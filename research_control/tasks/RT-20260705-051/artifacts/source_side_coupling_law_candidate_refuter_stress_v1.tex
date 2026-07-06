@@ -1,0 +1,357 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\EStar}{E_{\ast}}
+\newcommand{\SMScope}{\mathrm{SMScope}}
+\newcommand{\SCLBundle}{\mathrm{SCLBundle}}
+\newcommand{\DetPlaceholder}{\mathrm{DetPlaceholder}}
+\newcommand{\KStar}{K_{E_{\ast}}}
+\newcommand{\NoTarget}{\mathrm{NoTarget}}
+\newcommand{\Src}{\mathrm{src}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\StressPass}{\mathrm{STRESS}\mbox{-}\mathrm{PASS}}
+\newcommand{\FailClosed}{\mathrm{FAIL}\mbox{-}\mathrm{CLOSED}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{verdict}{Verdict}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Source-Side Coupling-Law Candidate Refuter Stress v1}
+\author{Refuter Packet RT-20260705-051}
+\date{2026-07-05}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v17 P2-T02. It stress-tests the audited
+draft/control source-side coupling-law candidate
+\[
+  \mathrm{SourceCouplingLawCandidate\_EStar\_v1}
+\]
+from \texttt{RT-20260705-047}, using the P2-T01 source-purity audit from
+\texttt{RT-20260705-050}. The stressed mathematical object is the finite
+partial map
+\[
+  \KStar:R_{\EStar}\rightharpoonup
+  \SCLBundle(\EStar)\times T_{\EStar}^{\Src}.
+\]
+
+The stress result is local and conditional:
+\[
+  \texttt{stress\_survives\_as\_draft\_control\_candidate}.
+\]
+The bridge-or-fail loop category is
+\[
+  \texttt{bridge\_facing\_candidate\_path}.
+\]
+
+This packet does not adopt \(\KStar\), does not adopt a source-side law, does
+not adopt \(\mathrm{RR}_{E}\mathrm{TransportCompletenessOrInvarianceLaw}_{v1}\),
+does not authorize an unrestricted \(RR_E\) theorem, does not adopt detector
+semantics, does not adopt matter semantics, does not adopt a coupling law, does
+not derive or adopt matter coupling, does not import stress-energy semantics,
+does not construct a stress-energy tensor, does not import a matter action,
+does not derive Einstein equations, does not promote benchmark status, and
+does not claim a completed derivation.
+
+\section{Stress Domain}
+
+The candidate contains:
+
+\begin{itemize}[leftmargin=2em]
+  \item the finite source event \(\EStar=\{\epsilon_0,\epsilon_1\}\);
+  \item the finite source matter-semantics scope
+        \(\SMScope(\EStar)=(\EStar,\{A_0,A_1\},R_{\EStar},S_{\EStar})\);
+  \item the finite certificate bundle
+        \(\SCLBundle(\EStar)\);
+  \item the explicit detector block
+        \(\DetPlaceholder(\EStar)=\mathrm{missing\_and\_blocked}\);
+  \item the finite graph of \(\KStar\) on \(r_0,r_1,r_{01}\);
+  \item the no-target certificate \(C^{nt}_{\EStar}\);
+  \item process markers that are explicitly nonpremises.
+\end{itemize}
+
+The stress suite therefore asks whether the candidate can survive pressure
+without importing target topology, target smooth atlas, Lorentzian metric,
+proper time, empirical detector protocols, stress-energy semantics,
+matter-action semantics, Einstein equations, benchmark behavior, generated
+derivatives, registry rows, validators, roles, handoffs, approvals, local
+caches, file order, checkpoints, or commits as scientific premises.
+
+\section{Stress Matrix}
+
+\begin{longtable}{p{0.30\linewidth}p{0.48\linewidth}p{0.14\linewidth}}
+\toprule
+Stress mode & Result & Verdict \\
+\midrule
+Finite or local source-scope perturbation &
+Source-signature-preserving relabelings or restrictions can transport the
+finite record names and certificates. Undeclared records outside
+\(R_{\EStar}\) are outside the partial-map domain and cannot be repaired by
+target data. & \(\StressPass\) \\
+Certificate removal &
+Deleting a required matter-semantics certificate, \(RR\) identity certificate,
+or no-target certificate removes an explicit positive branch and returns
+\(\BottomSrc\) or a precise missing-certificate obstruction. & \(\FailClosed\) \\
+Malformed certificate replacement &
+Replacing a source certificate with a target metric, detector protocol,
+stress-energy object, matter action, benchmark status, validator result, or
+process marker violates the declared source codomain. & \(\FailClosed\) \\
+Target import attack &
+Target topology, target atlas, Lorentzian metric, proper time, empirical fit,
+and benchmark behavior remain outside the candidate vocabulary. & \(\FailClosed\) \\
+Detector placeholder erasure &
+The detector component is required to be explicit. Erasing
+\(\DetPlaceholder(\EStar)\) leaves no detector component and therefore no
+positive candidate branch. & \(\FailClosed\) \\
+Detector placeholder replaced by empirical protocol &
+Replacing the missing-and-blocked marker with clocks, rods, calibration,
+readout semantics, or empirical detector behavior is a forbidden non-source
+repair. & \(\FailClosed\) \\
+\(\KStar\) domain collapse &
+Collapsing \(r_0,r_1,r_{01}\) without a declared source quotient and updated
+certificates makes the graph undefined on the mutated record set. A declared
+source restriction remains only a smaller finite draft/control subcase. &
+\(\FailClosed\) \\
+\(\KStar\) codomain not source-side &
+Values outside \(\SCLBundle(\EStar)\times T_{\EStar}^{\Src}\) are not values
+of the candidate partial map. & \(\FailClosed\) \\
+Unrestricted \(RR_E\) theorem overread &
+The \(RR\)-side objects are record-only placeholders plus identity
+certificates. They do not supply unrestricted \(RR_E\) transport,
+invariance, or collapse. & \(\FailClosed\) \\
+Evidence-as-adoption laundering &
+\(S_{\EStar}\), certificate validity, audit pass, and stress survival remain
+scoped route evidence. They are not law adoption or matter-coupling
+derivation. & \(\FailClosed\) \\
+\(g_{\mathrm{eff}}\) as physical metric overread &
+No \(g_{\mathrm{eff}}\) object, Lorentzian metric, metric signature, or proper
+time premise occurs in the candidate graph. & \(\FailClosed\) \\
+Stress-energy semantics import &
+Stress-energy appears only as a blocked import class. No stress-energy tensor
+or conservation semantics is supplied. & \(\FailClosed\) \\
+Matter-action import &
+No matter action, Lagrangian, variational principle, or matter field equation
+is present. & \(\FailClosed\) \\
+Benchmark behavior import &
+Exact-GR benchmark behavior and Gate Chair status do not define
+\(\SMScope(\EStar)\), \(\SCLBundle(\EStar)\), or \(\KStar\). & \(\FailClosed\) \\
+Process-authority import &
+Validators, registries, roles, handoffs, approvals, generated derivatives,
+local caches, file order, checkpoints, and commits remain nonpremises. &
+\(\FailClosed\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Finite source perturbation survival or bottom]
+Under a finite source-signature-preserving relabeling or restriction of
+\(\EStar\), \(\KStar\) survives only when the relabeled or restricted records,
+certificates, no-target certificate, detector block, and source tokens are
+carried along as source-side data. If a mutated record is not in the declared
+source domain and no source-side update is supplied, the candidate returns
+\(\BottomSrc\) or an explicit missing-domain obstruction.
+\end{lemma}
+
+\begin{proof}
+The graph of \(\KStar\) has exactly three declared source records. A
+source-signature-preserving relabeling changes names but not the source-side
+typing of records, certificates, or tokens. A restriction can remove graph
+entries and yields only a smaller finite draft/control subcase. A new,
+collapsed, or target-repaired record is not in the declared domain. Since the
+candidate is a partial source-side map, no target geometry or process receipt
+can extend its domain.
+\end{proof}
+
+\begin{lemma}[Certificate deletion and malformed replacement fail closed]
+If a required source certificate in \(\SCLBundle(\EStar)\) is deleted or
+replaced by a malformed certificate whose domain, codomain, witness, or
+authority source is not source-side, the non-bottom branch of \(\KStar\) is
+blocked.
+\end{lemma}
+
+\begin{proof}
+Each graph value of \(\KStar\) contains named source certificates. Removing
+one removes a premise of that graph value. Replacing one with target metric
+data, detector protocol data, stress-energy data, matter-action data,
+benchmark data, or process metadata violates the codomain
+\(\SCLBundle(\EStar)\times T_{\EStar}^{\Src}\) and the no-target certificate.
+The candidate supplies fail-closed markers rather than any target or process
+repair.
+\end{proof}
+
+\begin{lemma}[Detector placeholder replacement is not detector semantics]
+The block
+\[
+  \DetPlaceholder(\EStar)=
+  (\mathrm{status}=\mathrm{missing\_and\_blocked},
+   \mathrm{reason}=\mathrm{no\_source\_side\_detector\_replacement\_law})
+\]
+prevents detector-placeholder stress from becoming detector semantics.
+\end{lemma}
+
+\begin{proof}
+The placeholder is an explicit absence marker. Erasing it leaves the candidate
+without its declared detector component. Replacing it by empirical readout,
+clocks, rods, calibration, proper-time normalization, or detector response
+laws imports forbidden non-source premises. Therefore detector stress either
+preserves the explicit block or fails closed.
+\end{proof}
+
+\begin{lemma}[Overread pressure does not produce matter coupling]
+Stress survival of \(\KStar\) does not supply source-law adoption, detector
+semantics, coupling-law adoption, matter-coupling derivation, stress-energy
+semantics, matter action, Einstein equations, benchmark promotion, or proof
+authority.
+\end{lemma}
+
+\begin{proof}
+The candidate contains finite source records, finite source certificates, an
+explicit detector block, source bookkeeping tokens, no-target guards, and
+process nonpremise markers. It contains no unrestricted \(RR_E\) theorem, no
+\(g_{\mathrm{eff}}\) metric premise, no stress-energy tensor, no matter action,
+no field equation, no benchmark verdict, and no Gate Chair closure. Stress
+survival therefore narrows the candidate's local failure surface but does not
+promote it into a law or a matter-coupling derivation.
+\end{proof}
+
+\section{Refuted Overreads}
+
+This stress packet refutes the following readings of the stress result:
+
+\begin{enumerate}[leftmargin=*]
+  \item finite witness as universal coupling law;
+  \item source certificate validity as source-law adoption;
+  \item detector block as detector semantics;
+  \item no-target guard as positive matter theory;
+  \item stress survival as coupling-law adoption;
+  \item stress survival as matter-coupling derivation;
+  \item \(RR_E\) placeholders as unrestricted \(RR_E\) theorem;
+  \item prior \(g_{\mathrm{eff}}\) context as physical metric or proper-time
+        standard;
+  \item stress survival as stress-energy semantics or matter action;
+  \item benchmark, validator, registry, role, handoff, approval, generated
+        derivative, local-cache, file-order, checkpoint, or commit-state repair;
+  \item benchmark promotion, Gate Chair closure, completed derivation, future
+        source-extension impossibility, or global theory rejection.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc theorem is supplied. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Prior source-localization context only. \\
+Resp\_lc & Prior accepted response/localization context only. \\
+M\_src & Unchanged; scoped source-only boundary remains previously accepted. \\
+\(g_{\mathrm{eff}}\) & Prior scoped source-extension context only; no scope expansion and no physical metric premise. \\
+Matter coupling & The candidate stress-survives only as a draft/control source-side candidate pending selector; no coupling law is adopted and no matter coupling is derived or adopted. \\
+Einstein equations & Blocked; no field-equation derivation is supplied. \\
+Finite-variation robustness & Local finite perturbation stress profile recorded; no global theorem. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & No matter-coupling or coupling-law verdict is issued. \\
+Current route freeze or hard-fail status & Not frozen; P2-T03 Theoretical Continuation Selector route remains open. \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Verdict}
+
+\begin{verdict}[Stress-survived as draft/control candidate]
+The audited draft/control candidate
+\(\mathrm{SourceCouplingLawCandidate\_EStar\_v1}\) survives the required P2-T02
+stress suite only as a finite source-side candidate with fail-closed behavior.
+The stress result is
+\[
+  \texttt{stress\_survives\_as\_draft\_control\_candidate}.
+\]
+The bridge-or-fail loop category is
+\[
+  \texttt{bridge\_facing\_candidate\_path}.
+\]
+The result routes to P2-T03 selector. It does not adopt the candidate, does not
+derive matter coupling, and does not change the Distance-to-GR ledger.
+\end{verdict}
+
+\begin{verbatim}
+stress_result:
+  result_type: "stress_survives_as_draft_control_candidate"
+  bridge_or_fail_category: "bridge_facing_candidate_path"
+  stressed_object: "SourceCouplingLawCandidate_EStar_v1"
+  finite_or_local_scope_perturbation: "survives_under_source_relabeling_or_restriction_fails_closed"
+  certificate_removal: "fails_closed"
+  malformed_certificate_replacement: "fails_closed"
+  detector_placeholder_erasure: "fails_closed"
+  detector_placeholder_replacement_by_empirical_protocol: "blocked_target_import"
+  K_E_domain_collapse: "partial_map_undefined_or_finite_subcase_only"
+  K_E_codomains_not_source_side: "fails_closed"
+  RR_E_unrestricted_theorem_overread: "blocked"
+  evidence_as_adoption_laundering: "blocked"
+  g_eff_as_physical_metric_overread: "blocked"
+  stress_energy_semantics_import: "blocked"
+  matter_action_import: "blocked"
+  benchmark_behavior_import: "blocked"
+  process_authority_import: "blocked"
+  candidate_adopted: false
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+\section{Next Route}
+
+The next lawful packet is one bounded v17 P2-T03 Theoretical Continuation
+Selector classification of the post-construction, post-audit, post-stress
+candidate route. The selector may route to integration, repair, scoped
+obstruction, freeze review, or another bounded non-promotional packet. It must
+not adopt a coupling law, derive matter coupling, derive Einstein equations, or
+promote benchmark status.
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}
+This stress result is not source-law adoption, detector-semantics adoption,
+matter-semantics adoption, coupling-law adoption, matter-coupling derivation,
+stress-energy semantics, a matter action, Einstein equations, benchmark
+promotion, proof authority, or completed derivation.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+This stress result is not a global no-go theorem and does not prove future
+source-extension impossibility.
+\end{nonconclusion}
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan continue task v17} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v17.md}.
+
+The AEther-Flow Research Project. (2026b). \emph{Source-side coupling-law
+candidate K\_EStar v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260705-047/artifacts/source\_side\_coupling\_law\_candidate\_v1.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{Source-side coupling-law
+candidate smuggling audit v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260705-050/artifacts/source\_side\_coupling\_law\_candidate\_smuggling\_audit\_v1.tex}.
+
+The AEther-Flow Research Project. (2026d). \emph{No-target-import guard map}
+[Internal control artifact].
+\texttt{research\_control/design/no\_target\_import\_guard\_map.md}.
+
+\end{document}

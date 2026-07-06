@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-050`
-- Latest handoff: `handoff-0623`
-- Current status: `v17_p2_t01_candidate_audit_source_pure_as_written_pending_refuter_stress_no_adoption`
+- Active task: `RT-20260705-051`
+- Latest handoff: `handoff-0624`
+- Current status: `v17_p2_t02_candidate_stress_survived_pending_selector_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p2_t02_refuter_stress_of_source_side_coupling_law_candidate`
-- Role family: `refuter@0.2.0`
+- Route ID: `v17_p2_t03_post_candidate_audit_stress_selector`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Stress the audited candidate against finite/local perturbation, missing-certificate, detector-placeholder, evidence-as-adoption, and metric-use collapse modes.
+- Milestone burden: Select one next route after candidate construction, audit, and stress.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `2a8b28e4f8c67951cbf5162bd39468433cbd307985994712e578b2120c97ce21`
-- JSON SHA-256: `4e05c365521f6383526c7cfd3dbbdd62afa23c0693da6b1c58f0f22ba2bd8380`
+- YAML SHA-256: `fdc099bef83a42b6f64e6fb45e950e6869dfd2c7c27ef56c7d999c534970e6e5`
+- JSON SHA-256: `68ee07ca3695687ea1b95a38bd48f22f5502c3d6c5032f4385caa17d33fa9c53`
 
 ## Authority Warning
 

@@ -1,0 +1,82 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260705-051"
+job_id: "AJ-RT-20260705-051-001"
+status: "completed"
+candidate_name: "SourceCouplingLawCandidate_EStar_v1"
+candidate_symbol: "K_{E_*}"
+result_category: "bridge_facing_candidate_path"
+stress_result: "stress_survives_as_draft_control_candidate"
+formal_stress_findings:
+  finite_or_local_scope_perturbation:
+    result: "survives_under_source_relabeling_or_restriction_fails_closed"
+    reasoning: "A finite source-signature-preserving relabeling or restriction can transport the listed records and certificates. Records outside R_{E_*} remain outside the partial-map domain and cannot be repaired by target data."
+  certificate_removal:
+    result: "fails_closed"
+    reasoning: "Deleting C^{id}_0 C^{id}_1 C^{tr}_{01} C^{inv}_{01} C^{fact}_{01} RR identity certificates or C^{nt}_{E_*} removes an explicit premise of the finite graph and blocks the non-bottom candidate branch."
+  malformed_certificate_replacement:
+    result: "fails_closed"
+    reasoning: "A certificate with target codomain empirical detector content stress-energy content or process-authority content violates the declared source codomain and no-target guard."
+  detector_placeholder_erasure:
+    result: "fails_closed"
+    reasoning: "The candidate requires DetPlaceholder(E_*) as missing_and_blocked; erasing it leaves no detector component."
+  detector_placeholder_replacement_by_empirical_protocol:
+    result: "blocked_target_import"
+    reasoning: "Replacing the placeholder with clocks rods calibration readout or empirical detector protocol imports a forbidden non-source premise."
+  K_E_domain_collapse:
+    result: "partial_map_undefined_or_finite_subcase_only"
+    reasoning: "If r_0 r_1 or r_{01} is collapsed without a declared source quotient and certificate update K_{E_*} is undefined on the mutated record set. A declared source subcase remains only a smaller finite draft/control candidate."
+  K_E_codomains_not_source_side:
+    result: "fails_closed"
+    reasoning: "Codomain entries outside SCLBundle(E_*) x T_{E_*}^{src} are not values of the candidate partial map."
+  RR_E_unrestricted_theorem_overread:
+    result: "blocked"
+    reasoning: "The RR objects are record-only placeholders plus identity certificates and do not supply unrestricted RR_E transport or invariance."
+  evidence_as_adoption_laundering:
+    result: "blocked"
+    reasoning: "S_{E_*} and certificate validity remain finite scoped evidence only."
+  g_eff_as_physical_metric_overread:
+    result: "blocked"
+    reasoning: "No g_eff object appears in the candidate graph and no proper-time or Lorentzian metric premise is available."
+  stress_energy_semantics_import:
+    result: "blocked"
+    reasoning: "No stress-energy semantics or tensor occurs as a source-side value; listed occurrences are only forbidden-import guards."
+  matter_action_import:
+    result: "blocked"
+    reasoning: "No matter action Lagrangian variational rule or field-equation premise is present."
+  benchmark_behavior_import:
+    result: "blocked"
+    reasoning: "No exact-GR benchmark behavior or Gate Chair status defines any candidate component."
+  process_authority_import:
+    result: "blocked"
+    reasoning: "G^{proc}_{E_*} explicitly marks process surfaces as nonpremises."
+new_mathematical_payload:
+  - payload_id: "P2T02-LEMMA-001"
+    payload_type: "lemma"
+    object_name: "Finite source-scope perturbation stress survival"
+    status: "draft/control"
+    summary: "Source-signature-preserving finite relabelings or restrictions preserve the candidate form, while undeclared outside-domain records fail closed."
+  - payload_id: "P2T02-LEMMA-002"
+    payload_type: "lemma"
+    object_name: "Certificate loss and malformed replacement fail closed"
+    status: "draft/control"
+    summary: "Removing or replacing required source certificates eliminates the non-bottom branch rather than importing target or process repairs."
+  - payload_id: "P2T02-LEMMA-003"
+    payload_type: "lemma"
+    object_name: "Detector placeholder replacement is blocked"
+    status: "draft/control"
+    summary: "The explicit missing-and-blocked detector component prevents empirical detector protocols from entering as source premises."
+  - payload_id: "P2T02-LEMMA-004"
+    payload_type: "lemma"
+    object_name: "Overread pressure fails closed"
+    status: "draft/control"
+    summary: "RR_E theorem g_eff metric stress-energy matter-action benchmark evidence-as-adoption and process-authority overreads do not produce candidate adoption or matter coupling."
+forbidden_conclusions:
+  - "No source-law adoption follows."
+  - "No detector semantics adoption follows."
+  - "No coupling-law adoption follows."
+  - "No matter-coupling derivation follows."
+  - "No stress-energy semantics or matter action follows."
+  - "No Einstein-equation derivation follows."
+  - "No benchmark promotion follows."
+  - "No completed derivation follows."
