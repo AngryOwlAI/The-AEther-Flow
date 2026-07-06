@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-008` and `handoff-0640`.
+`RT-20260706-009` and `handoff-0641`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-008` |
-| Latest handoff ID | `handoff-0640` |
-| Current status | `v17_p5_t03_metric_use_linter_tests_completed_no_physics_delta` |
+| Active task ID | `RT-20260706-009` |
+| Latest handoff ID | `handoff-0641` |
+| Current status | `v17_p5_t04_metric_use_frontier_integration_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p5 t03 linter to p5 t04 frontier integration no physics delta |
+| Current route family | v17 p5 t04 frontier to p6 t01 upstream selector no physics delta |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P5-T04 metric-use ledger rendering in current frontier and compact frontier with no physics status change |
-| Next recommended action | Run one bounded v17 P5-T04 metric-use frontier integration packet. |
+| Required next authority | P6-T01 selector may choose EqSrc RetainH GenH or continued matter-coupling repair using P2 candidate-cycle detector-route and metric-use ledger status as inputs. |
+| Next recommended action | Run one bounded v17 P6-T01 upstream-burden selector packet. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-008/00_TASK.yaml`.
-- Active task objective: Add deterministic claim-language linter coverage for forbidden g_eff physical metric use while preserving scoped source-extension context.
-- Latest handoff path: `research_control/handoffs/handoff-0640.yaml`.
-- Latest handoff summary: RT-20260706-008 completed one bounded v17 P5-T03 metric-use linter and tests packet. It added deterministic claim-language classes and focused tests for forbidden g_eff physical metric overreads while preserving scoped source-extension context and no physics delta.
-- Current route family: v17 p5 t03 linter to p5 t04 frontier integration no physics delta.
-- Next recommended action: Run one bounded v17 P5-T04 metric-use frontier integration packet.
+- Active task path: `research_control/tasks/RT-20260706-009/00_TASK.yaml`.
+- Active task objective: Render the metric-use ledger summary in current frontier and compact frontier without changing physics status.
+- Latest handoff path: `research_control/handoffs/handoff-0641.yaml`.
+- Latest handoff summary: RT-20260706-009 completed one bounded v17 P5-T04 metric-use frontier integration packet. It rendered metric-use ledger path and guard-row counts into current frontier and compact frontier with no physics delta.
+- Current route family: v17 p5 t04 frontier to p6 t01 upstream selector no physics delta.
+- Next recommended action: Run one bounded v17 P6-T01 upstream-burden selector packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -95,6 +95,25 @@ This ledger status must not be read as coupling-law adoption, universal matter-c
 
 Universal matter coupling and downstream GR promotion remain blocked until a
 separate tracked route and the required protected authorities establish them.
+
+## Metric-Use Ledger Warning
+
+`registries/METRIC_USE_LEDGER.csv` is a project-control guard ledger for
+metric-adjacent wording. It records allowed scope and blocked interpretations
+only. It does not adopt `MetricData(E)`, expand `g_eff`, authorize a physical
+metric, import matter dynamics, promote benchmark status, or prove any
+downstream GR claim.
+
+| Field | Value |
+| --- | --- |
+| Ledger path | `registries/METRIC_USE_LEDGER.csv` |
+| Total rows | 19 |
+| Forbidden/import guard rows | 19 |
+| Blocked physical metric-use rows | 11 |
+| Audited-clean rows | 6 |
+| Blocked-by-scope rows | 13 |
+| Use categories | `blocked_physical_metric_use`: 11; `finite_local_witness_context`: 4; `scoped_source_extension_context`: 3; `source_side_relation_input_candidate`: 1 |
+| Audit statuses | `audited_clean`: 6; `blocked_by_scope`: 13 |
 
 ## Positive-First Status Cards
 
@@ -254,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P5-T04 metric-use frontier integration packet.
+Run one bounded v17 P6-T01 upstream-burden selector packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -282,14 +301,18 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-008`;
-- latest handoff: `handoff-0640`;
-- current status: `v17_p5_t03_metric_use_linter_tests_completed_no_physics_delta`;
+- active task: `RT-20260706-009`;
+- latest handoff: `handoff-0641`;
+- current status: `v17_p5_t04_metric_use_frontier_integration_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `focused_unittest`: PASS;
-- latest handoff validation `global_research_control_validation`: PENDING;
+- latest handoff validation `compact_frontier_render_check`: PASS;
+- latest handoff validation `compact_frontier_validator`: PASS;
+- latest handoff validation `compileall`: PASS;
+- latest handoff validation `current_frontier_render_check`: PASS;
+- latest handoff validation `focused_unittests`: PASS;
+- latest handoff validation `global_research_control_validation`: PASS;
 - latest handoff validation `task_local_validator`: PASS;
 
 ## Retrieval Warning Status
@@ -297,8 +320,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0640.yaml`
-- `research_control/tasks/RT-20260706-008/00_TASK.yaml`
+- `research_control/handoffs/handoff-0641.yaml`
+- `research_control/tasks/RT-20260706-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -314,7 +337,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0640*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0641*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

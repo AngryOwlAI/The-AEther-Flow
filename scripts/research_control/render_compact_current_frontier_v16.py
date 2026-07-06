@@ -22,6 +22,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_ID = "compact_current_frontier_v16"
 PROGRAM_STATE_PATH = "research_control/program_state.yaml"
 DISTANCE_LEDGER_PATH = "registries/DISTANCE_TO_GR_LEDGER.csv"
+METRIC_USE_LEDGER_PATH = "registries/METRIC_USE_LEDGER.csv"
 CURRENT_FRONTIER_PATH = "research_control/current_frontier.md"
 MARKDOWN_REGISTRY_PATH = "registries/MARKDOWN_SOURCE_REGISTRY.csv"
 ACCEPTED_STATUS_CALIBRATION_PATH = "research_control/design/accepted_status_calibration_v1.yaml"
@@ -65,6 +66,7 @@ YAML_FIELD_ORDER = [
     "scoped_evidence_preconditions",
     "blocked_physical_targets",
     "distance_to_gr",
+    "metric_use_ledger",
     "validation",
     "authority_warning",
 ]
@@ -154,6 +156,47 @@ def dedupe_ordered(items: list[str]) -> list[str]:
             output.append(value)
             seen.add(value)
     return output
+
+
+def count_by_field(rows: list[dict[str, str]], field_name: str) -> dict[str, str]:
+    counts: dict[str, int] = {}
+    for row in rows:
+        value = text_value(row.get(field_name)) or "unspecified"
+        counts[value] = counts.get(value, 0) + 1
+    return {key: str(value) for key, value in sorted(counts.items())}
+
+
+def metric_use_ledger_summary(rows: list[dict[str, str]]) -> dict[str, Any]:
+    forbidden_or_import_rows: set[str] = set()
+    import_terms = ("import", "physical_metric", "blocked_physical_metric_use")
+    for index, row in enumerate(rows):
+        row_id = text_value(row.get("use_id")) or f"row-{index + 1}"
+        if text_value(row.get("forbidden_interpretations")):
+            forbidden_or_import_rows.add(row_id)
+        haystack = " ".join(
+            text_value(row.get(field))
+            for field in ["use_category", "declared_scope", "allowed_use", "notes"]
+        ).lower()
+        if any(term in haystack for term in import_terms):
+            forbidden_or_import_rows.add(row_id)
+
+    return {
+        "ledger_path": METRIC_USE_LEDGER_PATH,
+        "total_row_count": str(len(rows)),
+        "forbidden_or_import_row_count": str(len(forbidden_or_import_rows)),
+        "blocked_physical_metric_use_row_count": str(sum(
+            1 for row in rows if text_value(row.get("use_category")) == "blocked_physical_metric_use"
+        )),
+        "audited_clean_row_count": str(
+            sum(1 for row in rows if text_value(row.get("audit_status")) == "audited_clean")
+        ),
+        "blocked_by_scope_row_count": str(
+            sum(1 for row in rows if text_value(row.get("audit_status")) == "blocked_by_scope")
+        ),
+        "use_category_counts": count_by_field(rows, "use_category"),
+        "audit_status_counts": count_by_field(rows, "audit_status"),
+        "stress_status_counts": count_by_field(rows, "stress_status"),
+    }
 
 
 def markdown_registry_has_object(rows: list[dict[str, str]], object_id: str) -> bool:
@@ -400,6 +443,7 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
     latest_handoff_path = handoff_path(latest_handoff_id)
     latest_handoff = load_control_yaml(repo_root, latest_handoff_path)
     ledger_rows = read_csv_rows(repo_root, DISTANCE_LEDGER_PATH)
+    metric_use_rows = read_csv_rows(repo_root, METRIC_USE_LEDGER_PATH)
     markdown_rows = read_csv_rows(repo_root, MARKDOWN_REGISTRY_PATH)
     frontier_text = read_text_source(repo_root, CURRENT_FRONTIER_PATH)
     accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_PATH)
@@ -423,6 +467,7 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
         PROGRAM_STATE_PATH,
         latest_handoff_path,
         DISTANCE_LEDGER_PATH,
+        METRIC_USE_LEDGER_PATH,
         CURRENT_FRONTIER_PATH,
         MARKDOWN_REGISTRY_PATH,
     ]
@@ -460,6 +505,7 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
             "delta": distance_delta(latest_handoff),
             "high_risk_rows": high_risk_rows,
         },
+        "metric_use_ledger": metric_use_ledger_summary(metric_use_rows),
         "validation": {
             "latest_required_status": latest_required_status(latest_handoff),
             "pending_layers": pending_validation_layers(latest_handoff),
@@ -526,6 +572,16 @@ def validate_snapshot(snapshot: dict[str, Any]) -> list[str]:
             errors.append(f"empty status card blocked_overread: {burden_id}")
         if text_value(card.get("positive_status")).lower() == "accepted":
             errors.append(f"bare accepted status card: {burden_id}")
+    metric_summary = snapshot.get("metric_use_ledger")
+    if not isinstance(metric_summary, dict):
+        errors.append("metric_use_ledger summary missing")
+    else:
+        if metric_summary.get("ledger_path") != METRIC_USE_LEDGER_PATH:
+            errors.append("metric_use_ledger ledger_path mismatch")
+        if int(metric_summary.get("total_row_count", 0)) <= 0:
+            errors.append("metric_use_ledger total_row_count missing")
+        if int(metric_summary.get("forbidden_or_import_row_count", 0)) <= 0:
+            errors.append("metric_use_ledger forbidden_or_import_row_count missing")
     return errors
 
 
@@ -561,6 +617,7 @@ def status_cards_markdown_rows(cards: list[dict[str, Any]]) -> str:
 def render_markdown(snapshot: dict[str, Any], yaml_text: str, json_text: str) -> str:
     active = snapshot["active_state"]
     next_route = snapshot["next_route"]
+    metric_use = snapshot["metric_use_ledger"]
     high_risk_rows = snapshot["distance_to_gr"]["high_risk_rows"]
     status_cards = snapshot.get("high_risk_status_cards", [])
     status_cards = status_cards if isinstance(status_cards, list) else []
@@ -609,6 +666,12 @@ def render_markdown(snapshot: dict[str, Any], yaml_text: str, json_text: str) ->
         "exact scope, allowed use, and blocked overread. They are operational "
         "calibration only and do not create physics proof authority.\n\n"
         f"{status_cards_markdown_rows(status_cards)}\n\n"
+        "## Metric-Use Ledger\n\n"
+        f"- Ledger path: `{metric_use['ledger_path']}`\n"
+        f"- Total rows: `{metric_use['total_row_count']}`\n"
+        f"- Forbidden/import guard rows: `{metric_use['forbidden_or_import_row_count']}`\n"
+        f"- Blocked physical metric-use rows: `{metric_use['blocked_physical_metric_use_row_count']}`\n"
+        "- Authority: project-control guard ledger only; no physics proof authority.\n\n"
         "## Snapshot Hashes\n\n"
         f"- YAML SHA-256: `{sha256_text(yaml_text)}`\n"
         f"- JSON SHA-256: `{sha256_text(json_text)}`\n\n"
@@ -715,6 +778,9 @@ def status_payload(snapshot: dict[str, Any], status: str, errors: list[str]) -> 
         "markdown_sha256": sha256_text(markdown_text),
         "high_risk_row_count": len(snapshot["distance_to_gr"]["high_risk_rows"]),
         "high_risk_status_card_count": len(snapshot.get("high_risk_status_cards", [])),
+        "metric_use_forbidden_or_import_row_count": int(
+            snapshot["metric_use_ledger"]["forbidden_or_import_row_count"]
+        ),
         "blocked_claim_count": len(snapshot["claim_boundary"]["blocked_claims"]),
         "snapshot_only_not_authority": snapshot["authority_warning"]["snapshot_only_not_authority"],
     }

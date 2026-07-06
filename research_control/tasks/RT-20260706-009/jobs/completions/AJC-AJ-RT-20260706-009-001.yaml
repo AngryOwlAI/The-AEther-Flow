@@ -1,0 +1,205 @@
+completion_id: "AJC-AJ-RT-20260706-009-001"
+job_id: "AJ-RT-20260706-009-001"
+task_id: "RT-20260706-009"
+decision_id: "DDR-20260706-009"
+status: "completed"
+completed_at: "2026-07-06T08:10:00Z"
+completed_by_role: "project-control-maintainer@0.2.0--RT-20260706-009"
+plan_task_id: "P5-T04"
+objective_result: "completed"
+summary: "Integrated the metric-use ledger into current frontier and compact frontier generated snapshots while preserving no physics delta."
+artifacts:
+  - "scripts/research_control/render_current_frontier.py"
+  - "scripts/research_control/render_compact_current_frontier_v16.py"
+  - "scripts/research_control/validate_compact_current_frontier_v16.py"
+  - "tests/test_render_current_frontier.py"
+  - "tests/test_render_compact_current_frontier_v16.py"
+  - "tests/test_validate_compact_current_frontier_v16.py"
+  - "research_control/tasks/RT-20260706-009/artifacts/validate_p5_t04_metric_use_frontier_integration.py"
+  - "research_control/tasks/RT-20260706-009/artifacts/p5_t04_metric_use_frontier_integration_report.json"
+  - "research_control/tasks/RT-20260706-009/artifacts/p5_t04_metric_use_frontier_integration_receipt.md"
+validation:
+  compileall: "PASS"
+  focused_renderer_unittests: "PASS"
+  current_frontier_render_check: "PASS"
+  compact_frontier_render_check: "PASS"
+  compact_frontier_validator: "PASS"
+  task_local_validator: "PASS"
+  global_research_control_validation: "PASS"
+metric_use_frontier_integration:
+  ledger_path: "registries/METRIC_USE_LEDGER.csv"
+  current_frontier_section: "Metric-Use Ledger Warning"
+  current_frontier_total_row_count: 19
+  current_frontier_forbidden_or_import_row_count: 19
+  compact_frontier_total_row_count: "19"
+  compact_frontier_forbidden_or_import_row_count: "19"
+  compact_frontier_blocked_physical_metric_use_row_count: "11"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-009 updates generated renderer surfaces only and does not adopt or derive matter coupling stress-energy matter action Einstein equations benchmark promotion or completed derivation."
+claim_boundary:
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_metric_authorized: false
+  detector_calibration_authorized: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P5-T04 metric-use ledger summary as physics proof"
+  - "P5-T04 metric-use ledger summary as MetricData(E) adoption"
+  - "P5-T04 metric-use ledger summary as g_eff scope expansion"
+  - "P5-T04 metric-use ledger summary as physical metric authority"
+  - "P5-T04 metric-use ledger summary as detector calibration"
+  - "P5-T04 metric-use ledger summary as stress-energy semantics"
+  - "P5-T04 metric-use ledger summary as matter action"
+  - "P5-T04 metric-use ledger summary as Einstein equations"
+  - "P5-T04 metric-use ledger summary as benchmark promotion"
+  - "P5-T04 metric-use ledger summary as completed derivation"
+outputs:
+  receipt_path: "research_control/tasks/RT-20260706-009/artifacts/p5_t04_metric_use_frontier_integration_receipt.md"
+  report_path: "research_control/tasks/RT-20260706-009/artifacts/p5_t04_metric_use_frontier_integration_report.json"
+  validator_path: "research_control/tasks/RT-20260706-009/artifacts/validate_p5_t04_metric_use_frontier_integration.py"
+  current_frontier_path: "research_control/current_frontier.md"
+  compact_frontier_yaml_path: "output/compact_current_frontier_v16.yaml"
+  compact_frontier_json_path: "output/compact_current_frontier_v16.json"
+  compact_frontier_markdown_path: "wiki/indexes/compact_current_frontier_v16.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=666 relationship_row_count=3417 semantic_row_count=666 vault_row_count=666"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260706-008 latest_handoff=handoff-0640 boundary=director_decision_required"
+  - ".venv/bin/python -m compileall scripts/research_control/render_current_frontier.py scripts/research_control/render_compact_current_frontier_v16.py scripts/research_control/validate_compact_current_frontier_v16.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python -m unittest tests.test_render_current_frontier tests.test_render_compact_current_frontier_v16 tests.test_validate_compact_current_frontier_v16 | exit_code=0 | tests=11 status=OK"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass metric_use_forbidden_or_import_row_count=19"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check | exit_code=0 | status=pass metric_use_forbidden_or_import_row_count=19"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260706-009/artifacts/validate_p5_t04_metric_use_frontier_integration.py --write-report | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --graph output/claim_graph_v1.json --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1455"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=PASS operational_receipt_only=true"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json | exit_code=0 | status=PASS"
+  - "git diff --check | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 666
+    relationship_row_count: 3417
+    semantic_row_count: 666
+    vault_row_count: 666
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "5b2bf13284f106143c271dcbb0e84c560c8ac652c332d7e032f3696f7ea23cad"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/metric_use_ledger_schema_v1.md"
+      source_hash: "0728604c2269878ba579e750cfe110dcd58aaaabde6f1128df18771c02ed7112"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS after local retrieval refresh"
+      - "query_memory status PASS after refresh"
+      - "targeted memory lookup returned v17 plan current frontier and metric-use ledger schema"
+      - "continue_research.py resolved handoff-0640 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "current frontier renders Metric-Use Ledger Warning section"
+      - "compact frontier exposes metric-use ledger path and forbidden/import guard row count"
+      - "compact validator checks metric-use ledger summary"
+      - "P6-T01 route selected"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "focused renderer and compact-validator tests PASS"
+      - "task-local validator PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier write and check PASS"
+      - "compact frontier write check and validation PASS"
+      - "dependency graph check PASS"
+      - "claim graph validation PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS"
+      - "bootstrap_memory_system --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language --changed PASS with zero hard failures"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  renderer_update_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not applicable to P5-T04 renderer packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+verdict: "v17_p5_t04_metric_use_frontier_integration_completed_no_physics_delta"
+coherent_resolution_summary: "P5-T04 exposes metric-use ledger guard counts in generated frontier surfaces. It does not convert the ledger into physical metric authority."
+next_recommendation: "Run one bounded v17 P6-T01 upstream-burden selector packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

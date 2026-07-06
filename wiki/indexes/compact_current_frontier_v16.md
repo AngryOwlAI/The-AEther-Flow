@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-008`
-- Latest handoff: `handoff-0640`
-- Current status: `v17_p5_t03_metric_use_linter_tests_completed_no_physics_delta`
+- Active task: `RT-20260706-009`
+- Latest handoff: `handoff-0641`
+- Current status: `v17_p5_t04_metric_use_frontier_integration_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p5_t04_metric_use_frontier_integration`
+- Route ID: `v17_p6_t01_upstream_burden_selector`
 - Role family: ``
-- Target milestone: `matter_coupling`
-- Milestone burden: Render metric-use ledger summary in current frontier without changing physics status.
+- Target milestone: `source_equivalence_eqsrc`
+- Milestone burden: Select whether to attack EqSrc RetainH GenH or continue matter-coupling candidate repair.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -42,10 +42,18 @@ These cards render high-risk rows in the required order: positive status, exact 
 | `einstein_equations` | not started; no positive derivation status | The status is limited to control status not_started, mathematical status dynamics_action_or_variation_missing, physical status no_field_equation_derivation. | Later bounded packets may use this row only as a blocked-target boundary condition. | No einstein equations follows from this row.<br>No benchmark promotion follows from this row.<br>No completed derivation follows from this row. |
 | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | The status is limited to control status blocked, mathematical status upstream_burdens_missing, physical status no_exact_gr_benchmark_promotion. | Later bounded packets may use this row only as a blocked-target boundary condition. | No benchmark promotion follows from this row.<br>No benchmark gate chair closure follows from this row.<br>No completed derivation follows from this row. |
 
+## Metric-Use Ledger
+
+- Ledger path: `registries/METRIC_USE_LEDGER.csv`
+- Total rows: `19`
+- Forbidden/import guard rows: `19`
+- Blocked physical metric-use rows: `11`
+- Authority: project-control guard ledger only; no physics proof authority.
+
 ## Snapshot Hashes
 
-- YAML SHA-256: `58843d53f495472ed2c835887e16c53e3a41d5427f6202b96f26e19b2ba4b148`
-- JSON SHA-256: `cec29ceafa1a7e83e065650466405f4d543c49614c2fd8975e75924df9eb6d36`
+- YAML SHA-256: `1497f2b8a9b7aed864508c3005d9568807c508e5eb25ccdfa9343ef7ba4555f8`
+- JSON SHA-256: `34345cfffe11bbc00d45a1c28aaf24751911cdd3aa8b32d00f43fa7c2861ac77`
 
 ## Authority Warning
 

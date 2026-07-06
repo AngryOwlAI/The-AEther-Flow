@@ -1,23 +1,24 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0640.yaml"
+  - "research_control/handoffs/handoff-0641.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
   - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
   - "research_control/design/accepted_status_calibration_v1.yaml"
 active_state:
-  active_task_id: "RT-20260706-008"
-  latest_handoff_id: "handoff-0640"
-  current_status: "v17_p5_t03_metric_use_linter_tests_completed_no_physics_delta"
+  active_task_id: "RT-20260706-009"
+  latest_handoff_id: "handoff-0641"
+  current_status: "v17_p5_t04_metric_use_frontier_integration_completed_no_physics_delta"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 next_route:
-  route_id: "v17_p5_t04_metric_use_frontier_integration"
+  route_id: "v17_p6_t01_upstream_burden_selector"
   role_family: ""
-  target_derivation_milestone: "matter_coupling"
-  milestone_burden: "Render metric-use ledger summary in current frontier without changing physics status."
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Select whether to attack EqSrc RetainH GenH or continue matter-coupling candidate repair."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -359,6 +360,24 @@ distance_to_gr:
           - "No completed derivation follows from this row."
         blocked_overread_sentence: "No benchmark promotion follows from this row. No benchmark gate chair closure follows from this row. No completed derivation follows from this row."
         evidence_source: "research_control/program_state.yaml"
+metric_use_ledger:
+  ledger_path: "registries/METRIC_USE_LEDGER.csv"
+  total_row_count: "19"
+  forbidden_or_import_row_count: "19"
+  blocked_physical_metric_use_row_count: "11"
+  audited_clean_row_count: "6"
+  blocked_by_scope_row_count: "13"
+  use_category_counts:
+    blocked_physical_metric_use: "11"
+    finite_local_witness_context: "4"
+    scoped_source_extension_context: "3"
+    source_side_relation_input_candidate: "1"
+  audit_status_counts:
+    audited_clean: "6"
+    blocked_by_scope: "13"
+  stress_status_counts:
+    not_applicable: "17"
+    scoped_obstruction: "2"
 validation:
   latest_required_status: "PASS"
   pending_layers: []

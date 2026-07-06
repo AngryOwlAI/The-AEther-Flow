@@ -170,6 +170,17 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             ),
             encoding="utf-8",
         )
+        (registries / "METRIC_USE_LEDGER.csv").write_text(
+            "\n".join(
+                [
+                    "use_id,task_id,artifact_path,object_used,use_category,declared_scope,allowed_use,forbidden_interpretations,no_target_guard_path,audit_status,stress_status,created_at,notes",
+                    "MUL-FIXTURE-001,RT-FIXTURE,research_control/current_frontier.md,g_eff,scoped_source_extension_context,Scoped source-extension context only,Use as source-extension context,physical_lorentzian_metric;detector_calibration,research_control/current_frontier.md,audited_clean,not_applicable,2026-07-06T00:00:00Z,Fixture scoped row",
+                    "MUL-FIXTURE-002,RT-FIXTURE,research_control/current_frontier.md,target_metric_import_guard,blocked_physical_metric_use,Target metric import guard only,Use only as fail-closed import guard,physical_lorentzian_metric;stress_energy_semantics,research_control/current_frontier.md,blocked_by_scope,not_applicable,2026-07-06T00:00:00Z,Fixture blocked import row",
+                    "",
+                ]
+            ),
+            encoding="utf-8",
+        )
 
     def test_render_payload_contains_authoritative_state_and_boundaries(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -195,6 +206,23 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             self.assertIn(
                 "research_control/design/distance_to_gr_status_aliases.yaml",
                 payload["source_paths"],
+            )
+            self.assertIn(
+                "registries/METRIC_USE_LEDGER.csv",
+                payload["source_paths"],
+            )
+            self.assertEqual(
+                payload["metric_use_ledger_summary"]["ledger_path"],
+                "registries/METRIC_USE_LEDGER.csv",
+            )
+            self.assertEqual(payload["metric_use_ledger_summary"]["total_row_count"], 2)
+            self.assertEqual(
+                payload["metric_use_ledger_summary"]["forbidden_or_import_row_count"],
+                2,
+            )
+            self.assertEqual(
+                payload["metric_use_ledger_summary"]["blocked_physical_metric_use_row_count"],
+                1,
             )
             self.assertEqual(
                 payload["layered_status_fields"],
@@ -264,6 +292,9 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             self.assertIn("not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics", markdown)
             self.assertIn("no_matter_coupling_derivation", markdown)
             self.assertIn("Positive-First Status Cards", markdown)
+            self.assertIn("Metric-Use Ledger Warning", markdown)
+            self.assertIn("Forbidden/import guard rows", markdown)
+            self.assertIn("project-control guard ledger", markdown)
             self.assertIn("**Positive status:** accepted only as scoped source-extension evidence/precondition", markdown)
             self.assertIn("**Scope:** The status is limited to control status accepted_as_scoped_evidence_precondition", markdown)
             self.assertIn("**Allowed use:** Later bounded packets may use this row only under the listed scope and overread guards.", markdown)
@@ -312,6 +343,10 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             self.assertEqual(payload["schema_id"], "current_frontier_state_v1")
             self.assertEqual(payload["status"], "rendered")
             self.assertEqual(payload["distance_to_gr_row_count"], 4)
+            self.assertEqual(
+                payload["metric_use_ledger_summary"]["forbidden_or_import_row_count"],
+                2,
+            )
             self.assertIn("overread_guard", payload["layered_status_fields"])
             self.assertIn("post_write", payload["validation_layer_fields"])
             self.assertEqual(payload["validation_layer_status_counts"]["PENDING"], 1)

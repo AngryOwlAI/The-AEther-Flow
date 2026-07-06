@@ -30,6 +30,9 @@ CHECKED_FAILURE_MODES = [
     "high_risk_row_missing",
     "high_risk_status_card_missing",
     "high_risk_status_card_incomplete",
+    "metric_use_ledger_missing",
+    "metric_use_ledger_path_mismatch",
+    "metric_use_ledger_forbidden_import_count_missing",
     "blocked_claim_missing",
     "matter_coupling_overpromoted",
     "einstein_equations_overpromoted",
@@ -261,6 +264,31 @@ def validate_authority_warning(payload: dict[str, Any], errors: list[dict[str, s
         )
 
 
+def validate_metric_use_ledger(payload: dict[str, Any], errors: list[dict[str, str]]) -> None:
+    summary = payload.get("metric_use_ledger")
+    if not isinstance(summary, dict):
+        append_error(errors, "metric_use_ledger_missing", "metric_use_ledger must be a mapping")
+        return
+    if text(summary.get("ledger_path")) != renderer.METRIC_USE_LEDGER_PATH:
+        append_error(
+            errors,
+            "metric_use_ledger_path_mismatch",
+            f"metric_use_ledger.ledger_path must be {renderer.METRIC_USE_LEDGER_PATH}",
+        )
+    if int(summary.get("forbidden_or_import_row_count", 0)) <= 0:
+        append_error(
+            errors,
+            "metric_use_ledger_forbidden_import_count_missing",
+            "metric_use_ledger.forbidden_or_import_row_count must be positive",
+        )
+    if int(summary.get("total_row_count", 0)) < int(summary.get("forbidden_or_import_row_count", 0)):
+        append_error(
+            errors,
+            "metric_use_ledger_forbidden_import_count_missing",
+            "metric_use_ledger.forbidden_or_import_row_count must not exceed total_row_count",
+        )
+
+
 def validate_overpromotion(payload: dict[str, Any], errors: list[dict[str, str]]) -> None:
     rows = high_risk_rows(payload)
     targets = blocked_targets(payload)
@@ -414,6 +442,7 @@ def build_report(
         validate_required_claims(primary_payload, errors)
         validate_high_risk_rows(primary_payload, errors)
         validate_high_risk_status_cards(primary_payload, errors)
+        validate_metric_use_ledger(primary_payload, errors)
         validate_authority_warning(primary_payload, errors)
         validate_overpromotion(primary_payload, errors)
 

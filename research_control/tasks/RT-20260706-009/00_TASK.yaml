@@ -1,0 +1,58 @@
+task_id: "RT-20260706-009"
+task_type: "metric_use_frontier_integration"
+status: "completed"
+created_at: "2026-07-06T08:10:00Z"
+updated_at: "2026-07-06T08:10:00Z"
+closed_at: "2026-07-06T08:10:00Z"
+parent_task_id: "RT-20260706-008"
+parent_handoff_id: "handoff-0640"
+decision_id: "DDR-20260706-009"
+job_id: "AJ-RT-20260706-009-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260706-009"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This P5-T04 renderer packet does not consume Gate Chair authority or issue a protected verdict."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T04"
+  plan_task_name: "Integrate metric-use ledger into current frontier and compact frontier"
+objective: "Render the metric-use ledger summary in current frontier and compact frontier without changing physics status."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Render metric-use ledger summary in current frontier without changing physics status."
+closure_status: "v17_p5_t04_metric_use_frontier_integration_completed_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P5-T04 current-frontier and compact-frontier renderer integration plus validator coverage only."
+  no_physics_delta: true
+  immediate_v17_next_plan_task_id: "P6-T01"
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_metric_authorized: false
+  detector_calibration_authorized: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "scripts/research_control/render_current_frontier.py"
+  - "scripts/research_control/render_compact_current_frontier_v16.py"
+  - "scripts/research_control/validate_compact_current_frontier_v16.py"
+  - "tests/test_render_current_frontier.py"
+  - "tests/test_render_compact_current_frontier_v16.py"
+  - "tests/test_validate_compact_current_frontier_v16.py"
+  - "research_control/tasks/RT-20260706-009/artifacts/validate_p5_t04_metric_use_frontier_integration.py"
+  - "research_control/tasks/RT-20260706-009/artifacts/p5_t04_metric_use_frontier_integration_report.json"
+  - "research_control/tasks/RT-20260706-009/artifacts/p5_t04_metric_use_frontier_integration_receipt.md"
+  - "research_control/current_frontier.md"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+next_recommended_action: "Run one bounded v17 P6-T01 upstream-burden selector packet."
+notes: "RT-20260706-009 completes P5-T04 by rendering the METRIC_USE_LEDGER path and guard-row counts into current frontier and compact frontier. It records no Distance-to-GR ledger status update and no physics claim promotion."
+documentation_impact_id: "DI-RT-20260706-009-001"

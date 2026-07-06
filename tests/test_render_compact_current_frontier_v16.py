@@ -110,6 +110,17 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
             ),
             encoding="utf-8",
         )
+        (registries / "METRIC_USE_LEDGER.csv").write_text(
+            "\n".join(
+                [
+                    "use_id,task_id,artifact_path,object_used,use_category,declared_scope,allowed_use,forbidden_interpretations,no_target_guard_path,audit_status,stress_status,created_at,notes",
+                    "MUL-COMPACT-001,RT-COMPACT,research_control/current_frontier.md,g_eff,scoped_source_extension_context,Scoped source-extension context only,Use as source-extension context,physical_lorentzian_metric;detector_calibration,research_control/current_frontier.md,audited_clean,not_applicable,2026-07-06T00:00:00Z,Fixture scoped row",
+                    "MUL-COMPACT-002,RT-COMPACT,research_control/current_frontier.md,target_metric_import_guard,blocked_physical_metric_use,Target metric import guard only,Use only as fail-closed import guard,physical_lorentzian_metric;stress_energy_semantics,research_control/current_frontier.md,blocked_by_scope,not_applicable,2026-07-06T00:00:00Z,Fixture blocked import row",
+                    "",
+                ]
+            ),
+            encoding="utf-8",
+        )
         (registries / "MARKDOWN_SOURCE_REGISTRY.csv").write_text(
             "\n".join(
                 [
@@ -169,6 +180,16 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
                 ],
             )
             self.assertTrue(snapshot["authority_warning"]["snapshot_only_not_authority"])
+            self.assertEqual(
+                snapshot["metric_use_ledger"]["ledger_path"],
+                "registries/METRIC_USE_LEDGER.csv",
+            )
+            self.assertEqual(snapshot["metric_use_ledger"]["total_row_count"], "2")
+            self.assertEqual(snapshot["metric_use_ledger"]["forbidden_or_import_row_count"], "2")
+            self.assertEqual(
+                snapshot["metric_use_ledger"]["blocked_physical_metric_use_row_count"],
+                "1",
+            )
             self.assertEqual(self.renderer.validate_snapshot(snapshot), [])
 
     def test_cli_write_then_check_and_json(self) -> None:
@@ -195,6 +216,7 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
             self.assertEqual(payload["schema_id"], "compact_current_frontier_v16")
             self.assertEqual(payload["validation"]["latest_required_status"], "PASS")
             self.assertIn("high_risk_status_cards", payload)
+            self.assertEqual(payload["metric_use_ledger"]["forbidden_or_import_row_count"], "2")
 
 
 if __name__ == "__main__":

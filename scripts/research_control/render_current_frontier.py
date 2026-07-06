@@ -22,6 +22,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_ID = "current_frontier_state_v1"
 DEFAULT_FRONTIER_PATH = "research_control/current_frontier.md"
 LEDGER_PATH = "registries/DISTANCE_TO_GR_LEDGER.csv"
+METRIC_USE_LEDGER_PATH = "registries/METRIC_USE_LEDGER.csv"
 STATUS_ALIAS_PATH = "research_control/design/distance_to_gr_status_aliases.yaml"
 ACCEPTED_STATUS_CALIBRATION_PATH = "research_control/design/accepted_status_calibration_v1.yaml"
 HIGH_RISK_STATUS_CARD_IDS = [
@@ -190,6 +191,68 @@ def line_list(items: list[str]) -> str:
 
 def split_tokens(value: Any) -> list[str]:
     return [item.strip() for item in text_value(value).split(";") if item.strip()]
+
+
+def count_by_field(rows: list[dict[str, str]], field_name: str) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for row in rows:
+        value = text_value(row.get(field_name)) or "unspecified"
+        counts[value] = counts.get(value, 0) + 1
+    return dict(sorted(counts.items()))
+
+
+def metric_use_ledger_summary(rows: list[dict[str, str]]) -> dict[str, Any]:
+    forbidden_or_import_rows: set[str] = set()
+    import_terms = ("import", "physical_metric", "blocked_physical_metric_use")
+    for index, row in enumerate(rows):
+        row_id = text_value(row.get("use_id")) or f"row-{index + 1}"
+        if text_value(row.get("forbidden_interpretations")):
+            forbidden_or_import_rows.add(row_id)
+        haystack = " ".join(
+            text_value(row.get(field))
+            for field in ["use_category", "declared_scope", "allowed_use", "notes"]
+        ).lower()
+        if any(term in haystack for term in import_terms):
+            forbidden_or_import_rows.add(row_id)
+
+    return {
+        "ledger_path": METRIC_USE_LEDGER_PATH,
+        "total_row_count": len(rows),
+        "forbidden_or_import_row_count": len(forbidden_or_import_rows),
+        "blocked_physical_metric_use_row_count": sum(
+            1 for row in rows if text_value(row.get("use_category")) == "blocked_physical_metric_use"
+        ),
+        "audited_clean_row_count": sum(1 for row in rows if text_value(row.get("audit_status")) == "audited_clean"),
+        "blocked_by_scope_row_count": sum(1 for row in rows if text_value(row.get("audit_status")) == "blocked_by_scope"),
+        "use_category_counts": count_by_field(rows, "use_category"),
+        "audit_status_counts": count_by_field(rows, "audit_status"),
+        "stress_status_counts": count_by_field(rows, "stress_status"),
+    }
+
+
+def inline_counts(counts: dict[str, int]) -> str:
+    if not counts:
+        return "none"
+    return "; ".join(f"`{md_cell(key)}`: {value}" for key, value in counts.items())
+
+
+def metric_use_ledger_markdown(summary: dict[str, Any]) -> str:
+    return f"""`{METRIC_USE_LEDGER_PATH}` is a project-control guard ledger for
+metric-adjacent wording. It records allowed scope and blocked interpretations
+only. It does not adopt `MetricData(E)`, expand `g_eff`, authorize a physical
+metric, import matter dynamics, promote benchmark status, or prove any
+downstream GR claim.
+
+| Field | Value |
+| --- | --- |
+| Ledger path | `{md_cell(summary.get('ledger_path'))}` |
+| Total rows | {int(summary.get('total_row_count', 0))} |
+| Forbidden/import guard rows | {int(summary.get('forbidden_or_import_row_count', 0))} |
+| Blocked physical metric-use rows | {int(summary.get('blocked_physical_metric_use_row_count', 0))} |
+| Audited-clean rows | {int(summary.get('audited_clean_row_count', 0))} |
+| Blocked-by-scope rows | {int(summary.get('blocked_by_scope_row_count', 0))} |
+| Use categories | {inline_counts(summary.get('use_category_counts', {}))} |
+| Audit statuses | {inline_counts(summary.get('audit_status_counts', {}))} |"""
 
 
 def guard_cell(value: Any) -> str:
@@ -899,6 +962,7 @@ def build_state(repo_root: Path) -> dict[str, Any]:
     latest_handoff = load_control_yaml(repo_root, handoff_path(latest_handoff_id))
     active_task = load_control_yaml(repo_root, active_task_path(active_task_id))
     ledger_rows = read_csv_rows(repo_root, LEDGER_PATH)
+    metric_use_rows = read_csv_rows(repo_root, METRIC_USE_LEDGER_PATH)
     status_aliases = load_optional_control_yaml(repo_root, STATUS_ALIAS_PATH)
     accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_PATH)
     aliases = status_alias_rows(status_aliases)
@@ -921,10 +985,13 @@ def build_state(repo_root: Path) -> dict[str, Any]:
         "latest_handoff_path": handoff_path(latest_handoff_id),
         "active_task_path": active_task_path(active_task_id),
         "ledger_path": LEDGER_PATH,
+        "metric_use_ledger_path": METRIC_USE_LEDGER_PATH,
         "active_task": active_task,
         "latest_handoff": latest_handoff,
         "v16_completed": bool_value(latest_handoff.get("v16_completed")),
         "distance_to_gr_rows": ledger_rows,
+        "metric_use_rows": metric_use_rows,
+        "metric_use_ledger_summary": metric_use_ledger_summary(metric_use_rows),
         "status_aliases": status_aliases,
         "accepted_status_calibration": accepted_status_calibration,
         "high_risk_status_cards": status_cards,
@@ -942,6 +1009,7 @@ def render_markdown(state: dict[str, Any]) -> str:
     status_aliases = state["status_aliases"]
     aliases = status_alias_rows(status_aliases)
     status_cards = state["high_risk_status_cards"]
+    metric_use_summary = state["metric_use_ledger_summary"]
     task_objective = text_value(task.get("objective"))
     handoff_summary = text_value(handoff.get("summary"))
     validation = handoff.get("validation") if isinstance(handoff.get("validation"), dict) else {}
@@ -1028,6 +1096,10 @@ active-state authority. The renderer provides a deterministic repair command:
 
 Universal matter coupling and downstream GR promotion remain blocked until a
 separate tracked route and the required protected authorities establish them.
+
+## Metric-Use Ledger Warning
+
+{metric_use_ledger_markdown(metric_use_summary)}
 
 ## Positive-First Status Cards
 
@@ -1146,6 +1218,7 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
         state["latest_handoff_path"],
         state["active_task_path"],
         state["ledger_path"],
+        state["metric_use_ledger_path"],
     ]
     if state["status_aliases"]:
         source_paths.append(STATUS_ALIAS_PATH)
@@ -1166,6 +1239,8 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
         "frontier_path": DEFAULT_FRONTIER_PATH,
         "rendered_hash": sha256_text(markdown),
         "distance_to_gr_row_count": len(state["distance_to_gr_rows"]),
+        "metric_use_ledger_path": state["metric_use_ledger_path"],
+        "metric_use_ledger_summary": state["metric_use_ledger_summary"],
         "status_alias_path": STATUS_ALIAS_PATH if state["status_aliases"] else "",
         "status_alias_row_count": len(status_alias_rows(state["status_aliases"])),
         "status_alias_integration": "reader_facing_status_column",
