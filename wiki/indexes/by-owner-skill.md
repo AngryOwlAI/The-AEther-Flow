@@ -346,6 +346,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-FORMALIZATION-PROOF-NORMAL-FORM-SCHEMA-V1` `wiki/markdown/md-research-control-formalization-proof-normal-form-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `wiki/markdown/md-research-control-p5-t01-support-only-mechanization-boundary-design.md`
 - `WIKI-MD-RESEARCH-CONTROL-P6-T01-PAYLOAD-DENSITY-METRICS-DESIGN` `wiki/markdown/md-research-control-p6-t01-payload-density-metrics-design.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASK-INDEX` `wiki/markdown/md-research-control-task-index.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260614-133-EXTERNAL-REVIEW-BRIEF-M-SRC-GSC-INTEGRATED-THEOREM` `wiki/markdown/md-research-control-tasks-rt-20260614-133-external-review-brief-m-src-gsc-integrated-theorem.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260629-033-DISTANCE-TO-GR-LAYERED-STATUS-MIGRATION-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260629-033-distance-to-gr-layered-status-migration-report.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260629-036-P1-LAYERED-STATUS-CROSS-CHECK` `wiki/markdown/md-research-control-tasks-rt-20260629-036-p1-layered-status-cross-check.md`
@@ -959,6 +960,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-FORMALIZATION-PROOF-NORMAL-FORM-SCHEMA-V1` `research_control/formalization/proof_normal_form_schema_v1.md`
 - `MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `research_control/tasks/RT-20260614-270/artifacts/p5_t01_support_only_mechanization_boundary_design.md`
 - `MD-RESEARCH-CONTROL-P6-T01-PAYLOAD-DENSITY-METRICS-DESIGN` `research_control/tasks/RT-20260614-275/artifacts/p6_t01_payload_density_metrics_design.md`
+- `MD-RESEARCH-CONTROL-TASK-INDEX` `research_control/tasks/TASK_INDEX.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260629-033-DISTANCE-TO-GR-LAYERED-STATUS-MIGRATION-REPORT` `research_control/tasks/RT-20260629-033/artifacts/distance_to_gr_layered_status_migration_report.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260629-036-P1-LAYERED-STATUS-CROSS-CHECK` `research_control/tasks/RT-20260629-036/artifacts/p1_layered_status_cross_check.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260702-001-P4-T04-LATEST-STATE-VALIDATION-BACKFILL-RECEIPT` `research_control/tasks/RT-20260702-001/artifacts/p4_t04_latest_state_validation_backfill_receipt.md`

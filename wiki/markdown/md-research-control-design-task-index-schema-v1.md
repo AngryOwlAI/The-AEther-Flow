@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17;MD-RESEARCH-CONTROL-CURRENT-FRONTIER` ``
 - Generated output path: `wiki/markdown/md-research-control-design-task-index-schema-v1.md`
+- Backlink from `MD-RESEARCH-CONTROL-TASK-INDEX` `research_control/tasks/TASK_INDEX.md`
 
 ## Validation
 

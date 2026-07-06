@@ -467,6 +467,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER` `github-facing/source-authority-explainer.md`
 - `MD-GITHUB-FACING-TECHNICAL-REQUIREMENTS-EXPLAINER` `github-facing/technical-requirements-explainer.md`
 - `MD-GITHUB-FACING-VALIDATOR-OPERATOR-WORKFLOW-EXPLAINER` `github-facing/validator-operator-workflow-explainer.md`
+- `MD-RESEARCH-CONTROL-TASK-INDEX` `research_control/tasks/TASK_INDEX.md`
 - `PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `legacy_ontology/pdfs/aether_flow_consistency.pdf`
 - `PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `legacy_ontology/pdfs/aether_flow_dynamics.pdf`
 - `PDF-LEGACY-ONTOLOGY-AETHER-FLOW-EXACT-CLOSURE-FLAGSHIP-ARTICLE` `legacy_ontology/pdfs/aether_flow_exact_closure_flagship_article.pdf`
@@ -674,6 +675,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-FORMALIZATION-PROOF-NORMAL-FORM-SCHEMA-V1` `wiki/markdown/md-research-control-formalization-proof-normal-form-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `wiki/markdown/md-research-control-p5-t01-support-only-mechanization-boundary-design.md`
 - `WIKI-MD-RESEARCH-CONTROL-P6-T01-PAYLOAD-DENSITY-METRICS-DESIGN` `wiki/markdown/md-research-control-p6-t01-payload-density-metrics-design.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASK-INDEX` `wiki/markdown/md-research-control-task-index.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260614-133-EXTERNAL-REVIEW-BRIEF-M-SRC-GSC-INTEGRATED-THEOREM` `wiki/markdown/md-research-control-tasks-rt-20260614-133-external-review-brief-m-src-gsc-integrated-theorem.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260629-033-DISTANCE-TO-GR-LAYERED-STATUS-MIGRATION-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260629-033-distance-to-gr-layered-status-migration-report.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260629-036-P1-LAYERED-STATUS-CROSS-CHECK` `wiki/markdown/md-research-control-tasks-rt-20260629-036-p1-layered-status-cross-check.md`

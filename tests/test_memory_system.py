@@ -339,6 +339,31 @@ class MemorySystemSmokeTests(unittest.TestCase):
         self.assertEqual(row["agent_documentation"], "true")
         self.assertIn("Folder-level explanatory README", row["notes"])
 
+    def test_generated_task_index_is_discovered_as_noncanonical_memory_surface(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir).resolve()
+            task_index = root / "research_control/tasks/TASK_INDEX.md"
+            task_index.parent.mkdir(parents=True)
+            task_index.write_text(
+                "# Research-Control Task Index\n\nGenerated navigation support only.\n",
+                encoding="utf-8",
+            )
+            with mock.patch.object(self.memory_system, "REPO_ROOT", root):
+                rows = self.memory_system.discover_markdown_rows("2026-07-06T00:00:00Z")
+
+        row_by_id = {row["object_id"]: row for row in rows}
+        row = row_by_id["MD-RESEARCH-CONTROL-TASK-INDEX"]
+        self.assertEqual(row["path"], "research_control/tasks/TASK_INDEX.md")
+        self.assertEqual(row["role"], "generated_task_index")
+        self.assertEqual(row["authority_status"], "generated_noncanonical")
+        self.assertEqual(row["audience"], "humans_and_agents")
+        self.assertEqual(row["owner_skill"], "project-memory-system")
+        self.assertEqual(row["related_source"], "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1")
+        self.assertEqual(row["generated_from"], "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1")
+        self.assertIn("wiki/indexes/research_control_task_index.md", row["generated_outputs"])
+        self.assertEqual(row["agent_documentation"], "true")
+        self.assertIn("non-authoritative for task", row["notes"])
+
     def test_legacy_ontology_markdown_is_discovered_as_archival_snapshot(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir).resolve()

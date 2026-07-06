@@ -17,6 +17,18 @@ A task folder may include:
 - `documentation_impact.yaml` when documentation impact is required.
 - `artifacts/` for task-local outputs.
 
+## Generated Task Index
+
+Generated task-index surfaces are available for navigation and retrieval:
+
+- `TASK_INDEX.csv`
+- `TASK_INDEX.md`
+- `../../wiki/indexes/research_control_task_index.md`
+
+These files are generated from tracked task records and the task-index schema.
+They help humans and agents locate task folders, completion receipts, and next
+actions. They are not canonical task authority.
+
 ## What Belongs Here
 
 - Immutable or superseded task records.
@@ -36,3 +48,9 @@ Task records are control evidence for a bounded transaction. They do not by
 themselves promote scientific claims unless the proper source, registry,
 refutation, and gate sequence also supports that promotion.
 
+Generated task-index files are lower-authority navigation and memory-retrieval
+support. Canonical research-control authority remains in the task folders,
+Director Decision Records, AgentJobs, completion records, handoffs,
+`program_state.yaml`, and registries. Generated indexes must not be read as
+physics proof, benchmark promotion, Gate Chair authority, ontology adoption, or
+completed-derivation evidence.

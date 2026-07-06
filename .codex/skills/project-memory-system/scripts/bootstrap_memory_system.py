@@ -194,6 +194,9 @@ FOLDER_README_FILES = [
     "tests/README.md",
     "tex_shared/README.md",
 ]
+GENERATED_MARKDOWN_INDEX_FILES = [
+    "research_control/tasks/TASK_INDEX.md",
+]
 PROJECT_MARKDOWN_GLOBS = [
     ".agents/roles/**/*.md",
     ".agents/schemas/*.md",
@@ -202,6 +205,15 @@ PROJECT_MARKDOWN_GLOBS = [
     "github-facing/**/*.md",
     "research_control/design/*.md",
 ]
+TASK_INDEX_MARKDOWN_PATH = "research_control/tasks/TASK_INDEX.md"
+TASK_INDEX_SCHEMA_OBJECT_ID = "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1"
+TASK_INDEX_GENERATED_OUTPUTS = ";".join(
+    [
+        "research_control/tasks/TASK_INDEX.csv",
+        "wiki/indexes/research_control_task_index.md",
+        "wiki/markdown/md-research-control-task-index.md",
+    ]
+)
 
 CANONICAL_LANES = [
     "ontology",
@@ -522,6 +534,8 @@ def markdown_object_id(path: Path) -> str:
         return "MD-README"
     if relative == "AGENTS.md":
         return "MD-AGENTS"
+    if relative == TASK_INDEX_MARKDOWN_PATH:
+        return "MD-RESEARCH-CONTROL-TASK-INDEX"
     if relative.startswith("github-facing/"):
         return f"MD-GITHUB-FACING-{object_suffix_from_stem(path.stem)}"
     if relative.endswith("/AGENTS.md"):
@@ -579,6 +593,14 @@ def markdown_role(path: Path) -> tuple[str, str, str, str, str]:
             "agents",
             "project-memory-system",
             "Root agent instructions and repository authority hierarchy.",
+        )
+    if relative == TASK_INDEX_MARKDOWN_PATH:
+        return (
+            "generated_task_index",
+            "generated_noncanonical",
+            "humans_and_agents",
+            "project-memory-system",
+            "Generated task-index navigation surface derived from tracked research-control task records; non-authoritative for task, physics, benchmark, Gate Chair, or completed-derivation claims.",
         )
     if relative == ".agents/AGENTS.md":
         return (
@@ -753,6 +775,10 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
         path = REPO_ROOT / path_text
         if path.exists():
             paths.append(path)
+    for path_text in GENERATED_MARKDOWN_INDEX_FILES:
+        path = REPO_ROOT / path_text
+        if path.exists():
+            paths.append(path)
     for pattern in PROJECT_MARKDOWN_GLOBS:
         paths.extend(sorted(REPO_ROOT.glob(pattern)))
     paths.extend(sorted((REPO_ROOT / "ontology").glob("*.md")))
@@ -772,6 +798,11 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
             if matching_spec.exists():
                 related_source = markdown_object_id(matching_spec)
                 generated_from = related_source
+        generated_outputs = wiki_path
+        if relative == TASK_INDEX_MARKDOWN_PATH:
+            related_source = TASK_INDEX_SCHEMA_OBJECT_ID
+            generated_from = TASK_INDEX_SCHEMA_OBJECT_ID
+            generated_outputs = TASK_INDEX_GENERATED_OUTPUTS
         is_github_facing = relative.startswith("github-facing/") or path.name == "README.md"
         is_agent_documentation = (
             relative.startswith("github-facing/")
@@ -793,7 +824,7 @@ def discover_markdown_rows(now: str) -> list[dict[str, str]]:
                 "source_hash": sha256_file(path),
                 "related_source": related_source,
                 "generated_from": generated_from,
-                "generated_outputs": wiki_path,
+                "generated_outputs": generated_outputs,
                 "owner_skill": owner_skill,
                 "validation_status": "PASS",
                 "last_validated_at": now,

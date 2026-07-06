@@ -1,0 +1,236 @@
+completion_id: "AJC-AJ-RT-20260706-028-001"
+job_id: "AJ-RT-20260706-028-001"
+task_id: "RT-20260706-028"
+source_role_id: "memory-system-maintainer"
+completed_at: "2026-07-06T18:07:24Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P10-T04"
+  plan_phase_id: "P10"
+  implemented_task_scope: "Integrated generated task-index outputs into deterministic memory bootstrap discovery and folder documentation as generated noncanonical navigation and retrieval support."
+  downstream_tasks_not_implemented:
+    - "P11 CI and reproducibility tasks"
+    - "source-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+  phase_p10_completed: true
+output_paths:
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - "tests/test_memory_system.py"
+  - "tests/test_obsidian_wiki.py"
+  - "research_control/tasks/README.md"
+  - "research_control/tasks/RT-20260706-028/artifacts/task_index_memory_integration_receipt.md"
+  - "research_control/tasks/RT-20260706-028/artifacts/task_index_memory_integration_validator_report.json"
+  - "research_control/tasks/RT-20260706-028/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-028/jobs/AJ-RT-20260706-028-001.yaml"
+  - "research_control/tasks/RT-20260706-028/jobs/completions/AJC-AJ-RT-20260706-028-001.yaml"
+  - "research_control/tasks/RT-20260706-028/roles/memory-system-maintainer@0.2.0--RT-20260706-028.yaml"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/research_control_task_index.md"
+  - "wiki/markdown/md-research-control-task-index.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-0660.yaml"
+  - "research_control/handoffs/handoff-0660.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/memory-system-maintainer.v0.2.0.md"
+  - ".agents/roles/research_ops/documentation-curator.v2.0.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/design/v17_recommendation_backlog.yaml"
+  - "research_control/design/task_index_schema_v1.md"
+  - "research_control/tasks/README.md"
+  - "research_control/tasks/TASK_INDEX.md"
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".codex/skills/project-memory-system/scripts/obsidian_wiki_lib.py"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0659.yaml"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=681 relationship_row_count=3491 semantic_row_count=681 vault_row_count=681"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"task index memory folder documentation integration\" --limit 10 --json | exit_code=0 | returned_object_ids=SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17,MD-RESEARCH-CONTROL-CURRENT-FRONTIER,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  - ".venv/bin/python -m unittest tests.test_memory_system.MemorySystemSmokeTests.test_generated_task_index_is_discovered_as_noncanonical_memory_surface | exit_code=0 | tests=1"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS source_object_count_after_preflight=682 semantic_row_count_after_preflight=682 vault_row_count_after_preflight=682 relationship_row_count_after_preflight=3499"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=682 relationship_row_count=3499 semantic_row_count=682 vault_row_count=682"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASK-INDEX --json | exit_code=0 | primary_registry=MARKDOWN_SOURCE_REGISTRY.csv match_count=24"
+  - ".venv/bin/python -m unittest tests.test_memory_system tests.test_obsidian_wiki | exit_code=0 | tests=61"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 681
+    relationship_row_count: 3491
+    semantic_row_count: 681
+    vault_row_count: 681
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"task index memory folder documentation integration\" --limit 10 --json"
+      query_type: "search"
+      query_text: "task index memory folder documentation integration"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      generated_retrieval_evidence_ids:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      retrieval_note: "Search returned plan and current-frontier context. Routing authority came from tracked handoff-0659, the v17 plan, and the task-index schema."
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "f20cddca4c18a48bdd97095d9a7c9eb669c49c0427d19bc1dd0d0f911cb62196"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/task_index_schema_v1.md"
+      source_hash: "d456f151421ca4514972b23bb092d94e0236ed2262794581f78a006b3eed9b73"
+memory_integration_receipt:
+  generated_task_index_object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+  source_path: "research_control/tasks/TASK_INDEX.md"
+  role: "generated_task_index"
+  authority_status: "generated_noncanonical"
+  owner_skill: "project-memory-system"
+  related_source: "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1"
+  generated_outputs:
+    - "research_control/tasks/TASK_INDEX.csv"
+    - "wiki/indexes/research_control_task_index.md"
+    - "wiki/markdown/md-research-control-task-index.md"
+  retrieval_rows:
+    semantic_object_id: "SEMANTIC-MD-RESEARCH-CONTROL-TASK-INDEX"
+    wiki_object_id: "WIKI-MD-RESEARCH-CONTROL-TASK-INDEX"
+    vault_object_id: "VAULT-MD-RESEARCH-CONTROL-TASK-INDEX"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false before routing"
+      - "query_memory search returned v17 plan and current-frontier retrieval evidence"
+      - "handoff-0659 selected one bounded P10-T04 packet"
+  implementation:
+    status: "PASS"
+    evidence:
+      - "bootstrap discovery registers TASK_INDEX.md as generated_noncanonical"
+      - "research_control/tasks/README.md points to generated task-index outputs and states the boundary"
+      - "focused discovery and Obsidian retrieval tests passed"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P10-T04 task-local memory integration receipt recorded generated task-index registry and retrieval boundaries"
+      - "P10-T04 documentation-impact receipt records live classifier paths and reason codes"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_task_index.py --write refreshed the generated task index after the P10-T04 task artifact set stabilized"
+      - "render_task_index.py --check passed with row_count=800"
+  validator:
+    status: "PASS"
+    evidence:
+      - "validate_task_index.py reported PASS with row_count=800 hard_fail_count=0 warning_count=297"
+      - "historical missing metadata remains reported as warnings rather than repaired or promoted"
+  unit_tests:
+    status: "PASS"
+    evidence:
+      - "focused memory-system discovery test passed"
+      - "memory-system and Obsidian test modules passed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS"
+      - "continue_research_memory_preflight refreshed local retrieval caches after bootstrap"
+      - "query_memory lookup for MD-RESEARCH-CONTROL-TASK-INDEX resolved source, semantic, wiki, vault, and relationship rows"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language --changed PASS with historical warnings only"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "documentation impact validation PASS"
+      - "project improvement signal validation PASS"
+      - "compact frontier validation PASS"
+      - "claim graph validation PASS"
+      - "dependency graph freshness check PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command required before transaction is committed"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+schema_result: "task_index_memory_integrated"
+generated_task_index_memory_integration_created: true
+coherent_resolution_summary: "P10-T04 integrated the generated task index into memory retrieval and folder documentation while preserving noncanonical generated-output boundaries."
+next_recommendation: "Run one bounded v17 P11-T01 GitHub Actions validation workflow packet through an active software-engineer-compatible role overlay."
+physics_progress_status:
+  status: "memory_integration_no_physics_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Integrate generated task index into memory and folder map surfaces."
+  explanation: "This project-control memory integration creates retrieval and documentation support and does not update the Distance-to-GR ledger or discharge a derivation burden."
+distance_to_gr_status:
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Integrate generated task index into memory and folder map surfaces."
+  burden_matrix:
+    - burden: "matter coupling"
+      status_before: "accepted_as_scoped_evidence_precondition"
+      status_after: "accepted_as_scoped_evidence_precondition"
+      review_delta: "no matter-coupling derivation or adoption created"
+    - burden: "Einstein equations"
+      status_before: "not_started"
+      status_after: "not_started"
+      review_delta: "no stress-energy matter action or field-equation authority created"
+    - burden: "benchmark promotion"
+      status_before: "blocked"
+      status_after: "blocked"
+      review_delta: "no benchmark authority created"
+distance_to_gr_delta:
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "accepted_as_scoped_evidence_precondition"
+  ledger_row_updated: false
+claim_boundary:
+  generated_task_index_authority: false
+  memory_retrieval_authority: false
+  proof_authority: false
+  benchmark_authority: false
+  gate_chair_authority: false
+  completed_derivation_authority: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

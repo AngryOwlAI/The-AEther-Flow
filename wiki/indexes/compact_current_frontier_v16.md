@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-027`
-- Latest handoff: `handoff-0659`
-- Current status: `v17_p10_t03_task_index_validator_completed_no_physics_delta`
+- Active task: `RT-20260706-028`
+- Latest handoff: `handoff-0660`
+- Current status: `v17_p10_t04_task_index_memory_folder_docs_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p10_t04_task_index_memory_folder_docs`
-- Role family: `memory-system-maintainer@0.2.0 or documentation-curator@2.0.0 task overlay`
+- Route ID: `v17_p11_t01_github_actions_validation_workflow`
+- Role family: `software-engineer@0.1.0 or active software-engineer-compatible task overlay`
 - Target milestone: `matter_coupling`
-- Milestone burden: Integrate task index into memory retrieval and folder documentation.
+- Milestone burden: Add CI workflow for project-control validation without changing physics claims.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `c00ec61e5bcbebda0f7d9466fa7a71e6463a83ca78a4a62af32f1705bd8be8b0`
-- JSON SHA-256: `e96abcb00a2bd9227cfdd0c2efa5276b38aa93b5f0780e2469a881e12621f631`
+- YAML SHA-256: `e553f662e247a278ed62f57b5f6dcdf6b8432b2425cd310a616adb53deebae75`
+- JSON SHA-256: `b3e4c679359cede046d4ad6cec6e8a8fa8cc0ad1e03f9dce427ae5c77d77804c`
 
 ## Authority Warning
 

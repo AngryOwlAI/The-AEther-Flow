@@ -105,6 +105,29 @@ class ObsidianWikiTests(unittest.TestCase):
                 conn.close()
         self.assertTrue(rows)
 
+    def test_memory_index_searches_generated_task_index_content(self) -> None:
+        self.obsidian.write_generated_registries(
+            REPO_ROOT,
+            self.obsidian.load_rows_by_registry(REPO_ROOT),
+            "2099-01-01T00:00:00Z",
+            write_semantic_text=True,
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            index_path = Path(tmp) / "memory.sqlite"
+            self.obsidian.build_memory_index(REPO_ROOT, index_path)
+            conn = sqlite3.connect(index_path)
+            try:
+                rows = conn.execute(
+                    "SELECT object_id FROM docs_fts WHERE docs_fts MATCH ? AND object_id = ? LIMIT 1",
+                    (
+                        '"Generated navigation support"',
+                        "MD-RESEARCH-CONTROL-TASK-INDEX",
+                    ),
+                ).fetchall()
+            finally:
+                conn.close()
+        self.assertTrue(rows)
+
     def test_lookup_matches_control_registry_identifier_fields(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
