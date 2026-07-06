@@ -5,17 +5,14 @@ does not derive GR, certify a proof, adopt a source law, derive matter coupling,
 derive Einstein equations, promote benchmark status, issue a Gate Chair verdict,
 or complete the derivation.
 
-## Source Materials
+## At A Glance
 
-- `research_control/current_frontier.md`
-- `output/compact_current_frontier_v16.yaml`
-- `registries/DISTANCE_TO_GR_LEDGER.csv`
-- `registries/METRIC_USE_LEDGER.csv`
-- `registries/CLAIM_BOUNDARY_REGISTRY.csv`
-- `research_control/design/distance_to_gr_status_aliases.yaml`
-- `research_control/design/accepted_status_calibration_v1.yaml`
-- `research_control/design/public_status_exists_does_not_exist_source_spec.md`
-- `research_control/handoffs/handoff-0652.yaml`
+| Status card | Positive reading | Boundary |
+| --- | --- | --- |
+| `Resp_lc` | Scoped source-extension selector data exists for continuation. | No detector semantics, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows. |
+| `M_src` | A scoped source-only `M_src` object is available as prerequisite context. | It is not a target manifold, metric, matter-coupling result, benchmark promotion, or completed derivation. |
+| `g_eff` | A scoped source-extension `g_eff` object is available as source-extension context. | It is not an unscoped Lorentzian metric, `MetricData(E)` adoption, matter coupling, Einstein equations, benchmark promotion, or completed derivation. |
+| `matter_coupling` | Scoped source-extension evidence/preconditions exist only for bounded continuation. | No source-law adoption, coupling-law adoption, matter-coupling derivation, stress-energy semantics, matter action, Einstein equations, benchmark promotion, or completed derivation follows. |
 
 ## Dashboard
 
@@ -29,6 +26,18 @@ or complete the derivation.
 | Benchmark promotion | no benchmark promotion from scoped evidence/precondition alone | The status is limited to control status `blocked`, mathematical status `upstream_burdens_missing`, and physical status `no_exact_gr_benchmark_promotion`. | Later bounded packets may use this row only as a blocked-target boundary condition. | No benchmark promotion, benchmark Gate Chair closure, or completed derivation follows. | Blocked by upstream derivation burdens and protected authority. |
 | Finite toy metric response | frozen local route context only | The finite toy route failed tag-removal stress and is frozen locally. | Use only as a local frozen-negative boundary and redesign signal. | It is not `g_eff` scope expansion, matter-coupling derivation, Einstein equations, benchmark promotion, completed derivation, global theory rejection, or future source-extension impossibility. | Route is frozen or must be redesigned before any broader GR use. |
 
+## Source Materials
+
+- AEther-Flow Project. (2026). `research_control/current_frontier.md` [Current research-control frontier].
+- AEther-Flow Project. (2026). `output/compact_current_frontier_v16.yaml` [Compact current-frontier snapshot].
+- AEther-Flow Project. (2026). `registries/DISTANCE_TO_GR_LEDGER.csv` [Distance-to-GR ledger].
+- AEther-Flow Project. (2026). `registries/METRIC_USE_LEDGER.csv` [Metric-use ledger].
+- AEther-Flow Project. (2026). `registries/CLAIM_BOUNDARY_REGISTRY.csv` [Claim boundary registry].
+- AEther-Flow Project. (2026). `research_control/design/distance_to_gr_status_aliases.yaml` [Distance-to-GR status aliases].
+- AEther-Flow Project. (2026). `research_control/design/accepted_status_calibration_v1.yaml` [Accepted-status calibration data].
+- AEther-Flow Project. (2026). `research_control/design/public_status_exists_does_not_exist_source_spec.md` [Public exists / does-not-exist source spec].
+- AEther-Flow Project. (2026). `research_control/handoffs/handoff-0652.yaml` [P9-T01 routing handoff].
+
 ## Reader Scope
 
 Reader scope: proof-state dashboard only. It does not change the
@@ -37,4 +46,17 @@ coupling, derive Einstein equations, promote benchmark status, issue a Gate
 Chair verdict, complete the derivation, or make generated public outputs into
 scientific authority.
 
-Generated from `markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md`.
+<!-- explainer-control: authority_footer -->
+
+## Source Binding And Authority
+
+- **Derived from spec:** `markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md`
+- **Related HTML:** `html/proof-state-dashboard-explainer.html`
+- **Publication brief:** `markdown/publication-briefs/proof-state-dashboard.publication-brief.md`
+- **Authority status:** generated noncanonical reader surface
+
+This page is a generated noncanonical reader surface. It is useful for public
+orientation, but it does not promote ontology, certify proof authority, change
+the Distance-to-GR ledger, derive matter coupling, derive Einstein equations,
+promote benchmark status, issue a Gate Chair verdict, complete the derivation,
+or change any control record.

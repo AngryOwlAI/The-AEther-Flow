@@ -1,0 +1,53 @@
+task_id: "RT-20260706-022"
+task_type: "public_proof_state_dashboard_renderer"
+status: "completed"
+created_at: "2026-07-06T14:18:00Z"
+updated_at: "2026-07-06T14:18:00Z"
+closed_at: "2026-07-06T14:18:00Z"
+parent_task_id: "RT-20260706-021"
+parent_handoff_id: "handoff-0653"
+decision_id: "DDR-20260706-022"
+job_id: "AJ-RT-20260706-022-001"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260706-022"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-05-all-human-gates"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T02"
+  plan_task_name: "Dashboard renderer and generated outputs"
+objective: "Harden the proof-state dashboard GitHub Markdown and standalone HTML derivatives from the registered source spec, register them as a publication pilot, and capture screenshot QA without changing physics claim status."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Render dashboard from tracked control sources and calibrated status cards."
+closure_status: "v17_p9_t02_public_proof_state_dashboard_renderer_completed_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P9-T02 generated GitHub Markdown and standalone HTML dashboard derivatives, publication-process registration, screenshot QA, task-local review evidence, and generated memory/wiki derivative refresh."
+  proof_authority_created: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  detector_semantics_adopted: false
+  matter_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  generated_output_authority_created: false
+output_artifacts:
+  - "github-facing/proof-state-dashboard-explainer.md"
+  - "html/proof-state-dashboard-explainer.html"
+  - "research_control/tasks/RT-20260706-022/artifacts/screenshots/proof-state-dashboard-desktop.png"
+  - "research_control/tasks/RT-20260706-022/artifacts/screenshots/proof-state-dashboard-mobile.png"
+  - "research_control/tasks/RT-20260706-022/artifacts/proof_state_dashboard_publication_review.md"
+next_recommended_action: "Run one bounded v17 P9-T03 README and front-door integration packet."
+notes: "RT-20260706-022 completes v17 P9-T02 by hardening the dashboard reader surfaces from the registered source spec, registering the publication pilot state, and preserving no proof authority no physics promotion and no generated-output authority."
+documentation_impact_id: "DI-RT-20260706-022-001"

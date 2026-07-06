@@ -9,7 +9,7 @@ renderer_skill: "visual-explainer@0.7.1-project-aether-flow"
 publication_brief: "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"
 document_type: "visual_brief"
 visual_strategy: "annotated_table"
-migration_status: "deferred"
+migration_status: "publication_pilot"
 source_materials:
   - "research_control/current_frontier.md"
   - "output/compact_current_frontier_v16.yaml"
@@ -124,3 +124,5 @@ scientific authority.
   rejection or future impossibility.
 - Names tracked source paths visibly.
 - Preserves the noncanonical status of generated GitHub Markdown and HTML.
+- Includes desktop and mobile screenshot QA evidence before the publication
+  brief row can be marked as a publication pilot.

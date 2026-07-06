@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-021`
-- Latest handoff: `handoff-0653`
-- Current status: `v17_p9_t01_public_proof_state_dashboard_source_spec_completed_no_physics_delta`
+- Active task: `RT-20260706-022`
+- Latest handoff: `handoff-0654`
+- Current status: `v17_p9_t02_public_proof_state_dashboard_renderer_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p9_t02_public_proof_state_dashboard_renderer`
-- Role family: ``
+- Route ID: `v17_p9_t03_proof_state_dashboard_front_door_integration`
+- Role family: `documentation-curator@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Render dashboard from tracked control sources and calibrated status cards.
+- Milestone burden: Link proof-state dashboard from front-door docs without changing claim status.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `714759408950d3dee6c7e4b5adbf92554ed950204a20a533f160dcffa6d4484a`
-- JSON SHA-256: `6f95fe83620ce95534c7a658c1593c07405d32b98e17ad3c3bee451983f97304`
+- YAML SHA-256: `100d07f94c293c9ef62c706472e13b07b4590c8cc6d2ccfed8740052c6a9225b`
+- JSON SHA-256: `d94062c40fc51e1d572af0a7b31f929c5b9cf9b88eb4c23aea96dc91bb6fd6fd`
 
 ## Authority Warning
 

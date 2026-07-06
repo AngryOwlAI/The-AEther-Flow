@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-021` and `handoff-0653`.
+`RT-20260706-022` and `handoff-0654`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-021` |
-| Latest handoff ID | `handoff-0653` |
-| Current status | `v17_p9_t01_public_proof_state_dashboard_source_spec_completed_no_physics_delta` |
+| Active task ID | `RT-20260706-022` |
+| Latest handoff ID | `handoff-0654` |
+| Current status | `v17_p9_t02_public_proof_state_dashboard_renderer_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p9 t01 public proof state dashboard source spec completed no physics delta |
-| Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: public proof-state dashboard source spec registered only; no physics delta |
-| Required next authority | P9-T02 may harden the generated GitHub Markdown and HTML derivatives from the registered source spec run screenshot QA and update generated-output registries. |
-| Next recommended action | Run one bounded v17 P9-T02 dashboard renderer hardening generated-output registration and screenshot QA packet. |
+| Current route family | v17 p9 t02 public proof state dashboard renderer completed no physics delta |
+| Target derivation milestone | none; this is project-control tooling work |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P9-T03 README and front-door integration packet. |
+| Required next authority | P9-T03 may link the proof-state dashboard from README and front-door documentation without changing claim status. |
+| Next recommended action | Run one bounded v17 P9-T03 README and front-door integration packet. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-021/00_TASK.yaml`.
-- Active task objective: Create the source-backed proof-state dashboard publication brief and HTML explainer source spec using calibrated status cards and explicit non-authoritative derivative boundaries.
-- Latest handoff path: `research_control/handoffs/handoff-0653.yaml`.
-- Latest handoff summary: RT-20260706-021 completed one bounded v17 P9-T01 proof-state dashboard source-specification packet. The publication brief source spec and validator-compatible seed GitHub Markdown and HTML derivatives exist; screenshot QA renderer hardening and generated-output registration remain deferred to P9-T02. No proof authority source-law adoption matter-coupling derivation Einstein-equation derivation benchmark promotion or completed derivation follows.
-- Current route family: v17 p9 t01 public proof state dashboard source spec completed no physics delta.
-- Next recommended action: Run one bounded v17 P9-T02 dashboard renderer hardening generated-output registration and screenshot QA packet.
+- Active task path: `research_control/tasks/RT-20260706-022/00_TASK.yaml`.
+- Active task objective: Harden the proof-state dashboard GitHub Markdown and standalone HTML derivatives from the registered source spec, register them as a publication pilot, and capture screenshot QA without changing physics claim status.
+- Latest handoff path: `research_control/handoffs/handoff-0654.yaml`.
+- Latest handoff summary: RT-20260706-022 completed one bounded v17 P9-T02 proof-state dashboard renderer packet. The GitHub Markdown and standalone HTML derivatives were hardened from the registered source spec, the publication brief moved to publication_pilot with generated-output registration and screenshot QA evidence, and no proof authority source-law adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict or completed derivation follows.
+- Current route family: v17 p9 t02 public proof state dashboard renderer completed no physics delta.
+- Next recommended action: Run one bounded v17 P9-T03 README and front-door integration packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P9-T02 dashboard renderer hardening generated-output registration and screenshot QA packet.
+Run one bounded v17 P9-T03 README and front-door integration packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,25 +301,20 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-021`;
-- latest handoff: `handoff-0653`;
-- current status: `v17_p9_t01_public_proof_state_dashboard_source_spec_completed_no_physics_delta`;
+- active task: `RT-20260706-022`;
+- latest handoff: `handoff-0654`;
+- current status: `v17_p9_t02_public_proof_state_dashboard_renderer_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `generated_public_outputs_created`: True;
-- latest handoff validation `generated_public_outputs_scope`: validator-compatible seed derivatives only pending P9-T02 hardening registration and screenshot QA;
-- latest handoff validation `global_research_control_validation`: PENDING;
-- latest handoff validation `publication_brief_registered`: True;
-- latest handoff validation `source_spec_registered`: True;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0653.yaml`
-- `research_control/tasks/RT-20260706-021/00_TASK.yaml`
+- `research_control/handoffs/handoff-0654.yaml`
+- `research_control/tasks/RT-20260706-022/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -335,7 +330,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0653*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0654*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

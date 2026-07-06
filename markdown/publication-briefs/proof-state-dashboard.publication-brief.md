@@ -40,7 +40,7 @@ forbidden_patterns:
   - "Rendering accepted scoped evidence/preconditions as source-law adoption, detector semantics, coupling-law adoption, matter coupling, or Einstein equations."
   - "Rendering g_eff as an unscoped Lorentzian metric or physical metric authority."
   - "Rendering finite toy metric response as a program-wide no-go, global theory rejection, or future source-extension impossibility."
-migration_status: "deferred"
+migration_status: "publication_pilot"
 ---
 
 # Publication Brief: Proof-State Dashboard
@@ -51,5 +51,7 @@ not to simplify the claim boundary away. Its purpose is to keep positive status,
 exact scope, allowed use, blocked overread, and next route visible at the same
 time.
 
-The brief is source-only for P9-T01. Public generated outputs, screenshot QA,
-and generated-output registry updates are deferred to P9-T02.
+P9-T02 renders the GitHub Markdown and standalone HTML surfaces as a
+publication pilot. The surfaces remain generated noncanonical reader outputs;
+they do not change proof authority, source authority, the Distance-to-GR
+ledger, or physics claim status.
