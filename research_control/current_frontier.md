@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260705-056` and `handoff-0629`.
+`RT-20260705-057` and `handoff-0630`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260705-056` |
-| Latest handoff ID | `handoff-0629` |
-| Current status | `v17_p3_t03_underclaim_linter_completed_no_physics_delta` |
+| Active task ID | `RT-20260705-057` |
+| Latest handoff ID | `handoff-0630` |
+| Current status | `v17_p3_t04_positive_first_status_card_renderer_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p3 t03 underclaim linter to p3 t04 positive first renderer no physics delta |
+| Current route family | v17 p3 t04 positive first renderer to p3 t05 public documentation no physics delta |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P3-T04 renderer update for positive-first status cards with no physics delta |
-| Next recommended action | Run one bounded v17 P3-T04 renderer update for positive-first status cards. |
+| Required next authority | P3-T05 public-facing documentation calibration with no physics delta |
+| Next recommended action | Run one bounded v17 P3-T05 public-facing documentation calibration pass. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260705-056/00_TASK.yaml`.
-- Active task objective: Add advisory underclaim calibration warnings to the claim-language linter while preserving existing overclaim hard gates.
-- Latest handoff path: `research_control/handoffs/handoff-0629.yaml`.
-- Latest handoff summary: RT-20260705-056 completed one bounded v17 P3-T03 claim-language linter underclaim calibration packet. It added advisory underclaim classes and report-level finding-kind separation while preserving existing overclaim hard gates.
-- Current route family: v17 p3 t03 underclaim linter to p3 t04 positive first renderer no physics delta.
-- Next recommended action: Run one bounded v17 P3-T04 renderer update for positive-first status cards.
+- Active task path: `research_control/tasks/RT-20260705-057/00_TASK.yaml`.
+- Active task objective: Update the current-frontier and compact-frontier renderers so high-risk accepted rows expose positive-first status cards with exact scope allowed use and blocked overread fields.
+- Latest handoff path: `research_control/handoffs/handoff-0630.yaml`.
+- Latest handoff summary: RT-20260705-057 completed one bounded v17 P3-T04 positive-first status-card renderer packet. It updated frontier and compact-frontier renderers so high-risk accepted rows expose positive-first exact-scope status cards and compact machine-readable status-card data.
+- Current route family: v17 p3 t04 positive first renderer to p3 t05 public documentation no physics delta.
+- Next recommended action: Run one bounded v17 P3-T05 public-facing documentation calibration pass.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -95,6 +95,64 @@ This ledger status must not be read as coupling-law adoption, universal matter-c
 
 Universal matter coupling and downstream GR promotion remain blocked until a
 separate tracked route and the required protected authorities establish them.
+
+## Positive-First Status Cards
+
+Every high-risk accepted or blocked row below is rendered with positive status
+first, then exact scope, allowed use, and blocked overread. These cards are
+reader-facing calibration only. They do not override the Distance-to-GR ledger
+and do not create physics proof, Gate Chair authority, benchmark authority, or
+completed-derivation authority.
+
+### `m_src`
+
+**Positive status:** M_src is adopted only as a scoped source-only M_src object.
+
+**Scope:** The adoption applies only under the declared source-only GSC candidate scope and fail-closed boundary.
+
+**Allowed use:** Later bounded packets may use it as source-side prerequisite context.
+
+**Blocked overread:** It is not a target manifold, metric, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation.
+
+### `g_eff`
+
+**Positive status:** g_eff is adopted only as a scoped source-extension g_eff object.
+
+**Scope:** The adoption applies only to the declared source-extension candidate scope.
+
+**Allowed use:** Later bounded packets may use it as scoped source-extension context.
+
+**Blocked overread:** It is not an unscoped Lorentzian metric, MetricData(E) adoption, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation.
+
+### `matter_coupling`
+
+**Positive status:** matter_coupling has accepted scoped evidence/precondition only for continuation.
+
+**Scope:** The support is certificate-indexed, source-side, and finite/local only.
+
+**Allowed use:** Later bounded packets may use it to construct, audit, or stress one source-side coupling-law candidate.
+
+**Blocked overread:** It is not source-law adoption, detector semantics, coupling-law adoption, matter-coupling derivation, stress-energy semantics, matter action, Einstein-equation result, benchmark promotion, or completed derivation.
+
+### `einstein_equations`
+
+**Positive status:** not started; no positive derivation status
+
+**Scope:** The status is limited to control status not_started, mathematical status dynamics_action_or_variation_missing, physical status no_field_equation_derivation.
+
+**Allowed use:** Later bounded packets may use this row only as a blocked-target boundary condition.
+
+**Blocked overread:** No einstein equations follows from this row. No benchmark promotion follows from this row. No completed derivation follows from this row.
+
+### `benchmark_promotion`
+
+**Positive status:** no benchmark promotion from scoped evidence/precondition alone
+
+**Scope:** The status is limited to control status blocked, mathematical status upstream_burdens_missing, physical status no_exact_gr_benchmark_promotion.
+
+**Allowed use:** Later bounded packets may use this row only as a blocked-target boundary condition.
+
+**Blocked overread:** No benchmark promotion follows from this row. No benchmark gate chair closure follows from this row. No completed derivation follows from this row.
 
 ## Layered Distance-To-GR Boundary Notes
 
@@ -196,7 +254,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P3-T04 renderer update for positive-first status cards.
+Run one bounded v17 P3-T05 public-facing documentation calibration pass.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -224,9 +282,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260705-056`;
-- latest handoff: `handoff-0629`;
-- current status: `v17_p3_t03_underclaim_linter_completed_no_physics_delta`;
+- active task: `RT-20260705-057`;
+- latest handoff: `handoff-0630`;
+- current status: `v17_p3_t04_positive_first_status_card_renderer_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -241,8 +299,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0629.yaml`
-- `research_control/tasks/RT-20260705-056/00_TASK.yaml`
+- `research_control/handoffs/handoff-0630.yaml`
+- `research_control/tasks/RT-20260705-057/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -258,7 +316,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0629*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0630*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

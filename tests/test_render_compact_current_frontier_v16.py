@@ -144,6 +144,22 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
                 {row["burden_id"] for row in rows},
                 {"m_src", "g_eff", "matter_coupling", "einstein_equations", "benchmark_promotion"},
             )
+            cards = snapshot["high_risk_status_cards"]
+            self.assertEqual(
+                {card["object_id"] for card in cards},
+                {"m_src", "g_eff", "matter_coupling", "einstein_equations", "benchmark_promotion"},
+            )
+            matter_card = next(card for card in cards if card["object_id"] == "matter_coupling")
+            self.assertEqual(
+                matter_card["positive_status"],
+                "accepted only as scoped source-extension evidence/precondition",
+            )
+            self.assertIn("exact_scope", matter_card)
+            self.assertIn("allowed_use", matter_card)
+            self.assertIn("coupling law adoption", " ".join(matter_card["blocked_overread"]))
+            for row in rows:
+                self.assertIn("high_risk_status_card", row)
+                self.assertEqual(row["high_risk_status_card"]["object_id"], row["burden_id"])
             self.assertNotIn(
                 "accepted",
                 [
@@ -178,6 +194,7 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
             payload = json.loads(output.getvalue())
             self.assertEqual(payload["schema_id"], "compact_current_frontier_v16")
             self.assertEqual(payload["validation"]["latest_required_status"], "PASS")
+            self.assertIn("high_risk_status_cards", payload)
 
 
 if __name__ == "__main__":

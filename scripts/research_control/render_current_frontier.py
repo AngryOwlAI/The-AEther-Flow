@@ -23,6 +23,14 @@ SCHEMA_ID = "current_frontier_state_v1"
 DEFAULT_FRONTIER_PATH = "research_control/current_frontier.md"
 LEDGER_PATH = "registries/DISTANCE_TO_GR_LEDGER.csv"
 STATUS_ALIAS_PATH = "research_control/design/distance_to_gr_status_aliases.yaml"
+ACCEPTED_STATUS_CALIBRATION_PATH = "research_control/design/accepted_status_calibration_v1.yaml"
+HIGH_RISK_STATUS_CARD_IDS = [
+    "m_src",
+    "g_eff",
+    "matter_coupling",
+    "einstein_equations",
+    "benchmark_promotion",
+]
 VALIDATION_LAYER_ORDER = [
     "pre_execution",
     "completion_internal",
@@ -213,6 +221,122 @@ def reader_facing_status(row: dict[str, str], aliases: dict[str, dict[str, Any]]
     if display:
         return display
     return text_value(row.get("current_status"))
+
+
+def calibration_rows(calibration: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    root = calibration.get("accepted_status_calibration_v1")
+    root = root if isinstance(root, dict) else {}
+    rows = root.get("high_risk_objects")
+    if not isinstance(rows, dict):
+        return {}
+    return {str(key): value for key, value in rows.items() if isinstance(value, dict)}
+
+
+def sentence_from_guard_token(token: str) -> str:
+    raw = token.removeprefix("no_").strip()
+    text = raw.replace("_", " ").strip()
+    if not text:
+        return ""
+    return f"No {text} follows from this row."
+
+
+def fallback_scope_sentence(row: dict[str, str]) -> str:
+    pieces = [
+        f"control status {text_value(row.get('control_status')) or 'unspecified'}",
+        f"mathematical status {text_value(row.get('mathematical_status')) or 'unspecified'}",
+        f"physical status {text_value(row.get('physical_status')) or 'unspecified'}",
+    ]
+    return "The status is limited to " + ", ".join(pieces) + "."
+
+
+def fallback_allowed_use_sentence(row: dict[str, str]) -> str:
+    burden_id = text_value(row.get("burden_id"))
+    if burden_id in {"einstein_equations", "benchmark_promotion"}:
+        return "Later bounded packets may use this row only as a blocked-target boundary condition."
+    return "Later bounded packets may use this row only under the listed scope and overread guards."
+
+
+def fallback_blocked_overread_items(row: dict[str, str]) -> list[str]:
+    tokens = split_tokens(row.get("overread_guard", ""))
+    sentences = [sentence_from_guard_token(token) for token in tokens]
+    return [sentence for sentence in sentences if sentence]
+
+
+def status_card_for_row(
+    row: dict[str, str],
+    aliases: dict[str, dict[str, Any]],
+    calibration: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    burden_id = text_value(row.get("burden_id"))
+    card_source = calibration.get(burden_id, {})
+    if card_source:
+        blocked_items = card_source.get("full_control_blocked_items")
+        return {
+            "object_id": burden_id,
+            "positive_status": text_value(card_source.get("positive_status_sentence")),
+            "exact_scope": text_value(card_source.get("exact_scope_sentence")),
+            "allowed_use": text_value(card_source.get("allowed_use_sentence")),
+            "blocked_overread": [
+                text_value(item)
+                for item in blocked_items
+                if text_value(item)
+            ]
+            if isinstance(blocked_items, list)
+            else [text_value(card_source.get("blocked_overread_sentence"))],
+            "blocked_overread_sentence": text_value(card_source.get("blocked_overread_sentence")),
+            "evidence_source": text_value(card_source.get("evidence_source")),
+        }
+    blocked_items = fallback_blocked_overread_items(row)
+    return {
+        "object_id": burden_id,
+        "positive_status": reader_facing_status(row, aliases),
+        "exact_scope": fallback_scope_sentence(row),
+        "allowed_use": fallback_allowed_use_sentence(row),
+        "blocked_overread": blocked_items,
+        "blocked_overread_sentence": " ".join(blocked_items),
+        "evidence_source": text_value(row.get("last_evidence_path")),
+    }
+
+
+def high_risk_status_cards(
+    rows: list[dict[str, str]],
+    aliases: dict[str, dict[str, Any]],
+    calibration: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    cards: list[dict[str, Any]] = []
+    for burden_id in HIGH_RISK_STATUS_CARD_IDS:
+        row = row_by_burden(rows, burden_id)
+        if row:
+            cards.append(status_card_for_row(row, aliases, calibration))
+    return cards
+
+
+def status_cards_markdown(cards: list[dict[str, Any]]) -> str:
+    if not cards:
+        return "No high-risk status cards are available."
+    sections: list[str] = []
+    for card in cards:
+        blocked = text_value(card.get("blocked_overread_sentence"))
+        if not blocked:
+            blocked_items = card.get("blocked_overread")
+            if isinstance(blocked_items, list):
+                blocked = " ".join(text_value(item) for item in blocked_items if text_value(item))
+        sections.append(
+            "\n".join(
+                [
+                    f"### `{md_cell(card.get('object_id', ''))}`",
+                    "",
+                    f"**Positive status:** {md_cell(card.get('positive_status', ''))}",
+                    "",
+                    f"**Scope:** {md_cell(card.get('exact_scope', ''))}",
+                    "",
+                    f"**Allowed use:** {md_cell(card.get('allowed_use', ''))}",
+                    "",
+                    f"**Blocked overread:** {md_cell(blocked)}",
+                ]
+            )
+        )
+    return "\n\n".join(sections)
 
 
 def ledger_rows_for_markdown(rows: list[dict[str, str]], aliases: dict[str, dict[str, Any]]) -> str:
@@ -776,6 +900,13 @@ def build_state(repo_root: Path) -> dict[str, Any]:
     active_task = load_control_yaml(repo_root, active_task_path(active_task_id))
     ledger_rows = read_csv_rows(repo_root, LEDGER_PATH)
     status_aliases = load_optional_control_yaml(repo_root, STATUS_ALIAS_PATH)
+    accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_PATH)
+    aliases = status_alias_rows(status_aliases)
+    status_cards = high_risk_status_cards(
+        ledger_rows,
+        aliases,
+        calibration_rows(accepted_status_calibration),
+    )
     next_action = text_value(latest_handoff.get("next_action")) or text_value(
         program_state.get("next_recommended_action")
     )
@@ -795,6 +926,8 @@ def build_state(repo_root: Path) -> dict[str, Any]:
         "v16_completed": bool_value(latest_handoff.get("v16_completed")),
         "distance_to_gr_rows": ledger_rows,
         "status_aliases": status_aliases,
+        "accepted_status_calibration": accepted_status_calibration,
+        "high_risk_status_cards": status_cards,
         "route_family": route_family_text(latest_handoff, active_task),
         "target_derivation_milestone": target_milestone_text(latest_handoff),
         "current_burden": current_burden_text(latest_handoff),
@@ -808,6 +941,7 @@ def render_markdown(state: dict[str, Any]) -> str:
     ledger_rows = state["distance_to_gr_rows"]
     status_aliases = state["status_aliases"]
     aliases = status_alias_rows(status_aliases)
+    status_cards = state["high_risk_status_cards"]
     task_objective = text_value(task.get("objective"))
     handoff_summary = text_value(handoff.get("summary"))
     validation = handoff.get("validation") if isinstance(handoff.get("validation"), dict) else {}
@@ -894,6 +1028,16 @@ active-state authority. The renderer provides a deterministic repair command:
 
 Universal matter coupling and downstream GR promotion remain blocked until a
 separate tracked route and the required protected authorities establish them.
+
+## Positive-First Status Cards
+
+Every high-risk accepted or blocked row below is rendered with positive status
+first, then exact scope, allowed use, and blocked overread. These cards are
+reader-facing calibration only. They do not override the Distance-to-GR ledger
+and do not create physics proof, Gate Chair authority, benchmark authority, or
+completed-derivation authority.
+
+{status_cards_markdown(status_cards)}
 
 ## Layered Distance-To-GR Boundary Notes
 
@@ -1005,6 +1149,8 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
     ]
     if state["status_aliases"]:
         source_paths.append(STATUS_ALIAS_PATH)
+    if state["accepted_status_calibration"]:
+        source_paths.append(ACCEPTED_STATUS_CALIBRATION_PATH)
     payload = {
         "schema_id": SCHEMA_ID,
         "active_task_id": state["active_task_id"],
@@ -1023,6 +1169,13 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
         "status_alias_path": STATUS_ALIAS_PATH if state["status_aliases"] else "",
         "status_alias_row_count": len(status_alias_rows(state["status_aliases"])),
         "status_alias_integration": "reader_facing_status_column",
+        "accepted_status_calibration_path": (
+            ACCEPTED_STATUS_CALIBRATION_PATH if state["accepted_status_calibration"] else ""
+        ),
+        "high_risk_status_card_count": len(state["high_risk_status_cards"]),
+        "high_risk_status_card_object_ids": [
+            card["object_id"] for card in state["high_risk_status_cards"]
+        ],
         "layered_status_fields": [
             "control_status",
             "mathematical_status",

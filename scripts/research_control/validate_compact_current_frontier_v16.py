@@ -28,6 +28,8 @@ CHECKED_FAILURE_MODES = [
     "latest_handoff_mismatch",
     "next_route_mismatch",
     "high_risk_row_missing",
+    "high_risk_status_card_missing",
+    "high_risk_status_card_incomplete",
     "blocked_claim_missing",
     "matter_coupling_overpromoted",
     "einstein_equations_overpromoted",
@@ -90,6 +92,19 @@ def high_risk_rows(payload: dict[str, Any]) -> dict[str, dict[str, Any]]:
             burden_id = str(row.get("burden_id", "")).strip()
             if burden_id:
                 output[burden_id] = row
+    return output
+
+
+def high_risk_status_cards(payload: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    rows = payload.get("high_risk_status_cards", [])
+    if not isinstance(rows, list):
+        return {}
+    output: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        if isinstance(row, dict):
+            object_id = str(row.get("object_id", "")).strip()
+            if object_id:
+                output[object_id] = row
     return output
 
 
@@ -185,6 +200,55 @@ def validate_high_risk_rows(payload: dict[str, Any], errors: list[dict[str, str]
     for burden_id in renderer.HIGH_RISK_BURDEN_IDS:
         if burden_id not in rows:
             append_error(errors, f"high_risk_row_missing:{burden_id}", f"missing high-risk row: {burden_id}")
+
+
+def validate_high_risk_status_cards(payload: dict[str, Any], errors: list[dict[str, str]]) -> None:
+    cards_value = payload.get("high_risk_status_cards")
+    if not isinstance(cards_value, list):
+        append_error(
+            errors,
+            "high_risk_status_card_missing",
+            "high_risk_status_cards must be a list",
+        )
+        return
+    cards = high_risk_status_cards(payload)
+    rows = high_risk_rows(payload)
+    for burden_id in renderer.HIGH_RISK_BURDEN_IDS:
+        card = cards.get(burden_id)
+        if not isinstance(card, dict):
+            append_error(
+                errors,
+                f"high_risk_status_card_missing:{burden_id}",
+                f"missing high-risk status card: {burden_id}",
+            )
+        else:
+            for field in ["positive_status", "exact_scope", "allowed_use"]:
+                if not text(card.get(field)):
+                    append_error(
+                        errors,
+                        f"high_risk_status_card_incomplete:{burden_id}:{field}",
+                        f"status card {burden_id} missing {field}",
+                    )
+            blocked = card.get("blocked_overread")
+            if not isinstance(blocked, list) or not [item for item in blocked if text(item)]:
+                append_error(
+                    errors,
+                    f"high_risk_status_card_incomplete:{burden_id}:blocked_overread",
+                    f"status card {burden_id} missing blocked_overread list",
+                )
+            if lower_text(card.get("positive_status")) == "accepted":
+                append_error(
+                    errors,
+                    f"high_risk_status_card_incomplete:{burden_id}:bare_accepted",
+                    f"status card {burden_id} renders bare accepted",
+                )
+        nested = rows.get(burden_id, {}).get("high_risk_status_card")
+        if not isinstance(nested, dict) or nested.get("object_id") != burden_id:
+            append_error(
+                errors,
+                f"high_risk_status_card_missing:{burden_id}:nested",
+                f"high-risk row {burden_id} missing nested high_risk_status_card",
+            )
 
 
 def validate_authority_warning(payload: dict[str, Any], errors: list[dict[str, str]]) -> None:
@@ -349,6 +413,7 @@ def build_report(
                 append_error(errors, "schema_boundary_error", message)
         validate_required_claims(primary_payload, errors)
         validate_high_risk_rows(primary_payload, errors)
+        validate_high_risk_status_cards(primary_payload, errors)
         validate_authority_warning(primary_payload, errors)
         validate_overpromotion(primary_payload, errors)
 

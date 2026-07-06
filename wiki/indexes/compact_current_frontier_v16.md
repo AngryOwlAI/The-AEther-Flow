@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-056`
-- Latest handoff: `handoff-0629`
-- Current status: `v17_p3_t03_underclaim_linter_completed_no_physics_delta`
+- Active task: `RT-20260705-057`
+- Latest handoff: `handoff-0630`
+- Current status: `v17_p3_t04_positive_first_status_card_renderer_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p3_t04_positive_first_status_card_renderer_update`
-- Role family: ``
+- Route ID: `v17_p3_t05_public_documentation_calibration_pass`
+- Role family: `documentation-curator@2.0.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Update frontier and compact-frontier renderers to use calibrated positive-first status cards.
+- Milestone burden: Update public-facing summaries to use calibrated acceptance language without changing claim status.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -30,10 +30,22 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 | `einstein_equations` | not started; no positive derivation status | not_started | no_field_equation_derivation | none |
 | `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | blocked | no_exact_gr_benchmark_promotion | none |
 
+## Positive-First Status Cards
+
+These cards render high-risk rows in the required order: positive status, exact scope, allowed use, and blocked overread. They are operational calibration only and do not create physics proof authority.
+
+| Object | Positive status | Scope | Allowed use | Blocked overread |
+| --- | --- | --- | --- | --- |
+| `m_src` | M_src is adopted only as a scoped source-only M_src object. | The adoption applies only under the declared source-only GSC candidate scope and fail-closed boundary. | Later bounded packets may use it as source-side prerequisite context. | no_target_manifold<br>no_metric<br>no_metricdata_e_scope_expansion<br>no_geff_scope_expansion<br>no_matter_coupling<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation |
+| `g_eff` | g_eff is adopted only as a scoped source-extension g_eff object. | The adoption applies only to the declared source-extension candidate scope. | Later bounded packets may use it as scoped source-extension context. | no_unscoped_lorentzian_metric<br>no_metricdata_e_adoption<br>no_unscoped_geff<br>no_matter_coupling<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation |
+| `matter_coupling` | matter_coupling has accepted scoped evidence/precondition only for continuation. | The support is certificate-indexed, source-side, and finite/local only. | Later bounded packets may use it to construct, audit, or stress one source-side coupling-law candidate. | no_source_law_adoption<br>no_rr_e_transport_law_adoption<br>no_positive_ms_profile_adoption<br>no_source_matter_semantics_readiness_law_adoption<br>no_matter_semantics_adoption<br>no_detector_semantics_adoption<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation |
+| `einstein_equations` | not started; no positive derivation status | The status is limited to control status not_started, mathematical status dynamics_action_or_variation_missing, physical status no_field_equation_derivation. | Later bounded packets may use this row only as a blocked-target boundary condition. | No einstein equations follows from this row.<br>No benchmark promotion follows from this row.<br>No completed derivation follows from this row. |
+| `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | The status is limited to control status blocked, mathematical status upstream_burdens_missing, physical status no_exact_gr_benchmark_promotion. | Later bounded packets may use this row only as a blocked-target boundary condition. | No benchmark promotion follows from this row.<br>No benchmark gate chair closure follows from this row.<br>No completed derivation follows from this row. |
+
 ## Snapshot Hashes
 
-- YAML SHA-256: `8c72dc29ea85f74936a4b9931db704049c929259cedd8b0482b1dfa56201d425`
-- JSON SHA-256: `c3adc20dabb71ab65dba1c7157c78c65dc955359f61b186ffbee2ed904ec16f2`
+- YAML SHA-256: `a138fae5dc902fbd1543bf15e920d51da0e994bbca9c02c7bfc194b0343ebd61`
+- JSON SHA-256: `7770e9c93e044bcfe06748191396fa2db565a417fac39c714d818fc97de55c81`
 
 ## Authority Warning
 

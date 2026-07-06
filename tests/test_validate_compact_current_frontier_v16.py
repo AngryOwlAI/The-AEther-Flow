@@ -106,6 +106,28 @@ class ValidateCompactCurrentFrontierV16Tests(unittest.TestCase):
 
             self.assertIn("high_risk_row_missing:matter_coupling", error_ids(report))
 
+    def test_missing_status_card_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write_fixture_outputs(root)
+            json_path = root / "output" / "compact_current_frontier_v16.json"
+            payload = json.loads(json_path.read_text(encoding="utf-8"))
+            payload["high_risk_status_cards"] = [
+                card
+                for card in payload["high_risk_status_cards"]
+                if card["object_id"] != "matter_coupling"
+            ]
+            for row in payload["distance_to_gr"]["high_risk_rows"]:
+                if row["burden_id"] == "matter_coupling":
+                    row.pop("high_risk_status_card", None)
+            json_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+            report = self.validator.build_report(root)
+
+            ids = error_ids(report)
+            self.assertIn("high_risk_status_card_missing:matter_coupling", ids)
+            self.assertIn("high_risk_status_card_missing:matter_coupling:nested", ids)
+
     def test_overpromoted_einstein_equations_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

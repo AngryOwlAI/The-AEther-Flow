@@ -187,6 +187,11 @@ class RenderCurrentFrontierTests(unittest.TestCase):
                 payload["status_alias_integration"],
                 "reader_facing_status_column",
             )
+            self.assertEqual(payload["high_risk_status_card_count"], 4)
+            self.assertEqual(
+                payload["high_risk_status_card_object_ids"],
+                ["g_eff", "matter_coupling", "einstein_equations", "benchmark_promotion"],
+            )
             self.assertIn(
                 "research_control/design/distance_to_gr_status_aliases.yaml",
                 payload["source_paths"],
@@ -258,6 +263,11 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             self.assertIn("accepted_as_scoped_evidence_precondition", markdown)
             self.assertIn("not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics", markdown)
             self.assertIn("no_matter_coupling_derivation", markdown)
+            self.assertIn("Positive-First Status Cards", markdown)
+            self.assertIn("**Positive status:** accepted only as scoped source-extension evidence/precondition", markdown)
+            self.assertIn("**Scope:** The status is limited to control status accepted_as_scoped_evidence_precondition", markdown)
+            self.assertIn("**Allowed use:** Later bounded packets may use this row only under the listed scope and overread guards.", markdown)
+            self.assertIn("**Blocked overread:** No coupling law adoption follows from this row.", markdown)
             self.assertIn("not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations", markdown)
             self.assertIn("no_unscoped_geff_adoption", markdown)
             self.assertIn("no_field_equation_derivation", markdown)

@@ -24,6 +24,7 @@ PROGRAM_STATE_PATH = "research_control/program_state.yaml"
 DISTANCE_LEDGER_PATH = "registries/DISTANCE_TO_GR_LEDGER.csv"
 CURRENT_FRONTIER_PATH = "research_control/current_frontier.md"
 MARKDOWN_REGISTRY_PATH = "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+ACCEPTED_STATUS_CALIBRATION_PATH = "research_control/design/accepted_status_calibration_v1.yaml"
 DEFAULT_YAML_PATH = "output/compact_current_frontier_v16.yaml"
 DEFAULT_JSON_PATH = "output/compact_current_frontier_v16.json"
 DEFAULT_MARKDOWN_PATH = "wiki/indexes/compact_current_frontier_v16.md"
@@ -59,6 +60,7 @@ YAML_FIELD_ORDER = [
     "active_state",
     "next_route",
     "claim_boundary",
+    "high_risk_status_cards",
     "scoped_positive_objects",
     "scoped_evidence_preconditions",
     "blocked_physical_targets",
@@ -94,6 +96,19 @@ def load_control_yaml(repo_root: Path, rel_path: str) -> dict[str, Any]:
     path = repo_path(repo_root, rel_path)
     if not path.exists():
         raise CompactFrontierError(f"missing YAML source: {rel_path}")
+    try:
+        data = load_yaml(path)
+    except StrictYamlError as exc:
+        raise CompactFrontierError(f"invalid YAML source {rel_path}: {exc}") from exc
+    if not isinstance(data, dict):
+        raise CompactFrontierError(f"YAML source is not a mapping: {rel_path}")
+    return data
+
+
+def load_optional_control_yaml(repo_root: Path, rel_path: str) -> dict[str, Any]:
+    path = repo_path(repo_root, rel_path)
+    if not path.exists():
+        return {}
     try:
         data = load_yaml(path)
     except StrictYamlError as exc:
@@ -170,7 +185,100 @@ def guarded_reader_status(row: dict[str, str], frontier_text: str) -> str:
     return raw_status
 
 
-def high_risk_row(row: dict[str, str], frontier_text: str) -> dict[str, Any]:
+def calibration_rows(calibration: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    root = calibration.get("accepted_status_calibration_v1")
+    root = root if isinstance(root, dict) else {}
+    rows = root.get("high_risk_objects")
+    if not isinstance(rows, dict):
+        return {}
+    return {str(key): value for key, value in rows.items() if isinstance(value, dict)}
+
+
+def sentence_from_guard_token(token: str) -> str:
+    raw = token.removeprefix("no_").strip()
+    text = raw.replace("_", " ").strip()
+    if not text:
+        return ""
+    return f"No {text} follows from this row."
+
+
+def fallback_scope_sentence(row: dict[str, str]) -> str:
+    return (
+        "The status is limited to "
+        f"control status {text_value(row.get('control_status')) or 'unspecified'}, "
+        f"mathematical status {text_value(row.get('mathematical_status')) or 'unspecified'}, "
+        f"physical status {text_value(row.get('physical_status')) or 'unspecified'}."
+    )
+
+
+def fallback_allowed_use_sentence(row: dict[str, str]) -> str:
+    burden_id = text_value(row.get("burden_id"))
+    if burden_id in {"einstein_equations", "benchmark_promotion"}:
+        return "Later bounded packets may use this row only as a blocked-target boundary condition."
+    return "Later bounded packets may use this row only under the listed scope and overread guards."
+
+
+def fallback_blocked_overread_items(row: dict[str, str]) -> list[str]:
+    return [
+        sentence
+        for sentence in (sentence_from_guard_token(token) for token in split_tokens(row.get("overread_guard", "")))
+        if sentence
+    ]
+
+
+def status_card_for_row(
+    row: dict[str, str],
+    frontier_text: str,
+    calibration: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    burden_id = text_value(row.get("burden_id"))
+    card_source = calibration.get(burden_id, {})
+    if card_source:
+        blocked_items = card_source.get("full_control_blocked_items")
+        blocked_overread = [
+            text_value(item)
+            for item in blocked_items
+            if text_value(item)
+        ] if isinstance(blocked_items, list) else [text_value(card_source.get("blocked_overread_sentence"))]
+        return {
+            "object_id": burden_id,
+            "positive_status": text_value(card_source.get("positive_status_sentence")),
+            "exact_scope": text_value(card_source.get("exact_scope_sentence")),
+            "allowed_use": text_value(card_source.get("allowed_use_sentence")),
+            "blocked_overread": blocked_overread,
+            "blocked_overread_sentence": text_value(card_source.get("blocked_overread_sentence")),
+            "evidence_source": text_value(card_source.get("evidence_source")),
+        }
+    blocked_overread = fallback_blocked_overread_items(row)
+    return {
+        "object_id": burden_id,
+        "positive_status": guarded_reader_status(row, frontier_text),
+        "exact_scope": fallback_scope_sentence(row),
+        "allowed_use": fallback_allowed_use_sentence(row),
+        "blocked_overread": blocked_overread,
+        "blocked_overread_sentence": " ".join(blocked_overread),
+        "evidence_source": text_value(row.get("last_evidence_path")),
+    }
+
+
+def high_risk_status_cards(
+    rows: list[dict[str, str]],
+    frontier_text: str,
+    calibration: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    output: list[dict[str, Any]] = []
+    for burden_id in HIGH_RISK_BURDEN_IDS:
+        row = row_by_burden(rows, burden_id)
+        if row:
+            output.append(status_card_for_row(row, frontier_text, calibration))
+    return output
+
+
+def high_risk_row(
+    row: dict[str, str],
+    frontier_text: str,
+    calibration: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
     return {
         "burden_id": row.get("burden_id", ""),
         "reader_facing_status": guarded_reader_status(row, frontier_text),
@@ -181,6 +289,7 @@ def high_risk_row(row: dict[str, str], frontier_text: str) -> dict[str, Any]:
         "promotion_status": row.get("promotion_status", ""),
         "overread_guard": split_tokens(row.get("overread_guard", "")),
         "last_evidence_path": row.get("last_evidence_path", ""),
+        "high_risk_status_card": status_card_for_row(row, frontier_text, calibration),
     }
 
 
@@ -293,6 +402,8 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
     ledger_rows = read_csv_rows(repo_root, DISTANCE_LEDGER_PATH)
     markdown_rows = read_csv_rows(repo_root, MARKDOWN_REGISTRY_PATH)
     frontier_text = read_text_source(repo_root, CURRENT_FRONTIER_PATH)
+    accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_PATH)
+    calibration = calibration_rows(accepted_status_calibration)
     selected_route = latest_handoff.get("selected_next_route")
     selected_route = selected_route if isinstance(selected_route, dict) else {}
     hard_blocks = latest_handoff.get("hard_blocks")
@@ -303,20 +414,24 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
     v16_completed = bool_value(latest_handoff.get("v16_completed"))
 
     high_risk_rows = [
-        high_risk_row(row_by_burden(ledger_rows, burden_id), frontier_text)
+        high_risk_row(row_by_burden(ledger_rows, burden_id), frontier_text, calibration)
         for burden_id in HIGH_RISK_BURDEN_IDS
         if row_by_burden(ledger_rows, burden_id)
     ]
+    status_cards = high_risk_status_cards(ledger_rows, frontier_text, calibration)
+    generated_from = [
+        PROGRAM_STATE_PATH,
+        latest_handoff_path,
+        DISTANCE_LEDGER_PATH,
+        CURRENT_FRONTIER_PATH,
+        MARKDOWN_REGISTRY_PATH,
+    ]
+    if accepted_status_calibration:
+        generated_from.append(ACCEPTED_STATUS_CALIBRATION_PATH)
 
     return {
         "schema_id": SCHEMA_ID,
-        "generated_from": [
-            PROGRAM_STATE_PATH,
-            latest_handoff_path,
-            DISTANCE_LEDGER_PATH,
-            CURRENT_FRONTIER_PATH,
-            MARKDOWN_REGISTRY_PATH,
-        ],
+        "generated_from": generated_from,
         "active_state": {
             "active_task_id": active_task_id,
             "latest_handoff_id": latest_handoff_id,
@@ -337,6 +452,7 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
             "proof_authority": False,
             "blocked_claims": dedupe_ordered([*REQUIRED_BLOCKED_CLAIMS, *[text_value(item) for item in hard_blocks]]),
         },
+        "high_risk_status_cards": status_cards,
         "scoped_positive_objects": scoped_positive_objects(ledger_rows, frontier_text),
         "scoped_evidence_preconditions": scoped_evidence_preconditions(ledger_rows, frontier_text),
         "blocked_physical_targets": blocked_physical_targets(ledger_rows, frontier_text),
@@ -382,13 +498,72 @@ def validate_snapshot(snapshot: dict[str, Any]) -> list[str]:
             continue
         if row.get("burden_id") in HIGH_RISK_BURDEN_IDS and row.get("reader_facing_status") == "accepted":
             errors.append(f"bare accepted high-risk row: {row.get('burden_id')}")
+        card = row.get("high_risk_status_card")
+        if not isinstance(card, dict):
+            errors.append(f"missing nested status card: {row.get('burden_id')}")
+            continue
+        if card.get("object_id") != row.get("burden_id"):
+            errors.append(f"nested status card object mismatch: {row.get('burden_id')}")
+    cards = snapshot.get("high_risk_status_cards")
+    if not isinstance(cards, list):
+        errors.append("high_risk_status_cards must be a list")
+        cards = []
+    cards_by_id = {
+        card.get("object_id"): card
+        for card in cards
+        if isinstance(card, dict) and text_value(card.get("object_id"))
+    }
+    for burden_id in HIGH_RISK_BURDEN_IDS:
+        card = cards_by_id.get(burden_id)
+        if not isinstance(card, dict):
+            errors.append(f"missing high-risk status card: {burden_id}")
+            continue
+        for field in ["positive_status", "exact_scope", "allowed_use"]:
+            if not text_value(card.get(field)):
+                errors.append(f"empty status card field {field}: {burden_id}")
+        blocked = card.get("blocked_overread")
+        if not isinstance(blocked, list) or not [item for item in blocked if text_value(item)]:
+            errors.append(f"empty status card blocked_overread: {burden_id}")
+        if text_value(card.get("positive_status")).lower() == "accepted":
+            errors.append(f"bare accepted status card: {burden_id}")
     return errors
+
+
+def markdown_list_cell(values: Any) -> str:
+    if not isinstance(values, list):
+        return text_value(values) if text_value(values) else "none"
+    items = [text_value(item) for item in values if text_value(item)]
+    return "<br>".join(items) if items else "none"
+
+
+def status_cards_markdown_rows(cards: list[dict[str, Any]]) -> str:
+    lines = [
+        "| Object | Positive status | Scope | Allowed use | Blocked overread |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for card in cards:
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    f"`{card['object_id']}`",
+                    card["positive_status"],
+                    card["exact_scope"],
+                    card["allowed_use"],
+                    markdown_list_cell(card.get("blocked_overread", [])),
+                ]
+            )
+            + " |"
+        )
+    return "\n".join(lines) if len(lines) > 2 else "No high-risk status cards are available."
 
 
 def render_markdown(snapshot: dict[str, Any], yaml_text: str, json_text: str) -> str:
     active = snapshot["active_state"]
     next_route = snapshot["next_route"]
     high_risk_rows = snapshot["distance_to_gr"]["high_risk_rows"]
+    status_cards = snapshot.get("high_risk_status_cards", [])
+    status_cards = status_cards if isinstance(status_cards, list) else []
     row_lines = [
         "| Burden ID | Reader-facing status | Control | Physical | Promotion |",
         "| --- | --- | --- | --- | --- |",
@@ -429,6 +604,11 @@ def render_markdown(snapshot: dict[str, Any], yaml_text: str, json_text: str) ->
         "## High-Risk Rows\n\n"
         + "\n".join(row_lines)
         + "\n\n"
+        "## Positive-First Status Cards\n\n"
+        "These cards render high-risk rows in the required order: positive status, "
+        "exact scope, allowed use, and blocked overread. They are operational "
+        "calibration only and do not create physics proof authority.\n\n"
+        f"{status_cards_markdown_rows(status_cards)}\n\n"
         "## Snapshot Hashes\n\n"
         f"- YAML SHA-256: `{sha256_text(yaml_text)}`\n"
         f"- JSON SHA-256: `{sha256_text(json_text)}`\n\n"
@@ -534,6 +714,7 @@ def status_payload(snapshot: dict[str, Any], status: str, errors: list[str]) -> 
         "json_sha256": sha256_text(json_text),
         "markdown_sha256": sha256_text(markdown_text),
         "high_risk_row_count": len(snapshot["distance_to_gr"]["high_risk_rows"]),
+        "high_risk_status_card_count": len(snapshot.get("high_risk_status_cards", [])),
         "blocked_claim_count": len(snapshot["claim_boundary"]["blocked_claims"]),
         "snapshot_only_not_authority": snapshot["authority_warning"]["snapshot_only_not_authority"],
     }
