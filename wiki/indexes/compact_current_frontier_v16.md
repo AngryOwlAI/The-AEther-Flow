@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-055`
-- Latest handoff: `handoff-0628`
-- Current status: `v17_p3_t02_acceptance_calibration_schema_completed_no_physics_delta`
+- Active task: `RT-20260705-056`
+- Latest handoff: `handoff-0629`
+- Current status: `v17_p3_t03_underclaim_linter_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p3_t03_claim_language_underclaim_calibration_linter`
+- Route ID: `v17_p3_t04_positive_first_status_card_renderer_update`
 - Role family: ``
 - Target milestone: `matter_coupling`
-- Milestone burden: Add advisory underclaim warnings using accepted-status calibration fields while preserving existing overclaim hard gates.
+- Milestone burden: Update frontier and compact-frontier renderers to use calibrated positive-first status cards.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `d57c3af312d57f8197324d63606135a557127ba9c214225e81b8ab8a4e569f88`
-- JSON SHA-256: `9fb153e072aca77905591827c56b63104ac85875b490c929317f7f95cf066936`
+- YAML SHA-256: `8c72dc29ea85f74936a4b9931db704049c929259cedd8b0482b1dfa56201d425`
+- JSON SHA-256: `c3adc20dabb71ab65dba1c7157c78c65dc955359f61b186ffbee2ed904ec16f2`
 
 ## Authority Warning
 

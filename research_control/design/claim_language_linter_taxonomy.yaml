@@ -1,14 +1,14 @@
 schema_id: "claim_language_linter_taxonomy_v1"
-schema_version: "1.2.0"
+schema_version: "1.3.0"
 authority: "control"
 status: "active"
 created_at: "2026-07-01T20:07:07Z"
 created_by_task_id: "RT-20260701-037"
 created_by_job_id: "AJ-RT-20260701-037-001"
 created_by_role: "project-control-maintainer@0.2.0"
-updated_at: "2026-07-03T10:32:10Z"
-updated_by_task_id: "RT-20260703-013"
-updated_by_job_id: "AJ-RT-20260703-013-001"
+updated_at: "2026-07-06T02:00:13Z"
+updated_by_task_id: "RT-20260705-056"
+updated_by_job_id: "AJ-RT-20260705-056-001"
 updated_by_role: "validator-engineer@0.2.0"
 purpose: "Machine-readable taxonomy for P3-T02 claim-language linter implementation."
 scope_note: "This taxonomy classifies risky wording. It does not prove, adopt, promote, or reject any physics claim."
@@ -47,6 +47,18 @@ source_materials:
   - path: "research_control/design/einstein_equation_route_moratorium_v1.md"
     role: "control_source"
     note: "P8-T01 blocks direct EFE routing from scoped evidence/precondition alone while allowing bounded prerequisite work."
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+    role: "route_context"
+    note: "P3-T03 requires advisory underclaim calibration checks without weakening existing overclaim hard gates."
+  - path: "research_control/design/accepted_status_calibration_policy_v1.md"
+    role: "policy_source"
+    note: "P3-T01 defines positive-first exact-scope blocked-overread accepted-status language."
+  - path: "research_control/design/accepted_status_calibration_schema_v1.md"
+    role: "schema_source"
+    note: "P3-T02 defines machine-readable positive_status exact_scope allowed_use blocked_overread underclaim_guard and overclaim_guard fields."
+  - path: "research_control/design/accepted_status_calibration_v1.yaml"
+    role: "calibration_source"
+    note: "P3-T02 populated accepted-status calibration rows for M_src g_eff and matter_coupling."
 
 authority_rules:
   taxonomy_is_physics_proof: false
@@ -106,6 +118,16 @@ severity_levels:
     blocks_publication: false
     blocks_checkpoint: false
     meaning: "Ambiguous wording requiring human review or safer rewrite."
+  warn_current_control:
+    numeric_rank: 25
+    blocks_publication: false
+    blocks_checkpoint: false
+    meaning: "Advisory underclaim calibration warning on current control surfaces."
+  warn_public_summary:
+    numeric_rank: 25
+    blocks_publication: false
+    blocks_checkpoint: false
+    meaning: "Advisory underclaim calibration warning on reader-facing public or frontier summaries."
 
 context_rules:
   bare_status_terms:
@@ -769,6 +791,60 @@ phrase_classes:
       - "theory rejected"
     corrective_language: "Use blocked-adoption/open-continuation or scoped-obstruction language unless a separate no-go theorem exists."
 
+  - class_id: "accepted_positive_status_missing"
+    plan_required_class_number: "P3-T03-A"
+    title: "Accepted positive status missing"
+    default_severity: "warn_public_summary"
+    control_severity: "warn_current_control"
+    historical_severity: "warn_historical"
+    finding_kind: "underclaim_calibration_warning"
+    detection_kind: "accepted_underclaim_calibration"
+    forbidden_patterns: []
+    bad_phrases:
+      - "High-risk accepted row states caveats without positive scoped status"
+    corrective_language: "State the positive scoped status first, then the exact scope, allowed use, and blocked overread."
+
+  - class_id: "accepted_scope_after_blocked_overread"
+    plan_required_class_number: "P3-T03-B"
+    title: "Accepted scope after blocked overread"
+    default_severity: "warn_public_summary"
+    control_severity: "warn_current_control"
+    historical_severity: "warn_historical"
+    finding_kind: "underclaim_calibration_warning"
+    detection_kind: "accepted_underclaim_calibration"
+    forbidden_patterns: []
+    bad_phrases:
+      - "High-risk accepted row lists blocked overreads before exact positive scope"
+    corrective_language: "Move the positive scoped status and exact scope before blocked-overread caveats."
+
+  - class_id: "scoped_adoption_minimized"
+    plan_required_class_number: "P3-T03-C"
+    title: "Scoped adoption minimized"
+    default_severity: "warn_public_summary"
+    control_severity: "warn_current_control"
+    historical_severity: "warn_historical"
+    finding_kind: "underclaim_calibration_warning"
+    detection_kind: "accepted_underclaim_calibration"
+    forbidden_patterns: []
+    bad_phrases:
+      - "M_src is not really anything"
+      - "g_eff is basically nothing"
+      - "matter_coupling accepted evidence is meaningless"
+    corrective_language: "Do not minimize scoped positive status; describe it as scoped source-side support while preserving blocked downstream claims."
+
+  - class_id: "caveat_wall_public_summary"
+    plan_required_class_number: "P3-T03-D"
+    title: "Caveat wall public summary"
+    default_severity: "warn_public_summary"
+    control_severity: "warn_current_control"
+    historical_severity: "warn_historical"
+    finding_kind: "underclaim_calibration_warning"
+    detection_kind: "accepted_underclaim_calibration"
+    forbidden_patterns: []
+    bad_phrases:
+      - "Reader-facing summary repeats blocked claims so heavily that positive status is obscured"
+    corrective_language: "Compress blocked overreads after a positive-first scoped status sentence."
+
 required_phrase_coverage:
   plan_phrases:
     - phrase: "matter coupling accepted"
@@ -887,7 +963,7 @@ required_phrase_coverage:
       class_id: "finite_local_model_rendered_as_universal_matter_coupling"
 
 next_linter_contract:
-  route: "P3-T02"
+  route: "P3-T03"
   transformable: true
   expected_inputs:
     - "surface path"
@@ -902,11 +978,14 @@ next_linter_contract:
     - "historical-artifact warning downgrade"
     - "line-number and phrase reporting"
     - "machine-readable JSON output"
+    - "advisory underclaim calibration matching"
+    - "finding-kind counts separating overclaim hard failures from underclaim calibration warnings"
   required_failure_policy:
     current_public_surface: "fail on hard_fail_current_public"
     current_control_surface: "fail on hard_fail_current_control"
     intentional_bad_example_surface: "warn only"
     historical_artifact_surface: "warn only"
+    underclaim_calibration: "warn only unless a future task explicitly promotes selected checks"
   output_fields:
     - "path"
     - "line"
@@ -914,17 +993,25 @@ next_linter_contract:
     - "matched_text"
     - "severity"
     - "surface_class"
+    - "finding_kind"
     - "corrective_language"
+  report_fields:
+    - "overclaim_hard_fail_count"
+    - "underclaim_calibration_warning_count"
+    - "finding_kind_counts"
 
 acceptance_receipt:
-  required_class_count: 33
-  implemented_class_count: 33
+  required_class_count: 37
+  implemented_class_count: 37
   p4_t04_semantic_layer_fixtures_mapped: true
   p8_t02_efe_prerequisite_fixtures_mapped: true
   p14_t03_target_import_fixtures_mapped: true
+  p3_t03_underclaim_advisory_classes_mapped: true
   required_phrases_mapped: true
   severity_assignments_present: true
   public_overclaims_hard_fail_candidates: true
   historical_warnings_separated: true
+  underclaim_warnings_are_advisory_only: true
+  report_distinguishes_overclaim_and_underclaim: true
   proof_authority: false
   physics_promotion_authorized: false

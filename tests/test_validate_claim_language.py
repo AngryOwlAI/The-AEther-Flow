@@ -80,6 +80,79 @@ class ClaimLanguageLinterTests(unittest.TestCase):
         )
         self.assertEqual(report["status"], "FAIL")
         self.assertEqual(report["findings"][0]["class_id"], "bare_high_risk_accepted")
+        self.assertEqual(report["overclaim_hard_fail_count"], 1)
+
+    def test_calibrated_accepted_fixture_passes(self) -> None:
+        fixture_text = (
+            REPO_ROOT / "tests/fixtures/claim_language/accepted_calibrated_valid.md"
+        ).read_text(encoding="utf-8")
+        report = self.scan_one("research_control/current_frontier.md", fixture_text)
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["finding_count"], 0)
+
+    def test_scoped_source_only_adoption_wording_passes(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            "M_src is adopted as a scoped source-only object.\n",
+        )
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["finding_count"], 0)
+
+    def test_scoped_source_extension_adoption_wording_passes(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            (
+                "g_eff is adopted as a scoped source-extension object with boundary "
+                "language and no MetricData(E), matter coupling, or Einstein-equation "
+                "promotion.\n"
+            ),
+        )
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["finding_count"], 0)
+
+    def test_matter_coupling_scoped_precondition_wording_passes(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            (
+                "matter_coupling has accepted scoped evidence/precondition only for "
+                "continuation; it is not source-law adoption, detector semantics, "
+                "coupling-law adoption, stress-energy semantics, matter action, "
+                "Einstein equations, benchmark promotion, or completed derivation.\n"
+            ),
+        )
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["finding_count"], 0)
+
+    def test_scoped_adoption_minimized_warns_only(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            "M_src is not really anything.\n",
+        )
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["hard_fail_count"], 0)
+        self.assertEqual(report["underclaim_calibration_warning_count"], 1)
+        self.assertEqual(report["findings"][0]["class_id"], "scoped_adoption_minimized")
+        self.assertEqual(report["findings"][0]["finding_kind"], "underclaim_calibration_warning")
+
+    def test_underclaim_overcorrection_fixture_warns_only(self) -> None:
+        fixture_text = (
+            REPO_ROOT / "tests/fixtures/claim_language/accepted_underclaim_overcorrection.md"
+        ).read_text(encoding="utf-8")
+        report = self.scan_one("research_control/current_frontier.md", fixture_text)
+        class_ids = {finding["class_id"] for finding in report["findings"]}
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["hard_fail_count"], 0)
+        self.assertGreaterEqual(report["underclaim_calibration_warning_count"], 4)
+        self.assertIn("accepted_positive_status_missing", class_ids)
+        self.assertIn("accepted_scope_after_blocked_overread", class_ids)
+        self.assertIn("scoped_adoption_minimized", class_ids)
+        self.assertIn("caveat_wall_public_summary", class_ids)
 
     def test_active_handoff_overclaim_hard_fails_as_control(self) -> None:
         report = self.scan_one(

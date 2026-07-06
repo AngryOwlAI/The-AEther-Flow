@@ -1,0 +1,60 @@
+task_id: "RT-20260705-056"
+task_type: "claim_language_underclaim_calibration_linter"
+status: "completed"
+created_at: "2026-07-06T02:00:13Z"
+updated_at: "2026-07-06T02:00:13Z"
+closed_at: "2026-07-06T02:00:13Z"
+parent_task_id: "RT-20260705-055"
+parent_handoff_id: "handoff-0628"
+decision_id: "DDR-20260705-056"
+job_id: "AJ-RT-20260705-056-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260705-056"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This validator packet does not consume Gate Chair authority or issue a protected verdict."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T03"
+  plan_task_name: "Claim-language linter underclaim calibration"
+objective: "Add advisory underclaim calibration warnings to the claim-language linter while preserving existing overclaim hard gates."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Add advisory underclaim calibration checks while preserving hard overclaim checks."
+closure_status: "v17_p3_t03_underclaim_linter_completed_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P3-T03 claim-language linter advisory underclaim calibration with no physics delta."
+  linter_path: "scripts/project_control/validate_claim_language.py"
+  taxonomy_path: "research_control/design/claim_language_linter_taxonomy.yaml"
+  tests_path: "tests/test_validate_claim_language.py"
+  underclaim_fixture_path: "tests/fixtures/claim_language/accepted_underclaim_overcorrection.md"
+  valid_fixture_path: "tests/fixtures/claim_language/accepted_calibrated_valid.md"
+  advisory_underclaim_classes_added: true
+  overclaim_hard_gates_preserved: true
+  report_distinguishes_overclaim_and_underclaim: true
+  immediate_v17_next_plan_task_id: "P3-T04"
+  source_law_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  detector_semantics_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "scripts/project_control/validate_claim_language.py"
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "tests/test_validate_claim_language.py"
+  - "tests/fixtures/claim_language/accepted_underclaim_overcorrection.md"
+  - "tests/fixtures/claim_language/accepted_calibrated_valid.md"
+  - "research_control/tasks/RT-20260705-056/artifacts/validate_p3_t03_underclaim_linter.py"
+  - "research_control/tasks/RT-20260705-056/artifacts/p3_t03_underclaim_linter_report.json"
+  - "research_control/tasks/RT-20260705-056/artifacts/p3_t03_underclaim_linter_receipt.md"
+next_recommended_action: "Run one bounded v17 P3-T04 renderer update for positive-first status cards."
+notes: "RT-20260705-056 completes v17 P3-T03 by adding advisory underclaim warnings and report-level finding-kind counts. It records no Distance-to-GR ledger update and no physics claim change."
+documentation_impact_id: "DI-RT-20260705-056-001"

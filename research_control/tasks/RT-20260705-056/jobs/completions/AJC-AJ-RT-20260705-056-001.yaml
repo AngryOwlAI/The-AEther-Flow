@@ -1,0 +1,207 @@
+completion_id: "AJC-AJ-RT-20260705-056-001"
+job_id: "AJ-RT-20260705-056-001"
+task_id: "RT-20260705-056"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-06T02:00:13Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P3-T03"
+  plan_phase_id: "P3"
+  implemented_task_scope: "Added advisory underclaim calibration warnings to the claim-language linter while preserving existing overclaim hard gates."
+  completed_v17_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+  downstream_tasks_not_implemented:
+    - "P3-T04 renderer update for positive-first status cards"
+    - "P3-T05 public-facing documentation calibration pass"
+    - "P3-T06 acceptance calibration red-team review"
+    - "P4 detector semantics"
+    - "P5 metric-use ledger"
+    - "P6 EqSrc RetainH GenH revisit"
+    - "P7 proof-normal-form layer"
+    - "P8 mechanized formal fragments"
+    - "P9 proof-state dashboard"
+    - "P10 generated task index"
+    - "P11 CI and reproducibility"
+    - "P12 AI research-agent system evaluation"
+    - "P13 V17 integration final validation and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+output_paths:
+  - "scripts/project_control/validate_claim_language.py"
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "tests/test_validate_claim_language.py"
+  - "tests/fixtures/claim_language/accepted_underclaim_overcorrection.md"
+  - "tests/fixtures/claim_language/accepted_calibrated_valid.md"
+  - "research_control/tasks/RT-20260705-056/artifacts/validate_p3_t03_underclaim_linter.py"
+  - "research_control/tasks/RT-20260705-056/artifacts/p3_t03_underclaim_linter_report.json"
+  - "research_control/tasks/RT-20260705-056/artifacts/p3_t03_underclaim_linter_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-056/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-056/DDR-20260705-056.md"
+  - "research_control/tasks/RT-20260705-056/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-056/jobs/AJ-RT-20260705-056-001.yaml"
+  - "research_control/tasks/RT-20260705-056/jobs/completions/AJC-AJ-RT-20260705-056-001.yaml"
+  - "research_control/tasks/RT-20260705-056/roles/validator-engineer@0.2.0--RT-20260705-056.yaml"
+  - "research_control/handoffs/handoff-0629.yaml"
+  - "research_control/handoffs/handoff-0629.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=658 relationship_row_count=3385 semantic_row_count=658 vault_row_count=658"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260705-055 latest_handoff=handoff-0628 boundary=director_decision_required"
+  - ".venv/bin/python -m unittest tests.test_validate_claim_language | exit_code=0 | tests=30 status=OK"
+  - ".venv/bin/python research_control/tasks/RT-20260705-056/artifacts/validate_p3_t03_underclaim_linter.py --write-report | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --paths tests/fixtures/claim_language/accepted_underclaim_overcorrection.md tests/fixtures/claim_language/accepted_calibrated_valid.md --json | exit_code=0 | status=PASS hard_fail_count=0 underclaim_calibration_warning_count=4"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | rendered_hash=f38b14b6ab157c9cc6679a752617439f2c388e3ed2cae14683b4028396330cc9"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write | exit_code=0 | next_route_id=v17_p3_t04_positive_first_status_card_renderer_update"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json | exit_code=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass latest_handoff=handoff-0629"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --graph output/claim_graph_v1.json --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | docs_impact_required=true project_system_improvement_required=true"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS open_improvement_handoff_count=0"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1449"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass metrics_are_operational=true"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json | exit_code=0 | status=PASS"
+  - "git diff --check | exit_code=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 658
+    relationship_row_count: 3385
+    semantic_row_count: 658
+    vault_row_count: 658
+  authority_note: "Obsidian notes .local caches semantic extracts SQLite retrieval indexes and generated wiki notes are retrieval aids only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P3-T03 claim-language linter underclaim calibration\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P3-T03 claim-language linter underclaim calibration"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      retrieval_evidence_object_ids:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "f38b14b6ab157c9cc6679a752617439f2c388e3ed2cae14683b4028396330cc9"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "query_memory status PASS"
+      - "targeted memory search returned v17 plan current frontier and semantic v17 plan evidence"
+      - "continue_research.py resolved handoff-0628 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Claim-language linter emits finding_kind"
+      - "Taxonomy defines four P3-T03 advisory underclaim classes"
+      - "Focused unit tests PASS"
+      - "Task-local validator PASS"
+      - "P3-T04 route selected"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier --check PASS with active_task RT-20260705-056 and latest_handoff handoff-0629"
+      - "render_compact_current_frontier_v16 --check PASS with next_route_id v17_p3_t04_positive_first_status_card_renderer_update"
+      - "validate_compact_current_frontier_v16 PASS"
+      - "render_dependency_graph --check PASS after documentation-impact receipt regeneration"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS"
+      - "bootstrap_memory_system --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "fixture scan PASS with hard_fail_count=0 and underclaim_calibration_warning_count=4"
+      - "changed-file claim-language scan PASS with hard_fail_count=0 and advisory warnings only"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_claim_graph_v1 PASS"
+      - "validate_documentation_impact PASS"
+      - "collect_project_improvement_signals --validate-emitted PASS"
+      - "validate_research_control PASS"
+      - "validate_research_control --check-diff PASS"
+      - "report_physics_progress_metrics PASS as operational metrics only"
+      - "run_full_research_control_validation --json PASS"
+      - "git diff --check PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  schema_packet_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not applicable to P3-T03 validator packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+verdict: "v17_p3_t03_underclaim_linter_completed_no_physics_delta"
+coherent_resolution_summary: "P3-T03 added advisory underclaim calibration warnings and report-level finding-kind counts while preserving existing overclaim hard gates."
+next_recommendation: "Run one bounded v17 P3-T04 renderer update for positive-first status cards."
+linter_result:
+  linter_path: "scripts/project_control/validate_claim_language.py"
+  linter_hash: "c5e071c64eb2bebc5041259471f8e16c54ca10010f3f11831dcc19e716861fae"
+  taxonomy_path: "research_control/design/claim_language_linter_taxonomy.yaml"
+  taxonomy_hash: "1382d98ee08650343d1362bde640ef61aec16bfc1a6313323b92769cc9024cf3"
+  test_path: "tests/test_validate_claim_language.py"
+  test_hash: "70b245cd8252435d88f32d5711fd4e214bc94efeb1fbf018a2537701352ea843"
+  underclaim_fixture_hash: "124d3a989fa1920a83f5f89a70243d49eb7e5699e733b48e1ea1c7271bbca206"
+  valid_fixture_hash: "cc81427dbb2cec7ee605ec8ba474cea54bbf60e6ec740388b0ba92d1dfc9a824"
+  validator_report_path: "research_control/tasks/RT-20260705-056/artifacts/p3_t03_underclaim_linter_report.json"
+  validator_report_hash: "74886b21039a7e05ba67d631c7bfd64adc977fecc7c075181896c918b6996d93"
+  validator_status: "PASS"
+  overclaim_hard_gates_preserved: true
+  underclaim_warnings_are_advisory_only: true
+  report_distinguishes_overclaim_and_underclaim: true
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  ledger_row_updated: false
+project_improvement_signals: []

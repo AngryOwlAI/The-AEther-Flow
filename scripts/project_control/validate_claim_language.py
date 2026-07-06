@@ -66,6 +66,59 @@ SCOPED_POSITIVE_MARKERS = (
     "scoped evidence/precondition only",
 )
 
+UNDERCLAIM_HIGH_RISK_TERMS = (
+    "matter_coupling",
+    "matter coupling",
+    "g_eff",
+    "m_src",
+    "MetricData(E)",
+    "RR_E",
+)
+
+UNDERCLAIM_POSITIVE_MARKERS = SCOPED_POSITIVE_MARKERS + (
+    "adopted as a scoped",
+    "adopted as scoped",
+    "scoped source-only object",
+    "scoped source-extension object",
+    "scoped source-side evidence/precondition only",
+    "scoped source-side support",
+    "positive scoped status",
+    "positive status",
+    "allowed use",
+)
+
+UNDERCLAIM_BLOCKED_MARKERS = (
+    "not source-law adoption",
+    "not source law adoption",
+    "not detector semantics",
+    "not coupling-law adoption",
+    "not coupling law adoption",
+    "not matter coupling",
+    "not matter-coupling",
+    "not stress-energy",
+    "not stress energy",
+    "not matter action",
+    "not einstein equations",
+    "not benchmark",
+    "not completed derivation",
+    "not proof authority",
+    "not derived",
+    "not adopted",
+    "remains blocked",
+    "blocked",
+)
+
+UNDERCLAIM_MINIMIZING_MARKERS = (
+    "not really anything",
+    "basically nothing",
+    "barely anything",
+    "barely meaningful",
+    "meaningless",
+    "not real",
+    "nothing meaningful",
+    "only caveats",
+)
+
 TOKEN_RE = re.compile(r"[A-Za-z0-9_]+(?:\([A-Za-z0-9_]+\))?")
 
 
@@ -77,6 +130,7 @@ class Finding:
     matched_text: str
     severity: str
     surface_class: str
+    finding_kind: str
     corrective_language: str
     context: str
 
@@ -231,6 +285,72 @@ def window_contains_phrase(window_tokens: list[str], phrase: str) -> bool:
     return any(window_tokens[index : index + width] == phrase_tokens for index in range(len(window_tokens)))
 
 
+def lower_markers(markers: Iterable[str]) -> tuple[str, ...]:
+    return tuple(marker.lower() for marker in markers)
+
+
+def first_marker_span(line_text: str, markers: Iterable[str]) -> tuple[int, int, str] | None:
+    lower = line_text.lower()
+    best: tuple[int, int, str] | None = None
+    for marker in markers:
+        index = lower.find(marker.lower())
+        if index < 0:
+            continue
+        candidate = (index, index + len(marker), line_text[index : index + len(marker)])
+        if best is None or candidate[0] < best[0]:
+            best = candidate
+    return best
+
+
+def contains_any_marker(line_text: str, markers: Iterable[str]) -> bool:
+    lower = line_text.lower()
+    return any(marker in lower for marker in lower_markers(markers))
+
+
+def blocked_marker_count(line_text: str) -> int:
+    lower = line_text.lower()
+    return sum(1 for marker in lower_markers(UNDERCLAIM_BLOCKED_MARKERS) if marker in lower)
+
+
+def underclaim_matches(
+    line_text: str,
+    phrase_class: dict[str, Any],
+) -> Iterable[tuple[int, int, str]]:
+    class_id = _text(phrase_class.get("class_id"))
+    high_risk_span = first_marker_span(line_text, UNDERCLAIM_HIGH_RISK_TERMS)
+    if high_risk_span is None:
+        return
+
+    positive_span = first_marker_span(line_text, UNDERCLAIM_POSITIVE_MARKERS)
+    blocked_count = blocked_marker_count(line_text)
+
+    if class_id == "accepted_positive_status_missing":
+        if positive_span is None and blocked_count >= 2:
+            yield high_risk_span[0], high_risk_span[1], line_text.strip()
+        return
+
+    if class_id == "accepted_scope_after_blocked_overread":
+        blocked_span = first_marker_span(line_text, UNDERCLAIM_BLOCKED_MARKERS)
+        if positive_span is not None and blocked_span is not None and blocked_span[0] < positive_span[0]:
+            start = min(blocked_span[0], positive_span[0], high_risk_span[0])
+            end = max(blocked_span[1], positive_span[1], high_risk_span[1])
+            yield start, end, line_text[start:end].strip()
+        return
+
+    if class_id == "scoped_adoption_minimized":
+        minimizing_span = first_marker_span(line_text, UNDERCLAIM_MINIMIZING_MARKERS)
+        if minimizing_span is not None:
+            start = min(high_risk_span[0], minimizing_span[0])
+            end = max(high_risk_span[1], minimizing_span[1])
+            yield start, end, line_text[start:end].strip()
+        return
+
+    if class_id == "caveat_wall_public_summary":
+        if blocked_count >= 5 and not contains_any_marker(line_text, UNDERCLAIM_POSITIVE_MARKERS):
+            yield high_risk_span[0], len(line_text), line_text[high_risk_span[0] :].strip()
+        return
+
+
 def near_term_matches(
     line_text: str,
     phrase_class: dict[str, Any],
@@ -279,6 +399,8 @@ def class_matches(
     detection_kind = _text(phrase_class.get("detection_kind"))
     if detection_kind == "near_term":
         yield from near_term_matches(line_text, phrase_class)
+    elif detection_kind == "accepted_underclaim_calibration":
+        yield from underclaim_matches(line_text, phrase_class)
     else:
         yield from regex_matches(line_text, phrase_class)
 
@@ -311,9 +433,10 @@ def finding_for_match(
     reviewed_contexts: Iterable[dict[str, Any]],
 ) -> Finding | None:
     class_id = _text(phrase_class.get("class_id"))
+    base_finding_kind = _text(phrase_class.get("finding_kind"))
     if has_scoped_positive_context(line_text, class_id):
         return None
-    if has_denial_context(line_text, match_start):
+    if has_denial_context(line_text, match_start) and base_finding_kind != "underclaim_calibration_warning":
         return None
 
     surface_class = classify_surface(path, active_handoffs)
@@ -330,6 +453,10 @@ def finding_for_match(
     if reviewed_override:
         surface_class, severity, context = reviewed_override
 
+    finding_kind = base_finding_kind
+    if not finding_kind:
+        finding_kind = "overclaim_hard_fail" if severity.startswith("hard_fail_") else "overclaim_warning"
+
     return Finding(
         path=path,
         line=line_number,
@@ -337,6 +464,7 @@ def finding_for_match(
         matched_text=matched_text,
         severity=severity,
         surface_class=surface_class,
+        finding_kind=finding_kind,
         corrective_language=_text(phrase_class.get("corrective_language")),
         context=context,
     )
@@ -457,12 +585,21 @@ def report_dict(
     config_errors = config_errors or []
     hard_failures = [finding for finding in findings if finding.hard_fail]
     warnings = [finding for finding in findings if not finding.hard_fail]
+    finding_kind_counts: dict[str, int] = {}
+    for finding in findings:
+        finding_kind_counts[finding.finding_kind] = finding_kind_counts.get(finding.finding_kind, 0) + 1
     status = "FAIL" if config_errors or hard_failures else "PASS"
     return {
         "status": status,
         "hard_fail_count": len(hard_failures),
         "warning_count": len(warnings),
         "finding_count": len(findings),
+        "overclaim_hard_fail_count": finding_kind_counts.get("overclaim_hard_fail", 0),
+        "underclaim_calibration_warning_count": finding_kind_counts.get(
+            "underclaim_calibration_warning",
+            0,
+        ),
+        "finding_kind_counts": finding_kind_counts,
         "scanned_path_count": len(scanned_paths),
         "scanned_paths": scanned_paths,
         "config_errors": config_errors,

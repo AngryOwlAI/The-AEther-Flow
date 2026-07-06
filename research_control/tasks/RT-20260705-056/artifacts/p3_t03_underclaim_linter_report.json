@@ -1,0 +1,138 @@
+{
+  "schema_id": "p3_t03_underclaim_linter_validation_report_v1",
+  "task_id": "RT-20260705-056",
+  "job_id": "AJ-RT-20260705-056-001",
+  "plan_task_id": "P3-T03",
+  "status": "PASS",
+  "errors": [],
+  "required_underclaim_classes": [
+    "accepted_positive_status_missing",
+    "accepted_scope_after_blocked_overread",
+    "caveat_wall_public_summary",
+    "scoped_adoption_minimized"
+  ],
+  "missing_underclaim_classes": [],
+  "unit_test": {
+    "command": [
+      "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.venv/bin/python",
+      "-m",
+      "unittest",
+      "tests.test_validate_claim_language"
+    ],
+    "returncode": 0,
+    "stdout_tail": "",
+    "stderr_tail": "..............................\n----------------------------------------------------------------------\nRan 30 tests in 0.071s\n\nOK\n"
+  },
+  "public_overclaim_report": {
+    "status": "FAIL",
+    "hard_fail_count": 1,
+    "warning_count": 0,
+    "finding_count": 1,
+    "overclaim_hard_fail_count": 1,
+    "underclaim_calibration_warning_count": 0,
+    "finding_kind_counts": {
+      "overclaim_hard_fail": 1
+    },
+    "scanned_path_count": 1,
+    "scanned_paths": [
+      "README.md"
+    ],
+    "config_errors": [],
+    "findings": [
+      {
+        "path": "README.md",
+        "line": 1,
+        "class_id": "einstein_equation_overclaim",
+        "matched_text": "GR derived",
+        "severity": "hard_fail_current_public",
+        "surface_class": "current_public_surfaces",
+        "finding_kind": "overclaim_hard_fail",
+        "corrective_language": "State that Einstein-equation derivation remains blocked until matter coupling, stress-energy semantics, matter action, and gate criteria are satisfied.",
+        "context": "surface_policy"
+      }
+    ]
+  },
+  "underclaim_fixture_report": {
+    "status": "PASS",
+    "hard_fail_count": 0,
+    "warning_count": 4,
+    "finding_count": 4,
+    "overclaim_hard_fail_count": 0,
+    "underclaim_calibration_warning_count": 4,
+    "finding_kind_counts": {
+      "underclaim_calibration_warning": 4
+    },
+    "scanned_path_count": 1,
+    "scanned_paths": [
+      "research_control/current_frontier.md"
+    ],
+    "config_errors": [],
+    "findings": [
+      {
+        "path": "research_control/current_frontier.md",
+        "line": 1,
+        "class_id": "scoped_adoption_minimized",
+        "matched_text": "M_src is not really anything",
+        "severity": "warn_public_summary",
+        "surface_class": "current_public_surfaces",
+        "finding_kind": "underclaim_calibration_warning",
+        "corrective_language": "Do not minimize scoped positive status; describe it as scoped source-side support while preserving blocked downstream claims.",
+        "context": "surface_policy"
+      },
+      {
+        "path": "research_control/current_frontier.md",
+        "line": 2,
+        "class_id": "accepted_positive_status_missing",
+        "matched_text": "matter_coupling is not source-law adoption, not detector semantics, not coupling-law adoption, not matter coupling, not stress-energy, not matter action, not Einstein equations, not benchmark promotion, and not completed derivation.",
+        "severity": "warn_public_summary",
+        "surface_class": "current_public_surfaces",
+        "finding_kind": "underclaim_calibration_warning",
+        "corrective_language": "State the positive scoped status first, then the exact scope, allowed use, and blocked overread.",
+        "context": "surface_policy"
+      },
+      {
+        "path": "research_control/current_frontier.md",
+        "line": 2,
+        "class_id": "caveat_wall_public_summary",
+        "matched_text": "matter_coupling is not source-law adoption, not detector semantics, not coupling-law adoption, not matter coupling, not stress-energy, not matter action, not Einstein equations, not benchmark promotion, and not completed derivation.",
+        "severity": "warn_public_summary",
+        "surface_class": "current_public_surfaces",
+        "finding_kind": "underclaim_calibration_warning",
+        "corrective_language": "Compress blocked overreads after a positive-first scoped status sentence.",
+        "context": "surface_policy"
+      },
+      {
+        "path": "research_control/current_frontier.md",
+        "line": 3,
+        "class_id": "accepted_scope_after_blocked_overread",
+        "matched_text": "not source-law adoption, not detector semantics, not coupling-law adoption; matter_coupling has accepted scoped evidence/precondition only",
+        "severity": "warn_public_summary",
+        "surface_class": "current_public_surfaces",
+        "finding_kind": "underclaim_calibration_warning",
+        "corrective_language": "Move the positive scoped status and exact scope before blocked-overread caveats.",
+        "context": "surface_policy"
+      }
+    ]
+  },
+  "calibrated_valid_fixture_report": {
+    "status": "PASS",
+    "hard_fail_count": 0,
+    "warning_count": 0,
+    "finding_count": 0,
+    "overclaim_hard_fail_count": 0,
+    "underclaim_calibration_warning_count": 0,
+    "finding_kind_counts": {},
+    "scanned_path_count": 1,
+    "scanned_paths": [
+      "research_control/current_frontier.md"
+    ],
+    "config_errors": [],
+    "findings": []
+  },
+  "overclaim_hard_gates_preserved": true,
+  "underclaim_warnings_are_advisory_only": true,
+  "report_distinguishes_overclaim_and_underclaim": true,
+  "no_physics_delta": true,
+  "physics_promotion_authorized": false,
+  "proof_authority": false
+}
