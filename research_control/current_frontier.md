@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-012` and `handoff-0644`.
+`RT-20260706-013` and `handoff-0645`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-012` |
-| Latest handoff ID | `handoff-0644` |
-| Current status | `v17_p6_t03_selected_p7_t01_proof_normal_form_schema_no_promotion` |
+| Active task ID | `RT-20260706-013` |
+| Latest handoff ID | `handoff-0645` |
+| Current status | `v17_p7_t01_proof_normal_form_schema_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p6 t03 selected p7 t01 proof normal form schema no promotion |
-| Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: draft object exists with general_equivalence_theorem_missing |
-| Required next authority | P7-T01 may create proof-normal-form schema and registry header only; it must not replace TeX authority or promote physics claims. |
-| Next recommended action | Run one bounded v17 P7-T01 proof_normal_form_schema packet under project-control-maintainer@0.2.0 task overlay to create the proof-normal-form schema and PROOF_NORMAL_FORM_REGISTRY header without replacing TeX authority. |
+| Current route family | v17 p7 t01 proof normal form schema completed no physics delta |
+| Target derivation milestone | `matter_coupling` |
+| Current burden | `matter_coupling`; status: accepted as scoped evidence/precondition only; not derived or adopted |
+| Required next authority | P7-T02 may populate proof-normal-form rows for priority artifacts only while preserving source authority and non-conclusions. |
+| Next recommended action | Run one bounded v17 P7-T02 proof_normal_form_initial_extraction packet under ontology-formalizer@0.2.0 to populate high-priority proof-normal-form rows while preserving source authority and non-conclusions. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-012/00_TASK.yaml`.
-- Active task objective: Select exactly one next route after the P6-T02 upstream EqSrc theorem attempt without overreading the record-local theorem candidate as downstream GR recovery.
-- Latest handoff path: `research_control/handoffs/handoff-0644.yaml`.
-- Latest handoff summary: RT-20260706-012 completed one bounded v17 P6-T03 upstream attempt selector. It selected P7-T01 proof-normal-form schema after the P6-T02 record-local EqSrc theorem candidate and general-family closure obstruction, with no audit stress repair freeze EqSrc discharge RetainH adoption GenH adoption source-law adoption matter-coupling derivation downstream GR promotion or Distance-to-GR ledger delta.
-- Current route family: v17 p6 t03 selected p7 t01 proof normal form schema no promotion.
-- Next recommended action: Run one bounded v17 P7-T01 proof_normal_form_schema packet under project-control-maintainer@0.2.0 task overlay to create the proof-normal-form schema and PROOF_NORMAL_FORM_REGISTRY header without replacing TeX authority.
+- Active task path: `research_control/tasks/RT-20260706-013/00_TASK.yaml`.
+- Active task objective: not recorded.
+- Latest handoff path: `research_control/handoffs/handoff-0645.yaml`.
+- Latest handoff summary: RT-20260706-013 completed one bounded v17 P7-T01 proof-normal-form schema packet. It created the proof-normal-form schema and registry header with no row population no TeX authority replacement no source-law adoption no matter-coupling derivation no downstream GR promotion and no Distance-to-GR ledger delta.
+- Current route family: v17 p7 t01 proof normal form schema completed no physics delta.
+- Next recommended action: Run one bounded v17 P7-T02 proof_normal_form_initial_extraction packet under ontology-formalizer@0.2.0 to populate high-priority proof-normal-form rows while preserving source authority and non-conclusions.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P7-T01 proof_normal_form_schema packet under project-control-maintainer@0.2.0 task overlay to create the proof-normal-form schema and PROOF_NORMAL_FORM_REGISTRY header without replacing TeX authority.
+Run one bounded v17 P7-T02 proof_normal_form_initial_extraction packet under ontology-formalizer@0.2.0 to populate high-priority proof-normal-form rows while preserving source authority and non-conclusions.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,23 +301,22 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-012`;
-- latest handoff: `handoff-0644`;
-- current status: `v17_p6_t03_selected_p7_t01_proof_normal_form_schema_no_promotion`;
+- active task: `RT-20260706-013`;
+- latest handoff: `handoff-0645`;
+- current status: `v17_p7_t01_proof_normal_form_schema_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `global_research_control_validation`: PENDING;
-- latest handoff validation `parent_child_synthesis`: PASS;
-- latest handoff validation `selector_artifact_present`: PASS;
+- latest handoff validation `schema_validator`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0644.yaml`
-- `research_control/tasks/RT-20260706-012/00_TASK.yaml`
+- `research_control/handoffs/handoff-0645.yaml`
+- `research_control/tasks/RT-20260706-013/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -333,7 +332,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0644*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0645*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

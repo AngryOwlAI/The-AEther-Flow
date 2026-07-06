@@ -332,6 +332,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `wiki/markdown/md-research-control-design-validation-command-inventory-v15.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `wiki/markdown/md-research-control-design-validation-command-inventory-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `wiki/markdown/md-research-control-design-validation-status-field-inventory.md`
+- `WIKI-MD-RESEARCH-CONTROL-FORMALIZATION-PROOF-NORMAL-FORM-SCHEMA-V1` `wiki/markdown/md-research-control-formalization-proof-normal-form-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `wiki/markdown/md-research-control-p5-t01-support-only-mechanization-boundary-design.md`
 - `WIKI-MD-RESEARCH-CONTROL-P6-T01-PAYLOAD-DENSITY-METRICS-DESIGN` `wiki/markdown/md-research-control-p6-t01-payload-density-metrics-design.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260614-133-EXTERNAL-REVIEW-BRIEF-M-SRC-GSC-INTEGRATED-THEOREM` `wiki/markdown/md-research-control-tasks-rt-20260614-133-external-review-brief-m-src-gsc-integrated-theorem.md`
@@ -936,6 +937,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `research_control/design/validation_command_inventory_v15.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `research_control/design/validation_command_inventory_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `research_control/design/validation_status_field_inventory.md`
+- `MD-RESEARCH-CONTROL-FORMALIZATION-PROOF-NORMAL-FORM-SCHEMA-V1` `research_control/formalization/proof_normal_form_schema_v1.md`
 - `MD-RESEARCH-CONTROL-P5-T01-SUPPORT-ONLY-MECHANIZATION-BOUNDARY-DESIGN` `research_control/tasks/RT-20260614-270/artifacts/p5_t01_support_only_mechanization_boundary_design.md`
 - `MD-RESEARCH-CONTROL-P6-T01-PAYLOAD-DENSITY-METRICS-DESIGN` `research_control/tasks/RT-20260614-275/artifacts/p6_t01_payload_density_metrics_design.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260629-033-DISTANCE-TO-GR-LAYERED-STATUS-MIGRATION-REPORT` `research_control/tasks/RT-20260629-033/artifacts/distance_to_gr_layered_status_migration_report.md`
