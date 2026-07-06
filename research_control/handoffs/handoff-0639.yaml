@@ -1,0 +1,76 @@
+handoff_id: "handoff-0639"
+created_at: "2026-07-06T07:14:55Z"
+task_id: "RT-20260706-007"
+decision_id: "DDR-20260706-007"
+job_id: "AJ-RT-20260706-007-001"
+completion_path: "research_control/tasks/RT-20260706-007/jobs/completions/AJC-AJ-RT-20260706-007-001.yaml"
+source_task_id: "RT-20260706-007"
+source_job_id: "AJ-RT-20260706-007-001"
+source_completion_id: "AJC-AJ-RT-20260706-007-001"
+status: "completed"
+summary: "RT-20260706-007 completed one bounded v17 P5-T02 metric-use ledger initial population packet. It populated 19 grouped rows for the required high-risk matter-route inspection surfaces and recorded no-use justifications where literal g_eff or MetricData(E) references were absent."
+next_action: "Run one bounded v17 P5-T03 metric-use linter and tests packet."
+loop_risk_route: "v17_p5_t02_population_to_p5_t03_linter_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P5-T03 metric-use linter and tests after initial ledger population with no physics promotion"
+  completed_plan_task_id: "P5-T02"
+  selected_next_plan_task_id: "P5-T03"
+  selected_next_role_family: "validator-engineer@0.1.0 or active project-control compatible overlay if role unavailable"
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_lorentzian_metric_authorized: false
+  proper_time_normalization_authorized: false
+  detector_calibration_authorized: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P5-T02 ledger population as MetricData(E) adoption"
+  - "P5-T02 ledger population as g_eff scope expansion"
+  - "P5-T02 ledger row as physical Lorentzian metric"
+  - "P5-T02 ledger row as proper-time normalization"
+  - "P5-T02 ledger row as detector calibration"
+  - "P5-T02 ledger row as stress-energy semantics"
+  - "P5-T02 ledger row as matter action"
+  - "P5-T02 ledger row as Einstein equations"
+  - "P5-T02 ledger row as benchmark promotion"
+  - "P5-T02 ledger row as completed derivation"
+metric_use_ledger_population:
+  registry_path: "registries/METRIC_USE_LEDGER.csv"
+  rows_added: 19
+  required_paths_covered: 5
+  grouped_rows_used: true
+  no_use_justifications_recorded: true
+  receipt_path: "research_control/tasks/RT-20260706-007/artifacts/metric_use_ledger_initial_population_receipt.md"
+  task_local_validator: "research_control/tasks/RT-20260706-007/artifacts/validate_p5_t02_metric_use_ledger_population.py"
+  validator_status: "PASS"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-007 populates project-control ledger rows only and does not adopt or derive matter coupling stress-energy matter action Einstein equations benchmark promotion or completed derivation."
+selected_next_route:
+  route_id: "v17_p5_t03_metric_use_linter_tests"
+  plan_task_id: "P5-T03"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Add linter tests that catch forbidden g_eff physical metric use in matter-coupling artifacts."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+validation:
+  task_local_validator: "PASS"
+  global_research_control_validation: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

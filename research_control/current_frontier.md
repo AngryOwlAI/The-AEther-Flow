@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-006` and `handoff-0638`.
+`RT-20260706-007` and `handoff-0639`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-006` |
-| Latest handoff ID | `handoff-0638` |
-| Current status | `v17_p5_t01_metric_use_ledger_schema_completed_no_physics_delta` |
+| Active task ID | `RT-20260706-007` |
+| Latest handoff ID | `handoff-0639` |
+| Current status | `v17_p5_t02_metric_use_ledger_initial_population_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p5 t01 schema to p5 t02 population no physics delta |
+| Current route family | v17 p5 t02 population to p5 t03 linter no physics delta |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P5-T02 metric-use ledger initial population after schema and header creation with no physics promotion |
-| Next recommended action | Run one bounded v17 P5-T02 metric-use ledger initial population packet for existing high-risk matter-route artifacts. |
+| Required next authority | P5-T03 metric-use linter and tests after initial ledger population with no physics promotion |
+| Next recommended action | Run one bounded v17 P5-T03 metric-use linter and tests packet. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-006/00_TASK.yaml`.
-- Active task objective: Create the v17 P5-T01 metric-use ledger schema and METRIC_USE_LEDGER registry header while preserving no physics delta.
-- Latest handoff path: `research_control/handoffs/handoff-0638.yaml`.
-- Latest handoff summary: RT-20260706-006 completed one bounded v17 P5-T01 metric-use ledger schema packet. It created metric_use_ledger_schema_v1.md and METRIC_USE_LEDGER.csv with the required header only and did not populate ledger rows or promote physics claims.
-- Current route family: v17 p5 t01 schema to p5 t02 population no physics delta.
-- Next recommended action: Run one bounded v17 P5-T02 metric-use ledger initial population packet for existing high-risk matter-route artifacts.
+- Active task path: `research_control/tasks/RT-20260706-007/00_TASK.yaml`.
+- Active task objective: Populate the metric-use ledger for required high-risk matter-route artifacts while preserving no physics delta.
+- Latest handoff path: `research_control/handoffs/handoff-0639.yaml`.
+- Latest handoff summary: RT-20260706-007 completed one bounded v17 P5-T02 metric-use ledger initial population packet. It populated 19 grouped rows for the required high-risk matter-route inspection surfaces and recorded no-use justifications where literal g_eff or MetricData(E) references were absent.
+- Current route family: v17 p5 t02 population to p5 t03 linter no physics delta.
+- Next recommended action: Run one bounded v17 P5-T03 metric-use linter and tests packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -254,7 +254,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P5-T02 metric-use ledger initial population packet for existing high-risk matter-route artifacts.
+Run one bounded v17 P5-T03 metric-use linter and tests packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -282,9 +282,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-006`;
-- latest handoff: `handoff-0638`;
-- current status: `v17_p5_t01_metric_use_ledger_schema_completed_no_physics_delta`;
+- active task: `RT-20260706-007`;
+- latest handoff: `handoff-0639`;
+- current status: `v17_p5_t02_metric_use_ledger_initial_population_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -296,8 +296,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0638.yaml`
-- `research_control/tasks/RT-20260706-006/00_TASK.yaml`
+- `research_control/handoffs/handoff-0639.yaml`
+- `research_control/tasks/RT-20260706-007/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -313,7 +313,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0638*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0639*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

@@ -1,0 +1,53 @@
+task_id: "RT-20260706-007"
+task_type: "metric_use_ledger_initial_population"
+status: "completed"
+created_at: "2026-07-06T07:14:55Z"
+updated_at: "2026-07-06T07:14:55Z"
+closed_at: "2026-07-06T07:14:55Z"
+parent_task_id: "RT-20260706-006"
+parent_handoff_id: "handoff-0638"
+decision_id: "DDR-20260706-007"
+job_id: "AJ-RT-20260706-007-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260706-007"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This P5-T02 ledger-population packet does not consume Gate Chair authority or issue a protected verdict."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T02"
+  plan_task_name: "Populate ledger for existing high-risk matter-route artifacts"
+objective: "Populate the metric-use ledger for required high-risk matter-route artifacts while preserving no physics delta."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Populate metric-use ledger for existing matter-coupling and g_eff-adjacent artifacts."
+closure_status: "v17_p5_t02_metric_use_ledger_initial_population_completed_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P5-T02 grouped metric-use ledger population for required high-risk inspection surfaces only."
+  registry_path: "registries/METRIC_USE_LEDGER.csv"
+  registry_rows_added: 19
+  grouped_rows_used: true
+  no_physics_delta: true
+  immediate_v17_next_plan_task_id: "P5-T03"
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_lorentzian_metric_authorized: false
+  proper_time_normalization_authorized: false
+  detector_calibration_authorized: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260706-007/artifacts/validate_p5_t02_metric_use_ledger_population.py"
+  - "research_control/tasks/RT-20260706-007/artifacts/p5_t02_metric_use_ledger_population_report.json"
+  - "research_control/tasks/RT-20260706-007/artifacts/metric_use_ledger_initial_population_receipt.md"
+next_recommended_action: "Run one bounded v17 P5-T03 metric-use linter and tests packet."
+notes: "RT-20260706-007 completes P5-T02 by adding grouped ledger rows and explicit no-use justifications for required high-risk inspection surfaces. It records no Distance-to-GR ledger status update and no physics claim promotion."
+documentation_impact_id: "DI-RT-20260706-007-001"

@@ -1,0 +1,206 @@
+completion_id: "AJC-AJ-RT-20260706-007-001"
+job_id: "AJ-RT-20260706-007-001"
+task_id: "RT-20260706-007"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-06T07:14:55Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P5-T02"
+  plan_phase_id: "P5"
+  implemented_task_scope: "Populated the metric-use ledger for required high-risk matter-route artifacts with grouped rows and explicit no-use justifications."
+  completed_v17_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P3-T04"
+    - "P3-T05"
+    - "P4-T01"
+    - "P4-T02"
+    - "P4-T03"
+    - "P4-T04"
+    - "P4-T05"
+    - "P5-T01"
+    - "P5-T02"
+  downstream_tasks_not_implemented:
+    - "P5-T03 metric-use linter and tests"
+    - "P5-T04 current-frontier and compact-frontier metric-use integration"
+    - "P6 EqSrc RetainH GenH revisit"
+    - "P7 proof-normal-form layer"
+    - "P8 mechanized formal fragments"
+    - "P9 proof-state dashboard"
+    - "P10 generated task index"
+    - "P11 CI and reproducibility"
+    - "P12 AI research-agent system evaluation"
+    - "P13 V17 integration final validation and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+output_paths:
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "research_control/tasks/RT-20260706-007/artifacts/validate_p5_t02_metric_use_ledger_population.py"
+  - "research_control/tasks/RT-20260706-007/artifacts/p5_t02_metric_use_ledger_population_report.json"
+  - "research_control/tasks/RT-20260706-007/artifacts/metric_use_ledger_initial_population_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260706-007/00_TASK.yaml"
+  - "research_control/tasks/RT-20260706-007/DDR-20260706-007.md"
+  - "research_control/tasks/RT-20260706-007/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-007/jobs/AJ-RT-20260706-007-001.yaml"
+  - "research_control/tasks/RT-20260706-007/jobs/completions/AJC-AJ-RT-20260706-007-001.yaml"
+  - "research_control/tasks/RT-20260706-007/roles/project-control-maintainer@0.2.0--RT-20260706-007.yaml"
+  - "research_control/handoffs/handoff-0639.yaml"
+  - "research_control/handoffs/handoff-0639.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=666 relationship_row_count=3417 semantic_row_count=666 vault_row_count=666"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260706-006 latest_handoff=handoff-0638 boundary=director_decision_required"
+  - ".venv/bin/python research_control/tasks/RT-20260706-007/artifacts/validate_p5_t02_metric_use_ledger_population.py | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 666
+    relationship_row_count: 3417
+    semantic_row_count: 666
+    vault_row_count: 666
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P5 T02 metric use ledger g_eff MetricData matter coupling\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P5 T02 metric use ledger g_eff MetricData matter coupling"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      retrieval_evidence_object_ids:
+        - "SEMANTIC-MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1"
+        - "SEMANTIC-MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "b9f81f52102071afe0183469693c20f0839c862c37654c59a71eb699afc89a39"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/metric_use_ledger_schema_v1.md"
+      source_hash: "0728604c2269878ba579e750cfe110dcd58aaaabde6f1128df18771c02ed7112"
+    - object_id: "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-SCOPED-SOURCE-EXTENSION-ADOPTION-GATE-CHAIR-REVIEW"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex"
+      source_hash: "3ce8cbc6cd79c6852d78f81045633beea44c4dfc6e2912c604b08e3c8bdb0257"
+    - object_id: "TEX-V16-P3-SOURCE-SIDE-COUPLING-LAW-TARGET-SPECIFICATION"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260704-021/artifacts/source_side_coupling_law_target_specification_v1.tex"
+      source_hash: "8af2234b62c10170f9235bf8120c295bd18bf429a647674ab2dec0ffa824c9a4"
+    - object_id: "TEX-V17-P1-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+      source_hash: "6e21a010e5247039564d96612cc4be7a0cc59564bfb1498d7dde9318b9ba6059"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes after refresh"
+      - "query_memory status PASS after refresh"
+      - "targeted memory lookup and search returned v17 plan current frontier and metric-use ledger schema evidence"
+      - "continue_research.py resolved handoff-0638 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "METRIC_USE_LEDGER.csv populated with 19 grouped rows"
+      - "Required inspection surfaces covered"
+      - "No-use justifications recorded for absent literal g_eff or MetricData(E) references in target-spec and candidate artifacts"
+      - "task-local validator PASS"
+      - "P5-T03 route selected"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "post-write validators passed after completion receipt creation"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier write and check PASS"
+      - "compact frontier write check and validation PASS"
+      - "dependency graph render and freshness check PASS"
+      - "claim graph generate check and validation PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS"
+      - "sync_obsidian_vault refreshed local retrieval cache"
+      - "bootstrap_memory_system --validate-only PASS"
+      - "query_memory status PASS after refresh"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language --changed PASS with historical warnings only"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  ledger_population_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not applicable to P5-T02 ledger-population packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+verdict: "v17_p5_t02_metric_use_ledger_initial_population_completed_no_physics_delta"
+coherent_resolution_summary: "P5-T02 populated the metric-use ledger as a control surface for high-risk matter-route metric language. It does not convert scoped source-extension context into target metric authority."
+next_recommendation: "Run one bounded v17 P5-T03 metric-use linter and tests packet."
+ledger_result:
+  registry_path: "registries/METRIC_USE_LEDGER.csv"
+  row_count_after_population: 19
+  required_paths_covered: 5
+  validator_report_path: "research_control/tasks/RT-20260706-007/artifacts/p5_t02_metric_use_ledger_population_report.json"
+  validator_status: "PASS"
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  ledger_row_updated: false
+project_improvement_signals: []
