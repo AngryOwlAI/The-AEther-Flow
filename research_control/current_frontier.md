@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-024` and `handoff-0656`.
+`RT-20260706-025` and `handoff-0657`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-024` |
-| Latest handoff ID | `handoff-0656` |
-| Current status | `v17_p9_t04_proof_state_dashboard_red_team_pass_no_repair_no_physics_delta` |
+| Active task ID | `RT-20260706-025` |
+| Latest handoff ID | `handoff-0657` |
+| Current status | `v17_p10_t01_task_index_schema_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p9 t04 proof state dashboard red team pass no repair no physics delta |
+| Current route family | v17 p10 t01 task index schema completed no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P10-T01 task-index schema packet through an active project-control role overlay. |
-| Required next authority | P10-T01 may define a generated task-index schema from tracked task records without changing physics claim status. |
-| Next recommended action | Run one bounded v17 P10-T01 task-index schema packet through an active project-control role overlay. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P10-T02 task-index generator packet through an active project-control tooling role overlay. |
+| Required next authority | P10-T02 may create a renderer and generated task-index outputs from tracked task records without changing physics claim status. |
+| Next recommended action | Run one bounded v17 P10-T02 task-index generator packet through an active project-control tooling role overlay. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-024/00_TASK.yaml`.
-- Active task objective: Review the proof-state dashboard for overclaim, underclaim, and reader comprehension while changing no physics claim status.
-- Latest handoff path: `research_control/handoffs/handoff-0656.yaml`.
-- Latest handoff summary: RT-20260706-024 completed one bounded v17 P9-T04 proof-state dashboard red-team review packet. The review found no blocking overclaim underclaim or reader-comprehension defect as written and no repair route is required. No dashboard source generated output README publication brief Distance-to-GR ledger physics claim Gate Chair benchmark or ontology authority changed.
-- Current route family: v17 p9 t04 proof state dashboard red team pass no repair no physics delta.
-- Next recommended action: Run one bounded v17 P10-T01 task-index schema packet through an active project-control role overlay.
+- Active task path: `research_control/tasks/RT-20260706-025/00_TASK.yaml`.
+- Active task objective: not recorded.
+- Latest handoff path: `research_control/handoffs/handoff-0657.yaml`.
+- Latest handoff summary: RT-20260706-025 completed one bounded v17 P10-T01 task-index schema packet. It created research_control/design/task_index_schema_v1.md with the required generated task-index header and source-record rules. It did not create renderer code, generated task-index outputs, validator integration, memory integration, ledger changes, physics claims, Gate Chair authority, benchmark status, ontology authority, or Distance-to-GR delta.
+- Current route family: v17 p10 t01 task index schema completed no physics delta.
+- Next recommended action: Run one bounded v17 P10-T02 task-index generator packet through an active project-control tooling role overlay.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P10-T01 task-index schema packet through an active project-control role overlay.
+Run one bounded v17 P10-T02 task-index generator packet through an active project-control tooling role overlay.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,9 +301,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-024`;
-- latest handoff: `handoff-0656`;
-- current status: `v17_p9_t04_proof_state_dashboard_red_team_pass_no_repair_no_physics_delta`;
+- active task: `RT-20260706-025`;
+- latest handoff: `handoff-0657`;
+- current status: `v17_p10_t01_task_index_schema_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -313,8 +313,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0656.yaml`
-- `research_control/tasks/RT-20260706-024/00_TASK.yaml`
+- `research_control/handoffs/handoff-0657.yaml`
+- `research_control/tasks/RT-20260706-025/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -330,7 +330,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0656*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0657*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

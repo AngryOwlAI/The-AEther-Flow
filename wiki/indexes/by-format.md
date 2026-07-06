@@ -188,6 +188,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `research_control/design/support_only_formalization_lane_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16` `research_control/design/target_import_attack_fixture_catalog_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16` `research_control/design/target_import_attack_taxonomy_v16.md`
+- `MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1` `research_control/design/task_index_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `research_control/design/three_tier_claim_convention.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V17-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v17_recommendation_backlog_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `research_control/design/validation_command_inventory_v15.md`
@@ -877,6 +878,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `wiki/markdown/md-research-control-design-support-only-formalization-lane-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16` `wiki/markdown/md-research-control-design-target-import-attack-fixture-catalog-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16` `wiki/markdown/md-research-control-design-target-import-attack-taxonomy-v16.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1` `wiki/markdown/md-research-control-design-task-index-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `wiki/markdown/md-research-control-design-three-tier-claim-convention.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V17-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v17-recommendation-backlog-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `wiki/markdown/md-research-control-design-validation-command-inventory-v15.md`
