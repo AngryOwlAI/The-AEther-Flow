@@ -1,0 +1,288 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\AuditVerdict}{\mathsf{source\_pure\_as\_written}}
+\newcommand{\PassAbsent}{\mathsf{pass\_absent}}
+\newcommand{\FailDetected}{\mathsf{fail\_detected}}
+\newcommand{\EStar}{E_{\ast}}
+\newcommand{\RStar}{R_{E_{\ast}}}
+\newcommand{\DSrc}{D^{\mathrm{src}}_{E_{\ast}}}
+\newcommand{\ReadD}{\mathrm{Read}_{D}(E_{\ast})}
+\newcommand{\CertD}{\mathrm{Cert}_{D}(E_{\ast})}
+\newcommand{\FailD}{\mathrm{Fail}_{D}(E_{\ast})}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\AuditSet}{\mathcal{I}_{D}}
+\newcommand{\AuditMap}{A_{D}}
+\newcommand{\DetPlaceholder}{\mathrm{DetPlaceholder}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Detector-Replacement Smuggling Audit v1}
+\author{Smuggling Auditor Packet RT-20260706-003}
+\date{2026-07-06}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This document implements v17 P4-T03. It audits the draft/control
+source-side detector-replacement candidate
+\[
+  \mathrm{SourceDetectorReplacementCandidate\_EStar\_v1}
+\]
+from \texttt{RT-20260706-002}. The audited object is the finite source-side
+tuple
+\[
+  \DSrc=(\mathrm{Dom}_{D}(\EStar),\ReadD,\mathrm{Tok}_{D}(\EStar),
+  \CertD,\FailD,\texttt{supplied\_source\_placeholder}).
+\]
+
+This is a hidden-import and status-laundering audit only. It is not detector
+semantics, not detector-semantics adoption, not source-law adoption, not
+matter-semantics adoption, not coupling-law adoption, not matter-coupling
+derivation or adoption, not stress-energy semantics, not a stress-energy
+tensor, not a matter action, not Einstein equations, not benchmark promotion,
+not proof authority, and not completed derivation.
+
+\section{Audited Object}
+
+The candidate defines the finite event scope
+\[
+  \EStar=\{\epsilon_0,\epsilon_1\},
+\]
+the finite source record family
+\[
+  \RStar=\{r_0,r_1,r_{01}\},
+\]
+the finite source readout tokens
+\[
+  \{\delta_0,\delta_1,\delta_{01},\BottomSrc\},
+\]
+and the partial readout map
+\[
+  \ReadD(r_0)=\delta_0,\qquad
+  \ReadD(r_1)=\delta_1,\qquad
+  \ReadD(r_{01})=\delta_{01}.
+\]
+It also declares a finite source certificate family and fail-closed branches
+for missing, malformed, target-importing, empirical-importing,
+proper-time-importing, and placeholder-collapsing cases.
+
+\section{Audit Criteria}
+
+The audit checks whether the candidate obtains its status by importing any
+forbidden authority:
+
+\begin{enumerate}[label=(\arabic*)]
+  \item empirical detector protocol, empirical calibration, detector readout,
+        clocks, rods, or observed detector response as source premises;
+  \item proper-time normalization;
+  \item target topology, target atlas, target differentiable structure,
+        target Lorentzian metric, target metric behavior, or benchmark
+        behavior;
+  \item stress-energy semantics, stress-energy tensor, matter action, or
+        Einstein-equation premise;
+  \item generated derivative, registry metadata, validator status, role
+        identity, handoff or approval status, local cache state, file order,
+        checkpoint, or commit state as proof authority;
+  \item the placeholder status treated as detector-semantics adoption.
+\end{enumerate}
+
+\section{Finite Audit Map}
+
+\begin{definition}[Detector-replacement audit classes]
+Define the finite audit-class set
+\[
+\begin{aligned}
+  \AuditSet=\{&
+  I_{\mathrm{emp}}, I_{\tau}, I_{g}, I_{\mathrm{atl}},
+  I_{\mathrm{bench}}, I_{T}, I_{\mathrm{proc}}, I_{\mathrm{adopt}}\}.
+\end{aligned}
+\]
+The class meanings are, respectively: empirical detector protocol import,
+proper-time import, target metric import, target atlas or topology import,
+benchmark-success import, stress-energy or matter-action import, process
+authority import, and placeholder-as-adoption.
+\end{definition}
+
+\begin{definition}[Audit verdict map]
+Define
+\[
+  \AuditMap:\AuditSet\to\{\PassAbsent,\FailDetected\}
+\]
+by
+\[
+\begin{array}{c|c}
+\text{audit class} & \AuditMap \\
+\midrule
+I_{\mathrm{emp}} & \PassAbsent\\
+I_{\tau} & \PassAbsent\\
+I_{g} & \PassAbsent\\
+I_{\mathrm{atl}} & \PassAbsent\\
+I_{\mathrm{bench}} & \PassAbsent\\
+I_{T} & \PassAbsent\\
+I_{\mathrm{proc}} & \PassAbsent\\
+I_{\mathrm{adopt}} & \PassAbsent
+\end{array}
+\]
+for the candidate as written.
+\end{definition}
+
+\begin{lemma}[Finite audit verdict]
+For \(\DSrc\) as written in P4-T02, every audited import class maps to
+\(\PassAbsent\). Therefore the P4-T03 verdict is
+\[
+  \AuditVerdict .
+\]
+\end{lemma}
+
+\begin{proof}
+The domain of \(\DSrc\) is \(\RStar\), a finite family of source records. The
+readout interface maps source records to source tokens only. The certificate
+family contains source identity, transport, invariance, restriction, and
+no-target certificates. The fail-closed family maps empirical detector
+protocol or calibration import, proper-time normalization import, target
+topology or atlas import, target metric import, benchmark import,
+stress-energy or matter-action import, Einstein-equation premise import,
+validator status, registry rows, handoffs, roles, local caches, file order,
+checkpoints, commits, and placeholder collapse to \(\BottomSrc\) when those
+objects are used as premises. The status
+\(\texttt{supplied\_source\_placeholder}\) is explicitly not detector
+semantics and not adoption. Hence no audited import class is used as a premise
+by \(\DSrc\) as written.
+\end{proof}
+
+\section{Findings}
+
+\subsection{No empirical detector protocol or calibration import detected}
+
+The map \(\ReadD\) is a source record to source token map. It does not depend
+on detector clicks, observed readouts, clocks, rods, calibrations, laboratory
+protocols, or empirical response laws. Empirical detector protocol and
+calibration pressure are represented only as fail-closed branches to
+\(\BottomSrc\).
+
+\subsection{No proper-time import detected}
+
+Proper-time normalization is not used to define the source domain, readout
+tokens, readout map, certificate family, or finite witness. The candidate
+names proper time only as a forbidden import mapped to \(\BottomSrc\).
+
+\subsection{No target topology, atlas, metric, or benchmark import detected}
+
+The candidate uses the source record set \(\RStar\), not a target topology,
+target atlas, differentiable structure, Lorentzian metric, metric signature,
+metric behavior, or exact-GR benchmark success. Target and benchmark objects
+appear only as false premises or fail-closed import classes.
+
+\subsection{No stress-energy, matter-action, or Einstein-equation import}
+
+The candidate does not import or construct stress-energy semantics, a
+stress-energy tensor, matter-action semantics, a matter action, or Einstein
+equations. These objects occur only in blocked-import and non-conclusion
+language.
+
+\subsection{No process-authority laundering detected as written}
+
+Registry rows, validators, roles, handoffs, local caches, file order,
+approvals, checkpoints, commits, and generated derivatives are not
+mathematical premises of \(\DSrc\). If they are used as premises, the candidate
+routes the branch to \(\BottomSrc\). Therefore process status is not used as
+proof authority.
+
+\subsection{No placeholder-as-adoption detected as written}
+
+The status \(\texttt{supplied\_source\_placeholder}\) means that a source-side
+interface candidate exists for audit and stress. It does not mean detector
+semantics, a detector theory, detector-semantics adoption, source-law
+adoption, coupling-law adoption, matter-coupling derivation, or benchmark
+promotion.
+
+\section{Audit Result}
+
+\begin{verbatim}
+detector_replacement_smuggling_audit_result:
+  result_type: "source_pure_as_written"
+  audited_candidate: "SourceDetectorReplacementCandidate_EStar_v1"
+  audited_candidate_path: "research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex"
+  empirical_detector_protocol_import: "pass_absent"
+  proper_time_import: "pass_absent"
+  target_metric_import: "pass_absent"
+  target_atlas_or_topology_import: "pass_absent"
+  benchmark_success_import: "pass_absent"
+  stress_energy_or_matter_action_import: "pass_absent"
+  role_registry_or_validator_authority_import: "pass_absent"
+  placeholder_as_adoption: "pass_absent"
+  blocking_defects: []
+  detector_semantics_adopted: false
+  source_law_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  next_required_role: "refuter"
+\end{verbatim}
+
+\section{Required P4-T04 Stress Targets}
+
+The next Refuter packet should stress at least:
+
+\begin{enumerate}[label=(\alph*)]
+  \item erasure of readout-interface fields;
+  \item replacement of source readout by empirical detector protocol;
+  \item replacement of source normalization by proper time;
+  \item target metric use to define detector response;
+  \item placeholder status treated as detector-semantics adoption;
+  \item finite/local witness perturbation of \(\EStar\), \(\RStar\),
+        \(\ReadD\), \(\CertD\), and \(\FailD\);
+  \item process-authority pressure from validators, registries, roles,
+        handoffs, generated derivatives, local caches, approvals,
+        checkpoints, commits, or file order.
+\end{enumerate}
+
+\section{Distance-To-GR Status}
+
+The Distance-to-GR ledger is unchanged. The matter-coupling burden remains
+open. This packet supplies a finite audit classification only. It does not
+discharge detector semantics, matter coupling, stress-energy semantics, matter
+action, Einstein equations, benchmark promotion, Gate Chair status, or
+completed derivation.
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}
+This audit does not adopt detector semantics, source law, matter semantics,
+coupling law, matter coupling, stress-energy semantics, a stress-energy
+tensor, a matter action, Einstein equations, benchmark status, proof
+authority, or completed derivation.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+The audit verdict is not a Refuter stress result and not a Gate Chair verdict.
+It only routes the source-side placeholder candidate to P4-T04 stress.
+\end{nonconclusion}
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan continue task v17} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v17.md}.
+
+The AEther-Flow Research Project. (2026b). \emph{Source-side
+detector-replacement candidate D\_src(E\_*) v1} [Research-control TeX
+artifact].
+\texttt{research\_control/tasks/RT-20260706-002/artifacts/detector\_semantics\_replacement\_candidate\_v1.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{No-target-import guard map}
+[Internal control artifact].
+\texttt{research\_control/design/no\_target\_import\_guard\_map.md}.
+
+\end{document}

@@ -140,6 +140,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-051-PARENT-FUSION-NOTES-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-REFUTER-STRESS` `research_control/tasks/RT-20260705-051/artifacts/parent_fusion_notes_source_side_coupling_law_candidate_refuter_stress.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-PARENT-FUSION-NOTES-POST-CANDIDATE-AUDIT-STRESS-SELECTOR` `research_control/tasks/RT-20260705-052/artifacts/parent_fusion_notes_post_candidate_audit_stress_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-PARENT-FUSION-NOTES-V17-CANDIDATE-CYCLE-INTEGRATION` `research_control/tasks/RT-20260705-053/artifacts/parent_fusion_notes_v17_candidate_cycle_integration.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260706-003-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260706-003/artifacts/parent_fusion_notes_detector_replacement_smuggling_audit.md`
 - `MD-ROLE-ROUTING-PUBLICATION-BRIEF` `markdown/publication-briefs/role-routing.publication-brief.md`
 - `MD-ROLES-AND-SKILLS-PUBLICATION-BRIEF` `markdown/publication-briefs/roles-and-skills.publication-brief.md`
 - `MD-SKILL-MARKDOWN-WIKI` `.codex/skills/markdown-wiki/SKILL.md`
@@ -381,6 +382,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-POST-CANDIDATE-AUDIT-STRESS-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260705-052-post-candidate-audit-stress-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-PARENT-FUSION-NOTES-V17-CANDIDATE-CYCLE-INTEGRATION` `wiki/markdown/md-research-control-tasks-rt-20260705-053-parent-fusion-notes-v17-candidate-cycle-integration.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-V17-COUPLING-LAW-CANDIDATE-CYCLE-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260705-053-v17-coupling-law-candidate-cycle-report.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-003-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260706-003-parent-fusion-notes-detector-replacement-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -805,6 +807,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V17-P2-T01-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-SMUGGLING-AUDIT` `wiki/tex/tex-v17-p2-t01-source-side-coupling-law-candidate-smuggling-audit.md`
 - `WIKI-TEX-V17-P2-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-REFUTER-STRESS` `wiki/tex/tex-v17-p2-t02-source-side-coupling-law-candidate-refuter-stress.md`
 - `WIKI-TEX-V17-P4-T02-DETECTOR-SEMANTICS-REPLACEMENT-CANDIDATE` `wiki/tex/tex-v17-p4-t02-detector-semantics-replacement-candidate.md`
+- `WIKI-TEX-V17-P4-T03-DETECTOR-REPLACEMENT-SMUGGLING-AUDIT` `wiki/tex/tex-v17-p4-t03-detector-replacement-smuggling-audit.md`
 
 ## obsidian-wiki
 
@@ -1352,6 +1355,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V17-P2-T01-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260705-050/artifacts/source_side_coupling_law_candidate_smuggling_audit_v1.tex`
 - `TEX-V17-P2-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-REFUTER-STRESS` `research_control/tasks/RT-20260705-051/artifacts/source_side_coupling_law_candidate_refuter_stress_v1.tex`
 - `TEX-V17-P4-T02-DETECTOR-SEMANTICS-REPLACEMENT-CANDIDATE` `research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex`
+- `TEX-V17-P4-T03-DETECTOR-REPLACEMENT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260706-003/artifacts/detector_replacement_smuggling_audit_v1.tex`
 
 ## user-modified-project
 

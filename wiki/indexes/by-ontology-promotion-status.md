@@ -341,6 +341,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V17-P2-T01-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260705-050/artifacts/source_side_coupling_law_candidate_smuggling_audit_v1.tex`
 - `TEX-V17-P2-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-REFUTER-STRESS` `research_control/tasks/RT-20260705-051/artifacts/source_side_coupling_law_candidate_refuter_stress_v1.tex`
 - `TEX-V17-P4-T02-DETECTOR-SEMANTICS-REPLACEMENT-CANDIDATE` `research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex`
+- `TEX-V17-P4-T03-DETECTOR-REPLACEMENT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260706-003/artifacts/detector_replacement_smuggling_audit_v1.tex`
 
 ## superseded
 
