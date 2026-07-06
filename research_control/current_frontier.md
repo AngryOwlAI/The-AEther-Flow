@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-010` and `handoff-0642`.
+`RT-20260706-011` and `handoff-0643`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-010` |
-| Latest handoff ID | `handoff-0642` |
-| Current status | `v17_p6_t01_selected_eqsrc_theorem_attempt_no_promotion` |
+| Active task ID | `RT-20260706-011` |
+| Latest handoff ID | `handoff-0643` |
+| Current status | `v17_p6_t02_record_local_eqsrc_theorem_candidate_obstruction_no_promotion` |
 | V16 completed | false |
-| Current route family | v17 p6 t01 eqsrc theorem attempt selected no promotion |
+| Current route family | v17 p6 t02 record local eqsrc theorem candidate no promotion |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists with general_equivalence_theorem_missing |
-| Required next authority | P6-T02 may execute only the selected EqSrc theorem-attempt packet with explicit premises failure branches and no downstream promotion. |
-| Next recommended action | Run one bounded v17 P6-T02 selected_upstream_equivalence_attempt packet under ontology-formalizer@0.2.0 task overlay to execute the EqSrc theorem attempt. |
+| Required next authority | P6-T03 may only select audit stress repair freeze or return-to-matter route for the P6-T02 upstream attempt without overreading the theorem candidate as general EqSrc. |
+| Next recommended action | Run one bounded v17 P6-T03 upstream_attempt_audit_stress_selector packet under theoretical-continuation-selector@0.1.0 to choose audit stress repair freeze or return-to-matter route. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-010/00_TASK.yaml`.
-- Active task objective: Select whether v17 continuation should attack EqSrc, RetainH, GenH, matter-coupling candidate repair, finite local model expansion, or scoped obstruction freeze after P2, P4, and P5 evidence.
-- Latest handoff path: `research_control/handoffs/handoff-0642.yaml`.
-- Latest handoff summary: RT-20260706-010 completed one bounded v17 P6-T01 upstream-burden selector packet. It selected EqSrc_theorem_attempt as the next route after P2 candidate-cycle P4 detector-route and P5 metric-use ledger evidence with no EqSrc discharge RetainH adoption GenH adoption source-law adoption matter-coupling repair downstream GR promotion or Distance-to-GR ledger delta.
-- Current route family: v17 p6 t01 eqsrc theorem attempt selected no promotion.
-- Next recommended action: Run one bounded v17 P6-T02 selected_upstream_equivalence_attempt packet under ontology-formalizer@0.2.0 task overlay to execute the EqSrc theorem attempt.
+- Active task path: `research_control/tasks/RT-20260706-011/00_TASK.yaml`.
+- Active task objective: Execute the selected EqSrc_theorem_attempt by producing one bounded record-local EqSrc theorem candidate and one explicit obstruction to general EqSrc promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0643.yaml`.
+- Latest handoff summary: RT-20260706-011 completed one bounded v17 P6-T02 selected upstream EqSrc theorem-attempt packet. It supplied a record-local relabeling orbit theorem candidate and named OB-P6T02-GENERAL-EQSRC-FAMILY-CLOSURE-MISSING as the obstruction to general EqSrc promotion with no EqSrc discharge RetainH adoption GenH adoption source-law adoption matter-coupling derivation downstream GR promotion or Distance-to-GR ledger delta.
+- Current route family: v17 p6 t02 record local eqsrc theorem candidate no promotion.
+- Next recommended action: Run one bounded v17 P6-T03 upstream_attempt_audit_stress_selector packet under theoretical-continuation-selector@0.1.0 to choose audit stress repair freeze or return-to-matter route.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P6-T02 selected_upstream_equivalence_attempt packet under ontology-formalizer@0.2.0 task overlay to execute the EqSrc theorem attempt.
+Run one bounded v17 P6-T03 upstream_attempt_audit_stress_selector packet under theoretical-continuation-selector@0.1.0 to choose audit stress repair freeze or return-to-matter route.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,24 +301,23 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-010`;
-- latest handoff: `handoff-0642`;
-- current status: `v17_p6_t01_selected_eqsrc_theorem_attempt_no_promotion`;
+- active task: `RT-20260706-011`;
+- latest handoff: `handoff-0643`;
+- current status: `v17_p6_t02_record_local_eqsrc_theorem_candidate_obstruction_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `global_research_control_validation`: PENDING;
 - latest handoff validation `parent_child_synthesis`: PASS;
-- latest handoff validation `route_input_inspection`: PASS;
-- latest handoff validation `theoretical_decision_output_present`: PASS;
+- latest handoff validation `theorem_attempt_artifact_present`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0642.yaml`
-- `research_control/tasks/RT-20260706-010/00_TASK.yaml`
+- `research_control/handoffs/handoff-0643.yaml`
+- `research_control/tasks/RT-20260706-011/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -334,7 +333,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0642*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0643*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

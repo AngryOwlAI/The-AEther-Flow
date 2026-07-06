@@ -1,0 +1,89 @@
+handoff_id: "handoff-0643"
+created_at: "2026-07-06T09:22:00Z"
+task_id: "RT-20260706-011"
+decision_id: "DDR-20260706-011"
+job_id: "AJ-RT-20260706-011-001"
+completion_path: "research_control/tasks/RT-20260706-011/jobs/completions/AJC-AJ-RT-20260706-011-001.yaml"
+source_task_id: "RT-20260706-011"
+source_job_id: "AJ-RT-20260706-011-001"
+source_completion_id: "AJC-AJ-RT-20260706-011-001"
+status: "completed"
+summary: "RT-20260706-011 completed one bounded v17 P6-T02 selected upstream EqSrc theorem-attempt packet. It supplied a record-local relabeling orbit theorem candidate and named OB-P6T02-GENERAL-EQSRC-FAMILY-CLOSURE-MISSING as the obstruction to general EqSrc promotion with no EqSrc discharge RetainH adoption GenH adoption source-law adoption matter-coupling derivation downstream GR promotion or Distance-to-GR ledger delta."
+next_action: "Run one bounded v17 P6-T03 upstream_attempt_audit_stress_selector packet under theoretical-continuation-selector@0.1.0 to choose audit stress repair freeze or return-to-matter route."
+loop_risk_route: "v17_p6_t02_record_local_eqsrc_theorem_candidate_no_promotion"
+claim_boundary:
+  allowed_next_scope: "P6-T03 may only select audit stress repair freeze or return-to-matter route for the P6-T02 upstream attempt without overreading the theorem candidate as general EqSrc."
+  completed_plan_task_id: "P6-T02"
+  selected_next_plan_task_id: "P6-T03"
+  selected_next_role_family: "theoretical-continuation-selector@0.1.0"
+  selected_next_packet_type: "upstream_attempt_audit_stress_selector"
+  theorem_candidate_supplied: true
+  obstruction_id: "OB-P6T02-GENERAL-EQSRC-FAMILY-CLOSURE-MISSING"
+  eqsrc_discharged: false
+  retainh_adopted: false
+  genh_adopted: false
+  source_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_metric_authorized: false
+  detector_calibration_authorized: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P6-T02 theorem candidate as general EqSrc discharge"
+  - "P6-T02 theorem candidate as RetainH adoption"
+  - "P6-T02 theorem candidate as GenH adoption"
+  - "P6-T02 obstruction as program-wide no-go theorem"
+  - "P6-T02 theorem candidate as matter-coupling derivation"
+  - "P6-T02 theorem candidate as Einstein equations"
+  - "P6-T02 theorem candidate as benchmark promotion"
+  - "P6-T02 theorem candidate as completed derivation"
+upstream_primitive_trigger_status:
+  EqSrc:
+    triggered: true
+    selected_for_this_packet: true
+    attempt_result: "record_local_theorem_candidate_plus_general_obstruction"
+    adoption_or_discharge: false
+  RetainH:
+    triggered: false
+    selected_for_this_packet: false
+    conditional_trigger_after_attempt: "future H-indexed retention preservation route"
+    adoption_or_discharge: false
+  GenH:
+    triggered: false
+    selected_for_this_packet: false
+    conditional_trigger_after_attempt: "future H-generated source-family route"
+    adoption_or_discharge: false
+distance_to_gr:
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  status: "draft object exists with general_equivalence_theorem_missing"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-011 supplies a bounded record-local theorem candidate only and does not update Distance-to-GR ledger rows or discharge general EqSrc."
+selected_next_route:
+  route_id: "v17_p6_t03_upstream_attempt_audit_stress_selector"
+  plan_task_id: "P6-T03"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Select audit, stress, repair, freeze, or return-to-matter route after upstream attempt."
+  required_artifact: "research_control/tasks/<task-id>/artifacts/upstream_attempt_audit_stress_selector_v1.md"
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+validation:
+  theorem_attempt_artifact_present: "PASS"
+  parent_child_synthesis: "PASS"
+  global_research_control_validation: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+

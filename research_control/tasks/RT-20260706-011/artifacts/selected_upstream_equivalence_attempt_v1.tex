@@ -1,0 +1,279 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\EqSrc}{\mathsf{Eq}_{\mathrm{src}}}
+\newcommand{\EqRec}{\mathsf{Eq}_{\mathrm{src}}^{\mathrm{rec}}}
+\newcommand{\EqIso}{\mathsf{Eq}_{\mathrm{src}}^{\mathrm{iso}}}
+\newcommand{\Obj}{\mathsf{Obj}_{0}^{\mathrm{rec}}}
+\newcommand{\Inv}{\mathsf{Inv}_{0}^{\mathrm{rec}}}
+\newcommand{\Cmp}{\mathsf{Cmp}_{0}^{\mathrm{rec}}}
+\newcommand{\Ann}{\mathsf{Ann}}
+\newcommand{\Infl}{\mathsf{Infl}}
+\newcommand{\Tok}{\mathsf{Tok}_{0}}
+\newcommand{\Block}{\mathsf{Block}}
+\newcommand{\Pass}{\mathsf{Pass}}
+\newcommand{\RetainH}{\mathsf{Retain}_{H}}
+\newcommand{\GenH}{\mathsf{Gen}_{H}}
+\newcommand{\MetricData}{\mathrm{MetricData}(E)}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{obstruction}{Obstruction}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Selected Upstream Equivalence Attempt v1}
+\author{Ontology Formalizer Packet RT-20260706-011}
+\date{2026-07-06}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v17 P6-T02. The P6-T01 selector chose
+\(\EqSrc\_\mathrm{theorem\_attempt}\). The present packet executes that
+attempt as a bounded theorem candidate over explicit source records and
+source-supplied relabeling maps.
+
+The result is not general \(\EqSrc\) discharge. It is not \(\RetainH\)
+adoption, not \(\GenH\) adoption, not source-law adoption, not a canonical
+ontology edit, not \(\MetricData\) adoption, not \(\geff\) scope expansion,
+not matter coupling, not stress-energy semantics, not matter action, not
+Einstein equations, not benchmark promotion, not a Gate Chair verdict, and
+not completed derivation.
+
+\section{Attempt Target}
+
+\begin{definition}[Record-local EqSrc datum]
+A record-local source-equivalence datum is a tuple
+\[
+  \mathcal E^{\mathrm{rec}}=(\Obj,\Inv,\Cmp,\Ann,\Infl)
+\]
+where \(\Obj\) is a finite set of declared source records, \(\Inv\) is a
+finite source-only invariant ledger, \(\Cmp\) is a source-only comparison
+rule, \(\Ann\) records comparison annotations, and \(\Infl\) records proxy
+and forbidden-channel influence edges.
+\end{definition}
+
+\begin{definition}[Admissible relabeling map]
+For \(X,Y\in\Obj\), an admissible relabeling map
+\(\rho:X\to Y\) is source-side data satisfying all of the following:
+\begin{enumerate}[leftmargin=*]
+  \item \(\rho\) is bijective on declared source token identifiers.
+  \item \(\rho\) preserves token class, annotation content, source path,
+  object identifier, hash, rule scope, dependency, proxy-exclusion content,
+  and influence-edge incidence.
+  \item \(\rho\) preserves forbidden-channel orientation and proxy-class
+  coverage.
+  \item \(\rho\) does not use target topology, target atlas, target metric,
+  proper time, detector protocol, stress-energy semantics, matter-action
+  semantics, benchmark behavior, validation status, registry status, role
+  identity, handoff state, or commit state as a premise.
+  \item Missing annotation, unmapped proxy use, changed influence incidence,
+  or a required target-side comparison returns \(\Block\).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Record-local equivalence relation candidate]
+Write
+\[
+  X\EqRec Y
+\]
+when there exists an explicitly supplied admissible relabeling map
+\(\rho:X\to Y\). The relation is defined only inside one declared finite
+record orbit whose objects and relabeling maps are listed in the packet.
+\end{definition}
+
+\section{Theorem Candidate}
+
+\begin{theorem}[Record-local EqSrc relabeling orbit theorem]
+Let \(\mathcal O\subseteq\Obj\) be a finite declared source-record orbit.
+Assume:
+\begin{enumerate}[leftmargin=*]
+  \item for every \(X\in\mathcal O\), the identity map \(1_X:X\to X\) is
+  explicitly supplied and admissible;
+  \item for every supplied admissible map \(\rho:X\to Y\), an explicitly
+  supplied inverse map \(\rho^{-1}:Y\to X\) is admissible;
+  \item for every pair of supplied admissible maps \(\rho:X\to Y\) and
+  \(\sigma:Y\to Z\), an explicitly supplied composition
+  \(\sigma\circ\rho:X\to Z\) is admissible;
+  \item every identity, inverse, and composition check uses only the source
+  invariants, annotations, and influence edges in
+  \(\mathcal E^{\mathrm{rec}}\).
+\end{enumerate}
+Then \(\EqRec\) is an equivalence relation on \(\mathcal O\).
+\end{theorem}
+
+\begin{proof}
+Reflexivity follows from premise 1: for every \(X\in\mathcal O\), the
+explicit admissible identity \(1_X\) witnesses \(X\EqRec X\). Symmetry
+follows from premise 2: if \(X\EqRec Y\), then an admissible \(\rho:X\to Y\)
+is supplied, and the supplied admissible inverse \(\rho^{-1}:Y\to X\)
+witnesses \(Y\EqRec X\). Transitivity follows from premise 3: if
+\(X\EqRec Y\) and \(Y\EqRec Z\), supplied admissible maps
+\(\rho:X\to Y\) and \(\sigma:Y\to Z\) exist, and the supplied admissible
+composition \(\sigma\circ\rho:X\to Z\) witnesses \(X\EqRec Z\). Premise 4
+keeps all three proof branches source-side. Therefore \(\EqRec\) is an
+equivalence relation on the declared finite orbit only.
+\end{proof}
+
+\section{Finite Witness}
+
+\begin{definition}[Two-object relabeling orbit]
+Let \(\mathcal O=\{X_0,X_1\}\), where \(X_0\) is the manifest-bound
+source-syntax object from the earlier local \(\EqIso\) datum and \(X_1\) is
+its source-neutral relabeling. Let \(\rho:X_0\to X_1\) be the bijection that
+renames source token identifiers while preserving token class, annotation
+content, proxy coverage, forbidden-channel orientation, and influence-edge
+incidence. Let \(\rho^{-1}\), \(1_{X_0}\), and \(1_{X_1}\) be explicitly
+listed source maps.
+\end{definition}
+
+\begin{lemma}[Witness satisfies the theorem premises]
+The finite orbit \(\{X_0,X_1\}\) satisfies the record-local theorem premises
+when the supplied composition table is
+\[
+\begin{array}{c|c|c}
+f & g & g\circ f \\
+\hline
+1_{X_0} & \rho & \rho \\
+\rho & \rho^{-1} & 1_{X_0} \\
+\rho^{-1} & \rho & 1_{X_1} \\
+1_{X_1} & \rho^{-1} & \rho^{-1}
+\end{array}
+\]
+with all rows checked only against source-token class, annotation, proxy, and
+influence-edge invariants.
+\end{lemma}
+
+\begin{proof}
+Each listed map is source-side data. The identity maps preserve every
+source invariant by definition. The relabeling \(\rho\) and inverse
+\(\rho^{-1}\) preserve the same source invariants because they are bijective
+renamings of source token identifiers and do not alter annotation content or
+influence incidence. The table supplies the only compositions needed inside
+the two-object orbit, and every composition remains admissible by direct row
+inspection. The theorem therefore applies.
+\end{proof}
+
+\section{Negative Controls}
+
+If \(X_{\mathrm{ann}}\) weakens required annotation content, then
+\[
+  \Cmp(X_0,X_{\mathrm{ann}};\Inv)=\Block.
+\]
+If \(X_{\mathrm{proxy}}\) introduces an unmapped proxy or treats an omitted
+influence edge as absent by default, then
+\[
+  \Cmp(X_0,X_{\mathrm{proxy}};\Inv)=\Block.
+\]
+These controls prevent the theorem candidate from becoming a notation
+similarity test, target-success proxy, validation-status proxy, or
+authority-label proxy.
+
+\section{Scoped Obstruction To General EqSrc}
+
+\begin{obstruction}[General EqSrc family closure is missing]
+The record-local theorem does not prove general \(\EqSrc\). The obstruction
+is
+\[
+  \mathrm{OB\mbox{-}P6T02\mbox{-}GENERAL\mbox{-}EQSRC\mbox{-}FAMILY\mbox{-}CLOSURE\mbox{-}MISSING}.
+\]
+A general theorem would need, for the relevant source families, a declared
+family domain, an invariant ledger valid across the family, a source-only
+comparison rule, explicit identity inverse and composition closure, negative
+control retention, and proof that broadening does not require \(\RetainH\)
+or \(\GenH\). Those objects are not supplied by the current packet.
+\end{obstruction}
+
+\section{RetainH and GenH Trigger Consequence}
+
+This attempt keeps \(\RetainH\) and \(\GenH\) deferred for the fixed
+record-local orbit. It exposes their conditional trigger boundary:
+\(\RetainH\) becomes an immediate primitive only if a later route asks
+whether source-record structure is preserved under an \(H\)-indexed retention
+operation; \(\GenH\) becomes an immediate primitive only if a later route
+constructs or ranges over an \(H\)-generated source family. Neither primitive
+is adopted here.
+
+\section{Distance-to-GR Effect}
+
+\begin{boundary}
+This packet supplies one bounded theorem candidate and one scoped obstruction.
+It produces no Distance-to-GR ledger delta. The `source_equivalence_eqsrc'
+ledger row remains draft/control with general equivalence theorem missing.
+\end{boundary}
+
+\begin{center}
+\begin{tabular}{p{0.32\linewidth}p{0.56\linewidth}}
+\toprule
+\textbf{Burden} & \textbf{Status after P6-T02} \\
+\midrule
+Source ontology primitives & unchanged; no canonical ontology edit \\
+Source equivalence EqSrc & record-local theorem candidate supplied; general EqSrc not discharged \\
+RetainH & unchanged; not adopted; conditional trigger clarified \\
+GenH & unchanged; not adopted; conditional trigger clarified \\
+ObsLoc\_lc & unchanged \\
+Resp\_lc & unchanged \\
+M\_src & unchanged \\
+g\_eff & unchanged; no scope expansion \\
+matter coupling & unchanged; not derived and not adopted \\
+Einstein equations & blocked \\
+finite-variation robustness & unchanged \\
+benchmark promotion & blocked \\
+Gate Chair status & unchanged; no verdict issued \\
+current route freeze or hard-fail status & not frozen; P6-T03 selector remains open \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Next Route}
+
+The logical next step is P6-T03: a theoretical-continuation-selector packet
+should choose whether this attempt needs smuggling audit, Refuter stress,
+repair, freeze review, or return-to-matter routing. The selector must not
+overread the theorem candidate as general \(\EqSrc\).
+
+\section{Forbidden Conclusions}
+
+\begin{nonconclusion}
+This theorem attempt does not authorize general \(\EqSrc\) discharge,
+\(\RetainH\) adoption, \(\GenH\) adoption, source-law adoption,
+\(\MetricData\) adoption, \(\geff\) scope expansion, physical metric
+authority, detector calibration, matter semantics, detector semantics,
+coupling-law adoption, matter-coupling derivation or adoption, stress-energy
+semantics, stress-energy tensor, matter action, Einstein equations, benchmark
+promotion, Gate Chair verdict, completed derivation, future source-extension
+impossibility, or program-wide no-go conclusion.
+\end{nonconclusion}
+
+\section*{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations implementation
+plan continue task v17} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026). \emph{Upstream-burden selector v1}
+[Internal science draft].
+
+The AEther-Flow Research Project. (2026). \emph{Localization source-basis
+axiom selector-domain EqSrc source-equivalence obligation packet or controlled
+pause} [Internal science draft].
+
+The AEther-Flow Research Project. (2026). \emph{Localization source-basis
+axiom selector-domain EqSrc source-relabeling isomorphism datum} [Internal
+science draft].
+
+The AEther-Flow Research Project. (2026). \emph{V15 P5-T01 upstream dependency
+audit for EqSrc RetainH and GenH} [Internal science draft].
+
+\end{document}
+

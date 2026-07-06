@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-010`
-- Latest handoff: `handoff-0642`
-- Current status: `v17_p6_t01_selected_eqsrc_theorem_attempt_no_promotion`
+- Active task: `RT-20260706-011`
+- Latest handoff: `handoff-0643`
+- Current status: `v17_p6_t02_record_local_eqsrc_theorem_candidate_obstruction_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p6_t02_selected_upstream_equivalence_attempt`
+- Route ID: `v17_p6_t03_upstream_attempt_audit_stress_selector`
 - Role family: ``
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Execute the upstream theorem or primitive attempt selected by P6-T01.
+- Milestone burden: Select audit, stress, repair, freeze, or return-to-matter route after upstream attempt.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `1540d5e50477043175613c91013c58a47251bd53f9c3d0fdad3b92630ead544a`
-- JSON SHA-256: `efe1fa1f00daf6a31f5505e3066ffbd7027d929e1a0add42f8ffe530d3138b06`
+- YAML SHA-256: `fa0ca545861f431bcd728ae6047b6d1d2044d249bf6e4d4b6fa0d33a5b5165a1`
+- JSON SHA-256: `efa10d80c49d1ff4a3d51a4b5da3395e676d12837e1f6cc6b6e540429386bc8b`
 
 ## Authority Warning
 
