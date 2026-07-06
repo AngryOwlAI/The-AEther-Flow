@@ -1,0 +1,24 @@
+review_id: "parent_conflict_review_upstream_attempt_audit_stress_selector"
+task_id: "RT-20260706-012"
+status: "no_conflict"
+blocking_conflicts_present: false
+resolution_rounds: 0
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260706-012/artifacts/child_phys_math_upstream_attempt_audit_stress_selector.yaml"
+    selected_route: "proof_normal_form_schema"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260706-012/artifacts/child_phys_phil_upstream_attempt_audit_stress_selector.yaml"
+    selected_route: "proof_normal_form_schema"
+conflict_checks:
+  mathematical_scope:
+    status: "aligned"
+    summary: "Both children preserve P6-T02 as record-local only and do not treat the theorem candidate as general EqSrc."
+  ontology_boundary:
+    status: "aligned"
+    summary: "Both children reject adoption, promotion, benchmark, and completed-derivation language."
+  next_route:
+    status: "aligned"
+    summary: "Both children select P7-T01 proof-normal-form schema."
+unresolved_conflicts: []
+

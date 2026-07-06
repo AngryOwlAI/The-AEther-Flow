@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-011` and `handoff-0643`.
+`RT-20260706-012` and `handoff-0644`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-011` |
-| Latest handoff ID | `handoff-0643` |
-| Current status | `v17_p6_t02_record_local_eqsrc_theorem_candidate_obstruction_no_promotion` |
+| Active task ID | `RT-20260706-012` |
+| Latest handoff ID | `handoff-0644` |
+| Current status | `v17_p6_t03_selected_p7_t01_proof_normal_form_schema_no_promotion` |
 | V16 completed | false |
-| Current route family | v17 p6 t02 record local eqsrc theorem candidate no promotion |
+| Current route family | v17 p6 t03 selected p7 t01 proof normal form schema no promotion |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists with general_equivalence_theorem_missing |
-| Required next authority | P6-T03 may only select audit stress repair freeze or return-to-matter route for the P6-T02 upstream attempt without overreading the theorem candidate as general EqSrc. |
-| Next recommended action | Run one bounded v17 P6-T03 upstream_attempt_audit_stress_selector packet under theoretical-continuation-selector@0.1.0 to choose audit stress repair freeze or return-to-matter route. |
+| Required next authority | P7-T01 may create proof-normal-form schema and registry header only; it must not replace TeX authority or promote physics claims. |
+| Next recommended action | Run one bounded v17 P7-T01 proof_normal_form_schema packet under project-control-maintainer@0.2.0 task overlay to create the proof-normal-form schema and PROOF_NORMAL_FORM_REGISTRY header without replacing TeX authority. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-011/00_TASK.yaml`.
-- Active task objective: Execute the selected EqSrc_theorem_attempt by producing one bounded record-local EqSrc theorem candidate and one explicit obstruction to general EqSrc promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0643.yaml`.
-- Latest handoff summary: RT-20260706-011 completed one bounded v17 P6-T02 selected upstream EqSrc theorem-attempt packet. It supplied a record-local relabeling orbit theorem candidate and named OB-P6T02-GENERAL-EQSRC-FAMILY-CLOSURE-MISSING as the obstruction to general EqSrc promotion with no EqSrc discharge RetainH adoption GenH adoption source-law adoption matter-coupling derivation downstream GR promotion or Distance-to-GR ledger delta.
-- Current route family: v17 p6 t02 record local eqsrc theorem candidate no promotion.
-- Next recommended action: Run one bounded v17 P6-T03 upstream_attempt_audit_stress_selector packet under theoretical-continuation-selector@0.1.0 to choose audit stress repair freeze or return-to-matter route.
+- Active task path: `research_control/tasks/RT-20260706-012/00_TASK.yaml`.
+- Active task objective: Select exactly one next route after the P6-T02 upstream EqSrc theorem attempt without overreading the record-local theorem candidate as downstream GR recovery.
+- Latest handoff path: `research_control/handoffs/handoff-0644.yaml`.
+- Latest handoff summary: RT-20260706-012 completed one bounded v17 P6-T03 upstream attempt selector. It selected P7-T01 proof-normal-form schema after the P6-T02 record-local EqSrc theorem candidate and general-family closure obstruction, with no audit stress repair freeze EqSrc discharge RetainH adoption GenH adoption source-law adoption matter-coupling derivation downstream GR promotion or Distance-to-GR ledger delta.
+- Current route family: v17 p6 t03 selected p7 t01 proof normal form schema no promotion.
+- Next recommended action: Run one bounded v17 P7-T01 proof_normal_form_schema packet under project-control-maintainer@0.2.0 task overlay to create the proof-normal-form schema and PROOF_NORMAL_FORM_REGISTRY header without replacing TeX authority.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P6-T03 upstream_attempt_audit_stress_selector packet under theoretical-continuation-selector@0.1.0 to choose audit stress repair freeze or return-to-matter route.
+Run one bounded v17 P7-T01 proof_normal_form_schema packet under project-control-maintainer@0.2.0 task overlay to create the proof-normal-form schema and PROOF_NORMAL_FORM_REGISTRY header without replacing TeX authority.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,23 +301,23 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-011`;
-- latest handoff: `handoff-0643`;
-- current status: `v17_p6_t02_record_local_eqsrc_theorem_candidate_obstruction_no_promotion`;
+- active task: `RT-20260706-012`;
+- latest handoff: `handoff-0644`;
+- current status: `v17_p6_t03_selected_p7_t01_proof_normal_form_schema_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `global_research_control_validation`: PENDING;
 - latest handoff validation `parent_child_synthesis`: PASS;
-- latest handoff validation `theorem_attempt_artifact_present`: PASS;
+- latest handoff validation `selector_artifact_present`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0643.yaml`
-- `research_control/tasks/RT-20260706-011/00_TASK.yaml`
+- `research_control/handoffs/handoff-0644.yaml`
+- `research_control/tasks/RT-20260706-012/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -333,7 +333,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0643*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0644*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

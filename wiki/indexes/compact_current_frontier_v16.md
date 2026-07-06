@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-011`
-- Latest handoff: `handoff-0643`
-- Current status: `v17_p6_t02_record_local_eqsrc_theorem_candidate_obstruction_no_promotion`
+- Active task: `RT-20260706-012`
+- Latest handoff: `handoff-0644`
+- Current status: `v17_p6_t03_selected_p7_t01_proof_normal_form_schema_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p6_t03_upstream_attempt_audit_stress_selector`
+- Route ID: `v17_p7_t01_proof_normal_form_schema`
 - Role family: ``
-- Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Select audit, stress, repair, freeze, or return-to-matter route after upstream attempt.
+- Target milestone: `matter_coupling`
+- Milestone burden: Create proof-normal-form schema for source-side mathematical artifacts.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `fa0ca545861f431bcd728ae6047b6d1d2044d249bf6e4d4b6fa0d33a5b5165a1`
-- JSON SHA-256: `efa10d80c49d1ff4a3d51a4b5da3395e676d12837e1f6cc6b6e540429386bc8b`
+- YAML SHA-256: `4d2c37ed41b26fc222262ecc8c39f3ab0ad00c83cc0a628b5ce889118a945c03`
+- JSON SHA-256: `fc71f8934cad490c71a479e364e40f1b2644261710405c952b60ee2917e0dc6a`
 
 ## Authority Warning
 
