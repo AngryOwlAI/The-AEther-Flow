@@ -1,0 +1,136 @@
+{
+  "checks": [
+    {
+      "check_id": "authority_marker",
+      "detail": "Taxonomy must be an explicit project-control artifact.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_present:overclaim_catch_rate",
+      "detail": "Required v17 P12-T01 metric identifier must be present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_present:underclaim_warning_rate",
+      "detail": "Required v17 P12-T01 metric identifier must be present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_present:obstruction_precision",
+      "detail": "Required v17 P12-T01 metric identifier must be present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_present:route_orbit_rate",
+      "detail": "Required v17 P12-T01 metric identifier must be present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_present:candidate_to_audit_conversion",
+      "detail": "Required v17 P12-T01 metric identifier must be present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_present:audit_to_stress_survival",
+      "detail": "Required v17 P12-T01 metric identifier must be present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_present:stress_survival_rate",
+      "detail": "Required v17 P12-T01 metric identifier must be present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_present:human_gate_load",
+      "detail": "Required v17 P12-T01 metric identifier must be present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_present:proof_to_process_ratio",
+      "detail": "Required v17 P12-T01 metric identifier must be present.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "definition_table_column:Metric ID",
+      "detail": "Metric definition table must include numerator, denominator, evidence, and guardrail fields.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "definition_table_column:Definition",
+      "detail": "Metric definition table must include numerator, denominator, evidence, and guardrail fields.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "definition_table_column:Numerator",
+      "detail": "Metric definition table must include numerator, denominator, evidence, and guardrail fields.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "definition_table_column:Denominator",
+      "detail": "Metric definition table must include numerator, denominator, evidence, and guardrail fields.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "definition_table_column:Primary evidence sources",
+      "detail": "Metric definition table must include numerator, denominator, evidence, and guardrail fields.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "definition_table_column:Interpretation guardrail",
+      "detail": "Metric definition table must include numerator, denominator, evidence, and guardrail fields.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_phrase:P12-T02 is responsible",
+      "detail": "Taxonomy must preserve P12-T02 deferral and no-physics-delta boundaries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_phrase:physics_claim_authority_created: false",
+      "detail": "Taxonomy must preserve P12-T02 deferral and no-physics-delta boundaries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_phrase:Physics promotion authorized: false",
+      "detail": "Taxonomy must preserve P12-T02 deferral and no-physics-delta boundaries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_phrase:Distance-to-GR ledger changed: false",
+      "detail": "Taxonomy must preserve P12-T02 deferral and no-physics-delta boundaries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_phrase:Source-law adoption authorized: false",
+      "detail": "Taxonomy must preserve P12-T02 deferral and no-physics-delta boundaries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_phrase:Matter-coupling derivation authorized: false",
+      "detail": "Taxonomy must preserve P12-T02 deferral and no-physics-delta boundaries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_phrase:Einstein-equation derivation authorized: false",
+      "detail": "Taxonomy must preserve P12-T02 deferral and no-physics-delta boundaries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_phrase:Gate Chair verdict created: false",
+      "detail": "Taxonomy must preserve P12-T02 deferral and no-physics-delta boundaries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_phrase:Completed derivation authorized: false",
+      "detail": "Taxonomy must preserve P12-T02 deferral and no-physics-delta boundaries.",
+      "status": "PASS"
+    }
+  ],
+  "gate_chair_verdict_created": false,
+  "p12_t02_implementation_deferred": true,
+  "physics_claim_authority_created": false,
+  "physics_promotion_authorized": false,
+  "required_metric_count": 9,
+  "status": "PASS",
+  "taxonomy_path": "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
+}
