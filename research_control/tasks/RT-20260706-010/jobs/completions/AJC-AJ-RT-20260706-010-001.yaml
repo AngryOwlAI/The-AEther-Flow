@@ -1,0 +1,363 @@
+completion_id: "AJC-AJ-RT-20260706-010-001"
+job_id: "AJ-RT-20260706-010-001"
+task_id: "RT-20260706-010"
+decision_id: "DDR-20260706-010"
+status: "completed"
+completed_at: "2026-07-06T08:39:37Z"
+completed_by_role: "theoretical-continuation-selector@0.1.0--RT-20260706-010"
+source_role_id: "theoretical-continuation-selector"
+source_role_version: "0.1.0"
+plan_task_id: "P6-T01"
+objective_result: "completed"
+summary: "Selected EqSrc_theorem_attempt as the bounded v17 P6-T01 upstream-burden route after P2 candidate-cycle P4 detector-route and P5 metric-use ledger evidence."
+artifacts:
+  - "research_control/tasks/RT-20260706-010/artifacts/upstream_burden_selector_v1.md"
+  - "research_control/tasks/RT-20260706-010/artifacts/child_phys_math_upstream_burden_selector.yaml"
+  - "research_control/tasks/RT-20260706-010/artifacts/child_phys_phil_upstream_burden_selector.yaml"
+  - "research_control/tasks/RT-20260706-010/artifacts/parent_conflict_review_upstream_burden_selector.yaml"
+  - "research_control/tasks/RT-20260706-010/artifacts/parent_fusion_notes_upstream_burden_selector.md"
+output_paths:
+  - "research_control/tasks/RT-20260706-010/artifacts/upstream_burden_selector_v1.md"
+  - "research_control/tasks/RT-20260706-010/artifacts/child_phys_math_upstream_burden_selector.yaml"
+  - "research_control/tasks/RT-20260706-010/artifacts/child_phys_phil_upstream_burden_selector.yaml"
+  - "research_control/tasks/RT-20260706-010/artifacts/parent_conflict_review_upstream_burden_selector.yaml"
+  - "research_control/tasks/RT-20260706-010/artifacts/parent_fusion_notes_upstream_burden_selector.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260706-010/00_TASK.yaml"
+  - "research_control/tasks/RT-20260706-010/DDR-20260706-010.md"
+  - "research_control/tasks/RT-20260706-010/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-010/jobs/AJ-RT-20260706-010-001.yaml"
+  - "research_control/tasks/RT-20260706-010/jobs/completions/AJC-AJ-RT-20260706-010-001.yaml"
+  - "research_control/tasks/RT-20260706-010/roles/theoretical-continuation-selector@0.1.0--RT-20260706-010.yaml"
+  - "research_control/handoffs/handoff-0642.yaml"
+  - "research_control/handoffs/handoff-0642.md"
+validation:
+  route_input_inspection: "PASS"
+  theoretical_decision_output_present: "PASS"
+  parent_child_synthesis: "PASS"
+  global_research_control_validation: "PASS"
+upstream_burden_selection:
+  selected_route: "EqSrc_theorem_attempt"
+  selected_next_plan_task_id: "P6-T02"
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  selected_next_plan_route_type: "selected_upstream_equivalence_attempt"
+  selected_next_role_family: "ontology-formalizer@0.2.0 task overlay"
+  selected_next_packet_requires_human_gate: false
+  selected_next_artifact: "research_control/tasks/<task-id>/artifacts/selected_upstream_equivalence_attempt_v1.tex"
+required_inputs:
+  p2_candidate_cycle:
+    artifact_path: "research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md"
+    status: "audited_stress_survived_draft_control_candidate_pending_exact_scoped_gate_question"
+    repair_required: false
+    freeze_required: false
+  p4_detector_route:
+    artifact_path: "research_control/tasks/RT-20260706-005/artifacts/detector_replacement_route_selector_v1.md"
+    selected_route: "metric_use_ledger_integration_packet"
+    freeze_decision: "not_frozen"
+  p5_metric_use_ledger:
+    registry_path: "registries/METRIC_USE_LEDGER.csv"
+    total_row_count: 19
+    guarded_row_count: 19
+  upstream_ledgers:
+    eqsrc:
+      burden_id: "source_equivalence_eqsrc"
+      status: "draft object exists"
+      mathematical_status: "general_equivalence_theorem_missing"
+    retain_h:
+      burden_id: "retain_h"
+      status: "blocked by missing primitive"
+      mathematical_status: "primitive_missing"
+    gen_h:
+      burden_id: "gen_h"
+      status: "blocked by missing primitive"
+      mathematical_status: "primitive_missing"
+upstream_primitive_trigger_status:
+  EqSrc:
+    triggered: true
+    trigger_kind: "selected_route_target"
+    selected_for_next_packet: true
+    reason: "P6-T01 selects the existing EqSrc draft-object theorem burden because source_equivalence_eqsrc remains general_equivalence_theorem_missing."
+    adoption_or_discharge: false
+  RetainH:
+    triggered: false
+    selected_for_next_packet: false
+    reason: "No current selected theorem setup has isolated H-indexed retention as the immediate primitive before EqSrc."
+    adoption_or_discharge: false
+  GenH:
+    triggered: false
+    selected_for_next_packet: false
+    reason: "No current selected theorem setup has isolated generated-family construction or closure as the immediate primitive before EqSrc."
+    adoption_or_discharge: false
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft_control_object_exists"
+  new_status: "draft_control_object_exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v17_p6_t02_eqsrc_theorem_attempt"
+  downstream_still_blocked:
+    - "EqSrc_discharge"
+    - "RetainH_adoption"
+    - "GenH_adoption"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_expansion"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+  explanation: "No Distance-to-GR ledger row is changed. P6-T01 selects an EqSrc theorem-attempt route only."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit"
+  - burden: "Source equivalence EqSrc"
+    status: "selected for P6-T02 theorem attempt; not discharged"
+  - burden: "RetainH"
+    status: "unchanged; missing primitive deferred"
+  - burden: "GenH"
+    status: "unchanged; missing primitive deferred"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only object remains bounded"
+  - burden: "g_eff"
+    status: "unchanged; no scope expansion and metric-use ledger guards remain active"
+  - burden: "matter coupling"
+    status: "unchanged; no repair selected and no adoption"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation"
+  - burden: "finite-variation robustness"
+    status: "unchanged"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark promotion"
+  - burden: "Gate Chair status"
+    status: "unchanged; no verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen"
+new_mathematical_payload:
+  - payload_id: "P6T01-PAYLOAD-001"
+    payload_type: "packet_selection"
+    object_name: "EqSrc theorem attempt route"
+    source_path: "research_control/tasks/RT-20260706-010/artifacts/upstream_burden_selector_v1.md"
+    source_hash: "9b04c7c695510123d623dd975fef927d49d1b769a2f0ad87dd1e8c6f7172b1b0"
+    summary: "Selects EqSrc_theorem_attempt as the single v17 P6-T01 route after P2 candidate-cycle P4 detector-route and P5 metric-use ledger completion."
+  - payload_id: "P6T01-PAYLOAD-002"
+    payload_type: "dependency_map_update"
+    object_name: "P2/P4/P5 guarded candidate cycle to EqSrc theorem attempt"
+    source_path: "research_control/tasks/RT-20260706-010/artifacts/upstream_burden_selector_v1.md"
+    source_hash: "9b04c7c695510123d623dd975fef927d49d1b769a2f0ad87dd1e8c6f7172b1b0"
+    summary: "Maps the guarded matter-coupling candidate cycle back to the existing EqSrc theorem burden before RetainH or GenH primitive introduction."
+  - payload_id: "P6T01-PAYLOAD-003"
+    payload_type: "packet_selection"
+    object_name: "EqSrc RetainH GenH trigger status"
+    source_path: "research_control/tasks/RT-20260706-010/artifacts/upstream_burden_selector_v1.md"
+    source_hash: "9b04c7c695510123d623dd975fef927d49d1b769a2f0ad87dd1e8c6f7172b1b0"
+    summary: "Records EqSrc selected for the next theorem-attempt packet while RetainH and GenH remain deferred until a theorem setup requires them."
+theoretical_decision_output:
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  selected_route: "EqSrc_theorem_attempt"
+  selected_next_plan_route_type: "selected_upstream_equivalence_attempt"
+  decision_basis: "P2 and P4 produced guarded draft/control candidate evidence without a current repair or freeze requirement, P5 supplied metric-use guard coverage, and the Distance-to-GR ledger still lists EqSrc as an existing draft object whose general equivalence theorem is missing. The lowest-authority constructive continuation is therefore EqSrc theorem attempt before introducing RetainH or GenH primitives."
+  theoretical_method: "Compare each v17 P6-T01 allowed route against the P2 candidate-cycle result, P4 detector route status, P5 metric-use ledger status, EqSrc RetainH GenH ledger rows, and upstream trigger-integration policy. Select the route that attacks an existing upstream theorem burden while preserving all adoption, benchmark, Gate Chair, and completed-derivation blocks."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "No protected Gate Chair verdict, canonical ontology edit, source-law adoption, benchmark claim, or physics promotion is selected."
+  next_execution_role_family: "ontology-formalizer@0.2.0 task overlay"
+  selected_next_packet_objective: "Execute P6-T02 by writing selected_upstream_equivalence_attempt_v1.tex as an EqSrc theorem-attempt packet with explicit premises, failure branches, and no downstream promotion."
+  selected_next_packet_requires_human_gate: false
+  decision_consequence: "P6-T01 completes without EqSrc discharge, RetainH adoption, GenH adoption, matter-coupling repair, freeze, benchmark promotion, or completed derivation; immediate continuation is P6-T02."
+  new_payload_novelty: "Converts the completed P2/P4/P5 guarded candidate cycle into a dependency-ordered upstream theorem route: attempt EqSrc first, then let the theorem attempt expose whether RetainH or GenH primitives are truly immediate dependencies."
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  scoped_obstruction_present: false
+  repeated_unmet_burdens_no_new_payload: false
+  new_mathematical_payload_present: true
+  freeze_decision: "not_frozen"
+  active_freeze_label: "V17-P6-T01-UPSTREAM-BURDEN-SELECTOR"
+  rationale: "The route is not frozen because no scoped obstruction was found and a non-promotional P6-T02 EqSrc theorem-attempt packet remains available."
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "Selector-only upstream route classification."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "EqSrc discharge"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "source-law adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "physical metric authority"
+    - "detector calibration"
+    - "matter semantics adoption"
+    - "detector semantics adoption"
+    - "coupling-law adoption"
+    - "matter coupling claim"
+    - "matter-coupling derivation"
+    - "matter-coupling adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "program-wide no-go conclusion"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260706-010/artifacts/child_phys_math_upstream_burden_selector.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260706-010/artifacts/child_phys_phil_upstream_burden_selector.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260706-010/artifacts/parent_conflict_review_upstream_burden_selector.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260706-010/artifacts/upstream_burden_selector_v1.md"
+    fusion_notes_path: "research_control/tasks/RT-20260706-010/artifacts/parent_fusion_notes_upstream_burden_selector.md"
+    summary: "Both child perspectives select EqSrc theorem attempt and immediate P6-T02 continuation while preserving all adoption and promotion blocks."
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=666 relationship_row_count=3417 semantic_row_count=666 vault_row_count=666"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260706-009 latest_handoff=handoff-0641 boundary=director_decision_required"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 668
+    relationship_row_count: 3425
+    semantic_row_count: 668
+    vault_row_count: 668
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"EqSrc RetainH GenH\" --limit 10 --json"
+      query_type: "search"
+      query_text: "EqSrc RetainH GenH"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-EQSRC-RETAINH-GENH-TRIGGER-LIST-V16"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "ffda2321a411aefd533418d82d7d23781ba1bce51d28a5b6f8aa8dc4d8fbc33e"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-EQSRC-RETAINH-GENH-TRIGGER-LIST-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/eqsrc_retainh_genh_trigger_list_v16.md"
+      source_hash: "5b2ce3eb2ed239a0858641f598ad2964005350b40c1e51e92864f1e5af38c634"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-018-UPSTREAM-TRIGGER-SELECTOR-INTEGRATION-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-018/artifacts/upstream_trigger_selector_integration_v16.md"
+      source_hash: "13e1b3c67d5a43b0e9de709019feac5e54870846648b9a324257c0b4c8ae9f8d"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-V17-COUPLING-LAW-CANDIDATE-CYCLE-REPORT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md"
+      source_hash: "5252003fd07de7b86625e5ab5e896b2cbf78e0ad44ddebafa103dff01106dda1"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260706-005-DETECTOR-REPLACEMENT-ROUTE-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260706-005/artifacts/detector_replacement_route_selector_v1.md"
+      source_hash: "d3e14ffde1167ec5adf135f77f1232eb609a9747134ebaa39d12653cd92d544d"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS without refresh"
+      - "query_memory status PASS"
+      - "targeted memory lookup returned v17 plan and current frontier"
+      - "continue_research.py resolved handoff-0641 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P6-T01 required inputs inspected"
+      - "EqSrc_theorem_attempt selected"
+      - "RetainH and GenH deferred without no-go claim"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "global validators reached structured repair pass after receipt schema alignment"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier write and check PASS"
+      - "compact frontier write check and validation PASS"
+      - "dependency graph check PASS after post-bootstrap rerender"
+      - "claim graph validation PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS"
+      - "continue_research_memory_preflight refreshed local retrieval layers to PASS"
+      - "bootstrap_memory_system --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language --changed PASS with zero hard failures"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  selector_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not applicable to P6-T01 selector packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+verdict: "v17_p6_t01_selected_eqsrc_theorem_attempt_no_promotion"
+coherent_resolution_summary: "P6-T01 routes to the existing EqSrc theorem burden before RetainH or GenH primitive introduction and without returning to matter-coupling repair."
+next_recommendation: "Run one bounded v17 P6-T02 ontology-formalizer packet to execute the EqSrc theorem attempt."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

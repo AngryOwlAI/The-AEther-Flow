@@ -1,0 +1,36 @@
+artifact_id: "child_phys_math_upstream_burden_selector"
+task_id: "RT-20260706-010"
+job_id: "AJ-RT-20260706-010-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+artifact_under_review: "research_control/tasks/RT-20260706-010/artifacts/upstream_burden_selector_v1.md"
+contribution_summary: "Compared the allowed P6-T01 route set against the current burden ledger and selected EqSrc_theorem_attempt because it attacks an existing draft-object theorem burden before introducing RetainH or GenH primitives."
+formal_findings:
+  - finding_id: "P6T01-MATH-001"
+    claim: "EqSrc has the immediate formal burden."
+    evidence: "DISTANCE_TO_GR_LEDGER row source_equivalence_eqsrc reports draft object exists and general_equivalence_theorem_missing."
+  - finding_id: "P6T01-MATH-002"
+    claim: "RetainH and GenH are deferred immediate primitives."
+    evidence: "Their ledger rows report primitive_missing, but no current theorem setup has yet shown they must precede EqSrc theorem formulation."
+  - finding_id: "P6T01-MATH-003"
+    claim: "Matter-coupling repair is not mathematically forced by current evidence."
+    evidence: "P2 and P4 route artifacts report no repair or freeze requirement, and P5 ledger guards the high-risk metric-adjacent references."
+selected_route: "EqSrc_theorem_attempt"
+selected_next_packet_type: "bounded_theoretical_calculation"
+selected_next_role_family: "ontology-formalizer@0.2.0 task overlay"
+upstream_primitive_trigger_status:
+  EqSrc: true
+  RetainH: false
+  GenH: false
+claim_boundary:
+  eqsrc_discharged: false
+  retainh_adopted: false
+  genh_adopted: false
+  source_law_adopted: false
+  downstream_gr_promoted: false
+next_packet_requirement: "P6-T02 should state theorem premises, target equivalence scope, required primitives if any, and failure branches in selected_upstream_equivalence_attempt_v1.tex."
+unresolved_mathematical_limitations:
+  - "The selector does not prove EqSrc."
+  - "The selector does not show whether RetainH or GenH will be needed by the theorem attempt."
+validation_status: "PASS"

@@ -1,0 +1,23 @@
+artifact_id: "parent_conflict_review_upstream_burden_selector"
+task_id: "RT-20260706-010"
+job_id: "AJ-RT-20260706-010-001"
+execution_unit_id: "parent"
+perspective: "physicist_mathematician_philosopher"
+status: "completed"
+child_outputs:
+  - "research_control/tasks/RT-20260706-010/artifacts/child_phys_math_upstream_burden_selector.yaml"
+  - "research_control/tasks/RT-20260706-010/artifacts/child_phys_phil_upstream_burden_selector.yaml"
+consensus_points:
+  - "Select EqSrc_theorem_attempt as the P6-T01 route."
+  - "Do not treat route selection as EqSrc discharge."
+  - "Defer RetainH and GenH until the EqSrc theorem attempt exposes a precise dependency."
+  - "Do not return to matter-coupling candidate repair because current P2 and P4 evidence does not require repair or freeze."
+  - "Preserve no source-law adoption no MetricData(E) adoption no g_eff scope expansion no matter-coupling derivation no Einstein equations no benchmark promotion and no completed derivation."
+conflicts:
+  - conflict_id: "none"
+    status: "no_conflict"
+    description: "Both child perspectives selected EqSrc theorem attempt and agreed on the adoption and promotion blocks."
+resolution_rounds: 0
+unresolved_conflicts: []
+fusion_decision: "Fuse the consensus into upstream_burden_selector_v1.md and route to P6-T02 ontology-formalizer task overlay."
+validation_status: "PASS"

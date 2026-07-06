@@ -719,6 +719,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-004-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260706-004-parent-fusion-notes-detector-replacement-refuter-stress.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-005-DETECTOR-REPLACEMENT-ROUTE-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260706-005-detector-replacement-route-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-005-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-ROUTE-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260706-005-parent-fusion-notes-detector-replacement-route-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-010-PARENT-FUSION-NOTES-UPSTREAM-BURDEN-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260706-010-parent-fusion-notes-upstream-burden-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-010-UPSTREAM-BURDEN-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260706-010-upstream-burden-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1293,6 +1295,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-004-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-REFUTER-STRESS` `research_control/tasks/RT-20260706-004/artifacts/parent_fusion_notes_detector_replacement_refuter_stress.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-005-DETECTOR-REPLACEMENT-ROUTE-SELECTOR` `research_control/tasks/RT-20260706-005/artifacts/detector_replacement_route_selector_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-005-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-ROUTE-SELECTOR` `research_control/tasks/RT-20260706-005/artifacts/parent_fusion_notes_detector_replacement_route_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260706-010-PARENT-FUSION-NOTES-UPSTREAM-BURDEN-SELECTOR` `research_control/tasks/RT-20260706-010/artifacts/parent_fusion_notes_upstream_burden_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260706-010-UPSTREAM-BURDEN-SELECTOR` `research_control/tasks/RT-20260706-010/artifacts/upstream_burden_selector_v1.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

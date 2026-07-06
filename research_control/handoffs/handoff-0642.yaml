@@ -1,0 +1,92 @@
+handoff_id: "handoff-0642"
+created_at: "2026-07-06T08:39:37Z"
+task_id: "RT-20260706-010"
+decision_id: "DDR-20260706-010"
+job_id: "AJ-RT-20260706-010-001"
+completion_path: "research_control/tasks/RT-20260706-010/jobs/completions/AJC-AJ-RT-20260706-010-001.yaml"
+source_task_id: "RT-20260706-010"
+source_job_id: "AJ-RT-20260706-010-001"
+source_completion_id: "AJC-AJ-RT-20260706-010-001"
+status: "completed"
+summary: "RT-20260706-010 completed one bounded v17 P6-T01 upstream-burden selector packet. It selected EqSrc_theorem_attempt as the next route after P2 candidate-cycle P4 detector-route and P5 metric-use ledger evidence with no EqSrc discharge RetainH adoption GenH adoption source-law adoption matter-coupling repair downstream GR promotion or Distance-to-GR ledger delta."
+next_action: "Run one bounded v17 P6-T02 selected_upstream_equivalence_attempt packet under ontology-formalizer@0.2.0 task overlay to execute the EqSrc theorem attempt."
+loop_risk_route: "v17_p6_t01_eqsrc_theorem_attempt_selected_no_promotion"
+claim_boundary:
+  allowed_next_scope: "P6-T02 may execute only the selected EqSrc theorem-attempt packet with explicit premises failure branches and no downstream promotion."
+  completed_plan_task_id: "P6-T01"
+  selected_next_plan_task_id: "P6-T02"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  selected_route: "EqSrc_theorem_attempt"
+  eqsrc_discharged: false
+  retainh_adopted: false
+  genh_adopted: false
+  source_law_adopted: false
+  matter_coupling_repair_selected: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_metric_authorized: false
+  detector_calibration_authorized: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P6-T01 selector as EqSrc discharge"
+  - "P6-T01 selector as RetainH adoption"
+  - "P6-T01 selector as GenH adoption"
+  - "P6-T01 selector as source-law adoption"
+  - "P6-T01 selector as matter-coupling repair or derivation"
+  - "P6-T01 selector as MetricData(E) adoption"
+  - "P6-T01 selector as g_eff scope expansion"
+  - "P6-T01 selector as physical metric authority"
+  - "P6-T01 selector as stress-energy semantics"
+  - "P6-T01 selector as matter action"
+  - "P6-T01 selector as Einstein equations"
+  - "P6-T01 selector as benchmark promotion"
+  - "P6-T01 selector as completed derivation"
+upstream_primitive_trigger_status:
+  EqSrc:
+    triggered: true
+    selected_for_next_packet: true
+    adoption_or_discharge: false
+  RetainH:
+    triggered: false
+    selected_for_next_packet: false
+    adoption_or_discharge: false
+  GenH:
+    triggered: false
+    selected_for_next_packet: false
+    adoption_or_discharge: false
+distance_to_gr:
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  status: "draft object exists with general_equivalence_theorem_missing"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-010 selects a theorem-attempt route only and does not update Distance-to-GR ledger rows or discharge any burden."
+selected_next_route:
+  route_id: "v17_p6_t02_selected_upstream_equivalence_attempt"
+  plan_task_id: "P6-T02"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Execute the upstream theorem or primitive attempt selected by P6-T01."
+  selected_attempt: "EqSrc_theorem_attempt"
+  required_artifact: "research_control/tasks/<task-id>/artifacts/selected_upstream_equivalence_attempt_v1.tex"
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+validation:
+  route_input_inspection: "PASS"
+  theoretical_decision_output_present: "PASS"
+  parent_child_synthesis: "PASS"
+  global_research_control_validation: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

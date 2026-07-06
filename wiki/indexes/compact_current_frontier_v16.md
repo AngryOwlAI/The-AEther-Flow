@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-009`
-- Latest handoff: `handoff-0641`
-- Current status: `v17_p5_t04_metric_use_frontier_integration_completed_no_physics_delta`
+- Active task: `RT-20260706-010`
+- Latest handoff: `handoff-0642`
+- Current status: `v17_p6_t01_selected_eqsrc_theorem_attempt_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p6_t01_upstream_burden_selector`
+- Route ID: `v17_p6_t02_selected_upstream_equivalence_attempt`
 - Role family: ``
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Select whether to attack EqSrc RetainH GenH or continue matter-coupling candidate repair.
+- Milestone burden: Execute the upstream theorem or primitive attempt selected by P6-T01.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `1497f2b8a9b7aed864508c3005d9568807c508e5eb25ccdfa9343ef7ba4555f8`
-- JSON SHA-256: `34345cfffe11bbc00d45a1c28aaf24751911cdd3aa8b32d00f43fa7c2861ac77`
+- YAML SHA-256: `1540d5e50477043175613c91013c58a47251bd53f9c3d0fdad3b92630ead544a`
+- JSON SHA-256: `efe1fa1f00daf6a31f5505e3066ffbd7027d929e1a0add42f8ffe530d3138b06`
 
 ## Authority Warning
 

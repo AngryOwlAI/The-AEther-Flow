@@ -1,0 +1,60 @@
+task_id: "RT-20260706-010"
+task_type: "upstream_equivalence_burden_selector"
+status: "completed"
+created_at: "2026-07-06T08:39:37Z"
+updated_at: "2026-07-06T08:39:37Z"
+closed_at: "2026-07-06T08:39:37Z"
+parent_task_id: "RT-20260706-009"
+parent_handoff_id: "handoff-0641"
+decision_id: "DDR-20260706-010"
+job_id: "AJ-RT-20260706-010-001"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260706-010"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This P6-T01 selector does not consume Gate Chair authority or issue a protected verdict; it selects one non-promotional upstream theorem-attempt route."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P6"
+  plan_task_id: "P6-T01"
+  plan_task_name: "Upstream-burden selector"
+objective: "Select whether v17 continuation should attack EqSrc, RetainH, GenH, matter-coupling candidate repair, finite local model expansion, or scoped obstruction freeze after P2, P4, and P5 evidence."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Select whether to attack EqSrc, RetainH, GenH, or continue matter-coupling candidate repair."
+closure_status: "v17_p6_t01_selected_eqsrc_theorem_attempt_no_promotion"
+claim_boundary:
+  allowed_scope: "P6-T01 selector-only route classification using P2 candidate-cycle P4 detector-route P5 metric-use ledger and EqSrc RetainH GenH ledger statuses."
+  selected_route: "EqSrc_theorem_attempt"
+  selected_next_plan_task_id: "P6-T02"
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  selected_next_plan_route_type: "selected_upstream_equivalence_attempt"
+  selected_next_role_family: "ontology-formalizer@0.2.0 task overlay"
+  selected_next_packet_requires_human_gate: false
+  eqsrc_discharged: false
+  retainh_adopted: false
+  genh_adopted: false
+  source_law_adopted: false
+  matter_coupling_repair_selected: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_metric_authorized: false
+  detector_calibration_authorized: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/tasks/RT-20260706-010/artifacts/upstream_burden_selector_v1.md"
+  - "research_control/tasks/RT-20260706-010/artifacts/child_phys_math_upstream_burden_selector.yaml"
+  - "research_control/tasks/RT-20260706-010/artifacts/child_phys_phil_upstream_burden_selector.yaml"
+  - "research_control/tasks/RT-20260706-010/artifacts/parent_conflict_review_upstream_burden_selector.yaml"
+  - "research_control/tasks/RT-20260706-010/artifacts/parent_fusion_notes_upstream_burden_selector.md"
+next_recommended_action: "Run one bounded v17 P6-T02 ontology-formalizer task overlay to execute an EqSrc theorem-attempt packet and write selected_upstream_equivalence_attempt_v1.tex with no downstream promotion."
+notes: "RT-20260706-010 completes P6-T01 by selecting EqSrc_theorem_attempt. It does not discharge EqSrc, adopt RetainH or GenH, adopt a source law, repair matter coupling, alter Distance-to-GR ledger rows, or promote downstream GR claims."
+documentation_impact_id: "DI-RT-20260706-010-001"
