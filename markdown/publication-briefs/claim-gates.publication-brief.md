@@ -32,6 +32,7 @@ acceptance_criteria:
   - "Separates scoped obstruction and freeze language from broad rejection of the theory."
   - "States that Gate Chair decisions are human-gated and not auto-executed by validators or documentation."
   - "Includes allowed and forbidden claim examples grounded in the claim boundary registry."
+  - "Uses positive-first scoped-status wording before blocked-overread language for M_src, g_eff, and matter-sector evidence/preconditions."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
 forbidden_patterns:
   - "Gate Chair verdict or benchmark promotion."

@@ -1,0 +1,109 @@
+task_id: "RT-20260705-058"
+task_type: "public_documentation_accepted_calibration_pass"
+status: "completed"
+created_at: "2026-07-06T03:11:46Z"
+updated_at: "2026-07-06T03:11:46Z"
+closed_at: "2026-07-06T03:11:46Z"
+parent_task_id: "RT-20260705-057"
+parent_handoff_id: "handoff-0630"
+decision_id: "DDR-20260705-058"
+job_id: "AJ-RT-20260705-058-001"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260705-058"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This documentation packet does not consume Gate Chair authority or issue a protected verdict."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T05"
+  plan_task_name: "Public-facing documentation calibration pass"
+objective: "Update public-facing summaries to use positive-first exact-scope acceptance language without changing claim status."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Update public-facing summaries to use calibrated acceptance language without changing claim status."
+closure_status: "v17_p3_t05_public_documentation_calibration_completed_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P3-T05 public-facing documentation calibration with no physics delta."
+  calibrated_public_surfaces:
+    - "README.md"
+    - "github-facing/project-overview-explainer.md"
+    - "github-facing/aether-flow-physics-program-explainer.md"
+    - "github-facing/exact-gr-benchmark-boundary-explainer.md"
+    - "github-facing/gr-derivation-roadmap-explainer.md"
+    - "github-facing/claim-gates-explainer.md"
+  source_contract_surfaces:
+    - "markdown/html-explainer-specs/project-overview-explainer.md"
+    - "markdown/html-explainer-specs/aether-flow-physics-program-explainer.md"
+    - "markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+    - "markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md"
+    - "markdown/html-explainer-specs/claim-gates-explainer.md"
+    - "markdown/publication-briefs/project-overview.publication-brief.md"
+    - "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md"
+    - "markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md"
+    - "markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md"
+    - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  html_derivative_sync_surfaces:
+    - "html/project-overview-explainer.html"
+    - "html/aether-flow-physics-program-explainer.html"
+    - "html/exact-gr-benchmark-boundary-explainer.html"
+    - "html/gr-derivation-roadmap-explainer.html"
+    - "html/claim-gates-explainer.html"
+  direct_html_only_edit: false
+  tracked_html_derivative_synchronized: true
+  tracked_html_hand_edited: false
+  focused_candidate_scan_zero_findings: true
+  immediate_v17_next_plan_task_id: "P3-T06"
+  source_law_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  detector_semantics_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "README.md"
+  - "github-facing/project-overview-explainer.md"
+  - "github-facing/aether-flow-physics-program-explainer.md"
+  - "github-facing/exact-gr-benchmark-boundary-explainer.md"
+  - "github-facing/gr-derivation-roadmap-explainer.md"
+  - "github-facing/claim-gates-explainer.md"
+  - "markdown/html-explainer-specs/project-overview-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-physics-program-explainer.md"
+  - "markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+  - "markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md"
+  - "markdown/html-explainer-specs/claim-gates-explainer.md"
+  - "markdown/publication-briefs/project-overview.publication-brief.md"
+  - "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md"
+  - "markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md"
+  - "markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md"
+  - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  - "html/project-overview-explainer.html"
+  - "html/aether-flow-physics-program-explainer.html"
+  - "html/exact-gr-benchmark-boundary-explainer.html"
+  - "html/gr-derivation-roadmap-explainer.html"
+  - "html/claim-gates-explainer.html"
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_research_control.py"
+  - "research_control/tasks/RT-20260705-058/artifacts/validate_p3_t05_public_documentation_calibration.py"
+  - "research_control/tasks/RT-20260705-058/artifacts/p3_t05_public_documentation_calibration_report.json"
+  - "research_control/tasks/RT-20260705-058/artifacts/p3_t05_public_documentation_calibration_receipt.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-058/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-058/DDR-20260705-058.md"
+  - "research_control/tasks/RT-20260705-058/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-058/jobs/AJ-RT-20260705-058-001.yaml"
+  - "research_control/tasks/RT-20260705-058/jobs/completions/AJC-AJ-RT-20260705-058-001.yaml"
+  - "research_control/tasks/RT-20260705-058/roles/documentation-curator@2.0.0--RT-20260705-058.yaml"
+  - "research_control/handoffs/handoff-0631.yaml"
+  - "research_control/handoffs/handoff-0631.md"
+  - "registries/HTML_EXPLAINER_REGISTRY.csv"
+  - "wiki/html/**"
+next_recommended_action: "Run one bounded v17 P3-T06 acceptance calibration red-team review."
+notes: "RT-20260705-058 completes v17 P3-T05 by calibrating public summaries and their source-spec/publication-brief contracts to positive-first exact-scope language. It records no Distance-to-GR ledger update and no physics claim change."
+documentation_impact_id: "DI-RT-20260705-058-001"

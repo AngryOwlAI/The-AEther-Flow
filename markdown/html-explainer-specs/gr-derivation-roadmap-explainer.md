@@ -119,12 +119,13 @@ browser-side Mermaid.
   `new_mathematical_payload`.
 - Preserves `draft/control`, `source-only`, `source-extension data`, `local`,
   `exact-branch`, and `human-gated` qualifiers.
-- Preserves current P14 public status wording for high-risk rows:
-  AEther-flow is a proposed research ontology / explanatory frame and not an
-  established physical ontology; GR is not derived; `M_src` is scoped
-  source-only; `g_eff` is scoped source-extension object status; matter
-  coupling remains scoped evidence/precondition only; Einstein equations
-  remain not started; and benchmark promotion remains blocked.
+- Preserves current P14 public status meaning for high-risk rows while using
+  positive-first status-card wording: AEther-flow is a proposed research
+  ontology / explanatory frame and not an established physical ontology; GR is
+  not derived; `M_src` is scoped source-only; `g_eff` is scoped
+  source-extension object status; matter-sector material is scoped
+  evidence/precondition only; Einstein equations remain not started; and
+  benchmark promotion remains blocked.
 - Explains source-extension and finite toy categories without treating them as
   GR recovery shortcuts.
 - Summarizes the frontier theorem inventory while naming

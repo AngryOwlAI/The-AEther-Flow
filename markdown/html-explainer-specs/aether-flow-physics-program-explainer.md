@@ -92,10 +92,12 @@ examples. Do not turn the page into a task transcript or role manual.
   inflation.
 - Preserves qualifiers such as `draft/control`, `source-only`, `local`,
   `exact-branch`, `source-extension data`, and `human-gated`.
-- Preserves the P14-T01 public table and P14-T02 glossary boundaries: GR is
-  not derived; AEther-flow is a proposed research ontology / explanatory
-  frame, not an established physical ontology; `M_src` is scoped source-only;
-  `g_eff` is scoped source-extension object status; matter coupling is not
+- Preserves the P14-T01 public table and P14-T02 glossary boundaries while
+  using positive-first status-card wording: GR is not derived; AEther-flow is a
+  proposed research ontology / explanatory frame, not an established physical
+  ontology; `M_src` is scoped source-only; `g_eff` is scoped source-extension
+  object status; matter-sector material is scoped evidence/precondition only
+  for source-side coupling-law candidate review; matter coupling is not
   derived or adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped
   evidence/precondition only; no-target certificates are not positive matter
   theory.

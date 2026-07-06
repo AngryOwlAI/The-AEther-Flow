@@ -35,6 +35,7 @@ acceptance_criteria:
   - "Explains the new_mathematical_payload rule without treating validator success as physics evidence."
   - "Summarizes the frontier theorem inventory without converting scoped source-extension evidence into physical adoption."
   - "Preserves Resp_lc, M_src, AtlasGlue_src^+, finite toy, source-extension, draft/control, source-only, and human-gated qualifiers."
+  - "Uses positive-first scoped-status wording before blocked-overread language for high-risk accepted rows."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
 forbidden_patterns:
   - "Page-local update to physics status."

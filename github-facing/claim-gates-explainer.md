@@ -99,11 +99,23 @@ Current public wording must preserve these gate distinctions:
 - GR is not derived from source substrate.
 - AEther-flow is a proposed research ontology / explanatory frame, not an
   established physical ontology.
-- `M_src` is scoped source-only status, not a target manifold, metric, or
-  downstream GR result.
-- `g_eff` is scoped source-extension object status, not an unscoped Lorentzian
-  metric, matter-coupling result, or Einstein-equation result.
-- Matter coupling remains not derived and not adopted.
+- `M_src` has positive status as a scoped source-only object. Its exact scope
+  is source-side structure review; its allowed use is burden tracking and
+  bridge-audit support, and its blocked overread is target manifold, metric,
+  matter-coupling result, Einstein-equation result, benchmark promotion, or
+  completed derivation.
+- `g_eff` has positive status as a scoped source-extension object. Its exact
+  scope is the declared source-extension context; its allowed use is bounded
+  source-extension review, and its blocked overread is unscoped Lorentzian
+  metric, matter-coupling result, Einstein-equation result, benchmark
+  promotion, or completed derivation.
+- Matter-sector material has positive status as scoped evidence/preconditions
+  only. Its exact scope is current matter-sector support; its allowed use is
+  constructing, auditing, and stress-testing source-side coupling-law
+  candidates, and its blocked overread is matter semantics, detector
+  semantics, coupling-law adoption, matter coupling, stress-energy semantics,
+  matter action, Einstein equations, benchmark promotion, or completed
+  derivation.
 - `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped
   certificate-indexed evidence/precondition, not an adopted source law.
 - No-target certificates do not provide positive matter theory, detector

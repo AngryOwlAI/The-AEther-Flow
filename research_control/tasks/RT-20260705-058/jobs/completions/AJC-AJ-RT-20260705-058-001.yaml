@@ -1,0 +1,221 @@
+completion_id: "AJC-AJ-RT-20260705-058-001"
+job_id: "AJ-RT-20260705-058-001"
+task_id: "RT-20260705-058"
+source_role_id: "documentation-curator"
+completed_at: "2026-07-06T03:11:46Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P3-T05"
+  plan_phase_id: "P3"
+  implemented_task_scope: "Calibrated public-facing summaries and paired publication contracts to positive-first exact-scope accepted-status language without changing claim status."
+  completed_v17_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P3-T04"
+    - "P3-T05"
+  downstream_tasks_not_implemented:
+    - "P3-T06 acceptance calibration red-team review"
+    - "P4 detector semantics"
+    - "P5 metric-use ledger"
+    - "P6 EqSrc RetainH GenH revisit"
+    - "P7 proof-normal-form layer"
+    - "P8 mechanized formal fragments"
+    - "P9 proof-state dashboard"
+    - "P10 generated task index"
+    - "P11 CI and reproducibility"
+    - "P12 AI research-agent system evaluation"
+    - "P13 V17 integration final validation and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+output_paths:
+  - "README.md"
+  - "github-facing/project-overview-explainer.md"
+  - "github-facing/aether-flow-physics-program-explainer.md"
+  - "github-facing/exact-gr-benchmark-boundary-explainer.md"
+  - "github-facing/gr-derivation-roadmap-explainer.md"
+  - "github-facing/claim-gates-explainer.md"
+  - "markdown/html-explainer-specs/project-overview-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-physics-program-explainer.md"
+  - "markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+  - "markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md"
+  - "markdown/html-explainer-specs/claim-gates-explainer.md"
+  - "markdown/publication-briefs/project-overview.publication-brief.md"
+  - "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md"
+  - "markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md"
+  - "markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md"
+  - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  - "html/project-overview-explainer.html"
+  - "html/aether-flow-physics-program-explainer.html"
+  - "html/exact-gr-benchmark-boundary-explainer.html"
+  - "html/gr-derivation-roadmap-explainer.html"
+  - "html/claim-gates-explainer.html"
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_research_control.py"
+  - "research_control/tasks/RT-20260705-058/artifacts/validate_p3_t05_public_documentation_calibration.py"
+  - "research_control/tasks/RT-20260705-058/artifacts/p3_t05_public_documentation_calibration_report.json"
+  - "research_control/tasks/RT-20260705-058/artifacts/p3_t05_public_documentation_calibration_receipt.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-058/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-058/DDR-20260705-058.md"
+  - "research_control/tasks/RT-20260705-058/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-058/jobs/AJ-RT-20260705-058-001.yaml"
+  - "research_control/tasks/RT-20260705-058/jobs/completions/AJC-AJ-RT-20260705-058-001.yaml"
+  - "research_control/tasks/RT-20260705-058/roles/documentation-curator@2.0.0--RT-20260705-058.yaml"
+  - "research_control/handoffs/handoff-0631.yaml"
+  - "research_control/handoffs/handoff-0631.md"
+  - "registries/HTML_EXPLAINER_REGISTRY.csv"
+  - "wiki/html/**"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=658 relationship_row_count=3385 semantic_row_count=658 vault_row_count=658"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json | exit_code=0 | canonical_path=implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - ".venv/bin/python -m compileall scripts/research_control/validate_research_control.py tests/test_research_control.py research_control/tasks/RT-20260705-058/artifacts/validate_p3_t05_public_documentation_calibration.py | exit_code=0"
+  - ".venv/bin/python -m unittest tests.test_research_control | exit_code=0 | tests=131 status=OK"
+  - ".venv/bin/python research_control/tasks/RT-20260705-058/artifacts/validate_p3_t05_public_documentation_calibration.py --write-report | exit_code=0 | status=PASS focused_warning_count=0 focused_underclaim_warning_count=0"
+  - ".venv/bin/python scripts/validate_publication_process.py --root . | exit_code=0 | status=PASS checked_briefs=17 checked_html_runtime=18 checked_migrated_surfaces=17"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass latest_handoff=handoff-0631"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check | exit_code=0 | status=pass next_route_id=v17_p3_t06_acceptance_calibration_red_team_review"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --graph output/claim_graph_v1.json --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1451 underclaim_calibration_warning_count=31"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS open_improvement_handoff_count=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=pass metrics_are_operational=true"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json | exit_code=0 | status=PASS"
+  - "git diff --check | exit_code=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 658
+    relationship_row_count: 3385
+    semantic_row_count: 658
+    vault_row_count: 658
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before closeout"
+      - "query_memory status PASS"
+      - "v17 plan lookup returned canonical registered path and hash"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Focused P3-T05 candidate claim-language scan PASS with zero findings over 45 paths"
+      - "Task-local validator PASS"
+  focused_public_language:
+    status: "PASS"
+    evidence:
+      - "Focused P3-T05 candidate claim-language scan PASS with zero findings over 45 paths"
+      - "Task-local validator PASS"
+      - "Tracked HTML derivative sync limited to five source-backed explainers"
+      - "No science or ontology authority path changed"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier --check PASS with active_task RT-20260705-058 and latest_handoff handoff-0631"
+      - "render_compact_current_frontier_v16 --check PASS with next_route_id v17_p3_t06_acceptance_calibration_red_team_review"
+      - "validate_compact_current_frontier_v16 PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS with local retrieval freshness warnings only before sync"
+      - "bootstrap_memory_system --validate-only PASS with local retrieval freshness warnings only before sync"
+      - "continue_research_memory_preflight refreshed .local retrieval cache; .local remains non-authoritative"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "focused candidate claim-language scan PASS with hard_fail_count=0"
+      - "changed-file claim-language scan PASS with hard_fail_count=0"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_claim_graph_v1 PASS"
+      - "validate_documentation_impact PASS"
+      - "collect_project_improvement_signals --validate-emitted PASS"
+      - "validate_research_control PASS"
+      - "validate_research_control --check-diff PASS"
+      - "render_dependency_graph --check PASS"
+      - "report_physics_progress_metrics PASS as operational metrics only"
+      - "run_full_research_control_validation --json PASS"
+      - "git diff --check PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  documentation_packet_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not applicable to P3-T05 documentation packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+validation_status_detail: "Focused public-language, publication, memory, graph, documentation-impact, claim-language, research-control, metrics, full validation, and whitespace checks passed. Checkpoint remains to be executed."
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  ledger_row_updated: false
+claim_boundary:
+  allowed_scope: "public-facing documentation calibration only"
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  direct_html_only_edit: false
+  tracked_html_derivative_synchronized: true
+  tracked_html_hand_edited: false
+next_recommendation: "Run one bounded v17 P3-T06 acceptance calibration red-team review."
+project_improvement_signals: []

@@ -103,10 +103,10 @@ assets, or external runtime packages.
   overview page itself authoritative.
 - Preserves exact-GR benchmark versus open derivation language.
 - Links or cites the P14-T01 simplified public table and P14-T02 glossary when
-  summarizing current public status, and preserves that GR is not derived while
-  AEther-flow remains a proposed research ontology / explanatory frame and
-  `M_src`, `g_eff`, and matter-coupling rows remain scoped under their
-  documented blocked overreads.
+  summarizing current public status, and uses positive-first status-card
+  wording for scoped `M_src`, scoped `g_eff`, and matter-sector
+  evidence/preconditions: positive status, exact scope, allowed use, then
+  blocked overread.
 - Preserves generated noncanonical status and source authority boundaries.
 - Does not change validators, commands, schemas, role contracts, skill
   contracts, routing behavior, checkpoint behavior, generated-output authority,

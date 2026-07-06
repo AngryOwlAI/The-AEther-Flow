@@ -106,9 +106,10 @@ source-to-validation diagram or browser-side Mermaid.
   `research_control/design/public_status_exists_does_not_exist_source_spec.md`
   and `research_control/design/epistemic_category_glossary.md`, including why
   AEther-flow is proposed research ontology / explanatory frame only and why
-  scoped `M_src`, scoped `g_eff`, and scoped matter-coupling
-  evidence/preconditions are not source-law, matter-coupling,
-  Einstein-equation, benchmark, or completed-derivation claims.
+  scoped `M_src`, scoped `g_eff`, and scoped matter-sector
+  evidence/preconditions have positive scoped status without becoming
+  source-law, matter-coupling, Einstein-equation, benchmark, or
+  completed-derivation claims.
 - Names source paths visibly in GitHub Markdown and HTML.
 - Uses the bottom Reader Scope hook immediately above the marked authority
   footer in GitHub Markdown and tracked HTML.

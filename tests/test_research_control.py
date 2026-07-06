@@ -896,6 +896,74 @@ class ResearchControlTests(unittest.TestCase):
             )
         self.assertEqual(report.errors, [])
 
+    def test_memory_preflight_allows_historical_public_documentation_hash(self) -> None:
+        root = Path(tempfile.mkdtemp()).resolve()
+        self.addCleanup(lambda: shutil.rmtree(root, ignore_errors=True))
+        control = root / "research_control"
+        registries = root / "registries"
+        control.mkdir(parents=True)
+        registries.mkdir(parents=True)
+        (control / "program_state.yaml").write_text(
+            'active_task_id: "RT-ACTIVE"\n',
+            encoding="utf-8",
+        )
+        readme = root / "README.md"
+        readme.write_text("current public summary\n", encoding="utf-8")
+        current_hash = sha256_text("current public summary\n")
+        with (registries / "MARKDOWN_SOURCE_REGISTRY.csv").open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=["object_id", "path", "source_hash"])
+            writer.writeheader()
+            writer.writerow(
+                {
+                    "object_id": "MD-README",
+                    "path": "README.md",
+                    "source_hash": current_hash,
+                }
+            )
+        receipt = {
+            "status_command": ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json",
+            "status_summary": {
+                "vault_exists": True,
+                "memory_index_exists": True,
+                "source_object_count": 1,
+            },
+            "queries": [
+                {
+                    "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-README --json",
+                    "query_type": "lookup",
+                    "query_text": "MD-README",
+                    "returned_object_ids": ["MD-README"],
+                }
+            ],
+            "canonical_inspections": [
+                {
+                    "object_id": "MD-README",
+                    "source_registry": "MARKDOWN_SOURCE_REGISTRY.csv",
+                    "registry_path": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+                    "canonical_path": "README.md",
+                    "source_hash": "historical-readme-hash",
+                }
+            ],
+            "authority_note": "Obsidian, semantic extracts, wiki notes, and .local are retrieval layers only and not authority.",
+        }
+        report = self.validator.ValidationReport()
+        with (
+            mock.patch.object(self.validator, "REPO_ROOT", root),
+            mock.patch.object(self.validator, "REGISTRY_DIR", registries),
+            mock.patch.object(self.validator, "CONTROL_DIR", control),
+        ):
+            self.validator.validate_memory_preflight(
+                report,
+                {
+                    "job_id": "AJ-HISTORICAL",
+                    "task_id": "RT-HISTORICAL",
+                    "created_at": "2026-06-18T15:33:00Z",
+                },
+                {"memory_preflight": receipt},
+                "research_control/tasks/RT-HISTORICAL/jobs/AJ-HISTORICAL.yaml",
+            )
+        self.assertEqual(report.errors, [])
+
     def test_memory_preflight_allows_historical_validation_inventory_hash(self) -> None:
         root = Path(tempfile.mkdtemp()).resolve()
         self.addCleanup(lambda: shutil.rmtree(root, ignore_errors=True))

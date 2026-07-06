@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-057`
-- Latest handoff: `handoff-0630`
-- Current status: `v17_p3_t04_positive_first_status_card_renderer_completed_no_physics_delta`
+- Active task: `RT-20260705-058`
+- Latest handoff: `handoff-0631`
+- Current status: `v17_p3_t05_public_documentation_calibration_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p3_t05_public_documentation_calibration_pass`
-- Role family: `documentation-curator@2.0.0`
+- Route ID: `v17_p3_t06_acceptance_calibration_red_team_review`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Update public-facing summaries to use calibrated acceptance language without changing claim status.
+- Milestone burden: Stress-test calibrated acceptance language for both overclaim and underclaim.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -44,8 +44,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `a138fae5dc902fbd1543bf15e920d51da0e994bbca9c02c7bfc194b0343ebd61`
-- JSON SHA-256: `7770e9c93e044bcfe06748191396fa2db565a417fac39c714d818fc97de55c81`
+- YAML SHA-256: `391f75ccd809a7b651b363e26e0c5e98e5c9f5f4ba90fdd33d90722e8612838e`
+- JSON SHA-256: `ad8fbec5a88dfe3995cc7f88189398a4034650f73dd02e79160bd1c974c25934`
 
 ## Authority Warning
 

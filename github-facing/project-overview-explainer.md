@@ -64,13 +64,16 @@ sources.
 
 The public-safe status is: GR is not derived from the source substrate;
 AEther-flow is a proposed research ontology or explanatory frame, not an
-established physical ontology; `M_src` is scoped source-only status, not a
-target manifold or metric;
-`g_eff` is scoped source-extension object status, not an unscoped Lorentzian
-metric or matter-coupling result; matter coupling remains not derived and not
-adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped
-certificate-indexed evidence/precondition, not an adopted source law; and
-no-target certificates do not provide positive matter theory, detector
+established physical ontology; `M_src` has positive status as a scoped
+source-only object for source-side bridge review, not as a target manifold or
+metric; `g_eff` has positive status as a scoped source-extension object for
+bounded source-extension review, not as an unscoped Lorentzian metric or
+matter-coupling result; matter-sector material has positive status as scoped
+evidence/preconditions only for constructing, auditing, and stress-testing
+source-side coupling-law candidates, while matter coupling remains not
+derived and not adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1` is
+scoped certificate-indexed evidence/precondition, not an adopted source law;
+and no-target certificates do not provide positive matter theory, detector
 semantics, stress-energy semantics, matter action, Einstein equations,
 benchmark promotion, or completed derivation.
 

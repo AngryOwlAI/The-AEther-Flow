@@ -30,6 +30,7 @@ acceptance_criteria:
   - "States one operative metric, universal matter coupling, ordinary causal structure, and no empirical deviation claim as the conservative benchmark boundary."
   - "Distinguishes adoption, compatibility, derivation, and promotion without blurring them."
   - "Names registered TeX and the claim boundary registry as authority surfaces."
+  - "Uses positive-first scoped-status wording before blocked-overread language for M_src, g_eff, and matter-sector evidence/preconditions."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
 forbidden_patterns:
   - "Language implying first-principles GR derivation is complete."

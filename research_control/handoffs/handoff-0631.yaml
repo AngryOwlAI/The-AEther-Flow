@@ -1,0 +1,94 @@
+handoff_id: "handoff-0631"
+created_at: "2026-07-06T03:11:46Z"
+task_id: "RT-20260705-058"
+decision_id: "DDR-20260705-058"
+job_id: "AJ-RT-20260705-058-001"
+completion_path: "research_control/tasks/RT-20260705-058/jobs/completions/AJC-AJ-RT-20260705-058-001.yaml"
+source_task_id: "RT-20260705-058"
+source_job_id: "AJ-RT-20260705-058-001"
+source_completion_id: "AJC-AJ-RT-20260705-058-001"
+status: "completed"
+summary: "RT-20260705-058 completed one bounded v17 P3-T05 public-facing documentation calibration pass. It updated selected public summaries and paired publication contracts to positive-first exact-scope wording with no physics delta."
+next_action: "Run one bounded v17 P3-T06 acceptance calibration red-team review."
+loop_risk_route: "v17_p3_t05_public_documentation_to_p3_t06_red_team_no_physics_delta"
+claim_boundary:
+  allowed_next_scope: "P3-T06 acceptance calibration red-team review with no physics delta"
+  task_validator_report_path: "research_control/tasks/RT-20260705-058/artifacts/p3_t05_public_documentation_calibration_report.json"
+  focused_candidate_scan_zero_findings: true
+  direct_html_only_edit: false
+  tracked_html_derivative_synchronized: true
+  tracked_html_hand_edited: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  gate_chair_verdict_issued: false
+  proof_authority: false
+blocked_claims:
+  - "P3-T05 wording as physics evidence"
+  - "P3-T05 public summaries as source-law adoption"
+  - "P3-T05 source-spec edits as matter coupling"
+  - "P3-T05 publication briefs as Einstein-equation evidence"
+  - "P3-T05 checkpoint as benchmark promotion"
+  - "P3-T05 commit as completed derivation"
+public_documentation_result:
+  calibrated_public_surfaces:
+    - "README.md"
+    - "github-facing/project-overview-explainer.md"
+    - "github-facing/aether-flow-physics-program-explainer.md"
+    - "github-facing/exact-gr-benchmark-boundary-explainer.md"
+    - "github-facing/gr-derivation-roadmap-explainer.md"
+    - "github-facing/claim-gates-explainer.md"
+  scanned_unchanged_surface:
+    - "github-facing/negative-results-and-obstructions-explainer.md"
+  source_contract_surfaces:
+    - "markdown/html-explainer-specs/project-overview-explainer.md"
+    - "markdown/html-explainer-specs/aether-flow-physics-program-explainer.md"
+    - "markdown/html-explainer-specs/exact-gr-benchmark-boundary-explainer.md"
+    - "markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md"
+    - "markdown/html-explainer-specs/claim-gates-explainer.md"
+    - "markdown/publication-briefs/project-overview.publication-brief.md"
+    - "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md"
+    - "markdown/publication-briefs/exact-gr-benchmark-boundary.publication-brief.md"
+    - "markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md"
+    - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  html_derivative_sync_surfaces:
+    - "html/project-overview-explainer.html"
+    - "html/aether-flow-physics-program-explainer.html"
+    - "html/exact-gr-benchmark-boundary-explainer.html"
+    - "html/gr-derivation-roadmap-explainer.html"
+    - "html/claim-gates-explainer.html"
+  validator_status: "PASS"
+  immediate_v17_continuation: "P3-T06"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260705-058 calibrates public wording only and does not adopt a coupling law derive matter coupling g_eff MetricData(E) Einstein equations benchmark promotion or completed derivation status."
+selected_next_route:
+  route_id: "v17_p3_t06_acceptance_calibration_red_team_review"
+  plan_task_id: "P3-T06"
+  role_family: "external-red-team-reviewer@0.1.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Stress-test calibrated acceptance language for both overclaim and underclaim."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+validation:
+  task_local_validator: "PASS"
+  focused_claim_language: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

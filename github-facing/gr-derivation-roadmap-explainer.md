@@ -20,12 +20,15 @@ Distance-to-GR ledger and the cited task evidence.
 
 The key public-safe updates are: GR is not derived; AEther-flow is a proposed
 research ontology / explanatory frame and not an established physical
-ontology; `M_src` has scoped source-only status but is not a target manifold
-or metric; `g_eff` has scoped source-extension object status but is not an
-unscoped Lorentzian metric; matter coupling remains not derived and not
-adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1`
-is scoped certificate-indexed evidence/precondition, not an adopted source
-law; and no-target certificates do not provide positive matter theory.
+ontology; `M_src` has positive status as a scoped source-only object for
+source-side bridge review, not as a target manifold or metric; `g_eff` has
+positive status as a scoped source-extension object for bounded
+source-extension review, not as an unscoped Lorentzian metric; matter-sector
+material has positive status as scoped evidence/preconditions only for
+source-side coupling-law candidate review, while matter coupling remains not
+derived and not adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1` is
+scoped certificate-indexed evidence/precondition, not an adopted source law;
+and no-target certificates do not provide positive matter theory.
 
 ## Milestone Ladder
 
@@ -35,9 +38,9 @@ law; and no-target certificates do not provide positive matter theory.
 | `source_equivalence_eqsrc` | `EqSrc` plus related retention and generator burdens | Draft or blocked burdens remain under stress and freeze discipline. |
 | `source_localization_obsloc_lc` | `ObsLoc_lc` | A constructive local exact-branch witness exists, but robustness and exact-branch limits remain important. |
 | `response_localization_resp_lc` | `Resp_lc` | Accepted only through controlled source-extension data; old selector obstruction remains relevant. |
-| `source_manifold_m_src` | `M_src` | Scoped source-only status exists; it is not a target manifold, metric, matter-coupling result, benchmark promotion, or completed derivation. |
-| `effective_metric_g_eff` | `g_eff` | Scoped source-extension object status exists; it is not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. |
-| `matter_coupling` | universal coupling | Scoped evidence/preconditions exist, but matter coupling remains not derived and not adopted. |
+| `source_manifold_m_src` | `M_src` | Positive status: scoped source-only object. Exact scope: source-side bridge review; allowed use: burden tracking and bridge-audit support; blocked overread: target manifold, metric, matter-coupling result, benchmark promotion, or completed derivation. |
+| `effective_metric_g_eff` | `g_eff` | Positive status: scoped source-extension object. Exact scope: declared source-extension context; allowed use: bounded source-extension review; blocked overread: unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. |
+| `matter_coupling` | universal coupling | Positive status: scoped evidence/preconditions only. Exact scope: matter-sector support for source-side coupling-law candidate review; matter coupling remains not derived and not adopted. |
 | `einstein_equations` | field equations | Not started. No dynamics/action/variation theorem is supplied. |
 | `finite_toy_metric_response` | finite source-to-response toy model | A local explicit-tag route is frozen negative and cannot be inflated into full GR recovery. |
 | `benchmark_promotion` | exact-GR benchmark promotion | Human-gated and blocked until all upstream burdens are actually discharged. |
@@ -97,16 +100,11 @@ The current frontier has several terms that must not be flattened:
 - `Resp_lc` is accepted only through admissible source-extension data for the
   continuation path. The older selector obstruction for the prior source tuple
   remains part of the record.
-- `M_src` has scoped source-only status. It is not a target manifold, not a
-  metric, not matter coupling, not Einstein equations, not benchmark
-  promotion, and not completed derivation.
+- `M_src` has positive scoped source-only object status: exact scope is source-side bridge review; allowed use is burden tracking and bridge-audit support; blocked overread is target manifold, metric, matter coupling, Einstein equations, benchmark promotion, or completed derivation.
 - `AtlasGlue_src^+` is a source-only primitive interface draft. It is not a
   target manifold import, not a target topology import, and not a metric law.
-- `g_eff` has scoped source-extension object status. It is not an unscoped
-  Lorentzian metric, not matter coupling, not Einstein equations, not
-  benchmark promotion, and not completed derivation.
-- Matter coupling remains not derived and not adopted. Current matter-sector
-  objects are scoped evidence/preconditions only.
+- `g_eff` has positive scoped source-extension object status: exact scope is the declared source-extension context; allowed use is bounded source-extension review; blocked overread is unscoped Lorentzian metric, matter coupling, Einstein equations, benchmark promotion, or completed derivation.
+- Matter-sector material has positive status as scoped evidence/preconditions only: exact scope is current matter-sector support; allowed use is constructing, auditing, and stress-testing source-side coupling-law candidates; blocked overread is matter semantics, detector semantics, coupling-law adoption, matter coupling, stress-energy semantics, matter action, Einstein equations, benchmark promotion, or completed derivation.
 - `RR_ETransportCompletenessOrInvarianceLaw_v1` is certificate-indexed
   evidence/precondition only; it is not adopted as a source law.
 - Einstein equations remain not started in the ledger and are not supplied by

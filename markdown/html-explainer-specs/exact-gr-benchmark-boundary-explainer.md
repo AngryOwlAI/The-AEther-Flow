@@ -100,6 +100,8 @@ generic documentation-flow diagram.
   and `research_control/design/epistemic_category_glossary.md` when explaining
   public status, and keeps benchmark promotion blocked by upstream derivation
   burdens and protected authority.
+- Uses positive-first status-card wording for high-risk scoped rows:
+  positive scoped status, exact scope, allowed use, then blocked overread.
 - Uses the bottom Reader Scope hook immediately above the marked authority
   footer in GitHub Markdown and tracked HTML.
 - Places the full generated-noncanonical authority paragraph only in the

@@ -30,6 +30,7 @@ acceptance_criteria:
   - "Explains exact-GR benchmark status and open first-principles derivation burden without merging them."
   - "Explains no-go, obstruction, and freeze records as disciplined negative-result preservation, not global theory rejection."
   - "Separates source-side mathematical work from claim promotion."
+  - "Uses positive-first status-card wording for scoped M_src, scoped g_eff, and scoped matter-sector evidence/preconditions."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
 forbidden_patterns:
   - "Completed-derivation claim."

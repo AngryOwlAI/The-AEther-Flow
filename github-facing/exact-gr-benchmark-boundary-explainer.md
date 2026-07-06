@@ -47,10 +47,10 @@ authority above the Distance-to-GR ledger and registered source evidence.
 
 The current boundary is exact: GR is not derived from the source substrate;
 AEther-flow is a proposed research ontology or explanatory frame, not an
-established physical ontology; `M_src` is scoped source-only status and not a
-target manifold or metric;
-`g_eff` is scoped source-extension object status and not an unscoped
-Lorentzian metric; matter coupling remains not derived and not adopted;
+established physical ontology; `M_src` has positive status as a scoped
+source-only object and not a target manifold or metric; `g_eff` has positive
+status as a scoped source-extension object and not an unscoped Lorentzian
+metric; matter-sector material has positive status as scoped evidence/preconditions only for source-side coupling-law candidate review, while matter coupling remains not derived and not adopted;
 `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped certificate-indexed
 evidence/precondition and not an adopted source law; and no-target
 certificates do not provide positive matter theory, detector semantics,

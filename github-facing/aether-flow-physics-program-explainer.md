@@ -63,9 +63,9 @@ Current public wording must preserve these layers:
 | --- | --- | --- |
 | AEther-flow ontology | Proposed research ontology / explanatory frame. | Not an established physical ontology or completed foundation for deriving GR. |
 | GR derivation | Not derived from source substrate in the tracked state. | No completed derivation, benchmark promotion, or Einstein-equation derivation follows from public documentation. |
-| `M_src` | Scoped source-only status. | Not a target manifold, metric, matter-coupling result, benchmark promotion, or completed derivation. |
-| `g_eff` | Scoped source-extension object status. | Not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. |
-| Matter coupling | Scoped evidence/preconditions exist, but matter coupling is not derived or adopted. | No coupling-law adoption, matter semantics, detector semantics, stress-energy semantics, stress-energy tensor, or matter action. |
+| `M_src` | Positive status: scoped source-only object. Exact scope: source-side bridge review; allowed use: burden tracking and bridge-audit support. | Not a target manifold, metric, matter-coupling result, benchmark promotion, or completed derivation. |
+| `g_eff` | Positive status: scoped source-extension object. Exact scope: declared source-extension context; allowed use: bounded source-extension review. | Not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. |
+| Matter coupling | Positive status: scoped evidence/preconditions only. Exact scope: matter-sector support for constructing, auditing, and stress-testing source-side coupling-law candidates. | No coupling-law adoption, matter semantics, detector semantics, matter coupling, stress-energy semantics, stress-energy tensor, matter action, Einstein equations, benchmark promotion, or completed derivation. |
 | `RR_ETransportCompletenessOrInvarianceLaw_v1` | Certificate-indexed evidence/precondition only. | Not adopted as a source law and not a positive matter theory. |
 
 ## Negative Results And Freeze Discipline

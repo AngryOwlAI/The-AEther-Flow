@@ -108,17 +108,25 @@ Current public-safe reading:
   explanatory frame; it is not an established physical ontology.
 - GR has not been derived from the source substrate in the tracked project
   state.
-- `M_src` has scoped source-only status; it is not a target manifold, metric,
+- `M_src` has positive status as a scoped source-only object. Its exact scope
+  is source-side structure review; its allowed use is burden tracking and
+  bridge-audit support, and its blocked overread is target manifold, metric,
   matter-coupling result, Einstein-equation result, benchmark promotion, or
   completed derivation.
-- `g_eff` has scoped source-extension object status; it is not an unscoped
-  Lorentzian metric, matter-coupling result, Einstein-equation result,
-  benchmark promotion, or completed derivation.
-- Matter coupling remains not derived and not adopted. Current matter-sector
-  objects, including `PositiveMSProfile_v1` and
-  `RR_ETransportCompletenessOrInvarianceLaw_v1`, are scoped
-  evidence/preconditions only; `RR_ETransportCompletenessOrInvarianceLaw_v1`
-  is not an adopted source law.
+- `g_eff` has positive status as a scoped source-extension object. Its exact
+  scope is the declared source-extension context; its allowed use is bounded
+  source-extension review, and its blocked overread is unscoped Lorentzian
+  metric, matter-coupling result, Einstein-equation result, benchmark
+  promotion, or completed derivation.
+- Matter-sector material has positive status as scoped evidence/preconditions
+  only. Its exact scope includes current matter-sector objects such as
+  `PositiveMSProfile_v1` and
+  `RR_ETransportCompletenessOrInvarianceLaw_v1`; its allowed use is
+  constructing, auditing, and stress-testing source-side coupling-law
+  candidates, and its blocked overread is source-law adoption, detector
+  semantics, matter semantics, coupling-law adoption, matter coupling,
+  stress-energy semantics, matter action, Einstein equations, benchmark
+  promotion, or completed derivation.
 - No-target certificates or certificate-indexed evidence do not provide
   positive matter theory, detector semantics, stress-energy semantics, matter
   action, Einstein equations, benchmark promotion, or completed derivation.

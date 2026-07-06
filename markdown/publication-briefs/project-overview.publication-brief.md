@@ -28,6 +28,7 @@ acceptance_criteria:
   - "Opens with a useful project framing before metadata."
   - "Does not use the old universal heading sequence."
   - "Contains visible source grounding and a non-authority boundary."
+  - "Summarizes high-risk public status with positive-first status-card wording for scoped M_src, scoped g_eff, and scoped matter-sector evidence/preconditions."
   - "HTML is standalone, readable on mobile, and screenshot verified."
 forbidden_patterns:
   - "What This Does / Why AEther Needs It / System Map as the page skeleton."
