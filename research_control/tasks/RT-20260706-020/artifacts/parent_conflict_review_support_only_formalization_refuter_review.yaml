@@ -1,0 +1,23 @@
+artifact_id: "parent_conflict_review_support_only_formalization_refuter_review"
+task_id: "RT-20260706-020"
+status: "resolved"
+resolution_rounds: 1
+authority_expansion_detected: false
+unresolved_conflicts: []
+conflicts:
+  - conflict_id: "P8T04-CONFLICT-001"
+    conflict_type: "terminology"
+    severity: "nonblocking"
+    child_positions:
+      child_phys_math: "pass_support_only is technically precise inside the report."
+      child_phys_phil: "pass_support_only can be reader-risky if detached from proof_authority=false."
+    resolution: "Keep pass_support_only only with adjacent proof_authority=false support_only=true and blocked-overread language."
+  - conflict_id: "P8T04-CONFLICT-002"
+    conflict_type: "next_route"
+    severity: "nonblocking"
+    child_positions:
+      child_phys_math: "No checker repair is required because all finite and report boundary checks pass."
+      child_phys_phil: "Dashboard work remains lawful only if support-only status is visible."
+    resolution: "Route to P9-T01 dashboard source specification with mandatory support-only and no-proof boundary."
+blocking_conflicts: []
+fusion_summary: "Both child reviews agree the formalization survives as support-only operational evidence, not proof authority. No repair packet is required before P9-T01."

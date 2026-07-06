@@ -255,6 +255,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR` `research_control/tasks/RT-20260706-017/artifacts/support_only_formalization_target_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-018-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-FRAGMENT` `research_control/tasks/RT-20260706-018/artifacts/parent_fusion_notes_support_only_formalization_fragment.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-018-SUPPORT-ONLY-FORMALIZATION-FRAGMENT-RECEIPT` `research_control/tasks/RT-20260706-018/artifacts/support_only_formalization_fragment_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260706-020-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-REFUTER-REVIEW` `research_control/tasks/RT-20260706-020/artifacts/parent_fusion_notes_support_only_formalization_refuter_review.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260706-020-SUPPORT-ONLY-FORMALIZATION-REFUTER-REVIEW` `research_control/tasks/RT-20260706-020/artifacts/support_only_formalization_refuter_review.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -938,6 +940,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260706-017-support-only-formalization-target-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-018-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-FRAGMENT` `wiki/markdown/md-research-control-tasks-rt-20260706-018-parent-fusion-notes-support-only-formalization-fragment.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-018-SUPPORT-ONLY-FORMALIZATION-FRAGMENT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260706-018-support-only-formalization-fragment-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-020-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-REFUTER-REVIEW` `wiki/markdown/md-research-control-tasks-rt-20260706-020-parent-fusion-notes-support-only-formalization-refuter-review.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-020-SUPPORT-ONLY-FORMALIZATION-REFUTER-REVIEW` `wiki/markdown/md-research-control-tasks-rt-20260706-020-support-only-formalization-refuter-review.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
