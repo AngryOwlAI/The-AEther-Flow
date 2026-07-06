@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-054`
-- Latest handoff: `handoff-0627`
-- Current status: `v17_p3_t01_acceptance_calibration_policy_completed_no_physics_delta`
+- Active task: `RT-20260705-055`
+- Latest handoff: `handoff-0628`
+- Current status: `v17_p3_t02_acceptance_calibration_schema_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p3_t02_acceptance_calibration_schema_alias_update`
+- Route ID: `v17_p3_t03_claim_language_underclaim_calibration_linter`
 - Role family: ``
 - Target milestone: `matter_coupling`
-- Milestone burden: Implement machine-readable acceptance calibration fields without physics delta.
+- Milestone burden: Add advisory underclaim warnings using accepted-status calibration fields while preserving existing overclaim hard gates.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `deda669ba4b71c9043dd51de8996656c42d02ad66fd3c90ddae890fbaeeeaa5b`
-- JSON SHA-256: `f233d5142e3fa3a09941135d886d4792351348efe5b2ae7e85df3a53abb55f54`
+- YAML SHA-256: `d57c3af312d57f8197324d63606135a557127ba9c214225e81b8ab8a4e569f88`
+- JSON SHA-256: `9fb153e072aca77905591827c56b63104ac85875b490c929317f7f95cf066936`
 
 ## Authority Warning
 

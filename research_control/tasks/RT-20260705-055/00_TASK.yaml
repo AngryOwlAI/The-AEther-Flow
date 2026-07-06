@@ -1,0 +1,57 @@
+task_id: "RT-20260705-055"
+task_type: "accepted_status_calibration_schema_alias_update"
+status: "completed"
+created_at: "2026-07-06T01:33:43Z"
+updated_at: "2026-07-06T01:33:43Z"
+closed_at: "2026-07-06T01:33:43Z"
+parent_task_id: "RT-20260705-054"
+parent_handoff_id: "handoff-0627"
+decision_id: "DDR-20260705-055"
+job_id: "AJ-RT-20260705-055-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260705-055"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This schema packet does not consume Gate Chair authority or issue a protected verdict."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T02"
+  plan_task_name: "Acceptance calibration schema and alias update"
+objective: "Create machine-readable accepted-status calibration fields for required high-risk rows and mirror them in the status alias map."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Add machine-readable acceptance calibration fields for high-risk status rows."
+closure_status: "v17_p3_t02_acceptance_calibration_schema_completed_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P3-T02 accepted-status calibration schema and alias metadata with no physics delta."
+  schema_path: "research_control/design/accepted_status_calibration_schema_v1.md"
+  calibration_path: "research_control/design/accepted_status_calibration_v1.yaml"
+  alias_path: "research_control/design/distance_to_gr_status_aliases.yaml"
+  positive_status_fields_added: true
+  exact_scope_fields_added: true
+  blocked_overread_fields_added: true
+  underclaim_guard_fields_added: true
+  immediate_v17_next_plan_task_id: "P3-T03"
+  source_law_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  detector_semantics_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/design/accepted_status_calibration_schema_v1.md"
+  - "research_control/design/accepted_status_calibration_v1.yaml"
+  - "research_control/design/distance_to_gr_status_aliases.yaml"
+  - "research_control/tasks/RT-20260705-055/artifacts/validate_p3_t02_acceptance_calibration_schema.py"
+  - "research_control/tasks/RT-20260705-055/artifacts/p3_t02_acceptance_calibration_schema_report.json"
+  - "research_control/tasks/RT-20260705-055/artifacts/p3_t02_acceptance_calibration_schema_receipt.md"
+next_recommended_action: "Run one bounded v17 P3-T03 claim-language linter underclaim calibration packet."
+notes: "RT-20260705-055 completes v17 P3-T02 by creating a control schema and machine-readable calibration YAML and by adding deterministic alias-map calibration metadata. It records no Distance-to-GR ledger update and no physics claim change."
+documentation_impact_id: "DI-RT-20260705-055-001"

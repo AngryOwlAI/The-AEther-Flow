@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-06T01:05:00Z`
-- Source fingerprint: `64cddd99eb2dd6944cfd9467d38b9b2439de2af040a3a13e8ab60981d63897bc`
-- Nodes: `14385`
-- Edges: `55142`
+- Generated from tracked state as of: `2026-07-06T01:33:43Z`
+- Source fingerprint: `6563378e23ea8fa92ca9018de5f0bec7967778a2a7c11ffc0c3195eb41fe0257`
+- Nodes: `14410`
+- Edges: `55214`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 763 |
+| `completion_yaml` | 764 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 627 |
+| `handoff_yaml` | 628 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 763 |
+| `agent_job` | `support_only` | 764 |
 | `artifact` | `canonical_source` | 82 |
-| `artifact` | `support_only` | 7607 |
-| `blocked_burden` | `blocked` | 2336 |
-| `claim_boundary` | `support_only` | 720 |
+| `artifact` | `support_only` | 7622 |
+| `blocked_burden` | `blocked` | 2340 |
+| `claim_boundary` | `support_only` | 721 |
 | `draft_control_candidate` | `draft_control` | 497 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 53 |
 | `frozen_negative` | `frozen_negative` | 99 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 627 |
-| `human_gated_object` | `human_gated` | 284 |
+| `handoff` | `support_only` | 628 |
+| `human_gated_object` | `human_gated` | 286 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 275 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 29 |
-| `task` | `support_only` | 705 |
+| `task` | `support_only` | 706 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260705-054`
-- Latest handoff: `handoff-0627`
-- Handoff path: `research_control/handoffs/handoff-0627.yaml`
-- Next action: Run one bounded v17 P3-T02 acceptance calibration schema and alias update packet to add machine-readable acceptance calibration fields while preserving all physics-promotion blocks.
+- Active task: `RT-20260705-055`
+- Latest handoff: `handoff-0628`
+- Handoff path: `research_control/handoffs/handoff-0628.yaml`
+- Next action: Run one bounded v17 P3-T03 claim-language linter underclaim calibration packet to add advisory underclaim warnings without weakening existing overclaim hard gates.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

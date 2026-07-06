@@ -14,6 +14,8 @@ authority_rules:
   aliases_are_routing_authority: false
   renderer_must_preserve_layered_status_fields: true
   high_risk_rows_must_not_render_bare_accepted: true
+  acceptance_calibration_fields_required_for_p3_t02_rows: true
+  acceptance_calibration_path: "research_control/design/accepted_status_calibration_v1.yaml"
   if_alias_conflicts_with_ledger: "ledger governs"
   renderer_integration_status: "integrated_into_current_frontier_renderer_by_v14_p2_t03"
 bare_accepted_policy:
@@ -72,6 +74,27 @@ row_aliases:
     display_status: "adopted only as scoped source-only M_src object"
     scoped_positive_term: "adopted_as_source_only_object"
     required_qualifier: "M_src is not a target manifold, not a metric, and not a GR derivation."
+    acceptance_calibration:
+      object_id: "m_src"
+      status_family: "scoped_source_object"
+      positive_status_sentence: "M_src is adopted only as a scoped source-only M_src object."
+      exact_scope_sentence: "The adoption applies only under the declared source-only GSC candidate scope and fail-closed boundary."
+      allowed_use_sentence: "Later bounded packets may use it as source-side prerequisite context."
+      blocked_overread_sentence: "It is not a target manifold, metric, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation."
+      underclaim_guard: "Do not describe M_src as basically nothing; it has scoped positive source-object status."
+      overclaim_guard: "Do not render M_src as a target manifold, physical metric, MetricData(E), matter coupling, Einstein-equation result, benchmark promotion, or completed derivation."
+      public_summary_max_blocked_items: 6
+      full_control_blocked_items:
+        - "no_target_manifold"
+        - "no_metric"
+        - "no_metricdata_e_scope_expansion"
+        - "no_geff_scope_expansion"
+        - "no_matter_coupling"
+        - "no_einstein_equations"
+        - "no_benchmark_promotion"
+        - "no_completed_derivation"
+      evidence_source: "registries/DISTANCE_TO_GR_LEDGER.csv#m_src"
+      no_physics_delta: true
     forbidden_renderings:
       - "target manifold"
       - "metric"
@@ -82,6 +105,26 @@ row_aliases:
     display_status: "adopted only as scoped source-extension g_eff object"
     scoped_positive_term: "adopted_as_scoped_source_extension_object"
     required_qualifier: "The object is not an unscoped Lorentzian metric and does not supply matter coupling or Einstein equations."
+    acceptance_calibration:
+      object_id: "g_eff"
+      status_family: "scoped_source_extension_object"
+      positive_status_sentence: "g_eff is adopted only as a scoped source-extension g_eff object."
+      exact_scope_sentence: "The adoption applies only to the declared source-extension candidate scope."
+      allowed_use_sentence: "Later bounded packets may use it as scoped source-extension context."
+      blocked_overread_sentence: "It is not an unscoped Lorentzian metric, MetricData(E) adoption, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation."
+      underclaim_guard: "Do not describe g_eff as basically nothing; it has scoped positive source-extension status."
+      overclaim_guard: "Do not render g_eff as an unscoped Lorentzian metric, MetricData(E) adoption, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation."
+      public_summary_max_blocked_items: 6
+      full_control_blocked_items:
+        - "no_unscoped_lorentzian_metric"
+        - "no_metricdata_e_adoption"
+        - "no_unscoped_geff"
+        - "no_matter_coupling"
+        - "no_einstein_equations"
+        - "no_benchmark_promotion"
+        - "no_completed_derivation"
+      evidence_source: "registries/DISTANCE_TO_GR_LEDGER.csv#g_eff"
+      no_physics_delta: true
     forbidden_renderings:
       - "unscoped Lorentzian metric"
       - "MetricData(E) adopted"
@@ -93,6 +136,36 @@ row_aliases:
     display_status: "accepted only as scoped source-extension evidence/precondition"
     scoped_positive_term: "accepted_as_scoped_evidence_precondition"
     required_qualifier: "PositiveMSProfile_v1 and RR_ETransportCompletenessOrInvarianceLaw_v1 are scoped evidence/preconditions only; matter coupling remains not derived and not adopted."
+    acceptance_calibration:
+      object_id: "matter_coupling"
+      status_family: "scoped_evidence_precondition"
+      positive_status_sentence: "matter_coupling has accepted scoped evidence/precondition only for continuation."
+      exact_scope_sentence: "The support is certificate-indexed, source-side, and finite/local only."
+      allowed_use_sentence: "Later bounded packets may use it to construct, audit, or stress one source-side coupling-law candidate."
+      blocked_overread_sentence: "It is not source-law adoption, detector semantics, coupling-law adoption, matter-coupling derivation, stress-energy semantics, matter action, Einstein-equation result, benchmark promotion, or completed derivation."
+      underclaim_guard: "Do not describe matter_coupling as basically nothing; it has accepted scoped evidence/precondition status for continuation."
+      overclaim_guard: "Do not render matter_coupling as source-law adoption, matter-semantics adoption, detector-semantics adoption, coupling-law adoption, matter-coupling derivation or adoption, stress-energy semantics, matter action, Einstein-equation result, benchmark promotion, Gate Chair verdict, or completed derivation."
+      public_summary_max_blocked_items: 9
+      full_control_blocked_items:
+        - "no_source_law_adoption"
+        - "no_rr_e_transport_law_adoption"
+        - "no_positive_ms_profile_adoption"
+        - "no_source_matter_semantics_readiness_law_adoption"
+        - "no_matter_semantics_adoption"
+        - "no_detector_semantics_adoption"
+        - "no_coupling_law_adoption"
+        - "no_matter_coupling_derivation"
+        - "no_matter_coupling_adoption"
+        - "no_stress_energy_semantics"
+        - "no_stress_energy_tensor"
+        - "no_matter_action"
+        - "no_metricdata_e_adoption"
+        - "no_geff_scope_expansion"
+        - "no_einstein_equations"
+        - "no_benchmark_promotion"
+        - "no_completed_derivation"
+      evidence_source: "registries/DISTANCE_TO_GR_LEDGER.csv#matter_coupling"
+      no_physics_delta: true
     forbidden_renderings:
       - "bare accepted"
       - "matter coupling accepted"
@@ -177,5 +250,8 @@ renderer_integration:
 source_materials:
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "research_control/design/scoped_positive_claim_vocabulary.md"
+  - "research_control/design/accepted_status_calibration_policy_v1.md"
+  - "research_control/design/accepted_status_calibration_schema_v1.md"
+  - "research_control/design/accepted_status_calibration_v1.yaml"
   - "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
   - "research_control/handoffs/handoff-0441.yaml"
