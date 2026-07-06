@@ -1,0 +1,232 @@
+completion_id: "AJC-AJ-RT-20260706-036-001"
+job_id: "AJ-RT-20260706-036-001"
+task_id: "RT-20260706-036"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-06T22:34:56Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P12-T04"
+  plan_phase_id: "P12"
+  implemented_task_scope: "Rendered the AI methodology metrics dashboard as a support-only AI-system diagnostic without ranking physics truth by workflow activity."
+  phase_p12_completed: true
+  completed_plan_task_id: "P12-T04"
+  selected_next_plan_task_id: "P13-T01"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "scripts/research_control/render_ai_methodology_metrics_dashboard.py"
+  - "tests/test_research_control.py"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "output/ai_methodology_metrics_dashboard.json"
+  - "wiki/indexes/ai_methodology_metrics_dashboard.md"
+  - "research_control/tasks/RT-20260706-036/artifacts/validate_p12_t04_methodology_dashboard.py"
+  - "research_control/tasks/RT-20260706-036/artifacts/p12_t04_methodology_dashboard_validation.json"
+  - "research_control/tasks/RT-20260706-036/artifacts/p12_t04_methodology_dashboard_receipt.md"
+  - "research_control/tasks/RT-20260706-036/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-036/jobs/completions/AJC-AJ-RT-20260706-036-001.yaml"
+  - "research_control/handoffs/handoff-0668.yaml"
+  - "research_control/handoffs/handoff-0668.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/design/v17_recommendation_backlog.yaml"
+  - "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "research_control/handoffs/handoff-0667.yaml"
+  - "research_control/handoffs/handoff-0667.md"
+  - "research_control/tasks/RT-20260706-035/artifacts/ai_research_agent_methodology_evaluation_v1.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=684 relationship_row_count=3507 semantic_row_count=684 vault_row_count=684"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P12-T04 methodology dashboard integration\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER;MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 navigation_support_object_ids=MD-RESEARCH-CONTROL-TASK-INDEX generated_retrieval_evidence_ids=SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  - ".venv/bin/python -m py_compile scripts/research_control/render_ai_methodology_metrics_dashboard.py research_control/tasks/RT-20260706-036/artifacts/validate_p12_t04_methodology_dashboard.py tests/test_research_control.py | exit_code=0"
+  - ".venv/bin/python -m unittest tests.test_research_control.ResearchControlTests.test_ai_methodology_dashboard_is_support_only_and_not_truth_ranking | exit_code=0 | tests=1"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format json --output output/physics_progress_metrics.json | exit_code=0"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format markdown --output output/physics_progress_metrics.md | exit_code=0"
+  - ".venv/bin/python scripts/research_control/render_ai_methodology_metrics_dashboard.py | exit_code=0 | status=written metric_count=9 advisory_warning_count=3"
+  - ".venv/bin/python scripts/research_control/render_ai_methodology_metrics_dashboard.py --check | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260706-036/artifacts/validate_p12_t04_methodology_dashboard.py --write-report --json | exit_code=0 | status=PASS metric_count=9 warning_count=3"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=true and refresh_performed=true"
+      - "targeted memory search returned current-frontier, v17 plan, task-index navigation, and generated semantic evidence"
+      - "canonical v17 plan P12-T04, backlog P12-T04, P12 taxonomy, P12-T02 metrics report, P12-T03 memo, and handoff-0667 were inspected before routing"
+  implementation:
+    status: "PASS"
+    evidence:
+      - "render_ai_methodology_metrics_dashboard.py renders JSON and Markdown dashboard outputs from the live methodology metrics report"
+      - "dashboard labels metrics as AI-system diagnostics"
+      - "dashboard declares support_only true and truth_ranking none"
+      - "dashboard does not include physics truth ranking fields"
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "task-local validator confirms dashboard freshness"
+      - "validator confirms all nine methodology metrics are present"
+      - "validator confirms dashboard and row authority flags do not create physics proof, benchmark, Gate Chair, or promotion authority"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P12-T04 methodology dashboard integration is implemented"
+      - "phase P12 is complete after P12-T04"
+      - "immediate continuation is P13-T01"
+      - "the completion preserves no physics delta and no proof-authority promotion"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "post-write validation is required after renderer, generated dashboard outputs, control records, handoff, and registry rows"
+      - "generated current-frontier, task-index, graph, dashboard, and memory surfaces must be refreshed from tracked control state"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier, compact frontier, task index, claim graph, dependency graph, and dashboard outputs must be refreshed after handoff-0668 state update"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap and validate-only are required after renderer, generated output, control record, and registry updates"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed claim-language surfaces preserve methodology dashboard as support-only diagnostics"
+      - "hard-fail overclaim count must be zero"
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "checkpoint_research_transaction must run after validators confirm the bounded P12-T04 transaction"
+      - "P13-T01 remains a future bounded packet and is not started by this completion"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+verdict: "v17_p12_t04_methodology_dashboard_completed_next_p13_t01_no_physics_delta"
+coherent_resolution_summary: "RT-20260706-036 completed the v17 P12-T04 methodology dashboard integration by adding a deterministic renderer, focused regression test, generated support-only JSON and Markdown dashboard outputs, and task-local validation."
+next_recommendation: "Run one bounded v17 P13-T01 integration report packet through director-of-research@0.3.0."
+dashboard_result:
+  status: "pass"
+  json_path: "output/ai_methodology_metrics_dashboard.json"
+  markdown_path: "wiki/indexes/ai_methodology_metrics_dashboard.md"
+  dashboard_label: "AI-system diagnostic"
+  methodology_metric_count: 9
+  advisory_warning_count: 3
+  support_only: true
+  truth_ranking: "none"
+  no_physics_truth_ranking: true
+physics_progress_status:
+  status: "dashboard_update_no_physics_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Render methodology metrics dashboard as support-only AI-system diagnostic."
+  physics_promotion_authorized: false
+  explanation: "This packet updates support-only AI methodology dashboard tooling and generated outputs; it does not change Distance-to-GR physics status."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P13-T01 integration report"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_change"
+    - "matter_coupling_derivation"
+    - "Einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "methodology metric success as physics proof"
+    - "methodology dashboard as autonomous scientific authority"
+    - "methodology dashboard as benchmark promotion"
+    - "workflow activity as physics truth ranking"
+    - "validation PASS as source-law adoption"
+    - "candidate survival as canonical ontology adoption"
+    - "candidate survival as matter-coupling derivation"
+    - "route-orbit reduction as Einstein-equation derivation"
+    - "human authorization as Gate Chair verdict"
+    - "proof-to-process balance as completed derivation"
+  summary: "The dashboard is project-control methodology evidence only and cannot promote scientific claims."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 684
+    relationship_row_count: 3507
+    semantic_row_count: 684
+    vault_row_count: 684
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P12-T04 methodology dashboard integration\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P12-T04 methodology dashboard integration"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      generated_retrieval_evidence_ids:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      navigation_support_object_ids:
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "88590d06d519cc8cfd6144efc0791f09ad0c399e6b93df664c77e9216e622bf7"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-AI-RESEARCH-AGENT-METRICS-TAXONOMY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
+      source_hash: "bb373ae346c855695d0002605410b2113e6aa9a703bce90604c549a66222e439"
+claim_boundary:
+  allowed_claims:
+    - "AI methodology dashboard as support-only AI-system diagnostic"
+    - "dashboard labels metrics as AI-system diagnostics"
+    - "dashboard does not rank physics truth by workflow activity"
+    - "P13-T01 integration report as future bounded packet"
+    - "no physics delta"
+  forbidden_claims:
+    - "methodology metric success as physics proof"
+    - "methodology dashboard as autonomous scientific authority"
+    - "methodology dashboard as benchmark promotion"
+    - "workflow activity as physics truth ranking"
+    - "human authorization as Gate Chair verdict"
+    - "completed derivation"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

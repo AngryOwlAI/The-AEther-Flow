@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-035`
-- Latest handoff: `handoff-0667`
-- Current status: `v17_p12_t03_ai_methodology_evaluation_memo_completed_no_physics_delta`
+- Active task: `RT-20260706-036`
+- Latest handoff: `handoff-0668`
+- Current status: `v17_p12_t04_methodology_dashboard_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p12_t04_methodology_dashboard_integration`
-- Role family: `tooling-engineer@0.1.0 or active compatible tooling overlay`
+- Route ID: `v17_p13_t01_integration_report`
+- Role family: `director-of-research@0.3.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Render methodology metrics dashboard as support-only AI-system diagnostic.
+- Milestone burden: Write v17 integration report from completed packets and unresolved claim boundaries.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `2964b9ed70e604beb1c57a3a4333277d9704bc35c1e5829cd44d9e2dd0b51a74`
-- JSON SHA-256: `501a57acac2e1acab203b4e282d434be9c3e58f9fd0f0174178cdec59e0fc1b6`
+- YAML SHA-256: `67ca154c717b15ae37f5df181042e3a1a29a9fad4ef4cf32b9c25694162bdf3e`
+- JSON SHA-256: `ee51404584029527848538187cdf514766aa9ad102eb3508f9b08f929deaf62e`
 
 ## Authority Warning
 

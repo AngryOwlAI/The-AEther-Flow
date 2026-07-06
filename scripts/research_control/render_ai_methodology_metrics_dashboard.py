@@ -1,0 +1,409 @@
+#!/usr/bin/env python3
+"""Render the v17 AI methodology metrics dashboard.
+
+The dashboard is a support-only AI-system diagnostic. It is not a physics
+truth ranking, proof authority, benchmark authority, or Gate Chair verdict.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import sys
+from pathlib import Path
+from typing import Any
+
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+import report_physics_progress_metrics as metrics_reporter  # noqa: E402
+
+
+SCHEMA_ID = "ai_methodology_metrics_dashboard_v1"
+DEFAULT_JSON_PATH = "output/ai_methodology_metrics_dashboard.json"
+DEFAULT_MARKDOWN_PATH = "wiki/indexes/ai_methodology_metrics_dashboard.md"
+METRICS_JSON_PATH = "output/physics_progress_metrics.json"
+METRICS_MARKDOWN_PATH = "output/physics_progress_metrics.md"
+SOURCE_PATHS = [
+    "implementations_plans/recommendations_implementation_plan_continue_task-v17.md",
+    "research_control/design/v17_recommendation_backlog.yaml",
+    "research_control/design/ai_research_agent_metrics_taxonomy_v1.md",
+    "research_control/current_frontier.md",
+    "research_control/handoffs/handoff-0667.yaml",
+    "research_control/tasks/RT-20260706-035/artifacts/ai_research_agent_methodology_evaluation_v1.md",
+    METRICS_JSON_PATH,
+    METRICS_MARKDOWN_PATH,
+]
+REQUIRED_MARKDOWN_PHRASES = [
+    "AI-system diagnostic",
+    "does not rank physics truth by workflow activity",
+    "support-only",
+]
+FORBIDDEN_ROW_FIELDS = {
+    "truth_rank",
+    "physics_truth_rank",
+    "physics_truth_score",
+    "physics_truth_ranking",
+}
+
+
+class DashboardError(RuntimeError):
+    """Raised when dashboard inputs or outputs are invalid."""
+
+
+def repo_path(repo_root: Path, rel_path: str) -> Path:
+    return repo_root / rel_path
+
+
+def sha256_path(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def source_hashes(repo_root: Path) -> dict[str, str]:
+    hashes: dict[str, str] = {}
+    for rel_path in SOURCE_PATHS:
+        path = repo_path(repo_root, rel_path)
+        if path.exists():
+            hashes[rel_path] = sha256_path(path)
+    return hashes
+
+
+def load_methodology_report(repo_root: Path) -> dict[str, Any]:
+    report = metrics_reporter.build_report(repo_root)
+    metrics = report.get("metrics", {})
+    if not isinstance(metrics, dict):
+        raise DashboardError("metrics report missing metrics object")
+    methodology = metrics.get("ai_research_agent_methodology_metrics")
+    if not isinstance(methodology, dict):
+        raise DashboardError("metrics report missing ai_research_agent_methodology_metrics")
+    metric_records = methodology.get("metrics")
+    if not isinstance(metric_records, dict):
+        raise DashboardError("methodology metrics must be a mapping")
+    return report
+
+
+def value_text(value: Any) -> str:
+    if value is None:
+        return "not measured"
+    if isinstance(value, float):
+        return f"{value:.4f}".rstrip("0").rstrip(".")
+    if isinstance(value, (dict, list)):
+        return json.dumps(value, sort_keys=True)
+    return str(value)
+
+
+def markdown_cell(value: Any) -> str:
+    text = value_text(value)
+    return text.replace("|", "\\|").replace("\n", " ")
+
+
+def metric_rows(methodology: dict[str, Any]) -> list[dict[str, Any]]:
+    records = methodology.get("metrics", {})
+    if not isinstance(records, dict):
+        raise DashboardError("methodology metrics must be a mapping")
+
+    rows: list[dict[str, Any]] = []
+    for metric_id in metrics_reporter.AI_METHODOLOGY_REQUIRED_METRICS:
+        record = records.get(metric_id)
+        if not isinstance(record, dict):
+            raise DashboardError(f"missing methodology metric: {metric_id}")
+        row = {
+            "metric_id": metric_id,
+            "dashboard_label": "AI-system diagnostic",
+            "diagnostic_label": "AI-system diagnostic",
+            "family": record.get("family", ""),
+            "status": record.get("status", ""),
+            "value": record.get("value"),
+            "numerator_value": (record.get("numerator") or {}).get("value"),
+            "denominator_value": (record.get("denominator") or {}).get("value"),
+            "diagnostic_interpretation": record.get("diagnostic_interpretation", ""),
+            "interpretation_guardrail": record.get("interpretation_guardrail", ""),
+            "uncertainty_note": record.get("uncertainty_note", ""),
+            "authority_boundary": record.get("authority_boundary", {}),
+        }
+        if FORBIDDEN_ROW_FIELDS.intersection(row):
+            raise DashboardError(f"metric row contains forbidden ranking field: {metric_id}")
+        rows.append(row)
+    return rows
+
+
+def warning_rows(methodology: dict[str, Any]) -> list[dict[str, Any]]:
+    warnings = methodology.get("calibrated_acceptance_warnings", [])
+    if not isinstance(warnings, list):
+        raise DashboardError("calibrated_acceptance_warnings must be a list")
+    rows: list[dict[str, Any]] = []
+    for warning in warnings:
+        if not isinstance(warning, dict):
+            continue
+        rows.append(
+            {
+                "warning_id": warning.get("warning_id", ""),
+                "metric_id": warning.get("metric_id", ""),
+                "status": warning.get("status", ""),
+                "severity": warning.get("severity", ""),
+                "diagnostic_label": "AI-system diagnostic warning",
+                "hard_gate": warning.get("hard_gate"),
+                "physics_claim_authority": warning.get("physics_claim_authority"),
+                "reason": warning.get("reason", ""),
+                "recommended_guard_action": warning.get("recommended_guard_action", ""),
+            }
+        )
+    return rows
+
+
+def build_dashboard(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
+    repo_root = Path(repo_root)
+    report = load_methodology_report(repo_root)
+    methodology = report["metrics"]["ai_research_agent_methodology_metrics"]
+    rows = metric_rows(methodology)
+    warnings = warning_rows(methodology)
+    status_counts: dict[str, int] = {}
+    for row in rows:
+        status = str(row.get("status") or "unknown")
+        status_counts[status] = status_counts.get(status, 0) + 1
+
+    return {
+        "schema_id": SCHEMA_ID,
+        "dashboard_type": "support_only_ai_system_diagnostic",
+        "plan_task_id": "P12-T04",
+        "title": "AI Methodology Metrics Dashboard",
+        "source_metrics_report": {
+            "report_id": report.get("report_id", ""),
+            "as_of": report.get("as_of", ""),
+            "source_basis": report.get("source_basis", []),
+            "metric_separation_guard_status": report["metrics"].get(
+                "metric_separation_guard",
+                {},
+            ).get("status"),
+        },
+        "generated_from": {
+            "source_paths": [path for path in SOURCE_PATHS if repo_path(repo_root, path).exists()],
+            "source_hashes": source_hashes(repo_root),
+        },
+        "dashboard_labels": {
+            "primary_label": "AI-system diagnostic",
+            "support_only": True,
+            "truth_ranking": "none",
+            "no_physics_truth_ranking": True,
+            "boundary_statement": (
+                "This dashboard labels metrics as AI-system diagnostics and "
+                "does not rank physics truth by workflow activity."
+            ),
+        },
+        "summary_cards": {
+            "metric_count": len(rows),
+            "measured_count": status_counts.get("measured", 0),
+            "partial_count": status_counts.get("partial", 0),
+            "not_measured_count": status_counts.get("not_measured", 0),
+            "advisory_warning_count": len(warnings),
+            "metric_separation_guard_status": report["metrics"].get(
+                "metric_separation_guard",
+                {},
+            ).get("status"),
+        },
+        "metric_rows": rows,
+        "advisory_warning_rows": warnings,
+        "claim_boundary": {
+            "physics_claim_authority_created": False,
+            "physics_promotion_authorized": False,
+            "gate_chair_verdict_created": False,
+            "benchmark_promotion_authorized": False,
+            "dashboard_not_physics_proof": True,
+            "dashboard_not_physics_truth_ranking": True,
+            "forbidden_overreads": [
+                "methodology metric success as physics proof",
+                "methodology dashboard as autonomous scientific authority",
+                "methodology dashboard as benchmark promotion",
+                "workflow activity as physics truth ranking",
+                "candidate survival as canonical ontology adoption",
+                "route-orbit reduction as Einstein-equation derivation",
+                "human authorization as Gate Chair verdict",
+                "proof-to-process balance as completed derivation",
+            ],
+        },
+    }
+
+
+def render_markdown(dashboard: dict[str, Any]) -> str:
+    labels = dashboard["dashboard_labels"]
+    summary = dashboard["summary_cards"]
+    lines = [
+        "<!-- authority: generated -->",
+        "",
+        "# AI Methodology Metrics Dashboard",
+        "",
+        (
+            "This is a support-only AI-system diagnostic. It labels metrics as "
+            "AI-system diagnostics and does not rank physics truth by workflow activity."
+        ),
+        "",
+        "## Summary",
+        "",
+        "| Field | Value |",
+        "| --- | --- |",
+        f"| Dashboard label | {markdown_cell(labels['primary_label'])} |",
+        f"| Support-only | {markdown_cell(labels['support_only'])} |",
+        f"| Truth ranking | {markdown_cell(labels['truth_ranking'])} |",
+        f"| Metric count | {markdown_cell(summary['metric_count'])} |",
+        f"| Measured | {markdown_cell(summary['measured_count'])} |",
+        f"| Partial | {markdown_cell(summary['partial_count'])} |",
+        f"| Not measured | {markdown_cell(summary['not_measured_count'])} |",
+        f"| Advisory warnings | {markdown_cell(summary['advisory_warning_count'])} |",
+        f"| Metric separation guard | {markdown_cell(summary['metric_separation_guard_status'])} |",
+        "",
+        "## Metric Rows",
+        "",
+        "| Metric | Family | Status | Value | Diagnostic interpretation | Guardrail |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for row in dashboard["metric_rows"]:
+        lines.append(
+            "| `{metric_id}` | {family} | {status} | {value} | {interpretation} | {guardrail} |".format(
+                metric_id=markdown_cell(row["metric_id"]),
+                family=markdown_cell(row.get("family", "")),
+                status=markdown_cell(row.get("status", "")),
+                value=markdown_cell(row.get("value")),
+                interpretation=markdown_cell(row.get("diagnostic_interpretation", "")),
+                guardrail=markdown_cell(row.get("interpretation_guardrail", "")),
+            )
+        )
+
+    lines.extend(
+        [
+            "",
+            "## Advisory Warnings",
+            "",
+            "| Warning | Metric | Status | Hard gate | Physics authority | Recommended guard action |",
+            "| --- | --- | --- | --- | --- | --- |",
+        ]
+    )
+    warnings = dashboard["advisory_warning_rows"]
+    if warnings:
+        for warning in warnings:
+            lines.append(
+                "| `{warning_id}` | `{metric_id}` | {status} | {hard_gate} | {authority} | {action} |".format(
+                    warning_id=markdown_cell(warning.get("warning_id", "")),
+                    metric_id=markdown_cell(warning.get("metric_id", "")),
+                    status=markdown_cell(warning.get("status", "")),
+                    hard_gate=markdown_cell(warning.get("hard_gate")),
+                    authority=markdown_cell(warning.get("physics_claim_authority")),
+                    action=markdown_cell(warning.get("recommended_guard_action", "")),
+                )
+            )
+    else:
+        lines.append("| none | none | none | false | false | none |")
+
+    lines.extend(
+        [
+            "",
+            "## Claim Boundary",
+            "",
+            "- Dashboard authority: support-only AI-system diagnostic.",
+            "- Physics claim authority: false.",
+            "- Benchmark promotion authority: false.",
+            "- Gate Chair verdict authority: false.",
+            "- Completed derivation authority: false.",
+            "- This dashboard does not rank physics truth by workflow activity.",
+            "",
+            "## Source Basis",
+            "",
+            f"- Metrics report as-of: `{markdown_cell(dashboard['source_metrics_report'].get('as_of', ''))}`",
+            "- Generated source paths:",
+        ]
+    )
+    for path in dashboard["generated_from"]["source_paths"]:
+        lines.append(f"  - `{path}`")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def canonical_json(dashboard: dict[str, Any]) -> str:
+    return json.dumps(dashboard, indent=2, sort_keys=True) + "\n"
+
+
+def write_outputs(
+    dashboard: dict[str, Any],
+    repo_root: Path,
+    json_output: str,
+    markdown_output: str,
+) -> None:
+    json_path = repo_path(repo_root, json_output)
+    markdown_path = repo_path(repo_root, markdown_output)
+    json_path.parent.mkdir(parents=True, exist_ok=True)
+    markdown_path.parent.mkdir(parents=True, exist_ok=True)
+    json_path.write_text(canonical_json(dashboard), encoding="utf-8")
+    markdown_path.write_text(render_markdown(dashboard), encoding="utf-8")
+
+
+def check_outputs(
+    dashboard: dict[str, Any],
+    repo_root: Path,
+    json_output: str,
+    markdown_output: str,
+) -> list[str]:
+    errors: list[str] = []
+    expected_json = canonical_json(dashboard)
+    expected_markdown = render_markdown(dashboard)
+    json_path = repo_path(repo_root, json_output)
+    markdown_path = repo_path(repo_root, markdown_output)
+    if not json_path.exists():
+        errors.append(f"missing JSON dashboard: {json_output}")
+    elif json_path.read_text(encoding="utf-8") != expected_json:
+        errors.append(f"stale JSON dashboard: {json_output}")
+    if not markdown_path.exists():
+        errors.append(f"missing Markdown dashboard: {markdown_output}")
+    elif markdown_path.read_text(encoding="utf-8") != expected_markdown:
+        errors.append(f"stale Markdown dashboard: {markdown_output}")
+    for phrase in REQUIRED_MARKDOWN_PHRASES:
+        if phrase not in expected_markdown:
+            errors.append(f"renderer markdown missing required phrase: {phrase}")
+    return errors
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--repo-root", default=str(REPO_ROOT))
+    parser.add_argument("--json-output", default=DEFAULT_JSON_PATH)
+    parser.add_argument("--markdown-output", default=DEFAULT_MARKDOWN_PATH)
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--print-json", action="store_true")
+    args = parser.parse_args()
+
+    repo_root = Path(args.repo_root)
+    dashboard = build_dashboard(repo_root)
+    if args.print_json:
+        print(canonical_json(dashboard), end="")
+    if args.check:
+        errors = check_outputs(dashboard, repo_root, args.json_output, args.markdown_output)
+        if errors:
+            for error in errors:
+                print(error, file=sys.stderr)
+            return 1
+        print("AI methodology dashboard freshness check: PASS")
+        return 0
+    write_outputs(dashboard, repo_root, args.json_output, args.markdown_output)
+    print(
+        json.dumps(
+            {
+                "status": "written",
+                "json_path": args.json_output,
+                "markdown_path": args.markdown_output,
+                "schema_id": SCHEMA_ID,
+                "metric_count": len(dashboard["metric_rows"]),
+                "advisory_warning_count": len(dashboard["advisory_warning_rows"]),
+                "support_only": True,
+                "no_physics_truth_ranking": True,
+            },
+            indent=2,
+            sort_keys=True,
+        )
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

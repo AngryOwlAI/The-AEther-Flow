@@ -47,6 +47,10 @@ class ResearchControlTests(unittest.TestCase):
             "report_physics_progress_metrics",
             "report_physics_progress_metrics.py",
         )
+        cls.ai_methodology_dashboard = load_module(
+            "render_ai_methodology_metrics_dashboard",
+            "render_ai_methodology_metrics_dashboard.py",
+        )
 
     def test_strict_yaml_parses_nested_maps_and_lists(self) -> None:
         parsed = self.strict_yaml.loads(
@@ -226,6 +230,41 @@ class ResearchControlTests(unittest.TestCase):
         self.assertIn("`overclaim_catch_rate`", rendered)
         self.assertIn("Claim-boundary control", rendered)
         self.assertIn("## Diagnostic Warnings", rendered)
+
+    def test_ai_methodology_dashboard_is_support_only_and_not_truth_ranking(self) -> None:
+        dashboard = self.ai_methodology_dashboard.build_dashboard(REPO_ROOT)
+        rendered = self.ai_methodology_dashboard.render_markdown(dashboard)
+
+        self.assertEqual(dashboard["schema_id"], "ai_methodology_metrics_dashboard_v1")
+        self.assertEqual(dashboard["dashboard_type"], "support_only_ai_system_diagnostic")
+        self.assertEqual(dashboard["dashboard_labels"]["primary_label"], "AI-system diagnostic")
+        self.assertTrue(dashboard["dashboard_labels"]["support_only"])
+        self.assertTrue(dashboard["dashboard_labels"]["no_physics_truth_ranking"])
+        self.assertEqual(dashboard["dashboard_labels"]["truth_ranking"], "none")
+        self.assertEqual(
+            len(dashboard["metric_rows"]),
+            len(self.metrics.AI_METHODOLOGY_REQUIRED_METRICS),
+        )
+        self.assertFalse(dashboard["claim_boundary"]["physics_claim_authority_created"])
+        self.assertFalse(dashboard["claim_boundary"]["physics_promotion_authorized"])
+        self.assertFalse(dashboard["claim_boundary"]["gate_chair_verdict_created"])
+        self.assertFalse(dashboard["claim_boundary"]["benchmark_promotion_authorized"])
+        self.assertTrue(dashboard["claim_boundary"]["dashboard_not_physics_truth_ranking"])
+
+        forbidden_fields = {
+            "truth_rank",
+            "physics_truth_rank",
+            "physics_truth_score",
+            "physics_truth_ranking",
+        }
+        for row in dashboard["metric_rows"]:
+            self.assertEqual(row["diagnostic_label"], "AI-system diagnostic")
+            self.assertFalse(forbidden_fields.intersection(row))
+            self.assertFalse(row["authority_boundary"]["physics_claim_authority_created"])
+            self.assertFalse(row["authority_boundary"]["physics_promotion_authorized"])
+
+        self.assertIn("AI-system diagnostic", rendered)
+        self.assertIn("does not rank physics truth by workflow activity", rendered)
 
     def test_support_only_checker_parse_errors_are_tooling_metrics(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
