@@ -243,6 +243,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-PARENT-FUSION-NOTES-V17-CANDIDATE-CYCLE-INTEGRATION` `research_control/tasks/RT-20260705-053/artifacts/parent_fusion_notes_v17_candidate_cycle_integration.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-V17-COUPLING-LAW-CANDIDATE-CYCLE-REPORT` `research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-003-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260706-003/artifacts/parent_fusion_notes_detector_replacement_smuggling_audit.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260706-004-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-REFUTER-STRESS` `research_control/tasks/RT-20260706-004/artifacts/parent_fusion_notes_detector_replacement_refuter_stress.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -674,6 +675,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V17-P2-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-REFUTER-STRESS` `research_control/tasks/RT-20260705-051/artifacts/source_side_coupling_law_candidate_refuter_stress_v1.tex`
 - `TEX-V17-P4-T02-DETECTOR-SEMANTICS-REPLACEMENT-CANDIDATE` `research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex`
 - `TEX-V17-P4-T03-DETECTOR-REPLACEMENT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260706-003/artifacts/detector_replacement_smuggling_audit_v1.tex`
+- `TEX-V17-P4-T04-DETECTOR-REPLACEMENT-REFUTER-STRESS` `research_control/tasks/RT-20260706-004/artifacts/detector_replacement_refuter_stress_v1.tex`
 
 ## wiki_markdown
 
@@ -913,6 +915,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-PARENT-FUSION-NOTES-V17-CANDIDATE-CYCLE-INTEGRATION` `wiki/markdown/md-research-control-tasks-rt-20260705-053-parent-fusion-notes-v17-candidate-cycle-integration.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-V17-COUPLING-LAW-CANDIDATE-CYCLE-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260705-053-v17-coupling-law-candidate-cycle-report.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-003-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260706-003-parent-fusion-notes-detector-replacement-smuggling-audit.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-004-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260706-004-parent-fusion-notes-detector-replacement-refuter-stress.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1338,3 +1341,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V17-P2-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-REFUTER-STRESS` `wiki/tex/tex-v17-p2-t02-source-side-coupling-law-candidate-refuter-stress.md`
 - `WIKI-TEX-V17-P4-T02-DETECTOR-SEMANTICS-REPLACEMENT-CANDIDATE` `wiki/tex/tex-v17-p4-t02-detector-semantics-replacement-candidate.md`
 - `WIKI-TEX-V17-P4-T03-DETECTOR-REPLACEMENT-SMUGGLING-AUDIT` `wiki/tex/tex-v17-p4-t03-detector-replacement-smuggling-audit.md`
+- `WIKI-TEX-V17-P4-T04-DETECTOR-REPLACEMENT-REFUTER-STRESS` `wiki/tex/tex-v17-p4-t04-detector-replacement-refuter-stress.md`

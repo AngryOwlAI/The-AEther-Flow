@@ -1,0 +1,56 @@
+task_id: "RT-20260706-004"
+task_type: "detector_replacement_refuter_stress"
+status: "completed"
+created_at: "2026-07-06T05:50:55Z"
+updated_at: "2026-07-06T05:50:55Z"
+closed_at: "2026-07-06T05:50:55Z"
+parent_task_id: "RT-20260706-003"
+parent_handoff_id: "handoff-0635"
+decision_id: "DDR-20260706-004"
+job_id: "AJ-RT-20260706-004-001"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260706-004"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This packet requires no human gate because it performs only draft/control Refuter stress and does not promote claims."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T04"
+  plan_task_name: "Detector-replacement Refuter stress"
+objective: "Stress SourceDetectorReplacementCandidate_EStar_v1 and the P4-T03 audit against placeholder collapse, empirical-protocol substitution, proper-time substitution, target-metric response definition, placeholder-as-adoption, finite/local perturbation, and process-authority pressure."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Stress detector replacement against placeholder collapse, empirical-protocol substitution, and finite/local perturbations."
+closure_status: "v17_p4_t04_detector_replacement_stress_survived_pending_selector_no_adoption"
+claim_boundary:
+  allowed_scope: "P4-T04 Refuter stress of SourceDetectorReplacementCandidate_EStar_v1 as audited source-pure in P4-T03"
+  candidate_artifact: "research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex"
+  audit_artifact: "research_control/tasks/RT-20260706-003/artifacts/detector_replacement_smuggling_audit_v1.tex"
+  allowed_verdict: "survives_as_source_replacement_candidate"
+  loop_risk_category: "bridge_facing_candidate_path"
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  matter_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/tasks/RT-20260706-004/artifacts/child_phys_math_detector_replacement_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260706-004/artifacts/child_phys_phil_detector_replacement_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260706-004/artifacts/parent_conflict_review_detector_replacement_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260706-004/artifacts/parent_fusion_notes_detector_replacement_refuter_stress.md"
+  - "research_control/tasks/RT-20260706-004/artifacts/detector_replacement_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260706-004/artifacts/validate_p4_t04_detector_replacement_refuter_stress.py"
+  - "research_control/tasks/RT-20260706-004/artifacts/p4_t04_detector_replacement_refuter_stress_report.json"
+  - "research_control/tasks/RT-20260706-004/artifacts/p4_t04_detector_replacement_refuter_stress_receipt.md"
+next_recommended_action: "Run one bounded v17 P4-T05 Theoretical Continuation Selector packet to select the post-detector-replacement route."
+notes: "RT-20260706-004 completes the v17 P4-T04 Refuter stress and routes next to P4-T05 selector. It records no detector-semantics adoption, no matter-coupling derivation, and no Distance-to-GR ledger delta."
+documentation_impact_id: "DI-RT-20260706-004-001"

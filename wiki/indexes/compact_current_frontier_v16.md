@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-003`
-- Latest handoff: `handoff-0635`
-- Current status: `v17_p4_t03_detector_replacement_audited_source_pure_as_written_pending_refuter_stress_no_adoption`
+- Active task: `RT-20260706-004`
+- Latest handoff: `handoff-0636`
+- Current status: `v17_p4_t04_detector_replacement_stress_survived_pending_selector_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p4_t04_detector_replacement_refuter_stress`
-- Role family: `refuter@0.2.0`
+- Route ID: `v17_p4_t05_detector_replacement_route_selector`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Stress detector replacement against placeholder collapse, empirical-protocol substitution, and finite/local perturbations.
+- Milestone burden: Select one next route after detector replacement candidate or obstruction.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -44,8 +44,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `e94ef838b0cda513333591a912d51fe8307bfa6cec9691a29c2db5f24722ed7a`
-- JSON SHA-256: `61a974fc8683f51266a4fc26e6b3002be00b796e4dc1c3d5b91639f139dc81de`
+- YAML SHA-256: `6d014159212d832ef4d089fa9187c4c848dfa419e575b018cb7f14c3440569cb`
+- JSON SHA-256: `e6de97430b9e5a7fe22423d7c5370b071f726c35a2ec34e169f7e7be019585cb`
 
 ## Authority Warning
 
