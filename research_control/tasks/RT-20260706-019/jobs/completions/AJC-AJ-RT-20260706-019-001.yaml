@@ -1,0 +1,168 @@
+completion_id: "AJC-AJ-RT-20260706-019-001"
+job_id: "AJ-RT-20260706-019-001"
+task_id: "RT-20260706-019"
+decision_id: "DDR-20260706-019"
+status: "completed"
+completed_at: "2026-07-06T12:50:00Z"
+completed_by_role: "project-control-maintainer@0.2.0--RT-20260706-019"
+plan_task_id: "P8-T03"
+objective_result: "completed"
+summary: "Added a support-only traceability row for support_formalization_fail_closed_certificate_evaluation_v1 connecting it to source_certificate_operation_laws_v1 and proof-normal-form row PNF-RT-20260706-014-003."
+artifacts:
+  - "research_control/design/support_formalization_traceability_registry_v1.yaml"
+  - "research_control/tasks/RT-20260706-019/artifacts/support_formalization_traceability_entry.yaml"
+  - "research_control/tasks/RT-20260706-019/artifacts/support_formalization_traceability_registry_report.json"
+  - "tests/test_support_formalization_traceability_registry.py"
+validation:
+  support_formalization_traceability_registry: "PASS"
+  support_formalization_traceability_registry_report: "PASS"
+  focused_unit_tests: "PASS"
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "traceability update only; no physics delta"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-019 records project-control traceability only and does not adopt or derive matter coupling, stress-energy, matter action, Einstein equations, benchmark promotion, or completed derivation."
+traceability_row:
+  entry_id: "SFR-V17-P8-T02-FAIL-CLOSED-CERTIFICATE-EVALUATION"
+  formalization_id: "support_formalization_fail_closed_certificate_evaluation_v1"
+  source_artifact_path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+  proof_normal_form_row_id: "PNF-RT-20260706-014-003"
+  support_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+claim_boundary:
+  proof_authority: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_metric_authorized: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+blocked_claims:
+  - "P8-T03 traceability row as proof authority"
+  - "P8-T03 traceability row as source-law adoption"
+  - "P8-T03 traceability row as MetricData(E) adoption"
+  - "P8-T03 traceability row as g_eff scope expansion"
+  - "P8-T03 traceability row as matter-coupling derivation"
+  - "P8-T03 traceability row as Einstein equations"
+  - "P8-T03 traceability row as benchmark promotion"
+  - "P8-T03 traceability row as completed derivation"
+outputs:
+  traceability_registry_path: "research_control/design/support_formalization_traceability_registry_v1.yaml"
+  traceability_manifest_path: "research_control/tasks/RT-20260706-019/artifacts/support_formalization_traceability_entry.yaml"
+  traceability_report_path: "research_control/tasks/RT-20260706-019/artifacts/support_formalization_traceability_registry_report.json"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=674 relationship_row_count=3449 semantic_row_count=674 vault_row_count=674"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260706-018 latest_handoff=handoff-0650 boundary=director_decision_required"
+  - ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry.py --json | exit_code=0 | status=PASS checked_entry_count=3"
+  - ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry.py --json-output research_control/tasks/RT-20260706-019/artifacts/support_formalization_traceability_registry_report.json --json | exit_code=0 | status=PASS checked_entry_count=3"
+  - ".venv/bin/python -m unittest tests.test_support_formalization_traceability_registry | exit_code=0 | tests=5 status=OK"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 674
+    relationship_row_count: 3449
+    semantic_row_count: 674
+    vault_row_count: 674
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"support formalization traceability fail closed certificate\" --limit 10 --json"
+      query_type: "search"
+      query_text: "support formalization traceability fail closed certificate"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-FORMALIZATION-FAIL-CLOSED-CERTIFICATE-EVALUATION-README"
+        - "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "9810cd9693322d4e13540e5046011a317d8a9ed4c5b5bad454be04a7ab30a51c"
+    - object_id: "MD-RESEARCH-CONTROL-FORMALIZATION-FAIL-CLOSED-CERTIFICATE-EVALUATION-README"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/formalization/fail_closed_certificate_evaluation/README.md"
+      source_hash: "8f52db0bb4a8c10d4c9279d30d5c3f595fe0af93baea327278503d65643cea7e"
+    - object_id: "TEX-V15-P3-T02-SOURCE-CERTIFICATE-OPERATION-LAWS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+      source_hash: "2ebc781bd82b4d39ab394255e5d3836d992625bdece8b8f912a8ab809669b986"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260706-017-SUPPORT-ONLY-FORMALIZATION-TARGET-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260706-017/artifacts/support_only_formalization_target_selector.md"
+      source_hash: "fd2bde2f530c78f7d45bbe105a8433dba87440ca14cf36d4bec89c0f24da4ef1"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "continue_research.py resolved handoff-0650 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "support formalization traceability registry PASS"
+      - "traceability registry JSON report PASS"
+      - "focused unittest suite PASS"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "global post-write validators not yet run in this receipt snapshot"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap not yet run in this receipt snapshot"
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "frontier and graph renderers not yet run in this receipt snapshot"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "claim-language linter not yet run in this receipt snapshot"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  traceability_update_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not applicable to P8-T03 traceability packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+next_recommendation: "Run one bounded v17 P8-T04 support_only_formalization_refuter_review packet."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+verdict: "v17_p8_t03_formalization_traceability_updated_no_physics_delta"

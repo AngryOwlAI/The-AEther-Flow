@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-018` and `handoff-0650`.
+`RT-20260706-019` and `handoff-0651`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-018` |
-| Latest handoff ID | `handoff-0650` |
-| Current status | `v17_p8_t02_fail_closed_certificate_evaluation_mechanized_no_physics_delta` |
+| Active task ID | `RT-20260706-019` |
+| Latest handoff ID | `handoff-0651` |
+| Current status | `v17_p8_t03_formalization_traceability_updated_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p8 t02 fail closed certificate evaluation mechanized no physics delta |
+| Current route family | v17 p8 t03 formalization traceability updated no physics delta |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: support-only formalization artifact recorded only; not derived or adopted |
-| Required next authority | P8-T03 may update research_control/design/support_formalization_traceability_registry_v1.yaml with a support-only traceability row for support_formalization_fail_closed_certificate_evaluation_v1. |
-| Next recommended action | Run one bounded v17 P8-T03 support_only_formalization_traceability_update packet to connect support_formalization_fail_closed_certificate_evaluation_v1 to its source artifact and proof-normal-form row. |
+| Current burden | `matter_coupling`; status: support-only traceability metadata recorded only; not derived or adopted |
+| Required next authority | P8-T04 may perform a Refuter review of the support-only formalization and traceability row for overread risk without changing proof authority. |
+| Next recommended action | Run one bounded v17 P8-T04 support_only_formalization_refuter_review packet to stress the support-only formalization for overread as physics proof. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-018/00_TASK.yaml`.
-- Active task objective: Mechanize the selected fail_closed_certificate_evaluation fragment as a support-only deterministic finite checker with proof_authority=false.
-- Latest handoff path: `research_control/handoffs/handoff-0650.yaml`.
-- Latest handoff summary: RT-20260706-018 completed one bounded v17 P8-T02 support-only formalization fragment packet. It mechanized fail_closed_certificate_evaluation as a deterministic Python finite checker with focused tests and validation_report.json while preserving proof_authority=false and no Distance-to-GR ledger delta.
-- Current route family: v17 p8 t02 fail closed certificate evaluation mechanized no physics delta.
-- Next recommended action: Run one bounded v17 P8-T03 support_only_formalization_traceability_update packet to connect support_formalization_fail_closed_certificate_evaluation_v1 to its source artifact and proof-normal-form row.
+- Active task path: `research_control/tasks/RT-20260706-019/00_TASK.yaml`.
+- Active task objective: Connect support_formalization_fail_closed_certificate_evaluation_v1 to its source artifact and proof-normal-form row in the support-only formalization traceability registry.
+- Latest handoff path: `research_control/handoffs/handoff-0651.yaml`.
+- Latest handoff summary: RT-20260706-019 completed one bounded v17 P8-T03 support-only formalization traceability update. It added traceability for support_formalization_fail_closed_certificate_evaluation_v1 to source_certificate_operation_laws_v1 and proof-normal-form row PNF-RT-20260706-014-003 while preserving proof_authority=false and no Distance-to-GR ledger delta.
+- Current route family: v17 p8 t03 formalization traceability updated no physics delta.
+- Next recommended action: Run one bounded v17 P8-T04 support_only_formalization_refuter_review packet to stress the support-only formalization for overread as physics proof.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P8-T03 support_only_formalization_traceability_update packet to connect support_formalization_fail_closed_certificate_evaluation_v1 to its source artifact and proof-normal-form row.
+Run one bounded v17 P8-T04 support_only_formalization_refuter_review packet to stress the support-only formalization for overread as physics proof.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,26 +301,25 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-018`;
-- latest handoff: `handoff-0650`;
-- current status: `v17_p8_t02_fail_closed_certificate_evaluation_mechanized_no_physics_delta`;
+- active task: `RT-20260706-019`;
+- latest handoff: `handoff-0651`;
+- current status: `v17_p8_t03_formalization_traceability_updated_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `focused_tests_pass`: True;
-- latest handoff validation `fragment_runs_locally`: True;
 - latest handoff validation `global_research_control_validation`: PENDING;
 - latest handoff validation `report_proof_authority_false`: True;
 - latest handoff validation `report_support_only_true`: True;
-- latest handoff validation `validation_report_exists`: True;
+- latest handoff validation `traceability_registry_pass`: True;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0650.yaml`
-- `research_control/tasks/RT-20260706-018/00_TASK.yaml`
+- `research_control/handoffs/handoff-0651.yaml`
+- `research_control/tasks/RT-20260706-019/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -336,7 +335,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0650*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0651*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

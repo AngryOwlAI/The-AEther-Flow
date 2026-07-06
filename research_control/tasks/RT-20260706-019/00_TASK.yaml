@@ -1,0 +1,59 @@
+task_id: "RT-20260706-019"
+task_type: "support_only_formalization_traceability_update"
+status: "completed"
+created_at: "2026-07-06T12:50:00Z"
+updated_at: "2026-07-06T12:50:00Z"
+closed_at: "2026-07-06T12:50:00Z"
+parent_task_id: "RT-20260706-018"
+parent_handoff_id: "handoff-0650"
+decision_id: "DDR-20260706-019"
+job_id: "AJ-RT-20260706-019-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260706-019"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This P8-T03 traceability update does not consume Gate Chair authority or issue a protected scientific verdict."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T03"
+  plan_task_name: "Formalization traceability registry update"
+objective: "Connect support_formalization_fail_closed_certificate_evaluation_v1 to its source artifact and proof-normal-form row in the support-only formalization traceability registry."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Connect formalized fragment to source artifacts and proof-normal-form rows."
+closure_status: "v17_p8_t03_formalization_traceability_updated_no_physics_delta"
+traceability_row:
+  formalization_id: "support_formalization_fail_closed_certificate_evaluation_v1"
+  source_artifact_path: "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+  proof_normal_form_row_id: "PNF-RT-20260706-014-003"
+  support_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+claim_boundary:
+  allowed_scope: "P8-T03 support-only traceability registry row, task-local traceability manifest, validator report, control-registry updates, and P8-T04 routing only."
+  support_only: true
+  no_physics_delta: true
+  immediate_v17_next_plan_task_id: "P8-T04"
+  proof_authority: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  physical_metric_authorized: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/design/support_formalization_traceability_registry_v1.yaml"
+  - "research_control/tasks/RT-20260706-019/artifacts/support_formalization_traceability_entry.yaml"
+  - "research_control/tasks/RT-20260706-019/artifacts/support_formalization_traceability_registry_report.json"
+  - "tests/test_support_formalization_traceability_registry.py"
+next_recommended_action: "Run one bounded v17 P8-T04 support_only_formalization_refuter_review packet to stress the support-only formalization for overread as physics proof."
+notes: "RT-20260706-019 completes P8-T03 by adding traceability metadata only. It does not change Distance-to-GR ledger rows and does not create proof authority."
+documentation_impact_id: "DI-RT-20260706-019-001"

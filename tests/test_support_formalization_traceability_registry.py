@@ -36,12 +36,13 @@ class SupportFormalizationTraceabilityRegistryTests(unittest.TestCase):
         self.assertEqual(receipt["status"], "PASS")
         self.assertFalse(receipt["proof_authority"])
         self.assertTrue(receipt["support_only"])
-        self.assertEqual(receipt["checked_entry_count"], 2)
+        self.assertEqual(receipt["checked_entry_count"], 3)
         self.assertEqual(
             {entry["checker_id"] for entry in receipt["entries"]},
             {
                 "finite_toy_tag_removal_support_formalization",
                 "finite_local_witness_schema_support_formalization",
+                "fail_closed_certificate_evaluation_support_formalization",
             },
         )
 
@@ -70,7 +71,7 @@ class SupportFormalizationTraceabilityRegistryTests(unittest.TestCase):
                 capture_output=True,
             )
             parsed = json.loads(report_path.read_text(encoding="utf-8"))
-        self.assertEqual(parsed["checked_entry_count"], 2)
+        self.assertEqual(parsed["checked_entry_count"], 3)
         self.assertEqual(parsed["authority_boundary_status"], "proof_authority_false_preserved")
 
     def test_registry_fails_closed_when_proof_authority_is_enabled(self) -> None:
