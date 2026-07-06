@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-001`
-- Latest handoff: `handoff-0633`
-- Current status: `v17_p4_t01_detector_semantics_replacement_problem_statement_completed_no_adoption`
+- Active task: `RT-20260706-002`
+- Latest handoff: `handoff-0634`
+- Current status: `v17_p4_t02_detector_replacement_candidate_constructed_pending_audit_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p4_t02_detector_semantics_replacement_candidate_or_obstruction`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v17_p4_t03_detector_replacement_smuggling_audit`
+- Role family: `smuggling-auditor@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Construct one source-side detector-replacement candidate or record one precise obstruction.
+- Milestone burden: Audit detector-replacement candidate for empirical detector, target metric, proper-time, benchmark, or process-authority imports.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -44,8 +44,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `fa9300c8effb7ea5862e5fe9e24a2f776b6b9db423c768e70f14c2865696ed86`
-- JSON SHA-256: `6b511dec0af605de1e1f06789b738ba14b18caa8672ea0ce64d64fa24cec1e2a`
+- YAML SHA-256: `90bfe728caeda46b7f5b60823e999c2f16678f7f4bf9782d0dabf239a33ca0b3`
+- JSON SHA-256: `4d787625ff1aa88283ee7c8b890b107690dd3345eb1187a63266effbcbee4c97`
 
 ## Authority Warning
 

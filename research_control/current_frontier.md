@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-001` and `handoff-0633`.
+`RT-20260706-002` and `handoff-0634`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-001` |
-| Latest handoff ID | `handoff-0633` |
-| Current status | `v17_p4_t01_detector_semantics_replacement_problem_statement_completed_no_adoption` |
+| Active task ID | `RT-20260706-002` |
+| Latest handoff ID | `handoff-0634` |
+| Current status | `v17_p4_t02_detector_replacement_candidate_constructed_pending_audit_no_adoption` |
 | V16 completed | false |
-| Current route family | v17 p4 t01 detector semantics replacement problem statement to p4 t02 no adoption |
+| Current route family | v17 p4 t02 detector replacement candidate to p4 t03 no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P4-T02 source-side detector-replacement candidate or scoped obstruction with no adoption or physics promotion |
-| Next recommended action | Run one bounded v17 P4-T02 source-side detector-replacement candidate or scoped obstruction packet. |
+| Required next authority | P4-T03 smuggling audit of detector-replacement candidate with no adoption or physics promotion |
+| Next recommended action | Run one bounded v17 P4-T03 smuggling audit of the detector-replacement candidate. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-001/00_TASK.yaml`.
-- Active task objective: Define the exact source-side detector-semantics replacement burden for coupling-law candidates without adopting detector semantics or deriving matter coupling.
-- Latest handoff path: `research_control/handoffs/handoff-0633.yaml`.
-- Latest handoff summary: RT-20260706-001 completed one bounded v17 P4-T01 detector-semantics replacement problem statement. It selected constructive P4-T02 continuation with obstruction branch preserved and no detector-semantics adoption or physics promotion.
-- Current route family: v17 p4 t01 detector semantics replacement problem statement to p4 t02 no adoption.
-- Next recommended action: Run one bounded v17 P4-T02 source-side detector-replacement candidate or scoped obstruction packet.
+- Active task path: `research_control/tasks/RT-20260706-002/00_TASK.yaml`.
+- Active task objective: Construct one source-side detector-replacement candidate or record one precise scoped obstruction without adopting detector semantics or deriving matter coupling.
+- Latest handoff path: `research_control/handoffs/handoff-0634.yaml`.
+- Latest handoff summary: RT-20260706-002 completed one bounded v17 P4-T02 source-side detector-replacement candidate. It constructed SourceDetectorReplacementCandidate_EStar_v1 as a finite supplied_source_placeholder and did not adopt detector semantics or promote physics claims.
+- Current route family: v17 p4 t02 detector replacement candidate to p4 t03 no adoption.
+- Next recommended action: Run one bounded v17 P4-T03 smuggling audit of the detector-replacement candidate.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -254,7 +254,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P4-T02 source-side detector-replacement candidate or scoped obstruction packet.
+Run one bounded v17 P4-T03 smuggling audit of the detector-replacement candidate.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -282,22 +282,22 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-001`;
-- latest handoff: `handoff-0633`;
-- current status: `v17_p4_t01_detector_semantics_replacement_problem_statement_completed_no_adoption`;
+- active task: `RT-20260706-002`;
+- latest handoff: `handoff-0634`;
+- current status: `v17_p4_t02_detector_replacement_candidate_constructed_pending_audit_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `global_research_control_validation`: PENDING_POST_WRITE;
-- latest handoff validation `task_local_validator`: PENDING_POST_WRITE;
+- latest handoff validation `global_research_control_validation`: PASS;
+- latest handoff validation `task_local_validator`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0633.yaml`
-- `research_control/tasks/RT-20260706-001/00_TASK.yaml`
+- `research_control/handoffs/handoff-0634.yaml`
+- `research_control/tasks/RT-20260706-002/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -313,7 +313,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0633*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0634*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

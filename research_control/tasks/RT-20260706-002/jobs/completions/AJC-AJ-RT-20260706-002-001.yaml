@@ -1,0 +1,425 @@
+completion_id: "AJC-AJ-RT-20260706-002-001"
+job_id: "AJ-RT-20260706-002-001"
+task_id: "RT-20260706-002"
+source_role_id: "candidate-constructor"
+completed_at: "2026-07-06T04:45:11Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P4-T02"
+  plan_phase_id: "P4"
+  implemented_task_scope: "Constructed one finite source-side detector-replacement candidate with status supplied_source_placeholder."
+  completed_v17_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P3-T04"
+    - "P3-T05"
+    - "P3-T06"
+    - "P4-T01"
+    - "P4-T02"
+  downstream_tasks_not_implemented:
+    - "P4-T03 detector-replacement smuggling audit"
+    - "P4-T04 detector-replacement Refuter stress"
+    - "P4-T05 detector route selector"
+    - "P5 metric-use ledger"
+    - "P6 EqSrc RetainH GenH revisit"
+    - "P7 proof-normal-form layer"
+    - "P8 mechanized formal fragments"
+    - "P9 proof-state dashboard"
+    - "P10 generated task index"
+    - "P11 CI and reproducibility"
+    - "P12 AI research-agent system evaluation"
+    - "P13 V17 integration final validation and ordinary continuation handoff"
+    - "source-law adoption"
+    - "detector-semantics adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+  phase_p4_completed: false
+output_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260706-002/00_TASK.yaml"
+  - "research_control/tasks/RT-20260706-002/DDR-20260706-002.md"
+  - "research_control/tasks/RT-20260706-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-002/artifacts/child_phys_math_detector_replacement_candidate.yaml"
+  - "research_control/tasks/RT-20260706-002/artifacts/child_phys_phil_detector_replacement_candidate.yaml"
+  - "research_control/tasks/RT-20260706-002/artifacts/parent_conflict_review_detector_replacement_candidate.yaml"
+  - "research_control/tasks/RT-20260706-002/artifacts/parent_fusion_notes_detector_replacement_candidate.md"
+  - "research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex"
+  - "research_control/tasks/RT-20260706-002/artifacts/validate_p4_t02_detector_replacement_candidate.py"
+  - "research_control/tasks/RT-20260706-002/artifacts/p4_t02_detector_replacement_candidate_report.json"
+  - "research_control/tasks/RT-20260706-002/artifacts/p4_t02_detector_replacement_candidate_receipt.md"
+  - "research_control/tasks/RT-20260706-002/jobs/AJ-RT-20260706-002-001.yaml"
+  - "research_control/tasks/RT-20260706-002/jobs/completions/AJC-AJ-RT-20260706-002-001.yaml"
+  - "research_control/tasks/RT-20260706-002/roles/candidate-constructor@0.2.0--RT-20260706-002.yaml"
+  - "research_control/handoffs/handoff-0634.yaml"
+  - "research_control/handoffs/handoff-0634.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0633.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/matter_coupling_dependency_dag_v1.md"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "research_control/tasks/RT-20260706-001/artifacts/detector_semantics_replacement_problem_statement_v1.md"
+  - "research_control/tasks/RT-20260706-001/jobs/completions/AJC-AJ-RT-20260706-001-001.yaml"
+  - "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260705-050/artifacts/source_side_coupling_law_candidate_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260705-051/artifacts/source_side_coupling_law_candidate_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260702-057/artifacts/source_side_matter_semantics_object_certificate_manifest_v1.tex"
+  - "research_control/tasks/RT-20260702-063/artifacts/source_certificate_algebra_primitives_v1.tex"
+  - "research_control/tasks/RT-20260702-064/artifacts/source_certificate_operation_laws_v1.tex"
+  - "research_control/tasks/RT-20260704-021/artifacts/source_side_coupling_law_target_specification_v1.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=658 relationship_row_count=3385 semantic_row_count=658 vault_row_count=658"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source side detector replacement\" --limit 10 --json | exit_code=0 | returned_object_ids include MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260706-001 latest_handoff=handoff-0633 next_action=P4-T02"
+  - ".venv/bin/python research_control/tasks/RT-20260706-002/artifacts/validate_p4_t02_detector_replacement_candidate.py --write-report | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 658
+    relationship_row_count: 3385
+    semantic_row_count: 658
+    vault_row_count: 658
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source side detector replacement\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source side detector replacement"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1"
+      generated_retrieval_ids_seen:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "ace3703a5fca4d72cc9464df99181da71d59e88e570a634ea65eb989bf45d078"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/matter_coupling_dependency_dag_v1.md"
+      source_hash: "8cca047480ae21c3b0641a5221277ae43cd5fdf1eb688a9080a168e27b1e98c3"
+project_system_change_only: false
+physics_progress_status:
+  status: "detector_replacement_candidate_constructed_pending_audit"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Construct one source-side detector-replacement candidate or record one precise obstruction."
+  explanation: "P4-T02 constructs one finite source-side detector replacement candidate with status supplied_source_placeholder. It is pending P4-T03 smuggling audit and P4-T04 Refuter stress. It does not adopt detector semantics or derive matter coupling."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  ledger_row_updated: false
+  ledger_update_rationale: "A finite draft/control source-side detector replacement candidate narrows the next audit target but does not discharge the matter-coupling burden."
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v17_p4_t03_detector_replacement_smuggling_audit"
+  downstream_still_blocked:
+    - "source_law_adoption"
+    - "detector_semantics_adoption"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "stress_energy_tensor"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only context retained"
+  - burden: "g_eff"
+    status: "unchanged; scoped source-extension context only and no physical metric use"
+  - burden: "matter coupling"
+    status: "finite source-side detector replacement candidate constructed pending audit and stress; no detector semantics adoption no coupling-law adoption and no matter-coupling derivation"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "unchanged; finite/local witness recorded only for the candidate"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "unchanged; no Gate Chair verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; P4-T03 audit is the next bounded route"
+new_mathematical_payload:
+  - payload_id: "P4T02-PAYLOAD-001"
+    payload_type: "explicit_witness"
+    artifact_path: "research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex"
+    status: "draft/control"
+    summary: "Constructed D_src(E_*) as a finite source-side detector replacement tuple with source domain, readout interface, source readout tokens, certificate family, fail-closed branches, and finite/local witness."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-V17-P4-T02-DETECTOR-REPLACEMENT-CANDIDATE-001"
+    payload_type: "construction"
+    object_name: "SourceDetectorReplacementCandidate_EStar_v1"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex"
+    burden_effect: "no_distance_delta"
+    summary: "One finite source-side detector replacement candidate was constructed and remains pending P4-T03 audit and P4-T04 stress."
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  candidate_name: "SourceDetectorReplacementCandidate_EStar_v1"
+  candidate_constructed: true
+  constructed_candidate_path: "research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  precise_obstruction: ""
+  formal_objects:
+    - "E_*"
+    - "R_{E_*}"
+    - "D_src(E_*)"
+    - "Dom_D(E_*)"
+    - "Read_D(E_*)"
+    - "Tok_D(E_*)"
+    - "Cert_D(E_*)"
+    - "Fail_D(E_*)"
+  maps:
+    - "Read_D(E_*): R_{E_*} -> Tok_D(E_*)"
+    - "Read_D(r_0)=delta_0"
+    - "Read_D(r_1)=delta_1"
+    - "Read_D(r_01)=delta_01"
+  proof_obligations:
+    - "P4-T03 must audit the candidate for empirical detector protocol proper-time target metric benchmark and process-authority imports"
+    - "P4-T04 must stress placeholder collapse empirical-protocol substitution proper-time substitution target-metric substitution and finite/local perturbation"
+    - "The candidate remains supplied_source_placeholder and cannot be read as detector semantics"
+    - "No coupling-law adoption or matter-coupling derivation follows from this finite source-side placeholder"
+  failed_components: []
+  next_required_role: "smuggling-auditor"
+  no_fog_check: true
+  no_fog_explanation: "RT-20260706-002 constructs exactly one finite source-side detector replacement candidate with status supplied_source_placeholder. It is not detector semantics source-law adoption coupling-law adoption matter coupling stress-energy matter action Einstein equations benchmark promotion or completed derivation. The next route is P4-T03 smuggling audit."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V17-P4-T02-DETECTOR-REPLACEMENT-CANDIDATE-001"
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "SourceDetectorReplacementCandidate_EStar_v1"
+  bridge_result: "constructed_source_side_detector_replacement_candidate_pending_audit"
+  candidate_map: "Read_D(E_*): R_{E_*} -> Tok_D(E_*)"
+  missing_primitive: ""
+  preserves_blocks: true
+  preserves_blocked_downstream_targets: true
+detector_replacement_candidate_result:
+  result_type: "constructed_candidate"
+  candidate_path: "research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex"
+  source_domain: "Dom_D(E_*) = R_{E_*}"
+  readout_interface: "Read_D(E_*): R_{E_*} -> Tok_D(E_*)"
+  certificate: "Cert_D(E_*)"
+  status: "supplied_source_placeholder"
+  finite_local_witness: "W_D(E_*)"
+  no_empirical_protocol_import: true
+  no_proper_time_import: true
+  no_target_metric_import: true
+  obstruction_recorded: false
+  detector_semantics_adopted: false
+  source_law_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+freeze_criteria_status:
+  evaluated: true
+  freeze_decision: "not_frozen"
+  candidate_freeze_label: ""
+  criteria_evaluated:
+    - "candidate construction failure"
+    - "scoped obstruction"
+    - "placeholder collapse"
+  rationale: "P4-T02 constructs a finite candidate and records no scoped obstruction. Audit and stress remain open."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260706-002/artifacts/child_phys_math_detector_replacement_candidate.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260706-002/artifacts/child_phys_phil_detector_replacement_candidate.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260706-002/artifacts/parent_conflict_review_detector_replacement_candidate.yaml"
+    blocking_conflicts_present: false
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    path: "research_control/tasks/RT-20260706-002/artifacts/parent_fusion_notes_detector_replacement_candidate.md"
+    fused_output_path: "research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS"
+      - "continue_research.py resolved handoff-0633 and P4-T02"
+  source_basis:
+    status: "PASS"
+    evidence:
+      - "v17 plan P4-T02 inspected"
+      - "P4-T01 problem statement inspected"
+      - "P1 K_E candidate and audit/stress artifacts inspected"
+      - "matter-coupling DAG and no-target guard inspected"
+  candidate_construction:
+    status: "PASS"
+    evidence:
+      - "candidate_name=SourceDetectorReplacementCandidate_EStar_v1"
+      - "candidate_status=supplied_source_placeholder"
+      - "source_domain=Dom_D(E_*)"
+      - "readout_interface=Read_D(E_*)"
+      - "certificate=Cert_D(E_*)"
+      - "finite_local_witness=W_D(E_*)"
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "validate_p4_t02_detector_replacement_candidate.py --write-report PASS"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P4-T02 detector replacement candidate artifact created"
+      - "candidate_constructor_result is constructed_candidate"
+      - "P4-T03 audit route selected"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier --check PASS with latest_handoff handoff-0634"
+      - "render_compact_current_frontier_v16 --check PASS with next_route_id v17_p4_t03_detector_replacement_smuggling_audit"
+      - "render_dependency_graph --check PASS after dependency graph refresh"
+      - "validate_claim_graph_v1 PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS"
+      - "bootstrap_memory_system --validate-only PASS"
+      - "continue_research_memory_preflight refreshed local retrieval and PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language --changed PASS with hard_fail_count=0"
+      - "historical and advisory warning count remains nonblocking"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "task-local P4-T02 validator PASS"
+      - "validate_documentation_impact PASS"
+      - "collect_project_improvement_signals --validate-emitted PASS"
+      - "validate_research_control PASS"
+      - "validate_research_control --check-diff PASS"
+      - "run_full_research_control_validation PASS"
+      - "git diff --check PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command required before transaction is committed"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  source_law_adoption_authorized: false
+  matter_semantics_adoption_authorized: false
+  detector_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  matter_coupling_adoption_authorized: false
+  stress_energy_semantics_authorized: false
+  matter_action_authorized: false
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  downstream_physics_promotion_authorized: false
+claim_boundary:
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  detector_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "detector-semantics adoption"
+    - "matter-semantics adoption"
+    - "coupling-law adoption"
+    - "matter coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "proof authority"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "program-wide no-go conclusion"
+  summary: "P4-T02 constructs a finite source-side detector replacement candidate only. It routes to P4-T03 audit and preserves all adoption promotion proof-authority and completed-derivation blocks."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+next_recommendation: "Run one bounded v17 P4-T03 smuggling audit of the source-side detector-replacement candidate."

@@ -1,0 +1,32 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260706-002"
+job_id: "AJ-RT-20260706-002-001"
+status: "completed"
+analysis_summary: "A finite source-side detector replacement candidate can be constructed by declaring a finite source readout domain, a partial source readout map, source readout tokens, readout certificates, a no-target certificate, and fail-closed branches. The construction supplies a source placeholder and does not supply detector semantics."
+formal_objects:
+  - "E_*"
+  - "R_{E_*}"
+  - "D^{src}_{E_*}"
+  - "Dom_D(E_*)"
+  - "Read_D(E_*)"
+  - "Tok_D(E_*)"
+  - "Cert_D(E_*)"
+  - "Fail_D(E_*)"
+candidate_maps:
+  - "Read_D(E_*): R_{E_*} -> Tok_D(E_*) partial source readout map"
+  - "Read_D(r_0)=delta_0"
+  - "Read_D(r_1)=delta_1"
+  - "Read_D(r_01)=delta_01"
+certificate_family:
+  - "C_D_id_0"
+  - "C_D_id_1"
+  - "C_D_tr_01"
+  - "C_D_inv_01"
+  - "C_D_res_0"
+  - "C_D_nt"
+finite_local_witness: "W_D(E_*)=(E_*,R_{E_*},D^{src}_{E_*},Read_D,Cert_D,Fail_D)"
+candidate_status: "supplied_source_placeholder"
+obstruction_recorded: false
+next_route: "P4-T03 smuggling audit"
+claim_boundary_preserved: true

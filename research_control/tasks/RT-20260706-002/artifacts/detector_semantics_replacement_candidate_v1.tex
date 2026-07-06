@@ -1,0 +1,329 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\EStar}{E_{\ast}}
+\newcommand{\RStar}{R_{E_{\ast}}}
+\newcommand{\DSrc}{D^{\mathrm{src}}_{E_{\ast}}}
+\newcommand{\DomD}{\mathrm{Dom}_{D}(E_{\ast})}
+\newcommand{\ReadD}{\mathrm{Read}_{D}(E_{\ast})}
+\newcommand{\TokD}{\mathrm{Tok}_{D}(E_{\ast})}
+\newcommand{\CertD}{\mathrm{Cert}_{D}(E_{\ast})}
+\newcommand{\FailD}{\mathrm{Fail}_{D}(E_{\ast})}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\Src}{\mathrm{src}}
+\newcommand{\DetPlaceholder}{\mathrm{DetPlaceholder}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Source-Side Detector-Replacement Candidate \(D^{\mathrm{src}}_{E_{\ast}}\) v1}
+\author{Candidate Constructor Packet RT-20260706-002}
+\date{2026-07-06}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v17 P4-T02. It constructs exactly one bounded
+draft/control source-side detector-replacement candidate for the detector
+component that was previously left as
+\[
+  \DetPlaceholder(\EStar)=\mathrm{missing\_and\_blocked}.
+\]
+The constructed object is
+\[
+  \mathrm{SourceDetectorReplacementCandidate\_EStar\_v1}.
+\]
+
+The candidate status is
+\[
+  \texttt{supplied\_source\_placeholder}.
+\]
+This status means that a source-side interface candidate exists for later
+audit and stress. It is not detector semantics and not detector-semantics
+adoption. This artifact does not adopt a source law, does not adopt matter
+semantics, does not adopt a coupling law, does not derive or adopt matter
+coupling, does not import stress-energy semantics, does not construct a
+stress-energy tensor, does not import a matter action, does not derive
+Einstein equations, does not promote benchmark status, and does not claim a
+completed derivation.
+
+\section{Required Candidate Fields}
+
+\begin{verbatim}
+detector_replacement_candidate:
+  source_domain: "Dom_D(E_*) = R_{E_*}"
+  readout_interface: "Read_D(E_*): R_{E_*} -> Tok_D(E_*)"
+  certificate: "Cert_D(E_*) = {C_D_id_0, C_D_id_1, C_D_tr_01,
+    C_D_inv_01, C_D_res_0, C_D_nt}"
+  status: "supplied_source_placeholder"
+  no_empirical_protocol_import: true
+  no_proper_time_import: true
+  no_target_metric_import: true
+  finite_local_witness: "W_D(E_*)"
+\end{verbatim}
+
+No obstruction is recorded in this packet because the finite candidate below
+supplies the required fields under the current draft/control vocabulary.
+
+\section{Finite Source Domain}
+
+\begin{definition}[Source readout domain]
+Let the finite event scope be
+\[
+  \EStar=\{\epsilon_0,\epsilon_1\}.
+\]
+Use the same finite source record family already declared for the bounded
+source-side coupling-law candidate:
+\[
+  \RStar=\{r_0,r_1,r_{01}\}.
+\]
+Define the detector-replacement source domain as
+\[
+  \DomD=\RStar.
+\]
+The records \(r_0,r_1,r_{01}\) are source records only. They are not detector
+events, measurement outcomes, target spacetime events, proper-time readings,
+or empirical protocol records.
+\end{definition}
+
+\section{Source Readout Tokens}
+
+\begin{definition}[Source readout token family]
+Define the finite source readout-token set
+\[
+  \TokD=\{\delta_0,\delta_1,\delta_{01},\BottomSrc\}.
+\]
+The tokens \(\delta_0,\delta_1,\delta_{01}\) are internal source-side
+readout placeholders. They are not detector clicks, clock readings,
+calibration constants, physical coupling constants, stress-energy terms,
+Lagrangian terms, or benchmark observables. The token \(\BottomSrc\) is the
+fail-closed output for missing, malformed, target-importing, or
+placeholder-collapsing branches.
+\end{definition}
+
+\section{Readout Interface}
+
+\begin{definition}[Finite source readout interface]
+Define a partial source-side readout map
+\[
+  \ReadD:\RStar\rightharpoonup \TokD
+\]
+by
+\[
+\begin{aligned}
+  \ReadD(r_0) &= \delta_0,\\
+  \ReadD(r_1) &= \delta_1,\\
+  \ReadD(r_{01}) &= \delta_{01}.
+\end{aligned}
+\]
+The map is undefined outside \(\RStar\). If an attempted input is not a
+declared source record, the branch returns \(\BottomSrc\) rather than a target
+or empirical repair.
+\end{definition}
+
+This readout interface supplies only a source-side relation between source
+records and source readout tokens. It does not use empirical detector
+protocol, proper time, target metric, target atlas, stress-energy semantics,
+matter action, Einstein equations, benchmark behavior, or process authority.
+
+\section{Certificate Family}
+
+\begin{definition}[Readout certificate family]
+Let
+\[
+  \CertD=\{C^{D,id}_0,C^{D,id}_1,C^{D,tr}_{01},C^{D,inv}_{01},
+  C^{D,res}_0,C^{D,nt}_{\EStar}\}.
+\]
+The certificates have the following declared source-side meanings:
+\[
+\begin{array}{ll}
+C^{D,id}_0 &: r_0\mapsto r_0,\ \delta_0\mapsto\delta_0,\\
+C^{D,id}_1 &: r_1\mapsto r_1,\ \delta_1\mapsto\delta_1,\\
+C^{D,tr}_{01} &: r_0\mapsto r_1,\ \delta_0\mapsto\delta_1,\\
+C^{D,inv}_{01} &: \{(r_0,\delta_0),(r_1,\delta_1)\}\ \text{is preserved under the declared source relabeling},\\
+C^{D,res}_0 &: \ReadD\ \text{restricted to}\ \{r_0\}\ \text{remains source-side},\\
+C^{D,nt}_{\EStar} &: \text{forbidden target empirical and process imports are absent}.
+\end{array}
+\]
+\end{definition}
+
+The certificate family is explicit and finite. It is not a source law, not an
+unrestricted \(RR_E\) theorem, not detector semantics, and not a coupling law.
+
+\section{Fail-Closed Branches}
+
+\begin{definition}[Fail-closed detector replacement rules]
+The fail-closed component is
+\[
+  \FailD=\{
+  F_{\mathrm{missing}},
+  F_{\mathrm{malformed}},
+  F_{\mathrm{target}},
+  F_{\mathrm{empirical}},
+  F_{\mathrm{proper}},
+  F_{\mathrm{placeholder}}
+  \}.
+\]
+Each element maps the relevant invalid branch to \(\BottomSrc\):
+\[
+\begin{array}{ll}
+F_{\mathrm{missing}} &: \text{missing source record or certificate}\mapsto\BottomSrc,\\
+F_{\mathrm{malformed}} &: \text{malformed source record or certificate}\mapsto\BottomSrc,\\
+F_{\mathrm{target}} &: \text{target topology, atlas, metric, or benchmark import}\mapsto\BottomSrc,\\
+F_{\mathrm{empirical}} &: \text{empirical detector protocol or calibration import}\mapsto\BottomSrc,\\
+F_{\mathrm{proper}} &: \text{proper-time normalization import}\mapsto\BottomSrc,\\
+F_{\mathrm{placeholder}} &: \text{placeholder treated as adopted detector semantics}\mapsto\BottomSrc.
+\end{array}
+\]
+\end{definition}
+
+\section{Candidate Tuple}
+
+\begin{definition}[Source-side detector-replacement candidate]
+The P4-T02 candidate is the tuple
+\[
+  \DSrc=(\DomD,\ReadD,\TokD,\CertD,\FailD,
+  \texttt{supplied\_source\_placeholder}).
+\]
+It is a source-side placeholder candidate for later audit and stress. It is
+not a physical detector model and not detector-semantics adoption.
+\end{definition}
+
+\section{Finite/Local Witness}
+
+\begin{lemma}[Finite/local witness]
+The tuple
+\[
+  W_D(\EStar)=(\EStar,\RStar,\DSrc,\ReadD,\CertD,\FailD)
+\]
+is a finite witness for one source-side detector-replacement candidate.
+\end{lemma}
+
+\begin{proof}
+\(\EStar\) has two elements. \(\RStar\) has three source records. The token
+set \(\TokD\) has four elements. The readout map has three graph entries. The
+certificate family has six explicitly named certificates. The fail-closed
+family has six explicitly named branches. Every component is finite and
+source-side, so \(W_D(\EStar)\) is a finite/local witness for the candidate.
+\end{proof}
+
+\section{No-Target And No-Empirical Guard}
+
+\begin{lemma}[No empirical protocol, proper-time, or target-metric import]
+The candidate \(\DSrc\) uses no empirical detector protocol, no proper-time
+normalization, and no target metric.
+\end{lemma}
+
+\begin{proof}
+The domain is the finite source record set \(\RStar\). The readout interface
+is a finite map from source records to source tokens. The certificate family
+contains only source identity, transport, invariance, restriction, and
+no-target certificates. The fail-closed rules explicitly map empirical
+detector protocol, proper-time normalization, target topology, target atlas,
+target metric, benchmark behavior, stress-energy semantics, matter action,
+Einstein equations, validator status, registry rows, handoffs, roles, local
+caches, file order, checkpoints, and commits to \(\BottomSrc\) when they are
+used as premises. Therefore none of those objects is imported as a source
+premise by this candidate.
+\end{proof}
+
+\section{Interaction With \(\DetPlaceholder(\EStar)\)}
+
+This packet does not rewrite the earlier `K_E` artifact. It supplies a new
+candidate that a later repair or integration packet may audit and stress as a
+possible replacement component. The local replacement reading is:
+\[
+  \DetPlaceholder(\EStar)
+  \leadsto
+  (\DSrc,\texttt{supplied\_source\_placeholder})
+\]
+only inside the P4 candidate route. The arrow does not mean detector
+semantics adoption, source-law adoption, or coupling-law adoption.
+
+\section{Candidate Result}
+
+\begin{verbatim}
+detector_replacement_result:
+  result_type: "constructed_candidate"
+  candidate_name: "SourceDetectorReplacementCandidate_EStar_v1"
+  source_domain: "Dom_D(E_*) = R_{E_*}"
+  readout_interface: "Read_D(E_*): R_{E_*} -> Tok_D(E_*)"
+  certificate: "Cert_D(E_*)"
+  status: "supplied_source_placeholder"
+  finite_local_witness: "W_D(E_*)"
+  no_empirical_protocol_import: true
+  no_proper_time_import: true
+  no_target_metric_import: true
+  obstruction_recorded: false
+  detector_semantics_adopted: false
+  next_required_role: "smuggling-auditor"
+\end{verbatim}
+
+\section{Distance-To-GR Status}
+
+The Distance-to-GR ledger is unchanged. The matter-coupling burden remains
+open. This packet supplies a candidate for later audit and stress only. It
+does not discharge matter coupling, Einstein equations, benchmark promotion,
+Gate Chair status, or completed derivation.
+
+\section{Forbidden Conclusions}
+
+\begin{nonconclusion}
+This candidate is not detector semantics and not detector-semantics adoption.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+This candidate is not a source law, not matter semantics, not a coupling law,
+not matter-coupling derivation, not matter-coupling adoption, not
+stress-energy semantics, not a stress-energy tensor, not a matter action, not
+Einstein equations, not benchmark promotion, not proof authority, and not a
+completed derivation.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+The existence of this finite source-side placeholder candidate does not prove
+that a general detector-replacement law exists, that future audit or stress
+will pass, or that future source extensions are impossible if the candidate
+later fails.
+\end{nonconclusion}
+
+\section{Next Route}
+
+The logical next route is v17 P4-T03: run one bounded smuggling audit against
+this detector-replacement candidate for empirical detector protocol, target
+metric, proper-time, benchmark, and process-authority imports.
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan continue task v17} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v17.md}.
+
+The AEther-Flow Research Project. (2026b). \emph{Detector-semantics
+replacement problem statement v1} [Research-control task artifact].
+\texttt{research\_control/tasks/RT-20260706-001/artifacts/detector\_semantics\_replacement\_problem\_statement\_v1.md}.
+
+The AEther-Flow Research Project. (2026c). \emph{Source-side coupling-law
+candidate K\_EStar v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260705-047/artifacts/source\_side\_coupling\_law\_candidate\_v1.tex}.
+
+The AEther-Flow Research Project. (2026d). \emph{Source certificate operation
+laws v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260702-064/artifacts/source\_certificate\_operation\_laws\_v1.tex}.
+
+The AEther-Flow Research Project. (2026e). \emph{No-target-import guard map}
+[Internal control artifact].
+\texttt{research\_control/design/no\_target\_import\_guard\_map.md}.
+
+\end{document}

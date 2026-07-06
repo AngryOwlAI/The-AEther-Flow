@@ -1,0 +1,78 @@
+handoff_id: "handoff-0634"
+created_at: "2026-07-06T04:45:11Z"
+task_id: "RT-20260706-002"
+decision_id: "DDR-20260706-002"
+job_id: "AJ-RT-20260706-002-001"
+completion_path: "research_control/tasks/RT-20260706-002/jobs/completions/AJC-AJ-RT-20260706-002-001.yaml"
+source_task_id: "RT-20260706-002"
+source_job_id: "AJ-RT-20260706-002-001"
+source_completion_id: "AJC-AJ-RT-20260706-002-001"
+status: "completed"
+summary: "RT-20260706-002 completed one bounded v17 P4-T02 source-side detector-replacement candidate. It constructed SourceDetectorReplacementCandidate_EStar_v1 as a finite supplied_source_placeholder and did not adopt detector semantics or promote physics claims."
+next_action: "Run one bounded v17 P4-T03 smuggling audit of the detector-replacement candidate."
+loop_risk_route: "v17_p4_t02_detector_replacement_candidate_to_p4_t03_no_adoption"
+claim_boundary:
+  allowed_next_scope: "P4-T03 smuggling audit of detector-replacement candidate with no adoption or physics promotion"
+  selected_route_class: "detector_replacement_smuggling_audit"
+  candidate_constructed: true
+  obstruction_branch_used: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: true
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  gate_chair_verdict_issued: false
+  proof_authority: false
+blocked_claims:
+  - "P4-T02 candidate as detector semantics"
+  - "P4-T02 candidate as source-law adoption"
+  - "P4-T02 candidate as coupling-law adoption"
+  - "P4-T02 candidate as matter-coupling derivation"
+  - "P4-T02 candidate as stress-energy semantics"
+  - "P4-T02 candidate as matter action"
+  - "P4-T02 candidate as Einstein equations"
+  - "P4-T02 candidate as benchmark promotion"
+  - "P4-T02 candidate as completed derivation"
+detector_replacement_candidate:
+  artifact_path: "research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex"
+  candidate_name: "SourceDetectorReplacementCandidate_EStar_v1"
+  status: "supplied_source_placeholder"
+  source_domain_supplied: true
+  readout_interface_supplied: true
+  certificate_supplied: true
+  finite_local_witness_supplied: true
+  no_empirical_protocol_import: true
+  no_proper_time_import: true
+  no_target_metric_import: true
+  detector_semantics_adopted: false
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-002 constructs a detector replacement candidate only and does not adopt detector semantics source law coupling law matter coupling stress-energy matter action Einstein equations benchmark promotion or completed derivation."
+selected_next_route:
+  route_id: "v17_p4_t03_detector_replacement_smuggling_audit"
+  plan_task_id: "P4-T03"
+  role_family: "smuggling-auditor@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Audit detector-replacement candidate for empirical detector, target metric, proper-time, benchmark, or process-authority imports."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+validation:
+  task_local_validator: "PASS"
+  global_research_control_validation: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
