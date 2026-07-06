@@ -238,6 +238,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-051-PARENT-FUSION-NOTES-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-REFUTER-STRESS` `research_control/tasks/RT-20260705-051/artifacts/parent_fusion_notes_source_side_coupling_law_candidate_refuter_stress.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-PARENT-FUSION-NOTES-POST-CANDIDATE-AUDIT-STRESS-SELECTOR` `research_control/tasks/RT-20260705-052/artifacts/parent_fusion_notes_post_candidate_audit_stress_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-POST-CANDIDATE-AUDIT-STRESS-SELECTOR` `research_control/tasks/RT-20260705-052/artifacts/post_candidate_audit_stress_selector_v1.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-PARENT-FUSION-NOTES-V17-CANDIDATE-CYCLE-INTEGRATION` `research_control/tasks/RT-20260705-053/artifacts/parent_fusion_notes_v17_candidate_cycle_integration.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-V17-COUPLING-LAW-CANDIDATE-CYCLE-REPORT` `research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -901,6 +903,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-051-PARENT-FUSION-NOTES-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260705-051-parent-fusion-notes-source-side-coupling-law-candidate-refuter-stress.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-PARENT-FUSION-NOTES-POST-CANDIDATE-AUDIT-STRESS-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260705-052-parent-fusion-notes-post-candidate-audit-stress-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-POST-CANDIDATE-AUDIT-STRESS-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260705-052-post-candidate-audit-stress-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-PARENT-FUSION-NOTES-V17-CANDIDATE-CYCLE-INTEGRATION` `wiki/markdown/md-research-control-tasks-rt-20260705-053-parent-fusion-notes-v17-candidate-cycle-integration.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-V17-COUPLING-LAW-CANDIDATE-CYCLE-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260705-053-v17-coupling-law-candidate-cycle-report.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`

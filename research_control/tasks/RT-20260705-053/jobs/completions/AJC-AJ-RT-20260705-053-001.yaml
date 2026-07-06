@@ -1,0 +1,402 @@
+completion_id: "AJC-AJ-RT-20260705-053-001"
+job_id: "AJ-RT-20260705-053-001"
+task_id: "RT-20260705-053"
+source_role_id: "director-of-research"
+completed_at: "2026-07-06T00:31:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P2-T04"
+  plan_phase_id: "P2"
+  implemented_task_scope: "Integrated the SourceCouplingLawCandidate_EStar_v1 construction self-check audit stress and selector cycle without adoption or physics promotion."
+  completed_v17_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+  downstream_tasks_not_implemented:
+    - "P3 acceptance calibration"
+    - "P4 detector semantics"
+    - "P5 metric-use ledger"
+    - "P6 EqSrc RetainH GenH revisit"
+    - "P7 proof-normal-form layer"
+    - "P8 mechanized formal fragments"
+    - "P9 proof-state dashboard"
+    - "P10 generated task index"
+    - "P11 CI and reproducibility"
+    - "P12 AI research-agent system evaluation"
+    - "P13 V17 integration final validation and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md"
+  - "research_control/tasks/RT-20260705-053/artifacts/child_phys_math_v17_candidate_cycle_integration.yaml"
+  - "research_control/tasks/RT-20260705-053/artifacts/child_phys_phil_v17_candidate_cycle_integration.yaml"
+  - "research_control/tasks/RT-20260705-053/artifacts/parent_conflict_review_v17_candidate_cycle_integration.yaml"
+  - "research_control/tasks/RT-20260705-053/artifacts/parent_fusion_notes_v17_candidate_cycle_integration.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260705-053/00_TASK.yaml"
+  - "research_control/tasks/RT-20260705-053/DDR-20260705-053.md"
+  - "research_control/tasks/RT-20260705-053/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260705-053/jobs/AJ-RT-20260705-053-001.yaml"
+  - "research_control/tasks/RT-20260705-053/jobs/completions/AJC-AJ-RT-20260705-053-001.yaml"
+  - "research_control/tasks/RT-20260705-053/roles/director-of-research@0.3.0--RT-20260705-053.yaml"
+  - "research_control/handoffs/handoff-0626.yaml"
+  - "research_control/handoffs/handoff-0626.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0625.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/v17_recommendation_backlog.yaml"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/AGENT_ROLE_REGISTRY.csv"
+  - "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260705-048/artifacts/source_side_coupling_law_candidate_self_check_v1.yaml"
+  - "research_control/tasks/RT-20260705-050/artifacts/source_side_coupling_law_candidate_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260705-051/artifacts/source_side_coupling_law_candidate_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260705-052/artifacts/post_candidate_audit_stress_selector_v1.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=654 relationship_row_count=3369 semantic_row_count=654 vault_row_count=654"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"v17 P2-T04 candidate-cycle integration report SourceCouplingLawCandidate selector\" --limit 10 --json | exit_code=0 | returned_object_ids=none fts_error=no_such_column_T04"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"candidate cycle integration report source coupling law candidate\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-PARENT-FUSION-NOTES-POST-CANDIDATE-AUDIT-STRESS-SELECTOR;MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-POST-CANDIDATE-AUDIT-STRESS-SELECTOR;MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17;MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260705-052 latest_handoff=handoff-0625 boundary=director_decision_required"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 654
+    relationship_row_count: 3369
+    semantic_row_count: 654
+    vault_row_count: 654
+  authority_note: "Obsidian notes .local caches semantic extracts SQLite retrieval indexes and generated wiki notes are retrieval aids only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"candidate cycle integration report source coupling law candidate\" --limit 10 --json"
+      query_type: "search"
+      query_text: "candidate cycle integration report source coupling law candidate"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-PARENT-FUSION-NOTES-POST-CANDIDATE-AUDIT-STRESS-SELECTOR"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-POST-CANDIDATE-AUDIT-STRESS-SELECTOR"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      retrieval_evidence_object_ids:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "a7ebdc7e0abff132f6998d8d67b1c86dd94290e411b68ef9c94ca0600f7cc1ab"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-PARENT-FUSION-NOTES-POST-CANDIDATE-AUDIT-STRESS-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-052/artifacts/parent_fusion_notes_post_candidate_audit_stress_selector.md"
+      source_hash: "b1103daf8ee05932a86e2bfff3a0ed26c8a8418b0a82915cf73272aff2cec1d2"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-052-POST-CANDIDATE-AUDIT-STRESS-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-052/artifacts/post_candidate_audit_stress_selector_v1.md"
+      source_hash: "2e959890cf855300a0c471b7e48a5a0aa9988e86b4dc372b92117de660cc2bfc"
+    - object_id: "TEX-V17-P1-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+      source_hash: "6e21a010e5247039564d96612cc4be7a0cc59564bfb1498d7dde9318b9ba6059"
+    - object_id: "TEX-V17-P2-T01-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-SMUGGLING-AUDIT"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-050/artifacts/source_side_coupling_law_candidate_smuggling_audit_v1.tex"
+      source_hash: "fca39ba6a9235a4dd09c76c5e5cd0d12d39859ad057a84fcb6504c6fce3ef686"
+    - object_id: "TEX-V17-P2-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE-REFUTER-STRESS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260705-051/artifacts/source_side_coupling_law_candidate_refuter_stress_v1.tex"
+      source_hash: "b927917c760186c883f345fa0cb1817fcda31d00cb0bc0ee5ef29064362eb232"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "query_memory status PASS"
+      - "targeted memory search returned P2-T04 selector report and v17 plan objects"
+      - "canonical source files and source registry rows inspected"
+      - "continue_research.py resolved handoff-0625 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P2-T04 integration report created"
+      - "required report sections present"
+      - "Distance-to-GR ledger update is not required"
+      - "next exact route is P3-T01"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "post-write validators run after this completion receipt is created"
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "renderers run after this completion receipt is created"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap_memory_system.py runs after this completion receipt is created"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "validate_claim_language.py --changed --json runs after this completion receipt is created"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  integration_consumes_gate_authority: false
+  future_selected_gate_packet_requires_human_gate: true
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "future exact question only"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+tests_added_or_updated: []
+verdict: "v17_p2_t04_candidate_cycle_integrated_no_adoption"
+coherent_resolution_summary: "RT-20260705-053 integrates the completed SourceCouplingLawCandidate_EStar_v1 construction self-check audit stress and selector cycle. It keeps the candidate as draft/control source-side evidence-precondition candidate, preserves protected_gate_question_setup_only as future question setup only, records no Distance-to-GR ledger update, and routes to P3-T01 acceptance calibration."
+next_recommendation: "Run one bounded v17 P3-T01 acceptance calibration design note packet."
+candidate_cycle_result:
+  artifact_path: "research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md"
+  object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260705-053-V17-COUPLING-LAW-CANDIDATE-CYCLE-REPORT"
+  source_hash: "5252003fd07de7b86625e5ab5e896b2cbf78e0ad44ddebafa103dff01106dda1"
+  candidate_name: "SourceCouplingLawCandidate_EStar_v1"
+  candidate_artifact_path: "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+  candidate_artifact_hash: "6e21a010e5247039564d96612cc4be7a0cc59564bfb1498d7dde9318b9ba6059"
+  self_check_artifact_path: "research_control/tasks/RT-20260705-048/artifacts/source_side_coupling_law_candidate_self_check_v1.yaml"
+  self_check_artifact_hash: "244219b84fdf36968293cc7ebdb7dd40a33a4c61e964672c97a6fa07d553ccf7"
+  audit_artifact_path: "research_control/tasks/RT-20260705-050/artifacts/source_side_coupling_law_candidate_smuggling_audit_v1.tex"
+  audit_artifact_hash: "fca39ba6a9235a4dd09c76c5e5cd0d12d39859ad057a84fcb6504c6fce3ef686"
+  stress_artifact_path: "research_control/tasks/RT-20260705-051/artifacts/source_side_coupling_law_candidate_refuter_stress_v1.tex"
+  stress_artifact_hash: "b927917c760186c883f345fa0cb1817fcda31d00cb0bc0ee5ef29064362eb232"
+  selector_artifact_path: "research_control/tasks/RT-20260705-052/artifacts/post_candidate_audit_stress_selector_v1.md"
+  selector_artifact_hash: "2e959890cf855300a0c471b7e48a5a0aa9988e86b4dc372b92117de660cc2bfc"
+  integrated_status: "audited_stress_survived_draft_control_candidate_pending_exact_scoped_gate_question"
+  immediate_v17_continuation: "P3-T01"
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - object: "SourceCouplingLawCandidate_EStar_v1_candidate_cycle_integration"
+      classification: "status_boundary_evidence_only"
+      relation_to_current_ontology: "evidence_only"
+      claim_boundary_ref: "CB-V17-P2-T04-CANDIDATE-CYCLE-INTEGRATION-001"
+      protected_authority_required: true
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+      blocked_overreads:
+        - "candidate-cycle integration as Gate Chair verdict"
+        - "candidate-cycle integration as source-law adoption"
+        - "candidate-cycle integration as coupling-law adoption"
+        - "candidate-cycle integration as matter-coupling derivation"
+        - "candidate-cycle integration as detector semantics"
+        - "candidate-cycle integration as stress-energy semantics"
+        - "candidate-cycle integration as Einstein-equation derivation"
+        - "candidate-cycle integration as benchmark promotion"
+        - "candidate-cycle integration as completed derivation"
+      notes: "P2-T04 is candidate-cycle integration and next-route selection only."
+physics_progress_status:
+  status: "candidate_cycle_integrated_no_adoption"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Integrate candidate construction, audit, stress, and selector results into current frontier without promotion."
+  explanation: "The completed candidate cycle is integrated as draft/control source-side evidence-precondition candidate status only."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "accepted_as_scoped_evidence_precondition"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v17_p3_t01_acceptance_calibration_design_note"
+    - "future_exact_scoped_gate_question_setup_only"
+  downstream_still_blocked:
+    - "source_law_adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "unrestricted RR_E theorem"
+    - "matter_semantics_adoption"
+    - "detector_semantics_adoption"
+    - "coupling_law_adoption"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+  explanation: "No Distance-to-GR ledger row is changed. P2-T04 integrates candidate-cycle status and unlocks bounded P3-T01 acceptance calibration only."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only context retained"
+  - burden: "g_eff"
+    status: "unchanged; no physical metric premise"
+  - burden: "matter coupling"
+    status: "candidate cycle integrated as draft/control evidence-precondition candidate only; no coupling law or matter coupling is adopted or derived"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation"
+  - burden: "finite-variation robustness"
+    status: "unchanged"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion"
+  - burden: "Gate Chair status"
+    status: "future narrow question preserved; no verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen"
+new_mathematical_payload:
+  - payload_id: "P2T04-PAYLOAD-001"
+    payload_type: "dependency_map_update"
+    object_name: "SourceCouplingLawCandidate_EStar_v1 candidate-cycle integration"
+    source_path: "research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md"
+    source_hash: "5252003fd07de7b86625e5ab5e896b2cbf78e0ad44ddebafa103dff01106dda1"
+    summary: "Integrates construction self-check audit stress and selector status into a single no-promotion control state."
+  - payload_id: "P2T04-PAYLOAD-002"
+    payload_type: "source_extension_classification"
+    object_name: "SourceCouplingLawCandidate_EStar_v1 scoped evidence-precondition candidate"
+    source_path: "research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md"
+    source_hash: "5252003fd07de7b86625e5ab5e896b2cbf78e0ad44ddebafa103dff01106dda1"
+    summary: "Keeps the stress-surviving candidate as draft/control source-extension evidence-precondition candidate pending future exact scoped Gate Chair review."
+  - payload_id: "P2T04-PAYLOAD-003"
+    payload_type: "packet_selection"
+    object_name: "P3 acceptance calibration route"
+    source_path: "research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md"
+    source_hash: "5252003fd07de7b86625e5ab5e896b2cbf78e0ad44ddebafa103dff01106dda1"
+    summary: "Selects P3-T01 acceptance calibration as the immediate continuation after candidate-cycle integration."
+mathematical_payload_manifest:
+  - payload_id: "P2T04-PAYLOAD-001"
+    payload_type: "dependency_map_update"
+    object_name: "SourceCouplingLawCandidate_EStar_v1 candidate-cycle integration"
+    source_path: "research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md"
+    source_hash: "5252003fd07de7b86625e5ab5e896b2cbf78e0ad44ddebafa103dff01106dda1"
+    burden_effect: "no_distance_delta"
+  - payload_id: "P2T04-PAYLOAD-002"
+    payload_type: "source_extension_classification"
+    object_name: "SourceCouplingLawCandidate_EStar_v1 scoped evidence-precondition candidate"
+    source_path: "research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md"
+    source_hash: "5252003fd07de7b86625e5ab5e896b2cbf78e0ad44ddebafa103dff01106dda1"
+    burden_effect: "no_distance_delta"
+  - payload_id: "P2T04-PAYLOAD-003"
+    payload_type: "packet_selection"
+    object_name: "P3 acceptance calibration route"
+    source_path: "research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md"
+    source_hash: "5252003fd07de7b86625e5ab5e896b2cbf78e0ad44ddebafa103dff01106dda1"
+    burden_effect: "no_distance_delta"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  scoped_obstruction_present: false
+  repeated_unmet_burdens_no_new_payload: false
+  new_mathematical_payload_present: true
+  freeze_decision: "not_frozen"
+  active_freeze_label: "V17-SOURCE-COUPLING-LAW-CANDIDATE-CYCLE-INTEGRATION"
+  rationale: "The route is not frozen because P2-T04 completes the integration step selected by P2-T03 and routes to a distinct acceptance-calibration policy packet rather than repeating construction audit stress or selector work."
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  authorized_scope: "Candidate-cycle integration report only."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "RR_ETransportCompletenessOrInvarianceLaw_v1 adoption"
+    - "unrestricted RR_E theorem"
+    - "matter semantics adoption"
+    - "detector semantics adoption"
+    - "coupling-law adoption"
+    - "matter coupling claim"
+    - "matter-coupling derivation"
+    - "matter-coupling adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "program-wide no-go conclusion"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260705-053/artifacts/child_phys_math_v17_candidate_cycle_integration.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260705-053/artifacts/child_phys_phil_v17_candidate_cycle_integration.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260705-053/artifacts/parent_conflict_review_v17_candidate_cycle_integration.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fusion_notes_path: "research_control/tasks/RT-20260705-053/artifacts/parent_fusion_notes_v17_candidate_cycle_integration.md"
+    fused_output_path: "research_control/tasks/RT-20260705-053/artifacts/v17_coupling_law_candidate_cycle_report.md"
+    fused_output_hash: "5252003fd07de7b86625e5ab5e896b2cbf78e0ad44ddebafa103dff01106dda1"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+forbidden_conclusions:
+  - "P2-T04 integration proves source-law adoption."
+  - "P2-T04 integration proves coupling-law adoption."
+  - "P2-T04 integration derives matter coupling."
+  - "P2-T04 integration executes a Gate Chair verdict."
+  - "P2-T04 integration starts or derives Einstein equations."
+  - "P2-T04 integration promotes the exact-GR benchmark."
+  - "Any validator result grants proof authority."

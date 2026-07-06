@@ -1,0 +1,44 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260705-053"
+artifact_id: "child_phys_math_v17_candidate_cycle_integration"
+status: "completed"
+claim_boundary_inherited: true
+analysis:
+  candidate_object:
+    name: "SourceCouplingLawCandidate_EStar_v1"
+    construction_status: "finite draft/control source-side candidate"
+    construction_source: "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex"
+    construction_hash: "6e21a010e5247039564d96612cc4be7a0cc59564bfb1498d7dde9318b9ba6059"
+  self_check:
+    status: "passed target-floor checks"
+    source: "research_control/tasks/RT-20260705-048/artifacts/source_side_coupling_law_candidate_self_check_v1.yaml"
+    source_hash: "244219b84fdf36968293cc7ebdb7dd40a33a4c61e964672c97a6fa07d553ccf7"
+  audit:
+    status: "source_pure_as_written"
+    source: "research_control/tasks/RT-20260705-050/artifacts/source_side_coupling_law_candidate_smuggling_audit_v1.tex"
+    source_hash: "fca39ba6a9235a4dd09c76c5e5cd0d12d39859ad057a84fcb6504c6fce3ef686"
+  stress:
+    status: "stress_survives_as_draft_control_candidate"
+    bridge_or_fail_category: "bridge_facing_candidate_path"
+    source: "research_control/tasks/RT-20260705-051/artifacts/source_side_coupling_law_candidate_refuter_stress_v1.tex"
+    source_hash: "b927917c760186c883f345fa0cb1817fcda31d00cb0bc0ee5ef29064362eb232"
+  selector:
+    selected_route: "protected_gate_question_setup_only"
+    source: "research_control/tasks/RT-20260705-052/artifacts/post_candidate_audit_stress_selector_v1.md"
+    source_hash: "2e959890cf855300a0c471b7e48a5a0aa9988e86b4dc372b92117de660cc2bfc"
+mathematical_integration:
+  integrated_chain:
+    - "finite source-side K_EStar candidate exists as draft/control"
+    - "target-floor self-check passed"
+    - "source-purity audit passed as written"
+    - "Refuter stress did not collapse the candidate under named stress modes"
+    - "selector preserved protected gate-question setup rather than adoption"
+  repair_required: false
+  freeze_required: false
+  ledger_update_required: false
+  next_plan_task_id: "P3-T01"
+limits:
+  - "No source-law adoption follows from finite candidate survival."
+  - "No coupling law or matter coupling is derived."
+  - "No stress-energy tensor matter action Einstein equations benchmark promotion or completed derivation follows."

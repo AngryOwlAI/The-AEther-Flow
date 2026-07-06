@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260705-052`
-- Latest handoff: `handoff-0625`
-- Current status: `v17_p2_t03_selector_selected_protected_gate_question_setup_no_adoption`
+- Active task: `RT-20260705-053`
+- Latest handoff: `handoff-0626`
+- Current status: `v17_p2_t04_candidate_cycle_integrated_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p2_t04_candidate_cycle_integration_report`
-- Role family: `director-of-research@0.3.0`
+- Route ID: `v17_p3_t01_acceptance_calibration_design_note`
+- Role family: ``
 - Target milestone: `matter_coupling`
-- Milestone burden: Integrate candidate construction, audit, stress, and selector results into current frontier without promotion.
+- Milestone burden: Define calibrated acceptance language for high-risk rows with no physics delta.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -32,8 +32,8 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `9b23b57f77c78c09a8185d88b41c6c2d5b6fd2fead8c429cd769f35faa5e8143`
-- JSON SHA-256: `8bdf7152f425c5d774deae3c202b5aff8161ab90eb44a94f2daf8b477b9193ae`
+- YAML SHA-256: `70705c7b0591ad6df364b70ca991da54dcf2e4b573c0bc0a18b62fbfb25fd95b`
+- JSON SHA-256: `9dc77fa08c7efec7df7690bacb916c6924ca7708da05113f131b40f203e19bc7`
 
 ## Authority Warning
 
