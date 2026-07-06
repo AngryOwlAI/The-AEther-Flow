@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-034` and `handoff-0666`.
+`RT-20260706-035` and `handoff-0667`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-034` |
-| Latest handoff ID | `handoff-0666` |
-| Current status | `v17_p12_t02_ai_research_agent_metrics_report_extension_completed_no_physics_delta` |
+| Active task ID | `RT-20260706-035` |
+| Latest handoff ID | `handoff-0667` |
+| Current status | `v17_p12_t03_ai_methodology_evaluation_memo_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p12 t02 ai research agent metrics report extension completed no physics delta |
+| Current route family | v17 p12 t03 ai methodology evaluation memo completed no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P12-T03 AI-methodology evaluation memo packet through research-methodologist@0.1.0 or an active compatible methodology overlay. |
-| Required next authority | P12-T03 may write a task-local AI-methodology evaluation memo using the generated metrics report as support-only AI-system diagnostic evidence, without changing physics claim status. |
-| Next recommended action | Run one bounded v17 P12-T03 AI-methodology evaluation memo packet through research-methodologist@0.1.0 or an active compatible methodology overlay. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P12-T04 methodology dashboard integration packet through tooling-engineer@0.1.0 or an active compatible tooling overlay. |
+| Required next authority | P12-T04 may render methodology metrics dashboard outputs as support-only AI-system diagnostics, without ranking physics truth by workflow activity or changing physics claim status. |
+| Next recommended action | Run one bounded v17 P12-T04 methodology dashboard integration packet through tooling-engineer@0.1.0 or an active compatible tooling overlay. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-034/00_TASK.yaml`.
+- Active task path: `research_control/tasks/RT-20260706-035/00_TASK.yaml`.
 - Active task objective: not recorded.
-- Latest handoff path: `research_control/handoffs/handoff-0666.yaml`.
-- Latest handoff summary: RT-20260706-034 completed one bounded v17 P12-T02 AI research-agent methodology metrics report extension packet. It extended report_physics_progress_metrics.py with a support-only ai_research_agent_methodology_metrics object, generated output/physics_progress_metrics.json and output/physics_progress_metrics.md, added focused regression coverage, and validated that the methodology diagnostics remain outside scientific_progress_metrics. No physics delta, source-law adoption, matter-coupling derivation, Einstein-equation derivation, benchmark promotion, Gate Chair verdict, or completed-derivation claim was created.
-- Current route family: v17 p12 t02 ai research agent metrics report extension completed no physics delta.
-- Next recommended action: Run one bounded v17 P12-T03 AI-methodology evaluation memo packet through research-methodologist@0.1.0 or an active compatible methodology overlay.
+- Latest handoff path: `research_control/handoffs/handoff-0667.yaml`.
+- Latest handoff summary: RT-20260706-035 completed one bounded v17 P12-T03 AI-methodology evaluation memo packet. It wrote a support-only memo using the P12-T01 taxonomy and P12-T02 measured methodology diagnostics, identified strengths, failure modes, recommendations, and preserved all physics claim boundaries. No physics delta, source-law adoption, matter-coupling derivation, Einstein-equation derivation, benchmark promotion, Gate Chair verdict, or completed-derivation claim was created.
+- Current route family: v17 p12 t03 ai methodology evaluation memo completed no physics delta.
+- Next recommended action: Run one bounded v17 P12-T04 methodology dashboard integration packet through tooling-engineer@0.1.0 or an active compatible tooling overlay.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P12-T03 AI-methodology evaluation memo packet through research-methodologist@0.1.0 or an active compatible methodology overlay.
+Run one bounded v17 P12-T04 methodology dashboard integration packet through tooling-engineer@0.1.0 or an active compatible tooling overlay.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,9 +301,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-034`;
-- latest handoff: `handoff-0666`;
-- current status: `v17_p12_t02_ai_research_agent_metrics_report_extension_completed_no_physics_delta`;
+- active task: `RT-20260706-035`;
+- latest handoff: `handoff-0667`;
+- current status: `v17_p12_t03_ai_methodology_evaluation_memo_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -313,8 +313,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0666.yaml`
-- `research_control/tasks/RT-20260706-034/00_TASK.yaml`
+- `research_control/handoffs/handoff-0667.yaml`
+- `research_control/tasks/RT-20260706-035/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -330,7 +330,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0666*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0667*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

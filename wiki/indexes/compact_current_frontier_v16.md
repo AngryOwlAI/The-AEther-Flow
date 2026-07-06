@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-034`
-- Latest handoff: `handoff-0666`
-- Current status: `v17_p12_t02_ai_research_agent_metrics_report_extension_completed_no_physics_delta`
+- Active task: `RT-20260706-035`
+- Latest handoff: `handoff-0667`
+- Current status: `v17_p12_t03_ai_methodology_evaluation_memo_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p12_t03_ai_methodology_evaluation_memo`
-- Role family: `research-methodologist@0.1.0 or active compatible methodology overlay`
+- Route ID: `v17_p12_t04_methodology_dashboard_integration`
+- Role family: `tooling-engineer@0.1.0 or active compatible tooling overlay`
 - Target milestone: `matter_coupling`
-- Milestone burden: Write methodology memo evaluating the research-agent system without physics promotion.
+- Milestone burden: Render methodology metrics dashboard as support-only AI-system diagnostic.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `e71cd61b3c02fe0710203315dcbfdeba98ad57177586dee3cf6c166287cc1c5f`
-- JSON SHA-256: `ad47be9c88e3be15ef50585c75ca5dba5f29acf0d3e21cb5e1c43baaf1545c24`
+- YAML SHA-256: `2964b9ed70e604beb1c57a3a4333277d9704bc35c1e5829cd44d9e2dd0b51a74`
+- JSON SHA-256: `501a57acac2e1acab203b4e282d434be9c3e58f9fd0f0174178cdec59e0fc1b6`
 
 ## Authority Warning
 
