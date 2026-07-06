@@ -1,0 +1,21 @@
+artifact_id: "parent_conflict_review_support_only_formalization_target_selector"
+task_id: "RT-20260706-017"
+job_id: "AJ-RT-20260706-017-001"
+status: "completed"
+mode: "parent_child_parallel_synthesis"
+reviewed_child_outputs:
+  - "research_control/tasks/RT-20260706-017/artifacts/child_phys_math_support_only_formalization_target_selector.yaml"
+  - "research_control/tasks/RT-20260706-017/artifacts/child_phys_phil_support_only_formalization_target_selector.yaml"
+conflicts:
+  - conflict_id: "P8T01-CF-001"
+    type: "scope"
+    severity: "nonblocking"
+    summary: "The mathematical child preferred maximum evaluator coverage while the philosophy child emphasized overread risk."
+    resolution: "Select fail_closed_certificate_evaluation but require P8-T02 to publish support_only and proof_authority flags and treat no-target import as a negative branch."
+unresolved_blocking_conflicts: []
+authority_expansion_detected: false
+selected_target: "fail_closed_certificate_evaluation"
+selected_toolchain: "custom finite checker implemented in Python"
+support_only: true
+proof_authority: false
+physics_promotion_authorized: false

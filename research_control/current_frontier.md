@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-016` and `handoff-0648`.
+`RT-20260706-017` and `handoff-0649`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-016` |
-| Latest handoff ID | `handoff-0648` |
-| Current status | `v17_p7_t04_proof_normal_form_reader_surface_completed_no_physics_delta` |
+| Active task ID | `RT-20260706-017` |
+| Latest handoff ID | `handoff-0649` |
+| Current status | `v17_p8_t01_selected_fail_closed_certificate_evaluation_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p7 t04 proof normal form reader surface completed no physics delta |
+| Current route family | v17 p8 t01 selected fail closed certificate evaluation no physics delta |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted as scoped evidence/precondition only; not derived or adopted |
-| Required next authority | P8-T01 may select exactly one support-only formalization target and justify tool choice without mechanizing it yet or changing physics authority. |
-| Next recommended action | Run one bounded v17 P8-T01 support_only_formalization_target_selector packet under theoretical-continuation-selector@0.1.0 to select exactly one low-level support-only formalization target. |
+| Required next authority | P8-T02 may create research_control/formalization/fail_closed_certificate_evaluation support-only files and validation report for the selected fragment only. |
+| Next recommended action | Run one bounded v17 P8-T02 support_only_formalization_fragment packet to mechanize fail_closed_certificate_evaluation under a support-only custom finite checker. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-016/00_TASK.yaml`.
-- Active task objective: Render proof-normal-form summaries for agent retrieval into deterministic JSON and Markdown reader surfaces without changing source authority or proof status.
-- Latest handoff path: `research_control/handoffs/handoff-0648.yaml`.
-- Latest handoff summary: RT-20260706-016 completed one bounded v17 P7-T04 proof-normal-form reader-surface packet. It rendered deterministic JSON and Markdown indexes while preserving source authority, no proof authority, and no Distance-to-GR ledger delta.
-- Current route family: v17 p7 t04 proof normal form reader surface completed no physics delta.
-- Next recommended action: Run one bounded v17 P8-T01 support_only_formalization_target_selector packet under theoretical-continuation-selector@0.1.0 to select exactly one low-level support-only formalization target.
+- Active task path: `research_control/tasks/RT-20260706-017/00_TASK.yaml`.
+- Active task objective: Select exactly one low-level formal fragment for support-only mechanization and justify the tool choice without mechanizing it or changing physics authority.
+- Latest handoff path: `research_control/handoffs/handoff-0649.yaml`.
+- Latest handoff summary: RT-20260706-017 completed one bounded v17 P8-T01 support-only formalization target selector packet. It selected fail_closed_certificate_evaluation and a custom finite checker implemented in Python while preserving no proof authority and no Distance-to-GR ledger delta.
+- Current route family: v17 p8 t01 selected fail closed certificate evaluation no physics delta.
+- Next recommended action: Run one bounded v17 P8-T02 support_only_formalization_fragment packet to mechanize fail_closed_certificate_evaluation under a support-only custom finite checker.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P8-T01 support_only_formalization_target_selector packet under theoretical-continuation-selector@0.1.0 to select exactly one low-level support-only formalization target.
+Run one bounded v17 P8-T02 support_only_formalization_fragment packet to mechanize fail_closed_certificate_evaluation under a support-only custom finite checker.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,25 +301,25 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-016`;
-- latest handoff: `handoff-0648`;
-- current status: `v17_p7_t04_proof_normal_form_reader_surface_completed_no_physics_delta`;
+- active task: `RT-20260706-017`;
+- latest handoff: `handoff-0649`;
+- current status: `v17_p8_t01_selected_fail_closed_certificate_evaluation_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `focused_unit_tests`: PASS;
+- latest handoff validation `exact_one_target_selected`: True;
 - latest handoff validation `global_research_control_validation`: PENDING;
-- latest handoff validation `proof_normal_form_index_check`: PASS;
-- latest handoff validation `proof_normal_form_index_render`: PASS;
-- latest handoff validation `proof_normal_form_registry_validator`: PASS;
+- latest handoff validation `selector_done_criteria`: PASS;
+- latest handoff validation `support_only_boundary_explicit`: True;
+- latest handoff validation `tool_choice_justified`: True;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0648.yaml`
-- `research_control/tasks/RT-20260706-016/00_TASK.yaml`
+- `research_control/handoffs/handoff-0649.yaml`
+- `research_control/tasks/RT-20260706-017/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -335,7 +335,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0648*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0649*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

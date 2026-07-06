@@ -1,0 +1,35 @@
+artifact_id: "child_phys_math_support_only_formalization_target_selector"
+task_id: "RT-20260706-017"
+job_id: "AJ-RT-20260706-017-001"
+execution_unit: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+selected_target: "fail_closed_certificate_evaluation"
+selected_toolchain: "custom finite checker implemented in Python"
+selection_basis:
+  - "The target has finite inputs and deterministic branch outcomes."
+  - "The certificate algebra checklist names missing malformed target-metric detector-semantics benchmark and source-certificate branches."
+  - "The v16 support-only executable certificate spec already demonstrates a local evaluator shape without proof authority."
+  - "The PNF row PNF-RT-20260706-014-003 points to source certificate operation laws as draft/control support-only theorem material."
+candidate_evaluation:
+  source_certificate_identity_composition_restriction: "not selected because identity composition restriction is useful but narrower and closer to theorem proof obligations than fail-closed evaluator coverage."
+  fail_closed_certificate_evaluation: "selected because it is a finite relation from certificate record states to allowed or blocked outcomes."
+  finite_toy_tag_removal_obstruction: "not selected because it was already mechanized in an older support-only lane and is less directly tied to current certificate algebra."
+  no_target_import_guard_taxonomy: "not selected because it should be a subcase inside the fail-closed evaluator."
+  claim_graph_non_promotion_constraints: "not selected because it is project-control graph validation rather than a low-level source-side formal fragment."
+formal_fragment_contract:
+  input: "finite certificate record with status, declared source fields, source witness payload, and forbidden-import flags"
+  output: "allowed declared-equivalence support classification or fail-closed blocked classification with reason"
+  required_negative_branches:
+    - "missing_certificate"
+    - "malformed_certificate"
+    - "target_metric_import"
+    - "detector_semantics_import"
+    - "process_authority_import"
+    - "stress_energy_or_matter_action_import"
+    - "benchmark_behavior_import"
+    - "scoped_evidence_not_certificate"
+support_only: true
+proof_authority: false
+physics_promotion_authorized: false
+notes: "Mathematically, the selected fragment is a finite evaluator and not a theorem establishing source-law adoption or matter coupling."

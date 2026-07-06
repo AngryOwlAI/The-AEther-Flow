@@ -1,0 +1,28 @@
+artifact_id: "child_phys_phil_support_only_formalization_target_selector"
+task_id: "RT-20260706-017"
+job_id: "AJ-RT-20260706-017-001"
+execution_unit: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+selected_target: "fail_closed_certificate_evaluation"
+selection_basis:
+  - "The target tests guard behavior rather than physical ontology."
+  - "The selected checker can prevent overread of missing or malformed certificate branches without claiming that a certificate exists."
+  - "The target preserves the separation between source-side control hygiene and empirical detector or target-metric semantics."
+  - "The tool choice carries low process risk because it adds no proof-assistant dependency and creates no proof-authority impression."
+overread_risks:
+  - risk: "finite checker pass read as physics proof"
+    mitigation: "P8-T02 report must state support_only true and proof_authority false."
+  - risk: "fail-closed behavior read as source-law adoption"
+    mitigation: "Completion and handoff must block source-law adoption and matter-coupling derivation."
+  - risk: "target-import guard read as target-metric evidence"
+    mitigation: "Checker must classify target-metric import as invalid and fail closed."
+not_selected_rationale:
+  source_certificate_identity_composition_restriction: "could invite theorem overread before a support-only evaluator is stabilized."
+  finite_toy_tag_removal_obstruction: "valuable but less central to current certificate-algebra route."
+  no_target_import_guard_taxonomy: "important as a branch, not sufficient as the whole target."
+  claim_graph_non_promotion_constraints: "belongs to public proof-state/project-control validation rather than this source certificate fragment."
+support_only: true
+proof_authority: false
+physics_promotion_authorized: false
+notes: "The selection improves reproducibility and overread resistance, not project physics authority."
