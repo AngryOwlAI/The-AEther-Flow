@@ -1,0 +1,218 @@
+completion_id: "AJC-AJ-RT-20260706-037-001"
+job_id: "AJ-RT-20260706-037-001"
+task_id: "RT-20260706-037"
+source_role_id: "director-of-research"
+completed_at: "2026-07-06T23:13:41Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_task_id: "P13-T01"
+  related_plan_task_id: "P13-T01"
+  plan_phase_id: "P13"
+  implemented_task_scope: "Wrote the v17 integration report from completed v17 packets and unresolved claim boundaries without physics overclaim."
+  phase_p13_completed: false
+  completed_plan_task_id: "P13-T01"
+  selected_next_plan_task_id: "P13-T02"
+  implemented_v17_plan_tasks_after_completion: 54
+  deferred_v17_plan_tasks_after_completion:
+    - "P13-T02"
+    - "P13-T03"
+    - "P13-T04"
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "output/ai_methodology_metrics_dashboard.json"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "research_control/tasks/RT-20260706-037/artifacts/v17_integration_report.md"
+  - "research_control/tasks/RT-20260706-037/artifacts/validate_p13_t01_integration_report.py"
+  - "research_control/tasks/RT-20260706-037/artifacts/p13_t01_integration_report_validation.json"
+  - "research_control/tasks/RT-20260706-037/artifacts/p13_t01_integration_report_receipt.md"
+  - "research_control/tasks/RT-20260706-037/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-037/jobs/AJ-RT-20260706-037-001.yaml"
+  - "research_control/tasks/RT-20260706-037/jobs/completions/AJC-AJ-RT-20260706-037-001.yaml"
+  - "research_control/tasks/RT-20260706-037/roles/director-of-research@0.3.0--RT-20260706-037.yaml"
+  - "research_control/handoffs/handoff-0669.yaml"
+  - "research_control/handoffs/handoff-0669.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/design/v17_recommendation_backlog.yaml"
+  - "research_control/design/v17_recommendation_backlog_schema.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/handoffs/handoff-0668.yaml"
+  - "research_control/handoffs/handoff-0668.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=684 relationship_row_count=3509 semantic_row_count=684 vault_row_count=684"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P13-T01 integration report\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER navigation_support_object_ids=MD-RESEARCH-CONTROL-TASK-INDEX"
+  - ".venv/bin/python research_control/tasks/RT-20260706-037/artifacts/validate_p13_t01_integration_report.py --write-report --json | exit_code=0 | status=PASS implemented_v17_plan_tasks=54 deferred_v17_plan_tasks=3"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | validation=PASS warnings=local_retrieval_freshness"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py | exit_code=0 | CONTENT_SEMANTIC_REGISTRY.csv=685 OBJECT_RELATIONSHIP_REGISTRY.csv=3513 OBSIDIAN_VAULT_REGISTRY.csv=685"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=true and refresh_performed=true"
+      - "targeted memory search returned current-frontier and task-index retrieval navigation surfaces"
+      - "canonical v17 plan P13-T01 P13-T02 P13-T03 P13-T04 backlog P13 block handoff-0668 Director role and current control state were inspected"
+  implementation:
+    status: "PASS"
+    evidence:
+      - "v17 integration report contains all sixteen required P13-T01 sections"
+      - "report records 54 implemented v17 tasks after P13-T01 and defers P13-T02 through P13-T04"
+      - "report preserves P13-T02 as the immediate next bounded route"
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "task-local validator confirms required sections"
+      - "validator confirms deferred task count and no_distance_delta token"
+      - "validator blocks common positive overclaim phrases"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P13-T01 integration report is implemented"
+      - "phase P13 remains incomplete until P13-T02 P13-T03 and P13-T04"
+      - "all applicable v17 plan tasks are not yet proven complete"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "post-write validation is required after report control records handoff and registry rows"
+      - "generated current-frontier task-index graph metrics dashboard and memory surfaces must be refreshed from tracked control state"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier compact frontier task index dependency graph claim graph metrics report and methodology dashboard were regenerated from tracked control state"
+      - "renderer checks passed for current frontier compact frontier task index dependency graph claim graph and methodology dashboard"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap and validate-only passed after the integration report registry rows and handoff refresh"
+      - "Obsidian vault synchronization refreshed generated retrieval rows for the new P13-T01 artifact"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed claim-language surfaces passed with hard_fail_count=0"
+      - "P13-T01 report preserves no physics delta no proof authority and no completed-derivation claim"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint_research_transaction must run after final validators confirm the bounded P13-T01 transaction"
+      - "P13-T02 P13-T03 and P13-T04 remain future bounded packets after checkpoint"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+verdict: "v17_p13_t01_integration_report_completed_next_p13_t02_no_physics_delta"
+coherent_resolution_summary: "RT-20260706-037 completed the v17 P13-T01 integration report and preserved P13-T02 as the next bounded final-validation packet."
+next_recommendation: "Run one bounded v17 P13-T02 final validation packet through director-of-research@0.3.0."
+integration_report_result:
+  status: "pass"
+  report_path: "research_control/tasks/RT-20260706-037/artifacts/v17_integration_report.md"
+  implemented_v17_plan_tasks_after_completion: 54
+  deferred_v17_plan_tasks_after_completion: 3
+  required_section_count: 16
+  next_route: "P13-T02"
+physics_progress_status:
+  status: "v17_integration_no_promotion"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Integrate v17 phase outputs into one control report without physics overclaim."
+  physics_promotion_authorized: false
+  explanation: "This packet writes a control integration report; it does not change Distance-to-GR physics status."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P13-T02 final validation packet"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_change"
+    - "matter_coupling_derivation"
+    - "Einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "integration report as proof authority"
+    - "task coverage as source-law adoption"
+    - "candidate survival as canonical ontology adoption"
+    - "candidate survival as matter-coupling derivation"
+    - "validation PASS as physics proof"
+    - "human authorization as Gate Chair verdict"
+    - "v17 integration as completed derivation"
+  summary: "The integration report is project-control evidence only and cannot promote scientific claims."
+claim_boundary:
+  allowed_claims:
+    - "v17 integration report as control report"
+    - "54 of 57 v17 plan tasks implemented after P13-T01"
+    - "P13-T02 P13-T03 and P13-T04 remain separate bounded packets"
+    - "P13-T02 is the immediate next route"
+    - "no physics delta"
+  forbidden_claims:
+    - "integration report as proof authority"
+    - "task coverage as source-law adoption"
+    - "candidate survival as canonical ontology adoption"
+    - "candidate survival as matter-coupling derivation"
+    - "validation PASS as physics proof"
+    - "human authorization as Gate Chair verdict"
+    - "v17 integration as completed derivation"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 684
+    relationship_row_count: 3509
+    semantic_row_count: 684
+    vault_row_count: 684
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P13-T01 integration report\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P13-T01 integration report"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      navigation_support_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "3288384f19c26eb81f1b7d92e917674ed3d11e5ec4e989b57678027f7cff36b1"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
