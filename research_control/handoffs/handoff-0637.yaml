@@ -1,0 +1,80 @@
+handoff_id: "handoff-0637"
+created_at: "2026-07-06T06:21:02Z"
+task_id: "RT-20260706-005"
+decision_id: "DDR-20260706-005"
+job_id: "AJ-RT-20260706-005-001"
+completion_path: "research_control/tasks/RT-20260706-005/jobs/completions/AJC-AJ-RT-20260706-005-001.yaml"
+source_task_id: "RT-20260706-005"
+source_job_id: "AJ-RT-20260706-005-001"
+source_completion_id: "AJC-AJ-RT-20260706-005-001"
+status: "completed"
+summary: "RT-20260706-005 completed one bounded v17 P4-T05 detector route selector. It selected metric_use_ledger_integration_packet after SourceDetectorReplacementCandidate_EStar_v1 survived construction audit and stress, and did not adopt detector semantics or promote physics claims."
+next_action: "Run one bounded v17 P5-T01 metric-use ledger schema packet through an active project-control role overlay."
+loop_risk_route: "v17_p4_t05_detector_route_selector_to_p5_t01_no_adoption"
+claim_boundary:
+  allowed_next_scope: "P5-T01 metric-use ledger schema after detector-replacement route selection with no adoption or physics promotion"
+  selected_route_class: "metric_use_ledger_integration_packet"
+  selected_next_plan_task_id: "P5-T01"
+  selected_next_role_family: "project-control-maintainer@0.2.0 task overlay"
+  physics_promotion_authorized: false
+  scientific_claims_changed: true
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  gate_chair_verdict_issued: false
+  proof_authority: false
+blocked_claims:
+  - "P4-T05 selector as detector semantics"
+  - "P4-T05 selector as source-law adoption"
+  - "P4-T05 selector as coupling-law adoption"
+  - "P4-T05 selector as matter-coupling derivation"
+  - "P4-T05 selector as stress-energy semantics"
+  - "P4-T05 selector as matter action"
+  - "P4-T05 selector as Einstein equations"
+  - "P4-T05 selector as benchmark promotion"
+  - "P4-T05 selector as completed derivation"
+detector_replacement_route_selector:
+  artifact_path: "research_control/tasks/RT-20260706-005/artifacts/detector_replacement_route_selector_v1.md"
+  selected_route: "metric_use_ledger_integration_packet"
+  selected_next_plan_task_id: "P5-T01"
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  selected_next_plan_route_type: "project_control_schema_update"
+  selected_next_role_family: "project-control-maintainer@0.2.0 task overlay"
+  candidate_artifact_path: "research_control/tasks/RT-20260706-002/artifacts/detector_semantics_replacement_candidate_v1.tex"
+  audit_artifact_path: "research_control/tasks/RT-20260706-003/artifacts/detector_replacement_smuggling_audit_v1.tex"
+  stress_artifact_path: "research_control/tasks/RT-20260706-004/artifacts/detector_replacement_refuter_stress_v1.tex"
+  stress_verdict: "survives_as_source_replacement_candidate"
+  bridge_or_fail_category: "bridge_facing_candidate_path"
+  freeze_decision: "not_frozen"
+  detector_semantics_adopted: false
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "accepted_as_scoped_evidence_precondition"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260706-005 selects a metric-use ledger route only and does not adopt detector semantics source law coupling law matter coupling stress-energy matter action Einstein equations benchmark promotion or completed derivation."
+selected_next_route:
+  route_id: "v17_p5_t01_metric_use_ledger_schema"
+  plan_task_id: "P5-T01"
+  role_family: "project-control-maintainer@0.2.0 task overlay"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Create a metric-use ledger schema for every g_eff reference in matter-coupling tasks."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+validation:
+  task_local_validator: "PENDING"
+  global_research_control_validation: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

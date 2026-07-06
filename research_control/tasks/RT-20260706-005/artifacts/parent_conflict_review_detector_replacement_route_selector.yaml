@@ -1,0 +1,25 @@
+review_id: "parent_conflict_review_detector_replacement_route_selector"
+task_id: "RT-20260706-005"
+job_id: "AJ-RT-20260706-005-001"
+status: "no_conflict"
+resolution_rounds: 0
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    perspective: "physicist_mathematician"
+    output_path: "research_control/tasks/RT-20260706-005/artifacts/child_phys_math_detector_replacement_route_selector.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    perspective: "physicist_philosopher"
+    output_path: "research_control/tasks/RT-20260706-005/artifacts/child_phys_phil_detector_replacement_route_selector.yaml"
+    status: "completed"
+consensus:
+  - "Select metric_use_ledger_integration_packet as the single P4-T05 route."
+  - "Route immediate continuation to P5-T01."
+  - "Preserve no detector semantics adoption, no source-law adoption, no matter-coupling derivation, no Einstein equations, and no benchmark promotion."
+unique_contributions:
+  child_phys_math:
+    - "Direct K_E repair integration is premature until metric and detector-reference uses are ledgered."
+  child_phys_phil:
+    - "The surviving candidate must remain a source-side model artifact rather than a physical detector theory."
+unresolved_conflicts: []
+blocking_conflicts: []

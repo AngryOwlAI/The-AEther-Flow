@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-004` and `handoff-0636`.
+`RT-20260706-005` and `handoff-0637`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-004` |
-| Latest handoff ID | `handoff-0636` |
-| Current status | `v17_p4_t04_detector_replacement_stress_survived_pending_selector_no_adoption` |
+| Active task ID | `RT-20260706-005` |
+| Latest handoff ID | `handoff-0637` |
+| Current status | `v17_p4_t05_detector_route_selected_metric_use_ledger_no_adoption` |
 | V16 completed | false |
-| Current route family | v17 p4 t04 detector replacement stress to p4 t05 no adoption |
+| Current route family | v17 p4 t05 detector route selector to p5 t01 no adoption |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P4-T05 selector after detector-replacement candidate audit and stress with no adoption or physics promotion |
-| Next recommended action | Run one bounded v17 P4-T05 Theoretical Continuation Selector packet to select the next route after detector-replacement candidate, audit, and stress. |
+| Required next authority | P5-T01 metric-use ledger schema after detector-replacement route selection with no adoption or physics promotion |
+| Next recommended action | Run one bounded v17 P5-T01 metric-use ledger schema packet through an active project-control role overlay. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-004/00_TASK.yaml`.
-- Active task objective: Stress SourceDetectorReplacementCandidate_EStar_v1 and the P4-T03 audit against placeholder collapse, empirical-protocol substitution, proper-time substitution, target-metric response definition, placeholder-as-adoption, finite/local perturbation, and process-authority pressure.
-- Latest handoff path: `research_control/handoffs/handoff-0636.yaml`.
-- Latest handoff summary: RT-20260706-004 completed one bounded v17 P4-T04 detector-replacement Refuter stress. It classified SourceDetectorReplacementCandidate_EStar_v1 as survives_as_source_replacement_candidate pending selector and did not adopt detector semantics or promote physics claims.
-- Current route family: v17 p4 t04 detector replacement stress to p4 t05 no adoption.
-- Next recommended action: Run one bounded v17 P4-T05 Theoretical Continuation Selector packet to select the next route after detector-replacement candidate, audit, and stress.
+- Active task path: `research_control/tasks/RT-20260706-005/00_TASK.yaml`.
+- Active task objective: Classify the route after SourceDetectorReplacementCandidate_EStar_v1 construction, source-purity audit, and Refuter stress, then select exactly one next route while preserving all hard blocks.
+- Latest handoff path: `research_control/handoffs/handoff-0637.yaml`.
+- Latest handoff summary: RT-20260706-005 completed one bounded v17 P4-T05 detector route selector. It selected metric_use_ledger_integration_packet after SourceDetectorReplacementCandidate_EStar_v1 survived construction audit and stress, and did not adopt detector semantics or promote physics claims.
+- Current route family: v17 p4 t05 detector route selector to p5 t01 no adoption.
+- Next recommended action: Run one bounded v17 P5-T01 metric-use ledger schema packet through an active project-control role overlay.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -254,7 +254,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P4-T05 Theoretical Continuation Selector packet to select the next route after detector-replacement candidate, audit, and stress.
+Run one bounded v17 P5-T01 metric-use ledger schema packet through an active project-control role overlay.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -282,9 +282,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-004`;
-- latest handoff: `handoff-0636`;
-- current status: `v17_p4_t04_detector_replacement_stress_survived_pending_selector_no_adoption`;
+- active task: `RT-20260706-005`;
+- latest handoff: `handoff-0637`;
+- current status: `v17_p4_t05_detector_route_selected_metric_use_ledger_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -296,8 +296,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0636.yaml`
-- `research_control/tasks/RT-20260706-004/00_TASK.yaml`
+- `research_control/handoffs/handoff-0637.yaml`
+- `research_control/tasks/RT-20260706-005/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -313,7 +313,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0636*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0637*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
