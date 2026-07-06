@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-005`
-- Latest handoff: `handoff-0637`
-- Current status: `v17_p4_t05_detector_route_selected_metric_use_ledger_no_adoption`
+- Active task: `RT-20260706-006`
+- Latest handoff: `handoff-0638`
+- Current status: `v17_p5_t01_metric_use_ledger_schema_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p5_t01_metric_use_ledger_schema`
-- Role family: `project-control-maintainer@0.2.0 task overlay`
+- Route ID: `v17_p5_t02_metric_use_ledger_initial_population`
+- Role family: ``
 - Target milestone: `matter_coupling`
-- Milestone burden: Create a metric-use ledger schema for every g_eff reference in matter-coupling tasks.
+- Milestone burden: Populate metric-use ledger for existing matter-coupling and g_eff-adjacent artifacts.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -44,8 +44,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `25e95b422f475ec21b458968a9a4f87f5c87f991524416b74db89d095b2abf66`
-- JSON SHA-256: `9e6fe3ff36bafb8a7ec265ca4dfcbe141d0ba6da39e26d25645a7e5f58ee7d18`
+- YAML SHA-256: `c6242ac84a3f19d278e7bfdb34400f24ecc58db77a5e3e1c0065c8d161d8206d`
+- JSON SHA-256: `b5fb373661c28886ae208a21280f7115dc3f5c3a0864fda6ff5d542eb748d763`
 
 ## Authority Warning
 

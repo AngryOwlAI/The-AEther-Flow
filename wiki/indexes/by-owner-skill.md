@@ -291,6 +291,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1` `wiki/markdown/md-research-control-design-matter-coupling-dependency-dag-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DERIVATION-MORATORIUM` `wiki/markdown/md-research-control-design-matter-coupling-derivation-moratorium.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `wiki/markdown/md-research-control-design-matter-coupling-pre-adoption-checklist.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1` `wiki/markdown/md-research-control-design-metric-use-ledger-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MINIMUM-PHYSICS-PAYLOAD-SCHEMA-V1` `wiki/markdown/md-research-control-design-minimum-physics-payload-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NARROW-THEOREM-TASK-TEMPLATE` `wiki/markdown/md-research-control-design-narrow-theorem-task-template.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NEGATIVE-RESULT-INVENTORY-V15` `wiki/markdown/md-research-control-design-negative-result-inventory-v15.md`
@@ -892,6 +893,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1` `research_control/design/matter_coupling_dependency_dag_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DERIVATION-MORATORIUM` `research_control/design/matter_coupling_derivation_moratorium.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `research_control/design/matter_coupling_pre_adoption_checklist.md`
+- `MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1` `research_control/design/metric_use_ledger_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MINIMUM-PHYSICS-PAYLOAD-SCHEMA-V1` `research_control/design/minimum_physics_payload_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NARROW-THEOREM-TASK-TEMPLATE` `research_control/design/narrow_theorem_task_template.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NEGATIVE-RESULT-INVENTORY-V15` `research_control/design/negative_result_inventory_v15.md`

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-005` and `handoff-0637`.
+`RT-20260706-006` and `handoff-0638`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-005` |
-| Latest handoff ID | `handoff-0637` |
-| Current status | `v17_p4_t05_detector_route_selected_metric_use_ledger_no_adoption` |
+| Active task ID | `RT-20260706-006` |
+| Latest handoff ID | `handoff-0638` |
+| Current status | `v17_p5_t01_metric_use_ledger_schema_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p4 t05 detector route selector to p5 t01 no adoption |
+| Current route family | v17 p5 t01 schema to p5 t02 population no physics delta |
 | Target derivation milestone | `matter_coupling` |
 | Current burden | `matter_coupling`; status: accepted_as_scoped_evidence_precondition |
-| Required next authority | P5-T01 metric-use ledger schema after detector-replacement route selection with no adoption or physics promotion |
-| Next recommended action | Run one bounded v17 P5-T01 metric-use ledger schema packet through an active project-control role overlay. |
+| Required next authority | P5-T02 metric-use ledger initial population after schema and header creation with no physics promotion |
+| Next recommended action | Run one bounded v17 P5-T02 metric-use ledger initial population packet for existing high-risk matter-route artifacts. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-005/00_TASK.yaml`.
-- Active task objective: Classify the route after SourceDetectorReplacementCandidate_EStar_v1 construction, source-purity audit, and Refuter stress, then select exactly one next route while preserving all hard blocks.
-- Latest handoff path: `research_control/handoffs/handoff-0637.yaml`.
-- Latest handoff summary: RT-20260706-005 completed one bounded v17 P4-T05 detector route selector. It selected metric_use_ledger_integration_packet after SourceDetectorReplacementCandidate_EStar_v1 survived construction audit and stress, and did not adopt detector semantics or promote physics claims.
-- Current route family: v17 p4 t05 detector route selector to p5 t01 no adoption.
-- Next recommended action: Run one bounded v17 P5-T01 metric-use ledger schema packet through an active project-control role overlay.
+- Active task path: `research_control/tasks/RT-20260706-006/00_TASK.yaml`.
+- Active task objective: Create the v17 P5-T01 metric-use ledger schema and METRIC_USE_LEDGER registry header while preserving no physics delta.
+- Latest handoff path: `research_control/handoffs/handoff-0638.yaml`.
+- Latest handoff summary: RT-20260706-006 completed one bounded v17 P5-T01 metric-use ledger schema packet. It created metric_use_ledger_schema_v1.md and METRIC_USE_LEDGER.csv with the required header only and did not populate ledger rows or promote physics claims.
+- Current route family: v17 p5 t01 schema to p5 t02 population no physics delta.
+- Next recommended action: Run one bounded v17 P5-T02 metric-use ledger initial population packet for existing high-risk matter-route artifacts.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -254,7 +254,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P5-T01 metric-use ledger schema packet through an active project-control role overlay.
+Run one bounded v17 P5-T02 metric-use ledger initial population packet for existing high-risk matter-route artifacts.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -282,22 +282,22 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-005`;
-- latest handoff: `handoff-0637`;
-- current status: `v17_p4_t05_detector_route_selected_metric_use_ledger_no_adoption`;
+- active task: `RT-20260706-006`;
+- latest handoff: `handoff-0638`;
+- current status: `v17_p5_t01_metric_use_ledger_schema_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `global_research_control_validation`: PENDING;
-- latest handoff validation `task_local_validator`: PENDING;
+- latest handoff validation `task_local_validator`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0637.yaml`
-- `research_control/tasks/RT-20260706-005/00_TASK.yaml`
+- `research_control/handoffs/handoff-0638.yaml`
+- `research_control/tasks/RT-20260706-006/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -313,7 +313,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0637*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0638*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

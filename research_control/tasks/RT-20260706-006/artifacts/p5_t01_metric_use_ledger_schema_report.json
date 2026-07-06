@@ -1,0 +1,40 @@
+{
+  "allowed_use_categories": [
+    "scoped_source_extension_context",
+    "source_side_relation_input_candidate",
+    "finite_local_witness_context",
+    "blocked_physical_metric_use",
+    "forbidden_import_detected"
+  ],
+  "errors": [],
+  "forbidden_metric_uses": [
+    "physical_lorentzian_metric",
+    "proper_time_normalization",
+    "detector_calibration",
+    "stress_energy_semantics",
+    "matter_action_premise",
+    "Einstein_equation_premise",
+    "benchmark_fit_premise"
+  ],
+  "physics_delta_allowed": false,
+  "population_deferred_to": "P5-T02",
+  "registry_data_rows": 0,
+  "registry_path": "registries/METRIC_USE_LEDGER.csv",
+  "required_columns": [
+    "use_id",
+    "task_id",
+    "artifact_path",
+    "object_used",
+    "use_category",
+    "declared_scope",
+    "allowed_use",
+    "forbidden_interpretations",
+    "no_target_guard_path",
+    "audit_status",
+    "stress_status",
+    "created_at",
+    "notes"
+  ],
+  "schema_path": "research_control/design/metric_use_ledger_schema_v1.md",
+  "status": "PASS"
+}

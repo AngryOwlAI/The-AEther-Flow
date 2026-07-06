@@ -1,0 +1,190 @@
+completion_id: "AJC-AJ-RT-20260706-006-001"
+job_id: "AJ-RT-20260706-006-001"
+task_id: "RT-20260706-006"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-06T06:51:56Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P5-T01"
+  plan_phase_id: "P5"
+  implemented_task_scope: "Created the metric-use ledger schema and METRIC_USE_LEDGER registry header with no ledger population and no physics delta."
+  completed_v17_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P3-T04"
+    - "P3-T05"
+    - "P4-T01"
+    - "P4-T02"
+    - "P4-T03"
+    - "P4-T04"
+    - "P4-T05"
+    - "P5-T01"
+  downstream_tasks_not_implemented:
+    - "P5-T02 metric-use ledger initial population"
+    - "P5-T03 metric-use linter and tests"
+    - "P5-T04 current-frontier and compact-frontier metric-use integration"
+    - "P6 EqSrc RetainH GenH revisit"
+    - "P7 proof-normal-form layer"
+    - "P8 mechanized formal fragments"
+    - "P9 proof-state dashboard"
+    - "P10 generated task index"
+    - "P11 CI and reproducibility"
+    - "P12 AI research-agent system evaluation"
+    - "P13 V17 integration final validation and ordinary continuation handoff"
+  all_applicable_plan_tasks_proven: false
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+output_paths:
+  - "research_control/design/metric_use_ledger_schema_v1.md"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - "research_control/tasks/RT-20260706-006/artifacts/validate_p5_t01_metric_use_ledger_schema.py"
+  - "research_control/tasks/RT-20260706-006/artifacts/p5_t01_metric_use_ledger_schema_report.json"
+  - "research_control/tasks/RT-20260706-006/artifacts/metric_use_ledger_schema_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260706-006/00_TASK.yaml"
+  - "research_control/tasks/RT-20260706-006/DDR-20260706-006.md"
+  - "research_control/tasks/RT-20260706-006/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-006/jobs/AJ-RT-20260706-006-001.yaml"
+  - "research_control/tasks/RT-20260706-006/jobs/completions/AJC-AJ-RT-20260706-006-001.yaml"
+  - "research_control/tasks/RT-20260706-006/roles/project-control-maintainer@0.2.0--RT-20260706-006.yaml"
+  - "research_control/handoffs/handoff-0638.yaml"
+  - "research_control/handoffs/handoff-0638.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=665 relationship_row_count=3413 semantic_row_count=665 vault_row_count=665"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260706-005 latest_handoff=handoff-0637 boundary=director_decision_required"
+  - ".venv/bin/python research_control/tasks/RT-20260706-006/artifacts/validate_p5_t01_metric_use_ledger_schema.py | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 665
+    relationship_row_count: 3413
+    semantic_row_count: 665
+    vault_row_count: 665
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"v17 P5 T01 metric use ledger schema\" --limit 10 --json"
+      query_type: "search"
+      query_text: "v17 P5 T01 metric use ledger schema"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260706-005-DETECTOR-REPLACEMENT-ROUTE-SELECTOR"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260706-005-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-ROUTE-SELECTOR"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      retrieval_evidence_object_ids:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "3f85c47544ce4d25faa157f181b522251a17675ccc4d227d93150a93556125cd"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260706-005-DETECTOR-REPLACEMENT-ROUTE-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260706-005/artifacts/detector_replacement_route_selector_v1.md"
+      source_hash: "d3e14ffde1167ec5adf135f77f1232eb609a9747134ebaa39d12653cd92d544d"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260706-005-PARENT-FUSION-NOTES-DETECTOR-REPLACEMENT-ROUTE-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260706-005/artifacts/parent_fusion_notes_detector_replacement_route_selector.md"
+      source_hash: "29415b3c2ba103e6851279c27a667c769493197d8aa4f01f33aa0573b32bda43"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "query_memory status PASS"
+      - "targeted memory lookup and search returned v17 plan current frontier and P4-T05 route-selector evidence"
+      - "continue_research.py resolved handoff-0637 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Metric Use Ledger Schema v1 created"
+      - "METRIC_USE_LEDGER.csv created with required header and zero data rows"
+      - "task-local validator PASS"
+      - "P5-T02 route selected"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "post-write validators run after this completion receipt is created"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "renderer checks run after this completion receipt is created"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap and validate-only run after this completion receipt is created"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "changed-file claim-language gate run after this completion receipt is created"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  schema_packet_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not applicable to P5-T01 schema packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+verdict: "v17_p5_t01_metric_use_ledger_schema_completed_no_physics_delta"
+coherent_resolution_summary: "P5-T01 created the metric-use ledger schema and empty registry header required before g_eff and metric-adjacent matter-route references are populated into the ledger. It does not promote g_eff or any target metric semantics."
+next_recommendation: "Run one bounded v17 P5-T02 metric-use ledger initial population packet."
+schema_result:
+  schema_path: "research_control/design/metric_use_ledger_schema_v1.md"
+  schema_object_id: "MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1"
+  schema_source_hash: "0728604c2269878ba579e750cfe110dcd58aaaabde6f1128df18771c02ed7112"
+  registry_path: "registries/METRIC_USE_LEDGER.csv"
+  registry_hash: "9bcb2ebf66783033d5e3aff1d1dfd5bc919023ea03ea73accb09d274385daf8a"
+  validator_report_path: "research_control/tasks/RT-20260706-006/artifacts/p5_t01_metric_use_ledger_schema_report.json"
+  validator_status: "PASS"
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  ledger_row_updated: false
+project_improvement_signals: []
