@@ -18,6 +18,8 @@ source_basis:
   - "research_control/design/documentation_curator_publication_process.md"
   - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
   - "research_control/design/epistemic_category_glossary.md"
+  - "markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md"
+  - "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"
 authority_boundaries:
   - "Generated GitHub Markdown and HTML are noncanonical derivatives."
   - "The page does not promote physics claims, role authority, routing behavior, or generated-output authority."
@@ -28,6 +30,7 @@ acceptance_criteria:
   - "Opens with a useful project framing before metadata."
   - "Does not use the old universal heading sequence."
   - "Contains visible source grounding and a non-authority boundary."
+  - "Links the proof-state dashboard as a compact reader-facing derivative without changing claim status."
   - "Summarizes high-risk public status with positive-first status-card wording for scoped M_src, scoped g_eff, and scoped matter-sector evidence/preconditions."
   - "HTML is standalone, readable on mobile, and screenshot verified."
 forbidden_patterns:

@@ -102,6 +102,16 @@ do not promote physics claims and they do not override the Distance-to-GR
 ledger, registered science sources, task completions, Gate Chair records, or
 claim-boundary registry rows.
 
+For a compact reader-facing view of the same status layer, use the
+[`Proof-State Dashboard`](github-facing/proof-state-dashboard-explainer.md)
+or the paired
+[`Proof-State Dashboard HTML`](html/proof-state-dashboard-explainer.html).
+The dashboard is a generated noncanonical derivative for orientation only. It
+does not change the Distance-to-GR ledger, certify a proof, adopt a source law,
+derive matter coupling, derive Einstein equations, promote benchmark status,
+issue a Gate Chair verdict, complete the derivation, or make generated public
+outputs authoritative.
+
 Current public-safe reading:
 
 - The `Æther` / `Æther-flow` ontology is a proposed research ontology and
@@ -202,6 +212,7 @@ validator behavior, and registry authority.
 | Page | Reader job | GitHub Markdown | HTML |
 | --- | --- | --- | --- |
 | Project Overview | Front-door orientation to the two project missions and first reading path. | [`project-overview-explainer.md`](github-facing/project-overview-explainer.md) | [`project-overview-explainer.html`](html/project-overview-explainer.html) |
+| Proof-State Dashboard | Compact public status dashboard for positive scoped status, blocked overread, and next lawful route. | [`proof-state-dashboard-explainer.md`](github-facing/proof-state-dashboard-explainer.md) | [`proof-state-dashboard-explainer.html`](html/proof-state-dashboard-explainer.html) |
 | Source Authority And Generated Derivatives | Boundary map for source authority, generated derivatives, registries, and local retrieval layers. | [`source-authority-explainer.md`](github-facing/source-authority-explainer.md) | [`source-authority-explainer.html`](html/source-authority-explainer.html) |
 
 ### Physics frame

@@ -28,6 +28,7 @@ from the publication brief and source spec.
 | What is the project? | `README.md` | Physics and AI-agent mission sections. |
 | What can define project state? | `AGENTS.md` | Authority hierarchy and generated-output boundaries. |
 | What is the current governed workflow? | `research_control/README.md` | Task, DDR, AgentJob, role, completion, and validator records. |
+| What is the compact public proof-state? | [`Proof-State Dashboard`](proof-state-dashboard-explainer.md) | Reader-facing status cards for positive scoped status, blocked overread, and next lawful route. |
 | How are public explainers accepted? | `research_control/design/documentation_curator_publication_process.md` | Publication briefs, source specs, screenshots, and review artifacts. |
 
 ## Page Families
@@ -62,6 +63,16 @@ These are documentation contracts for public status layers, not physics proof
 and not replacements for the Distance-to-GR ledger or registered science
 sources.
 
+For a compact reader-facing dashboard of that same status layer, use
+[`Proof-State Dashboard`](proof-state-dashboard-explainer.md) or its paired
+HTML derivative at
+[`../html/proof-state-dashboard-explainer.html`](../html/proof-state-dashboard-explainer.html).
+The dashboard is a generated noncanonical derivative for orientation only. It
+does not change the Distance-to-GR ledger, certify a proof, adopt a source law,
+derive matter coupling, derive Einstein equations, promote benchmark status,
+issue a Gate Chair verdict, complete the derivation, or make generated public
+outputs authoritative.
+
 The public-safe status is: GR is not derived from the source substrate;
 AEther-flow is a proposed research ontology or explanatory frame, not an
 established physical ontology; `M_src` has positive status as a scoped
@@ -92,9 +103,11 @@ Compact reader check:
    derivatives, or agent behavior.
 3. Read `research_control/README.md` if the question touches controlled task
    state, routing, completion evidence, or validators.
-4. Read the relevant publication brief and source spec before treating a public
+4. Use the Proof-State Dashboard for a compact orientation to positive scoped
+   status, blocked overread, and next lawful route.
+5. Read the relevant publication brief and source spec before treating a public
    explainer as a useful summary.
-5. Use generated GitHub-facing Markdown and HTML as navigation back to sources,
+6. Use generated GitHub-facing Markdown and HTML as navigation back to sources,
    not as independent evidence.
 
 ## Reader Scope
@@ -114,9 +127,9 @@ permission, or make generated documentation authoritative.
 
 This page is a generated noncanonical reader surface. It orients readers to the
 physics research lane, the research-agent workflow lane, the source-authority
-spine, page-family routes, and first-reading paths without creating physics
-claims, role authority, routing behavior, validator authority, write
-permissions, or generated-output authority.
+spine, the proof-state dashboard route, page-family routes, and first-reading
+paths without creating physics claims, role authority, routing behavior,
+validator authority, write permissions, or generated-output authority.
 
 ## Source Materials
 
@@ -140,6 +153,12 @@ permissions, or generated-output authority.
   `research_control/design/epistemic_category_glossary.md`
   [Epistemic category glossary for interpretation, model, evidence, adoption,
   promotion, validator receipt, publication, and authority categories.]
+- AEther-Flow Project. (2026).
+  `markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md`
+  [Proof-state dashboard source specification.]
+- AEther-Flow Project. (2026).
+  `markdown/publication-briefs/proof-state-dashboard.publication-brief.md`
+  [Proof-state dashboard publication brief.]
 
 ## Safe Operating Summary
 

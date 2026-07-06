@@ -17,6 +17,8 @@ source_materials:
   - "research_control/design/documentation_curator_publication_process.md"
   - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
   - "research_control/design/epistemic_category_glossary.md"
+  - "markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md"
+  - "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"
 claim_boundary: "Human-only publication explainer for Project Overview. It orients readers to the physics research lane, the research-agent workflow lane, the source-authority spine, and first-reading routes without creating physics claims, role authority, routing behavior, validator authority, write permissions, or generated-output authority."
 human_visual_only: true
 standalone_html: true
@@ -59,6 +61,13 @@ placement without changing project behavior or physics claim status.
   distinctions separating interpretation, model, benchmark compatibility,
   derivation, evidence/precondition, adoption, promotion, validator receipt,
   publication surface, and authority source.
+- `markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md`:
+  source-backed dashboard specification for compact reader-facing proof-state
+  orientation across positive scoped status, blocked overread, and next lawful
+  route.
+- `markdown/publication-briefs/proof-state-dashboard.publication-brief.md`:
+  publication-process contract for the proof-state dashboard derivatives and
+  their non-authoritative reader scope.
 
 ## Required Reader Outcome
 
@@ -68,7 +77,9 @@ substrate derivation burden, and a governed research-agent workflow that makes
 theoretical and documentation work auditable. The reader should know that the
 overview page is a route map, not authority, and should be able to choose the
 next page family or canonical source lane before summarizing claims or changing
-files.
+files. The reader should also be able to find the proof-state dashboard as a
+compact noncanonical orientation surface, then return to the named sources and
+registries for authority.
 
 ## Reader Scope Footer Binding
 
@@ -85,11 +96,11 @@ permission, or make generated documentation authoritative.
 
 Use a compact first-entry route map plus a source matrix. The route map must be
 specific to AEther-Flow's two missions, source authority, research control,
-and publication pages; it must not become a generic validation or
-source-to-output diagram. The HTML derivative may render the route map as local
-CSS cards and connectors. The GitHub Markdown derivative should keep the map
-as a native Markdown table/list. Do not use browser-side Mermaid, remote
-assets, or external runtime packages.
+the proof-state dashboard, and publication pages; it must not become a generic
+validation or source-to-output diagram. The HTML derivative may render the
+route map as local CSS cards and connectors. The GitHub Markdown derivative
+should keep the map as a native Markdown table/list. Do not use browser-side
+Mermaid, remote assets, or external runtime packages.
 
 ## Acceptance Criteria
 
@@ -107,6 +118,8 @@ assets, or external runtime packages.
   wording for scoped `M_src`, scoped `g_eff`, and matter-sector
   evidence/preconditions: positive status, exact scope, allowed use, then
   blocked overread.
+- Links the proof-state dashboard as a reader-facing noncanonical derivative
+  and preserves that it does not alter claim status or source authority.
 - Preserves generated noncanonical status and source authority boundaries.
 - Does not change validators, commands, schemas, role contracts, skill
   contracts, routing behavior, checkpoint behavior, generated-output authority,

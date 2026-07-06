@@ -1,0 +1,56 @@
+task_id: "RT-20260706-023"
+task_type: "proof_state_dashboard_front_door_integration"
+status: "completed"
+created_at: "2026-07-06T14:50:47Z"
+updated_at: "2026-07-06T14:50:47Z"
+closed_at: "2026-07-06T14:50:47Z"
+parent_task_id: "RT-20260706-022"
+parent_handoff_id: "handoff-0654"
+decision_id: "DDR-20260706-023"
+job_id: "AJ-RT-20260706-023-001"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260706-023"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-05-all-human-gates"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T03"
+  plan_task_name: "README and front-door integration"
+objective: "Link the proof-state dashboard from the README and front-door overview surfaces while preserving reader-facing non-authoritative derivative boundaries and changing no physics claim status."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Link proof-state dashboard from front-door docs without changing claim status."
+closure_status: "v17_p9_t03_proof_state_dashboard_front_door_integrated_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P9-T03 README and front-door overview links to the proof-state dashboard as reader-facing non-authoritative derivatives."
+  proof_authority_created: false
+  source_law_adopted: false
+  metricdata_e_adopted: false
+  g_eff_scope_expanded: false
+  detector_semantics_adopted: false
+  matter_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  generated_output_authority_created: false
+output_artifacts:
+  - "README.md"
+  - "markdown/html-explainer-specs/project-overview-explainer.md"
+  - "markdown/publication-briefs/project-overview.publication-brief.md"
+  - "github-facing/project-overview-explainer.md"
+  - "html/project-overview-explainer.html"
+  - "research_control/tasks/RT-20260706-023/artifacts/screenshots/project-overview-p9-t03-desktop.png"
+  - "research_control/tasks/RT-20260706-023/artifacts/screenshots/project-overview-p9-t03-mobile.png"
+  - "research_control/tasks/RT-20260706-023/artifacts/proof_state_dashboard_front_door_integration_review.md"
+next_recommended_action: "Run one bounded v17 P9-T04 proof-state dashboard red-team review packet."
+notes: "RT-20260706-023 completes v17 P9-T03 by adding source-backed dashboard links to README and project overview surfaces while preserving no proof authority no source-law adoption no matter-coupling derivation no Einstein-equation derivation no benchmark promotion no Gate Chair verdict and no completed derivation."
+documentation_impact_id: "DI-RT-20260706-023-001"

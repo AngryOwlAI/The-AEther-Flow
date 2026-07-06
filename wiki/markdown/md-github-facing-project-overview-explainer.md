@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `github_facing_documentation`
 - Authority status: `generated_noncanonical`
 - Owner skill: `documentation-curator`
-- Source hash: `6b50f4b562bf94f586d13c7022712177207c94c21f84bce6ecf9ffd318dd8bfa`
+- Source hash: `c5c26cede398db4417ba96d71c940c432ad553d970e46d8b2dc1fbd84713b656`
 
 ## Related Objects
 
@@ -20,4 +20,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-06T03:21:11Z`
+- Last validated at: `2026-07-06T15:03:39Z`
