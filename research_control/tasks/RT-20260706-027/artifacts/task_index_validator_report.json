@@ -1,0 +1,2178 @@
+{
+  "checked_failure_modes": [
+    "required_header_equality",
+    "generated_output_freshness",
+    "csv_rows_match_tracked_renderer",
+    "source_task_directory_existence",
+    "completion_path_existence_for_completed_jobs",
+    "task_status_compatibility",
+    "support_only_physics_delta_false",
+    "forbidden_task_index_overread_language",
+    "historical_metadata_issues_reported_not_invented"
+  ],
+  "checks": {
+    "csv_rows_match_renderer": true,
+    "freshness": {
+      "csv": {
+        "actual_hash": "98af7292660c2f227c2e4a4c3604a1081d15d88d5d6a49fd74615bd43a89b685",
+        "expected_hash": "98af7292660c2f227c2e4a4c3604a1081d15d88d5d6a49fd74615bd43a89b685",
+        "fresh": true,
+        "path": "research_control/tasks/TASK_INDEX.csv",
+        "status": "fresh"
+      },
+      "markdown": {
+        "actual_hash": "f602105aef9595453bf507b1411ac83519067cb5028f046515d388c2d92c6db6",
+        "expected_hash": "f602105aef9595453bf507b1411ac83519067cb5028f046515d388c2d92c6db6",
+        "fresh": true,
+        "path": "research_control/tasks/TASK_INDEX.md",
+        "status": "fresh"
+      },
+      "wiki_markdown": {
+        "actual_hash": "f602105aef9595453bf507b1411ac83519067cb5028f046515d388c2d92c6db6",
+        "expected_hash": "f602105aef9595453bf507b1411ac83519067cb5028f046515d388c2d92c6db6",
+        "fresh": true,
+        "path": "wiki/indexes/research_control_task_index.md",
+        "status": "fresh"
+      }
+    },
+    "header": {
+      "actual": [
+        "task_id",
+        "parent_task_id",
+        "created_at",
+        "closed_at",
+        "task_type",
+        "status",
+        "target_derivation_milestone",
+        "milestone_burden",
+        "role_family",
+        "physics_delta",
+        "ledger_rows_changed",
+        "artifact_count",
+        "next_recommended_action",
+        "validation_status",
+        "completion_path"
+      ],
+      "expected": [
+        "task_id",
+        "parent_task_id",
+        "created_at",
+        "closed_at",
+        "task_type",
+        "status",
+        "target_derivation_milestone",
+        "milestone_burden",
+        "role_family",
+        "physics_delta",
+        "ledger_rows_changed",
+        "artifact_count",
+        "next_recommended_action",
+        "validation_status",
+        "completion_path"
+      ],
+      "matches": true
+    }
+  },
+  "errors": [],
+  "generated_at": "2026-07-06T17:45:12.121552Z",
+  "hard_fail_count": 0,
+  "no_physics_delta": true,
+  "operational_receipt_only": true,
+  "output_hashes": {
+    "csv": "98af7292660c2f227c2e4a4c3604a1081d15d88d5d6a49fd74615bd43a89b685",
+    "markdown": "f602105aef9595453bf507b1411ac83519067cb5028f046515d388c2d92c6db6",
+    "wiki_markdown": "f602105aef9595453bf507b1411ac83519067cb5028f046515d388c2d92c6db6"
+  },
+  "physics_proof_authority": false,
+  "renderer_issue_count": 297,
+  "renderer_issue_kind_counts": {
+    "missing_field": 293,
+    "missing_source": 4
+  },
+  "repo_root": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow",
+  "row_count": 799,
+  "schema_id": "research_control_task_index_validation_report_v1",
+  "source_fingerprint": "31d05f475a73afa13e5d0206849f496db86f0a0a0fecb70a3c5d00def329a690",
+  "status": "PASS",
+  "task_index_authority": false,
+  "validator_name": "scripts/research_control/validate_task_index.py",
+  "validator_version": "v1",
+  "warning_count": 297,
+  "warnings": [
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-008/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-008"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-009/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-009"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-011/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-011"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-012/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-012"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-013/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-013"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-014/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-014"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-015/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-015"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-016/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-016"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-017/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-017"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-018/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-018"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-019/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-019"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-020/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-020"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-021/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-021"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-022/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-022"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260608-023/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260608-023"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260610-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260610-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260610-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260610-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260610-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260610-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260610-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260610-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260610-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260610-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260610-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260610-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260610-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260610-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260610-008/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260610-008"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260610-009/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260610-009"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260610-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260610-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260611-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260611-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260611-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260611-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260611-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260611-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260611-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260611-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260611-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260611-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260611-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260611-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260611-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260611-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260611-008/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260611-008"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260611-009/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260611-009"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260611-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260611-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260611-011/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260611-011"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260612-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260612-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260612-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260612-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260612-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260612-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260612-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260612-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260612-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260612-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260612-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260612-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260612-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260612-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-008/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-008"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-009/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-009"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-011/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-011"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-012/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-012"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-013/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-013"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-014/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-014"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-015/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-015"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-016/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-016"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-017/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-017"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-018/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-018"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-019/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-019"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-020/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-020"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-021/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-021"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-022/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-022"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-023/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-023"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-024/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-024"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-025/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-025"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-026/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-026"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260613-027/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260613-027"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-008/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-008"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-009/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-009"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-011/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-011"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-012/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-012"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-013/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-013"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-014/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-014"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-015/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-015"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-016/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-016"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-017/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-017"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-018/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-018"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-019/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-019"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-020/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-020"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-021/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-021"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-022/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-022"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-023/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-023"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-024/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-024"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-025/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-025"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-026/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-026"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-027/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-027"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-028/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-028"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-029/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-029"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-030/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-030"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-031/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-031"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-032/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-032"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-033/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-033"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-034/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-034"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-035/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-035"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-036/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-036"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-037/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-037"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-038/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-038"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-039/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-039"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-040/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-040"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-041/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-041"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-042/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-042"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-043/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-043"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-044/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-044"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-045/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-045"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-046/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-046"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-047/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-047"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-048/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-048"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-049/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-049"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-050/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-050"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-051/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-051"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-102/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-102"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-104/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-104"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-105/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-105"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-113/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-113"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-115/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-115"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-116/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-116"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-120/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-120"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-121/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-121"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-122/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-122"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-133/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-133"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-153/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-153"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-185/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-185"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-270/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-270"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-271/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-271"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-272/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-272"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-273/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-273"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-274/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-274"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-275/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-275"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-276/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-276"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-277/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-277"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-278/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-278"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-279/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-279"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-280/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-280"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-281/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-281"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-282/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-282"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-283/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-283"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-284/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-284"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-285/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-285"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-286/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-286"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-287/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-287"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-288/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-288"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-289/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-289"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260614-290/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260614-290"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260616-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260616-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260616-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260616-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260616-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260616-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260617-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260617-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260617-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260617-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260617-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260617-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260617-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260617-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260617-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260617-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260617-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260617-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260617-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260617-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260617-008/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260617-008"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260617-009/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260617-009"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260617-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260617-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-008/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-008"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-009/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-009"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-011/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-011"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-012/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-012"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-013/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-013"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-014/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-014"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-015/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-015"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-016/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-016"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-017/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-017"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-018/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-018"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-019/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-019"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-020/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-020"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-021/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-021"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260618-022/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260618-022"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-008/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-008"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-009/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-009"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-011/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-011"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-012/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-012"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-013/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-013"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-014/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-014"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-015/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-015"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-016/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-016"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-017/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-017"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260619-018/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260619-018"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260620-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260620-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260620-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260620-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260620-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260620-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260620-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260620-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260620-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260620-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260620-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260620-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260620-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260620-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260620-008/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260620-008"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260620-009/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260620-009"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260620-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260620-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260620-011/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260620-011"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260621-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260621-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260621-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260621-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260621-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260621-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260621-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260621-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260621-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260621-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260621-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260621-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260621-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260621-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260621-008/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260621-008"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260621-009/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260621-009"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260621-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260621-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-007/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-007"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-008/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-008"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-009/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-009"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-011/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-011"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-012/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-012"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260622-013/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260622-013"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260627-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260627-001"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260627-002/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260627-002"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260627-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260627-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-001/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-001"
+    },
+    {
+      "code": "missing_source",
+      "message": "missing structured YAML source",
+      "path": "research_control/tasks/RT-20260629-010/00_TASK.yaml",
+      "severity": "warning"
+    },
+    {
+      "code": "missing_field",
+      "message": "created_at is missing",
+      "path": "research_control/tasks/RT-20260629-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "task_type is missing",
+      "path": "research_control/tasks/RT-20260629-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-010"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-010/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-010"
+    },
+    {
+      "code": "missing_source",
+      "message": "missing structured YAML source",
+      "path": "research_control/tasks/RT-20260629-011/00_TASK.yaml",
+      "severity": "warning"
+    },
+    {
+      "code": "missing_field",
+      "message": "created_at is missing",
+      "path": "research_control/tasks/RT-20260629-011/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-011"
+    },
+    {
+      "code": "missing_field",
+      "message": "task_type is missing",
+      "path": "research_control/tasks/RT-20260629-011/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-011"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-011/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-011"
+    },
+    {
+      "code": "missing_source",
+      "message": "missing structured YAML source",
+      "path": "research_control/tasks/RT-20260629-012/00_TASK.yaml",
+      "severity": "warning"
+    },
+    {
+      "code": "missing_field",
+      "message": "created_at is missing",
+      "path": "research_control/tasks/RT-20260629-012/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-012"
+    },
+    {
+      "code": "missing_field",
+      "message": "task_type is missing",
+      "path": "research_control/tasks/RT-20260629-012/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-012"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-012/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-012"
+    },
+    {
+      "code": "missing_source",
+      "message": "missing structured YAML source",
+      "path": "research_control/tasks/RT-20260629-028/00_TASK.yaml",
+      "severity": "warning"
+    },
+    {
+      "code": "missing_field",
+      "message": "created_at is missing",
+      "path": "research_control/tasks/RT-20260629-028/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-028"
+    },
+    {
+      "code": "missing_field",
+      "message": "task_type is missing",
+      "path": "research_control/tasks/RT-20260629-028/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-028"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-028/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-028"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-029/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-029"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-030/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-030"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-031/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-031"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-032/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-032"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-033/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-033"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-034/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-034"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-035/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-035"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-036/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-036"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-037/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-037"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-038/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-038"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-039/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-039"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260629-040/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260629-040"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260630-027/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260630-027"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260630-028/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260630-028"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260630-030/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260630-030"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260630-031/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260630-031"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260630-032/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260630-032"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260701-003/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260701-003"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260701-004/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260701-004"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260701-005/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260701-005"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260701-006/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260701-006"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260702-033/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260702-033"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260702-034/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260702-034"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260702-035/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260702-035"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260702-037/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260702-037"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260702-053/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260702-053"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260702-054/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260702-054"
+    },
+    {
+      "code": "missing_field",
+      "message": "milestone_burden is missing",
+      "path": "research_control/tasks/RT-20260702-055/00_TASK.yaml",
+      "severity": "warning",
+      "task_id": "RT-20260702-055"
+    }
+  ]
+}

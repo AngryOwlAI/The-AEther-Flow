@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-026` and `handoff-0658`.
+`RT-20260706-027` and `handoff-0659`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-026` |
-| Latest handoff ID | `handoff-0658` |
-| Current status | `v17_p10_t02_task_index_generator_completed_no_physics_delta` |
+| Active task ID | `RT-20260706-027` |
+| Latest handoff ID | `handoff-0659` |
+| Current status | `v17_p10_t03_task_index_validator_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p10 t02 task index generator completed no physics delta |
+| Current route family | v17 p10 t03 task index validator completed no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P10-T03 task-index validator packet through an active validator role overlay. |
-| Required next authority | P10-T03 may validate generated task-index outputs against tracked task records and completions without changing physics claim status. |
-| Next recommended action | Run one bounded v17 P10-T03 task-index validator packet through an active validator role overlay. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P10-T04 task-index memory and folder-documentation integration packet through an active memory/documentation curator-compatible role overlay. |
+| Required next authority | P10-T04 may integrate the task index into memory retrieval and folder documentation without changing physics claim status. |
+| Next recommended action | Run one bounded v17 P10-T04 task-index memory and folder-documentation integration packet through an active memory/documentation curator-compatible role overlay. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-026/00_TASK.yaml`.
+- Active task path: `research_control/tasks/RT-20260706-027/00_TASK.yaml`.
 - Active task objective: not recorded.
-- Latest handoff path: `research_control/handoffs/handoff-0658.yaml`.
-- Latest handoff summary: RT-20260706-026 completed one bounded v17 P10-T02 task-index generator packet. It created scripts/research_control/render_task_index.py and generated research_control/tasks/TASK_INDEX.csv research_control/tasks/TASK_INDEX.md and wiki/indexes/research_control_task_index.md from tracked task records. It reports missing or malformed historical task metadata but does not create the P10-T03 validator memory integration folder-map integration ledger changes physics claims Gate Chair authority benchmark status ontology authority or Distance-to-GR delta.
-- Current route family: v17 p10 t02 task index generator completed no physics delta.
-- Next recommended action: Run one bounded v17 P10-T03 task-index validator packet through an active validator role overlay.
+- Latest handoff path: `research_control/handoffs/handoff-0659.yaml`.
+- Latest handoff summary: RT-20260706-027 completed one bounded v17 P10-T03 task-index validator packet. It created scripts/research_control/validate_task_index.py and tests/test_task_index_renderer.py, wired task_index_validation into scripts/research_control/run_full_research_control_validation.py, and verified generated task-index outputs against tracked task records and completions. The validator reports historical missing metadata as warnings and does not create memory integration folder-doc integration ledger changes physics claims Gate Chair authority benchmark status ontology authority or Distance-to-GR delta.
+- Current route family: v17 p10 t03 task index validator completed no physics delta.
+- Next recommended action: Run one bounded v17 P10-T04 task-index memory and folder-documentation integration packet through an active memory/documentation curator-compatible role overlay.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P10-T03 task-index validator packet through an active validator role overlay.
+Run one bounded v17 P10-T04 task-index memory and folder-documentation integration packet through an active memory/documentation curator-compatible role overlay.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,9 +301,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-026`;
-- latest handoff: `handoff-0658`;
-- current status: `v17_p10_t02_task_index_generator_completed_no_physics_delta`;
+- active task: `RT-20260706-027`;
+- latest handoff: `handoff-0659`;
+- current status: `v17_p10_t03_task_index_validator_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -313,8 +313,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0658.yaml`
-- `research_control/tasks/RT-20260706-026/00_TASK.yaml`
+- `research_control/handoffs/handoff-0659.yaml`
+- `research_control/tasks/RT-20260706-027/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -330,7 +330,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0658*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0659*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

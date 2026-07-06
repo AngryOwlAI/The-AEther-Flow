@@ -71,6 +71,12 @@ def base_command_plan(include_smoke_tests: bool = False) -> list[ValidationComma
             authority_level="required-render-check",
         ),
         ValidationCommand(
+            label="task_index_validation",
+            command=(py, "scripts/research_control/validate_task_index.py", "--json"),
+            purpose="Validate generated task-index outputs against tracked task records and completions.",
+            authority_level="required-gate",
+        ),
+        ValidationCommand(
             label="claim_graph_validation",
             command=(py, "scripts/research_control/validate_claim_graph_v1.py", "--json"),
             purpose="Validate claim_graph_v1 against P12-T03 non-promotion and derivative-authority guard rules.",
@@ -203,6 +209,7 @@ def coverage_map(commands: list[dict[str, Any]]) -> dict[str, bool]:
             "compact_current_frontier_check",
             "dependency_graph_check",
         }.issubset(labels),
+        "task_index_validation": "task_index_validation" in labels,
         "claim_graph_validation": "claim_graph_validation" in labels,
         "route_signature_extraction_if_implemented": "route_signature_extraction" in labels,
         "no_bare_accepted_high_risk_rows": "claim_language_changed_lint" in labels,

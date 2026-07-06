@@ -33,6 +33,7 @@ class LocalCiEquivalentValidationTests(unittest.TestCase):
         self.assertIn("current_frontier_check", labels)
         self.assertIn("compact_current_frontier_check", labels)
         self.assertIn("dependency_graph_check", labels)
+        self.assertIn("task_index_validation", labels)
         self.assertIn("claim_graph_validation", labels)
         self.assertIn("claim_language_changed_lint", labels)
         self.assertIn("documentation_impact_validation", labels)

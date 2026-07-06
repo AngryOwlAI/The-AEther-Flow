@@ -1,0 +1,270 @@
+completion_id: "AJC-AJ-RT-20260706-027-001"
+job_id: "AJ-RT-20260706-027-001"
+task_id: "RT-20260706-027"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-06T17:29:46Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P10-T03"
+  plan_phase_id: "P10"
+  implemented_task_scope: "Created a task-index validator, focused tests, and full local validation runner integration for generated task-index output checks."
+  downstream_tasks_not_implemented:
+    - "P10-T04 task-index memory and folder-doc integration"
+    - "P11 CI and reproducibility tasks"
+    - "source-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+  phase_p10_completed: false
+output_paths:
+  - "scripts/research_control/validate_task_index.py"
+  - "tests/test_task_index_renderer.py"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "tests/test_run_full_research_control_validation.py"
+  - "research_control/tasks/RT-20260706-027/artifacts/task_index_validator_report.json"
+  - "research_control/tasks/RT-20260706-027/artifacts/task_index_validator_receipt.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/research_control_task_index.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260706-027/00_TASK.yaml"
+  - "research_control/tasks/RT-20260706-027/DDR-20260706-027.md"
+  - "research_control/tasks/RT-20260706-027/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260706-027/jobs/AJ-RT-20260706-027-001.yaml"
+  - "research_control/tasks/RT-20260706-027/jobs/completions/AJC-AJ-RT-20260706-027-001.yaml"
+  - "research_control/tasks/RT-20260706-027/roles/validator-engineer@0.2.0--RT-20260706-027.yaml"
+  - "research_control/handoffs/handoff-0659.yaml"
+  - "research_control/handoffs/handoff-0659.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/design/v17_recommendation_backlog.yaml"
+  - "research_control/design/task_index_schema_v1.md"
+  - "scripts/research_control/render_task_index.py"
+  - "tests/test_research_control.py"
+  - "tests/test_render_current_frontier.py"
+  - "tests/test_run_full_research_control_validation.py"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0658.yaml"
+  - "research_control/handoffs/handoff-0658.md"
+  - "registries/AGENT_ROLE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=681 relationship_row_count=3491 semantic_row_count=681 vault_row_count=681"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"v17 P10-T03 task index validator\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER generated_retrieval_evidence_ids=SEMANTIC-MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260706-026 latest_handoff=handoff-0658 boundary=director_decision_required"
+  - ".venv/bin/python -m unittest tests.test_task_index_renderer tests.test_run_full_research_control_validation | exit_code=0 | tests=8"
+  - ".venv/bin/python scripts/research_control/validate_task_index.py --write-report research_control/tasks/RT-20260706-027/artifacts/task_index_validator_report.json --json | exit_code=0 | status=PASS row_count=799 warning_count=297 hard_fail_count=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 681
+    relationship_row_count: 3491
+    semantic_row_count: 681
+    vault_row_count: 681
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"v17 P10-T03 task index validator\" --limit 10 --json"
+      query_type: "search"
+      query_text: "v17 P10-T03 task index validator"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      generated_retrieval_evidence_ids:
+        - "SEMANTIC-MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      retrieval_note: "Search returned current-frontier retrieval evidence. Routing authority came from tracked handoff and canonical v17 plan and schema inspection."
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "3137e36d3ad1981eb224f642bdfff139f1103e9fff3d33c38c8505cd30f23515"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/task_index_schema_v1.md"
+      source_hash: "d456f151421ca4514972b23bb092d94e0236ed2262794581f78a006b3eed9b73"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS with refresh_needed=false and refresh_performed=false"
+      - "query_memory search returned current frontier retrieval evidence"
+      - "query_memory lookup returned v17 implementation plan canonical source object"
+      - "continue_research.py resolved handoff-0658 to one bounded P10-T03 packet"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P10-T03 task-local validator report written with PASS"
+      - "documentation-impact receipt records live classifier paths and reason codes"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_task_index.py --write refreshed the generated task index after the P10-T03 task artifact set stabilized"
+      - "render_task_index.py --check passed with row_count=799"
+  validator:
+    status: "PASS"
+    evidence:
+      - "validate_task_index.py checks freshness header equality row equality source task directories completion paths task statuses support-only physics_delta and overread language"
+      - "historical missing metadata is reported as warnings rather than repaired or converted into hard failures"
+      - "validator report status PASS with row_count=799 hard_fail_count=0 warning_count=297 after task-index regeneration"
+  unit_tests:
+    status: "PASS"
+    evidence:
+      - "focused task-index tests passed"
+      - "run_full_research_control_validation coverage test passed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system PASS"
+      - "bootstrap_memory_system --validate-only PASS"
+      - "continue_research_memory_preflight refreshed local retrieval caches after bootstrap"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language --changed PASS with historical warnings only"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "documentation impact validation PASS"
+      - "project improvement signal validation PASS"
+      - "compact frontier validation PASS"
+      - "claim graph validation PASS"
+      - "dependency graph freshness check PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command required before transaction is committed"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+schema_result: "validator_created"
+generated_task_index_validator_created: true
+task_index_memory_integration_created: false
+coherent_resolution_summary: "P10-T03 created the task-index validator and focused tests and wired the validator into the local full validation runner, while deferring memory and folder-documentation integration to P10-T04."
+next_recommendation: "Run one bounded v17 P10-T04 task-index memory and folder-documentation integration packet through an active memory/documentation curator-compatible role overlay."
+physics_progress_status:
+  status: "validator_update_no_physics_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Validate generated task index against tracked tasks and completions."
+  explanation: "This project-control validator creates operational receipt checks and does not update the Distance-to-GR ledger or discharge a derivation burden."
+distance_to_gr_status:
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Validate generated task index against tracked tasks and completions."
+  burden_matrix:
+    - burden: "matter coupling"
+      status_before: "accepted_as_scoped_evidence_precondition"
+      status_after: "accepted_as_scoped_evidence_precondition"
+      review_delta: "no matter-coupling derivation or adoption created"
+    - burden: "Einstein equations"
+      status_before: "not_started"
+      status_after: "not_started"
+      review_delta: "no stress-energy matter action or field-equation authority created"
+    - burden: "benchmark promotion"
+      status_before: "blocked"
+      status_after: "blocked"
+      review_delta: "no benchmark authority created"
+distance_to_gr_delta:
+  changed: false
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "accepted_as_scoped_evidence_precondition"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "P10-T04 task-index memory and folder-documentation integration"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "MetricData(E)_adoption"
+    - "g_eff_scope_expansion"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+  explanation: "P10-T03 is a project-control validator packet and does not change Distance-to-GR ledger status."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+claim_boundary:
+  claim_boundary_id: "CB-V17-P10-T03-TASK-INDEX-VALIDATOR-001"
+  allowed_claims:
+    - "P10-T03 validator exists"
+    - "P10-T03 focused tests exist"
+    - "local full validation runner includes task_index_validation"
+    - "historical task-index metadata issues are reported as warnings"
+    - "no physics delta"
+  forbidden_claims:
+    - "generated task index as task authority"
+    - "validator PASS as physics proof authority"
+    - "validator PASS as source-law adoption"
+    - "validator PASS as MetricData(E) adoption"
+    - "validator PASS as g_eff scope expansion"
+    - "validator PASS as matter-coupling derivation"
+    - "validator PASS as Einstein equations"
+    - "validator PASS as benchmark promotion"
+    - "validator PASS as Gate Chair verdict"
+    - "validator PASS as completed derivation"
+next_route:
+  route_id: "v17_p10_t04_task_index_memory_folder_docs"
+  plan_task_id: "P10-T04"
+  role_family: "memory-system-maintainer@0.2.0 or documentation-curator@2.0.0 task overlay"
+  plan_role_family: "research-ops-curator@0.1.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Integrate task index into memory retrieval and folder documentation."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true

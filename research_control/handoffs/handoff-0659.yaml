@@ -1,0 +1,50 @@
+handoff_id: "handoff-0659"
+handoff_number: 659
+task_id: "RT-20260706-027"
+job_id: "AJ-RT-20260706-027-001"
+completion_path: "research_control/tasks/RT-20260706-027/jobs/completions/AJC-AJ-RT-20260706-027-001.yaml"
+created_at: "2026-07-06T17:29:46Z"
+status: "completed"
+summary: "RT-20260706-027 completed one bounded v17 P10-T03 task-index validator packet. It created scripts/research_control/validate_task_index.py and tests/test_task_index_renderer.py, wired task_index_validation into scripts/research_control/run_full_research_control_validation.py, and verified generated task-index outputs against tracked task records and completions. The validator reports historical missing metadata as warnings and does not create memory integration folder-doc integration ledger changes physics claims Gate Chair authority benchmark status ontology authority or Distance-to-GR delta."
+next_action: "Run one bounded v17 P10-T04 task-index memory and folder-documentation integration packet through an active memory/documentation curator-compatible role overlay."
+loop_risk_route: "v17_p10_t03_task_index_validator_completed_no_physics_delta"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_phase_id: "P10"
+  completed_plan_task_id: "P10-T03"
+  selected_next_plan_task_id: "P10-T04"
+  phase_p10_completed: false
+  all_applicable_plan_tasks_proven: false
+claim_boundary:
+  allowed_next_scope: "P10-T04 may integrate the task index into memory retrieval and folder documentation without changing physics claim status."
+  blocked_claims:
+    - "generated task index as task authority"
+    - "validator PASS as proof authority"
+    - "validator PASS as source-law adoption"
+    - "validator PASS as MetricData(E) adoption"
+    - "validator PASS as g_eff scope expansion"
+    - "validator PASS as matter-coupling derivation"
+    - "validator PASS as Einstein equations"
+    - "validator PASS as benchmark promotion"
+    - "validator PASS as Gate Chair verdict"
+    - "validator PASS as completed derivation"
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+selected_next_route:
+  route_id: "v17_p10_t04_task_index_memory_folder_docs"
+  plan_task_id: "P10-T04"
+  role_family: "memory-system-maintainer@0.2.0 or documentation-curator@2.0.0 task overlay"
+  plan_role_family: "research-ops-curator@0.1.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Integrate task index into memory retrieval and folder documentation."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
