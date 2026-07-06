@@ -19,6 +19,16 @@ development and is not a finished product:
 
 ---
 
+## Copyright and License
+
+Copyright (c) 2026 Alexander Samuel Ricciardi under the label AngryOwl.
+
+This repository is split-licensed because it contains both research content and
+software/tooling. See [`LICENSE`](LICENSE) for license scope and controlling
+license texts. See [`NOTICES`](NOTICES) for attribution and notice text.
+
+---
+
 ## The Research Program
 
 The Æther-Flow Interpretation of Relativity Research Program is a dual physics-and-AI research project.
@@ -571,6 +581,8 @@ from the canonical type registry rather than duplicated local constant sets.
 │   └── Project license.
 ├── Makefile
 │   └── Single-command validation wrappers for repository operators.
+├── NOTICES
+│   └── Copyright, attribution, and notice text.
 ├── README.md
 │   └── Project overview, environment setup, and file map.
 ├── requirements.txt
