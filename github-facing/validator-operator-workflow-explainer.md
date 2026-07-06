@@ -107,6 +107,8 @@ This page is a generated noncanonical reader surface. It explains existing comma
 - AEther-Flow Project. (2026). `scripts/project_control/project_improvement_handoff_validation.py` [Sidecar schema, source-bridge, and parity validation.]
 - AEther-Flow Project. (2026). `scripts/research_control/checkpoint_research_transaction.py` [Checkpoint guard for exact source-bridge sidecar paths.]
 - AEther-Flow Project. (2026). `scripts/research_control/validate_research_control.py` [Tracked research-control and diff boundary checks.]
+- AEther-Flow Project. (2026). `research_control/design/public_status_exists_does_not_exist_source_spec.md` [Public exists / does-not-exist source-spec boundary.]
+- AEther-Flow Project. (2026). `research_control/design/epistemic_category_glossary.md` [Epistemic category glossary for validator, proof, and publication-surface distinctions.]
 - AEther-Flow Project. (2026). `research_control/tasks/RT-20260622-007/artifacts/project_improvement_bridge_phase6_checkpoint_allowlist_governance.md` [Phase 6 conditional sidecar checkpoint governance evidence.]
 
 ## Safe Operating Summary

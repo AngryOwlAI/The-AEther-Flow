@@ -619,11 +619,16 @@ def check_github_facing_explainers(report: AuditReport, root: Path) -> None:
         source_path = root / "markdown" / "html-explainer-specs" / page_path.name
         html_path = root / "html" / f"{page_path.stem}.html"
         relative_page = page_path.relative_to(root).as_posix()
-        relative_source = source_path.relative_to(root).as_posix()
         relative_html = html_path.relative_to(root).as_posix()
         if not source_path.exists():
-            report.error(f"{relative_page}: matching source spec is missing: {relative_source}")
-            continue
+            spec_candidate = source_path.with_name(f"{source_path.stem}.spec{source_path.suffix}")
+            if spec_candidate.exists():
+                source_path = spec_candidate
+            else:
+                relative_source = source_path.relative_to(root).as_posix()
+                report.error(f"{relative_page}: matching source spec is missing: {relative_source}")
+                continue
+        relative_source = source_path.relative_to(root).as_posix()
         check_path_exists(report, root, relative_html, context=relative_page)
 
         page_text = normalized_text(page_path.read_text(encoding="utf-8"))

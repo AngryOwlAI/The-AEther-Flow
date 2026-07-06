@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `dcc422d18ac6a231226f9fede68f9519e9e19307b2bd1e0a489a8720637628d8`
-- Generated-at source timestamp: `2026-07-06T18:07:24Z`
-- Row count: `800`
+- Source fingerprint: `e8be305eb0097e9e20819a6758de1271a39eee83452c3686cd1329fc1293d1a7`
+- Generated-at source timestamp: `2026-07-06T18:45:20Z`
+- Row count: `801`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260706-029|RT-20260706-028|2026-07-06T18:45:20Z|2026-07-06T18:45:20Z|github_actions_validation_workflow|completed|matter_coupling|Add CI workflow for project-control validation without changing physics claims.|validator-engineer@0.2.0|false|false|4|Run one bounded v17 P11-T02 Python environment and reproducibility documentation packet through an active software-engineer-compatible role overlay.|PASS|research_control/tasks/RT-20260706-029/jobs/completions/AJC-AJ-RT-20260706-029-001.yaml|
 |RT-20260706-028|RT-20260706-027|2026-07-06T18:07:24Z|2026-07-06T18:07:24Z|research_control_task_index_memory_integration|completed|matter_coupling|Integrate generated task index into memory and folder map surfaces.|memory-system-maintainer@0.2.0|false|false|2|Run one bounded v17 P11-T01 GitHub Actions validation workflow packet through an active software-engineer-compatible role overlay.|PASS|research_control/tasks/RT-20260706-028/jobs/completions/AJC-AJ-RT-20260706-028-001.yaml|
 |RT-20260706-027|RT-20260706-026|2026-07-06T17:29:46Z|2026-07-06T17:29:46Z|research_control_task_index_validator|completed|matter_coupling|Validate generated task index against tracked tasks and completions.|validator-engineer@0.2.0|false|false|2|Run one bounded v17 P10-T04 task-index memory and folder-documentation integration packet through an active memory/documentation curator-compatible role overlay.|PASS|research_control/tasks/RT-20260706-027/jobs/completions/AJC-AJ-RT-20260706-027-001.yaml|
 |RT-20260706-026|RT-20260706-025|2026-07-06T16:43:52Z|2026-07-06T16:43:52Z|research_control_task_index_generator|completed|matter_coupling|Generate TASK_INDEX.csv and TASK_INDEX.md from tracked task folders.|project-control-maintainer@0.2.0|false|false|3|Run one bounded v17 P10-T03 task-index validator packet through an active validator role overlay.|PASS|research_control/tasks/RT-20260706-026/jobs/completions/AJC-AJ-RT-20260706-026-001.yaml|

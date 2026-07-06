@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-028`
-- Latest handoff: `handoff-0660`
-- Current status: `v17_p10_t04_task_index_memory_folder_docs_completed_no_physics_delta`
+- Active task: `RT-20260706-029`
+- Latest handoff: `handoff-0661`
+- Current status: `v17_p11_t01_github_actions_validation_workflow_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p11_t01_github_actions_validation_workflow`
+- Route ID: `v17_p11_t02_python_environment_reproducibility_documentation`
 - Role family: `software-engineer@0.1.0 or active software-engineer-compatible task overlay`
 - Target milestone: `matter_coupling`
-- Milestone burden: Add CI workflow for project-control validation without changing physics claims.
+- Milestone burden: Document Python environment and reproducibility metadata without changing physics claims.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `e553f662e247a278ed62f57b5f6dcdf6b8432b2425cd310a616adb53deebae75`
-- JSON SHA-256: `b3e4c679359cede046d4ad6cec6e8a8fa8cc0ad1e03f9dce427ae5c77d77804c`
+- YAML SHA-256: `1922222fe4bab9800ec59c7e72f8271b9a9b45f6e66fe80447a99618f6bf533a`
+- JSON SHA-256: `6df6e3574602b53b3abe139eb892a85f5a0f65ad0e31c6882f08c1bde13f53ae`
 
 ## Authority Warning
 

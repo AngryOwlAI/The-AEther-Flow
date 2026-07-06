@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-028` and `handoff-0660`.
+`RT-20260706-029` and `handoff-0661`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-028` |
-| Latest handoff ID | `handoff-0660` |
-| Current status | `v17_p10_t04_task_index_memory_folder_docs_completed_no_physics_delta` |
+| Active task ID | `RT-20260706-029` |
+| Latest handoff ID | `handoff-0661` |
+| Current status | `v17_p11_t01_github_actions_validation_workflow_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p10 t04 task index memory folder docs completed no physics delta |
+| Current route family | v17 p11 t01 github actions validation workflow completed no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P11-T01 GitHub Actions validation workflow packet through an active software-engineer-compatible role overlay. |
-| Required next authority | P11-T01 may add a GitHub Actions validation workflow for project-control validation without changing physics claim status. |
-| Next recommended action | Run one bounded v17 P11-T01 GitHub Actions validation workflow packet through an active software-engineer-compatible role overlay. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P11-T02 Python environment and reproducibility documentation packet through an active software-engineer-compatible role overlay. |
+| Required next authority | P11-T02 may document Python environment and reproducibility metadata without changing physics claim status. |
+| Next recommended action | Run one bounded v17 P11-T02 Python environment and reproducibility documentation packet through an active software-engineer-compatible role overlay. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-028/00_TASK.yaml`.
+- Active task path: `research_control/tasks/RT-20260706-029/00_TASK.yaml`.
 - Active task objective: not recorded.
-- Latest handoff path: `research_control/handoffs/handoff-0660.yaml`.
-- Latest handoff summary: RT-20260706-028 completed one bounded v17 P10-T04 task-index memory and folder-documentation integration packet. It registered research_control/tasks/TASK_INDEX.md as MD-RESEARCH-CONTROL-TASK-INDEX with generated_noncanonical authority, refreshed memory/wiki/registry derivatives, proved lookup and focused retrieval tests, and updated research_control/tasks/README.md to point to generated task-index outputs while preserving generated-output boundaries. This creates no task-index authority expansion, ledger change, physics claim, Gate Chair authority, benchmark status, ontology authority, or Distance-to-GR delta.
-- Current route family: v17 p10 t04 task index memory folder docs completed no physics delta.
-- Next recommended action: Run one bounded v17 P11-T01 GitHub Actions validation workflow packet through an active software-engineer-compatible role overlay.
+- Latest handoff path: `research_control/handoffs/handoff-0661.yaml`.
+- Latest handoff summary: RT-20260706-029 completed one bounded v17 P11-T01 GitHub Actions validation workflow packet. It added .github/workflows/project-control-validation.yml with validate_project_control and validate_memory_read_only jobs, used a CI-created .venv with make PYTHON=.venv/bin/python validate-project-control, added a read-only memory validation job, and recorded task-local workflow validation evidence. This creates no CI-as-proof authority, ledger change, physics claim, Gate Chair authority, benchmark status, ontology authority, or Distance-to-GR delta.
+- Current route family: v17 p11 t01 github actions validation workflow completed no physics delta.
+- Next recommended action: Run one bounded v17 P11-T02 Python environment and reproducibility documentation packet through an active software-engineer-compatible role overlay.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P11-T01 GitHub Actions validation workflow packet through an active software-engineer-compatible role overlay.
+Run one bounded v17 P11-T02 Python environment and reproducibility documentation packet through an active software-engineer-compatible role overlay.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,9 +301,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-028`;
-- latest handoff: `handoff-0660`;
-- current status: `v17_p10_t04_task_index_memory_folder_docs_completed_no_physics_delta`;
+- active task: `RT-20260706-029`;
+- latest handoff: `handoff-0661`;
+- current status: `v17_p11_t01_github_actions_validation_workflow_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -313,8 +313,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0660.yaml`
-- `research_control/tasks/RT-20260706-028/00_TASK.yaml`
+- `research_control/handoffs/handoff-0661.yaml`
+- `research_control/tasks/RT-20260706-029/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -330,7 +330,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0660*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0661*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

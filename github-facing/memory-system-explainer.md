@@ -88,6 +88,8 @@ This page is a generated noncanonical reader surface. It explains existing sourc
 - AEther-Flow Project. (2026). `registries/WIKI_ARTIFACT_REGISTRY.csv` [Generated wiki-note rows and source-object hashes.]
 - AEther-Flow Project. (2026). `registries/OBSIDIAN_VAULT_REGISTRY.csv` [Local Obsidian note and raw mirror paths.]
 - AEther-Flow Project. (2026). `registries/CONTENT_SEMANTIC_REGISTRY.csv` [Deterministic semantic extraction rows for local search.]
+- AEther-Flow Project. (2026). `research_control/design/public_status_exists_does_not_exist_source_spec.md` [Current public status source-spec boundary.]
+- AEther-Flow Project. (2026). `research_control/design/epistemic_category_glossary.md` [Epistemic category distinctions for status, proof, and authority.]
 - AEther-Flow Project. (2026). `FOLDER_MAP.md` [Generated folder classification for canonical, generated, local, tooling, and reserved lanes.]
 
 ## Safe Operating Summary

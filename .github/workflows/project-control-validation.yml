@@ -1,0 +1,70 @@
+name: Project Control Validation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: project-control-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate_project_control:
+    name: Validate project-control gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PYTHON: .venv/bin/python
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      - name: Install Python dependencies
+        run: |
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install -r requirements.txt
+
+      - name: Run project-control validation
+        run: make PYTHON=.venv/bin/python validate-project-control
+
+  validate_memory_read_only:
+    name: Validate generated memory surfaces
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHON: .venv/bin/python
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      - name: Install Python dependencies
+        run: |
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install -r requirements.txt
+
+      - name: Run read-only memory validation
+        run: .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
