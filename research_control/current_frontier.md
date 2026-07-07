@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260707-001` and `handoff-0671`.
+`RT-20260707-002` and `handoff-0672`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260707-001` |
-| Latest handoff ID | `handoff-0671` |
-| Current status | `v17_p13_t03_current_frontier_ledger_sync_completed_no_physics_delta` |
+| Active task ID | `RT-20260707-002` |
+| Latest handoff ID | `handoff-0672` |
+| Current status | `v17_completed_ordinary_continuation_selected_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p13 t03 current frontier ledger sync completed no physics delta |
+| Current route family | v17 completed ordinary continuation selected no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P13-T04 ordinary continuation handoff packet. |
-| Required next authority | P13-T04 may complete v17 and select exactly one ordinary continuation route from validated v17 outputs without promoting physics claims or changing Distance-to-GR status unless separately justified by protected authority. |
-| Next recommended action | Run one bounded v17 P13-T04 ordinary continuation handoff packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs. |
+| Required next authority | The next ordinary continuation may create exactly one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet. It must not promote physics claims or change Distance-to-GR status unless separately justified by protected authority. |
+| Next recommended action | Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260707-001/00_TASK.yaml`.
+- Active task path: `research_control/tasks/RT-20260707-002/00_TASK.yaml`.
 - Active task objective: not recorded.
-- Latest handoff path: `research_control/handoffs/handoff-0671.yaml`.
-- Latest handoff summary: RT-20260707-001 completed one bounded v17 P13-T03 current frontier and ledger synchronization packet. It refreshed current frontier, compact frontier, claim graph, dependency graph, task-index, metrics, and generated memory derivatives while preserving unchanged Distance-to-GR and metric-use ledger hashes. No ledger status change, physics promotion, proof authority, source-law adoption, matter-coupling derivation, Einstein-equation derivation, benchmark promotion, Gate Chair verdict, final ordinary continuation route selection, or completed-derivation claim is authorized.
-- Current route family: v17 p13 t03 current frontier ledger sync completed no physics delta.
-- Next recommended action: Run one bounded v17 P13-T04 ordinary continuation handoff packet.
+- Latest handoff path: `research_control/handoffs/handoff-0672.yaml`.
+- Latest handoff summary: RT-20260707-002 completed v17 P13-T04 by proving all applicable v17 plan tasks complete and selecting upstream_EqSrc_RetainH_GenH_theorem_attempt as the single ordinary continuation route from validated v17 outputs. No Distance-to-GR ledger status change, physics promotion, proof authority, source-law adoption, general EqSrc discharge, RetainH adoption, GenH adoption, matter-coupling derivation, Einstein-equation derivation, benchmark promotion, Gate Chair verdict, or completed-derivation claim is authorized.
+- Current route family: v17 completed ordinary continuation selected no physics delta.
+- Next recommended action: Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P13-T04 ordinary continuation handoff packet.
+Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,9 +301,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260707-001`;
-- latest handoff: `handoff-0671`;
-- current status: `v17_p13_t03_current_frontier_ledger_sync_completed_no_physics_delta`;
+- active task: `RT-20260707-002`;
+- latest handoff: `handoff-0672`;
+- current status: `v17_completed_ordinary_continuation_selected_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -313,8 +313,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0671.yaml`
-- `research_control/tasks/RT-20260707-001/00_TASK.yaml`
+- `research_control/handoffs/handoff-0672.yaml`
+- `research_control/tasks/RT-20260707-002/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -330,7 +330,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0671*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0672*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

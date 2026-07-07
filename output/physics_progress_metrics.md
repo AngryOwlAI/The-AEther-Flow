@@ -19,17 +19,17 @@ This report is generated from tracked research-control registries and completion
 
 | Metric | Value |
 | --- | --- |
-| `tasks_registered` | `807` |
-| `jobs_registered` | `807` |
-| `completions_read` | `807` |
+| `tasks_registered` | `808` |
+| `jobs_registered` | `808` |
+| `completions_read` | `808` |
 | `physics_completions_read` | `444` |
-| `claim_boundary_rows` | `764` |
-| `active_claim_boundary_rows` | `754` |
-| `completion_validation_status_counts` | `{"PASS": 787, "PASS_WITH_SURFACE_AUDIT_FINDINGS": 1, "unknown": 19}` |
+| `claim_boundary_rows` | `765` |
+| `active_claim_boundary_rows` | `755` |
+| `completion_validation_status_counts` | `{"PASS": 788, "PASS_WITH_SURFACE_AUDIT_FINDINGS": 1, "unknown": 19}` |
 | `tasks_with_forbidden_conclusion_summary` | `394` |
 | `physics_promotion_authorized_true` | `27` |
 | `physics_promotion_authorized_false` | `367` |
-| `claim_boundary_rows_active` | `754` |
+| `claim_boundary_rows_active` | `755` |
 | `selector_tasks` | `96` |
 | `candidate_constructor_tasks` | `51` |
 | `smuggling_auditor_tasks` | `83` |
@@ -52,7 +52,7 @@ This report is generated from tracked research-control registries and completion
 | Metric | Value |
 | --- | --- |
 | `distance_to_gr_delta_true_count` | `183` |
-| `distance_to_gr_delta_false_count` | `309` |
+| `distance_to_gr_delta_false_count` | `310` |
 | `burden_discharged_count` | `18` |
 | `constructed_candidate_count` | `73` |
 | `candidate_smuggling_audit_pass_count` | `45` |
@@ -65,7 +65,7 @@ This report is generated from tracked research-control registries and completion
 | `obstruction_records_referenced_by_later_tasks` | `24` |
 | `repeated_obstructions_triggering_freeze_review` | `223` |
 | `frozen_routes_reopened_by_human_gate` | `16` |
-| `physics_progress_status_counts` | `{"burden_advanced": 2, "burden_discharged": 18, "candidate_audit_passed_pending_stress": 1, "candidate_audited_pending_stress": 45, "candidate_constructed_pending_audit": 42, "candidate_cycle_integrated_no_adoption": 1, "candidate_stress_passed_pending_gate": 34, "candidate_stress_survived_pending_selector": 7, "ci_update_no_physics_delta": 1, "comparison_only_no_distance_delta": 1, "control_checklist_no_distance_delta": 1, "control_note_no_distance_delta": 2, "control_template_no_distance_delta": 1, "control_validation_only": 1, "dashboard_update_no_physics_delta": 1, "dependency_audit_no_distance_delta": 1, "detector_replacement_audited_source_pure_as_written_pending_stress": 1, "detector_replacement_candidate_constructed_pending_audit": 1, "detector_replacement_stress_survived_pending_selector": 1, "detector_route_selected_no_adoption": 1, "docs_no_physics_delta": 1, "documentation_control_no_distance_delta": 16, "documentation_or_control_only_no_physics_delta": 11, "external_review_no_distance_delta": 1, "finite_local_negative_fixtures_recorded": 1, "finite_local_witness_recorded": 3, "formalization_support_no_physics_delta": 1, "formalized_precondition_target_no_distance_delta": 1, "frontier_sync_no_promotion": 1, "human_gate_required": 23, "invalid_under_claim_boundary": 1, "memory_integration_no_physics_delta": 1, "methodology_memo_no_physics_delta": 1, "methodology_metrics_no_physics_delta": 1, "metrics_tool_update_no_physics_delta": 1, "no_distance_delta": 22, "precise_obstruction_found": 16, "precise_obstruction_found_no_distance_delta": 1, "process_control_no_distance_delta": 42, "project_control_backlog_no_physics_delta": 1, "project_control_bridge_no_distance_delta": 1, "project_control_coverage_audit_no_distance_delta": 1, "project_control_documentation_impact_no_distance_delta": 1, "project_control_final_validation_no_distance_delta": 1, "project_control_frontier_refresh_no_distance_delta": 1, "project_control_no_distance_delta": 3, "project_control_plan_registration_no_physics_delta": 1, "project_control_renderer_no_distance_delta": 1, "project_control_schema_no_distance_delta": 1, "project_control_validation_inventory_no_distance_delta": 1, "project_control_validation_no_distance_delta": 1, "project_control_validator_no_distance_delta": 1, "proposal_only_law_target_formalized_pending_audit": 1, "record_local_theorem_candidate_no_distance_delta": 1, "red_team_review_no_physics_delta": 3, "route_frozen": 1, "route_selector_no_distance_delta": 1, "routing_control_no_distance_delta": 1, "schema_defined": 1, "schema_no_physics_delta": 1, "selector_no_adoption": 1, "selector_no_promotion": 1, "selector_only_no_distance_delta": 49, "selector_routes_to_candidate_constructor_bridge_attempt": 1, "source_acquisition_only_no_distance_delta": 1, "source_extension_adopted": 9, "source_extension_evidence_accepted": 7, "support_only_conditional_theorem_no_distance_delta": 1, "support_only_formalization_no_distance_delta": 4, "support_only_schema_no_distance_delta": 1, "support_only_tooling_design_no_distance_delta": 1, "theoretical_decision_selected": 5, "tooling_update_no_physics_delta": 2, "traceability_only_no_distance_delta": 1, "unchanged": 12, "v16_completed_ordinary_continuation_selected_no_distance_delta": 1, "v17_final_validation_no_promotion": 1, "v17_integration_no_promotion": 1, "v17_p0_t03_active_state_preflight_passed_no_physics_delta": 1, "validator_fixture_catalog_no_distance_delta": 1, "validator_integration_no_distance_delta": 1, "validator_update_no_physics_delta": 1}` |
+| `physics_progress_status_counts` | `{"burden_advanced": 2, "burden_discharged": 18, "candidate_audit_passed_pending_stress": 1, "candidate_audited_pending_stress": 45, "candidate_constructed_pending_audit": 42, "candidate_cycle_integrated_no_adoption": 1, "candidate_stress_passed_pending_gate": 34, "candidate_stress_survived_pending_selector": 7, "ci_update_no_physics_delta": 1, "comparison_only_no_distance_delta": 1, "control_checklist_no_distance_delta": 1, "control_note_no_distance_delta": 2, "control_template_no_distance_delta": 1, "control_validation_only": 1, "dashboard_update_no_physics_delta": 1, "dependency_audit_no_distance_delta": 1, "detector_replacement_audited_source_pure_as_written_pending_stress": 1, "detector_replacement_candidate_constructed_pending_audit": 1, "detector_replacement_stress_survived_pending_selector": 1, "detector_route_selected_no_adoption": 1, "docs_no_physics_delta": 1, "documentation_control_no_distance_delta": 16, "documentation_or_control_only_no_physics_delta": 11, "external_review_no_distance_delta": 1, "finite_local_negative_fixtures_recorded": 1, "finite_local_witness_recorded": 3, "formalization_support_no_physics_delta": 1, "formalized_precondition_target_no_distance_delta": 1, "frontier_sync_no_promotion": 1, "human_gate_required": 23, "invalid_under_claim_boundary": 1, "memory_integration_no_physics_delta": 1, "methodology_memo_no_physics_delta": 1, "methodology_metrics_no_physics_delta": 1, "metrics_tool_update_no_physics_delta": 1, "no_distance_delta": 22, "precise_obstruction_found": 16, "precise_obstruction_found_no_distance_delta": 1, "process_control_no_distance_delta": 42, "project_control_backlog_no_physics_delta": 1, "project_control_bridge_no_distance_delta": 1, "project_control_coverage_audit_no_distance_delta": 1, "project_control_documentation_impact_no_distance_delta": 1, "project_control_final_validation_no_distance_delta": 1, "project_control_frontier_refresh_no_distance_delta": 1, "project_control_no_distance_delta": 3, "project_control_plan_registration_no_physics_delta": 1, "project_control_renderer_no_distance_delta": 1, "project_control_schema_no_distance_delta": 1, "project_control_validation_inventory_no_distance_delta": 1, "project_control_validation_no_distance_delta": 1, "project_control_validator_no_distance_delta": 1, "proposal_only_law_target_formalized_pending_audit": 1, "record_local_theorem_candidate_no_distance_delta": 1, "red_team_review_no_physics_delta": 3, "route_frozen": 1, "route_selector_no_distance_delta": 1, "routing_control_no_distance_delta": 1, "schema_defined": 1, "schema_no_physics_delta": 1, "selector_no_adoption": 1, "selector_no_promotion": 1, "selector_only_no_distance_delta": 49, "selector_routes_to_candidate_constructor_bridge_attempt": 1, "source_acquisition_only_no_distance_delta": 1, "source_extension_adopted": 9, "source_extension_evidence_accepted": 7, "support_only_conditional_theorem_no_distance_delta": 1, "support_only_formalization_no_distance_delta": 4, "support_only_schema_no_distance_delta": 1, "support_only_tooling_design_no_distance_delta": 1, "theoretical_decision_selected": 5, "tooling_update_no_physics_delta": 2, "traceability_only_no_distance_delta": 1, "unchanged": 12, "v16_completed_ordinary_continuation_selected_no_distance_delta": 1, "v17_completed_ordinary_continuation_selected": 1, "v17_final_validation_no_promotion": 1, "v17_integration_no_promotion": 1, "v17_p0_t03_active_state_preflight_passed_no_physics_delta": 1, "validator_fixture_catalog_no_distance_delta": 1, "validator_integration_no_distance_delta": 1, "validator_update_no_physics_delta": 1}` |
 
 ## Payload-Density Metrics
 
@@ -103,10 +103,10 @@ This report is generated from tracked research-control registries and completion
 | `authority_boundary` | `operational_summary_only_not_physics_proof` |
 | `not_physics_proof` | `True` |
 | `physics_claim_promotion_authorized` | `False` |
-| `distance_delta` | `{"changed_false_count": 309, "changed_true_count": 183, "effect_counts": {"missing_effect": 684, "no_distance_delta": 123}, "records_read": 807}` |
-| `separate_packet_counts` | `{"candidate_packet_count": 174, "freeze_packet_count": 240, "obstruction_packet_count": 34, "process_only_packet_count": 440, "theorem_packet_count": 110}` |
+| `distance_delta` | `{"changed_false_count": 310, "changed_true_count": 183, "effect_counts": {"missing_effect": 684, "no_distance_delta": 124}, "records_read": 808}` |
+| `separate_packet_counts` | `{"candidate_packet_count": 174, "freeze_packet_count": 240, "obstruction_packet_count": 34, "process_only_packet_count": 441, "theorem_packet_count": 110}` |
 | `candidate_result_counts` | `{"constructed_candidate": 31, "constructed_target_pending_candidate_constructor": 1, "minimal_countermodel": 1, "precise_obstruction": 10}` |
-| `payload_density_summary` | `{"classified_item_count": 1390, "mathematical_payload_item_count": 846, "mathematical_payload_task_count": 367, "payload_class_counts": {"conditional_theorem": 20, "countermodel": 46, "dependency_map_update": 136, "documentation_only": 100, "finite_witness": 202, "new_definition": 47, "new_theorem_statement": 134, "obstruction": 143, "proof_attempt": 0, "proved_theorem": 1, "route_selector_only": 165, "source_extension_classification": 117, "validator_tooling_only": 279}, "payload_density": 0.608633, "process_only_item_count": 544, "process_only_task_count": 440, "task_count": 807, "task_payload_density": 0.454771}` |
+| `payload_density_summary` | `{"classified_item_count": 1391, "mathematical_payload_item_count": 846, "mathematical_payload_task_count": 367, "payload_class_counts": {"conditional_theorem": 20, "countermodel": 46, "dependency_map_update": 136, "documentation_only": 100, "finite_witness": 202, "new_definition": 47, "new_theorem_statement": 134, "obstruction": 143, "proof_attempt": 0, "proved_theorem": 1, "route_selector_only": 165, "source_extension_classification": 117, "validator_tooling_only": 280}, "payload_density": 0.608196, "process_only_item_count": 545, "process_only_task_count": 441, "task_count": 808, "task_payload_density": 0.454208}` |
 
 ## AI Research-Agent Methodology Metrics
 
@@ -122,7 +122,7 @@ These diagnostics are support-only AI-system methodology metrics. They are separ
 | `audit_to_stress_survival` | Candidate life cycle | `partial` | `1.0` | This is an aggregate route-stage proxy; candidate lineage across audit and stress is not yet deterministic. |
 | `stress_survival_rate` | Candidate life cycle | `partial` | `0.4096` | Stress survival is counted only as a non-promotional candidate-status outcome. |
 | `human_gate_load` | Governance load | `measured` | `None` | Gate-load signals are governance workload diagnostics, not Gate Chair scientific verdicts. |
-| `proof_to_process_ratio` | Payload balance | `measured` | `1.5551` | Payload balance compares mathematical payload items to process-only items; it is not proof authority. |
+| `proof_to_process_ratio` | Payload balance | `measured` | `1.5523` | Payload balance compares mathematical payload items to process-only items; it is not proof authority. |
 
 ## AI Methodology Acceptance Warnings
 

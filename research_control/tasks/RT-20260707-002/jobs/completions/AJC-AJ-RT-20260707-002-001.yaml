@@ -1,0 +1,196 @@
+completion_id: "AJC-AJ-RT-20260707-002-001"
+job_id: "AJ-RT-20260707-002-001"
+task_id: "RT-20260707-002"
+source_role_id: "director-of-research"
+completed_at: "2026-07-07T00:57:15Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v17"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  related_plan_task_id: "P13-T04"
+  plan_phase_id: "P13"
+  implemented_task_scope: "Completed v17 by selecting exactly one ordinary continuation route from validated v17 outputs."
+  phase_p13_completed: true
+  completed_plan_task_id: "P13-T04"
+  selected_next_plan_task_id: ""
+  implemented_v17_plan_tasks_after_completion: 57
+  deferred_v17_plan_tasks_after_completion: []
+  all_applicable_plan_tasks_proven: true
+output_paths:
+  - "research_control/tasks/RT-20260707-002/artifacts/v17_ordinary_continuation_handoff_report.json"
+  - "research_control/tasks/RT-20260707-002/artifacts/validate_p13_t04_ordinary_handoff.py"
+  - "research_control/tasks/RT-20260707-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260707-002/jobs/AJ-RT-20260707-002-001.yaml"
+  - "research_control/tasks/RT-20260707-002/jobs/completions/AJC-AJ-RT-20260707-002-001.yaml"
+  - "research_control/tasks/RT-20260707-002/roles/director-of-research@0.3.0--RT-20260707-002.yaml"
+  - "research_control/handoffs/handoff-0672.yaml"
+  - "research_control/handoffs/handoff-0672.md"
+  - "research_control/current_frontier.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+  - "research_control/design/v17_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0671.yaml"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/RT-20260706-037/artifacts/v17_integration_report.md"
+  - "research_control/tasks/RT-20260706-038/artifacts/v17_final_validation_report.json"
+  - "research_control/tasks/RT-20260707-001/artifacts/v17_current_frontier_ledger_sync_report.json"
+  - "research_control/tasks/RT-20260706-011/artifacts/selected_upstream_equivalence_attempt_v1.tex"
+  - "research_control/tasks/RT-20260706-012/artifacts/upstream_attempt_audit_stress_selector_v1.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=685 relationship_row_count=3513 semantic_row_count=685 vault_row_count=685"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P13-T04 V17 ordinary continuation handoff\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260706-037-V17-INTEGRATION-REPORT MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17 SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  - ".venv/bin/python scripts/research_control/continue_research.py --json | exit_code=0 | status=ready active_task=RT-20260707-001 latest_handoff=handoff-0671 next_action=P13-T04"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 685
+    relationship_row_count: 3513
+    semantic_row_count: 685
+    vault_row_count: 685
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P13-T04 V17 ordinary continuation handoff\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P13-T04 V17 ordinary continuation handoff"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260706-037-V17-INTEGRATION-REPORT"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      generated_retrieval_evidence_ids:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v17.md"
+      source_hash: "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260706-037-V17-INTEGRATION-REPORT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260706-037/artifacts/v17_integration_report.md"
+      source_hash: "d411b0ee5c4aa9adfeba74f447e0c1b3c03d066a0be78248af6f58468a700d95"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS without refresh"
+      - "targeted memory search returned v17 plan and P13 integration report navigation surfaces"
+      - "continue_research.py resolved handoff-0671 and P13-T04"
+      - "P13-T04 plan section and prior P13 reports inspected"
+  implementation:
+    status: "PASS"
+    evidence:
+      - "exactly one ordinary continuation route selected"
+      - "all v17 plan tasks are now recorded as implemented"
+      - "no deferred v17 plan tasks remain"
+      - "Distance-to-GR and metric-use ledger hashes unchanged"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P13-T04 route-selection report records exactly one selected ordinary route"
+      - "all applicable v17 plan tasks are proven complete"
+      - "forbidden conclusions remain blocked"
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "validate_p13_t04_ordinary_handoff.py checks route count v17 completion handoff program_state and unchanged ledgers"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_research_control.py passed"
+      - "validate_research_control.py --check-diff passed"
+      - "git diff --check passed"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier check passed"
+      - "compact frontier validation passed"
+      - "task index validation passed"
+      - "dependency graph freshness check passed"
+      - "claim graph validation passed"
+      - "AI methodology dashboard freshness check passed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py passed"
+      - "bootstrap_memory_system.py --validate-only passed"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json passed with hard_fail_count=0"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint_research_transaction must run after validators confirm the bounded P13-T04 transaction"
+selected_ordinary_continuation_route:
+  route_id: "upstream_EqSrc_RetainH_GenH_theorem_attempt"
+  selected_next_action: "Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs."
+  selection_rationale: "Validated v17 outputs have no hard validation failure and no candidate repair or freeze requirement. The strongest remaining blocker is the general EqSrc family-closure obstruction and deferred RetainH or GenH primitive boundary recorded by P6."
+project_system_change_only: true
+physics_progress_status:
+  status: "v17_completed_ordinary_continuation_selected"
+  physics_promotion_authorized: false
+  summary: "P13-T04 completes v17 and selects one ordinary continuation route only."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  ledger_update_rationale: "P13-T04 selects an ordinary continuation route only and does not discharge any Distance-to-GR burden."
+  milestone: "matter_coupling"
+  downstream_unlocked:
+    - "upstream_EqSrc_RetainH_GenH_theorem_attempt"
+new_mathematical_payload: []
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-001"
+    payload_type: "project_control_route_selection_receipt"
+    object_name: "v17_ordinary_continuation_handoff_report"
+    claim_status: "operational_receipt_only"
+    source_path: "research_control/tasks/RT-20260707-002/artifacts/v17_ordinary_continuation_handoff_report.json"
+    burden_effect: "no_distance_delta"
+    summary: "Records v17 completion and selects exactly one ordinary continuation route."
+claim_boundary:
+  allowed_claims:
+    - "v17 P13-T04 completed"
+    - "all applicable v17 plan tasks proven complete"
+    - "one ordinary continuation route selected"
+    - "selected route is upstream_EqSrc_RetainH_GenH_theorem_attempt"
+    - "no physics delta"
+  forbidden_claims:
+    - "ordinary route selection as physics proof"
+    - "v17 completion as completed derivation"
+    - "upstream route selection as general EqSrc discharge"
+    - "upstream route selection as RetainH or GenH adoption"
+    - "candidate survival as matter-coupling derivation"
+    - "validation pass as benchmark promotion"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-05"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+coherent_resolution_summary: "RT-20260707-002 completed v17 P13-T04 by selecting upstream_EqSrc_RetainH_GenH_theorem_attempt as the single ordinary continuation route from validated v17 outputs."
+next_recommendation: "Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs."

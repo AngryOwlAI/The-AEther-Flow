@@ -30,7 +30,7 @@ This is a support-only AI-system diagnostic. It labels metrics as AI-system diag
 | `audit_to_stress_survival` | Candidate life cycle | partial | 1 | This is an aggregate route-stage proxy; candidate lineage across audit and stress is not yet deterministic. | Reaching stress means the candidate remains testable; it does not mean the candidate is true or adopted. |
 | `stress_survival_rate` | Candidate life cycle | partial | 0.4096 | Stress survival is counted only as a non-promotional candidate-status outcome. | Survival is candidate-status only; it does not authorize canonical ontology, source-law, metric, or coupling adoption. |
 | `human_gate_load` | Governance load | measured | not measured | Gate-load signals are governance workload diagnostics, not Gate Chair scientific verdicts. | Human authorization for a task is not a Gate Chair verdict unless the protected gate itself states that verdict. |
-| `proof_to_process_ratio` | Payload balance | measured | 1.5551 | Payload balance compares mathematical payload items to process-only items; it is not proof authority. | This ratio is a productivity and balance signal; neither numerator nor denominator creates proof authority by itself. |
+| `proof_to_process_ratio` | Payload balance | measured | 1.5523 | Payload balance compares mathematical payload items to process-only items; it is not proof authority. | This ratio is a productivity and balance signal; neither numerator nor denominator creates proof authority by itself. |
 
 ## Advisory Warnings
 
@@ -51,7 +51,7 @@ This is a support-only AI-system diagnostic. It labels metrics as AI-system diag
 
 ## Source Basis
 
-- Metrics report as-of: `2026-07-07T00:24:09Z`
+- Metrics report as-of: `2026-07-07T00:57:15Z`
 - Generated source paths:
   - `implementations_plans/recommendations_implementation_plan_continue_task-v17.md`
   - `research_control/design/v17_recommendation_backlog.yaml`

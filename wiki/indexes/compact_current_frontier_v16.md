@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260707-001`
-- Latest handoff: `handoff-0671`
-- Current status: `v17_p13_t03_current_frontier_ledger_sync_completed_no_physics_delta`
+- Active task: `RT-20260707-002`
+- Latest handoff: `handoff-0672`
+- Current status: `v17_completed_ordinary_continuation_selected_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p13_t04_ordinary_continuation_handoff`
+- Route ID: `upstream_EqSrc_RetainH_GenH_theorem_attempt`
 - Role family: `director-of-research@0.3.0`
-- Target milestone: `matter_coupling`
-- Milestone burden: Complete v17 and select exactly one ordinary continuation route from validated v17 outputs.
+- Target milestone: `source_equivalence_eqsrc`
+- Milestone burden: Select or execute a bounded upstream family-closure RetainH or GenH theorem or primitive attempt after validated v17 support-layer completion.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `a659701a7c7a0dabe62c2eb704763b35a5c742f41873a82a53f73662de65cf71`
-- JSON SHA-256: `4ffabfa78bf95caa7091c30964b91a2b2476fe3b90860dda1b94aa16f80b2234`
+- YAML SHA-256: `c2d5d033ae806eaee5a6fdd3e84b7899829644997cfe2d15cc7d551e5e05c6f4`
+- JSON SHA-256: `89a087aa0a501aa9aec3d4e0bcb8f6a6850890e54bf9834b16a6cc39ad2e25e4`
 
 ## Authority Warning
 

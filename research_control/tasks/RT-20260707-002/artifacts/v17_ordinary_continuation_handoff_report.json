@@ -1,0 +1,127 @@
+{
+  "schema_id": "v17_ordinary_continuation_handoff_report_v1",
+  "task_id": "RT-20260707-002",
+  "job_id": "AJ-RT-20260707-002-001",
+  "plan_id": "recommendations_implementation_plan_continue_task-v17",
+  "plan_task_id": "P13-T04",
+  "created_at": "2026-07-07T00:57:15Z",
+  "aggregate_status": "PASS",
+  "operational_receipt_only": true,
+  "proof_authority": false,
+  "physics_promotion_authorized": false,
+  "v17_completion": {
+    "implemented_v17_plan_tasks_after_completion": 57,
+    "deferred_v17_plan_tasks_after_completion": [],
+    "phase_p13_completed": true,
+    "all_applicable_plan_tasks_proven": true,
+    "final_handoff_selects_exactly_one_next_ordinary_route": true
+  },
+  "selected_ordinary_continuation_route": {
+    "route_id": "upstream_EqSrc_RetainH_GenH_theorem_attempt",
+    "allowed_route_family": "upstream_EqSrc_RetainH_GenH_theorem_attempt",
+    "selected": true,
+    "exactly_one_selected_route": true,
+    "selected_next_action": "Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs.",
+    "requires_human_gate": false,
+    "physics_promotion_authorized": false,
+    "selection_basis": [
+      "P13-T02 final validation passed with no pending hard validation layers.",
+      "P13-T03 synchronized current frontier compact frontier claim graph dependency graph and ledger receipts with unchanged Distance-to-GR and metric-use ledger hashes.",
+      "P2 candidate-cycle and P4 detector candidate outputs survived only as draft/control source-side candidates and did not require repair or freeze.",
+      "P5 metric-use ledger guards high-risk metric-adjacent wording and does not require repair.",
+      "P6-T02 recorded a record-local EqSrc theorem candidate plus the named general-family closure obstruction OB-P6T02-GENERAL-EQSRC-FAMILY-CLOSURE-MISSING.",
+      "P6-T03 did not freeze the upstream route and stated that a later physics packet may select a precise family-closure RetainH or GenH primitive attempt.",
+      "P7 through P12 implemented the support layers selected before returning to the current physics frontier."
+    ]
+  },
+  "route_family_disposition": [
+    {
+      "route_family": "repair_coupling_law_candidate",
+      "disposition": "not_selected",
+      "reason": "P2 candidate cycle reports draft/control audit and stress survival without a current candidate repair requirement."
+    },
+    {
+      "route_family": "smuggling_audit_next_candidate",
+      "disposition": "not_selected",
+      "reason": "P2-T01 and P4-T03 already completed the current candidate smuggling-audit lanes and no new candidate has been selected for audit."
+    },
+    {
+      "route_family": "refuter_stress_next_candidate",
+      "disposition": "not_selected",
+      "reason": "P2-T02 and P4-T04 already completed current candidate stress lanes and no current stress failure or new candidate selection requires this route."
+    },
+    {
+      "route_family": "detector_semantics_replacement_continuation",
+      "disposition": "not_selected",
+      "reason": "P4 selected metric-use ledger continuation after detector candidate audit and stress; no detector-semantics adoption or repair route is selected by final validation."
+    },
+    {
+      "route_family": "metric_use_ledger_repair",
+      "disposition": "not_selected",
+      "reason": "P5 metric-use ledger validation and P13-T03 ledger synchronization passed with unchanged ledger hashes."
+    },
+    {
+      "route_family": "upstream_EqSrc_RetainH_GenH_theorem_attempt",
+      "disposition": "selected",
+      "reason": "General EqSrc family closure remains the strongest validated upstream blocker after v17 support layers have been completed."
+    },
+    {
+      "route_family": "proof_normal_form_expansion",
+      "disposition": "not_selected",
+      "reason": "P7 created the proof-normal-form schema and initial rows; expansion remains useful but weaker than returning to the upstream theorem burden after support-layer completion."
+    },
+    {
+      "route_family": "support_only_formalization_expansion",
+      "disposition": "not_selected",
+      "reason": "P8 support-only formalization passed Refuter review; expansion remains support work and is weaker than the active upstream blocker."
+    },
+    {
+      "route_family": "project_system_repair_from_validation_findings",
+      "disposition": "not_selected",
+      "reason": "P13-T02 and P13-T03 validation layers passed and no hard project-system repair finding blocks continuation."
+    },
+    {
+      "route_family": "scoped_obstruction_freeze_review",
+      "disposition": "not_selected",
+      "reason": "P6-T03 found a scoped obstruction but explicitly selected not_frozen because new payload and support continuation remained available; final v17 now selects a constructive upstream continuation rather than freeze."
+    }
+  ],
+  "source_hashes": {
+    "v17_plan": "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a",
+    "v17_backlog": "4323df2cd41e3af4eec00594ab1103635b1c5c9bae705721973c3d59c81b248d",
+    "handoff_0671": "ecef0d6495669b06549dbd6f4e4925bf5951162df1dba4b207647556d991b1a4",
+    "v17_integration_report": "d411b0ee5c4aa9adfeba74f447e0c1b3c03d066a0be78248af6f58468a700d95",
+    "v17_final_validation_report": "09b987e6f98f2555c110fc0064c43147ecc18ceb130628d63d3679513a617070",
+    "p13_t03_frontier_sync_report": "a0e2f1fb5a998ecc58199b3d3aeb39e40fc34b861fd5eb9604d5293515b5ca42",
+    "current_frontier_before_p13_t04": "f96300dcb32f5ea7db594c8d0015c991c8c488662c4f1a6a42864759f84e0310",
+    "selected_upstream_equivalence_attempt_v1": "d7481f552716ee1690fec757f6456feb6539e7d586fa8348d239563607d90803",
+    "upstream_attempt_audit_stress_selector_v1": "a69474aaffcd7f3fc8fd25e44179ed80a572d6c30a1727e0f960d821a77720a2",
+    "distance_to_gr_ledger": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+    "metric_use_ledger": "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  },
+  "distance_to_gr_delta": {
+    "changed": false,
+    "effect": "no_distance_delta",
+    "milestone": "matter_coupling",
+    "burden_id": "matter_coupling",
+    "ledger_row_updated": false,
+    "rationale": "P13-T04 selects an ordinary continuation route only. It does not discharge EqSrc RetainH GenH matter coupling Einstein equations or benchmark burdens."
+  },
+  "hard_blocks_preserved": [
+    "canonical ontology edit",
+    "general EqSrc discharge",
+    "RetainH adoption",
+    "GenH adoption",
+    "source-law adoption",
+    "MetricData(E) adoption",
+    "g_eff scope expansion",
+    "coupling-law adoption",
+    "matter-coupling derivation or adoption",
+    "stress-energy semantics",
+    "matter action",
+    "Einstein equations",
+    "benchmark promotion",
+    "Gate Chair verdict",
+    "completed derivation"
+  ]
+}
