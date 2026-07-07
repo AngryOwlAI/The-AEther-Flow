@@ -1541,7 +1541,39 @@ def git_ignored_paths(path_texts: Iterable[str]) -> set[str]:
     return ignored_paths
 
 
-def project_directories() -> list[str]:
+def git_tracked_paths() -> list[str]:
+    try:
+        result = subprocess.run(
+            ["git", "ls-files", "-z"],
+            cwd=REPO_ROOT,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+    except OSError:
+        return []
+    if result.returncode != 0:
+        return []
+    return [
+        path_text
+        for path_text in result.stdout.decode("utf-8").split("\0")
+        if path_text
+    ]
+
+
+def add_directory_with_parents(directories: set[str], directory: str) -> None:
+    parts = [part for part in directory.split("/") if part]
+    for index in range(1, len(parts) + 1):
+        directories.add("/".join(parts[:index]))
+
+
+def add_tracked_file_parents(directories: set[str], path_text: str) -> None:
+    parts = [part for part in path_text.split("/") if part]
+    for index in range(1, len(parts)):
+        directories.add("/".join(parts[:index]))
+
+
+def live_project_directories() -> list[str]:
     directories = {"."}
     for root, dirnames, _filenames in os.walk(REPO_ROOT):
         root_path = Path(root)
@@ -1557,6 +1589,18 @@ def project_directories() -> list[str]:
         if root_path == REPO_ROOT:
             continue
         directories.add(rel_path(root_path))
+    return sorted(directories, key=lambda value: (value.count("/"), value))
+
+
+def project_directories() -> list[str]:
+    tracked_paths = git_tracked_paths()
+    if not tracked_paths:
+        return live_project_directories()
+    directories = {"."}
+    for path_text in tracked_paths:
+        add_tracked_file_parents(directories, path_text)
+    for directory in REQUIRED_DIRS:
+        add_directory_with_parents(directories, directory)
     return sorted(directories, key=lambda value: (value.count("/"), value))
 
 
@@ -1731,7 +1775,7 @@ def folder_map_text(rows_by_registry: dict[str, list[dict[str, str]]]) -> str:
         "",
         "## Source Basis",
         "",
-        "- Live repository directory tree, excluding `.git/`, `.venv/`, `__pycache__/`, and Git-ignored local/cache directories.",
+        "- Git-tracked directory prefixes plus explicit reserved lanes from `REQUIRED_DIRS`; fallback live walks exclude `.git/`, `.venv/`, `__pycache__/`, and Git-ignored local/cache directories.",
         "- Source and generated CSV registries under `registries/`.",
         "- Project authority rules in `AGENTS.md` and the memory-system bootstrap script.",
         "",
