@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260707-017`
-- Latest handoff: `handoff-0686`
-- Current status: `v18_p2_t05_source_equivalence_typed_object_stress_survived_pending_selector_no_promotion`
+- Active task: `RT-20260707-018`
+- Latest handoff: `handoff-0687`
+- Current status: `v18_p2_t06_typed_object_selector_selected_p3_t01_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260707-017`
-- Latest research handoff: `handoff-0686`
-- Latest research next action: Run one bounded v18 P2-T06 Typed-object continuation selector packet.
+- Latest research task: `RT-20260707-018`
+- Latest research handoff: `handoff-0687`
+- Latest research next action: Run one bounded v18 P3-T01 EqSrc family-closure theorem-or-countermodel setup packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `typed_object_continuation_selector`
-- Role family: `theoretical-continuation-selector@0.1.0`
+- Route ID: `eqsrc_family_closure_theorem_or_countermodel_setup`
+- Role family: `director-of-research@0.3.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Select the next continuation route after typed-object stress while preserving no promotion.
+- Milestone burden: Set up one bounded EqSrc family-closure theorem-or-countermodel packet after typed-object audit and stress.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `1c389b120ebe354b475b406cf06ffac2f3a8d0f096a70a410bb6539977623689`
-- JSON SHA-256: `b0bb6bceb8507ace58ef0bb802c648f7604301c7c529d15cd7dba2e2585bd0ed`
+- YAML SHA-256: `701259018bbfcffefcdcd87f8b7cdeeec4c5c3008f9e990f1074ad40d9e74bc9`
+- JSON SHA-256: `eec5513bb8335e6ebc761df2f02cdeb8b957607c651d5269706a3d997af59bfd`
 
 ## Authority Warning
 

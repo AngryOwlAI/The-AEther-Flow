@@ -1,0 +1,48 @@
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+task_id: "RT-20260707-018"
+job_id: "AJ-RT-20260707-018-001"
+plan_task_id: "P2-T06"
+input_artifacts:
+  - "research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex"
+  - "research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex"
+conceptual_assessment:
+  typed_object_status: "draft/control source-side definition"
+  source_target_boundary: "preserved"
+  process_authority_boundary: "preserved"
+  ontology_status: "no_canonical_ontology_edit"
+  promotion_status: "no_downstream_promotion"
+route_principle: "Continue with the lowest-authority constructive route that converts live closure obligations into explicit theorem-or-countermodel burden without treating the typed object itself as proof."
+route_evaluation:
+  P3_T01_family_closure_theorem_or_countermodel_setup:
+    disposition: "selected"
+    reason: "It preserves the source-side status of the typed object while asking the next precise question: which closure theorem or countermodel burden follows from the live identity inverse composition invariant RetainH and GenH obligations."
+  repair_typed_source_equivalence_definition:
+    disposition: "not_selected"
+    reason: "Repair would imply a defect; current evidence instead shows source-pure draft/control survival."
+  minimal_countermodel_obligation_system_first:
+    disposition: "not_selected"
+    reason: "A countermodel obligation system is useful but should be scoped by P3-T01 rather than replace the plan-selected theorem/countermodel setup."
+  RetainH_primitive_requirement_packet:
+    disposition: "not_selected"
+    reason: "RetainH is live only when retention is used; selecting it immediately would over-narrow the route before family closure is mapped."
+  GenH_primitive_requirement_packet:
+    disposition: "not_selected"
+    reason: "GenH is live only when generated-family quantification is used; selecting it immediately would over-narrow the route before family closure is mapped."
+  scoped_obstruction_freeze_review:
+    disposition: "not_selected"
+    reason: "The route is open and constructive; freeze would be premature."
+selected_route: "P3_T01_family_closure_theorem_or_countermodel_setup"
+selected_next_packet_type: "bounded_theoretical_calculation"
+selected_next_role_family: "director-of-research@0.3.0"
+requires_human_gate: false
+blocked_overreads:
+  - "selector as EqSrc theorem"
+  - "selector as RetainH adoption"
+  - "selector as GenH adoption"
+  - "selector as source-law adoption"
+  - "selector as matter-coupling derivation"
+  - "selector as Einstein-equation derivation"
+  - "selector as benchmark promotion"
+recommendation: "Route to P3-T01 setup with explicit no-promotion boundary."

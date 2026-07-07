@@ -1,0 +1,53 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260707-018"
+job_id: "AJ-RT-20260707-018-001"
+plan_task_id: "P2-T06"
+input_artifacts:
+  - "research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex"
+  - "research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex"
+stress_result: "survives_as_draft_control_definition"
+audit_result: "source_pure_as_written"
+mathematical_assessment:
+  typed_object_status: "draft_control_definition"
+  closure_obligations_live:
+    - "identity witnesses"
+    - "inverse witnesses"
+    - "composition closure"
+    - "invariant-ledger completeness and preservation"
+    - "forbidden-channel incidence preservation"
+    - "RetainH if retention is used"
+    - "GenH if generated-family quantification is used"
+  theorem_status: "not_proven"
+  obstruction_status: "no_precise_scoped_obstruction_found"
+route_evaluation:
+  P3_T01_family_closure_theorem_or_countermodel_setup:
+    disposition: "selected"
+    reason: "The audited object stress-survives as a draft/control definition and supplies exactly the closure obligations needed for a family-closure theorem-or-countermodel setup."
+  repair_typed_source_equivalence_definition:
+    disposition: "not_selected"
+    reason: "P2-T04 found the object source-pure as written and P2-T05 did not identify a definition defect requiring repair before theorem/countermodel setup."
+  minimal_countermodel_obligation_system_first:
+    disposition: "not_selected"
+    reason: "Countermodel slots should be integrated into P3-T01 as theorem-or-countermodel obligations rather than split into a separate pre-P3 packet."
+  RetainH_primitive_requirement_packet:
+    disposition: "not_selected"
+    reason: "RetainH remains a live boundary condition, but P3-T01 can first separate closure theorem requirements from RetainH-specific assumptions."
+  GenH_primitive_requirement_packet:
+    disposition: "not_selected"
+    reason: "GenH remains a live boundary condition, but P3-T01 can first separate generated-family requirements from base closure assumptions."
+  scoped_obstruction_freeze_review:
+    disposition: "not_selected"
+    reason: "No scoped obstruction or repeated no-payload loop was produced by P2-T05."
+selected_route: "P3_T01_family_closure_theorem_or_countermodel_setup"
+selected_next_packet_type: "bounded_theoretical_calculation"
+selected_next_role_family: "director-of-research@0.3.0"
+requires_human_gate: false
+claim_boundary:
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_law_adopted: false
+  physics_promotion_authorized: false
+recommendation: "Route to one bounded v18 P3-T01 family-closure theorem-or-countermodel setup packet."

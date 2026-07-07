@@ -758,6 +758,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260707-016-source-equivalence-typed-object-smuggling-audit-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-017-PARENT-FUSION-NOTES-SOURCE-EQUIVALENCE-TYPED-OBJECT-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260707-017-parent-fusion-notes-source-equivalence-typed-object-refuter-stress.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-017-SOURCE-EQUIVALENCE-TYPED-OBJECT-REFUTER-STRESS-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260707-017-source-equivalence-typed-object-refuter-stress-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-018-PARENT-FUSION-NOTES-TYPED-OBJECT-CONTINUATION-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260707-018-parent-fusion-notes-typed-object-continuation-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-018-TYPED-OBJECT-CONTINUATION-SELECTOR-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260707-018-typed-object-continuation-selector-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-018-TYPED-OBJECT-CONTINUATION-SELECTOR-V1` `wiki/markdown/md-research-control-tasks-rt-20260707-018-typed-object-continuation-selector-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1361,6 +1364,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-017-PARENT-FUSION-NOTES-SOURCE-EQUIVALENCE-TYPED-OBJECT-REFUTER-STRESS` `research_control/tasks/RT-20260707-017/artifacts/parent_fusion_notes_source_equivalence_typed_object_refuter_stress.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-017-SOURCE-EQUIVALENCE-TYPED-OBJECT-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260707-018-PARENT-FUSION-NOTES-TYPED-OBJECT-CONTINUATION-SELECTOR` `research_control/tasks/RT-20260707-018/artifacts/parent_fusion_notes_typed_object_continuation_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260707-018-TYPED-OBJECT-CONTINUATION-SELECTOR-RECEIPT` `research_control/tasks/RT-20260707-018/artifacts/typed_object_continuation_selector_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260707-018-TYPED-OBJECT-CONTINUATION-SELECTOR-V1` `research_control/tasks/RT-20260707-018/artifacts/typed_object_continuation_selector_v1.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
