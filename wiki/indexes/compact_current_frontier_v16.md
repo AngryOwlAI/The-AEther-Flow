@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260707-007`
-- Latest handoff: `handoff-0676`
-- Current status: `v18_p0_t04_recommendation_coverage_seed_completed_no_physics_delta`
+- Active task: `RT-20260707-008`
+- Latest handoff: `handoff-0677`
+- Current status: `v18_p1_t01_active_state_bifurcation_policy_defined_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `active_state_bifurcation_design_note`
-- Role family: `project-control-maintainer@0.2.0`
+- Route ID: `active_state_bifurcation_renderer`
+- Role family: `tooling-engineer@0.1.0`
 - Target milestone: `none`
-- Milestone burden: Define how research handoffs and project-system sidecars coexist in active-state surfaces.
+- Milestone burden: Render explicit active_state_bifurcation fields while preserving compatibility fields.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `9a47d77e3db156d993aca1b0ba4cbfc7f2f81bacac9052f6c82344ef6a207736`
-- JSON SHA-256: `c770b70023262f022b848630044298e69d88b560f60039779e2f57fd73d377aa`
+- YAML SHA-256: `d5e35d3682dd567cc1b44bde83d91cd72f036672c02e59c2d449c5aa06f602e4`
+- JSON SHA-256: `33c0a14c28a85173c96fc81d2ee47f38bdd40e08b47b470b6fb3922cd8c109fb`
 
 ## Authority Warning
 

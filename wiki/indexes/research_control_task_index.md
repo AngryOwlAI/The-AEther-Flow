@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `24ea736c8ec27a3c3ba1834b2c9b2ec0f731db8e5ffac6c0b458ebf9b7bd7366`
-- Generated-at source timestamp: `2026-07-07T06:50:35Z`
-- Row count: `817`
+- Source fingerprint: `a321b458aeb73afd36d97a4bafdcf187228d31357fa29c4e7745e98c510245de`
+- Generated-at source timestamp: `2026-07-07T07:22:18Z`
+- Row count: `818`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260707-008|RT-20260707-007|2026-07-07T07:22:18Z|2026-07-07T07:22:18Z|active_state_bifurcation_design_note|completed|none|Define how research handoffs and project-system sidecars coexist in active-state surfaces.|project-control-maintainer@0.2.0|false|false|0|Run one bounded v18 P1-T02 active-state bifurcation renderer packet to add explicit research-handoff and project-system-sidecar fields while preserving compatibility fields.|PASS|research_control/tasks/RT-20260707-008/jobs/completions/AJC-AJ-RT-20260707-008-001.yaml|
 |RT-20260707-007|RT-20260707-006|2026-07-07T06:50:35Z|2026-07-07T06:50:35Z|v18_recommendation_coverage_seed|completed|none|Create a baseline recommendation coverage matrix before executing v18.|process-integrity-auditor@0.1.0|false|false|1|Run one bounded v18 P1-T01 active-state bifurcation design-note packet before P1 renderer changes P2 typed EqSrc work or downstream v18 tasks.|PASS|research_control/tasks/RT-20260707-007/jobs/completions/AJC-AJ-RT-20260707-007-001.yaml|
 |RT-20260707-006|RT-20260707-005|2026-07-07T06:15:46Z|2026-07-07T06:15:46Z|v18_active_state_preflight|completed|source_equivalence_eqsrc|Verify the latest research handoff and sidecar state before v18 physics or project-system tasks.|director-of-research@0.3.0|false|false|1|Run one bounded v18 P0-T04 recommendation coverage seed packet before P1 active-state bifurcation P2 typed EqSrc work or downstream v18 tasks.|PASS|research_control/tasks/RT-20260707-006/jobs/completions/AJC-AJ-RT-20260707-006-001.yaml|
 |RT-20260707-005|RT-20260707-004|2026-07-07T05:42:52Z|2026-07-07T05:42:52Z|v18_execution_backlog_materialization|completed|none|Create a task-addressable v18 backlog from the implementation plan.|project-control-maintainer@0.2.0|false|false|3|Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task.|PASS|research_control/tasks/RT-20260707-005/jobs/completions/AJC-AJ-RT-20260707-005-001.yaml|
