@@ -1,0 +1,221 @@
+completion_id: "AJC-AJ-RT-20260707-004-001"
+job_id: "AJ-RT-20260707-004-001"
+task_id: "RT-20260707-004"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-07T04:58:43Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_task_id: "P0-T01"
+  related_plan_task_id: "P0-T01"
+  plan_phase_id: "P0"
+  recommendation_ids:
+    - "V18-R01"
+    - "V18-R02"
+    - "V18-R03"
+    - "V18-R04"
+    - "V18-R05"
+    - "V18-R06"
+    - "V18-R07"
+    - "V18-R08"
+    - "V18-R09"
+    - "V18-R10"
+  implemented_task_scope: "Ran one bounded Project-Control Maintainer packet for v18 plan registration .gitignore tracking exception Markdown source registration task-local intake note and handoff to P0-T02."
+  completed_v18_tasks_to_date:
+    - "P0-T01"
+  downstream_tasks_not_implemented:
+    - "P0-T02 execution backlog materialization"
+    - "P0-T03 active-state and source-basis preflight"
+    - "P0-T04 recommendation coverage seed report"
+    - "P1 active-state bifurcation after project-system sidecars"
+    - "P2 typed source-equivalence object formalization"
+    - "P3 EqSrc family-closure theorem-or-countermodel packet"
+    - "P4 minimal countermodel obligation system"
+    - "P5 source detector/readout semantics frontier burden"
+    - "P6 non-tag-fragile finite toy response model v2"
+    - "P7 authority-limited support formalization expansion"
+    - "P8 physics-payload ratio and route-orbit control"
+    - "P9 public status-card v2 and cognitive-load reduction"
+    - "P10 focused external-review packet preparation"
+    - "P11 final v18 integration validation and handoff"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "project_control_plan_registration"
+project_system_boundary_authorized_by_plan: true
+source_authorization: "recommendations_implementation_plan_continue_task-v18"
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R01"
+    - "V18-R02"
+    - "V18-R03"
+    - "V18-R04"
+    - "V18-R05"
+    - "V18-R06"
+    - "V18-R07"
+    - "V18-R08"
+    - "V18-R09"
+    - "V18-R10"
+  implements_plan_task_id: "P0-T01"
+  implementation_status: "completed"
+  coverage_effect: "support"
+physics_claims_changed: false
+physics_progress_status:
+  status: "project_control_plan_registration_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P0-T01 registers the v18 implementation plan as project-control guidance only and executes no physics construction."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "No Distance-to-GR burden is discharged by plan registration."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+output_paths:
+  - "research_control/tasks/RT-20260707-004/artifacts/v18_plan_intake_note.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260707-004/00_TASK.yaml"
+  - "research_control/tasks/RT-20260707-004/DDR-20260707-004.md"
+  - "research_control/tasks/RT-20260707-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260707-004/jobs/AJ-RT-20260707-004-001.yaml"
+  - "research_control/tasks/RT-20260707-004/jobs/completions/AJC-AJ-RT-20260707-004-001.yaml"
+  - "research_control/tasks/RT-20260707-004/roles/project-control-maintainer@0.2.0--RT-20260707-004.yaml"
+  - "research_control/handoffs/handoff-0673.yaml"
+  - "research_control/handoffs/handoff-0673.md"
+  - "wiki/markdown/md-recommendations-implementation-plan-continue-task-v18.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=685 relationship_row_count=3513 semantic_row_count=685 vault_row_count=685"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"upstream EqSrc RetainH GenH theorem attempt\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260706-010-UPSTREAM-BURDEN-SELECTOR MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/handoffs/handoff-0672.yaml --json | exit_code=0 | returned_object_ids=none"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260707-002 latest_handoff=handoff-0672 boundary=director_decision_required"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "query_memory status PASS after refresh"
+      - "targeted memory search returned upstream EqSrc navigation surfaces"
+      - "canonical handoff-0672 and current program state inspected directly"
+      - "continue_research.py resolved handoff-0672 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P0-T01 plan registration files created"
+      - "v18 plan registered as implementation_plan project-control guidance"
+      - "handoff-0673 routes to P0-T02 backlog materialization"
+      - "handoff-0672 scientific basis preserved"
+      - "RT-20260707-003 classified as project-system sidecar evidence"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --write and --check passed"
+      - "render_compact_current_frontier_v16.py --write and --check passed"
+      - "render_task_index.py --write and --check passed"
+      - "render_dependency_graph.py write and --check passed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py passed after generated navigation artifacts were refreshed"
+      - "continue_research_memory_preflight.py --json refreshed .local retrieval and ended PASS"
+      - "bootstrap_memory_system.py --validate-only passed"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json returned PASS with no hard failures"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_documentation_impact.py --json returned PASS"
+      - "validate_research_control.py returned PASS"
+      - "validate_research_control.py --check-diff returned PASS"
+      - "run_full_research_control_validation.py --json returned PASS"
+      - "git diff --check returned PASS"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command pending until final validation pass"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-07"
+  plan_registration_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+claim_boundary:
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  source_detector_readout_semantics_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  external_outreach_authorized: false
+  completed_derivation_authorized: false
+forbidden_conclusions:
+  - "The v18 plan is physics proof."
+  - "The v18 plan is source-law adoption."
+  - "The v18 plan discharges general EqSrc."
+  - "The v18 plan adopts RetainH or GenH."
+  - "The v18 plan adopts source detector/readout semantics."
+  - "The v18 plan is coupling-law adoption."
+  - "P0-T01 executes all v18 phases."
+  - "Matter coupling is derived or adopted."
+  - "Einstein equations are started or derived."
+  - "The exact-GR benchmark is promoted."
+  - "The external-review packet is sent."
+  - "Any validator result grants proof authority."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+verdict: "v18_p0_t01_plan_registration_no_physics_delta"
+coherent_resolution_summary: "RT-20260707-004 registered the v18 recommendations implementation plan as project-control implementation guidance added the matching .gitignore exception preserved handoff-0672 as the scientific basis for later upstream EqSrc RetainH GenH theorem work classified RT-20260707-003 as sidecar project-system evidence and handed off to P0-T02 backlog materialization. No physics claim Distance-to-GR status source-law status EqSrc RetainH GenH matter-coupling benchmark proof external outreach or Gate Chair status changed."
+next_recommendation: "Run one bounded v18 P0-T02 backlog materialization packet to create research_control/design/v18_recommendation_backlog.yaml and research_control/design/v18_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 active-state bifurcation or any downstream v18 task."
+rollback_or_repair_notes: "If validation rejects the P0-T01 control scope revert only RT-20260707-004 records the v18 registry row and the v18 .gitignore exception; do not alter v17 science or project-control tasks."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 686
+    relationship_row_count: 3518
+    semantic_row_count: 686
+    vault_row_count: 686
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"upstream EqSrc RetainH GenH theorem attempt\" --limit 10 --json"
+      query_type: "search"
+      query_text: "upstream EqSrc RetainH GenH theorem attempt"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260706-010-UPSTREAM-BURDEN-SELECTOR"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260706-010-UPSTREAM-BURDEN-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260706-010/artifacts/upstream_burden_selector_v1.md"
+      source_hash: "9b04c7c695510123d623dd975fef927d49d1b769a2f0ad87dd1e8c6f7172b1b0"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"

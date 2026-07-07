@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260707-002` and `handoff-0672`.
+`RT-20260707-004` and `handoff-0673`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260707-002` |
-| Latest handoff ID | `handoff-0672` |
-| Current status | `v17_completed_ordinary_continuation_selected_no_physics_delta` |
+| Active task ID | `RT-20260707-004` |
+| Latest handoff ID | `handoff-0673` |
+| Current status | `v18_p0_t01_plan_registration_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 completed ordinary continuation selected no physics delta |
+| Current route family | v18 p0 t01 plan registration handoff to backlog materialization no physics claim change |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs. |
-| Required next authority | The next ordinary continuation may create exactly one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet. It must not promote physics claims or change Distance-to-GR status unless separately justified by protected authority. |
-| Next recommended action | Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P0-T02 backlog materialization packet to create research_control/design/v18_recommendation_backlog.yaml and research_control/design/v18_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 active-state bifurcation or any downstream v18 task. |
+| Required next authority | P0-T02 backlog materialization |
+| Next recommended action | Run one bounded v18 P0-T02 backlog materialization packet to create research_control/design/v18_recommendation_backlog.yaml and research_control/design/v18_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 active-state bifurcation or any downstream v18 task. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260707-002/00_TASK.yaml`.
-- Active task objective: not recorded.
-- Latest handoff path: `research_control/handoffs/handoff-0672.yaml`.
-- Latest handoff summary: RT-20260707-002 completed v17 P13-T04 by proving all applicable v17 plan tasks complete and selecting upstream_EqSrc_RetainH_GenH_theorem_attempt as the single ordinary continuation route from validated v17 outputs. No Distance-to-GR ledger status change, physics promotion, proof authority, source-law adoption, general EqSrc discharge, RetainH adoption, GenH adoption, matter-coupling derivation, Einstein-equation derivation, benchmark promotion, Gate Chair verdict, or completed-derivation claim is authorized.
-- Current route family: v17 completed ordinary continuation selected no physics delta.
-- Next recommended action: Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs.
+- Active task path: `research_control/tasks/RT-20260707-004/00_TASK.yaml`.
+- Active task objective: Add recommendations_implementation_plan_continue_task-v18.md to tracked project-control guidance register it as implementation guidance only preserve handoff-0672 as the scientific basis for later upstream EqSrc RetainH GenH theorem work classify RT-20260707-003 as project-system sidecar evidence and hand off to P0-T02 backlog materialization without changing physics claims.
+- Latest handoff path: `research_control/handoffs/handoff-0673.yaml`.
+- Latest handoff summary: RT-20260707-004 completed one bounded Project-Control Maintainer packet for v18 P0-T01 plan registration. It added the v18 implementation-plan ignore exception registered recommendations_implementation_plan_continue_task-v18.md as implementation_plan project-control guidance created a task-local intake note recorded all ten recommendation IDs preserved handoff-0672 as the scientific basis for later upstream EqSrc RetainH GenH theorem work classified RT-20260707-003 as sidecar project-system evidence and changed no physics claims.
+- Current route family: v18 p0 t01 plan registration handoff to backlog materialization no physics claim change.
+- Next recommended action: Run one bounded v18 P0-T02 backlog materialization packet to create research_control/design/v18_recommendation_backlog.yaml and research_control/design/v18_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 active-state bifurcation or any downstream v18 task.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs.
+Run one bounded v18 P0-T02 backlog materialization packet to create research_control/design/v18_recommendation_backlog.yaml and research_control/design/v18_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 active-state bifurcation or any downstream v18 task.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,20 +301,27 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260707-002`;
-- latest handoff: `handoff-0672`;
-- current status: `v17_completed_ordinary_continuation_selected_no_physics_delta`;
+- active task: `RT-20260707-004`;
+- latest handoff: `handoff-0673`;
+- current status: `v18_p0_t01_plan_registration_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
+- latest handoff validation `bootstrap_memory_system`: PENDING;
+- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
+- latest handoff validation `git_diff_check`: PENDING;
+- latest handoff validation `graph_freshness_check`: PENDING;
+- latest handoff validation `validate_documentation_impact`: PENDING;
+- latest handoff validation `validate_research_control`: PENDING;
+- latest handoff validation `validate_research_control_check_diff`: PENDING;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0672.yaml`
-- `research_control/tasks/RT-20260707-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-0673.yaml`
+- `research_control/tasks/RT-20260707-004/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -330,7 +337,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0672*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0673*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

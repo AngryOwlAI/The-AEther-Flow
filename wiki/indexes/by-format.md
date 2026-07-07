@@ -121,6 +121,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15` `implementations_plans/recommendations_implementation_plan_continue_task-v15.md`
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16` `implementations_plans/recommendations_implementation_plan_continue_task-v16.md`
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17` `implementations_plans/recommendations_implementation_plan_continue_task-v17.md`
+- `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18` `implementations_plans/recommendations_implementation_plan_continue_task-v18.md`
 - `MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/research-agent-workflow.publication-brief.md`
 - `MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `research_control/current_frontier.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-POLICY-V1` `research_control/design/accepted_status_calibration_policy_v1.md`
@@ -815,6 +816,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V15` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v15.md`
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v16.md`
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v17.md`
+- `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v18.md`
 - `WIKI-MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-research-agent-workflow-publication-brief.md`
 - `WIKI-MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `wiki/markdown/md-research-control-current-frontier.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-POLICY-V1` `wiki/markdown/md-research-control-design-accepted-status-calibration-policy-v1.md`
