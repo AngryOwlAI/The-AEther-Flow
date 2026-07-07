@@ -1,0 +1,84 @@
+handoff_id: "handoff-0683"
+created_at: "2026-07-07T10:52:51Z"
+task_id: "RT-20260707-014"
+decision_id: "DDR-20260707-014"
+job_id: "AJ-RT-20260707-014-001"
+completion_path: "research_control/tasks/RT-20260707-014/jobs/completions/AJC-AJ-RT-20260707-014-001.yaml"
+source_task_id: "RT-20260707-014"
+source_job_id: "AJ-RT-20260707-014-001"
+source_completion_id: "AJC-AJ-RT-20260707-014-001"
+status: "completed"
+summary: "RT-20260707-014 completed v18 P2-T02 by creating the typed source-equivalence object schema and header-only SOURCE_EQUIVALENCE_OBJECT_REGISTRY. Registry row population is deferred to P2-T03. No general EqSrc discharge RetainH adoption GenH adoption source-law adoption physics promotion or Distance-to-GR ledger delta is authorized."
+next_action: "Run one bounded v18 P2-T03 initial typed source-equivalence registry population packet."
+loop_risk_route: "v18_p2_t03_initial_source_equivalence_registry_population_no_physics_promotion"
+claim_boundary:
+  allowed_next_scope: "P2-T03 initial typed source-equivalence registry population"
+  immediate_routing_authority: "handoff-0683 selects P2-T03 because P2-T02 created the schema and empty registry."
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_detector_readout_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  benchmark_promoted: false
+  external_outreach_authorized: false
+  proof_authority: false
+blocked_claims:
+  - "P2-T02 schema as physics proof"
+  - "P2-T02 schema as completed v18 implementation"
+  - "P2-T02 schema as source-law adoption"
+  - "P2-T02 schema as general EqSrc discharge"
+  - "P2-T02 schema as RetainH adoption"
+  - "P2-T02 schema as GenH adoption"
+  - "P2-T02 schema as source detector/readout semantics adoption"
+  - "P2-T02 schema as coupling-law adoption"
+  - "P2-T02 schema as matter-coupling derivation"
+  - "P2-T02 schema as Einstein-equation evidence"
+  - "P2-T02 schema as benchmark promotion"
+  - "P2-T02 schema as external outreach"
+  - "P2-T02 schema as completed derivation"
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260707-014"
+  latest_research_handoff_id: "handoff-0683"
+  latest_research_next_action: "Run one bounded v18 P2-T03 initial typed source-equivalence registry population packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+distance_to_gr:
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  status: "schema_exists_header_only_registry"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260707-014 adds a project-control schema and empty registry only. The source_equivalence_eqsrc ledger row remains draft/control with general equivalence theorem missing."
+selected_next_route:
+  route_id: "initial_typed_source_equivalence_registry_population"
+  plan_task_id: "P2-T03"
+  role_family: "research-ops-curator@0.1.0 if registered otherwise Director-selected project-control/schema task overlay"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Populate SOURCE_EQUIVALENCE_OBJECT_REGISTRY with initial rows from P2-T01/P2-T02 sources."
+  requires_human_gate: false
+validation:
+  memory_preflight: "PASS"
+  query_memory_status: "PASS"
+  continue_research_json: "PASS"
+  schema_artifact: "PASS"
+  registry_header_only: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

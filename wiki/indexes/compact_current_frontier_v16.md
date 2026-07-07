@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260707-013`
-- Latest handoff: `handoff-0682`
-- Current status: `v18_p2_t01_source_equivalence_typed_object_problem_statement_completed_no_distance_delta`
+- Active task: `RT-20260707-014`
+- Latest handoff: `handoff-0683`
+- Current status: `v18_p2_t02_typed_source_equivalence_schema_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260707-013`
-- Latest research handoff: `handoff-0682`
-- Latest research next action: Run one bounded v18 P2-T02 typed source-equivalence schema and registry packet.
+- Latest research task: `RT-20260707-014`
+- Latest research handoff: `handoff-0683`
+- Latest research next action: Run one bounded v18 P2-T03 initial typed source-equivalence registry population packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `typed_source_equivalence_schema_and_registry`
-- Role family: `schema-maintainer@0.1.0 if registered otherwise Director-selected project-control/schema task overlay`
+- Route ID: `initial_typed_source_equivalence_registry_population`
+- Role family: `research-ops-curator@0.1.0 if registered otherwise Director-selected project-control/schema task overlay`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Create a machine-readable schema for typed source-equivalence objects.
+- Milestone burden: Populate SOURCE_EQUIVALENCE_OBJECT_REGISTRY with initial rows from P2-T01/P2-T02 sources.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `887f29ab99afff1f2bdc4cd8798fcc220188c75007f544315c9c696ceff4e824`
-- JSON SHA-256: `9973b64228ca01958d9d7cc469bfe910300161747418c73b494e536d63a832b8`
+- YAML SHA-256: `0f248fbdab4cbb12d2848dda09b6e8be88cd28768715feabc85e2270800e1d15`
+- JSON SHA-256: `757360e544e1e5b530f441f09c1ed5120b53ea3d4d947ef737a3101fe2defaeb`
 
 ## Authority Warning
 

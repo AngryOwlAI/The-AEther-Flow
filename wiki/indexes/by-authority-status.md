@@ -663,6 +663,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-INDEX-V1` `wiki/markdown/md-research-control-design-source-certificate-instance-library-index-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA` `wiki/markdown/md-research-control-design-source-certificate-instance-library-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA-V1` `wiki/markdown/md-research-control-design-source-certificate-instance-library-schema-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1` `wiki/markdown/md-research-control-design-source-equivalence-typed-object-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-EXTENSION-CLASSIFICATION-CHECKLIST-V1` `wiki/markdown/md-research-control-design-source-extension-classification-checklist-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1` `wiki/markdown/md-research-control-design-source-model-zoo-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1` `wiki/markdown/md-research-control-design-source-model-zoo-v1.md`
@@ -1257,6 +1258,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-INDEX-V1` `research_control/design/source_certificate_instance_library_index_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA` `research_control/design/source_certificate_instance_library_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA-V1` `research_control/design/source_certificate_instance_library_schema_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1` `research_control/design/source_equivalence_typed_object_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-EXTENSION-CLASSIFICATION-CHECKLIST-V1` `research_control/design/source_extension_classification_checklist_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1` `research_control/design/source_model_zoo_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1` `research_control/design/source_model_zoo_v1.md`

@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0682.yaml"
+  - "research_control/handoffs/handoff-0683.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v1.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260707-013"
-  latest_handoff_id: "handoff-0682"
-  current_status: "v18_p2_t01_source_equivalence_typed_object_problem_statement_completed_no_distance_delta"
+  active_task_id: "RT-20260707-014"
+  latest_handoff_id: "handoff-0683"
+  current_status: "v18_p2_t02_typed_source_equivalence_schema_completed_no_physics_delta"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260707-013"
-  latest_research_handoff_id: "handoff-0682"
-  latest_research_next_action: "Run one bounded v18 P2-T02 typed source-equivalence schema and registry packet."
+  latest_research_task_id: "RT-20260707-014"
+  latest_research_handoff_id: "handoff-0683"
+  latest_research_next_action: "Run one bounded v18 P2-T03 initial typed source-equivalence registry population packet."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "typed_source_equivalence_schema_and_registry"
-  role_family: "schema-maintainer@0.1.0 if registered otherwise Director-selected project-control/schema task overlay"
+  route_id: "initial_typed_source_equivalence_registry_population"
+  role_family: "research-ops-curator@0.1.0 if registered otherwise Director-selected project-control/schema task overlay"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Create a machine-readable schema for typed source-equivalence objects."
+  milestone_burden: "Populate SOURCE_EQUIVALENCE_OBJECT_REGISTRY with initial rows from P2-T01/P2-T02 sources."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
