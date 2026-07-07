@@ -1,0 +1,288 @@
+completion_id: "AJC-AJ-RT-20260707-021-001"
+job_id: "AJ-RT-20260707-021-001"
+task_id: "RT-20260707-021"
+decision_id: "DDR-20260707-021"
+status: "completed"
+completed_at: "2026-07-07T21:46:23Z"
+completed_by_role: "ontology-formalizer@0.2.0--RT-20260707-021"
+source_role_id: "ontology-formalizer"
+source_role_version: "0.2.0"
+plan_task_id: "P3-T03"
+objective_result: "completed"
+summary: "Completed v18 P3-T03 by extracting RetainH and GenH primitive boundaries from the P3-T02 conditional family-closure theorem candidate. RetainH and GenH are each not_required_here for the already-declared closed-family theorem and candidate_definition_needed for their H-retention or H-generated extensions. No RetainH adoption GenH adoption source-law adoption general EqSrc discharge or Distance-to-GR ledger delta is claimed."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_task_id: "P3-T03"
+  plan_phase_id: "P3"
+  implemented_task_scope: "RetainH and GenH primitive-boundary extraction"
+  completed_v18_tasks_this_packet:
+    - "P3-T03"
+  downstream_tasks_not_implemented:
+    - "P3-T04 and later v18 tasks"
+  all_applicable_plan_tasks_proven: false
+artifacts:
+  - "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_v1.tex"
+  - "research_control/tasks/RT-20260707-021/artifacts/child_phys_math_retainh_genh_primitive_boundary.yaml"
+  - "research_control/tasks/RT-20260707-021/artifacts/child_phys_phil_retainh_genh_primitive_boundary.yaml"
+  - "research_control/tasks/RT-20260707-021/artifacts/parent_conflict_review_retainh_genh_primitive_boundary.yaml"
+  - "research_control/tasks/RT-20260707-021/artifacts/parent_fusion_notes_retainh_genh_primitive_boundary.md"
+  - "research_control/tasks/RT-20260707-021/artifacts/validate_retainh_genh_primitive_boundary.py"
+  - "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_validation.json"
+  - "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_receipt.md"
+output_paths:
+  - "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_v1.tex"
+  - "research_control/tasks/RT-20260707-021/artifacts/child_phys_math_retainh_genh_primitive_boundary.yaml"
+  - "research_control/tasks/RT-20260707-021/artifacts/child_phys_phil_retainh_genh_primitive_boundary.yaml"
+  - "research_control/tasks/RT-20260707-021/artifacts/parent_conflict_review_retainh_genh_primitive_boundary.yaml"
+  - "research_control/tasks/RT-20260707-021/artifacts/parent_fusion_notes_retainh_genh_primitive_boundary.md"
+  - "research_control/tasks/RT-20260707-021/artifacts/validate_retainh_genh_primitive_boundary.py"
+  - "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_validation.json"
+  - "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_receipt.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260707-021/00_TASK.yaml"
+  - "research_control/tasks/RT-20260707-021/DDR-20260707-021.md"
+  - "research_control/tasks/RT-20260707-021/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260707-021/jobs/AJ-RT-20260707-021-001.yaml"
+  - "research_control/tasks/RT-20260707-021/jobs/completions/AJC-AJ-RT-20260707-021-001.yaml"
+  - "research_control/tasks/RT-20260707-021/roles/ontology-formalizer@0.2.0--RT-20260707-021.yaml"
+  - "research_control/handoffs/handoff-0690.yaml"
+  - "research_control/handoffs/handoff-0690.md"
+extra_read_paths:
+  - "research_control/handoffs/handoff-0689.yaml"
+  - "research_control/handoffs/handoff-0689.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  - "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex"
+  - "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_attempt_receipt.md"
+  - "research_control/tasks/RT-20260707-020/artifacts/parent_fusion_notes_eqsrc_family_closure_attempt.md"
+  - "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=709 relationship_row_count=3615 semantic_row_count=709 vault_row_count=709 local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1 --json | exit_code=0 | returned_object_ids=TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"RetainH GenH primitive boundary extraction P3-T03\" --limit 10 --json | exit_code=0 | returned_object_ids=none"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260707-020 latest_handoff=handoff-0689 next_action=P3-T03"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260707-021/artifacts/validate_retainh_genh_primitive_boundary.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260707-021/artifacts/validate_retainh_genh_primitive_boundary.py | exit_code=0 | status=PASS primitive_boundary_result=primitive_boundary_extracted_no_adoption next_route=P3-T04"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 709
+    relationship_row_count: 3615
+    semantic_row_count: 709
+    vault_row_count: 709
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1"
+      returned_object_ids:
+        - "TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "dc5754c36eb264ce9a4b2713f5630a206fe834d7cf35db00d504a70f4fcbb4be"
+    - object_id: "TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex"
+      source_hash: "3f644b68b3d81c6892517a2e3a4c7f1a777a9d201bff0716c5d3b4936597d618"
+claim_boundary:
+  allowed_scope: "P3-T03 primitive-boundary extraction only"
+  primitive_boundary_result: "primitive_boundary_extracted_no_adoption"
+  RetainH_status_for_closed_declared_family: "not_required_here"
+  RetainH_status_for_H_retention_extension: "candidate_definition_needed"
+  GenH_status_for_closed_declared_family: "not_required_here"
+  GenH_status_for_H_generated_extension: "candidate_definition_needed"
+  physics_promotion_authorized: false
+  scientific_claims_changed: true
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+validation:
+  route_input_inspection: "PASS"
+  primitive_classifications_present: "PASS"
+  parent_child_synthesis: "PASS"
+  task_local_validator: "PASS"
+validation_status: "PASS"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-07"
+  p3_t03_consumes_gate_authority: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable_primitive_boundary_no_gate"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS after refresh"
+      - "continue_research.py resolved handoff-0689 and P3-T03"
+      - "v18 plan P3-T03 section and P3-T02 theorem artifact inspected"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "retainh_genh_primitive_boundary_v1.tex created"
+      - "RetainH and GenH classified with allowed vocabulary"
+      - "Neither primitive adopted"
+      - "Next route P3-T04 recorded"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "task-local validator PASS"
+      - "validator py_compile PASS"
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "renderers run after this completion receipt is created"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap_memory_system.py runs after this completion receipt is created"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "validate_claim_language.py --changed --json runs after this completion receipt is created"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260707-021/artifacts/child_phys_math_retainh_genh_primitive_boundary.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260707-021/artifacts/child_phys_phil_retainh_genh_primitive_boundary.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260707-021/artifacts/parent_conflict_review_retainh_genh_primitive_boundary.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Children agreed on primitive-boundary classifications with no RetainH or GenH adoption."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260707-021/artifacts/parent_fusion_notes_retainh_genh_primitive_boundary.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused artifact extracts closed-family and extension-specific primitive boundaries while routing to P3-T04 audit."
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260707-021-001"
+    payload_type: "countermodel_or_obstruction"
+    name: "RetainH primitive-boundary classification"
+    summary: "RetainH is not required for the supplied closed-family theorem but is candidate_definition_needed for H-retention extensions."
+  - payload_id: "NMP-RT-20260707-021-002"
+    payload_type: "countermodel_or_obstruction"
+    name: "GenH primitive-boundary classification"
+    summary: "GenH is not required for the supplied closed-family theorem but is candidate_definition_needed for H-generated family extensions."
+  - payload_id: "NMP-RT-20260707-021-003"
+    payload_type: "countermodel_or_obstruction"
+    name: "H-retention and H-generation omission witness slots"
+    summary: "Source-only slots show why applying H-retention without RetainH and expanding a source family without GenH cannot support extension claims."
+mathematical_payload_manifest:
+  - payload_id: "MP-RT-20260707-021-001"
+    payload_family: "primitive-boundary classification"
+    claim_status: "draft/control boundary extraction only"
+    proof_authority: false
+  - payload_id: "MP-RT-20260707-021-002"
+    payload_family: "minimal omission witness slots"
+    claim_status: "source-only extension pressure witnesses"
+    proof_authority: false
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged_no_canonical_ontology_edit"
+  - burden: "Source equivalence EqSrc"
+    status: "primitive_boundaries_extracted_no_general_discharge"
+  - burden: "RetainH"
+    status: "not_adopted_candidate_definition_needed_for_H_retention_extension"
+  - burden: "GenH"
+    status: "not_adopted_candidate_definition_needed_for_H_generated_extension"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged"
+  - burden: "g_eff"
+    status: "unchanged_no_metric_scope_expansion"
+  - burden: "matter coupling"
+    status: "blocked_unchanged"
+  - burden: "Einstein equations"
+    status: "blocked_unchanged"
+  - burden: "finite-variation robustness"
+    status: "unchanged"
+  - burden: "benchmark promotion"
+    status: "blocked_no_promotion"
+  - burden: "Gate Chair status"
+    status: "unchanged_no_verdict"
+  - burden: "current route freeze or hard-fail status"
+    status: "not_frozen_route_to_p3_t04"
+distance_to_gr_delta:
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  reason: "P3-T03 extracts primitive boundaries only and does not adopt RetainH GenH EqSrc or any source law."
+freeze_criteria_status:
+  evaluated: true
+  repeated_burden: false
+  scoped_obstruction_present: false
+  new_mathematical_payload_present: true
+  freeze_decision: "not_frozen"
+  reason: "The packet adds primitive-boundary classifications and omission witness slots, so it is not a no-payload repeat."
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R01"
+    - "V18-R02"
+    - "V18-R03"
+  implements_plan_task_id: "P3-T03"
+  implementation_status: "completed"
+  coverage_effect: "direct"
+forbidden_conclusion_summary:
+  - "No general EqSrc discharge."
+  - "No RetainH adoption."
+  - "No GenH adoption."
+  - "No source-law adoption."
+  - "No matter-coupling derivation."
+  - "No Einstein-equation derivation."
+  - "No benchmark promotion."
+  - "No Gate Chair verdict."
+  - "No completed derivation."
+project_improvement_signals: []
+next_recommended_action: "Run one bounded v18 P3-T04 smuggling audit of the family-closure attempt."

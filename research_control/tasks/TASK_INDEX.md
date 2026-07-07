@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `5fcb613f669907e2a237486775643e52fe5b5741a8ee2a3cb38898e5fa615946`
-- Generated-at source timestamp: `2026-07-07T21:08:39Z`
-- Row count: `830`
+- Source fingerprint: `0a5124e452799308cc24707a994514d456acc92181dfd0e82478e4ffc9f1cf96`
+- Generated-at source timestamp: `2026-07-07T21:46:23Z`
+- Row count: `831`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260707-021|RT-20260707-020|2026-07-07T21:46:23Z|2026-07-07T21:46:23Z|retainh_genh_primitive_boundary_extraction|completed|source_equivalence_eqsrc|Extract exact RetainH and GenH primitive-boundary consequences from the P3-T02 theorem-or-countermodel result.|ontology-formalizer@0.2.0|false|false|9|Run one bounded v18 P3-T04 smuggling audit of the family-closure attempt.|PASS|research_control/tasks/RT-20260707-021/jobs/completions/AJC-AJ-RT-20260707-021-001.yaml|
 |RT-20260707-020|RT-20260707-019|2026-07-07T21:08:39Z|2026-07-07T21:08:39Z|eqsrc_family_closure_theorem_or_countermodel|completed|source_equivalence_eqsrc|Discharge, refute, or sharpen OB-P6T02-GENERAL-EQSRC-FAMILY-CLOSURE-MISSING.|ontology-formalizer@0.2.0|false|false|9|Run one bounded v18 P3-T03 RetainH and GenH primitive-boundary extraction packet.|PASS|research_control/tasks/RT-20260707-020/jobs/completions/AJC-AJ-RT-20260707-020-001.yaml|
 |RT-20260707-019|RT-20260707-018|2026-07-07T13:41:34Z|2026-07-07T13:41:34Z|eqsrc_family_closure_theorem_or_countermodel_setup|completed|source_equivalence_eqsrc|Set up one bounded EqSrc family-closure theorem-or-countermodel packet after typed-object audit and stress.|director-of-research@0.3.0|false|false|8|Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet.|PASS|research_control/tasks/RT-20260707-019/jobs/completions/AJC-AJ-RT-20260707-019-001.yaml|
 |RT-20260707-018|RT-20260707-017|2026-07-07T13:07:23Z|2026-07-07T13:07:23Z|source_equivalence_typed_object_continuation_selector|completed|source_equivalence_eqsrc|Select one next route after typed-object definition, audit, and stress.|theoretical-continuation-selector@0.1.0|false|false|8|Run one bounded v18 P3-T01 EqSrc family-closure theorem-or-countermodel setup packet.|PASS|research_control/tasks/RT-20260707-018/jobs/completions/AJC-AJ-RT-20260707-018-001.yaml|

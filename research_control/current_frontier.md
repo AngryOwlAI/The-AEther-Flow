@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260707-020` and `handoff-0689`.
+`RT-20260707-021` and `handoff-0690`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260707-020` |
-| Latest handoff ID | `handoff-0689` |
-| Current status | `v18_p3_t02_conditional_eqsrc_family_closure_theorem_candidate_no_promotion` |
+| Active task ID | `RT-20260707-021` |
+| Latest handoff ID | `handoff-0690` |
+| Current status | `v18_p3_t03_retainh_genh_primitive_boundary_extracted_no_adoption` |
 | V16 completed | false |
-| Current route family | v18 p3 t03 retainh genh primitive boundary extraction no promotion |
+| Current route family | v18 p3 t04 eqsrc family closure smuggling audit no promotion |
 | Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: conditional_eqsrc_family_closure_theorem_candidate_no_general_discharge |
-| Required next authority | Run one bounded v18 P3-T03 RetainH and GenH primitive-boundary extraction packet. |
-| Next recommended action | Run one bounded v18 P3-T03 RetainH and GenH primitive-boundary extraction packet. |
+| Current burden | `source_equivalence_eqsrc`; status: retainh_genh_primitive_boundaries_extracted_no_adoption |
+| Required next authority | Run one bounded v18 P3-T04 smuggling audit of the family-closure attempt. |
+| Next recommended action | Run one bounded v18 P3-T04 smuggling audit of the family-closure attempt. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260707-020` |
-| Latest research handoff ID | `handoff-0689` |
-| Latest research next action | Run one bounded v18 P3-T03 RetainH and GenH primitive-boundary extraction packet. |
+| Latest research task ID | `RT-20260707-021` |
+| Latest research handoff ID | `handoff-0690` |
+| Latest research next action | Run one bounded v18 P3-T04 smuggling audit of the family-closure attempt. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260707-020/00_TASK.yaml`.
-- Active task objective: Execute one bounded non-promotional P3-T02 EqSrc family-closure theorem-or-countermodel attempt over the typed source family F_src.
-- Latest handoff path: `research_control/handoffs/handoff-0689.yaml`.
-- Latest handoff summary: Completed v18 P3-T02 by supplying a conditional EqSrc_T family-closure theorem candidate under explicit source-only identity inverse composition invariant-ledger comparison and no-target hypotheses plus one missing-inverse minimal countermodel slot.
-- Current route family: v18 p3 t03 retainh genh primitive boundary extraction no promotion.
-- Next recommended action: Run one bounded v18 P3-T03 RetainH and GenH primitive-boundary extraction packet.
+- Active task path: `research_control/tasks/RT-20260707-021/00_TASK.yaml`.
+- Active task objective: Extract exact RetainH and GenH primitive-boundary consequences from the P3-T02 theorem-or-countermodel result.
+- Latest handoff path: `research_control/handoffs/handoff-0690.yaml`.
+- Latest handoff summary: Completed v18 P3-T03 by extracting RetainH and GenH primitive boundaries from the P3-T02 conditional family-closure theorem candidate. Both primitives are not_required_here for the already-declared closed-family theorem and candidate_definition_needed for their extension-specific uses.
+- Current route family: v18 p3 t04 eqsrc family closure smuggling audit no promotion.
+- Next recommended action: Run one bounded v18 P3-T04 smuggling audit of the family-closure attempt.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P3-T03 RetainH and GenH primitive-boundary extraction packet.
+Run one bounded v18 P3-T04 smuggling audit of the family-closure attempt.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,25 +320,25 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260707-020`;
-- latest handoff: `handoff-0689`;
-- current status: `v18_p3_t02_conditional_eqsrc_family_closure_theorem_candidate_no_promotion`;
+- active task: `RT-20260707-021`;
+- latest handoff: `handoff-0690`;
+- current status: `v18_p3_t03_retainh_genh_primitive_boundary_extracted_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `continue_research_json`: PASS;
 - latest handoff validation `memory_preflight`: PASS;
+- latest handoff validation `primitive_boundary_artifact`: PASS;
 - latest handoff validation `query_memory_status`: PASS;
 - latest handoff validation `task_local_validator`: PASS;
-- latest handoff validation `theorem_artifact`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0689.yaml`
-- `research_control/tasks/RT-20260707-020/00_TASK.yaml`
+- `research_control/handoffs/handoff-0690.yaml`
+- `research_control/tasks/RT-20260707-021/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -354,7 +354,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0689*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0690*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

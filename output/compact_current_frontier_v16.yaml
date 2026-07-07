@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0689.yaml"
+  - "research_control/handoffs/handoff-0690.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v1.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260707-020"
-  latest_handoff_id: "handoff-0689"
-  current_status: "v18_p3_t02_conditional_eqsrc_family_closure_theorem_candidate_no_promotion"
+  active_task_id: "RT-20260707-021"
+  latest_handoff_id: "handoff-0690"
+  current_status: "v18_p3_t03_retainh_genh_primitive_boundary_extracted_no_adoption"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260707-020"
-  latest_research_handoff_id: "handoff-0689"
-  latest_research_next_action: "Run one bounded v18 P3-T03 RetainH and GenH primitive-boundary extraction packet."
+  latest_research_task_id: "RT-20260707-021"
+  latest_research_handoff_id: "handoff-0690"
+  latest_research_next_action: "Run one bounded v18 P3-T04 smuggling audit of the family-closure attempt."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "retainh_genh_primitive_boundary_extraction"
-  role_family: "ontology-formalizer@0.2.0"
+  route_id: "eqsrc_family_closure_smuggling_audit"
+  role_family: "smuggling-auditor@0.2.0"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Extract exact RetainH and GenH primitive-boundary consequences from the P3-T02 theorem-or-countermodel result."
+  milestone_burden: "Audit the family-closure theorem-or-countermodel attempt for target imports and authority laundering."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false

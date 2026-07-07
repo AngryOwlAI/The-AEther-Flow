@@ -1,0 +1,34 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260707-021"
+artifact_id: "child_phys_math_retainh_genh_primitive_boundary"
+status: "completed"
+boundary_result: "primitive_boundary_extracted_no_adoption"
+upstream_result:
+  source_artifact: "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex"
+  primary_result: "family_closure_theorem_candidate_supplied"
+  theorem_scope: "already-declared closed source family with supplied identity inverse composition invariant-ledger comparison and no-target hypotheses"
+retainh_classification:
+  closed_declared_family: "not_required_here"
+  H_retention_extension: "candidate_definition_needed"
+  reason: "Closed-family EqSrc_T theorem uses supplied family closure; an H-retention theorem additionally needs a source-side preservation rule for record certificate invariant forbidden-channel comparison and negative-control entries."
+genh_classification:
+  closed_declared_family: "not_required_here"
+  H_generated_extension: "candidate_definition_needed"
+  reason: "Closed-family EqSrc_T theorem does not generate family members; an H-generated theorem additionally needs a source-side generation and membership rule for generated objects morphisms and ledgers."
+minimal_witness_slots:
+  - slot: "apply_H_retention_without_RetainH"
+    consequence: "Ledger preservation under an H-retention operation is not derivable, so the extension comparison must block or remain undefined."
+  - slot: "expand_source_family_without_GenH"
+    consequence: "Generated objects and morphisms are not in the declared family without a GenH rule, so family closure cannot be inferred."
+new_mathematical_payload:
+  - "RetainH primitive-boundary classification"
+  - "GenH primitive-boundary classification"
+  - "Two source-only omission witness slots"
+claim_boundary:
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_law_adopted: false
+  physics_promotion_authorized: false
+next_route: "P3-T04"

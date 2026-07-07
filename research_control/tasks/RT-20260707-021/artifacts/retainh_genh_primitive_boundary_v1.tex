@@ -1,0 +1,294 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\EqSrc}{\mathrm{EqSrc}}
+\newcommand{\EqSrcT}{\mathrm{EqSrc}_{T}}
+\newcommand{\RetainH}{\mathrm{RetainH}}
+\newcommand{\GenH}{\mathrm{GenH}}
+\newcommand{\Fsrc}{\mathcal{F}_{\mathrm{src}}}
+\newcommand{\Osrc}{\mathcal{O}_{\mathrm{src}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\Isrc}{\mathcal{I}_{\mathrm{src}}}
+\newcommand{\Asrc}{\mathcal{A}_{\mathrm{src}}}
+\newcommand{\Psrc}{\mathcal{P}_{\mathrm{src}}}
+\newcommand{\Nsrc}{\mathcal{N}_{\mathrm{src}}}
+\newcommand{\Csrc}{C_{\mathrm{src}}}
+\newcommand{\Block}{\mathrm{Block}}
+\newcommand{\NoTarget}{\mathsf{NoTarget}}
+\newcommand{\Hret}{\rho_{H}}
+\newcommand{\Hgen}{\gamma_{H}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Boundary Lemma}
+\newtheorem{witness}{Minimal Witness Slot}
+\newtheorem{remark}{Boundary Remark}
+
+\title{RetainH and GenH Primitive-Boundary Extraction v1}
+\author{Ontology Formalizer Packet RT-20260707-021}
+\date{2026-07-07}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v18 P3-T03 as a draft/control science artifact. It
+extracts the exact primitive-boundary consequences for \(\RetainH\) and
+\(\GenH\) from the P3-T02 conditional \(\EqSrcT\) family-closure theorem
+candidate.
+
+The primary result is:
+\[
+  \texttt{primitive\_boundary\_extracted\_no\_adoption}.
+\]
+
+\begin{verbatim}
+primitive_boundary_result: primitive_boundary_extracted_no_adoption
+RetainH_adopted: false
+GenH_adopted: false
+adoption_requested: false
+next_route: P3-T04
+\end{verbatim}
+
+The artifact does not discharge general \(\EqSrc\), adopt \(\RetainH\), adopt
+\(\GenH\), adopt a source law, edit canonical ontology, adopt
+\(\mathrm{MetricData}(E)\), expand \(g_{\mathrm{eff}}\), derive matter
+coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair
+verdict, authorize external outreach, or claim completed derivation.
+
+\section{Inputs from P3-T02}
+
+P3-T02 supplied a conditional theorem candidate over an already-declared source
+family
+\[
+  \Fsrc=(\Osrc,\Msrc,\Isrc,\Csrc,\Asrc,\Psrc,\Nsrc).
+\]
+The theorem branch assumed:
+\begin{enumerate}[label=(H\arabic*)]
+  \item source-only objects in \(\Osrc\);
+  \item identity witnesses in \(\Msrc\);
+  \item inverse witnesses in \(\Msrc\);
+  \item composition closure in \(\Msrc\);
+  \item source invariant, annotation, and forbidden-channel ledger stability;
+  \item source-only comparison by \(\Csrc\);
+  \item a no-target-import guard for all witnesses and comparison premises.
+\end{enumerate}
+
+Under those supplied hypotheses, P3-T02 stated that \(\EqSrcT\) is reflexive,
+symmetric, and transitive on \(\Osrc\). The theorem is conditional: it does not
+prove that current ontology derives H1--H7 for every future source family.
+
+P3-T02 also recorded the missing-inverse countermodel slot. That slot shows
+that theorem hypotheses cannot be silently removed, but it does not by itself
+adopt \(\RetainH\) or \(\GenH\).
+
+\section{\(\RetainH\) Boundary}
+
+\begin{verbatim}
+section_marker: RetainH Boundary
+\end{verbatim}
+
+\begin{definition}[RetainH boundary pressure]
+An \(H\)-retention extension introduces a source-side operation or relation
+\[
+  \Hret:X\rightsquigarrow X_{H}
+\]
+and asks whether source records, certificate status, invariant ledger entries,
+annotation entries, forbidden-channel or proxy-edge incidence, comparison
+status, and negative controls are retained from \(X\) to \(X_{H}\).
+\end{definition}
+
+The closed-family P3-T02 theorem does not require this primitive. It assumes
+the relevant family, witnesses, comparison rule, and ledger preservation
+hypotheses directly. Therefore \(\RetainH\) is avoided in that theorem branch.
+
+For an \(H\)-retention extension, however, the current source record does not
+derive a rule saying that \(\Hret\) preserves the entries needed by
+\(\EqSrcT\). A candidate definition is therefore needed before a future packet
+can claim that retention under \(H\) preserves the source equivalence evidence.
+
+\begin{verbatim}
+RetainH_status_for_closed_declared_family: not_required_here
+RetainH_status_for_H_retention_extension: candidate_definition_needed
+RetainH_adopted: false
+\end{verbatim}
+
+\section{\(\GenH\) Boundary}
+
+\begin{verbatim}
+section_marker: GenH Boundary
+\end{verbatim}
+
+\begin{definition}[GenH boundary pressure]
+An \(H\)-generated family extension introduces a source-side generation rule
+\[
+  \Hgen:S\rightsquigarrow \Fsrc^{H}
+\]
+and asks which generated objects, morphisms, ledgers, comparison entries, and
+negative controls are admitted into the source family used by \(\EqSrcT\).
+\end{definition}
+
+The closed-family P3-T02 theorem does not require this primitive. It assumes a
+declared family \(\Fsrc\) and tests identity, inverse, composition, ledger,
+comparison, and no-target conditions inside that family. It does not claim to
+generate the family.
+
+For an \(H\)-generated extension, the current source record does not derive a
+rule saying which \(H\)-generated objects and morphisms are members of
+\(\Osrc\) and \(\Msrc\), nor which generated invariant and negative-control
+entries accompany them. A candidate definition is therefore needed before a
+future packet can quantify over an \(H\)-generated source family.
+
+\begin{verbatim}
+GenH_status_for_closed_declared_family: not_required_here
+GenH_status_for_H_generated_extension: candidate_definition_needed
+GenH_adopted: false
+\end{verbatim}
+
+\section{Primitive Needed, Primitive Avoided, or Primitive Deferred Classification}
+
+\begin{longtable}{p{0.21\linewidth}p{0.30\linewidth}p{0.35\linewidth}}
+\toprule
+Primitive & Classification & Reason \\
+\midrule
+\(\RetainH\) in the already-declared closed-family theorem & \texttt{not\_required\_here} & The theorem uses supplied identity, inverse, composition, ledger, comparison, and no-target hypotheses inside \(\Fsrc\). \\
+\(\RetainH\) for \(H\)-retention extensions & \texttt{candidate\_definition\_needed} & A source-side retention rule is needed to preserve record and ledger evidence under \(\Hret\). \\
+\(\GenH\) in the already-declared closed-family theorem & \texttt{not\_required\_here} & The theorem does not generate family members; it works only on the declared \(\Fsrc\). \\
+\(\GenH\) for \(H\)-generated family extensions & \texttt{candidate\_definition\_needed} & A source-side generation and membership rule is needed before generated objects and morphisms can be used in \(\EqSrcT\). \\
+\bottomrule
+\end{longtable}
+
+No classification in this packet is \texttt{required\_but\_missing} for the
+already-declared closed-family theorem. No classification in this packet is
+\texttt{countermodel\_blocks\_current\_route}. The route remains open to
+P3-T04 audit and P3-T05 stress.
+
+\section{Minimal Witness or Countermodel}
+
+\begin{verbatim}
+witness_slots:
+  - apply_H_retention_without_RetainH
+  - expand_source_family_without_GenH
+\end{verbatim}
+
+\begin{witness}[Applying H-retention without RetainH]
+Let \(X\in\Osrc\) have source ledger entries sufficient for comparison. Let an
+extension ask to compare \(X\) with \(X_{H}\), where \(X_{H}\) is produced by a
+purported \(H\)-retention operation \(\Hret:X\rightsquigarrow X_{H}\). If no
+source-side \(\RetainH\) rule states that \(\Hret\) preserves
+\(\Isrc,\Asrc,\Psrc,\Nsrc\) and comparison status, then the positive
+\(\EqSrcT\) branch is unavailable. The comparison must block or remain
+undefined for the extension.
+\end{witness}
+
+This witness does not affect the P3-T02 theorem over an already-declared
+closed family. It only shows why a future \(H\)-retention theorem needs a
+candidate source definition before using retention as evidence.
+
+\begin{witness}[Expanding the source family without GenH]
+Let \(S=\{X\}\) be a seed source fragment. Suppose a later packet asserts a
+generated family \(\Fsrc^{H}\) containing \(X\), \(Y=\Hgen(X)\), and a morphism
+\(f:X\to Y\). If no source-side \(\GenH\) rule places \(Y\) in \(\Osrc\),
+places \(f\) in \(\Msrc\), and supplies generated ledger and negative-control
+entries, then \(Y\) and \(f\) cannot serve as \(\EqSrcT\) witnesses. The
+comparison must block or remain outside the declared family.
+\end{witness}
+
+This witness does not prove that an \(H\)-generated extension is impossible. It
+shows that the current closed-family theorem cannot be reused as a generated
+family theorem without a separate source-side generation primitive or an
+equivalent explicit construction.
+
+\section{No-Target Import Guard}
+
+The primitive-boundary classifications above are source-side classifications.
+They cannot be repaired or strengthened by importing:
+\begin{itemize}[leftmargin=*]
+  \item target topology, target smooth atlas, or target metric;
+  \item proper time, detector protocol, empirical calibration, or benchmark behavior;
+  \item stress-energy semantics, stress-energy tensor, matter action, matter coupling, or Einstein equations;
+  \item Gate Chair status, validation success, registry metadata, role identity, handoff state, commit state, generated derivative, or external reputation.
+\end{itemize}
+
+Those objects may appear as forbidden conclusions or process evidence. They
+are not mathematical premises for \(\RetainH\), \(\GenH\), or \(\EqSrcT\).
+
+\section{Distance-to-GR Effect}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit. \\
+Source equivalence EqSrc & Primitive boundaries extracted; no general EqSrc discharge. \\
+RetainH & Not adopted; not required for the supplied closed-family theorem; candidate definition needed for H-retention extensions. \\
+GenH & Not adopted; not required for the supplied closed-family theorem; candidate definition needed for H-generated family extensions. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Unchanged. \\
+M\_src & Unchanged. \\
+g\_eff & Unchanged; no MetricData(E) or metric-scope expansion. \\
+matter coupling & Blocked and unchanged; no coupling derivation or adoption. \\
+Einstein equations & Blocked and unchanged; no field-equation derivation. \\
+finite-variation robustness & Unchanged; no global robustness theorem. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion. \\
+Gate Chair status & Unchanged; no Gate Chair verdict. \\
+current route freeze or hard-fail status & Not frozen; route continues to P3-T04 audit. \\
+\bottomrule
+\end{longtable}
+
+\begin{verbatim}
+distance_to_gr_delta:
+  changed: false
+  effect: no_distance_delta
+  ledger_row_updated: false
+  reason: P3-T03 extracts primitive boundaries only. It does not adopt RetainH
+    GenH or EqSrc and does not prove the closure hypotheses from current
+    ontology.
+\end{verbatim}
+
+\section{Forbidden Conclusions}
+
+This artifact does not authorize:
+
+\begin{itemize}[leftmargin=*]
+  \item canonical ontology edit;
+  \item general \(\EqSrc\) discharge;
+  \item \(\RetainH\) adoption;
+  \item \(\GenH\) adoption;
+  \item source-law adoption;
+  \item source detector/readout semantics adoption;
+  \item \(\mathrm{MetricData}(E)\) adoption;
+  \item \(g_{\mathrm{eff}}\) adoption or scope expansion;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics, stress-energy tensor, or matter action;
+  \item Einstein-equation derivation;
+  \item benchmark promotion;
+  \item Gate Chair verdict;
+  \item external outreach;
+  \item completed derivation;
+  \item future source-extension impossibility;
+  \item global no-go conclusion.
+\end{itemize}
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan continue task v18} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v18.md}.
+
+The AEther-Flow Research Project. (2026b). \emph{EqSrc family-closure theorem
+or countermodel v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260707-020/artifacts/eqsrc\_family\_closure\_theorem\_or\_countermodel\_v1.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{V18 P2-T05
+source-equivalence typed object Refuter stress v1} [Research-control TeX
+artifact].
+\texttt{research\_control/tasks/RT-20260707-017/artifacts/source\_equivalence\_typed\_object\_refuter\_stress\_v1.tex}.
+
+\end{document}
