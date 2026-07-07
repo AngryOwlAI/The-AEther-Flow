@@ -1,0 +1,161 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\EqSrc}{\mathrm{EqSrc}}
+\newcommand{\RetainH}{\mathrm{RetainH}}
+\newcommand{\GenH}{\mathrm{GenH}}
+
+\title{V18 P2-T04 Source-Equivalence Typed Object Smuggling Audit v1}
+\author{The AEther-Flow Research Project}
+\date{2026-07-07}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This document is a draft/control smuggling audit for v18 P2-T04. It audits
+\texttt{SourceEquivalenceTypedObject\_v1} from
+\texttt{RT-20260707-015} as written. The audit result is
+\texttt{source\_pure\_as\_written}. This result has no proof authority beyond
+the local hidden-import screen. It does not discharge general \(\EqSrc\), does
+not adopt \(\RetainH\), does not adopt \(\GenH\), does not adopt a source law,
+does not construct \(\mathrm{MetricData}(E)\), does not expand \(g_{\rm eff}\),
+does not derive matter coupling, does not derive Einstein equations, does not
+promote a benchmark, does not issue a Gate Chair verdict, and does not claim a
+completed derivation.
+
+\section*{Artifact Under Audit}
+
+The audited artifact is:
+
+\begin{quote}
+\texttt{research\_control/tasks/RT-20260707-015/artifacts/source\_equivalence\_typed\_object\_v1.tex}
+\end{quote}
+
+It defines a typed source family \((O,M,I,C,A,P,N)\), source objects, source
+morphisms, source invariant ledgers, a source-only comparison rule, closure
+status fields, and no-target guards. The audit reads registry rows, validation
+status, role identity, handoff state, commit state, and generated derivatives
+only as provenance or process evidence, never as theorem premises.
+
+\section*{Audit Method}
+
+For each possible hidden import channel, the audit asks whether the typed
+object requires the channel as a premise of the source-equivalence relation or
+the comparison rule. Mentions inside explicit forbidden-premise guards count as
+guards, not as imports. A local pass is possible only when the written object
+keeps the channel outside the mathematical premise set.
+
+\section*{Target-Import Audit Matrix}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.26\linewidth} >{\raggedright\arraybackslash}p{0.16\linewidth} >{\raggedright\arraybackslash}p{0.50\linewidth}}
+\textbf{Audit target} & \textbf{Finding} & \textbf{Reasoning} \\
+\hline
+target topology import & not detected & The object works over source carriers and source labels. It does not require a target topological space as a premise. \\
+target smooth atlas import & not detected & No target charts, transition maps, differentiable atlas, or smooth compatibility condition is used to define the comparison rule. \\
+target Lorentzian metric import & not detected & No Lorentzian signature, connection, curvature, null cone, geodesic structure, or metric tensor supplies a source invariant. \\
+proper-time normalization import & not detected & No proper-time clock normalization, observer worldline normalization, or target time parameter appears as a premise. \\
+detector protocol import & not detected & Detector protocol language appears only in the no-target guard as a forbidden premise. It does not generate a source invariant. \\
+empirical calibration import & not detected & No empirical calibration table, measurement protocol, or observed detector response is used to define \(\EqSrc_T\). \\
+stress-energy semantics import & not detected & The artifact does not use stress-energy tensor semantics, matter density, pressure, flux, or energy condition data as a premise. \\
+matter-action import & not detected & No matter action, Lagrangian density, or variational stress-energy construction is used. \\
+Einstein-equation premise import & not detected & No field equation, Einstein tensor, or Einstein-equation residual is used to define source equivalence. \\
+benchmark behavior import & not detected & Exact-GR benchmark recovery is not used as evidence for the typed object. Benchmark behavior remains downstream and blocked. \\
+\end{longtable}
+
+\section*{Process-Authority Audit Matrix}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.28\linewidth} >{\raggedright\arraybackslash}p{0.16\linewidth} >{\raggedright\arraybackslash}p{0.48\linewidth}}
+\textbf{Audit target} & \textbf{Finding} & \textbf{Reasoning} \\
+\hline
+validation status as premise & not detected & The artifact treats validation as a control check only. A validator pass is not a premise of \(\EqSrc_T\). \\
+registry metadata as theorem premise & not detected & Registry metadata indexes the draft/control object. It does not supply mathematical truth conditions. \\
+role identity as theorem premise & not detected & The execution role can audit or author a control artifact but cannot make a source-equivalence theorem true. \\
+handoff state as theorem premise & not detected & Handoff state selects routing. It is not a mathematical premise in the source comparison rule. \\
+commit state as theorem premise & not detected & Commit state preserves provenance only. It is not part of the source object or morphism definition. \\
+generated derivative as theorem premise & not detected & Wiki notes, indexes, semantic extracts, and local memory are retrieval layers only and do not define source equivalence. \\
+\end{longtable}
+
+\section*{Source-Purity Lemma}
+
+\textbf{Lemma.} If \texttt{SourceEquivalenceTypedObject\_v1} is read exactly as
+written, with its no-target guard and process-authority exclusions active, then
+target topology, target smooth atlas structure, Lorentzian metric structure,
+proper-time normalization, detector protocol, empirical calibration,
+stress-energy semantics, matter-action semantics, Einstein-equation premises,
+benchmark behavior, validator status, registry metadata, role identity, handoff
+state, commit state, and generated derivatives are not premises of its source
+comparison rule.
+
+\textbf{Reasoning.} The written object defines its data through source-family
+slots, source morphisms or relabelings, source invariant ledgers, and explicit
+closure-status fields. Each target or process-authority channel is either
+absent from the defining slots or named only as forbidden authority. Therefore
+the audited text is source-pure as written for the named channels.
+
+\section*{Audit Result}
+
+The audit result is:
+
+\begin{center}
+\texttt{source\_pure\_as\_written}
+\end{center}
+
+This is a local source-purity result for the P2-T03 artifact only. It does not
+convert the typed object into a proof, does not close inverse or composition
+closure, and does not authorize any adoption or physics promotion.
+
+\section*{Residual Risks}
+
+The primary remaining risks are mathematical and route-local:
+
+\begin{itemize}
+  \item inverse closure remains missing;
+  \item composition closure remains missing;
+  \item \(\RetainH\) remains a required boundary condition, not an adopted
+  premise;
+  \item \(\GenH\) remains a required boundary condition, not an adopted premise;
+  \item a local no-smuggling pass can still fail under P2-T05 Refuter stress.
+\end{itemize}
+
+\section*{Distance-to-GR Effect}
+
+No Distance-to-GR ledger row is changed. The source-equivalence milestone now
+has an audited typed-object draft/control candidate for stress testing, but it
+still lacks a general family-closure theorem, a countermodel resolution,
+\(\RetainH\) adoption, and \(\GenH\) adoption.
+
+\section*{Forbidden Conclusions}
+
+The audit result must not be read as any of the following: general \(\EqSrc\)
+discharge, \(\RetainH\) adoption, \(\GenH\) adoption, source-law adoption,
+canonical ontology edit, source detector/readout semantics adoption,
+coupling-law adoption, matter-coupling derivation, Einstein-equation
+derivation, benchmark promotion, Gate Chair verdict, external outreach
+authorization, global-theory closure claim, or completed derivation.
+
+\section*{Next Route}
+
+The logical next route is one bounded v18 P2-T05 Refuter stress packet against
+the audited typed object. The stress packet should target inverse closure,
+composition closure, family-level closure, process-authority laundering under
+edge cases, and overread from local source-purity to theorem status.
+
+\section*{Source Materials}
+
+The AEther-Flow Research Project. (2026, July 7). \textit{V18 P2-T03
+source-equivalence typed object science draft} [Internal research-control TeX
+artifact].
+
+The AEther-Flow Research Project. (2026, July 7). \textit{Handoff 0684}
+[Internal research-control handoff].
+
+The AEther-Flow Research Project. (2026, July 7). \textit{Recommendations
+implementation plan continue task v18} [Internal implementation plan].
+
+\end{document}

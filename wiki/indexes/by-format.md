@@ -274,6 +274,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-013-SOURCE-EQUIVALENCE-TYPED-OBJECT-PROBLEM-STATEMENT-V1` `research_control/tasks/RT-20260707-013/artifacts/source_equivalence_typed_object_problem_statement_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-015-PARENT-FUSION-NOTES-SOURCE-EQUIVALENCE-TYPED-OBJECT` `research_control/tasks/RT-20260707-015/artifacts/parent_fusion_notes_source_equivalence_typed_object.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-015-SOURCE-EQUIVALENCE-TYPED-OBJECT-RECEIPT` `research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-PARENT-FUSION-NOTES-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260707-016/artifacts/parent_fusion_notes_source_equivalence_typed_object_smuggling_audit.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_receipt.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -707,6 +709,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V17-P4-T03-DETECTOR-REPLACEMENT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260706-003/artifacts/detector_replacement_smuggling_audit_v1.tex`
 - `TEX-V17-P4-T04-DETECTOR-REPLACEMENT-REFUTER-STRESS` `research_control/tasks/RT-20260706-004/artifacts/detector_replacement_refuter_stress_v1.tex`
 - `TEX-V18-P2-T03-SOURCE-EQUIVALENCE-TYPED-OBJECT-V1` `research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex`
+- `TEX-V18-P2-T04-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_v1.tex`
 
 ## wiki_markdown
 
@@ -977,6 +980,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-013-SOURCE-EQUIVALENCE-TYPED-OBJECT-PROBLEM-STATEMENT-V1` `wiki/markdown/md-research-control-tasks-rt-20260707-013-source-equivalence-typed-object-problem-statement-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-015-PARENT-FUSION-NOTES-SOURCE-EQUIVALENCE-TYPED-OBJECT` `wiki/markdown/md-research-control-tasks-rt-20260707-015-parent-fusion-notes-source-equivalence-typed-object.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-015-SOURCE-EQUIVALENCE-TYPED-OBJECT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260707-015-source-equivalence-typed-object-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-PARENT-FUSION-NOTES-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260707-016-parent-fusion-notes-source-equivalence-typed-object-smuggling-audit.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260707-016-source-equivalence-typed-object-smuggling-audit-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1404,3 +1409,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V17-P4-T03-DETECTOR-REPLACEMENT-SMUGGLING-AUDIT` `wiki/tex/tex-v17-p4-t03-detector-replacement-smuggling-audit.md`
 - `WIKI-TEX-V17-P4-T04-DETECTOR-REPLACEMENT-REFUTER-STRESS` `wiki/tex/tex-v17-p4-t04-detector-replacement-refuter-stress.md`
 - `WIKI-TEX-V18-P2-T03-SOURCE-EQUIVALENCE-TYPED-OBJECT-V1` `wiki/tex/tex-v18-p2-t03-source-equivalence-typed-object-v1.md`
+- `WIKI-TEX-V18-P2-T04-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v18-p2-t04-source-equivalence-typed-object-smuggling-audit-v1.md`

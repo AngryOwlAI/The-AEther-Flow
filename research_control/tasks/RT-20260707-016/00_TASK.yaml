@@ -1,0 +1,38 @@
+task_id: "RT-20260707-016"
+created_at: "2026-07-07T11:59:48Z"
+updated_at: "2026-07-07T11:59:48Z"
+status: "completed"
+task_type: "source_equivalence_typed_object_smuggling_audit"
+title: "V18 P2-T04 source-equivalence typed object smuggling audit"
+parent_task_id: "RT-20260707-015"
+source_handoff_id: "handoff-0684"
+decision_id: "DDR-20260707-016"
+agent_job_id: "AJ-RT-20260707-016-001"
+plan_id: "recommendations_implementation_plan_continue_task-v18"
+plan_task_id: "P2-T04"
+phase_id: "P2"
+recommendation_ids:
+  - "V18-R01"
+  - "V18-R02"
+objective: "Audit SourceEquivalenceTypedObject_v1 for target imports and process-authority imports before P2-T05 Refuter stress."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Audit the typed source-equivalence object for target imports and process-authority imports."
+requires_human_gate: false
+physics_promotion_authorized: false
+distance_to_gr_delta: "no_distance_delta"
+project_system_change_only: false
+project_system_boundary_authorized_by_plan: false
+outputs:
+  - "research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260707-016/artifacts/child_phys_math_source_equivalence_typed_object_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260707-016/artifacts/child_phys_phil_source_equivalence_typed_object_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260707-016/artifacts/parent_conflict_review_source_equivalence_typed_object_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260707-016/artifacts/parent_fusion_notes_source_equivalence_typed_object_smuggling_audit.md"
+  - "research_control/tasks/RT-20260707-016/artifacts/validate_source_equivalence_typed_object_smuggling_audit.py"
+  - "research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_validation.json"
+  - "research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_receipt.md"
+  - "research_control/handoffs/handoff-0685.yaml"
+  - "research_control/handoffs/handoff-0685.md"
+next_route_on_success: "P2-T05"
+validation_status: "PASS"
+notes: "P2-T04 audits the P2-T03 typed object as source_pure_as_written and routes to P2-T05 Refuter stress. It does not discharge EqSrc adopt RetainH adopt GenH adopt a source law or promote physics."
