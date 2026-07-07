@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260707-011` and `handoff-0680`.
+`RT-20260707-012` and `handoff-0681`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260707-011` |
-| Latest handoff ID | `handoff-0680` |
-| Current status | `v18_p1_t04_active_state_bifurcation_red_team_repair_required_no_physics_delta` |
+| Active task ID | `RT-20260707-012` |
+| Latest handoff ID | `handoff-0681` |
+| Current status | `v18_p1_t04_repair_active_state_supersession_guard_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v18 p1 t04 active state bifurcation red team repair required no physics claim change |
+| Current route family | v18 p2 t01 typed source equivalence problem statement no physics promotion |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P1-T04 repair task to require tracked Director-decision authorization before any project-system sidecar may supersede ordinary research handoff authority. |
-| Required next authority | P1-T04 repair active-state supersession Director-decision guard |
-| Next recommended action | Run one bounded v18 P1-T04 repair task to require tracked Director-decision authorization before any project-system sidecar may supersede ordinary research handoff authority. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P2-T01 source-equivalence typed-object problem-statement packet. |
+| Required next authority | P2-T01 source-equivalence typed-object problem statement |
+| Next recommended action | Run one bounded v18 P2-T01 source-equivalence typed-object problem-statement packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260707-011` |
-| Latest research handoff ID | `handoff-0680` |
-| Latest research next action | Run one bounded v18 P1-T04 repair task to require tracked Director-decision authorization before any project-system sidecar may supersede ordinary research handoff authority. |
+| Latest research task ID | `RT-20260707-012` |
+| Latest research handoff ID | `handoff-0681` |
+| Latest research next action | Run one bounded v18 P2-T01 source-equivalence typed-object problem-statement packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260707-011/00_TASK.yaml`.
-- Active task objective: Review active-state bifurcation policy rendered surfaces and validator behavior for route confusion authority laundering sidecar-as-scientific-authority overread and generated-frontier-as-proof overread.
-- Latest handoff path: `research_control/handoffs/handoff-0680.yaml`.
-- Latest handoff summary: RT-20260707-011 completed one bounded External Red-Team Reviewer packet for v18 P1-T04 active-state bifurcation review. Current rendered surfaces identify the latest research handoff and sidecar fields and preserve generated-frontier non-authority, but repair is required because sidecar supersession authorization can be accepted from a handoff-level flag without verifying an explicit tracked Director decision. No physics claim promotion or Distance-to-GR delta is authorized.
-- Current route family: v18 p1 t04 active state bifurcation red team repair required no physics claim change.
-- Next recommended action: Run one bounded v18 P1-T04 repair task to require tracked Director-decision authorization before any project-system sidecar may supersede ordinary research handoff authority.
+- Active task path: `research_control/tasks/RT-20260707-012/00_TASK.yaml`.
+- Active task objective: Repair the active-state sidecar supersession validator so project-system sidecars may supersede ordinary research handoff authority only when a tracked Director decision explicitly authorizes active-state supersession.
+- Latest handoff path: `research_control/handoffs/handoff-0681.yaml`.
+- Latest handoff summary: RT-20260707-012 completed the v18 P1-T04 repair. Active-state sidecar supersession validation now requires a tracked Director decision registry row and DDR front matter explicitly authorizing active-state sidecar supersession with a nonblank scope. Flag-only handoff or bifurcation authorization is rejected. No physics claim promotion or Distance-to-GR delta is authorized.
+- Current route family: v18 p2 t01 typed source equivalence problem statement no physics promotion.
+- Next recommended action: Run one bounded v18 P2-T01 source-equivalence typed-object problem-statement packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P1-T04 repair task to require tracked Director-decision authorization before any project-system sidecar may supersede ordinary research handoff authority.
+Run one bounded v18 P2-T01 source-equivalence typed-object problem-statement packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,25 +320,25 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260707-011`;
-- latest handoff: `handoff-0680`;
-- current status: `v18_p1_t04_active_state_bifurcation_red_team_repair_required_no_physics_delta`;
+- active task: `RT-20260707-012`;
+- latest handoff: `handoff-0681`;
+- current status: `v18_p1_t04_repair_active_state_supersession_guard_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `continue_research_json`: PASS;
+- latest handoff validation `focused_unit_tests`: PASS;
 - latest handoff validation `memory_preflight`: PASS;
 - latest handoff validation `query_memory_status`: PASS;
-- latest handoff validation `red_team_review_artifact`: PASS;
-- latest handoff validation `task_local_review_validator`: PASS;
+- latest handoff validation `task_local_validator`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0680.yaml`
-- `research_control/tasks/RT-20260707-011/00_TASK.yaml`
+- `research_control/handoffs/handoff-0681.yaml`
+- `research_control/tasks/RT-20260707-012/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -354,7 +354,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0680*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0681*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260707-011`
-- Latest handoff: `handoff-0680`
-- Current status: `v18_p1_t04_active_state_bifurcation_red_team_repair_required_no_physics_delta`
+- Active task: `RT-20260707-012`
+- Latest handoff: `handoff-0681`
+- Current status: `v18_p1_t04_repair_active_state_supersession_guard_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260707-011`
-- Latest research handoff: `handoff-0680`
-- Latest research next action: Run one bounded v18 P1-T04 repair task to require tracked Director-decision authorization before any project-system sidecar may supersede ordinary research handoff authority.
+- Latest research task: `RT-20260707-012`
+- Latest research handoff: `handoff-0681`
+- Latest research next action: Run one bounded v18 P2-T01 source-equivalence typed-object problem-statement packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `active_state_supersession_director_decision_guard_repair`
-- Role family: `validator-engineer@0.2.0`
-- Target milestone: `none`
-- Milestone burden: Require tracked Director-decision authorization before sidecar supersession can be accepted.
+- Route ID: `source_equivalence_typed_object_problem_statement`
+- Role family: `theoretical-continuation-selector@0.1.0`
+- Target milestone: `source_equivalence_eqsrc`
+- Milestone burden: Define the exact typed-object burden for EqSrc, RetainH, and GenH continuation.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `648cae27dc08ab801b63c049f059593bee64af63d00b7c036ffbf02895e4351f`
-- JSON SHA-256: `fa843574fc49c79c7f39ace75d618650d11a05eaa0937d7b0833b989eac3070e`
+- YAML SHA-256: `c1e7700d9dd678c540572fcc9f363ba3af49a629df3cdc9443c93871f382fa4a`
+- JSON SHA-256: `45c32a8239426158e7f4147e1ecf4c501a34c515df43d19681c5723dd7fe01c2`
 
 ## Authority Warning
 

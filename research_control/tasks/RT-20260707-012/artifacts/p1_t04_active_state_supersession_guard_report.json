@@ -1,0 +1,38 @@
+{
+  "commands": [
+    {
+      "command": [
+        "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.venv/bin/python",
+        "-m",
+        "py_compile",
+        "scripts/research_control/validate_research_control.py"
+      ],
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    {
+      "command": [
+        "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.venv/bin/python",
+        "-m",
+        "unittest",
+        "tests.test_validate_research_control"
+      ],
+      "returncode": 0,
+      "stderr_tail": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.020s\n\nOK\n",
+      "stdout_tail": ""
+    }
+  ],
+  "decision_authorization_fixture_present": true,
+  "focused_tests_present": true,
+  "hard_failures": [],
+  "job_id": "AJ-RT-20260707-012-001",
+  "next_route_if_pass": "P2-T01",
+  "no_physics_delta": true,
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P1-T04-repair",
+  "schema_id": "p1_t04_active_state_supersession_guard_report_v1",
+  "status": "PASS",
+  "task_id": "RT-20260707-012",
+  "validator_guard_present": true
+}

@@ -1,0 +1,35 @@
+task_id: "RT-20260707-012"
+task_type: "active_state_supersession_director_decision_guard_repair"
+status: "completed"
+created_at: "2026-07-07T09:51:14Z"
+updated_at: "2026-07-07T09:57:09Z"
+parent_task_id: "RT-20260707-011"
+current_decision_id: "DDR-20260707-012"
+current_job_id: "AJ-RT-20260707-012-001"
+plan_id: "recommendations_implementation_plan_continue_task-v18"
+plan_task_id: "P1-T04-repair"
+plan_phase_id: "P1"
+recommendation_ids:
+  - "V18-R08"
+objective: "Repair the active-state sidecar supersession validator so project-system sidecars may supersede ordinary research handoff authority only when a tracked Director decision explicitly authorizes active-state supersession."
+source_handoff_id: "handoff-0680"
+source_handoff_path: "research_control/handoffs/handoff-0680.yaml"
+requires_human_gate: false
+human_authorization_id: "user-2026-07-07-all-human-gates"
+target_derivation_milestone: "none"
+milestone_burden: "Require tracked Director-decision authorization before sidecar supersession can be accepted."
+physics_progress_status: "v18_p1_t04_repair_active_state_supersession_guard_completed_no_physics_delta"
+physics_promotion_authorized: false
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+claim_boundary_summary: "Validator repair only. No canonical ontology edit, source-law adoption, general EqSrc discharge, RetainH adoption, GenH adoption, source detector/readout semantics adoption, coupling-law adoption, matter-coupling derivation or adoption, Einstein-equation derivation, benchmark promotion, external outreach, or completed derivation is authorized."
+done_criteria:
+  - "Validator rejects handoff-level or bifurcation-level sidecar supersession flags without a tracked Director decision."
+  - "Validator accepts sidecar supersession only when a matching Director decision registry row and DDR front matter explicitly authorize active-state sidecar supersession with a nonblank scope."
+  - "Focused tests cover invalid flag-only supersession and valid tracked-decision supersession."
+  - "Full research-control validation passes."
+  - "Next route returns to P2-T01 only if repair passes."

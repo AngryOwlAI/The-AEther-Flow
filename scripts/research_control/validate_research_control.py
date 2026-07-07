@@ -4237,16 +4237,128 @@ def _inactive_marker(value: Any) -> bool:
     return _normalize_bifurcation_value(value).lower() in {"", "none", "null", "false"}
 
 
-def _sidecar_supersession_authorized(handoff: dict[str, Any]) -> bool:
+SIDECAR_SUPERSESSION_DECISION_ID_FIELDS = (
+    "active_state_supersession_decision_id",
+    "sidecar_supersession_decision_id",
+    "sidecar_supersession_authority_decision_id",
+)
+SIDECAR_SUPERSESSION_DECISION_PATH_FIELDS = (
+    "active_state_supersession_authority_source_path",
+    "sidecar_supersession_authority_source_path",
+    "sidecar_supersession_decision_path",
+)
+SIDECAR_SUPERSESSION_SCOPE_FIELDS = (
+    "active_state_supersession_scope",
+    "sidecar_supersession_scope",
+    "sidecar_supersession_authority_scope",
+)
+
+
+def _sidecar_supersession_authorization_ref(handoff: dict[str, Any]) -> tuple[str, str, str, bool]:
     bifurcation = handoff.get("active_state_bifurcation")
     bifurcation = bifurcation if isinstance(bifurcation, dict) else {}
-    return any(
-        _truthy_flag(value)
-        for value in (
-            bifurcation.get("explicit_sidecar_supersession_authorization"),
-            handoff.get("explicit_sidecar_supersession_authorization"),
+    containers = (bifurcation, handoff)
+    flag_present = False
+    decision_id = ""
+    decision_path = ""
+    scope = ""
+    for container in containers:
+        explicit = container.get("explicit_sidecar_supersession_authorization")
+        if isinstance(explicit, dict):
+            flag_present = True
+            decision_id = decision_id or str(explicit.get("decision_id", "")).strip()
+            decision_path = decision_path or str(
+                explicit.get("decision_path", explicit.get("authority_source_path", ""))
+            ).strip()
+            scope = scope or str(explicit.get("scope", "")).strip()
+        elif _truthy_flag(explicit):
+            flag_present = True
+        for field_name in SIDECAR_SUPERSESSION_DECISION_ID_FIELDS:
+            decision_id = decision_id or str(container.get(field_name, "")).strip()
+        for field_name in SIDECAR_SUPERSESSION_DECISION_PATH_FIELDS:
+            decision_path = decision_path or str(container.get(field_name, "")).strip()
+        for field_name in SIDECAR_SUPERSESSION_SCOPE_FIELDS:
+            scope = scope or str(container.get(field_name, "")).strip()
+    return decision_id, decision_path, scope, flag_present
+
+
+def _director_decision_authorizes_sidecar_supersession(
+    decision_id: str,
+    decision_path_text: str,
+    scope: str,
+) -> tuple[bool, list[str]]:
+    errors: list[str] = []
+    if not decision_id:
+        errors.append("sidecar supersession requires an explicit Director decision id")
+        return False, errors
+    rows = read_csv_rows("DIRECTOR_DECISION_REGISTRY.csv")
+    row = existing_by_id(rows, "decision_id").get(decision_id)
+    if not row:
+        errors.append(f"sidecar supersession Director decision {decision_id} is not registered")
+        return False, errors
+    row_path = str(row.get("decision_path", "")).strip()
+    if decision_path_text and decision_path_text != row_path:
+        errors.append(
+            f"sidecar supersession decision path {decision_path_text} does not match "
+            f"DIRECTOR_DECISION_REGISTRY.csv path {row_path}"
+        )
+        return False, errors
+    decision_path_text = decision_path_text or row_path
+    reason = validate_relative_path(decision_path_text)
+    if reason:
+        errors.append(f"invalid sidecar supersession decision path {decision_path_text}: {reason}")
+        return False, errors
+    decision_path = repo_path(decision_path_text)
+    if not decision_path.exists():
+        errors.append(f"sidecar supersession decision path does not exist: {decision_path_text}")
+        return False, errors
+    try:
+        frontmatter, _ = load_frontmatter(decision_path)
+    except StrictYamlError as exc:
+        errors.append(f"sidecar supersession decision frontmatter is invalid: {exc}")
+        return False, errors
+    if _frontmatter_value(frontmatter.get("decision_id", "")) != decision_id:
+        errors.append(f"sidecar supersession decision frontmatter decision_id does not match {decision_id}")
+    authorized = any(
+        _truthy_flag(frontmatter.get(field_name))
+        for field_name in (
+            "active_state_supersession_authorized",
+            "sidecar_supersession_authorized",
         )
     )
+    if not authorized:
+        errors.append(
+            f"{decision_path_text}: Director decision does not explicitly authorize "
+            "active-state sidecar supersession"
+        )
+    decision_scope = str(
+        frontmatter.get(
+            "active_state_supersession_scope",
+            frontmatter.get("sidecar_supersession_scope", ""),
+        )
+    ).strip()
+    if not decision_scope:
+        errors.append(f"{decision_path_text}: Director decision lacks sidecar supersession scope")
+    if scope and decision_scope and scope != decision_scope:
+        errors.append(
+            f"sidecar supersession scope {scope!r} does not match Director decision scope {decision_scope!r}"
+        )
+    return not errors, errors
+
+
+def _sidecar_supersession_authorized(handoff: dict[str, Any]) -> tuple[bool, list[str]]:
+    decision_id, decision_path, scope, flag_present = _sidecar_supersession_authorization_ref(handoff)
+    if not any([decision_id, decision_path, scope, flag_present]):
+        return False, []
+    if flag_present and not decision_id:
+        return (
+            False,
+            [
+                "flag-only sidecar supersession authorization is insufficient; "
+                "provide a tracked Director decision id and authority source path"
+            ],
+        )
+    return _director_decision_authorizes_sidecar_supersession(decision_id, decision_path, scope)
 
 
 def _collect_protected_sidecar_flags(data: Any, prefix: str = "") -> list[str]:
@@ -4320,12 +4432,14 @@ def _validate_sidecar_supersession_boundary(
     route_source = _normalize_bifurcation_value(
         bifurcation.get("next_research_route_source", "latest_research_handoff")
     )
-    authorized = _sidecar_supersession_authorized(handoff)
+    authorized, authorization_errors = _sidecar_supersession_authorized(handoff)
     if (supersedes or route_source != "latest_research_handoff") and not authorized:
         report.error(
             f"{source_path}: project-system sidecar may not supersede the latest "
             "ordinary research handoff without explicit tracked authorization"
         )
+        for error in authorization_errors:
+            report.error(f"{source_path}: {error}")
     if sidecar_present and not supersedes and route_source != "latest_research_handoff":
         report.error(
             f"{source_path}: project-system sidecar is present but next_research_route_source "

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+import csv
 import importlib.util
 import json
 import shutil
@@ -95,8 +96,10 @@ class ActiveStateSidecarValidatorTests(unittest.TestCase):
             'job_id: "AJ-TEST-001"',
             'completion_path: "research_control/tasks/RT-TEST-002/jobs/completions/AJC-AJ-TEST-001.yaml"',
             f"next_action: {yaml_scalar(scenario['next_action'])}",
-            "active_state_bifurcation:",
         ]
+        for field_name, value in scenario.get("handoff_fields", {}).items():
+            handoff_lines.append(f"{field_name}: {yaml_scalar(value)}")
+        handoff_lines.append("active_state_bifurcation:")
         for field_name in self.validator.ACTIVE_STATE_BIFURCATION_FIELDS:
             handoff_lines.append(f"  {field_name}: {yaml_scalar(bifurcation[field_name])}")
         handoff_lines.extend(
@@ -153,6 +156,24 @@ class ActiveStateSidecarValidatorTests(unittest.TestCase):
             for fixture in sidecar_fixture_dir.glob("improve-project-handoff_*.yaml"):
                 shutil.copyfile(fixture, sidecar_dir / fixture.name)
 
+        if scenario.get("director_decisions"):
+            registry_dir = root / "registries"
+            registry_dir.mkdir(parents=True)
+            registry_path = registry_dir / "DIRECTOR_DECISION_REGISTRY.csv"
+            with registry_path.open("w", encoding="utf-8", newline="") as handle:
+                writer = csv.DictWriter(handle, fieldnames=self.validator.DECISION_COLUMNS)
+                writer.writeheader()
+                for decision in scenario["director_decisions"]:
+                    writer.writerow({column: decision.get(column, "") for column in self.validator.DECISION_COLUMNS})
+                    decision_path = root / decision["decision_path"]
+                    decision_path.parent.mkdir(parents=True, exist_ok=True)
+                    frontmatter = decision.get("frontmatter", {})
+                    lines = ["---"]
+                    for key, value in frontmatter.items():
+                        lines.append(f"{key}: {yaml_scalar(value)}")
+                    lines.extend(["---", "", "# Test Director Decision", ""])
+                    decision_path.write_text("\n".join(lines), encoding="utf-8")
+
         return {scenario["active_task_id"]: {"task_id": scenario["active_task_id"]}}
 
     def run_bifurcation_validation(
@@ -194,6 +215,25 @@ class ActiveStateSidecarValidatorTests(unittest.TestCase):
         errors = self.run_bifurcation_validation(scenario)
 
         self.assertTrue(any("may not supersede" in error for error in errors), errors)
+
+    def test_sidecar_supersession_with_handoff_flag_but_no_tracked_decision_fails(self) -> None:
+        scenario = copy.deepcopy(
+            self.load_scenario(
+                FIXTURE_ROOT / "active_state_sidecar_invalid" / "sidecar_supersedes_without_authorization.yaml"
+            )
+        )
+        scenario["handoff_fields"] = {"explicit_sidecar_supersession_authorization": True}
+
+        errors = self.run_bifurcation_validation(scenario)
+
+        self.assertTrue(any("flag-only sidecar supersession authorization is insufficient" in error for error in errors), errors)
+
+    def test_sidecar_supersession_with_tracked_director_decision_passes(self) -> None:
+        scenario = self.load_scenario(
+            FIXTURE_ROOT / "active_state_sidecar_valid" / "director_decision_authorized_supersession.yaml"
+        )
+
+        self.assertEqual(self.run_bifurcation_validation(scenario), [])
 
     def test_sidecar_physics_promotion_claim_fails(self) -> None:
         scenario = self.load_scenario(
