@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260707-009`
-- Latest handoff: `handoff-0678`
-- Current status: `v18_p1_t02_active_state_bifurcation_renderer_completed_no_physics_delta`
+- Active task: `RT-20260707-010`
+- Latest handoff: `handoff-0679`
+- Current status: `v18_p1_t03_active_state_sidecar_validator_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260707-009`
-- Latest research handoff: `handoff-0678`
-- Latest research next action: Run one bounded v18 P1-T03 active-state sidecar validator and tests packet to prevent project-system sidecars from overriding research handoffs.
+- Latest research task: `RT-20260707-010`
+- Latest research handoff: `handoff-0679`
+- Latest research next action: Run one bounded v18 P1-T04 active-state bifurcation red-team review packet to stress the bifurcation for route confusion and authority laundering.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `active_state_sidecar_validator`
-- Role family: `validator-engineer@0.2.0`
+- Route ID: `active_state_bifurcation_red_team_review`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `none`
-- Milestone burden: Add validation that prevents project-system sidecars from silently overriding research handoffs.
+- Milestone burden: Stress the active-state bifurcation for route confusion and authority laundering.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `0659f65e5cd18e8efb3c30cd371a3f254369ad4564d097d4f22791bbed218048`
-- JSON SHA-256: `4085bfdecc4bdb6d35192c07733aa083f7325f8b6175c99c090fd04e13f4eb78`
+- YAML SHA-256: `11759098d8d0d52b7c3c13b69d3ddababe78fdf512f35bc86a23894d999f83d7`
+- JSON SHA-256: `7a1d9b187d0d091a83f3c0062c4b02606cb927ad556052903a649733841bd818`
 
 ## Authority Warning
 

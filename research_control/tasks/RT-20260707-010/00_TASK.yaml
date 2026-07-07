@@ -1,0 +1,61 @@
+task_id: "RT-20260707-010"
+task_type: "active_state_sidecar_validator"
+status: "completed"
+created_at: "2026-07-07T08:32:47Z"
+updated_at: "2026-07-07T08:48:36Z"
+closed_at: "2026-07-07T08:48:36Z"
+parent_task_id: "RT-20260707-009"
+parent_handoff_id: "handoff-0678"
+decision_id: "DDR-20260707-010"
+job_id: "AJ-RT-20260707-010-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260707-010"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates. This P1-T03 validator packet requires no Gate Chair adoption authority benchmark authority external outreach authority or physics claim-promotion authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T03"
+  plan_task_name: "Active-state sidecar validator"
+  recommendation_ids:
+    - "V18-R08"
+objective: "Add validation and focused tests that prevent project-system sidecars from silently overriding ordinary research handoffs or claiming physics authority without ledger and gate authority."
+target_derivation_milestone: "none"
+milestone_burden: "Add validation that prevents project-system sidecars from silently overriding research handoffs."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v18_p1_t03_active_state_sidecar_validator_completed_no_physics_delta"
+claim_boundary:
+  allowed_scope: "Active-state sidecar validator update only"
+  immediate_routing_authority: "handoff-0678 selects P1-T03 after P1-T02 renderer implementation."
+  policy_authority: "research_control/design/active_state_bifurcation_policy_v1.md defines the bifurcation contract enforced by this validator packet."
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  canonical_ontology_edit_authorized: false
+  source_law_adopted: false
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_detector_readout_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  external_outreach_authorized: false
+  proof_authority: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "tests/test_validate_research_control.py"
+  - "tests/test_run_full_research_control_validation.py"
+  - "tests/fixtures/research_control/active_state_sidecar_valid/"
+  - "tests/fixtures/research_control/active_state_sidecar_invalid/"
+next_recommended_action: "Run one bounded v18 P1-T04 active-state bifurcation red-team review packet to stress the bifurcation for route confusion and authority laundering."
+notes: "This task completes only P1-T03. It does not execute P1-T04 red-team review P2 typed EqSrc work or downstream v18 phases."
+documentation_impact_id: "DI-RT-20260707-010-001"

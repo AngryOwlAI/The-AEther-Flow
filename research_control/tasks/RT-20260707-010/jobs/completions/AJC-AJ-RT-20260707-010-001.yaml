@@ -1,0 +1,192 @@
+completion_id: "AJC-AJ-RT-20260707-010-001"
+job_id: "AJ-RT-20260707-010-001"
+task_id: "RT-20260707-010"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-07T08:48:36Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_task_id: "P1-T03"
+  plan_phase_id: "P1"
+  implemented_task_scope: "Added active-state sidecar validation logic fixtures tests and full-validation coverage reporting."
+  downstream_tasks_not_implemented:
+    - "P1-T04 and later v18 tasks"
+output_paths:
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "tests/test_validate_research_control.py"
+  - "tests/test_run_full_research_control_validation.py"
+  - "tests/fixtures/research_control/active_state_sidecar_valid/ordinary_research_handoff.yaml"
+  - "tests/fixtures/research_control/active_state_sidecar_invalid/sidecar_supersedes_without_authorization.yaml"
+  - "tests/fixtures/research_control/active_state_sidecar_invalid/sidecar_physics_promotion.yaml"
+  - "tests/fixtures/research_control/active_state_sidecar_invalid/improve-project-handoff_20260707_001.yaml"
+  - "research_control/current_frontier.md"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260707-010/00_TASK.yaml"
+  - "research_control/tasks/RT-20260707-010/DDR-20260707-010.md"
+  - "research_control/tasks/RT-20260707-010/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260707-010/jobs/AJ-RT-20260707-010-001.yaml"
+  - "research_control/tasks/RT-20260707-010/jobs/completions/AJC-AJ-RT-20260707-010-001.yaml"
+  - "research_control/tasks/RT-20260707-010/roles/validator-engineer@0.2.0--RT-20260707-010.yaml"
+  - "research_control/handoffs/handoff-0679.yaml"
+  - "research_control/handoffs/handoff-0679.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=688 relationship_row_count=3527 semantic_row_count=688 vault_row_count=688 local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v18.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/active_state_bifurcation_policy_v1.md --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-ACTIVE-STATE-BIFURCATION-POLICY-V1"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260707-009 latest_handoff=handoff-0678 next_action=P1-T03"
+  - ".venv/bin/python -m unittest tests.test_validate_research_control | exit_code=0 | ran=5"
+  - ".venv/bin/python -m unittest tests.test_run_full_research_control_validation | exit_code=0 | ran=3"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 688
+    relationship_row_count: 3527
+    semantic_row_count: 688
+    vault_row_count: 688
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v18.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/active_state_bifurcation_policy_v1.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/active_state_bifurcation_policy_v1.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-ACTIVE-STATE-BIFURCATION-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-ACTIVE-STATE-BIFURCATION-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/active_state_bifurcation_policy_v1.md"
+      source_hash: "5ddc84bbffc1902964da0dc916e7a6a56ce77782dc9ef1abe3896090c3f1e86e"
+project_system_change_only: true
+physics_progress_status:
+  status: "v18_p1_t03_active_state_sidecar_validator_completed_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P1-T03 adds active-state sidecar validation and tests. It does not change Distance-to-GR status or promote any physics claim."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  ledger_update_rationale: "No Distance-to-GR burden is discharged by active-state sidecar validation."
+  milestone: "none"
+  burden_id: "none"
+mathematical_payload_manifest: []
+validator_contract:
+  status: "PASS"
+  unauthorized_sidecar_supersession_rejected: true
+  sidecar_physics_authority_claim_rejected: true
+  ordinary_research_handoff_supersession_allowed: true
+  rendered_bifurcation_sync_checked: true
+  full_validation_coverage_key: "active_state_sidecar_validation"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS"
+      - "continue_research.py resolved handoff-0678 and P1-T03"
+  focused_tests:
+    status: "PASS"
+    evidence:
+      - "tests.test_validate_research_control PASS"
+      - "tests.test_run_full_research_control_validation PASS"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "validator_contract status PASS"
+      - "next route set to P1-T04 active-state bifurcation red-team review"
+      - "completion preserves no physics delta and no physics promotion"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "generated outputs refreshed through memory bootstrap and renderers"
+      - "documentation-impact gate PASS"
+      - "claim graph validation PASS"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier check PASS with active_state_bifurcation synchronized to handoff-0679"
+      - "compact current frontier validation PASS with next_route active_state_bifurcation_red_team_review"
+      - "task index validation PASS with historical warnings only"
+      - "dependency graph freshness check PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS"
+      - "bootstrap_memory_system.py --validate-only PASS"
+      - "continue_research_memory_preflight.py refreshed local retrieval to PASS after generated output changes"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --json --changed PASS with zero hard failures"
+      - "reported warnings are historical warning-class findings"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint_research_transaction.py pending until post-write validators pass"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: "not_applicable"
+  source_law_adoption_authorized: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  source_detector_readout_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  matter_coupling_adoption_authorized: false
+  stress_energy_semantics_authorized: false
+  matter_action_authorized: false
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  downstream_physics_promotion_authorized: false
+claim_boundary:
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+forbidden_conclusions:
+  - "P1-T03 is not proof of completed v18 implementation."
+  - "P1-T03 is not upstream theorem construction."
+  - "P1-T03 does not discharge general EqSrc."
+  - "P1-T03 does not adopt RetainH."
+  - "P1-T03 does not adopt GenH."
+  - "P1-T03 does not adopt source detector/readout semantics."
+  - "P1-T03 does not adopt a coupling law."
+  - "P1-T03 does not derive or adopt matter coupling."
+  - "P1-T03 does not derive Einstein equations."
+  - "P1-T03 does not promote the exact-GR benchmark."
+  - "P1-T03 does not authorize external outreach."
+  - "P1-T03 does not complete v18."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

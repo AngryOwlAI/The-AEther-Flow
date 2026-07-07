@@ -1,0 +1,15 @@
+scenario_id: "sidecar_supersedes_without_authorization"
+active_task_id: "RT-TEST-002"
+latest_handoff_id: "handoff-0002"
+current_status: "test_invalid_supersession"
+next_action: "Run one bounded ordinary research continuation packet."
+bifurcation:
+  latest_research_task_id: "RT-TEST-002"
+  latest_research_handoff_id: "handoff-0002"
+  latest_research_next_action: "Run one bounded ordinary research continuation packet."
+  latest_project_system_task_id: "RT-SIDE-001"
+  latest_project_system_status: "project_system_repair_completed"
+  latest_project_system_sidecar_task_id: "RT-SIDE-001"
+  latest_project_system_sidecar_status: "sidecar_status_only"
+  sidecar_supersedes_research_handoff: true
+  next_research_route_source: "project_system_sidecar"

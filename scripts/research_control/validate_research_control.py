@@ -244,6 +244,39 @@ CURRENT_FRONTIER_ACTIVE_FIELD_MAP = {
     "Current burden": "current_burden",
     "Next recommended action": "next_recommended_action",
 }
+CURRENT_FRONTIER_BIFURCATION_FIELD_MAP = {
+    "Latest research task ID": "latest_research_task_id",
+    "Latest research handoff ID": "latest_research_handoff_id",
+    "Latest research next action": "latest_research_next_action",
+    "Latest project-system task ID": "latest_project_system_task_id",
+    "Latest project-system status": "latest_project_system_status",
+    "Latest project-system sidecar task ID": "latest_project_system_sidecar_task_id",
+    "Latest project-system sidecar status": "latest_project_system_sidecar_status",
+    "Sidecar supersedes research handoff": "sidecar_supersedes_research_handoff",
+    "Next research route source": "next_research_route_source",
+}
+ACTIVE_STATE_BIFURCATION_FIELDS = tuple(CURRENT_FRONTIER_BIFURCATION_FIELD_MAP.values())
+PROTECTED_SIDECAR_CLAIM_FLAGS = {
+    "physics_promotion_authorized",
+    "canonical_ontology_edit_authorized",
+    "source_law_adopted",
+    "general_EqSrc_discharged",
+    "RetainH_adopted",
+    "GenH_adopted",
+    "source_detector_readout_semantics_adopted",
+    "coupling_law_adopted",
+    "matter_coupling_derived",
+    "matter_coupling_adopted",
+    "stress_energy_semantics_imported",
+    "stress_energy_tensor_constructed",
+    "matter_action_imported",
+    "einstein_equations_derived",
+    "benchmark_promoted",
+    "external_outreach_authorized",
+    "proof_authority",
+    "completed_derivation_claimed",
+}
+PROJECT_IMPROVEMENT_HANDOFF_DIR = CONTROL_DIR / "project_improvement_handoffs"
 MIXED_MARKDOWN_PATHS = {
     "README.md",
     "AGENTS.md",
@@ -4099,6 +4132,17 @@ def current_frontier_active_state(text: str) -> dict[str, str]:
     return fields
 
 
+def current_frontier_active_state_bifurcation(text: str) -> dict[str, str]:
+    fields: dict[str, str] = {}
+    for row in _frontier_table_rows(text, "Active-State Bifurcation"):
+        if len(row) < 2 or row[0] == "Field":
+            continue
+        key = CURRENT_FRONTIER_BIFURCATION_FIELD_MAP.get(row[0])
+        if key:
+            fields[key] = row[1]
+    return fields
+
+
 def current_frontier_distance_rows(text: str) -> dict[str, dict[str, str]]:
     rows: dict[str, dict[str, str]] = {}
     headers: list[str] = []
@@ -4156,6 +4200,267 @@ def _frontier_contains_required_phrase(snapshot_value: str, authoritative_value:
     snapshot_text = _normalize_frontier_cell(snapshot_value).rstrip(".")
     authoritative_text = _normalize_frontier_cell(authoritative_value).rstrip(".")
     return bool(authoritative_text and authoritative_text in snapshot_text)
+
+
+def _normalize_bifurcation_value(value: Any) -> str:
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    return _normalize_frontier_cell(value)
+
+
+def _bifurcation_values_match(left: Any, right: Any) -> bool:
+    left_text = _normalize_bifurcation_value(left)
+    right_text = _normalize_bifurcation_value(right)
+    if left_text.lower() in {"true", "false"} or right_text.lower() in {"true", "false"}:
+        return left_text.lower() == right_text.lower()
+    return left_text == right_text
+
+
+def _truthy_flag(value: Any) -> bool:
+    if value is True:
+        return True
+    if isinstance(value, str):
+        return value.strip().lower() in {
+            "true",
+            "yes",
+            "1",
+            "authorized",
+            "adopted",
+            "claimed",
+            "derived",
+            "promoted",
+        }
+    return False
+
+
+def _inactive_marker(value: Any) -> bool:
+    return _normalize_bifurcation_value(value).lower() in {"", "none", "null", "false"}
+
+
+def _sidecar_supersession_authorized(handoff: dict[str, Any]) -> bool:
+    bifurcation = handoff.get("active_state_bifurcation")
+    bifurcation = bifurcation if isinstance(bifurcation, dict) else {}
+    return any(
+        _truthy_flag(value)
+        for value in (
+            bifurcation.get("explicit_sidecar_supersession_authorization"),
+            handoff.get("explicit_sidecar_supersession_authorization"),
+        )
+    )
+
+
+def _collect_protected_sidecar_flags(data: Any, prefix: str = "") -> list[str]:
+    if isinstance(data, dict):
+        found: list[str] = []
+        for key, value in data.items():
+            path = f"{prefix}.{key}" if prefix else str(key)
+            if key in PROTECTED_SIDECAR_CLAIM_FLAGS and _truthy_flag(value):
+                found.append(path)
+            found.extend(_collect_protected_sidecar_flags(value, path))
+        return found
+    if isinstance(data, list):
+        found = []
+        for index, item in enumerate(data):
+            path = f"{prefix}[{index}]" if prefix else f"[{index}]"
+            found.extend(_collect_protected_sidecar_flags(item, path))
+        return found
+    return []
+
+
+def _active_state_bifurcation_error(
+    report: ValidationReport,
+    field_name: str,
+    authoritative_value: Any,
+    snapshot_value: Any,
+    authoritative_source: str,
+    snapshot_source: str,
+) -> None:
+    report.error(
+        f"{snapshot_source}: active_state_bifurcation drift "
+        f"field={field_name} "
+        f"authoritative_value={_normalize_bifurcation_value(authoritative_value)!r} "
+        f"snapshot_value={_normalize_bifurcation_value(snapshot_value)!r} "
+        f"authoritative_source={authoritative_source} "
+        f"suggested_repair_route={CURRENT_FRONTIER_REPAIR_ROUTE}"
+    )
+
+
+def _compare_active_state_bifurcation_field(
+    report: ValidationReport,
+    snapshot: dict[str, Any],
+    field_name: str,
+    authoritative_value: Any,
+    authoritative_source: str,
+    snapshot_source: str,
+) -> None:
+    snapshot_value = snapshot.get(field_name, "")
+    if not _bifurcation_values_match(authoritative_value, snapshot_value):
+        _active_state_bifurcation_error(
+            report,
+            field_name,
+            authoritative_value,
+            snapshot_value,
+            authoritative_source,
+            snapshot_source,
+        )
+
+
+def _validate_sidecar_supersession_boundary(
+    report: ValidationReport,
+    bifurcation: dict[str, Any],
+    handoff: dict[str, Any],
+    source_path: str,
+) -> None:
+    sidecar_fields = (
+        bifurcation.get("latest_project_system_sidecar_task_id"),
+        bifurcation.get("latest_project_system_sidecar_status"),
+    )
+    sidecar_present = any(not _inactive_marker(value) for value in sidecar_fields)
+    supersedes = _truthy_flag(bifurcation.get("sidecar_supersedes_research_handoff"))
+    route_source = _normalize_bifurcation_value(
+        bifurcation.get("next_research_route_source", "latest_research_handoff")
+    )
+    authorized = _sidecar_supersession_authorized(handoff)
+    if (supersedes or route_source != "latest_research_handoff") and not authorized:
+        report.error(
+            f"{source_path}: project-system sidecar may not supersede the latest "
+            "ordinary research handoff without explicit tracked authorization"
+        )
+    if sidecar_present and not supersedes and route_source != "latest_research_handoff":
+        report.error(
+            f"{source_path}: project-system sidecar is present but next_research_route_source "
+            "does not remain latest_research_handoff"
+        )
+
+
+def _validate_project_improvement_sidecar_claims(report: ValidationReport) -> None:
+    sidecar_dir = CONTROL_DIR / "project_improvement_handoffs"
+    if not sidecar_dir.exists():
+        return
+    for path in sorted(sidecar_dir.glob("improve-project-handoff_*.yaml")):
+        relative_path = path.relative_to(REPO_ROOT).as_posix()
+        try:
+            data = load_yaml(path)
+        except StrictYamlError:
+            continue
+        flags = _collect_protected_sidecar_flags(data)
+        if flags:
+            report.error(
+                f"{relative_path}: project-system sidecar contains protected "
+                "physics-authority claim flags without ledger and Gate Chair authority: "
+                + ";".join(sorted(flags))
+            )
+
+
+def validate_active_state_bifurcation(report: ValidationReport, tasks: dict[str, dict[str, str]]) -> None:
+    """Validate sidecar/research authority separation in active-state surfaces."""
+
+    frontier_path = CONTROL_DIR / "current_frontier.md"
+    program_state_path = CONTROL_DIR / "program_state.yaml"
+    if not frontier_path.exists() or not program_state_path.exists():
+        return
+    try:
+        state = load_yaml(program_state_path)
+    except StrictYamlError:
+        return
+    latest_handoff_id = str(state.get("latest_handoff_id", "")).strip()
+    if not latest_handoff_id:
+        return
+    handoff_path = CONTROL_DIR / "handoffs" / f"{latest_handoff_id}.yaml"
+    if not handoff_path.exists():
+        return
+    try:
+        handoff = load_yaml(handoff_path)
+    except StrictYamlError:
+        return
+    bifurcation = handoff.get("active_state_bifurcation")
+    if not isinstance(bifurcation, dict):
+        report.error(
+            f"research_control/handoffs/{latest_handoff_id}.yaml: missing active_state_bifurcation "
+            f"suggested_repair_route={CURRENT_FRONTIER_REPAIR_ROUTE}"
+        )
+        return
+
+    frontier_text = frontier_path.read_text(encoding="utf-8")
+    markdown_snapshot = current_frontier_active_state_bifurcation(frontier_text)
+    if not markdown_snapshot:
+        report.error(
+            "research_control/current_frontier.md: missing Active-State Bifurcation section "
+            f"suggested_repair_route={CURRENT_FRONTIER_REPAIR_ROUTE}"
+        )
+    handoff_source = f"research_control/handoffs/{latest_handoff_id}.yaml"
+    for field_name in ACTIVE_STATE_BIFURCATION_FIELDS:
+        _compare_active_state_bifurcation_field(
+            report,
+            markdown_snapshot,
+            field_name,
+            bifurcation.get(field_name, ""),
+            handoff_source,
+            "research_control/current_frontier.md",
+        )
+
+    if not _bifurcation_values_match(bifurcation.get("latest_research_handoff_id"), latest_handoff_id):
+        _active_state_bifurcation_error(
+            report,
+            "latest_research_handoff_id",
+            latest_handoff_id,
+            bifurcation.get("latest_research_handoff_id"),
+            "research_control/program_state.yaml",
+            handoff_source,
+        )
+    handoff_task_id = str(handoff.get("task_id", "")).strip()
+    if handoff_task_id and not _bifurcation_values_match(bifurcation.get("latest_research_task_id"), handoff_task_id):
+        _active_state_bifurcation_error(
+            report,
+            "latest_research_task_id",
+            handoff_task_id,
+            bifurcation.get("latest_research_task_id"),
+            handoff_source,
+            handoff_source,
+        )
+    if handoff_task_id and handoff_task_id not in tasks:
+        report.error(f"{handoff_source}: active_state_bifurcation latest_research_task_id is not registered")
+    next_action = str(handoff.get("next_action", "")).strip()
+    if next_action and not _bifurcation_values_match(bifurcation.get("latest_research_next_action"), next_action):
+        _active_state_bifurcation_error(
+            report,
+            "latest_research_next_action",
+            next_action,
+            bifurcation.get("latest_research_next_action"),
+            handoff_source,
+            handoff_source,
+        )
+
+    _validate_sidecar_supersession_boundary(report, bifurcation, handoff, handoff_source)
+
+    compact_path = REPO_ROOT / "output" / "compact_current_frontier_v16.json"
+    if compact_path.exists():
+        try:
+            compact = json.loads(compact_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            report.error(f"output/compact_current_frontier_v16.json: invalid JSON: {exc.msg}")
+        else:
+            compact_snapshot = compact.get("active_state_bifurcation")
+            if not isinstance(compact_snapshot, dict):
+                report.error("output/compact_current_frontier_v16.json: missing active_state_bifurcation object")
+            else:
+                for field_name in ACTIVE_STATE_BIFURCATION_FIELDS:
+                    _compare_active_state_bifurcation_field(
+                        report,
+                        compact_snapshot,
+                        field_name,
+                        bifurcation.get(field_name, ""),
+                        handoff_source,
+                        "output/compact_current_frontier_v16.json",
+                    )
+                _validate_sidecar_supersession_boundary(
+                    report,
+                    compact_snapshot,
+                    handoff,
+                    "output/compact_current_frontier_v16.json",
+                )
+
+    _validate_project_improvement_sidecar_claims(report)
 
 
 def validate_current_frontier_sync(report: ValidationReport, tasks: dict[str, dict[str, str]]) -> None:
@@ -4784,6 +5089,7 @@ def validate_all(
     validate_program_state(report, tasks)
     validate_handoffs(report, tasks, jobs)
     validate_current_frontier_sync(report, tasks)
+    validate_active_state_bifurcation(report, tasks)
     validate_compact_current_frontier_sync(report)
     validate_project_improvement_handoffs(report)
     validate_approvals(report, decisions)

@@ -42,6 +42,7 @@ class LocalCiEquivalentValidationTests(unittest.TestCase):
         self.assertIn("route_signature_extraction", labels)
         self.assertIn("route_orbit_advisory", labels)
         self.assertIn("whitespace_diff_check", labels)
+        self.assertTrue(coverage["active_state_sidecar_validation"])
         self.assertNotIn("repository_smoke_tests", labels)
         self.assertTrue(all(coverage.values()))
 

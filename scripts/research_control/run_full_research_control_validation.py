@@ -199,6 +199,10 @@ def coverage_map(commands: list[dict[str, Any]]) -> dict[str, bool]:
     labels = {command["label"] for command in commands}
     return {
         "registry_referential_integrity": "research_control_validation" in labels,
+        "active_state_sidecar_validation": (
+            "research_control_validation" in labels
+            and "compact_current_frontier_check" in labels
+        ),
         "claim_language_lint": "claim_language_changed_lint" in labels,
         "research_control_validation": "research_control_validation" in labels,
         "current_frontier_check": "current_frontier_check" in labels,
