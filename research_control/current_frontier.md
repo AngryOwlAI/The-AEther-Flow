@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260707-012` and `handoff-0681`.
+`RT-20260707-013` and `handoff-0682`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260707-012` |
-| Latest handoff ID | `handoff-0681` |
-| Current status | `v18_p1_t04_repair_active_state_supersession_guard_completed_no_physics_delta` |
+| Active task ID | `RT-20260707-013` |
+| Latest handoff ID | `handoff-0682` |
+| Current status | `v18_p2_t01_source_equivalence_typed_object_problem_statement_completed_no_distance_delta` |
 | V16 completed | false |
-| Current route family | v18 p2 t01 typed source equivalence problem statement no physics promotion |
-| Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P2-T01 source-equivalence typed-object problem-statement packet. |
-| Required next authority | P2-T01 source-equivalence typed-object problem statement |
-| Next recommended action | Run one bounded v18 P2-T01 source-equivalence typed-object problem-statement packet. |
+| Current route family | v18 p2 t02 typed source equivalence schema and registry no physics promotion |
+| Target derivation milestone | `source_equivalence_eqsrc` |
+| Current burden | `source_equivalence_eqsrc`; status: draft_control_object_exists |
+| Required next authority | P2-T02 typed source-equivalence schema and registry |
+| Next recommended action | Run one bounded v18 P2-T02 typed source-equivalence schema and registry packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260707-012` |
-| Latest research handoff ID | `handoff-0681` |
-| Latest research next action | Run one bounded v18 P2-T01 source-equivalence typed-object problem-statement packet. |
+| Latest research task ID | `RT-20260707-013` |
+| Latest research handoff ID | `handoff-0682` |
+| Latest research next action | Run one bounded v18 P2-T02 typed source-equivalence schema and registry packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260707-012/00_TASK.yaml`.
-- Active task objective: Repair the active-state sidecar supersession validator so project-system sidecars may supersede ordinary research handoff authority only when a tracked Director decision explicitly authorizes active-state supersession.
-- Latest handoff path: `research_control/handoffs/handoff-0681.yaml`.
-- Latest handoff summary: RT-20260707-012 completed the v18 P1-T04 repair. Active-state sidecar supersession validation now requires a tracked Director decision registry row and DDR front matter explicitly authorizing active-state sidecar supersession with a nonblank scope. Flag-only handoff or bifurcation authorization is rejected. No physics claim promotion or Distance-to-GR delta is authorized.
-- Current route family: v18 p2 t01 typed source equivalence problem statement no physics promotion.
-- Next recommended action: Run one bounded v18 P2-T01 source-equivalence typed-object problem-statement packet.
+- Active task path: `research_control/tasks/RT-20260707-013/00_TASK.yaml`.
+- Active task objective: Translate the prior record-local EqSrc theorem candidate and OB-P6T02-GENERAL-EQSRC-FAMILY-CLOSURE-MISSING obstruction into an exact typed source-equivalence object problem statement.
+- Latest handoff path: `research_control/handoffs/handoff-0682.yaml`.
+- Latest handoff summary: RT-20260707-013 completed v18 P2-T01 by producing a typed source-equivalence object problem statement grounded in the prior record-local EqSrc theorem candidate and OB-P6T02-GENERAL-EQSRC-FAMILY-CLOSURE-MISSING. It defines TypedSourceEquivalenceObject_v1 burden slots and routes to P2-T02 schema and registry. No general EqSrc discharge RetainH adoption GenH adoption source-law adoption physics promotion or Distance-to-GR ledger delta is authorized.
+- Current route family: v18 p2 t02 typed source equivalence schema and registry no physics promotion.
+- Next recommended action: Run one bounded v18 P2-T02 typed source-equivalence schema and registry packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P2-T01 source-equivalence typed-object problem-statement packet.
+Run one bounded v18 P2-T02 typed source-equivalence schema and registry packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,25 +320,24 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260707-012`;
-- latest handoff: `handoff-0681`;
-- current status: `v18_p1_t04_repair_active_state_supersession_guard_completed_no_physics_delta`;
+- active task: `RT-20260707-013`;
+- latest handoff: `handoff-0682`;
+- current status: `v18_p2_t01_source_equivalence_typed_object_problem_statement_completed_no_distance_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `continue_research_json`: PASS;
-- latest handoff validation `focused_unit_tests`: PASS;
 - latest handoff validation `memory_preflight`: PASS;
+- latest handoff validation `problem_statement_artifact`: PASS;
 - latest handoff validation `query_memory_status`: PASS;
-- latest handoff validation `task_local_validator`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0681.yaml`
-- `research_control/tasks/RT-20260707-012/00_TASK.yaml`
+- `research_control/handoffs/handoff-0682.yaml`
+- `research_control/tasks/RT-20260707-013/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -354,7 +353,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0681*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0682*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

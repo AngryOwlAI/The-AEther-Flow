@@ -746,6 +746,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-020-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-REFUTER-REVIEW` `wiki/markdown/md-research-control-tasks-rt-20260706-020-parent-fusion-notes-support-only-formalization-refuter-review.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-020-SUPPORT-ONLY-FORMALIZATION-REFUTER-REVIEW` `wiki/markdown/md-research-control-tasks-rt-20260706-020-support-only-formalization-refuter-review.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260706-037-V17-INTEGRATION-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260706-037-v17-integration-report.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-013-PARENT-FUSION-NOTES-SOURCE-EQUIVALENCE-TYPED-OBJECT-PROBLEM-STATEMENT` `wiki/markdown/md-research-control-tasks-rt-20260707-013-parent-fusion-notes-source-equivalence-typed-object-problem-statement.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-013-SOURCE-EQUIVALENCE-TYPED-OBJECT-PROBLEM-STATEMENT-V1` `wiki/markdown/md-research-control-tasks-rt-20260707-013-source-equivalence-typed-object-problem-statement-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1337,6 +1339,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-020-PARENT-FUSION-NOTES-SUPPORT-ONLY-FORMALIZATION-REFUTER-REVIEW` `research_control/tasks/RT-20260706-020/artifacts/parent_fusion_notes_support_only_formalization_refuter_review.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-020-SUPPORT-ONLY-FORMALIZATION-REFUTER-REVIEW` `research_control/tasks/RT-20260706-020/artifacts/support_only_formalization_refuter_review.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260706-037-V17-INTEGRATION-REPORT` `research_control/tasks/RT-20260706-037/artifacts/v17_integration_report.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260707-013-PARENT-FUSION-NOTES-SOURCE-EQUIVALENCE-TYPED-OBJECT-PROBLEM-STATEMENT` `research_control/tasks/RT-20260707-013/artifacts/parent_fusion_notes_source_equivalence_typed_object_problem_statement.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260707-013-SOURCE-EQUIVALENCE-TYPED-OBJECT-PROBLEM-STATEMENT-V1` `research_control/tasks/RT-20260707-013/artifacts/source_equivalence_typed_object_problem_statement_v1.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
