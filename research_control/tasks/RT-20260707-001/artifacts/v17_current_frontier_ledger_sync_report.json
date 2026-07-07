@@ -1,0 +1,95 @@
+{
+  "schema_id": "v17_current_frontier_ledger_sync_report_v1",
+  "task_id": "RT-20260707-001",
+  "job_id": "AJ-RT-20260707-001-001",
+  "plan_id": "recommendations_implementation_plan_continue_task-v17",
+  "plan_task_id": "P13-T03",
+  "created_at": "2026-07-07T00:24:09Z",
+  "aggregate_status": "PASS",
+  "operational_receipt_only": true,
+  "proof_authority": false,
+  "physics_promotion_authorized": false,
+  "synchronization_scope": {
+    "current_frontier": "research_control/current_frontier.md",
+    "compact_frontier_yaml": "output/compact_current_frontier_v16.yaml",
+    "compact_frontier_json": "output/compact_current_frontier_v16.json",
+    "claim_graph": "output/claim_graph_v1.json",
+    "dependency_graph": "output/research_dependency_graph.json",
+    "distance_to_gr_ledger": "registries/DISTANCE_TO_GR_LEDGER.csv",
+    "metric_use_ledger": "registries/METRIC_USE_LEDGER.csv"
+  },
+  "ledger_integrity": {
+    "distance_to_gr_ledger_before_sha256": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+    "distance_to_gr_ledger_after_sha256": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+    "metric_use_ledger_before_sha256": "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf",
+    "metric_use_ledger_after_sha256": "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf",
+    "distance_to_gr_status_changed": false,
+    "metric_use_status_changed": false,
+    "protected_authority_for_status_change": false,
+    "ledger_status_change_rationale": "No ledger status change is authorized or needed for P13-T03."
+  },
+  "surface_hashes": {
+    "current_frontier_md_sha256": "f96300dcb32f5ea7db594c8d0015c991c8c488662c4f1a6a42864759f84e0310",
+    "compact_frontier_yaml_sha256": "a659701a7c7a0dabe62c2eb704763b35a5c742f41873a82a53f73662de65cf71",
+    "compact_frontier_json_sha256": "4ffabfa78bf95caa7091c30964b91a2b2476fe3b90860dda1b94aa16f80b2234",
+    "claim_graph_json_sha256": "f40950102ac186526b774fc806fb01315a70d9925d86c9f98555cb34c68c9162",
+    "dependency_graph_json_sha256": "e09896e6d151b8ee7e68211586931be783bb0c9dc822fb7cf9fed148f5c49059",
+    "dependency_graph_dot_sha256": "47ae2c3e4a68b62928cb6ce456bbcf061c51c6bced62ac0fd6b73d61da9901d8",
+    "dependency_graph_markdown_sha256": "8eb77b2417471831342f3f2d4f7a15e1c3f9d659ae341df86de7ee1cff214442"
+  },
+  "done_criteria": [
+    {
+      "criterion": "current_frontier.md is synchronized",
+      "status": "PASS",
+      "evidence": "render_current_frontier.py --write synchronized current_frontier.md to handoff-0671 and P13-T04 next action."
+    },
+    {
+      "criterion": "Compact frontier is synchronized",
+      "status": "PASS",
+      "evidence": "render_compact_current_frontier_v16.py --write synchronized compact frontier YAML JSON and Markdown to handoff-0671."
+    },
+    {
+      "criterion": "Claim graph and dependency graph are fresh",
+      "status": "PASS",
+      "evidence": "generate_claim_graph_v1.py and render_dependency_graph.py refreshed graph outputs after handoff-0671."
+    },
+    {
+      "criterion": "Distance-to-GR ledger remains accurate",
+      "status": "PASS",
+      "evidence": "Distance-to-GR ledger hash is unchanged and no status change is authorized."
+    },
+    {
+      "criterion": "Any ledger status change is justified by protected authority otherwise no ledger status change",
+      "status": "PASS",
+      "evidence": "No Distance-to-GR or metric-use ledger status change is made in P13-T03."
+    }
+  ],
+  "implementation_plan_receipt": {
+    "implemented_v17_plan_tasks_after_completion": 56,
+    "deferred_v17_plan_tasks_after_completion": [
+      "P13-T04"
+    ],
+    "phase_p13_completed": false,
+    "all_applicable_plan_tasks_proven": false,
+    "selected_next_plan_task_id": "P13-T04"
+  },
+  "next_route": {
+    "route_id": "v17_p13_t04_ordinary_continuation_handoff",
+    "plan_task_id": "P13-T04",
+    "role_family": "director-of-research@0.3.0",
+    "requires_human_gate": false,
+    "note": "P13-T04 remains a separate bounded loop unit. It must select exactly one ordinary continuation route from validated v17 outputs."
+  },
+  "hard_blocks_preserved": [
+    "canonical ontology edit",
+    "source-law adoption",
+    "MetricData(E) adoption",
+    "g_eff scope expansion",
+    "matter-coupling derivation or adoption",
+    "Einstein equations",
+    "benchmark promotion",
+    "Gate Chair verdict",
+    "final ordinary continuation route selection",
+    "completed derivation"
+  ]
+}

@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `c17ac5b7c7fe2cb89ce059ccc75aac26bd085709c0f0e3472c0bf2b2c627bd98`
-- Generated-at source timestamp: `2026-07-06T23:54:18Z`
-- Row count: `810`
+- Source fingerprint: `33775302ca664236c8e98e4b74773e1b6a218252d154f2ed58f5086ce72e97cb`
+- Generated-at source timestamp: `2026-07-07T00:24:09Z`
+- Row count: `811`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260707-001|RT-20260706-038|2026-07-07T00:24:09Z|2026-07-07T00:24:09Z|v17_current_frontier_synchronization|completed|matter_coupling|Synchronize current frontier, compact frontier, graphs, and ledgers after v17 final validation.|project-control-maintainer@0.2.0|false|false|3|Run one bounded v17 P13-T04 ordinary continuation handoff packet.|PASS|research_control/tasks/RT-20260707-001/jobs/completions/AJC-AJ-RT-20260707-001-001.yaml|
 |RT-20260706-038|RT-20260706-037|2026-07-06T23:54:18Z|2026-07-06T23:54:18Z|v17_final_validation_packet|completed|matter_coupling|Run final v17 validation layers and record exact pending reasons if any.|director-of-research@0.3.0|false|false|3|Run one bounded v17 P13-T03 current frontier and ledger synchronization packet.|PASS|research_control/tasks/RT-20260706-038/jobs/completions/AJC-AJ-RT-20260706-038-001.yaml|
 |RT-20260706-037|RT-20260706-036|2026-07-06T23:13:41Z|2026-07-06T23:13:41Z|v17_integration_report|completed|matter_coupling|Integrate v17 phase outputs into one control report without physics overclaim.|director-of-research@0.3.0|false|false|5|Run one bounded v17 P13-T02 final validation packet through director-of-research@0.3.0.|PASS|research_control/tasks/RT-20260706-037/jobs/completions/AJC-AJ-RT-20260706-037-001.yaml|
 |RT-20260706-036|RT-20260706-035|2026-07-06T22:34:56Z|2026-07-06T22:34:56Z|ai_methodology_dashboard_integration|completed|matter_coupling|Render methodology metrics dashboard as support-only AI-system diagnostic.|project-control-maintainer@0.2.0|false|false|4|Run one bounded v17 P13-T01 integration report packet through director-of-research@0.3.0.|PASS|research_control/tasks/RT-20260706-036/jobs/completions/AJC-AJ-RT-20260706-036-001.yaml|
