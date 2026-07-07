@@ -1,0 +1,292 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\newcommand{\EqSrc}{\mathrm{EqSrc}}
+\newcommand{\Block}{\mathrm{Block}}
+\newcommand{\NotEqSrc}{\mathrm{not\_EqSrc}}
+\newcommand{\RetainH}{\mathrm{RetainH}}
+\newcommand{\GenH}{\mathrm{GenH}}
+\newcommand{\SourceEquivalenceTypedObject}{\mathrm{SourceEquivalenceTypedObject\_v1}}
+
+\title{Source-Equivalence Typed Object v1}
+\author{The AEther-Flow Research Project}
+\date{2026-07-07}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v18 P2-T03 as a draft/control science artifact. It
+defines \(\SourceEquivalenceTypedObject\) as a source-side typed object for
+future family-level \(\EqSrc\) theorem-or-countermodel work.
+
+The artifact has no proof authority. It does not discharge general \(\EqSrc\),
+adopt \(\RetainH\), adopt \(\GenH\), adopt a source law, edit canonical
+ontology, adopt \(\mathrm{MetricData}(E)\), expand \(g_{\mathrm{eff}}\), derive
+matter coupling, derive Einstein equations, promote a benchmark, issue a Gate
+Chair verdict, authorize external outreach, or claim completed derivation.
+
+\section{Prior Record-Local Theorem}
+
+The prior record-local theorem candidate works inside one declared finite
+source-record orbit. Let
+\[
+  E_{\mathrm{rec}} = (\mathrm{Obj}_{\mathrm{rec}},
+  \mathrm{Inv}_{\mathrm{rec}}, \mathrm{Cmp}_{\mathrm{rec}},
+  \mathrm{Ann}, \mathrm{Infl})
+\]
+denote that record-local packet. Inside that packet, explicitly supplied
+source-side relabelings witness the equivalence-relation obligations only
+when the identity, inverse, and composition checks are listed and source-side.
+
+This prior result is not a family-level theorem. It is the local datum that
+P2-T03 generalizes into typed obligations.
+
+\section{Typed Source Family}
+
+A typed source family is a tuple
+\[
+  \mathcal{F}_{\mathrm{src}} =
+  (\mathcal{O}, \mathcal{M}, \mathcal{I}, C, \mathcal{A},
+   \mathcal{P}, \mathcal{N})
+\]
+where each component is source-side:
+\begin{enumerate}[label=(\alph*)]
+\item \(\mathcal{O}\) is a declared class or bounded family fragment of source
+objects.
+\item \(\mathcal{M}\) is a declared class of admissible source morphisms or
+relabelings between objects.
+\item \(\mathcal{I}\) is an invariant ledger whose entries are source tokens,
+source certificates, source annotations, and source influence exclusions.
+\item \(C\) is a source-only comparison rule with codomain
+\(\{\EqSrc,\NotEqSrc,\Block\}\).
+\item \(\mathcal{A}\) is an annotation ledger recording source path, object id,
+hash, rule scope, and dependency.
+\item \(\mathcal{P}\) is an influence ledger for forbidden-channel and proxy
+edges that must be blocked rather than ignored.
+\item \(\mathcal{N}\) is a negative-control set on which the same rule returns
+\(\NotEqSrc\) or \(\Block\).
+\end{enumerate}
+
+\section{Source Objects}
+
+An object \(X \in \mathcal{O}\) is source-side data. It is not a target
+topological space, smooth atlas, Lorentzian metric, detector protocol,
+empirical calibration, stress-energy object, matter action, benchmark branch,
+validator status, role label, handoff state, or commit state.
+
+For P2-T03 the object-set status is \emph{explicit as a type}: the artifact
+requires a declared \(\mathcal{O}\) before any family theorem can be attempted.
+Concrete members of \(\mathcal{O}\) remain future theorem or countermodel data.
+
+\section{Admissible Source Morphisms or Relabelings}
+
+A morphism \(f:X\to Y\) is admissible only if it is declared in
+\(\mathcal{M}\) and preserves the source-side information named by the ledger:
+\[
+  f^\ast \mathcal{I}(Y) = \mathcal{I}(X), \qquad
+  f^\ast \mathcal{A}(Y) = \mathcal{A}(X),
+\]
+with the influence incidence in \(\mathcal{P}\) mapped or blocked by an
+explicit source-side rule.
+
+If a proposed morphism needs target topology, target metric, detector protocol,
+proper-time normalization, stress-energy semantics, matter action, benchmark
+behavior, registry metadata authority, validator status, role status, or
+handoff status, then \(f\) is not admissible and \(C\) must return \(\Block\).
+
+\section{Invariant Ledger}
+
+The invariant ledger \(\mathcal{I}\) is the data that a future proof or
+countermodel must preserve or refute. Each entry must identify:
+\[
+  (\mathrm{name}, \mathrm{source\_path}, \mathrm{object\_id},
+  \mathrm{source\_hash}, \mathrm{scope}, \mathrm{dependency},
+  \mathrm{proxy\_exclusion}).
+\]
+The ledger has family validity status \emph{unknown} in this draft. It is a
+typed obligation, not a proven family invariant.
+
+\section{Source-Only Comparison Rule}
+
+The comparison rule is a partial source-side function
+\[
+  C:\mathcal{O}\times\mathcal{O}\to
+  \{\EqSrc,\NotEqSrc,\Block\}.
+\]
+Define the typed relation
+\[
+  X\,\EqSrc_T\,Y \quad \Longleftrightarrow \quad C(X,Y)=\EqSrc
+\]
+under the side condition that all required object, morphism, invariant,
+annotation, influence, negative-control, and no-target guard checks pass.
+
+The rule returns \(\Block\) for missing annotations, unmapped proxy edges,
+changed influence incidence, missing closure witnesses, target-side comparison,
+or authority-status premises.
+
+\section{Identity Closure}
+
+Identity closure is supplied as a typed requirement:
+\[
+  \forall X\in\mathcal{O},\quad \mathrm{id}_X\in\mathcal{M},
+  \quad C(X,X)=\EqSrc
+\]
+provided the invariant, annotation, influence, and no-target checks pass. A
+future theorem must supply the actual identity witnesses for its chosen family
+or bounded fragment.
+
+\section{Inverse Closure}
+
+Inverse closure is candidate-derived, not proven. The required obligation is:
+\[
+  \forall f:X\to Y\in\mathcal{M},\quad
+  \exists f^{-1}:Y\to X\in\mathcal{M}
+\]
+with source-only preservation of \(\mathcal{I}\), \(\mathcal{A}\), and
+\(\mathcal{P}\). If the inverse is missing, the missing inverse is a
+countermodel slot rather than a theorem premise.
+
+\section{Composition Closure}
+
+Composition closure is candidate-derived, not proven. The required obligation
+is:
+\[
+  f:X\to Y,\ g:Y\to Z \in \mathcal{M}
+  \quad\Longrightarrow\quad g\circ f:X\to Z\in\mathcal{M}
+\]
+with source-only preservation of every ledger entry. If composition is not
+supplied or derived, the failure is a typed obstruction slot.
+
+\section{\(\RetainH\) Boundary}
+
+\(\RetainH\) is a boundary condition only. It is required exactly when a future
+packet asks whether source-record structure, certificate status, comparison
+status, negative controls, or invariant status is preserved under an
+\(H\)-indexed retention operation.
+
+P2-T03 does not adopt \(\RetainH\). The typed object records
+\(\RetainH\) status as \emph{required as a possible primitive} for broader
+families and as \emph{not supplied} by this artifact.
+
+\section{\(\GenH\) Boundary}
+
+\(\GenH\) is a boundary condition only. It is required exactly when a future
+packet constructs, enumerates, or quantifies over an \(H\)-generated source
+family.
+
+P2-T03 does not adopt \(\GenH\). The typed object records \(\GenH\) status as
+\emph{required as a possible primitive} for generated families and as
+\emph{not supplied} by this artifact.
+
+\section{No-Target Guard}
+
+The no-target guard is part of the typed object:
+\[
+  B=(b_{\mathrm{top}},b_{\mathrm{metric}},b_{\mathrm{det}},
+  b_{\mathrm{stress}},b_{\mathrm{action}},b_{\mathrm{bench}},
+  b_{\mathrm{authority}}).
+\]
+Every component must remain false for import-as-premise:
+\[
+  b_{\mathrm{top}}=b_{\mathrm{metric}}=b_{\mathrm{det}}=
+  b_{\mathrm{stress}}=b_{\mathrm{action}}=b_{\mathrm{bench}}=
+  b_{\mathrm{authority}}=\mathrm{false}.
+\]
+Thus target topology, target metric, detector protocol, stress-energy
+semantics, matter action, benchmark behavior, validator status, registry
+status, role identity, handoff state, commit state, and generated derivatives
+are not theorem premises.
+
+\section{Family-Level Burden}
+
+The family-level burden is:
+\[
+  \mathrm{Burden}_{\EqSrc_T}(\mathcal{F}_{\mathrm{src}}):
+  \quad \EqSrc_T \text{ is reflexive, symmetric, and transitive on }
+  \mathcal{O}
+\]
+using only the source-side data and guards above.
+
+P2-T03 does not discharge this burden. It makes the burden explicit enough for
+P2-T04 audit, P2-T05 stress, and later P3 theorem-or-countermodel work.
+
+\section{Countermodel Slots}
+
+A minimal countermodel may target any one of these slots:
+\begin{center}
+\begin{tabular}{|p{0.22\linewidth}|p{0.62\linewidth}|}
+\hline
+Slot & Countermodel condition \\
+\hline
+Object domain & A declared family admits an object with no source-only ledger. \\
+\hline
+Morphism family & A required relabeling is missing or uses a target proxy. \\
+\hline
+Invariant ledger & A morphism changes a required invariant. \\
+\hline
+Comparison rule & \(C\) returns \(\EqSrc\) from benchmark behavior or authority status. \\
+\hline
+Identity & Some \(X\) lacks \(\mathrm{id}_X\). \\
+\hline
+Inverse & Some admissible \(f\) lacks a source-side inverse. \\
+\hline
+Composition & Some \(g\circ f\) is not admissible or not source-side. \\
+\hline
+\(\RetainH\) & Preservation under \(H\)-retention is required but not supplied. \\
+\hline
+\(\GenH\) & Generated-family quantification is required but not supplied. \\
+\hline
+No-target guard & A hidden target or authority premise is used. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Distance-to-GR Effect}
+
+Distance-to-GR effect is \emph{no distance delta}. The ledger row for
+source-equivalence remains draft/control with general \(\EqSrc\), \(\RetainH\),
+and \(\GenH\) open. This artifact is a new mathematical payload, not a
+protected ledger update.
+
+\section{Forbidden Conclusions}
+
+This artifact forbids the following overreads:
+\begin{itemize}
+\item P2-T03 as general \(\EqSrc\) discharge.
+\item P2-T03 as \(\RetainH\) adoption.
+\item P2-T03 as \(\GenH\) adoption.
+\item P2-T03 as source-law adoption.
+\item P2-T03 as canonical ontology edit.
+\item P2-T03 as detector semantics, matter semantics, coupling-law, or
+matter-coupling adoption.
+\item P2-T03 as stress-energy tensor, matter action, Einstein-equation, or
+effective-metric authority.
+\item P2-T03 as benchmark promotion, Gate Chair verdict, external outreach, or
+completed derivation.
+\item P2-T03 registry metadata as proof authority.
+\item P2-T03 validator status as theorem premise.
+\end{itemize}
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026). \emph{Recommendations implementation
+plan continue task v18} [Internal implementation plan].
+
+The AEther-Flow Research Project. (2026). \emph{Source-equivalence typed-object
+problem statement v1} [Internal science draft].
+
+The AEther-Flow Research Project. (2026). \emph{Source-equivalence typed-object
+schema v1} [Internal control schema].
+
+The AEther-Flow Research Project. (2026). \emph{Selected upstream equivalence
+attempt v1} [Internal science draft].
+
+\end{document}

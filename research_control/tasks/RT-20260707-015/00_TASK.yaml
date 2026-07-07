@@ -1,0 +1,38 @@
+task_id: "RT-20260707-015"
+created_at: "2026-07-07T11:24:59Z"
+updated_at: "2026-07-07T11:24:59Z"
+status: "completed"
+task_type: "source_equivalence_typed_object_science_draft"
+title: "V18 P2-T03 source-equivalence typed object science draft"
+parent_task_id: "RT-20260707-014"
+source_handoff_id: "handoff-0683"
+decision_id: "DDR-20260707-015"
+agent_job_id: "AJ-RT-20260707-015-001"
+plan_id: "recommendations_implementation_plan_continue_task-v18"
+plan_task_id: "P2-T03"
+phase_id: "P2"
+recommendation_ids:
+  - "V18-R01"
+  - "V18-R02"
+objective: "Define the draft/control SourceEquivalenceTypedObject_v1 science artifact and populate one registry row that indexes the typed object without proof authority."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Define the typed source-equivalence object that will support the family-closure theorem-or-countermodel attempt."
+requires_human_gate: false
+physics_promotion_authorized: false
+distance_to_gr_delta: "no_distance_delta"
+project_system_change_only: false
+project_system_boundary_authorized_by_plan: false
+outputs:
+  - "research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex"
+  - "research_control/tasks/RT-20260707-015/artifacts/child_phys_math_source_equivalence_typed_object.yaml"
+  - "research_control/tasks/RT-20260707-015/artifacts/child_phys_phil_source_equivalence_typed_object.yaml"
+  - "research_control/tasks/RT-20260707-015/artifacts/parent_conflict_review_source_equivalence_typed_object.yaml"
+  - "research_control/tasks/RT-20260707-015/artifacts/parent_fusion_notes_source_equivalence_typed_object.md"
+  - "research_control/tasks/RT-20260707-015/artifacts/validate_source_equivalence_typed_object.py"
+  - "research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_validation.json"
+  - "research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_receipt.md"
+  - "research_control/handoffs/handoff-0684.yaml"
+  - "research_control/handoffs/handoff-0684.md"
+next_route_on_success: "P2-T04"
+validation_status: "PASS"
+notes: "P2-T03 defines a source-only typed EqSrc object as science_draft_definition_only and adds one draft/control registry row. It does not discharge EqSrc adopt RetainH adopt GenH adopt a source law promote a benchmark or complete v18."

@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `36b3220fae2a3f30a15bf9b1a42c1698ec1ad2c5e363dbcdf020b82d9265c102`
-- Generated-at source timestamp: `2026-07-07T10:52:51Z`
-- Row count: `824`
+- Source fingerprint: `6f42df41a2036c4200d85778f1b800908b8ffa4f88a14837653c39cd083b55bb`
+- Generated-at source timestamp: `2026-07-07T11:24:59Z`
+- Row count: `825`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260707-015|RT-20260707-014|2026-07-07T11:24:59Z|2026-07-07T11:24:59Z|source_equivalence_typed_object_science_draft|completed|source_equivalence_eqsrc|Define the typed source-equivalence object that will support the family-closure theorem-or-countermodel attempt.|ontology-formalizer@0.2.0|false|false|9|Run one bounded v18 P2-T04 smuggling audit of the typed source-equivalence object.|PASS|research_control/tasks/RT-20260707-015/jobs/completions/AJC-AJ-RT-20260707-015-001.yaml|
 |RT-20260707-014|RT-20260707-013|2026-07-07T10:52:51Z|2026-07-07T10:52:51Z|source_equivalence_typed_schema|completed|source_equivalence_eqsrc|Create a machine-readable schema for typed source-equivalence objects.|project-control-maintainer@0.2.0|false|false|4|Run one bounded v18 P2-T03 initial typed source-equivalence registry population packet.|PASS|research_control/tasks/RT-20260707-014/jobs/completions/AJC-AJ-RT-20260707-014-001.yaml|
 |RT-20260707-013|RT-20260707-012|2026-07-07T10:18:40Z|2026-07-07T10:18:40Z|source_equivalence_typed_object_problem_statement|completed|source_equivalence_eqsrc|Define the exact typed-object burden for EqSrc, RetainH, and GenH continuation.|theoretical-continuation-selector@0.1.0|false|false|5||PASS|research_control/tasks/RT-20260707-013/jobs/completions/AJC-AJ-RT-20260707-013-001.yaml|
 |RT-20260707-012|RT-20260707-011|2026-07-07T09:51:14Z|2026-07-07T09:57:09Z|active_state_supersession_director_decision_guard_repair|completed|none|Require tracked Director-decision authorization before sidecar supersession can be accepted.|validator-engineer@0.2.0|false|false|3||PASS|research_control/tasks/RT-20260707-012/jobs/completions/AJC-AJ-RT-20260707-012-001.yaml|

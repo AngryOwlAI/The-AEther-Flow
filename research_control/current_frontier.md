@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260707-014` and `handoff-0683`.
+`RT-20260707-015` and `handoff-0684`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260707-014` |
-| Latest handoff ID | `handoff-0683` |
-| Current status | `v18_p2_t02_typed_source_equivalence_schema_completed_no_physics_delta` |
+| Active task ID | `RT-20260707-015` |
+| Latest handoff ID | `handoff-0684` |
+| Current status | `v18_p2_t03_source_equivalence_typed_object_defined_no_promotion` |
 | V16 completed | false |
-| Current route family | v18 p2 t03 initial source equivalence registry population no physics promotion |
+| Current route family | v18 p2 t04 typed source equivalence object smuggling audit no promotion |
 | Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: schema_exists_header_only_registry |
-| Required next authority | P2-T03 initial typed source-equivalence registry population |
-| Next recommended action | Run one bounded v18 P2-T03 initial typed source-equivalence registry population packet. |
+| Current burden | `source_equivalence_eqsrc`; status: typed_object_defined_registry_indexed_no_promotion |
+| Required next authority | P2-T04 smuggling audit of source_equivalence_typed_object_v1.tex |
+| Next recommended action | Run one bounded v18 P2-T04 smuggling audit of the typed source-equivalence object. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260707-014` |
-| Latest research handoff ID | `handoff-0683` |
-| Latest research next action | Run one bounded v18 P2-T03 initial typed source-equivalence registry population packet. |
+| Latest research task ID | `RT-20260707-015` |
+| Latest research handoff ID | `handoff-0684` |
+| Latest research next action | Run one bounded v18 P2-T04 smuggling audit of the typed source-equivalence object. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260707-014/00_TASK.yaml`.
-- Active task objective: Create the machine-readable schema for typed source-equivalence objects and the header-only SOURCE_EQUIVALENCE_OBJECT_REGISTRY.
-- Latest handoff path: `research_control/handoffs/handoff-0683.yaml`.
-- Latest handoff summary: RT-20260707-014 completed v18 P2-T02 by creating the typed source-equivalence object schema and header-only SOURCE_EQUIVALENCE_OBJECT_REGISTRY. Registry row population is deferred to P2-T03. No general EqSrc discharge RetainH adoption GenH adoption source-law adoption physics promotion or Distance-to-GR ledger delta is authorized.
-- Current route family: v18 p2 t03 initial source equivalence registry population no physics promotion.
-- Next recommended action: Run one bounded v18 P2-T03 initial typed source-equivalence registry population packet.
+- Active task path: `research_control/tasks/RT-20260707-015/00_TASK.yaml`.
+- Active task objective: Define the draft/control SourceEquivalenceTypedObject_v1 science artifact and populate one registry row that indexes the typed object without proof authority.
+- Latest handoff path: `research_control/handoffs/handoff-0684.yaml`.
+- Latest handoff summary: RT-20260707-015 completed v18 P2-T03 by defining SourceEquivalenceTypedObject_v1 as a draft/control source-only typed object and adding one metadata row to SOURCE_EQUIVALENCE_OBJECT_REGISTRY. No general EqSrc discharge RetainH adoption GenH adoption source-law adoption physics promotion or Distance-to-GR ledger delta is authorized.
+- Current route family: v18 p2 t04 typed source equivalence object smuggling audit no promotion.
+- Next recommended action: Run one bounded v18 P2-T04 smuggling audit of the typed source-equivalence object.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P2-T03 initial typed source-equivalence registry population packet.
+Run one bounded v18 P2-T04 smuggling audit of the typed source-equivalence object.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,25 +320,26 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260707-014`;
-- latest handoff: `handoff-0683`;
-- current status: `v18_p2_t02_typed_source_equivalence_schema_completed_no_physics_delta`;
+- active task: `RT-20260707-015`;
+- latest handoff: `handoff-0684`;
+- current status: `v18_p2_t03_source_equivalence_typed_object_defined_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `continue_research_json`: PASS;
 - latest handoff validation `memory_preflight`: PASS;
 - latest handoff validation `query_memory_status`: PASS;
-- latest handoff validation `registry_header_only`: PASS;
-- latest handoff validation `schema_artifact`: PASS;
+- latest handoff validation `source_equivalence_registry_row`: PASS;
+- latest handoff validation `task_local_validator`: PASS;
+- latest handoff validation `typed_object_artifact`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0683.yaml`
-- `research_control/tasks/RT-20260707-014/00_TASK.yaml`
+- `research_control/handoffs/handoff-0684.yaml`
+- `research_control/tasks/RT-20260707-015/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -354,7 +355,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0683*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0684*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
