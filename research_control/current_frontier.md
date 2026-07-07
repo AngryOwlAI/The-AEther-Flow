@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260707-004` and `handoff-0673`.
+`RT-20260707-005` and `handoff-0674`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260707-004` |
-| Latest handoff ID | `handoff-0673` |
-| Current status | `v18_p0_t01_plan_registration_no_physics_delta` |
+| Active task ID | `RT-20260707-005` |
+| Latest handoff ID | `handoff-0674` |
+| Current status | `v18_p0_t02_backlog_materialized_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v18 p0 t01 plan registration handoff to backlog materialization no physics claim change |
+| Current route family | v18 p0 t02 backlog materialized handoff to active state preflight no physics claim change |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P0-T02 backlog materialization packet to create research_control/design/v18_recommendation_backlog.yaml and research_control/design/v18_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 active-state bifurcation or any downstream v18 task. |
-| Required next authority | P0-T02 backlog materialization |
-| Next recommended action | Run one bounded v18 P0-T02 backlog materialization packet to create research_control/design/v18_recommendation_backlog.yaml and research_control/design/v18_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 active-state bifurcation or any downstream v18 task. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task. |
+| Required next authority | P0-T03 active-state and source-basis preflight |
+| Next recommended action | Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260707-004/00_TASK.yaml`.
-- Active task objective: Add recommendations_implementation_plan_continue_task-v18.md to tracked project-control guidance register it as implementation guidance only preserve handoff-0672 as the scientific basis for later upstream EqSrc RetainH GenH theorem work classify RT-20260707-003 as project-system sidecar evidence and hand off to P0-T02 backlog materialization without changing physics claims.
-- Latest handoff path: `research_control/handoffs/handoff-0673.yaml`.
-- Latest handoff summary: RT-20260707-004 completed one bounded Project-Control Maintainer packet for v18 P0-T01 plan registration. It added the v18 implementation-plan ignore exception registered recommendations_implementation_plan_continue_task-v18.md as implementation_plan project-control guidance created a task-local intake note recorded all ten recommendation IDs preserved handoff-0672 as the scientific basis for later upstream EqSrc RetainH GenH theorem work classified RT-20260707-003 as sidecar project-system evidence and changed no physics claims.
-- Current route family: v18 p0 t01 plan registration handoff to backlog materialization no physics claim change.
-- Next recommended action: Run one bounded v18 P0-T02 backlog materialization packet to create research_control/design/v18_recommendation_backlog.yaml and research_control/design/v18_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 active-state bifurcation or any downstream v18 task.
+- Active task path: `research_control/tasks/RT-20260707-005/00_TASK.yaml`.
+- Active task objective: Create a machine-readable v18 backlog and companion schema mapping every v18 phase task to recommendation IDs route type role family dependencies outputs validators and handoff behavior without changing physics claims.
+- Latest handoff path: `research_control/handoffs/handoff-0674.yaml`.
+- Latest handoff summary: RT-20260707-005 completed one bounded Project-Control Maintainer packet for v18 P0-T02 backlog materialization. It created the v18 backlog and schema mapped all 68 tasks exactly once recorded direct and final recommendation coverage and changed no physics claims.
+- Current route family: v18 p0 t02 backlog materialized handoff to active state preflight no physics claim change.
+- Next recommended action: Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P0-T02 backlog materialization packet to create research_control/design/v18_recommendation_backlog.yaml and research_control/design/v18_recommendation_backlog_schema.md before P0-T03 active-state preflight P1 active-state bifurcation or any downstream v18 task.
+Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,9 +301,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260707-004`;
-- latest handoff: `handoff-0673`;
-- current status: `v18_p0_t01_plan_registration_no_physics_delta`;
+- active task: `RT-20260707-005`;
+- latest handoff: `handoff-0674`;
+- current status: `v18_p0_t02_backlog_materialized_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -311,6 +311,7 @@ Legacy compatibility records:
 - latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
 - latest handoff validation `git_diff_check`: PENDING;
 - latest handoff validation `graph_freshness_check`: PENDING;
+- latest handoff validation `v18_backlog_task_local_validator`: PASS;
 - latest handoff validation `validate_documentation_impact`: PENDING;
 - latest handoff validation `validate_research_control`: PENDING;
 - latest handoff validation `validate_research_control_check_diff`: PENDING;
@@ -320,8 +321,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0673.yaml`
-- `research_control/tasks/RT-20260707-004/00_TASK.yaml`
+- `research_control/handoffs/handoff-0674.yaml`
+- `research_control/tasks/RT-20260707-005/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -337,7 +338,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0673*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0674*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

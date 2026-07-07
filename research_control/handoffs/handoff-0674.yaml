@@ -1,0 +1,104 @@
+handoff_id: "handoff-0674"
+created_at: "2026-07-07T05:42:52Z"
+task_id: "RT-20260707-005"
+decision_id: "DDR-20260707-005"
+job_id: "AJ-RT-20260707-005-001"
+completion_path: "research_control/tasks/RT-20260707-005/jobs/completions/AJC-AJ-RT-20260707-005-001.yaml"
+source_task_id: "RT-20260707-005"
+source_job_id: "AJ-RT-20260707-005-001"
+source_completion_id: "AJC-AJ-RT-20260707-005-001"
+status: "completed"
+summary: "RT-20260707-005 completed one bounded Project-Control Maintainer packet for v18 P0-T02 backlog materialization. It created the v18 backlog and schema mapped all 68 tasks exactly once recorded direct and final recommendation coverage and changed no physics claims."
+next_action: "Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task."
+loop_risk_route: "v18_p0_t02_backlog_materialized_handoff_to_active_state_preflight_no_physics_claim_change"
+claim_boundary:
+  allowed_next_scope: "P0-T03 active-state and source-basis preflight"
+  scientific_basis: "handoff-0672 remains the scientific basis for the later upstream EqSrc RetainH GenH theorem-attempt packet after v18 P0 active-state preflight."
+  sidecar_context: "RT-20260707-003 is project-system sidecar evidence only and not the latest normal research handoff."
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  canonical_ontology_edit_authorized: false
+  source_law_adopted: false
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_detector_readout_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  proof_authority: false
+  external_outreach_authorized: false
+blocked_claims:
+  - "v18 backlog as physics proof"
+  - "v18 backlog as source-law adoption"
+  - "v18 backlog as general EqSrc discharge"
+  - "v18 backlog as RetainH adoption"
+  - "v18 backlog as GenH adoption"
+  - "v18 backlog as source detector/readout semantics adoption"
+  - "v18 backlog as coupling-law adoption"
+  - "v18 backlog as matter coupling"
+  - "v18 backlog as Einstein-equation evidence"
+  - "v18 backlog as benchmark promotion"
+  - "v18 backlog as external outreach"
+  - "v18 backlog as completed derivation"
+  - "P0-T02 as execution of all v18 phases"
+backlog_materialization:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+  source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+  backlog_path: "research_control/design/v18_recommendation_backlog.yaml"
+  schema_path: "research_control/design/v18_recommendation_backlog_schema.md"
+  task_count: 68
+  first_physics_bearing_task_after_p0: "P2-T01"
+  status: "tracked_project_control_guidance"
+  physics_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R01"
+    - "V18-R02"
+    - "V18-R03"
+    - "V18-R04"
+    - "V18-R05"
+    - "V18-R06"
+    - "V18-R07"
+    - "V18-R08"
+    - "V18-R09"
+    - "V18-R10"
+  implements_plan_task_id: "P0-T02"
+  implementation_status: "completed"
+  coverage_effect: "backlog_records_direct_implementation_and_final_audit_coverage"
+  final_coverage_audit_task_id: "P11-T05"
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260707-005 changes no Distance-to-GR ledger row. It materializes project-control backlog guidance only and does not change EqSrc RetainH GenH source detector/readout matter coupling g_eff MetricData(E) Einstein equations benchmark promotion or completed derivation status."
+selected_next_route:
+  route_id: "v18_active_state_preflight"
+  role_family: "director-of-research@0.3.0"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Verify the latest research handoff and sidecar state before v18 physics or project-system tasks."
+  requires_human_gate: false
+validation:
+  v18_backlog_task_local_validator: "PASS"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  validate_research_control: "PENDING"
+  validate_documentation_impact: "PENDING"
+  graph_freshness_check: "PENDING"
+  validate_research_control_check_diff: "PENDING"
+  git_diff_check: "PENDING"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

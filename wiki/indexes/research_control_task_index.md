@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `4e08245e29a5d7d063747dce80429277e493983d18b3a84c99badd5424d62efe`
-- Generated-at source timestamp: `2026-07-07T04:58:43Z`
-- Row count: `814`
+- Source fingerprint: `00c19b6dc9a951d1ff2c98ce908bf91412773b4c3db6f14e5e4b1b45a4df5080`
+- Generated-at source timestamp: `2026-07-07T05:42:52Z`
+- Row count: `815`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260707-005|RT-20260707-004|2026-07-07T05:42:52Z|2026-07-07T05:42:52Z|v18_execution_backlog_materialization|completed|none|Create a task-addressable v18 backlog from the implementation plan.|project-control-maintainer@0.2.0|false|false|3|Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task.|PASS|research_control/tasks/RT-20260707-005/jobs/completions/AJC-AJ-RT-20260707-005-001.yaml|
 |RT-20260707-004|RT-20260707-002|2026-07-07T04:58:43Z|2026-07-07T04:58:43Z|v18_plan_registration|completed|none|Register v18 implementation plan as control source with no physics delta.|project-control-maintainer@0.2.0|false|false|1|Run one bounded v18 P0-T02 backlog materialization packet before P0-T03 active-state preflight P1 active-state bifurcation or any downstream v18 task.|PASS|research_control/tasks/RT-20260707-004/jobs/completions/AJC-AJ-RT-20260707-004-001.yaml|
 |RT-20260707-003|RT-20260707-002|2026-07-07T02:49:59Z|2026-07-07T02:49:59Z|ci_registry_path_visibility_repair|completed|matter_coupling|Repair project-system validation so registry-referenced paths cannot be ignored or untracked in a clean checkout and ignored local/cache directories cannot stale tracked folder-map derivatives.|validator-engineer@0.2.0|false|false|0|Run the existing CI validation workflow on the pushed commit and continue ordinary research only from the latest research handoff.|PASS|research_control/tasks/RT-20260707-003/jobs/completions/AJC-AJ-RT-20260707-003-001.yaml|
 |RT-20260707-002|RT-20260707-001|2026-07-07T00:57:15Z|2026-07-07T00:57:15Z|v17_ordinary_continuation_handoff|completed|matter_coupling|Complete v17 and select exactly one ordinary continuation route from validated v17 outputs.|director-of-research@0.3.0|false|false|3|Run one bounded upstream EqSrc RetainH GenH theorem-attempt continuation packet from the validated v17 outputs.|PASS|research_control/tasks/RT-20260707-002/jobs/completions/AJC-AJ-RT-20260707-002-001.yaml|
