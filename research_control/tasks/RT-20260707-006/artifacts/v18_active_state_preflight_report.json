@@ -1,0 +1,157 @@
+{
+  "schema_id": "v18_active_state_preflight_report_v1",
+  "task_id": "RT-20260707-006",
+  "job_id": "AJ-RT-20260707-006-001",
+  "plan_id": "recommendations_implementation_plan_continue_task-v18",
+  "plan_phase_id": "P0",
+  "plan_task_id": "P0-T03",
+  "created_at": "2026-07-07T06:15:46Z",
+  "status": "PASS",
+  "physics_claim_authority": false,
+  "proof_authority": false,
+  "preflight_verdict": {
+    "required_drift": "absent",
+    "deterministic_repair_task_required": false,
+    "next_route": "P0-T04",
+    "next_route_role_family": "process-integrity-auditor@0.1.0",
+    "next_route_scope": "v18 recommendation coverage seed only"
+  },
+  "sequencing_resolution": {
+    "local_plan_inconsistency": "P0-T03 prose says next route P1-T01 while the same plan defines P0-T04 as dependent on P0-T03 and the backlog records P0-T04 as the next success route.",
+    "selected_route": "P0-T04",
+    "rationale": "Preserve all v18 plan tasks and avoid skipping the P0-T04 coverage seed before P1."
+  },
+  "required_checks": {
+    "program_state_points_to_latest_handoff": {
+      "status": "PASS",
+      "active_task_id": "RT-20260707-005",
+      "latest_handoff_id": "handoff-0674",
+      "program_state_sha256": "f57737588c79b065ce021669e3c930693eacdb1ff444b4dc5f0f1fa6e4f330f2",
+      "latest_handoff_sha256": "3518b7837df9dca4e50d5004f7f1a1bfaa8f39b6487ec947c3dd9fadc2aa14f8"
+    },
+    "latest_handoff_sequences_p0_t03": {
+      "status": "PASS",
+      "latest_handoff_id": "handoff-0674",
+      "latest_handoff_next_action": "Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task."
+    },
+    "deferred_scientific_route_preserved": {
+      "status": "PASS",
+      "deferred_handoff_id": "handoff-0672",
+      "deferred_route_id": "upstream_EqSrc_RetainH_GenH_theorem_attempt",
+      "deferred_role_family": "director-of-research@0.3.0",
+      "deferred_target_derivation_milestone": "source_equivalence_eqsrc",
+      "deferred_milestone_burden": "Select or execute a bounded upstream family-closure RetainH or GenH theorem or primitive attempt after validated v17 support-layer completion.",
+      "supersession_assessment": "V18 P0-T01 and P0-T02 registered project-control guidance and backlog material only. They preserved handoff-0672 as the deferred scientific basis and did not execute or supersede the upstream EqSrc RetainH GenH theorem-attempt route."
+    },
+    "project_system_sidecar_classification": {
+      "status": "PASS",
+      "sidecar_task_id": "RT-20260707-003",
+      "sidecar_task_type": "ci_registry_path_visibility_repair",
+      "sidecar_closure_status": "ci_registry_path_visibility_repair_completed_no_physics_delta",
+      "classification": "project_system_repair_sidecar_not_research_handoff",
+      "physics_delta": false
+    },
+    "current_frontier_synchronized": {
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_current_frontier.py --check",
+      "active_task_id": "RT-20260707-005",
+      "latest_handoff_id": "handoff-0674",
+      "rendered_hash": "733464ccdf8bdcb80922d84935e27d469fcd79c53a5d2298911a469e862b14fd"
+    },
+    "compact_current_frontier_synchronized": {
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check",
+      "active_task_id": "RT-20260707-005",
+      "latest_handoff_id": "handoff-0674",
+      "next_route_id": "v18_active_state_preflight",
+      "yaml_sha256": "803b88bb18f1259146316ac70f2c12a7673598c1b688858134315b94f8e60485",
+      "json_sha256": "714209e23eec8c8b16d7e6b7d194f582f73a3f53282e305f632d08ab283c96df"
+    },
+    "task_index_synchronized": {
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_task_index.py --check",
+      "csv_sha256": "80d025cdbfbdfe65dfca5ddc3b68ef90b4e8b4a0be87c30491b358f85187c9ca",
+      "markdown_sha256": "58151d388adc7c28b30534b44ea0be29b5a0dbcae8c8c8e12a6bac41d3768843"
+    },
+    "dependency_graph_synchronized": {
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_dependency_graph.py --check",
+      "json_sha256": "d7b9993016526cc70cff03286a4899de06190cc1b8442b3fc56ae6a2485f5e2c",
+      "markdown_sha256": "088298b15a1c31dd7111acedb3a694024dc762a830b356e4d8957998d9b8ca54"
+    },
+    "distance_to_gr_boundary": {
+      "status": "PASS",
+      "ledger_sha256": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+      "source_equivalence_eqsrc_control_status": "draft_control_object_exists",
+      "source_equivalence_eqsrc_blocking_burden": "general equivalence under variations",
+      "retain_h_control_status": "blocked",
+      "retain_h_mathematical_status": "primitive_missing",
+      "gen_h_control_status": "blocked",
+      "gen_h_mathematical_status": "primitive_missing",
+      "matter_coupling_control_status": "accepted_as_scoped_evidence_precondition",
+      "matter_coupling_promotion_status": "scoped_source_evidence_only",
+      "einstein_equations_control_status": "not_started",
+      "benchmark_promotion_control_status": "blocked",
+      "blocked_overread_summary": [
+        "no_source_law_adoption",
+        "no_general_EqSrc_discharge",
+        "no_RetainH_adoption",
+        "no_GenH_adoption",
+        "no_coupling_law_adoption",
+        "no_matter_coupling_derivation",
+        "no_stress_energy_semantics",
+        "no_stress_energy_tensor",
+        "no_matter_action",
+        "no_detector_semantics",
+        "no_einstein_equations",
+        "no_benchmark_promotion",
+        "no_completed_derivation"
+      ]
+    },
+    "required_source_basis_available": {
+      "status": "PASS",
+      "source_count": 30,
+      "missing": [],
+      "manifest_scope": "v18 active-state sources sidecar classification sources generated frontier outputs task index dependency graph and Distance-to-GR boundary ledgers",
+      "representative_hashes": {
+        "v18_plan": "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d",
+        "v18_backlog": "99b3f9ce98db71e4d8849337e59d66fcfca76a43206d885e6a44c052224b44e4",
+        "v18_backlog_schema": "d2eef1d79ff65796dcef3feb1a0ed39e0336e1712df009d52d94f7fd8c721640",
+        "handoff_0672": "a33463477db5e7abb3e432ce012f8995353358ec6cb5722c0864eb88696504a9",
+        "handoff_0674": "3518b7837df9dca4e50d5004f7f1a1bfaa8f39b6487ec947c3dd9fadc2aa14f8",
+        "distance_to_gr_ledger": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+      }
+    }
+  },
+  "generated_output_advisories": {
+    "claim_graph_precheck": {
+      "status": "STALE_ADVISORY",
+      "command": ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check",
+      "route_blocking": false,
+      "repair": "Refresh generated claim graph during normal post-write synchronization."
+    }
+  },
+  "next_route": {
+    "plan_task_id": "P0-T04",
+    "task_type": "v18_recommendation_coverage_seed",
+    "role_family": "process-integrity-auditor@0.1.0",
+    "target_derivation_milestone": "none",
+    "milestone_burden": "Create a baseline recommendation coverage matrix before executing v18.",
+    "requires_human_gate": false
+  },
+  "forbidden_conclusions": [
+    "P0-T03 is not upstream theorem construction.",
+    "P0-T03 does not discharge general EqSrc.",
+    "P0-T03 does not adopt RetainH.",
+    "P0-T03 does not adopt GenH.",
+    "P0-T03 does not adopt a source law.",
+    "P0-T03 does not adopt source detector or readout semantics.",
+    "P0-T03 does not adopt a coupling law.",
+    "P0-T03 does not derive or adopt matter coupling.",
+    "P0-T03 does not establish stress-energy semantics, stress-energy tensor, or matter action.",
+    "P0-T03 does not derive Einstein equations.",
+    "P0-T03 does not promote the exact-GR benchmark.",
+    "P0-T03 does not authorize external outreach.",
+    "P0-T03 does not complete v18."
+  ]
+}

@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `00c19b6dc9a951d1ff2c98ce908bf91412773b4c3db6f14e5e4b1b45a4df5080`
-- Generated-at source timestamp: `2026-07-07T05:42:52Z`
-- Row count: `815`
+- Source fingerprint: `17ba62e16c4bba3242fa670000d387e9acdde760b1d111f2bcdce4d666549312`
+- Generated-at source timestamp: `2026-07-07T06:15:46Z`
+- Row count: `816`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260707-006|RT-20260707-005|2026-07-07T06:15:46Z|2026-07-07T06:15:46Z|v18_active_state_preflight|completed|source_equivalence_eqsrc|Verify the latest research handoff and sidecar state before v18 physics or project-system tasks.|director-of-research@0.3.0|false|false|1|Run one bounded v18 P0-T04 recommendation coverage seed packet before P1 active-state bifurcation P2 typed EqSrc work or downstream v18 tasks.|PASS|research_control/tasks/RT-20260707-006/jobs/completions/AJC-AJ-RT-20260707-006-001.yaml|
 |RT-20260707-005|RT-20260707-004|2026-07-07T05:42:52Z|2026-07-07T05:42:52Z|v18_execution_backlog_materialization|completed|none|Create a task-addressable v18 backlog from the implementation plan.|project-control-maintainer@0.2.0|false|false|3|Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task.|PASS|research_control/tasks/RT-20260707-005/jobs/completions/AJC-AJ-RT-20260707-005-001.yaml|
 |RT-20260707-004|RT-20260707-002|2026-07-07T04:58:43Z|2026-07-07T04:58:43Z|v18_plan_registration|completed|none|Register v18 implementation plan as control source with no physics delta.|project-control-maintainer@0.2.0|false|false|1|Run one bounded v18 P0-T02 backlog materialization packet before P0-T03 active-state preflight P1 active-state bifurcation or any downstream v18 task.|PASS|research_control/tasks/RT-20260707-004/jobs/completions/AJC-AJ-RT-20260707-004-001.yaml|
 |RT-20260707-003|RT-20260707-002|2026-07-07T02:49:59Z|2026-07-07T02:49:59Z|ci_registry_path_visibility_repair|completed|matter_coupling|Repair project-system validation so registry-referenced paths cannot be ignored or untracked in a clean checkout and ignored local/cache directories cannot stale tracked folder-map derivatives.|validator-engineer@0.2.0|false|false|0|Run the existing CI validation workflow on the pushed commit and continue ordinary research only from the latest research handoff.|PASS|research_control/tasks/RT-20260707-003/jobs/completions/AJC-AJ-RT-20260707-003-001.yaml|

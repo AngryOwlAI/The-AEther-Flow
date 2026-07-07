@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260707-005`
-- Latest handoff: `handoff-0674`
-- Current status: `v18_p0_t02_backlog_materialized_no_physics_delta`
-- V15 completed: `false`
+- Active task: `RT-20260707-006`
+- Latest handoff: `handoff-0675`
+- Current status: `v18_p0_t03_active_state_preflight_passed_no_physics_delta`
+- V15 completed: `true`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v18_active_state_preflight`
-- Role family: `director-of-research@0.3.0`
-- Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Verify the latest research handoff and sidecar state before v18 physics or project-system tasks.
+- Route ID: `v18_recommendation_coverage_seed`
+- Role family: `process-integrity-auditor@0.1.0`
+- Target milestone: `none`
+- Milestone burden: Create a baseline recommendation coverage matrix before executing v18.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `803b88bb18f1259146316ac70f2c12a7673598c1b688858134315b94f8e60485`
-- JSON SHA-256: `714209e23eec8c8b16d7e6b7d194f582f73a3f53282e305f632d08ab283c96df`
+- YAML SHA-256: `aecdc22bc31de5643a165db46763b9db52237f17a39776c4fb24cabcce0f77cb`
+- JSON SHA-256: `cc872c453bc77f722766ec1c1d0425ac2283db789d0962b410b6d22fb4c3a975`
 
 ## Authority Warning
 

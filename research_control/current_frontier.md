@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260707-005` and `handoff-0674`.
+`RT-20260707-006` and `handoff-0675`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260707-005` |
-| Latest handoff ID | `handoff-0674` |
-| Current status | `v18_p0_t02_backlog_materialized_no_physics_delta` |
+| Active task ID | `RT-20260707-006` |
+| Latest handoff ID | `handoff-0675` |
+| Current status | `v18_p0_t03_active_state_preflight_passed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v18 p0 t02 backlog materialized handoff to active state preflight no physics claim change |
-| Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task. |
-| Required next authority | P0-T03 active-state and source-basis preflight |
-| Next recommended action | Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task. |
+| Current route family | v18 p0 t03 active state preflight handoff to recommendation coverage seed no physics claim change |
+| Target derivation milestone | `source_equivalence_eqsrc` |
+| Current burden | `source_equivalence_eqsrc`; status: draft_control_object_exists |
+| Required next authority | P0-T04 recommendation coverage seed |
+| Next recommended action | Run one bounded v18 P0-T04 recommendation coverage seed packet before P1 active-state bifurcation P2 typed EqSrc work or downstream v18 tasks. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260707-005/00_TASK.yaml`.
-- Active task objective: Create a machine-readable v18 backlog and companion schema mapping every v18 phase task to recommendation IDs route type role family dependencies outputs validators and handoff behavior without changing physics claims.
-- Latest handoff path: `research_control/handoffs/handoff-0674.yaml`.
-- Latest handoff summary: RT-20260707-005 completed one bounded Project-Control Maintainer packet for v18 P0-T02 backlog materialization. It created the v18 backlog and schema mapped all 68 tasks exactly once recorded direct and final recommendation coverage and changed no physics claims.
-- Current route family: v18 p0 t02 backlog materialized handoff to active state preflight no physics claim change.
-- Next recommended action: Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task.
+- Active task path: `research_control/tasks/RT-20260707-006/00_TASK.yaml`.
+- Active task objective: Verify active-state authority source-basis availability sidecar classification generated-output synchronization and Distance-to-GR boundaries before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or downstream v18 tasks.
+- Latest handoff path: `research_control/handoffs/handoff-0675.yaml`.
+- Latest handoff summary: RT-20260707-006 completed one bounded Director of Research packet for v18 P0-T03 active-state and source-basis preflight. Required drift was absent: program_state pointed to handoff-0674 handoff-0674 selected P0-T03 handoff-0672 remained the deferred scientific upstream EqSrc RetainH GenH theorem-attempt authority RT-20260707-003 remained sidecar project-system evidence current-frontier compact-frontier task-index and dependency-graph checks passed all 30 required source-basis paths existed and the Distance-to-GR ledger still blocks general EqSrc discharge RetainH GenH matter-coupling derivation Einstein equations benchmark promotion and completed derivation.
+- Current route family: v18 p0 t03 active state preflight handoff to recommendation coverage seed no physics claim change.
+- Next recommended action: Run one bounded v18 P0-T04 recommendation coverage seed packet before P1 active-state bifurcation P2 typed EqSrc work or downstream v18 tasks.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P0-T03 active-state and source-basis preflight packet before P0-T04 P1 active-state bifurcation P2 typed EqSrc work or any downstream v18 task.
+Run one bounded v18 P0-T04 recommendation coverage seed packet before P1 active-state bifurcation P2 typed EqSrc work or downstream v18 tasks.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,28 +301,31 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260707-005`;
-- latest handoff: `handoff-0674`;
-- current status: `v18_p0_t02_backlog_materialized_no_physics_delta`;
+- active task: `RT-20260707-006`;
+- latest handoff: `handoff-0675`;
+- current status: `v18_p0_t03_active_state_preflight_passed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PENDING;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PENDING;
-- latest handoff validation `git_diff_check`: PENDING;
-- latest handoff validation `graph_freshness_check`: PENDING;
-- latest handoff validation `v18_backlog_task_local_validator`: PASS;
-- latest handoff validation `validate_documentation_impact`: PENDING;
-- latest handoff validation `validate_research_control`: PENDING;
-- latest handoff validation `validate_research_control_check_diff`: PENDING;
+- latest handoff validation `continue_research_json`: PASS;
+- latest handoff validation `dependency_graph_freshness_check`: PASS;
+- latest handoff validation `generated_claim_graph_precheck`: STALE_ADVISORY;
+- latest handoff validation `memory_preflight`: PASS;
+- latest handoff validation `query_memory_status`: PASS;
+- latest handoff validation `render_compact_current_frontier_check`: PASS;
+- latest handoff validation `render_current_frontier_check`: PASS;
+- latest handoff validation `source_basis_manifest`: PASS;
+- latest handoff validation `task_index_check`: PASS;
+- latest handoff validation `validate_compact_current_frontier_v16`: PASS;
+- latest handoff validation `validate_task_index`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0674.yaml`
-- `research_control/tasks/RT-20260707-005/00_TASK.yaml`
+- `research_control/handoffs/handoff-0675.yaml`
+- `research_control/tasks/RT-20260707-006/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -338,7 +341,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0674*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0675*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
