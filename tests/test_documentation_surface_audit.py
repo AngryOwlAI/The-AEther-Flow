@@ -290,6 +290,60 @@ class DocumentationSurfaceAuditTests(unittest.TestCase):
         self.assertEqual(report.counts["checked_markdown_rows"], 1)
         self.assertEqual(report.counts["checked_github_facing_explainers"], 1)
 
+    def test_registered_path_guard_rejects_ignored_existing_file(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            path = root / "ignored" / "example.md"
+            path.parent.mkdir()
+            path.write_text("# Ignored\n", encoding="utf-8")
+            report = self.audit.AuditReport(
+                git_tracked_paths=set(),
+                git_ignored_paths={"ignored/example.md"},
+            )
+            self.audit.check_path_exists(
+                report,
+                root,
+                "ignored/example.md",
+                context="MARKDOWN_SOURCE_REGISTRY.csv:MD-IGNORED",
+            )
+        self.assertTrue(any("registered path is ignored by Git" in error for error in report.errors))
+
+    def test_registered_path_guard_rejects_untracked_existing_file(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            path = root / "docs" / "example.md"
+            path.parent.mkdir()
+            path.write_text("# Untracked\n", encoding="utf-8")
+            report = self.audit.AuditReport(
+                git_tracked_paths=set(),
+                git_ignored_paths=set(),
+            )
+            self.audit.check_path_exists(
+                report,
+                root,
+                "docs/example.md",
+                context="MARKDOWN_SOURCE_REGISTRY.csv:MD-UNTRACKED",
+            )
+        self.assertTrue(any("registered path is not tracked by Git" in error for error in report.errors))
+
+    def test_registered_path_guard_accepts_tracked_file(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            path = root / "docs" / "example.md"
+            path.parent.mkdir()
+            path.write_text("# Tracked\n", encoding="utf-8")
+            report = self.audit.AuditReport(
+                git_tracked_paths={"docs/example.md"},
+                git_ignored_paths=set(),
+            )
+            self.audit.check_path_exists(
+                report,
+                root,
+                "docs/example.md",
+                context="MARKDOWN_SOURCE_REGISTRY.csv:MD-TRACKED",
+            )
+        self.assertEqual(report.errors, [])
+
     def test_audit_detects_stale_markdown_hash(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

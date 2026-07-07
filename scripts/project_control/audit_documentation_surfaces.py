@@ -8,6 +8,7 @@ import csv
 import hashlib
 import json
 import re
+import subprocess
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -107,6 +108,8 @@ class AuditReport:
     warnings: list[str] = field(default_factory=list)
     counts: dict[str, int] = field(default_factory=dict)
     include_local: bool = True
+    git_tracked_paths: set[str] | None = None
+    git_ignored_paths: set[str] | None = None
 
     def error(self, message: str) -> None:
         self.errors.append(message)
@@ -400,8 +403,64 @@ def check_path_exists(
 ) -> None:
     if not should_check_path(path_text, include_local=report.include_local):
         return
-    if not (root / path_text).exists():
+    path = root / path_text
+    if not path.exists():
         report.error(f"{context}: path does not exist: {path_text}")
+        return
+    check_git_visible_path(report, path, path_text, context=context)
+
+
+def run_git_z(root: Path, command: list[str]) -> set[str]:
+    result = subprocess.run(
+        command,
+        cwd=root,
+        text=False,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    if result.returncode != 0:
+        return set()
+    return {
+        item.decode("utf-8", errors="replace")
+        for item in result.stdout.split(b"\0")
+        if item
+    }
+
+
+def git_path_inventory(root: Path) -> tuple[set[str], set[str]] | None:
+    result = subprocess.run(
+        ["git", "rev-parse", "--is-inside-work-tree"],
+        cwd=root,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    if result.returncode != 0 or result.stdout.strip() != "true":
+        return None
+    tracked = run_git_z(root, ["git", "ls-files", "-z", "--cached"])
+    ignored = run_git_z(
+        root,
+        ["git", "ls-files", "-z", "--others", "--ignored", "--exclude-standard"],
+    )
+    return tracked, ignored
+
+
+def check_git_visible_path(
+    report: AuditReport,
+    path: Path,
+    path_text: str,
+    *,
+    context: str,
+) -> None:
+    if report.git_tracked_paths is None or report.git_ignored_paths is None:
+        return
+    if path_text.startswith(LOCAL_PREFIXES) or not path.is_file():
+        return
+    relative = Path(path_text).as_posix()
+    if relative in report.git_ignored_paths:
+        report.error(f"{context}: registered path is ignored by Git: {path_text}")
+    elif relative not in report.git_tracked_paths:
+        report.error(f"{context}: registered path is not tracked by Git: {path_text}")
 
 
 def read_registry(
@@ -736,7 +795,12 @@ def audit_documentation_surfaces(
     stale_reference: str = STALE_REFERENCE,
 ) -> AuditReport:
     root = root.resolve()
-    report = AuditReport(include_local=include_local)
+    git_inventory = git_path_inventory(root)
+    report = AuditReport(
+        include_local=include_local,
+        git_tracked_paths=git_inventory[0] if git_inventory else None,
+        git_ignored_paths=git_inventory[1] if git_inventory else None,
+    )
     registries = {
         key: read_registry(report, root, filename)
         for key, filename in REQUIRED_REGISTRIES.items()

@@ -1,0 +1,151 @@
+completion_id: "AJC-AJ-RT-20260707-003-001"
+job_id: "AJ-RT-20260707-003-001"
+task_id: "RT-20260707-003"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-07T02:49:59Z"
+status: "completed"
+output_paths:
+  - ".gitignore"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+  - "scripts/project_control/audit_documentation_surfaces.py"
+  - "tests/test_documentation_surface_audit.py"
+  - "research_control/tasks/RT-20260707-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260707-003/DDR-20260707-003.md"
+  - "research_control/tasks/RT-20260707-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260707-003/jobs/AJ-RT-20260707-003-001.yaml"
+  - "research_control/tasks/RT-20260707-003/jobs/completions/AJC-AJ-RT-20260707-003-001.yaml"
+  - "research_control/tasks/RT-20260707-003/roles/validator-engineer@0.2.0--RT-20260707-003.yaml"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".github/workflows/project-control-validation.yml"
+  - "Makefile"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+command_results:
+  - "gh run view 28837378200 --repo AngryOwlAI/The-AEther-Flow | exit_code=0 | failing checks=documentation surface audit missing v16 plan and bootstrap validate-only stale generated surfaces"
+  - "git check-ignore -v implementations_plans/recommendations_implementation_plan_continue_task-v16.md | exit_code=0 before repair | ignored by implementations_plans/*"
+  - ".venv/bin/python -m unittest tests.test_documentation_surface_audit | exit_code=0 | tests=20"
+  - "make PYTHON=.venv/bin/python validate-project-control | exit_code=0 | tests=474"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "GitHub Actions run 28837378200 failed because a registered v16 plan path was absent from clean checkout."
+      - "Local Git ignore inspection showed implementations_plans/* excluded the v16 plan before the explicit exception."
+      - "Memory lookup identified the registered v16 implementation plan as canonical project-control source."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The repair is bounded to Git visibility, documentation-surface validation, focused tests, and control receipts."
+      - "The v16 plan wording change removes unsafe global-impossibility phrasing from a forbidden-conclusion list without promoting physics claims."
+  implementation:
+    status: "PASS"
+    evidence:
+      - "Added explicit .gitignore exception for the v16 plan."
+      - "Tracked the registered v16 plan."
+      - "Added Git visibility checks to documentation-surface audit for ignored or untracked registry-referenced paths."
+      - "Added focused tests for ignored, untracked, and tracked path cases."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_documentation_impact.py --json passed."
+      - "audit_documentation_surfaces.py --skip-local --json passed."
+      - "bootstrap_memory_system.py --validate-only passed with local retrieval freshness warnings."
+      - "validate_research_control.py and --check-diff passed."
+      - "make PYTHON=.venv/bin/python validate-project-control exited 0 after 474 tests."
+  post_checkpoint:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "This user-authorized CI repair is closed by validation, commit, push, and CI confirmation rather than a research-continuation checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_task_index.py --write and --check refreshed the task index and generated wiki task-index derivative."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "bootstrap_memory_system.py and --validate-only passed while reporting local retrieval freshness warnings for regenerated local cache surfaces."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json passed with hard_fail_count=0."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 685
+    relationship_row_count: 3513
+    semantic_row_count: 685
+    vault_row_count: 685
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: false
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      generated_retrieval_evidence_ids:
+        - "WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+        - "VAULT-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
+      source_hash: "7e94e3d0a12887fd59d611caa86be8c3e195743ceea7294fd4d11a7590070e06"
+project_system_change_only: true
+physics_progress_status:
+  status: "project_system_ci_repair_no_physics_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Repair project-system validation so registry-referenced paths cannot be ignored or untracked in a clean checkout."
+  physics_promotion_authorized: false
+  explanation: "This packet changes Git visibility and validation enforcement only."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+claim_boundary:
+  allowed_claims:
+    - "registered v16 implementation plan is tracked"
+    - "documentation-surface audit checks Git visibility for registry-referenced paths"
+    - "ignored or untracked registered file paths fail validation"
+    - "no physics delta"
+  forbidden_claims:
+    - "CI pass as physics proof authority"
+    - "validator repair as source-law adoption"
+    - "validator repair as matter-coupling derivation"
+    - "validator repair as Einstein-equation derivation"
+    - "validator repair as benchmark promotion"
+    - "validator repair as Gate Chair verdict"
+    - "validator repair as completed derivation"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-07"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+coherent_resolution_summary: "RT-20260707-003 repaired CI by restoring Git visibility for the registered v16 plan and hardening documentation-surface validation against ignored or untracked registry paths."
+next_recommendation: "Use the latest research handoff for any future research continuation; this packet creates no physics route."
