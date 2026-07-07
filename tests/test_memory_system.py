@@ -8,6 +8,7 @@ import tempfile
 import unittest
 from unittest import mock
 from pathlib import Path
+from typing import Iterable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -1546,6 +1547,53 @@ class MemorySystemSmokeTests(unittest.TestCase):
         for folder, expected_category in cases.items():
             category, _reason = self.memory_system.classify_folder(folder, rows_by_registry)
             self.assertEqual(category, expected_category, folder)
+
+    def test_project_directories_excludes_git_ignored_directories(self) -> None:
+        def fake_walk(_root: Path):
+            root_dirnames = [".local", "ontology", "Step-by-step-Comments"]
+            yield REPO_ROOT.as_posix(), root_dirnames, []
+            if "ontology" in root_dirnames:
+                ontology_dirnames = ["node_modules", "tex"]
+                yield (REPO_ROOT / "ontology").as_posix(), ontology_dirnames, []
+                if "tex" in ontology_dirnames:
+                    yield (REPO_ROOT / "ontology" / "tex").as_posix(), [], []
+                if "node_modules" in ontology_dirnames:
+                    yield (REPO_ROOT / "ontology" / "node_modules").as_posix(), [], []
+            if "Step-by-step-Comments" in root_dirnames:
+                yield (REPO_ROOT / "Step-by-step-Comments").as_posix(), [], []
+
+        def fake_git_ignored(path_texts: Iterable[str]) -> set[str]:
+            return {
+                path_text
+                for path_text in path_texts
+                if path_text
+                in {
+                    ".local",
+                    "Step-by-step-Comments",
+                    "ontology/node_modules",
+                }
+            }
+
+        with (
+            mock.patch.object(self.memory_system.os, "walk", side_effect=fake_walk),
+            mock.patch.object(
+                self.memory_system, "git_ignored_paths", side_effect=fake_git_ignored
+            ),
+        ):
+            directories = self.memory_system.project_directories()
+
+        self.assertIn("ontology", directories)
+        self.assertIn("ontology/tex", directories)
+        self.assertNotIn(".local", directories)
+        self.assertNotIn("Step-by-step-Comments", directories)
+        self.assertNotIn("ontology/node_modules", directories)
+
+    def test_git_ignored_paths_handles_directory_only_patterns(self) -> None:
+        ignored_paths = self.memory_system.git_ignored_paths(
+            [".codex/local", "ontology"]
+        )
+        self.assertIn(".codex/local", ignored_paths)
+        self.assertNotIn("ontology", ignored_paths)
 
     def test_folder_map_mentions_task_artifact_relationships(self) -> None:
         rows_by_registry = {

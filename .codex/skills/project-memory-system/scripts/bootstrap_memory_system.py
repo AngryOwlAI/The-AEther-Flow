@@ -1512,13 +1512,48 @@ def path_is_under(path_text: str, folder: str) -> bool:
     return path_text == folder or path_text.startswith(f"{folder}/")
 
 
+def git_ignored_paths(path_texts: Iterable[str]) -> set[str]:
+    candidates = [path_text for path_text in path_texts if path_text]
+    if not candidates:
+        return set()
+    check_path_map: dict[str, str] = {}
+    for path_text in candidates:
+        check_path_map[path_text] = path_text
+        check_path_map[f"{path_text}/"] = path_text
+    payload = ("\0".join(check_path_map) + "\0").encode("utf-8")
+    try:
+        result = subprocess.run(
+            ["git", "check-ignore", "-z", "--stdin"],
+            cwd=REPO_ROOT,
+            input=payload,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+    except OSError:
+        return set()
+    if result.returncode not in (0, 1):
+        return set()
+    ignored_paths: set[str] = set()
+    for path_text in result.stdout.decode("utf-8").split("\0"):
+        if path_text:
+            ignored_paths.add(check_path_map.get(path_text, path_text.rstrip("/")))
+    return ignored_paths
+
+
 def project_directories() -> list[str]:
     directories = {"."}
     for root, dirnames, _filenames in os.walk(REPO_ROOT):
-        dirnames[:] = sorted(
-            name for name in dirnames if name not in FOLDER_WALK_SKIP_NAMES
-        )
         root_path = Path(root)
+        candidates = [
+            (name, rel_path(root_path / name))
+            for name in sorted(dirnames)
+            if name not in FOLDER_WALK_SKIP_NAMES
+        ]
+        ignored_paths = git_ignored_paths([path_text for _name, path_text in candidates])
+        dirnames[:] = [
+            name for name, path_text in candidates if path_text not in ignored_paths
+        ]
         if root_path == REPO_ROOT:
             continue
         directories.add(rel_path(root_path))
@@ -1696,7 +1731,7 @@ def folder_map_text(rows_by_registry: dict[str, list[dict[str, str]]]) -> str:
         "",
         "## Source Basis",
         "",
-        "- Live repository directory tree, excluding `.git/`, `.venv/`, and `__pycache__/`.",
+        "- Live repository directory tree, excluding `.git/`, `.venv/`, `__pycache__/`, and Git-ignored local/cache directories.",
         "- Source and generated CSV registries under `registries/`.",
         "- Project authority rules in `AGENTS.md` and the memory-system bootstrap script.",
         "",

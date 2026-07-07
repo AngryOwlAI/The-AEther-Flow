@@ -9,6 +9,9 @@ output_paths:
   - "implementations_plans/recommendations_implementation_plan_continue_task-v16.md"
   - "scripts/project_control/audit_documentation_surfaces.py"
   - "tests/test_documentation_surface_audit.py"
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - "tests/test_memory_system.py"
+  - "FOLDER_MAP.md"
   - "research_control/tasks/RT-20260707-003/00_TASK.yaml"
   - "research_control/tasks/RT-20260707-003/DDR-20260707-003.md"
   - "research_control/tasks/RT-20260707-003/documentation_impact.yaml"
@@ -21,12 +24,16 @@ extra_read_paths:
   - ".codex/skills/improve-project-system/SKILL.md"
   - ".github/workflows/project-control-validation.yml"
   - "Makefile"
+  - "FOLDER_MAP.md"
   - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
 command_results:
   - "gh run view 28837378200 --repo AngryOwlAI/The-AEther-Flow | exit_code=0 | failing checks=documentation surface audit missing v16 plan and bootstrap validate-only stale generated surfaces"
+  - "gh run view 28838932471 --repo AngryOwlAI/The-AEther-Flow | exit_code=0 | failing checks=clean-checkout bootstrap validate-only stale FOLDER_MAP.md because ignored local/cache directories were included locally"
   - "git check-ignore -v implementations_plans/recommendations_implementation_plan_continue_task-v16.md | exit_code=0 before repair | ignored by implementations_plans/*"
   - ".venv/bin/python -m unittest tests.test_documentation_surface_audit | exit_code=0 | tests=20"
-  - "make PYTHON=.venv/bin/python validate-project-control | exit_code=0 | tests=474"
+  - ".venv/bin/python -m unittest tests.test_memory_system.MemorySystemSmokeTests.test_project_directories_excludes_git_ignored_directories tests.test_memory_system.MemorySystemSmokeTests.test_git_ignored_paths_handles_directory_only_patterns | exit_code=0 | tests=2"
+  - "clean-checkout simulation with .local temporarily moved outside repository then bootstrap_memory_system.py --validate-only | exit_code=0 | warnings=missing local retrieval only"
+  - "make PYTHON=.venv/bin/python validate-project-control | exit_code=0 | tests=476"
 validation_status: "PASS"
 validation_layers:
   pre_execution:
@@ -34,6 +41,7 @@ validation_layers:
     evidence:
       - "GitHub Actions run 28837378200 failed because a registered v16 plan path was absent from clean checkout."
       - "Local Git ignore inspection showed implementations_plans/* excluded the v16 plan before the explicit exception."
+      - "GitHub Actions run 28838932471 showed FOLDER_MAP.md drift in clean checkout after ignored local/cache directories had been included locally."
       - "Memory lookup identified the registered v16 implementation plan as canonical project-control source."
   completion_internal:
     status: "PASS"
@@ -47,14 +55,16 @@ validation_layers:
       - "Tracked the registered v16 plan."
       - "Added Git visibility checks to documentation-surface audit for ignored or untracked registry-referenced paths."
       - "Added focused tests for ignored, untracked, and tracked path cases."
+      - "Excluded Git-ignored directories from folder-map generation and added a focused memory-system regression test."
   post_write:
     status: "PASS"
     evidence:
       - "validate_documentation_impact.py --json passed."
       - "audit_documentation_surfaces.py --skip-local --json passed."
       - "bootstrap_memory_system.py --validate-only passed with local retrieval freshness warnings."
+      - "Clean-checkout simulation with .local absent passed bootstrap validate-only with missing local retrieval warnings only."
       - "validate_research_control.py and --check-diff passed."
-      - "make PYTHON=.venv/bin/python validate-project-control exited 0 after 474 tests."
+      - "make PYTHON=.venv/bin/python validate-project-control exited 0 after 476 tests."
   post_checkpoint:
     status: "NOT_APPLICABLE"
     evidence:
@@ -120,6 +130,7 @@ claim_boundary:
     - "registered v16 implementation plan is tracked"
     - "documentation-surface audit checks Git visibility for registry-referenced paths"
     - "ignored or untracked registered file paths fail validation"
+    - "folder-map generation excludes Git-ignored local/cache directories"
     - "no physics delta"
   forbidden_claims:
     - "CI pass as physics proof authority"
@@ -147,5 +158,5 @@ project_improvement_bridge:
   improvement_handoff_path: ""
   signal_ids: []
   bridge_status: "not_required"
-coherent_resolution_summary: "RT-20260707-003 repaired CI by restoring Git visibility for the registered v16 plan and hardening documentation-surface validation against ignored or untracked registry paths."
+coherent_resolution_summary: "RT-20260707-003 repaired CI by restoring Git visibility for the registered v16 plan, hardening documentation-surface validation against ignored or untracked registry paths, and making folder-map generation independent of ignored local/cache directory presence."
 next_recommendation: "Use the latest research handoff for any future research continuation; this packet creates no physics route."

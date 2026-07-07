@@ -9,11 +9,11 @@ current_decision_id: "DDR-20260707-003"
 current_job_id: "AJ-RT-20260707-003-001"
 route_label: "user_authorized_ci_registry_path_visibility_repair"
 target_derivation_milestone: "matter_coupling"
-milestone_burden: "Repair project-system validation so registry-referenced paths cannot be ignored or untracked in a clean checkout."
+milestone_burden: "Repair project-system validation so registry-referenced paths cannot be ignored or untracked in a clean checkout and ignored local/cache directories cannot stale tracked folder-map derivatives."
 requires_human_gate: false
 human_authorization_id: "user-2026-07-07-ci-repair"
 project_system_boundary_authorized_by_plan: true
 physics_progress_status: "project_system_ci_repair_no_physics_delta"
 closure_status: "ci_registry_path_visibility_repair_completed_no_physics_delta"
-summary: "Tracked the registered v16 implementation plan, added a Git visibility guard to the documentation-surface audit, and preserved project-control validation boundaries with no physics claim promotion."
+summary: "Tracked the registered v16 implementation plan, added a Git visibility guard to the documentation-surface audit, stabilized folder-map generation against ignored local/cache directories, and preserved project-control validation boundaries with no physics claim promotion."
 next_recommended_action: "Run the existing CI validation workflow on the pushed commit and continue ordinary research only from the latest research handoff."
