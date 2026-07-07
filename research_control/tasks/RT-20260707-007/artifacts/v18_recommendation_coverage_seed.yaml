@@ -1,0 +1,159 @@
+schema_id: "v18_recommendation_coverage_seed_v1"
+status: "PASS"
+created_at: "2026-07-07T06:50:35Z"
+task_id: "RT-20260707-007"
+job_id: "AJ-RT-20260707-007-001"
+plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_sha256: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+  plan_task_id: "P0-T04"
+  plan_phase_id: "P0"
+  plan_task_name: "V18 recommendation coverage seed report"
+backlog:
+  path: "research_control/design/v18_recommendation_backlog.yaml"
+  sha256: "99b3f9ce98db71e4d8849337e59d66fcfca76a43206d885e6a44c052224b44e4"
+  planned_task_count: 68
+  missing_validator_layer_task_ids: []
+done_criteria:
+  every_recommendation_has_planned_implementation_tasks: "PASS"
+  every_planned_implementation_task_has_at_least_one_validator_layer: "PASS"
+  protected_actions_are_human_gated_or_setup_only: "PASS"
+  next_route_is_p1_t01: "PASS"
+recommendation_coverage:
+  - recommendation_id: "V18-R01"
+    planned_task_count: 21
+    direct_implementation_task_count: 11
+    direct_implementation_task_ids: ["P2-T01", "P2-T03", "P2-T06", "P3-T01", "P3-T02", "P3-T03", "P3-T04", "P3-T05", "P3-T06", "P4-T05", "P10-T01"]
+    audit_or_closure_task_ids: ["P11-T01", "P11-T02", "P11-T04", "P11-T05"]
+    planned_task_ids: ["P0-T01", "P0-T02", "P0-T03", "P0-T04", "P2-T01", "P2-T03", "P2-T06", "P3-T01", "P3-T02", "P3-T03", "P3-T04", "P3-T05", "P3-T06", "P4-T05", "P10-T01", "P11-T01", "P11-T02", "P11-T03", "P11-T04", "P11-T05", "P11-T06"]
+  - recommendation_id: "V18-R02"
+    planned_task_count: 21
+    direct_implementation_task_count: 12
+    direct_implementation_task_ids: ["P2-T01", "P2-T02", "P2-T03", "P2-T04", "P2-T05", "P2-T06", "P3-T01", "P3-T02", "P3-T03", "P3-T06", "P7-T02", "P10-T01"]
+    audit_or_closure_task_ids: ["P11-T01", "P11-T02", "P11-T04", "P11-T05"]
+    planned_task_ids: ["P0-T01", "P0-T02", "P0-T04", "P2-T01", "P2-T02", "P2-T03", "P2-T04", "P2-T05", "P2-T06", "P3-T01", "P3-T02", "P3-T03", "P3-T06", "P7-T02", "P10-T01", "P11-T01", "P11-T02", "P11-T03", "P11-T04", "P11-T05", "P11-T06"]
+  - recommendation_id: "V18-R03"
+    planned_task_count: 25
+    direct_implementation_task_count: 16
+    direct_implementation_task_ids: ["P2-T05", "P2-T06", "P3-T01", "P3-T02", "P3-T03", "P3-T04", "P3-T05", "P3-T06", "P4-T01", "P4-T02", "P4-T03", "P4-T04", "P4-T05", "P4-T06", "P7-T03", "P10-T01"]
+    audit_or_closure_task_ids: ["P11-T01", "P11-T02", "P11-T04", "P11-T05"]
+    planned_task_ids: ["P0-T01", "P0-T02", "P0-T04", "P2-T05", "P2-T06", "P3-T01", "P3-T02", "P3-T03", "P3-T04", "P3-T05", "P3-T06", "P4-T01", "P4-T02", "P4-T03", "P4-T04", "P4-T05", "P4-T06", "P7-T03", "P10-T01", "P11-T01", "P11-T02", "P11-T03", "P11-T04", "P11-T05", "P11-T06"]
+  - recommendation_id: "V18-R04"
+    planned_task_count: 17
+    direct_implementation_task_count: 8
+    direct_implementation_task_ids: ["P5-T01", "P5-T02", "P5-T03", "P5-T04", "P5-T05", "P5-T06", "P5-T07", "P7-T06"]
+    audit_or_closure_task_ids: ["P11-T01", "P11-T02", "P11-T04", "P11-T05"]
+    planned_task_ids: ["P0-T01", "P0-T02", "P0-T04", "P5-T01", "P5-T02", "P5-T03", "P5-T04", "P5-T05", "P5-T06", "P5-T07", "P7-T06", "P11-T01", "P11-T02", "P11-T03", "P11-T04", "P11-T05", "P11-T06"]
+  - recommendation_id: "V18-R05"
+    planned_task_count: 14
+    direct_implementation_task_count: 5
+    direct_implementation_task_ids: ["P6-T01", "P6-T02", "P6-T03", "P6-T04", "P6-T05"]
+    audit_or_closure_task_ids: ["P11-T01", "P11-T02", "P11-T04", "P11-T05"]
+    planned_task_ids: ["P0-T01", "P0-T02", "P0-T04", "P6-T01", "P6-T02", "P6-T03", "P6-T04", "P6-T05", "P11-T01", "P11-T02", "P11-T03", "P11-T04", "P11-T05", "P11-T06"]
+  - recommendation_id: "V18-R06"
+    planned_task_count: 17
+    direct_implementation_task_count: 8
+    direct_implementation_task_ids: ["P7-T01", "P7-T02", "P7-T03", "P7-T04", "P7-T05", "P7-T06", "P7-T07", "P7-T08"]
+    audit_or_closure_task_ids: ["P11-T01", "P11-T02", "P11-T04", "P11-T05"]
+    planned_task_ids: ["P0-T01", "P0-T02", "P0-T04", "P7-T01", "P7-T02", "P7-T03", "P7-T04", "P7-T05", "P7-T06", "P7-T07", "P7-T08", "P11-T01", "P11-T02", "P11-T03", "P11-T04", "P11-T05", "P11-T06"]
+  - recommendation_id: "V18-R07"
+    planned_task_count: 14
+    direct_implementation_task_count: 5
+    direct_implementation_task_ids: ["P8-T01", "P8-T02", "P8-T03", "P8-T04", "P8-T05"]
+    audit_or_closure_task_ids: ["P11-T01", "P11-T02", "P11-T04", "P11-T05"]
+    planned_task_ids: ["P0-T01", "P0-T02", "P0-T04", "P8-T01", "P8-T02", "P8-T03", "P8-T04", "P8-T05", "P11-T01", "P11-T02", "P11-T03", "P11-T04", "P11-T05", "P11-T06"]
+  - recommendation_id: "V18-R08"
+    planned_task_count: 14
+    direct_implementation_task_count: 4
+    direct_implementation_task_ids: ["P1-T01", "P1-T02", "P1-T03", "P1-T04"]
+    audit_or_closure_task_ids: ["P11-T01", "P11-T02", "P11-T04", "P11-T05"]
+    planned_task_ids: ["P0-T01", "P0-T02", "P0-T03", "P0-T04", "P1-T01", "P1-T02", "P1-T03", "P1-T04", "P11-T01", "P11-T02", "P11-T03", "P11-T04", "P11-T05", "P11-T06"]
+  - recommendation_id: "V18-R09"
+    planned_task_count: 14
+    direct_implementation_task_count: 5
+    direct_implementation_task_ids: ["P9-T01", "P9-T02", "P9-T03", "P9-T04", "P9-T05"]
+    audit_or_closure_task_ids: ["P11-T01", "P11-T02", "P11-T04", "P11-T05"]
+    planned_task_ids: ["P0-T01", "P0-T02", "P0-T04", "P9-T01", "P9-T02", "P9-T03", "P9-T04", "P9-T05", "P11-T01", "P11-T02", "P11-T03", "P11-T04", "P11-T05", "P11-T06"]
+  - recommendation_id: "V18-R10"
+    planned_task_count: 15
+    direct_implementation_task_count: 6
+    direct_implementation_task_ids: ["P10-T01", "P10-T02", "P10-T03", "P10-T04", "P10-T05", "P10-T06"]
+    audit_or_closure_task_ids: ["P11-T01", "P11-T02", "P11-T04", "P11-T05"]
+    planned_task_ids: ["P0-T01", "P0-T02", "P0-T04", "P10-T01", "P10-T02", "P10-T03", "P10-T04", "P10-T05", "P10-T06", "P11-T01", "P11-T02", "P11-T03", "P11-T04", "P11-T05", "P11-T06"]
+protected_action_review:
+  status: "PASS"
+  interpretation: "The backlog marks protected surfaces as setup-only or non-promotional in this plan. No actual external outreach source-law adoption benchmark promotion ledger status promotion or Gate Chair verdict is authorized by P0-T04."
+  reviewed_task_count: 9
+  reviewed_tasks:
+    - plan_task_id: "P5-T02"
+      title: "Matter-coupling DAG and ledger-delta question setup"
+      human_gate_required: false
+      promotion_allowed: false
+      classification: "setup_only_non_promotional"
+    - plan_task_id: "P7-T05"
+      title: "Metric-use ledger TeX validator"
+      human_gate_required: false
+      promotion_allowed: false
+      classification: "validator_only_non_promotional"
+    - plan_task_id: "P10-T01"
+      title: "External-review question selector"
+      human_gate_required: false
+      promotion_allowed: false
+      classification: "selection_only_no_outreach"
+    - plan_task_id: "P10-T02"
+      title: "External-review packet source spec"
+      human_gate_required: false
+      promotion_allowed: false
+      classification: "packet_spec_only_no_outreach"
+    - plan_task_id: "P10-T03"
+      title: "External-review packet artifact"
+      human_gate_required: false
+      promotion_allowed: false
+      classification: "artifact_preparation_only_no_outreach"
+    - plan_task_id: "P10-T04"
+      title: "Internal red-team review of external packet"
+      human_gate_required: false
+      promotion_allowed: false
+      classification: "internal_review_only_no_outreach"
+    - plan_task_id: "P10-T05"
+      title: "External-outreach human-gate setup only"
+      human_gate_required: false
+      promotion_allowed: false
+      classification: "human_gate_setup_only_no_outreach"
+    - plan_task_id: "P10-T06"
+      title: "Review-response intake template"
+      human_gate_required: false
+      promotion_allowed: false
+      classification: "intake_template_only_no_outreach"
+    - plan_task_id: "P11-T03"
+      title: "Current frontier, compact frontier, graphs, and ledger synchronization"
+      human_gate_required: false
+      promotion_allowed: false
+      classification: "synchronization_only_non_promotional"
+claim_boundary:
+  physics_delta_allowed: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_detector_readout_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  external_outreach_authorized: false
+  proof_authority: false
+  completed_derivation_claimed: false
+next_route:
+  plan_task_id: "P1-T01"
+  route_type: "active_state_bifurcation_design_note"
+  role_family: "project-control-maintainer@0.2.0"
+  target_derivation_milestone: "none"
+  milestone_burden: "Define how research handoffs and project-system sidecars coexist in active-state surfaces."
