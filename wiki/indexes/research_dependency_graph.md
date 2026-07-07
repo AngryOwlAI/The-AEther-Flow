@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-07T13:07:23Z`
-- Source fingerprint: `95b93f136d934c9dd9ba75ed26c8bcfe05ec665a35e596ceae192d357e3fd3ac`
-- Nodes: `16069`
-- Edges: `58887`
+- Generated from tracked state as of: `2026-07-07T13:41:34Z`
+- Source fingerprint: `04aae2091e11596f6c6ec36596b1351e71199a9330ef8e6e9aefe41afc4e3ab8`
+- Nodes: `16104`
+- Edges: `58960`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 824 |
+| `completion_yaml` | 825 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 687 |
+| `handoff_yaml` | 688 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 824 |
+| `agent_job` | `support_only` | 825 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 8449 |
-| `blocked_burden` | `blocked` | 2905 |
-| `claim_boundary` | `support_only` | 781 |
+| `artifact` | `support_only` | 8469 |
+| `blocked_burden` | `blocked` | 2916 |
+| `claim_boundary` | `support_only` | 782 |
 | `draft_control_candidate` | `draft_control` | 504 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 58 |
 | `frozen_negative` | `frozen_negative` | 102 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 687 |
+| `handoff` | `support_only` | 688 |
 | `human_gated_object` | `human_gated` | 289 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 281 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 30 |
-| `task` | `support_only` | 765 |
+| `task` | `support_only` | 766 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260707-018`
-- Latest handoff: `handoff-0687`
-- Handoff path: `research_control/handoffs/handoff-0687.yaml`
-- Next action: Run one bounded v18 P3-T01 EqSrc family-closure theorem-or-countermodel setup packet.
+- Active task: `RT-20260707-019`
+- Latest handoff: `handoff-0688`
+- Handoff path: `research_control/handoffs/handoff-0688.yaml`
+- Next action: Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

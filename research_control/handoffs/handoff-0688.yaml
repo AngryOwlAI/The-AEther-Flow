@@ -1,0 +1,92 @@
+handoff_id: "handoff-0688"
+created_at: '2026-07-07T13:41:34Z'
+task_id: "RT-20260707-019"
+decision_id: "DDR-20260707-019"
+job_id: "AJ-RT-20260707-019-001"
+completion_path: "research_control/tasks/RT-20260707-019/jobs/completions/AJC-AJ-RT-20260707-019-001.yaml"
+source_task_id: "RT-20260707-019"
+source_job_id: "AJ-RT-20260707-019-001"
+source_completion_id: "AJC-AJ-RT-20260707-019-001"
+status: "completed"
+from_task_id: "RT-20260707-019"
+from_job_id: "AJ-RT-20260707-019-001"
+from_decision_id: "DDR-20260707-019"
+parent_handoff_id: "handoff-0687"
+implementation_plan: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+completed_plan_task_id: "P3-T01"
+completed_status: "v18_p3_t01_eqsrc_family_closure_setup_no_promotion"
+summary: "Completed v18 P3-T01 by defining one P3-T02 EqSrc family-closure theorem-or-countermodel attempt target over F_src with exactly one primary payload requirement RetainH and GenH analysis countermodel obligations and no target imports."
+claim_boundary:
+  allowed_claims:
+    - "v18 P3-T01 setup completed"
+    - "exactly one P3-T02 packet target named"
+    - "RetainH and GenH analysis required without adoption"
+    - "no-target-import guard required"
+    - "no Distance-to-GR delta"
+  forbidden_claims:
+    - "general EqSrc discharge"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "source-law adoption"
+    - "matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "global no-go conclusion"
+outputs:
+  - "research_control/tasks/RT-20260707-019/artifacts/eqsrc_family_closure_packet_setup_v1.md"
+  - "research_control/tasks/RT-20260707-019/artifacts/eqsrc_family_closure_packet_setup_validation.json"
+  - "research_control/tasks/RT-20260707-019/jobs/completions/AJC-AJ-RT-20260707-019-001.yaml"
+next_recommended_action: "Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet."
+next_action: "Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet."
+loop_risk_route: "v18_p3_t02_eqsrc_family_closure_theorem_or_countermodel_no_promotion"
+blocked_claims:
+  - "P3-T01 setup as physics proof"
+  - "P3-T01 setup as completed v18 implementation"
+  - "P3-T01 setup as source-law adoption"
+  - "P3-T01 setup as general EqSrc discharge"
+  - "P3-T01 setup as RetainH adoption"
+  - "P3-T01 setup as GenH adoption"
+  - "P3-T01 setup as matter-coupling derivation"
+  - "P3-T01 setup as Einstein-equation derivation"
+  - "P3-T01 setup as benchmark promotion"
+  - "P3-T01 setup as external outreach"
+  - "P3-T01 setup as completed derivation"
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260707-019"
+  latest_research_handoff_id: "handoff-0688"
+  latest_research_next_action: "Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+distance_to_gr:
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  status: "eqsrc_family_closure_setup_selected_p3_t02_no_promotion"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260707-019 sets up P3-T02 only. The source_equivalence_eqsrc ledger row remains without family-closure proof RetainH adoption GenH adoption or EqSrc discharge."
+selected_next_route:
+  route_id: "eqsrc_family_closure_theorem_or_countermodel_attempt"
+  plan_task_id: "P3-T02"
+  role_family: "ontology-formalizer@0.2.0"
+  task_type: "eqsrc_family_closure_theorem_or_countermodel"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Discharge, refute, or sharpen OB-P6T02-GENERAL-EQSRC-FAMILY-CLOSURE-MISSING."
+  requires_human_gate: false
+checkpoint_required_after_execution: true
+validation:
+  memory_preflight: "PASS"
+  query_memory_status: "PASS"
+  continue_research_json: "PASS"
+  setup_artifact: "PASS"
+  task_local_validator: "PASS"
+human_authorization:
+  authorization_id: "user-2026-07-07-all-human-gates"
+  consumed: false
+  reason: "P3-T01 and selected P3-T02 route do not require a human gate."
+project_improvement_signals: []

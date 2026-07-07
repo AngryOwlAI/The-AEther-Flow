@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `5400b2de1dde27cbf764bdbddc9df2fc657069838c65376630e26f8995c1b0ed`
-- Generated-at source timestamp: `2026-07-07T13:07:23Z`
-- Row count: `828`
+- Source fingerprint: `266edbbf22f189b61a8620b21ec7b9f42ed1f86533f69b1a3d09605293bc6a2e`
+- Generated-at source timestamp: `2026-07-07T13:41:34Z`
+- Row count: `829`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260707-019|RT-20260707-018|2026-07-07T13:41:34Z|2026-07-07T13:41:34Z|eqsrc_family_closure_theorem_or_countermodel_setup|completed|source_equivalence_eqsrc|Set up one bounded EqSrc family-closure theorem-or-countermodel packet after typed-object audit and stress.|director-of-research@0.3.0|false|false|8|Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet.|PASS|research_control/tasks/RT-20260707-019/jobs/completions/AJC-AJ-RT-20260707-019-001.yaml|
 |RT-20260707-018|RT-20260707-017|2026-07-07T13:07:23Z|2026-07-07T13:07:23Z|source_equivalence_typed_object_continuation_selector|completed|source_equivalence_eqsrc|Select one next route after typed-object definition, audit, and stress.|theoretical-continuation-selector@0.1.0|false|false|8|Run one bounded v18 P3-T01 EqSrc family-closure theorem-or-countermodel setup packet.|PASS|research_control/tasks/RT-20260707-018/jobs/completions/AJC-AJ-RT-20260707-018-001.yaml|
 |RT-20260707-017|RT-20260707-016|2026-07-07T12:29:11Z|2026-07-07T12:29:11Z|source_equivalence_typed_object_refuter_stress|completed|source_equivalence_eqsrc|Stress the typed source-equivalence object for missing closure, weak invariants, and hidden primitive dependence.|refuter@0.2.0|false|false|9|Run one bounded v18 P2-T06 Typed-object continuation selector packet.|PASS|research_control/tasks/RT-20260707-017/jobs/completions/AJC-AJ-RT-20260707-017-001.yaml|
 |RT-20260707-016|RT-20260707-015|2026-07-07T11:59:48Z|2026-07-07T11:59:48Z|source_equivalence_typed_object_smuggling_audit|completed|source_equivalence_eqsrc|Audit the typed source-equivalence object for target imports and process-authority imports.|smuggling-auditor@0.2.0|false|false|9|Run one bounded v18 P2-T05 Refuter stress packet against the audited typed source-equivalence object.|PASS|research_control/tasks/RT-20260707-016/jobs/completions/AJC-AJ-RT-20260707-016-001.yaml|

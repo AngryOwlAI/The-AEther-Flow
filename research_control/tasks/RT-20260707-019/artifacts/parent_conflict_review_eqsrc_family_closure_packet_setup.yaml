@@ -1,0 +1,18 @@
+artifact_id: parent_conflict_review_eqsrc_family_closure_packet_setup
+task_id: RT-20260707-019
+status: completed
+created_at: '2026-07-07T13:41:34Z'
+child_artifacts:
+  - research_control/tasks/RT-20260707-019/artifacts/child_phys_math_eqsrc_family_closure_packet_setup.yaml
+  - research_control/tasks/RT-20260707-019/artifacts/child_phys_phil_eqsrc_family_closure_packet_setup.yaml
+conflicts_found: false
+unresolved_conflicts: []
+resolved_alignment:
+  - Both perspectives require exactly one downstream P3-T02 target.
+  - Both perspectives require a theorem-or-countermodel branch rather than a setup-only conclusion.
+  - Both perspectives require explicit RetainH and GenH analysis without adoption.
+  - Both perspectives require no target-side premise import.
+  - Both perspectives forbid physics promotion from P3-T01.
+parent_decision: Use one P3-T02 family-level EqSrc closure theorem-or-minimal-countermodel attempt target with exactly one primary payload and no promotion.
+next_route: P3-T02
+

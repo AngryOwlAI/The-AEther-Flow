@@ -1,0 +1,52 @@
+artifact_id: child_phys_math_eqsrc_family_closure_packet_setup
+task_id: RT-20260707-019
+perspective: physicist_mathematician
+status: completed
+created_at: '2026-07-07T13:41:34Z'
+summary: Defines the formal setup obligations for the P3-T02 EqSrc family-closure theorem-or-countermodel attempt.
+source_family_symbol: F_src
+typed_object_artifact: research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex
+selected_packet_target: P3_T02_family_level_eqsrc_closure_theorem_or_minimal_countermodel_attempt
+exactly_one_target: true
+formal_obligations:
+  - declare typed source-family domain
+  - define source-only comparison relation
+  - test identity closure
+  - test inverse closure
+  - test composition closure
+  - test family invariant-ledger stability
+  - preserve no-target-import guard
+  - produce exactly one primary payload
+allowed_primary_payloads:
+  - family_level_eqsrc_closure_theorem_candidate
+  - minimal_family_closure_countermodel
+  - RetainH_primitive_required
+  - GenH_primitive_required
+  - scoped_freeze_obstruction
+primitive_analysis_required:
+  RetainH:
+    status_one_of:
+      - not_required_here
+      - required_but_missing
+      - candidate_definition_needed
+      - countermodel_blocks_current_route
+      - deferred
+  GenH:
+    status_one_of:
+      - not_required_here
+      - required_but_missing
+      - candidate_definition_needed
+      - countermodel_blocks_current_route
+      - deferred
+countermodel_slots:
+  - missing_inverse_countermodel
+  - missing_composition_countermodel
+  - invariant_ledger_not_family_stable_countermodel
+  - target_import_needed_countermodel
+  - RetainH_needed_countermodel
+  - GenH_needed_countermodel
+mathematical_boundary:
+  theorem_candidate_is_not_adoption: true
+  countermodel_is_scoped_unless_proven_global: true
+  registry_or_validator_state_is_not_theorem_premise: true
+

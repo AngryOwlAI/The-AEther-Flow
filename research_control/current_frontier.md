@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260707-018` and `handoff-0687`.
+`RT-20260707-019` and `handoff-0688`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260707-018` |
-| Latest handoff ID | `handoff-0687` |
-| Current status | `v18_p2_t06_typed_object_selector_selected_p3_t01_no_promotion` |
+| Active task ID | `RT-20260707-019` |
+| Latest handoff ID | `handoff-0688` |
+| Current status | `v18_p3_t01_eqsrc_family_closure_setup_no_promotion` |
 | V16 completed | false |
-| Current route family | v18 p3 t01 family closure theorem or countermodel setup no promotion |
+| Current route family | v18 p3 t02 eqsrc family closure theorem or countermodel no promotion |
 | Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: typed_object_selector_selected_p3_t01_no_promotion |
-| Required next authority | P3-T01 EqSrc family-closure theorem-or-countermodel setup after P2-T06 route selection |
-| Next recommended action | Run one bounded v18 P3-T01 EqSrc family-closure theorem-or-countermodel setup packet. |
+| Current burden | `source_equivalence_eqsrc`; status: eqsrc_family_closure_setup_selected_p3_t02_no_promotion |
+| Required next authority | Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet. |
+| Next recommended action | Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260707-018` |
-| Latest research handoff ID | `handoff-0687` |
-| Latest research next action | Run one bounded v18 P3-T01 EqSrc family-closure theorem-or-countermodel setup packet. |
+| Latest research task ID | `RT-20260707-019` |
+| Latest research handoff ID | `handoff-0688` |
+| Latest research next action | Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260707-018/00_TASK.yaml`.
-- Active task objective: Select exactly one next route after the v18 typed source-equivalence object definition audit and stress while preserving no-promotion boundaries.
-- Latest handoff path: `research_control/handoffs/handoff-0687.yaml`.
-- Latest handoff summary: RT-20260707-018 completed v18 P2-T06 by selecting P3_T01_family_closure_theorem_or_countermodel_setup after SourceEquivalenceTypedObject_v1 definition audit and stress. The selector records no general EqSrc discharge RetainH adoption GenH adoption source-law adoption physics promotion or Distance-to-GR ledger delta.
-- Current route family: v18 p3 t01 family closure theorem or countermodel setup no promotion.
-- Next recommended action: Run one bounded v18 P3-T01 EqSrc family-closure theorem-or-countermodel setup packet.
+- Active task path: `research_control/tasks/RT-20260707-019/00_TASK.yaml`.
+- Active task objective: Set up exactly one bounded P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet after typed-object audit and stress.
+- Latest handoff path: `research_control/handoffs/handoff-0688.yaml`.
+- Latest handoff summary: Completed v18 P3-T01 by defining one P3-T02 EqSrc family-closure theorem-or-countermodel attempt target over F_src with exactly one primary payload requirement RetainH and GenH analysis countermodel obligations and no target imports.
+- Current route family: v18 p3 t02 eqsrc family closure theorem or countermodel no promotion.
+- Next recommended action: Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P3-T01 EqSrc family-closure theorem-or-countermodel setup packet.
+Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,16 +320,16 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260707-018`;
-- latest handoff: `handoff-0687`;
-- current status: `v18_p2_t06_typed_object_selector_selected_p3_t01_no_promotion`;
+- active task: `RT-20260707-019`;
+- latest handoff: `handoff-0688`;
+- current status: `v18_p3_t01_eqsrc_family_closure_setup_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `continue_research_json`: PASS;
 - latest handoff validation `memory_preflight`: PASS;
 - latest handoff validation `query_memory_status`: PASS;
-- latest handoff validation `selector_artifact`: PASS;
+- latest handoff validation `setup_artifact`: PASS;
 - latest handoff validation `task_local_validator`: PASS;
 
 ## Retrieval Warning Status
@@ -337,8 +337,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0687.yaml`
-- `research_control/tasks/RT-20260707-018/00_TASK.yaml`
+- `research_control/handoffs/handoff-0688.yaml`
+- `research_control/tasks/RT-20260707-019/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -354,7 +354,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0687*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0688*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
