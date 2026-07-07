@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260707-019`
-- Latest handoff: `handoff-0688`
-- Current status: `v18_p3_t01_eqsrc_family_closure_setup_no_promotion`
+- Active task: `RT-20260707-020`
+- Latest handoff: `handoff-0689`
+- Current status: `v18_p3_t02_conditional_eqsrc_family_closure_theorem_candidate_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260707-019`
-- Latest research handoff: `handoff-0688`
-- Latest research next action: Run one bounded v18 P3-T02 EqSrc family-closure theorem-or-countermodel attempt packet.
+- Latest research task: `RT-20260707-020`
+- Latest research handoff: `handoff-0689`
+- Latest research next action: Run one bounded v18 P3-T03 RetainH and GenH primitive-boundary extraction packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_family_closure_theorem_or_countermodel_attempt`
+- Route ID: `retainh_genh_primitive_boundary_extraction`
 - Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Discharge, refute, or sharpen OB-P6T02-GENERAL-EQSRC-FAMILY-CLOSURE-MISSING.
+- Milestone burden: Extract exact RetainH and GenH primitive-boundary consequences from the P3-T02 theorem-or-countermodel result.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `3af14e99280c8bdef53ccbf37090b69b44bb9a559456b56255dc2c79b8cdebd9`
-- JSON SHA-256: `ac7c205ef1ca53a822c4a54e58e8296bc6668764b1a281c542d938ccd14d4e44`
+- YAML SHA-256: `2e7d79a81974da94e591d80fbe2f7d4bf4a38355bb5aadc8f8451af8030bd0ac`
+- JSON SHA-256: `05950f6633c3d3221fd8d82271079be8707f299e7aa498f22d155dc791e10505`
 
 ## Authority Warning
 

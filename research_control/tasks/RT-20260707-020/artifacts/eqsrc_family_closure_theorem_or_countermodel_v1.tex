@@ -1,0 +1,389 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\EqSrc}{\mathrm{EqSrc}}
+\newcommand{\EqSrcT}{\mathrm{EqSrc}_{T}}
+\newcommand{\Block}{\mathrm{Block}}
+\newcommand{\NotEqSrc}{\mathrm{not\_EqSrc}}
+\newcommand{\RetainH}{\mathrm{RetainH}}
+\newcommand{\GenH}{\mathrm{GenH}}
+\newcommand{\Fsrc}{\mathcal{F}_{\mathrm{src}}}
+\newcommand{\Osrc}{\mathcal{O}_{\mathrm{src}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\Isrc}{\mathcal{I}_{\mathrm{src}}}
+\newcommand{\Asrc}{\mathcal{A}_{\mathrm{src}}}
+\newcommand{\Psrc}{\mathcal{P}_{\mathrm{src}}}
+\newcommand{\Nsrc}{\mathcal{N}_{\mathrm{src}}}
+\newcommand{\Csrc}{C_{\mathrm{src}}}
+\newcommand{\NoTarget}{\mathsf{NoTarget}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem Candidate}
+\newtheorem{countermodel}{Minimal Countermodel Slot}
+\newtheorem{remark}{Boundary Remark}
+
+\title{EqSrc Family-Closure Theorem or Countermodel v1}
+\author{Ontology Formalizer Packet RT-20260707-020}
+\date{2026-07-07}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v18 P3-T02 as a draft/control science artifact. It
+executes one bounded EqSrc family-closure theorem-or-countermodel attempt over
+the typed source family introduced by
+\(\mathrm{SourceEquivalenceTypedObject\_v1}\).
+
+The primary result is:
+\[
+  \texttt{family\_closure\_theorem\_candidate\_supplied}.
+\]
+
+\begin{verbatim}
+primary_result: family_closure_theorem_candidate_supplied
+\end{verbatim}
+
+The required minimal countermodel slot attempted is:
+\[
+  \texttt{missing\_inverse\_countermodel}.
+\]
+
+The result has no proof-promotion authority. It does not discharge general
+\(\EqSrc\), adopt \(\RetainH\), adopt \(\GenH\), adopt a source law, edit
+canonical ontology, adopt \(\mathrm{MetricData}(E)\), expand
+\(g_{\mathrm{eff}}\), derive matter coupling, derive Einstein equations,
+promote a benchmark, issue a Gate Chair verdict, authorize external outreach,
+or claim completed derivation.
+
+\section{Prior Record-Local \(\EqSrc\) Theorem}
+
+The prior record-local theorem candidate works inside one declared finite
+source-record orbit. It supplies record-local relabeling witnesses and checks
+identity, inverse, and composition inside that local orbit. It does not by
+itself establish a theorem over an arbitrary source family.
+
+The present packet treats the record-local theorem as an input pattern. It asks
+which source-side hypotheses are sufficient to lift the equivalence-relation
+argument to the typed family \(\Fsrc\), and which minimal countermodel appears
+when one hypothesis is removed.
+
+\section{Typed Source Family}
+
+Let
+\[
+  \Fsrc=(\Osrc,\Msrc,\Isrc,\Csrc,\Asrc,\Psrc,\Nsrc)
+\]
+be a declared source-side family, where:
+\begin{enumerate}[label=(\alph*)]
+  \item \(\Osrc\) is a class or bounded family fragment of source objects;
+  \item \(\Msrc\) is a class of admissible source morphisms or relabelings;
+  \item \(\Isrc\) is a source invariant ledger;
+  \item \(\Csrc:\Osrc\times\Osrc\to\{\EqSrc,\NotEqSrc,\Block\}\) is a
+  source-only comparison rule;
+  \item \(\Asrc\) records source paths, object ids, hashes, scopes, and
+  dependencies;
+  \item \(\Psrc\) records forbidden-channel and proxy-edge incidence;
+  \item \(\Nsrc\) is a negative-control set.
+\end{enumerate}
+
+Every component is source-side. None is a target topology, target metric,
+detector protocol, empirical calibration, stress-energy object, matter action,
+benchmark behavior, validator status, registry authority, role identity,
+handoff state, commit state, or generated derivative.
+
+\section{Family Invariant Ledger}
+
+For a morphism \(f:X\to Y\) in \(\Msrc\), write
+\[
+  f \models \mathrm{Pres}(\Isrc,\Asrc,\Psrc)
+\]
+when \(f\) preserves the relevant invariant entries, annotation entries, and
+forbidden-channel or proxy-edge incidence by an explicit source-side rule.
+
+The family-level theorem candidate uses the following ledger hypothesis:
+
+\[
+  \forall f\in\Msrc,\quad
+  f \models \mathrm{Pres}(\Isrc,\Asrc,\Psrc)
+  \text{ or } \Csrc(\mathrm{dom}(f),\mathrm{cod}(f))=\Block.
+\]
+
+This is a hypothesis, not a completed ledger proof. The current project record
+does not promote it to a source law.
+
+\section{Candidate Family-Level \(\EqSrc\) Relation}
+
+\begin{definition}[Typed family relation]
+For \(X,Y\in\Osrc\), define
+\[
+  X\,\EqSrcT\,Y
+\]
+when there exists a witness \(w_{XY}:X\to Y\) in \(\Msrc\) such that:
+\begin{enumerate}[label=(\roman*)]
+  \item \(w_{XY}\models \mathrm{Pres}(\Isrc,\Asrc,\Psrc)\);
+  \item \(\Csrc(X,Y)=\EqSrc\);
+  \item all negative-control checks in \(\Nsrc\) remain source-side and
+  fail-closed;
+  \item \(\NoTarget(w_{XY})\) holds.
+\end{enumerate}
+\end{definition}
+
+\(\NoTarget\) means that the witness and comparison do not use target
+topology, target metric, proper time, detector protocol, stress-energy,
+matter action, Einstein equations, benchmark behavior, validator status,
+registry metadata, role identity, handoff state, commit state, or generated
+derivatives as premises.
+
+\section{Identity Closure Attempt}
+
+The identity hypothesis is:
+\[
+  \forall X\in\Osrc,\quad \mathrm{id}_{X}\in\Msrc
+  \quad\text{and}\quad
+  \mathrm{id}_{X}\models \mathrm{Pres}(\Isrc,\Asrc,\Psrc).
+\]
+
+If also \(\Csrc(X,X)=\EqSrc\) under the no-target guard, then
+\[
+  X\,\EqSrcT\,X.
+\]
+
+Thus reflexivity follows from supplied source-side identity witnesses. It is
+not inferred from process authority or from target-side behavior.
+
+\section{Inverse Closure Attempt}
+
+The inverse hypothesis is:
+\[
+  \forall w_{XY}:X\to Y\in\Msrc,\quad
+  \exists w_{YX}:Y\to X\in\Msrc
+\]
+such that \(w_{YX}\models \mathrm{Pres}(\Isrc,\Asrc,\Psrc)\),
+\(\Csrc(Y,X)=\EqSrc\), and \(\NoTarget(w_{YX})\) holds whenever
+\(w_{XY}\) witnesses \(X\,\EqSrcT\,Y\).
+
+If the inverse witness is missing, symmetry is not derivable. That missing
+case is the minimal countermodel slot recorded below.
+
+\section{Composition Closure Attempt}
+
+The composition hypothesis is:
+\[
+  w_{XY}:X\to Y,\quad w_{YZ}:Y\to Z\in\Msrc
+  \quad\Longrightarrow\quad
+  w_{YZ}\circ w_{XY}:X\to Z\in\Msrc,
+\]
+with source-side preservation of \(\Isrc,\Asrc,\Psrc\), \(\Csrc(X,Z)=\EqSrc\),
+and \(\NoTarget(w_{YZ}\circ w_{XY})\).
+
+If composition is not supplied or derived, transitivity is not derivable.
+
+\section{\(\RetainH\) Trigger Analysis}
+
+\(\RetainH\) is not required for the conditional theorem over an already
+declared closed family \(\Fsrc\). The theorem candidate asks only whether
+identity, inverse, composition, ledger stability, comparison, and no-target
+guards are present inside the declared family.
+
+\(\RetainH\) becomes a live boundary condition when a later packet asks
+whether source-record structure, certificate status, comparison status,
+negative controls, or invariant status is preserved under an \(H\)-indexed
+retention operation. The current sources do not derive that primitive.
+
+Classification:
+
+\begin{verbatim}
+RetainH_status_for_this_theorem: not_required_here
+RetainH_status_for_H_retention_extension: candidate_definition_needed
+RetainH_adopted: false
+adoption_requested: false
+\end{verbatim}
+
+\section{\(\GenH\) Trigger Analysis}
+
+\(\GenH\) is not required for the conditional theorem over an already declared
+closed family \(\Fsrc\). The theorem candidate does not claim to generate all
+family members; it assumes the family and its closure witnesses are declared.
+
+\(\GenH\) becomes a live boundary condition when a later packet constructs,
+enumerates, or quantifies over an \(H\)-generated source family. The current
+sources do not derive that primitive.
+
+Classification:
+
+\begin{verbatim}
+GenH_status_for_this_theorem: not_required_here
+GenH_status_for_H_generated_extension: candidate_definition_needed
+GenH_adopted: false
+adoption_requested: false
+\end{verbatim}
+
+\section{Minimal Countermodel Search}
+
+\begin{countermodel}[Missing inverse countermodel]
+Let
+\[
+  \Osrc=\{A,B\},\qquad
+  \Msrc=\{\mathrm{id}_{A},\mathrm{id}_{B},f:A\to B\}.
+\]
+Assume all listed morphisms are source-side and preserve the chosen invariant
+and annotation entries. Define the comparison rule by
+\[
+  \Csrc(A,A)=\EqSrc,\quad
+  \Csrc(B,B)=\EqSrc,\quad
+  \Csrc(A,B)=\EqSrc,\quad
+  \Csrc(B,A)=\Block.
+\]
+The block in the last entry is caused only by the absence of a source-side
+inverse \(f^{-1}:B\to A\) in \(\Msrc\).
+\end{countermodel}
+
+This is a finite source-only witness. It does not import target topology,
+target metric, detector protocol, stress-energy, matter action, Einstein
+equations, benchmark behavior, or process authority. It shows that inverse
+closure is a real theorem hypothesis: \(A\,\EqSrcT\,B\) is witnessed by \(f\),
+but \(B\,\EqSrcT\,A\) is blocked. Therefore symmetry fails without the inverse
+hypothesis.
+
+Other countermodel slots remain available for later stress:
+\[
+\texttt{missing\_composition\_countermodel},\quad
+\texttt{invariant\_ledger\_not\_family\_stable\_countermodel},\quad
+\texttt{RetainH\_needed\_countermodel},\quad
+\texttt{GenH\_needed\_countermodel}.
+\]
+
+\section{Theorem Candidate or Obstruction}
+
+\begin{theorem}[Conditional family closure for \(\EqSrcT\)]
+Assume a declared source family \(\Fsrc\) satisfies all of the following:
+\begin{enumerate}[label=(H\arabic*)]
+  \item source-only object domain: every \(X\in\Osrc\) is a source object;
+  \item identity closure: \(\mathrm{id}_{X}\in\Msrc\) for every \(X\);
+  \item inverse closure: every witness \(w_{XY}\) has a source-side inverse
+  witness \(w_{YX}\);
+  \item composition closure: composable witnesses have source-side
+  compositions in \(\Msrc\);
+  \item invariant-ledger stability: witnesses and their inverses and
+  compositions preserve \(\Isrc,\Asrc,\Psrc\);
+  \item source-only comparison: \(\Csrc\) uses only source data and returns
+  \(\Block\) on missing ledger or proxy-incidence evidence;
+  \item no-target guard: \(\NoTarget\) holds for all witnesses and comparison
+  premises.
+\end{enumerate}
+Then \(\EqSrcT\) is reflexive, symmetric, and transitive on \(\Osrc\).
+\end{theorem}
+
+\begin{proof}
+For reflexivity, fix \(X\in\Osrc\). By H2, \(\mathrm{id}_{X}\in\Msrc\).
+By H5 and H7, the identity witness preserves the source ledger and uses no
+forbidden target or process-authority premise. By H6, \(\Csrc(X,X)=\EqSrc\)
+when those source-side checks pass. Hence \(X\,\EqSrcT\,X\).
+
+For symmetry, assume \(X\,\EqSrcT\,Y\), witnessed by
+\(w_{XY}:X\to Y\). By H3, there is a source-side inverse witness
+\(w_{YX}:Y\to X\). By H5, H6, and H7, this inverse preserves the ledger,
+passes the same source-only comparison rule, and uses no forbidden target or
+process-authority premise. Hence \(Y\,\EqSrcT\,X\).
+
+For transitivity, assume \(X\,\EqSrcT\,Y\) and \(Y\,\EqSrcT\,Z\), witnessed by
+\(w_{XY}\) and \(w_{YZ}\). By H4, \(w_{YZ}\circ w_{XY}\in\Msrc\). By H5, H6,
+and H7, the composite preserves the source ledger, passes the source-only
+comparison rule, and uses no forbidden target or process-authority premise.
+Hence \(X\,\EqSrcT\,Z\).
+
+The proof is conditional on H1--H7. It does not show that the current ontology
+derives those hypotheses for every future source family.
+\end{proof}
+
+The obstruction is therefore sharpened rather than globally discharged:
+`OB-P6T02-GENERAL-EQSRC-FAMILY-CLOSURE-MISSING` is reduced to the need for
+source-side proof or construction of H1--H7 in each intended family, plus
+separate extraction of `RetainH` and `GenH` boundaries for \(H\)-retained or
+\(H\)-generated extensions.
+
+\section{Distance-to-GR Effect}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit. \\
+Source equivalence EqSrc & Conditional theorem candidate supplied; general family closure not adopted and no ledger delta. \\
+RetainH & Not adopted; boundary extracted as candidate-definition-needed for H-retention extensions. \\
+GenH & Not adopted; boundary extracted as candidate-definition-needed for H-generated family extensions. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Unchanged. \\
+M\_src & Unchanged. \\
+g\_eff & Unchanged; no MetricData(E) or metric-scope expansion. \\
+matter coupling & Blocked and unchanged; no coupling derivation or adoption. \\
+Einstein equations & Blocked and unchanged; no field-equation derivation. \\
+finite-variation robustness & Unchanged; no global robustness theorem. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion. \\
+Gate Chair status & Unchanged; no Gate Chair verdict. \\
+current route freeze or hard-fail status & Not frozen; route continues to P3-T03 extraction, then audit and stress. \\
+\bottomrule
+\end{longtable}
+
+\begin{verbatim}
+distance_to_gr_delta:
+  changed: false
+  effect: no_distance_delta
+  ledger_row_updated: false
+  reason: P3-T02 supplies a conditional theorem candidate and one minimal
+    inverse-countermodel slot only. It does not prove the closure hypotheses
+    from current ontology and does not adopt RetainH GenH or EqSrc.
+\end{verbatim}
+
+\section{Forbidden Conclusions}
+
+This artifact does not authorize:
+
+\begin{itemize}[leftmargin=*]
+  \item canonical ontology edit;
+  \item general \(\EqSrc\) discharge;
+  \item \(\RetainH\) adoption;
+  \item \(\GenH\) adoption;
+  \item source-law adoption;
+  \item source detector/readout semantics adoption;
+  \item \(\mathrm{MetricData}(E)\) adoption;
+  \item \(g_{\mathrm{eff}}\) adoption or scope expansion;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics, stress-energy tensor, or matter action;
+  \item Einstein-equation derivation;
+  \item benchmark promotion;
+  \item Gate Chair verdict;
+  \item external outreach;
+  \item completed derivation;
+  \item future source-extension impossibility;
+  \item global no-go conclusion.
+\end{itemize}
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan continue task v18} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v18.md}.
+
+The AEther-Flow Research Project. (2026b). \emph{Source-equivalence typed
+object v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260707-015/artifacts/source\_equivalence\_typed\_object\_v1.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{V18 P2-T05
+source-equivalence typed object Refuter stress v1} [Research-control TeX
+artifact].
+\texttt{research\_control/tasks/RT-20260707-017/artifacts/source\_equivalence\_typed\_object\_refuter\_stress\_v1.tex}.
+
+The AEther-Flow Research Project. (2026d). \emph{EqSrc family-closure packet
+setup v1} [Research-control artifact].
+\texttt{research\_control/tasks/RT-20260707-019/artifacts/eqsrc\_family\_closure\_packet\_setup\_v1.md}.
+
+\end{document}

@@ -346,6 +346,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V18-P2-T03-SOURCE-EQUIVALENCE-TYPED-OBJECT-V1` `research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex`
 - `TEX-V18-P2-T04-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_v1.tex`
 - `TEX-V18-P2-T05-SOURCE-EQUIVALENCE-TYPED-OBJECT-REFUTER-STRESS-V1` `research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex`
+- `TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1` `research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex`
 
 ## superseded
 

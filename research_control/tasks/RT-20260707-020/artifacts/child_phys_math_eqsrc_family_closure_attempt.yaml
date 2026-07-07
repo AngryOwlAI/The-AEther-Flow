@@ -1,0 +1,32 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260707-020"
+artifact_id: "child_phys_math_eqsrc_family_closure_attempt"
+status: "completed"
+primary_result_recommendation: "family_closure_theorem_candidate_supplied"
+formal_objects:
+  source_family: "F_src = (O_src, M_src, I_src, C_src, A_src, P_src, N_src)"
+  relation: "X EqSrc_T Y iff a source-only witness in M_src preserves I_src A_src P_src and C_src(X,Y)=EqSrc under the no-target guard."
+theorem_candidate:
+  name: "Conditional family closure theorem for EqSrc_T"
+  hypotheses:
+    - "O_src is a declared source-only family."
+    - "M_src supplies identity witnesses for all source objects."
+    - "M_src is closed under source-side inverse witnesses."
+    - "M_src is closed under source-side composition."
+    - "I_src A_src P_src and N_src are stable under those witnesses."
+    - "C_src is source-only and respects the no-target guard."
+  proof_sketch: "Reflexivity follows from identity witnesses, symmetry from inverse witnesses, and transitivity from composition witnesses."
+countermodel_slot:
+  slot: "missing_inverse_countermodel"
+  witness: "Two source objects A and B with id_A id_B and f:A->B but no source-side inverse f^{-1}:B->A."
+  consequence: "EqSrc_T(A,B) can be witnessed while EqSrc_T(B,A) blocks, so symmetry is not derivable without inverse closure."
+retainh_status: "not_required_here_for_closed_declared_family_but_candidate_definition_needed_for_H_retention_extension"
+genh_status: "not_required_here_for_closed_declared_family_but_candidate_definition_needed_for_H_generated_family_extension"
+claim_boundary:
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_law_adopted: false
+  physics_promotion_authorized: false
+next_route: "P3-T03"
