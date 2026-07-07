@@ -1,0 +1,325 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\EqSrc}{\mathrm{EqSrc}}
+\newcommand{\EqSrcT}{\mathrm{EqSrc}_{T}}
+\newcommand{\Block}{\mathrm{Block}}
+\newcommand{\RetainH}{\mathrm{RetainH}}
+\newcommand{\GenH}{\mathrm{GenH}}
+\newcommand{\Fsrc}{\mathcal{F}_{\mathrm{src}}}
+\newcommand{\Osrc}{\mathcal{O}}
+\newcommand{\Msrc}{\mathcal{M}}
+\newcommand{\Isrc}{\mathcal{I}}
+\newcommand{\Asrc}{\mathcal{A}}
+\newcommand{\Psrc}{\mathcal{P}}
+\newcommand{\Nsrc}{\mathcal{N}}
+\newcommand{\Csrc}{C}
+\newcommand{\StressPass}{\mathrm{STRESS}\mbox{-}\mathrm{PASS}}
+\newcommand{\FailClosed}{\mathrm{FAIL}\mbox{-}\mathrm{CLOSED}}
+\newcommand{\LiveObligation}{\mathrm{LIVE}\mbox{-}\mathrm{OBLIGATION}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{verdict}{Verdict}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{V18 P2-T05 Source-Equivalence Typed Object Refuter Stress v1}
+\author{Refuter Packet RT-20260707-017}
+\date{2026-07-07}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v18 P2-T05. It stress-tests the audited
+draft/control typed source-equivalence object
+\[
+  \mathrm{SourceEquivalenceTypedObject\_v1}
+\]
+from \texttt{RT-20260707-015}, using the P2-T04 source-purity audit from
+\texttt{RT-20260707-016}.
+
+The stress result is local and non-promotional:
+\[
+  \texttt{survives\_as\_draft\_control\_definition}.
+\]
+The bridge-or-fail loop category is
+\[
+  \texttt{bridge\_facing\_candidate\_path}.
+\]
+
+This packet does not discharge general \(\EqSrc\), does not adopt
+\(\RetainH\), does not adopt \(\GenH\), does not adopt a source law, does not
+construct \(\mathrm{MetricData}(E)\), does not expand \(g_{\mathrm{eff}}\),
+does not derive or adopt matter coupling, does not import stress-energy
+semantics, does not construct a stress-energy tensor, does not import a matter
+action, does not derive Einstein equations, does not promote benchmark status,
+does not issue a Gate Chair verdict, and does not claim a completed
+derivation.
+
+\section{Object Under Stress}
+
+The audited typed object is the source-side family target
+\[
+  \Fsrc=(\Osrc,\Msrc,\Isrc,\Csrc,\Asrc,\Psrc,\Nsrc)
+\]
+with source objects, source morphisms or relabelings, invariant ledger,
+source-only comparison rule, annotation ledger, forbidden-channel or proxy-edge
+ledger, and negative-control set.
+
+The typed relation is
+\[
+  X\,\EqSrcT\,Y \quad\Longleftrightarrow\quad \Csrc(X,Y)=\EqSrc
+\]
+under the side condition that object, morphism, invariant, annotation,
+influence, negative-control, and no-target guard checks all pass.
+
+The P2-T04 audit found no hidden target or process-authority import as written.
+P2-T05 asks whether the typed object survives destructive mathematical stress
+without overclaiming a theorem.
+
+\section{Stress Suite}
+
+\begin{longtable}{p{0.30\linewidth}p{0.48\linewidth}p{0.14\linewidth}}
+\toprule
+Stress mode & Result & Verdict \\
+\midrule
+remove\_identity\_maps &
+If an object \(X\in\Osrc\) lacks a declared identity witness
+\(\mathrm{id}_{X}\in\Msrc\), the reflexive positive branch is blocked. The
+typed object survives by preserving identity as a required witness rather than
+silently inferring it. & \(\LiveObligation\) \\
+remove\_inverse\_maps &
+If \(f:X\to Y\in\Msrc\) has no source-side inverse in \(\Msrc\), symmetry is
+not derivable. The missing inverse remains a countermodel slot or theorem
+obligation. & \(\LiveObligation\) \\
+remove\_composition\_table &
+If \(f:X\to Y\) and \(g:Y\to Z\) are admissible but \(g\circ f\) is not
+declared or derived in \(\Msrc\), transitivity is not derivable. & \(\LiveObligation\) \\
+weaken\_family\_invariant\_ledger &
+Weakening \(\Isrc\) can erase the evidence that a morphism preserves the
+declared source invariants. The comparison rule then narrows, returns
+\(\Block\), or requires a repaired ledger. & \(\FailClosed\) \\
+introduce\_morphism\_outside\_declared\_family &
+A morphism not in the declared \(\Msrc\) cannot witness \(\EqSrcT\). The rule
+returns \(\Block\) rather than expanding the source family by fiat. &
+\(\FailClosed\) \\
+alter\_forbidden\_channel\_orientation &
+Changing a forbidden-channel or proxy-edge orientation changes the incidence
+data in \(\Psrc\). Without an explicit source-side mapping rule the comparison
+blocks. & \(\FailClosed\) \\
+introduce\_proxy\_edge\_without\_mapping &
+An unmapped proxy edge is not ignored. It is a declared blocking condition in
+the typed object. & \(\FailClosed\) \\
+replace\_source\_comparison\_rule\_with\_target\_success\_proxy &
+Using target success, benchmark behavior, target geometry, detector protocol,
+or empirical calibration as the comparison rule changes the object. The
+audited typed object blocks that replacement. & \(\FailClosed\) \\
+require\_\RetainH\_without\_declaring\_\RetainH &
+If an \(H\)-retention claim is needed, \(\RetainH\) must be declared and
+authorized separately. P2-T05 cannot infer it from the typed object. &
+\(\LiveObligation\) \\
+require\_\GenH\_without\_declaring\_\GenH &
+If an \(H\)-generated family claim is needed, \(\GenH\) must be declared and
+authorized separately. P2-T05 cannot infer it from the typed object. &
+\(\LiveObligation\) \\
+treat\_validation\_pass\_as\_theorem\_premise &
+A validator pass, registry row, role identity, handoff state, commit state, or
+generated derivative cannot provide missing identity, inverse, composition,
+or invariant witnesses. & \(\FailClosed\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Closure deletion blocks theorem status]
+Deleting identity witnesses, inverse witnesses, or composition witnesses from
+the typed source family blocks the corresponding reflexivity, symmetry, or
+transitivity branch of \(\EqSrcT\).
+\end{lemma}
+
+\begin{proof}
+The P2-T03 object defines identity, inverse, and composition as typed
+obligations. It does not assert that all future source families automatically
+contain the relevant witnesses. Therefore deleting a witness deletes the
+premise needed for the corresponding equivalence-relation property. The
+comparison rule can block or expose a countermodel slot, but it cannot turn
+missing closure data into a theorem.
+\end{proof}
+
+\begin{lemma}[Invariant weakening is fail-closed]
+If the invariant ledger no longer records enough source-side data to verify
+preservation under a declared morphism, the positive \(\EqSrcT\) branch is not
+available.
+\end{lemma}
+
+\begin{proof}
+The invariant ledger is part of the side condition for \(\Csrc(X,Y)=\EqSrc\).
+Weakening the ledger removes preservation evidence. The typed object supplies
+no target geometry, benchmark success, registry authority, or validation
+authority that can replace missing source invariant data. The result is a
+narrower domain, a blocked comparison, or a repaired source ledger obligation.
+\end{proof}
+
+\begin{lemma}[Outside-family morphisms and unmapped proxy edges are blocked]
+An outside-family morphism or unmapped proxy edge cannot be used to extend
+\(\EqSrcT\).
+\end{lemma}
+
+\begin{proof}
+Admissible morphisms are exactly those declared in \(\Msrc\) and compatible
+with \(\Isrc\), \(\Asrc\), and \(\Psrc\). A morphism outside \(\Msrc\), or a
+proxy edge without a source-side mapping rule, fails the typed side condition.
+Thus the object blocks the comparison rather than expanding the family by
+process authority or target-side analogy.
+\end{proof}
+
+\begin{lemma}[\(\RetainH\) and \(\GenH\) remain boundary conditions]
+The typed object does not adopt \(\RetainH\) or \(\GenH\). If either is needed
+for a future family theorem, it must be supplied by a separate authorized
+packet.
+\end{lemma}
+
+\begin{proof}
+The P2-T03 object explicitly records \(\RetainH\) and \(\GenH\) as boundary
+conditions. P2-T04 found that this statement is source-pure as written. P2-T05
+stress confirms that requiring either condition without declaration creates a
+live obligation, not a theorem premise.
+\end{proof}
+
+\begin{lemma}[Process authority cannot repair missing closure]
+Validation success, registry metadata, role identity, handoff state, commit
+state, and generated derivatives cannot provide source-side identity, inverse,
+composition, invariant, \(\RetainH\), or \(\GenH\) witnesses.
+\end{lemma}
+
+\begin{proof}
+Those objects are provenance and process-control evidence. None is an element
+of \(\Osrc\), a morphism in \(\Msrc\), an invariant in \(\Isrc\), or a
+source-side closure witness. Treating them as mathematical premises would
+change the comparison rule into an authority-status rule, which the typed
+object blocks.
+\end{proof}
+
+\section{Closure Obligations Still Live}
+
+The following obligations remain open after P2-T05:
+
+\begin{enumerate}[leftmargin=*]
+  \item source-side identity witnesses for every declared family member;
+  \item source-side inverse witnesses for admissible morphisms;
+  \item source-side composition closure for composable morphisms;
+  \item invariant-ledger completeness and preservation;
+  \item annotation-ledger and forbidden-channel incidence preservation;
+  \item negative-control behavior under the same comparison rule;
+  \item \(\RetainH\), if an \(H\)-retention theorem is attempted;
+  \item \(\GenH\), if an \(H\)-generated family theorem is attempted.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Typed object stress-survives only as draft/control definition; no general EqSrc theorem is supplied. \\
+RetainH & Boundary condition remains required when used; not adopted. \\
+GenH & Boundary condition remains required when used; not adopted. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Unchanged. \\
+M\_src & Unchanged. \\
+g\_eff & Unchanged; no metric scope expansion. \\
+matter coupling & Blocked and unchanged; no coupling derivation or adoption. \\
+Einstein equations & Blocked and unchanged; no field-equation derivation. \\
+finite-variation robustness & Local stress pressure recorded for source-family invariants; no global robustness theorem. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion. \\
+Gate Chair status & Unchanged; no Gate Chair verdict issued. \\
+current route freeze or hard-fail status & Not frozen; P2-T06 selector route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Loop-Risk Decision}
+
+The Refuter category is:
+\[
+  \texttt{bridge\_facing\_candidate\_path}.
+\]
+
+The result is not a repeated-burden freeze and not a scoped obstruction. The
+reason is that P2-T05 adds stress information: destructive tests identify
+which closure obligations remain live and confirm that the object fails closed
+instead of laundering target or process authority. The next allowed route is
+continuation through P2-T06 selector, not a generic repair loop.
+
+\section{Stress Result}
+
+\begin{verbatim}
+source_equivalence_typed_object_refuter_stress_result:
+  result_type: "survives_as_draft_control_definition"
+  bridge_or_fail_category: "bridge_facing_candidate_path"
+  stressed_object: "SourceEquivalenceTypedObject_v1"
+  candidate_artifact_path: "research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex"
+  audit_artifact_path: "research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_v1.tex"
+  identity_closure: "live_obligation"
+  inverse_closure: "live_obligation"
+  composition_closure: "live_obligation"
+  invariant_ledger_completeness: "live_obligation"
+  outside_family_morphism: "blocked"
+  forbidden_channel_orientation_change: "blocked"
+  proxy_edge_without_mapping: "blocked"
+  target_success_proxy: "blocked"
+  RetainH_status: "live_boundary_condition_not_adopted"
+  GenH_status: "live_boundary_condition_not_adopted"
+  validation_pass_as_theorem_premise: "blocked"
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+\begin{verdict}
+The typed source-equivalence object survives P2-T05 Refuter stress only as a
+draft/control definition. It is suitable for P2-T06 route selection, not for
+claim promotion.
+\end{verdict}
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}
+This stress result does not discharge general \(\EqSrc\), adopt \(\RetainH\),
+adopt \(\GenH\), adopt a source law, adopt detector or matter semantics,
+derive matter coupling, derive Einstein equations, promote benchmark status,
+issue Gate Chair authority, or claim completed derivation.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+This stress result is not a route freeze, not a proof authority, and not a
+program-wide closure claim.
+\end{nonconclusion}
+
+\section{APA 7 Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan continue task v18} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v18.md}.
+
+The AEther-Flow Research Project. (2026b). \emph{Source-equivalence typed
+object v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260707-015/artifacts/source\_equivalence\_typed\_object\_v1.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{V18 P2-T04 source-equivalence
+typed object smuggling audit v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260707-016/artifacts/source\_equivalence\_typed\_object\_smuggling\_audit\_v1.tex}.
+
+\end{document}

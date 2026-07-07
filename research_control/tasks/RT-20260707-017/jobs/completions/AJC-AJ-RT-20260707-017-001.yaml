@@ -1,0 +1,431 @@
+completion_id: "AJC-AJ-RT-20260707-017-001"
+job_id: "AJ-RT-20260707-017-001"
+task_id: "RT-20260707-017"
+decision_id: "DDR-20260707-017"
+status: "completed"
+completed_at: "2026-07-07T12:29:11Z"
+completed_by_role: "refuter@0.2.0--RT-20260707-017"
+source_role_id: "refuter"
+source_role_version: "0.2.0"
+plan_task_id: "P2-T05"
+objective_result: "completed"
+summary: "Completed v18 P2-T05 by stress-testing SourceEquivalenceTypedObject_v1 after the P2-T04 source-purity audit. The typed object survives as draft/control definition only. Identity inverse composition invariant-ledger RetainH and GenH obligations remain live. No general EqSrc discharge RetainH adoption GenH adoption source-law adoption or Distance-to-GR ledger delta is claimed."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_task_id: "P2-T05"
+  plan_phase_id: "P2"
+  implemented_task_scope: "Refuter stress of SourceEquivalenceTypedObject_v1"
+  completed_v18_tasks_this_packet:
+    - "P2-T05"
+  downstream_tasks_not_implemented:
+    - "P2-T06 and later v18 tasks"
+  all_applicable_plan_tasks_proven: false
+artifacts:
+  - "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260707-017/artifacts/child_phys_math_source_equivalence_typed_object_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260707-017/artifacts/child_phys_phil_source_equivalence_typed_object_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260707-017/artifacts/parent_conflict_review_source_equivalence_typed_object_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260707-017/artifacts/parent_fusion_notes_source_equivalence_typed_object_refuter_stress.md"
+  - "research_control/tasks/RT-20260707-017/artifacts/validate_source_equivalence_typed_object_refuter_stress.py"
+  - "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_validation.json"
+  - "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_receipt.md"
+output_paths:
+  - "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260707-017/artifacts/child_phys_math_source_equivalence_typed_object_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260707-017/artifacts/child_phys_phil_source_equivalence_typed_object_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260707-017/artifacts/parent_conflict_review_source_equivalence_typed_object_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260707-017/artifacts/parent_fusion_notes_source_equivalence_typed_object_refuter_stress.md"
+  - "research_control/tasks/RT-20260707-017/artifacts/validate_source_equivalence_typed_object_refuter_stress.py"
+  - "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_validation.json"
+  - "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_receipt.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260707-017/00_TASK.yaml"
+  - "research_control/tasks/RT-20260707-017/DDR-20260707-017.md"
+  - "research_control/tasks/RT-20260707-017/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260707-017/jobs/AJ-RT-20260707-017-001.yaml"
+  - "research_control/tasks/RT-20260707-017/jobs/completions/AJC-AJ-RT-20260707-017-001.yaml"
+  - "research_control/tasks/RT-20260707-017/roles/refuter@0.2.0--RT-20260707-017.yaml"
+  - "research_control/handoffs/handoff-0686.yaml"
+  - "research_control/handoffs/handoff-0686.md"
+extra_read_paths:
+  - "research_control/handoffs/handoff-0685.yaml"
+  - "research_control/handoffs/handoff-0685.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex"
+  - "research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260707-016/jobs/completions/AJC-AJ-RT-20260707-016-001.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=697 relationship_row_count=3563 semantic_row_count=697 vault_row_count=697 local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V18-P2-T04-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-V1 --json | exit_code=0 | returned_object_ids=TEX-V18-P2-T04-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-V1"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source equivalence typed object refuter stress\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-RECEIPT,MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-PARENT-FUSION-NOTES-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT,TEX-V18-P2-T04-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-V1,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18,MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260707-016 latest_handoff=handoff-0685 next_action=P2-T05"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260707-017/artifacts/validate_source_equivalence_typed_object_refuter_stress.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260707-017/artifacts/validate_source_equivalence_typed_object_refuter_stress.py | exit_code=0 | status=PASS stress_result=survives_as_draft_control_definition next_route=P2-T06"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 697
+    relationship_row_count: 3563
+    semantic_row_count: 697
+    vault_row_count: 697
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  refresh_summary:
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V18-P2-T04-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V18-P2-T04-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-V1"
+      returned_object_ids:
+        - "TEX-V18-P2-T04-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source equivalence typed object refuter stress\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source equivalence typed object refuter stress"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-RECEIPT"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-PARENT-FUSION-NOTES-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT"
+        - "TEX-V18-P2-T04-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "TEX-V18-P2-T03-SOURCE-EQUIVALENCE-TYPED-OBJECT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex"
+      source_hash: "2a57ce0e429945e0a2438e2a45bb32fb8a4fbba0309650ed85fb2f8f3b2c5e9e"
+    - object_id: "TEX-V18-P2-T04-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_v1.tex"
+      source_hash: "e670b02c0abb1beded6ed3ffe2ffdba0d70b9c0b44fc2692eb29ceeba223e332"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-PARENT-FUSION-NOTES-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260707-016/artifacts/parent_fusion_notes_source_equivalence_typed_object_smuggling_audit.md"
+      source_hash: "377f1d760b747ac1dbb8a5fb73073b9cc2cc493e6bdaabc7bcb11a3d0bdbc953"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260707-016-SOURCE-EQUIVALENCE-TYPED-OBJECT-SMUGGLING-AUDIT-RECEIPT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_receipt.md"
+      source_hash: "46ce2566a84f34f4b12724f50a774370ba4e4388a9d763ffc2db9c179a8091c0"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "86e7957a08c9e9f20d6d651c6f3d3f76406900461a4856c13f09209591b9d06b"
+validation:
+  route_input_inspection: "PASS"
+  audited_artifact_present: "PASS"
+  parent_child_synthesis: "PASS"
+  stress_result_present: "PASS"
+  task_local_validator: "PENDING"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS after refresh"
+      - "continue_research.py resolved handoff-0685 and P2-T05"
+      - "P2-T05 plan section handoff-0685 P2-T03 typed object and P2-T04 audit inspected"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "source_equivalence_typed_object_refuter_stress_v1.tex created"
+      - "stress result survives_as_draft_control_definition"
+      - "loop risk category bridge_facing_candidate_path"
+      - "parent-child synthesis completed"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "post-write validators run after this completion receipt is created"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier compact frontier task index dependency graph and claim graph write/check passes completed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS"
+      - "sync_obsidian_vault.py refreshed local retrieval rows to 700"
+      - "bootstrap_memory_system.py --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed PASS with zero hard failures"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260707-017/artifacts/child_phys_math_source_equivalence_typed_object_refuter_stress.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260707-017/artifacts/child_phys_phil_source_equivalence_typed_object_refuter_stress.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260707-017/artifacts/parent_conflict_review_source_equivalence_typed_object_refuter_stress.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Children agreed that the typed object survives as draft/control definition while identity inverse composition invariant-ledger RetainH and GenH obligations remain live."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260707-017/artifacts/parent_fusion_notes_source_equivalence_typed_object_refuter_stress.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused artifact stress-tests closure and authority-laundering modes and routes the draft/control survival result to P2-T06 selector."
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260707-017-001"
+    payload_type: "lemma"
+    name: "Closure deletion blocks theorem status"
+    summary: "Deleting identity inverse or composition witnesses blocks reflexivity symmetry or transitivity instead of producing a general EqSrc theorem."
+  - payload_id: "NMP-RT-20260707-017-002"
+    payload_type: "lemma"
+    name: "Invariant weakening is fail-closed"
+    summary: "Weakening the invariant ledger removes source preservation evidence and forces a narrower domain blocked comparison or repaired source-ledger obligation."
+  - payload_id: "NMP-RT-20260707-017-003"
+    payload_type: "lemma"
+    name: "Process authority cannot repair missing closure"
+    summary: "Validation registry role handoff commit and generated derivative status cannot supply source-side identity inverse composition invariant RetainH or GenH witnesses."
+mathematical_payload_manifest:
+  - payload_id: "MP-RT-20260707-017-001"
+    payload_type: "lemma"
+    object_name: "Closure deletion blocks theorem status"
+    claim_status: "draft_control"
+    source_path: "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex"
+    burden_effect: "keeps source_equivalence_eqsrc open"
+    summary: "Identity inverse and composition deletion pressure shows the typed object is not a theorem."
+  - payload_id: "MP-RT-20260707-017-002"
+    payload_type: "lemma"
+    object_name: "Invariant weakening is fail-closed"
+    claim_status: "draft_control"
+    source_path: "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex"
+    burden_effect: "records live invariant-ledger obligation"
+    summary: "Weak source invariant data blocks positive comparison rather than importing target or process support."
+  - payload_id: "MP-RT-20260707-017-003"
+    payload_type: "dependency_map_update"
+    object_name: "Live closure obligations for typed source-equivalence selector"
+    claim_status: "draft_control"
+    source_path: "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex"
+    burden_effect: "routes to P2-T06 selector"
+    summary: "P2-T06 must select among closure theorem construction countermodel search or boundary-condition formalization."
+physics_progress_status:
+  status: "typed_eqsrc_stressed_no_promotion"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Stress the typed source-equivalence object for missing closure weak invariants and hidden primitive dependence."
+  explanation: "The packet stress-tests the typed object and finds draft/control definition survival only. It does not change Distance-to-GR ledger status."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "typed_object_audited_source_pure_as_written_no_promotion"
+  new_status: "typed_object_stress_survived_pending_selector_no_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v18_p2_t06_typed_object_continuation_selector"
+  downstream_still_blocked:
+    - "general EqSrc discharge"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "source_law_adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "not_changed"
+  - burden: "Source equivalence EqSrc"
+    status: "typed_object_stress_survived_as_draft_control_definition_no_general_discharge"
+  - burden: "RetainH"
+    status: "boundary_condition_required_not_adopted"
+  - burden: "GenH"
+    status: "boundary_condition_required_not_adopted"
+  - burden: "ObsLoc_lc"
+    status: "not_changed"
+  - burden: "Resp_lc"
+    status: "not_changed"
+  - burden: "M_src"
+    status: "not_changed"
+  - burden: "g_eff"
+    status: "not_changed"
+  - burden: "matter coupling"
+    status: "blocked_not_changed"
+  - burden: "Einstein equations"
+    status: "blocked_not_changed"
+  - burden: "finite-variation robustness"
+    status: "local_source_family_stress_recorded_no_global_theorem"
+  - burden: "benchmark promotion"
+    status: "blocked_not_changed"
+  - burden: "Gate Chair status"
+    status: "not_requested"
+  - burden: "current route freeze or hard-fail status"
+    status: "not_frozen"
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "continue_bridge_facing_candidate_path"
+  rationale: "The stress packet adds new mathematical pressure and identifies live closure obligations while the typed object fails closed against target and process-authority laundering. The lawful next step is P2-T06 typed-object continuation selector."
+  repeated_burdens: []
+  obstruction_summary: ""
+route_cycle_control:
+  cycle_family: "v18_source_equivalence_typed_object"
+  current_cycle_step: "P2-T05_refuter_stress"
+  cycle_risk: "moderate"
+  prior_related_tasks:
+    - "RT-20260707-013"
+    - "RT-20260707-014"
+    - "RT-20260707-015"
+    - "RT-20260707-016"
+  orbit_avoidance_reason: "The packet routes to selector after stress rather than another generic construction or audit packet."
+  next_role_consequence: "P2-T06 selector must choose the next theorem countermodel or boundary-condition route."
+freeze_criteria_status:
+  freeze_decision: "not_frozen"
+  criteria_evaluated:
+    - "repeated_unmet_burdens_no_new_payload"
+    - "scoped_obstruction"
+    - "route_freeze_candidate"
+  rationale: "The result is bridge_facing_candidate_path with new stress payload and no scoped obstruction or repeated-burden no-payload finding."
+  candidate_freeze_label: ""
+source_extension_category: "source_extension_refuter_stress"
+source_extension_import_classification: "draft_control_typed_source_equivalence_object_stress_survived_pending_selector_no_promotion"
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - object: "SourceEquivalenceTypedObject_v1_refuter_stress_classification"
+      classification: "status_boundary_evidence_only"
+      relation_to_current_ontology: "evidence_only"
+      claim_boundary_ref: "CB-V18-P2-T05-SOURCE-EQUIVALENCE-TYPED-OBJECT-REFUTER-STRESS-001"
+      protected_authority_required: false
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+      blocked_overreads:
+        - "stress survival as general EqSrc theorem"
+        - "stress survival as RetainH adoption"
+        - "stress survival as GenH adoption"
+        - "stress survival as source-law adoption"
+        - "stress survival as matter-coupling derivation"
+        - "stress survival as Einstein-equation derivation"
+        - "stress survival as benchmark promotion"
+        - "stress survival as completed derivation"
+      notes: "P2-T05 is a Refuter stress of a draft/control typed source-equivalence object. It is route evidence for P2-T06 selector only and not proof authority."
+source_equivalence_refuter_stress_result:
+  artifact_path: "research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex"
+  object_id: "TEX-V18-P2-T05-SOURCE-EQUIVALENCE-TYPED-OBJECT-REFUTER-STRESS-V1"
+  source_hash: "f30db6e2a74170b80ebe54b8fab7a5a00b7610c7b73b55c924a72663ba131b03"
+  result_type: "survives_as_draft_control_definition"
+  bridge_or_fail_category: "bridge_facing_candidate_path"
+  stressed_object: "SourceEquivalenceTypedObject_v1"
+  candidate_artifact_path: "research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex"
+  candidate_artifact_hash: "2a57ce0e429945e0a2438e2a45bb32fb8a4fbba0309650ed85fb2f8f3b2c5e9e"
+  audit_artifact_path: "research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_v1.tex"
+  audit_artifact_hash: "e670b02c0abb1beded6ed3ffe2ffdba0d70b9c0b44fc2692eb29ceeba223e332"
+  identity_closure: "live_obligation"
+  inverse_closure: "live_obligation"
+  composition_closure: "live_obligation"
+  invariant_ledger_completeness: "live_obligation"
+  outside_family_morphism: "blocked"
+  forbidden_channel_orientation_change: "blocked"
+  proxy_edge_without_mapping: "blocked"
+  target_success_proxy: "blocked"
+  RetainH_status: "live_boundary_condition_not_adopted"
+  GenH_status: "live_boundary_condition_not_adopted"
+  validation_pass_as_theorem_premise: "blocked"
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  next_required_role: "theoretical-continuation-selector"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  source_law_adoption_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+claim_boundary:
+  physics_promotion_authorized: false
+  proof_authority: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  source_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "general EqSrc discharge"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "source-law adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "source detector/readout semantics adoption"
+    - "matter-semantics adoption"
+    - "coupling-law adoption"
+    - "matter coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "proof authority"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+verdict: "v18_p2_t05_source_equivalence_typed_object_stress_survived_pending_selector_no_promotion"
+coherent_resolution_summary: "RT-20260707-017 completes v18 P2-T05 by finding SourceEquivalenceTypedObject_v1 survives stress only as a draft/control definition. Removing identity inverse composition invariant ledger family-boundary no-target RetainH GenH or process-authority supports blocks the relevant positive branch or leaves a live obligation. The result routes to P2-T06 selector and does not discharge general EqSrc adopt RetainH adopt GenH adopt a source law or promote any physics claim."
+next_recommendation: "Run one bounded theoretical-continuation-selector@0.1.0 packet for v18 P2-T06 typed-object continuation selection."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

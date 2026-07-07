@@ -1,0 +1,48 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260707-017"
+job_id: "AJ-RT-20260707-017-001"
+artifact_under_stress: "research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex"
+audit_basis: "research_control/tasks/RT-20260707-016/artifacts/source_equivalence_typed_object_smuggling_audit_v1.tex"
+stress_result: "survives_as_draft_control_definition"
+bridge_or_fail_category: "bridge_facing_candidate_path"
+formal_findings:
+  - id: "PM-P2T05-001"
+    stress_mode: "remove_identity_maps"
+    result: "positive branch blocks for any object lacking a declared identity witness"
+    consequence: "identity closure remains live but the typed object does not overclaim a theorem"
+  - id: "PM-P2T05-002"
+    stress_mode: "remove_inverse_maps"
+    result: "inverse closure is not derivable from the typed slots alone"
+    consequence: "inverse closure remains a theorem obligation or countermodel slot"
+  - id: "PM-P2T05-003"
+    stress_mode: "remove_composition_table"
+    result: "transitivity cannot be obtained without a source-side composition witness"
+    consequence: "composition closure remains a theorem obligation or obstruction slot"
+  - id: "PM-P2T05-004"
+    stress_mode: "weaken_family_invariant_ledger"
+    result: "weakening the ledger changes the domain on which comparison is meaningful"
+    consequence: "ledger completeness remains a live proof obligation"
+  - id: "PM-P2T05-005"
+    stress_mode: "introduce_morphism_outside_declared_family"
+    result: "outside-family morphisms return Block instead of extending EqSrc_T"
+    consequence: "family boundary is stress-stable as a fail-closed definition"
+  - id: "PM-P2T05-006"
+    stress_mode: "treat_validation_pass_as_theorem_premise"
+    result: "validator success cannot supply a missing identity inverse composition or invariant witness"
+    consequence: "process authority is excluded as a mathematical premise"
+closure_obligations_remaining_live:
+  - "identity witnesses for every future declared family member"
+  - "source-side inverse witnesses for admissible morphisms"
+  - "source-side composition table or theorem"
+  - "family invariant ledger completeness"
+  - "RetainH if H-retention is used"
+  - "GenH if generated-family quantification is used"
+promotion_boundary:
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_law_adopted: false
+  proof_authority: false
+recommendation: "Route to P2-T06 selector because the typed object survives stress only as a draft/control definition with live closure obligations."

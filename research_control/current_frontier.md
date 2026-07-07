@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260707-016` and `handoff-0685`.
+`RT-20260707-017` and `handoff-0686`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260707-016` |
-| Latest handoff ID | `handoff-0685` |
-| Current status | `v18_p2_t04_source_equivalence_typed_object_smuggling_audit_passed_no_promotion` |
+| Active task ID | `RT-20260707-017` |
+| Latest handoff ID | `handoff-0686` |
+| Current status | `v18_p2_t05_source_equivalence_typed_object_stress_survived_pending_selector_no_promotion` |
 | V16 completed | false |
-| Current route family | v18 p2 t05 audited typed source equivalence object refuter stress no promotion |
+| Current route family | v18 p2 t06 typed object continuation selector no promotion |
 | Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: typed_object_audited_source_pure_as_written_no_promotion |
-| Required next authority | P2-T05 Refuter stress of source_equivalence_typed_object_v1.tex after P2-T04 audit pass |
-| Next recommended action | Run one bounded v18 P2-T05 Refuter stress packet against the audited typed source-equivalence object. |
+| Current burden | `source_equivalence_eqsrc`; status: typed_object_stress_survived_pending_selector_no_promotion |
+| Required next authority | P2-T06 Typed-object continuation selector after P2-T05 stress survival as draft/control definition |
+| Next recommended action | Run one bounded v18 P2-T06 Typed-object continuation selector packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260707-016` |
-| Latest research handoff ID | `handoff-0685` |
-| Latest research next action | Run one bounded v18 P2-T05 Refuter stress packet against the audited typed source-equivalence object. |
+| Latest research task ID | `RT-20260707-017` |
+| Latest research handoff ID | `handoff-0686` |
+| Latest research next action | Run one bounded v18 P2-T06 Typed-object continuation selector packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260707-016/00_TASK.yaml`.
-- Active task objective: Audit SourceEquivalenceTypedObject_v1 for target imports and process-authority imports before P2-T05 Refuter stress.
-- Latest handoff path: `research_control/handoffs/handoff-0685.yaml`.
-- Latest handoff summary: RT-20260707-016 completed v18 P2-T04 by auditing SourceEquivalenceTypedObject_v1 as source_pure_as_written for target imports and process-authority imports. No general EqSrc discharge RetainH adoption GenH adoption source-law adoption physics promotion or Distance-to-GR ledger delta is authorized.
-- Current route family: v18 p2 t05 audited typed source equivalence object refuter stress no promotion.
-- Next recommended action: Run one bounded v18 P2-T05 Refuter stress packet against the audited typed source-equivalence object.
+- Active task path: `research_control/tasks/RT-20260707-017/00_TASK.yaml`.
+- Active task objective: Stress SourceEquivalenceTypedObject_v1 after P2-T04 audit for missing closure weak invariants hidden primitive dependence target-proxy substitution process-authority laundering and RetainH or GenH overread.
+- Latest handoff path: `research_control/handoffs/handoff-0686.yaml`.
+- Latest handoff summary: RT-20260707-017 completed v18 P2-T05 by stress-testing SourceEquivalenceTypedObject_v1. The result is survives_as_draft_control_definition with bridge_facing_candidate_path. Identity inverse composition invariant-ledger RetainH and GenH obligations remain live. No general EqSrc discharge RetainH adoption GenH adoption source-law adoption physics promotion or Distance-to-GR ledger delta is authorized.
+- Current route family: v18 p2 t06 typed object continuation selector no promotion.
+- Next recommended action: Run one bounded v18 P2-T06 Typed-object continuation selector packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P2-T05 Refuter stress packet against the audited typed source-equivalence object.
+Run one bounded v18 P2-T06 Typed-object continuation selector packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,25 +320,25 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260707-016`;
-- latest handoff: `handoff-0685`;
-- current status: `v18_p2_t04_source_equivalence_typed_object_smuggling_audit_passed_no_promotion`;
+- active task: `RT-20260707-017`;
+- latest handoff: `handoff-0686`;
+- current status: `v18_p2_t05_source_equivalence_typed_object_stress_survived_pending_selector_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `audited_artifact`: PASS;
 - latest handoff validation `continue_research_json`: PASS;
 - latest handoff validation `memory_preflight`: PASS;
 - latest handoff validation `query_memory_status`: PASS;
-- latest handoff validation `task_local_validator`: PASS;
+- latest handoff validation `stress_artifact`: PASS;
+- latest handoff validation `task_local_validator`: PENDING;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0685.yaml`
-- `research_control/tasks/RT-20260707-016/00_TASK.yaml`
+- `research_control/handoffs/handoff-0686.yaml`
+- `research_control/tasks/RT-20260707-017/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -354,7 +354,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0685*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0686*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
