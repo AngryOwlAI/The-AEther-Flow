@@ -1,0 +1,396 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\EqSrc}{\mathrm{EqSrc}}
+\newcommand{\EqSrcT}{\mathrm{EqSrc}_{T}}
+\newcommand{\Block}{\mathrm{Block}}
+\newcommand{\NotEqSrc}{\mathrm{not\_EqSrc}}
+\newcommand{\RetainH}{\mathrm{RetainH}}
+\newcommand{\GenH}{\mathrm{GenH}}
+\newcommand{\Fsrc}{\mathcal{F}_{\mathrm{src}}}
+\newcommand{\Osrc}{\mathcal{O}_{\mathrm{src}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\Isrc}{\mathcal{I}_{\mathrm{src}}}
+\newcommand{\Asrc}{\mathcal{A}_{\mathrm{src}}}
+\newcommand{\Psrc}{\mathcal{P}_{\mathrm{src}}}
+\newcommand{\Nsrc}{\mathcal{N}_{\mathrm{src}}}
+\newcommand{\Csrc}{C_{\mathrm{src}}}
+\newcommand{\NoTarget}{\mathsf{NoTarget}}
+
+\newtheorem{countermodel}{Finite Countermodel}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Boundary Remark}
+
+\title{EqSrc Family-Closure Refuter Stress v1}
+\author{Refuter Packet RT-20260707-023}
+\date{2026-07-07}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v18 P3-T05 as a draft/control Refuter stress packet.
+It stress-tests the P3-T02 conditional \(\EqSrcT\) family-closure theorem
+candidate after the P3-T04 source-purity audit.
+
+The stress result is:
+\[
+  \texttt{scoped\_obstruction}.
+\]
+
+\begin{verbatim}
+stress_result: scoped_obstruction
+refuter_classification: scoped_obstruction
+loop_classification: scoped_obstruction
+target_derivation_milestone: source_equivalence_eqsrc
+milestone_burden: Stress the P3 family-closure result against closure removal,
+  invariant weakening, primitive-dependence, and target-import attacks.
+minimal_countermodel_available: true
+next_route: P3-T06
+general_EqSrc_adopted: false
+RetainH_adopted: false
+GenH_adopted: false
+source_law_adopted: false
+distance_to_gr_delta: no_distance_delta
+\end{verbatim}
+
+This result has no promotion authority. It does not discharge general
+\(\EqSrc\), adopt \(\RetainH\), adopt \(\GenH\), adopt a source law, edit
+canonical ontology, adopt \(\mathrm{MetricData}(E)\), expand
+\(g_{\mathrm{eff}}\), derive matter coupling, derive Einstein equations,
+promote a benchmark, issue a Gate Chair verdict, authorize external outreach,
+or claim completed derivation.
+
+\section{Inputs and Scope}
+
+The object under stress is the P3-T02 conditional theorem candidate:
+\begin{quote}
+\texttt{research\_control/tasks/RT-20260707-020/artifacts/eqsrc\_family\_closure\_theorem\_or\_countermodel\_v1.tex}.
+\end{quote}
+
+The primitive-boundary input is:
+\begin{quote}
+\texttt{research\_control/tasks/RT-20260707-021/artifacts/retainh\_genh\_primitive\_boundary\_v1.tex}.
+\end{quote}
+
+The audit input is:
+\begin{quote}
+\texttt{research\_control/tasks/RT-20260707-022/artifacts/eqsrc\_family\_closure\_smuggling\_audit\_v1.tex}.
+\end{quote}
+
+The stress question is not whether the P3-T02 proof is source-pure as written.
+P3-T04 already answered that in the affirmative. The stress question is
+whether the conditional theorem candidate survives the ten P3-T05 attack modes
+without becoming an adopted general \(\EqSrc\) theorem, a \(\RetainH\)
+adoption, a \(\GenH\) adoption, or a target/process-authority overread.
+
+\section{Stress Method}
+
+For each stress mode, the Refuter removes or weakens one source-side
+obligation and checks whether the positive family-closure conclusion still
+follows. If the positive conclusion requires a missing closure witness, missing
+ledger certificate, missing primitive, target premise, or process-authority
+premise, the branch fails closed.
+
+The P3-T02 theorem branch remains a conditional theorem candidate under
+supplied H1--H7. The attacked overread is the stronger claim that the current
+ontology has derived family closure generally or that the theorem candidate is
+already adopted \(\EqSrc\).
+
+\begin{verbatim}
+stress_modes_checked:
+  - remove_family_identity_closure
+  - remove_inverse_closure
+  - remove_composition_closure
+  - weaken_invariant_ledger
+  - expand_source_family_without_GenH
+  - apply_H_retention_without_RetainH
+  - replace_source_invariant_with_target_success
+  - allow_missing_negative_controls
+  - import_metric_or_detector_protocol
+  - treat_theorem_candidate_as_adopted_EqSrc
+\end{verbatim}
+
+\section{Stress Mode Matrix}
+
+\begin{longtable}{p{0.30\linewidth}p{0.20\linewidth}p{0.42\linewidth}}
+\toprule
+Mode & Result & Reason \\
+\midrule
+\texttt{remove\_family\_identity\_closure} & \texttt{obstruction} & Reflexivity is not derivable for an object whose source identity witness is absent from \(\Msrc\). \\
+\texttt{remove\_inverse\_closure} & \texttt{finite\_countermodel} & The P3-T02 missing-inverse countermodel blocks symmetry with source data only. \\
+\texttt{remove\_composition\_closure} & \texttt{finite\_countermodel} & The new three-object missing-composition countermodel below blocks transitivity. \\
+\texttt{weaken\_invariant\_ledger} & \texttt{fails\_closed} & Without preservation of \(\Isrc,\Asrc,\Psrc\), \(\Csrc\) must return \(\Block\). \\
+\texttt{expand\_source\_family\_without\_GenH} & \texttt{extension\_obstruction} & Generated objects cannot enter the theorem domain without a source-side \(\GenH\) rule. \\
+\texttt{apply\_H\_retention\_without\_RetainH} & \texttt{extension\_obstruction} & H-retained records cannot be used as closure evidence without a source-side \(\RetainH\) rule. \\
+\texttt{replace\_source\_invariant\_with\_target\_success} & \texttt{blocked} & Target success is excluded by \(\NoTarget\) and cannot replace \(\Isrc\) preservation. \\
+\texttt{allow\_missing\_negative\_controls} & \texttt{fails\_closed} & Missing \(\Nsrc\) checks remove exclusion evidence and block positive comparison. \\
+\texttt{import\_metric\_or\_detector\_protocol} & \texttt{blocked} & A metric or detector protocol would be a forbidden target/downstream premise. \\
+\texttt{treat\_theorem\_candidate\_as\_adopted\_EqSrc} & \texttt{scoped\_obstruction} & Conditional theorem-candidate status does not equal adopted general \(\EqSrc\). \\
+\bottomrule
+\end{longtable}
+
+\section{Missing-Inverse Countermodel Retained}
+
+The P3-T02 missing-inverse countermodel remains valid stress evidence. It uses
+\(\Osrc=\{A,B\}\), \(\Msrc=\{\mathrm{id}_{A},\mathrm{id}_{B},f:A\to B\}\),
+and a source comparison rule with \(\Csrc(A,B)=\EqSrc\) but
+\(\Csrc(B,A)=\Block\) because no source-side inverse \(B\to A\) is present.
+Thus symmetry fails without inverse closure.
+
+\section{Missing-Composition Countermodel}
+
+\begin{countermodel}[Missing composition blocks transitivity]
+Let
+\[
+  \Osrc=\{A,B,C\}
+\]
+and let
+\[
+  \Msrc=\{\mathrm{id}_{A},\mathrm{id}_{B},\mathrm{id}_{C},
+  f:A\to B,\ g:B\to C\}.
+\]
+Assume every listed morphism is source-side, preserves the declared local
+ledger, and satisfies \(\NoTarget\). Define
+\[
+  \Csrc(A,A)=\Csrc(B,B)=\Csrc(C,C)=\EqSrc,
+  \quad \Csrc(A,B)=\EqSrc,\quad \Csrc(B,C)=\EqSrc,
+\]
+but
+\[
+  \Csrc(A,C)=\Block
+\]
+because no source-side composite \(h:A\to C\) is present in \(\Msrc\).
+\end{countermodel}
+
+Then \(A\,\EqSrcT\,B\) is witnessed by \(f\), and \(B\,\EqSrcT\,C\) is
+witnessed by \(g\), but \(A\,\EqSrcT\,C\) is blocked. The construction uses
+only source objects, source morphisms, a source comparison rule, ledger
+preservation, and the no-target guard. Therefore transitivity is not derivable
+without the composition-closure hypothesis.
+
+\section{Ledger-Weakening Witness}
+
+\begin{lemma}[Ledger weakening is fail-closed]
+If a witness \(w:X\to Y\) no longer preserves the required entries of
+\(\Isrc,\Asrc,\Psrc\), and no replacement source certificate is supplied, then
+the source-only comparison rule cannot return \(\EqSrc\) for \(X,Y\) without
+overreading the ledger.
+\end{lemma}
+
+\textbf{Reasoning.} The P3-T02 relation requires explicit preservation of the
+invariant ledger, annotations, and forbidden-channel/proxy-edge incidence.
+Weakening that ledger removes the certificate that the comparison is between
+the same source-side content. The fail-closed comparison is
+\(\Csrc(X,Y)=\Block\), not target repair and not process-authority repair.
+
+\section{RetainH and GenH Extension Pressure}
+
+P3-T03 classified \(\RetainH\) and \(\GenH\) as
+\texttt{not\_required\_here} for the already declared closed-family theorem.
+P3-T05 preserves that result.
+
+The extension attacks have a narrower implication:
+\begin{itemize}[leftmargin=*]
+  \item \texttt{apply\_H\_retention\_without\_RetainH} blocks using
+  H-retained records as theorem evidence until a source-side retention rule is
+  supplied.
+  \item \texttt{expand\_source\_family\_without\_GenH} blocks using generated
+  objects or morphisms as theorem-domain members until a source-side generation
+  rule is supplied.
+\end{itemize}
+
+These are scoped extension obstructions. They do not refute the closed-family
+conditional theorem under H1--H7, and they do not adopt \(\RetainH\) or
+\(\GenH\).
+
+\section{Target and Process Authority Attacks}
+
+The target-import attacks fail closed. Replacing source invariants with target
+success, importing a target metric, importing a detector protocol, or using
+proper-time calibration would violate \(\NoTarget\). Such premises cannot
+repair a missing source inverse, missing composition, weak ledger, missing
+\(\RetainH\), missing \(\GenH\), or missing negative-control evidence.
+
+The process-authority attacks also fail closed. Registry rows, validator
+passes, role identity, handoff status, commit state, and generated derivative
+status are provenance and operational receipts only. They do not make source
+objects, morphisms, composites, ledger certificates, \(\RetainH\), or
+\(\GenH\) exist.
+
+\section{Refuter Obstruction Record}
+
+\begin{verbatim}
+refuter_obstruction_record:
+  obstruction_id: "OB-V18-P3T05-EQSRC-FAMILY-CLOSURE-001"
+  target_claim: "P3-T02 conditional EqSrc_T family-closure theorem candidate
+    read as adopted general EqSrc discharge"
+  target_milestone: "source_equivalence_eqsrc"
+  failed_premise: "H1-H7 closure and ledger hypotheses are supplied
+    conditionally and are not derived by current ontology for closure-removed
+    or extension-expanded cases"
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex"
+  countermodel_scope: "finite_local"
+  certificate_gap: "missing source-side inverse composition or
+    ledger-preservation certificate under the stressed modes"
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "not_frozen"
+    decision_reason: "This is the first P3-T05 stress of this exact
+      family-closure burden and P3-T06 selector remains mandated."
+    next_allowed_route: "P3-T06"
+  route_cycle_control:
+    cycle_family: "v18_p3_eqsrc_family_closure"
+    current_cycle_step: "refuter_stress"
+    prior_related_tasks:
+      - "RT-20260707-020"
+      - "RT-20260707-021"
+      - "RT-20260707-022"
+    cycle_risk: "medium"
+    orbit_avoidance_reason: "The packet adds a concrete
+      missing-composition finite countermodel and routes to selector rather
+      than repeating theorem construction."
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+  forbidden_conclusions:
+    - "No general EqSrc discharge follows."
+    - "No RetainH adoption follows."
+    - "No GenH adoption follows."
+    - "No source-law adoption follows."
+    - "No MetricData(E) adoption follows."
+    - "No g_eff scope expansion follows."
+    - "No matter-coupling derivation follows."
+    - "No Einstein-equation derivation follows."
+    - "No benchmark promotion follows."
+    - "No Gate Chair verdict follows."
+    - "No completed derivation follows."
+    - "No program-wide no-go conclusion follows."
+    - "No future source-extension impossibility follows."
+\end{verbatim}
+
+\section{Stress Result}
+
+The stress result is \(\texttt{scoped\_obstruction}\).
+
+The conditional theorem candidate survives exactly as a theorem candidate under
+supplied H1--H7. The overread fails: current ontology has not derived those
+hypotheses generally, and closure-removed or extension-expanded branches
+produce finite/local source-side obstructions. The minimal countermodel status
+therefore survives, but only inside the named finite closure-removal scope.
+
+\begin{verbatim}
+stress_result_one_of:
+  - survives_as_theorem_candidate
+  - minimal_countermodel_survives
+  - repair_required
+  - scoped_obstruction
+  - freeze_route
+selected_stress_result: scoped_obstruction
+minimal_countermodel_survives: true
+repair_required: false
+freeze_route: false
+same_milestone_continuation_status: blocked_adoption_open_continuation
+\end{verbatim}
+
+\section{Distance-to-GR Effect}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit. \\
+Source equivalence EqSrc & Family-closure overread stress returns scoped obstruction; no general EqSrc discharge. \\
+RetainH & Not adopted; extension pressure remains candidate-definition-needed. \\
+GenH & Not adopted; generated-family extension pressure remains candidate-definition-needed. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Unchanged. \\
+M\_src & Unchanged. \\
+g\_eff & Unchanged; no MetricData(E) or metric-scope expansion. \\
+matter coupling & Blocked and unchanged; no coupling derivation or adoption. \\
+Einstein equations & Blocked and unchanged; no field-equation derivation. \\
+finite-variation robustness & Unchanged; no global robustness theorem. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion. \\
+Gate Chair status & Unchanged; no Gate Chair verdict. \\
+current route freeze or hard-fail status & Not frozen; route continues to P3-T06 selector. \\
+\bottomrule
+\end{longtable}
+
+\begin{verbatim}
+distance_to_gr_delta:
+  changed: false
+  effect: no_distance_delta
+  ledger_row_updated: false
+  reason: P3-T05 records a scoped Refuter obstruction and finite local
+    closure-removal countermodels only. It does not adopt EqSrc RetainH GenH
+    or any downstream physics claim.
+\end{verbatim}
+
+\section{Forbidden Conclusions}
+
+This Refuter stress result must not be read as any of the following:
+\begin{itemize}[leftmargin=*]
+  \item general \(\EqSrc\) discharge;
+  \item \(\RetainH\) adoption;
+  \item \(\GenH\) adoption;
+  \item source-law adoption;
+  \item canonical ontology edit;
+  \item target metric or detector-protocol import;
+  \item \(\mathrm{MetricData}(E)\) adoption;
+  \item \(g_{\mathrm{eff}}\) scope expansion;
+  \item source detector/readout semantics adoption;
+  \item matter-semantics adoption;
+  \item coupling-law adoption;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics, a stress-energy tensor, or a matter action;
+  \item Einstein-equation derivation;
+  \item benchmark promotion;
+  \item Gate Chair verdict;
+  \item completed derivation;
+  \item program-wide rejection claim; or
+  \item future source-extension impossibility.
+\end{itemize}
+
+\section{Next Route}
+
+The next route is:
+\[
+  \texttt{P3-T06}.
+\]
+
+P3-T06 must select the post-family-closure continuation route. The default
+route remains P4-T01 unless the selector determines that repair, freeze review,
+\(\RetainH\), \(\GenH\), source detector/readout semantics, or external review
+preparation is more appropriate under the v18 plan.
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026, July 7). \textit{EqSrc
+family-closure theorem or countermodel v1} [Internal science draft].
+\texttt{research\_control/tasks/RT-20260707-020/artifacts/eqsrc\_family\_closure\_theorem\_or\_countermodel\_v1.tex}
+
+The AEther-Flow Research Project. (2026, July 7). \textit{RetainH and GenH
+primitive-boundary extraction v1} [Internal science draft].
+\texttt{research\_control/tasks/RT-20260707-021/artifacts/retainh\_genh\_primitive\_boundary\_v1.tex}
+
+The AEther-Flow Research Project. (2026, July 7). \textit{EqSrc
+family-closure smuggling audit v1} [Internal science draft].
+\texttt{research\_control/tasks/RT-20260707-022/artifacts/eqsrc\_family\_closure\_smuggling\_audit\_v1.tex}
+
+The AEther-Flow Research Project. (2026, July 7). \textit{Recommendations
+implementation plan continue task v18} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v18.md}
+
+The AEther-Flow Research Project. (2026, July 2). \textit{Refuter obstruction
+schema v1} [Internal project-control note].
+\texttt{research\_control/design/refuter\_obstruction\_schema\_v1.md}
+
+\end{document}

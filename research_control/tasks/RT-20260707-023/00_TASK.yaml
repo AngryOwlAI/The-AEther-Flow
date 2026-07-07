@@ -1,0 +1,56 @@
+task_id: "RT-20260707-023"
+task_type: "eqsrc_family_closure_refuter_stress"
+status: "completed"
+created_at: "2026-07-07T22:54:55Z"
+updated_at: "2026-07-07T22:54:55Z"
+closed_at: "2026-07-07T22:54:55Z"
+parent_task_id: "RT-20260707-022"
+parent_handoff_id: "handoff-0691"
+decision_id: "DDR-20260707-023"
+job_id: "AJ-RT-20260707-023-001"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260707-023"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This packet requires no human gate because it performs only draft/control Refuter stress and does not promote claims."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T05"
+  plan_task_name: "Refuter stress of family-closure attempt"
+objective: "Stress the P3 EqSrc_T family-closure result against closure removal invariant weakening primitive-dependence target-import attacks and process-authority overread."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Stress the P3 family-closure result against closure removal, invariant weakening, primitive-dependence, and target-import attacks."
+closure_status: "v18_p3_t05_eqsrc_family_closure_refuter_scoped_obstruction_pending_selector_no_promotion"
+claim_boundary:
+  allowed_scope: "P3-T05 Refuter stress of the P3-T02 conditional EqSrc_T family-closure theorem candidate after P3-T04 source-purity audit"
+  candidate_artifact: "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex"
+  audit_artifact: "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_v1.tex"
+  primitive_boundary_artifact: "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_v1.tex"
+  allowed_verdict: "scoped_obstruction"
+  refuter_loop_classification: "scoped_obstruction"
+  minimal_countermodel_available: true
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_law_adopted: false
+  MetricData_E_adopted: false
+  g_eff_scope_expanded: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/tasks/RT-20260707-023/artifacts/child_phys_math_eqsrc_family_closure_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260707-023/artifacts/child_phys_phil_eqsrc_family_closure_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260707-023/artifacts/parent_conflict_review_eqsrc_family_closure_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260707-023/artifacts/parent_fusion_notes_eqsrc_family_closure_refuter_stress.md"
+  - "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260707-023/artifacts/validate_eqsrc_family_closure_refuter_stress.py"
+  - "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_validation.json"
+  - "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_receipt.md"
+next_recommended_action: "Run one bounded v18 P3-T06 post-EqSrc family-closure selector packet."
+notes: "RT-20260707-023 completes v18 P3-T05 Refuter stress as scoped_obstruction. The conditional family-closure theorem candidate remains source-pure only under supplied H1-H7. Removing inverse closure composition closure or ledger stability gives finite or local source-side obstruction. RetainH and GenH remain not adopted and candidate-definition-needed only for extension branches. No general EqSrc discharge or Distance-to-GR ledger delta is claimed."
+documentation_impact_id: "DI-RT-20260707-023-001"

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260707-022`
-- Latest handoff: `handoff-0691`
-- Current status: `v18_p3_t04_eqsrc_family_closure_audited_source_pure_as_written_no_promotion`
+- Active task: `RT-20260707-023`
+- Latest handoff: `handoff-0692`
+- Current status: `v18_p3_t05_eqsrc_family_closure_refuter_scoped_obstruction_pending_selector_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260707-022`
-- Latest research handoff: `handoff-0691`
-- Latest research next action: Run one bounded v18 P3-T05 Refuter stress of the family-closure attempt.
+- Latest research task: `RT-20260707-023`
+- Latest research handoff: `handoff-0692`
+- Latest research next action: Run one bounded v18 P3-T06 post-EqSrc family-closure selector packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_family_closure_refuter_stress`
-- Role family: `refuter@0.2.0`
+- Route ID: `post_eqsrc_family_closure_selector`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Stress the P3 family-closure result against closure removal, invariant weakening, primitive-dependence, and target-import attacks.
+- Milestone burden: Select the next continuation route after P3 family-closure theorem candidate audit and stress.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `2141d735575458f971cff47d661646730161981ee48fcaa9bba78c11f5f4e81e`
-- JSON SHA-256: `5f18ee8f3cd3d687751b0d7d9d9e4b8c819b20cb3376c7fd33e97fcfe9e56e18`
+- YAML SHA-256: `a0e11199211f6dacbdcaa1c26770f270c457fe47e1bbee790c04e1929e7c9be4`
+- JSON SHA-256: `5228314279b7b2c09eae45efffae160422be85248b64e93ce7fa302a877eb263`
 
 ## Authority Warning
 
