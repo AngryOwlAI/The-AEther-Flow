@@ -1,0 +1,31 @@
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+task_id: "RT-20260707-011"
+agent_job_id: "AJ-RT-20260707-011-001"
+review_target: "active_state_bifurcation_authority_boundary"
+status: "completed"
+workflow_success_disregarded_as_evidence: true
+validator_success_disregarded_as_evidence: true
+authority_boundaries_checked:
+  - "research handoff authority"
+  - "project-system sidecar status"
+  - "generated frontier non-authority"
+  - "Director decision as routing authority"
+findings:
+  - finding_id: "P1T04-PHIL-001"
+    severity: "repair_required"
+    claim: "A sidecar could launder process authority into research-route authority if a handoff-level flag is treated as sufficient without checking the Director decision that grants supersession."
+    evidence:
+      - "The policy states that recency alone and sidecar status do not create scientific next-route authority."
+      - "The rendered frontier correctly says sidecars do not supersede unless explicitly authorized."
+      - "The validator's authorization check needs a stronger provenance test for Director-decision authority."
+    authority_risk: "The current predicate risks making a self-describing sidecar flag look like external routing authority."
+    repair_route: "Require Director-decision provenance for supersession and render the source decision path when supersession is true."
+review_question_results:
+  latest_research_handoff_identifiable: "pass"
+  latest_project_system_sidecar_identifiable: "pass"
+  sidecar_cannot_become_authority_accidentally: "repair_required"
+  generated_frontier_not_proof: "pass"
+  next_route_upstream_unless_superseded: "repair_required_until_decision_provenance_is_checked"
+physics_promotion_authorized: false
+recommended_next_route: "v18_p1_t04_repair_active_state_supersession_director_decision_guard"

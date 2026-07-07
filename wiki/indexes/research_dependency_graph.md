@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-07T08:48:36Z`
-- Source fingerprint: `4eed4d7cf74f1f22e2896b68107d4775202e90b6faddc866aeec87fd56f424be`
-- Nodes: `15778`
-- Edges: `58293`
+- Generated from tracked state as of: `2026-07-07T09:16:35Z`
+- Source fingerprint: `04ba98bc73bf7315694a4533b5970051b6d5d84a4b9e04cc0783cfb053a265b9`
+- Nodes: `15815`
+- Edges: `58362`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 816 |
+| `completion_yaml` | 817 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 679 |
+| `handoff_yaml` | 680 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 816 |
+| `agent_job` | `support_only` | 817 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 8311 |
-| `blocked_burden` | `blocked` | 2791 |
-| `claim_boundary` | `support_only` | 773 |
+| `artifact` | `support_only` | 8328 |
+| `blocked_burden` | `blocked` | 2807 |
+| `claim_boundary` | `support_only` | 774 |
 | `draft_control_candidate` | `draft_control` | 504 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 55 |
 | `frozen_negative` | `frozen_negative` | 101 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 679 |
+| `handoff` | `support_only` | 680 |
 | `human_gated_object` | `human_gated` | 289 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 278 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 30 |
-| `task` | `support_only` | 757 |
+| `task` | `support_only` | 758 |
 
 ## Frontier Table
 
@@ -84,6 +84,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:accepted_evidence_as_adoption` | Blocked claim: accepted evidence as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:accepted_evidence_as_matter_coupling` | Blocked claim: accepted evidence as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:accepted_evidence_preconditions_as_adopted_objects` | Blocked claim: accepted evidence/preconditions as adopted objects | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:active_state_validator_source_edit` | Blocked permission: active-state validator source edit | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:active_teaching_packet_fallback_revival` | Blocked claim: active teaching-packet fallback revival | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:advisory_formatting_scripts_as_canonical_content_law` | Blocked claim: advisory formatting scripts as canonical content law | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agent_native_authority` | Blocked claim: Agent-Native authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:baseline_reconciliation_as_coupling_law_adoption` | Blocked claim: baseline reconciliation as coupling-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_reconciliation_as_detector_semantics` | Blocked claim: baseline reconciliation as detector semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_reconciliation_as_einstein_equation_evidence` | Blocked claim: baseline reconciliation as Einstein-equation evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_gate_chair_verdict` | Blocked claim: baseline reconciliation as Gate Chair verdict | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260707-010`
-- Latest handoff: `handoff-0679`
-- Handoff path: `research_control/handoffs/handoff-0679.yaml`
-- Next action: Run one bounded v18 P1-T04 active-state bifurcation red-team review packet to stress the bifurcation for route confusion and authority laundering.
+- Active task: `RT-20260707-011`
+- Latest handoff: `handoff-0680`
+- Handoff path: `research_control/handoffs/handoff-0680.yaml`
+- Next action: Run one bounded v18 P1-T04 repair task to require tracked Director-decision authorization before any project-system sidecar may supersede ordinary research handoff authority.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

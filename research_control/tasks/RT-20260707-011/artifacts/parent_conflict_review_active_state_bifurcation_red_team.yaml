@@ -1,0 +1,23 @@
+conflict_review_id: "PARENT-CONFLICT-RT-20260707-011"
+task_id: "RT-20260707-011"
+agent_job_id: "AJ-RT-20260707-011-001"
+status: "resolved"
+resolution_rounds: 0
+unresolved_conflicts: []
+child_outputs:
+  - "research_control/tasks/RT-20260707-011/artifacts/child_phys_math_active_state_bifurcation_red_team.yaml"
+  - "research_control/tasks/RT-20260707-011/artifacts/child_phys_phil_active_state_bifurcation_red_team.yaml"
+consensus_findings:
+  - "Both children agree that the latest research handoff is identifiable as handoff-0679."
+  - "Both children agree that project-system sidecar fields are identifiable and currently inactive."
+  - "Both children agree that generated frontier wording is not proof authority as written."
+  - "Both children agree that the supersession authorization predicate needs repair because policy requires tracked Director-decision authority."
+unique_contributions:
+  - child: "child_phys_math"
+    contribution: "Separated the formal validator predicate from the stronger policy predicate."
+  - child: "child_phys_phil"
+    contribution: "Named the authority-laundering risk created by a handoff-level self-authorization flag."
+blocking_conflicts: []
+final_resolution: "repair_required"
+recommended_next_route: "v18_p1_t04_repair_active_state_supersession_director_decision_guard"
+physics_promotion_authorized: false

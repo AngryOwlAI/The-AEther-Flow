@@ -1,0 +1,33 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260707-011"
+agent_job_id: "AJ-RT-20260707-011-001"
+review_target: "active_state_bifurcation_authority_predicate"
+status: "completed"
+workflow_success_disregarded_as_evidence: true
+validator_success_disregarded_as_evidence: true
+formal_objects_checked:
+  - "active_state_bifurcation.latest_research_handoff_id"
+  - "active_state_bifurcation.latest_project_system_sidecar_task_id"
+  - "active_state_bifurcation.sidecar_supersedes_research_handoff"
+  - "active_state_bifurcation.next_research_route_source"
+  - "_sidecar_supersession_authorized"
+  - "_validate_sidecar_supersession_boundary"
+findings:
+  - finding_id: "P1T04-MATH-001"
+    severity: "repair_required"
+    claim: "The validator authorization predicate is weaker than the policy predicate."
+    evidence:
+      - "research_control/design/active_state_bifurcation_policy_v1.md requires a tracked Director decision explicitly authorizing active-state supersession."
+      - "scripts/research_control/validate_research_control.py _sidecar_supersession_authorized accepts explicit_sidecar_supersession_authorization on the handoff or bifurcation object."
+      - "tests/test_validate_research_control.py verifies missing authorization fails but does not require Director-decision evidence when authorization is present."
+    formal_gap: "A boolean authorization flag in a handoff is not equivalent to a tracked Director decision row or DDR source inspection."
+    repair_route: "Add validation and tests that bind sidecar supersession to an explicit tracked Director decision and reject handoff-only authorization."
+review_question_results:
+  latest_research_handoff_identifiable: "pass"
+  latest_project_system_sidecar_identifiable: "pass"
+  sidecar_cannot_become_authority_accidentally: "repair_required"
+  generated_frontier_not_proof: "pass"
+  next_route_upstream_unless_superseded: "repair_required_until_authorization_predicate_is_tightened"
+physics_promotion_authorized: false
+recommended_next_route: "v18_p1_t04_repair_active_state_supersession_director_decision_guard"

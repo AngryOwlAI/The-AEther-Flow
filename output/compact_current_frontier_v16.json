@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0679.yaml",
+    "research_control/handoffs/handoff-0680.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260707-010",
-    "latest_handoff_id": "handoff-0679",
-    "current_status": "v18_p1_t03_active_state_sidecar_validator_completed_no_physics_delta",
+    "active_task_id": "RT-20260707-011",
+    "latest_handoff_id": "handoff-0680",
+    "current_status": "v18_p1_t04_active_state_bifurcation_red_team_repair_required_no_physics_delta",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260707-010",
-    "latest_research_handoff_id": "handoff-0679",
-    "latest_research_next_action": "Run one bounded v18 P1-T04 active-state bifurcation red-team review packet to stress the bifurcation for route confusion and authority laundering.",
+    "latest_research_task_id": "RT-20260707-011",
+    "latest_research_handoff_id": "handoff-0680",
+    "latest_research_next_action": "Run one bounded v18 P1-T04 repair task to require tracked Director-decision authorization before any project-system sidecar may supersede ordinary research handoff authority.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "active_state_bifurcation_red_team_review",
-    "role_family": "external-red-team-reviewer@0.1.0",
+    "route_id": "active_state_supersession_director_decision_guard_repair",
+    "role_family": "validator-engineer@0.2.0",
     "target_derivation_milestone": "none",
-    "milestone_burden": "Stress the active-state bifurcation for route confusion and authority laundering.",
+    "milestone_burden": "Require tracked Director-decision authorization before sidecar supersession can be accepted.",
     "requires_human_gate": false
   },
   "claim_boundary": {
