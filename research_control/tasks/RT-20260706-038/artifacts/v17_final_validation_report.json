@@ -1,0 +1,177 @@
+{
+  "schema_id": "v17_final_validation_report_v1",
+  "task_id": "RT-20260706-038",
+  "job_id": "AJ-RT-20260706-038-001",
+  "plan_id": "recommendations_implementation_plan_continue_task-v17",
+  "plan_task_id": "P13-T02",
+  "created_at": "2026-07-06T23:54:18Z",
+  "operational_receipt_only": true,
+  "proof_authority": false,
+  "physics_promotion_authorized": false,
+  "validators_as_physics_proof": false,
+  "v17_distance_to_gr_delta": {
+    "effect": "no_distance_delta",
+    "changed": false,
+    "burden_id": "matter_coupling",
+    "summary": "P13-T02 records final v17 validation layers as operational receipts. It does not discharge a Distance-to-GR burden or authorize downstream physics promotion."
+  },
+  "implementation_plan_receipt": {
+    "implemented_v17_plan_tasks_after_completion": 55,
+    "deferred_v17_plan_tasks_after_completion": [
+      "P13-T03",
+      "P13-T04"
+    ],
+    "phase_p13_completed": false,
+    "all_applicable_plan_tasks_proven": false,
+    "selected_next_plan_task_id": "P13-T03"
+  },
+  "aggregate_status": "PASS",
+  "layer_statuses": [
+    {
+      "layer_id": "memory_preflight",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json",
+      "evidence": "Local retrieval status PASS with refresh_needed=false and refresh_performed=false."
+    },
+    {
+      "layer_id": "memory_bootstrap",
+      "status": "PASS",
+      "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py && .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only",
+      "evidence": "Bootstrap and validate-only are required after the P13-T02 control records and handoff are created."
+    },
+    {
+      "layer_id": "research_control_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_research_control.py",
+      "evidence": "Research-control task DDR AgentJob role completion handoff program state and registries validate."
+    },
+    {
+      "layer_id": "diff_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff",
+      "evidence": "Changed research-control surfaces validate within the active P13-T02 transaction boundary."
+    },
+    {
+      "layer_id": "claim_language_linter",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json",
+      "evidence": "Changed claim-language surfaces preserve operational-only validation language and no physics-promotion wording."
+    },
+    {
+      "layer_id": "accepted_calibration_advisory_report",
+      "status": "PASS_WITH_ADVISORY",
+      "command": ".venv/bin/python research_control/tasks/RT-20260705-059/artifacts/validate_p3_t06_accepted_status_calibration_red_team.py",
+      "evidence": "P3-T06 accepted-status calibration red-team report returned status PASS with review_result=pass_with_advisory and failures=[]."
+    },
+    {
+      "layer_id": "documentation_impact_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json",
+      "evidence": "Documentation-impact receipt covers control records registries generated derivatives and validators_run."
+    },
+    {
+      "layer_id": "registry_consistency",
+      "status": "PASS",
+      "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only",
+      "evidence": "Registered sources and generated registry metadata are synchronized."
+    },
+    {
+      "layer_id": "current_frontier_render_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_current_frontier.py --check",
+      "evidence": "Current frontier matches tracked state after handoff-0670."
+    },
+    {
+      "layer_id": "compact_frontier_render_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check && .venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json",
+      "evidence": "Compact frontier YAML JSON and Markdown are fresh and synchronized."
+    },
+    {
+      "layer_id": "dependency_graph_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_dependency_graph.py --check",
+      "evidence": "Dependency graph JSON DOT and Markdown outputs are fresh."
+    },
+    {
+      "layer_id": "claim_graph_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --graph output/claim_graph_v1.json --json",
+      "evidence": "Claim graph validates with non-promotion guard rows."
+    },
+    {
+      "layer_id": "task_index_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_task_index.py --check && .venv/bin/python scripts/research_control/validate_task_index.py --json",
+      "evidence": "Task index is fresh and validates after P13-T02."
+    },
+    {
+      "layer_id": "metric_use_ledger_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python research_control/tasks/RT-20260706-007/artifacts/validate_p5_t02_metric_use_ledger_population.py",
+      "evidence": "Metric-use ledger validation returned status PASS row_count=19 warnings=[]."
+    },
+    {
+      "layer_id": "proof_normal_form_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_proof_normal_form_registry.py --json",
+      "evidence": "Proof-normal-form registry validation returned status PASS checked_row_count=7 proof_authority=false."
+    },
+    {
+      "layer_id": "support_only_formalization_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry.py --json",
+      "evidence": "Support-only formalization traceability validation returned status PASS checked_entry_count=3 proof_authority=false."
+    },
+    {
+      "layer_id": "unit_tests",
+      "status": "PASS",
+      "command": ".venv/bin/python -m unittest tests/test_proof_normal_form_registry.py tests/test_render_proof_normal_form_index.py tests/test_support_formalization_traceability_registry.py tests/test_support_only_finite_local_witness_schema.py tests/test_support_only_finite_toy_tag_obstruction.py tests/test_validate_claim_language.py tests/test_run_full_research_control_validation.py",
+      "evidence": "Targeted final-validation unit suite ran 70 tests and returned OK."
+    },
+    {
+      "layer_id": "ci_workflow_syntax_check_where_available",
+      "status": "PASS",
+      "command": ".venv/bin/python -c \"import pathlib, yaml; paths=list(pathlib.Path('.github/workflows').glob('*.yml'))+list(pathlib.Path('.github/workflows').glob('*.yaml')); [yaml.safe_load(path.read_text()) for path in paths]; print('workflow_yaml_syntax=PASS files=' + str(len(paths)))\"",
+      "evidence": "Workflow YAML syntax parsed successfully for 1 workflow file."
+    }
+  ],
+  "pending_layers": [],
+  "advisory_reasons": [
+    {
+      "layer_id": "accepted_calibration_advisory_report",
+      "reason": "The accepted-status calibration red-team review is pass_with_advisory. It records no failures and creates no physics-promotion authority."
+    }
+  ],
+  "hard_blocks_preserved": [
+    "canonical ontology edit",
+    "source-law adoption",
+    "MetricData(E) adoption",
+    "g_eff scope expansion",
+    "matter-semantics adoption",
+    "detector-semantics adoption",
+    "coupling-law adoption",
+    "matter-coupling derivation or adoption",
+    "stress-energy semantics",
+    "matter action",
+    "Einstein equations",
+    "benchmark promotion",
+    "Gate Chair verdict",
+    "proof authority",
+    "final ordinary continuation route selection",
+    "completed derivation"
+  ],
+  "source_hashes": {
+    "v17_plan": "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a",
+    "current_frontier_before_p13_t02": "3288384f19c26eb81f1b7d92e917674ed3d11e5ec4e989b57678027f7cff36b1",
+    "handoff_0669": "303763d5720d6ec825f549aad5f41172d2d23650fc5064d2060836308ac1b1c8",
+    "v17_backlog": "4323df2cd41e3af4eec00594ab1103635b1c5c9bae705721973c3d59c81b248d"
+  },
+  "next_route": {
+    "route_id": "v17_p13_t03_current_frontier_synchronization",
+    "plan_task_id": "P13-T03",
+    "role_family": "tooling-engineer@0.1.0",
+    "requires_human_gate": false,
+    "note": "P13-T03 remains a separate bounded loop unit. Role fit must be resolved from tracked state in the next analysis pass."
+  }
+}

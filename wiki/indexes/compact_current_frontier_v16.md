@@ -6,18 +6,18 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260706-037`
-- Latest handoff: `handoff-0669`
-- Current status: `v17_p13_t01_integration_report_completed_no_physics_delta`
+- Active task: `RT-20260706-038`
+- Latest handoff: `handoff-0670`
+- Current status: `v17_p13_t02_final_validation_packet_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Next Route
 
-- Route ID: `v17_p13_t02_final_validation_packet`
-- Role family: `director-of-research@0.3.0`
+- Route ID: `v17_p13_t03_current_frontier_synchronization`
+- Role family: `tooling-engineer@0.1.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Run final v17 validation layers and record exact pending reasons if any.
+- Milestone burden: Synchronize current frontier, compact frontier, graphs, and ledgers after v17 final validation.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +52,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `07050b5674af3feef23b37961007a72bcbfc92034269a3a8c361c7a3db38f5bd`
-- JSON SHA-256: `41022c8c68f4fa07a88a22ac201b80f88e06aa39a6709223fd08b8189deb28d1`
+- YAML SHA-256: `6f6120d27c9945aa5c0926df687e846983c2d87815f9314ee3e92cb9648ec159`
+- JSON SHA-256: `153ef9b0faaf3836474c08a1423f006b5d499e3e05c0f3b51ff1231945a29286`
 
 ## Authority Warning
 

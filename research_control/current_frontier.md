@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260706-037` and `handoff-0669`.
+`RT-20260706-038` and `handoff-0670`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260706-037` |
-| Latest handoff ID | `handoff-0669` |
-| Current status | `v17_p13_t01_integration_report_completed_no_physics_delta` |
+| Active task ID | `RT-20260706-038` |
+| Latest handoff ID | `handoff-0670` |
+| Current status | `v17_p13_t02_final_validation_packet_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v17 p13 t01 integration report completed no physics delta |
+| Current route family | v17 p13 t02 final validation packet completed no physics delta |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P13-T02 final validation packet through director-of-research@0.3.0. |
-| Required next authority | P13-T02 may run final v17 validation layers and record exact pending reasons if any without promoting physics claims or editing canonical science sources. |
-| Next recommended action | Run one bounded v17 P13-T02 final validation packet through director-of-research@0.3.0. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v17 P13-T03 current frontier and ledger synchronization packet. |
+| Required next authority | P13-T03 may synchronize current frontier compact frontier graphs and ledgers after v17 final validation without promoting physics claims or changing Distance-to-GR status unless separately justified by protected authority. |
+| Next recommended action | Run one bounded v17 P13-T03 current frontier and ledger synchronization packet. |
 
 ## Active Boundary
 
@@ -49,12 +49,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260706-037/00_TASK.yaml`.
-- Active task objective: not recorded.
-- Latest handoff path: `research_control/handoffs/handoff-0669.yaml`.
-- Latest handoff summary: RT-20260706-037 completed one bounded v17 P13-T01 integration report packet. The report integrates the active v17 chain through P12-T04 plus P13-T01 itself as 54 of 57 plan tasks implemented and identifies P13-T02 P13-T03 and P13-T04 as deferred bounded packets. It preserves no Distance-to-GR delta no physics promotion no proof authority no source-law adoption no matter-coupling derivation no Einstein-equation derivation no benchmark promotion no Gate Chair verdict and no completed-derivation claim.
-- Current route family: v17 p13 t01 integration report completed no physics delta.
-- Next recommended action: Run one bounded v17 P13-T02 final validation packet through director-of-research@0.3.0.
+- Active task path: `research_control/tasks/RT-20260706-038/00_TASK.yaml`.
+- Active task objective: Execute one bounded non-promotional v17 P13-T02 final validation packet.
+- Latest handoff path: `research_control/handoffs/handoff-0670.yaml`.
+- Latest handoff summary: RT-20260706-038 completed one bounded v17 P13-T02 final validation packet. The report records all required final validation layers as operational receipts with pending_layers empty and accepted calibration advisory status recorded as pass_with_advisory. It preserves no Distance-to-GR delta no physics promotion no proof authority no source-law adoption no matter-coupling derivation no Einstein-equation derivation no benchmark promotion no Gate Chair verdict final ordinary-route selection or completed-derivation claim.
+- Current route family: v17 p13 t02 final validation packet completed no physics delta.
+- Next recommended action: Run one bounded v17 P13-T03 current frontier and ledger synchronization packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -273,7 +273,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v17 P13-T02 final validation packet through director-of-research@0.3.0.
+Run one bounded v17 P13-T03 current frontier and ledger synchronization packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -301,9 +301,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260706-037`;
-- latest handoff: `handoff-0669`;
-- current status: `v17_p13_t01_integration_report_completed_no_physics_delta`;
+- active task: `RT-20260706-038`;
+- latest handoff: `handoff-0670`;
+- current status: `v17_p13_t02_final_validation_packet_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -313,8 +313,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0669.yaml`
-- `research_control/tasks/RT-20260706-037/00_TASK.yaml`
+- `research_control/handoffs/handoff-0670.yaml`
+- `research_control/tasks/RT-20260706-038/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -330,7 +330,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0669*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0670*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
