@@ -1,0 +1,87 @@
+handoff_id: "handoff-0678"
+created_at: "2026-07-07T07:59:03Z"
+task_id: "RT-20260707-009"
+decision_id: "DDR-20260707-009"
+job_id: "AJ-RT-20260707-009-001"
+completion_path: "research_control/tasks/RT-20260707-009/jobs/completions/AJC-AJ-RT-20260707-009-001.yaml"
+source_task_id: "RT-20260707-009"
+source_job_id: "AJ-RT-20260707-009-001"
+source_completion_id: "AJC-AJ-RT-20260707-009-001"
+status: "completed"
+summary: "RT-20260707-009 completed one bounded Project-Control Maintainer packet for v18 P1-T02 active-state bifurcation renderer work. Current-frontier and compact-frontier surfaces now render explicit active_state_bifurcation fields while preserving compatibility fields and no physics claim promotion or Distance-to-GR delta is authorized."
+next_action: "Run one bounded v18 P1-T03 active-state sidecar validator and tests packet to prevent project-system sidecars from overriding research handoffs."
+loop_risk_route: "v18_p1_t02_active_state_bifurcation_renderer_handoff_to_p1_t03_no_physics_claim_change"
+claim_boundary:
+  allowed_next_scope: "P1-T03 active-state sidecar validator and tests"
+  immediate_routing_authority: "handoff-0678 selects P1-T03 after P1-T02 renderer implementation."
+  policy_authority: "research_control/design/active_state_bifurcation_policy_v1.md defines the active-state bifurcation policy and validation hooks."
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_detector_readout_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  downstream_gr_promotion_authorized: false
+  benchmark_promoted: false
+  external_outreach_authorized: false
+  proof_authority: false
+blocked_claims:
+  - "P1-T02 renderer fields as validator enforcement"
+  - "P1-T02 renderer fields as proof of completed v18 implementation"
+  - "P1-T02 renderer fields as physics proof"
+  - "P1-T02 renderer fields as upstream theorem construction"
+  - "P1-T02 renderer fields as source-law adoption"
+  - "P1-T02 renderer fields as general EqSrc discharge"
+  - "P1-T02 renderer fields as RetainH adoption"
+  - "P1-T02 renderer fields as GenH adoption"
+  - "P1-T02 renderer fields as source detector/readout semantics adoption"
+  - "P1-T02 renderer fields as coupling-law adoption"
+  - "P1-T02 renderer fields as matter coupling"
+  - "P1-T02 renderer fields as Einstein-equation evidence"
+  - "P1-T02 renderer fields as benchmark promotion"
+  - "P1-T02 renderer fields as external outreach"
+  - "P1-T02 renderer fields as completed derivation"
+  - "P1-T02 as execution of downstream v18 phases"
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260707-009"
+  latest_research_handoff_id: "handoff-0678"
+  latest_research_next_action: "Run one bounded v18 P1-T03 active-state sidecar validator and tests packet to prevent project-system sidecars from overriding research handoffs."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "no_distance_delta"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "RT-20260707-009 changes no Distance-to-GR ledger row. It renders project-control active-state bifurcation fields only and does not discharge general EqSrc RetainH GenH matter coupling g_eff MetricData(E) Einstein equations benchmark promotion or completed derivation status."
+selected_next_route:
+  route_id: "active_state_sidecar_validator"
+  plan_task_id: "P1-T03"
+  role_family: "validator-engineer@0.2.0"
+  target_derivation_milestone: "none"
+  milestone_burden: "Add validation that prevents project-system sidecars from silently overriding research handoffs."
+  requires_human_gate: false
+validation:
+  memory_preflight: "PASS"
+  query_memory_status: "PASS"
+  continue_research_json: "PASS"
+  renderer_unit_tests: "PASS"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

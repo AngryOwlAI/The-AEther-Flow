@@ -6,18 +6,30 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260707-008`
-- Latest handoff: `handoff-0677`
-- Current status: `v18_p1_t01_active_state_bifurcation_policy_defined_no_physics_delta`
+- Active task: `RT-20260707-009`
+- Latest handoff: `handoff-0678`
+- Current status: `v18_p1_t02_active_state_bifurcation_renderer_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
+## Active-State Bifurcation
+
+- Latest research task: `RT-20260707-009`
+- Latest research handoff: `handoff-0678`
+- Latest research next action: Run one bounded v18 P1-T03 active-state sidecar validator and tests packet to prevent project-system sidecars from overriding research handoffs.
+- Latest project-system task: `none`
+- Latest project-system status: `none`
+- Latest project-system sidecar task: `none`
+- Latest project-system sidecar status: `none`
+- Sidecar supersedes research handoff: `false`
+- Next research route source: `latest_research_handoff`
+
 ## Next Route
 
-- Route ID: `active_state_bifurcation_renderer`
-- Role family: `tooling-engineer@0.1.0`
+- Route ID: `active_state_sidecar_validator`
+- Role family: `validator-engineer@0.2.0`
 - Target milestone: `none`
-- Milestone burden: Render explicit active_state_bifurcation fields while preserving compatibility fields.
+- Milestone burden: Add validation that prevents project-system sidecars from silently overriding research handoffs.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -52,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `d5e35d3682dd567cc1b44bde83d91cd72f036672c02e59c2d449c5aa06f602e4`
-- JSON SHA-256: `33c0a14c28a85173c96fc81d2ee47f38bdd40e08b47b470b6fb3922cd8c109fb`
+- YAML SHA-256: `0659f65e5cd18e8efb3c30cd371a3f254369ad4564d097d4f22791bbed218048`
+- JSON SHA-256: `4085bfdecc4bdb6d35192c07733aa083f7325f8b6175c99c090fd04e13f4eb78`
 
 ## Authority Warning
 

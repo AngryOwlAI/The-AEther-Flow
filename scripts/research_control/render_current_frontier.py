@@ -25,6 +25,7 @@ LEDGER_PATH = "registries/DISTANCE_TO_GR_LEDGER.csv"
 METRIC_USE_LEDGER_PATH = "registries/METRIC_USE_LEDGER.csv"
 STATUS_ALIAS_PATH = "research_control/design/distance_to_gr_status_aliases.yaml"
 ACCEPTED_STATUS_CALIBRATION_PATH = "research_control/design/accepted_status_calibration_v1.yaml"
+ACTIVE_STATE_BIFURCATION_POLICY_PATH = "research_control/design/active_state_bifurcation_policy_v1.md"
 HIGH_RISK_STATUS_CARD_IDS = [
     "m_src",
     "g_eff",
@@ -930,6 +931,26 @@ def required_next_authority_text(handoff: dict[str, Any]) -> str:
     return "tracked continue-research decision required"
 
 
+def active_state_bifurcation_state(
+    *,
+    active_task_id: str,
+    latest_handoff_id: str,
+    next_action: str,
+) -> dict[str, Any]:
+    no_sidecar = "none"
+    return {
+        "latest_research_task_id": active_task_id,
+        "latest_research_handoff_id": latest_handoff_id,
+        "latest_research_next_action": next_action,
+        "latest_project_system_task_id": no_sidecar,
+        "latest_project_system_status": no_sidecar,
+        "latest_project_system_sidecar_task_id": no_sidecar,
+        "latest_project_system_sidecar_status": no_sidecar,
+        "sidecar_supersedes_research_handoff": False,
+        "next_research_route_source": "latest_research_handoff",
+    }
+
+
 def matter_coupling_boundary(rows: list[dict[str, str]]) -> str:
     row = row_by_burden(rows, "matter_coupling")
     status = row.get("current_status", "unknown")
@@ -974,6 +995,11 @@ def build_state(repo_root: Path) -> dict[str, Any]:
     next_action = text_value(latest_handoff.get("next_action")) or text_value(
         program_state.get("next_recommended_action")
     )
+    bifurcation = active_state_bifurcation_state(
+        active_task_id=active_task_id,
+        latest_handoff_id=latest_handoff_id,
+        next_action=next_action,
+    )
 
     return {
         "schema_id": SCHEMA_ID,
@@ -981,6 +1007,7 @@ def build_state(repo_root: Path) -> dict[str, Any]:
         "latest_handoff_id": latest_handoff_id,
         "current_status": text_value(program_state.get("current_status")),
         "next_recommended_action": next_action,
+        "active_state_bifurcation": bifurcation,
         "program_state_path": "research_control/program_state.yaml",
         "latest_handoff_path": handoff_path(latest_handoff_id),
         "active_task_path": active_task_path(active_task_id),
@@ -1027,6 +1054,7 @@ def render_markdown(state: dict[str, Any]) -> str:
     validation_layers_table = validation_layer_table(handoff)
     validation_layers_summary_table = validation_status_summary_table(handoff)
     authorization_layers_table = authorization_layer_table(handoff)
+    bifurcation = state["active_state_bifurcation"]
 
     body = f"""<!-- authority: control -->
 
@@ -1053,6 +1081,25 @@ tracked authority files govern.
 | Current burden | {md_cell(state['current_burden'])} |
 | Required next authority | {md_cell(state['required_next_authority'])} |
 | Next recommended action | {md_cell(state['next_recommended_action'])} |
+
+## Active-State Bifurcation
+
+These fields separate ordinary research-continuation authority from any
+project-system sidecar status. A sidecar may be evidence for project-system
+repair, but it does not supersede the latest research handoff unless a later
+tracked validator and handoff explicitly authorize that change.
+
+| Field | Value |
+| --- | --- |
+| Latest research task ID | {code_value(bifurcation['latest_research_task_id'])} |
+| Latest research handoff ID | {code_value(bifurcation['latest_research_handoff_id'])} |
+| Latest research next action | {md_cell(bifurcation['latest_research_next_action'])} |
+| Latest project-system task ID | {code_value(bifurcation['latest_project_system_task_id'])} |
+| Latest project-system status | {code_value(bifurcation['latest_project_system_status'])} |
+| Latest project-system sidecar task ID | {code_value(bifurcation['latest_project_system_sidecar_task_id'])} |
+| Latest project-system sidecar status | {code_value(bifurcation['latest_project_system_sidecar_status'])} |
+| Sidecar supersedes research handoff | {str(bifurcation['sidecar_supersedes_research_handoff']).lower()} |
+| Next research route source | {code_value(bifurcation['next_research_route_source'])} |
 
 ## Active Boundary
 
@@ -1224,6 +1271,8 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
         source_paths.append(STATUS_ALIAS_PATH)
     if state["accepted_status_calibration"]:
         source_paths.append(ACCEPTED_STATUS_CALIBRATION_PATH)
+    if repo_path(repo_root, ACTIVE_STATE_BIFURCATION_POLICY_PATH).exists():
+        source_paths.append(ACTIVE_STATE_BIFURCATION_POLICY_PATH)
     payload = {
         "schema_id": SCHEMA_ID,
         "active_task_id": state["active_task_id"],
@@ -1231,6 +1280,7 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
         "current_status": state["current_status"],
         "v16_completed": state["v16_completed"],
         "next_recommended_action": state["next_recommended_action"],
+        "active_state_bifurcation": state["active_state_bifurcation"],
         "route_family": state["route_family"],
         "target_derivation_milestone": state["target_derivation_milestone"],
         "current_burden": state["current_burden"],

@@ -35,9 +35,11 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
 
     def make_fixture_repo(self, root: Path) -> None:
         control = root / "research_control"
+        design = control / "design"
         handoffs = control / "handoffs"
         registries = root / "registries"
         control.mkdir(parents=True)
+        design.mkdir(parents=True)
         handoffs.mkdir(parents=True)
         registries.mkdir(parents=True)
         (control / "program_state.yaml").write_text(
@@ -59,6 +61,7 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
                     'task_id: "RT-COMPACT"',
                     'status: "completed"',
                     'summary: "Fixture completed v16 compact renderer packet."',
+                    'next_action: "Run one bounded fixture compact check packet."',
                     "selected_next_route:",
                     '  route_id: "compact_current_frontier_check_integration_v16"',
                     '  plan_task_id: "P15-T03"',
@@ -75,6 +78,19 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
                     '  effect: "no_distance_delta"',
                     '  milestone: "matter_coupling"',
                     '  burden_id: "none"',
+                    "",
+                ]
+            ),
+            encoding="utf-8",
+        )
+        (design / "active_state_bifurcation_policy_v1.md").write_text(
+            "\n".join(
+                [
+                    "<!-- authority: control -->",
+                    "",
+                    "# Active-State Bifurcation Policy",
+                    "",
+                    "Fixture policy source for compact renderer bifurcation tests.",
                     "",
                 ]
             ),
@@ -140,6 +156,24 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
 
             self.assertEqual(snapshot["schema_id"], "compact_current_frontier_v16")
             self.assertEqual(snapshot["active_state"]["active_task_id"], "RT-COMPACT")
+            self.assertEqual(
+                snapshot["active_state_bifurcation"],
+                {
+                    "latest_research_task_id": "RT-COMPACT",
+                    "latest_research_handoff_id": "handoff-compact",
+                    "latest_research_next_action": "Run one bounded fixture compact check packet.",
+                    "latest_project_system_task_id": "none",
+                    "latest_project_system_status": "none",
+                    "latest_project_system_sidecar_task_id": "none",
+                    "latest_project_system_sidecar_status": "none",
+                    "sidecar_supersedes_research_handoff": False,
+                    "next_research_route_source": "latest_research_handoff",
+                },
+            )
+            self.assertIn(
+                "research_control/design/active_state_bifurcation_policy_v1.md",
+                snapshot["generated_from"],
+            )
             self.assertTrue(snapshot["active_state"]["v15_completed"])
             self.assertFalse(snapshot["active_state"]["v16_completed"])
             self.assertTrue(snapshot["active_state"]["v16_plan_registered"])
@@ -215,6 +249,10 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
             payload = json.loads(output.getvalue())
             self.assertEqual(payload["schema_id"], "compact_current_frontier_v16")
             self.assertEqual(payload["validation"]["latest_required_status"], "PASS")
+            self.assertEqual(
+                payload["active_state_bifurcation"]["next_research_route_source"],
+                "latest_research_handoff",
+            )
             self.assertIn("high_risk_status_cards", payload)
             self.assertEqual(payload["metric_use_ledger"]["forbidden_or_import_row_count"], "2")
 

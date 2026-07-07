@@ -85,6 +85,19 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             ),
             encoding="utf-8",
         )
+        (design / "active_state_bifurcation_policy_v1.md").write_text(
+            "\n".join(
+                [
+                    "<!-- authority: control -->",
+                    "",
+                    "# Active-State Bifurcation Policy",
+                    "",
+                    "Fixture policy source for renderer bifurcation tests.",
+                    "",
+                ]
+            ),
+            encoding="utf-8",
+        )
         (handoffs / "handoff-0001.yaml").write_text(
             "\n".join(
                 [
@@ -190,6 +203,20 @@ class RenderCurrentFrontierTests(unittest.TestCase):
 
             self.assertEqual(payload["active_task_id"], "RT-TEST")
             self.assertEqual(payload["latest_handoff_id"], "handoff-0001")
+            self.assertEqual(
+                payload["active_state_bifurcation"],
+                {
+                    "latest_research_task_id": "RT-TEST",
+                    "latest_research_handoff_id": "handoff-0001",
+                    "latest_research_next_action": "Run one bounded fixture validation packet.",
+                    "latest_project_system_task_id": "none",
+                    "latest_project_system_status": "none",
+                    "latest_project_system_sidecar_task_id": "none",
+                    "latest_project_system_sidecar_status": "none",
+                    "sidecar_supersedes_research_handoff": False,
+                    "next_research_route_source": "latest_research_handoff",
+                },
+            )
             self.assertFalse(payload["v16_completed"])
             self.assertTrue(payload["snapshot_only_not_authority"])
             self.assertFalse(payload["physics_claim_authority"])
@@ -205,6 +232,10 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             )
             self.assertIn(
                 "research_control/design/distance_to_gr_status_aliases.yaml",
+                payload["source_paths"],
+            )
+            self.assertIn(
+                "research_control/design/active_state_bifurcation_policy_v1.md",
                 payload["source_paths"],
             )
             self.assertIn(
@@ -271,6 +302,11 @@ class RenderCurrentFrontierTests(unittest.TestCase):
                 },
             )
             self.assertIn("generated synchronized snapshot only", markdown)
+            self.assertIn("Active-State Bifurcation", markdown)
+            self.assertIn("| Latest research task ID | `RT-TEST` |", markdown)
+            self.assertIn("| Latest project-system task ID | `none` |", markdown)
+            self.assertIn("| Sidecar supersedes research handoff | false |", markdown)
+            self.assertIn("| Next research route source | `latest_research_handoff` |", markdown)
             self.assertIn("| V16 completed | false |", markdown)
             self.assertIn("no `MetricData(E)` adoption", markdown)
             self.assertIn("Validation And Authorization Layers", markdown)

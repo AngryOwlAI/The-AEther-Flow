@@ -1,0 +1,63 @@
+task_id: "RT-20260707-009"
+task_type: "active_state_bifurcation_schema_renderer"
+status: "completed"
+created_at: "2026-07-07T07:59:03Z"
+updated_at: "2026-07-07T07:59:03Z"
+closed_at: "2026-07-07T07:59:03Z"
+parent_task_id: "RT-20260707-008"
+parent_handoff_id: "handoff-0677"
+decision_id: "DDR-20260707-009"
+job_id: "AJ-RT-20260707-009-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260707-009"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates. This P1-T02 renderer packet requires no Gate Chair adoption authority benchmark authority external outreach authority or physics claim-promotion authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T02"
+  plan_task_name: "Active-state bifurcation schema renderer"
+  recommendation_ids:
+    - "V18-R08"
+objective: "Render explicit active_state_bifurcation fields in current-frontier and compact-frontier surfaces while preserving compatibility fields."
+target_derivation_milestone: "none"
+milestone_burden: "Expose latest research handoff and latest project-system sidecar in generated frontier surfaces."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v18_p1_t02_active_state_bifurcation_renderer_completed_no_physics_delta"
+claim_boundary:
+  allowed_scope: "Active-state bifurcation renderer update only"
+  immediate_routing_authority: "handoff-0677 selects P1-T02 after P1-T01 active-state bifurcation policy definition."
+  policy_authority: "research_control/design/active_state_bifurcation_policy_v1.md defines the bifurcation contract implemented by this renderer packet."
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  canonical_ontology_edit_authorized: false
+  source_law_adopted: false
+  general_EqSrc_discharged: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  source_detector_readout_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  external_outreach_authorized: false
+  proof_authority: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "scripts/research_control/render_current_frontier.py"
+  - "scripts/research_control/render_compact_current_frontier_v16.py"
+  - "tests/test_render_current_frontier.py"
+  - "tests/test_render_compact_current_frontier_v16.py"
+  - "research_control/current_frontier.md"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+next_recommended_action: "Run one bounded v18 P1-T03 active-state sidecar validator and tests packet to prevent project-system sidecars from overriding research handoffs."
+notes: "This task completes only P1-T02. It does not execute P1-T03 validator enforcement P2 typed EqSrc work or downstream v18 phases. The renderer surfaces active_state_bifurcation explicitly while compatibility fields remain present."
+documentation_impact_id: "DI-RT-20260707-009-001"

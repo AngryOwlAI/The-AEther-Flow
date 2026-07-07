@@ -26,6 +26,7 @@ METRIC_USE_LEDGER_PATH = "registries/METRIC_USE_LEDGER.csv"
 CURRENT_FRONTIER_PATH = "research_control/current_frontier.md"
 MARKDOWN_REGISTRY_PATH = "registries/MARKDOWN_SOURCE_REGISTRY.csv"
 ACCEPTED_STATUS_CALIBRATION_PATH = "research_control/design/accepted_status_calibration_v1.yaml"
+ACTIVE_STATE_BIFURCATION_POLICY_PATH = "research_control/design/active_state_bifurcation_policy_v1.md"
 DEFAULT_YAML_PATH = "output/compact_current_frontier_v16.yaml"
 DEFAULT_JSON_PATH = "output/compact_current_frontier_v16.json"
 DEFAULT_MARKDOWN_PATH = "wiki/indexes/compact_current_frontier_v16.md"
@@ -59,6 +60,7 @@ YAML_FIELD_ORDER = [
     "schema_id",
     "generated_from",
     "active_state",
+    "active_state_bifurcation",
     "next_route",
     "claim_boundary",
     "high_risk_status_cards",
@@ -433,6 +435,26 @@ def distance_delta(handoff: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def active_state_bifurcation_state(
+    *,
+    active_task_id: str,
+    latest_handoff_id: str,
+    next_action: str,
+) -> dict[str, Any]:
+    no_sidecar = "none"
+    return {
+        "latest_research_task_id": active_task_id,
+        "latest_research_handoff_id": latest_handoff_id,
+        "latest_research_next_action": next_action,
+        "latest_project_system_task_id": no_sidecar,
+        "latest_project_system_status": no_sidecar,
+        "latest_project_system_sidecar_task_id": no_sidecar,
+        "latest_project_system_sidecar_status": no_sidecar,
+        "sidecar_supersedes_research_handoff": False,
+        "next_research_route_source": "latest_research_handoff",
+    }
+
+
 def build_snapshot(repo_root: Path) -> dict[str, Any]:
     program_state = load_control_yaml(repo_root, PROGRAM_STATE_PATH)
     active_task_id = text_value(program_state.get("active_task_id"))
@@ -456,6 +478,11 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
     handoff_summary = text_value(latest_handoff.get("summary"))
     v15_completed = "v16_" in current_status or "v16 " in handoff_summary or "v16" in frontier_text
     v16_completed = bool_value(latest_handoff.get("v16_completed"))
+    next_action = (
+        text_value(latest_handoff.get("next_action"))
+        or text_value(program_state.get("next_recommended_action"))
+        or text_value(selected_route.get("route_id"))
+    )
 
     high_risk_rows = [
         high_risk_row(row_by_burden(ledger_rows, burden_id), frontier_text, calibration)
@@ -473,6 +500,8 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
     ]
     if accepted_status_calibration:
         generated_from.append(ACCEPTED_STATUS_CALIBRATION_PATH)
+    if repo_path(repo_root, ACTIVE_STATE_BIFURCATION_POLICY_PATH).exists():
+        generated_from.append(ACTIVE_STATE_BIFURCATION_POLICY_PATH)
 
     return {
         "schema_id": SCHEMA_ID,
@@ -485,6 +514,11 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
             "v16_completed": v16_completed,
             "v16_plan_registered": markdown_registry_has_object(markdown_rows, V16_PLAN_OBJECT_ID),
         },
+        "active_state_bifurcation": active_state_bifurcation_state(
+            active_task_id=active_task_id,
+            latest_handoff_id=latest_handoff_id,
+            next_action=next_action,
+        ),
         "next_route": {
             "route_id": text_value(selected_route.get("route_id")),
             "role_family": text_value(selected_route.get("role_family")),
@@ -522,6 +556,21 @@ def validate_snapshot(snapshot: dict[str, Any]) -> list[str]:
         errors.append("schema_id mismatch")
     if snapshot.get("authority_warning", {}).get("snapshot_only_not_authority") is not True:
         errors.append("authority warning is missing or false")
+    bifurcation = snapshot.get("active_state_bifurcation")
+    if not isinstance(bifurcation, dict):
+        errors.append("active_state_bifurcation missing")
+    else:
+        active_state = snapshot.get("active_state", {})
+        if bifurcation.get("latest_research_task_id") != active_state.get("active_task_id"):
+            errors.append("active_state_bifurcation latest_research_task_id mismatch")
+        if bifurcation.get("latest_research_handoff_id") != active_state.get("latest_handoff_id"):
+            errors.append("active_state_bifurcation latest_research_handoff_id mismatch")
+        if not text_value(bifurcation.get("latest_research_next_action")):
+            errors.append("active_state_bifurcation latest_research_next_action missing")
+        if bifurcation.get("sidecar_supersedes_research_handoff") is not False:
+            errors.append("active_state_bifurcation must not let sidecar supersede research handoff")
+        if bifurcation.get("next_research_route_source") != "latest_research_handoff":
+            errors.append("active_state_bifurcation next route source mismatch")
     boundary = snapshot.get("claim_boundary", {})
     if boundary.get("physics_claim_authority") is not False:
         errors.append("physics_claim_authority must be false")
@@ -616,6 +665,7 @@ def status_cards_markdown_rows(cards: list[dict[str, Any]]) -> str:
 
 def render_markdown(snapshot: dict[str, Any], yaml_text: str, json_text: str) -> str:
     active = snapshot["active_state"]
+    bifurcation = snapshot["active_state_bifurcation"]
     next_route = snapshot["next_route"]
     metric_use = snapshot["metric_use_ledger"]
     high_risk_rows = snapshot["distance_to_gr"]["high_risk_rows"]
@@ -652,6 +702,16 @@ def render_markdown(snapshot: dict[str, Any], yaml_text: str, json_text: str) ->
         f"- Current status: `{active['current_status']}`\n"
         f"- V15 completed: `{str(active['v15_completed']).lower()}`\n"
         f"- V16 plan registered: `{str(active['v16_plan_registered']).lower()}`\n\n"
+        "## Active-State Bifurcation\n\n"
+        f"- Latest research task: `{bifurcation['latest_research_task_id']}`\n"
+        f"- Latest research handoff: `{bifurcation['latest_research_handoff_id']}`\n"
+        f"- Latest research next action: {bifurcation['latest_research_next_action']}\n"
+        f"- Latest project-system task: `{bifurcation['latest_project_system_task_id']}`\n"
+        f"- Latest project-system status: `{bifurcation['latest_project_system_status']}`\n"
+        f"- Latest project-system sidecar task: `{bifurcation['latest_project_system_sidecar_task_id']}`\n"
+        f"- Latest project-system sidecar status: `{bifurcation['latest_project_system_sidecar_status']}`\n"
+        f"- Sidecar supersedes research handoff: `{str(bifurcation['sidecar_supersedes_research_handoff']).lower()}`\n"
+        f"- Next research route source: `{bifurcation['next_research_route_source']}`\n\n"
         "## Next Route\n\n"
         f"- Route ID: `{next_route['route_id']}`\n"
         f"- Role family: `{next_route['role_family']}`\n"
@@ -770,6 +830,7 @@ def status_payload(snapshot: dict[str, Any], status: str, errors: list[str]) -> 
         "active_task_id": snapshot["active_state"]["active_task_id"],
         "latest_handoff_id": snapshot["active_state"]["latest_handoff_id"],
         "next_route_id": snapshot["next_route"]["route_id"],
+        "active_state_bifurcation": snapshot["active_state_bifurcation"],
         "yaml_path": DEFAULT_YAML_PATH,
         "json_path": DEFAULT_JSON_PATH,
         "markdown_path": DEFAULT_MARKDOWN_PATH,
