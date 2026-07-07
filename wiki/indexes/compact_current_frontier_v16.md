@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260707-021`
-- Latest handoff: `handoff-0690`
-- Current status: `v18_p3_t03_retainh_genh_primitive_boundary_extracted_no_adoption`
+- Active task: `RT-20260707-022`
+- Latest handoff: `handoff-0691`
+- Current status: `v18_p3_t04_eqsrc_family_closure_audited_source_pure_as_written_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260707-021`
-- Latest research handoff: `handoff-0690`
-- Latest research next action: Run one bounded v18 P3-T04 smuggling audit of the family-closure attempt.
+- Latest research task: `RT-20260707-022`
+- Latest research handoff: `handoff-0691`
+- Latest research next action: Run one bounded v18 P3-T05 Refuter stress of the family-closure attempt.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_family_closure_smuggling_audit`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `eqsrc_family_closure_refuter_stress`
+- Role family: `refuter@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Audit the family-closure theorem-or-countermodel attempt for target imports and authority laundering.
+- Milestone burden: Stress the P3 family-closure result against closure removal, invariant weakening, primitive-dependence, and target-import attacks.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `2d7ff27df3b32d8e741d257ce1df421ecf1fb02cf68ed79bbe495af59442c97a`
-- JSON SHA-256: `0297db87f69f88d80a6b42f157a5c619f62b02014f2af5b795c250605008bc2a`
+- YAML SHA-256: `2141d735575458f971cff47d661646730161981ee48fcaa9bba78c11f5f4e81e`
+- JSON SHA-256: `5f18ee8f3cd3d687751b0d7d9d9e4b8c819b20cb3376c7fd33e97fcfe9e56e18`
 
 ## Authority Warning
 

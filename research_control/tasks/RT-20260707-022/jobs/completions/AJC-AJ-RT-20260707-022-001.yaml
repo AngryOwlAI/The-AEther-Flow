@@ -1,0 +1,302 @@
+completion_id: "AJC-AJ-RT-20260707-022-001"
+job_id: "AJ-RT-20260707-022-001"
+task_id: "RT-20260707-022"
+decision_id: "DDR-20260707-022"
+status: "completed"
+completed_at: "2026-07-07T22:19:13Z"
+completed_by_role: "smuggling-auditor@0.2.0--RT-20260707-022"
+source_role_id: "smuggling-auditor"
+source_role_version: "0.2.0"
+plan_task_id: "P3-T04"
+objective_result: "completed"
+summary: "Completed v18 P3-T04 by auditing the P3-T02 conditional EqSrc_T family-closure theorem candidate and missing-inverse countermodel slot for target imports and process-authority imports. The audit result is source_pure_as_written with explicit supplied-not-derived conditionality for H1-H7. No general EqSrc discharge RetainH adoption GenH adoption source-law adoption or Distance-to-GR ledger delta is claimed."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_task_id: "P3-T04"
+  plan_phase_id: "P3"
+  implemented_task_scope: "Smuggling audit of P3 EqSrc family-closure attempt"
+  completed_v18_tasks_this_packet:
+    - "P3-T04"
+  downstream_tasks_not_implemented:
+    - "P3-T05 and later v18 tasks"
+  all_applicable_plan_tasks_proven: false
+artifacts:
+  - "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260707-022/artifacts/child_phys_math_eqsrc_family_closure_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260707-022/artifacts/child_phys_phil_eqsrc_family_closure_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260707-022/artifacts/parent_conflict_review_eqsrc_family_closure_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260707-022/artifacts/parent_fusion_notes_eqsrc_family_closure_smuggling_audit.md"
+  - "research_control/tasks/RT-20260707-022/artifacts/validate_eqsrc_family_closure_smuggling_audit.py"
+  - "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_validation.json"
+  - "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_receipt.md"
+output_paths:
+  - "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260707-022/artifacts/child_phys_math_eqsrc_family_closure_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260707-022/artifacts/child_phys_phil_eqsrc_family_closure_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260707-022/artifacts/parent_conflict_review_eqsrc_family_closure_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260707-022/artifacts/parent_fusion_notes_eqsrc_family_closure_smuggling_audit.md"
+  - "research_control/tasks/RT-20260707-022/artifacts/validate_eqsrc_family_closure_smuggling_audit.py"
+  - "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_validation.json"
+  - "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_receipt.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260707-022/00_TASK.yaml"
+  - "research_control/tasks/RT-20260707-022/DDR-20260707-022.md"
+  - "research_control/tasks/RT-20260707-022/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260707-022/jobs/AJ-RT-20260707-022-001.yaml"
+  - "research_control/tasks/RT-20260707-022/jobs/completions/AJC-AJ-RT-20260707-022-001.yaml"
+  - "research_control/tasks/RT-20260707-022/roles/smuggling-auditor@0.2.0--RT-20260707-022.yaml"
+  - "research_control/handoffs/handoff-0691.yaml"
+  - "research_control/handoffs/handoff-0691.md"
+extra_read_paths:
+  - "research_control/handoffs/handoff-0690.yaml"
+  - "research_control/handoffs/handoff-0690.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  - "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex"
+  - "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_v1.tex"
+  - "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_attempt_receipt.md"
+  - "research_control/tasks/RT-20260707-020/artifacts/parent_fusion_notes_eqsrc_family_closure_attempt.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=712 relationship_row_count=3629 semantic_row_count=712 vault_row_count=712 local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1 --json | exit_code=0 | returned_object_ids=TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"v18 P3-T04 smuggling audit family-closure\" --limit 10 --json | exit_code=0 | returned_object_ids=none"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260707-021 latest_handoff=handoff-0690 next_action=P3-T04"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260707-022/artifacts/validate_eqsrc_family_closure_smuggling_audit.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260707-022/artifacts/validate_eqsrc_family_closure_smuggling_audit.py | exit_code=0 | status=PASS audit_result=source_pure_as_written next_route=P3-T05"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 712
+    relationship_row_count: 3629
+    semantic_row_count: 712
+    vault_row_count: 712
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1"
+      returned_object_ids:
+        - "TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "cc7d8ab6009c378b30fc5d1c8f0fffd5987698557d9e18f579ce8f7b1cd3cb68"
+    - object_id: "TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex"
+      source_hash: "3f644b68b3d81c6892517a2e3a4c7f1a777a9d201bff0716c5d3b4936597d618"
+    - object_id: "TEX-V18-P3-T03-RETAINH-GENH-PRIMITIVE-BOUNDARY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_v1.tex"
+      source_hash: "90ee93c4634052297b65e6f386cf6db4becef73a32cccf3b6b2bdc154023d928"
+validation:
+  route_input_inspection: "PASS"
+  audited_artifact_present: "PASS"
+  parent_child_synthesis: "PASS"
+  audit_result_present: "PASS"
+  theorem_branch_supplied_not_derived_guard: "PASS"
+  countermodel_branch_source_side_guard: "PASS"
+  task_local_validator: "PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS"
+      - "continue_research.py resolved handoff-0690 and P3-T04"
+      - "P3-T04 plan section handoff-0690 P3-T02 theorem artifact and P3-T03 primitive-boundary artifact inspected"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "eqsrc_family_closure_smuggling_audit_v1.tex created"
+      - "audit_result source_pure_as_written"
+      - "H1-H7 supplied-not-derived boundary recorded"
+      - "parent-child synthesis completed"
+      - "task-local validator PASS"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "post-write validators run after this completion receipt is created"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "renderer checks run after this completion receipt is created"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap and validate-only run after this completion receipt is created"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "changed-file claim-language gate run after this completion receipt is created"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260707-022/artifacts/child_phys_math_eqsrc_family_closure_smuggling_audit.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260707-022/artifacts/child_phys_phil_eqsrc_family_closure_smuggling_audit.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260707-022/artifacts/parent_conflict_review_eqsrc_family_closure_smuggling_audit.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Children agreed that the P3-T02 family-closure attempt is source_pure_as_written with H1-H7 supplied rather than derived and no adoption or promotion."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260707-022/artifacts/parent_fusion_notes_eqsrc_family_closure_smuggling_audit.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused artifact audits target and process-authority channels and routes the source-pure conditional result to P3-T05."
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260707-022-001"
+    payload_type: "lemma"
+    name: "H1-H7 source-purity audit lemma"
+    status: "draft/control"
+    summary: "If the P3-T02 theorem candidate is read exactly as a conditional proof from H1-H7 then target and process-authority channels are not premises of its EqSrc_T proof."
+  - payload_id: "NMP-RT-20260707-022-002"
+    payload_type: "dependency_map_update"
+    name: "Supplied-not-derived family-closure boundary"
+    status: "draft/control"
+    summary: "Separated source-pure conditional theorem status from derivation of H1-H7 by current ontology."
+  - payload_id: "NMP-RT-20260707-022-003"
+    payload_type: "obstruction"
+    name: "Audit-pass overread obstruction"
+    status: "draft/control"
+    summary: "Validation registry role handoff commit generated derivatives and local audit pass cannot serve as proof authority or theorem premises."
+physics_progress_status:
+  status: "eqsrc_family_closure_audited_source_pure_as_written_no_promotion"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Audit the family-closure theorem-or-countermodel attempt for target imports and authority laundering."
+  explanation: "The packet audits the P3-T02 conditional family-closure theorem candidate and finds no target or process-authority import as written. It does not change Distance-to-GR ledger status."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "retainh_genh_primitive_boundaries_extracted_no_adoption"
+  new_status: "eqsrc_family_closure_audited_source_pure_as_written_no_promotion"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v18_p3_t05_refuter_stress_of_audited_family_closure_attempt"
+  downstream_still_blocked:
+    - "general EqSrc discharge"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "source_law_adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "matter_coupling_derivation_or_adoption"
+    - "stress_energy_semantics"
+    - "matter_action"
+    - "einstein_equations"
+    - "benchmark_promotion"
+    - "completed_derivation"
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "not_changed"
+  - burden: "Source equivalence EqSrc"
+    status: "conditional_family_closure_audited_source_pure_as_written_no_general_discharge"
+  - burden: "RetainH"
+    status: "not_adopted_candidate_definition_needed_for_H_retention_extension"
+  - burden: "GenH"
+    status: "not_adopted_candidate_definition_needed_for_H_generated_extension"
+  - burden: "ObsLoc_lc"
+    status: "not_changed"
+  - burden: "Resp_lc"
+    status: "not_changed"
+  - burden: "M_src"
+    status: "not_changed"
+  - burden: "g_eff"
+    status: "not_changed"
+  - burden: "matter coupling"
+    status: "blocked_not_changed"
+  - burden: "Einstein equations"
+    status: "blocked_not_changed"
+  - burden: "finite-variation robustness"
+    status: "P3-T05 stress required"
+  - burden: "benchmark promotion"
+    status: "blocked_not_changed"
+  - burden: "Gate Chair status"
+    status: "not_requested"
+  - burden: "current route freeze or hard-fail status"
+    status: "not_frozen"
+eqsrc_family_closure_smuggling_audit_result:
+  audit_result: "source_pure_as_written"
+  primary_obstruction: ""
+  audited_artifact: "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex"
+  theorem_branch_primary: true
+  family_closure_derived_from_current_ontology: false
+  family_closure_supplied_as_conditional_hypotheses: true
+  countermodel_branch_checked: true
+  countermodel_branch_finding: "source_side_as_written"
+  target_import_channels_checked:
+    - "target topology import"
+    - "target smooth atlas import"
+    - "target Lorentzian metric import"
+    - "proper-time normalization import"
+    - "detector protocol import"
+    - "empirical calibration import"
+    - "stress-energy semantics import"
+    - "matter-action import"
+    - "Einstein-equation premise import"
+    - "benchmark behavior import"
+  process_authority_channels_checked:
+    - "validation status as premise"
+    - "registry metadata as theorem premise"
+    - "role identity as theorem premise"
+    - "handoff state as theorem premise"
+    - "commit state as theorem premise"
+    - "generated derivative as theorem premise"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-07"
+  p3_t04_consumes_gate_authority: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable_smuggling_audit_no_gate"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

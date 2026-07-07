@@ -1,0 +1,306 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\EqSrc}{\mathrm{EqSrc}}
+\newcommand{\EqSrcT}{\mathrm{EqSrc}_{T}}
+\newcommand{\RetainH}{\mathrm{RetainH}}
+\newcommand{\GenH}{\mathrm{GenH}}
+\newcommand{\Fsrc}{\mathcal{F}_{\mathrm{src}}}
+\newcommand{\Osrc}{\mathcal{O}_{\mathrm{src}}}
+\newcommand{\Msrc}{\mathcal{M}_{\mathrm{src}}}
+\newcommand{\Isrc}{\mathcal{I}_{\mathrm{src}}}
+\newcommand{\Asrc}{\mathcal{A}_{\mathrm{src}}}
+\newcommand{\Psrc}{\mathcal{P}_{\mathrm{src}}}
+\newcommand{\Nsrc}{\mathcal{N}_{\mathrm{src}}}
+\newcommand{\Csrc}{C_{\mathrm{src}}}
+\newcommand{\NoTarget}{\mathsf{NoTarget}}
+
+\title{EqSrc Family-Closure Smuggling Audit v1}
+\author{Smuggling Auditor Packet RT-20260707-022}
+\date{2026-07-07}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v18 P3-T04 as a draft/control smuggling audit. It
+audits the P3-T02 conditional \(\EqSrcT\) family-closure theorem candidate and
+its missing-inverse countermodel slot for target imports and authority
+laundering.
+
+The audit result is:
+\[
+  \texttt{source\_pure\_as\_written}.
+\]
+
+\begin{verbatim}
+audit_result: source_pure_as_written
+family_closure_status: supplied_as_conditional_H1_H7_hypotheses_not_derived
+countermodel_audit: source_side_as_written
+next_route: P3-T05
+\end{verbatim}
+
+This result has no proof-promotion authority. It does not discharge general
+\(\EqSrc\), adopt \(\RetainH\), adopt \(\GenH\), adopt a source law, edit
+canonical ontology, adopt \(\mathrm{MetricData}(E)\), expand
+\(g_{\mathrm{eff}}\), derive matter coupling, derive Einstein equations,
+promote a benchmark, issue a Gate Chair verdict, authorize external outreach,
+or claim completed derivation.
+
+\section{Artifact Under Audit}
+
+The audited artifact is:
+\begin{quote}
+\texttt{research\_control/tasks/RT-20260707-020/artifacts/eqsrc\_family\_closure\_theorem\_or\_countermodel\_v1.tex}.
+\end{quote}
+
+The audit also inspects the primitive-boundary extraction:
+\begin{quote}
+\texttt{research\_control/tasks/RT-20260707-021/artifacts/retainh\_genh\_primitive\_boundary\_v1.tex}.
+\end{quote}
+
+The P3-T02 primary branch is
+\texttt{family\_closure\_theorem\_candidate\_supplied}. It states that a
+declared source family \(\Fsrc\) satisfies hypotheses H1--H7 and then proves
+reflexivity, symmetry, and transitivity for \(\EqSrcT\). The P3-T03 artifact
+records that \(\RetainH\) and \(\GenH\) are not required for the already
+declared closed-family theorem and remain candidate-definition-needed for
+\(H\)-retention or \(H\)-generated extensions.
+
+\section{Audit Method}
+
+For each possible smuggling channel, the audit asks whether the theorem branch
+or countermodel branch uses that channel as a premise. Mentions inside
+explicit forbidden-premise guards count as guards, not as imports.
+
+The audit distinguishes three statuses:
+\begin{itemize}[leftmargin=*]
+  \item \texttt{source\_pure\_as\_written}: no target or process-authority
+  import is detected in the written artifact.
+  \item \texttt{repair\_required}: a premise is ambiguous enough that the
+  artifact must be rewritten before stress.
+  \item \texttt{fails\_closed}: the artifact depends on a forbidden target or
+  process-authority premise.
+\end{itemize}
+
+\section{Theorem Branch Audit: Supplied versus Derived}
+
+The theorem branch is source-pure as written because its proof only uses the
+following declared source-side hypotheses:
+\begin{enumerate}[label=(H\arabic*)]
+  \item source-only object domain;
+  \item identity closure;
+  \item inverse closure;
+  \item composition closure;
+  \item invariant-ledger stability;
+  \item source-only comparison;
+  \item no-target guard.
+\end{enumerate}
+
+The key audit finding is not that family closure has been derived from current
+ontology. The key finding is that family closure was supplied conditionally:
+
+\begin{verbatim}
+family_closure_derived_from_current_ontology: false
+family_closure_supplied_as_conditional_hypotheses: true
+H1_H7_status: supplied_not_derived
+\end{verbatim}
+
+Therefore the theorem branch is source-pure as a conditional theorem
+candidate, but it cannot be read as a general \(\EqSrc\) discharge. A later
+packet must still stress H1--H7, especially inverse closure, composition
+closure, ledger stability, and no-target robustness.
+
+\section{Countermodel Branch Audit}
+
+The required countermodel slot in P3-T02 is the missing-inverse countermodel.
+It uses a finite source object set \(\{A,B\}\), a source morphism
+\(f:A\to B\), identity morphisms, and a source comparison rule that blocks
+\(\Csrc(B,A)\) because no source-side inverse witness is available.
+
+The countermodel branch is:
+
+\begin{verbatim}
+countermodel_branch_checked: true
+countermodel_branch_finding: source_side_as_written
+global_no_go_claimed: false
+\end{verbatim}
+
+It does not import target topology, target metric, detector protocol,
+empirical calibration, stress-energy, matter action, Einstein equations,
+benchmark behavior, or process authority. It also does not prove global
+impossibility. It only records that inverse closure is a real hypothesis.
+
+\section{Target-Import Audit Matrix}
+
+\begin{longtable}{p{0.27\linewidth}p{0.17\linewidth}p{0.48\linewidth}}
+\toprule
+Audit target & Finding & Reason \\
+\midrule
+target topology import & not detected & The theorem and countermodel use source objects, source morphisms, and source comparison data only. \\
+target smooth atlas import & not detected & No target charts, transition maps, differentiability, or atlas compatibility condition is a premise. \\
+target Lorentzian metric import & not detected & No metric tensor, signature, connection, curvature, cone, or geodesic structure supplies the proof. \\
+proper-time normalization import & not detected & No proper-time clock or worldline normalization enters H1--H7. \\
+detector protocol import & not detected & Detector protocol language is absent as a premise and remains a forbidden downstream channel. \\
+empirical calibration import & not detected & No measurement table, calibration law, or empirical response supplies source equivalence. \\
+stress-energy semantics import & not detected & No stress-energy tensor, density, pressure, flux, or energy condition is used. \\
+matter-action import & not detected & No matter action or Lagrangian density is used. \\
+Einstein-equation premise import & not detected & No Einstein tensor, field equation, or field-equation residual is used. \\
+benchmark behavior import & not detected & Exact-GR benchmark behavior is not a theorem premise. \\
+\bottomrule
+\end{longtable}
+
+\section{Process-Authority Audit Matrix}
+
+\begin{longtable}{p{0.29\linewidth}p{0.17\linewidth}p{0.46\linewidth}}
+\toprule
+Audit target & Finding & Reason \\
+\midrule
+validation status as premise & not detected & Validator passes are operational receipts only and do not establish H1--H7. \\
+registry metadata as theorem premise & not detected & Registry rows route and identify artifacts; they do not make source morphisms exist. \\
+role identity as theorem premise & not detected & The authoring role constrains execution but is not a mathematical input. \\
+handoff state as theorem premise & not detected & Handoffs select packets and preserve routing; they do not prove family closure. \\
+commit state as theorem premise & not detected & Commits preserve provenance only. \\
+generated derivative as theorem premise & not detected & Wiki notes, indexes, semantic extracts, and local memory remain derivative retrieval layers. \\
+\bottomrule
+\end{longtable}
+
+\section{Family-Closure Source-Purity Lemma}
+
+\textbf{Lemma.} If the P3-T02 theorem candidate is read exactly as written,
+with H1--H7 treated as source-side conditional hypotheses and with
+\(\NoTarget\) active, then target topology, target smooth atlas structure,
+target Lorentzian metric structure, proper-time normalization, detector
+protocol, empirical calibration, stress-energy semantics, matter-action
+semantics, Einstein-equation premises, benchmark behavior, validator status,
+registry metadata, role identity, handoff state, commit state, and generated
+derivatives are not premises of the \(\EqSrcT\) family-closure proof.
+
+\textbf{Reasoning.} Reflexivity uses H1, H2, H5, H6, and H7. Symmetry uses H3,
+H5, H6, and H7. Transitivity uses H4, H5, H6, and H7. Each hypothesis is
+stated as source-side in the artifact. The proof does not appeal to a target
+metric, target atlas, detector protocol, empirical calibration, field
+equation, benchmark result, validator, registry row, role, handoff, commit, or
+generated derivative. Therefore the theorem branch passes the smuggling audit
+as a conditional source theorem candidate.
+
+\section{Audit Result}
+
+The audit result is:
+
+\begin{center}
+\texttt{source\_pure\_as\_written}
+\end{center}
+
+The exact scope is a hidden-import screen for the P3-T02 conditional theorem
+candidate and missing-inverse countermodel slot. The allowed use is routing to
+P3-T05 Refuter stress. The blocked overread is any claim that current ontology
+derives H1--H7, any general \(\EqSrc\) discharge, and any RetainH or GenH
+adoption.
+
+\section{Residual Risks and Repairs}
+
+No repair is required before P3-T05. The stress packet should nevertheless
+target the strongest remaining pressure points:
+\begin{itemize}[leftmargin=*]
+  \item inverse closure can fail when a source-side inverse witness is absent;
+  \item composition closure can fail when composites leave \(\Msrc\);
+  \item ledger stability can fail under family variation;
+  \item \(\RetainH\) remains only a candidate-definition-needed pressure for
+  \(H\)-retention extensions;
+  \item \(\GenH\) remains only a candidate-definition-needed pressure for
+  \(H\)-generated family extensions;
+  \item a local audit pass can be overread as proof authority unless P3-T05
+  stress preserves the supplied-not-derived boundary.
+\end{itemize}
+
+\section{Distance-to-GR Effect}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit. \\
+Source equivalence EqSrc & Conditional family-closure theorem candidate audited source-pure as written; no general EqSrc discharge. \\
+RetainH & Not adopted; still not required for the closed-family theorem and candidate-definition-needed for H-retention extensions. \\
+GenH & Not adopted; still not required for the closed-family theorem and candidate-definition-needed for H-generated extensions. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Unchanged. \\
+M\_src & Unchanged. \\
+g\_eff & Unchanged; no MetricData(E) or metric-scope expansion. \\
+matter coupling & Blocked and unchanged; no coupling derivation or adoption. \\
+Einstein equations & Blocked and unchanged; no field-equation derivation. \\
+finite-variation robustness & Unchanged; P3-T05 stress remains required. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion. \\
+Gate Chair status & Unchanged; no Gate Chair verdict. \\
+current route freeze or hard-fail status & Not frozen; route continues to P3-T05 stress. \\
+\bottomrule
+\end{longtable}
+
+\begin{verbatim}
+distance_to_gr_delta:
+  changed: false
+  effect: no_distance_delta
+  ledger_row_updated: false
+  reason: P3-T04 is a hidden-import audit only. It does not prove H1-H7 from
+    current ontology and does not adopt EqSrc RetainH GenH or any downstream
+    physics claim.
+\end{verbatim}
+
+\section{Forbidden Conclusions}
+
+This audit result must not be read as any of the following:
+\begin{itemize}[leftmargin=*]
+  \item canonical ontology edit;
+  \item general \(\EqSrc\) discharge;
+  \item \(\RetainH\) adoption;
+  \item \(\GenH\) adoption;
+  \item source-law adoption;
+  \item source detector/readout semantics adoption;
+  \item \(\mathrm{MetricData}(E)\) adoption;
+  \item \(g_{\mathrm{eff}}\) adoption or scope expansion;
+  \item matter-coupling derivation or adoption;
+  \item stress-energy semantics, stress-energy tensor, or matter action;
+  \item Einstein-equation derivation;
+  \item benchmark promotion;
+  \item Gate Chair verdict;
+  \item external outreach;
+  \item completed derivation;
+  \item future source-extension impossibility;
+  \item global no-go conclusion.
+\end{itemize}
+
+\section{Next Route}
+
+The logical next route is one bounded v18 P3-T05 Refuter stress packet against
+the audited family-closure attempt. The stress packet should target inverse
+closure removal, composition closure removal, ledger-instability witnesses,
+RetainH and GenH primitive-dependence pressure, no-target-guard weakening, and
+overread from local source-purity to theorem or adoption status.
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan continue task v18} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v18.md}.
+
+The AEther-Flow Research Project. (2026b). \emph{EqSrc family-closure theorem
+or countermodel v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260707-020/artifacts/eqsrc\_family\_closure\_theorem\_or\_countermodel\_v1.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{RetainH and GenH
+primitive-boundary extraction v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260707-021/artifacts/retainh\_genh\_primitive\_boundary\_v1.tex}.
+
+The AEther-Flow Research Project. (2026d). \emph{Handoff 0690} [Internal
+research-control handoff].
+\texttt{research\_control/handoffs/handoff-0690.yaml}.
+
+\end{document}

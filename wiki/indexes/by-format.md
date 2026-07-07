@@ -288,6 +288,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-020-PARENT-FUSION-NOTES-EQSRC-FAMILY-CLOSURE-ATTEMPT` `research_control/tasks/RT-20260707-020/artifacts/parent_fusion_notes_eqsrc_family_closure_attempt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-021-PARENT-FUSION-NOTES-RETAINH-GENH-PRIMITIVE-BOUNDARY` `research_control/tasks/RT-20260707-021/artifacts/parent_fusion_notes_retainh_genh_primitive_boundary.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-021-RETAINH-GENH-PRIMITIVE-BOUNDARY-RECEIPT` `research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260707-022-EQSRC-FAMILY-CLOSURE-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260707-022-PARENT-FUSION-NOTES-EQSRC-FAMILY-CLOSURE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260707-022/artifacts/parent_fusion_notes_eqsrc_family_closure_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -725,6 +727,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V18-P2-T05-SOURCE-EQUIVALENCE-TYPED-OBJECT-REFUTER-STRESS-V1` `research_control/tasks/RT-20260707-017/artifacts/source_equivalence_typed_object_refuter_stress_v1.tex`
 - `TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1` `research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex`
 - `TEX-V18-P3-T03-RETAINH-GENH-PRIMITIVE-BOUNDARY-V1` `research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_v1.tex`
+- `TEX-V18-P3-T04-EQSRC-FAMILY-CLOSURE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_v1.tex`
 
 ## wiki_markdown
 
@@ -1009,6 +1012,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-020-PARENT-FUSION-NOTES-EQSRC-FAMILY-CLOSURE-ATTEMPT` `wiki/markdown/md-research-control-tasks-rt-20260707-020-parent-fusion-notes-eqsrc-family-closure-attempt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-021-PARENT-FUSION-NOTES-RETAINH-GENH-PRIMITIVE-BOUNDARY` `wiki/markdown/md-research-control-tasks-rt-20260707-021-parent-fusion-notes-retainh-genh-primitive-boundary.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-021-RETAINH-GENH-PRIMITIVE-BOUNDARY-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260707-021-retainh-genh-primitive-boundary-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-022-EQSRC-FAMILY-CLOSURE-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260707-022-eqsrc-family-closure-smuggling-audit-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-022-PARENT-FUSION-NOTES-EQSRC-FAMILY-CLOSURE-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260707-022-parent-fusion-notes-eqsrc-family-closure-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1440,3 +1445,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V18-P2-T05-SOURCE-EQUIVALENCE-TYPED-OBJECT-REFUTER-STRESS-V1` `wiki/tex/tex-v18-p2-t05-source-equivalence-typed-object-refuter-stress-v1.md`
 - `WIKI-TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1` `wiki/tex/tex-v18-p3-t02-eqsrc-family-closure-theorem-or-countermodel-v1.md`
 - `WIKI-TEX-V18-P3-T03-RETAINH-GENH-PRIMITIVE-BOUNDARY-V1` `wiki/tex/tex-v18-p3-t03-retainh-genh-primitive-boundary-v1.md`
+- `WIKI-TEX-V18-P3-T04-EQSRC-FAMILY-CLOSURE-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v18-p3-t04-eqsrc-family-closure-smuggling-audit-v1.md`
