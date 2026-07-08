@@ -1,0 +1,21 @@
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+task_id: "RT-20260708-011"
+job_id: "AJ-RT-20260708-011-001"
+artifact_under_audit: "research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex"
+audit_result: "source_pure_as_written"
+ontological_assessment:
+  source_side_candidate_remains_draft_control: true
+  detector_semantics_adopted: false
+  empirical_detector_protocol_authorized: false
+  target_metric_authorized: false
+  process_authority_used_as_physics: false
+  benchmark_status_changed: false
+  matter_coupling_derived: false
+reasoning: "The candidate's detector/readout language is explicitly source-side and task-local. The words readable, detector, and compatible are guarded against empirical, target-metric, benchmark, and process-authority overread."
+blocked_overreads:
+  - "audit pass as detector/readout semantics adoption"
+  - "audit pass as matter-coupling derivation"
+  - "audit pass as benchmark promotion"
+  - "validator or registry status as proof authority"
+next_route: "P5-T06"

@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `d7343770ec72393fc1f0df26ee2a69a67cf17e4f35453ff2eb2506ba8b440220`
-- Generated-at source timestamp: `2026-07-08T05:40:00Z`
-- Row count: `844`
+- Source fingerprint: `99d6fdc50b77d9c2ecd9c8242201f8576dd39798e6c4a0d5a1e4e2f46c01fc20`
+- Generated-at source timestamp: `2026-07-08T06:21:30Z`
+- Row count: `845`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260708-011|RT-20260708-010|2026-07-08T06:21:30Z|2026-07-08T06:21:30Z|source_detector_readout_smuggling_audit|completed|matter_coupling|Audit SourceReadoutCandidate_EStar_v1 for empirical detector, proper-time, target-metric, benchmark, stress-energy, matter-action, and process-authority smuggling.|smuggling-auditor@0.2.0|false|false|8|Run one bounded v18 P5-T06 source detector/readout Refuter stress packet against SourceReadoutCandidate_EStar_v1.|PASS|research_control/tasks/RT-20260708-011/jobs/completions/AJC-AJ-RT-20260708-011-001.yaml|
 |RT-20260708-010|RT-20260708-009|2026-07-08T05:40:00Z|2026-07-08T05:40:00Z|source_detector_readout_candidate_or_obstruction|completed|matter_coupling|Construct one source-side detector/readout candidate or record one precise obstruction.|candidate-constructor@0.2.0|false|false|8|Run one bounded v18 P5-T05 source detector/readout smuggling audit packet against SourceReadoutCandidate_EStar_v1.|PASS|research_control/tasks/RT-20260708-010/jobs/completions/AJC-AJ-RT-20260708-010-001.yaml|
 |RT-20260708-009|RT-20260708-008|2026-07-08T05:00:00Z|2026-07-08T05:00:00Z|source_detector_readout_candidate_setup|completed|matter_coupling|Set up one bounded source detector/readout candidate or obstruction packet.|candidate-constructor@0.2.0|false|false|8|Run one bounded v18 P5-T04 source detector/readout candidate-or-obstruction construction packet.|PASS|research_control/tasks/RT-20260708-009/jobs/completions/AJC-AJ-RT-20260708-009-001.yaml|
 |RT-20260708-008|RT-20260708-007|2026-07-08T04:36:00Z|2026-07-08T04:36:00Z|source_detector_readout_dag_ledger_question_setup|completed|matter_coupling|Prepare a protected question for adding source_detector_readout_semantics to DAG or ledger surfaces without performing unauthorized promotion.|project-control-maintainer@0.2.0|false|false|6|Run one bounded v18 P5-T03 source detector/readout candidate setup packet.|PASS|research_control/tasks/RT-20260708-008/jobs/completions/AJC-AJ-RT-20260708-008-001.yaml|

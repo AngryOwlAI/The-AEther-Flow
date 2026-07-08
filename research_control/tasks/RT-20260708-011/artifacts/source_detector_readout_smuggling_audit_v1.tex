@@ -1,0 +1,340 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\AuditVerdict}{\mathsf{source\_pure\_as\_written}}
+\newcommand{\PassAbsent}{\mathsf{pass\_absent}}
+\newcommand{\FailDetected}{\mathsf{fail\_detected}}
+\newcommand{\EStar}{E_{\ast}}
+\newcommand{\SMScope}{\mathrm{SMScope}}
+\newcommand{\ReadableSrc}{\mathrm{Readable}_{\mathrm{src}}}
+\newcommand{\ReadoutSrc}{\mathrm{Readout}_{\mathrm{src}}}
+\newcommand{\DetSrc}{\mathrm{Det}_{\mathrm{src}}}
+\newcommand{\TokR}{\mathrm{Tok}_{R}}
+\newcommand{\CertR}{\mathrm{Cert}_{R}}
+\newcommand{\FailR}{\mathrm{Fail}_{R}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\AuditSet}{\mathcal{I}_{R}}
+\newcommand{\AuditMap}{A_{R}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Source Detector/Readout Smuggling Audit v1}
+\author{Smuggling Auditor Packet RT-20260708-011}
+\date{2026-07-08}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v18 P5-T05. It audits the draft/control source
+detector/readout candidate
+\[
+  \mathrm{SourceReadoutCandidate\_EStar\_v1}
+\]
+from \texttt{RT-20260708-010}. The audited object is the finite source-side
+tuple
+\[
+  \DetSrc(\EStar)=
+  (\SMScope(\EStar),\ReadableSrc(\EStar),\ReadoutSrc(\EStar),
+   \TokR(\EStar),\CertR(\EStar),\FailR(\EStar),
+   \texttt{draft\_control\_candidate}).
+\]
+
+This is a hidden-import and status-laundering audit only. It is not
+\(\DetSrc\) adoption, not \(\ReadoutSrc\) adoption, not detector semantics,
+not source detector/readout semantics adoption, not empirical detector
+protocol authority, not proper-time normalization, not target metric
+authority, not a source law, not coupling-law adoption, not matter-coupling
+derivation or adoption, not stress-energy semantics, not a stress-energy
+tensor, not a matter action, not Einstein equations, not benchmark promotion,
+not proof authority, not a Gate Chair verdict, and not completed derivation.
+
+\section{Audited Object}
+
+The candidate defines the finite source situation
+\[
+  \EStar=\{\epsilon_0,\epsilon_1\},
+\]
+the source domain \(\SMScope(\EStar)\), the readable source-record family
+\[
+  \ReadableSrc(\EStar)=\{s_0,s_1,s_{01}\},
+\]
+the finite source readout tokens
+\[
+  \TokR(\EStar)=\{\rho^R_0,\rho^R_1,\rho^R_{01},\BottomSrc\},
+\]
+and the partial source readout map
+\[
+  \ReadoutSrc(\EStar)(s_0)=\rho^R_0,\qquad
+  \ReadoutSrc(\EStar)(s_1)=\rho^R_1,\qquad
+  \ReadoutSrc(\EStar)(s_{01})=\rho^R_{01}.
+\]
+It also declares \(\CertR(\EStar)\), \(\FailR(\EStar)\), a no-target
+certificate, and a limited projection-level compatibility statement with
+\(\mathrm{SourceCouplingLawCandidate\_EStar\_v1}\).
+
+The audit reads registry rows, validator status, role identity, handoff state,
+checkpoint state, commit state, wiki notes, semantic extracts, local memory,
+and generated derivatives only as provenance or process evidence. None of
+them is permitted to function as a theorem premise, source premise, or
+physics-promotion authority.
+
+\section{Audit Criteria}
+
+The audit checks whether the candidate obtains its local source/readout status
+by importing any forbidden authority:
+
+\begin{enumerate}[label=(\arabic*)]
+  \item empirical detector protocol, empirical calibration, detector readout,
+        clocks, rods, or observed detector response as source premises;
+  \item proper-time normalization;
+  \item target topology, target atlas, target differentiable structure,
+        target Lorentzian metric, target metric behavior, or exact-GR
+        benchmark behavior;
+  \item stress-energy semantics, stress-energy tensor, matter action, or
+        Einstein-equation premise;
+  \item generated derivative, registry metadata, validator status, role
+        identity, handoff or approval status, local cache state, file order,
+        checkpoint, or commit state as proof authority;
+  \item the candidate or audit pass treated as \(\DetSrc\),
+        \(\ReadoutSrc\), detector-semantics, coupling-law, or
+        matter-coupling adoption.
+\end{enumerate}
+
+\section{Finite Audit Map}
+
+\begin{definition}[Readout audit classes]
+Define the finite audit-class set
+\[
+\begin{aligned}
+  \AuditSet=\{&
+  I_{\mathrm{emp}}, I_{\mathrm{cal}}, I_{\tau}, I_{\mathrm{top}},
+  I_{\mathrm{atl}}, I_{g}, I_{\mathrm{bench}}, I_{T},
+  I_{\mathrm{act}}, I_{\mathrm{EFE}}, I_{\mathrm{proc}},
+  I_{\mathrm{adopt}}\}.
+\end{aligned}
+\]
+The class meanings are, respectively: empirical detector protocol import,
+empirical calibration import, proper-time import, target topology import,
+target atlas import, target metric import, benchmark-success import,
+stress-energy semantics import, matter-action import, Einstein-equation
+premise import, process-authority import, and candidate-as-adoption.
+\end{definition}
+
+\begin{definition}[Audit verdict map]
+Define
+\[
+  \AuditMap:\AuditSet\to\{\PassAbsent,\FailDetected\}
+\]
+by
+\[
+\begin{array}{c|c}
+\text{audit class} & \AuditMap \\
+\midrule
+I_{\mathrm{emp}} & \PassAbsent\\
+I_{\mathrm{cal}} & \PassAbsent\\
+I_{\tau} & \PassAbsent\\
+I_{\mathrm{top}} & \PassAbsent\\
+I_{\mathrm{atl}} & \PassAbsent\\
+I_{g} & \PassAbsent\\
+I_{\mathrm{bench}} & \PassAbsent\\
+I_T & \PassAbsent\\
+I_{\mathrm{act}} & \PassAbsent\\
+I_{\mathrm{EFE}} & \PassAbsent\\
+I_{\mathrm{proc}} & \PassAbsent\\
+I_{\mathrm{adopt}} & \PassAbsent
+\end{array}
+\]
+for the candidate as written.
+\end{definition}
+
+\begin{lemma}[Finite source/readout audit verdict]
+For \(\DetSrc(\EStar)\) as written in P5-T04, every audited import class maps
+to \(\PassAbsent\). Therefore the P5-T05 verdict is
+\[
+  \AuditVerdict .
+\]
+\end{lemma}
+
+\begin{proof}
+The domain of \(\DetSrc(\EStar)\) is \(\SMScope(\EStar)\), a finite source
+scope. The readable records are source records with source certificates. The
+readout interface maps source-readable records to source tokens only. The
+certificate family contains task-local source identity, transport,
+invariance, restriction, ambiguity, no-target, and limited compatibility
+certificates. The fail-closed family maps missing, malformed, ambiguous,
+target-importing, empirical-importing, proper-time-importing, downstream, and
+process-authority branches to \(\BottomSrc\). The no-target certificate says
+that empirical detector protocol, proper-time normalization, target topology,
+target atlas, target metric, benchmark behavior, stress-energy semantics,
+matter action, Einstein equations, registry or validator theorem use, role or
+handoff authority, generated derivatives, local caches, file order,
+checkpoints, and commits are absent as premises. The candidate status is
+\(\texttt{draft\_control\_candidate}\) and is explicitly not detector/readout
+semantics adoption. Hence no audited import class is used as a premise by the
+candidate as written.
+\end{proof}
+
+\section{Target-Import Findings}
+
+\begin{longtable}{p{0.31\linewidth}p{0.18\linewidth}p{0.43\linewidth}}
+\toprule
+Audit target & Finding & Reason \\
+\midrule
+empirical detector protocol import & not detected & The readout map is from certified source records to source tokens, not from observed detector responses or laboratory protocols. \\
+empirical calibration import & not detected & No calibration table, measurement law, detector click, rod, clock, or empirical response curve supplies a source premise. \\
+proper-time normalization import & not detected & Proper time appears only as a forbidden import routed to \(\BottomSrc\); it does not normalize the source readout tokens. \\
+target topology import & not detected & The finite source scope does not require a target topological space. \\
+target atlas import & not detected & No target charts, transition maps, differentiability, or smooth compatibility condition defines the readout relation. \\
+target Lorentzian metric import & not detected & No Lorentzian signature, metric tensor, connection, curvature, cone, or geodesic structure supplies the readout map. \\
+benchmark behavior import & not detected & Exact-GR benchmark recovery is not used as evidence for the readout candidate. \\
+stress-energy semantics import & not detected & No stress-energy tensor, density, pressure, flux, or energy condition is used. \\
+matter-action import & not detected & No matter action, Lagrangian density, or variational stress-energy construction is used. \\
+Einstein-equation premise import & not detected & No Einstein tensor, field equation, or field-equation residual is a premise. \\
+\bottomrule
+\end{longtable}
+
+\section{Process-Authority Findings}
+
+\begin{longtable}{p{0.31\linewidth}p{0.18\linewidth}p{0.43\linewidth}}
+\toprule
+Audit target & Finding & Reason \\
+\midrule
+validation status as premise & not detected & Validator passes are operational receipts only and do not make the source readout relation true. \\
+registry metadata as theorem premise & not detected & Registry rows identify and route artifacts; they do not supply source records or readout tokens. \\
+role identity as theorem premise & not detected & The authoring or auditing role constrains execution but is not a mathematical input. \\
+handoff or approval state as premise & not detected & Handoffs and approvals select workflow routes; they do not prove source readability. \\
+checkpoint or commit state as premise & not detected & Commits preserve provenance only and are not part of \(\DetSrc(\EStar)\). \\
+generated derivative as premise & not detected & Wiki notes, indexes, semantic extracts, and local memory remain derivative retrieval layers. \\
+file order as premise & not detected & File order does not enter \(\SMScope(\EStar)\), \(\ReadableSrc(\EStar)\), or \(\ReadoutSrc(\EStar)\). \\
+\bottomrule
+\end{longtable}
+
+\section{Adoption-Laundering Finding}
+
+The candidate's phrase \(\DetSrc(\EStar)\) names a task-local source detector
+record candidate, not adopted detector semantics. The phrase
+\(\ReadoutSrc(\EStar)\) names a finite source readout map, not adopted readout
+semantics. The compatibility statement with
+\(\mathrm{SourceCouplingLawCandidate\_EStar\_v1}\) is limited to
+projection-level draft/control compatibility and does not adopt the coupling
+candidate or derive matter coupling.
+
+\section{Audit Result}
+
+\begin{verbatim}
+source_detector_readout_smuggling_audit_result:
+  result_type: "source_pure_as_written"
+  audited_candidate: "SourceReadoutCandidate_EStar_v1"
+  audited_candidate_path: "research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex"
+  empirical_detector_protocol_import: "pass_absent"
+  empirical_calibration_import: "pass_absent"
+  proper_time_import: "pass_absent"
+  target_topology_import: "pass_absent"
+  target_atlas_import: "pass_absent"
+  target_metric_import: "pass_absent"
+  benchmark_success_import: "pass_absent"
+  stress_energy_semantics_import: "pass_absent"
+  matter_action_import: "pass_absent"
+  einstein_equation_premise_import: "pass_absent"
+  process_authority_import: "pass_absent"
+  candidate_as_adoption: "pass_absent"
+  blocking_defects: []
+  detector_readout_semantics_adopted: false
+  Det_src_adopted: false
+  Readout_src_adopted: false
+  source_law_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  next_required_role: "refuter"
+  selected_next_plan_task_id: "P5-T06"
+\end{verbatim}
+
+\section{Required P5-T06 Stress Targets}
+
+The next Refuter packet should stress at least:
+
+\begin{enumerate}[label=(\alph*)]
+  \item readout-interface erasure;
+  \item source-record removal;
+  \item replacement of source readout by empirical detector protocol;
+  \item replacement of source-status markers by proper-time normalization;
+  \item target metric use to define source readout response;
+  \item benchmark behavior used as evidence for source readability;
+  \item finite/local witness perturbation of \(\SMScope(\EStar)\),
+        \(\ReadableSrc(\EStar)\), \(\ReadoutSrc(\EStar)\), \(\CertR(\EStar)\),
+        and \(\FailR(\EStar)\);
+  \item failure of limited compatibility with
+        \(\mathrm{SourceCouplingLawCandidate\_EStar\_v1}\);
+  \item placeholder or draft/control status treated as adoption;
+  \item process-authority pressure from validators, registries, roles,
+        handoffs, generated derivatives, local caches, approvals,
+        checkpoints, commits, or file order.
+\end{enumerate}
+
+\section{Distance-To-GR Status}
+
+The Distance-to-GR ledger is unchanged. The matter-coupling burden remains
+open. This packet supplies a finite audit classification only. It does not
+discharge detector/readout semantics, matter coupling, stress-energy
+semantics, matter action, Einstein equations, benchmark promotion, Gate Chair
+status, or completed derivation.
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}
+This audit result is not \(\DetSrc\) adoption, \(\ReadoutSrc\) adoption,
+detector semantics, source detector/readout semantics adoption, or empirical
+detector protocol authority.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+This audit result is not a source law, not a coupling law, not
+matter-coupling derivation, not stress-energy semantics, not a stress-energy
+tensor, not a matter action, not Einstein equations, not benchmark promotion,
+not proof authority, not a Gate Chair verdict, and not completed derivation.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+The local source-purity result does not prove that the candidate survives
+P5-T06 Refuter stress, does not prove a general source detector/readout law,
+and does not make future source-extension or repair routes impossible.
+\end{nonconclusion}
+
+\section{Next Route}
+
+The logical next route is one bounded v18 P5-T06 Refuter stress packet against
+\(\mathrm{SourceReadoutCandidate\_EStar\_v1}\). The stress packet should
+attempt to break or collapse the source readout interface without importing
+protected target or process authority.
+
+\section{APA 7 Source Materials}
+
+The Aether-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan Continue Task v18} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v18.md}.
+
+The Aether-Flow Research Project. (2026b). \emph{Source detector/readout
+semantics burden v1} [Internal control note].
+\texttt{research\_control/design/source\_detector\_readout\_semantics\_burden\_v1.md}.
+
+The Aether-Flow Research Project. (2026c). \emph{Source detector/readout
+candidate \(SourceReadoutCandidate\_EStar\_v1\)} [Research-control TeX
+artifact].
+\texttt{research\_control/tasks/RT-20260708-010/artifacts/source\_detector\_readout\_candidate\_v1.tex}.
+
+The Aether-Flow Research Project. (2026d). \emph{Handoff 0703}
+[Internal research-control handoff].
+\texttt{research\_control/handoffs/handoff-0703.yaml}.
+
+\end{document}

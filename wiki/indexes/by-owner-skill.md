@@ -458,6 +458,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-009-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-CANDIDATE-SETUP` `wiki/markdown/md-research-control-tasks-rt-20260708-009-parent-fusion-notes-source-detector-readout-candidate-setup.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-009-SOURCE-DETECTOR-READOUT-CANDIDATE-SETUP-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-009-source-detector-readout-candidate-setup-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-010-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-CANDIDATE` `wiki/markdown/md-research-control-tasks-rt-20260708-010-parent-fusion-notes-source-detector-readout-candidate.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-011-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260708-011-parent-fusion-notes-source-detector-readout-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -892,6 +893,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V18-P3-T04-EQSRC-FAMILY-CLOSURE-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v18-p3-t04-eqsrc-family-closure-smuggling-audit-v1.md`
 - `WIKI-TEX-V18-P3-T05-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS-V1` `wiki/tex/tex-v18-p3-t05-eqsrc-family-closure-refuter-stress-v1.md`
 - `WIKI-TEX-V18-P5-T04-SOURCE-DETECTOR-READOUT-CANDIDATE` `wiki/tex/tex-v18-p5-t04-source-detector-readout-candidate.md`
+- `WIKI-TEX-V18-P5-T05-SOURCE-DETECTOR-READOUT-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v18-p5-t05-source-detector-readout-smuggling-audit-v1.md`
 
 ## obsidian-wiki
 
@@ -1104,6 +1106,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-009-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-CANDIDATE-SETUP` `research_control/tasks/RT-20260708-009/artifacts/parent_fusion_notes_source_detector_readout_candidate_setup.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-009-SOURCE-DETECTOR-READOUT-CANDIDATE-SETUP-V1` `research_control/tasks/RT-20260708-009/artifacts/source_detector_readout_candidate_setup_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-010-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-CANDIDATE` `research_control/tasks/RT-20260708-010/artifacts/parent_fusion_notes_source_detector_readout_candidate.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-011-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260708-011/artifacts/parent_fusion_notes_source_detector_readout_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -1508,6 +1511,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V18-P3-T04-EQSRC-FAMILY-CLOSURE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_v1.tex`
 - `TEX-V18-P3-T05-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS-V1` `research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex`
 - `TEX-V18-P5-T04-SOURCE-DETECTOR-READOUT-CANDIDATE` `research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex`
+- `TEX-V18-P5-T05-SOURCE-DETECTOR-READOUT-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260708-011/artifacts/source_detector_readout_smuggling_audit_v1.tex`
 
 ## user-modified-project
 
