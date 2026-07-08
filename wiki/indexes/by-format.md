@@ -307,6 +307,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-007-SOURCE-DETECTOR-READOUT-BURDEN-RECEIPT` `research_control/tasks/RT-20260708-007/artifacts/source_detector_readout_burden_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-LEDGER-QUESTION-RECEIPT` `research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_ledger_question_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-PATCH-PROPOSAL-V1` `research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_patch_proposal_v1.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-009-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-CANDIDATE-SETUP` `research_control/tasks/RT-20260708-009/artifacts/parent_fusion_notes_source_detector_readout_candidate_setup.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-009-SOURCE-DETECTOR-READOUT-CANDIDATE-SETUP-V1` `research_control/tasks/RT-20260708-009/artifacts/source_detector_readout_candidate_setup_v1.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -1049,6 +1051,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-007-SOURCE-DETECTOR-READOUT-BURDEN-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-007-source-detector-readout-burden-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-LEDGER-QUESTION-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-008-source-detector-readout-dag-ledger-question-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-PATCH-PROPOSAL-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-008-source-detector-readout-dag-patch-proposal-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-009-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-CANDIDATE-SETUP` `wiki/markdown/md-research-control-tasks-rt-20260708-009-parent-fusion-notes-source-detector-readout-candidate-setup.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-009-SOURCE-DETECTOR-READOUT-CANDIDATE-SETUP-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-009-source-detector-readout-candidate-setup-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-008`
-- Latest handoff: `handoff-0701`
-- Current status: `v18_p5_t02_source_detector_readout_dag_ledger_question_setup_no_delta`
+- Active task: `RT-20260708-009`
+- Latest handoff: `handoff-0702`
+- Current status: `v18_p5_t03_source_detector_readout_candidate_setup_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-008`
-- Latest research handoff: `handoff-0701`
-- Latest research next action: Run one bounded v18 P5-T03 source detector/readout candidate setup packet.
+- Latest research task: `RT-20260708-009`
+- Latest research handoff: `handoff-0702`
+- Latest research next action: Run one bounded v18 P5-T04 source detector/readout candidate-or-obstruction construction packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `source_detector_readout_candidate_setup`
+- Route ID: `source_detector_readout_candidate_or_obstruction`
 - Role family: `candidate-constructor@0.2.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Set up one bounded source detector/readout candidate or obstruction packet.
+- Milestone burden: Construct one source-side detector/readout candidate or record one precise obstruction.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `53f09296eac74d160550671eb8a565b145c027292e1526868a9f61b92f8bc1bb`
-- JSON SHA-256: `6cfcfa129518f8d4216931af85a7e7bee750570efb80eec9f8e6ce6d3481fc99`
+- YAML SHA-256: `d297471b0d21f327a401f56fe389b020b5101a857568a00774b8b67ad359e571`
+- JSON SHA-256: `a444fdcc5267ee231e09e0c881390a0a5015ae5a9d87dcb0da34643660ea529e`
 
 ## Authority Warning
 

@@ -1,0 +1,373 @@
+completion_id: "AJC-AJ-RT-20260708-009-001"
+job_id: "AJ-RT-20260708-009-001"
+task_id: "RT-20260708-009"
+decision_id: "DDR-20260708-009"
+status: "completed"
+completed_at: "2026-07-08T05:00:00Z"
+completed_by_role: "candidate-constructor@0.2.0--RT-20260708-009"
+source_role_id: "candidate-constructor"
+source_role_version: "0.2.0"
+plan_task_id: "P5-T03"
+objective_result: "completed"
+summary: "Completed v18 P5-T03 by setting up exactly one source detector/readout candidate target branch, SourceReadoutCandidate_EStar_v1. The setup defines SMScope(E_*), Readout_src(E_*), Det_src(E_*), compatibility with SourceCouplingLawCandidate_EStar_v1, and import guards for the later P5-T04 construction-or-obstruction packet. It does not construct or adopt detector/readout semantics, update the Distance-to-GR ledger or DAG, derive matter coupling, or promote downstream GR claims."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_task_id: "P5-T03"
+  plan_phase_id: "P5"
+  implemented_task_scope: "Source detector/readout candidate setup"
+  completed_v18_tasks_this_packet:
+    - "P5-T03"
+  downstream_tasks_not_implemented:
+    - "P5-T04 source detector/readout candidate or obstruction construction"
+    - "P5-T05 source detector/readout smuggling audit"
+    - "P5-T06 source detector/readout Refuter stress"
+    - "P5-T07 source detector/readout route selector and integration"
+    - "P6 and later v18 tasks"
+  all_applicable_plan_tasks_proven: false
+  phase_p5_completed: false
+artifacts:
+  - "research_control/tasks/RT-20260708-009/artifacts/child_phys_math_source_detector_readout_candidate_setup.yaml"
+  - "research_control/tasks/RT-20260708-009/artifacts/child_phys_phil_source_detector_readout_candidate_setup.yaml"
+  - "research_control/tasks/RT-20260708-009/artifacts/parent_conflict_review_source_detector_readout_candidate_setup.yaml"
+  - "research_control/tasks/RT-20260708-009/artifacts/parent_fusion_notes_source_detector_readout_candidate_setup.md"
+  - "research_control/tasks/RT-20260708-009/artifacts/source_detector_readout_candidate_setup_v1.md"
+  - "research_control/tasks/RT-20260708-009/artifacts/validate_p5_t03_source_detector_readout_candidate_setup.py"
+  - "research_control/tasks/RT-20260708-009/artifacts/p5_t03_source_detector_readout_candidate_setup_report.json"
+output_paths:
+  - "research_control/tasks/RT-20260708-009/artifacts/child_phys_math_source_detector_readout_candidate_setup.yaml"
+  - "research_control/tasks/RT-20260708-009/artifacts/child_phys_phil_source_detector_readout_candidate_setup.yaml"
+  - "research_control/tasks/RT-20260708-009/artifacts/parent_conflict_review_source_detector_readout_candidate_setup.yaml"
+  - "research_control/tasks/RT-20260708-009/artifacts/parent_fusion_notes_source_detector_readout_candidate_setup.md"
+  - "research_control/tasks/RT-20260708-009/artifacts/source_detector_readout_candidate_setup_v1.md"
+  - "research_control/tasks/RT-20260708-009/artifacts/validate_p5_t03_source_detector_readout_candidate_setup.py"
+  - "research_control/tasks/RT-20260708-009/artifacts/p5_t03_source_detector_readout_candidate_setup_report.json"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260708-009/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-009/DDR-20260708-009.md"
+  - "research_control/tasks/RT-20260708-009/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-009/jobs/AJ-RT-20260708-009-001.yaml"
+  - "research_control/tasks/RT-20260708-009/jobs/completions/AJC-AJ-RT-20260708-009-001.yaml"
+  - "research_control/tasks/RT-20260708-009/roles/candidate-constructor@0.2.0--RT-20260708-009.yaml"
+  - "research_control/handoffs/handoff-0702.yaml"
+  - "research_control/handoffs/handoff-0702.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0701.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/matter_coupling_dependency_dag_v1.md"
+  - "research_control/design/source_detector_readout_semantics_burden_v1.md"
+  - "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_patch_proposal_v1.md"
+  - "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_ledger_delta_question_v1.yaml"
+  - "research_control/tasks/RT-20260708-008/jobs/completions/AJC-AJ-RT-20260708-008-001.yaml"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=733 relationship_row_count=3717 semantic_row_count=733 vault_row_count=733 local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/handoffs/handoff-0701.yaml --json | exit_code=0 | no direct retrieval hits"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P5-T03 source detector readout candidate setup\" --limit 10 --json | exit_code=0 | returned current frontier P5-T02 artifact v18 plan and task index"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-008 latest_handoff=handoff-0701 next_action=P5-T03"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 733
+    relationship_row_count: 3717
+    semantic_row_count: 733
+    vault_row_count: 733
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P5-T03 source detector readout candidate setup\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P5-T03 source detector readout candidate setup"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-PATCH-PROPOSAL-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      generated_retrieval_evidence_ids:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      navigation_support_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "c7e50d31bbb7a1ad0dcd9854b0921219540dee32c0ba3b0941f5cfa82ebb1728"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SOURCE-DETECTOR-READOUT-SEMANTICS-BURDEN-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/source_detector_readout_semantics_burden_v1.md"
+      source_hash: "cb72078428ab1723926c724e064536bcbebdc6bb8f7dc86686b447fddee11f30"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/matter_coupling_dependency_dag_v1.md"
+      source_hash: "8cca047480ae21c3b0641a5221277ae43cd5fdf1eb688a9080a168e27b1e98c3"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-PATCH-PROPOSAL-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_patch_proposal_v1.md"
+      source_hash: "dea99483b6a4897bd72d185a94e13239cffad767cf10d0a9c12b0582409e5be0"
+physics_progress_status:
+  status: "detector_readout_setup_no_adoption"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Set up one bounded source detector/readout candidate or obstruction packet."
+  explanation: "P5-T03 names one candidate target branch and construction envelope only. It does not construct or adopt detector/readout semantics or derive matter coupling."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "unchanged; source detector/readout candidate setup only"
+  ledger_row_updated: false
+  ledger_update_rationale: "A setup envelope names the P5-T04 candidate target but does not construct evidence sufficient for a Distance-to-GR ledger delta."
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v18_p5_t04_source_detector_readout_candidate_or_obstruction"
+  downstream_still_blocked:
+    - "Det_src adoption"
+    - "Readout_src adoption"
+    - "detector semantics adoption"
+    - "source detector/readout semantics adoption"
+    - "coupling-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only context retained"
+  - burden: "g_eff"
+    status: "unchanged; no metric use or scope expansion"
+  - burden: "matter coupling"
+    status: "source detector/readout candidate target named for P5-T04; no detector semantics adoption no coupling-law adoption and no matter-coupling derivation"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "unchanged; finite/local witness remains a P5-T04 obligation"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "unchanged; no Gate Chair verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; P5-T04 construction-or-obstruction is the next bounded route"
+new_mathematical_payload:
+  - payload_id: "P5T03-PAYLOAD-001"
+    payload_type: "definition"
+    artifact_path: "research_control/tasks/RT-20260708-009/artifacts/source_detector_readout_candidate_setup_v1.md"
+    status: "draft/control_setup"
+    summary: "Defined the setup envelope for SourceReadoutCandidate_EStar_v1 with source domain SMScope(E_*), readout symbol Readout_src(E_*), detector symbol Det_src(E_*), compatibility target SourceCouplingLawCandidate_EStar_v1, finite/local witness obligation, and import guards."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-V18-P5-T03-SOURCE-READOUT-CANDIDATE-SETUP-001"
+    payload_type: "construction_setup"
+    object_name: "SourceReadoutCandidate_EStar_v1"
+    claim_status: "draft/control_setup"
+    source_path: "research_control/tasks/RT-20260708-009/artifacts/source_detector_readout_candidate_setup_v1.md"
+    burden_effect: "no_distance_delta"
+    summary: "One source detector/readout candidate target branch was named for P5-T04 construction or precise obstruction."
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "SourceReadoutCandidate_EStar_v1_setup"
+  bridge_result: "candidate_target_named_for_later_construction_or_obstruction"
+  candidate_map: "setup target Readout_src(E_*): SMScope(E_*) -> source_readout_records, to be constructed or obstructed in P5-T04"
+  missing_primitive: ""
+  preserves_blocks: true
+  preserves_blocked_downstream_targets: true
+candidate_setup_result:
+  result_type: "candidate_target_setup"
+  candidate_name: "SourceReadoutCandidate_EStar_v1"
+  candidate_constructed: false
+  setup_artifact_path: "research_control/tasks/RT-20260708-009/artifacts/source_detector_readout_candidate_setup_v1.md"
+  source_domain: "SMScope(E_*)"
+  readout_symbol: "Readout_src(E_*)"
+  detector_symbol: "Det_src(E_*)"
+  compatibility_target: "SourceCouplingLawCandidate_EStar_v1"
+  exactly_one_branch_named: true
+  branch_type: "candidate_target"
+  obstruction_branch_named: false
+  adoption_requested: false
+  finite_local_witness_required: true
+  empirical_protocol_import_forbidden: true
+  proper_time_import_forbidden: true
+  target_metric_import_forbidden: true
+  selected_next_plan_task_id: "P5-T04"
+  next_required_role: "candidate-constructor"
+freeze_criteria_status:
+  evaluated: true
+  freeze_decision: "not_frozen"
+  candidate_freeze_label: ""
+  criteria_evaluated:
+    - "candidate setup failure"
+    - "scoped obstruction branch"
+    - "placeholder repetition without new setup payload"
+  rationale: "P5-T03 names one setup target and records no obstruction. P5-T04 construction-or-obstruction remains open."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260708-009/artifacts/child_phys_math_source_detector_readout_candidate_setup.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260708-009/artifacts/child_phys_phil_source_detector_readout_candidate_setup.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260708-009/artifacts/parent_conflict_review_source_detector_readout_candidate_setup.yaml"
+    blocking_conflicts_present: false
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    path: "research_control/tasks/RT-20260708-009/artifacts/parent_fusion_notes_source_detector_readout_candidate_setup.md"
+    fused_output_path: "research_control/tasks/RT-20260708-009/artifacts/source_detector_readout_candidate_setup_v1.md"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS with no refresh needed"
+      - "continue_research.py resolved handoff-0701 and P5-T03"
+      - "canonical v18 plan, source detector/readout burden, P5-T02 patch proposal, current frontier, and task index inspected"
+  child_reviews:
+    status: "PASS"
+    evidence:
+      - "child_phys_math supplied formal setup obligations"
+      - "child_phys_phil supplied ontology/model/empirical boundary guards"
+      - "parent conflict review found no blocking conflict"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "source_detector_readout_candidate_setup_v1.md exists"
+      - "exactly one branch SourceReadoutCandidate_EStar_v1 is named"
+      - "setup routes to P5-T04"
+      - "adoption_requested is false"
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "validate_p5_t03_source_detector_readout_candidate_setup.py --write-report must pass before checkpoint"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "frontier, compact frontier, task index, dependency graph, and claim graph refreshes are required for checkpoint"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py and --validate-only are required after source registry update"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json is required"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "validate_research_control, check-diff, full validation, and git diff --check are required"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command required before transaction is committed"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  candidate_setup_packet_requires_human_gate: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable_setup_only_packet"
+  protected_ledger_update_authorized: false
+  protected_ledger_update_performed: false
+  detector_semantics_adoption_authorized: false
+  source_detector_readout_semantics_adoption_authorized: false
+  source_law_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  stress_energy_semantics_authorized: false
+  matter_action_authorized: false
+  einstein_equation_derivation_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+claim_boundary:
+  physics_promotion_authorized: false
+  proof_authority: false
+  detector_semantics_adoption_authorized: false
+  source_detector_readout_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "Distance-to-GR ledger update"
+    - "matter-coupling DAG update"
+    - "Det_src adoption"
+    - "Readout_src adoption"
+    - "detector-semantics adoption"
+    - "source detector/readout semantics adoption"
+    - "source-law adoption"
+    - "coupling-law adoption"
+    - "matter coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "proof authority"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "program-wide no-go conclusion"
+  summary: "P5-T03 sets up one candidate target only. It routes to P5-T04 and preserves all adoption promotion proof-authority and completed-derivation blocks."
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R04"
+  implements_plan_task_id: "P5-T03"
+  implementation_status: "completed"
+  coverage_effect: "support"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+next_recommendation: "Run one bounded v18 P5-T04 source detector/readout candidate-or-obstruction construction packet."

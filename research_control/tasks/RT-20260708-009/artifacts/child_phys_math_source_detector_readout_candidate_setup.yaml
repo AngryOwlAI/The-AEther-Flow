@@ -1,0 +1,30 @@
+artifact_id: "child_phys_math_source_detector_readout_candidate_setup"
+task_id: "RT-20260708-009"
+job_id: "AJ-RT-20260708-009-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+claim_status: "draft/control_setup"
+candidate_branch_count: 1
+selected_branch:
+  branch_type: "candidate_target"
+  branch_name: "SourceReadoutCandidate_EStar_v1"
+formal_setup:
+  source_domain: "SMScope(E_*)"
+  readout_symbol: "Readout_src(E_*)"
+  detector_symbol: "Det_src(E_*)"
+  compatibility_target: "SourceCouplingLawCandidate_EStar_v1"
+  finite_local_witness_required: true
+  empirical_protocol_import_forbidden: true
+  proper_time_import_forbidden: true
+  target_metric_import_forbidden: true
+  adoption_requested: false
+mathematical_obligations_for_p5_t04:
+  - "Define the source-side readable record family inside SMScope(E_*)."
+  - "Define Readout_src(E_*) as a source-side relation or partial map only."
+  - "Define Det_src(E_*) only as a source-side record interface, not as detector semantics."
+  - "Supply a finite/local witness or one precise construction obstruction."
+  - "State compatibility with SourceCouplingLawCandidate_EStar_v1 without treating that candidate as adopted."
+  - "Fail closed on empirical detector protocol, proper time, target metric, stress-energy, matter-action, or benchmark imports."
+distance_to_gr_effect: "no_distance_delta"
+next_route: "P5-T04"

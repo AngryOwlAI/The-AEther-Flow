@@ -1,0 +1,21 @@
+artifact_id: "parent_conflict_review_source_detector_readout_candidate_setup"
+task_id: "RT-20260708-009"
+job_id: "AJ-RT-20260708-009-001"
+status: "completed"
+review_result: "no_blocking_conflict"
+blocking_conflicts_present: false
+resolution_rounds: 0
+unresolved_conflicts: []
+reviewed_child_outputs:
+  - "research_control/tasks/RT-20260708-009/artifacts/child_phys_math_source_detector_readout_candidate_setup.yaml"
+  - "research_control/tasks/RT-20260708-009/artifacts/child_phys_phil_source_detector_readout_candidate_setup.yaml"
+agreement_points:
+  - "Exactly one candidate target branch is named."
+  - "The setup remains setup-only and routes to P5-T04."
+  - "No detector/readout semantics adoption or matter-coupling derivation is authorized."
+resolved_risks:
+  - risk: "setup wording could be overread as constructed Readout_src(E_*)"
+    resolution: "Use draft/control setup vocabulary and explicit P5-T04 construction obligation."
+  - risk: "compatibility target could be overread as coupling-law adoption"
+    resolution: "State compatibility target only and keep SourceCouplingLawCandidate_EStar_v1 non-adopted."
+fusion_decision: "Fuse both child outputs into source_detector_readout_candidate_setup_v1.md."
