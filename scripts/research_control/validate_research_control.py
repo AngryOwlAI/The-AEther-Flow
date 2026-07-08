@@ -167,6 +167,21 @@ CLAIM_COLUMNS = [
     "notes",
 ]
 
+COUNTERMODEL_OBLIGATION_COLUMNS = [
+    "obligation_id",
+    "task_id",
+    "artifact_path",
+    "theorem_family",
+    "countermodel_slot",
+    "status",
+    "result_artifact",
+    "obstruction_id",
+    "scope",
+    "global_no_go_claimed",
+    "created_at",
+    "notes",
+]
+
 REGISTRY_COLUMNS = {
     "AGENT_ROLE_REGISTRY.csv": ROLE_COLUMNS,
     "ROLE_EXECUTION_REGISTRY.csv": ROLE_EXECUTION_COLUMNS,
@@ -174,6 +189,7 @@ REGISTRY_COLUMNS = {
     "AGENT_JOB_REGISTRY.csv": JOB_COLUMNS,
     "RESEARCH_TASK_REGISTRY.csv": TASK_COLUMNS,
     "CLAIM_BOUNDARY_REGISTRY.csv": CLAIM_COLUMNS,
+    "COUNTERMODEL_OBLIGATION_REGISTRY.csv": COUNTERMODEL_OBLIGATION_COLUMNS,
 }
 
 BOOLEAN_FIELDS = {
@@ -183,6 +199,7 @@ BOOLEAN_FIELDS = {
     "may_promote_claims",
     "requires_human_gate",
     "non_reusable_until_registered",
+    "global_no_go_claimed",
 }
 
 SEMICOLON_FIELDS = {
@@ -507,6 +524,83 @@ DISTANCE_TO_GR_OVERREAD_GUARD_VALUES = {
     "no_stress_energy_tensor",
     "no_unscoped_geff_adoption",
 }
+
+COUNTERMODEL_OBLIGATION_POLICY_ACTIVE_AFTER = "2026-07-08T00:22:57Z"
+COUNTERMODEL_OBLIGATION_THEOREM_MARKERS = (
+    " theorem",
+    "theorem_",
+    "theorem-",
+    "proof attempt",
+    "theorem attempt",
+    "conditional theorem",
+    "source-side theorem",
+)
+COUNTERMODEL_OBLIGATION_FAMILIES = {
+    "eqsrc",
+    "matter_coupling",
+    "detector_readout",
+    "toy_model",
+    "other",
+}
+COUNTERMODEL_OBLIGATION_STATUS_VALUES = {
+    "filled",
+    "pending",
+    "waived_by_ddr",
+    "not_applicable_by_ddr",
+    "deferred_by_ddr",
+}
+COUNTERMODEL_REQUIRED_SLOTS_BY_FAMILY = {
+    "eqsrc": {
+        "missing_inverse_countermodel",
+        "missing_composition_countermodel",
+        "invariant_ledger_not_family_stable_countermodel",
+        "target_import_needed_countermodel",
+        "RetainH_needed_countermodel",
+        "GenH_needed_countermodel",
+    },
+    "matter_coupling": {
+        "source_matter_semantics_missing_countermodel",
+        "coupling_law_gap_countermodel",
+        "MetricData_or_g_eff_overread_countermodel",
+        "stress_energy_import_countermodel",
+        "matter_action_import_countermodel",
+        "benchmark_dependency_countermodel",
+    },
+    "detector_readout": {
+        "detector_semantics_import_countermodel",
+        "readout_equivalence_nonconservation_countermodel",
+        "rr_e_collapse_countermodel",
+        "calibration_import_countermodel",
+        "no_target_certificate_overread_countermodel",
+    },
+    "toy_model": {
+        "missing_transport_countermodel",
+        "missing_invariance_countermodel",
+        "missing_factorization_countermodel",
+        "finite_variation_fragility_countermodel",
+        "empty_selector_countermodel",
+        "support_tool_overread_countermodel",
+    },
+}
+COUNTERMODEL_HARD_OVERREAD_PATTERNS = (
+    re.compile(
+        r"\b(?:local\s+)?countermodel\s+"
+        r"(?:proves|establishes|means|is)\s+"
+        r"(?:a\s+)?(?:program-wide|global)\s+no-go\b",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"\b(?:local\s+)?countermodel\s+"
+        r"(?:proves|establishes|means)\s+"
+        r"(?:future\s+)?source-extension\s+impossible\b",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"\b(?:local\s+)?countermodel\s+"
+        r"(?:proves|establishes|means)\s+theory\s+rejected\b",
+        re.IGNORECASE,
+    ),
+)
 
 DISTANCE_TO_GR_FIELD_VALUE_SETS = {
     "control_status": DISTANCE_TO_GR_CONTROL_STATUS_VALUES,
@@ -1815,6 +1909,7 @@ def validate_registry_values(report: ValidationReport, rows_by_registry: dict[st
         "AGENT_JOB_REGISTRY.csv": "job_id",
         "RESEARCH_TASK_REGISTRY.csv": "task_id",
         "CLAIM_BOUNDARY_REGISTRY.csv": "claim_boundary_id",
+        "COUNTERMODEL_OBLIGATION_REGISTRY.csv": "obligation_id",
     }
     for registry_name, rows in rows_by_registry.items():
         id_field = id_fields[registry_name]
@@ -1847,6 +1942,185 @@ def validate_registry_values(report: ValidationReport, rows_by_registry: dict[st
                     report.error(
                         f"{registry_name}:{row_number}: {field_name} must use semicolons, not commas"
                     )
+
+
+def _countermodel_row_text(row: dict[str, str]) -> str:
+    return " ".join(str(row.get(field_name, "")) for field_name in COUNTERMODEL_OBLIGATION_COLUMNS)
+
+
+def _countermodel_path_check(report: ValidationReport, row_ref: str, field_name: str, value: str) -> None:
+    if not value.strip():
+        report.warn(f"{row_ref}: {field_name} is missing")
+        return
+    reason = validate_relative_path(value)
+    if reason:
+        report.error(f"{row_ref}: invalid {field_name}: {reason}")
+        return
+    if not repo_path(value).exists():
+        report.warn(f"{row_ref}: {field_name} does not exist: {value}")
+
+
+def validate_countermodel_obligation_registry(
+    report: ValidationReport,
+    rows: list[dict[str, str]],
+) -> None:
+    slots_by_family: dict[str, set[str]] = {}
+    for row_number, row in enumerate(rows, start=2):
+        row_ref = (
+            "COUNTERMODEL_OBLIGATION_REGISTRY.csv:"
+            f"{row_number}:{row.get('obligation_id', '<missing>')}"
+        )
+        family = row.get("theorem_family", "").strip()
+        slot = row.get("countermodel_slot", "").strip()
+        status = row.get("status", "").strip()
+        scope = row.get("scope", "").strip()
+
+        if family not in COUNTERMODEL_OBLIGATION_FAMILIES:
+            report.error(f"{row_ref}: unsupported theorem_family {family}")
+        elif family != "other":
+            slots_by_family.setdefault(family, set()).add(slot)
+        if status not in COUNTERMODEL_OBLIGATION_STATUS_VALUES:
+            report.error(f"{row_ref}: unsupported status {status}")
+        if not slot:
+            report.warn(f"{row_ref}: missing_countermodel_slot countermodel_slot is blank")
+        if not scope:
+            report.warn(f"{row_ref}: countermodel_scope_missing scope is blank")
+
+        _countermodel_path_check(report, row_ref, "artifact_path", row.get("artifact_path", ""))
+        _countermodel_path_check(report, row_ref, "result_artifact", row.get("result_artifact", ""))
+
+        if bool_value(row.get("global_no_go_claimed", "")):
+            report.error(
+                f"{row_ref}: countermodel_overread_as_global_no_go "
+                "global_no_go_claimed must remain false without protected no-go authority"
+            )
+
+        row_text = _countermodel_row_text(row)
+        for pattern in COUNTERMODEL_HARD_OVERREAD_PATTERNS:
+            match = pattern.search(row_text)
+            if match:
+                report.error(
+                    f"{row_ref}: countermodel_overread_as_global_no_go "
+                    f"matched {match.group(0)!r}"
+                )
+
+        if status in {"waived_by_ddr", "not_applicable_by_ddr", "deferred_by_ddr"}:
+            notes = row.get("notes", "")
+            result_artifact = row.get("result_artifact", "")
+            if "DDR-" not in notes and "DDR-" not in result_artifact:
+                report.warn(
+                    f"{row_ref}: waiver_without_director_decision "
+                    "DDR reference is required for waiver/deferred status"
+                )
+
+    for family, required_slots in sorted(COUNTERMODEL_REQUIRED_SLOTS_BY_FAMILY.items()):
+        observed = slots_by_family.get(family, set())
+        if not observed:
+            continue
+        missing = sorted(required_slots - observed)
+        if missing:
+            report.warn(
+                "COUNTERMODEL_OBLIGATION_REGISTRY.csv: "
+                f"missing_countermodel_slot theorem_family {family} missing slots {missing}"
+            )
+
+
+def _countermodel_completion_policy_active(
+    job_row: dict[str, str],
+    completion: dict[str, Any],
+) -> bool:
+    timestamps = [
+        job_row.get("created_at", ""),
+        job_row.get("started_at", ""),
+        job_row.get("completed_at", ""),
+        completion.get("completed_at", ""),
+    ]
+    return any(
+        timestamp_at_or_after(value, COUNTERMODEL_OBLIGATION_POLICY_ACTIVE_AFTER)
+        for value in timestamps
+    )
+
+
+def _looks_like_theorem_attempt(job_contract: dict[str, Any], completion: dict[str, Any]) -> bool:
+    blob = text_blob(job_contract, completion)
+    return any(marker in blob for marker in COUNTERMODEL_OBLIGATION_THEOREM_MARKERS)
+
+
+def validate_countermodel_obligation_completion(
+    report: ValidationReport,
+    job_row: dict[str, str],
+    job_contract: dict[str, Any],
+    completion: dict[str, Any],
+    path_text: str,
+) -> None:
+    if not _countermodel_completion_policy_active(job_row, completion):
+        return
+    if not (job_row.get("role_id", "") in PHYSICS_ROLE_IDS or "countermodel_obligations" in completion):
+        return
+
+    receipt = completion.get("countermodel_obligations")
+    if not isinstance(receipt, dict):
+        if _looks_like_theorem_attempt(job_contract, completion):
+            report.warn(
+                f"{path_text}: theorem_without_countermodel_justification "
+                "missing countermodel_obligations block"
+            )
+        return
+
+    policy_id = str(receipt.get("policy_id", "")).strip()
+    if policy_id != "minimal_countermodel_obligation_policy_v1":
+        report.warn(
+            f"{path_text}: countermodel_obligations.policy_id should be "
+            "minimal_countermodel_obligation_policy_v1"
+        )
+    family = str(receipt.get("theorem_family", "")).strip()
+    if family not in COUNTERMODEL_OBLIGATION_FAMILIES:
+        report.warn(f"{path_text}: countermodel_obligations.theorem_family is unsupported: {family}")
+    waiver_decision_id = str(receipt.get("waiver_decision_id", "")).strip()
+    slots = receipt.get("slots")
+    if not isinstance(slots, list) or not slots:
+        report.warn(f"{path_text}: missing_countermodel_slot countermodel_obligations.slots is empty")
+        return
+
+    observed_slots: set[str] = set()
+    for index, slot_record in enumerate(slots, start=1):
+        if not isinstance(slot_record, dict):
+            report.warn(f"{path_text}: countermodel_obligations.slots[{index}] should be a map")
+            continue
+        slot_name = str(slot_record.get("countermodel_slot", "")).strip()
+        slot_status = str(slot_record.get("status", "")).strip()
+        observed_slots.add(slot_name)
+        if not slot_name:
+            report.warn(
+                f"{path_text}: missing_countermodel_slot "
+                f"countermodel_obligations.slots[{index}].countermodel_slot is blank"
+            )
+        if slot_status not in COUNTERMODEL_OBLIGATION_STATUS_VALUES:
+            report.warn(
+                f"{path_text}: countermodel_obligations.slots[{index}].status "
+                f"is unsupported: {slot_status}"
+            )
+        if not str(slot_record.get("scope", "")).strip():
+            report.warn(
+                f"{path_text}: countermodel_scope_missing "
+                f"countermodel_obligations.slots[{index}].scope is blank"
+            )
+        if not str(slot_record.get("result_artifact", "")).strip():
+            report.warn(
+                f"{path_text}: countermodel_obligations.slots[{index}].result_artifact is blank"
+            )
+        if slot_status in {"waived_by_ddr", "not_applicable_by_ddr", "deferred_by_ddr"} and not waiver_decision_id:
+            report.warn(
+                f"{path_text}: waiver_without_director_decision "
+                f"countermodel_obligations.slots[{index}] requires waiver_decision_id"
+            )
+
+    required = COUNTERMODEL_REQUIRED_SLOTS_BY_FAMILY.get(family, set())
+    missing = sorted(required - observed_slots)
+    if missing:
+        report.warn(
+            f"{path_text}: missing_countermodel_slot theorem_family {family} missing slots {missing}"
+        )
 
 
 def _frontmatter_value(value: Any) -> str:
@@ -2913,6 +3187,13 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
         job_contract,
         completion,
         path,
+    )
+    validate_countermodel_obligation_completion(
+        report,
+        job_row,
+        job_contract,
+        completion,
+        path.relative_to(REPO_ROOT).as_posix(),
     )
     validate_ontology_law_research_packet(report, job_row, job_contract, completion, path)
     validate_source_extension_classification_receipt(
@@ -5180,6 +5461,10 @@ def validate_all(
     if len(rows_by_registry) != len(REGISTRY_COLUMNS):
         return report
     validate_registry_values(report, rows_by_registry)
+    validate_countermodel_obligation_registry(
+        report,
+        rows_by_registry["COUNTERMODEL_OBLIGATION_REGISTRY.csv"],
+    )
     roles = validate_roles(report, rows_by_registry["AGENT_ROLE_REGISTRY.csv"])
     decisions = validate_director_decisions(
         report, rows_by_registry["DIRECTOR_DECISION_REGISTRY.csv"], roles

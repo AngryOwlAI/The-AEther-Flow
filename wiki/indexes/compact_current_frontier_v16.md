@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-002`
-- Latest handoff: `handoff-0695`
-- Current status: `v18_p4_t02_countermodel_obligation_schema_registry_completed_no_physics_delta`
+- Active task: `RT-20260708-003`
+- Latest handoff: `handoff-0696`
+- Current status: `v18_p4_t03_countermodel_obligation_validator_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-002`
-- Latest research handoff: `handoff-0695`
-- Latest research next action: Run one bounded v18 P4-T03 countermodel-obligation validator and tests packet.
+- Latest research task: `RT-20260708-003`
+- Latest research handoff: `handoff-0696`
+- Latest research next action: Run one bounded v18 P4-T04 theorem-task template integration packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `countermodel_obligation_validator_tests`
-- Role family: `validator-engineer@0.2.0`
+- Route ID: `countermodel_obligation_task_template_integration`
+- Role family: `documentation-curator@2.0.0`
 - Target milestone: `none`
-- Milestone burden: Add advisory validation for missing countermodel-obligation blocks.
+- Milestone burden: Update theorem-task templates to require minimal countermodel slots.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `6d021907f21ab75f1b83cbaf43c71327e2369a36818749856d38e96e5e97c6df`
-- JSON SHA-256: `84a3522455b81d25ad516ef85372457b70bd9e2383d0d385ac8a3a03587515ff`
+- YAML SHA-256: `20ddea4e3ecf6aecc8a89759616a8e7459cc07a33e33ab40c1fab3b910191b62`
+- JSON SHA-256: `5ab8851eda4ce33958dafaa8e5d80d8b09360a2f5feeb20b0f2102bdb5b4cf44`
 
 ## Authority Warning
 

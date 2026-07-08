@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-002` and `handoff-0695`.
+`RT-20260708-003` and `handoff-0696`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-002` |
-| Latest handoff ID | `handoff-0695` |
-| Current status | `v18_p4_t02_countermodel_obligation_schema_registry_completed_no_physics_delta` |
+| Active task ID | `RT-20260708-003` |
+| Latest handoff ID | `handoff-0696` |
+| Current status | `v18_p4_t03_countermodel_obligation_validator_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v18 p4 t03 countermodel obligation validator tests no promotion |
+| Current route family | v18 p4 t04 theorem task template integration no promotion |
 | Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: countermodel_schema_registry_no_physics_delta |
-| Required next authority | Run one bounded v18 P4-T03 countermodel-obligation validator and tests packet. |
-| Next recommended action | Run one bounded v18 P4-T03 countermodel-obligation validator and tests packet. |
+| Current burden | `source_equivalence_eqsrc`; status: countermodel_obligation_validator_no_physics_delta |
+| Required next authority | Run one bounded v18 P4-T04 theorem-task template integration packet. |
+| Next recommended action | Run one bounded v18 P4-T04 theorem-task template integration packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-002` |
-| Latest research handoff ID | `handoff-0695` |
-| Latest research next action | Run one bounded v18 P4-T03 countermodel-obligation validator and tests packet. |
+| Latest research task ID | `RT-20260708-003` |
+| Latest research handoff ID | `handoff-0696` |
+| Latest research next action | Run one bounded v18 P4-T04 theorem-task template integration packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-002/00_TASK.yaml`.
+- Active task path: `research_control/tasks/RT-20260708-003/00_TASK.yaml`.
 - Active task objective: not recorded.
-- Latest handoff path: `research_control/handoffs/handoff-0695.yaml`.
-- Latest handoff summary: Completed v18 P4-T02 by creating minimal_countermodel_obligation_schema_v1 and COUNTERMODEL_OBLIGATION_REGISTRY.csv with seven P3 seed rows. Every seed row records global_no_go_claimed=false. No physics delta or promotion is authorized.
-- Current route family: v18 p4 t03 countermodel obligation validator tests no promotion.
-- Next recommended action: Run one bounded v18 P4-T03 countermodel-obligation validator and tests packet.
+- Latest handoff path: `research_control/handoffs/handoff-0696.yaml`.
+- Latest handoff summary: Completed v18 P4-T03 by adding countermodel-obligation validator hooks tests and fixtures. Missing countermodel slots warn during the first v18 cycle. Local countermodel overread as global no-go hard-fails. No physics delta or promotion is authorized.
+- Current route family: v18 p4 t04 theorem task template integration no promotion.
+- Next recommended action: Run one bounded v18 P4-T04 theorem-task template integration packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P4-T03 countermodel-obligation validator and tests packet.
+Run one bounded v18 P4-T04 theorem-task template integration packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,9 +320,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-002`;
-- latest handoff: `handoff-0695`;
-- current status: `v18_p4_t02_countermodel_obligation_schema_registry_completed_no_physics_delta`;
+- active task: `RT-20260708-003`;
+- latest handoff: `handoff-0696`;
+- current status: `v18_p4_t03_countermodel_obligation_validator_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -336,8 +336,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0695.yaml`
-- `research_control/tasks/RT-20260708-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-0696.yaml`
+- `research_control/tasks/RT-20260708-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -353,7 +353,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0695*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0696*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

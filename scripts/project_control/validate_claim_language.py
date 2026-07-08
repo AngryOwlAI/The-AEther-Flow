@@ -121,6 +121,47 @@ UNDERCLAIM_MINIMIZING_MARKERS = (
 
 TOKEN_RE = re.compile(r"[A-Za-z0-9_]+(?:\([A-Za-z0-9_]+\))?")
 
+COUNTERMODEL_OVERREAD_PHRASE_CLASS = {
+    "class_id": "countermodel_overread_as_global_no_go",
+    "plan_required_class_number": "P4-T03",
+    "title": "Countermodel overread as global no-go",
+    "default_severity": "hard_fail_current_public",
+    "control_severity": "hard_fail_current_control",
+    "historical_severity": "warn_historical",
+    "detection_kind": "exact_or_regex_phrase",
+    "forbidden_patterns": [
+        {
+            "pattern": (
+                r"\b(?:local\s+)?countermodel\s+"
+                r"(?:proves|establishes|means|is)\s+"
+                r"(?:a\s+)?(?:program-wide|global)\s+no-go\b"
+            )
+        },
+        {
+            "pattern": (
+                r"\b(?:local\s+)?countermodel\s+"
+                r"(?:proves|establishes|means)\s+"
+                r"(?:future\s+)?source-extension\s+impossible\b"
+            )
+        },
+        {
+            "pattern": (
+                r"\b(?:local\s+)?countermodel\s+"
+                r"(?:proves|establishes|means)\s+theory\s+rejected\b"
+            )
+        },
+    ],
+    "bad_phrases": [
+        "countermodel proves global no-go",
+        "local countermodel is program-wide no-go",
+        "countermodel proves source-extension impossible",
+    ],
+    "corrective_language": (
+        "State the local countermodel scope and preserve open continuation unless a "
+        "separate tracked no-go theorem authorizes a broader conclusion."
+    ),
+}
+
 
 @dataclass(frozen=True)
 class Finding:
@@ -165,6 +206,10 @@ def load_taxonomy(path: Path = DEFAULT_TAXONOMY_PATH) -> dict[str, Any]:
     data = load_yaml(path)
     if data.get("schema_id") != "claim_language_linter_taxonomy_v1":
         raise StrictYamlError(f"{path}: unsupported claim-language taxonomy schema")
+    phrase_classes = _as_list(data.get("phrase_classes"))
+    class_ids = {_text(item.get("class_id")) for item in phrase_classes if isinstance(item, dict)}
+    if COUNTERMODEL_OVERREAD_PHRASE_CLASS["class_id"] not in class_ids:
+        data["phrase_classes"] = phrase_classes + [COUNTERMODEL_OVERREAD_PHRASE_CLASS]
     return data
 
 

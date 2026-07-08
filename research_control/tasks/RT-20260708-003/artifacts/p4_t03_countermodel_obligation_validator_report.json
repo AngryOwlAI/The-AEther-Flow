@@ -1,0 +1,26 @@
+{
+  "authority_boundary": {
+    "global_no_go_overread_is_hard_fail": true,
+    "missing_slots_are_advisory_first_cycle": true,
+    "physics_claim_authority_created": false,
+    "validator_is_project_control_only": true
+  },
+  "errors": [],
+  "initial_severity": {
+    "countermodel_overread_as_global_no_go": "overclaim_hard_fail",
+    "countermodel_scope_missing": "warn_current_control",
+    "missing_countermodel_slot": "warn_current_control",
+    "theorem_without_countermodel_justification": "warn_current_control"
+  },
+  "missing_slot_warning_count": 1,
+  "overread_hard_fail_classes": [
+    "countermodel_overread_as_global_no_go"
+  ],
+  "overread_report_status": "FAIL",
+  "registry_error_count": 0,
+  "registry_row_count": 7,
+  "registry_warning_count": 1,
+  "schema_id": "p4_t03_countermodel_obligation_validator_report_v1",
+  "scoped_denial_report_status": "PASS",
+  "status": "PASS"
+}
