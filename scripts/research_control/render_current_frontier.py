@@ -24,7 +24,9 @@ DEFAULT_FRONTIER_PATH = "research_control/current_frontier.md"
 LEDGER_PATH = "registries/DISTANCE_TO_GR_LEDGER.csv"
 METRIC_USE_LEDGER_PATH = "registries/METRIC_USE_LEDGER.csv"
 STATUS_ALIAS_PATH = "research_control/design/distance_to_gr_status_aliases.yaml"
-ACCEPTED_STATUS_CALIBRATION_PATH = "research_control/design/accepted_status_calibration_v1.yaml"
+ACCEPTED_STATUS_CALIBRATION_V1_PATH = "research_control/design/accepted_status_calibration_v1.yaml"
+ACCEPTED_STATUS_CALIBRATION_V2_PATH = "research_control/design/accepted_status_calibration_v2.yaml"
+ACCEPTED_STATUS_CALIBRATION_PATH = ACCEPTED_STATUS_CALIBRATION_V2_PATH
 ACTIVE_STATE_BIFURCATION_POLICY_PATH = "research_control/design/active_state_bifurcation_policy_v1.md"
 HIGH_RISK_STATUS_CARD_IDS = [
     "m_src",
@@ -288,12 +290,13 @@ def reader_facing_status(row: dict[str, str], aliases: dict[str, dict[str, Any]]
 
 
 def calibration_rows(calibration: dict[str, Any]) -> dict[str, dict[str, Any]]:
-    root = calibration.get("accepted_status_calibration_v1")
-    root = root if isinstance(root, dict) else {}
-    rows = root.get("high_risk_objects")
-    if not isinstance(rows, dict):
-        return {}
-    return {str(key): value for key, value in rows.items() if isinstance(value, dict)}
+    for root_key in ("accepted_status_calibration_v2", "accepted_status_calibration_v1"):
+        root = calibration.get(root_key)
+        root = root if isinstance(root, dict) else {}
+        rows = root.get("high_risk_objects")
+        if isinstance(rows, dict):
+            return {str(key): value for key, value in rows.items() if isinstance(value, dict)}
+    return {}
 
 
 def sentence_from_guard_token(token: str) -> str:
@@ -333,24 +336,65 @@ def status_card_for_row(
 ) -> dict[str, Any]:
     burden_id = text_value(row.get("burden_id"))
     card_source = calibration.get(burden_id, {})
+    v2_card = card_source.get("status_card_v2") if isinstance(card_source, dict) else {}
+    if isinstance(v2_card, dict) and v2_card:
+        alias = aliases.get(burden_id, {})
+        blocked_items = v2_card.get("blocked_overread")
+        blocked_overread = [
+            text_value(item)
+            for item in blocked_items
+            if text_value(item)
+        ] if isinstance(blocked_items, list) else []
+        blocked_overread_sentence = (
+            text_value(v2_card.get("blocked_overread_sentence"))
+            or text_value(alias.get("required_blocked_phrase"))
+            or "; ".join(blocked_overread)
+        )
+        full_non_conclusions = v2_card.get("full_control_non_conclusions")
+        full_non_conclusions = [
+            text_value(item)
+            for item in full_non_conclusions
+            if text_value(item)
+        ] if isinstance(full_non_conclusions, list) else []
+        return {
+            "object_id": burden_id,
+            "positive_status": text_value(v2_card.get("positive_status")),
+            "exact_scope": text_value(v2_card.get("exact_scope")),
+            "allowed_use": text_value(v2_card.get("allowed_use")),
+            "blocked_overread": blocked_overread,
+            "blocked_overread_sentence": blocked_overread_sentence,
+            "next_burden": text_value(v2_card.get("next_burden")),
+            "next_lawful_route": text_value(v2_card.get("next_lawful_route")),
+            "public_summary": text_value(v2_card.get("public_summary")),
+            "full_control_non_conclusions": full_non_conclusions,
+            "evidence_source": text_value(card_source.get("source_v1_calibration_path"))
+            or ACCEPTED_STATUS_CALIBRATION_V2_PATH,
+            "status_card_version": "v2",
+        }
     if card_source:
         blocked_items = card_source.get("full_control_blocked_items")
+        blocked_overread = [
+            text_value(item)
+            for item in blocked_items
+            if text_value(item)
+        ] if isinstance(blocked_items, list) else [text_value(card_source.get("blocked_overread_sentence"))]
+        non_conclusions = split_tokens(row.get("overread_guard", "")) or blocked_overread
         return {
             "object_id": burden_id,
             "positive_status": text_value(card_source.get("positive_status_sentence")),
             "exact_scope": text_value(card_source.get("exact_scope_sentence")),
             "allowed_use": text_value(card_source.get("allowed_use_sentence")),
-            "blocked_overread": [
-                text_value(item)
-                for item in blocked_items
-                if text_value(item)
-            ]
-            if isinstance(blocked_items, list)
-            else [text_value(card_source.get("blocked_overread_sentence"))],
+            "blocked_overread": blocked_overread,
             "blocked_overread_sentence": text_value(card_source.get("blocked_overread_sentence")),
+            "next_burden": f"Address the current blocking burden before any downstream promotion: {text_value(row.get('blocking_burden')) or 'unspecified'}.",
+            "next_lawful_route": "one bounded continue-research packet authorized by the latest tracked handoff",
+            "public_summary": text_value(card_source.get("positive_status_sentence")),
+            "full_control_non_conclusions": non_conclusions,
             "evidence_source": text_value(card_source.get("evidence_source")),
+            "status_card_version": "v1_compat",
         }
     blocked_items = fallback_blocked_overread_items(row)
+    non_conclusions = split_tokens(row.get("overread_guard", ""))
     return {
         "object_id": burden_id,
         "positive_status": reader_facing_status(row, aliases),
@@ -358,7 +402,12 @@ def status_card_for_row(
         "allowed_use": fallback_allowed_use_sentence(row),
         "blocked_overread": blocked_items,
         "blocked_overread_sentence": " ".join(blocked_items),
+        "next_burden": f"Address the current blocking burden before any downstream promotion: {text_value(row.get('blocking_burden')) or 'unspecified'}.",
+        "next_lawful_route": "one bounded continue-research packet authorized by the latest tracked handoff",
+        "public_summary": reader_facing_status(row, aliases),
+        "full_control_non_conclusions": non_conclusions,
         "evidence_source": text_value(row.get("last_evidence_path")),
+        "status_card_version": "fallback",
     }
 
 
@@ -397,6 +446,8 @@ def status_cards_markdown(cards: list[dict[str, Any]]) -> str:
                     f"**Allowed use:** {md_cell(card.get('allowed_use', ''))}",
                     "",
                     f"**Blocked overread:** {md_cell(blocked)}",
+                    "",
+                    f"**Next burden:** {md_cell(card.get('next_burden', ''))}",
                 ]
             )
         )
@@ -985,7 +1036,14 @@ def build_state(repo_root: Path) -> dict[str, Any]:
     ledger_rows = read_csv_rows(repo_root, LEDGER_PATH)
     metric_use_rows = read_csv_rows(repo_root, METRIC_USE_LEDGER_PATH)
     status_aliases = load_optional_control_yaml(repo_root, STATUS_ALIAS_PATH)
-    accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_PATH)
+    accepted_status_calibration_path = ""
+    accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_V2_PATH)
+    if accepted_status_calibration:
+        accepted_status_calibration_path = ACCEPTED_STATUS_CALIBRATION_V2_PATH
+    else:
+        accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_V1_PATH)
+        if accepted_status_calibration:
+            accepted_status_calibration_path = ACCEPTED_STATUS_CALIBRATION_V1_PATH
     aliases = status_alias_rows(status_aliases)
     status_cards = high_risk_status_cards(
         ledger_rows,
@@ -1021,6 +1079,7 @@ def build_state(repo_root: Path) -> dict[str, Any]:
         "metric_use_ledger_summary": metric_use_ledger_summary(metric_use_rows),
         "status_aliases": status_aliases,
         "accepted_status_calibration": accepted_status_calibration,
+        "accepted_status_calibration_path": accepted_status_calibration_path,
         "high_risk_status_cards": status_cards,
         "route_family": route_family_text(latest_handoff, active_task),
         "target_derivation_milestone": target_milestone_text(latest_handoff),
@@ -1269,8 +1328,8 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
     ]
     if state["status_aliases"]:
         source_paths.append(STATUS_ALIAS_PATH)
-    if state["accepted_status_calibration"]:
-        source_paths.append(ACCEPTED_STATUS_CALIBRATION_PATH)
+    if state["accepted_status_calibration_path"]:
+        source_paths.append(state["accepted_status_calibration_path"])
     if repo_path(repo_root, ACTIVE_STATE_BIFURCATION_POLICY_PATH).exists():
         source_paths.append(ACTIVE_STATE_BIFURCATION_POLICY_PATH)
     payload = {
@@ -1295,7 +1354,12 @@ def render_payload(repo_root: Path) -> tuple[dict[str, Any], str]:
         "status_alias_row_count": len(status_alias_rows(state["status_aliases"])),
         "status_alias_integration": "reader_facing_status_column",
         "accepted_status_calibration_path": (
-            ACCEPTED_STATUS_CALIBRATION_PATH if state["accepted_status_calibration"] else ""
+            state["accepted_status_calibration_path"] if state["accepted_status_calibration"] else ""
+        ),
+        "status_card_version": (
+            "v2"
+            if state["accepted_status_calibration_path"] == ACCEPTED_STATUS_CALIBRATION_V2_PATH
+            else "v1_compat" if state["accepted_status_calibration_path"] else "fallback"
         ),
         "high_risk_status_card_count": len(state["high_risk_status_cards"]),
         "high_risk_status_card_object_ids": [

@@ -67,7 +67,7 @@
       "implementations_plans/recommendations_implementation_plan_continue_task-v18.md": "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d",
       "output/physics_progress_metrics.json": "eb229a4f0efa080f4e9495e7d27356836ba5dd6852fe3872d65cd560f4553ac2",
       "output/physics_progress_metrics.md": "bf052abff7f33b32d680c2f8279e4213c50cf70ce7cc57b6e1ddef0fb75cfea2",
-      "research_control/current_frontier.md": "ef9e85cc45b893a544787d5e394bb9969c3cce1ca9f46f516e60aaaa40beda57",
+      "research_control/current_frontier.md": "37c95c7a3ca67377e01ac9b4bf4cad03b33724eee979ce5cf2ac8a29170cd3e9",
       "research_control/design/ai_research_agent_metrics_taxonomy_v1.md": "bb373ae346c855695d0002605410b2113e6aa9a703bce90604c549a66222e439",
       "research_control/design/physics_payload_ratio_policy_v1.md": "0bf6b607a8f93b05e6e67c5a6676c0f889cb28f9a6c81db9c6c508e5f486d213",
       "research_control/design/v17_recommendation_backlog.yaml": "4323df2cd41e3af4eec00594ab1103635b1c5c9bae705721973c3d59c81b248d",
@@ -264,10 +264,10 @@
           "P6": 26,
           "P7": 57,
           "P8": 23,
-          "P9": 15,
+          "P9": 16,
           "unclassified": 476
         },
-        "registered_task_rows": 862
+        "registered_task_rows": 863
       },
       "diagnostic_interpretation": "Gate-load signals are governance workload diagnostics, not Gate Chair scientific verdicts.",
       "diagnostic_label": "AI-system diagnostic",
@@ -297,7 +297,7 @@
         "physics_promotion_authorized": false
       },
       "dashboard_label": "AI-system diagnostic",
-      "denominator_value": 573,
+      "denominator_value": 574,
       "diagnostic_interpretation": "Payload balance compares mathematical payload items to process-only items; it is not proof authority.",
       "diagnostic_label": "AI-system diagnostic",
       "family": "Payload balance",
@@ -306,7 +306,7 @@
       "numerator_value": 904,
       "status": "measured",
       "uncertainty_note": "",
-      "value": 1.5777
+      "value": 1.5749
     }
   ],
   "payload_ratio_metric_rows": [
@@ -327,7 +327,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "project_system_task_run_length",
       "status": "measured",
-      "value": 6
+      "value": 7
     },
     {
       "authority_boundary": {
@@ -422,7 +422,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "support_only_task_count_since_last_physics_payload",
       "status": "measured",
-      "value": 6
+      "value": 7
     },
     {
       "authority_boundary": {
@@ -469,7 +469,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "project_system_task_count",
       "status": "measured",
-      "value": 441
+      "value": 442
     },
     {
       "authority_boundary": {
@@ -507,7 +507,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "support_only_task_count",
       "status": "measured",
-      "value": 457
+      "value": 458
     },
     {
       "authority_boundary": {
@@ -526,7 +526,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "physics_bearing_to_project_system_task_ratio",
       "status": "measured",
-      "value": 0.8753
+      "value": 0.8733
     },
     {
       "authority_boundary": {
@@ -545,7 +545,7 @@
       "interpretation_guardrail": "Does not establish physics truth, proof authority, benchmark status, Gate Chair verdicts, or completed derivations.",
       "metric_id": "new_mathematical_payload_to_support_only_task_ratio",
       "status": "measured",
-      "value": 2.2735
+      "value": 2.2686
     },
     {
       "authority_boundary": {
@@ -580,19 +580,19 @@
     "calculation_window": "all tracked completion records available at report generation",
     "classification_counts": {
       "physics_bearing_task_count": 386,
-      "project_system_task_count": 441,
-      "route_history_records": 862,
-      "support_only_task_count": 457
+      "project_system_task_count": 442,
+      "route_history_records": 863,
+      "support_only_task_count": 458
     },
     "metrics": {
       "candidate_construction_count": 177,
       "new_mathematical_payload_count": 1039,
-      "new_mathematical_payload_to_support_only_task_ratio": 2.2735,
+      "new_mathematical_payload_to_support_only_task_ratio": 2.2686,
       "physics_bearing_task_count": 386,
       "physics_bearing_task_run_length": 0,
-      "physics_bearing_to_project_system_task_ratio": 0.8753,
-      "project_system_task_count": 441,
-      "project_system_task_run_length": 6,
+      "physics_bearing_to_project_system_task_ratio": 0.8733,
+      "project_system_task_count": 442,
+      "project_system_task_run_length": 7,
       "route_orbit_same_burden_repetition_count": 1,
       "route_orbit_warning_status": {
         "advisory_only": true,
@@ -604,26 +604,12 @@
           "gate_ready_without_gate"
         ]
       },
-      "support_only_task_count": 457,
-      "support_only_task_count_since_last_physics_payload": 6,
+      "support_only_task_count": 458,
+      "support_only_task_count_since_last_physics_payload": 7,
       "theorem_countermodel_candidate_count": 627
     },
     "policy_source_path": "research_control/design/physics_payload_ratio_policy_v1.md",
     "route_history_tail": [
-      {
-        "candidate_construction_signal": false,
-        "completed_at": "2026-07-08T13:32:05Z",
-        "completion_path": "research_control/tasks/RT-20260708-023/jobs/completions/AJC-AJ-RT-20260708-023-001.yaml",
-        "job_id": "AJ-RT-20260708-023-001",
-        "mathematical_payload_items": 0,
-        "physics_bearing_task": false,
-        "project_system_task": true,
-        "role_id": "validator-engineer",
-        "support_only_task": true,
-        "task_id": "RT-20260708-023",
-        "task_type": "metric_use_ledger_tex_validator_support_only",
-        "theorem_countermodel_candidate_signal": false
-      },
       {
         "candidate_construction_signal": false,
         "completed_at": "2026-07-08T13:56:54Z",
@@ -749,6 +735,20 @@
         "task_id": "RT-20260708-032",
         "task_type": "status_card_v2_schema_next_burden",
         "theorem_countermodel_candidate_signal": false
+      },
+      {
+        "candidate_construction_signal": false,
+        "completed_at": "2026-07-08T19:10:03Z",
+        "completion_path": "research_control/tasks/RT-20260708-033/jobs/completions/AJC-AJ-RT-20260708-033-001.yaml",
+        "job_id": "AJ-RT-20260708-033-001",
+        "mathematical_payload_items": 0,
+        "physics_bearing_task": false,
+        "project_system_task": true,
+        "role_id": "project-control-maintainer",
+        "support_only_task": true,
+        "task_id": "RT-20260708-033",
+        "task_type": "status_card_v2_frontier_renderer",
+        "theorem_countermodel_candidate_signal": false
       }
     ],
     "schema_id": "physics_payload_ratio_route_history_metrics_v1",
@@ -789,7 +789,7 @@
   ],
   "schema_id": "ai_methodology_metrics_dashboard_v1",
   "source_metrics_report": {
-    "as_of": "2026-07-08T18:20:24Z",
+    "as_of": "2026-07-08T19:10:03Z",
     "metric_separation_guard_status": "pass",
     "report_id": "research_control_metrics_separation",
     "source_basis": [

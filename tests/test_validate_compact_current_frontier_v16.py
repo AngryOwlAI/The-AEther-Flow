@@ -128,6 +128,28 @@ class ValidateCompactCurrentFrontierV16Tests(unittest.TestCase):
             self.assertIn("high_risk_status_card_missing:matter_coupling", ids)
             self.assertIn("high_risk_status_card_missing:matter_coupling:nested", ids)
 
+    def test_missing_status_card_next_burden_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write_fixture_outputs(root)
+            json_path = root / "output" / "compact_current_frontier_v16.json"
+            payload = json.loads(json_path.read_text(encoding="utf-8"))
+            for card in payload["high_risk_status_cards"]:
+                if card["object_id"] == "matter_coupling":
+                    card["next_burden"] = ""
+            for row in payload["distance_to_gr"]["high_risk_rows"]:
+                card = row.get("high_risk_status_card", {})
+                if card.get("object_id") == "matter_coupling":
+                    card["next_burden"] = ""
+            json_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+            report = self.validator.build_report(root)
+
+            self.assertIn(
+                "high_risk_status_card_incomplete:matter_coupling:next_burden",
+                error_ids(report),
+            )
+
     def test_missing_metric_use_ledger_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

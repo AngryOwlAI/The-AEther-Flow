@@ -225,7 +225,7 @@ def validate_high_risk_status_cards(payload: dict[str, Any], errors: list[dict[s
                 f"missing high-risk status card: {burden_id}",
             )
         else:
-            for field in ["positive_status", "exact_scope", "allowed_use"]:
+            for field in ["positive_status", "exact_scope", "allowed_use", "next_burden", "public_summary"]:
                 if not text(card.get(field)):
                     append_error(
                         errors,
@@ -238,6 +238,16 @@ def validate_high_risk_status_cards(payload: dict[str, Any], errors: list[dict[s
                     errors,
                     f"high_risk_status_card_incomplete:{burden_id}:blocked_overread",
                     f"status card {burden_id} missing blocked_overread list",
+                )
+            full_non_conclusions = card.get("full_control_non_conclusions")
+            if (
+                not isinstance(full_non_conclusions, list)
+                or not [item for item in full_non_conclusions if text(item)]
+            ):
+                append_error(
+                    errors,
+                    f"high_risk_status_card_incomplete:{burden_id}:full_control_non_conclusions",
+                    f"status card {burden_id} missing full_control_non_conclusions list",
                 )
             if lower_text(card.get("positive_status")) == "accepted":
                 append_error(

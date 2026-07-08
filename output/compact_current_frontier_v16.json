@@ -2,26 +2,26 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0725.yaml",
+    "research_control/handoffs/handoff-0726.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
     "registries/MARKDOWN_SOURCE_REGISTRY.csv",
-    "research_control/design/accepted_status_calibration_v1.yaml",
+    "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260708-032",
-    "latest_handoff_id": "handoff-0725",
-    "current_status": "v18_p9_t01_status_card_v2_schema_defined_no_physics_delta",
+    "active_task_id": "RT-20260708-033",
+    "latest_handoff_id": "handoff-0726",
+    "current_status": "v18_p9_t02_status_card_v2_frontier_renderer_completed_no_physics_delta",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260708-032",
-    "latest_research_handoff_id": "handoff-0725",
-    "latest_research_next_action": "Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet.",
+    "latest_research_task_id": "RT-20260708-033",
+    "latest_research_handoff_id": "handoff-0726",
+    "latest_research_next_action": "Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "status_card_v2_frontier_renderer",
-    "role_family": "renderer-maintainer@0.1.0",
+    "route_id": "public_documentation_cognitive_load_calibration",
+    "role_family": "documentation-curator@2.0.0",
     "target_derivation_milestone": "none",
-    "milestone_burden": "Render status-card v2 in current frontier and compact frontier.",
+    "milestone_burden": "Update public-facing pages to use concise status-card v2 summaries without changing claim status.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -65,6 +65,20 @@
       "exact_scope": "The adoption applies only under the declared source-only GSC candidate scope and fail-closed boundary.",
       "allowed_use": "Later bounded packets may use it as source-side prerequisite context.",
       "blocked_overread": [
+        "not a target manifold",
+        "not a metric",
+        "not MetricData(E) scope expansion",
+        "not g_eff scope expansion",
+        "not matter coupling",
+        "not Einstein equations",
+        "not benchmark promotion",
+        "not completed derivation"
+      ],
+      "blocked_overread_sentence": "not a target manifold; not a metric; not MetricData(E) scope expansion; not g_eff scope expansion; not matter coupling; not Einstein equations; not benchmark promotion; not completed derivation",
+      "next_burden": "Use scoped M_src only as source-side prerequisite context while deriving any later metric or coupling bridge without target-manifold or target-metric import.",
+      "next_lawful_route": "one bounded source-side construction, audit, stress, or selector packet authorized by the latest handoff",
+      "public_summary": "Scoped source-only M_src exists for continuation; it is not a target manifold, metric, coupling, benchmark, or derivation.",
+      "full_control_non_conclusions": [
         "no_target_manifold",
         "no_metric",
         "no_metricdata_e_scope_expansion",
@@ -74,8 +88,8 @@
         "no_benchmark_promotion",
         "no_completed_derivation"
       ],
-      "blocked_overread_sentence": "It is not a target manifold, metric, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation.",
-      "evidence_source": "registries/DISTANCE_TO_GR_LEDGER.csv#m_src"
+      "evidence_source": "research_control/design/accepted_status_calibration_v1.yaml#accepted_status_calibration_v1.high_risk_objects.m_src",
+      "status_card_version": "v2"
     },
     {
       "object_id": "g_eff",
@@ -83,6 +97,19 @@
       "exact_scope": "The adoption applies only to the declared source-extension candidate scope.",
       "allowed_use": "Later bounded packets may use it as scoped source-extension context.",
       "blocked_overread": [
+        "not an unscoped Lorentzian metric",
+        "not MetricData(E) adoption",
+        "not unscoped g_eff",
+        "not matter coupling",
+        "not Einstein equations",
+        "not benchmark promotion",
+        "not completed derivation"
+      ],
+      "blocked_overread_sentence": "not an unscoped Lorentzian metric; not MetricData(E) adoption; not unscoped g_eff; not matter coupling; not Einstein equations; not benchmark promotion; not completed derivation",
+      "next_burden": "Show any later use of scoped g_eff as source-extension context without adopting MetricData(E), an unscoped Lorentzian metric, matter coupling, or Einstein equations.",
+      "next_lawful_route": "one bounded source-extension construction, audit, stress, or selector packet authorized by the latest handoff",
+      "public_summary": "Scoped source-extension g_eff exists for continuation; it is not an unscoped Lorentzian metric, coupling, benchmark, or derivation.",
+      "full_control_non_conclusions": [
         "no_unscoped_lorentzian_metric",
         "no_metricdata_e_adoption",
         "no_unscoped_geff",
@@ -91,8 +118,8 @@
         "no_benchmark_promotion",
         "no_completed_derivation"
       ],
-      "blocked_overread_sentence": "It is not an unscoped Lorentzian metric, MetricData(E) adoption, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation.",
-      "evidence_source": "registries/DISTANCE_TO_GR_LEDGER.csv#g_eff"
+      "evidence_source": "research_control/design/accepted_status_calibration_v1.yaml#accepted_status_calibration_v1.high_risk_objects.g_eff",
+      "status_card_version": "v2"
     },
     {
       "object_id": "matter_coupling",
@@ -100,6 +127,21 @@
       "exact_scope": "The support is certificate-indexed, source-side, and finite/local only.",
       "allowed_use": "Later bounded packets may use it to construct, audit, or stress one source-side coupling-law candidate.",
       "blocked_overread": [
+        "not source-law adoption",
+        "not detector semantics",
+        "not coupling-law adoption",
+        "not matter-coupling derivation",
+        "not stress-energy semantics",
+        "not matter action",
+        "not Einstein equations",
+        "not benchmark promotion",
+        "not completed derivation"
+      ],
+      "blocked_overread_sentence": "not source-law adoption; not detector semantics; not coupling-law adoption; not matter-coupling derivation; not stress-energy semantics; not matter action; not Einstein equations; not benchmark promotion; not completed derivation",
+      "next_burden": "Construct, audit, or stress one source-side coupling-law candidate from the scoped evidence/preconditions before any matter-coupling derivation or adoption claim.",
+      "next_lawful_route": "one bounded source-side coupling-law candidate construction, smuggling audit, or refuter stress packet under protected claim gates",
+      "public_summary": "Scoped source-side evidence/preconditions exist for continuation; matter coupling is still not derived or adopted.",
+      "full_control_non_conclusions": [
         "no_source_law_adoption",
         "no_rr_e_transport_law_adoption",
         "no_positive_ms_profile_adoption",
@@ -118,34 +160,62 @@
         "no_benchmark_promotion",
         "no_completed_derivation"
       ],
-      "blocked_overread_sentence": "It is not source-law adoption, detector semantics, coupling-law adoption, matter-coupling derivation, stress-energy semantics, matter action, Einstein-equation result, benchmark promotion, or completed derivation.",
-      "evidence_source": "registries/DISTANCE_TO_GR_LEDGER.csv#matter_coupling"
+      "evidence_source": "research_control/design/accepted_status_calibration_v1.yaml#accepted_status_calibration_v1.high_risk_objects.matter_coupling",
+      "status_card_version": "v2"
     },
     {
       "object_id": "einstein_equations",
-      "positive_status": "not started; no positive derivation status",
-      "exact_scope": "The status is limited to control status not_started, mathematical status dynamics_action_or_variation_missing, physical status no_field_equation_derivation.",
-      "allowed_use": "Later bounded packets may use this row only as a blocked-target boundary condition.",
+      "positive_status": "einstein_equations remains blocked with open continuation and no positive derivation status.",
+      "exact_scope": "No Einstein-equation premise, derivation, benchmark closure, or completed derivation has been established.",
+      "allowed_use": "Later bounded packets may use this row only as a visible downstream burden and claim-boundary guard.",
       "blocked_overread": [
-        "No einstein equations follows from this row.",
-        "No benchmark promotion follows from this row.",
-        "No completed derivation follows from this row."
+        "not field equations derived",
+        "not dynamics or action established",
+        "not matter coupling established",
+        "not benchmark closure",
+        "not completed derivation"
       ],
-      "blocked_overread_sentence": "No einstein equations follows from this row. No benchmark promotion follows from this row. No completed derivation follows from this row.",
-      "evidence_source": "research_control/program_state.yaml"
+      "blocked_overread_sentence": "not field equations derived; not dynamics or action established; not matter coupling established; not benchmark closure; not completed derivation",
+      "next_burden": "Derive lawful dynamics/action/variation and matter coupling under protected gates before any Einstein-equation derivation claim.",
+      "next_lawful_route": "one bounded upstream dynamics, action, variation, matter-coupling, or selector packet after prerequisite source-side burdens are satisfied",
+      "public_summary": "Einstein equations remain blocked; the next burden is lawful dynamics/action/variation plus matter coupling under protected gates.",
+      "full_control_non_conclusions": [
+        "no_einstein_equation_premise",
+        "no_einstein_equation_derivation",
+        "no_dynamics_action_variation",
+        "no_matter_coupling",
+        "no_benchmark_promotion",
+        "no_completed_derivation"
+      ],
+      "evidence_source": "research_control/design/accepted_status_calibration_v2.yaml",
+      "status_card_version": "v2"
     },
     {
       "object_id": "benchmark_promotion",
-      "positive_status": "no benchmark promotion from scoped evidence/precondition alone",
-      "exact_scope": "The status is limited to control status blocked, mathematical status upstream_burdens_missing, physical status no_exact_gr_benchmark_promotion.",
-      "allowed_use": "Later bounded packets may use this row only as a blocked-target boundary condition.",
+      "positive_status": "benchmark_promotion remains blocked by upstream derivation burdens and protected authority.",
+      "exact_scope": "No exact-GR benchmark promotion, benchmark closure, fit claim, Gate Chair verdict, or completed derivation follows from scoped evidence/preconditions.",
+      "allowed_use": "Later bounded packets may use this row only as a protected downstream authority boundary.",
       "blocked_overread": [
-        "No benchmark promotion follows from this row.",
-        "No benchmark gate chair closure follows from this row.",
-        "No completed derivation follows from this row."
+        "not benchmark promoted",
+        "not exact-GR derivation complete",
+        "not benchmark fit accepted",
+        "not Gate Chair verdict",
+        "not completed derivation"
       ],
-      "blocked_overread_sentence": "No benchmark promotion follows from this row. No benchmark gate chair closure follows from this row. No completed derivation follows from this row.",
-      "evidence_source": "research_control/program_state.yaml"
+      "blocked_overread_sentence": "not benchmark promoted; not exact-GR derivation complete; not benchmark fit accepted; not Gate Chair verdict; not completed derivation",
+      "next_burden": "Complete upstream derivation burdens and protected Gate Chair benchmark review before any benchmark promotion or completed-derivation claim.",
+      "next_lawful_route": "protected Gate Chair benchmark review only after upstream derivation burdens are explicitly satisfied",
+      "public_summary": "Benchmark promotion remains blocked; upstream derivation burdens and protected Gate Chair review are still required.",
+      "full_control_non_conclusions": [
+        "no_benchmark_promotion",
+        "no_benchmark_closure",
+        "no_fit_claim",
+        "no_gate_chair_verdict",
+        "no_completed_exact_gr_derivation",
+        "no_completed_derivation"
+      ],
+      "evidence_source": "research_control/design/accepted_status_calibration_v2.yaml",
+      "status_card_version": "v2"
     }
   ],
   "scoped_positive_objects": [
@@ -282,6 +352,20 @@
           "exact_scope": "The adoption applies only under the declared source-only GSC candidate scope and fail-closed boundary.",
           "allowed_use": "Later bounded packets may use it as source-side prerequisite context.",
           "blocked_overread": [
+            "not a target manifold",
+            "not a metric",
+            "not MetricData(E) scope expansion",
+            "not g_eff scope expansion",
+            "not matter coupling",
+            "not Einstein equations",
+            "not benchmark promotion",
+            "not completed derivation"
+          ],
+          "blocked_overread_sentence": "not a target manifold; not a metric; not MetricData(E) scope expansion; not g_eff scope expansion; not matter coupling; not Einstein equations; not benchmark promotion; not completed derivation",
+          "next_burden": "Use scoped M_src only as source-side prerequisite context while deriving any later metric or coupling bridge without target-manifold or target-metric import.",
+          "next_lawful_route": "one bounded source-side construction, audit, stress, or selector packet authorized by the latest handoff",
+          "public_summary": "Scoped source-only M_src exists for continuation; it is not a target manifold, metric, coupling, benchmark, or derivation.",
+          "full_control_non_conclusions": [
             "no_target_manifold",
             "no_metric",
             "no_metricdata_e_scope_expansion",
@@ -291,8 +375,8 @@
             "no_benchmark_promotion",
             "no_completed_derivation"
           ],
-          "blocked_overread_sentence": "It is not a target manifold, metric, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation.",
-          "evidence_source": "registries/DISTANCE_TO_GR_LEDGER.csv#m_src"
+          "evidence_source": "research_control/design/accepted_status_calibration_v1.yaml#accepted_status_calibration_v1.high_risk_objects.m_src",
+          "status_card_version": "v2"
         }
       },
       {
@@ -319,6 +403,19 @@
           "exact_scope": "The adoption applies only to the declared source-extension candidate scope.",
           "allowed_use": "Later bounded packets may use it as scoped source-extension context.",
           "blocked_overread": [
+            "not an unscoped Lorentzian metric",
+            "not MetricData(E) adoption",
+            "not unscoped g_eff",
+            "not matter coupling",
+            "not Einstein equations",
+            "not benchmark promotion",
+            "not completed derivation"
+          ],
+          "blocked_overread_sentence": "not an unscoped Lorentzian metric; not MetricData(E) adoption; not unscoped g_eff; not matter coupling; not Einstein equations; not benchmark promotion; not completed derivation",
+          "next_burden": "Show any later use of scoped g_eff as source-extension context without adopting MetricData(E), an unscoped Lorentzian metric, matter coupling, or Einstein equations.",
+          "next_lawful_route": "one bounded source-extension construction, audit, stress, or selector packet authorized by the latest handoff",
+          "public_summary": "Scoped source-extension g_eff exists for continuation; it is not an unscoped Lorentzian metric, coupling, benchmark, or derivation.",
+          "full_control_non_conclusions": [
             "no_unscoped_lorentzian_metric",
             "no_metricdata_e_adoption",
             "no_unscoped_geff",
@@ -327,8 +424,8 @@
             "no_benchmark_promotion",
             "no_completed_derivation"
           ],
-          "blocked_overread_sentence": "It is not an unscoped Lorentzian metric, MetricData(E) adoption, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation.",
-          "evidence_source": "registries/DISTANCE_TO_GR_LEDGER.csv#g_eff"
+          "evidence_source": "research_control/design/accepted_status_calibration_v1.yaml#accepted_status_calibration_v1.high_risk_objects.g_eff",
+          "status_card_version": "v2"
         }
       },
       {
@@ -363,6 +460,21 @@
           "exact_scope": "The support is certificate-indexed, source-side, and finite/local only.",
           "allowed_use": "Later bounded packets may use it to construct, audit, or stress one source-side coupling-law candidate.",
           "blocked_overread": [
+            "not source-law adoption",
+            "not detector semantics",
+            "not coupling-law adoption",
+            "not matter-coupling derivation",
+            "not stress-energy semantics",
+            "not matter action",
+            "not Einstein equations",
+            "not benchmark promotion",
+            "not completed derivation"
+          ],
+          "blocked_overread_sentence": "not source-law adoption; not detector semantics; not coupling-law adoption; not matter-coupling derivation; not stress-energy semantics; not matter action; not Einstein equations; not benchmark promotion; not completed derivation",
+          "next_burden": "Construct, audit, or stress one source-side coupling-law candidate from the scoped evidence/preconditions before any matter-coupling derivation or adoption claim.",
+          "next_lawful_route": "one bounded source-side coupling-law candidate construction, smuggling audit, or refuter stress packet under protected claim gates",
+          "public_summary": "Scoped source-side evidence/preconditions exist for continuation; matter coupling is still not derived or adopted.",
+          "full_control_non_conclusions": [
             "no_source_law_adoption",
             "no_rr_e_transport_law_adoption",
             "no_positive_ms_profile_adoption",
@@ -381,8 +493,8 @@
             "no_benchmark_promotion",
             "no_completed_derivation"
           ],
-          "blocked_overread_sentence": "It is not source-law adoption, detector semantics, coupling-law adoption, matter-coupling derivation, stress-energy semantics, matter action, Einstein-equation result, benchmark promotion, or completed derivation.",
-          "evidence_source": "registries/DISTANCE_TO_GR_LEDGER.csv#matter_coupling"
+          "evidence_source": "research_control/design/accepted_status_calibration_v1.yaml#accepted_status_calibration_v1.high_risk_objects.matter_coupling",
+          "status_card_version": "v2"
         }
       },
       {
@@ -401,16 +513,30 @@
         "last_evidence_path": "research_control/program_state.yaml",
         "high_risk_status_card": {
           "object_id": "einstein_equations",
-          "positive_status": "not started; no positive derivation status",
-          "exact_scope": "The status is limited to control status not_started, mathematical status dynamics_action_or_variation_missing, physical status no_field_equation_derivation.",
-          "allowed_use": "Later bounded packets may use this row only as a blocked-target boundary condition.",
+          "positive_status": "einstein_equations remains blocked with open continuation and no positive derivation status.",
+          "exact_scope": "No Einstein-equation premise, derivation, benchmark closure, or completed derivation has been established.",
+          "allowed_use": "Later bounded packets may use this row only as a visible downstream burden and claim-boundary guard.",
           "blocked_overread": [
-            "No einstein equations follows from this row.",
-            "No benchmark promotion follows from this row.",
-            "No completed derivation follows from this row."
+            "not field equations derived",
+            "not dynamics or action established",
+            "not matter coupling established",
+            "not benchmark closure",
+            "not completed derivation"
           ],
-          "blocked_overread_sentence": "No einstein equations follows from this row. No benchmark promotion follows from this row. No completed derivation follows from this row.",
-          "evidence_source": "research_control/program_state.yaml"
+          "blocked_overread_sentence": "not field equations derived; not dynamics or action established; not matter coupling established; not benchmark closure; not completed derivation",
+          "next_burden": "Derive lawful dynamics/action/variation and matter coupling under protected gates before any Einstein-equation derivation claim.",
+          "next_lawful_route": "one bounded upstream dynamics, action, variation, matter-coupling, or selector packet after prerequisite source-side burdens are satisfied",
+          "public_summary": "Einstein equations remain blocked; the next burden is lawful dynamics/action/variation plus matter coupling under protected gates.",
+          "full_control_non_conclusions": [
+            "no_einstein_equation_premise",
+            "no_einstein_equation_derivation",
+            "no_dynamics_action_variation",
+            "no_matter_coupling",
+            "no_benchmark_promotion",
+            "no_completed_derivation"
+          ],
+          "evidence_source": "research_control/design/accepted_status_calibration_v2.yaml",
+          "status_card_version": "v2"
         }
       },
       {
@@ -429,16 +555,30 @@
         "last_evidence_path": "research_control/program_state.yaml",
         "high_risk_status_card": {
           "object_id": "benchmark_promotion",
-          "positive_status": "no benchmark promotion from scoped evidence/precondition alone",
-          "exact_scope": "The status is limited to control status blocked, mathematical status upstream_burdens_missing, physical status no_exact_gr_benchmark_promotion.",
-          "allowed_use": "Later bounded packets may use this row only as a blocked-target boundary condition.",
+          "positive_status": "benchmark_promotion remains blocked by upstream derivation burdens and protected authority.",
+          "exact_scope": "No exact-GR benchmark promotion, benchmark closure, fit claim, Gate Chair verdict, or completed derivation follows from scoped evidence/preconditions.",
+          "allowed_use": "Later bounded packets may use this row only as a protected downstream authority boundary.",
           "blocked_overread": [
-            "No benchmark promotion follows from this row.",
-            "No benchmark gate chair closure follows from this row.",
-            "No completed derivation follows from this row."
+            "not benchmark promoted",
+            "not exact-GR derivation complete",
+            "not benchmark fit accepted",
+            "not Gate Chair verdict",
+            "not completed derivation"
           ],
-          "blocked_overread_sentence": "No benchmark promotion follows from this row. No benchmark gate chair closure follows from this row. No completed derivation follows from this row.",
-          "evidence_source": "research_control/program_state.yaml"
+          "blocked_overread_sentence": "not benchmark promoted; not exact-GR derivation complete; not benchmark fit accepted; not Gate Chair verdict; not completed derivation",
+          "next_burden": "Complete upstream derivation burdens and protected Gate Chair benchmark review before any benchmark promotion or completed-derivation claim.",
+          "next_lawful_route": "protected Gate Chair benchmark review only after upstream derivation burdens are explicitly satisfied",
+          "public_summary": "Benchmark promotion remains blocked; upstream derivation burdens and protected Gate Chair review are still required.",
+          "full_control_non_conclusions": [
+            "no_benchmark_promotion",
+            "no_benchmark_closure",
+            "no_fit_claim",
+            "no_gate_chair_verdict",
+            "no_completed_exact_gr_derivation",
+            "no_completed_derivation"
+          ],
+          "evidence_source": "research_control/design/accepted_status_calibration_v2.yaml",
+          "status_card_version": "v2"
         }
       }
     ]

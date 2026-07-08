@@ -201,6 +201,13 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
             )
             self.assertIn("exact_scope", matter_card)
             self.assertIn("allowed_use", matter_card)
+            self.assertEqual(
+                matter_card["next_burden"],
+                "Address the current blocking burden before any downstream promotion: source evidence only.",
+            )
+            self.assertIn("public_summary", matter_card)
+            self.assertIn("full_control_non_conclusions", matter_card)
+            self.assertIn("no_matter_coupling_derivation", matter_card["full_control_non_conclusions"])
             self.assertIn("coupling law adoption", " ".join(matter_card["blocked_overread"]))
             for row in rows:
                 self.assertIn("high_risk_status_card", row)
@@ -254,6 +261,11 @@ class RenderCompactCurrentFrontierV16Tests(unittest.TestCase):
                 "latest_research_handoff",
             )
             self.assertIn("high_risk_status_cards", payload)
+            matter_card = next(
+                card for card in payload["high_risk_status_cards"] if card["object_id"] == "matter_coupling"
+            )
+            self.assertIn("next_burden", matter_card)
+            self.assertIn("full_control_non_conclusions", matter_card)
             self.assertEqual(payload["metric_use_ledger"]["forbidden_or_import_row_count"], "2")
 
 

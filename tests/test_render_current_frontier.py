@@ -335,6 +335,7 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             self.assertIn("**Scope:** The status is limited to control status accepted_as_scoped_evidence_precondition", markdown)
             self.assertIn("**Allowed use:** Later bounded packets may use this row only under the listed scope and overread guards.", markdown)
             self.assertIn("**Blocked overread:** No coupling law adoption follows from this row.", markdown)
+            self.assertIn("**Next burden:** Address the current blocking burden before any downstream promotion: scoped evidence only.", markdown)
             self.assertIn("not_unscoped_lorentzian_metric_not_matter_coupling_not_einstein_equations", markdown)
             self.assertIn("no_unscoped_geff_adoption", markdown)
             self.assertIn("no_field_equation_derivation", markdown)
@@ -378,6 +379,7 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             payload = json.loads(output.getvalue())
             self.assertEqual(payload["schema_id"], "current_frontier_state_v1")
             self.assertEqual(payload["status"], "rendered")
+            self.assertEqual(payload["status_card_version"], "fallback")
             self.assertEqual(payload["distance_to_gr_row_count"], 4)
             self.assertEqual(
                 payload["metric_use_ledger_summary"]["forbidden_or_import_row_count"],

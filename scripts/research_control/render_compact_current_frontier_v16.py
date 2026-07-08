@@ -25,7 +25,9 @@ DISTANCE_LEDGER_PATH = "registries/DISTANCE_TO_GR_LEDGER.csv"
 METRIC_USE_LEDGER_PATH = "registries/METRIC_USE_LEDGER.csv"
 CURRENT_FRONTIER_PATH = "research_control/current_frontier.md"
 MARKDOWN_REGISTRY_PATH = "registries/MARKDOWN_SOURCE_REGISTRY.csv"
-ACCEPTED_STATUS_CALIBRATION_PATH = "research_control/design/accepted_status_calibration_v1.yaml"
+ACCEPTED_STATUS_CALIBRATION_V1_PATH = "research_control/design/accepted_status_calibration_v1.yaml"
+ACCEPTED_STATUS_CALIBRATION_V2_PATH = "research_control/design/accepted_status_calibration_v2.yaml"
+ACCEPTED_STATUS_CALIBRATION_PATH = ACCEPTED_STATUS_CALIBRATION_V2_PATH
 ACTIVE_STATE_BIFURCATION_POLICY_PATH = "research_control/design/active_state_bifurcation_policy_v1.md"
 DEFAULT_YAML_PATH = "output/compact_current_frontier_v16.yaml"
 DEFAULT_JSON_PATH = "output/compact_current_frontier_v16.json"
@@ -231,12 +233,13 @@ def guarded_reader_status(row: dict[str, str], frontier_text: str) -> str:
 
 
 def calibration_rows(calibration: dict[str, Any]) -> dict[str, dict[str, Any]]:
-    root = calibration.get("accepted_status_calibration_v1")
-    root = root if isinstance(root, dict) else {}
-    rows = root.get("high_risk_objects")
-    if not isinstance(rows, dict):
-        return {}
-    return {str(key): value for key, value in rows.items() if isinstance(value, dict)}
+    for root_key in ("accepted_status_calibration_v2", "accepted_status_calibration_v1"):
+        root = calibration.get(root_key)
+        root = root if isinstance(root, dict) else {}
+        rows = root.get("high_risk_objects")
+        if isinstance(rows, dict):
+            return {str(key): value for key, value in rows.items() if isinstance(value, dict)}
+    return {}
 
 
 def sentence_from_guard_token(token: str) -> str:
@@ -278,6 +281,35 @@ def status_card_for_row(
 ) -> dict[str, Any]:
     burden_id = text_value(row.get("burden_id"))
     card_source = calibration.get(burden_id, {})
+    v2_card = card_source.get("status_card_v2") if isinstance(card_source, dict) else {}
+    if isinstance(v2_card, dict) and v2_card:
+        blocked_items = v2_card.get("blocked_overread")
+        blocked_overread = [
+            text_value(item)
+            for item in blocked_items
+            if text_value(item)
+        ] if isinstance(blocked_items, list) else []
+        full_non_conclusions = v2_card.get("full_control_non_conclusions")
+        full_non_conclusions = [
+            text_value(item)
+            for item in full_non_conclusions
+            if text_value(item)
+        ] if isinstance(full_non_conclusions, list) else []
+        return {
+            "object_id": burden_id,
+            "positive_status": text_value(v2_card.get("positive_status")),
+            "exact_scope": text_value(v2_card.get("exact_scope")),
+            "allowed_use": text_value(v2_card.get("allowed_use")),
+            "blocked_overread": blocked_overread,
+            "blocked_overread_sentence": "; ".join(blocked_overread),
+            "next_burden": text_value(v2_card.get("next_burden")),
+            "next_lawful_route": text_value(v2_card.get("next_lawful_route")),
+            "public_summary": text_value(v2_card.get("public_summary")),
+            "full_control_non_conclusions": full_non_conclusions,
+            "evidence_source": text_value(card_source.get("source_v1_calibration_path"))
+            or ACCEPTED_STATUS_CALIBRATION_V2_PATH,
+            "status_card_version": "v2",
+        }
     if card_source:
         blocked_items = card_source.get("full_control_blocked_items")
         blocked_overread = [
@@ -285,6 +317,7 @@ def status_card_for_row(
             for item in blocked_items
             if text_value(item)
         ] if isinstance(blocked_items, list) else [text_value(card_source.get("blocked_overread_sentence"))]
+        non_conclusions = split_tokens(row.get("overread_guard", "")) or blocked_overread
         return {
             "object_id": burden_id,
             "positive_status": text_value(card_source.get("positive_status_sentence")),
@@ -292,9 +325,15 @@ def status_card_for_row(
             "allowed_use": text_value(card_source.get("allowed_use_sentence")),
             "blocked_overread": blocked_overread,
             "blocked_overread_sentence": text_value(card_source.get("blocked_overread_sentence")),
+            "next_burden": f"Address the current blocking burden before any downstream promotion: {text_value(row.get('blocking_burden')) or 'unspecified'}.",
+            "next_lawful_route": "one bounded continue-research packet authorized by the latest tracked handoff",
+            "public_summary": text_value(card_source.get("positive_status_sentence")),
+            "full_control_non_conclusions": non_conclusions,
             "evidence_source": text_value(card_source.get("evidence_source")),
+            "status_card_version": "v1_compat",
         }
     blocked_overread = fallback_blocked_overread_items(row)
+    non_conclusions = split_tokens(row.get("overread_guard", ""))
     return {
         "object_id": burden_id,
         "positive_status": guarded_reader_status(row, frontier_text),
@@ -302,7 +341,12 @@ def status_card_for_row(
         "allowed_use": fallback_allowed_use_sentence(row),
         "blocked_overread": blocked_overread,
         "blocked_overread_sentence": " ".join(blocked_overread),
+        "next_burden": f"Address the current blocking burden before any downstream promotion: {text_value(row.get('blocking_burden')) or 'unspecified'}.",
+        "next_lawful_route": "one bounded continue-research packet authorized by the latest tracked handoff",
+        "public_summary": guarded_reader_status(row, frontier_text),
+        "full_control_non_conclusions": non_conclusions,
         "evidence_source": text_value(row.get("last_evidence_path")),
+        "status_card_version": "fallback",
     }
 
 
@@ -468,7 +512,14 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
     metric_use_rows = read_csv_rows(repo_root, METRIC_USE_LEDGER_PATH)
     markdown_rows = read_csv_rows(repo_root, MARKDOWN_REGISTRY_PATH)
     frontier_text = read_text_source(repo_root, CURRENT_FRONTIER_PATH)
-    accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_PATH)
+    accepted_status_calibration_path = ""
+    accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_V2_PATH)
+    if accepted_status_calibration:
+        accepted_status_calibration_path = ACCEPTED_STATUS_CALIBRATION_V2_PATH
+    else:
+        accepted_status_calibration = load_optional_control_yaml(repo_root, ACCEPTED_STATUS_CALIBRATION_V1_PATH)
+        if accepted_status_calibration:
+            accepted_status_calibration_path = ACCEPTED_STATUS_CALIBRATION_V1_PATH
     calibration = calibration_rows(accepted_status_calibration)
     selected_route = latest_handoff.get("selected_next_route")
     selected_route = selected_route if isinstance(selected_route, dict) else {}
@@ -498,8 +549,8 @@ def build_snapshot(repo_root: Path) -> dict[str, Any]:
         CURRENT_FRONTIER_PATH,
         MARKDOWN_REGISTRY_PATH,
     ]
-    if accepted_status_calibration:
-        generated_from.append(ACCEPTED_STATUS_CALIBRATION_PATH)
+    if accepted_status_calibration_path:
+        generated_from.append(accepted_status_calibration_path)
     if repo_path(repo_root, ACTIVE_STATE_BIFURCATION_POLICY_PATH).exists():
         generated_from.append(ACTIVE_STATE_BIFURCATION_POLICY_PATH)
 
@@ -613,12 +664,18 @@ def validate_snapshot(snapshot: dict[str, Any]) -> list[str]:
         if not isinstance(card, dict):
             errors.append(f"missing high-risk status card: {burden_id}")
             continue
-        for field in ["positive_status", "exact_scope", "allowed_use"]:
+        for field in ["positive_status", "exact_scope", "allowed_use", "next_burden", "public_summary"]:
             if not text_value(card.get(field)):
                 errors.append(f"empty status card field {field}: {burden_id}")
         blocked = card.get("blocked_overread")
         if not isinstance(blocked, list) or not [item for item in blocked if text_value(item)]:
             errors.append(f"empty status card blocked_overread: {burden_id}")
+        full_non_conclusions = card.get("full_control_non_conclusions")
+        if (
+            not isinstance(full_non_conclusions, list)
+            or not [item for item in full_non_conclusions if text_value(item)]
+        ):
+            errors.append(f"empty status card full_control_non_conclusions: {burden_id}")
         if text_value(card.get("positive_status")).lower() == "accepted":
             errors.append(f"bare accepted status card: {burden_id}")
     metric_summary = snapshot.get("metric_use_ledger")
@@ -643,8 +700,8 @@ def markdown_list_cell(values: Any) -> str:
 
 def status_cards_markdown_rows(cards: list[dict[str, Any]]) -> str:
     lines = [
-        "| Object | Positive status | Scope | Allowed use | Blocked overread |",
-        "| --- | --- | --- | --- | --- |",
+        "| Object | Positive status | Scope | Allowed use | Blocked overread | Next burden |",
+        "| --- | --- | --- | --- | --- | --- |",
     ]
     for card in cards:
         lines.append(
@@ -656,6 +713,7 @@ def status_cards_markdown_rows(cards: list[dict[str, Any]]) -> str:
                     card["exact_scope"],
                     card["allowed_use"],
                     markdown_list_cell(card.get("blocked_overread", [])),
+                    card.get("next_burden", ""),
                 ]
             )
             + " |"

@@ -1,0 +1,66 @@
+task_id: "RT-20260708-033"
+task_type: "status_card_v2_frontier_renderer"
+status: "completed"
+created_at: "2026-07-08T19:10:03Z"
+updated_at: "2026-07-08T19:10:03Z"
+closed_at: "2026-07-08T19:10:03Z"
+parent_task_id: "RT-20260708-032"
+parent_handoff_id: "handoff-0725"
+decision_id: "DDR-20260708-033"
+job_id: "AJ-RT-20260708-033-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260708-033"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This renderer packet does not consume Gate Chair authority or issue a protected verdict."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T02"
+  plan_task_name: "Current-frontier and compact-frontier status-card v2 renderer"
+  recommendation_ids:
+    - "V18-R09"
+objective: "Integrate status-card v2 rendering into current-frontier and compact-frontier renderers while preserving concise public blocked lists and full control non-conclusions in control outputs."
+target_derivation_milestone: "none"
+milestone_burden: "Render status-card v2 in current frontier and compact frontier."
+closure_status: "v18_p9_t02_status_card_v2_frontier_renderer_completed_no_physics_delta"
+project_system_boundary_authorized_by_plan: true
+physics_progress_status: "renderer_update_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P9-T02 renderer integration for status-card v2 with no physics delta."
+  current_frontier_renderer_path: "scripts/research_control/render_current_frontier.py"
+  compact_frontier_renderer_path: "scripts/research_control/render_compact_current_frontier_v16.py"
+  compact_frontier_validator_path: "scripts/research_control/validate_compact_current_frontier_v16.py"
+  next_burden_rendered_for_high_risk_rows: true
+  concise_public_blocked_overread_preserved: true
+  full_control_non_conclusions_available_in_control_payloads: true
+  source_law_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  detector_semantics_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "scripts/research_control/render_current_frontier.py"
+  - "scripts/research_control/render_compact_current_frontier_v16.py"
+  - "scripts/research_control/validate_compact_current_frontier_v16.py"
+  - "tests/test_render_current_frontier.py"
+  - "tests/test_render_compact_current_frontier_v16.py"
+  - "tests/test_validate_compact_current_frontier_v16.py"
+  - "research_control/current_frontier.md"
+  - "output/compact_current_frontier_v16.yaml"
+  - "output/compact_current_frontier_v16.json"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "research_control/tasks/RT-20260708-033/artifacts/validate_p9_t02_status_card_v2_renderer.py"
+  - "research_control/tasks/RT-20260708-033/artifacts/p9_t02_status_card_v2_renderer_report.json"
+  - "research_control/tasks/RT-20260708-033/artifacts/status_card_v2_renderer_receipt.md"
+next_recommended_action: "Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet."
+notes: "RT-20260708-033 completes v18 P9-T02 by integrating status-card v2 into frontier renderers and compact-frontier validation. It records no Distance-to-GR ledger update and no physics claim change."
+documentation_impact_id: "DI-RT-20260708-033-001"

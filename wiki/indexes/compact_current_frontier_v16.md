@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-032`
-- Latest handoff: `handoff-0725`
-- Current status: `v18_p9_t01_status_card_v2_schema_defined_no_physics_delta`
+- Active task: `RT-20260708-033`
+- Latest handoff: `handoff-0726`
+- Current status: `v18_p9_t02_status_card_v2_frontier_renderer_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-032`
-- Latest research handoff: `handoff-0725`
-- Latest research next action: Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet.
+- Latest research task: `RT-20260708-033`
+- Latest research handoff: `handoff-0726`
+- Latest research next action: Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `status_card_v2_frontier_renderer`
-- Role family: `renderer-maintainer@0.1.0`
+- Route ID: `public_documentation_cognitive_load_calibration`
+- Role family: `documentation-curator@2.0.0`
 - Target milestone: `none`
-- Milestone burden: Render status-card v2 in current frontier and compact frontier.
+- Milestone burden: Update public-facing pages to use concise status-card v2 summaries without changing claim status.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -46,13 +46,13 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 These cards render high-risk rows in the required order: positive status, exact scope, allowed use, and blocked overread. They are operational calibration only and do not create physics proof authority.
 
-| Object | Positive status | Scope | Allowed use | Blocked overread |
-| --- | --- | --- | --- | --- |
-| `m_src` | M_src is adopted only as a scoped source-only M_src object. | The adoption applies only under the declared source-only GSC candidate scope and fail-closed boundary. | Later bounded packets may use it as source-side prerequisite context. | no_target_manifold<br>no_metric<br>no_metricdata_e_scope_expansion<br>no_geff_scope_expansion<br>no_matter_coupling<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation |
-| `g_eff` | g_eff is adopted only as a scoped source-extension g_eff object. | The adoption applies only to the declared source-extension candidate scope. | Later bounded packets may use it as scoped source-extension context. | no_unscoped_lorentzian_metric<br>no_metricdata_e_adoption<br>no_unscoped_geff<br>no_matter_coupling<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation |
-| `matter_coupling` | matter_coupling has accepted scoped evidence/precondition only for continuation. | The support is certificate-indexed, source-side, and finite/local only. | Later bounded packets may use it to construct, audit, or stress one source-side coupling-law candidate. | no_source_law_adoption<br>no_rr_e_transport_law_adoption<br>no_positive_ms_profile_adoption<br>no_source_matter_semantics_readiness_law_adoption<br>no_matter_semantics_adoption<br>no_detector_semantics_adoption<br>no_coupling_law_adoption<br>no_matter_coupling_derivation<br>no_matter_coupling_adoption<br>no_stress_energy_semantics<br>no_stress_energy_tensor<br>no_matter_action<br>no_metricdata_e_adoption<br>no_geff_scope_expansion<br>no_einstein_equations<br>no_benchmark_promotion<br>no_completed_derivation |
-| `einstein_equations` | not started; no positive derivation status | The status is limited to control status not_started, mathematical status dynamics_action_or_variation_missing, physical status no_field_equation_derivation. | Later bounded packets may use this row only as a blocked-target boundary condition. | No einstein equations follows from this row.<br>No benchmark promotion follows from this row.<br>No completed derivation follows from this row. |
-| `benchmark_promotion` | no benchmark promotion from scoped evidence/precondition alone | The status is limited to control status blocked, mathematical status upstream_burdens_missing, physical status no_exact_gr_benchmark_promotion. | Later bounded packets may use this row only as a blocked-target boundary condition. | No benchmark promotion follows from this row.<br>No benchmark gate chair closure follows from this row.<br>No completed derivation follows from this row. |
+| Object | Positive status | Scope | Allowed use | Blocked overread | Next burden |
+| --- | --- | --- | --- | --- | --- |
+| `m_src` | M_src is adopted only as a scoped source-only M_src object. | The adoption applies only under the declared source-only GSC candidate scope and fail-closed boundary. | Later bounded packets may use it as source-side prerequisite context. | not a target manifold<br>not a metric<br>not MetricData(E) scope expansion<br>not g_eff scope expansion<br>not matter coupling<br>not Einstein equations<br>not benchmark promotion<br>not completed derivation | Use scoped M_src only as source-side prerequisite context while deriving any later metric or coupling bridge without target-manifold or target-metric import. |
+| `g_eff` | g_eff is adopted only as a scoped source-extension g_eff object. | The adoption applies only to the declared source-extension candidate scope. | Later bounded packets may use it as scoped source-extension context. | not an unscoped Lorentzian metric<br>not MetricData(E) adoption<br>not unscoped g_eff<br>not matter coupling<br>not Einstein equations<br>not benchmark promotion<br>not completed derivation | Show any later use of scoped g_eff as source-extension context without adopting MetricData(E), an unscoped Lorentzian metric, matter coupling, or Einstein equations. |
+| `matter_coupling` | matter_coupling has accepted scoped evidence/precondition only for continuation. | The support is certificate-indexed, source-side, and finite/local only. | Later bounded packets may use it to construct, audit, or stress one source-side coupling-law candidate. | not source-law adoption<br>not detector semantics<br>not coupling-law adoption<br>not matter-coupling derivation<br>not stress-energy semantics<br>not matter action<br>not Einstein equations<br>not benchmark promotion<br>not completed derivation | Construct, audit, or stress one source-side coupling-law candidate from the scoped evidence/preconditions before any matter-coupling derivation or adoption claim. |
+| `einstein_equations` | einstein_equations remains blocked with open continuation and no positive derivation status. | No Einstein-equation premise, derivation, benchmark closure, or completed derivation has been established. | Later bounded packets may use this row only as a visible downstream burden and claim-boundary guard. | not field equations derived<br>not dynamics or action established<br>not matter coupling established<br>not benchmark closure<br>not completed derivation | Derive lawful dynamics/action/variation and matter coupling under protected gates before any Einstein-equation derivation claim. |
+| `benchmark_promotion` | benchmark_promotion remains blocked by upstream derivation burdens and protected authority. | No exact-GR benchmark promotion, benchmark closure, fit claim, Gate Chair verdict, or completed derivation follows from scoped evidence/preconditions. | Later bounded packets may use this row only as a protected downstream authority boundary. | not benchmark promoted<br>not exact-GR derivation complete<br>not benchmark fit accepted<br>not Gate Chair verdict<br>not completed derivation | Complete upstream derivation burdens and protected Gate Chair benchmark review before any benchmark promotion or completed-derivation claim. |
 
 ## Metric-Use Ledger
 
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `5f5ee0499aa42422b6b0b4971b23b124fe3c4e6f9b3182fcc4dfc3f6361c642d`
-- JSON SHA-256: `eafe6e3433dedffd29e6ebb200e693b779eaf69a5e780d6b1118e959a7c5d81f`
+- YAML SHA-256: `97298e1eb52c321c49bdc35810eaec3661493212a54ea46799080db92f9941fc`
+- JSON SHA-256: `2c156d76ae9064218bd7595d644ec526ed4f28a78ce860e8c7a23fd9c5678919`
 
 ## Authority Warning
 

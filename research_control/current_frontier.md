@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-032` and `handoff-0725`.
+`RT-20260708-033` and `handoff-0726`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-032` |
-| Latest handoff ID | `handoff-0725` |
-| Current status | `v18_p9_t01_status_card_v2_schema_defined_no_physics_delta` |
+| Active task ID | `RT-20260708-033` |
+| Latest handoff ID | `handoff-0726` |
+| Current status | `v18_p9_t02_status_card_v2_frontier_renderer_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | status_card_v2_schema_next_burden |
+| Current route family | status_card_v2_frontier_renderer |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet. |
-| Required next authority | Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet. |
-| Next recommended action | Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet. |
+| Required next authority | Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet. |
+| Next recommended action | Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-032` |
-| Latest research handoff ID | `handoff-0725` |
-| Latest research next action | Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet. |
+| Latest research task ID | `RT-20260708-033` |
+| Latest research handoff ID | `handoff-0726` |
+| Latest research next action | Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-032/00_TASK.yaml`.
-- Active task objective: Create status-card v2 schema and calibration metadata with required next_burden and public-compression fields for high-risk rows.
-- Latest handoff path: `research_control/handoffs/handoff-0725.yaml`.
-- Latest handoff summary: RT-20260708-032 completed v18 P9-T01 by creating status-card v2 schema calibration and alias metadata with required next_burden public_summary and full_control_non_conclusions fields for high-risk rows no physics promotion.
-- Current route family: status_card_v2_schema_next_burden.
-- Next recommended action: Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet.
+- Active task path: `research_control/tasks/RT-20260708-033/00_TASK.yaml`.
+- Active task objective: Integrate status-card v2 rendering into current-frontier and compact-frontier renderers while preserving concise public blocked lists and full control non-conclusions in control outputs.
+- Latest handoff path: `research_control/handoffs/handoff-0726.yaml`.
+- Latest handoff summary: RT-20260708-033 completed v18 P9-T02 by integrating status-card v2 into current-frontier and compact-frontier renderers with next_burden rendering and retained full_control_non_conclusions no physics promotion.
+- Current route family: status_card_v2_frontier_renderer.
+- Next recommended action: Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -150,7 +150,9 @@ completed-derivation authority.
 
 **Allowed use:** Later bounded packets may use it as source-side prerequisite context.
 
-**Blocked overread:** It is not a target manifold, metric, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation.
+**Blocked overread:** No MetricData(E), g_eff scope expansion, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row.
+
+**Next burden:** Use scoped M_src only as source-side prerequisite context while deriving any later metric or coupling bridge without target-manifold or target-metric import.
 
 ### `g_eff`
 
@@ -160,7 +162,9 @@ completed-derivation authority.
 
 **Allowed use:** Later bounded packets may use it as scoped source-extension context.
 
-**Blocked overread:** It is not an unscoped Lorentzian metric, MetricData(E) adoption, matter coupling, Einstein-equation result, benchmark promotion, or completed derivation.
+**Blocked overread:** No MetricData(E), unscoped g_eff, matter coupling, Einstein equations, benchmark promotion, or completed derivation follows from this row.
+
+**Next burden:** Show any later use of scoped g_eff as source-extension context without adopting MetricData(E), an unscoped Lorentzian metric, matter coupling, or Einstein equations.
 
 ### `matter_coupling`
 
@@ -170,27 +174,33 @@ completed-derivation authority.
 
 **Allowed use:** Later bounded packets may use it to construct, audit, or stress one source-side coupling-law candidate.
 
-**Blocked overread:** It is not source-law adoption, detector semantics, coupling-law adoption, matter-coupling derivation, stress-energy semantics, matter action, Einstein-equation result, benchmark promotion, or completed derivation.
+**Blocked overread:** No source-law adoption, RR_ETransportCompletenessOrInvarianceLaw_v1 adoption, PositiveMSProfile_v1 adoption, SourceMatterSemanticsAdoptionReadinessLaw_v1 law adoption, matter semantics, detector semantics, coupling law, matter coupling, stress-energy, matter action, MetricData(E), g_eff scope expansion, Einstein equations, benchmark promotion, or completed derivation follows from this row.
+
+**Next burden:** Construct, audit, or stress one source-side coupling-law candidate from the scoped evidence/preconditions before any matter-coupling derivation or adoption claim.
 
 ### `einstein_equations`
 
-**Positive status:** not started; no positive derivation status
+**Positive status:** einstein_equations remains blocked with open continuation and no positive derivation status.
 
-**Scope:** The status is limited to control status not_started, mathematical status dynamics_action_or_variation_missing, physical status no_field_equation_derivation.
+**Scope:** No Einstein-equation premise, derivation, benchmark closure, or completed derivation has been established.
 
-**Allowed use:** Later bounded packets may use this row only as a blocked-target boundary condition.
+**Allowed use:** Later bounded packets may use this row only as a visible downstream burden and claim-boundary guard.
 
-**Blocked overread:** No einstein equations follows from this row. No benchmark promotion follows from this row. No completed derivation follows from this row.
+**Blocked overread:** Einstein equations remain blocked by missing dynamics, action, variation, matter coupling, and protected benchmark authority.
+
+**Next burden:** Derive lawful dynamics/action/variation and matter coupling under protected gates before any Einstein-equation derivation claim.
 
 ### `benchmark_promotion`
 
-**Positive status:** no benchmark promotion from scoped evidence/precondition alone
+**Positive status:** benchmark_promotion remains blocked by upstream derivation burdens and protected authority.
 
-**Scope:** The status is limited to control status blocked, mathematical status upstream_burdens_missing, physical status no_exact_gr_benchmark_promotion.
+**Scope:** No exact-GR benchmark promotion, benchmark closure, fit claim, Gate Chair verdict, or completed derivation follows from scoped evidence/preconditions.
 
-**Allowed use:** Later bounded packets may use this row only as a blocked-target boundary condition.
+**Allowed use:** Later bounded packets may use this row only as a protected downstream authority boundary.
 
-**Blocked overread:** No benchmark promotion follows from this row. No benchmark gate chair closure follows from this row. No completed derivation follows from this row.
+**Blocked overread:** No benchmark promotion, closure, fit claim, or completed exact-GR derivation claim follows from scoped evidence/preconditions.
+
+**Next burden:** Complete upstream derivation burdens and protected Gate Chair benchmark review before any benchmark promotion or completed-derivation claim.
 
 ## Layered Distance-To-GR Boundary Notes
 
@@ -292,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet.
+Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-032`;
-- latest handoff: `handoff-0725`;
-- current status: `v18_p9_t01_status_card_v2_schema_defined_no_physics_delta`;
+- active task: `RT-20260708-033`;
+- latest handoff: `handoff-0726`;
+- current status: `v18_p9_t02_status_card_v2_frontier_renderer_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -332,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0725.yaml`
-- `research_control/tasks/RT-20260708-032/00_TASK.yaml`
+- `research_control/handoffs/handoff-0726.yaml`
+- `research_control/tasks/RT-20260708-033/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -349,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0725*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0726*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

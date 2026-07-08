@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `88c330f6ff9bb65c349bca0a5b1526500c0e5da06dd821ad4160fd594195a889`
-- Generated-at source timestamp: `2026-07-08T18:20:24Z`
-- Row count: `866`
+- Source fingerprint: `0bc09d1e8fd7b6e022a2ab1cf95ee0f259af0f651997e8aa6e82b28d3634e694`
+- Generated-at source timestamp: `2026-07-08T19:10:03Z`
+- Row count: `867`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260708-033|RT-20260708-032|2026-07-08T19:10:03Z|2026-07-08T19:10:03Z|status_card_v2_frontier_renderer|completed|none|Render status-card v2 in current frontier and compact frontier.|project-control-maintainer@0.2.0|false|false|4|Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet.|PASS|research_control/tasks/RT-20260708-033/jobs/completions/AJC-AJ-RT-20260708-033-001.yaml|
 |RT-20260708-032|RT-20260708-031|2026-07-08T18:20:24Z|2026-07-08T18:20:24Z|status_card_v2_schema_next_burden|completed|none|Extend status-card schema with next burden and public compression fields.|project-control-maintainer@0.2.0|false|false|4|Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet.|PASS|research_control/tasks/RT-20260708-032/jobs/completions/AJC-AJ-RT-20260708-032-001.yaml|
 |RT-20260708-031|RT-20260708-030|2026-07-08T17:47:27Z|2026-07-08T17:47:27Z|physics_payload_ratio_red_team_review|completed|none|Stress payload-ratio policy for false pressure, process overcorrection, and research distortion.|external-red-team-reviewer@0.1.0|false|false|9|Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet.|PASS|research_control/tasks/RT-20260708-031/jobs/completions/AJC-AJ-RT-20260708-031-001.yaml|
 |RT-20260708-030|RT-20260708-029|2026-07-08T17:13:25Z|2026-07-08T17:13:25Z|physics_payload_ratio_dashboard_integration|completed|none|Render payload-ratio metrics as support-only AI methodology diagnostics.|project-control-maintainer@0.2.0|false|false|1|Run one bounded v18 P8-T05 physics-payload ratio red-team review packet.|PASS|research_control/tasks/RT-20260708-030/jobs/completions/AJC-AJ-RT-20260708-030-001.yaml|

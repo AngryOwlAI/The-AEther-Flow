@@ -1,0 +1,83 @@
+handoff_id: "handoff-0726"
+handoff_type: "research_completion"
+created_at: "2026-07-08T19:10:03Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-033"
+decision_id: "DDR-20260708-033"
+job_id: "AJ-RT-20260708-033-001"
+agent_job_id: "AJ-RT-20260708-033-001"
+completion_path: "research_control/tasks/RT-20260708-033/jobs/completions/AJC-AJ-RT-20260708-033-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-033-001"
+created_by_task_id: "RT-20260708-033"
+created_by_job_id: "AJ-RT-20260708-033-001"
+previous_handoff_id: "handoff-0725"
+supersedes_handoff_id: "handoff-0725"
+status: "ready_for_next_bounded_packet"
+authority: "control"
+summary: "RT-20260708-033 completed v18 P9-T02 by integrating status-card v2 into current-frontier and compact-frontier renderers with next_burden rendering and retained full_control_non_conclusions no physics promotion."
+completion:
+  task_id: "RT-20260708-033"
+  job_id: "AJ-RT-20260708-033-001"
+  completion_id: "AJC-AJ-RT-20260708-033-001"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T02"
+  task_type: "status_card_v2_frontier_renderer"
+  closure_status: "v18_p9_t02_status_card_v2_frontier_renderer_completed_no_physics_delta"
+  validation_status: "PASS"
+  completed_v18_tasks_this_packet:
+    - "P9-T02"
+  output_paths:
+    - "scripts/research_control/render_current_frontier.py"
+    - "scripts/research_control/render_compact_current_frontier_v16.py"
+    - "scripts/research_control/validate_compact_current_frontier_v16.py"
+    - "research_control/current_frontier.md"
+    - "output/compact_current_frontier_v16.yaml"
+    - "output/compact_current_frontier_v16.json"
+    - "wiki/indexes/compact_current_frontier_v16.md"
+    - "research_control/tasks/RT-20260708-033/artifacts/p9_t02_status_card_v2_renderer_report.json"
+renderer_result:
+  status_card_version: "v2"
+  current_frontier_uses_v2_calibration: true
+  compact_frontier_uses_v2_calibration: true
+  high_risk_next_burden_rendered: true
+  concise_public_blocked_overread_preserved: true
+  full_control_non_conclusions_available_in_control_payloads: true
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  ledger_row_updated: false
+physics_progress_status: "renderer_update_no_physics_delta"
+new_mathematical_payload: []
+mathematical_payload_manifest: []
+claim_boundary_summary: "Status-card v2 renderer integration does not create proof authority routing authority ledger override physics truth ranking source-law adoption detector-semantics adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation future source-extension impossibility or program-wide no-go conclusion."
+project_improvement_signals: []
+selected_next_route:
+  route_id: "public_documentation_cognitive_load_calibration"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P9"
+  plan_task_id: "P9-T03"
+  task_name: "Public documentation cognitive-load calibration"
+  role_family: "documentation-curator@2.0.0"
+  task_type: "public_documentation_cognitive_load_calibration"
+  target_derivation_milestone: "none"
+  milestone_burden: "Update public-facing pages to use concise status-card v2 summaries without changing claim status."
+  requires_human_gate: false
+  expected_agent_job_scope: "One bounded P9-T03 packet updating public-facing pages to use concise status-card v2 summaries without changing claim status."
+next_action: "Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet."
+next_recommended_action: "Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet."
+active_state_bifurcation:
+  latest_research_completion: "RT-20260708-033"
+  latest_research_task_id: "RT-20260708-033"
+  latest_research_handoff_id: "handoff-0726"
+  latest_research_next_action: "Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+operator_notes:
+  continue_research_boundary: "director_decision_required"
+  one_bounded_agentjob_limit: true
