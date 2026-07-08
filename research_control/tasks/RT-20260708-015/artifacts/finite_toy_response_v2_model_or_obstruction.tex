@@ -1,0 +1,248 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\title{V18 P6-T02 Finite Toy Response v2 Model-or-Obstruction}
+\author{Candidate Constructor packet RT-20260708-015}
+\date{2026-07-08}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\begin{document}
+\maketitle
+
+\section*{Control metadata}
+
+\begin{verbatim}
+plan_id: recommendations_implementation_plan_continue_task-v18
+plan_phase_id: P6
+plan_task_id: P6-T02
+task_type: finite_toy_response_v2_model_or_obstruction
+task_id: RT-20260708-015
+job_id: AJ-RT-20260708-015-001
+role: candidate-constructor@0.2.0
+model_or_obstruction_result: positive_toy_model_constructed
+positive_toy_model: true
+precise_obstruction: false
+obstruction_id: none
+target_derivation_milestone: finite_toy_metric_response
+milestone_burden: Construct a non-tag finite toy response model or record a precise obstruction.
+claim_status: draft/control
+promotion_allowed: false
+no_target_metric_import: true
+not_g_eff: true
+not_matter_coupling: true
+not_einstein_equations: true
+not_benchmark_promotion: true
+next_plan_task_id: P6-T03
+\end{verbatim}
+
+\section{Question}
+
+P6-T02 asks whether the P6-T01 source specification supports a finite toy
+response model without reviving the frozen explicit-tag route. The required
+answer is exactly one of:
+\[
+  \text{positive finite toy model}
+  \quad\text{or}\quad
+  \text{precise scoped obstruction}.
+\]
+This packet records the positive branch.
+
+\section{Constructed finite toy response model}
+
+\begin{definition}[Finite source object]
+Let
+\[
+  S_{v2}=\{a,b,c\},\qquad
+  A_{v2}=\bigl\{\{a,b\},\{b,c\}\bigr\}.
+\]
+The incidence relation is
+\[
+  Inc_{v2}(x,e) \iff x\in e,\quad x\in S_{v2},\ e\in A_{v2}.
+\]
+The source object is the finite path
+\[
+  P_{v2}:=(S_{v2},A_{v2},Inc_{v2}).
+\]
+\end{definition}
+
+\begin{verbatim}
+finite_source_set: S_v2 = {a,b,c}
+source_relations:
+  - A_v2 = {{a,b},{b,c}}
+  - Inc_v2(x,e) iff x in e
+\end{verbatim}
+
+\begin{definition}[Source-local distance and response]
+For \(x,y\in S_{v2}\), define \(d_A(x,y)\) to be the minimum number of
+adjacency edges in an \(A_{v2}\)-path from \(x\) to \(y\). Since \(P_{v2}\) is
+connected, \(d_A\) is total on \(S_{v2}\times S_{v2}\). Define
+\[
+  R_{v2}(\{x,y\}) := d_A(x,y),
+  \qquad
+  D_{v2}(x,y) := R_{v2}(\{x,y\}).
+\]
+Thus \(R_{v2}\) has values \(0,1,2\), induced only by the source adjacency
+relation.
+\end{definition}
+
+\begin{verbatim}
+induced_response_relation: R_v2({x,y}) = d_A(x,y)
+metric_response_analogue: D_v2(x,y) = R_v2({x,y}) as finite graph-distance form
+no_target_metric_import: true
+not_g_eff: true
+\end{verbatim}
+
+\begin{definition}[Orbit/invariant structure]
+Let \(Aut(P_{v2})\) be the automorphism group of the finite path. It contains
+the identity and the reflection \(\rho(a)=c,\rho(b)=b,\rho(c)=a\). On
+unordered pairs with repetition, the orbit classes are
+\[
+  O_0=\{\{a,a\},\{b,b\},\{c,c\}\},\quad
+  O_1=\{\{a,b\},\{b,c\}\},\quad
+  O_2=\{\{a,c\}\}.
+\]
+The response relation factors through these orbit-distance classes:
+\[
+  \{x,y\}\in O_k \implies R_{v2}(\{x,y\})=k,\qquad k\in\{0,1,2\}.
+\]
+\end{definition}
+
+\begin{verbatim}
+orbit_or_invariant_structure:
+  automorphism_group: Aut(P3) = {id, reflection}
+  unordered_pair_orbits:
+    - O_0 diagonal/source-coincidence class
+    - O_1 adjacent-pair class
+    - O_2 endpoint-pair class
+source_local_token_candidates: orbit-distance classes only
+explicit_target_tags_used: false
+\end{verbatim}
+
+\section{Orientation, normalization, and token candidates}
+
+The construction uses only source-local candidates:
+
+\begin{itemize}
+  \item The orientation candidate is neutral: no directed edge orientation is
+  selected. Reflection is an allowed source automorphism, not a broken
+  symmetry.
+  \item The normalization candidate is the source edge-count unit
+  \(d_A(x,y)=1\) for adjacent vertices.
+  \item The token candidates are the orbit-distance classes \(O_0,O_1,O_2\).
+  Their names are presentation names for invariant classes; they are not
+  independent target response tags.
+\end{itemize}
+
+\section{Tag independence}
+
+\begin{lemma}[Presentation-label erasure]
+Erase the vertex names \(a,b,c\) but retain the isomorphism class of the
+three-vertex path relation. Then the orbit-distance response relation is still
+defined up to unique graph isomorphism.
+\end{lemma}
+
+\begin{proof}
+The finite path has one vertex of degree two and two vertices of degree one.
+This degree pattern identifies the center and endpoint orbit without using the
+presentation labels. The source adjacency relation determines shortest-path
+edge count on the unlabeled path, and the pair orbits are exactly the
+distance classes \(0,1,2\). Hence \(R_{v2}\) is recoverable from the source
+relation structure alone.
+\end{proof}
+
+\begin{verbatim}
+tag_independence_argument: presentation labels can be erased; the unlabeled
+  path relation still determines center/endpoint orbits and the response
+  classes 0,1,2.
+explicit_tag_route_reintroduced: false
+\end{verbatim}
+
+\section{Relabeling invariance}
+
+\begin{proposition}[Relabeling invariance]
+For every source automorphism \(\sigma\in Aut(P_{v2})\),
+\[
+  R_{v2}(\{\sigma x,\sigma y\})=R_{v2}(\{x,y\})
+  \quad\text{for all }x,y\in S_{v2}.
+\]
+\end{proposition}
+
+\begin{proof}
+An automorphism of \(P_{v2}\) preserves adjacency and therefore preserves path
+length. Hence \(d_A(\sigma x,\sigma y)=d_A(x,y)\). The result follows from
+\(R_{v2}(\{x,y\})=d_A(x,y)\).
+\end{proof}
+
+\begin{verbatim}
+relabeling_invariance_argument: every source automorphism preserves adjacency,
+  path length, orbit classes, and therefore R_v2.
+\end{verbatim}
+
+\section{Finite-variation probe for the next stress packet}
+
+P6-T03 owns adversarial stress. This packet nevertheless records a bounded
+probe target so the next Refuter has a concrete object to attack. For a
+single finite edit \(A'\) of \(A_{v2}\) on the same source set, define
+\[
+  R_{v2}^{A'}(\{x,y\})=
+  \begin{cases}
+    d_{A'}(x,y), & \text{if }x,y\text{ lie in the same }A'\text{-component},\\
+    \bot, & \text{otherwise.}
+  \end{cases}
+\]
+The value \(\bot\) is a fail-closed source-local obstruction marker for a
+disconnected pair, not a target metric value and not an empirical detector
+readout. The base model remains the connected path model above.
+
+\section{Claim boundary}
+
+This is a finite toy response model only. It does not construct or adopt a
+physical metric, matter coupling, detector/readout semantics, stress-energy
+semantics, matter action, field equations, benchmark status, or any completed
+derivation claim.
+
+\begin{verbatim}
+not_matter_coupling: true
+detector_readout_status: placeholder_only_nonadopted
+source_law_adopted: false
+canonical_ontology_edit: false
+distance_to_gr_ledger_delta: false
+benchmark_status_changed: false
+\end{verbatim}
+
+\section{Candidate constructor result}
+
+\begin{verbatim}
+candidate_constructor_result:
+  result_type: constructed_candidate
+  constructed_candidate_path: research_control/tasks/RT-20260708-015/artifacts/finite_toy_response_v2_model_or_obstruction.tex
+  formal_objects:
+    - P_v2 = (S_v2,A_v2,Inc_v2)
+    - Aut(P_v2) orbit-distance classes O_0,O_1,O_2
+    - R_v2({x,y}) = d_A(x,y)
+    - finite-variation fail-closed probe R_v2^{A'}
+  maps:
+    - source adjacency relation -> graph distance d_A
+    - graph distance -> response relation R_v2
+    - source automorphism orbits -> invariant response classes
+  proof_obligations:
+    - P6-T03 relabeling and tag-removal stress
+    - P6-T03 finite-variation fail-closed stress
+    - later selector must decide source-model zoo integration without promotion
+  no_fog_check: true
+  next_required_role: refuter
+  claim_boundary_preserved: true
+\end{verbatim}
+
+\section{Conclusion}
+
+P6-T02 is satisfied by the positive construction above. The construction is
+source-local, finite, relation-induced, relabeling invariant, and independent
+of presentation labels. It remains draft/control and must be stress-tested by
+P6-T03 before any selector may integrate it into the source-model zoo.
+
+\end{document}

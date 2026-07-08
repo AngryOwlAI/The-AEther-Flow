@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `3c1f2182830b4d8d11b3289a8999444ce741e7ceb36ad1f1cb55c4cd18ddec95`
-- Generated-at source timestamp: `2026-07-08T08:07:00Z`
-- Row count: `848`
+- Source fingerprint: `1a2183c64b049cc5c255ee5f3d99c361dafdce9d4d03847baacc672ef5bc2cbd`
+- Generated-at source timestamp: `2026-07-08T08:46:09Z`
+- Row count: `849`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260708-015|RT-20260708-014|2026-07-08T08:46:09Z|2026-07-08T08:46:09Z|finite_toy_response_v2_model_or_obstruction|completed|finite_toy_metric_response|Construct a non-tag finite toy response model or record a precise obstruction.|candidate-constructor@0.2.0|false|false|8|Run one bounded v18 P6-T03 finite toy response v2 invariance and tag-removal stress packet.|PASS|research_control/tasks/RT-20260708-015/jobs/completions/AJC-AJ-RT-20260708-015-001.yaml|
 |RT-20260708-014|RT-20260708-013|2026-07-08T08:07:00Z|2026-07-08T08:07:00Z|finite_toy_response_v2_source_spec|completed|finite_toy_metric_response|Specify a non-tag-fragile finite source-to-response toy target.|ontology-formalizer@0.2.0|false|false|7|Run one bounded v18 P6-T02 finite toy response v2 model-or-obstruction packet.|PASS|research_control/tasks/RT-20260708-014/jobs/completions/AJC-AJ-RT-20260708-014-001.yaml|
 |RT-20260708-013|RT-20260708-012|2026-07-08T07:28:00Z|2026-07-08T07:28:00Z|source_detector_readout_route_selector_integration|completed|matter_coupling|Select one next route after source detector/readout candidate or obstruction.|theoretical-continuation-selector@0.1.0|false|false|7|Run one bounded v18 P6-T01 finite toy response v2 source specification packet.|PASS|research_control/tasks/RT-20260708-013/jobs/completions/AJC-AJ-RT-20260708-013-001.yaml|
 |RT-20260708-012|RT-20260708-011|2026-07-08T07:08:00Z|2026-07-08T07:08:00Z|source_detector_readout_refuter_stress|completed|matter_coupling|Stress source detector/readout candidate against placeholder collapse, empirical substitution, and finite/local perturbations.|refuter@0.2.0|false|false|8|Run one bounded v18 P5-T07 source detector/readout route selector and integration packet.|PASS|research_control/tasks/RT-20260708-012/jobs/completions/AJC-AJ-RT-20260708-012-001.yaml|

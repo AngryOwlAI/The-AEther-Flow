@@ -1,0 +1,22 @@
+task_id: "RT-20260708-015"
+plan_task_id: "P6-T02"
+review_status: "completed"
+children_reviewed:
+  - "research_control/tasks/RT-20260708-015/artifacts/child_phys_math_finite_toy_response_v2_model_or_obstruction.yaml"
+  - "research_control/tasks/RT-20260708-015/artifacts/child_phys_phil_finite_toy_response_v2_model_or_obstruction.yaml"
+conflicts:
+  - conflict_id: "P6T02-CF-001"
+    topic: "Whether the response classes are tags"
+    math_position: "The classes are automorphism orbit-distance classes induced by source adjacency."
+    philosophy_position: "Names for classes are acceptable only as presentation names, not independent target tags."
+    resolution: "Keep the classes as orbit-distance invariants and explicitly state that their names are presentation names."
+    status: "resolved"
+  - conflict_id: "P6T02-CF-002"
+    topic: "Finite variation scope"
+    math_position: "A fail-closed edited-relation probe can be defined."
+    philosophy_position: "Stress ownership belongs to P6-T03 and should not be claimed as passed here."
+    resolution: "Include the finite-variation probe as a stress target only."
+    status: "resolved"
+parent_resolution: "Both child units support the positive finite toy model and preserve the no-promotion boundary. The fused artifact constructs the model, records proof sketches, and routes to P6-T03 Refuter stress."
+unresolved_conflicts: []
+claim_boundary_preserved: true

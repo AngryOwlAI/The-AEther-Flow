@@ -315,6 +315,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-013-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-ROUTE-SELECTOR-INTEGRATION` `research_control/tasks/RT-20260708-013/artifacts/parent_fusion_notes_source_detector_readout_route_selector_integration.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-013-SOURCE-DETECTOR-READOUT-ROUTE-SELECTOR-INTEGRATION-RECEIPT` `research_control/tasks/RT-20260708-013/artifacts/source_detector_readout_route_selector_integration_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-014-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-SOURCE-SPEC` `research_control/tasks/RT-20260708-014/artifacts/parent_fusion_notes_finite_toy_response_v2_source_spec.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-015-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION` `research_control/tasks/RT-20260708-015/artifacts/parent_fusion_notes_finite_toy_response_v2_model_or_obstruction.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -758,6 +759,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V18-P5-T05-SOURCE-DETECTOR-READOUT-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260708-011/artifacts/source_detector_readout_smuggling_audit_v1.tex`
 - `TEX-V18-P5-T06-SOURCE-DETECTOR-READOUT-REFUTER-STRESS-V1` `research_control/tasks/RT-20260708-012/artifacts/source_detector_readout_refuter_stress_v1.tex`
 - `TEX-V18-P6-T01-FINITE-TOY-RESPONSE-V2-SOURCE-SPEC` `research_control/tasks/RT-20260708-014/artifacts/finite_toy_response_v2_source_spec.tex`
+- `TEX-V18-P6-T02-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION` `research_control/tasks/RT-20260708-015/artifacts/finite_toy_response_v2_model_or_obstruction.tex`
 
 ## wiki_markdown
 
@@ -1069,6 +1071,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-013-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-ROUTE-SELECTOR-INTEGRATION` `wiki/markdown/md-research-control-tasks-rt-20260708-013-parent-fusion-notes-source-detector-readout-route-selector-integration.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-013-SOURCE-DETECTOR-READOUT-ROUTE-SELECTOR-INTEGRATION-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-013-source-detector-readout-route-selector-integration-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-014-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-SOURCE-SPEC` `wiki/markdown/md-research-control-tasks-rt-20260708-014-parent-fusion-notes-finite-toy-response-v2-source-spec.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-015-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION` `wiki/markdown/md-research-control-tasks-rt-20260708-015-parent-fusion-notes-finite-toy-response-v2-model-or-obstruction.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1506,3 +1509,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V18-P5-T05-SOURCE-DETECTOR-READOUT-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v18-p5-t05-source-detector-readout-smuggling-audit-v1.md`
 - `WIKI-TEX-V18-P5-T06-SOURCE-DETECTOR-READOUT-REFUTER-STRESS-V1` `wiki/tex/tex-v18-p5-t06-source-detector-readout-refuter-stress-v1.md`
 - `WIKI-TEX-V18-P6-T01-FINITE-TOY-RESPONSE-V2-SOURCE-SPEC` `wiki/tex/tex-v18-p6-t01-finite-toy-response-v2-source-spec.md`
+- `WIKI-TEX-V18-P6-T02-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION` `wiki/tex/tex-v18-p6-t02-finite-toy-response-v2-model-or-obstruction.md`

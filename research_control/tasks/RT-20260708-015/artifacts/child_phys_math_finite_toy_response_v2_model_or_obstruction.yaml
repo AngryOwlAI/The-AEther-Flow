@@ -1,0 +1,55 @@
+child_execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260708-015"
+plan_task_id: "P6-T02"
+status: "completed"
+result: "positive_model_constructed"
+source_inputs:
+  - "research_control/tasks/RT-20260708-014/artifacts/finite_toy_response_v2_source_spec.tex"
+  - "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex"
+formal_objects:
+  finite_source_set: "S_v2 = {a,b,c}"
+  source_relations:
+    - "A_v2 = {{a,b},{b,c}}"
+    - "Inc_v2(x,e) iff x in e"
+  automorphism_structure: "Aut(P_v2) has identity and reflection"
+  orbit_classes:
+    - "O_0 diagonal/source-coincidence class"
+    - "O_1 adjacent-pair class"
+    - "O_2 endpoint-pair class"
+  induced_response_relation: "R_v2({x,y}) = d_A(x,y)"
+  metric_response_analogue: "D_v2(x,y) = R_v2({x,y}) finite graph-distance form only"
+proof_units:
+  - lemma_id: "P6T02-L1"
+    name: "presentation-label erasure"
+    statement: "The unlabeled three-vertex path relation determines the center/endpoint orbit structure and response classes."
+    proof_status: "proved_in_artifact"
+  - lemma_id: "P6T02-L2"
+    name: "relabeling invariance"
+    statement: "Every source automorphism preserves adjacency, graph distance, orbit classes, and R_v2."
+    proof_status: "proved_in_artifact"
+finite_variation_probe:
+  status: "stress_target_only"
+  definition: "For a single relation edit A_prime, R_v2^{A_prime} returns componentwise graph distance or fail-closed bottom for disconnected pairs."
+  next_owner: "P6-T03 refuter"
+new_mathematical_payload:
+  - payload_id: "P6T02-PAYLOAD-001"
+    payload_type: "finite_model"
+    artifact_path: "research_control/tasks/RT-20260708-015/artifacts/finite_toy_response_v2_model_or_obstruction.tex"
+    status: "draft/control"
+    summary: "Constructed the finite source path model P_v2 and response relation R_v2 from source adjacency and graph distance."
+  - payload_id: "P6T02-PAYLOAD-002"
+    payload_type: "lemma"
+    artifact_path: "research_control/tasks/RT-20260708-015/artifacts/finite_toy_response_v2_model_or_obstruction.tex"
+    status: "draft/control"
+    summary: "Proved presentation-label erasure and relabeling invariance for R_v2."
+  - payload_id: "P6T02-PAYLOAD-003"
+    payload_type: "finite_toy_model_target"
+    artifact_path: "research_control/tasks/RT-20260708-015/artifacts/finite_toy_response_v2_model_or_obstruction.tex"
+    status: "draft/control_stress_target"
+    summary: "Defined a fail-closed finite-variation probe for P6-T03 stress."
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  rationale: "The artifact constructs a finite toy model only and does not discharge g_eff, matter coupling, Einstein equations, or benchmark burdens."
+claim_boundary_preserved: true

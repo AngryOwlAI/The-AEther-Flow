@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-014`
-- Latest handoff: `handoff-0707`
-- Current status: `v18_p6_t01_finite_toy_response_v2_source_spec_completed_no_promotion`
+- Active task: `RT-20260708-015`
+- Latest handoff: `handoff-0708`
+- Current status: `v18_p6_t02_finite_toy_response_v2_model_constructed_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-014`
-- Latest research handoff: `handoff-0707`
-- Latest research next action: Run one bounded v18 P6-T02 finite toy response v2 model-or-obstruction packet.
+- Latest research task: `RT-20260708-015`
+- Latest research handoff: `handoff-0708`
+- Latest research next action: Run one bounded v18 P6-T03 finite toy response v2 invariance and tag-removal stress packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `finite_toy_response_v2_model_or_obstruction`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `finite_toy_response_v2_invariance_and_tag_removal_stress`
+- Role family: `refuter@0.2.0`
 - Target milestone: `finite_toy_metric_response`
-- Milestone burden: Construct the P6-T01 finite toy response target or record a precise obstruction.
+- Milestone burden: Stress finite toy response v2 against relabeling, tag removal, and target-import collapse.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `821ce58a9cec85098c46077fbabe5d32497ee02caa5be847f87ab58db51125e2`
-- JSON SHA-256: `48e6bc7a315f6819411bf982d35ddd8e551580109d6a61d5729fb35b04ce03cc`
+- YAML SHA-256: `187db6333f6f56b54edc4adafb9c781ea490930f9c57267f4985b0c8f5098558`
+- JSON SHA-256: `4bf1f5e93c9929d9af55e1ab287185c4b67b27de07ef9b7367d8ca897725d25e`
 
 ## Authority Warning
 
