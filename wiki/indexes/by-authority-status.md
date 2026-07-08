@@ -682,6 +682,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1` `wiki/markdown/md-research-control-design-source-equivalence-typed-object-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-EXTENSION-CLASSIFICATION-CHECKLIST-V1` `wiki/markdown/md-research-control-design-source-extension-classification-checklist-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1` `wiki/markdown/md-research-control-design-source-model-zoo-schema-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V18-EXTENSION` `wiki/markdown/md-research-control-design-source-model-zoo-schema-v18-extension.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1` `wiki/markdown/md-research-control-design-source-model-zoo-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `wiki/markdown/md-research-control-design-support-only-formalization-lane-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16` `wiki/markdown/md-research-control-design-target-import-attack-fixture-catalog-v16.md`
@@ -807,6 +808,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-014-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-SOURCE-SPEC` `wiki/markdown/md-research-control-tasks-rt-20260708-014-parent-fusion-notes-finite-toy-response-v2-source-spec.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-015-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION` `wiki/markdown/md-research-control-tasks-rt-20260708-015-parent-fusion-notes-finite-toy-response-v2-model-or-obstruction.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-016-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260708-016-parent-fusion-notes-finite-toy-response-v2-refuter-stress.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-017-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-MODEL-ZOO-INTEGRATION` `wiki/markdown/md-research-control-tasks-rt-20260708-017-parent-fusion-notes-finite-toy-response-v2-model-zoo-integration.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1335,6 +1337,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1` `research_control/design/source_equivalence_typed_object_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-EXTENSION-CLASSIFICATION-CHECKLIST-V1` `research_control/design/source_extension_classification_checklist_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1` `research_control/design/source_model_zoo_schema_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V18-EXTENSION` `research_control/design/source_model_zoo_schema_v18_extension.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1` `research_control/design/source_model_zoo_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `research_control/design/support_only_formalization_lane_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16` `research_control/design/target_import_attack_fixture_catalog_v16.md`
@@ -1459,6 +1462,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-014-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-SOURCE-SPEC` `research_control/tasks/RT-20260708-014/artifacts/parent_fusion_notes_finite_toy_response_v2_source_spec.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-015-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION` `research_control/tasks/RT-20260708-015/artifacts/parent_fusion_notes_finite_toy_response_v2_model_or_obstruction.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-016-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS` `research_control/tasks/RT-20260708-016/artifacts/parent_fusion_notes_finite_toy_response_v2_refuter_stress.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-017-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-MODEL-ZOO-INTEGRATION` `research_control/tasks/RT-20260708-017/artifacts/parent_fusion_notes_finite_toy_response_v2_model_zoo_integration.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

@@ -1,0 +1,59 @@
+task_id: "RT-20260708-017"
+task_type: "finite_toy_response_v2_model_zoo_integration"
+status: "completed"
+created_at: "2026-07-08T10:02:00Z"
+updated_at: "2026-07-08T10:02:00Z"
+closed_at: "2026-07-08T10:02:00Z"
+parent_task_id: "RT-20260708-016"
+parent_handoff_id: "handoff-0709"
+decision_id: "DDR-20260708-017"
+job_id: "AJ-RT-20260708-017-001"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260708-017"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. P6-T04 requires no human gate because it creates only draft/control source-model zoo retrieval surfaces and does not adopt ontology metric coupling benchmark or completed-derivation authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P6"
+  plan_task_id: "P6-T04"
+  plan_task_name: "Source-model zoo integration for toy v2"
+objective: "Integrate the finite toy response v2 model construction and stress status into source-model zoo retrieval surfaces without physics promotion."
+target_derivation_milestone: "finite_toy_metric_response"
+milestone_burden: "Integrate finite toy response v2 model, obstruction, and stress status into the source model zoo."
+closure_status: "v18_p6_t04_finite_toy_response_v2_zoo_integrated_no_promotion"
+claim_boundary:
+  allowed_scope: "P6-T04 draft/control source-model zoo integration only"
+  zoo_entry_id: "FTMR-V2-PATH3"
+  model_id: "SMZ-FTRV2-PATH3-001"
+  source_model_zoo_integration_done: true
+  model_result: "positive_toy_model_constructed"
+  stress_result: "survives_as_finite_toy_model"
+  freeze_status: "not_frozen"
+  selected_next_route: "P6-T05 finite toy response v2 selector"
+  selected_next_packet_requires_human_gate: false
+  finite_source_set: "S_v2 = {a,b,c}"
+  induced_response_relation: "R_v2({x,y}) = d_A(x,y)"
+  target_metric_authorized: false
+  physical_metric_authorized: false
+  empirical_readout_authorized: false
+  g_eff_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/design/source_model_zoo_schema_v18_extension.md"
+  - "registries/SOURCE_MODEL_ZOO_REGISTRY.csv"
+  - "research_control/tasks/RT-20260708-017/artifacts/finite_toy_response_v2_model_zoo_entry.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/child_phys_math_finite_toy_response_v2_model_zoo_integration.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/child_phys_phil_finite_toy_response_v2_model_zoo_integration.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/parent_conflict_review_finite_toy_response_v2_model_zoo_integration.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/parent_fusion_notes_finite_toy_response_v2_model_zoo_integration.md"
+  - "research_control/tasks/RT-20260708-017/artifacts/validate_p6_t04_finite_toy_response_v2_model_zoo_integration.py"
+  - "research_control/tasks/RT-20260708-017/artifacts/p6_t04_finite_toy_response_v2_model_zoo_integration_report.json"
+next_recommended_action: "Run one bounded v18 P6-T05 finite toy response v2 selector packet."
+notes: "RT-20260708-017 completes v18 P6-T04 by making finite toy response v2 retrievable as source-model zoo entry FTMR-V2-PATH3 while preserving all no-promotion claims."
+documentation_impact_id: "DI-RT-20260708-017-001"

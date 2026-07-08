@@ -1,0 +1,28 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260708-017"
+plan_task_id: "P6-T04"
+status: "completed"
+summary: "Finite toy response v2 can be integrated as source-model zoo entry FTMR-V2-PATH3 because the entry has a finite source object P_v2 and a source-induced response relation R_v2({x,y}) = d_A(x,y)."
+mathematical_findings:
+  - finding_id: "MATH-P6T04-001"
+    statement: "The retrievable source object is P_v2 = (S_v2,A_v2,Inc_v2) with S_v2 = {a,b,c} and A_v2 = {{a,b},{b,c}}."
+    status: "draft/control"
+  - finding_id: "MATH-P6T04-002"
+    statement: "The response relation is source-local graph distance and does not require target metric data."
+    status: "draft/control"
+  - finding_id: "MATH-P6T04-003"
+    statement: "P6-T03 stress status supports cataloging as survives_as_finite_toy_model while preserving edge perturbation as fail-closed or changed-source pressure."
+    status: "draft/control"
+admissibility_decision:
+  entry_id: "FTMR-V2-PATH3"
+  model_kind: "finite_toy_metric_response_model"
+  admissible_as_zoo_entry: true
+  reason: "All payload fields are source-local and the blocked-overread fields prevent target or downstream promotion."
+forbidden_claims:
+  - "target metric import"
+  - "g_eff construction"
+  - "matter coupling"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "completed derivation"

@@ -1,0 +1,138 @@
+zoo_entry_id: "FTMR-V2-PATH3"
+model_id: "SMZ-FTRV2-PATH3-001"
+model_kind: "finite_toy_metric_response_model"
+entry_status: "draft_control"
+task_id: "RT-20260708-017"
+plan_task_id: "P6-T04"
+task_type: "finite_toy_response_v2_model_zoo_integration"
+source_model_zoo_schema_extension: "research_control/design/source_model_zoo_schema_v18_extension.md"
+registry_path: "registries/SOURCE_MODEL_ZOO_REGISTRY.csv"
+schema_basis:
+  - "research_control/design/source_model_zoo_schema_v1.md"
+  - "research_control/design/source_model_zoo_v1.md"
+lineage_tasks:
+  source_spec_task: "RT-20260708-014"
+  model_task: "RT-20260708-015"
+  stress_task: "RT-20260708-016"
+  integration_task: "RT-20260708-017"
+lineage_paths:
+  - "research_control/tasks/RT-20260708-014/artifacts/finite_toy_response_v2_source_spec.tex"
+  - "research_control/tasks/RT-20260708-015/artifacts/finite_toy_response_v2_model_or_obstruction.tex"
+  - "research_control/tasks/RT-20260708-016/artifacts/finite_toy_response_v2_refuter_stress.tex"
+model_result: "positive_toy_model_constructed"
+stress_result: "survives_as_finite_toy_model"
+freeze_status: "not_frozen"
+finite_toy_response_fields:
+  finite_source_set: "S_v2 = {a,b,c}"
+  source_relation_family: "A_v2 = {{a,b},{b,c}}"
+  incidence_record: "Inc_v2(x,e) iff x in e"
+  invariant_orbit_structure: "Aut(P3) unordered-pair distance classes O_0 O_1 O_2"
+  induced_response_relation: "R_v2({x,y}) = d_A(x,y)"
+  metric_response_analogue: "D_v2 graph-distance form only not g_eff"
+source_domain:
+  domain_id: "SD-FTMR-V2-PATH3"
+  finite: true
+  carrier: ["a", "b", "c"]
+source_objects:
+  - object_id: "P_v2"
+    local_carrier: ["a", "b", "c"]
+    source_labels: ["presentation_a", "presentation_b", "presentation_c"]
+    source_guards:
+      - "guard_source_path_relation_declared"
+      - "guard_presentation_labels_not_response_tags"
+source_labels:
+  - "presentation_a"
+  - "presentation_b"
+  - "presentation_c"
+source_guards:
+  - "guard_source_path_relation_declared"
+  - "guard_response_induced_by_source_graph_distance"
+  - "guard_no_target_metric_import"
+  - "guard_no_g_eff_promotion"
+  - "guard_no_matter_coupling_promotion"
+response_tokens:
+  - "distance_class_0"
+  - "distance_class_1"
+  - "distance_class_2"
+certificate_instances:
+  allowed: []
+  blocked:
+    - "OB-V18-P6T03-TARGET-OVERREAD-001"
+rr_e_records:
+  - relation_id: "RR-FTMR-V2-PATH3-SOURCE-DISTANCE"
+    source_pair: ["P_v2", "P_v2"]
+    relation_status: "finite_toy_response_defined"
+    scope: "source graph-distance response on the three-vertex path only"
+  - relation_id: "OB-FTMR-V2-PATH3-EDGE-PERTURBATION"
+    source_pair: ["P_v2", "edited_path_or_triangle"]
+    relation_status: "fail_closed_or_changed_source_object"
+    scope: "edge perturbation is local finite-variation pressure not physical robustness"
+target_import_status: "blocked"
+detector_semantics_status: "not_used"
+stress_energy_status: "not_used"
+matter_action_status: "not_used"
+benchmark_status: "blocked"
+expected_valid_relations:
+  - "R_v2({x,y}) = d_A(x,y) is defined from source graph distance on P_v2"
+  - "Tag removal and source relabeling preserve the finite toy response as a finite toy model"
+expected_fail_closed_relations:
+  - "Deleting an edge sends disconnected pairs to bottom_src"
+  - "Adding the endpoint edge changes the finite source object"
+  - "Target metric physical metric empirical readout g_eff and matter coupling substitutions are blocked overreads"
+allowed_reuse:
+  - "finite toy response retrieval through source model zoo"
+  - "P6-T05 selector input"
+  - "source-pure positive-control fixture for future validation"
+  - "blocked-overread fixture for target-import attack suites"
+forbidden_overreads:
+  - "source-model zoo retrieval as source-law adoption"
+  - "finite graph-distance form as g_eff"
+  - "finite toy response as physical metric"
+  - "finite toy response as matter coupling"
+  - "finite toy response as stress-energy semantics"
+  - "finite toy response as matter action"
+  - "finite toy response as Einstein equations"
+  - "finite toy response as benchmark promotion"
+  - "finite toy response as Gate Chair verdict"
+  - "finite toy response as completed derivation"
+retrieval_keys:
+  - "finite_toy_metric_response"
+  - "finite_toy_response_v2"
+  - "FTMR-V2-PATH3"
+  - "SMZ-FTRV2-PATH3-001"
+  - "R_v2({x,y}) = d_A(x,y)"
+formal_payload:
+  definition:
+    payload_id: "P6T04-PAYLOAD-001"
+    payload_type: "finite_concrete_source_object_witnesses"
+    statement: "FTMR-V2-PATH3 is the source-model zoo entry for P_v2 = (S_v2,A_v2,Inc_v2) with response R_v2({x,y}) = d_A(x,y)."
+  proposition:
+    payload_id: "P6T04-PAYLOAD-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    statement: "FTMR-V2-PATH3 is admissible as a draft/control finite toy metric-response source-model zoo entry because its payload is source-local and its forbidden overreads block target and downstream substitutions."
+  proof_sketch: "P6-T02 supplies the finite source path and source graph-distance response. P6-T03 supplies tag-removal and source-relabeling survival plus blocked-overread status for target distance physical metric empirical readout g_eff and matter coupling. P6-T04 records these fields without importing any target metric detector semantics stress-energy matter action benchmark behavior generated derivative validator status registry state role identity handoff state approval state or commit state as model data."
+distance_to_gr_status:
+  changed: false
+  ledger_row_updated: false
+  burden_id: "finite_toy_metric_response"
+  status: "finite toy response v2 is retrievable as draft/control source-model zoo entry only"
+  downstream_still_blocked:
+    - "g_eff construction or adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+claim_boundary:
+  physics_promotion_authorized: false
+  claim_boundary_preserved: true
+  no_target_metric_import: true
+  not_g_eff: true
+  not_matter_coupling: true
+  not_einstein_equations: true
+  not_benchmark_promotion: true
+  not_gate_chair_verdict: true
+  not_completed_derivation: true
+next_plan_task_id: "P6-T05"

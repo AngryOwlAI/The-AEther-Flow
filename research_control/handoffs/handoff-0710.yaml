@@ -1,0 +1,100 @@
+handoff_id: "handoff-0710"
+created_at: "2026-07-08T10:02:00Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-017"
+decision_id: "DDR-20260708-017"
+job_id: "AJ-RT-20260708-017-001"
+agent_job_id: "AJ-RT-20260708-017-001"
+completion_path: "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-017-001"
+status: "ready_for_next_bounded_packet"
+previous_handoff_id: "handoff-0709"
+summary: "Completed v18 P6-T04 finite toy response v2 source-model zoo integration. The P6-T02 positive model and P6-T03 stress status are retrievable as source-model zoo entry FTMR-V2-PATH3 through the v18 schema extension and SOURCE_MODEL_ZOO_REGISTRY.csv. The entry remains draft/control. No target metric import g_eff construction matter-coupling derivation ledger delta benchmark promotion Gate Chair verdict or completed derivation occurred."
+completed_packet:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P6"
+  plan_task_id: "P6-T04"
+  task_name: "Source-model zoo integration for toy v2"
+  role_family: "ontology-formalizer@0.2.0"
+  target_derivation_milestone: "finite_toy_metric_response"
+  milestone_burden: "Integrate finite toy response v2 model, obstruction, and stress status into the source model zoo."
+  result_type: "integrated_as_draft_control_source_model_zoo_entry"
+  zoo_entry_id: "FTMR-V2-PATH3"
+  model_id: "SMZ-FTRV2-PATH3-001"
+  finite_source_set: "S_v2 = {a,b,c}"
+  induced_response_relation: "R_v2({x,y}) = d_A(x,y)"
+  model_result: "positive_toy_model_constructed"
+  stress_result: "survives_as_finite_toy_model"
+  freeze_status: "not_frozen"
+  target_import_status: "blocked_overread"
+  no_target_metric_import: true
+  not_g_eff: true
+  not_matter_coupling: true
+  selected_next_plan_task_id: "P6-T05"
+  selected_next_role_family: "theoretical-continuation-selector@0.1.0"
+claim_boundary:
+  allowed_claims:
+    - "P6-T04 finite toy response v2 source-model zoo integration completed as draft/control"
+    - "FTMR-V2-PATH3 is retrievable through SOURCE_MODEL_ZOO_REGISTRY.csv"
+    - "P6-T02 positive model result and P6-T03 stress status are attached to the entry"
+    - "selected next plan task P6-T05"
+  forbidden_claims:
+    - "target metric import"
+    - "physical metric construction"
+    - "g_eff construction or adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "future source-extension impossibility"
+    - "global no-go conclusion"
+    - "completed derivation"
+  no_adoption: true
+  no_ledger_delta: true
+  no_dag_update: true
+  no_physics_promotion: true
+distance_to_gr_status:
+  changed: false
+  ledger_row_updated: false
+  burden_id: "finite_toy_metric_response"
+  status: "finite toy response v2 retrievable as draft/control source-model zoo entry only"
+  freeze_decision: "not_frozen"
+new_mathematical_payload:
+  - "Definition: FTMR-V2-PATH3 is the retrievable source-model zoo entry for P_v2 and R_v2."
+  - "Proposition: FTMR-V2-PATH3 is admissible as draft/control source-model zoo entry because model data are source-local and blocked overreads are explicit."
+selected_next_route:
+  route_id: "finite_toy_response_v2_selector"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P6"
+  plan_task_id: "P6-T05"
+  task_name: "Finite toy response v2 selector"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  task_type: "finite_toy_response_v2_selector"
+  target_derivation_milestone: "finite_toy_metric_response"
+  milestone_burden: "Select repair, freeze, source detector/readout continuation, or upstream return after finite toy response v2."
+  expected_agent_job_scope: "One bounded P6-T05 selector packet choosing exactly one next route after finite toy response v2 zoo integration with no promotion."
+  requires_human_gate: false
+next_action: "Run one bounded v18 P6-T05 finite toy response v2 selector packet."
+next_recommended_action: "Run one bounded v18 P6-T05 finite toy response v2 selector packet."
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260708-017"
+  latest_research_handoff_id: "handoff-0710"
+  latest_research_next_action: "Run one bounded v18 P6-T05 finite toy response v2 selector packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+project_improvement_signals: []
+validation:
+  task_local_validator: "PASS"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  documentation_impact: "PENDING"
+  research_control_validation: "PENDING"
+  research_control_diff_validation: "PENDING"
+  wrapper_validation: "PENDING"
+notes: "This handoff is the research-continuation authority for the next invocation. Generated derivatives and .local caches remain retrieval layers only."

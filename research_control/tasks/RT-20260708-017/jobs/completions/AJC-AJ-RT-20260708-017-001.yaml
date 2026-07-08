@@ -1,0 +1,410 @@
+completion_id: "AJC-AJ-RT-20260708-017-001"
+job_id: "AJ-RT-20260708-017-001"
+task_id: "RT-20260708-017"
+decision_id: "DDR-20260708-017"
+status: "completed"
+completed_at: "2026-07-08T10:02:00Z"
+completed_by_role: "ontology-formalizer@0.2.0--RT-20260708-017"
+source_role_id: "ontology-formalizer"
+source_role_version: "0.2.0"
+plan_task_id: "P6-T04"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Completed v18 P6-T04 by extending the source-model zoo schema for finite toy response entries, introducing SOURCE_MODEL_ZOO_REGISTRY.csv, and registering finite toy response v2 as FTMR-V2-PATH3. The entry records the P6-T02 positive model, P6-T03 stress survival, not_frozen status, and blocked overreads. No target metric import g_eff construction matter-coupling derivation Einstein equations benchmark promotion Gate Chair verdict ledger delta or completed derivation is adopted or derived."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_task_id: "P6-T04"
+  plan_phase_id: "P6"
+  implemented_task_scope: "Source-model zoo integration for finite toy response v2"
+  completed_v18_tasks_this_packet:
+    - "P6-T04"
+  downstream_tasks_not_implemented:
+    - "P6-T05 finite toy response v2 selector"
+    - "P7 and later v18 tasks"
+    - "g_eff construction or adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+  phase_p6_completed: false
+artifacts:
+  - "research_control/design/source_model_zoo_schema_v18_extension.md"
+  - "registries/SOURCE_MODEL_ZOO_REGISTRY.csv"
+  - "research_control/tasks/RT-20260708-017/artifacts/finite_toy_response_v2_model_zoo_entry.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/child_phys_math_finite_toy_response_v2_model_zoo_integration.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/child_phys_phil_finite_toy_response_v2_model_zoo_integration.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/parent_conflict_review_finite_toy_response_v2_model_zoo_integration.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/parent_fusion_notes_finite_toy_response_v2_model_zoo_integration.md"
+  - "research_control/tasks/RT-20260708-017/artifacts/validate_p6_t04_finite_toy_response_v2_model_zoo_integration.py"
+  - "research_control/tasks/RT-20260708-017/artifacts/p6_t04_finite_toy_response_v2_model_zoo_integration_report.json"
+output_paths:
+  - "research_control/design/source_model_zoo_schema_v18_extension.md"
+  - "registries/SOURCE_MODEL_ZOO_REGISTRY.csv"
+  - "research_control/tasks/RT-20260708-017/artifacts/finite_toy_response_v2_model_zoo_entry.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/child_phys_math_finite_toy_response_v2_model_zoo_integration.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/child_phys_phil_finite_toy_response_v2_model_zoo_integration.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/parent_conflict_review_finite_toy_response_v2_model_zoo_integration.yaml"
+  - "research_control/tasks/RT-20260708-017/artifacts/parent_fusion_notes_finite_toy_response_v2_model_zoo_integration.md"
+  - "research_control/tasks/RT-20260708-017/artifacts/validate_p6_t04_finite_toy_response_v2_model_zoo_integration.py"
+  - "research_control/tasks/RT-20260708-017/artifacts/p6_t04_finite_toy_response_v2_model_zoo_integration_report.json"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/RT-20260708-017/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-017/DDR-20260708-017.md"
+  - "research_control/tasks/RT-20260708-017/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-017/jobs/AJ-RT-20260708-017-001.yaml"
+  - "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml"
+  - "research_control/tasks/RT-20260708-017/roles/ontology-formalizer@0.2.0--RT-20260708-017.yaml"
+  - "research_control/handoffs/handoff-0710.yaml"
+  - "research_control/handoffs/handoff-0710.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0709.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/v18_recommendation_backlog.yaml"
+  - "research_control/design/source_model_zoo_schema_v1.md"
+  - "research_control/design/source_model_zoo_v1.md"
+  - "research_control/tasks/RT-20260708-014/artifacts/finite_toy_response_v2_source_spec.tex"
+  - "research_control/tasks/RT-20260708-015/artifacts/finite_toy_response_v2_model_or_obstruction.tex"
+  - "research_control/tasks/RT-20260708-016/artifacts/parent_fusion_notes_finite_toy_response_v2_refuter_stress.md"
+  - "research_control/tasks/RT-20260708-016/artifacts/finite_toy_response_v2_refuter_stress.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=749 relationship_row_count=3781 semantic_row_count=749 vault_row_count=749 local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"finite toy response v2 source model zoo integration P6 T04\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260708-016-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS,TEX-V18-P6-T03-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS,SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18,MD-RESEARCH-CONTROL-CURRENT-FRONTIER,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-016 latest_handoff=handoff-0709 next_action=P6-T04"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 749
+    relationship_row_count: 3781
+    semantic_row_count: 749
+    vault_row_count: 749
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"finite toy response v2 source model zoo integration P6 T04\" --limit 10 --json"
+      query_type: "search"
+      query_text: "finite toy response v2 source model zoo integration P6 T04"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-016-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS"
+        - "TEX-V18-P6-T03-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      generated_retrieval_evidence_ids:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-016-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-016/artifacts/parent_fusion_notes_finite_toy_response_v2_refuter_stress.md"
+      source_hash: "577e4bb54a3a26680af5581003add4959cd7d114c9eb4cc622dfcc1d5e5945e2"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "dd3f8e6363cbc114bd1babb70f0e51f174481225101e64fcccca6dc8440c6832"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/source_model_zoo_schema_v1.md"
+      source_hash: "c3b26c686ee7f84fb5818942d7691a4407ef2dd6bb83e4335e552bd95e0db543"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/source_model_zoo_v1.md"
+      source_hash: "ae1e2967759e4af4ac4c14655fac120489f6d0858480578914eba98d3a8d5cb5"
+    - object_id: "TEX-V18-P6-T02-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-015/artifacts/finite_toy_response_v2_model_or_obstruction.tex"
+      source_hash: "2a0a2c9274d00612b83a2cbd409842e0e0cdb328d268d45a7dbd4765207d0887"
+    - object_id: "TEX-V18-P6-T03-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-016/artifacts/finite_toy_response_v2_refuter_stress.tex"
+      source_hash: "88963f4577c97d05912609f4dc137b1a4cf381c299bb41c20e0b79fe45757010"
+physics_progress_status:
+  status: "toy_model_zoo_integrated_no_promotion"
+  target_derivation_milestone: "finite_toy_metric_response"
+  milestone_burden: "Integrate finite toy response v2 model, obstruction, and stress status into the source model zoo."
+  explanation: "P6-T04 integrates finite toy response v2 into source-model zoo retrieval as FTMR-V2-PATH3 while preserving all target and downstream claim boundaries."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+physics_promotion_authorized: false
+claim_boundary_preserved: true
+finite_toy_response_v2_model_zoo_integration:
+  integration_result: "integrated_as_draft_control_source_model_zoo_entry"
+  zoo_entry_id: "FTMR-V2-PATH3"
+  model_id: "SMZ-FTRV2-PATH3-001"
+  model_kind: "finite_toy_metric_response_model"
+  model_result: "positive_toy_model_constructed"
+  stress_result: "survives_as_finite_toy_model"
+  freeze_status: "not_frozen"
+  finite_source_set: "S_v2 = {a,b,c}"
+  induced_response_relation: "R_v2({x,y}) = d_A(x,y)"
+  tag_removal_status: "survives"
+  relabeling_status: "survives"
+  edge_perturbation_status: "fail_closed_or_changed_source_object"
+  target_import_status: "blocked_overread"
+  no_target_metric_import: true
+  not_g_eff: true
+  not_matter_coupling: true
+  not_einstein_equations: true
+  not_benchmark_promotion: true
+  selected_next_plan_task_id: "P6-T05"
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "finite_toy_metric_response"
+  milestone: "finite_toy_metric_response"
+  old_status: "finite toy response v2 stress-survives as draft/control finite toy model"
+  new_status: "finite toy response v2 is retrievable through source-model zoo as draft/control only"
+  ledger_row_updated: false
+  ledger_update_rationale: "Zoo retrieval does not discharge g_eff matter-coupling Einstein-equation benchmark or Gate Chair burdens."
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v18_p6_t05_finite_toy_response_v2_selector"
+  downstream_still_blocked:
+    - "g_eff construction or adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged"
+  - burden: "RetainH"
+    status: "unchanged; not adopted"
+  - burden: "GenH"
+    status: "unchanged; not adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "finite toy response v2 retrievable as draft/control source-model zoo entry only"
+  - burden: "M_src"
+    status: "unchanged; no source manifold construction"
+  - burden: "g_eff"
+    status: "not constructed; D_v2 remains a finite graph-distance analogue only"
+  - burden: "matter coupling"
+    status: "not derived or adopted"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation is supplied"
+  - burden: "finite-variation robustness"
+    status: "tag-removal and source-relabeling stress status is retrievable; arbitrary edge perturbation remains fail-closed or changed-source pressure"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion is supplied"
+  - burden: "Gate Chair status"
+    status: "unchanged; no Gate Chair verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen for P6-T04; P6-T05 selector is available"
+new_mathematical_payload:
+  - payload_id: "P6T04-PAYLOAD-001"
+    payload_type: "finite_concrete_source_object_witnesses"
+    artifact_path: "research_control/tasks/RT-20260708-017/artifacts/finite_toy_response_v2_model_zoo_entry.yaml"
+    status: "draft/control_definition"
+    summary: "FTMR-V2-PATH3 records P_v2 = (S_v2,A_v2,Inc_v2) and R_v2({x,y}) = d_A(x,y) as a source-model zoo entry."
+  - payload_id: "P6T04-PAYLOAD-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    artifact_path: "research_control/design/source_model_zoo_schema_v18_extension.md"
+    status: "draft/control_proposition"
+    summary: "The v2 finite toy response entry is admissible because model data are source-local and target or downstream substitutions are blocked overreads."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-V18-P6-T04-ZOO-001"
+    payload_type: "definition"
+    object_name: "FTMR-V2-PATH3 source-model zoo entry"
+    claim_status: "draft/control_zoo_entry"
+    source_path: "research_control/tasks/RT-20260708-017/artifacts/finite_toy_response_v2_model_zoo_entry.yaml"
+    burden_effect: "retrieval_integration_no_distance_delta"
+    summary: "Defines the retrievable finite toy response v2 source-model zoo entry."
+  - payload_id: "PAYLOAD-V18-P6-T04-ZOO-002"
+    payload_type: "theorem"
+    object_name: "v18 finite toy response zoo-entry admissibility"
+    claim_status: "draft/control_schema_extension"
+    source_path: "research_control/design/source_model_zoo_schema_v18_extension.md"
+    burden_effect: "retrieval_integration_no_distance_delta"
+    summary: "Shows the entry is admissible as source-local model data with explicit blocked overreads."
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "selector_required_by_plan"
+  selected_next_route: "P6-T05_finite_toy_response_v2_selector"
+  repeated_burdens: []
+  obstruction_summary: "none; edge perturbation remains local pressure only"
+  rationale: "P6-T04 adds retrieval integration and routes to a selector rather than repeating construction or stress."
+route_cycle_control:
+  cycle_family: "finite_toy_response_v2"
+  current_step: "P6-T04_model_zoo_integration"
+  prior_steps:
+    - "P6-T01_source_spec"
+    - "P6-T02_model_or_obstruction"
+    - "P6-T03_refuter_stress"
+  orbit_avoidance_reason: "The next packet is constrained to P6-T05 selector decision rather than re-integrating the same zoo entry."
+freeze_criteria_status:
+  evaluated: true
+  freeze_decision: "not_frozen"
+  criteria_evaluated:
+    - "repeated_unmet_burdens_no_new_payload"
+    - "scoped_obstruction"
+    - "source_model_zoo_retrieval_complete"
+    - "selector_needed_after_integration"
+  rationale: "The packet contains new retrieval payload and no freeze route is mandatory. P6-T05 must select the next route."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260708-017/artifacts/child_phys_math_finite_toy_response_v2_model_zoo_integration.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260708-017/artifacts/child_phys_phil_finite_toy_response_v2_model_zoo_integration.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260708-017/artifacts/parent_conflict_review_finite_toy_response_v2_model_zoo_integration.yaml"
+    blocking_conflicts_present: false
+    resolution_rounds: 1
+    unresolved_conflicts: []
+  fusion:
+    path: "research_control/tasks/RT-20260708-017/artifacts/parent_fusion_notes_finite_toy_response_v2_model_zoo_integration.md"
+    fused_output_path: "research_control/tasks/RT-20260708-017/artifacts/finite_toy_response_v2_model_zoo_entry.yaml"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight ended PASS"
+      - "query_memory status PASS"
+      - "targeted memory search returned P6-T03 stress P6-T04 plan current frontier and v18 plan"
+      - "canonical P6-T04 plan handoff-0709 Ontology Formalizer role source zoo schema v1 zoo v1 and P6-T01 through P6-T03 artifacts inspected"
+      - "continue_research.py resolved handoff-0709 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "source_model_zoo_schema_v18_extension.md created"
+      - "SOURCE_MODEL_ZOO_REGISTRY.csv created with FTMR-V2-PATH3"
+      - "finite_toy_response_v2_model_zoo_entry.yaml created"
+      - "P6-T05 selected as next route"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "task-local validator checks entry schema registry and completion markers"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --check PASS"
+      - "validate_compact_current_frontier_v16.py --json PASS"
+      - "validate_task_index.py --json PASS"
+      - "render_dependency_graph.py --check PASS after post-bootstrap rerender"
+      - "validate_claim_graph_v1.py --json PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS after generated refresh"
+      - "continue_research_memory_preflight.py --json refreshed local retrieval to PASS"
+      - "bootstrap_memory_system.py --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json PASS hard_fail_count=0"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  p6_t04_consumes_gate_authority: false
+  selected_next_packet_requires_human_gate: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable_source_model_zoo_retrieval_packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "toy_model"
+  waiver_decision_id: "DDR-20260708-017"
+  rationale: "P6-T04 records source-model zoo retrieval and does not prove a no-go theorem or target-side theorem needing countermodel discharge."
+  slots:
+    - countermodel_slot: "missing_transport_countermodel"
+      status: "not_applicable_by_ddr"
+      scope: "source-model zoo retrieval integration only"
+      result_artifact: "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml"
+    - countermodel_slot: "missing_invariance_countermodel"
+      status: "not_applicable_by_ddr"
+      scope: "P6-T03 already recorded finite toy invariance stress; P6-T04 only indexes the surviving draft/control model"
+      result_artifact: "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml"
+    - countermodel_slot: "missing_factorization_countermodel"
+      status: "not_applicable_by_ddr"
+      scope: "no factorization theorem is claimed by the zoo entry"
+      result_artifact: "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml"
+    - countermodel_slot: "finite_variation_fragility_countermodel"
+      status: "not_applicable_by_ddr"
+      scope: "edge perturbation remains fail-closed or changed-source pressure, not a new theorem"
+      result_artifact: "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml"
+    - countermodel_slot: "empty_selector_countermodel"
+      status: "not_applicable_by_ddr"
+      scope: "P6-T05 selector remains the next route"
+      result_artifact: "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml"
+    - countermodel_slot: "support_tool_overread_countermodel"
+      status: "not_applicable_by_ddr"
+      scope: "the zoo registry is support tooling and is explicitly blocked from proof authority"
+      result_artifact: "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml"
+  theorem_without_countermodel_justification:
+    status: "not_applicable_zoo_retrieval_integration"
+    rationale: "P6-T04 records source-model zoo retrieval and does not prove a no-go theorem or target-side theorem needing countermodel discharge."
+forbidden_conclusions:
+  - "canonical ontology edit"
+  - "target metric import"
+  - "physical metric construction"
+  - "g_eff construction or adoption"
+  - "matter-coupling derivation or adoption"
+  - "stress-energy semantics"
+  - "matter action"
+  - "Einstein equations"
+  - "benchmark promotion"
+  - "Gate Chair verdict"
+  - "future source-extension impossibility"
+  - "global theory rejection"
+  - "completed derivation"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  summary: "The packet authorizes only draft/control source-model zoo retrieval integration and immediate P6-T05 routing. It does not promote or adopt any physics object."
+selected_next_route:
+  route_id: "finite_toy_response_v2_selector"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P6"
+  plan_task_id: "P6-T05"
+  task_name: "Finite toy response v2 selector"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  task_type: "finite_toy_response_v2_selector"
+  target_derivation_milestone: "finite_toy_metric_response"
+  milestone_burden: "Select repair, freeze, source detector/readout continuation, or upstream return after finite toy response v2."
+  expected_agent_job_scope: "One bounded P6-T05 selector packet choosing exactly one next route after finite toy response v2 zoo integration with no promotion."
+  requires_human_gate: false
+project_improvement_signals: []
