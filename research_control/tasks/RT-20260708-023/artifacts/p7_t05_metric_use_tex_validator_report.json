@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "check_id": "exists:scripts/research_control/validate_metric_use_tex_references.py",
+      "detail": "scripts/research_control/validate_metric_use_tex_references.py exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:tests/test_validate_metric_use_tex_references.py",
+      "detail": "tests/test_validate_metric_use_tex_references.py exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_spec_v1.md",
+      "detail": "research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_spec_v1.md exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_receipt.md",
+      "detail": "research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_receipt.md exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_report.json",
+      "detail": "research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_report.json exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_report_passes",
+      "detail": "live configured TeX artifacts have ledger coverage or declaration-only non-use",
+      "status": "PASS"
+    },
+    {
+      "check_id": "stored_report_matches_live_core",
+      "detail": "stored JSON report matches live status, finding count, and configured scope count",
+      "status": "PASS"
+    },
+    {
+      "check_id": "expected_high_risk_classes",
+      "detail": "validator tracks the six required P7-T05 high-risk classes",
+      "status": "PASS"
+    },
+    {
+      "check_id": "support_only_boundary",
+      "detail": "live report preserves support-only non-promotion flags",
+      "status": "PASS"
+    },
+    {
+      "check_id": "hard_or_warning_policy_exposed",
+      "detail": "validator exposes warning and hard-fail integration policy",
+      "status": "PASS"
+    },
+    {
+      "check_id": "synthetic_unledgered_hard_fail",
+      "detail": "hard-fail mode catches all six unledgered classes",
+      "status": "PASS"
+    },
+    {
+      "check_id": "synthetic_unledgered_warn_mode",
+      "detail": "warning mode catches all six classes while exiting zero",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec_routes_to_p7_t06",
+      "detail": "spec records P7-T06 as the next route",
+      "status": "PASS"
+    }
+  ],
+  "configured_path_count": 3,
+  "failed_check_count": 0,
+  "high_risk_classes": [
+    "g_eff",
+    "metricdata_e",
+    "proper_time",
+    "detector_calibration",
+    "stress_energy",
+    "matter_action"
+  ],
+  "ledger_changed": false,
+  "live_finding_count": 0,
+  "live_validator_status": "PASS",
+  "next_route": "P7-T06 detector_placeholder_collapse_checker_support_only",
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "source_law_adopted": false,
+  "status": "PASS",
+  "support_only": true,
+  "validator_id": "p7_t05_metric_use_tex_validator_task_local_validator"
+}

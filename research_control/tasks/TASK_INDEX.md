@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `d94e5e108b3e600dea9e51e544053ecbddfd09d79e9cd42a54b1bf66ee1a1cda`
-- Generated-at source timestamp: `2026-07-08T12:56:41Z`
-- Row count: `856`
+- Source fingerprint: `7ec20835f8f3d3a60f7795e64cc9cfc42e7b64a2fadc637d18ae4aaaf6f75133`
+- Generated-at source timestamp: `2026-07-08T13:32:05Z`
+- Row count: `857`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260708-023|RT-20260708-022|2026-07-08T13:32:05Z|2026-07-08T13:32:05Z|metric_use_ledger_tex_validator_support_only|completed|matter_coupling|Implement support-only validation that high-risk metric references in TeX have ledger rows or no-use justification.|validator-engineer@0.2.0|false|false|5|Run one bounded v18 P7-T06 detector-placeholder collapse checker support-only implementation packet.|PASS|research_control/tasks/RT-20260708-023/jobs/completions/AJC-AJ-RT-20260708-023-001.yaml|
 |RT-20260708-022|RT-20260708-021|2026-07-08T12:56:41Z|2026-07-08T12:56:41Z|no_target_import_mutation_tester_support_only|completed|none|Implement a support-only mutation tester for no-target import guards.|validator-engineer@0.2.0|false|false|5|Run one bounded v18 P7-T05 metric-use ledger TeX validator support-only implementation packet.|PASS|research_control/tasks/RT-20260708-022/jobs/completions/AJC-AJ-RT-20260708-022-001.yaml|
 |RT-20260708-021|RT-20260708-020|2026-07-08T12:26:02Z|2026-07-08T12:26:02Z|closure_countermodel_generator_support_only|completed|source_equivalence_eqsrc|Implement a support-only generator for minimal missing-closure countermodels.|formalization-engineer@0.1.0|false|false|9|Run one bounded v18 P7-T04 no-target import mutation tester support-only implementation packet.|PASS|research_control/tasks/RT-20260708-021/jobs/completions/AJC-AJ-RT-20260708-021-001.yaml|
 |RT-20260708-020|RT-20260708-019|2026-07-08T12:00:17Z|2026-07-08T12:00:17Z|typed_eqsrc_orbit_checker_support_only|completed|source_equivalence_eqsrc|Implement a support-only checker for finite typed EqSrc orbit closure records.|formalization-engineer@0.1.0|false|false|10|Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet.|PASS|research_control/tasks/RT-20260708-020/jobs/completions/AJC-AJ-RT-20260708-020-001.yaml|

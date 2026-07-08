@@ -1,0 +1,103 @@
+handoff_id: "handoff-0716"
+created_at: "2026-07-08T13:32:05Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-023"
+decision_id: "DDR-20260708-023"
+job_id: "AJ-RT-20260708-023-001"
+agent_job_id: "AJ-RT-20260708-023-001"
+completion_path: "research_control/tasks/RT-20260708-023/jobs/completions/AJC-AJ-RT-20260708-023-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-023-001"
+status: "ready_for_next_bounded_packet"
+previous_handoff_id: "handoff-0715"
+summary: "Completed v18 P7-T05 metric-use ledger TeX validator support-only implementation. The validator scans configured TeX body references for six high-risk metric-adjacent classes and requires same-artifact ledger coverage or explicit no-use justification. It exposes hard-fail and warning modes without changing full validation policy. No source-law adoption proof authority target metric import MetricData(E) adoption g_eff adoption matter-coupling derivation stress-energy semantics matter action Einstein-equation derivation benchmark promotion Gate Chair verdict or completed derivation occurred."
+completed_packet:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P7"
+  plan_task_id: "P7-T05"
+  task_name: "Metric-use ledger TeX validator"
+  role_family: "validator-engineer@0.2.0 task overlay"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Implement support-only validation that high-risk metric references in TeX have ledger rows or no-use justification."
+  result_type: "support_only_metric_use_tex_validator_implemented"
+  validator_id: "metric_use_tex_reference_validator"
+  validator_version: "0.1.0"
+  configured_path_count: 3
+  finding_count: 0
+  selected_next_plan_task_id: "P7-T06"
+  selected_next_plan_route_type: "detector_placeholder_collapse_checker_support_only"
+  selected_next_packet_type: "project_system_validation"
+  selected_next_role_family: "formalization-engineer@0.1.0"
+  support_only: true
+  proof_authority: false
+  phase_p7_completed: false
+claim_boundary:
+  allowed_claims:
+    - "P7-T05 metric-use ledger TeX validator implemented"
+    - "six high-risk metric reference classes are detected"
+    - "live configured TeX scope passed with zero findings"
+    - "focused tests pass"
+    - "P7-T06 selected as next plan task"
+  forbidden_claims:
+    - "source-law proof"
+    - "source-law adoption"
+    - "validator PASS as theorem"
+    - "target metric import"
+    - "MetricData(E) adoption"
+    - "g_eff adoption or scope expansion"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+  support_only: true
+  proof_authority: false
+  no_adoption: true
+  no_ledger_delta: true
+  no_dag_update: true
+  no_physics_promotion: true
+distance_to_gr_status:
+  changed: false
+  ledger_row_updated: false
+  burden_id: "support_validation_metric_use_tex_ledger_coverage"
+  status: "support-only metric-use TeX validator implemented; no physics derivation status change"
+  freeze_decision: "not_applicable"
+new_support_payload:
+  - "Validator: validate_metric_use_tex_references scans configured TeX artifacts for six high-risk metric-use classes."
+  - "Report: live configured scope status PASS with finding_count 0 and configured_path_count 3."
+  - "Spec: metric_use_tex_validator_spec_v1 defines support-only validator boundary and P7-T06 route."
+selected_next_route:
+  route_id: "detector_placeholder_collapse_checker_support_only"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P7"
+  plan_task_id: "P7-T06"
+  task_name: "Detector-placeholder collapse checker"
+  role_family: "formalization-engineer@0.1.0"
+  task_type: "detector_placeholder_collapse_checker_support_only"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Implement support-only checks for placeholder-as-detector-semantics collapse."
+  expected_agent_job_scope: "One bounded P7-T06 implementation packet creating a support-only detector-placeholder collapse checker, tests, and spec without proof authority."
+  requires_human_gate: false
+next_action: "Run one bounded v18 P7-T06 detector-placeholder collapse checker support-only implementation packet."
+next_recommended_action: "Run one bounded v18 P7-T06 detector-placeholder collapse checker support-only implementation packet."
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260708-023"
+  latest_research_handoff_id: "handoff-0716"
+  latest_research_next_action: "Run one bounded v18 P7-T06 detector-placeholder collapse checker support-only implementation packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+project_improvement_signals: []
+validation:
+  task_local_validator: "PENDING"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  documentation_impact: "PENDING"
+  research_control_validation: "PENDING"
+  research_control_diff_validation: "PENDING"
+  wrapper_validation: "PENDING"
+notes: "This handoff is the research-continuation authority for the next invocation. Generated derivatives and .local caches remain retrieval layers only."
