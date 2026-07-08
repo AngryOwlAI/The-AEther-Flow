@@ -1,0 +1,329 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\EStar}{E_{\ast}}
+\newcommand{\SMScope}{\mathrm{SMScope}}
+\newcommand{\ReadableSrc}{\mathrm{Readable}_{\mathrm{src}}}
+\newcommand{\ReadoutSrc}{\mathrm{Readout}_{\mathrm{src}}}
+\newcommand{\DetSrc}{\mathrm{Det}_{\mathrm{src}}}
+\newcommand{\TokR}{\mathrm{Tok}_{R}}
+\newcommand{\CertR}{\mathrm{Cert}_{R}}
+\newcommand{\FailR}{\mathrm{Fail}_{R}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\StressPass}{\mathrm{STRESS}\mbox{-}\mathrm{PASS}}
+\newcommand{\FailClosed}{\mathrm{FAIL}\mbox{-}\mathrm{CLOSED}}
+\newcommand{\LiveObligation}{\mathrm{LIVE}\mbox{-}\mathrm{OBLIGATION}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{verdict}{Verdict}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Source Detector/Readout Refuter Stress v1}
+\author{Refuter Packet RT-20260708-012}
+\date{2026-07-08}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v18 P5-T06. It stress-tests the audited
+draft/control source detector/readout candidate
+\[
+  \mathrm{SourceReadoutCandidate\_EStar\_v1}
+\]
+from \texttt{RT-20260708-010}, using the P5-T05 source-purity audit from
+\texttt{RT-20260708-011}.
+
+The stress result is local and non-promotional:
+\[
+  \texttt{survives\_as\_draft\_control\_candidate}.
+\]
+The bridge-or-fail loop category is
+\[
+  \texttt{bridge\_facing\_candidate\_path}.
+\]
+
+This packet does not adopt \(\DetSrc\), does not adopt \(\ReadoutSrc\), does
+not adopt detector semantics, does not adopt source detector/readout
+semantics, does not adopt a source law, does not adopt a coupling law, does
+not derive or adopt matter coupling, does not import stress-energy semantics,
+does not construct a stress-energy tensor, does not import a matter action,
+does not derive Einstein equations, does not promote benchmark status, does
+not issue a Gate Chair verdict, and does not claim completed derivation.
+
+\section{Object Under Stress}
+
+The candidate under stress is the finite source-side tuple
+\[
+  \DetSrc(\EStar)=
+  (\SMScope(\EStar),\ReadableSrc(\EStar),\ReadoutSrc(\EStar),
+   \TokR(\EStar),\CertR(\EStar),\FailR(\EStar),
+   \texttt{draft\_control\_candidate}).
+\]
+It contains three readable source records \(s_0,s_1,s_{01}\), three
+non-bottom source readout values, a bottom token \(\BottomSrc\), eight
+task-local certificates, and eight fail-closed rules. The P5-T05 audit found
+no empirical detector, proper-time, target-metric, benchmark,
+stress-energy, matter-action, Einstein-equation, process-authority, or
+candidate-as-adoption import as written.
+
+\section{Stress Suite}
+
+\begin{longtable}{p{0.30\linewidth}p{0.48\linewidth}p{0.14\linewidth}}
+\toprule
+Stress mode & Result & Verdict \\
+\midrule
+readout\_interface\_erasure &
+Erasing \(\ReadoutSrc(\EStar)\) erases the candidate being tested. It does
+not expose a hidden premise in the candidate as written. A future repair or
+selector route may demand a broader readout law, but P5-T06 records no
+defect in the finite graph. & \(\LiveObligation\) \\
+source\_record\_removal &
+Removing \(s_0\), \(s_1\), \(s_{01}\), or a required certificate makes the
+corresponding branch missing or malformed. The candidate sends that invalid
+branch to \(\BottomSrc\) rather than importing external support. &
+\(\FailClosed\) \\
+empirical\_detector\_protocol\_substitution &
+Replacing source readable records with detector clicks, calibration tables,
+laboratory protocols, rods, clocks, or empirical response curves changes the
+object. The candidate's \(F_{\mathrm{empirical}}\) branch sends the attempt to
+\(\BottomSrc\). & \(\FailClosed\) \\
+proper\_time\_substitution &
+Replacing source status markers with proper-time normalization changes the
+readout relation into a target or observer-clock rule. The candidate's
+\(F_{\mathrm{proper}}\) branch sends the attempt to \(\BottomSrc\). &
+\(\FailClosed\) \\
+target\_metric\_substitution &
+Using target topology, atlas data, Lorentzian metric components, cones,
+connections, curvature, or geodesics to define source readout is outside
+\(\SMScope(\EStar)\). The candidate's target-import branch blocks it. &
+\(\FailClosed\) \\
+benchmark\_behavior\_substitution &
+Benchmark success cannot be evidence for source readability. Exact-GR
+benchmark behavior is not an input to \(\ReadoutSrc(\EStar)\). &
+\(\FailClosed\) \\
+finite\_local\_witness\_perturbation &
+Certified source relabeling that preserves \(s_0,s_1,s_{01}\), their tokens,
+and the listed certificates preserves the finite witness. Adding a new
+unregistered record, deleting a certificate, or making the readout
+multi-valued falls to \(\BottomSrc\) or a live repair obligation. &
+\(\StressPass\) \\
+\(K_{E_{\ast}}\)\_compatibility\_failure &
+Removing the limited projection compatibility with
+\(\mathrm{SourceCouplingLawCandidate\_EStar\_v1}\) removes an integration
+route to later coupling-law work. It does not make the finite source readout
+map collapse. & \(\LiveObligation\) \\
+placeholder\_as\_adoption\_laundering &
+Treating the candidate name, placeholder status, stress survival, or audit
+pass as adopted \(\DetSrc\), adopted \(\ReadoutSrc\), detector semantics, or
+matter coupling violates the stated claim boundary and is blocked. &
+\(\FailClosed\) \\
+process\_authority\_pressure &
+Validator status, registry rows, role identity, handoff state, generated
+derivatives, local caches, approvals, checkpoint state, commits, and file
+order cannot supply source records, readout tokens, or certificates. &
+\(\FailClosed\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Invalid source-readout branches fail closed]
+Missing source records, malformed certificates, ambiguous readout attempts,
+target imports, empirical detector substitutions, proper-time substitutions,
+downstream matter-coupling imports, and process-authority substitutions do
+not repair or extend \(\ReadoutSrc(\EStar)\). They map to \(\BottomSrc\).
+\end{lemma}
+
+\begin{proof}
+Those branches are exactly the branches named by \(\FailR(\EStar)\). The
+candidate does not define a recovery rule that can use detector protocols,
+proper time, target geometry, benchmark behavior, stress-energy semantics,
+matter action, Einstein-equation premises, validators, registries, roles,
+handoffs, generated derivatives, local caches, checkpoints, commits, or file
+order as source premises. Therefore the attempted substitution blocks rather
+than supplying a positive readout value.
+\end{proof}
+
+\begin{lemma}[Finite certified relabeling preserves the listed witness]
+Any finite source relabeling that preserves the three readable records, their
+source certificates, and their readout-token assignments preserves the
+P5-T04 finite witness.
+\end{lemma}
+
+\begin{proof}
+The non-bottom graph entries are explicitly finite:
+\[
+  s_0\mapsto \rho^R_0,\quad
+  s_1\mapsto \rho^R_1,\quad
+  s_{01}\mapsto \rho^R_{01}.
+\]
+If the perturbation preserves the certified records and these graph entries,
+the readout witness remains the same source-side finite graph up to relabeling.
+If the perturbation deletes a record or certificate, creates ambiguity, or
+imports target or process authority, the first lemma applies instead.
+\end{proof}
+
+\begin{lemma}[Compatibility loss is an integration pressure, not readout collapse]
+Failure of limited compatibility with \(K_{E_{\ast}}\) blocks immediate
+integration into the existing source-side coupling-law candidate, but it does
+not by itself collapse the finite source readout map.
+\end{lemma}
+
+\begin{proof}
+The source readout map is defined on \(\ReadableSrc(\EStar)\) with values in
+\(\TokR(\EStar)\). Projection-level compatibility with \(K_{E_{\ast}}\) is an
+additional integration statement. Removing that statement leaves a selector
+or repair obligation for P5-T07; it does not remove the three non-bottom
+source readout assignments.
+\end{proof}
+
+\begin{lemma}[Process authority cannot repair or promote the candidate]
+Validation success, registry metadata, role identity, handoff state,
+approvals, commits, generated derivatives, local caches, and file order
+cannot provide source records, source tokens, certificates, detector
+semantics, source detector/readout adoption, or matter coupling.
+\end{lemma}
+
+\begin{proof}
+Those objects are provenance and process-control evidence. None is an element
+of \(\SMScope(\EStar)\), \(\ReadableSrc(\EStar)\), \(\TokR(\EStar)\),
+\(\CertR(\EStar)\), or \(\FailR(\EStar)\). Treating them as mathematical or
+physical premises would change the candidate into an authority-status rule,
+which the P5-T04 candidate and P5-T05 audit both forbid.
+\end{proof}
+
+\section{Live Obligations}
+
+The following obligations remain open after P5-T06:
+
+\begin{enumerate}[leftmargin=*]
+  \item a general source detector/readout law beyond the finite
+        \(\EStar\) witness, if one is later needed;
+  \item a selector decision about whether to integrate the finite readout
+        candidate into a repaired \(K_E\)-style coupling-law candidate;
+  \item a repair route if P5-T07 treats \(K_{E_{\ast}}\) compatibility as
+        insufficient for the next matter-coupling step;
+  \item continued no-target and no-process-authority guards for any broader
+        source detector/readout extension.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Unchanged. \\
+M\_src & Unchanged; finite source context retained. \\
+g\_eff & Unchanged; no metric scope expansion. \\
+matter coupling & Source detector/readout candidate stress-survives only as a finite draft/control candidate; no detector semantics adoption and no coupling-law adoption. \\
+Einstein equations & Blocked and unchanged; no field-equation derivation. \\
+finite-variation robustness & Local finite readout stress recorded; no global robustness theorem. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion. \\
+Gate Chair status & Unchanged; no Gate Chair verdict issued. \\
+current route freeze or hard-fail status & Not frozen; P5-T07 selector route open. \\
+\bottomrule
+\end{longtable}
+
+\section{Loop-Risk Decision}
+
+The Refuter category is:
+\[
+  \texttt{bridge\_facing\_candidate\_path}.
+\]
+
+The result is not a repeated-burden freeze and not a scoped obstruction. The
+reason is that P5-T06 adds new stress information: destructive erasure
+identifies live integration obligations, invalid substitutions fail closed,
+and process-authority pressure cannot repair or promote the source readout
+candidate. The next allowed route is P5-T07 selector, not another generic
+audit or construction loop.
+
+\section{Stress Result}
+
+\begin{verbatim}
+source_detector_readout_refuter_stress_result:
+  result_type: "survives_as_draft_control_candidate"
+  bridge_or_fail_category: "bridge_facing_candidate_path"
+  stressed_candidate: "SourceReadoutCandidate_EStar_v1"
+  candidate_artifact_path: "research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex"
+  audit_artifact_path: "research_control/tasks/RT-20260708-011/artifacts/source_detector_readout_smuggling_audit_v1.tex"
+  readout_interface_erasure: "live_obligation"
+  source_record_removal: "fail_closed"
+  empirical_detector_protocol_substitution: "fail_closed"
+  proper_time_substitution: "fail_closed"
+  target_metric_substitution: "fail_closed"
+  benchmark_behavior_substitution: "fail_closed"
+  finite_local_witness_perturbation: "stress_pass"
+  K_Estar_compatibility_failure: "live_obligation"
+  placeholder_as_adoption_laundering: "blocked"
+  process_authority_pressure: "blocked"
+  detector_readout_semantics_adopted: false
+  Det_src_adopted: false
+  Readout_src_adopted: false
+  source_law_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  completed_derivation_claimed: false
+  selected_next_plan_task_id: "P5-T07"
+  next_required_role: "theoretical-continuation-selector"
+\end{verbatim}
+
+\begin{verdict}
+\(\mathrm{SourceReadoutCandidate\_EStar\_v1}\) survives P5-T06 Refuter
+stress only as a finite draft/control candidate. It is suitable for P5-T07
+route selection, not for claim promotion.
+\end{verdict}
+
+\section{Non-Conclusions}
+
+\begin{nonconclusion}
+This stress result does not adopt \(\DetSrc\), adopt \(\ReadoutSrc\), adopt
+detector semantics, adopt source detector/readout semantics, adopt a source
+law, adopt matter semantics, adopt a coupling law, derive matter coupling, or
+derive Einstein equations.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+This stress result does not promote benchmark status, issue Gate Chair
+authority, prove a general source detector/readout law, prove future
+source-extension impossibility, reject the global theory, or claim completed
+derivation.
+\end{nonconclusion}
+
+\section{APA 7 Source Materials}
+
+The Aether-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan Continue Task v18} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v18.md}.
+
+The Aether-Flow Research Project. (2026b). \emph{Source detector/readout
+candidate \(SourceReadoutCandidate\_EStar\_v1\)} [Research-control TeX
+artifact].
+\texttt{research\_control/tasks/RT-20260708-010/artifacts/source\_detector\_readout\_candidate\_v1.tex}.
+
+The Aether-Flow Research Project. (2026c). \emph{Source detector/readout
+smuggling audit v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260708-011/artifacts/source\_detector\_readout\_smuggling\_audit\_v1.tex}.
+
+The Aether-Flow Research Project. (2026d). \emph{Source detector/readout
+semantics burden v1} [Internal control note].
+\texttt{research\_control/design/source\_detector\_readout\_semantics\_burden\_v1.md}.
+
+\end{document}

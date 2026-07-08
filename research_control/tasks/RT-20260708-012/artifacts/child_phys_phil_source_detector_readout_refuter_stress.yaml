@@ -1,0 +1,24 @@
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+task_id: "RT-20260708-012"
+job_id: "AJ-RT-20260708-012-001"
+artifact_under_stress: "research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex"
+prior_audit: "research_control/tasks/RT-20260708-011/artifacts/source_detector_readout_smuggling_audit_v1.tex"
+stress_result: "survives_as_draft_control_candidate"
+bridge_or_fail_category: "bridge_facing_candidate_path"
+ontological_assessment:
+  source_side_candidate_remains_draft_control: true
+  detector_semantics_adopted: false
+  empirical_detector_protocol_authorized: false
+  target_metric_authorized: false
+  benchmark_status_changed: false
+  process_authority_used_as_physics: false
+  matter_coupling_derived: false
+reasoning: "The stress suite distinguishes source-side readout vocabulary from empirical detector semantics. Attacks that replace source records with detector protocols, clocks, target metric behavior, benchmark success, or process authority are treated as category errors and fail closed rather than as repairs."
+blocked_overreads:
+  - "stress survival as detector/readout semantics adoption"
+  - "stress survival as matter-coupling derivation"
+  - "stress survival as benchmark promotion"
+  - "stress survival as Gate Chair verdict"
+  - "validator or registry status as proof authority"
+next_route: "P5-T07"

@@ -1,0 +1,57 @@
+task_id: "RT-20260708-012"
+task_type: "source_detector_readout_refuter_stress"
+status: "completed"
+created_at: "2026-07-08T07:08:00Z"
+updated_at: "2026-07-08T07:08:00Z"
+closed_at: "2026-07-08T07:08:00Z"
+parent_task_id: "RT-20260708-011"
+parent_handoff_id: "handoff-0704"
+decision_id: "DDR-20260708-012"
+job_id: "AJ-RT-20260708-012-001"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260708-012"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. P5-T06 requires no human gate because it creates only a draft/control Refuter stress artifact and does not adopt detector/readout semantics or any downstream physics claim."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T06"
+  plan_task_name: "Source detector/readout Refuter stress"
+objective: "Stress SourceReadoutCandidate_EStar_v1 against placeholder collapse, empirical substitution, proper-time substitution, target-metric substitution, benchmark substitution, finite/local witness perturbation, K_Estar compatibility failure, and process-authority pressure."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Stress source detector/readout candidate against placeholder collapse, empirical substitution, and finite/local perturbations."
+closure_status: "v18_p5_t06_source_detector_readout_stress_survived_draft_control_no_adoption"
+claim_boundary:
+  allowed_scope: "P5-T06 draft/control Refuter stress only"
+  stressed_artifact: "research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex"
+  prior_audit_artifact: "research_control/tasks/RT-20260708-011/artifacts/source_detector_readout_smuggling_audit_v1.tex"
+  stress_result: "survives_as_draft_control_candidate"
+  bridge_or_fail_category: "bridge_facing_candidate_path"
+  selected_next_route: "P5-T07 source detector/readout route selector and integration"
+  selected_next_packet_requires_human_gate: false
+  detector_readout_semantics_adopted: false
+  Det_src_adopted: false
+  Readout_src_adopted: false
+  empirical_detector_protocol_authorized: false
+  proper_time_normalization_authorized: false
+  target_metric_authorized: false
+  stress_energy_semantics_adopted: false
+  matter_action_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/tasks/RT-20260708-012/artifacts/child_phys_math_source_detector_readout_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260708-012/artifacts/child_phys_phil_source_detector_readout_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260708-012/artifacts/parent_conflict_review_source_detector_readout_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260708-012/artifacts/parent_fusion_notes_source_detector_readout_refuter_stress.md"
+  - "research_control/tasks/RT-20260708-012/artifacts/source_detector_readout_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260708-012/artifacts/validate_p5_t06_source_detector_readout_refuter_stress.py"
+  - "research_control/tasks/RT-20260708-012/artifacts/p5_t06_source_detector_readout_refuter_stress_report.json"
+next_recommended_action: "Run one bounded v18 P5-T07 source detector/readout route selector and integration packet."
+notes: "RT-20260708-012 completes v18 P5-T06 by stress-testing SourceReadoutCandidate_EStar_v1 as survives_as_draft_control_candidate. The result is local and non-promotional, preserves all no-adoption and no-matter-coupling boundaries, and routes to P5-T07 selector."
+documentation_impact_id: "DI-RT-20260708-012-001"

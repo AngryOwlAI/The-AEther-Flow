@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-011`
-- Latest handoff: `handoff-0704`
-- Current status: `v18_p5_t05_source_detector_readout_audited_source_pure_as_written_no_adoption`
+- Active task: `RT-20260708-012`
+- Latest handoff: `handoff-0705`
+- Current status: `v18_p5_t06_source_detector_readout_stress_survived_draft_control_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-011`
-- Latest research handoff: `handoff-0704`
-- Latest research next action: Run one bounded v18 P5-T06 source detector/readout Refuter stress packet against SourceReadoutCandidate_EStar_v1.
+- Latest research task: `RT-20260708-012`
+- Latest research handoff: `handoff-0705`
+- Latest research next action: Run one bounded v18 P5-T07 source detector/readout route selector and integration packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `source_detector_readout_refuter_stress`
-- Role family: `refuter@0.2.0`
+- Route ID: `source_detector_readout_route_selector_and_integration`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `matter_coupling`
-- Milestone burden: Stress SourceReadoutCandidate_EStar_v1 against placeholder collapse, empirical substitution, proper-time substitution, target-metric substitution, benchmark substitution, finite/local witness perturbation, K_Estar compatibility failure, and process-authority pressure.
+- Milestone burden: Select the next source detector/readout route after source-pure candidate stress survival while preserving no-adoption and no-promotion gates.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `8659f2cf7f1e25bd91f436bbb43867a5c1f32c32cb928cd6cb38c403a8f3ce83`
-- JSON SHA-256: `9811122f9dff20c0f318c36d44dec11ccd717d2cf440ae0be2d95fb033460a5e`
+- YAML SHA-256: `c7665e29566e0a88a67d84376c8fdc798009035d50de9a7f7dc9f80e8841448f`
+- JSON SHA-256: `881a3c6631a94fa95af4735b334cdba3699da4b58b12b7b04c3c6872b943f25f`
 
 ## Authority Warning
 
