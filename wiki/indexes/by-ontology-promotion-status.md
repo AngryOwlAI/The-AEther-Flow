@@ -353,6 +353,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V18-P5-T04-SOURCE-DETECTOR-READOUT-CANDIDATE` `research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex`
 - `TEX-V18-P5-T05-SOURCE-DETECTOR-READOUT-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260708-011/artifacts/source_detector_readout_smuggling_audit_v1.tex`
 - `TEX-V18-P5-T06-SOURCE-DETECTOR-READOUT-REFUTER-STRESS-V1` `research_control/tasks/RT-20260708-012/artifacts/source_detector_readout_refuter_stress_v1.tex`
+- `TEX-V18-P6-T01-FINITE-TOY-RESPONSE-V2-SOURCE-SPEC` `research_control/tasks/RT-20260708-014/artifacts/finite_toy_response_v2_source_spec.tex`
 
 ## superseded
 

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-013`
-- Latest handoff: `handoff-0706`
-- Current status: `v18_p5_t07_source_detector_readout_route_selected_p6_t01_no_adoption`
+- Active task: `RT-20260708-014`
+- Latest handoff: `handoff-0707`
+- Current status: `v18_p6_t01_finite_toy_response_v2_source_spec_completed_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-013`
-- Latest research handoff: `handoff-0706`
-- Latest research next action: Run one bounded v18 P6-T01 finite toy response v2 source specification packet.
+- Latest research task: `RT-20260708-014`
+- Latest research handoff: `handoff-0707`
+- Latest research next action: Run one bounded v18 P6-T02 finite toy response v2 model-or-obstruction packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `finite_toy_response_v2_source_spec`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `finite_toy_response_v2_model_or_obstruction`
+- Role family: `candidate-constructor@0.2.0`
 - Target milestone: `finite_toy_metric_response`
-- Milestone burden: Specify a non-tag-fragile finite source-to-response toy target.
+- Milestone burden: Construct the P6-T01 finite toy response target or record a precise obstruction.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `9341f3c4bc534d34a5d697f3088d3eb797b25485a1de026ad6dbd049f87e58be`
-- JSON SHA-256: `3e08c73da9191861f2651ee9f84f10443e4f66e03af2eca2c922412a1ed507f7`
+- YAML SHA-256: `821ce58a9cec85098c46077fbabe5d32497ee02caa5be847f87ab58db51125e2`
+- JSON SHA-256: `48e6bc7a315f6819411bf982d35ddd8e551580109d6a61d5729fb35b04ce03cc`
 
 ## Authority Warning
 

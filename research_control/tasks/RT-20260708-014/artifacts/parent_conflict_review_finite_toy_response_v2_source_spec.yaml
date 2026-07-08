@@ -1,0 +1,17 @@
+task_id: "RT-20260708-014"
+plan_task_id: "P6-T01"
+mode: "parent_child_parallel_synthesis"
+status: "PASS"
+child_outputs:
+  - "research_control/tasks/RT-20260708-014/artifacts/child_phys_math_finite_toy_response_v2_source_spec.yaml"
+  - "research_control/tasks/RT-20260708-014/artifacts/child_phys_phil_finite_toy_response_v2_source_spec.yaml"
+reviewed_at: "2026-07-08T08:07:00Z"
+conflicts:
+  - conflict_id: "P6T01-CF-001"
+    conflict_type: "terminology"
+    severity: "nonblocking"
+    description: "The phrase metric-response analogue could be overread as g_eff construction."
+    resolution: "The fused artifact uses finite graph-distance form or finite distance-form analogue and explicitly forbids g_eff construction target metric import and benchmark recovery."
+unresolved_blocking_conflicts: []
+parent_resolution: "Both child outputs agree on a relation-based finite toy target, draft/control status, tag-route distinction, no adoption, and P6-T02 as the next route."
+validation_status: "PASS"

@@ -1,0 +1,35 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260708-014"
+plan_task_id: "P6-T01"
+status: "completed"
+claim_status: "draft/control"
+summary: "Defines a finite relation-based source target whose induced response relation is computed from the path relation rather than from explicit tags."
+formal_objects:
+  finite_source_set: "S_v2 = {a,b,c}"
+  source_relation_family:
+    adjacency: "A_v2 = {{a,b},{b,c}}"
+    incidence_records: "Inc_v2 = {(a,{a,b}), (b,{a,b}), (b,{b,c}), (c,{b,c})}"
+  orbit_structure:
+    automorphism_group: "Aut(P3)"
+    vertex_orbits:
+      - "{b}"
+      - "{a,c}"
+    unordered_pair_orbits:
+      - "diagonal"
+      - "adjacent"
+      - "endpoint_pair"
+  induced_response_relation: "R_v2({x,y}) = d_A(x,y) for unordered pairs in S_v2"
+  metric_response_analogue: "D_v2 is the finite graph-distance form on relation orbits, not g_eff."
+invariance_checks:
+  relabeling_invariance: "For every relation automorphism sigma, d_A(sigma x, sigma y) = d_A(x,y)."
+  tag_removal_stress: "Removing presentation labels leaves the unlabeled path relation and the orbit-distance response defined."
+detector_readout_status: "SourceReadoutCandidate_EStar_v1 is a nonadopted draft/control candidate_placeholder; R_v2 does not depend on it."
+forbidden_imports_absent:
+  explicit_target_tags: true
+  target_metric: true
+  empirical_detector_protocol: true
+  proper_time_normalization: true
+  benchmark_status: true
+next_route: "P6-T02"
+blocking_conflicts: []

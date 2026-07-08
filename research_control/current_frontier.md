@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-013` and `handoff-0706`.
+`RT-20260708-014` and `handoff-0707`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-013` |
-| Latest handoff ID | `handoff-0706` |
-| Current status | `v18_p5_t07_source_detector_readout_route_selected_p6_t01_no_adoption` |
+| Active task ID | `RT-20260708-014` |
+| Latest handoff ID | `handoff-0707` |
+| Current status | `v18_p6_t01_finite_toy_response_v2_source_spec_completed_no_promotion` |
 | V16 completed | false |
-| Current route family | source_detector_readout_route_selector_integration |
+| Current route family | finite_toy_response_v2_source_spec |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P6-T01 finite toy response v2 source specification packet. |
-| Required next authority | Run one bounded v18 P6-T01 finite toy response v2 source specification packet. |
-| Next recommended action | Run one bounded v18 P6-T01 finite toy response v2 source specification packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P6-T02 finite toy response v2 model-or-obstruction packet. |
+| Required next authority | Run one bounded v18 P6-T02 finite toy response v2 model-or-obstruction packet. |
+| Next recommended action | Run one bounded v18 P6-T02 finite toy response v2 model-or-obstruction packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-013` |
-| Latest research handoff ID | `handoff-0706` |
-| Latest research next action | Run one bounded v18 P6-T01 finite toy response v2 source specification packet. |
+| Latest research task ID | `RT-20260708-014` |
+| Latest research handoff ID | `handoff-0707` |
+| Latest research next action | Run one bounded v18 P6-T02 finite toy response v2 model-or-obstruction packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-013/00_TASK.yaml`.
-- Active task objective: Select exactly one next route after SourceReadoutCandidate_EStar_v1 survived audit and stress as a draft/control source detector/readout candidate while preserving no-adoption boundaries.
-- Latest handoff path: `research_control/handoffs/handoff-0706.yaml`.
-- Latest handoff summary: Completed v18 P5-T07 source detector/readout route selector and integration. The selected route is proceed_to_finite_toy_response_v2 with next plan task P6-T01. SourceReadoutCandidate_EStar_v1 remains draft/control only. Repair and freeze are not mandatory. No detector/readout adoption source-law adoption coupling-law adoption matter-coupling derivation ledger delta DAG update benchmark promotion Gate Chair verdict or completed derivation occurred.
-- Current route family: source_detector_readout_route_selector_integration.
-- Next recommended action: Run one bounded v18 P6-T01 finite toy response v2 source specification packet.
+- Active task path: `research_control/tasks/RT-20260708-014/00_TASK.yaml`.
+- Active task objective: Specify a non-tag-fragile finite source-to-response toy target for P6-T01 while preserving the frozen negative tag-route boundary and all no-promotion constraints.
+- Latest handoff path: `research_control/handoffs/handoff-0707.yaml`.
+- Latest handoff summary: Completed v18 P6-T01 finite toy response v2 source specification. The target is relation-based rather than explicit-tag-based: S_v2={a,b,c} with path adjacency A_v2 and response R_v2({x,y})=d_A(x,y). SourceReadoutCandidate_EStar_v1 remains a nonadopted draft/control placeholder. No Det_src adoption Readout_src adoption detector semantics source-law adoption coupling-law adoption g_eff construction matter-coupling derivation ledger delta benchmark promotion Gate Chair verdict or completed derivation occurred.
+- Current route family: finite_toy_response_v2_source_spec.
+- Next recommended action: Run one bounded v18 P6-T02 finite toy response v2 model-or-obstruction packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P6-T01 finite toy response v2 source specification packet.
+Run one bounded v18 P6-T02 finite toy response v2 model-or-obstruction packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,9 +320,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-013`;
-- latest handoff: `handoff-0706`;
-- current status: `v18_p5_t07_source_detector_readout_route_selected_p6_t01_no_adoption`;
+- active task: `RT-20260708-014`;
+- latest handoff: `handoff-0707`;
+- current status: `v18_p6_t01_finite_toy_response_v2_source_spec_completed_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -339,8 +339,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0706.yaml`
-- `research_control/tasks/RT-20260708-013/00_TASK.yaml`
+- `research_control/handoffs/handoff-0707.yaml`
+- `research_control/tasks/RT-20260708-014/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -356,7 +356,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0706*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0707*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

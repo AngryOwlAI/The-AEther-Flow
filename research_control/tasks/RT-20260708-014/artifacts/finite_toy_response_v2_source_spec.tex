@@ -1,0 +1,280 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\Sv}{S_{\mathrm{v2}}}
+\newcommand{\Av}{A_{\mathrm{v2}}}
+\newcommand{\Incv}{\mathrm{Inc}_{\mathrm{v2}}}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Rv}{R_{\mathrm{v2}}}
+\newcommand{\Dv}{D_{\mathrm{v2}}}
+\newcommand{\ReadoutSrc}{\mathrm{Readout}_{\mathrm{src}}}
+\newcommand{\DetSrc}{\mathrm{Det}_{\mathrm{src}}}
+\newcommand{\GEff}{g_{\mathrm{eff}}}
+
+\title{Finite Toy Response v2 Source Specification}
+\author{The AEther-Flow Research Project}
+\date{2026-07-08}
+
+\begin{document}
+\maketitle
+
+\section*{Control Status}
+
+This artifact implements v18 P6-T01. It is a draft/control finite toy
+response v2 source specification for \texttt{RT-20260708-014}. It is not
+canonical ontology, not \(\DetSrc\) adoption, not \(\ReadoutSrc\) adoption,
+not detector semantics, not source detector/readout semantics adoption, not
+source-law adoption, not coupling-law adoption, not \(\GEff\), not matter
+coupling, not stress-energy semantics, not a matter action, not Einstein
+equations, not benchmark evidence, not a Gate Chair verdict, and not
+completed-derivation evidence.
+
+The purpose of the packet is to specify a finite source-to-response toy target
+that does not depend on explicit tags whose erasure destroys the response
+relation.
+
+\section{Finite Toy Response v2 Fields}
+
+\begin{verbatim}
+finite_toy_response_v2:
+  finite_source_set: "S_v2 = {a,b,c}"
+  source_relation_family: "A_v2 path adjacency and Inc_v2 incidence records"
+  invariant_orbit_structure: "Aut(P3) vertex and unordered-pair orbits"
+  induced_response_relation: "R_v2({x,y}) = d_A(x,y)"
+  metric_response_analogue: "finite graph-distance form D_v2, not g_eff"
+  explicit_target_tags_forbidden: true
+  target_metric_import_forbidden: true
+  empirical_detector_import_forbidden: true
+  relabeling_invariance_test: "distance is invariant under Aut(P3)"
+  tag_removal_stress: "erase presentation labels but retain source relation"
+  detector_readout_status: "SourceReadoutCandidate_EStar_v1
+    candidate_placeholder_nonadopted"
+\end{verbatim}
+
+\section{Source Set and Relation Family}
+
+\begin{definition}[Finite source set]
+Let
+\[
+  \Sv=\{a,b,c\}.
+\]
+The letters \(a,b,c\) are presentation names only. They are not source tags,
+target labels, detector labels, proper-time labels, or metric coordinates.
+\end{definition}
+
+\begin{definition}[Source relation family]
+The source relation family consists of the path adjacency relation
+\[
+  \Av=\{\{a,b\},\{b,c\}\}
+\]
+and the incidence record
+\[
+  \Incv=\{(a,\{a,b\}),(b,\{a,b\}),(b,\{b,c\}),(c,\{b,c\})\}.
+\]
+No element of \(\Av\) or \(\Incv\) carries an explicit orientation tag,
+normalization tag, target metric component, empirical detector protocol, or
+benchmark-success flag.
+\end{definition}
+
+\section{Invariant Orbit Structure}
+
+\begin{definition}[Relabeling group]
+Let \(\Aut(\Sv,\Av)\) be the automorphism group of the three-vertex path.
+It has two elements: the identity and the endpoint swap
+\[
+  \sigma(a)=c,\qquad \sigma(b)=b,\qquad \sigma(c)=a.
+\]
+\end{definition}
+
+The vertex orbits are \(\{b\}\) and \(\{a,c\}\). The unordered-pair orbits
+are:
+\[
+  \mathcal{O}_0=\{\{a,a\},\{b,b\},\{c,c\}\},
+\]
+\[
+  \mathcal{O}_1=\{\{a,b\},\{b,c\}\},
+\]
+\[
+  \mathcal{O}_2=\{\{a,c\}\}.
+\]
+These orbit classes are determined by the source relation. They are not
+explicit response tags.
+
+\section{Induced Response Relation}
+
+\begin{definition}[Finite source distance]
+Let \(d_{\Av}(x,y)\) be the shortest-path distance in the graph
+\((\Sv,\Av)\). Thus
+\[
+  d_{\Av}(x,x)=0,\qquad
+  d_{\Av}(a,b)=d_{\Av}(b,c)=1,\qquad
+  d_{\Av}(a,c)=2.
+\]
+\end{definition}
+
+\begin{definition}[Induced response relation]
+The finite toy response relation is the source-induced partial map
+\[
+  \Rv:\binom{\Sv}{\leq 2}\to\{0,1,2\},\qquad
+  \Rv(\{x,y\})=d_{\Av}(x,y).
+\]
+Equivalently, \(\Rv(\mathcal{O}_k)=k\) for \(k\in\{0,1,2\}\).
+\end{definition}
+
+\begin{definition}[Finite distance-form analogue]
+The metric-response analogue is the finite graph-distance form
+\[
+  \Dv(x,y)=d_{\Av}(x,y).
+\]
+\(\Dv\) is only a finite toy distance-form analogue. It is not
+\(\GEff\), not a target metric, not proper-time normalization, and not a
+benchmark metric.
+\end{definition}
+
+\section{Relabeling Invariance Test}
+
+\begin{lemma}[Relabeling invariance]
+For every \(\sigma\in\Aut(\Sv,\Av)\) and every \(x,y\in\Sv\),
+\[
+  \Rv(\{\sigma(x),\sigma(y)\})=\Rv(\{x,y\}).
+\]
+\end{lemma}
+
+\begin{proof}
+Every automorphism of \((\Sv,\Av)\) preserves adjacency and therefore
+shortest-path distance. Since \(\Rv\) is defined as \(d_{\Av}\), it is
+constant on automorphism orbits of unordered pairs.
+\end{proof}
+
+\section{Tag-Removal Stress}
+
+\begin{definition}[Presentation-label erasure]
+Let \(E_{\mathrm{lab}}\) erase the presentation names \(a,b,c\) while
+retaining the isomorphism class of the finite source relation
+\((\Sv,\Av,\Incv)\). The result is the unlabeled three-vertex path.
+\end{definition}
+
+\begin{proposition}[Tag-removal survival target]
+Under \(E_{\mathrm{lab}}\), the induced response relation remains defined on
+the unlabeled path orbit classes. The response values are still
+diagonal \(0\), adjacent \(1\), and endpoint-pair \(2\).
+\end{proposition}
+
+\begin{proof}
+The construction of \(\Rv\) uses only source adjacency and shortest-path
+distance. Presentation names are not inputs to \(d_{\Av}\). Erasing names
+therefore removes no datum required to compute orbit distance. The unlabeled
+path still has the three orbit classes diagonal, adjacent, and endpoint-pair.
+\end{proof}
+
+\section{Difference From the Frozen Explicit-Tag Route}
+
+The older finite toy route used explicit response tags
+\((\varepsilon,\lambda,\tau)\). The Refuter stress for that route showed that
+erasing those tags made the response relation undefined and froze that local
+route. This P6-T01 target differs in the following precise way:
+
+\[
+  \text{old route: response read from explicit tags},
+\]
+\[
+  \text{P6-T01 route: response induced from source relation orbits}.
+\]
+
+The P6-T01 target does not claim that the finite model has been constructed
+or that all later stress tests will pass. It only supplies a non-tag-fragile
+source specification for P6-T02.
+
+\section{Detector/Readout Status}
+
+\begin{verbatim}
+detector_readout_status:
+  status: "candidate_placeholder_nonadopted"
+  candidate: "SourceReadoutCandidate_EStar_v1"
+  candidate_authority: "draft/control only"
+  used_to_define_R_v2: false
+  Det_src_adopted: false
+  Readout_src_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+\end{verbatim}
+
+The source detector/readout candidate may be carried forward as a
+nonadopted placeholder for later compatibility checks. It is not used as a
+premise of \(\Rv\), and it does not provide empirical detector semantics.
+
+\section{P6-T02 Construction Obligations}
+
+The next packet should either construct the finite toy response v2 model from
+this specification or record a precise obstruction. The construction attempt
+must check:
+
+\begin{enumerate}
+  \item whether \((\Sv,\Av,\Incv,\Rv,\Dv)\) can be represented without hidden
+        target metric import;
+  \item whether finite relation perturbations preserve a nontrivial response
+        class or produce a scoped obstruction;
+  \item whether `detector_readout_status' remains placeholder-only; and
+  \item whether no old explicit tag \((\varepsilon,\lambda,\tau)\) or
+        equivalent tag surrogate is reintroduced.
+\end{enumerate}
+
+\section{Distance-to-GR Status}
+
+\begin{center}
+\begin{tabular}{p{0.33\linewidth}p{0.57\linewidth}}
+\hline
+Burden & Status \\
+\hline
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged; no general EqSrc discharge. \\
+RetainH & Unchanged; not adopted. \\
+GenH & Unchanged; not adopted. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Unchanged; this is a finite toy response target only. \\
+M\_src & Unchanged; no source manifold construction is supplied. \\
+\(\GEff\) & Not constructed; \(\Dv\) is a finite graph-distance analogue only. \\
+matter coupling & Not derived or adopted. \\
+Einstein equations & Not started. \\
+finite-variation robustness & Source specification defines relabeling and tag-removal tests for later construction and stress. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion is supplied. \\
+Gate Chair status & Unchanged; no verdict issued. \\
+current route freeze or hard-fail status & Not frozen for P6-T01; construction or obstruction is routed to P6-T02. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Next Route}
+
+The next route is P6-T02:
+\[
+  \texttt{finite\_toy\_response\_v2\_model\_or\_obstruction}.
+\]
+
+\begin{thebibliography}{9}
+
+\bibitem{v18-plan}
+The AEther-Flow Research Project. (2026, July 7). \emph{Recommendations
+implementation plan continue task v18} [Internal implementation plan].
+
+\bibitem{handoff706}
+The AEther-Flow Research Project. (2026, July 8). \emph{Handoff 0706}
+[Internal research-control handoff].
+
+\bibitem{burden-map}
+The AEther-Flow Research Project. (2026, June 17). \emph{GR derivation
+burden map} [Internal control note].
+
+\bibitem{frozen-toy}
+The AEther-Flow Research Project. (2026, June 18). \emph{Resp\_lc finite toy
+metric-response model Refuter stress test} [Internal research-control TeX
+artifact].
+
+\end{thebibliography}
+
+\end{document}
