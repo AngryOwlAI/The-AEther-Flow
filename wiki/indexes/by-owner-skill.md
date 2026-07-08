@@ -440,6 +440,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-022-PARENT-FUSION-NOTES-EQSRC-FAMILY-CLOSURE-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260707-022-parent-fusion-notes-eqsrc-family-closure-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-023-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260707-023-eqsrc-family-closure-refuter-stress-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-023-PARENT-FUSION-NOTES-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260707-023-parent-fusion-notes-eqsrc-family-closure-refuter-stress.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-024-PARENT-FUSION-NOTES-POST-EQSRC-FAMILY-CLOSURE-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260707-024-parent-fusion-notes-post-eqsrc-family-closure-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-024-POST-EQSRC-FAMILY-CLOSURE-SELECTOR-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260707-024-post-eqsrc-family-closure-selector-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1067,6 +1069,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-022-PARENT-FUSION-NOTES-EQSRC-FAMILY-CLOSURE-SMUGGLING-AUDIT` `research_control/tasks/RT-20260707-022/artifacts/parent_fusion_notes_eqsrc_family_closure_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-023-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-023-PARENT-FUSION-NOTES-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS` `research_control/tasks/RT-20260707-023/artifacts/parent_fusion_notes_eqsrc_family_closure_refuter_stress.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260707-024-PARENT-FUSION-NOTES-POST-EQSRC-FAMILY-CLOSURE-SELECTOR` `research_control/tasks/RT-20260707-024/artifacts/parent_fusion_notes_post_eqsrc_family_closure_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260707-024-POST-EQSRC-FAMILY-CLOSURE-SELECTOR-RECEIPT` `research_control/tasks/RT-20260707-024/artifacts/post_eqsrc_family_closure_selector_receipt.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

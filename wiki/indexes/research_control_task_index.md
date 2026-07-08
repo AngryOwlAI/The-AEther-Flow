@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `13864f2921c4232c8b5f88b85cfb07e40b560f1499bc7685fb352da800f268bb`
-- Generated-at source timestamp: `2026-07-07T22:54:55Z`
-- Row count: `833`
+- Source fingerprint: `8468dfa3cdecaaf7dc2e43abdd2ba66ded9f7d57e2635465a2e1f9883e4d9eda`
+- Generated-at source timestamp: `2026-07-07T23:38:32Z`
+- Row count: `834`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260707-024|RT-20260707-023|2026-07-07T23:38:32Z|2026-07-07T23:38:32Z|post_eqsrc_family_closure_selector|completed|source_equivalence_eqsrc|Select one next route after family-closure theorem/countermodel, audit, and stress.|theoretical-continuation-selector@0.1.0|false|false|7|Run one bounded v18 P4-T01 countermodel-obligation policy packet.|PASS|research_control/tasks/RT-20260707-024/jobs/completions/AJC-AJ-RT-20260707-024-001.yaml|
 |RT-20260707-023|RT-20260707-022|2026-07-07T22:54:55Z|2026-07-07T22:54:55Z|eqsrc_family_closure_refuter_stress|completed|source_equivalence_eqsrc|Stress the P3 family-closure result against closure removal, invariant weakening, primitive-dependence, and target-import attacks.|refuter@0.2.0|false|false|9|Run one bounded v18 P3-T06 post-EqSrc family-closure selector packet.|PASS|research_control/tasks/RT-20260707-023/jobs/completions/AJC-AJ-RT-20260707-023-001.yaml|
 |RT-20260707-022|RT-20260707-021|2026-07-07T22:19:13Z|2026-07-07T22:19:13Z|eqsrc_family_closure_smuggling_audit|completed|source_equivalence_eqsrc|Audit the family-closure theorem-or-countermodel attempt for target imports and authority laundering.|smuggling-auditor@0.2.0|false|false|9|Run one bounded v18 P3-T05 Refuter stress of the family-closure attempt.|PASS|research_control/tasks/RT-20260707-022/jobs/completions/AJC-AJ-RT-20260707-022-001.yaml|
 |RT-20260707-021|RT-20260707-020|2026-07-07T21:46:23Z|2026-07-07T21:46:23Z|retainh_genh_primitive_boundary_extraction|completed|source_equivalence_eqsrc|Extract exact RetainH and GenH primitive-boundary consequences from the P3-T02 theorem-or-countermodel result.|ontology-formalizer@0.2.0|false|false|9|Run one bounded v18 P3-T04 smuggling audit of the family-closure attempt.|PASS|research_control/tasks/RT-20260707-021/jobs/completions/AJC-AJ-RT-20260707-021-001.yaml|

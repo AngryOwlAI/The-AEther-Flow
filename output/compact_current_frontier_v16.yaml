@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0692.yaml"
+  - "research_control/handoffs/handoff-0693.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v1.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260707-023"
-  latest_handoff_id: "handoff-0692"
-  current_status: "v18_p3_t05_eqsrc_family_closure_refuter_scoped_obstruction_pending_selector_no_promotion"
+  active_task_id: "RT-20260707-024"
+  latest_handoff_id: "handoff-0693"
+  current_status: "v18_p3_t06_selected_p4_t01_countermodel_obligation_system_no_promotion"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260707-023"
-  latest_research_handoff_id: "handoff-0692"
-  latest_research_next_action: "Run one bounded v18 P3-T06 post-EqSrc family-closure selector packet."
+  latest_research_task_id: "RT-20260707-024"
+  latest_research_handoff_id: "handoff-0693"
+  latest_research_next_action: "Run one bounded v18 P4-T01 countermodel-obligation policy packet."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "post_eqsrc_family_closure_selector"
-  role_family: "theoretical-continuation-selector@0.1.0"
+  route_id: "countermodel_obligation_policy"
+  role_family: "project-control-maintainer@0.2.0"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Select the next continuation route after P3 family-closure theorem candidate audit and stress."
+  milestone_burden: "Define minimal countermodel obligations for future theorem attempts."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false

@@ -1,0 +1,58 @@
+artifact_id: "child_phys_math_post_eqsrc_family_closure_selector"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260707-024"
+job_id: "AJ-RT-20260707-024-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+created_at: "2026-07-07T23:38:32Z"
+inputs:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  - "research_control/handoffs/handoff-0692.yaml"
+  - "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex"
+formal_assessment:
+  p3_t05_result: "scoped_obstruction"
+  theorem_candidate_status: "conditional_under_supplied_H1_H7"
+  finite_countermodel_pressure:
+    missing_inverse: "survives"
+    missing_composition: "supplied"
+  repair_mandatory: false
+  freeze_mandatory: false
+route_options:
+  P4_T01_countermodel_obligation_system:
+    disposition: "selected"
+    reason: "P3-T05 supplied countermodel pressure but did not mandate repair or freeze. The mathematically conservative next step is to require future theorem packets to carry minimal countermodel obligations."
+  RetainH_definition_candidate_packet:
+    disposition: "deferred"
+    reason: "RetainH is implicated by H-retention extension branches, but P3-T06 plan default requires P4-T01 unless repair or freeze is mandatory."
+  GenH_definition_candidate_packet:
+    disposition: "deferred"
+    reason: "GenH is implicated by generated-family extension branches, but no adopted source-law definition is authorized in P3-T06."
+  repair_family_closure_theorem_packet:
+    disposition: "not_selected"
+    reason: "The theorem candidate is not internally inconsistent; it remains conditional under H1-H7. Repair would require source-side definitions not yet adopted."
+  scoped_obstruction_freeze_review:
+    disposition: "not_selected"
+    reason: "P3-T05 freeze criteria were evaluated as not_frozen with new payload present and P3-T06 available."
+  source_detector_readout_semantics_frontier_burden:
+    disposition: "not_selected"
+    reason: "This is downstream of the source-equivalence EqSrc burden and would skip the countermodel-obligation discipline."
+  external_review_packet_preparation_after_internal_integration:
+    disposition: "deferred"
+    reason: "External review should follow internal countermodel-obligation integration."
+selected_route: "P4_T01_countermodel_obligation_system"
+selected_next_plan_task_id: "P4-T01"
+selected_next_role_family: "project-control-maintainer@0.2.0"
+new_mathematical_payload:
+  payload_type: "packet_selection"
+  summary: "Maps P3-T05 scoped obstruction and countermodel pressure to P4-T01 countermodel-obligation policy."
+claim_boundary_preserved: true
+forbidden_conclusions:
+  - "general EqSrc discharge"
+  - "RetainH adoption"
+  - "GenH adoption"
+  - "source-law adoption"
+  - "matter-coupling derivation"
+  - "Einstein-equation derivation"
+  - "benchmark promotion"
+  - "completed derivation"
