@@ -826,6 +826,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-024-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-024-detector-placeholder-collapse-checker-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-024-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER-SPEC-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-024-detector-placeholder-collapse-checker-spec-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-024-PARENT-FUSION-NOTES-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER` `wiki/markdown/md-research-control-tasks-rt-20260708-024-parent-fusion-notes-detector-placeholder-collapse-checker.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-025-SUPPORT-FORMALIZATION-TRACEABILITY-INTEGRATION-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-025-support-formalization-traceability-integration-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1497,6 +1498,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-024-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER-RECEIPT` `research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-024-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER-SPEC-V1` `research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_spec_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-024-PARENT-FUSION-NOTES-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER` `research_control/tasks/RT-20260708-024/artifacts/parent_fusion_notes_detector_placeholder_collapse_checker.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-025-SUPPORT-FORMALIZATION-TRACEABILITY-INTEGRATION-RECEIPT` `research_control/tasks/RT-20260708-025/artifacts/support_formalization_traceability_integration_receipt.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

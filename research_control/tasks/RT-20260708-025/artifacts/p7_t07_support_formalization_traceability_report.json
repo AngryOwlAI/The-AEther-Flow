@@ -1,0 +1,93 @@
+{
+  "checks": {
+    "index_declares_no_proof_authority": true,
+    "index_exists": true,
+    "index_routes_all_tools": true,
+    "pnf_registry_exists": true,
+    "proof_normal_form_pass": true,
+    "proof_normal_form_support_rows_present": true,
+    "registry_exists": true,
+    "traceability_entry_count_is_5": true,
+    "traceability_pass": true
+  },
+  "next_route": "P7-T08 support_formalization_refuter_review",
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "proof_normal_form": {
+    "authority_boundary_status": "proof_authority_false_preserved",
+    "checked_row_count": 12,
+    "errors": [],
+    "high_risk_row_count": 5,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "registry_path": "registries/PROOF_NORMAL_FORM_REGISTRY.csv",
+    "scientific_gate_row_count": 3,
+    "status": "PASS",
+    "support_only": true,
+    "support_only_row_count": 5
+  },
+  "status": "PASS",
+  "support_only": true,
+  "traceability": {
+    "authority_boundary_status": "support_only_no_proof_authority_preserved",
+    "entries": [
+      {
+        "entry_id": "SFR-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER",
+        "plan_task_id": "P7-T02",
+        "proof_normal_form_row_id": "PNF-RT-20260708-025-001",
+        "source_artifact_count": 2,
+        "status": "PASS",
+        "test_evidence_count": 2,
+        "tool_artifact_count": 2,
+        "tool_id": "typed_eqsrc_orbit_checker"
+      },
+      {
+        "entry_id": "SFR-V18-P7-T03-CLOSURE-COUNTERMODEL-GENERATOR",
+        "plan_task_id": "P7-T03",
+        "proof_normal_form_row_id": "PNF-RT-20260708-025-002",
+        "source_artifact_count": 2,
+        "status": "PASS",
+        "test_evidence_count": 2,
+        "tool_artifact_count": 2,
+        "tool_id": "closure_countermodel_generator"
+      },
+      {
+        "entry_id": "SFR-V18-P7-T04-NO-TARGET-IMPORT-MUTATION-TESTER",
+        "plan_task_id": "P7-T04",
+        "proof_normal_form_row_id": "PNF-RT-20260708-025-003",
+        "source_artifact_count": 2,
+        "status": "PASS",
+        "test_evidence_count": 2,
+        "tool_artifact_count": 2,
+        "tool_id": "no_target_import_mutation_tester"
+      },
+      {
+        "entry_id": "SFR-V18-P7-T05-METRIC-USE-TEX-VALIDATOR",
+        "plan_task_id": "P7-T05",
+        "proof_normal_form_row_id": "PNF-RT-20260708-025-004",
+        "source_artifact_count": 3,
+        "status": "PASS",
+        "test_evidence_count": 2,
+        "tool_artifact_count": 2,
+        "tool_id": "metric_use_tex_reference_validator"
+      },
+      {
+        "entry_id": "SFR-V18-P7-T06-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER",
+        "plan_task_id": "P7-T06",
+        "proof_normal_form_row_id": "PNF-RT-20260708-025-005",
+        "source_artifact_count": 3,
+        "status": "PASS",
+        "test_evidence_count": 2,
+        "tool_artifact_count": 2,
+        "tool_id": "detector_placeholder_collapse_checker"
+      }
+    ],
+    "entry_count": 5,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "proof_normal_form_registry_path": "registries/PROOF_NORMAL_FORM_REGISTRY.csv",
+    "registry_path": "research_control/design/support_formalization_traceability_registry_v18.yaml",
+    "status": "PASS",
+    "support_only": true
+  }
+}

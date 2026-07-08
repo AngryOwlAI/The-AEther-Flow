@@ -12,11 +12,11 @@ If this index conflicts with registered source artifacts, control registries, ta
 | --- | --- |
 | Schema | `proof_normal_form_index_v1` |
 | Generated from | `registries/PROOF_NORMAL_FORM_REGISTRY.csv` |
-| Registry hash | `da4baf35b0b72b8d643254908640e352c38cd066614e941e15cb8e15e862c49e` |
-| Row count | 7 |
-| High-risk row count | 4 |
+| Registry hash | `d789b0e902df08ae5f2568c8cf9a81525f5620a98f79168e2e201a1bb737b31d` |
+| Row count | 12 |
+| High-risk row count | 5 |
 | Scientific-gate row count | 3 |
-| Machine-checkable fragment count | 0 |
+| Machine-checkable fragment count | 5 |
 | Source missing count | 0 |
 | Proof authority | false |
 | Physics promotion authorized | false |
@@ -27,6 +27,7 @@ If this index conflicts with registered source artifacts, control registries, ta
 
 | Claim type | Count |
 | --- | --- |
+| `boundary` | 5 |
 | `decision` | 3 |
 | `definition` | 2 |
 | `obstruction` | 1 |
@@ -38,12 +39,13 @@ If this index conflicts with registered source artifacts, control registries, ta
 | --- | --- |
 | `science_draft` | 4 |
 | `scientific_gate` | 3 |
+| `support_only` | 5 |
 
 ### Proof-State Statuses
 
 | Status | Count |
 | --- | --- |
-| `draft_control` | 3 |
+| `draft_control` | 8 |
 | `frozen_negative` | 1 |
 | `scoped_adopted` | 3 |
 
@@ -58,6 +60,11 @@ If this index conflicts with registered source artifacts, control registries, ta
 | `PNF-RT-20260706-014-005` | `TEX-V17-P1-T02-SOURCE-SIDE-COUPLING-LAW-CANDIDATE` | definition / science_draft / draft_control | `research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex` | One finite source-side K_EStar candidate graph exists as draft/control and audit-eligible only | not source-side coupling law<br>not detector semantics<br>not matter semantics<br>not stress-energy semantics<br>not matter action<br>not matter-coupling derivation<br>not Einstein equations<br>not benchmark promotion<br>not proof authority<br>not completed derivation<br>not general law existence |
 | `PNF-RT-20260706-014-006` | `TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST` | obstruction / science_draft / frozen_negative | `research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex` | Explicit-tag-only finite toy metric-response route is locally frozen as scoped obstruction after tag-removal stress | not canonical ontology<br>not Resp_lc witness<br>not M_src<br>not g_eff<br>not matter coupling<br>not Einstein equations<br>not benchmark evidence<br>not Gate Chair verdict<br>not completed derivation<br>not future source-extension impossibility<br>not global theory rejection |
 | `PNF-RT-20260706-014-007` | `TEX-RESEARCH-CONTROL-RESP-LC-SOURCE-EXTENSION-HUMAN-GATE-ADOPTION-DECISION` | decision / scientific_gate / scoped_adopted | `research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex` | Xi_X^R is adopted only as admissible source-extension data for Resp_lc continuation | not canonical ontology edit<br>not derivation from old S_X<br>not M_src<br>not g_eff<br>not matter coupling<br>not Einstein equations<br>not benchmark evidence<br>not closure verdict<br>not completed derivation<br>not future source-extension impossibility |
+| `PNF-RT-20260708-025-001` | `PY-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER` | boundary / support_only / draft_control | `scripts/research_control/support_formalization/typed_eqsrc_orbit_checker.py` | Typed EqSrc orbit checker is support-only finite-record validation evidence only | not proof authority<br>not general EqSrc theorem<br>not source-law adoption<br>not RetainH adoption<br>not GenH adoption<br>not target metric import<br>not MetricData(E) adoption<br>not g_eff adoption<br>not matter coupling<br>not Einstein equations<br>not benchmark promotion<br>not Gate Chair verdict<br>not completed derivation |
+| `PNF-RT-20260708-025-002` | `PY-V18-P7-T03-CLOSURE-COUNTERMODEL-GENERATOR` | boundary / support_only / draft_control | `scripts/research_control/support_formalization/closure_countermodel_generator.py` | Closure countermodel generator is support-only finite mock-record evidence only | not proof authority<br>not general EqSrc theorem<br>not RetainH adoption<br>not GenH adoption<br>not source-law adoption<br>not target metric import<br>not MetricData(E) adoption<br>not g_eff adoption<br>not matter coupling<br>not Einstein equations<br>not benchmark promotion<br>not Gate Chair verdict<br>not completed derivation |
+| `PNF-RT-20260708-025-003` | `PY-V18-P7-T04-NO-TARGET-IMPORT-MUTATION-TESTER` | boundary / support_only / draft_control | `scripts/research_control/support_formalization/no_target_import_mutation_tester.py` | No-target import mutation tester is support-only linter stress evidence only | not proof authority<br>not validator-policy theorem<br>not source-law adoption<br>not target metric import<br>not proper-time normalization<br>not detector semantics adoption<br>not MetricData(E) adoption<br>not g_eff adoption<br>not stress-energy semantics<br>not matter action<br>not matter coupling<br>not Einstein equations<br>not benchmark promotion<br>not Gate Chair verdict<br>not completed derivation |
+| `PNF-RT-20260708-025-004` | `PY-V18-P7-T05-METRIC-USE-TEX-REFERENCE-VALIDATOR` | boundary / support_only / draft_control | `scripts/research_control/validate_metric_use_tex_references.py` | Metric-use TeX reference validator is support-only ledger coverage evidence only | not proof authority<br>not ledger mutation authority<br>not source-law adoption<br>not target metric import<br>not proper-time normalization<br>not detector semantics adoption<br>not MetricData(E) adoption<br>not g_eff adoption<br>not stress-energy semantics<br>not matter action<br>not matter coupling<br>not Einstein equations<br>not benchmark promotion<br>not Gate Chair verdict<br>not completed derivation |
+| `PNF-RT-20260708-025-005` | `PY-V18-P7-T06-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER` | boundary / support_only / draft_control | `scripts/research_control/support_formalization/detector_placeholder_collapse_checker.py` | Detector-placeholder collapse checker is support-only semantic-state collapse evidence only | not proof authority<br>not Det_src adoption<br>not Readout_src adoption<br>not detector semantics adoption<br>not source detector/readout semantics adoption<br>not target metric import<br>not MetricData(E) adoption<br>not g_eff adoption<br>not matter coupling<br>not Einstein equations<br>not benchmark promotion<br>not Gate Chair verdict<br>not completed derivation |
 
 ## Blocked Overreads
 
@@ -103,3 +110,14 @@ If this index conflicts with registered source artifacts, control registries, ta
 - not canonical ontology edit
 - not derivation from old S_X
 - not closure verdict
+- not general EqSrc theorem
+- not RetainH adoption
+- not GenH adoption
+- not target metric import
+- not g_eff adoption
+- not validator-policy theorem
+- not proper-time normalization
+- not ledger mutation authority
+- not Det_src adoption
+- not Readout_src adoption
+- not source detector/readout semantics adoption

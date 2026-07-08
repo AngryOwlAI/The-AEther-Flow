@@ -50,11 +50,22 @@
     "not global theory rejection",
     "not canonical ontology edit",
     "not derivation from old S_X",
-    "not closure verdict"
+    "not closure verdict",
+    "not general EqSrc theorem",
+    "not RetainH adoption",
+    "not GenH adoption",
+    "not target metric import",
+    "not g_eff adoption",
+    "not validator-policy theorem",
+    "not proper-time normalization",
+    "not ledger mutation authority",
+    "not Det_src adoption",
+    "not Readout_src adoption",
+    "not source detector/readout semantics adoption"
   ],
-  "generated_at": "2026-07-06T10:36:00Z",
+  "generated_at": "2026-07-08T14:22:38Z",
   "generated_from": "registries/PROOF_NORMAL_FORM_REGISTRY.csv",
-  "registry_hash": "da4baf35b0b72b8d643254908640e352c38cd066614e941e15cb8e15e862c49e",
+  "registry_hash": "d789b0e902df08ae5f2568c8cf9a81525f5620a98f79168e2e201a1bb737b31d",
   "rows": [
     {
       "allowed_uses": "prerequisite context for later bounded g_eff preflight selection",
@@ -386,50 +397,324 @@
       "scope": "S_X plus Xi_X^R source-extension route for later bounded Resp_lc packets",
       "source_artifact_path": "research_control/tasks/RT-20260614-060/artifacts/101_RESP_LC_SOURCE_EXTENSION_HUMAN_GATE_ADOPTION_DECISION.tex",
       "status": "scoped_adopted"
+    },
+    {
+      "allowed_uses": "traceability validation;reader support;P7-T08 Refuter overread review",
+      "authority_status": "support_only",
+      "claim_type": "boundary",
+      "conclusion": "Typed EqSrc orbit checker is support-only finite-record validation evidence only",
+      "created_at": "2026-07-08T14:22:38Z",
+      "depends_on": [
+        "MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-TYPED-EQSRC-ORBIT-CHECKER-SPEC-V1",
+        "MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1"
+      ],
+      "eligible_next_routes": [
+        "support_formalization_traceability",
+        "P7-T08_refuter_review"
+      ],
+      "forbidden_premises": [
+        "source-law adoption",
+        "unrestricted EqSrc theorem authority",
+        "RetainH adoption",
+        "GenH adoption",
+        "target metric import",
+        "MetricData(E) adoption",
+        "g_eff adoption",
+        "matter coupling",
+        "Einstein equations",
+        "benchmark promotion",
+        "Gate Chair verdict",
+        "completed derivation"
+      ],
+      "high_risk": true,
+      "machine_checkable_fragment": true,
+      "non_conclusions": [
+        "not proof authority",
+        "not general EqSrc theorem",
+        "not source-law adoption",
+        "not RetainH adoption",
+        "not GenH adoption",
+        "not target metric import",
+        "not MetricData(E) adoption",
+        "not g_eff adoption",
+        "not matter coupling",
+        "not Einstein equations",
+        "not benchmark promotion",
+        "not Gate Chair verdict",
+        "not completed derivation"
+      ],
+      "notes": "P7-T07 support-only PNF row for typed EqSrc orbit checker",
+      "object_id": "PY-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER",
+      "premises": "tool source exists;focused tests pass;deterministic report passes;v18 traceability row records support-only boundary",
+      "proof_normal_form_row_id": "PNF-RT-20260708-025-001",
+      "scope": "v18 P7 support-formalization traceability and finite-record checking",
+      "source_artifact_path": "scripts/research_control/support_formalization/typed_eqsrc_orbit_checker.py",
+      "status": "draft_control"
+    },
+    {
+      "allowed_uses": "traceability validation;reader support;P7-T08 Refuter overread review",
+      "authority_status": "support_only",
+      "claim_type": "boundary",
+      "conclusion": "Closure countermodel generator is support-only finite mock-record evidence only",
+      "created_at": "2026-07-08T14:22:38Z",
+      "depends_on": [
+        "MD-RESEARCH-CONTROL-TASKS-RT-20260708-021-CLOSURE-COUNTERMODEL-GENERATOR-SPEC-V1",
+        "MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-TYPED-EQSRC-ORBIT-CHECKER-SPEC-V1"
+      ],
+      "eligible_next_routes": [
+        "support_formalization_traceability",
+        "P7-T08_refuter_review"
+      ],
+      "forbidden_premises": [
+        "source-law adoption",
+        "unrestricted EqSrc theorem authority",
+        "RetainH adoption",
+        "GenH adoption",
+        "target metric import",
+        "MetricData(E) adoption",
+        "g_eff adoption",
+        "matter coupling",
+        "Einstein equations",
+        "benchmark promotion",
+        "Gate Chair verdict",
+        "completed derivation"
+      ],
+      "high_risk": false,
+      "machine_checkable_fragment": true,
+      "non_conclusions": [
+        "not proof authority",
+        "not general EqSrc theorem",
+        "not RetainH adoption",
+        "not GenH adoption",
+        "not source-law adoption",
+        "not target metric import",
+        "not MetricData(E) adoption",
+        "not g_eff adoption",
+        "not matter coupling",
+        "not Einstein equations",
+        "not benchmark promotion",
+        "not Gate Chair verdict",
+        "not completed derivation"
+      ],
+      "notes": "P7-T07 support-only PNF row for closure countermodel generator",
+      "object_id": "PY-V18-P7-T03-CLOSURE-COUNTERMODEL-GENERATOR",
+      "premises": "tool source exists;focused tests pass;deterministic report passes;v18 traceability row records support-only boundary",
+      "proof_normal_form_row_id": "PNF-RT-20260708-025-002",
+      "scope": "v18 P7 support-formalization missing-closure fixture generation",
+      "source_artifact_path": "scripts/research_control/support_formalization/closure_countermodel_generator.py",
+      "status": "draft_control"
+    },
+    {
+      "allowed_uses": "traceability validation;reader support;P7-T08 Refuter overread review",
+      "authority_status": "support_only",
+      "claim_type": "boundary",
+      "conclusion": "No-target import mutation tester is support-only linter stress evidence only",
+      "created_at": "2026-07-08T14:22:38Z",
+      "depends_on": [
+        "MD-RESEARCH-CONTROL-TASKS-RT-20260708-022-NO-TARGET-IMPORT-MUTATION-TESTER-SPEC-V1",
+        "MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP"
+      ],
+      "eligible_next_routes": [
+        "support_formalization_traceability",
+        "P7-T08_refuter_review"
+      ],
+      "forbidden_premises": [
+        "source-law adoption",
+        "target metric import",
+        "proper-time normalization",
+        "detector semantics adoption",
+        "MetricData(E) adoption",
+        "g_eff adoption",
+        "stress-energy semantics",
+        "matter action",
+        "matter coupling",
+        "Einstein equations",
+        "benchmark promotion",
+        "Gate Chair verdict",
+        "completed derivation"
+      ],
+      "high_risk": false,
+      "machine_checkable_fragment": true,
+      "non_conclusions": [
+        "not proof authority",
+        "not validator-policy theorem",
+        "not source-law adoption",
+        "not target metric import",
+        "not proper-time normalization",
+        "not detector semantics adoption",
+        "not MetricData(E) adoption",
+        "not g_eff adoption",
+        "not stress-energy semantics",
+        "not matter action",
+        "not matter coupling",
+        "not Einstein equations",
+        "not benchmark promotion",
+        "not Gate Chair verdict",
+        "not completed derivation"
+      ],
+      "notes": "P7-T07 support-only PNF row for no-target import mutation tester",
+      "object_id": "PY-V18-P7-T04-NO-TARGET-IMPORT-MUTATION-TESTER",
+      "premises": "tool source exists;focused tests pass;deterministic report passes;v18 traceability row records support-only boundary",
+      "proof_normal_form_row_id": "PNF-RT-20260708-025-003",
+      "scope": "v18 P7 support-formalization target-import hygiene mutation testing",
+      "source_artifact_path": "scripts/research_control/support_formalization/no_target_import_mutation_tester.py",
+      "status": "draft_control"
+    },
+    {
+      "allowed_uses": "traceability validation;reader support;P7-T08 Refuter overread review",
+      "authority_status": "support_only",
+      "claim_type": "boundary",
+      "conclusion": "Metric-use TeX reference validator is support-only ledger coverage evidence only",
+      "created_at": "2026-07-08T14:22:38Z",
+      "depends_on": [
+        "MD-RESEARCH-CONTROL-TASKS-RT-20260708-023-METRIC-USE-TEX-VALIDATOR-SPEC-V1",
+        "MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1"
+      ],
+      "eligible_next_routes": [
+        "support_formalization_traceability",
+        "P7-T08_refuter_review"
+      ],
+      "forbidden_premises": [
+        "source-law adoption",
+        "target metric import",
+        "proper-time normalization",
+        "detector semantics adoption",
+        "MetricData(E) adoption",
+        "g_eff adoption",
+        "stress-energy semantics",
+        "matter action",
+        "matter coupling",
+        "Einstein equations",
+        "benchmark promotion",
+        "Gate Chair verdict",
+        "completed derivation"
+      ],
+      "high_risk": false,
+      "machine_checkable_fragment": true,
+      "non_conclusions": [
+        "not proof authority",
+        "not ledger mutation authority",
+        "not source-law adoption",
+        "not target metric import",
+        "not proper-time normalization",
+        "not detector semantics adoption",
+        "not MetricData(E) adoption",
+        "not g_eff adoption",
+        "not stress-energy semantics",
+        "not matter action",
+        "not matter coupling",
+        "not Einstein equations",
+        "not benchmark promotion",
+        "not Gate Chair verdict",
+        "not completed derivation"
+      ],
+      "notes": "P7-T07 support-only PNF row for metric-use TeX validator",
+      "object_id": "PY-V18-P7-T05-METRIC-USE-TEX-REFERENCE-VALIDATOR",
+      "premises": "tool source exists;focused tests pass;deterministic report passes;v18 traceability row records support-only boundary",
+      "proof_normal_form_row_id": "PNF-RT-20260708-025-004",
+      "scope": "v18 P7 support-formalization metric-use ledger coverage checking",
+      "source_artifact_path": "scripts/research_control/validate_metric_use_tex_references.py",
+      "status": "draft_control"
+    },
+    {
+      "allowed_uses": "traceability validation;reader support;P7-T08 Refuter overread review",
+      "authority_status": "support_only",
+      "claim_type": "boundary",
+      "conclusion": "Detector-placeholder collapse checker is support-only semantic-state collapse evidence only",
+      "created_at": "2026-07-08T14:22:38Z",
+      "depends_on": [
+        "MD-RESEARCH-CONTROL-TASKS-RT-20260708-024-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER-SPEC-V1",
+        "MD-RESEARCH-CONTROL-DESIGN-SOURCE-DETECTOR-READOUT-SEMANTICS-BURDEN-V1"
+      ],
+      "eligible_next_routes": [
+        "support_formalization_traceability",
+        "P7-T08_refuter_review"
+      ],
+      "forbidden_premises": [
+        "source-law adoption",
+        "Det_src adoption",
+        "Readout_src adoption",
+        "detector semantics adoption",
+        "source detector readout semantics adoption",
+        "target metric import",
+        "MetricData(E) adoption",
+        "g_eff adoption",
+        "matter coupling",
+        "Einstein equations",
+        "benchmark promotion",
+        "Gate Chair verdict",
+        "completed derivation"
+      ],
+      "high_risk": false,
+      "machine_checkable_fragment": true,
+      "non_conclusions": [
+        "not proof authority",
+        "not Det_src adoption",
+        "not Readout_src adoption",
+        "not detector semantics adoption",
+        "not source detector/readout semantics adoption",
+        "not target metric import",
+        "not MetricData(E) adoption",
+        "not g_eff adoption",
+        "not matter coupling",
+        "not Einstein equations",
+        "not benchmark promotion",
+        "not Gate Chair verdict",
+        "not completed derivation"
+      ],
+      "notes": "P7-T07 support-only PNF row for detector-placeholder collapse checker",
+      "object_id": "PY-V18-P7-T06-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER",
+      "premises": "tool source exists;focused tests pass;deterministic report passes;v18 traceability row records support-only boundary",
+      "proof_normal_form_row_id": "PNF-RT-20260708-025-005",
+      "scope": "v18 P7 support-formalization detector and readout semantic-state hygiene",
+      "source_artifact_path": "scripts/research_control/support_formalization/detector_placeholder_collapse_checker.py",
+      "status": "draft_control"
     }
   ],
   "schema_id": "proof_normal_form_index_v1",
-  "snapshot_hash": "91bd54f8860539b433a60b716a5715f53ec88ba92aefab9dc7693dfc028b5bae",
+  "snapshot_hash": "d8c61e9a1cfaa02493ff6ff747ac5a6f223b2bb36d75357f79512e9d3eab94af",
   "source_basis": [
     "registries/PROOF_NORMAL_FORM_REGISTRY.csv",
     "research_control/formalization/proof_normal_form_schema_v1.md",
     "scripts/research_control/validate_proof_normal_form_registry.py"
   ],
-  "source_fingerprint": "da4baf35b0b72b8d643254908640e352c38cd066614e941e15cb8e15e862c49e",
+  "source_fingerprint": "d789b0e902df08ae5f2568c8cf9a81525f5620a98f79168e2e201a1bb737b31d",
   "summary": {
     "authority_status_counts": {
       "science_draft": 4,
-      "scientific_gate": 3
+      "scientific_gate": 3,
+      "support_only": 5
     },
     "claim_type_counts": {
+      "boundary": 5,
       "decision": 3,
       "definition": 2,
       "obstruction": 1,
       "theorem": 1
     },
-    "high_risk_row_count": 4,
-    "machine_checkable_fragment_count": 0,
-    "row_count": 7,
+    "high_risk_row_count": 5,
+    "machine_checkable_fragment_count": 5,
+    "row_count": 12,
     "scientific_gate_row_count": 3,
     "source_missing_count": 0,
     "status_counts": {
-      "draft_control": 3,
+      "draft_control": 8,
       "frozen_negative": 1,
       "scoped_adopted": 3
     },
-    "support_only_row_count": 0
+    "support_only_row_count": 5
   },
   "validation": {
     "authority_boundary_status": "proof_authority_false_preserved",
-    "checked_row_count": 7,
+    "checked_row_count": 12,
     "errors": [],
-    "high_risk_row_count": 4,
+    "high_risk_row_count": 5,
     "physics_promotion_authorized": false,
     "proof_authority": false,
     "registry_path": "registries/PROOF_NORMAL_FORM_REGISTRY.csv",
     "scientific_gate_row_count": 3,
     "status": "PASS",
     "support_only": true,
-    "support_only_row_count": 0
+    "support_only_row_count": 5
   }
 }

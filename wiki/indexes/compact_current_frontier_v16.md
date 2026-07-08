@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-024`
-- Latest handoff: `handoff-0717`
-- Current status: `v18_p7_t06_detector_placeholder_collapse_checker_implemented_no_proof_authority`
+- Active task: `RT-20260708-025`
+- Latest handoff: `handoff-0718`
+- Current status: `v18_p7_t07_support_formalization_traceability_integrated_no_proof_authority`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-024`
-- Latest research handoff: `handoff-0717`
-- Latest research next action: Run one bounded v18 P7-T07 support formalization traceability integration packet.
+- Latest research task: `RT-20260708-025`
+- Latest research handoff: `handoff-0718`
+- Latest research next action: Run one bounded v18 P7-T08 support formalization Refuter review packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `support_formalization_traceability_integration`
-- Role family: `validator-engineer@0.2.0`
+- Route ID: `support_formalization_refuter_review`
+- Role family: `refuter@0.2.0`
 - Target milestone: `none`
-- Milestone burden: Integrate support-only formalization tools into traceability registry or dashboard without proof authority.
+- Milestone burden: Stress v18 support formalization for proof-authority overread and false-confidence hazards.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `88cd5c785fb7d5306c59f72bd72700042f3569a702399b2054f18049c77c756b`
-- JSON SHA-256: `21c4374d96ca39ac7c1a2a3a3cf91d365eaa4ce7ee40597d820ea6a0aa1c0e68`
+- YAML SHA-256: `423cfa87f5e74bae3827c2f96c1f34ea4c4977ca56ed4d0877078164c8d14e53`
+- JSON SHA-256: `57986b411db581c1697492c07b8d9f187111a88e8b70cd3a90d31349f2ec4b74`
 
 ## Authority Warning
 
