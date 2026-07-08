@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-004`
-- Latest handoff: `handoff-0697`
-- Current status: `v18_p4_t04_countermodel_obligation_task_template_integration_completed_no_physics_delta`
+- Active task: `RT-20260708-005`
+- Latest handoff: `handoff-0698`
+- Current status: `v18_p4_t05_countermodel_obligation_pilot_completed_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-004`
-- Latest research handoff: `handoff-0697`
-- Latest research next action: Run one bounded v18 P4-T05 countermodel-obligation pilot on P3 outputs.
+- Latest research task: `RT-20260708-005`
+- Latest research handoff: `handoff-0698`
+- Latest research next action: Run one bounded v18 P4-T06 countermodel-obligation red-team review.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `countermodel_obligation_pilot`
-- Role family: `process-integrity-auditor@0.1.0`
+- Route ID: `countermodel_obligation_red_team_review`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Pilot the countermodel obligation registry on the P3 EqSrc family-closure packet.
+- Milestone burden: Stress the countermodel obligation system for false blockage, overclaim, and process orbit.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `43aa4c682f406ed6ff3cae3346727f9c387c0446ec8bef678ad8084f2d25e664`
-- JSON SHA-256: `8a4850d66a9d0beed6ffdf26ec3219bb29b5803c90ac4e2c6d0639d350fc49fa`
+- YAML SHA-256: `c97e11eff377444a621a707c99cabc6535c8aae47fdfc60e0e2607e68c619b7d`
+- JSON SHA-256: `f13f1f858411a3864610291745f451240744d8c16535c9d6c37667806e0637c8`
 
 ## Authority Warning
 

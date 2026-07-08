@@ -448,6 +448,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-002-COUNTERMODEL-OBLIGATION-SCHEMA-REGISTRY-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-002-countermodel-obligation-schema-registry-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-003-COUNTERMODEL-OBLIGATION-VALIDATOR-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-003-countermodel-obligation-validator-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-004-COUNTERMODEL-OBLIGATION-TEMPLATE-INTEGRATION-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-004-countermodel-obligation-template-integration-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-005-COUNTERMODEL-OBLIGATION-PILOT-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260708-005-countermodel-obligation-pilot-report.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1083,6 +1084,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-002-COUNTERMODEL-OBLIGATION-SCHEMA-REGISTRY-RECEIPT` `research_control/tasks/RT-20260708-002/artifacts/countermodel_obligation_schema_registry_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-003-COUNTERMODEL-OBLIGATION-VALIDATOR-RECEIPT` `research_control/tasks/RT-20260708-003/artifacts/countermodel_obligation_validator_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-004-COUNTERMODEL-OBLIGATION-TEMPLATE-INTEGRATION-RECEIPT` `research_control/tasks/RT-20260708-004/artifacts/countermodel_obligation_template_integration_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-005-COUNTERMODEL-OBLIGATION-PILOT-REPORT` `research_control/tasks/RT-20260708-005/artifacts/countermodel_obligation_pilot_report_v1.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
