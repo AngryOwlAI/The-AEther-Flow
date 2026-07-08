@@ -1,0 +1,245 @@
+completion_id: "AJC-AJ-RT-20260708-036-001"
+job_id: "AJ-RT-20260708-036-001"
+task_id: "RT-20260708-036"
+decision_id: "DDR-20260708-036"
+source_role_id: "external-red-team-reviewer"
+completed_at: "2026-07-08T21:18:00Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  related_plan_task_id: "P9-T05"
+  plan_phase_id: "P9"
+  implemented_task_scope: "Reviewed public and reader-facing status surfaces for overclaim, underclaim, cognitive overload, and generated-surface authority confusion."
+  recommendation_ids:
+    - "V18-R09"
+  completed_v18_tasks_this_packet:
+    - "P9-T05"
+  phase_p9_completed: true
+  downstream_tasks_not_implemented:
+    - "P10-T01 external-review question selector"
+    - "P10 and later v18 tasks"
+  all_applicable_plan_tasks_proven: false
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+output_paths:
+  - "research_control/tasks/RT-20260708-036/artifacts/child_phys_math_public_cognitive_load_review.yaml"
+  - "research_control/tasks/RT-20260708-036/artifacts/child_phys_phil_public_cognitive_load_review.yaml"
+  - "research_control/tasks/RT-20260708-036/artifacts/parent_conflict_review_public_cognitive_load_review.yaml"
+  - "research_control/tasks/RT-20260708-036/artifacts/parent_fusion_notes_public_cognitive_load_review.md"
+  - "research_control/tasks/RT-20260708-036/artifacts/public_cognitive_load_red_team_review_v1.md"
+  - "research_control/tasks/RT-20260708-036/artifacts/validate_p9_t05_public_cognitive_load_red_team.py"
+  - "research_control/tasks/RT-20260708-036/artifacts/p9_t05_public_cognitive_load_red_team_report.json"
+  - "research_control/tasks/RT-20260708-036/artifacts/public_cognitive_load_red_team_receipt.md"
+  - "research_control/tasks/RT-20260708-036/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-036/DDR-20260708-036.md"
+  - "research_control/tasks/RT-20260708-036/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-036/jobs/AJ-RT-20260708-036-001.yaml"
+  - "research_control/tasks/RT-20260708-036/jobs/completions/AJC-AJ-RT-20260708-036-001.yaml"
+  - "research_control/tasks/RT-20260708-036/roles/external-red-team-reviewer@0.1.0--RT-20260708-036.yaml"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-0729.yaml"
+  - "research_control/handoffs/handoff-0729.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=778 relationship_row_count=3897 semantic_row_count=778 vault_row_count=778"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-035 latest_handoff=handoff-0728 boundary=director_decision_required next_action=P9-T05"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --paths <62 explicit public files> --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=11"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 778
+    relationship_row_count: 3897
+    semantic_row_count: 778
+    vault_row_count: 778
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"status card v2 public summary next burden\" --limit 5 --json"
+      query_type: "search"
+      query_text: "status card v2 public summary next burden"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA"
+        - "MD-AETHER-FLOW-PHYSICS-PROGRAM-PUBLICATION-BRIEF"
+        - "MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER"
+        - "MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/status_card_v2_schema.md"
+      source_hash: "7485249b4b824290b7160e243349a1486f29d437a0d7bd99301fa3f26f791cda"
+    - object_id: "MD-AETHER-FLOW-PHYSICS-PROGRAM-PUBLICATION-BRIEF"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md"
+      source_hash: "88bc84765d409845edfe375cc7856895476304769aabc720e7fe111a3c944fe9"
+    - object_id: "MD-GITHUB-FACING-CLAIM-GATES-EXPLAINER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "github-facing/claim-gates-explainer.md"
+      source_hash: "c1bf6ca303eec3433a271f63288b58b7e50a02fd32ef4e04ea0a05a008609f2a"
+    - object_id: "MD-GITHUB-FACING-SOURCE-AUTHORITY-EXPLAINER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "github-facing/source-authority-explainer.md"
+      source_hash: "16eabfe2c9bc8d591d691281498655a8e4c22ee85485173c85bdd5e6a7317993"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "4a299cd00cde3edb66bb6a37c7c80e3764fe945bcc9d8756c36fb8efbf805202"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "continue_research.py resolved handoff-0728 and director_decision_required"
+  child_reviews:
+    status: "PASS"
+    evidence:
+      - "child_phys_math found status-card structure sufficient and linter warnings nonblocking"
+      - "child_phys_phil found ontology source authority and generated-surface boundaries preserved"
+      - "parent conflict review found no blocking child conflict"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "review artifact records p9_review_result pass"
+      - "six review questions are all pass or pass_with_nonblocking_advisory_warnings"
+      - "recommended_next_route is P10-T01"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "global validators run after control receipts and generated derivatives are refreshed"
+      - "documentation-impact, claim-language, and research-control validators are required before checkpoint"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command is run after this completion receipt is written"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current-frontier, compact-frontier, task-index, dependency-graph, and claim-graph renderers were refreshed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py and --validate-only passed after Markdown source registry update"
+      - "continue_research_memory_preflight refreshed local retrieval mirrors to PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json passed with zero hard failures"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-08"
+  red_team_packet_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+review_result:
+  status: "pass"
+  repair_required: false
+  fail_closed: false
+  recommended_next_route: "P10-T01"
+  summary: "No blocking public overclaim underclaim caveat-fog or generated-surface authority-confusion defect found as written."
+linter_result:
+  status: "PASS"
+  hard_fail_count: 0
+  warning_count: 11
+  warning_disposition: "justified_nonblocking"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260708-036/artifacts/child_phys_math_public_cognitive_load_review.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260708-036/artifacts/child_phys_phil_public_cognitive_load_review.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260708-036/artifacts/parent_conflict_review_public_cognitive_load_review.yaml"
+    blocking_conflicts_present: false
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    path: "research_control/tasks/RT-20260708-036/artifacts/parent_fusion_notes_public_cognitive_load_review.md"
+    fused_output_path: "research_control/tasks/RT-20260708-036/artifacts/public_cognitive_load_red_team_review_v1.md"
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  ledger_row_updated: false
+new_mathematical_payload: []
+mathematical_payload_manifest: []
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R09"
+  implements_plan_task_id: "P9-T05"
+  implementation_status: "completed"
+  coverage_effect: "direct_reader_surface_red_team_review_no_physics_promotion"
+claim_boundary:
+  allowed_claims:
+    - "v18 P9-T05 public cognitive-load red-team review passed"
+    - "sampled public surfaces expose what exists exact scope blocked overread and next burden"
+    - "no public overclaim hard failures were found"
+    - "advisory linter warnings are justified nonblocking findings"
+    - "generated surfaces remain noncanonical or snapshot-only reader aids"
+    - "next route is P10-T01"
+  forbidden_claims:
+    - "review pass as proof authority"
+    - "status-card v2 as Distance-to-GR ledger override"
+    - "public documentation as physics truth ranking"
+    - "generated reader surface as source authority"
+    - "source-law adoption"
+    - "detector-semantics adoption"
+    - "coupling-law adoption"
+    - "matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+project_improvement_signals: []
+selected_next_route:
+  route_id: "external_review_question_selector_v18"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P10"
+  plan_task_id: "P10-T01"
+  task_name: "External-review question selector"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  task_type: "external_review_question_selector_v18"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Select one focused external-review question from v18 theorem/countermodel results."
+  requires_human_gate: false
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

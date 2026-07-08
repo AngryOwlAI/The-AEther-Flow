@@ -1,0 +1,39 @@
+execution_unit_id: "child_phys_math"
+task_id: "RT-20260708-036"
+agent_job_id: "AJ-RT-20260708-036-001"
+perspective: "physicist_mathematician"
+status: "completed"
+review_result: "pass"
+blocking_conflicts: false
+review_focus:
+  - "Can a technical reader identify what exists and the exact scope?"
+  - "Can a technical reader identify what does not follow and the next burden?"
+  - "Does status-card v2 ordering retain enough mathematical and control structure without hiding the open burden?"
+findings:
+  - finding_id: "PM-01"
+    severity: "nonblocking"
+    conclusion: "The main status-card v2 surfaces expose object status, exact scope, blocked overread, and next burden in a reader-checkable order."
+    evidence_paths:
+      - "README.md"
+      - "github-facing/proof-state-dashboard-explainer.md"
+      - "research_control/current_frontier.md"
+  - finding_id: "PM-02"
+    severity: "nonblocking"
+    conclusion: "The linter reported 11 advisory underclaim warnings and zero hard overclaim failures across the sampled public surface set."
+    evidence_paths:
+      - "scripts/project_control/validate_claim_language.py"
+  - finding_id: "PM-03"
+    severity: "nonblocking"
+    conclusion: "The warnings do not block the review because each sampled page either has a nearby status-card table, an explicit source-first boundary, or a generated-noncanonical authority footer."
+    evidence_paths:
+      - "github-facing/gr-derivation-roadmap-explainer.md"
+      - "github-facing/memory-system-explainer.md"
+      - "markdown/publication-briefs/claim-gates.publication-brief.md"
+limitations:
+  - "No typography, screenshot, or external-reader usability test was run in this packet."
+  - "Generated HTML prose was not edited or regenerated."
+claim_boundary:
+  proof_authority_created: false
+  distance_to_gr_delta_created: false
+  physics_promotion_authorized: false
+recommended_next_route: "P10-T01"

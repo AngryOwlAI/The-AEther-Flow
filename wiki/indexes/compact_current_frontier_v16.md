@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-035`
-- Latest handoff: `handoff-0728`
-- Current status: `v18_p9_t04_status_card_v2_linter_tests_completed_no_physics_delta`
+- Active task: `RT-20260708-036`
+- Latest handoff: `handoff-0729`
+- Current status: `v18_p9_t05_public_cognitive_load_red_team_pass_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-035`
-- Latest research handoff: `handoff-0728`
-- Latest research next action: Run one bounded v18 P9-T05 public cognitive-load red-team review packet.
+- Latest research task: `RT-20260708-036`
+- Latest research handoff: `handoff-0729`
+- Latest research next action: Run one bounded v18 P10-T01 external-review question selector packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `public_cognitive_load_red_team_review`
-- Role family: `external-red-team-reviewer@0.1.0`
-- Target milestone: `none`
-- Milestone burden: Review public and reader-facing status surfaces for overclaim, underclaim, and cognitive overload.
+- Route ID: `external_review_question_selector_v18`
+- Role family: `theoretical-continuation-selector@0.1.0`
+- Target milestone: `source_equivalence_eqsrc`
+- Milestone burden: Select one focused external-review question from v18 theorem/countermodel results.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `2bbb875d8a109d9df3fa48bb94be6fc9b01b8563d4d09935a7f3bcc0d45c313c`
-- JSON SHA-256: `7045de1c9c90e8cdafc7ca1aa0e1f9041603f4cb4d448ee167820956e276bbf0`
+- YAML SHA-256: `d1e6a60dd4566f6196eb1e48ab5e94cde7baae5b62e1a1a8ade1946a27162f91`
+- JSON SHA-256: `3447f4a46bbf2e499a3d962074d5c275b6e862e3720e50b3b22ce17a73277743`
 
 ## Authority Warning
 

@@ -1,0 +1,79 @@
+handoff_id: "handoff-0729"
+handoff_type: "research_completion"
+created_at: "2026-07-08T21:18:00Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-036"
+decision_id: "DDR-20260708-036"
+job_id: "AJ-RT-20260708-036-001"
+agent_job_id: "AJ-RT-20260708-036-001"
+completion_path: "research_control/tasks/RT-20260708-036/jobs/completions/AJC-AJ-RT-20260708-036-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-036-001"
+created_by_task_id: "RT-20260708-036"
+created_by_job_id: "AJ-RT-20260708-036-001"
+previous_handoff_id: "handoff-0728"
+supersedes_handoff_id: "handoff-0728"
+status: "ready_for_next_bounded_packet"
+authority: "control"
+summary: "RT-20260708-036 completed v18 P9-T05 by red-teaming public reader-facing status surfaces for overclaim, underclaim, cognitive overload, and generated-surface authority confusion. Result pass with advisory linter warnings justified as nonblocking and no physics promotion."
+completion:
+  task_id: "RT-20260708-036"
+  job_id: "AJ-RT-20260708-036-001"
+  completion_id: "AJC-AJ-RT-20260708-036-001"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T05"
+  task_type: "public_cognitive_load_red_team_review"
+  closure_status: "v18_p9_t05_public_cognitive_load_red_team_pass_no_physics_delta"
+  validation_status: "PENDING"
+  completed_v18_tasks_this_packet:
+    - "P9-T05"
+  phase_p9_completed: true
+  output_paths:
+    - "research_control/tasks/RT-20260708-036/artifacts/public_cognitive_load_red_team_review_v1.md"
+    - "research_control/tasks/RT-20260708-036/artifacts/public_cognitive_load_red_team_receipt.md"
+    - "research_control/tasks/RT-20260708-036/artifacts/p9_t05_public_cognitive_load_red_team_report.json"
+review_result:
+  status: "pass"
+  repair_required: false
+  fail_closed: false
+  advisory_linter_warning_count: 11
+  linter_hard_fail_count: 0
+  warning_disposition: "justified_nonblocking"
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  ledger_row_updated: false
+physics_progress_status: "reader_surface_red_team_no_physics_delta"
+new_mathematical_payload: []
+mathematical_payload_manifest: []
+claim_boundary_summary: "Public cognitive-load review pass does not create proof authority source authority Distance-to-GR ledger override public physics truth ranking generated-output authority source-law adoption detector-semantics adoption coupling-law adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict future source-extension impossibility program-wide no-go conclusion or completed-derivation claim."
+project_improvement_signals: []
+selected_next_route:
+  route_id: "external_review_question_selector_v18"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P10"
+  plan_task_id: "P10-T01"
+  task_name: "External-review question selector"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  task_type: "external_review_question_selector_v18"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Select one focused external-review question from v18 theorem/countermodel results."
+  requires_human_gate: false
+  expected_agent_job_scope: "One bounded P10-T01 packet selecting exactly one focused external-review question with no external outreach."
+next_action: "Run one bounded v18 P10-T01 external-review question selector packet."
+next_recommended_action: "Run one bounded v18 P10-T01 external-review question selector packet."
+active_state_bifurcation:
+  latest_research_completion: "RT-20260708-036"
+  latest_research_task_id: "RT-20260708-036"
+  latest_research_handoff_id: "handoff-0729"
+  latest_research_next_action: "Run one bounded v18 P10-T01 external-review question selector packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+operator_notes:
+  continue_research_boundary: "director_decision_required"
+  one_bounded_agentjob_limit: true

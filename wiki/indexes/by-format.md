@@ -346,6 +346,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-029-PAYLOAD-RATIO-VALIDATOR-PILOT-REPORT-V1` `research_control/tasks/RT-20260708-029/artifacts/payload_ratio_validator_pilot_report_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-030-PAYLOAD-RATIO-DASHBOARD-INTEGRATION-REPORT-V1` `research_control/tasks/RT-20260708-030/artifacts/payload_ratio_dashboard_integration_report_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-031-PAYLOAD-RATIO-RED-TEAM-REVIEW` `research_control/tasks/RT-20260708-031/artifacts/payload_ratio_red_team_review_v1.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-036-PARENT-FUSION-NOTES-PUBLIC-COGNITIVE-LOAD-REVIEW` `research_control/tasks/RT-20260708-036/artifacts/parent_fusion_notes_public_cognitive_load_review.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-036-PUBLIC-COGNITIVE-LOAD-RED-TEAM-RECEIPT` `research_control/tasks/RT-20260708-036/artifacts/public_cognitive_load_red_team_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-036-PUBLIC-COGNITIVE-LOAD-RED-TEAM-REVIEW` `research_control/tasks/RT-20260708-036/artifacts/public_cognitive_load_red_team_review_v1.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -1133,6 +1136,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-029-PAYLOAD-RATIO-VALIDATOR-PILOT-REPORT-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-029-payload-ratio-validator-pilot-report-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-030-PAYLOAD-RATIO-DASHBOARD-INTEGRATION-REPORT-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-030-payload-ratio-dashboard-integration-report-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-031-PAYLOAD-RATIO-RED-TEAM-REVIEW` `wiki/markdown/md-research-control-tasks-rt-20260708-031-payload-ratio-red-team-review.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-036-PARENT-FUSION-NOTES-PUBLIC-COGNITIVE-LOAD-REVIEW` `wiki/markdown/md-research-control-tasks-rt-20260708-036-parent-fusion-notes-public-cognitive-load-review.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-036-PUBLIC-COGNITIVE-LOAD-RED-TEAM-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-036-public-cognitive-load-red-team-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-036-PUBLIC-COGNITIVE-LOAD-RED-TEAM-REVIEW` `wiki/markdown/md-research-control-tasks-rt-20260708-036-public-cognitive-load-red-team-review.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
