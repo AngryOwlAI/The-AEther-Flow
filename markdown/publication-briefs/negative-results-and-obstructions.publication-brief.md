@@ -33,6 +33,7 @@ acceptance_criteria:
   - "States that scoped obstructions are not program-wide rejection claims."
   - "States that frozen local routes do not prove future source-extension impossibility."
   - "States that exact source artifacts remain authority."
+  - "Uses status-card v2 order for public negative-result summaries: scoped status, exact route scope, blocked overread, and next burden."
   - "Uses the v15 negative-result inventory as the primary source basis."
   - "Does not imply publication action from the brief itself."
 forbidden_patterns:
@@ -45,6 +46,14 @@ migration_status: "deferred"
 ---
 
 # Publication Brief: Negative Results And Obstructions
+
+## P9-T03 Status-Card V2 Calibration Note
+
+P9-T03 body guidance references `research_control/design/status_card_v2_schema.md`
+and `research_control/design/accepted_status_calibration_v2.yaml` as
+wording-calibration context. They are not added to `source_basis` until a
+bounded HTML regeneration and publication-registry synchronization packet
+updates every generated surface.
 
 This deferred publication brief prepares a future public-safe explainer about
 negative results. It does not publish that explainer. Its immediate function is

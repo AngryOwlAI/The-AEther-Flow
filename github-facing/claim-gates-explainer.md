@@ -94,33 +94,17 @@ are the public documentation contracts for status wording and category
 separation. They do not create a Gate Chair verdict and they cannot override
 the ledger, registered science sources, or claim-boundary rows.
 
-Current public wording must preserve these gate distinctions:
+Current public wording must preserve these gate distinctions in status-card v2
+order:
 
-- GR is not derived from source substrate.
-- AEther-flow is a proposed research ontology / explanatory frame, not an
-  established physical ontology.
-- `M_src` has positive status as a scoped source-only object. Its exact scope
-  is source-side structure review; its allowed use is burden tracking and
-  bridge-audit support, and its blocked overread is target manifold, metric,
-  matter-coupling result, Einstein-equation result, benchmark promotion, or
-  completed derivation.
-- `g_eff` has positive status as a scoped source-extension object. Its exact
-  scope is the declared source-extension context; its allowed use is bounded
-  source-extension review, and its blocked overread is unscoped Lorentzian
-  metric, matter-coupling result, Einstein-equation result, benchmark
-  promotion, or completed derivation.
-- Matter-sector material has positive status as scoped evidence/preconditions
-  only. Its exact scope is current matter-sector support; its allowed use is
-  constructing, auditing, and stress-testing source-side coupling-law
-  candidates, and its blocked overread is matter semantics, detector
-  semantics, coupling-law adoption, matter coupling, stress-energy semantics,
-  matter action, Einstein equations, benchmark promotion, or completed
-  derivation.
-- `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped
-  certificate-indexed evidence/precondition, not an adopted source law.
-- No-target certificates do not provide positive matter theory, detector
-  semantics, stress-energy semantics, matter action, Einstein equations,
-  benchmark promotion, or completed derivation.
+| Target | Positive status | Exact scope | Blocked overread | Next burden |
+| --- | --- | --- | --- | --- |
+| GR derivation | Open source-to-GR recovery burden. | No first-principles derivation from the source substrate is established. | No completed derivation, Einstein-equation result, or benchmark promotion follows from public documentation. | Discharge metric, matter-coupling, field-equation, and benchmark-review burdens through tracked sources. |
+| AEther-flow ontology | Proposed research ontology / explanatory frame. | Ontology vocabulary and interpretation lane only. | Not an established physical ontology. | Supply source-side mathematics and protected gates before stronger ontology or derivation claims. |
+| `M_src` | Scoped source-only object. | Source-side prerequisite context under declared fail-closed scope. | Not a target manifold, metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | Use only as source-side prerequisite context while deriving later bridges without target import. |
+| `g_eff` | Scoped source-extension object. | Declared source-extension context only. | Not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | Show any later use without adopting `MetricData(E)`, an unscoped metric, matter coupling, or field equations. |
+| Matter sector | Scoped evidence/preconditions only. | Certificate-indexed, finite/local support for source-side coupling-law candidate work. | No matter semantics, detector semantics, coupling-law adoption, matter coupling, stress-energy semantics, matter action, Einstein equations, benchmark promotion, or completed derivation follows. | Construct, audit, or stress one source-side coupling-law candidate before any matter-coupling derivation or adoption claim. |
+| `RR_ETransportCompletenessOrInvarianceLaw_v1` | Certificate-indexed evidence/precondition only. | Scoped source-side support for later candidate work. | Not an adopted source law and not a positive matter theory. | Supply explicit source-law adoption authority before using it as law. |
 
 ## Gate Chair And Human-Gated Decisions
 
@@ -156,6 +140,8 @@ The safe answer is usually narrower than the tempting summary.
 - AEther-Flow Project. (2026). `research_control/design/gr_derivation_burden_map.md` [GR derivation burden map].
 - AEther-Flow Project. (2026). `research_control/design/public_status_exists_does_not_exist_source_spec.md` [Simplified public exists / does-not-exist status table source spec].
 - AEther-Flow Project. (2026). `research_control/design/epistemic_category_glossary.md` [Epistemic category glossary].
+- AEther-Flow Project. (2026). `research_control/design/status_card_v2_schema.md` [Status-card v2 schema].
+- AEther-Flow Project. (2026). `research_control/design/accepted_status_calibration_v2.yaml` [Status-card v2 calibration data].
 - AEther-Flow Project. (2026). `registries/CLAIM_BOUNDARY_REGISTRY.csv` [Claim boundary registry].
 - AEther-Flow Project. (2026). `registries/AGENT_ROLE_REGISTRY.csv` [Agent role registry].
 

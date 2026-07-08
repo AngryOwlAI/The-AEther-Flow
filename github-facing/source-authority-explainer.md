@@ -39,6 +39,20 @@ answer is that the page cannot establish it.
 | Memory lookup or freshness | Registry rows and the project-memory skill contract. | Finding likely paths and stale retrieval warnings. |
 | File inventory or local search | Source registry rows and tracked files. | Search acceleration, never final authority. |
 
+## Status-Card V2 Authority Boundary
+
+Status-card v2 reduces cognitive load; it does not create a new authority
+layer. A public status card must still trace back to registered control
+sources, the Distance-to-GR ledger, and row-specific evidence before it is
+cited.
+
+| Status-card field | Public use | Authority boundary |
+| --- | --- | --- |
+| Positive status | States the scoped status first so real progress is not hidden. | Cannot promote ontology, metric status, matter coupling, field equations, benchmark status, or completed derivation. |
+| Exact scope | Names the source-side, finite/local, or blocked-target scope. | Cannot broaden the row beyond its registered source and ledger evidence. |
+| Blocked overread | Names what the row does not establish. | Cannot turn scoped obstruction into global no-go or future impossibility. |
+| Next burden | Names the next honest burden before stronger claims. | Cannot route work or issue a Gate Chair verdict without tracked control authority. |
+
 ## Source-First Checklist
 
 1. Name the question: physics claim, workflow state, role authority,
@@ -97,6 +111,11 @@ authority.
   [Registered Markdown source, source spec, role, skill, and derivative rows.]
 - AEther-Flow Project. (2026). `registries/HTML_EXPLAINER_REGISTRY.csv`
   [Generated HTML rows bound to source specs and source-basis hashes.]
+- AEther-Flow Project. (2026). `research_control/design/status_card_v2_schema.md`
+  [Status-card v2 schema.]
+- AEther-Flow Project. (2026).
+  `research_control/design/accepted_status_calibration_v2.yaml`
+  [Status-card v2 calibration data.]
 - AEther-Flow Project. (2026). `registries/WIKI_ARTIFACT_REGISTRY.csv`
   [Generated wiki-note rows and source-object hash bindings.]
 - AEther-Flow Project. (2026). `registries/FILE_OBJECT_REGISTRY.csv`

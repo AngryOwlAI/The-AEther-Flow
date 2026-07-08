@@ -18,17 +18,17 @@ when this roadmap mentions high-risk rows. These are documentation contracts,
 not independent physics authority, and they remain downstream of the
 Distance-to-GR ledger and the cited task evidence.
 
-The key public-safe updates are: GR is not derived; AEther-flow is a proposed
-research ontology / explanatory frame and not an established physical
-ontology; `M_src` has positive status as a scoped source-only object for
-source-side bridge review, not as a target manifold or metric; `g_eff` has
-positive status as a scoped source-extension object for bounded
-source-extension review, not as an unscoped Lorentzian metric; matter-sector
-material has positive status as scoped evidence/preconditions only for
-source-side coupling-law candidate review, while matter coupling remains not
-derived and not adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1` is
-scoped certificate-indexed evidence/precondition, not an adopted source law;
-and no-target certificates do not provide positive matter theory.
+Status-card v2 public reading:
+
+| Burden | Positive status | Exact scope | Blocked overread | Next burden |
+| --- | --- | --- | --- | --- |
+| AEther-flow ontology | Proposed research ontology / explanatory frame. | Ontology vocabulary and interpretation lane only. | Not an established physical ontology or completed GR foundation. | Supply source-side mathematics and protected gates before stronger ontology or derivation claims. |
+| GR derivation | Open source-to-GR recovery burden. | No first-principles source-to-GR bridge is established in the tracked state. | No completed derivation, Einstein-equation result, or benchmark promotion follows from this roadmap. | Discharge metric, matter-coupling, field-equation, and benchmark-review burdens through tracked sources. |
+| `M_src` | Scoped source-only object. | Source-side prerequisite context under declared fail-closed scope. | Not a target manifold, metric, matter-coupling result, benchmark promotion, or completed derivation. | Use only as source-side prerequisite context while deriving later bridges without target import. |
+| `g_eff` | Scoped source-extension object. | Declared source-extension context only. | Not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | Show any later use without adopting `MetricData(E)`, an unscoped metric, matter coupling, or field equations. |
+| Matter sector | Scoped evidence/preconditions only. | Certificate-indexed, finite/local support for source-side coupling-law candidate work. | No source-law adoption, detector semantics, coupling-law adoption, matter coupling, stress-energy semantics, matter action, Einstein equations, benchmark promotion, or completed derivation follows. | Construct, audit, or stress one source-side coupling-law candidate before any matter-coupling derivation or adoption claim. |
+| Einstein equations | Not started; no positive derivation status. | No dynamics/action/variation theorem or matter-coupling derivation is supplied. | No Einstein equations, benchmark promotion, or completed derivation follows. | Derive lawful dynamics/action/variation and matter coupling under protected gates before any field-equation claim. |
+| Benchmark promotion | Blocked downstream target. | No benchmark closure, fit claim, Gate Chair verdict, or completed derivation has been established. | No exact-GR benchmark promotion follows from scoped evidence/preconditions. | Complete upstream derivation burdens and protected Gate Chair benchmark review before any promotion claim. |
 
 ## Milestone Ladder
 
@@ -170,6 +170,8 @@ and human gates where the control system says a gate is required.
 - AEther-Flow Project. (2026). `research_control/README.md` [Research-control guide].
 - AEther-Flow Project. (2026). `research_control/design/public_status_exists_does_not_exist_source_spec.md` [Simplified public exists / does-not-exist status table source spec].
 - AEther-Flow Project. (2026). `research_control/design/epistemic_category_glossary.md` [Epistemic category glossary].
+- AEther-Flow Project. (2026). `research_control/design/status_card_v2_schema.md` [Status-card v2 schema].
+- AEther-Flow Project. (2026). `research_control/design/accepted_status_calibration_v2.yaml` [Status-card v2 calibration data].
 - AEther-Flow Project. (2026). `AGENTS.md` [Repository authority hierarchy].
 
 ## Reader Scope

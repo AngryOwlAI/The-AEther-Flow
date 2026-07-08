@@ -58,6 +58,10 @@ publication action by themselves.
 - `research_control/design/epistemic_category_glossary.md` supplies the
   category distinctions among interpretation, model, evidence, adoption,
   validation receipt, publication surface, and authority source.
+- `research_control/design/status_card_v2_schema.md` and
+  `research_control/design/accepted_status_calibration_v2.yaml` supply the
+  public order for positive status, exact scope, blocked overread, and next
+  burden when negative-result pages mention high-risk burdens.
 - `AGENTS.md` defines the authority hierarchy and the rule that generated
   reader surfaces remain derivative.
 
@@ -139,6 +143,8 @@ artifacts.
 - Summarizes current frozen, obstructed, failed, or counterexample-bearing
   routes from `research_control/design/negative_result_inventory_v15.md`.
 - States what remains open after each negative result.
+- Uses status-card v2 order for public negative-result summaries: scoped
+  status, exact route scope, blocked overread, and next burden.
 - States that exact source artifacts and registries remain authority.
 - Names source paths visibly in any generated GitHub Markdown and HTML.
 - Uses the bottom Reader Scope hook immediately above the marked authority

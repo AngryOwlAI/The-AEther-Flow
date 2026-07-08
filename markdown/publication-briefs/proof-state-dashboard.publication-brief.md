@@ -8,7 +8,7 @@ reading_experience: "A concise dashboard brief centered on one annotated status 
 narrative_structure:
   - "Open by stating that the dashboard is a reader-facing derivative and that GR has not been derived."
   - "Render the required rows: Resp_lc, M_src, g_eff, matter_coupling, Einstein equations, benchmark promotion, and finite toy metric response."
-  - "Use the required columns: Object, Positive status, Exact scope, Allowed use, Blocked overread, and Next lawful route."
+  - "Use the required columns: Object, Positive status, Exact scope, Allowed use, Blocked overread, Next burden, and Next lawful route."
   - "Close by naming the authority hierarchy and the claims the dashboard cannot establish."
 visual_strategy: "annotated_table"
 source_basis:
@@ -30,6 +30,7 @@ output_surfaces:
   - "html/proof-state-dashboard-explainer.html"
 acceptance_criteria:
   - "Includes every required dashboard row and required dashboard column from v17 P9-T01."
+  - "Includes the status-card v2 next-burden field for high-risk public rows."
   - "Uses positive-first scoped status for Resp_lc, M_src, g_eff, and matter_coupling."
   - "States that Einstein equations are not started, benchmark promotion remains blocked, and finite toy metric response is a frozen local route rather than global rejection."
   - "Names the source basis for each row or for the table as a whole."
@@ -45,13 +46,20 @@ migration_status: "publication_pilot"
 
 # Publication Brief: Proof-State Dashboard
 
+## P9-T03 Status-Card V2 Calibration Note
+
+P9-T03 body guidance references `research_control/design/status_card_v2_schema.md`
+and `research_control/design/accepted_status_calibration_v2.yaml` as
+wording-calibration context. They are not added to `source_basis` until a
+bounded HTML regeneration and publication-registry synchronization packet
+updates every generated surface.
+
 The page is a compact proof-state dashboard for readers who need the present
 research status without reading the full control registry stack. Its purpose is
 not to simplify the claim boundary away. Its purpose is to keep positive status,
-exact scope, allowed use, blocked overread, and next route visible at the same
-time.
+exact scope, allowed use, blocked overread, next burden, and next route visible
+at the same time.
 
-P9-T02 renders the GitHub Markdown and standalone HTML surfaces as a
-publication pilot. The surfaces remain generated noncanonical reader outputs;
-they do not change proof authority, source authority, the Distance-to-GR
-ledger, or physics claim status.
+P9-T03 updates public Markdown wording to status-card v2. The surfaces remain
+generated noncanonical reader outputs; they do not change proof authority,
+source authority, the Distance-to-GR ledger, or physics claim status.

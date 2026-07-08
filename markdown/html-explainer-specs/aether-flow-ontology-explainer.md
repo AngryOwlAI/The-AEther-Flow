@@ -51,6 +51,11 @@ derivation note.
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv` records active claim boundaries
   against ontology promotion, benchmark promotion, completed-derivation
   claims, and generated-output authority.
+- `research_control/design/status_card_v2_schema.md` and
+  `research_control/design/accepted_status_calibration_v2.yaml` define the
+  concise public order for status summaries that mention downstream burdens
+  such as `M_src`, `g_eff`, matter coupling, Einstein equations, and benchmark
+  promotion.
 - `AGENTS.md` defines the repository-wide source authority hierarchy and
   generated-output boundaries.
 
@@ -94,6 +99,8 @@ panel. Do not use a generic workflow diagram or browser-side Mermaid.
   TeX source states a stronger claim.
 - Distinguishes live `ontology/` from archival `legacy_ontology/`.
 - Names the missing observer normal/readout source construction as open work.
+- States ontology status in status-card v2 order: positive vocabulary status,
+  exact ontology-lane scope, blocked overread, and next mathematical burden.
 - Avoids older three-dimensional aether, wind, river, or ordinary fluid
   overreadings.
 - Names source paths visibly in GitHub Markdown and HTML.

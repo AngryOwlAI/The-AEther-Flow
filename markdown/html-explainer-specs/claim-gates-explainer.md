@@ -55,6 +55,10 @@ ontology.
 - `research_control/design/epistemic_category_glossary.md` supplies the public
   category distinctions that keep interpretation, model, evidence, adoption,
   validator receipt, publication surface, and authority source separate.
+- `research_control/design/status_card_v2_schema.md` and
+  `research_control/design/accepted_status_calibration_v2.yaml` supply the
+  compact public card order for positive status, exact scope, blocked
+  overread, and next burden.
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv` supplies active examples of
   allowed claims, forbidden claims, required gates, and authority source
   paths.
@@ -107,8 +111,8 @@ source-to-validation diagram or browser-side Mermaid.
   and `research_control/design/epistemic_category_glossary.md`, including why
   AEther-flow is proposed research ontology / explanatory frame only and why
   scoped `M_src`, scoped `g_eff`, and scoped matter-sector
-  evidence/preconditions have positive scoped status without becoming
-  source-law, matter-coupling, Einstein-equation, benchmark, or
+  evidence/preconditions must be rendered in status-card v2 order without
+  becoming source-law, matter-coupling, Einstein-equation, benchmark, or
   completed-derivation claims.
 - Names source paths visibly in GitHub Markdown and HTML.
 - Uses the bottom Reader Scope hook immediately above the marked authority

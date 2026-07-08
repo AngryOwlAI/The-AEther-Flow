@@ -61,6 +61,10 @@ placement without changing project behavior or physics claim status.
   distinctions separating interpretation, model, benchmark compatibility,
   derivation, evidence/precondition, adoption, promotion, validator receipt,
   publication surface, and authority source.
+- `research_control/design/status_card_v2_schema.md` and
+  `research_control/design/accepted_status_calibration_v2.yaml`: compact
+  public status-card order for positive status, exact scope, blocked overread,
+  next burden, and non-promotional summaries.
 - `markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md`:
   source-backed dashboard specification for compact reader-facing proof-state
   orientation across positive scoped status, blocked overread, and next lawful
@@ -116,8 +120,8 @@ Mermaid, remote assets, or external runtime packages.
 - Links or cites the P14-T01 simplified public table and P14-T02 glossary when
   summarizing current public status, and uses positive-first status-card
   wording for scoped `M_src`, scoped `g_eff`, and matter-sector
-  evidence/preconditions: positive status, exact scope, allowed use, then
-  blocked overread.
+  evidence/preconditions: positive status, exact scope, blocked overread, and
+  next burden.
 - Links the proof-state dashboard as a reader-facing noncanonical derivative
   and preserves that it does not alter claim status or source authority.
 - Preserves generated noncanonical status and source authority boundaries.

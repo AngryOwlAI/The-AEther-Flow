@@ -29,6 +29,7 @@ acceptance_criteria:
   - "Opens with the trust problem, not metadata."
   - "Uses a page-specific authority matrix rather than a generic system map."
   - "Names concrete source surfaces and generated surfaces."
+  - "Explains that status-card v2 is a rendering contract that must trace back to registered sources and the Distance-to-GR ledger."
   - "HTML is standalone, accessible, mobile-safe, and screenshot verified."
 forbidden_patterns:
   - "Old universal heading sequence."
@@ -38,6 +39,14 @@ migration_status: "reviewed"
 ---
 
 # Publication Brief: Source Authority And Generated Derivatives
+
+## P9-T03 Status-Card V2 Calibration Note
+
+P9-T03 body guidance references `research_control/design/status_card_v2_schema.md`
+and `research_control/design/accepted_status_calibration_v2.yaml` as
+wording-calibration context. They are not added to `source_basis` until a
+bounded HTML regeneration and publication-registry synchronization packet
+updates every generated surface.
 
 The Source Authority pilot should act as a trust boundary map. It should make
 generated surfaces easier to use while making them harder to overclaim.

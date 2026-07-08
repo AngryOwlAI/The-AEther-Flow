@@ -1,0 +1,207 @@
+completion_id: "AJC-AJ-RT-20260708-034-001"
+job_id: "AJ-RT-20260708-034-001"
+task_id: "RT-20260708-034"
+decision_id: "DDR-20260708-034"
+source_role_id: "documentation-curator"
+completed_at: "2026-07-08T19:57:05Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  related_plan_task_id: "P9-T03"
+  plan_phase_id: "P9"
+  implemented_task_scope: "Calibrated public Markdown docs source specs and publication briefs to status-card v2 order with next burden."
+  recommendation_ids:
+    - "V18-R09"
+  completed_v18_tasks_this_packet:
+    - "P9-T03"
+  phase_p9_completed: false
+  downstream_tasks_not_implemented:
+    - "P9-T04 claim-language linter status-card v2 tests"
+    - "P9-T05 reader-comprehension red-team"
+    - "P9 and later v18 tasks"
+  all_applicable_plan_tasks_proven: false
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+output_paths:
+  - "README.md"
+  - "github-facing/project-overview-explainer.md"
+  - "github-facing/proof-state-dashboard-explainer.md"
+  - "github-facing/source-authority-explainer.md"
+  - "github-facing/aether-flow-physics-program-explainer.md"
+  - "github-facing/aether-flow-ontology-explainer.md"
+  - "github-facing/gr-derivation-roadmap-explainer.md"
+  - "github-facing/claim-gates-explainer.md"
+  - "github-facing/negative-results-and-obstructions-explainer.md"
+  - "markdown/html-explainer-specs/project-overview-explainer.md"
+  - "markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md"
+  - "markdown/html-explainer-specs/source-authority-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-physics-program-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-ontology-explainer.md"
+  - "markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md"
+  - "markdown/html-explainer-specs/claim-gates-explainer.md"
+  - "markdown/html-explainer-specs/negative-results-and-obstructions-explainer.md"
+  - "markdown/publication-briefs/project-overview.publication-brief.md"
+  - "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"
+  - "markdown/publication-briefs/source-authority.publication-brief.md"
+  - "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md"
+  - "markdown/publication-briefs/aether-flow-ontology.publication-brief.md"
+  - "markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md"
+  - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  - "markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md"
+  - "html/project-overview-explainer.html"
+  - "html/proof-state-dashboard-explainer.html"
+  - "html/source-authority-explainer.html"
+  - "html/aether-flow-physics-program-explainer.html"
+  - "html/aether-flow-ontology-explainer.html"
+  - "html/gr-derivation-roadmap-explainer.html"
+  - "html/claim-gates-explainer.html"
+  - "html/negative-results-and-obstructions-explainer.html"
+  - "research_control/tasks/RT-20260708-034/artifacts/validate_p9_t03_public_docs_status_cards.py"
+  - "research_control/tasks/RT-20260708-034/artifacts/p9_t03_public_docs_status_cards_report.json"
+  - "research_control/tasks/RT-20260708-034/artifacts/public_documentation_cognitive_load_calibration_receipt.md"
+  - "scripts/research_control/validate_research_control.py"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=PASS refresh_performed=true source_object_count=778 relationship_row_count=3897 semantic_row_count=778 vault_row_count=778"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-033 latest_handoff=handoff-0726 boundary=director_decision_required next_action=P9-T03"
+  - ".venv/bin/python research_control/tasks/RT-20260708-034/artifacts/validate_p9_t03_public_docs_status_cards.py --write-report --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/validate_publication_process.py --root . | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python -m py_compile scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 778
+    relationship_row_count: 3897
+    semantic_row_count: 778
+    vault_row_count: 778
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"status card v2 public summary next burden\" --limit 10 --json"
+      query_type: "search"
+      query_text: "status card v2 public summary next burden"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/status_card_v2_schema.md"
+      source_hash: "7485249b4b824290b7160e243349a1486f29d437a0d7bd99301fa3f26f791cda"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "c24d3d172f00ee45df139ad4af7d44ac49f06ccc3f80e2428db37bf57faf1056"
+validation_status: "PENDING"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS"
+      - "continue_research.py resolved handoff-0726 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "public docs contain Positive status Exact scope Blocked overread and Next burden"
+      - "paired source specs and publication briefs cite status-card v2 sources"
+      - "generated HTML prose and layout were not regenerated"
+      - "affected generated HTML source-basis hash metadata was synchronized for validation parity"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "task-local public-doc status-card v2 validator passed"
+      - "publication-process validation passed"
+      - "documentation-impact validation passed"
+      - "mutable public-doc memory-preflight allowlist compiles"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command is run after this receipt is written"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier and compact frontier were rendered from tracked state"
+      - "generated HTML source-basis hash metadata was synchronized without prose or layout regeneration"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py passed"
+      - "bootstrap_memory_system.py --validate-only passed"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed passed with zero hard failures"
+authorization_layers:
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  ledger_row_updated: false
+new_mathematical_payload: []
+mathematical_payload_manifest: []
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R09"
+  implements_plan_task_id: "P9-T03"
+  implementation_status: "completed"
+  coverage_effect: "direct_public_documentation_calibration_no_physics_promotion"
+claim_boundary:
+  allowed_claims:
+    - "v18 P9-T03 public documentation cognitive-load calibration completed"
+    - "selected public docs use status-card v2 field order"
+    - "paired source specs and publication briefs cite v2 sources"
+    - "affected generated HTML source-basis hash metadata was synchronized"
+    - "next route is P9-T04"
+  forbidden_claims:
+    - "documentation as proof authority"
+    - "status-card summary as physics truth ranking"
+    - "public docs as Distance-to-GR ledger override"
+    - "source-law adoption"
+    - "detector-semantics adoption"
+    - "matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+project_improvement_signals: []
+selected_next_route:
+  route_id: "status_card_v2_linter_tests"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P9"
+  plan_task_id: "P9-T04"
+  task_name: "Status-card v2 linter tests"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "status_card_v2_linter_tests"
+  target_derivation_milestone: "none"
+  milestone_burden: "Add linter tests for missing next-burden fields and caveat-wall public summaries."
+  requires_human_gate: false
+next_recommended_action: "Run one bounded v18 P9-T04 status-card v2 linter tests packet."
+execution_role_ref: "documentation-curator@2.0.0--RT-20260708-034"

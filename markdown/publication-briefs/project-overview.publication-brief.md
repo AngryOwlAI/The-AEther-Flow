@@ -31,7 +31,7 @@ acceptance_criteria:
   - "Does not use the old universal heading sequence."
   - "Contains visible source grounding and a non-authority boundary."
   - "Links the proof-state dashboard as a compact reader-facing derivative without changing claim status."
-  - "Summarizes high-risk public status with positive-first status-card wording for scoped M_src, scoped g_eff, and scoped matter-sector evidence/preconditions."
+  - "Summarizes high-risk public status with status-card v2 wording: positive status, exact scope, blocked overread, and next burden."
   - "HTML is standalone, readable on mobile, and screenshot verified."
 forbidden_patterns:
   - "What This Does / Why AEther Needs It / System Map as the page skeleton."
@@ -41,6 +41,14 @@ migration_status: "reviewed"
 ---
 
 # Publication Brief: Project Overview
+
+## P9-T03 Status-Card V2 Calibration Note
+
+P9-T03 body guidance references `research_control/design/status_card_v2_schema.md`
+and `research_control/design/accepted_status_calibration_v2.yaml` as
+wording-calibration context. They are not added to `source_basis` until a
+bounded HTML regeneration and publication-registry synchronization packet
+updates every generated surface.
 
 The Project Overview pilot should behave like the front-door article a careful
 new reader would choose to keep. It must help the reader decide what to inspect

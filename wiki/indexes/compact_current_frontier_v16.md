@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-033`
-- Latest handoff: `handoff-0726`
-- Current status: `v18_p9_t02_status_card_v2_frontier_renderer_completed_no_physics_delta`
+- Active task: `RT-20260708-034`
+- Latest handoff: `handoff-0727`
+- Current status: `v18_p9_t03_public_documentation_status_card_v2_calibration_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-033`
-- Latest research handoff: `handoff-0726`
-- Latest research next action: Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet.
+- Latest research task: `RT-20260708-034`
+- Latest research handoff: `handoff-0727`
+- Latest research next action: Run one bounded v18 P9-T04 status-card v2 linter tests packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `public_documentation_cognitive_load_calibration`
-- Role family: `documentation-curator@2.0.0`
+- Route ID: `status_card_v2_linter_tests`
+- Role family: `validator-engineer@0.2.0`
 - Target milestone: `none`
-- Milestone burden: Update public-facing pages to use concise status-card v2 summaries without changing claim status.
+- Milestone burden: Add linter tests for missing next-burden fields and caveat-wall public summaries.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `97298e1eb52c321c49bdc35810eaec3661493212a54ea46799080db92f9941fc`
-- JSON SHA-256: `2c156d76ae9064218bd7595d644ec526ed4f28a78ce860e8c7a23fd9c5678919`
+- YAML SHA-256: `5f9d2e8625212a9601cc1c6b32b494bfd73f62fe5970c5792b86abb115e9accf`
+- JSON SHA-256: `8be774d16f8f698cf426d6f179d3d9df117ec8463ae607cffb7a4dd3a5f9f23b`
 
 ## Authority Warning
 

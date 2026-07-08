@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-033` and `handoff-0726`.
+`RT-20260708-034` and `handoff-0727`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-033` |
-| Latest handoff ID | `handoff-0726` |
-| Current status | `v18_p9_t02_status_card_v2_frontier_renderer_completed_no_physics_delta` |
+| Active task ID | `RT-20260708-034` |
+| Latest handoff ID | `handoff-0727` |
+| Current status | `v18_p9_t03_public_documentation_status_card_v2_calibration_completed_no_physics_delta` |
 | V16 completed | false |
-| Current route family | status_card_v2_frontier_renderer |
+| Current route family | public_documentation_cognitive_load_calibration |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet. |
-| Required next authority | Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet. |
-| Next recommended action | Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P9-T04 status-card v2 linter tests packet. |
+| Required next authority | Run one bounded v18 P9-T04 status-card v2 linter tests packet. |
+| Next recommended action | Run one bounded v18 P9-T04 status-card v2 linter tests packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-033` |
-| Latest research handoff ID | `handoff-0726` |
-| Latest research next action | Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet. |
+| Latest research task ID | `RT-20260708-034` |
+| Latest research handoff ID | `handoff-0727` |
+| Latest research next action | Run one bounded v18 P9-T04 status-card v2 linter tests packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-033/00_TASK.yaml`.
-- Active task objective: Integrate status-card v2 rendering into current-frontier and compact-frontier renderers while preserving concise public blocked lists and full control non-conclusions in control outputs.
-- Latest handoff path: `research_control/handoffs/handoff-0726.yaml`.
-- Latest handoff summary: RT-20260708-033 completed v18 P9-T02 by integrating status-card v2 into current-frontier and compact-frontier renderers with next_burden rendering and retained full_control_non_conclusions no physics promotion.
-- Current route family: status_card_v2_frontier_renderer.
-- Next recommended action: Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet.
+- Active task path: `research_control/tasks/RT-20260708-034/00_TASK.yaml`.
+- Active task objective: Update public-facing Markdown pages, paired source specs, and publication briefs to use concise status-card v2 summaries without changing claim status.
+- Latest handoff path: `research_control/handoffs/handoff-0727.yaml`.
+- Latest handoff summary: RT-20260708-034 completed v18 P9-T03 by calibrating public Markdown source specs and publication briefs to status-card v2 positive-status exact-scope blocked-overread next-burden order with no physics promotion.
+- Current route family: public_documentation_cognitive_load_calibration.
+- Next recommended action: Run one bounded v18 P9-T04 status-card v2 linter tests packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P9-T03 public documentation cognitive-load calibration packet.
+Run one bounded v18 P9-T04 status-card v2 linter tests packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-033`;
-- latest handoff: `handoff-0726`;
-- current status: `v18_p9_t02_status_card_v2_frontier_renderer_completed_no_physics_delta`;
+- active task: `RT-20260708-034`;
+- latest handoff: `handoff-0727`;
+- current status: `v18_p9_t03_public_documentation_status_card_v2_calibration_completed_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0726.yaml`
-- `research_control/tasks/RT-20260708-033/00_TASK.yaml`
+- `research_control/handoffs/handoff-0727.yaml`
+- `research_control/tasks/RT-20260708-034/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0726*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0727*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

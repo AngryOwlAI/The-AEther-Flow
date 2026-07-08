@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `html_explainer_source_spec`
 - Authority status: `canonical_markdown_source`
 - Owner skill: `html-visual-explainer`
-- Source hash: `3b6449da475f2900f16770ded26c1a1f5be850c0f1d08c92127aa3294c229169`
+- Source hash: `1c62d93a4990bca48f84bd18f4be98af3ba6e8cefc952179ebce1d803cff8fb6`
 
 ## Related Objects
 
@@ -21,4 +21,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-02T01:41:06Z`
+- Last validated at: `2026-07-08T20:09:45Z`

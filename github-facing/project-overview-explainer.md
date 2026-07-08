@@ -73,20 +73,15 @@ derive matter coupling, derive Einstein equations, promote benchmark status,
 issue a Gate Chair verdict, complete the derivation, or make generated public
 outputs authoritative.
 
-The public-safe status is: GR is not derived from the source substrate;
-AEther-flow is a proposed research ontology or explanatory frame, not an
-established physical ontology; `M_src` has positive status as a scoped
-source-only object for source-side bridge review, not as a target manifold or
-metric; `g_eff` has positive status as a scoped source-extension object for
-bounded source-extension review, not as an unscoped Lorentzian metric or
-matter-coupling result; matter-sector material has positive status as scoped
-evidence/preconditions only for constructing, auditing, and stress-testing
-source-side coupling-law candidates, while matter coupling remains not
-derived and not adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1` is
-scoped certificate-indexed evidence/precondition, not an adopted source law;
-and no-target certificates do not provide positive matter theory, detector
-semantics, stress-energy semantics, matter action, Einstein equations,
-benchmark promotion, or completed derivation.
+Status-card v2 public reading:
+
+| Target | Positive status | Exact scope | Blocked overread | Next burden |
+| --- | --- | --- | --- | --- |
+| AEther-flow ontology | Proposed research ontology / explanatory frame. | Ontology vocabulary and interpretation lane only. | Not an established physical ontology or completed GR foundation. | Supply source-side mathematics and protected gates before stronger ontology or derivation claims. |
+| GR derivation | Open burden. | First-principles source-to-GR recovery is not established. | No completed derivation, Einstein-equation result, or benchmark promotion follows from public pages. | Discharge metric, matter-coupling, field-equation, and benchmark-review burdens through tracked sources. |
+| `M_src` | Scoped source-only object. | Source-side prerequisite context under declared fail-closed scope. | Not a target manifold, metric, matter-coupling result, benchmark promotion, or completed derivation. | Use only as source-side prerequisite context while deriving later bridges without target import. |
+| `g_eff` | Scoped source-extension object. | Declared source-extension context only. | Not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | Show any later use without adopting `MetricData(E)`, an unscoped metric, matter coupling, or field equations. |
+| Matter sector | Scoped evidence/preconditions only. | Certificate-indexed, finite/local support for source-side coupling-law candidate work. | No source-law adoption, detector semantics, coupling-law adoption, matter coupling, stress-energy semantics, matter action, Einstein equations, benchmark promotion, or completed derivation follows. | Construct, audit, or stress one source-side coupling-law candidate before any matter-coupling derivation or adoption claim. |
 
 Compact reader check:
 
@@ -153,6 +148,12 @@ validator authority, write permissions, or generated-output authority.
   `research_control/design/epistemic_category_glossary.md`
   [Epistemic category glossary for interpretation, model, evidence, adoption,
   promotion, validator receipt, publication, and authority categories.]
+- AEther-Flow Project. (2026).
+  `research_control/design/status_card_v2_schema.md`
+  [Status-card v2 schema.]
+- AEther-Flow Project. (2026).
+  `research_control/design/accepted_status_calibration_v2.yaml`
+  [Status-card v2 calibration data.]
 - AEther-Flow Project. (2026).
   `markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md`
   [Proof-state dashboard source specification.]

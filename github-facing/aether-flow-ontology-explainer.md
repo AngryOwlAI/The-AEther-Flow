@@ -47,6 +47,13 @@ construction of an observer normal/readout orbit from local AEther response
 data, or an equivalent source-side bridge, before response factorization,
 same-metric matter, nonmetric mode control, or S-time closure can be promoted.
 
+## Current Status-Card Boundary
+
+| Target | Positive status | Exact scope | Blocked overread | Next burden |
+| --- | --- | --- | --- | --- |
+| AEther-flow ontology | Proposed research ontology and explanatory vocabulary. | Ontology lane only: it frames substrate, flow, observed space, S-time, and expansion language. | It is not an established physical ontology, source-law adoption, exact-GR recovery, or completed derivation. | Supply source-side mathematics and protected gates before stronger ontology or derivation claims. |
+| Mathematical bridge | Open derivation burden. | Observer normal/readout, metric behavior, matter coupling, and closure remain source-side construction targets. | Public ontology language does not supply detector semantics, matter coupling, Einstein equations, benchmark promotion, or Gate Chair authority. | Construct and audit the missing source-side bridge before promotion language. |
+
 ## Live And Legacy Sources
 
 `ontology/README.md` defines `ontology/` as the live mutable ontology lane.
@@ -79,6 +86,8 @@ Before summarizing ontology claims, inspect these sources:
 - AEther-Flow Project. (2026). `ontology/README.md` [Ontology folder authority boundary].
 - AEther-Flow Project. (2026). `registries/TEX_SOURCE_REGISTRY.csv` [Registered TeX source registry].
 - AEther-Flow Project. (2026). `registries/CLAIM_BOUNDARY_REGISTRY.csv` [Claim boundary registry].
+- AEther-Flow Project. (2026). `research_control/design/status_card_v2_schema.md` [Status-card v2 schema].
+- AEther-Flow Project. (2026). `research_control/design/accepted_status_calibration_v2.yaml` [Status-card v2 calibration data].
 - AEther-Flow Project. (2026). `AGENTS.md` [Repository authority hierarchy].
 
 ## Safe And Unsafe Summaries

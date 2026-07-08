@@ -122,34 +122,16 @@ derive matter coupling, derive Einstein equations, promote benchmark status,
 issue a Gate Chair verdict, complete the derivation, or make generated public
 outputs authoritative.
 
-Current public-safe reading:
+Status-card v2 public reading:
 
-- The `Æther` / `Æther-flow` ontology is a proposed research ontology and
-  explanatory frame; it is not an established physical ontology.
-- GR has not been derived from the source substrate in the tracked project
-  state.
-- `M_src` has positive status as a scoped source-only object. Its exact scope
-  is source-side structure review; its allowed use is burden tracking and
-  bridge-audit support, and its blocked overread is target manifold, metric,
-  matter-coupling result, Einstein-equation result, benchmark promotion, or
-  completed derivation.
-- `g_eff` has positive status as a scoped source-extension object. Its exact
-  scope is the declared source-extension context; its allowed use is bounded
-  source-extension review, and its blocked overread is unscoped Lorentzian
-  metric, matter-coupling result, Einstein-equation result, benchmark
-  promotion, or completed derivation.
-- Matter-sector material has positive status as scoped evidence/preconditions
-  only. Its exact scope includes current matter-sector objects such as
-  `PositiveMSProfile_v1` and
-  `RR_ETransportCompletenessOrInvarianceLaw_v1`; its allowed use is
-  constructing, auditing, and stress-testing source-side coupling-law
-  candidates, and its blocked overread is source-law adoption, detector
-  semantics, matter semantics, coupling-law adoption, matter coupling,
-  stress-energy semantics, matter action, Einstein equations, benchmark
-  promotion, or completed derivation.
-- No-target certificates or certificate-indexed evidence do not provide
-  positive matter theory, detector semantics, stress-energy semantics, matter
-  action, Einstein equations, benchmark promotion, or completed derivation.
+| Target | Positive status | Exact scope | Blocked overread | Next burden |
+| --- | --- | --- | --- | --- |
+| `Æther` / `Æther-flow` ontology | Proposed research ontology and explanatory frame. | Ontology vocabulary and interpretation lane only. | Not an established physical ontology and not a completed foundation for deriving GR. | Supply source-side mathematical laws or gates before stronger ontology or derivation claims. |
+| GR derivation | Open research burden. | No first-principles source-to-GR bridge is established in the tracked state. | No completed derivation, Einstein-equation result, or benchmark promotion follows from public documentation. | Derive metric behavior, matter coupling, field equations, and protected benchmark review through tracked source artifacts. |
+| `M_src` | Scoped source-only object. | Source-side prerequisite context under the declared fail-closed scope. | Not a target manifold, metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | Use only as source-side prerequisite context while deriving later metric or coupling bridges without target import. |
+| `g_eff` | Scoped source-extension object. | Declared source-extension context only. | Not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | Show any later use without adopting `MetricData(E)`, an unscoped metric, matter coupling, or field equations. |
+| Matter sector | Scoped source-side evidence/preconditions for continuation. | Certificate-indexed, finite/local support for source-side coupling-law candidate work. | No source-law adoption, detector semantics, coupling-law adoption, matter coupling, stress-energy semantics, matter action, Einstein equations, benchmark promotion, or completed derivation follows. | Construct, audit, or stress one source-side coupling-law candidate before any matter-coupling derivation or adoption claim. |
+| Einstein equations and benchmark promotion | Blocked downstream targets. | No field-equation derivation, benchmark closure, fit claim, Gate Chair verdict, or completed derivation has been established. | Public pages cannot supply dynamics, action, variation, matter coupling, benchmark promotion, or Gate Chair authority. | Establish upstream dynamics/action/variation, matter coupling, and protected Gate Chair review before promotion claims. |
 
 Compact public table:
 

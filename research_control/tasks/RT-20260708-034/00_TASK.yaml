@@ -1,0 +1,92 @@
+task_id: "RT-20260708-034"
+task_type: "public_documentation_cognitive_load_calibration"
+status: "completed"
+created_at: "2026-07-08T19:57:05Z"
+updated_at: "2026-07-08T19:57:05Z"
+closed_at: "2026-07-08T19:57:05Z"
+parent_task_id: "RT-20260708-033"
+parent_handoff_id: "handoff-0726"
+decision_id: "DDR-20260708-034"
+job_id: "AJ-RT-20260708-034-001"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260708-034"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This public-documentation packet does not consume Gate Chair authority or issue a protected verdict."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T03"
+  plan_task_name: "Public documentation cognitive-load calibration"
+  recommendation_ids:
+    - "V18-R09"
+objective: "Update public-facing Markdown pages, paired source specs, and publication briefs to use concise status-card v2 summaries without changing claim status."
+target_derivation_milestone: "none"
+milestone_burden: "Update public-facing pages to use concise status-card v2 summaries without changing claim status."
+closure_status: "v18_p9_t03_public_documentation_status_card_v2_calibration_completed_no_physics_delta"
+project_system_boundary_authorized_by_plan: true
+physics_progress_status: "documentation_update_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P9-T03 public documentation cognitive-load calibration only."
+  public_docs_status_card_v2_order_applied: true
+  source_specs_v2_binding_updated: true
+  publication_briefs_v2_binding_updated: true
+  generated_html_hand_edit_performed: false
+  generated_html_metadata_sync_performed: true
+  generated_html_content_regeneration_performed: false
+  generated_html_regeneration_deferred: true
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  matter_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "README.md"
+  - "github-facing/project-overview-explainer.md"
+  - "github-facing/proof-state-dashboard-explainer.md"
+  - "github-facing/source-authority-explainer.md"
+  - "github-facing/aether-flow-physics-program-explainer.md"
+  - "github-facing/aether-flow-ontology-explainer.md"
+  - "github-facing/gr-derivation-roadmap-explainer.md"
+  - "github-facing/claim-gates-explainer.md"
+  - "github-facing/negative-results-and-obstructions-explainer.md"
+  - "markdown/html-explainer-specs/project-overview-explainer.md"
+  - "markdown/html-explainer-specs/proof-state-dashboard-explainer.spec.md"
+  - "markdown/html-explainer-specs/source-authority-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-physics-program-explainer.md"
+  - "markdown/html-explainer-specs/aether-flow-ontology-explainer.md"
+  - "markdown/html-explainer-specs/gr-derivation-roadmap-explainer.md"
+  - "markdown/html-explainer-specs/claim-gates-explainer.md"
+  - "markdown/html-explainer-specs/negative-results-and-obstructions-explainer.md"
+  - "markdown/publication-briefs/project-overview.publication-brief.md"
+  - "markdown/publication-briefs/proof-state-dashboard.publication-brief.md"
+  - "markdown/publication-briefs/source-authority.publication-brief.md"
+  - "markdown/publication-briefs/aether-flow-physics-program.publication-brief.md"
+  - "markdown/publication-briefs/aether-flow-ontology.publication-brief.md"
+  - "markdown/publication-briefs/gr-derivation-roadmap.publication-brief.md"
+  - "markdown/publication-briefs/claim-gates.publication-brief.md"
+  - "markdown/publication-briefs/negative-results-and-obstructions.publication-brief.md"
+  - "html/project-overview-explainer.html"
+  - "html/proof-state-dashboard-explainer.html"
+  - "html/source-authority-explainer.html"
+  - "html/aether-flow-physics-program-explainer.html"
+  - "html/aether-flow-ontology-explainer.html"
+  - "html/gr-derivation-roadmap-explainer.html"
+  - "html/claim-gates-explainer.html"
+  - "html/negative-results-and-obstructions-explainer.html"
+  - "research_control/tasks/RT-20260708-034/artifacts/validate_p9_t03_public_docs_status_cards.py"
+  - "research_control/tasks/RT-20260708-034/artifacts/p9_t03_public_docs_status_cards_report.json"
+  - "research_control/tasks/RT-20260708-034/artifacts/public_documentation_cognitive_load_calibration_receipt.md"
+  - "scripts/research_control/validate_research_control.py"
+next_recommended_action: "Run one bounded v18 P9-T04 status-card v2 linter tests packet."
+notes: "RT-20260708-034 completes v18 P9-T03 by calibrating public docs to status-card v2 language with no Distance-to-GR ledger update and no physics claim change."
+documentation_impact_id: "DI-RT-20260708-034-001"

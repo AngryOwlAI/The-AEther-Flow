@@ -29,6 +29,14 @@ these assumptions. The unsafe claim is broader: the project has failed, future
 source-extension work is impossible, or downstream GR structure has been
 settled.
 
+## Status-Card Reading For Negative Results
+
+| Route family | Positive status | Exact scope | Blocked overread | Next burden |
+| --- | --- | --- | --- | --- |
+| Frozen route | A specific route is preserved as blocked or not reusable as written. | Only the named packet, source tuple, assumptions, and obstruction scope. | Not global theory rejection, future source-extension impossibility, benchmark suspension, or completed derivation. | Redesign the route, supply new payload, or route a protected gate before reuse. |
+| Scoped obstruction | A named premise or construction failed under stated conditions. | The obstruction applies to the recorded assumptions and source evidence. | Not ontology rejection, matter coupling, Einstein equations, benchmark promotion, or Gate Chair verdict. | Select a narrower theorem, a source-side extension, a new witness, or a bounded refuter packet. |
+| Certificate gap | Required source certificates are absent or malformed. | The gap is local to the certificate family and target claim. | Not permission to skip certificates and not positive matter theory. | Construct valid certificates or revise the claim so it fails closed. |
+
 ## Current Inventory
 
 | Negative-result family | Source artifact | What it blocks | What remains open |
@@ -75,6 +83,8 @@ Avoid broad language:
 - AEther-Flow Project. (2026). `registries/DISTANCE_TO_GR_LEDGER.csv` [Distance-to-GR ledger].
 - AEther-Flow Project. (2026). `research_control/design/public_status_exists_does_not_exist_source_spec.md` [Public status source spec].
 - AEther-Flow Project. (2026). `research_control/design/epistemic_category_glossary.md` [Epistemic category glossary].
+- AEther-Flow Project. (2026). `research_control/design/status_card_v2_schema.md` [Status-card v2 schema].
+- AEther-Flow Project. (2026). `research_control/design/accepted_status_calibration_v2.yaml` [Status-card v2 calibration data].
 - AEther-Flow Project. (2026). `AGENTS.md` [Repository authority hierarchy].
 
 ## Reader Scope

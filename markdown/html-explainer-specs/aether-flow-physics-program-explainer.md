@@ -55,6 +55,10 @@ physics status, not a derivation note.
   category distinctions that prevent interpretation, model, evidence,
   validator receipt, publication surface, adoption, promotion, and authority
   source from being collapsed into one another.
+- `research_control/design/status_card_v2_schema.md` and
+  `research_control/design/accepted_status_calibration_v2.yaml` define the
+  concise public order for positive status, exact scope, blocked overread,
+  next burden, and non-promotional public summaries.
 - `registries/CLAIM_BOUNDARY_REGISTRY.csv` records concrete claim boundaries
   that prevent local artifacts from becoming broad physics claims.
 
@@ -93,14 +97,9 @@ examples. Do not turn the page into a task transcript or role manual.
 - Preserves qualifiers such as `draft/control`, `source-only`, `local`,
   `exact-branch`, `source-extension data`, and `human-gated`.
 - Preserves the P14-T01 public table and P14-T02 glossary boundaries while
-  using positive-first status-card wording: GR is not derived; AEther-flow is a
-  proposed research ontology / explanatory frame, not an established physical
-  ontology; `M_src` is scoped source-only; `g_eff` is scoped source-extension
-  object status; matter-sector material is scoped evidence/precondition only
-  for source-side coupling-law candidate review; matter coupling is not
-  derived or adopted; `RR_ETransportCompletenessOrInvarianceLaw_v1` is scoped
-  evidence/precondition only; no-target certificates are not positive matter
-  theory.
+  using status-card v2 wording: positive status, exact scope, blocked
+  overread, and next burden for the ontology, open GR derivation, scoped
+  `M_src`, scoped `g_eff`, and scoped matter-sector evidence/preconditions.
 - Names source paths visibly in GitHub Markdown and HTML.
 - Uses the bottom Reader Scope hook immediately above the marked authority
   footer in GitHub Markdown and tracked HTML.

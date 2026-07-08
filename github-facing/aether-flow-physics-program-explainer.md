@@ -57,16 +57,16 @@ They supply reader-facing status-layer wording for public documentation while
 remaining downstream of the Distance-to-GR ledger, registered science sources,
 task evidence, and claim-boundary records.
 
-Current public wording must preserve these layers:
+Current public wording must preserve this status-card v2 order:
 
-| Object or burden | Public-safe reading | Blocked overread |
-| --- | --- | --- |
-| AEther-flow ontology | Proposed research ontology / explanatory frame. | Not an established physical ontology or completed foundation for deriving GR. |
-| GR derivation | Not derived from source substrate in the tracked state. | No completed derivation, benchmark promotion, or Einstein-equation derivation follows from public documentation. |
-| `M_src` | Positive status: scoped source-only object. Exact scope: source-side bridge review; allowed use: burden tracking and bridge-audit support. | Not a target manifold, metric, matter-coupling result, benchmark promotion, or completed derivation. |
-| `g_eff` | Positive status: scoped source-extension object. Exact scope: declared source-extension context; allowed use: bounded source-extension review. | Not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. |
-| Matter coupling | Positive status: scoped evidence/preconditions only. Exact scope: matter-sector support for constructing, auditing, and stress-testing source-side coupling-law candidates. | No coupling-law adoption, matter semantics, detector semantics, matter coupling, stress-energy semantics, stress-energy tensor, matter action, Einstein equations, benchmark promotion, or completed derivation. |
-| `RR_ETransportCompletenessOrInvarianceLaw_v1` | Certificate-indexed evidence/precondition only. | Not adopted as a source law and not a positive matter theory. |
+| Object or burden | Positive status | Exact scope | Blocked overread | Next burden |
+| --- | --- | --- | --- | --- |
+| AEther-flow ontology | Proposed research ontology / explanatory frame. | Ontology vocabulary and interpretation lane only. | Not an established physical ontology or completed foundation for deriving GR. | Supply source-side mathematics and protected gates before stronger ontology or derivation claims. |
+| GR derivation | Open source-to-GR recovery burden. | Not derived from source substrate in the tracked state. | No completed derivation, benchmark promotion, or Einstein-equation derivation follows from public documentation. | Discharge metric, matter-coupling, field-equation, and benchmark-review burdens through tracked sources. |
+| `M_src` | Scoped source-only object. | Source-side prerequisite context under declared fail-closed scope. | Not a target manifold, metric, matter-coupling result, benchmark promotion, or completed derivation. | Use only as source-side prerequisite context while deriving later bridges without target import. |
+| `g_eff` | Scoped source-extension object. | Declared source-extension context only. | Not an unscoped Lorentzian metric, matter-coupling result, Einstein-equation result, benchmark promotion, or completed derivation. | Show any later use without adopting `MetricData(E)`, an unscoped metric, matter coupling, or field equations. |
+| Matter coupling | Scoped evidence/preconditions only. | Certificate-indexed, finite/local support for source-side coupling-law candidate work. | No coupling-law adoption, matter semantics, detector semantics, matter coupling, stress-energy semantics, stress-energy tensor, matter action, Einstein equations, benchmark promotion, or completed derivation follows. | Construct, audit, or stress one source-side coupling-law candidate before any matter-coupling derivation or adoption claim. |
+| `RR_ETransportCompletenessOrInvarianceLaw_v1` | Certificate-indexed evidence/precondition only. | Scoped source-side support for later candidate work. | Not adopted as a source law and not a positive matter theory. | Supply explicit source-law adoption authority before using it as law. |
 
 ## Negative Results And Freeze Discipline
 
@@ -134,6 +134,8 @@ or change any control record.
 - AEther-Flow Project. (2026). `research_control/design/gr_derivation_burden_map.md` [GR derivation burden map].
 - AEther-Flow Project. (2026). `research_control/design/public_status_exists_does_not_exist_source_spec.md` [Simplified public exists / does-not-exist status table source spec].
 - AEther-Flow Project. (2026). `research_control/design/epistemic_category_glossary.md` [Epistemic category glossary].
+- AEther-Flow Project. (2026). `research_control/design/status_card_v2_schema.md` [Status-card v2 schema].
+- AEther-Flow Project. (2026). `research_control/design/accepted_status_calibration_v2.yaml` [Status-card v2 calibration data].
 - AEther-Flow Project. (2026). `registries/CLAIM_BOUNDARY_REGISTRY.csv` [Claim boundary registry].
 
 ## Safe And Unsafe Summaries

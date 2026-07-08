@@ -30,7 +30,7 @@ acceptance_criteria:
   - "Explains exact-GR benchmark status and open first-principles derivation burden without merging them."
   - "Explains no-go, obstruction, and freeze records as disciplined negative-result preservation, not global theory rejection."
   - "Separates source-side mathematical work from claim promotion."
-  - "Uses positive-first status-card wording for scoped M_src, scoped g_eff, and scoped matter-sector evidence/preconditions."
+  - "Uses status-card v2 wording for scoped M_src, scoped g_eff, and scoped matter-sector evidence/preconditions, including next burden."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
 forbidden_patterns:
   - "Completed-derivation claim."
@@ -40,6 +40,14 @@ migration_status: "reviewed"
 ---
 
 # Publication Brief: AEther-Flow Physics Program
+
+## P9-T03 Status-Card V2 Calibration Note
+
+P9-T03 body guidance references `research_control/design/status_card_v2_schema.md`
+and `research_control/design/accepted_status_calibration_v2.yaml` as
+wording-calibration context. They are not added to `source_basis` until a
+bounded HTML regeneration and publication-registry synchronization packet
+updates every generated surface.
 
 This Phase 1A page gives readers a stable public account of the physics track:
 what is adopted for benchmark discipline, what remains open, why negative

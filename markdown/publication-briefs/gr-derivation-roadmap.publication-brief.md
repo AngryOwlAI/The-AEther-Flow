@@ -35,7 +35,7 @@ acceptance_criteria:
   - "Explains the new_mathematical_payload rule without treating validator success as physics evidence."
   - "Summarizes the frontier theorem inventory without converting scoped source-extension evidence into physical adoption."
   - "Preserves Resp_lc, M_src, AtlasGlue_src^+, finite toy, source-extension, draft/control, source-only, and human-gated qualifiers."
-  - "Uses positive-first scoped-status wording before blocked-overread language for high-risk accepted rows."
+  - "Uses status-card v2 wording for high-risk rows: positive status, exact scope, blocked overread, and next burden."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
 forbidden_patterns:
   - "Page-local update to physics status."
@@ -46,6 +46,14 @@ migration_status: "reviewed"
 ---
 
 # Publication Brief: GR Derivation Roadmap
+
+## P9-T03 Status-Card V2 Calibration Note
+
+P9-T03 body guidance references `research_control/design/status_card_v2_schema.md`
+and `research_control/design/accepted_status_calibration_v2.yaml` as
+wording-calibration context. They are not added to `source_basis` until a
+bounded HTML regeneration and publication-registry synchronization packet
+updates every generated surface.
 
 This Phase 2A page explains the controlled derivation frontier as a roadmap of
 burdens and gates. It helps readers see what must still be constructed before

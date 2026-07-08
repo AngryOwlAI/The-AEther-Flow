@@ -30,6 +30,7 @@ acceptance_criteria:
   - "Separates ontology model, mathematical derivation burden, and empirical prediction."
   - "Explains live ontology sources versus legacy archival snapshots."
   - "Names the observer normal/readout source construction as an open burden."
+  - "States ontology status in status-card v2 order without promoting ontology or derivation status."
   - "Includes page-specific before/after review and desktop/mobile screenshot evidence."
 forbidden_patterns:
   - "Ontology promotion."
@@ -40,6 +41,14 @@ migration_status: "reviewed"
 ---
 
 # Publication Brief: AEther-Flow Ontology
+
+## P9-T03 Status-Card V2 Calibration Note
+
+P9-T03 body guidance references `research_control/design/status_card_v2_schema.md`
+and `research_control/design/accepted_status_calibration_v2.yaml` as
+wording-calibration context. They are not added to `source_basis` until a
+bounded HTML regeneration and publication-registry synchronization packet
+updates every generated surface.
 
 This Phase 1B page gives readers a stable public ontology vocabulary while
 preserving the distinction between conceptual model, registered scientific

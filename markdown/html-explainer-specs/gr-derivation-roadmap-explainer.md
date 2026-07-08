@@ -59,6 +59,10 @@ not a physics proof, not a ledger update, and not a claim-promotion record.
   distinctions for interpretation, model, benchmark compatibility,
   first-principles recovery, derivation, evidence/precondition, adoption,
   promotion, validator receipt, publication surface, and authority source.
+- `research_control/design/status_card_v2_schema.md` and
+  `research_control/design/accepted_status_calibration_v2.yaml` define the
+  concise positive-first public card with exact scope, blocked overread, and
+  next burden fields for high-risk rows.
 - `research_control/design/frontier_theorem_inventory.md` is the canonical
   frontier inventory source for the current theorem-like, witness,
   obstruction, scoped-evidence, frozen-route, and missing-theorem review
@@ -120,12 +124,10 @@ browser-side Mermaid.
 - Preserves `draft/control`, `source-only`, `source-extension data`, `local`,
   `exact-branch`, and `human-gated` qualifiers.
 - Preserves current P14 public status meaning for high-risk rows while using
-  positive-first status-card wording: AEther-flow is a proposed research
-  ontology / explanatory frame and not an established physical ontology; GR is
-  not derived; `M_src` is scoped source-only; `g_eff` is scoped
-  source-extension object status; matter-sector material is scoped
-  evidence/precondition only; Einstein equations remain not started; and
-  benchmark promotion remains blocked.
+  status-card v2 wording: positive status, exact scope, blocked overread, and
+  next burden for AEther-flow ontology, open GR derivation, scoped `M_src`,
+  scoped `g_eff`, matter-sector evidence/preconditions, Einstein equations,
+  and benchmark promotion.
 - Explains source-extension and finite toy categories without treating them as
   GR recovery shortcuts.
 - Summarizes the frontier theorem inventory while naming

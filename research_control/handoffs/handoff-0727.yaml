@@ -1,0 +1,90 @@
+handoff_id: "handoff-0727"
+handoff_type: "research_completion"
+created_at: "2026-07-08T19:57:05Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-034"
+decision_id: "DDR-20260708-034"
+job_id: "AJ-RT-20260708-034-001"
+agent_job_id: "AJ-RT-20260708-034-001"
+completion_path: "research_control/tasks/RT-20260708-034/jobs/completions/AJC-AJ-RT-20260708-034-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-034-001"
+created_by_task_id: "RT-20260708-034"
+created_by_job_id: "AJ-RT-20260708-034-001"
+previous_handoff_id: "handoff-0726"
+supersedes_handoff_id: "handoff-0726"
+status: "ready_for_next_bounded_packet"
+authority: "control"
+summary: "RT-20260708-034 completed v18 P9-T03 by calibrating public Markdown source specs and publication briefs to status-card v2 positive-status exact-scope blocked-overread next-burden order with no physics promotion."
+completion:
+  task_id: "RT-20260708-034"
+  job_id: "AJ-RT-20260708-034-001"
+  completion_id: "AJC-AJ-RT-20260708-034-001"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T03"
+  task_type: "public_documentation_cognitive_load_calibration"
+  closure_status: "v18_p9_t03_public_documentation_status_card_v2_calibration_completed_no_physics_delta"
+  validation_status: "PENDING"
+  completed_v18_tasks_this_packet:
+    - "P9-T03"
+  output_paths:
+    - "README.md"
+    - "github-facing/project-overview-explainer.md"
+    - "github-facing/proof-state-dashboard-explainer.md"
+    - "github-facing/source-authority-explainer.md"
+    - "github-facing/aether-flow-physics-program-explainer.md"
+    - "github-facing/aether-flow-ontology-explainer.md"
+    - "github-facing/gr-derivation-roadmap-explainer.md"
+    - "github-facing/claim-gates-explainer.md"
+    - "github-facing/negative-results-and-obstructions-explainer.md"
+    - "markdown/html-explainer-specs/*.md"
+    - "markdown/publication-briefs/*.md"
+    - "html/*.html"
+    - "research_control/tasks/RT-20260708-034/artifacts/p9_t03_public_docs_status_cards_report.json"
+public_documentation_result:
+  status_card_version: "v2"
+  public_docs_status_card_v2_order_applied: true
+  source_specs_v2_binding_updated: true
+  publication_briefs_v2_binding_updated: true
+  generated_html_hand_edit_performed: false
+  generated_html_metadata_sync_performed: true
+  generated_html_content_regeneration_performed: false
+  task_local_validator_status: "PASS"
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  ledger_row_updated: false
+physics_progress_status: "documentation_update_no_physics_delta"
+new_mathematical_payload: []
+mathematical_payload_manifest: []
+claim_boundary_summary: "Public status-card v2 documentation calibration does not create proof authority routing authority ledger override physics truth ranking source-law adoption detector-semantics adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation future source-extension impossibility or program-wide no-go conclusion."
+project_improvement_signals: []
+selected_next_route:
+  route_id: "status_card_v2_linter_tests"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P9"
+  plan_task_id: "P9-T04"
+  task_name: "Status-card v2 linter tests"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "status_card_v2_linter_tests"
+  target_derivation_milestone: "none"
+  milestone_burden: "Add linter tests for missing next-burden fields and caveat-wall public summaries."
+  requires_human_gate: false
+  expected_agent_job_scope: "One bounded P9-T04 packet adding linter tests for missing next-burden fields and caveat-wall public summaries."
+next_action: "Run one bounded v18 P9-T04 status-card v2 linter tests packet."
+next_recommended_action: "Run one bounded v18 P9-T04 status-card v2 linter tests packet."
+active_state_bifurcation:
+  latest_research_completion: "RT-20260708-034"
+  latest_research_task_id: "RT-20260708-034"
+  latest_research_handoff_id: "handoff-0727"
+  latest_research_next_action: "Run one bounded v18 P9-T04 status-card v2 linter tests packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+operator_notes:
+  continue_research_boundary: "director_decision_required"
+  one_bounded_agentjob_limit: true
