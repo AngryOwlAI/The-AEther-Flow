@@ -1,0 +1,15 @@
+fixture_id: "bad_process_task_claims_physics_delta"
+expected_status: "HARD_FAIL"
+records:
+  - source: "fixture:bad_process_task_claims_physics_delta"
+    physics_payload_ratio_policy_record:
+      policy_id: "physics_payload_ratio_policy_v1"
+      consecutive_project_system_task_count: 1
+      threshold_met: false
+      active_exception: ""
+      selected_next_task_type: "validator_update"
+      selected_packet_project_system: true
+      physics_progress_status: "validator_claimed_physics_delta"
+      physics_delta_claimed: true
+      physics_promotion_authorized: false
+      proof_authority: false

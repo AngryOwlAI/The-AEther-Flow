@@ -253,6 +253,58 @@ CURRENT_FRONTIER_REPAIR_ROUTE = (
     "continue-research before proceeding"
 )
 
+PHYSICS_PAYLOAD_RATIO_POLICY_ID = "physics_payload_ratio_policy_v1"
+PHYSICS_PAYLOAD_RATIO_THRESHOLD_DEFAULT = 3
+PHYSICS_PAYLOAD_RATIO_REQUIRED_TASK_TYPES = {
+    "theorem_candidate",
+    "countermodel",
+    "finite_witness",
+    "obstruction_with_proof_sketch",
+    "source_primitive_requirement",
+    "candidate_construction",
+}
+PHYSICS_PAYLOAD_RATIO_EXCEPTIONS = {
+    "claim_boundary_hard_failure",
+    "failing_ci",
+    "human_gate_required",
+    "registry_corruption",
+    "security_or_integrity_repair",
+}
+PHYSICS_PAYLOAD_RATIO_PROJECT_SYSTEM_TOKENS = {
+    "checkpoint",
+    "dashboard",
+    "documentation",
+    "handoff",
+    "memory",
+    "metrics",
+    "project_system",
+    "registry",
+    "renderer",
+    "route_history",
+    "schema",
+    "sidecar",
+    "support",
+    "tooling",
+    "validation",
+    "validator",
+}
+PHYSICS_PAYLOAD_RATIO_NO_DELTA_STATUS_TOKENS = {
+    "no_physics_delta",
+    "no physics delta",
+    "support-only",
+    "support_only",
+    "validator_update_no_physics_delta",
+}
+PHYSICS_PAYLOAD_RATIO_DELTA_CLAIM_KEYS = (
+    "physics_delta_claimed",
+    "physics_delta_created",
+    "physics_delta_allowed",
+    "physics_promotion_authorized",
+    "proof_authority",
+    "benchmark_promotion_authorized",
+    "completed_derivation_authorized",
+)
+
 CURRENT_FRONTIER_ACTIVE_FIELD_MAP = {
     "Active task ID": "active_task_id",
     "Latest handoff ID": "latest_handoff_id",
@@ -382,6 +434,9 @@ MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS = {
     "MD-README",
     "MD-RESEARCH-CONTROL-CURRENT-FRONTIER",
     "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16",
+}
+SELF_REFERENTIAL_GENERATED_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS = {
+    "MD-RESEARCH-CONTROL-TASK-INDEX",
 }
 
 MEMORY_PREFLIGHT_SOURCE_REGISTRIES = {
@@ -1381,6 +1436,21 @@ def bool_value(value: Any) -> bool:
     return False
 
 
+def int_value(value: Any, default: int = 0) -> int:
+    if isinstance(value, bool):
+        return default
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float):
+        return int(value)
+    if isinstance(value, str):
+        try:
+            return int(value.strip())
+        except ValueError:
+            return default
+    return default
+
+
 def _clean_timestamp(value: Any) -> str:
     text = str(value or "").strip()
     if re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", text):
@@ -2376,6 +2446,8 @@ def active_program_task_id() -> str:
 
 
 def memory_preflight_hash_must_be_current(job_row: dict[str, str], object_id: str) -> bool:
+    if object_id in SELF_REFERENTIAL_GENERATED_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS:
+        return False
     if object_id not in MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS:
         return True
     active_task = active_program_task_id()
@@ -3167,6 +3239,11 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
     command_results = completion.get("command_results", [])
     if not isinstance(command_results, list) or not command_results:
         report.error(f"{path.relative_to(REPO_ROOT).as_posix()}: missing command_results")
+    validate_physics_payload_ratio_policy_record(
+        report,
+        completion,
+        path.relative_to(REPO_ROOT).as_posix(),
+    )
     validate_memory_preflight(report, job_row, completion, path.relative_to(REPO_ROOT).as_posix())
     validate_validation_layers(report, job_row, completion, path.relative_to(REPO_ROOT).as_posix())
     validate_authorization_layers(report, job_row, completion, path.relative_to(REPO_ROOT).as_posix())
@@ -3204,6 +3281,284 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
         path.relative_to(REPO_ROOT).as_posix(),
     )
     validate_completion_resolver_snapshots(report, completion, job_contract, path)
+
+
+def extract_physics_payload_ratio_policy_record(container: dict[str, Any]) -> dict[str, Any] | None:
+    record = container.get("physics_payload_ratio_policy_record")
+    if isinstance(record, dict):
+        return record
+    if container.get("policy_id") == PHYSICS_PAYLOAD_RATIO_POLICY_ID:
+        return container
+    return None
+
+
+def _payload_ratio_source_label(owner_path: str, index: int | None = None) -> str:
+    if index is None:
+        return owner_path
+    return f"{owner_path}[{index}]"
+
+
+def _payload_ratio_text(value: Any) -> str:
+    if isinstance(value, dict):
+        value = value.get("status", "")
+    if value is None:
+        return ""
+    return str(value).strip()
+
+
+def _payload_ratio_active_exception(record: dict[str, Any]) -> str:
+    return _payload_ratio_text(record.get("active_exception")).lower()
+
+
+def _payload_ratio_exception_has_evidence(record: dict[str, Any]) -> bool:
+    evidence_fields = (
+        "exception_source_path",
+        "exception_evidence",
+        "exception_evidence_path",
+        "exception_receipt_path",
+        "exception_receipt",
+    )
+    for field_name in evidence_fields:
+        value = record.get(field_name)
+        if isinstance(value, str) and value.strip():
+            return True
+        if isinstance(value, (dict, list)) and value:
+            return True
+    return False
+
+
+def _payload_ratio_selected_task_type(record: dict[str, Any]) -> str:
+    for field_name in (
+        "selected_next_task_type",
+        "selected_task_type",
+        "next_task_type",
+        "task_type",
+    ):
+        value = _payload_ratio_text(record.get(field_name))
+        if value:
+            return value
+    return ""
+
+
+def _payload_ratio_required_task_types(record: dict[str, Any]) -> set[str]:
+    values = record.get("required_next_task_type_one_of")
+    if not isinstance(values, list):
+        return set(PHYSICS_PAYLOAD_RATIO_REQUIRED_TASK_TYPES)
+    normalized = {str(value).strip() for value in values if str(value).strip()}
+    return normalized or set(PHYSICS_PAYLOAD_RATIO_REQUIRED_TASK_TYPES)
+
+
+def _payload_ratio_selected_is_physics_bearing(record: dict[str, Any]) -> bool:
+    if bool_value(record.get("selected_packet_physics_bearing")) or bool_value(
+        record.get("physics_bearing_task")
+    ):
+        return True
+    selected_task_type = _payload_ratio_selected_task_type(record)
+    return selected_task_type in _payload_ratio_required_task_types(record)
+
+
+def _payload_ratio_selected_is_project_system(record: dict[str, Any]) -> bool:
+    if bool_value(record.get("selected_packet_project_system")) or bool_value(
+        record.get("project_system_task")
+    ):
+        return True
+    selected_task_type = _payload_ratio_selected_task_type(record).lower()
+    if selected_task_type in _payload_ratio_required_task_types(record):
+        return False
+    return any(token in selected_task_type for token in PHYSICS_PAYLOAD_RATIO_PROJECT_SYSTEM_TOKENS)
+
+
+def _payload_ratio_claims_physics_delta(record: dict[str, Any]) -> bool:
+    for field_name in PHYSICS_PAYLOAD_RATIO_DELTA_CLAIM_KEYS:
+        if bool_value(record.get(field_name)):
+            return True
+    status_text = _payload_ratio_text(record.get("physics_progress_status")).lower()
+    if not status_text:
+        return False
+    if any(token in status_text for token in PHYSICS_PAYLOAD_RATIO_NO_DELTA_STATUS_TOKENS):
+        return False
+    return "physics_delta" in status_text or "physics delta" in status_text
+
+
+def physics_payload_ratio_policy_findings(
+    record: dict[str, Any],
+    source_label: str,
+) -> list[dict[str, str]]:
+    findings: list[dict[str, str]] = []
+    policy_id = _payload_ratio_text(record.get("policy_id"))
+    if policy_id and policy_id != PHYSICS_PAYLOAD_RATIO_POLICY_ID:
+        findings.append(
+            {
+                "code": "policy_id_mismatch",
+                "severity": "overclaim_hard_fail",
+                "message": (
+                    f"{source_label}: physics_payload_ratio_policy_record policy_id "
+                    f"must be {PHYSICS_PAYLOAD_RATIO_POLICY_ID}"
+                ),
+            }
+        )
+        return findings
+
+    threshold = int_value(
+        record.get("after_project_system_tasks", record.get("threshold")),
+        PHYSICS_PAYLOAD_RATIO_THRESHOLD_DEFAULT,
+    )
+    project_system_count = int_value(
+        record.get(
+            "consecutive_project_system_task_count",
+            record.get("project_system_task_run_length"),
+        )
+    )
+    threshold_met = bool_value(record.get("threshold_met")) or project_system_count >= threshold
+    active_exception = _payload_ratio_active_exception(record)
+    exception_known = active_exception in PHYSICS_PAYLOAD_RATIO_EXCEPTIONS
+    selected_is_physics_bearing = _payload_ratio_selected_is_physics_bearing(record)
+    selected_is_project_system = _payload_ratio_selected_is_project_system(record)
+
+    if selected_is_project_system and _payload_ratio_claims_physics_delta(record):
+        findings.append(
+            {
+                "code": "process_task_claims_physics_delta",
+                "severity": "overclaim_hard_fail",
+                "message": (
+                    f"{source_label}: process task claims a physics delta under "
+                    f"{PHYSICS_PAYLOAD_RATIO_POLICY_ID}"
+                ),
+            }
+        )
+
+    if active_exception and (not exception_known or not _payload_ratio_exception_has_evidence(record)):
+        detail = "unsupported exception" if not exception_known else "missing exception evidence"
+        findings.append(
+            {
+                "code": "exception_declared_without_evidence",
+                "severity": "warn_current_control",
+                "message": (
+                    f"{source_label}: payload-ratio exception is declared with {detail}: "
+                    f"{active_exception or '<blank>'}"
+                ),
+            }
+        )
+        return findings
+
+    if active_exception and exception_known:
+        return findings
+
+    if threshold_met:
+        findings.append(
+            {
+                "code": "project_system_run_exceeds_threshold",
+                "severity": "warn_current_control",
+                "message": (
+                    f"{source_label}: consecutive project-system task count "
+                    f"{project_system_count} meets advisory threshold {threshold}"
+                ),
+            }
+        )
+        if not selected_is_physics_bearing:
+            selected_task_type = _payload_ratio_selected_task_type(record) or "<blank>"
+            findings.append(
+                {
+                    "code": "physics_payload_missing_after_threshold",
+                    "severity": "warn_current_control",
+                    "message": (
+                        f"{source_label}: selected next task type {selected_task_type} "
+                        "is not physics-bearing under the payload-ratio policy"
+                    ),
+                }
+            )
+
+    return findings
+
+
+def validate_physics_payload_ratio_policy_record(
+    report: ValidationReport,
+    container: dict[str, Any],
+    owner_path: str,
+) -> None:
+    record = extract_physics_payload_ratio_policy_record(container)
+    if record is None:
+        return
+    for finding in physics_payload_ratio_policy_findings(record, owner_path):
+        message = f"{finding['code']}: {finding['message']}"
+        if finding["severity"].startswith("overclaim_hard_fail"):
+            report.error(message)
+        else:
+            report.warn(message)
+
+
+def validate_physics_payload_ratio_policy_records(
+    report: ValidationReport,
+    records: list[dict[str, Any]],
+    owner_path: str,
+) -> None:
+    for index, item in enumerate(records):
+        if not isinstance(item, dict):
+            report.error(f"{_payload_ratio_source_label(owner_path, index)}: record must be a map")
+            continue
+        source_label = _payload_ratio_text(item.get("source")) or _payload_ratio_source_label(
+            owner_path,
+            index,
+        )
+        record = extract_physics_payload_ratio_policy_record(item) or item
+        for finding in physics_payload_ratio_policy_findings(record, source_label):
+            message = f"{finding['code']}: {finding['message']}"
+            if finding["severity"].startswith("overclaim_hard_fail"):
+                report.error(message)
+            else:
+                report.warn(message)
+
+
+def evaluate_physics_payload_ratio_policy_records(
+    records: list[dict[str, Any]],
+    sample: str = "fixture",
+) -> dict[str, Any]:
+    report = ValidationReport()
+    validate_physics_payload_ratio_policy_records(report, records, sample)
+    warnings = [
+        {"code": message.split(":", 1)[0], "message": message}
+        for message in report.warnings
+    ]
+    hard_failures = [
+        {"code": message.split(":", 1)[0], "message": message}
+        for message in report.errors
+    ]
+    status = "HARD_FAIL" if hard_failures else "WARN" if warnings else "PASS"
+    return {
+        "schema_id": "physics_payload_ratio_policy_validator_pilot_v1",
+        "policy_id": PHYSICS_PAYLOAD_RATIO_POLICY_ID,
+        "status": status,
+        "warning_count": len(warnings),
+        "hard_failure_count": len(hard_failures),
+        "warnings": warnings,
+        "hard_failures": hard_failures,
+        "authority_boundary": {
+            "initial_enforcement": "advisory",
+            "warnings_are_hard_gates": False,
+            "hard_failures_are_overclaim_only": True,
+            "physics_claim_authority_created": False,
+            "proof_authority_created": False,
+        },
+    }
+
+
+def load_physics_payload_ratio_policy_fixture(path: Path) -> tuple[str, str, list[dict[str, Any]]]:
+    fixture = load_yaml(path)
+    fixture_id = _payload_ratio_text(fixture.get("fixture_id")) or path.stem
+    expected_status = _payload_ratio_text(fixture.get("expected_status")) or "PASS"
+    records = fixture.get("records", [])
+    if not isinstance(records, list):
+        records = []
+    return fixture_id, expected_status, records
+
+
+def evaluate_physics_payload_ratio_policy_fixture(path: Path) -> dict[str, Any]:
+    fixture_id, expected_status, records = load_physics_payload_ratio_policy_fixture(path)
+    report = evaluate_physics_payload_ratio_policy_records(records, sample=fixture_id)
+    report["fixture_id"] = fixture_id
+    report["expected_status"] = expected_status
+    report["matches_expected"] = report["status"] == expected_status
+    return report
 
 
 def validate_loop_control_completion(
@@ -5092,6 +5447,11 @@ def validate_handoffs(
             report.error(f"{yaml_path.name}: job_id is not registered")
         if ".local/" in yaml_path.read_text(encoding="utf-8"):
             report.error(f"{yaml_path.name}: tracked handoff YAML must not use .local/ as authority")
+        validate_physics_payload_ratio_policy_record(
+            report,
+            data,
+            yaml_path.relative_to(REPO_ROOT).as_posix(),
+        )
         validate_loop_control_handoff(report, data, jobs, yaml_path)
     if numbers and numbers != list(range(min(numbers), max(numbers) + 1)):
         report.error("handoff IDs must be monotonic without gaps")

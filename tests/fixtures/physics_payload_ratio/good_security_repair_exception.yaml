@@ -1,0 +1,16 @@
+fixture_id: "good_security_repair_exception"
+expected_status: "PASS"
+records:
+  - source: "fixture:good_security_repair_exception"
+    physics_payload_ratio_policy_record:
+      policy_id: "physics_payload_ratio_policy_v1"
+      consecutive_project_system_task_count: 5
+      threshold_met: true
+      active_exception: "security_or_integrity_repair"
+      exception_source_path: "research_control/tasks/RT-YYYYMMDD-NNN/documentation_impact.yaml"
+      selected_next_task_type: "validator_update"
+      selected_packet_project_system: true
+      physics_progress_status: "validator_update_no_physics_delta"
+      physics_delta_claimed: false
+      physics_promotion_authorized: false
+      proof_authority: false

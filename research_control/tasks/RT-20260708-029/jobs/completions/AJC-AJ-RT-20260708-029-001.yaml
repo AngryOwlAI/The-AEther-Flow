@@ -1,0 +1,190 @@
+completion_id: "AJC-AJ-RT-20260708-029-001"
+job_id: "AJ-RT-20260708-029-001"
+task_id: "RT-20260708-029"
+decision_id: "DDR-20260708-029"
+status: "completed"
+completed_at: "2026-07-08T16:31:45Z"
+completed_by_role: "validator-engineer@0.2.0--RT-20260708-029"
+plan_task_id: "P8-T03"
+objective_result: "completed"
+summary: "Added advisory physics-payload ratio policy validation to validate_research_control.py, created fixture histories, and added focused tests proving warning, exception, and hard-overclaim behavior with no physics delta."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  related_plan_task_id: "P8-T03"
+  plan_phase_id: "P8"
+  implemented_task_scope: "Piloted advisory payload-ratio validation for explicit policy receipts and fixture histories."
+  phase_p8_completed: false
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_physics_payload_ratio_policy.py"
+  - "tests/fixtures/physics_payload_ratio/good_not_applicable.yaml"
+  - "tests/fixtures/physics_payload_ratio/good_security_repair_exception.yaml"
+  - "tests/fixtures/physics_payload_ratio/warn_exception_missing_evidence.yaml"
+  - "tests/fixtures/physics_payload_ratio/warn_project_system_threshold.yaml"
+  - "tests/fixtures/physics_payload_ratio/bad_process_task_claims_physics_delta.yaml"
+  - "research_control/tasks/RT-20260708-029/artifacts/payload_ratio_validator_pilot_report_v1.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260708-029/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-029/DDR-20260708-029.md"
+  - "research_control/tasks/RT-20260708-029/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-029/jobs/AJ-RT-20260708-029-001.yaml"
+  - "research_control/tasks/RT-20260708-029/jobs/completions/AJC-AJ-RT-20260708-029-001.yaml"
+  - "research_control/tasks/RT-20260708-029/roles/validator-engineer@0.2.0--RT-20260708-029.yaml"
+  - "research_control/handoffs/handoff-0722.yaml"
+  - "research_control/handoffs/handoff-0722.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=774 relationship_row_count=3881 semantic_row_count=774 vault_row_count=774"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | source_object_count=774 relationship_row_count=3881"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P8-T03 physics-payload ratio validator pilot\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260708-028-PAYLOAD-RATIO-METRICS-REPORT-V1,MD-RESEARCH-CONTROL-CURRENT-FRONTIER,MD-RESEARCH-CONTROL-TASK-INDEX"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1 --json | exit_code=0 | primary_registry=MARKDOWN_SOURCE_REGISTRY.csv"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-028 latest_handoff=handoff-0721 next_action=P8-T03"
+  - ".venv/bin/python -m unittest tests/test_physics_payload_ratio_policy.py | exit_code=0 | tests=5"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json | exit_code=0 | errors=0 warnings=historical"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 774
+    relationship_row_count: 3881
+    semantic_row_count: 774
+    vault_row_count: 774
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/physics_payload_ratio_policy_v1.md"
+      source_hash: "0bf6b607a8f93b05e6e67c5a6676c0f889cb28f9a6c81db9c6c508e5f486d213"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "targeted memory policy lookup returned the canonical physics payload ratio policy source"
+      - "canonical plan, backlog, policy, handoff, validator script, and role contract inspected"
+      - "continue_research.py resolved handoff-0721 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "validator consumes explicit physics_payload_ratio_policy_record receipts"
+      - "warning findings are separate from hard overclaim failures"
+      - "security_or_integrity_repair exception fixture passes when evidence is present"
+      - "process task physics-delta claim fixture hard-fails"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "focused unittest passed"
+      - "validate_research_control.py --json passed with historical warnings only"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint commit has not yet been created; this layer is completed by checkpoint_research_transaction"
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "generated frontier, task index, dependency graph, and claim graph refresh will run before checkpoint"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap_memory_system.py will run before checkpoint"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "validate_claim_language.py --changed --json will run before checkpoint"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+physics_payload_ratio_policy_record:
+  policy_id: "physics_payload_ratio_policy_v1"
+  evaluated_window_task_ids:
+    - "RT-20260708-027"
+    - "RT-20260708-028"
+    - "RT-20260708-029"
+  consecutive_project_system_task_count: 3
+  threshold_met: true
+  active_exception: ""
+  exception_source_path: ""
+  required_next_task_type_one_of:
+    - "theorem_candidate"
+    - "countermodel"
+    - "finite_witness"
+    - "obstruction_with_proof_sketch"
+    - "source_primitive_requirement"
+    - "candidate_construction"
+  selected_next_task_type: "physics_payload_ratio_dashboard_integration"
+  selected_packet_project_system: true
+  selected_packet_physics_bearing: false
+  decision: "advise_physics_bearing_next_packet"
+  initial_enforcement: "advisory"
+  physics_delta_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+distance_to_gr:
+  milestone: "none"
+  burden_id: "physics_payload_ratio_validator_pilot"
+  status: "support-only validator pilot completed"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "P8-T03 pilots project-control diagnostics only and does not change physics derivation status."
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "physics_payload_ratio_validator_pilot"
+  milestone: "none"
+  old_status: "route-history payload-ratio metrics extended"
+  new_status: "advisory physics-payload ratio validator pilot completed"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+claim_boundary:
+  support_only: true
+  ai_system_diagnostics_only: true
+  proof_authority: false
+  physics_truth_ranking_authorized: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  target_metric_imported: false
+  metricdata_e_adopted: false
+  g_eff_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+selected_next_route:
+  route_id: "physics_payload_ratio_dashboard_integration"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P8"
+  plan_task_id: "P8-T04"
+  task_name: "Payload-ratio dashboard integration"
+  role_family: "tooling-engineer@0.1.0"
+  task_type: "physics_payload_ratio_dashboard_integration"
+  target_derivation_milestone: "none"
+  milestone_burden: "Render payload-ratio metrics as support-only AI methodology diagnostics."
+  requires_human_gate: false
+project_improvement_signals: []
+next_recommended_action: "Run one bounded v18 P8-T04 physics-payload ratio dashboard integration packet."

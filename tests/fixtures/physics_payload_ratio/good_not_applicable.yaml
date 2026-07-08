@@ -1,0 +1,14 @@
+fixture_id: "good_not_applicable"
+expected_status: "PASS"
+records:
+  - source: "fixture:good_not_applicable"
+    physics_payload_ratio_policy_record:
+      policy_id: "physics_payload_ratio_policy_v1"
+      consecutive_project_system_task_count: 2
+      threshold_met: false
+      selected_next_task_type: "route_history_payload_ratio_metrics"
+      selected_packet_project_system: true
+      physics_progress_status: "validator_update_no_physics_delta"
+      physics_delta_claimed: false
+      physics_promotion_authorized: false
+      proof_authority: false

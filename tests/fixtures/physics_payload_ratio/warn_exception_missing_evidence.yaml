@@ -1,0 +1,16 @@
+fixture_id: "warn_exception_missing_evidence"
+expected_status: "WARN"
+records:
+  - source: "fixture:warn_exception_missing_evidence"
+    physics_payload_ratio_policy_record:
+      policy_id: "physics_payload_ratio_policy_v1"
+      consecutive_project_system_task_count: 4
+      threshold_met: true
+      active_exception: "failing_ci"
+      exception_source_path: ""
+      selected_next_task_type: "validator_update"
+      selected_packet_project_system: true
+      physics_progress_status: "validator_update_no_physics_delta"
+      physics_delta_claimed: false
+      physics_promotion_authorized: false
+      proof_authority: false

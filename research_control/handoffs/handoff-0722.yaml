@@ -1,0 +1,119 @@
+handoff_id: "handoff-0722"
+created_at: "2026-07-08T16:31:45Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-029"
+decision_id: "DDR-20260708-029"
+job_id: "AJ-RT-20260708-029-001"
+agent_job_id: "AJ-RT-20260708-029-001"
+completion_path: "research_control/tasks/RT-20260708-029/jobs/completions/AJC-AJ-RT-20260708-029-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-029-001"
+status: "ready_for_next_bounded_packet"
+previous_handoff_id: "handoff-0721"
+summary: "Completed v18 P8-T03 physics-payload ratio validator pilot. The packet added advisory physics_payload_ratio_policy_record validation to validate_research_control.py, created fixture histories, and added focused tests proving warnings remain separate from hard process-task physics-delta overclaim failures. It creates no proof authority physics truth ranking physics promotion source-law adoption detector-semantics adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict or completed derivation."
+completed_packet:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P8"
+  plan_task_id: "P8-T03"
+  task_name: "Payload-ratio validator pilot"
+  plan_role_family: "validator-engineer@0.2.0"
+  selected_role_family: "validator-engineer@0.2.0"
+  target_derivation_milestone: "none"
+  milestone_burden: "Add advisory validation for payload-ratio policy."
+  result_type: "payload_ratio_validator_pilot_completed"
+  result: "validator_pilot_completed"
+  support_only: true
+  ai_system_diagnostics_only: true
+  proof_authority: false
+  physics_truth_ranking_authorized: false
+  selected_next_plan_task_id: "P8-T04"
+  selected_next_plan_route_type: "physics_payload_ratio_dashboard_integration"
+claim_boundary:
+  allowed_claims:
+    - "P8-T03 support-only validator pilot added"
+    - "project_system_run_exceeds_threshold warning implemented"
+    - "physics_payload_missing_after_threshold warning implemented"
+    - "exception_declared_without_evidence warning implemented"
+    - "process_task_claims_physics_delta hard overclaim failure implemented"
+    - "CI/security/integrity repair exceptions stay nonblocking when evidenced"
+    - "P8-T04 selected as next plan task"
+  forbidden_claims:
+    - "validator as proof authority"
+    - "validator as physics truth ranking"
+    - "validator as physics promotion"
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "Det_src adoption"
+    - "Readout_src adoption"
+    - "detector-semantics adoption"
+    - "source detector/readout semantics adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "program-wide no-go conclusion"
+    - "future source-extension impossibility"
+  support_only: true
+  ai_system_diagnostics_only: true
+  proof_authority: false
+  no_adoption: true
+  no_ledger_delta: true
+  no_physics_promotion: true
+distance_to_gr_status:
+  changed: false
+  ledger_row_updated: false
+  burden_id: "none"
+  status: "support-only physics-payload ratio validator pilot completed; no physics derivation status change"
+  freeze_decision: "not_applicable"
+physics_payload_ratio_policy:
+  validator_pilot_status: "completed"
+  initial_enforcement: "advisory"
+  warnings_are_hard_gates: false
+  hard_failures_are_overclaim_only: true
+  live_policy_record_status: "WARN"
+  live_policy_record_warning_ids:
+    - "project_system_run_exceeds_threshold"
+    - "physics_payload_missing_after_threshold"
+  hard_failure_fixture_id: "bad_process_task_claims_physics_delta"
+  exemption_fixture_id: "good_security_repair_exception"
+selected_next_route:
+  route_id: "physics_payload_ratio_dashboard_integration"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P8"
+  plan_task_id: "P8-T04"
+  task_name: "Payload-ratio dashboard integration"
+  role_family: "tooling-engineer@0.1.0"
+  task_type: "physics_payload_ratio_dashboard_integration"
+  target_derivation_milestone: "none"
+  milestone_burden: "Render payload-ratio metrics as support-only AI methodology diagnostics."
+  expected_agent_job_scope: "One bounded P8-T04 tooling packet rendering payload-ratio metrics as support-only AI methodology diagnostics without physics promotion."
+  requires_human_gate: false
+next_action: "Run one bounded v18 P8-T04 physics-payload ratio dashboard integration packet."
+next_recommended_action: "Run one bounded v18 P8-T04 physics-payload ratio dashboard integration packet."
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260708-029"
+  latest_research_handoff_id: "handoff-0722"
+  latest_research_next_action: "Run one bounded v18 P8-T04 physics-payload ratio dashboard integration packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+project_improvement_signals: []
+validation:
+  focused_unittest: "PASS"
+  research_control_validation: "PASS"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  documentation_impact: "PENDING"
+  research_control_diff_validation: "PENDING"
+  wrapper_validation: "PENDING"
+notes: "This handoff is the research-continuation authority for the next invocation. Generated derivatives and .local caches remain retrieval layers only."
+project_improvement_bridge:
+  required: false
+  reason: "project_improvement_signals is empty"
