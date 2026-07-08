@@ -1,0 +1,60 @@
+task_id: "RT-20260708-035"
+task_type: "status_card_v2_linter_tests"
+status: "completed"
+created_at: "2026-07-08T20:41:56Z"
+updated_at: "2026-07-08T20:41:56Z"
+closed_at: "2026-07-08T20:41:56Z"
+parent_task_id: "RT-20260708-034"
+parent_handoff_id: "handoff-0727"
+decision_id: "DDR-20260708-035"
+job_id: "AJ-RT-20260708-035-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260708-035"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This validator packet does not consume Gate Chair authority or issue a protected verdict."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T04"
+  plan_task_name: "Status-card v2 linter tests"
+  recommendation_ids:
+    - "V18-R09"
+objective: "Add focused claim-language linter tests for missing status-card v2 next-burden fields and caveat-wall public summaries while preserving hard overclaim failures."
+target_derivation_milestone: "none"
+milestone_burden: "Add linter tests for missing next-burden fields and caveat-wall public summaries."
+closure_status: "v18_p9_t04_status_card_v2_linter_tests_completed_no_physics_delta"
+project_system_boundary_authorized_by_plan: true
+physics_progress_status: "validator_update_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P9-T04 claim-language validator behavior, taxonomy entry, fixtures, tests, and task-local receipt only."
+  missing_next_burden_warns: true
+  caveat_wall_summaries_warn: true
+  overclaims_still_hard_fail: true
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  matter_semantics_adopted: false
+  coupling_law_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "scripts/project_control/validate_claim_language.py"
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "tests/test_validate_claim_language.py"
+  - "tests/fixtures/claim_language/status_card_v2_valid.md"
+  - "tests/fixtures/claim_language/status_card_v2_missing_next_burden.md"
+  - "tests/fixtures/claim_language/status_card_v2_caveat_wall.md"
+  - "research_control/tasks/RT-20260708-035/artifacts/validate_p9_t04_status_card_v2_linter.py"
+  - "research_control/tasks/RT-20260708-035/artifacts/p9_t04_status_card_v2_linter_report.json"
+  - "research_control/tasks/RT-20260708-035/artifacts/p9_t04_status_card_v2_linter_receipt.md"
+next_recommended_action: "Run one bounded v18 P9-T05 public cognitive-load red-team review packet."
+notes: "RT-20260708-035 completes v18 P9-T04 by adding status-card v2 linter coverage for missing next-burden and caveat-wall public-summary warnings with no Distance-to-GR ledger update and no physics claim promotion."
+documentation_impact_id: "DI-RT-20260708-035-001"

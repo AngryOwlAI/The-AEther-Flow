@@ -238,6 +238,55 @@ class ClaimLanguageLinterTests(unittest.TestCase):
         self.assertIn("scoped_adoption_minimized", class_ids)
         self.assertIn("caveat_wall_public_summary", class_ids)
 
+    def test_status_card_v2_valid_fixture_passes(self) -> None:
+        fixture_text = (
+            REPO_ROOT / "tests/fixtures/claim_language/status_card_v2_valid.md"
+        ).read_text(encoding="utf-8")
+        report = self.scan_one("research_control/current_frontier.md", fixture_text)
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["finding_count"], 0)
+
+    def test_status_card_v2_missing_next_burden_warns_only(self) -> None:
+        fixture_text = (
+            REPO_ROOT / "tests/fixtures/claim_language/status_card_v2_missing_next_burden.md"
+        ).read_text(encoding="utf-8")
+        report = self.scan_one("research_control/current_frontier.md", fixture_text)
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["hard_fail_count"], 0)
+        self.assertEqual(report["underclaim_calibration_warning_count"], 1)
+        self.assertEqual(report["findings"][0]["class_id"], "status_card_v2_missing_next_burden")
+        self.assertEqual(report["findings"][0]["finding_kind"], "underclaim_calibration_warning")
+
+    def test_status_card_v2_caveat_wall_fixture_warns_only(self) -> None:
+        fixture_text = (
+            REPO_ROOT / "tests/fixtures/claim_language/status_card_v2_caveat_wall.md"
+        ).read_text(encoding="utf-8")
+        report = self.scan_one("research_control/current_frontier.md", fixture_text)
+        class_ids = {finding["class_id"] for finding in report["findings"]}
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["hard_fail_count"], 0)
+        self.assertGreaterEqual(report["underclaim_calibration_warning_count"], 1)
+        self.assertIn("caveat_wall_public_summary", class_ids)
+
+    def test_status_card_v2_overclaim_still_hard_fails(self) -> None:
+        report = self.scan_one(
+            "research_control/current_frontier.md",
+            (
+                "Status-card v2: matter_coupling. Positive status: accepted scoped "
+                "evidence/precondition only for continuation. Exact scope: scoped "
+                "source-side support. Blocked overread: no benchmark promotion. "
+                "Next burden: derive lawful source-side coupling before promotion.\n"
+                "GR derived.\n"
+            ),
+        )
+
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(report["hard_fail_count"], 1)
+        self.assertEqual(report["findings"][0]["class_id"], "einstein_equation_overclaim")
+
     def test_active_handoff_overclaim_hard_fails_as_control(self) -> None:
         report = self.scan_one(
             "research_control/handoffs/handoff-active.yaml",

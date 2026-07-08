@@ -119,6 +119,16 @@ UNDERCLAIM_MINIMIZING_MARKERS = (
     "only caveats",
 )
 
+STATUS_CARD_V2_MARKERS = (
+    "status-card v2",
+    "status_card_v2",
+)
+
+STATUS_CARD_V2_NEXT_BURDEN_MARKERS = (
+    "next burden",
+    "next_burden",
+)
+
 TOKEN_RE = re.compile(r"[A-Za-z0-9_]+(?:\([A-Za-z0-9_]+\))?")
 
 COUNTERMODEL_OVERREAD_PHRASE_CLASS = {
@@ -357,6 +367,17 @@ def blocked_marker_count(line_text: str) -> int:
     return sum(1 for marker in lower_markers(UNDERCLAIM_BLOCKED_MARKERS) if marker in lower)
 
 
+def is_status_card_v2_summary_line(line_text: str) -> bool:
+    lower = line_text.lower()
+    if any(marker in lower for marker in STATUS_CARD_V2_MARKERS):
+        return True
+    return (
+        "positive status" in lower
+        and "blocked overread" in lower
+        and ("exact scope" in lower or "allowed use" in lower)
+    )
+
+
 def underclaim_matches(
     line_text: str,
     phrase_class: dict[str, Any],
@@ -368,6 +389,14 @@ def underclaim_matches(
 
     positive_span = first_marker_span(line_text, UNDERCLAIM_POSITIVE_MARKERS)
     blocked_count = blocked_marker_count(line_text)
+
+    if class_id == "status_card_v2_missing_next_burden":
+        if is_status_card_v2_summary_line(line_text) and not contains_any_marker(
+            line_text,
+            STATUS_CARD_V2_NEXT_BURDEN_MARKERS,
+        ):
+            yield high_risk_span[0], len(line_text), line_text[high_risk_span[0] :].strip()
+        return
 
     if class_id == "accepted_positive_status_missing":
         if positive_span is None and blocked_count >= 2:

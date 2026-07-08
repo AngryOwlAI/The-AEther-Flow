@@ -1,0 +1,1 @@
+Status-card v2: matter_coupling. Positive status: accepted scoped evidence/precondition only for continuation. Exact scope: scoped source-side support. Blocked overread: not source-law adoption, not detector semantics, not coupling-law adoption, not stress-energy semantics, not matter action, not Einstein equations, not benchmark promotion, and not completed derivation.

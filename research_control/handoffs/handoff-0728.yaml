@@ -1,0 +1,81 @@
+handoff_id: "handoff-0728"
+handoff_type: "research_completion"
+created_at: "2026-07-08T20:41:56Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-035"
+decision_id: "DDR-20260708-035"
+job_id: "AJ-RT-20260708-035-001"
+agent_job_id: "AJ-RT-20260708-035-001"
+completion_path: "research_control/tasks/RT-20260708-035/jobs/completions/AJC-AJ-RT-20260708-035-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-035-001"
+created_by_task_id: "RT-20260708-035"
+created_by_job_id: "AJ-RT-20260708-035-001"
+previous_handoff_id: "handoff-0727"
+supersedes_handoff_id: "handoff-0727"
+status: "ready_for_next_bounded_packet"
+authority: "control"
+summary: "RT-20260708-035 completed v18 P9-T04 by adding status-card v2 claim-language linter tests and advisory warning support for missing next-burden fields and caveat-wall public summaries with no physics promotion."
+completion:
+  task_id: "RT-20260708-035"
+  job_id: "AJ-RT-20260708-035-001"
+  completion_id: "AJC-AJ-RT-20260708-035-001"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T04"
+  task_type: "status_card_v2_linter_tests"
+  closure_status: "v18_p9_t04_status_card_v2_linter_tests_completed_no_physics_delta"
+  validation_status: "PENDING"
+  completed_v18_tasks_this_packet:
+    - "P9-T04"
+  output_paths:
+    - "scripts/project_control/validate_claim_language.py"
+    - "research_control/design/claim_language_linter_taxonomy.yaml"
+    - "tests/test_validate_claim_language.py"
+    - "tests/fixtures/claim_language/status_card_v2_valid.md"
+    - "tests/fixtures/claim_language/status_card_v2_missing_next_burden.md"
+    - "tests/fixtures/claim_language/status_card_v2_caveat_wall.md"
+    - "research_control/tasks/RT-20260708-035/artifacts/p9_t04_status_card_v2_linter_report.json"
+linter_result:
+  status_card_v2_missing_next_burden_class: "status_card_v2_missing_next_burden"
+  missing_next_burden_warns: true
+  caveat_wall_public_summary_warns: true
+  overclaims_still_hard_fail: true
+  task_local_validator_status: "PASS"
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  ledger_row_updated: false
+physics_progress_status: "validator_update_no_physics_delta"
+new_mathematical_payload: []
+mathematical_payload_manifest: []
+claim_boundary_summary: "Status-card v2 linter tests do not create proof authority routing authority ledger override physics truth ranking source-law adoption detector-semantics adoption coupling-law adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation future source-extension impossibility or program-wide no-go conclusion."
+project_improvement_signals: []
+selected_next_route:
+  route_id: "public_cognitive_load_red_team_review"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P9"
+  plan_task_id: "P9-T05"
+  task_name: "Public cognitive-load red-team review"
+  role_family: "external-red-team-reviewer@0.1.0"
+  task_type: "public_cognitive_load_red_team_review"
+  target_derivation_milestone: "none"
+  milestone_burden: "Review public and reader-facing status surfaces for overclaim, underclaim, and cognitive overload."
+  requires_human_gate: false
+  expected_agent_job_scope: "One bounded P9-T05 packet reviewing public and reader-facing status surfaces for overclaim, underclaim, and cognitive overload."
+next_action: "Run one bounded v18 P9-T05 public cognitive-load red-team review packet."
+next_recommended_action: "Run one bounded v18 P9-T05 public cognitive-load red-team review packet."
+active_state_bifurcation:
+  latest_research_completion: "RT-20260708-035"
+  latest_research_task_id: "RT-20260708-035"
+  latest_research_handoff_id: "handoff-0728"
+  latest_research_next_action: "Run one bounded v18 P9-T05 public cognitive-load red-team review packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+operator_notes:
+  continue_research_boundary: "director_decision_required"
+  one_bounded_agentjob_limit: true

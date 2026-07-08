@@ -1,0 +1,133 @@
+{
+  "task_id": "RT-20260708-035",
+  "job_id": "AJ-RT-20260708-035-001",
+  "plan_task_id": "P9-T04",
+  "status": "PASS",
+  "checks": {
+    "taxonomy_has_status_card_v2_missing_next_burden_class": true,
+    "valid_status_card_v2_fixture_passes_without_findings": true,
+    "missing_next_burden_warns_without_hard_fail": true,
+    "caveat_wall_warns_without_hard_fail": true,
+    "overclaim_still_hard_fails": true
+  },
+  "case_reports": {
+    "valid": {
+      "status": "PASS",
+      "hard_fail_count": 0,
+      "warning_count": 0,
+      "finding_count": 0,
+      "overclaim_hard_fail_count": 0,
+      "underclaim_calibration_warning_count": 0,
+      "finding_kind_counts": {},
+      "scanned_path_count": 1,
+      "scanned_paths": [
+        "research_control/current_frontier.md"
+      ],
+      "config_errors": [],
+      "findings": []
+    },
+    "missing_next_burden": {
+      "status": "PASS",
+      "hard_fail_count": 0,
+      "warning_count": 1,
+      "finding_count": 1,
+      "overclaim_hard_fail_count": 0,
+      "underclaim_calibration_warning_count": 1,
+      "finding_kind_counts": {
+        "underclaim_calibration_warning": 1
+      },
+      "scanned_path_count": 1,
+      "scanned_paths": [
+        "research_control/current_frontier.md"
+      ],
+      "config_errors": [],
+      "findings": [
+        {
+          "path": "research_control/current_frontier.md",
+          "line": 1,
+          "class_id": "status_card_v2_missing_next_burden",
+          "matched_text": "matter_coupling. Positive status: accepted scoped evidence/precondition only for continuation. Exact scope: scoped source-side support. Blocked overread: not source-law adoption, not detector semantics, not coupling-law adoption, not stress-energy semantics, not matter action, not Einstein equations, not benchmark promotion, and not completed derivation.",
+          "severity": "warn_public_summary",
+          "surface_class": "current_public_surfaces",
+          "finding_kind": "underclaim_calibration_warning",
+          "corrective_language": "Add a concise next_burden/Next burden statement so the reader sees the next lawful burden before any downstream promotion.",
+          "context": "surface_policy"
+        }
+      ]
+    },
+    "caveat_wall": {
+      "status": "PASS",
+      "hard_fail_count": 0,
+      "warning_count": 2,
+      "finding_count": 2,
+      "overclaim_hard_fail_count": 0,
+      "underclaim_calibration_warning_count": 2,
+      "finding_kind_counts": {
+        "underclaim_calibration_warning": 2
+      },
+      "scanned_path_count": 1,
+      "scanned_paths": [
+        "research_control/current_frontier.md"
+      ],
+      "config_errors": [],
+      "findings": [
+        {
+          "path": "research_control/current_frontier.md",
+          "line": 1,
+          "class_id": "accepted_positive_status_missing",
+          "matched_text": "Status-card v2: matter_coupling status summary: not source-law adoption, not detector semantics, not coupling-law adoption, not matter coupling, not stress-energy semantics, not matter action, not Einstein equations, not benchmark promotion, and not completed derivation. Next burden: define the next lawful source-side coupling burden before any matter-coupling derivation or adoption claim.",
+          "severity": "warn_public_summary",
+          "surface_class": "current_public_surfaces",
+          "finding_kind": "underclaim_calibration_warning",
+          "corrective_language": "State the positive scoped status first, then the exact scope, allowed use, and blocked overread.",
+          "context": "surface_policy"
+        },
+        {
+          "path": "research_control/current_frontier.md",
+          "line": 1,
+          "class_id": "caveat_wall_public_summary",
+          "matched_text": "matter_coupling status summary: not source-law adoption, not detector semantics, not coupling-law adoption, not matter coupling, not stress-energy semantics, not matter action, not Einstein equations, not benchmark promotion, and not completed derivation. Next burden: define the next lawful source-side coupling burden before any matter-coupling derivation or adoption claim.",
+          "severity": "warn_public_summary",
+          "surface_class": "current_public_surfaces",
+          "finding_kind": "underclaim_calibration_warning",
+          "corrective_language": "Compress blocked overreads after a positive-first scoped status sentence.",
+          "context": "surface_policy"
+        }
+      ]
+    },
+    "overclaim": {
+      "status": "FAIL",
+      "hard_fail_count": 1,
+      "warning_count": 0,
+      "finding_count": 1,
+      "overclaim_hard_fail_count": 1,
+      "underclaim_calibration_warning_count": 0,
+      "finding_kind_counts": {
+        "overclaim_hard_fail": 1
+      },
+      "scanned_path_count": 1,
+      "scanned_paths": [
+        "research_control/current_frontier.md"
+      ],
+      "config_errors": [],
+      "findings": [
+        {
+          "path": "research_control/current_frontier.md",
+          "line": 2,
+          "class_id": "einstein_equation_overclaim",
+          "matched_text": "GR derived",
+          "severity": "hard_fail_current_public",
+          "surface_class": "current_public_surfaces",
+          "finding_kind": "overclaim_hard_fail",
+          "corrective_language": "State that Einstein-equation derivation remains blocked until matter coupling, stress-energy semantics, matter action, and gate criteria are satisfied.",
+          "context": "surface_policy"
+        }
+      ]
+    }
+  },
+  "claim_boundary": {
+    "validator_only": true,
+    "physics_claims_changed": false,
+    "physics_promotion_authorized": false
+  }
+}

@@ -1,14 +1,14 @@
 schema_id: "claim_language_linter_taxonomy_v1"
-schema_version: "1.4.0"
+schema_version: "1.5.0"
 authority: "control"
 status: "active"
 created_at: "2026-07-01T20:07:07Z"
 created_by_task_id: "RT-20260701-037"
 created_by_job_id: "AJ-RT-20260701-037-001"
 created_by_role: "project-control-maintainer@0.2.0"
-updated_at: "2026-07-06T07:42:05Z"
-updated_by_task_id: "RT-20260706-008"
-updated_by_job_id: "AJ-RT-20260706-008-001"
+updated_at: "2026-07-08T20:41:56Z"
+updated_by_task_id: "RT-20260708-035"
+updated_by_job_id: "AJ-RT-20260708-035-001"
 updated_by_role: "validator-engineer@0.2.0"
 purpose: "Machine-readable taxonomy for P3-T02 claim-language linter implementation."
 scope_note: "This taxonomy classifies risky wording. It does not prove, adopt, promote, or reject any physics claim."
@@ -62,6 +62,15 @@ source_materials:
   - path: "research_control/design/metric_use_ledger_schema_v1.md"
     role: "control_source"
     note: "P5-T03 adds metric-use linter coverage for forbidden g_eff proper-time detector-calibration and stress-energy overreads while preserving scoped source-extension context."
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+    role: "route_context"
+    note: "P9-T04 requires status-card v2 linter tests for missing next-burden fields and caveat-wall public summaries."
+  - path: "research_control/design/status_card_v2_schema.md"
+    role: "schema_source"
+    note: "Status-card v2 defines required next_burden, next_lawful_route, public_summary, and full_control_non_conclusions fields."
+  - path: "research_control/design/accepted_status_calibration_v2.yaml"
+    role: "calibration_source"
+    note: "P9-T01 populated status-card v2 rows and declares next_burden required for high-risk rows."
 
 authority_rules:
   taxonomy_is_physics_proof: false
@@ -895,6 +904,19 @@ phrase_classes:
     bad_phrases:
       - "Reader-facing summary repeats blocked claims so heavily that positive status is obscured"
     corrective_language: "Compress blocked overreads after a positive-first scoped status sentence."
+
+  - class_id: "status_card_v2_missing_next_burden"
+    plan_required_class_number: "P9-T04-A"
+    title: "Status-card v2 missing next burden"
+    default_severity: "warn_public_summary"
+    control_severity: "warn_current_control"
+    historical_severity: "warn_historical"
+    finding_kind: "underclaim_calibration_warning"
+    detection_kind: "accepted_underclaim_calibration"
+    forbidden_patterns: []
+    bad_phrases:
+      - "Status-card v2 high-risk row omits next_burden or Next burden"
+    corrective_language: "Add a concise next_burden/Next burden statement so the reader sees the next lawful burden before any downstream promotion."
 
 required_phrase_coverage:
   plan_phrases:

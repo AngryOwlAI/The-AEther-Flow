@@ -1,0 +1,178 @@
+completion_id: "AJC-AJ-RT-20260708-035-001"
+job_id: "AJ-RT-20260708-035-001"
+task_id: "RT-20260708-035"
+decision_id: "DDR-20260708-035"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-08T20:41:56Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  related_plan_task_id: "P9-T04"
+  plan_phase_id: "P9"
+  implemented_task_scope: "Added status-card v2 linter tests and advisory warning support for missing next_burden and caveat-wall public summaries."
+  recommendation_ids:
+    - "V18-R09"
+  completed_v18_tasks_this_packet:
+    - "P9-T04"
+  phase_p9_completed: false
+  downstream_tasks_not_implemented:
+    - "P9-T05 public cognitive-load red-team review"
+    - "P10 and later v18 tasks"
+  all_applicable_plan_tasks_proven: false
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+output_paths:
+  - "scripts/project_control/validate_claim_language.py"
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "tests/test_validate_claim_language.py"
+  - "tests/fixtures/claim_language/status_card_v2_valid.md"
+  - "tests/fixtures/claim_language/status_card_v2_missing_next_burden.md"
+  - "tests/fixtures/claim_language/status_card_v2_caveat_wall.md"
+  - "research_control/tasks/RT-20260708-035/artifacts/validate_p9_t04_status_card_v2_linter.py"
+  - "research_control/tasks/RT-20260708-035/artifacts/p9_t04_status_card_v2_linter_report.json"
+  - "research_control/tasks/RT-20260708-035/artifacts/p9_t04_status_card_v2_linter_receipt.md"
+  - "research_control/tasks/RT-20260708-035/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-035/DDR-20260708-035.md"
+  - "research_control/tasks/RT-20260708-035/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-035/jobs/AJ-RT-20260708-035-001.yaml"
+  - "research_control/tasks/RT-20260708-035/jobs/completions/AJC-AJ-RT-20260708-035-001.yaml"
+  - "research_control/tasks/RT-20260708-035/roles/validator-engineer@0.2.0--RT-20260708-035.yaml"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-0728.yaml"
+  - "research_control/handoffs/handoff-0728.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=778 relationship_row_count=3897 semantic_row_count=778 vault_row_count=778"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-034 latest_handoff=handoff-0727 boundary=director_decision_required next_action=P9-T04"
+  - ".venv/bin/python -m unittest tests.test_validate_claim_language | exit_code=0 | tests=39 status=OK"
+  - ".venv/bin/python research_control/tasks/RT-20260708-035/artifacts/validate_p9_t04_status_card_v2_linter.py --write-report --json | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 778
+    relationship_row_count: 3897
+    semantic_row_count: 778
+    vault_row_count: 778
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"status card v2 linter tests next burden caveat wall\" --limit 10 --json"
+      query_type: "search"
+      query_text: "status card v2 linter tests next burden caveat wall"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "continue_research.py resolved handoff-0727 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "taxonomy adds status_card_v2_missing_next_burden advisory class"
+      - "focused unittest suite covers valid, missing-next-burden, caveat-wall, and overclaim cases"
+      - "task-local status-card v2 linter validator passed"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "global validators run after control receipts and generated derivatives are refreshed"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command is run after this completion receipt is written"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current-frontier and compact-frontier renderers were refreshed after program_state and handoff updates"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap and validate-only are run after generated outputs are refreshed"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "changed claim language validation is run after generated outputs are refreshed"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-08"
+  validator_packet_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+linter_result:
+  missing_next_burden_warning_class_id: "status_card_v2_missing_next_burden"
+  caveat_wall_warning_class_id: "caveat_wall_public_summary"
+  overclaim_hard_fail_class_id: "einstein_equation_overclaim"
+  task_local_validator_status: "PASS"
+  validator_report_path: "research_control/tasks/RT-20260708-035/artifacts/p9_t04_status_card_v2_linter_report.json"
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  ledger_row_updated: false
+new_mathematical_payload: []
+mathematical_payload_manifest: []
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R09"
+  implements_plan_task_id: "P9-T04"
+  implementation_status: "completed"
+  coverage_effect: "direct_validator_test_coverage_no_physics_promotion"
+claim_boundary:
+  allowed_claims:
+    - "v18 P9-T04 status-card v2 linter tests completed"
+    - "missing next_burden status-card v2 high-risk rows warn on configured surfaces"
+    - "caveat-wall public summaries warn"
+    - "overclaims still hard-fail"
+    - "next route is P9-T05"
+  forbidden_claims:
+    - "linter pass as proof authority"
+    - "linter pass as Distance-to-GR ledger override"
+    - "linter warning as physics truth ranking"
+    - "source-law adoption"
+    - "detector-semantics adoption"
+    - "coupling-law adoption"
+    - "matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+project_improvement_signals: []
+selected_next_route:
+  route_id: "public_cognitive_load_red_team_review"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P9"
+  plan_task_id: "P9-T05"
+  task_name: "Public cognitive-load red-team review"
+  role_family: "external-red-team-reviewer@0.1.0"
+  task_type: "public_cognitive_load_red_team_review"
+  target_derivation_milestone: "none"
+  milestone_burden: "Review public and reader-facing status surfaces for overclaim, underclaim, and cognitive overload."
+  requires_human_gate: false
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

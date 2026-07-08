@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-034`
-- Latest handoff: `handoff-0727`
-- Current status: `v18_p9_t03_public_documentation_status_card_v2_calibration_completed_no_physics_delta`
+- Active task: `RT-20260708-035`
+- Latest handoff: `handoff-0728`
+- Current status: `v18_p9_t04_status_card_v2_linter_tests_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-034`
-- Latest research handoff: `handoff-0727`
-- Latest research next action: Run one bounded v18 P9-T04 status-card v2 linter tests packet.
+- Latest research task: `RT-20260708-035`
+- Latest research handoff: `handoff-0728`
+- Latest research next action: Run one bounded v18 P9-T05 public cognitive-load red-team review packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `status_card_v2_linter_tests`
-- Role family: `validator-engineer@0.2.0`
+- Route ID: `public_cognitive_load_red_team_review`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `none`
-- Milestone burden: Add linter tests for missing next-burden fields and caveat-wall public summaries.
+- Milestone burden: Review public and reader-facing status surfaces for overclaim, underclaim, and cognitive overload.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `5f9d2e8625212a9601cc1c6b32b494bfd73f62fe5970c5792b86abb115e9accf`
-- JSON SHA-256: `8be774d16f8f698cf426d6f179d3d9df117ec8463ae607cffb7a4dd3a5f9f23b`
+- YAML SHA-256: `2bbb875d8a109d9df3fa48bb94be6fc9b01b8563d4d09935a7f3bcc0d45c313c`
+- JSON SHA-256: `7045de1c9c90e8cdafc7ca1aa0e1f9041603f4cb4d448ee167820956e276bbf0`
 
 ## Authority Warning
 
