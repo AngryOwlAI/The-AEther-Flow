@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-005` and `handoff-0698`.
+`RT-20260708-006` and `handoff-0699`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-005` |
-| Latest handoff ID | `handoff-0698` |
-| Current status | `v18_p4_t05_countermodel_obligation_pilot_completed_no_promotion` |
+| Active task ID | `RT-20260708-006` |
+| Latest handoff ID | `handoff-0699` |
+| Current status | `v18_p4_t06_countermodel_obligation_red_team_pass_no_promotion` |
 | V16 completed | false |
-| Current route family | v18 p4 t06 countermodel obligation red team review no promotion |
+| Current route family | v18 p5 t01 post p4 source equivalence route selector no promotion |
 | Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: countermodel_obligation_pilot_no_promotion |
-| Required next authority | Run one bounded v18 P4-T06 countermodel-obligation red-team review. |
-| Next recommended action | Run one bounded v18 P4-T06 countermodel-obligation red-team review. |
+| Current burden | `source_equivalence_eqsrc`; status: countermodel_obligation_red_team_pass_no_promotion |
+| Required next authority | Run one bounded v18 P5-T01 post-P4 source-equivalence route selector. |
+| Next recommended action | Run one bounded v18 P5-T01 post-P4 source-equivalence route selector. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-005` |
-| Latest research handoff ID | `handoff-0698` |
-| Latest research next action | Run one bounded v18 P4-T06 countermodel-obligation red-team review. |
+| Latest research task ID | `RT-20260708-006` |
+| Latest research handoff ID | `handoff-0699` |
+| Latest research next action | Run one bounded v18 P5-T01 post-P4 source-equivalence route selector. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-005/00_TASK.yaml`.
-- Active task objective: not recorded.
-- Latest handoff path: `research_control/handoffs/handoff-0698.yaml`.
-- Latest handoff summary: Completed v18 P4-T05 by piloting the countermodel-obligation registry on P3 EqSrc family-closure outputs. The invariant-ledger slot is listed and deferred with reason by DDR-20260708-005. No physics promotion or broad no-go conclusion is authorized.
-- Current route family: v18 p4 t06 countermodel obligation red team review no promotion.
-- Next recommended action: Run one bounded v18 P4-T06 countermodel-obligation red-team review.
+- Active task path: `research_control/tasks/RT-20260708-006/00_TASK.yaml`.
+- Active task objective: Red-team the P4 countermodel-obligation system for false blockage overclaim process-authority laundering and process orbit risk without promoting any physics claim.
+- Latest handoff path: `research_control/handoffs/handoff-0699.yaml`.
+- Latest handoff summary: Completed v18 P4-T06 by red-teaming the P4 countermodel-obligation system. The review result is pass: no blocking false-blockage overclaim theorem-substitution or process-orbit defect was found as written. No physics promotion is authorized.
+- Current route family: v18 p5 t01 post p4 source equivalence route selector no promotion.
+- Next recommended action: Run one bounded v18 P5-T01 post-P4 source-equivalence route selector.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P4-T06 countermodel-obligation red-team review.
+Run one bounded v18 P5-T01 post-P4 source-equivalence route selector.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,13 +320,14 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-005`;
-- latest handoff: `handoff-0698`;
-- current status: `v18_p4_t05_countermodel_obligation_pilot_completed_no_promotion`;
+- active task: `RT-20260708-006`;
+- latest handoff: `handoff-0699`;
+- current status: `v18_p4_t06_countermodel_obligation_red_team_pass_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `continue_research_json`: PASS;
+- latest handoff validation `global_red_team_review_validator`: PASS;
 - latest handoff validation `memory_preflight`: PASS;
 - latest handoff validation `query_memory_status`: PASS;
 - latest handoff validation `task_local_validator`: PASS;
@@ -336,8 +337,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0698.yaml`
-- `research_control/tasks/RT-20260708-005/00_TASK.yaml`
+- `research_control/handoffs/handoff-0699.yaml`
+- `research_control/tasks/RT-20260708-006/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -353,7 +354,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0698*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0699*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

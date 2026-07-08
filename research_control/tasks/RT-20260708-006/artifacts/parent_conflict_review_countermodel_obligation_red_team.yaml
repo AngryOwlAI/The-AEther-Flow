@@ -1,0 +1,17 @@
+parent_review_id: "parent-conflict-RT-20260708-006"
+task_id: "RT-20260708-006"
+agent_job_id: "AJ-RT-20260708-006-001"
+status: "pass"
+child_reviews:
+  - "research_control/tasks/RT-20260708-006/artifacts/child_phys_math_countermodel_obligation_red_team.yaml"
+  - "research_control/tasks/RT-20260708-006/artifacts/child_phys_phil_countermodel_obligation_red_team.yaml"
+conflicts_detected: false
+conflict_summary: "No blocking conflict. The math review emphasizes proof-status discipline; the ontology/process review emphasizes anti-orbit routing discipline."
+resolved_findings:
+  - finding_id: "P4-T06-PARENT-001"
+    resolution: "Treat status vocabulary risk as advisory, not repair-required, because the pilot and policy already block proof and promotion overread."
+  - finding_id: "P4-T06-PARENT-002"
+    resolution: "Treat process-orbit risk as controlled by the pass-to-P5-T01 routing criterion."
+selected_result: "pass"
+selected_next_route: "P5-T01"
+physics_promotion_authorized: false

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-005`
-- Latest handoff: `handoff-0698`
-- Current status: `v18_p4_t05_countermodel_obligation_pilot_completed_no_promotion`
+- Active task: `RT-20260708-006`
+- Latest handoff: `handoff-0699`
+- Current status: `v18_p4_t06_countermodel_obligation_red_team_pass_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-005`
-- Latest research handoff: `handoff-0698`
-- Latest research next action: Run one bounded v18 P4-T06 countermodel-obligation red-team review.
+- Latest research task: `RT-20260708-006`
+- Latest research handoff: `handoff-0699`
+- Latest research next action: Run one bounded v18 P5-T01 post-P4 source-equivalence route selector.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `countermodel_obligation_red_team_review`
-- Role family: `external-red-team-reviewer@0.1.0`
+- Route ID: `post_p4_source_equivalence_route_selector`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Stress the countermodel obligation system for false blockage, overclaim, and process orbit.
+- Milestone burden: Select the next source-equivalence continuation route after P4 countermodel-obligation controls pass red-team review.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `c97e11eff377444a621a707c99cabc6535c8aae47fdfc60e0e2607e68c619b7d`
-- JSON SHA-256: `f13f1f858411a3864610291745f451240744d8c16535c9d6c37667806e0637c8`
+- YAML SHA-256: `89240af682693e85da74eded3d3d20f9b4cc9b94fcf99f0bd8aafb91eaacba87`
+- JSON SHA-256: `4c5fb53736d2cf703d1426112f690d2ca781bf2e0a4e7e5d970f0706da5b4528`
 
 ## Authority Warning
 
