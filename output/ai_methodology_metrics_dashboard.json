@@ -63,9 +63,9 @@
   "generated_from": {
     "source_hashes": {
       "implementations_plans/recommendations_implementation_plan_continue_task-v17.md": "b83a27c7dec0323bea5bfd154590d906de98b4a950aa39b6219c8e5add810e2a",
-      "output/physics_progress_metrics.json": "335b815cf448f1acc703e218319fc7c8787c1876a16be95187da67d0a808b932",
-      "output/physics_progress_metrics.md": "f32ae3d1afc588fcd70c66803d37f0b477342154cc51b93463c8d4b7c9a7ca88",
-      "research_control/current_frontier.md": "3d1eae93b4b912e0cd79628166abede5c707b464df33eae227cc9624e8fbd941",
+      "output/physics_progress_metrics.json": "01b1737ecb5d22cfeebd0e2338319ada1c628dcee5b0ebc8383dfff077ba6b01",
+      "output/physics_progress_metrics.md": "f7a8e9449fada67dc713ceca15f687ac6735e5d0ae4114ab8bd602be812108ad",
+      "research_control/current_frontier.md": "af2360f541b96c5860d64017630bcfcb683b697dd07316b544ef13e92d9a8795",
       "research_control/design/ai_research_agent_metrics_taxonomy_v1.md": "bb373ae346c855695d0002605410b2113e6aa9a703bce90604c549a66222e439",
       "research_control/design/v17_recommendation_backlog.yaml": "4323df2cd41e3af4eec00594ab1103635b1c5c9bae705721973c3d59c81b248d",
       "research_control/handoffs/handoff-0667.yaml": "60b5a381a77a457c0ba12af96666dc088948f59e8ef368c4e0990f3c0b9cb001",
@@ -92,16 +92,16 @@
         "physics_promotion_authorized": false
       },
       "dashboard_label": "AI-system diagnostic",
-      "denominator_value": 394,
+      "denominator_value": 402,
       "diagnostic_interpretation": "Forbidden-conclusion summaries are counted as eligible overclaim-control surfaces; caught means no physics promotion was authorized.",
       "diagnostic_label": "AI-system diagnostic",
       "family": "Claim-boundary control",
       "interpretation_guardrail": "A high rate means better boundary control; it does not prove any physics claim.",
       "metric_id": "overclaim_catch_rate",
-      "numerator_value": 367,
+      "numerator_value": 375,
       "status": "measured",
       "uncertainty_note": "",
-      "value": 0.9315
+      "value": 0.9328
     },
     {
       "authority_boundary": {
@@ -152,16 +152,16 @@
         "physics_promotion_authorized": false
       },
       "dashboard_label": "AI-system diagnostic",
-      "denominator_value": 444,
+      "denominator_value": 467,
       "diagnostic_interpretation": "Repeated-burden streaks are process warnings only and do not change Distance-to-GR status.",
       "diagnostic_label": "AI-system diagnostic",
       "family": "Route dynamics",
       "interpretation_guardrail": "This is a process-warning metric; it is advisory unless a separate validator or policy makes a gate.",
       "metric_id": "route_orbit_rate",
-      "numerator_value": 0,
+      "numerator_value": 1,
       "status": "measured",
       "uncertainty_note": "",
-      "value": 0.0
+      "value": 0.0021
     },
     {
       "authority_boundary": {
@@ -172,16 +172,16 @@
         "physics_promotion_authorized": false
       },
       "dashboard_label": "AI-system diagnostic",
-      "denominator_value": 52,
+      "denominator_value": 55,
       "diagnostic_interpretation": "Candidate outputs are counted as audit-eligible only when tracked fields expose candidate result or pending-audit status.",
       "diagnostic_label": "AI-system diagnostic",
       "family": "Candidate life cycle",
       "interpretation_guardrail": "Eligibility for audit is not audit survival, adoption, or matter-coupling derivation.",
       "metric_id": "candidate_to_audit_conversion",
-      "numerator_value": 43,
+      "numerator_value": 44,
       "status": "measured",
       "uncertainty_note": "",
-      "value": 0.8269
+      "value": 0.8
     },
     {
       "authority_boundary": {
@@ -192,16 +192,16 @@
         "physics_promotion_authorized": false
       },
       "dashboard_label": "AI-system diagnostic",
-      "denominator_value": 83,
+      "denominator_value": 86,
       "diagnostic_interpretation": "This is an aggregate route-stage proxy; candidate lineage across audit and stress is not yet deterministic.",
       "diagnostic_label": "AI-system diagnostic",
       "family": "Candidate life cycle",
       "interpretation_guardrail": "Reaching stress means the candidate remains testable; it does not mean the candidate is true or adopted.",
       "metric_id": "audit_to_stress_survival",
-      "numerator_value": 83,
+      "numerator_value": 87,
       "status": "partial",
       "uncertainty_note": "Partial because the current completion records count stage occurrences, not candidate-linked transitions.",
-      "value": 1.0
+      "value": 1.0116
     },
     {
       "authority_boundary": {
@@ -212,7 +212,7 @@
         "physics_promotion_authorized": false
       },
       "dashboard_label": "AI-system diagnostic",
-      "denominator_value": 83,
+      "denominator_value": 87,
       "diagnostic_interpretation": "Stress survival is counted only as a non-promotional candidate-status outcome.",
       "diagnostic_label": "AI-system diagnostic",
       "family": "Candidate life cycle",
@@ -221,7 +221,7 @@
       "numerator_value": 34,
       "status": "partial",
       "uncertainty_note": "Partial because draft/control survivor lineage is not fully normalized across historical receipts.",
-      "value": 0.4096
+      "value": 0.3908
     },
     {
       "authority_boundary": {
@@ -234,8 +234,8 @@
       "dashboard_label": "AI-system diagnostic",
       "denominator_value": {
         "per_phase_registered_task_rows": {
-          "P0": 14,
-          "P1": 14,
+          "P0": 18,
+          "P1": 19,
           "P10": 15,
           "P11": 14,
           "P12": 14,
@@ -244,17 +244,17 @@
           "P15": 6,
           "P16": 6,
           "P17": 6,
-          "P2": 24,
-          "P3": 23,
-          "P4": 34,
-          "P5": 38,
-          "P6": 21,
+          "P2": 30,
+          "P3": 29,
+          "P4": 40,
+          "P5": 45,
+          "P6": 26,
           "P7": 49,
           "P8": 18,
           "P9": 14,
-          "unclassified": 475
+          "unclassified": 476
         },
-        "registered_task_rows": 808
+        "registered_task_rows": 848
       },
       "diagnostic_interpretation": "Gate-load signals are governance workload diagnostics, not Gate Chair scientific verdicts.",
       "diagnostic_label": "AI-system diagnostic",
@@ -284,22 +284,22 @@
         "physics_promotion_authorized": false
       },
       "dashboard_label": "AI-system diagnostic",
-      "denominator_value": 545,
+      "denominator_value": 562,
       "diagnostic_interpretation": "Payload balance compares mathematical payload items to process-only items; it is not proof authority.",
       "diagnostic_label": "AI-system diagnostic",
       "family": "Payload balance",
       "interpretation_guardrail": "This ratio is a productivity and balance signal; neither numerator nor denominator creates proof authority by itself.",
       "metric_id": "proof_to_process_ratio",
-      "numerator_value": 846,
+      "numerator_value": 896,
       "status": "measured",
       "uncertainty_note": "",
-      "value": 1.5523
+      "value": 1.5943
     }
   ],
   "plan_task_id": "P12-T04",
   "schema_id": "ai_methodology_metrics_dashboard_v1",
   "source_metrics_report": {
-    "as_of": "2026-07-07T00:57:15Z",
+    "as_of": "2026-07-08T10:45:00Z",
     "metric_separation_guard_status": "pass",
     "report_id": "research_control_metrics_separation",
     "source_basis": [

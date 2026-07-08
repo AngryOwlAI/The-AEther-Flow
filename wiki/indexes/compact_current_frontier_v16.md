@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-017`
-- Latest handoff: `handoff-0710`
-- Current status: `v18_p6_t04_finite_toy_response_v2_zoo_integrated_no_promotion`
+- Active task: `RT-20260708-018`
+- Latest handoff: `handoff-0711`
+- Current status: `v18_p6_t05_finite_toy_response_v2_selector_p7_t01_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-017`
-- Latest research handoff: `handoff-0710`
-- Latest research next action: Run one bounded v18 P6-T05 finite toy response v2 selector packet.
+- Latest research task: `RT-20260708-018`
+- Latest research handoff: `handoff-0711`
+- Latest research next action: Run one bounded v18 P7-T01 support formalization target selector packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `finite_toy_response_v2_selector`
+- Route ID: `support_formalization_target_selector_v18`
 - Role family: `theoretical-continuation-selector@0.1.0`
-- Target milestone: `finite_toy_metric_response`
-- Milestone burden: Select repair, freeze, source detector/readout continuation, or upstream return after finite toy response v2.
+- Target milestone: `source_equivalence_eqsrc`
+- Milestone burden: Select the first support-only formalization target from the v18 recommendation set.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `621a8f4a0dd7230110796e8acff1d0e8414a163c18f8241a660446f62998b896`
-- JSON SHA-256: `7e3b554d36b25c0d3e888d5ef178b9693dd31166519606e40dc29665c31601e5`
+- YAML SHA-256: `3015cdbeae27cd749b420d7fd399052beff46ab25b13852493f0db3eb30eac63`
+- JSON SHA-256: `74e7f28d22a510ab04e3fe978f7697c8b57962ee1dc65b26f21fb777ad264e31`
 
 ## Authority Warning
 
