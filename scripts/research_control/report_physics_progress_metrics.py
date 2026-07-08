@@ -42,16 +42,57 @@ OPERATIONAL_METRIC_KEY_TOKENS = {
     "generated",
     "memory",
     "payload_density",
+    "payload_ratio",
     "route_orbit",
     "wiki",
     "receipt",
     "role_schema",
     "handoff_continuity",
 }
+PROJECT_SYSTEM_AUTHORITY_LEVELS = {
+    "project_control",
+    "process_control",
+    "routing_control",
+}
+PROJECT_SYSTEM_TASK_TOKENS = (
+    "audit",
+    "checkpoint",
+    "control",
+    "dashboard",
+    "documentation",
+    "handoff",
+    "ledger",
+    "memory",
+    "metrics",
+    "policy",
+    "process",
+    "ratio",
+    "registry",
+    "route_history",
+    "route_orbit",
+    "schema",
+    "support",
+    "validator",
+)
+THEOREM_COUNTERMODEL_CLASSES = {
+    "new_theorem_statement",
+    "proved_theorem",
+    "conditional_theorem",
+    "proof_attempt",
+    "countermodel",
+    "obstruction",
+}
+PHYSICS_BEARING_PAYLOAD_CLASSES = THEOREM_COUNTERMODEL_CLASSES | {
+    "new_definition",
+    "finite_witness",
+    "dependency_map_update",
+    "source_extension_classification",
+}
 SUPPORT_ONLY_CHECKER_ID = "finite_local_candidate_checker"
 SUPPORT_ONLY_CHECKER_REPORT_GLOB = "research_control/tasks/*/artifacts/*checker_report.json"
 SUPPORT_ONLY_BOUNDARY_REQUIRED_PHRASES = ("support-only", "not proof authority")
 AI_METHODOLOGY_TAXONOMY_PATH = "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
+PHYSICS_PAYLOAD_RATIO_POLICY_PATH = "research_control/design/physics_payload_ratio_policy_v1.md"
 AI_METHODOLOGY_REQUIRED_METRICS = (
     "overclaim_catch_rate",
     "underclaim_warning_rate",
@@ -170,7 +211,7 @@ def completion_text(repo_root: Path, path_text: str) -> str:
     return path.read_text(encoding="utf-8") if path.exists() else ""
 
 
-def load_completion(repo_root: Path, path_text: str) -> dict[str, Any]:
+def load_yaml_document(repo_root: Path, path_text: str) -> dict[str, Any]:
     if not path_text:
         return {}
     path = repo_root / path_text
@@ -180,6 +221,10 @@ def load_completion(repo_root: Path, path_text: str) -> dict[str, Any]:
         return load_yaml(path)
     except StrictYamlError:
         return {}
+
+
+def load_completion(repo_root: Path, path_text: str) -> dict[str, Any]:
+    return load_yaml_document(repo_root, path_text)
 
 
 def status_from_progress(completion: dict[str, Any]) -> str:
@@ -216,6 +261,13 @@ def dict_value(value: Any) -> dict[str, Any]:
 
 def string_value(value: Any) -> str:
     return str(value).strip() if value is not None else ""
+
+
+def int_value(value: Any, default: int = 0) -> int:
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
 
 
 def payload_count(completion: dict[str, Any]) -> int:
@@ -302,7 +354,10 @@ def completion_record(
         "task_id": first_nonblank(completion.get("task_id"), row.get("task_id", "")),
         "job_id": row.get("job_id", ""),
         "role_id": row.get("role_id", ""),
+        "role_version": row.get("role_version", ""),
+        "job_path": row.get("job_path", ""),
         "completion_path": completion_path,
+        "created_at": row.get("created_at", ""),
         "completed_at": row.get("completed_at", ""),
         "is_physics": is_physics,
         "text": completion_text(repo_root, completion_path),
@@ -444,6 +499,275 @@ def collect_physics_progress_integration_metrics(
             "payload_density": float(overall_payload.get("payload_density", 0.0)),
             "task_payload_density": float(overall_payload.get("task_payload_density", 0.0)),
             "payload_class_counts": dict(sorted(payload_class_counts.items())),
+        },
+    }
+
+
+def has_payload_classes(task_row: dict[str, Any], classes: set[str]) -> bool:
+    counts = task_row.get("payload_class_counts")
+    if not isinstance(counts, dict):
+        return False
+    return sum(int_value(counts.get(class_id, 0)) for class_id in classes) > 0
+
+
+def is_project_system_role(role: dict[str, str] | None) -> bool:
+    if not role:
+        return False
+    role_kind = role.get("role_kind", "").lower()
+    authority = role.get("authority_level", "").lower()
+    return (
+        authority in PROJECT_SYSTEM_AUTHORITY_LEVELS
+        or role_kind.startswith(("project_", "process_", "routing_"))
+        or "validation" in role_kind
+        or "documentation" in role_kind
+    )
+
+
+def is_project_system_task(
+    task_row: dict[str, str],
+    task_doc: dict[str, Any],
+    job_doc: dict[str, Any],
+    role: dict[str, str] | None,
+) -> bool:
+    task_type = " ".join(
+        [
+            task_row.get("task_type", ""),
+            string_value(task_doc.get("task_type")),
+            string_value(job_doc.get("route_label")),
+        ]
+    ).lower()
+    milestone = first_nonblank(
+        task_doc.get("target_derivation_milestone"),
+        job_doc.get("target_derivation_milestone"),
+    ).lower()
+    project_boundary = bool_value(job_doc.get("project_system_boundary_authorized_by_plan")) is True
+    support_only = bool_value(job_doc.get("support_only")) is True
+    return (
+        is_project_system_role(role)
+        or milestone == "none"
+        or project_boundary
+        or support_only
+        or any(token in task_type for token in PROJECT_SYSTEM_TASK_TOKENS)
+    )
+
+
+def task_payload_row_by_task_id(payload_report: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    rows = payload_report.get("task_rows") if isinstance(payload_report, dict) else []
+    if not isinstance(rows, list):
+        return {}
+    return {
+        string_value(row.get("task_id")): row
+        for row in rows
+        if isinstance(row, dict) and string_value(row.get("task_id"))
+    }
+
+
+def task_payload_item_count(record: dict[str, Any], payload_row: dict[str, Any]) -> int:
+    del payload_row
+    return int_value(record.get("payload_count", 0))
+
+
+def task_has_theorem_countermodel_candidate_signal(
+    record: dict[str, Any],
+    task_row: dict[str, str],
+    task_doc: dict[str, Any],
+    payload_row: dict[str, Any],
+) -> bool:
+    task_text = " ".join(
+        [
+            task_row.get("task_type", ""),
+            string_value(task_doc.get("task_type")),
+            record.get("progress_status", ""),
+            record.get("candidate_result_type", ""),
+            record.get("text", ""),
+        ]
+    ).lower()
+    return (
+        has_payload_classes(payload_row, THEOREM_COUNTERMODEL_CLASSES)
+        or has_candidate_signal(record)
+        or has_obstruction_signal(record)
+        or any(token in task_text for token in ("theorem", "lemma", "proposition", "countermodel", "candidate"))
+    )
+
+
+def classify_payload_ratio_route_history(
+    repo_root: Path,
+    completion_records: list[dict[str, Any]],
+    task_rows: list[dict[str, str]],
+    roles: dict[tuple[str, str], dict[str, str]],
+    payload_report: dict[str, Any],
+) -> list[dict[str, Any]]:
+    task_registry_by_id = {
+        row.get("task_id", ""): row
+        for row in task_rows
+        if row.get("task_id")
+    }
+    payload_by_task_id = task_payload_row_by_task_id(payload_report)
+
+    rows: list[dict[str, Any]] = []
+    for record in sorted(completion_records, key=lambda item: (item.get("created_at", ""), item.get("job_id", ""))):
+        task_id = record.get("task_id", "")
+        task_row = task_registry_by_id.get(task_id, {})
+        task_path = task_row.get("task_path", "")
+        task_doc = load_yaml_document(repo_root, f"{task_path}/00_TASK.yaml") if task_path else {}
+        job_doc = load_yaml_document(repo_root, record.get("job_path", ""))
+        role = roles.get(role_key(record.get("role_id", ""), record.get("role_version", "")))
+        payload_row = payload_by_task_id.get(task_id, {})
+        math_payload_count = task_payload_item_count(record, payload_row)
+        candidate_signal = has_candidate_signal(record)
+        theorem_countermodel_candidate_signal = task_has_theorem_countermodel_candidate_signal(
+            record,
+            task_row,
+            task_doc,
+            payload_row,
+        )
+        physics_bearing = (
+            record.get("is_physics") is True
+            and (
+                math_payload_count > 0
+                or has_payload_classes(payload_row, PHYSICS_BEARING_PAYLOAD_CLASSES)
+                or candidate_signal
+                or has_obstruction_signal(record)
+            )
+        )
+        project_system = is_project_system_task(task_row, task_doc, job_doc, role) and not physics_bearing
+        support_only = project_system or bool_value(job_doc.get("support_only")) is True
+
+        rows.append(
+            {
+                "task_id": task_id,
+                "job_id": record.get("job_id", ""),
+                "role_id": record.get("role_id", ""),
+                "task_type": first_nonblank(task_row.get("task_type", ""), task_doc.get("task_type")),
+                "completed_at": record.get("completed_at", ""),
+                "project_system_task": project_system,
+                "physics_bearing_task": physics_bearing,
+                "support_only_task": support_only,
+                "mathematical_payload_items": math_payload_count,
+                "theorem_countermodel_candidate_signal": theorem_countermodel_candidate_signal,
+                "candidate_construction_signal": candidate_signal,
+                "completion_path": record.get("completion_path", ""),
+            }
+        )
+    return rows
+
+
+def trailing_run_length(rows: list[dict[str, Any]], key: str) -> int:
+    run_length = 0
+    for row in reversed(rows):
+        if row.get(key) is True:
+            run_length += 1
+            continue
+        break
+    return run_length
+
+
+def count_since_last_physics_payload(rows: list[dict[str, Any]]) -> int:
+    count = 0
+    for row in reversed(rows):
+        if row.get("physics_bearing_task") is True:
+            break
+        if row.get("support_only_task") is True:
+            count += 1
+    return count
+
+
+def route_orbit_warning_status(diagnostic_warnings: list[dict[str, Any]]) -> dict[str, Any]:
+    route_warnings = [
+        warning
+        for warning in diagnostic_warnings
+        if "route" in string_value(warning.get("warning_id")).lower()
+        or "burden" in string_value(warning.get("warning_id")).lower()
+        or "cycle" in string_value(warning.get("metric_key")).lower()
+    ]
+    return {
+        "status": "warning" if route_warnings else "clear",
+        "warning_ids": [string_value(warning.get("warning_id")) for warning in route_warnings],
+        "hard_gate": any(bool_value(warning.get("hard_gate")) is True for warning in route_warnings),
+        "physics_claim_authority": any(
+            bool_value(warning.get("physics_claim_authority")) is True
+            for warning in route_warnings
+        ),
+        "advisory_only": True,
+    }
+
+
+def collect_physics_payload_ratio_diagnostics(
+    repo_root: Path,
+    completion_records: list[dict[str, Any]],
+    task_rows: list[dict[str, str]],
+    roles: dict[tuple[str, str], dict[str, str]],
+    payload_report: dict[str, Any],
+    route_orbit_risk_metrics: dict[str, Any],
+    diagnostic_warnings: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Compute P8-T02 support-only route-history and payload-ratio diagnostics."""
+    route_history = classify_payload_ratio_route_history(
+        repo_root,
+        completion_records,
+        task_rows,
+        roles,
+        payload_report,
+    )
+    project_system_task_count = sum(1 for row in route_history if row["project_system_task"])
+    physics_bearing_task_count = sum(1 for row in route_history if row["physics_bearing_task"])
+    support_only_task_count = sum(1 for row in route_history if row["support_only_task"])
+    new_mathematical_payload_count = sum(
+        int_value(row["mathematical_payload_items"])
+        for row in route_history
+    )
+    theorem_countermodel_candidate_count = sum(
+        1 for row in route_history if row["theorem_countermodel_candidate_signal"]
+    )
+    candidate_construction_count = sum(
+        1 for row in route_history if row["candidate_construction_signal"]
+    )
+
+    diagnostics = {
+        "project_system_task_run_length": trailing_run_length(route_history, "project_system_task"),
+        "physics_bearing_task_run_length": trailing_run_length(route_history, "physics_bearing_task"),
+        "new_mathematical_payload_count": new_mathematical_payload_count,
+        "theorem_countermodel_candidate_count": theorem_countermodel_candidate_count,
+        "candidate_construction_count": candidate_construction_count,
+        "support_only_task_count_since_last_physics_payload": count_since_last_physics_payload(route_history),
+        "route_orbit_warning_status": route_orbit_warning_status(diagnostic_warnings),
+        "project_system_task_count": project_system_task_count,
+        "physics_bearing_task_count": physics_bearing_task_count,
+        "support_only_task_count": support_only_task_count,
+        "physics_bearing_to_project_system_task_ratio": ratio(
+            physics_bearing_task_count,
+            project_system_task_count,
+        ),
+        "new_mathematical_payload_to_support_only_task_ratio": ratio(
+            new_mathematical_payload_count,
+            support_only_task_count,
+        ),
+        "route_orbit_same_burden_repetition_count": int_value(
+            route_orbit_risk_metrics.get("same_burden_repetition_count", 0)
+        ),
+    }
+
+    return {
+        "schema_id": "physics_payload_ratio_route_history_metrics_v1",
+        "status": "measured",
+        "policy_source_path": PHYSICS_PAYLOAD_RATIO_POLICY_PATH,
+        "calculation_window": "all tracked completion records available at report generation",
+        "metrics": diagnostics,
+        "route_history_tail": route_history[-10:],
+        "classification_counts": {
+            "route_history_records": len(route_history),
+            "project_system_task_count": project_system_task_count,
+            "physics_bearing_task_count": physics_bearing_task_count,
+            "support_only_task_count": support_only_task_count,
+        },
+        "authority_boundary": {
+            "ai_system_diagnostics_only": True,
+            "does_not_rank_physics_truth": True,
+            "not_physics_proof": True,
+            "physics_claim_promotion_authorized": False,
+            "benchmark_promotion_authorized": False,
+            "gate_chair_verdict_created": False,
+            "completed_derivation_authorized": False,
         },
     }
 
@@ -1481,12 +1805,22 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
         route_orbit_risk_metrics,
         diagnostic_warnings,
     )
+    physics_payload_ratio_diagnostics = collect_physics_payload_ratio_diagnostics(
+        repo_root,
+        completion_records,
+        task_rows,
+        roles,
+        scientific_payload_density_report,
+        route_orbit_risk_metrics,
+        diagnostic_warnings,
+    )
     separation_violations = scientific_metric_key_violations(scientific_progress_metrics)
     metrics = {
         "operational_validation_metrics": operational_validation_metrics,
         "scientific_progress_metrics": scientific_progress_metrics,
         "payload_density_metrics": payload_density_metrics,
         "route_orbit_risk_metrics": route_orbit_risk_metrics,
+        "physics_payload_ratio_diagnostics": physics_payload_ratio_diagnostics,
         "physics_progress_integration_metrics": physics_progress_integration_metrics,
         "ai_research_agent_methodology_metrics": ai_research_agent_methodology_metrics,
         "diagnostic_warnings": diagnostic_warnings,
@@ -1522,11 +1856,13 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
             "registries/CLAIM_BOUNDARY_REGISTRY.csv",
             "research_control/tasks/*/jobs/completions/*.yaml",
             AI_METHODOLOGY_TAXONOMY_PATH,
+            PHYSICS_PAYLOAD_RATIO_POLICY_PATH,
         ],
         "authority_boundary": {
             "metrics_are_operational": True,
             "scoreboards_are_separated": True,
             "ai_methodology_metrics_are_support_only": True,
+            "physics_payload_ratio_diagnostics_are_support_only": True,
             "physics_claim_promotion_authorized": False,
             "metrics_report_not_physics_proof": True,
             "validation_status_is_not_physics_evidence": True,
@@ -1538,6 +1874,7 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
             "Scientific progress metrics are counts of tracked science-claim fields and must still cite source artifacts before any claim is reused.",
             "Obstruction reuse is measured by completion-level obstruction IDs and later completion references.",
             "AI research-agent methodology metrics are support-only diagnostics and cannot be used as proof, source-law adoption, benchmark promotion, or Gate Chair verdicts.",
+            "Physics-payload ratio diagnostics are AI-system diagnostics only; they do not rank physics truth.",
             "Validator failure history is not a durable event log, so this report does not infer blocked violation counts from past terminal output.",
         ],
     }
@@ -1658,6 +1995,12 @@ def render_markdown(report: dict[str, Any]) -> str:
             "## Route-Orbit Risk Metrics",
             "",
             *render_table(metrics["route_orbit_risk_metrics"]),
+            "",
+            "## Physics-Payload Ratio Diagnostics",
+            "",
+            "These metrics are AI-system diagnostics only. They do not rank physics truth, authorize proof, promote a benchmark, create a Gate Chair verdict, or complete a derivation.",
+            "",
+            *render_table(metrics["physics_payload_ratio_diagnostics"]["metrics"]),
             "",
             "## Physics-Progress Integration Metrics",
             "",

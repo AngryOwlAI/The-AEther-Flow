@@ -1,0 +1,52 @@
+task_id: "RT-20260708-028"
+task_type: "route_history_payload_ratio_metrics"
+status: "completed"
+created_at: "2026-07-08T16:05:59Z"
+updated_at: "2026-07-08T16:05:59Z"
+closed_at: "2026-07-08T16:05:59Z"
+parent_task_id: "RT-20260708-027"
+parent_handoff_id: "handoff-0720"
+decision_id: "DDR-20260708-028"
+job_id: "AJ-RT-20260708-028-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260708-028"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. P8-T02 requires no human gate because it extends support-only route-history metrics and does not promote physics claims."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T02"
+  plan_task_name: "Route-history and payload-ratio metrics extension"
+  plan_role_family: "process-integrity-auditor@0.1.0"
+  selected_role_family: "validator-engineer@0.2.0"
+  role_selection_note: "The plan and backlog name process-integrity-auditor@0.1.0, while latest handoff-0720 explicitly selects a bounded validator-engineer metrics packet. The Director used the latest tracked handoff as active continuation authority."
+objective: "Extend route-history metrics to compute project-system run length, physics-bearing run length, explicit new payload counts, candidate/theorem/countermodel counts, support-only tail length, and advisory route-orbit warning status."
+target_derivation_milestone: "none"
+milestone_burden: "Extend route-history metrics to compute project-system run length and physics-payload ratio."
+closure_status: "v18_p8_t02_payload_ratio_metrics_extended_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P8-T02 support-only metrics extension, focused regression test, generated JSON and Markdown metrics outputs, task-local payload-ratio report, and P8-T03 routing only."
+  support_only: true
+  ai_system_diagnostics_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+  physics_truth_ranking_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "scripts/research_control/report_physics_progress_metrics.py"
+  - "tests/test_report_physics_progress_metrics.py"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "research_control/tasks/RT-20260708-028/artifacts/payload_ratio_metrics_report_v1.md"
+next_recommended_action: "Run one bounded v18 P8-T03 physics-payload ratio validator pilot packet."
+notes: "RT-20260708-028 completes v18 P8-T02 by extending report_physics_progress_metrics.py with physics_payload_ratio_diagnostics and focused tests. The metrics are AI-system diagnostics only; they do not rank physics truth and do not authorize proof authority, physics promotion, benchmark promotion, Gate Chair verdict, or completed derivation."
+documentation_impact_id: "DI-RT-20260708-028-001"

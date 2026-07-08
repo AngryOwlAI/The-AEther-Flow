@@ -1,0 +1,131 @@
+handoff_id: "handoff-0721"
+created_at: "2026-07-08T16:05:59Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-028"
+decision_id: "DDR-20260708-028"
+job_id: "AJ-RT-20260708-028-001"
+agent_job_id: "AJ-RT-20260708-028-001"
+completion_path: "research_control/tasks/RT-20260708-028/jobs/completions/AJC-AJ-RT-20260708-028-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-028-001"
+status: "ready_for_next_bounded_packet"
+previous_handoff_id: "handoff-0720"
+summary: "Completed v18 P8-T02 route-history and payload-ratio metrics extension. The packet added support-only physics_payload_ratio_diagnostics to report_physics_progress_metrics.py, generated JSON and Markdown metrics outputs, added focused regression tests, and created a task-local payload-ratio report. It creates no proof authority physics truth ranking physics promotion source-law adoption detector-semantics adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict or completed derivation."
+completed_packet:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P8"
+  plan_task_id: "P8-T02"
+  task_name: "Route-history and payload-ratio metrics extension"
+  plan_role_family: "process-integrity-auditor@0.1.0"
+  selected_role_family: "validator-engineer@0.2.0"
+  target_derivation_milestone: "none"
+  milestone_burden: "Extend route-history metrics to compute project-system run length and physics-payload ratio."
+  result_type: "payload_ratio_metrics_extended"
+  result: "metrics_extended"
+  support_only: true
+  ai_system_diagnostics_only: true
+  proof_authority: false
+  physics_truth_ranking_authorized: false
+  selected_next_plan_task_id: "P8-T03"
+  selected_next_plan_route_type: "physics_payload_ratio_validator_pilot"
+claim_boundary:
+  allowed_claims:
+    - "P8-T02 support-only payload-ratio metrics added"
+    - "project_system_task_run_length emitted"
+    - "physics_bearing_task_run_length emitted"
+    - "new_mathematical_payload_count emitted"
+    - "theorem_countermodel_candidate_count emitted"
+    - "candidate_construction_count emitted"
+    - "support_only_task_count_since_last_physics_payload emitted"
+    - "route_orbit_warning_status emitted as advisory diagnostics"
+    - "P8-T03 selected as next plan task"
+  forbidden_claims:
+    - "metrics as proof authority"
+    - "metrics as physics truth ranking"
+    - "metrics as physics promotion"
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "Det_src adoption"
+    - "Readout_src adoption"
+    - "detector-semantics adoption"
+    - "source detector/readout semantics adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "program-wide no-go conclusion"
+    - "future source-extension impossibility"
+  support_only: true
+  ai_system_diagnostics_only: true
+  proof_authority: false
+  no_adoption: true
+  no_ledger_delta: true
+  no_physics_promotion: true
+distance_to_gr_status:
+  changed: false
+  ledger_row_updated: false
+  burden_id: "none"
+  status: "support-only route-history payload-ratio metrics extended; no physics derivation status change"
+  freeze_decision: "not_applicable"
+payload_ratio_metrics:
+  metrics_source_json: "output/physics_progress_metrics.json"
+  metrics_source_markdown: "output/physics_progress_metrics.md"
+  report_path: "research_control/tasks/RT-20260708-028/artifacts/payload_ratio_metrics_report_v1.md"
+  project_system_task_run_length: 2
+  physics_bearing_task_run_length: 0
+  new_mathematical_payload_count: 1039
+  theorem_countermodel_candidate_count: 624
+  candidate_construction_count: 177
+  support_only_task_count_since_last_physics_payload: 2
+  route_orbit_warning_status:
+    status: "warning"
+    advisory_only: true
+    hard_gate: false
+    physics_claim_authority: false
+    warning_ids:
+      - "post_gate_cycle_repeat"
+      - "gate_ready_without_gate"
+selected_next_route:
+  route_id: "physics_payload_ratio_validator_pilot"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P8"
+  plan_task_id: "P8-T03"
+  task_name: "Payload-ratio validator pilot"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "physics_payload_ratio_validator_pilot"
+  target_derivation_milestone: "none"
+  milestone_burden: "Pilot validator enforcement against fixture histories for the advisory physics-payload ratio policy."
+  expected_agent_job_scope: "One bounded P8-T03 validator-engineer packet piloting advisory physics-payload ratio validator enforcement against fixtures without physics promotion."
+  requires_human_gate: false
+next_action: "Run one bounded v18 P8-T03 physics-payload ratio validator pilot packet."
+next_recommended_action: "Run one bounded v18 P8-T03 physics-payload ratio validator pilot packet."
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260708-028"
+  latest_research_handoff_id: "handoff-0721"
+  latest_research_next_action: "Run one bounded v18 P8-T03 physics-payload ratio validator pilot packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+project_improvement_signals: []
+validation:
+  focused_unittest: "PASS"
+  metrics_json_generation: "PASS"
+  metrics_markdown_generation: "PASS"
+  metrics_required_fields_check: "PASS"
+  bootstrap_memory_system: "PASS"
+  bootstrap_memory_system_validate_only: "PASS"
+  documentation_impact: "PASS"
+  research_control_validation: "PASS"
+  research_control_diff_validation: "PASS"
+  wrapper_validation: "PENDING"
+notes: "This handoff is the research-continuation authority for the next invocation. Generated derivatives and .local caches remain retrieval layers only."
+project_improvement_bridge:
+  required: false
+  reason: "project_improvement_signals is empty"

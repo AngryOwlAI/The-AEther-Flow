@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `e47788f45d39c9bdf84a2f4ee2ac7152ed865a9cfe933ec97f10234e982675b1`
-- Generated-at source timestamp: `2026-07-08T15:32:02Z`
-- Row count: `861`
+- Source fingerprint: `b8f03d9262c79bef28e40f179635cb2add39e1d6b36539c48032c96e05f10f09`
+- Generated-at source timestamp: `2026-07-08T16:05:59Z`
+- Row count: `862`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260708-028|RT-20260708-027|2026-07-08T16:05:59Z|2026-07-08T16:05:59Z|route_history_payload_ratio_metrics|completed|none|Extend route-history metrics to compute project-system run length and physics-payload ratio.|validator-engineer@0.2.0|false|false|1|Run one bounded v18 P8-T03 physics-payload ratio validator pilot packet.|PASS|research_control/tasks/RT-20260708-028/jobs/completions/AJC-AJ-RT-20260708-028-001.yaml|
 |RT-20260708-027|RT-20260708-026|2026-07-08T15:32:02Z|2026-07-08T15:32:02Z|physics_payload_ratio_policy|completed|none|Define a policy requiring physics-bearing payloads after runs of project-system tasks.|project-control-maintainer@0.2.0|false|false|1|Run one bounded v18 P8-T02 route-history and payload-ratio metrics extension packet.|PASS|research_control/tasks/RT-20260708-027/jobs/completions/AJC-AJ-RT-20260708-027-001.yaml|
 |RT-20260708-026|RT-20260708-025|2026-07-08T14:50:11Z|2026-07-08T14:50:11Z|support_formalization_refuter_review_v18|completed|matter_coupling|Stress v18 support formalization for proof-authority overread and false-confidence hazards.|refuter@0.2.0|false|false|5|Run one bounded v18 P8-T01 physics-payload ratio policy packet.|PASS|research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml|
 |RT-20260708-025|RT-20260708-024|2026-07-08T14:22:38Z|2026-07-08T14:22:38Z|support_formalization_traceability_integration_v18|completed|none|Integrate v18 support formalization tools into traceability and proof-normal-form registries without proof authority.|project-control-maintainer@0.2.0|false|false|4|Run one bounded v18 P7-T08 support formalization Refuter review packet.|PASS|research_control/tasks/RT-20260708-025/jobs/completions/AJC-AJ-RT-20260708-025-001.yaml|

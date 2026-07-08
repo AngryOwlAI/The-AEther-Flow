@@ -1,10 +1,11 @@
 {
-  "as_of": "2026-07-08T10:45:00Z",
+  "as_of": "2026-07-08T16:05:59Z",
   "authority_boundary": {
     "ai_methodology_metrics_are_support_only": true,
     "metrics_are_operational": true,
     "metrics_report_not_physics_proof": true,
     "physics_claim_promotion_authorized": false,
+    "physics_payload_ratio_diagnostics_are_support_only": true,
     "scoreboards_are_separated": true,
     "validation_status_is_not_physics_evidence": true
   },
@@ -14,6 +15,7 @@
     "Scientific progress metrics are counts of tracked science-claim fields and must still cite source artifacts before any claim is reused.",
     "Obstruction reuse is measured by completion-level obstruction IDs and later completion references.",
     "AI research-agent methodology metrics are support-only diagnostics and cannot be used as proof, source-law adoption, benchmark promotion, or Gate Chair verdicts.",
+    "Physics-payload ratio diagnostics are AI-system diagnostics only; they do not rank physics truth.",
     "Validator failure history is not a durable event log, so this report does not infer blocked violation counts from past terminal output."
   ],
   "metrics": {
@@ -22,9 +24,9 @@
       "candidate_constructor_tasks": 54,
       "construct_audit_stress_cycle_count": 41,
       "gate_chair_tasks": 31,
-      "refuter_tasks": 87,
-      "selector_cycles_without_construction": 83,
-      "selector_tasks": 102,
+      "refuter_tasks": 88,
+      "selector_cycles_without_construction": 84,
+      "selector_tasks": 103,
       "smuggling_auditor_tasks": 86
     },
     "ai_research_agent_methodology_metrics": {
@@ -277,7 +279,8 @@
               "research_control/tasks/RT-20260707-023/jobs/completions/AJC-AJ-RT-20260707-023-001.yaml",
               "research_control/tasks/RT-20260708-011/jobs/completions/AJC-AJ-RT-20260708-011-001.yaml",
               "research_control/tasks/RT-20260708-012/jobs/completions/AJC-AJ-RT-20260708-012-001.yaml",
-              "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml"
+              "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml",
+              "research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml"
             ],
             "label": "Count of audited candidates with completed audit disposition.",
             "value": 86
@@ -461,14 +464,15 @@
               "research_control/tasks/RT-20260707-023/jobs/completions/AJC-AJ-RT-20260707-023-001.yaml",
               "research_control/tasks/RT-20260708-011/jobs/completions/AJC-AJ-RT-20260708-011-001.yaml",
               "research_control/tasks/RT-20260708-012/jobs/completions/AJC-AJ-RT-20260708-012-001.yaml",
-              "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml"
+              "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml",
+              "research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml"
             ],
             "label": "Count of audited candidates routed to Refuter stress or equivalent stress packet.",
-            "value": 87
+            "value": 88
           },
           "status": "partial",
           "uncertainty_note": "Partial because the current completion records count stage occurrences, not candidate-linked transitions.",
-          "value": 1.0116
+          "value": 1.0233
         },
         "candidate_to_audit_conversion": {
           "authority_boundary": {
@@ -721,12 +725,12 @@
                 "P4": 40,
                 "P5": 45,
                 "P6": 26,
-                "P7": 49,
-                "P8": 18,
+                "P7": 57,
+                "P8": 20,
                 "P9": 14,
                 "unclassified": 476
               },
-              "registered_task_rows": 848
+              "registered_task_rows": 858
             }
           },
           "diagnostic_interpretation": "Gate-load signals are governance workload diagnostics, not Gate Chair scientific verdicts.",
@@ -2627,10 +2631,20 @@
               "research_control/tasks/RT-20260708-015/jobs/completions/AJC-AJ-RT-20260708-015-001.yaml",
               "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml",
               "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml",
-              "research_control/tasks/RT-20260708-018/jobs/completions/AJC-AJ-RT-20260708-018-001.yaml"
+              "research_control/tasks/RT-20260708-018/jobs/completions/AJC-AJ-RT-20260708-018-001.yaml",
+              "research_control/tasks/RT-20260708-019/jobs/completions/AJC-AJ-RT-20260708-019-001.yaml",
+              "research_control/tasks/RT-20260708-020/jobs/completions/AJC-AJ-RT-20260708-020-001.yaml",
+              "research_control/tasks/RT-20260708-021/jobs/completions/AJC-AJ-RT-20260708-021-001.yaml",
+              "research_control/tasks/RT-20260708-022/jobs/completions/AJC-AJ-RT-20260708-022-001.yaml",
+              "research_control/tasks/RT-20260708-023/jobs/completions/AJC-AJ-RT-20260708-023-001.yaml",
+              "research_control/tasks/RT-20260708-024/jobs/completions/AJC-AJ-RT-20260708-024-001.yaml",
+              "research_control/tasks/RT-20260708-025/jobs/completions/AJC-AJ-RT-20260708-025-001.yaml",
+              "research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml",
+              "research_control/tasks/RT-20260708-027/jobs/completions/AJC-AJ-RT-20260708-027-001.yaml",
+              "research_control/tasks/RT-20260708-028/jobs/completions/AJC-AJ-RT-20260708-028-001.yaml"
             ],
             "label": "Count of process receipts.",
-            "value": 562
+            "value": 569
           },
           "diagnostic_interpretation": "Payload balance compares mathematical payload items to process-only items; it is not proof authority.",
           "family": "Payload balance",
@@ -3486,14 +3500,24 @@
               "research_control/tasks/RT-20260708-015/jobs/completions/AJC-AJ-RT-20260708-015-001.yaml",
               "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml",
               "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml",
-              "research_control/tasks/RT-20260708-018/jobs/completions/AJC-AJ-RT-20260708-018-001.yaml"
+              "research_control/tasks/RT-20260708-018/jobs/completions/AJC-AJ-RT-20260708-018-001.yaml",
+              "research_control/tasks/RT-20260708-019/jobs/completions/AJC-AJ-RT-20260708-019-001.yaml",
+              "research_control/tasks/RT-20260708-020/jobs/completions/AJC-AJ-RT-20260708-020-001.yaml",
+              "research_control/tasks/RT-20260708-021/jobs/completions/AJC-AJ-RT-20260708-021-001.yaml",
+              "research_control/tasks/RT-20260708-022/jobs/completions/AJC-AJ-RT-20260708-022-001.yaml",
+              "research_control/tasks/RT-20260708-023/jobs/completions/AJC-AJ-RT-20260708-023-001.yaml",
+              "research_control/tasks/RT-20260708-024/jobs/completions/AJC-AJ-RT-20260708-024-001.yaml",
+              "research_control/tasks/RT-20260708-025/jobs/completions/AJC-AJ-RT-20260708-025-001.yaml",
+              "research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml",
+              "research_control/tasks/RT-20260708-027/jobs/completions/AJC-AJ-RT-20260708-027-001.yaml",
+              "research_control/tasks/RT-20260708-028/jobs/completions/AJC-AJ-RT-20260708-028-001.yaml"
             ],
             "label": "Count of new mathematical payload artifacts.",
-            "value": 896
+            "value": 904
           },
           "status": "measured",
           "uncertainty_note": "",
-          "value": 1.5943
+          "value": 1.5888
         },
         "route_orbit_rate": {
           "authority_boundary": {
@@ -3511,7 +3535,7 @@
               "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
             ],
             "label": "Count of bounded continuation packets in the measurement window.",
-            "value": 467
+            "value": 469
           },
           "diagnostic_interpretation": "Repeated-burden streaks are process warnings only and do not change Distance-to-GR status.",
           "family": "Route dynamics",
@@ -3628,10 +3652,11 @@
               "research_control/tasks/RT-20260707-017/jobs/completions/AJC-AJ-RT-20260707-017-001.yaml",
               "research_control/tasks/RT-20260707-023/jobs/completions/AJC-AJ-RT-20260707-023-001.yaml",
               "research_control/tasks/RT-20260708-012/jobs/completions/AJC-AJ-RT-20260708-012-001.yaml",
-              "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml"
+              "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml",
+              "research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml"
             ],
             "label": "Count of stressed candidates with completed stress disposition.",
-            "value": 87
+            "value": 88
           },
           "diagnostic_interpretation": "Stress survival is counted only as a non-promotional candidate-status outcome.",
           "family": "Candidate life cycle",
@@ -3726,14 +3751,15 @@
               "research_control/tasks/RT-20260707-017/jobs/completions/AJC-AJ-RT-20260707-017-001.yaml",
               "research_control/tasks/RT-20260707-023/jobs/completions/AJC-AJ-RT-20260707-023-001.yaml",
               "research_control/tasks/RT-20260708-012/jobs/completions/AJC-AJ-RT-20260708-012-001.yaml",
-              "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml"
+              "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml",
+              "research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml"
             ],
             "label": "Count of stressed candidates whose post-stress status remains draft/control or equivalent non-promotional survivor status.",
             "value": 34
           },
           "status": "partial",
           "uncertainty_note": "Partial because draft/control survivor lineage is not fully normalized across historical receipts.",
-          "value": 0.3908
+          "value": 0.3864
         },
         "underclaim_warning_rate": {
           "authority_boundary": {
@@ -3790,7 +3816,7 @@
       "taxonomy_source_path": "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
     },
     "claim_hygiene_metrics": {
-      "claim_boundary_rows_active": 795,
+      "claim_boundary_rows_active": 805,
       "physics_promotion_authorized_false": 375,
       "physics_promotion_authorized_true": 27,
       "tasks_with_forbidden_conclusion_summary": 402
@@ -3868,7 +3894,9 @@
           "research_control/tasks/RT-20260708-015/jobs/completions/AJC-AJ-RT-20260708-015-001.yaml",
           "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml",
           "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml",
-          "research_control/tasks/RT-20260708-018/jobs/completions/AJC-AJ-RT-20260708-018-001.yaml"
+          "research_control/tasks/RT-20260708-018/jobs/completions/AJC-AJ-RT-20260708-018-001.yaml",
+          "research_control/tasks/RT-20260708-019/jobs/completions/AJC-AJ-RT-20260708-019-001.yaml",
+          "research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml"
         ],
         "hard_gate": false,
         "metric_key": "candidate_construct_audit_stress_selector_cycles",
@@ -4196,11 +4224,13 @@
           "research_control/tasks/RT-20260708-015/jobs/completions/AJC-AJ-RT-20260708-015-001.yaml",
           "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml",
           "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml",
-          "research_control/tasks/RT-20260708-018/jobs/completions/AJC-AJ-RT-20260708-018-001.yaml"
+          "research_control/tasks/RT-20260708-018/jobs/completions/AJC-AJ-RT-20260708-018-001.yaml",
+          "research_control/tasks/RT-20260708-019/jobs/completions/AJC-AJ-RT-20260708-019-001.yaml",
+          "research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml"
         ],
         "hard_gate": false,
         "metric_key": "gate_ready_cycles_without_gate_verdict",
-        "observed_value": 293,
+        "observed_value": 295,
         "physics_claim_authority": false,
         "recommended_guard_action": "Route the next packet to Gate Chair, explain why Gate Chair is not yet lawful, or withdraw gate-ready wording.",
         "severity": "warning",
@@ -4209,12 +4239,12 @@
       }
     ],
     "input_counts": {
-      "active_claim_boundary_rows": 795,
-      "claim_boundary_rows": 805,
-      "completions_read": 848,
-      "jobs_registered": 848,
-      "physics_completions_read": 467,
-      "tasks_registered": 848
+      "active_claim_boundary_rows": 805,
+      "claim_boundary_rows": 815,
+      "completions_read": 858,
+      "jobs_registered": 858,
+      "physics_completions_read": 469,
+      "tasks_registered": 858
     },
     "metric_separation_guard": {
       "operational_metric_key_tokens": [
@@ -4226,6 +4256,7 @@
         "memory",
         "methodology",
         "payload_density",
+        "payload_ratio",
         "proof_to_process",
         "receipt",
         "registry",
@@ -4246,48 +4277,235 @@
       "repeated_obstructions_triggering_freeze_review": 229
     },
     "operational_validation_metrics": {
-      "active_claim_boundary_rows": 795,
+      "active_claim_boundary_rows": 805,
       "average_tasks_per_construct_audit_stress_cycle": 2.93,
       "candidate_constructor_tasks": 54,
-      "claim_boundary_rows": 805,
-      "claim_boundary_rows_active": 795,
+      "claim_boundary_rows": 815,
+      "claim_boundary_rows_active": 805,
       "completion_validation_status_counts": {
-        "PASS": 820,
+        "PASS": 830,
         "PASS_WITH_SURFACE_AUDIT_FINDINGS": 1,
         "unknown": 27
       },
-      "completions_read": 848,
+      "completions_read": 858,
       "construct_audit_stress_cycle_count": 41,
       "gate_chair_tasks": 31,
-      "jobs_registered": 848,
-      "physics_completions_read": 467,
+      "jobs_registered": 858,
+      "physics_completions_read": 469,
       "physics_promotion_authorized_false": 375,
       "physics_promotion_authorized_true": 27,
-      "refuter_tasks": 87,
-      "selector_cycles_without_construction": 83,
-      "selector_tasks": 102,
+      "refuter_tasks": 88,
+      "selector_cycles_without_construction": 84,
+      "selector_tasks": 103,
       "smuggling_auditor_tasks": 86,
       "support_only_checker_boundary_mismatch_reports": 0,
       "support_only_checker_forbidden_overread_reports": 0,
       "support_only_checker_physics_obstruction_reports": 0,
-      "support_only_checker_report_files_scanned": 5,
+      "support_only_checker_report_files_scanned": 9,
       "support_only_checker_report_parse_errors": 0,
       "support_only_checker_reports_found": 2,
       "support_only_checker_status_counts": {
         "pass_support_only": 2
       },
       "support_only_checker_tooling_error_reports": 0,
-      "tasks_registered": 848,
+      "tasks_registered": 858,
       "tasks_with_forbidden_conclusion_summary": 402
     },
     "payload_density_metrics": {
       "new_payload_items_per_cycle": 16.33,
       "new_payload_items_per_physics_task": 2.1,
-      "physics_completions_read": 467,
+      "physics_completions_read": 469,
       "selector_cycles_without_new_payload": 0,
-      "tasks_since_last_burden_discharged": 71,
-      "tasks_since_last_distance_to_gr_delta": 69,
-      "total_payload_items": 982
+      "tasks_since_last_burden_discharged": 73,
+      "tasks_since_last_distance_to_gr_delta": 71,
+      "total_payload_items": 986
+    },
+    "physics_payload_ratio_diagnostics": {
+      "authority_boundary": {
+        "ai_system_diagnostics_only": true,
+        "benchmark_promotion_authorized": false,
+        "completed_derivation_authorized": false,
+        "does_not_rank_physics_truth": true,
+        "gate_chair_verdict_created": false,
+        "not_physics_proof": true,
+        "physics_claim_promotion_authorized": false
+      },
+      "calculation_window": "all tracked completion records available at report generation",
+      "classification_counts": {
+        "physics_bearing_task_count": 386,
+        "project_system_task_count": 437,
+        "route_history_records": 858,
+        "support_only_task_count": 453
+      },
+      "metrics": {
+        "candidate_construction_count": 177,
+        "new_mathematical_payload_count": 1039,
+        "new_mathematical_payload_to_support_only_task_ratio": 2.2936,
+        "physics_bearing_task_count": 386,
+        "physics_bearing_task_run_length": 0,
+        "physics_bearing_to_project_system_task_ratio": 0.8833,
+        "project_system_task_count": 437,
+        "project_system_task_run_length": 2,
+        "route_orbit_same_burden_repetition_count": 1,
+        "route_orbit_warning_status": {
+          "advisory_only": true,
+          "hard_gate": false,
+          "physics_claim_authority": false,
+          "status": "warning",
+          "warning_ids": [
+            "post_gate_cycle_repeat",
+            "gate_ready_without_gate"
+          ]
+        },
+        "support_only_task_count": 453,
+        "support_only_task_count_since_last_physics_payload": 2,
+        "theorem_countermodel_candidate_count": 624
+      },
+      "policy_source_path": "research_control/design/physics_payload_ratio_policy_v1.md",
+      "route_history_tail": [
+        {
+          "candidate_construction_signal": false,
+          "completed_at": "2026-07-08T11:20:48Z",
+          "completion_path": "research_control/tasks/RT-20260708-019/jobs/completions/AJC-AJ-RT-20260708-019-001.yaml",
+          "job_id": "AJ-RT-20260708-019-001",
+          "mathematical_payload_items": 2,
+          "physics_bearing_task": true,
+          "project_system_task": false,
+          "role_id": "theoretical-continuation-selector",
+          "support_only_task": false,
+          "task_id": "RT-20260708-019",
+          "task_type": "support_formalization_target_selector_v18",
+          "theorem_countermodel_candidate_signal": true
+        },
+        {
+          "candidate_construction_signal": false,
+          "completed_at": "2026-07-08T12:00:17Z",
+          "completion_path": "research_control/tasks/RT-20260708-020/jobs/completions/AJC-AJ-RT-20260708-020-001.yaml",
+          "job_id": "AJ-RT-20260708-020-001",
+          "mathematical_payload_items": 3,
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "role_id": "formalization-engineer",
+          "support_only_task": true,
+          "task_id": "RT-20260708-020",
+          "task_type": "typed_eqsrc_orbit_checker_support_only",
+          "theorem_countermodel_candidate_signal": true
+        },
+        {
+          "candidate_construction_signal": false,
+          "completed_at": "2026-07-08T12:26:02Z",
+          "completion_path": "research_control/tasks/RT-20260708-021/jobs/completions/AJC-AJ-RT-20260708-021-001.yaml",
+          "job_id": "AJ-RT-20260708-021-001",
+          "mathematical_payload_items": 2,
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "role_id": "formalization-engineer",
+          "support_only_task": true,
+          "task_id": "RT-20260708-021",
+          "task_type": "closure_countermodel_generator_support_only",
+          "theorem_countermodel_candidate_signal": true
+        },
+        {
+          "candidate_construction_signal": false,
+          "completed_at": "2026-07-08T12:56:41Z",
+          "completion_path": "research_control/tasks/RT-20260708-022/jobs/completions/AJC-AJ-RT-20260708-022-001.yaml",
+          "job_id": "AJ-RT-20260708-022-001",
+          "mathematical_payload_items": 0,
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "role_id": "validator-engineer",
+          "support_only_task": true,
+          "task_id": "RT-20260708-022",
+          "task_type": "no_target_import_mutation_tester_support_only",
+          "theorem_countermodel_candidate_signal": true
+        },
+        {
+          "candidate_construction_signal": false,
+          "completed_at": "2026-07-08T13:32:05Z",
+          "completion_path": "research_control/tasks/RT-20260708-023/jobs/completions/AJC-AJ-RT-20260708-023-001.yaml",
+          "job_id": "AJ-RT-20260708-023-001",
+          "mathematical_payload_items": 0,
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "role_id": "validator-engineer",
+          "support_only_task": true,
+          "task_id": "RT-20260708-023",
+          "task_type": "metric_use_ledger_tex_validator_support_only",
+          "theorem_countermodel_candidate_signal": false
+        },
+        {
+          "candidate_construction_signal": false,
+          "completed_at": "2026-07-08T13:56:54Z",
+          "completion_path": "research_control/tasks/RT-20260708-024/jobs/completions/AJC-AJ-RT-20260708-024-001.yaml",
+          "job_id": "AJ-RT-20260708-024-001",
+          "mathematical_payload_items": 0,
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "role_id": "formalization-engineer",
+          "support_only_task": true,
+          "task_id": "RT-20260708-024",
+          "task_type": "detector_placeholder_collapse_checker_support_only",
+          "theorem_countermodel_candidate_signal": true
+        },
+        {
+          "candidate_construction_signal": false,
+          "completed_at": "2026-07-08T14:22:38Z",
+          "completion_path": "research_control/tasks/RT-20260708-025/jobs/completions/AJC-AJ-RT-20260708-025-001.yaml",
+          "job_id": "AJ-RT-20260708-025-001",
+          "mathematical_payload_items": 0,
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "role_id": "project-control-maintainer",
+          "support_only_task": true,
+          "task_id": "RT-20260708-025",
+          "task_type": "support_formalization_traceability_integration_v18",
+          "theorem_countermodel_candidate_signal": false
+        },
+        {
+          "candidate_construction_signal": false,
+          "completed_at": "2026-07-08T14:50:11Z",
+          "completion_path": "research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml",
+          "job_id": "AJ-RT-20260708-026-001",
+          "mathematical_payload_items": 2,
+          "physics_bearing_task": true,
+          "project_system_task": false,
+          "role_id": "refuter",
+          "support_only_task": true,
+          "task_id": "RT-20260708-026",
+          "task_type": "support_formalization_refuter_review_v18",
+          "theorem_countermodel_candidate_signal": true
+        },
+        {
+          "candidate_construction_signal": false,
+          "completed_at": "2026-07-08T15:32:02Z",
+          "completion_path": "research_control/tasks/RT-20260708-027/jobs/completions/AJC-AJ-RT-20260708-027-001.yaml",
+          "job_id": "AJ-RT-20260708-027-001",
+          "mathematical_payload_items": 0,
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "role_id": "project-control-maintainer",
+          "support_only_task": true,
+          "task_id": "RT-20260708-027",
+          "task_type": "physics_payload_ratio_policy",
+          "theorem_countermodel_candidate_signal": false
+        },
+        {
+          "candidate_construction_signal": false,
+          "completed_at": "2026-07-08T16:05:59Z",
+          "completion_path": "research_control/tasks/RT-20260708-028/jobs/completions/AJC-AJ-RT-20260708-028-001.yaml",
+          "job_id": "AJ-RT-20260708-028-001",
+          "mathematical_payload_items": 0,
+          "physics_bearing_task": false,
+          "project_system_task": true,
+          "role_id": "validator-engineer",
+          "support_only_task": true,
+          "task_id": "RT-20260708-028",
+          "task_type": "route_history_payload_ratio_metrics",
+          "theorem_countermodel_candidate_signal": true
+        }
+      ],
+      "schema_id": "physics_payload_ratio_route_history_metrics_v1",
+      "status": "measured"
     },
     "physics_progress_integration_metrics": {
       "authority_boundary": "operational_summary_only_not_physics_proof",
@@ -4298,46 +4516,46 @@
         "precise_obstruction": 10
       },
       "distance_delta": {
-        "changed_false_count": 349,
+        "changed_false_count": 359,
         "changed_true_count": 183,
         "effect_counts": {
           "missing_effect": 685,
-          "no_distance_delta": 163
+          "no_distance_delta": 173
         },
-        "records_read": 848
+        "records_read": 858
       },
       "not_physics_proof": true,
       "payload_density_summary": {
-        "classified_item_count": 1458,
-        "mathematical_payload_item_count": 896,
-        "mathematical_payload_task_count": 393,
+        "classified_item_count": 1473,
+        "mathematical_payload_item_count": 904,
+        "mathematical_payload_task_count": 398,
         "payload_class_counts": {
           "conditional_theorem": 21,
-          "countermodel": 53,
-          "dependency_map_update": 141,
+          "countermodel": 56,
+          "dependency_map_update": 142,
           "documentation_only": 101,
-          "finite_witness": 221,
+          "finite_witness": 225,
           "new_definition": 49,
           "new_theorem_statement": 144,
           "obstruction": 149,
           "proof_attempt": 0,
           "proved_theorem": 1,
-          "route_selector_only": 166,
+          "route_selector_only": 167,
           "source_extension_classification": 117,
-          "validator_tooling_only": 295
+          "validator_tooling_only": 301
         },
-        "payload_density": 0.61454,
-        "process_only_item_count": 562,
-        "process_only_task_count": 455,
-        "task_count": 848,
-        "task_payload_density": 0.463443
+        "payload_density": 0.613714,
+        "process_only_item_count": 569,
+        "process_only_task_count": 460,
+        "task_count": 858,
+        "task_payload_density": 0.463869
       },
       "physics_claim_promotion_authorized": false,
       "separate_packet_counts": {
         "candidate_packet_count": 177,
-        "freeze_packet_count": 256,
+        "freeze_packet_count": 257,
         "obstruction_packet_count": 34,
-        "process_only_packet_count": 455,
+        "process_only_packet_count": 460,
         "theorem_packet_count": 119
       },
       "status": "pass"
@@ -4347,7 +4565,7 @@
       "candidate_refuter_stress_pass_count": 34,
       "candidate_smuggling_audit_pass_count": 45,
       "constructed_candidate_count": 74,
-      "distance_to_gr_delta_false_count": 349,
+      "distance_to_gr_delta_false_count": 359,
       "distance_to_gr_delta_true_count": 183,
       "frozen_routes_reopened_by_human_gate": 16,
       "human_gate_required_count": 23,
@@ -4391,6 +4609,7 @@
         "finite_local_witness_recorded": 3,
         "finite_toy_response_v2_model_constructed_no_promotion": 1,
         "finite_toy_response_v2_source_spec_no_promotion": 1,
+        "formalization_selector_no_proof_authority": 1,
         "formalization_support_no_physics_delta": 1,
         "formalized_precondition_target_no_distance_delta": 1,
         "frontier_sync_no_promotion": 1,
@@ -4473,7 +4692,7 @@
       "bridge_attempts_since_last_gate": 7,
       "candidate_construct_audit_stress_selector_cycles": 11,
       "freeze_reviews_triggered_by_repetition": 228,
-      "gate_ready_cycles_without_gate_verdict": 293,
+      "gate_ready_cycles_without_gate_verdict": 295,
       "obstructions_created": 19,
       "obstructions_created_missing_id": 0,
       "obstructions_reused": 24,
@@ -4487,7 +4706,7 @@
       "candidate_refuter_stress_pass_count": 34,
       "candidate_smuggling_audit_pass_count": 45,
       "constructed_candidate_count": 74,
-      "distance_to_gr_delta_false_count": 349,
+      "distance_to_gr_delta_false_count": 359,
       "distance_to_gr_delta_true_count": 183,
       "frozen_routes_reopened_by_human_gate": 16,
       "human_gate_required_count": 23,
@@ -4531,6 +4750,7 @@
         "finite_local_witness_recorded": 3,
         "finite_toy_response_v2_model_constructed_no_promotion": 1,
         "finite_toy_response_v2_source_spec_no_promotion": 1,
+        "formalization_selector_no_proof_authority": 1,
         "formalization_support_no_physics_delta": 1,
         "formalized_precondition_target_no_distance_delta": 1,
         "frontier_sync_no_promotion": 1,
@@ -4617,6 +4837,7 @@
     "registries/AGENT_ROLE_REGISTRY.csv",
     "registries/CLAIM_BOUNDARY_REGISTRY.csv",
     "research_control/tasks/*/jobs/completions/*.yaml",
-    "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
+    "research_control/design/ai_research_agent_metrics_taxonomy_v1.md",
+    "research_control/design/physics_payload_ratio_policy_v1.md"
   ]
 }
