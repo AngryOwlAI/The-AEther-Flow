@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0699.yaml"
+  - "research_control/handoffs/handoff-0700.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v1.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260708-006"
-  latest_handoff_id: "handoff-0699"
-  current_status: "v18_p4_t06_countermodel_obligation_red_team_pass_no_promotion"
+  active_task_id: "RT-20260708-007"
+  latest_handoff_id: "handoff-0700"
+  current_status: "v18_p5_t01_source_detector_readout_burden_defined_no_adoption"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260708-006"
-  latest_research_handoff_id: "handoff-0699"
-  latest_research_next_action: "Run one bounded v18 P5-T01 post-P4 source-equivalence route selector."
+  latest_research_task_id: "RT-20260708-007"
+  latest_research_handoff_id: "handoff-0700"
+  latest_research_next_action: "Run one bounded v18 P5-T02 matter-coupling DAG and ledger-delta question setup packet."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "post_p4_source_equivalence_route_selector"
-  role_family: "theoretical-continuation-selector@0.1.0"
-  target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Select the next source-equivalence continuation route after P4 countermodel-obligation controls pass red-team review."
+  route_id: "source_detector_readout_dag_ledger_question_setup"
+  role_family: "project-control-maintainer@0.2.0"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Prepare a protected question for adding source_detector_readout_semantics to DAG or ledger surfaces without performing unauthorized promotion."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -211,8 +211,8 @@ distance_to_gr:
   delta:
     effect: "no_distance_delta"
     changed: false
-    milestone: "source_equivalence_eqsrc"
-    burden_id: "source_equivalence_eqsrc"
+    milestone: "matter_coupling"
+    burden_id: "matter_coupling"
   high_risk_rows:
     - burden_id: "m_src"
       reader_facing_status: "adopted only as scoped source-only M_src object"

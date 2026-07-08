@@ -188,6 +188,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-INDEX-V1` `research_control/design/source_certificate_instance_library_index_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA` `research_control/design/source_certificate_instance_library_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA-V1` `research_control/design/source_certificate_instance_library_schema_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-SOURCE-DETECTOR-READOUT-SEMANTICS-BURDEN-V1` `research_control/design/source_detector_readout_semantics_burden_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1` `research_control/design/source_equivalence_typed_object_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-EXTENSION-CLASSIFICATION-CHECKLIST-V1` `research_control/design/source_extension_classification_checklist_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1` `research_control/design/source_model_zoo_schema_v1.md`
@@ -302,6 +303,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-004-COUNTERMODEL-OBLIGATION-TEMPLATE-INTEGRATION-RECEIPT` `research_control/tasks/RT-20260708-004/artifacts/countermodel_obligation_template_integration_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-005-COUNTERMODEL-OBLIGATION-PILOT-REPORT` `research_control/tasks/RT-20260708-005/artifacts/countermodel_obligation_pilot_report_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-006-COUNTERMODEL-OBLIGATION-RED-TEAM-REVIEW` `research_control/tasks/RT-20260708-006/artifacts/countermodel_obligation_red_team_review_v1.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-007-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-BURDEN` `research_control/tasks/RT-20260708-007/artifacts/parent_fusion_notes_source_detector_readout_burden.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-007-SOURCE-DETECTOR-READOUT-BURDEN-RECEIPT` `research_control/tasks/RT-20260708-007/artifacts/source_detector_readout_burden_receipt.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -925,6 +928,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-INDEX-V1` `wiki/markdown/md-research-control-design-source-certificate-instance-library-index-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA` `wiki/markdown/md-research-control-design-source-certificate-instance-library-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-CERTIFICATE-INSTANCE-LIBRARY-SCHEMA-V1` `wiki/markdown/md-research-control-design-source-certificate-instance-library-schema-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-DETECTOR-READOUT-SEMANTICS-BURDEN-V1` `wiki/markdown/md-research-control-design-source-detector-readout-semantics-burden-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1` `wiki/markdown/md-research-control-design-source-equivalence-typed-object-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-EXTENSION-CLASSIFICATION-CHECKLIST-V1` `wiki/markdown/md-research-control-design-source-extension-classification-checklist-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1` `wiki/markdown/md-research-control-design-source-model-zoo-schema-v1.md`
@@ -1039,6 +1043,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-004-COUNTERMODEL-OBLIGATION-TEMPLATE-INTEGRATION-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-004-countermodel-obligation-template-integration-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-005-COUNTERMODEL-OBLIGATION-PILOT-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260708-005-countermodel-obligation-pilot-report.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-006-COUNTERMODEL-OBLIGATION-RED-TEAM-REVIEW` `wiki/markdown/md-research-control-tasks-rt-20260708-006-countermodel-obligation-red-team-review.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-007-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-BURDEN` `wiki/markdown/md-research-control-tasks-rt-20260708-007-parent-fusion-notes-source-detector-readout-burden.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-007-SOURCE-DETECTOR-READOUT-BURDEN-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-007-source-detector-readout-burden-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`

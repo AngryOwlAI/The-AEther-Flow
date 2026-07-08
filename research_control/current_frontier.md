@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-006` and `handoff-0699`.
+`RT-20260708-007` and `handoff-0700`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-006` |
-| Latest handoff ID | `handoff-0699` |
-| Current status | `v18_p4_t06_countermodel_obligation_red_team_pass_no_promotion` |
+| Active task ID | `RT-20260708-007` |
+| Latest handoff ID | `handoff-0700` |
+| Current status | `v18_p5_t01_source_detector_readout_burden_defined_no_adoption` |
 | V16 completed | false |
-| Current route family | v18 p5 t01 post p4 source equivalence route selector no promotion |
-| Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: countermodel_obligation_red_team_pass_no_promotion |
-| Required next authority | Run one bounded v18 P5-T01 post-P4 source-equivalence route selector. |
-| Next recommended action | Run one bounded v18 P5-T01 post-P4 source-equivalence route selector. |
+| Current route family | v18 p5 t02 source detector readout dag ledger question setup no promotion |
+| Target derivation milestone | `matter_coupling` |
+| Current burden | `matter_coupling`; status: source_detector_readout_burden_defined_proposal_only_no_adoption |
+| Required next authority | Run one bounded v18 P5-T02 matter-coupling DAG and ledger-delta question setup packet. |
+| Next recommended action | Run one bounded v18 P5-T02 matter-coupling DAG and ledger-delta question setup packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-006` |
-| Latest research handoff ID | `handoff-0699` |
-| Latest research next action | Run one bounded v18 P5-T01 post-P4 source-equivalence route selector. |
+| Latest research task ID | `RT-20260708-007` |
+| Latest research handoff ID | `handoff-0700` |
+| Latest research next action | Run one bounded v18 P5-T02 matter-coupling DAG and ledger-delta question setup packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-006/00_TASK.yaml`.
-- Active task objective: Red-team the P4 countermodel-obligation system for false blockage overclaim process-authority laundering and process orbit risk without promoting any physics claim.
-- Latest handoff path: `research_control/handoffs/handoff-0699.yaml`.
-- Latest handoff summary: Completed v18 P4-T06 by red-teaming the P4 countermodel-obligation system. The review result is pass: no blocking false-blockage overclaim theorem-substitution or process-orbit defect was found as written. No physics promotion is authorized.
-- Current route family: v18 p5 t01 post p4 source equivalence route selector no promotion.
-- Next recommended action: Run one bounded v18 P5-T01 post-P4 source-equivalence route selector.
+- Active task path: `research_control/tasks/RT-20260708-007/00_TASK.yaml`.
+- Active task objective: Define source detector/readout semantics as a named matter-coupling frontier burden without adoption, ledger update, or downstream physics promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0700.yaml`.
+- Latest handoff summary: Completed v18 P5-T01 by defining source_detector_readout_semantics as a proposal-only matter-coupling frontier burden. No Det_src Readout_src detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark Gate Chair or completed-derivation claim is authorized.
+- Current route family: v18 p5 t02 source detector readout dag ledger question setup no promotion.
+- Next recommended action: Run one bounded v18 P5-T02 matter-coupling DAG and ledger-delta question setup packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P5-T01 post-P4 source-equivalence route selector.
+Run one bounded v18 P5-T02 matter-coupling DAG and ledger-delta question setup packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,14 +320,13 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-006`;
-- latest handoff: `handoff-0699`;
-- current status: `v18_p4_t06_countermodel_obligation_red_team_pass_no_promotion`;
+- active task: `RT-20260708-007`;
+- latest handoff: `handoff-0700`;
+- current status: `v18_p5_t01_source_detector_readout_burden_defined_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
 - latest handoff validation `continue_research_json`: PASS;
-- latest handoff validation `global_red_team_review_validator`: PASS;
 - latest handoff validation `memory_preflight`: PASS;
 - latest handoff validation `query_memory_status`: PASS;
 - latest handoff validation `task_local_validator`: PASS;
@@ -337,8 +336,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0699.yaml`
-- `research_control/tasks/RT-20260708-006/00_TASK.yaml`
+- `research_control/handoffs/handoff-0700.yaml`
+- `research_control/tasks/RT-20260708-007/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -354,7 +353,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0699*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0700*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

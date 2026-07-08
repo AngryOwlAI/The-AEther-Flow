@@ -1,0 +1,19 @@
+task_id: "RT-20260708-007"
+artifact_id: "parent_conflict_review_source_detector_readout_burden"
+status: "completed"
+children_reviewed:
+  - "research_control/tasks/RT-20260708-007/artifacts/child_phys_math_source_detector_readout_burden.yaml"
+  - "research_control/tasks/RT-20260708-007/artifacts/child_phys_phil_source_detector_readout_burden.yaml"
+conflicts:
+  blocking: []
+  nonblocking:
+    - conflict_id: "P5T01-CF-001"
+      conflict_type: "terminology"
+      description: "The phrase source detector/readout may invite empirical-detector overread."
+      resolution: "The fused design note uses proposal_burden_only status and a forbidden-overreads section."
+consensus:
+  - "P5-T01 may define a named burden without constructing or adopting Det_src or Readout_src."
+  - "No Distance-to-GR ledger update is permitted in this packet."
+  - "P5-T02 is the correct next route because ledger/DAG surface changes require a separate project-control question packet."
+unresolved_blocking_conflicts: false
+parent_decision: "pass"

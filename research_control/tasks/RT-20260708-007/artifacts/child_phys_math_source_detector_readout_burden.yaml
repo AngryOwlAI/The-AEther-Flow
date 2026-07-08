@@ -1,0 +1,38 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260708-007"
+status: "completed"
+review_target: "research_control/design/source_detector_readout_semantics_burden_v1.md"
+claim_boundary:
+  may_define_burden: true
+  may_construct_candidate: false
+  may_adopt_readout_semantics: false
+  may_update_distance_to_gr_ledger: false
+formal_assessment:
+  burden_id: "source_detector_readout_semantics"
+  milestone: "matter_coupling"
+  proposed_objects:
+    - "Det_src(E_*)"
+    - "Readout_src(E_*)"
+  status: "proposal_burden_only"
+  formal_slots_required:
+    - "source-side domain of readable source records"
+    - "source-side readout relation or law"
+    - "fail-closed malformed or target-importing readout rule"
+    - "finite/local nonempty witness family"
+    - "compatibility with SourceCouplingLawCandidate_EStar_v1 without adoption"
+    - "no-target-import certificate"
+  mathematical_payload:
+    payload_id: "MP-P5T01-SOURCE-DETECTOR-READOUT-BURDEN-DEFINITION"
+    payload_type: "definition"
+    summary: "Defines the formal slots for a future source detector/readout burden witness while preserving proposal-only status."
+  pass_conditions_met:
+    required_burden_model_present: true
+    no_candidate_constructed: true
+    no_ledger_update_requested: true
+    no_adoption_language: true
+limitations:
+  - "No Det_src or Readout_src candidate is constructed in P5-T01."
+  - "No finite/local witness is supplied in P5-T01."
+  - "Compatibility with SourceCouplingLawCandidate_EStar_v1 remains a future burden."
+recommended_next_route: "P5-T02 matter-coupling DAG and ledger-delta question setup"
