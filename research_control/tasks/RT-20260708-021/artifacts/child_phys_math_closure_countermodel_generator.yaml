@@ -1,0 +1,27 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260708-021"
+status: "completed"
+support_only: true
+proof_authority: false
+contribution_summary: "Defined the finite missing-closure generator modes and required deterministic records for identity inverse composition invariant RetainH and GenH branches."
+formal_objects:
+  - "closure_countermodel_generator"
+  - "finite typed EqSrc mock record"
+  - "missing_identity"
+  - "missing_inverse"
+  - "missing_composition"
+  - "non_family_stable_invariant"
+  - "RetainH_required"
+  - "GenH_required"
+validation_obligations:
+  - "all configured modes are generated"
+  - "each record is finite and source-only"
+  - "typed checker fail-closed statuses match the expected support-only branch"
+  - "primitive-required modes preserve adopted=false"
+forbidden_claims:
+  - "general EqSrc proof"
+  - "RetainH adoption"
+  - "GenH adoption"
+  - "source-law adoption"
+  - "completed derivation"

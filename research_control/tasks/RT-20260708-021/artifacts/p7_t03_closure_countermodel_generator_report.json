@@ -1,0 +1,141 @@
+{
+  "checks": [
+    {
+      "check_id": "exists:closure_countermodel_generator.py",
+      "message": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/scripts/research_control/support_formalization/closure_countermodel_generator.py exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:test_closure_countermodel_generator.py",
+      "message": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/tests/test_closure_countermodel_generator.py exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:closure_countermodel_generator_spec_v1.md",
+      "message": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260708-021/artifacts/closure_countermodel_generator_spec_v1.md exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:closure_countermodel_generator_report.json",
+      "message": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260708-021/artifacts/closure_countermodel_generator_report.json exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "deterministic_report",
+      "message": "stored report matches generator output",
+      "status": "PASS"
+    },
+    {
+      "check_id": "support_only",
+      "message": "bundle is support-only",
+      "status": "PASS"
+    },
+    {
+      "check_id": "proof_authority_false",
+      "message": "proof_authority is false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "physics_promotion_false",
+      "message": "physics promotion is not authorized",
+      "status": "PASS"
+    },
+    {
+      "check_id": "configured_modes",
+      "message": "all configured modes are present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "case_count",
+      "message": "case count matches generator mode count",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checker_status:missing_identity",
+      "message": "missing_identity yields fail_identity_map",
+      "status": "PASS"
+    },
+    {
+      "check_id": "case_boundary:missing_identity",
+      "message": "missing_identity case preserves support-only boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checker_status:missing_inverse",
+      "message": "missing_inverse yields fail_inverse_map",
+      "status": "PASS"
+    },
+    {
+      "check_id": "case_boundary:missing_inverse",
+      "message": "missing_inverse case preserves support-only boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checker_status:missing_composition",
+      "message": "missing_composition yields fail_malformed_record",
+      "status": "PASS"
+    },
+    {
+      "check_id": "case_boundary:missing_composition",
+      "message": "missing_composition case preserves support-only boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checker_status:non_family_stable_invariant",
+      "message": "non_family_stable_invariant yields fail_invariant_preservation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "case_boundary:non_family_stable_invariant",
+      "message": "non_family_stable_invariant case preserves support-only boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checker_status:RetainH_required",
+      "message": "RetainH_required yields fail_invariant_preservation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "case_boundary:RetainH_required",
+      "message": "RetainH_required case preserves support-only boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checker_status:GenH_required",
+      "message": "GenH_required yields fail_malformed_record",
+      "status": "PASS"
+    },
+    {
+      "check_id": "case_boundary:GenH_required",
+      "message": "GenH_required case preserves support-only boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "retainh_required_no_adoption",
+      "message": "RetainH mode requires RetainH without adoption",
+      "status": "PASS"
+    },
+    {
+      "check_id": "genh_required_no_adoption",
+      "message": "GenH mode requires GenH without adoption",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec_support_only",
+      "message": "spec states support-only",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec_next_route",
+      "message": "spec routes to P7-T04",
+      "status": "PASS"
+    }
+  ],
+  "failed_check_count": 0,
+  "generator_id": "closure_countermodel_generator",
+  "mode_count": 6,
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "status": "PASS",
+  "support_only": true
+}

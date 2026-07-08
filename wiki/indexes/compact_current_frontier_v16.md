@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-020`
-- Latest handoff: `handoff-0713`
-- Current status: `v18_p7_t02_typed_eqsrc_orbit_checker_implemented_no_proof_authority`
+- Active task: `RT-20260708-021`
+- Latest handoff: `handoff-0714`
+- Current status: `v18_p7_t03_closure_countermodel_generator_implemented_no_proof_authority`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-020`
-- Latest research handoff: `handoff-0713`
-- Latest research next action: Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet.
+- Latest research task: `RT-20260708-021`
+- Latest research handoff: `handoff-0714`
+- Latest research next action: Run one bounded v18 P7-T04 no-target import mutation tester support-only implementation packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `closure_countermodel_generator_support_only`
-- Role family: `formalization-engineer@0.1.0`
-- Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Implement a support-only generator for minimal missing-closure countermodels.
+- Route ID: `no_target_import_mutation_tester_support_only`
+- Role family: `validator-engineer@0.2.0`
+- Target milestone: `none`
+- Milestone burden: Implement a support-only mutation tester for no-target import guards.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `1a959d4b27e81eadb7956883891250909a9a3631ea76d0f5605b1cdf7389cfcc`
-- JSON SHA-256: `6ba2b2d089e1a549b34fe42eb0992330a63a01121046e816bdbe4b4770a3074c`
+- YAML SHA-256: `56b3c688583f5c93c2d77959ef138eca178aec37aacfc594e966a39313c6bdf5`
+- JSON SHA-256: `9e6619f5811db3684cc63f038d6953eacb6beaa75e521bdc7bf9d70d41c7cfc7`
 
 ## Authority Warning
 

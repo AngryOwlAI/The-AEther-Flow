@@ -1,0 +1,1256 @@
+{
+  "boundary_statement": "This closure countermodel generator is support-only finite-record tooling. It has proof_authority=false and does not prove general EqSrc, adopt RetainH or GenH, adopt a source law, import a target metric, adopt MetricData(E), adopt or expand g_eff, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or complete the derivation.",
+  "case_count": 6,
+  "cases": [
+    {
+      "case_id": "CCG-missing_identity-v1",
+      "countermodel_interpretation": "A declared source type lacks an explicit identity map, so finite EqSrc closure cannot be checked.",
+      "expected_checker_status": "fail_identity_map",
+      "mode": "missing_identity",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "record": {
+        "composition_table": [
+          {
+            "left": "id_A",
+            "result": "id_A",
+            "right": "id_A"
+          },
+          {
+            "left": "id_A",
+            "result": "flip_A",
+            "right": "flip_A"
+          },
+          {
+            "left": "flip_A",
+            "result": "flip_A",
+            "right": "id_A"
+          },
+          {
+            "left": "flip_A",
+            "result": "id_A",
+            "right": "flip_A"
+          }
+        ],
+        "countermodel_metadata": {
+          "global_no_go_claimed": false,
+          "minimal_finite_record": true,
+          "missing_closure_mode": "missing_identity",
+          "support_only": true
+        },
+        "eqsrc_pairs": [
+          {
+            "left": "a0",
+            "orbit": "orbit_A",
+            "right": "a1"
+          },
+          {
+            "left": "b0",
+            "orbit": "orbit_B",
+            "right": "b0"
+          }
+        ],
+        "forbidden_authority": {
+          "benchmark_promoted": false,
+          "completed_derivation_claimed": false,
+          "einstein_equations_derived": false,
+          "eqsrc_theorem_adopted": false,
+          "g_eff_adopted": false,
+          "g_eff_scope_expanded": false,
+          "gate_chair_verdict_issued": false,
+          "matter_action_imported": false,
+          "matter_coupling_adopted": false,
+          "matter_coupling_derived": false,
+          "metricdata_e_adopted": false,
+          "physical_metric_constructed": false,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_law_adopted": false,
+          "stress_energy_semantics_imported": false,
+          "stress_energy_tensor_constructed": false,
+          "target_atlas_imported": false,
+          "target_metric_imported": false
+        },
+        "identity_maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a0"
+              },
+              {
+                "from": "a1",
+                "to": "a1"
+              }
+            ],
+            "id": "id_A",
+            "type": "fiber_A"
+          }
+        ],
+        "invariant_flags": {
+          "fail_closed_for_missing_data": true,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_only_invariants_preserved": true,
+          "target_import_used": false
+        },
+        "inverse_maps": [
+          {
+            "inverse": "id_A",
+            "map": "id_A"
+          },
+          {
+            "inverse": "flip_A",
+            "map": "flip_A"
+          }
+        ],
+        "maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a1"
+              },
+              {
+                "from": "a1",
+                "to": "a0"
+              }
+            ],
+            "id": "flip_A",
+            "source_type": "fiber_A",
+            "target_type": "fiber_A"
+          }
+        ],
+        "metadata": {
+          "boundary_statement": "This typed EqSrc orbit checker is support-only finite-record tooling. It has proof_authority=false and does not prove general EqSrc, adopt a source law, import a target metric, adopt MetricData(E), adopt or expand g_eff, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or complete the derivation.",
+          "countermodel_generator_id": "closure_countermodel_generator",
+          "countermodel_generator_version": "0.1.0",
+          "countermodel_mode": "missing_identity",
+          "eqsrc_theorem_authority": false,
+          "fixture_id": "closure_countermodel_missing_identity_v1",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_artifact_paths": [
+            "implementations_plans/recommendations_implementation_plan_continue_task-v18.md",
+            "research_control/design/source_equivalence_typed_object_schema_v1.md",
+            "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md"
+          ],
+          "support_only": true
+        },
+        "orbits": [
+          {
+            "id": "orbit_A",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": true,
+              "target_import_used": false
+            },
+            "members": [
+              "a0",
+              "a1"
+            ],
+            "type": "fiber_A"
+          },
+          {
+            "id": "orbit_B",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": true,
+              "target_import_used": false
+            },
+            "members": [
+              "b0"
+            ],
+            "type": "fiber_B"
+          }
+        ],
+        "primitive_requirements": {
+          "genh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "status": "not_required"
+          },
+          "retainh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "status": "not_required"
+          }
+        },
+        "typed_objects": [
+          {
+            "id": "a0",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "a1",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "b0",
+            "source_only": true,
+            "type": "fiber_B"
+          }
+        ]
+      },
+      "support_only": true
+    },
+    {
+      "case_id": "CCG-missing_inverse-v1",
+      "countermodel_interpretation": "A finite map family supplies no inverse-map rows, so inverse closure is absent.",
+      "expected_checker_status": "fail_inverse_map",
+      "mode": "missing_inverse",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "record": {
+        "composition_table": [
+          {
+            "left": "id_A",
+            "result": "id_A",
+            "right": "id_A"
+          },
+          {
+            "left": "id_A",
+            "result": "flip_A",
+            "right": "flip_A"
+          },
+          {
+            "left": "flip_A",
+            "result": "flip_A",
+            "right": "id_A"
+          },
+          {
+            "left": "flip_A",
+            "result": "id_A",
+            "right": "flip_A"
+          },
+          {
+            "left": "id_B",
+            "result": "id_B",
+            "right": "id_B"
+          }
+        ],
+        "countermodel_metadata": {
+          "global_no_go_claimed": false,
+          "minimal_finite_record": true,
+          "missing_closure_mode": "missing_inverse",
+          "support_only": true
+        },
+        "eqsrc_pairs": [
+          {
+            "left": "a0",
+            "orbit": "orbit_A",
+            "right": "a1"
+          },
+          {
+            "left": "b0",
+            "orbit": "orbit_B",
+            "right": "b0"
+          }
+        ],
+        "forbidden_authority": {
+          "benchmark_promoted": false,
+          "completed_derivation_claimed": false,
+          "einstein_equations_derived": false,
+          "eqsrc_theorem_adopted": false,
+          "g_eff_adopted": false,
+          "g_eff_scope_expanded": false,
+          "gate_chair_verdict_issued": false,
+          "matter_action_imported": false,
+          "matter_coupling_adopted": false,
+          "matter_coupling_derived": false,
+          "metricdata_e_adopted": false,
+          "physical_metric_constructed": false,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_law_adopted": false,
+          "stress_energy_semantics_imported": false,
+          "stress_energy_tensor_constructed": false,
+          "target_atlas_imported": false,
+          "target_metric_imported": false
+        },
+        "identity_maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a0"
+              },
+              {
+                "from": "a1",
+                "to": "a1"
+              }
+            ],
+            "id": "id_A",
+            "type": "fiber_A"
+          },
+          {
+            "arrows": [
+              {
+                "from": "b0",
+                "to": "b0"
+              }
+            ],
+            "id": "id_B",
+            "type": "fiber_B"
+          }
+        ],
+        "invariant_flags": {
+          "fail_closed_for_missing_data": true,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_only_invariants_preserved": true,
+          "target_import_used": false
+        },
+        "inverse_maps": [],
+        "maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a1"
+              },
+              {
+                "from": "a1",
+                "to": "a0"
+              }
+            ],
+            "id": "flip_A",
+            "source_type": "fiber_A",
+            "target_type": "fiber_A"
+          }
+        ],
+        "metadata": {
+          "boundary_statement": "This typed EqSrc orbit checker is support-only finite-record tooling. It has proof_authority=false and does not prove general EqSrc, adopt a source law, import a target metric, adopt MetricData(E), adopt or expand g_eff, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or complete the derivation.",
+          "countermodel_generator_id": "closure_countermodel_generator",
+          "countermodel_generator_version": "0.1.0",
+          "countermodel_mode": "missing_inverse",
+          "eqsrc_theorem_authority": false,
+          "fixture_id": "closure_countermodel_missing_inverse_v1",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_artifact_paths": [
+            "implementations_plans/recommendations_implementation_plan_continue_task-v18.md",
+            "research_control/design/source_equivalence_typed_object_schema_v1.md",
+            "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md"
+          ],
+          "support_only": true
+        },
+        "orbits": [
+          {
+            "id": "orbit_A",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": true,
+              "target_import_used": false
+            },
+            "members": [
+              "a0",
+              "a1"
+            ],
+            "type": "fiber_A"
+          },
+          {
+            "id": "orbit_B",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": true,
+              "target_import_used": false
+            },
+            "members": [
+              "b0"
+            ],
+            "type": "fiber_B"
+          }
+        ],
+        "primitive_requirements": {
+          "genh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "status": "not_required"
+          },
+          "retainh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "status": "not_required"
+          }
+        },
+        "typed_objects": [
+          {
+            "id": "a0",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "a1",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "b0",
+            "source_only": true,
+            "type": "fiber_B"
+          }
+        ]
+      },
+      "support_only": true
+    },
+    {
+      "case_id": "CCG-missing_composition-v1",
+      "countermodel_interpretation": "The composition table is empty, so missing data fails closed instead of being inferred.",
+      "expected_checker_status": "fail_malformed_record",
+      "mode": "missing_composition",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "record": {
+        "composition_table": [],
+        "countermodel_metadata": {
+          "global_no_go_claimed": false,
+          "minimal_finite_record": true,
+          "missing_closure_mode": "missing_composition",
+          "support_only": true
+        },
+        "eqsrc_pairs": [
+          {
+            "left": "a0",
+            "orbit": "orbit_A",
+            "right": "a1"
+          },
+          {
+            "left": "b0",
+            "orbit": "orbit_B",
+            "right": "b0"
+          }
+        ],
+        "forbidden_authority": {
+          "benchmark_promoted": false,
+          "completed_derivation_claimed": false,
+          "einstein_equations_derived": false,
+          "eqsrc_theorem_adopted": false,
+          "g_eff_adopted": false,
+          "g_eff_scope_expanded": false,
+          "gate_chair_verdict_issued": false,
+          "matter_action_imported": false,
+          "matter_coupling_adopted": false,
+          "matter_coupling_derived": false,
+          "metricdata_e_adopted": false,
+          "physical_metric_constructed": false,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_law_adopted": false,
+          "stress_energy_semantics_imported": false,
+          "stress_energy_tensor_constructed": false,
+          "target_atlas_imported": false,
+          "target_metric_imported": false
+        },
+        "identity_maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a0"
+              },
+              {
+                "from": "a1",
+                "to": "a1"
+              }
+            ],
+            "id": "id_A",
+            "type": "fiber_A"
+          },
+          {
+            "arrows": [
+              {
+                "from": "b0",
+                "to": "b0"
+              }
+            ],
+            "id": "id_B",
+            "type": "fiber_B"
+          }
+        ],
+        "invariant_flags": {
+          "fail_closed_for_missing_data": true,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_only_invariants_preserved": true,
+          "target_import_used": false
+        },
+        "inverse_maps": [
+          {
+            "inverse": "id_A",
+            "map": "id_A"
+          },
+          {
+            "inverse": "id_B",
+            "map": "id_B"
+          },
+          {
+            "inverse": "flip_A",
+            "map": "flip_A"
+          }
+        ],
+        "maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a1"
+              },
+              {
+                "from": "a1",
+                "to": "a0"
+              }
+            ],
+            "id": "flip_A",
+            "source_type": "fiber_A",
+            "target_type": "fiber_A"
+          }
+        ],
+        "metadata": {
+          "boundary_statement": "This typed EqSrc orbit checker is support-only finite-record tooling. It has proof_authority=false and does not prove general EqSrc, adopt a source law, import a target metric, adopt MetricData(E), adopt or expand g_eff, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or complete the derivation.",
+          "countermodel_generator_id": "closure_countermodel_generator",
+          "countermodel_generator_version": "0.1.0",
+          "countermodel_mode": "missing_composition",
+          "eqsrc_theorem_authority": false,
+          "fixture_id": "closure_countermodel_missing_composition_v1",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_artifact_paths": [
+            "implementations_plans/recommendations_implementation_plan_continue_task-v18.md",
+            "research_control/design/source_equivalence_typed_object_schema_v1.md",
+            "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md"
+          ],
+          "support_only": true
+        },
+        "orbits": [
+          {
+            "id": "orbit_A",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": true,
+              "target_import_used": false
+            },
+            "members": [
+              "a0",
+              "a1"
+            ],
+            "type": "fiber_A"
+          },
+          {
+            "id": "orbit_B",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": true,
+              "target_import_used": false
+            },
+            "members": [
+              "b0"
+            ],
+            "type": "fiber_B"
+          }
+        ],
+        "primitive_requirements": {
+          "genh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "status": "not_required"
+          },
+          "retainh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "status": "not_required"
+          }
+        },
+        "typed_objects": [
+          {
+            "id": "a0",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "a1",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "b0",
+            "source_only": true,
+            "type": "fiber_B"
+          }
+        ]
+      },
+      "support_only": true
+    },
+    {
+      "case_id": "CCG-non_family_stable_invariant-v1",
+      "countermodel_interpretation": "A source-only invariant flag is not family-stable across the declared orbit.",
+      "expected_checker_status": "fail_invariant_preservation",
+      "mode": "non_family_stable_invariant",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "record": {
+        "composition_table": [
+          {
+            "left": "id_A",
+            "result": "id_A",
+            "right": "id_A"
+          },
+          {
+            "left": "id_A",
+            "result": "flip_A",
+            "right": "flip_A"
+          },
+          {
+            "left": "flip_A",
+            "result": "flip_A",
+            "right": "id_A"
+          },
+          {
+            "left": "flip_A",
+            "result": "id_A",
+            "right": "flip_A"
+          },
+          {
+            "left": "id_B",
+            "result": "id_B",
+            "right": "id_B"
+          }
+        ],
+        "countermodel_metadata": {
+          "global_no_go_claimed": false,
+          "minimal_finite_record": true,
+          "missing_closure_mode": "non_family_stable_invariant",
+          "support_only": true
+        },
+        "eqsrc_pairs": [
+          {
+            "left": "a0",
+            "orbit": "orbit_A",
+            "right": "a1"
+          },
+          {
+            "left": "b0",
+            "orbit": "orbit_B",
+            "right": "b0"
+          }
+        ],
+        "forbidden_authority": {
+          "benchmark_promoted": false,
+          "completed_derivation_claimed": false,
+          "einstein_equations_derived": false,
+          "eqsrc_theorem_adopted": false,
+          "g_eff_adopted": false,
+          "g_eff_scope_expanded": false,
+          "gate_chair_verdict_issued": false,
+          "matter_action_imported": false,
+          "matter_coupling_adopted": false,
+          "matter_coupling_derived": false,
+          "metricdata_e_adopted": false,
+          "physical_metric_constructed": false,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_law_adopted": false,
+          "stress_energy_semantics_imported": false,
+          "stress_energy_tensor_constructed": false,
+          "target_atlas_imported": false,
+          "target_metric_imported": false
+        },
+        "identity_maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a0"
+              },
+              {
+                "from": "a1",
+                "to": "a1"
+              }
+            ],
+            "id": "id_A",
+            "type": "fiber_A"
+          },
+          {
+            "arrows": [
+              {
+                "from": "b0",
+                "to": "b0"
+              }
+            ],
+            "id": "id_B",
+            "type": "fiber_B"
+          }
+        ],
+        "invariant_flags": {
+          "fail_closed_for_missing_data": true,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_only_invariants_preserved": false,
+          "target_import_used": false
+        },
+        "inverse_maps": [
+          {
+            "inverse": "id_A",
+            "map": "id_A"
+          },
+          {
+            "inverse": "id_B",
+            "map": "id_B"
+          },
+          {
+            "inverse": "flip_A",
+            "map": "flip_A"
+          }
+        ],
+        "maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a1"
+              },
+              {
+                "from": "a1",
+                "to": "a0"
+              }
+            ],
+            "id": "flip_A",
+            "source_type": "fiber_A",
+            "target_type": "fiber_A"
+          }
+        ],
+        "metadata": {
+          "boundary_statement": "This typed EqSrc orbit checker is support-only finite-record tooling. It has proof_authority=false and does not prove general EqSrc, adopt a source law, import a target metric, adopt MetricData(E), adopt or expand g_eff, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or complete the derivation.",
+          "countermodel_generator_id": "closure_countermodel_generator",
+          "countermodel_generator_version": "0.1.0",
+          "countermodel_mode": "non_family_stable_invariant",
+          "eqsrc_theorem_authority": false,
+          "fixture_id": "closure_countermodel_non_family_stable_invariant_v1",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_artifact_paths": [
+            "implementations_plans/recommendations_implementation_plan_continue_task-v18.md",
+            "research_control/design/source_equivalence_typed_object_schema_v1.md",
+            "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md"
+          ],
+          "support_only": true
+        },
+        "orbits": [
+          {
+            "id": "orbit_A",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": false,
+              "target_import_used": false
+            },
+            "members": [
+              "a0",
+              "a1"
+            ],
+            "type": "fiber_A"
+          },
+          {
+            "id": "orbit_B",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": true,
+              "target_import_used": false
+            },
+            "members": [
+              "b0"
+            ],
+            "type": "fiber_B"
+          }
+        ],
+        "primitive_requirements": {
+          "genh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "status": "not_required"
+          },
+          "retainh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "status": "not_required"
+          }
+        },
+        "typed_objects": [
+          {
+            "id": "a0",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "a1",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "b0",
+            "source_only": true,
+            "type": "fiber_B"
+          }
+        ]
+      },
+      "support_only": true
+    },
+    {
+      "case_id": "CCG-RetainH_required-v1",
+      "countermodel_interpretation": "The finite record marks RetainH as required for invariant retention while preserving adoption=false.",
+      "expected_checker_status": "fail_invariant_preservation",
+      "mode": "RetainH_required",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "record": {
+        "composition_table": [
+          {
+            "left": "id_A",
+            "result": "id_A",
+            "right": "id_A"
+          },
+          {
+            "left": "id_A",
+            "result": "flip_A",
+            "right": "flip_A"
+          },
+          {
+            "left": "flip_A",
+            "result": "flip_A",
+            "right": "id_A"
+          },
+          {
+            "left": "flip_A",
+            "result": "id_A",
+            "right": "flip_A"
+          },
+          {
+            "left": "id_B",
+            "result": "id_B",
+            "right": "id_B"
+          }
+        ],
+        "countermodel_metadata": {
+          "global_no_go_claimed": false,
+          "minimal_finite_record": true,
+          "missing_closure_mode": "RetainH_required",
+          "support_only": true
+        },
+        "eqsrc_pairs": [
+          {
+            "left": "a0",
+            "orbit": "orbit_A",
+            "right": "a1"
+          },
+          {
+            "left": "b0",
+            "orbit": "orbit_B",
+            "right": "b0"
+          }
+        ],
+        "forbidden_authority": {
+          "benchmark_promoted": false,
+          "completed_derivation_claimed": false,
+          "einstein_equations_derived": false,
+          "eqsrc_theorem_adopted": false,
+          "g_eff_adopted": false,
+          "g_eff_scope_expanded": false,
+          "gate_chair_verdict_issued": false,
+          "matter_action_imported": false,
+          "matter_coupling_adopted": false,
+          "matter_coupling_derived": false,
+          "metricdata_e_adopted": false,
+          "physical_metric_constructed": false,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_law_adopted": false,
+          "stress_energy_semantics_imported": false,
+          "stress_energy_tensor_constructed": false,
+          "target_atlas_imported": false,
+          "target_metric_imported": false
+        },
+        "identity_maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a0"
+              },
+              {
+                "from": "a1",
+                "to": "a1"
+              }
+            ],
+            "id": "id_A",
+            "type": "fiber_A"
+          },
+          {
+            "arrows": [
+              {
+                "from": "b0",
+                "to": "b0"
+              }
+            ],
+            "id": "id_B",
+            "type": "fiber_B"
+          }
+        ],
+        "invariant_flags": {
+          "fail_closed_for_missing_data": true,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_only_invariants_preserved": false,
+          "target_import_used": false
+        },
+        "inverse_maps": [
+          {
+            "inverse": "id_A",
+            "map": "id_A"
+          },
+          {
+            "inverse": "id_B",
+            "map": "id_B"
+          },
+          {
+            "inverse": "flip_A",
+            "map": "flip_A"
+          }
+        ],
+        "maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a1"
+              },
+              {
+                "from": "a1",
+                "to": "a0"
+              }
+            ],
+            "id": "flip_A",
+            "source_type": "fiber_A",
+            "target_type": "fiber_A"
+          }
+        ],
+        "metadata": {
+          "boundary_statement": "This typed EqSrc orbit checker is support-only finite-record tooling. It has proof_authority=false and does not prove general EqSrc, adopt a source law, import a target metric, adopt MetricData(E), adopt or expand g_eff, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or complete the derivation.",
+          "countermodel_generator_id": "closure_countermodel_generator",
+          "countermodel_generator_version": "0.1.0",
+          "countermodel_mode": "RetainH_required",
+          "eqsrc_theorem_authority": false,
+          "fixture_id": "closure_countermodel_RetainH_required_v1",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_artifact_paths": [
+            "implementations_plans/recommendations_implementation_plan_continue_task-v18.md",
+            "research_control/design/source_equivalence_typed_object_schema_v1.md",
+            "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md"
+          ],
+          "support_only": true
+        },
+        "orbits": [
+          {
+            "id": "orbit_A",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": false,
+              "target_import_used": false
+            },
+            "members": [
+              "a0",
+              "a1"
+            ],
+            "type": "fiber_A"
+          },
+          {
+            "id": "orbit_B",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": true,
+              "target_import_used": false
+            },
+            "members": [
+              "b0"
+            ],
+            "type": "fiber_B"
+          }
+        ],
+        "primitive_requirements": {
+          "genh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "status": "not_required"
+          },
+          "retainh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "requirement_statement": "RetainH is required to retain the source-only invariant over orbit_A.",
+            "status": "required"
+          }
+        },
+        "typed_objects": [
+          {
+            "id": "a0",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "a1",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "b0",
+            "source_only": true,
+            "type": "fiber_B"
+          }
+        ]
+      },
+      "support_only": true
+    },
+    {
+      "case_id": "CCG-GenH_required-v1",
+      "countermodel_interpretation": "The finite record introduces a generated source member whose closure arrows require GenH while preserving adoption=false.",
+      "expected_checker_status": "fail_malformed_record",
+      "mode": "GenH_required",
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "record": {
+        "composition_table": [
+          {
+            "left": "id_A",
+            "result": "id_A",
+            "right": "id_A"
+          },
+          {
+            "left": "id_A",
+            "result": "flip_A",
+            "right": "flip_A"
+          },
+          {
+            "left": "flip_A",
+            "result": "flip_A",
+            "right": "id_A"
+          },
+          {
+            "left": "flip_A",
+            "result": "id_A",
+            "right": "flip_A"
+          },
+          {
+            "left": "id_B",
+            "result": "id_B",
+            "right": "id_B"
+          }
+        ],
+        "countermodel_metadata": {
+          "global_no_go_claimed": false,
+          "minimal_finite_record": true,
+          "missing_closure_mode": "GenH_required",
+          "support_only": true
+        },
+        "eqsrc_pairs": [
+          {
+            "left": "a0",
+            "orbit": "orbit_A",
+            "right": "a1"
+          },
+          {
+            "left": "b0",
+            "orbit": "orbit_B",
+            "right": "b0"
+          },
+          {
+            "left": "a0",
+            "orbit": "orbit_A",
+            "right": "a2"
+          }
+        ],
+        "forbidden_authority": {
+          "benchmark_promoted": false,
+          "completed_derivation_claimed": false,
+          "einstein_equations_derived": false,
+          "eqsrc_theorem_adopted": false,
+          "g_eff_adopted": false,
+          "g_eff_scope_expanded": false,
+          "gate_chair_verdict_issued": false,
+          "matter_action_imported": false,
+          "matter_coupling_adopted": false,
+          "matter_coupling_derived": false,
+          "metricdata_e_adopted": false,
+          "physical_metric_constructed": false,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_law_adopted": false,
+          "stress_energy_semantics_imported": false,
+          "stress_energy_tensor_constructed": false,
+          "target_atlas_imported": false,
+          "target_metric_imported": false
+        },
+        "identity_maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a0"
+              },
+              {
+                "from": "a1",
+                "to": "a1"
+              },
+              {
+                "from": "a2",
+                "to": "a2"
+              }
+            ],
+            "id": "id_A",
+            "type": "fiber_A"
+          },
+          {
+            "arrows": [
+              {
+                "from": "b0",
+                "to": "b0"
+              }
+            ],
+            "id": "id_B",
+            "type": "fiber_B"
+          }
+        ],
+        "invariant_flags": {
+          "fail_closed_for_missing_data": true,
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_only_invariants_preserved": true,
+          "target_import_used": false
+        },
+        "inverse_maps": [
+          {
+            "inverse": "id_A",
+            "map": "id_A"
+          },
+          {
+            "inverse": "id_B",
+            "map": "id_B"
+          },
+          {
+            "inverse": "flip_A",
+            "map": "flip_A"
+          }
+        ],
+        "maps": [
+          {
+            "arrows": [
+              {
+                "from": "a0",
+                "to": "a1"
+              },
+              {
+                "from": "a1",
+                "to": "a0"
+              }
+            ],
+            "id": "flip_A",
+            "source_type": "fiber_A",
+            "target_type": "fiber_A"
+          }
+        ],
+        "metadata": {
+          "boundary_statement": "This typed EqSrc orbit checker is support-only finite-record tooling. It has proof_authority=false and does not prove general EqSrc, adopt a source law, import a target metric, adopt MetricData(E), adopt or expand g_eff, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or complete the derivation.",
+          "countermodel_generator_id": "closure_countermodel_generator",
+          "countermodel_generator_version": "0.1.0",
+          "countermodel_mode": "GenH_required",
+          "eqsrc_theorem_authority": false,
+          "fixture_id": "closure_countermodel_GenH_required_v1",
+          "physics_promotion_authorized": false,
+          "proof_authority": false,
+          "source_artifact_paths": [
+            "implementations_plans/recommendations_implementation_plan_continue_task-v18.md",
+            "research_control/design/source_equivalence_typed_object_schema_v1.md",
+            "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md"
+          ],
+          "support_only": true
+        },
+        "orbits": [
+          {
+            "id": "orbit_A",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": true,
+              "target_import_used": false
+            },
+            "members": [
+              "a0",
+              "a1",
+              "a2"
+            ],
+            "type": "fiber_A"
+          },
+          {
+            "id": "orbit_B",
+            "invariant_flags": {
+              "proof_authority": false,
+              "source_only_invariants_preserved": true,
+              "target_import_used": false
+            },
+            "members": [
+              "b0"
+            ],
+            "type": "fiber_B"
+          }
+        ],
+        "primitive_requirements": {
+          "genh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "requirement_statement": "GenH is required to generate action data for the new source member a2.",
+            "status": "required"
+          },
+          "retainh": {
+            "adopted": false,
+            "gate_protected_adoption": true,
+            "status": "not_required"
+          }
+        },
+        "typed_objects": [
+          {
+            "id": "a0",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "a1",
+            "source_only": true,
+            "type": "fiber_A"
+          },
+          {
+            "id": "b0",
+            "source_only": true,
+            "type": "fiber_B"
+          },
+          {
+            "id": "a2",
+            "source_only": true,
+            "type": "fiber_A"
+          }
+        ]
+      },
+      "support_only": true
+    }
+  ],
+  "configured_modes": [
+    "missing_identity",
+    "missing_inverse",
+    "missing_composition",
+    "non_family_stable_invariant",
+    "RetainH_required",
+    "GenH_required"
+  ],
+  "generator_id": "closure_countermodel_generator",
+  "generator_version": "0.1.0",
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "support_only": true
+}

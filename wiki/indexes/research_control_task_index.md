@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `07cce421702189ccbab3f6f0c34ca0fa217cf5f82ca97cd0f13ac6f0b03e2fb6`
-- Generated-at source timestamp: `2026-07-08T12:00:17Z`
-- Row count: `854`
+- Source fingerprint: `acff7433c48222a71117673c5e8cbdd05e6c1deb6032cd5ac5a0882cc265a6b7`
+- Generated-at source timestamp: `2026-07-08T12:26:02Z`
+- Row count: `855`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260708-021|RT-20260708-020|2026-07-08T12:26:02Z|2026-07-08T12:26:02Z|closure_countermodel_generator_support_only|completed|source_equivalence_eqsrc|Implement a support-only generator for minimal missing-closure countermodels.|formalization-engineer@0.1.0|false|false|9|Run one bounded v18 P7-T04 no-target import mutation tester support-only implementation packet.|PASS|research_control/tasks/RT-20260708-021/jobs/completions/AJC-AJ-RT-20260708-021-001.yaml|
 |RT-20260708-020|RT-20260708-019|2026-07-08T12:00:17Z|2026-07-08T12:00:17Z|typed_eqsrc_orbit_checker_support_only|completed|source_equivalence_eqsrc|Implement a support-only checker for finite typed EqSrc orbit closure records.|formalization-engineer@0.1.0|false|false|10|Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet.|PASS|research_control/tasks/RT-20260708-020/jobs/completions/AJC-AJ-RT-20260708-020-001.yaml|
 |RT-20260708-019|RT-20260708-018|2026-07-08T11:20:48Z|2026-07-08T11:20:48Z|support_formalization_target_selector_v18|completed|source_equivalence_eqsrc|Select the first support-only formalization target from the v18 recommendation set.|theoretical-continuation-selector@0.1.0|false|false|8|Run one bounded v18 P7-T02 typed EqSrc orbit checker support-only implementation packet.|PASS|research_control/tasks/RT-20260708-019/jobs/completions/AJC-AJ-RT-20260708-019-001.yaml|
 |RT-20260708-018|RT-20260708-017|2026-07-08T10:45:00Z|2026-07-08T10:45:00Z|finite_toy_response_v2_selector|completed|finite_toy_metric_response|Select repair, freeze, source detector/readout continuation, or upstream return after finite toy response v2.|theoretical-continuation-selector@0.1.0|false|false|8|Run one bounded v18 P7-T01 support formalization target selector packet.|PASS|research_control/tasks/RT-20260708-018/jobs/completions/AJC-AJ-RT-20260708-018-001.yaml|

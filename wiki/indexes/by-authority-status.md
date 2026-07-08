@@ -816,6 +816,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-PARENT-FUSION-NOTES-TYPED-EQSRC-ORBIT-CHECKER` `wiki/markdown/md-research-control-tasks-rt-20260708-020-parent-fusion-notes-typed-eqsrc-orbit-checker.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-TYPED-EQSRC-ORBIT-CHECKER-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-020-typed-eqsrc-orbit-checker-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-TYPED-EQSRC-ORBIT-CHECKER-SPEC-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-020-typed-eqsrc-orbit-checker-spec-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-021-CLOSURE-COUNTERMODEL-GENERATOR-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-021-closure-countermodel-generator-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-021-CLOSURE-COUNTERMODEL-GENERATOR-SPEC-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-021-closure-countermodel-generator-spec-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-021-PARENT-FUSION-NOTES-CLOSURE-COUNTERMODEL-GENERATOR` `wiki/markdown/md-research-control-tasks-rt-20260708-021-parent-fusion-notes-closure-countermodel-generator.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1477,6 +1480,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-PARENT-FUSION-NOTES-TYPED-EQSRC-ORBIT-CHECKER` `research_control/tasks/RT-20260708-020/artifacts/parent_fusion_notes_typed_eqsrc_orbit_checker.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-TYPED-EQSRC-ORBIT-CHECKER-RECEIPT` `research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-TYPED-EQSRC-ORBIT-CHECKER-SPEC-V1` `research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-021-CLOSURE-COUNTERMODEL-GENERATOR-RECEIPT` `research_control/tasks/RT-20260708-021/artifacts/closure_countermodel_generator_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-021-CLOSURE-COUNTERMODEL-GENERATOR-SPEC-V1` `research_control/tasks/RT-20260708-021/artifacts/closure_countermodel_generator_spec_v1.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-021-PARENT-FUSION-NOTES-CLOSURE-COUNTERMODEL-GENERATOR` `research_control/tasks/RT-20260708-021/artifacts/parent_fusion_notes_closure_countermodel_generator.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

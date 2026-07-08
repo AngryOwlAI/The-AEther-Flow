@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0713.yaml",
+    "research_control/handoffs/handoff-0714.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260708-020",
-    "latest_handoff_id": "handoff-0713",
-    "current_status": "v18_p7_t02_typed_eqsrc_orbit_checker_implemented_no_proof_authority",
+    "active_task_id": "RT-20260708-021",
+    "latest_handoff_id": "handoff-0714",
+    "current_status": "v18_p7_t03_closure_countermodel_generator_implemented_no_proof_authority",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260708-020",
-    "latest_research_handoff_id": "handoff-0713",
-    "latest_research_next_action": "Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet.",
+    "latest_research_task_id": "RT-20260708-021",
+    "latest_research_handoff_id": "handoff-0714",
+    "latest_research_next_action": "Run one bounded v18 P7-T04 no-target import mutation tester support-only implementation packet.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "closure_countermodel_generator_support_only",
-    "role_family": "formalization-engineer@0.1.0",
-    "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Implement a support-only generator for minimal missing-closure countermodels.",
+    "route_id": "no_target_import_mutation_tester_support_only",
+    "role_family": "validator-engineer@0.2.0",
+    "target_derivation_milestone": "none",
+    "milestone_burden": "Implement a support-only mutation tester for no-target import guards.",
     "requires_human_gate": false
   },
   "claim_boundary": {
