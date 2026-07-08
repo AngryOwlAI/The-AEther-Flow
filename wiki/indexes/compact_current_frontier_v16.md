@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-003`
-- Latest handoff: `handoff-0696`
-- Current status: `v18_p4_t03_countermodel_obligation_validator_completed_no_physics_delta`
+- Active task: `RT-20260708-004`
+- Latest handoff: `handoff-0697`
+- Current status: `v18_p4_t04_countermodel_obligation_task_template_integration_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-003`
-- Latest research handoff: `handoff-0696`
-- Latest research next action: Run one bounded v18 P4-T04 theorem-task template integration packet.
+- Latest research task: `RT-20260708-004`
+- Latest research handoff: `handoff-0697`
+- Latest research next action: Run one bounded v18 P4-T05 countermodel-obligation pilot on P3 outputs.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `countermodel_obligation_task_template_integration`
-- Role family: `documentation-curator@2.0.0`
-- Target milestone: `none`
-- Milestone burden: Update theorem-task templates to require minimal countermodel slots.
+- Route ID: `countermodel_obligation_pilot`
+- Role family: `process-integrity-auditor@0.1.0`
+- Target milestone: `source_equivalence_eqsrc`
+- Milestone burden: Pilot the countermodel obligation registry on the P3 EqSrc family-closure packet.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `20ddea4e3ecf6aecc8a89759616a8e7459cc07a33e33ab40c1fab3b910191b62`
-- JSON SHA-256: `5ab8851eda4ce33958dafaa8e5d80d8b09360a2f5feeb20b0f2102bdb5b4cf44`
+- YAML SHA-256: `43aa4c682f406ed6ff3cae3346727f9c387c0446ec8bef678ad8084f2d25e664`
+- JSON SHA-256: `8a4850d66a9d0beed6ffdf26ec3219bb29b5803c90ac4e2c6d0639d350fc49fa`
 
 ## Authority Warning
 

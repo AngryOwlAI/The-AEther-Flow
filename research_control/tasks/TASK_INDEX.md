@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `608d19b96010d243fbe43a36507c4a180076ed7a7c028a3032e21cb3d7a3d34a`
-- Generated-at source timestamp: `2026-07-08T01:29:02Z`
-- Row count: `837`
+- Source fingerprint: `4fc5c97f197c6eaf7c48dc3a829c5cd7398f6548751d3f4c02e97fc5224d1ac6`
+- Generated-at source timestamp: `2026-07-08T01:57:14Z`
+- Row count: `838`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,7 +16,8 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|RT-20260708-003|RT-20260708-002|2026-07-08T01:29:02Z|2026-07-08T01:29:02Z|countermodel_obligation_validator|completed|none|Add advisory validation that theorem attempts include countermodel slots.|validator-engineer@0.2.0|false|false|4|Run one bounded v18 P4-T04 theorem-task template integration packet.|PASS|research_control/tasks/RT-20260708-003/jobs/completions/AJC-AJ-RT-20260708-003-001.yaml|
+|RT-20260708-004|RT-20260708-003|2026-07-08T01:57:14Z|2026-07-08T01:57:14Z|countermodel_obligation_task_template_integration|completed|none|Update theorem-task templates to require minimal countermodel slots.|documentation-curator@2.0.0|false|false|3|Run one bounded v18 P4-T05 countermodel-obligation pilot on P3 outputs.|PASS|research_control/tasks/RT-20260708-004/jobs/completions/AJC-AJ-RT-20260708-004-001.yaml|
+|RT-20260708-003|RT-20260708-002|2026-07-08T01:29:02Z|2026-07-08T01:29:02Z|countermodel_obligation_validator|completed|none|Add advisory validation that theorem attempts include countermodel slots.|validator-engineer@0.2.0|false|false|3|Run one bounded v18 P4-T04 theorem-task template integration packet.|PASS|research_control/tasks/RT-20260708-003/jobs/completions/AJC-AJ-RT-20260708-003-001.yaml|
 |RT-20260708-002|RT-20260708-001|2026-07-08T00:57:13Z|2026-07-08T00:57:13Z|countermodel_obligation_schema_registry|completed|source_equivalence_eqsrc|Add machine-readable countermodel obligation fields to theorem/control registries.|project-control-maintainer@0.2.0|false|false|4|Run one bounded v18 P4-T03 countermodel-obligation validator and tests packet.|PASS|research_control/tasks/RT-20260708-002/jobs/completions/AJC-AJ-RT-20260708-002-001.yaml|
 |RT-20260708-001|RT-20260707-024|2026-07-08T00:22:57Z|2026-07-08T00:22:57Z|countermodel_obligation_policy|completed|source_equivalence_eqsrc|Define minimal countermodel obligations for future theorem attempts.|project-control-maintainer@0.2.0|false|false|3|Run one bounded v18 P4-T02 countermodel-obligation schema and registry extension packet.|PASS|research_control/tasks/RT-20260708-001/jobs/completions/AJC-AJ-RT-20260708-001-001.yaml|
 |RT-20260707-024|RT-20260707-023|2026-07-07T23:38:32Z|2026-07-07T23:38:32Z|post_eqsrc_family_closure_selector|completed|source_equivalence_eqsrc|Select one next route after family-closure theorem/countermodel, audit, and stress.|theoretical-continuation-selector@0.1.0|false|false|7|Run one bounded v18 P4-T01 countermodel-obligation policy packet.|PASS|research_control/tasks/RT-20260707-024/jobs/completions/AJC-AJ-RT-20260707-024-001.yaml|

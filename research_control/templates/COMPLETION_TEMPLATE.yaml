@@ -147,6 +147,21 @@ refuter_obstruction_record:
     - "completed derivation"
     - "program-wide no-go conclusion"
     - "future source-extension impossibility"
+# Required for future theorem, theorem-like, proof-attempt, or proved
+# conditional-theorem completions. Use an explicit DDR waiver when a required
+# slot is waived, not applicable, or deferred.
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "eqsrc | matter_coupling | detector_readout | toy_model | other"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: ""
+      status: ""
+      scope: ""
+      result_artifact: ""
+      obstruction_id: ""
+      local_countermodel_claim: ""
+      forbidden_overread: ""
 candidate_constructor_result:
   result_type: ""
   constructed_candidate_path: ""
