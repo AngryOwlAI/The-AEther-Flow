@@ -1,0 +1,35 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260708-031"
+job_id: "AJ-RT-20260708-031-001"
+plan_task_id: "P8-T05"
+status: "completed"
+review_scope:
+  - "physics_payload_ratio_policy_v1 required next-task classes"
+  - "advisory threshold and exception logic"
+  - "dashboard-visible payload-ratio and route-orbit warning rows"
+workflow_success_disregarded_as_evidence: true
+validator_success_disregarded_as_evidence: true
+claims_checked:
+  - "The policy pressures the route toward theorem, countermodel, witness, obstruction, source-primitive, or candidate-construction work after a bounded process run."
+  - "The policy does not make the threshold a hard gate in v1."
+  - "The policy preserves exceptions for failing CI, registry corruption, claim-boundary hard failure, human gate, and integrity repair."
+findings:
+  - finding_id: "math-001"
+    severity: "nonblocking"
+    result: "pressure_is_present"
+    evidence: "Required next-task classes include theorem_candidate countermodel finite_witness obstruction_with_proof_sketch source_primitive_requirement and candidate_construction."
+    repair_route: "none"
+  - finding_id: "math-002"
+    severity: "nonblocking"
+    result: "necessary_repairs_preserved"
+    evidence: "Exceptions and helpful-support definitions explicitly preserve repair work and protected gates."
+    repair_route: "none"
+  - finding_id: "math-003"
+    severity: "advisory"
+    result: "future_hard_gate_requires_more_precision"
+    evidence: "Initial enforcement is advisory. Any future hard enforcement should preserve exception fields and avoid treating every non-physics packet as avoidance."
+    repair_route: "future validator or policy packet if hard enforcement is requested"
+verdict: "no_blocking_defect_found_as_written"
+recommended_next_route: "P9-T01"
+physics_promotion_authorized: false

@@ -1,0 +1,227 @@
+completion_id: "AJC-AJ-RT-20260708-031-001"
+job_id: "AJ-RT-20260708-031-001"
+task_id: "RT-20260708-031"
+decision_id: "DDR-20260708-031"
+source_role_id: "external-red-team-reviewer"
+completed_at: "2026-07-08T17:47:27Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  related_plan_task_id: "P8-T05"
+  plan_phase_id: "P8"
+  implemented_task_scope: "Red-teamed the P8 physics-payload ratio policy for false pressure, process overcorrection, repair suppression, and research distortion."
+  recommendation_ids:
+    - "V18-R07"
+  completed_v18_tasks_this_packet:
+    - "P8-T05"
+  phase_p8_completed: true
+  downstream_tasks_not_implemented:
+    - "P9-T01 status-card v2 schema with next burden"
+    - "P9 and later v18 tasks"
+  all_applicable_plan_tasks_proven: false
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+output_paths:
+  - "research_control/tasks/RT-20260708-031/artifacts/child_phys_math_payload_ratio_red_team.yaml"
+  - "research_control/tasks/RT-20260708-031/artifacts/child_phys_phil_payload_ratio_red_team.yaml"
+  - "research_control/tasks/RT-20260708-031/artifacts/parent_conflict_review_payload_ratio_red_team.yaml"
+  - "research_control/tasks/RT-20260708-031/artifacts/parent_fusion_notes_payload_ratio_red_team.md"
+  - "research_control/tasks/RT-20260708-031/artifacts/payload_ratio_red_team_review_v1.md"
+  - "research_control/tasks/RT-20260708-031/artifacts/validate_p8_t05_payload_ratio_red_team.py"
+  - "research_control/tasks/RT-20260708-031/artifacts/p8_t05_payload_ratio_red_team_report.json"
+  - "research_control/tasks/RT-20260708-031/artifacts/payload_ratio_red_team_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260708-031/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-031/DDR-20260708-031.md"
+  - "research_control/tasks/RT-20260708-031/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-031/jobs/AJ-RT-20260708-031-001.yaml"
+  - "research_control/tasks/RT-20260708-031/jobs/completions/AJC-AJ-RT-20260708-031-001.yaml"
+  - "research_control/tasks/RT-20260708-031/roles/external-red-team-reviewer@0.1.0--RT-20260708-031.yaml"
+  - "research_control/handoffs/handoff-0724.yaml"
+  - "research_control/handoffs/handoff-0724.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true before_status=WARN after_status=PASS source_object_count=776 relationship_row_count=3889 semantic_row_count=776 vault_row_count=776"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | source_object_count=776 relationship_row_count=3889"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P8-T05 physics-payload ratio red-team review\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260708-030-PAYLOAD-RATIO-DASHBOARD-INTEGRATION-REPORT-V1,MD-RESEARCH-CONTROL-CURRENT-FRONTIER,MD-RESEARCH-CONTROL-TASK-INDEX"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260708-030-PAYLOAD-RATIO-DASHBOARD-INTEGRATION-REPORT-V1 --json | exit_code=0 | primary_registry=MARKDOWN_SOURCE_REGISTRY.csv"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-030 latest_handoff=handoff-0723 boundary=director_decision_required next_action=P8-T05"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py --json research_control/tasks/RT-20260708-031/artifacts/payload_ratio_red_team_review_v1.md | exit_code=0 | status=PASS"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260708-031/artifacts/validate_p8_t05_payload_ratio_red_team.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260708-031/artifacts/validate_p8_t05_payload_ratio_red_team.py --write-report --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write | exit_code=0 | status=written active_task_id=RT-20260708-031 latest_handoff_id=handoff-0724"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write | exit_code=0 | status=written active_task_id=RT-20260708-031 latest_handoff_id=handoff-0724 next_route_id=status_card_v2_schema_next_burden"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write | exit_code=0 | status=written row_count=865"
+  - ".venv/bin/python scripts/research_control/render_ai_methodology_metrics_dashboard.py | exit_code=0 | status=written support_only=true no_physics_truth_ranking=true"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --json output/claim_graph_v1.json --dot output/claim_graph_v1.dot --markdown wiki/indexes/claim_graph_v1.md | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | validation=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true after_status=PASS source_object_count=777 relationship_row_count=3893 semantic_row_count=777 vault_row_count=777"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | Validation PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1474"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 776
+    relationship_row_count: 3889
+    semantic_row_count: 776
+    vault_row_count: 776
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P8-T05 physics-payload ratio red-team review\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P8-T05 physics-payload ratio red-team review"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-030-PAYLOAD-RATIO-DASHBOARD-INTEGRATION-REPORT-V1"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260708-030-PAYLOAD-RATIO-DASHBOARD-INTEGRATION-REPORT-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-030-PAYLOAD-RATIO-DASHBOARD-INTEGRATION-REPORT-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-030-PAYLOAD-RATIO-DASHBOARD-INTEGRATION-REPORT-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/physics_payload_ratio_policy_v1.md"
+      source_hash: "0bf6b607a8f93b05e6e67c5a6676c0f889cb28f9a6c81db9c6c508e5f486d213"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-030-PAYLOAD-RATIO-DASHBOARD-INTEGRATION-REPORT-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-030/artifacts/payload_ratio_dashboard_integration_report_v1.md"
+      source_hash: "636eef4f79ae0840b3a550b72da2ef035289769afb3db7aa01e43d75ef2bd65e"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "e8dc1804f7e823ac645b4909c634c80b260127c2c3555b750f49a0cbb5b5e78c"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "a55752403f07da6745024764a096a1759aac32dd574c338e138dbf6fe6f0a82b"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS after refreshing local retrieval from WARN to PASS"
+      - "targeted memory search returned P8-T05 context and canonical P8-T04 report hit"
+      - "continue_research.py resolved handoff-0723 and director_decision_required"
+  child_reviews:
+    status: "PASS"
+    evidence:
+      - "child_phys_math found pressure toward theorem countermodel witness obstruction source primitive and candidate classes"
+      - "child_phys_phil found ontology and truth-ranking boundaries preserved"
+      - "parent conflict review found no blocking child conflict"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "red-team artifact records p8_review_result pass"
+      - "done criteria record policy_encourages_theorem_countermodel_work true"
+      - "done criteria record necessary_repairs_not_suppressed true"
+      - "recommended_next_route is P9-T01"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "global red-team artifact validator passed"
+      - "task-local validator passed"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --write refreshed active_task_id RT-20260708-031 and latest_handoff_id handoff-0724"
+      - "render_compact_current_frontier_v16.py --write refreshed next_route_id status_card_v2_schema_next_burden"
+      - "render_task_index.py --write refreshed TASK_INDEX.csv TASK_INDEX.md and wiki task index"
+      - "render_ai_methodology_metrics_dashboard.py refreshed support-only dashboard outputs"
+      - "dependency graph and claim graph renderers refreshed post-bootstrap outputs"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py returned Validation PASS"
+      - "continue_research_memory_preflight refreshed local retrieval to PASS with 777 source objects and 3893 relationship rows"
+      - "bootstrap_memory_system.py --validate-only returned Validation PASS after retrieval refresh"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json returned status PASS with hard_fail_count 0"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-08"
+  red_team_packet_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+review_result:
+  status: "pass"
+  repair_required: false
+  fail_closed: false
+  recommended_next_route: "P9-T01"
+  summary: "No blocking false-pressure repair-suppression process-overcorrection or research-distortion defect found as written. The policy remains advisory and support-only."
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  ledger_row_updated: false
+new_mathematical_payload: []
+mathematical_payload_manifest: []
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R07"
+  implements_plan_task_id: "P8-T05"
+  implementation_status: "completed"
+  coverage_effect: "direct_implementation_red_team_review_no_physics_promotion"
+claim_boundary:
+  allowed_claims:
+    - "v18 P8-T05 payload-ratio red-team review passed"
+    - "no blocking false-pressure repair-suppression process-overcorrection or research-distortion defect found as written"
+    - "policy remains advisory and support-only"
+    - "next route is P9-T01"
+  forbidden_claims:
+    - "review pass as theorem proof"
+    - "payload ratio as physics truth ranking"
+    - "payload ratio as proof authority"
+    - "dashboard metrics as benchmark status"
+    - "source-law adoption"
+    - "detector-semantics adoption"
+    - "matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+project_improvement_signals: []
+selected_next_route:
+  route_id: "status_card_v2_schema_next_burden"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P9"
+  plan_task_id: "P9-T01"
+  task_name: "Status-card v2 schema with next burden"
+  role_family: "schema-maintainer@0.1.0"
+  task_type: "status_card_v2_schema_next_burden"
+  target_derivation_milestone: "none"
+  milestone_burden: "Extend status-card schema with next burden and public compression fields."
+  requires_human_gate: false
+next_recommended_action: "Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet."
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260708-031"

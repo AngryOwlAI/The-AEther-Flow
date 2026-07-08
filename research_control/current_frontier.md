@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-030` and `handoff-0723`.
+`RT-20260708-031` and `handoff-0724`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-030` |
-| Latest handoff ID | `handoff-0723` |
-| Current status | `v18_p8_t04_payload_ratio_dashboard_integrated_no_physics_delta` |
+| Active task ID | `RT-20260708-031` |
+| Latest handoff ID | `handoff-0724` |
+| Current status | `v18_p8_t05_payload_ratio_red_team_pass_no_physics_delta` |
 | V16 completed | false |
-| Current route family | physics_payload_ratio_dashboard_integration |
+| Current route family | physics_payload_ratio_red_team_review |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P8-T05 physics-payload ratio red-team review packet. |
-| Required next authority | Run one bounded v18 P8-T05 physics-payload ratio red-team review packet. |
-| Next recommended action | Run one bounded v18 P8-T05 physics-payload ratio red-team review packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet. |
+| Required next authority | Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet. |
+| Next recommended action | Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-030` |
-| Latest research handoff ID | `handoff-0723` |
-| Latest research next action | Run one bounded v18 P8-T05 physics-payload ratio red-team review packet. |
+| Latest research task ID | `RT-20260708-031` |
+| Latest research handoff ID | `handoff-0724` |
+| Latest research next action | Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-030/00_TASK.yaml`.
-- Active task objective: Render payload-ratio diagnostics and route-orbit warnings in the support-only AI methodology metrics dashboard.
-- Latest handoff path: `research_control/handoffs/handoff-0723.yaml`.
-- Latest handoff summary: Completed v18 P8-T04 physics-payload ratio dashboard integration. The dashboard now includes payload-ratio diagnostics, route-orbit warnings, output Markdown and wiki Markdown surfaces, and explicit support-only boundary text that metrics do not establish physics truth.
-- Current route family: physics_payload_ratio_dashboard_integration.
-- Next recommended action: Run one bounded v18 P8-T05 physics-payload ratio red-team review packet.
+- Active task path: `research_control/tasks/RT-20260708-031/00_TASK.yaml`.
+- Active task objective: Stress the physics-payload ratio policy for false pressure, process overcorrection, and research distortion.
+- Latest handoff path: `research_control/handoffs/handoff-0724.yaml`.
+- Latest handoff summary: Completed v18 P8-T05 payload-ratio red-team review. The review passed with advisory carry-forward: the policy encourages theorem countermodel witness obstruction source-primitive or candidate work while preserving necessary repairs through advisory status exceptions and helpful-support criteria.
+- Current route family: physics_payload_ratio_red_team_review.
+- Next recommended action: Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P8-T05 physics-payload ratio red-team review packet.
+Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,28 +320,25 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-030`;
-- latest handoff: `handoff-0723`;
-- current status: `v18_p8_t04_payload_ratio_dashboard_integrated_no_physics_delta`;
+- active task: `RT-20260708-031`;
+- latest handoff: `handoff-0724`;
+- current status: `v18_p8_t05_payload_ratio_red_team_pass_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `bootstrap_memory_system`: PASS_WITH_LOCAL_RETRIEVAL_CACHE_WARNINGS;
-- latest handoff validation `bootstrap_memory_system_validate_only`: PASS_WITH_LOCAL_RETRIEVAL_CACHE_WARNINGS;
-- latest handoff validation `dashboard_renderer_check`: PASS;
-- latest handoff validation `documentation_impact`: PASS;
-- latest handoff validation `focused_unittest`: PASS;
-- latest handoff validation `research_control_diff_validation`: PASS;
-- latest handoff validation `research_control_validation`: PASS;
-- latest handoff validation `wrapper_validation`: PASS;
+- latest handoff validation `continue_research_json`: PASS;
+- latest handoff validation `global_red_team_review_validator`: PASS;
+- latest handoff validation `memory_preflight`: PASS;
+- latest handoff validation `query_memory_status`: PASS;
+- latest handoff validation `task_local_validator`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0723.yaml`
-- `research_control/tasks/RT-20260708-030/00_TASK.yaml`
+- `research_control/handoffs/handoff-0724.yaml`
+- `research_control/tasks/RT-20260708-031/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -357,7 +354,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0723*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0724*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

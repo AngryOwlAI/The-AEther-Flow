@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-030`
-- Latest handoff: `handoff-0723`
-- Current status: `v18_p8_t04_payload_ratio_dashboard_integrated_no_physics_delta`
+- Active task: `RT-20260708-031`
+- Latest handoff: `handoff-0724`
+- Current status: `v18_p8_t05_payload_ratio_red_team_pass_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-030`
-- Latest research handoff: `handoff-0723`
-- Latest research next action: Run one bounded v18 P8-T05 physics-payload ratio red-team review packet.
+- Latest research task: `RT-20260708-031`
+- Latest research handoff: `handoff-0724`
+- Latest research next action: Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `physics_payload_ratio_red_team_review`
-- Role family: `external-red-team-reviewer@0.1.0`
+- Route ID: `status_card_v2_schema_next_burden`
+- Role family: `schema-maintainer@0.1.0`
 - Target milestone: `none`
-- Milestone burden: Stress payload-ratio policy for false pressure process overcorrection and research distortion.
+- Milestone burden: Extend status-card schema with next burden and public compression fields.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `0ed97e417a65467eee98ab60cb490675a9729ad2181fe7fcc85755f5989ba6fb`
-- JSON SHA-256: `33629841224b0d5181e15c2eeb59cced4f5730a40bf5ca2d258a0697c8457fb3`
+- YAML SHA-256: `011fe97fb1a827c218af2d9f347451fbe9998f27aeeaccda792b02ca39cdaf7e`
+- JSON SHA-256: `599cf40329f1e96a6aaab2dd2f6254613112341c92b716576485dc61657bcc58`
 
 ## Authority Warning
 
