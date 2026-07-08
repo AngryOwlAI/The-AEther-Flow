@@ -1,0 +1,20 @@
+review_id: "PCR-RT-20260708-016-001"
+task_id: "RT-20260708-016"
+artifact: "finite_toy_response_v2_refuter_stress"
+status: "resolved"
+blocking_conflicts_present: false
+resolution_rounds: 1
+conflicts:
+  - conflict_id: "C1"
+    conflict_type: "mathematical"
+    severity: "nonblocking"
+    description: "The mathematics child treats edge perturbations as fail-closed or changed-source cases while the philosophy child treats them as limitations on robustness."
+    resolution: "The fused output records both views: the base model survives tag removal and relabeling but arbitrary edge edits are not global robustness evidence."
+  - conflict_id: "C2"
+    conflict_type: "claim_boundary"
+    severity: "nonblocking"
+    description: "Orbit-distance class labels could be mistaken for tags."
+    resolution: "The fused output states that class labels are presentation names for source-determined invariants and are removable."
+unresolved_conflicts: []
+authority_expansion_attempted: false
+claim_boundary_preserved: true

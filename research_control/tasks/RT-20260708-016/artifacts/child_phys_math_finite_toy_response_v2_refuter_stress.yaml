@@ -1,0 +1,43 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260708-016"
+artifact: "finite_toy_response_v2_refuter_stress"
+status: "completed"
+object_under_stress:
+  source_set: "S_v2={a,b,c}"
+  adjacency: "A_v2={{a,b},{b,c}}"
+  response_relation: "R_v2({x,y})=d_A(x,y)"
+stress_findings:
+  remove_explicit_labels_or_tags:
+    verdict: "survives"
+    reason: "The unlabeled three-vertex path still determines center endpoint orbits and graph distance classes."
+  relabel_source_tokens:
+    verdict: "survives"
+    reason: "Any source isomorphism that transports A_v2 preserves path length and therefore R_v2."
+  perturb_source_relation_edges:
+    verdict: "fail_closed_or_new_source_object"
+    reason: "Deleting an edge creates disconnected pairs sent to bottom by the P6-T02 probe. Adding the endpoint edge creates a triangle and changes the source object rather than preserving P_v2."
+  collapse_invariant_orbit_structure:
+    verdict: "repair_obligation"
+    reason: "If orbit-distance classes are intentionally collapsed the response no longer distinguishes distance one from distance two and the P6-T02 model is not preserved."
+  substitute_target_distance:
+    verdict: "blocked_overread"
+    reason: "Replacing d_A with target distance changes the premise from source graph distance to target geometry."
+  substitute_physical_metric:
+    verdict: "blocked_overread"
+    reason: "A physical metric is not present in the finite source object."
+  substitute_empirical_readout:
+    verdict: "blocked_overread"
+    reason: "Empirical readout values are not source graph-distance data."
+  treat_toy_response_as_g_eff:
+    verdict: "blocked_overread"
+    reason: "D_v2 is a finite graph-distance analogue only and not g_eff."
+  treat_toy_response_as_matter_coupling:
+    verdict: "blocked_overread"
+    reason: "The finite response relation has no matter action stress-energy semantics or coupling law."
+result: "survives_as_finite_toy_model"
+bridge_or_fail_category: "bridge_facing_candidate_path"
+new_mathematical_payload:
+  - "tag-erasure survival lemma"
+  - "source-isomorphism invariance lemma"
+  - "finite edge-perturbation fail-closed pressure"

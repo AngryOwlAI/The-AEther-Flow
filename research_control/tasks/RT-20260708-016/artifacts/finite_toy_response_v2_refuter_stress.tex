@@ -1,0 +1,266 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newcommand{\StressPass}{\mathrm{STRESS}\mbox{-}\mathrm{PASS}}
+\newcommand{\FailClosed}{\mathrm{FAIL}\mbox{-}\mathrm{CLOSED}}
+\newcommand{\LiveObligation}{\mathrm{LIVE}\mbox{-}\mathrm{OBLIGATION}}
+\newcommand{\BlockedOverread}{\mathrm{BLOCKED}\mbox{-}\mathrm{OVERREAD}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{verdict}{Verdict}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{V18 P6-T03 Finite Toy Response v2 Refuter Stress}
+\author{Refuter Packet RT-20260708-016}
+\date{2026-07-08}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact implements v18 P6-T03.
+
+\begin{verbatim}
+plan_id: recommendations_implementation_plan_continue_task-v18
+plan_phase_id: P6
+plan_task_id: P6-T03
+task_type: finite_toy_response_v2_invariance_tag_stress
+task_id: RT-20260708-016
+job_id: AJ-RT-20260708-016-001
+role: refuter@0.2.0
+stress_result: survives_as_finite_toy_model
+bridge_or_fail_category: bridge_facing_candidate_path
+target_derivation_milestone: finite_toy_metric_response
+milestone_burden: Stress finite toy response v2 against relabeling, tag removal, and target-import collapse.
+claim_status: draft/control
+promotion_allowed: false
+no_target_metric_import: true
+not_g_eff: true
+not_matter_coupling: true
+not_einstein_equations: true
+not_benchmark_promotion: true
+freeze_decision: not_frozen
+next_plan_task_id: P6-T04
+stress_modes:
+  - remove_explicit_labels_or_tags
+  - relabel_source_tokens
+  - perturb_source_relation_edges
+  - collapse_invariant_orbit_structure
+  - substitute_target_distance
+  - substitute_physical_metric
+  - substitute_empirical_readout
+  - treat_toy_response_as_g_eff
+  - treat_toy_response_as_matter_coupling
+\end{verbatim}
+
+The object under stress is the P6-T02 finite path model
+\[
+  P_{v2}=(S_{v2},A_{v2},Inc_{v2}),\qquad
+  S_{v2}=\{a,b,c\},\qquad
+  A_{v2}=\{\{a,b\},\{b,c\}\},
+\]
+with response relation
+\[
+  R_{v2}(\{x,y\})=d_A(x,y).
+\]
+
+\section{Stress Suite}
+
+\begin{longtable}{p{0.29\linewidth}p{0.50\linewidth}p{0.14\linewidth}}
+\toprule
+Stress mode & Result & Verdict \\
+\midrule
+remove\_explicit\_labels\_or\_tags &
+Erasing the vertex presentation names \(a,b,c\) and the class names
+\(O_0,O_1,O_2\) does not erase the unlabeled path relation. The degree pattern
+and graph distance still determine the response classes. & \(\StressPass\) \\
+relabel\_source\_tokens &
+Any source isomorphism that transports or preserves \(A_{v2}\) preserves graph
+distance and therefore preserves \(R_{v2}\). & \(\StressPass\) \\
+perturb\_source\_relation\_edges &
+Deleting one edge makes some pairs disconnected and the P6-T02 probe sends
+those branches to \(\BottomSrc\). Adding the endpoint edge creates a triangle
+and changes the source object rather than preserving \(P_{v2}\). &
+\(\LiveObligation\) \\
+collapse\_invariant\_orbit\_structure &
+Forcing distance-one and distance-two classes to collapse destroys the
+source-invariant distinction used by the toy response. That is a repair or
+zoo-classification obligation, not a hidden target import. &
+\(\LiveObligation\) \\
+substitute\_target\_distance &
+Replacing \(d_A\) with target distance changes the premise from source graph
+distance to target geometry. & \(\BlockedOverread\) \\
+substitute\_physical\_metric &
+A Lorentzian or physical metric is not an object in \(P_{v2}\). Introducing
+one changes the model and is outside this packet. & \(\BlockedOverread\) \\
+substitute\_empirical\_readout &
+Empirical detector or readout values are not source graph-distance data. &
+\(\BlockedOverread\) \\
+treat\_toy\_response\_as\_g\_eff &
+\(D_{v2}\) is a finite graph-distance analogue only. It is not an effective
+metric and cannot be promoted to \(g_{\mathrm{eff}}\). & \(\BlockedOverread\) \\
+treat\_toy\_response\_as\_matter\_coupling &
+The finite response relation supplies no matter action, stress-energy
+semantics, coupling law, or universal matter-coupling rule. &
+\(\BlockedOverread\) \\
+\bottomrule
+\end{longtable}
+
+\section{Stress Lemmas}
+
+\begin{lemma}[Tag erasure preserves the finite toy response]
+The response relation \(R_{v2}\) is recoverable from the unlabeled finite path
+relation.
+\end{lemma}
+
+\begin{proof}
+The unlabeled three-vertex path has one degree-two vertex and two degree-one
+vertices. This determines the center orbit and endpoint orbit without using
+presentation names. The path relation determines shortest path length between
+unordered pairs, so the distance classes \(0,1,2\) remain available without
+independent response tags.
+\end{proof}
+
+\begin{lemma}[Source relabeling preserves the response]
+For every isomorphism \(\sigma\) of the finite source path,
+\[
+  R_{v2}(\{\sigma x,\sigma y\})=R_{v2}(\{x,y\}).
+\]
+\end{lemma}
+
+\begin{proof}
+Source isomorphisms preserve adjacency and finite path length. Since
+\(R_{v2}\) is defined as graph distance in the source adjacency relation, the
+response relation is invariant under such relabeling.
+\end{proof}
+
+\begin{lemma}[Edge perturbation is not physical robustness]
+Changing \(A_{v2}\) is a source-relation edit. It either changes the finite
+source object or activates the P6-T02 fail-closed bottom branch for
+disconnected pairs.
+\end{lemma}
+
+\begin{proof}
+If an edge is removed, some pairs are no longer connected and the P6-T02
+finite-variation probe returns \(\BottomSrc\) for those pairs. If the endpoint
+edge is added, the finite path becomes a triangle and the distance-two class
+disappears. In neither case does target geometry, physical metric structure,
+empirical readout, \(g_{\mathrm{eff}}\), or matter coupling repair the branch.
+\end{proof}
+
+\begin{lemma}[Target and downstream substitutions are blocked overreads]
+Target distance, physical metric structure, empirical readout values,
+\(g_{\mathrm{eff}}\), and matter coupling cannot be substituted for
+source graph distance in this finite toy model.
+\end{lemma}
+
+\begin{proof}
+The only response input in the model is the finite source adjacency relation.
+Target geometry, physical metrics, empirical readouts, stress-energy
+semantics, matter action, Einstein-equation premises, validator status,
+registry metadata, handoff state, and commit state are not elements of
+\(S_{v2}\), \(A_{v2}\), \(Inc_{v2}\), or the graph-distance construction.
+Using any of them would change the candidate rather than stress it.
+\end{proof}
+
+\section{Loop-Risk Decision}
+
+The Refuter category is
+\[
+  \texttt{bridge\_facing\_candidate\_path}.
+\]
+
+The result is not a route freeze and not a scoped obstruction. The packet adds
+new stress information: tag erasure and source relabeling preserve the finite
+toy response, while arbitrary edge edits remain finite-variation pressure for
+later classification. The next route is P6-T04 source-model zoo integration.
+
+\section{Refuter Obstruction Record for Blocked Overreads}
+
+\begin{verbatim}
+refuter_obstruction_record:
+  obstruction_id: "OB-V18-P6T03-TARGET-OVERREAD-001"
+  target_claim: "Target metric physical metric empirical readout g_eff or matter coupling may replace source graph distance in the finite toy response v2 model"
+  target_milestone: "finite_toy_metric_response"
+  failed_premise: "The proposed substitution is not an element relation certificate or map in P_v2 and changes the source-local construction."
+  minimal_countermodel_available: false
+  countermodel_path: ""
+  countermodel_scope: "none"
+  certificate_gap: "target-import and downstream-overread gap for substitutions outside S_v2 A_v2 Inc_v2 and d_A"
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "not_frozen"
+    decision_reason: "The base finite toy model survives tag removal and source relabeling while blocked overreads are local substitution failures."
+    next_allowed_route: "ontology-formalizer P6-T04 source-model zoo integration"
+  route_cycle_control:
+    cycle_family: "finite_toy_response_v2"
+    current_cycle_step: "P6-T03_refuter_stress"
+    prior_related_tasks:
+      - "P6-T01 source specification"
+      - "P6-T02 finite toy response v2 model"
+    cycle_risk: "low"
+    orbit_avoidance_reason: "The packet routes to source-model zoo integration rather than repeating construction or audit."
+    next_role_consequence: "ontology-formalizer"
+  forbidden_conclusions:
+    - "No target metric import follows."
+    - "No g_eff construction or adoption follows."
+    - "No matter-coupling derivation follows."
+    - "No Einstein-equation derivation follows."
+    - "No benchmark promotion follows."
+    - "No Gate Chair verdict follows."
+    - "No completed derivation follows."
+    - "No program-wide no-go conclusion follows."
+    - "No future source-extension impossibility follows."
+\end{verbatim}
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.30\linewidth}p{0.56\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit is made. \\
+Source equivalence EqSrc & Unchanged. \\
+RetainH & Unchanged. \\
+GenH & Unchanged. \\
+ObsLoc\_lc & Unchanged. \\
+Resp\_lc & Finite toy response v2 stress result recorded as draft/control only. \\
+M\_src & Unchanged; no source manifold construction. \\
+g\_eff & Not constructed; toy graph distance remains blocked from metric promotion. \\
+matter coupling & Not derived or adopted. \\
+Einstein equations & Blocked; no field-equation derivation. \\
+finite-variation robustness & Tag removal and source relabeling stress survive; arbitrary edge perturbation remains local repair pressure and no global robustness theorem is supplied. \\
+benchmark promotion & Blocked; no benchmark evidence or promotion. \\
+Gate Chair status & Unchanged; no Gate Chair verdict issued. \\
+current route freeze or hard-fail status & Not frozen; P6-T04 source-model zoo integration is open. \\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion}
+
+\begin{verbatim}
+finite_toy_response_v2_refuter_result:
+  result_type: survives_as_finite_toy_model
+  stress_result: survives_as_finite_toy_model
+  bridge_or_fail_category: bridge_facing_candidate_path
+  tag_removal_survives: true
+  relabeling_survives: true
+  edge_perturbation_status: fail_closed_or_new_source_object
+  target_import_status: blocked_overread
+  no_target_metric_import: true
+  not_g_eff: true
+  not_matter_coupling: true
+  freeze_decision: not_frozen
+  selected_next_plan_task_id: P6-T04
+\end{verbatim}
+
+\end{document}

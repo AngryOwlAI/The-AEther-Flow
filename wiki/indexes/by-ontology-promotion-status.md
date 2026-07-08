@@ -355,6 +355,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V18-P5-T06-SOURCE-DETECTOR-READOUT-REFUTER-STRESS-V1` `research_control/tasks/RT-20260708-012/artifacts/source_detector_readout_refuter_stress_v1.tex`
 - `TEX-V18-P6-T01-FINITE-TOY-RESPONSE-V2-SOURCE-SPEC` `research_control/tasks/RT-20260708-014/artifacts/finite_toy_response_v2_source_spec.tex`
 - `TEX-V18-P6-T02-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION` `research_control/tasks/RT-20260708-015/artifacts/finite_toy_response_v2_model_or_obstruction.tex`
+- `TEX-V18-P6-T03-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS` `research_control/tasks/RT-20260708-016/artifacts/finite_toy_response_v2_refuter_stress.tex`
 
 ## superseded
 

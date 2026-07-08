@@ -1,0 +1,103 @@
+handoff_id: "handoff-0709"
+created_at: "2026-07-08T09:24:34Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-016"
+decision_id: "DDR-20260708-016"
+job_id: "AJ-RT-20260708-016-001"
+agent_job_id: "AJ-RT-20260708-016-001"
+completion_path: "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-016-001"
+status: "ready_for_next_bounded_packet"
+previous_handoff_id: "handoff-0708"
+summary: "Completed v18 P6-T03 finite toy response v2 Refuter stress. The P6-T02 model survives tag-removal and source-relabeling stress as a finite toy model. Edge perturbations are fail-closed or changed-source obligations. Target distance physical metric empirical readout g_eff and matter-coupling substitutions are blocked overreads. No target metric import g_eff construction matter-coupling derivation ledger delta benchmark promotion Gate Chair verdict or completed derivation occurred."
+completed_packet:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P6"
+  plan_task_id: "P6-T03"
+  task_name: "Finite toy response v2 invariance and tag-removal stress"
+  role_family: "refuter@0.2.0"
+  target_derivation_milestone: "finite_toy_metric_response"
+  milestone_burden: "Stress finite toy response v2 against relabeling, tag removal, and target-import collapse."
+  result_type: "survives_as_finite_toy_model"
+  bridge_or_fail_category: "bridge_facing_candidate_path"
+  finite_source_set: "S_v2 = {a,b,c}"
+  induced_response_relation: "R_v2({x,y}) = d_A(x,y)"
+  tag_removal_survives: true
+  relabeling_survives: true
+  edge_perturbation_status: "fail_closed_or_new_source_object"
+  target_import_status: "blocked_overread"
+  no_target_metric_import: true
+  not_g_eff: true
+  not_matter_coupling: true
+  selected_next_plan_task_id: "P6-T04"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+claim_boundary:
+  allowed_claims:
+    - "P6-T03 finite toy response v2 stress completed as draft/control"
+    - "P6-T02 model survives tag-removal stress as a finite toy model"
+    - "P6-T02 model survives source-relabeling stress under source isomorphism"
+    - "edge perturbations are fail-closed or changed-source obligations"
+    - "target distance physical metric empirical readout g_eff and matter-coupling substitutions are blocked overreads"
+    - "selected next plan task P6-T04"
+  forbidden_claims:
+    - "source-model zoo integration completed"
+    - "target metric import"
+    - "physical metric construction"
+    - "g_eff construction or adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "future source-extension impossibility"
+    - "global no-go conclusion"
+    - "completed derivation"
+  no_adoption: true
+  no_ledger_delta: true
+  no_dag_update: true
+  no_physics_promotion: true
+distance_to_gr_status:
+  changed: false
+  ledger_row_updated: false
+  burden_id: "finite_toy_metric_response"
+  status: "finite toy response v2 stress result recorded as draft/control; ledger unchanged"
+  freeze_decision: "not_frozen"
+new_mathematical_payload:
+  - "Lemma: tag erasure preserves the finite toy response because the unlabeled path determines response classes."
+  - "Lemma: source isomorphism relabeling preserves R_v2."
+  - "Blocked-overread record: target metric physical metric empirical readout g_eff and matter-coupling substitutions are not repairs."
+selected_next_route:
+  route_id: "finite_toy_response_v2_model_zoo_integration"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P6"
+  plan_task_id: "P6-T04"
+  task_name: "Source-model zoo integration for toy v2"
+  role_family: "ontology-formalizer@0.2.0"
+  task_type: "finite_toy_response_v2_model_zoo_integration"
+  target_derivation_milestone: "finite_toy_metric_response"
+  milestone_burden: "Integrate finite toy response v2 model, obstruction, and stress status into the source model zoo."
+  expected_agent_job_scope: "One bounded P6-T04 integration packet recording the P6-T02 model and P6-T03 stress status without g_eff matter-coupling Einstein-equation benchmark or adoption claims."
+  requires_human_gate: false
+next_action: "Run one bounded v18 P6-T04 source-model zoo integration for toy v2 packet."
+next_recommended_action: "Run one bounded v18 P6-T04 source-model zoo integration for toy v2 packet."
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260708-016"
+  latest_research_handoff_id: "handoff-0709"
+  latest_research_next_action: "Run one bounded v18 P6-T04 source-model zoo integration for toy v2 packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+project_improvement_signals: []
+validation:
+  task_local_validator: "PASS"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  documentation_impact: "PENDING"
+  research_control_validation: "PENDING"
+  research_control_diff_validation: "PENDING"
+  wrapper_validation: "PENDING"
+notes: "This handoff is the research-continuation authority for the next invocation. Generated derivatives and .local caches remain retrieval layers only."
