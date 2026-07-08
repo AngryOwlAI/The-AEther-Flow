@@ -307,6 +307,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `wiki/markdown/md-research-control-design-matter-coupling-pre-adoption-checklist.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1` `wiki/markdown/md-research-control-design-metric-use-ledger-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MINIMAL-COUNTERMODEL-OBLIGATION-POLICY-V1` `wiki/markdown/md-research-control-design-minimal-countermodel-obligation-policy-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-MINIMAL-COUNTERMODEL-OBLIGATION-SCHEMA-V1` `wiki/markdown/md-research-control-design-minimal-countermodel-obligation-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-MINIMUM-PHYSICS-PAYLOAD-SCHEMA-V1` `wiki/markdown/md-research-control-design-minimum-physics-payload-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NARROW-THEOREM-TASK-TEMPLATE` `wiki/markdown/md-research-control-design-narrow-theorem-task-template.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NEGATIVE-RESULT-INVENTORY-V15` `wiki/markdown/md-research-control-design-negative-result-inventory-v15.md`
@@ -444,6 +445,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-024-PARENT-FUSION-NOTES-POST-EQSRC-FAMILY-CLOSURE-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260707-024-parent-fusion-notes-post-eqsrc-family-closure-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260707-024-POST-EQSRC-FAMILY-CLOSURE-SELECTOR-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260707-024-post-eqsrc-family-closure-selector-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-001-COUNTERMODEL-OBLIGATION-POLICY-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-001-countermodel-obligation-policy-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-002-COUNTERMODEL-OBLIGATION-SCHEMA-REGISTRY-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-002-countermodel-obligation-schema-registry-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -961,6 +963,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-PRE-ADOPTION-CHECKLIST` `research_control/design/matter_coupling_pre_adoption_checklist.md`
 - `MD-RESEARCH-CONTROL-DESIGN-METRIC-USE-LEDGER-SCHEMA-V1` `research_control/design/metric_use_ledger_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MINIMAL-COUNTERMODEL-OBLIGATION-POLICY-V1` `research_control/design/minimal_countermodel_obligation_policy_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-MINIMAL-COUNTERMODEL-OBLIGATION-SCHEMA-V1` `research_control/design/minimal_countermodel_obligation_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-MINIMUM-PHYSICS-PAYLOAD-SCHEMA-V1` `research_control/design/minimum_physics_payload_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NARROW-THEOREM-TASK-TEMPLATE` `research_control/design/narrow_theorem_task_template.md`
 - `MD-RESEARCH-CONTROL-DESIGN-NEGATIVE-RESULT-INVENTORY-V15` `research_control/design/negative_result_inventory_v15.md`
@@ -1075,6 +1078,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-024-PARENT-FUSION-NOTES-POST-EQSRC-FAMILY-CLOSURE-SELECTOR` `research_control/tasks/RT-20260707-024/artifacts/parent_fusion_notes_post_eqsrc_family_closure_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260707-024-POST-EQSRC-FAMILY-CLOSURE-SELECTOR-RECEIPT` `research_control/tasks/RT-20260707-024/artifacts/post_eqsrc_family_closure_selector_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-001-COUNTERMODEL-OBLIGATION-POLICY-RECEIPT` `research_control/tasks/RT-20260708-001/artifacts/countermodel_obligation_policy_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-002-COUNTERMODEL-OBLIGATION-SCHEMA-REGISTRY-RECEIPT` `research_control/tasks/RT-20260708-002/artifacts/countermodel_obligation_schema_registry_receipt.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

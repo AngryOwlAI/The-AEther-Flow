@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-001`
-- Latest handoff: `handoff-0694`
-- Current status: `v18_p4_t01_countermodel_obligation_policy_completed_no_physics_delta`
+- Active task: `RT-20260708-002`
+- Latest handoff: `handoff-0695`
+- Current status: `v18_p4_t02_countermodel_obligation_schema_registry_completed_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-001`
-- Latest research handoff: `handoff-0694`
-- Latest research next action: Run one bounded v18 P4-T02 countermodel-obligation schema and registry extension packet.
+- Latest research task: `RT-20260708-002`
+- Latest research handoff: `handoff-0695`
+- Latest research next action: Run one bounded v18 P4-T03 countermodel-obligation validator and tests packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `countermodel_obligation_schema_registry`
-- Role family: `schema-maintainer@0.1.0_or_project_control_overlay_if_needed`
+- Route ID: `countermodel_obligation_validator_tests`
+- Role family: `validator-engineer@0.2.0`
 - Target milestone: `none`
-- Milestone burden: Add machine-readable countermodel obligation fields to theorem/control registries.
+- Milestone burden: Add advisory validation for missing countermodel-obligation blocks.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `79f2962bc57ffa7c521dcbfdfb13cddbd11ff697201965fc026ceee7117fada5`
-- JSON SHA-256: `66facf9975bc1251b34870c71678016814ef11a214bd9af0fc84e1fed7303539`
+- YAML SHA-256: `6d021907f21ab75f1b83cbaf43c71327e2369a36818749856d38e96e5e97c6df`
+- JSON SHA-256: `84a3522455b81d25ad516ef85372457b70bd9e2383d0d385ac8a3a03587515ff`
 
 ## Authority Warning
 

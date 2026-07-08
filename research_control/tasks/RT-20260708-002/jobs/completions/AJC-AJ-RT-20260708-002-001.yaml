@@ -1,0 +1,197 @@
+completion_id: "AJC-AJ-RT-20260708-002-001"
+job_id: "AJ-RT-20260708-002-001"
+task_id: "RT-20260708-002"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-08T00:57:13Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  related_plan_task_id: "P4-T02"
+  plan_phase_id: "P4"
+  implemented_task_scope: "Created minimal_countermodel_obligation_schema_v1 and COUNTERMODEL_OBLIGATION_REGISTRY.csv with P3 seed rows where available."
+  recommendation_ids:
+    - "V18-R03"
+  completed_v18_tasks_this_packet:
+    - "P4-T02"
+  downstream_tasks_not_implemented:
+    - "P4-T03 countermodel-obligation validator and tests"
+    - "P4-T04 theorem-task template integration"
+    - "P4-T05 countermodel-obligation pilot"
+    - "P4-T06 countermodel-obligation red-team review"
+    - "P5 and later v18 tasks"
+  all_applicable_plan_tasks_proven: false
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+output_paths:
+  - "research_control/design/minimal_countermodel_obligation_schema_v1.md"
+  - "registries/COUNTERMODEL_OBLIGATION_REGISTRY.csv"
+  - "research_control/tasks/RT-20260708-002/artifacts/validate_p4_t02_countermodel_obligation_schema_registry.py"
+  - "research_control/tasks/RT-20260708-002/artifacts/p4_t02_countermodel_obligation_schema_registry_report.json"
+  - "research_control/tasks/RT-20260708-002/artifacts/countermodel_obligation_schema_registry_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260708-002/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-002/DDR-20260708-002.md"
+  - "research_control/tasks/RT-20260708-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-002/jobs/AJ-RT-20260708-002-001.yaml"
+  - "research_control/tasks/RT-20260708-002/jobs/completions/AJC-AJ-RT-20260708-002-001.yaml"
+  - "research_control/tasks/RT-20260708-002/roles/project-control-maintainer@0.2.0--RT-20260708-002.yaml"
+  - "research_control/handoffs/handoff-0695.yaml"
+  - "research_control/handoffs/handoff-0695.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=722 relationship_row_count=3673 semantic_row_count=722 vault_row_count=722"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-001 latest_handoff=handoff-0694 boundary=director_decision_required"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260708-002/artifacts/validate_p4_t02_countermodel_obligation_schema_registry.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260708-002/artifacts/validate_p4_t02_countermodel_obligation_schema_registry.py | exit_code=0 | status=PASS seed_row_count=7 registry_hash=ffb6726c3d6b64263d1f353523362d780779c741dae5aa9e1e627f16b298ec41"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 722
+    relationship_row_count: 3673
+    semantic_row_count: 722
+    vault_row_count: 722
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-MINIMAL-COUNTERMODEL-OBLIGATION-POLICY-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-MINIMAL-COUNTERMODEL-OBLIGATION-POLICY-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-MINIMAL-COUNTERMODEL-OBLIGATION-POLICY-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P4-T02 countermodel obligation schema registry\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P4-T02 countermodel obligation schema registry"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-MINIMAL-COUNTERMODEL-OBLIGATION-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/minimal_countermodel_obligation_policy_v1.md"
+      source_hash: "057874c9d376ddbe4f10cbd7bc0547d16ceb9ad91c4c5cb00b61f7d8083b49a6"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "895b365f08aaa48899a6f9eab29ff130c196faa42d352160316f7e3da4d62953"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "query_memory status PASS"
+      - "targeted memory lookup and search returned v18 plan policy and current frontier"
+      - "continue_research.py resolved handoff-0694 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "minimal_countermodel_obligation_schema_v1 created"
+      - "COUNTERMODEL_OBLIGATION_REGISTRY.csv created"
+      - "task-local validator PASS"
+      - "P4-T03 route selected"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "global validators will be run after registry insertion"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier check PASS"
+      - "compact current-frontier validation PASS"
+      - "dependency graph freshness check PASS"
+      - "task-index validation PASS with historical warnings only"
+      - "claim graph validation PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap memory system PASS"
+      - "bootstrap memory system validate-only PASS"
+      - "continue_research_memory_preflight refreshed retrieval cache and returned PASS"
+      - "query_memory status PASS after refresh"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-file claim-language gate PASS with zero hard failures"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-07"
+  schema_registry_packet_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not applicable to P4-T02 schema and registry packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+verdict: "v18_p4_t02_countermodel_obligation_schema_registry_completed_no_physics_delta"
+coherent_resolution_summary: "P4-T02 created the project-control schema and registry for countermodel obligations. The initial registry contains seven P3 seed rows and every seed row explicitly denies program-wide no-go authority."
+next_recommendation: "Run one bounded v18 P4-T03 countermodel-obligation validator and tests packet."
+schema_registry_result:
+  schema_path: "research_control/design/minimal_countermodel_obligation_schema_v1.md"
+  schema_object_id: "MD-RESEARCH-CONTROL-DESIGN-MINIMAL-COUNTERMODEL-OBLIGATION-SCHEMA-V1"
+  schema_source_hash: "488a54d3a5196ace43dfb06300b1471aec925112e4af426153685f23ea1c7048"
+  registry_path: "registries/COUNTERMODEL_OBLIGATION_REGISTRY.csv"
+  registry_source_hash: "ffb6726c3d6b64263d1f353523362d780779c741dae5aa9e1e627f16b298ec41"
+  receipt_path: "research_control/tasks/RT-20260708-002/artifacts/countermodel_obligation_schema_registry_receipt.md"
+  receipt_object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-002-COUNTERMODEL-OBLIGATION-SCHEMA-REGISTRY-RECEIPT"
+  receipt_source_hash: "f7a86ff33554fea6a0ec2e73879067cf32f113f539f2c4e170144bd14e6f94d1"
+  validator_report_path: "research_control/tasks/RT-20260708-002/artifacts/p4_t02_countermodel_obligation_schema_registry_report.json"
+  validator_report_hash: "2cc1906fe95baa8992169a8e328919b105760fd479302a52b3a7703cc23ce2ce"
+  validator_status: "PASS"
+  seed_row_count: 7
+  all_seed_rows_global_no_go_false: true
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+new_mathematical_payload: []
+mathematical_payload_manifest: []
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R03"
+  implements_plan_task_id: "P4-T02"
+  implementation_status: "completed"
+  coverage_effect: "direct_implementation_schema_registry_no_physics_delta"
+claim_boundary:
+  allowed_claims:
+    - "v18 P4-T02 schema and registry completed"
+    - "COUNTERMODEL_OBLIGATION_REGISTRY exists with the exact P4-T02 header"
+    - "initial P3 seed rows were indexed where available"
+    - "all seed rows set global_no_go_claimed to false"
+    - "no Distance-to-GR delta"
+  forbidden_claims:
+    - "general EqSrc discharge"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "source-law adoption"
+    - "matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "program-wide no-go conclusion"
+    - "future source-extension impossibility"
+project_improvement_signals: []
