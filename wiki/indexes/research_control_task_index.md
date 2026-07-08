@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `8468dfa3cdecaaf7dc2e43abdd2ba66ded9f7d57e2635465a2e1f9883e4d9eda`
-- Generated-at source timestamp: `2026-07-07T23:38:32Z`
-- Row count: `834`
+- Source fingerprint: `e2e4884b1f4d6af83df7c584c0ed0e7eae54b00f2068a77fabc73555942edbbe`
+- Generated-at source timestamp: `2026-07-08T00:22:57Z`
+- Row count: `835`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260708-001|RT-20260707-024|2026-07-08T00:22:57Z|2026-07-08T00:22:57Z|countermodel_obligation_policy|completed|source_equivalence_eqsrc|Define minimal countermodel obligations for future theorem attempts.|project-control-maintainer@0.2.0|false|false|3|Run one bounded v18 P4-T02 countermodel-obligation schema and registry extension packet.|PASS|research_control/tasks/RT-20260708-001/jobs/completions/AJC-AJ-RT-20260708-001-001.yaml|
 |RT-20260707-024|RT-20260707-023|2026-07-07T23:38:32Z|2026-07-07T23:38:32Z|post_eqsrc_family_closure_selector|completed|source_equivalence_eqsrc|Select one next route after family-closure theorem/countermodel, audit, and stress.|theoretical-continuation-selector@0.1.0|false|false|7|Run one bounded v18 P4-T01 countermodel-obligation policy packet.|PASS|research_control/tasks/RT-20260707-024/jobs/completions/AJC-AJ-RT-20260707-024-001.yaml|
 |RT-20260707-023|RT-20260707-022|2026-07-07T22:54:55Z|2026-07-07T22:54:55Z|eqsrc_family_closure_refuter_stress|completed|source_equivalence_eqsrc|Stress the P3 family-closure result against closure removal, invariant weakening, primitive-dependence, and target-import attacks.|refuter@0.2.0|false|false|9|Run one bounded v18 P3-T06 post-EqSrc family-closure selector packet.|PASS|research_control/tasks/RT-20260707-023/jobs/completions/AJC-AJ-RT-20260707-023-001.yaml|
 |RT-20260707-022|RT-20260707-021|2026-07-07T22:19:13Z|2026-07-07T22:19:13Z|eqsrc_family_closure_smuggling_audit|completed|source_equivalence_eqsrc|Audit the family-closure theorem-or-countermodel attempt for target imports and authority laundering.|smuggling-auditor@0.2.0|false|false|9|Run one bounded v18 P3-T05 Refuter stress of the family-closure attempt.|PASS|research_control/tasks/RT-20260707-022/jobs/completions/AJC-AJ-RT-20260707-022-001.yaml|
