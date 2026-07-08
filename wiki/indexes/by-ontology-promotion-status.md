@@ -350,6 +350,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V18-P3-T03-RETAINH-GENH-PRIMITIVE-BOUNDARY-V1` `research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_v1.tex`
 - `TEX-V18-P3-T04-EQSRC-FAMILY-CLOSURE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_v1.tex`
 - `TEX-V18-P3-T05-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS-V1` `research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex`
+- `TEX-V18-P5-T04-SOURCE-DETECTOR-READOUT-CANDIDATE` `research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex`
 
 ## superseded
 

@@ -1,0 +1,34 @@
+task_id: "RT-20260708-010"
+task_type: "source_detector_readout_candidate_or_obstruction"
+status: "completed"
+created_at: "2026-07-08T05:40:00Z"
+updated_at: "2026-07-08T05:40:00Z"
+closed_at: "2026-07-08T05:40:00Z"
+parent_task_id: "RT-20260708-009"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T04"
+  recommendation_ids:
+    - "V18-R04"
+objective: "Construct one bounded source detector/readout candidate or record one precise obstruction without adopting detector/readout semantics or deriving matter coupling."
+current_decision_id: "DDR-20260708-010"
+current_job_id: "AJ-RT-20260708-010-001"
+role_family: "candidate-constructor@0.2.0"
+requires_human_gate: false
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Construct one source-side detector/readout candidate or record one precise obstruction."
+physics_progress_status: "detector_readout_candidate_no_adoption"
+scientific_claims_changed: true
+physics_promotion_authorized: false
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  ledger_row_updated: false
+  burden_id: "matter_coupling"
+claim_boundary_summary: "P5-T04 constructs exactly one draft/control candidate SourceReadoutCandidate_EStar_v1 with a finite source-side readout interface, detector source record bundle, certificate bundle, finite/local witness, fail-closed import guards, and limited compatibility with SourceCouplingLawCandidate_EStar_v1. It does not adopt Det_src or Readout_src, does not adopt detector semantics, does not update the Distance-to-GR ledger or matter-coupling DAG, and does not derive matter coupling."
+outputs:
+  - "research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex"
+  - "research_control/tasks/RT-20260708-010/jobs/completions/AJC-AJ-RT-20260708-010-001.yaml"
+next_recommended_action: "Run one bounded v18 P5-T05 source detector/readout smuggling audit packet against SourceReadoutCandidate_EStar_v1."

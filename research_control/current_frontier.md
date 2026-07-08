@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-009` and `handoff-0702`.
+`RT-20260708-010` and `handoff-0703`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-009` |
-| Latest handoff ID | `handoff-0702` |
-| Current status | `v18_p5_t03_source_detector_readout_candidate_setup_no_adoption` |
+| Active task ID | `RT-20260708-010` |
+| Latest handoff ID | `handoff-0703` |
+| Current status | `v18_p5_t04_source_detector_readout_candidate_no_adoption` |
 | V16 completed | false |
-| Current route family | v18 p5 t04 source detector readout candidate or obstruction no adoption |
+| Current route family | v18 p5 t05 source detector readout smuggling audit no adoption |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: detector_readout_setup_no_adoption |
-| Required next authority | Run one bounded v18 P5-T04 source detector/readout candidate-or-obstruction construction packet. |
-| Next recommended action | Run one bounded v18 P5-T04 source detector/readout candidate-or-obstruction construction packet. |
+| Current burden | `matter_coupling`; status: detector_readout_candidate_no_adoption |
+| Required next authority | Run one bounded v18 P5-T05 source detector/readout smuggling audit packet against SourceReadoutCandidate_EStar_v1. |
+| Next recommended action | Run one bounded v18 P5-T05 source detector/readout smuggling audit packet against SourceReadoutCandidate_EStar_v1. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-009` |
-| Latest research handoff ID | `handoff-0702` |
-| Latest research next action | Run one bounded v18 P5-T04 source detector/readout candidate-or-obstruction construction packet. |
+| Latest research task ID | `RT-20260708-010` |
+| Latest research handoff ID | `handoff-0703` |
+| Latest research next action | Run one bounded v18 P5-T05 source detector/readout smuggling audit packet against SourceReadoutCandidate_EStar_v1. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-009/00_TASK.yaml`.
-- Active task objective: Set up one bounded source detector/readout candidate target for later construction or precise obstruction without adopting detector/readout semantics or deriving matter coupling.
-- Latest handoff path: `research_control/handoffs/handoff-0702.yaml`.
-- Latest handoff summary: Completed v18 P5-T03 by naming exactly one source detector/readout candidate target branch, SourceReadoutCandidate_EStar_v1, with SMScope(E_*), Readout_src(E_*), Det_src(E_*), SourceCouplingLawCandidate_EStar_v1 compatibility target, finite/local witness obligation, and no-target import guards. No detector/readout semantics adoption, matter-coupling derivation, ledger update, DAG update, benchmark promotion, Gate Chair verdict, or completed-derivation claim is authorized.
-- Current route family: v18 p5 t04 source detector readout candidate or obstruction no adoption.
-- Next recommended action: Run one bounded v18 P5-T04 source detector/readout candidate-or-obstruction construction packet.
+- Active task path: `research_control/tasks/RT-20260708-010/00_TASK.yaml`.
+- Active task objective: Construct one bounded source detector/readout candidate or record one precise obstruction without adopting detector/readout semantics or deriving matter coupling.
+- Latest handoff path: `research_control/handoffs/handoff-0703.yaml`.
+- Latest handoff summary: Completed v18 P5-T04 by constructing exactly one draft/control source detector/readout candidate, SourceReadoutCandidate_EStar_v1, with SMScope(E_*), Readable_src(E_*), Readout_src(E_*), Det_src(E_*), Cert_R(E_*), Fail_R(E_*), finite/local witness W_R(E_*), no-target import guards, and limited projection-level compatibility with SourceCouplingLawCandidate_EStar_v1. No obstruction was recorded. No Det_src adoption, Readout_src adoption, detector-semantics adoption, matter-coupling derivation, ledger update, DAG update, benchmark promotion, Gate Chair verdict, or completed-derivation claim is authorized.
+- Current route family: v18 p5 t05 source detector readout smuggling audit no adoption.
+- Next recommended action: Run one bounded v18 P5-T05 source detector/readout smuggling audit packet against SourceReadoutCandidate_EStar_v1.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P5-T04 source detector/readout candidate-or-obstruction construction packet.
+Run one bounded v18 P5-T05 source detector/readout smuggling audit packet against SourceReadoutCandidate_EStar_v1.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,9 +320,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-009`;
-- latest handoff: `handoff-0702`;
-- current status: `v18_p5_t03_source_detector_readout_candidate_setup_no_adoption`;
+- active task: `RT-20260708-010`;
+- latest handoff: `handoff-0703`;
+- current status: `v18_p5_t04_source_detector_readout_candidate_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -336,8 +336,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0702.yaml`
-- `research_control/tasks/RT-20260708-009/00_TASK.yaml`
+- `research_control/handoffs/handoff-0703.yaml`
+- `research_control/tasks/RT-20260708-010/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -353,7 +353,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0702*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0703*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

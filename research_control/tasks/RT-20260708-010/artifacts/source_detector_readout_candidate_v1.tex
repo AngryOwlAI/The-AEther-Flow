@@ -1,0 +1,456 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newcommand{\EStar}{E_{\ast}}
+\newcommand{\SMScope}{\mathrm{SMScope}}
+\newcommand{\ReadableSrc}{\mathrm{Readable}_{\mathrm{src}}}
+\newcommand{\ReadoutSrc}{\mathrm{Readout}_{\mathrm{src}}}
+\newcommand{\DetSrc}{\mathrm{Det}_{\mathrm{src}}}
+\newcommand{\TokR}{\mathrm{Tok}_{R}}
+\newcommand{\CertR}{\mathrm{Cert}_{R}}
+\newcommand{\FailR}{\mathrm{Fail}_{R}}
+\newcommand{\BottomSrc}{\bot_{\mathrm{src}}}
+\newcommand{\KStar}{K_{E_{\ast}}}
+\newcommand{\Src}{\mathrm{src}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{boundary}{Boundary}
+\newtheorem{nonconclusion}{Non-conclusion}
+
+\title{Source Detector/Readout Candidate \(\mathrm{SourceReadoutCandidate\_EStar\_v1}\)}
+\author{Candidate Constructor Packet RT-20260708-010}
+\date{2026-07-08}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact completes v18 P5-T04. It constructs exactly one bounded
+draft/control source detector/readout candidate:
+\[
+  \mathrm{SourceReadoutCandidate\_EStar\_v1}.
+\]
+No obstruction is recorded because a finite source-side readout interface can
+be written under the P5-T03 setup boundary.
+
+The candidate is a task-local construction for later audit and stress. It is
+not \(\DetSrc\) adoption, not \(\ReadoutSrc\) adoption, not detector
+semantics, not source detector/readout semantics adoption, not a source law,
+not coupling-law adoption, not matter-coupling derivation, not stress-energy
+semantics, not a matter action, not Einstein equations, not benchmark
+promotion, not a Gate Chair verdict, and not completed derivation.
+
+\section{Required Candidate Fields}
+
+\begin{verbatim}
+source_detector_readout_candidate:
+  candidate_name: "SourceReadoutCandidate_EStar_v1"
+  result_type: "constructed_candidate"
+  source_domain: "SMScope(E_*)"
+  readout_interface: "Readout_src(E_*): Readable_src(E_*) -> Tok_R(E_*)"
+  detector_source_record: "Det_src(E_*) = (Readable_src(E_*),
+    Readout_src(E_*), Cert_R(E_*), Fail_R(E_*),
+    draft_control_candidate)"
+  certificate_bundle: "Cert_R(E_*) = {C_R_id_0, C_R_id_1,
+    C_R_tr_01, C_R_inv_01, C_R_res_0, C_R_amb, C_R_nt,
+    C_R_K_compat}"
+  finite_local_witness: "W_R(E_*)"
+  compatible_with_K_Estar: true
+  status: "draft_control_candidate"
+  no_empirical_protocol_import: true
+  no_proper_time_import: true
+  no_target_metric_import: true
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  no_fog_check: true
+\end{verbatim}
+
+\section{Finite Source Domain}
+
+\begin{definition}[Source situation and scoped domain]
+Let the finite source situation be
+\[
+  \EStar=\{\epsilon_0,\epsilon_1\}.
+\]
+Let \(A_0\) and \(A_1\) be declared source objects in the same finite
+source-side matter-semantics scope used by the bounded source-side coupling
+candidate. Define source records
+\[
+  r_0=(A_0,A_0,\mathrm{id\_record\_0}),\quad
+  r_1=(A_1,A_1,\mathrm{id\_record\_1}),\quad
+  r_{01}=(A_0,A_1,\mathrm{transport\_record\_01}).
+\]
+The source domain for this packet is
+\[
+  \SMScope(\EStar)=
+  (\EStar,\{A_0,A_1\},\{r_0,r_1,r_{01}\},
+  \mathrm{declared\_finite\_source\_scope}).
+\]
+\end{definition}
+
+The records \(r_0,r_1,r_{01}\) are source records only. They are not detector
+observations, target spacetime events, proper-time readings, calibration
+records, target-metric data, stress-energy records, matter-action terms, or
+benchmark observables.
+
+\section{Readable Source Records}
+
+\begin{definition}[Readable source record family]
+Define the readable source-record family
+\[
+  \ReadableSrc(\EStar)=\{s_0,s_1,s_{01}\}
+\]
+where
+\[
+\begin{aligned}
+  s_0 &= (r_0,C^{R,id}_0,\mathrm{readable\_src},\mathrm{unambiguous}),\\
+  s_1 &= (r_1,C^{R,id}_1,\mathrm{readable\_src},\mathrm{unambiguous}),\\
+  s_{01} &= (r_{01},C^{R,tr}_{01},\mathrm{readable\_src},
+    \mathrm{unambiguous}).
+\end{aligned}
+\]
+Each \(s_i\) is a certified source record. The words
+``readable'' and ``unambiguous'' are source-side status markers for the
+finite record interface. They are not empirical observation terms.
+\end{definition}
+
+\section{Readout Tokens and Interface}
+
+\begin{definition}[Source readout token family]
+Define the finite source readout-token set
+\[
+  \TokR(\EStar)=\{\rho^R_0,\rho^R_1,\rho^R_{01},\BottomSrc\}.
+\]
+The tokens \(\rho^R_0,\rho^R_1,\rho^R_{01}\) are internal source-side
+readout markers. They are not detector clicks, clock values, proper times,
+metric components, stress-energy components, Lagrangian terms, field
+equations, or benchmark observables. The token \(\BottomSrc\) is the
+fail-closed result for invalid branches.
+\end{definition}
+
+\begin{definition}[Finite source readout interface]
+Define the partial source-side readout map
+\[
+  \ReadoutSrc(\EStar):\ReadableSrc(\EStar)\rightharpoonup \TokR(\EStar)
+\]
+by the finite graph
+\[
+\begin{aligned}
+  \ReadoutSrc(\EStar)(s_0) &= \rho^R_0,\\
+  \ReadoutSrc(\EStar)(s_1) &= \rho^R_1,\\
+  \ReadoutSrc(\EStar)(s_{01}) &= \rho^R_{01}.
+\end{aligned}
+\]
+The map is undefined outside \(\ReadableSrc(\EStar)\). Any attempted input
+that is missing, malformed, ambiguous, or target-importing is sent to
+\(\BottomSrc\) by the fail-closed rules below.
+\end{definition}
+
+This interface supplies a source-side relation between certified source
+records and source readout tokens. It does not supply empirical detector
+protocol, proper-time normalization, target metric, target atlas,
+stress-energy semantics, matter action, Einstein equations, exact-GR
+benchmark behavior, or process authority.
+
+\section{Certificate Bundle}
+
+\begin{definition}[Readout certificate bundle]
+Let
+\[
+\CertR(\EStar)=
+\{C^{R,id}_0,C^{R,id}_1,C^{R,tr}_{01},C^{R,inv}_{01},
+  C^{R,res}_0,C^{R,amb},C^{R,nt}_{\EStar},C^{R,K}_{\EStar}\}.
+\]
+The certificates have the following task-local source-side meanings:
+\[
+\begin{array}{ll}
+C^{R,id}_0 &: s_0\mapsto s_0,\ \rho^R_0\mapsto \rho^R_0,\\
+C^{R,id}_1 &: s_1\mapsto s_1,\ \rho^R_1\mapsto \rho^R_1,\\
+C^{R,tr}_{01} &: s_0\mapsto s_1,\ \rho^R_0\mapsto \rho^R_1,\\
+C^{R,inv}_{01} &: \{(s_0,\rho^R_0),(s_1,\rho^R_1)\}\ \text{is preserved under the declared source relabeling},\\
+C^{R,res}_0 &: \ReadoutSrc(\EStar)\ \text{restricted to}\ \{s_0\}\ \text{remains source-side},\\
+C^{R,amb} &: \text{ambiguous or multi-valued readout attempts fail closed},\\
+C^{R,nt}_{\EStar} &: \text{forbidden target empirical and process imports are absent},\\
+C^{R,K}_{\EStar} &: \text{limited projection compatibility with}\ \KStar\ \text{is recorded}.
+\end{array}
+\]
+\end{definition}
+
+The certificate bundle is finite. It is not detector semantics, not a source
+law, not an unrestricted \(RR_E\) theorem, not a coupling law, and not a
+matter-coupling rule.
+
+\section{Fail-Closed Rules}
+
+\begin{definition}[Fail-closed readout rules]
+Define
+\[
+  \FailR(\EStar)=
+  \{F_{\mathrm{missing}},F_{\mathrm{malformed}},
+    F_{\mathrm{ambiguous}},F_{\mathrm{target}},
+    F_{\mathrm{empirical}},F_{\mathrm{proper}},
+    F_{\mathrm{downstream}},F_{\mathrm{process}}\}.
+\]
+Each rule maps the indicated invalid branch to \(\BottomSrc\):
+\[
+\begin{array}{ll}
+F_{\mathrm{missing}} &: \text{missing source record or certificate}\mapsto\BottomSrc,\\
+F_{\mathrm{malformed}} &: \text{malformed source record or certificate}\mapsto\BottomSrc,\\
+F_{\mathrm{ambiguous}} &: \text{ambiguous or multi-valued source readout}\mapsto\BottomSrc,\\
+F_{\mathrm{target}} &: \text{target topology, atlas, metric, or benchmark import}\mapsto\BottomSrc,\\
+F_{\mathrm{empirical}} &: \text{empirical detector protocol or calibration import}\mapsto\BottomSrc,\\
+F_{\mathrm{proper}} &: \text{proper-time normalization import}\mapsto\BottomSrc,\\
+F_{\mathrm{downstream}} &: \text{stress-energy, matter action, matter coupling, or Einstein-equation import}\mapsto\BottomSrc,\\
+F_{\mathrm{process}} &: \text{validator, registry, role, handoff, generated derivative, or file-order authority import}\mapsto\BottomSrc.
+\end{array}
+\]
+\end{definition}
+
+\section{Detector Source Record Candidate}
+
+\begin{definition}[Source detector/readout candidate]
+The P5-T04 candidate is the tuple
+\[
+  \DetSrc(\EStar)=
+  (\SMScope(\EStar),\ReadableSrc(\EStar),\ReadoutSrc(\EStar),
+   \TokR(\EStar),\CertR(\EStar),\FailR(\EStar),
+   \texttt{draft\_control\_candidate}).
+\]
+Equivalently, \(\DetSrc(\EStar)\) is a source record interface plus a
+source-side readout map and certificate bundle. It is not a physical detector
+model, not an empirical observation protocol, and not detector-semantics
+adoption.
+\end{definition}
+
+\section{Compatibility With \(\KStar\)}
+
+\begin{definition}[Projection-level compatibility with \(K_{E_{\ast}}\)]
+Let
+\[
+  \pi_K:\ReadableSrc(\EStar)\to \{r_0,r_1,r_{01}\}
+\]
+be the source projection
+\[
+  \pi_K(s_0)=r_0,\qquad
+  \pi_K(s_1)=r_1,\qquad
+  \pi_K(s_{01})=r_{01}.
+\]
+The readout candidate is compatible with \(\KStar\) in the limited
+draft/control sense if:
+\begin{enumerate}[leftmargin=2em]
+  \item \(\pi_K(s)\) is in the finite source record domain of \(\KStar\) for
+  each \(s\in\ReadableSrc(\EStar)\);
+  \item \(\ReadoutSrc(\EStar)(s)\neq\BottomSrc\) for the listed finite
+  witness records;
+  \item the no-target certificate \(C^{R,nt}_{\EStar}\) is present; and
+  \item the earlier detector placeholder or block in \(\KStar\) is not read
+  as detector-semantics adoption.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}[Limited compatibility holds]
+\(\mathrm{SourceReadoutCandidate\_EStar\_v1}\) is compatible with
+\(\mathrm{SourceCouplingLawCandidate\_EStar\_v1}\) in the limited
+projection-level draft/control sense above.
+\end{lemma}
+
+\begin{proof}
+The three readable source records project respectively to \(r_0\), \(r_1\),
+and \(r_{01}\), the finite source record names used by the bounded
+\(\KStar\) candidate. The readout map assigns non-bottom source readout
+tokens to all three listed records. The certificate bundle includes
+\(C^{R,nt}_{\EStar}\) and \(C^{R,K}_{\EStar}\). No step changes the earlier
+\(\KStar\) artifact, treats its detector placeholder as adopted detector
+semantics, or turns compatibility into coupling-law adoption. Therefore the
+limited compatibility condition holds.
+\end{proof}
+
+This compatibility statement does not mean that \(\KStar\) is adopted, that
+the readout candidate is integrated into a coupling law, or that matter
+coupling is derived.
+
+\section{No-Target Certificate}
+
+\begin{definition}[No-target import certificate]
+The certificate \(C^{R,nt}_{\EStar}\) records the following finite checklist:
+\[
+\begin{array}{ll}
+\text{empirical detector protocol imported} & \text{false},\\
+\text{proper-time normalization imported} & \text{false},\\
+\text{target topology or atlas imported} & \text{false},\\
+\text{target metric imported} & \text{false},\\
+\text{benchmark behavior imported} & \text{false},\\
+\text{stress-energy semantics imported} & \text{false},\\
+\text{matter action imported} & \text{false},\\
+\text{Einstein equation imported} & \text{false},\\
+\text{registry or validator pass used as theorem} & \text{false},\\
+\text{role handoff generated derivative or file order used as premise} & \text{false}.
+\end{array}
+\]
+\end{definition}
+
+\begin{lemma}[No empirical protocol, proper time, or target metric imported]
+The candidate \(\DetSrc(\EStar)\) uses no empirical detector protocol, no
+proper-time normalization, and no target metric.
+\end{lemma}
+
+\begin{proof}
+The domain is the finite source-side scope \(\SMScope(\EStar)\). The readable
+records are tuples of source records, source certificates, and source status
+markers. The readout interface maps these tuples to source readout tokens.
+The certificate bundle records only task-local source identity, transport,
+invariance, restriction, ambiguity, no-target, and \(K\)-compatibility
+certificates. The fail-closed rules explicitly route empirical detector
+protocol, proper-time normalization, target topology, target atlas, target
+metric, benchmark behavior, stress-energy semantics, matter action, Einstein
+equations, validator status, registry rows, handoffs, roles, generated
+derivatives, local caches, file order, checkpoints, and commits to
+\(\BottomSrc\) when used as premises. Therefore none of those objects is
+imported as a source premise by this candidate.
+\end{proof}
+
+\section{Finite/Local Witness}
+
+\begin{lemma}[Finite/local witness]
+The tuple
+\[
+  W_R(\EStar)=
+  (\EStar,\SMScope(\EStar),\ReadableSrc(\EStar),
+   \ReadoutSrc(\EStar),\TokR(\EStar),\CertR(\EStar),
+   \FailR(\EStar),\DetSrc(\EStar))
+\]
+is a finite/local witness for one source detector/readout candidate.
+\end{lemma}
+
+\begin{proof}
+\(\EStar\) has two elements. The scoped domain contains two declared source
+objects and three source records. \(\ReadableSrc(\EStar)\) has three readable
+source records. \(\TokR(\EStar)\) has four tokens including the bottom token.
+\(\ReadoutSrc(\EStar)\) has exactly three graph entries. \(\CertR(\EStar)\)
+has eight named certificates. \(\FailR(\EStar)\) has eight named fail-closed
+rules. The tuple is finite and explicitly listed.
+\end{proof}
+
+\section{Validity Predicate Evaluation}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.56\linewidth}
+                >{\raggedright\arraybackslash}p{0.14\linewidth}
+                >{\raggedright\arraybackslash}p{0.22\linewidth}}
+\toprule
+Validity field & Result & Evidence \\
+\midrule
+Source domain declared & PASS & Section 3 \\
+Readable source record family declared & PASS & Section 4 \\
+Readout interface declared & PASS & Section 5 \\
+Detector source record bundle declared & PASS & Section 8 \\
+Certificate bundle present & PASS & Section 6 \\
+Finite/local witness present & PASS & Section 11 \\
+Compatible with \(K_{E_{\ast}}\) & PASS & Limited projection sense in Section 9 \\
+No empirical protocol import & PASS & Sections 7 and 10 \\
+No proper-time import & PASS & Sections 7 and 10 \\
+No target-metric import & PASS & Sections 7 and 10 \\
+Detector semantics adopted & FALSE & Explicitly blocked \\
+Matter coupling derived & FALSE & Explicitly blocked \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Candidate Result}
+
+\begin{verbatim}
+source_detector_readout_result:
+  result_type: "constructed_candidate"
+  candidate_name: "SourceReadoutCandidate_EStar_v1"
+  source_domain: "SMScope(E_*)"
+  readout_interface: "Readout_src(E_*): Readable_src(E_*) -> Tok_R(E_*)"
+  detector_source_record: "Det_src(E_*)"
+  certificate_bundle: "Cert_R(E_*)"
+  finite_local_witness: "W_R(E_*)"
+  compatible_with_K_Estar: true
+  status: "draft_control_candidate"
+  no_empirical_protocol_import: true
+  no_proper_time_import: true
+  no_target_metric_import: true
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  obstruction_recorded: false
+  no_fog_check: true
+  next_required_role: "smuggling-auditor"
+\end{verbatim}
+
+\section{Distance-To-GR Status}
+
+The Distance-to-GR ledger is unchanged. The matter-coupling burden remains
+open. This packet supplies one finite/local draft/control readout candidate
+for later audit and stress. It does not discharge matter coupling, source-law
+adoption, detector-semantics adoption, coupling-law adoption, stress-energy
+semantics, matter action, Einstein equations, benchmark promotion, Gate Chair
+status, or completed derivation.
+
+\section{Forbidden Conclusions}
+
+\begin{nonconclusion}
+This candidate is not \(\DetSrc\) adoption, \(\ReadoutSrc\) adoption, detector
+semantics, source detector/readout semantics adoption, or empirical detector
+protocol authority.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+This candidate is not a source law, not a coupling law, not matter-coupling
+derivation, not matter-coupling adoption, not stress-energy semantics, not a
+stress-energy tensor, not a matter action, not Einstein equations, not
+benchmark promotion, not proof authority, and not completed derivation.
+\end{nonconclusion}
+
+\begin{nonconclusion}
+The existence of this finite source-side readout interface does not prove
+that a general source detector/readout law exists, that later smuggling audit
+or Refuter stress will pass, or that future source-extension routes are
+impossible if the candidate later fails.
+\end{nonconclusion}
+
+\section{Next Route}
+
+The logical next route is v18 P5-T05: run one bounded smuggling audit against
+\(\mathrm{SourceReadoutCandidate\_EStar\_v1}\) for empirical detector
+protocol, proper-time normalization, target metric, benchmark behavior,
+stress-energy semantics, matter-action language, and process-authority
+imports.
+
+\section{APA 7 Source Materials}
+
+The Aether-Flow Research Project. (2026a). \emph{Recommendations
+implementation plan Continue Task v18} [Internal implementation plan].
+\texttt{implementations\_plans/recommendations\_implementation\_plan\_continue\_task-v18.md}.
+
+The Aether-Flow Research Project. (2026b). \emph{Source detector/readout
+semantics burden v1} [Internal control note].
+\texttt{research\_control/design/source\_detector\_readout\_semantics\_burden\_v1.md}.
+
+The Aether-Flow Research Project. (2026c). \emph{Source detector/readout
+candidate setup v1} [Research-control task artifact].
+\texttt{research\_control/tasks/RT-20260708-009/artifacts/source\_detector\_readout\_candidate\_setup\_v1.md}.
+
+The Aether-Flow Research Project. (2026d). \emph{Source-side coupling-law
+candidate \(K_{E_{\ast}}\) v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260705-047/artifacts/source\_side\_coupling\_law\_candidate\_v1.tex}.
+
+The Aether-Flow Research Project. (2026e). \emph{Source-side
+detector-replacement candidate \(D^{src}_{E_{\ast}}\) v1} [Research-control
+TeX artifact].
+\texttt{research\_control/tasks/RT-20260706-002/artifacts/detector\_semantics\_replacement\_candidate\_v1.tex}.
+
+The Aether-Flow Research Project. (2026f). \emph{No-target-import guard map}
+[Internal control note].
+\texttt{research\_control/design/no\_target\_import\_guard\_map.md}.
+
+\end{document}

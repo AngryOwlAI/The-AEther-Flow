@@ -1,0 +1,21 @@
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+task_id: "RT-20260708-010"
+job_id: "AJ-RT-20260708-010-001"
+status: "completed"
+result_type: "constructed_candidate"
+candidate_name: "SourceReadoutCandidate_EStar_v1"
+semantic_assessment:
+  key_boundary: "A source readout record is a formal source-side interface token, not an empirical detector observation."
+  adoption_boundary_preserved: true
+  no_target_import_boundary_preserved: true
+  ontology_boundary_preserved: true
+  process_authority_boundary_preserved: true
+  caution: "The candidate may be useful only if later audit and stress show that it does not collapse into empirical detector semantics or placeholder naming."
+forbidden_overreads:
+  - "finite readout map as detector semantics"
+  - "source readout token as empirical observation"
+  - "compatibility with K_Estar as coupling-law adoption"
+  - "validator pass as physics proof"
+  - "candidate existence as matter-coupling derivation"
+recommendation: "Construct the candidate with explicit non-conclusions and route to smuggling audit before any integration decision."
