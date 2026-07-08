@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-038`
-- Latest handoff: `handoff-0731`
-- Current status: `v18_p10_t02_external_review_source_spec_created_no_outreach_no_promotion`
+- Active task: `RT-20260708-039`
+- Latest handoff: `handoff-0732`
+- Current status: `v18_p10_t03_external_review_packet_created_registered_no_outreach_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-038`
-- Latest research handoff: `handoff-0731`
-- Latest research next action: Run one bounded v18 P10-T03 external-review packet artifact packet.
+- Latest research task: `RT-20260708-039`
+- Latest research handoff: `handoff-0732`
+- Latest research next action: Run one bounded v18 P10-T04 internal red-team review of the external-review packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `external_review_packet_artifact`
-- Role family: `documentation-curator@2.0.0`
+- Route ID: `internal_red_team_review_of_external_packet`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Generate the focused external-review packet from tracked source spec.
+- Milestone burden: Red-team the focused external-review packet before any outreach decision.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `8cbb3e602e96c8ffcf07462980fcbda779582ad83b164c2c1a4d32101582c1f5`
-- JSON SHA-256: `01cce4ce540914215d4f3ecf73b09e2a5a1dabc7a1edda16dc4e03a80bd9c05e`
+- YAML SHA-256: `821c067b6aad8d58fdf047d5ca1776bd3a157d2a02b637983b50e27f3c5d3208`
+- JSON SHA-256: `12260ac8564d30d7c0c1716e546d168b921eb69fbcb5b72860c2b5a35ff241c7`
 
 ## Authority Warning
 

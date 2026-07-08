@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `f384232ea232d92b5d425dca3d9d733ac1a2a6a223a9ec4add1777f57e131346`
-- Generated-at source timestamp: `2026-07-08T22:14:18Z`
-- Row count: `872`
+- Source fingerprint: `5eefd3e204c7bf736ec4e0a866ab1cd421aff04c051c0e5d1bd99278367cd2cf`
+- Generated-at source timestamp: `2026-07-08T22:50:01Z`
+- Row count: `873`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260708-039|RT-20260708-038|2026-07-08T22:50:01Z|2026-07-08T22:50:01Z|external_review_packet_artifact|completed|source_equivalence_eqsrc|Generate the focused external-review packet from tracked source spec.|documentation-curator@2.0.0|false|false|8|Run one bounded v18 P10-T04 internal red-team review of the external-review packet.|PASS|research_control/tasks/RT-20260708-039/jobs/completions/AJC-AJ-RT-20260708-039-001.yaml|
 |RT-20260708-038|RT-20260708-037|2026-07-08T22:14:18Z|2026-07-08T22:14:18Z|external_review_packet_source_spec|completed|source_equivalence_eqsrc|Write a source spec for one focused external-review packet.|documentation-curator@2.0.0|false|false|8|Run one bounded v18 P10-T03 external-review packet artifact packet.|PASS|research_control/tasks/RT-20260708-038/jobs/completions/AJC-AJ-RT-20260708-038-001.yaml|
 |RT-20260708-037|RT-20260708-036|2026-07-08T21:31:55Z|2026-07-08T21:31:55Z|external_review_question_selector_v18|completed|source_equivalence_eqsrc|Select one focused external-review question from v18 theorem/countermodel results.|theoretical-continuation-selector@0.1.0|false|false|8|Run one bounded v18 P10-T02 external-review packet source spec packet.|PASS|research_control/tasks/RT-20260708-037/jobs/completions/AJC-AJ-RT-20260708-037-001.yaml|
 |RT-20260708-036|RT-20260708-035|2026-07-08T21:18:00Z|2026-07-08T21:18:00Z|public_cognitive_load_red_team_review|completed|none|Review public and reader-facing status surfaces for overclaim, underclaim, and cognitive overload.|external-red-team-reviewer@0.1.0|false|false|9|Run one bounded v18 P10-T01 external-review question selector packet.|PASS|research_control/tasks/RT-20260708-036/jobs/completions/AJC-AJ-RT-20260708-036-001.yaml|

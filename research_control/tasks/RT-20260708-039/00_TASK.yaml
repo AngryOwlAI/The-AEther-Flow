@@ -1,0 +1,60 @@
+task_id: "RT-20260708-039"
+task_type: "external_review_packet_artifact"
+status: "completed"
+created_at: "2026-07-08T22:50:01Z"
+updated_at: "2026-07-08T22:50:01Z"
+closed_at: "2026-07-08T22:50:01Z"
+parent_task_id: "RT-20260708-038"
+parent_handoff_id: "handoff-0731"
+decision_id: "DDR-20260708-039"
+job_id: "AJ-RT-20260708-039-001"
+role_id: "documentation-curator"
+role_version: "2.0.0"
+execution_role_ref: "documentation-curator@2.0.0--RT-20260708-039"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. This packet does not consume Gate Chair authority ontology adoption authority or external outreach authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T03"
+  plan_task_name: "External-review packet artifact"
+  recommendation_ids:
+    - "V18-R10"
+objective: "Generate the focused EqSrc family-closure external-review packet artifact from the tracked source spec with no outreach."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Generate the focused external-review packet from tracked source spec."
+closure_status: "v18_p10_t03_external_review_packet_created_registered_no_outreach_no_promotion"
+physics_progress_status: "review_packet_created_no_outreach"
+claim_boundary:
+  selected_question_family: "EqSrc_family_closure"
+  review_question_count: 1
+  external_outreach_performed: false
+  reviewer_named: false
+  external_review_completed: false
+  endorsement_claimed: false
+  source_law_adopted: false
+  RetainH_adopted: false
+  GenH_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "external_review_packets/eqsrc_family_closure_review_packet_v1.md"
+  - "registries/EXTERNAL_REVIEW_PACKET_REGISTRY.csv"
+  - "research_control/tasks/RT-20260708-039/artifacts/child_phys_math_external_review_packet_artifact.yaml"
+  - "research_control/tasks/RT-20260708-039/artifacts/child_phys_phil_external_review_packet_artifact.yaml"
+  - "research_control/tasks/RT-20260708-039/artifacts/parent_conflict_review_external_review_packet_artifact.yaml"
+  - "research_control/tasks/RT-20260708-039/artifacts/parent_fusion_notes_external_review_packet_artifact.md"
+  - "research_control/tasks/RT-20260708-039/artifacts/external_review_packet_artifact_receipt.md"
+  - "research_control/tasks/RT-20260708-039/artifacts/validate_p10_t03_external_review_packet_artifact.py"
+  - "research_control/tasks/RT-20260708-039/artifacts/p10_t03_external_review_packet_artifact_report.json"
+next_recommended_action: "Run one bounded v18 P10-T04 internal red-team review of the external-review packet."
+notes: "RT-20260708-039 completes v18 P10-T03 by generating and registering the focused EqSrc family-closure external-review packet artifact with no outreach and no physics promotion."
+documentation_impact_id: "DI-RT-20260708-039-001"
