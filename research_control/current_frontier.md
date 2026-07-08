@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-025` and `handoff-0718`.
+`RT-20260708-026` and `handoff-0719`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-025` |
-| Latest handoff ID | `handoff-0718` |
-| Current status | `v18_p7_t07_support_formalization_traceability_integrated_no_proof_authority` |
+| Active task ID | `RT-20260708-026` |
+| Latest handoff ID | `handoff-0719` |
+| Current status | `v18_p7_t08_support_formalization_refuter_review_pass_no_proof_authority` |
 | V16 completed | false |
-| Current route family | support_formalization_traceability_integration_v18 |
+| Current route family | support_formalization_refuter_review_v18 |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P7-T08 support formalization Refuter review packet. |
-| Required next authority | Run one bounded v18 P7-T08 support formalization Refuter review packet. |
-| Next recommended action | Run one bounded v18 P7-T08 support formalization Refuter review packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P8-T01 physics-payload ratio policy packet. |
+| Required next authority | Run one bounded v18 P8-T01 physics-payload ratio policy packet. |
+| Next recommended action | Run one bounded v18 P8-T01 physics-payload ratio policy packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-025` |
-| Latest research handoff ID | `handoff-0718` |
-| Latest research next action | Run one bounded v18 P7-T08 support formalization Refuter review packet. |
+| Latest research task ID | `RT-20260708-026` |
+| Latest research handoff ID | `handoff-0719` |
+| Latest research next action | Run one bounded v18 P8-T01 physics-payload ratio policy packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-025/00_TASK.yaml`.
-- Active task objective: Integrate v18 support formalization tools into traceability and proof-normal-form registries without proof authority.
-- Latest handoff path: `research_control/handoffs/handoff-0718.yaml`.
-- Latest handoff summary: Completed v18 P7-T07 support formalization traceability integration. The packet created support_formalization_traceability_registry_v18, added five proof-normal-form support-only rows, generated wiki/indexes/support_formalization_v18.md, and added deterministic validator tests. No proof authority, source-law adoption, detector-semantics adoption, matter-coupling derivation, Einstein-equation derivation, benchmark promotion, Gate Chair verdict, or completed derivation occurred.
-- Current route family: support_formalization_traceability_integration_v18.
-- Next recommended action: Run one bounded v18 P7-T08 support formalization Refuter review packet.
+- Active task path: `research_control/tasks/RT-20260708-026/00_TASK.yaml`.
+- Active task objective: not recorded.
+- Latest handoff path: `research_control/handoffs/handoff-0719.yaml`.
+- Latest handoff summary: Completed v18 P7-T08 support formalization Refuter review. The result is pass with no repair required and no fail-closed stop. The review found no material proof-authority overread, source-law adoption, hidden mathematical burden, false-positive blocker, or scoped false-negative allowing target import. No proof authority, detector-semantics adoption, matter-coupling derivation, Einstein-equation derivation, benchmark promotion, Gate Chair verdict, or completed derivation occurred.
+- Current route family: support_formalization_refuter_review_v18.
+- Next recommended action: Run one bounded v18 P8-T01 physics-payload ratio policy packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P7-T08 support formalization Refuter review packet.
+Run one bounded v18 P8-T01 physics-payload ratio policy packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,9 +320,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-025`;
-- latest handoff: `handoff-0718`;
-- current status: `v18_p7_t07_support_formalization_traceability_integrated_no_proof_authority`;
+- active task: `RT-20260708-026`;
+- latest handoff: `handoff-0719`;
+- current status: `v18_p7_t08_support_formalization_refuter_review_pass_no_proof_authority`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -339,8 +339,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0718.yaml`
-- `research_control/tasks/RT-20260708-025/00_TASK.yaml`
+- `research_control/handoffs/handoff-0719.yaml`
+- `research_control/tasks/RT-20260708-026/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -356,7 +356,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0718*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0719*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

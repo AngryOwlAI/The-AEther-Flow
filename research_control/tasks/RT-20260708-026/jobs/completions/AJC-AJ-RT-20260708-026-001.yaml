@@ -1,0 +1,352 @@
+completion_id: "AJC-AJ-RT-20260708-026-001"
+job_id: "AJ-RT-20260708-026-001"
+task_id: "RT-20260708-026"
+decision_id: "DDR-20260708-026"
+status: "completed"
+completed_at: "2026-07-08T14:50:11Z"
+completed_by_role: "refuter@0.2.0--RT-20260708-026"
+plan_task_id: "P7-T08"
+objective_result: "completed"
+summary: "Reviewed v18 support formalization tooling, traceability registry, proof-normal-form support rows, generated index, reports, and receipts for proof-authority overread and false-confidence hazards. Result is pass with no repair required, no fail-closed stop, no proof authority, and no physics promotion."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  related_plan_task_id: "P7-T08"
+  plan_phase_id: "P7"
+  implemented_task_scope: "Completed the v18 P7-T08 support formalization Refuter review and routed the next bounded packet to P8-T01."
+  phase_p7_completed: true
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/tasks/RT-20260708-026/artifacts/support_formalization_refuter_review_v18_receipt.md"
+  - "research_control/tasks/RT-20260708-026/artifacts/child_phys_math_support_formalization_refuter_review_v18.yaml"
+  - "research_control/tasks/RT-20260708-026/artifacts/child_phys_phil_support_formalization_refuter_review_v18.yaml"
+  - "research_control/tasks/RT-20260708-026/artifacts/parent_conflict_review_support_formalization_refuter_review_v18.yaml"
+  - "research_control/tasks/RT-20260708-026/artifacts/parent_fusion_notes_support_formalization_refuter_review_v18.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260708-026/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-026/DDR-20260708-026.md"
+  - "research_control/tasks/RT-20260708-026/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-026/jobs/AJ-RT-20260708-026-001.yaml"
+  - "research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml"
+  - "research_control/tasks/RT-20260708-026/roles/refuter@0.2.0--RT-20260708-026.yaml"
+  - "research_control/handoffs/handoff-0719.yaml"
+  - "research_control/handoffs/handoff-0719.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  - "research_control/design/v18_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0718.yaml"
+  - "research_control/design/support_formalization_traceability_registry_v18.yaml"
+  - "registries/PROOF_NORMAL_FORM_REGISTRY.csv"
+  - "wiki/indexes/support_formalization_v18.md"
+  - "research_control/tasks/RT-20260708-020/**"
+  - "research_control/tasks/RT-20260708-021/**"
+  - "research_control/tasks/RT-20260708-022/**"
+  - "research_control/tasks/RT-20260708-023/**"
+  - "research_control/tasks/RT-20260708-024/**"
+  - "research_control/tasks/RT-20260708-025/**"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=769 relationship_row_count=3861 semantic_row_count=769 vault_row_count=769"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | source_object_count=769 relationship_row_count=3861"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P7-T08 support formalization Refuter review\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260708-025-SUPPORT-FORMALIZATION-TRACEABILITY-INTEGRATION-RECEIPT,MD-RESEARCH-CONTROL-CURRENT-FRONTIER,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18,MD-RESEARCH-CONTROL-TASK-INDEX"
+  - ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry_v18.py --json | exit_code=0 | status=PASS entry_count=5"
+  - ".venv/bin/python scripts/research_control/validate_proof_normal_form_registry.py --json | exit_code=0 | status=PASS checked_row_count=12 support_only_row_count=5"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | tests_run=41 status=OK"
+  - ".venv/bin/python scripts/research_control/render_proof_normal_form_index.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check --validate | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --validate | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS warnings_nonblocking=true"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS warnings_nonblocking=true"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1474 scanned_path_count=17"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | docs_impact_required=true project_system_improvement_required=true blocked_paths=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 769
+    relationship_row_count: 3861
+    semantic_row_count: 769
+    vault_row_count: 769
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P7-T08 support formalization Refuter review\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P7-T08 support formalization Refuter review"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-025-SUPPORT-FORMALIZATION-TRACEABILITY-INTEGRATION-RECEIPT"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "cc3168b11611639dc65522d7b2e6dbf0deb2c7ef41513fa80be32768d0801720"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "7215f98d162181bb579fc887456074fdcd645cd58f3ec2c52cca2874d29fdb34"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-025-SUPPORT-FORMALIZATION-TRACEABILITY-INTEGRATION-RECEIPT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-025/artifacts/support_formalization_traceability_integration_receipt.md"
+      source_hash: "b4c18f5bf5d3f55f861f80173ae97ba09fbc4d13d5a3ef3ea4ad545c4bb34785"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before P7-T08 control writes"
+      - "targeted memory search returned P7-T07 receipt, current frontier, v18 plan, and task index navigation hits"
+      - "canonical plan, backlog, latest handoff, P7-T07 receipt, support traceability registry, proof-normal-form rows, support index, and P7 tool reports inspected"
+      - "continue_research.py resolved handoff-0718 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Refuter review result pass"
+      - "repair_required=false"
+      - "fail_closed=false"
+      - "no material proof-authority overread, source-law adoption, hidden burden, false-positive blocker, or scoped false-negative found"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "support formalization traceability registry validator passed"
+      - "proof-normal-form registry validator passed"
+      - "focused unittest suite passed"
+      - "documentation-impact validator passed"
+      - "research-control validator passed with nonblocking historical warnings"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint commit has not yet been created; this layer is completed by checkpoint_research_transaction"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "proof-normal-form index render and check passed"
+      - "current-frontier write and check passed"
+      - "compact current-frontier write, check, and validation passed"
+      - "task index render passed"
+      - "dependency graph render and check passed"
+      - "claim graph generation and validation passed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py passed"
+      - "sync_obsidian_vault.py refreshed non-authoritative local retrieval mirrors after bootstrap warnings"
+      - "bootstrap_memory_system.py --validate-only passed after retrieval refresh"
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "scripts/project_control/validate_claim_language.py --changed --json exited 0 with hard_fail_count=0 overclaim_hard_fail_count=0 warning_count=1474 scanned_path_count=17"
+      - "remaining warnings were historical calibration warnings and did not block P7-T08"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  user_goal_human_gate_authorization_present: true
+  p7_t08_consumes_gate_authority: false
+  selected_next_packet_requires_human_gate: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+refuter_review_result:
+  result: "pass"
+  repair_required: false
+  fail_closed: false
+  material_overread_risk_remaining: false
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "continue_bridge_facing_candidate_path"
+  rationale: "P7-T08 supplies new support-boundary dependency-map payload by separating support checker behavior from proof authority, source-law adoption, matter coupling, Einstein equations, benchmark status, and completed derivation. The next lawful route is P8-T01 policy work rather than another support-tool implementation loop."
+  repeated_burdens_without_new_payload: false
+  scoped_obstruction_found: false
+freeze_criteria_status:
+  evaluated: true
+  freeze_triggered: false
+  freeze_label: ""
+  rationale: "P7-T08 produced new overread and false-confidence maps and found no material repair blocker. No repeated-burden or scoped-obstruction freeze is triggered."
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "other"
+  waiver_decision_id: "DDR-20260708-026"
+  rationale: "P7-T08 is a support-only Refuter review of validation and traceability surfaces. It does not prove a no-go theorem or target-side theorem needing countermodel discharge."
+  slots:
+    - countermodel_slot: "proof_authority_overread_countermodel"
+      status: "not_applicable_by_ddr"
+      scope: "support-only boundary review; no proof-authority theorem is claimed"
+      result_artifact: "research_control/tasks/RT-20260708-026/artifacts/support_formalization_refuter_review_v18_receipt.md"
+    - countermodel_slot: "source_law_adoption_countermodel"
+      status: "not_applicable_by_ddr"
+      scope: "support-only boundary review; no source-law adoption claim is made"
+      result_artifact: "research_control/tasks/RT-20260708-026/artifacts/support_formalization_refuter_review_v18_receipt.md"
+    - countermodel_slot: "matter_coupling_countermodel"
+      status: "not_applicable_by_ddr"
+      scope: "support-only boundary review; no matter-coupling derivation or adoption is made"
+      result_artifact: "research_control/tasks/RT-20260708-026/artifacts/support_formalization_refuter_review_v18_receipt.md"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260708-026/artifacts/child_phys_math_support_formalization_refuter_review_v18.yaml"
+      status: "completed"
+      contribution: "Mathematical support-boundary stress review of traceability, proof-normal-form rows, checker behavior, and overread risks."
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260708-026/artifacts/child_phys_phil_support_formalization_refuter_review_v18.yaml"
+      status: "completed"
+      contribution: "Ontology, proof-authority, adoption-status, benchmark-status, and false-confidence boundary review."
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260708-026/artifacts/parent_conflict_review_support_formalization_refuter_review_v18.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    authority_expansion_detected: false
+  fusion:
+    fusion_notes_path: "research_control/tasks/RT-20260708-026/artifacts/parent_fusion_notes_support_formalization_refuter_review_v18.md"
+    fused_output_path: "research_control/tasks/RT-20260708-026/artifacts/support_formalization_refuter_review_v18_receipt.md"
+refuter_obstruction_record:
+  obstruction_id: "OB-P7T08-PROOF-AUTHORITY-OVERREAD-001"
+  target_claim: "V18 support formalization tools reports traceability registry PNF rows or generated index establish proof authority source-law adoption detector/readout semantics adoption matter coupling Einstein equations benchmark status or completed derivation."
+  target_milestone: "matter_coupling"
+  failed_premise: "Every reviewed support surface preserves support_only=true proof_authority=false and physics_promotion_authorized=false."
+  minimal_countermodel_available: false
+  countermodel_path: ""
+  countermodel_scope: "none"
+  certificate_gap: "none"
+  source_extension_repair_possible: "not_applicable_support_boundary_survives"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "not_frozen"
+    decision_reason: "No repeated-burden or scoped-obstruction freeze is triggered by a support-only boundary review."
+    next_allowed_route: "project-control-maintainer"
+new_mathematical_payload:
+  - payload_id: "P7T08-PAYLOAD-001"
+    payload_type: "dependency_map_update"
+    object_name: "support_formalization_overread_matrix_v18"
+    summary: "Maps each v18 support checker surface to blocked proof-authority adoption hidden-burden false-positive and false-negative overreads."
+  - payload_id: "P7T08-PAYLOAD-002"
+    payload_type: "dependency_map_update"
+    object_name: "support_formalization_false_confidence_scope_map_v18"
+    summary: "Separates scoped finite-record and text-hygiene support behavior from theorem authority and protected physics-adoption claims."
+distance_to_gr:
+  milestone: "matter_coupling"
+  burden_id: "matter_coupling"
+  status: "support-only Refuter review completed"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "P7-T08 reviewed support formalization boundary integrity and does not change physics derivation status."
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "support-only traceability integration completed"
+  new_status: "support-only Refuter review completed"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v18_p8_t01_physics_payload_ratio_policy"
+  downstream_still_blocked:
+    - "proof authority"
+    - "source-law adoption"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "Det_src adoption"
+    - "Readout_src adoption"
+    - "detector-semantics adoption"
+    - "source detector/readout semantics adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no theorem authority"
+  - burden: "RetainH"
+    status: "unchanged; no adoption"
+  - burden: "GenH"
+    status: "unchanged; no adoption"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged"
+  - burden: "g_eff"
+    status: "unchanged; no scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation or adoption"
+  - burden: "Einstein equations"
+    status: "blocked; no field-equation derivation"
+  - burden: "finite-variation robustness"
+    status: "unchanged"
+  - burden: "benchmark promotion"
+    status: "blocked; no promotion"
+  - burden: "Gate Chair status"
+    status: "unchanged; no verdict issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen"
+claim_boundary:
+  support_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  retainh_adopted: false
+  genh_adopted: false
+  det_src_adopted: false
+  readout_src_adopted: false
+  detector_semantics_adopted: false
+  source_detector_readout_semantics_adopted: false
+  target_metric_imported: false
+  metricdata_e_adopted: false
+  g_eff_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+selected_next_route:
+  route_id: "physics_payload_ratio_policy"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P8"
+  plan_task_id: "P8-T01"
+  task_name: "Physics-payload ratio policy"
+  role_family: "project-control-maintainer@0.2.0"
+  task_type: "physics_payload_ratio_policy"
+  target_derivation_milestone: "none"
+  milestone_burden: "Define a policy requiring physics-bearing payloads after runs of project-system tasks."
+  requires_human_gate: false
+project_improvement_signals: []
+next_recommended_action: "Run one bounded v18 P8-T01 physics-payload ratio policy packet."

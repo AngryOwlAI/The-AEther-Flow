@@ -1,0 +1,24 @@
+artifact_id: "parent_conflict_review_support_formalization_refuter_review_v18"
+artifact_type: "parent_child_conflict_review"
+task_id: "RT-20260708-026"
+job_id: "AJ-RT-20260708-026-001"
+status: "completed"
+support_only: true
+proof_authority: false
+physics_promotion_authorized: false
+reviewed_child_outputs:
+  - "research_control/tasks/RT-20260708-026/artifacts/child_phys_math_support_formalization_refuter_review_v18.yaml"
+  - "research_control/tasks/RT-20260708-026/artifacts/child_phys_phil_support_formalization_refuter_review_v18.yaml"
+conflicts:
+  blocking: []
+  nonblocking:
+    - conflict_id: "wording-risk-vs-repair"
+      summary: "Both children identify excerpt/name risk, but neither finds a material repair blocker."
+      resolution: "Record the risks as P8-T01 reader/policy constraints rather than repair_required."
+unresolved_conflicts: []
+fusion_decision:
+  verdict: "pass"
+  repair_required: false
+  fail_closed: false
+  next_route: "P8-T01"
+  rationale: "The reviewed support surfaces preserve proof_authority=false and forbid source-law, detector-semantics, matter-coupling, Einstein-equation, benchmark, Gate Chair, and completed-derivation overreads."

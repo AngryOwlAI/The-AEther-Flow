@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0718.yaml",
+    "research_control/handoffs/handoff-0719.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260708-025",
-    "latest_handoff_id": "handoff-0718",
-    "current_status": "v18_p7_t07_support_formalization_traceability_integrated_no_proof_authority",
+    "active_task_id": "RT-20260708-026",
+    "latest_handoff_id": "handoff-0719",
+    "current_status": "v18_p7_t08_support_formalization_refuter_review_pass_no_proof_authority",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260708-025",
-    "latest_research_handoff_id": "handoff-0718",
-    "latest_research_next_action": "Run one bounded v18 P7-T08 support formalization Refuter review packet.",
+    "latest_research_task_id": "RT-20260708-026",
+    "latest_research_handoff_id": "handoff-0719",
+    "latest_research_next_action": "Run one bounded v18 P8-T01 physics-payload ratio policy packet.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "support_formalization_refuter_review",
-    "role_family": "refuter@0.2.0",
+    "route_id": "physics_payload_ratio_policy",
+    "role_family": "project-control-maintainer@0.2.0",
     "target_derivation_milestone": "none",
-    "milestone_burden": "Stress v18 support formalization for proof-authority overread and false-confidence hazards.",
+    "milestone_burden": "Define a policy requiring physics-bearing payloads after runs of project-system tasks.",
     "requires_human_gate": false
   },
   "claim_boundary": {
