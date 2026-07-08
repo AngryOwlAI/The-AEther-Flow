@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-036`
-- Latest handoff: `handoff-0729`
-- Current status: `v18_p9_t05_public_cognitive_load_red_team_pass_no_physics_delta`
+- Active task: `RT-20260708-037`
+- Latest handoff: `handoff-0730`
+- Current status: `v18_p10_t01_external_review_question_selected_no_outreach_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-036`
-- Latest research handoff: `handoff-0729`
-- Latest research next action: Run one bounded v18 P10-T01 external-review question selector packet.
+- Latest research task: `RT-20260708-037`
+- Latest research handoff: `handoff-0730`
+- Latest research next action: Run one bounded v18 P10-T02 external-review packet source spec packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `external_review_question_selector_v18`
-- Role family: `theoretical-continuation-selector@0.1.0`
+- Route ID: `external_review_packet_source_spec`
+- Role family: `documentation-curator@2.0.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Select one focused external-review question from v18 theorem/countermodel results.
+- Milestone burden: Write a source spec for one focused external-review packet.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `d1e6a60dd4566f6196eb1e48ab5e94cde7baae5b62e1a1a8ade1946a27162f91`
-- JSON SHA-256: `3447f4a46bbf2e499a3d962074d5c275b6e862e3720e50b3b22ce17a73277743`
+- YAML SHA-256: `1026e95cf8803132b42a8a92b77f159365830e39822a947c8293a29b354782e9`
+- JSON SHA-256: `d6bcdd0763c570eb5acd653fd8ce47b13a325bcb8e3a89692521e8a7c27eae7d`
 
 ## Authority Warning
 

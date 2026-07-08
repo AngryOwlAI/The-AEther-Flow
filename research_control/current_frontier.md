@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-036` and `handoff-0729`.
+`RT-20260708-037` and `handoff-0730`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-036` |
-| Latest handoff ID | `handoff-0729` |
-| Current status | `v18_p9_t05_public_cognitive_load_red_team_pass_no_physics_delta` |
+| Active task ID | `RT-20260708-037` |
+| Latest handoff ID | `handoff-0730` |
+| Current status | `v18_p10_t01_external_review_question_selected_no_outreach_no_promotion` |
 | V16 completed | false |
-| Current route family | public_cognitive_load_red_team_review |
+| Current route family | external_review_question_selector_v18 |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P10-T01 external-review question selector packet. |
-| Required next authority | Run one bounded v18 P10-T01 external-review question selector packet. |
-| Next recommended action | Run one bounded v18 P10-T01 external-review question selector packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P10-T02 external-review packet source spec packet. |
+| Required next authority | Run one bounded v18 P10-T02 external-review packet source spec packet. |
+| Next recommended action | Run one bounded v18 P10-T02 external-review packet source spec packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-036` |
-| Latest research handoff ID | `handoff-0729` |
-| Latest research next action | Run one bounded v18 P10-T01 external-review question selector packet. |
+| Latest research task ID | `RT-20260708-037` |
+| Latest research handoff ID | `handoff-0730` |
+| Latest research next action | Run one bounded v18 P10-T02 external-review packet source spec packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-036/00_TASK.yaml`.
-- Active task objective: Review public and reader-facing status surfaces for overclaim, underclaim, cognitive overload, and generated-surface authority confusion.
-- Latest handoff path: `research_control/handoffs/handoff-0729.yaml`.
-- Latest handoff summary: RT-20260708-036 completed v18 P9-T05 by red-teaming public reader-facing status surfaces for overclaim, underclaim, cognitive overload, and generated-surface authority confusion. Result pass with advisory linter warnings justified as nonblocking and no physics promotion.
-- Current route family: public_cognitive_load_red_team_review.
-- Next recommended action: Run one bounded v18 P10-T01 external-review question selector packet.
+- Active task path: `research_control/tasks/RT-20260708-037/00_TASK.yaml`.
+- Active task objective: Select exactly one focused external-review question from v18 theorem/countermodel results with no external outreach.
+- Latest handoff path: `research_control/handoffs/handoff-0730.yaml`.
+- Latest handoff summary: RT-20260708-037 completed v18 P10-T01 by selecting exactly one EqSrc family-closure external-review question from P3 theorem/countermodel evidence with no outreach and no physics promotion.
+- Current route family: external_review_question_selector_v18.
+- Next recommended action: Run one bounded v18 P10-T02 external-review packet source spec packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P10-T01 external-review question selector packet.
+Run one bounded v18 P10-T02 external-review packet source spec packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-036`;
-- latest handoff: `handoff-0729`;
-- current status: `v18_p9_t05_public_cognitive_load_red_team_pass_no_physics_delta`;
+- active task: `RT-20260708-037`;
+- latest handoff: `handoff-0730`;
+- current status: `v18_p10_t01_external_review_question_selected_no_outreach_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0729.yaml`
-- `research_control/tasks/RT-20260708-036/00_TASK.yaml`
+- `research_control/handoffs/handoff-0730.yaml`
+- `research_control/tasks/RT-20260708-037/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0729*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0730*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
