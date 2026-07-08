@@ -1,0 +1,73 @@
+artifact_id: "source_detector_readout_ledger_delta_question_v1"
+task_id: "RT-20260708-008"
+job_id: "AJ-RT-20260708-008-001"
+plan_task_id: "P5-T02"
+created_at: "2026-07-08T04:36:00Z"
+artifact_type: "protected_ledger_delta_question"
+authority_status: "question_only"
+project_system_change_only: true
+physics_promotion_authorized: false
+scientific_claims_changed: false
+ledger_delta_question:
+  proposed_burden_id: "source_detector_readout_semantics"
+  proposed_status: "proposal_burden_only"
+  proposed_control_status: "burden_proposed_not_adopted"
+  proposed_mathematical_status: "readout_law_missing"
+  proposed_physical_status: "not_detector_semantics_not_matter_coupling"
+  promotion_status: "none"
+  requires_protected_authority_to_update_ledger: true
+  update_performed_in_this_task: false
+proposal_scope:
+  distance_to_gr_ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  dag_path: "research_control/design/matter_coupling_dependency_dag_v1.md"
+  existing_dag_node_considered: "mc_detector_semantics_target"
+  candidate_future_node_id: "mc_source_detector_readout_semantics_burden"
+  candidate_future_edge_id: "mc_edge_source_detector_readout_burden_to_detector_target"
+  update_class: "future_protected_or_explicitly_authorized_project_control_update"
+  this_task_updates_ledger: false
+  this_task_updates_dag: false
+ledger_precondition_question:
+  question: "Should a later protected or explicitly authorized control packet add source_detector_readout_semantics as a proposal-only burden surface in the Distance-to-GR ledger or a support-only DAG node?"
+  minimal_required_future_authority:
+    - "Director Decision Record selecting a bounded ledger or DAG update packet"
+    - "explicit AgentJob allowlist for the ledger or DAG path"
+    - "claim-boundary row preserving no-adoption and no-promotion status"
+    - "validator evidence that update wording remains proposal-only"
+  required_negative_guards:
+    - "no_Det_src_adoption"
+    - "no_Readout_src_adoption"
+    - "no_detector_semantics_adoption"
+    - "no_empirical_detector_protocol_import"
+    - "no_proper_time_import"
+    - "no_target_metric_import"
+    - "no_coupling_law_adoption"
+    - "no_matter_coupling_derivation"
+    - "no_stress_energy_semantics"
+    - "no_matter_action"
+    - "no_Einstein_equations"
+    - "no_benchmark_promotion"
+    - "no_completed_derivation"
+decision_result:
+  current_packet_result: "setup_question_created_no_delta"
+  selected_next_plan_task_id: "P5-T03"
+  selected_next_route: "source_detector_readout_candidate_setup"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_requires_human_gate: false
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  ledger_row_updated: false
+  burden_id: "matter_coupling"
+forbidden_conclusion_summary:
+  - "No Distance-to-GR ledger update was performed."
+  - "No populated matter-coupling DAG edit was performed."
+  - "source_detector_readout_semantics remains proposal_burden_only."
+  - "Det_src and Readout_src remain future required-object names only."
+  - "No detector semantics or matter-coupling adoption is authorized."
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R04"
+  implements_plan_task_id: "P5-T02"
+  implementation_status: "completed"
+  coverage_effect: "support"

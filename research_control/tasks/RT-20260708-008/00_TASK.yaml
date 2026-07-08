@@ -1,0 +1,38 @@
+task_id: "RT-20260708-008"
+task_type: "source_detector_readout_dag_ledger_question_setup"
+status: "completed"
+created_at: "2026-07-08T04:36:00Z"
+updated_at: "2026-07-08T04:36:00Z"
+closed_at: "2026-07-08T04:36:00Z"
+parent_task_id: "RT-20260708-007"
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T02"
+  recommendation_ids:
+    - "V18-R04"
+objective: "Prepare a protected question for adding source_detector_readout_semantics to DAG or ledger surfaces without performing unauthorized promotion."
+current_decision_id: "DDR-20260708-008"
+current_job_id: "AJ-RT-20260708-008-001"
+role_family: "project-control-maintainer@0.2.0"
+requires_human_gate: false
+project_system_boundary_authorized_by_plan: true
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Prepare a protected question for adding source_detector_readout_semantics to DAG or ledger surfaces without performing unauthorized promotion."
+physics_progress_status: "ledger_question_setup_no_delta"
+project_system_change_only: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  ledger_row_updated: false
+  burden_id: "matter_coupling"
+claim_boundary_summary: "P5-T02 creates only a protected DAG/ledger question and patch proposal for source_detector_readout_semantics. It does not update the Distance-to-GR ledger, edit the populated matter-coupling DAG, adopt Det_src or Readout_src, adopt detector semantics, derive matter coupling, or authorize downstream GR promotion."
+outputs:
+  - "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_ledger_delta_question_v1.yaml"
+  - "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_patch_proposal_v1.md"
+  - "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_ledger_question_receipt.md"
+  - "research_control/tasks/RT-20260708-008/jobs/completions/AJC-AJ-RT-20260708-008-001.yaml"
+next_recommended_action: "Run one bounded v18 P5-T03 source detector/readout candidate setup packet."

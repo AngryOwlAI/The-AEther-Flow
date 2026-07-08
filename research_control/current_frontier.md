@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-007` and `handoff-0700`.
+`RT-20260708-008` and `handoff-0701`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-007` |
-| Latest handoff ID | `handoff-0700` |
-| Current status | `v18_p5_t01_source_detector_readout_burden_defined_no_adoption` |
+| Active task ID | `RT-20260708-008` |
+| Latest handoff ID | `handoff-0701` |
+| Current status | `v18_p5_t02_source_detector_readout_dag_ledger_question_setup_no_delta` |
 | V16 completed | false |
-| Current route family | v18 p5 t02 source detector readout dag ledger question setup no promotion |
+| Current route family | v18 p5 t03 source detector readout candidate setup no adoption |
 | Target derivation milestone | `matter_coupling` |
-| Current burden | `matter_coupling`; status: source_detector_readout_burden_defined_proposal_only_no_adoption |
-| Required next authority | Run one bounded v18 P5-T02 matter-coupling DAG and ledger-delta question setup packet. |
-| Next recommended action | Run one bounded v18 P5-T02 matter-coupling DAG and ledger-delta question setup packet. |
+| Current burden | `matter_coupling`; status: ledger_question_setup_no_delta |
+| Required next authority | Run one bounded v18 P5-T03 source detector/readout candidate setup packet. |
+| Next recommended action | Run one bounded v18 P5-T03 source detector/readout candidate setup packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-007` |
-| Latest research handoff ID | `handoff-0700` |
-| Latest research next action | Run one bounded v18 P5-T02 matter-coupling DAG and ledger-delta question setup packet. |
+| Latest research task ID | `RT-20260708-008` |
+| Latest research handoff ID | `handoff-0701` |
+| Latest research next action | Run one bounded v18 P5-T03 source detector/readout candidate setup packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-007/00_TASK.yaml`.
-- Active task objective: Define source detector/readout semantics as a named matter-coupling frontier burden without adoption, ledger update, or downstream physics promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0700.yaml`.
-- Latest handoff summary: Completed v18 P5-T01 by defining source_detector_readout_semantics as a proposal-only matter-coupling frontier burden. No Det_src Readout_src detector-semantics coupling-law matter-coupling stress-energy matter-action Einstein-equation benchmark Gate Chair or completed-derivation claim is authorized.
-- Current route family: v18 p5 t02 source detector readout dag ledger question setup no promotion.
-- Next recommended action: Run one bounded v18 P5-T02 matter-coupling DAG and ledger-delta question setup packet.
+- Active task path: `research_control/tasks/RT-20260708-008/00_TASK.yaml`.
+- Active task objective: Prepare a protected question for adding source_detector_readout_semantics to DAG or ledger surfaces without performing unauthorized promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0701.yaml`.
+- Latest handoff summary: Completed v18 P5-T02 by creating a protected ledger-delta question and proposal-only DAG patch shape for source_detector_readout_semantics. No Distance-to-GR ledger update, populated DAG update, detector/readout adoption, matter-coupling derivation, Einstein-equation derivation, benchmark promotion, Gate Chair verdict, or completed-derivation claim is authorized.
+- Current route family: v18 p5 t03 source detector readout candidate setup no adoption.
+- Next recommended action: Run one bounded v18 P5-T03 source detector/readout candidate setup packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P5-T02 matter-coupling DAG and ledger-delta question setup packet.
+Run one bounded v18 P5-T03 source detector/readout candidate setup packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,9 +320,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-007`;
-- latest handoff: `handoff-0700`;
-- current status: `v18_p5_t01_source_detector_readout_burden_defined_no_adoption`;
+- active task: `RT-20260708-008`;
+- latest handoff: `handoff-0701`;
+- current status: `v18_p5_t02_source_detector_readout_dag_ledger_question_setup_no_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -336,8 +336,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0700.yaml`
-- `research_control/tasks/RT-20260708-007/00_TASK.yaml`
+- `research_control/handoffs/handoff-0701.yaml`
+- `research_control/tasks/RT-20260708-008/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -353,7 +353,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0700*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0701*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

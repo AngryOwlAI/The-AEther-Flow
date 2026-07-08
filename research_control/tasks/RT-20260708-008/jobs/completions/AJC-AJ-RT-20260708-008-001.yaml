@@ -1,0 +1,261 @@
+completion_id: "AJC-AJ-RT-20260708-008-001"
+job_id: "AJ-RT-20260708-008-001"
+task_id: "RT-20260708-008"
+decision_id: "DDR-20260708-008"
+status: "completed"
+completed_at: "2026-07-08T04:36:00Z"
+completed_by_role: "project-control-maintainer@0.2.0--RT-20260708-008"
+source_role_id: "project-control-maintainer"
+source_role_version: "0.2.0"
+plan_task_id: "P5-T02"
+objective_result: "completed"
+summary: "Completed v18 P5-T02 by creating a protected ledger-delta question and proposal-only DAG patch shape for source_detector_readout_semantics. No Distance-to-GR ledger update, populated DAG update, detector/readout adoption, matter-coupling derivation, Einstein-equation derivation, benchmark promotion, Gate Chair verdict, or completed-derivation claim is authorized."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_task_id: "P5-T02"
+  plan_phase_id: "P5"
+  implemented_task_scope: "Source detector/readout DAG and ledger-delta question setup"
+  completed_v18_tasks_this_packet:
+    - "P5-T02"
+  downstream_tasks_not_implemented:
+    - "P5-T03 source detector/readout candidate setup"
+    - "P5-T04 source detector/readout candidate or obstruction construction"
+    - "P5-T05 source detector/readout smuggling audit"
+    - "P5-T06 source detector/readout Refuter stress"
+    - "P5-T07 source detector/readout route selector and integration"
+    - "P6 and later v18 tasks"
+  all_applicable_plan_tasks_proven: false
+  phase_p5_completed: false
+artifacts:
+  - "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_ledger_delta_question_v1.yaml"
+  - "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_patch_proposal_v1.md"
+  - "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_ledger_question_receipt.md"
+  - "research_control/tasks/RT-20260708-008/artifacts/validate_p5_t02_source_detector_readout_dag_ledger_question.py"
+  - "research_control/tasks/RT-20260708-008/artifacts/p5_t02_source_detector_readout_dag_ledger_question_report.json"
+output_paths:
+  - "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_ledger_delta_question_v1.yaml"
+  - "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_patch_proposal_v1.md"
+  - "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_ledger_question_receipt.md"
+  - "research_control/tasks/RT-20260708-008/artifacts/validate_p5_t02_source_detector_readout_dag_ledger_question.py"
+  - "research_control/tasks/RT-20260708-008/artifacts/p5_t02_source_detector_readout_dag_ledger_question_report.json"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260708-008/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-008/DDR-20260708-008.md"
+  - "research_control/tasks/RT-20260708-008/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-008/jobs/AJ-RT-20260708-008-001.yaml"
+  - "research_control/tasks/RT-20260708-008/jobs/completions/AJC-AJ-RT-20260708-008-001.yaml"
+  - "research_control/tasks/RT-20260708-008/roles/project-control-maintainer@0.2.0--RT-20260708-008.yaml"
+  - "research_control/handoffs/handoff-0701.yaml"
+  - "research_control/handoffs/handoff-0701.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/matter_coupling_dependency_dag_v1.md"
+  - "research_control/design/matter_coupling_dependency_dag_schema_v1.md"
+  - "research_control/design/matter_coupling_derivation_moratorium.md"
+  - "research_control/design/source_detector_readout_semantics_burden_v1.md"
+  - "research_control/handoffs/handoff-0700.yaml"
+  - "research_control/tasks/RT-20260708-007/jobs/completions/AJC-AJ-RT-20260708-007-001.yaml"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=731 relationship_row_count=3709 semantic_row_count=731 vault_row_count=731 local_retrieval_status=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | post_write_refresh_performed=true source_object_count=733 relationship_row_count=3717 semantic_row_count=733 vault_row_count=733 local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P5-T02 matter-coupling DAG ledger delta\" --limit 10 --json | exit_code=0 | no direct retrieval hits"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/handoffs/handoff-0700.yaml --json | exit_code=0 | no direct retrieval hits"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-PATCH-PROPOSAL-V1 --json | exit_code=0 | returned canonical P5-T02 patch proposal and receipt rows"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source detector readout DAG patch proposal\" --limit 10 --json | exit_code=0 | returned canonical P5-T02 patch proposal and receipt rows plus generated retrieval layers"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-007 latest_handoff=handoff-0700 next_action=P5-T02"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 731
+    relationship_row_count: 3709
+    semantic_row_count: 731
+    vault_row_count: 731
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  before_status_summary:
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    local_cache_only_warning_count: 0
+  after_status_summary:
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-PATCH-PROPOSAL-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-PATCH-PROPOSAL-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-PATCH-PROPOSAL-V1"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-LEDGER-QUESTION-RECEIPT"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"source detector readout DAG patch proposal\" --limit 10 --json"
+      query_type: "search"
+      query_text: "source detector readout DAG patch proposal"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-PATCH-PROPOSAL-V1"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-LEDGER-QUESTION-RECEIPT"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SOURCE-DETECTOR-READOUT-SEMANTICS-BURDEN-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/source_detector_readout_semantics_burden_v1.md"
+      source_hash: "cb72078428ab1723926c724e064536bcbebdc6bb8f7dc86686b447fddee11f30"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-MATTER-COUPLING-DEPENDENCY-DAG-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/matter_coupling_dependency_dag_v1.md"
+      source_hash: "8cca047480ae21c3b0641a5221277ae43cd5fdf1eb688a9080a168e27b1e98c3"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-PATCH-PROPOSAL-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_patch_proposal_v1.md"
+      source_hash: "dea99483b6a4897bd72d185a94e13239cffad767cf10d0a9c12b0582409e5be0"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-008-SOURCE-DETECTOR-READOUT-DAG-LEDGER-QUESTION-RECEIPT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_dag_ledger_question_receipt.md"
+      source_hash: "509fd28d782277f511cf3bcf1db5986a05ce37aafc69f6dcfa2ae61ecfc83bae"
+post_write_memory_refresh:
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  before_status_summary:
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    local_cache_only_warning_count: 7
+  after_status_summary:
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    source_object_count: 733
+    relationship_row_count: 3717
+    semantic_row_count: 733
+    vault_row_count: 733
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight PASS with no refresh needed"
+      - "continue_research.py resolved handoff-0700 and director_decision_required"
+      - "canonical P5-T02 plan section handoff-0700 project-control-maintainer contract source detector/readout burden note DAG schema populated DAG and Distance-to-GR ledger inspected"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "ledger-delta question artifact exists"
+      - "DAG patch proposal artifact exists"
+      - "ledger_delta_question.update_performed_in_this_task is false"
+      - "requires_protected_authority_to_update_ledger is true"
+      - "selected next route is P5-T03"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "task-local validator report records no DAG update and no ledger update"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_current_frontier.py --write and --check PASS"
+      - "render_compact_current_frontier_v16.py --write and --check PASS"
+      - "render_task_index.py --write and --check PASS"
+      - "render_dependency_graph.py write and --check PASS"
+      - "generate_claim_graph_v1.py --json and --check PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS"
+      - "bootstrap_memory_system.py --validate-only PASS"
+      - "continue_research_memory_preflight.py --json refreshed local retrieval to PASS after new registered sources"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json PASS with hard_fail_count=0"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  project_control_packet_requires_human_gate: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable_project_control_setup_only_packet"
+  protected_ledger_update_authorized: false
+  protected_ledger_update_performed: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+selector_result:
+  artifact_path: "research_control/tasks/RT-20260708-008/artifacts/source_detector_readout_ledger_delta_question_v1.yaml"
+  selected_route: "P5_T03_source_detector_readout_candidate_setup"
+  selected_next_plan_task_id: "P5-T03"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_packet_requires_human_gate: false
+  immediate_v18_continuation: "P5-T03 source detector/readout candidate setup"
+physics_progress_status:
+  status: "ledger_question_setup_no_delta"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Prepare a protected question for adding source_detector_readout_semantics to DAG or ledger surfaces without performing unauthorized promotion."
+  explanation: "The packet creates setup artifacts only; it does not update the ledger or DAG and does not adopt detector/readout semantics."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  old_status: "accepted_as_scoped_evidence_precondition"
+  new_status: "unchanged; source_detector_readout_semantics ledger question created proposal-only"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v18_p5_t03_source_detector_readout_candidate_setup"
+  downstream_still_blocked:
+    - "Distance-to-GR ledger update"
+    - "populated matter-coupling DAG update"
+    - "Det_src adoption"
+    - "Readout_src adoption"
+    - "detector semantics adoption"
+    - "coupling-law adoption"
+    - "matter-coupling derivation"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+new_mathematical_payload: []
+new_mathematical_payload_note: "P5-T02 is project-system setup only; the v18 plan authorizes project-system boundary for this packet."
+project_system_change_only: true
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R04"
+  implements_plan_task_id: "P5-T02"
+  implementation_status: "completed"
+  coverage_effect: "support"
+forbidden_conclusion_summary:
+  - "No Distance-to-GR ledger update was performed."
+  - "No populated matter-coupling DAG update was performed."
+  - "source_detector_readout_semantics remains proposal_burden_only."
+  - "Det_src and Readout_src remain future required-object names only."
+  - "No detector-semantics adoption occurred."
+  - "No matter-coupling derivation or adoption occurred."
+  - "No stress-energy semantics tensor matter action Einstein equations benchmark promotion Gate Chair verdict or completed derivation claim is authorized."
+project_improvement_signals: []
