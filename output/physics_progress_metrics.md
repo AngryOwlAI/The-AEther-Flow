@@ -20,17 +20,17 @@ This report is generated from tracked research-control registries and completion
 
 | Metric | Value |
 | --- | --- |
-| `tasks_registered` | `858` |
-| `jobs_registered` | `858` |
-| `completions_read` | `858` |
+| `tasks_registered` | `860` |
+| `jobs_registered` | `860` |
+| `completions_read` | `860` |
 | `physics_completions_read` | `469` |
-| `claim_boundary_rows` | `815` |
-| `active_claim_boundary_rows` | `805` |
-| `completion_validation_status_counts` | `{"PASS": 830, "PASS_WITH_SURFACE_AUDIT_FINDINGS": 1, "unknown": 27}` |
+| `claim_boundary_rows` | `817` |
+| `active_claim_boundary_rows` | `807` |
+| `completion_validation_status_counts` | `{"PASS": 832, "PASS_WITH_SURFACE_AUDIT_FINDINGS": 1, "unknown": 27}` |
 | `tasks_with_forbidden_conclusion_summary` | `402` |
 | `physics_promotion_authorized_true` | `27` |
 | `physics_promotion_authorized_false` | `375` |
-| `claim_boundary_rows_active` | `805` |
+| `claim_boundary_rows_active` | `807` |
 | `selector_tasks` | `103` |
 | `candidate_constructor_tasks` | `54` |
 | `smuggling_auditor_tasks` | `86` |
@@ -53,7 +53,7 @@ This report is generated from tracked research-control registries and completion
 | Metric | Value |
 | --- | --- |
 | `distance_to_gr_delta_true_count` | `183` |
-| `distance_to_gr_delta_false_count` | `359` |
+| `distance_to_gr_delta_false_count` | `361` |
 | `burden_discharged_count` | `18` |
 | `constructed_candidate_count` | `74` |
 | `candidate_smuggling_audit_pass_count` | `45` |
@@ -102,18 +102,18 @@ These metrics are AI-system diagnostics only. They do not rank physics truth, au
 
 | Metric | Value |
 | --- | --- |
-| `project_system_task_run_length` | `2` |
+| `project_system_task_run_length` | `4` |
 | `physics_bearing_task_run_length` | `0` |
 | `new_mathematical_payload_count` | `1039` |
-| `theorem_countermodel_candidate_count` | `624` |
+| `theorem_countermodel_candidate_count` | `626` |
 | `candidate_construction_count` | `177` |
-| `support_only_task_count_since_last_physics_payload` | `2` |
+| `support_only_task_count_since_last_physics_payload` | `4` |
 | `route_orbit_warning_status` | `{"advisory_only": true, "hard_gate": false, "physics_claim_authority": false, "status": "warning", "warning_ids": ["post_gate_cycle_repeat", "gate_ready_without_gate"]}` |
-| `project_system_task_count` | `437` |
+| `project_system_task_count` | `439` |
 | `physics_bearing_task_count` | `386` |
-| `support_only_task_count` | `453` |
-| `physics_bearing_to_project_system_task_ratio` | `0.8833` |
-| `new_mathematical_payload_to_support_only_task_ratio` | `2.2936` |
+| `support_only_task_count` | `455` |
+| `physics_bearing_to_project_system_task_ratio` | `0.8793` |
+| `new_mathematical_payload_to_support_only_task_ratio` | `2.2835` |
 | `route_orbit_same_burden_repetition_count` | `1` |
 
 ## Physics-Progress Integration Metrics
@@ -124,10 +124,10 @@ These metrics are AI-system diagnostics only. They do not rank physics truth, au
 | `authority_boundary` | `operational_summary_only_not_physics_proof` |
 | `not_physics_proof` | `True` |
 | `physics_claim_promotion_authorized` | `False` |
-| `distance_delta` | `{"changed_false_count": 359, "changed_true_count": 183, "effect_counts": {"missing_effect": 685, "no_distance_delta": 173}, "records_read": 858}` |
-| `separate_packet_counts` | `{"candidate_packet_count": 177, "freeze_packet_count": 257, "obstruction_packet_count": 34, "process_only_packet_count": 460, "theorem_packet_count": 119}` |
+| `distance_delta` | `{"changed_false_count": 361, "changed_true_count": 183, "effect_counts": {"missing_effect": 685, "no_distance_delta": 175}, "records_read": 860}` |
+| `separate_packet_counts` | `{"candidate_packet_count": 177, "freeze_packet_count": 257, "obstruction_packet_count": 34, "process_only_packet_count": 462, "theorem_packet_count": 119}` |
 | `candidate_result_counts` | `{"constructed_candidate": 32, "constructed_target_pending_candidate_constructor": 1, "minimal_countermodel": 1, "precise_obstruction": 10}` |
-| `payload_density_summary` | `{"classified_item_count": 1473, "mathematical_payload_item_count": 904, "mathematical_payload_task_count": 398, "payload_class_counts": {"conditional_theorem": 21, "countermodel": 56, "dependency_map_update": 142, "documentation_only": 101, "finite_witness": 225, "new_definition": 49, "new_theorem_statement": 144, "obstruction": 149, "proof_attempt": 0, "proved_theorem": 1, "route_selector_only": 167, "source_extension_classification": 117, "validator_tooling_only": 301}, "payload_density": 0.613714, "process_only_item_count": 569, "process_only_task_count": 460, "task_count": 858, "task_payload_density": 0.463869}` |
+| `payload_density_summary` | `{"classified_item_count": 1475, "mathematical_payload_item_count": 904, "mathematical_payload_task_count": 398, "payload_class_counts": {"conditional_theorem": 21, "countermodel": 56, "dependency_map_update": 142, "documentation_only": 101, "finite_witness": 225, "new_definition": 49, "new_theorem_statement": 144, "obstruction": 149, "proof_attempt": 0, "proved_theorem": 1, "route_selector_only": 167, "source_extension_classification": 117, "validator_tooling_only": 303}, "payload_density": 0.612881, "process_only_item_count": 571, "process_only_task_count": 462, "task_count": 860, "task_payload_density": 0.462791}` |
 
 ## AI Research-Agent Methodology Metrics
 
@@ -143,7 +143,7 @@ These diagnostics are support-only AI-system methodology metrics. They are separ
 | `audit_to_stress_survival` | Candidate life cycle | `partial` | `1.0233` | This is an aggregate route-stage proxy; candidate lineage across audit and stress is not yet deterministic. |
 | `stress_survival_rate` | Candidate life cycle | `partial` | `0.3864` | Stress survival is counted only as a non-promotional candidate-status outcome. |
 | `human_gate_load` | Governance load | `measured` | `None` | Gate-load signals are governance workload diagnostics, not Gate Chair scientific verdicts. |
-| `proof_to_process_ratio` | Payload balance | `measured` | `1.5888` | Payload balance compares mathematical payload items to process-only items; it is not proof authority. |
+| `proof_to_process_ratio` | Payload balance | `measured` | `1.5832` | Payload balance compares mathematical payload items to process-only items; it is not proof authority. |
 
 ## AI Methodology Acceptance Warnings
 

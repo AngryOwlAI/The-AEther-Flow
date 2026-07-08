@@ -833,6 +833,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-027-PHYSICS-PAYLOAD-RATIO-POLICY-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-027-physics-payload-ratio-policy-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-028-PAYLOAD-RATIO-METRICS-REPORT-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-028-payload-ratio-metrics-report-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-029-PAYLOAD-RATIO-VALIDATOR-PILOT-REPORT-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-029-payload-ratio-validator-pilot-report-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-030-PAYLOAD-RATIO-DASHBOARD-INTEGRATION-REPORT-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-030-payload-ratio-dashboard-integration-report-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1511,6 +1512,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-027-PHYSICS-PAYLOAD-RATIO-POLICY-RECEIPT` `research_control/tasks/RT-20260708-027/artifacts/physics_payload_ratio_policy_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-028-PAYLOAD-RATIO-METRICS-REPORT-V1` `research_control/tasks/RT-20260708-028/artifacts/payload_ratio_metrics_report_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-029-PAYLOAD-RATIO-VALIDATOR-PILOT-REPORT-V1` `research_control/tasks/RT-20260708-029/artifacts/payload_ratio_validator_pilot_report_v1.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-030-PAYLOAD-RATIO-DASHBOARD-INTEGRATION-REPORT-V1` `research_control/tasks/RT-20260708-030/artifacts/payload_ratio_dashboard_integration_report_v1.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-029`
-- Latest handoff: `handoff-0722`
-- Current status: `v18_p8_t03_payload_ratio_validator_pilot_completed_no_physics_delta`
+- Active task: `RT-20260708-030`
+- Latest handoff: `handoff-0723`
+- Current status: `v18_p8_t04_payload_ratio_dashboard_integrated_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-029`
-- Latest research handoff: `handoff-0722`
-- Latest research next action: Run one bounded v18 P8-T04 physics-payload ratio dashboard integration packet.
+- Latest research task: `RT-20260708-030`
+- Latest research handoff: `handoff-0723`
+- Latest research next action: Run one bounded v18 P8-T05 physics-payload ratio red-team review packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `physics_payload_ratio_dashboard_integration`
-- Role family: `tooling-engineer@0.1.0`
+- Route ID: `physics_payload_ratio_red_team_review`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `none`
-- Milestone burden: Render payload-ratio metrics as support-only AI methodology diagnostics.
+- Milestone burden: Stress payload-ratio policy for false pressure process overcorrection and research distortion.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `334075298bf372db12fcc2222a909585985ba7bb63ef67b4e02489917a44af7c`
-- JSON SHA-256: `0576a5f0d3bb01678b64dd0567a5cee04dd4d86f7b4f308ffbf9b830295733f2`
+- YAML SHA-256: `0ed97e417a65467eee98ab60cb490675a9729ad2181fe7fcc85755f5989ba6fb`
+- JSON SHA-256: `33629841224b0d5181e15c2eeb59cced4f5730a40bf5ca2d258a0697c8457fb3`
 
 ## Authority Warning
 

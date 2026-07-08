@@ -1,0 +1,119 @@
+handoff_id: "handoff-0723"
+created_at: "2026-07-08T17:13:25Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-030"
+decision_id: "DDR-20260708-030"
+job_id: "AJ-RT-20260708-030-001"
+agent_job_id: "AJ-RT-20260708-030-001"
+completion_path: "research_control/tasks/RT-20260708-030/jobs/completions/AJC-AJ-RT-20260708-030-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-030-001"
+status: "ready_for_next_bounded_packet"
+previous_handoff_id: "handoff-0722"
+summary: "Completed v18 P8-T04 physics-payload ratio dashboard integration. The dashboard now includes payload-ratio diagnostics, route-orbit warnings, output Markdown and wiki Markdown surfaces, and explicit support-only boundary text that metrics do not establish physics truth."
+completed_packet:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P8"
+  plan_task_id: "P8-T04"
+  task_name: "Payload-ratio dashboard integration"
+  plan_role_family: "tooling-engineer@0.1.0"
+  selected_role_family: "project-control-maintainer@0.2.0"
+  target_derivation_milestone: "none"
+  milestone_burden: "Render payload-ratio metrics as support-only AI methodology diagnostics."
+  result_type: "payload_ratio_dashboard_integrated"
+  result: "dashboard_integration_completed"
+  support_only: true
+  ai_system_diagnostics_only: true
+  proof_authority: false
+  physics_truth_ranking_authorized: false
+  selected_next_plan_task_id: "P8-T05"
+  selected_next_plan_route_type: "physics_payload_ratio_red_team_review"
+claim_boundary:
+  allowed_claims:
+    - "P8-T04 support-only dashboard integration completed"
+    - "payload-ratio diagnostic rows rendered"
+    - "route-orbit warning rows rendered"
+    - "output Markdown dashboard rendered"
+    - "wiki Markdown dashboard rendered"
+    - "P8-T05 selected as next plan task"
+  forbidden_claims:
+    - "dashboard as proof authority"
+    - "dashboard as physics truth ranking"
+    - "dashboard as physics promotion"
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "Det_src adoption"
+    - "Readout_src adoption"
+    - "detector-semantics adoption"
+    - "source detector/readout semantics adoption"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "program-wide no-go conclusion"
+    - "future source-extension impossibility"
+  support_only: true
+  ai_system_diagnostics_only: true
+  proof_authority: false
+  no_adoption: true
+  no_ledger_delta: true
+  no_physics_promotion: true
+distance_to_gr_status:
+  changed: false
+  ledger_row_updated: false
+  burden_id: "none"
+  status: "support-only physics-payload ratio dashboard integration completed; no physics derivation status change"
+  freeze_decision: "not_applicable"
+physics_payload_ratio_policy:
+  dashboard_integration_status: "completed"
+  payload_ratio_metric_rows: 13
+  route_orbit_warning_rows: 2
+  live_policy_record_status: "WARN"
+  live_policy_record_warning_ids:
+    - "project_system_run_exceeds_threshold"
+    - "physics_payload_missing_after_threshold"
+  selected_next_plan_task_id: "P8-T05"
+  selected_next_task_type: "physics_payload_ratio_red_team_review"
+  advisory_note: "P8-T05 is the planned same-phase red-team review of this policy before downstream continuation."
+selected_next_route:
+  route_id: "physics_payload_ratio_red_team_review"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P8"
+  plan_task_id: "P8-T05"
+  task_name: "Payload-ratio red-team review"
+  role_family: "external-red-team-reviewer@0.1.0"
+  task_type: "physics_payload_ratio_red_team_review"
+  target_derivation_milestone: "none"
+  milestone_burden: "Stress payload-ratio policy for false pressure process overcorrection and research distortion."
+  expected_agent_job_scope: "One bounded P8-T05 red-team review packet evaluating whether the advisory payload-ratio policy encourages theorem and countermodel work without suppressing necessary repairs."
+  requires_human_gate: false
+next_action: "Run one bounded v18 P8-T05 physics-payload ratio red-team review packet."
+next_recommended_action: "Run one bounded v18 P8-T05 physics-payload ratio red-team review packet."
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260708-030"
+  latest_research_handoff_id: "handoff-0723"
+  latest_research_next_action: "Run one bounded v18 P8-T05 physics-payload ratio red-team review packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+project_improvement_signals: []
+validation:
+  focused_unittest: "PASS"
+  dashboard_renderer_check: "PASS"
+  research_control_validation: "PASS"
+  bootstrap_memory_system: "PASS_WITH_LOCAL_RETRIEVAL_CACHE_WARNINGS"
+  bootstrap_memory_system_validate_only: "PASS_WITH_LOCAL_RETRIEVAL_CACHE_WARNINGS"
+  documentation_impact: "PASS"
+  research_control_diff_validation: "PASS"
+  wrapper_validation: "PASS"
+notes: "This handoff is the research-continuation authority for the next invocation. Generated derivatives and .local caches remain retrieval layers only."
+project_improvement_bridge:
+  required: false
+  reason: "project_improvement_signals is empty"

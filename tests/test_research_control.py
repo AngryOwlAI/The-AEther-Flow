@@ -241,15 +241,35 @@ class ResearchControlTests(unittest.TestCase):
         self.assertTrue(dashboard["dashboard_labels"]["support_only"])
         self.assertTrue(dashboard["dashboard_labels"]["no_physics_truth_ranking"])
         self.assertEqual(dashboard["dashboard_labels"]["truth_ranking"], "none")
+        self.assertEqual(dashboard["plan_task_id"], "P8-T04")
+        self.assertIn("P12-T04", dashboard["plan_task_ids"])
+        self.assertIn("P8-T04", dashboard["plan_task_ids"])
         self.assertEqual(
             len(dashboard["metric_rows"]),
             len(self.metrics.AI_METHODOLOGY_REQUIRED_METRICS),
+        )
+        self.assertGreater(len(dashboard["payload_ratio_metric_rows"]), 0)
+        self.assertGreater(len(dashboard["route_orbit_warning_rows"]), 0)
+        self.assertEqual(
+            dashboard["physics_payload_ratio_diagnostics"]["schema_id"],
+            "physics_payload_ratio_route_history_metrics_v1",
+        )
+        self.assertTrue(
+            dashboard["physics_payload_ratio_diagnostics"]["authority_boundary"][
+                "does_not_rank_physics_truth"
+            ],
+        )
+        self.assertTrue(
+            dashboard["physics_payload_ratio_diagnostics"]["authority_boundary"][
+                "not_physics_proof"
+            ],
         )
         self.assertFalse(dashboard["claim_boundary"]["physics_claim_authority_created"])
         self.assertFalse(dashboard["claim_boundary"]["physics_promotion_authorized"])
         self.assertFalse(dashboard["claim_boundary"]["gate_chair_verdict_created"])
         self.assertFalse(dashboard["claim_boundary"]["benchmark_promotion_authorized"])
         self.assertTrue(dashboard["claim_boundary"]["dashboard_not_physics_truth_ranking"])
+        self.assertTrue(dashboard["claim_boundary"]["dashboard_not_physics_truth_establishment"])
 
         forbidden_fields = {
             "truth_rank",
@@ -263,8 +283,27 @@ class ResearchControlTests(unittest.TestCase):
             self.assertFalse(row["authority_boundary"]["physics_claim_authority_created"])
             self.assertFalse(row["authority_boundary"]["physics_promotion_authorized"])
 
+        for row in dashboard["payload_ratio_metric_rows"]:
+            self.assertEqual(row["diagnostic_label"], "Payload-ratio diagnostic")
+            self.assertFalse(forbidden_fields.intersection(row))
+            self.assertTrue(row["authority_boundary"]["does_not_rank_physics_truth"])
+            self.assertTrue(row["authority_boundary"]["not_physics_proof"])
+
+        route_warning_ids = {
+            row["warning_id"] for row in dashboard["route_orbit_warning_rows"]
+        }
+        self.assertIn("post_gate_cycle_repeat", route_warning_ids)
+        self.assertIn("gate_ready_without_gate", route_warning_ids)
+        for row in dashboard["route_orbit_warning_rows"]:
+            self.assertEqual(row["diagnostic_label"], "Route-orbit warning")
+            self.assertFalse(row["hard_gate"])
+            self.assertFalse(row["physics_claim_authority"])
+
         self.assertIn("AI-system diagnostic", rendered)
         self.assertIn("does not rank physics truth by workflow activity", rendered)
+        self.assertIn("Payload-Ratio Diagnostics", rendered)
+        self.assertIn("Route-Orbit Warnings", rendered)
+        self.assertIn("do not establish physics truth", rendered)
 
     def test_support_only_checker_parse_errors_are_tooling_metrics(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

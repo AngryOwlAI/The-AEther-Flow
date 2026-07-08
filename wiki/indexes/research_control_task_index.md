@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `34f96f89a886dc61c0ce07a562dd08c37734f74be0039f0b8e4883aee2cd4939`
-- Generated-at source timestamp: `2026-07-08T16:31:45Z`
-- Row count: `863`
+- Source fingerprint: `b747d203834fda135470e7d47e8da43b49e45413efe74a6c89e6d45a0710a3ef`
+- Generated-at source timestamp: `2026-07-08T17:13:25Z`
+- Row count: `864`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260708-030|RT-20260708-029|2026-07-08T17:13:25Z|2026-07-08T17:13:25Z|physics_payload_ratio_dashboard_integration|completed|none|Render payload-ratio metrics as support-only AI methodology diagnostics.|project-control-maintainer@0.2.0|false|false|1|Run one bounded v18 P8-T05 physics-payload ratio red-team review packet.|PASS|research_control/tasks/RT-20260708-030/jobs/completions/AJC-AJ-RT-20260708-030-001.yaml|
 |RT-20260708-029|RT-20260708-028|2026-07-08T16:31:45Z|2026-07-08T16:31:45Z|physics_payload_ratio_validator_pilot|completed|none|Add advisory validation for payload-ratio policy.|validator-engineer@0.2.0|false|false|1|Run one bounded v18 P8-T04 physics-payload ratio dashboard integration packet.|PASS|research_control/tasks/RT-20260708-029/jobs/completions/AJC-AJ-RT-20260708-029-001.yaml|
 |RT-20260708-028|RT-20260708-027|2026-07-08T16:05:59Z|2026-07-08T16:05:59Z|route_history_payload_ratio_metrics|completed|none|Extend route-history metrics to compute project-system run length and physics-payload ratio.|validator-engineer@0.2.0|false|false|1|Run one bounded v18 P8-T03 physics-payload ratio validator pilot packet.|PASS|research_control/tasks/RT-20260708-028/jobs/completions/AJC-AJ-RT-20260708-028-001.yaml|
 |RT-20260708-027|RT-20260708-026|2026-07-08T15:32:02Z|2026-07-08T15:32:02Z|physics_payload_ratio_policy|completed|none|Define a policy requiring physics-bearing payloads after runs of project-system tasks.|project-control-maintainer@0.2.0|false|false|1|Run one bounded v18 P8-T02 route-history and payload-ratio metrics extension packet.|PASS|research_control/tasks/RT-20260708-027/jobs/completions/AJC-AJ-RT-20260708-027-001.yaml|
