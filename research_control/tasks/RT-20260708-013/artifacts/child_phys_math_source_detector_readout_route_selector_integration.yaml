@@ -1,0 +1,27 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260708-013"
+job_id: "AJ-RT-20260708-013-001"
+status: "completed"
+selected_route: "proceed_to_finite_toy_response_v2"
+selected_next_plan_task_id: "P6-T01"
+route_evaluation:
+  candidate_status: "SourceReadoutCandidate_EStar_v1 is a finite draft/control source readout candidate."
+  audit_status: "source_pure_as_written"
+  stress_status: "survives_as_draft_control_candidate"
+  repair_mandatory: false
+  freeze_mandatory: false
+  p6_t01_available: true
+mathematical_reasoning:
+  - "P5-T06 records K_Estar compatibility failure as a live integration obligation not as candidate collapse."
+  - "The finite readout witness remains non-bottom under certified source relabeling and invalid branches fail closed."
+  - "Because neither repair nor freeze is mandatory the v18 backlog success route to P6-T01 is available."
+claim_boundary:
+  detector_readout_candidate_remains_draft_control: true
+  adoption_requested: false
+  ledger_delta_requested: false
+  dag_update_requested: false
+  physics_promotion_requested: false
+new_payload:
+  payload_type: "packet_selection"
+  summary: "Maps P5-T06 draft/control survival to the single next route proceed_to_finite_toy_response_v2."

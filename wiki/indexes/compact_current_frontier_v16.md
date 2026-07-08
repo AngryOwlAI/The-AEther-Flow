@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-012`
-- Latest handoff: `handoff-0705`
-- Current status: `v18_p5_t06_source_detector_readout_stress_survived_draft_control_no_adoption`
+- Active task: `RT-20260708-013`
+- Latest handoff: `handoff-0706`
+- Current status: `v18_p5_t07_source_detector_readout_route_selected_p6_t01_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-012`
-- Latest research handoff: `handoff-0705`
-- Latest research next action: Run one bounded v18 P5-T07 source detector/readout route selector and integration packet.
+- Latest research task: `RT-20260708-013`
+- Latest research handoff: `handoff-0706`
+- Latest research next action: Run one bounded v18 P6-T01 finite toy response v2 source specification packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `source_detector_readout_route_selector_and_integration`
-- Role family: `theoretical-continuation-selector@0.1.0`
-- Target milestone: `matter_coupling`
-- Milestone burden: Select the next source detector/readout route after source-pure candidate stress survival while preserving no-adoption and no-promotion gates.
+- Route ID: `finite_toy_response_v2_source_spec`
+- Role family: `ontology-formalizer@0.2.0`
+- Target milestone: `finite_toy_metric_response`
+- Milestone burden: Specify a non-tag-fragile finite source-to-response toy target.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `c7665e29566e0a88a67d84376c8fdc798009035d50de9a7f7dc9f80e8841448f`
-- JSON SHA-256: `881a3c6631a94fa95af4735b334cdba3699da4b58b12b7b04c3c6872b943f25f`
+- YAML SHA-256: `9341f3c4bc534d34a5d697f3088d3eb797b25485a1de026ad6dbd049f87e58be`
+- JSON SHA-256: `3e08c73da9191861f2651ee9f84f10443e4f66e03af2eca2c922412a1ed507f7`
 
 ## Authority Warning
 

@@ -312,6 +312,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-010-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-CANDIDATE` `research_control/tasks/RT-20260708-010/artifacts/parent_fusion_notes_source_detector_readout_candidate.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-011-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260708-011/artifacts/parent_fusion_notes_source_detector_readout_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-012-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-REFUTER-STRESS` `research_control/tasks/RT-20260708-012/artifacts/parent_fusion_notes_source_detector_readout_refuter_stress.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-013-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-ROUTE-SELECTOR-INTEGRATION` `research_control/tasks/RT-20260708-013/artifacts/parent_fusion_notes_source_detector_readout_route_selector_integration.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-013-SOURCE-DETECTOR-READOUT-ROUTE-SELECTOR-INTEGRATION-RECEIPT` `research_control/tasks/RT-20260708-013/artifacts/source_detector_readout_route_selector_integration_receipt.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -1062,6 +1064,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-010-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-CANDIDATE` `wiki/markdown/md-research-control-tasks-rt-20260708-010-parent-fusion-notes-source-detector-readout-candidate.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-011-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260708-011-parent-fusion-notes-source-detector-readout-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-012-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260708-012-parent-fusion-notes-source-detector-readout-refuter-stress.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-013-PARENT-FUSION-NOTES-SOURCE-DETECTOR-READOUT-ROUTE-SELECTOR-INTEGRATION` `wiki/markdown/md-research-control-tasks-rt-20260708-013-parent-fusion-notes-source-detector-readout-route-selector-integration.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-013-SOURCE-DETECTOR-READOUT-ROUTE-SELECTOR-INTEGRATION-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-013-source-detector-readout-route-selector-integration-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`

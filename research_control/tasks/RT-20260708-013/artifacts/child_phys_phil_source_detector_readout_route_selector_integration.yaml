@@ -1,0 +1,26 @@
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+task_id: "RT-20260708-013"
+job_id: "AJ-RT-20260708-013-001"
+status: "completed"
+selected_route: "proceed_to_finite_toy_response_v2"
+selected_next_plan_task_id: "P6-T01"
+ontology_model_distinction:
+  ontology_status: "unchanged"
+  mathematical_model_status: "finite draft/control readout candidate only"
+  empirical_recovery_status: "not claimed"
+  benchmark_status: "not promoted"
+reasoning:
+  - "A selector may integrate route evidence without adopting the object selected from."
+  - "Proceeding to a finite toy response v2 source specification preserves the readout candidate as controlled input rather than treating it as detector semantics."
+  - "K_E repair remains a later scientific preference after v18 integration rather than a mandatory immediate repair condition in P5-T07."
+claim_boundary:
+  no_Det_src_adoption: true
+  no_Readout_src_adoption: true
+  no_source_detector_readout_semantics_adoption: true
+  no_matter_coupling_derivation: true
+  no_benchmark_promotion: true
+  no_completed_derivation: true
+new_payload:
+  payload_type: "dependency_map_update"
+  summary: "Separates local source-readout candidate survival from downstream matter-coupling adoption and routes the next test through toy response v2."

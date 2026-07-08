@@ -1,0 +1,18 @@
+task_id: "RT-20260708-013"
+job_id: "AJ-RT-20260708-013-001"
+artifact_id: "parent_conflict_review_source_detector_readout_route_selector_integration"
+status: "completed"
+conflicts:
+  - conflict_id: "P5T07-CONFLICT-001"
+    conflict_type: "next_route"
+    severity: "nonblocking"
+    issue: "The P5-T07 allowed route list includes integration into K_E repair but the backlog success route is P6-T01."
+    resolution: "Select proceed_to_finite_toy_response_v2 now because P5-T06 did not make repair or freeze mandatory. Preserve K_E repair as a deferred post-v18 scientific preference."
+  - conflict_id: "P5T07-CONFLICT-002"
+    conflict_type: "claim_boundary"
+    severity: "nonblocking"
+    issue: "A surviving source readout candidate could be overread as detector semantics."
+    resolution: "Record the candidate as draft/control only and explicitly block Det_src Readout_src detector semantics source detector/readout semantics and matter-coupling adoption."
+blocking_conflicts: []
+unresolved_conflicts: []
+parent_resolution: "Both child units select proceed_to_finite_toy_response_v2 and agree that no repair freeze adoption ledger update DAG update or physics promotion is authorized."
