@@ -1,0 +1,44 @@
+task_id: "RT-20260708-027"
+task_type: "physics_payload_ratio_policy"
+status: "completed"
+created_at: "2026-07-08T15:32:02Z"
+updated_at: "2026-07-08T15:32:02Z"
+closed_at: "2026-07-08T15:32:02Z"
+parent_task_id: "RT-20260708-026"
+parent_handoff_id: "handoff-0719"
+decision_id: "DDR-20260708-027"
+job_id: "AJ-RT-20260708-027-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260708-027"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. P8-T01 requires no human gate because it defines an advisory project-control policy and does not promote physics claims."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T01"
+  plan_task_name: "Physics-payload ratio policy"
+objective: "Define a v18 physics-payload ratio policy requiring physics-bearing payloads after bounded runs of project-system tasks."
+target_derivation_milestone: "none"
+milestone_burden: "Define a policy requiring physics-bearing payloads after runs of project-system tasks."
+closure_status: "v18_p8_t01_physics_payload_ratio_policy_defined_no_physics_delta"
+claim_boundary:
+  allowed_scope: "P8-T01 project-control policy definition only with advisory initial enforcement and P8-T02 routing."
+  support_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "research_control/design/physics_payload_ratio_policy_v1.md"
+  - "research_control/tasks/RT-20260708-027/artifacts/physics_payload_ratio_policy_receipt.md"
+next_recommended_action: "Run one bounded v18 P8-T02 route-history and payload-ratio metrics extension packet."
+notes: "RT-20260708-027 completes v18 P8-T01 by creating an advisory control policy for process-orbit and physics-bearing next-task routing. It creates no physics delta proof authority source-law adoption detector-semantics adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict authority or completed derivation."
+documentation_impact_id: "DI-RT-20260708-027-001"

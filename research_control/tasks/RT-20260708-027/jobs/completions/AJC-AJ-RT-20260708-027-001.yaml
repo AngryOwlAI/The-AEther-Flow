@@ -1,0 +1,232 @@
+completion_id: "AJC-AJ-RT-20260708-027-001"
+job_id: "AJ-RT-20260708-027-001"
+task_id: "RT-20260708-027"
+decision_id: "DDR-20260708-027"
+status: "completed"
+completed_at: "2026-07-08T15:32:02Z"
+completed_by_role: "project-control-maintainer@0.2.0--RT-20260708-027"
+plan_task_id: "P8-T01"
+objective_result: "completed"
+summary: "Created physics_payload_ratio_policy_v1 as an advisory v18 project-control policy defining process orbit, route orbit, helpful support, avoidance behavior, three-project-system-task threshold, exceptions, and P8-T02 routing with no physics delta."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  related_plan_task_id: "P8-T01"
+  plan_phase_id: "P8"
+  implemented_task_scope: "Created the v18 P8-T01 physics-payload ratio policy source and task-local receipt; deferred metrics extension to P8-T02 and validator pilot to P8-T03."
+  phase_p8_completed: false
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "research_control/design/physics_payload_ratio_policy_v1.md"
+  - "research_control/tasks/RT-20260708-027/artifacts/physics_payload_ratio_policy_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260708-027/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-027/DDR-20260708-027.md"
+  - "research_control/tasks/RT-20260708-027/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-027/jobs/AJ-RT-20260708-027-001.yaml"
+  - "research_control/tasks/RT-20260708-027/jobs/completions/AJC-AJ-RT-20260708-027-001.yaml"
+  - "research_control/tasks/RT-20260708-027/roles/project-control-maintainer@0.2.0--RT-20260708-027.yaml"
+  - "research_control/handoffs/handoff-0720.yaml"
+  - "research_control/handoffs/handoff-0720.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  - "research_control/design/v18_recommendation_backlog.yaml"
+  - "research_control/design/minimum_physics_payload_schema_v1.md"
+  - "research_control/design/route_orbit_gating_policy_v16.md"
+  - "research_control/design/route_orbit_freeze_threshold_policy_v1.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0719.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=false source_object_count=771 relationship_row_count=3869 semantic_row_count=771 vault_row_count=771"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | source_object_count=771 relationship_row_count=3869"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P8-T01 physics-payload ratio policy\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260708-026-PARENT-FUSION-NOTES-SUPPORT-FORMALIZATION-REFUTER-REVIEW-V18,MD-RESEARCH-CONTROL-CURRENT-FRONTIER,MD-RESEARCH-CONTROL-TASKS-RT-20260708-026-SUPPORT-FORMALIZATION-REFUTER-REVIEW-V18-RECEIPT,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18,MD-RESEARCH-CONTROL-TASK-INDEX"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-026 latest_handoff=handoff-0719 next_action=P8-T01"
+  - "rg -n \"process orbit|route orbit|avoidance behavior|after_project_system_tasks: 3|initial_enforcement: \\\"advisory\\\"\" research_control/design/physics_payload_ratio_policy_v1.md | exit_code=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 771
+    relationship_row_count: 3869
+    semantic_row_count: 771
+    vault_row_count: 771
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: false
+  refresh_performed: false
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P8-T01 physics-payload ratio policy\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P8-T01 physics-payload ratio policy"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-026-PARENT-FUSION-NOTES-SUPPORT-FORMALIZATION-REFUTER-REVIEW-V18"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-026-SUPPORT-FORMALIZATION-REFUTER-REVIEW-V18-RECEIPT"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "92f84d97c4df59d7b198f9cabd1e9a1d2b59b31cdbd0853188a786d06fce08b3"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "87dbad8cedc5dea0afc2155163933aadcdef4c1bef1a5724651126b446421e1e"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-026-SUPPORT-FORMALIZATION-REFUTER-REVIEW-V18-RECEIPT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-026/artifacts/support_formalization_refuter_review_v18_receipt.md"
+      source_hash: "4b6079a2611cfe1f7a0c18018ed7f827c56b7ae2b776700c24865ff10c01f9df"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-026-PARENT-FUSION-NOTES-SUPPORT-FORMALIZATION-REFUTER-REVIEW-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-026/artifacts/parent_fusion_notes_support_formalization_refuter_review_v18.md"
+      source_hash: "8853d24969a5a708ddb42f0a1c98838cb4730af83fa34dca697bee711e3fcd5c"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "targeted memory search returned P7-T08 receipt, parent fusion notes, current frontier, v18 plan, and task index"
+      - "canonical plan, backlog, P7-T08 handoff, minimum payload schema, route-orbit policies, and role contracts inspected"
+      - "continue_research.py resolved handoff-0719 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "physics_payload_ratio_policy_v1 source created"
+      - "process orbit and route orbit defined"
+      - "helpful support work and avoidance behavior distinguished"
+      - "after_project_system_tasks=3 and initial_enforcement=advisory recorded"
+      - "required next-task classes and exceptions listed"
+      - "P8-T02 route selected"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "policy required-terms check passed"
+      - "documentation-impact validator passed after receipt update"
+      - "research-control validator passed with nonblocking historical warnings"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint commit has not yet been created; this layer is completed by checkpoint_research_transaction"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current-frontier write and check passed"
+      - "compact current-frontier write, check, and validation passed"
+      - "task index render passed"
+      - "dependency graph render and check passed"
+      - "claim graph generation and validation passed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py passed"
+      - "sync_obsidian_vault.py refreshed non-authoritative local retrieval mirrors after bootstrap warnings"
+      - "bootstrap_memory_system.py --validate-only passed after retrieval refresh"
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "validate_claim_language.py --changed --json exited 0 with hard_fail_count=0 and overclaim_hard_fail_count=0"
+      - "remaining warnings were historical or calibration warnings and did not block P8-T01"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  user_goal_human_gate_authorization_present: true
+  p8_t01_consumes_gate_authority: false
+  selected_next_packet_requires_human_gate: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+policy_receipt:
+  policy_path: "research_control/design/physics_payload_ratio_policy_v1.md"
+  policy_id: "physics_payload_ratio_policy_v1"
+  after_project_system_tasks: 3
+  initial_enforcement: "advisory"
+  defines_process_orbit: true
+  defines_route_orbit: true
+  distinguishes_helpful_support_from_avoidance: true
+  validator_enforcement_implemented: false
+  standing_global_gate_installed: false
+  next_metrics_packet_deferred_to: "P8-T02"
+  next_validator_pilot_deferred_to: "P8-T03"
+distance_to_gr:
+  milestone: "none"
+  burden_id: "physics_payload_ratio_policy"
+  status: "project-control policy defined"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "P8-T01 defines advisory project-control policy and does not change physics derivation status."
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "physics_payload_ratio_policy"
+  milestone: "none"
+  old_status: "support-only Refuter review completed"
+  new_status: "project-control physics-payload ratio policy defined"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v18_p8_t02_route_history_payload_ratio_metrics"
+  downstream_still_blocked:
+    - "proof authority"
+    - "validator enforcement"
+    - "standing global gate"
+    - "source-law adoption"
+    - "detector-semantics adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+claim_boundary:
+  support_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+  validator_enforcement_implemented: false
+  standing_global_gate_installed: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  detector_semantics_adopted: false
+  target_metric_imported: false
+  metricdata_e_adopted: false
+  g_eff_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+selected_next_route:
+  route_id: "route_history_payload_ratio_metrics"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P8"
+  plan_task_id: "P8-T02"
+  task_name: "Route-history and payload-ratio metrics extension"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "route_history_payload_ratio_metrics"
+  target_derivation_milestone: "none"
+  milestone_burden: "Extend route-history metrics to compute project-system run length and physics-payload ratio."
+  requires_human_gate: false
+project_improvement_signals: []
+next_recommended_action: "Run one bounded v18 P8-T02 route-history and payload-ratio metrics extension packet."

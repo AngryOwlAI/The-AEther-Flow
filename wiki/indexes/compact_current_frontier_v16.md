@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-026`
-- Latest handoff: `handoff-0719`
-- Current status: `v18_p7_t08_support_formalization_refuter_review_pass_no_proof_authority`
+- Active task: `RT-20260708-027`
+- Latest handoff: `handoff-0720`
+- Current status: `v18_p8_t01_physics_payload_ratio_policy_defined_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-026`
-- Latest research handoff: `handoff-0719`
-- Latest research next action: Run one bounded v18 P8-T01 physics-payload ratio policy packet.
+- Latest research task: `RT-20260708-027`
+- Latest research handoff: `handoff-0720`
+- Latest research next action: Run one bounded v18 P8-T02 route-history and payload-ratio metrics extension packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `physics_payload_ratio_policy`
-- Role family: `project-control-maintainer@0.2.0`
+- Route ID: `route_history_payload_ratio_metrics`
+- Role family: `validator-engineer@0.2.0`
 - Target milestone: `none`
-- Milestone burden: Define a policy requiring physics-bearing payloads after runs of project-system tasks.
+- Milestone burden: Extend route-history metrics to compute project-system run length and physics-payload ratio.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `4b2402479e0f1ef3f842350a5c9c3be71936e0f5785459ba516601bb660db888`
-- JSON SHA-256: `afdc07f21434dab227ab369ca7414a80ed135d58cea0d8c20b572a199c072c95`
+- YAML SHA-256: `472562058c54ee1c93b6e31eee59af7d30fcb7ce92720abc08fd1e8a240103c1`
+- JSON SHA-256: `359e2dc6ade7c3c59f8b5aab696d2950382ed5a8169e431bb6aa4595e6668576`
 
 ## Authority Warning
 

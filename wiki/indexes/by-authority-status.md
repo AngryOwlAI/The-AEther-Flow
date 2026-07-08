@@ -658,6 +658,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `wiki/markdown/md-research-control-design-no-target-import-guard-map.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `wiki/markdown/md-research-control-design-obstruction-and-freeze-control.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ONE-QUESTION-RED-TEAM-PACKET-V16` `wiki/markdown/md-research-control-design-one-question-red-team-packet-v16.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1` `wiki/markdown/md-research-control-design-physics-payload-ratio-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-POSITIVE-SEMANTICS-REQUIREMENT-NOTE` `wiki/markdown/md-research-control-design-positive-semantics-requirement-note.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC` `wiki/markdown/md-research-control-design-public-status-exists-does-not-exist-source-spec.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `wiki/markdown/md-research-control-design-public-status-table-source-spec.md`
@@ -829,6 +830,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-025-SUPPORT-FORMALIZATION-TRACEABILITY-INTEGRATION-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-025-support-formalization-traceability-integration-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-026-PARENT-FUSION-NOTES-SUPPORT-FORMALIZATION-REFUTER-REVIEW-V18` `wiki/markdown/md-research-control-tasks-rt-20260708-026-parent-fusion-notes-support-formalization-refuter-review-v18.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-026-SUPPORT-FORMALIZATION-REFUTER-REVIEW-V18-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-026-support-formalization-refuter-review-v18-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-027-PHYSICS-PAYLOAD-RATIO-POLICY-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-027-physics-payload-ratio-policy-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1333,6 +1335,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `research_control/design/no_target_import_guard_map.md`
 - `MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `research_control/design/obstruction_and_freeze_control.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ONE-QUESTION-RED-TEAM-PACKET-V16` `research_control/design/one_question_red_team_packet_v16.md`
+- `MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1` `research_control/design/physics_payload_ratio_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-POSITIVE-SEMANTICS-REQUIREMENT-NOTE` `research_control/design/positive_semantics_requirement_note.md`
 - `MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC` `research_control/design/public_status_exists_does_not_exist_source_spec.md`
 - `MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-TABLE-SOURCE-SPEC` `research_control/design/public_status_table_source_spec.md`
@@ -1503,6 +1506,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-025-SUPPORT-FORMALIZATION-TRACEABILITY-INTEGRATION-RECEIPT` `research_control/tasks/RT-20260708-025/artifacts/support_formalization_traceability_integration_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-026-PARENT-FUSION-NOTES-SUPPORT-FORMALIZATION-REFUTER-REVIEW-V18` `research_control/tasks/RT-20260708-026/artifacts/parent_fusion_notes_support_formalization_refuter_review_v18.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-026-SUPPORT-FORMALIZATION-REFUTER-REVIEW-V18-RECEIPT` `research_control/tasks/RT-20260708-026/artifacts/support_formalization_refuter_review_v18_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-027-PHYSICS-PAYLOAD-RATIO-POLICY-RECEIPT` `research_control/tasks/RT-20260708-027/artifacts/physics_payload_ratio_policy_receipt.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
