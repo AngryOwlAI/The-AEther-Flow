@@ -13,6 +13,9 @@ project-memory system.
 - `publication-briefs/` contains the page-specific briefs that authorize public
   HTML and GitHub-facing Markdown publication pages. The live corpus status is
   governed by `registries/PUBLICATION_BRIEF_REGISTRY.csv`.
+- `external-review-specs/` contains source specs for bounded external-review
+  packet artifacts. These specs are not outreach records, endorsements, or
+  external-review completions.
 - `ontology-promotions/` is reserved for bounded ontology-promotion packet
   notes.
 - `grill-memory-wiki-registry-design-handoff.md` records accepted memory,

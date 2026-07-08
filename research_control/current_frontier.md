@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-037` and `handoff-0730`.
+`RT-20260708-038` and `handoff-0731`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-037` |
-| Latest handoff ID | `handoff-0730` |
-| Current status | `v18_p10_t01_external_review_question_selected_no_outreach_no_promotion` |
+| Active task ID | `RT-20260708-038` |
+| Latest handoff ID | `handoff-0731` |
+| Current status | `v18_p10_t02_external_review_source_spec_created_no_outreach_no_promotion` |
 | V16 completed | false |
-| Current route family | external_review_question_selector_v18 |
+| Current route family | external_review_packet_source_spec |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P10-T02 external-review packet source spec packet. |
-| Required next authority | Run one bounded v18 P10-T02 external-review packet source spec packet. |
-| Next recommended action | Run one bounded v18 P10-T02 external-review packet source spec packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P10-T03 external-review packet artifact packet. |
+| Required next authority | Run one bounded v18 P10-T03 external-review packet artifact packet. |
+| Next recommended action | Run one bounded v18 P10-T03 external-review packet artifact packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-037` |
-| Latest research handoff ID | `handoff-0730` |
-| Latest research next action | Run one bounded v18 P10-T02 external-review packet source spec packet. |
+| Latest research task ID | `RT-20260708-038` |
+| Latest research handoff ID | `handoff-0731` |
+| Latest research next action | Run one bounded v18 P10-T03 external-review packet artifact packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-037/00_TASK.yaml`.
-- Active task objective: Select exactly one focused external-review question from v18 theorem/countermodel results with no external outreach.
-- Latest handoff path: `research_control/handoffs/handoff-0730.yaml`.
-- Latest handoff summary: RT-20260708-037 completed v18 P10-T01 by selecting exactly one EqSrc family-closure external-review question from P3 theorem/countermodel evidence with no outreach and no physics promotion.
-- Current route family: external_review_question_selector_v18.
-- Next recommended action: Run one bounded v18 P10-T02 external-review packet source spec packet.
+- Active task path: `research_control/tasks/RT-20260708-038/00_TASK.yaml`.
+- Active task objective: Write a source spec for one focused EqSrc family-closure external-review packet with no outreach.
+- Latest handoff path: `research_control/handoffs/handoff-0731.yaml`.
+- Latest handoff summary: RT-20260708-038 completed v18 P10-T02 by creating a bounded EqSrc family-closure external-review packet source spec with no outreach no reviewer naming and no physics promotion.
+- Current route family: external_review_packet_source_spec.
+- Next recommended action: Run one bounded v18 P10-T03 external-review packet artifact packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P10-T02 external-review packet source spec packet.
+Run one bounded v18 P10-T03 external-review packet artifact packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-037`;
-- latest handoff: `handoff-0730`;
-- current status: `v18_p10_t01_external_review_question_selected_no_outreach_no_promotion`;
+- active task: `RT-20260708-038`;
+- latest handoff: `handoff-0731`;
+- current status: `v18_p10_t02_external_review_source_spec_created_no_outreach_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0730.yaml`
-- `research_control/tasks/RT-20260708-037/00_TASK.yaml`
+- `research_control/handoffs/handoff-0731.yaml`
+- `research_control/tasks/RT-20260708-038/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0730*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0731*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

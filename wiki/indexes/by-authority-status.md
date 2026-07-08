@@ -526,6 +526,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-CONTRIBUTING` `wiki/markdown/md-contributing.md`
 - `WIKI-MD-DIRECTOR-AGENTJOB-LIFECYCLE-PUBLICATION-BRIEF` `wiki/markdown/md-director-agentjob-lifecycle-publication-brief.md`
 - `WIKI-MD-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-PUBLICATION-BRIEF` `wiki/markdown/md-documentation-curator-publication-process-publication-brief.md`
+- `WIKI-MD-EQSRC-FAMILY-CLOSURE-REVIEW-PACKET-SPEC-V1` `wiki/markdown/md-eqsrc-family-closure-review-packet-spec-v1.md`
 - `WIKI-MD-EXACT-GR-BENCHMARK-BOUNDARY-PUBLICATION-BRIEF` `wiki/markdown/md-exact-gr-benchmark-boundary-publication-brief.md`
 - `WIKI-MD-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA` `wiki/markdown/md-external-red-team-review-artifact-schema.md`
 - `WIKI-MD-GITHUB-FACING-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/markdown/md-github-facing-aether-flow-ontology-explainer.md`
@@ -841,6 +842,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-036-PUBLIC-COGNITIVE-LOAD-RED-TEAM-REVIEW` `wiki/markdown/md-research-control-tasks-rt-20260708-036-public-cognitive-load-red-team-review.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-037-EXTERNAL-REVIEW-QUESTION-SELECTOR-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-037-external-review-question-selector-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-037-PARENT-FUSION-NOTES-EXTERNAL-REVIEW-QUESTION-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260708-037-parent-fusion-notes-external-review-question-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-038-EXTERNAL-REVIEW-PACKET-SOURCE-SPEC-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-038-external-review-packet-source-spec-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1287,6 +1289,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-AGENTS-AGENTS` `.agents/AGENTS.md`
 - `MD-AGENTS-RESEARCH-CONTROL` `research_control/AGENTS.md`
 - `MD-CONTRIBUTING` `CONTRIBUTING.md`
+- `MD-EQSRC-FAMILY-CLOSURE-REVIEW-PACKET-SPEC-V1` `markdown/external-review-specs/eqsrc_family_closure_review_packet_spec_v1.md`
 - `MD-EXTERNAL-RED-TEAM-REVIEW-ARTIFACT-SCHEMA` `.agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md`
 - `MD-MISSING-SOURCE-LAW-INVENTORY` `research_control/missing_laws/missing_source_law_inventory.md`
 - `MD-PROJECT-CONTROL-GRILL-MEMORY-WIKI-REGISTRY-DESIGN-HANDOFF` `markdown/grill-memory-wiki-registry-design-handoff.md`
@@ -1527,6 +1530,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-036-PUBLIC-COGNITIVE-LOAD-RED-TEAM-REVIEW` `research_control/tasks/RT-20260708-036/artifacts/public_cognitive_load_red_team_review_v1.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-037-EXTERNAL-REVIEW-QUESTION-SELECTOR-RECEIPT` `research_control/tasks/RT-20260708-037/artifacts/external_review_question_selector_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-037-PARENT-FUSION-NOTES-EXTERNAL-REVIEW-QUESTION-SELECTOR` `research_control/tasks/RT-20260708-037/artifacts/parent_fusion_notes_external_review_question_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-038-EXTERNAL-REVIEW-PACKET-SOURCE-SPEC-RECEIPT` `research_control/tasks/RT-20260708-038/artifacts/external_review_packet_source_spec_receipt.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

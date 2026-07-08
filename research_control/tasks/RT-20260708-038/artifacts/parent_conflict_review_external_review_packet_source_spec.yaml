@@ -1,0 +1,22 @@
+review_id: "parent_conflict_review_external_review_packet_source_spec"
+task_id: "RT-20260708-038"
+created_at: "2026-07-08T22:14:18Z"
+mode: "parent_child_parallel_synthesis"
+child_outputs:
+  - "research_control/tasks/RT-20260708-038/artifacts/child_phys_math_external_review_packet_source_spec.yaml"
+  - "research_control/tasks/RT-20260708-038/artifacts/child_phys_phil_external_review_packet_source_spec.yaml"
+agreements:
+  - "The P10-T01 review question is preserved."
+  - "The source spec contains all 11 P10-T02 sections."
+  - "The source spec is bounded to listed source paths and does not request a whole-repository review."
+  - "No external outreach reviewer naming endorsement proof authority primitive adoption or physics promotion is authorized."
+  - "The next route is P10-T03."
+conflicts: []
+unresolved_conflicts: []
+parent_resolution:
+  source_spec_path: "markdown/external-review-specs/eqsrc_family_closure_review_packet_spec_v1.md"
+  selected_next_plan_task_id: "P10-T03"
+  external_outreach_performed: false
+  reviewer_named: false
+  rationale: "Both child checks converge that the source spec satisfies P10-T02 and preserves the no-outreach no-promotion boundary."
+status: "PASS"

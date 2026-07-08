@@ -1,0 +1,262 @@
+completion_id: "AJC-AJ-RT-20260708-038-001"
+job_id: "AJ-RT-20260708-038-001"
+task_id: "RT-20260708-038"
+decision_id: "DDR-20260708-038"
+status: "completed"
+completed_at: "2026-07-08T22:14:18Z"
+completed_by_role: "documentation-curator@2.0.0--RT-20260708-038"
+source_role_id: "documentation-curator"
+source_role_version: "2.0.0"
+plan_task_id: "P10-T02"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Completed v18 P10-T02 by creating a concise bounded external-review packet source spec for the selected EqSrc family-closure review question. No external outreach reviewer naming external acceptance claim general EqSrc discharge RetainH adoption GenH adoption source-law adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict or completed-derivation claim is authorized."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_task_id: "P10-T02"
+  plan_phase_id: "P10"
+  implemented_task_scope: "External-review packet source spec"
+  recommendation_ids:
+    - "V18-R10"
+  completed_v18_tasks_this_packet:
+    - "P10-T02"
+  downstream_tasks_not_implemented:
+    - "P10-T03 external-review packet artifact"
+    - "P10-T04 internal red-team review of external packet"
+    - "P10-T05 human gate for external outreach"
+    - "external outreach"
+    - "source-law adoption"
+    - "matter-coupling derivation or adoption"
+    - "Einstein-equation route"
+    - "benchmark-promotion route"
+  all_applicable_plan_tasks_proven: false
+  phase_p10_completed: false
+artifacts:
+  - "markdown/external-review-specs/eqsrc_family_closure_review_packet_spec_v1.md"
+  - "markdown/README.md"
+  - "research_control/tasks/RT-20260708-038/artifacts/child_phys_math_external_review_packet_source_spec.yaml"
+  - "research_control/tasks/RT-20260708-038/artifacts/child_phys_phil_external_review_packet_source_spec.yaml"
+  - "research_control/tasks/RT-20260708-038/artifacts/parent_conflict_review_external_review_packet_source_spec.yaml"
+  - "research_control/tasks/RT-20260708-038/artifacts/parent_fusion_notes_external_review_packet_source_spec.md"
+  - "research_control/tasks/RT-20260708-038/artifacts/external_review_packet_source_spec_receipt.md"
+  - "research_control/tasks/RT-20260708-038/artifacts/validate_p10_t02_external_review_packet_source_spec.py"
+  - "research_control/tasks/RT-20260708-038/artifacts/p10_t02_external_review_packet_source_spec_report.json"
+output_paths:
+  - "markdown/external-review-specs/eqsrc_family_closure_review_packet_spec_v1.md"
+  - "markdown/README.md"
+  - "research_control/tasks/RT-20260708-038/artifacts/child_phys_math_external_review_packet_source_spec.yaml"
+  - "research_control/tasks/RT-20260708-038/artifacts/child_phys_phil_external_review_packet_source_spec.yaml"
+  - "research_control/tasks/RT-20260708-038/artifacts/parent_conflict_review_external_review_packet_source_spec.yaml"
+  - "research_control/tasks/RT-20260708-038/artifacts/parent_fusion_notes_external_review_packet_source_spec.md"
+  - "research_control/tasks/RT-20260708-038/artifacts/external_review_packet_source_spec_receipt.md"
+  - "research_control/tasks/RT-20260708-038/artifacts/validate_p10_t02_external_review_packet_source_spec.py"
+  - "research_control/tasks/RT-20260708-038/artifacts/p10_t02_external_review_packet_source_spec_report.json"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260708-038/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-038/DDR-20260708-038.md"
+  - "research_control/tasks/RT-20260708-038/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-038/jobs/AJ-RT-20260708-038-001.yaml"
+  - "research_control/tasks/RT-20260708-038/jobs/completions/AJC-AJ-RT-20260708-038-001.yaml"
+  - "research_control/tasks/RT-20260708-038/roles/documentation-curator@2.0.0--RT-20260708-038.yaml"
+  - "research_control/handoffs/handoff-0731.yaml"
+  - "research_control/handoffs/handoff-0731.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/docs/documentation-curator.v2.0.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  - "research_control/design/v18_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0730.yaml"
+  - "research_control/tasks/RT-20260708-037/artifacts/external_review_question_selector_receipt.md"
+  - "research_control/design/source_equivalence_typed_object_schema_v1.md"
+  - "research_control/tasks/RT-20260707-015/artifacts/source_equivalence_typed_object_v1.tex"
+  - "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex"
+  - "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_v1.tex"
+  - "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=785 relationship_row_count=3925 semantic_row_count=785 vault_row_count=785 local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"EqSrc family closure review packet source spec\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260708-037-EXTERNAL-REVIEW-QUESTION-SELECTOR-RECEIPT,MD-RESEARCH-CONTROL-TASKS-RT-20260708-037-PARENT-FUSION-NOTES-EXTERNAL-REVIEW-QUESTION-SELECTOR,MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18,MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-037 latest_handoff=handoff-0730 next_action=P10-T02"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 785
+    relationship_row_count: 3925
+    semantic_row_count: 785
+    vault_row_count: 785
+    local_cache_only_warning_count: 0
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"EqSrc family closure review packet source spec\" --limit 10 --json"
+      query_type: "search"
+      query_text: "EqSrc family closure review packet source spec"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-037-EXTERNAL-REVIEW-QUESTION-SELECTOR-RECEIPT"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-037-PARENT-FUSION-NOTES-EXTERNAL-REVIEW-QUESTION-SELECTOR"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-037-EXTERNAL-REVIEW-QUESTION-SELECTOR-RECEIPT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-037/artifacts/external_review_question_selector_receipt.md"
+      source_hash: "dfae4d264ce4a400cd4cc075977e2698cc62dece4b40a4245d8ade770072859f"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-037-PARENT-FUSION-NOTES-EXTERNAL-REVIEW-QUESTION-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-037/artifacts/parent_fusion_notes_external_review_question_selector.md"
+      source_hash: "f46ea048fb951fc7af4d1de38d31174bda9e40523986d9083ae6f0a3c8559482"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "6c26ecced6746aa96335bbfd5accac94c1876a529ba6a5bdbe19145857e2f136"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "targeted memory search returned P10-T01 receipt P10 plan and current frontier evidence"
+      - "continue_research.py resolved handoff-0730 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "source spec contains all 11 v18 P10-T02 sections"
+      - "source spec states no broad repository tour"
+      - "source spec routes next to P10-T03"
+      - "external_outreach_performed is false"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "task-local validator passed after source spec creation"
+      - "full repository validators are recorded in documentation_impact after derivative refresh"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current frontier compact frontier task index dependency graph and claim graph write/check passes completed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py PASS"
+      - "continue_research_memory_preflight refreshed local retrieval rows to 785"
+      - "bootstrap_memory_system.py --validate-only PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "validate_claim_language.py --changed --json passed with zero hard failures"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command is run after this completion receipt is written"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  source_spec_consumes_gate_authority: false
+  external_outreach_authorized_by_this_packet: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable_source_spec_only_packet"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+source_spec_result:
+  artifact_path: "markdown/external-review-specs/eqsrc_family_closure_review_packet_spec_v1.md"
+  selected_question_family: "EqSrc_family_closure"
+  review_question_count: 1
+  external_outreach_performed: false
+  reviewer_named: false
+  selected_next_plan_task_id: "P10-T03"
+  selected_next_packet_type: "external_review_packet_artifact"
+  selected_next_role_family: "documentation-curator@2.0.0"
+physics_progress_status:
+  status: "review_packet_spec_no_outreach"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Write a source spec for one focused external-review packet."
+  explanation: "The source spec translates the selected EqSrc family-closure question into a bounded review-packet source without changing scientific claims."
+  physics_promotion_authorized: false
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "one_eqsrc_family_closure_review_question_selected_no_outreach"
+  new_status: "bounded_external_review_source_spec_created_no_outreach"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v18_p10_t03_external_review_packet_artifact"
+  downstream_still_blocked:
+    - "general EqSrc discharge"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "source-law adoption"
+    - "matter-coupling derivation"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260708-038/artifacts/child_phys_math_external_review_packet_source_spec.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260708-038/artifacts/child_phys_phil_external_review_packet_source_spec.yaml"
+      status: "completed"
+  conflict_review:
+    status: "no_conflict"
+    review_path: "research_control/tasks/RT-20260708-038/artifacts/parent_conflict_review_external_review_packet_source_spec.yaml"
+    blocking_conflicts_present: false
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    path: "research_control/tasks/RT-20260708-038/artifacts/parent_fusion_notes_external_review_packet_source_spec.md"
+    fused_output_path: "markdown/external-review-specs/eqsrc_family_closure_review_packet_spec_v1.md"
+claim_boundary:
+  allowed_claims:
+    - "v18 P10-T02 created a bounded source spec for the selected external-review question"
+    - "source spec contains the required sections and source paths"
+    - "no external outreach was performed"
+    - "no reviewer was named"
+    - "next route is P10-T03"
+  forbidden_claims:
+    - "source spec as external endorsement"
+    - "source spec as proof authority"
+    - "general EqSrc discharge"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "source-law adoption"
+    - "matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
