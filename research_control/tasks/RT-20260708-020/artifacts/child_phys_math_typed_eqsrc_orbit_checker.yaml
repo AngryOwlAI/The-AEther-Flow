@@ -1,0 +1,27 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260708-020"
+status: "completed"
+summary: "The finite typed EqSrc orbit checker should validate explicit source-only typed objects maps inverse maps composition rows and orbit-closure data without asserting a general EqSrc theorem."
+mathematical_obligations:
+  - "Require typed object ids to be finite unique and source-only."
+  - "Require identity maps to be explicit total self maps for every declared type."
+  - "Require declared maps to be total on their finite source type."
+  - "Verify inverse rows by finite composition against declared identities."
+  - "Verify composition table rows by computed finite-arrow composition."
+  - "Require orbits to partition exactly the declared typed objects."
+  - "Reject any map or EqSrc pair that leaves the declared typed orbit."
+support_only_boundary:
+  support_only: true
+  proof_authority: false
+  general_eqsrc_proved: false
+  source_law_adopted: false
+  physics_promotion_authorized: false
+recommended_tests:
+  - "valid finite support-only fixture passes"
+  - "orbit closure failure fails closed"
+  - "type mismatch fails closed"
+  - "target import overread fails closed"
+  - "proof authority overread fails closed"
+  - "missing composition data fails closed"
+contribution: "Supplies the finite algebraic contract for the checker and identifies the failure modes that preserve proof-authority boundaries."

@@ -1,0 +1,273 @@
+completion_id: "AJC-AJ-RT-20260708-020-001"
+job_id: "AJ-RT-20260708-020-001"
+task_id: "RT-20260708-020"
+decision_id: "DDR-20260708-020"
+status: "completed"
+completed_at: "2026-07-08T12:00:17Z"
+completed_by_role: "formalization-engineer@0.1.0--RT-20260708-020"
+plan_task_id: "P7-T02"
+objective_result: "completed"
+summary: "Implemented typed_eqsrc_orbit_checker as a support-only deterministic finite typed EqSrc orbit checker with focused fixtures tests spec and report, preserving proof_authority=false and no Distance-to-GR ledger delta."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  related_plan_task_id: "P7-T02"
+  plan_phase_id: "P7"
+  implemented_task_scope: "Implemented the typed EqSrc orbit checker script, focused tests, finite fixtures, task-local spec, report, and receipts; deferred closure countermodel generation to P7-T03."
+  phase_p7_completed: false
+  all_applicable_plan_tasks_proven: false
+output_paths:
+  - "scripts/research_control/support_formalization/typed_eqsrc_orbit_checker.py"
+  - "tests/test_typed_eqsrc_orbit_checker.py"
+  - "tests/fixtures/research_control/typed_eqsrc_orbit/valid_support_only.yaml"
+  - "tests/fixtures/research_control/typed_eqsrc_orbit/orbit_closure_failure.yaml"
+  - "tests/fixtures/research_control/typed_eqsrc_orbit/type_mismatch.yaml"
+  - "tests/fixtures/research_control/typed_eqsrc_orbit/target_import_overread.yaml"
+  - "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md"
+  - "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_report.json"
+  - "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_receipt.md"
+  - "research_control/tasks/RT-20260708-020/artifacts/child_phys_math_typed_eqsrc_orbit_checker.yaml"
+  - "research_control/tasks/RT-20260708-020/artifacts/child_phys_phil_typed_eqsrc_orbit_checker.yaml"
+  - "research_control/tasks/RT-20260708-020/artifacts/parent_conflict_review_typed_eqsrc_orbit_checker.yaml"
+  - "research_control/tasks/RT-20260708-020/artifacts/parent_fusion_notes_typed_eqsrc_orbit_checker.md"
+  - "research_control/tasks/RT-20260708-020/artifacts/validate_p7_t02_typed_eqsrc_orbit_checker.py"
+  - "research_control/tasks/RT-20260708-020/artifacts/p7_t02_typed_eqsrc_orbit_checker_report.json"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260708-020/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-020/DDR-20260708-020.md"
+  - "research_control/tasks/RT-20260708-020/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-020/jobs/AJ-RT-20260708-020-001.yaml"
+  - "research_control/tasks/RT-20260708-020/jobs/completions/AJC-AJ-RT-20260708-020-001.yaml"
+  - "research_control/tasks/RT-20260708-020/roles/formalization-engineer@0.1.0--RT-20260708-020.yaml"
+  - "research_control/handoffs/handoff-0713.yaml"
+  - "research_control/handoffs/handoff-0713.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  - "research_control/design/v18_recommendation_backlog.yaml"
+  - "research_control/design/source_equivalence_typed_object_schema_v1.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0712.yaml"
+  - "research_control/tasks/RT-20260708-019/artifacts/support_formalization_target_selector_v18_receipt.md"
+  - "scripts/research_control/mechanized_checks/check_finite_local_candidate.py"
+  - "tests/test_finite_local_candidate_checker.py"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=755 relationship_row_count=3805 semantic_row_count=755 vault_row_count=755"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18 --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260708-019-SUPPORT-FORMALIZATION-TARGET-SELECTOR-V18-RECEIPT --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260708-019-SUPPORT-FORMALIZATION-TARGET-SELECTOR-V18-RECEIPT"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1"
+  - ".venv/bin/python -m unittest tests/test_typed_eqsrc_orbit_checker.py | exit_code=0 | tests=9"
+  - ".venv/bin/python scripts/research_control/support_formalization/typed_eqsrc_orbit_checker.py --fixture tests/fixtures/research_control/typed_eqsrc_orbit/valid_support_only.yaml --json-output research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_report.json --json | exit_code=0 | status=pass_support_only support_only=true proof_authority=false"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 755
+    relationship_row_count: 3805
+    semantic_row_count: 755
+    vault_row_count: 755
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/current_frontier.md --json"
+      query_type: "lookup"
+      query_text: "research_control/current_frontier.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260708-019-SUPPORT-FORMALIZATION-TARGET-SELECTOR-V18-RECEIPT --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-019-SUPPORT-FORMALIZATION-TARGET-SELECTOR-V18-RECEIPT"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260708-019-SUPPORT-FORMALIZATION-TARGET-SELECTOR-V18-RECEIPT"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "95e1ba6447b8c4384751670a13a1fbb010d99c27cc8f9a752edc0ab0cb62697a"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260708-019-SUPPORT-FORMALIZATION-TARGET-SELECTOR-V18-RECEIPT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260708-019/artifacts/support_formalization_target_selector_v18_receipt.md"
+      source_hash: "9bb8ff85d4b9f051d3d816f8512c6d72d7cfed4a60d62fa85d39ef25250eea2e"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-SOURCE-EQUIVALENCE-TYPED-OBJECT-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/source_equivalence_typed_object_schema_v1.md"
+      source_hash: "27911188ee2a9673d034bb12d8f8d9b192960abc30aa26c38377ae84f367978a"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS before writes"
+      - "exact memory lookups returned current frontier plan P7-T01 receipt and typed object schema objects"
+      - "canonical source files and registry rows inspected"
+      - "continue_research.py resolved handoff-0712 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "checker report status pass_support_only"
+      - "support_only true proof_authority false physics_promotion_authorized false"
+      - "focused typed EqSrc orbit unittest suite passed"
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "post-write validators run after this completion receipt is created"
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "renderers run after this completion receipt is created"
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "bootstrap_memory_system.py runs after this completion receipt is created"
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "validate_claim_language.py --changed --json runs after this completion receipt is created"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "none"
+  user_goal_human_gate_authorization_present: true
+  p7_t02_consumes_gate_authority: false
+  selected_next_packet_requires_human_gate: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+tests_added_or_updated:
+  - "tests/test_typed_eqsrc_orbit_checker.py"
+new_mathematical_payload:
+  - payload_id: "P7T02-PAYLOAD-001"
+    payload_type: "support_only_finite_checker"
+    object_name: "typed_eqsrc_orbit_checker"
+    summary: "Deterministic checker validates finite typed source objects maps inverse rows composition rows orbit partition and orbit closure."
+  - payload_id: "P7T02-PAYLOAD-002"
+    payload_type: "negative_branch_suite"
+    object_name: "typed_eqsrc_orbit_checker_negative_fixtures"
+    summary: "Orbit closure type mismatch target import proof-authority and missing composition branches fail closed."
+  - payload_id: "P7T02-PAYLOAD-003"
+    payload_type: "specification"
+    object_name: "typed_eqsrc_orbit_checker_spec_v1"
+    summary: "Task-local spec defines finite-record contract and authority boundary."
+distance_to_gr:
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  status: "accepted_as_support_only_formalization_artifact"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "P7-T02 mechanizes finite typed EqSrc orbit closure records as support-only tooling and does not adopt source equivalence EqSrc theorem authority."
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "support-only typed EqSrc orbit checker target selected"
+  new_status: "support-only finite typed EqSrc orbit checker implemented"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_v18_p7_t03_closure_countermodel_generator_support_only"
+  downstream_still_blocked:
+    - "source-law adoption"
+    - "unrestricted EqSrc theorem authority"
+    - "target metric import"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "matter-coupling derivation or adoption"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+claim_boundary:
+  support_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  source_law_adopted: false
+  eqsrc_theorem_adopted: false
+  target_metric_imported: false
+  physical_metric_constructed: false
+  metricdata_e_adopted: false
+  g_eff_adopted: false
+  g_eff_scope_expanded: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260708-020/artifacts/child_phys_math_typed_eqsrc_orbit_checker.yaml"
+      status: "completed"
+      contribution: "Finite checker algebraic contract and closure predicates."
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260708-020/artifacts/child_phys_phil_typed_eqsrc_orbit_checker.yaml"
+      status: "completed"
+      contribution: "Authority boundary and overread controls."
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260708-020/artifacts/parent_conflict_review_typed_eqsrc_orbit_checker.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    authority_expansion_detected: false
+  fusion:
+    fusion_notes_path: "research_control/tasks/RT-20260708-020/artifacts/parent_fusion_notes_typed_eqsrc_orbit_checker.md"
+    fused_output_path: "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_receipt.md"
+    result: "support-only checker implementation accepted with no proof authority"
+selected_next_route:
+  route_id: "closure_countermodel_generator_support_only"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P7"
+  plan_task_id: "P7-T03"
+  task_name: "Closure countermodel generator"
+  role_family: "formalization-engineer@0.1.0"
+  task_type: "closure_countermodel_generator_support_only"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Implement a support-only generator for minimal missing-closure countermodels."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"

@@ -1,0 +1,68 @@
+task_id: "RT-20260708-020"
+task_type: "typed_eqsrc_orbit_checker_support_only"
+status: "completed"
+created_at: "2026-07-08T12:00:17Z"
+updated_at: "2026-07-08T12:00:17Z"
+closed_at: "2026-07-08T12:00:17Z"
+parent_task_id: "RT-20260708-019"
+parent_handoff_id: "handoff-0712"
+decision_id: "DDR-20260708-020"
+job_id: "AJ-RT-20260708-020-001"
+role_id: "formalization-engineer"
+role_version: "0.1.0"
+execution_role_ref: "formalization-engineer@0.1.0--RT-20260708-020"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. P7-T02 requires no human gate because it implements support-only finite checker tooling and does not promote physics claims."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T02"
+  plan_task_name: "Typed EqSrc orbit checker"
+objective: "Implement a support-only checker for finite typed EqSrc orbit closure records with focused tests and a task-local spec."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Implement a support-only checker for finite typed EqSrc orbit closure records."
+closure_status: "v18_p7_t02_typed_eqsrc_orbit_checker_implemented_no_proof_authority"
+selected_formalization_target: "typed_EqSrc_orbit_checker"
+formalization_id: "typed_eqsrc_orbit_checker_v1"
+checker_id: "typed_eqsrc_orbit_checker"
+checker_version: "0.1.0"
+claim_boundary:
+  allowed_scope: "P7-T02 support-only finite typed EqSrc orbit checker, focused tests, task-local spec, control receipts, and P7-T03 routing only."
+  support_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  eqsrc_theorem_adopted: false
+  target_metric_imported: false
+  physical_metric_constructed: false
+  metricdata_e_adopted: false
+  g_eff_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+output_artifacts:
+  - "scripts/research_control/support_formalization/typed_eqsrc_orbit_checker.py"
+  - "tests/test_typed_eqsrc_orbit_checker.py"
+  - "tests/fixtures/research_control/typed_eqsrc_orbit/valid_support_only.yaml"
+  - "tests/fixtures/research_control/typed_eqsrc_orbit/orbit_closure_failure.yaml"
+  - "tests/fixtures/research_control/typed_eqsrc_orbit/type_mismatch.yaml"
+  - "tests/fixtures/research_control/typed_eqsrc_orbit/target_import_overread.yaml"
+  - "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md"
+  - "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_report.json"
+  - "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_receipt.md"
+  - "research_control/tasks/RT-20260708-020/artifacts/child_phys_math_typed_eqsrc_orbit_checker.yaml"
+  - "research_control/tasks/RT-20260708-020/artifacts/child_phys_phil_typed_eqsrc_orbit_checker.yaml"
+  - "research_control/tasks/RT-20260708-020/artifacts/parent_conflict_review_typed_eqsrc_orbit_checker.yaml"
+  - "research_control/tasks/RT-20260708-020/artifacts/parent_fusion_notes_typed_eqsrc_orbit_checker.md"
+  - "research_control/tasks/RT-20260708-020/artifacts/validate_p7_t02_typed_eqsrc_orbit_checker.py"
+  - "research_control/tasks/RT-20260708-020/artifacts/p7_t02_typed_eqsrc_orbit_checker_report.json"
+next_recommended_action: "Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet."
+notes: "RT-20260708-020 completes v18 P7-T02 by implementing typed_eqsrc_orbit_checker as support-only finite-record tooling. It does not prove general EqSrc, adopt a source law, update the Distance-to-GR ledger, or promote physics claims."
+documentation_impact_id: "DI-RT-20260708-020-001"

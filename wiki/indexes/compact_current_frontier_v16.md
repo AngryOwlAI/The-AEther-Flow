@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-019`
-- Latest handoff: `handoff-0712`
-- Current status: `v18_p7_t01_support_formalization_target_selected_no_proof_authority`
+- Active task: `RT-20260708-020`
+- Latest handoff: `handoff-0713`
+- Current status: `v18_p7_t02_typed_eqsrc_orbit_checker_implemented_no_proof_authority`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-019`
-- Latest research handoff: `handoff-0712`
-- Latest research next action: Run one bounded v18 P7-T02 typed EqSrc orbit checker support-only implementation packet.
+- Latest research task: `RT-20260708-020`
+- Latest research handoff: `handoff-0713`
+- Latest research next action: Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `typed_eqsrc_orbit_checker_support_only`
+- Route ID: `closure_countermodel_generator_support_only`
 - Role family: `formalization-engineer@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Implement a support-only checker for finite typed EqSrc orbit closure records.
+- Milestone burden: Implement a support-only generator for minimal missing-closure countermodels.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `5fa58d6c96858d090c98b65469ee90a6d9bae9b101a90806ed204c54edbc1ff3`
-- JSON SHA-256: `cebd36b529152ab826c6432e706f7deac4990d921ea41661cc2941bcd13ab252`
+- YAML SHA-256: `1a959d4b27e81eadb7956883891250909a9a3631ea76d0f5605b1cdf7389cfcc`
+- JSON SHA-256: `6ba2b2d089e1a549b34fe42eb0992330a63a01121046e816bdbe4b4770a3074c`
 
 ## Authority Warning
 

@@ -1,0 +1,92 @@
+{
+  "boundary_statement": "This typed EqSrc orbit checker is support-only finite-record tooling. It has proof_authority=false and does not prove general EqSrc, adopt a source law, import a target metric, adopt MetricData(E), adopt or expand g_eff, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or complete the derivation.",
+  "checked_counts": {
+    "composition_rows": 5,
+    "eqsrc_pairs": 2,
+    "identity_maps": 2,
+    "inverse_rows": 3,
+    "maps": 1,
+    "orbits": 2,
+    "typed_objects": 3
+  },
+  "checker_id": "typed_eqsrc_orbit_checker",
+  "checker_version": "0.1.0",
+  "fixture_hash": "703c503d8cffabce65ffb9bb3146fa73267660eb359f03982897682490858da7",
+  "fixture_id": "valid_typed_eqsrc_orbit_v1",
+  "forbidden_overread_flags": [],
+  "physics_promotion_authorized": false,
+  "predicate_results": [
+    {
+      "message": "all required finite-record sections are present",
+      "predicate": "required_sections_present",
+      "status": "pass"
+    },
+    {
+      "message": "support-only authority flags are exact",
+      "predicate": "support_only_authority_flags",
+      "status": "pass"
+    },
+    {
+      "message": "forbidden authority flags are explicitly false",
+      "predicate": "no_forbidden_authority",
+      "status": "pass"
+    },
+    {
+      "message": "typed source-only objects are finite and unique",
+      "predicate": "typed_objects_well_formed",
+      "status": "pass"
+    },
+    {
+      "message": "identity maps are explicit and total",
+      "predicate": "identity_maps_explicit_and_total",
+      "status": "pass"
+    },
+    {
+      "message": "declared maps are total on their finite source types",
+      "predicate": "maps_are_total_and_typed",
+      "status": "pass"
+    },
+    {
+      "message": "inverse maps compose to declared identities",
+      "predicate": "inverse_maps_declared_and_verified",
+      "status": "pass"
+    },
+    {
+      "message": "explicit composition rows match finite arrows",
+      "predicate": "composition_table_explicit_and_correct",
+      "status": "pass"
+    },
+    {
+      "message": "orbits partition declared typed objects",
+      "predicate": "orbits_partition_typed_objects",
+      "status": "pass"
+    },
+    {
+      "message": "all explicit maps preserve declared orbit closure",
+      "predicate": "maps_preserve_orbit_closure",
+      "status": "pass"
+    },
+    {
+      "message": "EqSrc pairs are type-local and orbit-local",
+      "predicate": "eqsrc_pairs_are_orbit_local",
+      "status": "pass"
+    },
+    {
+      "message": "source-only invariant flags are preserved",
+      "predicate": "source_only_invariant_flags_preserved",
+      "status": "pass"
+    },
+    {
+      "message": "missing-data controls are explicit and fail closed",
+      "predicate": "fail_closed_missing_data_controls_present",
+      "status": "pass"
+    }
+  ],
+  "proof_authority": false,
+  "source_artifact_refs": [
+    "research_control/design/source_equivalence_typed_object_schema_v1.md"
+  ],
+  "status": "pass_support_only",
+  "support_only": true,
+  "tooling_error": false
+}

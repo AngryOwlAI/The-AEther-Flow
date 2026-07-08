@@ -1,0 +1,98 @@
+metadata:
+  fixture_id: "orbit_closure_failure_v1"
+  support_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+  eqsrc_theorem_authority: false
+  boundary_statement: "This typed EqSrc orbit checker is support-only finite-record tooling. It has proof_authority=false and does not prove general EqSrc, adopt a source law, import a target metric, adopt MetricData(E), adopt or expand g_eff, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or complete the derivation."
+  source_artifact_paths:
+    - "research_control/design/source_equivalence_typed_object_schema_v1.md"
+typed_objects:
+  - id: "a0"
+    type: "fiber_A"
+    source_only: true
+  - id: "a1"
+    type: "fiber_A"
+    source_only: true
+identity_maps:
+  - id: "id_A"
+    type: "fiber_A"
+    arrows:
+      - from: "a0"
+        to: "a0"
+      - from: "a1"
+        to: "a1"
+maps:
+  - id: "flip_A"
+    source_type: "fiber_A"
+    target_type: "fiber_A"
+    arrows:
+      - from: "a0"
+        to: "a1"
+      - from: "a1"
+        to: "a0"
+inverse_maps:
+  - map: "id_A"
+    inverse: "id_A"
+  - map: "flip_A"
+    inverse: "flip_A"
+composition_table:
+  - left: "id_A"
+    right: "id_A"
+    result: "id_A"
+  - left: "id_A"
+    right: "flip_A"
+    result: "flip_A"
+  - left: "flip_A"
+    right: "id_A"
+    result: "flip_A"
+  - left: "flip_A"
+    right: "flip_A"
+    result: "id_A"
+orbits:
+  - id: "orbit_A0"
+    type: "fiber_A"
+    members:
+      - "a0"
+    invariant_flags:
+      source_only_invariants_preserved: true
+      target_import_used: false
+      proof_authority: false
+  - id: "orbit_A1"
+    type: "fiber_A"
+    members:
+      - "a1"
+    invariant_flags:
+      source_only_invariants_preserved: true
+      target_import_used: false
+      proof_authority: false
+eqsrc_pairs:
+  - left: "a0"
+    right: "a0"
+    orbit: "orbit_A0"
+invariant_flags:
+  source_only_invariants_preserved: true
+  target_import_used: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  fail_closed_for_missing_data: true
+forbidden_authority:
+  proof_authority: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  eqsrc_theorem_adopted: false
+  target_metric_imported: false
+  target_atlas_imported: false
+  physical_metric_constructed: false
+  metricdata_e_adopted: false
+  g_eff_adopted: false
+  g_eff_scope_expanded: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false

@@ -471,6 +471,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-018-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260708-018-parent-fusion-notes-finite-toy-response-v2-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-019-PARENT-FUSION-NOTES-SUPPORT-FORMALIZATION-TARGET-SELECTOR-V18` `wiki/markdown/md-research-control-tasks-rt-20260708-019-parent-fusion-notes-support-formalization-target-selector-v18.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-019-SUPPORT-FORMALIZATION-TARGET-SELECTOR-V18-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-019-support-formalization-target-selector-v18-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-PARENT-FUSION-NOTES-TYPED-EQSRC-ORBIT-CHECKER` `wiki/markdown/md-research-control-tasks-rt-20260708-020-parent-fusion-notes-typed-eqsrc-orbit-checker.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-TYPED-EQSRC-ORBIT-CHECKER-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-020-typed-eqsrc-orbit-checker-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-TYPED-EQSRC-ORBIT-CHECKER-SPEC-V1` `wiki/markdown/md-research-control-tasks-rt-20260708-020-typed-eqsrc-orbit-checker-spec-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1135,6 +1138,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-018-PARENT-FUSION-NOTES-FINITE-TOY-RESPONSE-V2-SELECTOR` `research_control/tasks/RT-20260708-018/artifacts/parent_fusion_notes_finite_toy_response_v2_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-019-PARENT-FUSION-NOTES-SUPPORT-FORMALIZATION-TARGET-SELECTOR-V18` `research_control/tasks/RT-20260708-019/artifacts/parent_fusion_notes_support_formalization_target_selector_v18.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-019-SUPPORT-FORMALIZATION-TARGET-SELECTOR-V18-RECEIPT` `research_control/tasks/RT-20260708-019/artifacts/support_formalization_target_selector_v18_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-PARENT-FUSION-NOTES-TYPED-EQSRC-ORBIT-CHECKER` `research_control/tasks/RT-20260708-020/artifacts/parent_fusion_notes_typed_eqsrc_orbit_checker.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-TYPED-EQSRC-ORBIT-CHECKER-RECEIPT` `research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260708-020-TYPED-EQSRC-ORBIT-CHECKER-SPEC-V1` `research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

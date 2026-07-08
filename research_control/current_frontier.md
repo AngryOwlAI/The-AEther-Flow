@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-019` and `handoff-0712`.
+`RT-20260708-020` and `handoff-0713`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-019` |
-| Latest handoff ID | `handoff-0712` |
-| Current status | `v18_p7_t01_support_formalization_target_selected_no_proof_authority` |
+| Active task ID | `RT-20260708-020` |
+| Latest handoff ID | `handoff-0713` |
+| Current status | `v18_p7_t02_typed_eqsrc_orbit_checker_implemented_no_proof_authority` |
 | V16 completed | false |
-| Current route family | support_formalization_target_selector_v18 |
+| Current route family | typed_eqsrc_orbit_checker_support_only |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P7-T02 typed EqSrc orbit checker support-only implementation packet. |
-| Required next authority | Run one bounded v18 P7-T02 typed EqSrc orbit checker support-only implementation packet. |
-| Next recommended action | Run one bounded v18 P7-T02 typed EqSrc orbit checker support-only implementation packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet. |
+| Required next authority | Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet. |
+| Next recommended action | Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-019` |
-| Latest research handoff ID | `handoff-0712` |
-| Latest research next action | Run one bounded v18 P7-T02 typed EqSrc orbit checker support-only implementation packet. |
+| Latest research task ID | `RT-20260708-020` |
+| Latest research handoff ID | `handoff-0713` |
+| Latest research next action | Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-019/00_TASK.yaml`.
-- Active task objective: Select exactly one support-only formalization target from the v18 recommendation set and route the next packet to P7-T02 without proof authority.
-- Latest handoff path: `research_control/handoffs/handoff-0712.yaml`.
-- Latest handoff summary: Completed v18 P7-T01 support formalization target selector. The selected target is typed_EqSrc_orbit_checker with next plan task P7-T02. Remaining P7 support formalization targets are sequenced for P7-T03 through P7-T06. No checker implementation proof authority source-law adoption EqSrc theorem adoption metric construction matter-coupling derivation ledger delta benchmark promotion Gate Chair verdict or completed derivation occurred.
-- Current route family: support_formalization_target_selector_v18.
-- Next recommended action: Run one bounded v18 P7-T02 typed EqSrc orbit checker support-only implementation packet.
+- Active task path: `research_control/tasks/RT-20260708-020/00_TASK.yaml`.
+- Active task objective: Implement a support-only checker for finite typed EqSrc orbit closure records with focused tests and a task-local spec.
+- Latest handoff path: `research_control/handoffs/handoff-0713.yaml`.
+- Latest handoff summary: Completed v18 P7-T02 typed EqSrc orbit checker support-only implementation. The checker validates finite typed orbit closure records with explicit objects identity maps inverse maps composition rows source-only invariant flags and fail-closed authority guards. No general EqSrc proof authority source-law adoption target metric import MetricData(E) adoption g_eff adoption matter-coupling derivation ledger delta benchmark promotion Gate Chair verdict or completed derivation occurred.
+- Current route family: typed_eqsrc_orbit_checker_support_only.
+- Next recommended action: Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P7-T02 typed EqSrc orbit checker support-only implementation packet.
+Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,9 +320,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-019`;
-- latest handoff: `handoff-0712`;
-- current status: `v18_p7_t01_support_formalization_target_selected_no_proof_authority`;
+- active task: `RT-20260708-020`;
+- latest handoff: `handoff-0713`;
+- current status: `v18_p7_t02_typed_eqsrc_orbit_checker_implemented_no_proof_authority`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -331,7 +331,7 @@ Legacy compatibility records:
 - latest handoff validation `documentation_impact`: PENDING;
 - latest handoff validation `research_control_diff_validation`: PENDING;
 - latest handoff validation `research_control_validation`: PENDING;
-- latest handoff validation `task_local_validator`: PASS;
+- latest handoff validation `task_local_validator`: PENDING;
 - latest handoff validation `wrapper_validation`: PENDING;
 
 ## Retrieval Warning Status
@@ -339,8 +339,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0712.yaml`
-- `research_control/tasks/RT-20260708-019/00_TASK.yaml`
+- `research_control/handoffs/handoff-0713.yaml`
+- `research_control/tasks/RT-20260708-020/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -356,7 +356,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0712*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0713*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

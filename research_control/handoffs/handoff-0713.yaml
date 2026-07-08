@@ -1,0 +1,104 @@
+handoff_id: "handoff-0713"
+created_at: "2026-07-08T12:00:17Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-020"
+decision_id: "DDR-20260708-020"
+job_id: "AJ-RT-20260708-020-001"
+agent_job_id: "AJ-RT-20260708-020-001"
+completion_path: "research_control/tasks/RT-20260708-020/jobs/completions/AJC-AJ-RT-20260708-020-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-020-001"
+status: "ready_for_next_bounded_packet"
+previous_handoff_id: "handoff-0712"
+summary: "Completed v18 P7-T02 typed EqSrc orbit checker support-only implementation. The checker validates finite typed orbit closure records with explicit objects identity maps inverse maps composition rows source-only invariant flags and fail-closed authority guards. No general EqSrc proof authority source-law adoption target metric import MetricData(E) adoption g_eff adoption matter-coupling derivation ledger delta benchmark promotion Gate Chair verdict or completed derivation occurred."
+completed_packet:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P7"
+  plan_task_id: "P7-T02"
+  task_name: "Typed EqSrc orbit checker"
+  role_family: "formalization-engineer@0.1.0 one-job provisional role"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Implement a support-only checker for finite typed EqSrc orbit closure records."
+  result_type: "support_only_checker_implemented"
+  selected_formalization_target: "typed_EqSrc_orbit_checker"
+  checker_id: "typed_eqsrc_orbit_checker"
+  checker_version: "0.1.0"
+  selected_next_plan_task_id: "P7-T03"
+  selected_next_plan_route_type: "closure_countermodel_generator_support_only"
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  selected_next_role_family: "formalization-engineer@0.1.0 one-job provisional role if not registered"
+  support_only: true
+  proof_authority: false
+  phase_p7_completed: false
+claim_boundary:
+  allowed_claims:
+    - "P7-T02 typed EqSrc orbit checker implemented"
+    - "finite typed orbit closure records can be checked by support-only tooling"
+    - "focused tests and fixtures pass"
+    - "P7-T03 selected as next plan task"
+  forbidden_claims:
+    - "general EqSrc proof"
+    - "proof authority"
+    - "source-law adoption"
+    - "unrestricted EqSrc theorem authority"
+    - "target metric import"
+    - "physical metric construction"
+    - "MetricData(E) adoption"
+    - "g_eff adoption or scope expansion"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "stress-energy tensor"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+  support_only: true
+  proof_authority: false
+  no_adoption: true
+  no_ledger_delta: true
+  no_dag_update: true
+  no_physics_promotion: true
+distance_to_gr_status:
+  changed: false
+  ledger_row_updated: false
+  burden_id: "source_equivalence_eqsrc"
+  status: "support-only finite typed EqSrc orbit checker implemented; no EqSrc theorem adoption"
+  freeze_decision: "not_applicable"
+new_mathematical_payload:
+  - "Finite checker: typed_eqsrc_orbit_checker validates explicit typed objects maps inverse rows composition rows and orbit closure."
+  - "Negative branch suite: target import type mismatch orbit closure authority overread and missing-data branches fail closed."
+  - "Spec: typed_eqsrc_orbit_checker_spec_v1 defines the support-only finite-record contract."
+selected_next_route:
+  route_id: "closure_countermodel_generator_support_only"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P7"
+  plan_task_id: "P7-T03"
+  task_name: "Closure countermodel generator"
+  role_family: "formalization-engineer@0.1.0"
+  task_type: "closure_countermodel_generator_support_only"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Implement a support-only generator for minimal missing-closure countermodels."
+  expected_agent_job_scope: "One bounded P7-T03 implementation packet creating a support-only closure countermodel generator, tests, and spec without proof authority."
+  requires_human_gate: false
+next_action: "Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet."
+next_recommended_action: "Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet."
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260708-020"
+  latest_research_handoff_id: "handoff-0713"
+  latest_research_next_action: "Run one bounded v18 P7-T03 closure countermodel generator support-only implementation packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+project_improvement_signals: []
+validation:
+  task_local_validator: "PENDING"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  documentation_impact: "PENDING"
+  research_control_validation: "PENDING"
+  research_control_diff_validation: "PENDING"
+  wrapper_validation: "PENDING"
+notes: "This handoff is the research-continuation authority for the next invocation. Generated derivatives and .local caches remain retrieval layers only."
