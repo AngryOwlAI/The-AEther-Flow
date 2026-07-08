@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-08T12:26:02Z`
-- Source fingerprint: `6e2bcb726860b7c526fb7c64a3ba38014cca22177c675eb78ccc7c104464525a`
-- Nodes: `16822`
-- Edges: `60616`
+- Generated from tracked state as of: `2026-07-08T12:56:41Z`
+- Source fingerprint: `3d620d5726187d0171465f234f9da291cd347b25782bcd68570431481ce37678`
+- Nodes: `16844`
+- Edges: `60664`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 851 |
+| `completion_yaml` | 852 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 714 |
+| `handoff_yaml` | 715 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 851 |
+| `agent_job` | `support_only` | 852 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 8936 |
-| `blocked_burden` | `blocked` | 3027 |
-| `claim_boundary` | `support_only` | 808 |
+| `artifact` | `support_only` | 8950 |
+| `blocked_burden` | `blocked` | 3031 |
+| `claim_boundary` | `support_only` | 809 |
 | `draft_control_candidate` | `draft_control` | 529 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 60 |
 | `frozen_negative` | `frozen_negative` | 108 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 714 |
+| `handoff` | `support_only` | 715 |
 | `human_gated_object` | `human_gated` | 282 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 291 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 30 |
-| `task` | `support_only` | 792 |
+| `task` | `support_only` | 793 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260708-021`
-- Latest handoff: `handoff-0714`
-- Handoff path: `research_control/handoffs/handoff-0714.yaml`
-- Next action: Run one bounded v18 P7-T04 no-target import mutation tester support-only implementation packet.
+- Active task: `RT-20260708-022`
+- Latest handoff: `handoff-0715`
+- Handoff path: `research_control/handoffs/handoff-0715.yaml`
+- Next action: Run one bounded v18 P7-T05 metric-use ledger TeX validator support-only implementation packet.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

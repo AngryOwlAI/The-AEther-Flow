@@ -1,0 +1,66 @@
+task_id: "RT-20260708-022"
+task_type: "no_target_import_mutation_tester_support_only"
+status: "completed"
+created_at: "2026-07-08T12:56:41Z"
+updated_at: "2026-07-08T12:56:41Z"
+closed_at: "2026-07-08T12:56:41Z"
+parent_task_id: "RT-20260708-021"
+parent_handoff_id: "handoff-0714"
+decision_id: "DDR-20260708-022"
+job_id: "AJ-RT-20260708-022-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260708-022"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. P7-T04 requires no human gate because it implements support-only validator tooling and does not promote physics claims."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T04"
+  plan_task_name: "No-target import mutation tester"
+objective: "Implement a support-only mutation tester for no-target import guards with focused tests and a task-local spec."
+target_derivation_milestone: "none"
+milestone_burden: "Implement a support-only mutation tester for no-target import guards."
+closure_status: "v18_p7_t04_no_target_import_mutation_tester_implemented_no_proof_authority"
+tester_id: "no_target_import_mutation_tester"
+tester_version: "0.1.0"
+mutations:
+  - "insert_target_metric_premise"
+  - "insert_proper_time_normalization"
+  - "insert_empirical_detector_protocol"
+  - "insert_stress_energy_semantics"
+  - "insert_matter_action_premise"
+  - "insert_benchmark_behavior_premise"
+  - "insert_validator_as_proof_premise"
+claim_boundary:
+  allowed_scope: "P7-T04 support-only no-target import mutation tester, focused tests, task-local spec, control receipts, and P7-T05 routing only."
+  support_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+  source_law_adopted: false
+  target_metric_imported: false
+  physical_metric_constructed: false
+  metricdata_e_adopted: false
+  g_eff_adopted: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  stress_energy_tensor_constructed: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  validator_behavior_changed: false
+output_artifacts:
+  - "scripts/research_control/support_formalization/no_target_import_mutation_tester.py"
+  - "tests/test_no_target_import_mutation_tester.py"
+  - "research_control/tasks/RT-20260708-022/artifacts/no_target_import_mutation_tester_spec_v1.md"
+  - "research_control/tasks/RT-20260708-022/artifacts/no_target_import_mutation_tester_report.json"
+  - "research_control/tasks/RT-20260708-022/artifacts/no_target_import_mutation_tester_receipt.md"
+  - "research_control/tasks/RT-20260708-022/artifacts/validate_p7_t04_no_target_import_mutation_tester.py"
+  - "research_control/tasks/RT-20260708-022/artifacts/p7_t04_no_target_import_mutation_tester_report.json"
+next_recommended_action: "Run one bounded v18 P7-T05 metric-use ledger TeX validator support-only implementation packet."
+notes: "RT-20260708-022 completes v18 P7-T04 by implementing no_target_import_mutation_tester as support-only validator tooling. It does not change validator policy, prove a source law, update the Distance-to-GR ledger, or promote physics claims."
+documentation_impact_id: "DI-RT-20260708-022-001"

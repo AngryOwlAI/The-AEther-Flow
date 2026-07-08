@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-021`
-- Latest handoff: `handoff-0714`
-- Current status: `v18_p7_t03_closure_countermodel_generator_implemented_no_proof_authority`
+- Active task: `RT-20260708-022`
+- Latest handoff: `handoff-0715`
+- Current status: `v18_p7_t04_no_target_import_mutation_tester_implemented_no_proof_authority`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-021`
-- Latest research handoff: `handoff-0714`
-- Latest research next action: Run one bounded v18 P7-T04 no-target import mutation tester support-only implementation packet.
+- Latest research task: `RT-20260708-022`
+- Latest research handoff: `handoff-0715`
+- Latest research next action: Run one bounded v18 P7-T05 metric-use ledger TeX validator support-only implementation packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `no_target_import_mutation_tester_support_only`
+- Route ID: `metric_use_ledger_tex_validator_support_only`
 - Role family: `validator-engineer@0.2.0`
-- Target milestone: `none`
-- Milestone burden: Implement a support-only mutation tester for no-target import guards.
+- Target milestone: `matter_coupling`
+- Milestone burden: Implement support-only validation that high-risk metric references in TeX have ledger rows or no-use justification.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `56b3c688583f5c93c2d77959ef138eca178aec37aacfc594e966a39313c6bdf5`
-- JSON SHA-256: `9e6619f5811db3684cc63f038d6953eacb6beaa75e521bdc7bf9d70d41c7cfc7`
+- YAML SHA-256: `482e027480b9a1d3feff73aa76b6eeb30d0c40c018413ec9a4acb4fec3f98144`
+- JSON SHA-256: `633ca27ebd001937a0732d8889fe99050d424df159b3f89c2e98a65819349899`
 
 ## Authority Warning
 
