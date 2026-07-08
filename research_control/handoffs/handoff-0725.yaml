@@ -1,0 +1,96 @@
+handoff_id: "handoff-0725"
+handoff_type: "research_completion"
+created_at: "2026-07-08T18:20:24Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-032"
+decision_id: "DDR-20260708-032"
+job_id: "AJ-RT-20260708-032-001"
+agent_job_id: "AJ-RT-20260708-032-001"
+completion_path: "research_control/tasks/RT-20260708-032/jobs/completions/AJC-AJ-RT-20260708-032-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-032-001"
+created_by_task_id: "RT-20260708-032"
+created_by_job_id: "AJ-RT-20260708-032-001"
+previous_handoff_id: "handoff-0724"
+supersedes_handoff_id: "handoff-0724"
+status: "ready_for_next_bounded_packet"
+authority: "control"
+summary: "RT-20260708-032 completed v18 P9-T01 by creating status-card v2 schema calibration and alias metadata with required next_burden public_summary and full_control_non_conclusions fields for high-risk rows no physics promotion."
+completion:
+  task_id: "RT-20260708-032"
+  job_id: "AJ-RT-20260708-032-001"
+  completion_id: "AJC-AJ-RT-20260708-032-001"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T01"
+  task_type: "status_card_v2_schema_next_burden"
+  closure_status: "v18_p9_t01_status_card_v2_schema_defined_no_physics_delta"
+  validation_status: "PASS"
+  completed_v18_tasks_this_packet:
+    - "P9-T01"
+  output_paths:
+    - "research_control/design/status_card_v2_schema.md"
+    - "research_control/design/accepted_status_calibration_v2.yaml"
+    - "research_control/design/distance_to_gr_status_aliases.yaml"
+    - "research_control/tasks/RT-20260708-032/artifacts/p9_t01_status_card_v2_schema_report.json"
+    - "research_control/tasks/RT-20260708-032/artifacts/status_card_v2_schema_receipt.md"
+schema_result:
+  schema_path: "research_control/design/status_card_v2_schema.md"
+  schema_source_hash: "7485249b4b824290b7160e243349a1486f29d437a0d7bd99301fa3f26f791cda"
+  calibration_path: "research_control/design/accepted_status_calibration_v2.yaml"
+  calibration_hash: "f4ccc61868dd4160e60b09a43b9cfc7e49f7f33e84e6b32fa3d1da7cec5cd470"
+  alias_path: "research_control/design/distance_to_gr_status_aliases.yaml"
+  alias_hash: "a83befbf4dd145ebcb636f77103374c6d6712906533824a383fef36a73789e4a"
+  required_status_card_v2_fields:
+    - "object_id"
+    - "positive_status"
+    - "exact_scope"
+    - "allowed_use"
+    - "blocked_overread"
+    - "next_burden"
+    - "next_lawful_route"
+    - "public_summary"
+    - "full_control_non_conclusions"
+  high_risk_object_ids:
+    - "m_src"
+    - "g_eff"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  ledger_row_updated: false
+physics_progress_status: "schema_update_no_physics_delta"
+new_mathematical_payload: []
+mathematical_payload_manifest: []
+claim_boundary_summary: "Status-card v2 schema and calibration metadata do not create proof authority routing authority ledger override physics truth ranking source-law adoption detector-semantics adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation future source-extension impossibility or program-wide no-go conclusion."
+project_improvement_signals: []
+selected_next_route:
+  route_id: "status_card_v2_frontier_renderer"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P9"
+  plan_task_id: "P9-T02"
+  task_name: "Current-frontier and compact-frontier status-card v2 renderer"
+  role_family: "renderer-maintainer@0.1.0"
+  task_type: "status_card_v2_frontier_renderer"
+  target_derivation_milestone: "none"
+  milestone_burden: "Render status-card v2 in current frontier and compact frontier."
+  requires_human_gate: false
+  expected_agent_job_scope: "One bounded P9-T02 packet integrating status-card v2 into current-frontier and compact-frontier renderers."
+next_action: "Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet."
+next_recommended_action: "Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet."
+active_state_bifurcation:
+  latest_research_completion: "RT-20260708-032"
+  latest_research_task_id: "RT-20260708-032"
+  latest_research_handoff_id: "handoff-0725"
+  latest_research_next_action: "Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+operator_notes:
+  continue_research_boundary: "director_decision_required"
+  one_bounded_agentjob_limit: true

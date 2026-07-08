@@ -195,6 +195,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1` `research_control/design/source_model_zoo_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V18-EXTENSION` `research_control/design/source_model_zoo_schema_v18_extension.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1` `research_control/design/source_model_zoo_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA` `research_control/design/status_card_v2_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `research_control/design/support_only_formalization_lane_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16` `research_control/design/target_import_attack_fixture_catalog_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16` `research_control/design/target_import_attack_taxonomy_v16.md`
@@ -981,6 +982,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V1` `wiki/markdown/md-research-control-design-source-model-zoo-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-SCHEMA-V18-EXTENSION` `wiki/markdown/md-research-control-design-source-model-zoo-schema-v18-extension.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1` `wiki/markdown/md-research-control-design-source-model-zoo-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA` `wiki/markdown/md-research-control-design-status-card-v2-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `wiki/markdown/md-research-control-design-support-only-formalization-lane-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16` `wiki/markdown/md-research-control-design-target-import-attack-fixture-catalog-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16` `wiki/markdown/md-research-control-design-target-import-attack-taxonomy-v16.md`

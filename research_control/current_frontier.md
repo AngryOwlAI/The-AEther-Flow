@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-031` and `handoff-0724`.
+`RT-20260708-032` and `handoff-0725`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-031` |
-| Latest handoff ID | `handoff-0724` |
-| Current status | `v18_p8_t05_payload_ratio_red_team_pass_no_physics_delta` |
+| Active task ID | `RT-20260708-032` |
+| Latest handoff ID | `handoff-0725` |
+| Current status | `v18_p9_t01_status_card_v2_schema_defined_no_physics_delta` |
 | V16 completed | false |
-| Current route family | physics_payload_ratio_red_team_review |
+| Current route family | status_card_v2_schema_next_burden |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet. |
-| Required next authority | Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet. |
-| Next recommended action | Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet. |
+| Required next authority | Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet. |
+| Next recommended action | Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-031` |
-| Latest research handoff ID | `handoff-0724` |
-| Latest research next action | Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet. |
+| Latest research task ID | `RT-20260708-032` |
+| Latest research handoff ID | `handoff-0725` |
+| Latest research next action | Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-031/00_TASK.yaml`.
-- Active task objective: Stress the physics-payload ratio policy for false pressure, process overcorrection, and research distortion.
-- Latest handoff path: `research_control/handoffs/handoff-0724.yaml`.
-- Latest handoff summary: Completed v18 P8-T05 payload-ratio red-team review. The review passed with advisory carry-forward: the policy encourages theorem countermodel witness obstruction source-primitive or candidate work while preserving necessary repairs through advisory status exceptions and helpful-support criteria.
-- Current route family: physics_payload_ratio_red_team_review.
-- Next recommended action: Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet.
+- Active task path: `research_control/tasks/RT-20260708-032/00_TASK.yaml`.
+- Active task objective: Create status-card v2 schema and calibration metadata with required next_burden and public-compression fields for high-risk rows.
+- Latest handoff path: `research_control/handoffs/handoff-0725.yaml`.
+- Latest handoff summary: RT-20260708-032 completed v18 P9-T01 by creating status-card v2 schema calibration and alias metadata with required next_burden public_summary and full_control_non_conclusions fields for high-risk rows no physics promotion.
+- Current route family: status_card_v2_schema_next_burden.
+- Next recommended action: Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet.
+Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,25 +320,20 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-031`;
-- latest handoff: `handoff-0724`;
-- current status: `v18_p8_t05_payload_ratio_red_team_pass_no_physics_delta`;
+- active task: `RT-20260708-032`;
+- latest handoff: `handoff-0725`;
+- current status: `v18_p9_t01_status_card_v2_schema_defined_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
-- latest handoff validation `continue_research_json`: PASS;
-- latest handoff validation `global_red_team_review_validator`: PASS;
-- latest handoff validation `memory_preflight`: PASS;
-- latest handoff validation `query_memory_status`: PASS;
-- latest handoff validation `task_local_validator`: PASS;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0724.yaml`
-- `research_control/tasks/RT-20260708-031/00_TASK.yaml`
+- `research_control/handoffs/handoff-0725.yaml`
+- `research_control/tasks/RT-20260708-032/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -354,7 +349,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0724*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0725*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

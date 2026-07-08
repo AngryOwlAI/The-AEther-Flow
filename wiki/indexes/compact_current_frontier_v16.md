@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-031`
-- Latest handoff: `handoff-0724`
-- Current status: `v18_p8_t05_payload_ratio_red_team_pass_no_physics_delta`
+- Active task: `RT-20260708-032`
+- Latest handoff: `handoff-0725`
+- Current status: `v18_p9_t01_status_card_v2_schema_defined_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-031`
-- Latest research handoff: `handoff-0724`
-- Latest research next action: Run one bounded v18 P9-T01 status-card v2 schema with next-burden packet.
+- Latest research task: `RT-20260708-032`
+- Latest research handoff: `handoff-0725`
+- Latest research next action: Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `status_card_v2_schema_next_burden`
-- Role family: `schema-maintainer@0.1.0`
+- Route ID: `status_card_v2_frontier_renderer`
+- Role family: `renderer-maintainer@0.1.0`
 - Target milestone: `none`
-- Milestone burden: Extend status-card schema with next burden and public compression fields.
+- Milestone burden: Render status-card v2 in current frontier and compact frontier.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `011fe97fb1a827c218af2d9f347451fbe9998f27aeeaccda792b02ca39cdaf7e`
-- JSON SHA-256: `599cf40329f1e96a6aaab2dd2f6254613112341c92b716576485dc61657bcc58`
+- YAML SHA-256: `5f5ee0499aa42422b6b0b4971b23b124fe3c4e6f9b3182fcc4dfc3f6361c642d`
+- JSON SHA-256: `eafe6e3433dedffd29e6ebb200e693b779eaf69a5e780d6b1118e959a7c5d81f`
 
 ## Authority Warning
 

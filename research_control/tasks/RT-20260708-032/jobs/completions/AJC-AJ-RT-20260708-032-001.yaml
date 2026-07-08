@@ -1,0 +1,198 @@
+completion_id: "AJC-AJ-RT-20260708-032-001"
+job_id: "AJ-RT-20260708-032-001"
+task_id: "RT-20260708-032"
+decision_id: "DDR-20260708-032"
+source_role_id: "project-control-maintainer"
+completed_at: "2026-07-08T18:20:24Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  related_plan_task_id: "P9-T01"
+  plan_phase_id: "P9"
+  implemented_task_scope: "Created status-card v2 schema calibration and alias metadata with next_burden public_summary and full_control_non_conclusions fields."
+  recommendation_ids:
+    - "V18-R09"
+  completed_v18_tasks_this_packet:
+    - "P9-T01"
+  phase_p9_completed: false
+  downstream_tasks_not_implemented:
+    - "P9-T02 current-frontier and compact-frontier status-card v2 renderer"
+    - "P9-T03 public docs status-card v2 pass"
+    - "P9-T04 claim-language linter status-card v2 tests"
+    - "P9-T05 reader-comprehension red-team"
+    - "P9 and later v18 tasks"
+  all_applicable_plan_tasks_proven: false
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+output_paths:
+  - "research_control/design/status_card_v2_schema.md"
+  - "research_control/design/accepted_status_calibration_v2.yaml"
+  - "research_control/design/distance_to_gr_status_aliases.yaml"
+  - "research_control/tasks/RT-20260708-032/artifacts/validate_p9_t01_status_card_v2_schema.py"
+  - "research_control/tasks/RT-20260708-032/artifacts/p9_t01_status_card_v2_schema_report.json"
+  - "research_control/tasks/RT-20260708-032/artifacts/status_card_v2_schema_receipt.md"
+  - "research_control/current_frontier.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260708-032/00_TASK.yaml"
+  - "research_control/tasks/RT-20260708-032/DDR-20260708-032.md"
+  - "research_control/tasks/RT-20260708-032/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260708-032/jobs/AJ-RT-20260708-032-001.yaml"
+  - "research_control/tasks/RT-20260708-032/jobs/completions/AJC-AJ-RT-20260708-032-001.yaml"
+  - "research_control/tasks/RT-20260708-032/roles/project-control-maintainer@0.2.0--RT-20260708-032.yaml"
+  - "research_control/handoffs/handoff-0725.yaml"
+  - "research_control/handoffs/handoff-0725.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=PASS source_object_count=777 relationship_row_count=3893 semantic_row_count=777 vault_row_count=777"
+  - ".venv/bin/python scripts/research_control/continue_research.py | exit_code=0 | status=ready active_task=RT-20260708-031 latest_handoff=handoff-0724 boundary=director_decision_required next_action=P9-T01"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260708-032/artifacts/validate_p9_t01_status_card_v2_schema.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260708-032/artifacts/validate_p9_t01_status_card_v2_schema.py --write-report --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS with retrieval warning followed by refreshed preflight"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=PASS source_object_count=778 relationship_row_count=3897 semantic_row_count=778 vault_row_count=778"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | docs_impact_required=true project_system_improvement_required=true"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS emitted_signal_count=3 improvement_handoff_count=0 open_improvement_handoff_count=0"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1474"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json | exit_code=0 | status=PASS errors=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write | exit_code=0 | status=written row_count=866 warning_count=297"
+  - ".venv/bin/python scripts/research_control/validate_task_index.py --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=297"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py | exit_code=0 | status=PASS wrote generated dependency graph artifacts"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 778
+    relationship_row_count: 3897
+    semantic_row_count: 778
+    vault_row_count: 778
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"status card v2 schema next burden\" --limit 10 --json"
+      query_type: "search"
+      query_text: "status card v2 schema next burden"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+      source_hash: "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "ef9e85cc45b893a544787d5e394bb9969c3cce1ca9f46f516e60aaaa40beda57"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "continue_research_memory_preflight PASS"
+      - "continue_research.py resolved handoff-0724 and director_decision_required"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "status_card_v2_schema.md defines all required P9-T01 fields"
+      - "accepted_status_calibration_v2.yaml adds next_burden and public compression fields for five high-risk rows"
+      - "distance_to_gr_status_aliases.yaml mirrors status_card_v2 blocks"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "task-local validator passed"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint command has not yet been run in this receipt snapshot"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_task_index.py --write refreshed TASK_INDEX.csv/md and wiki index"
+      - "render_dependency_graph.py refreshed dependency graph JSON/DOT/wiki artifacts"
+      - "render_dependency_graph.py --check returned PASS"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py completed"
+      - "continue_research_memory_preflight.py refreshed retrieval counts to 778/3897/778/778"
+      - "bootstrap_memory_system.py --validate-only returned PASS"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "scripts/project_control/validate_claim_language.py --changed returned PASS with hard_fail_count=0"
+authorization_layers:
+  user_goal_human_gate_authorization_present: true
+  user_goal_human_gate_authority_source_path: "conversation user request 2026-07-08"
+  schema_packet_consumes_gate_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+schema_result:
+  schema_path: "research_control/design/status_card_v2_schema.md"
+  schema_object_id: "MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA"
+  schema_source_hash: "7485249b4b824290b7160e243349a1486f29d437a0d7bd99301fa3f26f791cda"
+  calibration_path: "research_control/design/accepted_status_calibration_v2.yaml"
+  calibration_hash: "f4ccc61868dd4160e60b09a43b9cfc7e49f7f33e84e6b32fa3d1da7cec5cd470"
+  alias_path: "research_control/design/distance_to_gr_status_aliases.yaml"
+  alias_hash: "a83befbf4dd145ebcb636f77103374c6d6712906533824a383fef36a73789e4a"
+  validator_report_path: "research_control/tasks/RT-20260708-032/artifacts/p9_t01_status_card_v2_schema_report.json"
+  validator_status: "PASS"
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  ledger_row_updated: false
+new_mathematical_payload: []
+mathematical_payload_manifest: []
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v18"
+  source_recommendation_ids:
+    - "V18-R09"
+  implements_plan_task_id: "P9-T01"
+  implementation_status: "completed"
+  coverage_effect: "direct_implementation_schema_update_no_physics_promotion"
+claim_boundary:
+  allowed_claims:
+    - "v18 P9-T01 status-card v2 schema created"
+    - "next_burden is required for high-risk status-card v2 rows"
+    - "public_summary is compression only"
+    - "full_control_non_conclusions are retained for audit surfaces"
+    - "next route is P9-T02"
+  forbidden_claims:
+    - "schema as proof authority"
+    - "status card as routing authority"
+    - "status card as Distance-to-GR ledger override"
+    - "public summary as physics truth ranking"
+    - "source-law adoption"
+    - "detector-semantics adoption"
+    - "matter-coupling derivation"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+project_improvement_signals: []
+selected_next_route:
+  route_id: "status_card_v2_frontier_renderer"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P9"
+  plan_task_id: "P9-T02"
+  task_name: "Current-frontier and compact-frontier status-card v2 renderer"
+  role_family: "renderer-maintainer@0.1.0"
+  task_type: "status_card_v2_frontier_renderer"
+  target_derivation_milestone: "none"
+  milestone_burden: "Render status-card v2 in current frontier and compact frontier."
+  requires_human_gate: false
+next_recommended_action: "Run one bounded v18 P9-T02 current-frontier and compact-frontier status-card v2 renderer packet."
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260708-032"
