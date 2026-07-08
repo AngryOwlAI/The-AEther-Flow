@@ -1,0 +1,35 @@
+artifact_id: "child-phys-phil-p7-t01-support-formalization-target-selector-v18"
+task_id: "RT-20260708-019"
+job_id: "AJ-RT-20260708-019-001"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+selected_target: "typed_EqSrc_orbit_checker"
+ontological_boundary:
+  selector_creates_support_tool_route: true
+  selector_creates_canonical_ontology: false
+  selector_adopts_source_law: false
+  selector_proves_general_eqsrc: false
+  selector_creates_physics_claim_authority: false
+authority_boundary:
+  support_only: true
+  proof_authority: false
+  validator_authority_as_proof: false
+  generated_derivative_authority: false
+  benchmark_authority: false
+reasoning:
+  - "The typed EqSrc orbit checker can be useful as disciplined scaffolding without becoming a theorem prover."
+  - "The planned checker should be framed as finite-fixture hygiene for declared source-side records."
+  - "The selected target should reduce ambiguity for later support tools while keeping all adoption and benchmark claims blocked."
+sequence_rationale:
+  - "closure_countermodel_generator follows after a finite typed record contract exists"
+  - "no_target_import_mutation_tester follows after support-tool input surfaces exist"
+  - "metric_use_ledger_tex_validator follows as a high-risk reference guard"
+  - "detector_placeholder_collapse_checker follows after source/readout placeholder overread surfaces can be tested"
+blocked_overreads:
+  - "checker pass as EqSrc theorem"
+  - "checker pass as source-law adoption"
+  - "checker pass as target metric construction"
+  - "checker pass as matter-coupling derivation"
+  - "checker pass as benchmark promotion"
+next_route: "P7-T02"

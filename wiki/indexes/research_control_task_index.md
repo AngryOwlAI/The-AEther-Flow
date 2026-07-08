@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `3ef7163004a09e135e3c1f2192a21e5d5376226a2e5b59b279cdf44f5fd7b2c2`
-- Generated-at source timestamp: `2026-07-08T10:45:00Z`
-- Row count: `852`
+- Source fingerprint: `ca27c414b4164084f4e5b189eb742023ea092ef568fb256469b72aa87c801ed8`
+- Generated-at source timestamp: `2026-07-08T11:20:48Z`
+- Row count: `853`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260708-019|RT-20260708-018|2026-07-08T11:20:48Z|2026-07-08T11:20:48Z|support_formalization_target_selector_v18|completed|source_equivalence_eqsrc|Select the first support-only formalization target from the v18 recommendation set.|theoretical-continuation-selector@0.1.0|false|false|8|Run one bounded v18 P7-T02 typed EqSrc orbit checker support-only implementation packet.|PASS|research_control/tasks/RT-20260708-019/jobs/completions/AJC-AJ-RT-20260708-019-001.yaml|
 |RT-20260708-018|RT-20260708-017|2026-07-08T10:45:00Z|2026-07-08T10:45:00Z|finite_toy_response_v2_selector|completed|finite_toy_metric_response|Select repair, freeze, source detector/readout continuation, or upstream return after finite toy response v2.|theoretical-continuation-selector@0.1.0|false|false|8|Run one bounded v18 P7-T01 support formalization target selector packet.|PASS|research_control/tasks/RT-20260708-018/jobs/completions/AJC-AJ-RT-20260708-018-001.yaml|
 |RT-20260708-017|RT-20260708-016|2026-07-08T10:02:00Z|2026-07-08T10:02:00Z|finite_toy_response_v2_model_zoo_integration|completed|finite_toy_metric_response|Integrate finite toy response v2 model, obstruction, and stress status into the source model zoo.|ontology-formalizer@0.2.0|false|false|8|Run one bounded v18 P6-T05 finite toy response v2 selector packet.|PASS|research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml|
 |RT-20260708-016|RT-20260708-015|2026-07-08T09:24:34Z|2026-07-08T09:24:34Z|finite_toy_response_v2_invariance_tag_stress|completed|finite_toy_metric_response|Stress finite toy response v2 against relabeling, tag removal, and target-import collapse.|refuter@0.2.0|false|false|8|Run one bounded v18 P6-T04 source-model zoo integration for toy v2 packet.|PASS|research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml|

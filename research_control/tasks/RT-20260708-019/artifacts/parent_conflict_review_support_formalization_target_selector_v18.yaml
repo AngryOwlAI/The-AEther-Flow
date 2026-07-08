@@ -1,0 +1,24 @@
+artifact_id: "parent-conflict-review-p7-t01-support-formalization-target-selector-v18"
+task_id: "RT-20260708-019"
+job_id: "AJ-RT-20260708-019-001"
+status: "resolved"
+review_rounds: 1
+blocking_conflicts_present: false
+unresolved_conflicts: []
+child_outputs:
+  - "research_control/tasks/RT-20260708-019/artifacts/child_phys_math_support_formalization_target_selector_v18.yaml"
+  - "research_control/tasks/RT-20260708-019/artifacts/child_phys_phil_support_formalization_target_selector_v18.yaml"
+consensus:
+  - "Select typed_EqSrc_orbit_checker as the single immediate P7-T01 target."
+  - "Route next to P7-T02."
+  - "Do not implement the checker in P7-T01."
+  - "Keep support-only and proof_authority false boundaries explicit."
+nonblocking_tensions:
+  - tension_id: "sequence_vs_utility"
+    description: "Metric-use ledger TeX validation is high-value, but P7-T02 is explicitly the typed EqSrc orbit checker and should come first."
+    resolution: "Sequence the ledger validator later at P7-T05 as the plan states."
+  - tension_id: "checker_vs_theorem"
+    description: "A typed orbit checker is proof-adjacent and can be overread as theorem authority."
+    resolution: "The receipt and next handoff require support_only true proof_authority false and forbid general EqSrc proof claims."
+selected_target: "typed_EqSrc_orbit_checker"
+next_route: "P7-T02"

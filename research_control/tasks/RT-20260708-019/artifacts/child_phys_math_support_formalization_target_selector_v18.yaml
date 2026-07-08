@@ -1,0 +1,36 @@
+artifact_id: "child-phys-math-p7-t01-support-formalization-target-selector-v18"
+task_id: "RT-20260708-019"
+job_id: "AJ-RT-20260708-019-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+selected_target: "typed_EqSrc_orbit_checker"
+selection_basis:
+  - "P7-T01 requires exactly one target from the v18 allowed set."
+  - "P7-T02 is the typed EqSrc orbit checker implementation task, so selecting it preserves the plan sequence."
+  - "The checker can be specified over finite records with declared objects identity maps inverse maps composition table source-only invariant flags and fail-closed missing-data status."
+  - "A finite record checker is a prerequisite for later closure countermodels and no-target import mutation tests."
+formal_constraints:
+  finite_record_fields:
+    - "declared_objects"
+    - "identity_maps"
+    - "inverse_maps"
+    - "composition_table"
+    - "source_only_invariant_flags"
+    - "missing_data_status"
+  allowed_classifications:
+    - "typed_eqsrc_orbit_closure_supported"
+    - "typed_eqsrc_orbit_closure_blocked"
+  support_only: true
+  proof_authority: false
+rejected_targets:
+  closure_countermodel_generator: "Deferred until a typed orbit-closure record shape exists."
+  no_target_import_mutation_tester: "Deferred until support tool contracts exist for mutation pressure."
+  metric_use_ledger_tex_validator: "Deferred because it validates TeX/ledger references, not the first EqSrc support target."
+  detector_placeholder_collapse_checker: "Deferred because it belongs to detector/readout overread control after lower-level EqSrc support tooling."
+claim_boundary:
+  proves_general_eqsrc: false
+  source_law_adopted: false
+  target_metric_imported: false
+  physics_promotion_authorized: false
+next_route: "P7-T02"

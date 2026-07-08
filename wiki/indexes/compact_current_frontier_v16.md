@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-018`
-- Latest handoff: `handoff-0711`
-- Current status: `v18_p6_t05_finite_toy_response_v2_selector_p7_t01_no_promotion`
+- Active task: `RT-20260708-019`
+- Latest handoff: `handoff-0712`
+- Current status: `v18_p7_t01_support_formalization_target_selected_no_proof_authority`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-018`
-- Latest research handoff: `handoff-0711`
-- Latest research next action: Run one bounded v18 P7-T01 support formalization target selector packet.
+- Latest research task: `RT-20260708-019`
+- Latest research handoff: `handoff-0712`
+- Latest research next action: Run one bounded v18 P7-T02 typed EqSrc orbit checker support-only implementation packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `support_formalization_target_selector_v18`
-- Role family: `theoretical-continuation-selector@0.1.0`
+- Route ID: `typed_eqsrc_orbit_checker_support_only`
+- Role family: `formalization-engineer@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Select the first support-only formalization target from the v18 recommendation set.
+- Milestone burden: Implement a support-only checker for finite typed EqSrc orbit closure records.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `3015cdbeae27cd749b420d7fd399052beff46ab25b13852493f0db3eb30eac63`
-- JSON SHA-256: `74e7f28d22a510ab04e3fe978f7697c8b57962ee1dc65b26f21fb777ad264e31`
+- YAML SHA-256: `5fa58d6c96858d090c98b65469ee90a6d9bae9b101a90806ed204c54edbc1ff3`
+- JSON SHA-256: `cebd36b529152ab826c6432e706f7deac4990d921ea41661cc2941bcd13ab252`
 
 ## Authority Warning
 
