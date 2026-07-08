@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-039`
-- Latest handoff: `handoff-0732`
-- Current status: `v18_p10_t03_external_review_packet_created_registered_no_outreach_no_promotion`
+- Active task: `RT-20260708-040`
+- Latest handoff: `handoff-0733`
+- Current status: `v18_p10_t04_external_review_packet_internal_red_team_pass_no_outreach_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-039`
-- Latest research handoff: `handoff-0732`
-- Latest research next action: Run one bounded v18 P10-T04 internal red-team review of the external-review packet.
+- Latest research task: `RT-20260708-040`
+- Latest research handoff: `handoff-0733`
+- Latest research next action: Run one bounded v18 P10-T05 external-outreach human-gate setup packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `internal_red_team_review_of_external_packet`
-- Role family: `external-red-team-reviewer@0.1.0`
-- Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Red-team the focused external-review packet before any outreach decision.
+- Route ID: `external_outreach_human_gate_setup_only`
+- Role family: `director-of-research@0.3.0`
+- Target milestone: `none`
+- Milestone burden: Prepare a human-gate question for possible future external outreach without sending anything.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `821c067b6aad8d58fdf047d5ca1776bd3a157d2a02b637983b50e27f3c5d3208`
-- JSON SHA-256: `12260ac8564d30d7c0c1716e546d168b921eb69fbcb5b72860c2b5a35ff241c7`
+- YAML SHA-256: `28e2d5ab1a1587e91fd3ced3c70d4020dd5e7a2d9ad0cdb3f9e1c908509c82a6`
+- JSON SHA-256: `cc49b4e681949823df1c04284490b84a9cf53b4a1f4f8efb321d29708b1808df`
 
 ## Authority Warning
 

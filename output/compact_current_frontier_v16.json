@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0732.yaml",
+    "research_control/handoffs/handoff-0733.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260708-039",
-    "latest_handoff_id": "handoff-0732",
-    "current_status": "v18_p10_t03_external_review_packet_created_registered_no_outreach_no_promotion",
+    "active_task_id": "RT-20260708-040",
+    "latest_handoff_id": "handoff-0733",
+    "current_status": "v18_p10_t04_external_review_packet_internal_red_team_pass_no_outreach_no_promotion",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260708-039",
-    "latest_research_handoff_id": "handoff-0732",
-    "latest_research_next_action": "Run one bounded v18 P10-T04 internal red-team review of the external-review packet.",
+    "latest_research_task_id": "RT-20260708-040",
+    "latest_research_handoff_id": "handoff-0733",
+    "latest_research_next_action": "Run one bounded v18 P10-T05 external-outreach human-gate setup packet.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "internal_red_team_review_of_external_packet",
-    "role_family": "external-red-team-reviewer@0.1.0",
-    "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Red-team the focused external-review packet before any outreach decision.",
+    "route_id": "external_outreach_human_gate_setup_only",
+    "role_family": "director-of-research@0.3.0",
+    "target_derivation_milestone": "none",
+    "milestone_burden": "Prepare a human-gate question for possible future external outreach without sending anything.",
     "requires_human_gate": false
   },
   "claim_boundary": {
