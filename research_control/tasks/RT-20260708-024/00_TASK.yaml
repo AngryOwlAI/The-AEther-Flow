@@ -1,0 +1,67 @@
+task_id: "RT-20260708-024"
+task_type: "detector_placeholder_collapse_checker_support_only"
+status: "completed"
+created_at: "2026-07-08T13:56:54Z"
+updated_at: "2026-07-08T13:56:54Z"
+closed_at: "2026-07-08T13:56:54Z"
+parent_task_id: "RT-20260708-023"
+parent_handoff_id: "handoff-0716"
+decision_id: "DDR-20260708-024"
+job_id: "AJ-RT-20260708-024-001"
+role_id: "formalization-engineer"
+role_version: "0.1.0"
+execution_role_ref: "formalization-engineer@0.1.0--RT-20260708-024"
+requires_human_gate: false
+human_authorization_note: "The user granted human authorization for all human gates in the active goal. P7-T06 requires no human gate because it implements support-only checker tooling and does not promote physics claims."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v18.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T06"
+  plan_task_name: "Detector-placeholder collapse checker"
+objective: "Implement support-only checks for placeholder-as-detector-semantics collapse."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Implement support-only checks for placeholder-as-detector-semantics collapse."
+closure_status: "v18_p7_t06_detector_placeholder_collapse_checker_implemented_no_proof_authority"
+checker_id: "detector_placeholder_collapse_checker"
+checker_version: "0.1.0"
+semantic_states_checked:
+  - "explicit_placeholder_block"
+  - "draft_control_source_readout_candidate"
+  - "adopted_detector_semantics"
+claim_boundary:
+  allowed_scope: "P7-T06 support-only detector-placeholder collapse checker, focused tests, task-local spec, control receipts, and P7-T07 routing only."
+  support_only: true
+  proof_authority: false
+  physics_promotion_authorized: false
+  det_src_adopted: false
+  readout_src_adopted: false
+  detector_semantics_adopted: false
+  source_detector_readout_semantics_adopted: false
+  empirical_detector_protocol_authorized: false
+  proper_time_normalization_authorized: false
+  target_metric_imported: false
+  matter_coupling_derived: false
+  matter_coupling_adopted: false
+  stress_energy_semantics_imported: false
+  matter_action_imported: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  completed_derivation_claimed: false
+  validator_behavior_changed: false
+output_artifacts:
+  - "scripts/research_control/support_formalization/detector_placeholder_collapse_checker.py"
+  - "tests/test_detector_placeholder_collapse_checker.py"
+  - "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_spec_v1.md"
+  - "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_report.json"
+  - "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_receipt.md"
+  - "research_control/tasks/RT-20260708-024/artifacts/validate_p7_t06_detector_placeholder_collapse_checker.py"
+  - "research_control/tasks/RT-20260708-024/artifacts/p7_t06_detector_placeholder_collapse_checker_report.json"
+  - "research_control/tasks/RT-20260708-024/artifacts/child_phys_math_detector_placeholder_collapse_checker.yaml"
+  - "research_control/tasks/RT-20260708-024/artifacts/child_phys_phil_detector_placeholder_collapse_checker.yaml"
+  - "research_control/tasks/RT-20260708-024/artifacts/parent_conflict_review_detector_placeholder_collapse_checker.yaml"
+  - "research_control/tasks/RT-20260708-024/artifacts/parent_fusion_notes_detector_placeholder_collapse_checker.md"
+next_recommended_action: "Run one bounded v18 P7-T07 support formalization traceability integration packet."
+notes: "RT-20260708-024 completes v18 P7-T06 by implementing detector_placeholder_collapse_checker as support-only finite-record/text tooling. It distinguishes explicit placeholder/block, draft/control source-readout candidate, and unprotected adopted-detector-semantics states, while flagging placeholder or candidate overreads as fail-closed collapse. It does not adopt Det_src, Readout_src, detector semantics, source detector/readout semantics, matter coupling, or downstream GR claims."
+documentation_impact_id: "DI-RT-20260708-024-001"

@@ -1,0 +1,13 @@
+review_id: "parent_conflict_review_detector_placeholder_collapse_checker"
+task_id: "RT-20260708-024"
+status: "completed"
+blocking_conflicts: []
+nonblocking_conflicts: []
+consensus:
+  - "The checker should classify semantic state before evaluating collapse."
+  - "Explicit placeholder/block and draft/control candidate states may pass only when all adoption and downstream flags remain false."
+  - "Adopted detector semantics is a protected authority state and must not pass in this packet."
+resolution:
+  status: "resolved"
+  summary: "Both child perspectives agree that the checker is support-only semantic-state tooling and does not create detector-semantics authority."
+next_route: "P7-T07 support_formalization_traceability_integration"

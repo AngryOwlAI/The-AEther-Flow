@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260708-023`
-- Latest handoff: `handoff-0716`
-- Current status: `v18_p7_t05_metric_use_tex_validator_implemented_no_proof_authority`
+- Active task: `RT-20260708-024`
+- Latest handoff: `handoff-0717`
+- Current status: `v18_p7_t06_detector_placeholder_collapse_checker_implemented_no_proof_authority`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260708-023`
-- Latest research handoff: `handoff-0716`
-- Latest research next action: Run one bounded v18 P7-T06 detector-placeholder collapse checker support-only implementation packet.
+- Latest research task: `RT-20260708-024`
+- Latest research handoff: `handoff-0717`
+- Latest research next action: Run one bounded v18 P7-T07 support formalization traceability integration packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `detector_placeholder_collapse_checker_support_only`
-- Role family: `formalization-engineer@0.1.0`
-- Target milestone: `matter_coupling`
-- Milestone burden: Implement support-only checks for placeholder-as-detector-semantics collapse.
+- Route ID: `support_formalization_traceability_integration`
+- Role family: `validator-engineer@0.2.0`
+- Target milestone: `none`
+- Milestone burden: Integrate support-only formalization tools into traceability registry or dashboard without proof authority.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `995ea860e5a5603731b86bc5e6835a3b4755720300cd5306c128c660b908c0a9`
-- JSON SHA-256: `8f88a187259b9e1d03b458b3dba8cd88f7bc4d1be4d5d6ade3e1d0d7310c5478`
+- YAML SHA-256: `88cd5c785fb7d5306c59f72bd72700042f3569a702399b2054f18049c77c756b`
+- JSON SHA-256: `21c4374d96ca39ac7c1a2a3a3cf91d365eaa4ce7ee40597d820ea6a0aa1c0e68`
 
 ## Authority Warning
 

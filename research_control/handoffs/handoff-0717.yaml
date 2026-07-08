@@ -1,0 +1,104 @@
+handoff_id: "handoff-0717"
+created_at: "2026-07-08T13:56:54Z"
+created_by: "director-of-research@0.3.0"
+task_id: "RT-20260708-024"
+decision_id: "DDR-20260708-024"
+job_id: "AJ-RT-20260708-024-001"
+agent_job_id: "AJ-RT-20260708-024-001"
+completion_path: "research_control/tasks/RT-20260708-024/jobs/completions/AJC-AJ-RT-20260708-024-001.yaml"
+completion_id: "AJC-AJ-RT-20260708-024-001"
+status: "ready_for_next_bounded_packet"
+previous_handoff_id: "handoff-0716"
+summary: "Completed v18 P7-T06 detector-placeholder collapse checker support-only implementation. The checker distinguishes explicit placeholder/block, draft/control source-readout candidate, and unprotected adopted-detector-semantics states, and flags DetPlaceholder or source-readout candidate claims that imply adopted detector semantics or matter-coupling derivation. No Det_src adoption Readout_src adoption detector-semantics adoption source detector/readout semantics adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict or completed derivation occurred."
+completed_packet:
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P7"
+  plan_task_id: "P7-T06"
+  task_name: "Detector-placeholder collapse checker"
+  role_family: "formalization-engineer@0.1.0 one-job provisional"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Implement support-only checks for placeholder-as-detector-semantics collapse."
+  result_type: "support_only_detector_placeholder_collapse_checker_implemented"
+  checker_id: "detector_placeholder_collapse_checker"
+  checker_version: "0.1.0"
+  configured_case_count: 5
+  failed_case_count: 0
+  selected_next_plan_task_id: "P7-T07"
+  selected_next_plan_route_type: "support_formalization_traceability_integration"
+  selected_next_packet_type: "project_system_validation"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  support_only: true
+  proof_authority: false
+  phase_p7_completed: false
+claim_boundary:
+  allowed_claims:
+    - "P7-T06 detector-placeholder collapse checker implemented"
+    - "explicit placeholder/block and draft/control candidate states are distinguished"
+    - "placeholder/candidate adoption-collapse cases fail closed"
+    - "focused tests pass"
+    - "P7-T07 selected as next plan task"
+  forbidden_claims:
+    - "Det_src adoption"
+    - "Readout_src adoption"
+    - "detector-semantics adoption"
+    - "source detector/readout semantics adoption"
+    - "empirical detector protocol authority"
+    - "proper-time normalization"
+    - "target metric import"
+    - "matter-coupling derivation or adoption"
+    - "stress-energy semantics"
+    - "matter action"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+  support_only: true
+  proof_authority: false
+  no_adoption: true
+  no_ledger_delta: true
+  no_dag_update: true
+  no_physics_promotion: true
+distance_to_gr_status:
+  changed: false
+  ledger_row_updated: false
+  burden_id: "support_validation_detector_placeholder_collapse"
+  status: "support-only detector-placeholder collapse checker implemented; no physics derivation status change"
+  freeze_decision: "not_applicable"
+new_support_payload:
+  - "Checker: detector_placeholder_collapse_checker classifies detector/readout semantic states and detects collapse overreads."
+  - "Report: built-in suite status PASS with configured_case_count 5 and failed_case_count 0."
+  - "Spec: detector_placeholder_collapse_checker_spec_v1 defines support-only boundary and P7-T07 route."
+selected_next_route:
+  route_id: "support_formalization_traceability_integration"
+  plan_id: "recommendations_implementation_plan_continue_task-v18"
+  phase_id: "P7"
+  plan_task_id: "P7-T07"
+  task_name: "Support formalization traceability integration"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "support_formalization_traceability_integration"
+  target_derivation_milestone: "none"
+  milestone_burden: "Integrate support-only formalization tools into traceability registry or dashboard without proof authority."
+  expected_agent_job_scope: "One bounded P7-T07 integration packet linking support-only formalization tools into traceability surfaces without proof authority."
+  requires_human_gate: false
+next_action: "Run one bounded v18 P7-T07 support formalization traceability integration packet."
+next_recommended_action: "Run one bounded v18 P7-T07 support formalization traceability integration packet."
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260708-024"
+  latest_research_handoff_id: "handoff-0717"
+  latest_research_next_action: "Run one bounded v18 P7-T07 support formalization traceability integration packet."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  sidecar_supersedes_research_handoff: false
+  next_research_route_source: "latest_research_handoff"
+project_improvement_signals: []
+validation:
+  task_local_validator: "PENDING"
+  bootstrap_memory_system: "PENDING"
+  bootstrap_memory_system_validate_only: "PENDING"
+  documentation_impact: "PENDING"
+  research_control_validation: "PENDING"
+  research_control_diff_validation: "PENDING"
+  wrapper_validation: "PENDING"
+notes: "This handoff is the research-continuation authority for the next invocation. Generated derivatives and .local caches remain retrieval layers only."

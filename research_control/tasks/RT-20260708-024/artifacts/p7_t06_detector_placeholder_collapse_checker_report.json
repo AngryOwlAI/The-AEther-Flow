@@ -1,0 +1,146 @@
+{
+  "case_count": 5,
+  "checks": [
+    {
+      "check_id": "exists:scripts/research_control/support_formalization/detector_placeholder_collapse_checker.py",
+      "detail": "scripts/research_control/support_formalization/detector_placeholder_collapse_checker.py exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:tests/test_detector_placeholder_collapse_checker.py",
+      "detail": "tests/test_detector_placeholder_collapse_checker.py exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_spec_v1.md",
+      "detail": "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_spec_v1.md exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_receipt.md",
+      "detail": "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_receipt.md exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_report.json",
+      "detail": "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_report.json exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-024/00_TASK.yaml",
+      "detail": "research_control/tasks/RT-20260708-024/00_TASK.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-024/DDR-20260708-024.md",
+      "detail": "research_control/tasks/RT-20260708-024/DDR-20260708-024.md exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-024/jobs/AJ-RT-20260708-024-001.yaml",
+      "detail": "research_control/tasks/RT-20260708-024/jobs/AJ-RT-20260708-024-001.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-024/roles/formalization-engineer@0.1.0--RT-20260708-024.yaml",
+      "detail": "research_control/tasks/RT-20260708-024/roles/formalization-engineer@0.1.0--RT-20260708-024.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-024/artifacts/child_phys_math_detector_placeholder_collapse_checker.yaml",
+      "detail": "research_control/tasks/RT-20260708-024/artifacts/child_phys_math_detector_placeholder_collapse_checker.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-024/artifacts/child_phys_phil_detector_placeholder_collapse_checker.yaml",
+      "detail": "research_control/tasks/RT-20260708-024/artifacts/child_phys_phil_detector_placeholder_collapse_checker.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-024/artifacts/parent_conflict_review_detector_placeholder_collapse_checker.yaml",
+      "detail": "research_control/tasks/RT-20260708-024/artifacts/parent_conflict_review_detector_placeholder_collapse_checker.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:research_control/tasks/RT-20260708-024/artifacts/parent_fusion_notes_detector_placeholder_collapse_checker.md",
+      "detail": "research_control/tasks/RT-20260708-024/artifacts/parent_fusion_notes_detector_placeholder_collapse_checker.md exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_report_passes",
+      "detail": "live checker suite passes expected pass/fail behavior",
+      "status": "PASS"
+    },
+    {
+      "check_id": "stored_report_matches_live_core",
+      "detail": "stored JSON report matches live status and case counts",
+      "status": "PASS"
+    },
+    {
+      "check_id": "support_only_boundary",
+      "detail": "checker report preserves support-only non-promotion flags",
+      "status": "PASS"
+    },
+    {
+      "check_id": "required_states_distinguished",
+      "detail": "report distinguishes placeholder block, draft/control candidate, and adopted-detector-semantics states",
+      "status": "PASS"
+    },
+    {
+      "check_id": "expected_codes:explicit_placeholder_block_safe",
+      "detail": "explicit_placeholder_block_safe includes expected status codes ['pass_placeholder_block_preserved']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "expected_codes:draft_control_source_readout_candidate_safe",
+      "detail": "draft_control_source_readout_candidate_safe includes expected status codes ['pass_draft_control_candidate_preserved']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "expected_codes:placeholder_as_adopted_detector_semantics",
+      "detail": "placeholder_as_adopted_detector_semantics includes expected status codes ['fail_placeholder_as_detector_semantics_collapse']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "expected_codes:source_readout_candidate_as_detector_semantics",
+      "detail": "source_readout_candidate_as_detector_semantics includes expected status codes ['fail_candidate_as_detector_semantics_collapse', 'fail_matter_coupling_overread']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "expected_codes:unprotected_adopted_detector_semantics_state",
+      "detail": "unprotected_adopted_detector_semantics_state includes expected status codes ['fail_unprotected_adopted_detector_semantics']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "focused_unittest_passes",
+      "detail": "focused detector-placeholder collapse checker tests pass",
+      "status": "PASS"
+    },
+    {
+      "check_id": "spec_routes_to_p7_t07",
+      "detail": "spec records P7-T07 as the next route",
+      "status": "PASS"
+    },
+    {
+      "check_id": "receipt_forbidden_conclusions",
+      "detail": "receipt preserves Det_src and Readout_src non-adoption",
+      "status": "PASS"
+    }
+  ],
+  "detector_semantics_adopted": false,
+  "failed_check_count": 0,
+  "live_checker_status": "PASS",
+  "matter_coupling_derived": false,
+  "next_route": "P7-T07 support_formalization_traceability_integration",
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "semantic_state_counts": {
+    "adopted_detector_semantics": 1,
+    "draft_control_source_readout_candidate": 2,
+    "explicit_placeholder_block": 2,
+    "unknown": 0
+  },
+  "status": "PASS",
+  "support_only": true,
+  "validator_id": "p7_t06_detector_placeholder_collapse_checker_task_local_validator"
+}

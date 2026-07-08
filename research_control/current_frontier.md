@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-023` and `handoff-0716`.
+`RT-20260708-024` and `handoff-0717`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-023` |
-| Latest handoff ID | `handoff-0716` |
-| Current status | `v18_p7_t05_metric_use_tex_validator_implemented_no_proof_authority` |
+| Active task ID | `RT-20260708-024` |
+| Latest handoff ID | `handoff-0717` |
+| Current status | `v18_p7_t06_detector_placeholder_collapse_checker_implemented_no_proof_authority` |
 | V16 completed | false |
-| Current route family | metric_use_ledger_tex_validator_support_only |
+| Current route family | detector_placeholder_collapse_checker_support_only |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P7-T06 detector-placeholder collapse checker support-only implementation packet. |
-| Required next authority | Run one bounded v18 P7-T06 detector-placeholder collapse checker support-only implementation packet. |
-| Next recommended action | Run one bounded v18 P7-T06 detector-placeholder collapse checker support-only implementation packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P7-T07 support formalization traceability integration packet. |
+| Required next authority | Run one bounded v18 P7-T07 support formalization traceability integration packet. |
+| Next recommended action | Run one bounded v18 P7-T07 support formalization traceability integration packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-023` |
-| Latest research handoff ID | `handoff-0716` |
-| Latest research next action | Run one bounded v18 P7-T06 detector-placeholder collapse checker support-only implementation packet. |
+| Latest research task ID | `RT-20260708-024` |
+| Latest research handoff ID | `handoff-0717` |
+| Latest research next action | Run one bounded v18 P7-T07 support formalization traceability integration packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-023/00_TASK.yaml`.
-- Active task objective: Implement a support-only TeX validator that checks high-risk metric references against the metric-use ledger or no-use justifications.
-- Latest handoff path: `research_control/handoffs/handoff-0716.yaml`.
-- Latest handoff summary: Completed v18 P7-T05 metric-use ledger TeX validator support-only implementation. The validator scans configured TeX body references for six high-risk metric-adjacent classes and requires same-artifact ledger coverage or explicit no-use justification. It exposes hard-fail and warning modes without changing full validation policy. No source-law adoption proof authority target metric import MetricData(E) adoption g_eff adoption matter-coupling derivation stress-energy semantics matter action Einstein-equation derivation benchmark promotion Gate Chair verdict or completed derivation occurred.
-- Current route family: metric_use_ledger_tex_validator_support_only.
-- Next recommended action: Run one bounded v18 P7-T06 detector-placeholder collapse checker support-only implementation packet.
+- Active task path: `research_control/tasks/RT-20260708-024/00_TASK.yaml`.
+- Active task objective: Implement support-only checks for placeholder-as-detector-semantics collapse.
+- Latest handoff path: `research_control/handoffs/handoff-0717.yaml`.
+- Latest handoff summary: Completed v18 P7-T06 detector-placeholder collapse checker support-only implementation. The checker distinguishes explicit placeholder/block, draft/control source-readout candidate, and unprotected adopted-detector-semantics states, and flags DetPlaceholder or source-readout candidate claims that imply adopted detector semantics or matter-coupling derivation. No Det_src adoption Readout_src adoption detector-semantics adoption source detector/readout semantics adoption matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict or completed derivation occurred.
+- Current route family: detector_placeholder_collapse_checker_support_only.
+- Next recommended action: Run one bounded v18 P7-T07 support formalization traceability integration packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -292,7 +292,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P7-T06 detector-placeholder collapse checker support-only implementation packet.
+Run one bounded v18 P7-T07 support formalization traceability integration packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,9 +320,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-023`;
-- latest handoff: `handoff-0716`;
-- current status: `v18_p7_t05_metric_use_tex_validator_implemented_no_proof_authority`;
+- active task: `RT-20260708-024`;
+- latest handoff: `handoff-0717`;
+- current status: `v18_p7_t06_detector_placeholder_collapse_checker_implemented_no_proof_authority`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -339,8 +339,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0716.yaml`
-- `research_control/tasks/RT-20260708-023/00_TASK.yaml`
+- `research_control/handoffs/handoff-0717.yaml`
+- `research_control/tasks/RT-20260708-024/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -356,7 +356,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0716*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0717*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

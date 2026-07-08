@@ -1,0 +1,28 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260708-024"
+status: "completed"
+findings:
+  - "The checker defines a finite state partition over explicit placeholder/block, draft/control source-readout candidate, adopted-detector-semantics claim, and unknown state."
+  - "The pass states require all protected authority flags to remain false and avoid collapse phrases."
+  - "The fail states are deterministic: placeholder-as-detector-semantics, candidate-as-detector-semantics, matter-coupling overread, and unprotected adopted detector semantics."
+formal_objects:
+  semantic_state_set:
+    - "explicit_placeholder_block"
+    - "draft_control_source_readout_candidate"
+    - "adopted_detector_semantics"
+    - "unknown"
+  checked_predicates:
+    - "placeholder_block_preserved"
+    - "draft_control_candidate_preserved"
+    - "placeholder_as_detector_semantics_collapse"
+    - "candidate_as_detector_semantics_collapse"
+    - "unprotected_adopted_detector_semantics"
+limitations:
+  - "The checker is finite text/record tooling and does not prove a general detector/readout law."
+claim_boundary:
+  support_only: true
+  proof_authority: false
+  detector_semantics_adopted: false
+  matter_coupling_derived: false
+next_route: "P7-T07 support_formalization_traceability_integration"
