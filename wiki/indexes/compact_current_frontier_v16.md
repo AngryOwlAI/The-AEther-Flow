@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260709-001`
-- Latest handoff: `handoff-0735`
-- Current status: `v18_p10_t06_external_review_response_intake_template_complete_no_outreach_no_authority_promotion`
+- Active task: `RT-20260709-002`
+- Latest handoff: `handoff-0736`
+- Current status: `v18_p11_t01_integration_report_complete_no_physics_promotion_next_p11_t02`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260709-001`
-- Latest research handoff: `handoff-0735`
-- Latest research next action: Run one bounded v18 P11-T01 integration report packet.
+- Latest research task: `RT-20260709-002`
+- Latest research handoff: `handoff-0736`
+- Latest research next action: Run one bounded v18 P11-T02 final validation packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v18_integration_report`
-- Role family: `director-of-research@0.3.0`
+- Route ID: `v18_final_validation_packet`
+- Role family: `validator-engineer@0.2.0`
 - Target milestone: `none`
-- Milestone burden: Integrate all v18 phase outputs into one control report without physics promotion.
+- Milestone burden: Run final v18 validation layers and record exact pending reasons if any.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `37b71de69dacbabe718fe38ae2ad128472f8c736483450dc41d48abe5d2a6f22`
-- JSON SHA-256: `bdc53652fd516eaee1b60604493445eba8f1cfa7e3499fe83f651aacf5845fe0`
+- YAML SHA-256: `17ede26992a9635eb151153098394991670297b5737ea8835d3532633afc825f`
+- JSON SHA-256: `c21baff38835e610f157e47ed3979e09e89c349f46be7e7716b9e08e6104c528`
 
 ## Authority Warning
 

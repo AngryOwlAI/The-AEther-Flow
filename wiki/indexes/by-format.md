@@ -361,6 +361,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-040-PARENT-FUSION-NOTES-EXTERNAL-REVIEW-PACKET-RED-TEAM` `research_control/tasks/RT-20260708-040/artifacts/parent_fusion_notes_external_review_packet_red_team.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260708-041-EXTERNAL-OUTREACH-HUMAN-GATE-QUESTION-RECEIPT` `research_control/tasks/RT-20260708-041/artifacts/external_outreach_human_gate_question_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260709-001-EXTERNAL-REVIEW-RESPONSE-INTAKE-TEMPLATE-RECEIPT` `research_control/tasks/RT-20260709-001/artifacts/external_review_response_intake_template_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260709-002-V18-INTEGRATION-REPORT` `research_control/tasks/RT-20260709-002/artifacts/v18_integration_report.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260709-002-V18-INTEGRATION-REPORT-RECEIPT` `research_control/tasks/RT-20260709-002/artifacts/v18_integration_report_receipt.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -1163,6 +1165,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-040-PARENT-FUSION-NOTES-EXTERNAL-REVIEW-PACKET-RED-TEAM` `wiki/markdown/md-research-control-tasks-rt-20260708-040-parent-fusion-notes-external-review-packet-red-team.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260708-041-EXTERNAL-OUTREACH-HUMAN-GATE-QUESTION-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260708-041-external-outreach-human-gate-question-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260709-001-EXTERNAL-REVIEW-RESPONSE-INTAKE-TEMPLATE-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260709-001-external-review-response-intake-template-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260709-002-V18-INTEGRATION-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260709-002-v18-integration-report.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260709-002-V18-INTEGRATION-REPORT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260709-002-v18-integration-report-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
