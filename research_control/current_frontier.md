@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260708-040` and `handoff-0733`.
+`RT-20260708-041` and `handoff-0734`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260708-040` |
-| Latest handoff ID | `handoff-0733` |
-| Current status | `v18_p10_t04_external_review_packet_internal_red_team_pass_no_outreach_no_promotion` |
+| Active task ID | `RT-20260708-041` |
+| Latest handoff ID | `handoff-0734` |
+| Current status | `v18_p10_t05_external_outreach_human_gate_setup_complete_no_outreach_no_reviewer_named_no_physics_promotion` |
 | V16 completed | false |
-| Current route family | external_review_packet_internal_red_team |
+| Current route family | external_outreach_human_gate_setup_only |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P10-T05 external-outreach human-gate setup packet. |
-| Required next authority | Run one bounded v18 P10-T05 external-outreach human-gate setup packet. |
-| Next recommended action | Run one bounded v18 P10-T05 external-outreach human-gate setup packet. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P10-T06 review-response intake template packet. |
+| Required next authority | Run one bounded v18 P10-T06 review-response intake template packet. |
+| Next recommended action | Run one bounded v18 P10-T06 review-response intake template packet. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260708-040` |
-| Latest research handoff ID | `handoff-0733` |
-| Latest research next action | Run one bounded v18 P10-T05 external-outreach human-gate setup packet. |
+| Latest research task ID | `RT-20260708-041` |
+| Latest research handoff ID | `handoff-0734` |
+| Latest research next action | Run one bounded v18 P10-T06 review-response intake template packet. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260708-040/00_TASK.yaml`.
-- Active task objective: Internally red-team the focused EqSrc family-closure external-review packet for overclaim ambiguity reviewer burden endorsement implication and no-outreach preservation.
-- Latest handoff path: `research_control/handoffs/handoff-0733.yaml`.
-- Latest handoff summary: RT-20260708-040 completed v18 P10-T04 by internally red-teaming the EqSrc family-closure external-review packet. Result pass with one nonblocking H1-H7 compactness advisory no outreach no reviewer naming no external endorsement and no physics promotion.
-- Current route family: external_review_packet_internal_red_team.
-- Next recommended action: Run one bounded v18 P10-T05 external-outreach human-gate setup packet.
+- Active task path: `research_control/tasks/RT-20260708-041/00_TASK.yaml`.
+- Active task objective: Prepare the P10-T05 human-gate question for possible future external outreach without sending anything or naming any reviewer.
+- Latest handoff path: `research_control/handoffs/handoff-0734.yaml`.
+- Latest handoff summary: RT-20260708-041 completed v18 P10-T05 by preparing the external-outreach human-gate question for possible future review outreach. No external message was sent or queued no reviewer was named no endorsement or external-review completion claim was made and no physics promotion occurred.
+- Current route family: external_outreach_human_gate_setup_only.
+- Next recommended action: Run one bounded v18 P10-T06 review-response intake template packet.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P10-T05 external-outreach human-gate setup packet.
+Run one bounded v18 P10-T06 review-response intake template packet.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260708-040`;
-- latest handoff: `handoff-0733`;
-- current status: `v18_p10_t04_external_review_packet_internal_red_team_pass_no_outreach_no_promotion`;
+- active task: `RT-20260708-041`;
+- latest handoff: `handoff-0734`;
+- current status: `v18_p10_t05_external_outreach_human_gate_setup_complete_no_outreach_no_reviewer_named_no_physics_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0733.yaml`
-- `research_control/tasks/RT-20260708-040/00_TASK.yaml`
+- `research_control/handoffs/handoff-0734.yaml`
+- `research_control/tasks/RT-20260708-041/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0733*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0734*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

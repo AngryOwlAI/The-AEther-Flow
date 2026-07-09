@@ -1,0 +1,65 @@
+schema_id: "external_outreach_human_gate_question_v1"
+task_id: "RT-20260708-041"
+job_id: "AJ-RT-20260708-041-001"
+decision_id: "DDR-20260708-041"
+plan_id: "recommendations_implementation_plan_continue_task-v18"
+plan_task_id: "P10-T05"
+created_at: "2026-07-08T23:49:47Z"
+authority: "control"
+status: "prepared_no_outreach"
+external_outreach_human_gate_question:
+  packet_path: "external_review_packets/eqsrc_family_closure_review_packet_v1.md"
+  proposed_outreach: "not_executed"
+  external_outreach_authorized_in_this_task: false
+  human_gate_required_for_future_outreach: true
+  external_feedback_as_proof_authority: false
+  gate_question: "Should a later human-gated task authorize sending the registered EqSrc family-closure external-review packet to a human-provided reviewer or review venue, with reviewer identity, channel, and allowed response use supplied by the human gate and with no proof, endorsement, benchmark, or completed-derivation authority implied by any future response?"
+  default_answer_until_future_gate: "do_not_send"
+  proposed_future_gate_scope:
+    may_authorize_only_if_human_provided:
+      - "reviewer identity or review venue"
+      - "outreach channel"
+      - "whether the packet may be sent as written or must be revised first"
+      - "whether the reviewer may be publicly named"
+      - "where any response may be stored"
+    remains_forbidden_without_later_gate:
+      - "external outreach"
+      - "reviewer naming"
+      - "outreach message sending or queueing"
+      - "public reviewer identity"
+      - "external review completion claim"
+      - "external endorsement claim"
+      - "external feedback as proof authority"
+      - "external feedback as benchmark authority"
+      - "source-law adoption"
+      - "RetainH adoption"
+      - "GenH adoption"
+      - "matter-coupling derivation"
+      - "Einstein-equation derivation"
+      - "benchmark promotion"
+      - "completed derivation"
+  no_outreach_receipt:
+    external_message_sent: false
+    external_message_queued: false
+    outreach_message_created_for_delivery: false
+    reviewer_named: false
+    proposed_reviewer_names: []
+    reviewer_identity_publication_allowed: false
+    public_endorsement_claimed: false
+    external_review_completed: false
+  future_operator_checklist:
+    - "Confirm the human explicitly authorizes outreach in a later gate."
+    - "Confirm the human supplies or approves reviewer identity or review venue before any reviewer is named."
+    - "Confirm any outreach text preserves draft/control status and asks for critique, not endorsement."
+    - "Confirm any received response is ingested through the P10-T06 response-intake template or a later validated successor."
+    - "Confirm external feedback is advisory input only unless a later protected Gate Chair or benchmark route lawfully grants authority."
+  permitted_statement_after_this_packet: "A future outreach gate question exists; no outreach occurred."
+  forbidden_statement_after_this_packet: "External review, reviewer endorsement, or outreach authorization has occurred."
+  next_route: "P10-T06"
+  next_route_task_type: "external_review_response_intake_template"
+validation_expectations:
+  human_gate_setup_exists: true
+  no_external_message_sent: true
+  no_reviewer_named: true
+  next_route_is_p10_t06: true
+  physics_promotion_authorized: false

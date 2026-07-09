@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `e0f1de2d368d63ed8fdf1c5f43533542ab7d3943e85d8469a5817407c910ce5a`
-- Generated-at source timestamp: `2026-07-08T23:19:19Z`
-- Row count: `874`
+- Source fingerprint: `1a89cbe4e51f71e680662ba0bf635b692654407f800f79c5eda142a6260f773d`
+- Generated-at source timestamp: `2026-07-08T23:49:47Z`
+- Row count: `875`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260708-041|RT-20260708-040|2026-07-08T23:49:47Z|2026-07-08T23:49:47Z|external_outreach_human_gate_setup_only|completed|none|Prepare a human-gate question for possible future external outreach without sending anything.|director-of-research@0.3.0|false|false|5|Run one bounded v18 P10-T06 review-response intake template packet.|PASS|research_control/tasks/RT-20260708-041/jobs/completions/AJC-AJ-RT-20260708-041-001.yaml|
 |RT-20260708-040|RT-20260708-039|2026-07-08T23:19:19Z|2026-07-08T23:19:19Z|external_review_packet_internal_red_team|completed|source_equivalence_eqsrc|Internally stress the external-review packet for overclaim ambiguity and reviewer burden.|external-red-team-reviewer@0.1.0|false|false|9|Run one bounded v18 P10-T05 external-outreach human-gate setup packet.|PASS|research_control/tasks/RT-20260708-040/jobs/completions/AJC-AJ-RT-20260708-040-001.yaml|
 |RT-20260708-039|RT-20260708-038|2026-07-08T22:50:01Z|2026-07-08T22:50:01Z|external_review_packet_artifact|completed|source_equivalence_eqsrc|Generate the focused external-review packet from tracked source spec.|documentation-curator@2.0.0|false|false|8|Run one bounded v18 P10-T04 internal red-team review of the external-review packet.|PASS|research_control/tasks/RT-20260708-039/jobs/completions/AJC-AJ-RT-20260708-039-001.yaml|
 |RT-20260708-038|RT-20260708-037|2026-07-08T22:14:18Z|2026-07-08T22:14:18Z|external_review_packet_source_spec|completed|source_equivalence_eqsrc|Write a source spec for one focused external-review packet.|documentation-curator@2.0.0|false|false|8|Run one bounded v18 P10-T03 external-review packet artifact packet.|PASS|research_control/tasks/RT-20260708-038/jobs/completions/AJC-AJ-RT-20260708-038-001.yaml|
