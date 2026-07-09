@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `5a47565c01c74e34b08b2aa2e2b673adbb7311d9c92646cccdc98559217bc230`
-- Generated-at source timestamp: `2026-07-09T02:13:02Z`
-- Row count: `879`
+- Source fingerprint: `3de985742a0cb4401d6a448893813199bda19f5b02841ea0ad91dca31a2211be`
+- Generated-at source timestamp: `2026-07-09T02:38:46Z`
+- Row count: `880`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260709-005|RT-20260709-004|2026-07-09T02:38:46Z|2026-07-09T02:38:46Z|v18_ordinary_continuation_handoff|completed|none|Complete v18 ordinary-route selection by selecting exactly one continuation route from validated v18 outputs.|director-of-research@0.3.0|false|false|3|Run one bounded v18 P11-T05 recommendation coverage audit packet before executing the selected ordinary continuation route.|PASS|research_control/tasks/RT-20260709-005/jobs/completions/AJC-AJ-RT-20260709-005-001.yaml|
 |RT-20260709-004|RT-20260709-003|2026-07-09T02:13:02Z|2026-07-09T02:13:02Z|v18_current_frontier_ledger_sync|completed|none|Synchronize current frontier, compact frontier, graphs, and ledgers after v18 final validation.|project-control-maintainer@0.2.0|false|false|3|Run one bounded v18 P11-T04 ordinary continuation handoff packet.|PASS|research_control/tasks/RT-20260709-004/jobs/completions/AJC-AJ-RT-20260709-004-001.yaml|
 |RT-20260709-003|RT-20260709-002|2026-07-09T01:27:43Z|2026-07-09T01:27:43Z|v18_final_validation_packet|completed|none|Run final v18 validation layers and record exact pending reasons if any.|validator-engineer@0.2.0|false|false|1|Run one bounded v18 P11-T03 current-frontier ledger synchronization packet.|PASS|research_control/tasks/RT-20260709-003/jobs/completions/AJC-AJ-RT-20260709-003-001.yaml|
 |RT-20260709-002|RT-20260709-001|2026-07-09T00:51:47Z|2026-07-09T00:51:47Z|v18_integration_report|completed|none|Integrate all v18 phase outputs into one control report without physics promotion.|director-of-research@0.3.0|false|false|4|Run one bounded v18 P11-T02 final validation packet.|PASS|research_control/tasks/RT-20260709-002/jobs/completions/AJC-AJ-RT-20260709-002-001.yaml|
