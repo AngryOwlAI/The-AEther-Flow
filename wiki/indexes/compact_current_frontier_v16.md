@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260709-002`
-- Latest handoff: `handoff-0736`
-- Current status: `v18_p11_t01_integration_report_complete_no_physics_promotion_next_p11_t02`
+- Active task: `RT-20260709-003`
+- Latest handoff: `handoff-0737`
+- Current status: `v18_p11_t02_final_validation_passed_no_physics_promotion_next_p11_t03`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260709-002`
-- Latest research handoff: `handoff-0736`
-- Latest research next action: Run one bounded v18 P11-T02 final validation packet.
+- Latest research task: `RT-20260709-003`
+- Latest research handoff: `handoff-0737`
+- Latest research next action: Run one bounded v18 P11-T03 current-frontier ledger synchronization packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v18_final_validation_packet`
-- Role family: `validator-engineer@0.2.0`
+- Route ID: `v18_current_frontier_ledger_sync`
+- Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `none`
-- Milestone burden: Run final v18 validation layers and record exact pending reasons if any.
+- Milestone burden: Synchronize current frontier compact frontier graphs and ledger surfaces after final validation.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `17ede26992a9635eb151153098394991670297b5737ea8835d3532633afc825f`
-- JSON SHA-256: `c21baff38835e610f157e47ed3979e09e89c349f46be7e7716b9e08e6104c528`
+- YAML SHA-256: `54b1b9c84aec2e7a1ed13a0772eaf31b6e71fa7f8ca8bf163b6133e541153521`
+- JSON SHA-256: `ceb49dda95f237f64aebbac62533bd49d2d9a5c8fc48660ece3a31f8bed37e97`
 
 ## Authority Warning
 

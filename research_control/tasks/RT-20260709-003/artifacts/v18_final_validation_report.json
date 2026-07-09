@@ -1,0 +1,153 @@
+{
+  "schema_id": "v18_final_validation_report_v1",
+  "plan_id": "recommendations_implementation_plan_continue_task-v18",
+  "plan_phase_id": "P11",
+  "plan_task_id": "P11-T02",
+  "task_id": "RT-20260709-003",
+  "job_id": "AJ-RT-20260709-003-001",
+  "decision_id": "DDR-20260709-003",
+  "generated_at": "2026-07-09T02:00:01Z",
+  "status": "PASS",
+  "all_required_layers_passed": true,
+  "pending_hard_failures": [],
+  "repair_route_required": false,
+  "next_route": "P11-T03",
+  "next_route_id": "v18_current_frontier_ledger_sync",
+  "physics_progress_status": "v18_final_validation_no_promotion",
+  "claim_boundary": {
+    "distance_to_gr_promotion_claimed": false,
+    "ledger_row_updated": false,
+    "external_outreach_performed": false,
+    "proof_authority": false,
+    "benchmark_authority": false,
+    "gate_chair_verdict_issued": false,
+    "physics_promotion_authorized": false,
+    "completed_derivation_claimed": false
+  },
+  "validation_layers": [
+    {
+      "layer": "research_control_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_research_control.py",
+      "returncode": 0,
+      "evidence": "Research-control task decision job handoff role and registry consistency passed; historical advisory warnings only."
+    },
+    {
+      "layer": "research_control_diff_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff",
+      "returncode": 0,
+      "evidence": "Changed paths are within the active P11-T02 AgentJob allowlist; historical advisory warnings only."
+    },
+    {
+      "layer": "claim_language_changed",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json",
+      "returncode": 0,
+      "evidence": "Hard-fail count 0; warnings are historical advisory findings on pre-existing rows."
+    },
+    {
+      "layer": "documentation_impact",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json",
+      "returncode": 0,
+      "evidence": "Documentation-impact receipt matches classifier reason codes and live changed paths."
+    },
+    {
+      "layer": "memory_bootstrap_validate_only",
+      "status": "PASS",
+      "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only",
+      "returncode": 0,
+      "evidence": "Generated memory wiki semantic and registry derivative validation passed."
+    },
+    {
+      "layer": "current_frontier_render_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_current_frontier.py --check",
+      "returncode": 0,
+      "evidence": "Current frontier is fresh and routes next to P11-T03 with no physics-claim authority."
+    },
+    {
+      "layer": "compact_frontier_render_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check",
+      "returncode": 0,
+      "evidence": "Compact frontier is fresh, next_route_id is v18_current_frontier_ledger_sync, and no physics delta is recorded."
+    },
+    {
+      "layer": "task_index_render_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_task_index.py --check",
+      "returncode": 0,
+      "evidence": "Task-index CSV Markdown and wiki Markdown freshness checks passed after final report materialization."
+    },
+    {
+      "layer": "dependency_graph_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_dependency_graph.py --check",
+      "returncode": 0,
+      "evidence": "Dependency graph JSON Markdown and DOT freshness checks passed after post-bootstrap regeneration."
+    },
+    {
+      "layer": "claim_graph_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --graph output/claim_graph_v1.json --json",
+      "returncode": 0,
+      "evidence": "Claim graph validation passed with no physics delta and no proof authority."
+    },
+    {
+      "layer": "ai_methodology_dashboard_check",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/render_ai_methodology_metrics_dashboard.py --check --print-json",
+      "returncode": 0,
+      "evidence": "AI methodology dashboard freshness check passed; dashboard remains support-only diagnostic and does not rank physics truth."
+    },
+    {
+      "layer": "source_equivalence_object_registry_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_research_control.py",
+      "returncode": 0,
+      "evidence": "Research-control validation covers registry column and value contracts including source-equivalence object registry consistency."
+    },
+    {
+      "layer": "countermodel_obligation_registry_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python -m unittest tests/test_countermodel_obligation_validator.py",
+      "returncode": 0,
+      "evidence": "Countermodel obligation validator tests passed as part of the focused support-formalization test set."
+    },
+    {
+      "layer": "metric_use_ledger_tex_validator_if_integrated",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/validate_metric_use_tex_references.py --json --failure-mode hard-fail",
+      "returncode": 0,
+      "evidence": "Metric-use TeX reference validator passed for all configured high-risk metric-use artifacts."
+    },
+    {
+      "layer": "support_formalization_tests",
+      "status": "PASS",
+      "command": ".venv/bin/python -m unittest tests/test_countermodel_obligation_validator.py tests/test_typed_eqsrc_orbit_checker.py tests/test_closure_countermodel_generator.py tests/test_validate_metric_use_tex_references.py tests/test_support_formalization_traceability_registry_v18.py",
+      "returncode": 0,
+      "evidence": "Focused support-formalization unit test set passed: 32 tests."
+    },
+    {
+      "layer": "full_research_control_validation",
+      "status": "PASS",
+      "command": ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --output output/v18_p11_t02_full_research_control_validation_report.json --json",
+      "returncode": 0,
+      "evidence": "Full local CI-equivalent wrapper passed; required_failure_labels is empty; report written to output/v18_p11_t02_full_research_control_validation_report.json."
+    },
+    {
+      "layer": "git_diff_check",
+      "status": "PASS",
+      "command": "git diff --check",
+      "returncode": 0,
+      "evidence": "Whitespace diff check passed after LF normalization of touched CSV registry rows."
+    }
+  ],
+  "notes": [
+    "This report is a control-validation artifact only.",
+    "It is not proof authority, benchmark authority, Gate Chair authority, Distance-to-GR ledger promotion, or completed-derivation evidence.",
+    "All required P11-T02 validation layers passed with no pending hard failures; route to P11-T03."
+  ]
+}

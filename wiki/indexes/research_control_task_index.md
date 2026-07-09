@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `52f4138fbb64baa82e1243119fea01fc1ada5ea79d6b7e2fff5a0a7bc98effa6`
-- Generated-at source timestamp: `2026-07-09T00:51:47Z`
-- Row count: `877`
+- Source fingerprint: `175b570d4aee92bb9b4fe0f5414cb9ba8a31fbc6d525e0b161be91338feb89cf`
+- Generated-at source timestamp: `2026-07-09T01:27:43Z`
+- Row count: `878`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260709-003|RT-20260709-002|2026-07-09T01:27:43Z|2026-07-09T01:27:43Z|v18_final_validation_packet|completed|none|Run final v18 validation layers and record exact pending reasons if any.|validator-engineer@0.2.0|false|false|1|Run one bounded v18 P11-T03 current-frontier ledger synchronization packet.|PASS|research_control/tasks/RT-20260709-003/jobs/completions/AJC-AJ-RT-20260709-003-001.yaml|
 |RT-20260709-002|RT-20260709-001|2026-07-09T00:51:47Z|2026-07-09T00:51:47Z|v18_integration_report|completed|none|Integrate all v18 phase outputs into one control report without physics promotion.|director-of-research@0.3.0|false|false|4|Run one bounded v18 P11-T02 final validation packet.|PASS|research_control/tasks/RT-20260709-002/jobs/completions/AJC-AJ-RT-20260709-002-001.yaml|
 |RT-20260709-001|RT-20260708-041|2026-07-09T00:25:09Z|2026-07-09T00:25:09Z|external_review_response_intake_template|completed|none|Create a template for future external-review responses without treating them as proof authority.|process-integrity-auditor@0.1.0|false|false|3|Run one bounded v18 P11-T01 integration report packet.|PASS|research_control/tasks/RT-20260709-001/jobs/completions/AJC-AJ-RT-20260709-001-001.yaml|
 |RT-20260708-041|RT-20260708-040|2026-07-08T23:49:47Z|2026-07-08T23:49:47Z|external_outreach_human_gate_setup_only|completed|none|Prepare a human-gate question for possible future external outreach without sending anything.|director-of-research@0.3.0|false|false|4|Run one bounded v18 P10-T06 review-response intake template packet.|PASS|research_control/tasks/RT-20260708-041/jobs/completions/AJC-AJ-RT-20260708-041-001.yaml|

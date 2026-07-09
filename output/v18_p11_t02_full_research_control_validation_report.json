@@ -1,0 +1,263 @@
+{
+  "advisory_failure_labels": [],
+  "commands": [
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "label": "memory_validate_only",
+      "purpose": "Confirm generated memory, wiki, semantic, and registry derivative surfaces are fresh.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "Validation PASS\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-render-check",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/render_current_frontier.py",
+        "--check"
+      ],
+      "label": "current_frontier_check",
+      "purpose": "Confirm the current-frontier report is fresh relative to tracked control state.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"accepted_status_calibration_path\": \"research_control/design/accepted_status_calibration_v2.yaml\",\n  \"active_state_bifurcation\": {\n    \"latest_project_system_sidecar_status\": \"none\",\n    \"latest_project_system_sidecar_task_id\": \"none\",\n    \"latest_project_system_status\": \"none\",\n    \"latest_project_system_task_id\": \"none\",\n    \"latest_research_handoff_id\": \"handoff-0737\",\n    \"latest_research_next_action\": \"Run one bounded v18 P11-T03 current-frontier ledger synchronization packet.\",\n    \"latest_research_task_id\": \"RT-20260709-003\",\n    \"next_research_route_source\": \"latest_research_handoff\",\n    \"sidecar_supersedes_research_handoff\": false\n  },\n  \"active_task_id\": \"RT-20260709-003\",\n  \"authorization_layer_fields\": [],\n  \"authorization_layer_summary\": {\n    \"authorized\": [],\n    \"not_authorized\": []\n  },\n  \"current_burden\": \"none for physics derivation; live control burden follows the next action: Run one bounded v18 P11-T03 current-frontier ledger synchronization packet.\",\n  \"current_status\": \"v18_p11_t02_final_validation_passed_no_physics_promotion_next_p11_t03\",\n  \"distance_to_gr_row_count\": 14,\n  \"frontier_path\": \"research_control/current_frontier.md\",\n  \"high_risk_status_card_count\": 5,\n  \"high_risk_status_card_object_ids\": [\n    \"m_src\",\n    \"g_eff\",\n    \"matter_coupling\",\n    \"einstein_equations\",\n    \"benchmark_promotion\"\n  ],\n  \"latest_handoff_id\": \"handoff-0737\",\n  \"layered_status_fields\": [\n    \"control_status\",\n    \"mathematical_status\",\n    \"physical_status\",\n    \"promotion_status\",\n    \"overread_guard\"\n  ],\n  \"metric_use_ledger_path\": \"registries/METRIC_USE_LEDGER.csv\",\n  \"metric_use_ledger_summary\": {\n    \"audit_status_counts\": {\n      \"audited_clean\": 6,\n      \"blocked_by_scope\": 13\n    },\n    \"audited_clean_row_count\": 6,\n    \"blocked_by_scope_row_count\": 13,\n    \"blocked_physical_metric_use_row_count\": 11,\n    \"forbidden_or_import_row_count\": 19,\n    \"ledger_path\": \"registries/METRIC_USE_LEDGER.csv\",\n    \"stress_status_counts\": {\n      \"not_applicable\": 17,\n      \"scoped_obstruction\": 2\n    },\n    \"total_row_count\": 19,\n    \"use_category_counts\": {\n      \"blocked_physical_metric_use\": 11,\n      \"finite_local_witness_context\": 4,\n      \"scoped_source_extension_context\": 3,\n      \"source_side_relation_input_candidate\": 1\n    }\n  },\n  \"next_recommended_action\": \"Run one bounded v18 P11-T03 current-frontier ledger synchronization packet.\",\n  \"physics_claim_authority\": false,\n  \"rendered_hash\": \"d8b35cff6aa752389db5e51ad8881d4dc64fc820f828317693612053399b6309\",\n  \"required_next_authority\": \"Run one bounded v18 P11-T03 current-frontier ledger synchronization packet.\",\n  \"route_family\": \"v18_final_validation_packet\",\n  \"schema_id\": \"current_frontier_state_v1\",\n  \"snapshot_only_not_authority\": true,\n  \"source_paths\": [\n    \"research_control/program_state.yaml\",\n    \"research_control/handoffs/handoff-0737.yaml\",\n    \"research_control/tasks/RT-20260709-003/00_TASK.yaml\",\n    \"registries/DISTANCE_TO_GR_LEDGER.csv\",\n    \"registries/METRIC_USE_LEDGER.csv\",\n    \"research_control/design/distance_to_gr_status_aliases.yaml\",\n    \"research_control/design/accepted_status_calibration_v2.yaml\",\n    \"research_control/design/active_state_bifurcation_policy_v1.md\"\n  ],\n  \"status\": \"pass\",\n  \"status_alias_integration\": \"reader_facing_status_column\",\n  \"status_alias_path\": \"research_control/design/distance_to_gr_status_aliases.yaml\",\n  \"status_alias_row_count\": 11,\n  \"status_card_version\": \"v2\",\n  \"target_derivation_milestone\": \"none; this is project-control tooling work\",\n  \"v16_completed\": false,\n  \"validation_layer_fields\": [],\n  \"validation_layer_status_counts\": {}\n}\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_compact_current_frontier_v16.py",
+        "--json"
+      ],
+      "label": "compact_current_frontier_check",
+      "purpose": "Confirm compact current-frontier YAML and JSON remain synchronized with tracked state and protected claim boundaries.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"active_task_id\": \"RT-20260709-003\",\n  \"checked_failure_modes\": [\n    \"active_task_mismatch\",\n    \"latest_handoff_mismatch\",\n    \"next_route_mismatch\",\n    \"high_risk_row_missing\",\n    \"high_risk_status_card_missing\",\n    \"high_risk_status_card_incomplete\",\n    \"metric_use_ledger_missing\",\n    \"metric_use_ledger_path_mismatch\",\n    \"metric_use_ledger_forbidden_import_count_missing\",\n    \"blocked_claim_missing\",\n    \"matter_coupling_overpromoted\",\n    \"einstein_equations_overpromoted\",\n    \"benchmark_promotion_overpromoted\",\n    \"authority_warning_missing\",\n    \"yaml_json_mismatch\",\n    \"live_snapshot_mismatch\"\n  ],\n  \"errors\": [],\n  \"json_path\": \"output/compact_current_frontier_v16.json\",\n  \"latest_handoff_id\": \"handoff-0737\",\n  \"next_route_id\": \"v18_current_frontier_ledger_sync\",\n  \"no_physics_delta\": true,\n  \"operational_receipt_only\": true,\n  \"physics_proof_authority\": false,\n  \"schema_id\": \"compact_current_frontier_v16_validation_report_v1\",\n  \"snapshot_only_not_authority\": true,\n  \"status\": \"PASS\",\n  \"warnings\": [],\n  \"yaml_path\": \"output/compact_current_frontier_v16.yaml\"\n}\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-render-check",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/render_dependency_graph.py",
+        "--check"
+      ],
+      "label": "dependency_graph_check",
+      "purpose": "Confirm dependency graph JSON, Markdown, and DOT artifacts are fresh.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "dependency graph freshness check: PASS\n- json: fresh path=output/research_dependency_graph.json actual=ad381a88d6a068550389018f1290c7a0937133f216a9630fda9bcd1aef2649ea expected=ad381a88d6a068550389018f1290c7a0937133f216a9630fda9bcd1aef2649ea\n- markdown: fresh path=wiki/indexes/research_dependency_graph.md actual=2e2c819098df7e11b077c44bd8145d5a36a015c6b262a65d95e6361bbde416e5 expected=2e2c819098df7e11b077c44bd8145d5a36a015c6b262a65d95e6361bbde416e5\n- dot: fresh path=output/research_dependency_graph.dot actual=f2208c56e47cfe18e93a1f552176de68ef84ee05ff59fa7132fa3356d57b0bd3 expected=f2208c56e47cfe18e93a1f552176de68ef84ee05ff59fa7132fa3356d57b0bd3\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_task_index.py",
+        "--json"
+      ],
+      "label": "task_index_validation",
+      "purpose": "Validate generated task-index outputs against tracked task records and completions.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260629-039/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260629-039\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260629-040/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260629-040\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260630-027/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260630-027\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260630-028/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260630-028\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260630-030/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260630-030\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260630-031/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260630-031\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260630-032/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260630-032\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260701-003/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260701-003\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260701-004/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260701-004\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260701-005/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260701-005\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260701-006/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260701-006\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260702-033/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260702-033\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260702-034/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260702-034\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260702-035/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260702-035\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260702-037/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260702-037\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260702-053/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260702-053\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260702-054/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260702-054\"\n    },\n    {\n      \"code\": \"missing_field\",\n      \"message\": \"milestone_burden is missing\",\n      \"path\": \"research_control/tasks/RT-20260702-055/00_TASK.yaml\",\n      \"severity\": \"warning\",\n      \"task_id\": \"RT-20260702-055\"\n    }\n  ]\n}\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_claim_graph_v1.py",
+        "--json"
+      ],
+      "label": "claim_graph_validation",
+      "purpose": "Validate claim_graph_v1 against P12-T03 non-promotion and derivative-authority guard rules.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"claim_graph_schema_id\": \"claim_graph_schema_v1\",\n  \"distance_to_gr_delta\": \"none\",\n  \"error_count\": 0,\n  \"errors\": [],\n  \"generated_at\": \"2026-07-09T02:06:24.743954Z\",\n  \"graph_id\": \"claim_graph_v1\",\n  \"graph_path\": \"/Volumes/P-SSD/AngryOwl/The-AEther-Flow/output/claim_graph_v1.json\",\n  \"no_physics_delta\": true,\n  \"operational_receipt_only\": true,\n  \"physics_proof_authority\": false,\n  \"rule_results\": {\n    \"accepted_evidence_preconditions_downstream_non_establishment\": {\n      \"checked_count\": 3,\n      \"checked_node_ids\": [\n        \"conditional-theorem-narrow-ms-cert-eq-v1\",\n        \"evidence-positive-ms-profile-v1\",\n        \"evidence-rr-e-transport-completeness-or-invariance-law-v1\"\n      ],\n      \"status\": \"PASS\"\n    },\n    \"benchmark_promotion_protected_authority\": {\n      \"checked_count\": 14,\n      \"checked_edge_ids\": [\n        \"edge-benchmark-promotion-requires-human-gate\",\n        \"edge-einstein-equations-depends-on-matter-coupling\",\n        \"edge-einstein-equations-does-not-establish-benchmark-promotion\",\n        \"edge-g-eff-does-not-establish-matter-coupling\",\n        \"edge-m-src-supports-g-eff\",\n        \"edge-matter-coupling-depends-on-g-eff\",\n        \"edge-matter-coupling-depends-on-narrow-ms\",\n        \"edge-matter-coupling-depends-on-positive-profile\",\n        \"edge-matter-coupling-depends-on-rr-e-transport\",\n        \"edge-matter-coupling-does-not-establish-einstein-equations\",\n        \"edge-narrow-ms-cert-eq-does-not-establish-matter-coupling\",\n        \"edge-positive-profile-does-not-establish-matter-coupling\",\n        \"edge-resp-lc-supports-m-src\",\n        \"edge-rr-e-transport-does-not-establish-matter-coupling\"\n      ],\n      \"status\": \"PASS\"\n    },\n    \"gate_chair_exact_authority_paths\": {\n      \"checked_count\": 1,\n      \"checked_node_ids\": [\n        \"conditional-theorem-narrow-ms-cert-eq-v1\"\n      ],\n      \"status\": \"PASS\"\n    },\n    \"generated_derivatives_is_derivative_of\": {\n      \"checked_count\": 0,\n      \"checked_node_ids\": [],\n      \"status\": \"PASS\"\n    },\n    \"high_risk_positive_blocked_overread_edges\": {\n      \"checked_count\": 6,\n      \"checked_node_ids\": [\n        \"conditional-theorem-narrow-ms-cert-eq-v1\",\n        \"evidence-positive-ms-profile-v1\",\n        \"evidence-rr-e-transport-completeness-or-invariance-law-v1\",\n        \"source-extension-g-eff\",\n        \"source-extension-resp-lc\",\n        \"source-object-m-src\"\n      ],\n      \"status\": \"PASS\"\n    },\n    \"schema_and_boundary\": {\n      \"status\": \"PASS\"\n    },\n    \"scoped_evidence_to_completed_derivation_paths\": {\n      \"checked_path_count\": 0,\n      \"checked_source_count\": 6,\n      \"completed_derivation_target_count\": 0,\n      \"status\": \"PASS\"\n    }\n  },\n  \"schema_id\": \"claim_graph_validation_report_v1\",\n  \"status\": \"PASS\",\n  \"validator_name\": \"scripts/research_control/validate_claim_graph_v1.py\",\n  \"validator_version\": \"v1\"\n}\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/validate_claim_language.py",
+        "--json",
+        "--changed"
+      ],
+      "label": "claim_language_changed_lint",
+      "purpose": "Lint changed claim-language gate surfaces, including high-risk accepted wording.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "ssLaw_v1 adoption as law;source-extension data adoption beyond this exact scoped result;MetricData(E) adoption;g_eff scope change;matter-semantics adoption;detector-semantics adoption;coupling-law adoption;matter-coupling derivation;matter-coupling adoption;stress-energy semantics;stress-energy tensor;matter action;Einstein equation derivation;benchmark promotion;benchmark Gate Chair closure or suspension;completed derivation claim;future source-extension impossibility claim;global theory rejection,,research_control/approvals/approval-20260702-002.yaml;research_control/current_frontier.md;research_control/program_state.yaml;research_control/tasks/RT-20260702-062/**;research_control/tasks/RT-*/jobs/**;research_control/handoffs/handoff-0515.yaml;research_control/handoffs/handoff-0515.md;output/**;wiki/indexes/**;wiki/markdown/**;wiki/tex/**;registries/AGENT_JOB_REGISTRY.csv;registries/CLAIM_BOUNDARY_REGISTRY.csv;registries/DIRECTOR_DECISION_REGISTRY.csv;registries/DISTANCE_TO_GR_LEDGER.csv;registries/MARKDOWN_SOURCE_REGISTRY.csv;registries/RESEARCH_TASK_REGISTRY.csv;registries/ROLE_EXECUTION_REGISTRY.csv;registries/TEX_SOURCE_REGISTRY.csv;registries/CONTENT_SEMANTIC_REGISTRY.csv;registries/CONTENT_SEMANTIC_REGISTRY.meta.json;registries/FILE_OBJECT_REGISTRY.csv;registries/FILE_OBJECT_REGISTRY.meta.json;registries/OBJECT_RELATIONSHIP_REGISTRY.csv;registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json;registries/OBSIDIAN_VAULT_REGISTRY.csv;registries/OBSIDIAN_VAULT_REGISTRY.meta.json;registries/WIKI_ARTIFACT_REGISTRY.csv;registries/WIKI_ARTIFACT_REGISTRY.meta.json;FOLDER_MAP.md,false,AJ-RT-20260702-062-001,Handoff-0514 required one bounded Gate Chair packet and approval-20260702-002 records the exact user authorization.,false,PASS,2026-07-02T21:58:10Z,2026-07-02T21:58:10Z,Execution-role record accepts scoped NarrowMSCertEq_v1 source-extension evidence-status only and preserves all source-law RR_ETransportCompletenessOrInvarianceLaw_v1 PositiveMSProfile_v1 SourceMatterSemanticsAdoptionReadinessLaw_v1 matter-semantics detector-semantics coupling matter-coupling MetricData g_eff stress-energy matter-action Einstein-equation benchmark and completed-derivation blocks.\",\n      \"severity\": \"warn_historical\",\n      \"surface_class\": \"historical_artifacts\",\n      \"finding_kind\": \"underclaim_calibration_warning\",\n      \"corrective_language\": \"State the positive scoped status first, then the exact scope, allowed use, and blocked overread.\",\n      \"context\": \"surface_policy\"\n    },\n    {\n      \"path\": \"registries/ROLE_EXECUTION_REGISTRY.csv\",\n      \"line\": 868,\n      \"class_id\": \"global_no_go_or_rejection_overclaim\",\n      \"matched_text\": \"global theory rejection\",\n      \"severity\": \"warn_historical\",\n      \"surface_class\": \"historical_artifacts\",\n      \"finding_kind\": \"overclaim_warning\",\n      \"corrective_language\": \"Use blocked-adoption/open-continuation or scoped-obstruction language unless a separate no-go theorem exists.\",\n      \"context\": \"surface_policy\"\n    },\n    {\n      \"path\": \"registries/ROLE_EXECUTION_REGISTRY.csv\",\n      \"line\": 869,\n      \"class_id\": \"global_no_go_or_rejection_overclaim\",\n      \"matched_text\": \"global theory rejection\",\n      \"severity\": \"warn_historical\",\n      \"surface_class\": \"historical_artifacts\",\n      \"finding_kind\": \"overclaim_warning\",\n      \"corrective_language\": \"Use blocked-adoption/open-continuation or scoped-obstruction language unless a separate no-go theorem exists.\",\n      \"context\": \"surface_policy\"\n    },\n    {\n      \"path\": \"registries/ROLE_EXECUTION_REGISTRY.csv\",\n      \"line\": 870,\n      \"class_id\": \"global_no_go_or_rejection_overclaim\",\n      \"matched_text\": \"global theory rejection\",\n      \"severity\": \"warn_historical\",\n      \"surface_class\": \"historical_artifacts\",\n      \"finding_kind\": \"overclaim_warning\",\n      \"corrective_language\": \"Use blocked-adoption/open-continuation or scoped-obstruction language unless a separate no-go theorem exists.\",\n      \"context\": \"surface_policy\"\n    }\n  ]\n}\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/validate_documentation_impact.py",
+        "--json"
+      ],
+      "label": "documentation_impact_validation",
+      "purpose": "Validate documentation-impact receipts for the current transaction.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "put/research_dependency_graph.dot\",\n      \"output/research_dependency_graph.json\",\n      \"output/v18_p11_t02_full_research_control_validation_report.json\",\n      \"registries/AGENT_JOB_REGISTRY.csv\",\n      \"registries/CLAIM_BOUNDARY_REGISTRY.csv\",\n      \"registries/CONTENT_SEMANTIC_REGISTRY.csv\",\n      \"registries/CONTENT_SEMANTIC_REGISTRY.meta.json\",\n      \"registries/DIRECTOR_DECISION_REGISTRY.csv\",\n      \"registries/FILE_OBJECT_REGISTRY.csv\",\n      \"registries/FILE_OBJECT_REGISTRY.meta.json\",\n      \"registries/MARKDOWN_SOURCE_REGISTRY.csv\",\n      \"registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json\",\n      \"registries/OBSIDIAN_VAULT_REGISTRY.csv\",\n      \"registries/OBSIDIAN_VAULT_REGISTRY.meta.json\",\n      \"registries/RESEARCH_TASK_REGISTRY.csv\",\n      \"registries/ROLE_EXECUTION_REGISTRY.csv\",\n      \"registries/WIKI_ARTIFACT_REGISTRY.csv\",\n      \"registries/WIKI_ARTIFACT_REGISTRY.meta.json\",\n      \"research_control/current_frontier.md\",\n      \"research_control/handoffs/handoff-0737.md\",\n      \"research_control/handoffs/handoff-0737.yaml\",\n      \"research_control/program_state.yaml\",\n      \"research_control/tasks/RT-20260709-003/00_TASK.yaml\",\n      \"research_control/tasks/RT-20260709-003/DDR-20260709-003.md\",\n      \"research_control/tasks/RT-20260709-003/artifacts/v18_final_validation_report.json\",\n      \"research_control/tasks/RT-20260709-003/documentation_impact.yaml\",\n      \"research_control/tasks/RT-20260709-003/jobs/AJ-RT-20260709-003-001.yaml\",\n      \"research_control/tasks/RT-20260709-003/jobs/completions/AJC-AJ-RT-20260709-003-001.yaml\",\n      \"research_control/tasks/RT-20260709-003/roles/validator-engineer@0.2.0--RT-20260709-003.yaml\",\n      \"research_control/tasks/TASK_INDEX.csv\",\n      \"research_control/tasks/TASK_INDEX.md\",\n      \"wiki/indexes/ai_methodology_metrics_dashboard.md\",\n      \"wiki/indexes/compact_current_frontier_v16.md\",\n      \"wiki/indexes/research_control_task_index.md\",\n      \"wiki/indexes/research_dependency_graph.md\",\n      \"wiki/markdown/md-research-control-current-frontier.md\",\n      \"wiki/markdown/md-research-control-task-index.md\"\n    ],\n    \"ignored_paths\": [],\n    \"generated_only_paths\": [\n      \"FOLDER_MAP.md\",\n      \"registries/CONTENT_SEMANTIC_REGISTRY.csv\",\n      \"registries/CONTENT_SEMANTIC_REGISTRY.meta.json\",\n      \"registries/FILE_OBJECT_REGISTRY.csv\",\n      \"registries/FILE_OBJECT_REGISTRY.meta.json\",\n      \"registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json\",\n      \"registries/OBSIDIAN_VAULT_REGISTRY.csv\",\n      \"registries/OBSIDIAN_VAULT_REGISTRY.meta.json\",\n      \"registries/WIKI_ARTIFACT_REGISTRY.csv\",\n      \"registries/WIKI_ARTIFACT_REGISTRY.meta.json\",\n      \"wiki/indexes/ai_methodology_metrics_dashboard.md\",\n      \"wiki/indexes/compact_current_frontier_v16.md\",\n      \"wiki/indexes/research_control_task_index.md\",\n      \"wiki/indexes/research_dependency_graph.md\",\n      \"wiki/markdown/md-research-control-current-frontier.md\",\n      \"wiki/markdown/md-research-control-task-index.md\"\n    ],\n    \"blocked_paths\": [],\n    \"recommended_skill\": \"improve-project-system\",\n    \"recommended_role\": \"project-control-maintainer\",\n    \"required_documentation_surfaces\": [\n      \"AGENTS.md\",\n      \"README.md\",\n      \"registries/MARKDOWN_SOURCE_REGISTRY.csv\"\n    ],\n    \"required_validators\": [\n      \"bootstrap_memory_system\",\n      \"validate_documentation_impact\"\n    ],\n    \"documentation_impact_guidance\": \"State-changing project-system work requires research_control/tasks/<task_id>/documentation_impact.yaml. Use docs_update_required: false only when no source documentation or registry documentation update is needed; the receipt must still list live changed_paths, exact classifier reason_codes, generated_derivatives, validators_run, and a no_update_rationale.\",\n    \"block_checkpoint_until_addressed\": true\n  },\n  \"documentation_update_paths\": [\n    \"registries/MARKDOWN_SOURCE_REGISTRY.csv\"\n  ],\n  \"impact_record_paths\": [\n    \"research_control/tasks/RT-20260709-003/documentation_impact.yaml\"\n  ]\n}\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted",
+        "--json"
+      ],
+      "label": "project_improvement_signal_validation",
+      "purpose": "Validate emitted project-improvement signals and bridge sidecars.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"registered_signal_type_count\": 12,\n  \"registered_signal_count\": 6,\n  \"emitted_signal_count\": 3,\n  \"improvement_handoff_count\": 0,\n  \"open_improvement_handoff_count\": 0,\n  \"sidecar_validation_errors\": [],\n  \"sidecar_activation_timestamp\": \"2026-06-22T04:00:00Z\"\n}\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_research_control.py"
+      ],
+      "label": "research_control_validation",
+      "purpose": "Validate research-control task, decision, job, handoff, role, and registry consistency.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "h_control/tasks/RT-20260702-065/jobs/completions/AJC-AJ-RT-20260702-065-001.yaml: validation_layers.task_local_validator is an extension layer\nWarning: research_control/tasks/RT-20260702-065/jobs/completions/AJC-AJ-RT-20260702-065-001.yaml: validation_layers.unit_tests is an extension layer\nWarning: research_control/tasks/RT-20260705-038/jobs/completions/AJC-AJ-RT-20260705-038-001.yaml: validation_layers.signal_bridge is an extension layer\nWarning: research_control/tasks/RT-20260705-041/jobs/completions/AJC-AJ-RT-20260705-041-001.yaml: validation_layers.final_validation_report is an extension layer\nWarning: research_control/tasks/RT-20260705-045/jobs/completions/AJC-AJ-RT-20260705-045-001.yaml: validation_layers.active_state is an extension layer\nWarning: research_control/tasks/RT-20260705-045/jobs/completions/AJC-AJ-RT-20260705-045-001.yaml: validation_layers.frontier_sync is an extension layer\nWarning: research_control/tasks/RT-20260705-045/jobs/completions/AJC-AJ-RT-20260705-045-001.yaml: validation_layers.generated_derivative_advisory is an extension layer\nWarning: research_control/tasks/RT-20260705-045/jobs/completions/AJC-AJ-RT-20260705-045-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260705-046/jobs/completions/AJC-AJ-RT-20260705-046-001.yaml: validation_layers.candidate_setup is an extension layer\nWarning: research_control/tasks/RT-20260705-046/jobs/completions/AJC-AJ-RT-20260705-046-001.yaml: validation_layers.no_target_guard is an extension layer\nWarning: research_control/tasks/RT-20260705-046/jobs/completions/AJC-AJ-RT-20260705-046-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260705-047/jobs/completions/AJC-AJ-RT-20260705-047-001.yaml: validation_layers.candidate_construction is an extension layer\nWarning: research_control/tasks/RT-20260705-047/jobs/completions/AJC-AJ-RT-20260705-047-001.yaml: validation_layers.no_target_guard is an extension layer\nWarning: research_control/tasks/RT-20260705-047/jobs/completions/AJC-AJ-RT-20260705-047-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260705-048/jobs/completions/AJC-AJ-RT-20260705-048-001.yaml: validation_layers.candidate_self_check is an extension layer\nWarning: research_control/tasks/RT-20260705-048/jobs/completions/AJC-AJ-RT-20260705-048-001.yaml: validation_layers.no_target_guard is an extension layer\nWarning: research_control/tasks/RT-20260705-048/jobs/completions/AJC-AJ-RT-20260705-048-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260706-003/jobs/completions/AJC-AJ-RT-20260706-003-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260706-003/jobs/completions/AJC-AJ-RT-20260706-003-001.yaml: validation_layers.task_local_validator is an extension layer\nWarning: research_control/tasks/RT-20260706-004/jobs/completions/AJC-AJ-RT-20260706-004-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260706-004/jobs/completions/AJC-AJ-RT-20260706-004-001.yaml: validation_layers.task_local_validator is an extension layer\nWarning: research_control/tasks/RT-20260706-031/jobs/completions/AJC-AJ-RT-20260706-031-001.yaml: validation_layers.collector is an extension layer\nWarning: research_control/tasks/RT-20260706-031/jobs/completions/AJC-AJ-RT-20260706-031-001.yaml: validation_layers.implementation is an extension layer\nWarning: research_control/tasks/RT-20260706-031/jobs/completions/AJC-AJ-RT-20260706-031-001.yaml: validation_layers.task_local_validator is an extension layer\nWarning: research_control/tasks/RT-20260706-032/jobs/completions/AJC-AJ-RT-20260706-032-001.yaml: validation_layers.child_reviews is an extension layer\nWarning: research_control/tasks/RT-20260706-032/jobs/completions/AJC-AJ-RT-20260706-032-001.yaml: validation_layers.fused_review is an extension layer\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_research_control.py",
+        "--check-diff"
+      ],
+      "label": "research_control_diff_validation",
+      "purpose": "Validate current changed paths against the active AgentJob allowlist.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "h_control/tasks/RT-20260702-065/jobs/completions/AJC-AJ-RT-20260702-065-001.yaml: validation_layers.task_local_validator is an extension layer\nWarning: research_control/tasks/RT-20260702-065/jobs/completions/AJC-AJ-RT-20260702-065-001.yaml: validation_layers.unit_tests is an extension layer\nWarning: research_control/tasks/RT-20260705-038/jobs/completions/AJC-AJ-RT-20260705-038-001.yaml: validation_layers.signal_bridge is an extension layer\nWarning: research_control/tasks/RT-20260705-041/jobs/completions/AJC-AJ-RT-20260705-041-001.yaml: validation_layers.final_validation_report is an extension layer\nWarning: research_control/tasks/RT-20260705-045/jobs/completions/AJC-AJ-RT-20260705-045-001.yaml: validation_layers.active_state is an extension layer\nWarning: research_control/tasks/RT-20260705-045/jobs/completions/AJC-AJ-RT-20260705-045-001.yaml: validation_layers.frontier_sync is an extension layer\nWarning: research_control/tasks/RT-20260705-045/jobs/completions/AJC-AJ-RT-20260705-045-001.yaml: validation_layers.generated_derivative_advisory is an extension layer\nWarning: research_control/tasks/RT-20260705-045/jobs/completions/AJC-AJ-RT-20260705-045-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260705-046/jobs/completions/AJC-AJ-RT-20260705-046-001.yaml: validation_layers.candidate_setup is an extension layer\nWarning: research_control/tasks/RT-20260705-046/jobs/completions/AJC-AJ-RT-20260705-046-001.yaml: validation_layers.no_target_guard is an extension layer\nWarning: research_control/tasks/RT-20260705-046/jobs/completions/AJC-AJ-RT-20260705-046-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260705-047/jobs/completions/AJC-AJ-RT-20260705-047-001.yaml: validation_layers.candidate_construction is an extension layer\nWarning: research_control/tasks/RT-20260705-047/jobs/completions/AJC-AJ-RT-20260705-047-001.yaml: validation_layers.no_target_guard is an extension layer\nWarning: research_control/tasks/RT-20260705-047/jobs/completions/AJC-AJ-RT-20260705-047-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260705-048/jobs/completions/AJC-AJ-RT-20260705-048-001.yaml: validation_layers.candidate_self_check is an extension layer\nWarning: research_control/tasks/RT-20260705-048/jobs/completions/AJC-AJ-RT-20260705-048-001.yaml: validation_layers.no_target_guard is an extension layer\nWarning: research_control/tasks/RT-20260705-048/jobs/completions/AJC-AJ-RT-20260705-048-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260706-003/jobs/completions/AJC-AJ-RT-20260706-003-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260706-003/jobs/completions/AJC-AJ-RT-20260706-003-001.yaml: validation_layers.task_local_validator is an extension layer\nWarning: research_control/tasks/RT-20260706-004/jobs/completions/AJC-AJ-RT-20260706-004-001.yaml: validation_layers.source_basis is an extension layer\nWarning: research_control/tasks/RT-20260706-004/jobs/completions/AJC-AJ-RT-20260706-004-001.yaml: validation_layers.task_local_validator is an extension layer\nWarning: research_control/tasks/RT-20260706-031/jobs/completions/AJC-AJ-RT-20260706-031-001.yaml: validation_layers.collector is an extension layer\nWarning: research_control/tasks/RT-20260706-031/jobs/completions/AJC-AJ-RT-20260706-031-001.yaml: validation_layers.implementation is an extension layer\nWarning: research_control/tasks/RT-20260706-031/jobs/completions/AJC-AJ-RT-20260706-031-001.yaml: validation_layers.task_local_validator is an extension layer\nWarning: research_control/tasks/RT-20260706-032/jobs/completions/AJC-AJ-RT-20260706-032-001.yaml: validation_layers.child_reviews is an extension layer\nWarning: research_control/tasks/RT-20260706-032/jobs/completions/AJC-AJ-RT-20260706-032-001.yaml: validation_layers.fused_review is an extension layer\n"
+    },
+    {
+      "advisory": true,
+      "authority_level": "advisory-diagnostic",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/extract_route_signatures.py",
+        "--sample",
+        "recent-matter-coupling",
+        "--json"
+      ],
+      "label": "route_signature_extraction",
+      "purpose": "Exercise implemented v15 route-signature extraction as diagnostic control evidence.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "        ],\n        \"v14_source_evidence\": [\n          \"freeze_candidate\",\n          \"object_name\",\n          \"payload_type\"\n        ]\n      },\n      \"source_extension_classification\": \"source_extension_human_gate\",\n      \"source_job_id\": \"AJ-RT-20260701-030-001\",\n      \"source_signature_hash\": \"d49e5a0e321a49760233b5c78e051ee17e42f223f4fd931de5b6344afff8b0af\",\n      \"source_signature_schema_id\": \"route_signature_definition_v1\",\n      \"source_task_id\": \"RT-20260701-030\",\n      \"target_derivation_milestone\": \"matter_coupling\"\n    },\n    {\n      \"distance_to_gr_delta\": {\n        \"burden_id\": \"matter_coupling\",\n        \"changed\": false,\n        \"effect\": \"no_distance_delta\",\n        \"milestone\": \"matter_coupling\"\n      },\n      \"freeze_criteria_status\": {\n        \"decision\": \"not_applicable\",\n        \"evaluated\": false,\n        \"freeze_scope\": \"none\",\n        \"triggered\": false\n      },\n      \"mathematical_payload_class\": \"boundary_synchronization_only\",\n      \"milestone_burden\": \"matter_coupling\",\n      \"new_mathematics_signature\": false,\n      \"next_route_selected\": \"run_one_bounded_v14_p2-t01_scoped-positive_claim_vocabulary_control_packet_before_public_status_propagation_claim-language_linter_matter-coupling_einstein-equation_benchmark_or_promotion_work.\",\n      \"object_or_claim_name\": \"RR_E boundary theorem-inventory synchronization\",\n      \"obstruction_id\": \"none\",\n      \"process_refresh_signature\": false,\n      \"role_family\": \"project-control-maintainer\",\n      \"route_family\": \"boundary_synchronization\",\n      \"route_signature_hash\": \"feaeeeed6d9c3bea33e6a165062b56c8deb063f319fde23a73608c34a5a23677\",\n      \"route_signature_key\": \"matter_coupling|matter_coupling|RR_E boundary theorem-inventory synchronization|boundary_synchronization|project-control-maintainer|boundary_synchronization_only|no_distance_delta|source_extension_boundary_sync|none|not_applicable|run_one_bounded_v14_p2-t01_scoped-positive_claim_vocabulary_control_packet_before_public_status_propagation_claim-language_linter_matter-coupling_einstein-equation_benchmark_or_promotion_work.\",\n      \"signature_schema_id\": \"route_signature_schema_v1\",\n      \"source_completion_path\": \"research_control/tasks/RT-20260701-031/jobs/completions/AJC-AJ-RT-20260701-031-001.yaml\",\n      \"source_created_at\": \"2026-07-01T17:44:01Z\",\n      \"source_evidence\": {\n        \"projection_source\": [\n          \"scripts/research_control/extract_route_history.py\",\n          \"research_control/design/route_signature_schema_v1.md\"\n        ],\n        \"v14_source_evidence\": [\n          \"object_name\",\n          \"payload_type\"\n        ]\n      },\n      \"source_extension_classification\": \"source_extension_boundary_sync\",\n      \"source_job_id\": \"AJ-RT-20260701-031-001\",\n      \"source_signature_hash\": \"31ee5f9a5d8691e40bd578e3185c69dbf241db35dd9a9acb81bc40c85659d5c8\",\n      \"source_signature_schema_id\": \"route_signature_definition_v1\",\n      \"source_task_id\": \"RT-20260701-031\",\n      \"target_derivation_milestone\": \"matter_coupling\"\n    }\n  ],\n  \"sample\": \"recent-matter-coupling\",\n  \"schema_id\": \"route_signature_pilot_report_v1\",\n  \"signature_schema_id\": \"route_signature_schema_v1\",\n  \"source_route_history_schema_id\": \"route_history_extractor_v1\",\n  \"source_signature_schema_id\": \"route_signature_definition_v1\",\n  \"status\": \"PASS\",\n  \"suggested_freeze_or_continuation_consequence\": \"no_freeze_from_pilot_continue_to_p10_t03_freeze_threshold_policy\",\n  \"task_count\": 23,\n  \"task_ids\": [\n    \"RT-20260701-001\",\n    \"RT-20260701-002\",\n    \"RT-20260701-007\",\n    \"RT-20260701-008\",\n    \"RT-20260701-009\",\n    \"RT-20260701-010\",\n    \"RT-20260701-015\",\n    \"RT-20260701-016\",\n    \"RT-20260701-017\",\n    \"RT-20260701-018\",\n    \"RT-20260701-019\",\n    \"RT-20260701-020\",\n    \"RT-20260701-021\",\n    \"RT-20260701-022\",\n    \"RT-20260701-023\",\n    \"RT-20260701-024\",\n    \"RT-20260701-025\",\n    \"RT-20260701-026\",\n    \"RT-20260701-027\",\n    \"RT-20260701-028\",\n    \"RT-20260701-029\",\n    \"RT-20260701-030\",\n    \"RT-20260701-031\"\n  ]\n}\n"
+    },
+    {
+      "advisory": true,
+      "authority_level": "advisory-diagnostic",
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_route_orbits.py",
+        "--sample",
+        "recent-matter-rr-e",
+        "--json",
+        "--advisory-only"
+      ],
+      "label": "route_orbit_advisory",
+      "purpose": "Run route-orbit diagnostics without converting advisory evidence into a physics verdict.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"extraction_errors\": [],\n  \"generated_at\": \"2026-07-09T02:07:18Z\",\n  \"hard_failure_count\": 0,\n  \"hard_failures\": [],\n  \"schema_id\": \"route_orbit_validator_v1\",\n  \"signature_count\": 22,\n  \"signature_schema_id\": \"route_signature_definition_v1\",\n  \"source_route_history_schema_id\": \"route_history_extractor_v1\",\n  \"source_sample\": \"recent-matter-rr-e\",\n  \"source_task_count\": 22,\n  \"status\": \"PASS\",\n  \"warning_count\": 0,\n  \"warnings\": []\n}\n"
+    },
+    {
+      "advisory": false,
+      "authority_level": "required-gate",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "label": "whitespace_diff_check",
+      "purpose": "Detect whitespace errors in the current transaction diff.",
+      "required": true,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr_tail": "",
+      "stdout_tail": ""
+    }
+  ],
+  "distance_to_gr_delta": "none",
+  "generated_at": "2026-07-09T02:07:19.309738Z",
+  "include_smoke_tests": false,
+  "no_physics_delta": true,
+  "operational_receipt_only": true,
+  "physics_proof_authority": false,
+  "repo_root": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow",
+  "required_check_coverage": {
+    "active_state_sidecar_validation": true,
+    "claim_graph_validation": true,
+    "claim_language_lint": true,
+    "compact_current_frontier_check": true,
+    "current_frontier_check": true,
+    "diff_allowlist_check": true,
+    "documentation_impact": true,
+    "generated_derivative_drift_check": true,
+    "no_bare_accepted_high_risk_rows": true,
+    "no_premature_efe_route": true,
+    "registry_referential_integrity": true,
+    "research_control_validation": true,
+    "route_orbit_advisory": true,
+    "route_signature_extraction_if_implemented": true,
+    "task_index_validation": true,
+    "whitespace_diff_check": true
+  },
+  "required_failure_labels": [],
+  "schema_id": "research_control_local_ci_equivalent_report_v1",
+  "status": "PASS"
+}
