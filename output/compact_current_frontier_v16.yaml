@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0734.yaml"
+  - "research_control/handoffs/handoff-0735.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260708-041"
-  latest_handoff_id: "handoff-0734"
-  current_status: "v18_p10_t05_external_outreach_human_gate_setup_complete_no_outreach_no_reviewer_named_no_physics_promotion"
+  active_task_id: "RT-20260709-001"
+  latest_handoff_id: "handoff-0735"
+  current_status: "v18_p10_t06_external_review_response_intake_template_complete_no_outreach_no_authority_promotion"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260708-041"
-  latest_research_handoff_id: "handoff-0734"
-  latest_research_next_action: "Run one bounded v18 P10-T06 review-response intake template packet."
+  latest_research_task_id: "RT-20260709-001"
+  latest_research_handoff_id: "handoff-0735"
+  latest_research_next_action: "Run one bounded v18 P11-T01 integration report packet."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "external_review_response_intake_template"
-  role_family: "process-integrity-auditor@0.1.0"
+  route_id: "v18_integration_report"
+  role_family: "director-of-research@0.3.0"
   target_derivation_milestone: "none"
-  milestone_burden: "Create a template for future external-review responses without treating them as proof authority."
+  milestone_burden: "Integrate all v18 phase outputs into one control report without physics promotion."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
