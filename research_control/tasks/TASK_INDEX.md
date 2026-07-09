@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `b02c049b908d290ef121166a5cd3b1b5c5ecab0d4758b4f9c41aeb0cce38c124`
-- Generated-at source timestamp: `2026-07-09T14:20:54Z`
-- Row count: `882`
+- Source fingerprint: `aff49b06b05df0de38d71234ce7dae496c7b7fc4ff6737c3a9106c7960ecc619`
+- Generated-at source timestamp: `2026-07-09T16:17:08Z`
+- Row count: `883`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260709-008|RT-20260709-007|2026-07-09T16:17:08Z|2026-07-09T16:17:08Z|project_system_ci_validation_repair_followup|completed|none|Project-system CI validation repair follow-up only; no physics derivation milestone is advanced.|validator-engineer@0.2.0|false|false|0|Commit and push the repair then rerun GitHub Actions Project Control Validation.|PASS|research_control/tasks/RT-20260709-008/jobs/completions/AJC-AJ-RT-20260709-008-001.yaml|
 |RT-20260709-007|RT-20260709-006|2026-07-09T14:20:54Z|2026-07-09T14:20:54Z|project_system_ci_validation_repair|completed|none|Project-system CI validation repair only; no physics derivation milestone is advanced.|validator-engineer@0.2.0|false|false|0|Rerun GitHub Actions for Project Control Validation after commit and push.|PASS|research_control/tasks/RT-20260709-007/jobs/completions/AJC-AJ-RT-20260709-007-001.yaml|
 |RT-20260709-006|RT-20260709-005|2026-07-09T03:11:04Z|2026-07-09T03:11:04Z|v18_recommendation_coverage_audit|completed|none|Audit coverage of all v18 recommendations and identify any project-improvement signals.|process-integrity-auditor@0.1.0|false|false|5|Run one bounded EqSrc family-closure repair-or-stress packet from validated v18 outputs.|PASS|research_control/tasks/RT-20260709-006/jobs/completions/AJC-AJ-RT-20260709-006-001.yaml|
 |RT-20260709-005|RT-20260709-004|2026-07-09T02:38:46Z|2026-07-09T02:38:46Z|v18_ordinary_continuation_handoff|completed|none|Complete v18 ordinary-route selection by selecting exactly one continuation route from validated v18 outputs.|director-of-research@0.3.0|false|false|3|Run one bounded v18 P11-T05 recommendation coverage audit packet before executing the selected ordinary continuation route.|PASS|research_control/tasks/RT-20260709-005/jobs/completions/AJC-AJ-RT-20260709-005-001.yaml|

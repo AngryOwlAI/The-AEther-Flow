@@ -1,0 +1,123 @@
+completion_path: "research_control/tasks/RT-20260709-008/jobs/completions/AJC-AJ-RT-20260709-008-001.yaml"
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260709-008-001"
+job_id: "AJ-RT-20260709-008-001"
+task_id: "RT-20260709-008"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-09T16:17:08Z"
+status: "completed"
+output_paths:
+  - "FOLDER_MAP.md"
+  - "research_control/tasks/RT-20260709-008/00_TASK.yaml"
+  - "research_control/tasks/RT-20260709-008/DDR-20260709-008.md"
+  - "research_control/tasks/RT-20260709-008/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260709-008/jobs/AJ-RT-20260709-008-001.yaml"
+  - "research_control/tasks/RT-20260709-008/jobs/completions/AJC-AJ-RT-20260709-008-001.yaml"
+  - "research_control/tasks/RT-20260709-008/roles/validator-engineer@0.2.0--RT-20260709-008.yaml"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".gitignore"
+  - ".github/workflows/project-control-validation.yml"
+  - "research_control/tasks/RT-20260709-007/jobs/completions/AJC-AJ-RT-20260709-007-001.yaml"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=WARN local_retrieval_status=WARN source_object_count=796"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup RT-20260709-007 --json | exit_code=0 | match_count=4"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"stale generated folder map\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASK-INDEX among retrieval hits"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | changed_paths=[]"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | boundary=no_action advisory"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write | exit_code=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0"
+  - "make PYTHON=.venv/bin/python validate-project-control | exit_code=0"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 796
+    relationship_row_count: 3969
+    semantic_row_count: 796
+    vault_row_count: 796
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/TASK_INDEX.md --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/TASK_INDEX.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "cf9e9f2e035f41b18ad44045550ec7521934c56d849abb55a4917e8f39789efe"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "GitHub Actions logs and local validate-only reproduction both identify stale FOLDER_MAP.md as the hard failure."
+      - "The exact missing generated rows are for the tracked RT-20260709-007 task directory tree."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "RT-20260709-008 is a project-system follow-up only."
+      - "No canonical physics source or proof-normal-form science registry row was edited."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Follow-up control receipts and registry rows were written before generated surfaces were refreshed."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The project-control validation bundle is required to pass before commit or push."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "render_task_index.py refreshes generated task-index surfaces after the RT-20260709-008 task row exists."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "bootstrap_memory_system.py refreshes FOLDER_MAP.md after the tracked RT-20260709-007 and RT-20260709-008 task trees exist."
+  claim_language_linter:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "The packet does not edit claim-language taxonomy or public claim text."
+authorization_layers:
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+claim_boundary:
+  proof_authority: false
+  physics_promotion_authorized: false
+  source_law_adoption_authorized: false
+  matter_coupling_authorized: false
+  einstein_equation_route_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+next_recommended_action: "Commit and push this follow-up repair then rerun Project Control Validation on GitHub Actions."
