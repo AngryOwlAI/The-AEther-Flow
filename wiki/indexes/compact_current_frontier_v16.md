@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260709-005`
-- Latest handoff: `handoff-0739`
-- Current status: `v18_p11_t04_ordinary_route_selected_no_physics_delta_next_p11_t05`
+- Active task: `RT-20260709-006`
+- Latest handoff: `handoff-0740`
+- Current status: `v18_p11_t05_coverage_audit_complete_no_signals_v18_complete_next_eqsrc_route`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260709-005`
-- Latest research handoff: `handoff-0739`
-- Latest research next action: Run one bounded v18 P11-T05 recommendation coverage audit packet before executing the selected ordinary continuation route.
+- Latest research task: `RT-20260709-006`
+- Latest research handoff: `handoff-0740`
+- Latest research next action: Run one bounded EqSrc family-closure repair-or-stress packet from validated v18 outputs.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v18_p11_t05_recommendation_coverage_audit`
-- Role family: `process-integrity-auditor@0.1.0`
-- Target milestone: `none`
-- Milestone burden: Audit v18 recommendation coverage and identify any project-improvement signals before executing the selected ordinary scientific route.
+- Route ID: `EqSrc_family_closure_repair_or_stress`
+- Role family: `director-of-research@0.3.0`
+- Target milestone: `source_equivalence_eqsrc`
+- Milestone burden: Select or execute one bounded EqSrc family-closure repair-or-stress packet from validated v18 outputs.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ff0e065685ec5d5c5dcee38c78b434684873985c0655951b948b16b037eefdd8`
-- JSON SHA-256: `6d006511df31cb7d980d99dadeae1988ba81a33c689f000db96a9a2b1937fd2a`
+- YAML SHA-256: `062a9e9488cb6f69f1b1bafa5b26a60629758fdff520dbfdb0dca45420be6397`
+- JSON SHA-256: `b3290c79c433ac49f3b1a2abbeb633c44f608c89b28404ce3c38b7e8b1a09e82`
 
 ## Authority Warning
 

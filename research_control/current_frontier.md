@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260709-005` and `handoff-0739`.
+`RT-20260709-006` and `handoff-0740`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260709-005` |
-| Latest handoff ID | `handoff-0739` |
-| Current status | `v18_p11_t04_ordinary_route_selected_no_physics_delta_next_p11_t05` |
+| Active task ID | `RT-20260709-006` |
+| Latest handoff ID | `handoff-0740` |
+| Current status | `v18_p11_t05_coverage_audit_complete_no_signals_v18_complete_next_eqsrc_route` |
 | V16 completed | false |
-| Current route family | v18 p11 t04 ordinary route selected no physics delta next p11 t05 |
-| Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run one bounded v18 P11-T05 recommendation coverage audit packet before executing the selected ordinary continuation route. |
-| Required next authority | P11-T05 may audit recommendation coverage and decide whether P11-T06 is required. The selected ordinary scientific route is EqSrc family-closure repair or stress, but it must not be executed until the remaining P11 audit or bridge routing is resolved. |
-| Next recommended action | Run one bounded v18 P11-T05 recommendation coverage audit packet before executing the selected ordinary continuation route. |
+| Current route family | v18 completed recommendation coverage audit no signals next eqsrc family closure repair or stress |
+| Target derivation milestone | `source_equivalence_eqsrc` |
+| Current burden | `source_equivalence_eqsrc`; status: draft object exists |
+| Required next authority | The next ordinary continuation may create exactly one bounded EqSrc family-closure repair-or-stress packet from validated v18 outputs. It must not promote physics claims or change Distance-to-GR status unless separately justified by protected authority. |
+| Next recommended action | Run one bounded EqSrc family-closure repair-or-stress packet from validated v18 outputs. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260709-005` |
-| Latest research handoff ID | `handoff-0739` |
-| Latest research next action | Run one bounded v18 P11-T05 recommendation coverage audit packet before executing the selected ordinary continuation route. |
+| Latest research task ID | `RT-20260709-006` |
+| Latest research handoff ID | `handoff-0740` |
+| Latest research next action | Run one bounded EqSrc family-closure repair-or-stress packet from validated v18 outputs. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260709-005/00_TASK.yaml`.
+- Active task path: `research_control/tasks/RT-20260709-006/00_TASK.yaml`.
 - Active task objective: not recorded.
-- Latest handoff path: `research_control/handoffs/handoff-0739.yaml`.
-- Latest handoff summary: RT-20260709-005 completed v18 P11-T04 by selecting EqSrc_family_closure_repair_or_stress as the single ordinary continuation route from validated v18 outputs. P11-T05 remains the immediate next bounded plan packet before executing the selected ordinary route. No Distance-to-GR ledger status change, physics promotion, proof authority, source-law adoption, general EqSrc discharge, RetainH adoption, GenH adoption, detector or readout semantics adoption, matter-coupling derivation, Einstein-equation derivation, benchmark promotion, Gate Chair verdict, or completed-derivation claim is authorized.
-- Current route family: v18 p11 t04 ordinary route selected no physics delta next p11 t05.
-- Next recommended action: Run one bounded v18 P11-T05 recommendation coverage audit packet before executing the selected ordinary continuation route.
+- Latest handoff path: `research_control/handoffs/handoff-0740.yaml`.
+- Latest handoff summary: RT-20260709-006 completed v18 P11-T05 by assigning final covered status to V18-R01 through V18-R10. No missing or partial recommendation was found, no project-improvement signal was emitted, P11-T06 is not required, and v18 applicable plan tasks are complete. No Distance-to-GR ledger status change, physics promotion, proof authority, source-law adoption, general EqSrc discharge, RetainH adoption, GenH adoption, detector/readout semantics adoption, matter-coupling derivation, Einstein-equation derivation, benchmark promotion, Gate Chair verdict, or completed-derivation claim is authorized.
+- Current route family: v18 completed recommendation coverage audit no signals next eqsrc family closure repair or stress.
+- Next recommended action: Run one bounded EqSrc family-closure repair-or-stress packet from validated v18 outputs.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v18 P11-T05 recommendation coverage audit packet before executing the selected ordinary continuation route.
+Run one bounded EqSrc family-closure repair-or-stress packet from validated v18 outputs.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260709-005`;
-- latest handoff: `handoff-0739`;
-- current status: `v18_p11_t04_ordinary_route_selected_no_physics_delta_next_p11_t05`;
+- active task: `RT-20260709-006`;
+- latest handoff: `handoff-0740`;
+- current status: `v18_p11_t05_coverage_audit_complete_no_signals_v18_complete_next_eqsrc_route`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0739.yaml`
-- `research_control/tasks/RT-20260709-005/00_TASK.yaml`
+- `research_control/handoffs/handoff-0740.yaml`
+- `research_control/tasks/RT-20260709-006/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0739*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0740*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

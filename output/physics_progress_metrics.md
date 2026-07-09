@@ -20,17 +20,17 @@ This report is generated from tracked research-control registries and completion
 
 | Metric | Value |
 | --- | --- |
-| `tasks_registered` | `876` |
-| `jobs_registered` | `876` |
+| `tasks_registered` | `877` |
+| `jobs_registered` | `877` |
 | `completions_read` | `876` |
 | `physics_completions_read` | `473` |
-| `claim_boundary_rows` | `833` |
-| `active_claim_boundary_rows` | `823` |
+| `claim_boundary_rows` | `834` |
+| `active_claim_boundary_rows` | `824` |
 | `completion_validation_status_counts` | `{"PASS": 847, "PASS_WITH_SURFACE_AUDIT_FINDINGS": 1, "PENDING": 1, "unknown": 27}` |
 | `tasks_with_forbidden_conclusion_summary` | `402` |
 | `physics_promotion_authorized_true` | `27` |
 | `physics_promotion_authorized_false` | `375` |
-| `claim_boundary_rows_active` | `823` |
+| `claim_boundary_rows_active` | `824` |
 | `selector_tasks` | `104` |
 | `candidate_constructor_tasks` | `54` |
 | `smuggling_auditor_tasks` | `86` |
@@ -125,9 +125,9 @@ These metrics are AI-system diagnostics only. They do not rank physics truth, au
 | `not_physics_proof` | `True` |
 | `physics_claim_promotion_authorized` | `False` |
 | `distance_delta` | `{"changed_false_count": 377, "changed_true_count": 183, "effect_counts": {"missing_effect": 685, "no_distance_delta": 191}, "records_read": 876}` |
-| `separate_packet_counts` | `{"candidate_packet_count": 177, "freeze_packet_count": 257, "obstruction_packet_count": 34, "process_only_packet_count": 477, "theorem_packet_count": 119}` |
+| `separate_packet_counts` | `{"candidate_packet_count": 177, "freeze_packet_count": 257, "obstruction_packet_count": 34, "process_only_packet_count": 478, "theorem_packet_count": 119}` |
 | `candidate_result_counts` | `{"constructed_candidate": 32, "constructed_target_pending_candidate_constructor": 1, "minimal_countermodel": 1, "precise_obstruction": 10}` |
-| `payload_density_summary` | `{"classified_item_count": 1492, "mathematical_payload_item_count": 905, "mathematical_payload_task_count": 399, "payload_class_counts": {"conditional_theorem": 21, "countermodel": 56, "dependency_map_update": 143, "documentation_only": 104, "finite_witness": 225, "new_definition": 49, "new_theorem_statement": 144, "obstruction": 149, "proof_attempt": 0, "proved_theorem": 1, "route_selector_only": 168, "source_extension_classification": 117, "validator_tooling_only": 315}, "payload_density": 0.606568, "process_only_item_count": 587, "process_only_task_count": 477, "task_count": 876, "task_payload_density": 0.455479}` |
+| `payload_density_summary` | `{"classified_item_count": 1493, "mathematical_payload_item_count": 905, "mathematical_payload_task_count": 399, "payload_class_counts": {"conditional_theorem": 21, "countermodel": 56, "dependency_map_update": 143, "documentation_only": 104, "finite_witness": 225, "new_definition": 49, "new_theorem_statement": 144, "obstruction": 149, "proof_attempt": 0, "proved_theorem": 1, "route_selector_only": 168, "source_extension_classification": 117, "validator_tooling_only": 316}, "payload_density": 0.606162, "process_only_item_count": 588, "process_only_task_count": 478, "task_count": 877, "task_payload_density": 0.45496}` |
 
 ## AI Research-Agent Methodology Metrics
 
@@ -143,7 +143,7 @@ These diagnostics are support-only AI-system methodology metrics. They are separ
 | `audit_to_stress_survival` | Candidate life cycle | `partial` | `1.0233` | This is an aggregate route-stage proxy; candidate lineage across audit and stress is not yet deterministic. |
 | `stress_survival_rate` | Candidate life cycle | `partial` | `0.3864` | Stress survival is counted only as a non-promotional candidate-status outcome. |
 | `human_gate_load` | Governance load | `measured` | `None` | Gate-load signals are governance workload diagnostics, not Gate Chair scientific verdicts. |
-| `proof_to_process_ratio` | Payload balance | `measured` | `1.5417` | Payload balance compares mathematical payload items to process-only items; it is not proof authority. |
+| `proof_to_process_ratio` | Payload balance | `measured` | `1.5391` | Payload balance compares mathematical payload items to process-only items; it is not proof authority. |
 
 ## AI Methodology Acceptance Warnings
 

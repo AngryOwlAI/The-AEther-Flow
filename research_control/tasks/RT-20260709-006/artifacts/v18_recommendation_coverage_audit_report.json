@@ -1,0 +1,991 @@
+{
+  "schema_id": "v18_recommendation_coverage_audit_report_v1",
+  "task_id": "RT-20260709-006",
+  "job_id": "AJ-RT-20260709-006-001",
+  "decision_id": "DDR-20260709-006",
+  "plan_id": "recommendations_implementation_plan_continue_task-v18",
+  "plan_phase_id": "P11",
+  "plan_task_id": "P11-T05",
+  "created_at": "2026-07-09T03:11:04Z",
+  "aggregate_status": "PASS",
+  "operational_receipt_only": true,
+  "proof_authority": false,
+  "physics_promotion_authorized": false,
+  "expected_recommendation_ids": [
+    "V18-R01",
+    "V18-R02",
+    "V18-R03",
+    "V18-R04",
+    "V18-R05",
+    "V18-R06",
+    "V18-R07",
+    "V18-R08",
+    "V18-R09",
+    "V18-R10"
+  ],
+  "audited_recommendation_count": 10,
+  "covered_recommendation_count": 10,
+  "missing_or_partial_recommendation_count": 0,
+  "coverage_rows": [
+    {
+      "recommendation_id": "V18-R01",
+      "final_coverage_status": "covered",
+      "direct_backlog_task_count": 11,
+      "completed_direct_task_count": 11,
+      "missing_direct_tasks": [],
+      "direct_plan_tasks": [
+        "P10-T01",
+        "P2-T01",
+        "P2-T03",
+        "P2-T06",
+        "P3-T01",
+        "P3-T02",
+        "P3-T03",
+        "P3-T04",
+        "P3-T05",
+        "P3-T06",
+        "P4-T05"
+      ],
+      "completed_direct_evidence": [
+        {
+          "plan_task_id": "P10-T01",
+          "task_id": "RT-20260708-037",
+          "completion_id": "AJC-AJ-RT-20260708-037-001",
+          "completion_path": "research_control/tasks/RT-20260708-037/jobs/completions/AJC-AJ-RT-20260708-037-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P2-T01",
+          "task_id": "RT-20260707-013",
+          "completion_id": "AJC-AJ-RT-20260707-013-001",
+          "completion_path": "research_control/tasks/RT-20260707-013/jobs/completions/AJC-AJ-RT-20260707-013-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P2-T03",
+          "task_id": "RT-20260707-015",
+          "completion_id": "AJC-AJ-RT-20260707-015-001",
+          "completion_path": "research_control/tasks/RT-20260707-015/jobs/completions/AJC-AJ-RT-20260707-015-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P2-T06",
+          "task_id": "RT-20260707-018",
+          "completion_id": "AJC-AJ-RT-20260707-018-001",
+          "completion_path": "research_control/tasks/RT-20260707-018/jobs/completions/AJC-AJ-RT-20260707-018-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T01",
+          "task_id": "RT-20260707-019",
+          "completion_id": "AJC-AJ-RT-20260707-019-001",
+          "completion_path": "research_control/tasks/RT-20260707-019/jobs/completions/AJC-AJ-RT-20260707-019-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T02",
+          "task_id": "RT-20260707-020",
+          "completion_id": "AJC-AJ-RT-20260707-020-001",
+          "completion_path": "research_control/tasks/RT-20260707-020/jobs/completions/AJC-AJ-RT-20260707-020-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T03",
+          "task_id": "RT-20260707-021",
+          "completion_id": "AJC-AJ-RT-20260707-021-001",
+          "completion_path": "research_control/tasks/RT-20260707-021/jobs/completions/AJC-AJ-RT-20260707-021-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T04",
+          "task_id": "RT-20260707-022",
+          "completion_id": "AJC-AJ-RT-20260707-022-001",
+          "completion_path": "research_control/tasks/RT-20260707-022/jobs/completions/AJC-AJ-RT-20260707-022-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T05",
+          "task_id": "RT-20260707-023",
+          "completion_id": "AJC-AJ-RT-20260707-023-001",
+          "completion_path": "research_control/tasks/RT-20260707-023/jobs/completions/AJC-AJ-RT-20260707-023-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T06",
+          "task_id": "RT-20260707-024",
+          "completion_id": "AJC-AJ-RT-20260707-024-001",
+          "completion_path": "research_control/tasks/RT-20260707-024/jobs/completions/AJC-AJ-RT-20260707-024-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P4-T05",
+          "task_id": "RT-20260708-005",
+          "completion_id": "AJC-AJ-RT-20260708-005-001",
+          "completion_path": "research_control/tasks/RT-20260708-005/jobs/completions/AJC-AJ-RT-20260708-005-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        }
+      ],
+      "integration_report_status": "implemented with downstream validation pending",
+      "integration_report_remaining_work": "P11-T02 validates final v18 receipts; ordinary route may return to EqSrc-family repair or stress.",
+      "project_improvement_signal_required": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false
+    },
+    {
+      "recommendation_id": "V18-R02",
+      "final_coverage_status": "covered",
+      "direct_backlog_task_count": 12,
+      "completed_direct_task_count": 12,
+      "missing_direct_tasks": [],
+      "direct_plan_tasks": [
+        "P10-T01",
+        "P2-T01",
+        "P2-T02",
+        "P2-T03",
+        "P2-T04",
+        "P2-T05",
+        "P2-T06",
+        "P3-T01",
+        "P3-T02",
+        "P3-T03",
+        "P3-T06",
+        "P7-T02"
+      ],
+      "completed_direct_evidence": [
+        {
+          "plan_task_id": "P10-T01",
+          "task_id": "RT-20260708-037",
+          "completion_id": "AJC-AJ-RT-20260708-037-001",
+          "completion_path": "research_control/tasks/RT-20260708-037/jobs/completions/AJC-AJ-RT-20260708-037-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P2-T01",
+          "task_id": "RT-20260707-013",
+          "completion_id": "AJC-AJ-RT-20260707-013-001",
+          "completion_path": "research_control/tasks/RT-20260707-013/jobs/completions/AJC-AJ-RT-20260707-013-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P2-T02",
+          "task_id": "RT-20260707-014",
+          "completion_id": "AJC-AJ-RT-20260707-014-001",
+          "completion_path": "research_control/tasks/RT-20260707-014/jobs/completions/AJC-AJ-RT-20260707-014-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P2-T03",
+          "task_id": "RT-20260707-015",
+          "completion_id": "AJC-AJ-RT-20260707-015-001",
+          "completion_path": "research_control/tasks/RT-20260707-015/jobs/completions/AJC-AJ-RT-20260707-015-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P2-T04",
+          "task_id": "RT-20260707-016",
+          "completion_id": "AJC-AJ-RT-20260707-016-001",
+          "completion_path": "research_control/tasks/RT-20260707-016/jobs/completions/AJC-AJ-RT-20260707-016-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P2-T05",
+          "task_id": "RT-20260707-017",
+          "completion_id": "AJC-AJ-RT-20260707-017-001",
+          "completion_path": "research_control/tasks/RT-20260707-017/jobs/completions/AJC-AJ-RT-20260707-017-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P2-T06",
+          "task_id": "RT-20260707-018",
+          "completion_id": "AJC-AJ-RT-20260707-018-001",
+          "completion_path": "research_control/tasks/RT-20260707-018/jobs/completions/AJC-AJ-RT-20260707-018-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T01",
+          "task_id": "RT-20260707-019",
+          "completion_id": "AJC-AJ-RT-20260707-019-001",
+          "completion_path": "research_control/tasks/RT-20260707-019/jobs/completions/AJC-AJ-RT-20260707-019-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T02",
+          "task_id": "RT-20260707-020",
+          "completion_id": "AJC-AJ-RT-20260707-020-001",
+          "completion_path": "research_control/tasks/RT-20260707-020/jobs/completions/AJC-AJ-RT-20260707-020-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T03",
+          "task_id": "RT-20260707-021",
+          "completion_id": "AJC-AJ-RT-20260707-021-001",
+          "completion_path": "research_control/tasks/RT-20260707-021/jobs/completions/AJC-AJ-RT-20260707-021-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T06",
+          "task_id": "RT-20260707-024",
+          "completion_id": "AJC-AJ-RT-20260707-024-001",
+          "completion_path": "research_control/tasks/RT-20260707-024/jobs/completions/AJC-AJ-RT-20260707-024-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P7-T02",
+          "task_id": "RT-20260708-020",
+          "completion_id": "AJC-AJ-RT-20260708-020-001",
+          "completion_path": "research_control/tasks/RT-20260708-020/jobs/completions/AJC-AJ-RT-20260708-020-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        }
+      ],
+      "integration_report_status": "implemented with blocked adoption",
+      "integration_report_remaining_work": "Candidate definition packets remain possible ordinary routes; adoption remains blocked without protected authority.",
+      "project_improvement_signal_required": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false
+    },
+    {
+      "recommendation_id": "V18-R03",
+      "final_coverage_status": "covered",
+      "direct_backlog_task_count": 16,
+      "completed_direct_task_count": 16,
+      "missing_direct_tasks": [],
+      "direct_plan_tasks": [
+        "P10-T01",
+        "P2-T05",
+        "P2-T06",
+        "P3-T01",
+        "P3-T02",
+        "P3-T03",
+        "P3-T04",
+        "P3-T05",
+        "P3-T06",
+        "P4-T01",
+        "P4-T02",
+        "P4-T03",
+        "P4-T04",
+        "P4-T05",
+        "P4-T06",
+        "P7-T03"
+      ],
+      "completed_direct_evidence": [
+        {
+          "plan_task_id": "P10-T01",
+          "task_id": "RT-20260708-037",
+          "completion_id": "AJC-AJ-RT-20260708-037-001",
+          "completion_path": "research_control/tasks/RT-20260708-037/jobs/completions/AJC-AJ-RT-20260708-037-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P2-T05",
+          "task_id": "RT-20260707-017",
+          "completion_id": "AJC-AJ-RT-20260707-017-001",
+          "completion_path": "research_control/tasks/RT-20260707-017/jobs/completions/AJC-AJ-RT-20260707-017-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P2-T06",
+          "task_id": "RT-20260707-018",
+          "completion_id": "AJC-AJ-RT-20260707-018-001",
+          "completion_path": "research_control/tasks/RT-20260707-018/jobs/completions/AJC-AJ-RT-20260707-018-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T01",
+          "task_id": "RT-20260707-019",
+          "completion_id": "AJC-AJ-RT-20260707-019-001",
+          "completion_path": "research_control/tasks/RT-20260707-019/jobs/completions/AJC-AJ-RT-20260707-019-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T02",
+          "task_id": "RT-20260707-020",
+          "completion_id": "AJC-AJ-RT-20260707-020-001",
+          "completion_path": "research_control/tasks/RT-20260707-020/jobs/completions/AJC-AJ-RT-20260707-020-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T03",
+          "task_id": "RT-20260707-021",
+          "completion_id": "AJC-AJ-RT-20260707-021-001",
+          "completion_path": "research_control/tasks/RT-20260707-021/jobs/completions/AJC-AJ-RT-20260707-021-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T04",
+          "task_id": "RT-20260707-022",
+          "completion_id": "AJC-AJ-RT-20260707-022-001",
+          "completion_path": "research_control/tasks/RT-20260707-022/jobs/completions/AJC-AJ-RT-20260707-022-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T05",
+          "task_id": "RT-20260707-023",
+          "completion_id": "AJC-AJ-RT-20260707-023-001",
+          "completion_path": "research_control/tasks/RT-20260707-023/jobs/completions/AJC-AJ-RT-20260707-023-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P3-T06",
+          "task_id": "RT-20260707-024",
+          "completion_id": "AJC-AJ-RT-20260707-024-001",
+          "completion_path": "research_control/tasks/RT-20260707-024/jobs/completions/AJC-AJ-RT-20260707-024-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P4-T01",
+          "task_id": "RT-20260708-001",
+          "completion_id": "AJC-AJ-RT-20260708-001-001",
+          "completion_path": "research_control/tasks/RT-20260708-001/jobs/completions/AJC-AJ-RT-20260708-001-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P4-T02",
+          "task_id": "RT-20260708-002",
+          "completion_id": "AJC-AJ-RT-20260708-002-001",
+          "completion_path": "research_control/tasks/RT-20260708-002/jobs/completions/AJC-AJ-RT-20260708-002-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P4-T03",
+          "task_id": "RT-20260708-003",
+          "completion_id": "AJC-AJ-RT-20260708-003-001",
+          "completion_path": "research_control/tasks/RT-20260708-003/jobs/completions/AJC-AJ-RT-20260708-003-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P4-T04",
+          "task_id": "RT-20260708-004",
+          "completion_id": "AJC-AJ-RT-20260708-004-001",
+          "completion_path": "research_control/tasks/RT-20260708-004/jobs/completions/AJC-AJ-RT-20260708-004-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P4-T05",
+          "task_id": "RT-20260708-005",
+          "completion_id": "AJC-AJ-RT-20260708-005-001",
+          "completion_path": "research_control/tasks/RT-20260708-005/jobs/completions/AJC-AJ-RT-20260708-005-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P4-T06",
+          "task_id": "RT-20260708-006",
+          "completion_id": "AJC-AJ-RT-20260708-006-001",
+          "completion_path": "research_control/tasks/RT-20260708-006/jobs/completions/AJC-AJ-RT-20260708-006-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P7-T03",
+          "task_id": "RT-20260708-021",
+          "completion_id": "AJC-AJ-RT-20260708-021-001",
+          "completion_path": "research_control/tasks/RT-20260708-021/jobs/completions/AJC-AJ-RT-20260708-021-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        }
+      ],
+      "integration_report_status": "implemented with scoped obstruction preserved",
+      "integration_report_remaining_work": "General EqSrc discharge remains blocked; strongest surviving family result may need repair or stress.",
+      "project_improvement_signal_required": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false
+    },
+    {
+      "recommendation_id": "V18-R04",
+      "final_coverage_status": "covered",
+      "direct_backlog_task_count": 8,
+      "completed_direct_task_count": 8,
+      "missing_direct_tasks": [],
+      "direct_plan_tasks": [
+        "P5-T01",
+        "P5-T02",
+        "P5-T03",
+        "P5-T04",
+        "P5-T05",
+        "P5-T06",
+        "P5-T07",
+        "P7-T06"
+      ],
+      "completed_direct_evidence": [
+        {
+          "plan_task_id": "P5-T01",
+          "task_id": "RT-20260708-007",
+          "completion_id": "AJC-AJ-RT-20260708-007-001",
+          "completion_path": "research_control/tasks/RT-20260708-007/jobs/completions/AJC-AJ-RT-20260708-007-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P5-T02",
+          "task_id": "RT-20260708-008",
+          "completion_id": "AJC-AJ-RT-20260708-008-001",
+          "completion_path": "research_control/tasks/RT-20260708-008/jobs/completions/AJC-AJ-RT-20260708-008-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P5-T03",
+          "task_id": "RT-20260708-009",
+          "completion_id": "AJC-AJ-RT-20260708-009-001",
+          "completion_path": "research_control/tasks/RT-20260708-009/jobs/completions/AJC-AJ-RT-20260708-009-001.yaml",
+          "status": "completed",
+          "validation_status": ""
+        },
+        {
+          "plan_task_id": "P5-T04",
+          "task_id": "RT-20260708-010",
+          "completion_id": "AJC-AJ-RT-20260708-010-001",
+          "completion_path": "research_control/tasks/RT-20260708-010/jobs/completions/AJC-AJ-RT-20260708-010-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P5-T05",
+          "task_id": "RT-20260708-011",
+          "completion_id": "AJC-AJ-RT-20260708-011-001",
+          "completion_path": "research_control/tasks/RT-20260708-011/jobs/completions/AJC-AJ-RT-20260708-011-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P5-T06",
+          "task_id": "RT-20260708-012",
+          "completion_id": "AJC-AJ-RT-20260708-012-001",
+          "completion_path": "research_control/tasks/RT-20260708-012/jobs/completions/AJC-AJ-RT-20260708-012-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P5-T07",
+          "task_id": "RT-20260708-013",
+          "completion_id": "AJC-AJ-RT-20260708-013-001",
+          "completion_path": "research_control/tasks/RT-20260708-013/jobs/completions/AJC-AJ-RT-20260708-013-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P7-T06",
+          "task_id": "RT-20260708-024",
+          "completion_id": "AJC-AJ-RT-20260708-024-001",
+          "completion_path": "research_control/tasks/RT-20260708-024/jobs/completions/AJC-AJ-RT-20260708-024-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        }
+      ],
+      "integration_report_status": "implemented with process guard",
+      "integration_report_remaining_work": "Invariant-ledger slot remains deferred by DDR; final validation must confirm no global no-go overread.",
+      "project_improvement_signal_required": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false
+    },
+    {
+      "recommendation_id": "V18-R05",
+      "final_coverage_status": "covered",
+      "direct_backlog_task_count": 5,
+      "completed_direct_task_count": 5,
+      "missing_direct_tasks": [],
+      "direct_plan_tasks": [
+        "P6-T01",
+        "P6-T02",
+        "P6-T03",
+        "P6-T04",
+        "P6-T05"
+      ],
+      "completed_direct_evidence": [
+        {
+          "plan_task_id": "P6-T01",
+          "task_id": "RT-20260708-014",
+          "completion_id": "AJC-AJ-RT-20260708-014-001",
+          "completion_path": "research_control/tasks/RT-20260708-014/jobs/completions/AJC-AJ-RT-20260708-014-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P6-T02",
+          "task_id": "RT-20260708-015",
+          "completion_id": "AJC-AJ-RT-20260708-015-001",
+          "completion_path": "research_control/tasks/RT-20260708-015/jobs/completions/AJC-AJ-RT-20260708-015-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P6-T03",
+          "task_id": "RT-20260708-016",
+          "completion_id": "AJC-AJ-RT-20260708-016-001",
+          "completion_path": "research_control/tasks/RT-20260708-016/jobs/completions/AJC-AJ-RT-20260708-016-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P6-T04",
+          "task_id": "RT-20260708-017",
+          "completion_id": "AJC-AJ-RT-20260708-017-001",
+          "completion_path": "research_control/tasks/RT-20260708-017/jobs/completions/AJC-AJ-RT-20260708-017-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P6-T05",
+          "task_id": "RT-20260708-018",
+          "completion_id": "AJC-AJ-RT-20260708-018-001",
+          "completion_path": "research_control/tasks/RT-20260708-018/jobs/completions/AJC-AJ-RT-20260708-018-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        }
+      ],
+      "integration_report_status": "implemented as draft/control candidate lane",
+      "integration_report_remaining_work": "Detector/readout semantics adoption remains blocked; candidate repair or freeze review remains possible.",
+      "project_improvement_signal_required": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false
+    },
+    {
+      "recommendation_id": "V18-R06",
+      "final_coverage_status": "covered",
+      "direct_backlog_task_count": 8,
+      "completed_direct_task_count": 8,
+      "missing_direct_tasks": [],
+      "direct_plan_tasks": [
+        "P7-T01",
+        "P7-T02",
+        "P7-T03",
+        "P7-T04",
+        "P7-T05",
+        "P7-T06",
+        "P7-T07",
+        "P7-T08"
+      ],
+      "completed_direct_evidence": [
+        {
+          "plan_task_id": "P7-T01",
+          "task_id": "RT-20260708-019",
+          "completion_id": "AJC-AJ-RT-20260708-019-001",
+          "completion_path": "research_control/tasks/RT-20260708-019/jobs/completions/AJC-AJ-RT-20260708-019-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P7-T02",
+          "task_id": "RT-20260708-020",
+          "completion_id": "AJC-AJ-RT-20260708-020-001",
+          "completion_path": "research_control/tasks/RT-20260708-020/jobs/completions/AJC-AJ-RT-20260708-020-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P7-T03",
+          "task_id": "RT-20260708-021",
+          "completion_id": "AJC-AJ-RT-20260708-021-001",
+          "completion_path": "research_control/tasks/RT-20260708-021/jobs/completions/AJC-AJ-RT-20260708-021-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P7-T04",
+          "task_id": "RT-20260708-022",
+          "completion_id": "AJC-AJ-RT-20260708-022-001",
+          "completion_path": "research_control/tasks/RT-20260708-022/jobs/completions/AJC-AJ-RT-20260708-022-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P7-T05",
+          "task_id": "RT-20260708-023",
+          "completion_id": "AJC-AJ-RT-20260708-023-001",
+          "completion_path": "research_control/tasks/RT-20260708-023/jobs/completions/AJC-AJ-RT-20260708-023-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P7-T06",
+          "task_id": "RT-20260708-024",
+          "completion_id": "AJC-AJ-RT-20260708-024-001",
+          "completion_path": "research_control/tasks/RT-20260708-024/jobs/completions/AJC-AJ-RT-20260708-024-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P7-T07",
+          "task_id": "RT-20260708-025",
+          "completion_id": "AJC-AJ-RT-20260708-025-001",
+          "completion_path": "research_control/tasks/RT-20260708-025/jobs/completions/AJC-AJ-RT-20260708-025-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P7-T08",
+          "task_id": "RT-20260708-026",
+          "completion_id": "AJC-AJ-RT-20260708-026-001",
+          "completion_path": "research_control/tasks/RT-20260708-026/jobs/completions/AJC-AJ-RT-20260708-026-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        }
+      ],
+      "integration_report_status": "implemented as finite toy evidence only",
+      "integration_report_remaining_work": "Toy model remains finite and support-only; no target metric, g_eff, ledger, or matter-coupling promotion follows.",
+      "project_improvement_signal_required": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false
+    },
+    {
+      "recommendation_id": "V18-R07",
+      "final_coverage_status": "covered",
+      "direct_backlog_task_count": 5,
+      "completed_direct_task_count": 5,
+      "missing_direct_tasks": [],
+      "direct_plan_tasks": [
+        "P8-T01",
+        "P8-T02",
+        "P8-T03",
+        "P8-T04",
+        "P8-T05"
+      ],
+      "completed_direct_evidence": [
+        {
+          "plan_task_id": "P8-T01",
+          "task_id": "RT-20260708-027",
+          "completion_id": "AJC-AJ-RT-20260708-027-001",
+          "completion_path": "research_control/tasks/RT-20260708-027/jobs/completions/AJC-AJ-RT-20260708-027-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P8-T02",
+          "task_id": "RT-20260708-028",
+          "completion_id": "AJC-AJ-RT-20260708-028-001",
+          "completion_path": "research_control/tasks/RT-20260708-028/jobs/completions/AJC-AJ-RT-20260708-028-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P8-T03",
+          "task_id": "RT-20260708-029",
+          "completion_id": "AJC-AJ-RT-20260708-029-001",
+          "completion_path": "research_control/tasks/RT-20260708-029/jobs/completions/AJC-AJ-RT-20260708-029-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P8-T04",
+          "task_id": "RT-20260708-030",
+          "completion_id": "AJC-AJ-RT-20260708-030-001",
+          "completion_path": "research_control/tasks/RT-20260708-030/jobs/completions/AJC-AJ-RT-20260708-030-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P8-T05",
+          "task_id": "RT-20260708-031",
+          "completion_id": "AJC-AJ-RT-20260708-031-001",
+          "completion_path": "research_control/tasks/RT-20260708-031/jobs/completions/AJC-AJ-RT-20260708-031-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        }
+      ],
+      "integration_report_status": "implemented as support-only formalization",
+      "integration_report_remaining_work": "Formalization tools carry no proof authority and require future targeted use.",
+      "project_improvement_signal_required": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false
+    },
+    {
+      "recommendation_id": "V18-R08",
+      "final_coverage_status": "covered",
+      "direct_backlog_task_count": 4,
+      "completed_direct_task_count": 4,
+      "missing_direct_tasks": [],
+      "direct_plan_tasks": [
+        "P1-T01",
+        "P1-T02",
+        "P1-T03",
+        "P1-T04"
+      ],
+      "completed_direct_evidence": [
+        {
+          "plan_task_id": "P1-T01",
+          "task_id": "RT-20260707-008",
+          "completion_id": "AJC-AJ-RT-20260707-008-001",
+          "completion_path": "research_control/tasks/RT-20260707-008/jobs/completions/AJC-AJ-RT-20260707-008-001.yaml",
+          "status": "completed",
+          "validation_status": ""
+        },
+        {
+          "plan_task_id": "P1-T02",
+          "task_id": "RT-20260707-009",
+          "completion_id": "AJC-AJ-RT-20260707-009-001",
+          "completion_path": "research_control/tasks/RT-20260707-009/jobs/completions/AJC-AJ-RT-20260707-009-001.yaml",
+          "status": "completed",
+          "validation_status": ""
+        },
+        {
+          "plan_task_id": "P1-T03",
+          "task_id": "RT-20260707-010",
+          "completion_id": "AJC-AJ-RT-20260707-010-001",
+          "completion_path": "research_control/tasks/RT-20260707-010/jobs/completions/AJC-AJ-RT-20260707-010-001.yaml",
+          "status": "completed",
+          "validation_status": ""
+        },
+        {
+          "plan_task_id": "P1-T04",
+          "task_id": "RT-20260707-011",
+          "completion_id": "AJC-AJ-RT-20260707-011-001",
+          "completion_path": "research_control/tasks/RT-20260707-011/jobs/completions/AJC-AJ-RT-20260707-011-001.yaml",
+          "status": "completed",
+          "validation_status": ""
+        }
+      ],
+      "integration_report_status": "implemented as AI methodology/process control",
+      "integration_report_remaining_work": "Diagnostics remain advisory and must not rank physics truth or suppress valid repair work.",
+      "project_improvement_signal_required": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false
+    },
+    {
+      "recommendation_id": "V18-R09",
+      "final_coverage_status": "covered",
+      "direct_backlog_task_count": 5,
+      "completed_direct_task_count": 5,
+      "missing_direct_tasks": [],
+      "direct_plan_tasks": [
+        "P9-T01",
+        "P9-T02",
+        "P9-T03",
+        "P9-T04",
+        "P9-T05"
+      ],
+      "completed_direct_evidence": [
+        {
+          "plan_task_id": "P9-T01",
+          "task_id": "RT-20260708-032",
+          "completion_id": "AJC-AJ-RT-20260708-032-001",
+          "completion_path": "research_control/tasks/RT-20260708-032/jobs/completions/AJC-AJ-RT-20260708-032-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P9-T02",
+          "task_id": "RT-20260708-033",
+          "completion_id": "AJC-AJ-RT-20260708-033-001",
+          "completion_path": "research_control/tasks/RT-20260708-033/jobs/completions/AJC-AJ-RT-20260708-033-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P9-T03",
+          "task_id": "RT-20260708-034",
+          "completion_id": "AJC-AJ-RT-20260708-034-001",
+          "completion_path": "research_control/tasks/RT-20260708-034/jobs/completions/AJC-AJ-RT-20260708-034-001.yaml",
+          "status": "completed",
+          "validation_status": "PENDING"
+        },
+        {
+          "plan_task_id": "P9-T04",
+          "task_id": "RT-20260708-035",
+          "completion_id": "AJC-AJ-RT-20260708-035-001",
+          "completion_path": "research_control/tasks/RT-20260708-035/jobs/completions/AJC-AJ-RT-20260708-035-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P9-T05",
+          "task_id": "RT-20260708-036",
+          "completion_id": "AJC-AJ-RT-20260708-036-001",
+          "completion_path": "research_control/tasks/RT-20260708-036/jobs/completions/AJC-AJ-RT-20260708-036-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        }
+      ],
+      "integration_report_status": "implemented as public cognitive-load calibration",
+      "integration_report_remaining_work": "Generated outputs remain noncanonical; P11-T03 must sync frontier/compact surfaces after validation.",
+      "project_improvement_signal_required": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false
+    },
+    {
+      "recommendation_id": "V18-R10",
+      "final_coverage_status": "covered",
+      "direct_backlog_task_count": 6,
+      "completed_direct_task_count": 6,
+      "missing_direct_tasks": [],
+      "direct_plan_tasks": [
+        "P10-T01",
+        "P10-T02",
+        "P10-T03",
+        "P10-T04",
+        "P10-T05",
+        "P10-T06"
+      ],
+      "completed_direct_evidence": [
+        {
+          "plan_task_id": "P10-T01",
+          "task_id": "RT-20260708-037",
+          "completion_id": "AJC-AJ-RT-20260708-037-001",
+          "completion_path": "research_control/tasks/RT-20260708-037/jobs/completions/AJC-AJ-RT-20260708-037-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P10-T02",
+          "task_id": "RT-20260708-038",
+          "completion_id": "AJC-AJ-RT-20260708-038-001",
+          "completion_path": "research_control/tasks/RT-20260708-038/jobs/completions/AJC-AJ-RT-20260708-038-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P10-T03",
+          "task_id": "RT-20260708-039",
+          "completion_id": "AJC-AJ-RT-20260708-039-001",
+          "completion_path": "research_control/tasks/RT-20260708-039/jobs/completions/AJC-AJ-RT-20260708-039-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P10-T04",
+          "task_id": "RT-20260708-040",
+          "completion_id": "AJC-AJ-RT-20260708-040-001",
+          "completion_path": "research_control/tasks/RT-20260708-040/jobs/completions/AJC-AJ-RT-20260708-040-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P10-T05",
+          "task_id": "RT-20260708-041",
+          "completion_id": "AJC-AJ-RT-20260708-041-001",
+          "completion_path": "research_control/tasks/RT-20260708-041/jobs/completions/AJC-AJ-RT-20260708-041-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        },
+        {
+          "plan_task_id": "P10-T06",
+          "task_id": "RT-20260709-001",
+          "completion_id": "AJC-AJ-RT-20260709-001-001",
+          "completion_path": "research_control/tasks/RT-20260709-001/jobs/completions/AJC-AJ-RT-20260709-001-001.yaml",
+          "status": "completed",
+          "validation_status": "PASS"
+        }
+      ],
+      "integration_report_status": "implemented without outreach",
+      "integration_report_remaining_work": "External outreach and external-review completion remain unexecuted and require later gated routing.",
+      "project_improvement_signal_required": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false
+    }
+  ],
+  "v18_completion": {
+    "completed_plan_tasks_this_packet": [
+      "P11-T05"
+    ],
+    "completed_backlog_plan_tasks_before_packet": 66,
+    "completed_backlog_plan_tasks_after_packet": 67,
+    "conditional_plan_tasks_not_required_after_packet": [
+      "P11-T06"
+    ],
+    "project_improvement_signals": [],
+    "project_improvement_bridge_required": false,
+    "phase_p11_completed": true,
+    "v18_success_criteria_met": true,
+    "all_applicable_plan_tasks_proven": true,
+    "ordinary_continuation_route_selected": true
+  },
+  "selected_next_route": {
+    "route_id": "EqSrc_family_closure_repair_or_stress",
+    "role_family": "director-of-research@0.3.0",
+    "target_derivation_milestone": "source_equivalence_eqsrc",
+    "milestone_burden": "Select or execute one bounded EqSrc family-closure repair-or-stress packet from validated v18 outputs.",
+    "requires_human_gate": false,
+    "project_system_boundary_authorized_by_plan": false,
+    "next_action": "Run one bounded EqSrc family-closure repair-or-stress packet from validated v18 outputs.",
+    "source_handoff": "research_control/handoffs/handoff-0739.yaml"
+  },
+  "project_improvement_signals": [],
+  "project_improvement_bridge": {
+    "required": false,
+    "improvement_handoff_path": "",
+    "signal_ids": [],
+    "bridge_status": "not_required",
+    "rationale": "Every V18-R01 through V18-R10 recommendation has final covered status and no missing or partial recommendation was found."
+  },
+  "source_hashes": {
+    "v18_plan": "e4486e706d73542dacc72c297cad22cb17d5e5165c9a2afa67168b7e94bb112d",
+    "v18_backlog_schema": "d2eef1d79ff65796dcef3feb1a0ed39e0336e1712df009d52d94f7fd8c721640",
+    "v18_backlog": "99b3f9ce98db71e4d8849337e59d66fcfca76a43206d885e6a44c052224b44e4",
+    "handoff_0739": "b1465e14a0a5a6519d042106f5c1172d61e55bd5677e10ce42b0564d44e8025b",
+    "v18_integration_report": "ae91fb0d70fb24947d73924a988d04560764fc30facb9b044ef7e5f688c87d49",
+    "current_frontier_before_p11_t05": "d4853c16e5e8d31a26e7a815da3144346c358557f0e0bbdafeb8aacca9c6dfbb",
+    "process_integrity_auditor_role": "5e54f60d6a3064006e0a6ec73719475f191f21c975b9b2292498abb1dcc83db4",
+    "distance_to_gr_ledger": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+    "metric_use_ledger": "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  },
+  "distance_to_gr_delta": {
+    "effect": "no_distance_delta",
+    "changed": false,
+    "ledger_row_updated": false,
+    "milestone": "source_equivalence_eqsrc",
+    "burden_id": "source_equivalence_eqsrc",
+    "ledger_update_rationale": "P11-T05 is a recommendation coverage audit under the source_equivalence_eqsrc burden family. Coverage accounting does not discharge EqSrc, RetainH, GenH, matter coupling, Einstein-equation, benchmark, or completed-derivation burdens."
+  },
+  "claim_boundary": {
+    "allowed_claims": [
+      "v18 P11-T05 recommendation coverage audit completed",
+      "V18-R01 through V18-R10 have final covered status",
+      "no project-improvement bridge is required from P11-T05",
+      "all applicable v18 plan tasks are complete",
+      "the selected next route remains EqSrc_family_closure_repair_or_stress",
+      "no physics delta"
+    ],
+    "forbidden_claims": [
+      "coverage audit as physics proof",
+      "coverage count as Distance-to-GR promotion",
+      "v18 plan completion as completed derivation",
+      "general EqSrc discharge",
+      "RetainH adoption",
+      "GenH adoption",
+      "source-law adoption",
+      "detector or readout semantics adoption",
+      "coupling-law adoption",
+      "matter-coupling derivation",
+      "Einstein-equation derivation",
+      "benchmark promotion",
+      "Gate Chair verdict",
+      "future source-extension impossibility",
+      "program-wide no-go conclusion"
+    ]
+  }
+}
