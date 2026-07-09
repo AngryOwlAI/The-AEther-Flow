@@ -13,6 +13,8 @@ from scripts.research_control import validate_proof_normal_form_registry as vali
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = REPO_ROOT / "scripts" / "research_control" / "validate_proof_normal_form_registry.py"
+CURRENT_REGISTRY_ROW_COUNT = 12
+CURRENT_SUPPORT_ONLY_ROW_COUNT = 5
 
 
 def valid_row() -> dict[str, str]:
@@ -59,7 +61,8 @@ class ProofNormalFormRegistryTests(unittest.TestCase):
     def test_current_registry_validates(self) -> None:
         receipt = validator.validate_registry()
         self.assertEqual(receipt["status"], "PASS")
-        self.assertEqual(receipt["checked_row_count"], 7)
+        self.assertEqual(receipt["checked_row_count"], CURRENT_REGISTRY_ROW_COUNT)
+        self.assertEqual(receipt["support_only_row_count"], CURRENT_SUPPORT_ONLY_ROW_COUNT)
         self.assertFalse(receipt["proof_authority"])
 
     def test_cli_json_output_is_deterministic(self) -> None:

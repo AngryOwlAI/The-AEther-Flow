@@ -12,6 +12,9 @@ from scripts.research_control import render_proof_normal_form_index as renderer
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = REPO_ROOT / "scripts" / "research_control" / "render_proof_normal_form_index.py"
+CURRENT_REGISTRY_ROW_COUNT = 12
+CURRENT_SCIENTIFIC_GATE_ROW_COUNT = 3
+CURRENT_SUPPORT_ONLY_ROW_COUNT = 5
 
 
 class ProofNormalFormIndexRendererTests(unittest.TestCase):
@@ -22,8 +25,9 @@ class ProofNormalFormIndexRendererTests(unittest.TestCase):
         self.assertFalse(snapshot["authority_boundary"]["proof_authority"])
         self.assertFalse(snapshot["authority_boundary"]["physics_promotion_authorized"])
         self.assertTrue(snapshot["authority_boundary"]["source_artifacts_remain_authority"])
-        self.assertEqual(snapshot["summary"]["row_count"], 7)
-        self.assertEqual(snapshot["summary"]["scientific_gate_row_count"], 3)
+        self.assertEqual(snapshot["summary"]["row_count"], CURRENT_REGISTRY_ROW_COUNT)
+        self.assertEqual(snapshot["summary"]["scientific_gate_row_count"], CURRENT_SCIENTIFIC_GATE_ROW_COUNT)
+        self.assertEqual(snapshot["summary"]["support_only_row_count"], CURRENT_SUPPORT_ONLY_ROW_COUNT)
 
     def test_high_risk_rows_keep_non_conclusions(self) -> None:
         snapshot = renderer.build_snapshot()
@@ -54,7 +58,7 @@ class ProofNormalFormIndexRendererTests(unittest.TestCase):
             )
             self.assertEqual(write_result.returncode, 0, write_result.stderr)
             payload = json.loads(json_path.read_text(encoding="utf-8"))
-            self.assertEqual(payload["summary"]["row_count"], 7)
+            self.assertEqual(payload["summary"]["row_count"], CURRENT_REGISTRY_ROW_COUNT)
             self.assertIn("Proof Normal Form Index", markdown_path.read_text(encoding="utf-8"))
 
             check_result = subprocess.run(
