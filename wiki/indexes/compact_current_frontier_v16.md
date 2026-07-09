@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260709-003`
-- Latest handoff: `handoff-0737`
-- Current status: `v18_p11_t02_final_validation_passed_no_physics_promotion_next_p11_t03`
+- Active task: `RT-20260709-004`
+- Latest handoff: `handoff-0738`
+- Current status: `v18_p11_t03_current_frontier_ledger_sync_completed_no_physics_delta_next_p11_t04`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260709-003`
-- Latest research handoff: `handoff-0737`
-- Latest research next action: Run one bounded v18 P11-T03 current-frontier ledger synchronization packet.
+- Latest research task: `RT-20260709-004`
+- Latest research handoff: `handoff-0738`
+- Latest research next action: Run one bounded v18 P11-T04 ordinary continuation handoff packet.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v18_current_frontier_ledger_sync`
-- Role family: `project-control-maintainer@0.2.0`
+- Route ID: `v18_p11_t04_ordinary_continuation_handoff`
+- Role family: `director-of-research@0.3.0`
 - Target milestone: `none`
-- Milestone burden: Synchronize current frontier compact frontier graphs and ledger surfaces after final validation.
+- Milestone burden: Complete v18 by selecting exactly one ordinary continuation route from validated v18 outputs.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `54b1b9c84aec2e7a1ed13a0772eaf31b6e71fa7f8ca8bf163b6133e541153521`
-- JSON SHA-256: `ceb49dda95f237f64aebbac62533bd49d2d9a5c8fc48660ece3a31f8bed37e97`
+- YAML SHA-256: `8e8aa1369df3c6033e478f2e0c89e36bd57c51c11973169d1e223840df670876`
+- JSON SHA-256: `350fc6199418995e4d7041f6f48e2f53da27e820056b4ebb516cbe94d7b322ee`
 
 ## Authority Warning
 

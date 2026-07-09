@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0737.yaml"
+  - "research_control/handoffs/handoff-0738.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260709-003"
-  latest_handoff_id: "handoff-0737"
-  current_status: "v18_p11_t02_final_validation_passed_no_physics_promotion_next_p11_t03"
+  active_task_id: "RT-20260709-004"
+  latest_handoff_id: "handoff-0738"
+  current_status: "v18_p11_t03_current_frontier_ledger_sync_completed_no_physics_delta_next_p11_t04"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260709-003"
-  latest_research_handoff_id: "handoff-0737"
-  latest_research_next_action: "Run one bounded v18 P11-T03 current-frontier ledger synchronization packet."
+  latest_research_task_id: "RT-20260709-004"
+  latest_research_handoff_id: "handoff-0738"
+  latest_research_next_action: "Run one bounded v18 P11-T04 ordinary continuation handoff packet."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v18_current_frontier_ledger_sync"
-  role_family: "project-control-maintainer@0.2.0"
+  route_id: "v18_p11_t04_ordinary_continuation_handoff"
+  role_family: "director-of-research@0.3.0"
   target_derivation_milestone: "none"
-  milestone_burden: "Synchronize current frontier compact frontier graphs and ledger surfaces after final validation."
+  milestone_burden: "Complete v18 by selecting exactly one ordinary continuation route from validated v18 outputs."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
