@@ -1392,6 +1392,382 @@ class ResearchControlTests(unittest.TestCase):
             ],
         )
 
+    def test_checkpoint_git_status_preserves_both_rename_endpoints(self) -> None:
+        command = ["git", "status", "--porcelain"]
+        result = self.checkpoint.CommandResult(
+            command,
+            0,
+            "R  outside/old.txt -> allowed/new.txt\n",
+            "",
+        )
+        with mock.patch.object(self.checkpoint, "run_command", return_value=result):
+            statuses = self.checkpoint.git_status_paths()
+
+        self.assertEqual(
+            statuses,
+            {
+                "outside/old.txt": "R ",
+                "allowed/new.txt": "R ",
+            },
+        )
+
+    def test_checkpoint_stages_scope_before_bootstrap_and_validates_final_index(self) -> None:
+        commands: list[list[str]] = []
+
+        def fake_run(command: list[str]):
+            commands.append(command)
+            if command == ["git", "write-tree"]:
+                return self.checkpoint.CommandResult(command, 0, "original-tree\n", "")
+            if command == ["git", "ls-files", "-z"]:
+                return self.checkpoint.CommandResult(
+                    command,
+                    0,
+                    "tracked.txt\0research_control/tasks/RT-TEST/00_TASK.yaml\0",
+                    "",
+                )
+            return self.checkpoint.CommandResult(command, 0, "", "")
+
+        path = "research_control/tasks/RT-TEST/00_TASK.yaml"
+        preflight = {path: "??"}
+        staged = {path: "A "}
+        with (
+            mock.patch.object(
+                self.checkpoint,
+                "select_job",
+                return_value={"job_id": "AJ-TEST", "task_id": "RT-TEST"},
+            ),
+            mock.patch.object(self.checkpoint, "load_job_contract", return_value={}),
+            mock.patch.object(
+                self.checkpoint,
+                "execution_role_ref_for_job",
+                return_value="validator-engineer@0.2.0--RT-TEST",
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "git_status_paths",
+                side_effect=[preflight, staged, staged, staged],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "allowed_patterns_for_changed_paths",
+                return_value=["research_control/tasks/RT-TEST/**"],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "changed_registered_tex_requiring_pdf",
+                return_value=[],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "post_sync_validation_commands",
+                return_value=[["final-index-validation"]],
+            ),
+            mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
+        ):
+            result = self.checkpoint.checkpoint("AJ-TEST", no_commit=True)
+
+        bootstrap = [
+            ".venv/bin/python",
+            ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        ]
+        add_indices = [
+            index for index, command in enumerate(commands) if command[:2] == ["git", "add"]
+        ]
+        self.assertEqual(result["status"], "ready_to_commit")
+        self.assertEqual(result["sync_passes"], 1)
+        self.assertGreaterEqual(len(add_indices), 2)
+        self.assertLess(add_indices[0], commands.index(bootstrap))
+        self.assertLess(commands.index(bootstrap), add_indices[-1])
+        self.assertLess(add_indices[-1], commands.index(["final-index-validation"]))
+        self.assertLess(
+            commands.index(["final-index-validation"]),
+            commands.index([*bootstrap, "--validate-only"]),
+        )
+
+    def test_checkpoint_repeats_bootstrap_until_index_paths_stabilize(self) -> None:
+        commands: list[list[str]] = []
+        index_outputs = iter(
+            [
+                "tracked.txt\0source.txt\0",
+                "tracked.txt\0source.txt\0generated/new.md\0",
+                "tracked.txt\0source.txt\0generated/new.md\0",
+                "tracked.txt\0source.txt\0generated/new.md\0",
+            ]
+        )
+
+        def fake_run(command: list[str]):
+            commands.append(command)
+            if command == ["git", "write-tree"]:
+                return self.checkpoint.CommandResult(command, 0, "original-tree\n", "")
+            if command == ["git", "ls-files", "-z"]:
+                return self.checkpoint.CommandResult(command, 0, next(index_outputs), "")
+            return self.checkpoint.CommandResult(command, 0, "", "")
+
+        source = "source.txt"
+        generated = "generated/new.md"
+        with (
+            mock.patch.object(
+                self.checkpoint,
+                "select_job",
+                return_value={"job_id": "AJ-TEST", "task_id": "RT-TEST"},
+            ),
+            mock.patch.object(self.checkpoint, "load_job_contract", return_value={}),
+            mock.patch.object(
+                self.checkpoint,
+                "execution_role_ref_for_job",
+                return_value="validator-engineer@0.2.0--RT-TEST",
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "git_status_paths",
+                side_effect=[
+                    {source: "??"},
+                    {source: "A ", generated: "??"},
+                    {source: "A ", generated: "A "},
+                    {source: "A ", generated: "A "},
+                    {source: "A ", generated: "A "},
+                ],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "allowed_patterns_for_changed_paths",
+                return_value=["source.txt", "generated/**"],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "changed_registered_tex_requiring_pdf",
+                return_value=[],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "post_sync_validation_commands",
+                return_value=[],
+            ),
+            mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
+        ):
+            result = self.checkpoint.checkpoint("AJ-TEST", no_commit=True)
+
+        write_bootstrap = [
+            ".venv/bin/python",
+            ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        ]
+        self.assertEqual(result["status"], "ready_to_commit")
+        self.assertEqual(result["sync_passes"], 2)
+        self.assertEqual(commands.count(write_bootstrap), 2)
+
+    def test_checkpoint_restores_original_index_on_bootstrap_failure(self) -> None:
+        commands: list[list[str]] = []
+
+        def fake_run(command: list[str]):
+            commands.append(command)
+            if command == ["git", "write-tree"]:
+                return self.checkpoint.CommandResult(command, 0, "original-tree\n", "")
+            if command == ["git", "ls-files", "-z"]:
+                return self.checkpoint.CommandResult(command, 0, "tracked.txt\0new.txt\0", "")
+            if command[-1].endswith("bootstrap_memory_system.py"):
+                return self.checkpoint.CommandResult(command, 1, "", "bootstrap failed")
+            return self.checkpoint.CommandResult(command, 0, "", "")
+
+        changes = {"new.txt": "??"}
+        with (
+            mock.patch.object(
+                self.checkpoint,
+                "select_job",
+                return_value={"job_id": "AJ-TEST", "task_id": "RT-TEST"},
+            ),
+            mock.patch.object(self.checkpoint, "load_job_contract", return_value={}),
+            mock.patch.object(
+                self.checkpoint,
+                "execution_role_ref_for_job",
+                return_value="validator-engineer@0.2.0--RT-TEST",
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "git_status_paths",
+                side_effect=[changes, changes],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "allowed_patterns_for_changed_paths",
+                return_value=["new.txt"],
+            ),
+            mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
+        ):
+            result = self.checkpoint.checkpoint("AJ-TEST", no_commit=True)
+
+        self.assertEqual(result["status"], "blocked")
+        self.assertEqual(result["reason"], "memory bootstrap failed")
+        self.assertIn(["git", "read-tree", "original-tree"], commands)
+
+    def test_checkpoint_restores_entry_index_on_helper_exception(self) -> None:
+        commands: list[list[str]] = []
+        snapshots = iter(["entry-tree\n", "inner-tree\n"])
+
+        def fake_run(command: list[str]):
+            commands.append(command)
+            if command == ["git", "write-tree"]:
+                return self.checkpoint.CommandResult(command, 0, next(snapshots), "")
+            if command == ["git", "ls-files", "-z"]:
+                return self.checkpoint.CommandResult(command, 1, "", "index read failed")
+            return self.checkpoint.CommandResult(command, 0, "", "")
+
+        changes = {"new.txt": "??"}
+        with (
+            mock.patch.object(
+                self.checkpoint,
+                "select_job",
+                return_value={"job_id": "AJ-TEST", "task_id": "RT-TEST"},
+            ),
+            mock.patch.object(self.checkpoint, "load_job_contract", return_value={}),
+            mock.patch.object(
+                self.checkpoint,
+                "execution_role_ref_for_job",
+                return_value="validator-engineer@0.2.0--RT-TEST",
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "git_status_paths",
+                return_value=changes,
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "allowed_patterns_for_changed_paths",
+                return_value=["new.txt"],
+            ),
+            mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
+        ):
+            with self.assertRaisesRegex(RuntimeError, "index read failed"):
+                self.checkpoint.checkpoint("AJ-TEST", no_commit=True)
+
+        self.assertIn(["git", "read-tree", "entry-tree"], commands)
+
+    def test_checkpoint_retries_entry_snapshot_when_no_action_restore_fails(self) -> None:
+        commands: list[list[str]] = []
+        snapshots = iter(["entry-tree\n", "inner-tree\n"])
+        restore_results = iter([1, 0])
+
+        def fake_run(command: list[str]):
+            commands.append(command)
+            if command == ["git", "write-tree"]:
+                return self.checkpoint.CommandResult(command, 0, next(snapshots), "")
+            if command == ["git", "ls-files", "-z"]:
+                return self.checkpoint.CommandResult(command, 0, "tracked.txt\0new.txt\0", "")
+            if command[:2] == ["git", "read-tree"]:
+                returncode = next(restore_results)
+                return self.checkpoint.CommandResult(
+                    command,
+                    returncode,
+                    "",
+                    "inner restore failed" if returncode else "",
+                )
+            return self.checkpoint.CommandResult(command, 0, "", "")
+
+        with (
+            mock.patch.object(
+                self.checkpoint,
+                "select_job",
+                return_value={"job_id": "AJ-TEST", "task_id": "RT-TEST"},
+            ),
+            mock.patch.object(self.checkpoint, "load_job_contract", return_value={}),
+            mock.patch.object(
+                self.checkpoint,
+                "execution_role_ref_for_job",
+                return_value="validator-engineer@0.2.0--RT-TEST",
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "git_status_paths",
+                side_effect=[{"new.txt": "??"}, {}, {}],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "allowed_patterns_for_changed_paths",
+                return_value=["new.txt"],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "changed_registered_tex_requiring_pdf",
+                return_value=[],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "post_sync_validation_commands",
+                return_value=[],
+            ),
+            mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
+        ):
+            with self.assertRaisesRegex(RuntimeError, "inner restore failed"):
+                self.checkpoint.checkpoint("AJ-TEST", no_commit=True)
+
+        self.assertEqual(
+            [command for command in commands if command[:2] == ["git", "read-tree"]],
+            [
+                ["git", "read-tree", "inner-tree"],
+                ["git", "read-tree", "entry-tree"],
+            ],
+        )
+
+    def test_checkpoint_blocks_unstaged_residue_after_final_validation(self) -> None:
+        commands: list[list[str]] = []
+
+        def fake_run(command: list[str]):
+            commands.append(command)
+            if command == ["git", "write-tree"]:
+                return self.checkpoint.CommandResult(command, 0, "original-tree\n", "")
+            if command == ["git", "ls-files", "-z"]:
+                return self.checkpoint.CommandResult(command, 0, "tracked.txt\0changed.txt\0", "")
+            return self.checkpoint.CommandResult(command, 0, "", "")
+
+        path = "changed.txt"
+        with (
+            mock.patch.object(
+                self.checkpoint,
+                "select_job",
+                return_value={"job_id": "AJ-TEST", "task_id": "RT-TEST"},
+            ),
+            mock.patch.object(self.checkpoint, "load_job_contract", return_value={}),
+            mock.patch.object(
+                self.checkpoint,
+                "execution_role_ref_for_job",
+                return_value="validator-engineer@0.2.0--RT-TEST",
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "git_status_paths",
+                side_effect=[
+                    {path: " M"},
+                    {path: "M "},
+                    {path: "M "},
+                    {path: "MM"},
+                ],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "allowed_patterns_for_changed_paths",
+                return_value=[path],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "changed_registered_tex_requiring_pdf",
+                return_value=[],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "post_sync_validation_commands",
+                return_value=[],
+            ),
+            mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
+        ):
+            result = self.checkpoint.checkpoint("AJ-TEST", no_commit=True)
+
+        self.assertEqual(result["status"], "blocked")
+        self.assertEqual(
+            result["reason"],
+            "unstaged transaction changes remain after final validation",
+        )
+        self.assertEqual(result["validation_errors"], [path])
+        self.assertIn(["git", "read-tree", "original-tree"], commands)
+
     def test_commit_message_uses_execution_role_ref(self) -> None:
         lines = self.checkpoint.commit_message(
             {

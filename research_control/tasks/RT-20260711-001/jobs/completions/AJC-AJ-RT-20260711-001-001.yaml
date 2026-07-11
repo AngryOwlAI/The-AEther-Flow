@@ -1,0 +1,111 @@
+completion_id: "AJC-AJ-RT-20260711-001-001"
+job_id: "AJ-RT-20260711-001-001"
+task_id: "RT-20260711-001"
+completed_at: "2026-07-11T14:56:06Z"
+status: "completed"
+output_paths:
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/scripts/goal_state.py"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-goal/goals/.gitignore"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - "tests/test_continue_research_goal_state.py"
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - "tests/test_research_control.py"
+  - "tests/test_memory_system.py"
+  - "research_control/tasks/RT-20260711-001/artifacts/continue_research_goal_g5_source_candidate_receipt.md"
+extra_read_paths:
+  - "AGENTS.md"
+  - "README.md"
+  - "research_control/AGENTS.md"
+  - "research_control/README.md"
+command_results:
+  - ".venv/bin/python -m py_compile .codex/skills/continue-research-goal/scripts/goal_state.py | exit_code=0"
+  - ".venv/bin/python -m unittest tests.test_continue_research_goal_state -v | exit_code=0 | tests=36"
+  - ".venv/bin/python -m unittest tests.test_memory_system.MemorySystemSmokeTests.test_rebuilt_pdf_paths_stamp_built_at -v | exit_code=0 | tests=1"
+  - ".venv/bin/python -m unittest tests.test_research_control -v | exit_code=0 | tests=140"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS | local cache warnings only"
+  - "make PYTHON=.venv/bin/python validate-project-control | exit_code=2 | expected pre-checkpoint documentation audit rejected newly registered untracked paths before repaired stage-before-bootstrap ordering"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260711-001-001 --no-commit | exit_code=0 | status=ready_to_commit | sync_passes=1 | staged=true | final memory validation PASS"
+  - "make PYTHON=.venv/bin/python validate-project-control | exit_code=0 | tests=584 | skipped=1 | duration_seconds=489.837"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "main and origin/main matched at a8c0b3f4ada00d852d3bc2123ddd4d203f5428b0 before branch creation."
+      - "The accepted six-file allowlist hashes match the G4 acceptance values."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The accepted runtime hashes remained byte-identical and the 36 focused state-machine tests passed."
+      - "The focused continue-goal, checkpoint, and PDF-registry repairs pass; the aggregate project-control target passed all layers and 584 tests with one skip."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Registration, documentation impact, generated-memory parity, research-control diff validation, and Git diff checks passed."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The source-candidate checkpoint has not run."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The task index renderer completed successfully."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Bootstrap passed; missing local Obsidian and SQLite caches are retrieval-only warnings."
+  claim_language_linter:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No physics source or claim-language taxonomy changed."
+authorization_layers:
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: false
+    memory_index_exists: false
+    source_object_count: 799
+    relationship_row_count: 3981
+    semantic_row_count: 799
+    vault_row_count: 799
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup .codex/skills/improve-project-system/SKILL.md --json"
+      query_type: "lookup"
+      query_text: ".codex/skills/improve-project-system/SKILL.md"
+      returned_object_ids:
+        - "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+  canonical_inspections:
+    - object_id: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/improve-project-system/SKILL.md"
+      source_hash: "6ca061bcd3cec19db413aefaa3079c2dfd27e844ddde798b648eed1c576ece02"
+  authority_note: "Obsidian notes, wiki notes, semantic extracts, SQLite memory, and .local files are retrieval layers only and not authority. Canonical skill and role contracts, Git identity, and source registry rows were inspected directly."
+claim_boundary:
+  proof_authority: false
+  physics_promotion_authorized: false
+  source_law_adoption_authorized: false
+  matter_coupling_authorized: false
+  einstein_equation_route_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+verdict: "g5_repaired_source_candidate_validated_awaiting_checkpoint_and_fresh_derivative_smoke_no_physics_delta"
+next_recommendation: "Complete the source-only checkpoint and stop. A fresh derivative smoke worktree requires a later gate and must not modify this branch."

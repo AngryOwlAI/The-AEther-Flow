@@ -41,6 +41,7 @@ GLOBAL_SYNC_ALLOWLIST = {
     "registries/OBSIDIAN_VAULT_REGISTRY.meta.json",
     "wiki/indexes/**",
 }
+MAX_STAGED_SYNC_PASSES = 3
 
 
 @dataclass
@@ -97,8 +98,11 @@ def git_status_paths() -> dict[str, str]:
         status = line[:2]
         path = line[3:]
         if " -> " in path:
-            path = path.split(" -> ", 1)[1]
-        paths[path] = status
+            source_path, destination_path = path.split(" -> ", 1)
+            paths[source_path] = status
+            paths[destination_path] = status
+        else:
+            paths[path] = status
     return paths
 
 
@@ -145,6 +149,22 @@ def add_stageable_paths(paths: Iterable[str]) -> list[CommandResult]:
         # without -f. stageable_paths already limits this set to tracked paths.
         results.append(run_command(["git", "add", "-f", "--", *local_paths]))
     return results
+
+
+def git_index_paths() -> set[str]:
+    result = run_command(["git", "ls-files", "-z"])
+    if result.returncode != 0:
+        raise RuntimeError(result.stderr or "git ls-files failed")
+    return {path for path in result.stdout.split("\0") if path}
+
+
+def unstaged_stageable_paths(statuses: dict[str, str]) -> list[str]:
+    candidates = [
+        path
+        for path, status in statuses.items()
+        if status == "??" or len(status) < 2 or status[1] != " "
+    ]
+    return stageable_paths(candidates)
 
 
 def load_job_contract(job_row: dict[str, str]) -> dict[str, object]:
@@ -305,7 +325,7 @@ def post_sync_validation_commands() -> list[list[str]]:
     ]
 
 
-def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[str, object]:
+def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> dict[str, object]:
     job_row = select_job(job_id)
     job_contract = load_job_contract(job_row)
     execution_ref = execution_role_ref_for_job(job_row["job_id"], job_contract)
@@ -325,32 +345,114 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
         )
 
     commands: list[CommandResult] = []
-    bootstrap = run_command([
-        ".venv/bin/python",
-        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
-    ])
-    commands.append(bootstrap)
-    if bootstrap.returncode != 0:
-        return block_report("memory bootstrap failed", job_row, git_status_paths(), commands)
+    index_snapshot = run_command(["git", "write-tree"])
+    commands.append(index_snapshot)
+    if index_snapshot.returncode != 0 or not index_snapshot.stdout.strip():
+        return block_report(
+            "could not snapshot the original Git index",
+            job_row,
+            preflight,
+            commands,
+        )
+    original_index_tree = index_snapshot.stdout.strip()
+    index_mutated = False
 
-    after_bootstrap = git_status_paths()
-    tex_targets = changed_registered_tex_requiring_pdf(after_bootstrap)
-    if tex_targets:
-        pdf_build = run_command([
-            ".venv/bin/python",
-            ".codex/skills/project-memory-system/scripts/build_pdf_derivatives.py",
-            *tex_targets,
-        ])
-        commands.append(pdf_build)
-        if pdf_build.returncode != 0:
-            return block_report("targeted PDF build failed", job_row, git_status_paths(), commands)
-        bootstrap_after_pdf = run_command([
+    def restore_original_index() -> CommandResult | None:
+        if not index_mutated:
+            return None
+        restore = run_command(["git", "read-tree", original_index_tree])
+        commands.append(restore)
+        return restore
+
+    def rollback_block(
+        reason: str,
+        changed_paths: Iterable[str],
+        validation_errors: list[str] | None = None,
+        suggested_repair_role: str = "process-integrity-auditor",
+    ) -> dict[str, object]:
+        errors = list(validation_errors or [])
+        restore = restore_original_index()
+        if restore is not None and restore.returncode != 0:
+            raise RuntimeError(
+                restore.stderr or "failed to restore the original Git index"
+            )
+        return block_report(
+            reason,
+            job_row,
+            changed_paths,
+            commands,
+            errors,
+            suggested_repair_role=suggested_repair_role,
+        )
+
+    initial_paths = stageable_paths(preflight)
+    index_mutated = bool(initial_paths)
+    initial_add_results = add_stageable_paths(initial_paths)
+    commands.extend(initial_add_results)
+    if any(result.returncode != 0 for result in initial_add_results):
+        return rollback_block("pre-bootstrap git add failed", preflight)
+
+    sync_passes = 0
+    pdf_targets_processed = False
+    for sync_pass in range(1, MAX_STAGED_SYNC_PASSES + 1):
+        sync_passes = sync_pass
+        index_paths_before_sync = git_index_paths()
+        bootstrap = run_command([
             ".venv/bin/python",
             ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
         ])
-        commands.append(bootstrap_after_pdf)
-        if bootstrap_after_pdf.returncode != 0:
-            return block_report("post-PDF memory bootstrap failed", job_row, git_status_paths(), commands)
+        commands.append(bootstrap)
+        if bootstrap.returncode != 0:
+            return rollback_block("memory bootstrap failed", git_status_paths())
+
+        synced_changes = git_status_paths()
+        if not pdf_targets_processed:
+            tex_targets = changed_registered_tex_requiring_pdf(synced_changes)
+            pdf_targets_processed = True
+            if tex_targets:
+                pdf_build = run_command([
+                    ".venv/bin/python",
+                    ".codex/skills/project-memory-system/scripts/build_pdf_derivatives.py",
+                    *tex_targets,
+                ])
+                commands.append(pdf_build)
+                if pdf_build.returncode != 0:
+                    return rollback_block("targeted PDF build failed", git_status_paths())
+                bootstrap_after_pdf = run_command([
+                    ".venv/bin/python",
+                    ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+                ])
+                commands.append(bootstrap_after_pdf)
+                if bootstrap_after_pdf.returncode != 0:
+                    return rollback_block("post-PDF memory bootstrap failed", git_status_paths())
+                synced_changes = git_status_paths()
+
+        allowed = allowed_patterns_for_changed_paths(job_row, job_contract, synced_changes)
+        disallowed_sync = [
+            path for path in synced_changes if not allowed_by_any(path, allowed)
+        ]
+        if disallowed_sync:
+            return rollback_block(
+                "synchronized changes outside the AgentJob or sync allowlist",
+                synced_changes,
+                disallowed_sync,
+            )
+
+        synchronized_paths = stageable_paths(synced_changes)
+        if synchronized_paths:
+            index_mutated = True
+        sync_add_results = add_stageable_paths(synchronized_paths)
+        commands.extend(sync_add_results)
+        if any(result.returncode != 0 for result in sync_add_results):
+            return rollback_block("post-bootstrap git add failed", synced_changes)
+
+        if git_index_paths() == index_paths_before_sync:
+            break
+    else:
+        return rollback_block(
+            "staged tracked path set did not converge after bounded synchronization",
+            git_status_paths(),
+        )
 
     for command in post_sync_validation_commands():
         result = run_command(command)
@@ -361,11 +463,9 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
                 if "validate_documentation_impact.py" in command
                 else "process-integrity-auditor"
             )
-            return block_report(
+            return rollback_block(
                 "post-execution validation failed",
-                job_row,
                 git_status_paths(),
-                commands,
                 suggested_repair_role=suggested_role,
             )
 
@@ -375,14 +475,17 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
         path for path in final_changes if not allowed_by_any(path, allowed)
     ]
     if disallowed_final:
-        return block_report(
+        return rollback_block(
             "post-sync changes outside the AgentJob or sync allowlist",
-            job_row,
             final_changes,
-            commands,
             disallowed_final,
         )
     if not final_changes:
+        restore = restore_original_index()
+        if restore is not None and restore.returncode != 0:
+            raise RuntimeError(
+                restore.stderr or "failed to restore the original Git index"
+            )
         return {
             "status": "no_action",
             "reason": "no tracked or untracked transaction changes to commit",
@@ -395,6 +498,11 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
 
     paths_to_stage = stageable_paths(final_changes)
     if not paths_to_stage:
+        restore = restore_original_index()
+        if restore is not None and restore.returncode != 0:
+            raise RuntimeError(
+                restore.stderr or "failed to restore the original Git index"
+            )
         return {
             "status": "no_action",
             "reason": "only ignored cache changes remain after validation",
@@ -406,11 +514,6 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
             "committed": False,
         }
 
-    add_results = add_stageable_paths(paths_to_stage)
-    commands.extend(add_results)
-    if any(result.returncode != 0 for result in add_results):
-        return block_report("git add failed", job_row, final_changes, commands)
-
     staged_project_classifier = run_command([
         ".venv/bin/python",
         "scripts/project_control/classify_project_changes.py",
@@ -419,8 +522,7 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
     ])
     commands.append(staged_project_classifier)
     if staged_project_classifier.returncode != 0:
-        run_command(["git", "restore", "--staged", "--", *paths_to_stage])
-        return block_report("staged project-change classification failed", job_row, final_changes, commands)
+        return rollback_block("staged project-change classification failed", final_changes)
 
     staged_claim_language = run_command([
         ".venv/bin/python",
@@ -430,12 +532,9 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
     ])
     commands.append(staged_claim_language)
     if staged_claim_language.returncode != 0:
-        run_command(["git", "restore", "--staged", "--", *paths_to_stage])
-        return block_report(
+        return rollback_block(
             "staged claim-language validation failed",
-            job_row,
             final_changes,
-            commands,
             suggested_repair_role="validator-engineer",
         )
 
@@ -446,12 +545,9 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
     ])
     commands.append(staged_project_signals)
     if staged_project_signals.returncode != 0:
-        run_command(["git", "restore", "--staged", "--", *paths_to_stage])
-        return block_report(
+        return rollback_block(
             "staged project-improvement signal validation failed",
-            job_row,
             final_changes,
-            commands,
             suggested_repair_role="validator-engineer",
         )
 
@@ -462,12 +558,9 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
     ])
     commands.append(staged_documentation_impact)
     if staged_documentation_impact.returncode != 0:
-        run_command(["git", "restore", "--staged", "--", *paths_to_stage])
-        return block_report(
+        return rollback_block(
             "staged documentation-impact validation failed",
-            job_row,
             final_changes,
-            commands,
             suggested_repair_role="documentation-curator",
         )
 
@@ -479,8 +572,39 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
     ])
     commands.append(staged_check)
     if staged_check.returncode != 0:
-        run_command(["git", "restore", "--staged", "--", *paths_to_stage])
-        return block_report("staged diff allowlist validation failed", job_row, final_changes, commands)
+        return rollback_block("staged diff allowlist validation failed", final_changes)
+
+    final_memory_validation = run_command([
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only",
+    ])
+    commands.append(final_memory_validation)
+    if final_memory_validation.returncode != 0:
+        return rollback_block(
+            "final staged-scope memory validation failed",
+            git_status_paths(),
+        )
+
+    final_status = git_status_paths()
+    final_allowed = allowed_patterns_for_changed_paths(job_row, job_contract, final_status)
+    final_disallowed = [
+        path for path in final_status if not allowed_by_any(path, final_allowed)
+    ]
+    if final_disallowed:
+        return rollback_block(
+            "final staged scope contains paths outside the AgentJob or sync allowlist",
+            final_status,
+            final_disallowed,
+        )
+    unstaged_residue = unstaged_stageable_paths(final_status)
+    if unstaged_residue:
+        return rollback_block(
+            "unstaged transaction changes remain after final validation",
+            final_status,
+            unstaged_residue,
+        )
+    paths_to_stage = stageable_paths(final_status)
 
     if no_commit:
         return {
@@ -489,6 +613,7 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
             "active_agent_job": job_row.get("job_id", ""),
             "execution_role_ref": execution_ref,
             "changed_paths": paths_to_stage,
+            "sync_passes": sync_passes,
             "staged": True,
             "committed": False,
             "command_results": [result.as_dict() for result in commands],
@@ -501,7 +626,7 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
     commit_result = run_command(commit_command)
     commands.append(commit_result)
     if commit_result.returncode != 0:
-        return block_report("git commit failed", job_row, final_changes, commands)
+        return rollback_block("git commit failed", final_status)
     rev_parse = run_command(["git", "rev-parse", "HEAD"])
     commands.append(rev_parse)
     return {
@@ -510,12 +635,30 @@ def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[st
         "active_agent_job": job_row.get("job_id", ""),
         "execution_role_ref": execution_ref,
         "changed_paths": paths_to_stage,
+        "sync_passes": sync_passes,
         "commit_hash": rev_parse.stdout.strip() if rev_parse.returncode == 0 else "",
         "push": "not performed",
         "staged": True,
         "committed": True,
         "command_results": [result.as_dict() for result in commands],
     }
+
+
+def checkpoint(job_id: str | None = None, *, no_commit: bool = False) -> dict[str, object]:
+    """Run a checkpoint and restore the exact entry index on helper exceptions."""
+    entry_snapshot = run_command(["git", "write-tree"])
+    if entry_snapshot.returncode != 0 or not entry_snapshot.stdout.strip():
+        raise RuntimeError(entry_snapshot.stderr or "could not snapshot the entry Git index")
+    entry_index_tree = entry_snapshot.stdout.strip()
+    try:
+        return _checkpoint_impl(job_id, no_commit=no_commit)
+    except RuntimeError:
+        restore = run_command(["git", "read-tree", entry_index_tree])
+        if restore.returncode != 0:
+            raise RuntimeError(
+                restore.stderr or "checkpoint failed and the entry Git index could not be restored"
+            )
+        raise
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:

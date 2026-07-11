@@ -6,6 +6,15 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `MD-SKILL-CONTINUE-RESEARCH` `.codex/skills/continue-research/SKILL.md`
 
+## continue-research-continue-goal
+
+- `MD-SKILL-CONTINUE-RESEARCH-CONTINUE-GOAL` `.codex/skills/continue-research-continue-goal/SKILL.md`
+
+## continue-research-goal
+
+- `MD-SKILL-CONTINUE-RESEARCH-GOAL` `.codex/skills/continue-research-goal/SKILL.md`
+- `MD-SKILL-CONTINUE-RESEARCH-GOAL-SCHEMA` `.codex/skills/continue-research-goal/references/goal-file-schema.md`
+
 ## documentation-curator
 
 - `MD-EQSRC-FAMILY-CLOSURE-REVIEW-PACKET-SPEC-V1` `markdown/external-review-specs/eqsrc_family_closure_review_packet_spec_v1.md`
@@ -561,6 +570,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SCHEMA-ROLE-SCHEMA` `wiki/markdown/md-schema-role-schema.md`
 - `WIKI-MD-SCHEMA-VALIDATION-STATUS-LAYER-SCHEMA` `wiki/markdown/md-schema-validation-status-layer-schema.md`
 - `WIKI-MD-SKILL-CONTINUE-RESEARCH` `wiki/markdown/md-skill-continue-research.md`
+- `WIKI-MD-SKILL-CONTINUE-RESEARCH-CONTINUE-GOAL` `wiki/markdown/md-skill-continue-research-continue-goal.md`
+- `WIKI-MD-SKILL-CONTINUE-RESEARCH-GOAL` `wiki/markdown/md-skill-continue-research-goal.md`
+- `WIKI-MD-SKILL-CONTINUE-RESEARCH-GOAL-SCHEMA` `wiki/markdown/md-skill-continue-research-goal-schema.md`
 - `WIKI-MD-SKILL-GRILL-ME` `wiki/markdown/md-skill-grill-me.md`
 - `WIKI-MD-SKILL-GRILL-WITH-DOCS` `wiki/markdown/md-skill-grill-with-docs.md`
 - `WIKI-MD-SKILL-HTML-VISUAL-EXPLAINER` `wiki/markdown/md-skill-html-visual-explainer.md`

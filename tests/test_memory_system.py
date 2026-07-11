@@ -529,15 +529,16 @@ class MemorySystemSmokeTests(unittest.TestCase):
         tex_rows = self.memory_system.read_csv_rows(
             self.memory_system.registry_path("TEX_SOURCE_REGISTRY.csv")
         )
-        target_pdf_path = tex_rows[0]["pdf_path"]
-        with mock.patch.object(self.memory_system, "write_csv_if_changed"):
-            rows = self.memory_system.generate_pdf_rows(
-                tex_rows,
-                "2099-01-01T00:00:00Z",
-                rebuilt_pdf_paths={target_pdf_path},
-            )
-        rebuilt_row = next(row for row in rows if row["path"] == target_pdf_path)
-        self.assertEqual(rebuilt_row["built_at"], "2099-01-01T00:00:00Z")
+        target_pdf_path = next(row["pdf_path"] for row in tex_rows if row["pdf_path"])
+        for ordered_rows in (tex_rows, list(reversed(tex_rows))):
+            with mock.patch.object(self.memory_system, "write_csv_if_changed"):
+                rows = self.memory_system.generate_pdf_rows(
+                    ordered_rows,
+                    "2099-01-01T00:00:00Z",
+                    rebuilt_pdf_paths={target_pdf_path},
+                )
+            rebuilt_row = next(row for row in rows if row["path"] == target_pdf_path)
+            self.assertEqual(rebuilt_row["built_at"], "2099-01-01T00:00:00Z")
 
     def test_html_spec_contract_requires_source_backed_fields(self) -> None:
         report = self.memory_system.ValidationReport()
