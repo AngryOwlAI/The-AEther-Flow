@@ -1,0 +1,1200 @@
+{
+  "authority_boundary": {
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "p1_t04_unlocked": true,
+    "physics_promotion_authorized": false,
+    "project_system_change_only": true,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "blocking_mismatches": [],
+  "case_results": [
+    {
+      "blocking": false,
+      "consolidated": {
+        "authority_fields": [],
+        "hard_finding_ids": [],
+        "selected_paths": [
+          "README.md"
+        ],
+        "status": "PASS",
+        "warning_finding_ids": []
+      },
+      "fixture_id": "clean_pass",
+      "legacy": {
+        "authority_fields": [],
+        "hard_finding_ids": [],
+        "selected_paths": [
+          "README.md"
+        ],
+        "status": "PASS",
+        "warning_finding_ids": []
+      },
+      "mismatch_fields": []
+    },
+    {
+      "blocking": false,
+      "consolidated": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_core:malformed_registry",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_core:malformed_registry"
+        ],
+        "selected_paths": [],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "fixture_id": "malformed_registry",
+      "legacy": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_core:malformed_registry",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_core:malformed_registry"
+        ],
+        "selected_paths": [],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "mismatch_fields": []
+    },
+    {
+      "blocking": false,
+      "consolidated": {
+        "authority_fields": [
+          {
+            "context": "surface_policy",
+            "finding_id": "claim_language_changed:einstein_equation_overclaim",
+            "finding_kind": "overclaim_hard_fail",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces"
+          },
+          {
+            "finding_id": "research_control_diff:missing_active_agentjob",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "claim_language_changed:einstein_equation_overclaim",
+          "research_control_diff:missing_active_agentjob"
+        ],
+        "selected_paths": [
+          "README.md"
+        ],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "fixture_id": "missing_active_agentjob",
+      "legacy": {
+        "authority_fields": [
+          {
+            "context": "surface_policy",
+            "finding_id": "claim_language_changed:einstein_equation_overclaim",
+            "finding_kind": "overclaim_hard_fail",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces"
+          },
+          {
+            "finding_id": "research_control_diff:missing_active_agentjob",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "claim_language_changed:einstein_equation_overclaim",
+          "research_control_diff:missing_active_agentjob"
+        ],
+        "selected_paths": [
+          "README.md"
+        ],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "mismatch_fields": []
+    },
+    {
+      "blocking": false,
+      "consolidated": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_diff:disallowed_path",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_diff:disallowed_path"
+        ],
+        "selected_paths": [],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "fixture_id": "disallowed_path",
+      "legacy": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_diff:disallowed_path",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_diff:disallowed_path"
+        ],
+        "selected_paths": [],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "mismatch_fields": []
+    },
+    {
+      "blocking": false,
+      "consolidated": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_diff:overly_broad_allowlist",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_diff:overly_broad_allowlist"
+        ],
+        "selected_paths": [],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "fixture_id": "overly_broad_allowlist",
+      "legacy": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_diff:overly_broad_allowlist",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_diff:overly_broad_allowlist"
+        ],
+        "selected_paths": [],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "mismatch_fields": []
+    },
+    {
+      "blocking": false,
+      "consolidated": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_diff:markdown_authority_violation",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_diff:markdown_authority_violation"
+        ],
+        "selected_paths": [
+          "README.md"
+        ],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "fixture_id": "markdown_authority_violation",
+      "legacy": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_diff:markdown_authority_violation",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_diff:markdown_authority_violation"
+        ],
+        "selected_paths": [
+          "README.md"
+        ],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "mismatch_fields": []
+    },
+    {
+      "blocking": false,
+      "consolidated": {
+        "authority_fields": [
+          {
+            "context": "surface_policy",
+            "finding_id": "claim_language_changed:einstein_equation_overclaim",
+            "finding_kind": "overclaim_hard_fail",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces"
+          }
+        ],
+        "hard_finding_ids": [
+          "claim_language_changed:einstein_equation_overclaim"
+        ],
+        "selected_paths": [
+          "README.md"
+        ],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "fixture_id": "public_overclaim",
+      "legacy": {
+        "authority_fields": [
+          {
+            "context": "surface_policy",
+            "finding_id": "claim_language_changed:einstein_equation_overclaim",
+            "finding_kind": "overclaim_hard_fail",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces"
+          }
+        ],
+        "hard_finding_ids": [
+          "claim_language_changed:einstein_equation_overclaim"
+        ],
+        "selected_paths": [
+          "README.md"
+        ],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "mismatch_fields": []
+    },
+    {
+      "blocking": false,
+      "consolidated": {
+        "authority_fields": [
+          {
+            "context": "historical_provenance",
+            "finding_id": "claim_language_changed:benchmark_overclaim",
+            "finding_kind": "overclaim_warning",
+            "severity": "warn_historical",
+            "surface_class": "historical_artifacts"
+          }
+        ],
+        "hard_finding_ids": [],
+        "selected_paths": [
+          "research_control/tasks/RT-LEGACY/artifacts/legacy_note.md"
+        ],
+        "status": "PASS",
+        "warning_finding_ids": [
+          "claim_language_changed:benchmark_overclaim"
+        ]
+      },
+      "fixture_id": "reviewed_historical_warning",
+      "legacy": {
+        "authority_fields": [
+          {
+            "context": "historical_provenance",
+            "finding_id": "claim_language_changed:benchmark_overclaim",
+            "finding_kind": "overclaim_warning",
+            "severity": "warn_historical",
+            "surface_class": "historical_artifacts"
+          }
+        ],
+        "hard_finding_ids": [],
+        "selected_paths": [
+          "research_control/tasks/RT-LEGACY/artifacts/legacy_note.md"
+        ],
+        "status": "PASS",
+        "warning_finding_ids": [
+          "claim_language_changed:benchmark_overclaim"
+        ]
+      },
+      "mismatch_fields": []
+    },
+    {
+      "blocking": false,
+      "consolidated": {
+        "authority_fields": [
+          {
+            "context": "surface_policy",
+            "finding_id": "claim_language_changed:source_certificate_overread",
+            "finding_kind": "overclaim_hard_fail",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces"
+          },
+          {
+            "context": "surface_policy",
+            "finding_id": "claim_language_changed:target_metric_used_as_source_certificate",
+            "finding_kind": "overclaim_hard_fail",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces"
+          }
+        ],
+        "hard_finding_ids": [
+          "claim_language_changed:source_certificate_overread",
+          "claim_language_changed:target_metric_used_as_source_certificate"
+        ],
+        "selected_paths": [
+          "README.md"
+        ],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "fixture_id": "target_import",
+      "legacy": {
+        "authority_fields": [
+          {
+            "context": "surface_policy",
+            "finding_id": "claim_language_changed:source_certificate_overread",
+            "finding_kind": "overclaim_hard_fail",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces"
+          },
+          {
+            "context": "surface_policy",
+            "finding_id": "claim_language_changed:target_metric_used_as_source_certificate",
+            "finding_kind": "overclaim_hard_fail",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces"
+          }
+        ],
+        "hard_finding_ids": [
+          "claim_language_changed:source_certificate_overread",
+          "claim_language_changed:target_metric_used_as_source_certificate"
+        ],
+        "selected_paths": [
+          "README.md"
+        ],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "mismatch_fields": []
+    },
+    {
+      "blocking": false,
+      "consolidated": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_core:stale_sidecar",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_core:stale_sidecar"
+        ],
+        "selected_paths": [],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "fixture_id": "stale_sidecar",
+      "legacy": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_core:stale_sidecar",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_core:stale_sidecar"
+        ],
+        "selected_paths": [],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "mismatch_fields": []
+    },
+    {
+      "blocking": false,
+      "consolidated": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_diff:unrelated_path",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_diff:unrelated_path"
+        ],
+        "selected_paths": [],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "fixture_id": "unrelated_path",
+      "legacy": {
+        "authority_fields": [
+          {
+            "finding_id": "research_control_diff:unrelated_path",
+            "severity": "blocking"
+          }
+        ],
+        "hard_finding_ids": [
+          "research_control_diff:unrelated_path"
+        ],
+        "selected_paths": [],
+        "status": "FAIL",
+        "warning_finding_ids": []
+      },
+      "mismatch_fields": []
+    }
+  ],
+  "comparison_scope": "component semantic equivalence plus consolidated composition guard",
+  "composition_audit": {
+    "core_failure_preserved": true,
+    "diff_failure_preserved": true,
+    "diff_gate_executed": true,
+    "hermetic": true,
+    "reason": "core and diff findings are both preserved",
+    "status": "PASS"
+  },
+  "configuration_error_audit": {
+    "consolidated": {
+      "authority_fields": [
+        {
+          "context": "claim_configuration",
+          "finding_id": "claim_language_changed:configuration_error",
+          "finding_kind": "configuration_error",
+          "severity": "blocking",
+          "surface_class": "configuration"
+        }
+      ],
+      "hard_finding_ids": [
+        "claim_language_changed:configuration_error"
+      ],
+      "selected_paths": [
+        "README.md"
+      ],
+      "status": "FAIL",
+      "warning_finding_ids": []
+    },
+    "legacy": {
+      "authority_fields": [
+        {
+          "context": "claim_configuration",
+          "finding_id": "claim_language_changed:configuration_error",
+          "finding_kind": "configuration_error",
+          "severity": "blocking",
+          "surface_class": "configuration"
+        }
+      ],
+      "hard_finding_ids": [
+        "claim_language_changed:configuration_error"
+      ],
+      "selected_paths": [
+        "README.md"
+      ],
+      "status": "FAIL",
+      "warning_finding_ids": []
+    },
+    "mismatch_fields": [],
+    "standalone_exit_code": 1,
+    "status": "PASS"
+  },
+  "counts": {
+    "equivalent_fixture_count": 11,
+    "fixture_count": 11,
+    "hard_finding_disappearance_count": 0,
+    "legacy_fail_consolidated_pass_count": 0,
+    "semantic_mismatch_fixture_count": 0,
+    "taxonomy_authority_mismatch_class_count": 0,
+    "taxonomy_class_count": 42,
+    "taxonomy_class_finding_disappearance_count": 0,
+    "warning_finding_disappearance_count": 0
+  },
+  "coverage": {
+    "claim_taxonomy_class_ids": [
+      "bare_high_risk_accepted",
+      "matter_coupling_overclaim",
+      "g_eff_overclaim",
+      "m_src_underclaim",
+      "g_eff_proper_time_normalization_overread",
+      "g_eff_detector_calibration_overread",
+      "g_eff_stress_energy_semantics_overread",
+      "rr_e_transport_source_law_overclaim",
+      "unrestricted_rr_e_irrelevance_overclaim",
+      "positive_ms_profile_adoption_overclaim",
+      "source_matter_semantics_adoption_readiness_law_overclaim",
+      "einstein_equation_overclaim",
+      "benchmark_overclaim",
+      "validator_as_proof",
+      "registry_as_proof",
+      "gate_authority_laundering",
+      "generated_derivative_authority",
+      "audit_ready_as_adoption",
+      "no_target_certificate_as_positive_semantics",
+      "scoped_evidence_or_precondition_as_adoption",
+      "source_certificate_overread",
+      "semantic_layer_collapse_overclaim",
+      "premature_efe_prerequisite_overclaim",
+      "target_metric_used_as_source_certificate",
+      "lorentzian_signature_used_as_certificate_validity",
+      "proper_time_used_as_source_readout",
+      "detector_calibration_treated_as_source_label",
+      "stress_energy_tensor_used_to_prove_matter_semantics",
+      "matter_action_used_to_prove_coupling_law",
+      "einstein_equations_used_as_upstream_premise",
+      "benchmark_fit_used_as_source_evidence",
+      "gate_chair_scoped_evidence_used_as_source_law",
+      "validator_pass_used_as_proof",
+      "generated_wiki_note_used_as_authority",
+      "finite_local_model_rendered_as_universal_matter_coupling",
+      "global_no_go_or_rejection_overclaim",
+      "accepted_positive_status_missing",
+      "accepted_scope_after_blocked_overread",
+      "scoped_adoption_minimized",
+      "caveat_wall_public_summary",
+      "status_card_v2_missing_next_burden",
+      "countermodel_overread_as_global_no_go"
+    ],
+    "diff_boundary_classes": [
+      "missing_active_agentjob",
+      "disallowed_path",
+      "overly_broad_allowlist",
+      "markdown_authority_violation",
+      "unrelated_path"
+    ],
+    "mutation_guard": "Every manifest fixture is mutated and the comparator must reject the changed semantic result.",
+    "required_fixture_ids": [
+      "clean_pass",
+      "malformed_registry",
+      "missing_active_agentjob",
+      "disallowed_path",
+      "overly_broad_allowlist",
+      "markdown_authority_violation",
+      "public_overclaim",
+      "reviewed_historical_warning",
+      "target_import",
+      "stale_sidecar",
+      "unrelated_path"
+    ]
+  },
+  "gate_ids": {
+    "consolidated_candidate": [
+      "research_control_diff"
+    ],
+    "deduplication_activated": false,
+    "legacy": [
+      "research_control_core",
+      "research_control_diff",
+      "claim_language_changed"
+    ],
+    "orchestration_changed": false
+  },
+  "generated_at": "2026-07-13T14:03:32Z",
+  "job_id": "AJ-RT-20260713-002-001",
+  "migration_epoch": "legacy",
+  "performance_evidence": {
+    "before_reference": "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json",
+    "cache_hits": 0,
+    "cache_misses": 0,
+    "duration_seconds": 0.407067,
+    "output_bytes": 36670,
+    "subprocess_count": 0
+  },
+  "plan_task_id": "P1-T03",
+  "repair_route": {
+    "next_task": "One separately bounded Validator Engineer repair must preserve structured warnings and claim findings across early-failure branches, then rerun P1-T03.",
+    "production_validator_modified_by_this_job": false,
+    "reason": "The integrated path drops claim warnings and structured authority metadata and can short-circuit claim or diff findings on early failures.",
+    "required": false
+  },
+  "schema_id": "legacy_consolidated_equivalence_report_v1",
+  "severity_classification_audit": {
+    "consolidated_missing_reachable_levels": [],
+    "declared_severity_levels": [
+      "hard_fail_current_control",
+      "hard_fail_current_public",
+      "warn_current_control",
+      "warn_historical",
+      "warn_intentional_example",
+      "warn_public_summary",
+      "warn_review"
+    ],
+    "declared_without_active_mapping": [
+      "warn_review"
+    ],
+    "legacy_missing_reachable_levels": [],
+    "probe_results": [
+      {
+        "class_id": "einstein_equation_overclaim",
+        "consolidated_preserved": true,
+        "legacy_preserved": true,
+        "path": "README.md",
+        "probe_id": "current_public_hard",
+        "severity": "hard_fail_current_public",
+        "text": "GR derived.\n"
+      },
+      {
+        "class_id": "einstein_equation_overclaim",
+        "consolidated_preserved": true,
+        "legacy_preserved": true,
+        "path": "research_control/handoffs/handoff-synthetic.md",
+        "probe_id": "current_control_hard",
+        "severity": "hard_fail_current_control",
+        "text": "GR derived.\n"
+      },
+      {
+        "class_id": "einstein_equation_overclaim",
+        "consolidated_preserved": true,
+        "legacy_preserved": true,
+        "path": "README.md",
+        "probe_id": "intentional_example_warning",
+        "severity": "warn_intentional_example",
+        "text": "Bad example: GR derived.\n"
+      },
+      {
+        "class_id": "einstein_equation_overclaim",
+        "consolidated_preserved": true,
+        "legacy_preserved": true,
+        "path": "research_control/tasks/RT-SYNTHETIC/artifacts/history.md",
+        "probe_id": "historical_warning",
+        "severity": "warn_historical",
+        "text": "Historical GR derived.\n"
+      },
+      {
+        "class_id": "scoped_adoption_minimized",
+        "consolidated_preserved": true,
+        "legacy_preserved": true,
+        "path": "README.md",
+        "probe_id": "public_summary_warning",
+        "severity": "warn_public_summary",
+        "text": "M_src is not really anything.\n"
+      },
+      {
+        "class_id": "scoped_adoption_minimized",
+        "consolidated_preserved": true,
+        "legacy_preserved": true,
+        "path": "research_control/handoffs/handoff-synthetic.md",
+        "probe_id": "current_control_warning",
+        "severity": "warn_current_control",
+        "text": "M_src is not really anything.\n"
+      }
+    ],
+    "reachable_severity_levels": [
+      "hard_fail_current_control",
+      "hard_fail_current_public",
+      "warn_current_control",
+      "warn_historical",
+      "warn_intentional_example",
+      "warn_public_summary"
+    ]
+  },
+  "source_hashes": {
+    "claim_language_validator_sha256": "bd6705ff3f9dd11b77c441510503dad0a49f06cd2a862a25a8aac4e5b32fb65b",
+    "claim_taxonomy_sha256": "904c677a846d62f9260e3c0e7c49f4426c39f28ffc53aab20dfb169c9cafcc3f",
+    "fixture_corpus_sha256": "2764b50456afec0308aecd39bd24c1229b4d9241bd058ccbf5a66a27871829e7",
+    "research_control_validator_sha256": "34d7fdd6d6e471dd4747e01ceccb50e720086094f1b837c5bc85f1427bcf44bb",
+    "reviewed_contexts_sha256": "dcabd34c3e676a2131abab7af63b04834c74db2b228ace97a56e0450844e2df8",
+    "test_module_sha256": "505b2c12747ac0af7ad90099c7fa9357c8fca44e3348a58e26e13c646bb0c1c4"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260713-002",
+  "taxonomy_classification_audit": {
+    "active_class_count": 42,
+    "authority_mismatch_class_ids": [],
+    "class_results": [
+      {
+        "authority_fields_preserved": true,
+        "class_id": "bare_high_risk_accepted",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "matter_coupling_overclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "g_eff_overclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "m_src_underclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "g_eff_proper_time_normalization_overread",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "g_eff_detector_calibration_overread",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "g_eff_stress_energy_semantics_overread",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "rr_e_transport_source_law_overclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "unrestricted_rr_e_irrelevance_overclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "positive_ms_profile_adoption_overclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "source_matter_semantics_adoption_readiness_law_overclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "einstein_equation_overclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "benchmark_overclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "validator_as_proof",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "registry_as_proof",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "gate_authority_laundering",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "generated_derivative_authority",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "audit_ready_as_adoption",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "no_target_certificate_as_positive_semantics",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "scoped_evidence_or_precondition_as_adoption",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "source_certificate_overread",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "semantic_layer_collapse_overclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "premature_efe_prerequisite_overclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "target_metric_used_as_source_certificate",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "lorentzian_signature_used_as_certificate_validity",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "proper_time_used_as_source_readout",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "detector_calibration_treated_as_source_label",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "stress_energy_tensor_used_to_prove_matter_semantics",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "matter_action_used_to_prove_coupling_law",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "einstein_equations_used_as_upstream_premise",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "benchmark_fit_used_as_source_evidence",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "gate_chair_scoped_evidence_used_as_source_law",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "validator_pass_used_as_proof",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "generated_wiki_note_used_as_authority",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "finite_local_model_rendered_as_universal_matter_coupling",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "global_no_go_or_rejection_overclaim",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "accepted_positive_status_missing",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "warn_public_summary"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "warn_public_summary"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "accepted_scope_after_blocked_overread",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "warn_public_summary"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "warn_public_summary"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "scoped_adoption_minimized",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "warn_public_summary"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "warn_public_summary"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "caveat_wall_public_summary",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "warn_public_summary"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "warn_public_summary"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "status_card_v2_missing_next_burden",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "warn_public_summary"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "warn_public_summary"
+        ]
+      },
+      {
+        "authority_fields_preserved": true,
+        "class_id": "countermodel_overread_as_global_no_go",
+        "consolidated_detected": true,
+        "consolidated_severities": [
+          "hard_fail_current_public"
+        ],
+        "legacy_detected": true,
+        "legacy_severities": [
+          "hard_fail_current_public"
+        ]
+      }
+    ],
+    "consolidated_missing_class_ids": [],
+    "legacy_covered_class_count": 42,
+    "legacy_missing_class_ids": []
+  }
+}

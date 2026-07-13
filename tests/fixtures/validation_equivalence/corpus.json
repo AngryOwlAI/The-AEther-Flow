@@ -104,14 +104,24 @@
       },
       "expected_consolidated": {
         "status": "FAIL",
-        "hard_finding_ids": ["research_control_diff:missing_active_agentjob"],
+        "hard_finding_ids": [
+          "claim_language_changed:einstein_equation_overclaim",
+          "research_control_diff:missing_active_agentjob"
+        ],
         "warning_finding_ids": [],
-        "selected_paths": [],
+        "selected_paths": ["README.md"],
         "authority_fields": [
+          {
+            "finding_id": "claim_language_changed:einstein_equation_overclaim",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "context": "surface_policy"
+          },
           {"finding_id": "research_control_diff:missing_active_agentjob", "severity": "blocking"}
         ]
       },
-      "expected_mismatch_fields": ["hard_finding_ids", "selected_paths", "authority_fields"]
+      "expected_mismatch_fields": []
     },
     {
       "fixture_id": "disallowed_path",
@@ -265,10 +275,16 @@
         "warning_finding_ids": [],
         "selected_paths": ["README.md"],
         "authority_fields": [
-          {"finding_id": "claim_language_changed:einstein_equation_overclaim", "severity": "hard_fail_current_public"}
+          {
+            "finding_id": "claim_language_changed:einstein_equation_overclaim",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "context": "surface_policy"
+          }
         ]
       },
-      "expected_mismatch_fields": ["authority_fields"]
+      "expected_mismatch_fields": []
     },
     {
       "fixture_id": "reviewed_historical_warning",
@@ -296,11 +312,19 @@
       "expected_consolidated": {
         "status": "PASS",
         "hard_finding_ids": [],
-        "warning_finding_ids": [],
+        "warning_finding_ids": ["claim_language_changed:benchmark_overclaim"],
         "selected_paths": ["research_control/tasks/RT-LEGACY/artifacts/legacy_note.md"],
-        "authority_fields": []
+        "authority_fields": [
+          {
+            "finding_id": "claim_language_changed:benchmark_overclaim",
+            "severity": "warn_historical",
+            "surface_class": "historical_artifacts",
+            "finding_kind": "overclaim_warning",
+            "context": "historical_provenance"
+          }
+        ]
       },
-      "expected_mismatch_fields": ["warning_finding_ids", "authority_fields"]
+      "expected_mismatch_fields": []
     },
     {
       "fixture_id": "target_import",
@@ -347,11 +371,23 @@
         "warning_finding_ids": [],
         "selected_paths": ["README.md"],
         "authority_fields": [
-          {"finding_id": "claim_language_changed:source_certificate_overread", "severity": "hard_fail_current_public"},
-          {"finding_id": "claim_language_changed:target_metric_used_as_source_certificate", "severity": "hard_fail_current_public"}
+          {
+            "finding_id": "claim_language_changed:source_certificate_overread",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "context": "surface_policy"
+          },
+          {
+            "finding_id": "claim_language_changed:target_metric_used_as_source_certificate",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "context": "surface_policy"
+          }
         ]
       },
-      "expected_mismatch_fields": ["authority_fields"]
+      "expected_mismatch_fields": []
     },
     {
       "fixture_id": "stale_sidecar",

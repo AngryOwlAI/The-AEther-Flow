@@ -1404,6 +1404,7 @@ def parent_child_decomposition_policy() -> dict[str, object]:
 class ValidationReport:
     errors: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
+    findings: list[dict[str, Any]] = field(default_factory=list)
 
     def error(self, message: str) -> None:
         self.errors.append(message)
@@ -5604,20 +5605,51 @@ def validate_changed_claim_language(report: ValidationReport, paths: Iterable[st
     try:
         result = claim_language_linter.validate_paths(repo_root=REPO_ROOT, paths=selected_paths)
     except (FileNotFoundError, StrictYamlError, OSError, re.error) as exc:
+        report.findings.append(
+            {
+                "gate_id": "claim_language_changed",
+                "finding_id": "claim_language_changed:configuration_error",
+                "severity": "blocking",
+                "surface_class": "configuration",
+                "finding_kind": "configuration_error",
+                "context": "claim_configuration",
+            }
+        )
         report.error(f"claim-language validation failed to run: {exc}")
         return
 
     for error in result.get("config_errors", []):
+        report.findings.append(
+            {
+                "gate_id": "claim_language_changed",
+                "finding_id": "claim_language_changed:configuration_error",
+                "severity": "blocking",
+                "surface_class": "configuration",
+                "finding_kind": "configuration_error",
+                "context": "claim_configuration",
+            }
+        )
         report.error(f"claim-language config error: {error}")
     for finding in result.get("findings", []):
         severity = str(finding.get("severity", ""))
-        if not severity.startswith("hard_fail_"):
-            continue
-        report.error(
-            f"{finding.get('path')}:{finding.get('line')}: claim-language hard failure "
-            f"{finding.get('class_id')} {finding.get('matched_text')!r} ({severity}); "
+        class_id = str(finding.get("class_id", ""))
+        report.findings.append(
+            {
+                **finding,
+                "gate_id": "claim_language_changed",
+                "finding_id": f"claim_language_changed:{class_id}",
+            }
+        )
+        message = (
+            f"{finding.get('path')}:{finding.get('line')}: claim-language "
+            f"{'hard failure' if severity.startswith('hard_fail_') else 'warning'} "
+            f"{class_id} {finding.get('matched_text')!r} ({severity}); "
             f"{finding.get('corrective_language')}"
         )
+        if severity.startswith("hard_fail_"):
+            report.error(message)
+        else:
+            report.warn(message)
 
 
 def changed_paths(base_ref: str, staged_only: bool) -> list[str]:
@@ -5777,39 +5809,39 @@ def validate_diff(
     staged_only: bool,
 ) -> None:
     active_jobs = [row for row in job_rows.values() if row["status"] in {"active", "completed"}]
-    if not active_jobs:
+    job = sorted(active_jobs, key=lambda row: row["created_at"])[-1] if active_jobs else None
+    if job is None:
         report.error("--check-diff requires an active or completed AgentJob")
-        return
-    job = sorted(active_jobs, key=lambda row: row["created_at"])[-1]
-    allowed = split_semicolon(job["allowed_write_paths"])
-    output_paths = split_semicolon(job["output_paths"])
-    allowed.extend(output_paths)
-    job_path_text = job.get("job_path", "")
-    job_path = repo_path(job_path_text) if job_path_text else None
-    if job_path and job_path.exists():
-        try:
-            job_contract = load_yaml(job_path)
-        except StrictYamlError as exc:
-            report.error(f"{job_path_text}: {exc}")
-            job_contract = {}
-        generated_paths = job_contract.get("allowed_generated_paths", [])
-        if isinstance(generated_paths, list):
-            allowed.extend(str(path) for path in generated_paths if str(path))
     try:
         paths = changed_paths(base_ref, staged_only)
     except RuntimeError as exc:
         report.error(str(exc))
         return
-    allowed.extend(conditional_checkpoint_sidecar_paths(REPO_ROOT, paths, allowed))
-    for pattern in allowed:
-        if _pattern_is_too_broad(pattern):
-            report.error(f"{job['job_id']}: overly broad allowlist pattern {pattern}")
-    for changed in paths:
-        if changed.startswith(".local/"):
-            continue
-        if not any(_path_matches(changed, pattern) for pattern in allowed):
-            report.error(f"{changed}: changed path is not allowed by {job['job_id']}")
-    validate_markdown_authority_boundaries(report, job, paths, base_ref, staged_only)
+    if job is not None:
+        allowed = split_semicolon(job["allowed_write_paths"])
+        output_paths = split_semicolon(job["output_paths"])
+        allowed.extend(output_paths)
+        job_path_text = job.get("job_path", "")
+        job_path = repo_path(job_path_text) if job_path_text else None
+        if job_path and job_path.exists():
+            try:
+                job_contract = load_yaml(job_path)
+            except StrictYamlError as exc:
+                report.error(f"{job_path_text}: {exc}")
+                job_contract = {}
+            generated_paths = job_contract.get("allowed_generated_paths", [])
+            if isinstance(generated_paths, list):
+                allowed.extend(str(path) for path in generated_paths if str(path))
+        allowed.extend(conditional_checkpoint_sidecar_paths(REPO_ROOT, paths, allowed))
+        for pattern in allowed:
+            if _pattern_is_too_broad(pattern):
+                report.error(f"{job['job_id']}: overly broad allowlist pattern {pattern}")
+        for changed in paths:
+            if changed.startswith(".local/"):
+                continue
+            if not any(_path_matches(changed, pattern) for pattern in allowed):
+                report.error(f"{changed}: changed path is not allowed by {job['job_id']}")
+        validate_markdown_authority_boundaries(report, job, paths, base_ref, staged_only)
     validate_changed_claim_language(report, paths)
 
 
@@ -5829,6 +5861,17 @@ def validate_all(
         if (REGISTRY_DIR / name).exists()
     }
     if len(rows_by_registry) != len(REGISTRY_COLUMNS):
+        if check_diff:
+            partial_jobs = {
+                row["job_id"]: row
+                for row in rows_by_registry.get("AGENT_JOB_REGISTRY.csv", [])
+                if row.get("job_id")
+                and row.get("status")
+                and row.get("created_at")
+                and row.get("allowed_write_paths") is not None
+                and row.get("output_paths") is not None
+            }
+            validate_diff(report, partial_jobs, base_ref, staged_only)
         return report
     validate_registry_values(report, rows_by_registry)
     validate_countermodel_obligation_registry(
@@ -5886,7 +5929,16 @@ def main(argv: list[str] | None = None) -> int:
         staged_only=args.staged_only,
     )
     if args.json:
-        print(json.dumps({"errors": report.errors, "warnings": report.warnings}, indent=2))
+        print(
+            json.dumps(
+                {
+                    "errors": report.errors,
+                    "warnings": report.warnings,
+                    "findings": report.findings,
+                },
+                indent=2,
+            )
+        )
     else:
         if report.errors:
             print("Research-control validation failed:")

@@ -32,6 +32,8 @@ COMPARISON_FIELDS = (
     "selected_paths",
     "authority_fields",
 )
+REPORT_TASK_ID = "RT-20260713-002"
+REPORT_JOB_ID = "AJ-RT-20260713-002-001"
 CLAIM_ERROR_RE = re.compile(
     r"claim-language hard failure (?P<class_id>[^ ]+).*"
     r"\((?P<severity>hard_fail_[^)]+)\);"
@@ -183,6 +185,17 @@ def normalize_validation_report(
     warnings: set[str] = set()
     authority: list[dict[str, str]] = []
     matchers = fixture.get("message_matchers", [])
+    structured_authority = {
+        (str(finding.get("finding_id", "")), str(finding.get("severity", ""))): {
+            "finding_id": str(finding.get("finding_id", "")),
+            "severity": str(finding.get("severity", "")),
+            "surface_class": str(finding.get("surface_class", "")),
+            "finding_kind": str(finding.get("finding_kind", "")),
+            "context": str(finding.get("context", "")),
+        }
+        for finding in getattr(report, "findings", [])
+        if finding.get("finding_id") and finding.get("severity")
+    }
 
     for message in report.errors:
         claim_match = CLAIM_ERROR_RE.search(message)
@@ -199,7 +212,10 @@ def normalize_validation_report(
         elif claim_match:
             finding_id = f"claim_language_changed:{claim_match.group('class_id')}"
             severity = claim_match.group("severity")
-            authority_entry = {"finding_id": finding_id, "severity": severity}
+            authority_entry = structured_authority.get(
+                (finding_id, severity),
+                {"finding_id": finding_id, "severity": severity},
+            )
         else:
             matched = [entry for entry in matchers if entry["contains"] in message]
             if not matched:
@@ -215,7 +231,10 @@ def normalize_validation_report(
         if claim_match:
             finding_id = f"claim_language_changed:{claim_match.group('class_id')}"
             severity = claim_match.group("severity")
-            authority_entry = {"finding_id": finding_id, "severity": severity}
+            authority_entry = structured_authority.get(
+                (finding_id, severity),
+                {"finding_id": finding_id, "severity": severity},
+            )
         else:
             matched = [entry for entry in matchers if entry["contains"] in message]
             if not matched:
@@ -854,8 +873,8 @@ def build_report() -> dict[str, Any]:
     report: dict[str, Any] = {
         "schema_id": "legacy_consolidated_equivalence_report_v1",
         "plan_task_id": "P1-T03",
-        "task_id": "RT-20260713-001",
-        "job_id": "AJ-RT-20260713-001-001",
+        "task_id": REPORT_TASK_ID,
+        "job_id": REPORT_JOB_ID,
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "migration_epoch": "legacy",
         "status": "REPAIR_REQUIRED"
@@ -1009,28 +1028,13 @@ class ValidationEquivalenceTests(unittest.TestCase):
             with self.subTest(fixture=fixture["fixture_id"]):
                 self.assertTrue(intended.issubset(findings))
 
-    def test_current_semantic_mismatches_are_blocking(self) -> None:
+    def test_current_semantics_are_equivalent(self) -> None:
         blocking = {
             result["fixture_id"]: result["mismatch_fields"]
             for result in self.results
             if result["blocking"]
         }
-        self.assertEqual(
-            blocking,
-            {
-                "missing_active_agentjob": [
-                    "hard_finding_ids",
-                    "selected_paths",
-                    "authority_fields",
-                ],
-                "reviewed_historical_warning": [
-                    "warning_finding_ids",
-                    "authority_fields",
-                ],
-                "public_overclaim": ["authority_fields"],
-                "target_import": ["authority_fields"],
-            },
-        )
+        self.assertEqual(blocking, {})
 
     def test_comparator_rejects_a_semantic_mutation_for_every_fixture(self) -> None:
         for fixture in self.corpus["cases"]:
@@ -1064,54 +1068,37 @@ class ValidationEquivalenceTests(unittest.TestCase):
         self.assertEqual(taxonomy["active_class_count"], 42)
         self.assertEqual(taxonomy["legacy_covered_class_count"], 42)
         self.assertEqual(taxonomy["legacy_missing_class_ids"], [])
-        self.assertEqual(
-            set(taxonomy["consolidated_missing_class_ids"]),
-            {
-                "accepted_positive_status_missing",
-                "accepted_scope_after_blocked_overread",
-                "scoped_adoption_minimized",
-                "caveat_wall_public_summary",
-                "status_card_v2_missing_next_burden",
-            },
-        )
-        self.assertEqual(len(taxonomy["authority_mismatch_class_ids"]), 42)
+        self.assertEqual(taxonomy["consolidated_missing_class_ids"], [])
+        self.assertEqual(taxonomy["authority_mismatch_class_ids"], [])
 
         severity = severity_classification_audit()
         self.assertEqual(severity["declared_without_active_mapping"], ["warn_review"])
         self.assertEqual(severity["legacy_missing_reachable_levels"], [])
-        self.assertEqual(
-            set(severity["consolidated_missing_reachable_levels"]),
-            {
-                "warn_current_control",
-                "warn_historical",
-                "warn_intentional_example",
-                "warn_public_summary",
-            },
-        )
+        self.assertEqual(severity["consolidated_missing_reachable_levels"], [])
 
     def test_configuration_errors_preserve_blocking_semantics(self) -> None:
         audit = configuration_error_audit()
         self.assertEqual(audit["status"], "PASS")
         self.assertEqual(audit["mismatch_fields"], [])
 
-    def test_hermetic_composition_guard_records_early_return_loss(self) -> None:
+    def test_hermetic_composition_guard_preserves_both_gates(self) -> None:
         audit = composition_audit()
-        self.assertEqual(audit["status"], "REPAIR_REQUIRED")
+        self.assertEqual(audit["status"], "PASS")
         self.assertTrue(audit["hermetic"])
         self.assertTrue(audit["core_failure_preserved"])
-        self.assertFalse(audit["diff_gate_executed"])
-        self.assertFalse(audit["diff_failure_preserved"])
+        self.assertTrue(audit["diff_gate_executed"])
+        self.assertTrue(audit["diff_failure_preserved"])
 
-    def test_report_is_repair_required_and_keeps_p1_t04_locked(self) -> None:
+    def test_report_passes_and_unlocks_future_p1_t04_dependency(self) -> None:
         report = build_report()
-        self.assertEqual(report["status"], "REPAIR_REQUIRED")
-        self.assertEqual(report["counts"]["semantic_mismatch_fixture_count"], 4)
-        self.assertEqual(report["counts"]["hard_finding_disappearance_count"], 1)
-        self.assertEqual(report["counts"]["warning_finding_disappearance_count"], 1)
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["counts"]["semantic_mismatch_fixture_count"], 0)
+        self.assertEqual(report["counts"]["hard_finding_disappearance_count"], 0)
+        self.assertEqual(report["counts"]["warning_finding_disappearance_count"], 0)
         self.assertEqual(report["counts"]["taxonomy_class_count"], 42)
-        self.assertEqual(report["counts"]["taxonomy_class_finding_disappearance_count"], 5)
-        self.assertEqual(report["counts"]["taxonomy_authority_mismatch_class_count"], 42)
-        self.assertFalse(report["authority_boundary"]["p1_t04_unlocked"])
+        self.assertEqual(report["counts"]["taxonomy_class_finding_disappearance_count"], 0)
+        self.assertEqual(report["counts"]["taxonomy_authority_mismatch_class_count"], 0)
+        self.assertTrue(report["authority_boundary"]["p1_t04_unlocked"])
         self.assertFalse(report["gate_ids"]["deduplication_activated"])
 
 
