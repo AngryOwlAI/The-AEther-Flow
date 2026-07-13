@@ -19,6 +19,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-V19-LEGACY-VALIDATION-INVOCATION-GRAPH` `research_control/design/v19_legacy_validation_invocation_graph.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-OVERHEAD-BACKLOG-SCHEMA` `research_control/design/v19_validation_overhead_backlog_schema.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET` `research_control/design/v19_validation_performance_and_safety_budget.md`
+- Backlink from `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1` `research_control/design/validation_evidence_identity_policy_v1.md`
 
 ## Validation
 

@@ -1,0 +1,46 @@
+task_id: "RT-20260712-008"
+task_type: "validation_evidence_identity_policy"
+status: "completed"
+created_at: "2026-07-13T02:14:47Z"
+updated_at: "2026-07-13T02:14:47Z"
+parent_task_id: "RT-20260712-007"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260712-008"
+current_job_id: "AJ-RT-20260712-008-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260712-008"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested the next logical v19 task and the plan authorizes P1-T01 without a human gate."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T01"
+  plan_task_name: "Define validation evidence identity and epistemic classes"
+  recommendation_ids:
+    - "V19-R01"
+    - "V19-R26"
+    - "V19-R44"
+    - "V19-R47"
+objective: "Define when validation executions are duplicate evidence distinct cross-state confirmation or independently implemented evidence without changing executable validation behavior."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validation semantics only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p1_t01_validation_evidence_identity_policy_completed_no_physics_delta"
+claim_boundary_id: "CB-V19-P1-T01-VALIDATION-EVIDENCE-IDENTITY-001"
+claim_boundary:
+  allowed_scope: "P1-T01 validation evidence identity epistemic classes authority levels fixtures and audit evidence only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifact: "research_control/design/validation_evidence_identity_policy_v1.md"
+next_recommended_action: "Execute P1-T02 as a separate bounded Validator Engineer AgentJob to define canonical gate IDs and same-scope supersedence contracts."
+documentation_impact_id: "DI-RT-20260712-008-001"
+closed_at: "2026-07-13T02:14:47Z"
+completion_id: "AJC-AJ-RT-20260712-008-001"
+notes: "P1-T01 policy and five fixture families completed with all 37 current provisional gates assigned exactly once; no production validator orchestration checkpoint ordinary handoff or physics behavior changed."
+

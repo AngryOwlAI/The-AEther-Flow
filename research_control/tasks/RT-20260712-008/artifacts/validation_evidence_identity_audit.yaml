@@ -1,0 +1,91 @@
+schema_id: "validation_evidence_identity_audit_v1"
+task_id: "RT-20260712-008"
+job_id: "AJ-RT-20260712-008-001"
+plan_task_id: "P1-T01"
+status: "PASS"
+audited_at: "2026-07-13T02:14:47Z"
+audited_head: "b8c4d7c6567fbf503b4f6dc7c044433bae2c02e5"
+audited_index_tree: "056c720e479a8d18c2881c032ec3f8684836917b"
+source_hashes:
+  policy_sha256: "6afb60a18fee4983e302dc4b710505c32d9407f311ca4a03b7297d160d57fcf5"
+  examples_sha256: "b3537f7cc39b3b2d523786c229101a2ff0b3bf2aeeb7d204e50bafb100daf67b"
+  legacy_graph_sha256: "afa67c7fe7b31a8ae226020d5f5c125cad4a0f42842211d1a87e0f391916b85e"
+counts:
+  identity_components: 6
+  epistemic_classes: 4
+  authority_levels: 6
+  current_gate_assignments: 37
+  fixture_count: 5
+  fixture_pass_count: 5
+  duplicate_fixture_count: 2
+  legitimate_cross_state_fixture_count: 2
+  distinct_implementation_fixture_count: 1
+gate_assignment_counts:
+  protected_transaction_integrity: 12
+  derived_surface_freshness: 15
+  scientific_artifact_verification: 3
+  operational_diagnostics: 7
+fixture_results:
+  - fixture_id: "same_state_duplicate"
+    left_identity: "sha256:40e88b5fda7d434cc4c33754500ffe8ede35f7b0df53da3e5adf8bf4e6080d8f"
+    right_identity: "sha256:40e88b5fda7d434cc4c33754500ffe8ede35f7b0df53da3e5adf8bf4e6080d8f"
+    changed_components: []
+    actual_relation: "duplicate_evidence"
+    status: "PASS"
+  - fixture_id: "post_generation_legitimate_rerun"
+    left_identity: "sha256:40e88b5fda7d434cc4c33754500ffe8ede35f7b0df53da3e5adf8bf4e6080d8f"
+    right_identity: "sha256:aa5f27ab7fbb6431cf24587710fba4d03915aa0f444c92d1ef032b6cb3ae21f2"
+    changed_components:
+      - "tree_hash"
+    actual_relation: "legitimate_cross_state_confirmation"
+    status: "PASS"
+  - fixture_id: "independent_implementation"
+    left_identity: "sha256:62dd4153b76ba1ed196b97327a01eea5e5d12489f7dd9687840f04bf8135ab0e"
+    right_identity: "sha256:0166d63b862df40a8a26fda7237d521c20acbec5992dedef82a9a07b983b008c"
+    changed_components:
+      - "implementation_digest"
+    actual_relation: "distinct_implementation_identity"
+    independence_audit_status: "PASS"
+    status: "PASS"
+  - fixture_id: "environment_change"
+    left_identity: "sha256:384cdc9ed1c36b4dec6bee4a7612b016985c634ad8e43f0ac6ea0684bcb6a603"
+    right_identity: "sha256:d1bfcc5c79fdf7afb35cea8fc909a8c870a0fbe31695887212ba4cc3aa363174"
+    changed_components:
+      - "environment_digest"
+    actual_relation: "legitimate_cross_state_confirmation"
+    status: "PASS"
+  - fixture_id: "replay_test"
+    left_identity: "sha256:d2b04b634056296ddc58c9db84fec11bf39eb94716341ef4669b562c8ae9f2a3"
+    right_identity: "sha256:d2b04b634056296ddc58c9db84fec11bf39eb94716341ef4669b562c8ae9f2a3"
+    changed_components: []
+    actual_relation: "duplicate_evidence"
+    status: "PASS"
+review_findings:
+  checkpoint_staging_semantics:
+    status: "PASS"
+    finding: "Working-tree and index-tree identities are distinct through scope.tree_state and tree hash type."
+  memory_generation_semantics:
+    status: "PASS"
+    finding: "Mutating bootstrap and post-generation validation are legitimate cross-state confirmation when the generated tree changes."
+  operational_evidence_boundary:
+    status: "PASS"
+    finding: "Receipts cache hits CI statuses and summaries are pointers to underlying runs and never additional independent PASS evidence."
+  current_gate_coverage:
+    status: "PASS"
+    finding: "All 37 provisional legacy gates occur exactly once across the four epistemic classes."
+raw_audit_output:
+  status: "PASS"
+  fixture_count: 5
+  gate_assignment_count: 37
+  relations:
+    - "same_state_duplicate=duplicate_evidence"
+    - "post_generation_legitimate_rerun=legitimate_cross_state_confirmation"
+    - "independent_implementation=distinct_implementation_identity"
+    - "environment_change=legitimate_cross_state_confirmation"
+    - "replay_test=duplicate_evidence"
+authority_boundary:
+  operational_policy_only: true
+  executable_behavior_changed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false

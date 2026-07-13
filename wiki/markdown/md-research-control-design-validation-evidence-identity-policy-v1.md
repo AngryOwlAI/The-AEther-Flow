@@ -1,0 +1,23 @@
+# WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1
+
+Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
+
+## Source
+
+- Source object: `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1`
+- Source path: `research_control/design/validation_evidence_identity_policy_v1.md`
+- Format: `markdown`
+- Role: `control_design`
+- Authority status: `project_control`
+- Owner skill: `project-memory-system`
+- Source hash: `6afb60a18fee4983e302dc4b710505c32d9407f311ca4a03b7297d160d57fcf5`
+
+## Related Objects
+
+- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19` `implementations_plans/recommendations_implementation_plan_continue_task-v19.md`
+- Generated output path: `wiki/markdown/md-research-control-design-validation-evidence-identity-policy-v1.md`
+
+## Validation
+
+- Validation status: `PASS`
+- Last validated at: `2026-07-13T02:14:47Z`

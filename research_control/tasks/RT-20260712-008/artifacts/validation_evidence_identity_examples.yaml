@@ -1,0 +1,124 @@
+schema_id: "validation_evidence_identity_examples_v1"
+policy_id: "validation-evidence-identity-policy-v1"
+task_id: "RT-20260712-008"
+job_id: "AJ-RT-20260712-008-001"
+identity_algorithm: "sha256_canonical_json_v1"
+component_order:
+  - "gate_id"
+  - "implementation_digest"
+  - "environment_digest"
+  - "config_digest"
+  - "scope"
+  - "tree_hash"
+fixtures:
+  - fixture_id: "same_state_duplicate"
+    left:
+      gate_id: "LVG-007"
+      implementation_digest: "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+      environment_digest: "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+      config_digest: "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+      scope: "surface=memory_and_publication;tree_state=working"
+      tree_hash: "manifest-sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    right:
+      gate_id: "LVG-007"
+      implementation_digest: "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+      environment_digest: "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+      config_digest: "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+      scope: "surface=memory_and_publication;tree_state=working"
+      tree_hash: "manifest-sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    expected_relation: "duplicate_evidence"
+    independent_evidence: false
+    rationale: "All identity components match; an undeclared deterministic rerun adds no independent evidence."
+  - fixture_id: "post_generation_legitimate_rerun"
+    left:
+      gate_id: "LVG-007"
+      implementation_digest: "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+      environment_digest: "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+      config_digest: "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+      scope: "surface=memory_and_publication;tree_state=working"
+      tree_hash: "manifest-sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    right:
+      gate_id: "LVG-007"
+      implementation_digest: "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+      environment_digest: "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+      config_digest: "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+      scope: "surface=memory_and_publication;tree_state=working"
+      tree_hash: "manifest-sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    expected_relation: "legitimate_cross_state_confirmation"
+    changed_components:
+      - "tree_hash"
+    independent_evidence: false
+    rationale: "Generation changed the checked tree; the rerun validates a different state without claiming independent logic."
+  - fixture_id: "independent_implementation"
+    left:
+      gate_id: "LVG-023"
+      implementation_digest: "sha256:4444444444444444444444444444444444444444444444444444444444444444"
+      environment_digest: "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+      config_digest: "sha256:5555555555555555555555555555555555555555555555555555555555555555"
+      scope: "surface=changed_claim_language;tree_state=index"
+      tree_hash: "git-tree:cccccccccccccccccccccccccccccccccccccccc"
+    right:
+      gate_id: "LVG-023"
+      implementation_digest: "sha256:6666666666666666666666666666666666666666666666666666666666666666"
+      environment_digest: "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+      config_digest: "sha256:5555555555555555555555555555555555555555555555555555555555555555"
+      scope: "surface=changed_claim_language;tree_state=index"
+      tree_hash: "git-tree:cccccccccccccccccccccccccccccccccccccccc"
+    expected_relation: "distinct_implementation_identity"
+    changed_components:
+      - "implementation_digest"
+    independent_evidence: true
+    independence_audit:
+      status: "declared_for_fixture"
+      left_lineage: "implementation-family-a"
+      right_lineage: "implementation-family-b"
+      shared_decision_logic: false
+    rationale: "The gate and state match while audited decision logic is independently implemented."
+  - fixture_id: "environment_change"
+    left:
+      gate_id: "LVG-017"
+      implementation_digest: "sha256:7777777777777777777777777777777777777777777777777777777777777777"
+      environment_digest: "sha256:8888888888888888888888888888888888888888888888888888888888888888"
+      config_digest: "sha256:9999999999999999999999999999999999999999999999999999999999999999"
+      scope: "surface=repository;tree_state=commit"
+      tree_hash: "git-commit:dddddddddddddddddddddddddddddddddddddddd"
+    right:
+      gate_id: "LVG-017"
+      implementation_digest: "sha256:7777777777777777777777777777777777777777777777777777777777777777"
+      environment_digest: "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+      config_digest: "sha256:9999999999999999999999999999999999999999999999999999999999999999"
+      scope: "surface=repository;tree_state=commit"
+      tree_hash: "git-commit:dddddddddddddddddddddddddddddddddddddddd"
+    expected_relation: "legitimate_cross_state_confirmation"
+    changed_components:
+      - "environment_digest"
+    independent_evidence: false
+    rationale: "A distinct environment confirms portability for the same commit but may share implementation defects."
+  - fixture_id: "replay_test"
+    left:
+      gate_id: "LVG-016"
+      implementation_digest: "sha256:abababababababababababababababababababababababababababababababab"
+      environment_digest: "sha256:bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc"
+      config_digest: "sha256:cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd"
+      scope: "surface=research_control_and_diff;tree_state=index"
+      tree_hash: "git-tree:efefefefefefefefefefefefefefefefefefefef"
+    right:
+      gate_id: "LVG-016"
+      implementation_digest: "sha256:abababababababababababababababababababababababababababababababab"
+      environment_digest: "sha256:bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc"
+      config_digest: "sha256:cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd"
+      scope: "surface=research_control_and_diff;tree_state=index"
+      tree_hash: "git-tree:efefefefefefefefefefefefefefefefefefefef"
+    replay_metadata:
+      replay_id: "replay-001"
+      nondeterminism_experiment_declared: false
+    expected_relation: "duplicate_evidence"
+    independent_evidence: false
+    rationale: "Replay metadata is not an identity component; without a declared nondeterminism experiment the replay is duplicate deterministic evidence."
+authority_boundary:
+  generated_receipts_are_independent_evidence: false
+  cache_hits_are_independent_evidence: false
+  ci_statuses_are_independent_evidence: false
+  summaries_are_independent_evidence: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false

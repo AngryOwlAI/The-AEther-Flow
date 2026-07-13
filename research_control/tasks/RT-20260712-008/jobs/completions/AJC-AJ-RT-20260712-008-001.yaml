@@ -1,0 +1,184 @@
+job_id: "AJ-RT-20260712-008-001"
+completion_id: "AJC-AJ-RT-20260712-008-001"
+task_id: "RT-20260712-008"
+decision_id: "DDR-20260712-008"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260712-008"
+status: "completed"
+created_at: "2026-07-13T02:14:47Z"
+started_at: "2026-07-13T02:14:47Z"
+completed_at: "2026-07-13T02:14:47Z"
+objective: "Define validation evidence identity epistemic classes authority levels and representative fixtures without changing executable validation behavior."
+completion_summary: "Defined six-component evidence identity four epistemic classes six authority levels and five audited fixture families; assigned all 37 provisional legacy gates exactly once and preserved staged-tree human-gated and no-physics boundaries."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/v19_legacy_validation_invocation_graph.md"
+  - "research_control/design/v19_legacy_validation_invocation_graph.json"
+  - "scripts/research_control/validate_research_control.py"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P1-T01"
+  recommendation_ids:
+    - "V19-R01"
+    - "V19-R26"
+    - "V19-R44"
+    - "V19-R47"
+  migration_epoch: "legacy"
+  implemented_task_scope: "Defined validation evidence identity and classification policy only; no canonical gate manifest supersedence activation or orchestration authority changed."
+  completed_v19_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+  downstream_tasks_not_implemented:
+    - "P1-T02 canonical gate IDs and same-scope supersedence contracts"
+    - "P1-T03 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_validation_evidence_identity_and_epistemic_class_policy"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "policy"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P1-T01"
+  coverage_summary: "V19-R01 V19-R26 V19-R44 and V19-R47 receive explicit evidence identity duplicate cross-state independence authority and operational-receipt semantics."
+physics_progress_status:
+  status: "project_system_policy_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P1-T01 creates validation semantics and executes no physics construction or adjudication."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Validation evidence classification discharges no physics burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+identity_policy_audit:
+  status: "PASS"
+  policy_path: "research_control/design/validation_evidence_identity_policy_v1.md"
+  policy_sha256: "6afb60a18fee4983e302dc4b710505c32d9407f311ca4a03b7297d160d57fcf5"
+  examples_path: "research_control/tasks/RT-20260712-008/artifacts/validation_evidence_identity_examples.yaml"
+  examples_sha256: "b3537f7cc39b3b2d523786c229101a2ff0b3bf2aeeb7d204e50bafb100daf67b"
+  audit_path: "research_control/tasks/RT-20260712-008/artifacts/validation_evidence_identity_audit.yaml"
+  audit_sha256: "be0aa884cfc7c5c4ed0f0f3f1b8a8e13fa4b94181e5f5f570f96558e8d9d00b3"
+  identity_component_count: 6
+  epistemic_class_count: 4
+  authority_level_count: 6
+  current_gate_assignment_count: 37
+  fixture_count: 5
+  fixture_pass_count: 5
+  executable_behavior_changed: false
+output_paths:
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/tasks/RT-20260712-008/artifacts/validation_evidence_identity_examples.yaml"
+  - "research_control/tasks/RT-20260712-008/artifacts/validation_evidence_identity_audit.yaml"
+  - "research_control/tasks/RT-20260712-008/00_TASK.yaml"
+  - "research_control/tasks/RT-20260712-008/DDR-20260712-008.md"
+  - "research_control/tasks/RT-20260712-008/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260712-008/jobs/AJ-RT-20260712-008-001.yaml"
+  - "research_control/tasks/RT-20260712-008/jobs/completions/AJC-AJ-RT-20260712-008-001.yaml"
+  - "research_control/tasks/RT-20260712-008/roles/project-control-maintainer@0.2.0--RT-20260712-008.yaml"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=WARN local_retrieval_status=WARN"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P1-T01 validation evidence identity epistemic classes --limit 10 --json | exit_code=0 | returned_object_ids=none with exact-field fallback"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | reason_codes=research_control_state_changed blocked_paths=0"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | checkpoint_gate_source=validators"
+  - ".venv/bin/python inline P1-T01 fixture and gate-assignment audit | exit_code=0 | status=PASS fixtures=5 gate_assignments=37"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS with local-retrieval-only warnings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS with local-retrieval-only warnings"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - "git diff --check | exit_code=0 | status=PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P0-T05 PASS dependency remote checkpoint and clean worktree were verified before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 37 provisional gates are assigned exactly once and all five fixture relations match the policy algorithm."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local memory documentation claim-language research-control and whitespace gates passed."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "P1-T01 does not authorize checkpoint commit or push in this invocation."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap generated the registered policy derivative and indexes."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Bootstrap and validate-only passed; warnings concern ignored local retrieval caches."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-path hard-failure count is zero; 1476 historical or calibration warnings remain advisory."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260712-008/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: ""
+project_improvement_signals: []
+verdict: "v19_p1_t01_validation_evidence_identity_policy_completed_no_physics_delta"
+coherent_resolution_summary: "P1-T01 defines evidence identity duplicate and cross-state rules classifies every current provisional gate preserves staged and human boundaries and creates no executable or physics authority change."
+next_recommendation: "Execute P1-T02 as a separate bounded Validator Engineer AgentJob; do not activate deduplication or change orchestration in this packet."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 803
+    relationship_row_count: 4001
+    semantic_row_count: 803
+    vault_row_count: 803
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-V19-LEGACY-VALIDATION-INVOCATION-GRAPH"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/v19_legacy_validation_invocation_graph.md"
+      source_hash: "0a447cc473e137eb0892357a8634d1d850e5b7410df37e597c00d115ba47ec3b"
+  authority_note: "Obsidian and .local retrieval layers were navigation only and are not authority; the registered plan graph role contract and validator source were inspected directly."

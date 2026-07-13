@@ -702,6 +702,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET` `wiki/markdown/md-research-control-design-v19-validation-performance-and-safety-budget.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `wiki/markdown/md-research-control-design-validation-command-inventory-v15.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `wiki/markdown/md-research-control-design-validation-command-inventory-v16.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1` `wiki/markdown/md-research-control-design-validation-evidence-identity-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `wiki/markdown/md-research-control-design-validation-status-field-inventory.md`
 - `WIKI-MD-RESEARCH-CONTROL-FORMALIZATION-FAIL-CLOSED-CERTIFICATE-EVALUATION-README` `wiki/markdown/md-research-control-formalization-fail-closed-certificate-evaluation-readme.md`
 - `WIKI-MD-RESEARCH-CONTROL-FORMALIZATION-PROOF-NORMAL-FORM-SCHEMA-V1` `wiki/markdown/md-research-control-formalization-proof-normal-form-schema-v1.md`
@@ -1409,6 +1410,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET` `research_control/design/v19_validation_performance_and_safety_budget.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `research_control/design/validation_command_inventory_v15.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `research_control/design/validation_command_inventory_v16.md`
+- `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1` `research_control/design/validation_evidence_identity_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `research_control/design/validation_status_field_inventory.md`
 - `MD-RESEARCH-CONTROL-FORMALIZATION-FAIL-CLOSED-CERTIFICATE-EVALUATION-README` `research_control/formalization/fail_closed_certificate_evaluation/README.md`
 - `MD-RESEARCH-CONTROL-FORMALIZATION-PROOF-NORMAL-FORM-SCHEMA-V1` `research_control/formalization/proof_normal_form_schema_v1.md`
