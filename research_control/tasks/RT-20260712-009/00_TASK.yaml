@@ -1,0 +1,45 @@
+task_id: "RT-20260712-009"
+task_type: "gate_id_and_supersedence_contracts"
+status: "completed"
+created_at: "2026-07-13T02:35:09Z"
+updated_at: "2026-07-13T02:43:07Z"
+parent_task_id: "RT-20260712-008"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260712-009"
+current_job_id: "AJ-RT-20260712-009-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260712-009"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested checkpointing P1-T01 and then executing dependency-ready P1-T02 under one bounded Validator Engineer AgentJob."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T02"
+  plan_task_name: "Define canonical gate IDs and same-scope supersedence contracts"
+  recommendation_ids:
+    - "V19-R03"
+    - "V19-R04"
+    - "V19-R24"
+    - "V19-R27"
+objective: "Assign stable validation gate IDs and fail-closed same-scope supersedence contracts without activating deduplication or changing orchestration."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validation contract work only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p1_t02_gate_id_and_supersedence_contracts_completed_no_activation_no_physics_delta"
+claim_boundary_id: "CB-V19-P1-T02-GATE-ID-SUPERSEDENCE-001"
+claim_boundary:
+  allowed_scope: "P1-T02 canonical gate IDs obligation names fail-closed supersedence predicates schema fixtures and audit evidence only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifact: "research_control/design/validation_gate_id_catalog_v1.md"
+next_recommended_action: "Execute P1-T03 as a separate bounded Validator Engineer AgentJob to build the legacy-to-consolidated failure-mode equivalence corpus."
+documentation_impact_id: "DI-RT-20260712-009-001"
+closed_at: "2026-07-13T02:43:07Z"
+completion_id: "AJC-AJ-RT-20260712-009-001"
+notes: "P1-T02 assigned all 37 provisional gates stable IDs mapped all 53 legacy invocations and validated 12 schema and predicate fixtures; no production validator test orchestration checkpoint Make CI skill role or physics behavior changed."

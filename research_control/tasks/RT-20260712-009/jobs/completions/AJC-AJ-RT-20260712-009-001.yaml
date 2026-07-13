@@ -1,0 +1,207 @@
+job_id: "AJ-RT-20260712-009-001"
+completion_id: "AJC-AJ-RT-20260712-009-001"
+task_id: "RT-20260712-009"
+decision_id: "DDR-20260712-009"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260712-009"
+status: "completed"
+created_at: "2026-07-13T02:35:09Z"
+started_at: "2026-07-13T02:35:09Z"
+completed_at: "2026-07-13T02:43:07Z"
+objective: "Define stable canonical gate IDs obligation names and fail-closed same-scope supersedence contracts with schema and negative fixtures."
+completion_summary: "Assigned stable IDs and obligation names to all 37 provisional legacy gates mapped all 53 invocations exactly once and validated three inactive supersedence predicates eight forbidden rules and twelve schema or negative fixtures without activating deduplication or changing orchestration."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/v19_legacy_validation_invocation_graph.md"
+  - "research_control/design/v19_legacy_validation_invocation_graph.json"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/project_control/validate_claim_language.py"
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - "scripts/validate_publication_process.py"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P1-T02"
+  recommendation_ids:
+    - "V19-R03"
+    - "V19-R04"
+    - "V19-R24"
+    - "V19-R27"
+  migration_epoch: "legacy"
+  implemented_task_scope: "Defined canonical gate IDs stable obligation names and inactive fail-closed supersedence contracts only; no deduplication activation or orchestration authority changed."
+  completed_v19_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+  downstream_tasks_not_implemented:
+    - "P1-T03 legacy-to-consolidated failure-mode equivalence corpus"
+    - "P1-T04 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_canonical_gate_ids_and_fail_closed_supersedence_contracts"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "policy"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P1-T02"
+  coverage_summary: "V19-R03 V19-R04 V19-R24 and V19-R27 receive stable gate naming obligation mapping same-scope predicate and fail-closed non-activation semantics."
+physics_progress_status:
+  status: "project_system_policy_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P1-T02 creates validation contracts and executes no physics construction or adjudication."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Validation gate naming and supersedence contracts discharge no physics burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+gate_catalog_audit:
+  status: "PASS"
+  catalog_path: "research_control/design/validation_gate_id_catalog_v1.md"
+  catalog_sha256: "acf53fafae9bbf27641120c036195257b4bb1ecc401a198d4ad1d9707386e7da"
+  contracts_path: "research_control/design/validation_supersedence_contracts_v1.yaml"
+  contracts_sha256: "314a12b8358682be1975d8b2322b31d866ba6a824e541684ba796ca38f849618"
+  fixtures_path: "research_control/tasks/RT-20260712-009/artifacts/gate_id_and_supersedence_fixtures.yaml"
+  fixtures_sha256: "e4162669620e9cad1f228624d814e967f3f58aa8434a6e26cd28941b6cbb96ef"
+  audit_path: "research_control/tasks/RT-20260712-009/artifacts/gate_id_catalog_validation.json"
+  audit_sha256: "f32e7738e1dccf8d396adedca9f88b8628e641377e80725cf40a35492c8de7d2"
+  canonical_gate_count: 37
+  unique_canonical_gate_count: 37
+  mapped_legacy_gate_count: 37
+  mapped_legacy_invocation_count: 53
+  predicate_count: 3
+  supersedence_contract_count: 3
+  forbidden_rule_count: 8
+  fixture_count: 12
+  fixture_pass_count: 12
+  deduplication_activated: false
+  execution_authority_changed: false
+output_paths:
+  - "research_control/design/validation_gate_id_catalog_v1.md"
+  - "research_control/design/validation_supersedence_contracts_v1.yaml"
+  - "research_control/tasks/RT-20260712-009/artifacts/gate_id_and_supersedence_fixtures.yaml"
+  - "research_control/tasks/RT-20260712-009/artifacts/gate_id_catalog_validation.json"
+  - "research_control/tasks/RT-20260712-009/00_TASK.yaml"
+  - "research_control/tasks/RT-20260712-009/DDR-20260712-009.md"
+  - "research_control/tasks/RT-20260712-009/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260712-009/jobs/AJ-RT-20260712-009-001.yaml"
+  - "research_control/tasks/RT-20260712-009/jobs/completions/AJC-AJ-RT-20260712-009-001.yaml"
+  - "research_control/tasks/RT-20260712-009/roles/validator-engineer@0.2.0--RT-20260712-009.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | before_local_retrieval_status=WARN after_local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P1-T02 canonical gate IDs same-scope supersedence --limit 10 --json | exit_code=0 | returned_object_ids=none with exact-field fallback"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | initial_changed_paths=0"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | initial_boundary=no_action checkpoint_gate_source=validators"
+  - ".venv/bin/python inline P1-T02 schema fixture and legacy mapping audit | exit_code=0 | status=PASS gates=37 invocations=53 fixtures=12"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS with local-retrieval-only warnings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS with local-retrieval-only warnings"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - "git diff --check | exit_code=0 | status=PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P1-T01 PASS dependency common remote checkpoint and clean worktree were verified before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 37 provisional gates and all 53 legacy invocations map exactly once and all twelve schema or negative fixtures match fail-closed expectations."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local memory documentation claim-language research-control and whitespace gates passed."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "P1-T02 execution does not include a second checkpoint commit or push; its completed transaction remains dirty for a separate governed checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap generated the registered catalog derivative and indexes."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Bootstrap and validate-only passed; warnings concern ignored local retrieval caches."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-path hard-failure count is zero; historical or calibration warnings remain advisory."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260712-009/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: ""
+project_improvement_signals: []
+verdict: "v19_p1_t02_gate_id_and_supersedence_contracts_completed_no_activation_no_physics_delta"
+coherent_resolution_summary: "P1-T02 establishes stable gate and obligation vocabulary plus fail-closed inactive contracts while preserving every legacy execution and all physics boundaries."
+next_recommendation: "Execute P1-T03 as a separate bounded Validator Engineer AgentJob; do not activate deduplication or alter orchestration before its equivalence corpus and later P2 authority gates pass."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 804
+    relationship_row_count: 4006
+    semantic_row_count: 804
+    vault_row_count: 804
+  refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_evidence_identity_policy_v1.md"
+      source_hash: "6afb60a18fee4983e302dc4b710505c32d9407f311ca4a03b7297d160d57fcf5"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-V19-LEGACY-VALIDATION-INVOCATION-GRAPH"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/v19_legacy_validation_invocation_graph.md"
+      source_hash: "0a447cc473e137eb0892357a8634d1d850e5b7410df37e597c00d115ba47ec3b"
+  authority_note: "Obsidian semantic SQLite and .local retrieval outputs were navigation only and are not authority; the plan identity policy graph role and four implementation sources were inspected directly."

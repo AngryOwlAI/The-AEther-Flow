@@ -1,0 +1,164 @@
+schema_id: "validation_supersedence_contracts_v1"
+catalog_id: "validation-gate-id-catalog-v1"
+plan_task_id: "P1-T02"
+migration_epoch: "legacy"
+status: "active_policy"
+execution_authority_changed: false
+deduplication_activated: false
+ordinary_research_handoff_preserved: "handoff-0740"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+legacy_inventory:
+  path: "research_control/design/v19_legacy_validation_invocation_graph.json"
+  provisional_gate_count: 37
+  invocation_count: 53
+  unresolved_mapping_policy: "fail_closed_non_deduplicable"
+identity_contract:
+  source_policy: "research_control/design/validation_evidence_identity_policy_v1.md"
+  required_components:
+    - "gate_id"
+    - "implementation_digest"
+    - "environment_digest"
+    - "config_digest"
+    - "scope"
+    - "tree_hash"
+  missing_component_result: "ineligible"
+gate_catalog:
+  - {gate_id: "classify_changes", legacy_gate_id: "LVG-001", obligation_name: "classify_changes", implementation_id: "classify_project_changes:v1", authority: "blocking", mutating: false}
+  - {gate_id: "resolve_project_improvement", legacy_gate_id: "LVG-002", obligation_name: "resolve_project_improvement", implementation_id: "resolve_project_improvement:v1", authority: "advisory", mutating: false}
+  - {gate_id: "project_improvement_signals", legacy_gate_id: "LVG-003", obligation_name: "project_improvement_signals", implementation_id: "collect_project_improvement_signals:validate_emitted:v1", authority: "blocking", mutating: false}
+  - {gate_id: "documentation_impact", legacy_gate_id: "LVG-004", obligation_name: "documentation_impact", implementation_id: "validate_documentation_impact:v1", authority: "blocking", mutating: false}
+  - {gate_id: "documentation_surface_audit", legacy_gate_id: "LVG-005", obligation_name: "documentation_surface_audit", implementation_id: "audit_documentation_surfaces:v1", authority: "blocking", mutating: false}
+  - {gate_id: "memory_sync", legacy_gate_id: "LVG-006", obligation_name: "memory_sync", implementation_id: "bootstrap_memory_system:sync:v1", authority: "blocking", mutating: true}
+  - {gate_id: "memory_core", legacy_gate_id: "LVG-007", obligation_name: "memory_core", implementation_id: "bootstrap_memory_system:validate_only:v1", authority: "blocking", mutating: false}
+  - {gate_id: "local_retrieval_sync", legacy_gate_id: "LVG-008", obligation_name: "local_retrieval_sync", implementation_id: "sync_obsidian_vault:v1", authority: "local_only", mutating: true}
+  - {gate_id: "local_retrieval_lint", legacy_gate_id: "LVG-009", obligation_name: "local_retrieval_health", implementation_id: "lint_obsidian_vault:require_index:v1", authority: "local_only", mutating: false}
+  - {gate_id: "memory_status_diagnostic", legacy_gate_id: "LVG-010", obligation_name: "memory_status_diagnostic", implementation_id: "query_memory:status:v1", authority: "advisory", mutating: false}
+  - {gate_id: "memory_lookup_diagnostic", legacy_gate_id: "LVG-011", obligation_name: "memory_lookup_diagnostic", implementation_id: "query_memory:lookup:v1", authority: "advisory", mutating: false}
+  - {gate_id: "memory_search_diagnostic", legacy_gate_id: "LVG-012", obligation_name: "memory_search_diagnostic", implementation_id: "query_memory:search:v1", authority: "advisory", mutating: false}
+  - {gate_id: "spec_depth", legacy_gate_id: "LVG-013", obligation_name: "spec_depth", implementation_id: "spec_depth_lint:v1", authority: "blocking", mutating: false}
+  - {gate_id: "publication_validation", legacy_gate_id: "LVG-014", obligation_name: "publication_validation", implementation_id: "validate_publication_process:v1", authority: "blocking", mutating: false}
+  - {gate_id: "research_control_core", legacy_gate_id: "LVG-015", obligation_name: "research_control_core", implementation_id: "validate_research_control:core:v1", authority: "blocking", mutating: false}
+  - {gate_id: "research_control_diff", legacy_gate_id: "LVG-016", obligation_name: "research_control_diff", implementation_id: "validate_research_control:check_diff:v1", authority: "blocking", mutating: false}
+  - {gate_id: "test_shard_repository", legacy_gate_id: "LVG-017", obligation_name: "test_shard:repository", implementation_id: "unittest_discover:repository:v1", authority: "blocking", mutating: false}
+  - {gate_id: "current_frontier_freshness", legacy_gate_id: "LVG-018", obligation_name: "current_frontier_freshness", implementation_id: "render_current_frontier:check:v1", authority: "blocking", mutating: false}
+  - {gate_id: "compact_frontier_freshness", legacy_gate_id: "LVG-019", obligation_name: "compact_frontier_freshness", implementation_id: "validate_compact_current_frontier:v16", authority: "blocking", mutating: false}
+  - {gate_id: "dependency_graph_freshness", legacy_gate_id: "LVG-020", obligation_name: "dependency_graph_freshness", implementation_id: "render_dependency_graph:check:v1", authority: "blocking", mutating: false}
+  - {gate_id: "task_index_freshness", legacy_gate_id: "LVG-021", obligation_name: "task_index_freshness", implementation_id: "validate_task_index:v1", authority: "blocking", mutating: false}
+  - {gate_id: "claim_graph_validation", legacy_gate_id: "LVG-022", obligation_name: "claim_graph_validation", implementation_id: "validate_claim_graph:v1", authority: "blocking", mutating: false}
+  - {gate_id: "claim_language_changed", legacy_gate_id: "LVG-023", obligation_name: "claim_language_changed", implementation_id: "validate_claim_language:changed_or_staged:v1", authority: "blocking", mutating: false}
+  - {gate_id: "route_signature_diagnostic", legacy_gate_id: "LVG-024", obligation_name: "route_signature_diagnostic", implementation_id: "extract_route_signatures:sample:v1", authority: "advisory", mutating: false}
+  - {gate_id: "route_orbit_diagnostic", legacy_gate_id: "LVG-025", obligation_name: "route_orbit_diagnostic", implementation_id: "validate_route_orbits:advisory:v1", authority: "advisory", mutating: false}
+  - {gate_id: "git_diff_check", legacy_gate_id: "LVG-026", obligation_name: "git_diff_check", implementation_id: "git_diff_check:v1", authority: "blocking", mutating: false}
+  - {gate_id: "targeted_pdf_build", legacy_gate_id: "LVG-027", obligation_name: "targeted_pdf_build", implementation_id: "build_pdf_derivatives:targeted:v1", authority: "blocking", mutating: true}
+  - {gate_id: "continue_memory_preflight", legacy_gate_id: "LVG-028", obligation_name: "continue_memory_preflight", implementation_id: "continue_research_memory_preflight:v1", authority: "blocking", mutating: true}
+  - {gate_id: "continue_context_resolution", legacy_gate_id: "LVG-029", obligation_name: "continue_context_resolution", implementation_id: "continue_research:context:v1", authority: "advisory", mutating: false}
+  - {gate_id: "checkpoint_transaction", legacy_gate_id: "LVG-030", obligation_name: "checkpoint_transaction", implementation_id: "checkpoint_research_transaction:v1", authority: "blocking", mutating: true}
+  - {gate_id: "profile_validate_project_control", legacy_gate_id: "LVG-031", obligation_name: "profile:validate_project_control", implementation_id: "make:validate_project_control:v1", authority: "blocking", mutating: false}
+  - {gate_id: "profile_validate_memory", legacy_gate_id: "LVG-032", obligation_name: "profile:validate_memory", implementation_id: "make:validate_memory:v1", authority: "blocking", mutating: true}
+  - {gate_id: "profile_validate_html_explainers", legacy_gate_id: "LVG-033", obligation_name: "profile:validate_html_explainers", implementation_id: "make:validate_html_explainers:v1", authority: "blocking", mutating: false}
+  - {gate_id: "profile_audit_documentation_surfaces", legacy_gate_id: "LVG-034", obligation_name: "profile:audit_documentation_surfaces", implementation_id: "make:audit_documentation_surfaces:v1", authority: "blocking", mutating: false}
+  - {gate_id: "profile_full_research_control", legacy_gate_id: "LVG-035", obligation_name: "profile:full_research_control", implementation_id: "run_full_research_control_validation:v1", authority: "blocking", mutating: false}
+  - {gate_id: "profile_ci_project_control", legacy_gate_id: "LVG-036", obligation_name: "profile:ci_project_control", implementation_id: "github:project_control_validation:v1", authority: "blocking", mutating: false}
+  - {gate_id: "mermaid_sources", legacy_gate_id: "LVG-037", obligation_name: "mermaid_sources", implementation_id: "bootstrap:validate_mermaid_sources:v1", authority: "nested", mutating: false}
+first_wave_gate_ids:
+  - "research_control_core"
+  - "research_control_diff"
+  - "claim_language_changed"
+  - "memory_sync"
+  - "memory_core"
+  - "publication_validation"
+  - "local_retrieval_sync"
+  - "local_retrieval_lint"
+  - "documentation_impact"
+  - "resolve_project_improvement"
+  - "memory_status_diagnostic"
+  - "memory_lookup_diagnostic"
+  - "memory_search_diagnostic"
+  - "route_signature_diagnostic"
+  - "route_orbit_diagnostic"
+  - "continue_context_resolution"
+predicate_catalog:
+  - predicate_id: "rc_diff_satisfies_core_same_scope_v1"
+    status: "defined_inactive"
+    required_equal:
+      - "implementation_family_digest"
+      - "core_configuration_digest"
+      - "environment_digest"
+      - "tree_hash"
+      - "tree_state"
+      - "base_ref"
+      - "staged_flag"
+      - "core_scope_digest"
+    required_true:
+      - "superset_executed_core"
+      - "raw_core_failures_preserved"
+    fail_closed: true
+  - predicate_id: "rc_diff_satisfies_claim_language_same_scope_v1"
+    status: "blocked_pending_p1_t03"
+    required_equal:
+      - "implementation_digest"
+      - "environment_digest"
+      - "tree_hash"
+      - "tree_state"
+      - "base_ref"
+      - "staged_flag"
+      - "path_set_digest"
+      - "taxonomy_digest"
+      - "reviewed_context_policy_digest"
+      - "severity_mapping_digest"
+      - "claim_configuration_digest"
+    required_true:
+      - "integrated_linter_executed"
+      - "raw_claim_failures_preserved"
+      - "p1_t03_equivalence_proved"
+    fail_closed: true
+  - predicate_id: "memory_core_satisfies_publication_same_scope_v1"
+    status: "blocked_pending_p1_t03"
+    required_equal:
+      - "embedded_publication_implementation_digest"
+      - "publication_configuration_digest"
+      - "environment_digest"
+      - "tree_hash"
+      - "tree_state"
+      - "base_ref"
+      - "staged_flag"
+      - "publication_scope_digest"
+    required_true:
+      - "embedded_publication_validator_executed"
+      - "raw_publication_failures_preserved"
+      - "p1_t03_equivalence_proved"
+    fail_closed: true
+supersedence_contracts:
+  - contract_id: "SUP-RC-DIFF-CORE-V1"
+    source_gate_id: "research_control_diff"
+    target_gate_id: "research_control_core"
+    predicate_id: "rc_diff_satisfies_core_same_scope_v1"
+    activation_status: "policy_only_inactive"
+  - contract_id: "SUP-RC-DIFF-CLAIM-V1"
+    source_gate_id: "research_control_diff"
+    target_gate_id: "claim_language_changed"
+    predicate_id: "rc_diff_satisfies_claim_language_same_scope_v1"
+    activation_status: "blocked_pending_p1_t03"
+  - contract_id: "SUP-MEM-CORE-PUBLICATION-V1"
+    source_gate_id: "memory_core"
+    target_gate_id: "publication_validation"
+    predicate_id: "memory_core_satisfies_publication_same_scope_v1"
+    activation_status: "blocked_pending_p1_t03"
+forbidden_supersedence:
+  - {rule_id: "NO-MUTATOR-SATISFIES-VALIDATION", source_gate_id: "memory_sync", target_gate_id: "memory_core", reason: "mutator_receipt_is_not_post_generation_validation"}
+  - {rule_id: "NO-MUTATOR-SATISFIES-PUBLICATION", source_gate_id: "memory_sync", target_gate_id: "publication_validation", reason: "mutator_receipt_is_not_independent_validation"}
+  - {rule_id: "NO-LOCAL-SATISFIES-TRACKED", source_authority: "local_only", target_authority: "blocking", reason: "local_retrieval_is_not_tracked_authority"}
+  - {rule_id: "NO-ADVISORY-SATISFIES-BLOCKING", source_authority: "advisory", target_authority: "blocking", reason: "diagnostic_is_not_blocking_evidence"}
+  - {rule_id: "NO-WORKING-SATISFIES-STAGED", source_tree_state: "working", target_tree_state: "index", reason: "tree_scope_differs"}
+  - {rule_id: "NO-PREGEN-SATISFIES-POSTGEN", source_generation_state: "pre_generation", target_generation_state: "post_generation", reason: "mutator_changed_tree_identity"}
+  - {rule_id: "NO-PROFILE-NAME-EQUIVALENCE", source_kind: "profile", target_kind: "gate", reason: "profile_membership_is_not_evidence_identity"}
+  - {rule_id: "NO-CACHE-AS-INDEPENDENT-EVIDENCE", source_kind: "cache_hit", target_kind: "independent_execution", reason: "cache_is_same_identity_reuse"}
+activation_gate:
+  current_status: "inactive"
+  required_plan_tasks:
+    - "P1-T03"
+    - "P2"
+  rollback_authority: "research_control/design/v19_legacy_validation_invocation_graph.json"
+  unresolved_or_false_predicate_result: "execute_both_legacy_gates"
