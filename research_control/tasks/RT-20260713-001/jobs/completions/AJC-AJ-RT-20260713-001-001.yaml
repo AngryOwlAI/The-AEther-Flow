@@ -1,0 +1,225 @@
+job_id: "AJ-RT-20260713-001-001"
+completion_id: "AJC-AJ-RT-20260713-001-001"
+task_id: "RT-20260713-001"
+decision_id: "DDR-20260713-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260713-001"
+status: "completed"
+created_at: "2026-07-13T13:01:25Z"
+started_at: "2026-07-13T13:01:25Z"
+completed_at: "2026-07-13T13:26:09Z"
+objective: "Build and execute the P1-T03 adversarial legacy-to-consolidated validation-equivalence corpus and fail closed on every semantic mismatch."
+completion_summary: "Built the required eleven-fixture corpus plus exhaustive audits of 42 active claim classes six reachable severity classifications configuration errors and hermetic composition. The result is REPAIR_REQUIRED because the consolidated path loses findings warnings and authority metadata."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/v19_validation_performance_and_safety_budget.md"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_gate_id_catalog_v1.md"
+  - "research_control/design/validation_supersedence_contracts_v1.yaml"
+  - "research_control/design/claim_language_linter_taxonomy.yaml"
+  - "research_control/design/claim_language_linter_reviewed_contexts.yaml"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/project_control/validate_claim_language.py"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P1-T03"
+  recommendation_ids:
+    - "V19-R03"
+    - "V19-R04"
+    - "V19-R44"
+    - "V19-R45"
+  migration_epoch: "legacy"
+  attempted_task_scope: "Built and ran the test-only failure-mode equivalence corpus; no production validator repair or orchestration change was authorized."
+  completed_v19_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+  open_plan_task_obligation: "P1-T03 remains open pending repair and a future PASS rerun."
+  downstream_tasks_not_implemented:
+    - "P1-T04 instrumentation remains dependency-locked"
+    - "P2 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p1_t03_validation_equivalence_corpus_repair_required"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "repair_required"
+  coverage_effect: "validation"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P1-T03"
+  coverage_summary: "The corpus establishes blocking mismatch evidence but does not satisfy the P1-T03 equivalence obligation or unlock P1-T04."
+physics_progress_status:
+  status: "project_system_validation_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P1-T03 tests project-system validator semantics and performs no physics construction adjudication or promotion."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Validation-equivalence evidence discharges no physics burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+equivalence_audit:
+  status: "REPAIR_REQUIRED"
+  report_path: "research_control/tasks/RT-20260713-001/artifacts/legacy_consolidated_equivalence_report.json"
+  report_sha256: "f9f3afcb6c227f2eeb020098dee6f8d2b9777fe8655a31db75d951e64459a5d1"
+  fixture_corpus_path: "tests/fixtures/validation_equivalence/corpus.json"
+  fixture_corpus_sha256: "dd7c7f4126de104536b2dd25a6f772bb7a0a0c8861e82fab6313135de49b7f44"
+  test_module_path: "tests/test_validation_equivalence.py"
+  test_module_sha256: "dcd89c98838717c96af044c699f7e33be9ff1093665bad69a8d1bd3a39dbe1a4"
+  fixture_count: 11
+  equivalent_fixture_count: 7
+  semantic_mismatch_fixture_count: 4
+  hard_finding_disappearance_count: 1
+  warning_finding_disappearance_count: 1
+  taxonomy_class_count: 42
+  taxonomy_class_finding_disappearance_count: 5
+  taxonomy_authority_mismatch_class_count: 42
+  reachable_severity_classification_count: 6
+  configuration_equivalence_status: "PASS"
+  composition_status: "REPAIR_REQUIRED"
+  p1_t04_unlocked: false
+  deduplication_activated: false
+  orchestration_changed: false
+  production_validator_modified: false
+  blocking_summary:
+    - "Missing active AgentJob returns before the standalone hard claim finding is preserved."
+    - "Integrated claim validation discards all non-hard findings including four reachable warning severities."
+    - "Integrated findings omit surface_class finding_kind and context authority fields for all 42 active taxonomy classes."
+    - "validate_all returns before the diff gate when required registry surfaces are absent."
+output_paths:
+  - "FOLDER_MAP.md"
+  - "tests/fixtures/validation_equivalence/corpus.json"
+  - "tests/test_validation_equivalence.py"
+  - "research_control/tasks/RT-20260713-001/artifacts/legacy_consolidated_equivalence_report.json"
+  - "research_control/tasks/RT-20260713-001/00_TASK.yaml"
+  - "research_control/tasks/RT-20260713-001/DDR-20260713-001.md"
+  - "research_control/tasks/RT-20260713-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260713-001/jobs/AJ-RT-20260713-001-001.yaml"
+  - "research_control/tasks/RT-20260713-001/jobs/completions/AJC-AJ-RT-20260713-001-001.yaml"
+  - "research_control/tasks/RT-20260713-001/roles/validator-engineer@0.2.0--RT-20260713-001.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | local_retrieval_status=PASS refresh_performed=false"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search failure mode equivalence corpus --limit 10 --json | exit_code=0 | returned three canonical control sources"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | initial_changed_paths=0"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | boundary=no_action"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=PASS"
+  - ".venv/bin/python -m unittest tests/test_validation_equivalence.py | exit_code=0 | 9 tests PASS"
+  - ".venv/bin/python tests/test_validation_equivalence.py --write-report research_control/tasks/RT-20260713-001/artifacts/legacy_consolidated_equivalence_report.json | exit_code=0 | status=REPAIR_REQUIRED"
+  - ".venv/bin/python -m unittest tests/test_validate_claim_language.py | exit_code=0 | 39 tests PASS"
+  - ".venv/bin/python -m unittest tests/test_project_change_classifier.py | exit_code=0 | 48 tests PASS"
+  - ".venv/bin/python -m unittest tests/test_research_control.py | exit_code=1 | initial active-job state caused 1 expected continuation-status assertion failure of 140 tests; rerun required after terminalization"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | reason_codes=control_registry_changed research_control_state_changed test_changed"
+  - ".venv/bin/python -m unittest tests/test_research_control.py | exit_code=0 | terminal-state rerun 140 tests PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | Validation PASS and no tracked derivative delta"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | Validation PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | hard_fail_count=0 warning_count=1474 finding_count=1474 scanned_path_count=6"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS with pre-existing extension and advisory warnings"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS with pre-existing extension and advisory warnings"
+  - "git diff --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260713-001-001 | exit_code=1 | safely blocked before staging because bootstrap added FOLDER_MAP.md and made the documentation-impact receipt stale"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P1-T02 PASS dependency clean worktree common remote checkpoint and no open higher-priority improvement signal were verified before the first write."
+  completion_internal:
+    status: "FAIL"
+    evidence:
+      - "The corpus is valid but equivalence is not: one hard finding five taxonomy warning-class findings and all structured authority fields disappear on consolidated paths."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused corpus tests source regressions memory bootstrap documentation-impact changed-path claim-language checks research-control validation and whitespace checks pass."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "The governed P1-T03 checkpoint has not yet run."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The checkpoint bootstrap refreshed generated FOLDER_MAP.md for the new task and fixture directories; the derivative remains non-authoritative."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap and the subsequent validate-only check both report Validation PASS."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-path claim-language validation reports zero hard failures and 1474 reviewed advisory findings across six scanned paths."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260713-001/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: ""
+project_improvement_signals: []
+verdict: "v19_p1_t03_equivalence_corpus_repair_required_p1_t04_locked_no_physics_delta"
+coherent_resolution_summary: "P1-T03 completed a reproducible test-only corpus that blocks consolidation on semantic mismatches while retaining both legacy gates and every physics authority boundary."
+next_recommendation: "Create one separately bounded Validator Engineer repair for structured warning and authority-field propagation plus early-return composition, then rerun P1-T03; do not execute P1-T04."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 805
+    relationship_row_count: 4011
+    semantic_row_count: 805
+    vault_row_count: 805
+  refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    performed: false
+    before_local_retrieval_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search failure mode equivalence corpus --limit 10 --json"
+      query_type: "search"
+      query_text: "failure mode equivalence corpus"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET"
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-ID-CATALOG-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/v19_validation_performance_and_safety_budget.md"
+      source_hash: "fa3adf5e143c8d936ef0e7fd6386af9b3ce74873d1985299eb95302166b3a53a"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-ID-CATALOG-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_gate_id_catalog_v1.md"
+      source_hash: "acf53fafae9bbf27641120c036195257b4bb1ecc401a198d4ad1d9707386e7da"
+  authority_note: "Obsidian semantic SQLite and .local retrieval outputs were navigation only and are not authority; the canonical plan policy catalog contracts predecessor completion role validators and tests were inspected directly."

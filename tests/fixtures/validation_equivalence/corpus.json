@@ -1,0 +1,431 @@
+{
+  "schema_id": "validation_equivalence_corpus_v1",
+  "plan_task_id": "P1-T03",
+  "migration_epoch": "legacy",
+  "comparison_fields": [
+    "status",
+    "hard_finding_ids",
+    "warning_finding_ids",
+    "selected_paths",
+    "authority_fields"
+  ],
+  "cases": [
+    {
+      "fixture_id": "clean_pass",
+      "runner": "claim",
+      "files": {
+        "README.md": "<!-- authority: explanatory -->\nProject overview with scoped operational status only.\n"
+      },
+      "changed_paths": ["README.md"],
+      "intended_finding_ids": [],
+      "expected_legacy": {
+        "status": "PASS",
+        "hard_finding_ids": [],
+        "warning_finding_ids": [],
+        "selected_paths": ["README.md"],
+        "authority_fields": []
+      },
+      "expected_consolidated": {
+        "status": "PASS",
+        "hard_finding_ids": [],
+        "warning_finding_ids": [],
+        "selected_paths": ["README.md"],
+        "authority_fields": []
+      },
+      "expected_mismatch_fields": []
+    },
+    {
+      "fixture_id": "malformed_registry",
+      "runner": "malformed_registry",
+      "registry_name": "AGENT_ROLE_REGISTRY.csv",
+      "bad_header": "role_id,wrong_column",
+      "message_matchers": [
+        {
+          "contains": "AGENT_ROLE_REGISTRY.csv: expected columns",
+          "finding_id": "research_control_core:malformed_registry",
+          "severity": "blocking"
+        }
+      ],
+      "intended_finding_ids": ["research_control_core:malformed_registry"],
+      "expected_legacy": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_core:malformed_registry"],
+        "warning_finding_ids": [],
+        "selected_paths": [],
+        "authority_fields": [
+          {"finding_id": "research_control_core:malformed_registry", "severity": "blocking"}
+        ]
+      },
+      "expected_consolidated": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_core:malformed_registry"],
+        "warning_finding_ids": [],
+        "selected_paths": [],
+        "authority_fields": [
+          {"finding_id": "research_control_core:malformed_registry", "severity": "blocking"}
+        ]
+      },
+      "expected_mismatch_fields": []
+    },
+    {
+      "fixture_id": "missing_active_agentjob",
+      "runner": "diff",
+      "files": {
+        "README.md": "<!-- authority: explanatory -->\nThe project has GR derived from the substrate.\n"
+      },
+      "changed_paths": ["README.md"],
+      "job": null,
+      "message_matchers": [
+        {
+          "contains": "--check-diff requires an active or completed AgentJob",
+          "finding_id": "research_control_diff:missing_active_agentjob",
+          "severity": "blocking"
+        }
+      ],
+      "intended_finding_ids": ["research_control_diff:missing_active_agentjob"],
+      "expected_legacy": {
+        "status": "FAIL",
+        "hard_finding_ids": [
+          "claim_language_changed:einstein_equation_overclaim",
+          "research_control_diff:missing_active_agentjob"
+        ],
+        "warning_finding_ids": [],
+        "selected_paths": ["README.md"],
+        "authority_fields": [
+          {
+            "finding_id": "claim_language_changed:einstein_equation_overclaim",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "context": "surface_policy"
+          },
+          {"finding_id": "research_control_diff:missing_active_agentjob", "severity": "blocking"}
+        ]
+      },
+      "expected_consolidated": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_diff:missing_active_agentjob"],
+        "warning_finding_ids": [],
+        "selected_paths": [],
+        "authority_fields": [
+          {"finding_id": "research_control_diff:missing_active_agentjob", "severity": "blocking"}
+        ]
+      },
+      "expected_mismatch_fields": ["hard_finding_ids", "selected_paths", "authority_fields"]
+    },
+    {
+      "fixture_id": "disallowed_path",
+      "runner": "diff",
+      "files": {
+        "research_control/tasks/RT-OTHER/evidence.yaml": "status: draft\n"
+      },
+      "changed_paths": ["research_control/tasks/RT-OTHER/evidence.yaml"],
+      "job": {
+        "role_id": "validator-engineer",
+        "allowed_write_paths": "tests/**"
+      },
+      "message_matchers": [
+        {
+          "contains": "changed path is not allowed",
+          "finding_id": "research_control_diff:disallowed_path",
+          "severity": "blocking"
+        }
+      ],
+      "intended_finding_ids": ["research_control_diff:disallowed_path"],
+      "expected_legacy": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_diff:disallowed_path"],
+        "warning_finding_ids": [],
+        "selected_paths": [],
+        "authority_fields": [
+          {"finding_id": "research_control_diff:disallowed_path", "severity": "blocking"}
+        ]
+      },
+      "expected_consolidated": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_diff:disallowed_path"],
+        "warning_finding_ids": [],
+        "selected_paths": [],
+        "authority_fields": [
+          {"finding_id": "research_control_diff:disallowed_path", "severity": "blocking"}
+        ]
+      },
+      "expected_mismatch_fields": []
+    },
+    {
+      "fixture_id": "overly_broad_allowlist",
+      "runner": "diff",
+      "files": {
+        "wiki/markdown/example.md": "Generated example metadata.\n"
+      },
+      "changed_paths": ["wiki/markdown/example.md"],
+      "job": {
+        "role_id": "validator-engineer",
+        "allowed_write_paths": "wiki/**"
+      },
+      "message_matchers": [
+        {
+          "contains": "overly broad allowlist pattern",
+          "finding_id": "research_control_diff:overly_broad_allowlist",
+          "severity": "blocking"
+        },
+        {
+          "contains": "changed path is not allowed",
+          "finding_id": "research_control_diff:overly_broad_allowlist",
+          "severity": "blocking"
+        }
+      ],
+      "intended_finding_ids": ["research_control_diff:overly_broad_allowlist"],
+      "expected_legacy": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_diff:overly_broad_allowlist"],
+        "warning_finding_ids": [],
+        "selected_paths": [],
+        "authority_fields": [
+          {"finding_id": "research_control_diff:overly_broad_allowlist", "severity": "blocking"}
+        ]
+      },
+      "expected_consolidated": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_diff:overly_broad_allowlist"],
+        "warning_finding_ids": [],
+        "selected_paths": [],
+        "authority_fields": [
+          {"finding_id": "research_control_diff:overly_broad_allowlist", "severity": "blocking"}
+        ]
+      },
+      "expected_mismatch_fields": []
+    },
+    {
+      "fixture_id": "markdown_authority_violation",
+      "runner": "diff",
+      "files": {
+        "README.md": "Unmarked project text.\n"
+      },
+      "changed_paths": ["README.md"],
+      "changed_line_numbers": [1],
+      "job": {
+        "role_id": "project-control-maintainer",
+        "allowed_write_paths": "README.md"
+      },
+      "message_matchers": [
+        {
+          "contains": "mixed markdown change is outside an authority marker",
+          "finding_id": "research_control_diff:markdown_authority_violation",
+          "severity": "blocking"
+        }
+      ],
+      "intended_finding_ids": ["research_control_diff:markdown_authority_violation"],
+      "expected_legacy": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_diff:markdown_authority_violation"],
+        "warning_finding_ids": [],
+        "selected_paths": ["README.md"],
+        "authority_fields": [
+          {"finding_id": "research_control_diff:markdown_authority_violation", "severity": "blocking"}
+        ]
+      },
+      "expected_consolidated": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_diff:markdown_authority_violation"],
+        "warning_finding_ids": [],
+        "selected_paths": ["README.md"],
+        "authority_fields": [
+          {"finding_id": "research_control_diff:markdown_authority_violation", "severity": "blocking"}
+        ]
+      },
+      "expected_mismatch_fields": []
+    },
+    {
+      "fixture_id": "public_overclaim",
+      "runner": "claim",
+      "files": {
+        "README.md": "<!-- authority: explanatory -->\nThe project has GR derived from the substrate.\n"
+      },
+      "changed_paths": ["README.md"],
+      "intended_finding_ids": ["claim_language_changed:einstein_equation_overclaim"],
+      "expected_legacy": {
+        "status": "FAIL",
+        "hard_finding_ids": ["claim_language_changed:einstein_equation_overclaim"],
+        "warning_finding_ids": [],
+        "selected_paths": ["README.md"],
+        "authority_fields": [
+          {
+            "finding_id": "claim_language_changed:einstein_equation_overclaim",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "context": "surface_policy"
+          }
+        ]
+      },
+      "expected_consolidated": {
+        "status": "FAIL",
+        "hard_finding_ids": ["claim_language_changed:einstein_equation_overclaim"],
+        "warning_finding_ids": [],
+        "selected_paths": ["README.md"],
+        "authority_fields": [
+          {"finding_id": "claim_language_changed:einstein_equation_overclaim", "severity": "hard_fail_current_public"}
+        ]
+      },
+      "expected_mismatch_fields": ["authority_fields"]
+    },
+    {
+      "fixture_id": "reviewed_historical_warning",
+      "runner": "claim",
+      "files": {
+        "research_control/tasks/RT-LEGACY/artifacts/legacy_note.md": "Historical note says benchmark recovered.\n"
+      },
+      "changed_paths": ["research_control/tasks/RT-LEGACY/artifacts/legacy_note.md"],
+      "intended_finding_ids": ["claim_language_changed:benchmark_overclaim"],
+      "expected_legacy": {
+        "status": "PASS",
+        "hard_finding_ids": [],
+        "warning_finding_ids": ["claim_language_changed:benchmark_overclaim"],
+        "selected_paths": ["research_control/tasks/RT-LEGACY/artifacts/legacy_note.md"],
+        "authority_fields": [
+          {
+            "finding_id": "claim_language_changed:benchmark_overclaim",
+            "severity": "warn_historical",
+            "surface_class": "historical_artifacts",
+            "finding_kind": "overclaim_warning",
+            "context": "historical_provenance"
+          }
+        ]
+      },
+      "expected_consolidated": {
+        "status": "PASS",
+        "hard_finding_ids": [],
+        "warning_finding_ids": [],
+        "selected_paths": ["research_control/tasks/RT-LEGACY/artifacts/legacy_note.md"],
+        "authority_fields": []
+      },
+      "expected_mismatch_fields": ["warning_finding_ids", "authority_fields"]
+    },
+    {
+      "fixture_id": "target_import",
+      "runner": "claim",
+      "files": {
+        "README.md": "<!-- authority: explanatory -->\nTarget-metric certificate supplies source certificate validity.\n"
+      },
+      "changed_paths": ["README.md"],
+      "intended_finding_ids": [
+        "claim_language_changed:source_certificate_overread",
+        "claim_language_changed:target_metric_used_as_source_certificate"
+      ],
+      "expected_legacy": {
+        "status": "FAIL",
+        "hard_finding_ids": [
+          "claim_language_changed:source_certificate_overread",
+          "claim_language_changed:target_metric_used_as_source_certificate"
+        ],
+        "warning_finding_ids": [],
+        "selected_paths": ["README.md"],
+        "authority_fields": [
+          {
+            "finding_id": "claim_language_changed:source_certificate_overread",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "context": "surface_policy"
+          },
+          {
+            "finding_id": "claim_language_changed:target_metric_used_as_source_certificate",
+            "severity": "hard_fail_current_public",
+            "surface_class": "current_public_surfaces",
+            "finding_kind": "overclaim_hard_fail",
+            "context": "surface_policy"
+          }
+        ]
+      },
+      "expected_consolidated": {
+        "status": "FAIL",
+        "hard_finding_ids": [
+          "claim_language_changed:source_certificate_overread",
+          "claim_language_changed:target_metric_used_as_source_certificate"
+        ],
+        "warning_finding_ids": [],
+        "selected_paths": ["README.md"],
+        "authority_fields": [
+          {"finding_id": "claim_language_changed:source_certificate_overread", "severity": "hard_fail_current_public"},
+          {"finding_id": "claim_language_changed:target_metric_used_as_source_certificate", "severity": "hard_fail_current_public"}
+        ]
+      },
+      "expected_mismatch_fields": ["authority_fields"]
+    },
+    {
+      "fixture_id": "stale_sidecar",
+      "runner": "stale_sidecar",
+      "files": {
+        "research_control/project_improvement_handoffs/improve-project-handoff_20260713_999.yaml": "improvement_handoff_id: \"improve-project-handoff_20260713_999\"\ncreated_at: \"2026-07-13T13:01:25Z\"\nstatus: \"open\"\nsource:\n  source_kind: \"completion_only\"\n  task_id: \"RT-MISSING\"\n  decision_id: \"DDR-MISSING\"\n  job_id: \"AJ-MISSING\"\n  completion_path: \"research_control/tasks/RT-MISSING/jobs/completions/AJC-AJ-MISSING.yaml\"\n  regular_handoff_id: \"\"\n  regular_handoff_yaml_path: \"\"\n  regular_handoff_markdown_path: \"\"\nnormal_research_continuation:\n  regular_handoff_created: false\n  continue_research_next_action: \"\"\n  sidecar_does_not_replace_regular_handoff: true\nproject_boundary:\n  recommended_skill: \"improve-project-system\"\n  project_system_only: true\n  physics_claim_promotion_authorized: false\n  canonical_science_source_edits_authorized: false\n  generated_derivative_hand_edits_authorized: false\n  requires_human_gate: false\nsignal_summary:\n  signal_ids: []\n  signal_count: 0\n  highest_severity: \"\"\n  selected_signal_id: \"\"\n  routing_basis: \"highest_severity_then_created_at_then_signal_id\"\nissues: []\nsolution_plan:\n  present: false\n  status: \"absent\"\n  plan_owner_role: \"project-system-director\"\n  implementation_role: \"\"\n  objective: \"\"\n  allowed_write_paths_hint: []\n  required_validators: []\n  plan_steps: []\nresolution:\n  resolved_by_job_id: \"\"\n  resolution_evidence_path: \"\"\n  resolved_at: \"\"\nnotes: \"Synthetic stale-source fixture.\"\n",
+        "research_control/project_improvement_handoffs/improve-project-handoff_20260713_999.md": "# improve-project-handoff_20260713_999\n"
+      },
+      "message_matchers": [
+        {
+          "contains": "source.completion_path does not exist",
+          "finding_id": "research_control_core:stale_sidecar",
+          "severity": "blocking"
+        }
+      ],
+      "intended_finding_ids": ["research_control_core:stale_sidecar"],
+      "expected_legacy": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_core:stale_sidecar"],
+        "warning_finding_ids": [],
+        "selected_paths": [],
+        "authority_fields": [
+          {"finding_id": "research_control_core:stale_sidecar", "severity": "blocking"}
+        ]
+      },
+      "expected_consolidated": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_core:stale_sidecar"],
+        "warning_finding_ids": [],
+        "selected_paths": [],
+        "authority_fields": [
+          {"finding_id": "research_control_core:stale_sidecar", "severity": "blocking"}
+        ]
+      },
+      "expected_mismatch_fields": []
+    },
+    {
+      "fixture_id": "unrelated_path",
+      "runner": "diff",
+      "files": {
+        "notes/unrelated.txt": "unrelated transaction residue\n"
+      },
+      "changed_paths": ["notes/unrelated.txt"],
+      "job": {
+        "role_id": "validator-engineer",
+        "allowed_write_paths": "tests/fixtures/validation_equivalence/**"
+      },
+      "message_matchers": [
+        {
+          "contains": "changed path is not allowed",
+          "finding_id": "research_control_diff:unrelated_path",
+          "severity": "blocking"
+        }
+      ],
+      "intended_finding_ids": ["research_control_diff:unrelated_path"],
+      "expected_legacy": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_diff:unrelated_path"],
+        "warning_finding_ids": [],
+        "selected_paths": [],
+        "authority_fields": [
+          {"finding_id": "research_control_diff:unrelated_path", "severity": "blocking"}
+        ]
+      },
+      "expected_consolidated": {
+        "status": "FAIL",
+        "hard_finding_ids": ["research_control_diff:unrelated_path"],
+        "warning_finding_ids": [],
+        "selected_paths": [],
+        "authority_fields": [
+          {"finding_id": "research_control_diff:unrelated_path", "severity": "blocking"}
+        ]
+      },
+      "expected_mismatch_fields": []
+    }
+  ]
+}
