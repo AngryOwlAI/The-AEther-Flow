@@ -7,9 +7,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 - Schema: `research_dependency_graph_v1`
 - Generated from tracked state as of: `2026-07-09T03:11:04Z`
-- Source fingerprint: `a3a363181765fc36d09ea5ef3168808fd51c873d56369af2aed580dcce5af5cc`
-- Nodes: `17401`
-- Edges: `62118`
+- Source fingerprint: `e4cdfad30ae94db8cecad13b72bde26f920a19be1941bc45a68ee4f706fc1743`
+- Nodes: `17683`
+- Edges: `62906`
 
 ## Source Counts
 
@@ -17,7 +17,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 877 |
+| `completion_yaml` | 892 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 877 |
+| `agent_job` | `support_only` | 892 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 9300 |
-| `blocked_burden` | `blocked` | 3129 |
-| `claim_boundary` | `support_only` | 834 |
+| `artifact` | `support_only` | 9440 |
+| `blocked_burden` | `blocked` | 3210 |
+| `claim_boundary` | `support_only` | 849 |
 | `draft_control_candidate` | `draft_control` | 529 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 109 |
 | `gate_chair_verdict` | `human_gated` | 31 |
 | `handoff` | `support_only` | 740 |
-| `human_gated_object` | `human_gated` | 288 |
+| `human_gated_object` | `human_gated` | 304 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -57,8 +57,8 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `rejected` | 50 |
 | `source_ontology_object` | `support_only` | 291 |
 | `task` | `human_gated` | 29 |
-| `task` | `science_draft` | 30 |
-| `task` | `support_only` | 818 |
+| `task` | `science_draft` | 31 |
+| `task` | `support_only` | 832 |
 
 ## Frontier Table
 
@@ -145,21 +145,21 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:backlog_as_coupling_law_adoption` | Blocked claim: backlog as coupling-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_detector_semantics` | Blocked claim: backlog as detector semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_einstein_equations` | Blocked claim: backlog as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_eqsrc_discharge` | Blocked claim: backlog as EqSrc discharge | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_execution_of_downstream_tasks` | Blocked claim: backlog as execution of downstream tasks | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_gate_chair_verdict` | Blocked claim: backlog as Gate Chair verdict | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_matter_coupling` | Blocked claim: backlog as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_matter_semantics` | Blocked claim: backlog as matter semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_physics_proof` | Blocked claim: backlog as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_rr_etransportcompletenessorinvariancelaw_v1_adoption` | Blocked claim: backlog as RR_ETransportCompletenessOrInvarianceLaw_v1 adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_source_law_adoption` | Blocked claim: backlog as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_unrestricted_rr_e_theorem` | Blocked claim: backlog as unrestricted RR_E theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:backlog_as_validator_authority_cutover` | Blocked claim: backlog as validator authority cutover | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_flux_as_bianchi_identity` | Blocked claim: balance/flux as Bianchi identity | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_ledger_as_stress_energy_tensor` | Blocked claim: balance ledger as stress energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bare_accepted_high_risk_rendering` | Blocked claim: bare accepted high-risk rendering | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:baseline_failure_as_global_validation_regression` | Blocked claim: baseline failure as global validation regression | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_reconciliation_as_benchmark_promotion` | Blocked claim: baseline reconciliation as benchmark promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_claim_promotion` | Blocked claim: baseline reconciliation as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_completed_derivation` | Blocked claim: baseline reconciliation as completed derivation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_coupling_law_adoption` | Blocked claim: baseline reconciliation as coupling-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_detector_semantics` | Blocked claim: baseline reconciliation as detector semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_einstein_equation_evidence` | Blocked claim: baseline reconciliation as Einstein-equation evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 

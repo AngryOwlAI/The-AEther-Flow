@@ -1,0 +1,44 @@
+task_id: "RT-20260713-003"
+task_type: "validation_invocation_tracing"
+status: "completed"
+created_at: "2026-07-13T14:28:53Z"
+updated_at: "2026-07-13T15:12:24Z"
+closed_at: "2026-07-13T15:12:24Z"
+parent_task_id: "RT-20260713-002"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260713-003"
+current_job_id: "AJ-RT-20260713-003-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260713-003"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested the dependency-ready separately bounded P1-T04 Validator Engineer instrumentation AgentJob."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T04"
+  plan_task_name: "Instrument gate invocations scopes tree hashes and nested calls"
+  recommendation_ids:
+    - "V19-R01"
+    - "V19-R43"
+    - "V19-R45"
+objective: "Implement optional local validation invocation tracing with deterministic serialization nested subprocess parentage duplicate identity reporting and unchanged validator behavior."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validation instrumentation only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p1_t04_instrumentation_pass_p1_t05_dependency_unlocked_no_physics_delta"
+claim_boundary_id: "CB-V19-P1-T04-VALIDATION-TRACE-001"
+claim_boundary:
+  allowed_scope: "Trace helper focused tests task-local reports applicable registry rows and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifact: "research_control/tasks/RT-20260713-003/artifacts/validation_trace_instrumentation_report.md"
+next_recommended_action: "After checkpoint success create one separately bounded P1-T05 Process Integrity Auditor shadow-comparison and rollback-control AgentJob."
+documentation_impact_id: "DI-RT-20260713-003-001"
+completion_id: "AJC-AJ-RT-20260713-003-001"
+notes: "P1-T04 passes with tracing disabled by default ignored local diagnostics complete nested legacy-run evidence and no removed duplicate work or orchestration change."

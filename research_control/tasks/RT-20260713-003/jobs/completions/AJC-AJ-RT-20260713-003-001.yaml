@@ -1,0 +1,228 @@
+job_id: "AJ-RT-20260713-003-001"
+completion_id: "AJC-AJ-RT-20260713-003-001"
+task_id: "RT-20260713-003"
+decision_id: "DDR-20260713-003"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260713-003"
+status: "completed"
+created_at: "2026-07-13T15:12:24Z"
+started_at: "2026-07-13T14:28:53Z"
+completed_at: "2026-07-13T15:12:24Z"
+objective: "Implement optional local P1-T04 validation invocation tracing with deterministic serialization recursive subprocess parentage duplicate identity reporting and unchanged gate behavior."
+completion_summary: "Implemented a disabled-by-default local trace context manager subprocess wrapper recursive Python child hook deterministic normalizer and duplicate-identity reporter. A matched legacy full-profile pair passed all fourteen commands and produced twenty-five nested PASS events at 1.915 percent provisional overhead."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/v19_validation_performance_and_safety_budget.md"
+  - "research_control/design/v19_legacy_validation_invocation_graph.md"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_gate_id_catalog_v1.md"
+  - "research_control/tasks/RT-20260713-002/jobs/completions/AJC-AJ-RT-20260713-002-001.yaml"
+  - "Makefile"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P1-T04"
+  recommendation_ids:
+    - "V19-R01"
+    - "V19-R43"
+    - "V19-R45"
+  migration_epoch: "legacy"
+  attempted_task_scope: "Optional local validation trace helper focused regression module legacy full-run trace and one matched overhead pair."
+  completed_v19_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+  open_plan_task_obligation: "P1-T04 is satisfied by optional local instrumentation and PASS evidence; P1-T05 is dependency-unlocked for a future separately bounded AgentJob."
+  downstream_tasks_not_implemented:
+    - "P1-T05 shadow-comparison and rollback control"
+    - "P2 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p1_t04_validation_invocation_tracing_pass"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "validation"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P1-T04"
+  coverage_summary: "The helper makes nested legacy invocations and duplicate identities measurable without changing gate outcomes or orchestration."
+physics_progress_status:
+  status: "project_system_validation_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P1-T04 adds operational instrumentation and performs no physics construction adjudication or promotion."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Validation instrumentation discharges no physics burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+instrumentation_audit:
+  status: "PASS"
+  source_path: "scripts/validation/trace.py"
+  source_sha256: "e562078ae0e3346b4b15e6dc9ac9582f0848d1fa635d5def9b849d7bfa34a329"
+  test_path: "tests/test_validation_trace.py"
+  test_sha256: "fc7360c7d5b4780eb3b94c88bc8ed9cb162014aefbb729ef06a3fa07c7db391d"
+  report_path: "research_control/tasks/RT-20260713-003/artifacts/validation_trace_instrumentation_report.md"
+  trace_id: "p1-t04-legacy-full-ce7d97cc"
+  traced_tree_hash: "ce7d97cc994e4e9ef343c14639f7a1f637009a574c6c0376fbce4d5c59a4cbee"
+  trace_scope: "working_tree"
+  cache_state: "disabled"
+  event_count: 25
+  distinct_gate_id_count: 17
+  maximum_nesting_depth: 2
+  pass_event_count: 25
+  fail_event_count: 0
+  duplicate_identity_count: 3
+  legacy_command_count: 14
+  legacy_command_returncode_parity: true
+  nested_publication_parent_gate: "memory_core"
+  deterministic_serialization_tested: true
+  disabled_by_default: true
+  local_trace_only: true
+  trace_output_content_retained: false
+  trace_absence_is_pass_evidence: false
+  duplicate_work_removed: false
+  deduplication_activated: false
+  orchestration_changed: false
+performance_evidence:
+  budget_id: "V19-PERF-TRACE-001"
+  exact_tree_hash: "ce7d97cc994e4e9ef343c14639f7a1f637009a574c6c0376fbce4d5c59a4cbee"
+  matched_scope: "legacy full profile working tree cache disabled"
+  uninstrumented_duration_seconds: 108.63
+  instrumented_duration_seconds: 110.71
+  overhead_percent: 1.915
+  target_percent_max: 2.0
+  rollback_guard_percent: 5.0
+  matched_pair_count: 1
+  budget_status: "PASS_PROVISIONAL"
+  activation_status: "provisional_nonblocking_single_pair"
+  activation_requirement: "At least three matched pairs for affected checkpoint and full profiles are required before hard-budget activation."
+output_paths:
+  - "scripts/validation/trace.py"
+  - "tests/test_validation_trace.py"
+  - "research_control/tasks/RT-20260713-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260713-003/DDR-20260713-003.md"
+  - "research_control/tasks/RT-20260713-003/artifacts/validation_trace_instrumentation_report.md"
+  - "research_control/tasks/RT-20260713-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260713-003/jobs/AJ-RT-20260713-003-001.yaml"
+  - "research_control/tasks/RT-20260713-003/jobs/completions/AJC-AJ-RT-20260713-003-001.yaml"
+  - "research_control/tasks/RT-20260713-003/roles/validator-engineer@0.2.0--RT-20260713-003.yaml"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_control_task_index.md"
+  - "wiki/indexes/research_dependency_graph.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json | exit_code=0 | returned canonical v19 implementation plan object"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | initial_changed_paths=0"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | initial_boundary=no_action explicit plan task authorized"
+  - ".venv/bin/python -m py_compile scripts/validation/trace.py tests/test_validation_trace.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest tests/test_validation_trace.py | exit_code=0 | 10 tests PASS"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --output /tmp/p1-t04-untraced-ce7d97cc.json | exit_code=0 | 14 commands PASS 108.63 seconds"
+  - "AETHER_VALIDATION_TRACE=1 .venv/bin/python scripts/validation/trace.py --trace-id p1-t04-legacy-full-ce7d97cc --python-script scripts/research_control/run_full_research_control_validation.py | exit_code=0 | 25 trace events PASS 110.71 seconds 1.915 percent overhead"
+  - ".venv/bin/python -m unittest tests/test_validation_trace.py tests/test_validation_equivalence.py tests/test_research_control.py tests/test_validate_claim_language.py tests/test_project_change_classifier.py | exit_code=0 | 246 tests PASS after task completion"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS hard_fail_count=0 warning_count=1476"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P1-T03 is checkpointed PASS the worktree was clean memory status was PASS and the v19 plan explicitly authorizes the dependency-ready project-system packet."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The focused suite proves required fields deterministic normalization nested parentage duplicate identity detection recursive child tracing status and output preservation disabled behavior canonical mapping and fail-open trace writes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The matched legacy full-profile pair passes all fourteen commands with 1.915 percent provisional overhead and twenty-five PASS trace events."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "The governed checkpoint has not yet executed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Policy-required task-index and dependency-graph derivatives were rendered after the final lifecycle update and checked fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap and final validate-only passed; warnings were limited to ignored local retrieval mirrors being older than the newly generated tracked task index."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-path claim-language validation passed with zero hard failures and 1476 nonblocking advisories."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260713-003/documentation_impact.yaml"
+  source_documentation_updated: false
+  no_op_rationale: "Existing v19 plan and budget already define the trace contract local-only boundary environment switch and rollback rules; no operator command or workflow contract changed."
+project_improvement_signals: []
+verdict: "v19_p1_t04_instrumentation_pass_p1_t05_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P1-T04 makes complete nested legacy validation invocations measurable while preserving every gate outcome local authority boundary ordinary research route and physics promotion block."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P1-T05 Process Integrity Auditor shadow-comparison and rollback-control AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 805
+    relationship_row_count: 4011
+    semantic_row_count: 805
+    vault_row_count: 805
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_performed: false
+  before_local_retrieval_status: "PASS"
+  after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation only and are not authority; the canonical plan predecessor completion role contracts budget gate catalog and required runner sources were inspected directly."
