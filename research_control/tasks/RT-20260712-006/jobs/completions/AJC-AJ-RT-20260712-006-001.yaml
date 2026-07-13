@@ -1,0 +1,286 @@
+job_id: "AJ-RT-20260712-006-001"
+completion_id: "AJC-AJ-RT-20260712-006-001"
+task_id: "RT-20260712-006"
+decision_id: "DDR-20260712-006"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260712-006"
+status: "completed"
+created_at: "2026-07-13T00:55:00Z"
+started_at: "2026-07-13T00:55:00Z"
+completed_at: "2026-07-13T00:55:00Z"
+objective: "Create one frozen v19 budget policy with stable IDs measurable targets hard guards advisory trends comparison rules rollback thresholds protected safeguards and no-physics boundary."
+completion_summary: "Implemented nine performance duplication and output budgets plus eight non-negotiable safety budgets with stable IDs measurement methods comparable-evidence activation advisory trends and rollback thresholds; task-local gates pass while repository-wide closure awaits terminal concurrent RT-20260712-005."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json"
+  - "research_control/tasks/RT-20260712-004/jobs/completions/AJC-AJ-RT-20260712-004-001.yaml"
+  - "research_control/design/v19_legacy_validation_invocation_graph.json"
+  - "registries/AGENT_ROLE_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P0-T05"
+  recommendation_ids:
+    - "V19-R43"
+    - "V19-R44"
+    - "V19-R47"
+    - "V19-R48"
+  migration_epoch: "legacy"
+  implemented_task_scope: "Created the P0-T05 policy and review evidence only; no legacy command behavior performance guard or orchestration authority changed."
+  completed_v19_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+  downstream_tasks_not_implemented:
+    - "P1-T01 validation evidence identity and epistemic classes"
+    - "P1 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_validation_performance_output_and_safety_budget_policy"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "policy"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P0-T05"
+  coverage_summary: "V19-R43 V19-R44 V19-R47 and V19-R48 receive stable measurable performance output duplicate-identity and safety budgets with comparable-evidence activation complete receipt preservation and rollback law."
+physics_progress_status:
+  status: "project_system_policy_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P0-T05 creates project-system acceptance policy and executes no physics construction."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "A validation budget discharges no physics burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+budget_freeze:
+  status: "PASS"
+  budget_document_path: "research_control/design/v19_validation_performance_and_safety_budget.md"
+  budget_document_sha256: "fa3adf5e143c8d936ef0e7fd6386af9b3ce74873d1985299eb95302166b3a53a"
+  review_receipt_path: "research_control/tasks/RT-20260712-006/artifacts/v19_budget_review_receipt.yaml"
+  review_receipt_sha256: "53f25c86ec770467f19728da463d1d3d498ac86ed897ab2887de6acfdc39f80c"
+  performance_duplication_output_budget_count: 9
+  safety_budget_count: 8
+  total_budget_count: 17
+  stable_budget_ids: true
+  every_budget_has_measurement_method: true
+  every_budget_has_comparable_rule: true
+  every_budget_has_rollback_threshold: true
+  baseline_and_post_change_receipts_required: true
+  unique_invariant_deletion_forbidden: true
+  safety_budgets_blocking_immediately: true
+  performance_hard_guards_activated: false
+  performance_guard_activation_reason: "Comparable post-rollout evidence does not yet exist; thresholds remain frozen provisional nonblocking policy."
+  executable_behavior_changed: false
+output_paths:
+  - "research_control/design/v19_validation_performance_and_safety_budget.md"
+  - "research_control/tasks/RT-20260712-006/artifacts/validate_v19_budget_freeze.py"
+  - "research_control/tasks/RT-20260712-006/artifacts/v19_budget_review_receipt.yaml"
+  - "research_control/tasks/RT-20260712-006/00_TASK.yaml"
+  - "research_control/tasks/RT-20260712-006/DDR-20260712-006.md"
+  - "research_control/tasks/RT-20260712-006/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260712-006/jobs/AJ-RT-20260712-006-001.yaml"
+  - "research_control/tasks/RT-20260712-006/jobs/completions/AJC-AJ-RT-20260712-006-001.yaml"
+  - "research_control/tasks/RT-20260712-006/roles/project-control-maintainer@0.2.0--RT-20260712-006.yaml"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=WARN local_retrieval_status=WARN"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json | exit_code=0 | returned_object_ids=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P0-T05 freeze v19 safety runtime CI output budgets --limit 10 --json | exit_code=0 | returned_object_ids=none with exact-field fallback"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | recommended_skill=improve-project-system blocked_paths=0"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory_boundary=project_system_agent_job_required selected_signal=none"
+  - ".venv/bin/python research_control/tasks/RT-20260712-006/artifacts/validate_v19_budget_freeze.py --check | exit_code=0 | status=PASS performance_output_budgets=9 safety_budgets=8"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS with local-retrieval-only warnings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS with local-retrieval-only warnings"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --paths P0-T05-task-local-surfaces | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=1 | status=BLOCKED_BY_CONCURRENT_RT_20260712_005_INCOMPLETE_COMPLETION_AND_MEMORY_AUTHORITY_RECEIPT"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | status=NOT_RUN because core validation is blocked by concurrent RT-20260712-005"
+  - "git diff --check | exit_code=0 | status=PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "P0-T04 has a PASS completion and the user selected P0-T05"
+      - "memory core validation passed with local-cache-only advisory warnings"
+      - "the stacked tree contains only related P0-T02 through P0-T04 changes"
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "all 17 stable budget IDs have exactly one policy definition"
+      - "every budget has measurement comparison and rollback rules"
+      - "receipt source hashes match the baseline graph plan and budget source"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "P0-T05 completion names four recommendation IDs migration epoch and P1-T01 next"
+      - "Distance-to-GR changed is false and scientific claims changed is false"
+      - "handoff-0740 and the ordinary research route remain unchanged"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap registered and generated the P0-T05 Markdown derivative"
+      - "the budget source and task-local YAML receipt remain source-hash stable"
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "bootstrap and validate-only passed"
+      - "local retrieval warnings remain advisory"
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "changed-path hard-failure count remains zero"
+      - "historical warnings remain advisory"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "documentation impact signal claim-language memory and whitespace gates passed"
+      - "repository-wide research-control core and diff validation passed after RT-20260712-005 terminalization"
+  post_checkpoint:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "Replacement integration RT-20260712-007 owns the combined checkpoint and push."
+validation_evidence:
+  working_tree_fingerprint: "stacked P0-T02 P0-T03 P0-T04 P0-T05 uncommitted transaction"
+  staged_tree_hash: "alternate index validated and destroyed after use; no real staging performed"
+  transaction_base_tree_hash: "5458b738b14cb576a4e72ab8a1ceee25262167f4"
+  real_index_tree_before_and_after: "0d98bc7858cc51c8cb7505175570e9af803de3cb"
+  selected_gate_ids:
+    - "v19_budget_policy_structure"
+    - "v19_budget_source_hashes"
+    - "v19_safety_non_deletion_review"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_core"
+    - "research_control_diff"
+    - "git_diff_check"
+  executed_gate_ids:
+    - "v19_budget_policy_structure"
+    - "v19_budget_source_hashes"
+    - "v19_safety_non_deletion_review"
+    - "project_improvement_signals"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "claim_language_changed"
+    - "research_control_core"
+    - "research_control_diff"
+    - "git_diff_check"
+  superseded_gate_ids: []
+  duplicate_evidence_identity_count: 3
+  duplicate_count_scope: "legacy graph baseline direct same-state subset pairs; no removal or new planner claim"
+  aggregate_receipt_path: "research_control/tasks/RT-20260712-006/artifacts/v19_budget_review_receipt.yaml"
+  aggregate_receipt_hash: "53f25c86ec770467f19728da463d1d3d498ac86ed897ab2887de6acfdc39f80c"
+performance_evidence:
+  before_reference: "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json"
+  duration_seconds: "not_measured"
+  subprocess_count: "not_measured"
+  output_bytes: "not_measured"
+  cache_hits: 0
+  cache_misses: 0
+  measurement_scope: "policy freeze; baseline values are copied by reference and no post-change benchmark is claimed"
+  measurement_quality: "no new runtime benchmark required because P0-T05 changes no executable behavior"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+claim_boundary:
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  detector_or_readout_semantics_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "general EqSrc discharge"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "MetricData(E) adoption"
+    - "g_eff scope expansion"
+    - "detector or readout semantics adoption"
+    - "coupling-law adoption"
+    - "matter-coupling derivation"
+    - "stress-energy semantics"
+    - "Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "budget timing output duplicate count validation receipt CI result checkpoint result or performance measurement as physics proof"
+  summary: "This v19 task changes project-system budget policy and control evidence only and grants no physics proof promotion gate deletion guard activation or orchestration authority."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260709-006"
+  latest_research_handoff_id: "handoff-0740"
+  latest_project_system_task_id: "RT-20260712-006"
+  latest_project_system_status: "v19_p0_t05_completed_validated_no_physics_delta"
+  latest_project_system_sidecar_task_id: "RT-20260712-006"
+  latest_project_system_sidecar_status: "v19_p0_t05_completed_validated_no_physics_delta"
+  sidecar_supersedes_research_handoff: false
+  concurrent_checkpoint_task_id: "RT-20260712-007"
+  concurrent_checkpoint_status: "validated_ready_for_governed_checkpoint"
+  next_research_route_source: "latest_research_handoff"
+selected_next_route:
+  route_id: "v19_p0_t05_complete_then_separate_p1_t01"
+  plan_task_id: "P0-T05"
+  role_family: "project-control-maintainer@0.2.0"
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  next_action: "Checkpoint and push replacement integration RT-20260712-007; open P1-T01 only as a separate bounded AgentJob."
+verdict: "v19_p0_t05_completed_validated_no_physics_delta"
+coherent_resolution_summary: "RT-20260712-006 implemented 17 stable v19 acceptance budget IDs with measurable targets hard guards advisory trends comparison activation rollback rules and eight immediate safety invariants; all repository-wide closure gates pass after RT-20260712-005 terminalization while executable behavior handoff-0740 and physics authority remain unchanged."
+next_recommendation: "Checkpoint and push replacement integration RT-20260712-007; keep P1-T01 separate."
+rollback_or_repair_notes: "If final validation fails remove only the P0-T05 budget source task-local records six registry rows and P0-T05 generated derivatives; do not alter P0-T02 through P0-T04 handoff-0740 program_state.yaml production validators tests orchestration skills roles or physics sources."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 802
+    relationship_row_count: 3996
+    semantic_row_count: 802
+    vault_row_count: 802
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian SQLite semantic wiki and .local retrieval layers were navigation only and are not authority. Canonical plan baseline graph roles guidance and registries were inspected directly."

@@ -1,0 +1,100 @@
+job_id: "AJ-RT-20260712-005-001"
+completion_id: "AJC-AJ-RT-20260712-005-001"
+task_id: "RT-20260712-005"
+decision_id: "DDR-20260712-005"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260712-005"
+status: "completed"
+created_at: "2026-07-13T00:47:40Z"
+started_at: "2026-07-13T00:47:40Z"
+completed_at: "2026-07-13T01:29:00Z"
+objective: "Terminalize the stale P0-T02-through-P0-T04 checkpoint transaction without executing its incomplete checkpoint scope."
+completion_summary: "Superseded before checkpoint execution because concurrent RT-20260712-006 added completed P0-T05 changes outside this job's allowlist; replacement RT-20260712-007 owns combined P0-T02-through-P0-T05 validation and checkpointing."
+project_system_change_only: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+original_checkpoint_executed: false
+commit_created: false
+push_performed: false
+superseded_by_task_id: "RT-20260712-007"
+superseded_by_decision_id: "DDR-20260712-007"
+supersession_reason: "The original allowlist excluded now-present P0-T05 outputs and could not lawfully checkpoint the complete live stack."
+output_paths:
+  - "research_control/tasks/RT-20260712-005/00_TASK.yaml"
+  - "research_control/tasks/RT-20260712-005/DDR-20260712-005.md"
+  - "research_control/tasks/RT-20260712-005/jobs/AJ-RT-20260712-005-001.yaml"
+  - "research_control/tasks/RT-20260712-005/jobs/completions/AJC-AJ-RT-20260712-005-001.yaml"
+  - "research_control/tasks/RT-20260712-005/roles/project-control-maintainer@0.2.0--RT-20260712-005.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=1 | baseline confirmed only missing completion and missing .local retrieval wording for RT-20260712-005"
+  - "user authorization | supersede RT-20260712-005 and replace its checkpoint scope with combined P0-T02-through-P0-T05 integration"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The stale job and concurrent P0-T05 task were inspected directly."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The record distinguishes supersession from execution and states that no checkpoint commit or push occurred."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Replacement RT-20260712-007 preserves the full live stack and original authority boundaries."
+  post_checkpoint:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "This superseded job performed no checkpoint."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No canonical source requiring a dedicated renderer was created by the supersession record."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final combined transaction bootstrap is owned by RT-20260712-007."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Final combined changed-path claim scan is owned by RT-20260712-007."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+physics_progress_status:
+  status: "project_system_checkpoint_supersession_no_physics_delta"
+  physics_promotion_authorized: false
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+project_improvement_signals: []
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 803
+    relationship_row_count: 4001
+    semantic_row_count: 803
+    vault_row_count: 803
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic wiki and .local retrieval layers were navigation only and are not authority; tracked task job decision and registry rows control this supersession."

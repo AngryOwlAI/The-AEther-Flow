@@ -1,0 +1,184 @@
+{
+  "schema_id": "v19_baseline_benchmark_v1",
+  "task_id": "RT-20260712-003",
+  "job_id": "AJ-RT-20260712-003-001",
+  "plan_id": "recommendations_implementation_plan_continue_task-v19",
+  "plan_task_id": "P0-T03",
+  "generated_at": "2026-07-12T21:52:20Z",
+  "status": "PASS_WITH_BASELINE_CONDITIONS",
+  "measurement_classification": "exact current-state failure plus repaired clean-clone PASS",
+  "environment": {
+    "machine_model": "Mac15,14 Apple M3 Ultra",
+    "memory_bytes": 103079215104,
+    "platform": "macOS 26.5.2 Darwin arm64",
+    "python_version": "3.12.13",
+    "timezone": "America/Denver MDT",
+    "requirements_sha256": "7bc3bca027f6d2be2fcb2ca0e3d9568a09c07a6d0d30b774073501da06ced98f",
+    "cache_state": "warm environment; dependencies installed; OS and filesystem caches not cleared or controlled"
+  },
+  "repository_state": {
+    "head_commit": "d1655d9bc83030e26faed289cdbcc1aec3e961ae",
+    "branch": "main",
+    "origin_relation": "ahead 1",
+    "dirty_scope": "related uncommitted P0-T02 control and generated files only",
+    "pre_measurement_working_fingerprint": "4019c100423a662610ae1e0c50308b9d587f5f5526a970aed320c61d1783086a",
+    "post_restoration_working_fingerprint": "4019c100423a662610ae1e0c50308b9d587f5f5526a970aed320c61d1783086a",
+    "primary_workspace_restored": true,
+    "real_git_index_changed": false
+  },
+  "historical_reference": {
+    "path": "reviews/verification_validation_testing_overhead_audit_2026-07-12.md",
+    "audited_commit": "5ad2d856b5b7a689b76035e348734824cf7411f0",
+    "full_suite_seconds": 507.215,
+    "dependency_graph_module_seconds": 378.598,
+    "research_control_module_seconds": 64.568,
+    "memory_module_seconds": 23.880,
+    "ci_validation_step_seconds": 1025,
+    "comparison_status": "same machine class Python version and warm dependency environment; different commit and working-tree state so descriptive rather than controlled"
+  },
+  "exact_current_state_suite": {
+    "status": "FAIL_BASELINE",
+    "duration_seconds": 565.153962,
+    "tests_run": 584,
+    "tests_passed": 582,
+    "tests_failed": 2,
+    "failure_ids": [
+      "test_continue_research_goal_state.RepositoryContractTests.test_primary_main_worktree_remains_clean",
+      "test_memory_system.MemorySystemSmokeTests.test_bootstrap_is_idempotent_for_generated_outputs"
+    ],
+    "failure_classification": "current P0-T02 state-contract conditions; not P0-T03 production-code regressions",
+    "tracked_change_detected": true,
+    "tracked_change_path": "FOLDER_MAP.md",
+    "restoration_method": "removed only the five P0-T02 folder rows emitted by the test bootstrap and verified the exact pre-run fingerprint",
+    "output_bytes": 4123,
+    "token_proxy": 1031,
+    "python_subprocess_launch_count": 90,
+    "sampled_unique_descendant_process_count_lower_bound": 43,
+    "registry_csv_parse_count": 18457,
+    "dependency_graph_build_count": 9,
+    "cache_hits": 0,
+    "cache_misses": 0,
+    "measurement_quality": "single expensive indicative run with temporary CSV and process instrumentation"
+  },
+  "repaired_clean_clone_suite": {
+    "status": "PASS",
+    "duration_seconds": 515.454875,
+    "runner_reported_seconds": 515.282,
+    "tests_run": 584,
+    "tests_passed": 584,
+    "tests_failed": 0,
+    "temporary_commit": "e1be9a3708a94eb9a2259891e1929ecf22aafdb3",
+    "alternate_tree_hash": "a2b66f4a794df8681604f10cedca2ebfcf39ed49",
+    "working_fingerprint_before": "82e49f2a1cf78be5685c3fcde7f918f88905ca3ade23dfb6eefbc3245eeca5c9",
+    "working_fingerprint_after": "82e49f2a1cf78be5685c3fcde7f918f88905ca3ade23dfb6eefbc3245eeca5c9",
+    "tracked_state_unchanged": true,
+    "repair_scope": "the five P0-T02 folder-map rows observed from policy bootstrap output only; no production validator or test change",
+    "output_bytes": 2697,
+    "token_proxy": 674,
+    "subprocess_count": 90,
+    "subprocess_count_method": "Python subprocess.Popen launch events recorded by temporary sitecustomize instrumentation",
+    "sampled_unique_descendant_process_count_lower_bound": 33,
+    "registry_csv_parse_count": 18457,
+    "registry_parse_method": "csv.reader construction events for paths under registries; JSON and non-parser reads excluded",
+    "dependency_graph_build_count": 9,
+    "dependency_graph_build_method": "current test source call paths: nine full build_graph calls",
+    "concrete_gate_invocations": 1,
+    "full_research_control_spine_invocations": 0,
+    "cache_hits": 0,
+    "cache_misses": 0,
+    "measurement_quality": "single expensive indicative repaired-baseline run; instrumentation overhead included"
+  },
+  "legacy_acceptance_observation": {
+    "status": "BLOCKED_BASELINE",
+    "real_index_attempt_seconds": 2.302428,
+    "real_index_blocker": "registered P0-T02 source and wiki files are untracked until checkpoint",
+    "alternate_index_attempt_seconds": 9.346934,
+    "alternate_index_tree_hash": "e101aad9855728caef02a1af9ef28b9c2bd5d6f8",
+    "alternate_index_blocker": "FOLDER_MAP.md is stale once P0-T02 task directories are represented as tracked",
+    "concrete_declared_gate_invocations": 10,
+    "top_level_full_research_control_spine_invocations": 2,
+    "classification": "current baseline integration condition; no repair performed by P0-T03"
+  },
+  "focused_baseline_conditions": {
+    "dependency_graph": {
+      "status": "FAIL_BASELINE",
+      "duration_seconds": 48.742223,
+      "classification": "pre-existing stale JSON Markdown and DOT outputs; still present",
+      "measurement_quality": "single expensive indicative run"
+    },
+    "task_index": {
+      "status": "FAIL_BASELINE",
+      "duration_seconds": 1.107774,
+      "hard_error_count": 4,
+      "warning_count": 297,
+      "classification": "pre-existing stale CSV Markdown and wiki outputs plus row mismatch; still present",
+      "measurement_quality": "single indicative run"
+    },
+    "local_vault": {
+      "status": "FAIL_LOCAL_ONLY",
+      "issue_count": 11,
+      "durations_seconds": [0.296849, 0.230888, 0.229549],
+      "median_duration_seconds": 0.230888,
+      "classification": "ignored local-retrieval freshness only; not tracked authority",
+      "measurement_quality": "three repetitions because the check is sub-second"
+    }
+  },
+  "raw_measurement_manifests": [
+    {
+      "path": ".local/v19-baseline/20260712T152550-0600/measurement.json",
+      "sha256": "53ebb722325c2894d3f3b447a09d523bfd5a66783d86868f205d22f721df097d",
+      "purpose": "real-index legacy preflight and focused baseline logs"
+    },
+    {
+      "path": ".local/v19-baseline/20260712T152743-0600/measurement.json",
+      "sha256": "7670bd07978253821edfcba752810d9e140ee9cf506df3add8deb2d89a201620",
+      "purpose": "alternate-index legacy and focused baseline logs"
+    },
+    {
+      "path": ".local/v19-baseline/20260712T153003-0600/measurement.json",
+      "sha256": "9d8d842c5fe08bcd8713a3e45eced98c6fc84f019e314940bb5a7cbd42421b75",
+      "purpose": "exact current-state suite logs"
+    },
+    {
+      "path": ".local/v19-baseline/repaired-clean-clone/.local/v19-baseline/20260712T154315-0600/measurement.json",
+      "sha256": "704e43433cb9d1087999aa0678fce373522ba801b20c45f01ee5d97ac403b9b0",
+      "purpose": "repaired clean-clone suite logs"
+    }
+  ],
+  "raw_log_manifest": [
+    {"path": ".local/v19-baseline/20260712T152550-0600/legacy_acceptance.run-1.stdout.log", "sha256": "569baf15f8c1d2f98ac6694907a69f11ab0f6970345711728ba9fd6eba6eb2ac"},
+    {"path": ".local/v19-baseline/20260712T152550-0600/legacy_acceptance.run-1.stderr.log", "sha256": "b05abc8df78f81c7c053cad62a09fa0f9fc0b0e1f37036a3a8abf0a51dc3d29c"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/legacy_acceptance.run-1.stdout.log", "sha256": "4b47c3d3e7ea3acb8b0413e37b20a7ed215f83cdb0fafccd911781ebbb4fbd02"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/legacy_acceptance.run-1.stderr.log", "sha256": "b05abc8df78f81c7c053cad62a09fa0f9fc0b0e1f37036a3a8abf0a51dc3d29c"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/dependency_graph_check.run-1.stdout.log", "sha256": "881f9646eacd47b630b571125219003987ec8a290191b29c102d41aae78510f5"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/dependency_graph_check.run-1.stderr.log", "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/task_index_validation.run-1.stdout.log", "sha256": "96dd63ca55b4c0a7494650adacfc8a0db077ebf9006e7bcee1475d97bc24d026"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/task_index_validation.run-1.stderr.log", "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/local_vault_lint.run-1.stdout.log", "sha256": "9a2db5a0d6500aa18b1c27fe49dc1c2f9397da47b77216bc579371a8fbac6365"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/local_vault_lint.run-1.stderr.log", "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/local_vault_lint.run-2.stdout.log", "sha256": "9a2db5a0d6500aa18b1c27fe49dc1c2f9397da47b77216bc579371a8fbac6365"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/local_vault_lint.run-2.stderr.log", "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/local_vault_lint.run-3.stdout.log", "sha256": "9a2db5a0d6500aa18b1c27fe49dc1c2f9397da47b77216bc579371a8fbac6365"},
+    {"path": ".local/v19-baseline/20260712T152743-0600/local_vault_lint.run-3.stderr.log", "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"path": ".local/v19-baseline/20260712T153003-0600/repository_test_suite.run-1.stdout.log", "sha256": "234c8fef6c8563a8657bde442a1a55b06707b25eb3c37b3621006f11bd2bf0f5"},
+    {"path": ".local/v19-baseline/20260712T153003-0600/repository_test_suite.run-1.stderr.log", "sha256": "e8cf206cac639969e697e47eb916c76a045b4299acec270f7a8e99767a002bd8"},
+    {"path": ".local/v19-baseline/repaired-clean-clone/.local/v19-baseline/20260712T154315-0600/repository_test_suite.run-1.stdout.log", "sha256": "212b25cd66f054f9feba38da0058125136eeca3c7d210e36d6c4ddbd6de7ec6a"},
+    {"path": ".local/v19-baseline/repaired-clean-clone/.local/v19-baseline/20260712T154315-0600/repository_test_suite.run-1.stderr.log", "sha256": "8c198fa1365dbee07b45163a7d305fe6db3277d22d8c93e1910ae8e29b969803"}
+  ],
+  "uncertainty": [
+    "Expensive commands are single indicative runs and do not estimate variance.",
+    "Temporary CSV and subprocess instrumentation adds overhead, so current suite timings are not directly controlled against the uninstrumented 507.215-second historical run.",
+    "Sampled descendant process counts are lower bounds because processes shorter than 20 ms may be missed.",
+    "Registry parse counts cover CSV parser construction only and exclude JSON or non-parser file reads.",
+    "The repaired clean-clone result is a repair/control baseline and does not replace the exact current-state failure record."
+  ],
+  "claim_boundary": {
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "distance_to_gr_changed": false,
+    "benchmark_result_is_physics_evidence": false,
+    "ordinary_research_handoff_preserved": "handoff-0740"
+  },
+  "next_route": "P0-T04"
+}

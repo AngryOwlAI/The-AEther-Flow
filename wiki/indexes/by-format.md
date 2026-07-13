@@ -207,6 +207,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `research_control/design/three_tier_claim_convention.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V17-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v17_recommendation_backlog_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V18-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v18_recommendation_backlog_schema.md`
+- `MD-RESEARCH-CONTROL-DESIGN-V19-LEGACY-VALIDATION-INVOCATION-GRAPH` `research_control/design/v19_legacy_validation_invocation_graph.md`
+- `MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-OVERHEAD-BACKLOG-SCHEMA` `research_control/design/v19_validation_overhead_backlog_schema.md`
+- `MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET` `research_control/design/v19_validation_performance_and_safety_budget.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `research_control/design/validation_command_inventory_v15.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `research_control/design/validation_command_inventory_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `research_control/design/validation_status_field_inventory.md`
@@ -1016,6 +1019,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `wiki/markdown/md-research-control-design-three-tier-claim-convention.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V17-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v17-recommendation-backlog-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V18-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v18-recommendation-backlog-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-V19-LEGACY-VALIDATION-INVOCATION-GRAPH` `wiki/markdown/md-research-control-design-v19-legacy-validation-invocation-graph.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-OVERHEAD-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v19-validation-overhead-backlog-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET` `wiki/markdown/md-research-control-design-v19-validation-performance-and-safety-budget.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `wiki/markdown/md-research-control-design-validation-command-inventory-v15.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `wiki/markdown/md-research-control-design-validation-command-inventory-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `wiki/markdown/md-research-control-design-validation-status-field-inventory.md`

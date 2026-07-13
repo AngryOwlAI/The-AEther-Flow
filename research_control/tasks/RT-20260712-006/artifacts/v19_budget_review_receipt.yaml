@@ -1,0 +1,73 @@
+schema_id: "v19_budget_review_receipt_v1"
+task_id: "RT-20260712-006"
+job_id: "AJ-RT-20260712-006-001"
+plan_task_id: "P0-T05"
+created_at: "2026-07-13T00:55:00Z"
+status: "PASS"
+budget_document:
+  path: "research_control/design/v19_validation_performance_and_safety_budget.md"
+  sha256: "fa3adf5e143c8d936ef0e7fd6386af9b3ce74873d1985299eb95302166b3a53a"
+source_hashes:
+  baseline_benchmark: "b3d18259efad879101d6dab2c6e4c62b7f19ffa6826527a53b472dd653d34bac"
+  legacy_invocation_graph: "afa67c7fe7b31a8ae226020d5f5c125cad4a0f42842211d1a87e0f391916b85e"
+  implementation_plan: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+budget_ids:
+  - "V19-PERF-FULL-001"
+  - "V19-PERF-AFFECTED-001"
+  - "V19-PERF-CHECKPOINT-001"
+  - "V19-PERF-CI-001"
+  - "V19-PERF-TRACE-001"
+  - "V19-DUP-IDENTITY-001"
+  - "V19-OUT-PASS-001"
+  - "V19-OUT-FAIL-001"
+  - "V19-OUT-FINDINGS-001"
+  - "V19-SAFE-STAGED-ALLOWLIST-001"
+  - "V19-SAFE-AUTHORITY-001"
+  - "V19-SAFE-CLAIMS-001"
+  - "V19-SAFE-RESIDUE-001"
+  - "V19-SAFE-WHITESPACE-001"
+  - "V19-SAFE-SOURCE-AUTHORITY-001"
+  - "V19-SAFE-LIVE-SUBSYSTEM-001"
+  - "V19-SAFE-SCHEDULED-FULL-001"
+counts:
+  performance_duplication_output_budgets: 9
+  safety_budgets: 8
+  total_budgets: 17
+review_checks:
+  every_budget_has_measurement_method: true
+  every_budget_has_comparable_rule: true
+  every_budget_has_rollback_threshold: true
+  unique_invariant_deletion_forbidden: true
+  baseline_and_post_change_receipts_required: true
+  physics_authority_created: false
+activation:
+  safety_budgets: "blocking immediately"
+  performance_budgets: "provisional nonblocking until each comparable-evidence rule is satisfied"
+  output_and_duplicate_budgets: "activate only after deterministic receipt parity or stable evidence identity is proven"
+legacy_baseline:
+  repaired_clean_clone_suite_seconds: 515.454875
+  repaired_clean_clone_tests: 584
+  historical_full_suite_seconds: 507.215
+  historical_ci_critical_path_seconds: 1025
+  provisional_gate_count: 37
+  concrete_invocation_count: 53
+  direct_same_state_subset_pair_count: 3
+  legitimate_cross_scope_repetition_count: 6
+  unresolved_invocation_count: 0
+selected_gate_ids:
+  - "v19_budget_policy_structure"
+  - "v19_budget_source_hashes"
+  - "v19_safety_non_deletion_review"
+  - "claim_language_changed"
+  - "documentation_impact"
+  - "research_control_core"
+  - "research_control_diff"
+  - "git_diff_check"
+authority:
+  project_system_change_only: true
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  distance_to_gr_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+summary: "Frozen measurable v19 runtime CI duplicate-identity output and safety budgets with explicit comparison activation and rollback rules; no runtime behavior or physics authority changed."

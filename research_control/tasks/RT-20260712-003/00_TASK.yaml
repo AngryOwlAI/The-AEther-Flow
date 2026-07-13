@@ -1,0 +1,42 @@
+task_id: "RT-20260712-003"
+task_type: "v19_baseline_benchmark"
+status: "completed"
+created_at: "2026-07-12T21:52:20Z"
+updated_at: "2026-07-12T21:52:20Z"
+closed_at: "2026-07-12T21:52:20Z"
+parent_task_id: "RT-20260712-002"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260712-003"
+current_job_id: "AJ-RT-20260712-003-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260712-003"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested P0-T03 after the P0-T02 PASS completion; the plan requires no human gate."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T03"
+  plan_task_name: "Capture a reproducible v19 baseline benchmark receipt"
+  recommendation_ids:
+    - "V19-R43"
+    - "V19-R48"
+objective: "Capture reproducible historical exact-current repaired-clean and focused v19 validation-overhead baselines without repairing drift or changing production validators tests orchestration or physics authority."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system benchmark receipt only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p0_t03_baseline_captured_no_physics_delta"
+claim_boundary_id: "CB-V19-P0-T03-BASELINE-BENCHMARK-001"
+claim_boundary:
+  allowed_scope: "Measure and report P0-T03 runtime invocation output cache and baseline-failure evidence only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifact: "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json"
+next_recommended_action: "Run exactly one bounded v19 P0-T04 legacy invocation-and-obligation graph packet."
+documentation_impact_id: "DI-RT-20260712-003-001"
+notes: "P0-T03 records current baseline failures and a repaired clean-clone PASS without changing P0-T02 backlog state production sources handoff-0740 or program_state.yaml."

@@ -1,0 +1,2612 @@
+{
+  "audited_head": "d1655d9bc83030e26faed289cdbcc1aec3e961ae",
+  "audited_index_tree": "0d98bc7858cc51c8cb7505175570e9af803de3cb",
+  "authority": {
+    "operational_inventory_only": true,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "physics_delta_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "counts": {
+    "concrete_invocations": 53,
+    "direct_same_state_subset_pairs": 3,
+    "drift_findings": 8,
+    "duplicate_classes": {
+      "aggregate_wrapper": 1,
+      "cross_job_same_commit_duplicate": 1,
+      "direct_same_state_subset": 3,
+      "legitimate_cross_entrypoint_repeat": 1,
+      "legitimate_cross_scope_repeat": 6,
+      "nested_direct_duplicate": 2,
+      "nested_direct_overlap": 2,
+      "same_state_superset": 3,
+      "unique": 34
+    },
+    "legitimate_cross_scope_repetitions": 6,
+    "owners": {
+      "checkpoint": 16,
+      "ci": 2,
+      "local_runner": 15,
+      "make": 20
+    },
+    "provisional_gates": 37,
+    "role_obligations": 32,
+    "scopes": {
+      "changed_claim_language": 3,
+      "changed_required_pdf_derivatives": 1,
+      "claim_graph": 1,
+      "compact_frontier": 1,
+      "current_frontier": 1,
+      "dependency_graph": 1,
+      "documentation_impact": 3,
+      "documentation_including_local": 1,
+      "local_retrieval": 2,
+      "memory_and_publication": 7,
+      "memory_health": 1,
+      "memory_retrieval_smoke": 1,
+      "memory_sync": 1,
+      "post_pdf_memory_sync": 1,
+      "project_control": 6,
+      "project_improvement_signals": 3,
+      "publication": 2,
+      "registered_specs": 2,
+      "repository": 3,
+      "research_control": 3,
+      "research_control_and_diff": 4,
+      "route_diagnostic": 2,
+      "task_index": 1,
+      "tracked_documentation": 1,
+      "working_diff": 1
+    },
+    "severities": {
+      "advisory": 2,
+      "blocking": 45,
+      "conditional": 2,
+      "diagnostic": 2,
+      "local_only": 2
+    },
+    "skill_obligations": 6,
+    "source_fingerprints": 13,
+    "unresolved": 0
+  },
+  "drift_findings": [
+    {
+      "evidence": "Make includes classifier, documentation audit, spec lint, direct publication validation, and unconditional tests; the default local runner instead adds frontier, graph, index, claim graph, claim-language, advisory route, and whitespace gates and omits tests unless requested.",
+      "finding_id": "DRIFT-01",
+      "severity": "hard_finding",
+      "summary": "Make/CI and the local runner own different command sets."
+    },
+    {
+      "evidence": "GitHub executes make validate-project-control while the runner's base_command_plan differs in both additions and omissions.",
+      "finding_id": "DRIFT-02",
+      "severity": "hard_finding",
+      "summary": "The local runner is not CI-equivalent."
+    },
+    {
+      "evidence": "MPC-08/MPC-09, RUN-10/RUN-11, and CHK-W06/CHK-W07.",
+      "finding_id": "DRIFT-03",
+      "severity": "direct_duplicate",
+      "summary": "Plain research-control validation immediately precedes its same-state --check-diff superset in three owners."
+    },
+    {
+      "evidence": "MPC-05/MPC-07 and MHTML-01/MHTML-03; bootstrap_memory_system.validate_all calls validate_publication_docs.",
+      "finding_id": "DRIFT-04",
+      "severity": "nested_duplicate",
+      "summary": "Memory validate-only already invokes publication validation before Make invokes publication validation directly."
+    },
+    {
+      "evidence": "CI-PC-01 expands to MPC-05 and CI-MEM-01 runs the same implementation in a separate clean checkout job.",
+      "finding_id": "DRIFT-05",
+      "severity": "cross_job_duplicate",
+      "summary": "GitHub's separate memory job repeats memory validate-only already nested in the main Make job."
+    },
+    {
+      "evidence": "CHK-W* inspect synchronized working files; CHK-S01, CHK-S02, CHK-S04, and CHK-S05 explicitly inspect the staged index. CHK-S03 and CHK-S06 have no staged mode and therefore remain labeled working_files_index_synchronized.",
+      "finding_id": "DRIFT-06",
+      "severity": "scope_guard",
+      "summary": "Checkpoint working and final validations cannot be collapsed solely by command text."
+    },
+    {
+      "evidence": "Thirteen active roles declare seven label families; claim_boundary_phrase_scan is an integrated research-control behavior, not a universal standalone process.",
+      "finding_id": "DRIFT-07",
+      "severity": "obligation_drift",
+      "summary": "Role and skill declarations use labels and command strings that do not form a shared executable plan."
+    },
+    {
+      "evidence": "MMEM-02, MMEM-03, MMEM-05, and MMEM-06 inspect or mutate ignored local retrieval state.",
+      "finding_id": "DRIFT-08",
+      "severity": "local_authority",
+      "summary": "Local retrieval health is mixed into validate-memory but is non-authoritative for tracked project state."
+    }
+  ],
+  "gate_catalog": [
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-001",
+      "implementation": "scripts/project_control/classify_project_changes.py",
+      "mutating": false,
+      "name": "project_change_classifier",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "advisory",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-002",
+      "implementation": "scripts/project_control/resolve_project_improvement.py",
+      "mutating": false,
+      "name": "project_improvement_resolver",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-003",
+      "implementation": "scripts/project_control/collect_project_improvement_signals.py --validate-emitted",
+      "mutating": false,
+      "name": "project_improvement_signal_parity",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-004",
+      "implementation": "scripts/project_control/validate_documentation_impact.py",
+      "mutating": false,
+      "name": "documentation_impact",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-005",
+      "implementation": "scripts/project_control/audit_documentation_surfaces.py",
+      "mutating": false,
+      "name": "documentation_surface_audit",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-006",
+      "implementation": "bootstrap_memory_system.py default",
+      "mutating": true,
+      "name": "memory_sync_and_validate",
+      "nested_gate_ids": [
+        "LVG-007",
+        "LVG-014",
+        "LVG-037"
+      ],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-007",
+      "implementation": "bootstrap_memory_system.py --validate-only",
+      "mutating": false,
+      "name": "memory_core_validate_only",
+      "nested_gate_ids": [
+        "LVG-014",
+        "LVG-037"
+      ],
+      "provisional": true
+    },
+    {
+      "authority": "local_only",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-008",
+      "implementation": "sync_obsidian_vault.py",
+      "mutating": true,
+      "name": "obsidian_vault_sync",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "local_only",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-009",
+      "implementation": "lint_obsidian_vault.py --require-index",
+      "mutating": false,
+      "name": "obsidian_vault_lint",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "diagnostic",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-010",
+      "implementation": "query_memory.py status --json",
+      "mutating": false,
+      "name": "memory_status",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "diagnostic",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-011",
+      "implementation": "query_memory.py lookup",
+      "mutating": false,
+      "name": "memory_lookup",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "diagnostic",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-012",
+      "implementation": "query_memory.py search",
+      "mutating": false,
+      "name": "memory_search",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-013",
+      "implementation": "scripts/spec_depth_lint.py --root .",
+      "mutating": false,
+      "name": "spec_depth_lint",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-014",
+      "implementation": "scripts/validate_publication_process.py --root .",
+      "mutating": false,
+      "name": "publication_process",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-015",
+      "implementation": "scripts/research_control/validate_research_control.py",
+      "mutating": false,
+      "name": "research_control_core",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-016",
+      "implementation": "scripts/research_control/validate_research_control.py --check-diff",
+      "mutating": false,
+      "name": "research_control_diff",
+      "nested_gate_ids": [
+        "LVG-015",
+        "LVG-023"
+      ],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-017",
+      "implementation": "python -m unittest discover -s tests",
+      "mutating": false,
+      "name": "repository_unittest_suite",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-018",
+      "implementation": "render_current_frontier.py --check",
+      "mutating": false,
+      "name": "current_frontier_freshness",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-019",
+      "implementation": "validate_compact_current_frontier_v16.py --json",
+      "mutating": false,
+      "name": "compact_frontier_validation",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-020",
+      "implementation": "render_dependency_graph.py --check",
+      "mutating": false,
+      "name": "dependency_graph_freshness",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-021",
+      "implementation": "validate_task_index.py --json",
+      "mutating": false,
+      "name": "task_index_validation",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-022",
+      "implementation": "validate_claim_graph_v1.py --json",
+      "mutating": false,
+      "name": "claim_graph_validation",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-023",
+      "implementation": "validate_claim_language.py changed/staged mode",
+      "mutating": false,
+      "name": "changed_claim_language",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "advisory",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-024",
+      "implementation": "extract_route_signatures.py sample",
+      "mutating": false,
+      "name": "route_signature_extraction",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "advisory",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-025",
+      "implementation": "validate_route_orbits.py --advisory-only",
+      "mutating": false,
+      "name": "route_orbit_diagnostic",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-026",
+      "implementation": "git diff --check",
+      "mutating": false,
+      "name": "whitespace_diff",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "changed registered TeX has pdf_required=true",
+      "gate_id": "LVG-027",
+      "implementation": "build_pdf_derivatives.py <changed-required-tex>",
+      "mutating": true,
+      "name": "targeted_pdf_build",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-028",
+      "implementation": "continue_research_memory_preflight.py --json",
+      "mutating": true,
+      "name": "continue_memory_preflight",
+      "nested_gate_ids": [
+        "LVG-010",
+        "LVG-008"
+      ],
+      "provisional": true
+    },
+    {
+      "authority": "routing",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-029",
+      "implementation": "scripts/research_control/continue_research.py",
+      "mutating": false,
+      "name": "continue_context_resolution",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-030",
+      "implementation": "checkpoint_research_transaction.py",
+      "mutating": true,
+      "name": "checkpoint_transaction",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-031",
+      "implementation": "make validate-project-control",
+      "mutating": false,
+      "name": "make_validate_project_control",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-032",
+      "implementation": "make validate-memory",
+      "mutating": true,
+      "name": "make_validate_memory",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-033",
+      "implementation": "make validate-html-explainers",
+      "mutating": false,
+      "name": "make_validate_html_explainers",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-034",
+      "implementation": "make audit-documentation-surfaces",
+      "mutating": false,
+      "name": "make_audit_documentation_surfaces",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-035",
+      "implementation": "run_full_research_control_validation.py",
+      "mutating": false,
+      "name": "local_full_runner",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "blocking",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-036",
+      "implementation": "project-control-validation.yml validate_project_control job",
+      "mutating": false,
+      "name": "github_actions_project_control_job",
+      "nested_gate_ids": [],
+      "provisional": true
+    },
+    {
+      "authority": "nested",
+      "condition": "always_when_selected",
+      "gate_id": "LVG-037",
+      "implementation": "validate_mermaid_sources imported by bootstrap",
+      "mutating": false,
+      "name": "mermaid_source_validation",
+      "nested_gate_ids": [],
+      "provisional": true
+    }
+  ],
+  "generated_at": "2026-07-12T22:11:26Z",
+  "invocations": [
+    {
+      "arguments": [
+        "scripts/project_control/classify_project_changes.py",
+        "--json"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/classify_project_changes.py",
+        "--json"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-001",
+      "invocation_id": "MPC-01",
+      "mutating": false,
+      "owner": "make:validate-project-control",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "project_control",
+      "severity": "blocking",
+      "source_ref": "Makefile:16",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-003",
+      "invocation_id": "MPC-02",
+      "mutating": false,
+      "owner": "make:validate-project-control",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "project_control",
+      "severity": "blocking",
+      "source_ref": "Makefile:17",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/validate_documentation_impact.py"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/validate_documentation_impact.py"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-004",
+      "invocation_id": "MPC-03",
+      "mutating": false,
+      "owner": "make:validate-project-control",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "project_control",
+      "severity": "blocking",
+      "source_ref": "Makefile:18",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/audit_documentation_surfaces.py",
+        "--skip-local"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/audit_documentation_surfaces.py",
+        "--skip-local"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-005",
+      "invocation_id": "MPC-04",
+      "mutating": false,
+      "owner": "make:validate-project-control",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "tracked_documentation",
+      "severity": "blocking",
+      "source_ref": "Makefile:19",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "nested_direct_overlap",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-007",
+      "invocation_id": "MPC-05",
+      "mutating": false,
+      "owner": "make:validate-project-control",
+      "owner_type": "make",
+      "related_invocation_id": "MPC-07",
+      "same_state_superset_invocation_id": "",
+      "scope": "memory_and_publication",
+      "severity": "blocking",
+      "source_ref": "Makefile:20",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/spec_depth_lint.py",
+        "--root",
+        "."
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/spec_depth_lint.py",
+        "--root",
+        "."
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-013",
+      "invocation_id": "MPC-06",
+      "mutating": false,
+      "owner": "make:validate-project-control",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "registered_specs",
+      "severity": "blocking",
+      "source_ref": "Makefile:21",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/validate_publication_process.py",
+        "--root",
+        "."
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/validate_publication_process.py",
+        "--root",
+        "."
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "nested_direct_duplicate",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-014",
+      "invocation_id": "MPC-07",
+      "mutating": false,
+      "owner": "make:validate-project-control",
+      "owner_type": "make",
+      "related_invocation_id": "MPC-05",
+      "same_state_superset_invocation_id": "",
+      "scope": "publication",
+      "severity": "blocking",
+      "source_ref": "Makefile:22",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/validate_research_control.py"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_research_control.py"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "direct_same_state_subset",
+      "expected_cost": {
+        "class": "moderate",
+        "evidence": "2026-07-12 overhead audit single run",
+        "seconds": 11.784
+      },
+      "gate_id": "LVG-015",
+      "invocation_id": "MPC-08",
+      "mutating": false,
+      "owner": "make:validate-project-control",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "MPC-09",
+      "scope": "research_control",
+      "severity": "blocking",
+      "source_ref": "Makefile:23",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/validate_research_control.py",
+        "--check-diff"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_research_control.py",
+        "--check-diff"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "same_state_superset",
+      "expected_cost": {
+        "class": "moderate",
+        "evidence": "2026-07-12 overhead audit single run",
+        "seconds": 11.604
+      },
+      "gate_id": "LVG-016",
+      "invocation_id": "MPC-09",
+      "mutating": false,
+      "owner": "make:validate-project-control",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "research_control_and_diff",
+      "severity": "blocking",
+      "source_ref": "Makefile:24",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "expensive",
+        "evidence": "P0-T03 repaired clean-clone suite",
+        "seconds": 515.454875
+      },
+      "gate_id": "LVG-017",
+      "invocation_id": "MPC-10",
+      "mutating": false,
+      "owner": "make:validate-project-control",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "repository",
+      "severity": "blocking",
+      "source_ref": "Makefile:25",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-006",
+      "invocation_id": "MMEM-01",
+      "mutating": true,
+      "owner": "make:validate-memory",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "memory_and_publication",
+      "severity": "blocking",
+      "source_ref": "Makefile:7",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-008",
+      "invocation_id": "MMEM-02",
+      "mutating": true,
+      "owner": "make:validate-memory",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "local_retrieval",
+      "severity": "local_only",
+      "source_ref": "Makefile:8",
+      "tree_state": "local_cache"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/lint_obsidian_vault.py",
+        "--require-index"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/lint_obsidian_vault.py",
+        "--require-index"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "subsecond",
+        "evidence": "P0-T03 three-run median",
+        "seconds": 0.230888
+      },
+      "gate_id": "LVG-009",
+      "invocation_id": "MMEM-03",
+      "mutating": false,
+      "owner": "make:validate-memory",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "local_retrieval",
+      "severity": "local_only",
+      "source_ref": "Makefile:9",
+      "tree_state": "local_cache"
+    },
+    {
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "legitimate_cross_entrypoint_repeat",
+      "expected_cost": {
+        "class": "expensive",
+        "evidence": "P0-T03 repaired clean-clone suite",
+        "seconds": 515.454875
+      },
+      "gate_id": "LVG-017",
+      "invocation_id": "MMEM-04",
+      "mutating": false,
+      "owner": "make:validate-memory",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "repository",
+      "severity": "blocking",
+      "source_ref": "Makefile:10",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/query_memory.py",
+        "status",
+        "--json"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/query_memory.py",
+        "status",
+        "--json"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-010",
+      "invocation_id": "MMEM-05",
+      "mutating": false,
+      "owner": "make:validate-memory",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "memory_health",
+      "severity": "diagnostic",
+      "source_ref": "Makefile:11",
+      "tree_state": "working_tree_plus_local_cache"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/query_memory.py",
+        "search",
+        "Lorentzian metric",
+        "--formats",
+        "tex,pdf",
+        "--limit",
+        "5",
+        "--json"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/query_memory.py",
+        "search",
+        "Lorentzian metric",
+        "--formats",
+        "tex,pdf",
+        "--limit",
+        "5",
+        "--json"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-012",
+      "invocation_id": "MMEM-06",
+      "mutating": false,
+      "owner": "make:validate-memory",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "memory_retrieval_smoke",
+      "severity": "diagnostic",
+      "source_ref": "Makefile:12",
+      "tree_state": "local_cache"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "nested_direct_overlap",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-007",
+      "invocation_id": "MHTML-01",
+      "mutating": false,
+      "owner": "make:validate-html-explainers",
+      "owner_type": "make",
+      "related_invocation_id": "MHTML-03",
+      "same_state_superset_invocation_id": "",
+      "scope": "memory_and_publication",
+      "severity": "blocking",
+      "source_ref": "Makefile:29",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/spec_depth_lint.py",
+        "--root",
+        "."
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/spec_depth_lint.py",
+        "--root",
+        "."
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-013",
+      "invocation_id": "MHTML-02",
+      "mutating": false,
+      "owner": "make:validate-html-explainers",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "registered_specs",
+      "severity": "blocking",
+      "source_ref": "Makefile:30",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/validate_publication_process.py",
+        "--root",
+        "."
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/validate_publication_process.py",
+        "--root",
+        "."
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "nested_direct_duplicate",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-014",
+      "invocation_id": "MHTML-03",
+      "mutating": false,
+      "owner": "make:validate-html-explainers",
+      "owner_type": "make",
+      "related_invocation_id": "MHTML-01",
+      "same_state_superset_invocation_id": "",
+      "scope": "publication",
+      "severity": "blocking",
+      "source_ref": "Makefile:31",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/audit_documentation_surfaces.py"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/audit_documentation_surfaces.py"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-005",
+      "invocation_id": "MAUDIT-01",
+      "mutating": false,
+      "owner": "make:audit-documentation-surfaces",
+      "owner_type": "make",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "documentation_including_local",
+      "severity": "blocking",
+      "source_ref": "Makefile:35",
+      "tree_state": "working_tree_plus_local_cache"
+    },
+    {
+      "arguments": [
+        "PYTHON=.venv/bin/python",
+        "validate-project-control"
+      ],
+      "command": [
+        "make",
+        "PYTHON=.venv/bin/python",
+        "validate-project-control"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "aggregate_wrapper",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-031",
+      "invocation_id": "CI-PC-01",
+      "mutating": false,
+      "owner": "github:validate_project_control",
+      "owner_type": "ci",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "project_control",
+      "severity": "blocking",
+      "source_ref": ".github/workflows/project-control-validation.yml:35",
+      "tree_state": "clean_ci_checkout"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "cross_job_same_commit_duplicate",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-007",
+      "invocation_id": "CI-MEM-01",
+      "mutating": false,
+      "owner": "github:validate_memory_read_only",
+      "owner_type": "ci",
+      "related_invocation_id": "MPC-05",
+      "same_state_superset_invocation_id": "",
+      "scope": "memory_and_publication",
+      "severity": "blocking",
+      "source_ref": ".github/workflows/project-control-validation.yml:57",
+      "tree_state": "clean_ci_checkout_separate_job"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-007",
+      "invocation_id": "RUN-01",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "memory_and_publication",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/render_current_frontier.py",
+        "--check"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/render_current_frontier.py",
+        "--check"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-018",
+      "invocation_id": "RUN-02",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "current_frontier",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/validate_compact_current_frontier_v16.py",
+        "--json"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_compact_current_frontier_v16.py",
+        "--json"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-019",
+      "invocation_id": "RUN-03",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "compact_frontier",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/render_dependency_graph.py",
+        "--check"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/render_dependency_graph.py",
+        "--check"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "expensive",
+        "evidence": "P0-T03 exact focused baseline",
+        "seconds": 48.742223
+      },
+      "gate_id": "LVG-020",
+      "invocation_id": "RUN-04",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "dependency_graph",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/validate_task_index.py",
+        "--json"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_task_index.py",
+        "--json"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "low",
+        "evidence": "P0-T03 exact focused baseline",
+        "seconds": 1.107774
+      },
+      "gate_id": "LVG-021",
+      "invocation_id": "RUN-05",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "task_index",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/validate_claim_graph_v1.py",
+        "--json"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_claim_graph_v1.py",
+        "--json"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-022",
+      "invocation_id": "RUN-06",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "claim_graph",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/validate_claim_language.py",
+        "--json",
+        "--changed"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/validate_claim_language.py",
+        "--json",
+        "--changed"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-023",
+      "invocation_id": "RUN-07",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "changed_claim_language",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/validate_documentation_impact.py",
+        "--json"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/validate_documentation_impact.py",
+        "--json"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-004",
+      "invocation_id": "RUN-08",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "documentation_impact",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted",
+        "--json"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted",
+        "--json"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-003",
+      "invocation_id": "RUN-09",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "project_improvement_signals",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/validate_research_control.py"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_research_control.py"
+      ],
+      "condition": "default",
+      "duplicate_class": "direct_same_state_subset",
+      "expected_cost": {
+        "class": "moderate",
+        "evidence": "2026-07-12 overhead audit single run",
+        "seconds": 11.784
+      },
+      "gate_id": "LVG-015",
+      "invocation_id": "RUN-10",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "RUN-11",
+      "scope": "research_control",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/validate_research_control.py",
+        "--check-diff"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_research_control.py",
+        "--check-diff"
+      ],
+      "condition": "default",
+      "duplicate_class": "same_state_superset",
+      "expected_cost": {
+        "class": "moderate",
+        "evidence": "2026-07-12 overhead audit single run",
+        "seconds": 11.604
+      },
+      "gate_id": "LVG-016",
+      "invocation_id": "RUN-11",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "research_control_and_diff",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/extract_route_signatures.py",
+        "--sample",
+        "recent-matter-coupling",
+        "--json"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/extract_route_signatures.py",
+        "--sample",
+        "recent-matter-coupling",
+        "--json"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-024",
+      "invocation_id": "RUN-12",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "route_diagnostic",
+      "severity": "advisory",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/validate_route_orbits.py",
+        "--sample",
+        "recent-matter-rr-e",
+        "--json",
+        "--advisory-only"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_route_orbits.py",
+        "--sample",
+        "recent-matter-rr-e",
+        "--json",
+        "--advisory-only"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-025",
+      "invocation_id": "RUN-13",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "route_diagnostic",
+      "severity": "advisory",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "diff",
+        "--check"
+      ],
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "condition": "default",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-026",
+      "invocation_id": "RUN-14",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "working_diff",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "condition": "--include-smoke-tests",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "expensive",
+        "evidence": "P0-T03 repaired clean-clone suite",
+        "seconds": 515.454875
+      },
+      "gate_id": "LVG-017",
+      "invocation_id": "RUN-15",
+      "mutating": false,
+      "owner": "local_runner",
+      "owner_type": "local_runner",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "repository",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/run_full_research_control_validation.py:42-152",
+      "tree_state": "working_tree"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+      ],
+      "condition": "one_to_three_bounded_sync_passes",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-006",
+      "invocation_id": "CHK-01",
+      "mutating": true,
+      "owner": "checkpoint",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "memory_sync",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:400-403",
+      "tree_state": "working_tree_then_staged"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/build_pdf_derivatives.py",
+        "<targets>"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/build_pdf_derivatives.py",
+        "<targets>"
+      ],
+      "condition": "changed registered TeX has pdf_required=true",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-027",
+      "invocation_id": "CHK-02",
+      "mutating": true,
+      "owner": "checkpoint",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "changed_required_pdf_derivatives",
+      "severity": "conditional",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:413-417",
+      "tree_state": "working_tree_then_staged"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+      ],
+      "condition": "targeted PDF build ran",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-006",
+      "invocation_id": "CHK-03",
+      "mutating": true,
+      "owner": "checkpoint",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "post_pdf_memory_sync",
+      "severity": "conditional",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:421-424",
+      "tree_state": "working_tree_then_staged"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/classify_project_changes.py",
+        "--json"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/classify_project_changes.py",
+        "--json"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-001",
+      "invocation_id": "CHK-W01",
+      "mutating": false,
+      "owner": "checkpoint:post_sync",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "project_control",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:299-325",
+      "tree_state": "working_files_index_synchronized"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/validate_claim_language.py",
+        "--json",
+        "--changed"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/validate_claim_language.py",
+        "--json",
+        "--changed"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-023",
+      "invocation_id": "CHK-W02",
+      "mutating": false,
+      "owner": "checkpoint:post_sync",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "changed_claim_language",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:299-325",
+      "tree_state": "working_files_index_synchronized"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-003",
+      "invocation_id": "CHK-W03",
+      "mutating": false,
+      "owner": "checkpoint:post_sync",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "project_improvement_signals",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:299-325",
+      "tree_state": "working_files_index_synchronized"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/validate_documentation_impact.py"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/validate_documentation_impact.py"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-004",
+      "invocation_id": "CHK-W04",
+      "mutating": false,
+      "owner": "checkpoint:post_sync",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "documentation_impact",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:299-325",
+      "tree_state": "working_files_index_synchronized"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "unique",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-007",
+      "invocation_id": "CHK-W05",
+      "mutating": false,
+      "owner": "checkpoint:post_sync",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "memory_and_publication",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:299-325",
+      "tree_state": "working_files_index_synchronized"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/validate_research_control.py"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_research_control.py"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "direct_same_state_subset",
+      "expected_cost": {
+        "class": "moderate",
+        "evidence": "2026-07-12 overhead audit single run",
+        "seconds": 11.784
+      },
+      "gate_id": "LVG-015",
+      "invocation_id": "CHK-W06",
+      "mutating": false,
+      "owner": "checkpoint:post_sync",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "CHK-W07",
+      "scope": "research_control",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:299-325",
+      "tree_state": "working_files_index_synchronized"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/validate_research_control.py",
+        "--check-diff"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_research_control.py",
+        "--check-diff"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "same_state_superset",
+      "expected_cost": {
+        "class": "moderate",
+        "evidence": "2026-07-12 overhead audit single run",
+        "seconds": 11.604
+      },
+      "gate_id": "LVG-016",
+      "invocation_id": "CHK-W07",
+      "mutating": false,
+      "owner": "checkpoint:post_sync",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "",
+      "same_state_superset_invocation_id": "",
+      "scope": "research_control_and_diff",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:299-325",
+      "tree_state": "working_files_index_synchronized"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/classify_project_changes.py",
+        "--staged",
+        "--json"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/classify_project_changes.py",
+        "--staged",
+        "--json"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "legitimate_cross_scope_repeat",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-001",
+      "invocation_id": "CHK-S01",
+      "mutating": false,
+      "owner": "checkpoint:final",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "CHK-W01",
+      "same_state_superset_invocation_id": "",
+      "scope": "project_control",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:517-587",
+      "tree_state": "staged_index"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/validate_claim_language.py",
+        "--json",
+        "--staged"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/validate_claim_language.py",
+        "--json",
+        "--staged"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "legitimate_cross_scope_repeat",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-023",
+      "invocation_id": "CHK-S02",
+      "mutating": false,
+      "owner": "checkpoint:final",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "CHK-W02",
+      "same_state_superset_invocation_id": "",
+      "scope": "changed_claim_language",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:517-587",
+      "tree_state": "staged_index"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/collect_project_improvement_signals.py",
+        "--validate-emitted"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "legitimate_cross_scope_repeat",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-003",
+      "invocation_id": "CHK-S03",
+      "mutating": false,
+      "owner": "checkpoint:final",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "CHK-W03",
+      "same_state_superset_invocation_id": "",
+      "scope": "project_improvement_signals",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:517-587",
+      "tree_state": "working_files_index_synchronized"
+    },
+    {
+      "arguments": [
+        "scripts/project_control/validate_documentation_impact.py",
+        "--staged"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/project_control/validate_documentation_impact.py",
+        "--staged"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "legitimate_cross_scope_repeat",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-004",
+      "invocation_id": "CHK-S04",
+      "mutating": false,
+      "owner": "checkpoint:final",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "CHK-W04",
+      "same_state_superset_invocation_id": "",
+      "scope": "documentation_impact",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:517-587",
+      "tree_state": "staged_index"
+    },
+    {
+      "arguments": [
+        "scripts/research_control/validate_research_control.py",
+        "--check-diff",
+        "--staged-only"
+      ],
+      "command": [
+        ".venv/bin/python",
+        "scripts/research_control/validate_research_control.py",
+        "--check-diff",
+        "--staged-only"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "legitimate_cross_scope_repeat",
+      "expected_cost": {
+        "class": "moderate",
+        "evidence": "2026-07-12 overhead audit single run",
+        "seconds": 11.604
+      },
+      "gate_id": "LVG-016",
+      "invocation_id": "CHK-S05",
+      "mutating": false,
+      "owner": "checkpoint:final",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "CHK-W07",
+      "same_state_superset_invocation_id": "",
+      "scope": "research_control_and_diff",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:517-587",
+      "tree_state": "staged_index"
+    },
+    {
+      "arguments": [
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "command": [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only"
+      ],
+      "condition": "always_when_owner_runs",
+      "duplicate_class": "legitimate_cross_scope_repeat",
+      "expected_cost": {
+        "class": "unmeasured",
+        "evidence": "not isolated by P0-T03",
+        "seconds": null
+      },
+      "gate_id": "LVG-007",
+      "invocation_id": "CHK-S06",
+      "mutating": false,
+      "owner": "checkpoint:final",
+      "owner_type": "checkpoint",
+      "related_invocation_id": "CHK-W05",
+      "same_state_superset_invocation_id": "",
+      "scope": "memory_and_publication",
+      "severity": "blocking",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py:517-587",
+      "tree_state": "working_files_index_synchronized"
+    }
+  ],
+  "job_id": "AJ-RT-20260712-004-001",
+  "migration_epoch": "legacy",
+  "out_of_scope_commands": [
+    {
+      "command_family": "test -x $(PYTHON)",
+      "reason": "environment precondition, not validation evidence",
+      "source_ref": "Makefile:6,15,28,34"
+    },
+    {
+      "command_family": "python -m pip install -r requirements.txt",
+      "reason": "dependency provisioning, not validation evidence",
+      "source_ref": "Makefile:7"
+    },
+    {
+      "command_family": "venv creation and pip installation",
+      "reason": "CI environment provisioning, not validation evidence",
+      "source_ref": ".github/workflows/project-control-validation.yml:20-32,42-54"
+    },
+    {
+      "command_family": "git status/ls-files/add/write-tree/read-tree/diff --quiet/commit/rev-parse",
+      "reason": "transaction staging, rollback, residue, and commit mechanics; retained operationally but not counted as validation gates",
+      "source_ref": "scripts/research_control/checkpoint_research_transaction.py"
+    },
+    {
+      "command_family": "documented command blocks",
+      "reason": "compiled into obligations; declarations are not duplicate execution evidence",
+      "source_ref": ".codex/skills/*/SKILL.md"
+    },
+    {
+      "command_family": "embedded git check-ignore and ls-files calls",
+      "reason": "internal implementation operations represented by the parent memory gate",
+      "source_ref": ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    }
+  ],
+  "p5_manifest_seed": {
+    "deferred_contracts": "Canonical gate IDs, evidence identity, supersedence, planner profiles, and cache keys remain assigned to later v19 tasks.",
+    "stable_fields": [
+      "gate_id",
+      "implementation",
+      "authority",
+      "mutating",
+      "condition",
+      "nested_gate_ids"
+    ],
+    "suitable": true
+  },
+  "plan_task_id": "P0-T04",
+  "role_obligation_label_counts": {
+    "bootstrap_memory_system": 2,
+    "check_diff": 1,
+    "claim_boundary_phrase_scan": 7,
+    "scripts/validate_publication_process.py --root .": 1,
+    "unittest": 3,
+    "validate_documentation_impact": 5,
+    "validate_research_control": 13
+  },
+  "role_obligations": [
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "director-of-research@0.3.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "director-of-research@0.3.0",
+      "obligation_label": "claim_boundary_phrase_scan",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "process-integrity-auditor@0.1.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "process-integrity-auditor@0.1.0",
+      "obligation_label": "check_diff",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-016"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "ontology-formalizer@0.2.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "ontology-formalizer@0.2.0",
+      "obligation_label": "claim_boundary_phrase_scan",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "candidate-constructor@0.2.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "candidate-constructor@0.2.0",
+      "obligation_label": "claim_boundary_phrase_scan",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "refuter@0.2.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "refuter@0.2.0",
+      "obligation_label": "claim_boundary_phrase_scan",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "smuggling-auditor@0.2.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "smuggling-auditor@0.2.0",
+      "obligation_label": "claim_boundary_phrase_scan",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "theoretical-continuation-selector@0.1.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "theoretical-continuation-selector@0.1.0",
+      "obligation_label": "claim_boundary_phrase_scan",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "project-control-maintainer@0.2.0",
+      "obligation_label": "validate_documentation_impact",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-004"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "project-control-maintainer@0.2.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "project-control-maintainer@0.2.0",
+      "obligation_label": "unittest",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-017"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "project-system-director@0.2.0",
+      "obligation_label": "validate_documentation_impact",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-004"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "project-system-director@0.2.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "validator-engineer@0.2.0",
+      "obligation_label": "validate_documentation_impact",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-004"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "validator-engineer@0.2.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "validator-engineer@0.2.0",
+      "obligation_label": "unittest",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-017"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "memory-system-maintainer@0.2.0",
+      "obligation_label": "bootstrap_memory_system",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-006"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "memory-system-maintainer@0.2.0",
+      "obligation_label": "validate_documentation_impact",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-004"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "memory-system-maintainer@0.2.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "memory-system-maintainer@0.2.0",
+      "obligation_label": "unittest",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-017"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "documentation-curator@2.0.0",
+      "obligation_label": "bootstrap_memory_system",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-006"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "documentation-curator@2.0.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "documentation-curator@2.0.0",
+      "obligation_label": "validate_documentation_impact",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-004"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "documentation-curator@2.0.0",
+      "obligation_label": "scripts/validate_publication_process.py --root .",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-014"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "external-red-team-reviewer@0.1.0",
+      "obligation_label": "validate_research_control",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    },
+    {
+      "classification": "obligation_not_independent_evidence",
+      "declarer": "external-red-team-reviewer@0.1.0",
+      "obligation_label": "claim_boundary_phrase_scan",
+      "required_scope": "transaction_applicable_scope",
+      "satisfying_gate_ids": [
+        "LVG-015"
+      ],
+      "source_ref": "registries/AGENT_ROLE_REGISTRY.csv"
+    }
+  ],
+  "schema_id": "v19_legacy_validation_invocation_graph_v1",
+  "skill_obligations": [
+    {
+      "condition": "before Director routing",
+      "declarer": "continue-research",
+      "obligation": "refresh memory preflight, record status, perform one targeted lookup or search, and resolve tracked context before routing",
+      "satisfying_gate_ids": [
+        "LVG-028",
+        "LVG-010",
+        "LVG-011",
+        "LVG-012",
+        "LVG-029"
+      ],
+      "source_ref": ".codex/skills/continue-research/SKILL.md:22-60"
+    },
+    {
+      "condition": "state-changing transaction",
+      "declarer": "continue-research",
+      "obligation": "synchronize derivatives, validate memory/docs/research-control/diff, then checkpoint a valid nonempty transaction",
+      "satisfying_gate_ids": [
+        "LVG-006",
+        "LVG-007",
+        "LVG-004",
+        "LVG-015",
+        "LVG-016",
+        "LVG-030"
+      ],
+      "source_ref": ".codex/skills/continue-research/SKILL.md:243-266"
+    },
+    {
+      "condition": "before project-system routing",
+      "declarer": "improve-project-system",
+      "obligation": "status plus targeted memory query, classification, advisory resolution, and signal parity",
+      "satisfying_gate_ids": [
+        "LVG-010",
+        "LVG-011",
+        "LVG-012",
+        "LVG-001",
+        "LVG-002",
+        "LVG-003"
+      ],
+      "source_ref": ".codex/skills/improve-project-system/SKILL.md:39-88"
+    },
+    {
+      "condition": "state-changing project-system transaction",
+      "declarer": "improve-project-system",
+      "obligation": "bootstrap, validate memory, signals, documentation impact, research-control core and diff before checkpoint",
+      "satisfying_gate_ids": [
+        "LVG-006",
+        "LVG-007",
+        "LVG-003",
+        "LVG-004",
+        "LVG-015",
+        "LVG-016",
+        "LVG-030"
+      ],
+      "source_ref": ".codex/skills/improve-project-system/SKILL.md:147-158"
+    },
+    {
+      "condition": "accepted human-edit integration",
+      "declarer": "user-modified-project",
+      "obligation": "classify and resolve intake, then bootstrap and validate memory/docs/research-control/diff before checkpoint",
+      "satisfying_gate_ids": [
+        "LVG-001",
+        "LVG-002",
+        "LVG-006",
+        "LVG-007",
+        "LVG-004",
+        "LVG-015",
+        "LVG-016",
+        "LVG-030"
+      ],
+      "source_ref": ".codex/skills/user-modified-project/SKILL.md:37-80"
+    },
+    {
+      "condition": "mode alternatives, not cumulative gates",
+      "declarer": "project-memory-system",
+      "obligation": "select one scope-correct mutating or read-only memory/publication mode; local cleanup is not validation evidence",
+      "satisfying_gate_ids": [
+        "LVG-006",
+        "LVG-007",
+        "LVG-014"
+      ],
+      "source_ref": ".codex/skills/project-memory-system/SKILL.md:22-56"
+    }
+  ],
+  "source_fingerprints": [
+    {
+      "path": "Makefile",
+      "sha256": "6977e1e9fc4c3153f2193a35b10408f8d3d00b7e750d6d249a26c72ddbb6f885"
+    },
+    {
+      "path": ".github/workflows/project-control-validation.yml",
+      "sha256": "1d27b57c0eb2f2e4effc422470a7bae90d592ef78efb6b1d78e2c2c223346af4"
+    },
+    {
+      "path": ".codex/skills/continue-research/SKILL.md",
+      "sha256": "03110e3db4f972f74ee6bd8b5c7078047aca1f20f1c27e49c6caaf23e36e3730"
+    },
+    {
+      "path": ".codex/skills/improve-project-system/SKILL.md",
+      "sha256": "6ca061bcd3cec19db413aefaa3079c2dfd27e844ddde798b648eed1c576ece02"
+    },
+    {
+      "path": ".codex/skills/user-modified-project/SKILL.md",
+      "sha256": "06bb784131c763b0338399f7c65008c5a52f8b6612553842ce639dd9980bafe1"
+    },
+    {
+      "path": ".codex/skills/project-memory-system/SKILL.md",
+      "sha256": "b19407e6193123fb5a3274425b59d49eca5f91af25211eff4972991c2814583e"
+    },
+    {
+      "path": "registries/AGENT_ROLE_REGISTRY.csv",
+      "sha256": "a0b3e3a4ab41f29c1c755f9229603705134be2985c122d3f88545fecedf966f6"
+    },
+    {
+      "path": "scripts/research_control/run_full_research_control_validation.py",
+      "sha256": "58021c75b29dd001e24f7ac27e564c3dc77f26da9bbf55f7039900d83a38afc3"
+    },
+    {
+      "path": "scripts/research_control/checkpoint_research_transaction.py",
+      "sha256": "4f9bb5625e7600d2bfc3aad3c6d6685ea185da33c10558a04c89efdbff15935d"
+    },
+    {
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v19.md",
+      "sha256": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    },
+    {
+      "path": "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json",
+      "sha256": "b3d18259efad879101d6dab2c6e4c62b7f19ffa6826527a53b472dd653d34bac"
+    },
+    {
+      "path": "research_control/tasks/RT-20260712-003/jobs/completions/AJC-AJ-RT-20260712-003-001.yaml",
+      "sha256": "b53cb63415cb886c9f01f3d43d9ad57e3a22d1fedf513330b6449cb4c4795ece"
+    },
+    {
+      "path": "reviews/verification_validation_testing_overhead_audit_2026-07-12.md",
+      "sha256": "97b5bb5fb1a951b90924c512c53a6caed36082c3faa516f48b35c892f2437d25"
+    }
+  ],
+  "status": "PASS",
+  "task_id": "RT-20260712-004",
+  "unresolved_invocations": []
+}

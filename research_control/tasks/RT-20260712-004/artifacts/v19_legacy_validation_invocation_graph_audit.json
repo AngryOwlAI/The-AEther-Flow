@@ -1,0 +1,147 @@
+{
+  "checks": {
+    "distance_to_gr_changed": false,
+    "gate_ids_unique": true,
+    "invocation_gate_links_complete": true,
+    "nested_memory_and_publication_visible": true,
+    "non_validation_commands_explained": true,
+    "p5_seed_fields_present": true,
+    "role_obligations_mapped": true,
+    "same_state_supersets_explicit": true,
+    "scientific_claims_changed": false,
+    "skill_obligations_mapped": true,
+    "source_hashes_current": true,
+    "working_and_staged_scopes_distinct": true
+  },
+  "counts": {
+    "concrete_invocations": 53,
+    "direct_same_state_subset_pairs": 3,
+    "drift_findings": 8,
+    "duplicate_classes": {
+      "aggregate_wrapper": 1,
+      "cross_job_same_commit_duplicate": 1,
+      "direct_same_state_subset": 3,
+      "legitimate_cross_entrypoint_repeat": 1,
+      "legitimate_cross_scope_repeat": 6,
+      "nested_direct_duplicate": 2,
+      "nested_direct_overlap": 2,
+      "same_state_superset": 3,
+      "unique": 34
+    },
+    "legitimate_cross_scope_repetitions": 6,
+    "owners": {
+      "checkpoint": 16,
+      "ci": 2,
+      "local_runner": 15,
+      "make": 20
+    },
+    "provisional_gates": 37,
+    "role_obligations": 32,
+    "scopes": {
+      "changed_claim_language": 3,
+      "changed_required_pdf_derivatives": 1,
+      "claim_graph": 1,
+      "compact_frontier": 1,
+      "current_frontier": 1,
+      "dependency_graph": 1,
+      "documentation_impact": 3,
+      "documentation_including_local": 1,
+      "local_retrieval": 2,
+      "memory_and_publication": 7,
+      "memory_health": 1,
+      "memory_retrieval_smoke": 1,
+      "memory_sync": 1,
+      "post_pdf_memory_sync": 1,
+      "project_control": 6,
+      "project_improvement_signals": 3,
+      "publication": 2,
+      "registered_specs": 2,
+      "repository": 3,
+      "research_control": 3,
+      "research_control_and_diff": 4,
+      "route_diagnostic": 2,
+      "task_index": 1,
+      "tracked_documentation": 1,
+      "working_diff": 1
+    },
+    "severities": {
+      "advisory": 2,
+      "blocking": 45,
+      "conditional": 2,
+      "diagnostic": 2,
+      "local_only": 2
+    },
+    "skill_obligations": 6,
+    "source_fingerprints": 13,
+    "unresolved": 0
+  },
+  "errors": [],
+  "generated_at": "2026-07-12T22:11:26Z",
+  "graph_path": "research_control/design/v19_legacy_validation_invocation_graph.json",
+  "graph_sha256": "afa67c7fe7b31a8ae226020d5f5c125cad4a0f42842211d1a87e0f391916b85e",
+  "job_id": "AJ-RT-20260712-004-001",
+  "markdown_path": "research_control/design/v19_legacy_validation_invocation_graph.md",
+  "markdown_sha256": "0a447cc473e137eb0892357a8634d1d850e5b7410df37e597c00d115ba47ec3b",
+  "next_route": "P0-T05",
+  "no_physics_authority": true,
+  "ordinary_research_handoff_preserved": "handoff-0740",
+  "plan_task_id": "P0-T04",
+  "schema_id": "v19_legacy_validation_invocation_graph_audit_v1",
+  "source_fingerprint_count": 13,
+  "source_fingerprints": [
+    {
+      "path": "Makefile",
+      "sha256": "6977e1e9fc4c3153f2193a35b10408f8d3d00b7e750d6d249a26c72ddbb6f885"
+    },
+    {
+      "path": ".github/workflows/project-control-validation.yml",
+      "sha256": "1d27b57c0eb2f2e4effc422470a7bae90d592ef78efb6b1d78e2c2c223346af4"
+    },
+    {
+      "path": ".codex/skills/continue-research/SKILL.md",
+      "sha256": "03110e3db4f972f74ee6bd8b5c7078047aca1f20f1c27e49c6caaf23e36e3730"
+    },
+    {
+      "path": ".codex/skills/improve-project-system/SKILL.md",
+      "sha256": "6ca061bcd3cec19db413aefaa3079c2dfd27e844ddde798b648eed1c576ece02"
+    },
+    {
+      "path": ".codex/skills/user-modified-project/SKILL.md",
+      "sha256": "06bb784131c763b0338399f7c65008c5a52f8b6612553842ce639dd9980bafe1"
+    },
+    {
+      "path": ".codex/skills/project-memory-system/SKILL.md",
+      "sha256": "b19407e6193123fb5a3274425b59d49eca5f91af25211eff4972991c2814583e"
+    },
+    {
+      "path": "registries/AGENT_ROLE_REGISTRY.csv",
+      "sha256": "a0b3e3a4ab41f29c1c755f9229603705134be2985c122d3f88545fecedf966f6"
+    },
+    {
+      "path": "scripts/research_control/run_full_research_control_validation.py",
+      "sha256": "58021c75b29dd001e24f7ac27e564c3dc77f26da9bbf55f7039900d83a38afc3"
+    },
+    {
+      "path": "scripts/research_control/checkpoint_research_transaction.py",
+      "sha256": "4f9bb5625e7600d2bfc3aad3c6d6685ea185da33c10558a04c89efdbff15935d"
+    },
+    {
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v19.md",
+      "sha256": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    },
+    {
+      "path": "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json",
+      "sha256": "b3d18259efad879101d6dab2c6e4c62b7f19ffa6826527a53b472dd653d34bac"
+    },
+    {
+      "path": "research_control/tasks/RT-20260712-003/jobs/completions/AJC-AJ-RT-20260712-003-001.yaml",
+      "sha256": "b53cb63415cb886c9f01f3d43d9ad57e3a22d1fedf513330b6449cb4c4795ece"
+    },
+    {
+      "path": "reviews/verification_validation_testing_overhead_audit_2026-07-12.md",
+      "sha256": "97b5bb5fb1a951b90924c512c53a6caed36082c3faa516f48b35c892f2437d25"
+    }
+  ],
+  "status": "PASS",
+  "task_id": "RT-20260712-004"
+}

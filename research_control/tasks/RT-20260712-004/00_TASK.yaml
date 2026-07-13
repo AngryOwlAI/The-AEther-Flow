@@ -1,0 +1,45 @@
+task_id: "RT-20260712-004"
+task_type: "legacy_validation_invocation_graph"
+status: "completed"
+created_at: "2026-07-12T22:11:26Z"
+updated_at: "2026-07-12T22:11:26Z"
+closed_at: "2026-07-12T22:11:26Z"
+parent_task_id: "RT-20260712-003"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260712-004"
+current_job_id: "AJ-RT-20260712-004-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260712-004"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested dependency-ready P0-T04 after the P0-T03 PASS completion; the plan requires no human gate."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T04"
+  plan_task_name: "Build the legacy validation invocation and obligation graph"
+  recommendation_ids:
+    - "V19-R01"
+    - "V19-R27"
+    - "V19-R38"
+    - "V19-R39"
+    - "V19-R43"
+objective: "Map current legacy validation implementations invocations obligations nested calls duplicate classes and owner drift without changing validator orchestration or physics authority."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validation inventory only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p0_t04_legacy_invocation_graph_complete_no_physics_delta"
+claim_boundary_id: "CB-V19-P0-T04-LEGACY-INVOCATION-GRAPH-001"
+claim_boundary:
+  allowed_scope: "Inventory P0-T04 legacy validation implementations invocations obligations nesting duplication scope and owner drift only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifact: "research_control/design/v19_legacy_validation_invocation_graph.json"
+next_recommended_action: "Run exactly one bounded v19 P0-T05 safety runtime CI and output budget-freeze packet."
+documentation_impact_id: "DI-RT-20260712-004-001"
+notes: "P0-T04 inventories legacy behavior only and preserves Make CI skills roles local runner checkpoint production scripts tests handoff-0740 and program_state.yaml unchanged."
