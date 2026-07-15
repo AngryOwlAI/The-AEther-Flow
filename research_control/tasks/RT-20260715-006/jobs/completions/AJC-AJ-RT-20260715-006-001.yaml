@@ -1,0 +1,244 @@
+job_id: "AJ-RT-20260715-006-001"
+completion_id: "AJC-AJ-RT-20260715-006-001"
+task_id: "RT-20260715-006"
+decision_id: "DDR-20260715-006"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260715-006"
+status: "completed"
+created_at: "2026-07-15T17:24:36Z"
+started_at: "2026-07-15T17:24:36Z"
+completed_at: "2026-07-15T17:40:42Z"
+objective: "Close the first direct-consolidation wave only after proving failure-mode parity invocation-count reduction measured single-run savings and rollback readiness without changing production validation behavior."
+completion_summary: "Audited the first direct-consolidation wave with one fresh 11-fixture adversarial report one exact clean same-tree legacy-versus-consolidated pair a 196-test focused suite a 613-test repository suite and a 12-gate aggregate PASS while preserving final staged acceptance rollback references ordinary research routing and physics authority."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/v19_validation_performance_and_safety_budget.md"
+  - "research_control/design/v19_legacy_validation_invocation_graph.json"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_gate_id_catalog_v1.md"
+  - "research_control/design/validation_supersedence_contracts_v1.yaml"
+  - "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+  - "research_control/design/validation_obligation_resolution_policy_v1.md"
+  - "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json"
+  - "research_control/tasks/RT-20260713-002/artifacts/legacy_consolidated_equivalence_report.json"
+  - "research_control/tasks/RT-20260715-002/artifacts/make_superset_consolidation_report.json"
+  - "research_control/tasks/RT-20260715-003/artifacts/runner_checkpoint_superset_consolidation_report.json"
+  - "research_control/tasks/RT-20260715-004/artifacts/claim_gate_supersedence_report.json"
+  - "research_control/tasks/RT-20260715-005/artifacts/validation_obligation_update_audit.json"
+  - "Makefile"
+  - ".github/workflows/project-control-validation.yml"
+  - "scripts/project_control/validate_claim_language.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - "tests/test_validate_claim_language.py"
+  - "tests/test_validation_equivalence.py"
+  - "tests/test_validation_orchestration.py"
+  - "tests/test_run_full_research_control_validation.py"
+  - "tests/test_research_control.py"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P2-T05"
+  recommendation_ids:
+    - "V19-R03"
+    - "V19-R04"
+    - "V19-R43"
+    - "V19-R45"
+    - "V19-R48"
+  migration_epoch: "legacy_consolidated"
+  implemented_task_scope: "One task-local first-wave equivalence measured-savings and rollback-readiness audit with no production-source mutation."
+  completed_v19_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+  downstream_tasks_not_implemented:
+    - "P3-T01 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p2_t05_first_wave_equivalence_audit"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P2-T05"
+  coverage_summary: "V19-R03 V19-R04 V19-R43 V19-R45 and V19-R48 receive direct parity invocation-count measurement rollback and retained-evidence audit coverage."
+physics_progress_status:
+  status: "project_system_validation_audit_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P2-T05 audits validation orchestration and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Validation equivalence savings and rollback readiness are operational evidence only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+first_wave_audit:
+  status: "PASS"
+  markdown_path: "research_control/tasks/RT-20260715-006/artifacts/v19_first_wave_equivalence_audit.md"
+  markdown_sha256: "76dcdad9d1c9ec9fc113d646d3668f517cb2c2be444845ef1b03ae9daad2a338"
+  json_path: "research_control/tasks/RT-20260715-006/artifacts/v19_first_wave_equivalence_audit.json"
+  json_sha256: "ca21e4df3eec769eb6f3aafce4882b8d3692b01ecfb51ba54e2d65d74847230e"
+  adversarial_fixture_count: 11
+  semantic_mismatch_fixture_count: 0
+  hard_finding_disappearance_count: 0
+  warning_finding_disappearance_count: 0
+  taxonomy_class_count: 42
+  identity_difference_fields_tested_fail_closed: 14
+  focused_test_count: 196
+  full_repository_test_count: 613
+  aggregate_required_gate_count: 12
+  aggregate_required_failure_count: 0
+  surface_specific_duplicate_reduction_sum: 6
+  current_clean_saved_subprocess_count: 1
+  current_clean_saved_duration_seconds: 13.10
+  current_clean_saved_output_bytes: 19286
+  full_suite_comparable_to_frozen_baseline: false
+  runtime_hard_guard_activated: false
+  working_scope_satisfies_staged_scope: false
+  final_staged_diff_removed: false
+  rollback_ready: true
+  production_source_changed: false
+output_paths:
+  - "research_control/tasks/RT-20260715-006/artifacts/v19_first_wave_equivalence_audit.md"
+  - "research_control/tasks/RT-20260715-006/artifacts/v19_first_wave_equivalence_audit.json"
+  - "research_control/tasks/RT-20260715-006/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260715-006/jobs/completions/AJC-AJ-RT-20260715-006-001.yaml"
+command_results:
+  - ".venv/bin/python -m unittest tests/test_validate_claim_language.py tests/test_validation_equivalence.py tests/test_validation_orchestration.py tests/test_run_full_research_control_validation.py tests/test_research_control.py | exit_code=0 | 196 focused first-wave tests PASS in 68.24 seconds"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | 613 repository tests PASS in 617.50 seconds"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json | exit_code=0 | 12 required gates PASS in 71.15 seconds with zero claim findings"
+  - ".venv/bin/python tests.test_validation_equivalence.build_report probe | exit_code=0 | 11 fixtures PASS with zero hard or warning disappearance"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json | exit_code=0 | current clean core PASS 13.10 seconds 19286 output bytes"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json | exit_code=0 | current clean diff PASS 13.26 seconds 19286 output bytes and identical normalized output hash"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --plan-only --json | exit_code=0 | current local-runner plan has 12 commands"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write | exit_code=0 | 902 rows written and CSV Markdown and wiki task-index artifacts fresh"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py with tracked output paths | exit_code=0 | JSON Markdown and DOT artifacts written"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | tracked derivative synchronization PASS with local retrieval warnings only"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | core validation PASS with local retrieval warnings only"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS with no unregistered emitted signal"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS against 30 live changed paths and five exact classifier reason codes"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json | exit_code=0 | PASS with zero structural errors zero hard claim findings and 1476 historical or calibration findings"
+  - "git diff --check | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260715-006-001 | exit_code=1 | first attempt correctly blocked before staging because checkpoint synchronization added FOLDER_MAP.md not yet declared in documentation impact"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P2-T04 PASS checkpoint dependency clean worktree registered role exact plan task and no competing project-improvement signal were verified before the first audit execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The current clean results were identical and the 11-fixture adversarial report preserved every hard warning taxonomy and authority field."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The integrated post-write research-control diff passed with zero structural errors and zero hard claim findings."
+      - "The audit changes only task-local reports control records registries and generated derivatives; no production source is authorized."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "The governed checkpoint has not yet executed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The task index contains 902 rows and CSV Markdown wiki plus dependency-graph JSON Markdown and DOT artifacts were regenerated."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only passed; warnings were limited to ignored local Obsidian and SQLite retrieval freshness."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The live pre-write aggregate reported zero changed-claim findings and the integrated post-write diff reported zero hard findings plus 1476 historical or calibration findings."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260715-006/documentation_impact.yaml"
+  source_documentation_updated: false
+  no_op_rationale: "The canonical plan and registered v19 policies already define this audit contract; the task-local reports are the durable evidence and no production behavior changed."
+project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 task records project-system validation equivalence single-run savings invocation-count and rollback evidence only. It does not authorize planner cache compact-output or CI cutover legacy retirement canonical ontology edit source-law adoption general EqSrc discharge matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation or any validation test receipt checkpoint commit registry generated artifact or timing measurement as physics proof."
+verdict: "v19_p2_t05_first_wave_equivalence_pass_p3_t01_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P2-T05 preserves all audited hard and warning findings removes only six surface-specific eligible duplicate invocations retains distinct final staged acceptance and rollback references records one matched direct saving without statistical overclaim and changes no production or physics authority."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P3-T01 Memory-System Maintainer write-only memory synchronization extraction AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 807
+    relationship_row_count: 4021
+    semantic_row_count: 807
+    vault_row_count: 807
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P2-T05 first-wave equivalence measured savings --limit 10 --json"
+      query_type: "search"
+      query_text: "P2-T05 first-wave equivalence measured savings"
+      returned_object_ids:
+        - ""
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/v19_validation_performance_and_safety_budget.md"
+      source_hash: "fa3adf5e143c8d936ef0e7fd6386af9b3ce74873d1985299eb95302166b3a53a"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ORCHESTRATION-MIGRATION-AND-ROLLBACK-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+      source_hash: "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_obligation_resolution_policy_v1.md"
+      source_hash: "baea9d8b4b67c4c8bceb73da34dfbc562fe285c087992198295a177058c4cfc2"
+    - object_id: "MD-ROLE-AGENTS-ROLES-RESEARCH-OPS-PROCESS-INTEGRITY-AUDITOR-V0-1-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+      source_hash: "5e54f60d6a3064006e0a6ec73719475f191f21c975b9b2292498abb1dcc83db4"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation diagnostics and raw receipt storage only and are not authority; the registered plan policies role contract dependency completions implementation sources tests and registries were inspected directly."

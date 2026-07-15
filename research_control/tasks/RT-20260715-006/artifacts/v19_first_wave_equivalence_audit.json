@@ -1,0 +1,242 @@
+{
+  "schema_id": "v19_first_wave_equivalence_audit_v1",
+  "task_id": "RT-20260715-006",
+  "job_id": "AJ-RT-20260715-006-001",
+  "plan_task_id": "P2-T05",
+  "generated_at": "2026-07-15T17:40:42Z",
+  "status": "PASS",
+  "migration_epoch": "legacy_consolidated",
+  "entry_repository_state": {
+    "head_commit": "f6c0aa6236d69e3475e995757ea96464f3d6e793",
+    "tree_hash": "b0a66d912f87505765421b3fd93ecc9e9fec5b8f",
+    "branch": "main",
+    "origin_relation": "ahead 4",
+    "worktree_clean": true
+  },
+  "environment": {
+    "machine_model": "Mac15,14",
+    "chip": "Apple M3 Ultra",
+    "memory_gb": 96,
+    "platform": "macOS 26.5.2 Darwin arm64",
+    "python_version": "3.12.13",
+    "requirements_sha256": "7bc3bca027f6d2be2fcb2ca0e3d9568a09c07a6d0d30b774073501da06ced98f",
+    "cache_state": "warm dependency environment; OS and filesystem caches not cleared",
+    "instrumentation": "external /usr/bin/time and raw output byte counts; no internal full-suite subprocess instrumentation"
+  },
+  "source_reports": [
+    {
+      "plan_task_id": "P1-T03",
+      "path": "research_control/tasks/RT-20260713-002/artifacts/legacy_consolidated_equivalence_report.json",
+      "sha256": "6da0da2d76d16f590cc34119d02038d4f090af833f5aad1eb16664750eaa3512",
+      "status": "PASS"
+    },
+    {
+      "plan_task_id": "P2-T01",
+      "path": "research_control/tasks/RT-20260715-002/artifacts/make_superset_consolidation_report.json",
+      "sha256": "3218826dfa1fc8c239f51a470c971cc5b03c927dc1da2ab25aa60c5686648496",
+      "status": "PASS"
+    },
+    {
+      "plan_task_id": "P2-T02",
+      "path": "research_control/tasks/RT-20260715-003/artifacts/runner_checkpoint_superset_consolidation_report.json",
+      "sha256": "2429a8979f66465ac9620c78d698fe07a50a4f9b878aa218dcdffa76fd9dba9e",
+      "status": "PASS"
+    },
+    {
+      "plan_task_id": "P2-T03",
+      "path": "research_control/tasks/RT-20260715-004/artifacts/claim_gate_supersedence_report.json",
+      "sha256": "c4916d218ca9bafaf7d84924ade456f1de012be010e31b6444ff7325aff70dbc",
+      "status": "PASS"
+    },
+    {
+      "plan_task_id": "P2-T04",
+      "path": "research_control/tasks/RT-20260715-005/artifacts/validation_obligation_update_audit.json",
+      "sha256": "359ebc8f05081c519a01e6fd5da7f6796ffe0a9b499715b1472ffdb68d92c67d",
+      "status": "PASS"
+    }
+  ],
+  "clean_shadow_comparison": {
+    "scope": "exact same clean commit tree environment configuration and JSON rendering",
+    "legacy_gate_ids": [
+      "research_control_core",
+      "research_control_diff"
+    ],
+    "consolidated_executed_gate_ids": [
+      "research_control_diff"
+    ],
+    "legacy_plain_core": {
+      "status": "PASS",
+      "duration_seconds": 13.10,
+      "output_bytes": 19286,
+      "error_count": 0,
+      "warning_count": 123,
+      "finding_count": 0,
+      "stdout_sha256": "a034fd1d0393d54cb1c0301b6bc22ba11d93e1ac64714beabc46a50541493c67"
+    },
+    "consolidated_diff": {
+      "status": "PASS",
+      "duration_seconds": 13.26,
+      "output_bytes": 19286,
+      "error_count": 0,
+      "warning_count": 123,
+      "finding_count": 0,
+      "stdout_sha256": "a034fd1d0393d54cb1c0301b6bc22ba11d93e1ac64714beabc46a50541493c67"
+    },
+    "normalized_result_hash_equal": true,
+    "legacy_chain_duration_seconds": 26.36,
+    "consolidated_chain_duration_seconds": 13.26,
+    "observed_saved_duration_seconds": 13.10,
+    "observed_saved_duration_percent": 49.70,
+    "legacy_chain_output_bytes": 38572,
+    "consolidated_chain_output_bytes": 19286,
+    "observed_saved_output_bytes": 19286,
+    "observed_saved_output_percent": 50.0,
+    "observed_saved_subprocess_count": 1,
+    "measurement_classification": "single current same-tree direct eliminated-command measurement; no statistical certainty or full-profile speedup claim"
+  },
+  "adversarial_equivalence": {
+    "status": "PASS",
+    "fresh_report_local_path": ".local/v19_p2_t05_receipts/equivalence_report.json",
+    "fresh_report_sha256": "e06d78badf0f6a6abf16089533df29a39b5476d262f0dd438b73fe3442ffd510",
+    "fixture_count": 11,
+    "equivalent_fixture_count": 11,
+    "semantic_mismatch_fixture_count": 0,
+    "hard_finding_disappearance_count": 0,
+    "warning_finding_disappearance_count": 0,
+    "legacy_fail_consolidated_pass_count": 0,
+    "taxonomy_class_count": 42,
+    "taxonomy_authority_mismatch_class_count": 0,
+    "configuration_error_parity": true,
+    "core_and_diff_composition_guard": true,
+    "identity_difference_fields_tested_fail_closed": 14,
+    "research_control_validator_sha256": "660821f64abbe80f2b0c455b76489cbfad62921ab099520d509e85c1b096d9c3",
+    "claim_language_validator_sha256": "bd6705ff3f9dd11b77c441510503dad0a49f06cd2a862a25a8aac4e5b32fb65b",
+    "fixture_corpus_sha256": "2764b50456afec0308aecd39bd24c1229b4d9241bd058ccbf5a66a27871829e7"
+  },
+  "invocation_count_reduction": {
+    "make_validate_project_control": {
+      "legacy_command_count": 11,
+      "current_command_count": 10,
+      "eligible_duplicate_reduction": 1
+    },
+    "local_runner": {
+      "legacy_command_count": 14,
+      "current_command_count": 12,
+      "eligible_duplicate_reduction": 2
+    },
+    "checkpoint": {
+      "legacy_post_sync_command_count": 7,
+      "current_post_sync_command_count": 5,
+      "post_sync_duplicate_reduction": 2,
+      "final_staged_standalone_claim_before": 1,
+      "final_staged_standalone_claim_after": 0,
+      "final_staged_integrated_diff_count": 1,
+      "total_eligible_duplicate_reduction": 3
+    },
+    "surface_specific_duplicate_reduction_sum": 6,
+    "sum_interpretation": "sum across three separate entry-point plans; not a claim that every invocation occurs in one transaction",
+    "unexplained_duplicate_identity_count": 0
+  },
+  "validation_runs": {
+    "focused_first_wave_suite": {
+      "status": "PASS",
+      "test_count": 196,
+      "duration_seconds": 68.24,
+      "output_bytes": 297,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "a6f7be338b13a8a23efba3cede6656c424ec70832950883c9694132399c29737"
+    },
+    "full_repository_suite": {
+      "status": "PASS",
+      "test_count": 613,
+      "duration_seconds": 617.50,
+      "output_bytes": 2726,
+      "stdout_sha256": "e75116d675bdc1ad0a978d6e47249c792e40f7bc1d680177affb690e0f42a0a1",
+      "stderr_sha256": "2710bf9ffb40abcf5fee9e4a8227ecd213a6ce98e11692dd1484da1fdc43921b"
+    },
+    "legacy_consolidated_aggregate": {
+      "status": "PASS",
+      "required_gate_count": 12,
+      "required_failure_count": 0,
+      "advisory_failure_count": 0,
+      "duration_seconds": 71.15,
+      "receipt_output_bytes": 33553,
+      "receipt_sha256": "14aa821823026cf082c73503431cbfb9ce25b0f1f12df2826eb56e56786f4fa7",
+      "claim_finding_count": 0,
+      "claim_hard_fail_count": 0,
+      "claim_warning_count": 0,
+      "ci_equivalent": false,
+      "ci_equivalence_status": "not_equivalent_until_v19_p11_centralization"
+    }
+  },
+  "performance_interpretation": {
+    "frozen_baseline_path": "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json",
+    "frozen_baseline_sha256": "b3d18259efad879101d6dab2c6e4c62b7f19ffa6826527a53b472dd653d34bac",
+    "baseline_clean_test_count": 584,
+    "baseline_clean_duration_seconds": 515.454875,
+    "baseline_clean_output_bytes": 2697,
+    "current_test_count": 613,
+    "current_duration_seconds": 617.50,
+    "current_output_bytes": 2726,
+    "full_suite_comparable": false,
+    "noncomparability_reasons": [
+      "current suite contains 29 additional tests",
+      "only one current successful sample exists",
+      "baseline included temporary internal instrumentation while the current run used external timing only"
+    ],
+    "runtime_hard_guard_activated": false,
+    "performance_conclusion": "The current full suite passed but supports no statistical speedup or regression conclusion. The exact eliminated core invocation saved 13.10 seconds and 19286 output bytes in one same-tree clean measurement."
+  },
+  "rollback_readiness": {
+    "status": "PASS",
+    "policy_path": "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md",
+    "policy_sha256": "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0",
+    "legacy_inventory_path": "research_control/design/v19_legacy_validation_invocation_graph.json",
+    "legacy_inventory_sha256": "afa67c7fe7b31a8ae226020d5f5c125cad4a0f42842211d1a87e0f391916b85e",
+    "planner_mode_safe_value": "off",
+    "cache_mode_safe_value": "off",
+    "output_mode_safe_value": "legacy",
+    "legacy_fallback_safe_value": "enabled",
+    "legacy_validator_references_available": true,
+    "checkpoint_rollback_block_available": true,
+    "final_staged_integrated_diff_retained": true,
+    "working_scope_satisfies_staged_scope": false,
+    "ci_source_changed_in_p2": false,
+    "current_ci_is_unfiltered_push_pull_request_manual": true,
+    "scheduled_full_addition_owned_by_future_plan_task": "P11-T03"
+  },
+  "safety_result": {
+    "status": "PASS",
+    "missing_hard_finding_count": 0,
+    "unexplained_status_mismatch_count": 0,
+    "unexplained_warning_mismatch_count": 0,
+    "wrong_tree_acceptance_count": 0,
+    "final_staged_gate_removed": false,
+    "index_restoration_changed": false,
+    "staged_residue_behavior_changed": false,
+    "claim_taxonomy_changed": false,
+    "reviewed_context_policy_changed": false,
+    "path_filtering_changed": false,
+    "source_authority_changed": false,
+    "role_authority_changed": false,
+    "ordinary_research_route_changed": false,
+    "production_source_changed_by_p2_t05": false
+  },
+  "raw_receipt_boundary": {
+    "directory": ".local/v19_p2_t05_receipts",
+    "tracked": false,
+    "authority": "diagnostic receipt storage only",
+    "complete_raw_output_retained": true
+  },
+  "verdict": "v19_p2_t05_first_wave_equivalence_pass_p3_t01_dependency_unlocked_no_physics_delta",
+  "next_recommendation": "Create one separately bounded P3-T01 Memory-System Maintainer write-only memory synchronization extraction AgentJob after this transaction checkpoints successfully.",
+  "authority_boundary": {
+    "project_system_change_only": true,
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "distance_to_gr_changed": false,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "ordinary_research_route_preserved": "EqSrc_family_closure_repair_or_stress"
+  }
+}
