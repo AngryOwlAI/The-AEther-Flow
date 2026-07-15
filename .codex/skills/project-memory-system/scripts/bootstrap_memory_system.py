@@ -32,6 +32,11 @@ from obsidian_wiki_lib import (  # noqa: E402
     local_retrieval_warnings,
     write_generated_registries,
 )
+from memory_operations import (  # noqa: E402
+    MemoryMutationReceipt,
+    MemorySyncOperations,
+    memory_sync as run_memory_sync,
+)
 from strict_yaml import StrictYamlError, load_frontmatter  # noqa: E402
 
 COMMON_COLUMNS = [
@@ -1435,6 +1440,8 @@ def generate_indexes(rows_by_registry: dict[str, list[dict[str, str]]]) -> None:
 
 def prune_stale_generated_files(
     rows_by_registry: dict[str, list[dict[str, str]]],
+    *,
+    include_local_retrieval: bool = True,
 ) -> None:
     current_paths = {
         row.get("path", "")
@@ -1455,11 +1462,13 @@ def prune_stale_generated_files(
             if path
         )
 
-    for folder, pattern in [
+    tracked_patterns = [
         ("wiki/markdown", "*.md"),
         ("wiki/html", "*.md"),
         ("wiki/tex", "*.md"),
         ("wiki/pdf", "*.md"),
+    ]
+    local_patterns = [
         (".local/content_semantics/markdown", "*.txt"),
         (".local/content_semantics/html", "*.txt"),
         (".local/content_semantics/tex", "*.txt"),
@@ -1472,7 +1481,8 @@ def prune_stale_generated_files(
         (".local/obsidian/aether-flow-wiki/02_sources/html", "*.md"),
         (".local/obsidian/aether-flow-wiki/02_sources/tex", "*.md"),
         (".local/obsidian/aether-flow-wiki/02_sources/pdf", "*.md"),
-    ]:
+    ]
+    for folder, pattern in tracked_patterns + (local_patterns if include_local_retrieval else []):
         directory = REPO_ROOT / folder
         if not directory.exists():
             continue
@@ -2330,44 +2340,49 @@ def validate_all(*, strict_docs: bool = False) -> ValidationReport:
     return report
 
 
+def memory_sync(
+    refresh_existing: bool = False,
+    rebuilt_pdf_paths: Iterable[str] | None = None,
+    include_local_retrieval: bool = False,
+) -> MemoryMutationReceipt:
+    """Run deterministic memory synchronization without validation."""
+
+    operations = MemorySyncOperations(
+        now=utc_now,
+        ensure_directories=ensure_directories,
+        discover_markdown_rows=discover_markdown_rows,
+        discover_tex_rows=discover_tex_rows,
+        merge_authored_registry=merge_authored_registry,
+        generate_pdf_rows=generate_pdf_rows,
+        generate_html_rows=generate_html_rows,
+        generate_wiki=generate_wiki,
+        generate_indexes=generate_indexes,
+        write_generated_registries=write_generated_registries,
+        prune_stale_generated_files=prune_stale_generated_files,
+        generate_file_object_registry=generate_file_object_registry,
+        generate_folder_map=generate_folder_map,
+        markdown_columns=MARKDOWN_COLUMNS,
+        tex_columns=TEX_COLUMNS,
+    )
+    return run_memory_sync(
+        operations,
+        repo_root=REPO_ROOT,
+        refresh_existing=refresh_existing,
+        rebuilt_pdf_paths=rebuilt_pdf_paths,
+        include_local_retrieval=include_local_retrieval,
+    )
+
+
 def bootstrap(
     refresh_existing: bool = False,
     rebuilt_pdf_paths: Iterable[str] | None = None,
     strict_docs: bool = False,
 ) -> ValidationReport:
-    ensure_directories()
-    now = utc_now()
-    markdown_rows = merge_authored_registry(
-        "MARKDOWN_SOURCE_REGISTRY.csv",
-        MARKDOWN_COLUMNS,
-        discover_markdown_rows(now),
-        refresh_existing,
+    memory_sync(
+        refresh_existing=refresh_existing,
+        rebuilt_pdf_paths=rebuilt_pdf_paths,
+        include_local_retrieval=True,
     )
-    tex_rows = merge_authored_registry(
-        "TEX_SOURCE_REGISTRY.csv", TEX_COLUMNS, discover_tex_rows(now), refresh_existing
-    )
-    pdf_rows = generate_pdf_rows(tex_rows, now, rebuilt_pdf_paths=rebuilt_pdf_paths)
-    html_rows = generate_html_rows(now, markdown_rows)
-    rows_by_registry = {
-        "MARKDOWN_SOURCE_REGISTRY.csv": markdown_rows,
-        "TEX_SOURCE_REGISTRY.csv": tex_rows,
-        "PDF_DERIVATIVE_REGISTRY.csv": pdf_rows,
-        "HTML_EXPLAINER_REGISTRY.csv": html_rows,
-    }
-    wiki_rows = generate_wiki(rows_by_registry, now)
-    generate_indexes(rows_by_registry)
-    rows_by_registry["WIKI_ARTIFACT_REGISTRY.csv"] = wiki_rows
-    generated_rows = write_generated_registries(
-        REPO_ROOT,
-        rows_by_registry,
-        now,
-        write_semantic_text=True,
-    )
-    rows_by_registry.update(generated_rows)
-    prune_stale_generated_files(rows_by_registry)
-    file_object_rows = generate_file_object_registry(rows_by_registry, now)
-    rows_by_registry["FILE_OBJECT_REGISTRY.csv"] = file_object_rows
-    generate_folder_map(rows_by_registry)
     return validate_all(strict_docs=strict_docs)
 
 

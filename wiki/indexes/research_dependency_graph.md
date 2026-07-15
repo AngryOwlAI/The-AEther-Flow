@@ -7,9 +7,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 - Schema: `research_dependency_graph_v1`
 - Generated from tracked state as of: `2026-07-09T03:11:04Z`
-- Source fingerprint: `4c917ba60f9feaccae6e8d922ca9f6dd2371decbb83d3e6db59fdf1dc899f7bb`
-- Nodes: `17785`
-- Edges: `63263`
+- Source fingerprint: `7b612abe8f3c886def6efd58a056dc24fbb7e5babbbcdc221a08bf63b3c64c80`
+- Nodes: `17804`
+- Edges: `63315`
 
 ## Source Counts
 
@@ -17,7 +17,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 898 |
+| `completion_yaml` | 899 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 898 |
+| `agent_job` | `support_only` | 899 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 9472 |
-| `blocked_burden` | `blocked` | 3248 |
-| `claim_boundary` | `support_only` | 855 |
+| `artifact` | `support_only` | 9479 |
+| `blocked_burden` | `blocked` | 3254 |
+| `claim_boundary` | `support_only` | 856 |
 | `draft_control_candidate` | `draft_control` | 529 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 109 |
 | `gate_chair_verdict` | `human_gated` | 31 |
 | `handoff` | `support_only` | 740 |
-| `human_gated_object` | `human_gated` | 318 |
+| `human_gated_object` | `human_gated` | 321 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 291 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 838 |
+| `task` | `support_only` | 839 |
 
 ## Frontier Table
 
@@ -134,6 +134,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:audit_pass_as_theorem_proof` | Blocked claim: audit pass as theorem proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_proposition_as_einstein_equations` | Blocked claim: audit proposition as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:audit_ready_as_adoption` | Blocked claim: audit_ready as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:authored_judgment_overwrite` | Blocked claim: authored judgment overwrite | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:authority_expansion_through_role_decomposition` | Blocked claim: authority expansion through role decomposition | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:authority_label_as_physics_evidence` | Blocked claim: authority label as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:autonomous_gate_chair_route` | Blocked claim: autonomous Gate Chair route | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,7 +160,6 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:balance_ledger_as_stress_energy_tensor` | Blocked claim: balance ledger as stress energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bare_accepted_high_risk_rendering` | Blocked claim: bare accepted high-risk rendering | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:base_ref_semantics_change` | Blocked claim: base-ref semantics change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_failure_as_global_validation_regression` | Blocked claim: baseline failure as global validation regression | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 

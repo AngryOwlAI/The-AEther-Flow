@@ -1,0 +1,52 @@
+{
+  "boundary": {
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "physics_authority_changed": false,
+    "publication_validation_changed": false,
+    "validation_ownership_changed": false
+  },
+  "generated_snapshot_comparison": {
+    "after_sha256": "72b0e4d11bd07ef34d225459dde663819d380f189a13cb00c4b52b2b2a53fe60",
+    "before_sha256": "72b0e4d11bd07ef34d225459dde663819d380f189a13cb00c4b52b2b2a53fe60",
+    "byte_equivalent": true,
+    "scope": "FOLDER_MAP.md registries/** wiki/**"
+  },
+  "implementation": {
+    "bootstrap_compatibility_wrapper_preserved": true,
+    "local_retrieval_default_for_memory_sync": false,
+    "memory_sync_runs_validation": false,
+    "receipt_categories": [
+      "changed",
+      "unchanged",
+      "created",
+      "pruned"
+    ],
+    "write_if_changed_preserved": true
+  },
+  "job_id": "AJ-RT-20260715-007-001",
+  "live_memory_sync_receipt": {
+    "changed_count": 0,
+    "created_count": 0,
+    "local_retrieval_enabled": false,
+    "mutated": false,
+    "pruned_count": 0,
+    "unchanged_count": 850,
+    "unchanged_paths_sha256": "e296796c248f1d52dd08d666b76fc0b54ed5f659fcc36cf668b91e08ca23d963"
+  },
+  "plan_task_id": "P3-T01",
+  "schema_version": "v19_p3_t01_memory_sync_refactor_report@0.1.0",
+  "source_hashes": {
+    ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py": "5cdfcfb5e96d739ff64126f1a693c039243fa1545a6f088a22ea7d5ee83eb385",
+    ".codex/skills/project-memory-system/scripts/memory_operations.py": "f7c601e1a095ac44d305dfcf6e82b804c6cca309c375ce0c55befb7766d7d8b0",
+    "tests/test_memory_operations.py": "95d794f02cab029d74de66fa280dced6dd1e7cf748d7479eb1b155084794c417"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260715-007",
+  "tests": {
+    "focused_fixture_count": 3,
+    "focused_fixture_status": "PASS",
+    "full_suite_implementation_regressions": 0,
+    "full_suite_precheckpoint_status": "PASS_WITH_EXPECTED_TRANSACTION_STATE_FAILURES",
+    "live_bootstrap_idempotence_status": "PASS"
+  }
+}
