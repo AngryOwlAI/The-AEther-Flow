@@ -240,27 +240,30 @@ skills provide procedures, and gates control claim promotion.
    need fresh resolver snapshots merely because future project-system work is
    visible.
 
-8. Synchronize generated systems before commit. Always run:
-
-   ```zsh
-   .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py
-   ```
+8. Synchronize generated systems before commit by satisfying the named
+   `memory_sync` obligation in
+   `research_control/design/validation_obligation_resolution_policy_v1.md`.
+   Use the policy's single current compatibility recipe; a skill or role that
+   names the same obligation does not create another execution requirement.
 
    If a changed registered TeX source has `pdf_required=true`, build that
    specific PDF derivative, then rerun the bootstrap. HTML is synchronized
    through the HTML registry when HTML exists; generated HTML is created only
    when the AgentJob explicitly authorizes it from a registered Markdown spec.
 
-9. Run post-execution validation:
+9. Resolve post-execution obligations by gate ID under the same policy:
+   `memory_core`, `documentation_impact`, `project_improvement_signals` when
+   signals are emitted, `research_control_diff`, the task-selected test shard,
+   and `git_diff_check`. Under the registered same-scope predicates,
+   `research_control_diff` may also satisfy `research_control_core` and
+   `claim_language_changed`; working-tree evidence never satisfies a staged-tree
+   obligation. Direct precheckpoint commands are editing aids, not final
+   acceptance, and must not be repeated merely because both this skill and a
+   role declaration name an obligation.
 
-   ```zsh
-   .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
-   .venv/bin/python scripts/project_control/validate_documentation_impact.py
-   .venv/bin/python scripts/research_control/validate_research_control.py
-   .venv/bin/python scripts/research_control/validate_research_control.py --check-diff
-   ```
-
-10. Checkpoint only after a successful state-changing transaction:
+10. Checkpoint only after a successful state-changing transaction. The
+    checkpoint owns the `checkpoint_transaction` obligation and final staged
+    acceptance:
 
     ```zsh
     .venv/bin/python scripts/research_control/checkpoint_research_transaction.py

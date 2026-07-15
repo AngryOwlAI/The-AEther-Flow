@@ -832,6 +832,7 @@ class ResearchControlTests(unittest.TestCase):
         *,
         include_inspection: bool = True,
         stale_hash: bool = False,
+        object_id: str = "MD-IMMUTABLE-CONTROL-SOURCE",
     ):
         root = Path(tempfile.mkdtemp()).resolve()
         self.addCleanup(lambda: shutil.rmtree(root, ignore_errors=True))
@@ -846,7 +847,7 @@ class ResearchControlTests(unittest.TestCase):
             writer.writeheader()
             writer.writerow(
                 {
-                    "object_id": "MD-SKILL-CONTINUE-RESEARCH",
+                    "object_id": object_id,
                     "path": ".codex/skills/continue-research/SKILL.md",
                     "source_hash": source_hash,
                 }
@@ -860,10 +861,10 @@ class ResearchControlTests(unittest.TestCase):
             },
             "queries": [
                 {
-                    "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-CONTINUE-RESEARCH --json",
+                    "command": f".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup {object_id} --json",
                     "query_type": "lookup",
-                    "query_text": "MD-SKILL-CONTINUE-RESEARCH",
-                    "returned_object_ids": ["MD-SKILL-CONTINUE-RESEARCH"],
+                    "query_text": object_id,
+                    "returned_object_ids": [object_id],
                 }
             ],
             "canonical_inspections": [],
@@ -872,7 +873,7 @@ class ResearchControlTests(unittest.TestCase):
         if include_inspection:
             receipt["canonical_inspections"].append(
                 {
-                    "object_id": "MD-SKILL-CONTINUE-RESEARCH",
+                    "object_id": object_id,
                     "source_registry": "MARKDOWN_SOURCE_REGISTRY.csv",
                     "registry_path": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
                     "canonical_path": ".codex/skills/continue-research/SKILL.md",
@@ -939,6 +940,17 @@ class ResearchControlTests(unittest.TestCase):
         ):
             report = self.validate_memory_preflight_fixture(receipt)
         self.assertTrue(any("source_hash does not match registry row" in error for error in report.errors))
+
+    def test_memory_preflight_allows_historical_skill_contract_hash(self) -> None:
+        root, receipt = self.memory_preflight_fixture(
+            stale_hash=True,
+            object_id="MD-SKILL-CONTINUE-RESEARCH",
+        )
+        with mock.patch.object(self.validator, "REPO_ROOT", root), mock.patch.object(
+            self.validator, "REGISTRY_DIR", root / "registries"
+        ):
+            report = self.validate_memory_preflight_fixture(receipt)
+        self.assertFalse(any("source_hash" in error for error in report.errors))
 
     def test_memory_preflight_allows_historical_current_frontier_hash(self) -> None:
         root = Path(tempfile.mkdtemp()).resolve()

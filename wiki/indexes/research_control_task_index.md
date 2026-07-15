@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `21cdd3dd24615aac26d7ab072cdaca213d0dd2b09df974d363fbcb728c0cea20`
-- Generated-at source timestamp: `2026-07-15T14:44:40Z`
-- Row count: `900`
+- Source fingerprint: `006faa604583b251c5e000afd4e7d9c4fa6ab595d4e79b51c1789da8f5e24ccc`
+- Generated-at source timestamp: `2026-07-15T15:54:20Z`
+- Row count: `901`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260715-005|RT-20260715-004|2026-07-15T15:54:20Z|2026-07-15T16:10:09Z|skill_obligation_wording_update|completed|none|Project-system validation-obligation wording only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|2|On PASS checkpoint this transaction and route one separately bounded P2-T05 first-wave equivalence and measured-savings audit.|PASS|research_control/tasks/RT-20260715-005/jobs/completions/AJC-AJ-RT-20260715-005-001.yaml|
 |RT-20260715-004|RT-20260715-003|2026-07-15T14:44:40Z|2026-07-15T15:03:10Z|changed_claim_superset_consolidation|completed|none|Project-system claim-language validation orchestration only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|On PASS checkpoint this transaction and route one separately bounded P2-T04 Project-Control Maintainer obligation-wording update.|PASS|research_control/tasks/RT-20260715-004/jobs/completions/AJC-AJ-RT-20260715-004-001.yaml|
 |RT-20260715-003|RT-20260715-002|2026-07-15T14:04:30Z|2026-07-15T14:13:52Z|runner_checkpoint_superset_consolidation|completed|none|Project-system runner and checkpoint validation consolidation only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After checkpoint success create one separately bounded P2-T03 Validator Engineer claim-language consolidation AgentJob.|PASS|research_control/tasks/RT-20260715-003/jobs/completions/AJC-AJ-RT-20260715-003-001.yaml|
 |RT-20260715-002|RT-20260715-001|2026-07-15T13:05:22Z|2026-07-15T13:48:59Z|make_research_control_superset_consolidation|completed|none|Project-system Make validation consolidation only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After checkpoint success create one separately bounded P2-T02 Validator Engineer runner and checkpoint same-scope consolidation AgentJob.|PASS|research_control/tasks/RT-20260715-002/jobs/completions/AJC-AJ-RT-20260715-002-001.yaml|

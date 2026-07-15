@@ -144,20 +144,21 @@ an open-ended repository rewrite.
    only for plain documentation edits outside a project-system AgentJob. The
    record must mechanically cover live source changes, generated derivatives,
    classifier reason codes, and required validators.
-11. Regenerate and validate:
+11. Regenerate and validate by resolving the named obligations in
+    `research_control/design/validation_obligation_resolution_policy_v1.md`:
+    `memory_sync`, `memory_core`, `project_improvement_signals`,
+    `documentation_impact`, `research_control_diff`, the task-selected test
+    shard, and `git_diff_check`. Under the registered same-scope predicates,
+    `research_control_diff` may also satisfy `research_control_core` and
+    `claim_language_changed`; working-tree evidence never satisfies a staged
+    obligation. Use the policy's single current compatibility recipe per gate.
+    Direct precheckpoint commands are editing aids and do not become separate
+    executions merely because both a skill and a role name the same obligation.
 
-   ```zsh
-   .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py
-   .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
-   .venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted
-   .venv/bin/python scripts/project_control/validate_documentation_impact.py
-   .venv/bin/python scripts/research_control/validate_research_control.py
-   .venv/bin/python scripts/research_control/validate_research_control.py --check-diff
-   ```
-
-12. Checkpoint only if the transaction is valid and non-empty. Pass `--job-id`
-    when checkpointing a project-system AgentJob that is not the active physics
-    research task. Checkpoint blocking is defined by validators, not by
+12. Checkpoint only if the transaction is valid and non-empty. The checkpoint
+    owns the `checkpoint_transaction` obligation and final staged acceptance.
+    Pass `--job-id` when checkpointing a project-system AgentJob that is not the
+    active physics research task. Checkpoint blocking is defined by validators, not by
     `resolve_project_improvement.py` reporting future work. Completion records
     do not need a fresh resolver snapshot merely because high or critical
     signals remain open; resolver snapshots are optional handoff context unless

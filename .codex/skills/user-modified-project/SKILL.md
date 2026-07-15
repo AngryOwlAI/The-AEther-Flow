@@ -63,21 +63,24 @@ proceeding.
 
 5. Execute at most one authorized bounded AgentJob, using the selected
    workflow's role, allowlist, receipts, and stop conditions.
-6. Refresh and validate generated systems after an authorized state-changing
-   transaction:
-
-   ```zsh
-   .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py
-   .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
-   .venv/bin/python scripts/project_control/validate_documentation_impact.py
-   .venv/bin/python scripts/research_control/validate_research_control.py
-   .venv/bin/python scripts/research_control/validate_research_control.py --check-diff
-   ```
+6. After an authorized state-changing transaction, resolve the named
+   obligations in
+   `research_control/design/validation_obligation_resolution_policy_v1.md`:
+   `memory_sync`, `memory_core`, `documentation_impact`,
+   `project_improvement_signals` when signals are emitted,
+   `research_control_diff`, the task-selected test shard, and
+   `git_diff_check`. Under the registered same-scope predicates,
+   `research_control_diff` may also satisfy `research_control_core` and
+   `claim_language_changed`; working-tree evidence never satisfies a staged
+   obligation. The policy owns the single current compatibility recipe per
+   gate. Direct precheckpoint commands are editing aids, not independent
+   executions implied by each skill or role declaration.
 
 7. Checkpoint only when validation passes and the transaction is non-empty.
-   Use `scripts/research_control/checkpoint_research_transaction.py`, passing
-   `--job-id` when integrating a project-system AgentJob that is not the active
-   physics research task.
+   The checkpoint owns the `checkpoint_transaction` obligation and final staged
+   acceptance. Use `scripts/research_control/checkpoint_research_transaction.py`,
+   passing `--job-id` when integrating a project-system AgentJob that is not the
+   active physics research task.
 
 ## Stop Conditions
 

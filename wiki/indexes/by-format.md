@@ -214,6 +214,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `research_control/design/validation_command_inventory_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1` `research_control/design/validation_evidence_identity_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-ID-CATALOG-V1` `research_control/design/validation_gate_id_catalog_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1` `research_control/design/validation_obligation_resolution_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ORCHESTRATION-MIGRATION-AND-ROLLBACK-POLICY-V1` `research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `research_control/design/validation_status_field_inventory.md`
 - `MD-RESEARCH-CONTROL-FORMALIZATION-FAIL-CLOSED-CERTIFICATE-EVALUATION-README` `research_control/formalization/fail_closed_certificate_evaluation/README.md`
@@ -1029,6 +1030,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `wiki/markdown/md-research-control-design-validation-command-inventory-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1` `wiki/markdown/md-research-control-design-validation-evidence-identity-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-ID-CATALOG-V1` `wiki/markdown/md-research-control-design-validation-gate-id-catalog-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1` `wiki/markdown/md-research-control-design-validation-obligation-resolution-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ORCHESTRATION-MIGRATION-AND-ROLLBACK-POLICY-V1` `wiki/markdown/md-research-control-design-validation-orchestration-migration-and-rollback-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-STATUS-FIELD-INVENTORY` `wiki/markdown/md-research-control-design-validation-status-field-inventory.md`
 - `WIKI-MD-RESEARCH-CONTROL-FORMALIZATION-FAIL-CLOSED-CERTIFICATE-EVALUATION-README` `wiki/markdown/md-research-control-formalization-fail-closed-certificate-evaluation-readme.md`
