@@ -21,7 +21,6 @@ validate-project-control:
 	$(PYTHON) .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
 	$(PYTHON) scripts/spec_depth_lint.py --root .
 	$(PYTHON) scripts/validate_publication_process.py --root .
-	$(PYTHON) scripts/research_control/validate_research_control.py
 	$(PYTHON) scripts/research_control/validate_research_control.py --check-diff
 	$(PYTHON) -m unittest discover -s tests
 

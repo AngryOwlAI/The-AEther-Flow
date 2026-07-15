@@ -1,0 +1,232 @@
+job_id: "AJ-RT-20260715-002-001"
+completion_id: "AJC-AJ-RT-20260715-002-001"
+task_id: "RT-20260715-002"
+decision_id: "DDR-20260715-002"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260715-002"
+created_at: "2026-07-15T13:05:22Z"
+started_at: "2026-07-15T13:05:22Z"
+completed_at: "2026-07-15T13:48:59Z"
+objective: "Consolidate the same-state Make research-control core and check-diff pair into one check-diff superset invocation with focused command-plan and equivalence evidence."
+completion_summary: "Removed one same-state plain research-control Make invocation retained its check-diff superset added one dry-run command-plan guard passed the P1 equivalence corpus and passed the complete clean-candidate validate-project-control target with 604 tests."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+  - "research_control/design/validation_supersedence_contracts_v1.yaml"
+  - "research_control/tasks/RT-20260713-002/artifacts/legacy_consolidated_equivalence_report.json"
+  - "research_control/tasks/RT-20260715-001/jobs/completions/AJC-AJ-RT-20260715-001-001.yaml"
+  - "Makefile"
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_validation_orchestration.py"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P2-T01"
+  recommendation_ids:
+    - "V19-R03"
+    - "V19-R38"
+    - "V19-R43"
+  migration_epoch: "legacy_consolidated"
+  implemented_task_scope: "One Make validate-project-control same-state research-control direct-superset consolidation and one focused dry-run command-plan regression test."
+  completed_v19_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+  downstream_tasks_not_implemented:
+    - "P2-T02 runner and checkpoint same-scope consolidation"
+    - "P2-T03 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p2_t01_make_research_control_superset_consolidation"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P2-T01"
+  coverage_summary: "V19-R03 V19-R38 and V19-R43 receive one direct same-state Make research-control superset consolidation with equivalence and command-plan guards."
+physics_progress_status:
+  status: "project_system_validation_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P2-T01 changes Make validation orchestration and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Validation orchestration consolidation discharges no physics burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+consolidation_audit:
+  status: "PASS"
+  makefile_path: "Makefile"
+  makefile_sha256: "5db44368a4a131b8ec286d9391a689434c90e971c798f720e8d7f1c24472dc3f"
+  test_path: "tests/test_validation_orchestration.py"
+  test_sha256: "98008b02e7e66983984fc98e24b381467eec8c6fea2be9df7f6c21dd69ce041a"
+  report_path: "research_control/tasks/RT-20260715-002/artifacts/make_superset_consolidation_report.json"
+  report_sha256: "3218826dfa1fc8c239f51a470c971cc5b03c927dc1da2ab25aa60c5686648496"
+  legacy_research_control_invocation_count: 2
+  consolidated_research_control_invocation_count: 1
+  executed_gate_ids:
+    - "research_control_diff"
+  satisfied_gate_ids:
+    - "research_control_core"
+    - "research_control_diff"
+  superseded_gate_ids:
+    - "research_control_core"
+  predicate_id: "rc_diff_satisfies_core_same_scope_v1"
+  checkpoint_behavior_changed: false
+  runner_behavior_changed: false
+  path_filtering_changed: false
+  unrelated_gate_removed_count: 0
+  clean_candidate_tree_hash: "4b95f7743c415b3327ee7d5cb7e2e165e89444af"
+  clean_candidate_commit: "58b15bbf31b23a94f816eee7c3992750ffb2c0ee"
+  clean_candidate_make_status: "PASS"
+  clean_candidate_test_count: 604
+validation_evidence:
+  working_tree_fingerprint: "4b95f7743c415b3327ee7d5cb7e2e165e89444af"
+  staged_tree_hash: "4b95f7743c415b3327ee7d5cb7e2e165e89444af"
+  selected_gate_ids:
+    - "research_control_core"
+    - "research_control_diff"
+  executed_gate_ids:
+    - "research_control_diff"
+  superseded_gate_ids:
+    - "research_control_core"
+  duplicate_evidence_identity_count: 1
+  aggregate_receipt_path: "research_control/tasks/RT-20260715-002/artifacts/make_superset_consolidation_report.json"
+  aggregate_receipt_hash: "3218826dfa1fc8c239f51a470c971cc5b03c927dc1da2ab25aa60c5686648496"
+performance_evidence:
+  before_reference: "reviews/verification_validation_testing_overhead_audit_2026-07-12.md"
+  duration_seconds: 525.25
+  subprocess_count: 10
+  output_bytes: 25403
+  cache_hits: 0
+  cache_misses: 0
+  measurement_status: "pass_direct_eliminated_command_measurement"
+  saved_research_control_invocations_per_make_run: 1
+  saved_time_seconds: 11.71
+  saved_time_measurement_scope: "Eliminated plain research-control core invocation on the same clean candidate tree."
+  eliminated_core_output_bytes: 20266
+  full_target_before_duration_seconds: 608.24
+  full_target_before_resource_contended: true
+  full_target_before_after_pair_comparable: false
+  performance_improvement_claimed: true
+output_paths:
+  - "Makefile"
+  - "tests/test_validation_orchestration.py"
+  - "research_control/tasks/RT-20260715-002/00_TASK.yaml"
+  - "research_control/tasks/RT-20260715-002/DDR-20260715-002.md"
+  - "research_control/tasks/RT-20260715-002/artifacts/make_superset_consolidation_report.json"
+  - "research_control/tasks/RT-20260715-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260715-002/jobs/AJ-RT-20260715-002-001.yaml"
+  - "research_control/tasks/RT-20260715-002/jobs/completions/AJC-AJ-RT-20260715-002-001.yaml"
+  - "research_control/tasks/RT-20260715-002/roles/validator-engineer@0.2.0--RT-20260715-002.yaml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=WARN local_retrieval_status=WARN"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json | exit_code=0 | returned canonical v19 implementation plan object"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | expected Validator Engineer validation-entrypoint route"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | initial boundary no_action and explicit plan task authorized"
+  - "make -n PYTHON=.venv/bin/python validate-project-control | exit_code=0 | one research-control check-diff command"
+  - ".venv/bin/python -m unittest tests/test_validation_orchestration.py tests/test_validation_equivalence.py | exit_code=0 | 10 tests PASS"
+  - "make PYTHON=.venv/bin/python validate-project-control before change | exit_code=0 | 603 tests PASS 608.24 seconds under resource contention"
+  - "make PYTHON=.venv/bin/python validate-project-control after implementation before documentation receipt | exit_code=2 | expected fail-closed documentation-impact gate"
+  - "make PYTHON=.venv/bin/python validate-project-control on clean hydrated candidate tree | exit_code=0 | 604 tests PASS 525.25 seconds"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py on clean candidate tree | exit_code=0 | eliminated invocation measured 11.71 seconds"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P1-T05 is checkpointed PASS the worktree was clean and the v19 plan explicitly authorizes the dependency-ready P2-T01 packet."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The command-plan test and P1 equivalence corpus prove one same-state check-diff invocation preserves the core and diff obligations."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The clean hydrated candidate passed the complete validate-project-control target with 604 tests and no missing hard finding."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "The governed checkpoint has not yet executed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Policy-required task-index wiki and memory derivatives were regenerated and checked fresh."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Bootstrap and validate-only passed; warnings were limited to ignored local retrieval freshness."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-path hard-failure count is zero; historical advisory findings remain nonblocking."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260715-002/documentation_impact.yaml"
+  source_documentation_updated: false
+  no_op_rationale: "The canonical plan policy Make recipe and focused test already provide the required operator and behavioral contract."
+project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 task changes project-system validation orchestration and testing only. It does not authorize canonical ontology edit source-law adoption general EqSrc discharge RetainH adoption GenH adoption MetricData(E) adoption g_eff scope expansion detector or readout semantics adoption coupling-law adoption matter-coupling derivation stress-energy semantics stress-energy tensor matter action Einstein-equation derivation benchmark promotion Gate Chair verdict external endorsement future source-extension impossibility program-wide no-go conclusion completed derivation or any validator test cache receipt registry generated artifact CI status checkpoint commit or performance measurement as physics proof."
+verdict: "v19_p2_t01_make_superset_consolidation_pass_p2_t02_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P2-T01 removes one direct same-state Make validator duplicate while preserving the authoritative check-diff superset and every non-target gate."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P2-T02 Validator Engineer runner and checkpoint same-scope consolidation AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 806
+    relationship_row_count: 4016
+    semantic_row_count: 806
+    vault_row_count: 806
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ORCHESTRATION-MIGRATION-AND-ROLLBACK-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+      source_hash: "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation and diagnostics only and are not authority; canonical plan policy contracts equivalence report role Makefile and validator sources were inspected directly."

@@ -1,0 +1,44 @@
+task_id: "RT-20260715-002"
+task_type: "make_research_control_superset_consolidation"
+status: "completed"
+created_at: "2026-07-15T13:05:22Z"
+updated_at: "2026-07-15T13:48:59Z"
+closed_at: "2026-07-15T13:48:59Z"
+parent_task_id: "RT-20260715-001"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260715-002"
+current_job_id: "AJ-RT-20260715-002-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260715-002"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested the dependency-ready separately bounded P2-T01 Validator Engineer direct-superset consolidation AgentJob under legacy_consolidated authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T01"
+  plan_task_name: "Consolidate the Makefile research-control core and diff pair"
+  recommendation_ids:
+    - "V19-R03"
+    - "V19-R38"
+    - "V19-R43"
+objective: "Remove the plain research-control invocation immediately preceding its same-state check-diff superset in validate-project-control and prove command-plan and semantic equivalence."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system Make validation consolidation only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p2_t01_make_superset_consolidation_pass_p2_t02_dependency_unlocked_no_physics_delta"
+claim_boundary_id: "CB-V19-P2-T01-MAKE-SUPERSET-001"
+claim_boundary:
+  allowed_scope: "Makefile research-control direct-superset consolidation focused orchestration test task-local control records applicable registry rows and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifact: "research_control/tasks/RT-20260715-002/artifacts/make_superset_consolidation_report.json"
+next_recommended_action: "After checkpoint success create one separately bounded P2-T02 Validator Engineer runner and checkpoint same-scope consolidation AgentJob."
+documentation_impact_id: "DI-RT-20260715-002-001"
+completion_id: "AJC-AJ-RT-20260715-002-001"
+notes: "P2-T01 changes only the Make validate-project-control recipe and a focused dry-run command-plan test. Checkpoint and final staged validation behavior remain unchanged."

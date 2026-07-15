@@ -1,0 +1,84 @@
+{
+  "schema_id": "v19_make_superset_consolidation_report_v1",
+  "plan_task_id": "P2-T01",
+  "status": "PASS",
+  "migration_epoch": "legacy_consolidated",
+  "obligation_receipt": {
+    "executed_gate_ids": [
+      "research_control_diff"
+    ],
+    "satisfied_gate_ids": [
+      "research_control_core",
+      "research_control_diff"
+    ],
+    "superseded_gate_ids": [
+      "research_control_core"
+    ],
+    "predicate_id": "rc_diff_satisfies_core_same_scope_v1",
+    "scope": "working_tree",
+    "same_python": true,
+    "same_base_ref": true,
+    "same_configuration": true,
+    "same_implementation_family": true,
+    "same_tree_identity": true,
+    "raw_core_failures_preserved": true,
+    "unknown_identity_result": "execute_both_legacy_gates"
+  },
+  "command_plan": {
+    "legacy_research_control_invocation_count": 2,
+    "consolidated_research_control_invocation_count": 1,
+    "legacy_make_recipe_command_count": 11,
+    "consolidated_make_recipe_command_count": 10,
+    "unrelated_gate_removed_count": 0,
+    "checkpoint_behavior_changed": false,
+    "runner_behavior_changed": false,
+    "path_filtering_changed": false
+  },
+  "semantic_equivalence": {
+    "status": "PASS",
+    "fixture_count": 9,
+    "blocking_mismatch_count": 0,
+    "hard_finding_disappearance_count": 0,
+    "source_report": "research_control/tasks/RT-20260713-002/artifacts/legacy_consolidated_equivalence_report.json",
+    "source_report_sha256": "6da0da2d76d16f590cc34119d02038d4f090af833f5aad1eb16664750eaa3512"
+  },
+  "captured_runs": {
+    "before": {
+      "status": "PASS_CONTENDED_DIAGNOSTIC",
+      "duration_seconds": 608.24,
+      "output_bytes": 45333,
+      "raw_stdout_sha256": "20a11e55baf015b8f170a24b0014cae6ea3906cc0006dab6763389b09027abd2",
+      "raw_stderr_and_time_sha256": "d247bbfc3fd447bd98bcb1a19bd0d699ba2c1adca0c04d00341b643d080a5803",
+      "resource_contention_observed": true
+    },
+    "after": {
+      "status": "PASS",
+      "duration_seconds": 525.25,
+      "output_bytes": 25403,
+      "tests_run": 604,
+      "candidate_tree_hash": "4b95f7743c415b3327ee7d5cb7e2e165e89444af",
+      "candidate_commit": "58b15bbf31b23a94f816eee7c3992750ffb2c0ee",
+      "raw_stdout_sha256": "934bfa87b956816bf34dcfec02bdc1e9d5d88dc4d28dabf4922e8479db03cc74",
+      "raw_stderr_and_time_sha256": "a77783a400a178ab10ddcd599c9c8cd5ab80fc5479ea58bf4b315e3f0dcf987f"
+    }
+  },
+  "performance_conclusion": {
+    "status": "PASS_DIRECT_ELIMINATED_COMMAND_MEASUREMENT",
+    "saved_research_control_invocations_per_make_run": 1,
+    "saved_time_seconds": 11.71,
+    "saved_time_measurement_scope": "Eliminated plain research-control core invocation on the same clean candidate tree.",
+    "eliminated_core_output_bytes": 20266,
+    "eliminated_core_raw_stdout_sha256": "44025019a816e6f33f244301e13cb50729a5f6d20d7bf8196a145e4abc620ad8",
+    "eliminated_core_raw_stderr_and_time_sha256": "a42f984d428bc279276d0f5afcff84c7c57977b4bad4094734c7a688d208596d",
+    "full_target_before_after_pair_comparable": false,
+    "claim": "The removed invocation measured 11.71 seconds on the clean candidate. No full-target speedup percentage is claimed from the contended before sample."
+  },
+  "authority_boundary": {
+    "project_system_change_only": true,
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "ordinary_research_route_preserved": "EqSrc_family_closure_repair_or_stress"
+  }
+}
