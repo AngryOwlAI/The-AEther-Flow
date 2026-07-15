@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the v15 local CI-equivalent research-control validation sequence.
+"""Run the repository-local research-control validation sequence.
 
 This script is operational receipt evidence only. A PASS result means the
 configured control, registry, claim-language, render-freshness, and drift gates
@@ -101,15 +101,9 @@ def base_command_plan(include_smoke_tests: bool = False) -> list[ValidationComma
             authority_level="required-gate",
         ),
         ValidationCommand(
-            label="research_control_validation",
-            command=(py, "scripts/research_control/validate_research_control.py"),
-            purpose="Validate research-control task, decision, job, handoff, role, and registry consistency.",
-            authority_level="required-gate",
-        ),
-        ValidationCommand(
             label="research_control_diff_validation",
             command=(py, "scripts/research_control/validate_research_control.py", "--check-diff"),
-            purpose="Validate current changed paths against the active AgentJob allowlist.",
+            purpose="Validate research-control consistency and current changed paths against the active AgentJob allowlist.",
             authority_level="required-gate",
         ),
         ValidationCommand(
@@ -197,14 +191,17 @@ def run_command(command: ValidationCommand, repo_root: Path, tail_chars: int) ->
 
 def coverage_map(commands: list[dict[str, Any]]) -> dict[str, bool]:
     labels = {command["label"] for command in commands}
+    research_control_diff = "research_control_diff_validation" in labels
     return {
-        "registry_referential_integrity": "research_control_validation" in labels,
+        "registry_referential_integrity": research_control_diff,
         "active_state_sidecar_validation": (
-            "research_control_validation" in labels
+            research_control_diff
             and "compact_current_frontier_check" in labels
         ),
         "claim_language_lint": "claim_language_changed_lint" in labels,
-        "research_control_validation": "research_control_validation" in labels,
+        "research_control_validation": research_control_diff,
+        "research_control_core_obligation": research_control_diff,
+        "research_control_diff_obligation": research_control_diff,
         "current_frontier_check": "current_frontier_check" in labels,
         "compact_current_frontier_check": "compact_current_frontier_check" in labels,
         "generated_derivative_drift_check": {
@@ -217,9 +214,9 @@ def coverage_map(commands: list[dict[str, Any]]) -> dict[str, bool]:
         "claim_graph_validation": "claim_graph_validation" in labels,
         "route_signature_extraction_if_implemented": "route_signature_extraction" in labels,
         "no_bare_accepted_high_risk_rows": "claim_language_changed_lint" in labels,
-        "no_premature_efe_route": "claim_language_changed_lint" in labels and "research_control_validation" in labels,
+        "no_premature_efe_route": "claim_language_changed_lint" in labels and research_control_diff,
         "documentation_impact": "documentation_impact_validation" in labels,
-        "diff_allowlist_check": "research_control_diff_validation" in labels,
+        "diff_allowlist_check": research_control_diff,
         "route_orbit_advisory": "route_orbit_advisory" in labels,
         "whitespace_diff_check": "whitespace_diff_check" in labels,
     }
@@ -258,6 +255,8 @@ def build_report(
         "status": "PASS" if not required_failures else "FAIL",
         "repo_root": str(repo_root),
         "include_smoke_tests": include_smoke_tests,
+        "ci_equivalent": False,
+        "ci_equivalence_status": "not_equivalent_until_v19_p11_centralization",
         "operational_receipt_only": True,
         "no_physics_delta": True,
         "physics_proof_authority": False,
@@ -297,6 +296,8 @@ def main(argv: list[str] | None = None) -> int:
             "status": "PASS",
             "repo_root": str(repo_root),
             "include_smoke_tests": args.include_smoke_tests,
+            "ci_equivalent": False,
+            "ci_equivalence_status": "not_equivalent_until_v19_p11_centralization",
             "operational_receipt_only": True,
             "no_physics_delta": True,
             "required_check_coverage": coverage_map(command_plan(args.include_smoke_tests)),

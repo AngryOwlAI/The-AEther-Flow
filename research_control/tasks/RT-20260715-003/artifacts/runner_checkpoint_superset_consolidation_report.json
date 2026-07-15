@@ -1,0 +1,125 @@
+{
+  "schema_id": "v19_runner_checkpoint_superset_consolidation_report_v1",
+  "plan_task_id": "P2-T02",
+  "status": "PASS",
+  "migration_epoch": "legacy_consolidated",
+  "baseline_commit": "f98bec9155a2c0a156dbaa2eba1514634ce3c1c7",
+  "obligation_receipt": {
+    "executed_gate_ids": [
+      "research_control_diff"
+    ],
+    "satisfied_gate_ids": [
+      "research_control_core",
+      "research_control_diff"
+    ],
+    "superseded_gate_ids": [
+      "research_control_core"
+    ],
+    "predicate_id": "rc_diff_satisfies_core_same_scope_v1",
+    "working_scope_same_identity_required": true,
+    "working_scope_satisfies_staged_scope": false,
+    "unknown_identity_result": "execute_both_legacy_gates"
+  },
+  "command_plans": {
+    "local_runner": {
+      "legacy_total_command_count": 14,
+      "consolidated_total_command_count": 13,
+      "legacy_research_control_invocation_count": 2,
+      "consolidated_research_control_invocation_count": 1,
+      "research_control_diff_satisfies_core": true,
+      "ci_equivalent": false,
+      "ci_equivalence_status": "not_equivalent_until_v19_p11_centralization"
+    },
+    "checkpoint": {
+      "legacy_post_sync_command_count": 7,
+      "consolidated_post_sync_command_count": 6,
+      "legacy_working_research_control_invocation_count": 2,
+      "consolidated_working_research_control_invocation_count": 1,
+      "final_staged_diff_invocation_count": 1,
+      "final_staged_memory_invocation_count": 1,
+      "command_count_metadata_added": true
+    }
+  },
+  "checkpoint_command_count_schema": {
+    "total": "all observed checkpoint subprocess results",
+    "research_control_total": "all plain and check-diff research-control subprocess results",
+    "research_control_plain_working": 0,
+    "research_control_diff_working": 1,
+    "research_control_diff_staged": 1,
+    "working_and_staged_scopes_distinct": true
+  },
+  "semantic_equivalence": {
+    "status": "PASS",
+    "fixture_count": 9,
+    "blocking_mismatch_count": 0,
+    "hard_finding_disappearance_count": 0,
+    "source_report": "research_control/tasks/RT-20260713-002/artifacts/legacy_consolidated_equivalence_report.json",
+    "source_report_sha256": "6da0da2d76d16f590cc34119d02038d4f090af833f5aad1eb16664750eaa3512"
+  },
+  "source_hashes": {
+    "local_runner_before_sha256": "58021c75b29dd001e24f7ac27e564c3dc77f26da9bbf55f7039900d83a38afc3",
+    "local_runner_after_sha256": "92733525dedeede86920a9730edbb36b60fa83510710e3f258f7e36bfd36aee7",
+    "checkpoint_before_sha256": "4f9bb5625e7600d2bfc3aad3c6d6685ea185da33c10558a04c89efdbff15935d",
+    "checkpoint_after_sha256": "eadcd7d41b55b0e897fa41b803d5a67176bf9539114582bc84f86368135a6e2c",
+    "runner_test_after_sha256": "c9ebe7e0a75b74610252c68570cbe7841ffae3eb7ec0e6e4083d58b52ac18f35",
+    "orchestration_test_after_sha256": "37e21a3d7dffa49a7a1335379aac4ef3f0bd8d1107cfe1e285591308cd2d02aa"
+  },
+  "validation_evidence": {
+    "focused_required_suite": {
+      "status": "PASS",
+      "test_count": 20,
+      "covers": [
+        "local runner plan and coverage map",
+        "checkpoint working and staged scope distinction",
+        "checkpoint ordering",
+        "index restoration",
+        "unstaged residue blocking",
+        "no-commit synthetic checkpoint fixture",
+        "P1 adversarial equivalence corpus"
+      ]
+    },
+    "broad_precompletion_suite": {
+      "test_count": 140,
+      "implementation_failure_count": 0,
+      "transaction_state_failure_count": 1,
+      "transaction_state_failure": "continue-research context expected no unrelated active project-system AgentJob; final rerun is performed after completion materialization"
+    },
+    "broad_postcompletion_suite": {
+      "status": "PASS",
+      "test_count": 140,
+      "failure_count": 0,
+      "duration_seconds": 65.596
+    },
+    "no_commit_checkpoint_drill": {
+      "status": "ready_to_commit",
+      "sync_passes": 1,
+      "total_command_count": 16,
+      "research_control_total": 2,
+      "research_control_plain_working": 0,
+      "research_control_diff_working": 1,
+      "research_control_diff_staged": 1,
+      "working_and_staged_scopes_distinct": true
+    },
+    "git_diff_check": "PASS"
+  },
+  "behavior_boundaries": {
+    "final_staged_allowlist_preserved": true,
+    "final_staged_authority_preserved": true,
+    "final_staged_claim_gate_preserved": true,
+    "final_staged_residue_detection_preserved": true,
+    "final_staged_memory_gate_preserved": true,
+    "index_restoration_changed": false,
+    "rollback_behavior_changed": false,
+    "path_filtering_changed": false,
+    "ci_changed": false,
+    "planner_or_cache_changed": false
+  },
+  "authority_boundary": {
+    "project_system_change_only": true,
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "ordinary_research_route_preserved": "EqSrc_family_closure_repair_or_stress"
+  }
+}

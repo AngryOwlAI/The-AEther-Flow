@@ -1,0 +1,245 @@
+job_id: "AJ-RT-20260715-003-001"
+completion_id: "AJC-AJ-RT-20260715-003-001"
+task_id: "RT-20260715-003"
+decision_id: "DDR-20260715-003"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260715-003"
+created_at: "2026-07-15T14:04:30Z"
+started_at: "2026-07-15T14:04:30Z"
+completed_at: "2026-07-15T14:13:52Z"
+objective: "Consolidate the same-scope local-runner and checkpoint post-sync working research-control core and check-diff pairs while preserving the independent final staged boundary."
+completion_summary: "Removed one plain research-control invocation from the local runner and one from checkpoint post-sync working validation retained both check-diff supersets and the independent final staged gates added command-count metadata and passed 20 focused orchestration equivalence ordering rollback and synthetic no-commit tests."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_gate_id_catalog_v1.md"
+  - "research_control/design/validation_supersedence_contracts_v1.yaml"
+  - "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+  - "research_control/tasks/RT-20260713-002/artifacts/legacy_consolidated_equivalence_report.json"
+  - "research_control/tasks/RT-20260715-002/jobs/completions/AJC-AJ-RT-20260715-002-001.yaml"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - "tests/test_run_full_research_control_validation.py"
+  - "tests/test_research_control.py"
+  - "tests/test_validation_orchestration.py"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P2-T02"
+  recommendation_ids:
+    - "V19-R03"
+    - "V19-R12"
+    - "V19-R39"
+    - "V19-R43"
+  migration_epoch: "legacy_consolidated"
+  implemented_task_scope: "One local-runner and one checkpoint post-sync working-scope research-control direct-superset consolidation with focused tests and checkpoint command-count metadata."
+  completed_v19_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+  downstream_tasks_not_implemented:
+    - "P2-T03 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p2_t02_runner_checkpoint_superset_consolidation"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P2-T02"
+  coverage_summary: "V19-R03 V19-R12 V19-R39 and V19-R43 receive direct local-runner and checkpoint working-scope research-control superset consolidation with preserved final staged gates."
+physics_progress_status:
+  status: "project_system_validation_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P2-T02 changes validation orchestration and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Validation orchestration consolidation discharges no physics burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+consolidation_audit:
+  status: "PASS"
+  local_runner_path: "scripts/research_control/run_full_research_control_validation.py"
+  local_runner_sha256: "92733525dedeede86920a9730edbb36b60fa83510710e3f258f7e36bfd36aee7"
+  checkpoint_path: "scripts/research_control/checkpoint_research_transaction.py"
+  checkpoint_sha256: "eadcd7d41b55b0e897fa41b803d5a67176bf9539114582bc84f86368135a6e2c"
+  runner_test_path: "tests/test_run_full_research_control_validation.py"
+  runner_test_sha256: "c9ebe7e0a75b74610252c68570cbe7841ffae3eb7ec0e6e4083d58b52ac18f35"
+  orchestration_test_path: "tests/test_validation_orchestration.py"
+  orchestration_test_sha256: "37e21a3d7dffa49a7a1335379aac4ef3f0bd8d1107cfe1e285591308cd2d02aa"
+  report_path: "research_control/tasks/RT-20260715-003/artifacts/runner_checkpoint_superset_consolidation_report.json"
+  report_sha256: "2429a8979f66465ac9620c78d698fe07a50a4f9b878aa218dcdffa76fd9dba9e"
+  local_runner_legacy_research_control_invocation_count: 2
+  local_runner_consolidated_research_control_invocation_count: 1
+  checkpoint_legacy_working_research_control_invocation_count: 2
+  checkpoint_consolidated_working_research_control_invocation_count: 1
+  final_staged_diff_invocation_count: 1
+  final_staged_memory_invocation_count: 1
+  index_restoration_changed: false
+  rollback_behavior_changed: false
+  path_filtering_changed: false
+  unrelated_gate_removed_count: 0
+validation_evidence:
+  working_scope_gate_ids:
+    - "research_control_core"
+    - "research_control_diff"
+  working_scope_executed_gate_ids:
+    - "research_control_diff"
+  working_scope_superseded_gate_ids:
+    - "research_control_core"
+  staged_scope_gate_ids:
+    - "research_control_diff"
+    - "memory_core"
+  working_scope_satisfies_staged_scope: false
+  focused_test_count: 20
+  focused_test_status: "PASS"
+  aggregate_receipt_path: "research_control/tasks/RT-20260715-003/artifacts/runner_checkpoint_superset_consolidation_report.json"
+  aggregate_receipt_hash: "2429a8979f66465ac9620c78d698fe07a50a4f9b878aa218dcdffa76fd9dba9e"
+performance_evidence:
+  before_reference: "f98bec9155a2c0a156dbaa2eba1514634ce3c1c7"
+  duration_seconds: 0
+  subprocess_count: 2
+  output_bytes: 0
+  cache_hits: 0
+  cache_misses: 0
+  measurement_status: "command_count_only_no_wall_time_claim"
+  saved_research_control_invocations_per_local_runner_run: 1
+  saved_research_control_invocations_per_checkpoint_run: 1
+  performance_improvement_claimed: false
+output_paths:
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - "tests/test_run_full_research_control_validation.py"
+  - "tests/test_validation_orchestration.py"
+  - "research_control/tasks/RT-20260715-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260715-003/DDR-20260715-003.md"
+  - "research_control/tasks/RT-20260715-003/artifacts/runner_checkpoint_superset_consolidation_report.json"
+  - "research_control/tasks/RT-20260715-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260715-003/jobs/AJ-RT-20260715-003-001.yaml"
+  - "research_control/tasks/RT-20260715-003/jobs/completions/AJC-AJ-RT-20260715-003-001.yaml"
+  - "research_control/tasks/RT-20260715-003/roles/validator-engineer@0.2.0--RT-20260715-003.yaml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=WARN local_retrieval_status=WARN"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P2-T02 runner checkpoint superset consolidation --limit 10 --json | exit_code=0 | no direct result"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json | exit_code=0 | returned canonical v19 implementation plan object"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | expected checkpoint and research-control tooling route"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | initial boundary no_action and explicit plan task authorized"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --plan-only --json | exit_code=0 | 13 commands one research-control diff superset and explicit CI non-equivalence"
+  - ".venv/bin/python -m unittest focused runner checkpoint orchestration and equivalence tests | exit_code=0 | 20 tests PASS"
+  - ".venv/bin/python -m unittest tests/test_research_control.py before completion materialization | exit_code=1 | 139 tests PASS and one expected live transaction-state assertion pending task completion"
+  - ".venv/bin/python -m unittest tests/test_research_control.py after completion materialization | exit_code=0 | 140 tests PASS in 65.596 seconds"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260715-003-001 --no-commit | exit_code=0 | ready_to_commit sync_passes=1 total_commands=16 research_control_plain_working=0 research_control_diff_working=1 research_control_diff_staged=1"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P2-T01 is checkpointed PASS the worktree was clean and the v19 plan explicitly authorizes the dependency-ready P2-T02 packet."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The runner and checkpoint command-plan tests plus the P1 equivalence corpus prove the retained same-scope check-diff invocation preserves core and diff obligations."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Twenty focused tests passed including checkpoint ordering index restoration residue blocking synthetic no-commit and working-versus-staged identity checks."
+      - "The broader research-control suite passed all 140 tests after the transaction left active state."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "The governed checkpoint has not yet executed."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Policy-required task-index wiki and memory derivatives will be regenerated before checkpoint."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final bootstrap and validate-only remain required before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Final changed-path claim-language validation remains required before checkpoint."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260715-003/documentation_impact.yaml"
+  source_documentation_updated: false
+  no_op_rationale: "The canonical plan owns the P2-T02 orchestration contract and defers compatibility-wrapper renaming to P11; the executable report now declares CI non-equivalence while the command entry point remains unchanged."
+project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 task changes project-system validation orchestration and testing only. It does not authorize canonical ontology edit source-law adoption general EqSrc discharge matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation or any validator test receipt checkpoint commit performance measurement registry or generated artifact as physics proof."
+verdict: "v19_p2_t02_runner_checkpoint_superset_consolidation_pass_p2_t03_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P2-T02 removes two direct same-scope validator duplicates while preserving independent staged acceptance rollback and every non-target gate."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P2-T03 Validator Engineer claim-language consolidation AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 806
+    relationship_row_count: 4016
+    semantic_row_count: 806
+    vault_row_count: 806
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P2-T02 runner checkpoint superset consolidation --limit 10 --json"
+      query_type: "search"
+      query_text: "P2-T02 runner checkpoint superset consolidation"
+      returned_object_ids:
+        - ""
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_evidence_identity_policy_v1.md"
+      source_hash: "6afb60a18fee4983e302dc4b710505c32d9407f311ca4a03b7297d160d57fcf5"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ORCHESTRATION-MIGRATION-AND-ROLLBACK-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+      source_hash: "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation and diagnostics only and are not authority; canonical plan policy contracts equivalence report role runner checkpoint and test sources were inspected directly."

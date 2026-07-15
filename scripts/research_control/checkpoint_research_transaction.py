@@ -291,6 +291,7 @@ def block_report(
         "failed_commands": [result.as_dict() for result in command_results if result.returncode != 0],
         "validation_errors": validation_errors or [],
         "suggested_repair_role": suggested_repair_role,
+        "command_counts": checkpoint_command_counts(command_results),
         "staged": False,
         "committed": False,
     }
@@ -316,13 +317,42 @@ def post_sync_validation_commands() -> list[list[str]]:
             ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
             "--validate-only",
         ],
-        [".venv/bin/python", "scripts/research_control/validate_research_control.py"],
         [
             ".venv/bin/python",
             "scripts/research_control/validate_research_control.py",
             "--check-diff",
         ],
     ]
+
+
+def checkpoint_command_counts(command_results: Iterable[CommandResult]) -> dict[str, object]:
+    commands = [result.command for result in command_results]
+    research_control_commands = [
+        command
+        for command in commands
+        if "scripts/research_control/validate_research_control.py" in command
+    ]
+    plain_working = [
+        command for command in research_control_commands if "--check-diff" not in command
+    ]
+    diff_working = [
+        command
+        for command in research_control_commands
+        if "--check-diff" in command and "--staged-only" not in command
+    ]
+    diff_staged = [
+        command
+        for command in research_control_commands
+        if "--check-diff" in command and "--staged-only" in command
+    ]
+    return {
+        "total": len(commands),
+        "research_control_total": len(research_control_commands),
+        "research_control_plain_working": len(plain_working),
+        "research_control_diff_working": len(diff_working),
+        "research_control_diff_staged": len(diff_staged),
+        "working_and_staged_scopes_distinct": bool(diff_working and diff_staged),
+    }
 
 
 def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> dict[str, object]:
@@ -492,6 +522,7 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
             "active_task": job_row.get("task_id", ""),
             "active_agent_job": job_row.get("job_id", ""),
             "changed_paths": [],
+            "command_counts": checkpoint_command_counts(commands),
             "staged": False,
             "committed": False,
         }
@@ -510,6 +541,7 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
             "active_agent_job": job_row.get("job_id", ""),
             "changed_paths": [],
             "ignored_changed_paths": sorted(final_changes),
+            "command_counts": checkpoint_command_counts(commands),
             "staged": False,
             "committed": False,
         }
@@ -614,6 +646,7 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
             "execution_role_ref": execution_ref,
             "changed_paths": paths_to_stage,
             "sync_passes": sync_passes,
+            "command_counts": checkpoint_command_counts(commands),
             "staged": True,
             "committed": False,
             "command_results": [result.as_dict() for result in commands],
@@ -636,6 +669,7 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
         "execution_role_ref": execution_ref,
         "changed_paths": paths_to_stage,
         "sync_passes": sync_passes,
+        "command_counts": checkpoint_command_counts(commands),
         "commit_hash": rev_parse.stdout.strip() if rev_parse.returncode == 0 else "",
         "push": "not performed",
         "staged": True,

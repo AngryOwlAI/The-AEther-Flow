@@ -1,0 +1,45 @@
+task_id: "RT-20260715-003"
+task_type: "runner_checkpoint_superset_consolidation"
+status: "completed"
+created_at: "2026-07-15T14:04:30Z"
+updated_at: "2026-07-15T14:13:52Z"
+closed_at: "2026-07-15T14:13:52Z"
+parent_task_id: "RT-20260715-002"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260715-003"
+current_job_id: "AJ-RT-20260715-003-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260715-003"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested the dependency-ready separately bounded P2-T02 Validator Engineer runner and checkpoint same-scope consolidation AgentJob."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T02"
+  plan_task_name: "Consolidate local-runner and checkpoint same-scope research-control pairs"
+  recommendation_ids:
+    - "V19-R03"
+    - "V19-R12"
+    - "V19-R39"
+    - "V19-R43"
+objective: "Remove same-scope plain research-control execution from the local runner and checkpoint post-sync working scope while retaining the independent final staged boundary."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system runner and checkpoint validation consolidation only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p2_t02_runner_checkpoint_superset_consolidation_pass_p2_t03_dependency_unlocked_no_physics_delta"
+claim_boundary_id: "CB-V19-P2-T02-RUNNER-CHECKPOINT-001"
+claim_boundary:
+  allowed_scope: "Local runner and checkpoint post-sync research-control direct-superset consolidation focused tests command-count metadata task-local control records applicable registry rows and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifact: "research_control/tasks/RT-20260715-003/artifacts/runner_checkpoint_superset_consolidation_report.json"
+next_recommended_action: "After checkpoint success create one separately bounded P2-T03 Validator Engineer claim-language consolidation AgentJob."
+documentation_impact_id: "DI-RT-20260715-003-001"
+completion_id: "AJC-AJ-RT-20260715-003-001"
+notes: "P2-T02 removed one plain research-control invocation from the local runner and one from checkpoint post-sync working validation added command-count metadata and retained final staged-only diff memory rollback residue and physics boundaries."
