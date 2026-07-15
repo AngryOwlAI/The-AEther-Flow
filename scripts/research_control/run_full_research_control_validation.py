@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -23,6 +24,7 @@ from typing import Any
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
 REPORT_SCHEMA_ID = "research_control_local_ci_equivalent_report_v1"
+CLAIM_SUPERSEDENCE_PREDICATE_ID = "rc_diff_satisfies_claim_language_same_scope_v1"
 
 
 @dataclass(frozen=True)
@@ -83,12 +85,6 @@ def base_command_plan(include_smoke_tests: bool = False) -> list[ValidationComma
             authority_level="required-gate",
         ),
         ValidationCommand(
-            label="claim_language_changed_lint",
-            command=(py, "scripts/project_control/validate_claim_language.py", "--json", "--changed"),
-            purpose="Lint changed claim-language gate surfaces, including high-risk accepted wording.",
-            authority_level="required-gate",
-        ),
-        ValidationCommand(
             label="documentation_impact_validation",
             command=(py, "scripts/project_control/validate_documentation_impact.py", "--json"),
             purpose="Validate documentation-impact receipts for the current transaction.",
@@ -102,8 +98,8 @@ def base_command_plan(include_smoke_tests: bool = False) -> list[ValidationComma
         ),
         ValidationCommand(
             label="research_control_diff_validation",
-            command=(py, "scripts/research_control/validate_research_control.py", "--check-diff"),
-            purpose="Validate research-control consistency and current changed paths against the active AgentJob allowlist.",
+            command=(py, "scripts/research_control/validate_research_control.py", "--check-diff", "--json"),
+            purpose="Validate research-control consistency and current changed paths while satisfying the same-scope changed-claim obligation.",
             authority_level="required-gate",
         ),
         ValidationCommand(
@@ -166,6 +162,51 @@ def tail(text: str, limit: int) -> str:
     return text[-limit:]
 
 
+def claim_language_summary(stdout: str) -> dict[str, Any]:
+    try:
+        payload = json.loads(stdout)
+    except (json.JSONDecodeError, TypeError):
+        hard_ids = re.findall(r"claim-language hard failure ([a-z0-9_]+)", stdout)
+        warning_ids = re.findall(r"claim-language warning ([a-z0-9_]+)", stdout)
+        if not hard_ids and not warning_ids and "Research-control validation" not in stdout:
+            return {
+                "status": "UNAVAILABLE",
+                "finding_count": 0,
+                "hard_fail_count": 0,
+                "warning_count": 0,
+                "finding_ids": [],
+            }
+        return {
+            "status": "FAIL" if hard_ids else "PASS",
+            "finding_count": len(hard_ids) + len(warning_ids),
+            "hard_fail_count": len(hard_ids),
+            "warning_count": len(warning_ids),
+            "finding_ids": sorted(
+                {f"claim_language_changed:{class_id}" for class_id in hard_ids + warning_ids}
+            ),
+        }
+    findings = [
+        finding
+        for finding in payload.get("findings", [])
+        if finding.get("gate_id") == "claim_language_changed"
+    ]
+    hard_findings = [
+        finding
+        for finding in findings
+        if str(finding.get("severity", "")).startswith("hard_fail_")
+        or finding.get("severity") == "blocking"
+    ]
+    return {
+        "status": "FAIL" if hard_findings else "PASS",
+        "finding_count": len(findings),
+        "hard_fail_count": len(hard_findings),
+        "warning_count": len(findings) - len(hard_findings),
+        "finding_ids": sorted(
+            {str(finding.get("finding_id", "")) for finding in findings if finding.get("finding_id")}
+        ),
+    }
+
+
 def run_command(command: ValidationCommand, repo_root: Path, tail_chars: int) -> dict[str, Any]:
     completed = subprocess.run(
         command.command,
@@ -175,7 +216,7 @@ def run_command(command: ValidationCommand, repo_root: Path, tail_chars: int) ->
         stderr=subprocess.PIPE,
         check=False,
     )
-    return {
+    result = {
         "label": command.label,
         "command": list(command.command),
         "purpose": command.purpose,
@@ -187,6 +228,14 @@ def run_command(command: ValidationCommand, repo_root: Path, tail_chars: int) ->
         "stdout_tail": tail(completed.stdout, tail_chars),
         "stderr_tail": tail(completed.stderr, tail_chars),
     }
+    if command.label == "research_control_diff_validation":
+        result["satisfied_obligations"] = [
+            "research_control_core",
+            "research_control_diff",
+            "claim_language_changed",
+        ]
+        result["claim_language_summary"] = claim_language_summary(completed.stdout)
+    return result
 
 
 def coverage_map(commands: list[dict[str, Any]]) -> dict[str, bool]:
@@ -198,7 +247,7 @@ def coverage_map(commands: list[dict[str, Any]]) -> dict[str, bool]:
             research_control_diff
             and "compact_current_frontier_check" in labels
         ),
-        "claim_language_lint": "claim_language_changed_lint" in labels,
+        "claim_language_lint": research_control_diff,
         "research_control_validation": research_control_diff,
         "research_control_core_obligation": research_control_diff,
         "research_control_diff_obligation": research_control_diff,
@@ -213,8 +262,8 @@ def coverage_map(commands: list[dict[str, Any]]) -> dict[str, bool]:
         "task_index_validation": "task_index_validation" in labels,
         "claim_graph_validation": "claim_graph_validation" in labels,
         "route_signature_extraction_if_implemented": "route_signature_extraction" in labels,
-        "no_bare_accepted_high_risk_rows": "claim_language_changed_lint" in labels,
-        "no_premature_efe_route": "claim_language_changed_lint" in labels and research_control_diff,
+        "no_bare_accepted_high_risk_rows": research_control_diff,
+        "no_premature_efe_route": research_control_diff,
         "documentation_impact": "documentation_impact_validation" in labels,
         "diff_allowlist_check": research_control_diff,
         "route_orbit_advisory": "route_orbit_advisory" in labels,
@@ -249,6 +298,10 @@ def build_report(
         for result in results
         if result["returncode"] != 0 and result["advisory"]
     ]
+    diff_result = next(
+        (result for result in results if result["label"] == "research_control_diff_validation"),
+        {},
+    )
     return {
         "schema_id": REPORT_SCHEMA_ID,
         "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
@@ -264,6 +317,12 @@ def build_report(
         "required_failure_labels": required_failures,
         "advisory_failure_labels": advisory_failures,
         "required_check_coverage": coverage_map(commands),
+        "claim_language_obligation": {
+            "predicate_id": CLAIM_SUPERSEDENCE_PREDICATE_ID,
+            "satisfied_by": "research_control_diff_validation",
+            "same_scope_required": True,
+            "summary": diff_result.get("claim_language_summary", {}),
+        },
         "commands": results,
     }
 
@@ -301,6 +360,12 @@ def main(argv: list[str] | None = None) -> int:
             "operational_receipt_only": True,
             "no_physics_delta": True,
             "required_check_coverage": coverage_map(command_plan(args.include_smoke_tests)),
+            "claim_language_obligation": {
+                "predicate_id": CLAIM_SUPERSEDENCE_PREDICATE_ID,
+                "satisfied_by": "research_control_diff_validation",
+                "same_scope_required": True,
+                "status": "planned",
+            },
             "commands": command_plan(args.include_smoke_tests),
         }
         write_report(report, args.output)

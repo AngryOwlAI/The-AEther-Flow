@@ -27,6 +27,7 @@ if str(PROJECT_CONTROL_SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_CONTROL_SCRIPT_DIR))
 
 from project_improvement_handoff_validation import conditional_checkpoint_sidecar_paths  # noqa: E402
+from run_full_research_control_validation import claim_language_summary  # noqa: E402
 
 GLOBAL_SYNC_ALLOWLIST = {
     "registries/FILE_OBJECT_REGISTRY.csv",
@@ -42,6 +43,7 @@ GLOBAL_SYNC_ALLOWLIST = {
     "wiki/indexes/**",
 }
 MAX_STAGED_SYNC_PASSES = 3
+CLAIM_SUPERSEDENCE_PREDICATE_ID = "rc_diff_satisfies_claim_language_same_scope_v1"
 
 
 @dataclass
@@ -302,12 +304,6 @@ def post_sync_validation_commands() -> list[list[str]]:
         [".venv/bin/python", "scripts/project_control/classify_project_changes.py", "--json"],
         [
             ".venv/bin/python",
-            "scripts/project_control/validate_claim_language.py",
-            "--json",
-            "--changed",
-        ],
-        [
-            ".venv/bin/python",
             "scripts/project_control/collect_project_improvement_signals.py",
             "--validate-emitted",
         ],
@@ -326,7 +322,8 @@ def post_sync_validation_commands() -> list[list[str]]:
 
 
 def checkpoint_command_counts(command_results: Iterable[CommandResult]) -> dict[str, object]:
-    commands = [result.command for result in command_results]
+    results = list(command_results)
+    commands = [result.command for result in results]
     research_control_commands = [
         command
         for command in commands
@@ -345,6 +342,20 @@ def checkpoint_command_counts(command_results: Iterable[CommandResult]) -> dict[
         for command in research_control_commands
         if "--check-diff" in command and "--staged-only" in command
     ]
+    standalone_claim_commands = [
+        command
+        for command in commands
+        if "scripts/project_control/validate_claim_language.py" in command
+    ]
+    integrated_claim_summaries = [
+        {
+            "tree_state": "staged" if "--staged-only" in result.command else "working",
+            **claim_language_summary(result.stdout),
+        }
+        for result in results
+        if "scripts/research_control/validate_research_control.py" in result.command
+        and "--check-diff" in result.command
+    ]
     return {
         "total": len(commands),
         "research_control_total": len(research_control_commands),
@@ -352,6 +363,15 @@ def checkpoint_command_counts(command_results: Iterable[CommandResult]) -> dict[
         "research_control_diff_working": len(diff_working),
         "research_control_diff_staged": len(diff_staged),
         "working_and_staged_scopes_distinct": bool(diff_working and diff_staged),
+        "claim_language_standalone_working": len(
+            [command for command in standalone_claim_commands if "--staged" not in command]
+        ),
+        "claim_language_standalone_staged": len(
+            [command for command in standalone_claim_commands if "--staged" in command]
+        ),
+        "claim_language_obligation_satisfied_by": "research_control_diff",
+        "claim_language_supersedence_predicate_id": CLAIM_SUPERSEDENCE_PREDICATE_ID,
+        "claim_language_integrated_summaries": integrated_claim_summaries,
     }
 
 
@@ -556,20 +576,6 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
     if staged_project_classifier.returncode != 0:
         return rollback_block("staged project-change classification failed", final_changes)
 
-    staged_claim_language = run_command([
-        ".venv/bin/python",
-        "scripts/project_control/validate_claim_language.py",
-        "--json",
-        "--staged",
-    ])
-    commands.append(staged_claim_language)
-    if staged_claim_language.returncode != 0:
-        return rollback_block(
-            "staged claim-language validation failed",
-            final_changes,
-            suggested_repair_role="validator-engineer",
-        )
-
     staged_project_signals = run_command([
         ".venv/bin/python",
         "scripts/project_control/collect_project_improvement_signals.py",
@@ -601,6 +607,7 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
         "scripts/research_control/validate_research_control.py",
         "--check-diff",
         "--staged-only",
+        "--json",
     ])
     commands.append(staged_check)
     if staged_check.returncode != 0:

@@ -42,6 +42,24 @@ CLAIM_WARNING_RE = re.compile(
     r"claim-language (?:warning )?(?P<class_id>[a-z0-9_]+).*"
     r"\((?P<severity>warn_[^)]+)\)"
 )
+CLAIM_SUPERSEDENCE_EQUAL_FIELDS = (
+    "implementation_digest",
+    "environment_digest",
+    "tree_hash",
+    "tree_state",
+    "base_ref",
+    "staged_flag",
+    "path_set_digest",
+    "taxonomy_digest",
+    "reviewed_context_policy_digest",
+    "severity_mapping_digest",
+    "claim_configuration_digest",
+)
+CLAIM_SUPERSEDENCE_REQUIRED_TRUE = (
+    "integrated_linter_executed",
+    "raw_claim_failures_preserved",
+    "p1_t03_equivalence_proved",
+)
 
 
 def load_module(name: str, path: Path):
@@ -61,6 +79,36 @@ VALIDATOR = load_module(
     RESEARCH_SCRIPT_DIR / "validate_research_control.py",
 )
 CLAIM_LINTER = VALIDATOR.claim_language_linter
+
+
+def claim_supersedence_identity(*, staged: bool = False) -> dict[str, Any]:
+    tree_state = "index" if staged else "working"
+    return {
+        "implementation_digest": "validate_claim_language:changed_or_staged:v1",
+        "environment_digest": "repository_python_environment",
+        "tree_hash": f"same_{tree_state}_tree",
+        "tree_state": tree_state,
+        "base_ref": "HEAD",
+        "staged_flag": staged,
+        "path_set_digest": f"same_{tree_state}_claim_paths",
+        "taxonomy_digest": "claim_language_linter_taxonomy_v1",
+        "reviewed_context_policy_digest": "claim_language_reviewed_contexts_v1",
+        "severity_mapping_digest": "claim_language_severity_mapping_v1",
+        "claim_configuration_digest": "claim_language_default_configuration_v1",
+        "integrated_linter_executed": True,
+        "raw_claim_failures_preserved": True,
+        "p1_t03_equivalence_proved": True,
+    }
+
+
+def claim_supersedence_eligible(
+    standalone: dict[str, Any],
+    integrated: dict[str, Any],
+) -> bool:
+    return all(
+        standalone.get(field) == integrated.get(field)
+        for field in CLAIM_SUPERSEDENCE_EQUAL_FIELDS
+    ) and all(integrated.get(field) is True for field in CLAIM_SUPERSEDENCE_REQUIRED_TRUE)
 
 
 def sha256_file(path: Path) -> str:
@@ -1088,6 +1136,23 @@ class ValidationEquivalenceTests(unittest.TestCase):
         self.assertTrue(audit["core_failure_preserved"])
         self.assertTrue(audit["diff_gate_executed"])
         self.assertTrue(audit["diff_failure_preserved"])
+
+    def test_claim_supersedence_predicate_fails_closed_on_every_identity_difference(self) -> None:
+        standalone = claim_supersedence_identity()
+        integrated = claim_supersedence_identity()
+        self.assertTrue(claim_supersedence_eligible(standalone, integrated))
+
+        for field in CLAIM_SUPERSEDENCE_EQUAL_FIELDS:
+            mismatched = dict(integrated)
+            mismatched[field] = not mismatched[field] if isinstance(mismatched[field], bool) else "different"
+            with self.subTest(field=field):
+                self.assertFalse(claim_supersedence_eligible(standalone, mismatched))
+
+        for field in CLAIM_SUPERSEDENCE_REQUIRED_TRUE:
+            missing_proof = dict(integrated)
+            missing_proof[field] = False
+            with self.subTest(field=field):
+                self.assertFalse(claim_supersedence_eligible(standalone, missing_proof))
 
     def test_report_passes_and_unlocks_future_p1_t04_dependency(self) -> None:
         report = build_report()

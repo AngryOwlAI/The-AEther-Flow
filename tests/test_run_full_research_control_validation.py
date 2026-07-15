@@ -35,7 +35,7 @@ class LocalCiEquivalentValidationTests(unittest.TestCase):
         self.assertIn("dependency_graph_check", labels)
         self.assertIn("task_index_validation", labels)
         self.assertIn("claim_graph_validation", labels)
-        self.assertIn("claim_language_changed_lint", labels)
+        self.assertNotIn("claim_language_changed_lint", labels)
         self.assertIn("documentation_impact_validation", labels)
         self.assertNotIn("research_control_validation", labels)
         self.assertIn("research_control_diff_validation", labels)
@@ -45,6 +45,7 @@ class LocalCiEquivalentValidationTests(unittest.TestCase):
         self.assertTrue(coverage["active_state_sidecar_validation"])
         self.assertTrue(coverage["research_control_core_obligation"])
         self.assertTrue(coverage["research_control_diff_obligation"])
+        self.assertTrue(coverage["claim_language_lint"])
         self.assertNotIn("repository_smoke_tests", labels)
         self.assertTrue(all(coverage.values()))
 

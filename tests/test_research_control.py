@@ -1334,15 +1334,70 @@ class ResearchControlTests(unittest.TestCase):
             )
         )
 
-    def test_checkpoint_post_sync_validation_runs_claim_language_gate(self) -> None:
-        self.assertIn(
+    def test_checkpoint_post_sync_claim_obligation_uses_integrated_diff_gate(self) -> None:
+        commands = self.checkpoint.post_sync_validation_commands()
+        self.assertNotIn(
             [
                 ".venv/bin/python",
                 "scripts/project_control/validate_claim_language.py",
                 "--json",
                 "--changed",
             ],
-            self.checkpoint.post_sync_validation_commands(),
+            commands,
+        )
+        self.assertEqual(
+            (SCRIPT_DIR / "checkpoint_research_transaction.py")
+            .read_text(encoding="utf-8")
+            .count("scripts/project_control/validate_claim_language.py"),
+            1,
+        )
+
+        working_diff = [
+            ".venv/bin/python",
+            "scripts/research_control/validate_research_control.py",
+            "--check-diff",
+        ]
+        staged_diff = [*working_diff, "--staged-only", "--json"]
+        working_output = (
+            "Research-control validation passed.\n"
+            "Warning: README.md:1: claim-language warning reviewed_warning text (warn_review)\n"
+        )
+        staged_output = json.dumps(
+            {
+                "findings": [
+                    {
+                        "gate_id": "claim_language_changed",
+                        "finding_id": "claim_language_changed:public_overclaim",
+                        "severity": "hard_fail_current_public",
+                    }
+                ]
+            }
+        )
+        counts = self.checkpoint.checkpoint_command_counts(
+            [
+                self.checkpoint.CommandResult(working_diff, 0, working_output, ""),
+                self.checkpoint.CommandResult(staged_diff, 1, staged_output, ""),
+            ]
+        )
+        self.assertEqual(counts["claim_language_standalone_working"], 0)
+        self.assertEqual(counts["claim_language_standalone_staged"], 0)
+        self.assertEqual(counts["research_control_diff_working"], 1)
+        self.assertEqual(counts["research_control_diff_staged"], 1)
+        self.assertEqual(
+            [summary["finding_count"] for summary in counts["claim_language_integrated_summaries"]],
+            [1, 1],
+        )
+        self.assertEqual(
+            counts["claim_language_integrated_summaries"][1]["finding_ids"],
+            ["claim_language_changed:public_overclaim"],
+        )
+        self.assertIn(
+            [
+                ".venv/bin/python",
+                "scripts/research_control/validate_research_control.py",
+                "--check-diff",
+            ],
+            commands,
         )
 
     def test_checkpoint_stageable_paths_include_tracked_local_derivative(self) -> None:

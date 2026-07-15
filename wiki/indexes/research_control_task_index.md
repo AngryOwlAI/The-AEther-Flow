@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `c2e52b5dc7a42fb84a359dd470db8d2b1a7b509a6066ba8463714fcf2607a37d`
-- Generated-at source timestamp: `2026-07-15T14:04:30Z`
-- Row count: `899`
+- Source fingerprint: `21cdd3dd24615aac26d7ab072cdaca213d0dd2b09df974d363fbcb728c0cea20`
+- Generated-at source timestamp: `2026-07-15T14:44:40Z`
+- Row count: `900`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260715-004|RT-20260715-003|2026-07-15T14:44:40Z|2026-07-15T15:03:10Z|changed_claim_superset_consolidation|completed|none|Project-system claim-language validation orchestration only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|On PASS checkpoint this transaction and route one separately bounded P2-T04 Project-Control Maintainer obligation-wording update.|PASS|research_control/tasks/RT-20260715-004/jobs/completions/AJC-AJ-RT-20260715-004-001.yaml|
 |RT-20260715-003|RT-20260715-002|2026-07-15T14:04:30Z|2026-07-15T14:13:52Z|runner_checkpoint_superset_consolidation|completed|none|Project-system runner and checkpoint validation consolidation only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After checkpoint success create one separately bounded P2-T03 Validator Engineer claim-language consolidation AgentJob.|PASS|research_control/tasks/RT-20260715-003/jobs/completions/AJC-AJ-RT-20260715-003-001.yaml|
 |RT-20260715-002|RT-20260715-001|2026-07-15T13:05:22Z|2026-07-15T13:48:59Z|make_research_control_superset_consolidation|completed|none|Project-system Make validation consolidation only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After checkpoint success create one separately bounded P2-T02 Validator Engineer runner and checkpoint same-scope consolidation AgentJob.|PASS|research_control/tasks/RT-20260715-002/jobs/completions/AJC-AJ-RT-20260715-002-001.yaml|
 |RT-20260715-001|RT-20260713-003|2026-07-15T02:26:57Z|2026-07-15T02:26:57Z|validation_migration_rollback_policy|completed|none|Project-system migration and rollback policy only; no derivation milestone is advanced.|process-integrity-auditor@0.1.0|false|false|1|After checkpoint success create one separately bounded P2-T01 Validator Engineer direct-superset consolidation AgentJob under legacy_consolidated authority.|PASS|research_control/tasks/RT-20260715-001/jobs/completions/AJC-AJ-RT-20260715-001-001.yaml|

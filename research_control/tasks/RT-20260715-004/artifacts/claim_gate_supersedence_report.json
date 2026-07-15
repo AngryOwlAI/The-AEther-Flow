@@ -1,0 +1,124 @@
+{
+  "schema_id": "v19_p2_t03_claim_gate_supersedence_report_v1",
+  "task_id": "RT-20260715-004",
+  "job_id": "AJ-RT-20260715-004-001",
+  "plan_task_id": "P2-T03",
+  "generated_at": "2026-07-15T15:03:10Z",
+  "status": "PASS",
+  "migration_epoch": "legacy_consolidated",
+  "supersedence_contract": {
+    "contract_id": "SUP-RC-DIFF-CLAIM-V1",
+    "predicate_id": "rc_diff_satisfies_claim_language_same_scope_v1",
+    "source_gate_id": "research_control_diff",
+    "target_gate_id": "claim_language_changed",
+    "fail_closed": true,
+    "required_equal_fields": [
+      "implementation_digest",
+      "environment_digest",
+      "tree_hash",
+      "tree_state",
+      "base_ref",
+      "staged_flag",
+      "path_set_digest",
+      "taxonomy_digest",
+      "reviewed_context_policy_digest",
+      "severity_mapping_digest",
+      "claim_configuration_digest"
+    ],
+    "required_true_fields": [
+      "integrated_linter_executed",
+      "raw_claim_failures_preserved",
+      "p1_t03_equivalence_proved"
+    ]
+  },
+  "invocation_counts": {
+    "local_runner": {
+      "standalone_before": 1,
+      "standalone_after": 0,
+      "integrated_diff_after": 1,
+      "tree_state": "working"
+    },
+    "checkpoint_working": {
+      "standalone_before": 1,
+      "standalone_after": 0,
+      "integrated_diff_after": 1,
+      "tree_state": "working"
+    },
+    "checkpoint_staged": {
+      "standalone_before": 1,
+      "standalone_after": 0,
+      "integrated_diff_after": 1,
+      "tree_state": "index"
+    },
+    "working_scope_satisfies_staged_scope": false,
+    "eligible_duplicate_execution_reduction": 3
+  },
+  "finding_summary_contract": {
+    "satisfied_obligation": "claim_language_changed",
+    "satisfied_by": "research_control_diff",
+    "fields": [
+      "status",
+      "finding_count",
+      "hard_fail_count",
+      "warning_count",
+      "finding_ids"
+    ],
+    "working_and_staged_summaries_remain_separate": true
+  },
+  "equivalence_evidence": {
+    "p1_report_path": "research_control/tasks/RT-20260713-002/artifacts/legacy_consolidated_equivalence_report.json",
+    "p1_report_sha256": "6da0da2d76d16f590cc34119d02038d4f090af833f5aad1eb16664750eaa3512",
+    "fixture_count": 11,
+    "semantic_mismatch_fixture_count": 0,
+    "hard_finding_disappearance_count": 0,
+    "warning_finding_disappearance_count": 0,
+    "taxonomy_class_count": 42,
+    "negative_identity_field_count": 14,
+    "negative_identity_fail_closed_count": 14,
+    "normalized_fixture_classes": [
+      "public",
+      "control",
+      "historical",
+      "safe",
+      "configuration_error",
+      "diff_boundary"
+    ]
+  },
+  "focused_validation": {
+    "claim_language_taxonomy_equivalence_runner_orchestration_test_count": 55,
+    "checkpoint_and_static_control_targeted_test_count": 2,
+    "status": "PASS"
+  },
+  "source_hashes": {
+    "standalone_claim_validator_sha256": "bd6705ff3f9dd11b77c441510503dad0a49f06cd2a862a25a8aac4e5b32fb65b",
+    "integrated_research_control_validator_sha256": "34d7fdd6d6e471dd4747e01ceccb50e720086094f1b837c5bc85f1427bcf44bb",
+    "checkpoint_runner_sha256": "27e383341952ccd3f7c04b22aca3fca44fa5c43eb2373c0b3b44854dc8a3552c",
+    "local_runner_sha256": "473f125e07cbf16267c5b19ba9eb81e76baa6bc730fa68b2978e023ccb3ede5b",
+    "equivalence_test_sha256": "b0af0e098ccc8300f9a421bb6b71bf6059268b3ecb28464eb17962990d536825",
+    "checkpoint_test_sha256": "490f30df23adfdc2afb0aa4ecf3d6be4830ca9b1c58ae2304670aae63cb9334c",
+    "runner_test_sha256": "92f4c7d323c967dbcee6b4a7036c2beb295c378036519486a51c5c71062f7fff",
+    "taxonomy_sha256": "904c677a846d62f9260e3c0e7c49f4426c39f28ffc53aab20dfb169c9cafcc3f",
+    "reviewed_contexts_sha256": "dcabd34c3e676a2131abab7af63b04834c74db2b228ace97a56e0450844e2df8"
+  },
+  "preserved_boundaries": {
+    "standalone_editor_facing_command_retained": true,
+    "non_diff_profiles_changed": false,
+    "working_and_staged_scopes_distinct": true,
+    "claim_taxonomy_changed": false,
+    "reviewed_context_policy_changed": false,
+    "severity_mapping_changed": false,
+    "path_filtering_changed": false,
+    "base_ref_semantics_changed": false,
+    "final_staged_diff_gate_removed": false,
+    "index_restoration_changed": false,
+    "rollback_behavior_changed": false,
+    "ci_changed": false,
+    "make_profiles_changed": false,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "ordinary_research_route_preserved": "EqSrc_family_closure_repair_or_stress",
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  },
+  "verdict": "v19_p2_t03_changed_claim_supersedence_pass_p2_t04_dependency_unlocked_no_physics_delta"
+}

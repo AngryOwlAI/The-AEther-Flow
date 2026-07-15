@@ -7,9 +7,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 - Schema: `research_dependency_graph_v1`
 - Generated from tracked state as of: `2026-07-09T03:11:04Z`
-- Source fingerprint: `8e278c92c45428ab6f814d9e27fd255df8e6452cb012e6c2870dd145974c420e`
-- Nodes: `17701`
-- Edges: `62964`
+- Source fingerprint: `16260c61a80cea46e8c7f18ceaac3199ce51d2c3f0e64f7b89b755b80761cfc0`
+- Nodes: `17746`
+- Edges: `63159`
 
 ## Source Counts
 
@@ -17,7 +17,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 893 |
+| `completion_yaml` | 896 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 893 |
+| `agent_job` | `support_only` | 896 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 9446 |
-| `blocked_burden` | `blocked` | 3217 |
-| `claim_boundary` | `support_only` | 850 |
+| `artifact` | `support_only` | 9459 |
+| `blocked_burden` | `blocked` | 3233 |
+| `claim_boundary` | `support_only` | 853 |
 | `draft_control_candidate` | `draft_control` | 529 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 109 |
 | `gate_chair_verdict` | `human_gated` | 31 |
 | `handoff` | `support_only` | 740 |
-| `human_gated_object` | `human_gated` | 306 |
+| `human_gated_object` | `human_gated` | 313 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 291 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 833 |
+| `task` | `support_only` | 836 |
 
 ## Frontier Table
 
@@ -158,8 +158,8 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:balance_flux_as_bianchi_identity` | Blocked claim: balance/flux as Bianchi identity | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:balance_ledger_as_stress_energy_tensor` | Blocked claim: balance ledger as stress energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:bare_accepted_high_risk_rendering` | Blocked claim: bare accepted high-risk rendering | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:base_ref_semantics_change` | Blocked claim: base-ref semantics change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:baseline_failure_as_global_validation_regression` | Blocked claim: baseline failure as global validation regression | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:baseline_reconciliation_as_benchmark_promotion` | Blocked claim: baseline reconciliation as benchmark promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
