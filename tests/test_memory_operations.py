@@ -3,6 +3,7 @@ from __future__ import annotations
 import sys
 import tempfile
 import unittest
+from types import SimpleNamespace
 from unittest import mock
 from pathlib import Path
 
@@ -11,6 +12,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_DIR = REPO_ROOT / ".codex/skills/project-memory-system/scripts"
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
+ADAPTER_DIR = REPO_ROOT / "scripts/validation/adapters"
+if str(ADAPTER_DIR) not in sys.path:
+    sys.path.insert(0, str(ADAPTER_DIR))
 
 from memory_operations import (  # noqa: E402
     MemoryCoreCheck,
@@ -21,6 +25,8 @@ from memory_operations import (  # noqa: E402
     memory_sync,
     memory_validate_core,
 )
+import local_retrieval as local_retrieval_adapter  # noqa: E402
+import publication as publication_adapter  # noqa: E402
 
 
 class MiniatureMemoryBackend:
@@ -246,20 +252,34 @@ class MemoryOperationsTests(unittest.TestCase):
             load_snapshot=lambda: snapshot,
             checks=(MemoryCoreCheck("memory_core.synthetic", core_error),),
         )
+        local_report = ValidationReport(
+            gate_id="local_retrieval_health",
+            check_ids=["local_retrieval_health.freshness"],
+        )
+        local_report.warning(
+            "local retrieval warning",
+            finding_id="local_retrieval_health.local_cache_only",
+        )
+        publication_report = ValidationReport(
+            gate_id="publication_validation",
+            check_ids=["publication_validation.process"],
+        )
+        publication_report.error(
+            "publication failure",
+            finding_id="publication_validation.process.error",
+        )
         with (
             mock.patch.object(memory_system, "_memory_core_checks", return_value=operations.checks),
             mock.patch.object(memory_system, "load_memory_core_snapshot", return_value=snapshot),
             mock.patch.object(
                 memory_system,
-                "validate_local_retrieval_freshness",
-                side_effect=lambda report: report.warning("local retrieval warning"),
+                "local_retrieval_health",
+                return_value=local_report,
             ),
             mock.patch.object(
                 memory_system,
-                "validate_publication_docs",
-                side_effect=lambda report, strict_docs=False: report.error(
-                    "publication failure"
-                ),
+                "publication_validation",
+                return_value=publication_report,
             ),
         ):
             core_report = memory_system.memory_validate_core(snapshot)
@@ -276,6 +296,66 @@ class MemoryOperationsTests(unittest.TestCase):
             ["core hard failure", "publication failure"],
         )
         self.assertEqual(legacy_report.warnings, ["local retrieval warning"])
+        self.assertEqual(legacy_report.gate_id, "memory_legacy_composite")
+        self.assertEqual(
+            legacy_report.check_ids,
+            [
+                "memory_core.synthetic",
+                "local_retrieval_health.freshness",
+                "publication_validation.process",
+            ],
+        )
+
+    def test_publication_adapter_preserves_blocking_and_advisory_findings(self) -> None:
+        source_report = SimpleNamespace(
+            errors=["publication error"],
+            warnings=["publication warning"],
+        )
+        root = Path("/tmp/publication-fixture")
+        with mock.patch.object(
+            publication_adapter,
+            "validate_publication_process",
+            return_value=source_report,
+        ) as validate:
+            report = publication_adapter.publication_validation(root)
+
+        validate.assert_called_once_with(root)
+        self.assertEqual(report.gate_id, "publication_validation")
+        self.assertEqual(report.counts["errors"], 1)
+        self.assertEqual(report.counts["warnings"], 1)
+        self.assertEqual(
+            [finding.finding_id for finding in report.findings],
+            [
+                "publication_validation.process.error",
+                "publication_validation.process.warning",
+            ],
+        )
+        self.assertFalse(report.ok)
+
+    def test_local_retrieval_is_advisory_unless_explicitly_required(self) -> None:
+        records = [
+            {
+                "category": "local_cache_only",
+                "message": "stale local mirror",
+            }
+        ]
+        with mock.patch.object(
+            local_retrieval_adapter,
+            "local_retrieval_warning_records",
+            return_value=records,
+        ):
+            advisory = local_retrieval_adapter.local_retrieval_health(REPO_ROOT)
+            required = local_retrieval_adapter.local_retrieval_health(
+                REPO_ROOT,
+                required=True,
+            )
+
+        self.assertTrue(advisory.ok)
+        self.assertEqual(advisory.errors, [])
+        self.assertEqual(advisory.warnings, ["Local retrieval freshness: stale local mirror"])
+        self.assertFalse(required.ok)
+        self.assertEqual(required.warnings, [])
+        self.assertEqual(required.errors, ["Local retrieval freshness: stale local mirror"])
 
 
 if __name__ == "__main__":

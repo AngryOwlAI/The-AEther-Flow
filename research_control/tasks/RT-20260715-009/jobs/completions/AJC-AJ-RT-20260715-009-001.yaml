@@ -1,0 +1,194 @@
+job_id: "AJ-RT-20260715-009-001"
+completion_id: "AJC-AJ-RT-20260715-009-001"
+task_id: "RT-20260715-009"
+decision_id: "DDR-20260715-009"
+role_id: "memory-system-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "memory-system-maintainer@0.2.0--RT-20260715-009"
+status: "completed"
+created_at: "2026-07-15T22:39:35Z"
+started_at: "2026-07-15T22:39:35Z"
+completed_at: "2026-07-15T22:56:16Z"
+objective: "Create independently selectable publication and local-retrieval validation gates and compose them through the legacy wrapper without changing memory-core or ordinary research authority."
+completion_summary: "Completed v19 P3-T03 by creating independently selectable publication_validation and local_retrieval_health gates with explicit ownership structured receipts advisory local-cache behavior and legacy composite compatibility."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/memory-system-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/validation_obligation_resolution_policy_v1.md"
+  - "research_control/tasks/RT-20260715-008/jobs/completions/AJC-AJ-RT-20260715-008-001.yaml"
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".codex/skills/project-memory-system/scripts/memory_operations.py"
+  - ".codex/skills/project-memory-system/scripts/obsidian_wiki_lib.py"
+  - ".codex/skills/project-memory-system/scripts/query_memory.py"
+  - ".codex/skills/project-memory-system/scripts/lint_obsidian_vault.py"
+  - "scripts/validate_publication_process.py"
+  - "tests/test_memory_operations.py"
+  - "tests/test_memory_system.py"
+  - "tests/test_publication_process_validation.py"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P3-T03"
+  recommendation_ids:
+    - "V19-R07"
+    - "V19-R09"
+    - "V19-R32"
+  migration_epoch: "legacy_consolidated"
+  implemented_task_scope: "Independent publication and local-retrieval validation gates explicit compatibility composition focused fixtures and ownership evidence only."
+  completed_v19_tasks_to_date:
+    - "P0-T01 through P3-T03"
+  downstream_tasks_not_implemented:
+    - "P3-T04 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p3_t03_memory_validation_ownership_separation"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P3-T03"
+  coverage_summary: "V19-R07 V19-R09 and V19-R32 receive direct validation ownership separation explicit gate IDs advisory local retrieval and legacy composition coverage."
+physics_progress_status:
+  status: "project_system_memory_validation_ownership_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P3-T03 changes memory validation ownership only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Memory validation adapters and receipts are operational evidence only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+memory_validation_ownership:
+  status: "PASS"
+  report_path: "research_control/tasks/RT-20260715-009/artifacts/memory_validation_ownership_report.md"
+  receipt_path: "research_control/tasks/RT-20260715-009/artifacts/memory_validation_ownership_receipt.json"
+  memory_core_gate_id: "memory_core"
+  publication_gate_id: "publication_validation"
+  local_retrieval_gate_id: "local_retrieval_health"
+  legacy_composite_gate_id: "memory_legacy_composite"
+  memory_core_check_count: 13
+  legacy_composite_check_count: 15
+  publication_blocking: true
+  local_retrieval_advisory_by_default: true
+  local_retrieval_required_mode_available: true
+  local_retrieval_in_core: false
+  publication_in_core: false
+  legacy_validate_all_composite_preserved: true
+output_paths:
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".codex/skills/project-memory-system/scripts/memory_operations.py"
+  - "scripts/validation/adapters/publication.py"
+  - "scripts/validation/adapters/local_retrieval.py"
+  - "tests/test_memory_operations.py"
+  - "research_control/tasks/RT-20260715-009/artifacts/memory_validation_ownership_report.md"
+  - "research_control/tasks/RT-20260715-009/artifacts/memory_validation_ownership_receipt.json"
+  - "research_control/tasks/RT-20260715-009/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260715-009/jobs/completions/AJC-AJ-RT-20260715-009-001.yaml"
+command_results:
+  - ".venv/bin/python -m unittest tests/test_memory_operations.py | exit_code=0 | 7 focused synchronization core composition publication ownership and local-retrieval advisory fixtures PASS"
+  - ".venv/bin/python -m unittest tests/test_publication_process_validation.py | exit_code=0 | all 12 independent publication fixtures PASS"
+  - ".venv/bin/python -m unittest tests/test_memory_system.py | exit_code=0 | all 53 existing memory-system fixtures PASS"
+  - ".venv/bin/python scripts/validation/adapters/publication.py --json | exit_code=0 | gate_id=publication_validation checks=1 errors=0 warnings=0 findings=0"
+  - ".venv/bin/python scripts/validation/adapters/local_retrieval.py --json | exit_code=0 | gate_id=local_retrieval_health checks=1 errors=0 warnings=0 findings=0"
+  - "bootstrap_memory_system direct gate comparison | exit_code=0 | memory_core checks=13 publication checks=1 local retrieval checks=1 legacy composite checks=15 all PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | Validation PASS"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=1 | 620 tests ran with zero implementation regressions and one expected dirty-transaction repository-contract failure before checkpointing"
+  - "make PYTHON=.venv/bin/python validate-project-control | exit_code=2 | all eight pre-suite project-control validators PASS; the embedded 620-test suite had only the expected dirty-transaction repository-contract failure"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write | exit_code=0 | task-index row count 905 and generated task-index derivatives refreshed"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | dependency-graph derivatives refreshed"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | JSON Markdown and DOT dependency-graph outputs fresh"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local-retrieval status PASS after local-cache refresh"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260715-009-001 --no-commit | exit_code=0 | ready_to_commit after all 14 checkpoint acceptance commands passed across distinct working and staged scopes"
+  - "git diff --check | exit_code=0"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P3-T02 PASS checkpoint dependency clean worktree registered role exact plan task and no competing project-improvement signal were verified before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Independent live receipts expose all three gate IDs and the legacy composite with zero findings."
+      - "Focused fixtures preserve publication blocking behavior and local retrieval advisory default behavior."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Seven focused tests twelve publication fixtures and all 53 existing memory-system fixtures pass."
+      - "Live core publication local retrieval and legacy composite receipts pass."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The no-commit checkpoint transaction returned ready_to_commit after all 14 acceptance commands passed."
+      - "Working-tree and staged-tree research-control validation ran as distinct scopes with zero hard claim-language failures."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index derivatives were refreshed with 905 rows."
+      - "Dependency-graph JSON Markdown and DOT outputs pass the freshness check."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The direct live gate comparison and validate-only compatibility path pass."
+      - "After tracked derivative convergence the memory preflight refreshed only local retrieval caches and reported core freshness and local retrieval PASS with zero warnings."
+  claim_language_linter:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No physics or public claim-language source changed."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260715-009/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: "not_applicable"
+project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 task separates project-system memory validation ownership only. It does not authorize P3-T04 documentation-mode work Make CI checkpoint or skill changes legacy retirement canonical ontology edit source-law adoption general EqSrc discharge matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation or any validator test registry derivative or checkpoint evidence as physics proof."
+verdict: "v19_p3_t03_memory_validation_ownership_pass_p3_t04_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P3-T03 provides explicit independently selectable memory-core publication and local-retrieval gates while preserving legacy composition and ordinary research authority."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P3-T04 Memory-System Maintainer documentation-scoped memory-mode implementation or retirement AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 807
+    relationship_row_count: 4021
+    semantic_row_count: 807
+    vault_row_count: 807
+    local_cache_only_warning_count: 0
+  refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search publication local retrieval validation ownership --limit 10 --json"
+      query_type: "search"
+      query_text: "publication local retrieval validation ownership"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation diagnostics only and are not authority; the registered plan dependency completion role contract implementation sources tests validator policy and registries were inspected directly."

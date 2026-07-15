@@ -1,0 +1,105 @@
+{
+  "schema": "memory_validation_ownership_receipt_v1",
+  "task_id": "RT-20260715-009",
+  "job_id": "AJ-RT-20260715-009-001",
+  "plan_task_id": "P3-T03",
+  "captured_at": "2026-07-15T22:39:35Z",
+  "status": "PASS",
+  "source_hashes": {
+    ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py": "efa18690367164c4542de2e43d1aee90aa2ab19932e982718f5c6a518d2d24d8",
+    ".codex/skills/project-memory-system/scripts/memory_operations.py": "bda54e3a938b9f529821405d7f9b6b04a1285c2c23da8b8f197c2d6e52a05f32",
+    "scripts/validation/adapters/local_retrieval.py": "723ab76632c1a47b0e7a11174f73f758c0b9859e31e17a38da1812549a4790d2",
+    "scripts/validation/adapters/publication.py": "42bb893b844b9fb4d2354e86f4b72406394abf7682fb33599416db429b19cdaa",
+    "tests/test_memory_operations.py": "c5cec6339dc21688b61802d9e984ba9c6654811f2df14387d5d55e8d6030e95a"
+  },
+  "gates": {
+    "memory_core": {
+      "gate_id": "memory_core",
+      "status": "PASS",
+      "checks": 13,
+      "errors": 0,
+      "warnings": 0,
+      "findings": 0,
+      "blocking": true,
+      "owner": "tracked memory invariants"
+    },
+    "publication_validation": {
+      "gate_id": "publication_validation",
+      "status": "PASS",
+      "checks": 1,
+      "errors": 0,
+      "warnings": 0,
+      "findings": 0,
+      "blocking": true,
+      "owner": "active publication-process validator"
+    },
+    "local_retrieval_health": {
+      "gate_id": "local_retrieval_health",
+      "status": "PASS",
+      "checks": 1,
+      "errors": 0,
+      "warnings": 0,
+      "findings": 0,
+      "blocking": false,
+      "required_mode_available": true,
+      "owner": "local Obsidian semantic and SQLite retrieval health"
+    },
+    "memory_legacy_composite": {
+      "gate_id": "memory_legacy_composite",
+      "status": "PASS",
+      "checks": 15,
+      "errors": 0,
+      "warnings": 0,
+      "findings": 0,
+      "blocking": true,
+      "child_gate_ids": [
+        "memory_core",
+        "local_retrieval_health",
+        "publication_validation"
+      ]
+    }
+  },
+  "fixture_results": [
+    {
+      "command": ".venv/bin/python -m unittest tests/test_memory_operations.py",
+      "exit_code": 0,
+      "tests": 7,
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m unittest tests/test_publication_process_validation.py",
+      "exit_code": 0,
+      "tests": 12,
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m unittest tests/test_memory_system.py",
+      "exit_code": 0,
+      "tests": 53,
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only",
+      "exit_code": 0,
+      "result": "Validation PASS"
+    }
+  ],
+  "compatibility": {
+    "publication_failures_preserved": true,
+    "local_retrieval_default_advisory": true,
+    "local_retrieval_required_mode_blocking": true,
+    "local_retrieval_findings_absent_from_memory_core": true,
+    "publication_findings_absent_from_memory_core": true,
+    "legacy_wrapper_available": true,
+    "current_state_result_preserved": "PASS"
+  },
+  "authority": {
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "ordinary_research_route_preserved": "EqSrc_family_closure_repair_or_stress",
+    "generated_and_local_retrieval_results_are_authority": false
+  }
+}

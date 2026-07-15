@@ -25,10 +25,12 @@ if str(SCRIPT_DIR) not in sys.path:
 RESEARCH_CONTROL_SCRIPT_DIR = REPO_ROOT / "scripts" / "research_control"
 if str(RESEARCH_CONTROL_SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(RESEARCH_CONTROL_SCRIPT_DIR))
+VALIDATION_ADAPTER_DIR = REPO_ROOT / "scripts" / "validation" / "adapters"
+if str(VALIDATION_ADAPTER_DIR) not in sys.path:
+    sys.path.insert(0, str(VALIDATION_ADAPTER_DIR))
 
 from obsidian_wiki_lib import (  # noqa: E402
     GENERATED_REGISTRY_COLUMNS as OBSIDIAN_GENERATED_REGISTRY_COLUMNS,
-    local_retrieval_warnings,
     write_generated_registries,
 )
 from memory_operations import (  # noqa: E402
@@ -38,9 +40,12 @@ from memory_operations import (  # noqa: E402
     MemoryMutationReceipt,
     MemorySyncOperations,
     ValidationReport,
+    compose_validation_reports,
     memory_validate_core as run_memory_validate_core,
     memory_sync as run_memory_sync,
 )
+from local_retrieval import local_retrieval_health as run_local_retrieval_health  # noqa: E402
+from publication import publication_validation as run_publication_validation  # noqa: E402
 from strict_yaml import StrictYamlError, load_frontmatter  # noqa: E402
 
 COMMON_COLUMNS = [
@@ -2257,38 +2262,28 @@ def validate_tracked_local_noise(report: ValidationReport) -> None:
             report.error(f"tracked local noise in canonical lane: {line}")
 
 
+def local_retrieval_health(*, required: bool = False) -> ValidationReport:
+    """Run the explicit local-only retrieval-health gate."""
+
+    return run_local_retrieval_health(REPO_ROOT, required=required)
+
+
+def publication_validation(*, strict_docs: bool = False) -> ValidationReport:
+    """Run the explicit blocking publication-validation gate."""
+
+    return run_publication_validation(REPO_ROOT, strict=strict_docs)
+
+
 def validate_local_retrieval_freshness(report: ValidationReport) -> None:
-    for warning in local_retrieval_warnings(REPO_ROOT):
-        report.warning(f"Local retrieval freshness: {warning}")
+    """Compatibility merger for callers that still supply a parent report."""
+
+    report.extend(local_retrieval_health())
 
 
 def validate_publication_docs(report: ValidationReport, *, strict_docs: bool = False) -> None:
-    for script_path in DOCS_VALIDATOR_SCRIPTS:
-        command = [
-            sys.executable,
-            str(REPO_ROOT / script_path),
-            "--root",
-            str(REPO_ROOT),
-        ]
-        if strict_docs and script_path in {
-            "scripts/validate_publication_process.py",
-        }:
-            command.append("--strict")
-        try:
-            result = subprocess.run(
-                command,
-                cwd=REPO_ROOT,
-                text=True,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                check=False,
-            )
-        except OSError as exc:
-            report.error(f"{script_path}: could not run documentation validator: {exc}")
-            continue
-        output = (result.stdout + result.stderr).strip()
-        if result.returncode != 0:
-            report.error(f"{script_path}: documentation validator failed\n{output}")
+    """Compatibility merger routed through the sole publication gate."""
+
+    report.extend(publication_validation(strict_docs=strict_docs))
 
 
 def load_memory_core_snapshot() -> MemoryCoreSnapshot:
@@ -2384,10 +2379,14 @@ def memory_validate_core(
 
 
 def validate_all(*, strict_docs: bool = False) -> ValidationReport:
-    report = memory_validate_core()
-    validate_local_retrieval_freshness(report)
-    validate_publication_docs(report, strict_docs=strict_docs)
-    return report
+    return compose_validation_reports(
+        "memory_legacy_composite",
+        (
+            memory_validate_core(),
+            local_retrieval_health(),
+            publication_validation(strict_docs=strict_docs),
+        ),
+    )
 
 
 def memory_sync(

@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `c493cc47d69c079784c09dc4a9a2aca2e9414099854c5c970ceb76e990589ba3`
-- Generated-at source timestamp: `2026-07-15T20:23:36Z`
-- Row count: `904`
+- Source fingerprint: `2f383a2961f6d96efa3300cd028bbc21a7217747d90e48c4a28f9791087ffef5`
+- Generated-at source timestamp: `2026-07-15T22:39:35Z`
+- Row count: `905`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260715-009|RT-20260715-008|2026-07-15T22:39:35Z|2026-07-15T22:56:16Z|memory_publication_retrieval_separation|completed|none|Project-system validation ownership separation only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|2|On PASS checkpoint this transaction and route one separately bounded P3-T04 Memory-System Maintainer documentation-scoped memory-mode implementation or retirement AgentJob.|PASS|research_control/tasks/RT-20260715-009/jobs/completions/AJC-AJ-RT-20260715-009-001.yaml|
 |RT-20260715-008|RT-20260715-007|2026-07-15T20:23:36Z|2026-07-15T20:29:53Z|memory_core_validator_extraction|completed|none|Project-system memory-core validation extraction only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|1|On PASS checkpoint this transaction and route one separately bounded P3-T03 Memory-System Maintainer publication and local-retrieval validation ownership separation AgentJob.|PASS|research_control/tasks/RT-20260715-008/jobs/completions/AJC-AJ-RT-20260715-008-001.yaml|
 |RT-20260715-007|RT-20260715-006|2026-07-15T19:24:28Z|2026-07-15T19:43:45Z|memory_sync_extraction|completed|none|Project-system memory synchronization extraction only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|2|On PASS checkpoint this transaction and route one separately bounded P3-T02 Memory-System Maintainer memory-core validator extraction AgentJob.|PASS|research_control/tasks/RT-20260715-007/jobs/completions/AJC-AJ-RT-20260715-007-001.yaml|
 |RT-20260715-006|RT-20260715-005|2026-07-15T17:24:36Z|2026-07-15T17:40:42Z|first_wave_equivalence_audit|completed|none|Project-system first-wave validation equivalence and savings audit only; no derivation milestone is advanced.|process-integrity-auditor@0.1.0|false|false|2|On PASS checkpoint this transaction and route one separately bounded P3-T01 Memory-System Maintainer write-only memory synchronization extraction AgentJob.|PASS|research_control/tasks/RT-20260715-006/jobs/completions/AJC-AJ-RT-20260715-006-001.yaml|

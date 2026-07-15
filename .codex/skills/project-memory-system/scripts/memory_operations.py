@@ -46,6 +46,16 @@ class ValidationReport:
         self.warnings.append(message)
         self.findings.append(ValidationFinding(finding_id, "warning", message))
 
+    def extend(self, other: "ValidationReport") -> None:
+        """Merge one independently owned gate result without changing its findings."""
+
+        self.errors.extend(other.errors)
+        self.warnings.extend(other.warnings)
+        self.findings.extend(other.findings)
+        for check_id in other.check_ids:
+            if check_id not in self.check_ids:
+                self.check_ids.append(check_id)
+
     @property
     def ok(self) -> bool:
         return not self.errors
@@ -81,6 +91,18 @@ class ValidationReport:
             print("Validation PASS")
         else:
             print(f"Validation FAIL: {len(self.errors)} error(s)")
+
+
+def compose_validation_reports(
+    gate_id: str,
+    reports: Iterable[ValidationReport],
+) -> ValidationReport:
+    """Compose explicit gate results for a compatibility profile."""
+
+    composite = ValidationReport(gate_id=gate_id)
+    for report in reports:
+        composite.extend(report)
+    return composite
 
 
 @dataclass(frozen=True)
