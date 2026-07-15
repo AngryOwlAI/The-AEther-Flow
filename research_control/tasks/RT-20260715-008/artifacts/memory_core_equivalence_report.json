@@ -1,0 +1,73 @@
+{
+  "boundary": {
+    "legacy_validate_all_composite_preserved": true,
+    "local_retrieval_in_core": false,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "physics_authority_changed": false,
+    "publication_validation_in_core": false
+  },
+  "core_gate": {
+    "check_ids": [
+      "memory_core.registry_columns",
+      "memory_core.duplicate_object_id",
+      "memory_core.registry_path",
+      "memory_core.source_hash",
+      "memory_core.tex_vocabulary",
+      "memory_core.pdf_registry",
+      "memory_core.html_spec",
+      "memory_core.html_source_binding",
+      "memory_core.mermaid_source",
+      "memory_core.wiki_registry",
+      "memory_core.file_object_registry",
+      "memory_core.folder_map",
+      "memory_core.tracked_local_noise"
+    ],
+    "error_count": 0,
+    "finding_count": 0,
+    "gate_id": "memory_core",
+    "status": "PASS",
+    "warning_count": 0
+  },
+  "equivalence": {
+    "all_53_existing_memory_failure_fixtures_passed": true,
+    "core_errors_preserved_in_legacy": true,
+    "core_warnings_preserved_in_legacy": true,
+    "external_legacy_error_count": 0,
+    "external_legacy_warning_count": 9,
+    "immutable_preloaded_snapshot_reused_without_loader_call": true,
+    "legacy_status": "PASS",
+    "publication_and_local_fixture_separation_passed": true,
+    "stable_finding_id_fixture_passed": true
+  },
+  "job_id": "AJ-RT-20260715-008-001",
+  "plan_task_id": "P3-T02",
+  "raw_command_outputs": {
+    "existing_memory_failure_fixtures": "Ran 53 tests in 28.400s - OK",
+    "final_research_control_aggregate": "PASS - all 12 required and advisory checks returned exit code 0",
+    "focused_memory_operations": "Ran 5 tests in 0.018s - OK",
+    "full_repository_suite_precheckpoint": "Ran 618 tests in 604.441s - one expected failure test_primary_main_worktree_remains_clean because the bounded transaction is uncheckpointed; zero implementation regressions",
+    "governed_checkpoint_acceptance": "ready_to_commit - 14 transaction checks passed in --no-commit mode",
+    "live_read_only_acceptance": "memory_core PASS checks=13 errors=0 warnings=0 findings=0; legacy PASS errors=0 warnings=9; all core findings preserved"
+  },
+  "schema_version": "v19_p3_t02_memory_core_equivalence_report@0.1.0",
+  "scope_alarm_review": {
+    "dependency_added": false,
+    "planned_file_count": 3,
+    "public_schema_changed": false,
+    "reason": "Immutable snapshot reuse stable structured finding identity and legacy-composite equivalence require coordinated adapter report and focused-test code while remaining inside the exact planned three-file boundary."
+  },
+  "source_hashes": {
+    ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py": "55ecfb3a33370c2e7827c8eba8b8179211d484a318d46de9d246154b0245ec2e",
+    ".codex/skills/project-memory-system/scripts/memory_operations.py": "79ca60fdeed7bebb432686cba1dc0c932bd11a6faebbfec9d0c3ac1bcca40e2d",
+    "tests/test_memory_operations.py": "c717998f18cf4ffd8788488acf39d734544bb975af4acf28c36f81e77b6ce8f1"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260715-008",
+  "tests": {
+    "existing_memory_fixture_count": 53,
+    "focused_fixture_count": 5,
+    "full_repository_implementation_regressions": 0,
+    "full_repository_precheckpoint_status": "PASS_WITH_EXPECTED_DIRTY_TRANSACTION_GUARD",
+    "full_repository_test_count": 618
+  }
+}

@@ -3,6 +3,7 @@ from __future__ import annotations
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 
@@ -11,7 +12,15 @@ SCRIPT_DIR = REPO_ROOT / ".codex/skills/project-memory-system/scripts"
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
-from memory_operations import MemorySyncOperations, memory_sync  # noqa: E402
+from memory_operations import (  # noqa: E402
+    MemoryCoreCheck,
+    MemoryCoreSnapshot,
+    MemoryCoreValidationOperations,
+    MemorySyncOperations,
+    ValidationReport,
+    memory_sync,
+    memory_validate_core,
+)
 
 
 class MiniatureMemoryBackend:
@@ -181,6 +190,92 @@ class MemoryOperationsTests(unittest.TestCase):
 
         self.assertTrue(receipt.local_retrieval_enabled)
         self.assertIn(".local/content_semantics/source.txt", receipt.created)
+
+    def test_core_validation_reuses_snapshot_and_returns_stable_findings(self) -> None:
+        snapshot = MemoryCoreSnapshot.from_rows(
+            {"SOURCE.csv": [{"object_id": "SOURCE-1"}]}
+        )
+        load_snapshot = mock.Mock(side_effect=AssertionError("snapshot was reparsed"))
+
+        def hard_failure(report: ValidationReport, received: MemoryCoreSnapshot) -> None:
+            self.assertIs(received, snapshot)
+            report.error("hard failure")
+
+        def advisory(report: ValidationReport, received: MemoryCoreSnapshot) -> None:
+            self.assertIs(received, snapshot)
+            report.warning("advisory")
+
+        report = memory_validate_core(
+            MemoryCoreValidationOperations(
+                load_snapshot=load_snapshot,
+                checks=(
+                    MemoryCoreCheck("memory_core.synthetic_hard", hard_failure),
+                    MemoryCoreCheck("memory_core.synthetic_advisory", advisory),
+                ),
+            ),
+            snapshot=snapshot,
+        )
+
+        self.assertEqual(report.gate_id, "memory_core")
+        self.assertEqual(
+            report.check_ids,
+            ["memory_core.synthetic_hard", "memory_core.synthetic_advisory"],
+        )
+        self.assertEqual(report.counts["checks"], 2)
+        self.assertEqual(report.counts["errors"], 1)
+        self.assertEqual(report.counts["warnings"], 1)
+        self.assertEqual(
+            report.counts["by_finding_id"],
+            {
+                "memory_core.synthetic_advisory": 1,
+                "memory_core.synthetic_hard": 1,
+            },
+        )
+        self.assertFalse(report.ok)
+        load_snapshot.assert_not_called()
+
+    def test_legacy_composite_preserves_core_findings_and_adds_external_layers(self) -> None:
+        import bootstrap_memory_system as memory_system
+
+        snapshot = MemoryCoreSnapshot.from_rows({})
+
+        def core_error(report: ValidationReport, _snapshot: MemoryCoreSnapshot) -> None:
+            report.error("core hard failure")
+
+        operations = MemoryCoreValidationOperations(
+            load_snapshot=lambda: snapshot,
+            checks=(MemoryCoreCheck("memory_core.synthetic", core_error),),
+        )
+        with (
+            mock.patch.object(memory_system, "_memory_core_checks", return_value=operations.checks),
+            mock.patch.object(memory_system, "load_memory_core_snapshot", return_value=snapshot),
+            mock.patch.object(
+                memory_system,
+                "validate_local_retrieval_freshness",
+                side_effect=lambda report: report.warning("local retrieval warning"),
+            ),
+            mock.patch.object(
+                memory_system,
+                "validate_publication_docs",
+                side_effect=lambda report, strict_docs=False: report.error(
+                    "publication failure"
+                ),
+            ),
+        ):
+            core_report = memory_system.memory_validate_core(snapshot)
+            legacy_report = memory_system.validate_all()
+
+        self.assertEqual(core_report.errors, ["core hard failure"])
+        self.assertEqual(core_report.warnings, [])
+        self.assertEqual(
+            [finding.finding_id for finding in core_report.findings],
+            ["memory_core.synthetic"],
+        )
+        self.assertEqual(
+            legacy_report.errors,
+            ["core hard failure", "publication failure"],
+        )
+        self.assertEqual(legacy_report.warnings, ["local retrieval warning"])
 
 
 if __name__ == "__main__":

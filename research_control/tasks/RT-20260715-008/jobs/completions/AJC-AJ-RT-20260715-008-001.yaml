@@ -1,0 +1,174 @@
+job_id: "AJ-RT-20260715-008-001"
+completion_id: "AJC-AJ-RT-20260715-008-001"
+task_id: "RT-20260715-008"
+decision_id: "DDR-20260715-008"
+role_id: "memory-system-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "memory-system-maintainer@0.2.0--RT-20260715-008"
+status: "completed"
+created_at: "2026-07-15T20:23:36Z"
+started_at: "2026-07-15T20:23:36Z"
+completed_at: "2026-07-15T20:29:53Z"
+objective: "Extract a pure read-only memory-core validator with immutable snapshot reuse stable finding IDs and structured counts while preserving the legacy composite validation path."
+completion_summary: "Completed v19 P3-T02 by extracting all tracked memory invariant checks into memory_validate_core with immutable snapshot reuse 13 stable check IDs structured finding counts and zero publication or local-retrieval findings while preserving validate_all as the legacy composite path."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/memory-system-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/validation_obligation_resolution_policy_v1.md"
+  - "research_control/tasks/RT-20260715-007/jobs/completions/AJC-AJ-RT-20260715-007-001.yaml"
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".codex/skills/project-memory-system/scripts/memory_operations.py"
+  - ".codex/skills/project-memory-system/scripts/obsidian_wiki_lib.py"
+  - "scripts/validate_publication_process.py"
+  - "tests/test_memory_operations.py"
+  - "tests/test_memory_system.py"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P3-T02"
+  recommendation_ids:
+    - "V19-R05"
+    - "V19-R07"
+    - "V19-R29"
+  migration_epoch: "legacy_consolidated"
+  implemented_task_scope: "Pure memory-core validation extraction immutable snapshot reuse stable finding identity focused equivalence tests and compatibility preservation only."
+  completed_v19_tasks_to_date:
+    - "P0-T01 through P3-T02"
+  downstream_tasks_not_implemented:
+    - "P3-T03 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p3_t02_memory_core_validator_extraction"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P3-T02"
+  coverage_summary: "V19-R05 V19-R07 and V19-R29 receive direct pure-core extraction stable finding identity immutable snapshot reuse and equivalence coverage."
+physics_progress_status:
+  status: "project_system_memory_core_extraction_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P3-T02 changes memory validation tooling only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Memory validation behavior and receipts are operational evidence only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+memory_core_extraction:
+  status: "PASS"
+  report_path: "research_control/tasks/RT-20260715-008/artifacts/memory_core_equivalence_report.json"
+  gate_id: "memory_core"
+  stable_check_id_count: 13
+  live_error_count: 0
+  live_warning_count: 0
+  side_effect_free: true
+  immutable_snapshot_reuse: true
+  publication_in_core: false
+  local_retrieval_in_core: false
+  legacy_validate_all_composite_preserved: true
+output_paths:
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".codex/skills/project-memory-system/scripts/memory_operations.py"
+  - "tests/test_memory_operations.py"
+  - "research_control/tasks/RT-20260715-008/artifacts/memory_core_equivalence_report.json"
+  - "research_control/tasks/RT-20260715-008/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260715-008/jobs/completions/AJC-AJ-RT-20260715-008-001.yaml"
+command_results:
+  - ".venv/bin/python -m unittest tests/test_memory_operations.py | exit_code=0 | 5 focused synchronization snapshot finding identity and legacy-composite equivalence tests PASS"
+  - ".venv/bin/python -m unittest tests/test_memory_system.py | exit_code=0 | all 53 existing core memory failure fixtures PASS"
+  - "bootstrap_memory_system.memory_validate_core direct live call | exit_code=0 | gate_id=memory_core checks=13 errors=0 warnings=0 findings=0"
+  - "bootstrap_memory_system.validate_all direct live comparison | exit_code=0 | errors=0 warnings=9 all core findings preserved and external warnings limited to local retrieval"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=1 | 618 tests ran with zero implementation regressions and one expected uncheckpointed dirty-main repository contract failure"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py | exit_code=0 | all 12 required and advisory aggregate checks PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260715-008-001 --no-commit | exit_code=0 | ready_to_commit with all 14 transaction checks PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P3-T01 PASS checkpoint dependency clean worktree registered role exact plan task and no competing project-improvement signal were verified before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The pure gate ran 13 stable core checks with zero errors zero warnings and zero side effects."
+      - "Focused fixtures prove supplied snapshot reuse stable finding counts and separation from legacy external layers."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "All five focused tests and all 53 existing memory-system fixtures passed after the extraction."
+      - "Live core and legacy comparison preserved all core findings and isolated nine local-retrieval warnings outside the pure gate."
+      - "The 618-test precheckpoint repository suite had zero implementation regressions and only the expected dirty-main transaction guard failure."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The governed checkpoint acceptance run returned ready_to_commit in no-commit mode after all 14 transaction checks passed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index dependency-graph and memory derivatives were regenerated and their freshness checks passed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The direct live pure-core acceptance passed and legacy composite behavior remained available."
+  claim_language_linter:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No physics or public claim-language source changed."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260715-008/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: "not_applicable"
+project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 task extracts project-system memory-core validation only. It does not authorize P3-T03 publication or local-retrieval adapter ownership changes Make CI checkpoint or skill changes legacy retirement canonical ontology edit source-law adoption general EqSrc discharge matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation or any validator test registry derivative or checkpoint evidence as physics proof."
+verdict: "v19_p3_t02_pure_memory_core_validator_pass_p3_t03_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P3-T02 separates tracked memory invariants into a pure reusable gate with stable identity and structured receipts preserves the legacy composite and changes no ordinary research or physics authority."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P3-T03 Memory-System Maintainer publication and local-retrieval validation ownership separation AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 807
+    relationship_row_count: 4021
+    semantic_row_count: 807
+    vault_row_count: 807
+    local_cache_only_warning_count: 9
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search memory core validation read only gate --limit 10 --json"
+      query_type: "search"
+      query_text: "memory core validation read only gate"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation diagnostics only and are not authority; the registered plan dependency completion role contract implementation sources tests publication validator Obsidian library and registries were inspected directly."

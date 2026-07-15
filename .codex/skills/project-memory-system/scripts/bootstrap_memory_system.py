@@ -13,7 +13,6 @@ import os
 import re
 import subprocess
 import sys
-from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
@@ -33,8 +32,13 @@ from obsidian_wiki_lib import (  # noqa: E402
     write_generated_registries,
 )
 from memory_operations import (  # noqa: E402
+    MemoryCoreCheck,
+    MemoryCoreSnapshot,
+    MemoryCoreValidationOperations,
     MemoryMutationReceipt,
     MemorySyncOperations,
+    ValidationReport,
+    memory_validate_core as run_memory_validate_core,
     memory_sync as run_memory_sync,
 )
 from strict_yaml import StrictYamlError, load_frontmatter  # noqa: E402
@@ -339,34 +343,6 @@ HTML_PROSE_ANYWHERE_SELECTORS = (".publication-card", "p", "th", "td")
 DOCS_VALIDATOR_SCRIPTS = [
     "scripts/validate_publication_process.py",
 ]
-
-
-@dataclass
-class ValidationReport:
-    """Collect validation errors and warnings."""
-
-    errors: list[str] = field(default_factory=list)
-    warnings: list[str] = field(default_factory=list)
-
-    def error(self, message: str) -> None:
-        self.errors.append(message)
-
-    def warning(self, message: str) -> None:
-        self.warnings.append(message)
-
-    @property
-    def ok(self) -> bool:
-        return not self.errors
-
-    def print(self) -> None:
-        for message in self.errors:
-            print(f"ERROR: {message}")
-        for message in self.warnings:
-            print(f"WARNING: {message}")
-        if self.ok:
-            print("Validation PASS")
-        else:
-            print(f"Validation FAIL: {len(self.errors)} error(s)")
 
 
 def utc_now() -> str:
@@ -2315,27 +2291,101 @@ def validate_publication_docs(report: ValidationReport, *, strict_docs: bool = F
             report.error(f"{script_path}: documentation validator failed\n{output}")
 
 
-def validate_all(*, strict_docs: bool = False) -> ValidationReport:
-    report = ValidationReport()
-    validate_columns(report)
-    rows_by_registry = {
-        name: read_csv_rows(registry_path(name))
-        for name in SOURCE_REGISTRY_NAMES + GENERATED_REGISTRY_NAMES
-    }
-    for error in find_duplicate_object_ids(rows_by_registry):
+def load_memory_core_snapshot() -> MemoryCoreSnapshot:
+    return MemoryCoreSnapshot.from_rows(
+        {
+            name: read_csv_rows(registry_path(name))
+            for name in SOURCE_REGISTRY_NAMES + GENERATED_REGISTRY_NAMES
+        }
+    )
+
+
+def _memory_core_duplicate_ids(
+    report: ValidationReport, snapshot: MemoryCoreSnapshot
+) -> None:
+    for error in find_duplicate_object_ids(snapshot.rows_by_registry):
         report.error(error)
-    validate_paths(report, rows_by_registry)
-    validate_source_hashes(report, rows_by_registry)
-    validate_tex_vocab(report, rows_by_registry.get("TEX_SOURCE_REGISTRY.csv", []))
-    validate_pdf_registry(report, rows_by_registry)
-    validate_html_specs(report, rows_by_registry.get("MARKDOWN_SOURCE_REGISTRY.csv", []))
-    validate_html_registry(report, rows_by_registry)
-    validate_mermaid_documentation(report, rows_by_registry)
-    validate_wiki_registry(report, rows_by_registry)
-    validate_file_object_registry(report, rows_by_registry)
-    validate_folder_map(report, rows_by_registry)
+
+
+def _memory_core_checks() -> tuple[MemoryCoreCheck, ...]:
+    return (
+        MemoryCoreCheck(
+            "memory_core.registry_columns",
+            lambda report, _snapshot: validate_columns(report),
+        ),
+        MemoryCoreCheck("memory_core.duplicate_object_id", _memory_core_duplicate_ids),
+        MemoryCoreCheck(
+            "memory_core.registry_path",
+            lambda report, snapshot: validate_paths(report, snapshot.rows_by_registry),
+        ),
+        MemoryCoreCheck(
+            "memory_core.source_hash",
+            lambda report, snapshot: validate_source_hashes(report, snapshot.rows_by_registry),
+        ),
+        MemoryCoreCheck(
+            "memory_core.tex_vocabulary",
+            lambda report, snapshot: validate_tex_vocab(
+                report, snapshot.rows_by_registry.get("TEX_SOURCE_REGISTRY.csv", ())
+            ),
+        ),
+        MemoryCoreCheck(
+            "memory_core.pdf_registry",
+            lambda report, snapshot: validate_pdf_registry(report, snapshot.rows_by_registry),
+        ),
+        MemoryCoreCheck(
+            "memory_core.html_spec",
+            lambda report, snapshot: validate_html_specs(
+                report, snapshot.rows_by_registry.get("MARKDOWN_SOURCE_REGISTRY.csv", ())
+            ),
+        ),
+        MemoryCoreCheck(
+            "memory_core.html_source_binding",
+            lambda report, snapshot: validate_html_registry(report, snapshot.rows_by_registry),
+        ),
+        MemoryCoreCheck(
+            "memory_core.mermaid_source",
+            lambda report, snapshot: validate_mermaid_documentation(
+                report, snapshot.rows_by_registry
+            ),
+        ),
+        MemoryCoreCheck(
+            "memory_core.wiki_registry",
+            lambda report, snapshot: validate_wiki_registry(report, snapshot.rows_by_registry),
+        ),
+        MemoryCoreCheck(
+            "memory_core.file_object_registry",
+            lambda report, snapshot: validate_file_object_registry(
+                report, snapshot.rows_by_registry
+            ),
+        ),
+        MemoryCoreCheck(
+            "memory_core.folder_map",
+            lambda report, snapshot: validate_folder_map(report, snapshot.rows_by_registry),
+        ),
+        MemoryCoreCheck(
+            "memory_core.tracked_local_noise",
+            lambda report, _snapshot: validate_tracked_local_noise(report),
+        ),
+    )
+
+
+def memory_validate_core(
+    snapshot: MemoryCoreSnapshot | None = None,
+) -> ValidationReport:
+    """Validate tracked memory invariants without publication or local retrieval."""
+
+    return run_memory_validate_core(
+        MemoryCoreValidationOperations(
+            load_snapshot=load_memory_core_snapshot,
+            checks=_memory_core_checks(),
+        ),
+        snapshot=snapshot,
+    )
+
+
+def validate_all(*, strict_docs: bool = False) -> ValidationReport:
+    report = memory_validate_core()
     validate_local_retrieval_freshness(report)
-    validate_tracked_local_noise(report)
     validate_publication_docs(report, strict_docs=strict_docs)
     return report
 
