@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `ae642bbb6d1546f2c778fe9631908fab7ca9bd41005c2346e032d87652294360`
-- Generated-at source timestamp: `2026-07-13T14:28:53Z`
-- Row count: `896`
+- Source fingerprint: `b47323ac257f7ffc706c2ca0c589bf8925b966b50df757cad63999328fc76beb`
+- Generated-at source timestamp: `2026-07-15T02:26:57Z`
+- Row count: `897`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260715-001|RT-20260713-003|2026-07-15T02:26:57Z|2026-07-15T02:26:57Z|validation_migration_rollback_policy|completed|none|Project-system migration and rollback policy only; no derivation milestone is advanced.|process-integrity-auditor@0.1.0|false|false|1|After checkpoint success create one separately bounded P2-T01 Validator Engineer direct-superset consolidation AgentJob under legacy_consolidated authority.|PASS|research_control/tasks/RT-20260715-001/jobs/completions/AJC-AJ-RT-20260715-001-001.yaml|
 |RT-20260713-003|RT-20260713-002|2026-07-13T14:28:53Z|2026-07-13T15:12:24Z|validation_invocation_tracing|completed|none|Project-system validation instrumentation only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After checkpoint success create one separately bounded P1-T05 Process Integrity Auditor shadow-comparison and rollback-control AgentJob.|PASS|research_control/tasks/RT-20260713-003/jobs/completions/AJC-AJ-RT-20260713-003-001.yaml|
 |RT-20260713-002|RT-20260713-001|2026-07-13T13:54:46Z|2026-07-13T14:05:54Z|validation_equivalence_repair|completed|none|Project-system validation equivalence repair only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After checkpoint success create one separately bounded P1-T04 instrumentation AgentJob; P1-T04 was not implemented in this transaction.|PASS|research_control/tasks/RT-20260713-002/jobs/completions/AJC-AJ-RT-20260713-002-001.yaml|
 |RT-20260713-001|RT-20260712-009|2026-07-13T13:01:25Z|2026-07-13T13:26:09Z|validation_equivalence_corpus|completed|none|Project-system validation equivalence work only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|Create one separately bounded Validator Engineer repair for warning and authority-field propagation plus early-return composition, then rerun P1-T03; P1-T04 remains locked.|PASS|research_control/tasks/RT-20260713-001/jobs/completions/AJC-AJ-RT-20260713-001-001.yaml|

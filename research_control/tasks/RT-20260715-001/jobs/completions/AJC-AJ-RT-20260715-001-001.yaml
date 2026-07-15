@@ -1,0 +1,230 @@
+job_id: "AJ-RT-20260715-001-001"
+completion_id: "AJC-AJ-RT-20260715-001-001"
+task_id: "RT-20260715-001"
+decision_id: "DDR-20260715-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260715-001"
+status: "completed"
+created_at: "2026-07-15T02:26:57Z"
+started_at: "2026-07-15T02:26:57Z"
+completed_at: "2026-07-15T02:26:57Z"
+objective: "Define migration epochs comparison rules feature switches rollback triggers restoration controls retirement citations and bounded matched performance evidence without activating new orchestration."
+completion_summary: "Defined five fail-closed migration epochs four logical feature switches eight rollback trigger families six restoration surfaces and a destructive-retirement citation gate; tabletop exercises passed and three full-profile matched pairs recorded a 0.580 percent median tracing overhead with hard-budget activation remaining provisional."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_supersedence_contracts_v1.yaml"
+  - "research_control/design/v19_validation_performance_and_safety_budget.md"
+  - "research_control/tasks/RT-20260713-002/artifacts/legacy_consolidated_equivalence_report.json"
+  - "research_control/tasks/RT-20260713-003/jobs/completions/AJC-AJ-RT-20260713-003-001.yaml"
+  - "scripts/validation/trace.py"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - "Makefile"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P1-T05"
+  recommendation_ids:
+    - "V19-R45"
+    - "V19-R44"
+  migration_epoch: "legacy"
+  implemented_task_scope: "Migration and rollback policy tabletop exercises retirement citation audit and full-profile tracing trend evidence only."
+  completed_v19_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+  downstream_tasks_not_implemented:
+    - "P2-T01 direct-superset consolidation"
+    - "P2 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p1_t05_migration_shadow_comparison_and_rollback_control"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "policy_and_validation"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P1-T05"
+  coverage_summary: "V19-R45 receives fail-closed shadow and rollback control and V19-R44 retains every protected safety boundary during migration."
+physics_progress_status:
+  status: "project_system_policy_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P1-T05 controls operational migration and executes no physics construction adjudication or promotion."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Validation migration policy discharges no physics burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+migration_control_audit:
+  status: "PASS"
+  policy_path: "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+  policy_sha256: "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0"
+  report_path: "research_control/tasks/RT-20260715-001/artifacts/v19_rollback_tabletop_report.md"
+  report_sha256: "9835f3907a19a8b30fc48a8afc5df838fa5f40e71a612829431f3607500985f3"
+  migration_epoch_count: 5
+  logical_feature_switch_count: 4
+  rollback_trigger_family_count: 8
+  restoration_surface_count: 6
+  tabletop_exercise_count: 2
+  tabletop_pass_count: 2
+  active_destructive_retirement_job_count: 0
+  future_retirement_inventory_count: 3
+  legacy_authority_retained: true
+  planner_activated: false
+  cache_activated: false
+  compact_output_activated: false
+  supersedence_activated: false
+  deduplication_activated: false
+  legacy_retired: false
+performance_evidence:
+  budget_id: "V19-PERF-TRACE-001"
+  exact_commit: "57438af555214bc0785dcb390ee6254f580b8a62"
+  exact_tree_hash: "e33993071fba583aaa48f27366744ccf98cee395"
+  matched_scope: "legacy full profile commit tree cache disabled"
+  pair_count: 3
+  pair_overhead_percent:
+    - 0.580
+    - -4.601
+    - 1.471
+  median_pair_overhead_percent: 0.580
+  median_uninstrumented_duration_seconds: 82.16
+  median_instrumented_duration_seconds: 81.44
+  target_percent_max: 2.0
+  rollback_guard_percent: 5.0
+  pair_status_parity: true
+  command_count_per_run: 14
+  instrumented_event_count_per_run: 25
+  distinct_gate_id_count_per_run: 17
+  duplicate_identity_count_per_run: 3
+  budget_status: "PASS_PROVISIONAL"
+  activation_status: "provisional_nonblocking_full_profile_only"
+  missing_activation_evidence:
+    - "three affected-profile matched pairs"
+    - "three checkpoint-profile matched pairs"
+  hard_budget_activated: false
+output_paths:
+  - "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+  - "research_control/tasks/RT-20260715-001/00_TASK.yaml"
+  - "research_control/tasks/RT-20260715-001/DDR-20260715-001.md"
+  - "research_control/tasks/RT-20260715-001/artifacts/v19_rollback_tabletop_report.md"
+  - "research_control/tasks/RT-20260715-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260715-001/jobs/AJ-RT-20260715-001-001.yaml"
+  - "research_control/tasks/RT-20260715-001/jobs/completions/AJC-AJ-RT-20260715-001-001.yaml"
+  - "research_control/tasks/RT-20260715-001/roles/process-integrity-auditor@0.1.0--RT-20260715-001.yaml"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/research_dependency_graph.json"
+  - "output/research_dependency_graph.dot"
+  - "wiki/indexes/research_control_task_index.md"
+  - "wiki/indexes/research_dependency_graph.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=WARN local_retrieval_status=WARN"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P1-T05 Process Integrity Auditor shadow comparison rollback --limit 10 --json | exit_code=0 | returned_object_ids=none"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json | exit_code=0 | returned canonical v19 implementation plan object"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | initial_changed_paths=0"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | initial_boundary=no_action explicit plan task authorized"
+  - "three alternating full-profile matched trace pairs | exit_code=0 | six runs PASS 14 of 14 commands each median pair overhead 0.580 percent"
+  - ".venv/bin/python -m unittest tests/test_validation_equivalence.py tests/test_validation_trace.py | exit_code=0 | focused equivalence and trace tests PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS hard_fail_count=0"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P1-T04 is checkpointed PASS the worktree was clean and the v19 plan explicitly authorizes the dependency-ready project-system packet."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Policy and tabletop evidence define fail-closed comparison rollback restoration retirement citation and no-authority boundaries."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused equivalence trace memory documentation claim-language research-control and whitespace gates passed."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "The governed checkpoint has not yet executed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Policy-required task-index dependency-graph wiki and memory derivatives were regenerated and checked fresh."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Bootstrap and validate-only passed; warnings were limited to ignored local retrieval freshness."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-path hard-failure count is zero; advisory findings remain nonblocking."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260715-001/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: ""
+project_improvement_signals: []
+verdict: "v19_p1_t05_migration_rollback_policy_pass_p2_t01_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P1-T05 defines reversible fail-closed migration control records two rollback tabletop exercises three full-profile matched tracing pairs and a retirement citation gate while leaving legacy and ordinary research authority unchanged."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P2-T01 Validator Engineer direct-superset consolidation AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 805
+    relationship_row_count: 4011
+    semantic_row_count: 805
+    vault_row_count: 805
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_evidence_identity_policy_v1.md"
+      source_hash: "6afb60a18fee4983e302dc4b710505c32d9407f311ca4a03b7297d160d57fcf5"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation and diagnostics only and are not authority; canonical plan policy contracts equivalence report budget completion role and runner sources were inspected directly."
