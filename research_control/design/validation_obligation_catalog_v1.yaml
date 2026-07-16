@@ -1,0 +1,244 @@
+{
+  "schema_id": "validation_obligation_catalog_v1",
+  "schema_version": 1,
+  "catalog_id": "validation-obligation-catalog-v1",
+  "migration_epoch": "shadow_planner",
+  "execution_authority": "legacy",
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "proof_authority": false,
+    "benchmark_authority": false,
+    "gate_chair_authority": false
+  },
+  "evidence_identity_fields": [
+    "tree_hash",
+    "scope",
+    "path_set_hash",
+    "configuration_hash",
+    "generation_state"
+  ],
+  "obligation_specs": [
+    {
+      "obligation_id": "memory_sync",
+      "description": "Synchronize registered generated memory surfaces once for the current source identity.",
+      "default_scope": "repository",
+      "satisfying_gates": [
+        {
+          "gate_id": "memory_sync",
+          "allowed_scopes": ["repository"],
+          "predicate_id": null
+        }
+      ]
+    },
+    {
+      "obligation_id": "memory_core",
+      "description": "Validate canonical memory and registry consistency after generated paths stabilize.",
+      "default_scope": "repository",
+      "satisfying_gates": [
+        {
+          "gate_id": "memory_core",
+          "allowed_scopes": ["repository"],
+          "predicate_id": null
+        }
+      ]
+    },
+    {
+      "obligation_id": "project_improvement_signals",
+      "description": "Validate emitted project-improvement signal and registry parity.",
+      "default_scope": "working",
+      "satisfying_gates": [
+        {
+          "gate_id": "project_improvement_signals",
+          "allowed_scopes": ["working"],
+          "predicate_id": null
+        }
+      ]
+    },
+    {
+      "obligation_id": "documentation_impact",
+      "description": "Validate documentation-impact accounting for the current transaction.",
+      "default_scope": "working",
+      "satisfying_gates": [
+        {
+          "gate_id": "documentation_impact",
+          "allowed_scopes": ["working", "staged"],
+          "predicate_id": null
+        }
+      ]
+    },
+    {
+      "obligation_id": "research_control_core",
+      "description": "Validate repository-wide research-control invariants.",
+      "default_scope": "repository",
+      "satisfying_gates": [
+        {
+          "gate_id": "research_control_core",
+          "allowed_scopes": ["repository"],
+          "predicate_id": null
+        },
+        {
+          "gate_id": "research_control_diff",
+          "allowed_scopes": ["working", "staged"],
+          "predicate_id": "rc_diff_satisfies_core_same_scope_v1"
+        }
+      ]
+    },
+    {
+      "obligation_id": "research_control_diff",
+      "description": "Validate changed research-control paths and their exact working or staged identity.",
+      "default_scope": "working",
+      "satisfying_gates": [
+        {
+          "gate_id": "research_control_diff",
+          "allowed_scopes": ["working", "staged"],
+          "predicate_id": null
+        }
+      ]
+    },
+    {
+      "obligation_id": "claim_language_changed",
+      "description": "Validate changed-scope claim language without conferring claim authority.",
+      "default_scope": "working",
+      "satisfying_gates": [
+        {
+          "gate_id": "claim_language_changed",
+          "allowed_scopes": ["working", "staged"],
+          "predicate_id": null
+        },
+        {
+          "gate_id": "research_control_diff",
+          "allowed_scopes": ["working", "staged"],
+          "predicate_id": "rc_diff_satisfies_claim_language_same_scope_v1"
+        }
+      ]
+    },
+    {
+      "obligation_id": "git_diff_check",
+      "description": "Reject whitespace errors for the exact working or staged path set.",
+      "default_scope": "working",
+      "satisfying_gates": [
+        {
+          "gate_id": "git_diff_check",
+          "allowed_scopes": ["working", "staged"],
+          "predicate_id": null
+        }
+      ]
+    },
+    {
+      "obligation_id": "checkpoint_transaction",
+      "description": "Run the governed checkpoint against the final commit-scoped transaction identity.",
+      "default_scope": "commit",
+      "satisfying_gates": [
+        {
+          "gate_id": "checkpoint_transaction",
+          "allowed_scopes": ["commit"],
+          "predicate_id": null
+        }
+      ]
+    },
+    {
+      "obligation_id": "test_shard_repository",
+      "description": "Run the task-selected repository test shard declared by the owning AgentJob.",
+      "default_scope": "repository",
+      "satisfying_gates": [
+        {
+          "gate_id": "test_shard_repository",
+          "allowed_scopes": ["repository"],
+          "predicate_id": null
+        }
+      ]
+    },
+    {
+      "obligation_id": "publication_validation",
+      "description": "Validate source-backed public publication surfaces when the role declares that family.",
+      "default_scope": "repository",
+      "satisfying_gates": [
+        {
+          "gate_id": "publication_validation",
+          "allowed_scopes": ["repository"],
+          "predicate_id": null
+        }
+      ]
+    }
+  ],
+  "declaration_aliases": [
+    {
+      "label": "validate_research_control",
+      "obligation_ids": ["research_control_core"]
+    },
+    {
+      "label": "check_diff",
+      "obligation_ids": ["research_control_diff"]
+    },
+    {
+      "label": "claim_boundary_phrase_scan",
+      "obligation_ids": ["claim_language_changed"]
+    },
+    {
+      "label": "bootstrap_memory_system",
+      "obligation_ids": ["memory_sync", "memory_core"]
+    },
+    {
+      "label": "validate_documentation_impact",
+      "obligation_ids": ["documentation_impact"]
+    },
+    {
+      "label": "unittest",
+      "obligation_ids": ["test_shard_repository"]
+    },
+    {
+      "label": "scripts/validate_publication_process.py --root .",
+      "obligation_ids": ["publication_validation"]
+    }
+  ],
+  "skill_sources": [
+    {
+      "source_id": "continue-research",
+      "path": ".codex/skills/continue-research/SKILL.md",
+      "declarations": [
+        "memory_sync",
+        "memory_core",
+        "project_improvement_signals",
+        "documentation_impact",
+        "research_control_core",
+        "research_control_diff",
+        "claim_language_changed",
+        "git_diff_check",
+        "checkpoint_transaction"
+      ]
+    },
+    {
+      "source_id": "improve-project-system",
+      "path": ".codex/skills/improve-project-system/SKILL.md",
+      "declarations": [
+        "memory_sync",
+        "memory_core",
+        "project_improvement_signals",
+        "documentation_impact",
+        "research_control_core",
+        "research_control_diff",
+        "claim_language_changed",
+        "git_diff_check",
+        "checkpoint_transaction"
+      ]
+    },
+    {
+      "source_id": "user-modified-project",
+      "path": ".codex/skills/user-modified-project/SKILL.md",
+      "declarations": [
+        "memory_sync",
+        "memory_core",
+        "project_improvement_signals",
+        "documentation_impact",
+        "research_control_core",
+        "research_control_diff",
+        "claim_language_changed",
+        "git_diff_check",
+        "checkpoint_transaction"
+      ]
+    }
+  ]
+}

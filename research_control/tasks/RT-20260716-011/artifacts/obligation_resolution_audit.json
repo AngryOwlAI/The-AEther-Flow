@@ -1,0 +1,62 @@
+{
+  "schema_id": "validation_obligation_resolution_audit_v1",
+  "status": "PASS",
+  "task_id": "RT-20260716-011",
+  "job_id": "AJ-RT-20260716-011-001",
+  "catalog_id": "validation-obligation-catalog-v1",
+  "migration_epoch": "shadow_planner",
+  "execution_authority": "legacy",
+  "source_fingerprint": "368c7d906762a13d20a9c05e544face4ee46ef1936925a77aaaa2bae57939f0e",
+  "source_hashes": {
+    "catalog": "4db379483d9a48952f3dfbf46f1486e94d033ae7dfc7dd7a9e4ab3dd17059c04",
+    "manifest": "35d4b1e186fdbabcd48a78ce6d3dd92aef863cde8aee090bdf4d780ac6b7feae",
+    "role_registry": "a0b3e3a4ab41f29c1c755f9229603705134be2985c122d3f88545fecedf966f6",
+    "continue_research_skill": "a74ace0a14dc92f19966890863318474f66f9e53d13b3f83ad23b4eb30410349",
+    "improve_project_system_skill": "ee791770a971a33573c55c3e3444d96506834c0cce7b10d6cfca3fa564861e37",
+    "user_modified_project_skill": "0c6ad37f7b56596b32bce338cbc493bfff30aeb2badca59f72dee2815471b69b"
+  },
+  "active_role_count": 13,
+  "skill_count": 3,
+  "role_declaration_count": 32,
+  "skill_declaration_count": 27,
+  "resolved_declaration_count": 61,
+  "compiled_requirement_count": 11,
+  "unmapped_declaration_count": 0,
+  "requirements": [
+    {"obligation_id": "checkpoint_transaction", "scope": "commit", "required_by_count": 3, "satisfying_gate_ids": ["checkpoint_transaction"]},
+    {"obligation_id": "claim_language_changed", "scope": "working", "required_by_count": 10, "satisfying_gate_ids": ["claim_language_changed", "research_control_diff"]},
+    {"obligation_id": "documentation_impact", "scope": "working", "required_by_count": 8, "satisfying_gate_ids": ["documentation_impact"]},
+    {"obligation_id": "git_diff_check", "scope": "working", "required_by_count": 3, "satisfying_gate_ids": ["git_diff_check"]},
+    {"obligation_id": "memory_core", "scope": "repository", "required_by_count": 5, "satisfying_gate_ids": ["memory_core"]},
+    {"obligation_id": "memory_sync", "scope": "repository", "required_by_count": 5, "satisfying_gate_ids": ["memory_sync"]},
+    {"obligation_id": "project_improvement_signals", "scope": "working", "required_by_count": 3, "satisfying_gate_ids": ["project_improvement_signals"]},
+    {"obligation_id": "publication_validation", "scope": "repository", "required_by_count": 1, "satisfying_gate_ids": ["publication_validation"]},
+    {"obligation_id": "research_control_core", "scope": "repository", "required_by_count": 16, "satisfying_gate_ids": ["research_control_core"]},
+    {"obligation_id": "research_control_diff", "scope": "working", "required_by_count": 4, "satisfying_gate_ids": ["research_control_diff"]},
+    {"obligation_id": "test_shard_repository", "scope": "repository", "required_by_count": 3, "satisfying_gate_ids": ["test_shard_repository"]}
+  ],
+  "conditional_same_scope_mappings": [
+    {"obligation_id": "research_control_core", "gate_id": "research_control_diff", "predicate_id": "rc_diff_satisfies_core_same_scope_v1"},
+    {"obligation_id": "claim_language_changed", "gate_id": "research_control_diff", "predicate_id": "rc_diff_satisfies_claim_language_same_scope_v1"}
+  ],
+  "validation": {
+    "focused_test_count": 13,
+    "combined_test_count": 54,
+    "failure_count": 0,
+    "syntax_compilation": "PASS",
+    "deterministic_audit": "PASS",
+    "working_never_satisfies_staged": "PASS",
+    "unknown_declaration_fails_closed": "PASS"
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "legacy_execution_authoritative": true,
+    "role_authority_changed": false,
+    "scientific_claims_changed": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "proof_authority": false,
+    "benchmark_authority": false,
+    "gate_chair_authority": false
+  }
+}
