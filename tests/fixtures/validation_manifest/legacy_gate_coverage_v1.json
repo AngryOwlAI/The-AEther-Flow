@@ -1,0 +1,306 @@
+{
+  "schema_id": "legacy_gate_coverage_v1",
+  "schema_version": 1,
+  "source_graph": "research_control/design/v19_legacy_validation_invocation_graph.json",
+  "source_graph_sha256": "afa67c7fe7b31a8ae226020d5f5c125cad4a0f42842211d1a87e0f391916b85e",
+  "catalog_count": 37,
+  "execution_authority": "legacy",
+  "entries": [
+    {
+      "legacy_gate_id": "LVG-001",
+      "canonical_gate_id": "classify_changes",
+      "legacy_name": "project_change_classifier",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "scripts/project_control/classify_project_changes.py"
+    },
+    {
+      "legacy_gate_id": "LVG-002",
+      "canonical_gate_id": "resolve_project_improvement",
+      "legacy_name": "project_improvement_resolver",
+      "authority": "advisory",
+      "mutating": false,
+      "implementation": "scripts/project_control/resolve_project_improvement.py"
+    },
+    {
+      "legacy_gate_id": "LVG-003",
+      "canonical_gate_id": "project_improvement_signals",
+      "legacy_name": "project_improvement_signal_parity",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    },
+    {
+      "legacy_gate_id": "LVG-004",
+      "canonical_gate_id": "documentation_impact",
+      "legacy_name": "documentation_impact",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "scripts/project_control/validate_documentation_impact.py"
+    },
+    {
+      "legacy_gate_id": "LVG-005",
+      "canonical_gate_id": "documentation_surface_audit",
+      "legacy_name": "documentation_surface_audit",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "scripts/project_control/audit_documentation_surfaces.py"
+    },
+    {
+      "legacy_gate_id": "LVG-006",
+      "canonical_gate_id": "memory_sync",
+      "legacy_name": "memory_sync_and_validate",
+      "authority": "blocking",
+      "mutating": true,
+      "implementation": "bootstrap_memory_system.py default"
+    },
+    {
+      "legacy_gate_id": "LVG-007",
+      "canonical_gate_id": "memory_core",
+      "legacy_name": "memory_core_validate_only",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "bootstrap_memory_system.py --validate-only"
+    },
+    {
+      "legacy_gate_id": "LVG-008",
+      "canonical_gate_id": "local_retrieval_sync",
+      "legacy_name": "obsidian_vault_sync",
+      "authority": "local_only",
+      "mutating": true,
+      "implementation": "sync_obsidian_vault.py"
+    },
+    {
+      "legacy_gate_id": "LVG-009",
+      "canonical_gate_id": "local_retrieval_lint",
+      "legacy_name": "obsidian_vault_lint",
+      "authority": "local_only",
+      "mutating": false,
+      "implementation": "lint_obsidian_vault.py --require-index"
+    },
+    {
+      "legacy_gate_id": "LVG-010",
+      "canonical_gate_id": "memory_status_diagnostic",
+      "legacy_name": "memory_status",
+      "authority": "diagnostic",
+      "mutating": false,
+      "implementation": "query_memory.py status --json"
+    },
+    {
+      "legacy_gate_id": "LVG-011",
+      "canonical_gate_id": "memory_lookup_diagnostic",
+      "legacy_name": "memory_lookup",
+      "authority": "diagnostic",
+      "mutating": false,
+      "implementation": "query_memory.py lookup"
+    },
+    {
+      "legacy_gate_id": "LVG-012",
+      "canonical_gate_id": "memory_search_diagnostic",
+      "legacy_name": "memory_search",
+      "authority": "diagnostic",
+      "mutating": false,
+      "implementation": "query_memory.py search"
+    },
+    {
+      "legacy_gate_id": "LVG-013",
+      "canonical_gate_id": "spec_depth",
+      "legacy_name": "spec_depth_lint",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "scripts/spec_depth_lint.py --root ."
+    },
+    {
+      "legacy_gate_id": "LVG-014",
+      "canonical_gate_id": "publication_validation",
+      "legacy_name": "publication_process",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "scripts/validate_publication_process.py --root ."
+    },
+    {
+      "legacy_gate_id": "LVG-015",
+      "canonical_gate_id": "research_control_core",
+      "legacy_name": "research_control_core",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "scripts/research_control/validate_research_control.py"
+    },
+    {
+      "legacy_gate_id": "LVG-016",
+      "canonical_gate_id": "research_control_diff",
+      "legacy_name": "research_control_diff",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "scripts/research_control/validate_research_control.py --check-diff"
+    },
+    {
+      "legacy_gate_id": "LVG-017",
+      "canonical_gate_id": "test_shard_repository",
+      "legacy_name": "repository_unittest_suite",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "python -m unittest discover -s tests"
+    },
+    {
+      "legacy_gate_id": "LVG-018",
+      "canonical_gate_id": "current_frontier_freshness",
+      "legacy_name": "current_frontier_freshness",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "render_current_frontier.py --check"
+    },
+    {
+      "legacy_gate_id": "LVG-019",
+      "canonical_gate_id": "compact_frontier_freshness",
+      "legacy_name": "compact_frontier_validation",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "validate_compact_current_frontier_v16.py --json"
+    },
+    {
+      "legacy_gate_id": "LVG-020",
+      "canonical_gate_id": "dependency_graph_freshness",
+      "legacy_name": "dependency_graph_freshness",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "render_dependency_graph.py --check"
+    },
+    {
+      "legacy_gate_id": "LVG-021",
+      "canonical_gate_id": "task_index_freshness",
+      "legacy_name": "task_index_validation",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "validate_task_index.py --json"
+    },
+    {
+      "legacy_gate_id": "LVG-022",
+      "canonical_gate_id": "claim_graph_validation",
+      "legacy_name": "claim_graph_validation",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "validate_claim_graph_v1.py --json"
+    },
+    {
+      "legacy_gate_id": "LVG-023",
+      "canonical_gate_id": "claim_language_changed",
+      "legacy_name": "changed_claim_language",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "validate_claim_language.py changed/staged mode"
+    },
+    {
+      "legacy_gate_id": "LVG-024",
+      "canonical_gate_id": "route_signature_diagnostic",
+      "legacy_name": "route_signature_extraction",
+      "authority": "advisory",
+      "mutating": false,
+      "implementation": "extract_route_signatures.py sample"
+    },
+    {
+      "legacy_gate_id": "LVG-025",
+      "canonical_gate_id": "route_orbit_diagnostic",
+      "legacy_name": "route_orbit_diagnostic",
+      "authority": "advisory",
+      "mutating": false,
+      "implementation": "validate_route_orbits.py --advisory-only"
+    },
+    {
+      "legacy_gate_id": "LVG-026",
+      "canonical_gate_id": "git_diff_check",
+      "legacy_name": "whitespace_diff",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "git diff --check"
+    },
+    {
+      "legacy_gate_id": "LVG-027",
+      "canonical_gate_id": "targeted_pdf_build",
+      "legacy_name": "targeted_pdf_build",
+      "authority": "blocking",
+      "mutating": true,
+      "implementation": "build_pdf_derivatives.py <changed-required-tex>"
+    },
+    {
+      "legacy_gate_id": "LVG-028",
+      "canonical_gate_id": "continue_memory_preflight",
+      "legacy_name": "continue_memory_preflight",
+      "authority": "blocking",
+      "mutating": true,
+      "implementation": "continue_research_memory_preflight.py --json"
+    },
+    {
+      "legacy_gate_id": "LVG-029",
+      "canonical_gate_id": "continue_context_resolution",
+      "legacy_name": "continue_context_resolution",
+      "authority": "routing",
+      "mutating": false,
+      "implementation": "scripts/research_control/continue_research.py"
+    },
+    {
+      "legacy_gate_id": "LVG-030",
+      "canonical_gate_id": "checkpoint_transaction",
+      "legacy_name": "checkpoint_transaction",
+      "authority": "blocking",
+      "mutating": true,
+      "implementation": "checkpoint_research_transaction.py"
+    },
+    {
+      "legacy_gate_id": "LVG-031",
+      "canonical_gate_id": "profile_validate_project_control",
+      "legacy_name": "make_validate_project_control",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "make validate-project-control"
+    },
+    {
+      "legacy_gate_id": "LVG-032",
+      "canonical_gate_id": "profile_validate_memory",
+      "legacy_name": "make_validate_memory",
+      "authority": "blocking",
+      "mutating": true,
+      "implementation": "make validate-memory"
+    },
+    {
+      "legacy_gate_id": "LVG-033",
+      "canonical_gate_id": "profile_validate_html_explainers",
+      "legacy_name": "make_validate_html_explainers",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "make validate-html-explainers"
+    },
+    {
+      "legacy_gate_id": "LVG-034",
+      "canonical_gate_id": "profile_audit_documentation_surfaces",
+      "legacy_name": "make_audit_documentation_surfaces",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "make audit-documentation-surfaces"
+    },
+    {
+      "legacy_gate_id": "LVG-035",
+      "canonical_gate_id": "profile_full_research_control",
+      "legacy_name": "local_full_runner",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "run_full_research_control_validation.py"
+    },
+    {
+      "legacy_gate_id": "LVG-036",
+      "canonical_gate_id": "profile_ci_project_control",
+      "legacy_name": "github_actions_project_control_job",
+      "authority": "blocking",
+      "mutating": false,
+      "implementation": "project-control-validation.yml validate_project_control job"
+    },
+    {
+      "legacy_gate_id": "LVG-037",
+      "canonical_gate_id": "mermaid_sources",
+      "legacy_name": "mermaid_source_validation",
+      "authority": "nested",
+      "mutating": false,
+      "implementation": "validate_mermaid_sources imported by bootstrap"
+    }
+  ]
+}

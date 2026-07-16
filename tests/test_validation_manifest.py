@@ -12,6 +12,9 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "research_control/design/validation_gate_manifest_v1.yaml"
 CATALOG_PATH = ROOT / "research_control/design/validation_gate_id_catalog_v1.md"
 LEGACY_GRAPH_PATH = ROOT / "research_control/design/v19_legacy_validation_invocation_graph.json"
+LEGACY_COVERAGE_FIXTURE_PATH = (
+    ROOT / "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+)
 
 TOP_LEVEL_FIELDS = {
     "schema_id",
@@ -371,13 +374,21 @@ def populated_manifest(*gates: dict[str, object]) -> dict[str, object]:
     return manifest
 
 
-class ManifestSeedTests(unittest.TestCase):
-    def test_canonical_seed_is_valid_empty_and_legacy_authoritative(self) -> None:
+class ManifestContractTests(unittest.TestCase):
+    def test_canonical_manifest_is_populated_and_legacy_authoritative(self) -> None:
         manifest = load_manifest()
         validate_manifest(manifest)
-        self.assertEqual(manifest["gates"], [])
-        self.assertEqual(manifest["population_status"], "schema_seed_pending_p5_t02")
+        self.assertEqual(len(manifest["gates"]), 37)
+        self.assertEqual(manifest["population_status"], "populated")
         self.assertEqual(manifest["execution_authority"], "legacy")
+        self.assertTrue(all(gate["cache_policy"] == "ineligible" for gate in manifest["gates"]))
+        self.assertTrue(
+            all(
+                item["status"] == "policy_only_inactive"
+                for gate in manifest["gates"]
+                for item in gate["supersedes"]
+            )
+        )
 
     def test_canonical_serialization_and_hash_are_key_order_independent(self) -> None:
         manifest = populated_manifest(gate_fixture())
@@ -458,6 +469,47 @@ class ManifestMalformedFixtureTests(unittest.TestCase):
 
 
 class LegacyRepresentabilityTests(unittest.TestCase):
+    def test_canonical_manifest_exactly_covers_the_legacy_inventory(self) -> None:
+        manifest = load_manifest()
+        validate_manifest(manifest)
+        coverage = json.loads(LEGACY_COVERAGE_FIXTURE_PATH.read_text(encoding="utf-8"))
+        graph_bytes = LEGACY_GRAPH_PATH.read_bytes()
+        graph = json.loads(graph_bytes)
+
+        self.assertEqual(coverage["source_graph_sha256"], hashlib.sha256(graph_bytes).hexdigest())
+        self.assertEqual(coverage["catalog_count"], 37)
+        self.assertEqual(coverage["execution_authority"], "legacy")
+        self.assertEqual(len(coverage["entries"]), 37)
+
+        graph_by_id = {gate["gate_id"]: gate for gate in graph["gate_catalog"]}
+        manifest_by_id = {gate["gate_id"]: gate for gate in manifest["gates"]}
+        expected_ids = {entry["canonical_gate_id"] for entry in coverage["entries"]}
+        self.assertEqual(set(manifest_by_id), expected_ids)
+
+        for entry in coverage["entries"]:
+            legacy_gate = graph_by_id[entry["legacy_gate_id"]]
+            gate = manifest_by_id[entry["canonical_gate_id"]]
+            self.assertEqual(entry["legacy_name"], legacy_gate["name"])
+            self.assertEqual(entry["authority"], legacy_gate["authority"])
+            self.assertEqual(entry["mutating"], legacy_gate["mutating"])
+            self.assertEqual(entry["implementation"], legacy_gate["implementation"])
+            self.assertEqual(gate["adapter"], f"legacy:{entry['legacy_gate_id'].lower()}")
+            self.assertIn(entry["implementation"], gate["command_compatibility"])
+            expected_severity = (
+                "local_only"
+                if entry["authority"] == "local_only"
+                else "advisory"
+                if entry["authority"] in {"advisory", "diagnostic", "routing"}
+                else "blocking"
+            )
+            self.assertEqual(gate["severity"], expected_severity)
+            self.assertEqual(gate["mutating"], entry["mutating"])
+            self.assertEqual(gate["cache_policy"], "ineligible")
+            self.assertEqual(
+                gate["test_shard"],
+                "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json",
+            )
+
     def test_all_37_legacy_nodes_are_representable(self) -> None:
         catalog_map = {}
         for line in CATALOG_PATH.read_text(encoding="utf-8").splitlines():

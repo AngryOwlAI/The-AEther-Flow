@@ -1,0 +1,120 @@
+{
+  "schema_id": "initial_manifest_coverage_report_v1",
+  "packet": "P5-T02",
+  "task_id": "RT-20260716-008",
+  "job_id": "AJ-RT-20260716-008-001",
+  "status": "PASS",
+  "verified_at": "2026-07-16T17:51:21Z",
+  "manifest": {
+    "path": "research_control/design/validation_gate_manifest_v1.yaml",
+    "file_sha256": "35d4b1e186fdbabcd48a78ce6d3dd92aef863cde8aee090bdf4d780ac6b7feae",
+    "canonical_sha256": "7d9f04c5b06e7a5385cf7e101dbbdf4cc265f9ab1ee3a0307b2b435f5657747b",
+    "migration_epoch": "shadow_planner",
+    "population_status": "populated",
+    "execution_authority": "legacy"
+  },
+  "legacy_graph": {
+    "path": "research_control/design/v19_legacy_validation_invocation_graph.json",
+    "sha256": "afa67c7fe7b31a8ae226020d5f5c125cad4a0f42842211d1a87e0f391916b85e",
+    "gate_node_count": 37,
+    "unchanged": true
+  },
+  "coverage_fixture": {
+    "path": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json",
+    "sha256": "eac32db5a1c2991db32b1363e8846b504de0fd1badf51d564d74c74a29b850e0",
+    "entry_count": 37
+  },
+  "coverage": {
+    "manifest_gate_count": 37,
+    "exact_legacy_node_matches": 37,
+    "missing_legacy_nodes": [],
+    "unmatched_manifest_gates": [],
+    "gate_ids": [
+      "classify_changes",
+      "resolve_project_improvement",
+      "project_improvement_signals",
+      "documentation_impact",
+      "documentation_surface_audit",
+      "memory_sync",
+      "memory_core",
+      "local_retrieval_sync",
+      "local_retrieval_lint",
+      "memory_status_diagnostic",
+      "memory_lookup_diagnostic",
+      "memory_search_diagnostic",
+      "spec_depth",
+      "publication_validation",
+      "research_control_core",
+      "research_control_diff",
+      "test_shard_repository",
+      "current_frontier_freshness",
+      "compact_frontier_freshness",
+      "dependency_graph_freshness",
+      "task_index_freshness",
+      "claim_graph_validation",
+      "claim_language_changed",
+      "route_signature_diagnostic",
+      "route_orbit_diagnostic",
+      "git_diff_check",
+      "targeted_pdf_build",
+      "continue_memory_preflight",
+      "continue_context_resolution",
+      "checkpoint_transaction",
+      "profile_validate_project_control",
+      "profile_validate_memory",
+      "profile_validate_html_explainers",
+      "profile_audit_documentation_surfaces",
+      "profile_full_research_control",
+      "profile_ci_project_control",
+      "mermaid_sources"
+    ],
+    "severity_counts": {
+      "blocking": 28,
+      "advisory": 7,
+      "local_only": 2
+    },
+    "mutating_gate_count": 6,
+    "cache_ineligible_count": 37,
+    "inactive_supersedence_count": 3,
+    "active_supersedence_count": 0
+  },
+  "provisional_cost_model": {
+    "basis": "Current legacy command grouping and the v19 overhead audit; these are bounded safety classes and timeouts, not runtime measurements.",
+    "fast": {
+      "gate_count": 12,
+      "timeout_seconds": 300
+    },
+    "medium": {
+      "gate_count": 18,
+      "timeout_seconds": 1800
+    },
+    "slow": {
+      "gate_count": 7,
+      "timeout_seconds": 7200
+    }
+  },
+  "acceptance": {
+    "schema_validation": "PASS",
+    "exact_legacy_coverage": "PASS",
+    "blocking_command_coverage": "PASS",
+    "advisory_and_local_nonblocking": "PASS",
+    "legacy_command_adapters": "PASS",
+    "legacy_execution_authority_preserved": "PASS",
+    "cache_activation": "NONE",
+    "active_supersedence": "NONE",
+    "profile_activation": "NONE",
+    "planner_or_executor_change": "NONE",
+    "physics_authority_change": "NONE",
+    "focused_test_count": 10,
+    "focused_test_failures": 0
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "gate_chair_authority": false
+  }
+}

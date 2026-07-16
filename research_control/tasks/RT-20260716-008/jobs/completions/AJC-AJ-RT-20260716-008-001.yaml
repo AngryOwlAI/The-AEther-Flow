@@ -1,0 +1,241 @@
+job_id: "AJ-RT-20260716-008-001"
+completion_id: "AJC-AJ-RT-20260716-008-001"
+task_id: "RT-20260716-008"
+decision_id: "DDR-20260716-008"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-008"
+status: "completed"
+created_at: "2026-07-16T17:39:14Z"
+started_at: "2026-07-16T17:39:14Z"
+completed_at: "2026-07-16T17:56:06Z"
+objective: "Populate the canonical shadow validation-gate manifest with complete fail-closed coverage of the 37 legacy gate nodes without changing execution authority."
+completion_summary: "Completed v19 P5-T02 with 37 exact legacy-compatible manifest entries, a hash-pinned coverage fixture, focused acceptance tests, inactive supersedence, cache ineligibility, and unchanged legacy execution authority."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/validation_gate_manifest_schema_v1.md"
+  - "research_control/design/validation_gate_id_catalog_v1.md"
+  - "research_control/design/v19_legacy_validation_invocation_graph.json"
+  - "Makefile"
+  - ".github/workflows/project-control-validation.yml"
+  - "research_control/tasks/RT-20260716-007/jobs/completions/AJC-AJ-RT-20260716-007-001.yaml"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P5-T02"
+  recommendation_ids:
+    - "V19-R24"
+    - "V19-R26"
+    - "V19-R30"
+    - "V19-R31"
+    - "V19-R32"
+  migration_epoch: "shadow_planner"
+  implemented_task_scope: "One populated canonical shadow manifest one exact legacy coverage fixture one focused acceptance-test update task-local evidence control rows and governed derivatives only."
+  completed_v19_tasks_to_date:
+    - "P0-T01 through P5-T02"
+  downstream_tasks_not_implemented:
+    - "P5-T03 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p5_t02_validation_manifest_population"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P5-T02"
+  coverage_summary: "All 37 legacy graph nodes now have canonical manifest contracts and compatibility adapters; runtime planner and cutover remain separate."
+physics_progress_status:
+  status: "project_system_manifest_population_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P5-T02 changes operational validation metadata only and discharges no derivation burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Manifest data coverage tests task evidence registries derivatives and checkpoint evidence are operational only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+validation_manifest_population:
+  status: "PASS"
+  manifest_path: "research_control/design/validation_gate_manifest_v1.yaml"
+  report_path: "research_control/tasks/RT-20260716-008/artifacts/initial_manifest_coverage_report.json"
+  coverage_fixture_path: "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+  population_status: "populated"
+  execution_authority: "legacy"
+  migration_epoch: "shadow_planner"
+  manifest_file_sha256: "35d4b1e186fdbabcd48a78ce6d3dd92aef863cde8aee090bdf4d780ac6b7feae"
+  canonical_manifest_sha256: "7d9f04c5b06e7a5385cf7e101dbbdf4cc265f9ab1ee3a0307b2b435f5657747b"
+  legacy_graph_sha256: "afa67c7fe7b31a8ae226020d5f5c125cad4a0f42842211d1a87e0f391916b85e"
+  legacy_gate_node_count: 37
+  manifest_gate_count: 37
+  exact_legacy_node_matches: 37
+  blocking_gate_count: 28
+  advisory_gate_count: 7
+  local_only_gate_count: 2
+  mutating_gate_count: 6
+  cache_ineligible_gate_count: 37
+  inactive_supersedence_count: 3
+  active_supersedence_count: 0
+  focused_test_count: 10
+  focused_test_failures: 0
+  planner_implementation_changed: false
+  execution_authority_changed: false
+  cache_or_supersedence_activated: false
+  profile_authority_activated: false
+output_paths:
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+  - "tests/test_validation_manifest.py"
+  - "research_control/tasks/RT-20260716-008/artifacts/initial_manifest_coverage_report.json"
+  - "research_control/tasks/RT-20260716-008/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260716-008/jobs/completions/AJC-AJ-RT-20260716-008-001.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | memory core freshness and local retrieval PASS source_objects=811 relationships=4040 semantics=811 vault=811"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | P5-T02 manifest fixture test and control impact selected with no blocked paths"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | no competing open signal; plan supplies bounded P5-T02 authority"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | signal registry valid"
+  - ".venv/bin/python -m unittest tests.test_validation_manifest | exit_code=0 | 10 tests PASS with exact 37-node canonical coverage"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS findings=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS findings=1599"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | compact memory profile PASS findings=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | compact memory profile PASS findings=0"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260716-008-001 --no-commit | exit_code=0 | status=ready_to_commit staged_tree=18e2214b3a3877f3032c6e6882e70dba4ccafb3f"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_receipts:
+  - gate_id: "validation_manifest_population_tests"
+    status: "PASS"
+    receipt_path: "tests/test_validation_manifest.py"
+    content_hash: "sha256:344690533e65464fbf0b14af1dc41b4e528df8a9953459ab50ec8138ba447659"
+    counts:
+      error_count: 0
+      warning_count: 0
+      finding_count: 0
+      test_count: 10
+    relevant_finding_ids: []
+    tree_fingerprint: ""
+  - gate_id: "legacy_manifest_shadow_coverage"
+    status: "PASS"
+    receipt_path: "research_control/tasks/RT-20260716-008/artifacts/initial_manifest_coverage_report.json"
+    content_hash: "sha256:af0bcd4d3c37658c976f038b48b0b20906f0164e1c54af8d76fafef27c91bc98"
+    counts:
+      error_count: 0
+      warning_count: 0
+      finding_count: 0
+      legacy_gate_node_count: 37
+      manifest_gate_count: 37
+    relevant_finding_ids: []
+    tree_fingerprint: ""
+  - gate_id: "profile_validate_memory"
+    status: "PASS"
+    receipt_path: ".local/validation-receipts/working-sha256-1baf643379c569e69bcf8d901062d15db64fd010d7be43eabd75ce5b02ed5b65/PROFILE-VALIDATE-MEMORY-1BAF643379C569E6/full.json"
+    content_hash: ""
+    counts:
+      error_count: 0
+      warning_count: 0
+      finding_count: 0
+      gate_count: 1
+    relevant_finding_ids: []
+    tree_fingerprint: "working-sha256:1baf643379c569e69bcf8d901062d15db64fd010d7be43eabd75ce5b02ed5b65"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P5-T01 was checkpointed and explicitly unlocked P5-T02; relay lease branch clean entry worktree canonical plan and active control were verified before the first write."
+      - "The manifest schema legacy graph canonical ID catalog Make targets workflow and prior completion were inspected directly."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Every legacy node maps exactly once to a canonical gate ID with its compatibility command authority-derived severity and mutation flag."
+      - "All cache policies are ineligible all supersedence declarations are inactive and execution authority remains legacy."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Ten focused tests pass including exact hash-pinned legacy coverage and malformed-contract checks."
+      - "The legacy graph remained byte-identical and no planner executor classifier CI ordinary-research or physics implementation changed."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The governed no-commit checkpoint reached ready_to_commit with final staged tree 18e2214b3a3877f3032c6e6882e70dba4ccafb3f."
+      - "The commit-producing checkpoint must restage and revalidate this final truthful closeout update."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Canonical memory synchronization refreshed governed generated derivatives without hand-editing them."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and the following validate-only pass returned compact PASS receipts with zero findings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-scope claim-language obligations were evaluated by the passing research-control diff gate."
+      - "No scientific claim authority was introduced."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260716-008/documentation_impact.yaml"
+  source_documentation_updated: false
+  no_op_receipt: true
+  summary: "No explanatory documentation changed because the existing schema already defines P5-T02 population and runtime remains unchanged."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 811
+    relationship_row_count: 4040
+    semantic_row_count: 811
+    vault_row_count: 811
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."
+resolved_project_improvement_signals: []
+unresolved_items:
+  - "P5-T03 owns deterministic change classification and path-tag selection."
+  - "P5-T04 and later own planner runtime supersedence profiles cutover caching and retirement."
+next_recommended_action: "Route one separately bounded P5-T03 deterministic change-classification AgentJob."
+checkpoint_preflight:
+  status: "ready_to_commit"
+  staged_tree: "18e2214b3a3877f3032c6e6882e70dba4ccafb3f"
+  sync_passes: 1
+  final_validator: "memory_legacy_composite"
+  final_validator_status: "PASS"
+  no_physics_authority: true
+  note: "The staged tree passed the governed no-commit checkpoint before this truthful closeout update; the commit-producing checkpoint must restage and revalidate the final tree."

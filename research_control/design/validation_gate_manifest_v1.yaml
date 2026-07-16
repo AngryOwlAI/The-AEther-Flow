@@ -9,10 +9,2149 @@
     "source_authoritative": false
   },
   "execution_authority": "legacy",
-  "gates": [],
+  "gates": [
+    {
+      "gate_id": "classify_changes",
+      "description": "Legacy-compatible declarative contract for project_change_classifier; execution remains under legacy authority.",
+      "owner_role": "project-control-maintainer@0.2.0",
+      "adapter": "legacy:lvg-001",
+      "command_compatibility": [
+        "scripts/project_control/classify_project_changes.py"
+      ],
+      "input_globs": [
+        "**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": "This legacy gate evaluates a repository-wide invariant; the broad input is audited and remains legacy-executed.",
+      "scopes": [
+        "working",
+        "staged"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "classify_changes"
+      ],
+      "profiles": [
+        "fast",
+        "affected",
+        "checkpoint",
+        "full"
+      ],
+      "path_tags": [
+        "project_control",
+        "change_classification"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "fast",
+              "affected",
+              "checkpoint",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "resolve_project_improvement",
+      "description": "Legacy-compatible declarative contract for project_improvement_resolver; execution remains under legacy authority.",
+      "owner_role": "project-control-maintainer@0.2.0",
+      "adapter": "legacy:lvg-002",
+      "command_compatibility": [
+        "scripts/project_control/resolve_project_improvement.py"
+      ],
+      "input_globs": [
+        "research_control/project_improvement_handoffs/**",
+        "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "working"
+      ],
+      "severity": "advisory",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [
+        "classify_changes"
+      ],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "resolve_project_improvement"
+      ],
+      "profiles": [
+        "affected",
+        "full"
+      ],
+      "path_tags": [
+        "project_control",
+        "project_improvement"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "project_improvement_signals",
+      "description": "Legacy-compatible declarative contract for project_improvement_signal_parity; execution remains under legacy authority.",
+      "owner_role": "project-control-maintainer@0.2.0",
+      "adapter": "legacy:lvg-003",
+      "command_compatibility": [
+        "scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+      ],
+      "input_globs": [
+        "research_control/tasks/**",
+        "research_control/handoffs/**",
+        "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "working"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [
+        "classify_changes"
+      ],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "project_improvement_signals"
+      ],
+      "profiles": [
+        "checkpoint",
+        "full"
+      ],
+      "path_tags": [
+        "project_control",
+        "signal_parity"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "checkpoint",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "documentation_impact",
+      "description": "Legacy-compatible declarative contract for documentation_impact; execution remains under legacy authority.",
+      "owner_role": "documentation-curator@2.0.0",
+      "adapter": "legacy:lvg-004",
+      "command_compatibility": [
+        "scripts/project_control/validate_documentation_impact.py"
+      ],
+      "input_globs": [
+        "research_control/tasks/**",
+        "registries/**",
+        "scripts/**",
+        ".codex/skills/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "working",
+        "staged"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [
+        "classify_changes"
+      ],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "documentation_impact"
+      ],
+      "profiles": [
+        "affected",
+        "checkpoint",
+        "full"
+      ],
+      "path_tags": [
+        "documentation",
+        "receipt"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "checkpoint",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "documentation_surface_audit",
+      "description": "Legacy-compatible declarative contract for documentation_surface_audit; execution remains under legacy authority.",
+      "owner_role": "documentation-curator@2.0.0",
+      "adapter": "legacy:lvg-005",
+      "command_compatibility": [
+        "scripts/project_control/audit_documentation_surfaces.py"
+      ],
+      "input_globs": [
+        "markdown/**",
+        "research_control/**",
+        "registries/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "documentation_surface_audit"
+      ],
+      "profiles": [
+        "full"
+      ],
+      "path_tags": [
+        "documentation",
+        "surface_audit"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "memory_sync",
+      "description": "Legacy-compatible declarative contract for memory_sync_and_validate; execution remains under legacy authority.",
+      "owner_role": "memory-system-maintainer@0.2.0",
+      "adapter": "legacy:lvg-006",
+      "command_compatibility": [
+        "bootstrap_memory_system.py default"
+      ],
+      "input_globs": [
+        "registries/**",
+        "markdown/**",
+        "tex/**",
+        "research_control/**",
+        ".codex/skills/project-memory-system/**"
+      ],
+      "output_globs": [
+        "FOLDER_MAP.md",
+        "registries/**",
+        "research_control/tasks/TASK_INDEX.csv",
+        "research_control/tasks/TASK_INDEX.md",
+        "output/research_dependency_graph.json",
+        "output/research_dependency_graph.dot",
+        "wiki/**"
+      ],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": true,
+      "cost_class": "slow",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "memory_sync"
+      ],
+      "profiles": [
+        "affected",
+        "checkpoint",
+        "full"
+      ],
+      "path_tags": [
+        "memory",
+        "generated_derivatives"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "checkpoint",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 7200,
+      "parallel_group": "legacy_mutating_serial",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "memory_core",
+      "description": "Legacy-compatible declarative contract for memory_core_validate_only; execution remains under legacy authority.",
+      "owner_role": "memory-system-maintainer@0.2.0",
+      "adapter": "legacy:lvg-007",
+      "command_compatibility": [
+        "bootstrap_memory_system.py --validate-only"
+      ],
+      "input_globs": [
+        "registries/**",
+        "markdown/**",
+        "tex/**",
+        "research_control/**",
+        ".codex/skills/project-memory-system/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [
+        {
+          "gate_id": "publication_validation",
+          "predicate_id": "publication_covered_by_memory_core",
+          "status": "policy_only_inactive"
+        }
+      ],
+      "satisfies_obligations": [
+        "memory_core",
+        "memory_freshness"
+      ],
+      "profiles": [
+        "affected",
+        "checkpoint",
+        "full"
+      ],
+      "path_tags": [
+        "memory",
+        "core_validation"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "checkpoint",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "local_retrieval_sync",
+      "description": "Legacy-compatible declarative contract for obsidian_vault_sync; execution remains under legacy authority.",
+      "owner_role": "memory-system-maintainer@0.2.0",
+      "adapter": "legacy:lvg-008",
+      "command_compatibility": [
+        "sync_obsidian_vault.py"
+      ],
+      "input_globs": [
+        "registries/**",
+        "markdown/**",
+        "tex/**",
+        "research_control/**"
+      ],
+      "output_globs": [
+        ".local/obsidian-vault/**"
+      ],
+      "global_invariant_justification": null,
+      "scopes": [
+        "local_retrieval"
+      ],
+      "severity": "local_only",
+      "mutating": true,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "local_retrieval_sync"
+      ],
+      "profiles": [
+        "doctor",
+        "full"
+      ],
+      "path_tags": [
+        "memory",
+        "local_retrieval"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "doctor",
+              "full"
+            ]
+          },
+          {
+            "condition_id": "explicit_scope",
+            "kind": "explicit_scope",
+            "values": [
+              "local_retrieval"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_mutating_serial",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "local_retrieval_lint",
+      "description": "Legacy-compatible declarative contract for obsidian_vault_lint; execution remains under legacy authority.",
+      "owner_role": "memory-system-maintainer@0.2.0",
+      "adapter": "legacy:lvg-009",
+      "command_compatibility": [
+        "lint_obsidian_vault.py --require-index"
+      ],
+      "input_globs": [
+        ".local/obsidian-vault/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "local_retrieval"
+      ],
+      "severity": "local_only",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [
+        "local_retrieval_sync"
+      ],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "local_retrieval_lint"
+      ],
+      "profiles": [
+        "doctor",
+        "full"
+      ],
+      "path_tags": [
+        "memory",
+        "local_retrieval"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "doctor",
+              "full"
+            ]
+          },
+          {
+            "condition_id": "explicit_scope",
+            "kind": "explicit_scope",
+            "values": [
+              "local_retrieval"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "local_retrieval",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "memory_status_diagnostic",
+      "description": "Legacy-compatible declarative contract for memory_status; execution remains under legacy authority.",
+      "owner_role": "memory-system-maintainer@0.2.0",
+      "adapter": "legacy:lvg-010",
+      "command_compatibility": [
+        "query_memory.py status --json"
+      ],
+      "input_globs": [
+        "registries/**",
+        ".local/obsidian-vault/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "local_retrieval"
+      ],
+      "severity": "advisory",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "memory_status_diagnostic"
+      ],
+      "profiles": [
+        "doctor"
+      ],
+      "path_tags": [
+        "memory",
+        "diagnostic"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "doctor"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "memory_lookup_diagnostic",
+      "description": "Legacy-compatible declarative contract for memory_lookup; execution remains under legacy authority.",
+      "owner_role": "memory-system-maintainer@0.2.0",
+      "adapter": "legacy:lvg-011",
+      "command_compatibility": [
+        "query_memory.py lookup"
+      ],
+      "input_globs": [
+        "registries/**",
+        ".local/obsidian-vault/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "local_retrieval"
+      ],
+      "severity": "advisory",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "memory_lookup_diagnostic"
+      ],
+      "profiles": [
+        "doctor"
+      ],
+      "path_tags": [
+        "memory",
+        "diagnostic"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "doctor"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "memory_search_diagnostic",
+      "description": "Legacy-compatible declarative contract for memory_search; execution remains under legacy authority.",
+      "owner_role": "memory-system-maintainer@0.2.0",
+      "adapter": "legacy:lvg-012",
+      "command_compatibility": [
+        "query_memory.py search"
+      ],
+      "input_globs": [
+        "registries/**",
+        ".local/obsidian-vault/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "local_retrieval"
+      ],
+      "severity": "advisory",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "memory_search_diagnostic"
+      ],
+      "profiles": [
+        "doctor"
+      ],
+      "path_tags": [
+        "memory",
+        "diagnostic"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "doctor"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "spec_depth",
+      "description": "Legacy-compatible declarative contract for spec_depth_lint; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-013",
+      "command_compatibility": [
+        "scripts/spec_depth_lint.py --root ."
+      ],
+      "input_globs": [
+        "markdown/html-explainer-specs/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "spec_depth"
+      ],
+      "profiles": [
+        "affected",
+        "full"
+      ],
+      "path_tags": [
+        "documentation",
+        "html_explainer"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "publication_validation",
+      "description": "Legacy-compatible declarative contract for publication_process; execution remains under legacy authority.",
+      "owner_role": "documentation-curator@2.0.0",
+      "adapter": "legacy:lvg-014",
+      "command_compatibility": [
+        "scripts/validate_publication_process.py --root ."
+      ],
+      "input_globs": [
+        "markdown/**",
+        "html/**",
+        "registries/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "publication_validation"
+      ],
+      "profiles": [
+        "affected",
+        "full"
+      ],
+      "path_tags": [
+        "documentation",
+        "publication_surface"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "full"
+            ]
+          },
+          {
+            "condition_id": "publication_surface_changed",
+            "kind": "publication_surface_changed",
+            "values": [
+              "publication_surface"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "research_control_core",
+      "description": "Legacy-compatible declarative contract for research_control_core; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-015",
+      "command_compatibility": [
+        "scripts/research_control/validate_research_control.py"
+      ],
+      "input_globs": [
+        "research_control/**",
+        "registries/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "research_control_core"
+      ],
+      "profiles": [
+        "full"
+      ],
+      "path_tags": [
+        "research_control",
+        "core"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "research_control_diff",
+      "description": "Legacy-compatible declarative contract for research_control_diff; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-016",
+      "command_compatibility": [
+        "scripts/research_control/validate_research_control.py --check-diff"
+      ],
+      "input_globs": [
+        "research_control/**",
+        "registries/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "working",
+        "staged"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [
+        {
+          "gate_id": "research_control_core",
+          "predicate_id": "same_changed_scope",
+          "status": "policy_only_inactive"
+        },
+        {
+          "gate_id": "claim_language_changed",
+          "predicate_id": "claim_language_covered_by_diff",
+          "status": "policy_only_inactive"
+        }
+      ],
+      "satisfies_obligations": [
+        "research_control_diff",
+        "changed_claim_validation",
+        "authority_validation",
+        "residue_validation"
+      ],
+      "profiles": [
+        "affected",
+        "checkpoint",
+        "full"
+      ],
+      "path_tags": [
+        "research_control",
+        "changed_scope",
+        "changed_claims",
+        "authority",
+        "residue"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "checkpoint",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "test_shard_repository",
+      "description": "Legacy-compatible declarative contract for repository_unittest_suite; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-017",
+      "command_compatibility": [
+        "python -m unittest discover -s tests"
+      ],
+      "input_globs": [
+        "tests/**",
+        "scripts/**",
+        "research_control/**",
+        "registries/**",
+        ".codex/skills/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "slow",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "test_shard_repository",
+        "proof_normal_form_validation",
+        "metric_use_tex_validation",
+        "traceability_validation",
+        "scientific_checker_validation"
+      ],
+      "profiles": [
+        "full"
+      ],
+      "path_tags": [
+        "tests",
+        "test_shards",
+        "proof_normal_form",
+        "metric_use_tex",
+        "traceability",
+        "scientific_checkers"
+      ],
+      "selection": {
+        "operator": "any",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "full"
+            ]
+          },
+          {
+            "condition_id": "traceability_inputs_changed",
+            "kind": "traceability_inputs_changed",
+            "values": [
+              "traceability"
+            ]
+          },
+          {
+            "condition_id": "scientific_checker_family",
+            "kind": "scientific_checker_family",
+            "values": [
+              "proof_normal_form",
+              "metric_use_tex",
+              "scientific_checkers"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 7200,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "current_frontier_freshness",
+      "description": "Legacy-compatible declarative contract for current_frontier_freshness; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-018",
+      "command_compatibility": [
+        "render_current_frontier.py --check"
+      ],
+      "input_globs": [
+        "research_control/handoffs/**",
+        "research_control/program_state.yaml",
+        "research_control/CURRENT_FRONTIER.md"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "current_frontier_freshness"
+      ],
+      "profiles": [
+        "affected",
+        "full"
+      ],
+      "path_tags": [
+        "research_control",
+        "frontier"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "compact_frontier_freshness",
+      "description": "Legacy-compatible declarative contract for compact_frontier_validation; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-019",
+      "command_compatibility": [
+        "validate_compact_current_frontier_v16.py --json"
+      ],
+      "input_globs": [
+        "research_control/CURRENT_FRONTIER.md",
+        "research_control/handoffs/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "compact_frontier_freshness"
+      ],
+      "profiles": [
+        "affected",
+        "full"
+      ],
+      "path_tags": [
+        "research_control",
+        "frontier"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "dependency_graph_freshness",
+      "description": "Legacy-compatible declarative contract for dependency_graph_freshness; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-020",
+      "command_compatibility": [
+        "render_dependency_graph.py --check"
+      ],
+      "input_globs": [
+        "research_control/tasks/**",
+        "registries/RESEARCH_TASK_REGISTRY.csv",
+        "output/research_dependency_graph.json"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "dependency_graph_freshness"
+      ],
+      "profiles": [
+        "affected",
+        "full"
+      ],
+      "path_tags": [
+        "research_control",
+        "dependency_graph"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "full"
+            ]
+          },
+          {
+            "condition_id": "graph_inputs_changed",
+            "kind": "graph_inputs_changed",
+            "values": [
+              "research_dependency_graph"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "task_index_freshness",
+      "description": "Legacy-compatible declarative contract for task_index_validation; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-021",
+      "command_compatibility": [
+        "validate_task_index.py --json"
+      ],
+      "input_globs": [
+        "research_control/tasks/**",
+        "registries/RESEARCH_TASK_REGISTRY.csv"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "task_index_freshness"
+      ],
+      "profiles": [
+        "affected",
+        "full"
+      ],
+      "path_tags": [
+        "research_control",
+        "task_index"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "full"
+            ]
+          },
+          {
+            "condition_id": "task_index_inputs_changed",
+            "kind": "task_index_inputs_changed",
+            "values": [
+              "task_index"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "claim_graph_validation",
+      "description": "Legacy-compatible declarative contract for claim_graph_validation; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-022",
+      "command_compatibility": [
+        "validate_claim_graph_v1.py --json"
+      ],
+      "input_globs": [
+        "registries/CLAIM_REGISTRY.csv",
+        "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+        "registries/RELATIONSHIP_REGISTRY.csv"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "claim_graph_validation"
+      ],
+      "profiles": [
+        "affected",
+        "full"
+      ],
+      "path_tags": [
+        "claims",
+        "graph"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "claim_language_changed",
+      "description": "Legacy-compatible declarative contract for changed_claim_language; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-023",
+      "command_compatibility": [
+        "validate_claim_language.py changed/staged mode"
+      ],
+      "input_globs": [
+        "tex/**",
+        "markdown/**",
+        "research_control/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "working",
+        "staged"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "claim_language_changed"
+      ],
+      "profiles": [
+        "affected",
+        "checkpoint",
+        "full"
+      ],
+      "path_tags": [
+        "claims",
+        "claim_language"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "checkpoint",
+              "full"
+            ]
+          },
+          {
+            "condition_id": "path_tag_any",
+            "kind": "path_tag_any",
+            "values": [
+              "claim_language"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "route_signature_diagnostic",
+      "description": "Legacy-compatible declarative contract for route_signature_extraction; execution remains under legacy authority.",
+      "owner_role": "process-integrity-auditor@0.1.0",
+      "adapter": "legacy:lvg-024",
+      "command_compatibility": [
+        "extract_route_signatures.py sample"
+      ],
+      "input_globs": [
+        "research_control/**",
+        "scripts/research_control/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "advisory",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "route_signature_diagnostic"
+      ],
+      "profiles": [
+        "doctor",
+        "full"
+      ],
+      "path_tags": [
+        "research_control",
+        "diagnostic"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "doctor",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "route_orbit_diagnostic",
+      "description": "Legacy-compatible declarative contract for route_orbit_diagnostic; execution remains under legacy authority.",
+      "owner_role": "process-integrity-auditor@0.1.0",
+      "adapter": "legacy:lvg-025",
+      "command_compatibility": [
+        "validate_route_orbits.py --advisory-only"
+      ],
+      "input_globs": [
+        "research_control/**",
+        "scripts/research_control/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "advisory",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "route_orbit_diagnostic"
+      ],
+      "profiles": [
+        "doctor",
+        "full"
+      ],
+      "path_tags": [
+        "research_control",
+        "diagnostic"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "doctor",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "git_diff_check",
+      "description": "Legacy-compatible declarative contract for whitespace_diff; execution remains under legacy authority.",
+      "owner_role": "process-integrity-auditor@0.1.0",
+      "adapter": "legacy:lvg-026",
+      "command_compatibility": [
+        "git diff --check"
+      ],
+      "input_globs": [
+        "**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": "This legacy gate evaluates a repository-wide invariant; the broad input is audited and remains legacy-executed.",
+      "scopes": [
+        "working",
+        "staged"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "git_diff_check",
+        "whitespace_validation"
+      ],
+      "profiles": [
+        "fast",
+        "affected",
+        "checkpoint",
+        "full"
+      ],
+      "path_tags": [
+        "git",
+        "whitespace"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "fast",
+              "affected",
+              "checkpoint",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "targeted_pdf_build",
+      "description": "Legacy-compatible declarative contract for targeted_pdf_build; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-027",
+      "command_compatibility": [
+        "build_pdf_derivatives.py <changed-required-tex>"
+      ],
+      "input_globs": [
+        "tex/**",
+        "registries/TEX_SOURCE_REGISTRY.csv"
+      ],
+      "output_globs": [
+        "pdf/**"
+      ],
+      "global_invariant_justification": null,
+      "scopes": [
+        "working"
+      ],
+      "severity": "blocking",
+      "mutating": true,
+      "cost_class": "slow",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "targeted_pdf_build"
+      ],
+      "profiles": [
+        "affected",
+        "checkpoint",
+        "full"
+      ],
+      "path_tags": [
+        "tex",
+        "pdf"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "checkpoint",
+              "full"
+            ]
+          },
+          {
+            "condition_id": "changed_registered_tex_pdf_required",
+            "kind": "changed_registered_tex_pdf_required",
+            "values": [
+              "required_pdf"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 7200,
+      "parallel_group": "legacy_mutating_serial",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "continue_memory_preflight",
+      "description": "Legacy-compatible declarative contract for continue_memory_preflight; execution remains under legacy authority.",
+      "owner_role": "memory-system-maintainer@0.2.0",
+      "adapter": "legacy:lvg-028",
+      "command_compatibility": [
+        "continue_research_memory_preflight.py --json"
+      ],
+      "input_globs": [
+        "registries/**",
+        "markdown/**",
+        "tex/**",
+        "research_control/**",
+        ".local/obsidian-vault/**"
+      ],
+      "output_globs": [
+        ".local/obsidian-vault/**"
+      ],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": true,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "continue_memory_preflight"
+      ],
+      "profiles": [
+        "fast",
+        "affected",
+        "checkpoint",
+        "full"
+      ],
+      "path_tags": [
+        "memory",
+        "continue_research"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "fast",
+              "affected",
+              "checkpoint",
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_mutating_serial",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "continue_context_resolution",
+      "description": "Legacy-compatible declarative contract for continue_context_resolution; execution remains under legacy authority.",
+      "owner_role": "project-control-maintainer@0.2.0",
+      "adapter": "legacy:lvg-029",
+      "command_compatibility": [
+        "scripts/research_control/continue_research.py"
+      ],
+      "input_globs": [
+        "research_control/**",
+        "registries/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "working"
+      ],
+      "severity": "advisory",
+      "mutating": false,
+      "cost_class": "fast",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "continue_context_resolution"
+      ],
+      "profiles": [
+        "doctor"
+      ],
+      "path_tags": [
+        "research_control",
+        "routing"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "doctor"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 300,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "checkpoint_transaction",
+      "description": "Legacy-compatible declarative contract for checkpoint_transaction; execution remains under legacy authority.",
+      "owner_role": "process-integrity-auditor@0.1.0",
+      "adapter": "legacy:lvg-030",
+      "command_compatibility": [
+        "checkpoint_research_transaction.py"
+      ],
+      "input_globs": [
+        "**"
+      ],
+      "output_globs": [
+        "registries/**",
+        "research_control/tasks/TASK_INDEX.csv",
+        "research_control/tasks/TASK_INDEX.md",
+        "output/research_dependency_graph.json",
+        "output/research_dependency_graph.dot",
+        "wiki/**"
+      ],
+      "global_invariant_justification": "This legacy gate evaluates a repository-wide invariant; the broad input is audited and remains legacy-executed.",
+      "scopes": [
+        "commit"
+      ],
+      "severity": "blocking",
+      "mutating": true,
+      "cost_class": "slow",
+      "prerequisites": [
+        "classify_changes",
+        "project_improvement_signals",
+        "documentation_impact",
+        "research_control_diff",
+        "memory_core",
+        "git_diff_check",
+        "test_shard_repository"
+      ],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "checkpoint_transaction",
+        "final_staged_allowlist",
+        "authority_validation",
+        "residue_validation",
+        "whitespace_validation"
+      ],
+      "profiles": [
+        "checkpoint"
+      ],
+      "path_tags": [
+        "research_control",
+        "checkpoint",
+        "final_staged_allowlist",
+        "authority",
+        "residue"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "checkpoint"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 7200,
+      "parallel_group": "legacy_mutating_serial",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "profile_validate_project_control",
+      "description": "Legacy-compatible declarative contract for make_validate_project_control; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-031",
+      "command_compatibility": [
+        "make validate-project-control"
+      ],
+      "input_globs": [
+        "Makefile",
+        "scripts/**",
+        "tests/**",
+        "research_control/**",
+        "registries/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [
+        "classify_changes",
+        "project_improvement_signals",
+        "documentation_impact",
+        "spec_depth",
+        "publication_validation",
+        "research_control_core",
+        "test_shard_repository",
+        "current_frontier_freshness",
+        "compact_frontier_freshness",
+        "dependency_graph_freshness",
+        "task_index_freshness",
+        "claim_graph_validation",
+        "git_diff_check"
+      ],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "profile_validate_project_control"
+      ],
+      "profiles": [
+        "full"
+      ],
+      "path_tags": [
+        "profile",
+        "project_control"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "profile_validate_memory",
+      "description": "Legacy-compatible declarative contract for make_validate_memory; execution remains under legacy authority.",
+      "owner_role": "memory-system-maintainer@0.2.0",
+      "adapter": "legacy:lvg-032",
+      "command_compatibility": [
+        "make validate-memory"
+      ],
+      "input_globs": [
+        "Makefile",
+        ".codex/skills/project-memory-system/**",
+        "registries/**",
+        "markdown/**",
+        "tex/**"
+      ],
+      "output_globs": [
+        "FOLDER_MAP.md",
+        "registries/**",
+        "research_control/tasks/TASK_INDEX.csv",
+        "research_control/tasks/TASK_INDEX.md",
+        "output/research_dependency_graph.json",
+        "output/research_dependency_graph.dot",
+        "wiki/**"
+      ],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": true,
+      "cost_class": "slow",
+      "prerequisites": [
+        "memory_sync"
+      ],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "profile_validate_memory"
+      ],
+      "profiles": [
+        "full"
+      ],
+      "path_tags": [
+        "profile",
+        "memory"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 7200,
+      "parallel_group": "legacy_mutating_serial",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "profile_validate_html_explainers",
+      "description": "Legacy-compatible declarative contract for make_validate_html_explainers; execution remains under legacy authority.",
+      "owner_role": "documentation-curator@2.0.0",
+      "adapter": "legacy:lvg-033",
+      "command_compatibility": [
+        "make validate-html-explainers"
+      ],
+      "input_globs": [
+        "Makefile",
+        "markdown/html-explainer-specs/**",
+        "html/**",
+        "registries/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [
+        "spec_depth",
+        "publication_validation"
+      ],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "profile_validate_html_explainers"
+      ],
+      "profiles": [
+        "full"
+      ],
+      "path_tags": [
+        "profile",
+        "html_explainer"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "profile_audit_documentation_surfaces",
+      "description": "Legacy-compatible declarative contract for make_audit_documentation_surfaces; execution remains under legacy authority.",
+      "owner_role": "documentation-curator@2.0.0",
+      "adapter": "legacy:lvg-034",
+      "command_compatibility": [
+        "make audit-documentation-surfaces"
+      ],
+      "input_globs": [
+        "Makefile",
+        "markdown/**",
+        "research_control/**",
+        "registries/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [
+        "documentation_surface_audit"
+      ],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "profile_audit_documentation_surfaces"
+      ],
+      "profiles": [
+        "full"
+      ],
+      "path_tags": [
+        "profile",
+        "documentation"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "profile_full_research_control",
+      "description": "Legacy-compatible declarative contract for local_full_runner; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-035",
+      "command_compatibility": [
+        "run_full_research_control_validation.py"
+      ],
+      "input_globs": [
+        "**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": "This legacy gate evaluates a repository-wide invariant; the broad input is audited and remains legacy-executed.",
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "slow",
+      "prerequisites": [
+        "profile_validate_project_control",
+        "profile_validate_memory",
+        "profile_validate_html_explainers",
+        "profile_audit_documentation_surfaces",
+        "route_orbit_diagnostic"
+      ],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "profile_full_research_control"
+      ],
+      "profiles": [
+        "full"
+      ],
+      "path_tags": [
+        "profile",
+        "full"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 7200,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "profile_ci_project_control",
+      "description": "Legacy-compatible declarative contract for github_actions_project_control_job; execution remains under legacy authority.",
+      "owner_role": "validator-engineer@0.2.0",
+      "adapter": "legacy:lvg-036",
+      "command_compatibility": [
+        "project-control-validation.yml validate_project_control job"
+      ],
+      "input_globs": [
+        "**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": "This legacy gate evaluates a repository-wide invariant; the broad input is audited and remains legacy-executed.",
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "slow",
+      "prerequisites": [
+        "profile_validate_project_control"
+      ],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "profile_ci_project_control"
+      ],
+      "profiles": [
+        "full"
+      ],
+      "path_tags": [
+        "profile",
+        "ci"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "full"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 7200,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    },
+    {
+      "gate_id": "mermaid_sources",
+      "description": "Legacy-compatible declarative contract for mermaid_source_validation; execution remains under legacy authority.",
+      "owner_role": "documentation-curator@2.0.0",
+      "adapter": "legacy:lvg-037",
+      "command_compatibility": [
+        "validate_mermaid_sources imported by bootstrap"
+      ],
+      "input_globs": [
+        "markdown/**",
+        "tex/**",
+        "research_control/**"
+      ],
+      "output_globs": [],
+      "global_invariant_justification": null,
+      "scopes": [
+        "repository"
+      ],
+      "severity": "blocking",
+      "mutating": false,
+      "cost_class": "medium",
+      "prerequisites": [],
+      "supersedes": [],
+      "satisfies_obligations": [
+        "mermaid_sources"
+      ],
+      "profiles": [
+        "affected",
+        "full"
+      ],
+      "path_tags": [
+        "documentation",
+        "mermaid"
+      ],
+      "selection": {
+        "operator": "all",
+        "conditions": [
+          {
+            "condition_id": "profile_selected",
+            "kind": "profile_selected",
+            "values": [
+              "affected",
+              "full"
+            ]
+          },
+          {
+            "condition_id": "registered_mermaid_changed",
+            "kind": "registered_mermaid_changed",
+            "values": [
+              "registered_mermaid_source"
+            ]
+          }
+        ]
+      },
+      "timeout_seconds": 1800,
+      "parallel_group": "legacy_read_only",
+      "cache_policy": "ineligible",
+      "receipt_schema": "validation_gate_result_v1",
+      "test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+    }
+  ],
   "manifest_id": "validation-gate-manifest-v1",
   "migration_epoch": "shadow_planner",
-  "population_status": "schema_seed_pending_p5_t02",
+  "population_status": "populated",
   "schema_id": "validation_gate_manifest_v1",
   "schema_version": 1
 }
