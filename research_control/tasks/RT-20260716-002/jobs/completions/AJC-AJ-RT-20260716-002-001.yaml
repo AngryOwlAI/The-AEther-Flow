@@ -1,0 +1,216 @@
+job_id: "AJ-RT-20260716-002-001"
+completion_id: "AJC-AJ-RT-20260716-002-001"
+task_id: "RT-20260716-002"
+decision_id: "DDR-20260716-002"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-002"
+status: "completed"
+created_at: "2026-07-16T11:46:10Z"
+started_at: "2026-07-16T11:46:10Z"
+completed_at: "2026-07-16T11:55:01Z"
+objective: "Implement one reusable compact validation reporter and data model with deterministic bounded console output atomic full receipts and focused tests without wiring existing validators."
+completion_summary: "Completed v19 P4-T02 with immutable common validation models deterministic compact text and JSON reporting five mutually exclusive output modes bounded findings and warning groups Unicode-safe byte accounting atomic local full receipts visible receipt-write failure and twenty focused tests."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/validation_run_receipt_schema_v1.md"
+  - "research_control/design/validation_run_receipt_example_v1.json"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_environment_contract_v1.md"
+  - "research_control/design/v19_validation_performance_and_safety_budget.md"
+  - "scripts/research_control/collect_validation_artifacts.py"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "scripts/project_control/validate_claim_language.py"
+  - "research_control/tasks/RT-20260716-001/jobs/completions/AJC-AJ-RT-20260716-001-001.yaml"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P4-T02"
+  recommendation_ids:
+    - "V19-R20"
+    - "V19-R22"
+    - "V19-R43"
+    - "V19-R47"
+  migration_epoch: "legacy_consolidated"
+  implemented_task_scope: "Two P4-T02 reporting library modules one focused test file one task-local acceptance receipt registry rows and policy-generated derivatives only."
+  completed_v19_tasks_to_date:
+    - "P0-T01 through P4-T02"
+  downstream_tasks_not_implemented:
+    - "P4-T03 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p4_t02_common_compact_reporting"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct_and_supporting"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P4-T02"
+  coverage_summary: "V19-R20 V19-R22 V19-R43 and V19-R47 now have a reusable bounded reporter and exact common result model; existing validator adoption remains assigned to P4-T03 and later packets."
+physics_progress_status:
+  status: "project_system_compact_reporting_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P4-T02 implements operational validation reporting only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Validation models reporters tests task evidence registries derivatives and checkpoint evidence are operational only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+compact_reporter:
+  status: "PASS"
+  models_path: "scripts/validation/models.py"
+  reporting_path: "scripts/validation/reporting.py"
+  test_path: "tests/test_validation_reporting.py"
+  acceptance_path: "research_control/tasks/RT-20260716-002/artifacts/compact_reporter_acceptance.json"
+  test_count: 20
+  default_max_findings: 10
+  pass_console_budget_bytes: 2048
+  maximum_observed_pass_console_bytes: 77
+  nonpass_console_budget_bytes: 8192
+  maximum_observed_boundary_console_bytes: 1026
+  maximum_tested_finding_count: 300
+  default_shown_finding_count_at_maximum: 10
+  more_findings_at_maximum: 290
+  full_receipt_finding_count_at_maximum: 300
+  full_receipt_preserves_all_findings: true
+  warning_groups_bounded: true
+  deterministic_sorting: true
+  unicode_safe_byte_accounting: true
+  atomic_receipt_write: true
+  receipt_write_failure_is_visible: true
+  finding_count_parity: true
+  exit_code_parity: true
+  mode_flags:
+    - "--summary"
+    - "--json-summary"
+    - "--full-json"
+    - "--receipt"
+    - "--quiet"
+  default_receipt_root: ".local/validation-receipts/<tree-hash>/<run-id>/full.json"
+  tracked_receipt_created: false
+  existing_validators_integrated: false
+  CI_integration_implemented: false
+output_paths:
+  - "scripts/validation/models.py"
+  - "scripts/validation/reporting.py"
+  - "tests/test_validation_reporting.py"
+  - "research_control/tasks/RT-20260716-002/artifacts/compact_reporter_acceptance.json"
+  - "research_control/tasks/RT-20260716-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260716-002/jobs/completions/AJC-AJ-RT-20260716-002-001.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local retrieval PASS source_objects=809 relationships=4031 semantics=809 vault=809"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | documentation and project-system impact classified with no blocked paths"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory no_action and no competing open signal"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | signal registry valid and no open signal consumed"
+  - ".venv/bin/python -m unittest tests/test_validation_reporting.py | exit_code=0 | 20 tests PASS"
+  - ".venv/bin/python -m py_compile scripts/validation/models.py scripts/validation/reporting.py tests/test_validation_reporting.py | exit_code=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | governed regeneration PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | validation PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260716-002-001 --no-commit | exit_code=0 | ready_to_commit sync_passes=1 memory_sync=1 compatibility_bootstrap=0 memory_core=1 total_acceptance_operations=14 preflight_staged_tree=bb41c98ddf8f45ad5dc4a1cecae670553ab2165b duration_seconds=55.306"
+  - "git diff --check | exit_code=0"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P4-T01 was checkpointed and explicitly unlocked P4-T02; relay lease branch clean entry worktree canonical plan and active control were verified before the first write."
+      - "The receipt schema evidence identity environment budget collector full runner and claim-language sources were inspected directly and no competing project-improvement signal was open."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The common model validates exact statuses severities levels stable finding identity uniqueness nonnegative exit codes deterministic ordering and canonical aggregate priority."
+      - "The reporter writes atomic local full receipts before output and exposes bounded text compact JSON complete JSON receipt-path and quiet modes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Twenty focused tests cover finding boundaries byte budgets Unicode warning grouping deterministic ordering atomic failure full-receipt preservation flags and represented exit-code parity."
+      - "No existing validator CI planner requirement ordinary research handoff or physics source was changed."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The governed no-commit checkpoint returned ready_to_commit after all fourteen working and staged acceptance operations passed in 55.306 seconds."
+      - "Checkpoint convergence used one write-only tracked memory sync zero compatibility-bootstrap calls and one final staged memory-core gate on preflight tree bb41c98ddf8f45ad5dc4a1cecae670553ab2165b."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Governed memory regeneration completed without hand-editing generated derivatives."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Governed source and derivative regeneration and validate-only checks passed."
+  claim_language_linter:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No physics or public scientific claim-language source changed."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260716-002/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: "README.md and AGENTS.md remain unchanged because this packet creates an unintegrated internal library already specified by the canonical plan."
+project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 task implements an operational reporting library only. It does not authorize existing-validator integration P4-T03 CI or planner mutation canonical ontology edit source-law adoption general EqSrc discharge matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation or any reporter test receipt registry derivative or checkpoint evidence as physics proof."
+verdict: "v19_p4_t02_compact_reporter_pass_p4_t03_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P4-T02 supplies a deterministic bounded reporting boundary that later validator packets can adopt without losing full evidence or conflating operational validation with scientific authority."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P4-T03 Validator Engineer validator-integration AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 809
+    relationship_row_count: 4031
+    semantic_row_count: 809
+    vault_row_count: 809
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/validation_run_receipt_schema_v1.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/validation_run_receipt_schema_v1.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-RUN-RECEIPT-SCHEMA-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-RUN-RECEIPT-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_run_receipt_schema_v1.md"
+      source_hash: "991cac565466597ac92f85bb903b9908a924299c2d8b9146f45dc4245f5c986f"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation diagnostics only and are not authority; the registered plan schema and implementation sources were inspected directly."

@@ -1,0 +1,73 @@
+{
+  "schema_id": "compact_reporter_acceptance_v1",
+  "task_id": "RT-20260716-002",
+  "job_id": "AJ-RT-20260716-002-001",
+  "created_at": "2026-07-16T11:53:17Z",
+  "status": "PASS",
+  "implementation_paths": [
+    "scripts/validation/models.py",
+    "scripts/validation/reporting.py"
+  ],
+  "test_path": "tests/test_validation_reporting.py",
+  "test_count": 20,
+  "default_max_findings": 10,
+  "pass_console_budget_bytes": 2048,
+  "nonpass_console_budget_bytes": 8192,
+  "boundary_cases": [
+    {
+      "finding_count": 0,
+      "shown_finding_count": 0,
+      "more_findings": 0,
+      "console_bytes": 77
+    },
+    {
+      "finding_count": 1,
+      "shown_finding_count": 1,
+      "more_findings": 0,
+      "console_bytes": 207
+    },
+    {
+      "finding_count": 10,
+      "shown_finding_count": 10,
+      "more_findings": 0,
+      "console_bytes": 866
+    },
+    {
+      "finding_count": 11,
+      "shown_finding_count": 10,
+      "more_findings": 1,
+      "console_bytes": 866
+    },
+    {
+      "finding_count": 300,
+      "shown_finding_count": 10,
+      "more_findings": 290,
+      "console_bytes": 1026
+    }
+  ],
+  "mode_flags": [
+    "--summary",
+    "--json-summary",
+    "--full-json",
+    "--receipt",
+    "--quiet"
+  ],
+  "finding_count_parity": true,
+  "exit_code_parity": true,
+  "deterministic_sorting": true,
+  "unicode_safe_byte_accounting": true,
+  "warning_groups_bounded": true,
+  "atomic_receipt_write": true,
+  "atomic_write_failure_is_visible": true,
+  "full_receipt_finding_count": 300,
+  "full_receipt_preserves_all_findings": true,
+  "default_receipt_root": ".local/validation-receipts/<tree-hash>/<run-id>/full.json",
+  "tracked_receipt_created": false,
+  "existing_validators_integrated": false,
+  "physics_claim_authority": false,
+  "commands": [
+    ".venv/bin/python -m unittest tests/test_validation_reporting.py",
+    ".venv/bin/python -m py_compile scripts/validation/models.py scripts/validation/reporting.py tests/test_validation_reporting.py",
+    "git diff --check"
+  ]
+}
