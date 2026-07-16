@@ -25,6 +25,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-ID-CATALOG-V1` `research_control/design/validation_gate_id_catalog_v1.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1` `research_control/design/validation_obligation_resolution_policy_v1.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ORCHESTRATION-MIGRATION-AND-ROLLBACK-POLICY-V1` `research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md`
+- Backlink from `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1` `research_control/design/validation_profile_policy_v1.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-RUN-RECEIPT-SCHEMA-V1` `research_control/design/validation_run_receipt_schema_v1.md`
 
 ## Validation
