@@ -1,0 +1,143 @@
+{
+  "schema_id": "v19_staged_acceptance_report_v1",
+  "status": "PASS",
+  "task_id": "RT-20260716-018",
+  "job_id": "AJ-RT-20260716-018-001",
+  "plan_task_id": "P6-T04",
+  "migration_epoch": "shadow_planner",
+  "created_at": "2026-07-16T23:29:32Z",
+  "implementation": {
+    "module": "scripts/validation/staged.py",
+    "module_sha256": "4600c5c76547bd08a214bb972c86eca57e0f3ad1a9398c975efdcd375cf329c8",
+    "test_module": "tests/test_staged_validation.py",
+    "test_module_sha256": "ed1f4aab200722acfe3f3084d5d8b351cddd89d465aa9ec0e46623320fc258c2",
+    "manifest_sha256": "7d9f04c5b06e7a5385cf7e101dbbdf4cc265f9ab1ee3a0307b2b435f5657747b",
+    "base_ref": "HEAD",
+    "scope": "staged",
+    "index_identity_prefixes": [
+      "git-sha1:",
+      "git-sha256:"
+    ]
+  },
+  "staged_plan_contract": {
+    "plan_status": "READY",
+    "plan_scopes": [
+      "staged"
+    ],
+    "selected_nonmutating_blocking_gate_ids": [
+      "classify_changes",
+      "project_improvement_signals",
+      "documentation_impact",
+      "memory_core",
+      "research_control_diff",
+      "test_shard_repository",
+      "git_diff_check"
+    ],
+    "legacy_owned_mutating_gate_ids": [
+      "memory_sync",
+      "continue_memory_preflight",
+      "checkpoint_transaction"
+    ],
+    "unknown_paths": [],
+    "blocked_paths": [],
+    "execution_cardinality": "exactly_once_per_selected_gate_and_staged_identity",
+    "working_plan_staged_reusable": false,
+    "prior_evidence_reuse_enabled": false
+  },
+  "scenario_results": [
+    {
+      "scenario_id": "add_delete_rename_generated_exact_tree",
+      "expected": "PASS",
+      "observed": "PASS"
+    },
+    {
+      "scenario_id": "unrelated_unstaged_residue",
+      "expected": "BLOCKED_CONFIGURATION",
+      "observed": "BLOCKED_CONFIGURATION"
+    },
+    {
+      "scenario_id": "preexisting_staged_path_outside_exact_transaction",
+      "expected": "BLOCKED_CONFIGURATION_and_entry_index_restored",
+      "observed": "BLOCKED_CONFIGURATION_and_entry_index_restored"
+    },
+    {
+      "scenario_id": "stale_working_evidence",
+      "expected": "rejected_and_reexecuted",
+      "observed": "rejected_and_reexecuted"
+    },
+    {
+      "scenario_id": "unknown_governed_path",
+      "expected": "BLOCKED_CONFIGURATION",
+      "observed": "BLOCKED_CONFIGURATION"
+    },
+    {
+      "scenario_id": "gate_changes_index_tree",
+      "expected": "BLOCKED_CONFIGURATION_and_entry_index_restored",
+      "observed": "BLOCKED_CONFIGURATION_and_entry_index_restored"
+    },
+    {
+      "scenario_id": "gate_executor_exception",
+      "expected": "BLOCKED_CONFIGURATION_and_entry_index_restored",
+      "observed": "BLOCKED_CONFIGURATION_and_entry_index_restored"
+    },
+    {
+      "scenario_id": "legacy_shadow_status_mismatch",
+      "expected": "BLOCKED_CONFIGURATION",
+      "observed": "BLOCKED_CONFIGURATION"
+    },
+    {
+      "scenario_id": "duplicate_or_missing_gate_outcome",
+      "expected": "BLOCKED_CONFIGURATION",
+      "observed": "BLOCKED_CONFIGURATION"
+    },
+    {
+      "scenario_id": "path_outside_agentjob_allowlist",
+      "expected": "BLOCKED_CONFIGURATION",
+      "observed": "BLOCKED_CONFIGURATION"
+    }
+  ],
+  "test_evidence": {
+    "red_baseline": "ModuleNotFoundError before scripts/validation/staged.py existed",
+    "focused_test_count": 10,
+    "focused_status": "PASS",
+    "compatibility_test_count": 68,
+    "compatibility_status": "PASS",
+    "temporary_git_fixtures_only": true,
+    "live_repository_index_mutated_by_focused_tests": false
+  },
+  "shadow_legacy_equivalence": {
+    "status": "PASS",
+    "coverage_fixture": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json",
+    "all_selected_nonmutating_blocking_gates_have_legacy_coverage": true,
+    "unexplained_mismatch_count": 0,
+    "negative_mismatch_fixture_blocks": true,
+    "legacy_result_authoritative": true,
+    "planner_result_authoritative": false
+  },
+  "safety": {
+    "entry_index_restored_on_success": true,
+    "entry_index_restored_on_blocked_result": true,
+    "entry_index_restored_on_executor_exception": true,
+    "unstaged_residue_rejected": true,
+    "preexisting_staged_path_outside_transaction_rejected": true,
+    "staged_tree_mutation_rejected": true,
+    "agentjob_allowlist_enforced_before_and_after_staging": true,
+    "commit_performed": false,
+    "checkpoint_integration_changed": false
+  },
+  "scope_alarm_resolution": {
+    "triggered": true,
+    "continued": true,
+    "reason": "The single module must jointly preserve rename-aware Git staging exact index identity AgentJob allowlist enforcement residue detection one-shot gate execution legacy comparison and entry-index restoration. The implementation remained confined to the two planned source and test files and did not expand into checkpoint integration or adjacent orchestration."
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "scientific_claims_changed": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false,
+    "ordinary_research_handoff_preserved": "handoff-0740"
+  }
+}
