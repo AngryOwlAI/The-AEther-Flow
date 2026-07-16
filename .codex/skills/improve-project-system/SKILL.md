@@ -174,6 +174,21 @@ an open-ended repository rewrite.
     source, selected signal, open signals, and change classification. Ordinary
     validator and documentation jobs do not inherit that burden.
 
+## Validation-Output Consumption
+
+Follow
+`research_control/design/agent_validation_output_consumption_policy_v1.md`.
+Read the compact summary first. A PASS needs no receipt expansion unless an
+audit contract requires it. For a non-PASS result, inspect only the relevant
+failed or warning gate group, finding IDs, or a bounded receipt section or
+tail; do not ingest or retransmit an entire full receipt by default. Do not
+repeatedly poll when that would return unchanged output.
+
+Completion evidence records the gate ID, status, receipt path, content hash,
+counts, tree fingerprint when available, and relevant finding IDs. Full
+receipts under `.local/validation-receipts` remain untracked and
+non-authoritative; they do not become scientific or project-control authority.
+
 ## Stop Conditions
 
 - Required action would edit canonical ontology TeX, benchmark sources, science

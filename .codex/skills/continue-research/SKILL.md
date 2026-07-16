@@ -57,11 +57,12 @@ skills provide procedures, and gates control claim promotion.
 2. Resolve tracked state and request the Director context packet:
 
    ```zsh
-   .venv/bin/python scripts/research_control/continue_research.py
+   .venv/bin/python scripts/research_control/continue_research.py --summary
    ```
 
-   The script emits JSON by default. Use `--summary` only for a human-readable
-   rendering of the same packet.
+   Consume the summary first. Request the JSON rendering only when the summary
+   omits a routing field required for the current decision, and then inspect
+   only that bounded field or section.
 
 3. If the packet boundary is `director_decision_required`, enter Director of
    Research mode under `.agents/roles/research_ops/director-of-research.v0.3.0.md`.
@@ -286,6 +287,21 @@ skills provide procedures, and gates control claim promotion.
 
 11. If the invocation is read-only, blocked, human-gated, or produces no file
     changes, report the state and do not create an empty commit.
+
+## Validation-Output Consumption
+
+Follow
+`research_control/design/agent_validation_output_consumption_policy_v1.md`.
+Read the compact summary first. A PASS needs no receipt expansion unless an
+audit contract requires it. For a non-PASS result, inspect only the relevant
+failed or warning gate group, finding IDs, or a bounded receipt section or
+tail; do not ingest or retransmit an entire full receipt by default. Do not
+repeatedly poll when that would return unchanged output.
+
+Completion evidence records the gate ID, status, receipt path, content hash,
+counts, tree fingerprint when available, and relevant finding IDs. Full
+receipts under `.local/validation-receipts` remain untracked and
+non-authoritative; they do not become scientific or project-control authority.
 
 ## Checkpoint Boundaries
 

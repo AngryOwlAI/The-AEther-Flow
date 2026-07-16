@@ -85,6 +85,21 @@ proceeding.
    passing `--job-id` when integrating a project-system AgentJob that is not the
    active physics research task.
 
+## Validation-Output Consumption
+
+Follow
+`research_control/design/agent_validation_output_consumption_policy_v1.md`.
+Read the compact summary first. A PASS needs no receipt expansion unless an
+audit contract requires it. For a non-PASS result, inspect only the relevant
+failed or warning gate group, finding IDs, or a bounded receipt section or
+tail; do not ingest or retransmit an entire full receipt by default. Do not
+repeatedly poll when that would return unchanged output.
+
+Completion evidence records the gate ID, status, receipt path, content hash,
+counts, tree fingerprint when available, and relevant finding IDs. Full
+receipts under `.local/validation-receipts` remain untracked and
+non-authoritative; they do not become scientific or project-control authority.
+
 ## Stop Conditions
 
 - Human intent is missing and the diff is ambiguous.

@@ -241,6 +241,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-POLICY-V1` `wiki/markdown/md-research-control-design-accepted-status-calibration-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-SCHEMA-V1` `wiki/markdown/md-research-control-design-accepted-status-calibration-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ACTIVE-STATE-BIFURCATION-POLICY-V1` `wiki/markdown/md-research-control-design-active-state-bifurcation-policy-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-AGENT-VALIDATION-OUTPUT-CONSUMPTION-POLICY-V1` `wiki/markdown/md-research-control-design-agent-validation-output-consumption-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-AI-RESEARCH-AGENT-METRICS-TAXONOMY-V1` `wiki/markdown/md-research-control-design-ai-research-agent-metrics-taxonomy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-CLAIM-GRAPH-SCHEMA-V1` `wiki/markdown/md-research-control-design-claim-graph-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-COMPACT-CURRENT-FRONTIER-SCHEMA-V16` `wiki/markdown/md-research-control-design-compact-current-frontier-schema-v16.md`
@@ -581,6 +582,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-POLICY-V1` `research_control/design/accepted_status_calibration_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-SCHEMA-V1` `research_control/design/accepted_status_calibration_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ACTIVE-STATE-BIFURCATION-POLICY-V1` `research_control/design/active_state_bifurcation_policy_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-AGENT-VALIDATION-OUTPUT-CONSUMPTION-POLICY-V1` `research_control/design/agent_validation_output_consumption_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-AI-RESEARCH-AGENT-METRICS-TAXONOMY-V1` `research_control/design/ai_research_agent_metrics_taxonomy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-CLAIM-GRAPH-SCHEMA-V1` `research_control/design/claim_graph_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-COMPACT-CURRENT-FRONTIER-SCHEMA-V16` `research_control/design/compact_current_frontier_schema_v16.md`
