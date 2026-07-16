@@ -1,0 +1,55 @@
+{
+  "authority": {
+    "benchmark_authority": false,
+    "gate_chair_authority": false,
+    "legacy_checkpoint_authoritative": true,
+    "ontology_authority": false,
+    "operational_validation_only": true,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "source_authoritative": false
+  },
+  "compatibility_test_count": 96,
+  "fixture_results": {
+    "cache_eligible_mutator_rejected": true,
+    "declared_output_and_job_allowlist_both_enforced": true,
+    "failed_mutator_rollback_metadata": true,
+    "non_converging_fails_at_bound": true,
+    "one_pass_stabilization": true,
+    "read_only_after_final_barrier": true,
+    "replan_requires_new_affected_tags": true,
+    "targeted_pdf_second_memory_sync": true,
+    "two_pass_stabilization": true
+  },
+  "focused_test_count": 9,
+  "implementation": {
+    "bounded_stabilization": true,
+    "declared_output_hash_receipts": true,
+    "hidden_nested_generation_authorized": false,
+    "manifest_changed": false,
+    "mutator_cache_eligible": false,
+    "mutators_run_serially": true,
+    "planner_changed": false,
+    "read_only_gates_wait_for_stability": true,
+    "rollback_performed_by_shadow_executor": false,
+    "rollback_restoration_authority": "legacy_checkpoint_index_owner",
+    "shadow_planner_only": true,
+    "unexplained_legacy_mismatch_count": 0
+  },
+  "migration_epoch": "shadow_planner",
+  "plan_task_id": "P6-T02",
+  "schema_id": "v19_mutator_barrier_acceptance_v1",
+  "schema_version": 1,
+  "source_hashes": {
+    "scripts/validation/executor.py": "34d7963fdad79aee8692bee90b249382def6ca649b9d216ecc0c7ca9d535c3e8",
+    "scripts/validation/mutators.py": "a924f96b9530caeb211ef0ecdb408aeeb3449d8858e3925fd736bce70c18d117",
+    "tests/test_validation_mutator_barriers.py": "e60bd82832ace56111063f012c3635fab4e48fc8e77138bded082def7aa903f6"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260716-016",
+  "validation_commands": [
+    ".venv/bin/python -m py_compile scripts/validation/mutators.py scripts/validation/executor.py tests/test_validation_mutator_barriers.py",
+    ".venv/bin/python -m unittest tests/test_validation_mutator_barriers.py",
+    ".venv/bin/python -m unittest tests/test_validation_mutator_barriers.py tests/test_validation_executor.py tests/test_validation_planner.py tests/test_validation_reporting.py tests/test_validation_manifest.py tests/test_validation_change_matrix.py tests/test_validation_equivalence.py"
+  ]
+}

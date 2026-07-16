@@ -18,8 +18,17 @@ import subprocess
 import tempfile
 import threading
 import time
-from typing import Mapping, Protocol, Sequence
+from typing import Callable, Mapping, Protocol, Sequence
 
+from scripts.validation.mutators import (
+    MutatorContractError,
+    matches_any,
+    mutation_delta,
+    selected_mutators,
+    snapshot_tree,
+    validate_allowed_globs,
+    validate_mutator_gate,
+)
 from scripts.validation.plan import PlannerError, ValidationPlan, build_plan
 
 
@@ -135,7 +144,7 @@ def _classification_for(plan: ValidationPlan) -> dict[str, object]:
     }
 
 
-def _validate_read_only_plan(
+def _validate_plan(
     plan: ValidationPlan,
     manifest: Mapping[str, object],
     adapters: Mapping[str, ValidationAdapter],
@@ -171,8 +180,11 @@ def _validate_read_only_plan(
         gate = gates.get(gate_id)
         if gate is None:
             raise ExecutorError(f"unknown selected gate: {gate_id}")
-        if gate.get("mutating") is not False:
-            raise ExecutorError(f"mutating gate is forbidden in P6-T01: {gate_id}")
+        if gate.get("mutating") is True:
+            try:
+                validate_mutator_gate(gate)
+            except MutatorContractError as error:
+                raise ExecutorError(f"mutating gate contract invalid: {error}") from error
         adapter_id = gate.get("adapter")
         if not isinstance(adapter_id, str) or adapter_id not in adapters:
             raise ExecutorError(f"missing adapter for selected gate: {gate_id}")
@@ -200,8 +212,10 @@ def _run_gate(
     log_directory: Path,
     ordinal: int,
     cancellation: threading.Event,
+    attempt: int | None = None,
 ) -> dict[str, object]:
-    prefix = f"{ordinal:04d}-{gate_id}"
+    attempt_suffix = f"-pass-{attempt:02d}" if attempt is not None else ""
+    prefix = f"{ordinal:04d}-{gate_id}{attempt_suffix}"
     stdout_path = log_directory / f"{prefix}.stdout"
     stderr_path = log_directory / f"{prefix}.stderr"
     stdout_path.touch()
@@ -333,12 +347,24 @@ def execute_plan(
     max_workers: int = 4,
     cancellation: threading.Event | None = None,
     run_id: str | None = None,
+    mutation_root: Path | None = None,
+    allowed_mutation_globs: Sequence[str] = (),
+    max_stabilization_passes: int = 3,
+    replan_if_new_tags: Callable[[tuple[str, ...]], ValidationPlan | None] | None = None,
 ) -> ExecutionOutcome:
-    """Validate and execute one read-only shadow plan, then atomically receipt it."""
+    """Execute one validated shadow plan with a bounded pre-validation barrier."""
 
     if not isinstance(max_workers, int) or isinstance(max_workers, bool) or max_workers < 1:
         raise ExecutorError("max_workers must be a positive integer")
-    gates, entries = _validate_read_only_plan(plan, manifest, adapters)
+    if (
+        not isinstance(max_stabilization_passes, int)
+        or isinstance(max_stabilization_passes, bool)
+        or max_stabilization_passes < 1
+    ):
+        raise ExecutorError("max_stabilization_passes must be a positive integer")
+    if replan_if_new_tags is not None and not callable(replan_if_new_tags):
+        raise ExecutorError("replan_if_new_tags must be callable")
+    gates, entries = _validate_plan(plan, manifest, adapters)
     cancellation = cancellation or threading.Event()
     plan_hash = hashlib.sha256(plan.canonical_json().encode("utf-8")).hexdigest()
     if run_id is None:
@@ -354,12 +380,189 @@ def execute_plan(
     except OSError as error:
         raise ExecutorError(f"receipt directory creation failed: {error}") from error
 
-    order = list(plan.ordered_gate_ids)
+    active_plan = plan
+    mutator_ids = selected_mutators(active_plan.ordered_gate_ids, gates)
+    mutator_results: dict[str, dict[str, object]] = {}
+    barrier_passes: list[dict[str, object]] = []
+    mutation_sequence: list[str] = []
+    cumulative_changed_paths: set[str] = set()
+    paths_considered_for_replan: set[str] = set()
+    replan_count = 0
+    replan_events: list[dict[str, object]] = []
+    barrier_status = "NOT_APPLICABLE"
+    barrier_finding_id: str | None = None
+
+    if mutator_ids:
+        if mutation_root is None:
+            raise ExecutorError("mutation_root is required when the plan selects mutators")
+        try:
+            allowed_globs = validate_allowed_globs(
+                allowed_mutation_globs,
+                context="allowed_mutation_globs",
+            )
+        except MutatorContractError as error:
+            raise ExecutorError(str(error)) from error
+        mutation_root = Path(mutation_root)
+        barrier_status = "RUNNING"
+        for pass_number in range(1, max_stabilization_passes + 1):
+            pass_before = snapshot_tree(mutation_root, excluded=(receipt_root,))
+            pass_results: list[dict[str, object]] = []
+            stop_this_pass = False
+            for ordinal, gate_id in enumerate(mutator_ids):
+                gate = gates[gate_id]
+                before = snapshot_tree(mutation_root, excluded=(receipt_root,))
+                result = _run_gate(
+                    gate_id,
+                    gate,
+                    entries[gate_id],
+                    adapters[str(gate["adapter"])],
+                    log_directory,
+                    ordinal,
+                    cancellation,
+                    attempt=pass_number,
+                )
+                after = snapshot_tree(mutation_root, excluded=(receipt_root,))
+                delta = mutation_delta(before, after)
+                declared_globs = validate_mutator_gate(gate)
+                disallowed_paths = [
+                    path
+                    for path in delta.changed_paths
+                    if not matches_any(path, declared_globs)
+                    or not matches_any(path, allowed_globs)
+                ]
+                result = dict(result)
+                result.update(
+                    {
+                        "barrier_pass": pass_number,
+                        "mutation": delta.to_dict(),
+                        "declared_output_globs": list(declared_globs),
+                        "job_allowed_output_globs": list(allowed_globs),
+                        "disallowed_paths": disallowed_paths,
+                        "cache_eligible": False,
+                        "rollback": {
+                            "required": bool(disallowed_paths) or result["status"] != "PASS",
+                            "performed": False,
+                            "authority": "legacy_checkpoint_index_owner",
+                            "before_tree_hash": delta.before_tree_hash,
+                            "after_tree_hash": delta.after_tree_hash,
+                            "changed_paths": list(delta.changed_paths),
+                        },
+                    }
+                )
+                if disallowed_paths:
+                    result["status"] = "BLOCKED_CONFIGURATION"
+                    result["exit_code"] = 2
+                    result["reason"] = "disallowed_mutation_output"
+                    result["satisfied_obligations"] = []
+                    barrier_status = "DISALLOWED_OUTPUT"
+                    barrier_finding_id = "V19-MUTATOR-DISALLOWED-OUTPUT"
+                elif result["status"] != "PASS":
+                    barrier_status = "MUTATOR_FAILED"
+                    barrier_finding_id = "V19-MUTATOR-EXECUTION-FAILED"
+                pass_results.append(result)
+                mutator_results[gate_id] = result
+                mutation_sequence.append(gate_id)
+                cumulative_changed_paths.update(delta.changed_paths)
+                if result["status"] != "PASS":
+                    stop_this_pass = True
+                    break
+
+            pass_after = snapshot_tree(mutation_root, excluded=(receipt_root,))
+            pass_delta = mutation_delta(pass_before, pass_after)
+            barrier_passes.append(
+                {
+                    "pass": pass_number,
+                    "before_tree_hash": pass_delta.before_tree_hash,
+                    "after_tree_hash": pass_delta.after_tree_hash,
+                    "before_paths": list(pass_delta.before_paths),
+                    "after_paths": list(pass_delta.after_paths),
+                    "changed_paths": list(pass_delta.changed_paths),
+                    "gate_results": pass_results,
+                }
+            )
+            cumulative_changed_paths.update(pass_delta.changed_paths)
+            if stop_this_pass:
+                break
+
+            new_paths = tuple(
+                sorted(set(pass_delta.changed_paths) - paths_considered_for_replan)
+            )
+            if new_paths and replan_if_new_tags is not None:
+                paths_considered_for_replan.update(new_paths)
+                replanned = replan_if_new_tags(new_paths)
+                if replanned is not None and replanned.canonical_json() != active_plan.canonical_json():
+                    added_tags = sorted(set(replanned.path_tags) - set(active_plan.path_tags))
+                    if not added_tags:
+                        raise ExecutorError(
+                            "mutation replan changed the plan without new affected tags"
+                        )
+                    gates, entries = _validate_plan(replanned, manifest, adapters)
+                    replan_events.append(
+                        {
+                            "trigger_paths": list(new_paths),
+                            "new_affected_tags": added_tags,
+                        }
+                    )
+                    active_plan = replanned
+                    mutator_ids = selected_mutators(active_plan.ordered_gate_ids, gates)
+                    replan_count += 1
+
+            if not pass_delta.changes:
+                barrier_status = "STABLE"
+                break
+        else:
+            barrier_status = "NON_CONVERGING"
+            barrier_finding_id = "V19-MUTATOR-NON-CONVERGENCE"
+            if mutator_ids:
+                failing_gate_id = mutator_ids[-1]
+                failed = mutator_results[failing_gate_id]
+                failed["status"] = "FAIL"
+                failed["exit_code"] = 1
+                failed["reason"] = "stabilization_limit_exceeded"
+                failed["satisfied_obligations"] = []
+                rollback = dict(failed["rollback"])
+                rollback["required"] = True
+                failed["rollback"] = rollback
+                mutator_results[failing_gate_id] = failed
+
+    first_pdf = next(
+        (index for index, gate_id in enumerate(mutation_sequence) if gate_id == "targeted_pdf_build"),
+        None,
+    )
+    targeted_pdf_second_sync_observed = bool(
+        first_pdf is not None
+        and any(
+            gate_id == "memory_sync"
+            for gate_id in mutation_sequence[first_pdf + 1 :]
+        )
+    )
+    barrier_receipt: dict[str, object] = {
+        "schema_id": "validation_mutator_barrier_v1",
+        "status": barrier_status,
+        "finding_id": barrier_finding_id,
+        "pass_count": len(barrier_passes),
+        "max_stabilization_passes": max_stabilization_passes,
+        "selected_mutator_ids": list(mutator_ids),
+        "execution_sequence": mutation_sequence,
+        "changed_paths": sorted(cumulative_changed_paths),
+        "replan_count": replan_count,
+        "replan_events": replan_events,
+        "targeted_pdf_second_sync_observed": targeted_pdf_second_sync_observed,
+        "legacy_checkpoint_authoritative": True,
+        "rollback_performed": False,
+        "passes": barrier_passes,
+    }
+
+    order = [
+        gate_id
+        for gate_id in active_plan.ordered_gate_ids
+        if gates[gate_id]["mutating"] is False
+    ]
     position = {gate_id: index for index, gate_id in enumerate(order)}
     pending = set(order)
-    completed: set[str] = set()
+    completed: set[str] = set(mutator_ids) if barrier_status in {"STABLE", "NOT_APPLICABLE"} else set()
     results: dict[str, dict[str, object]] = {}
-    fail_fast = False
+    fail_fast = barrier_status not in {"STABLE", "NOT_APPLICABLE"}
     while pending and not fail_fast and not cancellation.is_set():
         ready = [
             gate_id
@@ -411,10 +614,25 @@ def execute_plan(
         )
 
     skip_reason = "cancelled_before_start" if cancellation.is_set() else "fail_fast"
+    if barrier_status not in {"STABLE", "NOT_APPLICABLE"}:
+        skip_reason = "mutator_barrier_failed"
     for gate_id in order:
         if gate_id in pending:
             results[gate_id] = _skipped_gate(gate_id, gates[gate_id], entries[gate_id], skip_reason)
-    ordered_results = [results[gate_id] for gate_id in order]
+    ordered_results: list[dict[str, object]] = []
+    for gate_id in active_plan.ordered_gate_ids:
+        if gates[gate_id]["mutating"] is True:
+            result = mutator_results.get(gate_id)
+            if result is None:
+                result = _skipped_gate(
+                    gate_id,
+                    gates[gate_id],
+                    entries[gate_id],
+                    "mutator_barrier_failed",
+                )
+            ordered_results.append(result)
+        else:
+            ordered_results.append(results[gate_id])
     cancelled = cancellation.is_set()
     status, exit_code = _run_status(ordered_results, cancelled)
     counts = {
@@ -430,6 +648,9 @@ def execute_plan(
         "schema_version": 1,
         "run_id": run_id,
         "plan_hash": plan_hash,
+        "final_plan_hash": hashlib.sha256(
+            active_plan.canonical_json().encode("utf-8")
+        ).hexdigest(),
         "manifest_hash": plan.manifest_hash,
         "execution_authority": "legacy",
         "migration_epoch": "shadow_planner",
@@ -438,6 +659,7 @@ def execute_plan(
         "cancelled": cancelled,
         "counts": counts,
         "gate_results": ordered_results,
+        "mutator_barrier": barrier_receipt,
         "authority": {
             "operational_validation_only": True,
             "legacy_result_authoritative": True,
