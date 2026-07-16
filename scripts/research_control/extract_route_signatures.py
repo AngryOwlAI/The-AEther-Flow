@@ -14,8 +14,9 @@ from typing import Any
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
-if str(SCRIPT_DIR) not in sys.path:
-    sys.path.insert(0, str(SCRIPT_DIR))
+for import_path in (REPO_ROOT, SCRIPT_DIR):
+    if str(import_path) not in sys.path:
+        sys.path.insert(0, str(import_path))
 
 from extract_route_history import (  # noqa: E402
     as_bool,
@@ -24,7 +25,15 @@ from extract_route_history import (  # noqa: E402
     load_yaml_record,
     normalize_compact,
 )
-from validate_route_orbits import validate_route_history  # noqa: E402
+from scripts.validation.reporting import add_reporting_arguments  # noqa: E402
+from validate_route_orbits import (  # noqa: E402
+    adapt_to_common_run,
+    bounded_values,
+    build_compact_summary,
+    emit_diagnostic_output,
+    write_diagnostic_receipts,
+    validate_route_history,
+)
 
 
 SIGNATURE_SCHEMA_ID = "route_signature_schema_v1"
@@ -520,26 +529,82 @@ def build_report(
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    add_reporting_arguments(parser)
     parser.add_argument("--repo-root", type=Path, default=REPO_ROOT)
     parser.add_argument("--sample", choices=["recent-matter-coupling"], default="recent-matter-coupling")
     parser.add_argument("--task-id", action="append", default=[], help="Restrict extraction to a task ID; repeatable.")
-    parser.add_argument("--output", type=Path, default=None, help="Optional JSON output path.")
-    parser.add_argument("--json", action="store_true", help="Print JSON to stdout.")
-    return parser.parse_args(argv)
+    parser.add_argument("--output", type=Path, default=None, help="Full JSON receipt path; written atomically.")
+    parser.add_argument("--json", action="store_true", help="Print the legacy full report.")
+    args = parser.parse_args(argv)
+    common_mode_selected = any(
+        getattr(args, name) for name in ("summary", "json_summary", "full_json", "receipt", "quiet")
+    )
+    if args.json and common_mode_selected:
+        parser.error("--json cannot be combined with a common reporting mode")
+    return args
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(list(argv or sys.argv[1:]))
     repo_root = args.repo_root.resolve()
     report = build_report(repo_root=repo_root, task_ids=args.task_id, sample=args.sample)
-    payload = json.dumps(report, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
-    if args.output is not None:
-        output_path = args.output if args.output.is_absolute() else repo_root / args.output
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        output_path.write_text(payload, encoding="utf-8")
-    if args.json or args.output is None:
-        print(payload, end="")
-    return 0 if report["status"] == "PASS" else 1
+    warning_cycles = [
+        cycle
+        for cycle in report["repeated_burden_cycles"]
+        if cycle["suggested_consequence"].startswith("emit_advisory")
+    ]
+    issues = [
+        *(
+            ("ERROR", "route_signature_extraction_error", compact_text(error))
+            for error in report["extraction_errors"]
+        ),
+        *(
+            (
+                "WARN",
+                "repeated_process_refresh_route_orbit",
+                f"Repeated process-refresh orbit {cycle['cycle_key']} task_ids={','.join(cycle['task_ids'])}",
+            )
+            for cycle in warning_cycles
+        ),
+    ]
+    run = adapt_to_common_run(report, "route_signature_diagnostic", issues, advisory_only=True)
+    try:
+        common_receipt, report_receipt = write_diagnostic_receipts(
+            report,
+            run,
+            repo_root,
+            args.output,
+        )
+    except (OSError, ValueError) as error:
+        print(f"BLOCKED_CONFIGURATION receipt_write_failed: {compact_text(error)}")
+        return 2
+    task_ids, omitted = bounded_values(
+        [task_id for cycle in warning_cycles for task_id in cycle["task_ids"]]
+    )
+    legacy = report["legacy_route_orbit_validation"]
+    summary = build_compact_summary(
+        run,
+        common_receipt,
+        report_receipt,
+        gate_id="route_signature_diagnostic",
+        counts={
+            "source_tasks": report["task_count"],
+            "signatures": report["route_signature_count"],
+            "extraction_errors": len(report["extraction_errors"]),
+            "repeated_burden_cycles": report["repeated_burden_cycle_count"],
+            "repeated_process_refresh_cycles": report["repeated_no_new_payload_cycle_count"],
+            "legacy_hard_failures": legacy["hard_failure_count"],
+            "legacy_warnings": legacy["warning_count"],
+        },
+        hard_failure_ids=["legacy_hard_route_orbit_candidate"] if legacy["hard_failure_count"] else [],
+        warning_ids=["repeated_process_refresh_route_orbit"] if warning_cycles else [],
+        affected_task_ids=task_ids,
+        affected_task_ids_omitted=omitted,
+        recommended_guard_action=report["suggested_freeze_or_continuation_consequence"],
+        advisory_only=True,
+    )
+    emit_diagnostic_output(args, report, summary, report_receipt)
+    return run.exit_code
 
 
 if __name__ == "__main__":

@@ -1,0 +1,116 @@
+{
+  "schema_id": "route_diagnostic_compact_output_acceptance_v1",
+  "task_id": "RT-20260716-004",
+  "job_id": "AJ-RT-20260716-004-001",
+  "created_at": "2026-07-16T15:00:29Z",
+  "status": "PASS",
+  "implementation": {
+    "route_signature_path": "scripts/research_control/extract_route_signatures.py",
+    "route_signature_sha256": "bb3a000a1645b2432711055d7efedac0634891f70aa7b675e8a90104bf523df6",
+    "route_orbit_path": "scripts/research_control/validate_route_orbits.py",
+    "route_orbit_sha256": "11e481c51fa284aa5dc13c4c0e5bbc33e8849004b3ad174c1f299931460145bd",
+    "test_path": "tests/test_route_signature_extractor.py",
+    "test_sha256": "7b77ba6d83f0450d98a0deef7e518ac90552ebfc299fb65bfbc28ed5896b735c",
+    "shared_reporter_changed": false,
+    "route_history_extractor_changed": false,
+    "warning_thresholds_changed": false
+  },
+  "focused_test_count": 7,
+  "acceptance_cases": [
+    "built_in_recent_matter_coupling",
+    "built_in_recent_matter_rr_e",
+    "repeated_process_refresh_warning",
+    "route_orbit_hard_candidate",
+    "route_orbit_advisory_exit",
+    "task_id_filter",
+    "receipt_write_failure"
+  ],
+  "common_adapter": {
+    "validation_run_adapter": true,
+    "stable_finding_ids": true,
+    "working_snapshot_hash_qualified": true,
+    "common_full_receipt_written_atomically": true,
+    "raw_route_report_written_atomically": true,
+    "raw_report_preserves_all_normalized_signatures_and_findings": true,
+    "receipt_write_failure_visible": true,
+    "cache_key_ignores_generated_timestamp_only": true,
+    "default_receipt_pattern": ".local/validation-receipts/<working-sha256>/<run-id>/{full.json,route-report.json}"
+  },
+  "compatibility": {
+    "legacy_json_alias": "--json",
+    "legacy_full_json_flag": "--full-json",
+    "legacy_output_path_flag": "--output",
+    "legacy_full_report_schema_preserved": true,
+    "full_receipt_exact_legacy_json": true,
+    "output_only_remains_quiet": true,
+    "common_modes": [
+      "--summary",
+      "--json-summary",
+      "--receipt",
+      "--quiet"
+    ]
+  },
+  "measurements": {
+    "route_signature_default_bytes": 835,
+    "route_signature_full_json_bytes": 68870,
+    "route_signature_shrink_percent": 98.788,
+    "route_orbit_live_precompletion_default_bytes": 986,
+    "route_orbit_live_precompletion_full_json_bytes": 291053,
+    "route_orbit_live_precompletion_shrink_percent": 99.661,
+    "route_orbit_live_precompletion_status": "FAIL_ACTIVE_TASK_COMPLETION_ABSENT",
+    "route_orbit_live_final_default_bytes": 966,
+    "route_orbit_live_final_full_json_bytes": 290908,
+    "route_orbit_live_final_shrink_percent": 99.668,
+    "route_orbit_live_final_status": "PASS",
+    "route_orbit_live_final_extraction_error_count": 0,
+    "route_orbit_live_final_hard_failure_count": 0,
+    "route_orbit_live_final_warning_count": 160,
+    "route_orbit_sample_default_bytes": 726,
+    "route_orbit_sample_full_json_bytes": 442,
+    "pass_console_budget_bytes": 2048,
+    "nonpass_console_budget_bytes": 8192,
+    "all_observed_default_outputs_within_budget": true
+  },
+  "shadow_comparison": {
+    "legacy_status_matches_common_status": true,
+    "legacy_exit_matches_common_exit": true,
+    "legacy_warning_and_hard_counts_match_summary_counts": true,
+    "advisory_only_exit_preserved": true,
+    "unexplained_mismatches": 0
+  },
+  "authority": {
+    "operational_diagnostic_only": true,
+    "advisory_only_preserved": true,
+    "route_freeze_authorized": false,
+    "physics_promotion_authorized": false,
+    "source_law_adoption_authorized": false,
+    "completed_derivation_authorized": false
+  },
+  "checkpoint_receipt": {
+    "status": "ready_to_commit",
+    "sync_passes": 1,
+    "acceptance_operation_count": 14,
+    "duration_seconds": 60.092,
+    "final_staged_tree": "fda7d90ac7c2cd9e76aa920446984bca27259f7a",
+    "memory_sync_count": 1,
+    "memory_core_count": 1,
+    "compatibility_bootstrap_count": 0,
+    "claim_language_hard_fail_count": 0,
+    "claim_language_historical_warning_count_per_scope": 1474,
+    "working_and_staged_claim_identity_match": true,
+    "tracked_full_receipt_created": false,
+    "no_physics_authority": true
+  },
+  "commands": [
+    ".venv/bin/python -m py_compile scripts/research_control/extract_route_signatures.py scripts/research_control/validate_route_orbits.py tests/test_route_signature_extractor.py tests/test_route_orbit_validator.py",
+    ".venv/bin/python -m unittest tests/test_route_signature_extractor.py tests/test_route_orbit_validator.py",
+    ".venv/bin/python scripts/research_control/extract_route_signatures.py",
+    ".venv/bin/python scripts/research_control/extract_route_signatures.py --json",
+    ".venv/bin/python scripts/research_control/validate_route_orbits.py --sample recent-matter-rr-e",
+    ".venv/bin/python scripts/research_control/validate_route_orbits.py --sample recent-matter-rr-e --json",
+    ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260716-004-001 --no-commit",
+    "git diff --check"
+  ],
+  "scientific_claims_changed": false,
+  "physics_claim_authority": false
+}

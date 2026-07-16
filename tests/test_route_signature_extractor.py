@@ -1,8 +1,12 @@
 from __future__ import annotations
 
 import importlib.util
+import io
+import json
 import sys
+import tempfile
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 
 
@@ -25,6 +29,7 @@ class RouteSignatureExtractorTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.extractor = load_module("extract_route_signatures", "extract_route_signatures.py")
+        cls.validator = sys.modules["validate_route_orbits"]
 
     def test_recent_matter_coupling_report_uses_v15_schema_and_is_advisory(self) -> None:
         report = self.extractor.build_report(REPO_ROOT, sample="recent-matter-coupling")
@@ -92,6 +97,96 @@ class RouteSignatureExtractorTests(unittest.TestCase):
             analysis["suggested_freeze_or_continuation_consequence"],
             "emit_advisory_route_orbit_warning_and_route_p10_t03_freeze_threshold_review",
         )
+
+    def test_compact_output_preserves_full_receipt_and_task_filter(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            receipt_path = Path(temporary_directory) / "route-signatures.json"
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                result = self.extractor.main(
+                    [
+                        "--repo-root",
+                        str(REPO_ROOT),
+                        "--task-id",
+                        "RT-20260701-010",
+                        "--output",
+                        str(receipt_path),
+                        "--json-summary",
+                    ]
+                )
+
+            summary = json.loads(stdout.getvalue())
+            full_report = json.loads(receipt_path.read_text(encoding="utf-8"))
+            self.assertEqual(result, 0)
+            self.assertEqual(summary["schema_id"], "validation_console_summary_v1")
+            self.assertEqual(summary["diagnostic"]["counts"]["source_tasks"], 1)
+            self.assertEqual(full_report["task_count"], 1)
+            self.assertEqual(len(full_report["route_signatures"]), 1)
+            self.assertFalse(summary["authority_boundary"]["route_freeze_authorized"])
+            self.assertFalse(summary["authority_boundary"]["physics_promotion_authorized"])
+            common_receipt = json.loads(Path(summary["full_receipt"]).read_text(encoding="utf-8"))
+            self.assertEqual(common_receipt["schema_id"], "validation_full_receipt_v1")
+
+            default_stdout = io.StringIO()
+            with redirect_stdout(default_stdout):
+                default_result = self.extractor.main(
+                    ["--repo-root", str(REPO_ROOT), "--task-id", "RT-20260701-010"]
+                )
+            self.assertEqual(default_result, 0)
+            self.assertIn("gate=route_signature_diagnostic", default_stdout.getvalue())
+            self.assertIn("guard_action=", default_stdout.getvalue())
+            self.assertLess(len(default_stdout.getvalue().encode("utf-8")), 2048)
+            self.assertLess(len(default_stdout.getvalue()), len(receipt_path.read_text(encoding="utf-8")))
+
+    def test_route_orbit_full_json_matches_receipt_and_advisory_exit(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            input_path = root / "route-history.json"
+            output_path = root / "route-orbits.json"
+            input_path.write_text(
+                json.dumps(
+                    {
+                        "schema_id": "route_history_extractor_v1",
+                        "task_count": 0,
+                        "signatures": [],
+                        "extraction_errors": ["synthetic extraction failure"],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                result = self.validator.main(
+                    [
+                        "--repo-root",
+                        str(root),
+                        "--input",
+                        str(input_path),
+                        "--output",
+                        str(output_path),
+                        "--full-json",
+                        "--advisory-only",
+                    ]
+                )
+
+            self.assertEqual(result, 0)
+            self.assertEqual(stdout.getvalue(), output_path.read_text(encoding="utf-8"))
+            self.assertEqual(json.loads(stdout.getvalue())["status"], "FAIL")
+            common_receipts = list(root.glob(".local/validation-receipts/**/full.json"))
+            self.assertEqual(len(common_receipts), 1)
+            common_receipt = json.loads(common_receipts[0].read_text(encoding="utf-8"))
+            self.assertEqual(common_receipt["status"], "FAIL")
+            self.assertEqual(common_receipt["exit_code"], 0)
+            self.assertEqual(list(root.rglob("*.tmp")), [])
+
+            blocked_stdout = io.StringIO()
+            with redirect_stdout(blocked_stdout):
+                blocked_result = self.validator.main(
+                    ["--repo-root", str(root), "--input", str(input_path), "--output", str(root)]
+                )
+            self.assertEqual(blocked_result, 2)
+            self.assertIn("BLOCKED_CONFIGURATION receipt_write_failed", blocked_stdout.getvalue())
+            self.assertEqual(list(root.rglob("*.tmp")), [])
 
 
 if __name__ == "__main__":
