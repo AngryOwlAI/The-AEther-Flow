@@ -1,0 +1,89 @@
+{
+  "authority": {
+    "benchmark_authority": false,
+    "gate_chair_authority": false,
+    "legacy_results_authoritative": true,
+    "ontology_authority": false,
+    "operational_validation_only": true,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "repository_acceptance_authority": false,
+    "source_authoritative": false
+  },
+  "compatibility_test_count": 95,
+  "focused_test_count": 11,
+  "implementation": {
+    "affected_fast_tests_bounded": true,
+    "checkpoint_acceptance_authority": false,
+    "full_raw_output_in_local_receipts": true,
+    "full_test_suite_selected": false,
+    "generator_execution": false,
+    "legacy_execution_authoritative": true,
+    "manifest_changed": false,
+    "mutating_planner_gates_excluded": true,
+    "only_failed_gate_rerun_supported": true,
+    "planner_changed": false,
+    "staged_pass_reusable": false,
+    "tracked_state_mutation": false,
+    "unexplained_shadow_mismatch_count": 0,
+    "working_tree_hash_recorded": true
+  },
+  "live_acceptance": {
+    "console_output_bytes": 1184,
+    "duration_seconds": 8.487292,
+    "gate_count": 7,
+    "gate_statuses": {
+      "affected_fast_tests": "PASS",
+      "changed_claim_language": "PASS",
+      "classify_changes": "PASS",
+      "git_diff_check": "PASS",
+      "path_policy_sanity": "PASS",
+      "shadow_legacy_equivalence": "PASS",
+      "syntax_schema": "PASS"
+    },
+    "hard_guard_seconds": 45,
+    "local_full_receipt_sha256": "d5c1c798a8f7204122c466d18236cb1563ec74002c5098395471dd5da0e4f7ef",
+    "run_id": "WORKING-PRECHECK-98CFF6F8C216F974",
+    "selected_path_count": 11,
+    "subprocess_count": 4,
+    "target_seconds": [
+      5,
+      30
+    ],
+    "tree_hash": "working-sha256:418c2eb068b3b6eedd7a149907a3d464d616983d3228e35059ff79a943eef6a0",
+    "within_hard_guard": true,
+    "within_target_range": true
+  },
+  "migration_epoch": "shadow_planner",
+  "plan_task_id": "P6-T03",
+  "representative_scenarios": {
+    "changed_claim_failure_propagates": true,
+    "empty_diff_passes": true,
+    "invalid_json_fails": true,
+    "invalid_python_fails": true,
+    "invalid_yaml_fails": true,
+    "local_retrieval_policy_path_passes": true,
+    "registered_markdown_policy_path_passes": true,
+    "research_control_yaml_policy_path_passes": true,
+    "single_gate_rerun_is_bounded": true,
+    "tracked_whitespace_failure_propagates": true,
+    "unknown_and_blocked_paths_fail_closed": true,
+    "untracked_whitespace_failure_propagates": true,
+    "validator_code_policy_path_passes": true,
+    "working_pass_cannot_satisfy_checkpoint": true
+  },
+  "schema_id": "v19_working_precheck_scenario_report_v1",
+  "schema_version": 1,
+  "source_hashes": {
+    "scripts/validation/precheck.py": "192e04d66ef169527deadbbab16745923fa69fd20e47677a17494ead248810da",
+    "tests/test_validation_precheck.py": "b2dfb945498215c45a5f2e3a6646e6c0786b060462da15fffc6bb85d145926de"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260716-017",
+  "validation_commands": [
+    ".venv/bin/python -m py_compile scripts/validation/precheck.py tests/test_validation_precheck.py",
+    ".venv/bin/python -m unittest tests/test_validation_precheck.py",
+    ".venv/bin/python scripts/validation/precheck.py --json",
+    ".venv/bin/python -m unittest tests/test_validation_precheck.py tests/test_validation_profiles.py tests/test_validation_change_matrix.py tests/test_validation_planner.py tests/test_validation_executor.py tests/test_validation_reporting.py"
+  ]
+}

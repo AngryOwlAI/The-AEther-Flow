@@ -1,0 +1,43 @@
+task_id: "RT-20260716-017"
+task_type: "validation_working_tree_precheck"
+status: "completed"
+created_at: "2026-07-16T22:33:35Z"
+updated_at: "2026-07-16T22:53:26Z"
+closed_at: "2026-07-16T22:53:26Z"
+parent_task_id: "RT-20260716-016"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260716-017"
+current_job_id: "AJ-RT-20260716-017-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-017"
+requires_human_gate: false
+human_authorization_note: "The user authorized a fresh recursive relay that implements every remaining v19 task one per discussion and generation 18 selects the dependency-ready P6-T03 packet."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P6"
+  plan_task_id: "P6-T03"
+  plan_task_name: "Implement the cheap working-tree precheck"
+  recommendation_ids:
+    - "V19-R02"
+    - "V19-R11"
+    - "V19-R25"
+objective: "Implement and test a cheap read-only working-tree precheck that returns bounded editing feedback without satisfying final staged checkpoint acceptance."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system working-tree validation only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V19-P6-T03-WORKING-PRECHECK-001"
+claim_boundary:
+  allowed_scope: "P6-T03 read-only working-tree classification path-policy syntax-or-schema changed-claim whitespace affected-fast-test execution compact receipts and focused tests only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+closure_status: "completed_v19_p6_t03_working_precheck_pass_next_p6_t04"
+next_recommended_action: "After governed checkpoint PASS route one separately bounded P6-T04 final staged-tree planning and acceptance packet."
+documentation_impact_id: "DI-RT-20260716-017-001"
+completion_id: "AJC-AJ-RT-20260716-017-001"
+notes: "P6-T03 completed 11 focused and 95 compatibility tests plus a live 8.487292-second working precheck PASS; staged checkpoint authority ordinary research and all physics boundaries remain unchanged."
