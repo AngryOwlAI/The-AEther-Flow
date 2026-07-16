@@ -1,0 +1,95 @@
+{
+  "authority": {
+    "benchmark_authority": false,
+    "gate_chair_authority": false,
+    "legacy_execution_authoritative": true,
+    "ontology_authority": false,
+    "operational_validation_only": true,
+    "physics_claim_authority": false,
+    "planner_executes_commands": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "case_count": 17,
+  "case_ids": [
+    "pure_python_validator",
+    "research_control_yaml",
+    "registered_markdown",
+    "tex_pdf_required",
+    "tex_without_pdf",
+    "html_spec_with_mermaid",
+    "memory_code",
+    "dependency_graph_input",
+    "task_index_input",
+    "scientific_checker",
+    "local_retrieval_only",
+    "ci_orchestration",
+    "deletion",
+    "rename",
+    "mixed_change",
+    "unknown_governed_path",
+    "irrelevant_local_retrieval"
+  ],
+  "determinism": {
+    "canonical_plan_hashes_locked": true,
+    "explanation_hashes_locked": true,
+    "explanation_output_bound_bytes": 8192,
+    "repeat_evaluation_status": "PASS"
+  },
+  "failure_path": {
+    "mutation": "remove the ci_orchestration family mapping for the governed workflow path",
+    "resulting_effective_profile": "full",
+    "resulting_family": "unknown_governed_path",
+    "silent_no_action": false,
+    "status": "PASS"
+  },
+  "file_hashes": {
+    "fixture_sha256": "b9be92f608c6edeffce232e8b47eabe35511a26ef921781cf4000801aee1f271",
+    "focused_test_sha256": "093fc773282865fde6aa8fd40286509a6fbb803458d7b1507d125794477e531a",
+    "manifest_sha256": "35d4b1e186fdbabcd48a78ce6d3dd92aef863cde8aee090bdf4d780ac6b7feae",
+    "matrix_source_sha256": "b230528e77d3ea55d989ed9bf28b4b797e68dd664aab60e6048312b37fc17803"
+  },
+  "legacy_shadow_comparison": {
+    "blocking_gate_adapter_prefix": "legacy:",
+    "blocking_gate_command_compatibility_required": true,
+    "selected_blocking_gate_missing_adapter_count": 0,
+    "status": "PASS",
+    "unexplained_mismatch_count": 0
+  },
+  "local_retrieval_boundary": {
+    "doctor_blocking_gate_count": 0,
+    "ignored_paths_remain_explicit": true,
+    "repository_acceptance_authority": false,
+    "status": "PASS"
+  },
+  "migration_epoch": "shadow_planner",
+  "plan_task_id": "P5-T08",
+  "schema_id": "validation_change_matrix_report_v1",
+  "status": "PASS",
+  "test_results": {
+    "compatibility_suite": {
+      "command": ".venv/bin/python -m unittest tests/test_validation_change_matrix.py tests/test_project_change_classifier.py tests/test_validation_planner.py tests/test_validation_profiles.py tests/test_validation_manifest.py tests/test_validation_deduplication.py",
+      "status": "PASS",
+      "test_count": 136
+    },
+    "fail_first_baseline": {
+      "expected_failure": "fixture absent",
+      "status": "OBSERVED"
+    },
+    "focused_suite": {
+      "command": ".venv/bin/python -m unittest tests.test_validation_change_matrix",
+      "status": "PASS",
+      "test_count": 8
+    },
+    "recovered_command_setup_error": {
+      "correction": "replace nonexistent tests/test_validation_change_classification.py with tracked tests/test_project_change_classifier.py in the task-local AgentJob command",
+      "production_code_changed": false,
+      "status": "RESOLVED"
+    },
+    "syntax": {
+      "command": ".venv/bin/python -m py_compile tests/test_validation_change_matrix.py",
+      "status": "PASS"
+    }
+  },
+  "tracked_test_shard": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"
+}

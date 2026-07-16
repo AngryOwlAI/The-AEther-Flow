@@ -1,0 +1,161 @@
+job_id: "AJ-RT-20260716-014-001"
+completion_id: "AJC-AJ-RT-20260716-014-001"
+task_id: "RT-20260716-014"
+decision_id: "DDR-20260716-014"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260716-014"
+status: "completed"
+created_at: "2026-07-16T20:58:39Z"
+started_at: "2026-07-16T20:58:39Z"
+completed_at: "2026-07-16T21:11:15Z"
+objective: "Create and test the P5-T08 lean validation change matrix with deterministic explanations and fail-closed governed-path coverage."
+completion_summary: "Registered a 17-case human-readable and machine-executable validation change matrix whose deterministic shadow plans explanations selected legacy mappings skips and unknown-path fallback are covered by focused and compatibility tests."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P5-T08"
+  - "research_control/design/validation_change_family_taxonomy_v1.md"
+  - "research_control/design/validation_profile_policy_v1.md"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "scripts/project_control/classify_project_changes.py"
+  - "scripts/validation/plan.py"
+  - "scripts/validation/profiles.py"
+  - "research_control/tasks/RT-20260716-013/jobs/completions/AJC-AJ-RT-20260716-013-001.yaml"
+outputs_created:
+  - "research_control/design/validation_change_matrix_v1.md"
+  - "tests/fixtures/validation_plans/change_matrix_v1.json"
+  - "tests/test_validation_change_matrix.py"
+  - "research_control/tasks/RT-20260716-014/artifacts/change_matrix_validation_report.json"
+  - "research_control/tasks/RT-20260716-014/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260716-014/jobs/completions/AJC-AJ-RT-20260716-014-001.yaml"
+output_hashes:
+  validation_change_matrix_v1_sha256: "b230528e77d3ea55d989ed9bf28b4b797e68dd664aab60e6048312b37fc17803"
+  validation_change_matrix_fixture_sha256: "b9be92f608c6edeffce232e8b47eabe35511a26ef921781cf4000801aee1f271"
+  validation_change_matrix_tests_sha256: "093fc773282865fde6aa8fd40286509a6fbb803458d7b1507d125794477e531a"
+  change_matrix_validation_report_sha256: "fe5f225d6efe6052e41f380ca78851eb2e3913600173762709087b0f39db4bbe"
+implementation_results:
+  plan_task_id: "P5-T08"
+  migration_epoch: "shadow_planner"
+  engine_mode: "pure_no_command_execution"
+  representative_case_count: 17
+  focused_test_count: 8
+  compatibility_test_count: 136
+  deterministic_plan_hash_count: 17
+  deterministic_explanation_hash_count: 17
+  explanation_output_bound_bytes: 8192
+  mutation_case_count: 1
+  unknown_path_effective_profile: "full"
+  silent_no_action_count: 0
+  selected_blocking_gate_missing_legacy_adapter_count: 0
+  unexplained_shadow_mismatch_count: 0
+  doctor_blocking_gate_count: 0
+  current_policy_active: false
+  legacy_execution_authoritative: true
+  classifier_changed: false
+  profile_changed: false
+  manifest_changed: false
+  planner_changed: false
+  executor_changed: false
+  ci_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refreshed local retrieval from WARN to PASS then core freshness and local retrieval PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | 813 canonical source objects 4049 relationships 813 semantic rows 813 vault rows"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json | exit_code=0 | returned MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | registered matrix validator and task-control changes with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory project-system AgentJob boundary already satisfied by the explicit P5-T08 plan and active job"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python -m py_compile tests/test_validation_change_matrix.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest tests.test_validation_change_matrix | exit_code=0 | 8 tests PASS"
+  - ".venv/bin/python -m unittest tests/test_validation_change_matrix.py tests/test_project_change_classifier.py tests/test_validation_planner.py tests/test_validation_profiles.py tests/test_validation_manifest.py tests/test_validation_deduplication.py | exit_code=0 | 136 tests PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | governed matrix wiki and registry synchronization PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | post-generation memory validation PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical warnings only"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P5-T07 PASS dependency clean checkpoint unique local project matching lease pair idle predecessor and no competing writer were verified before consumption and execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 8 focused matrix tests cover 17 deterministic cases including mutation fallback and legacy adapter mappings."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "All 136 matrix classifier planner profile manifest and deduplication compatibility tests passed and the classifier reported no blocked path."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The completion is eligible for persistence only through the governed checkpoint transaction which synchronizes stages validates and commits atomically or rolls back."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "P5-T08 changes no TeX PDF HTML Mermaid or publication source."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Canonical memory synchronization generated the registered change-matrix wiki derivative and validated the memory system."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Matrix tests and report preserve operational-only authority and changed-scope research-control validation remains required before checkpoint."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260716-014/documentation_impact.yaml"
+  source_documentation_updated: true
+  updated_source_documentation:
+    - "research_control/design/validation_change_matrix_v1.md"
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system validation change-matrix evidence only; no physics or derivation status changed."
+scientific_claims_changed: false
+forbidden_conclusion_summary: "This P5-T08 result is operational shadow-planner acceptance evidence only. It does not activate the planner execute validators authorize a commit bypass a human gate change ordinary research alter canonical ontology adopt source laws promote benchmark status grant Gate Chair authority prove physics or complete a derivation."
+verdict: "v19_p5_t08_validation_change_matrix_pass_p6_t01_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "Seventeen representative change families now have executable deterministic profile tag generator gate shard skip and explanation expectations with fail-closed unknown-path mutation proof while legacy execution remains authoritative."
+next_recommendation: "After governed validation and checkpoint PASS route one separately bounded P6-T01 executor-interface packet."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 813
+    relationship_row_count: 4049
+    semantic_row_count: 813
+    vault_row_count: 813
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."
