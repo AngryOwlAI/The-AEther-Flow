@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import fnmatch
 import hashlib
 import json
@@ -96,6 +97,30 @@ DOCUMENTATION_REGISTRY_PATHS = {
 }
 AUTHORITY_MARKER_RE = re.compile(r"<!--\s*authority:\s*(explanatory|control)\s*-->")
 HUNK_RE = re.compile(r"@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
+PATH_FAMILY_TAGS = (
+    "control_state",
+    "role_or_schema_contract",
+    "validator_code",
+    "memory_code",
+    "registered_markdown",
+    "registered_tex",
+    "required_pdf",
+    "publication_spec",
+    "html",
+    "mermaid",
+    "dependency_graph_input",
+    "task_index_input",
+    "claim_graph_input",
+    "traceability",
+    "scientific_checker",
+    "local_retrieval",
+    "ci_orchestration",
+    "unknown_governed_path",
+)
+SOURCE_REGISTRIES = (
+    ("MARKDOWN_SOURCE_REGISTRY.csv", "markdown"),
+    ("TEX_SOURCE_REGISTRY.csv", "tex"),
+)
 
 
 @dataclass
@@ -110,6 +135,13 @@ class Classification:
     project_system_improvement_required: bool = False
     recommended_role: str = ""
     recommended_role_priority: int = 0
+    path_family_tags: set[str] = field(default_factory=set)
+    path_family_reasons: set[str] = field(default_factory=set)
+    canonical_paths: set[str] = field(default_factory=set)
+    generated_derivatives: set[str] = field(default_factory=set)
+    affected_source_object_ids: set[str] = field(default_factory=set)
+    path_family_details: list[dict[str, object]] = field(default_factory=list)
+    recommended_validation_profile: str = ""
 
     def recommend(self, role: str) -> None:
         priority = ROLE_PRIORITY.get(role, 0)
@@ -150,6 +182,16 @@ class Classification:
             "ignored_paths": sorted(self.ignored_paths),
             "generated_only_paths": sorted(self.generated_only_paths),
             "blocked_paths": sorted(self.blocked_paths),
+            "path_family_tags": sorted(self.path_family_tags),
+            "path_family_reasons": sorted(self.path_family_reasons),
+            "canonical_paths": sorted(self.canonical_paths),
+            "generated_derivatives": sorted(self.generated_derivatives),
+            "affected_source_object_ids": sorted(self.affected_source_object_ids),
+            "path_family_details": sorted(
+                self.path_family_details,
+                key=lambda item: str(item.get("path", "")),
+            ),
+            "recommended_validation_profile": self.recommended_validation_profile,
             "recommended_skill": "improve-project-system"
             if self.docs_impact_required or self.project_system_improvement_required
             else "",
@@ -192,6 +234,32 @@ def run_git_text(command: list[str]) -> str:
     return result.stdout if result.returncode == 0 else ""
 
 
+def changed_paths_from_name_status(command: list[str]) -> list[str]:
+    result = subprocess.run(
+        command,
+        cwd=REPO_ROOT,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    if result.returncode != 0:
+        message = result.stderr.decode("utf-8", errors="replace").strip()
+        raise RuntimeError(message or "git command failed")
+    fields = result.stdout.split(b"\0")
+    paths: list[str] = []
+    index = 0
+    while index < len(fields) and fields[index]:
+        status = fields[index].decode("ascii", errors="replace")
+        index += 1
+        path_count = 2 if status.startswith(("R", "C")) else 1
+        if index + path_count > len(fields):
+            raise RuntimeError("git name-status output was truncated")
+        for raw_path in fields[index : index + path_count]:
+            if raw_path:
+                paths.append(raw_path.decode("utf-8", errors="surrogateescape"))
+        index += path_count
+    return paths
+
+
 def changed_paths_from_git(
     *,
     staged: bool = False,
@@ -199,10 +267,18 @@ def changed_paths_from_git(
     include_untracked: bool = True,
 ) -> list[str]:
     if staged:
-        paths = run_git(["git", "diff", "--cached", "--name-only", base_ref])
+        paths = changed_paths_from_name_status(
+            ["git", "diff", "--cached", "--name-status", "-z", base_ref, "--"]
+        )
     else:
-        paths = run_git(["git", "diff", "--name-only", base_ref])
-        paths.extend(run_git(["git", "diff", "--cached", "--name-only", base_ref]))
+        paths = changed_paths_from_name_status(
+            ["git", "diff", "--name-status", "-z", base_ref, "--"]
+        )
+        paths.extend(
+            changed_paths_from_name_status(
+                ["git", "diff", "--cached", "--name-status", "-z", base_ref, "--"]
+            )
+        )
         if include_untracked:
             paths.extend(run_git(["git", "ls-files", "--others", "--exclude-standard"]))
     return sorted(set(paths))
@@ -233,6 +309,247 @@ def is_generated_derivative(path: str) -> bool:
         or path.startswith("ontology/pdfs/")
         or path.startswith("manuscripts/pdfs/")
     )
+
+
+def split_registry_paths(value: object) -> list[str]:
+    return [item.strip() for item in str(value or "").split(";") if item.strip()]
+
+
+@dataclass(frozen=True)
+class RegisteredSource:
+    object_id: str
+    path: str
+    source_format: str
+    role: str
+    generated_outputs: tuple[str, ...]
+    contains_mermaid: bool = False
+    pdf_required: bool = False
+    pdf_path: str = ""
+
+
+@dataclass
+class RegistryIndex:
+    sources_by_path: dict[str, list[RegisteredSource]] = field(default_factory=dict)
+    sources_by_id: dict[str, RegisteredSource] = field(default_factory=dict)
+    sources_by_derivative: dict[str, list[RegisteredSource]] = field(default_factory=dict)
+    html_paths: set[str] = field(default_factory=set)
+
+    def add_derivative(self, path: str, source: RegisteredSource) -> None:
+        if not path:
+            return
+        rows = self.sources_by_derivative.setdefault(path, [])
+        if source not in rows:
+            rows.append(source)
+
+
+def read_registry_rows(root: Path, name: str) -> list[dict[str, str]]:
+    path = root / "registries" / name
+    if not path.is_file():
+        return []
+    with path.open(encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
+def load_registry_index(root: Path = REPO_ROOT) -> RegistryIndex:
+    index = RegistryIndex()
+    for registry_name, source_format in SOURCE_REGISTRIES:
+        for row in read_registry_rows(root, registry_name):
+            path = text_value(row.get("path"))
+            object_id = text_value(row.get("object_id"))
+            if not path or not object_id:
+                continue
+            source = RegisteredSource(
+                object_id=object_id,
+                path=path,
+                source_format=source_format,
+                role=text_value(row.get("role")),
+                generated_outputs=tuple(split_registry_paths(row.get("generated_outputs"))),
+                contains_mermaid=text_value(row.get("contains_mermaid")).lower() == "true",
+                pdf_required=text_value(row.get("pdf_required")).lower() == "true",
+                pdf_path=text_value(row.get("pdf_path")),
+            )
+            index.sources_by_path.setdefault(path, []).append(source)
+            index.sources_by_id[object_id] = source
+            for derivative in source.generated_outputs:
+                index.add_derivative(derivative, source)
+            if source.pdf_required and source.pdf_path:
+                index.add_derivative(source.pdf_path, source)
+
+    for row in read_registry_rows(root, "HTML_EXPLAINER_REGISTRY.csv"):
+        html_path = text_value(row.get("path"))
+        if html_path:
+            index.html_paths.add(html_path)
+        source_id = text_value(row.get("source_basis")) or text_value(row.get("generated_from"))
+        source = index.sources_by_id.get(source_id)
+        if not source:
+            continue
+        index.add_derivative(html_path, source)
+        for derivative in split_registry_paths(row.get("generated_outputs")):
+            index.add_derivative(derivative, source)
+    return index
+
+
+def is_control_state_path(path: str) -> bool:
+    return (
+        path == "research_control/program_state.yaml"
+        or path.startswith("research_control/tasks/")
+        or path.startswith("research_control/handoffs/")
+        or path.startswith("research_control/project_improvement_handoffs/")
+        or path in CONTROL_REGISTRY_PATHS
+    )
+
+
+def is_dependency_graph_input(path: str) -> bool:
+    return (
+        is_control_state_path(path)
+        or path
+        in {
+            "registries/RESEARCH_TASK_REGISTRY.csv",
+            "registries/AGENT_JOB_REGISTRY.csv",
+            "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+            "output/research_dependency_graph.json",
+            "output/research_dependency_graph.dot",
+        }
+    )
+
+
+def is_task_index_input(path: str) -> bool:
+    return (
+        path.startswith("research_control/tasks/")
+        or path
+        in {
+            "registries/RESEARCH_TASK_REGISTRY.csv",
+            "registries/AGENT_JOB_REGISTRY.csv",
+            "research_control/tasks/TASK_INDEX.csv",
+            "research_control/tasks/TASK_INDEX.md",
+        }
+    )
+
+
+def is_claim_graph_input(path: str) -> bool:
+    return (
+        path
+        in {
+            "registries/CLAIM_REGISTRY.csv",
+            "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+            "registries/RELATIONSHIP_REGISTRY.csv",
+            "output/claim_graph_v1.json",
+            "output/claim_graph_v1.dot",
+        }
+        or Path(path).name in {"generate_claim_graph_v1.py", "validate_claim_graph_v1.py"}
+    )
+
+
+def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object]:
+    tags: set[str] = set()
+    reasons: set[str] = set()
+    canonical_paths: set[str] = set()
+    derivatives: set[str] = set()
+    object_ids: set[str] = set()
+
+    sources = list(registry.sources_by_path.get(path, []))
+    for source in registry.sources_by_derivative.get(path, []):
+        if source not in sources:
+            sources.append(source)
+
+    for source in sources:
+        tag = "registered_markdown" if source.source_format == "markdown" else "registered_tex"
+        tags.add(tag)
+        reasons.add(f"registry:{source.source_format}:{source.object_id}")
+        canonical_paths.add(source.path)
+        object_ids.add(source.object_id)
+        derivatives.update(source.generated_outputs)
+        if source.contains_mermaid:
+            tags.add("mermaid")
+            reasons.add(f"registry:contains_mermaid:{source.object_id}")
+        if source.role == "html_explainer_source_spec":
+            tags.add("publication_spec")
+            reasons.add(f"registry:publication_spec:{source.object_id}")
+        if source.pdf_required:
+            tags.add("required_pdf")
+            reasons.add(f"registry:pdf_required:{source.object_id}")
+            if source.pdf_path:
+                derivatives.add(source.pdf_path)
+
+    if is_ignored(path):
+        tags.add("local_retrieval")
+        reasons.add("path_rule:local_retrieval")
+    elif not is_generated_derivative(path):
+        canonical_paths.add(path)
+
+    if path in registry.sources_by_derivative or is_generated_derivative(path):
+        derivatives.add(path)
+    if path in registry.html_paths or path.startswith("html/"):
+        tags.add("html")
+        reasons.add("path_rule:html")
+    if path.startswith("markdown/html-explainer-specs/"):
+        tags.add("publication_spec")
+        reasons.add("path_rule:publication_spec")
+    if is_control_state_path(path):
+        tags.add("control_state")
+        reasons.add("path_rule:control_state")
+    if (
+        path.startswith(".agents/roles/")
+        or path.startswith(".agents/schemas/")
+        or path_matches(path, [".codex/skills/*/SKILL.md"])
+        or any(source.role in {"control_schema", "control_policy"} for source in sources)
+    ):
+        tags.add("role_or_schema_contract")
+        reasons.add("path_rule:role_or_schema_contract")
+    if (
+        path.startswith("scripts/project_control/")
+        or path.startswith("scripts/validation/")
+        or (path.startswith("scripts/research_control/") and Path(path).name.startswith("validate"))
+        or path.startswith("tests/")
+    ):
+        tags.add("validator_code")
+        reasons.add("path_rule:validator_code")
+    if (
+        path.startswith(".codex/skills/project-memory-system/scripts/")
+        or path.startswith("scripts/memory/")
+        or Path(path).name in {"memory_operations.py", "memory_core.py", "local_retrieval.py"}
+    ):
+        tags.add("memory_code")
+        reasons.add("path_rule:memory_code")
+    if is_dependency_graph_input(path):
+        tags.add("dependency_graph_input")
+        reasons.add("path_rule:dependency_graph_input")
+    if is_task_index_input(path):
+        tags.add("task_index_input")
+        reasons.add("path_rule:task_index_input")
+    if is_claim_graph_input(path):
+        tags.add("claim_graph_input")
+        reasons.add("path_rule:claim_graph_input")
+    if "traceability" in path or path == "registries/FORMALIZATION_TRACEABILITY_REGISTRY.csv":
+        tags.add("traceability")
+        reasons.add("path_rule:traceability")
+    if (
+        Path(path).name.endswith("_checker.py")
+        or "scientific_payload" in Path(path).name
+        or (
+            path.startswith("scripts/research_control/support_formalization/")
+            and "traceability" not in Path(path).name
+        )
+    ):
+        tags.add("scientific_checker")
+        reasons.add("path_rule:scientific_checker")
+    if (
+        path.startswith(".github/workflows/")
+        or path == "Makefile"
+        or path.startswith("scripts/validation/")
+        or Path(path).name.startswith(("checkpoint_", "continue_", "run_full_"))
+    ):
+        tags.add("ci_orchestration")
+        reasons.add("path_rule:ci_orchestration")
+
+    return {
+        "path": path,
+        "tags": sorted(tags),
+        "reasons": sorted(reasons),
+        "canonical_paths": sorted(canonical_paths),
+        "generated_derivatives": sorted(derivatives),
+        "affected_source_object_ids": sorted(object_ids),
+    }
 
 
 def is_signal_emission_path(path: str) -> bool:
@@ -422,14 +739,26 @@ def classify_canonical_path(path: str, result: Classification) -> None:
         result.improve(VALIDATOR_ROLE)
 
 
-def classify_paths(paths: Iterable[str]) -> dict[str, object]:
+def classify_paths(paths: Iterable[str], *, registry_root: Path | None = None) -> dict[str, object]:
     result = Classification()
     canonical_changed = False
     generated_derivative_paths: set[str] = set()
+    registry = load_registry_index(registry_root or REPO_ROOT)
 
     for path in sorted(set(paths)):
         if not path:
             continue
+        family = classify_path_family(path, registry)
+        result.path_family_details.append(family)
+        result.path_family_tags.update(str(tag) for tag in family["tags"])
+        result.path_family_reasons.update(str(reason) for reason in family["reasons"])
+        result.canonical_paths.update(str(item) for item in family["canonical_paths"])
+        result.generated_derivatives.update(str(item) for item in family["generated_derivatives"])
+        result.affected_source_object_ids.update(
+            str(item) for item in family["affected_source_object_ids"]
+        )
+        if not is_ignored(path) and not result.recommended_validation_profile:
+            result.recommended_validation_profile = "affected"
         result.changed_paths.add(path)
         if is_ignored(path):
             result.ignored_paths.add(path)
@@ -444,7 +773,16 @@ def classify_paths(paths: Iterable[str]) -> dict[str, object]:
             result.reason_codes.add("generated_derivative_changed")
             continue
         canonical_changed = True
+        reason_codes_before = set(result.reason_codes)
         classify_canonical_path(path, result)
+        if not family["tags"] and result.reason_codes == reason_codes_before:
+            family["tags"] = ["unknown_governed_path"]
+            family["reasons"] = ["fallback:unknown_governed_path"]
+            result.path_family_tags.add("unknown_governed_path")
+            result.path_family_reasons.add("fallback:unknown_governed_path")
+            result.reason_codes.add("unknown_governed_path")
+            result.improve(VALIDATOR_ROLE)
+            result.recommended_validation_profile = "full"
 
     if generated_derivative_paths and not canonical_changed:
         result.reason_codes.add("direct_generated_derivative_edit")

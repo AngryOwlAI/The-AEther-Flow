@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -50,6 +52,15 @@ class ProjectChangeClassifierTests(unittest.TestCase):
                 f"{signal_type},improve-project-system,validator-engineer,active,Synthetic test signal type."
             )
         registry.write_text("\n".join(rows) + "\n", encoding="utf-8")
+
+    def initialize_git_fixture(self, root: Path) -> None:
+        subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+        subprocess.run(["git", "config", "user.name", "Classifier Test"], cwd=root, check=True)
+        subprocess.run(
+            ["git", "config", "user.email", "classifier@example.invalid"],
+            cwd=root,
+            check=True,
+        )
 
     def write_job_registry(self, root: Path, *job_ids: str) -> None:
         registry = root / "registries/AGENT_JOB_REGISTRY.csv"
@@ -294,6 +305,181 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         self.assertTrue(result["docs_impact_required"])
         self.assertEqual(result["blocked_paths"], [])
         self.assertIn("generated_derivative_changed", result["reason_codes"])
+
+    def test_path_family_taxonomy_covers_every_required_family(self) -> None:
+        result = self.classifier.classify_paths(
+            [
+                "research_control/tasks/RT-TEST/00_TASK.yaml",
+                ".agents/schemas/AGENT_JOB_SCHEMA.md",
+                "scripts/project_control/classify_project_changes.py",
+                ".codex/skills/project-memory-system/scripts/memory_operations.py",
+                "README.md",
+                "legacy_ontology/tex/aether_flow_consistency.tex",
+                "legacy_ontology/pdfs/aether_flow_consistency.pdf",
+                "markdown/html-explainer-specs/aether-flow-ontology-explainer.md",
+                "html/aether-flow-ontology-explainer.html",
+                "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+                "registries/FORMALIZATION_TRACEABILITY_REGISTRY.csv",
+                "scripts/research_control/finite_source_cover_model_checker.py",
+                ".local/memory_index/memory.sqlite",
+                ".github/workflows/project-control-validation.yml",
+                "governed/unknown.dat",
+            ]
+        )
+        self.assertEqual(
+            set(result["path_family_tags"]),
+            set(self.classifier.PATH_FAMILY_TAGS),
+        )
+        self.assertEqual(result["recommended_validation_profile"], "full")
+        self.assertIn("unknown_governed_path", result["reason_codes"])
+
+    def test_registered_source_metadata_returns_objects_and_derivatives(self) -> None:
+        result = self.classifier.classify_paths(
+            [
+                "README.md",
+                "legacy_ontology/pdfs/aether_flow_consistency.pdf",
+                "html/aether-flow-ontology-explainer.html",
+            ]
+        )
+        self.assertIn("MD-README", result["affected_source_object_ids"])
+        self.assertIn(
+            "TEX-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY",
+            result["affected_source_object_ids"],
+        )
+        self.assertIn("legacy_ontology/tex/aether_flow_consistency.tex", result["canonical_paths"])
+        self.assertIn("legacy_ontology/pdfs/aether_flow_consistency.pdf", result["generated_derivatives"])
+        self.assertIn("markdown/html-explainer-specs/aether-flow-ontology-explainer.md", result["canonical_paths"])
+        self.assertIn("required_pdf", result["path_family_tags"])
+        self.assertIn("publication_spec", result["path_family_tags"])
+        self.assertIn("mermaid", result["path_family_tags"])
+
+    def test_path_family_output_is_deterministic_for_mixed_changes(self) -> None:
+        paths = [
+            "scripts/project_control/classify_project_changes.py",
+            "research_control/tasks/RT-TEST/00_TASK.yaml",
+            "README.md",
+        ]
+        forward = self.classifier.classify_paths(paths)
+        reverse = self.classifier.classify_paths(reversed(paths))
+        self.assertEqual(forward, reverse)
+        self.assertEqual(
+            [item["path"] for item in forward["path_family_details"]],
+            sorted(paths),
+        )
+
+    def test_unknown_governed_path_selects_full_without_silent_skip(self) -> None:
+        result = self.classifier.classify_paths(["governed/new-format.bin"])
+        self.assertEqual(result["recommended_validation_profile"], "full")
+        self.assertTrue(result["project_system_improvement_required"])
+        self.assertEqual(result["path_family_tags"], ["unknown_governed_path"])
+        self.assertIn("unknown_governed_path", result["reason_codes"])
+
+    def test_legacy_classifier_fields_remain_exact_for_validator_change(self) -> None:
+        path = "scripts/project_control/validate_documentation_impact.py"
+        result = self.classifier.classify_paths([path])
+        legacy_fields = {
+            key: result[key]
+            for key in (
+                "docs_impact_required",
+                "project_system_improvement_required",
+                "reason_codes",
+                "changed_paths",
+                "ignored_paths",
+                "generated_only_paths",
+                "blocked_paths",
+                "recommended_skill",
+                "recommended_role",
+                "required_documentation_surfaces",
+                "required_validators",
+                "block_checkpoint_until_addressed",
+            )
+        }
+        self.assertEqual(
+            legacy_fields,
+            {
+                "docs_impact_required": True,
+                "project_system_improvement_required": True,
+                "reason_codes": ["validator_changed"],
+                "changed_paths": [path],
+                "ignored_paths": [],
+                "generated_only_paths": [],
+                "blocked_paths": [],
+                "recommended_skill": "improve-project-system",
+                "recommended_role": "validator-engineer",
+                "required_documentation_surfaces": [
+                    ".codex/skills/improve-project-system/SKILL.md",
+                    "README.md",
+                ],
+                "required_validators": [
+                    "bootstrap_memory_system",
+                    "validate_documentation_impact",
+                ],
+                "block_checkpoint_until_addressed": True,
+            },
+        )
+
+    def test_local_retrieval_remains_ignored_and_generated_direct_edit_stays_blocked(self) -> None:
+        local = self.classifier.classify_paths([".local/memory_index/memory.sqlite"])
+        self.assertEqual(local["ignored_paths"], [".local/memory_index/memory.sqlite"])
+        self.assertEqual(local["path_family_tags"], ["local_retrieval"])
+        self.assertEqual(local["recommended_validation_profile"], "")
+
+        generated = self.classifier.classify_paths(["wiki/markdown/unregistered.md"])
+        self.assertIn("wiki/markdown/unregistered.md", generated["blocked_paths"])
+        self.assertIn("wiki/markdown/unregistered.md", generated["generated_derivatives"])
+        self.assertIn("direct_generated_derivative_edit", generated["reason_codes"])
+
+    def test_explicit_path_classification_launches_no_subprocess(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            with mock.patch.object(
+                self.classifier.subprocess,
+                "run",
+                side_effect=AssertionError("classifier launched a subprocess"),
+            ):
+                result = self.classifier.classify_paths(
+                    ["scripts/project_control/example.py"],
+                    registry_root=root,
+                )
+        self.assertIn("validator_code", result["path_family_tags"])
+
+    def test_staged_rename_preserves_old_and_new_paths(self) -> None:
+        original_root = self.classifier.REPO_ROOT
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.initialize_git_fixture(root)
+            (root / "old.md").write_text("old\n", encoding="utf-8")
+            subprocess.run(["git", "add", "old.md"], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "fixture"], cwd=root, check=True)
+            (root / "old.md").rename(root / "new.md")
+            subprocess.run(["git", "add", "-A"], cwd=root, check=True)
+            self.classifier.REPO_ROOT = root
+            try:
+                staged_paths = self.classifier.changed_paths_from_git(staged=True)
+                default_paths = self.classifier.changed_paths_from_git()
+            finally:
+                self.classifier.REPO_ROOT = original_root
+        self.assertEqual(staged_paths, ["new.md", "old.md"])
+        self.assertEqual(default_paths, ["new.md", "old.md"])
+
+    def test_deletion_and_untracked_detection_respects_mode(self) -> None:
+        original_root = self.classifier.REPO_ROOT
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            self.initialize_git_fixture(root)
+            (root / "tracked.md").write_text("tracked\n", encoding="utf-8")
+            subprocess.run(["git", "add", "tracked.md"], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "fixture"], cwd=root, check=True)
+            (root / "tracked.md").unlink()
+            (root / "untracked.md").write_text("untracked\n", encoding="utf-8")
+            self.classifier.REPO_ROOT = root
+            try:
+                with_untracked = self.classifier.changed_paths_from_git()
+                tracked_only = self.classifier.changed_paths_from_git(include_untracked=False)
+            finally:
+                self.classifier.REPO_ROOT = original_root
+        self.assertEqual(with_untracked, ["tracked.md", "untracked.md"])
+        self.assertEqual(tracked_only, ["tracked.md"])
 
     def test_documentation_impact_validator_accepts_current_record(self) -> None:
         report = self.doc_impact.validate_paths(

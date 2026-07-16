@@ -211,6 +211,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-V19-LEGACY-VALIDATION-INVOCATION-GRAPH` `research_control/design/v19_legacy_validation_invocation_graph.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-OVERHEAD-BACKLOG-SCHEMA` `research_control/design/v19_validation_overhead_backlog_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET` `research_control/design/v19_validation_performance_and_safety_budget.md`
+- `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `research_control/design/validation_change_family_taxonomy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `research_control/design/validation_command_inventory_v15.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `research_control/design/validation_command_inventory_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ENVIRONMENT-CONTRACT-V1` `research_control/design/validation_environment_contract_v1.md`
@@ -652,6 +653,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V19-LEGACY-VALIDATION-INVOCATION-GRAPH` `wiki/markdown/md-research-control-design-v19-legacy-validation-invocation-graph.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-OVERHEAD-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v19-validation-overhead-backlog-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET` `wiki/markdown/md-research-control-design-v19-validation-performance-and-safety-budget.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `wiki/markdown/md-research-control-design-validation-change-family-taxonomy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V15` `wiki/markdown/md-research-control-design-validation-command-inventory-v15.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16` `wiki/markdown/md-research-control-design-validation-command-inventory-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ENVIRONMENT-CONTRACT-V1` `wiki/markdown/md-research-control-design-validation-environment-contract-v1.md`

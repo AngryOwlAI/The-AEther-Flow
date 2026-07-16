@@ -1,0 +1,43 @@
+task_id: "RT-20260716-009"
+task_type: "classifier_path_family_tags"
+status: "completed"
+created_at: "2026-07-16T18:11:27Z"
+updated_at: "2026-07-16T18:25:05Z"
+closed_at: "2026-07-16T18:25:05Z"
+parent_task_id: "RT-20260716-008"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260716-009"
+current_job_id: "AJ-RT-20260716-009-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-009"
+requires_human_gate: false
+human_authorization_note: "The user authorized a fresh recursive relay that implements every remaining v19 task one per discussion and generation 10 selects the dependency-ready P5-T03 packet."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T03"
+  plan_task_name: "Extend change classification with stable path-family tags"
+  recommendation_ids:
+    - "V19-R23"
+    - "V19-R30"
+    - "V19-R46"
+objective: "Extend the pure change classifier with deterministic registry-aware path-family tags and compact evidence without launching validators or generators."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system change classification only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V19-P5-T03-CLASSIFIER-PATH-FAMILY-TAGS-001"
+claim_boundary:
+  allowed_scope: "P5-T03 classifier tags taxonomy documentation focused tests task-local evidence registry rows and governed derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+closure_status: "v19_p5_t03_classifier_path_family_tags_pass_p5_t04_dependency_unlocked_no_physics_delta"
+next_recommended_action: "Route one separately bounded P5-T04 deterministic affected-plan builder AgentJob."
+documentation_impact_id: "DI-RT-20260716-009-001"
+completion_id: "AJC-AJ-RT-20260716-009-001"
+notes: "P5-T03 completed with PASS all 18 path-family tags deterministic registry-aware evidence preserved legacy behavior handoff-0740 and no planner runtime or physics authority change."
