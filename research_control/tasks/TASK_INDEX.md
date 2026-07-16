@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `c76e275e42297055ffb535e8227382a2be4074ba0f1166ba31993b40284a757e`
-- Generated-at source timestamp: `2026-07-16T05:44:50Z`
-- Row count: `910`
+- Source fingerprint: `68dd33c65e416838a0aaf91fa0d511ef5098b1e002419cd498ddd4639e7ec39e`
+- Generated-at source timestamp: `2026-07-16T06:44:14Z`
+- Row count: `911`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260716-001|RT-20260715-014|2026-07-16T06:44:14Z|2026-07-16T06:57:52Z|validation_receipt_schema|completed|none|Project-system validation receipt schema only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|4|After this transaction checkpoints successfully route one separately bounded P4-T02 compact-reporter AgentJob.|PASS|research_control/tasks/RT-20260716-001/jobs/completions/AJC-AJ-RT-20260716-001-001.yaml|
 |RT-20260715-014|RT-20260715-013|2026-07-16T05:44:50Z|2026-07-16T06:02:03Z|validation_environment_separation|completed|none|Project-system validation environment separation only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|3|On PASS checkpoint this transaction and route one separately bounded P4-T01 Project-Control Maintainer receipt-schema AgentJob.|PASS|research_control/tasks/RT-20260715-014/jobs/completions/AJC-AJ-RT-20260715-014-001.yaml|
 |RT-20260715-013|RT-20260715-012|2026-07-16T04:44:07Z|2026-07-16T04:51:07Z|continue_research_goal_production_profile_enablement|completed|none|Project-system relay contract enablement only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|1|On PASS checkpoint this enablement transaction then obtain finite positive pass and elapsed-minute guards before running the continue-research-goal production preflight on codex/v19-remaining-relay without consuming P3-T07.|PASS|research_control/tasks/RT-20260715-013/jobs/completions/AJC-AJ-RT-20260715-013-001.yaml|
 |RT-20260715-012|RT-20260715-011|2026-07-16T02:08:00Z|2026-07-16T03:19:09Z|memory_make_target_refactor|completed|none|Project-system Make target decomposition only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|3|On PASS checkpoint this transaction and route one separately bounded P3-T07 Project-Control Maintainer validation-environment separation AgentJob.|PASS|research_control/tasks/RT-20260715-012/jobs/completions/AJC-AJ-RT-20260715-012-001.yaml|

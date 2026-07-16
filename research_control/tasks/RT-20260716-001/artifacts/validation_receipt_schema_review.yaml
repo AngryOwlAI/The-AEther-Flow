@@ -1,0 +1,80 @@
+schema_version: validation_receipt_schema_review_v1
+task_id: RT-20260716-001
+job_id: AJ-RT-20260716-001-001
+plan_item: P4-T01
+status: PASS
+reviewed_at: "2026-07-16T06:44:14Z"
+authority: project_control
+scope: validation_run_and_gate_result_contract_only
+source_inspection:
+  - path: research_control/design/recommendations_implementation_plan_continue_task_v19.md
+    purpose: canonical_P4_T01_acceptance_and_boundary
+  - path: research_control/design/validation_evidence_identity_policy_v1.md
+    purpose: fingerprint_cache_and_evidence_identity_rules
+  - path: research_control/design/validation_gate_id_catalog_v1.md
+    purpose: registered_gate_ID_and_severity_authority
+  - path: research_control/design/validation_environment_contract_v1.md
+    purpose: environment_fingerprint_boundary
+  - path: research_control/design/v19_validation_output_budgets.md
+    purpose: compact_output_limits
+  - path: scripts/research_control/collect_validation_artifacts.py
+    purpose: current_artifact_collection_shape
+  - path: tests/test_collect_validation_artifacts.py
+    purpose: current_artifact_collection_test_boundary
+contract_outputs:
+  schema: research_control/design/validation_run_receipt_schema_v1.md
+  example: research_control/design/validation_run_receipt_example_v1.json
+  validator: research_control/tasks/RT-20260716-001/artifacts/validate_validation_receipt_schema.py
+  validation_report: research_control/tasks/RT-20260716-001/artifacts/validation_receipt_schema_validation.json
+required_run_fields_covered:
+  - run_identity
+  - mode_profile_scope_and_base_reference
+  - tree_manifest_implementation_and_environment_fingerprints
+  - selected_executed_and_superseded_gate_IDs
+  - UTC_timestamps_and_nonnegative_duration
+  - aggregate_status_and_counts
+  - bounded_gate_results
+  - local_non_authoritative_artifact_references
+required_gate_fields_covered:
+  - gate_ID_severity_status_and_cache_status
+  - input_and_implementation_fingerprints
+  - UTC_timestamps_and_nonnegative_duration
+  - full_error_warning_and_finding_counts
+  - bounded_shown_findings_and_truncation_state
+  - stable_finding_IDs
+  - satisfied_obligations_child_gates_and_mutated_paths
+  - mandatory_local_non_authoritative_full_receipt
+status_vocabulary:
+  - PASS
+  - FAIL
+  - WARN
+  - SKIP_NOT_APPLICABLE
+  - SKIP_SUPERSEDED
+  - CACHE_HIT
+  - BLOCKED_CONFIGURATION
+malformed_fixture_coverage:
+  - unknown_schema_version
+  - unknown_gate_status
+  - embedded_raw_stdout
+  - duplicate_finding_ID
+  - shown_findings_over_budget
+  - missing_full_receipt
+  - physics_authority_escalation
+claim_boundary:
+  operational_validation_evidence_only: true
+  physics_claim_authority: false
+  ontology_authority: false
+  benchmark_authority: false
+  gate_chair_authority: false
+  runtime_reporter_implemented: false
+  CI_integration_implemented: false
+acceptance_assessment:
+  common_run_receipt_contract_defined: true
+  common_gate_result_contract_defined: true
+  conforming_control_example_present: true
+  bounded_top_level_output_required: true
+  full_receipts_local_and_non_authoritative: true
+  stable_finding_ID_rule_defined: true
+  schema_version_mismatch_fails_closed: true
+  legacy_shadow_and_planner_modes_supported: true
+next_plan_item: P4-T02

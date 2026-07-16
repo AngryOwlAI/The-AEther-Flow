@@ -1,0 +1,225 @@
+job_id: "AJ-RT-20260716-001-001"
+completion_id: "AJC-AJ-RT-20260716-001-001"
+task_id: "RT-20260716-001"
+decision_id: "DDR-20260716-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260716-001"
+status: "completed"
+created_at: "2026-07-16T06:44:14Z"
+started_at: "2026-07-16T06:44:14Z"
+completed_at: "2026-07-16T06:57:52Z"
+objective: "Define stable common validation-run and gate-result receipt schemas plus one conforming example and bounded validation evidence without changing validator runtime behavior."
+completion_summary: "Completed v19 P4-T01 by defining one fail-closed compact run receipt and per-gate result contract with exact statuses deterministic identity bounded shown findings mandatory local non-authoritative full receipts one conforming example and seven malformed fixture classes."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "reviews/verification_validation_testing_overhead_audit_2026-07-12.md"
+  - "research_control/design/v19_validation_overhead_backlog.yaml"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_gate_id_catalog_v1.md"
+  - "research_control/design/validation_supersedence_contracts_v1.yaml"
+  - "research_control/design/validation_environment_contract_v1.md"
+  - "research_control/design/v19_validation_output_budgets.md"
+  - "scripts/research_control/collect_validation_artifacts.py"
+  - "tests/test_collect_validation_artifacts.py"
+  - "research_control/tasks/RT-20260715-014/jobs/completions/AJC-AJ-RT-20260715-014-001.yaml"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P4-T01"
+  recommendation_ids:
+    - "V19-R20"
+    - "V19-R22"
+    - "V19-R43"
+    - "V19-R47"
+  migration_epoch: "legacy_consolidated"
+  implemented_task_scope: "Two P4-T01 design outputs one task-local validator review and compact validation receipt registry rows and policy-generated derivatives only."
+  completed_v19_tasks_to_date:
+    - "P0-T01 through P4-T01"
+  downstream_tasks_not_implemented:
+    - "P4-T02 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p4_t01_validation_receipt_schema"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct_and_supporting"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P4-T01"
+  coverage_summary: "V19-R20 V19-R22 V19-R43 and V19-R47 receive a common compact evidence contract exact statuses stable finding IDs bounded output and explicit non-authority; compact reporter implementation remains assigned to P4-T02."
+physics_progress_status:
+  status: "project_system_validation_receipt_schema_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P4-T01 defines operational validation evidence only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Receipt schemas examples fixtures registries derivatives and checkpoint evidence are operational evidence only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+validation_receipt_schema:
+  status: "PASS"
+  schema_path: "research_control/design/validation_run_receipt_schema_v1.md"
+  example_path: "research_control/design/validation_run_receipt_example_v1.json"
+  review_path: "research_control/tasks/RT-20260716-001/artifacts/validation_receipt_schema_review.yaml"
+  validation_report_path: "research_control/tasks/RT-20260716-001/artifacts/validation_receipt_schema_validation.json"
+  validator_path: "research_control/tasks/RT-20260716-001/artifacts/validate_validation_receipt_schema.py"
+  run_schema_id: "validation_run_receipt_v1"
+  gate_schema_id: "validation_gate_result_v1"
+  status_vocabulary:
+    - "PASS"
+    - "FAIL"
+    - "WARN"
+    - "SKIP_NOT_APPLICABLE"
+    - "SKIP_SUPERSEDED"
+    - "CACHE_HIT"
+    - "BLOCKED_CONFIGURATION"
+  supported_modes:
+    - "legacy"
+    - "shadow"
+    - "planner"
+  example_error_count: 0
+  malformed_fixture_count: 7
+  rejected_fixture_count: 7
+  expected_finding_match_count: 7
+  default_shown_findings_per_gate: 5
+  hard_max_shown_findings_per_gate: 10
+  full_receipts_local_only: true
+  full_receipts_authoritative: false
+  schema_version_mismatch_fails_closed: true
+  raw_stdout_stderr_embedded: false
+  runtime_reporter_implemented: false
+  CI_integration_implemented: false
+output_paths:
+  - "research_control/design/validation_run_receipt_schema_v1.md"
+  - "research_control/design/validation_run_receipt_example_v1.json"
+  - "research_control/tasks/RT-20260716-001/artifacts/validation_receipt_schema_review.yaml"
+  - "research_control/tasks/RT-20260716-001/artifacts/validation_receipt_schema_validation.json"
+  - "research_control/tasks/RT-20260716-001/artifacts/validate_validation_receipt_schema.py"
+  - "research_control/tasks/RT-20260716-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260716-001/jobs/completions/AJC-AJ-RT-20260716-001-001.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local retrieval PASS source_objects=808 relationships=4026 semantics=808 vault=808"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | documentation and project-system impact classified with no blocked paths"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory no_action and no competing open signal"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | signal registry valid and no open signal consumed"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260716-001/artifacts/validate_validation_receipt_schema.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260716-001/artifacts/validate_validation_receipt_schema.py --json | exit_code=0 | example errors=0 malformed fixtures rejected=7 expected finding IDs matched=7"
+  - ".venv/bin/python -m unittest tests.test_collect_validation_artifacts | exit_code=0 | 4 tests PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | governed regeneration PASS with local cache-only freshness warnings for the new source"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260716-001-001 --no-commit | exit_code=0 | ready_to_commit sync_passes=1 memory_sync=1 compatibility_bootstrap=0 memory_core=1 total_acceptance_operations=14 preflight_staged_tree=29391f40227690bb51bf6ae1d4960b05f7082368 duration_seconds=79.329"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P3-T07 was checkpointed and explicitly unlocked P4-T01; relay lease branch clean entry worktree canonical plan and active control were verified before the first write."
+      - "Identity catalog supersedence environment output-budget collector and test sources were inspected directly and no competing project-improvement signal was open."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The contract defines required run gate finding and artifact fields exact statuses deterministic aggregation version failure cache linkage safe paths and an explicit operational-only authority object."
+      - "The conforming example has zero errors and each of seven malformed fixture classes is rejected with its expected stable finding ID."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The task-local validator compiles and passes; four existing collector regression tests pass."
+      - "Runtime validator reporter test CI workflow requirement ordinary research and physics source paths remain unchanged."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The governed no-commit checkpoint returned ready_to_commit after all fourteen working and staged acceptance operations passed in 79.329 seconds."
+      - "Checkpoint convergence used one write-only tracked memory sync zero compatibility-bootstrap calls and one final staged memory-core gate on preflight tree 29391f40227690bb51bf6ae1d4960b05f7082368."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The registered Markdown source and its wiki registry semantic relationship and folder-map derivatives were regenerated through the governed bootstrap."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Governed source and derivative validation passed; local retrieval refresh for the new source remains a checkpoint convergence operation rather than authority."
+  claim_language_linter:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No physics or public scientific claim-language source changed."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260716-001/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: "not_applicable"
+project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 task scopes operational validation receipt contracts only. It does not authorize P4-T02 reporter implementation validator or test mutation CI integration canonical ontology edit source-law adoption general EqSrc discharge matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation or any receipt schema example fixture registry derivative or checkpoint evidence as physics proof."
+verdict: "v19_p4_t01_validation_receipt_schema_pass_p4_t02_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P4-T01 now supplies one deterministic compact evidence contract that later reporters can implement without conflating operational validation with scientific or protected authority."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P4-T02 Validator Engineer compact-reporter AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 808
+    relationship_row_count: 4026
+    semantic_row_count: 808
+    vault_row_count: 808
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/validation_evidence_identity_policy_v1.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/validation_evidence_identity_policy_v1.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/validation_gate_id_catalog_v1.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/validation_gate_id_catalog_v1.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-ID-CATALOG-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_evidence_identity_policy_v1.md"
+      source_hash: "6afb60a18fee4983e302dc4b710505c32d9407f311ca4a03b7297d160d57fcf5"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-ID-CATALOG-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_gate_id_catalog_v1.md"
+      source_hash: "acf53fafae9bbf27641120c036195257b4bb1ecc401a198d4ad1d9707386e7da"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation diagnostics only and are not authority; the registered plan identity policy gate catalog implementation sources and control records were inspected directly."

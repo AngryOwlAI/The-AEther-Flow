@@ -1,0 +1,156 @@
+{
+  "schema_id": "validation_run_receipt_v1",
+  "schema_version": 1,
+  "run_id": "VRR-EXAMPLE-20260716-001",
+  "mode": "shadow",
+  "profile": "research-control-diff",
+  "scope": "illustrative bounded validation receipt",
+  "base_ref": "HEAD",
+  "tree_hash": "git-tree-sha1:1111111111111111111111111111111111111111",
+  "planner_version": "validation-plan-v1",
+  "manifest_hash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+  "environment_fingerprint": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+  "started_at": "2026-07-16T06:00:00.000Z",
+  "finished_at": "2026-07-16T06:00:01.500Z",
+  "duration_ms": 1500,
+  "status": "WARN",
+  "authority": {
+    "scope": "operational_validation_only",
+    "source_authoritative": false,
+    "full_receipts_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "gate_chair_authority": false
+  },
+  "output_policy": {
+    "default_shown_findings_per_gate": 5,
+    "hard_max_shown_findings_per_gate": 10,
+    "raw_stdout_stderr_embedded": false
+  },
+  "selected_gate_ids": [
+    "memory_core",
+    "research_control_diff"
+  ],
+  "executed_gate_ids": [
+    "memory_core",
+    "research_control_diff"
+  ],
+  "superseded_gate_ids": [],
+  "counts": {
+    "selected_gate_count": 2,
+    "executed_gate_count": 2,
+    "superseded_gate_count": 0,
+    "error_count": 0,
+    "warning_count": 1,
+    "finding_count": 1,
+    "status_counts": {
+      "PASS": 0,
+      "FAIL": 0,
+      "WARN": 1,
+      "SKIP_NOT_APPLICABLE": 0,
+      "SKIP_SUPERSEDED": 0,
+      "CACHE_HIT": 1,
+      "BLOCKED_CONFIGURATION": 0
+    }
+  },
+  "gate_results": [
+    {
+      "schema_id": "validation_gate_result_v1",
+      "gate_id": "memory_core",
+      "severity": "blocking",
+      "status": "CACHE_HIT",
+      "cache_status": "HIT",
+      "input_fingerprint": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+      "implementation_fingerprint": "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+      "started_at": "2026-07-16T06:00:00.050Z",
+      "finished_at": "2026-07-16T06:00:00.170Z",
+      "duration_ms": 120,
+      "error_count": 0,
+      "warning_count": 0,
+      "finding_count": 0,
+      "shown_finding_count": 0,
+      "findings_truncated": false,
+      "shown_findings": [],
+      "full_receipt": {
+        "artifact_id": "ART-MEMORY-CORE-FULL",
+        "path": ".local/validation/VRR-EXAMPLE-20260716-001/memory_core.json",
+        "content_hash": "sha256:6666666666666666666666666666666666666666666666666666666666666666",
+        "local_only": true,
+        "authoritative": false
+      },
+      "satisfied_obligation_ids": [
+        "memory_preflight"
+      ],
+      "child_gate_ids": [],
+      "mutated_paths": [],
+      "artifact_refs": [
+        "ART-MEMORY-CORE-FULL"
+      ]
+    },
+    {
+      "schema_id": "validation_gate_result_v1",
+      "gate_id": "research_control_diff",
+      "severity": "blocking",
+      "status": "WARN",
+      "cache_status": "MISS",
+      "input_fingerprint": "sha256:7777777777777777777777777777777777777777777777777777777777777777",
+      "implementation_fingerprint": "sha256:8888888888888888888888888888888888888888888888888888888888888888",
+      "started_at": "2026-07-16T06:00:00.200Z",
+      "finished_at": "2026-07-16T06:00:01.450Z",
+      "duration_ms": 1250,
+      "error_count": 0,
+      "warning_count": 1,
+      "finding_count": 1,
+      "shown_finding_count": 1,
+      "findings_truncated": false,
+      "shown_findings": [
+        {
+          "schema_id": "validation_finding_v1",
+          "finding_id": "VRR-EXAMPLE-RCD-WARN-001",
+          "level": "WARN",
+          "code": "historical_advisory_present",
+          "message": "A historical advisory was observed outside the changed packet.",
+          "artifact_ref": "ART-RESEARCH-CONTROL-DIFF-FULL"
+        }
+      ],
+      "full_receipt": {
+        "artifact_id": "ART-RESEARCH-CONTROL-DIFF-FULL",
+        "path": ".local/validation/VRR-EXAMPLE-20260716-001/research_control_diff.json",
+        "content_hash": "sha256:9999999999999999999999999999999999999999999999999999999999999999",
+        "local_only": true,
+        "authoritative": false
+      },
+      "satisfied_obligation_ids": [
+        "research_control_diff"
+      ],
+      "child_gate_ids": [],
+      "mutated_paths": [],
+      "artifact_refs": [
+        "ART-RESEARCH-CONTROL-DIFF-FULL"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "schema_id": "validation_artifact_reference_v1",
+      "artifact_id": "ART-MEMORY-CORE-FULL",
+      "kind": "full_gate_receipt",
+      "path": ".local/validation/VRR-EXAMPLE-20260716-001/memory_core.json",
+      "content_hash": "sha256:6666666666666666666666666666666666666666666666666666666666666666",
+      "local_only": true,
+      "authoritative": false,
+      "description": "Illustrative local full receipt for the memory gate."
+    },
+    {
+      "schema_id": "validation_artifact_reference_v1",
+      "artifact_id": "ART-RESEARCH-CONTROL-DIFF-FULL",
+      "kind": "full_gate_receipt",
+      "path": ".local/validation/VRR-EXAMPLE-20260716-001/research_control_diff.json",
+      "content_hash": "sha256:9999999999999999999999999999999999999999999999999999999999999999",
+      "local_only": true,
+      "authoritative": false,
+      "description": "Illustrative local full receipt for the research-control diff gate."
+    }
+  ]
+}
