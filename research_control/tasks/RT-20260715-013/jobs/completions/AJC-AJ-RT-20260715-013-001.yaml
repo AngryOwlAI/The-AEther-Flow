@@ -1,0 +1,171 @@
+job_id: "AJ-RT-20260715-013-001"
+completion_id: "AJC-AJ-RT-20260715-013-001"
+task_id: "RT-20260715-013"
+decision_id: "DDR-20260715-013"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260715-013"
+status: "completed"
+created_at: "2026-07-16T04:44:07Z"
+started_at: "2026-07-16T04:44:07Z"
+completed_at: "2026-07-16T04:51:07Z"
+objective: "Enable one explicit production_profile launcher binding on the canonical saved local project while preserving every existing fail-closed relay guard and leaving P3-T07 unimplemented."
+completion_summary: "Enabled the accepted continue-research-goal production profile for the uniquely saved canonical local project on a clean non-main codex branch while preserving the disposable acceptance profile and every existing relay stop."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-goal/scripts/goal_state.py"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "tests/test_continue_research_goal_state.py"
+  - "research_control/tasks/RT-20260711-001/**"
+  - "research_control/tasks/RT-20260715-012/**"
+project_system_change_only: true
+project_system_scope: "continue_research_goal_production_profile_enablement"
+project_system_boundary_authorized_by_user: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "not_applicable_control_enablement"
+  v19_task_consumed: false
+  preserved_next_plan_task_id: "P3-T07"
+  completed_v19_tasks_to_date:
+    - "P0-T01 through P3-T06"
+  downstream_tasks_not_implemented:
+    - "P3-T07 through P12-T07"
+  all_applicable_plan_tasks_completed: false
+production_profile_enablement:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260715-013/artifacts/production_profile_enablement_receipt.json"
+  acceptance_profile_preserved: true
+  production_root: "/Volumes/P-SSD/AngryOwl/The-AEther-Flow"
+  production_branch_rule: "non-main codex/*"
+  environment_mode: "local"
+  saved_project_cardinality_required: 1
+  clean_validated_checkpoint_required: true
+  main_allowed: false
+  remote_mode_allowed: false
+  managed_per_step_worktree_allowed: false
+  unknown_execution_profile_allowed: false
+  unlimited_guards_representable: false
+  launcher_status: "awaiting_finite_guard_inputs"
+output_paths:
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/scripts/goal_state.py"
+  - "tests/test_continue_research_goal_state.py"
+  - "research_control/tasks/RT-20260715-013/artifacts/production_profile_enablement_receipt.json"
+  - "research_control/tasks/RT-20260715-013/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260715-013/jobs/completions/AJC-AJ-RT-20260715-013-001.yaml"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core freshness and local retrieval PASS source_objects=807 relationships=4021"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search continue goal --limit 10 --json | exit_code=0 | returned the canonical continue-goal skill through generated navigation results"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | control registry research-control skill-contract and test impact classified"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory no_action before user-authorized packet creation"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest tests/test_continue_research_goal_state.py before change | exit_code=0 | 36 tests PASS 1 skipped"
+  - ".venv/bin/python -m unittest tests/test_continue_research_goal_state.py after change | exit_code=0 | 37 tests PASS 1 skipped"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write | exit_code=0 | 909 rows written and all three task-index artifacts fresh"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | RT-20260715-013 task decision job and artifact nodes materialized"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | tracked memory and wiki derivatives regenerated and validation PASS"
+  - "make PYTHON=.venv/bin/python memory-sync | exit_code=0 | tracked state already converged before checkpoint"
+  - "make PYTHON=.venv/bin/python memory-doctor | exit_code=0 | local vault and SQLite retrieval refreshed with zero warnings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | Validation PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical warnings only"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260715-013-001 --no-commit | exit_code=0 | first ready_to_commit receipt in 78.466 seconds with staged tree 78cd23c249354466fb40264bbc1a65f7a1d128ba"
+  - "git diff --check | exit_code=0"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P3-T06 is checkpointed at d074785be7f067e57f815f1dd6aab4f5d45ebc63 and the entry worktree was clean."
+      - "The user explicitly authorized the separate production-enablement packet."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The receipt preserves both execution profiles and every protected stop."
+      - "The packet explicitly consumes no v19 task and preserves P3-T07."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "All 37 focused state-helper tests pass with one existing skip."
+      - "Production profile round-trip and unknown-profile rejection are directly tested."
+      - "Existing main-branch rejection remains tested."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The governed no-commit checkpoint returned ready_to_commit after all working and staged acceptance operations passed."
+      - "The first recorded checkpoint receipt used one tracked memory sync zero compatibility-bootstrap convergence calls one final memory-core gate and staged tree 78cd23c249354466fb40264bbc1a65f7a1d128ba."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The task-index renderer wrote 909 rows and all CSV Markdown and wiki artifacts are fresh."
+      - "The dependency graph renderer materialized the RT-20260715-013 task decision job and artifact relationships."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory and wiki derivatives converged from canonical sources and validate-only passed."
+      - "The local-only Obsidian vault and SQLite retrieval index were refreshed and report zero warnings."
+  claim_language_linter:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No physics or public scientific claim-language source changed."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260715-013/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: "not_applicable"
+project_improvement_signals: []
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Relay profiles tests registries derivatives and checkpoint evidence are operational project-system evidence only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+forbidden_conclusion_summary: "This packet does not authorize unlimited unguarded recursion main-branch execution remote execution managed-per-step worktrees concurrent relays P3-T07 implementation ordinary research mutation physics derivation ontology change benchmark promotion Gate Chair verdict proof authority or completed derivation."
+verdict: "continue_research_goal_production_profile_enabled_finite_launcher_guards_required_no_v19_task_consumed_no_physics_delta"
+coherent_resolution_summary: "The accepted relay can now bind to the uniquely saved canonical local project on a clean non-main codex branch while retaining all fail-closed execution guards."
+next_recommendation: "Obtain finite positive max_continue_passes and max_elapsed_minutes then launch the production relay; P3-T07 remains the first v19 packet."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 807
+    relationship_row_count: 4021
+    semantic_row_count: 807
+    vault_row_count: 807
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search continue goal --limit 10 --json"
+      query_type: "search"
+      query_text: "continue goal"
+      returned_object_ids:
+        - "MD-SKILL-CONTINUE-RESEARCH-GOAL"
+  canonical_inspections:
+    - object_id: "MD-SKILL-CONTINUE-RESEARCH-GOAL"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/continue-research-goal/SKILL.md"
+      source_hash: "c59d16975f754ebabf0722b535c0f750d3c84a976679bcd348a625e67272e98a"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation diagnostics only and are not authority; the canonical skill schema helper role contract source registry acceptance evidence and live Git identity were inspected directly."

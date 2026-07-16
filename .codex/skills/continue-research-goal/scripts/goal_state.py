@@ -26,6 +26,7 @@ from typing import Any, Dict, Iterable, Iterator, Mapping, MutableMapping, Optio
 
 SCHEMA_VERSION = "continue-research-goal.v1"
 LEASE_SCHEMA_VERSION = "continue-research-goal-worktree-lease.v1"
+EXECUTION_PROFILES = {"acceptance_test", "production_profile"}
 
 NONTERMINAL_PHASES = {
     "initialized",
@@ -334,6 +335,8 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
     for key in ("execution_profile", "root", "branch", "environment_mode", "git_common_dir", "starting_head"):
         if not isinstance(binding.get(key), str) or not binding[key]:
             raise ValidationError(f"repository binding field {key} must be nonblank")
+    if binding["execution_profile"] not in EXECUTION_PROFILES:
+        raise ValidationError("unsupported repository execution profile")
     if binding["environment_mode"] != "local":
         raise ValidationError("only local environment mode is supported")
     if binding["branch"] == "main":
@@ -675,6 +678,8 @@ class GoalStore:
         now = timestamp or utc_now()
         parse_utc(now)
         binding = copy.deepcopy(dict(repository_binding))
+        if binding.get("execution_profile") not in EXECUTION_PROFILES:
+            raise ValidationError("unsupported repository execution profile")
         if binding.get("branch") == "main":
             raise ValidationError("main is disabled for relay initialization")
         if binding.get("environment_mode") != "local":

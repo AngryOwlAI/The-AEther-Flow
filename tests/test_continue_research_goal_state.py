@@ -35,6 +35,17 @@ def binding() -> dict:
     }
 
 
+def production_binding() -> dict:
+    return {
+        "execution_profile": "production_profile",
+        "root": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow",
+        "branch": "codex/v19-remaining-relay",
+        "environment_mode": "local",
+        "git_common_dir": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.git",
+        "starting_head": "b" * 40,
+    }
+
+
 def contract(label: str = "complete the bounded goal") -> dict:
     return {
         "interpretation": label,
@@ -169,6 +180,32 @@ class SerializationAndSchemaTests(GoalStateTestCase):
                 initial_fingerprint=fingerprint("A"),
                 timestamp=BASE_TIME,
             )
+
+    def test_production_profile_round_trips_and_unknown_profile_fails_closed(self):
+        bad = production_binding()
+        bad["execution_profile"] = "unregistered_profile"
+        with self.assertRaises(goal_state.ValidationError):
+            self.store.initialize(
+                goal_text="safe goal",
+                completion_contract=contract(),
+                max_continue_passes=1,
+                max_elapsed_minutes=1,
+                repository_binding=bad,
+                initial_fingerprint=fingerprint("A"),
+                timestamp=BASE_TIME,
+            )
+
+        path, record = self.store.initialize(
+            goal_text="safe production goal",
+            completion_contract=contract(),
+            max_continue_passes=2,
+            max_elapsed_minutes=30,
+            repository_binding=production_binding(),
+            initial_fingerprint=fingerprint("A"),
+            timestamp=BASE_TIME,
+        )
+        self.assertEqual(record["repository_binding"]["execution_profile"], "production_profile")
+        self.assertEqual(self.store.read(path), record)
 
     def test_contract_and_guard_amendments_are_append_only_and_hash_validated(self):
         path, record = self.initialize()

@@ -38,10 +38,10 @@ change tracked research-control state, prove scientific completion, weaken a
 human gate, or promote any claim. `continue-research` remains the only
 one-packet research authority.
 
-## Acceptance Binding
+## Repository Binding Profiles
 
-Until explicit revised user acceptance and later selective promotion, bind
-only to:
+Resolve exactly one requested profile before writing goal state. The
+disposable acceptance profile remains:
 
 ```text
 project root: /Volumes/P-SSD/AngryOwl/The-AEther-Flow-continue-goal-test
@@ -50,18 +50,37 @@ environment mode: local
 execution profile: acceptance_test
 ```
 
+The production profile is available only after explicit user authorization
+for the exact relay goal and guards. It binds to:
+
+```text
+project root: /Volumes/P-SSD/AngryOwl/The-AEther-Flow
+branch: the current non-main branch whose name begins with codex/
+environment mode: local
+execution profile: production_profile
+```
+
+The production starting HEAD must be a clean validated checkpoint, the exact
+root must resolve to one saved local Codex project, and the user must have
+requested fresh recursive discussions for the supplied goal. Production
+enablement does not authorize the launcher to create or switch branches, edit
+tracked files, run research, push, merge, or relax any relay guard.
+
 Derive and persist the resolved root, Git common directory, branch, starting
-HEAD, saved-project identity, and environment mode. Do not hard-code the
-disposable path in the state helper. Reject `main`, a different worktree, a
-managed-per-step worktree, an ambiguous saved project, or a non-local mode.
+HEAD, saved-project identity, environment mode, and selected execution profile.
+Do not hard-code either repository path in the state helper. For the acceptance
+profile, reject a different root or branch. For the production profile, reject
+a different root or a branch outside `codex/*`. Under both profiles reject
+`main`, a managed-per-step worktree, an ambiguous saved project, or a non-local
+mode.
 
 ## Required Capability Preflight
 
 Before writing any goal state:
 
 1. discover the current `list_projects` and `create_thread` tool contracts;
-2. confirm that exactly one saved local project resolves to the acceptance
-   root;
+2. confirm that exactly one saved local project resolves to the selected
+   profile root;
 3. confirm that a fresh project task can be requested with local environment
    mode and an initial textual prompt;
 4. inspect Git root, common directory, branch, HEAD, and porcelain status;

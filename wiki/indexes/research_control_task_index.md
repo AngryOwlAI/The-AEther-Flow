@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `c680371c2f1ce34b666b0b4250b58a82e444196eb0bdc30f47854e42ecd3a634`
-- Generated-at source timestamp: `2026-07-16T02:08:00Z`
-- Row count: `908`
+- Source fingerprint: `2643d98442a54bce6ebc25b474443ea153b0a6871c99f7efc34b2ca7d351bd63`
+- Generated-at source timestamp: `2026-07-16T04:44:07Z`
+- Row count: `909`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,7 +16,8 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|RT-20260715-012|RT-20260715-011|2026-07-16T02:08:00Z|2026-07-16T03:05:16Z|memory_make_target_refactor|completed|none|Project-system Make target decomposition only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|3|On PASS checkpoint this transaction and route one separately bounded P3-T07 Project-Control Maintainer validation-environment separation AgentJob.|PASS|research_control/tasks/RT-20260715-012/jobs/completions/AJC-AJ-RT-20260715-012-001.yaml|
+|RT-20260715-013|RT-20260715-012|2026-07-16T04:44:07Z|2026-07-16T04:51:07Z|continue_research_goal_production_profile_enablement|completed|none|Project-system relay contract enablement only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|1|On PASS checkpoint this enablement transaction then obtain finite positive pass and elapsed-minute guards before running the continue-research-goal production preflight on codex/v19-remaining-relay without consuming P3-T07.|PASS|research_control/tasks/RT-20260715-013/jobs/completions/AJC-AJ-RT-20260715-013-001.yaml|
+|RT-20260715-012|RT-20260715-011|2026-07-16T02:08:00Z|2026-07-16T03:19:09Z|memory_make_target_refactor|completed|none|Project-system Make target decomposition only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|3|On PASS checkpoint this transaction and route one separately bounded P3-T07 Project-Control Maintainer validation-environment separation AgentJob.|PASS|research_control/tasks/RT-20260715-012/jobs/completions/AJC-AJ-RT-20260715-012-001.yaml|
 |RT-20260715-011|RT-20260715-010|2026-07-16T01:20:44Z|2026-07-16T01:24:48Z|memory_bootstrap_validation_dedup|completed|none|Project-system checkpoint and memory-workflow deduplication only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|2|On PASS checkpoint this transaction and route one separately bounded P3-T06 Project-Control Maintainer memory Make-target refactor AgentJob.|PASS|research_control/tasks/RT-20260715-011/jobs/completions/AJC-AJ-RT-20260715-011-001.yaml|
 |RT-20260715-010|RT-20260715-009|2026-07-15T23:46:41Z|2026-07-16T00:12:47Z|true_docs_modes_or_retirement|completed|none|Project-system documentation memory scoping only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|2|On PASS checkpoint this transaction and route one separately bounded P3-T05 Memory-System Maintainer bootstrap-validation deduplication AgentJob.|PASS|research_control/tasks/RT-20260715-010/jobs/completions/AJC-AJ-RT-20260715-010-001.yaml|
 |RT-20260715-009|RT-20260715-008|2026-07-15T22:39:35Z|2026-07-15T22:56:16Z|memory_publication_retrieval_separation|completed|none|Project-system validation ownership separation only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|2|On PASS checkpoint this transaction and route one separately bounded P3-T04 Memory-System Maintainer documentation-scoped memory-mode implementation or retirement AgentJob.|PASS|research_control/tasks/RT-20260715-009/jobs/completions/AJC-AJ-RT-20260715-009-001.yaml|

@@ -1,0 +1,76 @@
+{
+  "schema_version": "continue-research-goal-production-profile-enablement.v1",
+  "task_id": "RT-20260715-013",
+  "job_id": "AJ-RT-20260715-013-001",
+  "created_at": "2026-07-16T04:44:07Z",
+  "entry_head": "d074785be7f067e57f815f1dd6aab4f5d45ebc63",
+  "entry_branch": "codex/v19-remaining-relay",
+  "v19_task_consumed": false,
+  "preserved_next_v19_task": "P3-T07",
+  "launcher_status": "awaiting_finite_guard_inputs",
+  "unlimited_guard_request_representable": false,
+  "profiles": {
+    "acceptance_test": {
+      "status": "preserved",
+      "root": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow-continue-goal-test",
+      "branch": "codex/continue-research-goal-test",
+      "environment_mode": "local"
+    },
+    "production_profile": {
+      "status": "enabled",
+      "root": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow",
+      "branch_rule": "current non-main codex/* branch",
+      "environment_mode": "local",
+      "saved_project_cardinality": 1,
+      "starting_head_requirement": "clean validated checkpoint"
+    }
+  },
+  "preserved_stops": [
+    "main_branch",
+    "remote_mode",
+    "managed_per_step_worktree",
+    "ambiguous_saved_project",
+    "dirty_state",
+    "multiple_live_relays",
+    "validation_failure",
+    "checkpoint_failure",
+    "human_gate",
+    "no_progress",
+    "repeated_state"
+  ],
+  "implementation": {
+    "source_file_count": 3,
+    "launcher_contract_sha256": "c59d16975f754ebabf0722b535c0f750d3c84a976679bcd348a625e67272e98a",
+    "state_helper_sha256": "97dc38e9446f02d4069d7b0bddd31228591de9a3a19065288d3ce9b6655b6550",
+    "focused_test_sha256": "3e0158809ab2b2653ad79fa84bf1f85f1cb7fa53e239afa911bf9d87acf7ef5d",
+    "execution_profiles": [
+      "acceptance_test",
+      "production_profile"
+    ]
+  },
+  "verification": {
+    "baseline_tests": 36,
+    "baseline_skipped": 1,
+    "post_change_tests": 37,
+    "post_change_skipped": 1,
+    "unknown_profile_rejected": true,
+    "production_profile_round_trip": true,
+    "main_rejection_preserved": true,
+    "git_diff_check": "PASS",
+    "task_index_rows": 909,
+    "memory_validation": "PASS",
+    "local_retrieval_warnings": 0,
+    "no_commit_checkpoint": "ready_to_commit",
+    "checkpoint_duration_seconds": 78.465671,
+    "checkpoint_sync_passes": 1,
+    "compatibility_bootstrap_passes": 0,
+    "first_no_commit_staged_tree": "78cd23c249354466fb40264bbc1a65f7a1d128ba"
+  },
+  "authority": {
+    "ordinary_research_handoff": "handoff-0740",
+    "ordinary_research_handoff_preserved": true,
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  }
+}
