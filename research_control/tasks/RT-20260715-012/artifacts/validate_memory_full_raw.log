@@ -1,0 +1,67 @@
+command: /usr/bin/time -p make PYTHON=.venv/bin/python validate-memory-full
+candidate_commit: 5f4b73056226de751d5adcf11f9054dad7297df3
+candidate_repository: isolated local clone with Git LFS initialized and objects materialized
+
+PYTHONPATH=".codex/skills/project-memory-system/scripts" .venv/bin/python -c 'import json; from bootstrap_memory_system import memory_sync; receipt = memory_sync().to_dict(); print(json.dumps({"gate_id": "memory_sync", "status": "PASS", "mutated": receipt["mutated"], "local_retrieval_enabled": receipt["local_retrieval_enabled"], "counts": receipt["counts"], "changed": receipt["changed"], "created": receipt["created"], "pruned": receipt["pruned"]}, sort_keys=True))'
+{"changed": [], "counts": {"changed": 0, "created": 0, "pruned": 0, "unchanged": 853}, "created": [], "gate_id": "memory_sync", "local_retrieval_enabled": false, "mutated": false, "pruned": [], "status": "PASS"}
+.venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py
+Synced Obsidian memory vault at /private/tmp/aether-flow-p3-t06-5f4b730/.local/obsidian/aether-flow-wiki
+Generated rows: CONTENT_SEMANTIC_REGISTRY.csv=807, OBJECT_RELATIONSHIP_REGISTRY.csv=4021, OBSIDIAN_VAULT_REGISTRY.csv=807
+Rebuilt memory index at /private/tmp/aether-flow-p3-t06-5f4b730/.local/memory_index/memory.sqlite
+.venv/bin/python .codex/skills/project-memory-system/scripts/lint_obsidian_vault.py --require-index
+Obsidian vault validation PASS
+.venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json
+{
+  "core_validation_status": "PASS",
+  "freshness_categories": {"blocking": [], "local_cache_only": [], "non_blocking": []},
+  "freshness_status": "PASS",
+  "freshness_warning_records": [],
+  "freshness_warnings": [],
+  "lint_issues": [],
+  "local_retrieval_status": "PASS",
+  "memory_index_exists": true,
+  "memory_index_path": ".local/memory_index/memory.sqlite",
+  "relationship_row_count": 4021,
+  "semantic_row_count": 807,
+  "source_object_count": 807,
+  "vault_exists": true,
+  "vault_path": ".local/obsidian/aether-flow-wiki",
+  "vault_row_count": 807
+}
+.venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search "Lorentzian metric" --formats tex,pdf --limit 5 --json
+{
+  "query": "Lorentzian metric",
+  "result_object_ids": [
+    "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-GEFF-CANDIDATE-OR-OBSTRUCTION",
+    "TEX-RESEARCH-CONTROL-NONBOTTOM-METRICDATA-WITNESS-SRC-GSC-POST-GATE-SIGSCALECONT-METRICFORMASSIGN-SMUGGLING-AUDIT",
+    "TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-GATE-CHAIR-REVIEW",
+    "TEX-RESEARCH-CONTROL-M-SRC-GSC-METRIC-LAW-SOURCE-FORMALIZATION",
+    "TEX-RESEARCH-CONTROL-LOCALIZATION-SOURCE-BASIS-AXIOM-SELECTOR-DOMAIN-EQSRC-LEDGER-COMPLETE-SOURCE-FAMILY-GENERATOR-PACKET-AUDITED-OBSLOC-OBSERVER-READOUT-BRIDGE-ATTEMPT"
+  ],
+  "search_mode": "fts"
+}
+{"target":"memory-doctor","status":"PASS","authority":"local_only"}
+.venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+Validation PASS
+.venv/bin/python -m unittest discover -s tests
+[633 unittest progress markers normalized to this bounded line; all semantic output follows]
+----------------------------------------------------------------------
+Ran 633 tests in 531.038s
+
+OK
+{"edges": 15, "graph_id": "claim_graph_v1", "nodes": 10, "status": "PASS"}
+claim graph outputs are fresh
+dependency graph freshness check: FAIL
+- json: fresh path=<temporary>/graph.json actual=ca99d9ec8256cf9a142d9bb4c083453fc4fc00b30224e477b80da88d5ab4759d expected=ca99d9ec8256cf9a142d9bb4c083453fc4fc00b30224e477b80da88d5ab4759d
+- markdown: stale path=<temporary>/graph.md actual=196383add148f606cedfde1d0e01804f5b22aea7c176e4ab89bd0618e8006438 expected=7031a70baebf735db087fe4d6603fa696bb43f381989386a97a561c067a0b2fa
+- dot: fresh path=<temporary>/graph.dot actual=c81e8554a3d5539bd10cb4eca80985928602ed3bddc2f37b8994fd329c32cb06 expected=c81e8554a3d5539bd10cb4eca80985928602ed3bddc2f37b8994fd329c32cb06
+dependency graph freshness check: PASS
+- json: fresh path=<temporary>/graph.json actual=ca99d9ec8256cf9a142d9bb4c083453fc4fc00b30224e477b80da88d5ab4759d expected=ca99d9ec8256cf9a142d9bb4c083453fc4fc00b30224e477b80da88d5ab4759d
+- markdown: fresh path=<temporary>/graph.md actual=7031a70baebf735db087fe4d6603fa696bb43f381989386a97a561c067a0b2fa expected=7031a70baebf735db087fe4d6603fa696bb43f381989386a97a561c067a0b2fa
+- dot: fresh path=<temporary>/graph.dot actual=c81e8554a3d5539bd10cb4eca80985928602ed3bddc2f37b8994fd329c32cb06 expected=c81e8554a3d5539bd10cb4eca80985928602ed3bddc2f37b8994fd329c32cb06
+{"target":"validate-memory-full","status":"PASS","profile":"full-memory-compatibility"}
+real 548.87
+user 483.06
+sys 64.88
+
+capture_note: Temporary paths and unittest dot progress were normalized; all gate, count, hash, status, timing, and diagnostic lines are preserved.

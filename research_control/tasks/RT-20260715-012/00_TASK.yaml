@@ -1,0 +1,48 @@
+task_id: "RT-20260715-012"
+task_type: "memory_make_target_refactor"
+status: "completed"
+created_at: "2026-07-16T02:08:00Z"
+updated_at: "2026-07-16T03:19:09Z"
+closed_at: "2026-07-16T03:19:09Z"
+parent_task_id: "RT-20260715-011"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260715-012"
+current_job_id: "AJ-RT-20260715-012-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260715-012"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested the dependency-ready separately bounded P3-T06 Project-Control Maintainer AgentJob recorded by P3-T05."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T06"
+  plan_task_name: "Refactor validate-memory into provisioning sync core doctor and test-shard targets"
+  recommendation_ids:
+    - "V19-R10"
+    - "V19-R32"
+    - "V19-R33"
+    - "V19-R38"
+objective: "Decompose memory Make validation into independently callable provisioning synchronization core doctor focused-test and full-acceptance targets while retaining validate-memory as the affected compatibility profile."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system Make target decomposition only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p3_t06_memory_make_target_refactor_pass_p3_t07_dependency_unlocked_no_physics_delta"
+claim_boundary_id: "CB-V19-P3-T06-MEMORY-MAKE-TARGET-REFACTOR-001"
+claim_boundary:
+  allowed_scope: "Memory Make targets focused orchestration tests narrow historical preflight compatibility documentation task-local evidence registry rows and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260715-012/artifacts/make_memory_target_matrix.json"
+  - "research_control/tasks/RT-20260715-012/artifacts/memory_make_validation_receipt.json"
+  - "research_control/tasks/RT-20260715-012/artifacts/validate_memory_full_raw.log"
+next_recommended_action: "On PASS checkpoint this transaction and route one separately bounded P3-T07 Project-Control Maintainer validation-environment separation AgentJob."
+documentation_impact_id: "DI-RT-20260715-012-001"
+completion_id: "AJC-AJ-RT-20260715-012-001"
+notes: "P3-T06 changes Make memory-validation orchestration and its documentation only. CI planner bootstrap implementation ordinary research and physics authority remain unchanged."

@@ -24,17 +24,20 @@ def load_script(name: str, relative_path: str):
 
 
 class MakeValidationOrchestrationTests(unittest.TestCase):
-    def test_validate_project_control_runs_one_research_control_spine(self) -> None:
+    def make_plan(self, target: str) -> list[str]:
         completed = subprocess.run(
-            ["make", "-n", "PYTHON=.venv/bin/python", "validate-project-control"],
+            ["make", "-n", "PYTHON=.venv/bin/python", target],
             cwd=REPO_ROOT,
             check=True,
             capture_output=True,
             text=True,
         )
+        return [line.strip() for line in completed.stdout.splitlines() if line.strip()]
+
+    def test_validate_project_control_runs_one_research_control_spine(self) -> None:
         research_control_commands = [
             line.strip()
-            for line in completed.stdout.splitlines()
+            for line in self.make_plan("validate-project-control")
             if "scripts/research_control/validate_research_control.py" in line
         ]
 
@@ -45,6 +48,57 @@ class MakeValidationOrchestrationTests(unittest.TestCase):
                 "--check-diff"
             ],
         )
+
+    def test_validate_memory_is_core_plus_focused_shard_only(self) -> None:
+        plan = "\n".join(self.make_plan("validate-memory"))
+
+        self.assertIn("memory_validate_core", plan)
+        self.assertIn("tests.test_memory_operations", plan)
+        self.assertIn("tests.test_validation_orchestration", plan)
+        for excluded in [
+            "pip install",
+            "memory_sync().to_dict()",
+            "sync_obsidian_vault.py",
+            "lint_obsidian_vault.py",
+            "query_memory.py status",
+            "query_memory.py search",
+            "unittest discover -s tests",
+        ]:
+            self.assertNotIn(excluded, plan)
+
+    def test_memory_targets_have_distinct_command_membership(self) -> None:
+        setup = "\n".join(self.make_plan("setup-dev"))
+        sync = "\n".join(self.make_plan("memory-sync"))
+        core = "\n".join(self.make_plan("memory-validate-core"))
+        doctor = "\n".join(self.make_plan("memory-doctor"))
+        shard = "\n".join(self.make_plan("test-memory"))
+        full = "\n".join(self.make_plan("validate-memory-full"))
+
+        self.assertIn("pip install -r requirements-dev.txt", setup)
+        self.assertIn("memory_sync().to_dict()", sync)
+        self.assertNotIn("memory_validate_core", sync)
+        self.assertIn("memory_validate_core", core)
+        self.assertNotIn("sync_obsidian_vault.py", core)
+        self.assertIn("sync_obsidian_vault.py", doctor)
+        self.assertIn("lint_obsidian_vault.py --require-index", doctor)
+        self.assertIn("query_memory.py status --json", doctor)
+        self.assertIn('query_memory.py search "Lorentzian metric"', doctor)
+        self.assertIn("tests.test_memory_operations", shard)
+        self.assertNotIn("unittest discover -s tests", shard)
+        self.assertIn("bootstrap_memory_system.py --validate-only", full)
+        self.assertIn("unittest discover -s tests", full)
+
+    def test_validation_targets_never_provision_dependencies(self) -> None:
+        for target in [
+            "memory-sync",
+            "memory-validate-core",
+            "memory-doctor",
+            "test-memory",
+            "validate-memory",
+            "validate-memory-full",
+        ]:
+            with self.subTest(target=target):
+                self.assertNotIn("pip install", "\n".join(self.make_plan(target)))
 
 
 class RunnerCheckpointValidationOrchestrationTests(unittest.TestCase):

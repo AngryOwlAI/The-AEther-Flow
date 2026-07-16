@@ -941,16 +941,23 @@ class ResearchControlTests(unittest.TestCase):
             report = self.validate_memory_preflight_fixture(receipt)
         self.assertTrue(any("source_hash does not match registry row" in error for error in report.errors))
 
-    def test_memory_preflight_allows_historical_skill_contract_hash(self) -> None:
-        root, receipt = self.memory_preflight_fixture(
-            stale_hash=True,
-            object_id="MD-SKILL-CONTINUE-RESEARCH",
-        )
-        with mock.patch.object(self.validator, "REPO_ROOT", root), mock.patch.object(
-            self.validator, "REGISTRY_DIR", root / "registries"
-        ):
-            report = self.validate_memory_preflight_fixture(receipt)
-        self.assertFalse(any("source_hash" in error for error in report.errors))
+    def test_memory_preflight_allows_historical_mutable_contract_hashes(self) -> None:
+        for object_id in [
+            "MD-SKILL-CONTINUE-RESEARCH",
+            "MD-SKILL-PROJECT-MEMORY-SYSTEM",
+            "MD-README-TESTS",
+            "MD-CONTRIBUTING",
+        ]:
+            with self.subTest(object_id=object_id):
+                root, receipt = self.memory_preflight_fixture(
+                    stale_hash=True,
+                    object_id=object_id,
+                )
+                with mock.patch.object(self.validator, "REPO_ROOT", root), mock.patch.object(
+                    self.validator, "REGISTRY_DIR", root / "registries"
+                ):
+                    report = self.validate_memory_preflight_fixture(receipt)
+                self.assertFalse(any("source_hash" in error for error in report.errors))
 
     def test_memory_preflight_allows_historical_current_frontier_hash(self) -> None:
         root = Path(tempfile.mkdtemp()).resolve()

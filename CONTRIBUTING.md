@@ -34,6 +34,38 @@ Use the same Python executable consistently:
 make PYTHON=.venv/bin/python validate-project-control
 ```
 
+Memory validation is decomposed by purpose. The ordinary compatibility target
+runs read-only memory-core validation and the focused memory test shard. It
+does not install dependencies, schedule `memory-sync` or the doctor profile,
+or discover the full repository suite. Focused tests may still exercise memory
+operations under their own fixture or live-acceptance boundaries:
+
+```zsh
+make PYTHON=.venv/bin/python validate-memory
+```
+
+Select setup, synchronization, core validation, local operational diagnostics,
+or the test shard independently when that is the actual task:
+
+```zsh
+make PYTHON=.venv/bin/python setup-dev
+make PYTHON=.venv/bin/python memory-sync
+make PYTHON=.venv/bin/python memory-validate-core
+make PYTHON=.venv/bin/python memory-doctor
+make PYTHON=.venv/bin/python test-memory
+```
+
+For memory-tool changes and scheduled integration, retain the full compatibility
+acceptance path:
+
+```zsh
+make PYTHON=.venv/bin/python validate-memory-full
+```
+
+No validation target provisions dependencies. `memory-doctor` may refresh
+ignored `.local/` retrieval state, but its results are operational diagnostics
+and cannot satisfy checkpoint or physics authority.
+
 For read-only generated-surface validation:
 
 ```zsh

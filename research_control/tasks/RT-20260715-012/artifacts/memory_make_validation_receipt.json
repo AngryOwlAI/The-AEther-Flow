@@ -1,0 +1,159 @@
+{
+  "receipt_id": "memory-make-validation-v19-p3-t06",
+  "task_id": "RT-20260715-012",
+  "job_id": "AJ-RT-20260715-012-001",
+  "status": "PASS",
+  "created_at": "2026-07-16T03:19:09Z",
+  "candidate_commit": "5f4b73056226de751d5adcf11f9054dad7297df3",
+  "source_hashes": {
+    "Makefile": "35a564e29038a9b5df9f680370c958fca0e3d07302be99dde2f300b0f7bab4a8",
+    ".codex/skills/project-memory-system/SKILL.md": "09175a94bb5e19ee06341c341a899ff3908ba96ba18f034fcc3a1413315b386d",
+    "tests/README.md": "dac4719d01666d42e04e4b782c265d4e8721d2add2c36dc1ec1c2eca949cf1d7",
+    "CONTRIBUTING.md": "e7351b9f4c6c1d69a7df387471868a1080276a862458ecf243200808d07ee7b2",
+    "tests/test_validation_orchestration.py": "4d66a0985229823ecb730eb7f9565b396bdfaa1284e408ceb85811b187bb81eb",
+    "scripts/research_control/validate_research_control.py": "db4160cfcc1cbfa944eb0ced22b48f41261e090c934607927cd77ed53928dae3",
+    "tests/test_research_control.py": "e1064cc914f34a2e95c9c43ee2c68d292dc0e38558c6552aa757d40fcdda4763"
+  },
+  "artifacts": {
+    "target_matrix": {
+      "path": "research_control/tasks/RT-20260715-012/artifacts/make_memory_target_matrix.json",
+      "sha256": "4f610515351da9013a6160a1981a9dc42e66be6f0ebb949973d72524ef32e690"
+    },
+    "full_raw_log": {
+      "path": "research_control/tasks/RT-20260715-012/artifacts/validate_memory_full_raw.log",
+      "sha256": "d24892d737218f14e71a70b620522650d309c1398a11962fb9e15760f9e4c124",
+      "capture_bytes": 4882,
+      "normalization": "Temporary paths and unittest dot progress normalized; all semantic gate count hash status timing and diagnostic output preserved."
+    }
+  },
+  "gates": [
+    {
+      "gate_id": "make_plan_membership_and_exclusion",
+      "status": "PASS",
+      "command": ".venv/bin/python -m unittest tests/test_validation_orchestration.py",
+      "tests_run": 4,
+      "duration_seconds": 0.149
+    },
+    {
+      "gate_id": "historical_preflight_compatibility",
+      "status": "PASS",
+      "command": ".venv/bin/python -m unittest selected five formerly coupled research-control fixtures",
+      "tests_run": 5,
+      "duration_seconds": 57.786
+    },
+    {
+      "gate_id": "memory_core_nonmutation",
+      "status": "PASS",
+      "command": "make PYTHON=.venv/bin/python memory-validate-core",
+      "check_count": 13,
+      "duration_seconds": 7.37,
+      "tracked_fingerprint_before": "95e8fa38254838ff3e82efa7ccb9979984d36d7b2a1e769e24feb76d5a812859",
+      "tracked_fingerprint_after": "95e8fa38254838ff3e82efa7ccb9979984d36d7b2a1e769e24feb76d5a812859",
+      "local_fingerprint_before": "f959892f609626cda1912f413cc07843fd840bc44e04a1b587bf4a85db779fcd",
+      "local_fingerprint_after": "f959892f609626cda1912f413cc07843fd840bc44e04a1b587bf4a85db779fcd",
+      "tracked_mutated": false,
+      "local_mutated": false
+    },
+    {
+      "gate_id": "affected_memory_compatibility",
+      "status": "PASS",
+      "command": "make PYTHON=.venv/bin/python validate-memory",
+      "tests_run": 86,
+      "runner_reported_seconds": 41.023,
+      "duration_seconds": 48.342,
+      "subprocess_count": 2,
+      "subprocess_count_method": "declared Make Python command launches for core plus shard",
+      "output_bytes": 1748,
+      "stdout_bytes": 1156,
+      "stderr_bytes": 592,
+      "stdout_sha256": "7b5289bd3d6f24e2918f206842d0048c7e1a342db7337755ff09ee594d8e47d8",
+      "stderr_sha256": "4a1a0767ae755661e19e2f85cb577f59d5bbb2c2d6e055b02969c63ecb2a96fd",
+      "cache_hits": 0,
+      "cache_misses": 0
+    },
+    {
+      "gate_id": "full_memory_compatibility_acceptance",
+      "status": "PASS",
+      "command": "make PYTHON=.venv/bin/python validate-memory-full",
+      "candidate_repository": "isolated clean local clone",
+      "tests_run": 633,
+      "runner_reported_seconds": 531.038,
+      "duration_seconds": 548.87,
+      "subprocess_count": 7,
+      "subprocess_count_method": "declared top-level Python command launches before descendant test processes",
+      "output_bytes": 4882,
+      "output_bytes_method": "normalized durable raw-log bytes",
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "memory_sync_mutated": false,
+      "legacy_consolidated_validation": "PASS",
+      "primary_main_worktree_clean": true
+    }
+  ],
+  "failed_attempts_preserved": [
+    {
+      "attempt": "initial live full acceptance before compatibility repair",
+      "status": "FAIL",
+      "tests_run": 633,
+      "runner_reported_seconds": 625.748,
+      "failure_count": 4,
+      "error_count": 1,
+      "classification": "expected dirty-main contract plus three missing historical mutable preflight object IDs",
+      "resolution": "Add exactly MD-CONTRIBUTING MD-README-TESTS and MD-SKILL-PROJECT-MEMORY-SYSTEM to the established mutable historical preflight set and extend its behavioral fixture."
+    },
+    {
+      "attempt": "first isolated clean candidate",
+      "status": "FAIL",
+      "tests_run": 633,
+      "runner_reported_seconds": 555.817,
+      "duration_seconds": 575.26,
+      "failure_count": 1,
+      "error_count": 0,
+      "classification": "candidate transport environment held output/research_dependency_graph.json as a Git LFS pointer",
+      "resolution": "Run git lfs install --local and git lfs pull in the isolated clone; the discriminating test then passed without a source patch."
+    }
+  ],
+  "baseline_comparison": {
+    "baseline_path": "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json",
+    "baseline_clean_tests": 584,
+    "baseline_clean_duration_seconds": 515.454875,
+    "baseline_clean_output_bytes": 2697,
+    "baseline_subprocess_count": 90,
+    "current_affected_tests": 86,
+    "current_affected_duration_seconds": 48.342,
+    "current_full_tests": 633,
+    "current_full_duration_seconds": 548.87,
+    "full_suite_directly_comparable": false,
+    "comparison_note": "The affected profile is the ordinary target and is materially smaller. The full clean suite contains 49 more tests than the frozen baseline so wall-time deltas are not interpreted as a regression."
+  },
+  "checkpoint_preflight": {
+    "status": "ready_to_commit",
+    "command": ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260715-012-001 --no-commit",
+    "sync_passes": 1,
+    "memory_sync_count": 1,
+    "memory_core_count": 1,
+    "compatibility_bootstrap_count": 0,
+    "total_acceptance_operations": 14,
+    "working_and_staged_scopes_distinct": true,
+    "final_staged_tree": "baa3b24bcdc2e21e49ac88979981f0d2177d3d76",
+    "duration_seconds": 70.498141,
+    "subprocess_count": 13,
+    "output_bytes": 1974741,
+    "cache_hits": 0,
+    "cache_misses": 0,
+    "no_physics_authority": true
+  },
+  "scope_observations": {
+    "contributing_discovery_gap": "CONTRIBUTING.md is registered but absent from current bootstrap Markdown discovery so its canonical source hash required a direct registry-row refresh before convergence.",
+    "registered_project_improvement_signal_emitted": false,
+    "signal_rationale": "One bounded discovery observation is preserved here but does not yet establish a recurring pattern; changing discovery is outside P3-T06."
+  },
+  "authority_boundary": {
+    "project_system_change_only": true,
+    "scientific_claims_changed": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "ordinary_research_handoff_preserved": "handoff-0740"
+  }
+}

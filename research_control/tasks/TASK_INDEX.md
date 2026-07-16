@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `fafe611ac8cb0e9741cb1c082c4243fb3a06f9b667282ee5dac30c1da44b600b`
-- Generated-at source timestamp: `2026-07-16T01:20:44Z`
-- Row count: `907`
+- Source fingerprint: `c680371c2f1ce34b666b0b4250b58a82e444196eb0bdc30f47854e42ecd3a634`
+- Generated-at source timestamp: `2026-07-16T02:08:00Z`
+- Row count: `908`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260715-012|RT-20260715-011|2026-07-16T02:08:00Z|2026-07-16T03:05:16Z|memory_make_target_refactor|completed|none|Project-system Make target decomposition only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|3|On PASS checkpoint this transaction and route one separately bounded P3-T07 Project-Control Maintainer validation-environment separation AgentJob.|PASS|research_control/tasks/RT-20260715-012/jobs/completions/AJC-AJ-RT-20260715-012-001.yaml|
 |RT-20260715-011|RT-20260715-010|2026-07-16T01:20:44Z|2026-07-16T01:24:48Z|memory_bootstrap_validation_dedup|completed|none|Project-system checkpoint and memory-workflow deduplication only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|2|On PASS checkpoint this transaction and route one separately bounded P3-T06 Project-Control Maintainer memory Make-target refactor AgentJob.|PASS|research_control/tasks/RT-20260715-011/jobs/completions/AJC-AJ-RT-20260715-011-001.yaml|
 |RT-20260715-010|RT-20260715-009|2026-07-15T23:46:41Z|2026-07-16T00:12:47Z|true_docs_modes_or_retirement|completed|none|Project-system documentation memory scoping only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|2|On PASS checkpoint this transaction and route one separately bounded P3-T05 Memory-System Maintainer bootstrap-validation deduplication AgentJob.|PASS|research_control/tasks/RT-20260715-010/jobs/completions/AJC-AJ-RT-20260715-010-001.yaml|
 |RT-20260715-009|RT-20260715-008|2026-07-15T22:39:35Z|2026-07-15T22:56:16Z|memory_publication_retrieval_separation|completed|none|Project-system validation ownership separation only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|2|On PASS checkpoint this transaction and route one separately bounded P3-T04 Memory-System Maintainer documentation-scoped memory-mode implementation or retirement AgentJob.|PASS|research_control/tasks/RT-20260715-009/jobs/completions/AJC-AJ-RT-20260715-009-001.yaml|

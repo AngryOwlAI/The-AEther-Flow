@@ -39,9 +39,23 @@ Run one test module:
 .venv/bin/python -m unittest tests.test_memory_system
 ```
 
+Run the memory-focused shard used by the ordinary memory acceptance profile:
+
+```zsh
+make PYTHON=.venv/bin/python test-memory
+```
+
+The shard covers the extracted memory operations, memory CLI modes, memory
+system behavior, local Obsidian support, and Make orchestration. It does not run
+the complete repository suite. Use the full compatibility profile when a
+memory-tool change requires the scheduled integration backstop:
+
+```zsh
+make PYTHON=.venv/bin/python validate-memory-full
+```
+
 ## Authority Boundary
 
 Tests provide evidence about expected behavior. Passing tests are not
 independent scientific authority and do not replace source registries,
 documentation-impact receipts, or research-control validation.
-

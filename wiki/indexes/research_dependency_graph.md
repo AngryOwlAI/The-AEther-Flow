@@ -7,9 +7,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 - Schema: `research_dependency_graph_v1`
 - Generated from tracked state as of: `2026-07-09T03:11:04Z`
-- Source fingerprint: `f159acfe6469edfacdcf70b9974bc89c517fac9c1e56f4c9fe6d3d44d906f409`
-- Nodes: `17856`
-- Edges: `63503`
+- Source fingerprint: `e0ff1abae318765c599592d00734ad2d0d14d7d8adebb8fbf230ad85ec4c9acd`
+- Nodes: `17867`
+- Edges: `63555`
 
 ## Source Counts
 
@@ -17,7 +17,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 903 |
+| `completion_yaml` | 904 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
@@ -33,11 +33,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 903 |
+| `agent_job` | `support_only` | 904 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 9501 |
-| `blocked_burden` | `blocked` | 3267 |
-| `claim_boundary` | `support_only` | 860 |
+| `artifact` | `support_only` | 9507 |
+| `blocked_burden` | `blocked` | 3269 |
+| `claim_boundary` | `support_only` | 861 |
 | `draft_control_candidate` | `draft_control` | 529 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 62 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 291 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 843 |
+| `task` | `support_only` | 844 |
 
 ## Frontier Table
 

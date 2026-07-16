@@ -21,6 +21,38 @@ wiki, registry, and derivative-artifact system.
 
 ## Commands
 
+Use the Make targets when selecting a local memory operation or acceptance
+profile. Environment provisioning is explicit and no validation target depends
+on it:
+
+```zsh
+make PYTHON=.venv/bin/python setup-dev
+make PYTHON=.venv/bin/python memory-sync
+make PYTHON=.venv/bin/python memory-validate-core
+make PYTHON=.venv/bin/python memory-doctor
+make PYTHON=.venv/bin/python test-memory
+make PYTHON=.venv/bin/python validate-memory
+make PYTHON=.venv/bin/python validate-memory-full
+```
+
+`memory-sync` runs the write-only tracked-memory synchronizer and emits its
+path-level receipt. `memory-validate-core` runs only the read-only tracked
+memory gate. `memory-doctor` owns local Obsidian synchronization and linting,
+memory status, and search smoke; it is local operational evidence and cannot
+satisfy checkpoint or physics authority. `test-memory` runs the focused memory
+test shard.
+
+During the legacy-consolidated migration epoch, `validate-memory` is the
+compatibility alias for the memory-focused affected profile: memory-core
+validation plus `test-memory`. It does not schedule `memory-sync`, provision
+dependencies, run the doctor profile, or discover the full repository test
+suite. Focused tests may exercise memory operations under their own fixtures or
+live-acceptance safeguards.
+`validate-memory-full` retains the full memory acceptance path for memory-tool
+changes and scheduled integration: tracked synchronization, doctor checks, the
+legacy composite validation gate, and the complete repository test suite. It
+also never provisions dependencies.
+
 Bootstrap or refresh generated outputs:
 
 ```zsh

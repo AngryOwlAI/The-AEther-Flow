@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `folder_readme_documentation`
 - Authority status: `explanatory_noncanonical`
 - Owner skill: `documentation-curator`
-- Source hash: `85f3bba8c1edf5aabec6081f5be5bbe38754098b97bd0c5441a344c17a1054c2`
+- Source hash: `dac4719d01666d42e04e4b782c265d4e8721d2add2c36dc1ec1c2eca949cf1d7`
 
 ## Related Objects
 
@@ -19,4 +19,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-06-18T00:15:45Z`
+- Last validated at: `2026-07-16T02:15:25Z`

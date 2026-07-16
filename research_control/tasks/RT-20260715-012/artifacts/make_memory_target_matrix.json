@@ -1,0 +1,67 @@
+{
+  "artifact_id": "make-memory-target-matrix-v19-p3-t06",
+  "task_id": "RT-20260715-012",
+  "job_id": "AJ-RT-20260715-012-001",
+  "status": "PASS",
+  "source_hashes": {
+    "Makefile": "35a564e29038a9b5df9f680370c958fca0e3d07302be99dde2f300b0f7bab4a8",
+    ".codex/skills/project-memory-system/SKILL.md": "09175a94bb5e19ee06341c341a899ff3908ba96ba18f034fcc3a1413315b386d",
+    "tests/README.md": "dac4719d01666d42e04e4b782c265d4e8721d2add2c36dc1ec1c2eca949cf1d7",
+    "CONTRIBUTING.md": "e7351b9f4c6c1d69a7df387471868a1080276a862458ecf243200808d07ee7b2"
+  },
+  "targets": {
+    "setup-dev": {
+      "profile": "explicit_provisioning",
+      "members": ["python_executable_check", "pip_install_requirements_dev"],
+      "excludes": ["memory_sync", "memory_core", "memory_doctor", "tests"],
+      "receipt": "compact_json"
+    },
+    "memory-sync": {
+      "profile": "tracked_state_synchronization",
+      "members": ["memory_sync"],
+      "excludes": ["pip_install", "memory_core", "local_retrieval", "tests"],
+      "receipt": "compact_json"
+    },
+    "memory-validate-core": {
+      "profile": "blocking_core_validation",
+      "members": ["memory_validate_core"],
+      "excludes": ["pip_install", "memory_sync", "obsidian_sync", "obsidian_lint", "query_status", "query_search", "tests"],
+      "receipt": "memory_core_json"
+    },
+    "memory-doctor": {
+      "profile": "local_only_diagnostics",
+      "members": ["obsidian_sync", "obsidian_lint_require_index", "query_status", "query_search_smoke"],
+      "excludes": ["pip_install", "tracked_memory_sync", "memory_core", "tests"],
+      "receipt": "compact_json"
+    },
+    "test-memory": {
+      "profile": "memory_focused_test_shard",
+      "members": ["tests.test_memory_operations", "tests.test_memory_cli_modes", "tests.test_memory_system", "tests.test_obsidian_wiki", "tests.test_validation_orchestration"],
+      "test_count": 86,
+      "excludes": ["pip_install", "memory_sync", "memory_doctor", "full_test_discovery"],
+      "receipt": "unittest_summary_plus_compact_json"
+    },
+    "validate-memory": {
+      "profile": "affected_memory_compatibility",
+      "members": ["memory-validate-core", "test-memory"],
+      "excludes": ["setup-dev", "memory-sync", "memory-doctor", "legacy_composite", "full_test_discovery"],
+      "receipt": "compact_json"
+    },
+    "validate-memory-full": {
+      "profile": "full_memory_compatibility",
+      "members": ["memory-sync", "memory-doctor", "legacy_consolidated_validate_only", "full_test_discovery"],
+      "excludes": ["setup-dev", "pip_install"],
+      "receipt": "compact_json"
+    }
+  },
+  "invariants": {
+    "validation_targets_silently_provision_dependencies": false,
+    "doctor_blocks_core": false,
+    "ordinary_validate_memory_runs_full_repository_suite": false,
+    "full_compatibility_acceptance_available": true,
+    "legacy_consolidated_epoch_preserved": true,
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  }
+}
