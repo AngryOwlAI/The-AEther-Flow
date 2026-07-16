@@ -1,0 +1,73 @@
+{
+  "receipt_id": "V19-P3-T05-MEMORY-WORKFLOW-VALIDATION-001",
+  "task_id": "RT-20260715-011",
+  "job_id": "AJ-RT-20260715-011-001",
+  "status": "PASS",
+  "gate_results": [
+    {
+      "gate_id": "checkpoint_dedup_orchestration_fixtures",
+      "status": "PASS",
+      "count": 6
+    },
+    {
+      "gate_id": "checkpoint_existing_safety_fixtures",
+      "status": "PASS",
+      "count": 5
+    },
+    {
+      "gate_id": "relevant_combined_test_shard",
+      "status": "PASS",
+      "count": 215,
+      "duration_seconds": 70.054
+    },
+    {
+      "gate_id": "memory_sync",
+      "status": "PASS",
+      "count": 1,
+      "mutated": false,
+      "tracked_path_count": 853
+    },
+    {
+      "gate_id": "memory_legacy_composite",
+      "satisfies_obligation": "memory_core",
+      "status": "PASS",
+      "count": 1
+    },
+    {
+      "gate_id": "git_diff_check",
+      "status": "PASS",
+      "count": 1
+    },
+    {
+      "gate_id": "checkpoint_transaction",
+      "status": "PASS",
+      "count": 1,
+      "acceptance_operation_count": 14,
+      "sync_passes": 1,
+      "memory_sync_count": 1,
+      "compatibility_bootstrap_count": 0,
+      "memory_core_count": 1,
+      "final_staged_tree_identity_recorded": true
+    }
+  ],
+  "performance": {
+    "before_duration_seconds": 14.619856,
+    "after_duration_seconds": 7.148233,
+    "before_subprocess_count": 1,
+    "after_subprocess_count": 0,
+    "before_output_bytes": 692,
+    "after_output_bytes": 234,
+    "cache_hits": 0,
+    "cache_misses": 0
+  },
+  "relevant_hashes": {
+    "plan": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc",
+    "dependency_completion": "2abe22fdbcd447a3c877bbc45cb5d0b4cdda4e54e83fd10d3e59d464c06c3376",
+    "checkpoint_source": "0417f50a707c23e5d0f316b4b8830bd9ac9b2c14be4e844093aae01fccf123fc"
+  },
+  "raw_output_policy": "Full test and checkpoint command output remains in command execution records; this tracked receipt stores compact counts hashes statuses and metrics only.",
+  "no_physics_authority": true,
+  "scientific_claims_changed": false,
+  "physics_promotion_authorized": false,
+  "proof_authority": false
+}

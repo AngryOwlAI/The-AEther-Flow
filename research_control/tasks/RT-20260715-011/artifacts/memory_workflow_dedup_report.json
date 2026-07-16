@@ -1,0 +1,89 @@
+{
+  "report_id": "V19-P3-T05-MEMORY-WORKFLOW-DEDUP-REPORT-001",
+  "task_id": "RT-20260715-011",
+  "job_id": "AJ-RT-20260715-011-001",
+  "plan_task_id": "P3-T05",
+  "migration_epoch": "legacy_consolidated",
+  "status": "PASS",
+  "objective": "Remove validating compatibility-bootstrap calls from bounded checkpoint convergence while retaining one blocking final memory-core compatibility validation on the final staged tree.",
+  "implementation": {
+    "convergence_operation": "memory_sync()",
+    "convergence_operation_kind": "write_only_tracked_state",
+    "local_retrieval_enabled": false,
+    "maximum_staged_sync_passes": 3,
+    "post_pdf_second_sync_retained": true,
+    "post_sync_memory_validation_removed": true,
+    "final_validator_command": ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only",
+    "final_runtime_gate_id": "memory_legacy_composite",
+    "final_satisfied_obligation": "memory_core",
+    "final_tree_identity": "git write-tree SHA-1 recorded immediately before final validation",
+    "entry_index_restoration_retained": true,
+    "unstaged_residue_block_retained": true,
+    "compatibility_bootstrap_cli_changed": false,
+    "makefile_changed": false,
+    "makefile_rationale": "Inspection found no immediate same-tree bootstrap-plus-validate pair; Make target decomposition remains P3-T06."
+  },
+  "ordinary_one_pass_command_model": {
+    "before": {
+      "convergence_compatibility_bootstrap_passes": 1,
+      "memory_validation_traversals": 3,
+      "explanation": "One validating bootstrap in convergence plus one post-sync validate-only plus one final validate-only."
+    },
+    "after": {
+      "convergence_compatibility_bootstrap_passes": 0,
+      "write_only_sync_passes": 1,
+      "memory_validation_traversals": 1,
+      "explanation": "One write-only tracked-state sync plus one final legacy-consolidated validation on the recorded staged tree."
+    },
+    "memory_validation_traversal_reduction_percent": 66.667
+  },
+  "operation_benchmark": {
+    "measurement_scope": "Stable live tracked state after source edits; old compatibility-bootstrap subprocess compared with the new in-process write-only sync operation. Final staged validation is deliberately excluded because both safety models retain it.",
+    "before_compatibility_bootstrap": {
+      "duration_seconds": 14.619856,
+      "subprocess_count": 1,
+      "output_bytes": 692,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "returncode": 0
+    },
+    "after_write_only_memory_sync": {
+      "duration_seconds": 7.148233,
+      "subprocess_count": 0,
+      "output_bytes": 234,
+      "cache_hits": 0,
+      "cache_misses": 0,
+      "returncode": 0,
+      "unchanged_tracked_memory_paths": 853,
+      "mutated": false
+    },
+    "duration_reduction_percent": 51.106,
+    "subprocess_reduction_percent": 100.0,
+    "output_reduction_percent": 66.185,
+    "cache_note": "Tracked memory synchronization has no cache lookup layer; zeroes are explicit not inferred hits."
+  },
+  "safety_proof": {
+    "focused_orchestration_tests": 6,
+    "checkpoint_safety_tests": 5,
+    "combined_relevant_tests": 215,
+    "generation_changes_tree_final_validation_post_generation": "PASS",
+    "multi_pass_stabilization": "PASS",
+    "targeted_pdf_second_sync": "PASS",
+    "sync_failure_no_commit_exact_index_restore": "PASS",
+    "unstaged_residue_blocks": "PASS",
+    "compatibility_bootstrap_count_during_convergence": 0,
+    "final_memory_core_compatibility_count": 1
+  },
+  "source_hashes": {
+    ".codex/skills/continue-research/SKILL.md": "391e02f7b82cb36a337bd0f0bf362f5f4abc94d1445f0c1aa61ee1bfc51fb96a",
+    ".codex/skills/improve-project-system/SKILL.md": "921524cb6e6aaaa0f975acab69cc1e8359c20d89ecbd36e47c88a80126eb43d1",
+    ".codex/skills/user-modified-project/SKILL.md": "caacd167edc0462834d122952d73b12daf1030421f43e4ce866456a1d0c7d3e5",
+    "scripts/research_control/checkpoint_research_transaction.py": "0417f50a707c23e5d0f316b4b8830bd9ac9b2c14be4e844093aae01fccf123fc",
+    "tests/test_validation_orchestration.py": "b352f3369de8a94c9752b8fb9c4d46c78723b464332dbc3b7504e7e4dc9ead6f",
+    "tests/test_research_control.py": "fdb7a55ade68361f0ca22481c556ca0d4f5cbefe3a87045a6297562b07a00aab"
+  },
+  "no_physics_authority": true,
+  "scientific_claims_changed": false,
+  "physics_promotion_authorized": false,
+  "proof_authority": false
+}

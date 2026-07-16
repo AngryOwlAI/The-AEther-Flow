@@ -1478,7 +1478,7 @@ class ResearchControlTests(unittest.TestCase):
             },
         )
 
-    def test_checkpoint_stages_scope_before_bootstrap_and_validates_final_index(self) -> None:
+    def test_checkpoint_stages_scope_before_sync_and_validates_final_index(self) -> None:
         commands: list[list[str]] = []
 
         def fake_run(command: list[str]):
@@ -1529,29 +1529,35 @@ class ResearchControlTests(unittest.TestCase):
                 "post_sync_validation_commands",
                 return_value=[["final-index-validation"]],
             ),
+            mock.patch.object(
+                self.checkpoint,
+                "memory_sync",
+                side_effect=lambda **_kwargs: fake_run(["memory_sync()"]),
+            ),
             mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
         ):
             result = self.checkpoint.checkpoint("AJ-TEST", no_commit=True)
 
-        bootstrap = [
-            ".venv/bin/python",
-            ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
-        ]
+        sync = ["memory_sync()"]
         add_indices = [
             index for index, command in enumerate(commands) if command[:2] == ["git", "add"]
         ]
         self.assertEqual(result["status"], "ready_to_commit")
         self.assertEqual(result["sync_passes"], 1)
         self.assertGreaterEqual(len(add_indices), 2)
-        self.assertLess(add_indices[0], commands.index(bootstrap))
-        self.assertLess(commands.index(bootstrap), add_indices[-1])
+        self.assertLess(add_indices[0], commands.index(sync))
+        self.assertLess(commands.index(sync), add_indices[-1])
         self.assertLess(add_indices[-1], commands.index(["final-index-validation"]))
         self.assertLess(
             commands.index(["final-index-validation"]),
-            commands.index([*bootstrap, "--validate-only"]),
+            commands.index(self.checkpoint.final_memory_validation_command()),
+        )
+        self.assertEqual(
+            result["checkpoint_receipt"]["final_validator"]["git_index_tree"],
+            "original-tree",
         )
 
-    def test_checkpoint_repeats_bootstrap_until_index_paths_stabilize(self) -> None:
+    def test_checkpoint_repeats_sync_until_index_paths_stabilize(self) -> None:
         commands: list[list[str]] = []
         index_outputs = iter(
             [
@@ -1610,19 +1616,22 @@ class ResearchControlTests(unittest.TestCase):
                 "post_sync_validation_commands",
                 return_value=[],
             ),
+            mock.patch.object(
+                self.checkpoint,
+                "memory_sync",
+                side_effect=lambda **_kwargs: fake_run(["memory_sync()"]),
+            ),
             mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
         ):
             result = self.checkpoint.checkpoint("AJ-TEST", no_commit=True)
 
-        write_bootstrap = [
-            ".venv/bin/python",
-            ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
-        ]
         self.assertEqual(result["status"], "ready_to_commit")
         self.assertEqual(result["sync_passes"], 2)
-        self.assertEqual(commands.count(write_bootstrap), 2)
+        self.assertEqual(commands.count(["memory_sync()"]), 2)
+        self.assertEqual(result["command_counts"]["memory_core"], 1)
+        self.assertEqual(result["command_counts"]["compatibility_bootstrap"], 0)
 
-    def test_checkpoint_restores_original_index_on_bootstrap_failure(self) -> None:
+    def test_checkpoint_restores_original_index_on_sync_failure(self) -> None:
         commands: list[list[str]] = []
 
         def fake_run(command: list[str]):
@@ -1631,8 +1640,6 @@ class ResearchControlTests(unittest.TestCase):
                 return self.checkpoint.CommandResult(command, 0, "original-tree\n", "")
             if command == ["git", "ls-files", "-z"]:
                 return self.checkpoint.CommandResult(command, 0, "tracked.txt\0new.txt\0", "")
-            if command[-1].endswith("bootstrap_memory_system.py"):
-                return self.checkpoint.CommandResult(command, 1, "", "bootstrap failed")
             return self.checkpoint.CommandResult(command, 0, "", "")
 
         changes = {"new.txt": "??"}
@@ -1658,13 +1665,21 @@ class ResearchControlTests(unittest.TestCase):
                 "allowed_patterns_for_changed_paths",
                 return_value=["new.txt"],
             ),
+            mock.patch.object(
+                self.checkpoint,
+                "memory_sync",
+                return_value=self.checkpoint.CommandResult(
+                    ["memory_sync()"], 1, "", "sync failed"
+                ),
+            ),
             mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
         ):
             result = self.checkpoint.checkpoint("AJ-TEST", no_commit=True)
 
         self.assertEqual(result["status"], "blocked")
-        self.assertEqual(result["reason"], "memory bootstrap failed")
+        self.assertEqual(result["reason"], "memory synchronization failed")
         self.assertIn(["git", "read-tree", "original-tree"], commands)
+        self.assertNotIn(["git", "commit"], commands)
 
     def test_checkpoint_restores_entry_index_on_helper_exception(self) -> None:
         commands: list[list[str]] = []
@@ -1761,6 +1776,11 @@ class ResearchControlTests(unittest.TestCase):
                 "post_sync_validation_commands",
                 return_value=[],
             ),
+            mock.patch.object(
+                self.checkpoint,
+                "memory_sync",
+                side_effect=lambda **_kwargs: fake_run(["memory_sync()"]),
+            ),
             mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
         ):
             with self.assertRaisesRegex(RuntimeError, "inner restore failed"):
@@ -1822,6 +1842,11 @@ class ResearchControlTests(unittest.TestCase):
                 self.checkpoint,
                 "post_sync_validation_commands",
                 return_value=[],
+            ),
+            mock.patch.object(
+                self.checkpoint,
+                "memory_sync",
+                side_effect=lambda **_kwargs: fake_run(["memory_sync()"]),
             ),
             mock.patch.object(self.checkpoint, "run_command", side_effect=fake_run),
         ):

@@ -1,0 +1,46 @@
+task_id: "RT-20260715-011"
+task_type: "memory_bootstrap_validation_dedup"
+status: "completed"
+created_at: "2026-07-16T01:20:44Z"
+updated_at: "2026-07-16T01:24:48Z"
+closed_at: "2026-07-16T01:24:48Z"
+parent_task_id: "RT-20260715-010"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260715-011"
+current_job_id: "AJ-RT-20260715-011-001"
+role_id: "memory-system-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "memory-system-maintainer@0.2.0--RT-20260715-011"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested the dependency-ready separately bounded P3-T05 Memory-System Maintainer bootstrap-validation deduplication AgentJob recorded by P3-T04."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T05"
+  plan_task_name: "Remove bootstrap-then-validate duplication from workflows and checkpoint stabilization"
+  recommendation_ids:
+    - "V19-R06"
+    - "V19-R11"
+    - "V19-R12"
+objective: "Use write-only memory synchronization during bounded checkpoint convergence and retain one blocking final memory-core compatibility validation on the final staged tree."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system checkpoint and memory-workflow deduplication only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p3_t05_memory_bootstrap_validation_dedup_pass_p3_t06_dependency_unlocked_no_physics_delta"
+claim_boundary_id: "CB-V19-P3-T05-MEMORY-WORKFLOW-DEDUP-001"
+claim_boundary:
+  allowed_scope: "Checkpoint write-only memory synchronization final staged validation identity three workflow skill contracts focused orchestration tests task-local evidence registry rows and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260715-011/artifacts/memory_workflow_dedup_report.json"
+  - "research_control/tasks/RT-20260715-011/artifacts/memory_workflow_validation_receipt.json"
+next_recommended_action: "On PASS checkpoint this transaction and route one separately bounded P3-T06 Project-Control Maintainer memory Make-target refactor AgentJob."
+documentation_impact_id: "DI-RT-20260715-011-001"
+completion_id: "AJC-AJ-RT-20260715-011-001"
+notes: "P3-T05 changes checkpoint memory orchestration and its governing skill contracts only. Make CI planner retirement ordinary research and physics authority remain unchanged."

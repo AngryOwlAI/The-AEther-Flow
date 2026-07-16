@@ -6,10 +6,13 @@ from __future__ import annotations
 import argparse
 import csv
 import fnmatch
+import importlib.util
 import json
 import subprocess
 import sys
+import time
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 from typing import Iterable
 
@@ -22,6 +25,10 @@ except ImportError:  # pragma: no cover
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REGISTRY_DIR = REPO_ROOT / "registries"
 PROGRAM_STATE_PATH = REPO_ROOT / "research_control" / "program_state.yaml"
+MEMORY_BOOTSTRAP_PATH = (
+    REPO_ROOT
+    / ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+)
 PROJECT_CONTROL_SCRIPT_DIR = REPO_ROOT / "scripts" / "project_control"
 if str(PROJECT_CONTROL_SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_CONTROL_SCRIPT_DIR))
@@ -52,6 +59,7 @@ class CommandResult:
     returncode: int
     stdout: str
     stderr: str
+    duration_seconds: float = 0.0
 
     def as_dict(self) -> dict[str, object]:
         return {
@@ -59,10 +67,14 @@ class CommandResult:
             "returncode": self.returncode,
             "stdout": self.stdout,
             "stderr": self.stderr,
+            "duration_seconds": self.duration_seconds,
+            "output_bytes": len(self.stdout.encode("utf-8"))
+            + len(self.stderr.encode("utf-8")),
         }
 
 
 def run_command(command: list[str]) -> CommandResult:
+    started = time.perf_counter()
     process = subprocess.run(
         command,
         cwd=REPO_ROOT,
@@ -70,7 +82,71 @@ def run_command(command: list[str]) -> CommandResult:
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
     )
-    return CommandResult(command, process.returncode, process.stdout, process.stderr)
+    return CommandResult(
+        command,
+        process.returncode,
+        process.stdout,
+        process.stderr,
+        time.perf_counter() - started,
+    )
+
+
+@lru_cache(maxsize=1)
+def _load_memory_sync():
+    """Load the write-only memory synchronizer without changing CLI semantics."""
+
+    module_name = "checkpoint_memory_bootstrap"
+    script_dir = str(MEMORY_BOOTSTRAP_PATH.parent)
+    if script_dir not in sys.path:
+        sys.path.insert(0, script_dir)
+    spec = importlib.util.spec_from_file_location(module_name, MEMORY_BOOTSTRAP_PATH)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"could not load {MEMORY_BOOTSTRAP_PATH}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    spec.loader.exec_module(module)
+    return module.memory_sync
+
+
+def memory_sync(*, rebuilt_pdf_paths: Iterable[str] | None = None) -> CommandResult:
+    """Run one tracked-state synchronization pass without validation."""
+
+    command = ["memory_sync()"]
+    rebuilt = sorted(set(rebuilt_pdf_paths or []))
+    if rebuilt:
+        command.extend(["rebuilt_pdf_paths", *rebuilt])
+    started = time.perf_counter()
+    try:
+        receipt = _load_memory_sync()(
+            rebuilt_pdf_paths=rebuilt,
+            include_local_retrieval=False,
+        )
+        mutation = receipt.to_dict()
+        payload = {
+            "gate_id": "memory_sync",
+            "operation": "write_only_tracked_state",
+            "mutated": mutation["mutated"],
+            "counts": mutation["counts"],
+            "changed": mutation["changed"],
+            "created": mutation["created"],
+            "pruned": mutation["pruned"],
+            "local_retrieval_enabled": mutation["local_retrieval_enabled"],
+        }
+        return CommandResult(
+            command,
+            0,
+            json.dumps(payload, sort_keys=True),
+            "",
+            time.perf_counter() - started,
+        )
+    except Exception as exc:
+        return CommandResult(
+            command,
+            1,
+            "",
+            f"{type(exc).__name__}: {exc}",
+            time.perf_counter() - started,
+        )
 
 
 def read_csv_registry(name: str) -> list[dict[str, str]]:
@@ -270,7 +346,7 @@ def commit_message(job_row: dict[str, str], execution_role_ref: str, handoff: di
         f"AgentJob: {job_row['job_id']}",
         f"Handoff: {handoff.get('handoff_id', '')}",
         f"Summary: {handoff.get('summary', job_row.get('notes', ''))}",
-        "Validation: memory bootstrap PASS; research-control PASS; diff allowlist PASS",
+        "Validation: memory sync PASS; final memory core PASS; research-control PASS; diff allowlist PASS",
         "Push: not performed",
     ]
     return [subject, *body]
@@ -294,6 +370,8 @@ def block_report(
         "validation_errors": validation_errors or [],
         "suggested_repair_role": suggested_repair_role,
         "command_counts": checkpoint_command_counts(command_results),
+        "performance": checkpoint_performance(command_results),
+        "checkpoint_receipt": checkpoint_receipt(command_results),
         "staged": False,
         "committed": False,
     }
@@ -310,15 +388,94 @@ def post_sync_validation_commands() -> list[list[str]]:
         [".venv/bin/python", "scripts/project_control/validate_documentation_impact.py"],
         [
             ".venv/bin/python",
-            ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
-            "--validate-only",
-        ],
-        [
-            ".venv/bin/python",
             "scripts/research_control/validate_research_control.py",
             "--check-diff",
         ],
     ]
+
+
+def final_memory_validation_command() -> list[str]:
+    return [
+        ".venv/bin/python",
+        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        "--validate-only",
+    ]
+
+
+def checkpoint_performance(command_results: Iterable[CommandResult]) -> dict[str, object]:
+    results = list(command_results)
+    return {
+        "duration_seconds": round(sum(result.duration_seconds for result in results), 6),
+        "subprocess_count": sum(
+            1 for result in results if result.command[:1] != ["memory_sync()"]
+        ),
+        "output_bytes": sum(
+            len(result.stdout.encode("utf-8")) + len(result.stderr.encode("utf-8"))
+            for result in results
+        ),
+        "cache_hits": 0,
+        "cache_misses": 0,
+        "cache_scope": "not_applicable_tracked_memory_sync",
+        "measurement_scope": "recorded_checkpoint_operations",
+    }
+
+
+def checkpoint_receipt(
+    command_results: Iterable[CommandResult],
+    *,
+    final_index_tree: str = "",
+) -> dict[str, object]:
+    results = list(command_results)
+    sync_results = [
+        result for result in results if result.command[:1] == ["memory_sync()"]
+    ]
+    sync_receipts: list[dict[str, object]] = []
+    for result in sync_results:
+        try:
+            payload = json.loads(result.stdout) if result.stdout else {}
+        except json.JSONDecodeError:
+            payload = {"raw_stdout": result.stdout}
+        sync_receipts.append(
+            {
+                "status": "PASS" if result.returncode == 0 else "FAIL",
+                "command": result.command,
+                "receipt": payload,
+            }
+        )
+    final_results = [
+        result for result in results if result.command == final_memory_validation_command()
+    ]
+    final_result = final_results[-1] if final_results else None
+    return {
+        "generator_gate_id": "memory_sync",
+        "generator_passes": len(sync_results),
+        "generator_receipts": sync_receipts,
+        "compatibility_bootstrap_passes": sum(
+            1
+            for result in results
+            if result.command
+            == [
+                ".venv/bin/python",
+                ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+            ]
+        ),
+        "final_validator": {
+            "gate_id": "memory_legacy_composite",
+            "satisfies_obligation": "memory_core",
+            "command": final_memory_validation_command(),
+            "tree_state": "final_staged",
+            "git_index_tree": final_index_tree,
+            "status": (
+                "PASS"
+                if final_result is not None and final_result.returncode == 0
+                else "FAIL"
+                if final_result is not None
+                else "NOT_RUN"
+            ),
+            "execution_count": len(final_results),
+        },
+        "no_physics_authority": True,
+    }
 
 
 def checkpoint_command_counts(command_results: Iterable[CommandResult]) -> dict[str, object]:
@@ -356,8 +513,24 @@ def checkpoint_command_counts(command_results: Iterable[CommandResult]) -> dict[
         if "scripts/research_control/validate_research_control.py" in result.command
         and "--check-diff" in result.command
     ]
+    sync_commands = [command for command in commands if command[:1] == ["memory_sync()"]]
+    memory_core_commands = [
+        command for command in commands if command == final_memory_validation_command()
+    ]
+    compatibility_bootstrap_commands = [
+        command
+        for command in commands
+        if command
+        == [
+            ".venv/bin/python",
+            ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+        ]
+    ]
     return {
         "total": len(commands),
+        "memory_sync": len(sync_commands),
+        "memory_core": len(memory_core_commands),
+        "compatibility_bootstrap": len(compatibility_bootstrap_commands),
         "research_control_total": len(research_control_commands),
         "research_control_plain_working": len(plain_working),
         "research_control_diff_working": len(diff_working),
@@ -440,20 +613,17 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
     initial_add_results = add_stageable_paths(initial_paths)
     commands.extend(initial_add_results)
     if any(result.returncode != 0 for result in initial_add_results):
-        return rollback_block("pre-bootstrap git add failed", preflight)
+        return rollback_block("pre-sync git add failed", preflight)
 
     sync_passes = 0
     pdf_targets_processed = False
     for sync_pass in range(1, MAX_STAGED_SYNC_PASSES + 1):
         sync_passes = sync_pass
         index_paths_before_sync = git_index_paths()
-        bootstrap = run_command([
-            ".venv/bin/python",
-            ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
-        ])
-        commands.append(bootstrap)
-        if bootstrap.returncode != 0:
-            return rollback_block("memory bootstrap failed", git_status_paths())
+        sync_result = memory_sync()
+        commands.append(sync_result)
+        if sync_result.returncode != 0:
+            return rollback_block("memory synchronization failed", git_status_paths())
 
         synced_changes = git_status_paths()
         if not pdf_targets_processed:
@@ -468,13 +638,10 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
                 commands.append(pdf_build)
                 if pdf_build.returncode != 0:
                     return rollback_block("targeted PDF build failed", git_status_paths())
-                bootstrap_after_pdf = run_command([
-                    ".venv/bin/python",
-                    ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
-                ])
-                commands.append(bootstrap_after_pdf)
-                if bootstrap_after_pdf.returncode != 0:
-                    return rollback_block("post-PDF memory bootstrap failed", git_status_paths())
+                sync_after_pdf = memory_sync(rebuilt_pdf_paths=tex_targets)
+                commands.append(sync_after_pdf)
+                if sync_after_pdf.returncode != 0:
+                    return rollback_block("post-PDF memory synchronization failed", git_status_paths())
                 synced_changes = git_status_paths()
 
         allowed = allowed_patterns_for_changed_paths(job_row, job_contract, synced_changes)
@@ -494,7 +661,7 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
         sync_add_results = add_stageable_paths(synchronized_paths)
         commands.extend(sync_add_results)
         if any(result.returncode != 0 for result in sync_add_results):
-            return rollback_block("post-bootstrap git add failed", synced_changes)
+            return rollback_block("post-sync git add failed", synced_changes)
 
         if git_index_paths() == index_paths_before_sync:
             break
@@ -543,6 +710,8 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
             "active_agent_job": job_row.get("job_id", ""),
             "changed_paths": [],
             "command_counts": checkpoint_command_counts(commands),
+            "performance": checkpoint_performance(commands),
+            "checkpoint_receipt": checkpoint_receipt(commands),
             "staged": False,
             "committed": False,
         }
@@ -562,6 +731,8 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
             "changed_paths": [],
             "ignored_changed_paths": sorted(final_changes),
             "command_counts": checkpoint_command_counts(commands),
+            "performance": checkpoint_performance(commands),
+            "checkpoint_receipt": checkpoint_receipt(commands),
             "staged": False,
             "committed": False,
         }
@@ -613,11 +784,16 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
     if staged_check.returncode != 0:
         return rollback_block("staged diff allowlist validation failed", final_changes)
 
-    final_memory_validation = run_command([
-        ".venv/bin/python",
-        ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
-        "--validate-only",
-    ])
+    final_index_snapshot = run_command(["git", "write-tree"])
+    commands.append(final_index_snapshot)
+    if final_index_snapshot.returncode != 0 or not final_index_snapshot.stdout.strip():
+        return rollback_block(
+            "could not identify the final staged tree before memory validation",
+            final_changes,
+        )
+    final_index_tree = final_index_snapshot.stdout.strip()
+
+    final_memory_validation = run_command(final_memory_validation_command())
     commands.append(final_memory_validation)
     if final_memory_validation.returncode != 0:
         return rollback_block(
@@ -654,6 +830,11 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
             "changed_paths": paths_to_stage,
             "sync_passes": sync_passes,
             "command_counts": checkpoint_command_counts(commands),
+            "performance": checkpoint_performance(commands),
+            "checkpoint_receipt": checkpoint_receipt(
+                commands,
+                final_index_tree=final_index_tree,
+            ),
             "staged": True,
             "committed": False,
             "command_results": [result.as_dict() for result in commands],
@@ -677,6 +858,11 @@ def _checkpoint_impl(job_id: str | None = None, *, no_commit: bool = False) -> d
         "changed_paths": paths_to_stage,
         "sync_passes": sync_passes,
         "command_counts": checkpoint_command_counts(commands),
+        "performance": checkpoint_performance(commands),
+        "checkpoint_receipt": checkpoint_receipt(
+            commands,
+            final_index_tree=final_index_tree,
+        ),
         "commit_hash": rev_parse.stdout.strip() if rev_parse.returncode == 0 else "",
         "push": "not performed",
         "staged": True,

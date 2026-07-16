@@ -243,13 +243,17 @@ skills provide procedures, and gates control claim promotion.
 8. Synchronize generated systems before commit by satisfying the named
    `memory_sync` obligation in
    `research_control/design/validation_obligation_resolution_policy_v1.md`.
-   Use the policy's single current compatibility recipe; a skill or role that
-   names the same obligation does not create another execution requirement.
+   During governed checkpoint convergence, the checkpoint calls the write-only
+   `memory_sync()` operation and records its mutation receipt; it does not run
+   the validating compatibility bootstrap on each convergence pass. A skill or
+   role that names the same obligation does not create another execution
+   requirement.
 
    If a changed registered TeX source has `pdf_required=true`, build that
-   specific PDF derivative, then rerun the bootstrap. HTML is synchronized
-   through the HTML registry when HTML exists; generated HTML is created only
-   when the AgentJob explicitly authorizes it from a registered Markdown spec.
+   specific PDF derivative, then run a second `memory_sync()` pass because the
+   PDF can change registered derivative inputs. HTML is synchronized through
+   the HTML registry when HTML exists; generated HTML is created only when the
+   AgentJob explicitly authorizes it from a registered Markdown spec.
 
 9. Resolve post-execution obligations by gate ID under the same policy:
    `memory_core`, `documentation_impact`, `project_improvement_signals` when
@@ -259,7 +263,9 @@ skills provide procedures, and gates control claim promotion.
    `claim_language_changed`; working-tree evidence never satisfies a staged-tree
    obligation. Direct precheckpoint commands are editing aids, not final
    acceptance, and must not be repeated merely because both this skill and a
-   role declaration name an obligation.
+   role declaration name an obligation. The checkpoint runs one blocking
+   `memory_core` validation after the generated paths stabilize and records the
+   final staged Git tree identity used by that gate.
 
 10. Checkpoint only after a successful state-changing transaction. The
     checkpoint owns the `checkpoint_transaction` obligation and final staged

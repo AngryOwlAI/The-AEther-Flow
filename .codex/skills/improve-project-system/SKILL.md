@@ -154,6 +154,9 @@ an open-ended repository rewrite.
     obligation. Use the policy's single current compatibility recipe per gate.
     Direct precheckpoint commands are editing aids and do not become separate
     executions merely because both a skill and a role name the same obligation.
+    Governed checkpoint convergence uses write-only `memory_sync()` passes,
+    retains the required second sync after a targeted PDF build, and runs one
+    blocking `memory_core` validation against the final staged Git tree.
 
 12. Checkpoint only if the transaction is valid and non-empty. The checkpoint
     owns the `checkpoint_transaction` obligation and final staged acceptance.

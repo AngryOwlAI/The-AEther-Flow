@@ -74,7 +74,10 @@ proceeding.
    `claim_language_changed`; working-tree evidence never satisfies a staged
    obligation. The policy owns the single current compatibility recipe per
    gate. Direct precheckpoint commands are editing aids, not independent
-   executions implied by each skill or role declaration.
+   executions implied by each skill or role declaration. Governed checkpoint
+   convergence uses write-only `memory_sync()` passes and one blocking
+   `memory_core` validation after the final staged Git tree is known; a
+   targeted PDF build still requires its second synchronization pass.
 
 7. Checkpoint only when validation passes and the transaction is non-empty.
    The checkpoint owns the `checkpoint_transaction` obligation and final staged
