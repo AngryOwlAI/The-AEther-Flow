@@ -216,6 +216,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ENVIRONMENT-CONTRACT-V1` `research_control/design/validation_environment_contract_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1` `research_control/design/validation_evidence_identity_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-ID-CATALOG-V1` `research_control/design/validation_gate_id_catalog_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-MANIFEST-SCHEMA-V1` `research_control/design/validation_gate_manifest_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1` `research_control/design/validation_obligation_resolution_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ORCHESTRATION-MIGRATION-AND-ROLLBACK-POLICY-V1` `research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-RUN-RECEIPT-SCHEMA-V1` `research_control/design/validation_run_receipt_schema_v1.md`
@@ -1035,6 +1036,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ENVIRONMENT-CONTRACT-V1` `wiki/markdown/md-research-control-design-validation-environment-contract-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-EVIDENCE-IDENTITY-POLICY-V1` `wiki/markdown/md-research-control-design-validation-evidence-identity-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-ID-CATALOG-V1` `wiki/markdown/md-research-control-design-validation-gate-id-catalog-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-MANIFEST-SCHEMA-V1` `wiki/markdown/md-research-control-design-validation-gate-manifest-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-OBLIGATION-RESOLUTION-POLICY-V1` `wiki/markdown/md-research-control-design-validation-obligation-resolution-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ORCHESTRATION-MIGRATION-AND-ROLLBACK-POLICY-V1` `wiki/markdown/md-research-control-design-validation-orchestration-migration-and-rollback-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-RUN-RECEIPT-SCHEMA-V1` `wiki/markdown/md-research-control-design-validation-run-receipt-schema-v1.md`
