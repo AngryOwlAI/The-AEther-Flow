@@ -1,0 +1,73 @@
+{
+  "authority": {
+    "benchmark_authority": false,
+    "gate_chair_authority": false,
+    "legacy_execution_authoritative": true,
+    "ontology_authority": false,
+    "operational_validation_only": true,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "execution_contract": {
+    "blocking_fast_before_expensive": "PASS",
+    "bounded_concurrency": "PASS",
+    "deterministic_receipt_order": "PASS",
+    "manifest_plan_rederivation": "PASS",
+    "mutating_gate_rejection": "PASS",
+    "raw_output_file_capture": "PASS",
+    "receipt_atomic_write": "PASS",
+    "shadow_only": true
+  },
+  "failure_mode_results": {
+    "adapter_configuration_error": "BLOCKED_CONFIGURATION",
+    "advisory_nonzero": "WARN",
+    "cancellation": "BLOCKED_CONFIGURATION_PARTIAL_RECEIPT",
+    "child_process_crash": "FAIL",
+    "hard_nonzero": "FAIL",
+    "receipt_write_failure": "BLOCKED_CONFIGURATION",
+    "success": "PASS",
+    "timeout": "FAIL"
+  },
+  "file_hashes": {
+    "executor_sha256": "5f57b53529384eb14150fab432f3d7419d95ef4122e1aac01f331d41e34cdaad",
+    "manifest_sha256": "35d4b1e186fdbabcd48a78ce6d3dd92aef863cde8aee090bdf4d780ac6b7feae",
+    "run_sha256": "83b2efbabfcb4d0480c4fc476f01616ac885b3ca648f6cdf612c878d58a994fe",
+    "tests_sha256": "5456500de07ca19585397714396881aab7552a39b9d0be4dd59b8ae2a617a8d9"
+  },
+  "migration_epoch": "shadow_planner",
+  "plan_task_id": "P6-T01",
+  "schema_id": "read_only_validation_executor_acceptance_v1",
+  "shadow_legacy_comparison": {
+    "cases": [
+      "blocking_exit_0_to_PASS_0",
+      "blocking_nonzero_to_FAIL_1",
+      "advisory_nonzero_to_WARN_0",
+      "local_only_nonzero_to_WARN_0"
+    ],
+    "case_count": 4,
+    "status": "PASS",
+    "unexplained_mismatch_count": 0
+  },
+  "status": "PASS",
+  "test_results": {
+    "compatibility_suite": {
+      "command": ".venv/bin/python -m unittest tests/test_validation_executor.py tests/test_validation_planner.py tests/test_validation_reporting.py tests/test_validation_manifest.py tests/test_validation_change_matrix.py tests/test_validation_equivalence.py",
+      "status": "PASS",
+      "test_count": 87
+    },
+    "fail_first_baseline": {
+      "expected_failure": "scripts.validation.executor absent",
+      "status": "OBSERVED"
+    },
+    "focused_suite": {
+      "command": ".venv/bin/python -m unittest tests/test_validation_executor.py",
+      "status": "PASS",
+      "test_count": 12
+    },
+    "syntax": {
+      "command": ".venv/bin/python -m py_compile scripts/validation/run.py scripts/validation/executor.py tests/test_validation_executor.py",
+      "status": "PASS"
+    }
+  }
+}

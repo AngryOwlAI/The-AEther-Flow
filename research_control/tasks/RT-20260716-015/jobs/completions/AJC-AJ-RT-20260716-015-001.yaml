@@ -1,0 +1,161 @@
+job_id: "AJ-RT-20260716-015-001"
+completion_id: "AJC-AJ-RT-20260716-015-001"
+task_id: "RT-20260716-015"
+decision_id: "DDR-20260716-015"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-015"
+status: "completed"
+created_at: "2026-07-16T21:31:18Z"
+started_at: "2026-07-16T21:31:18Z"
+completed_at: "2026-07-16T21:47:33Z"
+objective: "Implement and test the P6-T01 read-only shadow validation DAG executor with deterministic receipts and legacy-equivalence evidence."
+completion_summary: "Implemented a manifest-bound shadow executor that rejects mutated or mutating plans, schedules independent read-only gates deterministically with bounded concurrency, captures raw output to local receipt files, and propagates explicit failure and cancellation states."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P6-T01"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "scripts/validation/models.py"
+  - "scripts/validation/plan.py"
+  - "scripts/validation/reporting.py"
+  - "research_control/tasks/RT-20260716-014/jobs/completions/AJC-AJ-RT-20260716-014-001.yaml"
+outputs_created:
+  - "scripts/validation/executor.py"
+  - "scripts/validation/run.py"
+  - "tests/test_validation_executor.py"
+  - "research_control/tasks/RT-20260716-015/artifacts/read_only_executor_acceptance.json"
+  - "research_control/tasks/RT-20260716-015/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260716-015/jobs/completions/AJC-AJ-RT-20260716-015-001.yaml"
+output_hashes:
+  validation_executor_sha256: "5f57b53529384eb14150fab432f3d7419d95ef4122e1aac01f331d41e34cdaad"
+  validation_run_sha256: "83b2efbabfcb4d0480c4fc476f01616ac885b3ca648f6cdf612c878d58a994fe"
+  validation_executor_tests_sha256: "5456500de07ca19585397714396881aab7552a39b9d0be4dd59b8ae2a617a8d9"
+  read_only_executor_acceptance_sha256: "ae101efd6d913eb3367115876e3d3a6ee76333db5854aa3242e6f2adce788a52"
+implementation_results:
+  plan_task_id: "P6-T01"
+  migration_epoch: "shadow_planner"
+  engine_mode: "read_only_shadow_executor"
+  focused_test_count: 12
+  compatibility_test_count: 87
+  shadow_legacy_status_case_count: 4
+  unexplained_shadow_mismatch_count: 0
+  manifest_plan_rederivation: true
+  selected_mutator_count: 0
+  deterministic_receipt_ordering: true
+  bounded_concurrency: true
+  blocking_fast_before_expensive: true
+  raw_output_embedded_in_receipt: false
+  valid_partial_receipt_on_cancellation: true
+  receipt_write_failure_fails_closed: true
+  current_policy_active: false
+  legacy_execution_authoritative: true
+  manifest_changed: false
+  planner_changed: false
+  reporter_changed: false
+  legacy_runner_changed: false
+  mutator_changed: false
+  checkpoint_changed: false
+  aggregate_changed: false
+  cache_changed: false
+  ci_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refreshed local retrieval from WARN to PASS then core freshness and local retrieval PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | 814 canonical source objects 4053 relationships 814 semantic rows 814 vault rows"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json | exit_code=0 | returned MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | validator code tests and bounded task-control changes with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | active explicit P6-T01 Validator Engineer AgentJob satisfies the advisory boundary"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python -m py_compile scripts/validation/run.py scripts/validation/executor.py tests/test_validation_executor.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest tests/test_validation_executor.py | exit_code=0 | 12 tests PASS"
+  - ".venv/bin/python -m unittest tests/test_validation_executor.py tests/test_validation_planner.py tests/test_validation_reporting.py tests/test_validation_manifest.py tests/test_validation_change_matrix.py tests/test_validation_equivalence.py | exit_code=0 | 87 tests PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | governed memory and generated-surface synchronization PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | post-generation memory validation PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical warnings only"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P5-T08 PASS dependency clean checkpoint unique local project matching lease pair idle predecessor and no competing writer were verified before consumption and execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 12 focused executor tests cover success hard failure advisory failure actual subprocess timeout cancellation crash receipt-write failure deterministic parallel ordering strict plan authority and legacy normalization."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "All 87 executor planner reporting manifest change-matrix and equivalence compatibility tests passed and the classifier reported no blocked path."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The completion is eligible for persistence only through the governed checkpoint transaction which synchronizes stages validates and commits atomically or rolls back."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "P6-T01 changes no TeX PDF HTML Mermaid or publication source."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Canonical memory synchronization validated generated registries indexes and task-control derivatives."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Executor source tests and receipts preserve operational-only authority and changed-scope research-control validation remains required before checkpoint."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260716-015/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system read-only validation execution only; no physics or derivation status changed."
+scientific_claims_changed: false
+forbidden_conclusion_summary: "This P6-T01 result is operational shadow-executor evidence only. It does not activate the planner replace legacy execution authorize mutators checkpoint aggregate cache adapters or CI bypass a human gate change ordinary research alter canonical ontology adopt source laws promote benchmark status grant Gate Chair authority prove physics or complete a derivation."
+verdict: "v19_p6_t01_read_only_validation_executor_pass_p6_t02_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "The validated read-only shadow plan can now execute with deterministic bounded scheduling compact atomic receipts full raw local logs and explicit failure semantics while legacy execution remains authoritative."
+next_recommendation: "After governed validation and checkpoint PASS route one separately bounded P6-T02 mutator-barrier packet."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 814
+    relationship_row_count: 4053
+    semantic_row_count: 814
+    vault_row_count: 814
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."
