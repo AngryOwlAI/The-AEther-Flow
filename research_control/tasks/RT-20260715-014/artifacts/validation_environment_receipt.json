@@ -1,0 +1,159 @@
+{
+  "receipt_id": "validation-environment-v19-p3-t07",
+  "task_id": "RT-20260715-014",
+  "job_id": "AJ-RT-20260715-014-001",
+  "status": "PASS",
+  "created_at": "2026-07-16T05:59:51Z",
+  "candidate_commit": "4500befb217d5172a69f8a4ed0f47cf5c98a8898",
+  "source_hashes": {
+    "Makefile": "bc69d60f4adc814f8fe7d5cfa6ce242b64be4cb55ae55a8f2176017b6247e6ac",
+    "CONTRIBUTING.md": "bb1ef8f49f6fbaccfb02f94c59c1d7d332736ae8523f60d92444cb78c74f0267",
+    "research_control/design/validation_environment_contract_v1.md": "c287e34b47a015853c6e6f42d41c50a3e6a824b26514c41db3006f2e8d147ced"
+  },
+  "artifacts": {
+    "report": {
+      "path": "research_control/tasks/RT-20260715-014/artifacts/environment_provisioning_separation_report.md",
+      "sha256": "07740f720b6a83934518172d0a9e7521bfe359251589d6d153e0378fe775caeb"
+    },
+    "raw_log": {
+      "path": "research_control/tasks/RT-20260715-014/artifacts/validation_environment_raw.log",
+      "sha256": "7b5c9c21a3753a76acc3975a39e173cb8f55a0541b626cb4caa40def1e2cee5b",
+      "capture_bytes": 4104,
+      "normalization": "Temporary fixture paths were normalized; semantic commands, messages, hashes, versions, statuses, counts, and timings were preserved."
+    }
+  },
+  "environment_contract": {
+    "schema_id": "validation_environment_v1",
+    "gate_id": "validation_environment",
+    "python_implementation": "CPython",
+    "python_series": "3.12",
+    "observed_python_version": "3.12.13",
+    "required_distributions": {
+      "PyMuPDF": "1.27.2.3"
+    },
+    "dependency_specification_files": [
+      "requirements.txt",
+      "requirements-dev.txt"
+    ],
+    "dependency_lock_digest": "62997f5a81cb422703d6e25fbaa4bcc5a294bb13ed2eeaac05a5800edc604f83",
+    "environment_fingerprint": "11d74e983c23d78f5c2546926aad9b35934c7a69a594949e4c0a61127b2699fc",
+    "provisioning": false
+  },
+  "gates": [
+    {
+      "gate_id": "missing_interpreter_behavior",
+      "status": "PASS",
+      "command": "make PYTHON=<clean-fixture>/missing-python validation-environment",
+      "observed_exit_code": 2,
+      "remediation_is_compact": true
+    },
+    {
+      "gate_id": "missing_dependency_behavior",
+      "status": "PASS",
+      "command": "make PYTHON=<clean-fixture>/.venv/bin/python validation-environment",
+      "observed_exit_code": 2,
+      "missing_distributions": [
+        "PyMuPDF"
+      ],
+      "remediation_is_compact": true
+    },
+    {
+      "gate_id": "clean_setup_then_validation",
+      "status": "PASS",
+      "setup_command": "make PYTHON=<clean-fixture>/.venv/bin/python setup-dev",
+      "validation_command": "make PYTHON=<clean-fixture>/.venv/bin/python validation-environment",
+      "installed_distribution_version": "PyMuPDF 1.27.2.3"
+    },
+    {
+      "gate_id": "installed_package_nonmutation",
+      "status": "PASS",
+      "clean_fixture_package_hash_before": "f384ddcb28bce9b880f753c69ec1f98cd7ab4be2fd2df190fe2cee2df5c6dcf9",
+      "clean_fixture_package_hash_after": "f384ddcb28bce9b880f753c69ec1f98cd7ab4be2fd2df190fe2cee2df5c6dcf9",
+      "project_route_package_hash_before": "95c96bb50f8f5cdf9d46e5444b8438c58b38a23be8e53856114c1b15ab2a11b1",
+      "project_route_package_hash_after": "95c96bb50f8f5cdf9d46e5444b8438c58b38a23be8e53856114c1b15ab2a11b1"
+    },
+    {
+      "gate_id": "make_validation_plan_no_provisioning",
+      "status": "PASS",
+      "audited_target_count": 10,
+      "environment_check_count_per_target": 1,
+      "validation_plan_pip_install_count": 0,
+      "setup_dev_pip_install_count": 1
+    },
+    {
+      "gate_id": "validation_orchestration_test_shard",
+      "status": "PASS",
+      "command": ".venv/bin/python -m unittest tests/test_validation_orchestration.py",
+      "tests_run": 9,
+      "duration_seconds": 0.18
+    },
+    {
+      "gate_id": "affected_memory_compatibility",
+      "status": "PASS",
+      "command": "make PYTHON=.venv/bin/python validate-memory",
+      "tests_run": 86,
+      "runner_seconds": 38.802,
+      "duration_seconds": 45.57
+    },
+    {
+      "gate_id": "html_validation_route",
+      "status": "PASS",
+      "command": "make PYTHON=.venv/bin/python validate-html-explainers",
+      "publication_briefs_checked": 18,
+      "html_runtime_pages_checked": 19,
+      "migrated_surfaces_checked": 18
+    },
+    {
+      "gate_id": "full_project_control_acceptance",
+      "status": "PASS",
+      "command": "make PYTHON=.venv/bin/python validate-project-control",
+      "tree_state": "staged",
+      "tests_run": 634,
+      "runner_seconds": 600.899,
+      "duration_seconds": 642.92,
+      "documentation_surface_audit": "PASS",
+      "research_control_validation": "PASS",
+      "claim_graph_validation": "PASS"
+    }
+  ],
+  "failed_attempts_preserved": [
+    {
+      "attempt": "HTML route before registered Markdown regeneration",
+      "status": "FAIL",
+      "classification": "expected derivative convergence failure after CONTRIBUTING.md changed",
+      "resolution": "Refresh the canonical registry hash and regenerate policy-owned memory derivatives; the unchanged route then passed."
+    },
+    {
+      "attempt": "Project-control route before governed staging",
+      "status": "FAIL",
+      "classification": "expected documentation-surface audit rejection of the new untracked registered contract and wiki derivative",
+      "resolution": "Use the governed checkpoint preflight, which stages allowlisted paths before staged-scope validation; do not weaken or bypass the audit."
+    }
+  ],
+  "checkpoint_preflight": {
+    "status": "ready_to_commit",
+    "command": ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260715-014-001 --no-commit",
+    "changed_path_count": 45,
+    "sync_passes": 1,
+    "memory_sync_count": 1,
+    "memory_core_count": 1,
+    "compatibility_bootstrap_count": 0,
+    "total_acceptance_operations": 14,
+    "working_and_staged_scopes_distinct": true,
+    "final_staged_tree": "6985738100fe143072ce6a3b549a8a7f272a53d5",
+    "duration_seconds": 83.088791,
+    "subprocess_count": 13,
+    "output_bytes": 1976997,
+    "cache_hits": 0,
+    "cache_misses": 0,
+    "no_physics_authority": true
+  },
+  "authority_boundary": {
+    "project_system_change_only": true,
+    "scientific_claims_changed": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "ordinary_research_handoff_preserved": "handoff-0740"
+  }
+}

@@ -1,0 +1,97 @@
+task_id=RT-20260715-014
+job_id=AJ-RT-20260715-014-001
+plan_task_id=P3-T07
+captured_at=2026-07-16T05:59:51Z
+
+[missing interpreter]
+command: make PYTHON=<clean-fixture>/missing-python validation-environment
+Missing validation Python <clean-fixture>/missing-python. Create a CPython 3.12 virtual environment and run make setup-dev with its Python.
+exit_code=2
+
+[missing dependency]
+command: make PYTHON=<clean-fixture>/.venv/bin/python validation-environment
+Missing validation dependencies: PyMuPDF. Run make setup-dev PYTHON=<clean-fixture>/.venv/bin/python.
+exit_code=2
+
+[explicit setup]
+command: make PYTHON=<clean-fixture>/.venv/bin/python setup-dev
+Successfully installed PyMuPDF-1.27.2.3
+{"target":"setup-dev","status":"PASS","provisioning":true}
+exit_code=0
+
+[clean fixture validation]
+command: make PYTHON=<clean-fixture>/.venv/bin/python validation-environment
+{"dependency_lock_digest":"62997f5a81cb422703d6e25fbaa4bcc5a294bb13ed2eeaac05a5800edc604f83","dependency_specification_files":["requirements.txt","requirements-dev.txt"],"environment_fingerprint":"11d74e983c23d78f5c2546926aad9b35934c7a69a594949e4c0a61127b2699fc","gate_id":"validation_environment","installed_distributions":{"PyMuPDF":"1.27.2.3"},"provisioning":false,"python_implementation":"CPython","python_version":"3.12.13","schema_id":"validation_environment_v1","status":"PASS"}
+package_hash_before=f384ddcb28bce9b880f753c69ec1f98cd7ab4be2fd2df190fe2cee2df5c6dcf9
+package_hash_after=f384ddcb28bce9b880f753c69ec1f98cd7ab4be2fd2df190fe2cee2df5c6dcf9
+exit_code=0
+
+[project environment HTML route]
+command: make PYTHON=.venv/bin/python validate-html-explainers
+environment_status=PASS
+memory_validate_only=PASS
+depth_lint=PASS
+publication_process=PASS
+checked_briefs=18
+checked_html_runtime=19
+checked_migrated_surfaces=18
+package_hash_before=95c96bb50f8f5cdf9d46e5444b8438c58b38a23be8e53856114c1b15ab2a11b1
+package_hash_after=95c96bb50f8f5cdf9d46e5444b8438c58b38a23be8e53856114c1b15ab2a11b1
+exit_code=0
+
+[Make plan audit]
+targets=validation-environment,memory-sync,memory-validate-core,memory-doctor,test-memory,validate-memory,validate-memory-full,validate-project-control,validate-html-explainers,audit-documentation-surfaces
+environment_check_count_per_target=1
+validation_plan_pip_install_count=0
+setup_dev_pip_install_count=1
+status=PASS
+
+[focused orchestration shard]
+command: .venv/bin/python -m unittest tests/test_validation_orchestration.py
+tests_run=9
+status=PASS
+duration_seconds=0.180
+
+[affected memory compatibility]
+command: make PYTHON=.venv/bin/python validate-memory
+tests_run=86
+runner_seconds=38.802
+target_seconds=45.57
+status=PASS
+
+[retained convergence evidence]
+The pre-regeneration validate-html-explainers attempt failed on the expected stale CONTRIBUTING.md registered source hash. The registered hash and derivatives were regenerated, and the same route then passed. No validator or test was weakened.
+
+[retained pre-checkpoint staging evidence]
+command: make PYTHON=.venv/bin/python validate-project-control
+environment_status=PASS
+classifier_status=PASS
+project_improvement_signal_status=PASS
+documentation_impact_status=PASS
+documentation_surface_audit_status=FAIL
+classification=expected new registered contract and wiki derivative are not tracked until the governed checkpoint stages them
+resolution=run the governed no-commit checkpoint preflight, which stages allowlisted transaction paths before repeating staged-scope acceptance
+exit_code=2
+
+[staged full project-control acceptance]
+command: make PYTHON=.venv/bin/python validate-project-control
+environment_status=PASS
+classifier_status=PASS
+project_improvement_signal_status=PASS
+documentation_impact_status=PASS
+documentation_surface_audit_status=PASS
+memory_validate_only_status=PASS
+depth_lint_status=PASS
+publication_process_status=PASS
+research_control_status=PASS
+tests_run=634
+runner_seconds=600.899
+target_seconds=642.92
+claim_graph_status=PASS
+exit_code=0
+
+authority_boundary=project_system_only
+ordinary_research_handoff_preserved=handoff-0740
+scientific_claims_changed=false
+physics_promotion_authorized=false
+proof_authority=false

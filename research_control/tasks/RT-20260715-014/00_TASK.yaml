@@ -1,0 +1,46 @@
+task_id: "RT-20260715-014"
+task_type: "validation_environment_separation"
+status: "completed"
+created_at: "2026-07-16T05:44:50Z"
+updated_at: "2026-07-16T06:02:03Z"
+closed_at: "2026-07-16T06:02:03Z"
+parent_task_id: "RT-20260715-013"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260715-014"
+current_job_id: "AJ-RT-20260715-014-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260715-014"
+requires_human_gate: false
+human_authorization_note: "The user authorized a fresh recursive relay that implements every remaining v19 task one per discussion and generation 1 selects the earliest dependency-ready packet P3-T07."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T07"
+  plan_task_name: "Move environment provisioning out of all validation entry points"
+  recommendation_ids:
+    - "V19-R10"
+    - "V19-R38"
+objective: "Separate validation from environment provisioning and expose a deterministic Python and dependency fingerprint with compact prerequisite failures."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validation environment separation only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p3_t07_validation_environment_separation_pass_p4_t01_dependency_unlocked_no_physics_delta"
+claim_boundary_id: "CB-V19-P3-T07-VALIDATION-ENVIRONMENT-SEPARATION-001"
+claim_boundary:
+  allowed_scope: "Make validation environment checks contributor setup guidance one control contract task-local evidence registry rows and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260715-014/artifacts/environment_provisioning_separation_report.md"
+  - "research_control/tasks/RT-20260715-014/artifacts/validation_environment_receipt.json"
+  - "research_control/tasks/RT-20260715-014/artifacts/validation_environment_raw.log"
+next_recommended_action: "On PASS checkpoint this transaction and route one separately bounded P4-T01 Project-Control Maintainer receipt-schema AgentJob."
+documentation_impact_id: "DI-RT-20260715-014-001"
+completion_id: "AJC-AJ-RT-20260715-014-001"
+notes: "P3-T07 changes validation environment control and documentation only. CI provisioning requirements files ordinary research and physics authority remain unchanged."

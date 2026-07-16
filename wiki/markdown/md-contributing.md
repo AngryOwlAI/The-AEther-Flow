@@ -10,14 +10,14 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `contributor_operator_guide`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
-- Source hash: `e7351b9f4c6c1d69a7df387471868a1080276a862458ecf243200808d07ee7b2`
+- Source hash: `bb1ef8f49f6fbaccfb02f94c59c1d7d332736ae8523f60d92444cb78c74f0267`
 
 ## Related Objects
 
-- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17;MD-RESEARCH-CONTROL-CURRENT-FRONTIER` ``
+- Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V17;MD-RESEARCH-CONTROL-CURRENT-FRONTIER;MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ENVIRONMENT-CONTRACT-V1` ``
 - Generated output path: `wiki/markdown/md-contributing.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-16T02:36:07Z`
+- Last validated at: `2026-07-16T05:56:07Z`

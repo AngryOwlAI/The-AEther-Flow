@@ -26,12 +26,35 @@ python3.12 -m venv .venv
 If `python3.12` is not installed, use the local command that resolves to
 CPython 3.12 on your machine. Keep `.venv/` untracked.
 
+Provisioning is an explicit setup operation. Validators inspect the selected
+environment and never install or upgrade packages. GitHub Actions follows the
+same boundary by creating its environment and installing requirements before
+it invokes any validation target.
+
 ## Validation Commands
 
 Use the same Python executable consistently:
 
 ```zsh
+make PYTHON=.venv/bin/python validation-environment
 make PYTHON=.venv/bin/python validate-project-control
+```
+
+`validation-environment` is a read-only prerequisite shared by every Make
+validation entry point. It requires CPython 3.12 and the distributions named by
+the validation contract, then emits a compact JSON receipt containing the
+Python version, exact installed dependency versions, a deterministic digest of
+`requirements.txt` plus `requirements-dev.txt`, and an environment fingerprint.
+The fingerprint is suitable as one input to later exact-tree cache keys; it is
+not scientific evidence or proof authority.
+
+If the interpreter or a required distribution is missing, validation stops
+before running a gate and prints one setup command. Create the environment if
+needed, then provision it explicitly:
+
+```zsh
+python3.12 -m venv .venv
+make PYTHON=.venv/bin/python setup-dev
 ```
 
 Memory validation is decomposed by purpose. The ordinary compatibility target
@@ -62,9 +85,12 @@ acceptance path:
 make PYTHON=.venv/bin/python validate-memory-full
 ```
 
-No validation target provisions dependencies. `memory-doctor` may refresh
-ignored `.local/` retrieval state, but its results are operational diagnostics
-and cannot satisfy checkpoint or physics authority.
+No validation target provisions dependencies. The explicit `setup-dev` target
+and the setup steps in `.github/workflows/project-control-validation.yml` own
+provisioning. `memory-doctor` may refresh ignored `.local/` retrieval state,
+but its results are operational diagnostics and cannot satisfy checkpoint or
+physics authority. The normative environment and fingerprint rules are in
+`research_control/design/validation_environment_contract_v1.md`.
 
 For read-only generated-surface validation:
 

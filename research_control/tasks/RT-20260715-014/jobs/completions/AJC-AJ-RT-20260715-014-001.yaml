@@ -1,0 +1,194 @@
+job_id: "AJ-RT-20260715-014-001"
+completion_id: "AJC-AJ-RT-20260715-014-001"
+task_id: "RT-20260715-014"
+decision_id: "DDR-20260715-014"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260715-014"
+status: "completed"
+created_at: "2026-07-16T05:44:50Z"
+started_at: "2026-07-16T05:44:50Z"
+completed_at: "2026-07-16T06:02:03Z"
+objective: "Separate validation from environment provisioning and expose a deterministic Python and dependency fingerprint with compact prerequisite failures."
+completion_summary: "Completed v19 P3-T07 by placing one fail-fast non-provisioning CPython and dependency gate before every public Make validation entry point while preserving explicit setup and CI provisioning, emitting deterministic environment identity, and documenting the contract."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-control-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "reviews/verification_validation_testing_overhead_audit_2026-07-12.md"
+  - "research_control/design/v19_validation_overhead_backlog.yaml"
+  - "research_control/design/validation_obligation_resolution_policy_v1.md"
+  - "research_control/tasks/RT-20260715-012/jobs/completions/AJC-AJ-RT-20260715-012-001.yaml"
+  - "research_control/tasks/RT-20260715-013/jobs/completions/AJC-AJ-RT-20260715-013-001.yaml"
+  - "Makefile"
+  - ".github/workflows/project-control-validation.yml"
+  - "CONTRIBUTING.md"
+  - "requirements.txt"
+  - "requirements-dev.txt"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P3-T07"
+  recommendation_ids:
+    - "V19-R10"
+    - "V19-R38"
+  migration_epoch: "legacy_consolidated"
+  implemented_task_scope: "One Make environment prerequisite deterministic receipt contributor guide control contract task-local evidence registry rows and policy-generated derivatives only."
+  completed_v19_tasks_to_date:
+    - "P0-T01 through P3-T07"
+  downstream_tasks_not_implemented:
+    - "P4-T01 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p3_t07_validation_environment_separation"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct_and_supporting"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P3-T07"
+  coverage_summary: "V19-R10 and V19-R38 receive explicit setup versus validation separation, compact prerequisite failures, deterministic environment identity, and durable evidence; receipt-schema unification remains assigned to P4-T01."
+physics_progress_status:
+  status: "project_system_validation_environment_separation_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P3-T07 changes operational validation prerequisites only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Environment fingerprints tests registries derivatives and checkpoint evidence are operational evidence only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+validation_environment_separation:
+  status: "PASS"
+  report_path: "research_control/tasks/RT-20260715-014/artifacts/environment_provisioning_separation_report.md"
+  validation_receipt_path: "research_control/tasks/RT-20260715-014/artifacts/validation_environment_receipt.json"
+  raw_log_path: "research_control/tasks/RT-20260715-014/artifacts/validation_environment_raw.log"
+  supported_python_series: "CPython 3.12"
+  observed_python_version: "3.12.13"
+  required_distribution: "PyMuPDF 1.27.2.3"
+  dependency_lock_digest: "62997f5a81cb422703d6e25fbaa4bcc5a294bb13ed2eeaac05a5800edc604f83"
+  environment_fingerprint: "11d74e983c23d78f5c2546926aad9b35934c7a69a594949e4c0a61127b2699fc"
+  validation_target_provisions_dependencies: false
+  package_state_mutated_by_validation: false
+  ci_provisioning_preserved: true
+  requirements_files_changed: false
+  legacy_consolidated_epoch_preserved: true
+output_paths:
+  - "Makefile"
+  - "CONTRIBUTING.md"
+  - "research_control/design/validation_environment_contract_v1.md"
+  - "research_control/tasks/RT-20260715-014/artifacts/environment_provisioning_separation_report.md"
+  - "research_control/tasks/RT-20260715-014/artifacts/validation_environment_receipt.json"
+  - "research_control/tasks/RT-20260715-014/artifacts/validation_environment_raw.log"
+  - "research_control/tasks/RT-20260715-014/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260715-014/jobs/completions/AJC-AJ-RT-20260715-014-001.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local retrieval PASS source_objects=807 relationships=4021"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | clean entry path set before implementation"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory boundary no_action and no competing open signal"
+  - "make PYTHON=<missing> validation-environment | exit_code=2 | compact missing-interpreter remediation"
+  - "make PYTHON=<clean-fixture> validation-environment before setup | exit_code=2 | compact missing PyMuPDF remediation"
+  - "make PYTHON=<clean-fixture> setup-dev then validation-environment | exit_code=0 | PyMuPDF 1.27.2.3 and deterministic receipt PASS"
+  - "clean fixture pip-freeze comparison | exit_code=0 | identical before and after hash f384ddcb28bce9b880f753c69ec1f98cd7ab4be2fd2df190fe2cee2df5c6dcf9"
+  - "Make validation-plan audit | exit_code=0 | ten targets each traverse one environment check and contain zero pip-install commands"
+  - ".venv/bin/python -m unittest tests/test_validation_orchestration.py | exit_code=0 | 9 tests PASS in 0.180 seconds"
+  - "make PYTHON=.venv/bin/python validate-memory | exit_code=0 | 86 tests PASS in 38.802 seconds and target duration 45.57 seconds"
+  - "make PYTHON=.venv/bin/python validate-html-explainers | exit_code=0 | memory depth and publication checks PASS with package state unchanged"
+  - "make PYTHON=.venv/bin/python validate-project-control after governed staging | exit_code=0 | documentation audit research control and 634 tests PASS in 600.899 seconds; target duration 642.92 seconds"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260715-014-001 --no-commit | exit_code=0 | ready_to_commit sync_passes=1 memory_sync=1 compatibility_bootstrap=0 memory_core=1 total_acceptance_operations=14 preflight_staged_tree=6985738100fe143072ce6a3b549a8a7f272a53d5"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P3-T06 was checkpointed and explicitly unlocked P3-T07; the recursive relay lease branch and clean entry worktree were verified before the first write."
+      - "The plan workflow contributor and requirements sources were inspected directly and no competing project-improvement signal was open."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The control contract specifies canonical digest and fingerprint algorithms fail-fast behavior receipt fields and explicit remediation."
+      - "The report compact receipt and raw log preserve both successful gates and the expected pre-regeneration convergence failure."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Missing interpreter missing dependency clean setup no-provisioning dry plans and package nonmutation checks pass."
+      - "Nine orchestration tests the 86-test affected memory profile and the post-regeneration HTML route pass."
+  full_compatibility:
+    status: "PASS"
+    evidence:
+      - "The staged full project-control route passed its documentation audit research-control gate and all 634 repository tests."
+      - "The legacy consolidated acceptance remains reachable under validate-memory-full and validation entry points retain their previous commands after the new common prerequisite."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The governed no-commit checkpoint returned ready_to_commit after all fourteen working and staged acceptance operations passed."
+      - "Checkpoint convergence used one write-only sync zero compatibility-bootstrap calls and one final staged memory-core gate on preflight tree 6985738100fe143072ce6a3b549a8a7f272a53d5."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index dependency-graph registry wiki and folder-map derivatives are regenerated through their owning scripts."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only core checks pass; .local freshness warnings are cache-only and non-authoritative."
+  claim_language_linter:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No physics or public scientific claim-language source changed."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260715-014/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: "not_applicable"
+project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 task scopes project-system validation environment checks only. It does not authorize P4-T01 receipt unification CI or requirements mutation canonical ontology edit source-law adoption general EqSrc discharge matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation or any environment receipt validator test registry derivative or checkpoint evidence as physics proof."
+verdict: "v19_p3_t07_validation_environment_separation_pass_p4_t01_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P3-T07 cleanly separates explicit provisioning from non-provisioning validation, makes environment identity reproducible, and preserves legacy behavior and authority boundaries."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P4-T01 Project-Control Maintainer receipt-schema AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 807
+    relationship_row_count: 4021
+    semantic_row_count: 807
+    vault_row_count: 807
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_local_retrieval_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation diagnostics only and are not authority; the registered plan dependency completions role contract implementation sources and registries were inspected directly."
