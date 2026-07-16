@@ -1,0 +1,190 @@
+job_id: "AJ-RT-20260715-010-001"
+completion_id: "AJC-AJ-RT-20260715-010-001"
+task_id: "RT-20260715-010"
+decision_id: "DDR-20260715-010"
+role_id: "memory-system-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "memory-system-maintainer@0.2.0--RT-20260715-010"
+status: "completed"
+created_at: "2026-07-15T23:46:41Z"
+started_at: "2026-07-15T23:46:41Z"
+completed_at: "2026-07-16T00:12:47Z"
+objective: "Implement genuinely documentation-scoped synchronization and validation modes, or retire them if declared documentation invariants cannot be isolated without false-PASS risk."
+completion_summary: "Completed v19 P3-T04 by implementing a ten-check documentation_core gate an eleven-check documentation-validation composition and documentation-only Markdown HTML wiki mirror and index synchronization with explicit selected and excluded family counts."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/memory-system-maintainer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/v19_validation_overhead_backlog.yaml"
+  - "research_control/design/validation_obligation_resolution_policy_v1.md"
+  - "research_control/tasks/RT-20260715-009/jobs/completions/AJC-AJ-RT-20260715-009-001.yaml"
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".codex/skills/project-memory-system/scripts/memory_operations.py"
+  - ".codex/skills/project-memory-system/scripts/obsidian_wiki_lib.py"
+  - ".codex/skills/project-memory-system/SKILL.md"
+  - "scripts/validation/adapters/publication.py"
+  - "scripts/validate_publication_process.py"
+  - "tests/test_memory_system.py"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P3-T04"
+  recommendation_ids:
+    - "V19-R08"
+    - "V19-R30"
+    - "V19-R42"
+  migration_epoch: "legacy_consolidated"
+  implemented_task_scope: "True documentation-only synchronization documentation-core plus publication validation explicit scope summaries mixed-family proof and durable receipts only."
+  completed_v19_tasks_to_date:
+    - "P0-T01 through P3-T04"
+  downstream_tasks_not_implemented:
+    - "P3-T05 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p3_t04_documentation_memory_mode_scope"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct_and_supporting"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P3-T04"
+  coverage_summary: "V19-R08 receives direct true-mode implementation V19-R30 receives direct declared-input scoping and V19-R42 receives supporting readiness because all tracked commands are canonical while final compatibility-alias retirement remains assigned to P11-T05."
+physics_progress_status:
+  status: "project_system_documentation_memory_scoping_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P3-T04 changes documentation-mode memory tooling only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Documentation memory scope tests and receipts are operational evidence only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+documentation_memory_modes:
+  status: "PASS"
+  implementation_choice: "implement_true_documentation_modes"
+  scope_proof_path: "research_control/tasks/RT-20260715-010/artifacts/docs_mode_scope_proof.json"
+  validation_receipt_path: "research_control/tasks/RT-20260715-010/artifacts/docs_mode_validation_receipt.json"
+  documentation_core_gate_id: "documentation_core"
+  documentation_composite_gate_id: "documentation_validation"
+  publication_gate_id: "publication_validation"
+  documentation_core_check_count: 10
+  documentation_composite_check_count: 11
+  selected_object_count: 868
+  excluded_families:
+    - "tex_sources"
+    - "physics_pdf_derivatives"
+    - "scientific_checks"
+    - "full_control_history"
+    - "local_retrieval"
+  docs_only_byte_idempotent: true
+  ordinary_full_compatibility_preserved: true
+  check_alias_retained_for_p11_t05: true
+output_paths:
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - "tests/test_memory_cli_modes.py"
+  - "research_control/tasks/RT-20260715-010/artifacts/docs_mode_scope_proof.json"
+  - "research_control/tasks/RT-20260715-010/artifacts/docs_mode_validation_receipt.json"
+  - "research_control/tasks/RT-20260715-010/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260715-010/jobs/completions/AJC-AJ-RT-20260715-010-001.yaml"
+command_results:
+  - ".venv/bin/python -m unittest tests/test_memory_cli_modes.py | exit_code=0 | all 7 mixed-family scope corruption composition CLI and compatibility fixtures PASS"
+  - ".venv/bin/python -m unittest tests/test_memory_cli_modes.py tests/test_memory_system.py | exit_code=0 | all 60 focused and existing memory fixtures PASS"
+  - ".venv/bin/python -m unittest tests/test_publication_process_validation.py | exit_code=0 | all 12 independent publication fixtures PASS"
+  - ".venv/bin/python scripts/validation/adapters/publication.py --json | exit_code=0 | gate_id=publication_validation checks=1 errors=0 warnings=0 findings=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --docs-only | exit_code=0 | selected_objects=868 documentation_validation checks=11 findings=0 byte-idempotent"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --docs-validate-only | exit_code=0 | duration_seconds=0.265573 subprocess_count=0 output_bytes=558 cache_hits=0 cache_misses=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | legacy memory_legacy_composite PASS"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=1 | 627 tests ran; the initial pre-completion run exposed the expected dirty-worktree contract invalid draft zero-hit query missing completion and an out-of-allowlist optional skill-contract mutation; the query and optional skill mutation were removed and research-control validation then reduced to the expected missing-completion condition"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=1 | 627 tests ran in 610.576s with zero implementation regressions and one expected precheckpoint dirty-main repository-contract failure"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write | exit_code=0 | task-index row count 906 and generated task-index derivatives refreshed"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | dependency-graph derivatives refreshed"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | JSON Markdown and DOT dependency-graph outputs fresh"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local-retrieval status PASS with zero warnings after ignored-cache refresh"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260715-010-001 --no-commit | exit_code=0 | ready_to_commit after all 14 checkpoint acceptance commands passed across distinct working and staged scopes"
+  - "git diff --check | exit_code=0"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P3-T03 PASS checkpoint dependency clean worktree registered role exact plan task and no competing project-improvement signal were verified before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The scope proof names selected and excluded families and the two documentation gate IDs."
+      - "Mixed-family fixtures prove corrupted TeX remains excluded from documentation modes while full memory core detects it and documentation corruption remains blocking."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Seven focused fixtures all 53 existing memory fixtures and twelve publication fixtures pass."
+      - "Live documentation-only and documentation-validate-only commands pass with eleven checks and zero findings."
+      - "The 627-test precheckpoint repository suite had zero implementation regressions and only the expected dirty-main transaction guard failure."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The no-commit checkpoint transaction returned ready_to_commit after all 14 acceptance commands passed."
+      - "Working-tree and staged-tree research-control validation ran as distinct scopes with zero hard claim-language failures."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index derivatives were refreshed with 906 rows."
+      - "Dependency-graph JSON Markdown and DOT outputs pass the freshness check."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Full bootstrap and legacy validate-only compatibility pass after the scoped modes converge."
+      - "The ignored local retrieval caches were refreshed separately and the memory preflight reports core freshness and local retrieval PASS with zero warnings."
+  claim_language_linter:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No physics or public claim-language source changed."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260715-010/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: "not_applicable"
+project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 task scopes project-system documentation memory operations only. It does not authorize P3-T05 Make CI checkpoint planner changes final compatibility retirement canonical ontology edit source-law adoption general EqSrc discharge matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation or any validator test registry derivative or checkpoint evidence as physics proof."
+verdict: "v19_p3_t04_true_documentation_memory_modes_pass_p3_t05_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P3-T04 makes documentation mode names truthful with selected-family synchronization and validation while preserving ordinary full compatibility and research authority."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P3-T05 Memory-System Maintainer bootstrap-validation deduplication AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 807
+    relationship_row_count: 4021
+    semantic_row_count: 807
+    vault_row_count: 807
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs were navigation diagnostics only and are not authority; the registered plan dependency completion role contract implementation sources tests validator policy and registries were inspected directly."

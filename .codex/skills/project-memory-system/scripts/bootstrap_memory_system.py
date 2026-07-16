@@ -348,6 +348,31 @@ HTML_PROSE_ANYWHERE_SELECTORS = (".publication-card", "p", "th", "td")
 DOCS_VALIDATOR_SCRIPTS = [
     "scripts/validate_publication_process.py",
 ]
+DOCUMENTATION_SOURCE_REGISTRY_NAMES = [
+    "MARKDOWN_SOURCE_REGISTRY.csv",
+    "HTML_EXPLAINER_REGISTRY.csv",
+]
+DOCUMENTATION_WIKI_LANES = {"markdown", "html"}
+DOCUMENTATION_INDEX_SPECS = [
+    ("documentation-by-format.md", "Documentation Index By Format", "format"),
+    (
+        "documentation-by-authority-status.md",
+        "Documentation Index By Authority Status",
+        "authority_status",
+    ),
+    (
+        "documentation-by-owner-skill.md",
+        "Documentation Index By Owner Skill",
+        "owner_skill",
+    ),
+]
+DOCUMENTATION_EXCLUDED_FAMILIES = [
+    "tex_sources",
+    "physics_pdf_derivatives",
+    "scientific_checks",
+    "full_control_history",
+    "local_retrieval",
+]
 
 
 def utc_now() -> str:
@@ -1317,56 +1342,55 @@ def wiki_note_text(source_row: dict[str, str], lookup: dict[str, dict[str, str]]
     return "\n".join(lines)
 
 
-def generate_wiki(rows_by_registry: dict[str, list[dict[str, str]]], now: str) -> list[dict[str, str]]:
-    source_rows = all_source_rows(rows_by_registry)
-    lookup = {row["object_id"]: row for row in source_rows}
-    existing = existing_by_id(read_csv_rows(registry_path("WIKI_ARTIFACT_REGISTRY.csv")))
-    wiki_rows: list[dict[str, str]] = []
+def generated_wiki_row(
+    source_row: dict[str, str],
+    lookup: dict[str, dict[str, str]],
+    existing: dict[str, dict[str, str]],
+    now: str,
+) -> dict[str, str]:
+    object_id = wiki_object_id(source_row["object_id"])
+    note_path = wiki_path_for_source(source_row)
+    text = wiki_note_text(source_row, lookup)
+    write_text_if_changed(REPO_ROOT / note_path, text)
+    wiki_hash = sha256_text(text)
+    existing_row = existing.get(object_id, {})
+    generated_at = existing_row.get("generated_at", "")
+    last_validated_at = existing_row.get("last_validated_at", "")
+    if (
+        existing_row.get("source_object_hash") != source_row.get("source_hash")
+        or existing_row.get("wiki_hash") != wiki_hash
+    ):
+        generated_at = now
+        last_validated_at = now
+    if not generated_at:
+        generated_at = now
+    if not last_validated_at:
+        last_validated_at = now
+    return {
+        "object_id": object_id,
+        "path": note_path,
+        "format": "wiki_markdown",
+        "role": "generated_metadata_note",
+        "authority_status": "generated_noncanonical",
+        "audience": "humans_and_agents",
+        "source_hash": wiki_hash,
+        "related_source": source_row["object_id"],
+        "generated_from": source_row["object_id"],
+        "generated_outputs": "",
+        "owner_skill": "markdown-wiki",
+        "validation_status": "PASS",
+        "last_validated_at": last_validated_at,
+        "notes": "Generated metadata note; not canonical authority.",
+        "source_object_id": source_row["object_id"],
+        "source_path": source_row.get("path", ""),
+        "source_object_hash": source_row.get("source_hash", ""),
+        "wiki_hash": wiki_hash,
+        "wiki_kind": wiki_lane_for_format(source_row.get("format", "markdown")),
+        "generated_at": generated_at,
+    }
 
-    for source_row in sorted(source_rows, key=lambda row: row["object_id"]):
-        object_id = wiki_object_id(source_row["object_id"])
-        note_path = wiki_path_for_source(source_row)
-        text = wiki_note_text(source_row, lookup)
-        write_text_if_changed(REPO_ROOT / note_path, text)
-        wiki_hash = sha256_text(text)
-        existing_row = existing.get(object_id, {})
-        generated_at = existing_row.get("generated_at", "")
-        last_validated_at = existing_row.get("last_validated_at", "")
-        if (
-            existing_row.get("source_object_hash") != source_row.get("source_hash")
-            or existing_row.get("wiki_hash") != wiki_hash
-        ):
-            generated_at = now
-            last_validated_at = now
-        if not generated_at:
-            generated_at = now
-        if not last_validated_at:
-            last_validated_at = now
-        wiki_rows.append(
-            {
-                "object_id": object_id,
-                "path": note_path,
-                "format": "wiki_markdown",
-                "role": "generated_metadata_note",
-                "authority_status": "generated_noncanonical",
-                "audience": "humans_and_agents",
-                "source_hash": wiki_hash,
-                "related_source": source_row["object_id"],
-                "generated_from": source_row["object_id"],
-                "generated_outputs": "",
-                "owner_skill": "markdown-wiki",
-                "validation_status": "PASS",
-                "last_validated_at": last_validated_at,
-                "notes": "Generated metadata note; not canonical authority.",
-                "source_object_id": source_row["object_id"],
-                "source_path": source_row.get("path", ""),
-                "source_object_hash": source_row.get("source_hash", ""),
-                "wiki_hash": wiki_hash,
-                "wiki_kind": wiki_lane_for_format(source_row.get("format", "markdown")),
-                "generated_at": generated_at,
-            }
-        )
 
+def write_wiki_registry(wiki_rows: list[dict[str, str]], now: str) -> None:
     write_csv_if_changed(
         registry_path("WIKI_ARTIFACT_REGISTRY.csv"), WIKI_COLUMNS, wiki_rows
     )
@@ -1375,6 +1399,55 @@ def generate_wiki(rows_by_registry: dict[str, list[dict[str, str]]], now: str) -
         [registry_path(name) for name in SOURCE_REGISTRY_NAMES],
         now,
     )
+
+
+def generate_wiki(rows_by_registry: dict[str, list[dict[str, str]]], now: str) -> list[dict[str, str]]:
+    source_rows = all_source_rows(rows_by_registry)
+    lookup = {row["object_id"]: row for row in source_rows}
+    existing = existing_by_id(read_csv_rows(registry_path("WIKI_ARTIFACT_REGISTRY.csv")))
+    wiki_rows = [
+        generated_wiki_row(source_row, lookup, existing, now)
+        for source_row in sorted(source_rows, key=lambda row: row["object_id"])
+    ]
+    write_wiki_registry(wiki_rows, now)
+    return wiki_rows
+
+
+def generate_documentation_wiki(
+    rows_by_registry: dict[str, list[dict[str, str]]], now: str
+) -> list[dict[str, str]]:
+    all_rows = all_source_rows(rows_by_registry)
+    lookup = {row["object_id"]: row for row in all_rows}
+    documentation_rows = [
+        row
+        for registry_name in DOCUMENTATION_SOURCE_REGISTRY_NAMES
+        for row in rows_by_registry.get(registry_name, [])
+    ]
+    existing_rows = read_csv_rows(registry_path("WIKI_ARTIFACT_REGISTRY.csv"))
+    existing = existing_by_id(existing_rows)
+    preserved_rows = [
+        row
+        for row in existing_rows
+        if row.get("wiki_kind", "") not in DOCUMENTATION_WIKI_LANES
+    ]
+    generated_rows = [
+        generated_wiki_row(source_row, lookup, existing, now)
+        for source_row in sorted(documentation_rows, key=lambda row: row["object_id"])
+    ]
+    wiki_rows = sorted(
+        preserved_rows + generated_rows,
+        key=lambda row: row.get("object_id", ""),
+    )
+    write_wiki_registry(wiki_rows, now)
+
+    current_paths = {row["path"] for row in generated_rows}
+    for lane in sorted(DOCUMENTATION_WIKI_LANES):
+        directory = REPO_ROOT / "wiki" / lane
+        if not directory.exists():
+            continue
+        for path in sorted(directory.glob("*.md")):
+            if rel_path(path) not in current_paths:
+                path.unlink()
     return wiki_rows
 
 
@@ -1417,6 +1490,54 @@ def generate_indexes(rows_by_registry: dict[str, list[dict[str, str]]]) -> None:
         REPO_ROOT / "wiki" / "indexes" / "by-ontology-promotion-status.md",
         group_index_text("Index By Ontology Promotion Status", groups),
     )
+    generate_documentation_indexes(rows_by_registry)
+
+
+def documentation_index_texts(
+    rows_by_registry: dict[str, list[dict[str, str]]]
+) -> dict[str, str]:
+    rows = [
+        row
+        for registry_name in DOCUMENTATION_SOURCE_REGISTRY_NAMES
+        for row in rows_by_registry.get(registry_name, [])
+    ]
+    wiki_source_rows = rows_by_registry.get("WIKI_ARTIFACT_REGISTRY.csv")
+    if wiki_source_rows is None:
+        wiki_source_rows = read_csv_rows(registry_path("WIKI_ARTIFACT_REGISTRY.csv"))
+    wiki_rows = [
+        row
+        for row in wiki_source_rows
+        if row.get("wiki_kind", "") in DOCUMENTATION_WIKI_LANES
+    ]
+    all_rows = rows + wiki_rows
+    rendered: dict[str, str] = {}
+    for filename, title, field_name in DOCUMENTATION_INDEX_SPECS:
+        groups: dict[str, list[dict[str, str]]] = {}
+        for row in all_rows:
+            groups.setdefault(row.get(field_name, ""), []).append(row)
+        rendered[filename] = group_index_text(title, groups)
+    return rendered
+
+
+def generate_documentation_indexes(
+    rows_by_registry: dict[str, list[dict[str, str]]]
+) -> None:
+    for filename, rendered in documentation_index_texts(rows_by_registry).items():
+        write_text_if_changed(
+            REPO_ROOT / "wiki" / "indexes" / filename,
+            rendered,
+        )
+
+
+def validate_documentation_indexes(
+    report: ValidationReport, rows_by_registry: dict[str, list[dict[str, str]]]
+) -> None:
+    for filename, expected in documentation_index_texts(rows_by_registry).items():
+        path = REPO_ROOT / "wiki" / "indexes" / filename
+        if not path.exists():
+            report.error(f"missing documentation index: wiki/indexes/{filename}")
+        elif path.read_text(encoding="utf-8") != expected:
+            report.error(f"stale documentation index: wiki/indexes/{filename}")
 
 
 def prune_stale_generated_files(
@@ -1489,6 +1610,53 @@ def generate_file_object_registry(
     write_csv_if_changed(
         registry_path("FILE_OBJECT_REGISTRY.csv"), FILE_OBJECT_COLUMNS, output_rows
     )
+    write_meta_if_needed(
+        "FILE_OBJECT_REGISTRY",
+        [registry_path(name) for name in mirrored_registry_names],
+        now,
+    )
+    return output_rows
+
+
+def generate_documentation_file_objects(
+    rows_by_registry: dict[str, list[dict[str, str]]], now: str
+) -> list[dict[str, str]]:
+    existing_rows = read_csv_rows(registry_path("FILE_OBJECT_REGISTRY.csv"))
+    preserved_rows = [
+        row
+        for row in existing_rows
+        if row.get("source_registry", "")
+        not in DOCUMENTATION_SOURCE_REGISTRY_NAMES
+        and not (
+            row.get("source_registry", "") == "WIKI_ARTIFACT_REGISTRY.csv"
+            and any(
+                row.get("path", "").startswith(f"wiki/{lane}/")
+                for lane in DOCUMENTATION_WIKI_LANES
+            )
+        )
+    ]
+    generated_rows: list[dict[str, str]] = []
+    for registry_name in DOCUMENTATION_SOURCE_REGISTRY_NAMES:
+        for row in rows_by_registry.get(registry_name, []):
+            output = {field: row.get(field, "") for field in COMMON_COLUMNS}
+            output["source_registry"] = registry_name
+            generated_rows.append(output)
+    for row in rows_by_registry.get("WIKI_ARTIFACT_REGISTRY.csv", []):
+        if row.get("wiki_kind", "") not in DOCUMENTATION_WIKI_LANES:
+            continue
+        output = {field: row.get(field, "") for field in COMMON_COLUMNS}
+        output["source_registry"] = "WIKI_ARTIFACT_REGISTRY.csv"
+        generated_rows.append(output)
+    output_rows = sorted(
+        preserved_rows + generated_rows,
+        key=lambda row: row.get("object_id", ""),
+    )
+    write_csv_if_changed(
+        registry_path("FILE_OBJECT_REGISTRY.csv"), FILE_OBJECT_COLUMNS, output_rows
+    )
+    mirrored_registry_names = SOURCE_REGISTRY_NAMES + [
+        name for name in GENERATED_REGISTRY_NAMES if name != "FILE_OBJECT_REGISTRY.csv"
+    ]
     write_meta_if_needed(
         "FILE_OBJECT_REGISTRY",
         [registry_path(name) for name in mirrored_registry_names],
@@ -1870,8 +2038,11 @@ def find_duplicate_object_ids(
     return errors
 
 
-def validate_columns(report: ValidationReport) -> None:
-    for name, fieldnames in REGISTRIES.items():
+def validate_registry_columns(
+    report: ValidationReport, registry_names: Iterable[str]
+) -> None:
+    for name in registry_names:
+        fieldnames = REGISTRIES[name]
         path = registry_path(name)
         if not path.exists():
             report.error(f"missing registry: registries/{name}")
@@ -1886,6 +2057,10 @@ def validate_columns(report: ValidationReport) -> None:
         missing = [field for field in fieldnames if field not in header]
         if missing:
             report.error(f"registries/{name} missing columns: {', '.join(missing)}")
+
+
+def validate_columns(report: ValidationReport) -> None:
+    validate_registry_columns(report, REGISTRIES)
 
 
 def validate_paths(report: ValidationReport, rows_by_registry: dict[str, list[dict[str, str]]]) -> None:
@@ -2241,6 +2416,47 @@ def validate_file_object_registry(
         report.error(f"FILE_OBJECT_REGISTRY has stale extra object {object_id}")
 
 
+def validate_documentation_file_objects(
+    report: ValidationReport, rows_by_registry: dict[str, list[dict[str, str]]]
+) -> None:
+    file_rows = existing_by_id(rows_by_registry.get("FILE_OBJECT_REGISTRY.csv", []))
+    expected: dict[str, tuple[str, dict[str, str]]] = {}
+    for registry_name in DOCUMENTATION_SOURCE_REGISTRY_NAMES:
+        for row in rows_by_registry.get(registry_name, []):
+            expected[row.get("object_id", "")] = (registry_name, row)
+    for row in rows_by_registry.get("WIKI_ARTIFACT_REGISTRY.csv", []):
+        if row.get("wiki_kind", "") in DOCUMENTATION_WIKI_LANES:
+            expected[row.get("object_id", "")] = ("WIKI_ARTIFACT_REGISTRY.csv", row)
+
+    for object_id, (registry_name, row) in sorted(expected.items()):
+        mirror = file_rows.get(object_id)
+        if not mirror:
+            report.error(f"FILE_OBJECT_REGISTRY missing documentation object {object_id}")
+            continue
+        if mirror.get("source_registry", "") != registry_name:
+            report.error(f"FILE_OBJECT_REGISTRY stale source registry for {object_id}")
+            continue
+        for field_name in COMMON_COLUMNS:
+            if mirror.get(field_name, "") != row.get(field_name, ""):
+                report.error(
+                    f"FILE_OBJECT_REGISTRY stale documentation field {field_name} for {object_id}"
+                )
+                break
+
+    for object_id, row in sorted(file_rows.items()):
+        is_documentation_row = row.get("source_registry", "") in (
+            DOCUMENTATION_SOURCE_REGISTRY_NAMES
+        ) or (
+            row.get("source_registry", "") == "WIKI_ARTIFACT_REGISTRY.csv"
+            and any(
+                row.get("path", "").startswith(f"wiki/{lane}/")
+                for lane in DOCUMENTATION_WIKI_LANES
+            )
+        )
+        if is_documentation_row and object_id not in expected:
+            report.error(f"FILE_OBJECT_REGISTRY has stale documentation object {object_id}")
+
+
 def validate_tracked_local_noise(report: ValidationReport) -> None:
     try:
         result = subprocess.run(
@@ -2378,6 +2594,129 @@ def memory_validate_core(
     )
 
 
+def documentation_rows_by_registry() -> dict[str, list[dict[str, str]]]:
+    wiki_rows = [
+        row
+        for row in read_csv_rows(registry_path("WIKI_ARTIFACT_REGISTRY.csv"))
+        if row.get("wiki_kind", "") in DOCUMENTATION_WIKI_LANES
+    ]
+    return {
+        "MARKDOWN_SOURCE_REGISTRY.csv": read_csv_rows(
+            registry_path("MARKDOWN_SOURCE_REGISTRY.csv")
+        ),
+        "HTML_EXPLAINER_REGISTRY.csv": read_csv_rows(
+            registry_path("HTML_EXPLAINER_REGISTRY.csv")
+        ),
+        "WIKI_ARTIFACT_REGISTRY.csv": wiki_rows,
+        "FILE_OBJECT_REGISTRY.csv": read_csv_rows(
+            registry_path("FILE_OBJECT_REGISTRY.csv")
+        ),
+    }
+
+
+def _documentation_duplicate_ids(
+    report: ValidationReport, rows_by_registry: dict[str, list[dict[str, str]]]
+) -> None:
+    for error in find_duplicate_object_ids(rows_by_registry):
+        report.error(error)
+
+
+def documentation_validate_core() -> ValidationReport:
+    """Validate only declared documentation memory invariants."""
+
+    rows_by_registry = documentation_rows_by_registry()
+    checks = (
+        MemoryCoreCheck(
+            "documentation_core.registry_columns",
+            lambda report, _snapshot: validate_registry_columns(
+                report,
+                DOCUMENTATION_SOURCE_REGISTRY_NAMES
+                + ["WIKI_ARTIFACT_REGISTRY.csv", "FILE_OBJECT_REGISTRY.csv"],
+            ),
+        ),
+        MemoryCoreCheck(
+            "documentation_core.duplicate_object_id",
+            lambda report, snapshot: _documentation_duplicate_ids(
+                report, dict(snapshot.rows_by_registry)
+            ),
+        ),
+        MemoryCoreCheck(
+            "documentation_core.registry_path",
+            lambda report, snapshot: validate_paths(
+                report, dict(snapshot.rows_by_registry)
+            ),
+        ),
+        MemoryCoreCheck(
+            "documentation_core.source_hash",
+            lambda report, snapshot: validate_source_hashes(
+                report, dict(snapshot.rows_by_registry)
+            ),
+        ),
+        MemoryCoreCheck(
+            "documentation_core.html_spec",
+            lambda report, snapshot: validate_html_specs(
+                report,
+                list(snapshot.rows_by_registry.get("MARKDOWN_SOURCE_REGISTRY.csv", ())),
+            ),
+        ),
+        MemoryCoreCheck(
+            "documentation_core.html_source_binding",
+            lambda report, snapshot: validate_html_registry(
+                report, dict(snapshot.rows_by_registry)
+            ),
+        ),
+        MemoryCoreCheck(
+            "documentation_core.mermaid_source",
+            lambda report, snapshot: validate_mermaid_documentation(
+                report, dict(snapshot.rows_by_registry)
+            ),
+        ),
+        MemoryCoreCheck(
+            "documentation_core.wiki_registry",
+            lambda report, snapshot: validate_wiki_registry(
+                report, dict(snapshot.rows_by_registry)
+            ),
+        ),
+        MemoryCoreCheck(
+            "documentation_core.index",
+            lambda report, snapshot: validate_documentation_indexes(
+                report, dict(snapshot.rows_by_registry)
+            ),
+        ),
+        MemoryCoreCheck(
+            "documentation_core.file_object_registry",
+            lambda report, snapshot: validate_documentation_file_objects(
+                report, dict(snapshot.rows_by_registry)
+            ),
+        ),
+    )
+    snapshot = MemoryCoreSnapshot.from_rows(rows_by_registry)
+    report = ValidationReport(
+        gate_id="documentation_core",
+        check_ids=[check.finding_id for check in checks],
+    )
+    for check in checks:
+        staged = ValidationReport()
+        check.validate(staged, snapshot)
+        for message in staged.errors:
+            report.error(message, finding_id=check.finding_id)
+        for message in staged.warnings:
+            report.warning(message, finding_id=check.finding_id)
+    return report
+
+
+def documentation_validation(*, strict_docs: bool = False) -> ValidationReport:
+    """Compose documentation-core and publication validation only."""
+
+    return compose_validation_reports(
+        "documentation_validation",
+        (
+            documentation_validate_core(),
+            publication_validation(strict_docs=strict_docs),
+        ),
+    )
+
+
 def validate_all(*, strict_docs: bool = False) -> ValidationReport:
     return compose_validation_reports(
         "memory_legacy_composite",
@@ -2422,6 +2761,79 @@ def memory_sync(
     )
 
 
+def documentation_scope_summary(
+    rows_by_registry: dict[str, list[dict[str, str]]] | None = None,
+) -> dict[str, object]:
+    if rows_by_registry is None:
+        rows_by_registry = source_rows_by_registry()
+        rows_by_registry["WIKI_ARTIFACT_REGISTRY.csv"] = read_csv_rows(
+            registry_path("WIKI_ARTIFACT_REGISTRY.csv")
+        )
+    markdown_rows = rows_by_registry.get("MARKDOWN_SOURCE_REGISTRY.csv", [])
+    html_rows = rows_by_registry.get("HTML_EXPLAINER_REGISTRY.csv", [])
+    wiki_rows = [
+        row
+        for row in rows_by_registry.get("WIKI_ARTIFACT_REGISTRY.csv", [])
+        if row.get("wiki_kind", "") in DOCUMENTATION_WIKI_LANES
+    ]
+    selected_counts = {
+        "registered_markdown": len(markdown_rows),
+        "publication_briefs": sum(
+            row.get("path", "").startswith("markdown/publication-briefs/")
+            for row in markdown_rows
+        ),
+        "html_specs": sum(
+            row.get("role", "") == "html_explainer_source_spec"
+            for row in markdown_rows
+        ),
+        "github_facing_markdown": sum(
+            row.get("github_facing", "") == "true" for row in markdown_rows
+        ),
+        "html_explainers": len(html_rows),
+        "documentation_wiki_notes": len(wiki_rows),
+        "documentation_indexes": len(DOCUMENTATION_INDEX_SPECS),
+    }
+    return {
+        "gate_id": "documentation_scope",
+        "selected_object_count": len(markdown_rows) + len(html_rows) + len(wiki_rows),
+        "selected_counts": selected_counts,
+        "excluded_families": list(DOCUMENTATION_EXCLUDED_FAMILIES),
+        "excluded_registered_counts": {
+            "tex_sources": len(
+                rows_by_registry.get("TEX_SOURCE_REGISTRY.csv", [])
+            ),
+            "physics_pdf_derivatives": len(
+                rows_by_registry.get("PDF_DERIVATIVE_REGISTRY.csv", [])
+            ),
+        },
+        "no_physics_authority": True,
+    }
+
+
+def documentation_sync(refresh_existing: bool = False) -> dict[str, object]:
+    """Synchronize documentation registries, wiki notes, and affected indexes only."""
+
+    for directory in ["registries", "html", "wiki/markdown", "wiki/html", "wiki/indexes"]:
+        (REPO_ROOT / directory).mkdir(parents=True, exist_ok=True)
+    now = utc_now()
+    markdown_rows = merge_authored_registry(
+        "MARKDOWN_SOURCE_REGISTRY.csv",
+        MARKDOWN_COLUMNS,
+        discover_markdown_rows(now),
+        refresh_existing,
+    )
+    html_rows = generate_html_rows(now, markdown_rows)
+    rows_by_registry = source_rows_by_registry()
+    rows_by_registry["MARKDOWN_SOURCE_REGISTRY.csv"] = markdown_rows
+    rows_by_registry["HTML_EXPLAINER_REGISTRY.csv"] = html_rows
+    wiki_rows = generate_documentation_wiki(rows_by_registry, now)
+    rows_by_registry["WIKI_ARTIFACT_REGISTRY.csv"] = wiki_rows
+    generate_documentation_indexes(rows_by_registry)
+    file_object_rows = generate_documentation_file_objects(rows_by_registry, now)
+    rows_by_registry["FILE_OBJECT_REGISTRY.csv"] = file_object_rows
+    return documentation_scope_summary(rows_by_registry)
+
+
 def bootstrap(
     refresh_existing: bool = False,
     rebuilt_pdf_paths: Iterable[str] | None = None,
@@ -2444,22 +2856,23 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         action="store_true",
         help="Refresh existing authored source registry rows.",
     )
-    parser.add_argument(
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
         "--validate-only",
         "--check",
         action="store_true",
         dest="validate_only",
         help="Validate current registries and generated outputs without writing.",
     )
-    parser.add_argument(
+    mode.add_argument(
         "--docs-only",
         action="store_true",
-        help="Refresh generated documentation registry/wiki surfaces and run documentation validators.",
+        help="Synchronize and validate only declared documentation memory surfaces.",
     )
-    parser.add_argument(
+    mode.add_argument(
         "--docs-validate-only",
         action="store_true",
-        help="Run registry, wiki, and documentation validators without writing.",
+        help="Run documentation-core and publication validation without writing.",
     )
     parser.add_argument(
         "--strict-docs",
@@ -2471,7 +2884,22 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
-    if args.validate_only or args.docs_validate_only:
+    if args.docs_only:
+        summary = documentation_sync(refresh_existing=args.refresh_existing)
+        print("Documentation mode summary: " + json.dumps(summary, sort_keys=True))
+        report = documentation_validation(strict_docs=args.strict_docs)
+    elif args.docs_validate_only:
+        summary = documentation_scope_summary(
+            {
+                **source_rows_by_registry(),
+                "WIKI_ARTIFACT_REGISTRY.csv": read_csv_rows(
+                    registry_path("WIKI_ARTIFACT_REGISTRY.csv")
+                ),
+            }
+        )
+        print("Documentation mode summary: " + json.dumps(summary, sort_keys=True))
+        report = documentation_validation(strict_docs=args.strict_docs)
+    elif args.validate_only:
         report = validate_all(strict_docs=args.strict_docs)
     else:
         report = bootstrap(

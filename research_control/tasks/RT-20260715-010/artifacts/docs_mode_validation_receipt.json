@@ -1,0 +1,92 @@
+{
+  "artifact_id": "V19-P3-T04-DOCS-MODE-VALIDATION-RECEIPT-001",
+  "baseline": {
+    "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --docs-validate-only",
+    "duration_seconds": 7.16,
+    "observed_before_edit": true,
+    "result": "PASS through the misleading full 15-check memory_legacy_composite path"
+  },
+  "cache_hits": 0,
+  "cache_misses": 0,
+  "documentation_core": {
+    "check_ids": [
+      "documentation_core.registry_columns",
+      "documentation_core.duplicate_object_id",
+      "documentation_core.registry_path",
+      "documentation_core.source_hash",
+      "documentation_core.html_spec",
+      "documentation_core.html_source_binding",
+      "documentation_core.mermaid_source",
+      "documentation_core.wiki_registry",
+      "documentation_core.index",
+      "documentation_core.file_object_registry"
+    ],
+    "counts": {
+      "checks": 10,
+      "errors": 0,
+      "findings": 0,
+      "warnings": 0
+    },
+    "gate_id": "documentation_core",
+    "status": "PASS"
+  },
+  "documentation_validation": {
+    "check_ids": [
+      "documentation_core.registry_columns",
+      "documentation_core.duplicate_object_id",
+      "documentation_core.registry_path",
+      "documentation_core.source_hash",
+      "documentation_core.html_spec",
+      "documentation_core.html_source_binding",
+      "documentation_core.mermaid_source",
+      "documentation_core.wiki_registry",
+      "documentation_core.index",
+      "documentation_core.file_object_registry",
+      "publication_validation.process"
+    ],
+    "counts": {
+      "checks": 11,
+      "errors": 0,
+      "findings": 0,
+      "warnings": 0
+    },
+    "gate_id": "documentation_validation",
+    "status": "PASS"
+  },
+  "focused_tests": {
+    "command": ".venv/bin/python -m unittest tests/test_memory_cli_modes.py",
+    "raw_output": [
+      ".......",
+      "----------------------------------------------------------------------",
+      "Ran 7 tests in 0.075s",
+      "",
+      "OK"
+    ],
+    "status": "PASS",
+    "test_count": 7
+  },
+  "idempotence": {
+    "after_diff_sha256": "a296096e1b2d0e6a8555c8a264eff96e8e04216352a8a1c41862317f051499a7",
+    "before_diff_sha256": "a296096e1b2d0e6a8555c8a264eff96e8e04216352a8a1c41862317f051499a7",
+    "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --docs-only",
+    "status": "PASS"
+  },
+  "live_scoped_run": {
+    "cache_hits": 0,
+    "cache_misses": 0,
+    "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --docs-validate-only",
+    "duration_seconds": 0.265573,
+    "exit_code": 0,
+    "output_bytes": 558,
+    "raw_output": [
+      "Documentation mode summary: {\"excluded_families\": [\"tex_sources\", \"physics_pdf_derivatives\", \"scientific_checks\", \"full_control_history\", \"local_retrieval\"], \"excluded_registered_counts\": {\"physics_pdf_derivatives\": 16, \"tex_sources\": 357}, \"gate_id\": \"documentation_scope\", \"no_physics_authority\": true, \"selected_counts\": {\"documentation_indexes\": 3, \"documentation_wiki_notes\": 434, \"github_facing_markdown\": 47, \"html_explainers\": 19, \"html_specs\": 19, \"publication_briefs\": 20, \"registered_markdown\": 415}, \"selected_object_count\": 868}",
+      "Validation PASS"
+    ],
+    "status": "PASS",
+    "subprocess_count": 0
+  },
+  "no_physics_authority": true,
+  "performance_interpretation": "The scoped live path was approximately 27.0 times faster than the pre-edit full-profile alias observation without removing any declared documentation invariant.",
+  "plan_task_id": "P3-T04",
+  "status": "PASS"
+}

@@ -1,0 +1,67 @@
+{
+  "artifact_id": "V19-P3-T04-DOCS-MODE-SCOPE-PROOF-001",
+  "claim_boundary_id": "CB-V19-P3-T04-DOCUMENTATION-MEMORY-MODES-001",
+  "implementation_choice": "implement_true_documentation_modes",
+  "no_physics_authority": true,
+  "plan_task_id": "P3-T04",
+  "proof_status": "PASS",
+  "scope": {
+    "excluded_families": [
+      "tex_sources",
+      "physics_pdf_derivatives",
+      "scientific_checks",
+      "full_control_history",
+      "local_retrieval"
+    ],
+    "excluded_registered_counts": {
+      "physics_pdf_derivatives": 16,
+      "tex_sources": 357
+    },
+    "selected_counts": {
+      "documentation_indexes": 3,
+      "documentation_wiki_notes": 434,
+      "github_facing_markdown": 47,
+      "html_explainers": 19,
+      "html_specs": 19,
+      "publication_briefs": 20,
+      "registered_markdown": 415
+    },
+    "selected_object_count": 868,
+    "selected_surfaces": [
+      "registered Markdown",
+      "publication briefs",
+      "HTML explainer source specs",
+      "GitHub-facing Markdown derivatives",
+      "HTML explainer registry rows and generated HTML bindings",
+      "wiki notes for Markdown and HTML sources",
+      "file-object mirrors for selected documentation objects",
+      "documentation-by-format documentation-by-authority-status and documentation-by-owner-skill indexes"
+    ]
+  },
+  "fixture_proofs": [
+    {
+      "assertion": "documentation core ignores unrelated corrupted TeX while full memory core detects it",
+      "test": "tests.test_memory_cli_modes.DocumentationMemoryModeTests.test_documentation_core_ignores_corrupted_tex_but_full_core_detects_it"
+    },
+    {
+      "assertion": "documentation source-hash corruption remains blocking",
+      "test": "tests.test_memory_cli_modes.DocumentationMemoryModeTests.test_documentation_core_detects_documentation_corruption"
+    },
+    {
+      "assertion": "documentation synchronization never calls TeX PDF local retrieval or generated-local-registry owners and selected indexes omit unrelated TeX rows",
+      "test": "tests.test_memory_cli_modes.DocumentationMemoryModeTests.test_documentation_sync_never_calls_unrelated_family_owners"
+    },
+    {
+      "assertion": "documentation CLI modes cannot fall through to full bootstrap or full validation owners",
+      "test": "tests.test_memory_cli_modes.DocumentationMemoryModeTests.test_docs_cli_modes_do_not_fall_through_to_full_compatibility"
+    }
+  ],
+  "gate_ids": {
+    "composite": "documentation_validation",
+    "documentation_core": "documentation_core",
+    "publication": "publication_validation"
+  },
+  "ordinary_research_handoff_preserved": "handoff-0740",
+  "ordinary_research_route_preserved": "EqSrc_family_closure_repair_or_stress",
+  "rollback_rule": "Retire both modes if a declared documentation invariant cannot remain blocking inside the selected object families."
+}
