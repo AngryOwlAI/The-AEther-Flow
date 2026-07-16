@@ -1,0 +1,44 @@
+task_id: "RT-20260716-012"
+task_type: "validation_deduplication_engine"
+status: "completed"
+created_at: "2026-07-16T19:55:59Z"
+updated_at: "2026-07-16T20:05:30Z"
+closed_at: "2026-07-16T20:05:30Z"
+parent_task_id: "RT-20260716-011"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260716-012"
+current_job_id: "AJ-RT-20260716-012-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-012"
+requires_human_gate: false
+human_authorization_note: "The user authorized a fresh recursive relay that implements every remaining v19 task one per discussion and generation 13 selects the dependency-ready P5-T06 packet."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P5"
+  plan_task_id: "P5-T06"
+  plan_task_name: "Implement conditional supersedence and evidence-identity deduplication"
+  recommendation_ids:
+    - "V19-R01"
+    - "V19-R03"
+    - "V19-R04"
+    - "V19-R27"
+objective: "Implement a pure deterministic shadow-planner deduplication engine that removes only same-identity duplicates or explicitly active same-scope supersedence targets while retaining all unresolved cross-state mutating and replay-bypass gates."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validation deduplication only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V19-P5-T06-EVIDENCE-DEDUPLICATION-001"
+claim_boundary:
+  allowed_scope: "P5-T06 pure evidence-identity deduplication engine focused tests task-local reports registry rows and governed derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+closure_status: "completed_v19_p5_t06_conditional_evidence_deduplication_pass_next_p5_t07"
+next_recommended_action: "Route one separately bounded P5-T07 validation-profile packet after the governed P5-T06 checkpoint."
+documentation_impact_id: "DI-RT-20260716-012-001"
+completion_id: "AJC-AJ-RT-20260716-012-001"
+notes: "P5-T06 remains a pure shadow-planner component; no manifest activation planner integration validator execution ordinary-research mutation or physics authority is granted."

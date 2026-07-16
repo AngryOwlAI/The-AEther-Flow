@@ -1,0 +1,207 @@
+{
+  "authority": {
+    "legacy_execution_authoritative": true,
+    "manifest_changed": false,
+    "physics_claim_authority": false,
+    "planner_integration_changed": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "cases": [
+    {
+      "case_id": "exact_identity_duplicate",
+      "result": {
+        "decisions": [
+          {
+            "evidence_identity": "sha256:e4048397ed245111ffd29feb7d47c07eca597f6e8c0e6bd3f70c2a3b158f76c0",
+            "execution_id": "exact-1",
+            "gate_id": "git_diff_check",
+            "predicate_evidence": {},
+            "predicate_id": null,
+            "reasons": [
+              "first_complete_evidence_identity"
+            ],
+            "satisfying_execution_id": null,
+            "satisfying_gate_id": null,
+            "status": "retained"
+          },
+          {
+            "evidence_identity": "sha256:e4048397ed245111ffd29feb7d47c07eca597f6e8c0e6bd3f70c2a3b158f76c0",
+            "execution_id": "exact-2",
+            "gate_id": "git_diff_check",
+            "predicate_evidence": {
+              "generation_state": "post_generation",
+              "identity_components": {
+                "config_digest": "sha256:config",
+                "environment_digest": "sha256:env",
+                "gate_id": "git_diff_check",
+                "implementation_digest": "sha256:git_diff_check",
+                "scope": "tree_state=index;base_ref=HEAD",
+                "tree_hash": "git-tree:tree"
+              }
+            },
+            "predicate_id": "exact_evidence_identity_v1",
+            "reasons": [
+              "exact_evidence_identity_match"
+            ],
+            "satisfying_execution_id": "exact-1",
+            "satisfying_gate_id": "git_diff_check",
+            "status": "skipped_duplicate"
+          }
+        ],
+        "execution_authority_changed": false,
+        "feature_enabled": true,
+        "input_execution_count": 2,
+        "planned_execution_count": 1,
+        "planner_executes_commands": false,
+        "residual_repeated_identity_count": 0,
+        "retained_execution_ids": [
+          "exact-1"
+        ],
+        "retained_gate_ids": [
+          "git_diff_check"
+        ],
+        "schema_id": "validation_deduplication_result_v1",
+        "scientific_claims_changed": false,
+        "skipped_duplicate_count": 1,
+        "status": "PASS",
+        "superseded_count": 0,
+        "supersedence_policy_active": false
+      },
+      "status": "PASS"
+    },
+    {
+      "case_id": "active_same_scope_supersedence",
+      "result": {
+        "decisions": [
+          {
+            "evidence_identity": "sha256:6042d9f61f1da2aeaa5cd6e9f4effb215dc5a99c224b2282fc61b6b5c380baab",
+            "execution_id": "target",
+            "gate_id": "research_control_core",
+            "predicate_evidence": {
+              "identity_mismatches": [],
+              "required_equal_matched": {
+                "base_ref": "HEAD",
+                "core_configuration_digest": "sha256:core-config",
+                "core_scope_digest": "sha256:scope",
+                "environment_digest": "sha256:env",
+                "implementation_family_digest": "sha256:family",
+                "staged_flag": true,
+                "tree_hash": "git-tree:tree",
+                "tree_state": "index"
+              },
+              "required_equal_mismatches": [],
+              "required_true_false_or_missing": [],
+              "required_true_matched": [
+                "raw_core_failures_preserved",
+                "superset_executed_core"
+              ]
+            },
+            "predicate_id": "rc_diff_satisfies_core_same_scope_v1",
+            "reasons": [
+              "active_manifest_contract",
+              "predicate_proved_same_scope"
+            ],
+            "satisfying_execution_id": "source",
+            "satisfying_gate_id": "research_control_diff",
+            "status": "skipped_superseded"
+          },
+          {
+            "evidence_identity": "sha256:20e5be8d4a63d2369991922f4697bcedc0b6b72ca028e3ca17727e1c005fb48e",
+            "execution_id": "source",
+            "gate_id": "research_control_diff",
+            "predicate_evidence": {},
+            "predicate_id": null,
+            "reasons": [
+              "first_complete_evidence_identity"
+            ],
+            "satisfying_execution_id": null,
+            "satisfying_gate_id": null,
+            "status": "retained"
+          }
+        ],
+        "execution_authority_changed": false,
+        "feature_enabled": true,
+        "input_execution_count": 2,
+        "planned_execution_count": 1,
+        "planner_executes_commands": false,
+        "residual_repeated_identity_count": 0,
+        "retained_execution_ids": [
+          "source"
+        ],
+        "retained_gate_ids": [
+          "research_control_diff"
+        ],
+        "schema_id": "validation_deduplication_result_v1",
+        "scientific_claims_changed": false,
+        "skipped_duplicate_count": 0,
+        "status": "PASS",
+        "superseded_count": 1,
+        "supersedence_policy_active": true
+      },
+      "status": "PASS"
+    },
+    {
+      "case_id": "cross_scope_retained",
+      "result": {
+        "decisions": [
+          {
+            "evidence_identity": "sha256:56ee6c1fb770054325a5cd8e3826ef9b57e698bca852973bfc3dbece3a9d8b9f",
+            "execution_id": "target-working",
+            "gate_id": "research_control_core",
+            "predicate_evidence": {},
+            "predicate_id": null,
+            "reasons": [
+              "first_complete_evidence_identity"
+            ],
+            "satisfying_execution_id": null,
+            "satisfying_gate_id": null,
+            "status": "retained"
+          },
+          {
+            "evidence_identity": "sha256:20e5be8d4a63d2369991922f4697bcedc0b6b72ca028e3ca17727e1c005fb48e",
+            "execution_id": "source",
+            "gate_id": "research_control_diff",
+            "predicate_evidence": {},
+            "predicate_id": null,
+            "reasons": [
+              "first_complete_evidence_identity"
+            ],
+            "satisfying_execution_id": null,
+            "satisfying_gate_id": null,
+            "status": "retained"
+          }
+        ],
+        "execution_authority_changed": false,
+        "feature_enabled": true,
+        "input_execution_count": 2,
+        "planned_execution_count": 2,
+        "planner_executes_commands": false,
+        "residual_repeated_identity_count": 0,
+        "retained_execution_ids": [
+          "target-working",
+          "source"
+        ],
+        "retained_gate_ids": [
+          "research_control_core",
+          "research_control_diff"
+        ],
+        "schema_id": "validation_deduplication_result_v1",
+        "scientific_claims_changed": false,
+        "skipped_duplicate_count": 0,
+        "status": "PASS",
+        "superseded_count": 0,
+        "supersedence_policy_active": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "contracts_sha256": "314a12b8358682be1975d8b2322b31d866ba6a824e541684ba796ca38f849618",
+  "current_policy_active": false,
+  "execution_authority": "legacy",
+  "manifest_sha256": "7d9f04c5b06e7a5385cf7e101dbbdf4cc265f9ab1ee3a0307b2b435f5657747b",
+  "migration_epoch": "shadow_planner",
+  "plan_task_id": "P5-T06",
+  "schema_id": "validation_deduplication_predicate_report_v1",
+  "status": "PASS"
+}
