@@ -1,0 +1,207 @@
+job_id: "AJ-RT-20260716-005-001"
+completion_id: "AJC-AJ-RT-20260716-005-001"
+task_id: "RT-20260716-005"
+decision_id: "DDR-20260716-005"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-005"
+status: "completed"
+created_at: "2026-07-16T15:33:24Z"
+started_at: "2026-07-16T15:33:24Z"
+completed_at: "2026-07-16T16:10:32Z"
+objective: "Adapt four high-frequency validators to common compact receipts while preserving legacy output exit codes normalized findings and operational-only authority."
+completion_summary: "Implemented v19 P4-T05 by adapting research-control memory change-classification and documentation-impact CLIs to common compact operational receipts with deterministic content-manifest identities explicit legacy modes exact semantic parity and bounded console output."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/validation_run_receipt_schema_v1.md"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_gate_id_catalog_v1.md"
+  - "research_control/design/v19_validation_performance_and_safety_budget.md"
+  - "scripts/validation/models.py"
+  - "scripts/validation/reporting.py"
+  - "scripts/research_control/validate_research_control.py"
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - "scripts/project_control/classify_project_changes.py"
+  - "scripts/project_control/validate_documentation_impact.py"
+  - "scripts/project_control/collect_project_improvement_signals.py"
+  - "research_control/tasks/RT-20260716-004/jobs/completions/AJC-AJ-RT-20260716-004-001.yaml"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P4-T05"
+  recommendation_ids:
+    - "V19-R20"
+    - "V19-R21"
+    - "V19-R43"
+  migration_epoch: "shadow_planner"
+  implemented_task_scope: "Four P4-T05 validator presentation adapters one task-local acceptance report control rows and policy-generated derivatives only."
+  completed_v19_tasks_to_date:
+    - "P0-T01 through P4-T05"
+  downstream_tasks_not_implemented:
+    - "P4-T06 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p4_t05_core_validator_compact_receipts"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P4-T05"
+  coverage_summary: "V19-R20 V19-R21 and V19-R43 now have compact common reporting stable content-manifest identities local full receipts explicit compatibility modes byte measurements and legacy-planner parity across the four selected validators; local-agent consumption remains P4-T06."
+physics_progress_status:
+  status: "project_system_validation_reporting_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P4-T05 changes operational validator presentation only and discharges no derivation burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Validator adapters task evidence registries derivatives and checkpoint evidence are operational only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+core_validator_compact_receipts:
+  status: "PASS"
+  acceptance_path: "research_control/tasks/RT-20260716-005/artifacts/core_validator_reporting_migration.json"
+  adapter_count: 4
+  stable_gate_ids: true
+  stable_finding_ids: true
+  content_manifest_identity: true
+  exit_code_parity: true
+  error_multiset_parity: true
+  warning_multiset_parity: true
+  research_control_clean_compact_bytes: 230
+  research_control_failed_compact_bytes: 2742
+  memory_clean_compact_bytes: 230
+  memory_synthetic_failed_compact_bytes: 281
+  classifier_clean_compact_bytes: 223
+  classifier_failed_compact_bytes: 550
+  documentation_impact_clean_compact_bytes: 227
+  documentation_impact_failed_compact_bytes: 599
+  pass_output_budget_met: true
+  failed_output_budget_met: true
+  full_receipts_local_and_atomic: true
+  legacy_output_compatibility: true
+  validator_decision_logic_changed: false
+  warning_taxonomy_changed: false
+  shared_reporter_changed: false
+  tests_changed: false
+  tracked_full_receipt_created: false
+output_paths:
+  - "scripts/research_control/validate_research_control.py"
+  - ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - "scripts/project_control/classify_project_changes.py"
+  - "scripts/project_control/validate_documentation_impact.py"
+  - "research_control/tasks/RT-20260716-005/artifacts/core_validator_reporting_migration.json"
+  - "research_control/tasks/RT-20260716-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260716-005/jobs/completions/AJC-AJ-RT-20260716-005-001.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local retrieval PASS source_objects=809 relationships=4031 semantics=809 vault=809"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | selected validator tooling control task and generated derivative paths with no blocked paths"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | ready advisory route and no competing open signal"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | signal registry valid"
+  - ".venv/bin/python -m py_compile scripts/research_control/validate_research_control.py .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py scripts/project_control/classify_project_changes.py scripts/project_control/validate_documentation_impact.py | exit_code=0"
+  - ".venv/bin/python -m unittest tests/test_validate_research_control.py tests/test_memory_system.py tests/test_memory_cli_modes.py tests/test_memory_operations.py tests/test_project_change_classifier.py tests/test_validation_reporting.py | exit_code=0 | 143 tests PASS"
+  - ".venv/bin/python -m unittest tests/test_research_control.py | exit_code=0 | 141 tests PASS"
+  - ".venv/bin/python -m unittest tests/test_memory_cli_modes.py tests/test_project_change_classifier.py tests/test_validation_reporting.py | exit_code=0 | 76 focused tests PASS after final adapter review"
+  - "legacy planner shadow comparison harness | exit_code=0 | clean and failed exits error multisets warning multisets and operational authority PASS for all four adapters"
+  - "output byte measurement harness | exit_code=0 | maximum clean bytes=230 maximum failed bytes=2742"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | compact memory profile PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | compact memory profile PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | compact documentation-impact PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | compact research-control diff PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260716-005-001 --no-commit | exit_code=0 | ready_to_commit staged_tree=83dd0319b742c3e8b5fa2866f066bcd1163db252"
+  - "git diff --check | exit_code=0"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P4-T04 was checkpointed and explicitly unlocked P4-T05; relay lease branch clean entry worktree canonical plan and active control were verified before the first write."
+      - "The common reporter receipt and identity policies role contract required sources and lack of a competing open project-improvement signal were inspected directly."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The four adapters preserve existing report construction decisions warning taxonomies normalized findings and exit codes while adding deterministic registered gate and finding IDs."
+      - "Working identities hash HEAD the binary tracked diff untracked paths and untracked content plus the normalized legacy result payload."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Two focused existing-test shards totaling 284 tests pass and the documentation-mode compatibility regression is repaired."
+      - "Clean outputs are at most 230 bytes and representative failures are at most 2742 bytes while complete common receipts remain in ignored local storage."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The governed no-commit checkpoint returned ready_to_commit with every acceptance gate passing."
+      - "The accepted staged transaction tree was 83dd0319b742c3e8b5fa2866f066bcd1163db252 before this truthful closeout evidence update."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Canonical memory synchronization regenerated and validated task-index dependency-graph wiki and registry derivatives."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and the following validate-only pass both returned compact PASS receipts."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Working and staged integrated research-control checks each passed with zero hard failures and 1599 historical warnings."
+      - "The warning counts matched across working and staged scope and no scientific claim authority was introduced."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260716-005/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: "Root public and workflow documentation remains unchanged because the canonical plan and task-local evidence already govern this internal adapter."
+project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 task changes operational validator reporting only. It does not authorize P4-T06 local-agent rules CI planner shared-reporter or test mutation canonical ontology edit source-law adoption general EqSrc discharge matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation or any receipt registry derivative test result or checkpoint evidence as physics proof."
+verdict: "v19_p4_t05_core_validator_compact_receipts_pass_p4_t06_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P4-T05 makes the selected high-frequency validators bounded and receipt-addressable without changing decisions findings compatibility exits or scientific-authority boundaries."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P4-T06 local-agent summary-consumption and receipt-expansion AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 809
+    relationship_row_count: 4031
+    semantic_row_count: 809
+    vault_row_count: 809
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_local_retrieval_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

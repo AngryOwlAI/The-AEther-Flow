@@ -22,6 +22,8 @@ except ImportError:  # pragma: no cover - package import path for tests
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 REGISTRY_DIR = REPO_ROOT / "registries"
 CONTROL_DIR = REPO_ROOT / "research_control"
 PROJECT_CONTROL_SCRIPT_DIR = REPO_ROOT / "scripts" / "project_control"
@@ -31,6 +33,17 @@ if str(PROJECT_CONTROL_SCRIPT_DIR) not in sys.path:
 from project_improvement_handoff_validation import (  # noqa: E402
     conditional_checkpoint_sidecar_paths,
     validate_project_improvement_handoffs as validate_project_improvement_handoff_records,
+)
+from scripts.validation.models import (  # noqa: E402
+    ValidationFinding as CommonValidationFinding,
+    ValidationGateResult,
+    ValidationRun,
+)
+from scripts.validation.reporting import (  # noqa: E402
+    DEFAULT_RECEIPT_ROOT,
+    add_reporting_arguments,
+    emit_report,
+    options_from_namespace,
 )
 
 try:
@@ -5920,11 +5933,127 @@ def validate_all(
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    add_reporting_arguments(parser)
     parser.add_argument("--json", action="store_true", help="Emit machine-readable results.")
+    parser.add_argument(
+        "--legacy-human",
+        action="store_true",
+        help="Emit the previous unbounded human-readable output.",
+    )
     parser.add_argument("--check-diff", action="store_true", help="Check current git diff against the latest active/completed AgentJob.")
     parser.add_argument("--staged-only", action="store_true", help="Check staged changes only.")
     parser.add_argument("--base-ref", default="HEAD", help="Git base ref for --check-diff.")
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    common_mode_selected = any(
+        getattr(args, name)
+        for name in ("summary", "json_summary", "full_json", "receipt", "quiet")
+    )
+    if args.json and (args.legacy_human or common_mode_selected):
+        parser.error("--json cannot be combined with another reporting mode")
+    if args.legacy_human and common_mode_selected:
+        parser.error("--legacy-human cannot be combined with a common reporting mode")
+    return args
+
+
+def _legacy_payload(report: ValidationReport) -> dict[str, object]:
+    return {
+        "errors": report.errors,
+        "warnings": report.warnings,
+        "findings": report.findings,
+    }
+
+
+def _finding_id(gate_id: str, level: str, message: str, occurrence: int) -> str:
+    prefix = gate_id.replace("_", "-").upper()
+    digest = hashlib.sha256(
+        json.dumps(
+            {"level": level, "message": message, "occurrence": occurrence},
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode("utf-8")
+    ).hexdigest()[:12].upper()
+    return f"{prefix}-{level}-{digest}"
+
+
+def _working_tree_digest(payload: dict[str, object]) -> str:
+    digest = hashlib.sha256(
+        json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode(
+            "utf-8"
+        )
+    )
+    results: dict[str, bytes] = {}
+    for label, command in (
+        ("head", ["git", "rev-parse", "HEAD"]),
+        ("diff", ["git", "diff", "--no-ext-diff", "--binary", "HEAD", "--"]),
+        ("untracked", ["git", "ls-files", "--others", "--exclude-standard", "-z"]),
+    ):
+        completed = subprocess.run(
+            command,
+            cwd=REPO_ROOT,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+        if completed.returncode != 0:
+            return digest.hexdigest()
+        results[label] = completed.stdout
+        digest.update(label.encode("ascii") + b"\0" + completed.stdout)
+    for raw_path in sorted(path for path in results["untracked"].split(b"\0") if path):
+        path = REPO_ROOT / raw_path.decode("utf-8", errors="surrogateescape")
+        if path.is_file():
+            digest.update(b"untracked-content\0" + raw_path + b"\0" + path.read_bytes())
+    return digest.hexdigest()
+
+
+def adapt_to_common_run(report: ValidationReport, args: argparse.Namespace) -> ValidationRun:
+    gate_id = "research_control_diff" if args.check_diff else "research_control_core"
+    occurrence_counts: dict[tuple[str, str], int] = {}
+    findings: list[CommonValidationFinding] = []
+    for level, code, messages in (
+        ("ERROR", "research_control_error", report.errors),
+        ("WARN", "research_control_warning", report.warnings),
+    ):
+        for message in messages:
+            key = (level, message)
+            occurrence_counts[key] = occurrence_counts.get(key, 0) + 1
+            findings.append(
+                CommonValidationFinding(
+                    finding_id=_finding_id(
+                        gate_id,
+                        level,
+                        message,
+                        occurrence_counts[key],
+                    ),
+                    level=level,
+                    code=code,
+                    message=message,
+                )
+            )
+    payload = {
+        "legacy": _legacy_payload(report),
+        "check_diff": args.check_diff,
+        "staged_only": args.staged_only,
+        "base_ref": args.base_ref,
+    }
+    digest = _working_tree_digest(payload)
+    status = "PASS" if report.ok() else "FAIL"
+    exit_code = 0 if report.ok() else 1
+    gate = ValidationGateResult(
+        gate_id=gate_id,
+        status=status,
+        severity="blocking",
+        exit_code=exit_code,
+        findings=tuple(findings),
+    )
+    prefix = gate_id.replace("_", "-").upper()
+    return ValidationRun(
+        run_id=f"{prefix}-{digest[:16].upper()}",
+        tree_hash=f"working-sha256:{digest}",
+        status=status,
+        exit_code=exit_code,
+        gate_results=(gate,),
+        profile="shadow_planner",
+    )
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -5935,17 +6064,9 @@ def main(argv: list[str] | None = None) -> int:
         staged_only=args.staged_only,
     )
     if args.json:
-        print(
-            json.dumps(
-                {
-                    "errors": report.errors,
-                    "warnings": report.warnings,
-                    "findings": report.findings,
-                },
-                indent=2,
-            )
-        )
-    else:
+        print(json.dumps(_legacy_payload(report), indent=2))
+        return 0 if report.ok() else 1
+    if args.legacy_human:
         if report.errors:
             print("Research-control validation failed:")
             for error in report.errors:
@@ -5954,7 +6075,13 @@ def main(argv: list[str] | None = None) -> int:
             print("Research-control validation passed.")
         for warning in report.warnings:
             print(f"Warning: {warning}")
-    return 0 if report.ok() else 1
+        return 0 if report.ok() else 1
+    return emit_report(
+        adapt_to_common_run(report, args),
+        options=options_from_namespace(args),
+        receipt_root=REPO_ROOT / DEFAULT_RECEIPT_ROOT,
+        stream=sys.stdout,
+    )
 
 
 if __name__ == "__main__":

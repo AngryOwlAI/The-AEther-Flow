@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import fnmatch
+import hashlib
 import json
 import re
 import subprocess
@@ -15,6 +16,8 @@ from typing import Iterable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
@@ -23,6 +26,17 @@ if str(RESEARCH_CONTROL_SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(RESEARCH_CONTROL_SCRIPT_DIR))
 
 from project_signal_types import signal_type_names  # noqa: E402
+from scripts.validation.models import (  # noqa: E402
+    ValidationFinding,
+    ValidationGateResult,
+    ValidationRun,
+)
+from scripts.validation.reporting import (  # noqa: E402
+    DEFAULT_RECEIPT_ROOT,
+    add_reporting_arguments,
+    emit_report,
+    options_from_namespace,
+)
 from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
 
 IGNORED_PREFIXES = (".local/", ".venv/", "__pycache__/")
@@ -446,27 +460,117 @@ def classify_paths(paths: Iterable[str]) -> dict[str, object]:
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--json", action="store_true", help="Emit JSON. This is the default.")
+    add_reporting_arguments(parser)
+    parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Emit the previous complete JSON payload.",
+    )
     parser.add_argument("--staged", action="store_true", help="Classify staged changes only.")
     parser.add_argument("--base-ref", default="HEAD", help="Git base reference.")
     parser.add_argument("--no-untracked", action="store_true", help="Ignore untracked files.")
     parser.add_argument("--paths", nargs="*", help="Classify explicit paths instead of Git state.")
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    common_mode_selected = any(
+        getattr(args, name)
+        for name in ("summary", "json_summary", "full_json", "receipt", "quiet")
+    )
+    if args.json and common_mode_selected:
+        parser.error("--json cannot be combined with a common reporting mode")
+    return args
+
+
+def _working_tree_digest(payload: dict[str, object]) -> str:
+    digest = hashlib.sha256(
+        json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode(
+            "utf-8"
+        )
+    )
+    results: dict[str, bytes] = {}
+    for label, command in (
+        ("head", ["git", "rev-parse", "HEAD"]),
+        ("diff", ["git", "diff", "--no-ext-diff", "--binary", "HEAD", "--"]),
+        ("untracked", ["git", "ls-files", "--others", "--exclude-standard", "-z"]),
+    ):
+        completed = subprocess.run(
+            command,
+            cwd=REPO_ROOT,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+        if completed.returncode != 0:
+            return digest.hexdigest()
+        results[label] = completed.stdout
+        digest.update(label.encode("ascii") + b"\0" + completed.stdout)
+    for raw_path in sorted(path for path in results["untracked"].split(b"\0") if path):
+        path = REPO_ROOT / raw_path.decode("utf-8", errors="surrogateescape")
+        if path.is_file():
+            digest.update(b"untracked-content\0" + raw_path + b"\0" + path.read_bytes())
+    return digest.hexdigest()
+
+
+def adapt_to_common_run(
+    payload: dict[str, object],
+    selected_paths: Iterable[str],
+    *,
+    error: str = "",
+) -> ValidationRun:
+    normalized_paths = sorted(set(selected_paths))
+    identity_payload = {"payload": payload, "selected_paths": normalized_paths}
+    digest = _working_tree_digest(identity_payload)
+    findings = ()
+    if error:
+        finding_digest = hashlib.sha256(error.encode("utf-8")).hexdigest()[:12].upper()
+        findings = (
+            ValidationFinding(
+                finding_id=f"CLASSIFY-CHANGES-ERROR-{finding_digest}",
+                level="ERROR",
+                code="change_classification_error",
+                message=error,
+            ),
+        )
+    status = "FAIL" if error else "PASS"
+    exit_code = 1 if error else 0
+    gate = ValidationGateResult(
+        gate_id="classify_changes",
+        status=status,
+        severity="blocking",
+        exit_code=exit_code,
+        findings=findings,
+    )
+    return ValidationRun(
+        run_id=f"CLASSIFY-CHANGES-{digest[:16].upper()}",
+        tree_hash=f"working-sha256:{digest}",
+        status=status,
+        exit_code=exit_code,
+        gate_results=(gate,),
+        profile="shadow_planner",
+    )
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
+    paths: list[str] = []
+    error = ""
     try:
         paths = args.paths if args.paths is not None else changed_paths_from_git(
             staged=args.staged,
             base_ref=args.base_ref,
             include_untracked=not args.no_untracked,
         )
-        print(json.dumps(classify_paths(paths), indent=2))
+        payload = classify_paths(paths)
     except RuntimeError as exc:
-        print(json.dumps({"status": "error", "error": str(exc)}, indent=2), file=sys.stderr)
-        return 1
-    return 0
+        error = str(exc)
+        payload = {"status": "error", "error": error}
+    if args.json:
+        print(json.dumps(payload, indent=2), file=sys.stderr if error else sys.stdout)
+        return 1 if error else 0
+    return emit_report(
+        adapt_to_common_run(payload, paths, error=error),
+        options=options_from_namespace(args),
+        receipt_root=REPO_ROOT / DEFAULT_RECEIPT_ROOT,
+        stream=sys.stderr if error else sys.stdout,
+    )
 
 
 if __name__ == "__main__":

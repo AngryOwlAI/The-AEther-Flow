@@ -19,6 +19,8 @@ from typing import Iterable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
@@ -47,6 +49,17 @@ from memory_operations import (  # noqa: E402
 from local_retrieval import local_retrieval_health as run_local_retrieval_health  # noqa: E402
 from publication import publication_validation as run_publication_validation  # noqa: E402
 from strict_yaml import StrictYamlError, load_frontmatter  # noqa: E402
+from scripts.validation.models import (  # noqa: E402
+    ValidationFinding as CommonValidationFinding,
+    ValidationGateResult,
+    ValidationRun,
+)
+from scripts.validation.reporting import (  # noqa: E402
+    DEFAULT_RECEIPT_ROOT,
+    add_reporting_arguments,
+    emit_report,
+    options_from_namespace,
+)
 
 COMMON_COLUMNS = [
     "object_id",
@@ -2879,17 +2892,137 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         action="store_true",
         help="Fail documentation validators on advisory reader-facing warnings where supported.",
     )
-    return parser.parse_args(argv)
+    add_reporting_arguments(parser)
+    parser.add_argument(
+        "--legacy-human",
+        action="store_true",
+        help="Emit the previous unbounded human-readable validation output.",
+    )
+    args = parser.parse_args(argv)
+    common_mode_selected = any(
+        getattr(args, name)
+        for name in ("summary", "json_summary", "full_json", "receipt", "quiet")
+    )
+    if args.legacy_human and common_mode_selected:
+        parser.error("--legacy-human cannot be combined with a common reporting mode")
+    return args
+
+
+def _memory_gate_id(report: ValidationReport) -> str:
+    return {
+        "memory_core": "memory_core",
+        "documentation_validation": "documentation_surface_audit",
+        "memory_legacy_composite": "profile_validate_memory",
+    }.get(report.gate_id, "profile_validate_memory")
+
+
+def _memory_finding_id(
+    gate_id: str,
+    legacy_id: str,
+    level: str,
+    message: str,
+    occurrence: int,
+) -> str:
+    prefix = re.sub(r"[^A-Z0-9]+", "-", f"{gate_id}-{legacy_id}".upper()).strip("-")
+    prefix = prefix[:96].rstrip("-") or "MEMORY-FINDING"
+    digest = hashlib.sha256(
+        json.dumps(
+            {"level": level, "message": message, "occurrence": occurrence},
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode("utf-8")
+    ).hexdigest()[:12].upper()
+    return f"{prefix}-{digest}"
+
+
+def _working_tree_digest(payload: dict[str, object]) -> str:
+    digest = hashlib.sha256(
+        json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode(
+            "utf-8"
+        )
+    )
+    results: dict[str, bytes] = {}
+    for label, command in (
+        ("head", ["git", "rev-parse", "HEAD"]),
+        ("diff", ["git", "diff", "--no-ext-diff", "--binary", "HEAD", "--"]),
+        ("untracked", ["git", "ls-files", "--others", "--exclude-standard", "-z"]),
+    ):
+        completed = subprocess.run(
+            command,
+            cwd=REPO_ROOT,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+        if completed.returncode != 0:
+            return digest.hexdigest()
+        results[label] = completed.stdout
+        digest.update(label.encode("ascii") + b"\0" + completed.stdout)
+    for raw_path in sorted(path for path in results["untracked"].split(b"\0") if path):
+        path = REPO_ROOT / raw_path.decode("utf-8", errors="surrogateescape")
+        if path.is_file():
+            digest.update(b"untracked-content\0" + raw_path + b"\0" + path.read_bytes())
+    return digest.hexdigest()
+
+
+def adapt_to_common_run(
+    report: ValidationReport,
+    documentation_summary: dict[str, object] | None,
+) -> ValidationRun:
+    gate_id = _memory_gate_id(report)
+    occurrence_counts: dict[tuple[str, str, str], int] = {}
+    findings: list[CommonValidationFinding] = []
+    for finding in report.findings:
+        level = "ERROR" if finding.severity == "error" else "WARN"
+        key = (finding.finding_id, level, finding.message)
+        occurrence_counts[key] = occurrence_counts.get(key, 0) + 1
+        findings.append(
+            CommonValidationFinding(
+                finding_id=_memory_finding_id(
+                    gate_id,
+                    finding.finding_id,
+                    level,
+                    finding.message,
+                    occurrence_counts[key],
+                ),
+                level=level,
+                code=finding.finding_id[:64],
+                message=finding.message,
+            )
+        )
+    payload = {
+        "report": report.to_dict(),
+        "documentation_summary": documentation_summary,
+    }
+    digest = _working_tree_digest(payload)
+    status = "PASS" if report.ok else "FAIL"
+    exit_code = 0 if report.ok else 1
+    gate = ValidationGateResult(
+        gate_id=gate_id,
+        status=status,
+        severity="blocking",
+        exit_code=exit_code,
+        findings=tuple(findings),
+    )
+    prefix = gate_id.replace("_", "-").upper()
+    return ValidationRun(
+        run_id=f"{prefix}-{digest[:16].upper()}",
+        tree_hash=f"working-sha256:{digest}",
+        status=status,
+        exit_code=exit_code,
+        gate_results=(gate,),
+        profile="shadow_planner",
+    )
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
+    documentation_summary: dict[str, object] | None = None
     if args.docs_only:
-        summary = documentation_sync(refresh_existing=args.refresh_existing)
-        print("Documentation mode summary: " + json.dumps(summary, sort_keys=True))
+        documentation_summary = documentation_sync(refresh_existing=args.refresh_existing)
         report = documentation_validation(strict_docs=args.strict_docs)
     elif args.docs_validate_only:
-        summary = documentation_scope_summary(
+        documentation_summary = documentation_scope_summary(
             {
                 **source_rows_by_registry(),
                 "WIKI_ARTIFACT_REGISTRY.csv": read_csv_rows(
@@ -2897,7 +3030,6 @@ def main(argv: list[str] | None = None) -> int:
                 ),
             }
         )
-        print("Documentation mode summary: " + json.dumps(summary, sort_keys=True))
         report = documentation_validation(strict_docs=args.strict_docs)
     elif args.validate_only:
         report = validate_all(strict_docs=args.strict_docs)
@@ -2906,8 +3038,21 @@ def main(argv: list[str] | None = None) -> int:
             refresh_existing=args.refresh_existing,
             strict_docs=args.strict_docs,
         )
-    report.print()
-    return 0 if report.ok else 1
+    machine_common_mode = any(
+        getattr(args, name)
+        for name in ("json_summary", "full_json", "receipt", "quiet")
+    )
+    if documentation_summary is not None and not machine_common_mode:
+        print("Documentation mode summary: " + json.dumps(documentation_summary, sort_keys=True))
+    if args.legacy_human:
+        report.print()
+        return 0 if report.ok else 1
+    return emit_report(
+        adapt_to_common_run(report, documentation_summary),
+        options=options_from_namespace(args),
+        receipt_root=REPO_ROOT / DEFAULT_RECEIPT_ROOT,
+        stream=sys.stdout,
+    )
 
 
 if __name__ == "__main__":

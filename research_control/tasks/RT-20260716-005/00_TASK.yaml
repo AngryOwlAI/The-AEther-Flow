@@ -1,0 +1,43 @@
+task_id: "RT-20260716-005"
+task_type: "core_validator_compact_receipts"
+status: "completed"
+created_at: "2026-07-16T15:33:24Z"
+updated_at: "2026-07-16T16:10:32Z"
+closed_at: "2026-07-16T16:10:32Z"
+parent_task_id: "RT-20260716-004"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260716-005"
+current_job_id: "AJ-RT-20260716-005-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-005"
+requires_human_gate: false
+human_authorization_note: "The user authorized a recursive v19 relay that executes one remaining dependency-ready task per generation and generation 6 selects P4-T05."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T05"
+  plan_task_name: "Adapt research-control memory and project-control gates to compact receipts"
+  recommendation_ids:
+    - "V19-R20"
+    - "V19-R21"
+    - "V19-R43"
+objective: "Adapt four high-frequency validators to the common compact reporter while preserving legacy output modes exit codes normalized findings and operational-only authority."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validator reporting only and no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p4_t05_core_validator_compact_receipts_pass_p4_t06_dependency_unlocked_no_physics_delta"
+claim_boundary_id: "CB-V19-P4-T05-CORE-VALIDATOR-COMPACT-001"
+claim_boundary:
+  allowed_scope: "The four P4-T05 validator output adapters task-local evidence control rows and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+next_recommended_action: "After a PASS checkpoint route one separately bounded P4-T06 local-agent summary-consumption AgentJob."
+documentation_impact_id: "DI-RT-20260716-005-001"
+completion_id: "AJC-AJ-RT-20260716-005-001"
+notes: "P4-T05 implementation and governed no-commit checkpoint validation passed; P4-T06 is dependency-ready while handoff-0740 and every physics boundary remain preserved."

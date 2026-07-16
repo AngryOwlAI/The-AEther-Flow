@@ -1,0 +1,242 @@
+{
+  "schema_id": "core_validator_reporting_migration_v1",
+  "task_id": "RT-20260716-005",
+  "job_id": "AJ-RT-20260716-005-001",
+  "plan_task_id": "P4-T05",
+  "created_at": "2026-07-16T15:53:10Z",
+  "status": "PASS",
+  "validated_at": "2026-07-16T16:10:32Z",
+  "migration_epoch": "shadow_planner",
+  "changed_adapters": [
+    "scripts/research_control/validate_research_control.py",
+    ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py",
+    "scripts/project_control/classify_project_changes.py",
+    "scripts/project_control/validate_documentation_impact.py"
+  ],
+  "inspected_not_changed": [
+    "scripts/project_control/collect_project_improvement_signals.py",
+    "scripts/validation/models.py",
+    "scripts/validation/reporting.py"
+  ],
+  "gate_ids": [
+    "research_control_core",
+    "research_control_diff",
+    "profile_validate_memory",
+    "memory_core",
+    "documentation_surface_audit",
+    "classify_changes",
+    "documentation_impact"
+  ],
+  "selected_paths": {
+    "classifier_clean_case": [
+      "scripts/project_control/classify_project_changes.py"
+    ],
+    "documentation_impact_clean_case": [],
+    "documentation_impact_failed_case": [
+      "scripts/project_control/validate_documentation_impact.py"
+    ],
+    "research_control_failed_case": [
+      "base_ref=definitely-invalid-ref"
+    ]
+  },
+  "baseline": {
+    "research_control_clean_default_bytes": 19825,
+    "research_control_clean_json_bytes": 19596,
+    "research_control_failed_default_bytes": 20031,
+    "research_control_failed_json_bytes": 19812,
+    "memory_validate_default_bytes": 16,
+    "classifier_clean_repository_default_bytes": 481,
+    "documentation_impact_clean_default_bytes": 40,
+    "documentation_impact_clean_json_bytes": 652,
+    "documentation_impact_failed_default_bytes": 402,
+    "documentation_impact_failed_json_bytes": 1602
+  },
+  "post_change_measurements": [
+    {
+      "case": "research_control_clean_compact",
+      "gate_id": "research_control_core",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_ms": 14132,
+      "output_bytes": 230,
+      "error_count": 0,
+      "warning_count": 125,
+      "finding_count": 125
+    },
+    {
+      "case": "research_control_failed_compact",
+      "gate_id": "research_control_diff",
+      "status": "FAIL",
+      "exit_code": 1,
+      "duration_ms": 14159,
+      "output_bytes": 2742,
+      "error_count": 1,
+      "warning_count": 125,
+      "finding_count": 126
+    },
+    {
+      "case": "memory_validate_clean_compact",
+      "gate_id": "profile_validate_memory",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_ms": 7618,
+      "output_bytes": 230,
+      "error_count": 0,
+      "warning_count": 0,
+      "finding_count": 0
+    },
+    {
+      "case": "memory_core_synthetic_failed_summary",
+      "gate_id": "memory_core",
+      "status": "FAIL",
+      "exit_code": 1,
+      "duration_ms": 0,
+      "output_bytes": 281,
+      "error_count": 1,
+      "warning_count": 0,
+      "finding_count": 1
+    },
+    {
+      "case": "classifier_clean_compact",
+      "gate_id": "classify_changes",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_ms": 54,
+      "output_bytes": 223,
+      "error_count": 0,
+      "warning_count": 0,
+      "finding_count": 0
+    },
+    {
+      "case": "classifier_failed_compact",
+      "gate_id": "classify_changes",
+      "status": "FAIL",
+      "exit_code": 1,
+      "duration_ms": 73,
+      "output_bytes": 550,
+      "error_count": 1,
+      "warning_count": 0,
+      "finding_count": 1
+    },
+    {
+      "case": "documentation_impact_clean_compact",
+      "gate_id": "documentation_impact",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_ms": 58,
+      "output_bytes": 227,
+      "error_count": 0,
+      "warning_count": 0,
+      "finding_count": 0
+    },
+    {
+      "case": "documentation_impact_failed_compact",
+      "gate_id": "documentation_impact",
+      "status": "FAIL",
+      "exit_code": 1,
+      "duration_ms": 57,
+      "output_bytes": 599,
+      "error_count": 1,
+      "warning_count": 0,
+      "finding_count": 1
+    }
+  ],
+  "legacy_compatibility": {
+    "research_control_json_sha256_before": "b7991cf18e4d0773ca9e1eeaab649d9254b28e668dac2d5036cf4d196eaaccc2",
+    "research_control_json_sha256_after": "b7991cf18e4d0773ca9e1eeaab649d9254b28e668dac2d5036cf4d196eaaccc2",
+    "research_control_human_sha256_before": "f075c35a4ff7343e192854b3384188ef5cf3ba904f85e000e5e0880101036137",
+    "research_control_human_sha256_after": "f075c35a4ff7343e192854b3384188ef5cf3ba904f85e000e5e0880101036137",
+    "memory_human_sha256_before": "21d076bedeb2b890731d0b3f22e7c412f5c8a1b52c27b65001fc02c0321deb05",
+    "memory_human_sha256_after": "21d076bedeb2b890731d0b3f22e7c412f5c8a1b52c27b65001fc02c0321deb05",
+    "documentation_impact_clean_json_sha256_before": "3301d3fb04fdf4539aa88e2ba3ff10b2a7b42d0df5220c3a5eb82f2f2e25c772",
+    "documentation_impact_clean_json_sha256_after": "3301d3fb04fdf4539aa88e2ba3ff10b2a7b42d0df5220c3a5eb82f2f2e25c772",
+    "documentation_impact_failed_json_sha256_before": "32231bf2787c49388f1ec03351d05753c10c54d07beda7daa14b425b9e14d7a9",
+    "documentation_impact_failed_json_sha256_after": "32231bf2787c49388f1ec03351d05753c10c54d07beda7daa14b425b9e14d7a9",
+    "classifier_payload_parity": true
+  },
+  "shadow_comparison": {
+    "research_control_clean": "PASS",
+    "research_control_failed": "PASS",
+    "memory_clean": "PASS",
+    "memory_synthetic_failed": "PASS",
+    "classifier_clean": "PASS",
+    "classifier_failed": "PASS",
+    "documentation_impact_clean": "PASS",
+    "documentation_impact_failed": "PASS",
+    "exit_code_parity": true,
+    "error_multiset_parity": true,
+    "warning_multiset_parity": true
+  },
+  "output_budgets": {
+    "pass_hard_guard_bytes": 2048,
+    "failed_hard_guard_bytes": 8192,
+    "maximum_observed_pass_bytes": 230,
+    "maximum_observed_failed_bytes": 2742,
+    "pass_budget_met": true,
+    "failed_budget_met": true
+  },
+  "local_full_receipts_scope": "Representative pre-closeout measurements; each content-manifest identity binds its recorded working state while the governed checkpoint separately binds the accepted staged tree.",
+  "local_full_receipts": [
+    {
+      "case": "research_control_clean",
+      "path": ".local/validation-receipts/working-sha256-ac41b3a8f2fd2a403c259b1aabc4c42d24d2bb2a57e4ba53edd81e527fd9315e/RESEARCH-CONTROL-CORE-AC41B3A8F2FD2A40/full.json",
+      "sha256": "d8cd522daf1c4dd51eb0b6937f6c86315989ba3f2629bbfeaa46c0ee0df322fa"
+    },
+    {
+      "case": "research_control_failed",
+      "path": ".local/validation-receipts/working-sha256-dc84750c9b6406a8b4b8db33da82ac9cac90e0f0321636ca171afdc87c1045ca/RESEARCH-CONTROL-DIFF-DC84750C9B6406A8/full.json",
+      "sha256": "d92d8a13cfa2376635d39b2253cc3e0bb0f6a216051d3b07c5c69bd4a685e2e7"
+    },
+    {
+      "case": "memory_clean",
+      "path": ".local/validation-receipts/working-sha256-9cb932b6f80254021c793cddea6c7115fc62ce1dd7cbc6d40bc8477b5d0db7d4/PROFILE-VALIDATE-MEMORY-9CB932B6F8025402/full.json",
+      "sha256": "28e35ab17a4847515242a21fde25f6ffdd29839c1aa9121b01c6fbf3b1e1ab5e"
+    },
+    {
+      "case": "classifier_clean",
+      "path": ".local/validation-receipts/working-sha256-4b0fd1d78792945bcb78fc15894cbde7a114bc23718a0d10e0af2e66324e840a/CLASSIFY-CHANGES-4B0FD1D78792945B/full.json",
+      "sha256": "3abe37da5e0d580587480377874b02f5caa6f1ab81926bd6b3bb3d94f062398f"
+    },
+    {
+      "case": "classifier_failed",
+      "path": ".local/validation-receipts/working-sha256-a23768e166e0184dbcf78d5a37e6d2dd36055d42a76dc25c968857f3bf2b15f7/CLASSIFY-CHANGES-A23768E166E0184D/full.json",
+      "sha256": "066981a1195a785521fcdb4f48dc8b393acf3018ee7061b7ad2b22742e6e4240"
+    },
+    {
+      "case": "documentation_impact_clean",
+      "path": ".local/validation-receipts/working-sha256-39cc8d53ec3233f35398273a909a26be4f20e1c12d6a009c12ede688b6078dad/DOCUMENTATION-IMPACT-39CC8D53EC3233F3/full.json",
+      "sha256": "074dfe6a3be66e4910b0717d67afd5fe73a832f68ce1ec8133c6d91117ced81f"
+    },
+    {
+      "case": "documentation_impact_failed",
+      "path": ".local/validation-receipts/working-sha256-8fcf4012f10e927eb53c450bb5f54576a9ebfe6c9869d69c3dfb570a0e5bd3c3/DOCUMENTATION-IMPACT-8FCF4012F10E927E/full.json",
+      "sha256": "1010f64ff84ac80a37f7f9a8689048a5e710d60c2682553f265fb9287b7d8f2e"
+    }
+  ],
+  "checkpoint_acceptance": {
+    "status": "PASS",
+    "mode": "no_commit",
+    "result": "ready_to_commit",
+    "accepted_staged_tree": "83dd0319b742c3e8b5fa2866f066bcd1163db252",
+    "tree_scope": "Accepted before the final closeout-evidence update; the committing checkpoint revalidates the complete final transaction."
+  },
+  "receipt_policy": {
+    "atomic_common_reporter": true,
+    "raw_stdout_stderr_embedded": false,
+    "tracked_full_receipts_created": false,
+    "local_receipts_authoritative": false,
+    "working_identity_basis": "HEAD plus binary tracked diff plus sorted untracked paths and content plus the normalized validator result payload"
+  },
+  "authority": {
+    "scope": "operational_validation_only",
+    "source_authoritative": false,
+    "full_receipts_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "gate_chair_authority": false
+  },
+  "ordinary_research_handoff_preserved": "handoff-0740",
+  "scientific_claims_changed": false,
+  "distance_to_gr_delta_changed": false
+}

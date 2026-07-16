@@ -5,7 +5,10 @@ from __future__ import annotations
 
 import argparse
 import fnmatch
+import hashlib
 import json
+import re
+import subprocess
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -14,6 +17,8 @@ from typing import Any, Iterable
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 RESEARCH_CONTROL_DIR = REPO_ROOT / "scripts" / "research_control"
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
@@ -21,6 +26,17 @@ if str(RESEARCH_CONTROL_DIR) not in sys.path:
     sys.path.insert(0, str(RESEARCH_CONTROL_DIR))
 
 from classify_project_changes import changed_paths_from_git, classify_paths  # noqa: E402
+from scripts.validation.models import (  # noqa: E402
+    ValidationFinding,
+    ValidationGateResult,
+    ValidationRun,
+)
+from scripts.validation.reporting import (  # noqa: E402
+    DEFAULT_RECEIPT_ROOT,
+    add_reporting_arguments,
+    emit_report,
+    options_from_namespace,
+)
 from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
 
 
@@ -308,16 +324,119 @@ def validate_paths(paths: Iterable[str]) -> DocumentationImpactReport:
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    add_reporting_arguments(parser)
     parser.add_argument("--json", action="store_true", help="Emit JSON.")
+    parser.add_argument(
+        "--legacy-human",
+        action="store_true",
+        help="Emit the previous human-readable PASS or failure list.",
+    )
     parser.add_argument("--staged", action="store_true", help="Validate staged changes only.")
     parser.add_argument("--base-ref", default="HEAD", help="Git base reference.")
     parser.add_argument("--no-untracked", action="store_true", help="Ignore untracked files.")
     parser.add_argument("--paths", nargs="*", help="Validate explicit paths instead of Git state.")
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    common_mode_selected = any(
+        getattr(args, name)
+        for name in ("summary", "json_summary", "full_json", "receipt", "quiet")
+    )
+    if args.json and (args.legacy_human or common_mode_selected):
+        parser.error("--json cannot be combined with another reporting mode")
+    if args.legacy_human and common_mode_selected:
+        parser.error("--legacy-human cannot be combined with a common reporting mode")
+    return args
+
+
+def _finding_id(level: str, message: str, occurrence: int) -> str:
+    prefix = re.sub(r"[^A-Z0-9]+", "-", f"DOCUMENTATION-IMPACT-{level}").strip("-")
+    digest = hashlib.sha256(
+        json.dumps(
+            {"message": message, "occurrence": occurrence},
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode("utf-8")
+    ).hexdigest()[:12].upper()
+    return f"{prefix}-{digest}"
+
+
+def _working_tree_digest(payload: dict[str, object]) -> str:
+    digest = hashlib.sha256(
+        json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode(
+            "utf-8"
+        )
+    )
+    results: dict[str, bytes] = {}
+    for label, command in (
+        ("head", ["git", "rev-parse", "HEAD"]),
+        ("diff", ["git", "diff", "--no-ext-diff", "--binary", "HEAD", "--"]),
+        ("untracked", ["git", "ls-files", "--others", "--exclude-standard", "-z"]),
+    ):
+        completed = subprocess.run(
+            command,
+            cwd=REPO_ROOT,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+        if completed.returncode != 0:
+            return digest.hexdigest()
+        results[label] = completed.stdout
+        digest.update(label.encode("ascii") + b"\0" + completed.stdout)
+    for raw_path in sorted(path for path in results["untracked"].split(b"\0") if path):
+        path = REPO_ROOT / raw_path.decode("utf-8", errors="surrogateescape")
+        if path.is_file():
+            digest.update(b"untracked-content\0" + raw_path + b"\0" + path.read_bytes())
+    return digest.hexdigest()
+
+
+def adapt_to_common_run(
+    report: DocumentationImpactReport,
+    selected_paths: Iterable[str],
+) -> ValidationRun:
+    occurrence_counts: dict[tuple[str, str], int] = {}
+    findings: list[ValidationFinding] = []
+    for level, code, messages in (
+        ("ERROR", "documentation_impact_error", report.errors),
+        ("WARN", "documentation_impact_warning", report.warnings),
+    ):
+        for message in messages:
+            key = (level, message)
+            occurrence_counts[key] = occurrence_counts.get(key, 0) + 1
+            findings.append(
+                ValidationFinding(
+                    finding_id=_finding_id(level, message, occurrence_counts[key]),
+                    level=level,
+                    code=code,
+                    message=message,
+                )
+            )
+    payload = {
+        "legacy": report.as_dict(),
+        "selected_paths": sorted(set(selected_paths)),
+    }
+    digest = _working_tree_digest(payload)
+    status = "PASS" if report.ok() else "FAIL"
+    exit_code = 0 if report.ok() else 1
+    gate = ValidationGateResult(
+        gate_id="documentation_impact",
+        status=status,
+        severity="blocking",
+        exit_code=exit_code,
+        findings=tuple(findings),
+    )
+    return ValidationRun(
+        run_id=f"DOCUMENTATION-IMPACT-{digest[:16].upper()}",
+        tree_hash=f"working-sha256:{digest}",
+        status=status,
+        exit_code=exit_code,
+        gate_results=(gate,),
+        profile="shadow_planner",
+    )
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
+    paths: list[str] = []
     try:
         paths = args.paths if args.paths is not None else changed_paths_from_git(
             staged=args.staged,
@@ -331,13 +450,21 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.json:
         print(json.dumps(report.as_dict(), indent=2))
-    elif report.ok():
-        print("Documentation-impact validation passed.")
-    else:
-        print("Documentation-impact validation failed:")
-        for error in report.errors:
-            print(f"- {error}")
-    return 0 if report.ok() else 1
+        return 0 if report.ok() else 1
+    if args.legacy_human:
+        if report.ok():
+            print("Documentation-impact validation passed.")
+        else:
+            print("Documentation-impact validation failed:")
+            for error in report.errors:
+                print(f"- {error}")
+        return 0 if report.ok() else 1
+    return emit_report(
+        adapt_to_common_run(report, paths),
+        options=options_from_namespace(args),
+        receipt_root=REPO_ROOT / DEFAULT_RECEIPT_ROOT,
+        stream=sys.stdout,
+    )
 
 
 if __name__ == "__main__":
