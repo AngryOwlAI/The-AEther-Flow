@@ -1,0 +1,172 @@
+{
+  "schema_id": "v19_p5_t04_planner_scenario_report_v1",
+  "task_id": "RT-20260716-010",
+  "job_id": "AJ-RT-20260716-010-001",
+  "plan_task_id": "P5-T04",
+  "created_at": "2026-07-16T19:04:30Z",
+  "status": "PASS",
+  "migration_epoch": "shadow_planner",
+  "manifest": {
+    "path": "research_control/design/validation_gate_manifest_v1.yaml",
+    "manifest_id": "validation-gate-manifest-v1",
+    "canonical_sha256": "7d9f04c5b06e7a5385cf7e101dbbdf4cc265f9ab1ee3a0307b2b435f5657747b",
+    "raw_file_sha256": "35d4b1e186fdbabcd48a78ce6d3dd92aef863cde8aee090bdf4d780ac6b7feae",
+    "gate_count": 37,
+    "execution_authority": "legacy",
+    "active_supersedence_count": 0
+  },
+  "scenario_count": 13,
+  "scenarios": [
+    {
+      "scenario_id": "validator_code_affected",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 12,
+      "required_selected_gate_ids": ["classify_changes", "documentation_impact", "memory_sync", "memory_core", "research_control_diff", "git_diff_check"]
+    },
+    {
+      "scenario_id": "control_state_affected",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 14,
+      "required_selected_gate_ids": ["dependency_graph_freshness", "task_index_freshness", "research_control_diff"]
+    },
+    {
+      "scenario_id": "registry_backed_mermaid_affected",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 13,
+      "required_selected_gate_ids": ["mermaid_sources"]
+    },
+    {
+      "scenario_id": "required_pdf_affected",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 13,
+      "required_selected_gate_ids": ["targeted_pdf_build"]
+    },
+    {
+      "scenario_id": "publication_spec_affected",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 13,
+      "required_selected_gate_ids": ["publication_validation"]
+    },
+    {
+      "scenario_id": "memory_code_affected",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 12,
+      "required_selected_gate_ids": ["memory_sync", "memory_core"]
+    },
+    {
+      "scenario_id": "graph_and_task_index_input_affected",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 14,
+      "required_selected_gate_ids": ["dependency_graph_freshness", "task_index_freshness"]
+    },
+    {
+      "scenario_id": "scientific_checker_affected",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 13,
+      "required_selected_gate_ids": ["test_shard_repository"]
+    },
+    {
+      "scenario_id": "local_retrieval_doctor",
+      "requested_profile": "doctor",
+      "effective_profile": "doctor",
+      "status": "READY",
+      "selected_gate_count": 8,
+      "required_selected_gate_ids": ["local_retrieval_sync", "local_retrieval_lint", "memory_status_diagnostic"]
+    },
+    {
+      "scenario_id": "generated_only_block",
+      "requested_profile": "affected",
+      "effective_profile": "full",
+      "status": "BLOCKED_CONFIGURATION",
+      "selected_gate_count": 27,
+      "required_selected_gate_ids": ["profile_full_research_control"],
+      "blocked_path_count": 1
+    },
+    {
+      "scenario_id": "unknown_governed_path_fallback",
+      "requested_profile": "fast",
+      "effective_profile": "full",
+      "status": "READY",
+      "selected_gate_count": 27,
+      "required_selected_gate_ids": ["profile_full_research_control"],
+      "unknown_path_count": 1
+    },
+    {
+      "scenario_id": "mixed_documentation_validator_affected",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 13,
+      "required_selected_gate_ids": ["documentation_impact", "research_control_diff", "mermaid_sources"],
+      "deduplicated": true
+    },
+    {
+      "scenario_id": "checkpoint_final_staged_invariants",
+      "requested_profile": "checkpoint",
+      "effective_profile": "checkpoint",
+      "status": "READY",
+      "selected_gate_count": 10,
+      "required_selected_gate_ids": ["project_improvement_signals", "documentation_impact", "memory_sync", "memory_core", "research_control_diff", "test_shard_repository", "git_diff_check", "checkpoint_transaction"],
+      "checkpoint_transaction_last": true
+    }
+  ],
+  "invariant_results": {
+    "deterministic_canonical_json": "PASS",
+    "input_path_order_independent": "PASS",
+    "selected_gate_ids_unique": "PASS",
+    "every_selected_gate_has_reason": "PASS",
+    "skipped_not_applicable_entries_emitted": "PASS",
+    "unknown_path_entries_emitted": "PASS",
+    "blocked_path_entries_emitted": "PASS",
+    "prerequisites_expanded": "PASS",
+    "cycles_rejected": "PASS",
+    "malformed_or_schema_unknown_manifest_rejected": "PASS",
+    "active_supersedence_without_evidence_contract_rejected": "PASS",
+    "mutators_precede_ready_read_only_gates": "PASS",
+    "planner_command_execution_count": 0,
+    "scientific_claims_changed": false,
+    "physics_authority_changed": false
+  },
+  "legacy_shadow_comparison": {
+    "status": "PASS",
+    "comparison_profile": "checkpoint",
+    "legacy_execution_authority_preserved": true,
+    "legacy_required_blocking_gate_ids": ["project_improvement_signals", "documentation_impact", "memory_sync", "memory_core", "research_control_diff", "git_diff_check", "checkpoint_transaction"],
+    "planner_selected_blocking_gate_ids": ["project_improvement_signals", "documentation_impact", "memory_sync", "memory_core", "research_control_diff", "git_diff_check", "checkpoint_transaction"],
+    "task_specific_test_obligation_covered_by": "test_shard_repository",
+    "unexplained_missing_blocking_gate_ids": [],
+    "unexplained_extra_blocking_gate_ids": [],
+    "planner_executed_gate_commands": false,
+    "note": "The comparison checks the final checkpoint obligation set. Legacy commands remain authoritative and are executed only by the existing acceptance workflow, not by this planner."
+  },
+  "test_results": {
+    "focused_test_count": 26,
+    "focused_failure_count": 0,
+    "combined_compatibility_test_count": 93,
+    "combined_failure_count": 0,
+    "cli_single_run_wall_seconds": 0.05,
+    "affected_plan_100_build_seconds": 0.688402
+  },
+  "content_hashes": {
+    "scripts/validation/plan.py": "sha256:daf5a1e1ca95afd299198ea8fb5bfd3ca1f374bca9106b460b460a2c0ed712bf",
+    "scripts/validation/cli.py": "sha256:ebc8aee751f38d550edc2769532d0fba0b684dc36aa085df7ef557f911e9c419",
+    "tests/test_validation_planner.py": "sha256:03c1026b9569640d551f581f596118c72afdd2ab64b7d8ad1ee1b97c94f71369"
+  },
+  "boundary": "P5-T04 produces a pure shadow plan only. It does not execute validators, activate supersedence, change legacy authority, mutate ordinary research, or create physics, ontology, proof, benchmark, or Gate Chair authority."
+}

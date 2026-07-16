@@ -1,0 +1,253 @@
+job_id: "AJ-RT-20260716-010-001"
+completion_id: "AJC-AJ-RT-20260716-010-001"
+task_id: "RT-20260716-010"
+decision_id: "DDR-20260716-010"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-010"
+status: "completed"
+created_at: "2026-07-16T18:49:48Z"
+started_at: "2026-07-16T18:49:48Z"
+completed_at: "2026-07-16T19:04:30Z"
+objective: "Build a pure deterministic shadow planner that converts classifier evidence profile scope role obligations and the registered manifest into one ordered deduplicated validation plan without executing commands."
+completion_summary: "Completed v19 P5-T04 with a fail-closed deterministic shadow planner, explicit-path and Git-derived CLI inputs, prerequisite and mutator ordering, reasoned selected skipped unknown and blocked entries, compact scenario evidence, and zero validator command execution."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "research_control/design/validation_gate_manifest_schema_v1.md"
+  - "research_control/design/validation_change_family_taxonomy_v1.md"
+  - "research_control/design/validation_obligation_resolution_policy_v1.md"
+  - "scripts/project_control/classify_project_changes.py"
+  - "research_control/tasks/RT-20260716-009/jobs/completions/AJC-AJ-RT-20260716-009-001.yaml"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P5-T04"
+  recommendation_ids:
+    - "V19-R01"
+    - "V19-R23"
+    - "V19-R24"
+    - "V19-R30"
+    - "V19-R46"
+  migration_epoch: "shadow_planner"
+  implemented_task_scope: "One pure planner module one CLI entry point one focused regression module task-local evidence control rows and governed derivatives only."
+  completed_v19_tasks_to_date:
+    - "P0-T01 through P5-T04"
+  downstream_tasks_not_implemented:
+    - "P5-T05 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p5_t04_deterministic_validation_planner"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P5-T04"
+  coverage_summary: "The planner now deterministically converts declared classifier manifest profile scope and role-obligation inputs into a reasoned ordered shadow plan without executing commands."
+physics_progress_status:
+  status: "project_system_validation_planner_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P5-T04 changes operational validation planning only and discharges no derivation burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Planner code tests task evidence control registries derivatives and checkpoint evidence are operational only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+planner_result:
+  status: "PASS"
+  planner_path: "scripts/validation/plan.py"
+  cli_path: "scripts/validation/cli.py"
+  tests_path: "tests/test_validation_planner.py"
+  report_path: "research_control/tasks/RT-20260716-010/artifacts/planner_scenario_report.json"
+  manifest_path: "research_control/design/validation_gate_manifest_v1.yaml"
+  manifest_gate_count: 37
+  manifest_canonical_sha256: "7d9f04c5b06e7a5385cf7e101dbbdf4cc265f9ab1ee3a0307b2b435f5657747b"
+  scenario_count: 13
+  focused_test_count: 26
+  focused_test_failures: 0
+  combined_compatibility_test_count: 93
+  combined_compatibility_failures: 0
+  planner_command_execution_count: 0
+  legacy_execution_authority_preserved: true
+  active_supersedence_count: 0
+  unknown_governed_path_profile: "full"
+  generated_only_status: "BLOCKED_CONFIGURATION"
+  unexplained_legacy_planner_blocking_mismatch_count: 0
+  planner_sha256: "daf5a1e1ca95afd299198ea8fb5bfd3ca1f374bca9106b460b460a2c0ed712bf"
+  cli_sha256: "ebc8aee751f38d550edc2769532d0fba0b684dc36aa085df7ef557f911e9c419"
+  planner_tests_sha256: "03c1026b9569640d551f581f596118c72afdd2ab64b7d8ad1ee1b97c94f71369"
+  report_sha256: "426310c73d3b7a541bfdb67578a9e52c77c02760ffaf1d4d0b735383adf7f55e"
+output_paths:
+  - "scripts/validation/plan.py"
+  - "scripts/validation/cli.py"
+  - "tests/test_validation_planner.py"
+  - "research_control/tasks/RT-20260716-010/artifacts/planner_scenario_report.json"
+  - "research_control/tasks/RT-20260716-010/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260716-010/jobs/completions/AJC-AJ-RT-20260716-010-001.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh performed then memory core freshness and local retrieval PASS source_objects=812 relationships=4044 semantics=812 vault=812"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | affected profile with control-state validator-code and orchestration tags and no blocked paths"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | no competing open signal; plan supplies bounded P5-T04 authority"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | signal registry valid"
+  - ".venv/bin/python -m unittest tests/test_validation_planner.py | exit_code=0 | 26 tests PASS"
+  - ".venv/bin/python -m unittest tests/test_validation_manifest.py tests/test_project_change_classifier.py tests/test_validation_planner.py | exit_code=0 | 93 tests PASS"
+  - ".venv/bin/python -m py_compile scripts/validation/plan.py scripts/validation/cli.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/validation/cli.py plan --profile affected --paths scripts/validation/plan.py --json | exit_code=0 | deterministic JSON status READY authority legacy and planner_executes_commands=false"
+  - "/usr/bin/time -p .venv/bin/python scripts/validation/cli.py plan --profile affected --paths scripts/validation/plan.py --json | exit_code=0 | real=0.05 seconds"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS gates=1 findings=1599"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | compact memory profile PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | compact memory profile PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260716-010-001 --no-commit | exit_code=0 | status=ready_to_commit staged_tree=8a155d69384c56840b4f88576c7a76d069c1ca79"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_receipts:
+  - gate_id: "validation_planner_tests"
+    status: "PASS"
+    receipt_path: "tests/test_validation_planner.py"
+    content_hash: "sha256:03c1026b9569640d551f581f596118c72afdd2ab64b7d8ad1ee1b97c94f71369"
+    counts:
+      error_count: 0
+      warning_count: 0
+      finding_count: 0
+      test_count: 26
+    relevant_finding_ids: []
+    tree_fingerprint: ""
+  - gate_id: "planner_legacy_shadow_comparison"
+    status: "PASS"
+    receipt_path: "research_control/tasks/RT-20260716-010/artifacts/planner_scenario_report.json"
+    content_hash: "sha256:426310c73d3b7a541bfdb67578a9e52c77c02760ffaf1d4d0b735383adf7f55e"
+    counts:
+      error_count: 0
+      warning_count: 0
+      finding_count: 0
+      scenario_count: 13
+      unexplained_mismatch_count: 0
+    relevant_finding_ids: []
+    tree_fingerprint: ""
+  - gate_id: "profile_validate_memory"
+    status: "PASS"
+    receipt_path: ".local/validation-receipts/working-sha256-7afafe3cf30ac880930fc66cda38c0c7767210fd1423cf2162bc6c3db33dcd58/PROFILE-VALIDATE-MEMORY-7AFAFE3CF30AC880/full.json"
+    content_hash: "sha256:8cf1ac1113882a36f30c95a3b4ee7622f376a4aa53bf18fa7df2213ea563207a"
+    counts:
+      error_count: 0
+      warning_count: 0
+      finding_count: 0
+      gate_count: 1
+    relevant_finding_ids: []
+    tree_fingerprint: "working-sha256:7afafe3cf30ac880930fc66cda38c0c7767210fd1423cf2162bc6c3db33dcd58"
+  - gate_id: "research_control_diff"
+    status: "PASS"
+    receipt_path: ".local/validation-receipts/working-sha256-22984894007b1eb1ecb94ec676d69c6731ab496cb0a61a926804423df325b723/RESEARCH-CONTROL-DIFF-22984894007B1EB1/full.json"
+    content_hash: "sha256:b88871961cba62ed36427f15c70e6ead258b5b9ba8ff8c29a17a36702afd6f65"
+    counts:
+      error_count: 0
+      warning_count: 1599
+      finding_count: 1599
+      gate_count: 1
+    relevant_finding_ids: []
+    tree_fingerprint: "working-sha256:22984894007b1eb1ecb94ec676d69c6731ab496cb0a61a926804423df325b723"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P5-T03 was checkpointed and explicitly unlocked P5-T04; relay lease branch clean entry worktree canonical plan and active control were verified before the first write."
+      - "The canonical manifest schema taxonomy classifier role contract and predecessor completion were inspected directly."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The planner emits deterministic selected skipped unknown and blocked entries with reasons while prerequisites and mutator ordering remain explicit."
+      - "Malformed manifests unknown fields active supersedence without evidence contracts prerequisite cycles and unknown governed paths fail closed."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Twenty-six focused tests and ninety-three combined manifest classifier and planner tests pass."
+      - "Thirteen scenarios cover affected checkpoint doctor full fallback mixed generated-only unknown path and registry-derived special families."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The governed no-commit checkpoint reached ready_to_commit with final staged tree 8a155d69384c56840b4f88576c7a76d069c1ca79."
+      - "The commit-producing checkpoint must restage and revalidate this final truthful closeout update."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Canonical memory synchronization completed without derivative drift outside the authorized transaction."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Canonical memory synchronization and the following validate-only pass returned compact PASS receipts."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The passing research-control diff gate evaluated changed-scope claim-language obligations."
+      - "No scientific claim authority was introduced."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260716-010/documentation_impact.yaml"
+  source_documentation_updated: false
+  no_op_receipt: true
+  summary: "The internal shadow-planner contract was already documented by P5-T04; legacy execution and user-facing workflow remain unchanged."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 812
+    relationship_row_count: 4044
+    semantic_row_count: 812
+    vault_row_count: 812
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_local_retrieval_status: "WARN"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."
+resolved_project_improvement_signals: []
+unresolved_items:
+  - "P5-T05 owns compilation of role and skill declarations into validation obligations."
+  - "P5-T06 and later own active supersedence profiles execution caching cutover and retirement."
+next_recommended_action: "Route one separately bounded P5-T05 role and skill validation-obligation compiler AgentJob."
+checkpoint_preflight:
+  status: "ready_to_commit"
+  staged_tree: "8a155d69384c56840b4f88576c7a76d069c1ca79"
+  sync_passes: 1
+  final_validator: "memory_legacy_composite"
+  final_validator_status: "PASS"
+  no_physics_authority: true
+  note: "The staged tree passed the governed no-commit checkpoint before this truthful closeout update; the commit-producing checkpoint must restage and revalidate the final tree."
