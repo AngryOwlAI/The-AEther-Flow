@@ -1,0 +1,120 @@
+{
+  "schema_id": "task_index_compact_output_acceptance_v1",
+  "task_id": "RT-20260716-003",
+  "job_id": "AJ-RT-20260716-003-001",
+  "created_at": "2026-07-16T14:05:41Z",
+  "status": "PASS",
+  "implementation": {
+    "validator_path": "scripts/research_control/validate_task_index.py",
+    "validator_sha256": "e537c9d64b831fdfc763f0e740102eaac180b8cd982b0f31585eda129d30684d",
+    "task_index_test_path": "tests/test_task_index_renderer.py",
+    "task_index_test_sha256": "7636a0ea4722d85d6b02782d3eec6fe157eab7208d8df673cfae1ca80e70d44d",
+    "reporter_test_path": "tests/test_validation_reporting.py",
+    "reporter_test_sha256": "7751979a004cbd8607959c8c13456f88c007dc22530824f6779bbd2741a087ca"
+  },
+  "focused_test_count": 32,
+  "live_pre_sync_case": {
+    "status": "FAIL",
+    "row_count": 913,
+    "hard_fail_count": 4,
+    "warning_count": 297,
+    "finding_count": 301,
+    "default_output_bytes": 927,
+    "hard_codes": [
+      "generated_output_stale",
+      "generated_output_stale",
+      "generated_output_stale",
+      "csv_rows_mismatch"
+    ],
+    "hard_findings_precede_warning_groups": true
+  },
+  "live_fresh_case": {
+    "status": "PASS",
+    "row_count": 913,
+    "source_fingerprint": "9f3d4c4563a72e335a03b2a71c5d14e8d15146bdd843dbb06f4be1dbfca405c3",
+    "csv_sha256": "5f82f57ab441a840d72de227ac88c98e999c8c74df581eb4429d3a92f8c3afd0",
+    "markdown_sha256": "70dd35da153dd94b86e334f16ecf2991ef5087a918deb015eeda7cac6c5b1412",
+    "wiki_markdown_sha256": "70dd35da153dd94b86e334f16ecf2991ef5087a918deb015eeda7cac6c5b1412",
+    "hard_fail_count": 0,
+    "warning_count": 297,
+    "finding_count": 297,
+    "default_output_bytes": 399,
+    "warning_groups": {
+      "missing_field": 293,
+      "missing_source": 4
+    },
+    "representative_task_limit": 3
+  },
+  "synthetic_cases": [
+    "fresh_task_index",
+    "stale_csv_rows",
+    "stale_markdown",
+    "header_mismatch",
+    "support_only_physics_delta",
+    "297_historical_warnings"
+  ],
+  "common_adapter": {
+    "stable_finding_ids": true,
+    "hard_finding_code_parity": true,
+    "exit_code_parity": true,
+    "pass_with_advisories_preserved": true,
+    "working_snapshot_hash_qualified": true,
+    "full_receipt_preserves_all_findings": true,
+    "receipt_write_failure_visible": true,
+    "default_receipt_pattern": ".local/validation-receipts/<working-sha256>/<run-id>/full.json"
+  },
+  "compatibility": {
+    "legacy_json_alias": "--json",
+    "legacy_full_json_flag": "--full-json",
+    "legacy_schema_id": "research_control_task_index_validation_report_v1",
+    "legacy_payloads_equal_under_fixed_timestamp": true,
+    "common_modes": [
+      "--summary",
+      "--json-summary",
+      "--receipt",
+      "--quiet"
+    ]
+  },
+  "budgets": {
+    "pass_console_budget_bytes": 2048,
+    "nonpass_console_budget_bytes": 8192,
+    "observed_pass_console_bytes": 399,
+    "observed_nonpass_console_bytes": 927
+  },
+  "shadow_comparison": {
+    "legacy_status_matches_common_status": true,
+    "legacy_exit_matches_common_exit": true,
+    "legacy_hard_code_set_matches_common_hard_code_set": true,
+    "unexplained_mismatches": 0
+  },
+  "checkpoint_receipt": {
+    "status": "ready_to_commit",
+    "sync_passes": 1,
+    "acceptance_operation_count": 14,
+    "duration_seconds": 75.545,
+    "final_staged_tree": "19b9938b277afc45329cc866591657c0e7bb4c0c",
+    "memory_sync_count": 1,
+    "memory_core_count": 1,
+    "compatibility_bootstrap_count": 0,
+    "claim_language_hard_fail_count": 0,
+    "claim_language_historical_warning_count_per_scope": 1476,
+    "working_and_staged_claim_identity_match": true,
+    "no_physics_authority": true
+  },
+  "renderer_changed": false,
+  "shared_reporter_changed": false,
+  "tracked_full_receipt_created": false,
+  "scientific_claims_changed": false,
+  "physics_claim_authority": false,
+  "commands": [
+    ".venv/bin/python -m py_compile scripts/research_control/validate_task_index.py tests/test_task_index_renderer.py tests/test_validation_reporting.py",
+    ".venv/bin/python -m unittest tests/test_task_index_renderer.py tests/test_validation_reporting.py",
+    ".venv/bin/python scripts/research_control/render_task_index.py --write",
+    ".venv/bin/python scripts/research_control/validate_task_index.py",
+    ".venv/bin/python scripts/research_control/validate_task_index.py --json",
+    ".venv/bin/python scripts/research_control/validate_task_index.py --full-json",
+    ".venv/bin/python scripts/research_control/validate_task_index.py --json-summary",
+    ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260716-003-001 --no-commit",
+    "git diff --check"
+  ]
+}

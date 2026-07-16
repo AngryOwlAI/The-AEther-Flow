@@ -1,13 +1,23 @@
 from __future__ import annotations
 
 import csv
+from contextlib import redirect_stdout
 import importlib.util
+from io import StringIO
 import json
 import shutil
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
+
+from scripts.validation.reporting import (
+    DEFAULT_NONPASS_BUDGET_BYTES,
+    DEFAULT_PASS_BUDGET_BYTES,
+    console_bytes,
+    write_full_receipt,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -179,6 +189,23 @@ class TaskIndexRendererTests(unittest.TestCase):
 
         self.assertIn("generated_output_stale", {error.code for error in report.errors})
 
+    def test_validator_rejects_stale_csv_rows(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.make_fixture_repo(root)
+            self.render_outputs(root)
+            csv_path = root / self.renderer.DEFAULT_CSV_PATH
+            csv_path.write_text(
+                csv_path.read_text(encoding="utf-8").replace("RT-20260706-999", "RT-20260706-998"),
+                encoding="utf-8",
+            )
+
+            report = self.validator.validate_task_index(root)
+
+        hard_codes = {error.code for error in report.errors}
+        self.assertIn("generated_output_stale", hard_codes)
+        self.assertIn("csv_rows_mismatch", hard_codes)
+
     def test_validator_rejects_support_only_physics_delta(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -222,6 +249,99 @@ class TaskIndexRendererTests(unittest.TestCase):
 
         self.assertEqual(report.errors, [])
         self.assertIn("missing_field", {warning.code for warning in report.warnings})
+
+    def test_common_adapter_preserves_297_warnings_and_pass_semantics(self) -> None:
+        report = self.validator.TaskIndexValidationReport(repo_root=REPO_ROOT)
+        for index in range(297):
+            report.warn(
+                "missing_field",
+                "Historical metadata field is absent.",
+                task_id=f"RT-TEST-{index:03d}",
+                field="milestone_burden",
+            )
+
+        run = self.validator.adapt_to_common_run(report)
+        with tempfile.TemporaryDirectory() as tmp:
+            receipt_path = write_full_receipt(run, Path(tmp))
+            receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+            output = self.validator.render_compact_summary(report, run, receipt_path)
+
+        self.assertEqual(run.status, "PASS")
+        self.assertEqual(run.exit_code, 0)
+        self.assertEqual(run.warning_count, 297)
+        self.assertEqual(receipt["counts"]["finding_count"], 297)
+        self.assertEqual(len(receipt["gate_results"][0]["findings"]), 297)
+        self.assertIn("WARN_GROUP missing_field count=297", output)
+        self.assertIn("RT-TEST-000,RT-TEST-001,RT-TEST-002", output)
+        self.assertLessEqual(console_bytes(output), DEFAULT_PASS_BUDGET_BYTES)
+
+    def test_compact_summary_orders_hard_findings_before_warning_groups(self) -> None:
+        report = self.validator.TaskIndexValidationReport(repo_root=REPO_ROOT)
+        report.warn("missing_field", "Historical metadata field is absent.", task_id="RT-OLD-001")
+        report.error("required_header_mismatch", "Header mismatch.")
+        report.error("csv_rows_mismatch", "Row mismatch.")
+        report.error("generated_output_stale", "CSV output is stale.", path="task-index.csv")
+        run = self.validator.adapt_to_common_run(report)
+
+        output = self.validator.render_compact_summary(report, run, Path("receipt.json"))
+
+        stale_at = output.index("ERROR generated_output_stale")
+        rows_at = output.index("ERROR csv_rows_mismatch")
+        header_at = output.index("ERROR required_header_mismatch")
+        warning_at = output.index("WARN_GROUP missing_field")
+        self.assertLess(stale_at, rows_at)
+        self.assertLess(rows_at, header_at)
+        self.assertLess(header_at, warning_at)
+        self.assertLessEqual(console_bytes(output), DEFAULT_NONPASS_BUDGET_BYTES)
+
+    def test_common_adapter_preserves_legacy_hard_codes_and_exit_status(self) -> None:
+        report = self.validator.TaskIndexValidationReport(repo_root=REPO_ROOT)
+        report.error("generated_output_stale", "CSV output is stale.", path="task-index.csv")
+        report.error("csv_rows_mismatch", "Row mismatch.")
+
+        run = self.validator.adapt_to_common_run(report)
+
+        common_codes = {finding.code for finding in run.gate_results[0].findings if finding.level == "ERROR"}
+        self.assertEqual(common_codes, {finding.code for finding in report.errors})
+        ordered_codes = [finding.code for finding in run.gate_results[0].sorted_findings]
+        self.assertEqual(ordered_codes, ["generated_output_stale", "csv_rows_mismatch"])
+        self.assertEqual(run.status, "FAIL")
+        self.assertEqual(run.exit_code, 1)
+
+    def test_json_and_full_json_preserve_legacy_compatibility(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.make_fixture_repo(root)
+            self.render_outputs(root)
+            outputs: list[dict[str, object]] = []
+            with mock.patch.object(self.validator, "utc_now", return_value="2026-07-16T00:00:00Z"):
+                for flag in ("--json", "--full-json"):
+                    stream = StringIO()
+                    with redirect_stdout(stream):
+                        exit_code = self.validator.main(["--repo-root", root.as_posix(), flag])
+                    self.assertEqual(exit_code, 0)
+                    outputs.append(json.loads(stream.getvalue()))
+
+        self.assertEqual(outputs[0], outputs[1])
+        self.assertEqual(outputs[0]["schema_id"], self.validator.REPORT_SCHEMA_ID)
+        self.assertIn("errors", outputs[0])
+        self.assertIn("warnings", outputs[0])
+
+    def test_receipt_write_failure_is_visible_and_nonzero(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.make_fixture_repo(root)
+            self.render_outputs(root)
+            stream = StringIO()
+            with mock.patch.object(
+                self.validator,
+                "write_full_receipt",
+                side_effect=OSError("receipt denied"),
+            ), redirect_stdout(stream):
+                exit_code = self.validator.main(["--repo-root", root.as_posix(), "--quiet"])
+
+        self.assertEqual(exit_code, 2)
+        self.assertIn("BLOCKED_CONFIGURATION receipt_write_failed", stream.getvalue())
 
 
 if __name__ == "__main__":

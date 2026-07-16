@@ -170,6 +170,27 @@ class CompactSummaryTests(unittest.TestCase):
 
 
 class ReceiptTests(unittest.TestCase):
+    def test_pass_run_can_preserve_297_advisory_findings(self) -> None:
+        findings = make_findings(297)
+        gate = ValidationGateResult(
+            gate_id="task_index_validation",
+            status="PASS",
+            exit_code=0,
+            findings=findings,
+        )
+        run = ValidationRun(
+            run_id="RUN-TASK-INDEX-297",
+            tree_hash="working-sha256:" + "1" * 64,
+            status="PASS",
+            exit_code=0,
+            gate_results=(gate,),
+            profile="shadow_planner",
+        )
+
+        self.assertEqual(run.status, "PASS")
+        self.assertEqual(run.warning_count, 297)
+        self.assertEqual(len(run.to_full_receipt()["gate_results"][0]["findings"]), 297)
+
     def test_full_receipt_preserves_all_findings(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             path = write_full_receipt(make_run(300), Path(directory))

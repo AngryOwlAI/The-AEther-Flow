@@ -1,0 +1,201 @@
+job_id: "AJ-RT-20260716-003-001"
+completion_id: "AJC-AJ-RT-20260716-003-001"
+task_id: "RT-20260716-003"
+decision_id: "DDR-20260716-003"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-003"
+status: "completed"
+created_at: "2026-07-16T13:51:31Z"
+started_at: "2026-07-16T13:51:31Z"
+completed_at: "2026-07-16T14:05:41Z"
+objective: "Adapt task-index validation to stable common findings bounded default output complete local receipts legacy full JSON compatibility and focused parity tests."
+completion_summary: "Completed v19 P4-T03 by adapting the task-index validator to common stable findings and atomic local receipts while emitting hard freshness and row-parity failures before grouped historical warnings preserving representative task IDs and retaining legacy JSON compatibility."
+source_basis:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  - "research_control/design/validation_run_receipt_schema_v1.md"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/v19_validation_performance_and_safety_budget.md"
+  - "scripts/research_control/validate_task_index.py"
+  - "scripts/research_control/render_task_index.py"
+  - "scripts/validation/models.py"
+  - "scripts/validation/reporting.py"
+  - "research_control/tasks/RT-20260716-002/jobs/completions/AJC-AJ-RT-20260716-002-001.yaml"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P4-T03"
+  recommendation_ids:
+    - "V19-R20"
+    - "V19-R21"
+  migration_epoch: "shadow_planner"
+  implemented_task_scope: "One P4-T03 task-index validator adapter two focused test files one task-local acceptance report control rows and policy-generated derivatives only."
+  completed_v19_tasks_to_date:
+    - "P0-T01 through P4-T03"
+  downstream_tasks_not_implemented:
+    - "P4-T04 through P12 implementation and integration tasks"
+  all_applicable_plan_tasks_completed: false
+project_system_change_only: true
+project_system_scope: "v19_p4_t03_task_index_compact_output"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  implementation_status: "completed"
+  coverage_effect: "direct"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  implements_plan_task_id: "P4-T03"
+  coverage_summary: "V19-R20 and V19-R21 now have compact task-index output stable common findings complete local receipt retention and legacy JSON compatibility; other validator adoption remains assigned to later packets."
+physics_progress_status:
+  status: "project_system_task_index_reporting_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P4-T03 changes operational validator reporting only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Validator reporting tests task evidence registries derivatives and checkpoint evidence are operational only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+task_index_compact_output:
+  status: "PASS"
+  validator_path: "scripts/research_control/validate_task_index.py"
+  task_index_test_path: "tests/test_task_index_renderer.py"
+  reporter_test_path: "tests/test_validation_reporting.py"
+  acceptance_path: "research_control/tasks/RT-20260716-003/artifacts/task_index_compact_output_report.json"
+  focused_test_count: 32
+  synthetic_case_count: 6
+  live_warning_count: 297
+  live_warning_group_count: 2
+  live_nonpass_output_bytes: 927
+  live_pass_output_bytes: 399
+  hard_findings_precede_warnings: true
+  full_receipt_preserves_all_findings: true
+  stable_finding_ids: true
+  exit_code_parity: true
+  hard_finding_parity: true
+  legacy_json_compatibility: true
+  receipt_write_failure_visible: true
+  renderer_changed: false
+  shared_reporter_changed: false
+  tracked_receipt_created: false
+output_paths:
+  - "scripts/research_control/validate_task_index.py"
+  - "tests/test_task_index_renderer.py"
+  - "tests/test_validation_reporting.py"
+  - "research_control/tasks/RT-20260716-003/artifacts/task_index_compact_output_report.json"
+  - "research_control/tasks/RT-20260716-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260716-003/jobs/completions/AJC-AJ-RT-20260716-003-001.yaml"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local retrieval PASS source_objects=809 relationships=4031 semantics=809 vault=809"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | project-system validator and test impact classified with no blocked paths"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | ready advisory route and no competing open signal"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | signal registry valid"
+  - ".venv/bin/python -m unittest tests/test_task_index_renderer.py tests/test_validation_reporting.py | exit_code=0 | 32 tests PASS"
+  - ".venv/bin/python -m py_compile scripts/research_control/validate_task_index.py tests/test_task_index_renderer.py tests/test_validation_reporting.py | exit_code=0"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write | exit_code=0 | 913 rows and 297 historical warnings rendered"
+  - ".venv/bin/python scripts/research_control/validate_task_index.py | exit_code=0 | PASS with 297 warnings grouped into 399 bytes and full local receipt"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | governed regeneration PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260716-003-001 --no-commit | exit_code=0 | ready_to_commit sync_passes=1 staged_tree=19b9938b277afc45329cc866591657c0e7bb4c0c duration_seconds=75.545"
+  - "git diff --check | exit_code=0"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P4-T02 was checkpointed and explicitly unlocked P4-T03; relay lease branch clean entry worktree canonical plan and active control were verified before the first write."
+      - "The common reporter task-index validator renderer receipt identity policy and focused tests were inspected directly and no competing project-improvement signal was open."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The adapter preserves legacy PASS FAIL and exit semantics while assigning deterministic common finding IDs and a working-state content digest."
+      - "Default output places hard freshness and row-parity failures first then emits bounded warning groups with up to three representative task IDs."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Thirty-two focused tests cover fresh stale CSV stale Markdown header mismatch support-only physics delta 297 warnings hard parity legacy JSON equality byte budgets complete receipts and visible receipt-write failure."
+      - "The live 297-warning case emits 399 bytes on PASS and preserves all findings in the local full receipt."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The governed no-commit checkpoint returned ready_to_commit after fourteen acceptance operations passed in 75.545 seconds."
+      - "One tracked-memory sync converged and the final staged memory gate passed on tree 19b9938b277afc45329cc866591657c0e7bb4c0c."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index CSV Markdown and wiki outputs were regenerated through the renderer and validated fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Governed source and derivative regeneration completed without hand-editing generated derivatives."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Working and staged integrated claim-language gates each passed with zero hard failures and 1476 historical warnings."
+      - "The warning identity sets matched across working and staged scope and no new scientific claim authority was introduced."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260716-003/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: "Root public and workflow documentation remains unchanged because the canonical plan and task-local artifacts already govern this internal adapter."
+project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 task changes operational task-index reporting only. It does not authorize P4-T04 CI or planner mutation renderer or shared-reporter mutation canonical ontology edit source-law adoption general EqSrc discharge matter-coupling derivation Einstein-equation derivation benchmark promotion Gate Chair verdict completed derivation or any validator receipt registry derivative test result or checkpoint evidence as physics proof."
+verdict: "v19_p4_t03_task_index_compact_output_pass_p4_t04_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "P4-T03 makes the high-warning task-index gate concise and actionable without losing any hard finding warning evidence compatibility or scientific-authority boundary."
+next_recommendation: "After this transaction checkpoints successfully create one separately bounded P4-T04 Validator Engineer route-diagnostic compact-output AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 809
+    relationship_row_count: 4031
+    semantic_row_count: 809
+    vault_row_count: 809
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_local_retrieval_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/validation_run_receipt_schema_v1.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/validation_run_receipt_schema_v1.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-RUN-RECEIPT-SCHEMA-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-RUN-RECEIPT-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_run_receipt_schema_v1.md"
+      source_hash: "991cac565466597ac92f85bb903b9908a924299c2d8b9146f45dc4245f5c986f"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

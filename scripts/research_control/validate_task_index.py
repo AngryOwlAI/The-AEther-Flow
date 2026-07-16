@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
 import sys
@@ -27,10 +28,24 @@ REPORT_SCHEMA_ID = "research_control_task_index_validation_report_v1"
 VALIDATOR_NAME = "scripts/research_control/validate_task_index.py"
 VALIDATOR_VERSION = "v1"
 
-if str(SCRIPT_DIR) not in sys.path:
-    sys.path.insert(0, str(SCRIPT_DIR))
+for import_path in (REPO_ROOT, SCRIPT_DIR):
+    if str(import_path) not in sys.path:
+        sys.path.insert(0, str(import_path))
 
 import render_task_index  # noqa: E402
+from scripts.validation.models import (  # noqa: E402
+    ValidationFinding as CommonValidationFinding,
+    ValidationGateResult,
+    ValidationRun,
+)
+from scripts.validation.reporting import (  # noqa: E402
+    DEFAULT_MAX_FINDINGS,
+    DEFAULT_RECEIPT_ROOT,
+    add_reporting_arguments,
+    options_from_namespace,
+    render_output,
+    write_full_receipt,
+)
 
 
 HARD_RENDERER_ISSUES = {
@@ -91,6 +106,13 @@ NEGATING_CONTEXT = (
     "not ",
     "without",
 )
+HARD_FINDING_PRIORITY = {
+    "generated_output_stale": 0,
+    "csv_rows_mismatch": 1,
+    "required_header_mismatch": 2,
+}
+WARNING_GROUP_LIMIT = 5
+REPRESENTATIVE_TASK_LIMIT = 3
 
 
 @dataclass
@@ -347,20 +369,185 @@ def validate_task_index(repo_root: Path = REPO_ROOT) -> TaskIndexValidationRepor
     return report
 
 
+def _finding_identity(finding: ValidationFinding, level: str) -> str:
+    code = re.sub(r"[^A-Z0-9]+", "-", finding.code.upper()).strip("-") or "FINDING"
+    code = code[:48].rstrip("-")
+    priority = HARD_FINDING_PRIORITY.get(finding.code, 99) if level == "ERROR" else 0
+    digest = hashlib.sha256(
+        json.dumps(finding.as_dict(), ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode(
+            "utf-8"
+        )
+    ).hexdigest()[:12].upper()
+    return f"TASK-INDEX-{level}-{priority:02d}-{code}-{digest}"
+
+
+def _full_finding_message(finding: ValidationFinding) -> str:
+    context = [
+        f"{key}={value}"
+        for key, value in (
+            ("path", finding.path),
+            ("task_id", finding.task_id),
+            ("field", finding.field),
+            ("value", finding.value),
+        )
+        if value
+    ]
+    if not context:
+        return finding.message
+    return f"{finding.message} | {' | '.join(context)}"
+
+
+def _working_tree_hash(report: TaskIndexValidationReport) -> str:
+    payload = {
+        "source_fingerprint": report.source_fingerprint,
+        "output_hashes": report.output_hashes,
+        "checks": report.checks,
+        "row_count": report.row_count,
+        "renderer_issue_count": report.renderer_issue_count,
+        "renderer_issue_kind_counts": report.renderer_issue_kind_counts,
+        "errors": [finding.as_dict() for finding in report.errors],
+        "warnings": [finding.as_dict() for finding in report.warnings],
+    }
+    digest = hashlib.sha256(
+        json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    ).hexdigest()
+    return f"working-sha256:{digest}"
+
+
+def adapt_to_common_run(report: TaskIndexValidationReport) -> ValidationRun:
+    """Map the legacy task-index result to one complete common run receipt."""
+
+    common_findings: list[CommonValidationFinding] = []
+    identity_counts: Counter[str] = Counter()
+    for finding, level in (
+        *((finding, "ERROR") for finding in report.errors),
+        *((finding, "WARN") for finding in report.warnings),
+    ):
+        base_identity = _finding_identity(finding, level)
+        identity_counts[base_identity] += 1
+        suffix = f"-{identity_counts[base_identity]}" if identity_counts[base_identity] > 1 else ""
+        common_findings.append(
+            CommonValidationFinding(
+                finding_id=f"{base_identity}{suffix}",
+                level=level,
+                code=finding.code,
+                message=_full_finding_message(finding),
+            )
+        )
+
+    status = "PASS" if report.ok() else "FAIL"
+    exit_code = 0 if report.ok() else 1
+    gate = ValidationGateResult(
+        gate_id="task_index_validation",
+        status=status,
+        severity="blocking",
+        exit_code=exit_code,
+        findings=tuple(common_findings),
+    )
+    tree_hash = _working_tree_hash(report)
+    return ValidationRun(
+        run_id=f"TASK-INDEX-{tree_hash.removeprefix('working-sha256:')[:16].upper()}",
+        tree_hash=tree_hash,
+        status=status,
+        exit_code=exit_code,
+        gate_results=(gate,),
+        profile="shadow_planner",
+    )
+
+
+def _single_line(value: str, limit: int = 240) -> str:
+    collapsed = " ".join(value.split())
+    encoded = collapsed.encode("utf-8")
+    if len(encoded) <= limit:
+        return collapsed
+    shortened = encoded[: max(0, limit - 3)]
+    while shortened:
+        try:
+            return shortened.decode("utf-8") + "..."
+        except UnicodeDecodeError:
+            shortened = shortened[:-1]
+    return "..."
+
+
+def render_compact_summary(
+    report: TaskIndexValidationReport,
+    run: ValidationRun,
+    receipt_path: Path,
+) -> str:
+    """Render hard findings first, followed by bounded historical-warning groups."""
+
+    lines = [
+        (
+            f"{run.status} gates=1 errors={len(report.errors)} warnings={len(report.warnings)} "
+            f"findings={len(report.errors) + len(report.warnings)} receipt={receipt_path}"
+        )
+    ]
+    ordered_errors = sorted(
+        report.errors,
+        key=lambda finding: (
+            HARD_FINDING_PRIORITY.get(finding.code, len(HARD_FINDING_PRIORITY)),
+            finding.code,
+            finding.path,
+            finding.task_id,
+            finding.message,
+        ),
+    )
+    for finding in ordered_errors[:DEFAULT_MAX_FINDINGS]:
+        context = " ".join(
+            value
+            for value in (
+                f"path={finding.path}" if finding.path else "",
+                f"task_id={finding.task_id}" if finding.task_id else "",
+            )
+            if value
+        )
+        context = f" {context}" if context else ""
+        lines.append(f"ERROR {finding.code}{context}: {_single_line(finding.message)}")
+    if len(ordered_errors) > DEFAULT_MAX_FINDINGS:
+        lines.append(f"MORE_ERRORS count={len(ordered_errors) - DEFAULT_MAX_FINDINGS}")
+
+    warning_counts = Counter(finding.code for finding in report.warnings)
+    warning_task_ids: dict[str, set[str]] = {}
+    for finding in report.warnings:
+        if finding.task_id:
+            warning_task_ids.setdefault(finding.code, set()).add(finding.task_id)
+    group_codes = sorted(warning_counts)
+    for code in group_codes[:WARNING_GROUP_LIMIT]:
+        task_ids = sorted(warning_task_ids.get(code, set()))
+        representatives = ",".join(task_ids[:REPRESENTATIVE_TASK_LIMIT]) or "none"
+        more_task_ids = max(0, len(task_ids) - REPRESENTATIVE_TASK_LIMIT)
+        suffix = f" more_task_ids={more_task_ids}" if more_task_ids else ""
+        lines.append(
+            f"WARN_GROUP {code} count={warning_counts[code]} task_ids={representatives}{suffix}"
+        )
+    if len(group_codes) > WARNING_GROUP_LIMIT:
+        lines.append(f"MORE_WARNING_GROUPS count={len(group_codes) - WARNING_GROUP_LIMIT}")
+    return "\n".join(lines) + "\n"
+
+
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--json", action="store_true", help="Emit JSON.")
+    add_reporting_arguments(parser)
+    parser.add_argument("--json", action="store_true", help="Emit legacy full JSON (compatibility alias).")
     parser.add_argument("--write-report", help="Write the JSON report to this path.")
     parser.add_argument("--repo-root", default=REPO_ROOT.as_posix(), help=argparse.SUPPRESS)
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    common_mode_selected = any(
+        getattr(args, name)
+        for name in ("summary", "json_summary", "full_json", "receipt", "quiet")
+    )
+    if args.json and common_mode_selected:
+        parser.error("--json cannot be combined with a common reporting mode")
+    return args
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
+    repo_root = Path(args.repo_root).resolve()
     try:
-        report = validate_task_index(Path(args.repo_root))
+        report = validate_task_index(repo_root)
     except render_task_index.TaskIndexError as exc:
-        report = TaskIndexValidationReport(repo_root=Path(args.repo_root).resolve())
+        report = TaskIndexValidationReport(repo_root=repo_root)
         report.error("renderer_error", str(exc))
 
     payload = report.as_dict()
@@ -370,17 +557,22 @@ def main(argv: list[str] | None = None) -> int:
             report_path = Path(args.repo_root).resolve() / report_path
         report_path.parent.mkdir(parents=True, exist_ok=True)
         report_path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    if args.json:
+    run = adapt_to_common_run(report)
+    try:
+        receipt_path = write_full_receipt(run, repo_root / DEFAULT_RECEIPT_ROOT)
+    except (OSError, ValueError) as error:
+        print(f"BLOCKED_CONFIGURATION receipt_write_failed: {_single_line(str(error), limit=256)}")
+        return 2
+
+    if args.json or args.full_json:
         print(json.dumps(payload, indent=2, sort_keys=True))
-    elif report.ok():
-        print("Task-index validation passed.")
     else:
-        print("Task-index validation failed:")
-        for error in payload["errors"]:
-            path = f" {error['path']}" if error.get("path") else ""
-            task = f" {error['task_id']}" if error.get("task_id") else ""
-            print(f"- {error['code']}:{path}{task} {error['message']}")
-    return 0 if report.ok() else 1
+        options = options_from_namespace(args)
+        if options.mode == "summary":
+            sys.stdout.write(render_compact_summary(report, run, receipt_path))
+        else:
+            sys.stdout.write(render_output(run, receipt_path, options))
+    return run.exit_code
 
 
 if __name__ == "__main__":
