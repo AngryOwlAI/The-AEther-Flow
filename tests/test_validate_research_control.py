@@ -271,5 +271,16 @@ class ActiveStateSidecarValidatorTests(unittest.TestCase):
         self.assertTrue(any("output/compact_current_frontier_v16.json" in error for error in errors), errors)
 
 
+def load_tests(
+    loader: unittest.TestLoader,
+    tests: unittest.TestSuite,
+    pattern: str | None,
+) -> unittest.TestSuite:
+    """Keep direct-module compatibility while shard modules own discovery."""
+    if pattern is not None:
+        return unittest.TestSuite()
+    return tests
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -39,6 +39,31 @@ Run one test module:
 .venv/bin/python -m unittest tests.test_memory_system
 ```
 
+The broad research-control inventory is owned by six focused discovery shards:
+
+```zsh
+.venv/bin/python -m unittest tests.test_research_control_policy
+.venv/bin/python -m unittest tests.test_research_control_active_state
+.venv/bin/python -m unittest tests.test_research_control_continuation
+.venv/bin/python -m unittest tests.test_research_control_checkpoint
+.venv/bin/python -m unittest tests.test_research_control_metrics
+.venv/bin/python -m unittest tests.test_research_control_live_integration
+```
+
+The policy, active-state, continuation, checkpoint, and metrics shards are the
+selectable fast surfaces. The live-integration shard alone owns the declared
+full-corpus research-control validation checks. The shared shard map fails
+closed if a source test is added, removed, renamed, duplicated, or left
+unassigned.
+
+Direct compatibility commands remain available and still run the complete
+148-test source inventory:
+
+```zsh
+.venv/bin/python -m unittest tests.test_research_control
+.venv/bin/python -m unittest tests.test_validate_research_control
+```
+
 Run the memory-focused shard used by the ordinary memory acceptance profile:
 
 ```zsh

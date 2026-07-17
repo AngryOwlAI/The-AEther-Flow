@@ -1,0 +1,197 @@
+job_id: "AJ-RT-20260717-005-001"
+completion_id: "AJC-AJ-RT-20260717-005-001"
+task_id: "RT-20260717-005"
+decision_id: "DDR-20260717-005"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-005"
+status: "completed"
+created_at: "2026-07-17T09:48:07Z"
+started_at: "2026-07-17T09:48:07Z"
+completed_at: "2026-07-17T09:58:41Z"
+objective: "Implement six independently runnable research-control test shards with exact 148-test inventory parity and unchanged legacy test bodies."
+completion_summary: "The frozen 148-test source inventory maps to six disjoint shards with zero omissions or duplicates. Every shard passes independently direct compatibility and shard-owned discovery each run all 148 tests and the stable repository suite passes 865 tests with one expected skip."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P8-T01"
+  - "tests/test_research_control.py"
+  - "tests/test_validate_research_control.py"
+  - "tests/README.md"
+  - "research_control/tasks/RT-20260717-004/jobs/completions/AJC-AJ-RT-20260717-004-001.yaml"
+outputs_created:
+  - "tests/test_research_control.py"
+  - "tests/test_validate_research_control.py"
+  - "tests/test_research_control_policy.py"
+  - "tests/test_research_control_active_state.py"
+  - "tests/test_research_control_continuation.py"
+  - "tests/test_research_control_checkpoint.py"
+  - "tests/test_research_control_metrics.py"
+  - "tests/test_research_control_live_integration.py"
+  - "tests/support/__init__.py"
+  - "tests/support/research_control_shards.py"
+  - "tests/README.md"
+  - "research_control/tasks/RT-20260717-005/artifacts/research_control_test_split_map.json"
+  - "research_control/tasks/RT-20260717-005/artifacts/research_control_test_shard_validation.json"
+  - "research_control/tasks/RT-20260717-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-005/jobs/completions/AJC-AJ-RT-20260717-005-001.yaml"
+implementation_results:
+  plan_task_id: "P8-T01"
+  implementation_status: "PASS"
+  baseline_compatibility_seconds: 64.943
+  baseline_source_test_count: 148
+  post_split_source_test_count: 148
+  source_test_sha256: "319da5d5d388b76866b8e15054a4ea3b7f90979685393a61f72109c831bee76a"
+  shard_count: 6
+  assigned_test_count: 148
+  duplicate_test_count: 0
+  missing_test_count: 0
+  policy_test_count: 105
+  active_state_test_count: 11
+  continuation_test_count: 7
+  checkpoint_test_count: 12
+  metrics_test_count: 10
+  live_integration_test_count: 3
+  direct_compatibility_test_count: 148
+  direct_compatibility_seconds: 66.896
+  direct_compatibility_delta_percent: 3.007
+  shard_discovery_test_count: 148
+  shard_discovery_seconds: 66.921
+  shard_discovery_delta_percent: 3.046
+  stable_full_repository_test_count: 865
+  stable_full_repository_skip_count: 1
+  stable_full_repository_seconds: 209.070
+  stable_full_repository_wall_seconds: 209.30
+  every_shard_passed_independently: true
+  discovery_executes_source_inventory_exactly_once: true
+  direct_compatibility_preserved: true
+  import_side_effect_status: "PASS"
+  fast_shards_own_declared_live_tests: false
+  live_integration_owns_all_declared_live_tests: true
+  affected_blocking_legacy_gate_count: 11
+  affected_blocking_planner_gate_count: 11
+  affected_blocking_unexplained_mismatch_count: 0
+  affected_blocking_shadow_comparison_status: "PASS"
+  existing_test_method_bodies_changed: false
+  existing_assertions_changed: false
+  existing_fixtures_changed: false
+  activation_dates_changed: false
+  claim_boundaries_changed: false
+  production_validator_changed: false
+  workflow_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+contract_correction:
+  corrected_at: "2026-07-17T10:12:27Z"
+  path: "tests/support/"
+  status: "PASS"
+  explanation: "The checkpoint helper compacts the two new authorized support files to their untracked directory. Adding that directory representation does not authorize another file class or expand P8-T01."
+command_results:
+  - ".venv/bin/python -m py_compile <P8-T01 modules> | exit_code=0 | PASS"
+  - "read-only inline Python source inventory and split-map check | exit_code=0 | 148 assigned zero duplicate zero missing fingerprint 319da5d5d388b76866b8e15054a4ea3b7f90979685393a61f72109c831bee76a"
+  - "read-only six-shard import-side-effect check | exit_code=0 | no validation receipt module loaded"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_policy | exit_code=0 | 105 tests PASS in 0.311 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_active_state | exit_code=0 | 11 tests PASS in 0.045 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_continuation | stable_completed_state_exit_code=0 | 7 tests PASS in 41.385 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_checkpoint | exit_code=0 | 12 tests PASS in 0.029 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_metrics | exit_code=0 | 10 tests PASS in 14.978 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_live_integration | stable_completed_state_exit_code=0 | 3 tests PASS in 13.362 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_continuation | active_lifecycle_exit_code=1 | three expected failures caused only by the previously missing completion receipt"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_live_integration | active_lifecycle_exit_code=1 | one expected failure caused only by the previously missing completion receipt"
+  - ".venv/bin/python -m unittest tests.test_research_control tests.test_validate_research_control | exit_code=0 | direct compatibility 148 tests PASS in 66.896 seconds"
+  - ".venv/bin/python -m unittest discover -s tests -p test_research_control*.py | exit_code=0 | shard-owned discovery 148 tests PASS in 66.921 seconds"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable repository 865 tests PASS with one expected skip in 209.070 seconds"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths <P8-T01 paths> --explain | exit_code=0 | READY selects 11 blocking legacy gates"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy gates equal 11 planner gates with zero unexplained mismatch"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | PASS with three nonblocking existing-memory findings"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P7-T06 is completed and checkpointed; generation lease project binding clean entry tree predecessor guards and single invocation were verified before task activation."
+      - "Memory preflight canonical plan inspection classifier resolver and emitted-signal validation passed before implementation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All six shards pass independently and the fail-closed source fingerprint assigns all 148 tests exactly once."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Direct compatibility and shard discovery each pass 148 tests while the stable full repository suite passes 865 tests with one expected skip."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "All declared pre-checkpoint gates pass and persistence is authorized only through the governed checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index dependency-graph README wiki and registry derivatives are regenerated from the final source state and checked fresh."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass with three nonblocking existing-memory findings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Research-control diff validation passes and every test result remains operational project-system evidence only."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system test-organization work only; no physics or derivation status changes."
+scientific_claims_changed: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-005/documentation_impact.yaml"
+  source_documentation_updated: true
+  updated_source_documentation:
+    - "tests/README.md"
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet changes test discovery ownership and explanatory test commands only. It does not change test assertions fixtures validator behavior workflow authority ordinary research canonical ontology source laws benchmark status Gate Chair authority proof status physics claims or derivation status."
+verdict: "v19_p8_t01_research_control_test_sharding_pass_no_physics_delta"
+coherent_resolution_summary: "The broad compatibility inventory is partitioned exactly while retaining its original source methods and direct commands."
+next_recommendation: "After governed checkpoint PASS route only P8-T02 unless live state requires a bounded repair or supersession."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 814
+    relationship_row_count: 4053
+    semantic_row_count: 814
+    vault_row_count: 814
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

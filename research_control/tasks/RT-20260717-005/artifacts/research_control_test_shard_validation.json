@@ -1,0 +1,107 @@
+{
+  "authority": {
+    "benchmark_promotion_authorized": false,
+    "gate_chair_authority": false,
+    "operational_validation_only": true,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "baseline": {
+    "command": ".venv/bin/python -m unittest -v tests.test_research_control tests.test_validate_research_control",
+    "source_test_count": 148,
+    "unittest_seconds": 64.943
+  },
+  "compatibility_validation": {
+    "direct_modules": {
+      "delta_percent_from_baseline": 3.007,
+      "failure_count": 0,
+      "status": "PASS",
+      "test_count": 148,
+      "unittest_seconds": 66.896,
+      "wall_seconds": 66.96
+    },
+    "shard_owned_discovery": {
+      "delta_percent_from_baseline": 3.046,
+      "duplicate_test_count": 0,
+      "failure_count": 0,
+      "missing_test_count": 0,
+      "status": "PASS",
+      "test_count": 148,
+      "unittest_seconds": 66.921,
+      "wall_seconds": 66.99
+    }
+  },
+  "full_repository_validation": {
+    "failure_count": 0,
+    "skip_count": 1,
+    "status": "PASS",
+    "test_count": 865,
+    "unittest_seconds": 209.07,
+    "wall_seconds": 209.3
+  },
+  "implementation_invariants": {
+    "activation_dates_changed": false,
+    "claim_boundaries_changed": false,
+    "existing_assertions_changed": false,
+    "existing_fixture_semantics_changed": false,
+    "existing_test_method_bodies_changed": false,
+    "fast_shards_own_declared_live_tests": false,
+    "import_side_effect_status": "PASS",
+    "legacy_direct_module_commands_retained": true,
+    "legacy_modules_suppressed_only_during_discovery": true,
+    "live_integration_owns_all_declared_live_tests": true,
+    "production_validator_changed": false,
+    "workflow_changed": false
+  },
+  "inventory": {
+    "assigned_test_count": 148,
+    "duplicate_test_count": 0,
+    "missing_test_count": 0,
+    "post_split_source_test_count": 148,
+    "pre_split_source_test_count": 148,
+    "source_test_sha256": "319da5d5d388b76866b8e15054a4ea3b7f90979685393a61f72109c831bee76a",
+    "split_map_path": "research_control/tasks/RT-20260717-005/artifacts/research_control_test_split_map.json"
+  },
+  "planner_shadow_comparison": {
+    "legacy_blocking_gate_count": 11,
+    "planner_blocking_gate_count": 11,
+    "status": "PASS",
+    "unexplained_mismatch_gate_count": 0
+  },
+  "schema_id": "research_control_test_shard_validation_v1",
+  "shards": {
+    "active_state": {
+      "status": "PASS",
+      "test_count": 11,
+      "unittest_seconds": 0.045
+    },
+    "checkpoint": {
+      "status": "PASS",
+      "test_count": 12,
+      "unittest_seconds": 0.029
+    },
+    "continuation": {
+      "status": "PASS",
+      "test_count": 7,
+      "unittest_seconds": 41.385
+    },
+    "live_integration": {
+      "status": "PASS",
+      "test_count": 3,
+      "unittest_seconds": 13.362
+    },
+    "metrics": {
+      "status": "PASS",
+      "test_count": 10,
+      "unittest_seconds": 14.978
+    },
+    "policy": {
+      "status": "PASS",
+      "test_count": 105,
+      "unittest_seconds": 0.311
+    }
+  },
+  "status": "PASS",
+  "task_id": "RT-20260717-005"
+}

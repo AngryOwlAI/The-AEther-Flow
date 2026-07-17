@@ -4279,5 +4279,16 @@ class ResearchControlTests(unittest.TestCase):
         self.assertFalse(any("must declare role_decomposition.mode" in error for error in report.errors))
 
 
+def load_tests(
+    loader: unittest.TestLoader,
+    tests: unittest.TestSuite,
+    pattern: str | None,
+) -> unittest.TestSuite:
+    """Keep direct-module compatibility while shard modules own discovery."""
+    if pattern is not None:
+        return unittest.TestSuite()
+    return tests
+
+
 if __name__ == "__main__":
     unittest.main()
