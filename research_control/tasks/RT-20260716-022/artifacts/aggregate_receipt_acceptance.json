@@ -1,0 +1,103 @@
+{
+  "schema_id": "p6_t08_aggregate_receipt_acceptance_v1",
+  "schema_version": 1,
+  "task_id": "RT-20260716-022",
+  "job_id": "AJ-RT-20260716-022-001",
+  "plan_task_id": "P6-T08",
+  "status": "PASS",
+  "implementation": {
+    "module": "scripts/validation/aggregate.py",
+    "test_module": "tests/test_validation_aggregate_receipt.py",
+    "aggregate_schema_id": "validation_transaction_aggregate_receipt_v1",
+    "execution_authority": "none",
+    "legacy_validation_authoritative": true,
+    "planner_execution_authoritative": false
+  },
+  "targeted_validation": {
+    "command": ".venv/bin/python -m unittest tests/test_validation_aggregate_receipt.py",
+    "test_count": 16,
+    "status": "PASS",
+    "scenarios": {
+      "complete": "PASS",
+      "partial": "PASS",
+      "failed": "PASS",
+      "cancelled": "PASS",
+      "cache_hit": "PASS",
+      "rollback": "PASS",
+      "skipped_applicable_obligation": "PASS",
+      "condition_false_non_applicability": "PASS",
+      "supersedence": "PASS",
+      "legacy_planner_shadow_mismatch": "PASS",
+      "completion_order_determinism": "PASS",
+      "child_and_raw_artifact_hashing": "PASS",
+      "blocking_child_status_precedence": "PASS",
+      "bounded_console_and_complete_json": "PASS",
+      "embedded_raw_stream_rejection": "PASS",
+      "unknown_child_schema_rejection": "PASS"
+    }
+  },
+  "compatibility_validation": {
+    "command": ".venv/bin/python -m unittest tests/test_validation_aggregate_receipt.py tests/test_validation_orchestration.py tests/test_validation_planner.py tests/test_validation_profiles.py tests/test_checkpoint_validation_planner.py",
+    "test_count": 77,
+    "status": "PASS"
+  },
+  "representative_complete_receipt": {
+    "status": "PASS",
+    "outcome": "complete",
+    "receipt_hash": "sha256:aff3257a349c79bec4169736db43e1f3a4262b9d4646cf5eb5fb04a2fc119005",
+    "classification_hash": "sha256:b42d4f427d0c6f9726a26ac60c57e167d11346dd235b210fd147437d68d289c1",
+    "plan_hash": "sha256:ae372d6211ae07bab77b5f6da67261e24b5b2823aae8e72b5aa92c5cf8e239cd",
+    "child_receipt_hash": "sha256:d4d63a450e40190f3f0c0688b72ac2b38680ee7f0d0aff0720ed5a77ac213917",
+    "fixture_tree_hash": "git-tree-sha1:0123456789abcdef0123456789abcdef01234567",
+    "selected_gate_count": 1,
+    "executed_gate_count": 1,
+    "obligation_count": 4,
+    "blocked_obligation_count": 0,
+    "obligation_source_counts": {
+      "role": 1,
+      "skill": 1,
+      "profile": 1,
+      "checkpoint": 1
+    },
+    "duration_ms": 10,
+    "output_bytes": 10,
+    "cache_hits": 0,
+    "cache_misses": 0
+  },
+  "contract_checks": {
+    "classifier_paths_and_tags_present": true,
+    "plan_reasons_present": true,
+    "selected_skipped_and_superseded_gates_present": true,
+    "role_skill_profile_checkpoint_obligations_present": true,
+    "generator_changes_present": true,
+    "staged_tree_identity_present": true,
+    "timings_and_output_bytes_present": true,
+    "cache_status_present": true,
+    "final_residue_present": true,
+    "child_receipts_hashed_not_embedded": true,
+    "raw_artifacts_hashed_not_embedded": true,
+    "blocking_child_cannot_be_overridden": true,
+    "skipped_gate_requires_condition_false_proof": true,
+    "deterministic_independent_of_completion_order": true,
+    "complete_json_available": true,
+    "console_output_bounded": true
+  },
+  "shadow_comparison": {
+    "status": "MATCH",
+    "affected_blocking_gate_ids": [
+      "aggregate_receipt_scenario_tests"
+    ],
+    "legacy_status": "PASS",
+    "planner_status": "PASS",
+    "unexplained_mismatch": false
+  },
+  "authority": {
+    "scope": "operational_validation_only",
+    "source_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  }
+}
