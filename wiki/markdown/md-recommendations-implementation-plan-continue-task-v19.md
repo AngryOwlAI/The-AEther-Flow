@@ -17,6 +17,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18` `implementations_plans/recommendations_implementation_plan_continue_task-v18.md`
 - Generated output path: `wiki/markdown/md-recommendations-implementation-plan-continue-task-v19.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-AGENT-VALIDATION-OUTPUT-CONSUMPTION-POLICY-V1` `research_control/design/agent_validation_output_consumption_policy_v1.md`
+- Backlink from `MD-RESEARCH-CONTROL-DESIGN-SUPPORT-TRACEABILITY-V1-V18-PARITY-ASSESSMENT` `research_control/design/support_traceability_v1_v18_parity_assessment.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-V19-LEGACY-VALIDATION-INVOCATION-GRAPH` `research_control/design/v19_legacy_validation_invocation_graph.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-OVERHEAD-BACKLOG-SCHEMA` `research_control/design/v19_validation_overhead_backlog_schema.md`
 - Backlink from `MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET` `research_control/design/v19_validation_performance_and_safety_budget.md`

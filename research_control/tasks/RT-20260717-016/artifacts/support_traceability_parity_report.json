@@ -1,0 +1,345 @@
+{
+  "schema_id": "support_traceability_v1_v18_parity_report",
+  "schema_version": "1.0.0",
+  "task_id": "RT-20260717-016",
+  "job_id": "AJ-RT-20260717-016-001",
+  "plan_id": "recommendations_implementation_plan_continue_task-v19",
+  "plan_task_id": "P9-T04",
+  "generated_at": "2026-07-17T18:49:37Z",
+  "status": "PASS",
+  "migration_epoch": "shadow_planner",
+  "recommendation": "retain_active",
+  "recommendation_basis": "Parity is incomplete: all three v1 entries remain distinct, and five demonstrated v1-only hard failures have no v18 equivalent.",
+  "source_identity": {
+    "assessment": {
+      "path": "research_control/design/support_traceability_v1_v18_parity_assessment.md",
+      "sha256": "630a9b7ae901cae36373456db09dcfff15c7c2f1519400f0f7edd82cd3ef94be"
+    },
+    "v1_validator": {
+      "path": "scripts/research_control/support_formalization/validate_traceability_registry.py",
+      "sha256": "57a07fee6fe294fe723144a06d5f63ccd5d30f605f9e3751ed20972ad90bb45e"
+    },
+    "v18_validator": {
+      "path": "scripts/research_control/support_formalization/validate_traceability_registry_v18.py",
+      "sha256": "26fe277b1125c01297aaf8b9e8717308ea6cf891338c9b4676b4084f73240ee3"
+    },
+    "v1_registry": {
+      "path": "research_control/design/support_formalization_traceability_registry_v1.yaml",
+      "sha256": "c2c99b96dfcaf4852eb073e4751d657af48ce2c039cc180790b075e085474f94"
+    },
+    "v18_registry": {
+      "path": "research_control/design/support_formalization_traceability_registry_v18.yaml",
+      "sha256": "19c88963181ddbbf62c28a676d990a9583a17b6e47ac8fe25f1a7d5cce5823d3"
+    },
+    "v1_test": {
+      "path": "tests/test_support_formalization_traceability_registry.py",
+      "sha256": "ff6ae75931c595c1e0218c7f3311e8259ef1e72a1279a96543dd6ddec5317eb0"
+    },
+    "v18_test": {
+      "path": "tests/test_support_formalization_traceability_registry_v18.py",
+      "sha256": "f3a11784621f41f017cb16de449c97192c1c76c5aef6da421cfc670b08bac913"
+    },
+    "validation_command_inventory": {
+      "path": "research_control/design/validation_command_inventory_v16.md",
+      "sha256": "e5dd4df6a1fc35d56fffaec0d5787d1183c773320d9b32142fd08be3283611ce"
+    },
+    "dependency_completion": {
+      "path": "research_control/tasks/RT-20260717-015/jobs/completions/AJC-AJ-RT-20260717-015-001.yaml",
+      "sha256": "a2f6ee25c832d26de6885929339a194d143aadac613d9fc1a47e2ef484fc21d8"
+    }
+  },
+  "entry_coverage": {
+    "v1_entry_count": 3,
+    "v18_entry_count": 5,
+    "mapped_v1_to_v18_count": 0,
+    "distinct_v1_count": 3,
+    "entry_id_intersection_count": 0,
+    "task_id_intersection_count": 0,
+    "checker_or_tool_id_intersection_count": 0,
+    "registered_source_path_intersection_count": 0,
+    "v1_entries": [
+      {
+        "entry_id": "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL",
+        "task_id": "RT-20260630-028",
+        "checker_id": "finite_toy_tag_removal_support_formalization",
+        "referenced_evidence_path_count": 5,
+        "all_referenced_paths_exist": true,
+        "task_status": "completed",
+        "completion_readable": true,
+        "v18_mapping": null,
+        "disposition": "distinct_active_v1_formalization"
+      },
+      {
+        "entry_id": "SFR-V17-P8-T02-FAIL-CLOSED-CERTIFICATE-EVALUATION",
+        "task_id": "RT-20260706-019",
+        "checker_id": "fail_closed_certificate_evaluation_support_formalization",
+        "referenced_evidence_path_count": 7,
+        "all_referenced_paths_exist": true,
+        "task_status": "completed",
+        "completion_readable": true,
+        "v18_mapping": null,
+        "disposition": "distinct_active_v1_formalization"
+      },
+      {
+        "entry_id": "SFR-V12-P6-T03-FINITE-LOCAL-WITNESS-SCHEMA",
+        "task_id": "RT-20260630-029",
+        "checker_id": "finite_local_witness_schema_support_formalization",
+        "referenced_evidence_path_count": 8,
+        "all_referenced_paths_exist": true,
+        "task_status": "completed",
+        "completion_readable": true,
+        "v18_mapping": null,
+        "disposition": "distinct_active_v1_formalization"
+      }
+    ],
+    "v18_entries": [
+      {
+        "entry_id": "SFR-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER",
+        "task_id": "RT-20260708-020",
+        "tool_id": "typed_eqsrc_orbit_checker"
+      },
+      {
+        "entry_id": "SFR-V18-P7-T03-CLOSURE-COUNTERMODEL-GENERATOR",
+        "task_id": "RT-20260708-021",
+        "tool_id": "closure_countermodel_generator"
+      },
+      {
+        "entry_id": "SFR-V18-P7-T04-NO-TARGET-IMPORT-MUTATION-TESTER",
+        "task_id": "RT-20260708-022",
+        "tool_id": "no_target_import_mutation_tester"
+      },
+      {
+        "entry_id": "SFR-V18-P7-T05-METRIC-USE-TEX-VALIDATOR",
+        "task_id": "RT-20260708-023",
+        "tool_id": "metric_use_tex_reference_validator"
+      },
+      {
+        "entry_id": "SFR-V18-P7-T06-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER",
+        "task_id": "RT-20260708-024",
+        "tool_id": "detector_placeholder_collapse_checker"
+      }
+    ]
+  },
+  "mutation_matrix": {
+    "case_count": 17,
+    "shared_failure_count": 7,
+    "v1_only_failure_count": 5,
+    "v18_only_failure_count": 5,
+    "unexpected_outcome_count": 0,
+    "cases": [
+      {
+        "case_id": "registry_support_only_false",
+        "classification": "shared",
+        "v1_result": "FAIL",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "registry_proof_authority_true",
+        "classification": "shared",
+        "v1_result": "FAIL",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "entry_support_only_false",
+        "classification": "shared",
+        "v1_result": "FAIL",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "entry_proof_authority_true",
+        "classification": "shared",
+        "v1_result": "FAIL",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "entry_status_drift",
+        "classification": "shared",
+        "v1_result": "FAIL",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "report_hash_mismatch",
+        "classification": "shared",
+        "v1_result": "FAIL",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "source_artifact_hash_mismatch",
+        "classification": "shared",
+        "v1_result": "FAIL",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "required_registry_boundary_phrase_removed",
+        "classification": "v1_only",
+        "v1_result": "FAIL",
+        "v18_result": "PASS",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "generated_or_local_source_authority_path",
+        "classification": "v1_only",
+        "v1_result": "FAIL",
+        "v18_result": "PASS",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "report_checker_identity_drift",
+        "classification": "v1_only",
+        "v1_result": "FAIL",
+        "v18_result": "PASS",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "source_object_and_registry_metadata_removed",
+        "classification": "v1_only",
+        "v1_result": "FAIL",
+        "v18_result": "PASS",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "traceability_task_binding_drift",
+        "classification": "v1_only",
+        "v1_result": "FAIL",
+        "v18_result": "PASS",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "proof_normal_form_row_missing",
+        "classification": "v18_only",
+        "v1_result": "PASS",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "test_evidence_empty",
+        "classification": "v18_only",
+        "v1_result": "PASS",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "validator_executable_support_flag_false",
+        "classification": "v18_only",
+        "v1_result": "PASS",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "required_plan_task_order_changed",
+        "classification": "v18_only",
+        "v1_result": "PASS",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      },
+      {
+        "case_id": "entry_physics_promotion_boundary_enabled",
+        "classification": "v18_only",
+        "v1_result": "PASS",
+        "v18_result": "FAIL",
+        "expected_outcome_matched": true
+      }
+    ]
+  },
+  "historical_readability": {
+    "v1_referenced_evidence_path_count": 20,
+    "existing_evidence_path_count": 20,
+    "missing_evidence_path_count": 0,
+    "owning_task_count": 3,
+    "completed_task_count": 3,
+    "readable_completion_count": 3,
+    "historical_receipts_rewritten": false,
+    "status": "PASS"
+  },
+  "reference_audit": {
+    "direct_active_automation_invocation_count": 0,
+    "automation_surfaces_scanned": [
+      "Makefile",
+      "scripts/research_control/checkpoint_research_transaction.py",
+      "scripts/research_control/run_full_validation.py",
+      "scripts/validation/",
+      ".github/workflows/",
+      ".codex/skills/"
+    ],
+    "active_non_automation_references": [
+      "research_control/design/support_formalization_traceability_registry_v1.yaml",
+      "research_control/design/validation_command_inventory_v16.md",
+      "tests/test_support_formalization_traceability_registry.py",
+      "tests/fixtures/support_traceability_v1/",
+      "tracked claim boundaries, task evidence, and handoffs for the three v1 entries"
+    ],
+    "automation_migration_blocker": false,
+    "historical_only_classification_supported": false,
+    "status": "PASS"
+  },
+  "validation": {
+    "live_v1_validator": {
+      "status": "PASS",
+      "entry_count": 3
+    },
+    "live_v18_validator": {
+      "status": "PASS",
+      "entry_count": 5
+    },
+    "focused_test_modules": {
+      "status": "PASS",
+      "test_count": 11,
+      "duration_seconds": 0.208
+    },
+    "pre_registration_repository_suite": {
+      "status": "EXPECTED_TRANSACTION_ASSEMBLY_FINDING",
+      "test_count": 891,
+      "skip_count": 1,
+      "failure_count": 1,
+      "duration_seconds": 114.649,
+      "finding": "The memory bootstrap idempotence test detected the new canonical assessment before its generated registration outputs were synchronized."
+    },
+    "post_registration_repository_suite": {
+      "status": "PASS",
+      "test_count": 891,
+      "skip_count": 1,
+      "failure_count": 0,
+      "error_count": 0,
+      "duration_seconds": 115.032
+    },
+    "affected_profile": {
+      "status": "READY",
+      "selected_gate_count": 13,
+      "execution_authority": "legacy"
+    },
+    "legacy_planner_shadow_comparison": {
+      "status": "PASS",
+      "legacy_compatible_blocking_gate_count": 11,
+      "planner_blocking_gate_count": 11,
+      "unexplained_mismatch_count": 0
+    }
+  },
+  "retirement_decision": {
+    "retain_active": true,
+    "retain_historical": false,
+    "retire_after_migration": false,
+    "reconsideration_preconditions": [
+      "Migrate all three v1 entries to registered replacements without rewriting historical evidence.",
+      "Enforce every v1-only hard failure in the replacement with zero false PASS in the cross-validator matrix.",
+      "Migrate or preserve command-inventory, test, fixture, claim-boundary, and operator references.",
+      "Keep every historical receipt and source artifact readable.",
+      "Pass focused, repository-wide, shadow-parity, and governed checkpoint validation."
+    ]
+  },
+  "ordinary_research_handoff_preserved": "handoff-0740",
+  "ordinary_research_state_changed": false,
+  "distance_to_gr_delta": {
+    "changed": false,
+    "summary": "Project-system retirement parity assessment only; no derivation status changes."
+  },
+  "scientific_claims_changed": false,
+  "physics_promotion_authorized": false,
+  "proof_authority": false
+}

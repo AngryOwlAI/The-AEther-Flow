@@ -1,0 +1,255 @@
+job_id: "AJ-RT-20260717-016-001"
+completion_id: "AJC-AJ-RT-20260717-016-001"
+task_id: "RT-20260717-016"
+decision_id: "DDR-20260717-016"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260717-016"
+status: "completed"
+created_at: "2026-07-17T18:49:37Z"
+started_at: "2026-07-17T18:49:37Z"
+completed_at: "2026-07-17T18:49:37Z"
+objective: "Assess v1-to-v18 support-traceability retirement parity and emit one evidence-based retention recommendation without changing either validator, registry, test surface, ordinary research, or scientific authority."
+completion_summary: "Mapped all three active v1 entries and all five v18 entries, ran a 17-case cross-validator mutation matrix, verified 20 v1 evidence paths and three historical completions, and audited tracked invocation references. The entry families are disjoint and the matrix found five v1-only plus five v18-only hard failures with zero unexpected outcomes. The evidence therefore requires retain_active. Focused tests, both live validators, affected shadow comparison, and the 891-test repository suite pass. P9-T05 becomes dependency-ready only after the governed checkpoint."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P9-T04"
+  - "scripts/research_control/support_formalization/validate_traceability_registry.py"
+  - "scripts/research_control/support_formalization/validate_traceability_registry_v18.py"
+  - "research_control/design/support_formalization_traceability_registry_v1.yaml"
+  - "research_control/design/support_formalization_traceability_registry_v18.yaml"
+  - "tests/test_support_formalization_traceability_registry.py"
+  - "tests/test_support_formalization_traceability_registry_v18.py"
+  - "research_control/design/validation_command_inventory_v16.md"
+  - "research_control/tasks/RT-20260717-015/jobs/completions/AJC-AJ-RT-20260717-015-001.yaml"
+outputs_created:
+  - "research_control/design/support_traceability_v1_v18_parity_assessment.md"
+  - "research_control/tasks/RT-20260717-016/artifacts/support_traceability_parity_report.json"
+  - "research_control/tasks/RT-20260717-016/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-016/jobs/completions/AJC-AJ-RT-20260717-016-001.yaml"
+assessment_results:
+  plan_task_id: "P9-T04"
+  implementation_status: "PASS"
+  recommendation: "retain_active"
+  v1_entry_count: 3
+  v18_entry_count: 5
+  mapped_v1_to_v18_count: 0
+  distinct_v1_entry_count: 3
+  entry_id_intersection_count: 0
+  task_id_intersection_count: 0
+  checker_or_tool_id_intersection_count: 0
+  source_path_intersection_count: 0
+  mutation_case_count: 17
+  shared_hard_failure_count: 7
+  v1_only_hard_failure_count: 5
+  v18_only_hard_failure_count: 5
+  unexpected_mutation_outcome_count: 0
+  v1_referenced_evidence_path_count: 20
+  v1_existing_evidence_path_count: 20
+  v1_readable_completion_count: 3
+  direct_active_automation_invocation_count: 0
+  active_non_automation_reference_families: 4
+  historical_receipts_rewritten: false
+  validator_sources_changed: false
+  live_registry_sources_changed: false
+  test_or_fixture_sources_changed: false
+  p9_t05_executed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+validation_evidence:
+  selected_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "live_v1_traceability_registry"
+    - "live_v18_traceability_registry"
+    - "focused_v1_v18_traceability_tests"
+    - "entry_identity_intersection"
+    - "v1_entry_mapping"
+    - "cross_validator_mutation_matrix"
+    - "v1_only_hard_failure_count"
+    - "historical_artifact_readability"
+    - "active_automation_reference_audit"
+    - "affected_profile_selection"
+    - "legacy_planner_shadow_comparison"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "git_diff_check"
+    - "checkpoint_transaction"
+  executed_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "live_v1_traceability_registry"
+    - "live_v18_traceability_registry"
+    - "focused_v1_v18_traceability_tests"
+    - "entry_identity_intersection"
+    - "v1_entry_mapping"
+    - "cross_validator_mutation_matrix"
+    - "v1_only_hard_failure_count"
+    - "historical_artifact_readability"
+    - "active_automation_reference_audit"
+    - "affected_profile_selection"
+    - "legacy_planner_shadow_comparison"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+  parity_report_path: "research_control/tasks/RT-20260717-016/artifacts/support_traceability_parity_report.json"
+  parity_report_sha256: "3689217b0330705697e561c7b7f7895d5a3a2dfa19f9347c7ee271aa5782031c"
+  affected_profile:
+    status: "READY"
+    selected_gate_count: 13
+    execution_authority: "legacy"
+  legacy_planner_shadow_comparison:
+    status: "PASS"
+    legacy_compatible_blocking_gate_count: 11
+    planner_blocking_gate_count: 11
+    unexplained_mismatch_count: 0
+  pre_registration_repository_suite:
+    test_count: 891
+    skip_count: 1
+    failure_count: 1
+    duration_seconds: 114.649
+    status: "EXPECTED_TRANSACTION_ASSEMBLY_FINDING"
+    explanation: "The memory bootstrap idempotence test detected the newly written canonical assessment before its generated registration outputs were synchronized."
+  stable_post_registration_repository_suite:
+    test_count: 891
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    duration_seconds: 115.032
+    status: "PASS"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local retrieval PASS after refresh with 815 source objects 4057 relationships 815 semantic rows and 815 vault rows"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | canonical traceability assessment requires documentation-impact accounting with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory resolver preserved the explicit P9-T04 plan route"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry.py --json | exit_code=0 | live v1 registry PASS with 3 active entries"
+  - ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry_v18.py --json | exit_code=0 | live v18 registry PASS with 5 active entries"
+  - ".venv/bin/python -m unittest -v tests.test_support_formalization_traceability_registry tests.test_support_formalization_traceability_registry_v18 | exit_code=0 | 11 tests PASS in 0.208 seconds"
+  - "read-only inline Python 17-case cross-validator mutation matrix | exit_code=0 | 7 shared 5 v1-only and 5 v18-only failures with zero unexpected outcomes"
+  - "read-only tracked-reference audit | exit_code=0 | no direct active Make checkpoint full-validation planner workflow or skill invocation of v1; active inventory test registry claim-boundary task and handoff references remain"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/design/support_traceability_v1_v18_parity_assessment.md --explain | exit_code=0 | affected profile READY with 13 selected gates under legacy execution authority"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy-compatible affected blocking gates equal 11 planner blocking gates with zero unexplained mismatch"
+  - ".venv/bin/python -m unittest discover -s tests | pre_registration_exit_code=1 | 891 tests one expected skip and one transaction-assembly memory-idempotence finding before source registration"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state 891 tests PASS with one expected skip in 115.032 seconds"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | generated task indexes are fresh"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py with explicit output paths and --check | exit_code=0 | generated dependency graph outputs are fresh"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | governed memory derivatives and core validation PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical warnings only"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 42 lease parity project binding clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "Memory preflight canonical-plan inspection classifier resolver live validators and emitted-signal validation passed before the audit."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All three v1 entries are distinct from all five v18 entries by entry task checker or tool and source identity."
+      - "Every one of the 17 read-only mutation cases matched expectation with five hard failures unique to each validator."
+      - "All 20 v1 evidence paths and all three owning completion records remain readable."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The registered assessment and task report preserve the retain-active conclusion and no-physics boundary."
+      - "The stable post-registration repository suite passes 891 tests with one expected skip."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "This completion is eligible for persistence only through the governed compare-mode checkpoint which must confirm shadow parity, rerun final blockers, and commit atomically or restore the entry index."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "This packet changes no scientific renderer or rendered scientific artifact."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Governed source registration, memory synchronization, generated derivatives, and core validation pass; the checkpoint reruns final memory blockers."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The assessment uses operational retention language and does not make validator, proof, or physics authority claims."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-016/documentation_impact.yaml"
+  source_documentation_updated: true
+  updated_source_documentation:
+    - "research_control/design/support_traceability_v1_v18_parity_assessment.md"
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R19"
+  implements_plan_task_id: "P9-T04"
+  implementation_status: "PASS"
+  coverage_effect: "p9_t04_traceability_retirement_assessment_pass_retain_active_p9_t05_dependency_ready_after_checkpoint_no_physics_promotion"
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system support-traceability retirement parity assessment only; no physics or derivation status changes."
+scientific_claims_changed: false
+forbidden_conclusion_summary: "This v19 packet records a project-system retention assessment. It does not remove or modify either validator or live registry, rewrite historical evidence, make validation proof authority, execute P9-T05, change ordinary research, or authorize ontology, benchmark, Gate Chair, physics, proof, or completed-derivation claims."
+verdict: "v19_p9_t04_traceability_retirement_assessment_pass_retain_active_p9_t05_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "V1 remains necessary because its three active artifact families are unmigrated and its five unique hard failures are not enforced by v18. V18 adds five different hard failures, so the two validators are complementary rather than substitutive."
+selected_next_route:
+  route_id: "v19_p9_t05_memory_test_fixture_minimization"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P9"
+  plan_task_id: "P9-T05"
+  task_name: "Convert memory-system unit coverage to miniature repositories and isolate live acceptance"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "memory_test_fixture_minimization"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system memory-test fixture minimization only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After governed checkpoint PASS route one separately bounded P9-T05 memory-test fixture-minimization packet; do not execute it in P9-T04."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 815
+    relationship_row_count: 4057
+    semantic_row_count: 815
+    vault_row_count: 815
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

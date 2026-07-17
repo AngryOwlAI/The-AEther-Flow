@@ -1,0 +1,42 @@
+task_id: "RT-20260717-016"
+task_type: "support_traceability_retirement_assessment"
+status: "completed"
+created_at: "2026-07-17T18:49:37Z"
+updated_at: "2026-07-17T18:49:37Z"
+closed_at: "2026-07-17T18:49:37Z"
+parent_task_id: "RT-20260717-015"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260717-016"
+current_job_id: "AJ-RT-20260717-016-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260717-016"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached dependency-ready P9-T04 after the governed P9-T03 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T04"
+  plan_task_name: "Perform v1-to-v18 traceability retirement parity assessment"
+  recommendation_ids:
+    - "V19-R19"
+objective: "Determine from live entry mapping, fail-closed mutation behavior, historical readability, and tracked invocation references whether support-traceability v1 should remain active, become historical, or retire after migration."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system support-traceability retirement parity assessment only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p9_t04_traceability_retirement_assessment_pass_retain_active_p9_t05_dependency_ready_after_checkpoint"
+claim_boundary_id: "CB-V19-P9-T04-TRACEABILITY-RETIREMENT-ASSESSMENT-001"
+claim_boundary:
+  allowed_scope: "One canonical control assessment, one task-local machine-readable report, normal control records, and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+recommendation: "retain_active"
+next_recommended_action: "After governed checkpoint PASS route one separately bounded P9-T05 memory-test fixture-minimization packet."
+documentation_impact_id: "DI-RT-20260717-016-001"
+completion_id: "AJC-AJ-RT-20260717-016-001"
+notes: "All three v1 entries remain distinct from all five v18 entries. The 17-case matrix found seven shared, five v1-only, and five v18-only hard failures with zero unexpected outcomes, so retirement parity is incomplete and v1 remains active."

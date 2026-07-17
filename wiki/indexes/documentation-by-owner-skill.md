@@ -362,6 +362,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1` `wiki/markdown/md-research-control-design-source-model-zoo-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA` `wiki/markdown/md-research-control-design-status-card-v2-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `wiki/markdown/md-research-control-design-support-only-formalization-lane-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-SUPPORT-TRACEABILITY-V1-V18-PARITY-ASSESSMENT` `wiki/markdown/md-research-control-design-support-traceability-v1-v18-parity-assessment.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16` `wiki/markdown/md-research-control-design-target-import-attack-fixture-catalog-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16` `wiki/markdown/md-research-control-design-target-import-attack-taxonomy-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1` `wiki/markdown/md-research-control-design-task-index-schema-v1.md`
@@ -718,6 +719,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-SOURCE-MODEL-ZOO-V1` `research_control/design/source_model_zoo_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-STATUS-CARD-V2-SCHEMA` `research_control/design/status_card_v2_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-SUPPORT-ONLY-FORMALIZATION-LANE-V1` `research_control/design/support_only_formalization_lane_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-SUPPORT-TRACEABILITY-V1-V18-PARITY-ASSESSMENT` `research_control/design/support_traceability_v1_v18_parity_assessment.md`
 - `MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16` `research_control/design/target_import_attack_fixture_catalog_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16` `research_control/design/target_import_attack_taxonomy_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1` `research_control/design/task_index_schema_v1.md`
