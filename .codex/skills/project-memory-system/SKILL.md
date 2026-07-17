@@ -48,6 +48,19 @@ record the profile, selected gate IDs, status, compact receipt path and hash,
 counts, and tree identity; expand only the relevant failed or warning finding
 group.
 
+Execute the local-retrieval doctor through its explicit Make target:
+
+```zsh
+make PYTHON=.venv/bin/python validate-doctor
+make PYTHON=.venv/bin/python validate-doctor VALIDATION_DOCTOR_FLAGS=--refresh
+```
+
+The default is read-only. `--refresh` explicitly rebuilds only ignored local
+retrieval state. Doctor `WARN` findings do not change tracked-memory PASS and
+do not satisfy checkpoint acceptance. Full receipts remain under
+`.local/validation-receipts/doctor/`; operator output stays compact unless the
+receipt is inspected.
+
 ## Direct Memory Operations
 
 Use these direct compatibility operations only when the shared plan or owning
@@ -64,10 +77,11 @@ make PYTHON=.venv/bin/python test-memory
 
 `memory-sync` runs the write-only tracked-memory synchronizer and emits its
 path-level receipt. `memory-validate-core` runs only the read-only tracked
-memory gate. `memory-doctor` owns local Obsidian synchronization and linting,
-memory status, and search smoke; it is local operational evidence and cannot
-satisfy checkpoint or physics authority. `test-memory` runs the focused memory
-test shard.
+memory gate. `memory-doctor` remains the mutating compatibility wrapper for
+local Obsidian synchronization, linting, status, and search smoke;
+`validate-doctor` is the read-only-by-default diagnostic command. Both are
+local operational evidence and cannot satisfy checkpoint or physics authority.
+`test-memory` runs the focused memory test shard.
 
 The legacy Make aliases `validate-memory` and `validate-memory-full` remain
 compatibility entry points until their separately authorized wrapper and

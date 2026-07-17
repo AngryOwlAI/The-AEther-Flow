@@ -1,0 +1,112 @@
+{
+  "affected_profile": {
+    "execution_authority": "legacy",
+    "selected_gate_count": 13,
+    "status": "READY"
+  },
+  "commands": [
+    {
+      "command": ".venv/bin/python -m py_compile scripts/validation/doctor.py tests/test_validation_doctor.py",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_validation_doctor",
+      "duration_seconds": 1.157,
+      "exit_code": 0,
+      "result": "10 tests PASS"
+    },
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_validation_profiles tests.test_validation_orchestration",
+      "duration_seconds": 1.244,
+      "exit_code": 0,
+      "result": "26 tests PASS"
+    },
+    {
+      "command": "make PYTHON=.venv/bin/python test-memory",
+      "duration_seconds": 2.016,
+      "exit_code": 0,
+      "result": "96 tests PASS"
+    },
+    {
+      "command": "make PYTHON=.venv/bin/python validate-doctor VALIDATION_DOCTOR_FLAGS=--json",
+      "exit_code": 0,
+      "result": "WARN during active transaction with core validation PASS"
+    },
+    {
+      "command": "make PYTHON=.venv/bin/python validate-doctor VALIDATION_DOCTOR_FLAGS='--refresh --json'",
+      "exit_code": 0,
+      "result": "PASS with 816 semantic extracts refreshed and no tracked-state change"
+    },
+    {
+      "command": "make PYTHON=.venv/bin/python validate-doctor VALIDATION_DOCTOR_FLAGS=--json",
+      "exit_code": 0,
+      "result": "PASS in stable completed state without refresh"
+    },
+    {
+      "command": ".venv/bin/python scripts/validation/profiles.py audit --json",
+      "exit_code": 0,
+      "result": "PASS with 11 legacy-compatible blocking gates equal to 11 planner gates"
+    },
+    {
+      "command": ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "duration_seconds": 108.695,
+      "exit_code": 1,
+      "result": "904 tests with one compatibility-wrapper failure and one skip"
+    },
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_validation_wrappers.MakeValidationProfileWrapperTests.test_five_public_targets_delegate_to_shared_cli_profiles tests.test_validation_doctor",
+      "duration_seconds": 1.134,
+      "exit_code": 0,
+      "result": "11 tests PASS after restoring shared planner delegation"
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "duration_seconds": 109.479,
+      "exit_code": 0,
+      "result": "904 tests PASS with one expected skip"
+    }
+  ],
+  "doctor_live_precompletion": {
+    "check_count": 10,
+    "core_validation_status": "PASS",
+    "fail_count": 0,
+    "local_retrieval_status": "WARN",
+    "pass_count": 6,
+    "receipt_path": ".local/validation-receipts/doctor/RUN-DOCTOR-622947c5b06c008d.json",
+    "receipt_sha256": "b34a65fcaca15f0151741f24eeca539cad91418f328de8208fe2ae1af80a9266",
+    "skipped_count": 1,
+    "status": "WARN",
+    "warn_count": 3,
+    "warning_boundary": "Changed local mirror and index plus active-job completion diagnostic; all are non-authoritative and expected before completion and memory synchronization."
+  },
+  "legacy_planner_shadow_comparison": {
+    "legacy_compatible_blocking_gate_count": 11,
+    "planner_blocking_gate_count": 11,
+    "status": "PASS",
+    "unexplained_mismatch_count": 0
+  },
+  "live_completed_state": {
+    "default_read_only_receipt_path": ".local/validation-receipts/doctor/RUN-DOCTOR-a0005abcbf98bd7e.json",
+    "default_read_only_receipt_sha256": "4bf38d7de341056f5dd6036fd1c9c9d56113a3141e72fab93a2b52e9f4f3bd16",
+    "explicit_refresh_receipt_path": ".local/validation-receipts/doctor/RUN-DOCTOR-ce4b94971f5dcfa5.json",
+    "explicit_refresh_receipt_sha256": "63e3fb95cff30c5490b28b6b0cda3e6319efa6ae6ee2c8192687641b3142ab7b",
+    "status": "PASS",
+    "tracked_refresh_mutation": false
+  },
+  "no_physics_authority": true,
+  "plan_task_id": "P9-T07",
+  "schema_id": "v19_doctor_profile_validation_receipt_v1",
+  "status": "PASS",
+  "task_id": "RT-20260717-019"
+}

@@ -1,0 +1,292 @@
+job_id: "AJ-RT-20260717-019-001"
+completion_id: "AJC-AJ-RT-20260717-019-001"
+task_id: "RT-20260717-019"
+decision_id: "DDR-20260717-019"
+role_id: "memory-system-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "memory-system-maintainer@0.2.0--RT-20260717-019"
+status: "completed"
+created_at: "2026-07-17T20:31:48Z"
+started_at: "2026-07-17T20:31:48Z"
+completed_at: "2026-07-17T20:44:10Z"
+objective: "Implement one explicit local-retrieval doctor command with read-only diagnosis by default optional bounded local refresh compact output and no checkpoint authority."
+completion_summary: "Added one explicit doctor that resolves all eight advisory profile gates, checks environment and checkpoint separation, emits one compact line, stores a full ignored receipt, defaults to non-refreshing diagnosis, and rejects refresh targets outside .local before writing."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P9-T07"
+  - "research_control/design/validation_profile_policy_v1.md"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "scripts/validation/profiles.py"
+  - ".codex/skills/project-memory-system/scripts/obsidian_wiki_lib.py"
+  - "research_control/tasks/RT-20260717-018/jobs/completions/AJC-AJ-RT-20260717-018-001.yaml"
+outputs_created:
+  - "scripts/validation/doctor.py"
+  - "tests/test_validation_doctor.py"
+  - "research_control/tasks/RT-20260717-019/artifacts/doctor_profile_acceptance.json"
+  - "research_control/tasks/RT-20260717-019/artifacts/doctor_profile_validation_receipt.json"
+  - "research_control/tasks/RT-20260717-019/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-019/jobs/completions/AJC-AJ-RT-20260717-019-001.yaml"
+outputs_updated:
+  - "Makefile"
+  - ".codex/skills/project-memory-system/SKILL.md"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P9-T07"
+  recommendation_ids:
+    - "V19-R25"
+    - "V19-R32"
+    - "V19-R47"
+  migration_epoch: "shadow_planner"
+  implementation_status: "completed"
+  downstream_tasks_not_implemented:
+    - "P10-T01 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p9_t07_local_retrieval_doctor_profile"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R25"
+    - "V19-R32"
+    - "V19-R47"
+  implements_plan_task_id: "P9-T07"
+  implementation_status: "PASS"
+  coverage_effect: "explicit local-retrieval diagnosis optional local-only refresh compact receipts and checkpoint separation"
+physics_progress_status:
+  status: "project_system_local_retrieval_doctor_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P9-T07 changes local operational diagnostics only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Doctor statuses fixtures local receipts and route diagnostics are operational evidence only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+doctor_profile:
+  status: "PASS"
+  command: "make PYTHON=.venv/bin/python validate-doctor"
+  explicit_refresh_command: "make PYTHON=.venv/bin/python validate-doctor VALIDATION_DOCTOR_FLAGS=--refresh"
+  default_read_only: true
+  refresh_root: ".local"
+  refresh_target_precheck: true
+  tracked_mutation_guard: true
+  compact_output: true
+  full_receipt_root: ".local/validation-receipts/doctor"
+  result_count: 10
+  profile_selected_gate_count: 8
+  profile_blocking_gate_count: 0
+  checkpoint_overlap_count: 0
+  fixture_test_count: 10
+  core_status_under_stale_local_state: "PASS"
+  local_status_under_stale_local_state: "WARN"
+  unsafe_refresh_status: "FAIL_BEFORE_WRITE"
+  ordinary_research_handoff_preserved: "handoff-0740"
+compatibility_correction:
+  corrected_at: "2026-07-17T20:58:58Z"
+  path: "Makefile"
+  status: "PASS"
+  explanation: "The first stable full-suite run showed that validate-doctor must retain shared profile-planner delegation. The bounded wrapper now resolves the doctor profile silently before executing the compact health runner."
+checkpoint_receipt_correction:
+  corrected_at: "2026-07-17T21:02:05Z"
+  path: "research_control/tasks/RT-20260717-019/documentation_impact.yaml"
+  status: "PASS"
+  explanation: "The first checkpoint write-only memory sync created the authorized FOLDER_MAP.md derivative. The restored transaction now lists that live derivative explicitly before retry."
+validation_evidence:
+  doctor_fixture_status: "PASS"
+  validation_profile_status: "PASS"
+  validation_orchestration_status: "PASS"
+  memory_shard_status: "PASS"
+  affected_profile_status: "READY"
+  affected_selected_gate_count: 13
+  execution_authority: "legacy"
+  legacy_planner_shadow_comparison:
+    status: "PASS"
+    legacy_compatible_blocking_gate_count: 11
+    planner_blocking_gate_count: 11
+    unexplained_mismatch_count: 0
+  live_precompletion_doctor:
+    status: "WARN"
+    core_validation_status: "PASS"
+    local_retrieval_status: "WARN"
+    check_count: 10
+    pass_count: 6
+    warn_count: 3
+    fail_count: 0
+    skipped_count: 1
+    receipt_path: ".local/validation-receipts/doctor/RUN-DOCTOR-622947c5b06c008d.json"
+    receipt_sha256: "b34a65fcaca15f0151741f24eeca539cad91418f328de8208fe2ae1af80a9266"
+    explanation: "The changed canonical skill had a stale local mirror and index and the active job had no completion yet; all three findings were correctly advisory."
+  live_completed_state_doctor:
+    status: "PASS"
+    core_validation_status: "PASS"
+    local_retrieval_status: "PASS"
+    check_count: 10
+    pass_count: 9
+    warn_count: 0
+    fail_count: 0
+    skipped_count: 1
+    receipt_path: ".local/validation-receipts/doctor/RUN-DOCTOR-a0005abcbf98bd7e.json"
+    receipt_sha256: "4bf38d7de341056f5dd6036fd1c9c9d56113a3141e72fab93a2b52e9f4f3bd16"
+  live_explicit_refresh:
+    status: "PASS"
+    semantic_extract_count: 816
+    tracked_state_changed: false
+    receipt_path: ".local/validation-receipts/doctor/RUN-DOCTOR-ce4b94971f5dcfa5.json"
+    receipt_sha256: "63e3fb95cff30c5490b28b6b0cda3e6319efa6ae6ee2c8192687641b3142ab7b"
+  first_repository_suite:
+    test_count: 904
+    skip_count: 1
+    failure_count: 1
+    error_count: 0
+    duration_seconds: 108.695
+    status: "COMPATIBILITY_FINDING_REPAIRED"
+    explanation: "The new Make target initially omitted the shared profile-planner delegation required by the existing public-wrapper contract."
+  stable_completed_state_repository_suite:
+    test_count: 904
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    duration_seconds: 109.479
+    status: "PASS"
+command_results:
+  - ".venv/bin/python -m py_compile scripts/validation/doctor.py tests/test_validation_doctor.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_validation_doctor | exit_code=0 | 10 tests PASS in 1.157 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_validation_profiles tests.test_validation_orchestration | exit_code=0 | 26 tests PASS in 1.244 seconds"
+  - "make PYTHON=.venv/bin/python test-memory | exit_code=0 | 96 tests PASS in 2.016 seconds"
+  - "make PYTHON=.venv/bin/python validate-doctor VALIDATION_DOCTOR_FLAGS=--json | exit_code=0 | expected active-state WARN with core validation PASS and full local receipt"
+  - "make PYTHON=.venv/bin/python validate-doctor VALIDATION_DOCTOR_FLAGS='--refresh --json' | exit_code=0 | 10 checks PASS 816 semantic extracts refreshed and tracked Git fingerprint unchanged"
+  - "make PYTHON=.venv/bin/python validate-doctor VALIDATION_DOCTOR_FLAGS=--json | exit_code=0 | stable completed-state 10 checks PASS without refresh"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths scripts/validation/doctor.py Makefile .codex/skills/project-memory-system/SKILL.md tests/test_validation_doctor.py --json | exit_code=0 | READY with 13 selected gates"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy-compatible blocking gates equal 11 planner gates with zero unexplained mismatch"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | documentation impact required with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory resolver preserved the explicit P9-T07 AgentJob boundary"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | task index CSV and Markdown fresh"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json ... --markdown ... --dot ... and --check | exit_code=0 | graph JSON Markdown and DOT fresh"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | PASS with nonblocking existing-memory findings"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest discover -s tests | first_exit_code=1 | 904 tests one expected skip and one validate-doctor shared-planner wrapper failure"
+  - ".venv/bin/python -m unittest -v tests.test_validation_wrappers.MakeValidationProfileWrapperTests.test_five_public_targets_delegate_to_shared_cli_profiles tests.test_validation_doctor | exit_code=0 | 11 tests PASS after bounded Make wrapper correction"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state 904 tests PASS with one expected skip in 109.479 seconds"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-019-001 | required final atomic checkpoint"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 45 lease parity project binding clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "P9-T06 completion canonical-plan hash memory preflight classifier resolver and no competing signal were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Fresh stale missing-index malformed-index explicit-refresh search-failure read-only compact-output and unsafe-target fixtures pass."
+      - "Refresh writes only beneath .local and rejects an escaping target before any write."
+      - "The doctor profile contains no blocking gate and no checkpoint obligation overlap."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The focused doctor profile orchestration and 96-test memory shard pass."
+      - "The stable completed-state repository suite passes 904 tests with one expected skip."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "Persistence remains authorized only through the governed checkpoint after final generated-state validation."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Governed tracked-memory synchronization and completed-state validate-only pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The packet makes operational diagnostic claims only and changes no scientific claim source."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-019/documentation_impact.yaml"
+  source_documentation_updated: true
+  updated_source_documentation:
+    - ".codex/skills/project-memory-system/SKILL.md"
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet implements operational local diagnostics only. It does not make doctor PASS repository acceptance change blocking validator findings alter planner checkpoint or CI authority supersede ordinary research modify canonical ontology derive source laws matter coupling or Einstein equations promote a benchmark issue a Gate Chair verdict prove a theorem or complete the derivation."
+verdict: "v19_p9_t07_local_retrieval_doctor_pass_p10_t01_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "One explicit doctor now separates advisory local health from checkpoint acceptance while retaining opt-in fail-closed maintenance for an explicitly requested local refresh."
+selected_next_route:
+  route_id: "v19_p10_t01_shared_repository_snapshot"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P10"
+  plan_task_id: "P10-T01"
+  task_name: "Implement the shared immutable repository snapshot"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "shared_repository_snapshot"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system immutable repository snapshot only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After stable completed-state validation and governed checkpoint PASS route one separately bounded P10-T01 packet; do not execute it in P9-T07."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 816
+    relationship_row_count: 4062
+    semantic_row_count: 816
+    vault_row_count: 816
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"local retrieval doctor checkpoint separation\" --limit 10 --json"
+      query_type: "search"
+      query_text: "local retrieval doctor checkpoint separation"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1 --exact-id --limit 10 --json"
+      query_type: "search"
+      query_text: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_profile_policy_v1.md"
+      source_hash: "3e33c486484a8242563cc47d32a10c67f565d0324fc0f4fc171144a0d03e41fd"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

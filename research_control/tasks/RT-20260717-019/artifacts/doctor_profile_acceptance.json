@@ -1,0 +1,84 @@
+{
+  "authority": {
+    "benchmark_authority": false,
+    "checkpoint_authority": false,
+    "gate_chair_authority": false,
+    "local_only": true,
+    "ontology_authority": false,
+    "operational_diagnostics_only": true,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "repository_acceptance_authority": false
+  },
+  "implementation": {
+    "compact_output": true,
+    "default_read_only": true,
+    "explicit_refresh_flag": "--refresh",
+    "full_receipt_root": ".local/validation-receipts/doctor",
+    "make_command": "make PYTHON=.venv/bin/python validate-doctor",
+    "refresh_boundary": ".local",
+    "refresh_target_precheck": true,
+    "tracked_mutation_guard": true
+  },
+  "live_acceptance": {
+    "default_read_only": {
+      "check_count": 10,
+      "core_validation_status": "PASS",
+      "fail_count": 0,
+      "receipt_path": ".local/validation-receipts/doctor/RUN-DOCTOR-a0005abcbf98bd7e.json",
+      "receipt_sha256": "4bf38d7de341056f5dd6036fd1c9c9d56113a3141e72fab93a2b52e9f4f3bd16",
+      "status": "PASS",
+      "warn_count": 0
+    },
+    "explicit_refresh": {
+      "check_count": 10,
+      "core_validation_status": "PASS",
+      "fail_count": 0,
+      "receipt_path": ".local/validation-receipts/doctor/RUN-DOCTOR-ce4b94971f5dcfa5.json",
+      "receipt_sha256": "63e3fb95cff30c5490b28b6b0cda3e6319efa6ae6ee2c8192687641b3142ab7b",
+      "semantic_extract_count": 816,
+      "status": "PASS",
+      "tracked_state_changed": false,
+      "warn_count": 0
+    }
+  },
+  "plan_task_id": "P9-T07",
+  "profile_contract": {
+    "blocking_gate_ids": [],
+    "checkpoint_obligation_overlap": [],
+    "checkpoint_transaction_selected": false,
+    "selected_gate_ids": [
+      "local_retrieval_sync",
+      "local_retrieval_lint",
+      "memory_status_diagnostic",
+      "memory_lookup_diagnostic",
+      "memory_search_diagnostic",
+      "route_signature_diagnostic",
+      "route_orbit_diagnostic",
+      "continue_context_resolution"
+    ]
+  },
+  "schema_id": "v19_doctor_profile_acceptance_v1",
+  "source_hashes": {
+    ".codex/skills/project-memory-system/SKILL.md": "e43e4675254564900565f93ba3140baa18b55c4ff032b4e587dc6b409885a2fa",
+    "Makefile": "08063d5c46267a1355568dab91bbaa438080941cd57006bbc29cfde3403796bc",
+    "scripts/validation/doctor.py": "25017595d987a591b82039f62563b6bf8cf52940561118ac67f80254af7a302a",
+    "tests/test_validation_doctor.py": "0976612af73053d48844a7fec391d24c27c0eed01b583f8676ef1b3ed1e6c8ae"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260717-019",
+  "test_matrix": {
+    "compact_json": "PASS",
+    "explicit_refresh": "PASS",
+    "fresh": "PASS",
+    "malformed_index": "PASS",
+    "missing_index": "PASS",
+    "outside_local_refresh_rejected": "PASS",
+    "read_only_default": "PASS",
+    "refresh_failure": "PASS",
+    "search_failure": "PASS",
+    "stale_local_core_pass": "PASS",
+    "test_count": 10
+  },
+  "verdict": "local_retrieval_doctor_pass_checkpoint_separated_no_physics_delta"
+}

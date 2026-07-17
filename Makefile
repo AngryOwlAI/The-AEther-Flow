@@ -1,11 +1,12 @@
 PYTHON ?= .venv/bin/python
 MEMORY_SCRIPT_DIR := .codex/skills/project-memory-system/scripts
-MEMORY_TEST_MODULES := tests.test_memory_operations tests.test_memory_cli_modes tests.test_memory_system_unit tests.test_obsidian_wiki_unit tests.test_validation_orchestration
+MEMORY_TEST_MODULES := tests.test_memory_operations tests.test_memory_cli_modes tests.test_memory_system_unit tests.test_obsidian_wiki_unit tests.test_validation_orchestration tests.test_validation_doctor
 VALIDATION_PYTHON_SERIES := 3.12
 VALIDATION_REQUIREMENT_FILES := requirements.txt requirements-dev.txt
 VALIDATION_REQUIRED_DISTRIBUTIONS := PyMuPDF
 VALIDATION_PATHS ?=
 VALIDATION_DOCTOR_SCOPE ?= local_retrieval
+VALIDATION_DOCTOR_FLAGS ?=
 
 define VALIDATION_ENVIRONMENT_CHECK
 import hashlib
@@ -104,7 +105,7 @@ memory-doctor: validation-environment
 
 test-memory: validation-environment
 	$(PYTHON) -m unittest $(MEMORY_TEST_MODULES)
-	@printf '%s\n' '{"target":"test-memory","status":"PASS","module_count":5}'
+	@printf '%s\n' '{"target":"test-memory","status":"PASS","module_count":6}'
 
 validate-memory: memory-validate-core test-memory
 	@printf '%s\n' '{"target":"validate-memory","status":"PASS","profile":"affected-memory-compatibility"}'
@@ -127,7 +128,8 @@ validate-full: validation-environment
 	$(PYTHON) -m scripts.validation.cli plan --profile full --paths --explain
 
 validate-doctor: validation-environment
-	$(PYTHON) -m scripts.validation.cli plan --profile doctor --scope $(VALIDATION_DOCTOR_SCOPE) --explain
+	@$(PYTHON) -m scripts.validation.cli plan --profile doctor --scope $(VALIDATION_DOCTOR_SCOPE) --explain >/dev/null
+	$(PYTHON) scripts/validation/doctor.py --scope $(VALIDATION_DOCTOR_SCOPE) $(VALIDATION_DOCTOR_FLAGS)
 
 validate-project-control: validate-full validate-project-control-legacy
 	@printf '%s\n' '{"target":"validate-project-control","status":"PASS","compatibility_wrapper":true,"deprecated":true,"planner_profile":"full","execution_authority":"legacy"}'
