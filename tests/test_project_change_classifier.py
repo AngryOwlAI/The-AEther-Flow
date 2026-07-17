@@ -367,6 +367,33 @@ class ProjectChangeClassifierTests(unittest.TestCase):
             sorted(paths),
         )
 
+    def test_dependency_graph_implementation_paths_have_stable_family_tags(self) -> None:
+        paths = [
+            "scripts/research_control/render_dependency_graph.py",
+            "scripts/research_control/dependency_graph_model.py",
+        ]
+        for path in paths:
+            with self.subTest(path=path):
+                result = self.classifier.classify_paths([path])
+                self.assertEqual(result["path_family_tags"], ["dependency_graph_input"])
+                self.assertEqual(
+                    result["path_family_details"][0]["tags"],
+                    ["dependency_graph_input"],
+                )
+                self.assertNotIn("unknown_governed_path", result["reason_codes"])
+
+        forward = self.classifier.classify_paths(paths)
+        reverse = self.classifier.classify_paths(reversed(paths))
+        self.assertEqual(forward, reverse)
+        self.assertEqual(forward["path_family_tags"], ["dependency_graph_input"])
+        self.assertTrue(
+            all(
+                detail["tags"] == ["dependency_graph_input"]
+                for detail in forward["path_family_details"]
+            )
+        )
+        self.assertNotIn("unknown_governed_path", forward["reason_codes"])
+
     def test_unknown_governed_path_selects_full_without_silent_skip(self) -> None:
         result = self.classifier.classify_paths(["governed/new-format.bin"])
         self.assertEqual(result["recommended_validation_profile"], "full")

@@ -407,6 +407,8 @@ def is_dependency_graph_input(path: str) -> bool:
             "registries/RESEARCH_TASK_REGISTRY.csv",
             "registries/AGENT_JOB_REGISTRY.csv",
             "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+            "scripts/research_control/dependency_graph_model.py",
+            "scripts/research_control/render_dependency_graph.py",
             "output/research_dependency_graph.json",
             "output/research_dependency_graph.dot",
         }

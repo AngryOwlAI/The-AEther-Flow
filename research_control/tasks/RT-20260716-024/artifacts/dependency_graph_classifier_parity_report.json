@@ -1,0 +1,99 @@
+{
+  "schema_id": "dependency_graph_classifier_parity_report_v1",
+  "task_id": "RT-20260716-024",
+  "job_id": "AJ-RT-20260716-024-001",
+  "plan_task_id": "P7-T01",
+  "generated_at": "2026-07-17T05:29:24Z",
+  "status": "PASS",
+  "defect": {
+    "baseline_renderer_path_family_tags": [],
+    "baseline_snapshot_model_path_family_tags": [],
+    "baseline_joint_unknown_paths": [
+      "scripts/research_control/render_dependency_graph.py"
+    ],
+    "baseline_affected_dependency_graph_freshness_selected": false,
+    "root_cause": "The dependency-graph implementation paths received a legacy research-control reason code but no stable path-family tag, so fallback behavior depended on the other paths in the same classification request."
+  },
+  "repair": {
+    "classifier_path": "scripts/project_control/classify_project_changes.py",
+    "family_tag": "dependency_graph_input",
+    "mapped_paths": [
+      "scripts/research_control/dependency_graph_model.py",
+      "scripts/research_control/render_dependency_graph.py"
+    ],
+    "planner_implementation_changed": false,
+    "renderer_implementation_changed": false,
+    "snapshot_model_changed": false,
+    "legacy_execution_authority_changed": false
+  },
+  "acceptance": {
+    "individual_path_family_tags": {
+      "scripts/research_control/dependency_graph_model.py": [
+        "dependency_graph_input"
+      ],
+      "scripts/research_control/render_dependency_graph.py": [
+        "dependency_graph_input"
+      ]
+    },
+    "joint_path_family_tags": [
+      "dependency_graph_input"
+    ],
+    "joint_unknown_paths": [],
+    "affected_profile": "affected",
+    "affected_dependency_graph_freshness_selected": true,
+    "focused_classifier_planner_tests": {
+      "status": "PASS",
+      "tests": 119,
+      "duration_seconds": 5.580
+    },
+    "p7_t01_renderer_tests": {
+      "status": "PASS",
+      "tests": 10,
+      "duration_seconds": 32.244
+    },
+    "initial_active_state_full_suite": {
+      "status": "EXPECTED_SEQUENCING_FAILURE",
+      "tests": 853,
+      "failures": 1,
+      "errors": 1,
+      "skips": 1,
+      "duration_seconds": 217.491,
+      "causes": [
+        "The active AgentJob registry row intentionally had no completion path before durable completion creation.",
+        "The continuation context test requires stable completed task state before checkpoint_required_after_execution becomes true."
+      ]
+    },
+    "stable_completed_state_full_suite": {
+      "status": "PASS",
+      "tests": 853,
+      "skips": 1,
+      "duration_seconds": 218.550
+    },
+    "checkpoint_shadow": {
+      "status": "READY",
+      "unknown_paths": [],
+      "dependency_graph_freshness_selected": true,
+      "execution_authority": "legacy",
+      "governed_checkpoint_pending": true,
+      "initial_attempt": {
+        "status": "REPAIR_REQUIRED",
+        "shadow_comparison": "PASS",
+        "index_restored": true,
+        "commit_created": false,
+        "repair": "Add the memory-sync-generated FOLDER_MAP.md path and generated_derivative_changed classifier reason to the documentation-impact receipt."
+      }
+    }
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "scientific_claims_changed": false,
+    "physics_delta_changed": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "gate_chair_authority": false,
+    "proof_authority": false,
+    "p7_t02_executed": false
+  },
+  "verdict": "v19_p7_t01_classifier_shadow_parity_repair_pass_p7_t02_dependency_ready_after_checkpoint"
+}

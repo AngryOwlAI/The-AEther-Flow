@@ -85,6 +85,23 @@ class ValidationPlannerTests(unittest.TestCase):
         plan = self.plan_for(["registries/RESEARCH_TASK_REGISTRY.csv"])
         self.assertIn("dependency_graph_freshness", plan.selected_gate_ids)
 
+    def test_dependency_graph_implementation_paths_select_graph_freshness(self) -> None:
+        paths = [
+            "scripts/research_control/render_dependency_graph.py",
+            "scripts/research_control/dependency_graph_model.py",
+        ]
+        for path in paths:
+            with self.subTest(path=path):
+                plan = self.plan_for([path])
+                self.assertEqual(plan.effective_profile, "affected")
+                self.assertEqual(plan.unknown_paths, ())
+                self.assertIn("dependency_graph_freshness", plan.selected_gate_ids)
+
+        joint_plan = self.plan_for(paths)
+        self.assertEqual(joint_plan.effective_profile, "affected")
+        self.assertEqual(joint_plan.unknown_paths, ())
+        self.assertIn("dependency_graph_freshness", joint_plan.selected_gate_ids)
+
     def test_task_input_selects_task_index_freshness(self) -> None:
         plan = self.plan_for(["research_control/tasks/RT-TEST/00_TASK.yaml"])
         self.assertIn("task_index_freshness", plan.selected_gate_ids)
