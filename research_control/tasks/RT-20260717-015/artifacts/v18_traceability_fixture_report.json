@@ -1,0 +1,157 @@
+{
+  "authority_boundary": {
+    "fixture_paths_are_authority": false,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "baseline": {
+    "full_repository_copy_byte_count_per_negative_test": 1793955456,
+    "full_repository_copy_file_count_per_negative_test": 69639,
+    "full_repository_copy_negative_test_count": 2,
+    "full_repository_copy_total_byte_count": 3587910912,
+    "full_repository_copy_total_file_count": 139278,
+    "git_commit": "26ecbdf72f8940193d82bc39853c97e599c65336",
+    "git_tree": "d23406096d63467ba30f00cd7090bb5a16be099b",
+    "module_runtime_seconds": 53.213,
+    "status": "PASS",
+    "test_count": 4
+  },
+  "converted": {
+    "committed_fixture_byte_count": 289013,
+    "committed_fixture_file_count": 28,
+    "fixture_entry_count": 5,
+    "fixture_entry_ids": [
+      "SFR-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER",
+      "SFR-V18-P7-T03-CLOSURE-COUNTERMODEL-GENERATOR",
+      "SFR-V18-P7-T04-NO-TARGET-IMPORT-MUTATION-TESTER",
+      "SFR-V18-P7-T05-METRIC-USE-TEX-VALIDATOR",
+      "SFR-V18-P7-T06-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER"
+    ],
+    "module_runtime_reduction_percent": 99.872,
+    "module_runtime_seconds": 0.068,
+    "negative_test_fixture_bytes_created_per_run": 0,
+    "negative_test_fixture_files_created_per_run": 0,
+    "status": "PASS",
+    "test_count": 6
+  },
+  "failure_equivalence": [
+    {
+      "case_id": "proof_authority",
+      "exception_class": "V18TraceabilityError",
+      "message": "SFR-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER boundary proof_authority is not false",
+      "status": "PASS"
+    },
+    {
+      "case_id": "missing_pnf",
+      "exception_class": "V18TraceabilityError",
+      "message": "SFR-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER missing proof-normal-form row: PNF-MISSING",
+      "status": "PASS"
+    },
+    {
+      "case_id": "report_hash",
+      "exception_class": "V18TraceabilityError",
+      "message": "SFR-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER report_hash mismatch",
+      "status": "PASS"
+    },
+    {
+      "case_id": "source_hash",
+      "exception_class": "V18TraceabilityError",
+      "message": "SFR-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER source_artifacts hash mismatch for research_control/design/source_equivalence_typed_object_schema_v1.md: 27911188ee2a9673d034bb12d8f8d9b192960abc30aa26c38377ae84f367978a != 0000000000000000000000000000000000000000000000000000000000000000",
+      "status": "PASS"
+    }
+  ],
+  "fixture": {
+    "aggregate_sha256": "317ac02c54dfc7004271a5411c4b58860099c251ed94524273d03a292bf2ce5a",
+    "builder": "tests/support/traceability_fixture_builder.py",
+    "files": [
+      "registries/METRIC_USE_LEDGER.csv",
+      "registries/PROOF_NORMAL_FORM_REGISTRY.csv",
+      "research_control/design/metric_use_ledger_schema_v1.md",
+      "research_control/design/no_target_import_guard_map.md",
+      "research_control/design/source_detector_readout_semantics_burden_v1.md",
+      "research_control/design/source_equivalence_typed_object_schema_v1.md",
+      "research_control/design/support_formalization_traceability_registry_v18.yaml",
+      "research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex",
+      "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_report.json",
+      "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md",
+      "research_control/tasks/RT-20260708-021/artifacts/closure_countermodel_generator_report.json",
+      "research_control/tasks/RT-20260708-021/artifacts/closure_countermodel_generator_spec_v1.md",
+      "research_control/tasks/RT-20260708-022/artifacts/no_target_import_mutation_tester_report.json",
+      "research_control/tasks/RT-20260708-022/artifacts/no_target_import_mutation_tester_spec_v1.md",
+      "research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_report.json",
+      "research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_spec_v1.md",
+      "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_report.json",
+      "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_spec_v1.md",
+      "scripts/research_control/support_formalization/closure_countermodel_generator.py",
+      "scripts/research_control/support_formalization/detector_placeholder_collapse_checker.py",
+      "scripts/research_control/support_formalization/no_target_import_mutation_tester.py",
+      "scripts/research_control/support_formalization/typed_eqsrc_orbit_checker.py",
+      "scripts/research_control/validate_metric_use_tex_references.py",
+      "tests/test_closure_countermodel_generator.py",
+      "tests/test_detector_placeholder_collapse_checker.py",
+      "tests/test_no_target_import_mutation_tester.py",
+      "tests/test_typed_eqsrc_orbit_checker.py",
+      "tests/test_validate_metric_use_tex_references.py"
+    ],
+    "root": "tests/fixtures/support_traceability_v18",
+    "status": "PASS"
+  },
+  "gate_results": [
+    {
+      "gate_id": "live_v18_traceability_registry",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "minimal_v18_fixture_acceptance",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "normalized_exception_equivalence",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "v18_deterministic_cli",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "v18_cli_output_files",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "v18_module_runtime",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "affected_profile_selection",
+      "selected_gate_count": 14,
+      "status": "READY"
+    },
+    {
+      "gate_id": "stable_full_repository_tests",
+      "skip_count": 1,
+      "status": "PASS",
+      "test_count": 891
+    }
+  ],
+  "live_registry": {
+    "checked_entry_count": 5,
+    "plan_task_ids": [
+      "P7-T02",
+      "P7-T03",
+      "P7-T04",
+      "P7-T05",
+      "P7-T06"
+    ],
+    "proof_authority": false,
+    "status": "PASS",
+    "support_only": true
+  },
+  "plan_task_id": "P9-T03",
+  "recommendation_ids": [
+    "V19-R18"
+  ],
+  "status": "PASS",
+  "test_module_sha256": "f3a11784621f41f017cb16de449c97192c1c76c5aef6da421cfc670b08bac913"
+}

@@ -1,0 +1,258 @@
+job_id: "AJ-RT-20260717-015-001"
+completion_id: "AJC-AJ-RT-20260717-015-001"
+task_id: "RT-20260717-015"
+decision_id: "DDR-20260717-015"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-015"
+status: "completed"
+created_at: "2026-07-17T18:22:49Z"
+started_at: "2026-07-17T18:22:49Z"
+completed_at: "2026-07-17T18:22:49Z"
+objective: "Convert the v18 support-traceability mutation tests from full-repository copies to one all-entry fixture root while retaining legacy behavior and adding independent report-hash and source-hash failures."
+completion_summary: "Replaced both v18 negative-test full-repository copies with one committed 28-file fixture and injected raw-registry mutations. All four legacy behaviors plus independent report-hash and source-hash failures, live five-entry acceptance, deterministic CLI Markdown and JSON output, and the 891-test repository suite pass. Focused runtime fell from 53.213 seconds to 0.068 seconds. P9-T04 becomes dependency-ready only after the governed checkpoint."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P9-T03"
+  - "tests/test_support_formalization_traceability_registry_v18.py"
+  - "tests/support/traceability_fixture_builder.py"
+  - "research_control/design/support_formalization_traceability_registry_v18.yaml"
+  - "registries/PROOF_NORMAL_FORM_REGISTRY.csv"
+  - "scripts/research_control/support_formalization/traceability_io.py"
+  - "scripts/research_control/support_formalization/validate_traceability_registry_v18.py"
+  - "research_control/tasks/RT-20260717-014/jobs/completions/AJC-AJ-RT-20260717-014-001.yaml"
+outputs_created:
+  - "tests/test_support_formalization_traceability_registry_v18.py"
+  - "tests/fixtures/support_traceability_v18/**"
+  - "research_control/tasks/RT-20260717-015/artifacts/v18_traceability_fixture_report.json"
+  - "research_control/tasks/RT-20260717-015/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-015/jobs/completions/AJC-AJ-RT-20260717-015-001.yaml"
+implementation_results:
+  plan_task_id: "P9-T03"
+  implementation_status: "PASS"
+  legacy_behavior_count: 4
+  added_hash_case_count: 2
+  final_test_count: 6
+  live_registry_acceptance_preserved: true
+  live_registry_entry_count: 5
+  plan_task_order_preserved: true
+  deterministic_cli_markdown_preserved: true
+  deterministic_cli_json_preserved: true
+  proof_authority_failure_preserved: true
+  missing_pnf_failure_preserved: true
+  report_hash_failure_added: true
+  source_hash_failure_added: true
+  pnf_cross_registry_validation_preserved: true
+  support_only_boundary_preserved: true
+  full_repository_copy_calls_remaining: 0
+  fixture_entry_count: 5
+  fixture_file_count: 28
+  fixture_byte_count: 289013
+  negative_test_fixture_files_created_per_run: 0
+  negative_test_fixture_bytes_created_per_run: 0
+  p9_t04_executed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+validation_evidence:
+  selected_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "live_v18_traceability_registry"
+    - "minimal_v18_fixture_acceptance"
+    - "v18_proof_authority_failure"
+    - "v18_missing_pnf_failure"
+    - "v18_report_hash_failure"
+    - "v18_source_hash_failure"
+    - "normalized_exception_equivalence"
+    - "v18_deterministic_cli"
+    - "v18_cli_output_files"
+    - "v18_module_runtime"
+    - "affected_profile_selection"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "git_diff_check"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "git_diff_check"
+  executed_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "live_v18_traceability_registry"
+    - "minimal_v18_fixture_acceptance"
+    - "v18_proof_authority_failure"
+    - "v18_missing_pnf_failure"
+    - "v18_report_hash_failure"
+    - "v18_source_hash_failure"
+    - "normalized_exception_equivalence"
+    - "v18_deterministic_cli"
+    - "v18_cli_output_files"
+    - "v18_module_runtime"
+    - "affected_profile_selection"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+  fixture_report_path: "research_control/tasks/RT-20260717-015/artifacts/v18_traceability_fixture_report.json"
+  affected_profile:
+    status: "READY"
+    selected_gate_count: 14
+    execution_authority: "legacy"
+performance_evidence:
+  baseline_v18_module:
+    test_count: 4
+    duration_seconds: 53.213
+    status: "PASS"
+  baseline_negative_copy_cost:
+    negative_test_count: 2
+    file_count_per_top_level_copy: 69639
+    byte_count_per_top_level_copy: 1793955456
+    total_file_count: 139278
+    total_byte_count: 3587910912
+  converted_v18_module:
+    test_count: 6
+    duration_seconds: 0.068
+    real_seconds: 0.12
+    runtime_reduction_percent: 99.872
+    status: "PASS"
+  converted_negative_fixture_cost:
+    committed_fixture_file_count: 28
+    committed_fixture_byte_count: 289013
+    per_run_created_file_count: 0
+    per_run_created_byte_count: 0
+  stable_pre_checkpoint_full_suite:
+    test_count: 891
+    skip_count: 1
+    duration_seconds: 114.481
+    status: "PASS"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local retrieval PASS after refresh with 815 source objects 4057 relationships 815 semantic rows and 815 vault rows"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | bounded test fixture packet with no blocked path and no documentation source update required"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory resolver preserved the explicit P9-T03 plan route"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python -m py_compile tests/test_support_formalization_traceability_registry_v18.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_support_formalization_traceability_registry_v18 | exit_code=0 | 6 tests PASS in 0.068 seconds"
+  - ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry_v18.py --json | exit_code=0 | live v18 registry PASS with 5 entries in preserved P7-T02 through P7-T06 order"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths tests/test_support_formalization_traceability_registry_v18.py tests/fixtures/support_traceability_v18 --explain | exit_code=0 | affected profile READY with 14 selected gates under legacy execution authority"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable pre-checkpoint 891 tests PASS with one expected skip in 114.481 seconds"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | generated task indexes are fresh"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py with explicit output paths and --check | exit_code=0 | generated dependency graph outputs are fresh"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | governed memory derivatives and core validation PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical warnings only"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 41 lease parity project binding clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "Memory preflight canonical-plan inspection classifier resolver legacy timing baseline and emitted-signal validation passed before conversion."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The all-entry fixture validates source and tool hashes report hashes PNF rows plan ordering and support-only boundaries."
+      - "The two legacy negative cases retain exact V18TraceabilityError messages and independent report-hash and source-hash cases now pass."
+      - "The live registry and deterministic CLI Markdown and JSON behavior remain covered."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The converted six-test module passes in 0.068 seconds with no full-repository copy call."
+      - "The stable pre-checkpoint repository suite passes 891 tests with one expected skip."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "This completion is eligible for persistence only through the governed compare-mode checkpoint which must confirm shadow parity rerun final blockers and commit atomically or restore the entry index."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "This packet changes no renderer or rendered scientific artifact."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Governed memory synchronization and core validation pass and the checkpoint reruns final memory blockers."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The task uses operational test-fixture language and changes no scientific claim authority."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-015/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R18"
+  implements_plan_task_id: "P9-T03"
+  implementation_status: "PASS"
+  coverage_effect: "p9_t03_v18_traceability_minimal_fixture_conversion_pass_p9_t04_dependency_ready_after_checkpoint_no_physics_promotion"
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system v18 traceability test conversion only; no physics or derivation status changes."
+scientific_claims_changed: false
+forbidden_conclusion_summary: "This v19 packet changes test fixtures and test execution only. It does not weaken validation, make fixture paths authoritative, mutate the live traceability or PNF registry or production validator, execute P9-T04, change ordinary research, or authorize proof, benchmark, ontology, Gate Chair, physics, or derivation claims."
+verdict: "v19_p9_t03_v18_traceability_minimal_fixtures_pass_p9_t04_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "The v18 traceability module retains its four observable behaviors and exact fail-closed errors, adds independent report-hash and source-hash failures, and now reads one self-contained 28-file fixture without copying the repository. Focused and repository-wide tests pass and every authority boundary remains unchanged."
+selected_next_route:
+  route_id: "v19_p9_t04_traceability_retirement_parity_assessment"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P9"
+  plan_task_id: "P9-T04"
+  task_name: "Perform v1-to-v18 traceability retirement parity assessment"
+  role_family: "process-integrity-auditor@0.1.0"
+  task_type: "support_traceability_retirement_assessment"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system traceability retirement parity assessment only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After governed checkpoint PASS route one separately bounded P9-T04 traceability-retirement parity-assessment packet; do not execute it in P9-T03."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 815
+    relationship_row_count: 4057
+    semantic_row_count: 815
+    vault_row_count: 815
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

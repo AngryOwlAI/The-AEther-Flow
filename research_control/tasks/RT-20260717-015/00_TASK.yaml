@@ -1,0 +1,41 @@
+task_id: "RT-20260717-015"
+task_type: "v18_traceability_minimal_fixtures"
+status: "completed"
+created_at: "2026-07-17T18:22:49Z"
+updated_at: "2026-07-17T18:22:49Z"
+closed_at: "2026-07-17T18:22:49Z"
+parent_task_id: "RT-20260717-014"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260717-015"
+current_job_id: "AJ-RT-20260717-015-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-015"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached dependency-ready P9-T03 after the governed P9-T02 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T03"
+  plan_task_name: "Replace v18 support-traceability full-repository copies with minimal fixtures"
+  recommendation_ids:
+    - "V19-R18"
+objective: "Replace both v18 support-traceability full-repository mutation copies with one committed 28-file fixture and raw-registry injection while preserving the four legacy behaviors and adding independent report-hash and source-hash failures."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system v18 traceability test conversion only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p9_t03_v18_traceability_minimal_fixtures_pass_p9_t04_dependency_ready_after_checkpoint"
+claim_boundary_id: "CB-V19-P9-T03-V18-TRACEABILITY-MINIMAL-FIXTURES-001"
+claim_boundary:
+  allowed_scope: "One v18 traceability test module, one all-entry test-only fixture root, task-local performance and equivalence evidence, and governed derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+next_recommended_action: "After governed checkpoint PASS route one separately bounded P9-T04 traceability-retirement parity-assessment packet."
+documentation_impact_id: "DI-RT-20260717-015-001"
+completion_id: "AJC-AJ-RT-20260717-015-001"
+notes: "The live v18 all-entry acceptance and deterministic CLI Markdown and JSON coverage remain. All four negative cases now mutate an injected raw registry over one 28-file test fixture and create no repository copies."

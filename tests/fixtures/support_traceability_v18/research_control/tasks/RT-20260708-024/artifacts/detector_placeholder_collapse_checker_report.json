@@ -1,0 +1,147 @@
+{
+  "boundary_statement": "This detector-placeholder collapse checker is support-only finite-record and text tooling. It has proof_authority=false and does not adopt Det_src, adopt Readout_src, adopt detector semantics, derive matter coupling, derive Einstein equations, promote a benchmark, issue a Gate Chair verdict, or complete the derivation.",
+  "case_count": 5,
+  "case_results": [
+    {
+      "case_id": "explicit_placeholder_block_safe",
+      "collapse_detected": false,
+      "expected_status": "pass",
+      "expected_status_codes": [
+        "pass_placeholder_block_preserved"
+      ],
+      "missing_expected_status_codes": [],
+      "observed_status": "pass",
+      "observed_status_codes": [
+        "pass_placeholder_block_preserved"
+      ],
+      "pattern_hits": [],
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "semantic_state": "explicit_placeholder_block",
+      "status_match": true,
+      "support_only": true,
+      "text": "DetPlaceholder(E_*) = missing_and_blocked. The placeholder is an explicit block and is not detector semantics.",
+      "true_authority_flags": []
+    },
+    {
+      "case_id": "draft_control_source_readout_candidate_safe",
+      "collapse_detected": false,
+      "expected_status": "pass",
+      "expected_status_codes": [
+        "pass_draft_control_candidate_preserved"
+      ],
+      "missing_expected_status_codes": [],
+      "observed_status": "pass",
+      "observed_status_codes": [
+        "pass_draft_control_candidate_preserved"
+      ],
+      "pattern_hits": [],
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "semantic_state": "draft_control_source_readout_candidate",
+      "status_match": true,
+      "support_only": true,
+      "text": "SourceReadoutCandidate_EStar_v1 is a draft_control_candidate. Det_src(E_*) and Readout_src(E_*) are task-local source-side candidate names; detector_semantics_adopted: false.",
+      "true_authority_flags": []
+    },
+    {
+      "case_id": "placeholder_as_adopted_detector_semantics",
+      "collapse_detected": true,
+      "expected_status": "fail",
+      "expected_status_codes": [
+        "fail_placeholder_as_detector_semantics_collapse"
+      ],
+      "missing_expected_status_codes": [],
+      "observed_status": "fail",
+      "observed_status_codes": [
+        "fail_placeholder_as_detector_semantics_collapse"
+      ],
+      "pattern_hits": [
+        "adopts_detector_semantics",
+        "implies_detector_semantics"
+      ],
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "semantic_state": "explicit_placeholder_block",
+      "status_match": true,
+      "support_only": true,
+      "text": "DetPlaceholder(E_*) supplies adopted detector semantics for the matter-coupling step.",
+      "true_authority_flags": []
+    },
+    {
+      "case_id": "source_readout_candidate_as_detector_semantics",
+      "collapse_detected": true,
+      "expected_status": "fail",
+      "expected_status_codes": [
+        "fail_candidate_as_detector_semantics_collapse",
+        "fail_matter_coupling_overread"
+      ],
+      "missing_expected_status_codes": [],
+      "observed_status": "fail",
+      "observed_status_codes": [
+        "fail_candidate_as_detector_semantics_collapse",
+        "fail_matter_coupling_overread"
+      ],
+      "pattern_hits": [
+        "adopts_detector_semantics",
+        "implies_detector_semantics",
+        "matter_coupling_follows"
+      ],
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "semantic_state": "draft_control_source_readout_candidate",
+      "status_match": true,
+      "support_only": true,
+      "text": "SourceReadoutCandidate_EStar_v1 implies adopted detector semantics and therefore derives matter coupling.",
+      "true_authority_flags": []
+    },
+    {
+      "case_id": "unprotected_adopted_detector_semantics_state",
+      "collapse_detected": true,
+      "expected_status": "fail",
+      "expected_status_codes": [
+        "fail_unprotected_adopted_detector_semantics"
+      ],
+      "missing_expected_status_codes": [],
+      "observed_status": "fail",
+      "observed_status_codes": [
+        "fail_unprotected_adopted_detector_semantics"
+      ],
+      "pattern_hits": [
+        "adopts_detector_semantics"
+      ],
+      "physics_promotion_authorized": false,
+      "proof_authority": false,
+      "semantic_state": "adopted_detector_semantics",
+      "status_match": true,
+      "support_only": true,
+      "text": "This record asserts adopted detector semantics without a protected Gate Chair authority reference.",
+      "true_authority_flags": [
+        "detector_semantics_adopted"
+      ]
+    }
+  ],
+  "checker_id": "detector_placeholder_collapse_checker",
+  "checker_version": "0.1.0",
+  "configured_cases": [
+    "explicit_placeholder_block_safe",
+    "draft_control_source_readout_candidate_safe",
+    "placeholder_as_adopted_detector_semantics",
+    "source_readout_candidate_as_detector_semantics",
+    "unprotected_adopted_detector_semantics_state"
+  ],
+  "failed_case_count": 0,
+  "failed_cases": [],
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "schema_id": "detector_placeholder_collapse_checker_report_v1",
+  "semantic_state_counts": {
+    "adopted_detector_semantics": 1,
+    "draft_control_source_readout_candidate": 2,
+    "explicit_placeholder_block": 2,
+    "unknown": 0
+  },
+  "status": "PASS",
+  "support_only": true,
+  "validator_behavior_changed": false
+}

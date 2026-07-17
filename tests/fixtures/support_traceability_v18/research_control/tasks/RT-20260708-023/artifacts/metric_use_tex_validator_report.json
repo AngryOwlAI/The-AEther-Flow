@@ -1,0 +1,93 @@
+{
+  "configured_path_count": 3,
+  "configured_scope": "metric_use_ledger_tex_artifacts",
+  "exit_policy": {
+    "FAIL": 1,
+    "PASS": 0,
+    "WARN": 0
+  },
+  "failure_mode": "hard-fail",
+  "finding_count": 0,
+  "findings": [],
+  "high_risk_classes": [
+    "g_eff",
+    "metricdata_e",
+    "proper_time",
+    "detector_calibration",
+    "stress_energy",
+    "matter_action"
+  ],
+  "ledger_changed": false,
+  "ledger_path": "registries/METRIC_USE_LEDGER.csv",
+  "ledger_row_count": 19,
+  "path_reports": [
+    {
+      "covered_classes": [
+        "detector_calibration",
+        "g_eff",
+        "metricdata_e",
+        "proper_time",
+        "stress_energy"
+      ],
+      "detected_classes": [
+        "detector_calibration",
+        "g_eff",
+        "metricdata_e",
+        "proper_time",
+        "stress_energy"
+      ],
+      "exists": true,
+      "findings": [],
+      "ledger_row_count": 5,
+      "no_use_justified_classes": [],
+      "path": "research_control/tasks/RT-20260614-222/artifacts/251_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_GEFF_CANDIDATE_SCOPED_SOURCE_EXTENSION_ADOPTION_GATE_CHAIR_REVIEW.tex",
+      "status": "PASS"
+    },
+    {
+      "covered_classes": [
+        "detector_calibration",
+        "matter_action",
+        "proper_time",
+        "stress_energy"
+      ],
+      "detected_classes": [
+        "detector_calibration",
+        "matter_action",
+        "proper_time",
+        "stress_energy"
+      ],
+      "exists": true,
+      "findings": [],
+      "ledger_row_count": 3,
+      "no_use_justified_classes": [],
+      "path": "research_control/tasks/RT-20260704-021/artifacts/source_side_coupling_law_target_specification_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "covered_classes": [
+        "detector_calibration",
+        "matter_action",
+        "stress_energy"
+      ],
+      "detected_classes": [
+        "detector_calibration",
+        "matter_action",
+        "stress_energy"
+      ],
+      "exists": true,
+      "findings": [],
+      "ledger_row_count": 3,
+      "no_use_justified_classes": [],
+      "path": "research_control/tasks/RT-20260705-047/artifacts/source_side_coupling_law_candidate_v1.tex",
+      "status": "PASS"
+    }
+  ],
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "schema_id": "metric_use_tex_reference_validation_report_v1",
+  "source_law_adopted": false,
+  "status": "PASS",
+  "support_only": true,
+  "validator_id": "metric_use_tex_reference_validator",
+  "validator_version": "0.1.0"
+}
