@@ -1,0 +1,86 @@
+P7-T04 dependency-graph synthetic determinism evidence
+======================================================
+
+Initial focused run
+-------------------
+Command: .venv/bin/python -m unittest tests.test_dependency_graph_determinism
+Result: FAIL
+Findings:
+- The scoped payload label contained "evidence/precondition" and therefore
+  correctly classified as source-extension evidence rather than accepted scoped.
+- Reversing task rows changed first-reference provenance for a parent-task node.
+Repair:
+- Use the exact "accepted scoped" state label.
+- Keep task rows independent while retaining task/job and handoff relationships.
+
+Focused completed-state fixture run
+-----------------------------------
+Command: .venv/bin/python -m unittest tests.test_dependency_graph_determinism
+Result: PASS
+Tests: 6
+Unittest time: 0.023 seconds
+Wall time: 0.08 seconds
+
+Comparable synthetic two-scan benchmark
+---------------------------------------
+Samples: 0.010775 0.009275 0.008787 0.008477 0.008279 0.008094 0.008005
+Median: 0.008477 seconds
+Old live double-build samples: 5.739507 5.819294 5.908518
+Old live median: 5.819294 seconds
+Median reduction: 99.854 percent
+Nodes: 40
+Edges: 100
+Sources: 13
+Source fingerprint: dd0f2834ab7350359b93391bbec53f9e9af7ba999d20ca2277b5cc188d86f139
+JSON SHA-256: 5d1cc4f72ee26e725e34612ee279b2493c0714014f88455a19fb5f809fa062ad
+Markdown SHA-256: c413e78c620feeffd3423aba9bfcf34826dae1f553d46f976055bf3d08761928
+DOT SHA-256: b68e9b0d3149fa9ec8d92251456e30024a867f241bfb463d78067ff339d1223d
+
+Unchanged live acceptance
+-------------------------
+Command: .venv/bin/python -m unittest tests.test_render_dependency_graph
+Result: PASS
+Tests: 12
+Unittest time: 21.541 seconds
+Wall time: 21.64 seconds
+
+Active-lifecycle repository run
+-------------------------------
+Command: .venv/bin/python -m unittest discover -s tests
+Result: EXPECTED_ACTIVE_LIFECYCLE_FAILURE
+Tests: 861
+Skipped: 1
+Failures: 1
+Unittest time: 209.494 seconds
+Wall time: 209.71 seconds
+Finding: test_continue_research_reports_director_context_packet requires
+checkpoint_required_after_execution=true after the active AgentJob transitions
+to completed. No implementation test failed. A stable completed-state rerun is
+required before closure.
+
+Stable completed-state repository run
+-------------------------------------
+Command: .venv/bin/python -m unittest discover -s tests
+Result: PASS
+Tests: 861
+Skipped: 1
+Failures: 0
+Unittest time: 207.541 seconds
+Wall time: 207.73 seconds
+
+Initial checkpoint attempt
+--------------------------
+Command: .venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-002-001
+Result: BLOCKED before staging
+Finding: Git represented the entirely new fixture tree as the collapsed parent
+tests/fixtures/dependency_graph/. The AgentJob listed only the narrower
+synthetic_repo/** descendant pattern.
+Repair: add the exact parent directory marker for checkpoint path matching while
+retaining descendant write authority only for synthetic_repo/**.
+
+Authority boundary
+------------------
+The fixture and focused tests are operational validation evidence only.
+Production graph extraction rendering and schema are unchanged. Live acceptance
+is retained. Planner execution authority ordinary research scientific claims
+physics status Gate Chair authority and proof authority are unchanged.

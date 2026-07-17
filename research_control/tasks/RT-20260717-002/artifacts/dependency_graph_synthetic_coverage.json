@@ -1,0 +1,110 @@
+{
+  "schema_id": "dependency_graph_synthetic_coverage_v1",
+  "task_id": "RT-20260717-002",
+  "job_id": "AJ-RT-20260717-002-001",
+  "plan_task_id": "P7-T04",
+  "created_at": "2026-07-17T07:25:36Z",
+  "status": "PASS",
+  "fixture": {
+    "root": "tests/fixtures/dependency_graph/synthetic_repo",
+    "source_count": 13,
+    "node_count": 40,
+    "edge_count": 100,
+    "source_fingerprint": "dd0f2834ab7350359b93391bbec53f9e9af7ba999d20ca2277b5cc188d86f139",
+    "active_task_id": "RT-SYNTH-CHILD",
+    "latest_handoff_id": "handoff-0002"
+  },
+  "coverage": {
+    "node_classes": [
+      "accepted_scoped_object",
+      "agent_job",
+      "artifact",
+      "blocked_burden",
+      "claim_boundary",
+      "draft_control_candidate",
+      "frozen_negative",
+      "gate_chair_verdict",
+      "handoff",
+      "human_gated_object",
+      "ledger_row",
+      "obstruction",
+      "source_extension_evidence_precondition",
+      "source_ontology_object",
+      "task"
+    ],
+    "emitted_edge_classes": [
+      "accepts_as_evidence",
+      "adopts_scoped",
+      "audits",
+      "blocks",
+      "constructs",
+      "depends_on",
+      "forbids_overread",
+      "freezes",
+      "handoffs_to",
+      "requires",
+      "requires_human_gate",
+      "selects_next",
+      "stress_tests",
+      "updates_ledger"
+    ],
+    "reserved_non_emitted_edge_classes": [
+      "rejects"
+    ],
+    "all_serialized_fields": true,
+    "source_fingerprint": true,
+    "route_continuity": true,
+    "duplicate_source_references": true,
+    "malformed_edge": true,
+    "missing_source": true
+  },
+  "determinism": {
+    "repeated_graph_equal": true,
+    "repeated_render_bytes_equal": true,
+    "reordered_registry_rows_equal": true,
+    "reordered_handoff_enumeration_equal": true,
+    "render_hashes": {
+      "json": "5d1cc4f72ee26e725e34612ee279b2493c0714014f88455a19fb5f809fa062ad",
+      "markdown": "c413e78c620feeffd3423aba9bfcf34826dae1f553d46f976055bf3d08761928",
+      "dot": "b68e9b0d3149fa9ec8d92251456e30024a867f241bfb463d78067ff339d1223d"
+    }
+  },
+  "performance": {
+    "old_live_double_build_median_seconds": 5.819294,
+    "synthetic_double_build_samples_seconds": [
+      0.010775,
+      0.009275,
+      0.008787,
+      0.008477,
+      0.008279,
+      0.008094,
+      0.008005
+    ],
+    "synthetic_double_build_median_seconds": 0.008477,
+    "median_runtime_reduction_percent": 99.854
+  },
+  "live_acceptance": {
+    "module": "tests/test_render_dependency_graph.py",
+    "unchanged": true,
+    "test_count": 12,
+    "status": "PASS",
+    "unittest_seconds": 21.541
+  },
+  "repository_acceptance": {
+    "test_count": 861,
+    "skip_count": 1,
+    "failure_count": 0,
+    "status": "PASS",
+    "unittest_seconds": 207.541,
+    "wall_seconds": 207.73
+  },
+  "authority_boundary": {
+    "production_graph_changed": false,
+    "graph_schema_changed": false,
+    "live_acceptance_replaced": false,
+    "planner_execution_authority_changed": false,
+    "scientific_claims_changed": false,
+    "physics_delta_changed": false,
+    "proof_authority_created": false
+  }
+}

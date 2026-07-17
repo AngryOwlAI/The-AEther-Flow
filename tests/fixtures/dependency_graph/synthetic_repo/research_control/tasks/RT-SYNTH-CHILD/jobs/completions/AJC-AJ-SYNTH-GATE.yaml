@@ -1,0 +1,42 @@
+completion_id: "AJC-AJ-SYNTH-GATE"
+job_id: "AJ-SYNTH-GATE"
+task_id: "RT-SYNTH-CHILD"
+role_id: "gate-chair"
+status: "completed"
+completed_at: "2026-01-01T00:00:06Z"
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-SCOPED"
+    payload_type: "control"
+    object_name: "Scoped Metric Response"
+    claim_status: "accepted scoped"
+    burden_effect: "bounded"
+    summary: "Bounded fixture payload only."
+  - payload_id: "PAYLOAD-SOURCE-EXTENSION"
+    payload_type: "control"
+    object_name: "Source Extension Datum"
+    claim_status: "source-extension evidence"
+    burden_effect: "bounded"
+    summary: "Evidence fixture payload only."
+  - payload_id: "PAYLOAD-DRAFT"
+    payload_type: "control"
+    object_name: "Draft Source Law"
+    claim_status: "draft/control proposal-only"
+    burden_effect: "open"
+    summary: "Draft fixture payload only."
+obstruction_record:
+  obstruction_id: "OBS-SYNTH-001"
+  summary: "Synthetic scoped obstruction."
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  freeze_decision: "route_frozen"
+  active_freeze_label: "fixture frozen negative"
+  candidate_freeze_label: "fixture proposal-only"
+  prior_attempts_considered:
+    - "RT-SYNTH-PARENT"
+  next_allowed_route: "synthetic_repair"
+theoretical_decision_output:
+  selected_next_packet_type: "synthetic_repair"
+  status: "draft/control"
+forbidden_conclusion_summary: "No canonical ontology edit source-law adoption benchmark promotion Einstein equations or completed derivation."
+verdict: "Synthetic human-gated fixture verdict only."
