@@ -1,0 +1,97 @@
+{
+  "schema_id": "dependency_graph_shared_setup_timing_v1",
+  "task_id": "RT-20260716-025",
+  "job_id": "AJ-RT-20260716-025-001",
+  "plan_task_id": "P7-T02",
+  "generated_at": "2026-07-17T06:04:51Z",
+  "status": "PASS",
+  "baseline": {
+    "source_revision": "f8bd8d71d18dc2e3c1089e5a734782f6f267c589",
+    "test_count": 10,
+    "unittest_seconds": 32.060,
+    "wall_seconds": 32.13,
+    "source_hash": "0fab04f82bc518ff528860e65b4b33be7e009e468a20a9d3a6c7dc6d27c019d1"
+  },
+  "result": {
+    "test_count": 13,
+    "unittest_seconds": 26.802,
+    "wall_seconds": 26.92,
+    "wall_seconds_saved": 5.21,
+    "wall_runtime_reduction_percent": 16.2,
+    "source_hash": "4b4a6360aba3bbef3bcb3288ee0e4228f0283f2b73dd895de386449a7557ab2a",
+    "shared_source_load_count": 1680,
+    "shared_graph_build_count": 1,
+    "shared_render_count": 3,
+    "shared_renders_by_format": {
+      "json": 1,
+      "markdown": 1,
+      "dot": 1
+    },
+    "node_count": 18285,
+    "edge_count": 64599
+  },
+  "repeatability": {
+    "module_runs": [
+      {
+        "test_count": 13,
+        "unittest_seconds": 26.818,
+        "status": "PASS"
+      },
+      {
+        "test_count": 13,
+        "unittest_seconds": 26.802,
+        "wall_seconds": 26.92,
+        "status": "PASS"
+      }
+    ],
+    "shuffled_method_order": {
+      "seed": 47,
+      "test_count": 13,
+      "unittest_seconds": 26.953,
+      "status": "PASS"
+    },
+    "full_repository_suite": {
+      "test_count": 856,
+      "skip_count": 1,
+      "unittest_seconds": 212.941,
+      "wall_seconds": 213.13,
+      "status": "PASS"
+    }
+  },
+  "failure_fixture_messages": {
+    "removed_node": "required frontier node missing: Resp_lc",
+    "bad_edge": "edge target missing: missing-target-fixture",
+    "authority_mutation": "authority boundary mutated: navigational_support_only must remain true",
+    "defensive_copy_isolation": true,
+    "status": "PASS"
+  },
+  "render_hashes": {
+    "json": "41e7fd05ff6f3d51011b3cde00888b7e5782c28ecf26fa5b207f176ef04758be",
+    "markdown": "cf46b5c34a415152edfd857569f1166b4af92ffc2c4668f9e0f2eadcb4ff25ab",
+    "dot": "6d11e78ad28dd0fc94df8c0aa58243a88ad9f89377b5786acd7f862c8ef63b32"
+  },
+  "source_hashes": {
+    "dependency_graph_model": "f4b6f79f4644f10950b0dbbc4771bc8d3743fdcd25791b159d253a8a8b87a55c",
+    "implementation_plan": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  },
+  "checkpoint_shadow": {
+    "initial_attempt": {
+      "status": "REPAIR_REQUIRED",
+      "shadow_comparison": "PASS",
+      "agentjob_allowlist": "PASS",
+      "entry_index_restored": true,
+      "commit_created": false,
+      "repair": "Add FOLDER_MAP.md and generated_derivative_changed to the documentation-impact receipt after tracked memory sync."
+    }
+  },
+  "raw_output_path": "research_control/tasks/RT-20260716-025/artifacts/dependency_graph_shared_setup_timing.txt",
+  "authority": {
+    "operational_test_evidence_only": true,
+    "production_graph_changed": false,
+    "ordinary_research_state_changed": false,
+    "scientific_claims_changed": false,
+    "physics_delta_changed": false,
+    "proof_authority": false
+  },
+  "verdict": "p7_t02_shared_graph_setup_pass_material_runtime_reduction_no_physics_delta"
+}

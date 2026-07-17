@@ -1,0 +1,53 @@
+receipt_format: raw_command_output_v1
+command: /usr/bin/time -p .venv/bin/python -m unittest tests.test_render_dependency_graph
+exit_code: 0
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 26.802s
+
+OK
+dependency graph freshness check: FAIL
+- json: fresh path=<temporary-directory>/graph.json actual=41e7fd05ff6f3d51011b3cde00888b7e5782c28ecf26fa5b207f176ef04758be expected=41e7fd05ff6f3d51011b3cde00888b7e5782c28ecf26fa5b207f176ef04758be
+- markdown: stale path=<temporary-directory>/graph.md actual=4c087d64211c6976ddbc6b73f53f4f24d9019f39c93412a399feeabfb4e430c9 expected=cf46b5c34a415152edfd857569f1166b4af92ffc2c4668f9e0f2eadcb4ff25ab
+- dot: fresh path=<temporary-directory>/graph.dot actual=6d11e78ad28dd0fc94df8c0aa58243a88ad9f89377b5786acd7f862c8ef63b32 expected=6d11e78ad28dd0fc94df8c0aa58243a88ad9f89377b5786acd7f862c8ef63b32
+dependency graph freshness check: PASS
+- json: fresh path=<temporary-directory>/graph.json actual=41e7fd05ff6f3d51011b3cde00888b7e5782c28ecf26fa5b207f176ef04758be expected=41e7fd05ff6f3d51011b3cde00888b7e5782c28ecf26fa5b207f176ef04758be
+- markdown: fresh path=<temporary-directory>/graph.md actual=cf46b5c34a415152edfd857569f1166b4af92ffc2c4668f9e0f2eadcb4ff25ab expected=cf46b5c34a415152edfd857569f1166b4af92ffc2c4668f9e0f2eadcb4ff25ab
+- dot: fresh path=<temporary-directory>/graph.dot actual=6d11e78ad28dd0fc94df8c0aa58243a88ad9f89377b5786acd7f862c8ef63b32 expected=6d11e78ad28dd0fc94df8c0aa58243a88ad9f89377b5786acd7f862c8ef63b32
+real 26.92
+user 26.28
+sys 0.62
+
+command: shuffled unittest harness seed=47
+exit_code: 0
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 26.953s
+
+OK
+seed=47 status=PASS tests=13
+
+command: /usr/bin/time -p .venv/bin/python -m unittest discover -s tests
+exit_code: 0
+.............................................s.................................................................................................................................................................<frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:488: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 856 tests in 212.941s
+
+OK (skipped=1)
+{"edges": 15, "graph_id": "claim_graph_v1", "nodes": 10, "status": "PASS"}
+claim graph outputs are fresh
+dependency graph freshness check: FAIL
+- json: fresh path=<temporary-directory>/graph.json actual=89343e0ba882eb79e59f959f36e432268466b3060aab1bc26eb299a50f71a809 expected=89343e0ba882eb79e59f959f36e432268466b3060aab1bc26eb299a50f71a809
+- markdown: stale path=<temporary-directory>/graph.md actual=fae65ef52cf2c971e8f6cd07034a95bbfe9647b96fa45799988245a8122f6206 expected=c8472058f12b6d98dc0edd55d9fdc32468b14337bac4908dd22ad1ebb180a8d7
+- dot: fresh path=<temporary-directory>/graph.dot actual=0aad7a30cb92927516af8b9df067714dcee3188c75d5a85fab81409002d2981b expected=0aad7a30cb92927516af8b9df067714dcee3188c75d5a85fab81409002d2981b
+dependency graph freshness check: PASS
+- json: fresh path=<temporary-directory>/graph.json actual=89343e0ba882eb79e59f959f36e432268466b3060aab1bc26eb299a50f71a809 expected=89343e0ba882eb79e59f959f36e432268466b3060aab1bc26eb299a50f71a809
+- markdown: fresh path=<temporary-directory>/graph.md actual=c8472058f12b6d98dc0edd55d9fdc32468b14337bac4908dd22ad1ebb180a8d7 expected=c8472058f12b6d98dc0edd55d9fdc32468b14337bac4908dd22ad1ebb180a8d7
+- dot: fresh path=<temporary-directory>/graph.dot actual=0aad7a30cb92927516af8b9df067714dcee3188c75d5a85fab81409002d2981b expected=0aad7a30cb92927516af8b9df067714dcee3188c75d5a85fab81409002d2981b
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+real 213.13
+user 133.24
+sys 77.09
