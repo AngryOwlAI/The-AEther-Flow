@@ -1,0 +1,170 @@
+{
+  "schema_id": "validation_cache_implementation_acceptance_v1",
+  "schema_version": 1,
+  "acceptance_id": "V19-P10-T03-CACHE-IMPLEMENTATION-ACCEPTANCE-001",
+  "task_id": "RT-20260717-022",
+  "job_id": "AJ-RT-20260717-022-001",
+  "plan_task_id": "P10-T03",
+  "created_at": "2026-07-17T23:02:22Z",
+  "updated_at": "2026-07-17T23:13:52Z",
+  "status": "PASS",
+  "contract_id": "validation-cache-contract-v1",
+  "contract_path": "research_control/design/validation_cache_contract_v1.md",
+  "module_path": "scripts/validation/cache.py",
+  "test_path": "tests/test_validation_cache.py",
+  "storage_root": ".local/validation-cache/v1",
+  "cache_mode_default": "off",
+  "live_manifest_mutated": false,
+  "production_executor_integrated": false,
+  "production_gate_adapter_reference_count": 0,
+  "tracked_cache_entry_count": 0,
+  "source_fingerprints": [
+    {
+      "path": "scripts/validation/cache.py",
+      "sha256": "aa0346dd66cb7aa22aca3aad72018d4b30775a360016ca4b8987c939f68ea813"
+    },
+    {
+      "path": "tests/test_validation_cache.py",
+      "sha256": "79f37d31d6185b61c8fb250b86a754ff5870e08f3d9a4b42246bb0f6e5e37164"
+    },
+    {
+      "path": "research_control/design/validation_cache_contract_v1.md",
+      "sha256": "ef92aa55602b1e8cd9e2aaa73a08d3272fc58a311ac69fe1ee65c6b773e21aee"
+    },
+    {
+      "path": "research_control/design/validation_gate_manifest_v1.yaml",
+      "sha256": "0e757d206b2529a00a2e60cc2b725ab4b10188321a14c75e885cce429de23842"
+    },
+    {
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v19.md",
+      "sha256": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    }
+  ],
+  "implemented_contract": {
+    "canonical_exact_key": true,
+    "content_addressed_path": true,
+    "strict_unknown_and_duplicate_field_rejection": true,
+    "receipt_content_hash_validation": true,
+    "source_fingerprint_manifest_validation": true,
+    "environment_manifest_config_and_implementation_key_validation": true,
+    "clean_original_pass_only": true,
+    "atomic_flush_sync_and_replace": true,
+    "different_byte_collision_disables_reads": true,
+    "corruption_disables_reads_for_invocation": true,
+    "symlink_traversal_nonregular_and_owner_checks": true,
+    "maximum_entry_bytes": 16777216,
+    "maximum_entry_count": 2048,
+    "maximum_total_bytes": 536870912,
+    "deterministic_age_eviction": true,
+    "ascending_key_tiebreak": true,
+    "access_does_not_rewrite_entry": true,
+    "manual_clear": true,
+    "read_only_inspection": true,
+    "no_cache_override": true
+  },
+  "miss_reasons_exercised": [
+    "absent",
+    "expired",
+    "corrupt",
+    "wrong_tree",
+    "wrong_scope",
+    "wrong_implementation",
+    "gate_policy_ineligible",
+    "mandatory_bypass",
+    "key_unresolved",
+    "snapshot_stale_before_lookup",
+    "snapshot_stale_before_accept"
+  ],
+  "invalidation_dimensions_exercised": [
+    "gate_id",
+    "scope_kind",
+    "tree_state",
+    "profile",
+    "mode",
+    "selection_digest",
+    "repository_identity_digest",
+    "tree_hash",
+    "base_ref_name_and_commit",
+    "implementation_digest",
+    "manifest_digest",
+    "config_digest",
+    "environment_fingerprint",
+    "dependency_lock_digest",
+    "receipt_schema"
+  ],
+  "failure_modes_exercised": [
+    "unsupported_key_field",
+    "unqualified_digest",
+    "non_pass_result",
+    "warning_result",
+    "prior_cache_hit_result",
+    "mutating_result",
+    "truncated_result",
+    "partial_json_entry",
+    "unpublished_temporary_file",
+    "altered_full_receipt",
+    "altered_source_fingerprint_hash",
+    "symlinked_entry",
+    "symlinked_parent",
+    "different_byte_key_collision",
+    "entry_age_limit",
+    "aggregate_size_limit",
+    "manual_clear_symlink_refusal",
+    "cache_root_outside_repository"
+  ],
+  "concurrency_evidence": {
+    "identical_writer_count": 8,
+    "stored_count": 1,
+    "identical_existing_count": 7,
+    "reader_count": 8,
+    "lookups_per_reader": 32,
+    "observed_reader_outcomes": [
+      "absent",
+      "exact_match"
+    ],
+    "partial_or_corrupt_reader_outcome_count": 0
+  },
+  "validation_evidence": {
+    "focused_test_status": "PASS",
+    "focused_test_count": 23,
+    "focused_failure_count": 0,
+    "focused_error_count": 0,
+    "syntax_status": "PASS",
+    "affected_profile_status": "READY",
+    "affected_selected_gate_count": 13,
+    "legacy_planner_shadow_status": "PASS",
+    "legacy_compatible_blocking_gate_count": 11,
+    "planner_blocking_gate_count": 11,
+    "unexplained_mismatch_count": 0,
+    "first_repository_suite": {
+      "test_count": 935,
+      "skip_count": 1,
+      "failure_count": 4,
+      "error_count": 1,
+      "status": "ACTIVE_LIFECYCLE_FINDING",
+      "explanation": "All five findings were caused by the intentionally absent completion record for this active AgentJob; no cache test or cache implementation regression failed."
+    },
+    "stable_completed_state_repository_suite": {
+      "test_count": 940,
+      "skip_count": 1,
+      "failure_count": 0,
+      "error_count": 0,
+      "duration_seconds": 118.364,
+      "status": "PASS"
+    }
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "full_receipts_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "proof_authority": false,
+    "benchmark_authority": false,
+    "gate_chair_authority": false
+  },
+  "ordinary_research_handoff_preserved": "handoff-0740",
+  "scientific_claims_changed": false,
+  "distance_to_gr_delta_changed": false,
+  "next_plan_task_not_implemented": "P10-T04"
+}
