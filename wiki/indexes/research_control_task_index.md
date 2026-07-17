@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `89855731fe1d65e6e21fce41d690867952e0ff90c42ee7f9a84beaf0129fffcf`
-- Generated-at source timestamp: `2026-07-17T08:02:46Z`
-- Row count: `938`
+- Source fingerprint: `35ff7f92168cb6c2ae929899d053aac96974b43d36e33d67947f99f4f17991f7`
+- Generated-at source timestamp: `2026-07-17T08:51:59Z`
+- Row count: `939`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260717-004|RT-20260717-003|2026-07-17T08:51:59Z|2026-07-17T09:15:25Z|dependency_graph_coverage_performance_audit|completed|none|Project-system dependency-graph performance and failure-mode audit only; no derivation milestone is advanced.|process-integrity-auditor@0.1.0|false|false|2|After governed checkpoint PASS route only P8-T01 unless live state requires a bounded repair or supersession.|PASS|research_control/tasks/RT-20260717-004/jobs/completions/AJC-AJ-RT-20260717-004-001.yaml|
 |RT-20260717-003|RT-20260717-002|2026-07-17T08:02:46Z|2026-07-17T08:15:26Z|dependency_graph_path_selection|completed|none|Project-system validation-selection work only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After governed checkpoint PASS route only P7-T06 unless live state requires a bounded repair or supersession.|PASS|research_control/tasks/RT-20260717-003/jobs/completions/AJC-AJ-RT-20260717-003-001.yaml|
 |RT-20260717-002|RT-20260717-001|2026-07-17T07:11:21Z|2026-07-17T07:25:36Z|dependency_graph_synthetic_determinism|completed|none|Project-system dependency-graph determinism test optimization only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|2|After governed checkpoint PASS route only P7-T05 unless live state requires a bounded repair or supersession.|PASS|research_control/tasks/RT-20260717-002/jobs/completions/AJC-AJ-RT-20260717-002-001.yaml|
 |RT-20260717-001|RT-20260716-025|2026-07-17T06:37:19Z|2026-07-17T06:44:12Z|dependency_graph_cli_lifecycle|completed|none|Project-system dependency-graph CLI test-lifecycle optimization only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|2|After governed checkpoint PASS route only the earliest dependency-ready plan task identified by live v19 state.|PASS|research_control/tasks/RT-20260717-001/jobs/completions/AJC-AJ-RT-20260717-001-001.yaml|

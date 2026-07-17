@@ -1,0 +1,45 @@
+task_id: "RT-20260717-004"
+task_type: "dependency_graph_coverage_performance_audit"
+status: "completed"
+created_at: "2026-07-17T08:51:59Z"
+updated_at: "2026-07-17T09:15:25Z"
+closed_at: "2026-07-17T09:15:25Z"
+parent_task_id: "RT-20260717-003"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260717-004"
+current_job_id: "AJ-RT-20260717-004-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260717-004"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached dependency-ready P7-T06 after the governed P7-T05 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T06"
+  plan_task_name: "Benchmark and audit dependency-graph failure-mode coverage"
+  recommendation_ids:
+    - "V19-R13"
+    - "V19-R14"
+    - "V19-R15"
+    - "V19-R43"
+    - "V19-R48"
+objective: "Measure the dependency-graph refactor against the registered v19 baseline and prove that every required graph failure mode still fails closed without changing production graph code tests workflows or scientific authority."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system dependency-graph performance and failure-mode audit only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p7_t06_dependency_graph_final_audit_pass_no_physics_delta"
+claim_boundary_id: "CB-V19-P7-T06-DEPENDENCY-GRAPH-FINAL-AUDIT-001"
+claim_boundary:
+  allowed_scope: "One task-local dependency-graph benchmark coverage map mutation audit compact validation receipt and normal control records only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+next_recommended_action: "After governed checkpoint PASS route only P8-T01 unless live state requires a bounded repair or supersession."
+documentation_impact_id: "DI-RT-20260717-004-001"
+completion_id: "AJC-AJ-RT-20260717-004-001"
+notes: "P7-T06 audit evidence passes with zero false mutations, a 21.535-second complete graph shard, and an 865-test stable repository PASS. Governed checkpoint remains the final gate. Production graph sources tests workflow planner authority ordinary research and physics claims remain unchanged."

@@ -1,0 +1,256 @@
+job_id: "AJ-RT-20260717-004-001"
+completion_id: "AJC-AJ-RT-20260717-004-001"
+task_id: "RT-20260717-004"
+decision_id: "DDR-20260717-004"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260717-004"
+status: "completed"
+created_at: "2026-07-17T08:51:59Z"
+started_at: "2026-07-17T08:51:59Z"
+completed_at: "2026-07-17T09:15:25Z"
+objective: "Benchmark and audit P7-T06 dependency-graph performance and failure-mode coverage without changing production sources tests workflows ordinary research or physics authority."
+completion_summary: "The complete 18-test dependency-graph shard passes in 21.535 seconds 94.312 percent below the historical 378.598-second module baseline. One immutable 1684-source snapshot feeds one build and three byte-identical renders per transaction all seven legacy assertion families remain covered and all nine required mutations fail closed with zero false passes."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P7-T06"
+  - "research_control/design/v19_validation_performance_and_safety_budget.md"
+  - "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json"
+  - "scripts/research_control/dependency_graph_model.py"
+  - "scripts/research_control/render_dependency_graph.py"
+  - "tests/test_render_dependency_graph.py"
+  - "tests/test_dependency_graph_determinism.py"
+  - "research_control/tasks/RT-20260717-003/jobs/completions/AJC-AJ-RT-20260717-003-001.yaml"
+outputs_created:
+  - "research_control/tasks/RT-20260717-004/artifacts/dependency_graph_final_audit.md"
+  - "research_control/tasks/RT-20260717-004/artifacts/dependency_graph_final_audit.json"
+  - "research_control/tasks/RT-20260717-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-004/jobs/completions/AJC-AJ-RT-20260717-004-001.yaml"
+implementation_results:
+  plan_task_id: "P7-T06"
+  migration_epoch: "shadow_planner"
+  implementation_status: "PASS"
+  complete_graph_shard_test_count: 18
+  complete_graph_shard_seconds: 21.535
+  historical_graph_module_seconds: 378.598
+  historical_seconds_saved: 357.063
+  historical_runtime_reduction_percent: 94.312
+  graph_module_target_status: "PASS_BELOW_TARGET_MAXIMUM"
+  graph_module_provisional_hard_guard_status: "PASS"
+  measurement_sample_count: 3
+  median_snapshot_build_render_seconds: 2.970185
+  source_load_count_per_transaction: 1684
+  maximum_loads_per_source: 1
+  graph_build_count_per_transaction: 1
+  render_call_count_per_transaction: 3
+  rendered_total_bytes: 69708186
+  repeated_render_bytes_identical: true
+  legacy_assertion_family_count: 7
+  legacy_assertion_families_covered: 7
+  required_mutation_count: 9
+  detected_mutation_count: 9
+  false_pass_count: 0
+  isolated_live_double_build_seconds: 6.302
+  isolated_live_double_build_status: "PASS"
+  stable_full_repository_test_count: 865
+  stable_full_repository_skip_count: 1
+  stable_full_repository_seconds: 208.159
+  stable_full_repository_wall_seconds: 208.36
+  graph_shard_full_suite_contribution_percent: 10.345
+  historical_full_suite_seconds_saved: 299.056
+  historical_full_suite_runtime_reduction_percent: 58.960
+  current_full_suite_target_status: "ABOVE_TARGET_MAXIMUM"
+  current_full_suite_provisional_hard_guard_status: "THRESHOLD_EXCEEDED_NOT_ACTIVATED"
+  affected_blocking_legacy_gate_count: 11
+  affected_blocking_planner_gate_count: 11
+  affected_blocking_unexplained_mismatch_count: 0
+  affected_blocking_shadow_comparison_status: "PASS"
+  workflow_cron_schedule_present: false
+  workflow_cron_schedule_claimed: false
+  production_graph_changed: false
+  graph_schema_changed: false
+  test_or_fixture_changed: false
+  workflow_changed: false
+  planner_execution_authority_changed: false
+  legacy_execution_authoritative: true
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+contract_correction:
+  corrected_at: "2026-07-17T09:07:07Z"
+  path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  status: "PASS"
+  explanation: "Required task-index memory synchronization deterministically updates the registered generated task-index hash. The uncommitted AgentJob and execution overlay were corrected before checkpoint without opening a new source class or production path."
+validation_evidence:
+  selected_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "dependency_graph_complete_shard"
+    - "dependency_graph_live_double_build"
+    - "dependency_graph_measurement"
+    - "dependency_graph_assertion_coverage_map"
+    - "dependency_graph_failure_mode_mutations"
+    - "dependency_graph_serialized_byte_review"
+    - "dependency_graph_legacy_planner_shadow_comparison"
+    - "dependency_graph_freshness"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "git_diff_check"
+  executed_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "dependency_graph_complete_shard"
+    - "dependency_graph_live_double_build"
+    - "dependency_graph_measurement"
+    - "dependency_graph_assertion_coverage_map"
+    - "dependency_graph_failure_mode_mutations"
+    - "dependency_graph_serialized_byte_review"
+    - "dependency_graph_legacy_planner_shadow_comparison"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "dependency_graph_freshness"
+    - "git_diff_check"
+  audit_markdown_path: "research_control/tasks/RT-20260717-004/artifacts/dependency_graph_final_audit.md"
+  audit_json_path: "research_control/tasks/RT-20260717-004/artifacts/dependency_graph_final_audit.json"
+  active_lifecycle_repository_suite:
+    test_count: 865
+    skip_count: 1
+    failure_count: 1
+    error_count: 1
+    unittest_seconds: 207.888
+    wall_seconds: 208.09
+    status: "EXPECTED_ACTIVE_LIFECYCLE_FINDINGS"
+    explanation: "The active AgentJob intentionally had no completion path and checkpoint_required_after_execution remained false. No implementation test failed."
+  stable_completed_state_repository_suite:
+    test_count: 865
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    unittest_seconds: 208.159
+    wall_seconds: 208.36
+    status: "PASS"
+performance_evidence:
+  baseline_receipt_path: "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json"
+  baseline_receipt_sha256: "b3d18259efad879101d6dab2c6e4c62b7f19ffa6826527a53b472dd653d34bac"
+  environment:
+    machine_model: "Mac15,14"
+    python_version: "3.12.13"
+    requirements_sha256: "7bc3bca027f6d2be2fcb2ca0e3d9568a09c07a6d0d30b774073501da06ced98f"
+    cache_state: "warm environment; OS and filesystem caches not cleared or controlled"
+  comparison_classification: "Descriptive trend evidence because repository tree corpus and instrumentation differ; no performance hard guard is activated by this single task."
+command_results:
+  - ".venv/bin/python -m unittest -v tests.test_render_dependency_graph tests.test_dependency_graph_determinism | exit_code=0 | 18 tests PASS in 21.535 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_render_dependency_graph.DependencyGraphTests.test_implicit_and_explicit_snapshot_apis_are_byte_identical | exit_code=0 | one isolated live double-build PASS in 6.302 seconds"
+  - "read-only dependency-graph measurement harness | exit_code=0 | three byte-identical transactions median 2.970185 seconds 1684 one-time source loads one build three renders 69708186 output bytes"
+  - "read-only dependency-graph mutation harness | exit_code=0 | missing node dangling edge unknown class stale JSON Markdown DOT missing file authority overread and ordering coverage all detected with zero false passes"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --json | exit_code=0 | READY selects dependency_graph_freshness under legacy authority"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile full --explain | exit_code=0 | READY selects dependency_graph_freshness and test_shard_repository"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 affected blocking legacy gates equal 11 planner gates with zero unexplained mismatch"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | task index CSV and Markdown fresh in stable completed state"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json ... --markdown ... --dot ... and --check | exit_code=0 | graph JSON Markdown and DOT fresh in stable completed state"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS with two nonblocking existing-memory findings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | PASS with two nonblocking existing-memory findings"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest discover -s tests | active_lifecycle_exit_code=1 | 865 tests one expected skip one failure and one error both caused by active-job lifecycle state"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state 865 tests PASS with one expected skip in 208.159 seconds"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P7-T05 is completed and checkpointed; generation lease project binding clean entry tree predecessor guards and single invocation were verified before task activation."
+      - "Memory preflight canonical plan inspection classifier resolver and emitted-signal validation passed before audit execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The complete graph shard live double-build repeated measurements legacy mapping and nine-mutation corpus pass with zero false positives or false passes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The stable completed-state full suite passes 865 tests with one expected skip and zero failures or errors."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "Persistence is authorized only through the governed compare-mode checkpoint after all declared gates pass."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Graph and task-index derivatives were regenerated in the stable completed state and verified fresh."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization passes with two nonblocking existing-memory findings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Research-control diff validation passes and all measurements remain operational project-system evidence with no physics authority."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system dependency-graph audit only; no physics or derivation status changes."
+scientific_claims_changed: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-004/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet audits existing dependency-graph behavior and records task-local control evidence. It does not change production graph extraction rendering schema tests fixtures workflow planner authority ordinary research canonical ontology source laws benchmark status Gate Chair authority proof status physics claims or derivation status."
+verdict: "v19_p7_t06_dependency_graph_final_audit_pass_no_physics_delta"
+coherent_resolution_summary: "The graph refactor preserves all seven legacy assertion families and every plan-named failure boundary while removing the dominant repeated live-build cost."
+next_recommendation: "After governed checkpoint PASS route only P8-T01 unless live state requires a bounded repair or supersession."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 814
+    relationship_row_count: 4053
+    semantic_row_count: 814
+    vault_row_count: 814
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

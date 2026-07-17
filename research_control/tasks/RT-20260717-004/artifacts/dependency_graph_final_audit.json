@@ -1,0 +1,366 @@
+{
+  "schema_id": "dependency_graph_final_audit_v1",
+  "task_id": "RT-20260717-004",
+  "job_id": "AJ-RT-20260717-004-001",
+  "plan_task_id": "P7-T06",
+  "created_at": "2026-07-17T09:01:44Z",
+  "status": "PASS",
+  "authority": {
+    "operational_validation_only": true,
+    "production_graph_changed": false,
+    "graph_schema_changed": false,
+    "test_or_fixture_changed": false,
+    "workflow_changed": false,
+    "planner_execution_authority_changed": false,
+    "ordinary_research_state_changed": false,
+    "scientific_claims_changed": false,
+    "physics_delta_changed": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  },
+  "environment": {
+    "machine_model": "Mac15,14",
+    "python_version": "3.12.13",
+    "requirements_sha256": "7bc3bca027f6d2be2fcb2ca0e3d9568a09c07a6d0d30b774073501da06ced98f",
+    "branch": "codex/v19-remaining-relay",
+    "entry_head": "3a1ab5585e0729b8434df18ed7c34754d8e6e91b",
+    "cache_state": "warm environment; OS and filesystem caches not cleared or controlled"
+  },
+  "baseline": {
+    "receipt_path": "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json",
+    "receipt_sha256": "b3d18259efad879101d6dab2c6e4c62b7f19ffa6826527a53b472dd653d34bac",
+    "historical_full_suite_seconds": 507.215,
+    "historical_dependency_graph_module_seconds": 378.598,
+    "focused_dependency_graph_check_seconds": 48.742223,
+    "repaired_clean_clone_suite_seconds": 515.454875,
+    "repaired_clean_clone_test_count": 584,
+    "repaired_clean_clone_graph_build_count": 9,
+    "comparison_classification": "Descriptive trend evidence on the same machine model Python version dependency digest and warm-cache class. Repository tree test corpus and instrumentation differ so this receipt does not activate a hard guard."
+  },
+  "budgets": {
+    "source_path": "research_control/design/v19_validation_performance_and_safety_budget.md",
+    "source_sha256": "fa3adf5e143c8d936ef0e7fd6386af9b3ce74873d1985299eb95302166b3a53a",
+    "dependency_graph_fast_module_target_seconds": {
+      "minimum": 45,
+      "maximum": 90
+    },
+    "dependency_graph_fast_module_provisional_hard_guard_seconds": 120,
+    "full_suite_target_seconds": {
+      "minimum": 100,
+      "maximum": 160
+    },
+    "full_suite_provisional_hard_guard_seconds": 180,
+    "false_pass_hard_guard": 0
+  },
+  "complete_graph_shard": {
+    "command": ".venv/bin/python -m unittest -v tests.test_render_dependency_graph tests.test_dependency_graph_determinism",
+    "test_count": 18,
+    "failure_count": 0,
+    "error_count": 0,
+    "unittest_seconds": 21.535,
+    "wall_seconds": 21.65,
+    "status": "PASS",
+    "historical_seconds_saved": 357.063,
+    "historical_runtime_reduction_percent": 94.312,
+    "target_status": "PASS_BELOW_TARGET_MAXIMUM",
+    "provisional_hard_guard_status": "PASS"
+  },
+  "live_scheduled_style_double_build": {
+    "command": ".venv/bin/python -m unittest -v tests.test_render_dependency_graph.DependencyGraphTests.test_implicit_and_explicit_snapshot_apis_are_byte_identical",
+    "test_count": 1,
+    "unittest_seconds": 6.302,
+    "wall_seconds": 6.57,
+    "status": "PASS",
+    "outside_fast_path": true,
+    "full_profile_gate_id": "test_shard_repository",
+    "full_profile_gate_cache_policy": "ineligible",
+    "workflow_validation_command": "make PYTHON=.venv/bin/python validate-project-control",
+    "workflow_triggers": [
+      "push:main",
+      "pull_request",
+      "workflow_dispatch"
+    ],
+    "cron_schedule_present": false,
+    "scope_note": "P7-T06 executes the required scheduled-style live case outside the fast path. It does not claim that a cron trigger exists or change CI topology."
+  },
+  "measurement_transactions": {
+    "sample_count": 3,
+    "samples": [
+      {
+        "sample": 1,
+        "snapshot_seconds": 0.616429,
+        "build_seconds": 1.03957,
+        "render_seconds": 1.321437,
+        "total_seconds": 2.977467
+      },
+      {
+        "sample": 2,
+        "snapshot_seconds": 0.649487,
+        "build_seconds": 1.0165,
+        "render_seconds": 1.304191,
+        "total_seconds": 2.970185
+      },
+      {
+        "sample": 3,
+        "snapshot_seconds": 0.593677,
+        "build_seconds": 1.024901,
+        "render_seconds": 1.289626,
+        "total_seconds": 2.908207
+      }
+    ],
+    "median_snapshot_seconds": 0.616429,
+    "median_build_seconds": 1.024901,
+    "median_render_seconds": 1.304191,
+    "median_total_seconds": 2.970185,
+    "all_graphs_identical": true,
+    "all_render_bundles_identical": true,
+    "measurement_state": "active P7-T06 control state before completion receipt creation"
+  },
+  "instrumentation": {
+    "source_count": 1684,
+    "source_load_count_per_transaction": 1684,
+    "unique_source_load_count_per_transaction": 1684,
+    "maximum_loads_per_source_per_transaction": 1,
+    "graph_build_count_per_transaction": 1,
+    "render_call_count_per_transaction": 3,
+    "renders_by_format_per_transaction": {
+      "json": 1,
+      "markdown": 1,
+      "dot": 1
+    },
+    "node_count": 18334,
+    "edge_count": 64729,
+    "source_fingerprint": "3df3c75b802c79a5eba6f02bb7052ba77c296a886accc5ec5d4b6d946d1948b5"
+  },
+  "serialized_outputs": {
+    "active_control_snapshot": {
+      "json": {
+        "bytes": 55048052,
+        "sha256": "65f32886f39e4f7e52c12b97510021b6f94ac4933bf6f2b825df4ddaff30d1e5"
+      },
+      "markdown": {
+        "bytes": 16811,
+        "sha256": "9f20d950dd765abbe03072aed5b667187c8206791e194f686239a361b707d60d"
+      },
+      "dot": {
+        "bytes": 14643323,
+        "sha256": "1739fa29712effd06f7f5e81eb667353e49964e644643e1a01d19fca3b59908c"
+      },
+      "total_bytes": 69708186,
+      "repeatability_status": "PASS_BYTE_IDENTICAL"
+    },
+    "final_generated_derivatives": {
+      "status": "PASS_FINAL_CONTROL_CLOSURE",
+      "json_bytes": 55049834,
+      "json_sha256": "6f43e84a3645c030b19be0ebe268468669a93f2015ad3c47f039453fa10a782c",
+      "markdown_bytes": 16811,
+      "markdown_sha256": "d3127f37920786bd33f050f0f5bcca767196313f8088700ff48d04311aaf4a38",
+      "dot_bytes": 14643772,
+      "dot_sha256": "cb71dae7fc7491d97b1721f8f06f2e0ee14b7fb2a436dd759c9351b6b529463d",
+      "total_bytes": 69710417,
+      "attestation_boundary": "A full task-index memory and graph regeneration after audit finalization produced these same hashes; the governed checkpoint remains the final persistence gate."
+    }
+  },
+  "legacy_assertion_mapping": [
+    {
+      "legacy_test": "test_graph_includes_required_frontier_items_and_authority_boundary",
+      "legacy_source_revision": "bb0f9849c97d8e908b9b5fc15e0dd5ff42f08412",
+      "retained_coverage": [
+        "test_shared_graph_includes_required_frontier_items",
+        "test_shared_graph_preserves_authority_boundary",
+        "test_negative_fixtures_report_specific_failures_without_shared_mutation"
+      ],
+      "status": "PASS"
+    },
+    {
+      "legacy_test": "test_graph_edges_reference_existing_nodes",
+      "legacy_source_revision": "bb0f9849c97d8e908b9b5fc15e0dd5ff42f08412",
+      "retained_coverage": [
+        "test_shared_graph_edges_reference_existing_nodes",
+        "test_negative_fixtures_report_specific_failures_without_shared_mutation",
+        "test_malformed_edge_is_rejected_with_specific_endpoint"
+      ],
+      "status": "PASS"
+    },
+    {
+      "legacy_test": "test_graph_rendering_is_deterministic_for_unchanged_state",
+      "legacy_source_revision": "bb0f9849c97d8e908b9b5fc15e0dd5ff42f08412",
+      "retained_coverage": [
+        "test_graph_rendering_is_deterministic_for_unchanged_state",
+        "test_repeated_builds_have_identical_graph_and_render_hashes",
+        "test_reversed_row_and_file_enumeration_is_byte_identical"
+      ],
+      "status": "PASS"
+    },
+    {
+      "legacy_test": "test_freeze_summary_scopes_high_risk_accepted_label",
+      "legacy_source_revision": "bb0f9849c97d8e908b9b5fc15e0dd5ff42f08412",
+      "retained_coverage": [
+        "test_freeze_summary_scopes_high_risk_accepted_label"
+      ],
+      "status": "PASS"
+    },
+    {
+      "legacy_test": "test_cli_writes_all_declared_formats",
+      "legacy_source_revision": "bb0f9849c97d8e908b9b5fc15e0dd5ff42f08412",
+      "retained_coverage": [
+        "test_cli_write_fresh_and_stale_lifecycle",
+        "test_shared_graph_formats_contain_required_content"
+      ],
+      "status": "PASS"
+    },
+    {
+      "legacy_test": "test_cli_check_passes_for_fresh_outputs",
+      "legacy_source_revision": "bb0f9849c97d8e908b9b5fc15e0dd5ff42f08412",
+      "retained_coverage": [
+        "test_cli_write_fresh_and_stale_lifecycle"
+      ],
+      "status": "PASS"
+    },
+    {
+      "legacy_test": "test_cli_check_fails_for_stale_output",
+      "legacy_source_revision": "bb0f9849c97d8e908b9b5fc15e0dd5ff42f08412",
+      "retained_coverage": [
+        "test_cli_write_fresh_and_stale_lifecycle",
+        "read-only P7-T06 stale-format mutation harness"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "failure_mode_coverage": {
+    "required_mutation_count": 9,
+    "detected_mutation_count": 9,
+    "false_pass_count": 0,
+    "status": "PASS",
+    "mutations": [
+      {
+        "mutation_id": "missing_required_node",
+        "detection": "required frontier node missing: Resp_lc",
+        "coverage": "live negative fixture plus read-only mutation harness",
+        "status": "DETECTED"
+      },
+      {
+        "mutation_id": "dangling_edge",
+        "detection": "missing target node task:audit-missing",
+        "coverage": "live negative fixture synthetic malformed-edge test and read-only mutation harness",
+        "status": "DETECTED"
+      },
+      {
+        "mutation_id": "unknown_class",
+        "detection": "unknown node_class",
+        "coverage": "GraphBuilder.add_node fail-closed mutation plus synthetic emitted-class coverage",
+        "status": "DETECTED"
+      },
+      {
+        "mutation_id": "stale_json",
+        "detection": "status=stale and fresh=false with unequal hashes",
+        "coverage": "read-only compare_expected_text mutation harness",
+        "status": "DETECTED"
+      },
+      {
+        "mutation_id": "stale_markdown",
+        "detection": "status=stale and fresh=false with unequal hashes",
+        "coverage": "combined CLI lifecycle plus read-only mutation harness",
+        "status": "DETECTED"
+      },
+      {
+        "mutation_id": "stale_dot",
+        "detection": "status=stale and fresh=false with unequal hashes",
+        "coverage": "read-only compare_expected_text mutation harness",
+        "status": "DETECTED"
+      },
+      {
+        "mutation_id": "missing_file",
+        "detection": "missing output returns status=missing fresh=false and missing source changes fingerprint",
+        "coverage": "live missing-output test plus synthetic missing-source test plus read-only mutation harness",
+        "status": "DETECTED"
+      },
+      {
+        "mutation_id": "authority_overread",
+        "detection": "exact non-authoritative boundary mismatch",
+        "coverage": "live negative fixture plus read-only mutation harness",
+        "status": "DETECTED"
+      },
+      {
+        "mutation_id": "nondeterministic_ordering",
+        "detection": "reversed registry-row and handoff enumeration remains byte-identical",
+        "coverage": "test_reversed_row_and_file_enumeration_is_byte_identical",
+        "status": "DETECTED"
+      }
+    ]
+  },
+  "shadow_planner": {
+    "migration_epoch": "shadow_planner",
+    "execution_authority": "legacy",
+    "affected_live_diff_status": "READY",
+    "affected_live_diff_selected_gate_count": 14,
+    "affected_live_diff_dependency_graph_freshness_selected": true,
+    "full_profile_status": "READY",
+    "full_profile_dependency_graph_freshness_selected": true,
+    "full_profile_test_shard_repository_selected": true,
+    "affected_blocking_legacy_gate_count": 11,
+    "affected_blocking_planner_gate_count": 11,
+    "affected_blocking_unexplained_mismatch_count": 0,
+    "affected_blocking_shadow_comparison_status": "PASS"
+  },
+  "full_repository_suite": {
+    "active_lifecycle_execution": {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "test_count": 865,
+      "skip_count": 1,
+      "failure_count": 1,
+      "error_count": 1,
+      "unittest_seconds": 207.888,
+      "wall_seconds": 208.09,
+      "status": "EXPECTED_ACTIVE_LIFECYCLE_FINDINGS",
+      "finding_ids": [
+        "test_live_opt_in_scan_does_not_reclassify_historical_tasks",
+        "test_continue_research_reports_director_context_packet"
+      ],
+      "classification": "The active AgentJob intentionally had no completion path and checkpoint_required_after_execution remained false. No implementation test failed."
+    },
+    "stable_completed_state_execution": {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "test_count": 865,
+      "skip_count": 1,
+      "failure_count": 0,
+      "error_count": 0,
+      "unittest_seconds": 208.159,
+      "wall_seconds": 208.36,
+      "status": "PASS",
+      "graph_shard_full_suite_contribution_percent": 10.345,
+      "historical_full_suite_seconds_saved": 299.056,
+      "historical_full_suite_runtime_reduction_percent": 58.960,
+      "current_full_suite_target_status": "ABOVE_TARGET_MAXIMUM",
+      "current_full_suite_provisional_hard_guard_status": "THRESHOLD_EXCEEDED_NOT_ACTIVATED",
+      "classification": "The current suite is materially below the historical baseline. Its 208.159-second runtime exceeds the provisional 180-second threshold, but the frozen budget requires three comparable completed measurements before activation and this audit supplies only one."
+    },
+    "latest_dependency_reference": {
+      "source_task_id": "RT-20260717-003",
+      "test_count": 865,
+      "skip_count": 1,
+      "failure_count": 0,
+      "error_count": 0,
+      "unittest_seconds": 206.458,
+      "status": "PASS"
+    },
+    "historical_projection_seconds": 150.152,
+    "historical_projection_method": "507.215 - (378.598 - 21.535)",
+    "historical_projection_target_status": "PLAUSIBLE_WITHIN_100_TO_160_SECONDS",
+    "projection_is_not_current_suite_measurement": true
+  },
+  "source_hashes": {
+    "legacy_test_module": "7b2c52ba9ef3bd121b5316eb065657b646085f8966374058037239a54fbb8023",
+    "current_live_test_module": "1ac46a710216d1372373fd76a95d153abec8e8cd387e6e3b01cc11902c24beb0",
+    "synthetic_test_module": "957450475e3406c402b9251f371e7a06060c8b8ecd0b7ff7fa5d4c2920e92936",
+    "implementation_plan": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  },
+  "residual_cost_and_limits": [
+    "The stable completed-state full repository suite passes, but its 208.159-second runtime remains above the 160-second target maximum.",
+    "The frozen full-suite performance hard guard remains provisional until its three-run comparable activation rule is satisfied.",
+    "The workflow has push pull-request and manual-dispatch validation but no cron trigger; P7-T06 therefore claims only a scheduled-style full-profile live execution and does not claim scheduled-cron acceptance.",
+    "The 69.7 MB rendered bundle remains a material serialization cost even though extraction and assertion reuse have removed the dominant repeated-build cost."
+  ],
+  "verdict": "v19_p7_t06_dependency_graph_final_audit_pass_no_physics_delta"
+}
