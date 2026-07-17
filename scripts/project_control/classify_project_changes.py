@@ -115,6 +115,9 @@ DEPENDENCY_GRAPH_OUTPUT_PATHS = {
     "output/research_dependency_graph.dot",
     "wiki/indexes/research_dependency_graph.md",
 }
+VALIDATION_GATE_MANIFEST_PATH = (
+    "research_control/design/validation_gate_manifest_v1.yaml"
+)
 AUTHORITY_MARKER_RE = re.compile(r"<!--\s*authority:\s*(explanatory|control)\s*-->")
 HUNK_RE = re.compile(r"@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 PATH_FAMILY_TAGS = (
@@ -512,6 +515,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         path.startswith(".agents/roles/")
         or path.startswith(".agents/schemas/")
         or path_matches(path, [".codex/skills/*/SKILL.md"])
+        or path == VALIDATION_GATE_MANIFEST_PATH
         or any(source.role in {"control_schema", "control_policy"} for source in sources)
     ):
         tags.add("role_or_schema_contract")

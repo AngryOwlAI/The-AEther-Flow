@@ -1,0 +1,278 @@
+job_id: "AJ-RT-20260717-012-001"
+completion_id: "AJC-AJ-RT-20260717-012-001"
+task_id: "RT-20260717-012"
+decision_id: "DDR-20260717-012"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-012"
+status: "completed"
+created_at: "2026-07-17T16:31:35Z"
+started_at: "2026-07-17T16:31:35Z"
+completed_at: "2026-07-17T16:40:14Z"
+objective: "Repair validation-manifest path-family classification and rerun P8-T07 acceptance through checkpoint shadow parity."
+completion_summary: "Mapped the exact validation-gate manifest path to the existing role_or_schema_contract family and added focused classifier and checkpoint-shadow regressions. The manifest now classifies without unknown fallback, the minimal manifest-plus-registered-schema transaction produces a safe legacy-authoritative shadow plan selecting route_signature_diagnostic, and the stable focused, P8-T07, and repository suites pass. P8-T07 is accepted through the bounded repair and P9-T01 is dependency-ready only after the governed checkpoint; P9-T01 was not executed."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P8-T07"
+  - "research_control/design/validation_change_family_taxonomy_v1.md"
+  - "research_control/design/validation_change_matrix_v1.md"
+  - "research_control/design/validation_gate_manifest_schema_v1.md"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "research_control/design/validation_profile_policy_v1.md"
+  - "research_control/design/route_diagnostic_cache_schema_v1.md"
+  - "scripts/project_control/classify_project_changes.py"
+  - "scripts/validation/plan.py"
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_checkpoint_validation_planner.py"
+  - "research_control/tasks/RT-20260717-011/jobs/completions/AJC-AJ-RT-20260717-011-001.yaml"
+outputs_created:
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_checkpoint_validation_planner.py"
+  - "research_control/tasks/RT-20260717-012/artifacts/validation_manifest_classifier_parity_report.json"
+  - "research_control/tasks/RT-20260717-012/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-012/jobs/completions/AJC-AJ-RT-20260717-012-001.yaml"
+implementation_results:
+  plan_task_id: "P8-T07"
+  migration_epoch: "shadow_planner"
+  implementation_status: "PASS"
+  mapped_path: "research_control/design/validation_gate_manifest_v1.yaml"
+  mapped_path_family: "role_or_schema_contract"
+  manifest_classification_passed: true
+  checkpoint_shadow_plan_passed: true
+  unknown_paths: []
+  affected_profile: "affected"
+  route_signature_diagnostic_selected: true
+  focused_classifier_planner_test_count: 108
+  p8_t07_regression_test_count: 55
+  full_repository_test_count: 889
+  full_repository_skip_count: 1
+  manifest_changed: false
+  planner_implementation_changed: false
+  checkpoint_implementation_changed: false
+  route_cache_changed: false
+  planner_execution_authority_changed: false
+  legacy_execution_authoritative: true
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+  p9_t01_executed: false
+  p9_t01_dependency_ready_after_checkpoint: true
+validation_evidence:
+  selected_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "validation_manifest_path_family_regression"
+    - "checkpoint_shadow_manifest_path_parity"
+    - "p8_t07_regressions"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "git_diff_check"
+  executed_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "validation_manifest_path_family_regression"
+    - "checkpoint_shadow_manifest_path_parity"
+    - "p8_t07_regressions"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "git_diff_check"
+  parity_report_path: "research_control/tasks/RT-20260717-012/artifacts/validation_manifest_classifier_parity_report.json"
+  legacy_planner_shadow:
+    status: "READY"
+    affected_blocking_gate_ids:
+      - "route_signature_diagnostic"
+      - "checkpoint_transaction"
+    unknown_paths: []
+    unexplained_mismatch: false
+    execution_authority: "legacy"
+performance_evidence:
+  focused_classifier_planner_tests:
+    test_count: 108
+    duration_seconds: 4.961
+    status: "PASS"
+  initial_active_state_p8_regressions:
+    test_count: 55
+    failure_count: 3
+    error_count: 1
+    status: "EXPECTED_SEQUENCING_FAILURE"
+  stable_completed_state_p8_regressions:
+    test_count: 55
+    duration_seconds: 28.642
+    status: "PASS"
+  stable_completed_state_full_suite:
+    test_count: 889
+    skip_count: 1
+    duration_seconds: 201.002
+    status: "PASS"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local retrieval PASS after local retrieval refresh with 815 source objects 4057 relationships 815 semantic rows and 815 vault rows"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | bounded project-system validator test control and registry changes classified with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory resolver confirmed one bounded project-system AgentJob"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python -m py_compile scripts/project_control/classify_project_changes.py tests/test_project_change_classifier.py tests/test_checkpoint_validation_planner.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest tests.test_project_change_classifier tests.test_checkpoint_validation_planner tests.test_validation_planner tests.test_validation_change_matrix | exit_code=0 | 108 tests PASS in 4.961 seconds"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --paths research_control/design/validation_gate_manifest_v1.yaml --json | exit_code=0 | exact path maps only to role_or_schema_contract with no unknown fallback"
+  - "Direct plan_checkpoint_validation manifest-plus-registered-schema probe | exit_code=0 | READY legacy-authoritative shadow plan selects route_signature_diagnostic with no unknown path"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths scripts/project_control/classify_project_changes.py tests/test_project_change_classifier.py tests/test_checkpoint_validation_planner.py --explain | exit_code=0 | affected profile READY"
+  - ".venv/bin/python -m unittest tests.test_route_diagnostic_cache tests.test_validation_manifest tests.test_validation_profiles tests.test_research_control_continuation tests.test_routing_snapshot tests.test_run_full_research_control_validation | initial_exit_code=1 | 55 tests ran with four expected active-state missing-completion sequencing assertions"
+  - ".venv/bin/python -m unittest tests.test_route_diagnostic_cache tests.test_validation_manifest tests.test_validation_profiles tests.test_research_control_continuation tests.test_routing_snapshot tests.test_run_full_research_control_validation | exit_code=0 | stable completed-state 55 tests PASS in 28.642 seconds"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state 889 tests PASS with one expected skip in 201.002 seconds"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | generated task indexes are fresh"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py with explicit output paths and --check | exit_code=0 | generated dependency graph outputs are fresh"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | governed memory derivatives and core validation PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical warnings only"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P8-T07 returned REPAIR_REQUIRED with one exact separately bounded classifier and checkpoint-shadow repair route; generation lease project binding clean entry tree predecessor guards and single invocation were verified before task activation."
+      - "Memory preflight canonical-plan inspection classifier resolver baseline reproduction and emitted-signal validation passed before implementation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact manifest path classifies as role_or_schema_contract with no unknown fallback."
+      - "The minimal manifest-plus-registered-schema transaction produces a READY shadow plan selecting route_signature_diagnostic under legacy execution authority."
+      - "The 108-test focused classifier and planner matrix and 55-test P8-T07 regression set pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The stable completed-state repository suite passes 889 tests with one expected skip."
+      - "Documentation-impact research-control signal and whitespace gates pass."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "This completion is eligible for persistence only through the governed compare-mode checkpoint, which must confirm shadow parity rerun final blockers and commit atomically or restore the entry index."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "This packet changes no renderer or rendered scientific artifact."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The governed checkpoint owns final memory synchronization and validation before commit."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The task uses operational-only classifier and planner language and changes no scientific claim authority."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-012/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R17"
+    - "V19-R31"
+    - "V19-R32"
+  implements_plan_task_id: "P8-T07"
+  implementation_status: "PASS"
+  coverage_effect: "p8_t07_validation_manifest_classifier_shadow_parity_repair_pass_p9_t01_dependency_ready_after_checkpoint_no_physics_promotion"
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system validation-manifest classifier and checkpoint-shadow parity repair only; no physics or derivation status changes."
+scientific_claims_changed: false
+forbidden_conclusion_summary: "This v19 repair maps one operational manifest path to an existing validation family and adds regressions only. It does not change the manifest planner checkpoint cache ordinary research canonical ontology source laws benchmark Gate Chair proof physics claims or derivation status."
+verdict: "v19_p8_t07_classifier_shadow_parity_repair_pass_p9_t01_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "The validation-gate manifest now has deterministic schema-family identity and the formerly blocked mixed transaction produces a safe checkpoint shadow plan while legacy execution authority and all no-physics boundaries remain unchanged."
+selected_next_route:
+  route_id: "v19_p9_t01_traceability_dependency_injection"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P9"
+  plan_task_id: "P9-T01"
+  task_name: "Add dependency injection and minimal-fixture builders to support-traceability validators"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "traceability_dependency_injection"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system traceability fixture refactor only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After governed checkpoint PASS route one separately bounded P9-T01 traceability dependency-injection packet; do not widen this repair packet."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 815
+    relationship_row_count: 4057
+    semantic_row_count: 815
+    vault_row_count: 815
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"validation gate manifest checkpoint shadow classifier\" --limit 10 --json"
+      query_type: "search"
+      query_text: "validation gate manifest checkpoint shadow classifier"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1"
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-MANIFEST-SCHEMA-V1"
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1"
+        - "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-MATRIX-V1"
+        - "MD-RESEARCH-CONTROL-DESIGN-ROUTE-DIAGNOSTIC-CACHE-SCHEMA-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_change_family_taxonomy_v1.md"
+      source_hash: "a7e22d8bdd67992599b09e4ad22deae8be3979666e8ec58129e561af6e002329"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-GATE-MANIFEST-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_gate_manifest_schema_v1.md"
+      source_hash: "ebeb1140c95dfa04fd07c751c1fad0d6c890822baac307e761a5756856310a15"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-PROFILE-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_profile_policy_v1.md"
+      source_hash: "3e33c486484a8242563cc47d32a10c67f565d0324fc0f4fc171144a0d03e41fd"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-MATRIX-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_change_matrix_v1.md"
+      source_hash: "b230528e77d3ea55d989ed9bf28b4b797e68dd664aab60e6048312b37fc17803"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-ROUTE-DIAGNOSTIC-CACHE-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/route_diagnostic_cache_schema_v1.md"
+      source_hash: "dda7f9f093811e891dac2bd90c05036ac5760aced65b615a94343f0596e688b6"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

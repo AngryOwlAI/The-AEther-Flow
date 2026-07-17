@@ -112,6 +112,28 @@ class CheckpointPlannerIntegrationTests(unittest.TestCase):
         )
         self.assertIn("targeted_pdf_build", pdf_plan.generator_gate_ids)
 
+    def test_validation_manifest_schema_transaction_has_safe_shadow_plan(self) -> None:
+        manifest_path = "research_control/design/validation_gate_manifest_v1.yaml"
+        plan = self.checkpoint.plan_checkpoint_validation(
+            [
+                manifest_path,
+                "research_control/design/route_diagnostic_cache_schema_v1.md",
+            ]
+        )
+        details = {
+            item["path"]: item for item in plan.classification["path_family_details"]
+        }
+
+        self.assertEqual(
+            details[manifest_path]["tags"],
+            ["role_or_schema_contract"],
+        )
+        self.assertNotIn(
+            "unknown_governed_path",
+            plan.classification["path_family_tags"],
+        )
+        self.assertIn("route_signature_diagnostic", plan.selected_gate_ids)
+
     def test_planning_expands_git_collapsed_untracked_directory(self) -> None:
         command = [
             "git",

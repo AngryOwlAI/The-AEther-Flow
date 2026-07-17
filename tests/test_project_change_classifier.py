@@ -394,6 +394,21 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         )
         self.assertNotIn("unknown_governed_path", forward["reason_codes"])
 
+    def test_validation_gate_manifest_has_stable_schema_family_tag(self) -> None:
+        path = "research_control/design/validation_gate_manifest_v1.yaml"
+        result = self.classifier.classify_paths([path])
+
+        self.assertEqual(result["path_family_tags"], ["role_or_schema_contract"])
+        self.assertEqual(
+            result["path_family_details"][0]["tags"],
+            ["role_or_schema_contract"],
+        )
+        self.assertIn(
+            "path_rule:role_or_schema_contract",
+            result["path_family_details"][0]["reasons"],
+        )
+        self.assertNotIn("unknown_governed_path", result["reason_codes"])
+
     def test_unknown_governed_path_selects_full_without_silent_skip(self) -> None:
         result = self.classifier.classify_paths(["governed/new-format.bin"])
         self.assertEqual(result["recommended_validation_profile"], "full")
