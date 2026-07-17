@@ -1791,6 +1791,7 @@ digraph research_dependency_graph {
   "artifact:ddr_20260717_007" [label="DDR-20260717-007\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:ddr_20260717_008" [label="DDR-20260717-008\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:ddr_20260717_009" [label="DDR-20260717-009\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
+  "artifact:ddr_20260717_010" [label="DDR-20260717-010\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:docs_github_facing_md" [label="docs/github-facing/*.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:external_review_packets_eqsrc_family_closure_review_packet_v1_md" [label="external_review_packets/eqsrc_family_closure_review_packet_v1.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:folder_map_md" [label="FOLDER_MAP.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
@@ -9562,6 +9563,9 @@ digraph research_dependency_graph {
   "artifact:research_control_tasks_rt_20260717_009_artifacts_checkpoint_test_isolation_audit_json" [label="research_control/tasks/RT-20260717-009/artifacts/checkpoint_test_isolation_audit.json\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_tasks_rt_20260717_009_documentation_impact_yaml" [label="research_control/tasks/RT-20260717-009/documentation_impact.yaml\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_tasks_rt_20260717_009_jobs_completions_ajc_aj_rt_20260717_009_001_yaml" [label="research_control/tasks/RT-20260717-009/jobs/completions/AJC-AJ-RT-20260717-009-001.yaml\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
+  "artifact:research_control_tasks_rt_20260717_010_artifacts_routing_snapshot_parity_report_json" [label="research_control/tasks/RT-20260717-010/artifacts/routing_snapshot_parity_report.json\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
+  "artifact:research_control_tasks_rt_20260717_010_documentation_impact_yaml" [label="research_control/tasks/RT-20260717-010/documentation_impact.yaml\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
+  "artifact:research_control_tasks_rt_20260717_010_jobs_completions_ajc_aj_rt_20260717_010_001_yaml" [label="research_control/tasks/RT-20260717-010/jobs/completions/AJC-AJ-RT-20260717-010-001.yaml\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_tasks_rt_jobs" [label="research_control/tasks/RT-*/jobs/**\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_tasks_task_index_csv" [label="research_control/tasks/TASK_INDEX.csv\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
   "artifact:research_control_tasks_task_index_md" [label="research_control/tasks/TASK_INDEX.md\\nartifact\\nsupport_only", node_class="artifact", state_label="support_only"];
@@ -9881,6 +9885,8 @@ digraph research_dependency_graph {
   "blocked_claim:active_supersedence_or_evidence_deduplication_execution" [label="Blocked permission: active supersedence or evidence deduplication execution\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:active_teaching_packet_fallback_revival" [label="Blocked claim: active teaching-packet fallback revival\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:advisory_formatting_scripts_as_canonical_content_law" [label="Blocked claim: advisory formatting scripts as canonical content law\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:advisory_metric_authority" [label="Blocked permission: advisory metric authority\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:advisory_metrics_as_hard_gates" [label="Blocked claim: advisory metrics as hard gates\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:agent_native_authority" [label="Blocked claim: Agent-Native authority\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:agentjob_allowlist_change" [label="Blocked claim: AgentJob allowlist change\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:agentjob_allowlist_expansion" [label="Blocked claim: AgentJob allowlist expansion\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
@@ -10436,6 +10442,7 @@ digraph research_dependency_graph {
   "blocked_claim:external_review_completion_claim" [label="Blocked permission: external-review completion claim\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:external_review_packet_source_edit" [label="Blocked permission: external-review packet source edit\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:external_reviewer_contact" [label="Human-gated claim: external reviewer contact\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
+  "blocked_claim:external_routing_snapshot_input" [label="Human-gated claim: external routing snapshot input\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
   "blocked_claim:external_runtime_dependency" [label="Blocked claim: external runtime dependency\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:external_serialized_receipt_acceptance" [label="Blocked claim: external serialized receipt acceptance\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:external_website_status_as_scientific_authority" [label="Blocked claim: external website status as scientific authority\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
@@ -10491,11 +10498,13 @@ digraph research_dependency_graph {
   "blocked_claim:frontier_refresh_as_source_law_adoption" [label="Blocked claim: frontier refresh as source-law adoption\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:frontier_refresh_as_unrestricted_rr_e_theorem" [label="Blocked claim: frontier refresh as unrestricted RR_E theorem\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:frozen_shard_ownership_mutation" [label="Blocked permission: frozen shard ownership mutation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:full_acceptance_validator_weakening" [label="Blocked permission: full acceptance validator weakening\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:full_eqms_cert_src_v2_equivalence_relation" [label="Blocked claim: full EqMS_cert_src_v2 equivalence relation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:full_m_src_adoption" [label="Blocked claim: full M_src adoption\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:full_m_src_construction" [label="Blocked claim: full M_src construction\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:full_profile_speedup_from_incomparable_samples" [label="Blocked claim: full-profile speedup from incomparable samples\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:full_receipt_as_canonical_authority" [label="Blocked claim: full receipt as canonical authority\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:full_validator_weakening" [label="Human-gated claim: full validator weakening\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
   "blocked_claim:future_source_extension_impossibility" [label="Blocked claim: future source-extension impossibility\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:future_source_extension_impossibility_claim" [label="Blocked claim: future source-extension impossibility claim\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:fvr_src_adoption" [label="Blocked claim: FVR_src adoption\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
@@ -10921,6 +10930,8 @@ digraph research_dependency_graph {
   "blocked_claim:mutable_shared_report_authority" [label="Blocked claim: mutable shared report authority\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:mutating_generation" [label="Blocked claim: mutating generation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:mutating_generator_execution_inside_precheck" [label="Blocked permission: mutating generator execution inside precheck\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:narrow_snapshot_as_full_acceptance_authority" [label="Blocked claim: narrow snapshot as full acceptance authority\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:narrow_snapshot_as_physics_proof" [label="Blocked claim: narrow snapshot as physics proof\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:narrowmscerteq_v1_scoped_evidence_as_matter_semantics" [label="Blocked claim: NarrowMSCertEq_v1 scoped evidence as matter semantics\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:native_goal_operation" [label="Blocked claim: native goal operation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:negative_example_as_future_source_extension_impossibility" [label="Blocked claim: negative example as future source-extension impossibility\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
@@ -12264,6 +12275,7 @@ digraph research_dependency_graph {
   "blocked_claim:p8_t04_review_as_proof_authority" [label="Blocked claim: P8-T04 review as proof authority\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:p8_t05_and_later_plan_tasks" [label="Human-gated claim: P8-T05 and later plan tasks\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
   "blocked_claim:p8_t06_and_later_plan_tasks" [label="Human-gated claim: P8-T06 and later plan tasks\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
+  "blocked_claim:p8_t07_and_later_plan_tasks" [label="Human-gated claim: P8-T07 and later plan tasks\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
   "blocked_claim:p9_role_contract_implementation" [label="Blocked permission: P9 role contract implementation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:p9_t01_effect_field_as_proof_authority" [label="Blocked claim: P9-T01 effect field as proof authority\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:p9_t01_source_spec_as_proof_authority" [label="Blocked claim: P9-T01 source spec as proof authority\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
@@ -13588,6 +13600,7 @@ digraph research_dependency_graph {
   "blocked_claim:witness_generalization_inside_formalization" [label="Blocked claim: witness generalization inside formalization\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:witness_generalization_inside_stress" [label="Blocked claim: witness generalization inside stress\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:workflow_activity_as_physics_truth_ranking" [label="Blocked claim: workflow activity as physics truth ranking\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
+  "blocked_claim:workflow_authority_mutation" [label="Blocked permission: workflow authority mutation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:workflow_metrics_as_physics_evidence" [label="Blocked claim: workflow metrics as physics evidence\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:workflow_mutation" [label="Blocked claim: workflow mutation\\nblocked_burden\\nblocked", node_class="blocked_burden", state_label="blocked"];
   "blocked_claim:workflow_or_requirements_mutation" [label="Human-gated claim: workflow or requirements mutation\\nhuman_gated_object\\nhuman_gated", node_class="human_gated_object", state_label="human_gated"];
@@ -14508,6 +14521,7 @@ digraph research_dependency_graph {
   "claim_boundary:CB-V19-P8-T03-CONTINUATION-RECEIPT-INJECTION-001" [label="CB-V19-P8-T03-CONTINUATION-RECEIPT-INJECTION-001\\nclaim_boundary\\nsupport_only", node_class="claim_boundary", state_label="support_only"];
   "claim_boundary:CB-V19-P8-T04-METRICS-SNAPSHOT-REUSE-001" [label="CB-V19-P8-T04-METRICS-SNAPSHOT-REUSE-001\\nclaim_boundary\\nsupport_only", node_class="claim_boundary", state_label="support_only"];
   "claim_boundary:CB-V19-P8-T05-CHECKPOINT-TEST-ISOLATION-001" [label="CB-V19-P8-T05-CHECKPOINT-TEST-ISOLATION-001\\nclaim_boundary\\nsupport_only", node_class="claim_boundary", state_label="support_only"];
+  "claim_boundary:CB-V19-P8-T06-NARROW-ROUTING-SNAPSHOT-001" [label="CB-V19-P8-T06-NARROW-ROUTING-SNAPSHOT-001\\nclaim_boundary\\nsupport_only", node_class="claim_boundary", state_label="support_only"];
   "freeze:rt_20260614_055" [label="Freeze status for RT-20260614-055\\nfrozen_negative\\nfrozen_negative", node_class="frozen_negative", state_label="frozen_negative"];
   "freeze:rt_20260614_059" [label="Freeze status for RT-20260614-059\\nfrozen_negative\\nfrozen_negative", node_class="frozen_negative", state_label="frozen_negative"];
   "freeze:rt_20260614_071" [label="Freeze status for RT-20260614-071\\nfrozen_negative\\nfrozen_negative", node_class="frozen_negative", state_label="frozen_negative"];
@@ -16326,6 +16340,7 @@ digraph research_dependency_graph {
   "job:AJ-RT-20260717-007-001" [label="AJ-RT-20260717-007-001\\nagent_job\\nsupport_only", node_class="agent_job", state_label="support_only"];
   "job:AJ-RT-20260717-008-001" [label="AJ-RT-20260717-008-001\\nagent_job\\nsupport_only", node_class="agent_job", state_label="support_only"];
   "job:AJ-RT-20260717-009-001" [label="AJ-RT-20260717-009-001\\nagent_job\\nsupport_only", node_class="agent_job", state_label="support_only"];
+  "job:AJ-RT-20260717-010-001" [label="AJ-RT-20260717-010-001\\nagent_job\\nsupport_only", node_class="agent_job", state_label="support_only"];
   "ledger:benchmark_promotion" [label="benchmark_promotion\\nledger_row\\nblocked", node_class="ledger_row", state_label="blocked"];
   "ledger:einstein_equations" [label="einstein_equations\\nledger_row\\nblocked", node_class="ledger_row", state_label="blocked"];
   "ledger:finite_toy_metric_response" [label="finite_toy_metric_response\\nledger_row\\nfrozen_negative", node_class="ledger_row", state_label="frozen_negative"];
@@ -18424,6 +18439,7 @@ digraph research_dependency_graph {
   "task:RT-20260717-007" [label="RT-20260717-007\\ntask\\nsupport_only", node_class="task", state_label="support_only"];
   "task:RT-20260717-008" [label="RT-20260717-008\\ntask\\nsupport_only", node_class="task", state_label="support_only"];
   "task:RT-20260717-009" [label="RT-20260717-009\\ntask\\nsupport_only", node_class="task", state_label="support_only"];
+  "task:RT-20260717-010" [label="RT-20260717-010\\ntask\\nsupport_only", node_class="task", state_label="support_only"];
   "artifact:agents_md" -> "ledger:source_ontology_primitives" [label="updates_ledger", edge_class="updates_ledger"];
   "artifact:ddr_20260608_001" -> "job:AJ-RT-20260608-001-001" [label="selects_next", edge_class="selects_next"];
   "artifact:ddr_20260608_001" -> "task:RT-20260608-001" [label="selects_next", edge_class="selects_next"];
@@ -20305,6 +20321,8 @@ digraph research_dependency_graph {
   "artifact:ddr_20260717_008" -> "task:RT-20260717-008" [label="selects_next", edge_class="selects_next"];
   "artifact:ddr_20260717_009" -> "job:AJ-RT-20260717-009-001" [label="selects_next", edge_class="selects_next"];
   "artifact:ddr_20260717_009" -> "task:RT-20260717-009" [label="selects_next", edge_class="selects_next"];
+  "artifact:ddr_20260717_010" -> "job:AJ-RT-20260717-010-001" [label="selects_next", edge_class="selects_next"];
+  "artifact:ddr_20260717_010" -> "task:RT-20260717-010" [label="selects_next", edge_class="selects_next"];
   "artifact:research_control_approvals_readme_md" -> "ledger:gate_chair_status" [label="updates_ledger", edge_class="updates_ledger"];
   "artifact:research_control_program_state_yaml" -> "ledger:benchmark_promotion" [label="updates_ledger", edge_class="updates_ledger"];
   "artifact:research_control_program_state_yaml" -> "ledger:einstein_equations" [label="updates_ledger", edge_class="updates_ledger"];
@@ -49943,6 +49961,15 @@ digraph research_dependency_graph {
   "claim_boundary:CB-V19-P8-T05-CHECKPOINT-TEST-ISOLATION-001" -> "blocked_claim:p8_t06_and_later_plan_tasks" [label="requires_human_gate", edge_class="requires_human_gate"];
   "claim_boundary:CB-V19-P8-T05-CHECKPOINT-TEST-ISOLATION-001" -> "blocked_claim:production_checkpoint_validation_or_workflow_repair" [label="requires_human_gate", edge_class="requires_human_gate"];
   "claim_boundary:CB-V19-P8-T05-CHECKPOINT-TEST-ISOLATION-001" -> "blocked_claim:protected_adoption_benchmark_closure_or_physics_promotion" [label="requires_human_gate", edge_class="requires_human_gate"];
+  "claim_boundary:CB-V19-P8-T06-NARROW-ROUTING-SNAPSHOT-001" -> "blocked_claim:advisory_metrics_as_hard_gates" [label="forbids_overread", edge_class="forbids_overread"];
+  "claim_boundary:CB-V19-P8-T06-NARROW-ROUTING-SNAPSHOT-001" -> "blocked_claim:narrow_snapshot_as_full_acceptance_authority" [label="forbids_overread", edge_class="forbids_overread"];
+  "claim_boundary:CB-V19-P8-T06-NARROW-ROUTING-SNAPSHOT-001" -> "blocked_claim:narrow_snapshot_as_physics_proof" [label="forbids_overread", edge_class="forbids_overread"];
+  "claim_boundary:CB-V19-P8-T06-NARROW-ROUTING-SNAPSHOT-001" -> "blocked_claim:ordinary_research_source_law_benchmark_gate_chair_proof_or_completed_derivation_mutation" [label="forbids_overread", edge_class="forbids_overread"];
+  "claim_boundary:CB-V19-P8-T06-NARROW-ROUTING-SNAPSHOT-001" -> "blocked_claim:canonical_ontology_edit" [label="requires_human_gate", edge_class="requires_human_gate"];
+  "claim_boundary:CB-V19-P8-T06-NARROW-ROUTING-SNAPSHOT-001" -> "blocked_claim:external_routing_snapshot_input" [label="requires_human_gate", edge_class="requires_human_gate"];
+  "claim_boundary:CB-V19-P8-T06-NARROW-ROUTING-SNAPSHOT-001" -> "blocked_claim:full_validator_weakening" [label="requires_human_gate", edge_class="requires_human_gate"];
+  "claim_boundary:CB-V19-P8-T06-NARROW-ROUTING-SNAPSHOT-001" -> "blocked_claim:p8_t07_and_later_plan_tasks" [label="requires_human_gate", edge_class="requires_human_gate"];
+  "claim_boundary:CB-V19-P8-T06-NARROW-ROUTING-SNAPSHOT-001" -> "blocked_claim:protected_adoption_benchmark_closure_or_physics_promotion" [label="requires_human_gate", edge_class="requires_human_gate"];
   "gate_verdict:RT-20260614-060" -> "blocked_claim:benchmark_promotion" [label="forbids_overread", edge_class="forbids_overread"];
   "gate_verdict:RT-20260614-060" -> "blocked_claim:completed_derivation" [label="forbids_overread", edge_class="forbids_overread"];
   "gate_verdict:RT-20260614-060" -> "blocked_claim:einstein_equations" [label="forbids_overread", edge_class="forbids_overread"];
@@ -81212,6 +81239,21 @@ digraph research_dependency_graph {
   "job:AJ-RT-20260717-009-001" -> "blocked_claim:science_draft_mutation" [label="forbids_overread", edge_class="forbids_overread"];
   "job:AJ-RT-20260717-009-001" -> "blocked_claim:validation_gate_semantic_mutation" [label="forbids_overread", edge_class="forbids_overread"];
   "job:AJ-RT-20260717-009-001" -> "blocked_claim:workflow_mutation" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260717-010-001" -> "artifact:research_control_tasks_rt_20260717_010_artifacts_routing_snapshot_parity_report_json" [label="audits", edge_class="audits"];
+  "job:AJ-RT-20260717-010-001" -> "artifact:research_control_tasks_rt_20260717_010_documentation_impact_yaml" [label="audits", edge_class="audits"];
+  "job:AJ-RT-20260717-010-001" -> "artifact:research_control_tasks_rt_20260717_010_jobs_completions_ajc_aj_rt_20260717_010_001_yaml" [label="audits", edge_class="audits"];
+  "job:AJ-RT-20260717-010-001" -> "task:RT-20260717-010" [label="depends_on", edge_class="depends_on"];
+  "job:AJ-RT-20260717-010-001" -> "blocked_claim:advisory_metric_authority" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260717-010-001" -> "blocked_claim:benchmark_promotion" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260717-010-001" -> "blocked_claim:canonical_ontology_edit" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260717-010-001" -> "blocked_claim:external_routing_snapshot_input" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260717-010-001" -> "blocked_claim:full_acceptance_validator_weakening" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260717-010-001" -> "blocked_claim:gate_chair_verdict" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260717-010-001" -> "blocked_claim:ordinary_research_mutation" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260717-010-001" -> "blocked_claim:physics_claim_promotion" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260717-010-001" -> "blocked_claim:proof_authority" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260717-010-001" -> "blocked_claim:science_draft_mutation" [label="forbids_overread", edge_class="forbids_overread"];
+  "job:AJ-RT-20260717-010-001" -> "blocked_claim:workflow_authority_mutation" [label="forbids_overread", edge_class="forbids_overread"];
   "ledger:benchmark_promotion" -> "blocked_claim:benchmark_promotion" [label="blocks", edge_class="blocks"];
   "ledger:benchmark_promotion" -> "object:exact_gr_benchmark" [label="requires", edge_class="requires"];
   "ledger:benchmark_promotion" -> "ledger:benchmark_promotion" [label="requires_human_gate", edge_class="requires_human_gate"];
@@ -83323,4 +83365,6 @@ digraph research_dependency_graph {
   "task:RT-20260717-008" -> "job:AJ-RT-20260717-008-001" [label="depends_on", edge_class="depends_on"];
   "task:RT-20260717-008" -> "task:RT-20260717-009" [label="handoffs_to", edge_class="handoffs_to"];
   "task:RT-20260717-009" -> "job:AJ-RT-20260717-009-001" [label="depends_on", edge_class="depends_on"];
+  "task:RT-20260717-009" -> "task:RT-20260717-010" [label="handoffs_to", edge_class="handoffs_to"];
+  "task:RT-20260717-010" -> "job:AJ-RT-20260717-010-001" [label="depends_on", edge_class="depends_on"];
 }

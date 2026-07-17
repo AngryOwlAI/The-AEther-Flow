@@ -7,9 +7,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 - Schema: `research_dependency_graph_v1`
 - Generated from tracked state as of: `2026-07-09T03:11:04Z`
-- Source fingerprint: `286b9b21e20b4d35e8597c968fec858ad194fea0d8a73434762585e7141b89a0`
-- Nodes: `18423`
-- Edges: `64899`
+- Source fingerprint: `a2d52db302f78b25635f5931730b7567051db9ce134091732445200450fb873e`
+- Nodes: `18439`
+- Edges: `64927`
 
 ## Source Counts
 
@@ -17,7 +17,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 940 |
+| `completion_yaml` | 941 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 940 |
+| `agent_job` | `support_only` | 941 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 9727 |
-| `blocked_burden` | `blocked` | 3445 |
-| `claim_boundary` | `support_only` | 897 |
+| `artifact` | `support_only` | 9731 |
+| `blocked_burden` | `blocked` | 3451 |
+| `claim_boundary` | `support_only` | 898 |
 | `draft_control_candidate` | `draft_control` | 529 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 109 |
 | `gate_chair_verdict` | `human_gated` | 31 |
 | `handoff` | `support_only` | 740 |
-| `human_gated_object` | `human_gated` | 378 |
+| `human_gated_object` | `human_gated` | 381 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 291 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 880 |
+| `task` | `support_only` | 881 |
 
 ## Frontier Table
 
@@ -91,6 +91,8 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:active_supersedence_or_evidence_deduplication_execution` | Blocked permission: active supersedence or evidence deduplication execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:active_teaching_packet_fallback_revival` | Blocked claim: active teaching-packet fallback revival | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:advisory_formatting_scripts_as_canonical_content_law` | Blocked claim: advisory formatting scripts as canonical content law | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:advisory_metric_authority` | Blocked permission: advisory metric authority | `registries/ROLE_EXECUTION_REGISTRY.csv` |
+| `blocked_claim:advisory_metrics_as_hard_gates` | Blocked claim: advisory metrics as hard gates | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agent_native_authority` | Blocked claim: Agent-Native authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_change` | Blocked claim: AgentJob allowlist change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_expansion` | Blocked claim: AgentJob allowlist expansion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -158,8 +160,6 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:backlog_as_matter_semantics` | Blocked claim: backlog as matter semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_physics_proof` | Blocked claim: backlog as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_rr_etransportcompletenessorinvariancelaw_v1_adoption` | Blocked claim: backlog as RR_ETransportCompletenessOrInvarianceLaw_v1 adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:backlog_as_source_law_adoption` | Blocked claim: backlog as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:backlog_as_unrestricted_rr_e_theorem` | Blocked claim: backlog as unrestricted RR_E theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 

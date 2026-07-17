@@ -1,0 +1,155 @@
+job_id: "AJ-RT-20260717-010-001"
+completion_id: "AJC-AJ-RT-20260717-010-001"
+task_id: "RT-20260717-010"
+decision_id: "DDR-20260717-010"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-010"
+status: "completed"
+created_at: "2026-07-17T13:20:35Z"
+started_at: "2026-07-17T13:20:35Z"
+completed_at: "2026-07-17T13:37:22Z"
+objective: "Implement and verify a narrow fingerprinted routing snapshot that preserves every active-state blocker while removing full historical and advisory scans from the frequent default path."
+completion_summary: "The default Continue Research status path now uses a deterministic fingerprinted active-state preflight. Ten focused adversarial tests seven frozen continuation tests and the 878-test repository suite pass with one expected skip. Median routing latency falls from 15.66 seconds to 0.127 seconds while full research-control validation remains mandatory at checkpoint."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P8-T06"
+  - "scripts/research_control/continue_research.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "scripts/research_control/resolve_latest_handoff.py"
+outputs_created:
+  - "scripts/research_control/validate_routing_snapshot.py"
+  - "scripts/research_control/continue_research.py"
+  - "tests/test_routing_snapshot.py"
+  - "research_control/tasks/RT-20260717-010/artifacts/routing_snapshot_parity_report.json"
+implementation_results:
+  plan_task_id: "P8-T06"
+  implementation_status: "PASS"
+  active_state_gate_count: 10
+  focused_routing_tests: 10
+  frozen_continuation_tests: 7
+  baseline_routing_real_seconds: 15.66
+  final_routing_median_seconds: 0.126976
+  routing_latency_reduction_percent: 99.189
+  current_narrow_validation: "PASS"
+  current_full_validation: "PASS"
+  stale_handoff_fixture: "PASS_FAIL_CLOSED"
+  mismatched_current_job_fixture: "PASS_FAIL_CLOSED"
+  missing_execution_role_fixture: "PASS_FAIL_CLOSED"
+  conflicting_pending_jobs_fixture: "PASS_FAIL_CLOSED"
+  protected_human_gate_fixture: "PASS_HUMAN_GATE_REQUIRED"
+  allowlist_drift_fixture: "PASS_FAIL_CLOSED"
+  source_manifest_and_fingerprint: "PASS"
+  external_snapshot_input_created: false
+  full_acceptance_validator_replaced: false
+  advisory_metric_authority_created: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+command_results:
+  - ".venv/bin/python -m py_compile scripts/research_control/validate_routing_snapshot.py scripts/research_control/continue_research.py tests/test_routing_snapshot.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_routing_snapshot | exit_code=0 | 10 tests PASS"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_continuation | exit_code=0 | 7 frozen compatibility tests PASS"
+  - ".venv/bin/python scripts/research_control/validate_routing_snapshot.py --json | exit_code=0 | PASS ten active-state gates source fingerprint f1185b8e44e7f4696c46d2a09093bbd1ebecc0cbb6e3484e06869c3de68801ab"
+  - "five read-only continue_research.py --summary latency runs | exit_code=0 | median 0.126976 seconds mean 0.127709 seconds 99.189 percent median reduction from 15.66-second baseline"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | PASS with historical nonblocking warnings"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical nonblocking warnings"
+  - "preclosure .venv/bin/python -m unittest discover -s tests | exit_code=1 | two transaction-local errors identified: active row lacked completion path and one strict receipt fixture used a different module alias"
+  - "final .venv/bin/python -m unittest discover -s tests | exit_code=0 | 878 tests PASS in 219.155 seconds with one expected skip"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py and --check | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | PASS with two nonblocking findings"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-010-001 | authorized pending execution"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P8-T05 is completed and checkpointed; generation lease project binding clean entry tree predecessor guards and the single invocation were verified before P8-T06 activation."
+      - "Memory preflight canonical plan inspection classifier resolver and emitted-signal validation passed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The narrow preflight validates program state active task decision job handoff role frontier allowlists pending-job uniqueness and protected human-gate state."
+      - "The payload records deterministic source paths SHA-256 hashes and a sealed routing fingerprint."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Ten focused routing tests and seven frozen continuation tests pass."
+      - "Adversarial stale handoff mismatched job missing role conflicting jobs human gate and allowlist fixtures preserve fail-closed routing."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "Full research-control validation remains declared and mandatory at the governed checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index and dependency-graph derivatives are regenerated from the completed source state and checked fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only remain mandatory after source and registry closure."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Research-control diff validation passes and routing evidence remains operational project-system evidence only."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system routing-preflight validation only; no physics or derivation status changes."
+scientific_claims_changed: false
+documentation_impact:
+  status: "no_update_required"
+  receipt_path: "research_control/tasks/RT-20260717-010/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet validates active project-control routing only. It does not make validation status physics proof and does not change ordinary research ontology source laws benchmarks Gate Chair authority proof status physics claims or derivation status."
+verdict: "v19_p8_t06_narrow_routing_snapshot_pass_no_physics_delta"
+coherent_resolution_summary: "A fingerprinted active-state snapshot replaces full historical and advisory scans on the frequent status path while full acceptance remains mandatory at checkpoint."
+next_recommendation: "After governed checkpoint PASS route only P8-T07."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 814
+    relationship_row_count: 4053
+    semantic_row_count: 814
+    vault_row_count: 814
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."
+documentation_impact_id: "DI-RT-20260717-010-001"

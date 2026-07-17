@@ -20,13 +20,13 @@ try:
     from report_physics_progress_metrics import build_report as build_physics_progress_report
     from resolve_latest_handoff import resolve_latest
     from strict_yaml import StrictYamlError, load as load_yaml
+    from validate_routing_snapshot import build_routing_snapshot, validate_all
     from validate_research_control import (
         ValidationReport,
         gr_derivation_roadmap_policy,
         loop_control_policy,
         parent_child_decomposition_policy,
         theoretical_continuation_policy,
-        validate_all,
     )
 except ImportError:  # pragma: no cover
     from scripts.research_control.report_physics_progress_metrics import (
@@ -34,13 +34,16 @@ except ImportError:  # pragma: no cover
     )
     from scripts.research_control.resolve_latest_handoff import resolve_latest
     from scripts.research_control.strict_yaml import StrictYamlError, load as load_yaml
+    from scripts.research_control.validate_routing_snapshot import (
+        build_routing_snapshot,
+        validate_all,
+    )
     from scripts.research_control.validate_research_control import (
         ValidationReport,
         gr_derivation_roadmap_policy,
         loop_control_policy,
         parent_child_decomposition_policy,
         theoretical_continuation_policy,
-        validate_all,
     )
 
 
@@ -637,35 +640,7 @@ def route_orbit_diagnostic_context(repo_root: Path = REPO_ROOT) -> dict[str, obj
 
 
 def live_routing_snapshot() -> ValidatedContinuationInput:
-    program_state = load_yaml(PROGRAM_STATE_PATH)
-    latest = resolve_latest()
-    task_rows = by_id(read_csv_registry("RESEARCH_TASK_REGISTRY.csv"), "task_id")
-    job_rows = by_id(read_csv_registry("AGENT_JOB_REGISTRY.csv"), "job_id")
-    decision_rows = by_id(read_csv_registry("DIRECTOR_DECISION_REGISTRY.csv"), "decision_id")
-    active_task_id = str(program_state.get("active_task_id", ""))
-    active_task = task_rows.get(active_task_id, {})
-    current_decision_id = active_task.get("current_decision_id", "")
-    current_job_id = active_task.get("current_job_id", "")
-    current_job = job_rows.get(current_job_id, {})
-    return make_routing_snapshot(
-        {
-            "program_state": program_state,
-            "latest": latest,
-            "task_rows": task_rows,
-            "job_rows": job_rows,
-            "decision_rows": decision_rows,
-            "jobs_waiting": pending_or_active_jobs(),
-            "available_roles": active_roles(),
-            "route_orbit_diagnostics": route_orbit_diagnostic_context(REPO_ROOT),
-            "dependency_graph_summary": dependency_graph_summary(program_state, latest),
-            "required_authority_surfaces": authority_surfaces(
-                active_task_id,
-                latest,
-                active_task,
-                current_job,
-            ),
-        }
-    )
+    return make_routing_snapshot(build_routing_snapshot(REPO_ROOT))
 
 
 def continuation_status(
@@ -726,9 +701,17 @@ def continuation_status(
     graph_summary = routing_payload["dependency_graph_summary"]
 
     boundary = "director_decision_required"
-    if active_task.get("requires_human_gate") == "true" or current_decision.get(
-        "requires_human_gate"
-    ) == "true":
+    protected_gate = routing_payload.get("protected_gate", {})
+    protected_gate_required = (
+        isinstance(protected_gate, dict)
+        and protected_gate.get("requires_human_gate") is True
+    )
+    if (
+        active_task.get("requires_human_gate") == "true"
+        or current_decision.get("requires_human_gate") == "true"
+        or current_job.get("requires_human_gate") == "true"
+        or protected_gate_required
+    ):
         boundary = "human_gate_required"
     elif jobs_waiting:
         matching = [

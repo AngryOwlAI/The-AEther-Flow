@@ -1,0 +1,133 @@
+{
+  "schema_id": "routing_snapshot_parity_report.v1",
+  "task_id": "RT-20260717-010",
+  "job_id": "AJ-RT-20260717-010-001",
+  "plan_task_id": "P8-T06",
+  "generated_at": "2026-07-17T13:37:22Z",
+  "status": "PASS",
+  "objective": "Validate only active routing authority on the frequent path while retaining full acceptance at checkpoint.",
+  "baseline": {
+    "command": ".venv/bin/python scripts/research_control/continue_research.py --summary",
+    "real_seconds": 15.66,
+    "user_seconds": 14.09,
+    "system_seconds": 1.43,
+    "default_validator": "full research-control validation plus advisory metric and generated dependency-graph reads"
+  },
+  "final_measurement": {
+    "command": ".venv/bin/python scripts/research_control/continue_research.py --summary",
+    "runs_seconds": [
+      0.130835,
+      0.126748,
+      0.126345,
+      0.126976,
+      0.127638
+    ],
+    "median_seconds": 0.126976,
+    "mean_seconds": 0.127709,
+    "median_reduction_percent": 99.189,
+    "single_final_real_seconds": 0.13,
+    "materially_faster": true
+  },
+  "current_state_parity": {
+    "narrow_validation": "PASS",
+    "full_research_control_validation": "PASS",
+    "routing_boundary": "director_decision_required",
+    "active_task_id": "RT-20260709-006",
+    "latest_handoff_id": "handoff-0740",
+    "source_fingerprint": "f1185b8e44e7f4696c46d2a09093bbd1ebecc0cbb6e3484e06869c3de68801ab",
+    "routing_snapshot_fingerprint": "4272e20e277d901458f7bfe3f0aa65ff583af23170eac90b075332a449bd0943"
+  },
+  "gate_matrix": [
+    {
+      "gate_id": "program_state",
+      "current_state": "PASS",
+      "adversarial_fixture": "covered"
+    },
+    {
+      "gate_id": "active_task",
+      "current_state": "PASS",
+      "adversarial_fixture": "mismatched current job fails closed"
+    },
+    {
+      "gate_id": "current_decision",
+      "current_state": "PASS",
+      "adversarial_fixture": "pending job linkage checked"
+    },
+    {
+      "gate_id": "current_job",
+      "current_state": "PASS",
+      "adversarial_fixture": "mismatched current job fails closed"
+    },
+    {
+      "gate_id": "pending_job_uniqueness",
+      "current_state": "PASS",
+      "adversarial_fixture": "conflicting pending jobs fail closed"
+    },
+    {
+      "gate_id": "latest_handoff",
+      "current_state": "PASS",
+      "adversarial_fixture": "stale handoff fails closed"
+    },
+    {
+      "gate_id": "execution_role",
+      "current_state": "PASS",
+      "adversarial_fixture": "missing role execution fails closed"
+    },
+    {
+      "gate_id": "active_frontier",
+      "current_state": "PASS",
+      "adversarial_fixture": "active and bifurcated fields compared"
+    },
+    {
+      "gate_id": "allowlist",
+      "current_state": "PASS",
+      "adversarial_fixture": "registry job and role allowlist drift fails closed"
+    },
+    {
+      "gate_id": "protected_human_gate",
+      "current_state": "PASS",
+      "adversarial_fixture": "human gate is preserved as human_gate_required"
+    }
+  ],
+  "exclusions_verified": [
+    "full historical completion corpus",
+    "publication surfaces",
+    "memory derivatives",
+    "advisory physics-progress metrics",
+    "unrelated registries",
+    "generated dependency graph payload"
+  ],
+  "acceptance_boundary": {
+    "full_validator_still_required": true,
+    "full_validator_command": ".venv/bin/python scripts/research_control/validate_research_control.py",
+    "checkpoint_transaction_still_required": true,
+    "narrow_snapshot_is_checkpoint_authority": false,
+    "narrow_snapshot_is_physics_claim_authority": false,
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false
+  },
+  "test_evidence": {
+    "focused_routing_tests": 10,
+    "frozen_continuation_tests": 7,
+    "focused_status": "PASS",
+    "syntax_status": "PASS",
+    "diff_allowlist_status": "PASS",
+    "full_repository_test_status": "PASS",
+    "expected_skip_count": 1,
+    "preclosure_full_suite_findings": [
+      {
+        "finding": "active AgentJob registry row had no completion path",
+        "disposition": "resolved by normal transaction completion record"
+      },
+      {
+        "finding": "discovery mode loaded strict ValidationReport through a different module alias in one fixture",
+        "disposition": "test now constructs the exact continuation-owned report type without weakening runtime type checks"
+      }
+    ]
+  },
+  "ordinary_research_handoff_preserved": "handoff-0740",
+  "ordinary_research_state_changed": false,
+  "scientific_claims_changed": false,
+  "physics_delta_changed": false,
+  "proof_authority": false
+}
