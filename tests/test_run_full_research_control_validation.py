@@ -20,78 +20,40 @@ def load_module():
     return module
 
 
-class LocalCiEquivalentValidationTests(unittest.TestCase):
+class LocalFullWrapperCompatibilityTests(unittest.TestCase):
     def setUp(self) -> None:
         self.module = load_module()
 
-    def test_default_plan_covers_p11_t02_required_checks(self) -> None:
+    def test_compatibility_projection_is_shared_manifest_derived(self) -> None:
         plan = self.module.command_plan()
-        labels = {entry["label"] for entry in plan}
+        by_gate = {entry["gate_id"]: entry for entry in plan}
         coverage = self.module.coverage_map(plan)
 
-        self.assertIn("memory_validate_only", labels)
-        self.assertIn("current_frontier_check", labels)
-        self.assertIn("compact_current_frontier_check", labels)
-        self.assertIn("dependency_graph_check", labels)
-        self.assertIn("task_index_validation", labels)
-        self.assertIn("claim_graph_validation", labels)
-        self.assertNotIn("claim_language_changed_lint", labels)
-        self.assertIn("documentation_impact_validation", labels)
-        self.assertNotIn("research_control_validation", labels)
-        self.assertIn("research_control_diff_validation", labels)
-        self.assertIn("route_signature_extraction", labels)
-        self.assertIn("route_orbit_advisory", labels)
-        self.assertIn("whitespace_diff_check", labels)
-        self.assertTrue(coverage["active_state_sidecar_validation"])
+        self.assertNotIn("ValidationCommand", vars(self.module))
+        self.assertNotIn("base_command_plan", vars(self.module))
+        self.assertEqual(
+            by_gate["research_control_diff"]["command"],
+            ["scripts/research_control/validate_research_control.py", "--check-diff"],
+        )
+        self.assertEqual(
+            by_gate["research_control_diff"]["label"],
+            "research_control_diff_validation",
+        )
         self.assertTrue(coverage["research_control_core_obligation"])
         self.assertTrue(coverage["research_control_diff_obligation"])
-        self.assertTrue(coverage["claim_language_lint"])
-        self.assertNotIn("repository_smoke_tests", labels)
         self.assertTrue(all(coverage.values()))
 
-    def test_smoke_suite_is_explicit_opt_in(self) -> None:
-        default_labels = {entry["label"] for entry in self.module.command_plan()}
-        smoke_labels = {entry["label"] for entry in self.module.command_plan(include_smoke_tests=True)}
+    def test_claim_language_summary_remains_available_to_checkpoint(self) -> None:
+        summary = self.module.claim_language_summary(
+            "claim-language warning scoped_obstruction\n"
+        )
 
-        self.assertNotIn("repository_smoke_tests", default_labels)
-        self.assertIn("repository_smoke_tests", smoke_labels)
-
-    def test_report_marks_required_failures_but_keeps_boundary_fields(self) -> None:
-        results = [
-            {
-                "label": "research_control_validation",
-                "command": [".venv/bin/python", "scripts/research_control/validate_research_control.py"],
-                "purpose": "test",
-                "authority_level": "required-gate",
-                "required": True,
-                "advisory": False,
-                "returncode": 1,
-                "status": "FAIL",
-                "stdout_tail": "",
-                "stderr_tail": "failure",
-            },
-            {
-                "label": "route_orbit_advisory",
-                "command": [".venv/bin/python", "scripts/research_control/validate_route_orbits.py"],
-                "purpose": "test",
-                "authority_level": "advisory-diagnostic",
-                "required": True,
-                "advisory": True,
-                "returncode": 1,
-                "status": "FAIL",
-                "stdout_tail": "",
-                "stderr_tail": "advisory failure",
-            },
-        ]
-
-        report = self.module.build_report(results, include_smoke_tests=False, repo_root=REPO_ROOT)
-
-        self.assertEqual(report["status"], "FAIL")
-        self.assertEqual(report["required_failure_labels"], ["research_control_validation"])
-        self.assertEqual(report["advisory_failure_labels"], ["route_orbit_advisory"])
-        self.assertTrue(report["operational_receipt_only"])
-        self.assertTrue(report["no_physics_delta"])
-        self.assertFalse(report["physics_proof_authority"])
+        self.assertEqual(summary["status"], "PASS")
+        self.assertEqual(summary["warning_count"], 1)
+        self.assertEqual(
+            summary["finding_ids"],
+            ["claim_language_changed:scoped_obstruction"],
+        )
 
 
 if __name__ == "__main__":

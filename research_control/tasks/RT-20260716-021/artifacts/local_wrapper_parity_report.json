@@ -1,0 +1,87 @@
+{
+  "schema_id": "local_validation_wrapper_parity_v1",
+  "task_id": "RT-20260716-021",
+  "job_id": "AJ-RT-20260716-021-001",
+  "plan_task_id": "P6-T07",
+  "migration_epoch": "shadow_planner",
+  "status": "PASS",
+  "manifest_sha256": "7d9f04c5b06e7a5385cf7e101dbbdf4cc265f9ab1ee3a0307b2b435f5657747b",
+  "full_profile_selected_gate_count": 27,
+  "wrapper_selected_gate_count": 27,
+  "selected_gate_order_matches": true,
+  "make_profile_targets": {
+    "validate-fast": "fast",
+    "validate-affected": "affected",
+    "validate-checkpoint-plan": "checkpoint",
+    "validate-full": "full",
+    "validate-doctor": "doctor"
+  },
+  "make_compatibility_target": {
+    "target": "validate-project-control",
+    "planner_profile": "full",
+    "legacy_target": "validate-project-control-legacy",
+    "planner_invocation_count": 1,
+    "legacy_chain_invocation_count": 1,
+    "execution_authority": "legacy"
+  },
+  "runner_compatibility": {
+    "requested_profile": "full",
+    "planner_executes_commands": false,
+    "execution_authority": "legacy",
+    "deprecated": true,
+    "plan_only_preserved": true,
+    "json_stdout_preserved": true,
+    "optional_output_file_preserved": true,
+    "tail_limit_preserved": true,
+    "include_smoke_tests_accepted_no_op": true,
+    "planner_exit_code_propagated": true,
+    "legacy_exit_code_propagated": true,
+    "ci_equivalence_claimed": false
+  },
+  "independent_ownership_removed": {
+    "validation_command_dataclass_removed": true,
+    "base_command_plan_removed": true,
+    "executable_command_plan_owned_locally": false,
+    "compatibility_projection_manifest_derived": true,
+    "coverage_projection_manifest_derived": true
+  },
+  "tests": {
+    "focused_and_compatibility_test_count": 47,
+    "focused_and_compatibility_status": "PASS"
+  },
+  "full_shadow_execution": {
+    "active_state_probe": {
+      "status": "EXPECTED_FAIL_RESOLVED",
+      "failing_test": "test_continue_research_reports_director_context_packet",
+      "reason": "The first probe correctly observed the still-active project-system transaction; the exact test passed after stable task closure."
+    },
+    "make_validate_project_control": {
+      "status": "PASS",
+      "exit_code": 0,
+      "repository_test_count": 832,
+      "repository_test_skip_count": 1
+    },
+    "local_runner": {
+      "status": "PASS",
+      "exit_code": 0,
+      "report_schema_id": "research_control_local_full_wrapper_report_v2",
+      "repository_test_count": 832,
+      "repository_test_skip_count": 1,
+      "planner_status": "PASS",
+      "legacy_status": "PASS",
+      "required_failure_labels": []
+    }
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "legacy_execution_authoritative": true,
+    "planner_execution_authoritative": false,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "scientific_claims_changed": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  }
+}

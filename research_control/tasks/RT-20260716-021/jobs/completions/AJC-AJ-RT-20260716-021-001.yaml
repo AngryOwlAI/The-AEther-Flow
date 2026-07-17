@@ -1,0 +1,187 @@
+job_id: "AJ-RT-20260716-021-001"
+completion_id: "AJC-AJ-RT-20260716-021-001"
+task_id: "RT-20260716-021"
+decision_id: "DDR-20260716-021"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260716-021"
+status: "completed"
+created_at: "2026-07-17T02:07:49Z"
+started_at: "2026-07-17T02:07:49Z"
+completed_at: "2026-07-17T02:59:49Z"
+objective: "Implement and validate P6-T07 by converting Make and the local full validation runner into shared planner-profile wrappers while preserving legacy shadow execution compatibility and no scientific authority expansion."
+completion_summary: "Converted Make and the historical full validation runner into shared planner-profile wrappers. Five public Make profile targets now request the shared CLI; validate-project-control and the Python runner explicitly request full then delegate execution to one private legacy target. Focused parity tests and both full shadow entry points passed while legacy authority handoff-0740 and all scientific boundaries remained unchanged."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P6-T07"
+  - "research_control/design/validation_profile_policy_v1.md"
+  - "research_control/design/validation_migration_policy_v1.md"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "Makefile"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "tests/test_run_full_research_control_validation.py"
+  - "scripts/validation/cli.py"
+  - "research_control/tasks/RT-20260716-020/jobs/completions/AJC-AJ-RT-20260716-020-001.yaml"
+outputs_created:
+  - "Makefile"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "tests/test_validation_wrappers.py"
+  - "tests/test_run_full_research_control_validation.py"
+  - "research_control/tasks/RT-20260716-021/artifacts/local_wrapper_parity_report.json"
+  - "research_control/tasks/RT-20260716-021/artifacts/local_wrapper_audit.md"
+  - "research_control/tasks/RT-20260716-021/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260716-021/jobs/completions/AJC-AJ-RT-20260716-021-001.yaml"
+output_hashes:
+  makefile_sha256: "9cb4c0938cb1257f6a51cf342ff341b6598f3809c3723dd367c49ef7c45d5544"
+  runner_sha256: "1b5d0f63c037c3f22d1debe277cafa86dbd100eae4beaa288b614d47e6968deb"
+  validation_wrapper_tests_sha256: "7557db40679a8a6cf50cf6e355b6f4152f4763548a2d6b9a8a2225df8acf5277"
+  runner_compatibility_tests_sha256: "03eb4db48391eccaa7efb25fad0f64964b5d6def1e1f60335150ca3d973d5eee"
+  local_wrapper_audit_sha256: "b2c25f15317013e9888e4318b436022d10af2b8050e84f33f9b851b4b79f7e38"
+  local_wrapper_parity_report_sha256: "f935ccb9173859c69cb6e4fa736507d639ac131a29c8f96386a486355e243960"
+implementation_results:
+  plan_task_id: "P6-T07"
+  migration_epoch: "shadow_planner"
+  implementation_status: "PASS"
+  permanent_make_profile_target_count: 5
+  requested_full_profile_gate_count: 27
+  wrapper_full_profile_gate_count: 27
+  selected_gate_order_matches: true
+  independent_validation_command_dataclass_removed: true
+  independent_base_command_plan_removed: true
+  executable_command_plan_owned_locally: false
+  compatibility_projection_manifest_derived: true
+  coverage_projection_manifest_derived: true
+  make_public_compatibility_wrapper: true
+  runner_compatibility_wrapper: true
+  explicit_deprecation_status: true
+  plan_only_preserved: true
+  json_output_preserved: true
+  optional_output_file_preserved: true
+  tail_limit_preserved: true
+  include_smoke_tests_accepted_no_op: true
+  planner_exit_code_propagated: true
+  legacy_exit_code_propagated: true
+  ci_equivalent_claimed: false
+  focused_test_count: 17
+  combined_compatibility_test_count: 47
+  full_make_repository_test_count: 832
+  full_make_repository_test_skip_count: 1
+  full_runner_repository_test_count: 832
+  full_runner_repository_test_skip_count: 1
+  full_make_status: "PASS"
+  full_runner_status: "PASS"
+  legacy_execution_authoritative: true
+  planner_execution_authoritative: false
+  manifest_changed: false
+  profile_policy_changed: false
+  planner_changed: false
+  executor_changed: false
+  checkpoint_changed: false
+  CI_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | entry WARN freshness and local retrieval refreshed to PASS with 814 source objects 4053 relationships 814 semantic rows and 814 vault rows"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | validation entry point tooling tests control state and registry changes classified with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory resolver confirmed one project-system AgentJob boundary"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile full --paths --json | exit_code=0 | READY 27 selected gates manifest 7d9f04c5b06e7a5385cf7e101dbbdf4cc265f9ab1ee3a0307b2b435f5657747b legacy authority"
+  - ".venv/bin/python -m unittest tests/test_validation_wrappers.py tests/test_run_full_research_control_validation.py tests/test_validation_orchestration.py | exit_code=0 | 17 tests PASS"
+  - ".venv/bin/python -m unittest six wrapper profile checkpoint and artifact modules | exit_code=0 | 47 tests PASS"
+  - "make PYTHON=.venv/bin/python validate-project-control | initial_exit_code=2 | 832 tests ran with one expected active-transaction assertion before stable task closure"
+  - ".venv/bin/python -m unittest tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet | exit_code=0 | exact active-state regression PASS after stable closure"
+  - "make PYTHON=.venv/bin/python validate-project-control | exit_code=0 | shared full plan PASS legacy chain PASS 832 tests PASS one skip"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --output .local/p6-t07-runner-full.json --tail-chars 2000 | exit_code=0 | planner PASS legacy PASS 832 tests PASS one skip no required failures"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | governed memory and generated-surface synchronization PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | post-generation memory validation PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical warnings only"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P6-T06 PASS dependency clean starting checkpoint unique local project matching lease pair idle predecessor open guards exact relay claim and no competing writer were verified before generation consumption."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 17 focused and 47 combined wrapper compatibility tests passed and prove shared plan selection argument preservation deprecation output and exact exit propagation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Both full public entry points selected the same 27-gate full plan and completed the legacy-authoritative 832-test suite with one expected skip."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "This completion is eligible for persistence only through the governed compare-mode checkpoint which reruns final staged blockers and commits atomically or restores the entry index."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "P6-T07 changes no TeX PDF HTML Mermaid or publication source."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The governed bootstrap synchronized task registry wiki semantic and dependency derivatives and validate-only passed before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Research-control diff passed for the exact transaction with historical warnings only and no new scientific claim authority."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260716-021/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system local validation-wrapper maintenance only; no physics or derivation status changes."
+scientific_claims_changed: false
+forbidden_conclusion_summary: "This v19 task changes local project-system wrappers tests and control evidence only. It does not activate planner execution remove legacy authority establish CI equivalence change ordinary research edit canonical ontology adopt source laws promote a benchmark grant Gate Chair authority prove physics or complete a derivation."
+verdict: "v19_p6_t07_local_validation_wrappers_pass_p6_t08_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "Make and the historical runner now share one canonical full-profile selection path while compatibility arguments outputs exit codes and legacy shadow execution remain stable and explicitly bounded."
+next_recommendation: "After governed checkpoint PASS route one separately bounded P6-T08 memory-operation adapter packet."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 814
+    relationship_row_count: 4053
+    semantic_row_count: 814
+    vault_row_count: 814
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search Convert Make and the local full runner to planner wrappers --limit 10 --json"
+      query_type: "search"
+      query_text: "Convert Make and the local full runner to planner wrappers"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

@@ -4,6 +4,8 @@ MEMORY_TEST_MODULES := tests.test_memory_operations tests.test_memory_cli_modes 
 VALIDATION_PYTHON_SERIES := 3.12
 VALIDATION_REQUIREMENT_FILES := requirements.txt requirements-dev.txt
 VALIDATION_REQUIRED_DISTRIBUTIONS := PyMuPDF
+VALIDATION_PATHS ?=
+VALIDATION_DOCTOR_SCOPE ?= local_retrieval
 
 define VALIDATION_ENVIRONMENT_CHECK
 import hashlib
@@ -75,7 +77,8 @@ print(json.dumps(receipt, sort_keys=True, separators=(",", ":")))
 endef
 export VALIDATION_ENVIRONMENT_CHECK
 
-.PHONY: setup-dev validation-environment memory-sync memory-validate-core memory-doctor test-memory validate-memory validate-memory-full validate-project-control validate-html-explainers audit-documentation-surfaces
+.PHONY: setup-dev validation-environment memory-sync memory-validate-core memory-doctor test-memory validate-memory validate-memory-full validate-fast validate-affected validate-checkpoint-plan validate-full validate-doctor validate-project-control validate-project-control-legacy validate-html-explainers audit-documentation-surfaces
+.NOTPARALLEL: validate-project-control
 
 setup-dev:
 	@test -x "$(PYTHON)" || { printf '%s\n' "Missing $(PYTHON). Create the local environment with: python3 -m venv .venv"; exit 1; }
@@ -111,7 +114,25 @@ validate-memory-full: memory-sync memory-doctor
 	$(PYTHON) -m unittest discover -s tests
 	@printf '%s\n' '{"target":"validate-memory-full","status":"PASS","profile":"full-memory-compatibility"}'
 
-validate-project-control: validation-environment
+validate-fast: validation-environment
+	$(PYTHON) -m scripts.validation.cli plan --profile fast --paths $(VALIDATION_PATHS) --explain
+
+validate-affected: validation-environment
+	$(PYTHON) -m scripts.validation.cli plan --profile affected --paths $(VALIDATION_PATHS) --explain
+
+validate-checkpoint-plan: validation-environment
+	$(PYTHON) -m scripts.validation.cli plan --profile checkpoint --staged --explain
+
+validate-full: validation-environment
+	$(PYTHON) -m scripts.validation.cli plan --profile full --paths --explain
+
+validate-doctor: validation-environment
+	$(PYTHON) -m scripts.validation.cli plan --profile doctor --scope $(VALIDATION_DOCTOR_SCOPE) --explain
+
+validate-project-control: validate-full validate-project-control-legacy
+	@printf '%s\n' '{"target":"validate-project-control","status":"PASS","compatibility_wrapper":true,"deprecated":true,"planner_profile":"full","execution_authority":"legacy"}'
+
+validate-project-control-legacy: validation-environment
 	$(PYTHON) scripts/project_control/classify_project_changes.py --json
 	$(PYTHON) scripts/project_control/collect_project_improvement_signals.py --validate-emitted
 	$(PYTHON) scripts/project_control/validate_documentation_impact.py
