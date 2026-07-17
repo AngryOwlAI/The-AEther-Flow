@@ -85,6 +85,37 @@ proceeding.
    passing `--job-id` when integrating a project-system AgentJob that is not the
    active physics research task.
 
+## Validation Profile Wrapper
+
+Select validation through the shared profile planner instead of copying gate
+command chains into this skill:
+
+```zsh
+.venv/bin/python -m scripts.validation.cli plan --profile <fast|affected|full> --paths <changed-path> --explain
+.venv/bin/python -m scripts.validation.cli plan --profile checkpoint --staged --explain
+.venv/bin/python -m scripts.validation.cli plan --profile doctor --scope local_retrieval --explain
+```
+
+Use `fast` for the cheapest local edit loop, `affected` for bounded
+precheckpoint feedback, `checkpoint` only through the governed final
+state-changing transaction, `full` only for explicit exhaustive or scheduled
+coverage, and `doctor` only for local or advisory diagnostics. During the
+`shadow_planner` epoch, planner output is selection-only
+(`planner_executes_commands=false`) and legacy execution remains authoritative.
+A profile plan is not validation evidence and never replaces a human gate,
+role boundary, source inspection, or final staged checkpoint.
+
+Human intent recovery, Git inspection, classification, authority routing,
+the selected workflow's memory preflight, and canonical source inspection
+remain distinct prerequisites; do not count them as profile acceptance.
+Resolve selected obligations through the current shared executor or
+compatibility surface authorized by the AgentJob, never through a skill-local
+reconstructed command chain. Consume results under
+`research_control/design/agent_validation_output_consumption_policy_v1.md`:
+record the profile, selected gate IDs, status, compact receipt path and hash,
+counts, and tree identity; expand only the relevant failed or warning finding
+group.
+
 ## Validation-Output Consumption
 
 Follow

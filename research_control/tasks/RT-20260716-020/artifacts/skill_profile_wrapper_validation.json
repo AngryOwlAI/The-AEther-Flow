@@ -1,0 +1,79 @@
+{
+  "schema_id": "skill_profile_wrapper_validation_v1",
+  "task_id": "RT-20260716-020",
+  "job_id": "AJ-RT-20260716-020-001",
+  "plan_task_id": "P6-T06",
+  "migration_epoch": "shadow_planner",
+  "status": "PASS",
+  "skill_contract_count": 4,
+  "permanent_profiles": ["fast", "affected", "checkpoint", "full", "doctor"],
+  "shared_planner_command_count": 3,
+  "command_surface_identical": true,
+  "retired_full_chain_present": false,
+  "memory_preflight_and_canonical_inspection_preserved": true,
+  "final_staged_acceptance_checkpoint_owned": true,
+  "plan_examples": [
+    {
+      "workflow": "research",
+      "path": ".codex/skills/continue-research/SKILL.md",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 12,
+      "planner_executes_commands": false,
+      "execution_authority": "legacy",
+      "checkpoint_transaction_selected": false
+    },
+    {
+      "workflow": "project_system",
+      "path": ".codex/skills/improve-project-system/SKILL.md",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 12,
+      "planner_executes_commands": false,
+      "execution_authority": "legacy",
+      "checkpoint_transaction_selected": false
+    },
+    {
+      "workflow": "user_modified",
+      "path": ".codex/skills/user-modified-project/SKILL.md",
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_count": 12,
+      "planner_executes_commands": false,
+      "execution_authority": "legacy",
+      "checkpoint_transaction_selected": false
+    }
+  ],
+  "manifest_sha256": "7d9f04c5b06e7a5385cf7e101dbbdf4cc265f9ab1ee3a0307b2b435f5657747b",
+  "affected_blocking_shadow_comparison": {
+    "legacy_compatible_gate_count": 11,
+    "planner_gate_count": 11,
+    "status": "PASS",
+    "unexplained_mismatch_gate_ids": []
+  },
+  "doctor_blocking_gate_ids": [],
+  "doctor_checkpoint_obligation_overlap": [],
+  "full_nontransactional_blocking_missing_gate_ids": [],
+  "tests": {
+    "focused_test_count": 6,
+    "focused_status": "PASS",
+    "combined_compatibility_test_count": 34,
+    "combined_compatibility_status": "PASS"
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "legacy_execution_authoritative": true,
+    "planner_execution_authoritative": false,
+    "profile_selection_is_evidence": false,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "scientific_claims_changed": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  }
+}
