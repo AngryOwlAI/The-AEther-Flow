@@ -1,0 +1,161 @@
+job_id: "AJ-RT-20260717-009-001"
+completion_id: "AJC-AJ-RT-20260717-009-001"
+task_id: "RT-20260717-009"
+decision_id: "DDR-20260717-009"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-009"
+status: "completed"
+created_at: "2026-07-17T12:41:23Z"
+started_at: "2026-07-17T12:41:23Z"
+completed_at: "2026-07-17T12:54:31Z"
+objective: "Add isolated checkpoint fixtures for real temporary Git transitions and injected planner outcomes while retaining the frozen twelve-test compatibility shard and every blocking rollback invariant."
+completion_summary: "The checkpoint shard now retains all twelve frozen compatibility tests and adds three isolated synthetic-Git fixture tests. Actual temporary Git transitions, injected planner outcomes, exact entry-index restoration, the retained live-integration shard, and the 868-test repository suite pass with one expected skip."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P8-T05"
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - "scripts/validation/staged.py"
+  - "tests/test_research_control_checkpoint.py"
+  - "tests/test_checkpoint_validation_planner.py"
+  - "tests/test_staged_validation.py"
+outputs_created:
+  - "tests/test_research_control_checkpoint.py"
+  - "tests/fixtures/checkpoint/__init__.py"
+  - "tests/fixtures/checkpoint/scenarios.py"
+  - "research_control/tasks/RT-20260717-009/artifacts/checkpoint_test_isolation_audit.json"
+implementation_results:
+  plan_task_id: "P8-T05"
+  implementation_status: "PASS"
+  compatibility_checkpoint_tests: 12
+  isolated_fixture_tests: 3
+  focused_checkpoint_tests: 15
+  actual_temporary_git_semantics: "PASS"
+  injected_pass_fail_advisory_cache_hit_mismatch: "PASS"
+  exact_index_restoration: "PASS"
+  blocking_no_commit: "PASS"
+  ignored_path_behavior: "PASS_FAIL_CLOSED"
+  unstaged_residue_behavior: "PASS_FAIL_CLOSED"
+  source_test_inventory_changed: false
+  frozen_shard_map_changed: false
+  production_checkpoint_changed: false
+  live_repository_mutated_by_tests: false
+  live_integration_shard_retained: true
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+pre_checkpoint_receipt_correction:
+  detected_at: "2026-07-17T13:00:58Z"
+  path: "FOLDER_MAP.md"
+  status: "PASS"
+  explanation: "The governed checkpoint memory-sync generator added the authorized P8-T05 task directories to FOLDER_MAP.md. The staged documentation-impact gate correctly required this live generated derivative to be listed."
+  scope_expanded: false
+command_results:
+  - ".venv/bin/python -m py_compile tests/test_research_control_checkpoint.py tests/fixtures/checkpoint/__init__.py tests/fixtures/checkpoint/scenarios.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_checkpoint | exit_code=0 | 15 tests PASS in 1.344 seconds real 1.43 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_checkpoint_validation_planner tests.test_staged_validation | exit_code=0 | 19 tests PASS in 2.643 seconds real 2.71 seconds"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths tests/test_research_control_checkpoint.py tests/fixtures/checkpoint/__init__.py tests/fixtures/checkpoint/scenarios.py --explain | exit_code=0 | READY"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile checkpoint --paths tests/test_research_control_checkpoint.py tests/fixtures/checkpoint/__init__.py tests/fixtures/checkpoint/scenarios.py --explain | exit_code=0 | READY"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | PASS 11 legacy-compatible affected gates equal 11 planner affected gates zero unexplained mismatch"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_live_integration | exit_code=0 | 3 tests PASS in 12.041 seconds real 12.10 seconds"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | 868 tests PASS in 172.374 seconds with one expected skip real 172.59 seconds"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile full --explain | exit_code=0 | READY"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py and --check | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | PASS with two nonblocking findings"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | authorized pending final receipt validation"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-009-001 | authorized pending execution"
+  - "initial governed checkpoint attempt | blocked before commit | documentation-impact receipt omitted checkpoint-generated FOLDER_MAP.md"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P8-T04 is completed and checkpointed; generation lease project binding clean entry tree predecessor guards and the single invocation were verified before P8-T05 activation."
+      - "Memory preflight canonical plan inspection classifier resolver and emitted-signal validation passed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The checkpoint shim retains all twelve frozen compatibility tests and loads three isolated fixture cases."
+      - "Temporary repositories exercise real Git tree rename ignored-path residue and restoration semantics."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Fifteen focused checkpoint tests and nineteen existing planner and staged integration tests pass."
+      - "PASS FAIL WARN CACHE_HIT and mismatch cases preserve entry tree and HEAD and perform no commit."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "All declared pre-checkpoint gates pass and persistence is authorized only through the governed checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index and dependency-graph derivatives are regenerated from the completed source state and checked fresh."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass; any reported existing-memory findings remain nonblocking."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Research-control diff validation passes and all fixture evidence remains operational project-system evidence only."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system checkpoint-test isolation only; no physics or derivation status changes."
+scientific_claims_changed: false
+documentation_impact:
+  status: "no_update_required"
+  receipt_path: "research_control/tasks/RT-20260717-009/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet verifies checkpoint test isolation and rollback behavior only. It does not make validation status physics proof and does not change ordinary research ontology source laws benchmarks Gate Chair authority proof status physics claims or derivation status."
+verdict: "v19_p8_t05_checkpoint_test_fixture_isolation_pass_no_physics_delta"
+coherent_resolution_summary: "The focused checkpoint shard now combines twelve frozen compatibility tests with three isolated synthetic-Git fixture tests and no live repository validation."
+next_recommendation: "After governed checkpoint PASS route only P8-T06."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 814
+    relationship_row_count: 4053
+    semantic_row_count: 814
+    vault_row_count: 814
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."
+documentation_impact_id: "DI-RT-20260717-009-001"

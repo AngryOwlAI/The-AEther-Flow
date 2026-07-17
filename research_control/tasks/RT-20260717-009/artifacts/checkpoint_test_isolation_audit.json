@@ -1,0 +1,153 @@
+{
+  "schema_id": "checkpoint_test_isolation_audit_v1",
+  "status": "PASS",
+  "task_id": "RT-20260717-009",
+  "plan_task_id": "P8-T05",
+  "recommendation_ids": [
+    "V19-R34",
+    "V19-R44"
+  ],
+  "claim_boundary": {
+    "benchmark_authority": false,
+    "gate_chair_authority": false,
+    "ontology_authority": false,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "implementation": {
+    "compatibility_test_count": 12,
+    "isolated_fixture_test_count": 3,
+    "focused_checkpoint_test_count": 15,
+    "canonical_manifest_loads_per_fixture_class": 1,
+    "live_repository_validator_calls": 0,
+    "live_repository_mutations": 0,
+    "production_checkpoint_source_changed": false,
+    "staged_validation_source_changed": false,
+    "frozen_shard_map_changed": false,
+    "source_test_inventory_changed": false,
+    "temporary_git_repository_only": true,
+    "live_integration_shard_retained": true
+  },
+  "synthetic_git_coverage": {
+    "status": "PASS",
+    "actual_git_write_tree": true,
+    "actual_git_read_tree": true,
+    "actual_add": true,
+    "actual_modify": true,
+    "actual_delete": true,
+    "actual_rename": true,
+    "actual_ignored_path_failure": true,
+    "actual_unstaged_residue_failure": true,
+    "exact_entry_tree_restored": true,
+    "head_unchanged": true,
+    "commit_performed": false
+  },
+  "injected_planner_outcomes": {
+    "status": "PASS",
+    "scenarios": {
+      "pass": {
+        "planner_status": "PASS",
+        "legacy_status": "PASS",
+        "checkpoint_status": "PASS"
+      },
+      "fail": {
+        "planner_status": "FAIL",
+        "legacy_status": "FAIL",
+        "checkpoint_status": "FAIL"
+      },
+      "advisory": {
+        "planner_status": "WARN",
+        "legacy_status": "WARN",
+        "checkpoint_status": "FAIL"
+      },
+      "cache_hit": {
+        "planner_status": "CACHE_HIT",
+        "legacy_status": "CACHE_HIT",
+        "checkpoint_status": "FAIL",
+        "reason": "Shadow-epoch staged acceptance reuses no cached blocking result."
+      },
+      "mismatch": {
+        "planner_status": "PASS",
+        "legacy_status": "FAIL",
+        "checkpoint_status": "BLOCKED_CONFIGURATION",
+        "finding": "legacy_shadow_mismatch"
+      }
+    },
+    "all_scenarios_restored_entry_index": true,
+    "all_scenarios_preserved_head": true,
+    "all_scenarios_commit_performed": false
+  },
+  "performance": {
+    "audited_broad_research_control_seconds": 64.568,
+    "p8_t01_compatibility_only_checkpoint_seconds": 0.029,
+    "p8_t05_isolated_checkpoint_seconds": 1.344,
+    "existing_planner_and_staged_integration_seconds": 2.643,
+    "focused_checkpoint_feedback_below_two_seconds": true,
+    "subprocess_count": 0,
+    "output_bytes": 0,
+    "cache_hits": 0,
+    "cache_misses": 0,
+    "measurement_note": "The fixture suite invokes real Git subprocesses internally but no repository validator subprocesses. Timing is one warm local pass and is not a stable benchmark."
+  },
+  "test_inventory": {
+    "source_test_count_before": 148,
+    "source_test_count_after": 148,
+    "source_test_sha256_before": "319da5d5d388b76866b8e15054a4ea3b7f90979685393a61f72109c831bee76a",
+    "source_test_sha256_after": "319da5d5d388b76866b8e15054a4ea3b7f90979685393a61f72109c831bee76a",
+    "checkpoint_compatibility_count_before": 12,
+    "checkpoint_compatibility_count_after": 12,
+    "shard_ownership_changed": false
+  },
+  "planner_shadow_comparison": {
+    "status": "PASS",
+    "legacy_execution_authoritative": true,
+    "affected_blocking_legacy_gate_count": 11,
+    "affected_blocking_planner_gate_count": 11,
+    "unexplained_mismatch_gate_ids": []
+  },
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v19.md": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc",
+    "scripts/research_control/checkpoint_research_transaction.py": "f4be0da0308f2d93768e9816d05c0576193f51a47d767dbeda2bdb271bf4319c",
+    "scripts/validation/staged.py": "4600c5c76547bd08a214bb972c86eca57e0f3ad1a9398c975efdcd375cf329c8",
+    "tests/fixtures/checkpoint/__init__.py": "641173325fc2781ba125c293ac3fdfcc368523abb45764733c72b1b1fde92a73",
+    "tests/fixtures/checkpoint/scenarios.py": "758ca8f78155338b729da77299fad887541f2ea1414d1c406e564ec45e1559ad",
+    "tests/support/research_control_shards.py": "355726d0c0b6727134fbdd6291d47033e19c01f7ccb57aa78ad4251ad4fc5b58",
+    "tests/test_checkpoint_validation_planner.py": "f0a4e5c42773a963ff3f2f436d02a4d2a0124845d5a48d0a71081c5e43c627d1",
+    "tests/test_research_control.py": "adb5880f67e8008b0270426cb2834ef0324b22aebdad4b9a55e0d76f132bec22",
+    "tests/test_research_control_checkpoint.py": "1662cf142ca00dd4755aaed9e7aab310daf26d9b1bcfe819350df0e4f69c59f3",
+    "tests/test_staged_validation.py": "ed1f4aab200722acfe3f3084d5d8b351cddd89d465aa9ec0e46623320fc258c2"
+  },
+  "ordinary_research_preservation": {
+    "handoff_id": "handoff-0740",
+    "handoff_yaml_sha256": "5be1f16f476c1f03db0baf3dcfec8ffc1947ff61c5d5d3ff43012239ce5c0c1d",
+    "handoff_markdown_sha256": "2d2bb5936181f7040357c1074c06e124904b28cd84fdb6b3138be59055d02402",
+    "program_state_sha256": "1a28fc71d3076347be4221e4d30b4bf962e5f752fd9d90f099d916dd89a4706c",
+    "ordinary_research_state_changed": false
+  },
+  "validation": {
+    "py_compile": "PASS",
+    "checkpoint_shard": "PASS",
+    "checkpoint_shard_tests": 15,
+    "planner_and_staged_integration": "PASS",
+    "planner_and_staged_integration_tests": 19,
+    "live_integration": "PASS",
+    "live_integration_tests": 3,
+    "full_repository_tests": "PASS",
+    "full_repository_test_count": 868,
+    "full_repository_expected_skips": 1,
+    "planner_shadow_comparison": "PASS",
+    "research_control_diff": "PASS",
+    "git_diff_check": "PASS",
+    "checkpoint_transaction": "PENDING"
+  },
+  "raw_command_outputs": {
+    "baseline_checkpoint_shard": "P8-T01 receipt: Ran 12 tests in 0.029 seconds; PASS",
+    "checkpoint_shard": "Ran 15 tests in 1.344 seconds; OK; real 1.43 seconds",
+    "planner_and_staged_integration": "Ran 19 tests in 2.643 seconds; OK; real 2.71 seconds",
+    "first_targeted_attempt": "Ran 15 tests with one expected-fixture mismatch; actual ignored-only git add failed closed with git_command_failed",
+    "live_integration_pre_completion": "Three tests executed; two PASS and the live static validator correctly reported the active job completion was not yet registered",
+    "live_integration_post_completion_registration": "Ran 3 tests in 12.041 seconds; OK; real 12.10 seconds",
+    "full_repository_tests": "Ran 868 tests in 172.374 seconds; OK with one expected skip; real 172.59 seconds"
+  }
+}
