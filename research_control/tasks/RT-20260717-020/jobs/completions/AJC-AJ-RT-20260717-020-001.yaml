@@ -1,0 +1,283 @@
+job_id: "AJ-RT-20260717-020-001"
+completion_id: "AJC-AJ-RT-20260717-020-001"
+task_id: "RT-20260717-020"
+decision_id: "DDR-20260717-020"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-020"
+status: "completed"
+created_at: "2026-07-17T21:19:27Z"
+started_at: "2026-07-17T21:19:27Z"
+completed_at: "2026-07-17T21:30:41Z"
+objective: "Implement one lazy immutable tree-bound repository snapshot with declared components deterministic views stale-state rejection and read-count instrumentation."
+completion_summary: "Added one lazy parse-once repository snapshot contract for declared CSV registries strict YAML program state handoffs job completions Git changed paths and source hashes. Working and staged states are identity-bound immutable and instrumented; production gate adapters and cache behavior remain deferred."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P10-T01"
+  - "scripts/research_control/validate_research_control.py"
+  - ".codex/skills/project-memory-system/scripts/memory_operations.py"
+  - "scripts/research_control/render_dependency_graph.py"
+  - "scripts/research_control/dependency_graph_model.py"
+  - "scripts/research_control/report_physics_progress_metrics.py"
+  - "research_control/tasks/RT-20260717-019/jobs/completions/AJC-AJ-RT-20260717-019-001.yaml"
+outputs_created:
+  - "scripts/validation/snapshot.py"
+  - "tests/test_repository_snapshot.py"
+  - "research_control/tasks/RT-20260717-020/artifacts/repository_snapshot_equivalence.json"
+  - "research_control/tasks/RT-20260717-020/artifacts/repository_snapshot_validation_receipt.json"
+  - "research_control/tasks/RT-20260717-020/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-020/jobs/completions/AJC-AJ-RT-20260717-020-001.yaml"
+outputs_updated: []
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P10-T01"
+  recommendation_ids:
+    - "V19-R29"
+    - "V19-R43"
+  migration_epoch: "shadow_planner"
+  implementation_status: "completed"
+  downstream_tasks_not_implemented:
+    - "P10-T02 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p10_t01_shared_repository_snapshot"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R29"
+    - "V19-R43"
+  implements_plan_task_id: "P10-T01"
+  implementation_status: "PASS"
+  coverage_effect: "shared lazy immutable exact-state repository input contract with declared components and instrumentation"
+physics_progress_status:
+  status: "project_system_repository_snapshot_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P10-T01 changes validation input handling only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Snapshot identity parse counters and synthetic finding equivalence are operational evidence only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+repository_snapshot:
+  status: "PASS"
+  module_path: "scripts/validation/snapshot.py"
+  test_path: "tests/test_repository_snapshot.py"
+  equivalence_receipt: "research_control/tasks/RT-20260717-020/artifacts/repository_snapshot_equivalence.json"
+  validation_receipt: "research_control/tasks/RT-20260717-020/artifacts/repository_snapshot_validation_receipt.json"
+  supported_scopes:
+    - "working"
+    - "staged"
+  lazy_components:
+    - "CSV registries"
+    - "strict YAML"
+    - "program state"
+    - "handoffs"
+    - "job completions"
+    - "Git changed paths"
+    - "source hashes"
+  identity_fields:
+    - "repository root"
+    - "Git common directory"
+    - "scope"
+    - "base ref and commit"
+    - "HEAD commit"
+    - "staged tree or working fingerprint"
+    - "configuration fingerprint"
+  instrumentation_fields:
+    - "file reads"
+    - "CSV parses"
+    - "YAML parses"
+    - "hash operations"
+    - "Git commands"
+    - "component loads"
+    - "cache hits"
+    - "identity checks"
+  fixture_consumer_count: "3"
+  direct_file_reads: "6"
+  shared_file_reads: "2"
+  direct_csv_parses: "6"
+  shared_csv_parses: "2"
+  finding_mismatch_count: "0"
+  production_gate_adapters_changed: false
+  exact_tree_cache_implemented: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+checkpoint_receipt_correction:
+  corrected_at: "2026-07-17T21:48:38Z"
+  path: "research_control/tasks/RT-20260717-020/documentation_impact.yaml"
+  generated_derivative: "FOLDER_MAP.md"
+  status: "PASS"
+  first_attempt_committed: false
+  explanation: "The first checkpoint write-only memory sync changed the authorized FOLDER_MAP.md derivative. The restored transaction now lists that live derivative explicitly before retry."
+validation_evidence:
+  focused_snapshot_status: "PASS"
+  focused_test_count: "13"
+  focused_failure_count: "0"
+  focused_error_count: "0"
+  focused_duration_seconds: "6.317"
+  immutability_status: "PASS"
+  lazy_loading_status: "PASS"
+  stale_tree_rejection_status: "PASS"
+  strict_parse_error_status: "PASS"
+  deterministic_ordering_status: "PASS"
+  finding_equivalence_status: "PASS"
+  parse_count_reduction_status: "PASS"
+  affected_profile_status: "READY"
+  affected_selected_gate_count: "13"
+  execution_authority: "legacy"
+  legacy_planner_shadow_comparison:
+    status: "PASS"
+    legacy_compatible_blocking_gate_count: "11"
+    planner_blocking_gate_count: "11"
+    unexplained_mismatch_count: "0"
+  first_repository_suite:
+    test_count: "916"
+    skip_count: "1"
+    failure_count: "0"
+    error_count: "1"
+    duration_seconds: "117.532"
+    status: "ACTIVE_LIFECYCLE_FINDING"
+    explanation: "The only error loaded the intentionally blank completion_path of this still-active AgentJob; all other tests completed without a snapshot regression."
+  stable_completed_state_repository_suite:
+    test_count: "916"
+    skip_count: "1"
+    failure_count: "0"
+    error_count: "0"
+    duration_seconds: "118.170"
+    status: "PASS"
+  post_review_repository_suite:
+    test_count: "917"
+    skip_count: "1"
+    failure_count: "0"
+    error_count: "0"
+    duration_seconds: "121.477"
+    status: "PASS"
+    review_correction: "Rejected mid-read bytes are cached only after the post-read freshness check succeeds."
+command_results:
+  - ".venv/bin/python -m py_compile scripts/validation/snapshot.py tests/test_repository_snapshot.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_repository_snapshot | exit_code=0 | 13 tests PASS including rejected-midread cache safety in 6.317 seconds"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths scripts/validation/snapshot.py tests/test_repository_snapshot.py --json | exit_code=0 | READY with 13 selected gates"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy-compatible blocking gates equal 11 planner gates with zero unexplained mismatch"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | documentation impact required with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory resolver preserved the explicit P10-T01 AgentJob boundary"
+  - ".venv/bin/python -m unittest discover -s tests | first_exit_code=1 | 916 tests one expected skip and one active-AgentJob blank-completion-path lifecycle error"
+  - ".venv/bin/python -m unittest -v tests.test_minimum_physics_payload_validator.MinimumPhysicsPayloadValidatorTests.test_live_opt_in_scan_does_not_reclassify_historical_tasks | exit_code=0 | lifecycle regression PASS after completion record registration"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state 916 tests PASS with one expected skip in 118.170 seconds"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | post-review 917 tests PASS with one expected skip in 121.477 seconds"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | task index CSV Markdown and wiki derivative fresh"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json ... --markdown ... --dot ... and --check | exit_code=0 | dependency graph JSON Markdown and DOT fresh"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | PASS with two nonblocking existing-memory findings"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-020-001 | first_exit_code=1 | stopped before commit after authorized FOLDER_MAP.md generation and restored the index for receipt repair"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 46 lease parity project binding clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "P9-T07 completion canonical-plan hash memory preflight classifier resolver and no competing signal were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Thirteen synthetic-repository tests cover all declared components both Git scopes immutability staleness strict parsing deterministic order source metadata and rejected-midread cache safety."
+      - "Three named consumer fixtures preserve findings while reducing six direct reads and parses to two shared reads and parses."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The affected profile is READY and the legacy planner shadow comparison has zero unexplained mismatch."
+      - "The post-review repository suite passes all 917 tests with one expected skip after the cache-safety correction."
+      - "Task-index dependency-graph memory documentation-impact and research-control generated-state checks pass."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "Persistence remains authorized only through the governed checkpoint after final generated-state validation."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked-memory synchronization and validate-only remain required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The packet makes operational snapshot claims only and changes no scientific claim source."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-020/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet defines and tests an internal validation snapshot only. It does not integrate production gate adapters implement the exact-tree cache change validator findings alter planner checkpoint or CI authority supersede ordinary research modify canonical ontology derive source laws matter coupling or Einstein equations promote a benchmark issue a Gate Chair verdict prove a theorem or complete the derivation."
+verdict: "v19_p10_t01_shared_repository_snapshot_pass_p10_t02_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "One shared tree-bound parse-once contract now supplies immutable declared repository inputs and rejects stale reuse while preserving synthetic consumer findings."
+selected_next_route:
+  route_id: "v19_p10_t02_exact_tree_cache_contract"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P10"
+  plan_task_id: "P10-T02"
+  task_name: "Define the conservative exact-tree cache contract"
+  role_family: "project-control-maintainer@0.2.0"
+  task_type: "validation_cache_contract"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system exact-tree cache contract only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After stable completed-state validation and governed checkpoint PASS route one separately bounded P10-T02 packet; do not execute it in P10-T01."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "816"
+    relationship_row_count: "4062"
+    semantic_row_count: "816"
+    vault_row_count: "816"
+    local_cache_only_warning_count: "0"
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"shared immutable repository snapshot\" --limit 10 --json"
+      query_type: "search"
+      query_text: "shared immutable repository snapshot"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Generated wiki Obsidian SQLite semantic and .local retrieval outputs are navigation layers only and are not authority."

@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `ac64812adca1fde4fbcc641ec4816a4f689489434d5ec28052c4c121de9ef2b0`
-- Generated-at source timestamp: `2026-07-17T20:31:48Z`
-- Row count: `954`
+- Source fingerprint: `7ecc095efcb7a222aacbb3318b5df022d1f3eaffefdd37f87b5aa8c9da462931`
+- Generated-at source timestamp: `2026-07-17T21:19:27Z`
+- Row count: `955`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260717-020|RT-20260717-019|2026-07-17T21:19:27Z|2026-07-17T21:30:41Z|shared_repository_snapshot|completed|none|Project-system validation input sharing only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|2|After governed checkpoint PASS route one separately bounded P10-T02 exact-tree-cache-contract packet.|PASS|research_control/tasks/RT-20260717-020/jobs/completions/AJC-AJ-RT-20260717-020-001.yaml|
 |RT-20260717-019|RT-20260717-018|2026-07-17T20:31:48Z|2026-07-17T20:44:10Z|local_retrieval_doctor|completed|none|Project-system local-retrieval diagnostic separation only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|2|After governed checkpoint PASS route one separately bounded P10-T01 shared-repository-snapshot packet.|PASS|research_control/tasks/RT-20260717-019/jobs/completions/AJC-AJ-RT-20260717-019-001.yaml|
 |RT-20260717-018|RT-20260717-017|2026-07-17T19:59:30Z|2026-07-17T20:10:52Z|obsidian_test_fixture_minimization|completed|none|Project-system Obsidian and SQLite test fixture minimization only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|2|After governed checkpoint PASS route one separately bounded P9-T07 local-retrieval doctor-profile packet.|PASS|research_control/tasks/RT-20260717-018/jobs/completions/AJC-AJ-RT-20260717-018-001.yaml|
 |RT-20260717-017|RT-20260717-016|2026-07-17T19:13:26Z|2026-07-17T19:33:37Z|memory_test_fixture_minimization|completed|none|Project-system memory-test fixture minimization only; no derivation milestone is advanced.|memory-system-maintainer@0.2.0|false|false|2|After governed checkpoint PASS route one separately bounded P9-T06 Obsidian and SQLite test-fixture minimization packet.|PASS|research_control/tasks/RT-20260717-017/jobs/completions/AJC-AJ-RT-20260717-017-001.yaml|

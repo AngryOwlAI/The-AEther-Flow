@@ -1,0 +1,58 @@
+{
+  "schema_id": "repository_snapshot_equivalence_v1",
+  "task_id": "RT-20260717-020",
+  "plan_task_id": "P10-T01",
+  "status": "PASS",
+  "scope": "synthetic_repository_consumer_equivalence",
+  "consumer_ids": [
+    "research_control",
+    "dependency_graph",
+    "physics_metrics"
+  ],
+  "source_inputs": [
+    "registries/AGENT_JOB_REGISTRY.csv",
+    "registries/RESEARCH_TASK_REGISTRY.csv"
+  ],
+  "finding_equivalence": {
+    "status": "PASS",
+    "consumer_count": 3,
+    "direct_results_equal_shared_results": true,
+    "unexplained_mismatch_count": 0
+  },
+  "instrumentation": {
+    "direct_file_reads": 6,
+    "direct_csv_parses": 6,
+    "shared_file_reads": 2,
+    "shared_csv_parses": 2,
+    "shared_component_loads": 2,
+    "file_read_reduction": 4,
+    "csv_parse_reduction": 4,
+    "reduction_percent": 66.6667
+  },
+  "invariants": {
+    "declared_components_only": true,
+    "deeply_immutable_views": true,
+    "deterministic_iteration": true,
+    "working_tree_staleness_rejected": true,
+    "untracked_content_staleness_rejected": true,
+    "rejected_midread_content_not_cached": true,
+    "staged_tree_reads_index": true,
+    "staged_tree_staleness_rejected": true,
+    "strict_csv_errors_preserved": true,
+    "strict_yaml_errors_preserved": true,
+    "configuration_bound_identity": true,
+    "source_hashes_counted": true
+  },
+  "production_integration": {
+    "status": "DEFERRED_BY_PLAN_SCOPE",
+    "gate_adapters_changed": false,
+    "finding_semantics_changed": false,
+    "note": "P10-T01 defines and tests the shared contract in the two plan-named source files. Consumer adapter changes require a later bounded task."
+  },
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v19.md": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc",
+    "scripts/validation/snapshot.py": "fb9a859dca5ba9b7183b29f37d8791611639551d90ba730fd73fb94fa793fe04",
+    "tests/test_repository_snapshot.py": "d9915c08c15451175b52c0212cb5150d92b5da229ff75e3df7bf25be62641c98"
+  },
+  "no_physics_authority": true
+}

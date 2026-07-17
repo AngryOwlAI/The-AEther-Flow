@@ -1,0 +1,184 @@
+{
+  "schema_id": "repository_snapshot_validation_receipt_v1",
+  "task_id": "RT-20260717-020",
+  "plan_task_id": "P10-T01",
+  "status": "PASS",
+  "gate_ids": [
+    "research_control_diff",
+    "dependency_graph_freshness",
+    "physics_progress_metrics"
+  ],
+  "focused_contract": {
+    "status": "PASS",
+    "test_count": 13,
+    "failure_count": 0,
+    "error_count": 0,
+    "duration_seconds": 6.317,
+    "working_and_staged_identity_covered": true,
+    "strict_parse_failures_covered": true,
+    "finding_equivalence_status": "PASS",
+    "unexplained_mismatch_count": 0
+  },
+  "parse_count_evidence": {
+    "consumer_count": 3,
+    "direct_file_reads": 6,
+    "direct_csv_parses": 6,
+    "shared_file_reads": 2,
+    "shared_csv_parses": 2,
+    "reduction_percent": 66.6667
+  },
+  "affected_profile": {
+    "status": "READY",
+    "execution_authority": "legacy",
+    "selected_gate_count": 13,
+    "manifest_sha256": "83f4652af965272147c99202b4a0c2f11850d7bdb45c44dcca8eaa77a2d24c2a"
+  },
+  "legacy_planner_shadow_comparison": {
+    "status": "PASS",
+    "legacy_compatible_blocking_gate_count": 11,
+    "planner_blocking_gate_count": 11,
+    "unexplained_mismatch_count": 0
+  },
+  "first_repository_suite": {
+    "status": "ACTIVE_LIFECYCLE_FINDING",
+    "test_count": 916,
+    "skip_count": 1,
+    "failure_count": 0,
+    "error_count": 1,
+    "duration_seconds": 117.532,
+    "error_test": "test_live_opt_in_scan_does_not_reclassify_historical_tasks",
+    "explanation": "The live test encountered the intentionally blank completion_path of the still-active AgentJob. All other tests completed without a snapshot regression; the suite is rerun after lifecycle closure."
+  },
+  "stable_completed_state_repository_suite": {
+    "status": "PASS",
+    "test_count": 916,
+    "skip_count": 1,
+    "failure_count": 0,
+    "error_count": 0,
+    "duration_seconds": 118.17
+  },
+  "post_review_repository_suite": {
+    "status": "PASS",
+    "test_count": 917,
+    "skip_count": 1,
+    "failure_count": 0,
+    "error_count": 0,
+    "duration_seconds": 121.477,
+    "review_correction": "Rejected mid-read bytes are cached only after the post-read freshness check succeeds."
+  },
+  "generated_state": {
+    "status": "PASS",
+    "task_index_status": "PASS",
+    "dependency_graph_status": "PASS",
+    "memory_validate_only_status": "PASS",
+    "documentation_impact_status": "PASS",
+    "research_control_diff_status": "PASS",
+    "self_reference_guard": "Generated task-index and dependency-graph hashes are intentionally excluded because those derivatives incorporate this task receipt. Stable source hashes remain recorded below."
+  },
+  "checkpoint_repair": {
+    "status": "REPAIRED_BEFORE_COMMIT",
+    "first_attempt_committed": false,
+    "first_attempt_staged": false,
+    "generated_path": "FOLDER_MAP.md",
+    "finding": "The checkpoint write-only memory sync changed an authorized generated derivative that was not yet listed in documentation_impact.yaml.",
+    "repair": "List FOLDER_MAP.md in changed_paths and generated_derivatives, refresh dependent artifacts, and retry the same bounded transaction."
+  },
+  "commands": [
+    {
+      "command": ".venv/bin/python -m py_compile scripts/validation/snapshot.py tests/test_repository_snapshot.py",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_repository_snapshot",
+      "duration_seconds": 6.317,
+      "exit_code": 0,
+      "result": "13 tests PASS including rejected-midread cache safety"
+    },
+    {
+      "command": ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths scripts/validation/snapshot.py tests/test_repository_snapshot.py --json",
+      "exit_code": 0,
+      "result": "READY with 13 selected gates under legacy execution authority"
+    },
+    {
+      "command": ".venv/bin/python scripts/validation/profiles.py audit --json",
+      "exit_code": 0,
+      "result": "PASS with 11 legacy-compatible blocking gates equal to 11 planner gates"
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "duration_seconds": 117.532,
+      "exit_code": 1,
+      "result": "916 tests with one expected skip and one active-AgentJob blank-completion-path lifecycle error"
+    },
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_minimum_physics_payload_validator.MinimumPhysicsPayloadValidatorTests.test_live_opt_in_scan_does_not_reclassify_historical_tasks",
+      "duration_seconds": 0.363,
+      "exit_code": 0,
+      "result": "1 live completion-path regression test PASS after lifecycle closure"
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "duration_seconds": 118.17,
+      "exit_code": 0,
+      "result": "916 tests PASS with one expected skip in stable completed state"
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "duration_seconds": 121.477,
+      "exit_code": 0,
+      "result": "917 tests PASS with one expected skip after cache-safety review correction"
+    },
+    {
+      "command": ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/bin/python scripts/research_control/render_task_index.py --write and --check",
+      "exit_code": 0,
+      "result": "task index CSV Markdown and wiki derivative fresh"
+    },
+    {
+      "command": ".venv/bin/python scripts/research_control/render_dependency_graph.py --json ... --markdown ... --dot ... and --check",
+      "exit_code": 0,
+      "result": "dependency graph JSON Markdown and DOT fresh"
+    },
+    {
+      "command": ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only",
+      "exit_code": 0,
+      "result": "PASS with two nonblocking existing-memory findings"
+    },
+    {
+      "command": ".venv/bin/python scripts/project_control/validate_documentation_impact.py",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-020-001",
+      "exit_code": 1,
+      "result": "stopped before commit after write-only memory sync changed authorized FOLDER_MAP.md; index restored for receipt repair"
+    }
+  ],
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v19.md": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc",
+    "scripts/validation/snapshot.py": "fb9a859dca5ba9b7183b29f37d8791611639551d90ba730fd73fb94fa793fe04",
+    "tests/test_repository_snapshot.py": "d9915c08c15451175b52c0212cb5150d92b5da229ff75e3df7bf25be62641c98"
+  },
+  "production_gate_adapters_changed": false,
+  "cache_implemented": false,
+  "scientific_claims_changed": false,
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "no_physics_authority": true
+}

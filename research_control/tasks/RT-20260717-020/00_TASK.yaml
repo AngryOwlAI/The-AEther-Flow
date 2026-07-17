@@ -1,0 +1,45 @@
+task_id: "RT-20260717-020"
+task_type: "shared_repository_snapshot"
+status: "completed"
+created_at: "2026-07-17T21:19:27Z"
+updated_at: "2026-07-17T21:30:41Z"
+closed_at: "2026-07-17T21:30:41Z"
+parent_task_id: "RT-20260717-019"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260717-020"
+current_job_id: "AJ-RT-20260717-020-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-020"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached dependency-ready P10-T01 after the governed P9-T07 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T01"
+  plan_task_name: "Implement the shared immutable repository snapshot"
+  recommendation_ids:
+    - "V19-R29"
+    - "V19-R43"
+objective: "Implement one lazy immutable tree-bound repository snapshot with declared components deterministic views stale-state rejection and read-count instrumentation."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validation input sharing only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p10_t01_shared_repository_snapshot_pass_p10_t02_dependency_ready_after_checkpoint_no_physics_delta"
+claim_boundary_id: "CB-V19-P10-T01-SHARED-REPOSITORY-SNAPSHOT-001"
+claim_boundary:
+  allowed_scope: "Shared snapshot module focused tests task evidence registry rows and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260717-020/artifacts/repository_snapshot_equivalence.json"
+  - "research_control/tasks/RT-20260717-020/artifacts/repository_snapshot_validation_receipt.json"
+next_recommended_action: "After governed checkpoint PASS route one separately bounded P10-T02 exact-tree-cache-contract packet."
+documentation_impact_id: "DI-RT-20260717-020-001"
+completion_id: "AJC-AJ-RT-20260717-020-001"
+notes: "P10-T01 adds the shared snapshot contract without integrating cache behavior changing gate findings or changing any scientific authority."
