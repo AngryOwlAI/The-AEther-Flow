@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import hashlib
 import json
 import re
@@ -19,7 +18,11 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
-from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
+from dependency_graph_model import (  # noqa: E402
+    GraphInputSnapshot,
+    GraphInstrumentation,
+    load_graph_input_snapshot,
+)
 
 
 SCHEMA_ID = "research_dependency_graph_v1"
@@ -175,34 +178,6 @@ class GraphError(RuntimeError):
 
 def repo_path(path_text: str) -> Path:
     return REPO_ROOT / path_text
-
-
-def rel_path(path: Path) -> str:
-    return path.relative_to(REPO_ROOT).as_posix()
-
-
-def file_hash(path: Path) -> str:
-    if not path.exists() or not path.is_file():
-        return ""
-    return hashlib.sha256(path.read_bytes()).hexdigest()
-
-
-def read_csv_rows(path_text: str) -> list[dict[str, str]]:
-    path = repo_path(path_text)
-    if not path.exists():
-        return []
-    with path.open(newline="", encoding="utf-8") as handle:
-        return [{key: value or "" for key, value in row.items()} for row in csv.DictReader(handle)]
-
-
-def load_control_yaml(path_text: str) -> dict[str, Any]:
-    path = repo_path(path_text)
-    if not path.exists():
-        return {}
-    try:
-        return load_yaml(path)
-    except StrictYamlError:
-        return {}
 
 
 def split_semicolon(value: str) -> list[str]:
@@ -382,7 +357,8 @@ def edge_id(source_id: str, edge_class: str, target_id: str, source_field: str) 
 
 
 class GraphBuilder:
-    def __init__(self) -> None:
+    def __init__(self, snapshot: GraphInputSnapshot) -> None:
+        self.snapshot = snapshot
         self.sources: dict[str, dict[str, str]] = {}
         self.nodes: dict[str, dict[str, Any]] = {}
         self.edges: dict[str, dict[str, Any]] = {}
@@ -400,9 +376,8 @@ class GraphBuilder:
     ) -> None:
         if not path_text:
             return
-        path = repo_path(path_text)
         if not source_hash:
-            source_hash = file_hash(path)
+            source_hash = self.snapshot.source_hash(path_text)
         if path_text in self.sources:
             if registry_object_id and not self.sources[path_text].get("registry_object_id"):
                 self.sources[path_text]["registry_object_id"] = registry_object_id
@@ -624,16 +599,19 @@ class GraphBuilder:
         }
 
 
-def add_registry_sources(builder: GraphBuilder) -> dict[str, list[dict[str, str]]]:
+def add_registry_sources(
+    builder: GraphBuilder,
+    snapshot: GraphInputSnapshot,
+) -> dict[str, list[dict[str, str]]]:
     registries: dict[str, list[dict[str, str]]] = {}
     for name, source_kind in REGISTRY_SPECS.items():
         path_text = f"registries/{name}"
         builder.add_source(path_text, source_kind)
-        rows = read_csv_rows(path_text)
+        rows = snapshot.csv_rows(path_text)
         builder.note_timestamps(rows)
         registries[name] = rows
     builder.add_source("research_control/program_state.yaml", "program_state")
-    builder.note_timestamps(load_control_yaml("research_control/program_state.yaml"))
+    builder.note_timestamps(snapshot.yaml_payload("research_control/program_state.yaml"))
     return registries
 
 
@@ -1340,12 +1318,16 @@ def add_completion_payloads(
         )
 
 
-def add_completions(builder: GraphBuilder, jobs_by_id: dict[str, dict[str, str]]) -> None:
+def add_completions(
+    builder: GraphBuilder,
+    jobs_by_id: dict[str, dict[str, str]],
+    snapshot: GraphInputSnapshot,
+) -> None:
     for job_id, row in sorted(jobs_by_id.items()):
         completion_path = row.get("completion_path", "")
         if not completion_path:
             continue
-        completion = load_control_yaml(completion_path)
+        completion = snapshot.yaml_payload(completion_path)
         if not completion:
             builder.warnings.append(f"Skipped unreadable or empty completion: {completion_path}")
             continue
@@ -1354,23 +1336,19 @@ def add_completions(builder: GraphBuilder, jobs_by_id: dict[str, dict[str, str]]
         add_completion_payloads(builder, completion_path, completion, row)
 
 
-def handoff_number(path: Path) -> int:
-    match = re.fullmatch(r"handoff-(\d{4})\.yaml", path.name)
-    return int(match.group(1)) if match else -1
-
-
-def add_handoffs(builder: GraphBuilder) -> dict[str, Any]:
+def add_handoffs(
+    builder: GraphBuilder,
+    snapshot: GraphInputSnapshot,
+) -> dict[str, Any]:
     latest: dict[str, Any] = {}
-    handoff_dir = REPO_ROOT / "research_control" / "handoffs"
-    for path in sorted(handoff_dir.glob("handoff-*.yaml"), key=handoff_number):
-        path_text = rel_path(path)
-        data = load_control_yaml(path_text)
+    for path_text in snapshot.handoff_paths:
+        data = snapshot.yaml_payload(path_text)
         if not data:
             builder.warnings.append(f"Skipped unreadable handoff: {path_text}")
             continue
         builder.add_source(path_text, "handoff_yaml")
         builder.note_timestamps(data)
-        handoff_id = string_value(data.get("handoff_id")) or path.stem
+        handoff_id = string_value(data.get("handoff_id")) or Path(path_text).stem
         node_id = f"handoff:{handoff_id}"
         builder.add_node(
             node_id,
@@ -1464,44 +1442,60 @@ def add_handoffs(builder: GraphBuilder) -> dict[str, Any]:
     return latest
 
 
-def build_graph(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
-    global REPO_ROOT
-    previous_root = REPO_ROOT
-    REPO_ROOT = repo_root
-    try:
-        builder = GraphBuilder()
-        registries = add_registry_sources(builder)
-        add_ledger(builder, registries["DISTANCE_TO_GR_LEDGER.csv"])
-        add_tasks(builder, registries["RESEARCH_TASK_REGISTRY.csv"])
-        jobs_by_id = add_jobs(builder, registries["AGENT_JOB_REGISTRY.csv"])
-        add_claim_boundaries(builder, registries["CLAIM_BOUNDARY_REGISTRY.csv"])
-        add_decisions(builder, registries["DIRECTOR_DECISION_REGISTRY.csv"])
-        add_role_executions(builder, registries["ROLE_EXECUTION_REGISTRY.csv"])
-        add_source_registry_artifacts(builder, registries["TEX_SOURCE_REGISTRY.csv"], "TEX_SOURCE_REGISTRY.csv")
-        add_source_registry_artifacts(
-            builder,
-            registries["MARKDOWN_SOURCE_REGISTRY.csv"],
-            "MARKDOWN_SOURCE_REGISTRY.csv",
+def build_graph(
+    repo_root: Path = REPO_ROOT,
+    *,
+    snapshot: GraphInputSnapshot | None = None,
+    instrumentation: GraphInstrumentation | None = None,
+) -> dict[str, Any]:
+    snapshot = snapshot or load_graph_input_snapshot(
+        repo_root,
+        registry_paths=(f"registries/{name}" for name in REGISTRY_SPECS),
+        instrumentation=instrumentation,
+    )
+    if snapshot.repo_root != repo_root.resolve():
+        raise GraphError(
+            f"snapshot root {snapshot.repo_root} does not match requested root {repo_root.resolve()}"
         )
-        add_completions(builder, jobs_by_id)
-        latest_handoff = add_handoffs(builder)
-        graph = builder.graph()
-        graph["route_continuity"] = {
-            "program_state_path": "research_control/program_state.yaml",
-            "active_task_id": string_value(load_control_yaml("research_control/program_state.yaml").get("active_task_id")),
-            "latest_handoff": latest_handoff,
-            "authority_note": AUTHORITY_NOTICE,
-        }
-        return graph
-    finally:
-        REPO_ROOT = previous_root
+    if instrumentation is not None:
+        instrumentation.record_graph_build()
+    builder = GraphBuilder(snapshot)
+    registries = add_registry_sources(builder, snapshot)
+    add_ledger(builder, registries["DISTANCE_TO_GR_LEDGER.csv"])
+    add_tasks(builder, registries["RESEARCH_TASK_REGISTRY.csv"])
+    jobs_by_id = add_jobs(builder, registries["AGENT_JOB_REGISTRY.csv"])
+    add_claim_boundaries(builder, registries["CLAIM_BOUNDARY_REGISTRY.csv"])
+    add_decisions(builder, registries["DIRECTOR_DECISION_REGISTRY.csv"])
+    add_role_executions(builder, registries["ROLE_EXECUTION_REGISTRY.csv"])
+    add_source_registry_artifacts(builder, registries["TEX_SOURCE_REGISTRY.csv"], "TEX_SOURCE_REGISTRY.csv")
+    add_source_registry_artifacts(
+        builder,
+        registries["MARKDOWN_SOURCE_REGISTRY.csv"],
+        "MARKDOWN_SOURCE_REGISTRY.csv",
+    )
+    add_completions(builder, jobs_by_id, snapshot)
+    latest_handoff = add_handoffs(builder, snapshot)
+    graph = builder.graph()
+    program_state = snapshot.yaml_payload("research_control/program_state.yaml")
+    graph["route_continuity"] = {
+        "program_state_path": "research_control/program_state.yaml",
+        "active_task_id": string_value(program_state.get("active_task_id")),
+        "latest_handoff": latest_handoff,
+        "authority_note": AUTHORITY_NOTICE,
+    }
+    return graph
 
 
 def markdown_escape(value: Any) -> str:
     return string_value(value).replace("|", "\\|").replace("\n", " ")
 
 
-def render_markdown(graph: dict[str, Any]) -> str:
+def render_markdown(
+    graph: dict[str, Any],
+    instrumentation: GraphInstrumentation | None = None,
+) -> str:
+    if instrumentation is not None:
+        instrumentation.record_render("markdown")
     nodes = graph["nodes"]
     edges = graph["edges"]
     source_counts = Counter(source["source_kind"] for source in graph["sources"])
@@ -1626,7 +1620,12 @@ def dot_quote(value: Any) -> str:
     return json.dumps(string_value(value), ensure_ascii=False)
 
 
-def render_dot(graph: dict[str, Any]) -> str:
+def render_dot(
+    graph: dict[str, Any],
+    instrumentation: GraphInstrumentation | None = None,
+) -> str:
+    if instrumentation is not None:
+        instrumentation.record_render("dot")
     lines = [
         "digraph research_dependency_graph {",
         "  graph [label=\"navigational_support_only\", labelloc=\"t\"];",
@@ -1650,7 +1649,12 @@ def render_dot(graph: dict[str, Any]) -> str:
     return "\n".join(lines) + "\n"
 
 
-def render_json(graph: dict[str, Any]) -> str:
+def render_json(
+    graph: dict[str, Any],
+    instrumentation: GraphInstrumentation | None = None,
+) -> str:
+    if instrumentation is not None:
+        instrumentation.record_render("json")
     return json.dumps(graph, indent=2, sort_keys=True) + "\n"
 
 
@@ -1664,10 +1668,14 @@ def write_text(path_text: str, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
-def write_json(path_text: str, graph: dict[str, Any]) -> None:
+def write_json(
+    path_text: str,
+    graph: dict[str, Any],
+    instrumentation: GraphInstrumentation | None = None,
+) -> None:
     path = repo_path(path_text)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(render_json(graph), encoding="utf-8")
+    path.write_text(render_json(graph, instrumentation), encoding="utf-8")
 
 
 def compare_expected_text(path_text: str, expected_text: str) -> dict[str, Any]:
@@ -1698,12 +1706,18 @@ def check_graph_artifacts(
     json_path: str = DEFAULT_JSON_PATH,
     markdown_path: str = DEFAULT_MARKDOWN_PATH,
     dot_path: str = DEFAULT_DOT_PATH,
+    instrumentation: GraphInstrumentation | None = None,
 ) -> dict[str, Any]:
-    graph = build_graph(REPO_ROOT)
+    snapshot = load_graph_input_snapshot(
+        REPO_ROOT,
+        registry_paths=(f"registries/{name}" for name in REGISTRY_SPECS),
+        instrumentation=instrumentation,
+    )
+    graph = build_graph(REPO_ROOT, snapshot=snapshot, instrumentation=instrumentation)
     artifact_checks = {
-        "json": compare_expected_text(json_path, render_json(graph)),
-        "markdown": compare_expected_text(markdown_path, render_markdown(graph)),
-        "dot": compare_expected_text(dot_path, render_dot(graph)),
+        "json": compare_expected_text(json_path, render_json(graph, instrumentation)),
+        "markdown": compare_expected_text(markdown_path, render_markdown(graph, instrumentation)),
+        "dot": compare_expected_text(dot_path, render_dot(graph, instrumentation)),
     }
     fresh = all(item["fresh"] for item in artifact_checks.values())
     return {
@@ -1735,12 +1749,14 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
+    instrumentation = GraphInstrumentation()
     if args.check:
         try:
             report = check_graph_artifacts(
                 json_path=args.json_path or DEFAULT_JSON_PATH,
                 markdown_path=args.markdown_path or DEFAULT_MARKDOWN_PATH,
                 dot_path=args.dot_path or DEFAULT_DOT_PATH,
+                instrumentation=instrumentation,
             )
         except GraphError as exc:
             print(f"dependency graph freshness check failed: {exc}", file=sys.stderr)
@@ -1756,18 +1772,23 @@ def main(argv: list[str] | None = None) -> int:
                 )
         return 0 if report["fresh"] else 1
     try:
-        graph = build_graph(REPO_ROOT)
+        snapshot = load_graph_input_snapshot(
+            REPO_ROOT,
+            registry_paths=(f"registries/{name}" for name in REGISTRY_SPECS),
+            instrumentation=instrumentation,
+        )
+        graph = build_graph(REPO_ROOT, snapshot=snapshot, instrumentation=instrumentation)
     except GraphError as exc:
         print(f"dependency graph extraction failed: {exc}", file=sys.stderr)
         return 1
     if args.json_path:
-        write_json(args.json_path, graph)
+        write_json(args.json_path, graph, instrumentation)
     if args.markdown_path:
-        write_text(args.markdown_path, render_markdown(graph))
+        write_text(args.markdown_path, render_markdown(graph, instrumentation))
     if args.dot_path:
-        write_text(args.dot_path, render_dot(graph))
+        write_text(args.dot_path, render_dot(graph, instrumentation))
     if args.stdout or not (args.json_path or args.markdown_path or args.dot_path):
-        print(json.dumps(graph, indent=2, sort_keys=True))
+        print(render_json(graph, instrumentation), end="")
     return 0
 
 

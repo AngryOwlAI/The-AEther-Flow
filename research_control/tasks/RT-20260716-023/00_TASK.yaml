@@ -1,0 +1,42 @@
+task_id: "RT-20260716-023"
+task_type: "dependency_graph_reusable_snapshot"
+status: "completed"
+created_at: "2026-07-17T04:38:26Z"
+updated_at: "2026-07-17T05:03:47Z"
+closed_at: "2026-07-17T04:47:50Z"
+parent_task_id: "RT-20260716-022"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260716-023"
+current_job_id: "AJ-RT-20260716-023-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-023"
+requires_human_gate: false
+human_authorization_note: "The user authorized a fresh recursive relay that implements every remaining v19 task one per discussion and generation 24 selects dependency-ready P7-T01."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T01"
+  plan_task_name: "Refactor dependency-graph extraction for reusable snapshots"
+  recommendation_ids:
+    - "V19-R13"
+    - "V19-R29"
+objective: "Separate dependency-graph source loading construction validation and rendering so one immutable extraction feeds all assertions and formats without changing bytes authority or routing."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system dependency-graph extraction work only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V19-P7-T01-DEPENDENCY-GRAPH-SNAPSHOT-001"
+claim_boundary:
+  allowed_scope: "P7-T01 snapshot model bounded renderer integration focused existing-module regression tests task-local equivalence evidence and governed derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+closure_status: "v19_p7_t01_snapshot_repair_required_p7_t02_locked"
+next_recommended_action: "Create one separately bounded Validator Engineer repair for dependency-graph renderer path classification and checkpoint shadow parity; rerun P7-T01 before P7-T02."
+documentation_impact_id: "DI-RT-20260716-023-001"
+completion_id: "AJC-AJ-RT-20260716-023-001"
+notes: "The P7-T01 implementation and renderer equivalence are valid but the task returns REPAIR_REQUIRED because compare-mode checkpoint planning classifies the changed renderer as an unresolved governed path. P7-T02 remains locked."

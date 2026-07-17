@@ -7,9 +7,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 - Schema: `research_dependency_graph_v1`
 - Generated from tracked state as of: `2026-07-09T03:11:04Z`
-- Source fingerprint: `3a3e10a858db6fb274da46899f2832f811c8a500b0cb629b8c346ae13946ab7a`
-- Nodes: `17923`
-- Edges: `63690`
+- Source fingerprint: `f6e0e4f5fa12206b6a8b71a9bd560b254adc79b18df3baf5355ab32d0efff8d6`
+- Nodes: `18263`
+- Edges: `64537`
 
 ## Source Counts
 
@@ -17,7 +17,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 907 |
+| `completion_yaml` | 929 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 907 |
+| `agent_job` | `support_only` | 929 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 9531 |
-| `blocked_burden` | `blocked` | 3289 |
-| `claim_boundary` | `support_only` | 864 |
+| `artifact` | `support_only` | 9668 |
+| `blocked_burden` | `blocked` | 3394 |
+| `claim_boundary` | `support_only` | 886 |
 | `draft_control_candidate` | `draft_control` | 529 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 109 |
 | `gate_chair_verdict` | `human_gated` | 31 |
 | `handoff` | `support_only` | 740 |
-| `human_gated_object` | `human_gated` | 329 |
+| `human_gated_object` | `human_gated` | 361 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 291 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 847 |
+| `task` | `support_only` | 869 |
 
 ## Frontier Table
 
@@ -84,7 +84,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:accepted_evidence_as_adoption` | Blocked claim: accepted evidence as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:accepted_evidence_as_matter_coupling` | Blocked claim: accepted evidence as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:accepted_evidence_preconditions_as_adopted_objects` | Blocked claim: accepted evidence/preconditions as adopted objects | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:active_cache_or_supersedence` | Blocked claim: active cache or supersedence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:active_state_validator_source_edit` | Blocked permission: active-state validator source edit | `registries/ROLE_EXECUTION_REGISTRY.csv` |
+| `blocked_claim:active_supersedence` | Blocked claim: active supersedence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:active_supersedence_or_evidence_deduplication_execution` | Blocked permission: active supersedence or evidence deduplication execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:active_teaching_packet_fallback_revival` | Blocked claim: active teaching-packet fallback revival | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:advisory_formatting_scripts_as_canonical_content_law` | Blocked claim: advisory formatting scripts as canonical content law | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agent_native_authority` | Blocked claim: Agent-Native authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -102,6 +105,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:arbitrary_finite_variation_overread` | Blocked claim: arbitrary finite-variation overread | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_finite_variation_robustness_proof` | Blocked claim: arbitrary finite-variation robustness proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:article_body_content_change` | Blocked claim: article body content change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:artifact_body_scanning` | Blocked claim: artifact-body scanning | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:atlasglue_src_plus_adoption` | Blocked claim: AtlasGlue_src^+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:atlasglue_srcplus_adoption` | Blocked claim: AtlasGlue_src+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:atlasgluedisc_src_plus_adoption` | Blocked claim: AtlasGlueDisc_src^+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -156,10 +160,6 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:backlog_as_source_law_adoption` | Blocked claim: backlog as source-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_unrestricted_rr_e_theorem` | Blocked claim: backlog as unrestricted RR_E theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_validator_authority_cutover` | Blocked claim: backlog as validator authority cutover | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:balance_flux_as_bianchi_identity` | Blocked claim: balance/flux as Bianchi identity | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:balance_ledger_as_stress_energy_tensor` | Blocked claim: balance ledger as stress energy tensor | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:bare_accepted_high_risk_rendering` | Blocked claim: bare accepted high-risk rendering | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:base_ref_semantics_change` | Blocked claim: base-ref semantics change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 

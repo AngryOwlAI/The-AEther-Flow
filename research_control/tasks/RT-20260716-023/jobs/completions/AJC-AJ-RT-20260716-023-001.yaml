@@ -1,0 +1,232 @@
+job_id: "AJ-RT-20260716-023-001"
+completion_id: "AJC-AJ-RT-20260716-023-001"
+task_id: "RT-20260716-023"
+decision_id: "DDR-20260716-023"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-023"
+status: "completed"
+created_at: "2026-07-17T04:38:26Z"
+started_at: "2026-07-17T04:38:26Z"
+completed_at: "2026-07-17T04:47:50Z"
+objective: "Implement and validate P7-T01 immutable reusable dependency-graph snapshots without graph schema authority or physics changes."
+completion_summary: "Implemented one deeply immutable tree-bound graph input snapshot and integrated it with the existing builder and all render paths. Ten focused tests prove one load per source no file reads after extraction instrumentation behavior and implicit versus explicit snapshot equivalence. The entry renderer and refactor produce byte-identical JSON Markdown and DOT and the stable repository suite passed 851 tests with one skip. The result is REPAIR_REQUIRED because compare-mode checkpoint planning leaves the changed renderer as an unresolved governed path and safely stops before staging."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P7-T01"
+  - "scripts/research_control/render_dependency_graph.py"
+  - "tests/test_render_dependency_graph.py"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "research_control/tasks/RT-20260716-022/jobs/completions/AJC-AJ-RT-20260716-022-001.yaml"
+outputs_created:
+  - "scripts/research_control/dependency_graph_model.py"
+  - "scripts/research_control/render_dependency_graph.py"
+  - "tests/test_render_dependency_graph.py"
+  - "research_control/tasks/RT-20260716-023/artifacts/dependency_graph_refactor_equivalence.json"
+  - "research_control/tasks/RT-20260716-023/artifacts/dependency_graph_refactor_audit.md"
+  - "research_control/tasks/RT-20260716-023/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260716-023/jobs/completions/AJC-AJ-RT-20260716-023-001.yaml"
+implementation_results:
+  plan_task_id: "P7-T01"
+  migration_epoch: "shadow_planner"
+  implementation_status: "repair_required"
+  snapshot_model_immutable: true
+  snapshot_tree_bound: true
+  parsed_registries_captured: true
+  program_state_captured: true
+  completions_captured: true
+  handoffs_captured: true
+  source_hashes_captured: true
+  parse_failures_preserved: true
+  source_loads: 1679
+  unique_source_paths: 1679
+  all_source_paths_loaded_once: true
+  graph_builds: 1
+  render_calls: 3
+  node_count: 18263
+  edge_count: 64537
+  graph_objects_equal_to_entry_renderer: true
+  json_bytes_equal_to_entry_renderer: true
+  markdown_bytes_equal_to_entry_renderer: true
+  dot_bytes_equal_to_entry_renderer: true
+  no_file_reads_after_snapshot: true
+  focused_test_count: 10
+  focused_test_duration_seconds: 32.110
+  full_repository_test_count: 851
+  full_repository_skip_count: 1
+  full_repository_duration_seconds: 217.273
+  graph_schema_changed: false
+  cross_tree_cache_added: false
+  p7_t02_shared_test_setup_added: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+  p7_t02_unlocked: false
+  repair_required: true
+validation_evidence:
+  selected_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "dependency_graph_focused_tests"
+    - "entry_renderer_snapshot_equivalence"
+    - "project_improvement_signals"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "git_diff_check"
+    - "stable_full_repository_tests"
+    - "memory_sync"
+    - "memory_core"
+  executed_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "dependency_graph_focused_tests"
+    - "entry_renderer_snapshot_equivalence"
+    - "project_improvement_signals"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "git_diff_check"
+    - "stable_full_repository_tests"
+    - "memory_sync"
+    - "memory_core"
+  pending_gate_ids: []
+  equivalence_receipt_path: "research_control/tasks/RT-20260716-023/artifacts/dependency_graph_refactor_equivalence.json"
+  audit_path: "research_control/tasks/RT-20260716-023/artifacts/dependency_graph_refactor_audit.md"
+  legacy_planner_shadow:
+    status: "REPAIR_REQUIRED"
+    affected_blocking_gate_ids:
+      - "checkpoint_transaction"
+    unexplained_mismatch: true
+    unknown_paths:
+      - "scripts/research_control/render_dependency_graph.py"
+    compare_mode_staged: false
+    compare_mode_committed: false
+performance_evidence:
+  baseline_focused_tests:
+    test_count: 7
+    duration_seconds: 413.280
+    status: "PASS"
+  refactored_focused_tests:
+    test_count: 10
+    duration_seconds: 32.110
+    status: "PASS"
+  measured_snapshot_transaction:
+    source_loads: 1679
+    graph_builds: 1
+    render_calls: 3
+  stable_full_repository_tests:
+    test_count: 851
+    skip_count: 1
+    duration_seconds: 217.273
+    status: "PASS"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | entry core freshness and local retrieval PASS with 814 source objects 4053 relationships 814 semantic rows and 814 vault rows"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=0 | ready handoff-0740 director_decision_required with ordinary EqSrc route preserved"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | clean entry state no project-system action selected"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | ready no_action advisory result"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest tests/test_render_dependency_graph.py | exit_code=0 | baseline 7 tests PASS in 413.280 seconds"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check --stdout | baseline_exit_code=1 | clean-checkpoint generated JSON Markdown and DOT derivatives were stale and are governed P7-T01 synchronization scope"
+  - ".venv/bin/python -m py_compile scripts/research_control/dependency_graph_model.py scripts/research_control/render_dependency_graph.py tests/test_render_dependency_graph.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest tests/test_render_dependency_graph.py | exit_code=0 | refactored 10 tests PASS in 32.110 seconds"
+  - "in-memory entry renderer and snapshot renderer comparison | exit_code=0 | graph objects and JSON Markdown DOT bytes identical"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical findings only"
+  - "git diff --check | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet | active_state_exit_code=1 | expected checkpoint sequencing assertion before stable task closure"
+  - ".venv/bin/python -m unittest tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet | exit_code=0 | stable completed-state sequencing regression PASS"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state run 851 tests PASS one skip in 217.273 seconds"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | governed memory synchronization PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | governed memory validation PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot | exit_code=0 | governed graph derivatives synchronized"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check --stdout | exit_code=0 | JSON Markdown and DOT graph derivatives fresh"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260716-023-001 | exit_code=1 | compare-mode planner preflight safely blocked before staging on unresolved renderer path classification"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P6-T08 PASS dependency clean starting checkpoint unique local project matching lease pair idle predecessor open guards exact relay claim and no competing writer were verified before generation consumption."
+      - "Memory preflight routing classifier resolver and emitted-signal validation passed before task activation."
+  completion_internal:
+    status: "FAIL"
+    evidence:
+      - "Ten focused tests passed for immutable snapshot extraction single-source loads no post-extraction reads counters graph integrity and all three render formats."
+      - "The entry renderer and snapshot renderer produced equal graph objects and byte-identical JSON Markdown and DOT."
+      - "Checkpoint shadow planning retains scripts/research_control/render_dependency_graph.py as an unresolved unknown path so P7-T01 cannot claim PASS."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The stable completed-state repository run passed all 851 tests with one expected skip."
+      - "Documentation impact research-control signal and whitespace gates passed."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Compare mode safely stopped before staging. The shadow-migration policy keeps the fully validating legacy checkpoint path authoritative for preserving this REPAIR_REQUIRED evidence."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "All three refactored formats were byte-identical to the entry renderer on the same live state."
+      - "The clean-checkpoint generated drift was pre-existing and the governed JSON Markdown and DOT derivatives were synchronized and verified fresh."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The governed bootstrap and validate-only pass confirmed memory registry wiki dependency and retrieval consistency before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Research-control diff passed with the operational-only claim boundary and no scientific authority."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system dependency-graph extraction work only; no physics or derivation status changes."
+scientific_claims_changed: false
+forbidden_conclusion_summary: "This completed v19 task refactors operational dependency-graph extraction only. It does not change graph schema activate planner authority alter ordinary research edit canonical ontology adopt source laws promote a benchmark grant Gate Chair authority prove physics or complete a derivation."
+verdict: "v19_p7_t01_snapshot_repair_required_p7_t02_locked_no_physics_delta"
+coherent_resolution_summary: "The immutable graph extraction and renderer equivalence are established while the fail-closed checkpoint shadow mismatch precisely identifies the path-classification repair required before P7-T01 can pass."
+next_recommendation: "Create one separately bounded Validator Engineer repair for dependency-graph renderer path classification and checkpoint shadow parity then rerun P7-T01; do not execute P7-T02."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 814
+    relationship_row_count: 4053
+    semantic_row_count: 814
+    vault_row_count: 814
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_core_validation_status: "PASS"
+    before_freshness_status: "PASS"
+    before_local_retrieval_status: "PASS"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P7 T01 dependency graph reusable snapshot\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P7 T01 dependency graph reusable snapshot"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

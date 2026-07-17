@@ -7,6 +7,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -73,6 +74,92 @@ class DependencyGraphTests(unittest.TestCase):
         self.assertEqual(
             hashlib.sha256(payload_one.encode("utf-8")).hexdigest(),
             hashlib.sha256(payload_two.encode("utf-8")).hexdigest(),
+        )
+
+    def test_snapshot_is_immutable_and_loads_each_source_once(self) -> None:
+        instrumentation = self.graph_module.GraphInstrumentation()
+        snapshot = self.graph_module.load_graph_input_snapshot(
+            REPO_ROOT,
+            registry_paths=(
+                f"registries/{name}" for name in self.graph_module.REGISTRY_SPECS
+            ),
+            instrumentation=instrumentation,
+        )
+
+        self.assertEqual(instrumentation.source_loads, len(snapshot.sources))
+        self.assertTrue(instrumentation.source_loads_by_path)
+        self.assertEqual(set(instrumentation.source_loads_by_path.values()), {1})
+        with self.assertRaises(TypeError):
+            snapshot.sources["new"] = object()
+        with self.assertRaises(TypeError):
+            snapshot.source_hashes["new"] = "not-allowed"
+        program_state = snapshot.sources["research_control/program_state.yaml"].payload
+        with self.assertRaises(TypeError):
+            program_state["active_task_id"] = "not-allowed"
+
+    def test_snapshot_build_and_repeated_rendering_perform_no_file_reads(self) -> None:
+        instrumentation = self.graph_module.GraphInstrumentation()
+        snapshot = self.graph_module.load_graph_input_snapshot(
+            REPO_ROOT,
+            registry_paths=(
+                f"registries/{name}" for name in self.graph_module.REGISTRY_SPECS
+            ),
+            instrumentation=instrumentation,
+        )
+        loads_after_snapshot = instrumentation.source_loads
+
+        with (
+            mock.patch.object(Path, "read_bytes", side_effect=AssertionError("unexpected read_bytes")),
+            mock.patch.object(Path, "read_text", side_effect=AssertionError("unexpected read_text")),
+            mock.patch.object(Path, "open", side_effect=AssertionError("unexpected open")),
+        ):
+            graph = self.graph_module.build_graph(
+                REPO_ROOT,
+                snapshot=snapshot,
+                instrumentation=instrumentation,
+            )
+            first = (
+                self.graph_module.render_json(graph, instrumentation),
+                self.graph_module.render_markdown(graph, instrumentation),
+                self.graph_module.render_dot(graph, instrumentation),
+            )
+            second = (
+                self.graph_module.render_json(graph, instrumentation),
+                self.graph_module.render_markdown(graph, instrumentation),
+                self.graph_module.render_dot(graph, instrumentation),
+            )
+
+        self.assertEqual(first, second)
+        self.assertEqual(instrumentation.source_loads, loads_after_snapshot)
+        self.assertEqual(instrumentation.graph_builds, 1)
+        self.assertEqual(instrumentation.render_calls, 6)
+        self.assertEqual(
+            instrumentation.renders_by_format,
+            {"json": 2, "markdown": 2, "dot": 2},
+        )
+
+    def test_implicit_and_explicit_snapshot_apis_are_byte_identical(self) -> None:
+        snapshot = self.graph_module.load_graph_input_snapshot(
+            REPO_ROOT,
+            registry_paths=(
+                f"registries/{name}" for name in self.graph_module.REGISTRY_SPECS
+            ),
+        )
+        implicit_graph = self.graph_module.build_graph(REPO_ROOT)
+        snapshot_graph = self.graph_module.build_graph(REPO_ROOT, snapshot=snapshot)
+
+        self.assertEqual(implicit_graph, snapshot_graph)
+        self.assertEqual(
+            self.graph_module.render_json(implicit_graph),
+            self.graph_module.render_json(snapshot_graph),
+        )
+        self.assertEqual(
+            self.graph_module.render_markdown(implicit_graph),
+            self.graph_module.render_markdown(snapshot_graph),
+        )
+        self.assertEqual(
+            self.graph_module.render_dot(implicit_graph),
+            self.graph_module.render_dot(snapshot_graph),
         )
 
     def test_freeze_summary_scopes_high_risk_accepted_label(self) -> None:

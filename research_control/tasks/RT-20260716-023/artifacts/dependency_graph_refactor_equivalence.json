@@ -1,0 +1,77 @@
+{
+  "authority": {
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "baseline": {
+    "existing_test_count": 7,
+    "existing_tests_status": "PASS",
+    "generated_artifacts_status": "STALE_AT_CLEAN_CHECKPOINT",
+    "renderer_commit": "bb0f9849c97d8e908b9b5fc15e0dd5ff42f08412",
+    "renderer_sha256": "bbb45d135390b9c28554e2fb3407329e01a0582286d3b37890741ae7f0493f1e"
+  },
+  "comparison": {
+    "basis": "After the completion receipt reached PASS, the renderer from the entry commit and the refactored renderer read the same live tracked state. Each built one graph and rendered JSON Markdown and DOT in memory before final generated-derivative synchronization.",
+    "dot": {
+      "byte_identical": true,
+      "legacy_sha256": "56b69dad3a0ba71af59c2f14ebf758eb0518379c88c31e6df31bb67483503d8b",
+      "snapshot_sha256": "56b69dad3a0ba71af59c2f14ebf758eb0518379c88c31e6df31bb67483503d8b"
+    },
+    "graph_equal": true,
+    "json": {
+      "byte_identical": true,
+      "legacy_sha256": "ec434d64b392215a955be51facc2da34753eb90875e0d17713609ce55667c58f",
+      "snapshot_sha256": "ec434d64b392215a955be51facc2da34753eb90875e0d17713609ce55667c58f"
+    },
+    "markdown": {
+      "byte_identical": true,
+      "legacy_sha256": "056d4f2f25a0239f04d8af7bbb063e724cde676d6f46cc8776f6597af9055d3e",
+      "snapshot_sha256": "056d4f2f25a0239f04d8af7bbb063e724cde676d6f46cc8776f6597af9055d3e"
+    }
+  },
+  "checkpoint_planner_shadow": {
+    "compare_mode_staged": false,
+    "compare_mode_status": "BLOCKED_BEFORE_STAGING",
+    "effective_profile": "full",
+    "legacy_execution_authoritative": true,
+    "planner_execution_authoritative": false,
+    "repair_required": true,
+    "unexplained_mismatch": true,
+    "unknown_paths": [
+      "scripts/research_control/render_dependency_graph.py"
+    ]
+  },
+  "graph": {
+    "edge_count": 64537,
+    "generated_at": "2026-07-09T03:11:04Z",
+    "node_count": 18263,
+    "source_count": 1679,
+    "source_fingerprint": "c096d486ddc62542318e66f9627b305695f7ac8466f9c7bde47947e2d5a35072"
+  },
+  "instrumentation": {
+    "all_source_paths_loaded_once": true,
+    "graph_builds": 1,
+    "render_calls": 3,
+    "renders_by_format": {
+      "dot": 1,
+      "json": 1,
+      "markdown": 1
+    },
+    "source_loads": 1679,
+    "unique_source_paths": 1679
+  },
+  "job_id": "AJ-RT-20260716-023-001",
+  "schema_id": "dependency_graph_refactor_equivalence_v1",
+  "renderer_equivalence_status": "PASS",
+  "status": "REPAIR_REQUIRED",
+  "task_id": "RT-20260716-023",
+  "tests": {
+    "focused_test_count": 10,
+    "focused_test_duration_seconds": 32.11,
+    "focused_test_status": "PASS",
+    "immutable_snapshot_tested": true,
+    "no_file_reads_during_snapshot_build_and_repeated_rendering": true
+  }
+}
