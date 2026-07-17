@@ -3,6 +3,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import importlib.util
+import io
 import json
 import re
 import sys
@@ -292,93 +293,113 @@ class DependencyGraphTests(unittest.TestCase):
         self.assertNotIn("EVIDENCE-ACCEPTED", self.shared_freeze_summary)
         self.assertNotIn("True True", self.shared_freeze_summary)
 
-    def test_cli_writes_all_declared_formats(self) -> None:
+    def test_cli_write_fresh_and_stale_lifecycle(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             tmp_path = Path(tmp)
             json_path = tmp_path / "graph.json"
             markdown_path = tmp_path / "graph.md"
             dot_path = tmp_path / "graph.dot"
-            exit_code = self.graph_module.main(
-                [
-                    "--json",
-                    json_path.as_posix(),
-                    "--markdown",
-                    markdown_path.as_posix(),
-                    "--dot",
-                    dot_path.as_posix(),
-                ]
-            )
+            cli_paths = [
+                "--json",
+                json_path.as_posix(),
+                "--markdown",
+                markdown_path.as_posix(),
+                "--dot",
+                dot_path.as_posix(),
+            ]
+            instrumentation_records = []
+            instrumentation_class = self.graph_module.GraphInstrumentation
 
-            self.assertEqual(exit_code, 0)
+            def new_instrumentation():
+                instrumentation = instrumentation_class()
+                instrumentation_records.append(instrumentation)
+                return instrumentation
+
+            with mock.patch.object(
+                self.graph_module,
+                "GraphInstrumentation",
+                side_effect=new_instrumentation,
+            ):
+                write_exit_code = self.graph_module.main(cli_paths)
+
+                fresh_stdout = io.StringIO()
+                with mock.patch("sys.stdout", fresh_stdout):
+                    fresh_exit_code = self.graph_module.main(["--check", *cli_paths])
+
+                markdown_path.write_text(
+                    markdown_path.read_text(encoding="utf-8") + "\nstale fixture\n",
+                    encoding="utf-8",
+                )
+                stale_stdout = io.StringIO()
+                with mock.patch("sys.stdout", stale_stdout):
+                    stale_exit_code = self.graph_module.main(["--check", *cli_paths])
+
+            self.assertEqual(
+                [write_exit_code, fresh_exit_code, stale_exit_code],
+                [0, 0, 1],
+            )
+            for path in (json_path, markdown_path, dot_path):
+                self.assertTrue(path.is_file(), f"declared output missing: {path}")
             self.assertIn("navigational support only", markdown_path.read_text(encoding="utf-8"))
             self.assertIn("navigational_support_only", dot_path.read_text(encoding="utf-8"))
-            self.assertEqual(json.loads(json_path.read_text(encoding="utf-8"))["schema_id"], "research_dependency_graph_v1")
+            json_graph = json.loads(json_path.read_text(encoding="utf-8"))
+            self.assertEqual(json_graph["schema_id"], "research_dependency_graph_v1")
+            self.assertTrue(json_graph["authority_boundary"]["navigational_support_only"])
 
-    def test_cli_check_passes_for_fresh_outputs(self) -> None:
+            fresh_output = fresh_stdout.getvalue()
+            self.assertIn("dependency graph freshness check: PASS", fresh_output)
+            for format_name, path in (
+                ("json", json_path),
+                ("markdown", markdown_path),
+                ("dot", dot_path),
+            ):
+                self.assertIn(
+                    f"- {format_name}: fresh path={path.as_posix()}",
+                    fresh_output,
+                )
+
+            stale_output = stale_stdout.getvalue()
+            self.assertIn("dependency graph freshness check: FAIL", stale_output)
+            for format_name, status, path in (
+                ("json", "fresh", json_path),
+                ("markdown", "stale", markdown_path),
+                ("dot", "fresh", dot_path),
+            ):
+                self.assertIn(
+                    f"- {format_name}: {status} path={path.as_posix()}",
+                    stale_output,
+                )
+
+            self.assertEqual(len(instrumentation_records), 3)
+            for instrumentation in instrumentation_records:
+                self.assertEqual(instrumentation.graph_builds, 1)
+                self.assertEqual(instrumentation.render_calls, 3)
+                self.assertEqual(
+                    instrumentation.renders_by_format,
+                    {"json": 1, "markdown": 1, "dot": 1},
+                )
+
+    def test_compare_expected_text_reports_missing_output(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
-            tmp_path = Path(tmp)
-            json_path = tmp_path / "graph.json"
-            markdown_path = tmp_path / "graph.md"
-            dot_path = tmp_path / "graph.dot"
-            self.graph_module.main(
-                [
-                    "--json",
-                    json_path.as_posix(),
-                    "--markdown",
-                    markdown_path.as_posix(),
-                    "--dot",
-                    dot_path.as_posix(),
-                ]
+            missing_path = Path(tmp) / "missing.md"
+            expected_text = "expected dependency graph\n"
+            result = self.graph_module.compare_expected_text(
+                missing_path.as_posix(),
+                expected_text,
             )
 
-            exit_code = self.graph_module.main(
-                [
-                    "--check",
-                    "--json",
-                    json_path.as_posix(),
-                    "--markdown",
-                    markdown_path.as_posix(),
-                    "--dot",
-                    dot_path.as_posix(),
-                ]
+            self.assertEqual(
+                result,
+                {
+                    "path": missing_path.as_posix(),
+                    "status": "missing",
+                    "fresh": False,
+                    "expected_hash": hashlib.sha256(
+                        expected_text.encode("utf-8")
+                    ).hexdigest(),
+                    "actual_hash": "",
+                },
             )
-
-            self.assertEqual(exit_code, 0)
-
-    def test_cli_check_fails_for_stale_output(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            tmp_path = Path(tmp)
-            json_path = tmp_path / "graph.json"
-            markdown_path = tmp_path / "graph.md"
-            dot_path = tmp_path / "graph.dot"
-            self.graph_module.main(
-                [
-                    "--json",
-                    json_path.as_posix(),
-                    "--markdown",
-                    markdown_path.as_posix(),
-                    "--dot",
-                    dot_path.as_posix(),
-                ]
-            )
-            markdown_path.write_text(
-                markdown_path.read_text(encoding="utf-8") + "\nstale fixture\n",
-                encoding="utf-8",
-            )
-
-            exit_code = self.graph_module.main(
-                [
-                    "--check",
-                    "--json",
-                    json_path.as_posix(),
-                    "--markdown",
-                    markdown_path.as_posix(),
-                    "--dot",
-                    dot_path.as_posix(),
-                ]
-            )
-
-            self.assertEqual(exit_code, 1)
 
 
 if __name__ == "__main__":

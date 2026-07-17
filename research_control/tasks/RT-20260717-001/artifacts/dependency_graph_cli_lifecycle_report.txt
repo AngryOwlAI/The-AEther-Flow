@@ -1,0 +1,65 @@
+receipt_format: raw_command_output_v1
+command: /usr/bin/time -p .venv/bin/python -m unittest tests.test_render_dependency_graph
+baseline_exit_code: 0
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 26.743s
+
+OK
+real 26.88
+
+result_exit_code: 0
+............
+----------------------------------------------------------------------
+Ran 12 tests in 21.062s
+
+OK
+real 21.18
+user 20.68
+sys 0.48
+
+lifecycle_assertions:
+write_exit_code=0
+fresh_exit_code=0
+stale_exit_code=1
+fresh_statuses=json:fresh,markdown:fresh,dot:fresh
+stale_statuses=json:fresh,markdown:stale,dot:fresh
+missing_status=missing
+missing_fresh=false
+cli_invocations=3
+graph_builds=3
+render_calls=9
+renders_by_format=json:3,markdown:3,dot:3
+
+command: .venv/bin/python -m scripts.validation.cli plan --profile affected --explain
+exit_code: 0
+validation plan requested=affected effective=affected status=READY authority=legacy
+changed_paths=11 selected_gates=14
+selected dependency_graph_freshness reasons=condition:graph_inputs_changed,condition:profile_selected
+selected task_index_freshness reasons=condition:profile_selected,condition:task_index_inputs_changed
+
+command: /usr/bin/time -p .venv/bin/python -m unittest discover -s tests
+exit_code: 0
+----------------------------------------------------------------------
+Ran 855 tests in 206.812s
+
+OK (skipped=1)
+{"edges": 15, "graph_id": "claim_graph_v1", "nodes": 10, "status": "PASS"}
+claim graph outputs are fresh
+real 207.02
+user 127.63
+sys 76.52
+
+command: .venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-001-001
+initial_exit_code: 1
+status: blocked
+reason: planner staged acceptance or legacy comparison failed
+failed_gate: documentation_impact
+failed_finding: reason_codes missing classifier reason generated_derivative_changed
+memory_sync_changed: FOLDER_MAP.md
+shadow_comparison: PASS
+agentjob_allowlist: PASS
+unstaged_residue: PASS
+staged_tree_integrity: PASS
+entry_index_restoration: PASS
+committed: false

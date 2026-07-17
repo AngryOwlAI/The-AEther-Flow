@@ -1,0 +1,92 @@
+{
+  "schema_id": "dependency_graph_cli_lifecycle_report_v1",
+  "task_id": "RT-20260717-001",
+  "job_id": "AJ-RT-20260717-001-001",
+  "plan_task_id": "P7-T03",
+  "generated_at": "2026-07-17T06:44:12Z",
+  "status": "PASS",
+  "baseline": {
+    "source_revision": "57d109f197c3bb81e5f29f51c3f1c332976e0890",
+    "test_count": 13,
+    "unittest_seconds": 26.743,
+    "wall_seconds": 26.88,
+    "source_hash": "4b4a6360aba3bbef3bcb3288ee0e4228f0283f2b73dd895de386449a7557ab2a",
+    "cli_graph_build_count": 5
+  },
+  "result": {
+    "test_count": 12,
+    "unittest_seconds": 21.062,
+    "wall_seconds": 21.18,
+    "wall_seconds_saved": 5.70,
+    "wall_runtime_reduction_percent": 21.2,
+    "source_hash": "1ac46a710216d1372373fd76a95d153abec8e8cd387e6e3b01cc11902c24beb0",
+    "lifecycle_cli_invocation_count": 3,
+    "lifecycle_exit_codes": [0, 0, 1],
+    "lifecycle_graph_build_count": 3,
+    "lifecycle_render_count": 9,
+    "renders_by_format": {
+      "json": 3,
+      "markdown": 3,
+      "dot": 3
+    }
+  },
+  "failure_mode_coverage": {
+    "write_all_formats": "PASS",
+    "authority_boundary_content": "PASS",
+    "fresh_check": "PASS",
+    "stale_check": "PASS",
+    "stale_mutated_format": "markdown",
+    "stale_attribution": {
+      "json": "fresh",
+      "markdown": "stale",
+      "dot": "fresh"
+    },
+    "missing_output_helper_status": "missing",
+    "missing_output_fresh": false,
+    "missing_output_actual_hash": "",
+    "status": "PASS"
+  },
+  "affected_plan": {
+    "status": "READY",
+    "dependency_graph_freshness_selected": true,
+    "task_index_freshness_selected": true,
+    "execution_authority": "legacy",
+    "unknown_paths": []
+  },
+  "full_repository_suite": {
+    "test_count": 855,
+    "skip_count": 1,
+    "unittest_seconds": 206.812,
+    "wall_seconds": 207.02,
+    "status": "PASS"
+  },
+  "checkpoint_shadow": {
+    "initial_attempt": {
+      "status": "REPAIR_REQUIRED",
+      "shadow_comparison": "PASS",
+      "agentjob_allowlist": "PASS",
+      "unstaged_residue": "PASS",
+      "staged_tree_integrity": "PASS",
+      "entry_index_restored": true,
+      "commit_created": false,
+      "repair": "Add FOLDER_MAP.md and generated_derivative_changed to the documentation-impact receipt after tracked memory sync."
+    }
+  },
+  "source_hashes": {
+    "dependency_graph_renderer": "e98c0e8ab8b9902a85fb6fe61c75331c10e03d2defa6bb89ee4ed5df981aba8a",
+    "dependency_graph_model": "f4b6f79f4644f10950b0dbbc4771bc8d3743fdcd25791b159d253a8a8b87a55c",
+    "implementation_plan": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  },
+  "raw_output_path": "research_control/tasks/RT-20260717-001/artifacts/dependency_graph_cli_lifecycle_report.txt",
+  "authority": {
+    "operational_test_evidence_only": true,
+    "production_graph_changed": false,
+    "graph_schema_changed": false,
+    "planner_execution_authority_changed": false,
+    "ordinary_research_state_changed": false,
+    "scientific_claims_changed": false,
+    "physics_delta_changed": false,
+    "proof_authority": false
+  },
+  "verdict": "p7_t03_cli_lifecycle_pass_retained_failure_modes_bounded_builds_runtime_reduction_no_physics_delta"
+}

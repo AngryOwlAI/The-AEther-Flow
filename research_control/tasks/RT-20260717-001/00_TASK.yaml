@@ -1,0 +1,42 @@
+task_id: "RT-20260717-001"
+task_type: "dependency_graph_cli_lifecycle"
+status: "completed"
+created_at: "2026-07-17T06:37:19Z"
+updated_at: "2026-07-17T06:50:59Z"
+closed_at: "2026-07-17T06:44:12Z"
+parent_task_id: "RT-20260716-025"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260717-001"
+current_job_id: "AJ-RT-20260717-001-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-001"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached dependency-ready P7-T03 after the governed P7-T02 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P7"
+  plan_task_id: "P7-T03"
+  plan_task_name: "Combine dependency-graph CLI fresh and stale behavior into one lifecycle test"
+  recommendation_ids:
+    - "V19-R14"
+    - "V19-R48"
+objective: "Combine write fresh-check and stale-check CLI coverage into one lifecycle test while retaining format-specific attribution missing-output coverage exit-code behavior and bounded graph-build counts."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system dependency-graph CLI test-lifecycle optimization only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p7_t03_cli_lifecycle_pass_retained_failure_modes_bounded_builds_runtime_reduction_no_physics_delta"
+claim_boundary_id: "CB-V19-P7-T03-DEPENDENCY-GRAPH-CLI-LIFECYCLE-001"
+claim_boundary:
+  allowed_scope: "One dependency-graph CLI lifecycle test task-local timing and validation evidence and governed derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+next_recommended_action: "After governed checkpoint PASS route only the earliest dependency-ready plan task identified by live v19 state."
+documentation_impact_id: "DI-RT-20260717-001-001"
+completion_id: "AJC-AJ-RT-20260717-001-001"
+notes: "P7-T03 passes with one write fresh stale lifecycle three bounded CLI graph builds retained missing-output coverage exact Markdown-only stale attribution 21.2 percent lower focused wall time and 855 repository tests passing with one expected skip. Production graph behavior and scientific authority remain unchanged."
