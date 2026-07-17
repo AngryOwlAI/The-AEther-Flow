@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 import hashlib
 import json
 from pathlib import Path
@@ -11,6 +12,36 @@ ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_PATH = ROOT / "tests/fixtures/validation_plans/change_matrix_v1.json"
 MANIFEST_PATH = ROOT / "research_control/design/validation_gate_manifest_v1.yaml"
 MATRIX_PATH = ROOT / "research_control/design/validation_change_matrix_v1.md"
+LIVE_GRAPH_TEST_PATH = ROOT / "tests/test_render_dependency_graph.py"
+CI_WORKFLOW_PATH = ROOT / ".github/workflows/project-control-validation.yml"
+
+DEPENDENCY_GRAPH_INPUT_GLOBS = (
+    "registries/DISTANCE_TO_GR_LEDGER.csv",
+    "registries/AGENT_JOB_REGISTRY.csv",
+    "registries/RESEARCH_TASK_REGISTRY.csv",
+    "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+    "registries/DIRECTOR_DECISION_REGISTRY.csv",
+    "registries/ROLE_EXECUTION_REGISTRY.csv",
+    "registries/TEX_SOURCE_REGISTRY.csv",
+    "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+    "registries/FILE_OBJECT_REGISTRY.csv",
+    "research_control/program_state.yaml",
+    "research_control/tasks/**/jobs/completions/*.yaml",
+    "research_control/handoffs/handoff-*.yaml",
+    "scripts/research_control/dependency_graph_model.py",
+    "scripts/research_control/render_dependency_graph.py",
+)
+DEPENDENCY_GRAPH_OUTPUT_GLOBS = (
+    "output/research_dependency_graph.json",
+    "output/research_dependency_graph.dot",
+    "wiki/indexes/research_dependency_graph.md",
+)
+DEPENDENCY_GRAPH_CONCRETE_INPUTS = (
+    *DEPENDENCY_GRAPH_INPUT_GLOBS[:10],
+    "research_control/tasks/RT-MATRIX/jobs/completions/AJC-AJ-RT-MATRIX-001.yaml",
+    "research_control/handoffs/handoff-9999.yaml",
+    *DEPENDENCY_GRAPH_INPUT_GLOBS[12:],
+)
 
 from scripts.project_control import classify_project_changes as classifier
 from scripts.validation.plan import load_manifest, render_explanation
@@ -205,6 +236,108 @@ class ValidationChangeMatrixTests(unittest.TestCase):
         self.assertIn("Legacy execution remains authoritative", text)
         for case in self.fixture["cases"]:
             self.assertIn(f"`{case['case_id']}`", text)
+
+    def test_dependency_graph_manifest_matches_the_renderer_source_contract(self) -> None:
+        gate = self.gates["dependency_graph_freshness"]
+        self.assertEqual(tuple(gate["input_globs"]), DEPENDENCY_GRAPH_INPUT_GLOBS)
+        self.assertEqual(tuple(gate["output_globs"]), DEPENDENCY_GRAPH_OUTPUT_GLOBS)
+        self.assertEqual(gate["profiles"], ["affected", "full"])
+        self.assertEqual(gate["cache_policy"], "ineligible")
+        self.assertEqual(
+            gate["command_compatibility"],
+            ["render_dependency_graph.py --check"],
+        )
+
+    def test_every_dependency_graph_source_and_output_selects_freshness(self) -> None:
+        for path in (*DEPENDENCY_GRAPH_CONCRETE_INPUTS, *DEPENDENCY_GRAPH_OUTPUT_GLOBS):
+            with self.subTest(path=path):
+                classification = classifier.classify_paths([path])
+                resolution = resolve_profile(
+                    self.manifest,
+                    classification,
+                    requested_profile="affected",
+                    shadow=True,
+                )
+                self.assertIn(
+                    "dependency_graph_input",
+                    classification["path_family_tags"],
+                )
+                self.assertIn(
+                    "dependency_graph_freshness",
+                    resolution.plan.selected_gate_ids,
+                )
+
+    def test_unrelated_registered_source_skips_dependency_graph_freshness(self) -> None:
+        classification = classifier.classify_paths(
+            ["ontology/aether_flow_interpretation-lemen.md"]
+        )
+        resolution = resolve_profile(
+            self.manifest,
+            classification,
+            requested_profile="affected",
+            shadow=True,
+        )
+        self.assertNotIn(
+            "dependency_graph_input",
+            classification["path_family_tags"],
+        )
+        self.assertIn(
+            "dependency_graph_freshness",
+            resolution.plan.skipped_gate_ids,
+        )
+
+    def test_full_repository_gate_retains_one_live_double_build(self) -> None:
+        classification = classifier.classify_paths([])
+        resolution = resolve_profile(
+            self.manifest,
+            classification,
+            requested_profile="full",
+            shadow=True,
+        )
+        self.assertIn("test_shard_repository", resolution.plan.selected_gate_ids)
+        repository_gate = self.gates["test_shard_repository"]
+        self.assertEqual(repository_gate["cache_policy"], "ineligible")
+        self.assertEqual(
+            repository_gate["command_compatibility"],
+            ["python -m unittest discover -s tests"],
+        )
+
+        tree = ast.parse(LIVE_GRAPH_TEST_PATH.read_text(encoding="utf-8"))
+        graph_class = next(
+            node
+            for node in tree.body
+            if isinstance(node, ast.ClassDef) and node.name == "DependencyGraphTests"
+        )
+        methods = {
+            node.name: node
+            for node in graph_class.body
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))
+        }
+
+        def live_build_count(method_name: str) -> int:
+            return sum(
+                1
+                for node in ast.walk(methods[method_name])
+                if isinstance(node, ast.Call)
+                and isinstance(node.func, ast.Attribute)
+                and node.func.attr == "build_graph"
+                and node.args
+                and isinstance(node.args[0], ast.Name)
+                and node.args[0].id == "REPO_ROOT"
+            )
+
+        self.assertEqual(live_build_count("setUpClass"), 1)
+        self.assertEqual(
+            live_build_count(
+                "test_implicit_and_explicit_snapshot_apis_are_byte_identical"
+            ),
+            1,
+        )
+        workflow = CI_WORKFLOW_PATH.read_text(encoding="utf-8")
+        self.assertIn(
+            "make PYTHON=.venv/bin/python validate-project-control",
+            workflow,
+        )
 
 
 if __name__ == "__main__":

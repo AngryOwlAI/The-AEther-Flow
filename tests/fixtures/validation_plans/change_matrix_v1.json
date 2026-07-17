@@ -5,7 +5,7 @@
       "change_kind": "modified",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "974e1def44788851c2cda1f4fa257f3e7b9b86ffd84299b6449a8703e50976ae",
+        "canonical_plan_sha256": "12f099c51c0a2f1e5912cef403cde3502ea08db94388806d795734148051d6cf",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "b0908b2647aaad42b6728d4a7307ff460ee2e518a9d473a558d8266cb7479319",
@@ -28,7 +28,7 @@
       "change_kind": "modified",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "a03e121cd0ac6405cd9cfd80c6c7a40adc654053ea91f31873b38b011174e538",
+        "canonical_plan_sha256": "465b5041f0ce16818f9e883ec8634a961f6ea14455aee2fcda63cc76c7a97d9e",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "608f54950bbdba33879f91b7c55c57364eb42f97ba6bf2ac2e8a78d7de7b313b",
@@ -42,7 +42,7 @@
         "test_shards": ["tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"],
         "unknown_paths": []
       },
-      "paths": ["research_control/tasks/RT-MATRIX/00_TASK.yaml"],
+      "paths": ["research_control/tasks/RT-MATRIX/jobs/completions/AJC-AJ-RT-MATRIX-001.yaml"],
       "requested_profile": "affected",
       "scopes": []
     },
@@ -51,7 +51,7 @@
       "change_kind": "modified",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "df5f73ba7b4aee749ce18d1069c1002d7ca9bbbc576b30d9f2d2eaf46c22a766",
+        "canonical_plan_sha256": "8ad4727c43c9569f29e798a36213a3c67491213d9a2875ddb6a8ab32420bef23",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "b0908b2647aaad42b6728d4a7307ff460ee2e518a9d473a558d8266cb7479319",
@@ -74,7 +74,7 @@
       "change_kind": "modified",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "b66c148782cba8597538d5b56cfb34a96937308a9bf18e185187e962a666056e",
+        "canonical_plan_sha256": "8e229773d67ff33b1bc31889acc682e89b035cc2fba284e8b9758c00030da250",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "5550c0cff05adaaee216aa2405de1d92feab553025c7d8fb08c6446a9ef6c893",
@@ -97,15 +97,15 @@
       "change_kind": "modified",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "d1d84a9cbb4f66c2ccda50ae73dc99070beeefcdaff143c194846656bcb883da",
+        "canonical_plan_sha256": "d3113509d62749758db4b91d15974c12a118b4c2483bcc295a91561b1c824704",
         "classifier_profile": "affected",
         "effective_profile": "affected",
-        "explanation_sha256": "608f54950bbdba33879f91b7c55c57364eb42f97ba6bf2ac2e8a78d7de7b313b",
+        "explanation_sha256": "1b8395ce285755550054d071c40212b4d3fe53d981b5fa049d78045114e4b733",
         "generator_gate_ids": ["continue_memory_preflight", "memory_sync"],
         "ignored_paths": [],
-        "path_family_tags": ["control_state", "dependency_graph_input", "registered_tex", "task_index_input"],
+        "path_family_tags": ["control_state", "registered_tex", "task_index_input"],
         "required_explanation_fragments": ["validation plan requested=affected effective=affected status=READY authority=legacy", "task_index_freshness"],
-        "required_gate_ids": ["research_control_diff", "dependency_graph_freshness", "task_index_freshness"],
+        "required_gate_ids": ["research_control_diff", "task_index_freshness"],
         "required_skipped_gate_ids": ["checkpoint_transaction", "targeted_pdf_build"],
         "status": "READY",
         "test_shards": ["tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"],
@@ -120,7 +120,7 @@
       "change_kind": "mixed",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "97eea4ddffb570968292495bae4e1913639d1d0855b4796b74344d2dd887d8db",
+        "canonical_plan_sha256": "82c88a87cd058d476cbd79c081ed9416992ab273fbf88a79ffca9357f7e52293",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "182858176011322bfc9948ca10f8ff830d609a40ce98e311359432ef392439ba",
@@ -143,7 +143,7 @@
       "change_kind": "modified",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "10c56b8c3dc33d8a83188d6b058f905d510e3451395316a3580082d5933407c7",
+        "canonical_plan_sha256": "dca388181c34fa1ca68907522623fe57a0f298ea3cb3c08be296b4cbd7ebd995",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "b0908b2647aaad42b6728d4a7307ff460ee2e518a9d473a558d8266cb7479319",
@@ -166,7 +166,7 @@
       "change_kind": "modified",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "5388193512ed3dac2350f20ef8b736bf9f7117623ad9900bbc11d6a2ad333ae2",
+        "canonical_plan_sha256": "5da4452939ffd784d68a71e886f51d85bb5e6a9d6f6a7b28877eefb765dbdf8b",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "27df992479baf63dd4bd7c787d1281b49f8671ef15b51b247b617bc0565b7eae",
@@ -189,7 +189,7 @@
       "change_kind": "modified",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "4f52df9eee094ec1bc5e9b34c183bb2e39c27cba403c17ffbf8632095b5f088e",
+        "canonical_plan_sha256": "e0aa5ef8f9b4a1450e916ff96198565158817ad381b6a7277325b8ea5f83cf32",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "608f54950bbdba33879f91b7c55c57364eb42f97ba6bf2ac2e8a78d7de7b313b",
@@ -212,7 +212,7 @@
       "change_kind": "modified",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "756ee1df261e42f965cbc93103430c0f6541a35a29f629cd3410bdd8559763a0",
+        "canonical_plan_sha256": "95e27c1d2be38696432f75dd98a8e80ad52647c867ec8c0b453ecf3263d2f3f7",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "6f9fa216223df7a59c081b7d160f476f4004c42c087257025b2075781beff20b",
@@ -235,7 +235,7 @@
       "change_kind": "modified",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "04d6d5d2bd5d7c5fd205eebbae1257d1b8a0c753ce5d1714698e1ce01362d536",
+        "canonical_plan_sha256": "ec2b76783ecf9b5bba5d0d05b7cf8008ae332b361f62740dba4f895d188b4fcc",
         "classifier_profile": "",
         "effective_profile": "doctor",
         "explanation_sha256": "970d0452d996969cb1dd366b2f8c684b569f2d385f3b5285324b5eb8bd97c063",
@@ -258,7 +258,7 @@
       "change_kind": "modified",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "9d4cecee419ce34ffd29101b8908037b5d5071b9507b3a9f0b74387ca17a23e8",
+        "canonical_plan_sha256": "25c19c08183aa09660503111c6889f6625840689d63f66a84dda0d6e4afea3b9",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "b0908b2647aaad42b6728d4a7307ff460ee2e518a9d473a558d8266cb7479319",
@@ -281,7 +281,7 @@
       "change_kind": "deleted",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "daa92397d666a3d461e88cadc2d233f732afcd2f3aa5345b104dab33929a3914",
+        "canonical_plan_sha256": "78e224c4da6cf61f5e88f35dbbdaf920cea86591e842405fc43e454489eea72e",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "608f54950bbdba33879f91b7c55c57364eb42f97ba6bf2ac2e8a78d7de7b313b",
@@ -295,7 +295,7 @@
         "test_shards": ["tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"],
         "unknown_paths": []
       },
-      "paths": ["research_control/tasks/RT-DELETED/00_TASK.yaml"],
+      "paths": ["research_control/tasks/RT-DELETED/jobs/completions/AJC-AJ-RT-DELETED-001.yaml"],
       "requested_profile": "affected",
       "scopes": []
     },
@@ -304,7 +304,7 @@
       "change_kind": "renamed",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "b4a291eeb5724f62b8ae285a82b6680e86e452dd55834c5ac06c51e8245f76d9",
+        "canonical_plan_sha256": "89ec4b465ef9d576bfe07d7b7284468e06a1fff10ce9c221ddfe242f83486fbc",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "a482ced624a5632ec45d136ee0d4cbf1515689273468310a71663509036095df",
@@ -327,7 +327,7 @@
       "change_kind": "mixed",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "c79e3b57f113bb61c78483738742afbe0c5cb28cf23c8874d68f1be0cabbfb67",
+        "canonical_plan_sha256": "23f24f317f7048fe75850106ecb15f2059426da9ec720cac087fa2b8fa23519d",
         "classifier_profile": "affected",
         "effective_profile": "affected",
         "explanation_sha256": "1c6fd3c2d0b242dd117fa953451892de1bcc5e7380d6895ea6cbf73c5f283552",
@@ -341,7 +341,7 @@
         "test_shards": ["tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json"],
         "unknown_paths": []
       },
-      "paths": ["README.md", "scripts/validation/plan.py", "research_control/tasks/RT-MATRIX/00_TASK.yaml"],
+      "paths": ["README.md", "scripts/validation/plan.py", "research_control/tasks/RT-MATRIX/jobs/completions/AJC-AJ-RT-MATRIX-001.yaml"],
       "requested_profile": "affected",
       "scopes": []
     },
@@ -350,7 +350,7 @@
       "change_kind": "added",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "5a75a783adf2fa114e58d6cb68ed70b9b7ef255e2237025ac0ef8d8d63d27420",
+        "canonical_plan_sha256": "73cdc6bf5dcdf29de770beb637cfadf6f78f633cd34ffb5596e92a39692568a4",
         "classifier_profile": "full",
         "effective_profile": "full",
         "explanation_sha256": "072a490bb6b78f3d3190f3a47ecfbd3afe2df7c8d12e6032557829c3c534bcf4",
@@ -373,7 +373,7 @@
       "change_kind": "local_only",
       "expected": {
         "blocked_paths": [],
-        "canonical_plan_sha256": "373969e8a174906efd667f4f6bdd9a5e67b83fe988797fadde04b96c5f70df79",
+        "canonical_plan_sha256": "0659c76bc489ad45d1624231ae99421663b27d8454706a530da740efecc38b32",
         "classifier_profile": "",
         "effective_profile": "fast",
         "explanation_sha256": "6466e551edb5f9cecc08ddcc09c474cc7d06d560703d61879924bc79b16621c2",

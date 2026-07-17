@@ -1,0 +1,85 @@
+{
+  "authority": {
+    "benchmark_authority": false,
+    "gate_chair_authority": false,
+    "operational_validation_only": true,
+    "physics_claim_authority": false,
+    "proof_authority": false
+  },
+  "classifier_contract": {
+    "concrete_input_count": 14,
+    "concrete_output_count": 3,
+    "path_family_tag": "dependency_graph_input",
+    "relevant_paths_selected_count": 17,
+    "relevant_paths_selected_status": "PASS",
+    "unrelated_path": "ontology/aether_flow_interpretation-lemen.md",
+    "unrelated_path_skip_status": "PASS"
+  },
+  "graph_source_fingerprint": {
+    "active_control_snapshot": "577ea9000e9bdd6fd88f51f29114b2b6fa66a8d4b783e26c761b94da8bb75875",
+    "active_snapshot_edge_count": 64699,
+    "active_snapshot_node_count": 18319,
+    "final_generated_graph_field": "output/research_dependency_graph.json#source_fingerprint",
+    "note": "The active-control snapshot fingerprint is recorded before the completion receipt because completion and generated FILE_OBJECT registry writes are themselves graph inputs."
+  },
+  "implementation_boundary": {
+    "graph_model_changed": false,
+    "graph_renderer_changed": false,
+    "live_graph_test_changed": false,
+    "planner_execution_authority_changed": false,
+    "workflow_changed": false
+  },
+  "live_double_build": {
+    "cache_policy": "ineligible",
+    "full_profile_gate_id": "test_shard_repository",
+    "full_profile_gate_selected": true,
+    "shared_live_build_count": 1,
+    "implicit_acceptance_live_build_count": 1,
+    "status": "PASS",
+    "test_id": "tests.test_render_dependency_graph.DependencyGraphTests.test_implicit_and_explicit_snapshot_apis_are_byte_identical",
+    "workflow_command": "make PYTHON=.venv/bin/python validate-project-control"
+  },
+  "manifest_contract": {
+    "contract_sha256": "a30818a2c9167028c04ad9e83087f2c29352b3bc79d299ed3962824866629b08",
+    "input_globs": [
+      "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "registries/AGENT_JOB_REGISTRY.csv",
+      "registries/RESEARCH_TASK_REGISTRY.csv",
+      "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+      "registries/DIRECTOR_DECISION_REGISTRY.csv",
+      "registries/ROLE_EXECUTION_REGISTRY.csv",
+      "registries/TEX_SOURCE_REGISTRY.csv",
+      "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+      "registries/FILE_OBJECT_REGISTRY.csv",
+      "research_control/program_state.yaml",
+      "research_control/tasks/**/jobs/completions/*.yaml",
+      "research_control/handoffs/handoff-*.yaml",
+      "scripts/research_control/dependency_graph_model.py",
+      "scripts/research_control/render_dependency_graph.py"
+    ],
+    "manifest_sha256": "a3b160df5beeb9ae0e8634274e16134b9d12c3dfb611c9eba01f5aa3687baff2",
+    "output_globs": [
+      "output/research_dependency_graph.json",
+      "output/research_dependency_graph.dot",
+      "wiki/indexes/research_dependency_graph.md"
+    ]
+  },
+  "migration_epoch": "shadow_planner",
+  "plan_task_id": "P7-T05",
+  "schema_id": "dependency_graph_path_selection_audit_v1",
+  "stable_full_repository_suite": {
+    "active_lifecycle_error_count": 1,
+    "active_lifecycle_failure_count": 3,
+    "active_lifecycle_skip_count": 1,
+    "active_lifecycle_status": "EXPECTED_MISSING_COMPLETION_FAILURES",
+    "active_lifecycle_test_count": 865,
+    "completed_lifecycle_error_count": 0,
+    "completed_lifecycle_failure_count": 0,
+    "completed_lifecycle_seconds": 206.458,
+    "completed_lifecycle_skip_count": 1,
+    "completed_lifecycle_status": "PASS",
+    "completed_lifecycle_test_count": 865
+  },
+  "status": "PASS",
+  "task_id": "RT-20260717-003"
+}

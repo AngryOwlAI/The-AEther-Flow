@@ -95,6 +95,26 @@ DOCUMENTATION_REGISTRY_PATHS = {
     "registries/HTML_EXPLAINER_REGISTRY.csv",
     "registries/MARKDOWN_SOURCE_REGISTRY.csv",
 }
+DEPENDENCY_GRAPH_REGISTRY_PATHS = {
+    "registries/DISTANCE_TO_GR_LEDGER.csv",
+    "registries/AGENT_JOB_REGISTRY.csv",
+    "registries/RESEARCH_TASK_REGISTRY.csv",
+    "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+    "registries/DIRECTOR_DECISION_REGISTRY.csv",
+    "registries/ROLE_EXECUTION_REGISTRY.csv",
+    "registries/TEX_SOURCE_REGISTRY.csv",
+    "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+    "registries/FILE_OBJECT_REGISTRY.csv",
+}
+DEPENDENCY_GRAPH_IMPLEMENTATION_PATHS = {
+    "scripts/research_control/dependency_graph_model.py",
+    "scripts/research_control/render_dependency_graph.py",
+}
+DEPENDENCY_GRAPH_OUTPUT_PATHS = {
+    "output/research_dependency_graph.json",
+    "output/research_dependency_graph.dot",
+    "wiki/indexes/research_dependency_graph.md",
+}
 AUTHORITY_MARKER_RE = re.compile(r"<!--\s*authority:\s*(explanatory|control)\s*-->")
 HUNK_RE = re.compile(r"@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 PATH_FAMILY_TAGS = (
@@ -401,17 +421,15 @@ def is_control_state_path(path: str) -> bool:
 
 def is_dependency_graph_input(path: str) -> bool:
     return (
-        is_control_state_path(path)
-        or path
-        in {
-            "registries/RESEARCH_TASK_REGISTRY.csv",
-            "registries/AGENT_JOB_REGISTRY.csv",
-            "registries/CLAIM_BOUNDARY_REGISTRY.csv",
-            "scripts/research_control/dependency_graph_model.py",
-            "scripts/research_control/render_dependency_graph.py",
-            "output/research_dependency_graph.json",
-            "output/research_dependency_graph.dot",
-        }
+        path == "research_control/program_state.yaml"
+        or fnmatch.fnmatch(
+            path,
+            "research_control/tasks/*/jobs/completions/*.yaml",
+        )
+        or fnmatch.fnmatch(path, "research_control/handoffs/handoff-*.yaml")
+        or path in DEPENDENCY_GRAPH_REGISTRY_PATHS
+        or path in DEPENDENCY_GRAPH_IMPLEMENTATION_PATHS
+        or path in DEPENDENCY_GRAPH_OUTPUT_PATHS
     )
 
 

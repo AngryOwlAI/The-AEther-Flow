@@ -1,0 +1,226 @@
+job_id: "AJ-RT-20260717-003-001"
+completion_id: "AJC-AJ-RT-20260717-003-001"
+task_id: "RT-20260717-003"
+decision_id: "DDR-20260717-003"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-003"
+status: "completed"
+created_at: "2026-07-17T08:02:46Z"
+started_at: "2026-07-17T08:02:46Z"
+completed_at: "2026-07-17T08:15:26Z"
+objective: "Implement and validate exact dependency-graph path selection while preserving the existing uncached full-suite live double-build."
+completion_summary: "The dependency-graph freshness gate now declares the renderer's complete 14-input and three-output source contract. Every concrete source and output selects the gate under affected validation generic task artifacts no longer do an unrelated registered source skips it and the unchanged uncached full repository suite retains one live double-build."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P7-T05"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "scripts/project_control/classify_project_changes.py"
+  - "scripts/research_control/dependency_graph_model.py"
+  - "scripts/research_control/render_dependency_graph.py"
+  - "tests/test_render_dependency_graph.py"
+outputs_created:
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_validation_change_matrix.py"
+  - "tests/fixtures/validation_plans/change_matrix_v1.json"
+  - "research_control/tasks/RT-20260717-003/artifacts/dependency_graph_path_selection_audit.json"
+  - "research_control/tasks/RT-20260717-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-003/jobs/completions/AJC-AJ-RT-20260717-003-001.yaml"
+implementation_results:
+  plan_task_id: "P7-T05"
+  migration_epoch: "shadow_planner"
+  implementation_status: "PASS"
+  manifest_input_glob_count: 14
+  manifest_output_glob_count: 3
+  concrete_relevant_path_count: 17
+  relevant_paths_select_freshness: true
+  generic_task_artifacts_select_freshness: false
+  unrelated_registered_source_skips_freshness: true
+  full_repository_gate_retained: true
+  full_repository_gate_cache_policy: "ineligible"
+  live_double_build_retained: true
+  graph_source_fingerprint_recorded: true
+  graph_contract_sha256: "a30818a2c9167028c04ad9e83087f2c29352b3bc79d299ed3962824866629b08"
+  production_graph_changed: false
+  graph_schema_changed: false
+  workflow_changed: false
+  planner_execution_authority_changed: false
+  legacy_execution_authoritative: true
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+validation_evidence:
+  selected_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "dependency_graph_manifest_contract"
+    - "dependency_graph_path_family_classifier"
+    - "affected_graph_input_selection"
+    - "affected_graph_output_selection"
+    - "unrelated_path_skip"
+    - "full_profile_live_double_build_retention"
+    - "graph_source_fingerprint"
+    - "golden_plan_determinism"
+    - "focused_classifier_tests"
+    - "focused_change_matrix_tests"
+    - "validation_manifest_tests"
+    - "validation_planner_tests"
+    - "dependency_graph_freshness"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "git_diff_check"
+  executed_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "dependency_graph_manifest_contract"
+    - "dependency_graph_path_family_classifier"
+    - "affected_graph_input_selection"
+    - "affected_graph_output_selection"
+    - "unrelated_path_skip"
+    - "full_profile_live_double_build_retention"
+    - "graph_source_fingerprint"
+    - "golden_plan_determinism"
+    - "focused_classifier_tests"
+    - "focused_change_matrix_tests"
+    - "validation_manifest_tests"
+    - "validation_planner_tests"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "dependency_graph_freshness"
+    - "git_diff_check"
+  audit_path: "research_control/tasks/RT-20260717-003/artifacts/dependency_graph_path_selection_audit.json"
+  active_lifecycle_repository_suite:
+    test_count: 865
+    skip_count: 1
+    failure_count: 3
+    error_count: 1
+    unittest_seconds: 203.556
+    status: "EXPECTED_MISSING_COMPLETION_FAILURES"
+    explanation: "Every active-state failure was a direct consequence of the declared completion path not yet existing; no implementation test failed."
+  stable_completed_state_repository_suite:
+    test_count: 865
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    unittest_seconds: 206.458
+    status: "PASS"
+command_results:
+  - ".venv/bin/python -m py_compile scripts/project_control/classify_project_changes.py tests/test_validation_change_matrix.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest tests.test_validation_change_matrix | exit_code=0 | 12 tests PASS in 1.404 seconds"
+  - ".venv/bin/python -m unittest tests.test_project_change_classifier | exit_code=0 | 58 tests PASS in 2.245 seconds"
+  - ".venv/bin/python -m unittest tests.test_validation_manifest tests.test_validation_planner | exit_code=0 | 37 tests PASS in 0.331 seconds"
+  - ".venv/bin/python -m unittest tests.test_render_dependency_graph.DependencyGraphTests.test_implicit_and_explicit_snapshot_apis_are_byte_identical | exit_code=0 | one retained live double-build PASS in 6.207 seconds"
+  - ".venv/bin/python -m unittest tests.test_validation_change_matrix tests.test_project_change_classifier tests.test_validation_manifest tests.test_validation_planner | exit_code=0 | 107 tests PASS in 3.836 seconds"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths <17 dependency graph paths> --json | exit_code=0 | READY selects dependency_graph_freshness for all inputs and outputs under legacy authority"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths ontology/aether_flow_interpretation-lemen.md --explain | exit_code=0 | READY skips dependency_graph_freshness"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile full --explain | exit_code=0 | READY selects uncached test_shard_repository and dependency_graph_freshness on the live diff"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest discover -s tests | active_lifecycle_exit_code=1 | 865 tests with three failures and one error all caused by the intentionally absent completion path"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state 865 tests PASS with one expected skip in 206.458 seconds"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | task index CSV and Markdown fresh"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json ... --markdown ... --dot ... and --check | exit_code=0 | graph JSON Markdown and DOT fresh"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS with two nonblocking existing-memory findings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | PASS with two nonblocking existing-memory findings"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-003-001 | initial_exit_code=1 | blocked before commit because checkpoint memory sync added FOLDER_MAP.md and the documentation-impact receipt had not yet listed that live generated derivative"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P7-T04 is completed and checkpointed; generation lease project binding clean entry tree predecessor guards and single invocation were verified before task activation."
+      - "Memory preflight canonical plan inspection classifier resolver and emitted-signal validation passed before implementation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Focused tests prove exact manifest contract affected selection unrelated-path exclusion deterministic golden plans and the retained live double-build."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Classifier matrix manifest planner and retained live-double-build tests pass; the active full-suite failures were exclusively the expected missing-completion lifecycle boundary."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "Persistence is authorized only through the governed compare-mode checkpoint after all declared gates pass."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Dedicated graph and task-index renderers produced fresh tracked outputs after task closure and memory synchronization."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks pass with two nonblocking existing-memory findings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The packet reports operational path-selection evidence only and preserves all scientific claim boundaries."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system validation-selection work only; no physics or derivation status changes."
+scientific_claims_changed: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-003/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 packet changes only the dependency-graph validation manifest classifier mapping focused matrix tests golden hashes and governed evidence. It does not change production graph extraction rendering schema workflow planner execution authority ordinary research canonical ontology source laws benchmark status Gate Chair authority proof status physics claims or derivation status."
+verdict: "v19_p7_t05_dependency_graph_path_selection_pass_no_physics_delta"
+coherent_resolution_summary: "The dependency-graph freshness gate now follows the renderer's actual source boundary and excludes unrelated task artifacts while full validation retains a single uncached live double-build."
+next_recommendation: "After governed checkpoint PASS route only P7-T06 unless live state requires a bounded repair or supersession."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 814
+    relationship_row_count: 4053
+    semantic_row_count: 814
+    vault_row_count: 814
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."
