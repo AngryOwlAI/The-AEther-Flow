@@ -1,0 +1,191 @@
+completion_id: "AJC-AJ-RT-20260717-011-001"
+job_id: "AJ-RT-20260717-011-001"
+task_id: "RT-20260717-011"
+decision_id: "DDR-20260717-011"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-17T15:13:28Z"
+status: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  related_plan_task_id: "P8-T07"
+  plan_phase_id: "P8"
+  implemented_task_scope: "One compact source-fingerprinted advisory diagnostic cache renderer routing reader ordinary-full exclusion Doctor and explicit selection parity packet."
+  recommendation_ids:
+    - "V19-R17"
+    - "V19-R31"
+    - "V19-R32"
+  completed_v19_tasks_this_packet:
+    - "P8-T07"
+  downstream_tasks_not_implemented:
+    - "P9-T01 and later v19 tasks"
+  all_applicable_plan_tasks_proven: false
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+output_paths:
+  - "scripts/research_control/render_route_diagnostics.py"
+  - "research_control/design/route_diagnostic_cache_schema_v1.md"
+  - "scripts/research_control/continue_research.py"
+  - "scripts/research_control/run_full_research_control_validation.py"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "tests/test_route_diagnostic_cache.py"
+  - "tests/fixtures/validation_plans/change_matrix_v1.json"
+  - "research_control/tasks/RT-20260717-011/artifacts/route_diagnostic_cache_parity.json"
+  - "research_control/tasks/RT-20260717-011/documentation_impact.yaml"
+command_results:
+  - "Pre-execution baseline | route_orbit_diagnostic=PASS advisory findings=160 duration_seconds=1.28 | metrics_build duration_seconds=1.75 | continuation duration_seconds=0.13"
+  - ".venv/bin/python -m py_compile scripts/research_control/render_route_diagnostics.py scripts/research_control/continue_research.py tests/test_route_diagnostic_cache.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_route_diagnostic_cache | exit_code=0 | 9 tests PASS"
+  - ".venv/bin/python -m unittest -v tests.test_validation_manifest tests.test_validation_profiles tests.test_validation_planner | exit_code=0 | 54 tests PASS"
+  - ".venv/bin/python -m unittest -v tests.test_validation_change_matrix | exit_code=0 | 12 tests PASS after 17 mechanically refreshed manifest-derived golden cases"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_continuation tests.test_routing_snapshot | exit_code=0 | 17 tests PASS"
+  - ".venv/bin/python -m unittest -v tests.test_run_full_research_control_validation | exit_code=0 | 2 tests PASS"
+  - ".venv/bin/python scripts/research_control/render_route_diagnostics.py --refresh --summary | exit_code=0 | PASS fresh cache 164 advisory warnings 0 hard candidates"
+  - ".venv/bin/python scripts/research_control/extract_route_signatures.py --json-summary | exit_code=0 | PASS 23 signatures 0 warnings"
+  - ".venv/bin/python scripts/research_control/validate_route_orbits.py --advisory-only --json-summary | exit_code=0 | PASS 942 signatures 160 advisory warnings 0 hard failures"
+  - "Direct diagnostic-context comparison | exit_code=0 | eight compact warning and authority fields equal"
+  - "Planner profile comparisons | exit_code=0 | ordinary full selects no route diagnostics Doctor selects both explicit cache obligation selects route signature"
+  - ".venv/bin/python scripts/research_control/validate_routing_snapshot.py --json | exit_code=0 | PASS ten active-state gates"
+  - "initial .venv/bin/python -m unittest discover -s tests | exit_code=1 | stale generated derivatives and deprecated local-full coverage projection identified"
+  - "final .venv/bin/python -m unittest discover -s tests | exit_code=0 | 887 tests PASS in 203.483 seconds with one expected skip"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | PASS with historical nonblocking warnings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS with one nonblocking finding"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-011-001 | exit_code=1 | compare-mode planner preflight safely blocked before staging because research_control/design/validation_gate_manifest_v1.yaml remains an unresolved governed path"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 815
+    relationship_row_count: 4056
+    semantic_row_count: 815
+    vault_row_count: 815
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "PASS"
+    before_local_retrieval_status: "PASS"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P8-T06 PASS dependency and clean baseline were verified before activation."
+  completion_internal:
+    status: "FAIL"
+    evidence:
+      - "The cache renderer enforces exact source fingerprints atomic replacement schema validation and a non-authority boundary."
+      - "The routing reader consumes findings only from a fresh cache and returns empty advisory findings for missing stale malformed or invalid state."
+      - "Checkpoint shadow planning retains research_control/design/validation_gate_manifest_v1.yaml as an unresolved governed path, so P8-T07 cannot claim PASS."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Nine focused fixtures 54 planner-profile tests 12 change-matrix tests 17 routing-continuation tests and two compatibility-wrapper tests pass."
+      - "The complete repository suite passes 887 tests with one expected skip."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Compare mode safely stopped before staging. The shadow-migration policy keeps the fully validating legacy checkpoint path authoritative for preserving this REPAIR_REQUIRED evidence."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The live cache refresh passed with exact direct diagnostic parity and no hard candidate or physics authority."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Repository memory preflight and post-write bootstrap pass; the new control schema is registered and its derivative is generated."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Research-control validation preserves the support-only no-physics-authority claim boundary."
+authorization_layers:
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  ledger_row_updated: false
+new_mathematical_payload: []
+scientific_claims_changed: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R17"
+    - "V19-R31"
+    - "V19-R32"
+  implements_plan_task_id: "P8-T07"
+  implementation_status: "REPAIR_REQUIRED"
+  coverage_effect: "support_only_route_diagnostic_cache_implemented_checkpoint_shadow_path_classification_repair_required_no_physics_promotion"
+claim_boundary:
+  allowed_claims:
+    - "P8-T07 completed as one bounded advisory cache packet"
+    - "fresh cache findings match direct diagnostic computation"
+    - "ordinary full excludes direct route diagnostics while Doctor and explicit obligations retain them"
+  forbidden_claims:
+    - "cache as full acceptance authority"
+    - "cache as physics proof"
+    - "route warning as hard gate"
+    - "route freeze"
+    - "source-law adoption"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+project_improvement_signals: []
+legacy_planner_shadow:
+  status: "REPAIR_REQUIRED"
+  affected_blocking_gate_ids:
+    - "checkpoint_transaction"
+  unexplained_mismatch: true
+  unknown_paths:
+    - "research_control/design/validation_gate_manifest_v1.yaml"
+  compare_mode_staged: false
+  compare_mode_committed: false
+  legacy_fallback_authoritative: true
+selected_next_route:
+  route_id: "v19_p8_t07_validation_manifest_classifier_shadow_parity_repair"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P8"
+  plan_task_id: "P8-T07"
+  task_name: "Repair validation-manifest path classification and rerun P8-T07 checkpoint shadow parity"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "validation_manifest_classifier_shadow_parity_repair"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system validation-path classification repair only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommended_action: "Create one separately bounded Validator Engineer repair for validation-manifest path classification and checkpoint shadow parity; rerun P8-T07 before P9-T01 and do not execute the repair in this generation."
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-011"
+documentation_impact:
+  status: "completed"
+  receipt_path: "research_control/tasks/RT-20260717-011/documentation_impact.yaml"
+  source_documentation_updated: true
+  updated_source_documentation:
+    - "research_control/design/route_diagnostic_cache_schema_v1.md"
+forbidden_conclusion_summary: "This cache is local operational support only. It does not replace full acceptance create a hard route gate freeze a route establish physics proof change ordinary research authority or alter derivation status."
+verdict: "v19_p8_t07_cached_advisory_route_diagnostics_repair_required_p9_t01_locked_no_physics_delta"
+coherent_resolution_summary: "The cache implementation and diagnostic parity are established while the fail-closed checkpoint shadow preflight identifies the validation-manifest path-classification repair required before P8-T07 can pass."

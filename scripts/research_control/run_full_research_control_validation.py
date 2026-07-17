@@ -236,8 +236,52 @@ def command_plan(
     return projection
 
 
-def coverage_map(commands: list[dict[str, Any]]) -> dict[str, bool]:
-    """Return the deprecated coverage view derived from manifest gate IDs."""
+def _declared_advisory_diagnostic(
+    gate_id: str,
+    command_fragment: str,
+    *,
+    repo_root: Path,
+) -> bool:
+    """Confirm an explicit diagnostic remains available outside ordinary full."""
+
+    manifest_path = repo_root / DEFAULT_MANIFEST.relative_to(REPO_ROOT)
+    manifest = load_manifest(manifest_path)
+    gate = next(
+        (
+            item
+            for item in manifest.get("gates", [])
+            if isinstance(item, dict) and item.get("gate_id") == gate_id
+        ),
+        None,
+    )
+    if not isinstance(gate, dict):
+        return False
+    commands = gate.get("command_compatibility", [])
+    profiles = gate.get("profiles", [])
+    obligations = gate.get("satisfies_obligations", [])
+    return (
+        gate.get("severity") == "advisory"
+        and gate.get("mutating") is False
+        and isinstance(commands, list)
+        and any(command_fragment in str(command) for command in commands)
+        and isinstance(profiles, list)
+        and "doctor" in profiles
+        and isinstance(obligations, list)
+        and gate_id in obligations
+    )
+
+
+def coverage_map(
+    commands: list[dict[str, Any]],
+    *,
+    repo_root: Path = REPO_ROOT,
+) -> dict[str, bool]:
+    """Return the deprecated coverage view derived from shared manifest data.
+
+    Direct advisory diagnostics count as compatibility-covered when they
+    remain explicitly declared for Doctor or role-obligation use, even though
+    P8-T07 intentionally omits their execution from the ordinary full plan.
+    """
 
     gate_ids = {str(command.get("gate_id", "")) for command in commands}
     obligations = {
@@ -265,12 +309,20 @@ def coverage_map(commands: list[dict[str, Any]]) -> dict[str, bool]:
         }.issubset(gate_ids),
         "task_index_validation": "task_index_freshness" in gate_ids,
         "claim_graph_validation": "claim_graph_validation" in gate_ids,
-        "route_signature_extraction_if_implemented": "route_signature_diagnostic" in gate_ids,
+        "route_signature_extraction_if_implemented": _declared_advisory_diagnostic(
+            "route_signature_diagnostic",
+            "extract_route_signatures.py",
+            repo_root=repo_root,
+        ),
         "no_bare_accepted_high_risk_rows": research_control_diff,
         "no_premature_efe_route": research_control_diff,
         "documentation_impact": "documentation_impact" in gate_ids,
         "diff_allowlist_check": research_control_diff,
-        "route_orbit_advisory": "route_orbit_diagnostic" in gate_ids,
+        "route_orbit_advisory": _declared_advisory_diagnostic(
+            "route_orbit_diagnostic",
+            "validate_route_orbits.py --advisory-only",
+            repo_root=repo_root,
+        ),
         "whitespace_diff_check": "git_diff_check" in gate_ids,
     }
 
@@ -329,7 +381,10 @@ def build_report(
         "distance_to_gr_delta": "none",
         "required_failure_labels": required_failures,
         "advisory_failure_labels": [],
-        "required_check_coverage": coverage_map(compatibility_plan),
+        "required_check_coverage": coverage_map(
+            compatibility_plan,
+            repo_root=repo_root,
+        ),
         "claim_language_obligation": {
             "predicate_id": CLAIM_SUPERSEDENCE_PREDICATE_ID,
             "satisfied_by": "legacy_validate_project_control",

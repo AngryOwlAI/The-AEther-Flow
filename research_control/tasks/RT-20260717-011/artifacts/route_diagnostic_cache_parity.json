@@ -1,0 +1,165 @@
+{
+  "schema_id": "route_diagnostic_cache_parity.v1",
+  "task_id": "RT-20260717-011",
+  "job_id": "AJ-RT-20260717-011-001",
+  "plan_task_id": "P8-T07",
+  "generated_at": "2026-07-17T15:03:00Z",
+  "status": "PASS",
+  "objective": "Cache compact support-only route diagnostics behind exact source fingerprints while excluding direct diagnostic execution from ordinary full selection.",
+  "parity_snapshot": {
+    "cache_generated_at": "2026-07-17T15:00:02Z",
+    "cache_path": ".local/route_diagnostics/route_diagnostic_cache_v1.json",
+    "cache_source_fingerprint": "7ed68823a6c8e0c95b656d0fbcae3300ef0ed1f7ca8a2514f4d2c4e0191b4e44",
+    "source_file_count": 5278,
+    "missing_source_count": 0,
+    "cache_bytes": 6749,
+    "refresh_real_seconds": 3.49,
+    "direct_diagnostic_context_seconds": 1.62678,
+    "cache_hit_continuation_real_seconds": 0.4
+  },
+  "direct_legacy_parity": {
+    "diagnostic_context": {
+      "status": "PASS",
+      "warning_count": 4,
+      "warning_ids": [
+        "post_gate_cycle_repeat",
+        "claimed_bridge_no_delta",
+        "candidate_missing_result",
+        "gate_ready_without_gate"
+      ],
+      "compared_fields": [
+        "diagnostic_warning_count",
+        "diagnostic_warning_ids",
+        "payload_density_warning",
+        "route_orbit_warning",
+        "same_burden_repetition_warning",
+        "gate_ready_without_gate_warning",
+        "warning_hard_gates_created",
+        "physics_claim_authority_created"
+      ],
+      "all_compared_fields_equal": true
+    },
+    "route_signature": {
+      "command": ".venv/bin/python scripts/research_control/extract_route_signatures.py --json-summary",
+      "status": "PASS",
+      "source_task_count": 23,
+      "signature_count": 23,
+      "warning_count": 0,
+      "extraction_error_count": 0,
+      "cached_summary_equal": true,
+      "direct_real_seconds": 0.11
+    },
+    "route_orbit": {
+      "command": ".venv/bin/python scripts/research_control/validate_route_orbits.py --advisory-only --json-summary",
+      "status": "PASS",
+      "source_task_count": 942,
+      "signature_count": 942,
+      "warning_count": 160,
+      "extraction_error_count": 0,
+      "warning_ids": [
+        "repeated_burden_new_payload_missing_route_cycle_control",
+        "scoped_gate_followed_by_construction_before_boundary_sync",
+        "selector_same_shape_chain_missing_route_cycle_control"
+      ],
+      "cached_summary_equal": true,
+      "direct_real_seconds": 1.33
+    }
+  },
+  "cache_findings": {
+    "warning_count": 164,
+    "warning_ids": [
+      "candidate_missing_result",
+      "claimed_bridge_no_delta",
+      "gate_ready_without_gate",
+      "post_gate_cycle_repeat",
+      "repeated_burden_new_payload_missing_route_cycle_control",
+      "scoped_gate_followed_by_construction_before_boundary_sync",
+      "selector_same_shape_chain_missing_route_cycle_control"
+    ],
+    "legacy_hard_candidate_count": 0,
+    "route_signature_extraction_error_count": 0,
+    "route_orbit_extraction_error_count": 0
+  },
+  "freshness_fixtures": {
+    "warning": "PASS",
+    "no_warning": "PASS",
+    "fresh": "PASS",
+    "missing": "PASS_ADVISORY_EMPTY",
+    "stale": "PASS_ADVISORY_EMPTY",
+    "parse_error": "PASS_ADVISORY_EMPTY",
+    "invalid_authority": "PASS_ADVISORY_EMPTY",
+    "task_fingerprint_invalidation": "PASS",
+    "job_fingerprint_invalidation": "PASS",
+    "completion_fingerprint_invalidation": "PASS",
+    "handoff_fingerprint_invalidation": "PASS",
+    "policy_fingerprint_invalidation": "PASS"
+  },
+  "profile_selection": {
+    "ordinary_full": {
+      "status": "READY",
+      "selected_route_gates": []
+    },
+    "doctor_local_retrieval": {
+      "status": "READY",
+      "selected_route_gates": [
+        "route_signature_diagnostic",
+        "route_orbit_diagnostic"
+      ]
+    },
+    "explicit_cache_regeneration": {
+      "status": "READY",
+      "selected_route_gates": [
+        "route_signature_diagnostic"
+      ]
+    },
+    "explicit_route_orbit_obligation_fixture": "PASS"
+  },
+  "validation_evidence": {
+    "focused_route_cache_tests": {
+      "status": "PASS",
+      "test_count": 9
+    },
+    "validation_manifest_profile_planner_tests": {
+      "status": "PASS",
+      "test_count": 54
+    },
+    "validation_change_matrix_tests": {
+      "status": "PASS",
+      "test_count": 12,
+      "golden_cases_refreshed": 17
+    },
+    "routing_and_continuation_tests": {
+      "status": "PASS",
+      "test_count": 17
+    },
+    "local_full_compatibility_tests": {
+      "status": "PASS",
+      "test_count": 2
+    },
+    "full_repository_tests": {
+      "status": "PASS",
+      "test_count": 887,
+      "expected_skip_count": 1,
+      "seconds": 203.483
+    },
+    "blocking_gate_shadow_comparison": {
+      "status": "PASS",
+      "changed_blocking_gate_count": 0,
+      "all_selected_blocking_gates_retain_legacy_evidence": true
+    }
+  },
+  "authority_boundary": {
+    "support_only": true,
+    "advisory_only": true,
+    "hard_gate_created": false,
+    "route_freeze_authorized": false,
+    "checkpoint_authority": false,
+    "physics_claim_authority": false,
+    "physics_promotion_authorized": false,
+    "source_records_remain_authority": true
+  },
+  "ordinary_research_handoff_preserved": "handoff-0740",
+  "ordinary_research_state_changed": false,
+  "scientific_claims_changed": false,
+  "distance_to_gr_changed": false
+}

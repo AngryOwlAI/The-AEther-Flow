@@ -639,8 +639,69 @@ def route_orbit_diagnostic_context(repo_root: Path = REPO_ROOT) -> dict[str, obj
     return context
 
 
+def cached_route_diagnostic_context(
+    repo_root: Path = REPO_ROOT,
+) -> dict[str, object]:
+    """Read support-only diagnostics without computing historical metrics."""
+
+    try:
+        try:
+            from render_route_diagnostics import routing_diagnostics_from_cache
+        except ImportError:  # pragma: no cover - package import path
+            from scripts.research_control.render_route_diagnostics import (
+                routing_diagnostics_from_cache,
+            )
+        context = routing_diagnostics_from_cache(repo_root)
+    except Exception as exc:  # pragma: no cover - defensive advisory fallback
+        base_record = warning_record(
+            triggered=False,
+            warning_ids=[],
+            recommended_guard_action=(
+                "Route diagnostics cache could not be inspected; run "
+                "scripts/research_control/render_route_diagnostics.py "
+                "--refresh --summary. Routing may continue because the "
+                "diagnostic is advisory only."
+            ),
+        )
+        context = {
+            "source": "scripts/research_control/render_route_diagnostics.py",
+            "cache_status": "unavailable",
+            "freshness_notice": {
+                "status": "unavailable",
+                "advisory_only": True,
+                "hard_gate": False,
+                "errors": [str(exc)],
+            },
+            "warnings_are_advisory_only": True,
+            "warning_hard_gates_created": False,
+            "physics_claim_authority_created": False,
+            "payload_density_warning": dict(base_record),
+            "route_orbit_warning": dict(base_record),
+            "same_burden_repetition_warning": dict(base_record),
+            "gate_ready_without_gate_warning": dict(base_record),
+            "recommended_guard_action": base_record[
+                "recommended_guard_action"
+            ],
+            "diagnostic_warning_count": 0,
+            "diagnostic_warning_ids": [],
+            "payload_density_metrics": {},
+            "route_orbit_risk_metrics": {},
+        }
+    context["diagnostic_cache_status"] = str(
+        context.get("cache_status", "unavailable")
+    )
+    context["status"] = "excluded_from_narrow_snapshot"
+    return context
+
+
 def live_routing_snapshot() -> ValidatedContinuationInput:
-    return make_routing_snapshot(build_routing_snapshot(REPO_ROOT))
+    payload = build_routing_snapshot(REPO_ROOT)
+    payload["route_orbit_diagnostics"] = cached_route_diagnostic_context(REPO_ROOT)
+    payload.pop("routing_snapshot_fingerprint", None)
+    payload["routing_snapshot_fingerprint"] = hashlib.sha256(
+        _canonical_json(payload).encode("utf-8")
+    ).hexdigest()
+    return make_routing_snapshot(payload)
 
 
 def continuation_status(

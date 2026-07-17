@@ -1354,15 +1354,23 @@
     },
     {
       "gate_id": "route_signature_diagnostic",
-      "description": "Legacy-compatible declarative contract for route_signature_extraction; execution remains under legacy authority.",
+      "description": "Legacy-compatible direct route-signature diagnostic plus explicit local cache refresh and read-only freshness inspection; execution remains advisory under legacy authority.",
       "owner_role": "process-integrity-auditor@0.1.0",
       "adapter": "legacy:lvg-024",
       "command_compatibility": [
-        "extract_route_signatures.py sample"
+        "extract_route_signatures.py sample",
+        "scripts/research_control/render_route_diagnostics.py --refresh --summary",
+        "scripts/research_control/render_route_diagnostics.py --check --summary"
       ],
       "input_globs": [
+        ".local/route_diagnostics/route_diagnostic_cache_v1.json",
+        "research_control/design/route_diagnostic_cache_schema_v1.md",
         "research_control/**",
-        "scripts/research_control/**"
+        "scripts/research_control/**",
+        "registries/AGENT_JOB_REGISTRY.csv",
+        "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+        "registries/DIRECTOR_DECISION_REGISTRY.csv",
+        "registries/RESEARCH_TASK_REGISTRY.csv"
       ],
       "output_globs": [],
       "global_invariant_justification": null,
@@ -1375,25 +1383,37 @@
       "prerequisites": [],
       "supersedes": [],
       "satisfies_obligations": [
+        "route_diagnostic_cache_freshness",
+        "route_diagnostic_cache_regeneration",
         "route_signature_diagnostic"
       ],
       "profiles": [
+        "affected",
         "doctor",
         "full"
       ],
       "path_tags": [
-        "research_control",
-        "diagnostic"
+        "ci_orchestration",
+        "role_or_schema_contract",
+        "validator_code"
       ],
       "selection": {
-        "operator": "all",
+        "operator": "any",
         "conditions": [
           {
-            "condition_id": "profile_selected",
+            "condition_id": "doctor_profile_selected",
             "kind": "profile_selected",
             "values": [
-              "doctor",
-              "full"
+              "doctor"
+            ]
+          },
+          {
+            "condition_id": "route_policy_path_tag",
+            "kind": "path_tag_any",
+            "values": [
+              "ci_orchestration",
+              "role_or_schema_contract",
+              "validator_code"
             ]
           }
         ]
@@ -1406,7 +1426,7 @@
     },
     {
       "gate_id": "route_orbit_diagnostic",
-      "description": "Legacy-compatible declarative contract for route_orbit_diagnostic; execution remains under legacy authority.",
+      "description": "Explicit direct legacy route-orbit comparison retained for Doctor or role-obligation diagnostics; ordinary full selection excludes it.",
       "owner_role": "process-integrity-auditor@0.1.0",
       "adapter": "legacy:lvg-025",
       "command_compatibility": [
@@ -1444,8 +1464,7 @@
             "condition_id": "profile_selected",
             "kind": "profile_selected",
             "values": [
-              "doctor",
-              "full"
+              "doctor"
             ]
           }
         ]
@@ -2020,8 +2039,7 @@
         "profile_validate_project_control",
         "profile_validate_memory",
         "profile_validate_html_explainers",
-        "profile_audit_documentation_surfaces",
-        "route_orbit_diagnostic"
+        "profile_audit_documentation_surfaces"
       ],
       "supersedes": [],
       "satisfies_obligations": [

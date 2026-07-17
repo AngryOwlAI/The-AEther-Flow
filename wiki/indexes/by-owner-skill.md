@@ -339,6 +339,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-REFUTER-COUNTERMODEL-FIXTURE-CATALOG-V1` `wiki/markdown/md-research-control-design-refuter-countermodel-fixture-catalog-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-REFUTER-OBSTRUCTION-SCHEMA-V1` `wiki/markdown/md-research-control-design-refuter-obstruction-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `wiki/markdown/md-research-control-design-research-dependency-graph-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-ROUTE-DIAGNOSTIC-CACHE-SCHEMA-V1` `wiki/markdown/md-research-control-design-route-diagnostic-cache-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ROUTE-ORBIT-FREEZE-THRESHOLD-POLICY-V1` `wiki/markdown/md-research-control-design-route-orbit-freeze-threshold-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ROUTE-ORBIT-GATING-POLICY-V16` `wiki/markdown/md-research-control-design-route-orbit-gating-policy-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION` `wiki/markdown/md-research-control-design-route-signature-definition.md`
@@ -1083,6 +1084,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-REFUTER-COUNTERMODEL-FIXTURE-CATALOG-V1` `research_control/design/refuter_countermodel_fixture_catalog_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-REFUTER-OBSTRUCTION-SCHEMA-V1` `research_control/design/refuter_obstruction_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-RESEARCH-DEPENDENCY-GRAPH-SCHEMA` `research_control/design/research_dependency_graph_schema.md`
+- `MD-RESEARCH-CONTROL-DESIGN-ROUTE-DIAGNOSTIC-CACHE-SCHEMA-V1` `research_control/design/route_diagnostic_cache_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ROUTE-ORBIT-FREEZE-THRESHOLD-POLICY-V1` `research_control/design/route_orbit_freeze_threshold_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ROUTE-ORBIT-GATING-POLICY-V16` `research_control/design/route_orbit_gating_policy_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ROUTE-SIGNATURE-DEFINITION` `research_control/design/route_signature_definition.md`

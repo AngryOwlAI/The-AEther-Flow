@@ -1,0 +1,43 @@
+task_id: "RT-20260717-011"
+task_type: "cached_advisory_route_diagnostics"
+status: "completed"
+created_at: "2026-07-17T14:35:28Z"
+updated_at: "2026-07-17T15:34:06Z"
+closed_at: "2026-07-17T15:13:28Z"
+parent_task_id: "RT-20260717-010"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260717-011"
+current_job_id: "AJ-RT-20260717-011-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-011"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached dependency-ready P8-T07 after the governed P8-T06 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P8"
+  plan_task_id: "P8-T07"
+  plan_task_name: "Cache advisory route diagnostics and remove them from default blocking paths"
+  recommendation_ids:
+    - "V19-R17"
+    - "V19-R31"
+    - "V19-R32"
+objective: "Cache compact route-orbit and payload-density diagnostics behind source fingerprints and remove their direct legacy scans from ordinary full-profile selection while preserving explicit advisory diagnostics."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system advisory diagnostic caching only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p8_t07_cached_advisory_route_diagnostics_repair_required_p9_t01_locked"
+claim_boundary_id: "CB-V19-P8-T07-ROUTE-DIAGNOSTIC-CACHE-001"
+claim_boundary:
+  allowed_scope: "One compact support-only route-diagnostic cache renderer schema routing reader manifest selection update focused fixture module mechanical validation-plan golden hash refresh deprecated local-full advisory coverage projection repair and task-local evidence."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+next_recommended_action: "Create one separately bounded Validator Engineer repair for validation-manifest path classification and checkpoint shadow parity; rerun P8-T07 before P9-T01."
+documentation_impact_id: "DI-RT-20260717-011-001"
+completion_id: "AJC-AJ-RT-20260717-011-001"
+notes: "The P8-T07 implementation, diagnostic parity, profile selection, and 887-test repository suite pass, but the task returns REPAIR_REQUIRED because compare-mode checkpoint planning leaves research_control/design/validation_gate_manifest_v1.yaml as an unresolved governed path. P9-T01 remains locked."
