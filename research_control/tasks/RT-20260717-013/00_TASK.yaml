@@ -1,0 +1,42 @@
+task_id: "RT-20260717-013"
+task_type: "traceability_dependency_injection"
+status: "completed"
+created_at: "2026-07-17T17:13:39Z"
+updated_at: "2026-07-17T17:29:06Z"
+closed_at: "2026-07-17T17:29:06Z"
+parent_task_id: "RT-20260717-012"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260717-013"
+current_job_id: "AJ-RT-20260717-013-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-013"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached dependency-ready P9-T01 after the governed P8-T07 repair checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T01"
+  plan_task_name: "Add dependency injection and minimal-fixture builders to support-traceability validators"
+  recommendation_ids:
+    - "V19-R18"
+    - "V19-R19"
+objective: "Add one shared raw-input dependency layer and one minimal-fixture builder for the v1 and v18 support-traceability validators while preserving default production behavior and every fail-closed authority and hash check."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system traceability validator testability only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p9_t01_traceability_dependency_injection_pass_p9_t02_dependency_ready_after_checkpoint"
+claim_boundary_id: "CB-V19-P9-T01-TRACEABILITY-DEPENDENCY-INJECTION-001"
+claim_boundary:
+  allowed_scope: "Shared raw-input dependency layer, v1 and v18 validator adaptation, one minimal traceability fixture builder, task-local equivalence evidence, and governed derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+next_recommended_action: "After governed checkpoint PASS route one separately bounded P9-T02 v1 traceability-test conversion packet."
+documentation_impact_id: "DI-RT-20260717-013-001"
+completion_id: "AJC-AJ-RT-20260717-013-001"
+notes: "The plan-listed helpers alone cannot introduce dependency injection into production validators. This bounded task therefore also authorizes the two inspected validator modules to consume the shared raw-input dependency layer; P9-T02 and P9-T03 retain ownership of converting the existing full-repository-copy tests."

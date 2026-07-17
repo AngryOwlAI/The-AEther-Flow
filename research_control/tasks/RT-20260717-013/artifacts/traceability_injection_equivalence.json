@@ -1,0 +1,211 @@
+{
+  "authority_boundary": {
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "baseline": {
+    "full_copy_test_count": 9,
+    "full_copy_test_runtime_seconds": 83.731,
+    "live_v18_entry_count": 5,
+    "live_v18_runtime_seconds": 0.002104,
+    "live_v1_entry_count": 3,
+    "live_v1_runtime_seconds": 0.001647
+  },
+  "dependency_injection": {
+    "injectable_raw_inputs": [
+      "repo_root",
+      "registry",
+      "file_loader",
+      "hash_provider",
+      "proof_normal_form_rows"
+    ],
+    "prevalidated_results_injectable": false,
+    "v1": {
+      "file_reads": [
+        "scripts/research_control/support_formalization/finite_toy_tag_obstruction.py",
+        "tests/test_support_only_finite_toy_tag_obstruction.py",
+        "research_control/tasks/RT-20260630-028/artifacts/finite_toy_tag_obstruction_report.json",
+        "research_control/tasks/RT-20260630-028/artifacts/finite_toy_tag_removal_traceability.yaml",
+        "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex",
+        "research_control/tasks/RT-20260630-028/artifacts/finite_toy_tag_obstruction_report.json",
+        "research_control/tasks/RT-20260630-028/artifacts/finite_toy_tag_removal_traceability.yaml"
+      ],
+      "hash_calls": 5
+    },
+    "v18": {
+      "file_reads": [
+        "research_control/design/source_equivalence_typed_object_schema_v1.md",
+        "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md",
+        "scripts/research_control/support_formalization/typed_eqsrc_orbit_checker.py",
+        "tests/test_typed_eqsrc_orbit_checker.py",
+        "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_report.json",
+        "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_report.json",
+        "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md",
+        "research_control/tasks/RT-20260708-021/artifacts/closure_countermodel_generator_spec_v1.md",
+        "scripts/research_control/support_formalization/closure_countermodel_generator.py",
+        "tests/test_closure_countermodel_generator.py",
+        "research_control/tasks/RT-20260708-021/artifacts/closure_countermodel_generator_report.json",
+        "research_control/tasks/RT-20260708-021/artifacts/closure_countermodel_generator_report.json",
+        "research_control/design/no_target_import_guard_map.md",
+        "research_control/tasks/RT-20260708-022/artifacts/no_target_import_mutation_tester_spec_v1.md",
+        "scripts/research_control/support_formalization/no_target_import_mutation_tester.py",
+        "tests/test_no_target_import_mutation_tester.py",
+        "research_control/tasks/RT-20260708-022/artifacts/no_target_import_mutation_tester_report.json",
+        "research_control/tasks/RT-20260708-022/artifacts/no_target_import_mutation_tester_report.json",
+        "research_control/design/metric_use_ledger_schema_v1.md",
+        "registries/METRIC_USE_LEDGER.csv",
+        "research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_spec_v1.md",
+        "scripts/research_control/validate_metric_use_tex_references.py",
+        "tests/test_validate_metric_use_tex_references.py",
+        "research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_report.json",
+        "research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_report.json",
+        "research_control/design/source_detector_readout_semantics_burden_v1.md",
+        "research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex",
+        "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_spec_v1.md",
+        "scripts/research_control/support_formalization/detector_placeholder_collapse_checker.py",
+        "tests/test_detector_placeholder_collapse_checker.py",
+        "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_report.json",
+        "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_report.json"
+      ],
+      "hash_calls": 27
+    }
+  },
+  "failure_equivalence": [
+    {
+      "case_id": "missing_file",
+      "default_error": {
+        "class": "TraceabilityRegistryError",
+        "message": "missing path: missing/formalization.tex"
+      },
+      "injected_error": {
+        "class": "TraceabilityRegistryError",
+        "message": "missing path: missing/formalization.tex"
+      },
+      "status": "PASS"
+    },
+    {
+      "case_id": "hash_mismatch",
+      "default_error": {
+        "class": "TraceabilityRegistryError",
+        "message": "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL artifact hash mismatch for research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex: b589c29e440750e0dacaebb5d2ad86fd5bf0b593b7e27645052fcbf55839a161 != 0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "injected_error": {
+        "class": "TraceabilityRegistryError",
+        "message": "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL artifact hash mismatch for research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex: b589c29e440750e0dacaebb5d2ad86fd5bf0b593b7e27645052fcbf55839a161 != 0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "status": "PASS"
+    },
+    {
+      "case_id": "generated_authority_path",
+      "default_error": {
+        "class": "TraceabilityRegistryError",
+        "message": "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL uses generated or local path as authority: wiki/forbidden-authority.md"
+      },
+      "injected_error": {
+        "class": "TraceabilityRegistryError",
+        "message": "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL uses generated or local path as authority: wiki/forbidden-authority.md"
+      },
+      "status": "PASS"
+    },
+    {
+      "case_id": "proof_authority",
+      "default_error": {
+        "class": "TraceabilityRegistryError",
+        "message": "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL proof_authority is not false"
+      },
+      "injected_error": {
+        "class": "TraceabilityRegistryError",
+        "message": "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL proof_authority is not false"
+      },
+      "status": "PASS"
+    },
+    {
+      "case_id": "missing_pnf_row",
+      "default_error": {
+        "class": "V18TraceabilityError",
+        "message": "SFR-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER missing proof-normal-form row: PNF-MISSING"
+      },
+      "injected_error": {
+        "class": "V18TraceabilityError",
+        "message": "SFR-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER missing proof-normal-form row: PNF-MISSING"
+      },
+      "status": "PASS"
+    }
+  ],
+  "fixture_builds": {
+    "v1": {
+      "byte_count": 33850,
+      "entry_ids": [
+        "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL"
+      ],
+      "file_count": 6,
+      "files": [
+        "research_control/design/support_formalization_traceability_registry_v1.yaml",
+        "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex",
+        "research_control/tasks/RT-20260630-028/artifacts/finite_toy_tag_obstruction_report.json",
+        "research_control/tasks/RT-20260630-028/artifacts/finite_toy_tag_removal_traceability.yaml",
+        "scripts/research_control/support_formalization/finite_toy_tag_obstruction.py",
+        "tests/test_support_only_finite_toy_tag_obstruction.py"
+      ],
+      "registry_path": "research_control/design/support_formalization_traceability_registry_v1.yaml"
+    },
+    "v18": {
+      "byte_count": 289013,
+      "entry_ids": [
+        "SFR-V18-P7-T02-TYPED-EQSRC-ORBIT-CHECKER",
+        "SFR-V18-P7-T03-CLOSURE-COUNTERMODEL-GENERATOR",
+        "SFR-V18-P7-T04-NO-TARGET-IMPORT-MUTATION-TESTER",
+        "SFR-V18-P7-T05-METRIC-USE-TEX-VALIDATOR",
+        "SFR-V18-P7-T06-DETECTOR-PLACEHOLDER-COLLAPSE-CHECKER"
+      ],
+      "file_count": 28,
+      "files": [
+        "registries/METRIC_USE_LEDGER.csv",
+        "registries/PROOF_NORMAL_FORM_REGISTRY.csv",
+        "research_control/design/metric_use_ledger_schema_v1.md",
+        "research_control/design/no_target_import_guard_map.md",
+        "research_control/design/source_detector_readout_semantics_burden_v1.md",
+        "research_control/design/source_equivalence_typed_object_schema_v1.md",
+        "research_control/design/support_formalization_traceability_registry_v18.yaml",
+        "research_control/tasks/RT-20260708-010/artifacts/source_detector_readout_candidate_v1.tex",
+        "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_report.json",
+        "research_control/tasks/RT-20260708-020/artifacts/typed_eqsrc_orbit_checker_spec_v1.md",
+        "research_control/tasks/RT-20260708-021/artifacts/closure_countermodel_generator_report.json",
+        "research_control/tasks/RT-20260708-021/artifacts/closure_countermodel_generator_spec_v1.md",
+        "research_control/tasks/RT-20260708-022/artifacts/no_target_import_mutation_tester_report.json",
+        "research_control/tasks/RT-20260708-022/artifacts/no_target_import_mutation_tester_spec_v1.md",
+        "research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_report.json",
+        "research_control/tasks/RT-20260708-023/artifacts/metric_use_tex_validator_spec_v1.md",
+        "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_report.json",
+        "research_control/tasks/RT-20260708-024/artifacts/detector_placeholder_collapse_checker_spec_v1.md",
+        "scripts/research_control/support_formalization/closure_countermodel_generator.py",
+        "scripts/research_control/support_formalization/detector_placeholder_collapse_checker.py",
+        "scripts/research_control/support_formalization/no_target_import_mutation_tester.py",
+        "scripts/research_control/support_formalization/typed_eqsrc_orbit_checker.py",
+        "scripts/research_control/validate_metric_use_tex_references.py",
+        "tests/test_closure_countermodel_generator.py",
+        "tests/test_detector_placeholder_collapse_checker.py",
+        "tests/test_no_target_import_mutation_tester.py",
+        "tests/test_typed_eqsrc_orbit_checker.py",
+        "tests/test_validate_metric_use_tex_references.py"
+      ],
+      "registry_path": "research_control/design/support_formalization_traceability_registry_v18.yaml"
+    }
+  },
+  "fixture_validation": {
+    "v18_entry_count": 5,
+    "v18_runtime_seconds": 0.001643,
+    "v18_status": "PASS",
+    "v1_entry_count": 1,
+    "v1_runtime_seconds": 0.000489,
+    "v1_status": "PASS"
+  },
+  "plan_task_id": "P9-T01",
+  "recommendation_ids": [
+    "V19-R18",
+    "V19-R19"
+  ],
+  "status": "PASS"
+}

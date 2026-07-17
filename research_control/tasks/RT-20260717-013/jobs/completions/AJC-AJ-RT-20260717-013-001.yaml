@@ -1,0 +1,247 @@
+job_id: "AJ-RT-20260717-013-001"
+completion_id: "AJC-AJ-RT-20260717-013-001"
+task_id: "RT-20260717-013"
+decision_id: "DDR-20260717-013"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-013"
+status: "completed"
+created_at: "2026-07-17T17:13:39Z"
+started_at: "2026-07-17T17:13:39Z"
+completed_at: "2026-07-17T17:29:06Z"
+objective: "Implement and verify one raw-input dependency layer and minimal selected-entry fixture builder shared by the v1 and v18 support-traceability validators without weakening production validation."
+completion_summary: "Added one shared raw-input dependency object to the v1 and v18 support-traceability validators and one selected-entry minimal-fixture builder while preserving default production behavior and fail-closed checks. Task-local equivalence, focused traceability, and the full repository suite pass. P9-T01 is accepted through the bounded packet and P9-T02 becomes dependency-ready only after the governed checkpoint; P9-T02 and P9-T03 were not executed."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P9-T01"
+  - "scripts/research_control/support_formalization/validate_traceability_registry.py"
+  - "scripts/research_control/support_formalization/validate_traceability_registry_v18.py"
+  - "tests/test_support_formalization_traceability_registry.py"
+  - "tests/test_support_formalization_traceability_registry_v18.py"
+  - "research_control/tasks/RT-20260717-012/jobs/completions/AJC-AJ-RT-20260717-012-001.yaml"
+outputs_created:
+  - "scripts/research_control/support_formalization/traceability_io.py"
+  - "scripts/research_control/support_formalization/validate_traceability_registry.py"
+  - "scripts/research_control/support_formalization/validate_traceability_registry_v18.py"
+  - "tests/support/traceability_fixture_builder.py"
+  - "research_control/tasks/RT-20260717-013/artifacts/validate_traceability_injection.py"
+  - "research_control/tasks/RT-20260717-013/artifacts/traceability_injection_equivalence.json"
+  - "research_control/tasks/RT-20260717-013/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-013/jobs/completions/AJC-AJ-RT-20260717-013-001.yaml"
+implementation_results:
+  plan_task_id: "P9-T01"
+  implementation_status: "PASS"
+  injectable_raw_inputs:
+    - "repo_root"
+    - "registry"
+    - "file_loader"
+    - "hash_provider"
+    - "proof_normal_form_rows"
+  prevalidated_results_injectable: false
+  default_production_behavior_preserved: true
+  v1_live_entry_count: 3
+  v18_live_entry_count: 5
+  v1_minimal_fixture_entry_count: 1
+  v1_minimal_fixture_file_count: 6
+  v1_minimal_fixture_byte_count: 33850
+  v18_minimal_fixture_entry_count: 5
+  v18_minimal_fixture_file_count: 28
+  v18_minimal_fixture_byte_count: 289013
+  failure_equivalence_case_count: 5
+  failure_equivalence_pass_count: 5
+  focused_traceability_test_count: 9
+  full_repository_test_count: 889
+  full_repository_skip_count: 1
+  p9_t02_executed: false
+  p9_t03_executed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+validation_evidence:
+  selected_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "live_v1_traceability_registry"
+    - "live_v18_traceability_registry"
+    - "traceability_dependency_injection_equivalence"
+    - "focused_traceability_tests"
+    - "affected_profile_selection"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "git_diff_check"
+  executed_gate_ids:
+    - "memory_preflight"
+    - "classify_project_changes"
+    - "resolve_project_improvement"
+    - "live_v1_traceability_registry"
+    - "live_v18_traceability_registry"
+    - "traceability_dependency_injection_equivalence"
+    - "focused_traceability_tests"
+    - "affected_profile_selection"
+    - "stable_full_repository_tests"
+    - "project_improvement_signals"
+    - "memory_sync"
+    - "memory_core"
+    - "documentation_impact"
+    - "research_control_diff"
+    - "git_diff_check"
+  equivalence_report_path: "research_control/tasks/RT-20260717-013/artifacts/traceability_injection_equivalence.json"
+  affected_profile:
+    status: "READY"
+    selected_gate_count: 14
+    execution_authority: "legacy"
+performance_evidence:
+  baseline_full_copy_tests:
+    test_count: 9
+    duration_seconds: 83.731
+    status: "PASS"
+  stable_focused_traceability_tests:
+    test_count: 9
+    duration_seconds: 74.523
+    status: "PASS"
+  v1_minimal_fixture_validation:
+    entry_count: 1
+    duration_seconds: 0.000489
+    status: "PASS"
+  v18_minimal_fixture_validation:
+    entry_count: 5
+    duration_seconds: 0.001643
+    status: "PASS"
+  stable_completed_state_full_suite:
+    test_count: 889
+    skip_count: 1
+    duration_seconds: 212.713
+    status: "PASS"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local retrieval PASS after local retrieval refresh with 815 source objects 4057 relationships 815 semantic rows and 815 vault rows"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | one bounded project-system validator test control and registry change with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory resolver confirmed one bounded project-system AgentJob"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python -m py_compile scripts/research_control/support_formalization/traceability_io.py scripts/research_control/support_formalization/validate_traceability_registry.py scripts/research_control/support_formalization/validate_traceability_registry_v18.py tests/support/traceability_fixture_builder.py research_control/tasks/RT-20260717-013/artifacts/validate_traceability_injection.py | exit_code=0 | PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260717-013/artifacts/validate_traceability_injection.py | exit_code=0 | raw dependency injection minimal fixtures and five failure-equivalence cases PASS"
+  - ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry.py --json | exit_code=0 | live v1 registry PASS with 3 entries"
+  - ".venv/bin/python scripts/research_control/support_formalization/validate_traceability_registry_v18.py --json | exit_code=0 | live v18 registry PASS with 5 entries"
+  - ".venv/bin/python -m unittest -v tests.test_support_formalization_traceability_registry tests.test_support_formalization_traceability_registry_v18 | exit_code=0 | 9 tests PASS in 74.523 seconds"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths scripts/research_control/support_formalization/traceability_io.py scripts/research_control/support_formalization/validate_traceability_registry.py scripts/research_control/support_formalization/validate_traceability_registry_v18.py tests/support/traceability_fixture_builder.py --explain | exit_code=0 | affected profile READY with 14 selected gates under legacy execution authority"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state 889 tests PASS with one expected skip in 212.713 seconds"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | generated task indexes are fresh"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py with explicit output paths and --check | exit_code=0 | generated dependency graph outputs are fresh"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | governed memory derivatives and core validation PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical warnings only"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 39 lease parity project binding clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "Memory preflight canonical-plan inspection classifier resolver baseline behavior and emitted-signal validation passed before implementation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both validators consume the shared raw-input object while retaining default production paths and CLI behavior."
+      - "Five injected fail-closed cases preserve the default exception class and exact message."
+      - "Minimal fixtures contain only selected registry dependencies and exclude unrelated repository files."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The stable completed-state repository suite passes 889 tests with one expected skip."
+      - "Documentation-impact research-control signal and whitespace gates pass."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "This completion is eligible for persistence only through the governed compare-mode checkpoint, which must confirm shadow parity, rerun final blockers, and commit atomically or restore the entry index."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "This packet changes no renderer or rendered scientific artifact."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Governed memory synchronization and core validation pass; the checkpoint reruns final memory blockers."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The task uses operational-only validator and testability language and changes no scientific claim authority."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-013/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R18"
+    - "V19-R19"
+  implements_plan_task_id: "P9-T01"
+  implementation_status: "PASS"
+  coverage_effect: "p9_t01_traceability_dependency_injection_and_minimal_fixture_builder_pass_p9_t02_dependency_ready_after_checkpoint_no_physics_promotion"
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system traceability validator testability only; no physics or derivation status changes."
+scientific_claims_changed: false
+forbidden_conclusion_summary: "This v19 packet adds raw-input dependency injection and minimal test fixtures only. It does not weaken validation, inject prevalidated outcomes, mutate traceability or proof-normal-form data, convert the P9-T02 or P9-T03 tests, change ordinary research, or authorize proof, benchmark, ontology, Gate Chair, physics, or derivation claims."
+verdict: "v19_p9_t01_traceability_dependency_injection_pass_p9_t02_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "Both support-traceability validators now accept one explicit raw-input dependency object without exposing prevalidated outcomes, and the reusable fixture builder materializes only selected-entry dependencies. Default validators, fail-closed equivalence, focused tests, and the repository suite pass while legacy execution and all no-physics boundaries remain unchanged."
+selected_next_route:
+  route_id: "v19_p9_t02_convert_v1_traceability_tests"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P9"
+  plan_task_id: "P9-T02"
+  task_name: "Convert v1 support-traceability tests to injected minimal fixtures"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "traceability_test_conversion"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system traceability test conversion only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After governed checkpoint PASS route one separately bounded P9-T02 v1 traceability-test conversion packet; do not execute it in P9-T01."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 815
+    relationship_row_count: 4057
+    semantic_row_count: 815
+    vault_row_count: 815
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"support traceability fixture builder dependency injection\" --limit 10 --json"
+      query_type: "search"
+      query_text: "support traceability fixture builder dependency injection"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

@@ -5,18 +5,19 @@ from __future__ import annotations
 
 import argparse
 import csv
-import hashlib
+import io
 import json
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, Mapping
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 RESEARCH_CONTROL_SCRIPT_DIR = SCRIPT_DIR.parent
 if str(RESEARCH_CONTROL_SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(RESEARCH_CONTROL_SCRIPT_DIR))
 
-from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
+from strict_yaml import StrictYamlError, loads as load_yaml_text  # noqa: E402
+from support_formalization.traceability_io import TraceabilityInputs  # noqa: E402
 
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -48,40 +49,38 @@ class V18TraceabilityError(RuntimeError):
     """Raised when v18 support-formalization traceability is invalid."""
 
 
-def repo_path(repo_root: Path, rel_path: str) -> Path:
-    return repo_root / rel_path
-
-
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise V18TraceabilityError(message)
 
 
-def sha256_file(repo_root: Path, rel_path: str) -> str:
-    path = repo_path(repo_root, rel_path)
-    if not path.exists():
+def sha256_file(inputs: TraceabilityInputs, rel_path: str) -> str:
+    try:
+        return inputs.sha256_file(rel_path)
+    except FileNotFoundError:
         raise V18TraceabilityError(f"missing path: {rel_path}")
-    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def load_strict_yaml(repo_root: Path, rel_path: str) -> dict[str, Any]:
-    path = repo_path(repo_root, rel_path)
-    if not path.exists():
+def load_strict_yaml(inputs: TraceabilityInputs, rel_path: str) -> dict[str, Any]:
+    try:
+        text = inputs.read_text(rel_path)
+    except FileNotFoundError:
         raise V18TraceabilityError(f"missing YAML source: {rel_path}")
     try:
-        loaded = load_yaml(path)
+        loaded = load_yaml_text(text)
     except StrictYamlError as exc:
         raise V18TraceabilityError(f"invalid YAML source {rel_path}: {exc}") from exc
     require(isinstance(loaded, dict), f"YAML source is not a map: {rel_path}")
     return loaded
 
 
-def load_json(repo_root: Path, rel_path: str) -> dict[str, Any]:
-    path = repo_path(repo_root, rel_path)
-    if not path.exists():
+def load_json(inputs: TraceabilityInputs, rel_path: str) -> dict[str, Any]:
+    try:
+        text = inputs.read_text(rel_path)
+    except FileNotFoundError:
         raise V18TraceabilityError(f"missing JSON report: {rel_path}")
     try:
-        loaded = json.loads(path.read_text(encoding="utf-8"))
+        loaded = json.loads(text)
     except json.JSONDecodeError as exc:
         raise V18TraceabilityError(f"invalid JSON report {rel_path}: {exc}") from exc
     require(isinstance(loaded, dict), f"JSON report is not a map: {rel_path}")
@@ -107,36 +106,53 @@ def require_list_of_strings(value: Any, context: str) -> list[str]:
     return items
 
 
-def validate_hashed_paths(repo_root: Path, items: list[dict[str, Any]], context: str) -> None:
+def validate_hashed_paths(
+    inputs: TraceabilityInputs,
+    items: list[dict[str, Any]],
+    context: str,
+) -> None:
     require(items, f"{context} must not be empty")
     for item in items:
         rel_path = str(item.get("path", ""))
         source_hash = str(item.get("source_hash", ""))
         require(rel_path, f"{context} item missing path")
         require(source_hash, f"{context} item missing source_hash")
-        actual_hash = sha256_file(repo_root, rel_path)
+        actual_hash = sha256_file(inputs, rel_path)
         require(
             actual_hash == source_hash,
             f"{context} hash mismatch for {rel_path}: {actual_hash} != {source_hash}",
         )
 
 
-def load_pnf_rows(repo_root: Path, pnf_registry_path: str) -> dict[str, dict[str, str]]:
-    path = repo_path(repo_root, pnf_registry_path)
-    require(path.exists(), f"missing proof-normal-form registry: {pnf_registry_path}")
-    with path.open(newline="", encoding="utf-8") as handle:
+def load_pnf_rows(
+    inputs: TraceabilityInputs, pnf_registry_path: str
+) -> dict[str, dict[str, str]]:
+    if inputs.proof_normal_form_rows is not None:
         rows = {
-            row["proof_normal_form_row_id"]: {key: value or "" for key, value in row.items()}
-            for row in csv.DictReader(handle)
+            row_id: {key: value or "" for key, value in row.items()}
+            for row_id, row in inputs.proof_normal_form_rows.items()
+        }
+    else:
+        try:
+            text = inputs.read_text(pnf_registry_path)
+        except FileNotFoundError:
+            raise V18TraceabilityError(
+                f"missing proof-normal-form registry: {pnf_registry_path}"
+            )
+        rows = {
+            row["proof_normal_form_row_id"]: {
+                key: value or "" for key, value in row.items()
+            }
+            for row in csv.DictReader(io.StringIO(text))
         }
     require(rows, "proof-normal-form registry has no rows")
     return rows
 
 
-def validate_report(repo_root: Path, entry: dict[str, Any]) -> None:
+def validate_report(inputs: TraceabilityInputs, entry: dict[str, Any]) -> None:
     context = str(entry.get("entry_id", "entry"))
     report_path = str(entry.get("report_path", ""))
-    report = load_json(repo_root, report_path)
+    report = load_json(inputs, report_path)
     require(report.get("support_only") is True, f"{context} report support_only is not true")
     require(report.get("proof_authority") is False, f"{context} report proof_authority is not false")
     if "physics_promotion_authorized" in report:
@@ -147,7 +163,9 @@ def validate_report(repo_root: Path, entry: dict[str, Any]) -> None:
 
 
 def validate_entry(
-    repo_root: Path, entry: dict[str, Any], pnf_rows: dict[str, dict[str, str]]
+    inputs: TraceabilityInputs,
+    entry: dict[str, Any],
+    pnf_rows: dict[str, dict[str, str]],
 ) -> dict[str, Any]:
     entry_id = str(entry.get("entry_id", ""))
     require(entry_id, "entry missing entry_id")
@@ -178,12 +196,16 @@ def validate_entry(
     source_artifacts = require_list_of_maps(entry.get("source_artifacts"), f"{entry_id} source_artifacts")
     tool_artifacts = require_list_of_maps(entry.get("tool_artifacts"), f"{entry_id} tool_artifacts")
     test_evidence = require_list_of_maps(entry.get("test_evidence"), f"{entry_id} test_evidence")
-    validate_hashed_paths(repo_root, source_artifacts, f"{entry_id} source_artifacts")
-    validate_hashed_paths(repo_root, tool_artifacts, f"{entry_id} tool_artifacts")
+    validate_hashed_paths(inputs, source_artifacts, f"{entry_id} source_artifacts")
+    validate_hashed_paths(inputs, tool_artifacts, f"{entry_id} tool_artifacts")
     require(test_evidence, f"{entry_id} test_evidence must not be empty")
     require(str(entry.get("report_path", "")), f"{entry_id} missing report_path")
-    require(sha256_file(repo_root, str(entry["report_path"])) == str(entry.get("report_hash", "")), f"{entry_id} report_hash mismatch")
-    validate_report(repo_root, entry)
+    require(
+        sha256_file(inputs, str(entry["report_path"]))
+        == str(entry.get("report_hash", "")),
+        f"{entry_id} report_hash mismatch",
+    )
+    validate_report(inputs, entry)
 
     pnf_row_id = str(entry.get("proof_normal_form_row_id", ""))
     require(pnf_row_id in pnf_rows, f"{entry_id} missing proof-normal-form row: {pnf_row_id}")
@@ -208,8 +230,14 @@ def validate_registry(
     *,
     pnf_registry_path: str = DEFAULT_PNF_REGISTRY_PATH,
     repo_root: Path = REPO_ROOT,
+    dependencies: TraceabilityInputs | None = None,
 ) -> dict[str, Any]:
-    registry = load_strict_yaml(repo_root, registry_path)
+    inputs = dependencies or TraceabilityInputs(repo_root=repo_root)
+    registry: Mapping[str, Any]
+    if inputs.registry is None:
+        registry = load_strict_yaml(inputs, registry_path)
+    else:
+        registry = inputs.registry
     require(
         registry.get("registry_id") == "support_formalization_traceability_registry_v18",
         "unexpected registry_id",
@@ -221,8 +249,8 @@ def validate_registry(
         "registry validators_and_executable_specs_support_only is not true",
     )
     entries = require_list_of_maps(registry.get("entries"), "entries")
-    pnf_rows = load_pnf_rows(repo_root, pnf_registry_path)
-    entry_results = [validate_entry(repo_root, entry, pnf_rows) for entry in entries]
+    pnf_rows = load_pnf_rows(inputs, pnf_registry_path)
+    entry_results = [validate_entry(inputs, entry, pnf_rows) for entry in entries]
     plan_task_ids = [str(entry.get("plan_task_id", "")) for entry in entries]
     require(
         plan_task_ids == ["P7-T02", "P7-T03", "P7-T04", "P7-T05", "P7-T06"],
@@ -304,9 +332,14 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+    inputs = TraceabilityInputs(repo_root=REPO_ROOT)
     try:
-        receipt = validate_registry(args.registry, pnf_registry_path=args.pnf_registry)
-        registry = load_strict_yaml(REPO_ROOT, args.registry)
+        receipt = validate_registry(
+            args.registry,
+            pnf_registry_path=args.pnf_registry,
+            dependencies=inputs,
+        )
+        registry = load_strict_yaml(inputs, args.registry)
     except V18TraceabilityError as exc:
         print(f"support_formalization_traceability_registry_v18: FAIL: {exc}", file=sys.stderr)
         return 1

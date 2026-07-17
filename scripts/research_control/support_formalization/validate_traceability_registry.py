@@ -4,18 +4,18 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, Mapping
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 RESEARCH_CONTROL_SCRIPT_DIR = SCRIPT_DIR.parent
 if str(RESEARCH_CONTROL_SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(RESEARCH_CONTROL_SCRIPT_DIR))
 
-from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
+from strict_yaml import StrictYamlError, loads as load_yaml_text  # noqa: E402
+from support_formalization.traceability_io import TraceabilityInputs  # noqa: E402
 
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -58,20 +58,16 @@ class TraceabilityRegistryError(RuntimeError):
     """Raised when the traceability registry is missing required evidence."""
 
 
-def repo_path(repo_root: Path, rel_path: str) -> Path:
-    return repo_root / rel_path
-
-
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise TraceabilityRegistryError(message)
 
 
-def sha256_file(repo_root: Path, rel_path: str) -> str:
-    path = repo_path(repo_root, rel_path)
-    if not path.exists():
+def sha256_file(inputs: TraceabilityInputs, rel_path: str) -> str:
+    try:
+        return inputs.sha256_file(rel_path)
+    except FileNotFoundError:
         raise TraceabilityRegistryError(f"missing path: {rel_path}")
-    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def ensure_boundary_text(text: str, context: str) -> None:
@@ -87,24 +83,26 @@ def ensure_non_generated_authority_path(rel_path: str, context: str) -> None:
         )
 
 
-def load_json(repo_root: Path, rel_path: str) -> dict[str, Any]:
-    path = repo_path(repo_root, rel_path)
-    if not path.exists():
+def load_json(inputs: TraceabilityInputs, rel_path: str) -> dict[str, Any]:
+    try:
+        text = inputs.read_text(rel_path)
+    except FileNotFoundError:
         raise TraceabilityRegistryError(f"missing JSON report: {rel_path}")
     try:
-        loaded = json.loads(path.read_text(encoding="utf-8"))
+        loaded = json.loads(text)
     except json.JSONDecodeError as exc:
         raise TraceabilityRegistryError(f"invalid JSON report {rel_path}: {exc}") from exc
     require(isinstance(loaded, dict), f"JSON report is not a map: {rel_path}")
     return loaded
 
 
-def load_strict_yaml(repo_root: Path, rel_path: str) -> dict[str, Any]:
-    path = repo_path(repo_root, rel_path)
-    if not path.exists():
+def load_strict_yaml(inputs: TraceabilityInputs, rel_path: str) -> dict[str, Any]:
+    try:
+        text = inputs.read_text(rel_path)
+    except FileNotFoundError:
         raise TraceabilityRegistryError(f"missing YAML source: {rel_path}")
     try:
-        loaded = load_yaml(path)
+        loaded = load_yaml_text(text)
     except StrictYamlError as exc:
         raise TraceabilityRegistryError(f"invalid YAML source {rel_path}: {exc}") from exc
     require(isinstance(loaded, dict), f"YAML source is not a map: {rel_path}")
@@ -138,7 +136,10 @@ def artifact_key(artifact: dict[str, Any]) -> tuple[str, str, str]:
 
 
 def validate_artifact_hashes(
-    repo_root: Path, artifacts: list[dict[str, Any]], context: str, authority: bool
+    inputs: TraceabilityInputs,
+    artifacts: list[dict[str, Any]],
+    context: str,
+    authority: bool,
 ) -> None:
     require(artifacts, f"{context} has no artifacts")
     for artifact in artifacts:
@@ -152,7 +153,7 @@ def validate_artifact_hashes(
         require(registry_name, f"{context} artifact {object_id} missing registry_name")
         if authority:
             ensure_non_generated_authority_path(rel_path, context)
-        actual_hash = sha256_file(repo_root, rel_path)
+        actual_hash = sha256_file(inputs, rel_path)
         require(
             actual_hash == source_hash,
             f"{context} artifact hash mismatch for {rel_path}: {actual_hash} != {source_hash}",
@@ -252,7 +253,9 @@ def validate_traceability(entry: dict[str, Any], traceability: dict[str, Any]) -
     require(required <= blocked, f"{context} traceability missing blocked overreads")
 
 
-def validate_entry(repo_root: Path, entry: dict[str, Any]) -> dict[str, Any]:
+def validate_entry(
+    inputs: TraceabilityInputs, entry: dict[str, Any]
+) -> dict[str, Any]:
     entry_id = str(entry.get("entry_id", ""))
     require(entry_id, "entry missing entry_id")
     require(entry.get("support_only") is True, f"{entry_id} support_only is not true")
@@ -262,18 +265,19 @@ def validate_entry(repo_root: Path, entry: dict[str, Any]) -> dict[str, Any]:
     for formalization_file in list_of_strings(
         entry.get("formalization_files"), f"{entry_id} formalization_files"
     ):
-        sha256_file(repo_root, formalization_file)
+        sha256_file(inputs, formalization_file)
 
     report_path = str(entry.get("report_path", ""))
     traceability_path = str(entry.get("traceability_path", ""))
     require(report_path, f"{entry_id} missing report_path")
     require(traceability_path, f"{entry_id} missing traceability_path")
     require(
-        sha256_file(repo_root, report_path) == str(entry.get("report_hash", "")),
+        sha256_file(inputs, report_path) == str(entry.get("report_hash", "")),
         f"{entry_id} report_hash mismatch",
     )
     require(
-        sha256_file(repo_root, traceability_path) == str(entry.get("traceability_hash", "")),
+        sha256_file(inputs, traceability_path)
+        == str(entry.get("traceability_hash", "")),
         f"{entry_id} traceability_hash mismatch",
     )
 
@@ -283,14 +287,14 @@ def validate_entry(repo_root: Path, entry: dict[str, Any]) -> dict[str, Any]:
     support_artifacts = list_of_maps(
         entry.get("support_dependency_artifacts"), f"{entry_id} support_dependency_artifacts"
     )
-    validate_artifact_hashes(repo_root, canonical_artifacts, entry_id, authority=True)
+    validate_artifact_hashes(inputs, canonical_artifacts, entry_id, authority=True)
     if support_artifacts:
-        validate_artifact_hashes(repo_root, support_artifacts, entry_id, authority=False)
+        validate_artifact_hashes(inputs, support_artifacts, entry_id, authority=False)
 
-    report = load_json(repo_root, report_path)
+    report = load_json(inputs, report_path)
     validate_report(entry, report)
     validate_report_source_links(entry, report)
-    traceability = load_strict_yaml(repo_root, traceability_path)
+    traceability = load_strict_yaml(inputs, traceability_path)
     validate_traceability(entry, traceability)
 
     return {
@@ -304,9 +308,17 @@ def validate_entry(repo_root: Path, entry: dict[str, Any]) -> dict[str, Any]:
 
 
 def validate_registry(
-    registry_path: str = DEFAULT_REGISTRY_PATH, repo_root: Path = REPO_ROOT
+    registry_path: str = DEFAULT_REGISTRY_PATH,
+    repo_root: Path = REPO_ROOT,
+    *,
+    dependencies: TraceabilityInputs | None = None,
 ) -> dict[str, Any]:
-    registry = load_strict_yaml(repo_root, registry_path)
+    inputs = dependencies or TraceabilityInputs(repo_root=repo_root)
+    registry: Mapping[str, Any]
+    if inputs.registry is None:
+        registry = load_strict_yaml(inputs, registry_path)
+    else:
+        registry = inputs.registry
     require(
         registry.get("registry_id") == "support_formalization_traceability_registry_v1",
         "unexpected registry_id",
@@ -319,7 +331,7 @@ def validate_registry(
     require(entries, "registry has no entries")
     entry_ids = [str(entry.get("entry_id", "")) for entry in entries]
     require(len(set(entry_ids)) == len(entry_ids), "duplicate registry entry_id")
-    entry_results = [validate_entry(repo_root, entry) for entry in entries]
+    entry_results = [validate_entry(inputs, entry) for entry in entries]
     return {
         "authority_boundary_status": "proof_authority_false_preserved",
         "checked_entry_count": len(entry_results),
