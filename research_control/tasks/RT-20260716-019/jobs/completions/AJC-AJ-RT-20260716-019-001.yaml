@@ -1,0 +1,202 @@
+job_id: "AJ-RT-20260716-019-001"
+completion_id: "AJC-AJ-RT-20260716-019-001"
+task_id: "RT-20260716-019"
+decision_id: "DDR-20260716-019"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260716-019"
+status: "completed"
+created_at: "2026-07-16T23:58:40Z"
+started_at: "2026-07-16T23:58:40Z"
+completed_at: "2026-07-17T00:27:00Z"
+objective: "Implement and test P6-T05 checkpoint planner and executor integration with rollback-safe legacy comparison and explicit fallback switches."
+completion_summary: "Integrated the canonical shadow planner staged acceptance and existing executor into the governed checkpoint CLI while preserving legacy mutation index allowlist synchronization targeted-PDF rollback commit no-action no-commit and no-push semantics. Compare mode selects tracked generators and staged blockers through the planner executes every final blocker once binds outcomes to the exact index tree retains hashed child receipts and blocks before commit on legacy comparison or index mismatch."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P6-T05"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_obligation_resolution_policy_v1.md"
+  - "research_control/design/agent_validation_output_consumption_policy_v1.md"
+  - "research_control/design/validation_change_matrix_v1.md"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - "scripts/validation/plan.py"
+  - "scripts/validation/executor.py"
+  - "scripts/validation/precheck.py"
+  - "scripts/validation/profiles.py"
+  - "scripts/validation/staged.py"
+  - "research_control/tasks/RT-20260716-018/jobs/completions/AJC-AJ-RT-20260716-018-001.yaml"
+outputs_created:
+  - "scripts/research_control/checkpoint_research_transaction.py"
+  - "tests/test_checkpoint_validation_planner.py"
+  - "research_control/tasks/RT-20260716-019/artifacts/checkpoint_planner_integration_report.json"
+  - "research_control/tasks/RT-20260716-019/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260716-019/jobs/completions/AJC-AJ-RT-20260716-019-001.yaml"
+output_hashes:
+  checkpoint_research_transaction_sha256: "f4be0da0308f2d93768e9816d05c0576193f51a47d767dbeda2bdb271bf4319c"
+  checkpoint_validation_planner_tests_sha256: "f0a4e5c42773a963ff3f2f436d02a4d2a0124845d5a48d0a71081c5e43c627d1"
+  checkpoint_planner_integration_report_sha256: "11656856614fd889fec47f681905ad54ccafee3860fbfe9e27feee6056c01c46"
+implementation_results:
+  plan_task_id: "P6-T05"
+  migration_epoch: "shadow_planner"
+  cli_default_validation_mode: "compare"
+  python_api_compatibility_default: "legacy"
+  explicit_legacy_validation_switch: true
+  explicit_compare_validation_switch: true
+  cheap_working_precheck_gate: "path_policy_sanity"
+  planner_selects_tracked_generators: true
+  local_only_mutators_excluded_from_tracked_checkpoint: true
+  checkpoint_orchestrator_self_gate_excluded: true
+  final_staged_gate_selection_planner_owned: true
+  selected_staged_gates_execute_once_through_existing_executor: true
+  exact_index_identity_required: true
+  legacy_status_comparison_required: true
+  legacy_status_comparison_same_command_execution: true
+  status_mismatch_fail_closed: true
+  child_receipt_paths_and_hashes_retained: true
+  aggregate_checkpoint_receipt_retained: true
+  focused_test_count: 9
+  existing_checkpoint_test_count: 14
+  planner_executor_compatibility_test_count: 77
+  full_suite_test_count: 821
+  full_suite_skipped_count: 1
+  full_suite_status: "PASS"
+  representative_shadow_comparison_count: 3
+  representative_shadow_comparison_transactions:
+    - "staged_addition"
+    - "staged_modification"
+    - "staged_deletion"
+  unexplained_shadow_mismatch_count: 0
+  no_action_tested: true
+  no_commit_tested: true
+  synchronization_failure_tested: true
+  targeted_pdf_failure_tested: true
+  disallowed_path_tested: true
+  unstaged_residue_tested: true
+  commit_failure_tested: true
+  helper_exception_tested: true
+  collapsed_untracked_directory_expansion_tested: true
+  entry_index_restoration_preserved: true
+  deterministic_commit_message_preserved: true
+  automatic_push_performed: false
+  legacy_execution_authoritative: true
+  planner_execution_authoritative: false
+  manifest_changed: false
+  profiles_changed: false
+  planner_changed: false
+  executor_changed: false
+  staged_module_changed: false
+  precheck_module_changed: false
+  classifier_changed: false
+  memory_operations_changed: false
+  aggregate_module_changed: false
+  cache_changed: false
+  ci_changed: false
+  make_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local retrieval PASS with refresh not required"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | 814 canonical source objects 4053 relationships 814 semantic rows 814 vault rows at entry"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P6-T05-target --json | exit_code=0 | returned the canonical v19 plan object"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json | exit_code=0 | returned MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | checkpoint control registry task and test paths classified with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory project-system boundary already satisfied by this task"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python -m py_compile scripts/research_control/checkpoint_research_transaction.py tests/test_checkpoint_validation_planner.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest tests/test_checkpoint_validation_planner.py | exit_code=0 | 9 tests PASS"
+  - ".venv/bin/python -m unittest -k checkpoint tests/test_research_control.py tests/test_validation_orchestration.py | exit_code=0 | 14 tests PASS"
+  - ".venv/bin/python -m unittest tests/test_checkpoint_validation_planner.py tests/test_validation_executor.py tests/test_validation_planner.py tests/test_validation_precheck.py tests/test_validation_orchestration.py tests/test_staged_validation.py | exit_code=0 | 77 tests PASS"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | 821 tests PASS with 1 expected skip"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | governed memory and generated-surface synchronization PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P6-T04 PASS dependency clean starting checkpoint unique local project matching lease pair idle predecessor open guards exact relay claim and no competing writer were verified before consumption and execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 9 focused tests cover compare-mode switches generator selection add modify delete exact-index shadow comparison mismatch rollback no-action targeted-PDF failure disallowed paths commit failure and collapsed untracked task directories."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "All 14 existing checkpoint-focused tests all 77 focused planner executor precheck orchestration and staged compatibility tests and the full 821-test repository suite passed with one expected skip."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "This completion is eligible for persistence only through the governed compare-mode checkpoint which reruns planner-selected final staged blockers including the full repository test shard and commits atomically or restores the entry index."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "P6-T05 changes no TeX PDF HTML Mermaid or publication source."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Canonical memory synchronization completed after the implementation report and documentation-impact receipt were present."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The task changes operational validation code and control records only; the governed research-control diff and checkpoint retain changed-claim validation for the exact staged transaction."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260716-019/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system checkpoint integration only; no physics or derivation status changed."
+scientific_claims_changed: false
+forbidden_conclusion_summary: "This v19 task changes project-system checkpoint validation orchestration and tests only. It does not authorize canonical ontology edit source-law adoption general EqSrc discharge RetainH adoption GenH adoption MetricData(E) adoption g_eff scope expansion detector or readout semantics adoption coupling-law adoption matter-coupling derivation stress-energy semantics stress-energy tensor matter action Einstein-equation derivation benchmark promotion Gate Chair verdict external endorsement future source-extension impossibility program-wide no-go conclusion completed derivation or any validator test receipt registry generated artifact checkpoint commit or performance measurement as physics proof."
+verdict: "v19_p6_t05_checkpoint_planner_integration_pass_p6_t06_dependency_unlocked_no_physics_delta"
+coherent_resolution_summary: "The governed checkpoint CLI now consumes canonical planner selection and exact-index staged acceptance during shadow comparison while retaining legacy execution authority and every existing mutation rollback commit and no-push boundary."
+next_recommendation: "After governed checkpoint PASS route one separately bounded P6-T06 skill-wrapper conversion packet."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 814
+    relationship_row_count: 4053
+    semantic_row_count: 814
+    vault_row_count: 814
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_local_retrieval_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P6 T05 integrate planner executor checkpointing\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P6 T05 integrate planner executor checkpointing"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

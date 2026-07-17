@@ -1,0 +1,71 @@
+{
+  "schema_id": "checkpoint_planner_integration_report_v1",
+  "task_id": "RT-20260716-019",
+  "job_id": "AJ-RT-20260716-019-001",
+  "plan_task_id": "P6-T05",
+  "migration_epoch": "shadow_planner",
+  "status": "PASS",
+  "implementation": {
+    "cli_default": "compare",
+    "legacy_fallback_switch": "--legacy-validation",
+    "compare_switch": "--compare-validation",
+    "cheap_precheck_gate": "path_policy_sanity",
+    "planner_selects_tracked_generators": true,
+    "local_only_mutators_excluded_from_checkpoint_transaction": true,
+    "checkpoint_self_orchestrator_excluded_from_generator_execution": true,
+    "staged_gate_selection_owned_by_planner": true,
+    "selected_staged_gates_execute_once_through_existing_executor": true,
+    "legacy_status_comparison_uses_same_command_execution": true,
+    "status_mismatch_fails_closed": true,
+    "child_executor_receipt_paths_and_hashes_retained": true,
+    "aggregate_checkpoint_receipt_retained": true,
+    "automatic_push": false
+  },
+  "scenario_matrix": [
+    {"scenario": "no_action", "test": "test_compare_mode_preserves_no_action_without_staged_acceptance", "status": "PASS"},
+    {"scenario": "no_commit", "test": "test_checkpoint_stages_scope_before_sync_and_validates_final_index", "status": "PASS"},
+    {"scenario": "sync_failure", "test": "test_checkpoint_restores_original_index_on_sync_failure", "status": "PASS"},
+    {"scenario": "pdf_failure", "test": "test_compare_mode_pdf_failure_restores_original_index", "status": "PASS"},
+    {"scenario": "disallowed_path", "test": "test_disallowed_preexisting_path_blocks_before_planning", "status": "PASS"},
+    {"scenario": "unstaged_residue", "test": "test_checkpoint_blocks_unstaged_residue_after_final_validation", "status": "PASS"},
+    {"scenario": "commit_failure", "test": "test_commit_failure_restores_original_index", "status": "PASS"},
+    {"scenario": "helper_exception", "test": "test_checkpoint_restores_entry_index_on_helper_exception", "status": "PASS"}
+  ],
+  "shadow_comparisons": [
+    {"transaction": "staged_addition", "scope": "exact_index", "legacy_status": "PASS", "planner_status": "PASS", "status": "MATCH"},
+    {"transaction": "staged_modification", "scope": "exact_index", "legacy_status": "PASS", "planner_status": "PASS", "status": "MATCH"},
+    {"transaction": "staged_deletion", "scope": "exact_index", "legacy_status": "PASS", "planner_status": "PASS", "status": "MATCH"}
+  ],
+  "failure_controls": {
+    "legacy_planner_mismatch_tested": true,
+    "index_restored_after_mismatch": true,
+    "collapsed_untracked_directory_expansion_tested": true,
+    "unsupported_tracked_generator_fails_closed": true,
+    "planner_receipt_mutation_of_staged_tree_blocked": true
+  },
+  "validation": {
+    "focused_test_count": 9,
+    "focused_status": "PASS",
+    "existing_checkpoint_test_count": 14,
+    "existing_checkpoint_status": "PASS",
+    "planner_executor_compatibility_test_count": 77,
+    "planner_executor_compatibility_status": "PASS",
+    "memory_bootstrap_status": "PASS",
+    "full_suite_test_count": 821,
+    "full_suite_skipped_count": 1,
+    "full_suite_status": "PASS",
+    "unexplained_shadow_mismatch_count": 0
+  },
+  "authority": {
+    "legacy_execution_authoritative": true,
+    "planner_execution_authoritative": false,
+    "operational_validation_only": true,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "scientific_claims_changed": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  }
+}
