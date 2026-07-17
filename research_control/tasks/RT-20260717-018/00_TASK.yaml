@@ -1,0 +1,46 @@
+task_id: "RT-20260717-018"
+task_type: "obsidian_test_fixture_minimization"
+status: "completed"
+created_at: "2026-07-17T19:59:30Z"
+updated_at: "2026-07-17T20:10:52Z"
+closed_at: "2026-07-17T20:10:52Z"
+parent_task_id: "RT-20260717-017"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260717-018"
+current_job_id: "AJ-RT-20260717-018-001"
+role_id: "memory-system-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "memory-system-maintainer@0.2.0--RT-20260717-018"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached dependency-ready P9-T06 after the governed P9-T05 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P9"
+  plan_task_id: "P9-T06"
+  plan_task_name: "Convert Obsidian and SQLite tests to miniature repositories and isolate live acceptance"
+  recommendation_ids:
+    - "V19-R32"
+    - "V19-R37"
+    - "V19-R40"
+objective: "Move Obsidian extraction vault and SQLite search coverage to a miniature repository while retaining exactly one read-only full-source retrieval acceptance test."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system Obsidian and SQLite test fixture minimization only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p9_t06_obsidian_test_fixture_minimization_pass_p9_t07_dependency_ready_after_checkpoint_no_physics_delta"
+claim_boundary_id: "CB-V19-P9-T06-OBSIDIAN-TEST-FIXTURES-001"
+claim_boundary:
+  allowed_scope: "Obsidian and SQLite test topology miniature fixture repository test entry-point documentation task evidence registry rows and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260717-018/artifacts/obsidian_test_migration_report.json"
+  - "research_control/tasks/RT-20260717-018/artifacts/obsidian_test_validation_receipt.json"
+next_recommended_action: "After governed checkpoint PASS route one separately bounded P9-T07 local-retrieval doctor-profile packet."
+documentation_impact_id: "DI-RT-20260717-018-001"
+completion_id: "AJC-AJ-RT-20260717-018-001"
+notes: "P9-T06 maps all 10 legacy tests adds one fixture-integrity test isolates exactly one full-source acceptance and preserves production retrieval and physics authority."

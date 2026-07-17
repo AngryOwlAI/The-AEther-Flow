@@ -1,0 +1,252 @@
+job_id: "AJ-RT-20260717-018-001"
+completion_id: "AJC-AJ-RT-20260717-018-001"
+task_id: "RT-20260717-018"
+decision_id: "DDR-20260717-018"
+role_id: "memory-system-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "memory-system-maintainer@0.2.0--RT-20260717-018"
+status: "completed"
+created_at: "2026-07-17T19:59:30Z"
+started_at: "2026-07-17T19:59:30Z"
+completed_at: "2026-07-17T20:10:52Z"
+objective: "Move Obsidian extraction vault and SQLite search coverage to a miniature repository while retaining exactly one read-only full-source retrieval acceptance test."
+completion_summary: "Mapped all 10 legacy Obsidian tests to an 11-test miniature-repository unit module and added one isolated full-source generation-and-search acceptance. The legacy module is a zero-test compatibility tombstone. The 14-file fixture scans four source objects while the live path scans all 816 registered source objects in a temporary mirror. Unit tests pass in 0.27 seconds versus the 9.90-second legacy baseline."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P9-T06"
+  - "tests/test_obsidian_wiki.py"
+  - ".codex/skills/project-memory-system/scripts/obsidian_wiki_lib.py"
+  - "tests/README.md"
+  - "Makefile"
+  - "research_control/tasks/RT-20260717-017/jobs/completions/AJC-AJ-RT-20260717-017-001.yaml"
+outputs_created:
+  - "tests/test_obsidian_wiki.py"
+  - "tests/test_obsidian_wiki_unit.py"
+  - "tests/test_obsidian_wiki_live.py"
+  - "tests/fixtures/obsidian_wiki/"
+  - "tests/README.md"
+  - "Makefile"
+  - "research_control/tasks/RT-20260717-018/artifacts/obsidian_test_migration_report.json"
+  - "research_control/tasks/RT-20260717-018/artifacts/obsidian_test_validation_receipt.json"
+  - "research_control/tasks/RT-20260717-018/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-018/jobs/completions/AJC-AJ-RT-20260717-018-001.yaml"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P9-T06"
+  recommendation_ids:
+    - "V19-R32"
+    - "V19-R37"
+    - "V19-R40"
+  migration_epoch: "shadow_planner"
+  implementation_status: "completed"
+  downstream_tasks_not_implemented:
+    - "P9-T07 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p9_t06_obsidian_test_fixture_minimization"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R32"
+    - "V19-R37"
+    - "V19-R40"
+  implements_plan_task_id: "P9-T06"
+  implementation_status: "PASS"
+  coverage_effect: "direct fixture-backed Obsidian and SQLite test migration with one explicit full-source live acceptance"
+physics_progress_status:
+  status: "project_system_obsidian_test_fixture_minimization_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P9-T06 changes Obsidian and SQLite test topology only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Test fixtures durations source counts registries and validation receipts are operational evidence only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+obsidian_test_migration:
+  status: "PASS"
+  migration_report_path: "research_control/tasks/RT-20260717-018/artifacts/obsidian_test_migration_report.json"
+  validation_receipt_path: "research_control/tasks/RT-20260717-018/artifacts/obsidian_test_validation_receipt.json"
+  legacy_test_count: 10
+  mapped_legacy_test_count: 10
+  missing_legacy_test_count: 0
+  legacy_module_mode: "zero_test_compatibility_tombstone"
+  legacy_module_discovered_test_count: 0
+  unit_test_count: 11
+  live_acceptance_test_count: 1
+  fixture_file_count: 14
+  fixture_source_object_count: 4
+  live_source_object_count: 816
+  fixture_tree_sha256: "30d32b7aaf57da4a3f24d30484830d283522287ce437be9e1e95d8a8f374e83b"
+  unit_repository_local_write_count: 0
+  live_repository_local_write_count: 0
+  warning_classification_preserved: true
+  fts_fallback_preserved: true
+  conditional_pdf_coverage_preserved: true
+  production_obsidian_sources_changed: false
+  dependency_added: false
+  make_target_decomposition_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  benchmark:
+    legacy_module_real_seconds: 9.90
+    unit_module_real_seconds: 0.27
+    live_module_real_seconds: 2.39
+    unit_plus_live_real_seconds: 2.66
+    fast_unit_reduction_percent: 97.27
+    combined_reduction_percent: 73.13
+    memory_shard_real_seconds: 0.78
+    subprocess_count_unit: 0
+    subprocess_count_live: 0
+    cache_hits: 0
+    cache_misses: 0
+validation_evidence:
+  migration_report_status: "PASS"
+  fixture_integrity_status: "PASS"
+  unit_module_status: "PASS"
+  live_module_status: "PASS"
+  memory_shard_status: "PASS"
+  affected_profile_status: "READY"
+  affected_selected_gate_count: 13
+  execution_authority: "legacy"
+  legacy_planner_shadow_comparison:
+    status: "PASS"
+    legacy_compatible_blocking_gate_count: 11
+    planner_blocking_gate_count: 11
+    unexplained_mismatch_count: 0
+  pre_completion_repository_suite:
+    test_count: 894
+    skip_count: 1
+    failure_count: 1
+    error_count: 1
+    duration_seconds: 99.360
+    real_seconds: 99.57
+    status: "EXPECTED_TRANSACTION_ASSEMBLY_FINDING"
+    explanation: "The active AgentJob intentionally had no completion path and the first live bootstrap refreshed required generated derivatives. All Obsidian tests passed."
+  stable_completed_state_repository_suite:
+    test_count: 894
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    duration_seconds: 99.964
+    real_seconds: 100.18
+    status: "PASS"
+command_results:
+  - ".venv/bin/python -c compatibility tombstone loader audit | exit_code=0 | compatibility tombstone collects zero tests"
+  - ".venv/bin/python -m py_compile tests/test_obsidian_wiki_unit.py tests/test_obsidian_wiki_live.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_obsidian_wiki_unit | exit_code=0 | 11 tests PASS in 0.207 seconds real 0.27 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_obsidian_wiki_live | exit_code=0 | 1 test PASS in 2.342 seconds real 2.39 seconds"
+  - "make PYTHON=.venv/bin/python test-memory | exit_code=0 | 86 tests PASS in 0.621 seconds real 0.78 seconds"
+  - "read-only legacy test-name migration audit | exit_code=0 | all 10 legacy names mapped with zero missing and two new bounded tests"
+  - "read-only fixture tree hash audit | exit_code=0 | 14 files tree_sha256=30d32b7aaf57da4a3f24d30484830d283522287ce437be9e1e95d8a8f374e83b"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths tests/test_obsidian_wiki_unit.py tests/test_obsidian_wiki_live.py tests/fixtures/obsidian_wiki tests/README.md Makefile --explain | exit_code=0 | READY 13 selected gates legacy execution authority"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy-compatible blocking gates equal 11 planner blocking gates with zero unexplained mismatch"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | documentation impact required with no blocked paths"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory resolver preserved explicit P9-T06 AgentJob boundary"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest discover -s tests | pre_completion_exit_code=1 | 894 tests with one failure and one error caused by active transaction assembly state"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state 894 tests PASS with one expected skip in 99.964 seconds real 100.18 seconds"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 44 lease parity project binding clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "P9-T05 completion canonical-plan hash memory preflight classifier resolver and no competing signal were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 10 legacy test names map exactly once to the fixture-backed unit module."
+      - "The legacy module remains importable as a zero-test compatibility tombstone and does not duplicate test discovery."
+      - "The 14-file miniature repository covers four sources while one isolated live test scans all 816 registered sources."
+      - "PDF extraction FTS fallback warning categories declared vault indexes and manual-note preservation remain covered."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Unit live and memory-shard tests pass and the stable completed-state repository suite passes 894 tests with one expected skip."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The completed packet is eligible for persistence only through the governed checkpoint which must rerun final blockers and commit atomically or restore the entry index."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Governed bootstrap and completed-state validate-only pass after the explanatory test source update."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The packet makes operational test claims only and changes no scientific claim source."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-018/documentation_impact.yaml"
+  source_documentation_updated: true
+  updated_source_documentation:
+    - "tests/README.md"
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This v19 packet changes test topology only. It does not change production retrieval behavior validation findings planner or CI authority ordinary research canonical ontology source-law status matter coupling Einstein equations benchmark status Gate Chair authority proof authority completed-derivation status or Distance-to-GR."
+verdict: "v19_p9_t06_obsidian_test_fixture_minimization_pass_p9_t07_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "P9-T06 maps every legacy Obsidian test to a fixture-backed unit module and retains one temporary-mirror full-source acceptance while preserving warning semantics and ordinary research authority."
+selected_next_route:
+  route_id: "v19_p9_t07_local_retrieval_doctor_profile"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P9"
+  plan_task_id: "P9-T07"
+  task_name: "Implement the local-retrieval doctor profile and checkpoint separation"
+  role_family: "memory-system-maintainer@0.2.0"
+  task_type: "local_retrieval_doctor"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system local-retrieval diagnostic separation only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After stable completed-state validation and governed checkpoint PASS route one separately bounded P9-T07 packet; do not execute it in P9-T06."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 816
+    relationship_row_count: 4062
+    semantic_row_count: 816
+    vault_row_count: 816
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."

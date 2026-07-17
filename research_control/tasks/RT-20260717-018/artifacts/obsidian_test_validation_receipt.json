@@ -1,0 +1,153 @@
+{
+  "schema_id": "obsidian_test_validation_receipt_v1",
+  "task_id": "RT-20260717-018",
+  "job_id": "AJ-RT-20260717-018-001",
+  "plan_task_id": "P9-T06",
+  "status": "PASS",
+  "source_hashes": {
+    "Makefile": "58dedf7f6742ecf180173fd4311d4d434fc91f3383483fffabdcaff2f4826adf",
+    "tests/README.md": "5e926e7bb662a9f66aa26a0cbcfe0aed303d0fc1627211a637028ad7f29b703a",
+    "tests/test_obsidian_wiki.py": "d95d7ae1717b84dc8e1d6ba55a6f9805e26a6dc924a8f865c9e44563ddc849d3",
+    "tests/test_obsidian_wiki_live.py": "9eca0d8336bd04b981c1e8296cf80f2cd7e97a7b72bf8691c36df812fc66b113",
+    "tests/test_obsidian_wiki_unit.py": "704090ab25948468396ab5004958419187de25f9127ba1e04551053ad2f7eae2"
+  },
+  "fixture_snapshot": {
+    "root": "tests/fixtures/obsidian_wiki/mini_repo",
+    "file_count": 14,
+    "tree_sha256": "30d32b7aaf57da4a3f24d30484830d283522287ce437be9e1e95d8a8f374e83b",
+    "registry_fixture_count": 9,
+    "source_object_count": 4,
+    "wiki_object_count": 1
+  },
+  "migration": {
+    "legacy_test_count": 10,
+    "mapped_legacy_test_count": 10,
+    "missing_count": 0,
+    "duplicate_count": 0,
+    "new_fixture_integrity_test_count": 1,
+    "new_live_acceptance_test_count": 1,
+    "legacy_module_discovered_test_count": 0
+  },
+  "performance": {
+    "legacy_module_real_seconds": 9.90,
+    "legacy_module_test_count": 10,
+    "unit_module_real_seconds": 0.27,
+    "unit_module_test_count": 11,
+    "live_module_real_seconds": 2.39,
+    "live_module_test_count": 1,
+    "unit_plus_live_real_seconds": 2.66,
+    "fast_unit_reduction_percent": 97.27,
+    "combined_reduction_percent": 73.13,
+    "memory_shard_real_seconds": 0.78,
+    "memory_shard_test_count": 86,
+    "unit_source_object_count": 4,
+    "live_source_object_count": 816,
+    "subprocess_count_unit": 0,
+    "subprocess_count_live": 0,
+    "cache_hits": 0,
+    "cache_misses": 0
+  },
+  "command_results": [
+    {
+      "command": ".venv/bin/python -c compatibility tombstone loader audit",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_count": 0
+    },
+    {
+      "command": ".venv/bin/python -m py_compile tests/test_obsidian_wiki_unit.py tests/test_obsidian_wiki_live.py",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_obsidian_wiki_unit",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_count": 11,
+      "duration_seconds": 0.207,
+      "real_seconds": 0.27
+    },
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_obsidian_wiki_live",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_count": 1,
+      "duration_seconds": 2.342,
+      "real_seconds": 2.39
+    },
+    {
+      "command": "make PYTHON=.venv/bin/python test-memory",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_count": 86,
+      "duration_seconds": 0.621,
+      "real_seconds": 0.78
+    },
+    {
+      "command": ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths tests/test_obsidian_wiki_unit.py tests/test_obsidian_wiki_live.py tests/fixtures/obsidian_wiki tests/README.md Makefile --explain",
+      "exit_code": 0,
+      "status": "READY",
+      "selected_gate_count": 13,
+      "execution_authority": "legacy"
+    },
+    {
+      "command": ".venv/bin/python scripts/validation/profiles.py audit --json",
+      "exit_code": 0,
+      "status": "PASS",
+      "legacy_compatible_blocking_gate_count": 11,
+      "planner_blocking_gate_count": 11,
+      "unexplained_mismatch_count": 0
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "exit_code": 1,
+      "status": "EXPECTED_TRANSACTION_ASSEMBLY_FINDING",
+      "test_count": 894,
+      "skip_count": 1,
+      "failure_count": 1,
+      "error_count": 1,
+      "duration_seconds": 99.360,
+      "real_seconds": 99.57,
+      "explanation": "The active AgentJob intentionally had no completion path and the first live bootstrap refreshed required generated derivatives. All Obsidian tests passed."
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_count": 894,
+      "skip_count": 1,
+      "failure_count": 0,
+      "error_count": 0,
+      "duration_seconds": 99.964,
+      "real_seconds": 100.18
+    }
+  ],
+  "failure_mode_evidence": {
+    "fixture_registry_integrity": "PASS",
+    "conditional_pdf_extraction": "PASS",
+    "fts_parse_fallback": "PASS",
+    "stale_raw_mirror_warning": "PASS",
+    "missing_sqlite_warning": "PASS",
+    "local_cache_only_warning_category": "PASS",
+    "vault_index_path_generation": "PASS",
+    "manual_note_preservation": "PASS",
+    "unit_repo_local_isolation": "PASS",
+    "live_repo_local_isolation": "PASS"
+  },
+  "stable_completed_state_repository_suite": {
+    "status": "PASS",
+    "test_count": 894,
+    "skip_count": 1,
+    "failure_count": 0,
+    "error_count": 0,
+    "duration_seconds": 99.964,
+    "real_seconds": 100.18
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_claim_authority": false,
+    "proof_authority": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_id": "obsidian_test_migration_report_v1",
+  "task_id": "RT-20260717-018",
+  "job_id": "AJ-RT-20260717-018-001",
+  "plan_task_id": "P9-T06",
+  "status": "PASS",
+  "legacy_module": "tests/test_obsidian_wiki.py",
+  "legacy_module_mode": "zero_test_compatibility_tombstone",
+  "legacy_module_discovered_test_count": 0,
+  "legacy_test_count": 10,
+  "mapped_legacy_test_count": 10,
+  "missing_legacy_tests": [],
+  "duplicate_legacy_assignments": [],
+  "new_test_names": [
+    "test_fixture_repository_has_expected_source_formats",
+    "test_full_source_object_generation_and_search"
+  ],
+  "module_assignments": {
+    "tests/test_obsidian_wiki_unit.py": [
+      "test_fixture_repository_has_expected_source_formats",
+      "test_generated_registry_rows_cover_source_objects",
+      "test_lookup_matches_control_registry_identifier_fields",
+      "test_memory_index_searches_extracted_content",
+      "test_memory_index_searches_generated_task_index_content",
+      "test_pdf_extractor_reads_existing_project_pdf",
+      "test_search_falls_back_to_exact_registry_lookup_on_fts_parse_error",
+      "test_status_reports_stale_local_retrieval_as_warning",
+      "test_text_extractors_cover_markdown_tex_and_html",
+      "test_vault_preserves_manual_local_notes",
+      "test_vault_writes_declared_index_paths"
+    ],
+    "tests/test_obsidian_wiki_live.py": [
+      "test_full_source_object_generation_and_search"
+    ]
+  },
+  "legacy_name_mapping": {
+    "test_generated_registry_rows_cover_source_objects": "tests/test_obsidian_wiki_unit.py::test_generated_registry_rows_cover_source_objects",
+    "test_lookup_matches_control_registry_identifier_fields": "tests/test_obsidian_wiki_unit.py::test_lookup_matches_control_registry_identifier_fields",
+    "test_memory_index_searches_extracted_content": "tests/test_obsidian_wiki_unit.py::test_memory_index_searches_extracted_content",
+    "test_memory_index_searches_generated_task_index_content": "tests/test_obsidian_wiki_unit.py::test_memory_index_searches_generated_task_index_content",
+    "test_pdf_extractor_reads_existing_project_pdf": "tests/test_obsidian_wiki_unit.py::test_pdf_extractor_reads_existing_project_pdf",
+    "test_search_falls_back_to_exact_registry_lookup_on_fts_parse_error": "tests/test_obsidian_wiki_unit.py::test_search_falls_back_to_exact_registry_lookup_on_fts_parse_error",
+    "test_status_reports_stale_local_retrieval_as_warning": "tests/test_obsidian_wiki_unit.py::test_status_reports_stale_local_retrieval_as_warning",
+    "test_text_extractors_cover_markdown_tex_and_html": "tests/test_obsidian_wiki_unit.py::test_text_extractors_cover_markdown_tex_and_html",
+    "test_vault_preserves_manual_local_notes": "tests/test_obsidian_wiki_unit.py::test_vault_preserves_manual_local_notes",
+    "test_vault_writes_declared_index_paths": "tests/test_obsidian_wiki_unit.py::test_vault_writes_declared_index_paths"
+  },
+  "classification": {
+    "fixture_backed_unit": 11,
+    "live_acceptance": 1,
+    "legacy_tests_mapped_to_unit": 10,
+    "new_fixture_integrity_tests": 1,
+    "new_live_acceptance_tests": 1
+  },
+  "source_scan_boundary": {
+    "miniature_source_object_count": 4,
+    "live_source_object_count": 816,
+    "unit_repository_local_writes": 0,
+    "live_repository_local_writes": 0,
+    "live_mode": "temporary full-source symlink mirror with temporary generated registries semantic text and SQLite index"
+  },
+  "preserved_behavior": {
+    "markdown_tex_html_extraction": "PASS",
+    "conditional_pdf_extraction": "PASS",
+    "generated_vault_semantic_relationship_rows": "PASS",
+    "sqlite_content_search": "PASS",
+    "generated_task_index_search": "PASS",
+    "exact_registry_lookup": "PASS",
+    "fts_parse_fallback": "PASS",
+    "local_cache_only_warning_classification": "PASS",
+    "declared_vault_index_paths": "PASS",
+    "manual_note_preservation": "PASS"
+  },
+  "authority": {
+    "operational_test_evidence_only": true,
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_claim_authority": false,
+    "proof_authority": false
+  }
+}

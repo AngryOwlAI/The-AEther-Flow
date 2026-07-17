@@ -45,6 +45,18 @@ Run the two full-repository memory acceptance checks explicitly:
 .venv/bin/python -m unittest tests.test_memory_system_live
 ```
 
+Run the miniature-repository Obsidian and SQLite unit module:
+
+```zsh
+.venv/bin/python -m unittest tests.test_obsidian_wiki_unit
+```
+
+Run the single read-only full-source Obsidian generation-and-search acceptance:
+
+```zsh
+.venv/bin/python -m unittest tests.test_obsidian_wiki_live
+```
+
 The broad research-control inventory is owned by six focused discovery shards:
 
 ```zsh
@@ -77,11 +89,11 @@ make PYTHON=.venv/bin/python test-memory
 ```
 
 The shard covers the extracted memory operations, memory CLI modes,
-fixture-backed memory-system behavior, local Obsidian support, and Make
-orchestration. It excludes the live validate-only and bootstrap-idempotence
-checks and does not run the complete repository suite. Use the full
-compatibility profile when a memory-tool change requires the scheduled
-integration backstop:
+fixture-backed memory-system behavior, miniature-repository Obsidian support,
+and Make orchestration. It excludes the live validate-only,
+bootstrap-idempotence, and full-source Obsidian checks and does not run the
+complete repository suite. Use the full compatibility profile when a
+memory-tool change requires the scheduled integration backstop:
 
 ```zsh
 make PYTHON=.venv/bin/python validate-memory-full

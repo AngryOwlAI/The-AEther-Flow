@@ -1043,6 +1043,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260717-015` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260717-016` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260717-017` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260717-018` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `scripts/research_control/mechanized_checks` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `scripts/research_control/support_formalization` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `scripts/validation/adapters` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -1052,6 +1053,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `tests/fixtures/dependency_graph` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/memory_system` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/minimum_physics_payload` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
+| `tests/fixtures/obsidian_wiki` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/physics_payload_ratio` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/project_improvement_bridge` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/research_control` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -3836,8 +3838,12 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260717-017/artifacts` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260717-017/jobs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260717-017/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260717-018/artifacts` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260717-018/jobs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260717-018/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `tests/fixtures/dependency_graph/synthetic_repo` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/memory_system/mini_repo` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
+| `tests/fixtures/obsidian_wiki/mini_repo` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/research_control/active_state_sidecar_invalid` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/research_control/active_state_sidecar_valid` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/research_control/finite_local_candidate` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -4833,12 +4839,18 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260717-015/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260717-016/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260717-017/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260717-018/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `tests/fixtures/dependency_graph/synthetic_repo/registries` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/dependency_graph/synthetic_repo/research_control` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/memory_system/mini_repo/ontology` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/memory_system/mini_repo/registries` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/memory_system/mini_repo/research_control` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/memory_system/mini_repo/wiki` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
+| `tests/fixtures/obsidian_wiki/mini_repo/html` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
+| `tests/fixtures/obsidian_wiki/mini_repo/ontology` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
+| `tests/fixtures/obsidian_wiki/mini_repo/registries` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
+| `tests/fixtures/obsidian_wiki/mini_repo/research_control` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
+| `tests/fixtures/obsidian_wiki/mini_repo/wiki` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/support_traceability_v1/research_control/design` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/support_traceability_v1/research_control/tasks` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/support_traceability_v1/scripts/research_control` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -4857,6 +4869,9 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `tests/fixtures/memory_system/mini_repo/wiki/markdown` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/memory_system/mini_repo/wiki/pdf` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/memory_system/mini_repo/wiki/tex` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
+| `tests/fixtures/obsidian_wiki/mini_repo/ontology/tex` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
+| `tests/fixtures/obsidian_wiki/mini_repo/research_control/tasks` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
+| `tests/fixtures/obsidian_wiki/mini_repo/wiki/markdown` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/support_traceability_v1/research_control/tasks/RT-20260614-055` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/support_traceability_v1/research_control/tasks/RT-20260630-028` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/support_traceability_v1/scripts/research_control/support_formalization` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
