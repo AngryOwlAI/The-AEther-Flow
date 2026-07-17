@@ -1,0 +1,130 @@
+{
+  "authority_boundary": {
+    "fixture_paths_are_authority": false,
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "baseline": {
+    "full_repository_copy_byte_count_per_negative_test": 1719209430,
+    "full_repository_copy_file_count_per_negative_test": 68493,
+    "full_repository_copy_negative_test_count": 2,
+    "full_repository_copy_total_byte_count": 3438418860,
+    "full_repository_copy_total_file_count": 136986,
+    "git_commit": "69bfc12ae16617414e5341057ecacc7ac8975713",
+    "git_tree": "38717dbb6f72954301ec61bb7e9eb024919b7c6b",
+    "module_runtime_seconds": 36.128,
+    "status": "PASS",
+    "test_count": 5
+  },
+  "converted": {
+    "committed_fixture_byte_count": 33847,
+    "committed_fixture_file_count": 6,
+    "fixture_entry_count": 1,
+    "fixture_entry_ids": [
+      "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL"
+    ],
+    "module_runtime_reduction_percent": 99.668,
+    "module_runtime_seconds": 0.12,
+    "negative_test_fixture_bytes_created_per_run": 0,
+    "negative_test_fixture_files_created_per_run": 0,
+    "status": "PASS",
+    "test_count": 5
+  },
+  "failure_equivalence": [
+    {
+      "case_id": "proof_authority",
+      "exception_class": "TraceabilityRegistryError",
+      "message": "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL proof_authority is not false",
+      "status": "PASS"
+    },
+    {
+      "case_id": "generated_authority_path",
+      "exception_class": "TraceabilityRegistryError",
+      "message": "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL uses generated or local path as authority: .local/content_semantics/forbidden.txt",
+      "status": "PASS"
+    }
+  ],
+  "fixture": {
+    "builder": "tests/support/traceability_fixture_builder.py",
+    "files": [
+      {
+        "path": "research_control/design/support_formalization_traceability_registry_v1.yaml",
+        "sha256": "c9fe852ec288862d6b90d0c7ec463d0de4940f6aa396945bc61f80dff7d7a1e1"
+      },
+      {
+        "path": "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex",
+        "sha256": "b589c29e440750e0dacaebb5d2ad86fd5bf0b593b7e27645052fcbf55839a161"
+      },
+      {
+        "path": "research_control/tasks/RT-20260630-028/artifacts/finite_toy_tag_obstruction_report.json",
+        "sha256": "476eeb02cb1fca5e9eeb7ee519cee0a769fdfeb893f57d3cb603db3e8e3a1984"
+      },
+      {
+        "path": "research_control/tasks/RT-20260630-028/artifacts/finite_toy_tag_removal_traceability.yaml",
+        "sha256": "7be3a34aa80f624b56dda6dd41849d3c644f2a27f8b1b32bf72cffd041c830f1"
+      },
+      {
+        "path": "scripts/research_control/support_formalization/finite_toy_tag_obstruction.py",
+        "sha256": "5873317b62090e1444fe714ed564ebd23cad13be03b75db955214d4341fdf058"
+      },
+      {
+        "path": "tests/test_support_only_finite_toy_tag_obstruction.py",
+        "sha256": "9722dcb2f39938868ba6d664eb2ec65b5886d0ff7e6128be2cfa93dd20e424b2"
+      }
+    ],
+    "normalization": "Removed one inherited extra EOF blank line from three copied test-fixture files and refreshed the fixture-local traceability hash.",
+    "root": "tests/fixtures/support_traceability_v1",
+    "status": "PASS"
+  },
+  "gate_results": [
+    {
+      "gate_id": "live_v1_traceability_registry",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "minimal_v1_fixture_acceptance",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "normalized_exception_equivalence",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "v1_deterministic_cli",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "v1_cli_output_file",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "v1_module_runtime",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "affected_profile_selection",
+      "selected_gate_count": 14,
+      "status": "READY"
+    },
+    {
+      "gate_id": "stable_full_repository_tests",
+      "skip_count": 1,
+      "status": "PASS",
+      "test_count": 889
+    }
+  ],
+  "live_registry": {
+    "checked_entry_count": 3,
+    "proof_authority": false,
+    "status": "PASS",
+    "support_only": true
+  },
+  "plan_task_id": "P9-T02",
+  "recommendation_ids": [
+    "V19-R18"
+  ],
+  "status": "PASS",
+  "test_module_sha256": "ff6ae75931c595c1e0218c7f3311e8259ef1e72a1279a96543dd6ddec5317eb0"
+}

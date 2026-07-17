@@ -1,16 +1,20 @@
 from __future__ import annotations
 
+import copy
 import json
-import shutil
 import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from typing import Any
 
 from scripts.research_control import strict_yaml
 from scripts.research_control.support_formalization import (
     validate_traceability_registry as validator,
+)
+from scripts.research_control.support_formalization.traceability_io import (
+    TraceabilityInputs,
 )
 
 
@@ -28,6 +32,17 @@ REGISTRY_PATH = (
     / "design"
     / "support_formalization_traceability_registry_v1.yaml"
 )
+FIXTURE_ROOT = REPO_ROOT / "tests" / "fixtures" / "support_traceability_v1"
+FIXTURE_REGISTRY_PATH = FIXTURE_ROOT / REGISTRY_PATH.relative_to(REPO_ROOT)
+
+
+def validate_fixture_registry(registry: dict[str, Any]) -> dict[str, Any]:
+    return validator.validate_registry(
+        dependencies=TraceabilityInputs(
+            repo_root=FIXTURE_ROOT,
+            registry=registry,
+        )
+    )
 
 
 class SupportFormalizationTraceabilityRegistryTests(unittest.TestCase):
@@ -45,6 +60,20 @@ class SupportFormalizationTraceabilityRegistryTests(unittest.TestCase):
                 "fail_closed_certificate_evaluation_support_formalization",
             },
         )
+        fixture_receipt = validator.validate_registry(repo_root=FIXTURE_ROOT)
+        self.assertEqual(fixture_receipt["status"], "PASS")
+        self.assertEqual(fixture_receipt["checked_entry_count"], 1)
+        self.assertEqual(
+            fixture_receipt["entries"][0]["entry_id"],
+            "SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL",
+        )
+        fixture_files = {
+            path.relative_to(FIXTURE_ROOT).as_posix()
+            for path in FIXTURE_ROOT.rglob("*")
+            if path.is_file()
+        }
+        self.assertEqual(len(fixture_files), 6)
+        self.assertNotIn("README.md", fixture_files)
 
     def test_cli_json_output_is_deterministic(self) -> None:
         command = [sys.executable, str(SCRIPT_PATH), "--json"]
@@ -75,42 +104,32 @@ class SupportFormalizationTraceabilityRegistryTests(unittest.TestCase):
         self.assertEqual(parsed["authority_boundary_status"], "proof_authority_false_preserved")
 
     def test_registry_fails_closed_when_proof_authority_is_enabled(self) -> None:
-        with tempfile.TemporaryDirectory() as temp_dir:
-            temp_root = Path(temp_dir)
-            shutil.copytree(REPO_ROOT, temp_root / "repo", ignore=shutil.ignore_patterns(".git"))
-            copied_registry = (
-                temp_root
-                / "repo"
-                / "research_control"
-                / "design"
-                / "support_formalization_traceability_registry_v1.yaml"
-            )
-            data = strict_yaml.load(copied_registry)
-            data["entries"][0]["proof_authority"] = True
-            copied_registry.write_text(strict_yaml.dumps(data), encoding="utf-8")
+        registry = copy.deepcopy(strict_yaml.load(FIXTURE_REGISTRY_PATH))
+        registry["entries"][0]["proof_authority"] = True
 
-            with self.assertRaises(validator.TraceabilityRegistryError):
-                validator.validate_registry(repo_root=temp_root / "repo")
+        with self.assertRaisesRegex(
+            validator.TraceabilityRegistryError,
+            (
+                r"^SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL "
+                r"proof_authority is not false$"
+            ),
+        ):
+            validate_fixture_registry(registry)
 
     def test_registry_rejects_generated_path_as_canonical_source_authority(self) -> None:
-        with tempfile.TemporaryDirectory() as temp_dir:
-            temp_root = Path(temp_dir)
-            shutil.copytree(REPO_ROOT, temp_root / "repo", ignore=shutil.ignore_patterns(".git"))
-            copied_registry = (
-                temp_root
-                / "repo"
-                / "research_control"
-                / "design"
-                / "support_formalization_traceability_registry_v1.yaml"
-            )
-            data = strict_yaml.load(copied_registry)
-            artifact = data["entries"][0]["canonical_source_artifacts"][0]
-            artifact["path"] = ".local/content_semantics/forbidden.txt"
-            artifact["source_hash"] = "not_used_because_path_prefix_fails_first"
-            copied_registry.write_text(strict_yaml.dumps(data), encoding="utf-8")
+        registry = copy.deepcopy(strict_yaml.load(FIXTURE_REGISTRY_PATH))
+        artifact = registry["entries"][0]["canonical_source_artifacts"][0]
+        artifact["path"] = ".local/content_semantics/forbidden.txt"
+        artifact["source_hash"] = "not_used_because_path_prefix_fails_first"
 
-            with self.assertRaises(validator.TraceabilityRegistryError):
-                validator.validate_registry(repo_root=temp_root / "repo")
+        with self.assertRaisesRegex(
+            validator.TraceabilityRegistryError,
+            (
+                r"^SFR-V12-P6-T02-FINITE-TOY-TAG-REMOVAL uses generated or "
+                r"local path as authority: \.local/content_semantics/forbidden\.txt$"
+            ),
+        ):
+            validate_fixture_registry(registry)
 
 
 if __name__ == "__main__":

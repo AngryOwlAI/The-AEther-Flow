@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `f667637c919d1b893d76fc1464cff1a3e028a4f687c3d27ebe08d7c8c472fba8`
-- Generated-at source timestamp: `2026-07-17T17:13:39Z`
-- Row count: `948`
+- Source fingerprint: `057efd3c7d6048e735171cce068460f91528a5f8bc34dc6a5d7d54cf8485be32`
+- Generated-at source timestamp: `2026-07-17T17:45:50Z`
+- Row count: `949`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260717-014|RT-20260717-013|2026-07-17T17:45:50Z|2026-07-17T17:55:32Z|v1_traceability_minimal_fixtures|completed|none|Project-system v1 traceability test conversion only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After governed checkpoint PASS route one separately bounded P9-T03 v18 traceability-test conversion packet.|PASS|research_control/tasks/RT-20260717-014/jobs/completions/AJC-AJ-RT-20260717-014-001.yaml|
 |RT-20260717-013|RT-20260717-012|2026-07-17T17:13:39Z|2026-07-17T17:29:06Z|traceability_dependency_injection|completed|none|Project-system traceability validator testability only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|3|After governed checkpoint PASS route one separately bounded P9-T02 v1 traceability-test conversion packet.|PASS|research_control/tasks/RT-20260717-013/jobs/completions/AJC-AJ-RT-20260717-013-001.yaml|
 |RT-20260717-012|RT-20260717-011|2026-07-17T16:31:35Z|2026-07-17T16:40:14Z|validation_manifest_classifier_shadow_parity_repair|completed|none|Project-system validation-path classification repair only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After governed checkpoint PASS route one separately bounded P9-T01 traceability dependency-injection packet.|PASS|research_control/tasks/RT-20260717-012/jobs/completions/AJC-AJ-RT-20260717-012-001.yaml|
 |RT-20260717-011|RT-20260717-010|2026-07-17T14:35:28Z|2026-07-17T15:13:28Z|cached_advisory_route_diagnostics|completed|none|Project-system advisory diagnostic caching only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|Create one separately bounded Validator Engineer repair for validation-manifest path classification and checkpoint shadow parity; rerun P8-T07 before P9-T01.|PASS|research_control/tasks/RT-20260717-011/jobs/completions/AJC-AJ-RT-20260717-011-001.yaml|
