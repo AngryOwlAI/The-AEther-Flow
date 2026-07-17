@@ -1,0 +1,83 @@
+{
+  "claim_boundary": {
+    "benchmark_authority": false,
+    "gate_chair_authority": false,
+    "ontology_authority": false,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "gate_inclusion": {
+    "affected_profile_repository_gate_selected": false,
+    "checkpoint_profile_repository_gate_selected": true,
+    "checkpoint_requires_repository_gate": true,
+    "full_profile_repository_gate_selected": true,
+    "project_control_legacy_runs_repository_discovery": true,
+    "repository_gate_cache_policy": "ineligible",
+    "repository_gate_command": "python -m unittest discover -s tests",
+    "repository_gate_cost_class": "slow",
+    "repository_gate_profiles": [
+      "full"
+    ],
+    "repository_gate_severity": "blocking",
+    "scheduled_ci_invokes_project_control": true
+  },
+  "invocation_ownership": {
+    "behavioral_source_inventory_full_spine_call_count": 0,
+    "live_shard_test_count": 3,
+    "live_shard_test_ids": [
+      "tests.test_research_control.ResearchControlTests.test_distance_to_gr_ledger_is_static_validated",
+      "tests.test_research_control.ResearchControlTests.test_frontier_inventory_validator_accepts_live_inventory",
+      "tests.test_research_control.ResearchControlTests.test_static_research_control_validation_passes"
+    ],
+    "observed_live_full_spine_invocation_count": 1,
+    "primary_live_shard_membership_count": 1,
+    "primary_repository_discovery_count": 1,
+    "repository_discovery_test_count": 865,
+    "static_live_full_spine_call_count": 1,
+    "static_live_full_spine_owners": [
+      {
+        "line": 82,
+        "owner": "ResearchControlTests.test_static_research_control_validation_passes",
+        "path": "tests/test_research_control.py"
+      }
+    ]
+  },
+  "raw_command_outputs": {
+    "baseline_live_shard": "Ran 3 tests in 12.164s\nOK",
+    "checkpoint_plan": "requested=checkpoint effective=checkpoint status=READY selected_gates=10 includes test_shard_repository as prerequisite_for:checkpoint_transaction",
+    "full_plan": "requested=full effective=full status=READY selected_gates=27 includes test_shard_repository profile_full_research_control and profile_ci_project_control",
+    "instrumented_live_shard": "Ran 3 tests in 12.014s\nOK\nobserved_validate_all_calls=1",
+    "stable_full_repository": "Ran 865 tests\nOK (skipped=1)",
+    "static_audit": "status=PASS static_live_full_spine_call_count=1 behavioral_source_inventory_full_spine_call_count=0 primary_live_shard_membership_count=1 primary_repository_discovery_count=1",
+    "synthetic_corruption": "Ran 1 test in 0.202s\nOK"
+  },
+  "schema_id": "live_research_control_acceptance_report_v1",
+  "source_change": {
+    "live_test_source_changed": false,
+    "planned_write_scope_used": false
+  },
+  "source_hashes": {
+    ".github/workflows/project-control-validation.yml": "1d27b57c0eb2f2e4effc422470a7bae90d592ef78efb6b1d78e2c2c223346af4",
+    "Makefile": "9cb4c0938cb1257f6a51cf342ff341b6598f3809c3723dd367c49ef7c45d5544",
+    "research_control/design/validation_gate_manifest_v1.yaml": "f5a6255425b1b9c67e9cbd10d037c0df80fdb147cb5152a18d112ba79eb48a51",
+    "scripts/research_control/checkpoint_research_transaction.py": "f4be0da0308f2d93768e9816d05c0576193f51a47d767dbeda2bdb271bf4319c",
+    "tests/support/research_control_shards.py": "355726d0c0b6727134fbdd6291d47033e19c01f7ccb57aa78ad4251ad4fc5b58",
+    "tests/test_research_control_live_integration.py": "eee3d6306e150832f6c25ea8f177e814d8ccb60c6b1198aec3a095e779d0951c"
+  },
+  "status": "PASS",
+  "synthetic_corruption": {
+    "corrupts_live_repository": false,
+    "fixture_kind": "temporary synthetic repository",
+    "test_id": "tests.test_validation_equivalence.ValidationEquivalenceTests.test_configuration_errors_preserve_blocking_semantics",
+    "verdict": "PASS"
+  },
+  "task_id": "RT-20260717-006",
+  "validation": {
+    "full_repository_skip_count": 1,
+    "full_repository_test_count": 865,
+    "legacy_planner_unexplained_mismatch_count": 0,
+    "legacy_planner_shadow_comparison_status": "PASS",
+    "live_integration_post_record_status": "PASS"
+  }
+}

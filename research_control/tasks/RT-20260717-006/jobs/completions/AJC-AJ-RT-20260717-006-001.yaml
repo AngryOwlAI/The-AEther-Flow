@@ -1,0 +1,168 @@
+job_id: "AJ-RT-20260717-006-001"
+completion_id: "AJC-AJ-RT-20260717-006-001"
+task_id: "RT-20260717-006"
+decision_id: "DDR-20260717-006"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-006"
+status: "completed"
+created_at: "2026-07-17T10:31:43Z"
+started_at: "2026-07-17T10:31:43Z"
+completed_at: "2026-07-17T10:39:06Z"
+objective: "Verify and retain exactly one blocking primary live full-spine research-control acceptance with separate synthetic corruption coverage and no accidental behavioral repetition."
+completion_summary: "Exactly one primary live full-spine owner remains and is discovered once. Instrumented live execution calls validate_all once; synthetic corruption blocks separately; full checkpoint and scheduled-CI paths retain the slow blocking repository gate; the 865-test repository suite passes with one expected skip; and no test source changes."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P8-T02"
+  - "tests/test_research_control_live_integration.py"
+  - "tests/support/research_control_shards.py"
+  - "tests/test_research_control.py"
+  - "tests/test_validate_research_control.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - ".github/workflows/project-control-validation.yml"
+  - "research_control/tasks/RT-20260717-005/jobs/completions/AJC-AJ-RT-20260717-005-001.yaml"
+outputs_created:
+  - "research_control/tasks/RT-20260717-006/artifacts/live_research_control_acceptance_report.json"
+  - "research_control/tasks/RT-20260717-006/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-006/jobs/completions/AJC-AJ-RT-20260717-006-001.yaml"
+implementation_results:
+  plan_task_id: "P8-T02"
+  implementation_status: "PASS"
+  live_test_source_changed: false
+  live_test_source_sha256: "eee3d6306e150832f6c25ea8f177e814d8ccb60c6b1198aec3a095e779d0951c"
+  static_live_full_spine_call_count: 1
+  observed_live_full_spine_invocation_count: 1
+  behavioral_source_inventory_full_spine_call_count: 0
+  live_shard_test_count: 3
+  primary_live_shard_membership_count: 1
+  primary_repository_discovery_count: 1
+  synthetic_corruption_status: "PASS"
+  full_profile_live_gate_inclusion: true
+  affected_checkpoint_live_gate_inclusion: true
+  scheduled_ci_live_gate_inclusion: true
+  checkpoint_command_live_gate_inclusion: true
+  repository_gate_blocking: true
+  repository_gate_slow: true
+  affected_blocking_legacy_gate_count: 11
+  affected_blocking_planner_gate_count: 11
+  affected_blocking_unexplained_mismatch_count: 0
+  affected_blocking_shadow_comparison_status: "PASS"
+  stable_full_repository_test_count: 865
+  stable_full_repository_skip_count: 1
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+pre_checkpoint_receipt_correction:
+  detected_at: "2026-07-17T10:47:57Z"
+  path: "FOLDER_MAP.md"
+  status: "PASS"
+  explanation: "The governed checkpoint memory-sync generator added the authorized P8-T02 task directories to FOLDER_MAP.md. The staged documentation-impact gate correctly required this live generated derivative to be listed."
+  scope_expanded: false
+command_results:
+  - ".venv/bin/python -m py_compile tests/test_research_control_live_integration.py | exit_code=0 | PASS"
+  - "read-only inline Python full-spine ownership and plan-inclusion audit | exit_code=0 | one static owner one live-shard membership one repository-discovery membership zero behavioral live owners"
+  - ".venv/bin/python -m unittest -v tests.test_validation_equivalence.ValidationEquivalenceTests.test_configuration_errors_preserve_blocking_semantics | exit_code=0 | 1 synthetic-repository test PASS in 0.202 seconds"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile checkpoint --paths tests/test_research_control_live_integration.py --explain | exit_code=0 | READY selects blocking test_shard_repository prerequisite"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile full --explain | exit_code=0 | READY selects test_shard_repository profile_full_research_control and profile_ci_project_control"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy gates equal 11 planner gates with zero unexplained mismatch"
+  - "read-only inline Python instrumented live shard | exit_code=0 | 3 tests PASS in 12.014 seconds with exactly one observed validate_all call"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_live_integration | exit_code=0 | 3 tests PASS"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable repository 865 tests PASS with one expected skip"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py and --check | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | PASS with two nonblocking existing-memory findings"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS"
+  - "git diff --check | exit_code=0 | PASS"
+  - "initial governed checkpoint attempt | blocked before commit | documentation-impact receipt omitted checkpoint-generated FOLDER_MAP.md"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P8-T01 is completed and checkpointed; generation lease project binding clean entry tree predecessor guards and single invocation were verified before task activation."
+      - "Memory preflight canonical plan inspection classifier resolver and emitted-signal validation passed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Static and observed execution each prove exactly one live full-spine invocation while separate focused live tests do not call validate_all."
+      - "Synthetic corruption preserves blocking semantics without changing live repository state."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The required task-local acceptance report and documentation-impact receipt exist while the live test source remains byte-identical."
+      - "The stable full repository suite passes 865 tests with one expected skip."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "All declared pre-checkpoint gates pass and persistence is authorized only through the governed checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index dependency-graph wiki and registry derivatives are regenerated from the final source state and checked fresh."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass with two nonblocking existing-memory findings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Research-control diff validation passes and every acceptance result remains operational project-system evidence only."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system live-acceptance validation only; no physics or derivation status changes."
+scientific_claims_changed: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-006/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet verifies live test ownership scheduling and synthetic failure behavior only. It does not change production validators behavioral tests workflows ordinary research canonical ontology source laws benchmark status Gate Chair authority proof status physics claims or derivation status."
+verdict: "v19_p8_t02_single_live_research_control_acceptance_pass_no_source_or_physics_delta"
+coherent_resolution_summary: "One blocking live full-spine acceptance remains; behavioral shards do not repeat it; synthetic corruption is isolated; full checkpoint and scheduled-CI paths retain it; and no source change was required."
+next_recommendation: "After governed checkpoint PASS route only P8-T03 unless live state requires a bounded repair or supersession."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 814
+    relationship_row_count: 4053
+    semantic_row_count: 814
+    vault_row_count: 814
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."
