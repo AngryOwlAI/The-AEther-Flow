@@ -8,6 +8,7 @@ import csv
 import json
 import sys
 from collections import Counter
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -171,6 +172,29 @@ AI_METHODOLOGY_METRIC_SPECS: dict[str, dict[str, str]] = {
 }
 
 
+@dataclass
+class MetricsBuildInstrumentation:
+    """Mutable counters scoped to one metrics build."""
+
+    completion_files_read: int = 0
+
+
+@dataclass(frozen=True)
+class MetricsSnapshot:
+    """Immutable serialized outputs and instrumentation from one live build."""
+
+    report_json: str
+    report_markdown: str
+    completion_files_read: int
+    snapshot_builds: int = 1
+
+    def materialize_report(self) -> dict[str, Any]:
+        report = json.loads(self.report_json)
+        if not isinstance(report, dict):
+            raise ValueError("metrics snapshot report must be a mapping")
+        return report
+
+
 def read_csv_rows(repo_root: Path, registry_name: str) -> list[dict[str, str]]:
     path = repo_root / "registries" / registry_name
     with path.open(newline="", encoding="utf-8") as handle:
@@ -206,9 +230,17 @@ def is_physics_role(role: dict[str, str] | None) -> bool:
     )
 
 
-def completion_text(repo_root: Path, path_text: str) -> str:
+def completion_text(
+    repo_root: Path,
+    path_text: str,
+    instrumentation: MetricsBuildInstrumentation | None = None,
+) -> str:
     path = repo_root / path_text
-    return path.read_text(encoding="utf-8") if path.exists() else ""
+    if not path.exists():
+        return ""
+    if instrumentation is not None:
+        instrumentation.completion_files_read += 1
+    return path.read_text(encoding="utf-8")
 
 
 def load_yaml_document(repo_root: Path, path_text: str) -> dict[str, Any]:
@@ -223,7 +255,14 @@ def load_yaml_document(repo_root: Path, path_text: str) -> dict[str, Any]:
         return {}
 
 
-def load_completion(repo_root: Path, path_text: str) -> dict[str, Any]:
+def load_completion(
+    repo_root: Path,
+    path_text: str,
+    instrumentation: MetricsBuildInstrumentation | None = None,
+) -> dict[str, Any]:
+    path = repo_root / path_text
+    if path_text and path.exists() and instrumentation is not None:
+        instrumentation.completion_files_read += 1
     return load_yaml_document(repo_root, path_text)
 
 
@@ -340,6 +379,7 @@ def completion_record(
     row: dict[str, str],
     completion: dict[str, Any],
     is_physics: bool,
+    instrumentation: MetricsBuildInstrumentation | None = None,
 ) -> dict[str, Any]:
     progress = dict_value(completion.get("physics_progress_status"))
     delta = dict_value(completion.get("distance_to_gr_delta"))
@@ -360,7 +400,7 @@ def completion_record(
         "created_at": row.get("created_at", ""),
         "completed_at": row.get("completed_at", ""),
         "is_physics": is_physics,
-        "text": completion_text(repo_root, completion_path),
+        "text": completion_text(repo_root, completion_path, instrumentation),
         "progress_status": string_value(progress.get("status")),
         "milestone": first_nonblank(progress.get("target_derivation_milestone"), delta.get("milestone")),
         "burden_id": first_nonblank(progress.get("milestone_burden"), delta.get("burden_id")),
@@ -1591,7 +1631,11 @@ def collect_payload_density_metrics(
     return payload_density_metrics, route_orbit_risk_metrics, warnings
 
 
-def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
+def build_report(
+    repo_root: Path = REPO_ROOT,
+    *,
+    instrumentation: MetricsBuildInstrumentation | None = None,
+) -> dict[str, Any]:
     repo_root = Path(repo_root)
     task_rows = read_csv_rows(repo_root, "RESEARCH_TASK_REGISTRY.csv")
     job_rows = read_csv_rows(repo_root, "AGENT_JOB_REGISTRY.csv")
@@ -1624,7 +1668,7 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
 
     for row in sorted_jobs:
         completion_path = row.get("completion_path", "")
-        completion = load_completion(repo_root, completion_path)
+        completion = load_completion(repo_root, completion_path, instrumentation)
         if not completion:
             continue
 
@@ -1677,7 +1721,7 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
                 human_gate_freeze_count += 1
 
         completion_records.append(
-            completion_record(repo_root, row, completion, is_physics)
+            completion_record(repo_root, row, completion, is_physics, instrumentation)
         )
 
     referenced_obstructions = 0
@@ -1690,7 +1734,7 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
                 continue
             if source_time and later["completed_at"] and later["completed_at"] <= source_time:
                 continue
-            if oid and oid in completion_text(repo_root, later["completion_path"]):
+            if oid and oid in completion_text(repo_root, later["completion_path"], instrumentation):
                 referenced_obstructions += 1
                 break
 
@@ -1880,6 +1924,10 @@ def build_report(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
     }
 
 
+def render_json(report: dict[str, Any]) -> str:
+    return json.dumps(report, indent=2, sort_keys=True) + "\n"
+
+
 def render_table(mapping: dict[str, Any]) -> list[str]:
     lines = ["| Metric | Value |", "| --- | --- |"]
     for key, value in mapping.items():
@@ -2049,6 +2097,18 @@ def render_markdown(report: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def build_metrics_snapshot(repo_root: Path = REPO_ROOT) -> MetricsSnapshot:
+    """Build one report and freeze its canonical JSON and Markdown outputs."""
+
+    instrumentation = MetricsBuildInstrumentation()
+    report = build_report(repo_root, instrumentation=instrumentation)
+    return MetricsSnapshot(
+        report_json=render_json(report),
+        report_markdown=render_markdown(report),
+        completion_files_read=instrumentation.completion_files_read,
+    )
+
+
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -2063,11 +2123,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
-    report = build_report(REPO_ROOT)
+    snapshot = build_metrics_snapshot(REPO_ROOT)
     if args.format == "markdown":
-        output = render_markdown(report)
+        output = snapshot.report_markdown
     else:
-        output = json.dumps(report, indent=2, sort_keys=True) + "\n"
+        output = snapshot.report_json
 
     if args.output:
         output_path = REPO_ROOT / args.output

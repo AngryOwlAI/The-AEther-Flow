@@ -1,0 +1,167 @@
+job_id: "AJ-RT-20260717-008-001"
+completion_id: "AJC-AJ-RT-20260717-008-001"
+task_id: "RT-20260717-008"
+decision_id: "DDR-20260717-008"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-008"
+status: "completed"
+created_at: "2026-07-17T11:56:07Z"
+started_at: "2026-07-17T11:56:07Z"
+completed_at: "2026-07-17T12:13:45Z"
+objective: "Implement one immutable metrics snapshot per live metrics test class or executor context and prove exact report and dashboard equivalence with measured scan reduction."
+completion_summary: "One explicit frozen metrics snapshot now serves all live metrics and dashboard assertions in the class. Snapshot builds and completion-file reads fall by 88.9 percent, exact JSON and Markdown bytes are preserved, and the 865-test repository suite passes with one expected skip."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P8-T04"
+  - "scripts/research_control/report_physics_progress_metrics.py"
+  - "tests/test_research_control.py"
+  - "tests/test_research_control_metrics.py"
+  - "tests/test_report_physics_progress_metrics.py"
+outputs_created:
+  - "scripts/research_control/report_physics_progress_metrics.py"
+  - "tests/test_research_control.py"
+  - "research_control/tasks/RT-20260717-008/artifacts/metrics_snapshot_refactor_report.json"
+  - "research_control/tasks/RT-20260717-008/jobs/completions/AJC-AJ-RT-20260717-008-001.yaml"
+implementation_results:
+  plan_task_id: "P8-T04"
+  implementation_status: "PASS"
+  immutable_snapshot_status: "PASS"
+  snapshot_type: "MetricsSnapshot"
+  module_global_cache_created: false
+  cross_repository_state_cache_created: false
+  class_snapshot_builds_before: 9
+  class_snapshot_builds_after: 1
+  completion_files_read_before: 53379
+  completion_files_read_after: 5931
+  completion_file_read_reduction_percent: 88.9
+  metrics_shard_real_seconds_before: 13.905
+  metrics_shard_real_seconds_after: 1.74
+  metrics_shard_reduction_percent: 87.5
+  matched_state_json_byte_equivalence: "PASS"
+  matched_state_markdown_byte_equivalence: "PASS"
+  metrics_test_count_before: 10
+  metrics_test_count_after: 10
+  source_test_inventory_changed: false
+  dashboard_source_changed: false
+  discovery_shim_changed: false
+  small_fixture_source_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_state_changed: false
+  scientific_claims_changed: false
+  physics_delta_changed: false
+pre_checkpoint_receipt_correction:
+  detected_at: "2026-07-17T12:17:53Z"
+  path: "FOLDER_MAP.md"
+  status: "PASS"
+  explanation: "The governed checkpoint memory-sync generator added the authorized P8-T04 task directories to FOLDER_MAP.md. The staged documentation-impact gate correctly required this live generated derivative to be listed."
+  scope_expanded: false
+command_results:
+  - ".venv/bin/python -m py_compile scripts/research_control/report_physics_progress_metrics.py tests/test_research_control.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_metrics | exit_code=0 | 10 tests PASS in 1.663 seconds real 1.74 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_report_physics_progress_metrics | exit_code=0 | 2 tests PASS in 0.020 seconds"
+  - "read-only inline Python metrics snapshot build-count completion-read and byte-equivalence audit | exit_code=0 | PASS one class snapshot build 5931 completion-file reads exact serialized hashes"
+  - "matched-state JSON and Markdown cmp | exit_code=0 | PASS exact bytes and SHA-256 hashes"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths scripts/research_control/report_physics_progress_metrics.py tests/test_research_control.py --explain | exit_code=0 | READY"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile checkpoint --paths scripts/research_control/report_physics_progress_metrics.py tests/test_research_control.py --explain | exit_code=0 | READY"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile full --explain | exit_code=0 | READY"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | PASS 11 legacy-compatible affected gates equal 11 planner gates zero unexplained mismatch"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS"
+  - "git diff --check | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | 865 tests PASS in 173.577 seconds with one expected skip"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py and --check | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | PASS with two nonblocking existing-memory findings"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-008-001 | authorized pending execution"
+  - "initial governed checkpoint attempt | blocked before commit | documentation-impact receipt omitted checkpoint-generated FOLDER_MAP.md"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "P8-T03 is completed and checkpointed; generation lease project binding clean entry tree predecessor guards and the single invocation were verified before P8-T04 activation."
+      - "Memory preflight canonical plan inspection classifier resolver and emitted-signal validation passed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "A frozen MetricsSnapshot stores canonical JSON and Markdown strings and materializes a fresh report mapping."
+      - "The ten-test metrics shard builds one caller-owned snapshot reuses it for dashboard and Markdown assertions and passes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Matched-state JSON and Markdown bytes are identical and actual completion-file reads fall from 53379 to 5931."
+      - "The two source-file implementation remains within the AgentJob allowlist with 148 source test IDs and ten metrics test IDs unchanged."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "All declared pre-checkpoint gates pass and persistence is authorized only through the governed checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index and dependency-graph derivatives are regenerated from the completed source state and checked fresh."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass with two nonblocking existing-memory findings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Research-control diff validation passes and all snapshot evidence remains operational project-system evidence only."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+distance_to_gr_delta:
+  changed: false
+  summary: "Project-system metrics-test optimization only; no physics or derivation status changes."
+scientific_claims_changed: false
+documentation_impact:
+  status: "no_update_required"
+  receipt_path: "research_control/tasks/RT-20260717-008/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet verifies immutable project-control metrics snapshots and tests only. It does not make metrics status physics proof and does not change ordinary research ontology source laws benchmarks Gate Chair authority proof status physics claims or derivation status."
+verdict: "v19_p8_t04_immutable_metrics_snapshot_reuse_pass_no_physics_delta"
+coherent_resolution_summary: "One explicit frozen snapshot replaces nine live report builds for the metrics class while exact serialized outputs and all ten test IDs remain unchanged."
+next_recommendation: "After governed checkpoint PASS route only P8-T05."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 814
+    relationship_row_count: 4053
+    semantic_row_count: 814
+    vault_row_count: 814
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Obsidian semantic SQLite wiki and .local retrieval outputs are navigation diagnostics only and are not authority."
+documentation_impact_id: "DI-RT-20260717-008-001"

@@ -51,6 +51,19 @@ class ResearchControlTests(unittest.TestCase):
             "render_ai_methodology_metrics_dashboard",
             "render_ai_methodology_metrics_dashboard.py",
         )
+        cls._metrics_snapshot = None
+        cls._metrics_snapshot_builds = 0
+
+    @classmethod
+    def live_metrics_snapshot(cls):
+        if cls._metrics_snapshot is None:
+            cls._metrics_snapshot = cls.metrics.build_metrics_snapshot(REPO_ROOT)
+            cls._metrics_snapshot_builds += 1
+        return cls._metrics_snapshot
+
+    @classmethod
+    def live_metrics_report(cls) -> dict:
+        return cls.live_metrics_snapshot().materialize_report()
 
     def test_strict_yaml_parses_nested_maps_and_lists(self) -> None:
         parsed = self.strict_yaml.loads(
@@ -83,16 +96,21 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(report.errors, [])
 
     def test_physics_progress_metrics_report_reads_tracked_completions(self) -> None:
-        report = self.metrics.build_report(REPO_ROOT)
+        snapshot = self.live_metrics_snapshot()
+        report = snapshot.materialize_report()
         metrics = report["metrics"]
         self.assertGreater(metrics["input_counts"]["completions_read"], 0)
         self.assertIn("physics_progress_metrics", metrics)
         self.assertIn("operational_validation_metrics", metrics)
         self.assertIn("scientific_progress_metrics", metrics)
         self.assertFalse(report["authority_boundary"]["physics_claim_promotion_authorized"])
+        self.assertTrue(snapshot.__dataclass_params__.frozen)
+        self.assertEqual(snapshot.snapshot_builds, 1)
+        self.assertEqual(self._metrics_snapshot_builds, 1)
+        self.assertGreater(snapshot.completion_files_read, 0)
 
     def test_physics_progress_metrics_separate_operational_and_scientific_scoreboards(self) -> None:
-        report = self.metrics.build_report(REPO_ROOT)
+        report = self.live_metrics_report()
         metrics = report["metrics"]
         operational = metrics["operational_validation_metrics"]
         scientific = metrics["scientific_progress_metrics"]
@@ -103,7 +121,7 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
 
     def test_support_only_checker_metrics_are_operational_only(self) -> None:
-        report = self.metrics.build_report(REPO_ROOT)
+        report = self.live_metrics_report()
         metrics = report["metrics"]
         operational = metrics["operational_validation_metrics"]
         scientific = metrics["scientific_progress_metrics"]
@@ -115,7 +133,7 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
 
     def test_payload_density_and_route_orbit_metrics_are_operational_only(self) -> None:
-        report = self.metrics.build_report(REPO_ROOT)
+        report = self.live_metrics_report()
         metrics = report["metrics"]
         scientific = metrics["scientific_progress_metrics"]
         payload_density = metrics["payload_density_metrics"]
@@ -149,7 +167,7 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
 
     def test_physics_progress_integration_metrics_count_required_packet_types(self) -> None:
-        report = self.metrics.build_report(REPO_ROOT)
+        report = self.live_metrics_report()
         metrics = report["metrics"]
         scientific = metrics["scientific_progress_metrics"]
         integration = metrics["physics_progress_integration_metrics"]
@@ -177,7 +195,7 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(metrics["metric_separation_guard"]["status"], "pass")
 
     def test_ai_methodology_metrics_are_support_only_and_separate(self) -> None:
-        report = self.metrics.build_report(REPO_ROOT)
+        report = self.live_metrics_report()
         metrics = report["metrics"]
         scientific = metrics["scientific_progress_metrics"]
         methodology = metrics["ai_research_agent_methodology_metrics"]
@@ -207,7 +225,7 @@ class ResearchControlTests(unittest.TestCase):
             self.assertFalse(metric["authority_boundary"]["benchmark_promotion_authorized"])
 
     def test_payload_density_warnings_are_advisory(self) -> None:
-        report = self.metrics.build_report(REPO_ROOT)
+        report = self.live_metrics_report()
         warnings = report["metrics"]["diagnostic_warnings"]
 
         self.assertIsInstance(warnings, list)
@@ -219,8 +237,8 @@ class ResearchControlTests(unittest.TestCase):
             self.assertIn("recommended_guard_action", warning)
 
     def test_physics_progress_metrics_markdown_renders_diagnostic_sections(self) -> None:
-        report = self.metrics.build_report(REPO_ROOT)
-        rendered = self.metrics.render_markdown(report)
+        snapshot = self.live_metrics_snapshot()
+        rendered = snapshot.report_markdown
 
         self.assertIn("## Payload-Density Metrics", rendered)
         self.assertIn("## Route-Orbit Risk Metrics", rendered)
@@ -232,9 +250,18 @@ class ResearchControlTests(unittest.TestCase):
         self.assertIn("## Diagnostic Warnings", rendered)
 
     def test_ai_methodology_dashboard_is_support_only_and_not_truth_ranking(self) -> None:
-        dashboard = self.ai_methodology_dashboard.build_dashboard(REPO_ROOT)
+        snapshot = self.live_metrics_snapshot()
+        report = snapshot.materialize_report()
+        with mock.patch.object(
+            self.ai_methodology_dashboard,
+            "load_methodology_report",
+            return_value=report,
+        ):
+            dashboard = self.ai_methodology_dashboard.build_dashboard(REPO_ROOT)
         rendered = self.ai_methodology_dashboard.render_markdown(dashboard)
 
+        self.assertIs(snapshot, self.live_metrics_snapshot())
+        self.assertEqual(self._metrics_snapshot_builds, 1)
         self.assertEqual(dashboard["schema_id"], "ai_methodology_metrics_dashboard_v1")
         self.assertEqual(dashboard["dashboard_type"], "support_only_ai_system_diagnostic")
         self.assertEqual(dashboard["dashboard_labels"]["primary_label"], "AI-system diagnostic")

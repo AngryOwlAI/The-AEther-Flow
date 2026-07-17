@@ -1,0 +1,121 @@
+{
+  "schema_id": "metrics_snapshot_refactor_report_v1",
+  "status": "PASS",
+  "task_id": "RT-20260717-008",
+  "plan_task_id": "P8-T04",
+  "recommendation_ids": [
+    "V19-R17",
+    "V19-R35"
+  ],
+  "claim_boundary": {
+    "benchmark_authority": false,
+    "gate_chair_authority": false,
+    "ontology_authority": false,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "implementation": {
+    "snapshot_type": "MetricsSnapshot",
+    "snapshot_representation": "frozen dataclass containing canonical JSON and Markdown strings",
+    "report_materialization": "fresh mapping parsed from the immutable JSON string",
+    "snapshot_owner": "explicit caller or metrics test class",
+    "module_global_cache_created": false,
+    "cross_repository_state_cache_created": false,
+    "live_test_class_snapshot_builds": 1,
+    "dashboard_uses_materialized_same_snapshot": true,
+    "cli_builds_one_snapshot_per_invocation": true,
+    "completion_file_read_instrumentation": true
+  },
+  "matched_state_serialization_equivalence": {
+    "status": "PASS",
+    "control_state": "active RT-20260717-008 before completion registration",
+    "json_bytes_before": 462337,
+    "json_bytes_after": 462337,
+    "json_sha256_before": "64f85dc27365b4c3b2ccecebd18d925710d5d54ef52e8ca7941c8e10dff989ec",
+    "json_sha256_after": "64f85dc27365b4c3b2ccecebd18d925710d5d54ef52e8ca7941c8e10dff989ec",
+    "json_cmp_exit_code": 0,
+    "markdown_bytes_before": 18540,
+    "markdown_bytes_after": 18540,
+    "markdown_sha256_before": "9e083b2201c2f15310e4c401acfb2afecc4a78427d303707c2305ee554b16ae2",
+    "markdown_sha256_after": "9e083b2201c2f15310e4c401acfb2afecc4a78427d303707c2305ee554b16ae2",
+    "markdown_cmp_exit_code": 0
+  },
+  "performance": {
+    "baseline_snapshot_builds": 9,
+    "post_change_snapshot_builds": 1,
+    "snapshot_build_reduction_percent": 88.9,
+    "baseline_completion_files_read": 53379,
+    "post_change_completion_files_read": 5931,
+    "completion_file_read_reduction_percent": 88.9,
+    "baseline_metrics_shard_real_seconds": 13.905,
+    "post_change_metrics_shard_real_seconds": 1.74,
+    "metrics_shard_real_time_reduction_percent": 87.5,
+    "baseline_metrics_shard_test_count": 10,
+    "post_change_metrics_shard_test_count": 10,
+    "small_fixture_test_count": 2
+  },
+  "test_inventory": {
+    "source_test_count_before": 148,
+    "source_test_count_after": 148,
+    "source_test_sha256_before": "319da5d5d388b76866b8e15054a4ea3b7f90979685393a61f72109c831bee76a",
+    "source_test_sha256_after": "319da5d5d388b76866b8e15054a4ea3b7f90979685393a61f72109c831bee76a",
+    "metrics_test_count_before": 10,
+    "metrics_test_count_after": 10,
+    "shard_ownership_changed": false,
+    "discovery_shim_changed": false,
+    "small_fixture_source_changed": false
+  },
+  "planner_shadow_comparison": {
+    "status": "PASS",
+    "legacy_execution_authoritative": true,
+    "affected_blocking_legacy_gate_count": 11,
+    "affected_blocking_planner_gate_count": 11,
+    "unexplained_mismatch_gate_ids": []
+  },
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v19.md": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc",
+    "scripts/research_control/render_ai_methodology_metrics_dashboard.py": "05922b33accfe483ec66f67f64ef7a6917f60e0f68d15706993c57328a18c4e8",
+    "scripts/research_control/report_physics_progress_metrics.py": "0b809b86f3cd7d61c1a01bea9793033cef906da85e789cea82b94c7a26b9f9e4",
+    "tests/support/research_control_shards.py": "355726d0c0b6727134fbdd6291d47033e19c01f7ccb57aa78ad4251ad4fc5b58",
+    "tests/test_report_physics_progress_metrics.py": "bd9a4ec8a231414a9e032e7c9514bb2c5515863716a1b7fe982b12fa5d2cb3a0",
+    "tests/test_research_control.py": "adb5880f67e8008b0270426cb2834ef0324b22aebdad4b9a55e0d76f132bec22",
+    "tests/test_research_control_metrics.py": "3b1fc591414833449eed1d92393ce675d798586b7f38db173b10aec659d3270d"
+  },
+  "ordinary_research_preservation": {
+    "handoff_id": "handoff-0740",
+    "handoff_yaml_sha256": "5be1f16f476c1f03db0baf3dcfec8ffc1947ff61c5d5d3ff43012239ce5c0c1d",
+    "handoff_markdown_sha256": "2d2bb5936181f7040357c1074c06e124904b28cd84fdb6b3138be59055d02402",
+    "program_state_sha256": "1a28fc71d3076347be4221e4d30b4bf962e5f752fd9d90f099d916dd89a4706c",
+    "ordinary_research_state_changed": false
+  },
+  "validation": {
+    "py_compile": "PASS",
+    "metrics_shard": "PASS",
+    "metrics_shard_tests": 10,
+    "small_metrics_fixtures": "PASS",
+    "small_metrics_fixture_tests": 2,
+    "single_snapshot_audit": "PASS",
+    "json_byte_equivalence": "PASS",
+    "markdown_byte_equivalence": "PASS",
+    "planner_shadow_comparison": "PASS",
+    "research_control_diff": "PASS",
+    "git_diff_check": "PASS",
+    "full_repository_tests": "PASS",
+    "full_repository_test_count": 865,
+    "full_repository_skip_count": 1,
+    "checkpoint_transaction": "RETRY_AUTHORIZED_AFTER_RECEIPT_CORRECTION"
+  },
+  "raw_command_outputs": {
+    "baseline_instrumentation": "PASS; tests=10; snapshot_builds=9; completion_files_read=53379; duration_seconds=13.905; JSON bytes=462337; Markdown bytes=18540",
+    "matched_state_json_cmp": "exit_code=0; bytes=462337; sha256=64f85dc27365b4c3b2ccecebd18d925710d5d54ef52e8ca7941c8e10dff989ec",
+    "matched_state_markdown_cmp": "exit_code=0; bytes=18540; sha256=9e083b2201c2f15310e4c401acfb2afecc4a78427d303707c2305ee554b16ae2",
+    "metrics_shard": "Ran 10 tests in 1.663s; OK; real 1.74s",
+    "single_snapshot_audit": "PASS; tests=10; class_snapshot_builds=1; snapshot_builds=1; completion_files_read=5931",
+    "small_metrics_fixtures": "Ran 2 tests in 0.020s; OK",
+    "planner_audit": "PASS; 11 legacy-compatible affected gates equal 11 planner affected gates; zero unexplained mismatches",
+    "research_control_diff": "PASS gates=1 findings=1599",
+    "full_repository": "Ran 865 tests in 173.577s; OK skipped=1; real 173.79s",
+    "initial_checkpoint_attempt": "blocked before commit because checkpoint-generated FOLDER_MAP.md was absent from documentation-impact generated_derivatives; scope remained authorized"
+  }
+}

@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `a2f04236189f7336b63ae6b1676ddfce580c16d9e518a01d5230c5fa13286342`
-- Generated-at source timestamp: `2026-07-17T11:06:12Z`
-- Row count: `942`
+- Source fingerprint: `783fa455eae7994ca89d01a211dced0c1cdbefbc782e561019b283dddcbe9f6e`
+- Generated-at source timestamp: `2026-07-17T11:56:07Z`
+- Row count: `943`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260717-008|RT-20260717-007|2026-07-17T11:56:07Z|2026-07-17T12:13:45Z|metrics_snapshot_reuse|completed|none|Project-system metrics-test optimization only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After governed checkpoint PASS route only P8-T05.|PASS|research_control/tasks/RT-20260717-008/jobs/completions/AJC-AJ-RT-20260717-008-001.yaml|
 |RT-20260717-007|RT-20260717-006|2026-07-17T11:06:12Z|2026-07-17T11:25:49Z|continuation_validation_receipt_injection|completed|none|Project-system continuation-test optimization only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After governed checkpoint PASS route only P8-T04.|PASS|research_control/tasks/RT-20260717-007/jobs/completions/AJC-AJ-RT-20260717-007-001.yaml|
 |RT-20260717-006|RT-20260717-005|2026-07-17T10:31:43Z|2026-07-17T10:39:06Z|single_live_research_control_acceptance|completed|none|Project-system validation-audit work only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|1|After governed checkpoint PASS route only P8-T03 unless live state requires a bounded repair or supersession.|PASS|research_control/tasks/RT-20260717-006/jobs/completions/AJC-AJ-RT-20260717-006-001.yaml|
 |RT-20260717-005|RT-20260717-004|2026-07-17T09:48:07Z|2026-07-17T09:58:41Z|research_control_test_sharding|completed|none|Project-system test-organization work only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|2|After governed checkpoint PASS route only P8-T02 unless live state requires a bounded repair or supersession.|PASS|research_control/tasks/RT-20260717-005/jobs/completions/AJC-AJ-RT-20260717-005-001.yaml|
