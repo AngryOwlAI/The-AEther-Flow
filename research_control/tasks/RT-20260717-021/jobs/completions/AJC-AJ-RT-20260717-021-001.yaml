@@ -1,0 +1,238 @@
+job_id: "AJ-RT-20260717-021-001"
+completion_id: "AJC-AJ-RT-20260717-021-001"
+task_id: "RT-20260717-021"
+decision_id: "DDR-20260717-021"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260717-021"
+status: "completed"
+created_at: "2026-07-17T22:04:26Z"
+started_at: "2026-07-17T22:04:26Z"
+completed_at: "2026-07-17T22:18:52Z"
+objective: "Define a conservative exact-tree validation-cache contract and mechanically audit every current manifest gate without implementing or activating caching."
+completion_summary: "Defined one fail-closed exact-tree cache key entry eligibility integrity storage eviction bypass and rollback contract. Reviewed all 37 current manifest gates while leaving every live cache policy ineligible and legacy execution authoritative."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P10-T02"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "research_control/design/validation_gate_manifest_schema_v1.md"
+  - "research_control/design/validation_run_receipt_schema_v1.md"
+  - "research_control/design/validation_environment_contract_v1.md"
+  - "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+  - "scripts/validation/snapshot.py"
+  - "research_control/tasks/RT-20260717-020/jobs/completions/AJC-AJ-RT-20260717-020-001.yaml"
+outputs_created:
+  - "research_control/design/validation_cache_contract_v1.md"
+  - "research_control/tasks/RT-20260717-021/artifacts/cache_contract_review.yaml"
+  - "research_control/tasks/RT-20260717-021/artifacts/validate_cache_contract.py"
+  - "research_control/tasks/RT-20260717-021/artifacts/cache_contract_validation_receipt.json"
+  - "research_control/tasks/RT-20260717-021/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-021/jobs/completions/AJC-AJ-RT-20260717-021-001.yaml"
+outputs_updated: []
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P10-T02"
+  recommendation_ids:
+    - "V19-R28"
+    - "V19-R44"
+    - "V19-R47"
+  migration_epoch: "shadow_planner"
+  implementation_status: "completed"
+  downstream_tasks_not_implemented:
+    - "P10-T03 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p10_t02_validation_cache_contract"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R28"
+    - "V19-R44"
+    - "V19-R47"
+  implements_plan_task_id: "P10-T02"
+  implementation_status: "PASS"
+  coverage_effect: "conservative exact-tree cache identity eligibility integrity non-authority and all-gate provisional policy contract"
+physics_progress_status:
+  status: "project_system_validation_cache_contract_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P10-T02 changes project-control policy documentation only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Cache keys eligibility reviews and operational receipts do not constitute scientific evidence or derivation progress."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+validation_cache_contract:
+  status: "PASS"
+  contract_id: "validation-cache-contract-v1"
+  contract_path: "research_control/design/validation_cache_contract_v1.md"
+  contract_sha256: "ef92aa55602b1e8cd9e2aaa73a08d3272fc58a311ac69fe1ee65c6b773e21aee"
+  review_path: "research_control/tasks/RT-20260717-021/artifacts/cache_contract_review.yaml"
+  review_sha256: "5bd7234fe6c4cb9fb20bfbffb1a0b750fcb9addafb522d3ef3caa4680cb34deb"
+  validation_receipt: "research_control/tasks/RT-20260717-021/artifacts/cache_contract_validation_receipt.json"
+  manifest_gate_count: 37
+  live_manifest_cache_policy_counts:
+    exact_tree: 0
+    scheduled_bypass: 0
+    ineligible: 37
+  provisional_cache_policy_counts:
+    exact_tree: 13
+    scheduled_bypass: 5
+    ineligible: 19
+  key_example_count: 10
+  threat_case_count: 9
+  storage_root: ".local/validation-cache/"
+  safe_cache_mode: "off"
+  cache_runtime_implemented: false
+  cache_runtime_activated: false
+  live_manifest_mutated: false
+  execution_authority: "legacy"
+  ordinary_research_handoff_preserved: "handoff-0740"
+validation_evidence:
+  focused_contract_status: "PASS"
+  reviewed_gate_count: 37
+  duplicate_gate_review_count: 0
+  missing_gate_review_count: 0
+  source_fingerprint_count: 10
+  positive_key_pair_count: 1
+  negative_key_case_count: 8
+  threat_case_count: 9
+  affected_profile_status: "READY"
+  affected_selected_gate_count: 13
+  execution_authority: "legacy"
+  legacy_planner_shadow_comparison:
+    status: "PASS"
+    legacy_compatible_blocking_gate_count: 11
+    planner_blocking_gate_count: 11
+    unexplained_mismatch_count: 0
+  claim_language_status: "PASS"
+  claim_language_hard_fail_count: 0
+  claim_language_historical_warning_count: 1474
+  research_control_diff_status: "PASS"
+  research_control_diff_historical_warning_count: 1599
+  task_index_status: "PASS"
+  dependency_graph_status: "PASS_AFTER_POST_MEMORY_REGENERATION"
+  memory_bootstrap_status: "PASS"
+  memory_validate_only_status: "PASS"
+  checkpoint_status: "PASS_REQUIRED_FOR_COMPLETION_PERSISTENCE"
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260717-021/artifacts/validate_cache_contract.py | exit_code=0 | 37 gates 10 key examples 9 threat cases PASS"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260717-021/artifacts/validate_cache_contract.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/design/validation_cache_contract_v1.md research_control/tasks/RT-20260717-021/artifacts/cache_contract_review.yaml --json | exit_code=0 | READY with 13 selected gates"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy-compatible blocking gates equal 11 planner gates with zero unexplained mismatch"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | documentation impact required with no blocked path"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | explicit P10-T02 Project-Control Maintainer AgentJob boundary remains valid"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS with zero hard failures and historical warnings only"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical warnings only"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | task index CSV Markdown and wiki derivative fresh"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json ... --markdown ... --dot ... and --check | exit_code=0 | dependency graph JSON Markdown and DOT refreshed after memory synchronization"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | PASS with four nonblocking existing-memory findings"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS after generated-state receipt synchronization"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-021-001 | exit_code=0 required | governed local checkpoint with no push"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 47 lease parity project binding clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "P10-T01 PASS completion canonical plan memory preflight classifier resolver and preserved ordinary handoff were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The deterministic task validator checks all 37 manifest rows exact policy counts source hashes canonical key equality and separation and nine threat responses."
+      - "The live manifest remains all-ineligible under legacy execution and the affected shadow comparison has zero unexplained mismatch."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The affected validation plan is READY with no blocked or unknown path and the task-local contract validator passes."
+      - "Research-control diff claim-language and whitespace checks have no hard failure."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "This completion is valid for persistence only when the governed checkpoint commits this exact validated transaction; failure leaves the PASS claim uncommitted and requires repair."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked-memory synchronization and validate-only pass with the new registered contract and generated wiki note."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-surface claim-language validation has zero hard failures; reported findings are historical warnings."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-021/documentation_impact.yaml"
+  source_documentation_updated: true
+  updated_source_documentation:
+    - "research_control/design/validation_cache_contract_v1.md"
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet defines policy and review evidence only. It does not implement cache storage lookup or eviction activate a live manifest policy integrate a production gate change validator findings alter planner checkpoint or CI authority supersede ordinary research modify canonical ontology derive a source law matter coupling or Einstein equations promote a benchmark issue a Gate Chair verdict prove a theorem or complete the derivation."
+verdict: "v19_p10_t02_validation_cache_contract_pass_p10_t03_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "One conservative key and eligibility contract now makes cross-tree cross-scope environment implementation configuration and corrupt-receipt reuse fail closed while keeping every live cache policy disabled."
+selected_next_route:
+  route_id: "v19_p10_t03_cache_storage_lookup_integrity_eviction"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P10"
+  plan_task_id: "P10-T03"
+  task_name: "Implement cache storage, lookup, integrity, and eviction"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "validation_cache_implementation"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system exact-tree cache implementation only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After generated-state validation and governed checkpoint PASS route one separately bounded P10-T03 packet; do not execute it in P10-T02."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "816"
+    relationship_row_count: "4062"
+    semantic_row_count: "816"
+    vault_row_count: "816"
+    local_cache_only_warning_count: "0"
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Generated wiki Obsidian SQLite semantic and .local retrieval outputs were navigation layers only and are not authority."

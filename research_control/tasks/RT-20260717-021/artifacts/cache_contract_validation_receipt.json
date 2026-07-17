@@ -1,0 +1,112 @@
+{
+  "schema_id": "validation_cache_contract_validation_v1",
+  "schema_version": 1,
+  "receipt_id": "V19-P10-T02-CACHE-CONTRACT-VALIDATION-001",
+  "task_id": "RT-20260717-021",
+  "job_id": "AJ-RT-20260717-021-001",
+  "created_at": "2026-07-17T22:16:05Z",
+  "status": "PASS",
+  "gate_count": 37,
+  "live_manifest_cache_policy_counts": {
+    "exact_tree": 0,
+    "ineligible": 37,
+    "scheduled_bypass": 0
+  },
+  "provisional_cache_policy_counts": {
+    "exact_tree": 13,
+    "ineligible": 19,
+    "scheduled_bypass": 5
+  },
+  "source_fingerprint_count": 10,
+  "key_example_count": 10,
+  "threat_case_count": 9,
+  "legacy_compatible_blocking_gate_count": 11,
+  "planner_blocking_gate_count": 11,
+  "unexplained_mismatch_count": 0,
+  "hashes": {
+    "contract_sha256": "ef92aa55602b1e8cd9e2aaa73a08d3272fc58a311ac69fe1ee65c6b773e21aee",
+    "manifest_sha256": "0e757d206b2529a00a2e60cc2b725ab4b10188321a14c75e885cce429de23842",
+    "review_sha256": "5bd7234fe6c4cb9fb20bfbffb1a0b750fcb9addafb522d3ef3caa4680cb34deb",
+    "validator_sha256": "e9ac65c703c80d33b632ad0e073ea5a2f5f240a4c4c04b5fa4d90d02103cd05a"
+  },
+  "checks": [
+    {
+      "check_id": "strict_source_and_review_parsing",
+      "status": "PASS",
+      "detail": "Manifest and review parse as duplicate-key-rejecting UTF-8 JSON objects."
+    },
+    {
+      "check_id": "all_manifest_gates_reviewed",
+      "status": "PASS",
+      "detail": "All 37 current gate IDs appear once in exact manifest order."
+    },
+    {
+      "check_id": "live_manifest_unchanged",
+      "status": "PASS",
+      "detail": "All 37 live cache policies remain ineligible and execution authority remains legacy."
+    },
+    {
+      "check_id": "conservative_provisional_policy",
+      "status": "PASS",
+      "detail": "Thirteen exact-tree candidates five scheduled-bypass candidates and nineteen ineligible gates satisfy mutator local-state wrapper and final-safeguard rules."
+    },
+    {
+      "check_id": "positive_and_negative_keys",
+      "status": "PASS",
+      "detail": "One duplicate positive pair retains one key and eight independently varied identity components produce distinct canonical keys."
+    },
+    {
+      "check_id": "threat_analysis",
+      "status": "PASS",
+      "detail": "Nine cases cover working-to-staged environment implementation manifest/config corruption partial writes missing closure path attacks and final safeguards."
+    },
+    {
+      "check_id": "legacy_planner_shadow_comparison",
+      "status": "PASS",
+      "detail": "Eleven legacy-compatible affected blocking gates equal eleven planner gates with zero unexplained mismatch."
+    },
+    {
+      "check_id": "non_authority_boundary",
+      "status": "PASS",
+      "detail": "Cache evidence remains operational only with all scientific proof ontology benchmark and Gate Chair authority flags false."
+    }
+  ],
+  "commands": [
+    {
+      "command": ".venv/bin/python research_control/tasks/RT-20260717-021/artifacts/validate_cache_contract.py",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": ".venv/bin/python scripts/validation/profiles.py audit --json",
+      "exit_code": 0,
+      "status": "PASS",
+      "result_summary": "affected shadow comparison 11 versus 11 with zero unexplained gate mismatch"
+    },
+    {
+      "command": ".venv/bin/python -m py_compile research_control/tasks/RT-20260717-021/artifacts/validate_cache_contract.py",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff",
+      "exit_code": 0,
+      "status": "PASS",
+      "result_summary": "one blocking diff gate passed with historical warnings only"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "status": "PASS"
+    }
+  ],
+  "live_manifest_mutated": false,
+  "cache_runtime_implemented": false,
+  "cache_runtime_activated": false,
+  "ordinary_research_handoff_preserved": "handoff-0740",
+  "ordinary_research_route_preserved": "EqSrc_family_closure_repair_or_stress",
+  "scientific_claims_changed": false,
+  "physics_promotion_authorized": false,
+  "distance_to_gr_delta_changed": false,
+  "next_plan_task_not_executed": "P10-T03"
+}

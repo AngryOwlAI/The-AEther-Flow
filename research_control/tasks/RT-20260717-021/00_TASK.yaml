@@ -1,0 +1,47 @@
+task_id: "RT-20260717-021"
+task_type: "validation_cache_contract"
+status: "completed"
+created_at: "2026-07-17T22:04:26Z"
+updated_at: "2026-07-17T22:18:52Z"
+closed_at: "2026-07-17T22:18:52Z"
+parent_task_id: "RT-20260717-020"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260717-021"
+current_job_id: "AJ-RT-20260717-021-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260717-021"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached dependency-ready P10-T02 after the governed P10-T01 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T02"
+  plan_task_name: "Define the conservative exact-tree cache contract"
+  recommendation_ids:
+    - "V19-R28"
+    - "V19-R44"
+    - "V19-R47"
+objective: "Define a fail-closed exact-tree validation-cache contract covering key identity eligibility invalidation storage integrity eviction and authority without implementing or activating caching."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system exact-tree validation-cache contract only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p10_t02_validation_cache_contract_pass_p10_t03_dependency_ready_after_checkpoint_no_physics_delta"
+claim_boundary_id: "CB-V19-P10-T02-VALIDATION-CACHE-CONTRACT-001"
+claim_boundary:
+  allowed_scope: "P10-T02 cache contract all-gate provisional review threat analysis task evidence registry rows and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/design/validation_cache_contract_v1.md"
+  - "research_control/tasks/RT-20260717-021/artifacts/cache_contract_review.yaml"
+  - "research_control/tasks/RT-20260717-021/artifacts/cache_contract_validation_receipt.json"
+next_recommended_action: "After governed checkpoint PASS route one separately bounded P10-T03 cache-storage packet."
+documentation_impact_id: "DI-RT-20260717-021-001"
+completion_id: "AJC-AJ-RT-20260717-021-001"
+notes: "P10-T02 defines policy and provisional eligibility only; all live manifest entries remain ineligible and no cache runtime gate scientific claim or ordinary research state changes."

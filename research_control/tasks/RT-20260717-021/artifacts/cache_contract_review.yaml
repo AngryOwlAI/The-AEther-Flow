@@ -1,0 +1,750 @@
+{
+  "schema_id": "validation_cache_contract_review_v1",
+  "schema_version": 1,
+  "review_id": "V19-P10-T02-CACHE-CONTRACT-REVIEW-001",
+  "task_id": "RT-20260717-021",
+  "job_id": "AJ-RT-20260717-021-001",
+  "plan_task_id": "P10-T02",
+  "created_at": "2026-07-17T22:12:17Z",
+  "status": "PASS",
+  "manifest_path": "research_control/design/validation_gate_manifest_v1.yaml",
+  "contract_path": "research_control/design/validation_cache_contract_v1.md",
+  "live_manifest_mutated": false,
+  "live_manifest_execution_authority": "legacy",
+  "live_manifest_policy_count": {
+    "exact_tree": 0,
+    "ineligible": 37,
+    "scheduled_bypass": 0
+  },
+  "provisional_policy_count": {
+    "exact_tree": 13,
+    "ineligible": 19,
+    "scheduled_bypass": 5
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "full_receipts_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "proof_authority": false,
+    "benchmark_authority": false,
+    "gate_chair_authority": false
+  },
+  "source_fingerprints": [
+    {
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v19.md",
+      "sha256": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    },
+    {
+      "path": "research_control/design/validation_evidence_identity_policy_v1.md",
+      "sha256": "6afb60a18fee4983e302dc4b710505c32d9407f311ca4a03b7297d160d57fcf5"
+    },
+    {
+      "path": "research_control/design/validation_gate_manifest_v1.yaml",
+      "sha256": "0e757d206b2529a00a2e60cc2b725ab4b10188321a14c75e885cce429de23842"
+    },
+    {
+      "path": "research_control/design/validation_gate_manifest_schema_v1.md",
+      "sha256": "ebeb1140c95dfa04fd07c751c1fad0d6c890822baac307e761a5756856310a15"
+    },
+    {
+      "path": "research_control/design/validation_run_receipt_schema_v1.md",
+      "sha256": "991cac565466597ac92f85bb903b9908a924299c2d8b9146f45dc4245f5c986f"
+    },
+    {
+      "path": "research_control/design/validation_environment_contract_v1.md",
+      "sha256": "c287e34b47a015853c6e6f42d41c50a3e6a824b26514c41db3006f2e8d147ced"
+    },
+    {
+      "path": "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md",
+      "sha256": "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0"
+    },
+    {
+      "path": "scripts/validation/snapshot.py",
+      "sha256": "fb9a859dca5ba9b7183b29f37d8791611639551d90ba730fd73fb94fa793fe04"
+    },
+    {
+      "path": "research_control/tasks/RT-20260717-020/jobs/completions/AJC-AJ-RT-20260717-020-001.yaml",
+      "sha256": "c5d6b3a0c5f41c98dbcaf21b48fda4012d25efb2a834c8f5c7d09c370c2f054c"
+    },
+    {
+      "path": "research_control/design/validation_cache_contract_v1.md",
+      "sha256": "ef92aa55602b1e8cd9e2aaa73a08d3272fc58a311ac69fe1ee65c6b773e21aee"
+    }
+  ],
+  "gate_reviews": [
+    {
+      "manifest_index": 0,
+      "gate_id": "classify_changes",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_exact_state_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 1,
+      "gate_id": "resolve_project_improvement",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_routing_evidence_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 2,
+      "gate_id": "project_improvement_signals",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_signal_parity_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 3,
+      "gate_id": "documentation_impact",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_documentation_receipt_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 4,
+      "gate_id": "documentation_surface_audit",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_documentation_surface_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 5,
+      "gate_id": "memory_sync",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "mutating_generated_state",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 6,
+      "gate_id": "memory_core",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "scheduled_bypass",
+      "determination": "candidate_not_activated",
+      "reason_code": "broad_read_only_integrity_requires_periodic_uncached",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "scheduled_full_bypass",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 7,
+      "gate_id": "local_retrieval_sync",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "mutating_local_retrieval_state",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 8,
+      "gate_id": "local_retrieval_lint",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "ignored_local_retrieval_input_not_exact_tree",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 9,
+      "gate_id": "memory_status_diagnostic",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "local_retrieval_diagnostic",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 10,
+      "gate_id": "memory_lookup_diagnostic",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "local_retrieval_query",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 11,
+      "gate_id": "memory_search_diagnostic",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "local_retrieval_query",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 12,
+      "gate_id": "spec_depth",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_spec_lint_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 13,
+      "gate_id": "publication_validation",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_publication_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 14,
+      "gate_id": "research_control_core",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "scheduled_bypass",
+      "determination": "candidate_not_activated",
+      "reason_code": "broad_control_integrity_requires_periodic_uncached",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "scheduled_full_bypass",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 15,
+      "gate_id": "research_control_diff",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "scheduled_bypass",
+      "determination": "candidate_not_activated",
+      "reason_code": "changed_state_integrity_requires_final_uncached",
+      "final_safeguard": true,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "final_checkpoint_bypass",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 16,
+      "gate_id": "test_shard_repository",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "scheduled_bypass",
+      "determination": "candidate_not_activated",
+      "reason_code": "broad_test_integrity_requires_periodic_uncached",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "scheduled_full_bypass",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 17,
+      "gate_id": "current_frontier_freshness",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_frontier_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 18,
+      "gate_id": "compact_frontier_freshness",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_compact_frontier_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 19,
+      "gate_id": "dependency_graph_freshness",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "read_only_generated_artifact_freshness_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "declared_outputs_fingerprinted_and_unchanged",
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 20,
+      "gate_id": "task_index_freshness",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_task_index_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 21,
+      "gate_id": "claim_graph_validation",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_claim_graph_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 22,
+      "gate_id": "claim_language_changed",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "scheduled_bypass",
+      "determination": "candidate_not_activated",
+      "reason_code": "changed_claim_safeguard_requires_final_uncached",
+      "final_safeguard": true,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "final_checkpoint_bypass",
+        "later_manifest_activation"
+      ]
+    },
+    {
+      "manifest_index": 23,
+      "gate_id": "route_signature_diagnostic",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "nested_ignored_local_diagnostic_cache",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 24,
+      "gate_id": "route_orbit_diagnostic",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "advisory_diagnostic_incomplete_input_closure",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 25,
+      "gate_id": "git_diff_check",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "final_residue_and_whitespace_safeguard",
+      "final_safeguard": true,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 26,
+      "gate_id": "targeted_pdf_build",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "mutating_generated_pdf_state",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 27,
+      "gate_id": "continue_memory_preflight",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "mutating_local_retrieval_preflight",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 28,
+      "gate_id": "continue_context_resolution",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "live_continuation_routing_context",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 29,
+      "gate_id": "checkpoint_transaction",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "mutating_index_integrity_transaction",
+      "final_safeguard": true,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 30,
+      "gate_id": "profile_validate_project_control",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "wrapper_level_aggregate",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 31,
+      "gate_id": "profile_validate_memory",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "mutating_wrapper_level_aggregate",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 32,
+      "gate_id": "profile_validate_html_explainers",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "wrapper_level_aggregate",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 33,
+      "gate_id": "profile_audit_documentation_surfaces",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "wrapper_level_aggregate",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 34,
+      "gate_id": "profile_full_research_control",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "wrapper_level_aggregate",
+      "final_safeguard": false,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 35,
+      "gate_id": "profile_ci_project_control",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "ineligible",
+      "determination": "ineligible",
+      "reason_code": "authoritative_ci_wrapper_requires_live_execution",
+      "final_safeguard": true,
+      "activation_requirements": []
+    },
+    {
+      "manifest_index": 36,
+      "gate_id": "mermaid_sources",
+      "current_cache_policy": "ineligible",
+      "provisional_cache_policy": "exact_tree",
+      "determination": "candidate_not_activated",
+      "reason_code": "deterministic_read_only_mermaid_candidate",
+      "final_safeguard": false,
+      "activation_requirements": [
+        "transitive_input_closure",
+        "transitive_implementation_digest",
+        "determinism_and_uncached_parity",
+        "later_manifest_activation"
+      ]
+    }
+  ],
+  "key_examples": {
+    "canonicalization": "sha256_utf8_json_sort_keys_compact",
+    "baseline": {
+      "key_material": {
+        "base_ref": {
+          "commit": "git-commit-sha1:1111111111111111111111111111111111111111",
+          "name": "HEAD"
+        },
+        "config_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "contract_id": "validation-cache-contract-v1",
+        "dependency_lock_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "environment_fingerprint": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "gate_id": "classify_changes",
+        "implementation_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "manifest_digest": "sha256:0e757d206b2529a00a2e60cc2b725ab4b10188321a14c75e885cce429de23842",
+        "receipt_schema": {
+          "gate_result_id": "validation_gate_result_v1",
+          "gate_result_version": 1,
+          "run_receipt_id": "validation_run_receipt_v1",
+          "run_receipt_version": 1
+        },
+        "schema_id": "validation_cache_key_v1",
+        "schema_version": 1,
+        "scope": {
+          "mode": "shadow",
+          "profile": "affected",
+          "repository_identity_digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+          "scope_kind": "working",
+          "selection_digest": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "tree_state": "working"
+        },
+        "tree_hash": "snapshot-tree-sha256:0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "cache_key": "c9a7bf0ae9fe2ec44bb2379e0050b2db4f5bed08c7b74e5815e790bb4117ad7a"
+    },
+    "positive_same_identity": {
+      "copy_of": "baseline",
+      "expected_relation": "equal",
+      "cache_key": "c9a7bf0ae9fe2ec44bb2379e0050b2db4f5bed08c7b74e5815e790bb4117ad7a"
+    },
+    "negative_examples": [
+      {
+        "example_id": "working_to_staged",
+        "overrides": {
+          "scope.scope_kind": "staged",
+          "scope.tree_state": "staged",
+          "tree_hash": "snapshot-tree-sha256:9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "expected_relation": "different",
+        "cache_key": "ba38ffcb911c801a40a8158b3e39a583bd1dd1f3a9b4ef7f18ff7685a9e00bab"
+      },
+      {
+        "example_id": "environment_drift",
+        "overrides": {
+          "environment_fingerprint": "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+        },
+        "expected_relation": "different",
+        "cache_key": "14dc4422c352d52f3285dd062d246c7ecb6ac459d05a4001cb950bdf6377dc2a"
+      },
+      {
+        "example_id": "implementation_change",
+        "overrides": {
+          "implementation_digest": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+        },
+        "expected_relation": "different",
+        "cache_key": "c51a31402617a9036682891a9f4eb5018b9fe5945fbe63cdeb840c74daa5e2cf"
+      },
+      {
+        "example_id": "manifest_change",
+        "overrides": {
+          "manifest_digest": "sha256:4444444444444444444444444444444444444444444444444444444444444444"
+        },
+        "expected_relation": "different",
+        "cache_key": "8cc7554d16205b7f29a1266884b5c4310ad83ae84ac328105318179557e8c2d1"
+      },
+      {
+        "example_id": "configuration_change",
+        "overrides": {
+          "config_digest": "sha256:5555555555555555555555555555555555555555555555555555555555555555"
+        },
+        "expected_relation": "different",
+        "cache_key": "e842f9463b12b407b97ebd6e87cb8ef64fd68cb9609f37a36d8752e0d3b21aef"
+      },
+      {
+        "example_id": "dependency_change",
+        "overrides": {
+          "dependency_lock_digest": "sha256:6666666666666666666666666666666666666666666666666666666666666666"
+        },
+        "expected_relation": "different",
+        "cache_key": "e2cc94ee8133903b2f640731f241e0f5ce44e0b44b34eafdd4ebed987b3908e2"
+      },
+      {
+        "example_id": "base_ref_change",
+        "overrides": {
+          "base_ref.commit": "git-commit-sha1:7777777777777777777777777777777777777777",
+          "base_ref.name": "origin/main"
+        },
+        "expected_relation": "different",
+        "cache_key": "de4b2acb0015acf86cdabb1a9e4db28e56785d60f9144f1e211cb99efecaf89e"
+      },
+      {
+        "example_id": "repository_change",
+        "overrides": {
+          "scope.repository_identity_digest": "sha256:8888888888888888888888888888888888888888888888888888888888888888"
+        },
+        "expected_relation": "different",
+        "cache_key": "7383f4673617a07e37b43c6df404e29057646399c6cb6d9b5b7d3320e49cdc77"
+      }
+    ]
+  },
+  "threat_analysis": [
+    {
+      "threat_id": "working_to_staged_reuse",
+      "prevented_by": [
+        "scope.tree_state",
+        "tree_hash"
+      ],
+      "required_response": "different_key_then_uncached_staged_execution",
+      "status": "PASS"
+    },
+    {
+      "threat_id": "environment_drift",
+      "prevented_by": [
+        "environment_fingerprint",
+        "dependency_lock_digest"
+      ],
+      "required_response": "different_key",
+      "status": "PASS"
+    },
+    {
+      "threat_id": "implementation_change",
+      "prevented_by": [
+        "implementation_digest"
+      ],
+      "required_response": "different_key",
+      "status": "PASS"
+    },
+    {
+      "threat_id": "manifest_or_configuration_change",
+      "prevented_by": [
+        "manifest_digest",
+        "config_digest"
+      ],
+      "required_response": "different_key",
+      "status": "PASS"
+    },
+    {
+      "threat_id": "corrupt_receipt",
+      "prevented_by": [
+        "result_hash",
+        "full_receipt_content_hash",
+        "strict_schema_validation"
+      ],
+      "required_response": "disable_cache_reads_for_invocation_then_run_uncached",
+      "status": "PASS"
+    },
+    {
+      "threat_id": "partial_write",
+      "prevented_by": [
+        "same_directory_atomic_rename",
+        "prepublication_hash_check"
+      ],
+      "required_response": "ignore_partial_entry_then_run_uncached",
+      "status": "PASS"
+    },
+    {
+      "threat_id": "missing_input_closure",
+      "prevented_by": [
+        "source_fingerprint_manifest",
+        "fail_closed_eligibility"
+      ],
+      "required_response": "leave_gate_ineligible",
+      "status": "PASS"
+    },
+    {
+      "threat_id": "symlink_or_path_traversal",
+      "prevented_by": [
+        "safe_root_resolution",
+        "regular_file_requirement"
+      ],
+      "required_response": "reject_path_then_run_uncached",
+      "status": "PASS"
+    },
+    {
+      "threat_id": "final_safeguard_reuse",
+      "prevented_by": [
+        "ineligible_policy",
+        "mandatory_final_bypass"
+      ],
+      "required_response": "uncached_final_execution",
+      "status": "PASS"
+    }
+  ],
+  "shadow_comparison": {
+    "command": ".venv/bin/python scripts/validation/profiles.py audit --json",
+    "status": "PASS",
+    "legacy_compatible_blocking_gate_count": 11,
+    "planner_blocking_gate_count": 11,
+    "unexplained_mismatch_count": 0
+  },
+  "ordinary_research_handoff_preserved": "handoff-0740",
+  "ordinary_research_route_preserved": "EqSrc_family_closure_repair_or_stress",
+  "scientific_claims_changed": false,
+  "physics_promotion_authorized": false,
+  "distance_to_gr_delta_changed": false,
+  "next_plan_task_not_executed": "P10-T03"
+}
