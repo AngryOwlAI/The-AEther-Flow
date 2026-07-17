@@ -1,0 +1,136 @@
+{
+  "schema_id": "memory_test_validation_receipt_v1",
+  "task_id": "RT-20260717-017",
+  "job_id": "AJ-RT-20260717-017-001",
+  "plan_task_id": "P9-T05",
+  "status": "PASS",
+  "source_hashes": {
+    "Makefile": "fd496e99ac9531634b22a24acd07025e6c445c78aa6da79a81172bddb0de2c49",
+    "tests/README.md": "cfdeba1eadd761f558d095a54dd2961e5251ca05e1a709b87dce44dc3a1f505f",
+    "tests/test_memory_system.py": "0a70d9a9c77d7267e583c02e8126d86baeb9a2793c4ccd9bae8faf7bc6ffb1da",
+    "tests/test_memory_system_live.py": "9ff67f1f26d16ac8d27677f0761b8a890e28f4c098334c72ae230529f12a0a18",
+    "tests/test_memory_system_unit.py": "07cfdfa2e6221c863a14223e25ecb00f1accdb9085d7945744e605dca6c08c6f"
+  },
+  "fixture_snapshot": {
+    "root": "tests/fixtures/memory_system/mini_repo",
+    "file_count": 17,
+    "tree_sha256": "723c3f89cb3af0afc4a71f6a53ea29edaf83f879646a635408653c96222b516d",
+    "registry_fixture_count": 10,
+    "source_object_count": 3,
+    "wiki_object_count": 3
+  },
+  "migration": {
+    "legacy_test_count": 53,
+    "mapped_legacy_test_count": 53,
+    "missing_count": 0,
+    "duplicate_count": 0,
+    "new_fixture_integrity_test_count": 1
+  },
+  "performance": {
+    "legacy_module_real_seconds": 27.63,
+    "legacy_module_test_count": 53,
+    "unit_module_real_seconds": 0.14,
+    "unit_module_test_count": 52,
+    "live_module_real_seconds": 21.53,
+    "live_module_test_count": 2,
+    "unit_plus_live_real_seconds": 21.67,
+    "fast_unit_reduction_percent": 99.49,
+    "combined_reduction_percent": 21.57,
+    "memory_shard_real_seconds": 10.44,
+    "memory_shard_test_count": 85,
+    "subprocess_count_unit": 0,
+    "subprocess_count_live": 2,
+    "cache_hits": 0,
+    "cache_misses": 0
+  },
+  "command_results": [
+    {
+      "command": ".venv/bin/python -c 'import unittest; suite = unittest.defaultTestLoader.loadTestsFromName(\"tests.test_memory_system\"); assert suite.countTestCases() == 0'",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_count": 0
+    },
+    {
+      "command": ".venv/bin/python -m py_compile tests/test_memory_system_unit.py tests/test_memory_system_live.py",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_memory_system_unit",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_count": 52,
+      "duration_seconds": 0.079,
+      "real_seconds": 0.14
+    },
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_memory_system_live",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_count": 2,
+      "duration_seconds": 21.488,
+      "real_seconds": 21.53
+    },
+    {
+      "command": "make PYTHON=.venv/bin/python test-memory",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_count": 85,
+      "duration_seconds": 10.290,
+      "real_seconds": 10.44
+    },
+    {
+      "command": ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths tests/test_memory_system_unit.py tests/test_memory_system_live.py tests/fixtures/memory_system tests/README.md Makefile --explain",
+      "exit_code": 0,
+      "status": "READY",
+      "selected_gate_count": 13,
+      "execution_authority": "legacy"
+    },
+    {
+      "command": ".venv/bin/python scripts/validation/profiles.py audit --json",
+      "exit_code": 0,
+      "status": "PASS",
+      "legacy_compatible_blocking_gate_count": 11,
+      "planner_blocking_gate_count": 11,
+      "unexplained_mismatch_count": 0
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "exit_code": 1,
+      "status": "EXPECTED_TRANSACTION_ASSEMBLY_FINDING",
+      "test_count": 892,
+      "skip_count": 1,
+      "failure_count": 3,
+      "error_count": 2,
+      "duration_seconds": 106.107,
+      "explanation": "The live repository tests observed the intentionally active AgentJob and its initially non-normalized allowlists before completion registration. Targeted implementation tests remained green."
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_count": 892,
+      "skip_count": 1,
+      "failure_count": 0,
+      "error_count": 0,
+      "duration_seconds": 107.460,
+      "real_seconds": 107.68
+    }
+  ],
+  "failure_mode_evidence": {
+    "fixture_registry_integrity": "PASS",
+    "stale_pdf_source_hash_detection": "PASS",
+    "stale_html_source_basis_detection": "PASS",
+    "generated_file_pruning": "PASS",
+    "duplicate_object_id_detection": "PASS",
+    "path_traversal_rejection": "PASS",
+    "live_snapshot_idempotence": "PASS"
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "scientific_claims_changed": false,
+    "distance_to_gr_changed": false,
+    "physics_claim_authority": false,
+    "proof_authority": false
+  }
+}

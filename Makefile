@@ -1,6 +1,6 @@
 PYTHON ?= .venv/bin/python
 MEMORY_SCRIPT_DIR := .codex/skills/project-memory-system/scripts
-MEMORY_TEST_MODULES := tests.test_memory_operations tests.test_memory_cli_modes tests.test_memory_system tests.test_obsidian_wiki tests.test_validation_orchestration
+MEMORY_TEST_MODULES := tests.test_memory_operations tests.test_memory_cli_modes tests.test_memory_system_unit tests.test_obsidian_wiki tests.test_validation_orchestration
 VALIDATION_PYTHON_SERIES := 3.12
 VALIDATION_REQUIREMENT_FILES := requirements.txt requirements-dev.txt
 VALIDATION_REQUIRED_DISTRIBUTIONS := PyMuPDF
