@@ -13,6 +13,7 @@ import csv
 import hashlib
 import json
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
 try:
@@ -20,6 +21,7 @@ try:
     from resolve_latest_handoff import resolve_latest
     from strict_yaml import StrictYamlError, load as load_yaml
     from validate_research_control import (
+        ValidationReport,
         gr_derivation_roadmap_policy,
         loop_control_policy,
         parent_child_decomposition_policy,
@@ -33,6 +35,7 @@ except ImportError:  # pragma: no cover
     from scripts.research_control.resolve_latest_handoff import resolve_latest
     from scripts.research_control.strict_yaml import StrictYamlError, load as load_yaml
     from scripts.research_control.validate_research_control import (
+        ValidationReport,
         gr_derivation_roadmap_policy,
         loop_control_policy,
         parent_child_decomposition_policy,
@@ -87,6 +90,146 @@ PAYLOAD_DENSITY_METRIC_KEYS = {
     "selector_cycles_without_new_payload",
 }
 GRAPH_SUMMARY_LIMIT = 8
+CONTINUATION_INPUT_SCHEMAS = {
+    "validation_receipt": "continuation_validation_receipt.v1",
+    "routing_snapshot": "continuation_routing_snapshot.v1",
+}
+CONTINUATION_INPUT_AUTHORITY = {
+    "project_control_only": True,
+    "physics_claim_authority": False,
+}
+
+
+@dataclass(frozen=True)
+class ValidatedContinuationInput:
+    """Fingerprint-checked in-process input; no CLI or serialized input path exists."""
+
+    kind: str
+    payload_json: str
+    sha256: str
+
+
+def _canonical_json(value: dict[str, object]) -> str:
+    return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
+
+def _seal_continuation_input(
+    kind: str,
+    payload: dict[str, object],
+) -> ValidatedContinuationInput:
+    if kind not in CONTINUATION_INPUT_SCHEMAS:
+        raise ValueError(f"unknown continuation input kind: {kind}")
+    sealed_payload = {
+        **payload,
+        "schema_id": CONTINUATION_INPUT_SCHEMAS[kind],
+        "authority_boundary": CONTINUATION_INPUT_AUTHORITY,
+    }
+    payload_json = _canonical_json(sealed_payload)
+    return ValidatedContinuationInput(
+        kind=kind,
+        payload_json=payload_json,
+        sha256=hashlib.sha256(payload_json.encode("utf-8")).hexdigest(),
+    )
+
+
+def _open_continuation_input(
+    value: ValidatedContinuationInput,
+    expected_kind: str,
+) -> dict[str, object]:
+    if type(value) is not ValidatedContinuationInput or value.kind != expected_kind:
+        raise ValueError(f"expected typed {expected_kind}")
+    if not isinstance(value.payload_json, str) or not isinstance(value.sha256, str):
+        raise ValueError(f"{expected_kind} envelope fields must be strings")
+    observed = hashlib.sha256(value.payload_json.encode("utf-8")).hexdigest()
+    if observed != value.sha256:
+        raise ValueError(f"{expected_kind} fingerprint mismatch")
+    payload = json.loads(value.payload_json)
+    if (
+        not isinstance(payload, dict)
+        or payload.get("schema_id") != CONTINUATION_INPUT_SCHEMAS[expected_kind]
+        or payload.get("authority_boundary") != CONTINUATION_INPUT_AUTHORITY
+    ):
+        raise ValueError(f"{expected_kind} schema or authority boundary mismatch")
+    if expected_kind == "validation_receipt":
+        if payload.get("status") not in {"PASS", "FAIL"}:
+            raise ValueError("validation_receipt status must be PASS or FAIL")
+        for field_name in ("errors", "warnings"):
+            field_value = payload.get(field_name)
+            if (
+                not isinstance(field_value, list)
+                or any(not isinstance(item, str) for item in field_value)
+            ):
+                raise ValueError(
+                    f"validation_receipt {field_name} must be a list of strings"
+                )
+    else:
+        routing_field_types = {
+            "program_state": dict,
+            "latest": dict,
+            "task_rows": dict,
+            "job_rows": dict,
+            "decision_rows": dict,
+            "jobs_waiting": list,
+            "available_roles": list,
+            "route_orbit_diagnostics": dict,
+            "dependency_graph_summary": dict,
+            "required_authority_surfaces": list,
+        }
+        for field_name, field_type in routing_field_types.items():
+            if not isinstance(payload.get(field_name), field_type):
+                raise ValueError(
+                    f"routing_snapshot {field_name} must be {field_type.__name__}"
+                )
+        for row_map_name in ("task_rows", "job_rows", "decision_rows"):
+            if any(
+                not isinstance(row, dict)
+                for row in payload[row_map_name].values()
+            ):
+                raise ValueError(
+                    f"routing_snapshot {row_map_name} values must be objects"
+                )
+        for row in payload["jobs_waiting"]:
+            if not isinstance(row, dict) or any(
+                not isinstance(row.get(field_name), str)
+                for field_name in ("job_id", "task_id", "decision_id")
+            ):
+                raise ValueError(
+                    "routing_snapshot jobs_waiting entries require string "
+                    "job_id, task_id, and decision_id"
+                )
+        diagnostics = payload["route_orbit_diagnostics"]
+        for field_name in (
+            "payload_density_warning",
+            "route_orbit_warning",
+            "same_burden_repetition_warning",
+            "gate_ready_without_gate_warning",
+        ):
+            if not isinstance(diagnostics.get(field_name), dict):
+                raise ValueError(
+                    f"routing_snapshot route_orbit_diagnostics.{field_name} "
+                    "must be object"
+                )
+        if not isinstance(diagnostics.get("recommended_guard_action"), str):
+            raise ValueError(
+                "routing_snapshot route_orbit_diagnostics."
+                "recommended_guard_action must be string"
+            )
+    return payload
+
+
+def make_validation_receipt(report: ValidationReport) -> ValidatedContinuationInput:
+    if type(report) is not ValidationReport:
+        raise ValueError("validation receipt requires ValidationReport")
+    errors = [str(error) for error in report.errors]
+    warnings = [str(warning) for warning in report.warnings]
+    return _seal_continuation_input(
+        "validation_receipt",
+        {"status": "PASS" if not errors else "FAIL", "errors": errors, "warnings": warnings},
+    )
+
+
+def make_routing_snapshot(payload: dict[str, object]) -> ValidatedContinuationInput:
+    return _seal_continuation_input("routing_snapshot", payload)
 
 
 def read_csv_registry(name: str) -> list[dict[str, str]]:
@@ -493,26 +636,8 @@ def route_orbit_diagnostic_context(repo_root: Path = REPO_ROOT) -> dict[str, obj
     return context
 
 
-def continuation_status() -> dict[str, object]:
-    report = validate_all()
-    if not report.ok():
-        return {
-            "status": "blocked",
-            "boundary": "blocked",
-            "reason": "research-control validation failed",
-            "validation_errors": report.errors,
-            "checkpoint_required_after_execution": False,
-        }
-    try:
-        program_state = load_yaml(PROGRAM_STATE_PATH)
-    except StrictYamlError as exc:
-        return {
-            "status": "blocked",
-            "boundary": "blocked",
-            "reason": f"program_state parse failed: {exc}",
-            "validation_errors": [str(exc)],
-            "checkpoint_required_after_execution": False,
-        }
+def live_routing_snapshot() -> ValidatedContinuationInput:
+    program_state = load_yaml(PROGRAM_STATE_PATH)
     latest = resolve_latest()
     task_rows = by_id(read_csv_registry("RESEARCH_TASK_REGISTRY.csv"), "task_id")
     job_rows = by_id(read_csv_registry("AGENT_JOB_REGISTRY.csv"), "job_id")
@@ -522,10 +647,83 @@ def continuation_status() -> dict[str, object]:
     current_decision_id = active_task.get("current_decision_id", "")
     current_job_id = active_task.get("current_job_id", "")
     current_job = job_rows.get(current_job_id, {})
+    return make_routing_snapshot(
+        {
+            "program_state": program_state,
+            "latest": latest,
+            "task_rows": task_rows,
+            "job_rows": job_rows,
+            "decision_rows": decision_rows,
+            "jobs_waiting": pending_or_active_jobs(),
+            "available_roles": active_roles(),
+            "route_orbit_diagnostics": route_orbit_diagnostic_context(REPO_ROOT),
+            "dependency_graph_summary": dependency_graph_summary(program_state, latest),
+            "required_authority_surfaces": authority_surfaces(
+                active_task_id,
+                latest,
+                active_task,
+                current_job,
+            ),
+        }
+    )
+
+
+def continuation_status(
+    *,
+    validation_result: ValidatedContinuationInput | None = None,
+    routing_snapshot: ValidatedContinuationInput | None = None,
+) -> dict[str, object]:
+    validation_injected = validation_result is not None
+    if validation_result is None:
+        validation_result = make_validation_receipt(validate_all())
+    try:
+        validation_payload = _open_continuation_input(
+            validation_result,
+            "validation_receipt",
+        )
+    except (ValueError, json.JSONDecodeError) as exc:
+        return {
+            "status": "blocked",
+            "boundary": "blocked",
+            "reason": "validation receipt integrity failed",
+            "validation_errors": [str(exc)],
+            "checkpoint_required_after_execution": False,
+        }
+    if validation_payload.get("status") != "PASS":
+        return {
+            "status": "blocked",
+            "boundary": "blocked",
+            "reason": "research-control validation failed",
+            "validation_errors": validation_payload.get("errors", []),
+            "checkpoint_required_after_execution": False,
+        }
+    routing_injected = routing_snapshot is not None
+    try:
+        if routing_snapshot is None:
+            routing_snapshot = live_routing_snapshot()
+        routing_payload = _open_continuation_input(routing_snapshot, "routing_snapshot")
+    except (StrictYamlError, ValueError, json.JSONDecodeError) as exc:
+        return {
+            "status": "blocked",
+            "boundary": "blocked",
+            "reason": f"routing snapshot integrity failed: {exc}",
+            "validation_errors": [str(exc)],
+            "checkpoint_required_after_execution": False,
+        }
+    program_state = routing_payload["program_state"]
+    latest = routing_payload["latest"]
+    task_rows = routing_payload["task_rows"]
+    job_rows = routing_payload["job_rows"]
+    decision_rows = routing_payload["decision_rows"]
+    active_task_id = str(program_state.get("active_task_id", ""))
+    active_task = task_rows.get(active_task_id, {})
+    current_decision_id = active_task.get("current_decision_id", "")
+    current_job_id = active_task.get("current_job_id", "")
+    current_job = job_rows.get(current_job_id, {})
     current_decision = decision_rows.get(current_decision_id, {})
-    jobs_waiting = pending_or_active_jobs()
-    route_orbit_diagnostics = route_orbit_diagnostic_context(REPO_ROOT)
-    graph_summary = dependency_graph_summary(program_state, latest)
+    jobs_waiting = routing_payload["jobs_waiting"]
+    route_orbit_diagnostics = routing_payload["route_orbit_diagnostics"]
+    graph_summary = routing_payload["dependency_graph_summary"]
 
     boundary = "director_decision_required"
     if active_task.get("requires_human_gate") == "true" or current_decision.get(
@@ -557,7 +755,7 @@ def continuation_status() -> dict[str, object]:
         "next_action": latest.get("next_action", ""),
         "next_recommended_action": program_state.get("next_recommended_action", latest.get("next_action", "")),
         "task_boundary_policy": TASK_BOUNDARY_POLICY,
-        "available_roles": active_roles(),
+        "available_roles": routing_payload["available_roles"],
         "pending_or_active_jobs": jobs_waiting,
         "payload_density_warning": route_orbit_diagnostics["payload_density_warning"],
         "route_orbit_warning": route_orbit_diagnostics["route_orbit_warning"],
@@ -574,14 +772,22 @@ def continuation_status() -> dict[str, object]:
         "theoretical_continuation_policy": theoretical_continuation_policy(),
         "parent_child_decomposition_policy": parent_child_decomposition_policy(),
         "gr_derivation_roadmap_policy": gr_derivation_roadmap_policy(),
-        "required_authority_surfaces": authority_surfaces(
-            active_task_id,
-            latest,
-            active_task,
-            current_job,
-        ),
+        "required_authority_surfaces": routing_payload["required_authority_surfaces"],
         "stop_conditions": STOP_CONDITIONS,
         "validation_errors": [],
+        "input_receipts": {
+            "validation": {
+                "injected": validation_injected,
+                "status": validation_payload["status"],
+                "sha256": validation_result.sha256,
+                "physics_claim_authority": False,
+            },
+            "routing": {
+                "injected": routing_injected,
+                "sha256": routing_snapshot.sha256,
+                "physics_claim_authority": False,
+            },
+        },
         "checkpoint_required_after_execution": boundary in {
             "director_decision_required",
             "existing_agent_job_ready",

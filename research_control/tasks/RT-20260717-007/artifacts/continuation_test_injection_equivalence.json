@@ -1,0 +1,104 @@
+{
+  "schema_id": "continuation_test_injection_equivalence_v1",
+  "status": "PASS",
+  "task_id": "RT-20260717-007",
+  "claim_boundary": {
+    "benchmark_authority": false,
+    "external_serialized_input_path_created": false,
+    "gate_chair_authority": false,
+    "ontology_authority": false,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "implementation": {
+    "input_envelope_type": "ValidatedContinuationInput",
+    "input_transport": "typed in-process Python object only",
+    "schema_ids": [
+      "continuation_validation_receipt.v1",
+      "continuation_routing_snapshot.v1"
+    ],
+    "fingerprint": "SHA-256 over canonical JSON",
+    "authority_marker": {
+      "physics_claim_authority": false,
+      "project_control_only": true
+    },
+    "default_live_path_retained": true,
+    "cli_surface_changed": false
+  },
+  "integrity_coverage": {
+    "authority_marker_mismatch": "PASS",
+    "incorrect_kind": "PASS",
+    "incorrect_type": "PASS",
+    "schema_mismatch": "PASS",
+    "validation_fingerprint_mismatch": "PASS",
+    "routing_fingerprint_mismatch": "PASS",
+    "malformed_payload_shapes_fail_closed": true
+  },
+  "fixture_coverage": {
+    "PASS": "PASS",
+    "FAIL": "PASS",
+    "human_gate_required": "PASS",
+    "existing_agent_job_ready": "PASS",
+    "no_action": "PASS",
+    "warning_only": "PASS"
+  },
+  "equivalence": {
+    "status": "PASS",
+    "snapshot_phase": "active project-system transaction",
+    "live_boundary": "blocked",
+    "live_default_validate_all_call_count": 1,
+    "injected_additional_validate_all_call_count": 0,
+    "live_injected_outputs_equal_excluding_receipt_metadata": true,
+    "equivalent_output_sha256": "22efbcbdb0ba6eb9e0e9ff5c00ddfba92bf3a289fc568b5ee629afa6ea5eeeb6",
+    "validation_receipt_sha256": "6e79e35a949e52c1fbddbf8b4f58abc5531320e6a69121b864be28f6a11ceddc",
+    "routing_snapshot_sha256": "4e605927bdb4d1d74bf64b0f4da54e8066274f52a2e3b226c9e963bcd94dcfa1",
+    "boundary_note": "The live boundary is blocked only because the P8-T03 project-system AgentJob is active while ordinary handoff-0740 remains the research authority."
+  },
+  "performance": {
+    "baseline_command": ".venv/bin/python -m unittest -v tests.test_research_control_continuation",
+    "baseline_real_seconds": 39.8,
+    "post_change_real_seconds": 13.85,
+    "real_seconds_reduced": 25.95,
+    "relative_reduction_percent": 65.2,
+    "continuation_shard_test_count_before": 7,
+    "continuation_shard_test_count_after": 7,
+    "test_inventory_changed": false
+  },
+  "planner_shadow_comparison": {
+    "status": "PASS",
+    "legacy_execution_authoritative": true,
+    "affected_blocking_legacy_gate_count": 11,
+    "affected_blocking_planner_gate_count": 11,
+    "unexplained_mismatch_gate_ids": []
+  },
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v19.md": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc",
+    "scripts/research_control/continue_research.py": "62a21795dd8aac5f01ee736b997439b5dd62b0e7ba1b1f0b43729fef12dae177",
+    "tests/support/research_control_shards.py": "355726d0c0b6727134fbdd6291d47033e19c01f7ccb57aa78ad4251ad4fc5b58",
+    "tests/test_research_control.py": "f64cb6d5e3b277968e59a30012e1337b8e666c154c7ac2d7529e2ee677908daf",
+    "tests/test_research_control_continuation.py": "95cc2e4a1c9ca55fbe951fb134e0c4f4a3fbf03681a026d2a78bbf84f7909a8f"
+  },
+  "validation": {
+    "py_compile": "PASS",
+    "continuation_shard": "PASS",
+    "continuation_shard_tests": 7,
+    "live_integration_shard": "PASS",
+    "live_integration_tests": 3,
+    "initial_full_repository_run": "TRANSIENT_CONTROL_STATE_ERROR",
+    "initial_full_repository_tests_run": 865,
+    "initial_full_repository_errors": 1,
+    "initial_error": "An active AgentJob row had no completion path yet; the live minimum-payload opt-in scanner interpreted the blank path as the repository root.",
+    "completion_path_registered_full_repository_run": "PASS",
+    "completion_path_registered_full_repository_tests": 865,
+    "completion_path_registered_full_repository_skips": 1
+  },
+  "raw_command_outputs": {
+    "continuation_shard": "Ran 7 tests in 13.786s; OK; real 13.85s",
+    "live_integration_shard": "Ran 3 tests in 11.944s; OK",
+    "equivalence_audit": "PASS; live validate_all calls=1; injected additional calls=0; outputs equal excluding receipt metadata",
+    "initial_full_repository": "Ran 865 tests in 182.336s; FAILED errors=1 skipped=1; transient active-row completion-path error",
+    "completion_path_registered_full_repository": "Ran 865 tests in 182.391s; OK skipped=1; real 182.63s",
+    "planner_audit": "PASS; 11 legacy-compatible affected gates equal 11 planner affected gates; zero unexplained mismatch"
+  }
+}

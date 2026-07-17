@@ -1182,18 +1182,167 @@ class ResearchControlTests(unittest.TestCase):
         )
         self.assertTrue(any("outside an authority marker" in error for error in report.errors))
 
+    def continuation_routing_fixture(self) -> dict[str, object]:
+        base_warning = self.continue_research.warning_record(
+            triggered=False,
+            warning_ids=[],
+            recommended_guard_action=self.continue_research.WARNING_DEFAULT_ACTION,
+        )
+        route_orbit_diagnostics = {
+            "status": "pass",
+            "warnings_are_advisory_only": True,
+            "warning_hard_gates_created": False,
+            "physics_claim_authority_created": False,
+            "payload_density_warning": dict(base_warning),
+            "route_orbit_warning": dict(base_warning),
+            "same_burden_repetition_warning": dict(base_warning),
+            "gate_ready_without_gate_warning": dict(base_warning),
+            "recommended_guard_action": self.continue_research.WARNING_DEFAULT_ACTION,
+        }
+        dependency_graph_summary = {
+            "status": "available",
+            "authority_note": (
+                "Generated dependency graph data is navigational support only. "
+                "It does not replace canonical source inspection and cannot promote claims."
+            ),
+            "source_inspection_required": True,
+            "freshness_check_command": (
+                ".venv/bin/python scripts/research_control/"
+                "render_dependency_graph.py --check"
+            ),
+            "freshness_status": "not_checked_by_continue_research",
+            "active_task": "RT-TEST",
+            "latest_handoff": "handoff-test",
+            "active_burden": {
+                "milestone": "none",
+                "burden_id": "none",
+                "status": "fixture",
+            },
+            "immediate_upstream_objects": [],
+            "accepted_scoped_objects": [],
+            "draft_control_objects": [],
+            "human_gated_objects": [],
+            "blocked_downstream_objects": [],
+            "frozen_negative_routes": [],
+            "next_recommended_route": "Route fixture",
+            "graph_path": "output/research_dependency_graph.json",
+            "graph_hash": "a" * 64,
+            "graph_path_or_hash": (
+                "output/research_dependency_graph.json#" + ("a" * 64)
+            ),
+        }
+        return {
+            "program_state": {
+                "active_task_id": "RT-TEST",
+                "latest_handoff_id": "handoff-test",
+                "current_status": "fixture",
+                "next_recommended_action": "Route fixture",
+            },
+            "latest": {
+                "handoff_id": "handoff-test",
+                "yaml_path": "research_control/handoffs/handoff-test.yaml",
+                "markdown_path": "research_control/handoffs/handoff-test.md",
+                "next_action": "Route fixture",
+            },
+            "task_rows": {
+                "RT-TEST": {
+                    "current_decision_id": "DDR-TEST",
+                    "current_job_id": "AJ-TEST",
+                    "requires_human_gate": "false",
+                }
+            },
+            "job_rows": {
+                "AJ-TEST": {
+                    "job_id": "AJ-TEST",
+                    "job_path": "research_control/tasks/RT-TEST/jobs/AJ-TEST.yaml",
+                    "status": "completed",
+                }
+            },
+            "decision_rows": {
+                "DDR-TEST": {
+                    "decision_id": "DDR-TEST",
+                    "requires_human_gate": "false",
+                }
+            },
+            "jobs_waiting": [],
+            "available_roles": [
+                {
+                    "role_id": "gate-chair",
+                    "version": "0.1.0",
+                    "requires_human_gate": "true",
+                }
+            ],
+            "route_orbit_diagnostics": route_orbit_diagnostics,
+            "dependency_graph_summary": dependency_graph_summary,
+            "required_authority_surfaces": ["research_control/program_state.yaml"],
+        }
+
     def test_continue_research_reports_director_context_packet(self) -> None:
         program_state = self.strict_yaml.loads(
             (REPO_ROOT / "research_control" / "program_state.yaml").read_text(
                 encoding="utf-8"
             )
         )
-        status = self.continue_research.continuation_status()
+        validation_reports = []
+        routing_snapshots = []
+        real_live_routing_snapshot = self.continue_research.live_routing_snapshot
+
+        def counted_validate_all():
+            report = self.validator.validate_all()
+            validation_reports.append(report)
+            return report
+
+        def captured_live_routing_snapshot():
+            snapshot = real_live_routing_snapshot()
+            routing_snapshots.append(snapshot)
+            return snapshot
+
+        with mock.patch.object(
+            self.continue_research,
+            "validate_all",
+            side_effect=counted_validate_all,
+        ) as validate_all_mock, mock.patch.object(
+            self.continue_research,
+            "live_routing_snapshot",
+            side_effect=captured_live_routing_snapshot,
+        ):
+            status = self.continue_research.continuation_status()
+            injected_status = self.continue_research.continuation_status(
+                validation_result=self.continue_research.make_validation_receipt(
+                    validation_reports[0]
+                ),
+                routing_snapshot=routing_snapshots[0],
+            )
+
+        self.assertEqual(validate_all_mock.call_count, 1)
+        self.assertEqual(len(validation_reports), 1)
+        self.assertEqual(len(routing_snapshots), 1)
+        live_comparable = dict(status)
+        injected_comparable = dict(injected_status)
+        live_comparable.pop("input_receipts")
+        injected_comparable.pop("input_receipts")
+        self.assertEqual(live_comparable, injected_comparable)
+        self.assertFalse(status["input_receipts"]["validation"]["injected"])
+        self.assertFalse(status["input_receipts"]["routing"]["injected"])
+        self.assertTrue(injected_status["input_receipts"]["validation"]["injected"])
+        self.assertTrue(injected_status["input_receipts"]["routing"]["injected"])
+        self.assertFalse(
+            injected_status["input_receipts"]["validation"][
+                "physics_claim_authority"
+            ]
+        )
+        self.assertFalse(
+            injected_status["input_receipts"]["routing"]["physics_claim_authority"]
+        )
         self.assertEqual(status["status"], "ready")
         self.assertIn(status["boundary"], {"director_decision_required", "existing_agent_job_ready", "human_gate_required", "blocked", "no_action"})
         self.assertEqual(status["active_task_id"], program_state["active_task_id"])
         self.assertEqual(status["latest_handoff_id"], program_state["latest_handoff_id"])
-        self.assertTrue(status["checkpoint_required_after_execution"])
+        self.assertEqual(
+            status["checkpoint_required_after_execution"],
+            status["boundary"]
+            in {"director_decision_required", "existing_agent_job_ready"},
+        )
         self.assertEqual(status["execution_boundary"], "one bounded AgentJob per invocation")
         self.assertEqual(status["bridge_or_fail_policy"]["policy_id"], "bridge_or_fail_loop_control_v1")
         self.assertEqual(
@@ -1226,7 +1375,22 @@ class ResearchControlTests(unittest.TestCase):
             self.assertIn(field_name, graph_summary)
 
     def test_continue_research_dependency_graph_summary_is_support_only(self) -> None:
-        status = self.continue_research.continuation_status()
+        pass_receipt = self.continue_research.make_validation_receipt(
+            self.validator.ValidationReport()
+        )
+        routing_snapshot = self.continue_research.make_routing_snapshot(
+            self.continuation_routing_fixture()
+        )
+        with mock.patch.object(
+            self.continue_research,
+            "validate_all",
+            side_effect=AssertionError("injected path ran full validation"),
+        ) as validate_all_mock:
+            status = self.continue_research.continuation_status(
+                validation_result=pass_receipt,
+                routing_snapshot=routing_snapshot,
+            )
+        validate_all_mock.assert_not_called()
         graph_summary = status["dependency_graph_summary"]
 
         self.assertEqual(graph_summary["status"], "available")
@@ -1247,6 +1411,84 @@ class ResearchControlTests(unittest.TestCase):
             "frozen_negative_routes",
         ):
             self.assertLessEqual(len(graph_summary[list_field]), self.continue_research.GRAPH_SUMMARY_LIMIT)
+
+        failed_report = self.validator.ValidationReport()
+        failed_report.errors.append("fixture validation failure")
+        failed_status = self.continue_research.continuation_status(
+            validation_result=self.continue_research.make_validation_receipt(
+                failed_report
+            ),
+            routing_snapshot=routing_snapshot,
+        )
+        self.assertEqual(failed_status["status"], "blocked")
+        self.assertEqual(
+            failed_status["reason"],
+            "research-control validation failed",
+        )
+        self.assertEqual(
+            failed_status["validation_errors"],
+            ["fixture validation failure"],
+        )
+
+        receipt_payload = json.loads(pass_receipt.payload_json)
+        schema_payload = dict(receipt_payload)
+        schema_payload["schema_id"] = "invalid"
+        schema_json = self.continue_research._canonical_json(schema_payload)
+        authority_payload = dict(receipt_payload)
+        authority_payload["authority_boundary"] = {
+            "project_control_only": False,
+            "physics_claim_authority": True,
+        }
+        authority_json = self.continue_research._canonical_json(authority_payload)
+        invalid_validation_inputs = {
+            "type": object(),
+            "kind": self.continue_research.ValidatedContinuationInput(
+                kind="routing_snapshot",
+                payload_json=pass_receipt.payload_json,
+                sha256=pass_receipt.sha256,
+            ),
+            "schema": self.continue_research.ValidatedContinuationInput(
+                kind="validation_receipt",
+                payload_json=schema_json,
+                sha256=sha256_text(schema_json),
+            ),
+            "authority": self.continue_research.ValidatedContinuationInput(
+                kind="validation_receipt",
+                payload_json=authority_json,
+                sha256=sha256_text(authority_json),
+            ),
+            "fingerprint": self.continue_research.ValidatedContinuationInput(
+                kind="validation_receipt",
+                payload_json=pass_receipt.payload_json,
+                sha256="0" * 64,
+            ),
+        }
+        for case_name, invalid_receipt in invalid_validation_inputs.items():
+            with self.subTest(case=case_name):
+                blocked = self.continue_research.continuation_status(
+                    validation_result=invalid_receipt,
+                    routing_snapshot=routing_snapshot,
+                )
+                self.assertEqual(blocked["status"], "blocked")
+                self.assertEqual(
+                    blocked["reason"],
+                    "validation receipt integrity failed",
+                )
+
+        tampered_routing = self.continue_research.ValidatedContinuationInput(
+            kind="routing_snapshot",
+            payload_json=routing_snapshot.payload_json,
+            sha256="0" * 64,
+        )
+        blocked_routing = self.continue_research.continuation_status(
+            validation_result=pass_receipt,
+            routing_snapshot=tampered_routing,
+        )
+        self.assertEqual(blocked_routing["status"], "blocked")
+        self.assertIn(
+            "routing snapshot integrity failed",
+            blocked_routing["reason"],
+        )
 
     def test_continue_research_route_orbit_diagnostics_are_advisory(self) -> None:
         fake_report = {
@@ -1299,30 +1541,83 @@ class ResearchControlTests(unittest.TestCase):
         self.assertIn("selector_cycles_without_new_payload", diagnostics["recommended_guard_action"])
 
     def test_continue_research_context_warnings_do_not_block_gate_chair_route(self) -> None:
-        fake_report = {
-            "metrics": {
-                "payload_density_metrics": {},
-                "route_orbit_risk_metrics": {
-                    "gate_ready_cycles_without_gate_verdict": 1,
-                },
-                "diagnostic_warnings": [
-                    {
-                        "warning_id": "gate_ready_without_gate",
-                        "metric_key": "gate_ready_cycles_without_gate_verdict",
-                        "recommended_guard_action": "Keep Gate Chair review available when exact authorization exists.",
-                        "hard_gate": False,
-                        "physics_claim_authority": False,
-                    }
-                ],
-            }
-        }
-
+        payload = self.continuation_routing_fixture()
+        guard_action = (
+            "Keep Gate Chair review available when exact authorization exists."
+        )
+        payload["route_orbit_diagnostics"]["gate_ready_without_gate_warning"] = (
+            self.continue_research.warning_record(
+                triggered=True,
+                warning_ids=["gate_ready_without_gate"],
+                recommended_guard_action=guard_action,
+                evidence={"gate_ready_cycles_without_gate_verdict": 1},
+            )
+        )
+        payload["route_orbit_diagnostics"]["route_orbit_warning"] = (
+            self.continue_research.warning_record(
+                triggered=True,
+                warning_ids=["gate_ready_without_gate"],
+                recommended_guard_action=guard_action,
+            )
+        )
+        payload["route_orbit_diagnostics"]["recommended_guard_action"] = guard_action
+        pass_receipt = self.continue_research.make_validation_receipt(
+            self.validator.ValidationReport()
+        )
         with mock.patch.object(
             self.continue_research,
-            "build_physics_progress_report",
-            return_value=fake_report,
-        ):
-            status = self.continue_research.continuation_status()
+            "validate_all",
+            side_effect=AssertionError("injected path ran full validation"),
+        ) as validate_all_mock:
+            status = self.continue_research.continuation_status(
+                validation_result=pass_receipt,
+                routing_snapshot=self.continue_research.make_routing_snapshot(
+                    payload
+                ),
+            )
+
+            human_gate_payload = json.loads(json.dumps(payload))
+            human_gate_payload["task_rows"]["RT-TEST"]["requires_human_gate"] = (
+                "true"
+            )
+            human_gate_status = self.continue_research.continuation_status(
+                validation_result=pass_receipt,
+                routing_snapshot=self.continue_research.make_routing_snapshot(
+                    human_gate_payload
+                ),
+            )
+
+            existing_job_payload = json.loads(json.dumps(payload))
+            existing_job_payload["jobs_waiting"] = [
+                {
+                    "job_id": "AJ-TEST",
+                    "task_id": "RT-TEST",
+                    "decision_id": "DDR-TEST",
+                    "status": "active",
+                }
+            ]
+            existing_job_status = self.continue_research.continuation_status(
+                validation_result=pass_receipt,
+                routing_snapshot=self.continue_research.make_routing_snapshot(
+                    existing_job_payload
+                ),
+            )
+
+            no_action_payload = json.loads(json.dumps(payload))
+            no_action_payload["latest"]["next_action"] = ""
+            no_action_payload["program_state"]["next_recommended_action"] = "NONE"
+            no_action_status = self.continue_research.continuation_status(
+                validation_result=pass_receipt,
+                routing_snapshot=self.continue_research.make_routing_snapshot(
+                    no_action_payload
+                ),
+            )
+
+        validate_all_mock.assert_not_called()
+        self.assertEqual(status["boundary"], "director_decision_required")
+        self.assertEqual(human_gate_status["boundary"], "human_gate_required")
+        self.assertEqual(existing_job_status["boundary"], "existing_agent_job_ready")
+        self.assertEqual(no_action_status["boundary"], "no_action")
 
         self.assertIn("payload_density_warning", status)
         self.assertIn("route_orbit_warning", status)
