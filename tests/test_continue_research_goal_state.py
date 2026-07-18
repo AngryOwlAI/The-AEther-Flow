@@ -160,11 +160,19 @@ class GoalStateTestCase(unittest.TestCase):
     def tearDown(self) -> None:
         self.temp.cleanup()
 
-    def initialize(self, *, goal: str = "Perform two bounded passes.", passes: int = 3, goal_id: str | None = None):
+    def initialize(
+        self,
+        *,
+        goal: str = "Perform two bounded passes.",
+        passes: int = 3,
+        goal_id: str | None = None,
+        reasoning_effort: str = "max",
+    ):
         return self.store.initialize(
             goal_text=goal,
             completion_contract=contract(),
             scope_contract=scope_contract(),
+            reasoning_effort=reasoning_effort,
             max_continue_passes=passes,
             max_elapsed_minutes=60,
             repository_binding=binding(),
@@ -267,16 +275,35 @@ class GoalStateTestCase(unittest.TestCase):
 
 
 class SerializationAndSchemaTests(GoalStateTestCase):
-    def test_omitted_scheduling_guards_emit_v2_nulls(self):
+    def test_v4_default_effort_contract_and_omitted_scheduling_guards(self):
         path, record = self.store.initialize(
             goal_text="unbounded scheduling horizon",
             completion_contract=contract(),
             scope_contract=scope_contract(),
+            reasoning_effort="max",
             repository_binding=binding(),
             initial_fingerprint=fingerprint("A"),
             timestamp=BASE_TIME,
         )
-        self.assertEqual(record["schema_version"], "continue-research-goal.v3")
+        self.assertEqual(record["schema_version"], "continue-research-goal.v4")
+        self.assertEqual(record["discussion_contract"]["reasoning_effort"], "max")
+        self.assertEqual(
+            record["discussion_contract"]["accepted_goal_sha256"],
+            record["goal_sha256"],
+        )
+        self.assertEqual(
+            record["discussion_contract"]["confirmation_marker"],
+            goal_state.DISCUSSION_CONFIRMATION_MARKER,
+        )
+        self.assertEqual(
+            record["discussion_contract_sha256"],
+            goal_state.sha256_json(record["discussion_contract"]),
+        )
+        initialized = record["journal"][0]["payload"]
+        self.assertEqual(
+            initialized["discussion_contract_sha256"],
+            record["discussion_contract_sha256"],
+        )
         self.assertIsNone(record["guards"]["max_continue_passes"])
         self.assertIsNone(record["deadline_at"])
         self.assertIsNone(goal_state.effective_guards(record)["max_continue_passes"])
@@ -288,6 +315,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             goal_text="pass-only guard",
             completion_contract=contract(),
             scope_contract=scope_contract(),
+            reasoning_effort="max",
             max_continue_passes=4,
             repository_binding=binding(),
             initial_fingerprint=fingerprint("A"),
@@ -317,6 +345,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             goal_text="deadline-only guard",
             completion_contract=contract(),
             scope_contract=scope_contract(),
+            reasoning_effort="max",
             deadline_at="2026-07-10T15:30:00+02:00",
             repository_binding=binding(),
             initial_fingerprint=fingerprint("B"),
@@ -335,6 +364,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
                         goal_text=f"invalid deadline {index}",
                         completion_contract=contract(),
                         scope_contract=scope_contract(),
+                        reasoning_effort="max",
                         deadline_at=deadline,
                         repository_binding=binding(),
                         initial_fingerprint=fingerprint("A"),
@@ -354,6 +384,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
                         goal_text="invalid finite scheduling guard",
                         completion_contract=contract(),
                         scope_contract=scope_contract(),
+                        reasoning_effort="max",
                         repository_binding=binding(),
                         initial_fingerprint=fingerprint("A"),
                         timestamp=BASE_TIME,
@@ -366,6 +397,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
                 goal_text="conflicting deadline inputs",
                 completion_contract=contract(),
                 scope_contract=scope_contract(),
+                reasoning_effort="max",
                 deadline_at="2026-07-10T13:00:00Z",
                 max_elapsed_minutes=30,
                 repository_binding=binding(),
@@ -376,12 +408,13 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             goal_text="legacy elapsed alias",
             completion_contract=contract(),
             scope_contract=scope_contract(),
+            reasoning_effort="max",
             max_elapsed_minutes=30,
             repository_binding=binding(),
             initial_fingerprint=fingerprint("A"),
             timestamp=BASE_TIME,
         )
-        self.assertEqual(record["schema_version"], "continue-research-goal.v3")
+        self.assertEqual(record["schema_version"], "continue-research-goal.v4")
         self.assertEqual(record["deadline_at"], "2026-07-10T12:30:00Z")
 
     def test_cli_deadline_arguments_are_optional_and_mutually_exclusive(self):
@@ -395,6 +428,8 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             json.dumps(contract()),
             "--scope-contract-json",
             json.dumps(scope_contract()),
+            "--reasoning-effort",
+            "max",
             "--repository-binding-json",
             json.dumps(binding()),
             "--initial-fingerprint",
@@ -404,6 +439,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
         self.assertIsNone(args.max_continue_passes)
         self.assertIsNone(args.deadline_at)
         self.assertIsNone(args.max_elapsed_minutes)
+        self.assertEqual(args.reasoning_effort, "max")
         with contextlib.redirect_stderr(io.StringIO()):
             with self.assertRaises(SystemExit):
                 goal_state.build_parser().parse_args(
@@ -416,10 +452,42 @@ class SerializationAndSchemaTests(GoalStateTestCase):
                     ]
                 )
 
+        missing_effort = common.copy()
+        effort_index = missing_effort.index("--reasoning-effort")
+        del missing_effort[effort_index : effort_index + 2]
+        with contextlib.redirect_stderr(io.StringIO()):
+            with self.assertRaises(SystemExit):
+                goal_state.build_parser().parse_args(missing_effort)
+
+    def test_alternate_reasoning_effort_serializes_and_summarizes(self):
+        path, record = self.initialize(reasoning_effort="high")
+        summary = self.store.summarize(path)
+        self.assertEqual(record["discussion_contract"]["reasoning_effort"], "high")
+        self.assertEqual(summary["reasoning_effort"], "high")
+        self.assertEqual(
+            summary["discussion_contract_sha256"],
+            record["discussion_contract_sha256"],
+        )
+
+    def test_unsupported_reasoning_effort_is_rejected_without_state(self):
+        with self.assertRaises(goal_state.ValidationError):
+            self.store.initialize(
+                goal_text="unsupported reasoning fixture",
+                completion_contract=contract(),
+                scope_contract=scope_contract(),
+                reasoning_effort="extreme",
+                repository_binding=binding(),
+                initial_fingerprint=fingerprint("A"),
+                timestamp=BASE_TIME,
+            )
+        self.assertEqual(list(self.goals.glob("goal-*.md")), [])
+
     def _retained_record(self, record: dict, schema_version: str) -> dict:
         retained = copy.deepcopy(record)
         retained["schema_version"] = schema_version
         for key in (
+            "discussion_contract",
+            "discussion_contract_sha256",
             "scope_contract",
             "scope_contract_sha256",
             "recovery_ledger",
@@ -472,6 +540,27 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             )
         self.assertEqual(path.read_bytes(), before)
 
+    def test_v3_record_is_validation_and_summary_only_without_migration(self):
+        path, record = self.initialize()
+        retained = copy.deepcopy(record)
+        retained["schema_version"] = goal_state.AUTONOMOUS_SCHEMA_VERSION
+        retained.pop("discussion_contract")
+        retained.pop("discussion_contract_sha256")
+        path.write_text(goal_state.render_goal(retained), encoding="utf-8")
+        before = path.read_bytes()
+        loaded = self.store.read(path)
+        summary = self.store.summarize(path)
+        self.assertEqual(loaded["schema_version"], "continue-research-goal.v3")
+        self.assertEqual(summary["reasoning_effort"], None)
+        self.assertIn("validation and summary only", summary["reader_report"])
+        with self.assertRaises(goal_state.StateConflict):
+            self.store.reserve_successor(
+                path,
+                expected_revision=loaded["state"]["revision"],
+                predecessor_thread_id="launcher",
+            )
+        self.assertEqual(path.read_bytes(), before)
+
     def test_exact_goal_serialization_hash_and_round_trip(self):
         exact = "  α goal\r\nline two\r\n"
         path, record = self.initialize(goal=exact)
@@ -491,6 +580,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
                 goal_text="safe goal",
                 completion_contract=contract(),
                 scope_contract=scope_contract(),
+                reasoning_effort="max",
                 max_continue_passes=1,
                 max_elapsed_minutes=1,
                 repository_binding=bad,
@@ -506,6 +596,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
                 goal_text="safe goal",
                 completion_contract=contract(),
                 scope_contract=scope_contract(),
+                reasoning_effort="max",
                 max_continue_passes=1,
                 max_elapsed_minutes=1,
                 repository_binding=bad,
@@ -517,6 +608,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             goal_text="safe production goal",
             completion_contract=contract(),
             scope_contract=scope_contract(),
+            reasoning_effort="max",
             max_continue_passes=2,
             max_elapsed_minutes=30,
             repository_binding=production_binding(),
@@ -634,6 +726,10 @@ class SerializationAndSchemaTests(GoalStateTestCase):
         for mutate in (
             lambda item: item.__setitem__("schema_version", "wrong"),
             lambda item: item.__setitem__("goal_sha256", "0" * 64),
+            lambda item: item["discussion_contract"].__setitem__(
+                "reasoning_effort",
+                "high",
+            ),
             lambda item: item["journal"][0].__setitem__("entry_hash", "0" * 64),
         ):
             candidate = copy.deepcopy(record)
@@ -652,6 +748,20 @@ class SerializationAndSchemaTests(GoalStateTestCase):
         path.rename(wrong)
         with self.assertRaises(goal_state.ValidationError):
             self.store.read(wrong)
+
+    def test_rehashed_discussion_tamper_is_rejected_by_initialization_evidence(self):
+        path, record = self.initialize()
+        tampered = copy.deepcopy(record)
+        tampered["discussion_contract"]["reasoning_effort"] = "high"
+        tampered["discussion_contract_sha256"] = goal_state.sha256_json(
+            tampered["discussion_contract"]
+        )
+        path.write_text(goal_state.render_goal(tampered), encoding="utf-8")
+        with self.assertRaisesRegex(
+            goal_state.ValidationError,
+            "initialization evidence does not bind discussion contract",
+        ):
+            self.store.read(path)
 
     def test_path_traversal_symlink_and_hardlink_are_rejected(self):
         path, _ = self.initialize()
@@ -707,6 +817,7 @@ class AtomicityAndConcurrencyTests(GoalStateTestCase):
                     goal_text=f"goal {suffix}",
                     completion_contract=contract(),
                     scope_contract=scope_contract(),
+                    reasoning_effort="max",
                     max_continue_passes=2,
                     max_elapsed_minutes=30,
                     repository_binding=binding(),
@@ -1004,6 +1115,7 @@ class StateMachineTests(GoalStateTestCase):
                         goal_text="dispatch fixture",
                         completion_contract=contract(),
                         scope_contract=scope_contract(),
+                        reasoning_effort="max",
                         max_continue_passes=2,
                         max_elapsed_minutes=20,
                         repository_binding=binding(),
@@ -1100,6 +1212,7 @@ class StateMachineTests(GoalStateTestCase):
             goal_text="unlimited guard fixture",
             completion_contract=contract(),
             scope_contract=scope_contract(),
+            reasoning_effort="max",
             repository_binding=binding(),
             initial_fingerprint=fingerprint("A"),
             timestamp=BASE_TIME,
@@ -1133,12 +1246,13 @@ class StateMachineTests(GoalStateTestCase):
         )
 
 
-class V3AutonomousRoutingTests(GoalStateTestCase):
+class V4AutonomousRoutingTests(GoalStateTestCase):
     def initialize_multi(self):
         return self.store.initialize(
             goal_text="Complete task A and then task B; preserve independent task C.",
             completion_contract=contract("complete the explicitly included plan tasks"),
             scope_contract=multi_scope_contract(),
+            reasoning_effort="max",
             max_continue_passes=8,
             max_elapsed_minutes=120,
             repository_binding=binding(),
@@ -1485,6 +1599,7 @@ class V3AutonomousRoutingTests(GoalStateTestCase):
                 goal_text="dispatch adoption fixture",
                 completion_contract=contract(),
                 scope_contract=scope_contract(),
+                reasoning_effort="max",
                 max_continue_passes=2,
                 max_elapsed_minutes=30,
                 repository_binding=binding(),
@@ -1565,6 +1680,7 @@ class FingerprintAndReceiptTests(GoalStateTestCase):
                     goal_text="fingerprint fixture",
                     completion_contract=contract(),
                     scope_contract=scope_contract(),
+                    reasoning_effort="max",
                     max_continue_passes=3,
                     max_elapsed_minutes=30,
                     repository_binding=binding(),
@@ -1720,6 +1836,69 @@ class RepositoryContractTests(unittest.TestCase):
         self.assertIn("invokes `continue-research` zero times", launcher)
         self.assertIn("invoke `$continue-research` exactly once", recursive)
         self.assertIn("creates zero or one successor", recursive)
+
+    def test_launcher_acceptance_loop_covers_defaults_edits_and_ambiguous_approval(self):
+        launcher = (ROOT / ".codex/skills/continue-research-goal/SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        for token in (
+            'reasoning_effort: "<value>"',
+            "Omission of `reasoning_effort` selects `max`",
+            "edits only the goal, preserve the previously selected",
+            "edits only the effort, preserve the goal",
+            "edits both simultaneously, replace both candidates",
+            "restart the loop",
+            "ambiguous approval",
+            "create no state",
+        ):
+            self.assertIn(token, launcher)
+
+    def test_launcher_metadata_mismatch_stops_before_initialization(self):
+        launcher = (ROOT / ".codex/skills/continue-research-goal/SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        metadata = 'nodeRepl.requestMeta["x-codex-turn-metadata"]'
+        self.assertIn(metadata, launcher)
+        self.assertIn("active metadata model", launcher)
+        self.assertIn("current-task `reasoning_effort` exactly equals", launcher)
+        self.assertIn("stops before goal initialization", launcher)
+        self.assertIn("change the Codex UI reasoning setting", launcher)
+        self.assertLess(launcher.index(metadata), launcher.index("call helper `initialize` exactly once"))
+
+    def test_both_relay_skills_pin_thinking_and_omit_model(self):
+        launcher = (ROOT / ".codex/skills/continue-research-goal/SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        recursive = (
+            ROOT / ".codex/skills/continue-research-continue-goal/SKILL.md"
+        ).read_text(encoding="utf-8")
+        pinned_call = (
+            "create_thread(..., thinking=<persisted discussion_contract reasoning_effort>)"
+        )
+        for text in (launcher, recursive):
+            self.assertIn(pinned_call, text)
+            self.assertIn("omit the `model` argument", text)
+            self.assertIn("silently downgrade", text)
+        self.assertIn("rely on default inheritance", launcher)
+        self.assertIn("inherit a default reasoning effort", recursive)
+
+    def test_recursive_effort_checks_precede_claim_and_successor_reservation(self):
+        recursive = (
+            ROOT / ".codex/skills/continue-research-continue-goal/SKILL.md"
+        ).read_text(encoding="utf-8")
+        metadata = 'nodeRepl.requestMeta["x-codex-turn-metadata"]'
+        self.assertIn(metadata, recursive)
+        self.assertIn("stops before generation claim", recursive)
+        self.assertLess(recursive.index(metadata), recursive.index("Call helper `claim` exactly once"))
+        rediscover = (
+            "rediscover the exact saved project and current `create_thread` contract\n"
+            "   before successor reservation"
+        )
+        self.assertIn(rediscover, recursive)
+        self.assertLess(
+            recursive.index(rediscover),
+            recursive.index("call helper `reserve-successor` once"),
+        )
 
     def test_native_goal_operations_appear_only_in_forbidden_sections(self):
         banned = ("create_goal", "get_goal", "update_goal", "thread/goal/", "`/goal`")

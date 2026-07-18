@@ -10,13 +10,14 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `skill_contract`
 - Authority status: `project_control`
 - Owner skill: `continue-research-goal`
-- Source hash: `751e0bb4448adbf1cf11af170c1224eedcb8e8d9d90b167fe1a982d5b59eb68e`
+- Source hash: `782bc3f96d22c3486368505ac11406cab88ed675bfd1b8be01f14dd828a690c2`
 
 ## Related Objects
 
 - Generated output path: `wiki/markdown/md-skill-continue-research-goal.md`
+- Backlink from `MD-CONTINUE-RESEARCH-GOAL-V4-REASONING-EFFORT-POLICY` `research_control/tasks/RT-20260718-013/artifacts/continue_research_goal_v4_reasoning_effort_policy.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-18T21:44:28Z`
+- Last validated at: `2026-07-18T23:18:36Z`

@@ -43,21 +43,31 @@ packets; `improve-project-system` owns project-system repair packets.
    a direct regular child of the configured `goals/` directory and its
    filename must match the embedded goal ID.
 2. Run helper `validate --require-lease-parity`; verify schema, exact goal and
-   completion-contract and scope-contract hashes, amendments, journal and
-   recovery-ledger chains, revision, repository binding, immutable generation
-   route, token, and idempotency key. V1/v2 records are validation-only and
-   must not be claimed or resumed.
-3. Verify the immutable saved-project/root/Git-common-dir/branch/local-mode
+   discussion-contract, completion-contract, and scope-contract hashes,
+   amendments, journal and recovery-ledger chains, revision, repository
+   binding, immutable generation route, token, and idempotency key. V1-v3
+   records are validation-and-summary-only and must not be claimed or resumed.
+3. Read the persisted reasoning effort only from the validated v4
+   `discussion_contract`. Rediscover `node_repl` and the current task-tool
+   model/reasoning contract, then read
+   `nodeRepl.requestMeta["x-codex-turn-metadata"]`. Require nonblank `model` and
+   `reasoning_effort`, require that the active model supports the persisted
+   effort, and require the current task's effort to equal it exactly. Missing
+   metadata, unsupported effort, or mismatch stops before generation claim,
+   worker execution, or any helper mutation. Tell the user to change the Codex
+   UI setting and reconfirm; never change global configuration, self-message,
+   silently downgrade, substitute a model, or inherit a default.
+4. Verify the immutable saved-project/root/Git-common-dir/branch/local-mode
    binding. The branch must not be `main`.
-4. If the predecessor has not recorded `successor_created`, perform read-only
+5. If the predecessor has not recorded `successor_created`, perform read-only
    polling for no more than `handoff_ready_timeout_seconds`. Do not touch
    tracked research state or claim the generation while waiting. On timeout,
    stop without mutation or research and report the idempotency key for
    explicit recovery.
-5. Call helper `claim` exactly once with the expected revision and relay
+6. Call helper `claim` exactly once with the expected revision and relay
    identity. A stale, duplicate, consumed, mismatched, or concurrently leased
    frame exits before research and appends no step receipt.
-6. Read the claimed generation's `worker_skill`, strategy, work-item ID,
+7. Read the claimed generation's `worker_skill`, strategy, work-item ID,
    blocker fingerprint, evidence hashes, and dirty-state manifest directly
    from the validated record. Do not accept a worker route from task prose.
 
@@ -126,7 +136,7 @@ fields, active task and AgentJob, latest handoff pair and hashes, normalized
 continuation boundary/reason, required validators, and checkpoint outcome.
 
 Call helper `verify-step` once with the after fingerprint, canonical evidence,
-goal evaluation `met`, `unmet`, or `indeterminate`, and the standardized v3
+goal evaluation `met`, `unmet`, or `indeterminate`, and the standardized v4
 `work_result`: included work-item ID and status, task and AgentJob IDs,
 completion path/hash, checkpoint commit, validator results, progress summary,
 explicit zero-AgentJob reason when applicable, and out-of-scope remaining
@@ -191,12 +201,19 @@ Then:
    `decide-step --decision continuation_required` with the next included
    work-item ID when it changes; for a recovery, use the already-recorded
    `recovery_required` state;
-2. call helper `reserve-successor` once for generation `N+1` under the same
+2. rediscover the exact saved project and current `create_thread` contract
+   before successor reservation. Reverify that `thinking` exists, the active
+   metadata model supports the persisted discussion-contract effort, and the
+   current task metadata still matches it. Any missing metadata, unsupported
+   effort, absent `thinking` support, or mismatch stops before successor
+   reservation;
+3. call helper `reserve-successor` once for generation `N+1` under the same
    goal; it copies the already-approved route and creates one new token and
    idempotency key;
-3. rediscover the exact saved project and current `create_thread` contract;
-4. call `create_thread` exactly once in local mode with the same minimal prompt
-   shape used by the launcher and the new generation identity;
+4. call
+   `create_thread(..., thinking=<persisted discussion_contract reasoning_effort>)`
+   exactly once in local mode with the same minimal prompt shape used by the
+   launcher and the new generation identity; omit the `model` argument;
 5. record the returned ID with helper `record-successor`; this atomically
    finalizes generation `N`'s one receipt and transfers both leases;
 6. make no further repository, helper, orchestration, or worker call; and
@@ -236,11 +253,11 @@ change requires a new launcher record. Absorbing terminal states
 (`terminal_complete`, `terminal_duplicate_detected`,
 `terminal_corrupt_state`, and `terminal_cancelled`) cannot resume.
 
-For v3 records, a scheduling-guard amendment may only raise a finite limit or
+For v4 records, a scheduling-guard amendment may only raise a finite limit or
 replace a finite limit with JSON `null`. It may never replace an unlimited
 guard with a finite value or append a no-op unlimited value. Finite amended
-deadlines are normalized to canonical UTC `Z`. Retained v1/v2 records are
-validation-only and cannot be resumed or mutated.
+deadlines are normalized to canonical UTC `Z`. Retained v1-v3 records are
+validation-and-summary-only and cannot be resumed or mutated.
 
 ## Reporting
 
@@ -271,3 +288,6 @@ its unmistakable reader report exactly. Preserve uncertainties exactly.
 - Never repeat a recovery strategy for the same blocker, broaden the scope
   contract, cross into an unlisted task, or execute a repair after any
   dirty-manifest field differs.
+- Never omit `thinking`, inherit a default reasoning effort, change global
+  Codex configuration, self-message, silently downgrade effort, or pass a
+  substitute `model`.

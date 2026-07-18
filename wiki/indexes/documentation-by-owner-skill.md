@@ -12,6 +12,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 ## continue-research-goal
 
+- `MD-CONTINUE-RESEARCH-GOAL-V4-REASONING-EFFORT-POLICY` `research_control/tasks/RT-20260718-013/artifacts/continue_research_goal_v4_reasoning_effort_policy.md`
 - `MD-SKILL-CONTINUE-RESEARCH-GOAL` `.codex/skills/continue-research-goal/SKILL.md`
 - `MD-SKILL-CONTINUE-RESEARCH-GOAL-SCHEMA` `.codex/skills/continue-research-goal/references/goal-file-schema.md`
 - `MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3` `research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md`
@@ -193,6 +194,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-AGENTS-AGENTS` `wiki/markdown/md-agents-agents.md`
 - `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
 - `WIKI-MD-CLAIM-GATES-PUBLICATION-BRIEF` `wiki/markdown/md-claim-gates-publication-brief.md`
+- `WIKI-MD-CONTINUE-RESEARCH-GOAL-V4-REASONING-EFFORT-POLICY` `wiki/markdown/md-continue-research-goal-v4-reasoning-effort-policy.md`
 - `WIKI-MD-CONTRIBUTING` `wiki/markdown/md-contributing.md`
 - `WIKI-MD-DIRECTOR-AGENTJOB-LIFECYCLE-PUBLICATION-BRIEF` `wiki/markdown/md-director-agentjob-lifecycle-publication-brief.md`
 - `WIKI-MD-DOCUMENTATION-CURATOR-PUBLICATION-PROCESS-PUBLICATION-BRIEF` `wiki/markdown/md-documentation-curator-publication-process-publication-brief.md`

@@ -10,6 +10,7 @@ research relay and supplies the required goal:
 
 ```yaml
 goal: <nonblank exact research objective>
+reasoning_effort: <optional current task-tool reasoning value; default max>
 scope:
   mode: single_objective | multi_step
   included_work_items: <exact immutable work-item list>
@@ -54,7 +55,7 @@ The goal record is orchestration state only. It cannot choose an AgentJob,
 change tracked research-control state, prove scientific completion, weaken a
 human gate, or promote any claim. `continue-research` remains the one-packet
 research authority. `improve-project-system` remains the one-packet
-project-system repair authority. A v3 generation route chooses between those
+project-system repair authority. A v4 generation route chooses between those
 two existing skills without expanding either skill's authority.
 
 ## Repository Binding Profiles
@@ -93,15 +94,40 @@ a different root or a branch outside `codex/*`. Under both profiles reject
 `main`, a managed-per-step worktree, an ambiguous saved project, or a non-local
 mode.
 
+## Mandatory Pre-Launch Acceptance Loop
+
+Before capability preflight or any state creation, maintain two in-memory
+candidates: the exact understood goal and the selected reasoning effort.
+Omission of `reasoning_effort` selects `max`. Then:
+
+1. restate the complete understood goal without silently narrowing or
+   broadening it;
+2. display the separate exact line `reasoning_effort: "<value>"`;
+3. request one combined confirmation of both the goal and reasoning effort;
+4. treat only an unambiguous combined acceptance as confirmation;
+5. when the user edits only the goal, preserve the previously selected
+   reasoning effort; when the user edits only the effort, preserve the goal;
+   when the user edits both simultaneously, replace both candidates;
+6. after any goal or effort change, restart the loop and display both values
+   again; and
+7. treat ambiguous approval, partial approval, or silence as no acceptance and
+   create no state.
+
+Do not call `initialize`, reserve a successor, create a task, or write a goal
+record until this loop has one unambiguous combined acceptance. The accepted
+effort is immutable after initialization. A later effort change requires a new
+goal launch.
+
 ## Required Capability Preflight
 
 Before writing any goal state:
 
-1. discover the current `list_projects` and `create_thread` tool contracts;
+1. discover the current `list_projects`, `create_thread`, and `node_repl`
+   contracts;
 2. confirm that exactly one saved local project resolves to the selected
    profile root;
 3. confirm that a fresh project task can be requested with local environment
-   mode and an initial textual prompt;
+   mode, an initial textual prompt, and explicit `thinking`;
 4. inspect Git root, common directory, branch, HEAD, and porcelain status;
 5. inspect `research_control/program_state.yaml`, the latest tracked handoff,
    relevant registries, and the current `continue_research.py` boundary;
@@ -110,6 +136,23 @@ Before writing any goal state:
    and the global lease are ignored and untracked; and
 8. confirm that no goal record or global relay lease authorizes another active
    conforming relay.
+
+After combined acceptance and before `initialize`, read
+`nodeRepl.requestMeta["x-codex-turn-metadata"]` from the current task. Require
+nonblank `model` and `reasoning_effort` metadata. Confirm that:
+
+- the accepted effort is a member of the current `create_thread.thinking`
+  enum;
+- the discovered `create_thread` contract lists that effort as supported by
+  the active metadata model; and
+- current-task `reasoning_effort` exactly equals the accepted effort.
+
+Missing metadata, an unsupported effort, absent `thinking` support, or a
+current-task mismatch stops before goal initialization. On mismatch, tell the
+user to change the Codex UI reasoning setting and then restart the combined
+acceptance loop. Never change global Codex configuration, send a message to
+the current task itself, silently downgrade the effort, substitute another
+model, or infer support from a different model.
 
 If capability discovery or any repository identity is absent, ambiguous, or
 incompatible, stop before goal creation. Do not substitute a fork, follow-up,
@@ -140,14 +183,21 @@ multi-step scope is not explicit in the original user request. The original
 goal, original completion contract, scope contract, scheduling guards, fixed
 guards, and repository binding are immutable.
 
-New records use `continue-research-goal.v3`. Omitted
+New records use `continue-research-goal.v4`. Omitted
 `max_continue_passes` and `deadline_at` values are persisted independently as
 JSON `null`; each `null` disables only its corresponding count or elapsed-time
 stop. Continue recording `passes_consumed` even when the pass horizon is
 unlimited. The helper retains byte-compatible read and validation behavior for
-v1 and v2 records. It never migrates, rewrites, or automatically resumes them.
+v1 through v3 records. It never migrates, rewrites, or automatically resumes
+them.
 
-Every v3 generation has one immutable route containing the worker skill,
+Every v4 record contains one immutable, hash-bound `discussion_contract`
+containing the accepted goal hash, accepted reasoning effort, and
+`combined_goal_and_reasoning_effort_confirmed` confirmation marker. The
+contract hash is initialization evidence and summary evidence. It is not
+amendable.
+
+Every v4 generation has one immutable route containing the worker skill,
 reason and strategy identifiers, source generation, included work-item ID,
 canonical blocker fingerprint, evidence hashes, and any exact dirty-state
 manifest. The initial route is `continue-research`; later routes are approved
@@ -175,7 +225,7 @@ stop_on_capability_loss: true
 stop_on_branch_or_repository_mismatch: true
 ```
 
-For v3, a validation, checkpoint, dirty-state, no-progress, or repeated-state
+For v4, a validation, checkpoint, dirty-state, no-progress, or repeated-state
 finding does not itself force terminalization. The generation must first select
 a distinct safe authorized recovery strategy when one exists. A non-success
 terminal is lawful only when the user cancels, a finite guard is reached, or
@@ -195,9 +245,9 @@ subcommand. The helper provides exclusive initialization, schema/hash/journal
 validation, compare-and-swap revisions, per-goal and worktree-global lease
 parity, successor reservation, idempotent successor-ID recording, generation
 claims, pre-execution consumption, receipt finalization, terminalization, and
-explicit recovery. V3 additionally provides:
+explicit recovery. V4 additionally provides:
 
-- `initialize --scope-contract-json`;
+- `initialize --scope-contract-json --reasoning-effort`;
 - `record-recovery-required --recovery-plan-json`;
 - route-aware `reserve-successor`;
 - worker-skill and exact repair-manifest checks in `consume` and `returned`;
@@ -218,18 +268,21 @@ operation consumes no pass.
 
 ## Launcher Workflow
 
-After all preflight checks pass:
+After combined acceptance and all preflight checks pass:
 
 1. call helper `initialize` exactly once with the exact goal, completion
-   contract, scope-contract JSON, optional scheduling guards, fixed guards,
-   repository binding, and initial canonical fingerprint; the helper writes the
+   contract, scope-contract JSON, required `--reasoning-effort`, optional
+   scheduling guards, fixed guards, repository binding, and initial canonical
+   fingerprint; the helper writes the accepted discussion contract and
    approved generation-1 `continue-research` route;
 2. retain the returned absolute `goal_file`, `goal_id`, revision, and launcher
    lease evidence;
 3. call helper `reserve-successor` once for generation 1, creating one random
    handoff token and deterministic idempotency key `<goal_id>:1`;
-4. call `create_thread` exactly once against the uniquely resolved saved
-   project in local mode with the prompt below;
+4. call
+   `create_thread(..., thinking=<persisted discussion_contract reasoning_effort>)`
+   exactly once against the uniquely resolved saved project in local mode with
+   the prompt below; omit the `model` argument;
 5. if a concrete thread ID returns, call helper `record-successor` only; this
    idempotent operation records the ID, moves to `successor_created`, and
    transfers both cooperative leases to the reserved successor token;
@@ -291,9 +344,9 @@ authorized only to poll until the handoff is recorded and its atomic claim
 wins.
 
 Report the goal path and ID, immutable goal hash, generation, successor task
-ID, scope-contract hash, generation route hash, repository root/branch/HEAD,
-initial fingerprint, helper revision, and launcher stop reason. Worker prose is
-telemetry only.
+ID, discussion-contract hash, accepted reasoning effort, scope-contract hash,
+generation route hash, repository root/branch/HEAD, initial fingerprint,
+helper revision, and launcher stop reason. Worker prose is telemetry only.
 
 ## Forbidden Actions
 
@@ -312,3 +365,6 @@ telemetry only.
 - Never register, checkpoint, promote, or generate wiki artifacts from runtime
   goal files.
 - Never omit, infer away, or broaden the immutable scope contract.
+- Never omit `thinking`, rely on default inheritance, change global Codex
+  configuration, self-message, silently downgrade reasoning effort, or pass a
+  substitute `model`.

@@ -6,16 +6,20 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `aa7268089454e9ed8a18c8de10c9a610918224675efd82013cd19d0e26558719`
-- Generated-at source timestamp: `2026-07-18T14:42:41Z`
-- Row count: `967`
-- Issue count: `298`
+- Source fingerprint: `b16d9997e7de35c242e11cf895a836c3d1a5cec7c4d260605bb8c18d6dae873d`
+- Generated-at source timestamp: `2026-07-18T23:18:36Z`
+- Row count: `971`
+- Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
 ## Task Rows
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260718-013|RT-20260718-012|2026-07-18T23:18:36Z|2026-07-18T23:18:36Z|continue_research_goal_v4_reasoning_effort_contract|completed|none|Project-system relay-governance implementation only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|3|No further action is required for this bounded implementation; any live relay requires a separate explicit launch and combined acceptance.|PASS|research_control/tasks/RT-20260718-013/jobs/completions/AJC-AJ-RT-20260718-013-001.yaml|
+|RT-20260718-012|RT-20260718-011|2026-07-18T21:44:28Z|2026-07-18T21:44:28Z|v20_autonomous_goal_relay_v3_policy|completed|none|Project-system relay-governance implementation only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|5|P0-T04 remains outside this single-objective transaction and may begin only through a new explicit user-authorized goal.|PASS|research_control/tasks/RT-20260718-012/jobs/completions/AJC-AJ-RT-20260718-012-001.yaml|
+|RT-20260718-011|RT-20260718-010|2026-07-18T20:18:11Z|2026-07-18T20:18:11Z|v20_recommendation_backlog_materialization|completed|none|Project-system backlog materialization only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|4|Start a new explicitly authorized v20 P0-T03 goal relay; do not reuse this P0-T02 relay.|PASS|research_control/tasks/RT-20260718-011/jobs/completions/AJC-AJ-RT-20260718-011-001.yaml|
+|RT-20260718-010|RT-20260718-008|2026-07-18T16:04:54Z|2026-07-18T16:04:54Z|v20_plan_registration|completed|none|Project-system plan registration only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|4|Start a new explicitly authorized v20 P0-T02 goal relay to materialize the typed recommendation backlog and dependency DAG.|PASS|research_control/tasks/RT-20260718-010/jobs/completions/AJC-AJ-RT-20260718-010-001.yaml|
 |RT-20260718-009|RT-20260715-013|2026-07-18T14:42:41Z|2026-07-18T15:12:11Z|continue_research_goal_unlimited_default_scheduling_guards|completed|none|Project-system relay scheduling contract only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|1|No successor task is required. Preserve the validated staged transaction without commit push relay launch or branch change.|PASS|research_control/tasks/RT-20260718-009/jobs/completions/AJC-AJ-RT-20260718-009-001.yaml|
 |RT-20260718-008|RT-20260718-007|2026-07-18T05:46:18Z|2026-07-18T05:46:18Z|planner_authoritative_hosted_ci_and_default_cutover_evidence|completed|none|Project-system hosted-CI authority evidence only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|5|Await explicit user authority to publish the exact branch checkpoint; only then obtain matched hosted-CI and scheduled-full evidence before reconsidering P11-T04 cutover. P11-T05 remains blocked.|PASS|research_control/tasks/RT-20260718-008/jobs/completions/AJC-AJ-RT-20260718-008-001.yaml|
 |RT-20260718-007|RT-20260718-006|2026-07-18T04:14:30Z|2026-07-18T05:13:50Z|planner_authoritative_execution_binding_repair|completed|none|Project-system validation-orchestration repair only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|3|After governed checkpoint PASS route one separately bounded P11-T04 hosted-CI and default-cutover evidence packet; P11-T05 remains blocked.|PASS|research_control/tasks/RT-20260718-007/jobs/completions/AJC-AJ-RT-20260718-007-001.yaml|
@@ -1285,4 +1289,3 @@ Generated navigation support only. This index is not task authority, physics pro
 |missing_field|RT-20260702-053|research_control/tasks/RT-20260702-053/00_TASK.yaml|milestone_burden is missing|
 |missing_field|RT-20260702-054|research_control/tasks/RT-20260702-054/00_TASK.yaml|milestone_burden is missing|
 |missing_field|RT-20260702-055|research_control/tasks/RT-20260702-055/00_TASK.yaml|milestone_burden is missing|
-|malformed_yaml||research_control/tasks/RT-20260718-009/jobs/completions/AJC-AJ-RT-20260718-009-001.yaml|line 54: null values are not allowed|

@@ -1,6 +1,6 @@
 <!-- authority: control -->
 
-# Continue-Research Goal Record Schema v3
+# Continue-Research Goal Record Schema v4
 
 ## Purpose and Authority
 
@@ -20,11 +20,12 @@ and mutate only the ignored state described here. It has no authority to call
 task tools, invoke research, select an AgentJob, edit tracked research state,
 commit, push, merge, or decide whether a scientific goal is complete.
 
-New launcher records use `continue-research-goal.v3`. The helper also reads and
-validates retained `continue-research-goal.v1` and
-`continue-research-goal.v2` records under their original serialization,
-guard, journal, and amendment-hash semantics. It does not migrate, rewrite,
-normalize, automatically resume, or mutate a retained v1/v2 file.
+New launcher records use `continue-research-goal.v4`. The helper also reads and
+validates retained `continue-research-goal.v1`,
+`continue-research-goal.v2`, and `continue-research-goal.v3` records under
+their original serialization, guard, journal, and amendment-hash semantics.
+It does not migrate, rewrite, normalize, automatically resume, or mutate a
+retained v1-v3 file.
 
 ## Filesystem Boundary
 
@@ -78,10 +79,15 @@ newline. `goal_sha256` hashes those exact UTF-8 bytes. The frontmatter
 ## Required Record
 
 ```yaml
-schema_version: "continue-research-goal.v3"
+schema_version: "continue-research-goal.v4"
 goal_id: "crg-<YYYYMMDDTHHMMSSZ>-<random lowercase hex>"
 goal_text: "<exact canonical user text>"
 goal_sha256: "<sha256>"
+discussion_contract:
+  accepted_goal_sha256: "<same exact goal_sha256>"
+  reasoning_effort: "none | minimal | low | medium | high | xhigh | max | ultra"
+  confirmation_marker: "combined_goal_and_reasoning_effort_confirmed"
+discussion_contract_sha256: "<canonical JSON sha256>"
 completion_contract:
   interpretation: "<operational interpretation>"
   required_evidence:
@@ -160,7 +166,7 @@ dirty-state manifests, standardized work results, recovery-ledger entries, and
 human-intervention records. It may add fail-closed record-level diagnostic
 fields. It may not omit or weaken the semantics above.
 
-For v3, JSON `null` independently means no pass-count horizon or no deadline
+For v4, JSON `null` independently means no pass-count horizon or no deadline
 horizon. Omitted launcher inputs are serialized as `null`. A finite
 `deadline_at` is an absolute timezone-aware input normalized to canonical UTC
 `Z`; initialization rejects invalid, naive, or non-future values. The
@@ -176,7 +182,7 @@ or any other terminal condition. `state.passes_consumed` continues to count
 authorized invocations when the pass horizon is unlimited.
 
 Retained v1 records require a finite positive `max_continue_passes` and finite
-`deadline_at`. Retained v2 records preserve their nullable scheduling
+`deadline_at`. Retained v2 and v3 records preserve their nullable scheduling
 semantics. Their original records, serialization, amendment hash basis, and
 extension behavior remain readable and valid without mutation or resumption.
 
@@ -185,6 +191,7 @@ extension behavior remain readable and valid without mutation or resumption.
 The following original values never change in place:
 
 - `goal_text` and `goal_sha256`;
+- `discussion_contract` and `discussion_contract_sha256`;
 - `completion_contract` and `completion_contract_sha256`;
 - `deadline_at`;
 - `guards`;
@@ -203,7 +210,7 @@ new_sha256: "<effective-value hash>"
 ```
 
 Contract amendments replace only the effective completion contract. For v2
-and v3,
+through v4,
 guard amendments may only raise a finite `max_continue_passes` or
 `deadline_at`, or change either finite value to JSON `null`. An unlimited
 guard cannot be tightened to a finite value or amended with a no-op `null`.
@@ -213,9 +220,39 @@ their original finite-extension behavior. No guard amendment can weaken
 human-gate, validation, authority, identity, duplicate, concurrency, lease,
 or branch stops. Changing the goal itself always requires a new goal record.
 
-For v3, the `scope_contract`, its hash, and every included work item,
+For v4, the `scope_contract`, its hash, and every included work item,
 dependency, exclusion, and source hash are never amendable. A different scope
 always requires a new goal.
+
+## Immutable Discussion Contract
+
+Before initialization, the launcher restates the exact understood goal,
+displays `reasoning_effort: "<value>"`, and obtains one unambiguous combined
+acceptance. Omitted effort defaults to `max`. A goal-only edit preserves the
+selected effort, an effort-only edit preserves the goal, a simultaneous edit
+replaces both, and every edit restarts combined acceptance. Ambiguous or
+partial approval creates no record.
+
+Accepted values are limited first to the current task-tool reasoning enum and
+then to values supported by the active metadata model. Before initialization,
+the launcher reads the current task's actual `model` and `reasoning_effort`
+metadata and proves exact equality with the accepted effort. It may not change
+global configuration, self-message, silently downgrade, or substitute another
+model.
+
+The immutable contract is exactly:
+
+```yaml
+accepted_goal_sha256: "<same exact goal_sha256>"
+reasoning_effort: "<accepted current task-tool value>"
+confirmation_marker: "combined_goal_and_reasoning_effort_confirmed"
+```
+
+Its canonical JSON hash is `discussion_contract_sha256`. The initialized
+journal event includes that hash, the generation-1 route evidence hashes bind
+it, and read-only summaries include the contract hash and reasoning effort.
+No amendment operation may modify the discussion contract. Changing the
+accepted effort requires a new goal launch.
 
 ## Immutable Scope Contract
 
@@ -234,7 +271,7 @@ block an independent included item.
 
 ## Immutable Generation Route
 
-Every v3 generation copies one already-approved route:
+Every v4 generation copies one already-approved route:
 
 ```yaml
 worker_skill: "continue-research | improve-project-system"
@@ -520,7 +557,7 @@ uses `unknown` and stops.
 
 ## Autonomous Route and Deterministic Stop Mapping
 
-For v3, the mapping below is a terminal mapping only after the worker proves
+For v4, the mapping below is a terminal mapping only after the worker proves
 that no distinct safe authorized route remains, or when the condition is
 intrinsically protected. Validation, checkpoint, dirty-state, no-progress,
 indeterminate, repeated-state, and missing-datum findings first select a
@@ -544,7 +581,7 @@ explicit cancellation                         -> terminal_cancelled
 
 A guard or protected stop is never relabeled as successful completion.
 
-Every non-success v3 terminal requires:
+Every non-success v4 terminal requires:
 
 ```yaml
 required_action: "<smallest exact human action>"
@@ -647,8 +684,11 @@ subcommands are `begin-recovery`, `amend-contract`, `amend-guards`, and
 abandoned or consumed crash reconciliation.
 
 `initialize` requires `--goal-text`, completion-contract JSON,
-`--scope-contract-json`, repository-binding JSON, and an initial fingerprint.
-`--max-continue-passes` and `--deadline-at` are optional.
+`--scope-contract-json`, `--reasoning-effort`, repository-binding JSON, and an
+initial fingerprint. The helper rejects reasoning values outside the current
+task-tool enum; the launcher separately verifies active-model support and
+current-task metadata before calling it. `--max-continue-passes` and
+`--deadline-at` are optional.
 `--max-elapsed-minutes` is an optional compatibility alias and is mutually
 exclusive with `--deadline-at`.
 

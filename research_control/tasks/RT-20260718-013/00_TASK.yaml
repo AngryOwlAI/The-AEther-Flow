@@ -1,0 +1,39 @@
+task_id: "RT-20260718-013"
+task_type: "continue_research_goal_v4_reasoning_effort_contract"
+status: "completed"
+created_at: "2026-07-18T23:18:36Z"
+updated_at: "2026-07-18T23:18:36Z"
+closed_at: "2026-07-18T23:18:36Z"
+closure_status: "continue_research_goal_v4_reasoning_effort_contract_pass_no_physics_delta"
+parent_task_id: "RT-20260718-012"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260718-013"
+current_job_id: "AJ-RT-20260718-013-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260718-013"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested implementation of the Confirm and Pin Relay Reasoning Effort plan, including a new bounded Project-Control Maintainer transaction, v4 policy receipt, full validation, and a governed checkpoint without a live relay or push."
+objective: "Implement and validate continue-research-goal.v4 with combined goal-and-reasoning acceptance, exact current-task metadata verification, an immutable hash-bound discussion contract, and explicit create_thread thinking pinning for every relay task."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system relay-governance implementation only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_user_plan: true
+claim_boundary_id: "CB-CONTINUE-RESEARCH-GOAL-V4-REASONING-EFFORT-001"
+claim_boundary:
+  allowed_scope: "Modify the two relay skills, goal schema/helper, focused tests, and one bounded v4 policy transaction needed to implement the exact user-authorized reasoning-effort contract."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  completed_v3_transaction_preserved: true
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260718-013/artifacts/continue_research_goal_v4_reasoning_effort_policy.md"
+  - "research_control/tasks/RT-20260718-013/artifacts/continue_research_goal_v4_policy_validation.json"
+  - "research_control/tasks/RT-20260718-013/artifacts/validate_continue_research_goal_v4_policy.py"
+next_recommended_action: "No further action is required for this bounded implementation; any live relay requires a separate explicit launch and combined acceptance."
+documentation_impact_id: "DI-RT-20260718-013-001"
+completion_id: "AJC-AJ-RT-20260718-013-001"
+notes: "The transaction changes project-control relay behavior only. It does not modify program_state, ordinary handoffs, completed RT-20260718-012 artifacts, canonical science, or protected authority."

@@ -1,0 +1,231 @@
+completion_id: "AJC-AJ-RT-20260718-013-001"
+job_id: "AJ-RT-20260718-013-001"
+task_id: "RT-20260718-013"
+decision_id: "DDR-20260718-013"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260718-013"
+status: "completed"
+created_at: "2026-07-18T23:18:36Z"
+started_at: "2026-07-18T23:18:36Z"
+completed_at: "2026-07-18T23:18:36Z"
+objective: "Implement and validate the bounded continue-research-goal.v4 reasoning-effort contract without creating a live relay or changing research or scientific authority."
+completion_summary: "Continue-research-goal.v4 now requires combined goal-and-reasoning acceptance, exact active-model and current-task metadata verification, an immutable hash-bound discussion contract, pre-claim worker verification, pre-reservation create_thread rediscovery, and explicit thinking pinning with the model argument omitted."
+request_receipt:
+  request_kind: "direct_user_authorized_implementation_plan"
+  task_metadata_model: "gpt-5.6-sol"
+  task_metadata_reasoning_effort: "max"
+  create_thread_thinking_supported: true
+  active_model_supports_selected_effort: true
+  runtime_goal_record_created: false
+  live_relay_task_created: false
+  rationale: "This bounded AgentJob implements and validates the relay launcher itself; verification does not launch that runtime."
+transaction_status: "completed"
+result_disposition: "implemented"
+epistemic_status: "verified_project_control_runtime_contract"
+burden_effect: "no_distance_delta"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "continue_research_goal_v4_reasoning_effort"
+project_system_boundary_authorized_by_user_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Relay-governance implementation is project-control work and discharges no scientific burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+outputs_created:
+  - "research_control/tasks/RT-20260718-013/artifacts/continue_research_goal_v4_reasoning_effort_policy.md"
+  - "research_control/tasks/RT-20260718-013/artifacts/continue_research_goal_v4_policy_validation.json"
+  - "research_control/tasks/RT-20260718-013/artifacts/validate_continue_research_goal_v4_policy.py"
+  - "research_control/tasks/RT-20260718-013/00_TASK.yaml"
+  - "research_control/tasks/RT-20260718-013/DDR-20260718-013.md"
+  - "research_control/tasks/RT-20260718-013/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-013/jobs/AJ-RT-20260718-013-001.yaml"
+  - "research_control/tasks/RT-20260718-013/jobs/completions/AJC-AJ-RT-20260718-013-001.yaml"
+  - "research_control/tasks/RT-20260718-013/roles/project-control-maintainer@0.2.0--RT-20260718-013.yaml"
+outputs_updated:
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-goal/scripts/goal_state.py"
+  - "tests/test_continue_research_goal_state.py"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "output/research_dependency_graph.dot"
+  - "output/research_dependency_graph.json"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+artifact_evidence:
+  policy:
+    path: "research_control/tasks/RT-20260718-013/artifacts/continue_research_goal_v4_reasoning_effort_policy.md"
+    sha256: "6b7628361c3b8d1349ac34ae3fbe5fe0d738a8e2bbfaf9cbfd24d5875ba126a8"
+  validation:
+    path: "research_control/tasks/RT-20260718-013/artifacts/continue_research_goal_v4_policy_validation.json"
+    sha256: "2d15c618ccb1e039c952650a1d6b806ec893cc6f9a41780c7b7cf6282cfe1fae"
+  validator:
+    path: "research_control/tasks/RT-20260718-013/artifacts/validate_continue_research_goal_v4_policy.py"
+    sha256: "29926a34316d9779242bd4b19afd646a219449ee7aa90980374c59bb8e2112ad"
+  completed_v3_tree:
+    path: "research_control/tasks/RT-20260718-012"
+    sha256: "4a70356a7fbb89e32847fdaae111ad7a8ae33c1eb235f311c996070334baf526"
+runtime_contract_evidence:
+  schema_version: "continue-research-goal.v4"
+  retained_schema_versions:
+    - "continue-research-goal.v1"
+    - "continue-research-goal.v2"
+    - "continue-research-goal.v3"
+  accepted_reasoning_efforts:
+    - "none"
+    - "minimal"
+    - "low"
+    - "medium"
+    - "high"
+    - "xhigh"
+    - "max"
+    - "ultra"
+  default_reasoning_effort: "max"
+  confirmation_marker: "combined_goal_and_reasoning_effort_confirmed"
+  focused_test_count: 63
+  focused_expected_skip_count: 1
+  policy_check_count: 7
+command_results:
+  - ".venv/bin/python -m unittest tests.test_continue_research_goal_state | exit_code=0 | 63 tests PASS 1 expected skip"
+  - ".venv/bin/python research_control/tasks/RT-20260718-013/artifacts/validate_continue_research_goal_v4_policy.py --write --json | exit_code=0 | PASS 7 checks completed v3 tree unchanged"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | 1001 tests PASS 1 expected skip"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths ... --explain | exit_code=0 | requested affected effective full 26 gates selected under legacy authority"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json | exit_code=0 | local full profile and legacy-authoritative execution PASS; remote CI equivalence not claimed"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | memory profile PASS and generated derivatives synchronized"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS findings=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS hard errors=0"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The starting branch was codex/v20-implementation at d0716fd9a88c18e391ca83a10f8e156b674ef912 with a clean worktree and no active relay lease."
+      - "Current task metadata was gpt-5.6-sol with reasoning_effort max and live create_thread discovery confirmed explicit thinking support."
+  baseline:
+    status: "PASS"
+    evidence:
+      - "The focused pre-change suite passed 55 tests with one expected skip."
+      - "Completed RT-20260718-012 artifacts and tree hashes were captured before implementation."
+  focused_state_machine:
+    status: "PASS"
+    evidence:
+      - "63 focused tests pass with one expected skip."
+      - "V4 coverage includes max and alternate effort serialization required CLI input summary output retained v1-v3 behavior discussion tamper rejection and static skill ordering."
+  task_local_policy:
+    status: "PASS"
+    evidence:
+      - "Seven policy checks verify the v4 enum discussion contract combined acceptance worker pinning test coverage and preserved v3 research-control state."
+      - "The completed RT-20260718-012 tree remains unchanged."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The completion names one bounded AgentJob no-distance delta no live relay and the exact preserved authority boundary."
+      - "Recorded artifact hashes agree with the task-local validator."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Documentation-impact and research-control diff validation pass."
+      - "Changed-source claim-language validation has no hard failures."
+      - "The first full-profile attempt exposed an incomplete generated-derivative receipt; live classifier reconciliation repaired the complete set before the passing rerun."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks pass after registered-source updates."
+      - "Generated skill schema policy wiki notes indexes master registries and folder map are synchronized."
+  repository_test_suite:
+    status: "PASS"
+    evidence:
+      - "The complete repository unit suite passes 1001 tests with one expected skip after derivative synchronization."
+      - "The affected request resolved to the full 26-gate selection and the local legacy-authoritative full runner passes."
+      - "The full-runner receipt is explicitly not remote-CI equivalent during the current shadow-planner epoch; no remote CI result is claimed."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "The governed checkpoint will record the exact transaction without push."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The governed memory bootstrap regenerates the four affected wiki notes and registry derivatives."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source validation has zero hard failures; historical warnings remain advisory."
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The user directly authorized the bounded project-system contract change; focused and policy validation found no separate unresolved repair signal."
+preserved_state:
+  program_state_changed: false
+  ordinary_research_handoff: "handoff-0740"
+  ordinary_research_route: "EqSrc_family_closure_repair_or_stress"
+  completed_v3_transaction_changed: false
+  live_relay_created: false
+  global_codex_configuration_changed: false
+  distance_to_gr_changed: false
+forbidden_conclusion_summary: "Relay v4 implementation and validation do not prove physics authorize scientific promotion create a live relay change global Codex configuration modify program state resume retained goal records mutate completed v3 artifacts push publish deploy or alter external systems."
+verdict: "continue_research_goal_v4_reasoning_effort_contract_pass_no_physics_delta"
+coherent_resolution_summary: "RT-20260718-013 synchronizes launcher worker schema helper tests and policy at v4 pins accepted reasoning through explicit thinking retains v1-v3 as read-only history preserves completed v3 and research state and changes no physics authority."
+next_recommendation: "No further action is needed for this implementation; any live relay requires a separate explicit launch and combined acceptance."
+rollback_or_repair_notes: "If final validation fails repair only the v4 runtime test policy transaction and generated derivatives; do not alter RT-20260718-012 handoff-0740 program_state or science."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 821
+    relationship_row_count: 4085
+    semantic_row_count: 821
+    vault_row_count: 821
+    local_cache_only_warning_count: 4
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup .codex/skills/continue-research-goal/SKILL.md --json"
+      query_type: "lookup"
+      query_text: ".codex/skills/continue-research-goal/SKILL.md"
+      returned_object_ids:
+        - "MD-SKILL-CONTINUE-RESEARCH-GOAL"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md"
+      returned_object_ids:
+        - "MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3"
+  canonical_inspections:
+    - object_id: "MD-SKILL-CONTINUE-RESEARCH-GOAL"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/continue-research-goal/SKILL.md"
+      source_hash: "782bc3f96d22c3486368505ac11406cab88ed675bfd1b8be01f14dd828a690c2"
+    - object_id: "MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md"
+      source_hash: "18c4cfe125883dc84da84156e0337a58720eab9c9c471d635fb5b01fc739e858"
+  authority_note: "Generated Obsidian and .local retrieval surfaces are navigation layers only and are not authority."
+validation_status: "PASS"

@@ -26,16 +26,38 @@ from typing import Any, Dict, Iterable, Iterator, Mapping, MutableMapping, Optio
 
 LEGACY_SCHEMA_VERSION = "continue-research-goal.v1"
 RETAINED_SCHEMA_VERSION = "continue-research-goal.v2"
-SCHEMA_VERSION = "continue-research-goal.v3"
-SUPPORTED_SCHEMA_VERSIONS = {
+AUTONOMOUS_SCHEMA_VERSION = "continue-research-goal.v3"
+SCHEMA_VERSION = "continue-research-goal.v4"
+RETAINED_SCHEMA_VERSIONS = {
     LEGACY_SCHEMA_VERSION,
     RETAINED_SCHEMA_VERSION,
+    AUTONOMOUS_SCHEMA_VERSION,
+}
+STRUCTURED_SCHEMA_VERSIONS = {
+    AUTONOMOUS_SCHEMA_VERSION,
     SCHEMA_VERSION,
 }
+NULLABLE_GUARD_SCHEMA_VERSIONS = {
+    RETAINED_SCHEMA_VERSION,
+    AUTONOMOUS_SCHEMA_VERSION,
+    SCHEMA_VERSION,
+}
+SUPPORTED_SCHEMA_VERSIONS = RETAINED_SCHEMA_VERSIONS | {SCHEMA_VERSION}
 LEASE_SCHEMA_VERSION = "continue-research-goal-worktree-lease.v1"
 EXECUTION_PROFILES = {"acceptance_test", "production_profile"}
 WORKER_SKILLS = {"continue-research", "improve-project-system"}
 SCOPE_MODES = {"single_objective", "multi_step"}
+REASONING_EFFORTS = {
+    "none",
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+    "ultra",
+}
+DISCUSSION_CONFIRMATION_MARKER = "combined_goal_and_reasoning_effort_confirmed"
 WORK_ITEM_STATUSES = {
     "completed",
     "in_progress",
@@ -225,6 +247,51 @@ def _require_sha256(value: Any, field: str) -> str:
     if not isinstance(value, str) or not SHA256_RE.fullmatch(value):
         raise ValidationError(f"{field} must be a lowercase SHA-256")
     return value
+
+
+def validate_reasoning_effort(value: Any) -> str:
+    if not isinstance(value, str) or value not in REASONING_EFFORTS:
+        raise ValidationError("reasoning_effort is not in the current task-tool reasoning enum")
+    return value
+
+
+def build_discussion_contract(
+    *,
+    accepted_goal_sha256: str,
+    reasoning_effort: str,
+) -> Dict[str, Any]:
+    contract = {
+        "accepted_goal_sha256": _require_sha256(
+            accepted_goal_sha256,
+            "discussion-contract accepted goal hash",
+        ),
+        "reasoning_effort": validate_reasoning_effort(reasoning_effort),
+        "confirmation_marker": DISCUSSION_CONFIRMATION_MARKER,
+    }
+    return contract
+
+
+def validate_discussion_contract(
+    discussion_contract: Mapping[str, Any],
+    *,
+    goal_sha256: str,
+) -> None:
+    required = {
+        "accepted_goal_sha256",
+        "reasoning_effort",
+        "confirmation_marker",
+    }
+    if not isinstance(discussion_contract, Mapping) or set(discussion_contract) != required:
+        raise ValidationError("discussion_contract fields are incomplete or unexpected")
+    if discussion_contract["accepted_goal_sha256"] != goal_sha256:
+        raise ValidationError("discussion contract does not bind the accepted goal hash")
+    _require_sha256(
+        discussion_contract["accepted_goal_sha256"],
+        "discussion-contract accepted goal hash",
+    )
+    validate_reasoning_effort(discussion_contract["reasoning_effort"])
+    if discussion_contract["confirmation_marker"] != DISCUSSION_CONFIRMATION_MARKER:
+        raise ValidationError("discussion contract confirmation marker is invalid")
 
 
 def _scope_item_map(scope_contract: Mapping[str, Any]) -> Dict[str, Mapping[str, Any]]:
@@ -644,7 +711,7 @@ def effective_completion_contract(record: Mapping[str, Any]) -> Mapping[str, Any
 
 def _initial_effective_guards(record: Mapping[str, Any]) -> Dict[str, Any]:
     value = copy.deepcopy(record["guards"])
-    if record.get("schema_version") in {RETAINED_SCHEMA_VERSION, SCHEMA_VERSION}:
+    if record.get("schema_version") in NULLABLE_GUARD_SCHEMA_VERSIONS:
         value["deadline_at"] = record["deadline_at"]
     return value
 
@@ -778,8 +845,8 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
     schema_version = record["schema_version"]
     if schema_version not in SUPPORTED_SCHEMA_VERSIONS:
         raise ValidationError("unsupported goal schema version")
-    if schema_version == SCHEMA_VERSION:
-        v3_required = {
+    if schema_version in STRUCTURED_SCHEMA_VERSIONS:
+        structured_required = {
             "scope_contract",
             "scope_contract_sha256",
             "recovery_ledger",
@@ -788,12 +855,22 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
             "human_intervention_summary",
             "human_intervention_summary_sha256",
         }
-        v3_missing = sorted(v3_required - set(record))
-        if v3_missing:
-            raise ValidationError(f"v3 goal record missing fields: {', '.join(v3_missing)}")
+        structured_missing = sorted(structured_required - set(record))
+        if structured_missing:
+            raise ValidationError(
+                f"structured goal record missing fields: {', '.join(structured_missing)}"
+            )
         validate_scope_contract(record["scope_contract"])
         if sha256_json(record["scope_contract"]) != record["scope_contract_sha256"]:
             raise ValidationError("scope-contract hash mismatch")
+    if schema_version == SCHEMA_VERSION:
+        v4_required = {
+            "discussion_contract",
+            "discussion_contract_sha256",
+        }
+        v4_missing = sorted(v4_required - set(record))
+        if v4_missing:
+            raise ValidationError(f"v4 goal record missing fields: {', '.join(v4_missing)}")
     if not GOAL_ID_RE.fullmatch(str(record["goal_id"])):
         raise ValidationError("invalid goal_id")
     if expected_path is not None and expected_path.name != f"goal-{record['goal_id']}.md":
@@ -802,6 +879,13 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
         raise ValidationError("goal text contains noncanonical line endings")
     if goal_text_sha256(record["goal_text"]) != record["goal_sha256"]:
         raise ValidationError("goal text hash mismatch")
+    if schema_version == SCHEMA_VERSION:
+        validate_discussion_contract(
+            record["discussion_contract"],
+            goal_sha256=record["goal_sha256"],
+        )
+        if sha256_json(record["discussion_contract"]) != record["discussion_contract_sha256"]:
+            raise ValidationError("discussion-contract hash mismatch")
     if sha256_json(record["completion_contract"]) != record["completion_contract_sha256"]:
         raise ValidationError("original completion-contract hash mismatch")
     created_at = parse_utc(record["created_at"])
@@ -830,7 +914,7 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
     for key in ("max_repeated_state_fingerprints", "max_live_continuations", "handoff_ready_timeout_seconds"):
         if not isinstance(guards.get(key), int) or guards[key] <= 0:
             raise ValidationError(f"guard {key} must be a positive integer")
-    if schema_version == SCHEMA_VERSION:
+    if schema_version in STRUCTURED_SCHEMA_VERSIONS:
         for key in (
             "stop_on_human_gate",
             "stop_on_validation_failure",
@@ -842,7 +926,7 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
             "stop_on_branch_or_repository_mismatch",
         ):
             if guards.get(key) is not True:
-                raise ValidationError(f"v3 fixed guard {key} must remain true")
+                raise ValidationError(f"structured fixed guard {key} must remain true")
     binding = record["repository_binding"]
     for key in ("execution_profile", "root", "branch", "environment_mode", "git_common_dir", "starting_head"):
         if not isinstance(binding.get(key), str) or not binding[key]:
@@ -854,7 +938,7 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
     if binding["branch"] == "main":
         raise ValidationError("main is not an authorized relay branch")
 
-    if schema_version == SCHEMA_VERSION:
+    if schema_version in STRUCTURED_SCHEMA_VERSIONS:
         ledger = record["recovery_ledger"]
         if not isinstance(ledger, list):
             raise ValidationError("recovery_ledger must be a list")
@@ -906,10 +990,10 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
         raise ValidationError("invalid goal evaluation")
     if state["phase"] in ABSORBING_TERMINALS and state.get("active_lease") is not None:
         raise ValidationError("absorbing terminal phase cannot retain a lease")
-    if schema_version == SCHEMA_VERSION:
+    if schema_version in STRUCTURED_SCHEMA_VERSIONS:
         for key in ("approved_route", "approved_route_sha256", "human_intervention"):
             if key not in state:
-                raise ValidationError(f"v3 state missing {key}")
+                raise ValidationError(f"structured state missing {key}")
         approved_route = state["approved_route"]
         approved_route_sha256 = state["approved_route_sha256"]
         if approved_route is None:
@@ -925,11 +1009,14 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
         elif state["phase"] in TERMINAL_PHASES:
             validate_human_intervention(state["human_intervention"], record["recovery_ledger"])
         elif state["human_intervention"] is not None:
-            raise ValidationError("nonterminal v3 state cannot retain human intervention")
+            raise ValidationError("nonterminal structured state cannot retain human intervention")
 
     expected_prior = None
     seen_receipts: Dict[int, str] = {}
     recovery_events: Dict[int, Mapping[str, Any]] = {}
+    if schema_version == SCHEMA_VERSION:
+        if not record["journal"] or record["journal"][0].get("kind") != "initialized":
+            raise ValidationError("v4 journal must begin with initialization evidence")
     for index, entry in enumerate(record["journal"], start=1):
         if entry.get("sequence") != index or entry.get("prior_hash") != expected_prior:
             raise ValidationError("journal sequence or prior hash mismatch")
@@ -942,7 +1029,7 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
             generation = entry["payload"].get("generation")
             if not isinstance(generation, int) or generation in seen_receipts:
                 raise ValidationError("generation has duplicate or invalid finalized receipt")
-            if schema_version == SCHEMA_VERSION:
+            if schema_version in STRUCTURED_SCHEMA_VERSIONS:
                 validate_work_result(entry["payload"].get("work_result"), record["scope_contract"])
             seen_receipts[generation] = expected_hash
         if entry["kind"] in {"recovery_required", "dispatch_recovery_required"}:
@@ -951,7 +1038,7 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
                 raise ValidationError("recovery journal sequence is duplicate or invalid")
             recovery_events[recovery_sequence] = entry["payload"]
 
-    if schema_version == SCHEMA_VERSION:
+    if schema_version in STRUCTURED_SCHEMA_VERSIONS:
         if set(recovery_events) != set(range(1, len(record["recovery_ledger"]) + 1)):
             raise ValidationError("recovery ledger is not fully linked to the journal")
         for recovery in record["recovery_ledger"]:
@@ -985,7 +1072,7 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
             raise ValidationError("finalized receipt hash does not match journal")
         if receipt_hash is None and number in seen_receipts:
             raise ValidationError("journal receipt is not linked from its generation")
-        if schema_version == SCHEMA_VERSION:
+        if schema_version in STRUCTURED_SCHEMA_VERSIONS:
             route = generation.get("route")
             route_sha256 = generation.get("route_sha256")
             validate_route(route, record["scope_contract"])
@@ -995,6 +1082,26 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
                 raise ValidationError("generation route source must precede its generation")
 
     if schema_version == SCHEMA_VERSION:
+        initialization_evidence = record["journal"][0]["payload"]
+        if (
+            initialization_evidence.get("discussion_contract_sha256")
+            != record["discussion_contract_sha256"]
+        ):
+            raise ValidationError("initialization evidence does not bind discussion contract")
+        initial_route = (
+            generations["1"]["route"]
+            if "1" in generations
+            else state["approved_route"]
+        )
+        if initial_route is None or (
+            sha256_json(initial_route)
+            != initialization_evidence.get("initial_route_sha256")
+        ):
+            raise ValidationError("initialization evidence does not bind generation-1 route")
+        if record["discussion_contract_sha256"] not in initial_route["evidence_hashes"]:
+            raise ValidationError("generation-1 route does not bind discussion contract")
+
+    if schema_version in STRUCTURED_SCHEMA_VERSIONS:
         for recovery in record["recovery_ledger"]:
             target = str(recovery["approved_for_generation"])
             if target in generations:
@@ -1012,7 +1119,7 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
         elif amendment.get("kind") == "guards":
             prior = sha256_json(effective_guard_values)
             new_guard_values = amendment.get("new_value", {})
-            if schema_version in {RETAINED_SCHEMA_VERSION, SCHEMA_VERSION}:
+            if schema_version in NULLABLE_GUARD_SCHEMA_VERSIONS:
                 new_guard_values = _validate_v2_guard_extension(
                     effective_guard_values,
                     new_guard_values,
@@ -1030,7 +1137,7 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
             raise ValidationError("amendment lacks exact user authorization")
         parse_utc(amendment.get("created_at"))
 
-    if schema_version == SCHEMA_VERSION:
+    if schema_version in STRUCTURED_SCHEMA_VERSIONS:
         completion_summary = record["completion_summary"]
         completion_summary_sha256 = record["completion_summary_sha256"]
         human_summary = record["human_intervention_summary"]
@@ -1060,7 +1167,7 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
                 human_summary_sha256,
             )
         ):
-            raise ValidationError("nonterminal v3 record cannot retain a terminal summary")
+            raise ValidationError("nonterminal structured record cannot retain a terminal summary")
 
     if rendered_text is not None and render_goal(record) != rendered_text:
         raise ValidationError("Markdown body or serialization drift detected")
@@ -1203,22 +1310,27 @@ class GoalStore:
             for receipt in receipts
             if isinstance(receipt.get("work_result"), Mapping)
         ]
-        if record["schema_version"] == SCHEMA_VERSION:
+        if record["schema_version"] in STRUCTURED_SCHEMA_VERSIONS:
             terminal_summary = (
                 record["completion_summary"]
                 if record["completion_summary"] is not None
                 else record["human_intervention_summary"]
             )
-            reader_report = terminal_summary["reader_report"] if terminal_summary else ""
             scope_contract = copy.deepcopy(record["scope_contract"])
             recovery_ledger = copy.deepcopy(record["recovery_ledger"])
+        else:
+            scope_contract = None
+            recovery_ledger = []
+            terminal_summary = None
+        if record["schema_version"] == SCHEMA_VERSION:
+            reader_report = terminal_summary["reader_report"] if terminal_summary else ""
+            discussion_contract = copy.deepcopy(record["discussion_contract"])
         else:
             reader_report = (
                 f"Retained {record['schema_version']} record; validation and summary only. "
                 "Automatic resumption is disabled."
             )
-            scope_contract = None
-            recovery_ledger = []
+            discussion_contract = None
         return {
             "schema_version": record["schema_version"],
             "goal_id": record["goal_id"],
@@ -1230,6 +1342,13 @@ class GoalStore:
             "passes_consumed": record["state"]["passes_consumed"],
             "effective_completion_contract": copy.deepcopy(effective_completion_contract(record)),
             "effective_guards": effective_guards(record),
+            "discussion_contract": discussion_contract,
+            "discussion_contract_sha256": record.get("discussion_contract_sha256"),
+            "reasoning_effort": (
+                discussion_contract["reasoning_effort"]
+                if discussion_contract is not None
+                else None
+            ),
             "scope_contract": scope_contract,
             "finalized_receipt_count": len(receipts),
             "finalized_receipts": receipts,
@@ -1264,7 +1383,9 @@ class GoalStore:
     def _load_locked(self, path: Path, expected_revision: Optional[int] = None, require_parity: bool = True) -> Dict[str, Any]:
         record = self.read(path)
         if record["schema_version"] != SCHEMA_VERSION:
-            raise StateConflict("retained v1/v2 records are validation-only and cannot be resumed or mutated")
+            raise StateConflict(
+                "retained v1-v3 records are validation-and-summary-only and cannot be resumed or mutated"
+            )
         if expected_revision is not None and record["state"]["revision"] != expected_revision:
             raise StateConflict(
                 f"stale revision: expected {expected_revision}, found {record['state']['revision']}"
@@ -1359,6 +1480,7 @@ class GoalStore:
         goal_text: str,
         completion_contract: Mapping[str, Any],
         scope_contract: Mapping[str, Any],
+        reasoning_effort: str,
         max_continue_passes: Optional[int] = None,
         deadline_at: Optional[str] = None,
         max_elapsed_minutes: Optional[int] = None,
@@ -1373,6 +1495,7 @@ class GoalStore:
             raise ValidationError("goal_text must be nonblank")
         if contains_secret(exact_goal):
             raise ValidationError("goal text appears to contain a secret; redact it before persistence")
+        accepted_reasoning_effort = validate_reasoning_effort(reasoning_effort)
         if max_continue_passes is not None and (
             isinstance(max_continue_passes, bool)
             or not isinstance(max_continue_passes, int)
@@ -1427,6 +1550,12 @@ class GoalStore:
             exact_scope_contract = copy.deepcopy(dict(scope_contract))
             scope_contract_sha256 = sha256_json(exact_scope_contract)
             completion_contract_sha256 = sha256_json(completion_contract)
+            goal_sha256 = goal_text_sha256(exact_goal)
+            discussion_contract = build_discussion_contract(
+                accepted_goal_sha256=goal_sha256,
+                reasoning_effort=accepted_reasoning_effort,
+            )
+            discussion_contract_sha256 = sha256_json(discussion_contract)
             initial_work_item_id = exact_scope_contract["included_work_items"][0]["work_item_id"]
             initial_route = build_route(
                 worker_skill="continue-research",
@@ -1435,14 +1564,20 @@ class GoalStore:
                 source_generation=0,
                 work_item_id=initial_work_item_id,
                 blocker_fingerprint=initial_fingerprint,
-                evidence_hashes=[completion_contract_sha256, scope_contract_sha256],
+                evidence_hashes=[
+                    completion_contract_sha256,
+                    scope_contract_sha256,
+                    discussion_contract_sha256,
+                ],
                 scope_contract=exact_scope_contract,
             )
             record: Dict[str, Any] = {
                 "schema_version": SCHEMA_VERSION,
                 "goal_id": candidate_id,
                 "goal_text": exact_goal,
-                "goal_sha256": goal_text_sha256(exact_goal),
+                "goal_sha256": goal_sha256,
+                "discussion_contract": discussion_contract,
+                "discussion_contract_sha256": discussion_contract_sha256,
                 "completion_contract": copy.deepcopy(dict(completion_contract)),
                 "completion_contract_sha256": completion_contract_sha256,
                 "scope_contract": exact_scope_contract,
@@ -1505,6 +1640,7 @@ class GoalStore:
                 {
                     "goal_id": candidate_id,
                     "goal_sha256": record["goal_sha256"],
+                    "discussion_contract_sha256": record["discussion_contract_sha256"],
                     "completion_contract_sha256": record["completion_contract_sha256"],
                     "scope_contract_sha256": record["scope_contract_sha256"],
                     "initial_route_sha256": record["state"]["approved_route_sha256"],
@@ -3162,6 +3298,11 @@ def build_parser() -> argparse.ArgumentParser:
     init.add_argument("--goal-text", required=True)
     init.add_argument("--completion-contract-json", type=_json_arg, required=True)
     init.add_argument("--scope-contract-json", type=_json_arg, required=True)
+    init.add_argument(
+        "--reasoning-effort",
+        choices=sorted(REASONING_EFFORTS),
+        required=True,
+    )
     init.add_argument("--max-continue-passes", type=int)
     deadline = init.add_mutually_exclusive_group()
     deadline.add_argument("--deadline-at")
@@ -3306,6 +3447,7 @@ def main(argv: Optional[list[str]] = None) -> int:
                 goal_text=args.goal_text,
                 completion_contract=args.completion_contract_json,
                 scope_contract=args.scope_contract_json,
+                reasoning_effort=args.reasoning_effort,
                 max_continue_passes=args.max_continue_passes,
                 deadline_at=args.deadline_at,
                 max_elapsed_minutes=args.max_elapsed_minutes,
