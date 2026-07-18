@@ -1,0 +1,199 @@
+{
+  "canonical_sources": {
+    "budget_policy": {
+      "path": "research_control/design/v19_validation_performance_and_safety_budget.md",
+      "sha256": "fa3adf5e143c8d936ef0e7fd6386af9b3ce74873d1985299eb95302166b3a53a"
+    },
+    "manifest": {
+      "path": "research_control/design/validation_gate_manifest_v1.yaml",
+      "sha256": "0e757d206b2529a00a2e60cc2b725ab4b10188321a14c75e885cce429de23842"
+    },
+    "migration_policy": {
+      "path": "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md",
+      "sha256": "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0"
+    }
+  },
+  "command_receipts": {
+    "current_head_ci": {
+      "command": [
+        "gh",
+        "run",
+        "list",
+        "--commit",
+        "01c5a98a4470635d2e8ce771365b1db563518f8d",
+        "--limit",
+        "20",
+        "--json",
+        "databaseId,workflowName,status,conclusion,headSha,url"
+      ],
+      "duration_seconds": 0.491581,
+      "label": "current-head-ci",
+      "receipt_path": ".local/v19_p11_t04/current-head-ci.receipt.json",
+      "receipt_sha256": "6285da3dea57f4e8e5860e22538efa3c50a5f4192adaa3294bb635b49f524a31",
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": {
+        "bytes": 0,
+        "path": ".local/v19_p11_t04/current-head-ci.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 3,
+        "path": ".local/v19_p11_t04/current-head-ci.stdout.log",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    },
+    "focused_equivalence": {
+      "command": [
+        "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.venv/bin/python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_validation_equivalence",
+        "tests.test_checkpoint_validation_planner",
+        "tests.test_validation_profiles",
+        "tests.test_validation_precheck",
+        "tests.test_staged_validation",
+        "tests.test_ci_validation_plan"
+      ],
+      "duration_seconds": 5.900236,
+      "label": "focused-equivalence",
+      "receipt_path": ".local/v19_p11_t04/focused-equivalence.receipt.json",
+      "receipt_sha256": "448d094647030b52c6990e9842c27d054c3207e2efff85328bd7e5c20b25f43a",
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": {
+        "bytes": 12922,
+        "path": ".local/v19_p11_t04/focused-equivalence.stderr.log",
+        "sha256": "ad7c4b2492145c7ab06243ffc69fe0ef681327da13f3a18032d823d030d45938"
+      },
+      "stdout": {
+        "bytes": 654,
+        "path": ".local/v19_p11_t04/focused-equivalence.stdout.log",
+        "sha256": "48010861ecf25aa7c585bf405c3a52032f1897fdea65e22f1135bae86452591e"
+      }
+    },
+    "full_plan": {
+      "command": [
+        "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.venv/bin/python",
+        "-m",
+        "scripts.validation.cli",
+        "plan",
+        "--profile",
+        "full",
+        "--scope",
+        "repository",
+        "--paths",
+        "--json"
+      ],
+      "duration_seconds": 0.059823,
+      "label": "full-plan",
+      "receipt_path": ".local/v19_p11_t04/full-plan.receipt.json",
+      "receipt_sha256": "86a5edf3366fabb3e2d24bd9a08ebcc15dd920507645242dabea3be8d089c928",
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": {
+        "bytes": 0,
+        "path": ".local/v19_p11_t04/full-plan.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 11122,
+        "path": ".local/v19_p11_t04/full-plan.stdout.log",
+        "sha256": "a16e0d04e9a649dedaa1f990c42f3361343e3184e53f7ce9bbdb3f882a7f7d40"
+      }
+    },
+    "legacy_full_wrapper": {
+      "command": [
+        "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.venv/bin/python",
+        "scripts/research_control/run_full_research_control_validation.py",
+        "--output",
+        ".local/v19_p11_t04/legacy-full-report.json",
+        "--json"
+      ],
+      "duration_seconds": 162.770824,
+      "label": "legacy-full-wrapper",
+      "receipt_path": ".local/v19_p11_t04/legacy-full-wrapper.receipt.json",
+      "receipt_sha256": "be9668741040ca6e1124bf94033ae905972b83673dac5a1468d5d9eaef2a4209",
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": {
+        "bytes": 142,
+        "path": ".local/v19_p11_t04/legacy-full-wrapper.stderr.log",
+        "sha256": "00ba6d99c82de6aed1071d5459b1ae9cdf12fc83860089b9990d7faecbaeb512"
+      },
+      "stdout": {
+        "bytes": 42901,
+        "path": ".local/v19_p11_t04/legacy-full-wrapper.stdout.log",
+        "sha256": "aa45c991fba22a471e30ce66e15a5473dc68d973fa8734f5ea3bf009aaf976e8"
+      }
+    }
+  },
+  "current_execution_state": {
+    "checkpoint_default_compare": true,
+    "checkpoint_explicit_legacy_fallback": true,
+    "ci_shadow_continue_on_error": true,
+    "full_plan_planner_executes_commands": false,
+    "full_plan_selected_gate_count": 25,
+    "full_plan_status": "READY",
+    "manifest_execution_authority": "legacy",
+    "manifest_migration_epoch": "shadow_planner",
+    "official_current_head_run_count": 0,
+    "official_current_head_runs": [],
+    "scheduled_full_present": true
+  },
+  "cutover_decision": {
+    "blocking_findings": [
+      "tracked_manifest_epoch_remains_shadow_planner",
+      "tracked_manifest_execution_authority_remains_legacy",
+      "full_profile_plan_is_selection_only",
+      "no_tracked_default_adapter_binding_for_full_planner_execution",
+      "no_official_ci_shadow_run_for_current_head",
+      "ci_shadow_shards_remain_non_authoritative",
+      "ci_default_still_names_shadow_execution",
+      "matched_authoritative_planner_full_receipt_absent"
+    ],
+    "cache_mode": "off",
+    "distance_to_gr_changed": false,
+    "legacy_fallback": "enabled",
+    "next_route": "Create one separately bounded P11-T04 Validator Engineer repair that implements an explicit planner-authoritative execution binding and obtains matched current-head local checkpoint full and hosted-CI receipts while retaining the tested legacy fallback; do not execute P11-T05 yet.",
+    "ordinary_research_handoff_preserved": "handoff-0740",
+    "output_mode": "legacy",
+    "performance_hard_guards_activated": false,
+    "planner_authority_changed": false,
+    "safety_failures": [],
+    "scientific_claims_changed": false,
+    "summary": "Local equivalence and rollback checks pass, but planner authority cannot be cut over because required execution and current-head hosted-CI evidence is absent while tracked defaults still preserve shadow-planner legacy authority.",
+    "verdict": "REPAIR_REQUIRED"
+  },
+  "job_id": "AJ-RT-20260718-006-001",
+  "plan_task_id": "P11-T04",
+  "prior_evidence": {
+    "p11_t02_ci_shadow": {
+      "path": "research_control/tasks/RT-20260718-004/artifacts/ci_shadow_run_report.json",
+      "sha256": "75a3a9d8f3bc9b161ba1c02180952b5a573a355db53c6d3470f716e4c01b98fb",
+      "status": "PASS"
+    },
+    "p2_first_wave": {
+      "path": "research_control/tasks/RT-20260715-006/artifacts/v19_first_wave_equivalence_audit.json",
+      "sha256": "ca21e4df3eec769eb6f3aafce4882b8d3692b01ecfb51ba54e2d65d74847230e",
+      "status": "PASS"
+    }
+  },
+  "repository": {
+    "branch": "codex/v19-remaining-relay",
+    "changed_paths": [
+      "registries/AGENT_JOB_REGISTRY.csv",
+      "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+      "registries/DIRECTOR_DECISION_REGISTRY.csv",
+      "registries/RESEARCH_TASK_REGISTRY.csv",
+      "registries/ROLE_EXECUTION_REGISTRY.csv",
+      "research_control/tasks/RT-20260718-006/"
+    ],
+    "head": "01c5a98a4470635d2e8ce771365b1db563518f8d",
+    "root": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow",
+    "unexpected_paths": []
+  },
+  "schema_id": "v19_p11_t04_planner_cutover_evidence_v1",
+  "task_id": "RT-20260718-006"
+}
