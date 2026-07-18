@@ -81,6 +81,69 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
+  validation_shards_shadow:
+    name: Shadow validation shard / ${{ matrix.shard }}
+    needs: validation_plan_shadow
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        shard:
+          - policy-fast
+          - research-control-integration
+          - dependency-graph
+          - memory-core
+          - publication
+          - scientific-support
+          - local-retrieval
+          - orchestration-equivalence
+    env:
+      PYTHON: .venv/bin/python
+      VALIDATION_SHARD: ${{ matrix.shard }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      - name: Install Python dependencies
+        run: |
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install -r requirements.txt
+
+      - name: Download validation plan
+        uses: actions/download-artifact@v4
+        with:
+          name: validation-plan-${{ github.run_id }}-${{ github.run_attempt }}
+          path: validation-plan-artifacts
+
+      - name: Run planner-selected shadow shard
+        shell: bash
+        run: |
+          set -euo pipefail
+          .venv/bin/python tests/test_ci_validation_plan.py run-shard \
+            --plan validation-plan-artifacts/validation-plan.json \
+            --shard "$VALIDATION_SHARD" \
+            --output-dir "validation-shard-artifacts/$VALIDATION_SHARD"
+
+      - name: Upload full shadow shard receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-shard-${{ matrix.shard }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: validation-shard-artifacts/${{ matrix.shard }}/
+          if-no-files-found: error
+          retention-days: 14
+
   validate_project_control:
     name: Validate project-control gates
     runs-on: ubuntu-latest

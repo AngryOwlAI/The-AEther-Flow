@@ -1,0 +1,118 @@
+{
+  "schema_id": "v19_p11_t02_ci_shard_implementation_validation_receipt_v1",
+  "status": "PASS",
+  "created_at": "2026-07-18T02:25:00Z",
+  "updated_at": "2026-07-18T02:30:00Z",
+  "task_id": "RT-20260718-004",
+  "job_id": "AJ-RT-20260718-004-001",
+  "base_commit": "c504dc46b3b68f5ff0e2de5fd50e62792da7dc2f",
+  "gates": [
+    {
+      "gate_id": "workflow_syntax",
+      "status": "PASS",
+      "counts": {
+        "workflow_count": 2,
+        "error_count": 0
+      },
+      "summary": "Both CI workflow files parse as YAML and retain stable job identities."
+    },
+    {
+      "gate_id": "planner_to_shard_selection",
+      "status": "PASS",
+      "counts": {
+        "shard_count": 8,
+        "selected_gate_count": 13,
+        "applicable_shard_count": 6,
+        "responsibility_test_count": 405
+      },
+      "receipt_path": "research_control/tasks/RT-20260718-004/artifacts/ci_shadow_run_report.json",
+      "summary": "All shard activation is derived from emitted plan gate IDs and the P11-T01 primary-owner map."
+    },
+    {
+      "gate_id": "inapplicable_shard_receipt",
+      "status": "PASS",
+      "counts": {
+        "inapplicable_shard_count": 2
+      },
+      "receipt_path": "research_control/tasks/RT-20260718-004/artifacts/ci_shadow_run_report.json",
+      "summary": "Dependency-graph and local-retrieval remain visible with explicit SKIP_NOT_APPLICABLE receipts for the representative affected plan."
+    },
+    {
+      "gate_id": "scheduled_full_unfiltered",
+      "status": "PASS",
+      "counts": {
+        "full_plan_selected_gate_count": 25,
+        "local_retrieval_plan_selected_gate_count": 8,
+        "scheduled_shard_count": 8,
+        "local_retrieval_test_count": 24
+      },
+      "receipt_path": ".github/workflows/scheduled-full-validation.yml",
+      "summary": "The scheduled workflow has no path filter and composes full repository and doctor local-retrieval plans."
+    },
+    {
+      "gate_id": "receipt_artifact_upload",
+      "status": "PASS",
+      "counts": {
+        "artifact_upload_job_count": 2,
+        "missing_receipt_contract_count": 0
+      },
+      "summary": "Both shadow execution surfaces print compact summaries and upload full logs plus JSON receipts with missing artifacts treated as errors."
+    },
+    {
+      "gate_id": "legacy_planner_shadow_comparison",
+      "status": "PASS",
+      "counts": {
+        "legacy_blocking_gate_count": 11,
+        "planner_blocking_gate_count": 11,
+        "unexplained_mismatch_count": 0
+      },
+      "summary": "Legacy-compatible blocking and planner gate sets match while both legacy jobs remain authoritative."
+    },
+    {
+      "gate_id": "focused_ci_shard_tests",
+      "status": "PASS",
+      "counts": {
+        "test_count": 8,
+        "failure_count": 0,
+        "error_count": 0
+      },
+      "receipt_path": "tests/test_ci_validation_plan.py",
+      "summary": "Focused workflow, selection, direct-run, scheduled composition, and explicit-skip tests pass."
+    },
+    {
+      "gate_id": "repository_test_suite",
+      "status": "PASS",
+      "counts": {
+        "test_count": 962,
+        "skip_count": 1,
+        "failure_count": 0,
+        "error_count": 0
+      },
+      "summary": "The exact final-source completed-state repository suite passes in 121.420 seconds with one expected skip."
+    },
+    {
+      "gate_id": "governed_checkpoint",
+      "status": "PENDING",
+      "counts": {
+        "error_count": 0
+      },
+      "summary": "The checkpoint transaction remains required after completed-state validation."
+    }
+  ],
+  "raw_receipt_boundary": {
+    "local_receipts_are_authoritative": false,
+    "task_receipts_are_physics_authority": false,
+    "full_terminal_output_embedded": false
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "legacy_ci_authoritative": true,
+    "planner_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  }
+}

@@ -1,0 +1,234 @@
+job_id: "AJ-RT-20260718-004-001"
+completion_id: "AJC-AJ-RT-20260718-004-001"
+task_id: "RT-20260718-004"
+decision_id: "DDR-20260718-004"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260718-004"
+status: "completed"
+created_at: "2026-07-18T02:12:27Z"
+started_at: "2026-07-18T02:12:27Z"
+completed_at: "2026-07-18T02:25:00Z"
+objective: "Implement P11-T02 shadow CI shards path selection compact logging full receipt upload and unfiltered scheduled full composition while legacy CI remains authoritative."
+completion_summary: "Eight stable planner-driven shadow shards, explicit inapplicable receipts, full artifact uploads, and one unfiltered scheduled full composition pass focused validation while both legacy jobs remain authoritative."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P11-T02"
+  - "research_control/design/ci_validation_shard_policy_v1.md"
+  - ".github/workflows/project-control-validation.yml"
+  - ".github/workflows/scheduled-full-validation.yml"
+  - "research_control/tasks/RT-20260718-003/jobs/completions/AJC-AJ-RT-20260718-003-001.yaml"
+outputs_created:
+  - ".github/workflows/scheduled-full-validation.yml"
+  - "tests/test_ci_validation_plan.py"
+  - "research_control/tasks/RT-20260718-004/artifacts/ci_shadow_run_report.json"
+  - "research_control/tasks/RT-20260718-004/artifacts/ci_shard_implementation_validation_receipt.json"
+  - "research_control/tasks/RT-20260718-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-004/jobs/completions/AJC-AJ-RT-20260718-004-001.yaml"
+outputs_updated:
+  - ".github/workflows/project-control-validation.yml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P11-T02"
+  recommendation_ids:
+    - "V19-R30"
+    - "V19-R40"
+    - "V19-R47"
+  migration_epoch: "shadow_shards"
+  implementation_status: "completed"
+  downstream_tasks_not_implemented:
+    - "P11-T03 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p11_t02_ci_shard_implementation"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R30"
+    - "V19-R40"
+    - "V19-R47"
+  implements_plan_task_id: "P11-T02"
+  implementation_status: "PASS"
+  coverage_effect: "planner-driven shadow CI shard execution receipts and unfiltered scheduled full composition"
+physics_progress_status:
+  status: "project_system_ci_shard_implementation_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P11-T02 changes operational CI topology and receipts only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "CI execution topology and operational receipts are not scientific evidence or derivation progress."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+ci_shard_implementation:
+  status: "PASS"
+  shadow_run_report_path: "research_control/tasks/RT-20260718-004/artifacts/ci_shadow_run_report.json"
+  validation_receipt_path: "research_control/tasks/RT-20260718-004/artifacts/ci_shard_implementation_validation_receipt.json"
+  shard_count: 8
+  affected_selected_gate_count: 13
+  affected_applicable_shard_count: 6
+  affected_inapplicable_shard_count: 2
+  affected_responsibility_test_count: 405
+  scheduled_full_plan_selected_gate_count: 25
+  scheduled_local_retrieval_plan_selected_gate_count: 8
+  scheduled_local_retrieval_test_count: 24
+  focused_test_count: 8
+  unexplained_legacy_planner_mismatch_count: 0
+  workflow_syntax_status: "PASS"
+  shadow_shards_implemented: true
+  scheduled_workflow_implemented: true
+  scheduled_path_filters_present: false
+  receipt_artifact_upload_present: true
+  explicit_inapplicable_receipts_present: true
+  legacy_jobs_preserved: true
+  legacy_ci_authoritative: true
+  planner_authoritative: false
+  branch_protection_changed: false
+  manifest_execution_authority_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+validation_evidence:
+  task_local_implementation_status: "PASS"
+  focused_test_count: 8
+  focused_failure_count: 0
+  focused_error_count: 0
+  affected_shard_responsibility_test_count: 405
+  scheduled_local_retrieval_test_count: 24
+  legacy_planner_shadow_status: "PASS"
+  unexplained_mismatch_count: 0
+  repository_suite:
+    status: "PASS"
+    test_count: 962
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    duration_seconds: "121.420"
+  checkpoint_status: "PENDING"
+command_results:
+  - ".venv/bin/python -m unittest -v tests.test_ci_validation_plan | exit_code=0 | 8 tests PASS"
+  - "ruby workflow YAML parse | exit_code=0 | both workflows PASS"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths three P11-T02 sources --json | exit_code=0 | READY with 13 selected gates"
+  - "eight direct run-shard invocations against affected plan | exit_code=0 | 405 applicable responsibility tests PASS and two shards SKIP_NOT_APPLICABLE"
+  - "scheduled doctor local-retrieval run-shard with cache audit | exit_code=0 | 24 tests PASS"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy-compatible blocking gates equal 11 planner gates with zero unexplained mismatch"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | exact final-source completed-state 962 tests PASS with one expected skip in 121.420 seconds"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json-summary | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS with zero hard failures"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=0 | PASS"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 53 lease parity clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "P11-T01 PASS completion canonical plan CI workflow shard policy memory preflight classifier resolver and preserved ordinary handoff were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Eight stable shadow shard identities consume gate IDs from the emitted plan and P11-T01 owner map."
+      - "Inapplicable shards emit explicit receipts and the unfiltered scheduled workflow composes full and local-retrieval plans."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused implementation and responsibility-shard checks pass."
+      - "The stable completed-state repository suite passes 962 tests with one expected skip."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains required after stable completed-state validation."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and read-only validation pass before checkpoint persistence."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-surface claim-language validation passes with zero hard failures."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260718-004/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet implements shadow operational CI shards and receipts only. It does not make the planner authoritative, change required checks or branch protection, deduplicate P11-T03 memory CI, alter checkpoint authority, supersede ordinary research, modify canonical ontology, derive a source law matter coupling or Einstein equations, promote a benchmark, issue a Gate Chair verdict, prove a theorem, or complete the derivation."
+verdict: "v19_p11_t02_ci_shard_implementation_pass_p11_t03_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "Eight stable planner-driven shadow shards and one unfiltered scheduled full composition are implemented with explicit receipts while legacy CI remains authoritative."
+selected_next_route:
+  route_id: "v19_p11_t03_memory_ci_deduplication"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P11"
+  plan_task_id: "P11-T03"
+  task_name: "Deduplicate memory CI"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "memory_ci_deduplication"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system memory CI deduplication only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After governed checkpoint PASS route one separately bounded P11-T03 packet; do not execute it in P11-T02."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "818"
+    relationship_row_count: "4070"
+    semantic_row_count: "818"
+    vault_row_count: "818"
+    local_cache_only_warning_count: "0"
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search CI shards path filters receipt artifacts --limit 10 --json"
+      query_type: "search"
+      query_text: "CI shards path filters receipt artifacts"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/ci_validation_shard_policy_v1.md"
+      source_hash: "3c4b3239dd36f1736480470e1d421034553764e8bf4ef6e207612ca89bbe2e2e"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Generated wiki Obsidian SQLite semantic and .local retrieval outputs were navigation layers only and are not authority."

@@ -1,0 +1,132 @@
+name: Scheduled Full Validation
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scheduled-full-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  plan_scheduled_full:
+    name: Plan unfiltered scheduled validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHON: .venv/bin/python
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      - name: Install Python dependencies
+        run: |
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install -r requirements.txt
+
+      - name: Emit unfiltered full and local-retrieval plans
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p validation-plan-artifacts
+          .venv/bin/python -m scripts.validation.cli plan \
+            --profile full \
+            --scope repository \
+            --paths \
+            --json > validation-plan-artifacts/validation-plan.json
+          .venv/bin/python -m scripts.validation.cli plan \
+            --profile doctor \
+            --scope local_retrieval \
+            --paths .local/scheduled-health \
+            --json > validation-plan-artifacts/local-retrieval-plan.json
+          printf '%s\n' audit > validation-plan-artifacts/cache-mode.txt
+
+      - name: Upload scheduled validation plans
+        uses: actions/upload-artifact@v4
+        with:
+          name: scheduled-validation-plan-${{ github.run_id }}-${{ github.run_attempt }}
+          path: validation-plan-artifacts/
+          if-no-files-found: error
+          retention-days: 30
+
+  scheduled_validation_shards:
+    name: Scheduled validation shard / ${{ matrix.shard }}
+    needs: plan_scheduled_full
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        shard:
+          - policy-fast
+          - research-control-integration
+          - dependency-graph
+          - memory-core
+          - publication
+          - scientific-support
+          - local-retrieval
+          - orchestration-equivalence
+    env:
+      PYTHON: .venv/bin/python
+      VALIDATION_CACHE_MODE: audit
+      VALIDATION_SHARD: ${{ matrix.shard }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      - name: Install Python dependencies
+        run: |
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install -r requirements.txt
+
+      - name: Download scheduled validation plans
+        uses: actions/download-artifact@v4
+        with:
+          name: scheduled-validation-plan-${{ github.run_id }}-${{ github.run_attempt }}
+          path: validation-plan-artifacts
+
+      - name: Run scheduled planner-selected shard
+        shell: bash
+        run: |
+          set -euo pipefail
+          plan_path=validation-plan-artifacts/validation-plan.json
+          if [[ "$VALIDATION_SHARD" == "local-retrieval" ]]; then
+            plan_path=validation-plan-artifacts/local-retrieval-plan.json
+          fi
+          .venv/bin/python tests/test_ci_validation_plan.py run-shard \
+            --plan "$plan_path" \
+            --shard "$VALIDATION_SHARD" \
+            --output-dir "validation-shard-artifacts/$VALIDATION_SHARD" \
+            --scheduled-full
+
+      - name: Upload full scheduled shard receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scheduled-validation-shard-${{ matrix.shard }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: validation-shard-artifacts/${{ matrix.shard }}/
+          if-no-files-found: error
+          retention-days: 30
