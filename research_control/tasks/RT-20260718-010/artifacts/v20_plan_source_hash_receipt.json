@@ -1,0 +1,95 @@
+{
+  "schema_version": "v20_plan_source_hash_receipt.v1",
+  "task_id": "RT-20260718-010",
+  "plan_task_id": "P0-T01",
+  "recorded_at": "2026-07-18T16:04:54Z",
+  "compatibility_status": "PASS_CURRENT_RUNTIME_SUPERSEDES_AUTHORING_HASHES",
+  "authority_note": "Current tracked runtime contracts govern over authoring-time plan hashes. Hash drift is recorded evidence, not authority for the plan.",
+  "sources": [
+    {
+      "path": ".codex/skills/continue-research-goal/SKILL.md",
+      "purpose": "launcher contract",
+      "authoring_git_blob_sha1": "614ea45579ed2977d3ca43b390be6a28e2498fa0",
+      "current_git_blob_sha1": "8a51a89ee79dfafe704bb85423a9ae3a37368478",
+      "current_sha256": "a4be33e0d1146569303b87d5cba0063fbd2490918d35f7c15fa2c384482a68fd",
+      "changed_since_authoring": true,
+      "inspection_result": "v2 records now permit independently nullable scheduling horizons while preserving every fixed relay stop and the one-frame boundary"
+    },
+    {
+      "path": ".codex/skills/continue-research-goal/references/goal-file-schema.md",
+      "purpose": "relay schema",
+      "authoring_git_blob_sha1": "7f98af6ce76f8098615cfa2e2abe367af9d001d0",
+      "current_git_blob_sha1": "e18c5c3acbef9995b3843789b7f310f033321855",
+      "current_sha256": "5f7883df01975531a3892cd8bbcd81e6ac557601e20b599fbf665e483820f790",
+      "changed_since_authoring": true,
+      "inspection_result": "current v2 schema retains one receipt per generation, lease parity, no-progress, human-gate, validation, checkpoint, and identity stops"
+    },
+    {
+      "path": ".codex/skills/continue-research-continue-goal/SKILL.md",
+      "purpose": "one-generation worker",
+      "authoring_git_blob_sha1": "e9bff4c03035e93b27ae564e51c081fdfb5effbf",
+      "current_git_blob_sha1": "e8afa0a180092515097a3121b0f785ff7a00e810",
+      "current_sha256": "49191662332729a28fc8b1edde4fad5c7eb5cd812d96dd5b79d223cc122fb359",
+      "changed_since_authoring": true,
+      "inspection_result": "current worker preserves claim-consume-return-verify sequencing, one continue-research invocation, and at most one successor"
+    },
+    {
+      "path": ".codex/skills/continue-research/SKILL.md",
+      "purpose": "one-packet research authority",
+      "authoring_git_blob_sha1": "599c1d7828f2a1e205eb7ccf01552f220b2c4561",
+      "current_git_blob_sha1": "599c1d7828f2a1e205eb7ccf01552f220b2c4561",
+      "current_sha256": "4ff16918097dd940bfed731f921acbe496b3e5a1d14f43a0fd352e74b7b0173f",
+      "changed_since_authoring": false,
+      "inspection_result": "current skill remains the sole one-AgentJob research authority and requires memory preflight, validation, and governed checkpoint"
+    },
+    {
+      "path": "research_control/program_state.yaml",
+      "purpose": "ordinary scientific anchor",
+      "authoring_git_blob_sha1": "6de3e8b80bc0cc07d278caa4c8d50d332025bab0",
+      "current_git_blob_sha1": "6de3e8b80bc0cc07d278caa4c8d50d332025bab0",
+      "current_sha256": "1a28fc71d3076347be4221e4d30b4bf962e5f752fd9d90f099d916dd89a4706c",
+      "changed_since_authoring": false,
+      "inspection_result": "RT-20260709-006 and handoff-0740 remain the ordinary research anchor"
+    },
+    {
+      "path": "research_control/handoffs/handoff-0740.yaml",
+      "purpose": "ordinary research handoff",
+      "current_git_blob_sha1": "c4e8a74656b4fceec55e3ced15f0d49377c8c2eb",
+      "current_sha256": "5be1f16f476c1f03db0baf3dcfec8ffc1947ff61c5d5d3ff43012239ce5c0c1d",
+      "inspection_result": "EqSrc_family_closure_repair_or_stress remains the ordinary route with no physics promotion"
+    },
+    {
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v19.md",
+      "purpose": "predecessor implementation plan",
+      "current_git_blob_sha1": "09fe40816953ad729bb4364d8e195cbc9dc97008",
+      "current_sha256": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc",
+      "inspection_result": "v19 remains registered project-control guidance and is not scientific authority"
+    },
+    {
+      "path": "research_control/tasks/RT-20260718-008/jobs/completions/AJC-AJ-RT-20260718-008-001.yaml",
+      "purpose": "latest v19 sidecar completion named by the v20 plan",
+      "current_git_blob_sha1": "0c60da10aef5f119a8b0b401e1620e376924095c",
+      "current_sha256": "2f96b32c2d1df599cf1922b4bdef9162d0e18ab2e4cd70914b196cd8886bd226",
+      "inspection_result": "v19 P11-T04 is blocked at explicit publication authority; legacy validation authority remains live and P11-T05 remains blocked"
+    },
+    {
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v20.md",
+      "purpose": "registered plan source",
+      "current_git_blob_sha1": "0da1428918539a38c63543c21bce799d602a8274",
+      "current_sha256": "6ef3fc85f89dcfc71832298a3ff846e0425e93a61a7409801f737c2132f8ba6a",
+      "inspection_result": "authority-marked v20 planning source with 17 phases, 104 task cards, and 21 recommendations"
+    }
+  ],
+  "compatibility_findings": [
+    {
+      "finding_id": "V20-P0-T01-HASH-001",
+      "status": "PASS_WITH_RECORDED_DRIFT",
+      "summary": "Launcher, schema, and generation-worker blobs changed after plan authoring because the tracked v2 nullable-guard contract superseded the older finite-default contract."
+    },
+    {
+      "finding_id": "V20-P0-T01-HASH-002",
+      "status": "PASS",
+      "summary": "The current runtime contracts preserve all fixed guards, authority boundaries, one-frame execution limits, and checkpoint requirements assumed by P0-T01."
+    }
+  ]
+}
