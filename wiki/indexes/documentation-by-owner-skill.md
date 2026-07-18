@@ -14,6 +14,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `MD-SKILL-CONTINUE-RESEARCH-GOAL` `.codex/skills/continue-research-goal/SKILL.md`
 - `MD-SKILL-CONTINUE-RESEARCH-GOAL-SCHEMA` `.codex/skills/continue-research-goal/references/goal-file-schema.md`
+- `MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3` `research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md`
 
 ## documentation-curator
 
@@ -611,6 +612,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V12-P0-BASELINE-SUMMARY` `wiki/markdown/md-v12-p0-baseline-summary.md`
 - `WIKI-MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION` `wiki/markdown/md-v12-p4-t01-source-extension-dependency-extraction.md`
 - `WIKI-MD-V12-P4-T02-SOURCE-EXTENSION-MINIMIZATION-TARGET` `wiki/markdown/md-v12-p4-t02-source-extension-minimization-target.md`
+- `WIKI-MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3` `wiki/markdown/md-v20-goal-relay-execution-policy-v3.md`
 - `WIKI-MD-V20-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-v20-recommendation-backlog-schema.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 

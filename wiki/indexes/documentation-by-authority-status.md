@@ -563,6 +563,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V12-P0-BASELINE-SUMMARY` `wiki/markdown/md-v12-p0-baseline-summary.md`
 - `WIKI-MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION` `wiki/markdown/md-v12-p4-t01-source-extension-dependency-extraction.md`
 - `WIKI-MD-V12-P4-T02-SOURCE-EXTENSION-MINIMIZATION-TARGET` `wiki/markdown/md-v12-p4-t02-source-extension-minimization-target.md`
+- `WIKI-MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3` `wiki/markdown/md-v20-goal-relay-execution-policy-v3.md`
 - `WIKI-MD-V20-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-v20-recommendation-backlog-schema.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
@@ -909,4 +910,5 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V12-P0-BASELINE-SUMMARY` `research_control/tasks/RT-20260629-030/artifacts/v12_p0_baseline_summary.md`
 - `MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION` `research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_extraction_v1.md`
 - `MD-V12-P4-T02-SOURCE-EXTENSION-MINIMIZATION-TARGET` `research_control/tasks/RT-20260629-044/artifacts/source_extension_minimization_target_v1.md`
+- `MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3` `research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md`
 - `MD-V20-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/tasks/RT-20260718-011/artifacts/v20_recommendation_backlog_schema.md`

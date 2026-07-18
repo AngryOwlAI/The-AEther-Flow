@@ -56,6 +56,89 @@ def contract(label: str = "complete the bounded goal") -> dict:
     }
 
 
+def scope_contract() -> dict:
+    return {
+        "mode": "single_objective",
+        "included_work_items": [
+            {
+                "work_item_id": "objective-1",
+                "objective": "complete the bounded goal",
+                "depends_on": [],
+            }
+        ],
+        "dependency_source": None,
+        "exclusions": ["all work outside the exact user goal"],
+        "source_hashes": {"goal-source.md": "c" * 64},
+        "allow_scope_expansion": False,
+    }
+
+
+def multi_scope_contract() -> dict:
+    return {
+        "mode": "multi_step",
+        "included_work_items": [
+            {"work_item_id": "task-a", "objective": "complete task A", "depends_on": []},
+            {"work_item_id": "task-b", "objective": "complete task B", "depends_on": ["task-a"]},
+            {"work_item_id": "task-c", "objective": "complete independent task C", "depends_on": []},
+        ],
+        "dependency_source": {"path": "plan.yaml", "sha256": "e" * 64},
+        "exclusions": ["task-d and every unlisted task"],
+        "source_hashes": {"plan.yaml": "e" * 64},
+        "allow_scope_expansion": False,
+    }
+
+
+def work_result(
+    *,
+    work_item_id: str = "objective-1",
+    status: str = "completed",
+    progress: str = "one bounded frame completed",
+    agent_job: bool = True,
+    outside: list[str] | None = None,
+) -> dict:
+    return {
+        "work_item_id": work_item_id,
+        "work_item_status": status,
+        "task_id": "RT-TEST-001" if agent_job else None,
+        "agent_job_id": "AJ-TEST-001" if agent_job else None,
+        "completion_path": "research_control/tasks/RT-TEST-001/completion.yaml" if agent_job else None,
+        "completion_sha256": "d" * 64 if agent_job else None,
+        "checkpoint_commit": "b" * 40 if agent_job else None,
+        "validator_results": ["validate_research_control=PASS"],
+        "progress_summary": progress,
+        "zero_job_reason": None if agent_job else "no worker AgentJob was required",
+        "out_of_scope_remaining_work": outside or [],
+    }
+
+
+def human_intervention(*attempted_strategy_ids: str) -> dict:
+    return {
+        "required_action": "Choose extension or cancellation after reviewing canonical evidence.",
+        "reason": "No safe authorized autonomous route remains.",
+        "blocking_evidence_hashes": ["f" * 64],
+        "safe_authorized_strategies_exhausted": True,
+        "attempted_strategy_ids": list(attempted_strategy_ids),
+        "remaining_safe_authorized_strategy_ids": [],
+    }
+
+
+def dirty_manifest(*, changed_hash: str = "1" * 64) -> dict:
+    return {
+        "owning_task_id": "RT-TEST-001",
+        "owning_agent_job_id": "AJ-TEST-001",
+        "head": "b" * 40,
+        "porcelain": " M generated.txt",
+        "changed_paths": [{"path": "generated.txt", "sha256": changed_hash}],
+        "failed_gates": [
+            {
+                "gate_id": "generated_derivative",
+                "status": "FAIL",
+                "evidence_sha256": "2" * 64,
+            }
+        ],
+    }
+
+
 def fingerprint(label: str) -> str:
     return goal_state.canonical_fingerprint(
         {
@@ -81,6 +164,7 @@ class GoalStateTestCase(unittest.TestCase):
         return self.store.initialize(
             goal_text=goal,
             completion_contract=contract(),
+            scope_contract=scope_contract(),
             max_continue_passes=passes,
             max_elapsed_minutes=60,
             repository_binding=binding(),
@@ -119,12 +203,28 @@ class GoalStateTestCase(unittest.TestCase):
             timestamp=BASE_TIME,
         )
 
-    def returned_step(self, path: Path, record: dict, generation: int, claim_token: str, after: str, evaluation: str):
+    def returned_step(
+        self,
+        path: Path,
+        record: dict,
+        generation: int,
+        claim_token: str,
+        after: str,
+        evaluation: str,
+        *,
+        worker_skill: str = "continue-research",
+        work_item_id: str = "objective-1",
+        work_item_status: str | None = None,
+        observed_dirty_state_manifest: dict | None = None,
+        agent_job: bool = True,
+    ):
         record = self.store.consume_invocation(
             path,
             expected_revision=record["state"]["revision"],
             generation=generation,
             claim_token=claim_token,
+            worker_skill=worker_skill,
+            observed_dirty_state_manifest=observed_dirty_state_manifest,
             timestamp=BASE_TIME,
         )
         record = self.store.record_invocation_returned(
@@ -132,7 +232,9 @@ class GoalStateTestCase(unittest.TestCase):
             expected_revision=record["state"]["revision"],
             generation=generation,
             claim_token=claim_token,
-            execution_evidence={"skill": "continue-research", "returned": True},
+            worker_skill=worker_skill,
+            execution_evidence={"skill": worker_skill, "returned": True},
+            observed_dirty_state_manifest=observed_dirty_state_manifest,
             timestamp=BASE_TIME,
         )
         record = self.store.verify_step(
@@ -151,6 +253,13 @@ class GoalStateTestCase(unittest.TestCase):
                 "validator_results": ["validate_research_control=PASS"],
                 "progress_summary": "one bounded pass completed",
                 "remaining_work": "one pass remains" if evaluation == "unmet" else "none",
+                "work_result": work_result(
+                    work_item_id=work_item_id,
+                    status=work_item_status
+                    or ("completed" if evaluation == "met" else "in_progress"),
+                    progress="one bounded pass completed",
+                    agent_job=agent_job,
+                ),
             },
             timestamp=BASE_TIME,
         )
@@ -162,11 +271,12 @@ class SerializationAndSchemaTests(GoalStateTestCase):
         path, record = self.store.initialize(
             goal_text="unbounded scheduling horizon",
             completion_contract=contract(),
+            scope_contract=scope_contract(),
             repository_binding=binding(),
             initial_fingerprint=fingerprint("A"),
             timestamp=BASE_TIME,
         )
-        self.assertEqual(record["schema_version"], "continue-research-goal.v2")
+        self.assertEqual(record["schema_version"], "continue-research-goal.v3")
         self.assertIsNone(record["guards"]["max_continue_passes"])
         self.assertIsNone(record["deadline_at"])
         self.assertIsNone(goal_state.effective_guards(record)["max_continue_passes"])
@@ -177,6 +287,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
         path, record = self.store.initialize(
             goal_text="pass-only guard",
             completion_contract=contract(),
+            scope_contract=scope_contract(),
             max_continue_passes=4,
             repository_binding=binding(),
             initial_fingerprint=fingerprint("A"),
@@ -198,12 +309,14 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             handoff_token="handoff-token-1",
             outcome="definitive",
             diagnostic={"fixture": "release lease"},
+            human_intervention=human_intervention(),
             timestamp=BASE_TIME,
         )
 
         _, record = self.store.initialize(
             goal_text="deadline-only guard",
             completion_contract=contract(),
+            scope_contract=scope_contract(),
             deadline_at="2026-07-10T15:30:00+02:00",
             repository_binding=binding(),
             initial_fingerprint=fingerprint("B"),
@@ -221,6 +334,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
                     self.store.initialize(
                         goal_text=f"invalid deadline {index}",
                         completion_contract=contract(),
+                        scope_contract=scope_contract(),
                         deadline_at=deadline,
                         repository_binding=binding(),
                         initial_fingerprint=fingerprint("A"),
@@ -239,6 +353,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
                     self.store.initialize(
                         goal_text="invalid finite scheduling guard",
                         completion_contract=contract(),
+                        scope_contract=scope_contract(),
                         repository_binding=binding(),
                         initial_fingerprint=fingerprint("A"),
                         timestamp=BASE_TIME,
@@ -250,6 +365,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             self.store.initialize(
                 goal_text="conflicting deadline inputs",
                 completion_contract=contract(),
+                scope_contract=scope_contract(),
                 deadline_at="2026-07-10T13:00:00Z",
                 max_elapsed_minutes=30,
                 repository_binding=binding(),
@@ -259,12 +375,13 @@ class SerializationAndSchemaTests(GoalStateTestCase):
         _, record = self.store.initialize(
             goal_text="legacy elapsed alias",
             completion_contract=contract(),
+            scope_contract=scope_contract(),
             max_elapsed_minutes=30,
             repository_binding=binding(),
             initial_fingerprint=fingerprint("A"),
             timestamp=BASE_TIME,
         )
-        self.assertEqual(record["schema_version"], "continue-research-goal.v2")
+        self.assertEqual(record["schema_version"], "continue-research-goal.v3")
         self.assertEqual(record["deadline_at"], "2026-07-10T12:30:00Z")
 
     def test_cli_deadline_arguments_are_optional_and_mutually_exclusive(self):
@@ -276,6 +393,8 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             "CLI fixture",
             "--completion-contract-json",
             json.dumps(contract()),
+            "--scope-contract-json",
+            json.dumps(scope_contract()),
             "--repository-binding-json",
             json.dumps(binding()),
             "--initial-fingerprint",
@@ -297,10 +416,37 @@ class SerializationAndSchemaTests(GoalStateTestCase):
                     ]
                 )
 
+    def _retained_record(self, record: dict, schema_version: str) -> dict:
+        retained = copy.deepcopy(record)
+        retained["schema_version"] = schema_version
+        for key in (
+            "scope_contract",
+            "scope_contract_sha256",
+            "recovery_ledger",
+            "completion_summary",
+            "completion_summary_sha256",
+            "human_intervention_summary",
+            "human_intervention_summary_sha256",
+        ):
+            retained.pop(key)
+        for key in ("approved_route", "approved_route_sha256", "human_intervention"):
+            retained["state"].pop(key)
+        for key in (
+            "stop_on_human_gate",
+            "stop_on_validation_failure",
+            "stop_on_checkpoint_failure",
+            "stop_on_unexpected_dirty_state",
+            "stop_on_no_progress",
+            "stop_on_repeated_state",
+            "stop_on_capability_loss",
+            "stop_on_branch_or_repository_mismatch",
+        ):
+            retained["guards"].pop(key)
+        return retained
+
     def test_v1_finite_record_validates_and_round_trips_without_mutation(self):
         path, record = self.initialize()
-        legacy = copy.deepcopy(record)
-        legacy["schema_version"] = goal_state.LEGACY_SCHEMA_VERSION
+        legacy = self._retained_record(record, goal_state.LEGACY_SCHEMA_VERSION)
         path.write_text(goal_state.render_goal(legacy), encoding="utf-8")
         before = path.read_bytes()
         loaded = self.store.read(path)
@@ -308,6 +454,22 @@ class SerializationAndSchemaTests(GoalStateTestCase):
         self.assertIsInstance(loaded["guards"]["max_continue_passes"], int)
         self.assertIsInstance(loaded["deadline_at"], str)
         self.assertEqual(goal_state.render_goal(loaded).encode("utf-8"), before)
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_v2_record_validates_byte_for_byte_but_cannot_resume(self):
+        path, record = self.initialize()
+        retained = self._retained_record(record, goal_state.RETAINED_SCHEMA_VERSION)
+        path.write_text(goal_state.render_goal(retained), encoding="utf-8")
+        before = path.read_bytes()
+        loaded = self.store.read(path)
+        self.assertEqual(loaded["schema_version"], "continue-research-goal.v2")
+        self.assertEqual(path.read_bytes(), before)
+        with self.assertRaises(goal_state.StateConflict):
+            self.store.reserve_successor(
+                path,
+                expected_revision=loaded["state"]["revision"],
+                predecessor_thread_id="launcher",
+            )
         self.assertEqual(path.read_bytes(), before)
 
     def test_exact_goal_serialization_hash_and_round_trip(self):
@@ -328,6 +490,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             self.store.initialize(
                 goal_text="safe goal",
                 completion_contract=contract(),
+                scope_contract=scope_contract(),
                 max_continue_passes=1,
                 max_elapsed_minutes=1,
                 repository_binding=bad,
@@ -342,6 +505,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             self.store.initialize(
                 goal_text="safe goal",
                 completion_contract=contract(),
+                scope_contract=scope_contract(),
                 max_continue_passes=1,
                 max_elapsed_minutes=1,
                 repository_binding=bad,
@@ -352,6 +516,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
         path, record = self.store.initialize(
             goal_text="safe production goal",
             completion_contract=contract(),
+            scope_contract=scope_contract(),
             max_continue_passes=2,
             max_elapsed_minutes=30,
             repository_binding=production_binding(),
@@ -373,7 +538,12 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             generation=1,
             claim_token="claim-token",
             stop_reason="human_gate",
-            evidence={"zero_agent_job_reason": "protected human decision"},
+            evidence={
+                "zero_agent_job_reason": "protected human decision",
+                "progress_summary": "protected human gate detected before worker execution",
+                "out_of_scope_remaining_work": [],
+            },
+            human_intervention=human_intervention(),
             timestamp=BASE_TIME,
         )
         record = self.store.begin_recovery(
@@ -415,7 +585,12 @@ class SerializationAndSchemaTests(GoalStateTestCase):
             generation=1,
             claim_token="claim-token",
             stop_reason="human_gate",
-            evidence={"zero_agent_job_reason": "guard amendment fixture"},
+            evidence={
+                "zero_agent_job_reason": "guard amendment fixture",
+                "progress_summary": "guard amendment is required before worker execution",
+                "out_of_scope_remaining_work": [],
+            },
+            human_intervention=human_intervention(),
             timestamp=BASE_TIME,
         )
         record = self.store.begin_recovery(
@@ -515,6 +690,7 @@ class AtomicityAndConcurrencyTests(GoalStateTestCase):
             handoff_token="handoff-token-1",
             outcome="definitive",
             diagnostic={"created": False},
+            human_intervention=human_intervention(),
             timestamp=BASE_TIME,
         )
         with self.assertRaises(goal_state.StateConflict):
@@ -530,6 +706,7 @@ class AtomicityAndConcurrencyTests(GoalStateTestCase):
                 path, _ = store.initialize(
                     goal_text=f"goal {suffix}",
                     completion_contract=contract(),
+                    scope_contract=scope_contract(),
                     max_continue_passes=2,
                     max_elapsed_minutes=30,
                     repository_binding=binding(),
@@ -695,7 +872,12 @@ class StateMachineTests(GoalStateTestCase):
             generation=1,
             claim_token="claim-token",
             stop_reason="validation",
-            evidence={"zero_agent_job_reason": "validator failed before research"},
+            evidence={
+                "zero_agent_job_reason": "validator failed before research",
+                "progress_summary": "validator failure prevented worker execution",
+                "out_of_scope_remaining_work": [],
+            },
+            human_intervention=human_intervention(),
             timestamp=BASE_TIME,
         )
         receipt = next(item for item in record["journal"] if item["kind"] == "step_receipt")
@@ -708,6 +890,7 @@ class StateMachineTests(GoalStateTestCase):
                 generation=1,
                 claim_token="claim-token",
                 stop_reason="validation",
+                human_intervention=human_intervention(),
             )
 
     def test_consumption_replay_is_blocked_and_pass_count_increments_once(self):
@@ -720,6 +903,7 @@ class StateMachineTests(GoalStateTestCase):
             expected_revision=before_revision,
             generation=1,
             claim_token="claim-token",
+            worker_skill="continue-research",
             timestamp=BASE_TIME,
         )
         with self.assertRaises(goal_state.StateConflict):
@@ -728,6 +912,7 @@ class StateMachineTests(GoalStateTestCase):
                 expected_revision=record["state"]["revision"],
                 generation=1,
                 claim_token="claim-token",
+                worker_skill="continue-research",
                 timestamp=BASE_TIME,
             )
         self.assertEqual(self.store.read(path)["state"]["passes_consumed"], 1)
@@ -741,6 +926,7 @@ class StateMachineTests(GoalStateTestCase):
             expected_revision=record["state"]["revision"],
             generation=1,
             claim_token="claim-token",
+            worker_skill="continue-research",
             timestamp=BASE_TIME,
         )
         record = self.store.record_invocation_uncertain(
@@ -748,7 +934,9 @@ class StateMachineTests(GoalStateTestCase):
             expected_revision=record["state"]["revision"],
             generation=1,
             claim_token="claim-token",
+            worker_skill="continue-research",
             diagnostic={"crash_window": "consumption_before_research_return"},
+            human_intervention=human_intervention(),
             timestamp=BASE_TIME,
         )
         self.assertTrue(record["state"]["active_lease"]["quarantined"])
@@ -767,8 +955,17 @@ class StateMachineTests(GoalStateTestCase):
             generation=1,
             returned_proven=False,
             terminal_holder_proof={"thread_state": "completed"},
-            canonical_evidence={"after_head": "unknown", "goal_evaluation": "indeterminate"},
+            canonical_evidence={
+                "after_head": "unknown",
+                "goal_evaluation": "indeterminate",
+                "work_result": work_result(
+                    status="blocked",
+                    progress="worker outcome remains unknown",
+                    agent_job=False,
+                ),
+            },
             decision="terminal_awaiting_human",
+            human_intervention=human_intervention(),
             timestamp=BASE_TIME,
         )
         receipt = next(item for item in record["journal"] if item["kind"] == "step_receipt")
@@ -785,6 +982,7 @@ class StateMachineTests(GoalStateTestCase):
             generation=1,
             user_authorization="user authorizes abandoned claim recovery",
             terminal_holder_proof={"thread_state": "failed"},
+            human_intervention=human_intervention(),
             timestamp=BASE_TIME,
         )
         receipt = next(item for item in record["journal"] if item["kind"] == "step_receipt")
@@ -805,6 +1003,7 @@ class StateMachineTests(GoalStateTestCase):
                     path, record = store.initialize(
                         goal_text="dispatch fixture",
                         completion_contract=contract(),
+                        scope_contract=scope_contract(),
                         max_continue_passes=2,
                         max_elapsed_minutes=20,
                         repository_binding=binding(),
@@ -826,6 +1025,7 @@ class StateMachineTests(GoalStateTestCase):
                         handoff_token="token",
                         outcome=outcome,
                         diagnostic={"fixture": outcome},
+                        human_intervention=human_intervention(),
                         timestamp=BASE_TIME,
                     )
                     self.assertEqual(record["state"]["phase"], phase)
@@ -888,6 +1088,7 @@ class StateMachineTests(GoalStateTestCase):
                 expected_revision=record["state"]["revision"],
                 generation=1,
                 claim_token="claim-token",
+                worker_skill="continue-research",
                 timestamp=late,
             )
         unchanged = self.store.read(path)
@@ -898,6 +1099,7 @@ class StateMachineTests(GoalStateTestCase):
         path, record = self.store.initialize(
             goal_text="unlimited guard fixture",
             completion_contract=contract(),
+            scope_contract=scope_contract(),
             repository_binding=binding(),
             initial_fingerprint=fingerprint("A"),
             timestamp=BASE_TIME,
@@ -915,6 +1117,7 @@ class StateMachineTests(GoalStateTestCase):
             expected_revision=record["state"]["revision"],
             generation=1,
             claim_token="claim-token",
+            worker_skill="continue-research",
             timestamp="2099-07-10T14:00:00Z",
         )
         self.assertEqual(record["state"]["passes_consumed"], 10002)
@@ -928,6 +1131,419 @@ class StateMachineTests(GoalStateTestCase):
             self.store.check_guards(record, timestamp="2026-07-10T13:00:00Z"),
             ["elapsed_limit"],
         )
+
+
+class V3AutonomousRoutingTests(GoalStateTestCase):
+    def initialize_multi(self):
+        return self.store.initialize(
+            goal_text="Complete task A and then task B; preserve independent task C.",
+            completion_contract=contract("complete the explicitly included plan tasks"),
+            scope_contract=multi_scope_contract(),
+            max_continue_passes=8,
+            max_elapsed_minutes=120,
+            repository_binding=binding(),
+            initial_fingerprint=fingerprint("A"),
+            timestamp=BASE_TIME,
+            launcher_token="launcher-token",
+        )
+
+    def recovery_plan(
+        self,
+        record: dict,
+        *,
+        strategy_id: str,
+        worker_skill: str = "continue-research",
+        work_item_id: str | None = None,
+        manifest: dict | None = None,
+    ) -> dict:
+        generation = record["state"]["current_generation"]
+        entry = record["generations"][str(generation)]
+        return {
+            "worker_skill": worker_skill,
+            "reason_id": f"recover_with_{strategy_id}",
+            "strategy_id": strategy_id,
+            "work_item_id": work_item_id or entry["route"]["work_item_id"],
+            "blocker_fingerprint": entry.get("after_fingerprint")
+            or record["state"]["last_canonical_fingerprint"],
+            "evidence_hashes": ["3" * 64],
+            "dirty_state_manifest": manifest,
+            "work_result": copy.deepcopy(entry["pending_step_result"]["work_result"]),
+        }
+
+    def test_explicit_multi_step_scope_crosses_included_task_boundary_and_summarizes(self):
+        path, record = self.initialize_multi()
+        record = self.reserve_and_record(path, record)
+        record = self.claim(path, record)
+        record = self.returned_step(
+            path,
+            record,
+            1,
+            "claim-token",
+            fingerprint("B"),
+            "unmet",
+            work_item_id="task-a",
+            work_item_status="completed",
+        )
+        record = self.store.decide_step(
+            path,
+            expected_revision=record["state"]["revision"],
+            generation=1,
+            claim_token="claim-token",
+            decision="continuation_required",
+            next_work_item_id="task-b",
+            timestamp=BASE_TIME,
+        )
+        record = self.reserve_and_record(path, record, generation=2, successor="thread-2")
+        self.assertEqual(record["generations"]["2"]["route"]["work_item_id"], "task-b")
+        record = self.claim(path, record, generation=2, token="claim-token-2")
+        record = self.returned_step(
+            path,
+            record,
+            2,
+            "claim-token-2",
+            fingerprint("C"),
+            "met",
+            work_item_id="task-b",
+            work_item_status="completed",
+        )
+        record = self.store.decide_step(
+            path,
+            expected_revision=record["state"]["revision"],
+            generation=2,
+            claim_token="claim-token-2",
+            decision="terminal_complete",
+            timestamp=BASE_TIME,
+        )
+        summary = self.store.summarize(path)
+        self.assertEqual(summary["finalized_receipt_count"], 2)
+        self.assertEqual(summary["phase"], "terminal_complete")
+        self.assertTrue(summary["reader_report"].startswith("Goal reached.\n"))
+        self.assertIn(json.dumps(record["goal_text"], ensure_ascii=False), summary["reader_report"])
+        self.assertTrue(summary["reader_report"].endswith("That goal was reached."))
+        self.assertEqual(record["completion_summary_sha256"], goal_state.sha256_json(record["completion_summary"]))
+
+    def test_single_objective_scope_rejects_unlisted_next_task(self):
+        path, record = self.initialize()
+        record = self.reserve_and_record(path, record)
+        record = self.claim(path, record)
+        record = self.returned_step(
+            path,
+            record,
+            1,
+            "claim-token",
+            fingerprint("B"),
+            "unmet",
+            work_item_status="completed",
+        )
+        revision = record["state"]["revision"]
+        with self.assertRaises(goal_state.StateConflict):
+            self.store.decide_step(
+                path,
+                expected_revision=revision,
+                generation=1,
+                claim_token="claim-token",
+                decision="continuation_required",
+                next_work_item_id="task-b",
+                timestamp=BASE_TIME,
+            )
+        self.assertEqual(self.store.read(path)["state"]["revision"], revision)
+
+    def test_research_to_project_system_repair_to_resumed_research_counts_every_frame(self):
+        path, record = self.initialize()
+        record = self.reserve_and_record(path, record)
+        record = self.claim(path, record)
+        record = self.returned_step(
+            path,
+            record,
+            1,
+            "claim-token",
+            fingerprint("B"),
+            "unmet",
+            work_item_status="in_progress",
+        )
+        manifest = dirty_manifest()
+        plan = self.recovery_plan(
+            record,
+            strategy_id="repair_generated_derivative",
+            worker_skill="improve-project-system",
+            manifest=manifest,
+        )
+        record = self.store.record_recovery_required(
+            path,
+            expected_revision=record["state"]["revision"],
+            generation=1,
+            claim_token="claim-token",
+            recovery_plan=plan,
+            timestamp=BASE_TIME,
+        )
+        self.assertEqual(record["state"]["phase"], "recovery_required")
+        self.assertEqual(len(record["recovery_ledger"]), 1)
+        record = self.reserve_and_record(path, record, generation=2, successor="thread-2")
+        self.assertEqual(
+            record["generations"]["2"]["route"]["worker_skill"],
+            "improve-project-system",
+        )
+        record = self.claim(path, record, generation=2, token="repair-claim")
+        revision = record["state"]["revision"]
+        with self.assertRaises(goal_state.StateConflict):
+            self.store.consume_invocation(
+                path,
+                expected_revision=revision,
+                generation=2,
+                claim_token="repair-claim",
+                worker_skill="continue-research",
+                timestamp=BASE_TIME,
+            )
+        with self.assertRaises(goal_state.StateConflict):
+            self.store.consume_invocation(
+                path,
+                expected_revision=revision,
+                generation=2,
+                claim_token="repair-claim",
+                worker_skill="improve-project-system",
+                observed_dirty_state_manifest=dirty_manifest(changed_hash="4" * 64),
+                timestamp=BASE_TIME,
+            )
+        self.assertEqual(self.store.read(path)["state"]["revision"], revision)
+        record = self.returned_step(
+            path,
+            record,
+            2,
+            "repair-claim",
+            fingerprint("C"),
+            "unmet",
+            worker_skill="improve-project-system",
+            work_item_status="repair_completed",
+            observed_dirty_state_manifest=manifest,
+        )
+        self.assertEqual(record["state"]["passes_consumed"], 2)
+        record = self.store.decide_step(
+            path,
+            expected_revision=record["state"]["revision"],
+            generation=2,
+            claim_token="repair-claim",
+            decision="continuation_required",
+            timestamp=BASE_TIME,
+        )
+        record = self.store.reserve_successor(
+            path,
+            expected_revision=record["state"]["revision"],
+            predecessor_thread_id="thread-2",
+            handoff_token="handoff-token-3",
+            timestamp=BASE_TIME,
+        )
+        self.assertEqual(record["generations"]["3"]["route"]["worker_skill"], "continue-research")
+        self.assertEqual(
+            record["generations"]["3"]["route"]["reason_id"],
+            "resume_research_after_project_system_repair",
+        )
+
+    def test_human_gated_item_is_deferred_while_independent_scope_continues(self):
+        path, record = self.initialize_multi()
+        record = self.reserve_and_record(path, record)
+        record = self.claim(path, record)
+        record = self.returned_step(
+            path,
+            record,
+            1,
+            "claim-token",
+            fingerprint("B"),
+            "unmet",
+            work_item_id="task-a",
+            work_item_status="deferred_human_gate",
+        )
+        record = self.store.decide_step(
+            path,
+            expected_revision=record["state"]["revision"],
+            generation=1,
+            claim_token="claim-token",
+            decision="continuation_required",
+            next_work_item_id="task-c",
+            timestamp=BASE_TIME,
+        )
+        self.assertEqual(record["state"]["phase"], "continuation_required")
+        self.assertEqual(record["state"]["approved_route"]["work_item_id"], "task-c")
+        self.assertIsNone(record["state"]["human_intervention"])
+
+    def test_repeated_fingerprint_switches_distinct_strategies_then_stops_with_exact_human_action(self):
+        path, record = self.initialize(passes=6)
+        record = self.reserve_and_record(path, record)
+        record = self.claim(path, record)
+        record = self.returned_step(
+            path,
+            record,
+            1,
+            "claim-token",
+            fingerprint("A"),
+            "unmet",
+            work_item_status="in_progress",
+        )
+        record = self.store.record_recovery_required(
+            path,
+            expected_revision=record["state"]["revision"],
+            generation=1,
+            claim_token="claim-token",
+            recovery_plan=self.recovery_plan(record, strategy_id="source_acquisition"),
+            timestamp=BASE_TIME,
+        )
+        record = self.reserve_and_record(path, record, generation=2, successor="thread-2")
+        record = self.claim(path, record, generation=2, token="claim-2")
+        record = self.returned_step(
+            path,
+            record,
+            2,
+            "claim-2",
+            fingerprint("A"),
+            "unmet",
+            work_item_status="in_progress",
+        )
+        duplicate_plan = self.recovery_plan(record, strategy_id="source_acquisition")
+        revision = record["state"]["revision"]
+        with self.assertRaises(goal_state.StateConflict):
+            self.store.record_recovery_required(
+                path,
+                expected_revision=revision,
+                generation=2,
+                claim_token="claim-2",
+                recovery_plan=duplicate_plan,
+                timestamp=BASE_TIME,
+            )
+        record = self.store.record_recovery_required(
+            path,
+            expected_revision=revision,
+            generation=2,
+            claim_token="claim-2",
+            recovery_plan=self.recovery_plan(record, strategy_id="bounded_calculation"),
+            timestamp=BASE_TIME,
+        )
+        record = self.reserve_and_record(path, record, generation=3, successor="thread-3")
+        record = self.claim(path, record, generation=3, token="claim-3")
+        record = self.returned_step(
+            path,
+            record,
+            3,
+            "claim-3",
+            fingerprint("A"),
+            "unmet",
+            work_item_status="blocked",
+        )
+        record = self.store.decide_step(
+            path,
+            expected_revision=record["state"]["revision"],
+            generation=3,
+            claim_token="claim-3",
+            decision="terminal_no_progress",
+            human_intervention=human_intervention(
+                "source_acquisition",
+                "bounded_calculation",
+            ),
+            timestamp=BASE_TIME,
+        )
+        self.assertEqual(record["state"]["passes_consumed"], 3)
+        self.assertEqual(record["state"]["phase"], "terminal_no_progress")
+        self.assertTrue(
+            record["human_intervention_summary"]["reader_report"].startswith(
+                "Goal not reached — human action required"
+            )
+        )
+
+    def test_dispatch_reconciliation_retries_only_after_zero_children_or_adopts_one(self):
+        path, record = self.initialize()
+        record = self.store.reserve_successor(
+            path,
+            expected_revision=record["state"]["revision"],
+            predecessor_thread_id="launcher",
+            handoff_token="handoff-token-1",
+            timestamp=BASE_TIME,
+        )
+        record = self.store.reconcile_dispatch(
+            path,
+            expected_revision=record["state"]["revision"],
+            generation=1,
+            handoff_token="handoff-token-1",
+            recovery_evidence={
+                "prior_holder_terminal": True,
+                "matching_unclaimed_successor_ids": [],
+                "capability_available": True,
+                "inspection_evidence_hashes": ["5" * 64],
+            },
+            timestamp=BASE_TIME,
+        )
+        self.assertEqual(record["state"]["phase"], "recovery_required")
+        record = self.store.reserve_successor(
+            path,
+            expected_revision=record["state"]["revision"],
+            predecessor_thread_id="launcher",
+            handoff_token="handoff-token-2",
+            timestamp=BASE_TIME,
+        )
+        self.assertEqual(record["state"]["current_generation"], 2)
+
+        with tempfile.TemporaryDirectory() as temp:
+            store = goal_state.GoalStore(Path(temp) / "goals")
+            path, record = store.initialize(
+                goal_text="dispatch adoption fixture",
+                completion_contract=contract(),
+                scope_contract=scope_contract(),
+                max_continue_passes=2,
+                max_elapsed_minutes=30,
+                repository_binding=binding(),
+                initial_fingerprint=fingerprint("A"),
+                timestamp=BASE_TIME,
+            )
+            record = store.reserve_successor(
+                path,
+                expected_revision=record["state"]["revision"],
+                predecessor_thread_id="launcher",
+                handoff_token="token",
+                timestamp=BASE_TIME,
+            )
+            revision = record["state"]["revision"]
+            with self.assertRaises(goal_state.StateConflict):
+                store.reconcile_dispatch(
+                    path,
+                    expected_revision=revision,
+                    generation=1,
+                    handoff_token="token",
+                    recovery_evidence={
+                        "prior_holder_terminal": True,
+                        "matching_unclaimed_successor_ids": ["thread-a", "thread-b"],
+                        "capability_available": True,
+                        "inspection_evidence_hashes": ["6" * 64],
+                    },
+                    timestamp=BASE_TIME,
+                )
+            self.assertEqual(store.read(path)["state"]["revision"], revision)
+            record = store.reconcile_dispatch(
+                path,
+                expected_revision=revision,
+                generation=1,
+                handoff_token="token",
+                recovery_evidence={
+                    "prior_holder_terminal": True,
+                    "matching_unclaimed_successor_ids": ["thread-only"],
+                    "capability_available": True,
+                    "inspection_evidence_hashes": ["7" * 64],
+                },
+                timestamp=BASE_TIME,
+            )
+            self.assertEqual(record["state"]["phase"], "successor_created")
+            self.assertEqual(record["handoff"]["successor_thread_id"], "thread-only")
+
+    def test_scope_contract_hash_and_route_hash_fail_closed(self):
+        path, record = self.initialize()
+        tampered = copy.deepcopy(record)
+        tampered["scope_contract"]["exclusions"].append("silently added exclusion")
+        path.write_text(goal_state.render_goal(tampered), encoding="utf-8")
+        with self.assertRaises(goal_state.ValidationError):
+            self.store.read(path)
+        path.write_text(goal_state.render_goal(record), encoding="utf-8")
+        record = self.reserve_and_record(path, record)
+        tampered = copy.deepcopy(record)
+        tampered["generations"]["1"]["route"]["strategy_id"] = "rewritten"
+        path.write_text(goal_state.render_goal(tampered), encoding="utf-8")
+        with self.assertRaises(goal_state.ValidationError):
+            self.store.read(path)
 
 
 class FingerprintAndReceiptTests(GoalStateTestCase):
@@ -948,6 +1564,7 @@ class FingerprintAndReceiptTests(GoalStateTestCase):
                 path, record = store.initialize(
                     goal_text="fingerprint fixture",
                     completion_contract=contract(),
+                    scope_contract=scope_contract(),
                     max_continue_passes=3,
                     max_elapsed_minutes=30,
                     repository_binding=binding(),
@@ -957,9 +1574,9 @@ class FingerprintAndReceiptTests(GoalStateTestCase):
                 record = store.reserve_successor(path, expected_revision=record["state"]["revision"], predecessor_thread_id="launcher", handoff_token="handoff-token-1", timestamp=BASE_TIME)
                 record = store.record_successor(path, expected_revision=record["state"]["revision"], generation=1, handoff_token="handoff-token-1", successor_thread_id="thread-1", timestamp=BASE_TIME)
                 record = store.claim_generation(path, expected_revision=record["state"]["revision"], generation=1, handoff_token="handoff-token-1", idempotency_key=f"{record['goal_id']}:1", claim_token="claim", timestamp=BASE_TIME)
-                record = store.consume_invocation(path, expected_revision=record["state"]["revision"], generation=1, claim_token="claim", timestamp=BASE_TIME)
-                record = store.record_invocation_returned(path, expected_revision=record["state"]["revision"], generation=1, claim_token="claim", execution_evidence={"returned": True}, timestamp=BASE_TIME)
-                record = store.verify_step(path, expected_revision=record["state"]["revision"], generation=1, claim_token="claim", after_fingerprint=after, goal_evaluation="unmet", evidence={"progress_summary": "none"}, timestamp=BASE_TIME)
+                record = store.consume_invocation(path, expected_revision=record["state"]["revision"], generation=1, claim_token="claim", worker_skill="continue-research", timestamp=BASE_TIME)
+                record = store.record_invocation_returned(path, expected_revision=record["state"]["revision"], generation=1, claim_token="claim", worker_skill="continue-research", execution_evidence={"returned": True}, timestamp=BASE_TIME)
+                record = store.verify_step(path, expected_revision=record["state"]["revision"], generation=1, claim_token="claim", after_fingerprint=after, goal_evaluation="unmet", evidence={"progress_summary": "none", "work_result": work_result(status="in_progress", progress="no canonical progress")}, timestamp=BASE_TIME)
                 with self.assertRaises(goal_state.StateConflict):
                     store.decide_step(path, expected_revision=record["state"]["revision"], generation=1, claim_token="claim", decision="continuation_required", timestamp=BASE_TIME)
 
@@ -1026,6 +1643,7 @@ class CrashWindowTests(GoalStateTestCase):
             handoff_token="handoff-token-1",
             outcome="ambiguous",
             diagnostic={"create_result": "unknown"},
+            human_intervention=human_intervention(),
             timestamp=BASE_TIME,
         )
         record = self.store.begin_recovery(
@@ -1058,8 +1676,8 @@ class CrashWindowTests(GoalStateTestCase):
         path, record = self.initialize()
         record = self.reserve_and_record(path, record)
         record = self.claim(path, record)
-        record = self.store.consume_invocation(path, expected_revision=record["state"]["revision"], generation=1, claim_token="claim-token", timestamp=BASE_TIME)
-        record = self.store.record_invocation_uncertain(path, expected_revision=record["state"]["revision"], generation=1, claim_token="claim-token", diagnostic={"crash": "return-before-receipt"}, timestamp=BASE_TIME)
+        record = self.store.consume_invocation(path, expected_revision=record["state"]["revision"], generation=1, claim_token="claim-token", worker_skill="continue-research", timestamp=BASE_TIME)
+        record = self.store.record_invocation_uncertain(path, expected_revision=record["state"]["revision"], generation=1, claim_token="claim-token", worker_skill="continue-research", diagnostic={"crash": "return-before-receipt"}, human_intervention=human_intervention(), timestamp=BASE_TIME)
         record = self.store.begin_recovery(path, expected_revision=record["state"]["revision"], user_authorization="reconcile returned pass", canonical_reconciliation={"holder_terminal": True}, timestamp=BASE_TIME)
         record = self.store.reconcile_consumed(
             path,
@@ -1067,8 +1685,9 @@ class CrashWindowTests(GoalStateTestCase):
             generation=1,
             returned_proven=True,
             terminal_holder_proof={"thread_state": "completed"},
-            canonical_evidence={"after_head": "b" * 40, "goal_evaluation": "unmet", "progress_summary": "pass returned"},
+            canonical_evidence={"after_head": "b" * 40, "goal_evaluation": "unmet", "progress_summary": "pass returned", "work_result": work_result(status="in_progress", progress="pass returned")},
             decision="terminal_awaiting_human",
+            human_intervention=human_intervention(),
             timestamp=BASE_TIME,
         )
         receipt = next(item for item in record["journal"] if item["kind"] == "step_receipt")

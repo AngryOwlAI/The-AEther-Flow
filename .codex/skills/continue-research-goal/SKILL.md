@@ -10,6 +10,12 @@ research relay and supplies the required goal:
 
 ```yaml
 goal: <nonblank exact research objective>
+scope:
+  mode: single_objective | multi_step
+  included_work_items: <exact immutable work-item list>
+  dependency_source: <null or exact path and SHA-256>
+  exclusions: <nonempty list>
+  source_hashes: <path-to-SHA-256 map>
 max_continue_passes: <optional positive integer; default null means unlimited>
 deadline_at: <optional absolute timezone-aware timestamp; default null means unlimited>
 max_elapsed_minutes: <optional positive integer compatibility alias for deadline_at>
@@ -22,8 +28,13 @@ non-future value. `--deadline-at` is the canonical CLI override;
 
 This is a launcher, not a research worker. It creates one durable ignored goal
 record, dispatches one fresh `continue-research-continue-goal` discussion, and
-ends. It invokes `continue-research` zero times and creates no native Codex
-goal.
+ends. It invokes `continue-research` zero times, invokes
+`improve-project-system` zero times, and creates no native Codex goal.
+
+`single_objective` is the default for one task-specific goal. `multi_step` is
+lawful only when the exact original user goal explicitly includes every work
+item and the dependency source. A task-specific goal may never be repurposed
+for later work merely because scheduling budget remains.
 
 ## Authority and Runtime Sources
 
@@ -41,8 +52,10 @@ summary is not runtime authority.
 
 The goal record is orchestration state only. It cannot choose an AgentJob,
 change tracked research-control state, prove scientific completion, weaken a
-human gate, or promote any claim. `continue-research` remains the only
-one-packet research authority.
+human gate, or promote any claim. `continue-research` remains the one-packet
+research authority. `improve-project-system` remains the one-packet
+project-system repair authority. A v3 generation route chooses between those
+two existing skills without expanding either skill's authority.
 
 ## Repository Binding Profiles
 
@@ -103,31 +116,48 @@ incompatible, stop before goal creation. Do not substitute a fork, follow-up,
 handoff, shell prompt injection, controller, hook, plugin, or App Server
 client.
 
-## Input and Completion-Contract Gate
+## Input, Scope, and Completion-Contract Gate
 
 Preserve the user-supplied goal exactly after CRLF/CR-to-LF canonicalization;
 do not trim, dedent, normalize Unicode, or add a terminal newline. Reject a
 goal containing credentials, access tokens, private keys, or other secrets.
 
 Derive a plain-language completion contract naming the canonical repository
-evidence and validator/checkpoint conditions that would prove success. Ask for
-clarification before writing state only when an operational interpretation
-would materially narrow, broaden, or rewrite the goal. The original goal,
-original completion contract, scheduling guards, fixed guards, and repository
-binding are immutable.
+evidence and validator/checkpoint conditions that would prove success. Also
+derive one immutable `scope_contract`:
 
-New records use `continue-research-goal.v2`. Omitted
+- `mode` is `single_objective` or `multi_step`;
+- every included work item has a stable ID, exact objective, and in-scope
+  dependency list;
+- a structured `multi_step` goal names the exact dependency-source path and
+  SHA-256;
+- exclusions and every source hash are explicit; and
+- `allow_scope_expansion` is exactly `false`.
+
+Ask for clarification before writing state when an operational interpretation
+would materially narrow, broaden, or rewrite the goal or when an asserted
+multi-step scope is not explicit in the original user request. The original
+goal, original completion contract, scope contract, scheduling guards, fixed
+guards, and repository binding are immutable.
+
+New records use `continue-research-goal.v3`. Omitted
 `max_continue_passes` and `deadline_at` values are persisted independently as
 JSON `null`; each `null` disables only its corresponding count or elapsed-time
 stop. Continue recording `passes_consumed` even when the pass horizon is
-unlimited. The helper retains exact read and validation support for finite v1
-records and never migrates or rewrites them.
+unlimited. The helper retains byte-compatible read and validation behavior for
+v1 and v2 records. It never migrates, rewrites, or automatically resumes them.
+
+Every v3 generation has one immutable route containing the worker skill,
+reason and strategy identifiers, source generation, included work-item ID,
+canonical blocker fingerprint, evidence hashes, and any exact dirty-state
+manifest. The initial route is `continue-research`; later routes are approved
+only by verified in-scope continuation or `record-recovery-required`.
 
 “Unlimited” applies only to the scheduling horizon. It does not expand the
-single bounded AgentJob permitted in each relay frame, weaken human gates,
-disable no-progress or repeated-state detection, bypass validation or
-checkpoint requirements, relax leases or repository identity, permit
-concurrency, or authorize a successor when any other stop applies.
+single bounded AgentJob permitted in each worker frame, weaken human gates,
+bypass validation or checkpoint requirements, relax leases or repository
+identity, permit concurrency, broaden the scope contract, repeat a consumed
+generation, or repeat the same recovery strategy for the same blocker.
 
 Fixed guards are:
 
@@ -145,6 +175,13 @@ stop_on_capability_loss: true
 stop_on_branch_or_repository_mismatch: true
 ```
 
+For v3, a validation, checkpoint, dirty-state, no-progress, or repeated-state
+finding does not itself force terminalization. The generation must first select
+a distinct safe authorized recovery strategy when one exists. A non-success
+terminal is lawful only when the user cancels, a finite guard is reached, or
+canonical evidence proves that no safe authorized AI route remains and names
+one exact human action.
+
 ## Deterministic State Helper
 
 Use only the repository helper:
@@ -158,20 +195,35 @@ subcommand. The helper provides exclusive initialization, schema/hash/journal
 validation, compare-and-swap revisions, per-goal and worktree-global lease
 parity, successor reservation, idempotent successor-ID recording, generation
 claims, pre-execution consumption, receipt finalization, terminalization, and
-explicit recovery. It has no research, task-management, Git mutation, commit,
-or scientific-evaluation authority.
+explicit recovery. V3 additionally provides:
+
+- `initialize --scope-contract-json`;
+- `record-recovery-required --recovery-plan-json`;
+- route-aware `reserve-successor`;
+- worker-skill and exact repair-manifest checks in `consume` and `returned`;
+- `reconcile-dispatch` for zero-or-one-child proof;
+- mandatory `--human-intervention-json` on non-success terminal operations;
+  and
+- read-only `summarize`, which validates and aggregates finalized receipts and
+  renders the terminal report.
+
+It has no research, task-management, Git mutation, commit, or
+scientific-evaluation authority.
 
 Treat every helper conflict or validation error as fail-closed. Never hand-edit
 a goal record or lease. Lease expiry is diagnostic and never authorizes
-stealing.
+stealing. Every state-changing research or project-system worker frame consumes
+one pass before invocation. A helper-only routing or dispatch-reconciliation
+operation consumes no pass.
 
 ## Launcher Workflow
 
 After all preflight checks pass:
 
 1. call helper `initialize` exactly once with the exact goal, completion
-   contract, optional scheduling guards, fixed guards, repository binding, and
-   initial canonical fingerprint;
+   contract, scope-contract JSON, optional scheduling guards, fixed guards,
+   repository binding, and initial canonical fingerprint; the helper writes the
+   approved generation-1 `continue-research` route;
 2. retain the returned absolute `goal_file`, `goal_id`, revision, and launcher
    lease evidence;
 3. call helper `reserve-successor` once for generation 1, creating one random
@@ -200,8 +252,9 @@ handoff_token: <unguessable token>
 idempotency_key: <goal-id>:1
 
 Wait for the handoff to reach successor_created, then atomically claim this
-generation. Follow $continue-research-continue-goal exactly. It authorizes one
-$continue-research invocation and at most one successor discussion.
+generation. Read and obey its immutable worker_skill route. Follow
+$continue-research-continue-goal exactly. It authorizes one routed worker-skill
+invocation and at most one successor discussion.
 ```
 
 Do not duplicate the goal text in the prompt. The goal file is the continuation
@@ -209,11 +262,18 @@ token.
 
 ## Dispatch Failure
 
-- On a definitive create failure, record `terminal_failed`, release both
-  leases, and stop.
-- On an ambiguous create result, record `terminal_handoff_ambiguous`,
-  quarantine both leases, write the ignored dispatch-recovery sidecar if a
-  returned ID could not be persisted, and stop for explicit recovery.
+- On a definitive create failure or timeout, inspect task state once. Call
+  `reconcile-dispatch` only when canonical evidence proves either that no child
+  exists and task creation capability remains available, or that exactly one
+  matching unclaimed child exists. The first case approves one new
+  idempotent generation; the second records that one child.
+- On duplicate matching children, unavailable capability, uncertain
+  invocation, or unresolved ambiguity, record the mapped non-success terminal
+  with exact human-intervention JSON. Quarantine leases where the schema
+  requires it.
+- On an ambiguous create result without zero-or-one-child proof, record
+  `terminal_handoff_ambiguous`, quarantine both leases, and write the ignored
+  dispatch-recovery sidecar if a returned ID could not be persisted.
 - If a concrete thread ID was returned but record persistence fails, retry
   only the idempotent record-only operation for a short bounded count. Never
   call `create_thread` again for the same intent.
@@ -231,14 +291,16 @@ authorized only to poll until the handoff is recorded and its atomic claim
 wins.
 
 Report the goal path and ID, immutable goal hash, generation, successor task
-ID, repository root/branch/HEAD, initial fingerprint, helper revision, and
-launcher stop reason. Worker prose is telemetry only.
+ID, scope-contract hash, generation route hash, repository root/branch/HEAD,
+initial fingerprint, helper revision, and launcher stop reason. Worker prose is
+telemetry only.
 
 ## Forbidden Actions
 
 - Never call native goal operations (`create_goal`, `get_goal`, `update_goal`,
   `/goal`, or `thread/goal/*`).
 - Never invoke `continue-research` from the launcher.
+- Never invoke `improve-project-system` from the launcher.
 - Never execute an AgentJob, author a Director decision, or evaluate a physics
   result from the launcher.
 - Never create more than one initial successor or retry an ambiguous task
@@ -249,3 +311,4 @@ launcher stop reason. Worker prose is telemetry only.
   branch/worktree.
 - Never register, checkpoint, promote, or generate wiki artifacts from runtime
   goal files.
+- Never omit, infer away, or broaden the immutable scope contract.

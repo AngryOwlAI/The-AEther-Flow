@@ -1,0 +1,56 @@
+{
+  "distance_to_gr_delta_changed": false,
+  "errors": [],
+  "historical_p0_t02_tree_sha256": "62d50465c8223c022f2802203b59f6d52216eae9c2049a50d343cdcb02b1b5ef",
+  "historical_p0_t02_unchanged": true,
+  "plan_task_id": "P0-T03",
+  "policy_sha256": "18c4cfe125883dc84da84156e0337a58720eab9c9c471d635fb5b01fc739e858",
+  "recovery_required_is_nonterminal": true,
+  "recursive_scenario_count": 6,
+  "retained_schema_versions": [
+    "continue-research-goal.v1",
+    "continue-research-goal.v2"
+  ],
+  "runtime_schema": "continue-research-goal.v3",
+  "scenario_count": 15,
+  "scenario_ids": [
+    "S01_MULTI_STEP_INCLUDED_TASKS",
+    "S02_SINGLE_OBJECTIVE_SCOPE_PROTECTION",
+    "S03_RESEARCH_REPAIR_RESUME",
+    "S04_HUMAN_GATE_WITH_INDEPENDENT_WORK",
+    "S05_STRATEGY_SWITCH_ON_REPEAT",
+    "S06_STRATEGY_EXHAUSTION",
+    "S07_EXPLICIT_GUARD_STOP",
+    "S08_DIRTY_MANIFEST_MISMATCH",
+    "S09_ZERO_CHILD_DISPATCH",
+    "S10_ONE_CHILD_DISPATCH_ADOPTION",
+    "S11_AMBIGUOUS_OR_DUPLICATE_DISPATCH",
+    "S12_DUPLICATE_WORKER_OR_LEASE",
+    "S13_UNCERTAIN_CONSUMED_INVOCATION",
+    "S14_DETERMINISTIC_SUCCESS_REPORT",
+    "S15_V1_V2_HISTORICAL_VALIDATION"
+  ],
+  "scenarios_sha256": "73ebd5d03153a309533364de822c453de5fe06f06bb5735ca9930d1040446c65",
+  "schema_version": "v20-goal-relay-policy-validation.v3",
+  "scientific_claims_changed": false,
+  "scope_modes": [
+    "multi_step",
+    "single_objective"
+  ],
+  "source_hashes": {
+    ".codex/skills/continue-research-continue-goal/SKILL.md": "aed1d57b99d616711e05a942d9d49a403fc896c3f95f44f8599f541af8ce44bf",
+    ".codex/skills/continue-research-goal/SKILL.md": "751e0bb4448adbf1cf11af170c1224eedcb8e8d9d90b167fe1a982d5b59eb68e",
+    ".codex/skills/continue-research-goal/references/goal-file-schema.md": "fbc56eedc3bde63f275df9e7bb881e0b9392c66152be7699200d418cd0622852",
+    ".codex/skills/continue-research-goal/scripts/goal_state.py": "7397123a1ed6188da4f8fa8aeffb4d899566c4ff3e772d088b2a465e3a369c58",
+    ".codex/skills/continue-research/SKILL.md": "4ff16918097dd940bfed731f921acbe496b3e5a1d14f43a0fd352e74b7b0173f",
+    "research_control/tasks/RT-20260718-011/artifacts/v20_recommendation_backlog.yaml": "01680dd2bebfbb46faef039541610436153259d141e5515b70b4f55c7cfea06c",
+    "tests/test_continue_research_goal_state.py": "0717146d8513af7f5587fd6e57f65216ab32edbc6cf428f884fd55e4f1f26ed3"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260718-012",
+  "terminal_scenario_count": 9,
+  "worker_skills": [
+    "continue-research",
+    "improve-project-system"
+  ]
+}

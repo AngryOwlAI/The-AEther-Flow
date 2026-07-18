@@ -1,0 +1,54 @@
+task_id: "RT-20260718-012"
+task_type: "v20_autonomous_goal_relay_v3_policy"
+status: "completed"
+created_at: "2026-07-18T21:44:28Z"
+updated_at: "2026-07-18T21:44:28Z"
+closed_at: "2026-07-18T21:44:28Z"
+closure_status: "v20_p0_t03_autonomous_goal_relay_v3_pass_no_physics_delta"
+parent_task_id: "RT-20260718-011"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260718-012"
+current_job_id: "AJ-RT-20260718-012-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260718-012"
+requires_human_gate: false
+human_authorization_note: "The user explicitly requested implementation of the attached autonomous continue-research-goal relay plan, including one bounded Project-Control Maintainer AgentJob and governed supersession of P0-T03's stop-heavy assumptions."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v20"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v20.md"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T03"
+  plan_task_name: "Validate the v20 continue-research-goal execution policy"
+  superseding_user_plan_sha256: "c173a60aa52a95804d37944d580fde5c4c4b2e7d3604f961b8e5be6314197e82"
+  recommendation_ids:
+    - "V20-R02"
+    - "V20-R14"
+    - "V20-R16"
+    - "V20-R18"
+    - "V20-R20"
+objective: "Implement and validate continue-research-goal.v3 with immutable goal scope, autonomous evidence-backed recovery, routed research or project-system frames, deterministic terminal reporting, retained v1/v2 validation, and a governed P0-T03 supersession policy."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system relay-governance implementation only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_user_plan: true
+claim_boundary_id: "CB-V20-P0-T03-AUTONOMOUS-GOAL-RELAY-V3-001"
+claim_boundary:
+  allowed_scope: "Modify the launcher and relay-worker skills, v3 schema/helper, focused tests, and one P0-T03 control packet needed to implement the exact user-authorized autonomous relay contract."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  v19_human_boundary_preserved: "await_explicit_publication_authority_for_v19_p11_t04"
+  completed_p0_t02_preserved: true
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md"
+  - "research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_scenarios.json"
+  - "research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_policy_validation.json"
+  - "research_control/tasks/RT-20260718-012/artifacts/validate_v20_goal_relay_policy.py"
+next_recommended_action: "P0-T04 remains outside this single-objective transaction and may begin only through a new explicit user-authorized goal."
+documentation_impact_id: "DI-RT-20260718-012-001"
+completion_id: "AJC-AJ-RT-20260718-012-001"
+notes: "The supersession changes project-control runtime behavior only. It neither reopens P0-T02 nor changes program_state, handoff-0740, canonical science, or protected authority."

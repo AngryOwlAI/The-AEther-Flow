@@ -1,0 +1,264 @@
+completion_id: "AJC-AJ-RT-20260718-012-001"
+job_id: "AJ-RT-20260718-012-001"
+task_id: "RT-20260718-012"
+decision_id: "DDR-20260718-012"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260718-012"
+status: "completed"
+created_at: "2026-07-18T21:44:28Z"
+started_at: "2026-07-18T21:44:28Z"
+completed_at: "2026-07-18T21:44:28Z"
+objective: "Implement and validate the bounded v20 P0-T03 autonomous continue-research-goal.v3 policy without changing science or executing P0-T04."
+completion_summary: "V20 P0-T03 is complete: continue-research-goal.v3 now enforces immutable single-objective or explicit multi-step scope, route-bound research or project-system frames, append-only distinct-strategy recovery, dirty-state and dispatch reconciliation, mandatory evidence-backed terminals, deterministic goal reporting, and validation-only v1/v2 retention."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v20"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v20.md"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T03"
+  recommendation_ids:
+    - "V20-R02"
+    - "V20-R14"
+    - "V20-R16"
+    - "V20-R18"
+    - "V20-R20"
+  superseding_user_plan_sha256: "c173a60aa52a95804d37944d580fde5c4c4b2e7d3604f961b8e5be6314197e82"
+  implementation_status: "completed"
+  completed_v20_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+  downstream_tasks_not_implemented:
+    - "P0-T04 and every later v20 task"
+goal_receipt:
+  goal_id: "user-plan-c173a60aa52a9580"
+  goal_sha256: "c173a60aa52a95804d37944d580fde5c4c4b2e7d3604f961b8e5be6314197e82"
+  goal_kind: "direct_user_authorized_implementation_plan"
+  generation: 1
+  passes_consumed: 1
+  terminal_phase: "terminal_complete"
+  idempotency_key: "user-plan-c173a60aa52a9580:1"
+  runtime_goal_record_created: false
+  rationale: "This bounded AgentJob implements and validates the relay launcher itself; it does not recursively launch that same runtime while replacing it."
+transaction_status: "completed"
+result_disposition: "implemented"
+epistemic_status: "verified_project_control_runtime_contract"
+burden_effect: "no_distance_delta"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "v20_p0_t03_autonomous_goal_relay_v3"
+project_system_boundary_authorized_by_user_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v20"
+  source_recommendation_ids:
+    - "V20-R02"
+    - "V20-R14"
+    - "V20-R16"
+    - "V20-R18"
+    - "V20-R20"
+  implements_plan_task_id: "P0-T03"
+  implementation_status: "completed"
+  coverage_effect: "direct"
+  remaining_work:
+    - "P0-T04 and every later v20 task require a separate explicit user-authorized goal."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Relay-governance implementation is project-control work and discharges no scientific burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+outputs_created:
+  - "research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md"
+  - "research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_scenarios.json"
+  - "research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_policy_validation.json"
+  - "research_control/tasks/RT-20260718-012/artifacts/validate_v20_goal_relay_policy.py"
+  - "research_control/tasks/RT-20260718-012/00_TASK.yaml"
+  - "research_control/tasks/RT-20260718-012/DDR-20260718-012.md"
+  - "research_control/tasks/RT-20260718-012/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-012/jobs/AJ-RT-20260718-012-001.yaml"
+  - "research_control/tasks/RT-20260718-012/jobs/completions/AJC-AJ-RT-20260718-012-001.yaml"
+  - "research_control/tasks/RT-20260718-012/roles/project-control-maintainer@0.2.0--RT-20260718-012.yaml"
+outputs_updated:
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-goal/scripts/goal_state.py"
+  - "tests/test_continue_research_goal_state.py"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+artifact_evidence:
+  policy:
+    path: "research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md"
+    sha256: "18c4cfe125883dc84da84156e0337a58720eab9c9c471d635fb5b01fc739e858"
+  scenarios:
+    path: "research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_scenarios.json"
+    sha256: "73ebd5d03153a309533364de822c453de5fe06f06bb5735ca9930d1040446c65"
+  validation:
+    path: "research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_policy_validation.json"
+    sha256: "dc08b90b0f13b04cfe572e1d52d88d70214126eff128b6b9e02ca2f14ef5ccd2"
+  validator:
+    path: "research_control/tasks/RT-20260718-012/artifacts/validate_v20_goal_relay_policy.py"
+    sha256: "e6bec75ae452e108109b95d63d74d4635aab8cd7c26b705d2f60062765263296"
+  completed_p0_t02_tree:
+    path: "research_control/tasks/RT-20260718-011"
+    sha256: "62d50465c8223c022f2802203b59f6d52216eae9c2049a50d343cdcb02b1b5ef"
+runtime_contract_evidence:
+  schema_version: "continue-research-goal.v3"
+  retained_schema_versions:
+    - "continue-research-goal.v1"
+    - "continue-research-goal.v2"
+  scope_modes:
+    - "single_objective"
+    - "multi_step"
+  worker_skills:
+    - "continue-research"
+    - "improve-project-system"
+  recovery_phase: "recovery_required"
+  scenario_count: 15
+  terminal_scenario_count: 9
+  recursive_scenario_count: 6
+  focused_test_count: 55
+  focused_expected_skip_count: 1
+command_results:
+  - ".venv/bin/python -m unittest tests.test_continue_research_goal_state | exit_code=0 | 55 tests PASS 1 expected skip"
+  - ".venv/bin/python research_control/tasks/RT-20260718-012/artifacts/validate_v20_goal_relay_policy.py --write --json | exit_code=0 | PASS 15 scenarios 9 terminal 6 recursive P0-T02 unchanged"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | 993 tests PASS 1 expected skip after derivative synchronization"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | memory profile PASS and generated derivatives synchronized"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS findings=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS hard errors=0"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The starting branch was codex/v20-implementation at fcf72504823ffe5e69250f5c484ec2b9cea3e8e5 with a clean worktree."
+      - "Current relay skills, schema, program state, handoff-0740, P0-T02 completion, v20 plan, role authority, and registries were inspected directly."
+  baseline:
+    status: "PASS"
+    evidence:
+      - "The focused pre-change suite passed 47 tests with one expected skip."
+      - "The initial branch was codex/v20-implementation at fcf72504823ffe5e69250f5c484ec2b9cea3e8e5 with a clean worktree."
+  focused_state_machine:
+    status: "PASS"
+    evidence:
+      - "55 focused tests pass with one expected skip."
+      - "V3 scenarios cover multi-step and single-scope behavior, repair routing, deferred gates, strategy switching, guard safety, dispatch reconciliation, hash integrity, deterministic summaries, and retained v1/v2 validation."
+  task_local_policy:
+    status: "PASS"
+    evidence:
+      - "15 policy scenarios map only to legal recursive or terminal v3 phases."
+      - "All tracked runtime source hashes agree and the completed P0-T02 task tree remains unchanged."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The completion names the exact plan task, five recommendation IDs, direct user-plan hash, one bounded AgentJob, no-distance delta, and the separate P0-T04 boundary."
+      - "The recorded artifact hashes agree with the task-local validator and completed P0-T02 is unchanged."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Documentation-impact validation passes with zero findings and research-control diff validation passes with zero hard errors."
+      - "Changed-source claim-language validation has zero hard failures; historical warnings remain advisory."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization completed and validate-only reports memory profile PASS."
+      - "The live idempotence test passes after synchronization."
+  repository_test_suite:
+    status: "PASS"
+    evidence:
+      - "The complete repository suite passes 993 tests with one expected skip."
+      - "The first broad run exposed only stale pre-bootstrap generated outputs; the exact live acceptance test and full suite passed after the required bootstrap."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "The governed checkpoint records the exact commit without push."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The governed memory bootstrap regenerated the four affected skill/policy wiki notes, indexes, master registries, and FOLDER_MAP."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source validation has zero hard failures; 1474 historical warnings remain advisory."
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The user directly authorized the bounded project-system contract change; focused and policy validation found no separate unresolved repair signal."
+preserved_state:
+  program_state_changed: false
+  ordinary_research_handoff: "handoff-0740"
+  ordinary_research_route: "EqSrc_family_closure_repair_or_stress"
+  completed_p0_t02_changed: false
+  v19_human_boundary: "await_explicit_publication_authority_for_v19_p11_t04"
+  distance_to_gr_changed: false
+forbidden_conclusion_summary: "Relay v3 implementation policy PASS checkpoint completion or autonomous recovery is not scientific proof and does not authorize P0-T04 goal expansion canonical ontology source-law adoption EqSrc discharge matter coupling Einstein equations benchmark promotion Gate Chair authority publication push or completed derivation."
+selected_next_route:
+  route_id: "v20_p0_t04_baseline_capture"
+  plan_task_id: "P0-T04"
+  requires_new_goal_record: true
+  requires_explicit_user_authorization: true
+  next_action: "Do not start P0-T04 from this single-objective goal."
+verdict: "v20_p0_t03_autonomous_goal_relay_v3_pass_no_physics_delta"
+coherent_resolution_summary: "RT-20260718-012 synchronizes the split launcher worker schema helper and test contract at v3 validates 15 autonomous routing scenarios retains historical v1/v2 and P0-T02 evidence and preserves all research and scientific authority."
+next_recommendation: "No further action is needed for this goal; P0-T04 requires a separate explicit request."
+rollback_or_repair_notes: "If final validation fails, repair only the v3 runtime/test packet, this P0-T03 transaction, and its generated registry derivatives; do not alter P0-T02, handoff-0740, program_state, or science."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 821
+    relationship_row_count: 4084
+    semantic_row_count: 821
+    vault_row_count: 821
+    local_cache_only_warning_count: 0
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-011/artifacts/v20_recommendation_backlog_schema.md --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-011/artifacts/v20_recommendation_backlog_schema.md"
+      returned_object_ids:
+        - "MD-V20-RECOMMENDATION-BACKLOG-SCHEMA"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v20.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v20.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V20"
+  canonical_inspections:
+    - object_id: "MD-V20-RECOMMENDATION-BACKLOG-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-011/artifacts/v20_recommendation_backlog_schema.md"
+      source_hash: "959fe92c0db426a184b1cd56acb61d8de976e7d4f5fab8a983502c4c0fa4ee58"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V20"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v20.md"
+      source_hash: "6ef3fc85f89dcfc71832298a3ff846e0425e93a61a7409801f737c2132f8ba6a"
+  authority_note: "Obsidian wiki semantic SQLite and .local retrieval layers are navigation only and not authority; canonical tracked sources and registries were inspected directly."
+validation_status: "PASS"
