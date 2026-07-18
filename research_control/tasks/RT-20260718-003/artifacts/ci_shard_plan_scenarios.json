@@ -1,0 +1,151 @@
+{
+  "schema_id": "v19_ci_shard_plan_scenarios_v1",
+  "status": "PASS",
+  "task_id": "RT-20260718-003",
+  "comparison_mode": "shadow",
+  "scenarios": {
+    "workflow": {
+      "paths": [
+        ".github/workflows/project-control-validation.yml"
+      ],
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_ids": [
+        "classify_changes",
+        "resolve_project_improvement",
+        "documentation_impact",
+        "memory_sync",
+        "memory_core",
+        "spec_depth",
+        "research_control_diff",
+        "current_frontier_freshness",
+        "compact_frontier_freshness",
+        "claim_graph_validation",
+        "route_signature_diagnostic",
+        "git_diff_check",
+        "continue_memory_preflight"
+      ],
+      "unknown_paths": []
+    },
+    "research_control_task": {
+      "paths": [
+        "research_control/tasks/RT-20260718-003/00_TASK.yaml"
+      ],
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_ids": [
+        "classify_changes",
+        "resolve_project_improvement",
+        "documentation_impact",
+        "memory_sync",
+        "memory_core",
+        "spec_depth",
+        "research_control_diff",
+        "current_frontier_freshness",
+        "compact_frontier_freshness",
+        "task_index_freshness",
+        "claim_graph_validation",
+        "git_diff_check",
+        "continue_memory_preflight"
+      ],
+      "unknown_paths": []
+    },
+    "registered_markdown": {
+      "paths": [
+        "research_control/design/ci_validation_shard_policy_v1.md",
+        "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      ],
+      "requested_profile": "affected",
+      "effective_profile": "affected",
+      "status": "READY",
+      "selected_gate_ids": [
+        "classify_changes",
+        "resolve_project_improvement",
+        "documentation_impact",
+        "memory_sync",
+        "memory_core",
+        "spec_depth",
+        "research_control_diff",
+        "current_frontier_freshness",
+        "compact_frontier_freshness",
+        "dependency_graph_freshness",
+        "claim_graph_validation",
+        "git_diff_check",
+        "continue_memory_preflight"
+      ],
+      "unknown_paths": []
+    },
+    "local_retrieval": {
+      "paths": [
+        ".local/example.db"
+      ],
+      "requested_profile": "doctor",
+      "scopes": [
+        "local_retrieval"
+      ],
+      "effective_profile": "doctor",
+      "status": "READY",
+      "selected_gate_ids": [
+        "local_retrieval_sync",
+        "local_retrieval_lint",
+        "memory_status_diagnostic",
+        "memory_lookup_diagnostic",
+        "memory_search_diagnostic",
+        "route_signature_diagnostic",
+        "route_orbit_diagnostic",
+        "continue_context_resolution"
+      ],
+      "unknown_paths": []
+    },
+    "unknown_governed": {
+      "paths": [
+        "future_governed_surface/example.rule"
+      ],
+      "requested_profile": "affected",
+      "effective_profile": "full",
+      "status": "READY",
+      "selected_gate_ids": [
+        "classify_changes",
+        "resolve_project_improvement",
+        "project_improvement_signals",
+        "documentation_impact",
+        "documentation_surface_audit",
+        "memory_sync",
+        "memory_core",
+        "spec_depth",
+        "publication_validation",
+        "research_control_core",
+        "research_control_diff",
+        "test_shard_repository",
+        "current_frontier_freshness",
+        "compact_frontier_freshness",
+        "dependency_graph_freshness",
+        "task_index_freshness",
+        "claim_graph_validation",
+        "claim_language_changed",
+        "git_diff_check",
+        "targeted_pdf_build",
+        "continue_memory_preflight",
+        "profile_validate_project_control",
+        "profile_validate_memory",
+        "profile_validate_html_explainers",
+        "profile_audit_documentation_surfaces",
+        "profile_full_research_control",
+        "profile_ci_project_control",
+        "mermaid_sources"
+      ],
+      "unknown_paths": [
+        "future_governed_surface/example.rule"
+      ]
+    }
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "planner_executes_commands": false,
+    "legacy_result_authoritative": true,
+    "physics_claim_authority": false,
+    "proof_authority": false
+  }
+}

@@ -15,6 +15,72 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  validation_plan_shadow:
+    name: Plan validation shards (shadow)
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHON: .venv/bin/python
+    steps:
+      - name: Check out repository with comparison history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      - name: Install Python dependencies
+        run: |
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install -r requirements.txt
+
+      - name: Determine changed paths
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PUSH_BEFORE_SHA: ${{ github.event.before }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p validation-plan-artifacts
+          base_sha="$PUSH_BEFORE_SHA"
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
+            base_sha="$PR_BASE_SHA"
+          fi
+          if [[ -z "$base_sha" || "$base_sha" =~ ^0+$ ]] || ! git cat-file -e "$base_sha^{commit}" 2>/dev/null; then
+            base_sha="$(git rev-parse HEAD^ 2>/dev/null || git rev-parse HEAD)"
+          fi
+          git diff --name-only --diff-filter=ACDMRTUXB "$base_sha" HEAD |
+            LC_ALL=C sort -u > validation-plan-artifacts/changed-paths.txt
+          printf '%s\n' "$base_sha" > validation-plan-artifacts/base-sha.txt
+
+      - name: Validate manifest and emit affected plan
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t changed_paths < validation-plan-artifacts/changed-paths.txt
+          .venv/bin/python -m scripts.validation.cli plan \
+            --profile affected \
+            --paths "${changed_paths[@]}" \
+            --json > validation-plan-artifacts/validation-plan.json
+
+      - name: Upload shadow validation plan
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-plan-${{ github.run_id }}-${{ github.run_attempt }}
+          path: validation-plan-artifacts/
+          if-no-files-found: error
+          retention-days: 14
+
   validate_project_control:
     name: Validate project-control gates
     runs-on: ubuntu-latest

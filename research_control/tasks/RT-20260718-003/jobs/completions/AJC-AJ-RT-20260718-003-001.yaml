@@ -1,0 +1,227 @@
+job_id: "AJ-RT-20260718-003-001"
+completion_id: "AJC-AJ-RT-20260718-003-001"
+task_id: "RT-20260718-003"
+decision_id: "DDR-20260718-003"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260718-003"
+status: "completed"
+created_at: "2026-07-18T01:37:58Z"
+started_at: "2026-07-18T01:37:58Z"
+completed_at: "2026-07-18T01:51:16Z"
+objective: "Implement the P11-T01 shadow validation-plan job and complete primary CI shard ownership design without implementing shard execution or replacing legacy CI authority."
+completion_summary: "One fail-open shadow validation-plan job and exact primary ownership for all 37 live gates pass stable completed-state validation while both legacy CI jobs remain authoritative."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P11-T01"
+  - ".github/workflows/project-control-validation.yml"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "research_control/design/validation_profile_policy_v1.md"
+  - "research_control/design/validation_change_matrix_v1.md"
+  - "research_control/tasks/RT-20260718-002/jobs/completions/AJC-AJ-RT-20260718-002-001.yaml"
+outputs_created:
+  - "research_control/design/ci_validation_shard_policy_v1.md"
+  - "research_control/tasks/RT-20260718-003/artifacts/ci_shard_coverage_report.json"
+  - "research_control/tasks/RT-20260718-003/artifacts/ci_shard_plan_scenarios.json"
+  - "research_control/tasks/RT-20260718-003/artifacts/validate_ci_shard_design.py"
+  - "research_control/tasks/RT-20260718-003/artifacts/ci_shard_design_validation_receipt.json"
+  - "research_control/tasks/RT-20260718-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-003/jobs/completions/AJC-AJ-RT-20260718-003-001.yaml"
+outputs_updated:
+  - ".github/workflows/project-control-validation.yml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P11-T01"
+  recommendation_ids:
+    - "V19-R38"
+    - "V19-R40"
+    - "V19-R41"
+  migration_epoch: "shadow_planner"
+  implementation_status: "completed"
+  downstream_tasks_not_implemented:
+    - "P11-T02 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p11_t01_ci_shard_design"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R38"
+    - "V19-R40"
+    - "V19-R41"
+  implements_plan_task_id: "P11-T01"
+  implementation_status: "PASS"
+  coverage_effect: "shadow validation-plan job and complete static primary ownership for the live manifest gate catalog"
+physics_progress_status:
+  status: "project_system_ci_shard_design_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P11-T01 changes operational CI planning and control documentation only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "CI topology and validation receipts are not scientific evidence or derivation progress."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+ci_shard_design:
+  status: "PASS"
+  policy_path: "research_control/design/ci_validation_shard_policy_v1.md"
+  coverage_report_path: "research_control/tasks/RT-20260718-003/artifacts/ci_shard_coverage_report.json"
+  scenario_fixture_path: "research_control/tasks/RT-20260718-003/artifacts/ci_shard_plan_scenarios.json"
+  validation_receipt_path: "research_control/tasks/RT-20260718-003/artifacts/ci_shard_design_validation_receipt.json"
+  live_manifest_gate_count: 37
+  primary_owned_gate_count: 37
+  missing_gate_count: 0
+  duplicate_primary_owner_gate_count: 0
+  full_profile_selected_gate_count: 28
+  representative_scenario_count: 5
+  unexplained_legacy_planner_mismatch_count: 0
+  workflow_syntax_status: "PASS"
+  shadow_planning_job_present: true
+  legacy_jobs_preserved: true
+  execution_shards_implemented: false
+  scheduled_workflow_implemented: false
+  branch_protection_changed: false
+  planner_execution_authority_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+validation_evidence:
+  task_local_design_status: "PASS"
+  focused_test_count: 39
+  focused_failure_count: 0
+  focused_error_count: 0
+  full_profile_union_status: "PASS"
+  legacy_planner_shadow_status: "PASS"
+  unexplained_mismatch_count: 0
+  repository_suite:
+    status: "PASS"
+    test_count: 954
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    duration_seconds: "108.216"
+    repair_evidence: "The initial 108.221-second run found one memory-bootstrap idempotence failure because the new registered policy derivatives were not yet synchronized. The governed bootstrap completed, validate-only passed, and the stable completed-state rerun passed."
+  checkpoint_status: "PENDING"
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260718-003/artifacts/validate_ci_shard_design.py | exit_code=0 | PASS with 37 exact primary owners 28 full-profile gates and 5 representative scenarios"
+  - "ruby workflow YAML parse | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_validation_change_matrix tests.test_validation_profiles tests.test_validation_manifest | exit_code=0 | 39 tests PASS"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths .github/workflows/project-control-validation.yml --json | exit_code=0 | READY with 13 selected gates"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy-compatible blocking gates equal 11 planner gates with zero unexplained mismatch"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json-summary | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS with zero hard failures"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=1 | active-lifecycle completion and role-registry parity findings identified for repair"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=0 | PASS after exact role-registry parity and completion binding repair"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=1 | 954 tests with one expected skip and one pre-bootstrap generated-memory idempotence failure in 108.221 seconds"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state 954 tests PASS with one expected skip in 108.216 seconds"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 52 lease parity project binding clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "P10-T06 PASS completion canonical plan CI workflow profile and matrix policy memory preflight classifier resolver and preserved ordinary handoff were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 37 live gates have exactly one primary owner and the 28-gate resolved full profile has complete primary ownership."
+      - "Five deterministic path scenarios and the workflow shadow planning boundary pass task-local validation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local design validation focused planner tests and stable completed-state repository suite pass."
+      - "The initial generated-memory idempotence failure was resolved by the required governed synchronization and did not require a workflow or policy change."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains required after stable completed-state validation."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only pass before checkpoint persistence."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-surface claim-language validation passes with zero hard failures."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260718-003/documentation_impact.yaml"
+  source_documentation_updated: true
+  updated_source_documentation:
+    - "research_control/design/ci_validation_shard_policy_v1.md"
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet defines static CI shard ownership and emits a fail-open shadow plan only. It does not implement execution shards scheduled CI branch protection planner or checkpoint authority change ordinary research authority modify canonical ontology derive a source law matter coupling or Einstein equations promote a benchmark issue a Gate Chair verdict prove a theorem or complete the derivation."
+verdict: "v19_p11_t01_ci_shard_design_pass_p11_t02_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "One fail-open shadow planning job and a complete exact primary-owner matrix are implemented while legacy jobs remain authoritative and all shard execution is deferred."
+selected_next_route:
+  route_id: "v19_p11_t02_ci_shard_implementation"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P11"
+  plan_task_id: "P11-T02"
+  task_name: "Implement CI shards path filters and receipt artifacts"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "ci_shard_implementation"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system CI shard implementation only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After governed checkpoint PASS route one separately bounded P11-T02 packet; do not execute it in P11-T01."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "818"
+    relationship_row_count: "4070"
+    semantic_row_count: "818"
+    vault_row_count: "818"
+    local_cache_only_warning_count: "0"
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_core_validation_status: "PASS"
+    before_freshness_status: "PASS"
+    before_local_retrieval_status: "PASS"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search manifest driven CI shard matrix --json"
+      query_type: "search"
+      query_text: "manifest driven CI shard matrix"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Generated wiki Obsidian SQLite semantic and .local retrieval outputs were navigation layers only and are not authority."

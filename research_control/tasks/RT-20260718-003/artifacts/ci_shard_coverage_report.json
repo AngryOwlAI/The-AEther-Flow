@@ -1,0 +1,138 @@
+{
+  "schema_id": "v19_ci_shard_coverage_report_v1",
+  "status": "DESIGN_READY_SHADOW_ONLY",
+  "task_id": "RT-20260718-003",
+  "plan_task_id": "P11-T01",
+  "migration_epoch": "shadow_planner",
+  "manifest_path": "research_control/design/validation_gate_manifest_v1.yaml",
+  "manifest_gate_count": 37,
+  "execution_authority": "legacy",
+  "execution_shards_implemented": false,
+  "legacy_ci_authoritative": true,
+  "primary_owners": {
+    "policy-fast": [
+      "classify_changes",
+      "resolve_project_improvement",
+      "project_improvement_signals",
+      "documentation_impact",
+      "claim_language_changed",
+      "git_diff_check"
+    ],
+    "research-control-integration": [
+      "research_control_core",
+      "research_control_diff",
+      "current_frontier_freshness",
+      "compact_frontier_freshness",
+      "task_index_freshness",
+      "continue_memory_preflight",
+      "continue_context_resolution",
+      "checkpoint_transaction"
+    ],
+    "dependency-graph": [
+      "dependency_graph_freshness"
+    ],
+    "memory-core": [
+      "memory_sync",
+      "memory_core",
+      "profile_validate_memory"
+    ],
+    "publication": [
+      "documentation_surface_audit",
+      "spec_depth",
+      "publication_validation",
+      "profile_validate_html_explainers",
+      "profile_audit_documentation_surfaces",
+      "mermaid_sources"
+    ],
+    "scientific-support": [
+      "test_shard_repository",
+      "claim_graph_validation",
+      "targeted_pdf_build"
+    ],
+    "local-retrieval": [
+      "local_retrieval_sync",
+      "local_retrieval_lint",
+      "memory_status_diagnostic",
+      "memory_lookup_diagnostic",
+      "memory_search_diagnostic",
+      "route_orbit_diagnostic"
+    ],
+    "orchestration-equivalence": [
+      "route_signature_diagnostic",
+      "profile_validate_project_control",
+      "profile_full_research_control",
+      "profile_ci_project_control"
+    ]
+  },
+  "catalog_coverage": {
+    "owned_gate_count": 37,
+    "missing_gate_ids": [],
+    "duplicate_primary_owner_gate_ids": [],
+    "unknown_gate_ids": [],
+    "non_ci_gate_ids": [
+      "checkpoint_transaction"
+    ]
+  },
+  "full_profile": {
+    "selected_gate_count": 28,
+    "selected_gate_ids": [
+      "classify_changes",
+      "resolve_project_improvement",
+      "project_improvement_signals",
+      "documentation_impact",
+      "documentation_surface_audit",
+      "memory_sync",
+      "memory_core",
+      "spec_depth",
+      "publication_validation",
+      "research_control_core",
+      "research_control_diff",
+      "test_shard_repository",
+      "current_frontier_freshness",
+      "compact_frontier_freshness",
+      "dependency_graph_freshness",
+      "task_index_freshness",
+      "claim_graph_validation",
+      "claim_language_changed",
+      "git_diff_check",
+      "targeted_pdf_build",
+      "continue_memory_preflight",
+      "profile_validate_project_control",
+      "profile_validate_memory",
+      "profile_validate_html_explainers",
+      "profile_audit_documentation_surfaces",
+      "profile_full_research_control",
+      "profile_ci_project_control",
+      "mermaid_sources"
+    ],
+    "missing_primary_owner_gate_ids": [],
+    "scheduled_full_composition_only": true
+  },
+  "test_shard_contract": {
+    "manifest_coverage_fixture": "tests/fixtures/validation_manifest/legacy_gate_coverage_v1.json",
+    "manifest_fixture_owner_count": 37,
+    "primary_test_responsibility_count": 8,
+    "hidden_command_lists_allowed": false,
+    "implementation_deferred_to": "P11-T02"
+  },
+  "required_check_contract": {
+    "authoritative_required_jobs": [
+      "validate_project_control",
+      "validate_memory_read_only"
+    ],
+    "optional_shadow_jobs": [
+      "validation_plan_shadow"
+    ],
+    "path_filtered_required_jobs_allowed": false,
+    "stable_aggregate_required_before_cutover": true
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  }
+}

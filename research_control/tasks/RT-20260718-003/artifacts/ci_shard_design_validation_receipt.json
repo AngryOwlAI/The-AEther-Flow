@@ -1,0 +1,157 @@
+{
+  "schema_id": "v19_p11_t01_ci_shard_design_validation_receipt_v1",
+  "status": "PASS",
+  "created_at": "2026-07-18T01:51:16Z",
+  "task_id": "RT-20260718-003",
+  "job_id": "AJ-RT-20260718-003-001",
+  "base_commit": "c6573dd10fe55deac2d8dc4f2175808b894b3023",
+  "gates": [
+    {
+      "gate_id": "workflow_syntax",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": ".github/workflows/project-control-validation.yml",
+      "content_hash": "sha256:e08df0e5c50724be365747a6e5ce444eba7c34941537eee7e69c64d447292c4c",
+      "summary": "PyYAML and Ruby YAML parsing pass; the shadow planner is fail-open and both legacy jobs remain present."
+    },
+    {
+      "gate_id": "generated_plan_artifact_schema",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "scenario_count": 5
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-003/artifacts/ci_shard_plan_scenarios.json",
+      "content_hash": "sha256:62a598f69019fd84e42674ba0ab8780d8a8bc94192b1d2e2e85f2db0b14d4c53",
+      "summary": "Every representative plan has validation_plan_v1 shape non-executing authority fields and deterministic membership."
+    },
+    {
+      "gate_id": "ci_shard_primary_ownership",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "manifest_gate_count": 37,
+        "owned_gate_count": 37,
+        "missing_gate_count": 0,
+        "duplicate_owner_count": 0
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-003/artifacts/ci_shard_coverage_report.json",
+      "content_hash": "sha256:fd4e2b7572da968fe2053f1ca04937db4493b64404e580ae0c4e11803dba5091",
+      "summary": "All 37 live gates have exactly one primary owner with no missing unknown or duplicate gate."
+    },
+    {
+      "gate_id": "full_profile_union",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "selected_gate_count": 28,
+        "missing_nontransactional_blocking_gate_count": 0
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-003/artifacts/ci_shard_coverage_report.json",
+      "content_hash": "sha256:fd4e2b7572da968fe2053f1ca04937db4493b64404e580ae0c4e11803dba5091",
+      "summary": "The planner-resolved 28-gate full profile equals the designed scheduled-full gate union."
+    },
+    {
+      "gate_id": "representative_path_scenarios",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "scenario_count": 5
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-003/artifacts/ci_shard_plan_scenarios.json",
+      "content_hash": "sha256:62a598f69019fd84e42674ba0ab8780d8a8bc94192b1d2e2e85f2db0b14d4c53",
+      "summary": "Workflow task registered Markdown local retrieval and unknown-governed scenarios match current planner output."
+    },
+    {
+      "gate_id": "legacy_planner_shadow_comparison",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "legacy_blocking_gate_count": 11,
+        "planner_blocking_gate_count": 11,
+        "unexplained_mismatch_count": 0
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-003/artifacts/ci_shard_coverage_report.json",
+      "content_hash": "sha256:fd4e2b7572da968fe2053f1ca04937db4493b64404e580ae0c4e11803dba5091",
+      "summary": "Affected blocking legacy-compatible and planner sets match with zero unexplained mismatch."
+    },
+    {
+      "gate_id": "focused_ci_design_tests",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "test_count": 39
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-003/artifacts/validate_ci_shard_design.py",
+      "content_hash": "sha256:cef994ddd7c665c40bb40ee9b37208ecb1c43ed6f013031e199b5e68842de435",
+      "summary": "Task-local validator plus focused manifest profile and change-matrix tests pass."
+    },
+    {
+      "gate_id": "repository_test_suite",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "test_count": 954,
+        "skip_count": 1
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-003/jobs/completions/AJC-AJ-RT-20260718-003-001.yaml",
+      "content_hash": "sha256:1b44ef191c812ba978bc7e0d0035035ce28f5ba428fa14dc2d2ec05e195c1f13",
+      "summary": "The stable completed-state repository suite passes in 108.216 seconds with one expected skip."
+    },
+    {
+      "gate_id": "memory_sync_and_core",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 3,
+        "finding_count": 3
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": ".local/validation-receipts/working-sha256-16f0ae6534495290588879381e6677d20d61f54689881e03de2b34a62c409833/PROFILE-VALIDATE-MEMORY-16F0AE6534495290/full.json",
+      "content_hash": "sha256:3dc62764e9c2913fff29f06d9d6afe4d3a7c922fc7e808891a523d8cc9ae1c94",
+      "summary": "Governed synchronization and read-only validation pass; three advisory findings remain non-authoritative."
+    }
+  ],
+  "raw_receipt_boundary": {
+    "local_receipts_are_authoritative": false,
+    "task_receipts_are_physics_authority": false,
+    "full_terminal_output_embedded": false
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "legacy_ci_authoritative": true,
+    "execution_shards_implemented": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  }
+}

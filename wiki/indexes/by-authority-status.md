@@ -622,6 +622,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ACTIVE-STATE-BIFURCATION-POLICY-V1` `wiki/markdown/md-research-control-design-active-state-bifurcation-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-AGENT-VALIDATION-OUTPUT-CONSUMPTION-POLICY-V1` `wiki/markdown/md-research-control-design-agent-validation-output-consumption-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-AI-RESEARCH-AGENT-METRICS-TAXONOMY-V1` `wiki/markdown/md-research-control-design-ai-research-agent-metrics-taxonomy-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1` `wiki/markdown/md-research-control-design-ci-validation-shard-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-CLAIM-GRAPH-SCHEMA-V1` `wiki/markdown/md-research-control-design-claim-graph-schema-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-COMPACT-CURRENT-FRONTIER-SCHEMA-V16` `wiki/markdown/md-research-control-design-compact-current-frontier-schema-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `wiki/markdown/md-research-control-design-director-led-agent-architecture-grill-decisions.md`
@@ -1343,6 +1344,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-ACTIVE-STATE-BIFURCATION-POLICY-V1` `research_control/design/active_state_bifurcation_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-AGENT-VALIDATION-OUTPUT-CONSUMPTION-POLICY-V1` `research_control/design/agent_validation_output_consumption_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-AI-RESEARCH-AGENT-METRICS-TAXONOMY-V1` `research_control/design/ai_research_agent_metrics_taxonomy_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-CI-VALIDATION-SHARD-POLICY-V1` `research_control/design/ci_validation_shard_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-CLAIM-GRAPH-SCHEMA-V1` `research_control/design/claim_graph_schema_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-COMPACT-CURRENT-FRONTIER-SCHEMA-V16` `research_control/design/compact_current_frontier_schema_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-DIRECTOR-LED-AGENT-ARCHITECTURE-GRILL-DECISIONS` `research_control/design/director_led_agent_architecture_grill_decisions.md`
