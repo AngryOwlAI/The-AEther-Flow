@@ -1,0 +1,53 @@
+{
+  "schema_id": "cache_adversarial_audit_v1",
+  "status": "PASS",
+  "task_id": "RT-20260718-001",
+  "job_id": "AJ-RT-20260718-001-001",
+  "plan_task_id": "P10-T05",
+  "test_path": "tests/test_validation_cache_adversarial.py",
+  "test_sha256": "b6f30208612fb81338c4a9a10c7b506dafecf39d891094a4f3cf3665aa9abc0e",
+  "production_sources_changed": false,
+  "false_hit_count": 0,
+  "missing_hard_finding_count": 0,
+  "wrong_staged_tree_reuse_count": 0,
+  "unexplained_shadow_mismatch_count": 0,
+  "cases": [
+    {"case_id": "preserved_timestamp_input_change", "status": "PASS", "outcome": "MISS"},
+    {"case_id": "identity_invalidation_matrix", "status": "PASS", "mutation_count": 9, "outcome": "MISS_OR_KEY_UNRESOLVED"},
+    {"case_id": "corrupt_result_and_receipt", "status": "PASS", "corruption_count": 3, "outcome": "FAIL_CLOSED"},
+    {"case_id": "scope_branch_tree_isolation", "status": "PASS", "mutation_count": 2, "outcome": "MISS"},
+    {"case_id": "concurrent_publication", "status": "PASS", "writer_count": 8, "stored_count": 1, "exists_count": 7},
+    {"case_id": "interrupted_atomic_rename", "status": "PASS", "partial_entry_count": 0, "retry_status": "STORED"},
+    {"case_id": "final_safeguards", "status": "PASS", "execution_count": 2, "cache_status": "BYPASSED"},
+    {"case_id": "clear_and_uncached_rollback", "status": "PASS", "normalized_parity": true}
+  ],
+  "metrics": {
+    "duration_seconds": 0.12,
+    "subprocess_count": 0,
+    "subprocess_count_definition": "test-controlled validator adapter subprocesses",
+    "test_runner_process_count": 1,
+    "output_bytes": 1646,
+    "cache_hits": 3,
+    "cache_misses_or_blocks": 18,
+    "combined_focused_test_count": 37,
+    "combined_focused_duration_seconds": 0.365,
+    "repository_test_count": 954,
+    "repository_duration_seconds": 107.521,
+    "repository_expected_skip_count": 1
+  },
+  "rollback": {
+    "triggered_by_false_hit": false,
+    "drill_performed": true,
+    "cache_cleared": true,
+    "uncached_rerun_status": "PASS",
+    "normalized_parity": true
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "benchmark_authority": false
+  },
+  "next_plan_task_not_implemented": "P10-T06"
+}

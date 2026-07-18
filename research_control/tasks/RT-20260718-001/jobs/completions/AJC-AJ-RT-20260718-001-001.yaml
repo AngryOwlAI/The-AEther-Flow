@@ -1,0 +1,219 @@
+job_id: "AJ-RT-20260718-001-001"
+completion_id: "AJC-AJ-RT-20260718-001-001"
+task_id: "RT-20260718-001"
+decision_id: "DDR-20260718-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260718-001"
+status: "completed"
+created_at: "2026-07-18T00:26:25Z"
+started_at: "2026-07-18T00:26:25Z"
+completed_at: "2026-07-18T00:28:24Z"
+objective: "Execute the P10-T05 adversarial cache safety matrix and force rollback on any false hit while leaving production sources unchanged when the matrix passes."
+completion_summary: "Added one permanent adversarial cache test module. All identity mutations miss or remain unresolved, all corruptions fail closed, concurrent and interrupted publication preserve atomicity, final safeguards always execute, and clear-to-uncached normalized parity passes. No production source changed."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P10-T05"
+  - "research_control/design/v19_validation_overhead_backlog.yaml#P10-T05"
+  - "research_control/design/validation_cache_contract_v1.md"
+  - "scripts/validation/cache.py"
+  - "scripts/validation/executor.py"
+  - "tests/test_validation_cache.py"
+  - "tests/test_executor_cache_integration.py"
+  - "research_control/tasks/RT-20260717-023/jobs/completions/AJC-AJ-RT-20260717-023-001.yaml"
+outputs_created:
+  - "tests/test_validation_cache_adversarial.py"
+  - "research_control/tasks/RT-20260718-001/artifacts/cache_adversarial_audit.md"
+  - "research_control/tasks/RT-20260718-001/artifacts/cache_adversarial_audit.json"
+  - "research_control/tasks/RT-20260718-001/artifacts/cache_adversarial_validation_receipt.json"
+  - "research_control/tasks/RT-20260718-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-001/jobs/completions/AJC-AJ-RT-20260718-001-001.yaml"
+outputs_updated: []
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P10-T05"
+  recommendation_ids:
+    - "V19-R28"
+    - "V19-R44"
+    - "V19-R45"
+  migration_epoch: "shadow_planner"
+  implementation_status: "completed"
+  downstream_tasks_not_implemented:
+    - "P10-T06 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p10_t05_cache_adversarial_safety"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R28"
+    - "V19-R44"
+    - "V19-R45"
+  implements_plan_task_id: "P10-T05"
+  implementation_status: "PASS"
+  coverage_effect: "permanent adversarial invalidation isolation corruption concurrency interruption safeguard and rollback regression coverage"
+physics_progress_status:
+  status: "project_system_cache_adversarial_audit_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P10-T05 audits operational cache safety only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Adversarial cache tests are not scientific evidence or derivation progress."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+cache_adversarial_safety:
+  status: "PASS"
+  test_path: "tests/test_validation_cache_adversarial.py"
+  test_sha256: "b6f30208612fb81338c4a9a10c7b506dafecf39d891094a4f3cf3665aa9abc0e"
+  report_path: "research_control/tasks/RT-20260718-001/artifacts/cache_adversarial_audit.md"
+  machine_report_path: "research_control/tasks/RT-20260718-001/artifacts/cache_adversarial_audit.json"
+  validation_receipt: "research_control/tasks/RT-20260718-001/artifacts/cache_adversarial_validation_receipt.json"
+  adversarial_case_count: 8
+  identity_mutation_count: 9
+  corruption_case_count: 3
+  false_hit_count: 0
+  wrong_staged_tree_reuse_count: 0
+  missing_hard_finding_count: 0
+  interrupted_partial_entry_count: 0
+  concurrent_writer_count: 8
+  final_safeguard_execution_count: 2
+  rollback_drill_status: "PASS"
+  production_sources_changed: false
+  live_manifest_mutated: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+validation_evidence:
+  baseline_cache_test_count: 29
+  focused_adversarial_test_count: 8
+  focused_adversarial_duration_seconds: "0.12"
+  focused_output_bytes: 1646
+  combined_focused_test_count: 37
+  combined_focused_failure_count: 0
+  combined_focused_error_count: 0
+  combined_focused_duration_seconds: "0.365"
+  syntax_status: "PASS"
+  affected_profile_status: "READY"
+  legacy_planner_shadow_comparison:
+    status: "PASS"
+    legacy_compatible_blocking_gate_count: 11
+    planner_blocking_gate_count: 11
+    unexplained_mismatch_count: 0
+  repository_suite:
+    test_count: 954
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    duration_seconds: "107.521"
+    status: "PASS"
+  checkpoint_status: "PASS_REQUIRED_FOR_COMPLETION_PERSISTENCE"
+command_results:
+  - ".venv/bin/python -m py_compile tests/test_validation_cache_adversarial.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_validation_cache_adversarial | exit_code=0 | 8 tests PASS"
+  - ".venv/bin/python -m unittest -v tests.test_validation_cache_adversarial tests.test_validation_cache tests.test_executor_cache_integration | exit_code=0 | 37 tests PASS"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state 954 tests PASS with one expected skip in 107.521 seconds"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy-compatible blocking gates equal 11 planner gates with zero unexplained mismatch"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260718-001-001 | exit_code=0 required | governed local checkpoint with no push"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 50 lease parity project binding clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "P10-T04 PASS completion canonical plan cache contract memory preflight classifier resolver and preserved ordinary handoff were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Eight focused tests cover all plan-named invalidation isolation corruption concurrency interruption safeguard and rollback families."
+      - "No false hit occurred and the affected shadow comparison has zero unexplained blocking-gate mismatch."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The full repository suite passes all 954 tests with one expected skip."
+      - "Production cache executor live manifest and physics sources remain unchanged."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "This completion is valid for persistence only when the governed checkpoint commits this exact validated transaction; failure leaves the PASS claim uncommitted and requires repair."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory derivatives must be synchronized and validate-only must pass before checkpoint persistence."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-surface claim-language validation must have zero hard failures before checkpoint persistence."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260718-001/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet audits synthetic exact-tree cache behavior only. It does not activate a live gate permit cached final staged acceptance change production cache executor manifest planner checkpoint CI or ordinary research authority modify canonical ontology derive a source law matter coupling or Einstein equations promote a benchmark issue a Gate Chair verdict prove a theorem or complete the derivation."
+verdict: "v19_p10_t05_cache_adversarial_safety_pass_p10_t06_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "Every tested state change misses or fails closed, concurrent and interrupted writes preserve complete publication, fixed safeguards remain live, and clearing cache reproduces the normalized uncached result."
+selected_next_route:
+  route_id: "v19_p10_t06_snapshot_cache_benchmark"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P10"
+  plan_task_id: "P10-T06"
+  task_name: "Benchmark shared snapshots and cold and warm cache behavior"
+  role_family: "process-integrity-auditor@0.1.0"
+  task_type: "snapshot_cache_benchmark"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system snapshot and cache benchmark only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After stable completed-state validation and governed checkpoint PASS route one separately bounded P10-T06 packet; do not execute it in P10-T05."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "817"
+    relationship_row_count: "4066"
+    semantic_row_count: "817"
+    vault_row_count: "817"
+    local_cache_only_warning_count: "0"
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Generated wiki Obsidian SQLite semantic and .local retrieval outputs were navigation layers only and are not authority."

@@ -1,0 +1,64 @@
+{
+  "schema_id": "cache_adversarial_validation_receipt_v1",
+  "status": "PASS",
+  "task_id": "RT-20260718-001",
+  "job_id": "AJ-RT-20260718-001-001",
+  "started_at": "2026-07-18T00:26:25Z",
+  "completed_at": "2026-07-18T00:28:24Z",
+  "raw_focused_output": [
+    "test_branch_scope_and_tree_state_reuse_are_isolated ... ok",
+    "test_clear_rollback_reruns_uncached_with_normalized_parity ... ok",
+    "test_concurrent_writers_publish_one_complete_entry ... ok",
+    "test_corrupt_status_finding_counts_and_receipt_hash_fail_closed ... ok",
+    "test_every_adversarial_identity_change_misses_or_is_unresolved ... ok",
+    "test_final_safeguards_always_execute ... ok",
+    "test_input_bytes_change_with_preserved_timestamp_misses ... ok",
+    "test_interrupted_atomic_rename_leaves_no_partial_and_retry_succeeds ... ok",
+    "Ran 8 tests",
+    "OK"
+  ],
+  "command_results": [
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_validation_cache tests.test_executor_cache_integration",
+      "exit_code": 0,
+      "test_count": 29,
+      "status": "PASS",
+      "kind": "baseline"
+    },
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_validation_cache_adversarial",
+      "exit_code": 0,
+      "test_count": 8,
+      "duration_seconds": 0.12,
+      "output_bytes": 1646,
+      "status": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m unittest -v tests.test_validation_cache_adversarial tests.test_validation_cache tests.test_executor_cache_integration",
+      "exit_code": 0,
+      "test_count": 37,
+      "duration_seconds": 0.365,
+      "status": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests",
+      "exit_code": 0,
+      "test_count": 954,
+      "skip_count": 1,
+      "duration_seconds": 107.521,
+      "status": "PASS"
+    },
+    {
+      "command": ".venv/bin/python scripts/validation/profiles.py audit --json",
+      "exit_code": 0,
+      "legacy_blocking_gate_count": 11,
+      "planner_blocking_gate_count": 11,
+      "unexplained_mismatch_count": 0,
+      "status": "PASS"
+    }
+  ],
+  "rollback_trigger_status": "NOT_TRIGGERED",
+  "rollback_drill_status": "PASS",
+  "checkpoint_status": "PASS_REQUIRED_FOR_COMPLETION_PERSISTENCE",
+  "authority": "operational_validation_only"
+}

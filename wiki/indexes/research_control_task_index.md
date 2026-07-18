@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `896c62e3b05237abc333a97501be175f08b2ca69a87f7b8e36775a3c34528bad`
-- Generated-at source timestamp: `2026-07-17T23:29:06Z`
-- Row count: `958`
+- Source fingerprint: `6d84ba3b9c09e6b52a704443f8a533bea28d80e846c051cd56eb60c1cbfab323`
+- Generated-at source timestamp: `2026-07-18T00:26:25Z`
+- Row count: `959`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260718-001|RT-20260717-023|2026-07-18T00:26:25Z|2026-07-18T00:28:24Z|cache_adversarial_safety_audit|completed|none|Project-system validation-cache adversarial safety audit only; no derivation milestone is advanced.|process-integrity-auditor@0.1.0|false|false|3|After this exact transaction checkpoints route one separately bounded P10-T06 snapshot and cache benchmark packet.|PASS|research_control/tasks/RT-20260718-001/jobs/completions/AJC-AJ-RT-20260718-001-001.yaml|
 |RT-20260717-023|RT-20260717-022|2026-07-17T23:29:06Z|2026-07-17T23:50:25Z|executor_cache_integration|completed|none|Project-system validation executor cache integration only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|2|After this exact transaction checkpoints route one separately bounded P10-T05 cache invalidation isolation and safety audit.|PASS|research_control/tasks/RT-20260717-023/jobs/completions/AJC-AJ-RT-20260717-023-001.yaml|
 |RT-20260717-022|RT-20260717-021|2026-07-17T22:43:12Z|2026-07-17T23:03:18Z|validation_cache_implementation|completed|none|Project-system exact-tree validation-cache implementation only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|2|After governed checkpoint PASS route one separately bounded P10-T04 executor-cache integration packet.|PASS|research_control/tasks/RT-20260717-022/jobs/completions/AJC-AJ-RT-20260717-022-001.yaml|
 |RT-20260717-021|RT-20260717-020|2026-07-17T22:04:26Z|2026-07-17T22:18:52Z|validation_cache_contract|completed|none|Project-system exact-tree validation-cache contract only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|4|After governed checkpoint PASS route one separately bounded P10-T03 cache-storage packet.|PASS|research_control/tasks/RT-20260717-021/jobs/completions/AJC-AJ-RT-20260717-021-001.yaml|
