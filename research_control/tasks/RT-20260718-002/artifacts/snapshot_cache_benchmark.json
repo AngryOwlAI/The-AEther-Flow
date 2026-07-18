@@ -1,0 +1,259 @@
+{
+  "schema_id": "v19_p10_t06_snapshot_cache_benchmark_v1",
+  "status": "PASS_WITH_ACTIVATION_REJECTED",
+  "measured_at": "2026-07-18T01:12:35Z",
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "benchmark_authority": false,
+    "physics_claim_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  },
+  "environment": {
+    "machine_model": "Mac15,14",
+    "cpu_brand": "Apple M3 Ultra",
+    "memory_bytes": 103079215104,
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python_version": "3.12.13",
+    "dependency_lock_digest": "sha256:7bc3bca027f6d2be2fcb2ca0e3d9568a09c07a6d0d30b774073501da06ced98f",
+    "environment_fingerprint": "sha256:6b030929d94745e437cc414ec208a282e49709ddac3681e5eab992ab5792a2b4",
+    "git_branch": "codex/v19-remaining-relay",
+    "git_head": "e8e542fc99e2ca2ac91c5a81e44bb4290f194d8b",
+    "tree_fingerprint": "sha256:565b1892b12d8e3fcc2849c36225e1f615cf4124a76f01f706b2e9f165fb914e"
+  },
+  "comparability": {
+    "baseline_path": "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json",
+    "baseline_sha256": "sha256:b3d18259efad879101d6dab2c6e4c62b7f19ffa6826527a53b472dd653d34bac",
+    "hardware_python_dependency_and_os_match": true,
+    "profile_corpus_matches_frozen_baseline": false,
+    "hard_guard_comparable": false,
+    "classification": "controlled_trend_evidence",
+    "reason": "The controlled plan-shape gates preserve exact-tree cache behavior and affected/full gate counts but do not reproduce the frozen representative affected corpus or complete full-profile gate union."
+  },
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v19.md": "sha256:a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc",
+    "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json": "sha256:b3d18259efad879101d6dab2c6e4c62b7f19ffa6826527a53b472dd653d34bac",
+    "scripts/validation/snapshot.py": "sha256:fb9a859dca5ba9b7183b29f37d8791611639551d90ba730fd73fb94fa793fe04",
+    "scripts/validation/cache.py": "sha256:aa0346dd66cb7aa22aca3aad72018d4b30775a360016ca4b8987c939f68ea813",
+    "scripts/validation/executor.py": "sha256:7801052e7767281ca9af156483ffdceb86114fae0c01052e5c32a45686810d89"
+  },
+  "shared_snapshot": {
+    "affected": {
+      "consumer_count": 13,
+      "registry_count": 3,
+      "direct": {
+        "file_reads": 39,
+        "registry_parses": 39,
+        "hash_operations": 39,
+        "bytes_read": 64801620,
+        "wall_seconds": 0.350020
+      },
+      "shared": {
+        "file_reads": 3,
+        "registry_parses": 3,
+        "hash_operations": 3,
+        "cache_hits": 36,
+        "bytes_read": 4984740,
+        "wall_seconds": 8.623543
+      },
+      "parse_reduction_count": 36,
+      "parse_reduction_percent": 92.308,
+      "row_count_parity": true
+    },
+    "full": {
+      "consumer_count": 36,
+      "registry_count": 3,
+      "direct": {
+        "file_reads": 108,
+        "registry_parses": 108,
+        "hash_operations": 108,
+        "bytes_read": 179450640,
+        "wall_seconds": 0.961250
+      },
+      "shared": {
+        "file_reads": 3,
+        "registry_parses": 3,
+        "hash_operations": 3,
+        "cache_hits": 105,
+        "bytes_read": 4984740,
+        "wall_seconds": 22.823053
+      },
+      "parse_reduction_count": 105,
+      "parse_reduction_percent": 97.222,
+      "row_count_parity": true
+    },
+    "interpretation": "Parse and read counts fall as intended, but repeated exact-tree freshness checks dominate this isolated three-registry wall-time model. Parse reduction is established; a general snapshot wall-time improvement is not."
+  },
+  "cache_matrix": {
+    "affected": {
+      "gate_count": 13,
+      "repetitions_per_mode": 3,
+      "normalized_correctness_parity": true,
+      "false_hit_count": 0,
+      "disabled": {
+        "wall_seconds": [0.360515, 0.357046, 0.320754],
+        "median_seconds": 0.357046,
+        "range_seconds": 0.039761,
+        "subprocesses_per_run": 13,
+        "file_reads_per_run": 13,
+        "hash_operations_per_run": 13,
+        "bytes_read_per_run": 1666884,
+        "cache_hits_per_run": 0,
+        "cache_misses_per_run": 0
+      },
+      "no_hit": {
+        "wall_seconds": [0.538387, 0.550516, 0.546396],
+        "median_seconds": 0.546396,
+        "range_seconds": 0.012129,
+        "overhead_percent_vs_disabled": 53.032,
+        "subprocesses_per_run": 13,
+        "file_reads_per_run": 13,
+        "hash_operations_per_run": 13,
+        "bytes_read_per_run": 1666884,
+        "cache_hits_per_run": 0,
+        "cache_misses_per_run": 13
+      },
+      "cold": {
+        "wall_seconds": [0.555489, 0.565043, 0.541470],
+        "median_seconds": 0.555489,
+        "range_seconds": 0.023573,
+        "overhead_percent_vs_disabled": 55.579,
+        "subprocesses_per_run": 13,
+        "file_reads_per_run": 13,
+        "hash_operations_per_run": 13,
+        "bytes_read_per_run": 1666884,
+        "cache_hits_per_run": 0,
+        "cache_misses_per_run": 13,
+        "cache_entry_count": 13,
+        "cache_bytes": 47167,
+        "mean_bytes_per_entry": 3628.231
+      },
+      "warm": {
+        "wall_seconds": [0.415145, 0.422380, 0.442752],
+        "median_seconds": 0.422380,
+        "range_seconds": 0.027607,
+        "savings_percent_vs_cold": 23.962,
+        "savings_percent_vs_disabled": -18.298,
+        "subprocesses_per_run": 0,
+        "file_reads_per_run": 0,
+        "hash_operations_per_run": 0,
+        "bytes_read_per_run": 0,
+        "cache_hits_per_run": 13,
+        "cache_misses_per_run": 0
+      }
+    },
+    "full": {
+      "gate_count": 36,
+      "repetitions_per_mode": 3,
+      "normalized_correctness_parity": true,
+      "false_hit_count": 0,
+      "disabled": {
+        "wall_seconds": [0.526662, 0.508890, 0.595577],
+        "median_seconds": 0.526662,
+        "range_seconds": 0.086687,
+        "subprocesses_per_run": 36,
+        "file_reads_per_run": 36,
+        "hash_operations_per_run": 36,
+        "bytes_read_per_run": 4562670,
+        "cache_hits_per_run": 0,
+        "cache_misses_per_run": 0
+      },
+      "no_hit": {
+        "wall_seconds": [0.733924, 0.728495, 0.750909],
+        "median_seconds": 0.733924,
+        "range_seconds": 0.022414,
+        "overhead_percent_vs_disabled": 39.354,
+        "subprocesses_per_run": 36,
+        "file_reads_per_run": 36,
+        "hash_operations_per_run": 36,
+        "bytes_read_per_run": 4562670,
+        "cache_hits_per_run": 0,
+        "cache_misses_per_run": 36
+      },
+      "cold": {
+        "wall_seconds": [0.873807, 0.885727, 0.870399],
+        "median_seconds": 0.873807,
+        "range_seconds": 0.015328,
+        "overhead_percent_vs_disabled": 65.914,
+        "subprocesses_per_run": 36,
+        "file_reads_per_run": 36,
+        "hash_operations_per_run": 36,
+        "bytes_read_per_run": 4562670,
+        "cache_hits_per_run": 0,
+        "cache_misses_per_run": 36,
+        "cache_entry_count": 36,
+        "cache_bytes": 129241,
+        "mean_bytes_per_entry": 3590.028
+      },
+      "warm": {
+        "wall_seconds": [0.432476, 0.426208, 0.440230],
+        "median_seconds": 0.432476,
+        "range_seconds": 0.014022,
+        "savings_percent_vs_cold": 50.507,
+        "savings_percent_vs_disabled": 17.884,
+        "subprocesses_per_run": 0,
+        "file_reads_per_run": 0,
+        "hash_operations_per_run": 0,
+        "bytes_read_per_run": 0,
+        "cache_hits_per_run": 36,
+        "cache_misses_per_run": 0
+      }
+    }
+  },
+  "eviction": {
+    "max_entries": 5,
+    "first_run_subprocesses": 13,
+    "repeat_run_subprocesses": 13,
+    "repeat_run_cache_hits": 0,
+    "final_entry_count": 5,
+    "final_total_bytes": 18126,
+    "valid_entry_count": 5,
+    "invalid_entry_count": 0,
+    "entry_cap_enforced": true,
+    "normalized_correctness_parity": true,
+    "interpretation": "The five-entry cap is enforced without corruption, but a 13-gate working set thrashes and yields no repeat hits. Storage bounds are safe; undersized caches are not beneficial."
+  },
+  "cold_budget_assessment": {
+    "budget_source": "research_control/design/v19_validation_performance_and_safety_budget.md",
+    "affected_absolute_hard_guard_seconds": 45,
+    "full_absolute_hard_guard_seconds": 180,
+    "affected_cold_median_seconds": 0.555489,
+    "full_cold_median_seconds": 0.873807,
+    "within_absolute_provisional_guards": true,
+    "comparable_hard_guard_result": false,
+    "interpretation": "Absolute controlled cold durations remain below the frozen provisional guards, but this corpus cannot activate or discharge those guards."
+  },
+  "live_manifest_eligibility": {
+    "gate_count": 37,
+    "exact_tree_count": 0,
+    "scheduled_bypass_count": 0,
+    "ineligible_count": 37,
+    "production_run_supplies_cache_context": false
+  },
+  "activation_assessment": {
+    "verdict": "REJECT_ACTIVATION_KEEP_DEFAULT_OFF",
+    "shared_snapshot_parse_reduction_established": true,
+    "warm_savings_vs_cold_established": true,
+    "warm_beats_disabled_for_every_shape": false,
+    "all_mode_correctness_parity": true,
+    "false_hit_count": 0,
+    "live_exact_tree_gate_count": 0,
+    "production_runner_cache_context": false,
+    "comparable_cutover_corpus": false,
+    "reason": "Warm exact-tree reuse is correct and saves work versus cold publication, but no-hit and cold overhead are material, the affected warm path does not beat disabled execution, the live manifest has no eligible gate, the production runner supplies no cache context, and the controlled corpus cannot authorize cutover."
+  },
+  "raw_evidence": {
+    "result_path": ".local/p10_t06_snapshot_cache_benchmark_result.json",
+    "result_sha256": "sha256:08ada943b662c755ec40f1f36eb45eadbcedf8bd673f2e900e09a5d084fe3995",
+    "result_bytes": 209952,
+    "receipt_root": ".local/p10-t06-benchmark/receipts",
+    "receipt_count": 26,
+    "receipt_set_sha256": "sha256:ff2375558336869d122f722694854b8ca8b2e9228944fa311ccb78384079c2f1",
+    "local_only": true,
+    "authoritative": false
+  },
+  "tracked_state_unchanged_by_benchmark": true,
+  "scientific_claims_changed": false,
+  "distance_to_gr_delta_changed": false
+}

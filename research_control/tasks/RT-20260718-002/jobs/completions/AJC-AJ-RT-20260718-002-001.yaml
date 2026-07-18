@@ -1,0 +1,229 @@
+job_id: "AJ-RT-20260718-002-001"
+completion_id: "AJC-AJ-RT-20260718-002-001"
+task_id: "RT-20260718-002"
+decision_id: "DDR-20260718-002"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260718-002"
+status: "completed"
+created_at: "2026-07-18T00:58:52Z"
+started_at: "2026-07-18T00:58:52Z"
+completed_at: "2026-07-18T01:19:22Z"
+objective: "Execute the P10-T06 shared-snapshot and exact-tree cache benchmark matrix and issue an evidence-bounded activation verdict while leaving production sources unchanged."
+completion_summary: "Controlled evidence establishes shared-snapshot parse reduction and correct warm exact-tree reuse but rejects activation because lookup and cold overhead are material the short affected warm path remains slower than disabled execution the live manifest has no eligible gates and the production runner supplies no cache context."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P10-T06"
+  - "research_control/design/v19_validation_performance_and_safety_budget.md"
+  - "research_control/tasks/RT-20260712-003/artifacts/v19_baseline_benchmark.json"
+  - "scripts/validation/snapshot.py"
+  - "scripts/validation/cache.py"
+  - "scripts/validation/executor.py"
+  - "research_control/tasks/RT-20260718-001/jobs/completions/AJC-AJ-RT-20260718-001-001.yaml"
+outputs_created:
+  - "research_control/tasks/RT-20260718-002/artifacts/snapshot_cache_benchmark.md"
+  - "research_control/tasks/RT-20260718-002/artifacts/snapshot_cache_benchmark.json"
+  - "research_control/tasks/RT-20260718-002/artifacts/snapshot_cache_benchmark_validation_receipt.json"
+  - "research_control/tasks/RT-20260718-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-002/jobs/completions/AJC-AJ-RT-20260718-002-001.yaml"
+outputs_updated: []
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P10-T06"
+  recommendation_ids:
+    - "V19-R29"
+    - "V19-R43"
+    - "V19-R48"
+  migration_epoch: "shadow_planner"
+  implementation_status: "completed_activation_rejected"
+  downstream_tasks_not_implemented:
+    - "P11-T01 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p10_t06_snapshot_cache_benchmark"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R29"
+    - "V19-R43"
+    - "V19-R48"
+  implements_plan_task_id: "P10-T06"
+  implementation_status: "PASS_WITH_ACTIVATION_REJECTED"
+  coverage_effect: "controlled shared-snapshot parse and disabled no-hit cold warm storage eviction and activation-evidence benchmark"
+physics_progress_status:
+  status: "project_system_snapshot_cache_benchmark_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P10-T06 measures operational validator behavior only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Snapshot and cache measurements are not scientific evidence or derivation progress."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+snapshot_cache_benchmark:
+  status: "PASS_WITH_ACTIVATION_REJECTED"
+  report_path: "research_control/tasks/RT-20260718-002/artifacts/snapshot_cache_benchmark.md"
+  machine_report_path: "research_control/tasks/RT-20260718-002/artifacts/snapshot_cache_benchmark.json"
+  validation_receipt: "research_control/tasks/RT-20260718-002/artifacts/snapshot_cache_benchmark_validation_receipt.json"
+  affected_shared_parse_reduction_percent: "92.308"
+  full_shared_parse_reduction_percent: "97.222"
+  affected_warm_savings_percent_vs_cold: "23.962"
+  full_warm_savings_percent_vs_cold: "50.507"
+  affected_warm_savings_percent_vs_disabled: "-18.298"
+  full_warm_savings_percent_vs_disabled: "17.884"
+  affected_no_hit_overhead_percent: "53.032"
+  full_no_hit_overhead_percent: "39.354"
+  affected_cold_overhead_percent: "55.579"
+  full_cold_overhead_percent: "65.914"
+  warm_repetitions_per_shape: 3
+  measured_cache_run_count: 24
+  eviction_run_count: 2
+  false_hit_count: 0
+  invalid_cache_entry_count: 0
+  normalized_correctness_parity: true
+  live_manifest_gate_count: 37
+  live_exact_tree_gate_count: 0
+  production_runner_cache_context: false
+  activation_verdict: "REJECT_ACTIVATION_KEEP_DEFAULT_OFF"
+  production_sources_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+validation_evidence:
+  focused_test_count: 50
+  focused_failure_count: 0
+  focused_error_count: 0
+  focused_duration_seconds: "5.318"
+  affected_profile_status: "READY"
+  affected_selected_gate_count: 13
+  legacy_planner_shadow_comparison:
+    status: "PASS"
+    legacy_compatible_blocking_gate_count: 11
+    planner_blocking_gate_count: 11
+    unexplained_mismatch_count: 0
+  repository_suite:
+    test_count: 954
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    duration_seconds: "106.755"
+    status: "PASS"
+    repair_evidence: "The initial 106.222-second run observed one active-lifecycle completion-path error. Binding this completion path made the targeted test pass and the completed-state 954-test rerun pass."
+  checkpoint_status: "PASS_REQUIRED_FOR_COMPLETION_PERSISTENCE"
+command_results:
+  - ".venv/bin/python .local/p10_t06_snapshot_cache_benchmark.py | exit_code=0 | PASS_WITH_ACTIVATION_REJECTED | 24 measured cache runs 2 eviction runs and tracked state unchanged"
+  - ".venv/bin/python -m unittest -v tests.test_repository_snapshot tests.test_validation_cache tests.test_executor_cache_integration tests.test_validation_cache_adversarial | exit_code=0 | 50 tests PASS in 5.318 seconds"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260718-002 --json | exit_code=0 | READY with 13 selected gates"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy-compatible blocking gates equal 11 planner gates with zero unexplained mismatch"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=1 | 954 tests with one expected skip and one active-lifecycle completion-path error in 106.222 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_minimum_physics_payload_validator.MinimumPhysicsPayloadValidatorTests.test_live_opt_in_scan_does_not_reclassify_historical_tasks | exit_code=0 | repaired active-lifecycle test PASS"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | stable completed-state 954 tests PASS with one expected skip in 106.755 seconds"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS with zero hard failures"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS"
+  - "git diff --check | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260718-002-001 | exit_code=0 required | governed local checkpoint with no push"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 51 lease parity project binding clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "P10-T05 PASS completion canonical plan performance budget memory preflight classifier resolver and preserved ordinary handoff were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Shared snapshot reduces registry parses by 92.308 and 97.222 percent with row-count parity."
+      - "All 24 disabled no-hit cold and warm runs and both eviction runs preserve normalized correctness with zero false hits."
+      - "Activation is rejected and cache remains off by default."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused tests and legacy-planner shadow comparison pass."
+      - "The initial active-lifecycle completion-path error was repaired by binding this receipt and the stable completed-state full suite passes all 954 tests with one expected skip."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains required after stable completed-state validation."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only both pass before checkpoint persistence."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-surface claim-language validation passes with zero hard failures before checkpoint persistence."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260718-002/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet measures controlled operational snapshot and exact-tree cache behavior only. It does not activate a live gate permit cached final staged acceptance change production snapshot cache executor manifest planner runner checkpoint CI or ordinary research authority modify canonical ontology derive a source law matter coupling or Einstein equations promote a benchmark issue a Gate Chair verdict prove a theorem or complete the derivation."
+verdict: "v19_p10_t06_measurement_pass_activation_rejected_p11_t01_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "Shared snapshot parse reduction and warm-versus-cold savings are established with exact normalized parity while measured overhead live ineligibility and corpus non-comparability require cache to remain disabled by default."
+selected_next_route:
+  route_id: "v19_p11_t01_ci_shard_design"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P11"
+  plan_task_id: "P11-T01"
+  task_name: "Design the manifest-driven CI job and shard matrix"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "ci_shard_design"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system CI shard design only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After stable completed-state validation and governed checkpoint PASS route one separately bounded P11-T01 packet; do not execute it in P10-T06."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "817"
+    relationship_row_count: "4066"
+    semantic_row_count: "817"
+    vault_row_count: "817"
+    local_cache_only_warning_count: "0"
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v19.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Generated wiki Obsidian SQLite semantic and .local retrieval outputs were navigation layers only and are not authority."

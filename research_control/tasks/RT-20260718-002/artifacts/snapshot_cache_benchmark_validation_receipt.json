@@ -1,0 +1,156 @@
+{
+  "schema_id": "v19_p10_t06_snapshot_cache_benchmark_validation_receipt_v1",
+  "status": "PASS_WITH_ACTIVATION_REJECTED",
+  "created_at": "2026-07-18T01:12:35Z",
+  "task_id": "RT-20260718-002",
+  "job_id": "AJ-RT-20260718-002-001",
+  "tree_fingerprint": "sha256:565b1892b12d8e3fcc2849c36225e1f615cf4124a76f01f706b2e9f165fb914e",
+  "gates": [
+    {
+      "gate_id": "benchmark_environment_fingerprint",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": ".local/p10_t06_snapshot_cache_benchmark_result.json",
+      "content_hash": "sha256:08ada943b662c755ec40f1f36eb45eadbcedf8bd673f2e900e09a5d084fe3995",
+      "summary": "Hardware Python dependency digest OS Git head and exact working-tree fingerprint are recorded."
+    },
+    {
+      "gate_id": "snapshot_parse_reduction",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "affected_direct_parses": 39,
+        "affected_shared_parses": 3,
+        "full_direct_parses": 108,
+        "full_shared_parses": 3
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-002/artifacts/snapshot_cache_benchmark.json",
+      "content_hash": "sha256:5f423e6451d3f6576e0ae865e4fe74485eafa97f10b577c350738d63053bf9bc",
+      "summary": "Shared snapshot reduces repeated parses by 92.308% and 97.222% with row-count parity."
+    },
+    {
+      "gate_id": "cache_mode_correctness_parity",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "profile_count": 2,
+        "mode_count": 4,
+        "measured_run_count": 24,
+        "false_hit_count": 0
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": ".local/p10-t06-benchmark/receipts",
+      "content_hash": "sha256:ff2375558336869d122f722694854b8ca8b2e9228944fa311ccb78384079c2f1",
+      "summary": "Disabled no-hit cold and warm normalized outcomes match for affected and full shapes."
+    },
+    {
+      "gate_id": "cache_cold_warm_storage_eviction",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "warm_repetition_count_per_shape": 3,
+        "eviction_run_count": 2,
+        "invalid_cache_entry_count": 0
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-002/artifacts/snapshot_cache_benchmark.json",
+      "content_hash": "sha256:5f423e6451d3f6576e0ae865e4fe74485eafa97f10b577c350738d63053bf9bc",
+      "summary": "Warm reuse saves 23.962% and 50.507% versus cold; storage and five-entry eviction remain valid and bounded."
+    },
+    {
+      "gate_id": "activation_assessment",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "live_gate_count": 37,
+        "live_exact_tree_gate_count": 0
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-002/artifacts/snapshot_cache_benchmark.json",
+      "content_hash": "sha256:5f423e6451d3f6576e0ae865e4fe74485eafa97f10b577c350738d63053bf9bc",
+      "summary": "Evidence rejects activation and preserves cache mode off by default."
+    },
+    {
+      "gate_id": "benchmark_tracked_state_stability",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": ".local/p10_t06_snapshot_cache_benchmark_result.json",
+      "content_hash": "sha256:08ada943b662c755ec40f1f36eb45eadbcedf8bd673f2e900e09a5d084fe3995",
+      "summary": "Git status before and after benchmark execution is identical."
+    },
+    {
+      "gate_id": "focused_snapshot_cache_executor_tests",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "test_count": 50
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": ".local/p10-t06-benchmark/receipts",
+      "content_hash": "sha256:ff2375558336869d122f722694854b8ca8b2e9228944fa311ccb78384079c2f1",
+      "summary": "Snapshot cache executor and adversarial focused tests pass."
+    },
+    {
+      "gate_id": "legacy_planner_shadow_comparison",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "legacy_blocking_gate_count": 11,
+        "planner_blocking_gate_count": 11,
+        "unexplained_mismatch_count": 0
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-002/jobs/completions/AJC-AJ-RT-20260718-002-001.yaml",
+      "content_hash": "sha256:8860a845628865a441cf0be701748fc49bbf67b8746a3869d5bec4e97e079192",
+      "summary": "All affected legacy-compatible blocking gates match the planner shadow set."
+    },
+    {
+      "gate_id": "repository_test_suite",
+      "status": "PASS",
+      "counts": {
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "test_count": 954,
+        "skip_count": 1
+      },
+      "relevant_finding_ids": [],
+      "receipt_path": "research_control/tasks/RT-20260718-002/jobs/completions/AJC-AJ-RT-20260718-002-001.yaml",
+      "content_hash": "sha256:8860a845628865a441cf0be701748fc49bbf67b8746a3869d5bec4e97e079192",
+      "summary": "Stable completed-state repository suite passes in 106.755 seconds after repairing the active-lifecycle completion-path test error."
+    }
+  ],
+  "raw_receipt_boundary": {
+    "local_receipt_count": 26,
+    "local_receipt_set_hash": "sha256:ff2375558336869d122f722694854b8ca8b2e9228944fa311ccb78384079c2f1",
+    "local_only": true,
+    "authoritative": false
+  },
+  "activation_verdict": "REJECT_ACTIVATION_KEEP_DEFAULT_OFF",
+  "scientific_claims_changed": false,
+  "distance_to_gr_delta_changed": false,
+  "validation_status": "PASS"
+}
