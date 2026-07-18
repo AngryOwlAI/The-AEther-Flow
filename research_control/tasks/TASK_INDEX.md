@@ -6,16 +6,18 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `bfc2e31f8eafb5fd59dd438739811010c381f2d5029b90a8e717944227dc8d42`
-- Generated-at source timestamp: `2026-07-18T04:14:30Z`
-- Row count: `965`
-- Issue count: `297`
+- Source fingerprint: `aa7268089454e9ed8a18c8de10c9a610918224675efd82013cd19d0e26558719`
+- Generated-at source timestamp: `2026-07-18T14:42:41Z`
+- Row count: `967`
+- Issue count: `298`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
 ## Task Rows
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260718-009|RT-20260715-013|2026-07-18T14:42:41Z|2026-07-18T15:12:11Z|continue_research_goal_unlimited_default_scheduling_guards|completed|none|Project-system relay scheduling contract only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|1|No successor task is required. Preserve the validated staged transaction without commit push relay launch or branch change.|PASS|research_control/tasks/RT-20260718-009/jobs/completions/AJC-AJ-RT-20260718-009-001.yaml|
+|RT-20260718-008|RT-20260718-007|2026-07-18T05:46:18Z|2026-07-18T05:46:18Z|planner_authoritative_hosted_ci_and_default_cutover_evidence|completed|none|Project-system hosted-CI authority evidence only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|5|Await explicit user authority to publish the exact branch checkpoint; only then obtain matched hosted-CI and scheduled-full evidence before reconsidering P11-T04 cutover. P11-T05 remains blocked.|PASS|research_control/tasks/RT-20260718-008/jobs/completions/AJC-AJ-RT-20260718-008-001.yaml|
 |RT-20260718-007|RT-20260718-006|2026-07-18T04:14:30Z|2026-07-18T05:13:50Z|planner_authoritative_execution_binding_repair|completed|none|Project-system validation-orchestration repair only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|3|After governed checkpoint PASS route one separately bounded P11-T04 hosted-CI and default-cutover evidence packet; P11-T05 remains blocked.|PASS|research_control/tasks/RT-20260718-007/jobs/completions/AJC-AJ-RT-20260718-007-001.yaml|
 |RT-20260718-006|RT-20260718-005|2026-07-18T03:37:30Z|2026-07-18T03:47:57Z|planner_authoritative_cutover|completed|none|Project-system validation-orchestration audit only; no derivation milestone is advanced.|process-integrity-auditor@0.1.0|false|false|5|Route one separately bounded P11-T04 Validator Engineer repair for planner-authoritative execution binding and matched current-head local and hosted-CI receipts; P11-T05 remains blocked.|PASS|research_control/tasks/RT-20260718-006/jobs/completions/AJC-AJ-RT-20260718-006-001.yaml|
 |RT-20260718-005|RT-20260718-004|2026-07-18T02:46:28Z|2026-07-18T03:06:47Z|memory_ci_dedup_and_scheduled_full|completed|none|Project-system memory CI deduplication only; no derivation milestone is advanced.|validator-engineer@0.2.0|false|false|2|After governed checkpoint PASS route one separately bounded P11-T04 packet; do not execute it in P11-T03.|PASS|research_control/tasks/RT-20260718-005/jobs/completions/AJC-AJ-RT-20260718-005-001.yaml|
@@ -1283,3 +1285,4 @@ Generated navigation support only. This index is not task authority, physics pro
 |missing_field|RT-20260702-053|research_control/tasks/RT-20260702-053/00_TASK.yaml|milestone_burden is missing|
 |missing_field|RT-20260702-054|research_control/tasks/RT-20260702-054/00_TASK.yaml|milestone_burden is missing|
 |missing_field|RT-20260702-055|research_control/tasks/RT-20260702-055/00_TASK.yaml|milestone_burden is missing|
+|malformed_yaml||research_control/tasks/RT-20260718-009/jobs/completions/AJC-AJ-RT-20260718-009-001.yaml|line 54: null values are not allowed|

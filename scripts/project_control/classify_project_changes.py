@@ -515,6 +515,7 @@ def classify_path_family(path: str, registry: RegistryIndex) -> dict[str, object
         path.startswith(".agents/roles/")
         or path.startswith(".agents/schemas/")
         or path_matches(path, [".codex/skills/*/SKILL.md"])
+        or path.startswith(".codex/skills/continue-research-goal/scripts/")
         or path == VALIDATION_GATE_MANIFEST_PATH
         or any(source.role in {"control_schema", "control_policy"} for source in sources)
     ):
@@ -674,6 +675,14 @@ def classify_canonical_path(path: str, result: Classification) -> None:
     elif path_matches(path, [".codex/skills/*/SKILL.md"]):
         result.reason_codes.add("skill_contract_changed")
         result.docs("AGENTS.md", "README.md", role=CONTROL_ROLE)
+        result.improve(CONTROL_ROLE)
+    elif path.startswith(".codex/skills/continue-research-goal/scripts/"):
+        result.reason_codes.add("skill_runtime_changed")
+        result.docs(
+            ".codex/skills/continue-research-goal/SKILL.md",
+            ".codex/skills/continue-research-goal/references/goal-file-schema.md",
+            role=CONTROL_ROLE,
+        )
         result.improve(CONTROL_ROLE)
     elif path.startswith(".codex/skills/project-memory-system/scripts/"):
         result.reason_codes.add("memory_tooling_changed")

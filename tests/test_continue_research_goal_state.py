@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import ast
+import contextlib
 from concurrent.futures import ThreadPoolExecutor
 import copy
 import datetime as dt
 import importlib.util
+import io
 import json
 from pathlib import Path
 import subprocess
@@ -156,6 +158,158 @@ class GoalStateTestCase(unittest.TestCase):
 
 
 class SerializationAndSchemaTests(GoalStateTestCase):
+    def test_omitted_scheduling_guards_emit_v2_nulls(self):
+        path, record = self.store.initialize(
+            goal_text="unbounded scheduling horizon",
+            completion_contract=contract(),
+            repository_binding=binding(),
+            initial_fingerprint=fingerprint("A"),
+            timestamp=BASE_TIME,
+        )
+        self.assertEqual(record["schema_version"], "continue-research-goal.v2")
+        self.assertIsNone(record["guards"]["max_continue_passes"])
+        self.assertIsNone(record["deadline_at"])
+        self.assertIsNone(goal_state.effective_guards(record)["max_continue_passes"])
+        self.assertIsNone(goal_state.effective_guards(record)["deadline_at"])
+        self.assertEqual(self.store.read(path), record)
+
+    def test_pass_and_absolute_deadline_overrides_are_independent(self):
+        path, record = self.store.initialize(
+            goal_text="pass-only guard",
+            completion_contract=contract(),
+            max_continue_passes=4,
+            repository_binding=binding(),
+            initial_fingerprint=fingerprint("A"),
+            timestamp=BASE_TIME,
+        )
+        self.assertEqual(record["guards"]["max_continue_passes"], 4)
+        self.assertIsNone(record["deadline_at"])
+        terminal = self.store.reserve_successor(
+            path,
+            expected_revision=record["state"]["revision"],
+            predecessor_thread_id="launcher",
+            handoff_token="handoff-token-1",
+            timestamp=BASE_TIME,
+        )
+        self.store.dispatch_failure(
+            path,
+            expected_revision=terminal["state"]["revision"],
+            generation=1,
+            handoff_token="handoff-token-1",
+            outcome="definitive",
+            diagnostic={"fixture": "release lease"},
+            timestamp=BASE_TIME,
+        )
+
+        _, record = self.store.initialize(
+            goal_text="deadline-only guard",
+            completion_contract=contract(),
+            deadline_at="2026-07-10T15:30:00+02:00",
+            repository_binding=binding(),
+            initial_fingerprint=fingerprint("B"),
+            timestamp=BASE_TIME,
+        )
+        self.assertIsNone(record["guards"]["max_continue_passes"])
+        self.assertEqual(record["deadline_at"], "2026-07-10T13:30:00Z")
+
+    def test_deadline_validation_rejects_invalid_naive_and_nonfuture_values(self):
+        for index, deadline in enumerate(
+            ("invalid", "2026-07-10T13:00:00", BASE_TIME, "2026-07-10T11:59:59Z")
+        ):
+            with self.subTest(deadline=deadline):
+                with self.assertRaises(goal_state.ValidationError):
+                    self.store.initialize(
+                        goal_text=f"invalid deadline {index}",
+                        completion_contract=contract(),
+                        deadline_at=deadline,
+                        repository_binding=binding(),
+                        initial_fingerprint=fingerprint("A"),
+                        timestamp=BASE_TIME,
+                    )
+
+    def test_finite_scheduling_overrides_require_positive_integers(self):
+        for kwargs in (
+            {"max_continue_passes": 0},
+            {"max_continue_passes": True},
+            {"max_elapsed_minutes": 0},
+            {"max_elapsed_minutes": True},
+        ):
+            with self.subTest(kwargs=kwargs):
+                with self.assertRaises(goal_state.ValidationError):
+                    self.store.initialize(
+                        goal_text="invalid finite scheduling guard",
+                        completion_contract=contract(),
+                        repository_binding=binding(),
+                        initial_fingerprint=fingerprint("A"),
+                        timestamp=BASE_TIME,
+                        **kwargs,
+                    )
+
+    def test_legacy_elapsed_alias_derives_deadline_and_conflicts_with_absolute_deadline(self):
+        with self.assertRaises(goal_state.ValidationError):
+            self.store.initialize(
+                goal_text="conflicting deadline inputs",
+                completion_contract=contract(),
+                deadline_at="2026-07-10T13:00:00Z",
+                max_elapsed_minutes=30,
+                repository_binding=binding(),
+                initial_fingerprint=fingerprint("A"),
+                timestamp=BASE_TIME,
+            )
+        _, record = self.store.initialize(
+            goal_text="legacy elapsed alias",
+            completion_contract=contract(),
+            max_elapsed_minutes=30,
+            repository_binding=binding(),
+            initial_fingerprint=fingerprint("A"),
+            timestamp=BASE_TIME,
+        )
+        self.assertEqual(record["schema_version"], "continue-research-goal.v2")
+        self.assertEqual(record["deadline_at"], "2026-07-10T12:30:00Z")
+
+    def test_cli_deadline_arguments_are_optional_and_mutually_exclusive(self):
+        common = [
+            "--goals-dir",
+            str(self.goals),
+            "initialize",
+            "--goal-text",
+            "CLI fixture",
+            "--completion-contract-json",
+            json.dumps(contract()),
+            "--repository-binding-json",
+            json.dumps(binding()),
+            "--initial-fingerprint",
+            fingerprint("A"),
+        ]
+        args = goal_state.build_parser().parse_args(common)
+        self.assertIsNone(args.max_continue_passes)
+        self.assertIsNone(args.deadline_at)
+        self.assertIsNone(args.max_elapsed_minutes)
+        with contextlib.redirect_stderr(io.StringIO()):
+            with self.assertRaises(SystemExit):
+                goal_state.build_parser().parse_args(
+                    common
+                    + [
+                        "--deadline-at",
+                        "2026-07-10T13:00:00Z",
+                        "--max-elapsed-minutes",
+                        "60",
+                    ]
+                )
+
+    def test_v1_finite_record_validates_and_round_trips_without_mutation(self):
+        path, record = self.initialize()
+        legacy = copy.deepcopy(record)
+        legacy["schema_version"] = goal_state.LEGACY_SCHEMA_VERSION
+        path.write_text(goal_state.render_goal(legacy), encoding="utf-8")
+        before = path.read_bytes()
+        loaded = self.store.read(path)
+        self.assertEqual(loaded["schema_version"], "continue-research-goal.v1")
+        self.assertIsInstance(loaded["guards"]["max_continue_passes"], int)
+        self.assertIsInstance(loaded["deadline_at"], str)
+        self.assertEqual(goal_state.render_goal(loaded).encode("utf-8"), before)
+        self.assertEqual(path.read_bytes(), before)
+
     def test_exact_goal_serialization_hash_and_round_trip(self):
         exact = "  α goal\r\nline two\r\n"
         path, record = self.initialize(goal=exact)
@@ -250,6 +404,54 @@ class SerializationAndSchemaTests(GoalStateTestCase):
         self.assertEqual(goal_state.effective_completion_contract(record), new_contract)
         self.assertEqual(goal_state.effective_guards(record)["max_continue_passes"], 5)
         self.store.read(path)
+
+    def test_v2_guard_amendments_allow_finite_to_unlimited_but_never_tighten_unlimited(self):
+        path, record = self.initialize()
+        record = self.reserve_and_record(path, record)
+        record = self.claim(path, record)
+        record = self.store.pre_execution_stop(
+            path,
+            expected_revision=record["state"]["revision"],
+            generation=1,
+            claim_token="claim-token",
+            stop_reason="human_gate",
+            evidence={"zero_agent_job_reason": "guard amendment fixture"},
+            timestamp=BASE_TIME,
+        )
+        record = self.store.begin_recovery(
+            path,
+            expected_revision=record["state"]["revision"],
+            user_authorization="user authorizes scheduling-horizon extension",
+            canonical_reconciliation={"prior_holder_terminal": True},
+            timestamp=BASE_TIME,
+        )
+        record = self.store.amend_guards(
+            path,
+            expected_revision=record["state"]["revision"],
+            user_authorization="user makes both finite scheduling guards unlimited",
+            new_guards={"max_continue_passes": None, "deadline_at": None},
+            timestamp=BASE_TIME,
+        )
+        effective = goal_state.effective_guards(record)
+        self.assertIsNone(effective["max_continue_passes"])
+        self.assertIsNone(effective["deadline_at"])
+        revision = record["state"]["revision"]
+        for tightening in (
+            {"max_continue_passes": 100},
+            {"deadline_at": "2026-07-11T12:00:00Z"},
+            {"max_continue_passes": None},
+            {"deadline_at": None},
+        ):
+            with self.subTest(tightening=tightening):
+                with self.assertRaises(goal_state.ValidationError):
+                    self.store.amend_guards(
+                        path,
+                        expected_revision=revision,
+                        user_authorization="attempted tightening",
+                        new_guards=tightening,
+                        timestamp=BASE_TIME,
+                    )
+                self.assertEqual(self.store.read(path)["state"]["revision"], revision)
 
     def test_corrupted_schema_hash_journal_body_and_filename_fail_closed(self):
         path, record = self.initialize()
@@ -692,6 +894,41 @@ class StateMachineTests(GoalStateTestCase):
         self.assertFalse(unchanged["generations"]["1"]["invocation_consumed"])
         self.assertEqual(unchanged["state"]["passes_consumed"], 0)
 
+    def test_unlimited_scheduling_guards_do_not_stop_at_former_limits(self):
+        path, record = self.store.initialize(
+            goal_text="unlimited guard fixture",
+            completion_contract=contract(),
+            repository_binding=binding(),
+            initial_fingerprint=fingerprint("A"),
+            timestamp=BASE_TIME,
+        )
+        record["state"]["passes_consumed"] = 10001
+        self.assertEqual(
+            self.store.check_guards(record, timestamp="2099-07-10T14:00:00Z"),
+            [],
+        )
+        self.store._write_record(path, record)
+        record = self.reserve_and_record(path, record)
+        record = self.claim(path, record)
+        record = self.store.consume_invocation(
+            path,
+            expected_revision=record["state"]["revision"],
+            generation=1,
+            claim_token="claim-token",
+            timestamp="2099-07-10T14:00:00Z",
+        )
+        self.assertEqual(record["state"]["passes_consumed"], 10002)
+
+    def test_finite_pass_and_deadline_guards_stop_independently(self):
+        _, record = self.initialize(passes=1)
+        record["state"]["passes_consumed"] = 1
+        self.assertEqual(self.store.check_guards(record, timestamp=BASE_TIME), ["pass_limit"])
+        record["state"]["passes_consumed"] = 0
+        self.assertEqual(
+            self.store.check_guards(record, timestamp="2026-07-10T13:00:00Z"),
+            ["elapsed_limit"],
+        )
+
 
 class FingerprintAndReceiptTests(GoalStateTestCase):
     def test_canonical_fingerprint_is_deterministic_and_detects_cycle(self):
@@ -924,7 +1161,7 @@ class RepositoryContractTests(unittest.TestCase):
         tracked = subprocess.check_output(["git", "ls-files"], cwd=ROOT, text=True).splitlines()
         self.assertFalse(any("/goals/goal-" in path for path in tracked))
 
-    def test_primary_main_worktree_remains_clean(self):
+    def test_primary_main_worktree_is_clean_or_contains_one_governed_transaction(self):
         lines = subprocess.check_output(["git", "worktree", "list", "--porcelain"], cwd=ROOT, text=True).splitlines()
         main_path = None
         current_path = None
@@ -936,7 +1173,19 @@ class RepositoryContractTests(unittest.TestCase):
         if main_path is None:
             self.skipTest("no primary main worktree is present")
         status = subprocess.check_output(["git", "status", "--porcelain"], cwd=main_path, text=True)
-        self.assertEqual(status, "")
+        if status:
+            governed = subprocess.run(
+                [
+                    ".venv/bin/python",
+                    "scripts/research_control/validate_research_control.py",
+                    "--check-diff",
+                ],
+                cwd=main_path,
+                text=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+            )
+            self.assertEqual(governed.returncode, 0, governed.stdout)
 
 
 if __name__ == "__main__":

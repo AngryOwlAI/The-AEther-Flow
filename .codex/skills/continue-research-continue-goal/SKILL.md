@@ -62,13 +62,21 @@ After a successful claim, directly reverify:
 - `research_control/program_state.yaml`, the active task/AgentJob, latest
   handoff pair, and relevant registries;
 - the current `continue_research.py` boundary;
-- pass count, elapsed deadline, repetition state, and all fixed guards;
+- the pass count against `max_continue_passes` only when that guard is finite,
+  the current time against `deadline_at` only when that guard is finite,
+  repetition state, and all fixed guards;
 - matching per-goal and worktree-global leases; and
 - absence of a possibly active predecessor or unexplained repository writer.
 
 Map a pre-execution stop through the helper to one terminal state and one
 zero-invocation receipt, then release both leases. Do not consume the
 generation when any guard fails.
+
+A JSON `null` pass limit or deadline means unlimited only for that scheduling
+dimension. Continue incrementing `passes_consumed` for every authorized
+invocation. Unlimited scheduling does not expand the per-frame AgentJob
+boundary, weaken human gates or no-progress detection, bypass validators,
+leases, identity checks, or concurrency limits, or override any other stop.
 
 ## One Research Invocation
 
@@ -110,7 +118,7 @@ successor.
 Create no successor and use the deterministic terminal mapping when any of the
 following applies: human-gated authority; indeterminate evaluation; no action
 or no authoritative progress; unchanged/repeated fingerprint; exhausted count
-or deadline; validation/checkpoint/dirty-state failure; identity or branch
+or deadline when finite; validation/checkpoint/dirty-state failure; identity or branch
 mismatch; corrupt schema/hash/journal/path; missing or conflicting leases;
 interruption; task-capability loss; duplicate successor; or ambiguous dispatch.
 
@@ -169,6 +177,12 @@ original guards, repository binding, prior events, or prior receipts. A goal
 change requires a new launcher record. Absorbing terminal states
 (`terminal_complete`, `terminal_duplicate_detected`,
 `terminal_corrupt_state`, and `terminal_cancelled`) cannot resume.
+
+For v2 records, a scheduling-guard amendment may only raise a finite limit or
+replace a finite limit with JSON `null`. It may never replace an unlimited
+guard with a finite value or append a no-op unlimited value. Finite amended
+deadlines are normalized to canonical UTC `Z`. Retained v1 records remain
+finite and use their original finite-extension contract.
 
 ## Reporting
 

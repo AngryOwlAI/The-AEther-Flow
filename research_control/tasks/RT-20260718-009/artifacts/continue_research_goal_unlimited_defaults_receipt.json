@@ -1,0 +1,111 @@
+{
+  "schema_version": "continue-research-goal-unlimited-defaults.v1",
+  "task_id": "RT-20260718-009",
+  "job_id": "AJ-RT-20260718-009-001",
+  "created_at": "2026-07-18T14:59:32Z",
+  "parent_task_id": "RT-20260715-013",
+  "entry_head": "3aa8b474eb056afab618413b9b4b1de810dd8b3b",
+  "entry_branch": "main",
+  "new_record_schema": "continue-research-goal.v2",
+  "scheduling_guards": {
+    "max_continue_passes_default": null,
+    "deadline_at_default": null,
+    "null_semantics": "unlimited for only the corresponding scheduling horizon",
+    "canonical_deadline_input": "--deadline-at",
+    "compatibility_deadline_alias": "--max-elapsed-minutes",
+    "deadline_arguments_mutually_exclusive": true,
+    "finite_deadline_normalized_to_utc_z": true,
+    "passes_consumed_remains_counted": true
+  },
+  "compatibility": {
+    "v1_read_validation_supported": true,
+    "v1_finite_semantics_preserved": true,
+    "v1_amendment_hash_basis_preserved": true,
+    "v1_migrated": false,
+    "retained_goal_record_changed": false,
+    "retained_goal_record_sha256": "3d7306b65d62f10968535dcd262ea8938303fc2adbc135eb5ac805bd3383b12b"
+  },
+  "v2_amendments": {
+    "finite_to_larger_finite": true,
+    "finite_to_unlimited": true,
+    "unlimited_to_finite": false,
+    "unlimited_to_unlimited_noop": false
+  },
+  "preserved_boundaries": [
+    "one bounded AgentJob per relay frame",
+    "human gates",
+    "no-progress detection",
+    "repeated-state detection",
+    "validation failure stop",
+    "checkpoint failure stop",
+    "lease parity",
+    "repository and branch identity",
+    "single live continuation",
+    "capability stop",
+    "dispatch safety"
+  ],
+  "historical_preflight_hash_policy": {
+    "historical_records_rewritten": false,
+    "mutable_source_object_ids": [
+      "MD-SKILL-CONTINUE-RESEARCH-CONTINUE-GOAL",
+      "MD-SKILL-CONTINUE-RESEARCH-GOAL",
+      "MD-SKILL-CONTINUE-RESEARCH-GOAL-SCHEMA"
+    ]
+  },
+  "implementation": {
+    "launcher_contract_sha256": "a4be33e0d1146569303b87d5cba0063fbd2490918d35f7c15fa2c384482a68fd",
+    "continuation_contract_sha256": "49191662332729a28fc8b1edde4fad5c7eb5cd812d96dd5b79d223cc122fb359",
+    "schema_contract_sha256": "5f7883df01975531a3892cd8bbcd81e6ac557601e20b599fbf665e483820f790",
+    "state_helper_sha256": "1cf6d16dfe1af275558f011b567f1153591908cc36c9c6374f69838cca8f4ace",
+    "project_change_classifier_sha256": "97c56d5d8ae283a480d785ac7bda378a650112059308d8ee732261b0a54c6ae7",
+    "research_control_validator_sha256": "85aee57a86a66467e782762d730bb2d06e69ea84a087fd8331c7b3a364d96b19",
+    "relay_test_sha256": "09c59f478cd54618a54926c66c6228130fc6ee725ff8caaba5c6c9a6feb1c436",
+    "project_change_classifier_test_sha256": "0c08518792b830b4e5bd6e6676454229192023b61b3ddc8976d8e09893ef3339",
+    "research_control_test_sha256": "e2f6a2788e8a42f894dc071ce9d87b068a64a262724e1f7268b0b745ae888d92"
+  },
+  "verification": {
+    "baseline_relay_tests": 37,
+    "post_change_relay_tests": 47,
+    "post_change_relay_tests_status": "PASS",
+    "research_control_tests": 141,
+    "research_control_tests_status": "PASS",
+    "project_change_classifier_runtime_routing_test": "PASS",
+    "project_change_classifier_tests": 60,
+    "project_change_classifier_tests_status": "PASS",
+    "full_repository_tests": 985,
+    "full_repository_tests_status": "PASS",
+    "unknown_governed_paths": 0,
+    "retained_v1_validation": "PASS",
+    "memory_bootstrap": "PASS",
+    "memory_validate_only": "PASS",
+    "memory_sync_mutated": false,
+    "memory_doctor": "PASS",
+    "task_index_rows": 967,
+    "project_improvement_signals": "PASS",
+    "research_control_diff": "PASS",
+    "claim_language": "PASS_WITH_HISTORICAL_WARNINGS",
+    "git_diff_check": "PASS",
+    "initial_no_commit_checkpoint": "BLOCKED_BEFORE_EXECUTION_BY_UNROUTED_SKILL_RUNTIME_PATH",
+    "no_commit_checkpoint": "PASS_READY_TO_COMMIT_STAGED",
+    "checkpoint_validation_mode": "compare",
+    "checkpoint_staged_tree": "46da30a1cf128fbe008637c2e367f9832f490578",
+    "checkpoint_shadow_comparison": "PASS",
+    "checkpoint_agentjob_allowlist": "PASS",
+    "checkpoint_unstaged_residue": "PASS",
+    "checkpoint_commit_created": false
+  },
+  "authority": {
+    "ordinary_research_handoff": "handoff-0740",
+    "ordinary_research_handoff_preserved": true,
+    "program_state_changed": false,
+    "ignored_goal_record_changed": false,
+    "native_codex_goal_changed": false,
+    "branch_changed": false,
+    "relay_launched": false,
+    "successor_created": false,
+    "external_system_changed": false,
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  }
+}

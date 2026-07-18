@@ -1,0 +1,205 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260718-009-001"
+completion_id: "AJC-AJ-RT-20260718-009-001"
+task_id: "RT-20260718-009"
+decision_id: "DDR-20260718-009"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260718-009"
+status: "completed"
+created_at: "2026-07-18T15:12:11Z"
+started_at: "2026-07-18T14:42:41Z"
+completed_at: "2026-07-18T15:12:11Z"
+objective: "Implement v2 nullable pass and absolute-deadline scheduling horizons with finite v1 compatibility and no change to any other relay stop."
+completion_summary: "New goal records emit continue-research-goal.v2 with independently nullable max_continue_passes and deadline_at scheduling horizons. Finite v1 records retain exact read validation and hash behavior, all non-scheduling relay stops remain active, and the governed compare-mode no-commit checkpoint passed with 985 repository tests."
+source_basis:
+  - "research_control/tasks/RT-20260715-013/DDR-20260715-013.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-goal/scripts/goal_state.py"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - "tests/test_continue_research_goal_state.py"
+outputs_created:
+  - "research_control/tasks/RT-20260718-009/00_TASK.yaml"
+  - "research_control/tasks/RT-20260718-009/DDR-20260718-009.md"
+  - "research_control/tasks/RT-20260718-009/artifacts/continue_research_goal_unlimited_defaults_receipt.json"
+  - "research_control/tasks/RT-20260718-009/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-009/jobs/AJ-RT-20260718-009-001.yaml"
+  - "research_control/tasks/RT-20260718-009/jobs/completions/AJC-AJ-RT-20260718-009-001.yaml"
+  - "research_control/tasks/RT-20260718-009/roles/project-control-maintainer@0.2.0--RT-20260718-009.yaml"
+outputs_updated:
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-goal/scripts/goal_state.py"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - "scripts/project_control/classify_project_changes.py"
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_continue_research_goal_state.py"
+  - "tests/test_project_change_classifier.py"
+  - "tests/test_research_control.py"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+project_system_change_only: true
+project_system_scope: "continue_research_goal_v2_unlimited_default_scheduling_guards"
+project_system_boundary_authorized_by_user: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+implementation_results:
+  new_record_schema: "continue-research-goal.v2"
+  omitted_max_continue_passes: "JSON null"
+  omitted_deadline_at: "JSON null"
+  independently_finite_overrides_supported: true
+  canonical_deadline_argument: "--deadline-at"
+  compatibility_deadline_alias: "--max-elapsed-minutes"
+  deadline_arguments_mutually_exclusive: true
+  finite_deadline_normalized_to_utc_z: true
+  invalid_naive_or_nonfuture_deadline_rejected: true
+  finite_to_unlimited_amendment_supported: true
+  unlimited_guard_tightening_rejected: true
+  finite_v1_read_validation_preserved: true
+  finite_v1_amendment_hash_basis_preserved: true
+  retained_v1_record_mutated: false
+  retained_v1_record_sha256: "3d7306b65d62f10968535dcd262ea8938303fc2adbc135eb5ac805bd3383b12b"
+  passes_consumed_evidence_preserved: true
+  per_frame_agent_job_scope_changed: false
+  non_scheduling_stop_conditions_changed: false
+  relay_launched: false
+  successor_created: false
+  branch_changed: false
+  commit_created: false
+  push_performed: false
+validation_evidence:
+  baseline_relay_test_count: 37
+  completed_relay_test_count: 47
+  project_change_classifier_test_count: 60
+  research_control_test_count: 141
+  governed_checkpoint_repository_test_count: 985
+  initial_checkpoint_result: "BLOCKED_BEFORE_EXECUTION_BY_UNROUTED_SKILL_RUNTIME_PATH"
+  classifier_routing_repair: "PASS"
+  governed_checkpoint_result: "PASS_READY_TO_COMMIT_STAGED"
+  governed_checkpoint_validation_mode: "compare"
+  governed_checkpoint_staged_tree: "46da30a1cf128fbe008637c2e367f9832f490578"
+  governed_checkpoint_shadow_comparison: "PASS"
+  governed_checkpoint_commit_created: false
+command_results:
+  - ".venv/bin/python -m unittest tests.test_continue_research_goal_state | exit_code=0 | 47 tests PASS"
+  - ".venv/bin/python -m unittest tests.test_project_change_classifier | exit_code=0 | 60 tests PASS"
+  - ".venv/bin/python -m unittest tests.test_research_control | exit_code=0 | 141 tests PASS"
+  - ".venv/bin/python .codex/skills/continue-research-goal/scripts/goal_state.py ... validate --goal-file goal-crg-20260716T053715Z-47e6f6f5298bb427.md | exit_code=0 | retained v1 validation PASS and SHA-256 unchanged"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | no unknown governed paths"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical warnings only"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | PASS"
+  - "make PYTHON=.venv/bin/python memory-sync | exit_code=0 | PASS"
+  - "make PYTHON=.venv/bin/python memory-doctor | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260718-009-001 --no-commit | exit_code=0 | ready_to_commit staged compare-mode tree 46da30a1cf128fbe008637c2e367f9832f490578"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | 985 tests PASS"
+  - "git diff --check | exit_code=0 | PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The repository was clean at entry on main at 3aa8b474eb056afab618413b9b4b1de810dd8b3b and the retained ignored v1 record had no active lease."
+      - "The user-authorized plan and RT-20260715-013 finite-default predecessor evidence were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Focused tests cover nullable omissions independent finite overrides absolute UTC validation finite and unlimited consumption amendments and byte-preserving v1 validation."
+      - "The retained v1 record validates with unchanged SHA-256 3d7306b65d62f10968535dcd262ea8938303fc2adbc135eb5ac805bd3383b12b."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The relay-state classifier and research-control suites pass 47 60 and 141 tests respectively."
+      - "The full repository checkpoint shard passes 985 tests."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "The governed compare-mode no-commit checkpoint returned ready_to_commit staged with planner shadow comparison allowlist unstaged-residue and staged-tree integrity checks passing."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task indexes dependency graphs source-backed wiki metadata registry derivatives and FOLDER_MAP.md were regenerated through repository tooling."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization validate-only memory validation and local retrieval doctor pass with 818 source objects and 4070 relationship rows."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Research-control diff reports zero hard claim-language failures; remaining findings are historical warnings."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "Relay scheduling-horizon control contract only; no derivation milestone or physics claim changed."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Scheduling-horizon policy and compatibility behavior are project-system evidence only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260718-009/documentation_impact.yaml"
+  source_documentation_updated: true
+  updated_source_documentation:
+    - ".codex/skills/continue-research-goal/SKILL.md"
+    - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+    - ".codex/skills/continue-research-continue-goal/SKILL.md"
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "No M_src adoption or source-law adoption."
+    - "No g_eff definition scope or adoption change."
+    - "No matter coupling derivation or adoption."
+    - "No Einstein equation derivation or promotion."
+    - "No benchmark promotion or Gate Chair verdict."
+    - "No completed derivation claim."
+    - "No global theory rejection."
+  summary: "Unlimited applies only to nullable v2 scheduling horizons. It does not weaken per-frame AgentJob scope human gates no-progress detection validation checkpoint leases identity concurrency or any scientific authority."
+verdict: "continue_research_goal_v2_unlimited_defaults_pass_v1_preserved_no_relay_no_physics_delta"
+coherent_resolution_summary: "The relay can now remain scheduled without an implicit pass or elapsed-time horizon while each frame remains independently bounded and every non-scheduling stop retains authority."
+next_recommendation: "No successor task is required. Preserve the validated staged transaction without commit push relay launch or branch change."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 818
+    relationship_row_count: 4070
+    semantic_row_count: 818
+    vault_row_count: 818
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-CONTINUE-RESEARCH-GOAL --json"
+      query_type: "lookup"
+      query_text: "MD-SKILL-CONTINUE-RESEARCH-GOAL"
+      returned_object_ids:
+        - "MD-SKILL-CONTINUE-RESEARCH-GOAL"
+  canonical_inspections:
+    - object_id: "MD-SKILL-CONTINUE-RESEARCH-GOAL"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/continue-research-goal/SKILL.md"
+      source_hash: "a4be33e0d1146569303b87d5cba0063fbd2490918d35f7c15fa2c384482a68fd"
+  authority_note: "Generated Obsidian wiki SQLite semantic and .local retrieval surfaces are navigation layers only and are not authority."

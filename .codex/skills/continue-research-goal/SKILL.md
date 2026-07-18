@@ -6,13 +6,19 @@ description: Launch one file-backed recursive relay that pursues an explicit The
 # Continue Research Goal
 
 Use this skill only when the user explicitly requests a fresh-discussion
-research relay and supplies all required inputs:
+research relay and supplies the required goal:
 
 ```yaml
 goal: <nonblank exact research objective>
-max_continue_passes: <positive integer>
-max_elapsed_minutes: <positive integer>
+max_continue_passes: <optional positive integer; default null means unlimited>
+deadline_at: <optional absolute timezone-aware timestamp; default null means unlimited>
+max_elapsed_minutes: <optional positive integer compatibility alias for deadline_at>
 ```
+
+`deadline_at` and `max_elapsed_minutes` are mutually exclusive. Normalize a
+finite deadline to canonical UTC `Z` and reject an invalid, naive, or
+non-future value. `--deadline-at` is the canonical CLI override;
+`--max-elapsed-minutes` remains a supported compatibility alias.
 
 This is a launcher, not a research worker. It creates one durable ignored goal
 record, dispatches one fresh `continue-research-continue-goal` discussion, and
@@ -51,7 +57,7 @@ execution profile: acceptance_test
 ```
 
 The production profile is available only after explicit user authorization
-for the exact relay goal and guards. It binds to:
+for the exact relay goal and effective scheduling guards. It binds to:
 
 ```text
 project root: /Volumes/P-SSD/AngryOwl/The-AEther-Flow
@@ -107,7 +113,21 @@ Derive a plain-language completion contract naming the canonical repository
 evidence and validator/checkpoint conditions that would prove success. Ask for
 clarification before writing state only when an operational interpretation
 would materially narrow, broaden, or rewrite the goal. The original goal,
-original completion contract, guards, and repository binding are immutable.
+original completion contract, scheduling guards, fixed guards, and repository
+binding are immutable.
+
+New records use `continue-research-goal.v2`. Omitted
+`max_continue_passes` and `deadline_at` values are persisted independently as
+JSON `null`; each `null` disables only its corresponding count or elapsed-time
+stop. Continue recording `passes_consumed` even when the pass horizon is
+unlimited. The helper retains exact read and validation support for finite v1
+records and never migrates or rewrites them.
+
+“Unlimited” applies only to the scheduling horizon. It does not expand the
+single bounded AgentJob permitted in each relay frame, weaken human gates,
+disable no-progress or repeated-state detection, bypass validation or
+checkpoint requirements, relax leases or repository identity, permit
+concurrency, or authorize a successor when any other stop applies.
 
 Fixed guards are:
 
@@ -150,7 +170,8 @@ stealing.
 After all preflight checks pass:
 
 1. call helper `initialize` exactly once with the exact goal, completion
-   contract, guards, repository binding, and initial canonical fingerprint;
+   contract, optional scheduling guards, fixed guards, repository binding, and
+   initial canonical fingerprint;
 2. retain the returned absolute `goal_file`, `goal_id`, revision, and launcher
    lease evidence;
 3. call helper `reserve-successor` once for generation 1, creating one random

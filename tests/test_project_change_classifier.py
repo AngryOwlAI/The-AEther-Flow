@@ -333,6 +333,15 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         self.assertEqual(result["recommended_validation_profile"], "full")
         self.assertIn("unknown_governed_path", result["reason_codes"])
 
+    def test_continue_goal_state_helper_has_governed_skill_runtime_routing(self) -> None:
+        result = self.classifier.classify_paths(
+            [".codex/skills/continue-research-goal/scripts/goal_state.py"]
+        )
+        self.assertIn("role_or_schema_contract", result["path_family_tags"])
+        self.assertIn("skill_runtime_changed", result["reason_codes"])
+        self.assertNotIn("unknown_governed_path", result["reason_codes"])
+        self.assertEqual(result["recommended_role"], "project-control-maintainer")
+
     def test_registered_source_metadata_returns_objects_and_derivatives(self) -> None:
         result = self.classifier.classify_paths(
             [

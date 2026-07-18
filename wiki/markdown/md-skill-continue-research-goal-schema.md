@@ -10,7 +10,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `schema_contract`
 - Authority status: `project_control`
 - Owner skill: `continue-research-goal`
-- Source hash: `7593aae31da161ef5a777f39f39b0550657d23aa419b90c7f67119b6f7e7c19c`
+- Source hash: `5f7883df01975531a3892cd8bbcd81e6ac557601e20b599fbf665e483820f790`
 
 ## Related Objects
 
@@ -19,4 +19,4 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-11T14:13:25Z`
+- Last validated at: `2026-07-18T14:42:41Z`

@@ -1,6 +1,6 @@
 <!-- authority: control -->
 
-# Continue-Research Goal Record Schema v1
+# Continue-Research Goal Record Schema v2
 
 ## Purpose and Authority
 
@@ -19,6 +19,11 @@ The deterministic implementation is
 and mutate only the ignored state described here. It has no authority to call
 task tools, invoke research, select an AgentJob, edit tracked research state,
 commit, push, merge, or decide whether a scientific goal is complete.
+
+New launcher records use `continue-research-goal.v2`. The helper also reads and
+validates retained `continue-research-goal.v1` records under their original
+finite-guard and amendment-hash semantics. It does not migrate, rewrite, or
+normalize a retained v1 file.
 
 ## Filesystem Boundary
 
@@ -72,7 +77,7 @@ newline. `goal_sha256` hashes those exact UTF-8 bytes. The frontmatter
 ## Required Record
 
 ```yaml
-schema_version: "continue-research-goal.v1"
+schema_version: "continue-research-goal.v2"
 goal_id: "crg-<YYYYMMDDTHHMMSSZ>-<random lowercase hex>"
 goal_text: "<exact canonical user text>"
 goal_sha256: "<sha256>"
@@ -84,9 +89,9 @@ completion_contract:
 completion_contract_sha256: "<canonical JSON sha256>"
 amendments: []
 created_at: "<UTC>"
-deadline_at: "<UTC>"
+deadline_at: "<canonical UTC Z timestamp or null>"
 guards:
-  max_continue_passes: <positive integer>
+  max_continue_passes: <positive integer or null>
   max_repeated_state_fingerprints: 1
   max_live_continuations: 1
   handoff_ready_timeout_seconds: 60
@@ -125,12 +130,32 @@ updated_at: "<UTC>"
 The schema may add fail-closed diagnostic fields. It may not omit or weaken the
 semantics above.
 
+For v2, JSON `null` independently means no pass-count horizon or no deadline
+horizon. Omitted launcher inputs are serialized as `null`. A finite
+`deadline_at` is an absolute timezone-aware input normalized to canonical UTC
+`Z`; initialization rejects invalid, naive, or non-future values. The
+canonical CLI input is `--deadline-at`. The mutually exclusive
+`--max-elapsed-minutes` compatibility alias derives the same absolute value
+and remains supported.
+
+Unlimited scheduling affects only whether the count or elapsed-time guard
+stops a later frame. It does not change the one-AgentJob-per-frame boundary,
+human gates, no-progress and repeated-fingerprint checks, validation and
+checkpoint gates, leases, repository binding, concurrency, dispatch safety,
+or any other terminal condition. `state.passes_consumed` continues to count
+authorized invocations when the pass horizon is unlimited.
+
+Retained v1 records require a finite positive `max_continue_passes` and finite
+`deadline_at`. Their original records, serialization, amendment hash basis,
+and finite extension behavior remain valid without mutation.
+
 ## Immutable and Append-Only Data
 
 The following original values never change in place:
 
 - `goal_text` and `goal_sha256`;
 - `completion_contract` and `completion_contract_sha256`;
+- `deadline_at`;
 - `guards`;
 - `repository_binding`; and
 - every finalized journal entry and receipt.
@@ -146,10 +171,15 @@ new_value: <new contract or allowed guard fields>
 new_sha256: "<effective-value hash>"
 ```
 
-Contract amendments replace only the effective completion contract. Guard
-amendments may only extend `max_continue_passes` or `deadline_at`; they cannot
-weaken human-gate, validation, authority, identity, duplicate, or branch stops.
-Changing the goal itself always requires a new goal record.
+Contract amendments replace only the effective completion contract. For v2,
+guard amendments may only raise a finite `max_continue_passes` or
+`deadline_at`, or change either finite value to JSON `null`. An unlimited
+guard cannot be tightened to a finite value or amended with a no-op `null`.
+Finite deadlines are normalized to canonical UTC `Z` and must be later than
+both the amendment time and the prior finite deadline. V1 amendments retain
+their original finite-extension behavior. No guard amendment can weaken
+human-gate, validation, authority, identity, duplicate, concurrency, lease,
+or branch stops. Changing the goal itself always requires a new goal record.
 
 ## Generation Record
 
@@ -358,7 +388,7 @@ uses `unknown` and stops.
 goal met                                      -> terminal_complete
 human gate or indeterminate evaluation       -> terminal_awaiting_human
 missing or changed capability                 -> terminal_capability_blocked
-pass, elapsed, repetition, or budget guard    -> terminal_guard_exhausted
+finite pass, finite elapsed, repetition, or budget guard -> terminal_guard_exhausted
 no action, no progress, or repeated state     -> terminal_no_progress
 validator, checkpoint, or dirty-state failure -> terminal_validation_failed
 ambiguous dispatch                            -> terminal_handoff_ambiguous
@@ -430,6 +460,11 @@ Normal subcommands are `initialize`, `validate`, `reserve-successor`,
 `begin-recovery`, `amend-contract`, `amend-guards`, and `cancel`; the Python API
 also exposes terminal-holder-proof operations for abandoned or consumed crash
 reconciliation.
+
+`initialize` requires `--goal-text`, completion-contract JSON, repository
+binding JSON, and an initial fingerprint. `--max-continue-passes` and
+`--deadline-at` are optional. `--max-elapsed-minutes` is an optional
+compatibility alias and is mutually exclusive with `--deadline-at`.
 
 Every state-changing call requires `expected_revision` after initialization.
 Conflicts return a blocked error and make no mutation. The helper never calls a

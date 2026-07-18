@@ -24,7 +24,9 @@ from contextlib import contextmanager
 from typing import Any, Dict, Iterable, Iterator, Mapping, MutableMapping, Optional
 
 
-SCHEMA_VERSION = "continue-research-goal.v1"
+LEGACY_SCHEMA_VERSION = "continue-research-goal.v1"
+SCHEMA_VERSION = "continue-research-goal.v2"
+SUPPORTED_SCHEMA_VERSIONS = {LEGACY_SCHEMA_VERSION, SCHEMA_VERSION}
 LEASE_SCHEMA_VERSION = "continue-research-goal-worktree-lease.v1"
 EXECUTION_PROFILES = {"acceptance_test", "production_profile"}
 
@@ -133,11 +135,17 @@ def utc_now() -> str:
 def parse_utc(value: str) -> dt.datetime:
     try:
         parsed = dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
-    except (TypeError, ValueError) as exc:
+    except (AttributeError, TypeError, ValueError) as exc:
         raise ValidationError(f"invalid UTC timestamp: {value!r}") from exc
     if parsed.tzinfo is None:
         raise ValidationError(f"timestamp lacks timezone: {value!r}")
     return parsed.astimezone(dt.timezone.utc)
+
+
+def canonical_utc(value: str) -> str:
+    parsed = parse_utc(value)
+    timespec = "microseconds" if parsed.microsecond else "seconds"
+    return parsed.isoformat(timespec=timespec).replace("+00:00", "Z")
 
 
 def add_minutes(value: str, minutes: int) -> str:
@@ -224,12 +232,60 @@ def effective_completion_contract(record: Mapping[str, Any]) -> Mapping[str, Any
     return value
 
 
-def effective_guards(record: Mapping[str, Any]) -> Dict[str, Any]:
+def _initial_effective_guards(record: Mapping[str, Any]) -> Dict[str, Any]:
     value = copy.deepcopy(record["guards"])
+    if record.get("schema_version") == SCHEMA_VERSION:
+        value["deadline_at"] = record["deadline_at"]
+    return value
+
+
+def effective_guards(record: Mapping[str, Any]) -> Dict[str, Any]:
+    value = _initial_effective_guards(record)
     for amendment in record.get("amendments", []):
         if amendment.get("kind") == "guards":
             value.update(copy.deepcopy(amendment["new_value"]))
     return value
+
+
+def _validate_v2_guard_extension(
+    prior_value: Mapping[str, Any],
+    new_value: Mapping[str, Any],
+    *,
+    created_at: str,
+    require_canonical_deadline: bool,
+) -> Dict[str, Any]:
+    allowed = {"max_continue_passes", "deadline_at"}
+    if not isinstance(new_value, Mapping) or not new_value or not set(new_value) <= allowed:
+        raise ValidationError("guard amendment may change only max_continue_passes or deadline_at")
+
+    normalized = copy.deepcopy(dict(new_value))
+    if "max_continue_passes" in normalized:
+        prior_passes = prior_value["max_continue_passes"]
+        proposed_passes = normalized["max_continue_passes"]
+        if proposed_passes is None:
+            if prior_passes is None:
+                raise ValidationError("unlimited max_continue_passes cannot be amended")
+        elif isinstance(proposed_passes, bool) or not isinstance(proposed_passes, int) or proposed_passes <= 0:
+            raise ValidationError("max_continue_passes must be a positive integer or null")
+        elif prior_passes is None or proposed_passes <= prior_passes:
+            raise ValidationError("max_continue_passes may only extend a finite limit or become unlimited")
+
+    if "deadline_at" in normalized:
+        prior_deadline = prior_value["deadline_at"]
+        proposed_deadline = normalized["deadline_at"]
+        if proposed_deadline is None:
+            if prior_deadline is None:
+                raise ValidationError("unlimited deadline_at cannot be amended")
+        else:
+            canonical_deadline = canonical_utc(proposed_deadline)
+            if require_canonical_deadline and canonical_deadline != proposed_deadline:
+                raise ValidationError("deadline_at must use canonical UTC Z form")
+            if parse_utc(canonical_deadline) <= parse_utc(created_at):
+                raise ValidationError("deadline_at must be in the future")
+            if prior_deadline is None or parse_utc(canonical_deadline) <= parse_utc(prior_deadline):
+                raise ValidationError("deadline_at may only extend a finite limit or become unlimited")
+            normalized["deadline_at"] = canonical_deadline
+    return normalized
 
 
 def render_goal(record: Mapping[str, Any]) -> str:
@@ -309,7 +365,8 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
     missing = sorted(required - set(record))
     if missing:
         raise ValidationError(f"goal record missing fields: {', '.join(missing)}")
-    if record["schema_version"] != SCHEMA_VERSION:
+    schema_version = record["schema_version"]
+    if schema_version not in SUPPORTED_SCHEMA_VERSIONS:
         raise ValidationError("unsupported goal schema version")
     if not GOAL_ID_RE.fullmatch(str(record["goal_id"])):
         raise ValidationError("invalid goal_id")
@@ -321,14 +378,30 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
         raise ValidationError("goal text hash mismatch")
     if sha256_json(record["completion_contract"]) != record["completion_contract_sha256"]:
         raise ValidationError("original completion-contract hash mismatch")
-    parse_utc(record["created_at"])
-    parse_utc(record["deadline_at"])
+    created_at = parse_utc(record["created_at"])
     parse_utc(record["updated_at"])
-    if parse_utc(record["deadline_at"]) <= parse_utc(record["created_at"]):
-        raise ValidationError("deadline must be after creation")
+    deadline_at = record["deadline_at"]
+    if schema_version == LEGACY_SCHEMA_VERSION:
+        if parse_utc(deadline_at) <= created_at:
+            raise ValidationError("deadline must be after creation")
+    elif deadline_at is not None:
+        if canonical_utc(deadline_at) != deadline_at:
+            raise ValidationError("deadline_at must use canonical UTC Z form")
+        if parse_utc(deadline_at) <= created_at:
+            raise ValidationError("deadline must be after creation")
 
     guards = record["guards"]
-    for key in ("max_continue_passes", "max_repeated_state_fingerprints", "max_live_continuations", "handoff_ready_timeout_seconds"):
+    max_continue_passes = guards.get("max_continue_passes")
+    if schema_version == LEGACY_SCHEMA_VERSION:
+        if not isinstance(max_continue_passes, int) or max_continue_passes <= 0:
+            raise ValidationError("guard max_continue_passes must be a positive integer")
+    elif max_continue_passes is not None and (
+        isinstance(max_continue_passes, bool)
+        or not isinstance(max_continue_passes, int)
+        or max_continue_passes <= 0
+    ):
+        raise ValidationError("guard max_continue_passes must be a positive integer or null")
+    for key in ("max_repeated_state_fingerprints", "max_live_continuations", "handoff_ready_timeout_seconds"):
         if not isinstance(guards.get(key), int) or guards[key] <= 0:
             raise ValidationError(f"guard {key} must be a positive integer")
     binding = record["repository_binding"]
@@ -393,14 +466,22 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
             raise ValidationError("journal receipt is not linked from its generation")
 
     effective_contract = record["completion_contract"]
-    effective_guard_values = copy.deepcopy(record["guards"])
+    effective_guard_values = _initial_effective_guards(record)
     for amendment in record["amendments"]:
         if amendment.get("kind") == "completion_contract":
             prior = sha256_json(effective_contract)
             effective_contract = amendment.get("new_value")
         elif amendment.get("kind") == "guards":
             prior = sha256_json(effective_guard_values)
-            effective_guard_values.update(amendment.get("new_value", {}))
+            new_guard_values = amendment.get("new_value", {})
+            if schema_version == SCHEMA_VERSION:
+                new_guard_values = _validate_v2_guard_extension(
+                    effective_guard_values,
+                    new_guard_values,
+                    created_at=amendment.get("created_at"),
+                    require_canonical_deadline=True,
+                )
+            effective_guard_values.update(new_guard_values)
         else:
             raise ValidationError("invalid amendment kind")
         if amendment.get("prior_effective_sha256") != prior:
@@ -656,8 +737,9 @@ class GoalStore:
         *,
         goal_text: str,
         completion_contract: Mapping[str, Any],
-        max_continue_passes: int,
-        max_elapsed_minutes: int,
+        max_continue_passes: Optional[int] = None,
+        deadline_at: Optional[str] = None,
+        max_elapsed_minutes: Optional[int] = None,
         repository_binding: Mapping[str, Any],
         initial_fingerprint: str,
         goal_id: Optional[str] = None,
@@ -669,14 +751,32 @@ class GoalStore:
             raise ValidationError("goal_text must be nonblank")
         if contains_secret(exact_goal):
             raise ValidationError("goal text appears to contain a secret; redact it before persistence")
-        if not isinstance(max_continue_passes, int) or max_continue_passes <= 0:
-            raise ValidationError("max_continue_passes must be a positive integer")
-        if not isinstance(max_elapsed_minutes, int) or max_elapsed_minutes <= 0:
+        if max_continue_passes is not None and (
+            isinstance(max_continue_passes, bool)
+            or not isinstance(max_continue_passes, int)
+            or max_continue_passes <= 0
+        ):
+            raise ValidationError("max_continue_passes must be a positive integer or null")
+        if deadline_at is not None and max_elapsed_minutes is not None:
+            raise ValidationError("deadline_at and max_elapsed_minutes are mutually exclusive")
+        if max_elapsed_minutes is not None and (
+            isinstance(max_elapsed_minutes, bool)
+            or not isinstance(max_elapsed_minutes, int)
+            or max_elapsed_minutes <= 0
+        ):
             raise ValidationError("max_elapsed_minutes must be a positive integer")
         if not isinstance(completion_contract, Mapping) or not completion_contract.get("required_evidence"):
             raise ValidationError("completion contract must name required canonical evidence")
         now = timestamp or utc_now()
-        parse_utc(now)
+        parsed_now = parse_utc(now)
+        if deadline_at is not None:
+            effective_deadline = canonical_utc(deadline_at)
+            if parse_utc(effective_deadline) <= parsed_now:
+                raise ValidationError("deadline_at must be in the future")
+        elif max_elapsed_minutes is not None:
+            effective_deadline = add_minutes(now, max_elapsed_minutes)
+        else:
+            effective_deadline = None
         binding = copy.deepcopy(dict(repository_binding))
         if binding.get("execution_profile") not in EXECUTION_PROFILES:
             raise ValidationError("unsupported repository execution profile")
@@ -710,7 +810,7 @@ class GoalStore:
                 "completion_contract_sha256": sha256_json(completion_contract),
                 "amendments": [],
                 "created_at": now,
-                "deadline_at": add_minutes(now, max_elapsed_minutes),
+                "deadline_at": effective_deadline,
                 "guards": {
                     "max_continue_passes": max_continue_passes,
                     "max_repeated_state_fingerprints": 1,
@@ -981,9 +1081,11 @@ class GoalStore:
         now = parse_utc(timestamp or utc_now())
         guards = effective_guards(record)
         stops = []
-        if record["state"]["passes_consumed"] >= guards["max_continue_passes"]:
+        pass_limit = guards["max_continue_passes"]
+        if pass_limit is not None and record["state"]["passes_consumed"] >= pass_limit:
             stops.append("pass_limit")
-        if now >= parse_utc(guards.get("deadline_at", record["deadline_at"])):
+        deadline = guards.get("deadline_at", record["deadline_at"])
+        if deadline is not None and now >= parse_utc(deadline):
             stops.append("elapsed_limit")
         return stops
 
@@ -1615,14 +1717,22 @@ class GoalStore:
             else:
                 prior_value = effective_guards(record)
                 effective_new = copy.deepcopy(prior_value)
-                if "max_continue_passes" in new_value:
-                    proposed = new_value["max_continue_passes"]
-                    if not isinstance(proposed, int) or proposed <= prior_value["max_continue_passes"]:
-                        raise ValidationError("max_continue_passes may only be extended")
-                if "deadline_at" in new_value and parse_utc(new_value["deadline_at"]) <= parse_utc(
-                    prior_value.get("deadline_at", record["deadline_at"])
-                ):
-                    raise ValidationError("deadline_at may only be extended")
+                if record["schema_version"] == SCHEMA_VERSION:
+                    new_value = _validate_v2_guard_extension(
+                        prior_value,
+                        new_value,
+                        created_at=now,
+                        require_canonical_deadline=False,
+                    )
+                else:
+                    if "max_continue_passes" in new_value:
+                        proposed = new_value["max_continue_passes"]
+                        if not isinstance(proposed, int) or proposed <= prior_value["max_continue_passes"]:
+                            raise ValidationError("max_continue_passes may only be extended")
+                    if "deadline_at" in new_value and parse_utc(new_value["deadline_at"]) <= parse_utc(
+                        prior_value.get("deadline_at", record["deadline_at"])
+                    ):
+                        raise ValidationError("deadline_at may only be extended")
                 effective_new.update(copy.deepcopy(dict(new_value)))
             amendment = {
                 "kind": kind,
@@ -1808,8 +1918,10 @@ def build_parser() -> argparse.ArgumentParser:
     init = sub.add_parser("initialize")
     init.add_argument("--goal-text", required=True)
     init.add_argument("--completion-contract-json", type=_json_arg, required=True)
-    init.add_argument("--max-continue-passes", type=int, required=True)
-    init.add_argument("--max-elapsed-minutes", type=int, required=True)
+    init.add_argument("--max-continue-passes", type=int)
+    deadline = init.add_mutually_exclusive_group()
+    deadline.add_argument("--deadline-at")
+    deadline.add_argument("--max-elapsed-minutes", type=int)
     init.add_argument("--repository-binding-json", type=_json_arg, required=True)
     init.add_argument("--initial-fingerprint", required=True)
 
@@ -1923,6 +2035,7 @@ def main(argv: Optional[list[str]] = None) -> int:
                 goal_text=args.goal_text,
                 completion_contract=args.completion_contract_json,
                 max_continue_passes=args.max_continue_passes,
+                deadline_at=args.deadline_at,
                 max_elapsed_minutes=args.max_elapsed_minutes,
                 repository_binding=args.repository_binding_json,
                 initial_fingerprint=args.initial_fingerprint,

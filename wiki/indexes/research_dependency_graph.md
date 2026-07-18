@@ -7,9 +7,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 - Schema: `research_dependency_graph_v1`
 - Generated from tracked state as of: `2026-07-09T03:11:04Z`
-- Source fingerprint: `6821b5e5b3e196a964e569bf3450bd8ca321ee2551b62a3156d657797cd7cf61`
-- Nodes: `18769`
-- Edges: `65667`
+- Source fingerprint: `342f394b0634b9821278c77f4b48c1f1e41ad3fe633a9796426beb70f4a0e8eb`
+- Nodes: `18808`
+- Edges: `65760`
 
 ## Source Counts
 
@@ -17,7 +17,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 961 |
+| `completion_yaml` | 962 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 961 |
+| `agent_job` | `support_only` | 963 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 9860 |
-| `blocked_burden` | `blocked` | 3572 |
-| `claim_boundary` | `support_only` | 918 |
+| `artifact` | `support_only` | 9873 |
+| `blocked_burden` | `blocked` | 3589 |
+| `claim_boundary` | `support_only` | 920 |
 | `draft_control_candidate` | `draft_control` | 529 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 109 |
 | `gate_chair_verdict` | `human_gated` | 31 |
 | `handoff` | `support_only` | 740 |
-| `human_gated_object` | `human_gated` | 401 |
+| `human_gated_object` | `human_gated` | 404 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 291 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 901 |
+| `task` | `support_only` | 903 |
 
 ## Frontier Table
 
