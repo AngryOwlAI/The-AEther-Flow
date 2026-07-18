@@ -1,0 +1,40 @@
+task_id: "RT-20260718-005"
+task_type: "memory_ci_dedup_and_scheduled_full"
+status: "completed"
+created_at: "2026-07-18T02:46:28Z"
+updated_at: "2026-07-18T03:06:47Z"
+closed_at: "2026-07-18T03:06:47Z"
+closure_status: "v19_p11_t03_memory_ci_deduplication_pass_next_p11_t04_no_physics_delta"
+parent_task_id: "RT-20260718-004"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260718-005"
+current_job_id: "AJ-RT-20260718-005-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260718-005"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached dependency-ready P11-T03 after the governed P11-T02 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P11"
+  plan_task_id: "P11-T03"
+  plan_task_name: "Deduplicate the parallel memory CI signal and add unfiltered scheduled full validation"
+  recommendation_ids:
+    - "V19-R40"
+    - "V19-R41"
+objective: "Make the stable legacy memory CI signal execute the authoritative read-only memory gate only when the planner selects memory responsibility while retaining the unfiltered scheduled full backstop."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system memory CI deduplication only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V19-P11-T03-MEMORY-CI-DEDUP-001"
+claim_boundary:
+  allowed_scope: "P11-T03 project-control workflow conditional memory signal focused tests task-local evidence control registry rows and generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+next_recommended_action: "After governed checkpoint PASS route one separately bounded P11-T04 packet; do not execute it in P11-T03."
+notes: "P11-T03 reuses the same-workflow-run legacy memory-core receipt for applicable plans, emits an explicit unrelated skip, and retains direct execution only as a missing-plan fallback. The scheduled workflow remains unfiltered and legacy CI remains authoritative."

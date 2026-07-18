@@ -1,0 +1,240 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260718-005-001"
+completion_id: "AJC-AJ-RT-20260718-005-001"
+task_id: "RT-20260718-005"
+decision_id: "DDR-20260718-005"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260718-005"
+status: "completed"
+created_at: "2026-07-18T02:46:28Z"
+started_at: "2026-07-18T02:46:28Z"
+completed_at: "2026-07-18T03:06:47Z"
+objective: "Implement P11-T03 conditional memory CI execution receipt reuse explicit skip behavior and scheduled full verification while legacy CI remains authoritative."
+completion_summary: "The stable memory check now reuses the same-run legacy memory-core receipt for applicable plans, skips without duplicate provisioning for unrelated plans, and restores direct validation only when the shadow plan is unavailable; the existing unfiltered scheduled full backstop passes local dispatch-equivalent checks."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P11-T03"
+  - "research_control/design/ci_validation_shard_policy_v1.md"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_obligation_resolution_policy_v1.md"
+  - ".github/workflows/project-control-validation.yml"
+  - ".github/workflows/scheduled-full-validation.yml"
+  - "research_control/tasks/RT-20260718-004/jobs/completions/AJC-AJ-RT-20260718-004-001.yaml"
+outputs_created:
+  - "research_control/tasks/RT-20260718-005/artifacts/memory_ci_dedup_report.json"
+  - "research_control/tasks/RT-20260718-005/artifacts/memory_ci_dedup_validation_receipt.json"
+  - "research_control/tasks/RT-20260718-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-005/jobs/completions/AJC-AJ-RT-20260718-005-001.yaml"
+outputs_updated:
+  - ".github/workflows/project-control-validation.yml"
+  - "tests/test_ci_validation_plan.py"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P11-T03"
+  recommendation_ids:
+    - "V19-R40"
+    - "V19-R41"
+  migration_epoch: "shadow_planner"
+  implementation_status: "completed"
+  downstream_tasks_not_implemented:
+    - "P11-T04 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p11_t03_memory_ci_deduplication"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R40"
+    - "V19-R41"
+  implements_plan_task_id: "P11-T03"
+  implementation_status: "PASS"
+  coverage_effect: "conditional memory signal receipt reuse explicit skip behavior planner-failure fallback and scheduled full verification"
+physics_progress_status:
+  status: "project_system_memory_ci_deduplication_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P11-T03 changes operational CI selection and receipts only and discharges no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "CI execution topology, cost measurements, and operational receipts are not scientific evidence or derivation progress."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+memory_ci_deduplication:
+  status: "PASS"
+  report_path: "research_control/tasks/RT-20260718-005/artifacts/memory_ci_dedup_report.json"
+  validation_receipt_path: "research_control/tasks/RT-20260718-005/artifacts/memory_ci_dedup_validation_receipt.json"
+  affected_case_status: "REUSED_SAME_TREE_LEGACY_RECEIPT"
+  unrelated_case_status: "SKIP_NOT_APPLICABLE"
+  full_case_status: "REUSED_SAME_TREE_LEGACY_RECEIPT"
+  scheduled_case_status: "REUSED_SAME_TREE_LEGACY_RECEIPT"
+  normal_authoritative_memory_execution_count: 1
+  normal_duplicate_memory_execution_count: 0
+  normal_duplicate_environment_provision_count: 0
+  planner_failure_direct_fallback_preserved: true
+  identity_mismatch_fail_closed: true
+  focused_test_count: 14
+  scheduled_memory_test_count: 59
+  scheduled_dependency_graph_test_count: 18
+  scheduled_local_retrieval_test_count: 24
+  unexplained_legacy_planner_mismatch_count: 0
+  duplicate_memory_validate_seconds_local: "8.12"
+  receipt_verification_seconds_local: "0.10"
+  command_only_seconds_avoided_local: "8.02"
+  hosted_critical_path_delta: "not_measured"
+  workflow_syntax_status: "PASS"
+  scheduled_workflow_source_changed: false
+  scheduled_path_filters_present: false
+  legacy_ci_authoritative: true
+  planner_authoritative: false
+  branch_protection_changed: false
+  manifest_execution_authority_changed: false
+  ordinary_research_handoff_preserved: "handoff-0740"
+validation_evidence:
+  task_local_implementation_status: "PASS"
+  focused_test_count: 14
+  focused_failure_count: 0
+  focused_error_count: 0
+  scheduled_dispatch_equivalent_test_count: 101
+  legacy_planner_shadow_status: "PASS"
+  unexplained_mismatch_count: 0
+  repository_suite:
+    status: "PASS"
+    test_count: 968
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    duration_seconds: "129.581"
+  checkpoint_status: "PENDING"
+command_results:
+  - ".venv/bin/python -m unittest -v tests.test_ci_validation_plan | exit_code=0 | 14 tests PASS"
+  - "ruby workflow YAML parse | exit_code=0 | ordinary and scheduled workflows PASS"
+  - "affected memory unrelated full and scheduled prepare/finalize direct exercises | exit_code=0 | three same-run receipt reuses and one explicit skip PASS"
+  - "affected memory run-shard | exit_code=0 | 59 tests PASS"
+  - "scheduled full memory run-shard with cache audit | exit_code=0 | 59 tests PASS"
+  - "scheduled full dependency-graph run-shard with cache audit | exit_code=0 | 18 tests PASS"
+  - "scheduled doctor local-retrieval run-shard with cache audit | exit_code=0 | 24 tests PASS"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy-compatible blocking gates equal 11 planner gates with zero unexplained mismatch"
+  - "direct local memory-core baseline | exit_code=0 | 8.12 seconds and sha256:02807814d77b09b1526b8f580b4c960bb32604cc32d13d2dda841744ca3380e4"
+  - "same-run receipt verification | exit_code=0 | 0.10 seconds and sha256:e05185d408d861689f169c8cdf0ba18a02507bc0ba014ccec201beef41fda3d8"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | exact final-source completed-state 968 tests PASS with one expected skip in 129.581 seconds"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json-summary | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS with zero hard failures"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=0 | PASS with historical warnings only"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 54 lease parity, clean entry tree, predecessor checkpoint, handoff-0740 preservation, and the single invocation were verified before task activation."
+      - "P11-T02 PASS completion, canonical plan, CI workflows, identity and obligation policies, memory preflight, classifier, resolver, and role boundaries were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Applicable memory signals consume a same-workflow-run legacy receipt with tree, implementation, environment, configuration, scope, manifest, and plan evidence."
+      - "Unrelated signals skip without duplicate provisioning; missing planner evidence restores the prior direct command."
+      - "The existing unfiltered scheduled workflow retains manual dispatch, weekly cadence, live graph coverage, and local-retrieval health."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused and scheduled dispatch-equivalent checks pass."
+      - "The exact completed-state repository suite passes 968 tests with one expected skip."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains required after stable completed-state validation."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and final read-only validation pass before checkpoint persistence."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-surface claim-language validation passes with zero hard failures."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260718-005/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet deduplicates one operational memory CI signal and verifies the existing scheduled backstop only. It does not make the planner authoritative, change required checks or branch protection, change the manifest, alter checkpoint authority, supersede ordinary research, modify canonical ontology, derive a source law matter coupling or Einstein equations, promote a benchmark, issue a Gate Chair verdict, prove a theorem, or complete the derivation."
+verdict: "v19_p11_t03_memory_ci_deduplication_pass_p11_t04_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "One authoritative legacy memory execution now backs the normal stable memory signal through fail-closed same-run receipt verification, with explicit unrelated skip and planner-failure rollback behavior."
+selected_next_route:
+  route_id: "v19_p11_t04_planner_authoritative_cutover"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P11"
+  plan_task_id: "P11-T04"
+  task_name: "Run authoritative shadow comparison and cut over to planner orchestration"
+  role_family: "process-integrity-auditor@0.1.0"
+  task_type: "planner_authoritative_cutover"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system planner cutover only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After governed checkpoint PASS route one separately bounded P11-T04 packet; do not execute it in P11-T03."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "818"
+    relationship_row_count: "4070"
+    semantic_row_count: "818"
+    vault_row_count: "818"
+    local_cache_only_warning_count: "0"
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_core_validation_status: "PASS"
+    before_freshness_status: "PASS"
+    before_local_retrieval_status: "PASS"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search memory CI dedup scheduled full validation --limit 10 --json"
+      query_type: "search"
+      query_text: "memory CI dedup scheduled full validation"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, and .local retrieval outputs were navigation layers only and are not authority."
+project_state_transition:
+  previous_task: "P11-T02"
+  completed_task: "P11-T03"
+  next_task: "P11-T04"
+  generation: 54

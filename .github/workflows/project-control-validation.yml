@@ -169,31 +169,137 @@ jobs:
           .venv/bin/python -m pip install -r requirements.txt
 
       - name: Run project-control validation
-        run: make PYTHON=.venv/bin/python validate-project-control
+        shell: bash
+        run: |
+          set +e
+          mkdir -p legacy-project-control-artifacts
+          started_at="$(date +%s)"
+          make PYTHON=.venv/bin/python validate-project-control \
+            > legacy-project-control-artifacts/full-output.log 2>&1
+          exit_code="$?"
+          finished_at="$(date +%s)"
+          duration_seconds="$((finished_at - started_at))"
+          .venv/bin/python tests/test_ci_validation_plan.py write-legacy-receipt \
+            --output-dir legacy-project-control-artifacts \
+            --full-output legacy-project-control-artifacts/full-output.log \
+            --exit-code "$exit_code" \
+            --duration-seconds "$duration_seconds"
+          receipt_exit="$?"
+          if [[ "$exit_code" -ne 0 ]]; then
+            tail -n 200 legacy-project-control-artifacts/full-output.log
+          fi
+          if [[ "$receipt_exit" -ne 0 ]]; then
+            exit "$receipt_exit"
+          fi
+          exit "$exit_code"
+
+      - name: Upload legacy project-control receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: legacy-project-control-${{ github.run_id }}-${{ github.run_attempt }}
+          path: legacy-project-control-artifacts/
+          if-no-files-found: error
+          retention-days: 14
 
   validate_memory_read_only:
     name: Validate generated memory surfaces
+    needs:
+      - validation_plan_shadow
+      - validate_project_control
+    if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    env:
-      PYTHON: .venv/bin/python
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Download validation plan
+        id: validation_plan
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: validation-plan-${{ github.run_id }}-${{ github.run_attempt }}
+          path: validation-plan-artifacts
+
+      - name: Select memory signal mode without provisioning
+        id: memory_selection
+        run: |
+          python3 tests/test_ci_validation_plan.py prepare-memory-signal \
+            --plan validation-plan-artifacts/validation-plan.json \
+            --output-dir memory-signal-selection-artifacts
+
+      - name: Download same-run legacy project-control receipt
+        if: steps.memory_selection.outputs.mode == 'reuse'
+        uses: actions/download-artifact@v4
+        with:
+          name: legacy-project-control-${{ github.run_id }}-${{ github.run_attempt }}
+          path: legacy-project-control-artifacts
+
+      - name: Set up fallback Python
+        if: steps.memory_selection.outputs.mode == 'fallback'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
 
-      - name: Create virtual environment
+      - name: Create fallback virtual environment
+        if: steps.memory_selection.outputs.mode == 'fallback'
         run: python -m venv .venv
 
-      - name: Install Python dependencies
+      - name: Install fallback dependencies
+        if: steps.memory_selection.outputs.mode == 'fallback'
         run: |
           .venv/bin/python -m pip install --upgrade pip
           .venv/bin/python -m pip install -r requirements.txt
 
-      - name: Run read-only memory validation
-        run: .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only
+      - name: Run direct memory fallback
+        id: fallback_memory
+        if: steps.memory_selection.outputs.mode == 'fallback'
+        shell: bash
+        run: |
+          set +e
+          mkdir -p memory-signal-fallback-artifacts
+          .venv/bin/python \
+            .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py \
+            --validate-only \
+            > memory-signal-fallback-artifacts/full-output.log 2>&1
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Finalize visible memory signal
+        shell: bash
+        env:
+          MEMORY_MODE: ${{ steps.memory_selection.outputs.mode }}
+          FALLBACK_EXIT_CODE: ${{ steps.fallback_memory.outputs.exit_code }}
+        run: |
+          set -euo pipefail
+          args=(
+            --selection memory-signal-selection-artifacts/memory-signal-selection.json
+            --output-dir memory-signal-artifacts
+          )
+          if [[ "$MEMORY_MODE" == "reuse" ]]; then
+            args+=(
+              --legacy-receipt
+              legacy-project-control-artifacts/legacy-project-control-receipt.json
+            )
+          elif [[ "$MEMORY_MODE" == "fallback" ]]; then
+            args+=(
+              --fallback-output
+              memory-signal-fallback-artifacts/full-output.log
+              --fallback-exit-code
+              "$FALLBACK_EXIT_CODE"
+            )
+          fi
+          python3 tests/test_ci_validation_plan.py finalize-memory-signal "${args[@]}"
+
+      - name: Upload visible memory signal receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: memory-signal-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            memory-signal-selection-artifacts/
+            memory-signal-artifacts/
+            memory-signal-fallback-artifacts/
+          if-no-files-found: error
+          retention-days: 14

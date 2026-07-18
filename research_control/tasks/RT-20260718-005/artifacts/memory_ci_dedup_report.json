@@ -1,0 +1,124 @@
+{
+  "schema_id": "v19_p11_t03_memory_ci_dedup_report_v1",
+  "status": "PASS",
+  "created_at": "2026-07-18T03:06:47Z",
+  "task_id": "RT-20260718-005",
+  "job_id": "AJ-RT-20260718-005-001",
+  "base_commit": "cd72579094cad99de73b51e6dcbe15181f6e11ca",
+  "implementation": {
+    "workflow_path": ".github/workflows/project-control-validation.yml",
+    "workflow_sha256": "6529469894198a7edb5eb3003d56d150859ec5be9bbf1781b416df26ad475eab",
+    "test_and_runner_path": "tests/test_ci_validation_plan.py",
+    "test_and_runner_sha256": "b136b5cca43993a644292c55a2581494a19f5f7431e748fdff5e447992e429ce",
+    "manifest_sha256": "83f4652af965272147c99202b4a0c2f11850d7bdb45c44dcca8eaa77a2d24c2a",
+    "legacy_execution_authoritative": true,
+    "planner_execution_authoritative": false,
+    "normal_memory_command_count": 1,
+    "normal_duplicate_memory_command_count": 0,
+    "normal_duplicate_dependency_provision_count": 0,
+    "planner_failure_fallback_preserved": true
+  },
+  "selection_cases": [
+    {
+      "case_id": "memory_input_changed",
+      "status": "PASS",
+      "execution": "REUSED_SAME_TREE_LEGACY_RECEIPT",
+      "plan_hash": "cdb848c214285ac59cefa3ea4c51417674a76d6b540be4924c871962a9bafcb7",
+      "receipt_sha256": "545c5a1750053c093e45f64a03d13cb5eec1b77c7d21ab100cd238d5600a43ec",
+      "duplicate_environment_provisioned": false,
+      "duplicate_memory_command_executed": false
+    },
+    {
+      "case_id": "unrelated_change",
+      "status": "PASS",
+      "execution": "SKIP_NOT_APPLICABLE",
+      "plan_hash": "01e1a2fd8430f5a17ca8874bd4beca1f7c5424775810f683ede4fcf3be5889f6",
+      "receipt_sha256": "7a0940dcd5ab03fcbbd86128784b3bf37140b43be4402443e85b2c789769923e",
+      "duplicate_environment_provisioned": false,
+      "duplicate_memory_command_executed": false
+    },
+    {
+      "case_id": "full_profile",
+      "status": "PASS",
+      "execution": "REUSED_SAME_TREE_LEGACY_RECEIPT",
+      "plan_hash": "547a34a0ba158f9ec1f2e59ad832d11ca5b33eb98aa5cdb9f4474f63c9b2fbab",
+      "receipt_sha256": "b6025b233de460614010cb582fe6f26e3a260c86ba26ac6e58e209d78f1c1d51",
+      "duplicate_environment_provisioned": false,
+      "duplicate_memory_command_executed": false
+    },
+    {
+      "case_id": "scheduled_full",
+      "status": "PASS",
+      "execution": "REUSED_SAME_TREE_LEGACY_RECEIPT",
+      "plan_hash": "01e1a2fd8430f5a17ca8874bd4beca1f7c5424775810f683ede4fcf3be5889f6",
+      "receipt_sha256": "6c5db50303cde33fefc3789189a02dd87398f55f24dd699233786b104565191a",
+      "duplicate_environment_provisioned": false,
+      "duplicate_memory_command_executed": false
+    }
+  ],
+  "receipt_identity": {
+    "required_components": [
+      "gate_id",
+      "implementation_digest",
+      "environment_digest",
+      "config_digest",
+      "scope",
+      "tree_hash"
+    ],
+    "additional_components": [
+      "manifest_hash",
+      "workflow_run_id",
+      "workflow_run_attempt",
+      "plan_hash"
+    ],
+    "mismatch_behavior": "fail_closed",
+    "raw_legacy_receipt_sha256": "b3a74147c49da479c17f1edaaef073ce335679c9f8870621f58eef69effd3e37"
+  },
+  "scheduled_backstop": {
+    "workflow_path": ".github/workflows/scheduled-full-validation.yml",
+    "workflow_sha256": "3e6730babc97077555956d48a6995fa6ab5c17ea94928eac62b558aa9d0c04c5",
+    "source_changed_by_this_task": false,
+    "path_filters_present": false,
+    "manual_dispatch_present": true,
+    "weekly_schedule_present": true,
+    "local_dispatch_equivalent_status": "PASS",
+    "memory_test_count": 59,
+    "dependency_graph_test_count": 18,
+    "local_retrieval_test_count": 24,
+    "memory_receipt_sha256": "37b12c8bf4a134c77e100e671affd5ec9c0ea400796202103a364a50bab4f6c5",
+    "dependency_graph_receipt_sha256": "58edeb0bb7813787df47f6ae10760275470b43b0aed0afa763e7e00ed8c8a426",
+    "local_retrieval_receipt_sha256": "cfcb84a1eec892682e2397df931f6742a12475cfc20f5aa727bff291039a7a46"
+  },
+  "cost_measurement": {
+    "measurement_scope": "local command-only comparison on the same working tree; hosted runner queue and dependency-install duration were not measured",
+    "duplicate_memory_validate_seconds": 8.12,
+    "receipt_verification_seconds": 0.1,
+    "command_only_seconds_avoided": 8.02,
+    "command_only_reduction_percent": 98.77,
+    "duplicate_environment_setup_removed_on_normal_path": true,
+    "stable_visible_check_retained": true,
+    "hosted_critical_path_delta": "not_measured"
+  },
+  "legacy_planner_comparison": {
+    "status": "PASS",
+    "legacy_compatible_blocking_gate_count": 11,
+    "planner_blocking_gate_count": 11,
+    "unexplained_mismatch_count": 0
+  },
+  "raw_output_boundary": {
+    "local_receipts_are_authoritative": false,
+    "full_terminal_output_embedded": false,
+    "tracked_report_is_operational_evidence_only": true
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "legacy_ci_authoritative": true,
+    "planner_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "schema_id": "v19_p11_t03_memory_ci_dedup_validation_receipt_v1",
+  "status": "PASS",
+  "created_at": "2026-07-18T03:06:47Z",
+  "updated_at": "2026-07-18T03:12:00Z",
+  "task_id": "RT-20260718-005",
+  "job_id": "AJ-RT-20260718-005-001",
+  "base_commit": "cd72579094cad99de73b51e6dcbe15181f6e11ca",
+  "gates": [
+    {
+      "gate_id": "workflow_syntax",
+      "status": "PASS",
+      "counts": {
+        "workflow_count": 2,
+        "error_count": 0
+      },
+      "summary": "The ordinary and scheduled workflows parse as YAML."
+    },
+    {
+      "gate_id": "memory_signal_path_selection",
+      "status": "PASS",
+      "counts": {
+        "case_count": 4,
+        "reuse_case_count": 3,
+        "skip_case_count": 1
+      },
+      "receipt_path": "research_control/tasks/RT-20260718-005/artifacts/memory_ci_dedup_report.json",
+      "summary": "Memory-input, unrelated, full, and scheduled cases select deterministic reuse or explicit skip modes."
+    },
+    {
+      "gate_id": "memory_signal_identity",
+      "status": "PASS",
+      "counts": {
+        "identity_component_count": 10,
+        "tested_mismatch_count": 8,
+        "accepted_mismatch_count": 0
+      },
+      "receipt_path": "tests/test_ci_validation_plan.py",
+      "summary": "Receipt reuse fails closed on tree, implementation, environment, configuration, scope, manifest, or same-run mismatch."
+    },
+    {
+      "gate_id": "memory_signal_deduplication",
+      "status": "PASS",
+      "counts": {
+        "authoritative_memory_execution_count": 1,
+        "duplicate_memory_execution_count": 0,
+        "duplicate_environment_provision_count": 0
+      },
+      "receipt_path": ".github/workflows/project-control-validation.yml",
+      "summary": "The normal stable signal consumes the same-run legacy receipt without a second memory command or dependency environment."
+    },
+    {
+      "gate_id": "planner_failure_rollback",
+      "status": "PASS",
+      "counts": {
+        "fallback_case_count": 1
+      },
+      "receipt_path": "tests/test_ci_validation_plan.py",
+      "summary": "An unavailable shadow-plan artifact restores the prior direct read-only memory execution rather than weakening legacy acceptance."
+    },
+    {
+      "gate_id": "scheduled_full_unfiltered",
+      "status": "PASS",
+      "counts": {
+        "scheduled_shard_count": 3,
+        "scheduled_test_count": 101,
+        "path_filter_count": 0
+      },
+      "receipt_path": "research_control/tasks/RT-20260718-005/artifacts/memory_ci_dedup_report.json",
+      "summary": "The unfiltered scheduled composition and direct dispatch-equivalent memory, graph, and local-retrieval shards pass."
+    },
+    {
+      "gate_id": "legacy_planner_shadow_comparison",
+      "status": "PASS",
+      "counts": {
+        "legacy_blocking_gate_count": 11,
+        "planner_blocking_gate_count": 11,
+        "unexplained_mismatch_count": 0
+      },
+      "summary": "The affected blocking-gate comparison contains no unexplained mismatch."
+    },
+    {
+      "gate_id": "focused_memory_ci_tests",
+      "status": "PASS",
+      "counts": {
+        "test_count": 14,
+        "failure_count": 0,
+        "error_count": 0
+      },
+      "receipt_path": "tests/test_ci_validation_plan.py",
+      "summary": "Focused workflow, selection, reuse, skip, fallback, mismatch, scheduled, and shard tests pass."
+    },
+    {
+      "gate_id": "repository_test_suite",
+      "status": "PASS",
+      "counts": {
+        "test_count": 968,
+        "skip_count": 1,
+        "failure_count": 0,
+        "error_count": 0
+      },
+      "summary": "The exact final-source completed-state repository suite passes in 129.581 seconds with one expected skip."
+    },
+    {
+      "gate_id": "governed_checkpoint",
+      "status": "PENDING",
+      "counts": {
+        "error_count": 0
+      },
+      "summary": "The checkpoint transaction remains required after completed-state validation."
+    }
+  ],
+  "raw_receipt_boundary": {
+    "local_receipts_are_authoritative": false,
+    "task_receipts_are_physics_authority": false,
+    "full_terminal_output_embedded": false
+  },
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "legacy_ci_authoritative": true,
+    "planner_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  }
+}
