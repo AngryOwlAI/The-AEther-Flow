@@ -1,0 +1,126 @@
+{
+  "schema_id": "validation_executor_cache_integration_report_v1",
+  "schema_version": 1,
+  "report_id": "V19-P10-T04-EXECUTOR-CACHE-INTEGRATION-001",
+  "task_id": "RT-20260717-023",
+  "job_id": "AJ-RT-20260717-023-001",
+  "plan_task_id": "P10-T04",
+  "created_at": "2026-07-17T23:50:25Z",
+  "updated_at": "2026-07-18T00:05:20Z",
+  "status": "PASS",
+  "contract_id": "validation-cache-contract-v1",
+  "executor_path": "scripts/validation/executor.py",
+  "test_path": "tests/test_executor_cache_integration.py",
+  "source_fingerprints": [
+    {
+      "path": "scripts/validation/executor.py",
+      "sha256": "7801052e7767281ca9af156483ffdceb86114fae0c01052e5c32a45686810d89"
+    },
+    {
+      "path": "tests/test_executor_cache_integration.py",
+      "sha256": "7f5a40b3d3e2c6c77670b202347c0fa295b1a5d0ffe1a907fab14b08b4e06c51"
+    },
+    {
+      "path": "scripts/validation/cache.py",
+      "sha256": "aa0346dd66cb7aa22aca3aad72018d4b30775a360016ca4b8987c939f68ea813"
+    },
+    {
+      "path": "research_control/design/validation_cache_contract_v1.md",
+      "sha256": "ef92aa55602b1e8cd9e2aaa73a08d3272fc58a311ac69fe1ee65c6b773e21aee"
+    },
+    {
+      "path": "research_control/design/validation_gate_manifest_v1.yaml",
+      "sha256": "0e757d206b2529a00a2e60cc2b725ab4b10188321a14c75e885cce429de23842"
+    },
+    {
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v19.md",
+      "sha256": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    }
+  ],
+  "implemented_behavior": {
+    "explicit_complete_evidence_context_required": true,
+    "lookup_after_identity_resolution": true,
+    "canonical_exact_key_material_forwarded": true,
+    "working_staged_and_commit_identity_disjoint": true,
+    "manifest_config_implementation_environment_and_dependency_invalidation": true,
+    "freshness_checked_before_lookup_before_hit_acceptance_and_after_execution": true,
+    "clean_original_pass_publication_only": true,
+    "rejected_lookup_evidence_never_published": true,
+    "cache_hit_preserves_original_status_receipt_hash_child_gates_and_obligations": true,
+    "cache_hit_reports_duration_saved": true,
+    "miss_executes_normal_adapter": true,
+    "corruption_executes_normal_adapter_and_disables_later_reads": true,
+    "cache_off_executes_normal_adapter": true,
+    "mandatory_bypass_executes_normal_adapter": true,
+    "git_diff_check_unconditionally_bypassed": true,
+    "checkpoint_transaction_unconditionally_bypassed": true,
+    "mutating_gates_never_cache": true,
+    "aggregate_status_reason_write_and_duration_counts": true,
+    "cache_operations_serialized_without_serializing_adapter_execution": true
+  },
+  "focused_scenarios": [
+    "repeated_exact_tree_hit",
+    "working_then_staged_isolation",
+    "manifest_edit_invalidation",
+    "validator_implementation_edit_invalidation",
+    "dependency_edit_invalidation",
+    "environment_edit_invalidation",
+    "cache_enabled_disabled_child_evidence_parity",
+    "cache_mode_off_bypass",
+    "explicit_operator_bypass",
+    "fixed_safeguard_bypass",
+    "corrupt_entry_live_fallback"
+  ],
+  "validation_evidence": {
+    "focused_executor_cache_test_count": 6,
+    "focused_executor_cache_failure_count": 0,
+    "focused_executor_cache_error_count": 0,
+    "combined_executor_cache_test_count": 41,
+    "combined_executor_cache_failure_count": 0,
+    "combined_executor_cache_error_count": 0,
+    "syntax_status": "PASS",
+    "affected_profile_status": "READY",
+    "affected_selected_gate_count": 13,
+    "legacy_planner_shadow_status": "PASS",
+    "legacy_compatible_blocking_gate_count": 11,
+    "planner_blocking_gate_count": 11,
+    "unexplained_mismatch_count": 0,
+    "claim_language_status": "PASS_WITH_WARNINGS",
+    "claim_language_hard_failure_count": 0,
+    "claim_language_historical_warning_count": 1476,
+    "first_repository_suite": {
+      "test_count": 946,
+      "skip_count": 1,
+      "failure_count": 4,
+      "error_count": 1,
+      "duration_seconds": 115.788,
+      "status": "ACTIVE_LIFECYCLE_FINDING",
+      "explanation": "All five findings were caused by the intentionally absent completion record for this active AgentJob; no executor or cache integration test failed."
+    },
+    "stable_completed_state_repository_suite": {
+      "test_count": 946,
+      "skip_count": 1,
+      "failure_count": 0,
+      "error_count": 0,
+      "duration_seconds": 110.521,
+      "status": "PASS"
+    }
+  },
+  "live_manifest_mutated": false,
+  "live_exact_tree_gate_count": 0,
+  "cache_mode_default": "off",
+  "ordinary_research_handoff_preserved": "handoff-0740",
+  "scientific_claims_changed": false,
+  "distance_to_gr_delta_changed": false,
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "full_receipts_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "proof_authority": false,
+    "benchmark_authority": false,
+    "gate_chair_authority": false
+  },
+  "next_plan_task_not_implemented": "P10-T05"
+}

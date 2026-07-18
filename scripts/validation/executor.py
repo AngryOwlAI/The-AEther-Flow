@@ -7,8 +7,10 @@ proof, or Gate Chair authority.
 
 from __future__ import annotations
 
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
+from datetime import datetime, timezone
 import hashlib
 import json
 import os
@@ -20,6 +22,7 @@ import threading
 import time
 from typing import Callable, Mapping, Protocol, Sequence
 
+from scripts.validation.cache import ValidationCache
 from scripts.validation.mutators import (
     MutatorContractError,
     matches_any,
@@ -79,6 +82,70 @@ class ExecutionOutcome:
 
 
 @dataclass(frozen=True, slots=True)
+class GateCacheEvidence:
+    """Complete decision-relevant closure for one potentially cacheable gate."""
+
+    implementation_digest: str
+    source_fingerprint_manifest: tuple[Mapping[str, object], ...]
+
+    def __post_init__(self) -> None:
+        object.__setattr__(
+            self,
+            "source_fingerprint_manifest",
+            tuple(dict(item) for item in self.source_fingerprint_manifest),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class ExecutionCacheContext:
+    """Invocation-wide exact-state identity supplied by the execution owner."""
+
+    cache: ValidationCache
+    tree_state: str
+    tree_hash: str
+    base_ref_name: str
+    base_ref_commit: str
+    git_common_dir: Path
+    environment_fingerprint: str
+    dependency_lock_digest: str
+    gate_evidence: Mapping[str, GateCacheEvidence]
+    freshness_check: Callable[[], bool]
+    mandatory_bypass_reason: str | None = None
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.cache, ValidationCache):
+            raise TypeError("cache must be a ValidationCache")
+        if self.tree_state not in {"working", "staged", "commit"}:
+            raise ValueError("tree_state must be working, staged, or commit")
+        if not callable(self.freshness_check):
+            raise TypeError("freshness_check must be callable")
+        evidence = dict(self.gate_evidence)
+        if any(
+            not isinstance(gate_id, str)
+            or not gate_id
+            or not isinstance(value, GateCacheEvidence)
+            for gate_id, value in evidence.items()
+        ):
+            raise TypeError("gate_evidence must map gate IDs to GateCacheEvidence")
+        object.__setattr__(self, "gate_evidence", evidence)
+        object.__setattr__(self, "git_common_dir", Path(self.git_common_dir).absolute())
+        if self.mandatory_bypass_reason is not None and not self.mandatory_bypass_reason.strip():
+            raise ValueError("mandatory_bypass_reason must be nonblank when present")
+
+
+@dataclass(frozen=True, slots=True)
+class _GateCachePlan:
+    cache: ValidationCache | None
+    key_material: dict[str, object] | None
+    source_fingerprint_manifest: tuple[dict[str, object], ...]
+    freshness_check: Callable[[], bool]
+    gate_policy: str
+    mandatory_bypass: bool
+    initial_cache_status: str
+    initial_reason: str
+
+
+@dataclass(frozen=True, slots=True)
 class SubprocessAdapter:
     """Shell-free adapter that captures complete process output to files."""
 
@@ -130,6 +197,185 @@ class SubprocessAdapter:
 
 
 _COST_PRIORITY = {"fast": 0, "medium": 1, "slow": 2}
+_UNCONDITIONALLY_UNCACHED_GATE_IDS = {"git_diff_check", "checkpoint_transaction"}
+
+
+def _utc_timestamp(value: datetime | None = None) -> str:
+    timestamp = value or datetime.now(timezone.utc)
+    return timestamp.isoformat(timespec="microseconds").replace("+00:00", "Z")
+
+
+def _canonical_bytes(value: object) -> bytes:
+    return json.dumps(
+        value,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+        allow_nan=False,
+    ).encode("utf-8")
+
+
+def _sha256(value: object) -> str:
+    return f"sha256:{hashlib.sha256(_canonical_bytes(value)).hexdigest()}"
+
+
+def _canonical_sources(
+    values: Sequence[Mapping[str, object]],
+) -> tuple[dict[str, object], ...]:
+    return tuple(
+        sorted(
+            (dict(value) for value in values),
+            key=lambda value: (
+                str(value.get("input_id", "")),
+                str(value.get("input_type", "")),
+            ),
+        )
+    )
+
+
+def _safe_freshness(check: Callable[[], bool]) -> bool:
+    try:
+        return check() is True
+    except Exception:
+        # Cache evidence is optional; an unreliable freshness probe disables reuse.
+        return False
+
+
+def _cache_plan_for_gate(
+    plan: ValidationPlan,
+    manifest: Mapping[str, object],
+    gate_id: str,
+    gate: Mapping[str, object],
+    entry: Mapping[str, object],
+    cache_context: ExecutionCacheContext | None,
+    *,
+    receipt_root: Path,
+) -> _GateCachePlan:
+    policy = str(gate["cache_policy"])
+    if policy == "ineligible":
+        return _GateCachePlan(
+            None, None, (), lambda: False, policy, False, "NOT_ELIGIBLE", "gate_policy_ineligible"
+        )
+    if gate.get("mutating") is not False:
+        return _GateCachePlan(
+            None, None, (), lambda: False, policy, True, "NOT_ELIGIBLE", "mutating_gate"
+        )
+    if cache_context is None:
+        return _GateCachePlan(
+            None, None, (), lambda: False, policy, False, "NOT_ELIGIBLE", "cache_evidence_absent"
+        )
+    freshness_check = lambda: _safe_freshness(cache_context.freshness_check)
+    evidence = cache_context.gate_evidence.get(gate_id)
+    if evidence is None or not evidence.source_fingerprint_manifest:
+        return _GateCachePlan(
+            cache_context.cache,
+            None,
+            (),
+            freshness_check,
+            policy,
+            False,
+            "NOT_ELIGIBLE",
+            "incomplete_evidence_identity",
+        )
+    try:
+        Path(receipt_root).resolve().relative_to(cache_context.cache.repository_root)
+    except ValueError:
+        return _GateCachePlan(
+            cache_context.cache,
+            None,
+            (),
+            freshness_check,
+            policy,
+            False,
+            "NOT_ELIGIBLE",
+            "receipt_root_outside_repository",
+        )
+
+    declared_scopes = {str(value) for value in gate["scopes"]}
+    if "repository" in plan.scopes and "repository" in declared_scopes:
+        scope_kind = "repository"
+    elif cache_context.tree_state in declared_scopes:
+        scope_kind = cache_context.tree_state
+    else:
+        return _GateCachePlan(
+            cache_context.cache,
+            None,
+            (),
+            freshness_check,
+            policy,
+            False,
+            "NOT_ELIGIBLE",
+            "scope_evidence_incomplete",
+        )
+
+    mandatory_bypass = bool(cache_context.mandatory_bypass_reason) or (
+        gate_id in _UNCONDITIONALLY_UNCACHED_GATE_IDS
+    )
+    bypass_reason = cache_context.mandatory_bypass_reason
+    if gate_id in _UNCONDITIONALLY_UNCACHED_GATE_IDS:
+        bypass_reason = "unconditionally_uncached_safeguard"
+    sources = _canonical_sources(evidence.source_fingerprint_manifest)
+    selection_material = {
+        "ordered_gate_ids": list(plan.ordered_gate_ids),
+        "selected_gate_ids": list(plan.selected_gate_ids),
+        "changed_paths": list(plan.changed_paths),
+        "blocked_paths": list(plan.blocked_paths),
+        "path_tags": list(plan.path_tags),
+        "scopes": list(plan.scopes),
+        "role_obligations": list(plan.role_obligations),
+    }
+    config_material = {
+        "gate": dict(gate),
+        "plan_entry": dict(entry),
+        "requested_profile": plan.requested_profile,
+        "effective_profile": plan.effective_profile,
+        "execution_authority": plan.execution_authority,
+    }
+    repository_identity = {
+        "repository_root": str(cache_context.cache.repository_root.resolve()),
+        "git_common_dir": str(cache_context.git_common_dir.resolve()),
+    }
+    key_material: dict[str, object] = {
+        "schema_id": "validation_cache_key_v1",
+        "schema_version": 1,
+        "contract_id": "validation-cache-contract-v1",
+        "gate_id": gate_id,
+        "scope": {
+            "scope_kind": scope_kind,
+            "tree_state": cache_context.tree_state,
+            "profile": plan.effective_profile,
+            "mode": "legacy",
+            "selection_digest": _sha256(selection_material),
+            "repository_identity_digest": _sha256(repository_identity),
+        },
+        "tree_hash": cache_context.tree_hash,
+        "base_ref": {
+            "name": cache_context.base_ref_name,
+            "commit": cache_context.base_ref_commit,
+        },
+        "implementation_digest": evidence.implementation_digest,
+        "manifest_digest": _sha256(manifest),
+        "config_digest": _sha256(config_material),
+        "environment_fingerprint": cache_context.environment_fingerprint,
+        "dependency_lock_digest": cache_context.dependency_lock_digest,
+        "receipt_schema": {
+            "gate_result_id": "validation_gate_result_v1",
+            "gate_result_version": 1,
+            "run_receipt_id": "validation_run_receipt_v1",
+            "run_receipt_version": 1,
+        },
+    }
+    return _GateCachePlan(
+        cache_context.cache,
+        key_material,
+        sources,
+        freshness_check,
+        policy,
+        mandatory_bypass,
+        "BYPASSED" if mandatory_bypass else "MISS",
+        bypass_reason
+        or ("cache_mode_off" if cache_context.cache.mode == "off" else "lookup_required"),
+    )
 
 
 def _classification_for(plan: ValidationPlan) -> dict[str, object]:
@@ -227,6 +473,7 @@ def _run_gate(
         stderr_path=stderr_path,
         cancellation=cancellation,
     )
+    started_at = datetime.now(timezone.utc)
     started = time.monotonic()
     exit_code = 0
     child_gates: tuple[str, ...] = ()
@@ -264,13 +511,18 @@ def _run_gate(
         status = "BLOCKED_CONFIGURATION"
         with stderr_path.open("ab") as stderr:
             stderr.write(f"executor captured {type(error).__name__}: {error}\n".encode("utf-8"))
+    finished_at = datetime.now(timezone.utc)
+    duration_seconds = round(time.monotonic() - started, 6)
     return {
         "gate_id": gate_id,
         "status": status,
         "severity": gate["severity"],
         "reason": reason,
         "exit_code": exit_code,
-        "duration_seconds": round(time.monotonic() - started, 6),
+        "started_at": _utc_timestamp(started_at),
+        "finished_at": _utc_timestamp(finished_at),
+        "duration_ms": round((finished_at - started_at).total_seconds() * 1000),
+        "duration_seconds": duration_seconds,
         "stdout_bytes": _file_size(stdout_path),
         "stderr_bytes": _file_size(stderr_path),
         "stdout_path": str(stdout_path),
@@ -286,6 +538,223 @@ def _run_gate(
     }
 
 
+def _write_gate_full_receipt(
+    result: Mapping[str, object],
+    *,
+    log_directory: Path,
+    repository_root: Path,
+) -> dict[str, object]:
+    gate_id = str(result["gate_id"])
+    artifact_id = f"ART-{hashlib.sha256(gate_id.encode('utf-8')).hexdigest()[:24]}"
+    path = log_directory / f"{gate_id}.full-receipt.json"
+    evidence = {
+        "schema_id": "validation_executor_gate_evidence_v1",
+        "gate_id": gate_id,
+        "result": dict(result),
+        "authority": "operational_validation_only",
+    }
+    _atomic_write(evidence, path)
+    payload = path.read_bytes()
+    return {
+        "artifact_id": artifact_id,
+        "path": path.resolve().relative_to(repository_root).as_posix(),
+        "content_hash": f"sha256:{hashlib.sha256(payload).hexdigest()}",
+        "local_only": True,
+        "authoritative": False,
+    }
+
+
+def _cache_original_result(
+    result: Mapping[str, object],
+    cache_plan: _GateCachePlan,
+    full_receipt: Mapping[str, object],
+) -> dict[str, object]:
+    assert cache_plan.key_material is not None
+    implementation_digest = str(cache_plan.key_material["implementation_digest"])
+    severity = str(result["severity"])
+    if severity == "local_only":
+        severity = "diagnostic"
+    return {
+        "schema_id": "validation_gate_result_v1",
+        "gate_id": result["gate_id"],
+        "severity": severity,
+        "status": result["status"],
+        "cache_status": "MISS",
+        "input_fingerprint": _sha256(cache_plan.source_fingerprint_manifest),
+        "implementation_fingerprint": implementation_digest,
+        "started_at": result["started_at"],
+        "finished_at": result["finished_at"],
+        "duration_ms": result["duration_ms"],
+        "error_count": 0,
+        "warning_count": 0,
+        "finding_count": 0,
+        "shown_finding_count": 0,
+        "findings_truncated": False,
+        "shown_findings": [],
+        "full_receipt": dict(full_receipt),
+        "satisfied_obligation_ids": list(result["satisfied_obligations"]),
+        "child_gate_ids": list(result["child_gates"]),
+        "mutated_paths": [],
+        "artifact_refs": [],
+    }
+
+
+def _cache_hit_result(
+    gate_id: str,
+    gate: Mapping[str, object],
+    entry: Mapping[str, object],
+    original: Mapping[str, object],
+    *,
+    result_hash: str | None,
+    started_at: datetime,
+    finished_at: datetime,
+) -> dict[str, object]:
+    duration_ms = round((finished_at - started_at).total_seconds() * 1000)
+    original_duration_ms = int(original["duration_ms"])
+    full_receipt = dict(original["full_receipt"])  # type: ignore[arg-type]
+    return {
+        "gate_id": gate_id,
+        "status": "CACHE_HIT",
+        "severity": gate["severity"],
+        "reason": "cache_hit",
+        "cache_status": "HIT",
+        "cache_reason": "exact_match",
+        "cache_write_status": "NOT_ATTEMPTED",
+        "cache_write_reason": "cache_hit",
+        "exit_code": 0,
+        "started_at": _utc_timestamp(started_at),
+        "finished_at": _utc_timestamp(finished_at),
+        "duration_ms": duration_ms,
+        "duration_seconds": round(duration_ms / 1000, 6),
+        "duration_saved_seconds": round(original_duration_ms / 1000, 6),
+        "original_status": original["status"],
+        "original_receipt_hash": full_receipt["content_hash"],
+        "result_hash": result_hash,
+        "input_fingerprint": original["input_fingerprint"],
+        "implementation_fingerprint": original["implementation_fingerprint"],
+        "full_receipt": full_receipt,
+        "stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "stdout_path": None,
+        "stderr_path": None,
+        "child_gates": list(original["child_gate_ids"]),
+        "dependencies": sorted(str(value) for value in gate["prerequisites"]),
+        "satisfied_obligations": list(original["satisfied_obligation_ids"]),
+        "plan_reasons": list(entry["reasons"]),
+    }
+
+
+def _run_gate_cached(
+    gate_id: str,
+    gate: Mapping[str, object],
+    entry: Mapping[str, object],
+    adapter: ValidationAdapter,
+    log_directory: Path,
+    ordinal: int,
+    cancellation: threading.Event,
+    cache_plan: _GateCachePlan,
+    cache_lock: threading.Lock,
+) -> dict[str, object]:
+    if cache_plan.cache is None or cache_plan.key_material is None:
+        result = _run_gate(
+            gate_id, gate, entry, adapter, log_directory, ordinal, cancellation
+        )
+        result.update(
+            {
+                "cache_status": cache_plan.initial_cache_status,
+                "cache_reason": cache_plan.initial_reason,
+                "cache_write_status": "NOT_ATTEMPTED",
+                "cache_write_reason": cache_plan.initial_reason,
+                "duration_saved_seconds": 0.0,
+            }
+        )
+        return result
+
+    lookup_started = datetime.now(timezone.utc)
+    with cache_lock:
+        lookup = cache_plan.cache.lookup(
+            cache_plan.key_material,
+            gate_policy=cache_plan.gate_policy,
+            mandatory_bypass=cache_plan.mandatory_bypass,
+            freshness_check=cache_plan.freshness_check,
+        )
+    lookup_finished = datetime.now(timezone.utc)
+    if lookup.hit and lookup.original_result is not None:
+        return _cache_hit_result(
+            gate_id,
+            gate,
+            entry,
+            lookup.original_result,
+            result_hash=lookup.result_hash,
+            started_at=lookup_started,
+            finished_at=lookup_finished,
+        )
+
+    if cache_plan.mandatory_bypass or lookup.status == "DISABLED":
+        cache_status = "BYPASSED"
+    else:
+        cache_status = "MISS"
+    result = _run_gate(
+        gate_id, gate, entry, adapter, log_directory, ordinal, cancellation
+    )
+    result.update(
+        {
+            "cache_status": cache_status,
+            "cache_reason": lookup.reason,
+            "cache_key": lookup.cache_key,
+            "cache_write_status": "NOT_ATTEMPTED",
+            "cache_write_reason": "result_not_cacheable",
+            "duration_saved_seconds": 0.0,
+        }
+    )
+    if result["status"] != "PASS" or cache_status != "MISS":
+        return result
+    if lookup.reason not in {"absent", "expired"}:
+        result["cache_write_status"] = "SKIPPED"
+        result["cache_write_reason"] = f"lookup_not_publishable:{lookup.reason}"
+        return result
+    if not cache_plan.freshness_check():
+        result["cache_write_status"] = "SKIPPED"
+        result["cache_write_reason"] = "snapshot_stale_after_execution"
+        return result
+
+    try:
+        full_receipt = _write_gate_full_receipt(
+            result,
+            log_directory=log_directory,
+            repository_root=cache_plan.cache.repository_root,
+        )
+        original = _cache_original_result(result, cache_plan, full_receipt)
+        with cache_lock:
+            if lookup.reason == "expired":
+                cache_plan.cache.evict()
+            if cache_plan.cache.reads_disabled:
+                result["cache_write_status"] = "SKIPPED"
+                result["cache_write_reason"] = "reads_disabled_after_maintenance"
+                return result
+            write = cache_plan.cache.store(
+                cache_plan.key_material,
+                original,
+                source_fingerprint_manifest=cache_plan.source_fingerprint_manifest,
+                gate_policy=cache_plan.gate_policy,
+                mandatory_bypass=cache_plan.mandatory_bypass,
+            )
+        result.update(
+            {
+                "input_fingerprint": original["input_fingerprint"],
+                "implementation_fingerprint": original["implementation_fingerprint"],
+                "full_receipt": full_receipt,
+                "cache_write_status": write.status,
+                "cache_write_reason": write.reason,
+                "cache_key": write.cache_key or lookup.cache_key,
+            }
+        )
+    except (OSError, ValueError) as error:
+        result["cache_write_status"] = "SKIPPED"
+        result["cache_write_reason"] = f"full_receipt_unavailable:{type(error).__name__}"
+    return result
+
+
 def _skipped_gate(
     gate_id: str,
     gate: Mapping[str, object],
@@ -298,6 +767,14 @@ def _skipped_gate(
         "severity": gate["severity"],
         "reason": reason,
         "exit_code": 0,
+        "cache_status": "NOT_ELIGIBLE",
+        "cache_reason": reason,
+        "cache_write_status": "NOT_ATTEMPTED",
+        "cache_write_reason": reason,
+        "duration_saved_seconds": 0.0,
+        "started_at": None,
+        "finished_at": None,
+        "duration_ms": 0,
         "duration_seconds": 0.0,
         "stdout_bytes": 0,
         "stderr_bytes": 0,
@@ -351,6 +828,7 @@ def execute_plan(
     allowed_mutation_globs: Sequence[str] = (),
     max_stabilization_passes: int = 3,
     replan_if_new_tags: Callable[[tuple[str, ...]], ValidationPlan | None] | None = None,
+    cache_context: ExecutionCacheContext | None = None,
 ) -> ExecutionOutcome:
     """Execute one validated shadow plan with a bounded pre-validation barrier."""
 
@@ -439,6 +917,11 @@ def execute_plan(
                         "job_allowed_output_globs": list(allowed_globs),
                         "disallowed_paths": disallowed_paths,
                         "cache_eligible": False,
+                        "cache_status": "NOT_ELIGIBLE",
+                        "cache_reason": "mutating_gate",
+                        "cache_write_status": "NOT_ATTEMPTED",
+                        "cache_write_reason": "mutating_gate",
+                        "duration_saved_seconds": 0.0,
                         "rollback": {
                             "required": bool(disallowed_paths) or result["status"] != "PASS",
                             "performed": False,
@@ -559,6 +1042,19 @@ def execute_plan(
         if gates[gate_id]["mutating"] is False
     ]
     position = {gate_id: index for index, gate_id in enumerate(order)}
+    cache_plans = {
+        gate_id: _cache_plan_for_gate(
+            active_plan,
+            manifest,
+            gate_id,
+            gates[gate_id],
+            entries[gate_id],
+            cache_context,
+            receipt_root=Path(receipt_root),
+        )
+        for gate_id in order
+    }
+    cache_lock = threading.Lock()
     pending = set(order)
     completed: set[str] = set(mutator_ids) if barrier_status in {"STABLE", "NOT_APPLICABLE"} else set()
     results: dict[str, dict[str, object]] = {}
@@ -592,7 +1088,7 @@ def execute_plan(
         with ThreadPoolExecutor(max_workers=min(max_workers, len(batch))) as pool:
             futures = {
                 gate_id: pool.submit(
-                    _run_gate,
+                    _run_gate_cached,
                     gate_id,
                     gates[gate_id],
                     entries[gate_id],
@@ -600,6 +1096,8 @@ def execute_plan(
                     log_directory,
                     position[gate_id],
                     cancellation,
+                    cache_plans[gate_id],
+                    cache_lock,
                 )
                 for gate_id in batch
             }
@@ -637,11 +1135,41 @@ def execute_plan(
     status, exit_code = _run_status(ordered_results, cancelled)
     counts = {
         "gate_count": len(ordered_results),
-        "pass_count": sum(result["status"] == "PASS" for result in ordered_results),
+        "pass_count": sum(result["status"] in {"PASS", "CACHE_HIT"} for result in ordered_results),
+        "executed_pass_count": sum(result["status"] == "PASS" for result in ordered_results),
+        "cache_hit_count": sum(result["status"] == "CACHE_HIT" for result in ordered_results),
         "fail_count": sum(result["status"] == "FAIL" for result in ordered_results),
         "warn_count": sum(result["status"] == "WARN" for result in ordered_results),
         "blocked_count": sum(result["status"] == "BLOCKED_CONFIGURATION" for result in ordered_results),
         "skipped_count": sum(str(result["status"]).startswith("SKIP_") for result in ordered_results),
+    }
+    cache_status_counts = Counter(
+        str(result.get("cache_status", "NOT_ELIGIBLE")) for result in ordered_results
+    )
+    cache_reason_counts = Counter(
+        str(result.get("cache_reason", "unspecified")) for result in ordered_results
+    )
+    cache_write_counts = Counter(
+        str(result.get("cache_write_status", "NOT_ATTEMPTED"))
+        for result in ordered_results
+    )
+    cache_summary: dict[str, object] = {
+        "mode": cache_context.cache.mode if cache_context is not None else "unconfigured",
+        "status_counts": dict(sorted(cache_status_counts.items())),
+        "reason_counts": dict(sorted(cache_reason_counts.items())),
+        "write_status_counts": dict(sorted(cache_write_counts.items())),
+        "adapter_execution_count": sum(
+            not str(result["status"]).startswith("SKIP_") and result["status"] != "CACHE_HIT"
+            for result in ordered_results
+        ),
+        "duration_saved_seconds": round(
+            sum(float(result.get("duration_saved_seconds", 0.0)) for result in ordered_results),
+            6,
+        ),
+        "reads_disabled": bool(cache_context and cache_context.cache.reads_disabled),
+        "diagnostics": (
+            list(cache_context.cache.diagnostics[:8]) if cache_context is not None else []
+        ),
     }
     receipt: dict[str, object] = {
         "schema_id": "validation_execution_receipt_v1",
@@ -658,6 +1186,7 @@ def execute_plan(
         "exit_code": exit_code,
         "cancelled": cancelled,
         "counts": counts,
+        "cache": cache_summary,
         "gate_results": ordered_results,
         "mutator_barrier": barrier_receipt,
         "authority": {

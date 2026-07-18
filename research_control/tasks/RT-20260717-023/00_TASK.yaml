@@ -1,0 +1,47 @@
+task_id: "RT-20260717-023"
+task_type: "executor_cache_integration"
+status: "completed"
+created_at: "2026-07-17T23:29:06Z"
+updated_at: "2026-07-17T23:50:25Z"
+closed_at: "2026-07-17T23:50:25Z"
+parent_task_id: "RT-20260717-022"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260717-023"
+current_job_id: "AJ-RT-20260717-023-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-023"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached dependency-ready P10-T04 after the governed P10-T03 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T04"
+  plan_task_name: "Integrate exact-tree cache lookup with the executor"
+  recommendation_ids:
+    - "V19-R28"
+    - "V19-R43"
+objective: "Integrate conservative exact-tree cache lookup and publication with the shadow executor while preserving default-off operation final-safeguard bypasses and uncached correctness."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validation executor cache integration only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+closure_status: "v19_p10_t04_executor_cache_integration_pass_next_p10_t05_no_physics_delta"
+claim_boundary_id: "CB-V19-P10-T04-EXECUTOR-CACHE-INTEGRATION-001"
+claim_boundary:
+  allowed_scope: "P10-T04 executor cache integration focused tests task evidence registry rows and policy-generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "scripts/validation/executor.py"
+  - "tests/test_executor_cache_integration.py"
+  - "research_control/tasks/RT-20260717-023/artifacts/executor_cache_integration_report.json"
+  - "research_control/tasks/RT-20260717-023/artifacts/executor_cache_validation_receipt.json"
+next_recommended_action: "After this exact transaction checkpoints route one separately bounded P10-T05 cache invalidation isolation and safety audit."
+documentation_impact_id: "DI-RT-20260717-023-001"
+completion_id: "AJC-AJ-RT-20260717-023-001"
+notes: "P10-T04 completed with optional executor integration focused parity evidence and no live manifest or physics authority change."

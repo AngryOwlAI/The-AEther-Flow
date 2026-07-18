@@ -1,0 +1,222 @@
+job_id: "AJ-RT-20260717-023-001"
+completion_id: "AJC-AJ-RT-20260717-023-001"
+task_id: "RT-20260717-023"
+decision_id: "DDR-20260717-023"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260717-023"
+status: "completed"
+created_at: "2026-07-17T23:29:06Z"
+started_at: "2026-07-17T23:29:06Z"
+completed_at: "2026-07-17T23:50:25Z"
+objective: "Implement P10-T04 optional exact-tree cache lookup and clean-PASS publication in the shadow executor with transparent hit and miss evidence and uncached correctness parity."
+completion_summary: "Integrated the existing exact-tree cache storage API with the shadow executor behind an explicit complete evidence context. Eligible synthetic gates reuse verified PASS evidence with transparent CACHE_HIT attribution; misses corruption cache-off and mandatory safeguards execute the unchanged adapter. The live manifest remains unchanged and entirely ineligible."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P10-T04"
+  - "research_control/design/validation_cache_contract_v1.md"
+  - "research_control/design/validation_run_receipt_schema_v1.md"
+  - "research_control/design/validation_evidence_identity_policy_v1.md"
+  - "research_control/design/validation_environment_contract_v1.md"
+  - "scripts/validation/cache.py"
+  - "scripts/validation/snapshot.py"
+  - "research_control/tasks/RT-20260717-022/jobs/completions/AJC-AJ-RT-20260717-022-001.yaml"
+outputs_created:
+  - "tests/test_executor_cache_integration.py"
+  - "research_control/tasks/RT-20260717-023/artifacts/executor_cache_integration_report.json"
+  - "research_control/tasks/RT-20260717-023/artifacts/executor_cache_validation_receipt.json"
+  - "research_control/tasks/RT-20260717-023/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260717-023/jobs/completions/AJC-AJ-RT-20260717-023-001.yaml"
+outputs_updated:
+  - "scripts/validation/executor.py"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P10-T04"
+  recommendation_ids:
+    - "V19-R28"
+    - "V19-R43"
+  migration_epoch: "shadow_planner"
+  implementation_status: "completed"
+  downstream_tasks_not_implemented:
+    - "P10-T05 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p10_t04_executor_cache_integration"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R28"
+    - "V19-R43"
+  implements_plan_task_id: "P10-T04"
+  implementation_status: "PASS"
+  coverage_effect: "optional exact-tree executor lookup clean-PASS publication cache-hit attribution and fail-closed live fallback"
+physics_progress_status:
+  status: "project_system_executor_cache_integration_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P10-T04 changes operational validator execution only and discharge no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Cache reuse of duplicate operational PASS evidence is not scientific evidence or derivation progress."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+executor_cache_integration:
+  status: "PASS"
+  executor_path: "scripts/validation/executor.py"
+  executor_sha256: "7801052e7767281ca9af156483ffdceb86114fae0c01052e5c32a45686810d89"
+  test_path: "tests/test_executor_cache_integration.py"
+  test_sha256: "7f5a40b3d3e2c6c77670b202347c0fa295b1a5d0ffe1a907fab14b08b4e06c51"
+  report_path: "research_control/tasks/RT-20260717-023/artifacts/executor_cache_integration_report.json"
+  validation_receipt: "research_control/tasks/RT-20260717-023/artifacts/executor_cache_validation_receipt.json"
+  explicit_evidence_context_required: true
+  same_tree_reuse_status: "PASS"
+  working_staged_isolation_status: "PASS"
+  invalidation_status: "PASS"
+  mandatory_bypass_status: "PASS"
+  corruption_fallback_status: "PASS"
+  enabled_disabled_parity_status: "PASS"
+  live_manifest_mutated: false
+  live_exact_tree_gate_count: 0
+  execution_authority: "legacy"
+  ordinary_research_handoff_preserved: "handoff-0740"
+validation_evidence:
+  focused_executor_cache_test_count: 6
+  combined_focused_test_count: 41
+  combined_focused_failure_count: 0
+  combined_focused_error_count: 0
+  syntax_status: "PASS"
+  affected_profile_status: "READY"
+  affected_selected_gate_count: 13
+  legacy_planner_shadow_comparison:
+    status: "PASS"
+    legacy_compatible_blocking_gate_count: 11
+    planner_blocking_gate_count: 11
+    unexplained_mismatch_count: 0
+  first_repository_suite:
+    test_count: 946
+    skip_count: 1
+    failure_count: 4
+    error_count: 1
+    duration_seconds: "115.788"
+    status: "ACTIVE_LIFECYCLE_FINDING"
+    explanation: "All findings required this still-active AgentJob completion to exist; no executor or cache integration test failed."
+  stable_completed_state_repository_suite:
+    test_count: 946
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    duration_seconds: "110.521"
+    status: "PASS"
+  checkpoint_status: "PASS_REQUIRED_FOR_COMPLETION_PERSISTENCE"
+command_results:
+  - ".venv/bin/python -m py_compile scripts/validation/executor.py tests/test_executor_cache_integration.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_executor_cache_integration tests.test_validation_executor tests.test_validation_cache | exit_code=0 | 41 tests PASS"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths scripts/validation/executor.py tests/test_executor_cache_integration.py --json | exit_code=0 | READY with 13 selected gates"
+  - ".venv/bin/python scripts/validation/profiles.py audit --json | exit_code=0 | 11 legacy-compatible blocking gates equal 11 planner gates with zero unexplained mismatch"
+  - ".venv/bin/python -m unittest discover -s tests | first_exit_code=1 | 946 tests with one expected skip and only active-AgentJob completion lifecycle findings"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | final stable completed-state 946 tests PASS with one expected skip in 110.521 seconds"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260717-023-001 | exit_code=0 required | governed local checkpoint with no push"
+  - "git diff --check | exit_code=0 | PASS"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 49 lease parity project binding clean entry tree predecessor guards and the single invocation were verified before task activation."
+      - "P10-T03 PASS completion canonical plan cache contract memory preflight classifier resolver and preserved ordinary handoff were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Focused tests cover exact reuse scope isolation all required invalidators bypass corruption and enabled-disabled child evidence parity."
+      - "The affected shadow comparison has zero unexplained blocking-gate mismatch and the live manifest has no activated cache policy."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The first full suite reached only the expected missing-completion lifecycle condition for this active task."
+      - "The stable completed-state full suite passes all 946 tests with one expected skip."
+  post_checkpoint:
+    status: "PASS"
+    evidence:
+      - "This completion is valid for persistence only when the governed checkpoint commits this exact validated transaction; failure leaves the PASS claim uncommitted and requires repair."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked-memory synchronization and validate-only both pass with two existing nonblocking findings."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-surface claim-language validation passes with zero hard failures and 1476 historical warnings."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260717-023/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet integrates optional local cache reuse with the shadow executor only. It does not make a live manifest gate eligible permit cached final staged acceptance change validator findings alter cache storage planner checkpoint CI or ordinary research authority modify canonical ontology derive a source law matter coupling or Einstein equations promote a benchmark issue a Gate Chair verdict prove a theorem or complete the derivation."
+verdict: "v19_p10_t04_executor_cache_integration_pass_p10_t05_dependency_ready_after_checkpoint_no_physics_delta"
+coherent_resolution_summary: "The shadow executor can now consume exact duplicate operational PASS evidence only when a complete current evidence identity is supplied and verified; every absent stale disabled bypassed corrupt or noncacheable path executes the normal adapter."
+selected_next_route:
+  route_id: "v19_p10_t05_cache_safety_audit"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P10"
+  plan_task_id: "P10-T05"
+  task_name: "Audit cache invalidation isolation and safety"
+  role_family: "process-integrity-auditor@0.1.0"
+  task_type: "cache_safety_audit"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system cache invalidation isolation and safety audit only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After stable completed-state validation and governed checkpoint PASS route one separately bounded P10-T05 packet; do not execute it in P10-T04."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "817"
+    relationship_row_count: "4066"
+    semantic_row_count: "817"
+    vault_row_count: "817"
+    local_cache_only_warning_count: "0"
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P10-T04 Integrate exact-tree cache lookup with the executor\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P10-T04 Integrate exact-tree cache lookup with the executor"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+  authority_note: "Generated wiki Obsidian SQLite semantic and .local retrieval outputs were navigation layers only and are not authority."

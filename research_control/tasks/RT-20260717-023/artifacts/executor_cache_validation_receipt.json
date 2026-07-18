@@ -1,0 +1,99 @@
+{
+  "schema_id": "validation_executor_cache_integration_receipt_v1",
+  "schema_version": 1,
+  "receipt_id": "V19-P10-T04-EXECUTOR-CACHE-VALIDATION-001",
+  "task_id": "RT-20260717-023",
+  "job_id": "AJ-RT-20260717-023-001",
+  "created_at": "2026-07-17T23:50:25Z",
+  "updated_at": "2026-07-18T00:05:20Z",
+  "status": "PASS",
+  "gate_results": [
+    {
+      "gate_id": "executor_cache_same_tree_reuse",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "executor_cache_scope_isolation",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "executor_cache_invalidation",
+      "status": "PASS",
+      "dimension_count": 4
+    },
+    {
+      "gate_id": "executor_cache_mandatory_bypass",
+      "status": "PASS",
+      "bypass_class_count": 3
+    },
+    {
+      "gate_id": "executor_cache_corruption_fallback",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "executor_cache_enabled_disabled_parity",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "focused_unittest",
+      "status": "PASS",
+      "test_count": 41,
+      "failure_count": 0,
+      "error_count": 0
+    },
+    {
+      "gate_id": "affected_profile_plan",
+      "status": "READY",
+      "selected_gate_count": 13
+    },
+    {
+      "gate_id": "legacy_planner_shadow_comparison",
+      "status": "PASS",
+      "legacy_blocking_gate_count": 11,
+      "planner_blocking_gate_count": 11,
+      "unexplained_mismatch_count": 0
+    },
+    {
+      "gate_id": "claim_language_changed",
+      "status": "PASS_WITH_WARNINGS",
+      "hard_failure_count": 0,
+      "historical_warning_count": 1476
+    },
+    {
+      "gate_id": "repository_unittest",
+      "status": "PASS",
+      "test_count": 946,
+      "skip_count": 1,
+      "failure_count": 0,
+      "error_count": 0,
+      "duration_seconds": 110.521,
+      "executor_cache_regression_count": 0
+    }
+  ],
+  "counts": {
+    "gate_count": 11,
+    "pass_or_ready_count": 11,
+    "pending_completed_state_count": 0,
+    "unexplained_mismatch_count": 0,
+    "executor_cache_regression_count": 0
+  },
+  "hashes": {
+    "executor_sha256": "7801052e7767281ca9af156483ffdceb86114fae0c01052e5c32a45686810d89",
+    "integration_test_sha256": "7f5a40b3d3e2c6c77670b202347c0fa295b1a5d0ffe1a907fab14b08b4e06c51",
+    "cache_module_sha256": "aa0346dd66cb7aa22aca3aad72018d4b30775a360016ca4b8987c939f68ea813",
+    "contract_sha256": "ef92aa55602b1e8cd9e2aaa73a08d3272fc58a311ac69fe1ee65c6b773e21aee",
+    "manifest_sha256": "0e757d206b2529a00a2e60cc2b725ab4b10188321a14c75e885cce429de23842"
+  },
+  "live_manifest_mutated": false,
+  "scientific_claims_changed": false,
+  "distance_to_gr_delta_changed": false,
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "proof_authority": false,
+    "benchmark_authority": false,
+    "gate_chair_authority": false
+  }
+}
