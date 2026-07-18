@@ -1,0 +1,195 @@
+{
+  "schema_id": "validation_adapter_bindings_v1",
+  "schema_version": 1,
+  "binding_id": "validation-adapter-bindings-v1",
+  "manifest_id": "validation-gate-manifest-v1",
+  "gate_catalog_sha256": "f2151402dabb1acd43e39e2532b4b4ed3f9120930c7bb2f90029b157e4b964cf",
+  "scope": "canonical_current_full_profile",
+  "status": "active_candidate",
+  "authority": {
+    "operational_validation_only": true,
+    "source_authoritative": false,
+    "physics_claim_authority": false,
+    "ontology_authority": false,
+    "benchmark_authority": false,
+    "proof_authority": false,
+    "gate_chair_authority": false
+  },
+  "bindings": [
+    {
+      "gate_id": "classify_changes",
+      "adapter_id": "legacy:lvg-001",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/project_control/classify_project_changes.py", "--json"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "resolve_project_improvement",
+      "adapter_id": "legacy:lvg-002",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/project_control/resolve_project_improvement.py", "--json"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "project_improvement_signals",
+      "adapter_id": "legacy:lvg-003",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/project_control/collect_project_improvement_signals.py", "--validate-emitted"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "documentation_impact",
+      "adapter_id": "legacy:lvg-004",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/project_control/validate_documentation_impact.py"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "documentation_surface_audit",
+      "adapter_id": "legacy:lvg-005",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/project_control/audit_documentation_surfaces.py", "--skip-local"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "memory_sync",
+      "adapter_id": "legacy:lvg-006",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py", "--legacy-human"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "memory_core",
+      "adapter_id": "legacy:lvg-007",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", ".codex/skills/project-memory-system/scripts/bootstrap_memory_system.py", "--validate-only", "--legacy-human"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "spec_depth",
+      "adapter_id": "legacy:lvg-013",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/spec_depth_lint.py", "--root", "."],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "publication_validation",
+      "adapter_id": "legacy:lvg-014",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/validate_publication_process.py", "--root", "."],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "research_control_core",
+      "adapter_id": "legacy:lvg-015",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/research_control/validate_research_control.py", "--summary"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "research_control_diff",
+      "adapter_id": "legacy:lvg-016",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/research_control/validate_research_control.py", "--check-diff", "--summary"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "test_shard_repository",
+      "adapter_id": "legacy:lvg-017",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "-m", "unittest", "discover", "-s", "tests"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "current_frontier_freshness",
+      "adapter_id": "legacy:lvg-018",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/research_control/render_current_frontier.py", "--check"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "compact_frontier_freshness",
+      "adapter_id": "legacy:lvg-019",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/research_control/validate_compact_current_frontier_v16.py", "--json"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "dependency_graph_freshness",
+      "adapter_id": "legacy:lvg-020",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/research_control/render_dependency_graph.py", "--check"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "task_index_freshness",
+      "adapter_id": "legacy:lvg-021",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/research_control/validate_task_index.py", "--summary"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "claim_graph_validation",
+      "adapter_id": "legacy:lvg-022",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/research_control/validate_claim_graph_v1.py", "--json"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "git_diff_check",
+      "adapter_id": "legacy:lvg-026",
+      "kind": "subprocess",
+      "command": ["git", "diff", "--check"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "continue_memory_preflight",
+      "adapter_id": "legacy:lvg-028",
+      "kind": "subprocess",
+      "command": [".venv/bin/python", "scripts/research_control/continue_research_memory_preflight.py", "--json"],
+      "child_gate_ids": []
+    },
+    {
+      "gate_id": "profile_validate_project_control",
+      "adapter_id": "legacy:lvg-031",
+      "kind": "dependency_aggregate",
+      "command": [],
+      "child_gate_ids": ["classify_changes", "project_improvement_signals", "documentation_impact", "spec_depth", "publication_validation", "research_control_core", "test_shard_repository", "current_frontier_freshness", "compact_frontier_freshness", "dependency_graph_freshness", "task_index_freshness", "claim_graph_validation", "git_diff_check"]
+    },
+    {
+      "gate_id": "profile_validate_memory",
+      "adapter_id": "legacy:lvg-032",
+      "kind": "dependency_aggregate",
+      "command": [],
+      "child_gate_ids": ["memory_sync"]
+    },
+    {
+      "gate_id": "profile_validate_html_explainers",
+      "adapter_id": "legacy:lvg-033",
+      "kind": "dependency_aggregate",
+      "command": [],
+      "child_gate_ids": ["spec_depth", "publication_validation"]
+    },
+    {
+      "gate_id": "profile_audit_documentation_surfaces",
+      "adapter_id": "legacy:lvg-034",
+      "kind": "dependency_aggregate",
+      "command": [],
+      "child_gate_ids": ["documentation_surface_audit"]
+    },
+    {
+      "gate_id": "profile_full_research_control",
+      "adapter_id": "legacy:lvg-035",
+      "kind": "dependency_aggregate",
+      "command": [],
+      "child_gate_ids": ["profile_validate_project_control", "profile_validate_memory", "profile_validate_html_explainers", "profile_audit_documentation_surfaces"]
+    },
+    {
+      "gate_id": "profile_ci_project_control",
+      "adapter_id": "legacy:lvg-036",
+      "kind": "dependency_aggregate",
+      "command": [],
+      "child_gate_ids": ["profile_validate_project_control"]
+    }
+  ]
+}

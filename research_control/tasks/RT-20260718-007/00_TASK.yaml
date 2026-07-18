@@ -1,0 +1,42 @@
+task_id: "RT-20260718-007"
+task_type: "planner_authoritative_execution_binding_repair"
+status: "completed"
+created_at: "2026-07-18T04:14:30Z"
+updated_at: "2026-07-18T05:13:50Z"
+closed_at: "2026-07-18T05:13:50Z"
+closure_status: "v19_p11_t04_execution_binding_repair_pass_live_legacy_retained_hosted_ci_and_cutover_pending_no_physics_delta"
+parent_task_id: "RT-20260718-006"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260718-007"
+current_job_id: "AJ-RT-20260718-007-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260718-007"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive v19 relay reached the tracked P11-T04 REPAIR_REQUIRED route after the evidence-only cutover audit checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P11"
+  plan_task_id: "P11-T04"
+  plan_task_name: "Run authoritative shadow comparison and cut over to planner orchestration"
+  recommendation_ids:
+    - "V19-R38"
+    - "V19-R40"
+    - "V19-R45"
+    - "V19-R48"
+objective: "Implement the bounded P11-T04 tracked full-profile adapter binding and authority-aware planner execution repair while retaining live legacy authority and deferring hosted-CI evidence and default cutover."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validation-orchestration repair only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V19-P11-T04-EXECUTION-BINDING-REPAIR-001"
+claim_boundary:
+  allowed_scope: "P11-T04 authority-aware plan executor profile runner binding source active-job blank-completion compatibility focused tests local candidate receipts task control registry rows and generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+next_recommended_action: "After governed checkpoint PASS route one separately bounded P11-T04 hosted-CI and default-cutover evidence packet; P11-T05 remains blocked."
+notes: "This repair may prove an in-memory planner-authoritative candidate but may not change the live manifest or any default execution authority."

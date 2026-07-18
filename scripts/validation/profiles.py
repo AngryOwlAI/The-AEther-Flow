@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Five validation-profile contracts for the v19 shadow planner.
+"""Five validation-profile contracts for the v19 validation planner.
 
 This module validates profile membership and wraps the pure planner.  It does
 not execute validators, mutate the repository, satisfy a human gate, or change
-legacy execution authority.  The temporary ``shadow`` modifier requests a
-comparison receipt only; it never changes selected gate membership.
+execution authority.  The temporary ``shadow`` modifier requests a comparison
+receipt only; it never changes selected gate membership.
 """
 
 from __future__ import annotations
@@ -206,7 +206,9 @@ class ProfileResolution:
             "profile_definition": self.definition.to_dict(),
             "shadow_modifier_active": self.shadow_modifier_active,
             "comparison_required": self.comparison_required,
-            "profile_executes_commands": False,
+            "profile_executes_commands": (
+                self.plan.execution_authority == "manifest_planner"
+            ),
             "plan": self.plan.to_dict(),
             "authority": {
                 "operational_validation_only": True,
@@ -364,10 +366,6 @@ def _validate_manifest_profile_contract(
         build_plan(manifest, classify_paths([]), profile=DEFAULT_LOCAL_PROFILE)
     except PlannerError as error:
         raise ProfileError(f"manifest planner validation failed: {error}") from error
-    if manifest.get("migration_epoch") != "shadow_planner":
-        raise ProfileError("P5-T07 profiles require the shadow_planner epoch")
-    if manifest.get("execution_authority") != "legacy":
-        raise ProfileError("P5-T07 cannot change legacy execution authority")
     if tuple(PROFILE_DEFINITIONS) != PERMANENT_PROFILES:
         raise ProfileError("profile definitions do not match the permanent profile order")
     if DEFAULT_LOCAL_PROFILE == "full":
@@ -479,7 +477,7 @@ def resolve_profile(
     shadow: bool = False,
     human_gate_required: bool = False,
 ) -> ProfileResolution:
-    """Build one fail-closed pure profile resolution around the shadow planner."""
+    """Build one fail-closed pure profile resolution around the planner."""
 
     definition = profile_definition(requested_profile)
     if not isinstance(shadow, bool):
@@ -619,6 +617,7 @@ def build_membership_audit(
         "status": "PASS",
         "plan_task_id": "P5-T07",
         "migration_epoch": manifest.get("migration_epoch"),
+        "execution_authority": manifest.get("execution_authority"),
         "legacy_execution_authority": manifest.get("execution_authority"),
         "manifest_sha256": canonical_manifest_sha256(manifest),
         "permanent_profiles": list(PERMANENT_PROFILES),
@@ -656,7 +655,12 @@ def build_membership_audit(
         "authority": {
             "operational_validation_only": True,
             "profile_selection_is_evidence": False,
-            "legacy_execution_authoritative": True,
+            "legacy_execution_authoritative": (
+                manifest.get("execution_authority") == "legacy"
+            ),
+            "planner_execution_authoritative": (
+                manifest.get("execution_authority") == "manifest_planner"
+            ),
             "scientific_claims_changed": False,
             "physics_claim_authority": False,
             "proof_authority": False,

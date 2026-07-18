@@ -17,7 +17,7 @@ from scripts.validation.executor import (
     execute_plan,
 )
 from scripts.validation.plan import build_plan
-from scripts.validation.run import load_plan
+from scripts.validation.run import DEFAULT_BINDINGS, load_adapters, load_plan
 
 
 def gate(
@@ -295,6 +295,43 @@ class ValidationExecutorTests(unittest.TestCase):
                 receipt_root=Path(directory),
             )
 
+    def test_repo_local_cache_is_outside_job_mutation_scope(self) -> None:
+        mutator = gate("memory_sync", mutating=True)
+        mutator["output_globs"] = ["generated/**"]
+        document = manifest(mutator)
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            calls = 0
+
+            def synchronize(_context):
+                nonlocal calls
+                calls += 1
+                generated = root / "generated" / "state.txt"
+                cache = root / ".local" / "content_semantics" / "state.txt"
+                generated.parent.mkdir(parents=True, exist_ok=True)
+                cache.parent.mkdir(parents=True, exist_ok=True)
+                generated.write_text("stable\n", encoding="utf-8")
+                cache.write_text(f"refresh-{calls}\n", encoding="utf-8")
+                return AdapterResult()
+
+            outcome = execute_plan(
+                plan_for(document),
+                document,
+                {"test:memory_sync": FunctionAdapter(synchronize)},
+                receipt_root=root / ".local" / "receipts",
+                mutation_root=root,
+                allowed_mutation_globs=("generated/**",),
+                max_stabilization_passes=2,
+            )
+
+        self.assertEqual((outcome.status, outcome.exit_code), ("PASS", 0))
+        self.assertEqual(calls, 2)
+        self.assertEqual(
+            outcome.receipt["mutator_barrier"]["changed_paths"],
+            ["generated/state.txt"],
+        )
+
     def test_subprocess_adapter_captures_output_and_reports_crash(self) -> None:
         success = manifest(gate("process"))
         outcome = self.execute(
@@ -345,6 +382,63 @@ class ValidationExecutorTests(unittest.TestCase):
             path.write_text(json.dumps(planned), encoding="utf-8")
             with self.assertRaisesRegex(ExecutorError, "authority boundary"):
                 load_plan(path)
+
+    def test_authoritative_plan_executes_with_consistent_receipt_authority(self) -> None:
+        document = manifest(gate("alpha"))
+        document["migration_epoch"] = "planner_authoritative"
+        document["execution_authority"] = "manifest_planner"
+        outcome = self.execute(document, {"test:alpha": result_adapter()})
+        self.assertEqual((outcome.status, outcome.exit_code), ("PASS", 0))
+        self.assertEqual(outcome.receipt["execution_authority"], "manifest_planner")
+        self.assertEqual(outcome.receipt["migration_epoch"], "planner_authoritative")
+        self.assertTrue(outcome.receipt["authority"]["planner_result_authoritative"])
+        self.assertFalse(outcome.receipt["authority"]["legacy_result_authoritative"])
+
+        payload = plan_for(document).to_dict()
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "plan.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            self.assertEqual(load_plan(path).execution_authority, "manifest_planner")
+
+    def test_default_bindings_cover_the_canonical_current_full_plan(self) -> None:
+        root = Path(__file__).resolve().parents[1]
+        manifest_path = root / "research_control/design/validation_gate_manifest_v1.yaml"
+        from scripts.project_control.classify_project_changes import classify_paths
+        from scripts.validation.plan import load_manifest
+
+        document = load_manifest(manifest_path)
+        adapters = load_adapters(DEFAULT_BINDINGS, document)
+        full = build_plan(
+            document,
+            classify_paths([]),
+            profile="full",
+            scopes=("repository",),
+        )
+        by_id = {gate["gate_id"]: gate for gate in document["gates"]}
+        missing = [
+            gate_id
+            for gate_id in full.selected_gate_ids
+            if by_id[gate_id]["adapter"] not in adapters
+        ]
+        self.assertEqual(missing, [])
+
+        drifted = json.loads(json.dumps(document))
+        drifted["gates"][0]["description"] = "Drifted gate."
+        with self.assertRaisesRegex(ExecutorError, "gate catalog"):
+            load_adapters(DEFAULT_BINDINGS, drifted)
+
+        binding_document = json.loads(DEFAULT_BINDINGS.read_text(encoding="utf-8"))
+        aggregate = next(
+            binding
+            for binding in binding_document["bindings"]
+            if binding["kind"] == "dependency_aggregate"
+        )
+        aggregate["child_gate_ids"] = []
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "bindings.json"
+            path.write_text(json.dumps(binding_document), encoding="utf-8")
+            with self.assertRaisesRegex(ExecutorError, "differs from prerequisites"):
+                load_adapters(path, document)
 
     def test_shadow_status_matches_legacy_normalization_corpus(self) -> None:
         corpus = (

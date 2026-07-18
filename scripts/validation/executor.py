@@ -1,8 +1,8 @@
-"""Bounded read-only execution for validated v19 shadow plans.
+"""Bounded execution for validated v19 plans.
 
-The executor emits operational evidence only.  It does not make the manifest
-planner authoritative and it never confers scientific, ontology, benchmark,
-proof, or Gate Chair authority.
+The executor emits operational evidence only.  It follows but never changes
+the manifest's tracked execution authority, and it never confers scientific,
+ontology, benchmark, proof, or Gate Chair authority.
 """
 
 from __future__ import annotations
@@ -344,7 +344,7 @@ def _cache_plan_for_gate(
             "scope_kind": scope_kind,
             "tree_state": cache_context.tree_state,
             "profile": plan.effective_profile,
-            "mode": "legacy",
+            "mode": plan.execution_authority,
             "selection_digest": _sha256(selection_material),
             "repository_identity_digest": _sha256(repository_identity),
         },
@@ -411,8 +411,8 @@ def _validate_plan(
         raise ExecutorError("plan does not match the validated manifest and inputs")
     if plan.status != "READY":
         raise ExecutorError(f"plan is not executable: {plan.status}")
-    if plan.execution_authority != "legacy" or manifest.get("execution_authority") != "legacy":
-        raise ExecutorError("shadow executor requires legacy execution authority")
+    if plan.execution_authority != manifest.get("execution_authority"):
+        raise ExecutorError("plan and manifest execution authority differ")
 
     raw_gates = manifest.get("gates")
     assert isinstance(raw_gates, list)
@@ -815,6 +815,12 @@ def _atomic_write(receipt: Mapping[str, object], path: Path) -> None:
             temporary.unlink()
 
 
+def _snapshot_mutation_tree(root: Path, receipt_root: Path) -> dict[str, str]:
+    """Snapshot tracked transaction surfaces, excluding repo-local cache state."""
+
+    return snapshot_tree(root, excluded=(receipt_root, root / ".local"))
+
+
 def execute_plan(
     plan: ValidationPlan,
     manifest: Mapping[str, object],
@@ -830,7 +836,7 @@ def execute_plan(
     replan_if_new_tags: Callable[[tuple[str, ...]], ValidationPlan | None] | None = None,
     cache_context: ExecutionCacheContext | None = None,
 ) -> ExecutionOutcome:
-    """Execute one validated shadow plan with a bounded pre-validation barrier."""
+    """Execute one validated plan with a bounded pre-validation barrier."""
 
     if not isinstance(max_workers, int) or isinstance(max_workers, bool) or max_workers < 1:
         raise ExecutorError("max_workers must be a positive integer")
@@ -883,12 +889,12 @@ def execute_plan(
         mutation_root = Path(mutation_root)
         barrier_status = "RUNNING"
         for pass_number in range(1, max_stabilization_passes + 1):
-            pass_before = snapshot_tree(mutation_root, excluded=(receipt_root,))
+            pass_before = _snapshot_mutation_tree(mutation_root, receipt_root)
             pass_results: list[dict[str, object]] = []
             stop_this_pass = False
             for ordinal, gate_id in enumerate(mutator_ids):
                 gate = gates[gate_id]
-                before = snapshot_tree(mutation_root, excluded=(receipt_root,))
+                before = _snapshot_mutation_tree(mutation_root, receipt_root)
                 result = _run_gate(
                     gate_id,
                     gate,
@@ -899,7 +905,7 @@ def execute_plan(
                     cancellation,
                     attempt=pass_number,
                 )
-                after = snapshot_tree(mutation_root, excluded=(receipt_root,))
+                after = _snapshot_mutation_tree(mutation_root, receipt_root)
                 delta = mutation_delta(before, after)
                 declared_globs = validate_mutator_gate(gate)
                 disallowed_paths = [
@@ -925,7 +931,11 @@ def execute_plan(
                         "rollback": {
                             "required": bool(disallowed_paths) or result["status"] != "PASS",
                             "performed": False,
-                            "authority": "legacy_checkpoint_index_owner",
+                            "authority": (
+                                "manifest_planner"
+                                if active_plan.execution_authority == "manifest_planner"
+                                else "legacy_checkpoint_index_owner"
+                            ),
                             "before_tree_hash": delta.before_tree_hash,
                             "after_tree_hash": delta.after_tree_hash,
                             "changed_paths": list(delta.changed_paths),
@@ -950,7 +960,7 @@ def execute_plan(
                     stop_this_pass = True
                     break
 
-            pass_after = snapshot_tree(mutation_root, excluded=(receipt_root,))
+            pass_after = _snapshot_mutation_tree(mutation_root, receipt_root)
             pass_delta = mutation_delta(pass_before, pass_after)
             barrier_passes.append(
                 {
@@ -1031,7 +1041,12 @@ def execute_plan(
         "replan_count": replan_count,
         "replan_events": replan_events,
         "targeted_pdf_second_sync_observed": targeted_pdf_second_sync_observed,
-        "legacy_checkpoint_authoritative": True,
+        "legacy_checkpoint_authoritative": (
+            active_plan.execution_authority == "legacy"
+        ),
+        "planner_transaction_authoritative": (
+            active_plan.execution_authority == "manifest_planner"
+        ),
         "rollback_performed": False,
         "passes": barrier_passes,
     }
@@ -1180,8 +1195,8 @@ def execute_plan(
             active_plan.canonical_json().encode("utf-8")
         ).hexdigest(),
         "manifest_hash": plan.manifest_hash,
-        "execution_authority": "legacy",
-        "migration_epoch": "shadow_planner",
+        "execution_authority": active_plan.execution_authority,
+        "migration_epoch": manifest.get("migration_epoch"),
         "status": status,
         "exit_code": exit_code,
         "cancelled": cancelled,
@@ -1191,7 +1206,12 @@ def execute_plan(
         "mutator_barrier": barrier_receipt,
         "authority": {
             "operational_validation_only": True,
-            "legacy_result_authoritative": True,
+            "legacy_result_authoritative": (
+                active_plan.execution_authority == "legacy"
+            ),
+            "planner_result_authoritative": (
+                active_plan.execution_authority == "manifest_planner"
+            ),
             "source_authoritative": False,
             "physics_claim_authority": False,
             "ontology_authority": False,

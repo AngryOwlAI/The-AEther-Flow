@@ -182,6 +182,21 @@ class ValidationProfileTests(unittest.TestCase):
             )
         self.assertFalse(resolution.to_dict()["profile_executes_commands"])
 
+    def test_planner_authoritative_profile_reports_executor_authority(self) -> None:
+        manifest = deepcopy(self.manifest)
+        manifest["migration_epoch"] = "planner_authoritative"
+        manifest["execution_authority"] = "manifest_planner"
+        resolution = resolve_profile(
+            manifest,
+            classify_paths(["scripts/validation/profiles.py"]),
+            requested_profile="affected",
+        )
+        self.assertTrue(resolution.to_dict()["profile_executes_commands"])
+        audit = build_membership_audit(manifest)
+        self.assertEqual(audit["execution_authority"], "manifest_planner")
+        self.assertFalse(audit["authority"]["legacy_execution_authoritative"])
+        self.assertTrue(audit["authority"]["planner_execution_authoritative"])
+
     def test_missing_full_blocking_membership_fails_closed(self) -> None:
         manifest = deepcopy(self.manifest)
         gate = next(

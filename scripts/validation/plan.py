@@ -1,8 +1,9 @@
-"""Pure deterministic validation-plan construction for the v19 shadow planner.
+"""Pure deterministic validation-plan construction for the v19 planner.
 
 This module selects and orders declared manifest gates.  It never imports an
-adapter, executes a command, mutates the repository, or changes legacy
-validation authority.
+adapter, executes a command, mutates the repository, or changes validation
+authority.  The manifest's tracked authority determines whether a serialized
+plan authorizes a separate executor to run commands.
 """
 
 from __future__ import annotations
@@ -184,12 +185,23 @@ def _manifest_gates(manifest: Mapping[str, object]) -> tuple[dict[str, object], 
         raise PlannerError("unsupported manifest schema_version")
     if manifest.get("manifest_id") != "validation-gate-manifest-v1":
         raise PlannerError("unsupported manifest_id")
-    if manifest.get("migration_epoch") not in MIGRATION_EPOCHS:
+    migration_epoch = manifest.get("migration_epoch")
+    if migration_epoch not in MIGRATION_EPOCHS:
         raise PlannerError("unsupported migration_epoch")
     if manifest.get("population_status") != "populated":
         raise PlannerError("manifest is not populated")
-    if manifest.get("execution_authority") not in {"legacy", "manifest_planner"}:
+    execution_authority = manifest.get("execution_authority")
+    if execution_authority not in {"legacy", "manifest_planner"}:
         raise PlannerError("unsupported execution_authority")
+    if (
+        execution_authority == "manifest_planner"
+        and migration_epoch not in {"planner_authoritative", "legacy_retired"}
+    ):
+        raise PlannerError(
+            "manifest_planner authority requires planner_authoritative or legacy_retired epoch"
+        )
+    if migration_epoch == "legacy_retired" and execution_authority != "manifest_planner":
+        raise PlannerError("legacy_retired epoch requires manifest_planner authority")
     authority = _exact_object(document["authority"], AUTHORITY_FIELDS, "authority")
     expected_authority = {field: False for field in AUTHORITY_FIELDS}
     expected_authority["operational_validation_only"] = True
@@ -507,7 +519,7 @@ class ValidationPlan:
             "entries": list(self.entries),
             "execution_authority": self.execution_authority,
             "status": self.status,
-            "planner_executes_commands": False,
+            "planner_executes_commands": self.execution_authority == "manifest_planner",
             "authority": {
                 "operational_validation_only": True,
                 "legacy_result_authoritative": self.execution_authority == "legacy",

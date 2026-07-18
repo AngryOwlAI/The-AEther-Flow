@@ -1,0 +1,260 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260718-007-001"
+completion_id: "AJC-AJ-RT-20260718-007-001"
+task_id: "RT-20260718-007"
+decision_id: "DDR-20260718-007"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260718-007"
+status: "completed"
+created_at: "2026-07-18T04:14:30Z"
+started_at: "2026-07-18T04:14:30Z"
+completed_at: "2026-07-18T05:13:50Z"
+objective: "Implement and validate one tracked current-full-profile adapter binding plus internally consistent authority-aware plan profile runner and executor behavior without changing live execution defaults."
+completion_summary: "The bounded P11-T04 repair slice adds a tracked shell-free binding for the canonical current 25-gate full plan and makes plan profile runner and executor authority handling internally consistent. An in-memory planner-authoritative candidate passes all 25 gates while the live manifest Make checkpoint workflows and legacy fallback remain unchanged."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P11-T04"
+  - "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "research_control/design/v19_legacy_validation_invocation_graph.json"
+  - "research_control/tasks/RT-20260718-006/artifacts/planner_cutover_evidence.json"
+outputs_created:
+  - "research_control/design/validation_adapter_bindings_v1.json"
+  - "research_control/tasks/RT-20260718-007/artifacts/validate_planner_execution_binding.py"
+  - "research_control/tasks/RT-20260718-007/artifacts/planner_execution_binding_report.json"
+  - "research_control/tasks/RT-20260718-007/artifacts/planner_execution_binding_validation_receipt.json"
+  - "research_control/tasks/RT-20260718-007/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-007/jobs/completions/AJC-AJ-RT-20260718-007-001.yaml"
+outputs_updated:
+  - "scripts/validation/plan.py"
+  - "scripts/validation/profiles.py"
+  - "scripts/validation/run.py"
+  - "scripts/validation/executor.py"
+  - "scripts/research_control/validate_minimum_physics_payload.py"
+  - "tests/test_validation_planner.py"
+  - "tests/test_validation_profiles.py"
+  - "tests/test_validation_executor.py"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P11-T04"
+  recommendation_ids:
+    - "V19-R38"
+    - "V19-R40"
+    - "V19-R45"
+    - "V19-R48"
+  live_migration_epoch: "shadow_planner"
+  live_execution_authority: "legacy"
+  implementation_status: "repair_slice_completed"
+  downstream_tasks_not_implemented:
+    - "P11-T04 hosted-CI and default-cutover evidence"
+    - "P11-T05 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p11_t04_planner_authoritative_execution_binding_repair"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R38"
+    - "V19-R40"
+    - "V19-R45"
+    - "V19-R48"
+  implements_plan_task_id: "P11-T04"
+  implementation_status: "PASS_BOUNDED_REPAIR_SLICE"
+  coverage_effect: "tracked current-full binding and locally authoritative candidate execution evidence added while hosted-CI and live default cutover remain open"
+physics_progress_status:
+  status: "project_system_execution_binding_repair_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "Adapter binding and validation execution authority are operational project-system evidence and discharge no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Planner execution receipts are not scientific evidence or derivation progress."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+planner_execution_binding:
+  status: "PASS"
+  report_path: "research_control/tasks/RT-20260718-007/artifacts/planner_execution_binding_report.json"
+  validation_receipt_path: "research_control/tasks/RT-20260718-007/artifacts/planner_execution_binding_validation_receipt.json"
+  report_sha256: "9244c94c88c836efc0c2954123d5a487da50213fb11de1afc8da7911f3ecbf15"
+  binding_sha256: "583f1cae9a4a32800feb49d5361256213de66ad37c72f1bb68554beced73546f"
+  candidate_migration_epoch: "planner_authoritative"
+  candidate_execution_authority: "manifest_planner"
+  candidate_in_memory_only: true
+  candidate_gate_count: 25
+  candidate_pass_count: 25
+  candidate_failure_count: 0
+  candidate_skip_count: 0
+  candidate_planner_result_authoritative: true
+  candidate_legacy_result_authoritative: false
+  binding_missing_gate_count: 0
+  static_check_count: 11
+  static_check_pass_count: 11
+  live_migration_epoch: "shadow_planner"
+  live_execution_authority: "legacy"
+  live_planner_executes_commands: false
+  live_manifest_changed: false
+  make_default_changed: false
+  checkpoint_default_changed: false
+  workflow_default_changed: false
+  legacy_fallback_retained: true
+  hosted_ci_current_checkpoint: "PENDING_SEPARATE_PACKET"
+  p11_t05: "BLOCKED"
+  ordinary_research_handoff_preserved: "handoff-0740"
+compatibility_repairs:
+  repo_local_cache_transaction_scope:
+    status: "PASS"
+    summary: "Executor transaction snapshots exclude repo-local .local cache state while continuing to enforce tracked generated outputs."
+  active_job_blank_completion:
+    status: "PASS"
+    summary: "The minimum-physics-payload reader treats blank and non-file completion paths as absent records without changing payload classification."
+validation_evidence:
+  task_local_implementation_status: "PASS"
+  focused_test_count: 62
+  focused_failure_count: 0
+  focused_error_count: 0
+  broader_regression_test_count: 50
+  broader_regression_failure_count: 0
+  authoritative_candidate:
+    status: "PASS"
+    gate_count: 25
+    pass_count: 25
+    failure_count: 0
+    skip_count: 0
+  repository_suite:
+    status: "PASS"
+    test_count: 974
+    skip_count: 1
+    failure_count: 0
+    error_count: 0
+    duration_seconds: "125.818"
+  checkpoint_status: "PENDING"
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260718-007/artifacts/validate_planner_execution_binding.py --write-report --json | exit_code=0 | in-memory manifest_planner candidate 25 of 25 gates PASS"
+  - ".venv/bin/python -m unittest -v tests.test_validation_planner tests.test_validation_profiles tests.test_validation_executor | exit_code=0 | 62 tests PASS in 2.535 seconds"
+  - ".venv/bin/python -m unittest tests.test_validation_equivalence tests.test_checkpoint_validation_planner tests.test_staged_validation tests.test_validation_wrappers tests.test_ci_validation_plan | exit_code=0 | 50 tests PASS in 4.620 seconds"
+  - ".venv/bin/python -m unittest discover -s tests | candidate gate exit_code=0 | 974 tests PASS with one expected skip in 125.818 seconds"
+  - ".venv/bin/python -m unittest -v tests.test_minimum_physics_payload_validator.MinimumPhysicsPayloadValidatorTests.test_live_opt_in_scan_does_not_reclassify_historical_tasks | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS with zero hard failures"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --summary | exit_code=0 | PASS with historical warnings only"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 56 lease parity clean entry tree predecessor checkpoint handoff-0740 preservation and the single invocation were verified before task activation."
+      - "The P11-T04 REPAIR_REQUIRED audit canonical plan migration policy live defaults and active Validator Engineer boundary were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "One tracked binding document covers every gate in the canonical current 25-gate full plan and rejects catalog or aggregate drift."
+      - "Plan profile runner and executor authority fields agree for a planner-authoritative candidate while preserving the exact live legacy pair."
+      - "The local candidate emits planner-authoritative operational receipts with 25 of 25 gates passing."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused planner profile and executor tests pass 62 of 62."
+      - "The candidate repository test shard passes 974 tests with one expected skip."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains required after stable completed-state validation."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and completed-state read-only memory validation pass with only nonblocking local-cache freshness warnings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-surface claim-language validation passes with zero hard failures."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260718-007/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet proves only a bounded local planner-authoritative execution candidate. It does not change the live manifest Make checkpoint skills workflows branch protection cache defaults or legacy fallback; it does not claim hosted-CI PASS P11-T04 completion P11-T05 readiness scientific proof Distance-to-GR progress ontology adoption benchmark promotion a Gate Chair verdict or completed derivation."
+verdict: "v19_p11_t04_execution_binding_repair_pass_live_legacy_retained_hosted_ci_and_cutover_pending_no_physics_delta"
+coherent_resolution_summary: "The missing current-full adapter binding and internally inconsistent candidate authority handling are repaired and locally validated; live defaults remain legacy until a separately bounded hosted-CI and cutover packet supplies the remaining evidence."
+selected_next_route:
+  route_id: "v19_p11_t04_hosted_ci_and_default_cutover_evidence"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P11"
+  plan_task_id: "P11-T04"
+  task_name: "Obtain matched current-checkpoint hosted-CI evidence and decide the live default cutover while preserving rollback"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "planner_authoritative_hosted_ci_and_default_cutover_evidence"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system planner cutover evidence only; no derivation milestone is advanced."
+  requires_human_gate: false
+next_recommendation: "After governed checkpoint PASS route one separately bounded P11-T04 hosted-CI and default-cutover evidence packet; do not execute P11-T05."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "818"
+    relationship_row_count: "4070"
+    semantic_row_count: "818"
+    vault_row_count: "818"
+    local_cache_only_warning_count: "0"
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: false
+    refresh_performed: false
+    before_core_validation_status: "PASS"
+    before_freshness_status: "PASS"
+    before_local_retrieval_status: "PASS"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P11 T04 repair planner authoritative execution binding current head CI receipts --limit 10 --json"
+      query_type: "search"
+      query_text: "P11 T04 repair planner authoritative execution binding current head CI receipts"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ORCHESTRATION-MIGRATION-AND-ROLLBACK-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+      source_hash: "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0"
+  authority_note: "Generated wiki Obsidian SQLite semantic and .local retrieval outputs are navigation layers only and are not authority."
+project_state_transition:
+  previous_task: "P11-T04 evidence audit"
+  completed_task: "P11-T04 execution binding repair slice"
+  next_task: "P11-T04 hosted-CI and default-cutover evidence"
+  generation: 56

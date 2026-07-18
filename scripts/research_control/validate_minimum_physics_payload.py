@@ -452,8 +452,10 @@ def read_csv_rows(repo_root: Path, registry_name: str) -> list[dict[str, str]]:
 
 
 def load_completion(repo_root: Path, path_text: str) -> dict[str, Any]:
+    if not path_text:
+        return {}
     path = repo_root / path_text
-    if not path.exists():
+    if not path.is_file():
         return {}
     try:
         payload = load_yaml(path)

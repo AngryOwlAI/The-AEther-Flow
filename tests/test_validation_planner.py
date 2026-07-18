@@ -163,6 +163,28 @@ class ValidationPlannerTests(unittest.TestCase):
         self.assertEqual(plan.superseded_gate_ids, ())
         self.assertEqual(plan.execution_authority, "legacy")
 
+    def test_planner_authoritative_manifest_authorizes_executor_only(self) -> None:
+        manifest = deepcopy(self.manifest)
+        manifest["migration_epoch"] = "planner_authoritative"
+        manifest["execution_authority"] = "manifest_planner"
+        classification = classify_paths(["scripts/validation/plan.py"])
+        with mock.patch("subprocess.run", side_effect=AssertionError("command executed")):
+            plan = build_plan(manifest, classification, profile="affected")
+        self.assertEqual(plan.execution_authority, "manifest_planner")
+        self.assertTrue(plan.to_dict()["planner_executes_commands"])
+        self.assertFalse(plan.to_dict()["authority"]["legacy_result_authoritative"])
+
+    def test_invalid_manifest_planner_epoch_pair_fails_closed(self) -> None:
+        manifest = deepcopy(self.manifest)
+        manifest["execution_authority"] = "manifest_planner"
+        with self.assertRaisesRegex(PlannerError, "requires planner_authoritative"):
+            build_plan(manifest, classify_paths([]), profile="fast")
+
+        manifest = deepcopy(self.manifest)
+        manifest["migration_epoch"] = "legacy_retired"
+        with self.assertRaisesRegex(PlannerError, "requires manifest_planner"):
+            build_plan(manifest, classify_paths([]), profile="fast")
+
     def test_cycle_fails_closed(self) -> None:
         manifest = deepcopy(self.manifest)
         first = manifest["gates"][0]
