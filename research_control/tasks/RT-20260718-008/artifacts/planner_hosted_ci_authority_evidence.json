@@ -1,0 +1,62 @@
+{
+  "schema_version": "v19_p11_t04_hosted_ci_authority_evidence_v1",
+  "task_id": "RT-20260718-008",
+  "job_id": "AJ-RT-20260718-008-001",
+  "observed_at": "2026-07-18T05:46:18Z",
+  "route": {
+    "plan_id": "recommendations_implementation_plan_continue_task-v19",
+    "plan_task_id": "P11-T04",
+    "route_id": "v19_p11_t04_hosted_ci_and_default_cutover_evidence",
+    "predecessor_task_id": "RT-20260718-007"
+  },
+  "repository": {
+    "branch": "codex/v19-remaining-relay",
+    "local_checkpoint_sha": "52af94b88c8fbe799af45dd0d97f2f5ae801a823",
+    "origin_url": "git@github-omegapy:AngryOwlAI/The-AEther-Flow.git",
+    "upstream_configured": false,
+    "origin_branch_exists": false,
+    "origin_branch_sha": null,
+    "worktree_clean_at_entry": true
+  },
+  "hosted_ci": {
+    "query_checkpoint_sha": "52af94b88c8fbe799af45dd0d97f2f5ae801a823",
+    "github_actions_runs": [],
+    "matched_current_checkpoint_run_count": 0,
+    "scheduled_full_current_checkpoint_run_count": 0,
+    "official_ci_evidence_status": "ABSENT"
+  },
+  "live_authority": {
+    "manifest_id": "validation-gate-manifest-v1",
+    "migration_epoch": "shadow_planner",
+    "execution_authority": "legacy",
+    "planner_authoritative": false,
+    "legacy_fallback_retained": true
+  },
+  "authority": {
+    "push_authority_present_in_invocation": false,
+    "push_performed": false,
+    "hosted_workflow_dispatch_performed": false,
+    "branch_protection_mutated": false,
+    "live_defaults_mutated": false,
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  },
+  "source_hashes": {
+    "implementation_plan_sha256": "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc",
+    "migration_policy_sha256": "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0",
+    "live_manifest_sha256": "0e757d206b2529a00a2e60cc2b725ab4b10188321a14c75e885cce429de23842",
+    "adapter_bindings_sha256": "583f1cae9a4a32800feb49d5361256213de66ad37c72f1bb68554beced73546f",
+    "project_control_workflow_sha256": "6529469894198a7edb5eb3003d56d150859ec5be9bbf1781b416df26ad475eab",
+    "scheduled_full_workflow_sha256": "3e6730babc97077555956d48a6995fa6ab5c17ea94928eac62b558aa9d0c04c5",
+    "predecessor_completion_sha256": "b6f2748af6802e93c575b7f203ee68f8804c8d003a90cf8edd4d0e2fa9eaf6fd"
+  },
+  "decision": {
+    "status": "BLOCKED_EXTERNAL_PUBLICATION_AUTHORITY",
+    "cutover_authorized": false,
+    "p11_t04_completed": false,
+    "p11_t05_dependency_ready": false,
+    "blocking_invariant": "The exact repaired checkpoint is not available on origin and therefore has no matched hosted-CI or scheduled-full evidence. Publishing or dispatching it requires explicit authority not present in this invocation.",
+    "required_next_authority": "Explicit user authorization to push codex/v19-remaining-relay and run or observe hosted CI for the resulting exact remote checkpoint."
+  }
+}

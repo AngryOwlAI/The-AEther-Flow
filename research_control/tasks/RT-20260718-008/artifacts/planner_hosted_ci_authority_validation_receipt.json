@@ -1,0 +1,32 @@
+{
+  "schema_version": "v19_p11_t04_hosted_ci_authority_validation_receipt_v1",
+  "task_id": "RT-20260718-008",
+  "job_id": "AJ-RT-20260718-008-001",
+  "created_at": "2026-07-18T05:46:18Z",
+  "status": "PASS",
+  "audit_decision": "BLOCKED_EXTERNAL_PUBLICATION_AUTHORITY",
+  "checks": {
+    "evidence_json_valid": true,
+    "validator_syntax_valid": true,
+    "recorded_checkpoint_exists_locally": true,
+    "origin_branch_exists": false,
+    "matched_hosted_run_count": 0,
+    "live_migration_epoch": "shadow_planner",
+    "live_execution_authority": "legacy",
+    "source_hashes_match": true,
+    "push_performed": false,
+    "hosted_workflow_dispatch_performed": false,
+    "live_defaults_mutated": false,
+    "scientific_claims_changed": false,
+    "cutover_authorized": false,
+    "p11_t05_dependency_ready": false
+  },
+  "artifact_hashes": {
+    "evidence_sha256": "ad5eea123cd5d1601008921adb4074a984630a0ac6db3e85380f3d4efad6814e",
+    "validator_sha256": "5160c94f06e02cdb3aca7c8f9ef939d3b9e37842251f7f419781b4f2270cd653",
+    "decision_sha256": "f51a91d7b83d0c35b87446077019781596f06d6ba7fe99412e3fc090122715a4"
+  },
+  "validator_command": ".venv/bin/python research_control/tasks/RT-20260718-008/artifacts/validate_planner_hosted_ci_authority.py",
+  "validator_exit_code": 0,
+  "no_physics_authority": true
+}

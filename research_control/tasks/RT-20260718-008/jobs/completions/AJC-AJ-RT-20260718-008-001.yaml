@@ -1,0 +1,229 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260718-008-001"
+completion_id: "AJC-AJ-RT-20260718-008-001"
+task_id: "RT-20260718-008"
+decision_id: "DDR-20260718-008"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260718-008"
+status: "completed"
+created_at: "2026-07-18T05:46:18Z"
+started_at: "2026-07-18T05:46:18Z"
+completed_at: "2026-07-18T05:46:18Z"
+objective: "Audit the exact repaired checkpoint for the remote branch and hosted-CI evidence required before planner-authoritative default cutover."
+completion_summary: "The exact repaired checkpoint exists only locally: the branch has no upstream or origin ref and GitHub Actions has no run for the checkpoint. The audit therefore passes with a substantive BLOCKED_EXTERNAL_PUBLICATION_AUTHORITY decision; live legacy authority is retained and P11-T05 remains blocked."
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v19.md#P11-T04"
+  - "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+  - "research_control/design/validation_gate_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260718-007/jobs/completions/AJC-AJ-RT-20260718-007-001.yaml"
+outputs_created:
+  - "research_control/tasks/RT-20260718-008/artifacts/planner_hosted_ci_authority_evidence.json"
+  - "research_control/tasks/RT-20260718-008/artifacts/planner_hosted_ci_authority_decision.md"
+  - "research_control/tasks/RT-20260718-008/artifacts/validate_planner_hosted_ci_authority.py"
+  - "research_control/tasks/RT-20260718-008/artifacts/planner_hosted_ci_authority_validation_receipt.json"
+  - "research_control/tasks/RT-20260718-008/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-008/jobs/completions/AJC-AJ-RT-20260718-008-001.yaml"
+outputs_updated:
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_task_id: "P11-T04"
+  recommendation_ids:
+    - "V19-R38"
+    - "V19-R40"
+    - "V19-R45"
+    - "V19-R48"
+  live_migration_epoch: "shadow_planner"
+  live_execution_authority: "legacy"
+  implementation_status: "blocked_external_publication_authority"
+  downstream_tasks_not_implemented:
+    - "P11-T04 planner-authoritative default cutover"
+    - "P11-T05 through P12-T07"
+project_system_change_only: true
+project_system_scope: "v19_p11_t04_hosted_ci_authority_evidence"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v19"
+  source_recommendation_ids:
+    - "V19-R38"
+    - "V19-R40"
+    - "V19-R45"
+    - "V19-R48"
+  implements_plan_task_id: "P11-T04"
+  implementation_status: "BLOCKED_EXTERNAL_PUBLICATION_AUTHORITY"
+  coverage_effect: "exact-checkpoint hosted-CI precondition audited; cutover and P11-T04 completion remain open"
+physics_progress_status:
+  status: "project_system_hosted_ci_authority_audit_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "Remote publication and hosted-CI metadata are operational evidence and discharge no physics burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Hosted-CI availability is not scientific evidence or derivation progress."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+hosted_ci_authority_evidence:
+  status: "PASS"
+  substantive_decision: "BLOCKED_EXTERNAL_PUBLICATION_AUTHORITY"
+  checkpoint_sha: "52af94b88c8fbe799af45dd0d97f2f5ae801a823"
+  branch: "codex/v19-remaining-relay"
+  upstream_configured: false
+  origin_branch_exists: false
+  matched_hosted_run_count: 0
+  live_migration_epoch: "shadow_planner"
+  live_execution_authority: "legacy"
+  push_performed: false
+  hosted_workflow_dispatch_performed: false
+  live_defaults_mutated: false
+  legacy_fallback_retained: true
+  cutover_authorized: false
+  p11_t04_completed: false
+  p11_t05: "BLOCKED"
+  evidence_path: "research_control/tasks/RT-20260718-008/artifacts/planner_hosted_ci_authority_evidence.json"
+  validation_receipt_path: "research_control/tasks/RT-20260718-008/artifacts/planner_hosted_ci_authority_validation_receipt.json"
+  evidence_sha256: "ad5eea123cd5d1601008921adb4074a984630a0ac6db3e85380f3d4efad6814e"
+validation_evidence:
+  task_local_audit_status: "PASS"
+  exact_checkpoint_identity: "PASS"
+  origin_branch_absence: "PASS"
+  hosted_run_absence: "PASS"
+  live_legacy_authority_guard: "PASS"
+  source_hash_integrity: "PASS"
+  forbidden_authority_guard: "PASS"
+  checkpoint_status: "PENDING"
+command_results:
+  - "git rev-parse HEAD and git branch --show-current | exit_code=0 | exact checkpoint and branch observed"
+  - "git rev-parse --abbrev-ref --symbolic-full-name @{upstream} | exit_code=128 | no upstream configured"
+  - "git ls-remote --heads origin codex/v19-remaining-relay | exit_code=0 | empty result"
+  - "gh run list --commit 52af94b88c8fbe799af45dd0d97f2f5ae801a823 --json ... --limit 100 | exit_code=0 | empty result"
+  - ".venv/bin/python research_control/tasks/RT-20260718-008/artifacts/validate_planner_hosted_ci_authority.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260718-008/artifacts/validate_planner_hosted_ci_authority.py | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS before governed staged-index synchronization"
+  - "first governed checkpoint attempt | blocked before commit | staged classifier exposed generated_derivative_changed for FOLDER_MAP.md; receipt reconciled without scope expansion"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 57 lease parity clean entry tree predecessor completion and the single invocation were verified before task activation."
+      - "The canonical plan migration policy live manifest workflows predecessor completion and selected Validator Engineer route were inspected before the first write."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact local checkpoint has no origin branch and no hosted run."
+      - "The live authority pair remains shadow_planner and legacy."
+      - "The authority guard rejects push dispatch cutover downstream or scientific overstatement."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local Python syntax JSON syntax and semantic evidence validation pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains required after stable completed-state validation."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or rendered scientific artifact changed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap passes; the governed checkpoint remains responsible for final staged-index derivative synchronization."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-surface claim-language validation passes with zero hard failures."
+authorization_layers:
+  push_authorized: false
+  hosted_workflow_dispatch_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260718-008/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+forbidden_conclusion_summary: "This packet does not claim hosted-CI failure or PASS live cutover P11-T04 completion P11-T05 readiness scientific proof Distance-to-GR progress ontology adoption benchmark promotion a Gate Chair verdict or completed derivation. It performs no push workflow dispatch branch-protection change or live default mutation."
+verdict: "v19_p11_t04_blocked_external_publication_authority_live_legacy_retained_p11_t05_blocked_no_physics_delta"
+coherent_resolution_summary: "The required hosted evidence is absent because the repaired checkpoint is local-only. Legacy authority remains correct until separately authorized publication makes matched hosted evidence possible."
+selected_next_route:
+  route_id: "await_explicit_publication_authority_for_v19_p11_t04"
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  phase_id: "P11"
+  plan_task_id: "P11-T04"
+  task_name: "After explicit user authorization publish the exact branch checkpoint and obtain matched hosted-CI evidence before reconsidering cutover"
+  role_family: "validator-engineer@0.2.0"
+  task_type: "planner_authoritative_hosted_ci_and_default_cutover_evidence"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system planner cutover evidence only; no derivation milestone is advanced."
+  requires_human_gate: true
+next_recommendation: "Stop the recursive relay and await explicit user authority to push the branch; do not create a successor or execute P11-T05."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "818"
+    relationship_row_count: "4070"
+    semantic_row_count: "818"
+    vault_row_count: "818"
+    local_cache_only_warning_count: "0"
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P11 T04 hosted CI default cutover evidence planner authoritative --limit 10 --json"
+      query_type: "search"
+      query_text: "P11 T04 hosted CI default cutover evidence planner authoritative"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+      source_hash: "a28c02150d17f3c39cf919fa305d585cbe1ea7a022dd81320fa2cb72c8126ebc"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ORCHESTRATION-MIGRATION-AND-ROLLBACK-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/validation_orchestration_migration_and_rollback_policy_v1.md"
+      source_hash: "54f0103a73fe0239b43d2d014ef31075d3115b7572c00fd9adb03a1362eea7e0"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "01dbb3767729ced599467306d28b92ab7f4b5cb3c50d68932b999294eb86d800"
+  authority_note: "Generated wiki Obsidian SQLite semantic and .local retrieval outputs are navigation layers only and are not authority."
+project_state_transition:
+  previous_task: "P11-T04 execution binding repair slice"
+  completed_task: "P11-T04 hosted-CI authority precondition audit"
+  next_task: "P11-T04 hosted-CI evidence after explicit publication authority"
+  generation: 57

@@ -1,0 +1,42 @@
+task_id: "RT-20260718-008"
+task_type: "planner_authoritative_hosted_ci_and_default_cutover_evidence"
+status: "completed"
+created_at: "2026-07-18T05:46:18Z"
+updated_at: "2026-07-18T05:46:18Z"
+closed_at: "2026-07-18T05:46:18Z"
+closure_status: "v19_p11_t04_blocked_external_publication_authority_live_legacy_retained_p11_t05_blocked_no_physics_delta"
+parent_task_id: "RT-20260718-007"
+parent_handoff_id: "handoff-0740"
+current_decision_id: "DDR-20260718-008"
+current_job_id: "AJ-RT-20260718-008-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260718-008"
+requires_human_gate: false
+human_authorization_note: "This packet may audit publication and hosted-CI preconditions but may not push or dispatch a hosted workflow without separate explicit user authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v19"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v19.md"
+  plan_phase_id: "P11"
+  plan_task_id: "P11-T04"
+  plan_task_name: "Run authoritative shadow comparison and cut over to planner orchestration"
+  recommendation_ids:
+    - "V19-R38"
+    - "V19-R40"
+    - "V19-R45"
+    - "V19-R48"
+objective: "Determine whether the exact repaired P11-T04 checkpoint has the hosted-CI evidence required for live default cutover, without publishing, dispatching, or changing authority."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system hosted-CI authority evidence only; no derivation milestone is advanced."
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V19-P11-T04-HOSTED-CI-AUTHORITY-001"
+claim_boundary:
+  allowed_scope: "P11-T04 read-only origin and GitHub Actions evidence exact checkpoint identity live-authority inspection task-local audit records registry rows and generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0740"
+  ordinary_research_route_preserved: "EqSrc_family_closure_repair_or_stress"
+  sidecar_supersedes_research_handoff: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+next_recommended_action: "Await explicit user authority to publish the exact branch checkpoint; only then obtain matched hosted-CI and scheduled-full evidence before reconsidering P11-T04 cutover. P11-T05 remains blocked."
+notes: "The evidence packet completed successfully with a substantive BLOCKED_EXTERNAL_PUBLICATION_AUTHORITY result; no live default or scientific surface changed."
