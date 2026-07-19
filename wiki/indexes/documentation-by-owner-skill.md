@@ -574,6 +574,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-028-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-028-parent-fusion-notes-eqsrc-intrinsic-discriminator-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-029-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V2-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-029-eqsrc-intrinsic-discriminator-admissibility-law-candidate-v2-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-029-PARENT-FUSION-NOTES-EQSRC-RELATION-LABEL-SCOPE-REPAIR` `wiki/markdown/md-research-control-tasks-rt-20260718-029-parent-fusion-notes-eqsrc-relation-label-scope-repair.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-030-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V2-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-030-eqsrc-intrinsic-discriminator-admissibility-law-v2-smuggling-audit-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-030-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-V2-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-030-parent-fusion-notes-eqsrc-intrinsic-discriminator-v2-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -939,6 +941,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-028-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-028/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-029-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V2-RECEIPT` `research_control/tasks/RT-20260718-029/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v2_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-029-PARENT-FUSION-NOTES-EQSRC-RELATION-LABEL-SCOPE-REPAIR` `research_control/tasks/RT-20260718-029/artifacts/parent_fusion_notes_eqsrc_relation_label_scope_repair.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-030-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V2-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260718-030/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v2_smuggling_audit_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-030-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-030/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_v2_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

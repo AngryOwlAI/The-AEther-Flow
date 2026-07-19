@@ -1,0 +1,98 @@
+artifact_id: "child_phys_math_eqsrc_intrinsic_discriminator_v2_smuggling_audit"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-030"
+job_id: "AJ-RT-20260718-030-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_name: "EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v2"
+candidate_path: "research_control/tasks/RT-20260718-029/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v2.tex"
+candidate_hash: "ecae76fc40f30945e9c2e5486481f13f3f50790a8ebb9223da4924d607faa7c4"
+authority_boundary: "Audit only. No candidate repair, Refuter stress, source-law adoption, canonical-ontology edit, physical-admissibility claim, or promotion."
+
+exact_classification: "source_pure_as_written_with_precise_repairable_chain_map_reflection_scope_obstruction"
+recommendation: "one_bounded_proposal_only_ontology_formalizer_cross_complex_typing_and_reflection_scope_repair_before_fresh_audit"
+
+overall_assessment:
+  declaration_closure: "formal_core_closes_relative_to_a_supplied_finite_chain_package"
+  target_or_process_import: "not_detected_as_written"
+  source_extension_classification: "new_ontology_primitive_candidate"
+  physical_admissibility: "not_established"
+  quotient_factorization: "correct_for_self_maps_under_the_displayed_hypotheses"
+  translation_classification: "correct"
+  linear_stabilizer: "correct"
+  chain_map_naturality: "forward_preservation_correct_cross_complex_predicates_not_typed"
+  reflection_scope: "candidate_fail_closed_rule_is_too_strong"
+  adoption_status: "blocked_adoption_open_continuation"
+  distance_to_gr_delta: false
+
+dependency_findings:
+  - "A_E, B_E, K_E, chi_E, and EqCand_E are conservative definitions after E and its differentials are supplied."
+  - "Current ontology does not derive the chain-package family, select its differentials, or establish boundary translations as physically admissible variations."
+  - "AdmVar(E) and EqCand_E share partial_2 as a transparent root; formal non-reference does not establish independent physical selection."
+  - "RelPres and RelAut are defined only for endomaps A_E->A_E, but the naturality proposition applies F_1:A_E->A_E' without a typed two-complex relation predicate."
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-030-MATH-001"
+    payload_type: "theorem"
+    name: "cross_complex_chain_map_relation_criterion"
+    statement: "For a chain map F:E->E', F_1 preserves the kernel-pair relation because F_1(B_E) is contained in B_E'. It reflects the relation exactly when the induced map H_1(F):K_E->K_E' is injective."
+    proof: "The naturality factorization chi_E' F_1=H_1(F) chi_E gives preservation. Equality of the two image quotient values implies equality of the input quotient values exactly when H_1(F) is injective."
+    implication: "Chain-map invertibility is sufficient for reflection but is not necessary."
+    claim_status: "draft/control"
+
+  - payload_id: "NMP-RT-20260718-030-MATH-002"
+    payload_type: "counterexample"
+    name: "noninvertible_chain_map_with_reflecting_homology"
+    statement: "Let C2=F2<f>, C1=F2<a,b>, C0=0, d2(f)=a. Define F2=0, F1(a)=0, and F1(b)=b. Then F is a noninvertible self-chain-map whose induced H1 map is the identity."
+    exact_counts:
+      source_states: 4
+      quotient_classes: 2
+      ordered_pair_relation_checks: 16
+      relation_mismatches: 0
+    consequence: "The candidate fail-closed item rejecting reflection for every noninvertible chain map contradicts its own correct factorization theorem."
+    claim_status: "draft/control"
+
+  - payload_id: "NMP-RT-20260718-030-MATH-003"
+    payload_type: "finite_census"
+    name: "E_star_linear_endomorphism_census"
+    statement: "Among all 512 linear endomorphisms of F2^3, 128 preserve the kernel-pair relation, 168 are invertible, and 24 are invertible relation automorphisms."
+    witness_checks:
+      e2_label_changes: 8
+      e2_relation_mismatches: 0
+      ambient_L_relation_mismatches: 16
+    claim_status: "draft/control"
+
+  - payload_id: "NMP-RT-20260718-030-MATH-004"
+    payload_type: "counting_formula"
+    name: "invertible_linear_relation_mismatch_count"
+    statement: "For A=F_q^n, a k-dimensional B, invertible L, and r=dim(B intersect L^-1(B)), the number of ordered-pair relation mismatches is 2 q^n (q^k-q^r)."
+    specialization: "For E_star and the displayed L, q=2, n=3, k=1, r=0, so the mismatch count is 16."
+    claim_status: "draft/control"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-EQSRC-INTRINSIC-DISCRIMINATOR-CHAIN-MAP-REFLECTION-001"
+  scope: "source_extension_candidate"
+  failed_object: "fail_closed_noninvertible_chain_map_reflection_rule_and_cross_complex_predicate_typing"
+  exact_failure: "The candidate correctly characterizes reflection by injectivity of an induced quotient map, but later treats invertibility of the entire chain map as necessary. It also applies endomap-only relation predicates across different chain packages without typing them."
+  consequence: "repair_candidate_allowed"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  forbidden_overread: "This internal scope obstruction does not refute the quotient construction, prove target import, establish future source-extension impossibility, or reject the theory globally."
+
+scope_guards:
+  naturality: "Homology functoriality is correct after typed chain packages and chain maps are supplied; it is not physical covariance."
+  primitive_selection: "The supplied differential jointly determines the quotient kernel and boundary moves; no independent physical selection theorem is present."
+  finite_generalization: "The finite theorems and census do not establish physical admissibility, ontology-wide applicability, infinite-system robustness, or general EqSrc."
+  promotion: "No source-law adoption RetainH GenH M_src g_eff matter coupling Einstein equations benchmark promotion or completed derivation."
+
+next_packet_recommendation:
+  role_family: "ontology-formalizer@0.2.0"
+  route_label: "ontology-law-research-packet"
+  packet_count: 1
+  objective: "Define typed cross-complex relation preservation and reflection, replace the noninvertibility fail-closed rule with injectivity of the induced H1 map, and retain chain isomorphism as sufficient rather than necessary."
+  fresh_audit_required_after_repair: true
+  refuter_stress_ready_now: false
+  adoption_requested: false
+  recommendation_only_not_executed: true

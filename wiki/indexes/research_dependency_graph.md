@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T16:24:28Z`
-- Source fingerprint: `29d191439d04ffaeebd89544c6023dccae87ad03a80e369df7a2c83b37723474`
-- Nodes: `19292`
-- Edges: `66857`
+- Generated from tracked state as of: `2026-07-19T17:07:26Z`
+- Source fingerprint: `69b6c90d05281121057bd0efb19172069231e5885ec0ee656c2a1a2d81ebc459`
+- Nodes: `19323`
+- Edges: `66930`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 983 |
+| `completion_yaml` | 984 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 754 |
+| `handoff_yaml` | 755 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 983 |
+| `agent_job` | `support_only` | 984 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10111 |
+| `artifact` | `support_only` | 10130 |
 | `blocked_burden` | `blocked` | 3662 |
-| `claim_boundary` | `support_only` | 940 |
-| `draft_control_candidate` | `draft_control` | 572 |
-| `draft_control_candidate` | `proposal_only` | 85 |
+| `claim_boundary` | `support_only` | 941 |
+| `draft_control_candidate` | `draft_control` | 577 |
+| `draft_control_candidate` | `proposal_only` | 86 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 110 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 754 |
+| `handoff` | `support_only` | 755 |
 | `human_gated_object` | `human_gated` | 421 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 69 |
+| `obstruction` | `blocked` | 70 |
 | `obstruction` | `rejected` | 1 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 304 |
+| `source_ontology_object` | `support_only` | 305 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 923 |
+| `task` | `support_only` | 924 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-029`
-- Latest handoff: `handoff-0754`
-- Handoff path: `research_control/handoffs/handoff-0754.yaml`
-- Next action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact proposal-only v2 for label-relation semantics, induced codomain relabeling, ambient L witness scope, shared-differential primitive selection, target or process import, physical-admissibility and covariance overread, conditional theorem scope, and finite generalization. Do not repair adopt stress or promote the candidate.
+- Active task: `RT-20260718-030`
+- Latest handoff: `handoff-0755`
+- Handoff path: `research_control/handoffs/handoff-0755.yaml`
+- Next action: Run one bounded Ontology Formalizer ontology-law-research-packet to define typed cross-complex relation preservation and reflection replace whole-chain invertibility with induced-H1 injectivity retain chain isomorphism as sufficient rather than necessary and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

@@ -84,6 +84,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex`
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V2` `research_control/tasks/RT-20260718-029/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v2.tex`
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-028/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_smuggling_audit.tex`
+- `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-030/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v2_smuggling_audit.tex`
 - `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1` `research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex`
 - `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS` `research_control/tasks/RT-20260718-025/artifacts/eqsrc_source_rooted_quotient_selector_refuter_stress.tex`
 - `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-024/artifacts/eqsrc_source_rooted_quotient_selector_smuggling_audit.tex`
@@ -915,6 +916,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-028-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-028-parent-fusion-notes-eqsrc-intrinsic-discriminator-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-029-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V2-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-029-eqsrc-intrinsic-discriminator-admissibility-law-candidate-v2-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-029-PARENT-FUSION-NOTES-EQSRC-RELATION-LABEL-SCOPE-REPAIR` `wiki/markdown/md-research-control-tasks-rt-20260718-029-parent-fusion-notes-eqsrc-relation-label-scope-repair.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-030-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V2-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-030-eqsrc-intrinsic-discriminator-admissibility-law-v2-smuggling-audit-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-030-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-V2-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-030-parent-fusion-notes-eqsrc-intrinsic-discriminator-v2-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1012,6 +1015,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V1` `wiki/tex/tex-eqsrc-intrinsic-discriminator-admissibility-law-candidate-v1.md`
 - `WIKI-TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V2` `wiki/tex/tex-eqsrc-intrinsic-discriminator-admissibility-law-candidate-v2.md`
 - `WIKI-TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-SMUGGLING-AUDIT` `wiki/tex/tex-eqsrc-intrinsic-discriminator-admissibility-law-smuggling-audit.md`
+- `WIKI-TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V2-SMUGGLING-AUDIT` `wiki/tex/tex-eqsrc-intrinsic-discriminator-admissibility-law-v2-smuggling-audit.md`
 - `WIKI-TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1` `wiki/tex/tex-eqsrc-source-rooted-quotient-selector-candidate-v1.md`
 - `WIKI-TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS` `wiki/tex/tex-eqsrc-source-rooted-quotient-selector-refuter-stress.md`
 - `WIKI-TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-SMUGGLING-AUDIT` `wiki/tex/tex-eqsrc-source-rooted-quotient-selector-smuggling-audit.md`
@@ -1680,6 +1684,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-028-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-028/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-029-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V2-RECEIPT` `research_control/tasks/RT-20260718-029/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v2_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-029-PARENT-FUSION-NOTES-EQSRC-RELATION-LABEL-SCOPE-REPAIR` `research_control/tasks/RT-20260718-029/artifacts/parent_fusion_notes_eqsrc_relation_label_scope_repair.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-030-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V2-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260718-030/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v2_smuggling_audit_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-030-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-030/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_v2_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
