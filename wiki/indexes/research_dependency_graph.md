@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T15:40:45Z`
-- Source fingerprint: `0033860ca23866b540545fc0affcaf45131167a2b61505c8a44a1439bc8c0a78`
-- Nodes: `19265`
-- Edges: `66792`
+- Generated from tracked state as of: `2026-07-19T16:24:28Z`
+- Source fingerprint: `29d191439d04ffaeebd89544c6023dccae87ad03a80e369df7a2c83b37723474`
+- Nodes: `19292`
+- Edges: `66857`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 982 |
+| `completion_yaml` | 983 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 753 |
+| `handoff_yaml` | 754 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 982 |
+| `agent_job` | `support_only` | 983 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10097 |
-| `blocked_burden` | `blocked` | 3660 |
-| `claim_boundary` | `support_only` | 939 |
-| `draft_control_candidate` | `draft_control` | 568 |
-| `draft_control_candidate` | `proposal_only` | 83 |
+| `artifact` | `support_only` | 10111 |
+| `blocked_burden` | `blocked` | 3662 |
+| `claim_boundary` | `support_only` | 940 |
+| `draft_control_candidate` | `draft_control` | 572 |
+| `draft_control_candidate` | `proposal_only` | 85 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 110 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 753 |
+| `handoff` | `support_only` | 754 |
 | `human_gated_object` | `human_gated` | 421 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 303 |
+| `source_ontology_object` | `support_only` | 304 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 922 |
+| `task` | `support_only` | 923 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-028`
-- Latest handoff: `handoff-0753`
-- Handoff path: `research_control/handoffs/handoff-0753.yaml`
-- Next action: Run one bounded Ontology Formalizer ontology-law-research-packet to distinguish pointwise discriminator-value stability from kernel-pair relation preservation, correct or replace the e2-translation sharpness witness, and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate.
+- Active task: `RT-20260718-029`
+- Latest handoff: `handoff-0754`
+- Handoff path: `research_control/handoffs/handoff-0754.yaml`
+- Next action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact proposal-only v2 for label-relation semantics, induced codomain relabeling, ambient L witness scope, shared-differential primitive selection, target or process import, physical-admissibility and covariance overread, conditional theorem scope, and finite generalization. Do not repair adopt stress or promote the candidate.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

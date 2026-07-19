@@ -1,0 +1,96 @@
+artifact_id: "child_phys_math_eqsrc_relation_label_scope_repair"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-029"
+job_id: "AJ-RT-20260718-029-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_name: "EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v2"
+authority_boundary: "Proposal-only scope repair. No audit verdict Refuter stress source-law adoption canonical-ontology edit physical-admissibility claim or promotion."
+
+recommended_result: "candidate_repaired_pending_fresh_smuggling_audit"
+obstruction_disposition: "claimed_repaired_at_scope_level_pending_fresh_audit"
+source_extension_classification: "new_ontology_primitive_candidate"
+adoption_status: "blocked_adoption_open_continuation"
+physical_admissibility_established: false
+distance_to_gr_changed: false
+
+formal_setup:
+  source_state_space: "A=Z1(E)"
+  boundary_subgroup: "B=B1(E)"
+  quotient: "K=A/B"
+  discriminator: "chi:A->K"
+  candidate_relation: "z~z' iff z-z' is in B"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-029-MATH-001"
+    payload_type: "theorem"
+    name: "quotient_factorization_separation"
+    statement: "For V:A->A relation preservation is equivalent to a unique induced map bar_V:K->K with chi V=bar_V chi. Relation reflection is injectivity of bar_V, while pointwise label fixing is bar_V=id_K."
+    proof: "Define bar_V([z])=[Vz]; relation preservation gives well-definedness and quotient surjectivity gives uniqueness. Conversely factorization maps equal input classes to equal output classes. Reflection is exactly injectivity of the induced map."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-029-MATH-002"
+    payload_type: "theorem"
+    name: "exact_translation_classification"
+    statement: "For tau_c(z)=z+c, chi(tau_c z)=chi(z)+[c]. LabelFix holds exactly for c in B, but every translation is a relation automorphism with induced quotient permutation q->q+[c]."
+    proof: "Pointwise fixing is equivalent to [c]=0. Pairwise differences cancel c, so the kernel-pair relation is preserved and reflected."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-029-MATH-003"
+    payload_type: "theorem"
+    name: "linear_relation_stabilizer_criterion"
+    statement: "For linear L:A->A relation preservation is equivalent to L(B) subseteq B. For invertible L relation automorphism is equivalent to L(B)=B."
+    proof: "Apply preservation to b~0 for necessity; linearity gives sufficiency. For invertible L reflection yields the reverse inclusion."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-029-MATH-004"
+    payload_type: "explicit_witness"
+    name: "ambient_linear_relation_changing_witness"
+    statement: "On E_star let L(e0)=e0, L(e1)=e0+e2, L(e2)=e1. The images form a basis, but L(e0+e1)=e2 is outside B, so L changes the kernel-pair relation."
+    scope: "ambient_invertible_linear_source_state_map_outside_boundary_moves_and_chain_maps"
+    claim_status: "draft/control"
+
+e2_reclassification:
+  map: "tau_e2"
+  typed_domain: "Z1(E_star)->Z1(E_star)"
+  in_AdmVar: false
+  pointwise_discriminator_values_changed: 8
+  kernel_pair_ordered_pair_checks: 64
+  kernel_pair_relation_mismatches: 0
+  relation_status: "automorphism"
+  induced_quotient_map: "[z]->[z]+[e2]"
+  sharpness_supported: "pointwise_value_fixing_only"
+  relation_fragility_supported: false
+
+finite_validation_invariants:
+  state_count: 8
+  boundary_count: 2
+  quotient_class_count: 4
+  class_size: 2
+  translation_count: 8
+  translation_pointwise_checks: 64
+  boundary_translation_pointwise_matches: 16
+  nonboundary_translation_pointwise_changes: 48
+  translation_relation_pair_checks: 512
+  translation_relation_mismatches: 0
+  e2_pointwise_changes: 8
+  e2_relation_pair_checks: 64
+  e2_relation_mismatches: 0
+  L_unique_outputs: 8
+  L_relation_mismatches: 16
+  L_true_to_false_mismatches: 8
+  L_false_to_true_mismatches: 8
+  L_pointwise_quotient_fixes: 2
+  AdmVar_distinct_maps: 2
+
+surviving_results:
+  - "Typed chain maps preserve relatedness; chain isomorphisms preserve and reflect it."
+  - "Boundary translations fix quotient values pointwise and therefore preserve the relation."
+  - "Quotient uniqueness remains conditional on surjectivity and exact kernel-pair equality."
+  - "Definition-order nonreference remains formal and does not establish independent physical selection."
+
+scope_guards:
+  - "L is not a boundary move."
+  - "L is not an admitted chain map because it does not preserve B."
+  - "L is not established as physically admissible."
+  - "e2 is not relation-changing."
+  - "The chain package differential homology discriminator and physical variation class remain underived."
+  - "A fresh Smuggling Auditor review is required before Refuter stress."
