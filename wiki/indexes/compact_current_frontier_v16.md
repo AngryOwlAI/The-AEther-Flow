@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-033`
-- Latest handoff: `handoff-0758`
-- Current status: `eqsrc_intrinsic_discriminator_admissibility_law_v3_scoped_differential_selection_obstruction_pending_theoretical_selection_no_adoption`
+- Active task: `RT-20260718-034`
+- Latest handoff: `handoff-0759`
+- Current status: `eqsrc_cycle_boundary_selector_law_formalization_selected_exact_v3_cycle_locally_frozen_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-033`
-- Latest research handoff: `handoff-0758`
-- Latest research next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among a source-side chain-package or differential selector primitive, a source-side irrelevance theorem proving EqSrc independent of chain-package choice, a distinct scoped no-go question, or local freeze of exact v3. Do not repeat v3 construction, audit, or stress.
+- Latest research task: `RT-20260718-034`
+- Latest research handoff: `handoff-0759`
+- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1 with source-only domains and maps, naturality and automorphism equivariance, fixed-carrier discrimination, a nondegenerate finite witness or precise obstruction, relation-level uniqueness, noncircular independent variations, conditional robustness, and tagged fail-closed branches.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_intrinsic_discriminator_v3_post_obstruction_theoretical_selection`
-- Role family: `theoretical-continuation-selector@0.1.0`
+- Route ID: `eqsrc_cycle_boundary_selector_law_formalization`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Select the next same-milestone packet after exact v3's scoped differential-selection and independent-admissibility obstruction.
+- Milestone burden: Define a proposal-only source-local selector of quotient-relevant cycle-boundary data with new witness and theorem payload or return a precise obstruction.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `9b1c738a1b859b627eb22849febc80997a49ccad0b7d927721d80627747511bb`
-- JSON SHA-256: `119d42c7930f126b0a242735b707b1fe5bc1a4c73b0337d12dc3064962b0b8ab`
+- YAML SHA-256: `4928d559427c5aaef37c0897f7f1bfe69552c8a2d9dae2ade275c97e4dfd086e`
+- JSON SHA-256: `8e049a899737df60f79d2f30d13bf47755f99097f8ae68239022012ebd2c665b`
 
 ## Authority Warning
 

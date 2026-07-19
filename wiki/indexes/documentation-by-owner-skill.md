@@ -582,6 +582,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-032-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-V3-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-032-parent-fusion-notes-eqsrc-intrinsic-discriminator-v3-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-033-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-REFUTER-STRESS-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-033-eqsrc-intrinsic-discriminator-admissibility-law-v3-refuter-stress-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-033-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-V3-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260718-033-parent-fusion-notes-eqsrc-intrinsic-discriminator-v3-refuter-stress.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-034-PARENT-FUSION-NOTES-EQSRC-CHAIN-DATA-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260718-034-parent-fusion-notes-eqsrc-chain-data-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -955,6 +956,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-032-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-V3-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-032/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_v3_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-033-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-033-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-033/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_v3_refuter_stress.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-034-PARENT-FUSION-NOTES-EQSRC-CHAIN-DATA-SELECTOR` `research_control/tasks/RT-20260718-034/artifacts/parent_fusion_notes_eqsrc_chain_data_selector.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
