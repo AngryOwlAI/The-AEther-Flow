@@ -115,6 +115,10 @@ DEPENDENCY_GRAPH_OUTPUT_PATHS = {
     "output/research_dependency_graph.dot",
     "wiki/indexes/research_dependency_graph.md",
 }
+COMPACT_FRONTIER_OUTPUT_PATHS = {
+    "output/compact_current_frontier_v16.json",
+    "output/compact_current_frontier_v16.yaml",
+}
 VALIDATION_GATE_MANIFEST_PATH = (
     "research_control/design/validation_gate_manifest_v1.yaml"
 )
@@ -327,6 +331,7 @@ def is_generated_registry(path: str) -> bool:
 def is_generated_derivative(path: str) -> bool:
     return (
         path == "FOLDER_MAP.md"
+        or path in COMPACT_FRONTIER_OUTPUT_PATHS
         or path.startswith("wiki/")
         or path.startswith("html/")
         or path.startswith("ontology/pdfs/")

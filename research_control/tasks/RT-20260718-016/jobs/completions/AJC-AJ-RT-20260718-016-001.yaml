@@ -1,0 +1,178 @@
+validation_status: "PASS"
+completion_id: "AJC-AJ-RT-20260718-016-001"
+job_id: "AJ-RT-20260718-016-001"
+task_id: "RT-20260718-016"
+decision_id: "DDR-20260718-016"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260718-016"
+status: "completed"
+created_at: "2026-07-19T05:02:51Z"
+started_at: "2026-07-19T05:02:51Z"
+completed_at: "2026-07-19T05:08:30Z"
+objective: "Resolve PIS-RT-20260718-015-001 by classifying exactly output/compact_current_frontier_v16.yaml and output/compact_current_frontier_v16.json as generated derivatives while retaining the unknown-path fail-safe and atomically checkpointing the already-authorized RT-015 transaction."
+completion_summary: "The classifier now recognizes the two versioned compact-current-frontier snapshots as generated derivatives. Focused regression evidence confirms the exact paths avoid unknown_governed_path while an unrelated unrecognized path remains fail-closed; the ordinary handoff and RT-015 scientific payload are unchanged."
+source_basis:
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260718_015.yaml"
+  - "research_control/tasks/RT-20260718-015/jobs/completions/AJC-AJ-RT-20260718-015-001.yaml"
+  - "research_control/design/compact_current_frontier_schema_v16.md"
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+outputs_created:
+  - "research_control/tasks/RT-20260718-016/00_TASK.yaml"
+  - "research_control/tasks/RT-20260718-016/DDR-20260718-016.md"
+  - "research_control/tasks/RT-20260718-016/roles/validator-engineer@0.2.0--RT-20260718-016.yaml"
+  - "research_control/tasks/RT-20260718-016/jobs/AJ-RT-20260718-016-001.yaml"
+  - "research_control/tasks/RT-20260718-016/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-016/jobs/completions/AJC-AJ-RT-20260718-016-001.yaml"
+outputs_updated:
+  - "scripts/project_control/classify_project_changes.py"
+  - "tests/test_project_change_classifier.py"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260718_015.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260718_015.md"
+project_system_change_only: true
+project_system_scope: "exact_compact_frontier_generated_derivative_classifier_repair"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+repair_evidence:
+  status: "PASS"
+  recognized_paths:
+    - "output/compact_current_frontier_v16.json"
+    - "output/compact_current_frontier_v16.yaml"
+  generated_derivative_rule: "exact_versioned_path_set"
+  arbitrary_output_prefix_recognized: false
+  unknown_path_fail_safe_retained: true
+  current_transaction_unknown_governed_path_present: false
+  current_transaction_blocked_paths_present: false
+  ordinary_research_handoff_preserved: "handoff-0741"
+  ordinary_research_route_preserved: "Smuggling Auditor ontology-law-research-packet audit"
+  rt_015_scientific_payload_modified_by_repair: false
+validation_evidence:
+  syntax_status: "PASS"
+  focused_regression_status: "PASS"
+  focused_test_count: 71
+  focused_failure_count: 0
+  focused_error_count: 0
+  full_project_change_classifier_status: "PASS"
+  repository_suite_status: "PASS"
+  repository_test_count: 1005
+  repository_failure_count: 0
+  repository_error_count: 0
+  repository_duration_seconds: "146.243"
+  governed_checkpoint_status: "PENDING"
+preclosure_observation:
+  status: "EXPECTED_TRANSIENT"
+  command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier tests.test_checkpoint_validation_planner"
+  result: "70 tests passed and one existing resolver expectation observed the intentionally open high-priority RT-015 signal before closure."
+  interpretation: "The failure was state-coupled to the open signal and not to compact-frontier classification; the complete suite must be rerun after governed signal closure."
+checkpoint_recovery:
+  first_attempt_status: "BLOCKED_BEFORE_STAGING"
+  first_attempt_reason: "Git collapsed the untracked sidecar pair to research_control/project_improvement_handoffs/ while the initial allowlist named only the two leaf files."
+  repair: "Added the existing project-improvement sidecar directory pattern to the task-local read and write allowlists and synchronized the job and role registries."
+  authority_delta: "none"
+  scientific_delta: "none"
+command_results:
+  - ".venv/bin/python -m py_compile scripts/project_control/classify_project_changes.py | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_project_change_classifier.ProjectChangeClassifierTests.test_compact_frontier_outputs_are_exact_generated_derivatives tests.test_project_change_classifier.ProjectChangeClassifierTests.test_unknown_governed_path_selects_full_without_silent_skip tests.test_checkpoint_validation_planner | exit_code=0 | 12 tests PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json --paths output/compact_current_frontier_v16.yaml output/compact_current_frontier_v16.json | exit_code=0 | both paths are generated derivatives and neither is unknown_governed_path"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | current transaction has no unknown_governed_path and no blocked paths"
+  - ".venv/bin/python -m unittest -v tests.test_project_change_classifier tests.test_checkpoint_validation_planner | exit_code=0 | 71 tests PASS"
+  - ".venv/bin/python -m unittest discover -s tests | exit_code=0 | 1005 tests PASS in 146.243 seconds"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --summary | exit_code=0 | PASS with nine nonblocking local-cache freshness findings"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only --summary | exit_code=0 | PASS with nine nonblocking local-cache freshness findings"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --legacy-human | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS with no open signals"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS with zero hard failures and historical warnings only"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --summary | exit_code=0 | PASS with historical warnings only"
+  - "git diff --check | exit_code=0 | PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The high-severity signal sidecar and canonical compact-frontier derivative contract were inspected before the first implementation write."
+      - "One Validator Engineer AgentJob bounded the exact path repair and prior RT-015 checkpoint scope."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both exact compact-frontier outputs are generated derivatives in explicit-path classification."
+      - "The existing unknown-governed-path regression remains fail-closed."
+      - "The live mixed transaction has no unknown_governed_path and no blocked path."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Seventy-one focused classifier and checkpoint-planner tests pass."
+      - "The repository suite passes 1005 tests in 146.243 seconds."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains required after completed-state validation."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No scientific renderer or scientific artifact content changed in this repair."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Generated memory synchronization and completed-state read-only validation pass with nine nonblocking local-cache freshness findings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-surface claim-language validation passes with zero hard failures and historical warnings only."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260718-016/documentation_impact.yaml"
+  source_documentation_updated: false
+  updated_source_documentation: []
+resolved_project_improvement_signals:
+  - signal_id: "PIS-RT-20260718-015-001"
+coherent_resolution_summary: "The two mandatory versioned compact-current-frontier snapshots are now exact generated derivatives in the classifier; unknown governed paths remain fail-closed and the existing RT-015 transaction can proceed through governed checkpoint validation."
+project_improvement_signals: []
+forbidden_conclusion_summary: "This repair supplies no authority for arbitrary output paths generated-derivative hand edits RT-015 science changes source-law adoption general EqSrc discharge Distance-to-GR progress benchmark promotion a Gate Chair verdict or completed derivation."
+verdict: "compact_frontier_generated_derivative_classifier_repair_pass_pending_governed_checkpoint_no_physics_delta"
+selected_next_route:
+  route_id: "eqsrc_closure_source_law_smuggling_audit"
+  task_type: "ontology_law_research_packet_smuggling_audit"
+  role_family: "smuggling-auditor"
+  source_handoff_id: "handoff-0741"
+  requires_human_gate: false
+  project_system_bridge_resolved: true
+next_recommendation: "After governed checkpoint PASS continue from handoff-0741 with one bounded Smuggling Auditor audit of the proposal-only EqSrc closure source-law candidate."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: "826"
+    relationship_row_count: "4109"
+    semantic_row_count: "826"
+    vault_row_count: "826"
+    local_cache_only_warning_count: "9"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/compact_current_frontier_schema_v16.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/compact_current_frontier_schema_v16.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-COMPACT-CURRENT-FRONTIER-SCHEMA-V16"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-COMPACT-CURRENT-FRONTIER-SCHEMA-V16"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/compact_current_frontier_schema_v16.md"
+      source_hash: "c55765610ce2dfa1883b13166e92d0d46bc19885cbdfe61ab3e6f7e04ddeb429"
+  authority_note: "The registered compact-frontier schema is canonical project-control authority; generated wiki Obsidian SQLite semantic and .local retrieval outputs are navigation layers only and are not authority."
+project_state_transition:
+  previous_task: "RT-20260718-015 proposal-only EqSrc closure source-law candidate with checkpoint classifier gap"
+  completed_task: "RT-20260718-016 compact-frontier generated-derivative classifier repair"
+  next_task: "Smuggling Auditor audit from handoff-0741"
+  research_program_state_changed: false

@@ -1,0 +1,149 @@
+% authority: science-draft
+% status: proposal-only
+% route: ontology-law-research-packet
+% trigger_classification: derivation_critical_missing_source_law
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\title{Proposal-Only Source-Law Candidate for EqSrc Family Closure}
+\author{Ontology Formalizer control packet RT-20260718-015}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\paragraph{Status and scope.}
+This artifact defines the proposal-only object
+$\mathsf{EqSrcClosureLaw}^{\mathrm{cand}}_{\mathrm{src}}$ as source-extension
+data. Its adoption status is \texttt{blocked\_adoption\_open\_continuation}.
+Current ontology does not derive this law or an equivalent source-side closure
+primitive. The construction is not a canonical ontology edit, no general EqSrc
+discharge is claimed, and the lawful next role is the Smuggling Auditor.
+
+\section{Typed source certificate data}
+
+Let $\mathcal F_{\mathrm{src}}$ be a declared family of source objects. For
+$A,B\in\mathcal F_{\mathrm{src}}$, let
+$\mathsf{Cert}_{\mathrm{src}}(A,B)$ be a typed set of source certificates. A
+certificate contains source-defined endpoint data, source-invariant ledger
+annotations, and provenance for every closure operation used to construct it.
+No target atlas, target metric, detector outcome, benchmark result, generated
+derivative, registry row, role declaration, or validator result is admissible
+as certificate evidence.
+
+\begin{definition}[Candidate closure law]
+$\mathsf{EqSrcClosureLaw}^{\mathrm{cand}}_{\mathrm{src}}$ consists of the
+following clauses.
+
+\begin{enumerate}
+\item \textbf{Typed endpoints and identity token.} For every
+$A\in\mathcal F_{\mathrm{src}}$ there is a typed identity token
+$\mathbf 1_A\in\mathsf{Cert}_{\mathrm{src}}(A,A)$. Its ledger action is
+neutral and its provenance names $A$ only.
+
+\item \textbf{Explicit inverse-provenance.} For every
+$w\in\mathsf{Cert}_{\mathrm{src}}(A,B)$, an inverse-provenance token
+$\operatorname{Inv}(w;\pi_{\mathrm{inv}})$ may be accepted only if
+$\pi_{\mathrm{inv}}$ certifies endpoint reversal and yields an element of
+$\mathsf{Cert}_{\mathrm{src}}(B,A)$. Double inversion must be ledger-congruent
+with $w$.
+
+\item \textbf{Typed composition-certificate.} For
+$w\in\mathsf{Cert}_{\mathrm{src}}(A,B)$ and
+$v\in\mathsf{Cert}_{\mathrm{src}}(B,C)$, a composition-certificate token
+$\operatorname{Comp}(v,w;\pi_{\mathrm{comp}})$ may be accepted only when its
+middle endpoints agree and $\pi_{\mathrm{comp}}$ certifies a source-side
+composite in $\mathsf{Cert}_{\mathrm{src}}(A,C)$. Alternative parenthesizations
+must carry an associativity-compatibility certificate.
+
+\item \textbf{Ledger congruence.} A source ledger
+$\mathcal L_{\mathrm{src}}$ records invariant annotations and permitted proxy
+incidence. Identity, inverse, and composition are accepted only when the ledger
+annotations are preserved under the declared source-side congruence.
+
+\item \textbf{Fail-closed acceptance.} The predicate
+$\mathsf{Accept}_{\mathrm{src}}(w)$ is true only when typing, operation
+provenance, ledger congruence, negative controls, and no-target checks all pass.
+Missing or conflicting evidence returns \textsf{Block}; it never creates a
+positive certificate by default.
+
+\item \textbf{No-target grammar.} Definitions and witnesses must be stated in
+the source vocabulary before comparison with any target reconstruction. Target
+success and process success possess no source-law authority.
+\end{enumerate}
+\end{definition}
+
+Define the candidate relation
+\[
+ A\sim_{\mathrm{cand}}B
+ \quad\Longleftrightarrow\quad
+ \exists w\in\mathsf{Cert}_{\mathrm{src}}(A,B)
+ \;\mathsf{Accept}_{\mathrm{src}}(w).
+\]
+
+\begin{proposition}[Conditional family-closure theorem]
+If a declared family $\mathcal F_{\mathrm{src}}$ satisfies every clause of
+$\mathsf{EqSrcClosureLaw}^{\mathrm{cand}}_{\mathrm{src}}$, then
+$\sim_{\mathrm{cand}}$ is an equivalence relation on that family.
+\end{proposition}
+
+\begin{proof}
+Reflexivity follows from the accepted identity token $\mathbf 1_A$. Symmetry
+follows by applying the accepted inverse-provenance operation to any witness
+$w:A\to B$. Transitivity follows by applying the accepted
+composition-certificate operation to witnesses $w:A\to B$ and $v:B\to C$.
+Ledger congruence and fail-closed acceptance ensure that each constructed
+witness remains within the declared source certificate class. No target datum
+enters any step.
+\end{proof}
+
+\section{Fail-closed branches}
+
+\paragraph{Missing-inverse branch.}
+Let $\mathcal F_{\mathrm{src}}=\{A,B\}$ contain an accepted certificate
+$w:A\to B$ but no accepted inverse-provenance certificate $B\to A$. Then
+$A\sim_{\mathrm{cand}}B$ does not establish
+$B\sim_{\mathrm{cand}}A$. Symmetry is not derivable.
+
+\paragraph{Missing-composition branch.}
+Let $\mathcal F_{\mathrm{src}}=\{A,B,C\}$ contain accepted certificates
+$w:A\to B$ and $v:B\to C$ but no accepted composition-certificate from $A$ to
+$C$. Then the two premises do not establish $A\sim_{\mathrm{cand}}C$.
+Transitivity is not derivable.
+
+\paragraph{Ledger-mismatch branch.}
+If an identity, inverse, or composite token changes a protected ledger
+annotation or proxy incidence without a source congruence certificate, the
+candidate returns \textsf{Block}. The mismatch cannot be repaired using a
+target metric, detector output, benchmark success, registry status, role text,
+or validator pass.
+
+\section{Unresolved obligations and exact-GR recovery boundary}
+
+The candidate does not supply RetainH or GenH. It neither extends the declared
+family nor determines which historical data must be retained. Before any
+adoption request, a Smuggling Auditor must test the complete grammar and a
+Refuter must stress all closure and ledger clauses. Any adoption remains a
+protected human-gated decision.
+
+No general EqSrc discharge, $M_{\mathrm{src}}$ adoption, $g_{\mathrm{eff}}$
+scope change, matter-coupling derivation, Einstein-equation derivation,
+finite-variation robustness theorem, benchmark promotion, Gate Chair verdict,
+or completed derivation follows. Exact-GR recovery obligations therefore
+remain unchanged.
+
+\begin{remark}
+The candidate converts previously supplied H1--H7-style closure assumptions
+into an auditable source-law interface. It does not show that the interface is
+true of the project ontology. The scoped obstruction remains compatible with a
+future conservative source extension; no global no-go theorem or future
+source-extension impossibility is asserted.
+\end{remark}
+
+\end{document}

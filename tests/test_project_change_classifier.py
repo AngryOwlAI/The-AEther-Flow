@@ -306,6 +306,24 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         self.assertEqual(result["blocked_paths"], [])
         self.assertIn("generated_derivative_changed", result["reason_codes"])
 
+    def test_compact_frontier_outputs_are_exact_generated_derivatives(self) -> None:
+        paths = [
+            "output/compact_current_frontier_v16.json",
+            "output/compact_current_frontier_v16.yaml",
+        ]
+        generated_only = self.classifier.classify_paths(paths)
+
+        self.assertEqual(generated_only["generated_only_paths"], paths)
+        self.assertEqual(generated_only["generated_derivatives"], paths)
+        self.assertNotIn("unknown_governed_path", generated_only["reason_codes"])
+
+        transaction = self.classifier.classify_paths(
+            [*paths, "research_control/program_state.yaml"]
+        )
+        self.assertEqual(transaction["blocked_paths"], [])
+        self.assertNotIn("direct_generated_derivative_edit", transaction["reason_codes"])
+        self.assertNotIn("unknown_governed_path", transaction["reason_codes"])
+
     def test_path_family_taxonomy_covers_every_required_family(self) -> None:
         result = self.classifier.classify_paths(
             [

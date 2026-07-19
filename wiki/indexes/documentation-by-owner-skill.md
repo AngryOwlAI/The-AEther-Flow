@@ -548,6 +548,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260709-002-V18-INTEGRATION-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260709-002-v18-integration-report.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260709-002-V18-INTEGRATION-REPORT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260709-002-v18-integration-report-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260709-006-V18-RECOMMENDATION-COVERAGE-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260709-006-v18-recommendation-coverage-audit.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-015-EQSRC-CLOSURE-SOURCE-LAW-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-015-eqsrc-closure-source-law-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-015-PARENT-FUSION-NOTES-EQSRC-CLOSURE-SOURCE-LAW` `wiki/markdown/md-research-control-tasks-rt-20260718-015-parent-fusion-notes-eqsrc-closure-source-law.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -887,6 +889,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260709-002-V18-INTEGRATION-REPORT` `research_control/tasks/RT-20260709-002/artifacts/v18_integration_report.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260709-002-V18-INTEGRATION-REPORT-RECEIPT` `research_control/tasks/RT-20260709-002/artifacts/v18_integration_report_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260709-006-V18-RECOMMENDATION-COVERAGE-AUDIT` `research_control/tasks/RT-20260709-006/artifacts/v18_recommendation_coverage_audit.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-015-EQSRC-CLOSURE-SOURCE-LAW-RECEIPT` `research_control/tasks/RT-20260718-015/artifacts/eqsrc_closure_source_law_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-015-PARENT-FUSION-NOTES-EQSRC-CLOSURE-SOURCE-LAW` `research_control/tasks/RT-20260718-015/artifacts/parent_fusion_notes_eqsrc_closure_law.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

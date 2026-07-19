@@ -1,0 +1,480 @@
+completion_id: "AJC-AJ-RT-20260718-015-001"
+job_id: "AJ-RT-20260718-015-001"
+task_id: "RT-20260718-015"
+decision_id: "DDR-20260718-015"
+status: "completed"
+completed_at: "2026-07-19T04:18:22Z"
+completed_by_role: "ontology-formalizer@0.2.0--RT-20260718-015"
+source_role_id: "ontology-formalizer"
+source_role_version: "0.2.0"
+plan_task_id: "ordinary_eqsrc_family_closure_repair_or_stress"
+objective_result: "completed"
+summary: "Constructed proposal-only EqSrcClosureLaw_src^cand with typed source identity tokens explicit inverse-provenance tokens composable certificate-step families ledger congruence no-target checks and fail-closed branches. A conditional theorem proves equivalence only when all candidate clauses are supplied. Current ontology does not derive the candidate; adoption is blocked while continuation to Smuggling Auditor audit remains open."
+artifacts:
+  - "research_control/tasks/RT-20260718-015/artifacts/child_phys_math_eqsrc_closure_law.yaml"
+  - "research_control/tasks/RT-20260718-015/artifacts/child_phys_phil_eqsrc_closure_law.yaml"
+  - "research_control/tasks/RT-20260718-015/artifacts/parent_conflict_review_eqsrc_closure_law.yaml"
+  - "research_control/tasks/RT-20260718-015/artifacts/parent_fusion_notes_eqsrc_closure_law.md"
+  - "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-015/artifacts/eqsrc_closure_source_law_receipt.md"
+  - "research_control/tasks/RT-20260718-015/artifacts/validate_eqsrc_closure_source_law.py"
+  - "research_control/tasks/RT-20260718-015/artifacts/eqsrc_closure_source_law_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260718-015/artifacts/child_phys_math_eqsrc_closure_law.yaml"
+  - "research_control/tasks/RT-20260718-015/artifacts/child_phys_phil_eqsrc_closure_law.yaml"
+  - "research_control/tasks/RT-20260718-015/artifacts/parent_conflict_review_eqsrc_closure_law.yaml"
+  - "research_control/tasks/RT-20260718-015/artifacts/parent_fusion_notes_eqsrc_closure_law.md"
+  - "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-015/artifacts/eqsrc_closure_source_law_receipt.md"
+  - "research_control/tasks/RT-20260718-015/artifacts/validate_eqsrc_closure_source_law.py"
+  - "research_control/tasks/RT-20260718-015/artifacts/eqsrc_closure_source_law_validation.json"
+  - "research_control/tasks/RT-20260718-015/00_TASK.yaml"
+  - "research_control/tasks/RT-20260718-015/DDR-20260718-015.md"
+  - "research_control/tasks/RT-20260718-015/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-015/jobs/AJ-RT-20260718-015-001.yaml"
+  - "research_control/tasks/RT-20260718-015/jobs/completions/AJC-AJ-RT-20260718-015-001.yaml"
+  - "research_control/tasks/RT-20260718-015/roles/ontology-formalizer@0.2.0--RT-20260718-015.yaml"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0741.yaml"
+  - "research_control/handoffs/handoff-0741.md"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260718_015.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260718_015.md"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+extra_read_paths:
+  - "research_control/handoffs/handoff-0740.yaml"
+  - "research_control/handoffs/handoff-0740.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex"
+  - "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=823 relationship_row_count=4095 semantic_row_count=823 vault_row_count=823 local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1 --json | exit_code=0 | canonical_source_inspected=true"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V18-P3-T05-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS-V1 --json | exit_code=0 | canonical_source_inspected=true"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json | exit_code=0 | canonical_source_inspected=true"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=0 | status=ready active_task=RT-20260709-006 latest_handoff=handoff-0740"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260718-015/artifacts/validate_eqsrc_closure_source_law.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260718-015/artifacts/validate_eqsrc_closure_source_law.py --write-report --json | exit_code=0 | status=PASS next_required_role=smuggling-auditor@0.2.0"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260718-015-001 | exit_code=1 | checkpoint planner preflight failed because output/compact_current_frontier_v16.yaml and output/compact_current_frontier_v16.json were classified as unknown_governed_path; staged=false committed=false"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 823
+    relationship_row_count: 4095
+    semantic_row_count: 823
+    vault_row_count: 823
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1"
+      returned_object_ids:
+        - "TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V18-P3-T05-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V18-P3-T05-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS-V1"
+      returned_object_ids:
+        - "TEX-V18-P3-T05-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "TEX-V18-P3-T02-EQSRC-FAMILY-CLOSURE-THEOREM-OR-COUNTERMODEL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_theorem_or_countermodel_v1.tex"
+      source_hash: "3f644b68b3d81c6892517a2e3a4c7f1a777a9d201bff0716c5d3b4936597d618"
+    - object_id: "TEX-V18-P3-T05-EQSRC-FAMILY-CLOSURE-REFUTER-STRESS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex"
+      source_hash: "5e0832a3b7d2d604678fa128707baa4a2e801b9e47874801c8cfd8944bc57f98"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "2760bde5bed12d731adb3ecff358cbbde1adf743acac9f76a4f7ce60e72bcd15"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "memory preflight and three targeted lookups passed"
+      - "handoff-0740 and canonical P3 closure artifacts were inspected"
+      - "single-role Ontology Formalizer route was determined before execution"
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "EqSrcClosureLaw_src^cand proposal constructed"
+      - "conditional equivalence theorem and three fail-closed branches supplied"
+      - "parent-child synthesis completed with no unresolved conflict"
+  task_local:
+    status: "PASS"
+    evidence:
+      - "task-local validator PASS"
+      - "candidate status and next Smuggling Auditor route confirmed"
+  post_write:
+    status: "PASS"
+    evidence:
+      - "task-local repository-wide renderer memory documentation claim-language and research-control validations passed before checkpoint"
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "checkpoint was attempted but the safe shadow plan was blocked before staging because mandatory compact-frontier outputs were classified as unknown_governed_path"
+      - "the transaction remains unstaged and uncommitted pending a separate improve-project-system validator or registry repair"
+  renderer:
+    status: "PASS"
+    evidence:
+      - "current-frontier task-index dependency-graph claim-graph and compact-frontier renderers completed and their focused checks passed"
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "memory bootstrap and validate-only passed after registered source updates"
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "changed-file claim-language validation passed with zero hard failures"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  source_law_adoption_authorized: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  source_detector_readout_semantics_adoption_authorized: false
+  coupling_law_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  matter_coupling_adoption_authorized: false
+  stress_energy_semantics_authorized: false
+  matter_action_authorized: false
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  benchmark_promotion_authority_source_path: ""
+  downstream_physics_promotion_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260718-015/artifacts/child_phys_math_eqsrc_closure_law.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260718-015/artifacts/child_phys_phil_eqsrc_closure_law.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260718-015/artifacts/parent_conflict_review_eqsrc_closure_law.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "The children agreed on the proposal-only construction and resolved whether construction changes Distance-to-GR status by retaining no-distance-delta."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260718-015/artifacts/parent_fusion_notes_eqsrc_closure_law.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused artifact combines explicit source-side closure clauses with proposal-only blocked-adoption language and fail-closed branches."
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Define one proposal-only source-side EqSrc family-closure law candidate that replaces supplied H1-H7 assumptions with explicit typed certificate operations and proof obligations before audit stress adoption or any general EqSrc claim."
+  missing_source_law: "EqSrcClosureLaw_src^cand"
+  underdetermination_statement: "Current ontology does not derive EqSrcClosureLaw_src^cand or an equivalent source-side identity inverse composition and ledger-closure law."
+  no_go_theorem_status: "not_present_scoped_obstruction_only"
+  packet_payload_mode: "candidate_law_payload"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  candidate_law_payload:
+    source_side_definition: "For a declared source-object family accepted typed source certificates are closed under an identity token explicit inverse provenance and typed composition certificate only when a source ledger congruence and fail-closed acceptance predicate are satisfied."
+    status_label: "proposal-only"
+    source_class: "source-extension data"
+    formal_objects:
+      - "EqSrcClosureLaw_src^cand"
+      - "Cert_src(A,B)"
+      - "IdTok_src(A)"
+      - "InvProv_src(w)"
+      - "CompCert_src(v,w)"
+      - "Ledger_src"
+      - "Accept_src"
+    domains:
+      - "declared source-object family F_src"
+      - "typed certificate sets Cert_src(A,B)"
+      - "source invariant ledger annotations"
+    maps:
+      - "IdTok_src: A maps to Cert_src(A,A)"
+      - "InvProv_src: Cert_src(A,B) maps with provenance to Cert_src(B,A)"
+      - "CompCert_src: Cert_src(B,C) times Cert_src(A,B) maps with provenance to Cert_src(A,C)"
+      - "Accept_src: typed certificate evidence maps to accept or Block"
+    proof_obligations:
+      - "identity-token soundness"
+      - "inverse-provenance endpoint reversal and involution compatibility"
+      - "composition-certificate typing and associativity compatibility"
+      - "ledger congruence under identity inverse and composition"
+      - "fail-closed rejection for missing evidence or mismatch"
+      - "no-target-import audit"
+      - "Refuter stress after audit"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Audit that no target atlas target metric detector outcome benchmark behavior or process status defines a source certificate."
+      - "Stress identity inverse composition ledger and fail-closed clauses before any adoption request."
+      - "Keep RetainH GenH M_src g_eff matter coupling Einstein equations finite-variation robustness benchmark promotion and Gate Chair status open."
+      - "Require protected human authority before any source-law or ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+      - "detector_outcome"
+      - "approval_authority"
+      - "commit_authority"
+    audit_notes: "The candidate grammar is stated only in source-object certificate and ledger vocabulary. One bounded Smuggling Auditor packet must verify that this remains true under all definitions examples and proof steps."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No adoption is requested by this packet. Any future designation as canonical-ontology candidate or adopted source law requires separate protected human Gate Chair authority after audit and Refuter stress."
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-015-001"
+    payload_type: "explicit_inverse_provenance_tokens"
+    name: "Typed inverse-provenance operation"
+    summary: "Introduces a source-side endpoint-reversing inverse certificate with explicit provenance and double-inversion ledger compatibility."
+  - payload_id: "NMP-RT-20260718-015-002"
+    payload_type: "concrete_certificate_step_families"
+    name: "Identity and composition certificate-step family"
+    summary: "Defines typed identity and composable certificate steps with associativity compatibility inside the declared source family."
+  - payload_id: "NMP-RT-20260718-015-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Conditional EqSrc candidate equivalence theorem"
+    summary: "Proves that accepted certificates define an equivalence relation if every proposal clause is supplied."
+  - payload_id: "NMP-RT-20260718-015-004"
+    payload_type: "countermodel_or_obstruction"
+    name: "Fail-closed closure-removal branches"
+    summary: "Preserves finite missing-inverse and missing-composition branches plus ledger-mismatch rejection without target repair."
+mathematical_payload_manifest:
+  - payload_id: "MP-RT-20260718-015-001"
+    payload_type: "definition"
+    object_name: "EqSrcClosureLaw_src^cand"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+    burden_effect: "makes the missing source-side closure interface explicit without discharge"
+    summary: "Defines typed identity inverse composition ledger congruence fail-closed acceptance and no-target grammar clauses."
+  - payload_id: "MP-RT-20260718-015-002"
+    payload_type: "theorem"
+    object_name: "Conditional family-closure theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+    burden_effect: "conditional theorem only; source_equivalence_eqsrc remains open"
+    summary: "If every candidate clause is supplied accepted certificates induce an equivalence relation on the declared source family."
+  - payload_id: "MP-RT-20260718-015-003"
+    payload_type: "countermodel"
+    object_name: "Missing-inverse and missing-composition branches"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+    burden_effect: "preserves scoped obstruction and fail-closed behavior"
+    summary: "Finite certificate fragments show symmetry or transitivity remains unproved when the corresponding operation evidence is absent."
+  - payload_id: "MP-RT-20260718-015-004"
+    payload_type: "source_extension_classification"
+    object_name: "EqSrc closure candidate adoption boundary"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+    burden_effect: "routes to audit with no Distance-to-GR delta"
+    summary: "Classifies the object as proposal-only blocked adoption with open source-side continuation."
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Define and audit a source-side EqSrc family-closure law before any general closure claim."
+  explanation: "The packet constructs a concrete proposal and conditional theorem but does not establish that current ontology satisfies the candidate clauses."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "bounded_source_extension_smuggling_audit"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "general_EqSrc_discharge"
+    - "RetainH_adoption"
+    - "GenH_adoption"
+    - "M_src_adoption"
+    - "g_eff_scope_change"
+    - "matter_coupling_derivation"
+    - "Einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+  explanation: "The proposal sharpens the source-side missing-law interface and opens audit only; it changes no Distance-to-GR ledger row."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no canonical ontology edit and the candidate remains proposal-only"
+  - burden: "Source equivalence EqSrc"
+    status: "candidate constructed pending audit; no general EqSrc discharge"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged; no m_src adoption"
+  - burden: "g_eff"
+    status: "unchanged; no g_eff result or scope expansion"
+  - burden: "matter coupling"
+    status: "blocked; no matter coupling derivation"
+  - burden: "Einstein equations"
+    status: "blocked; no Einstein-equation derivation"
+  - burden: "finite-variation robustness"
+    status: "unchanged; local fail-closed branches are not a robustness theorem"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark promotion"
+  - burden: "Gate Chair status"
+    status: "unchanged; no verdict or adoption request"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; one bounded Smuggling Auditor audit is the next route"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  summary: "This proposal blocks m_src adoption source-law adoption any g_eff claim matter coupling Einstein-equation benchmark promotion completed derivation and global theory rejection overreads."
+  forbidden_conclusions:
+    - "No canonical ontology edit or source-law adoption."
+    - "No general EqSrc discharge."
+    - "No RetainH adoption or GenH adoption."
+    - "No m_src adoption."
+    - "No g_eff result adoption or scope expansion."
+    - "No matter coupling derivation or adoption."
+    - "No Einstein-equation derivation."
+    - "No benchmark promotion or Gate Chair verdict."
+    - "No completed derivation."
+    - "No future source-extension impossibility or global theory rejection."
+route_cycle_control:
+  cycle_family: "eqsrc_family_closure_source_law"
+  current_cycle_step: "proposal_only_source_law_candidate"
+  prior_related_tasks:
+    - "RT-20260707-020"
+    - "RT-20260707-022"
+    - "RT-20260707-023"
+    - "RT-20260707-024"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "This packet does not repeat generic theorem audit or stress. It supplies a new concrete source-side closure candidate and routes directly to smuggling audit."
+  next_role_consequence: "smuggling-auditor@0.2.0"
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "eqsrc"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: "missing_inverse_countermodel"
+      status: "filled"
+      scope: "finite local two-object source certificate fragment"
+      result_artifact: "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+    - countermodel_slot: "missing_composition_countermodel"
+      status: "filled"
+      scope: "finite local three-object source certificate fragment"
+      result_artifact: "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+    - countermodel_slot: "invariant_ledger_not_family_stable_countermodel"
+      status: "filled"
+      scope: "local ledger-mismatch fail-closed branch"
+      result_artifact: "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+    - countermodel_slot: "target_import_needed_countermodel"
+      status: "pending"
+      scope: "dedicated Smuggling Auditor and Refuter audit-stress sequence"
+      result_artifact: "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+    - countermodel_slot: "RetainH_needed_countermodel"
+      status: "pending"
+      scope: "separate H-retention extension family"
+      result_artifact: "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+    - countermodel_slot: "GenH_needed_countermodel"
+      status: "pending"
+      scope: "separate generated-family extension family"
+      result_artifact: "research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-PENDING-AUDIT"
+  candidate_freeze_label: "EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-PENDING-AUDIT"
+  prior_attempts_considered:
+    - "RT-20260707-020"
+    - "RT-20260707-022"
+    - "RT-20260707-023"
+    - "RT-20260707-024"
+  freeze_if:
+    - "Audit finds the candidate necessarily imports target or process authority and no source-only repair is available."
+    - "A later packet repeats the same missing closure primitives without new formal objects witnesses or obstruction evidence."
+  criteria_evaluated:
+    - "new mathematical payload is present"
+    - "a distinct audit route is available"
+    - "adoption remains blocked"
+  do_not_freeze_if:
+    - "A concrete source-only candidate has been constructed and awaits its first dedicated smuggling audit."
+  freeze_decision: "not_frozen"
+  decision_reason: "The packet adds a new concrete source-law candidate and a bounded audit route remains available."
+  rationale: "Freezing now would skip the required first audit of the new candidate."
+  next_allowed_route: "theoretical_decision_role_selection"
+next_recommendation:
+  role_id: "smuggling-auditor"
+  role_version: "0.2.0"
+  packet_type: "source_extension_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  task_type: "eqsrc_family_closure_source_law_smuggling_audit"
+  objective: "Audit EqSrcClosureLaw_src^cand for hidden target import process-authority laundering certificate-as-adoption overread and illicit general EqSrc RetainH or GenH promotion."
+  requires_human_gate: false
+  claim_boundary: "Audit only. Do not edit canonical ontology adopt the candidate discharge EqSrc change the Distance-to-GR ledger or promote any downstream physics claim."
+claim_boundary:
+  boundary_id: "CB-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-001"
+  allowed_scope: "Proposal-only source-side candidate construction conditional theorem and fail-closed local branches."
+  blocked_scope: "Canonical ontology or source-law adoption general EqSrc RetainH GenH M_src g_eff matter coupling Einstein equations benchmark Gate Chair or completed derivation promotion."
+  claim_boundary_preserved: true
+project_improvement_signals:
+  - signal_id: "PIS-RT-20260718-015-001"
+    signal_type: "validator_gap"
+    severity: "high"
+    evidence: "The governed checkpoint planner rejected mandatory output/compact_current_frontier_v16.yaml and output/compact_current_frontier_v16.json as unknown_governed_path and therefore could not produce a safe shadow plan. No files were staged or committed."
+    evidence_path: "research_control/tasks/RT-20260718-015/jobs/completions/AJC-AJ-RT-20260718-015-001.yaml"
+    recommended_skill: "improve-project-system"
+    recommended_role: "validator-engineer"
+    notes: "Repair classifier or registry provenance for the mandatory compact-current-frontier derivatives without changing physics authority or hand-editing generated outputs."
+project_improvement_bridge:
+  required: true
+  improvement_handoff_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260718_015.yaml"
+  signal_ids:
+    - "PIS-RT-20260718-015-001"
+  bridge_status: "generated"
+  notes: "Generated by scripts/project_control/generate_project_improvement_handoff.py."
