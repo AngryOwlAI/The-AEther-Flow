@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-027`
-- Latest handoff: `handoff-0752`
-- Current status: `eqsrc_intrinsic_discriminator_admissibility_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption`
+- Active task: `RT-20260718-028`
+- Latest handoff: `handoff-0753`
+- Current status: `eqsrc_intrinsic_discriminator_admissibility_law_audit_precise_relation_label_obstruction_repair_required_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-027`
-- Latest research handoff: `handoff-0752`
-- Latest research next action: Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 for hidden chain-package or boundary-law primitive selection target or process import physical-admissibility overread naturality-scope overread and finite-witness generalization. Do not repair adopt stress or promote the candidate.
+- Latest research task: `RT-20260718-028`
+- Latest research handoff: `handoff-0753`
+- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet to distinguish pointwise discriminator-value stability from kernel-pair relation preservation, correct or replace the e2-translation sharpness witness, and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_intrinsic_discriminator_admissibility_law_smuggling_audit`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `eqsrc_intrinsic_discriminator_admissibility_law_relation_label_scope_repair`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Audit the exact proposal-only chain-homology discriminator and boundary-move admissibility law before Refuter stress or protected adoption review.
+- Milestone burden: Repair the pointwise-label versus relation-preservation scope defect while preserving the surviving conditional theorem core and all primitive-selection limits.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `a27e663f26f917075b2e61a90f53c94c53dbb8bbe2a81f2939ae14cc3f6753ce`
-- JSON SHA-256: `4acbfc7c4568258d2af2a409cbcbc44fb67b4f694bef7251c553a2c34e0de8d9`
+- YAML SHA-256: `d782df62281fdfaff05bdff0f522d3a2daaaeb46816fb3d65d324903edf288ce`
+- JSON SHA-256: `e020f64db7f30f2f6687a51aac1d9e3476975d8b1e0c71ec5293b7d0618266aa`
 
 ## Authority Warning
 

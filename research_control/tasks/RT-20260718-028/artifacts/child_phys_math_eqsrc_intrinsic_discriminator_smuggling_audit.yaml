@@ -1,0 +1,85 @@
+artifact_id: "child_phys_math_eqsrc_intrinsic_discriminator_smuggling_audit"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-028"
+job_id: "AJ-RT-20260718-028-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_name: "EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1"
+candidate_path: "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+candidate_hash: "5f75d981dfa87790db6b3043497f7635ad74253bec84e4257e2f945e573e10e0"
+authority_boundary: "Audit only. No candidate repair, Refuter stress, source-law adoption, canonical-ontology edit, physical-admissibility claim, or promotion."
+
+exact_classification: "source_pure_as_written_with_precise_repairable_relation_label_obstruction"
+recommendation: "one_bounded_proposal_only_ontology_formalizer_relation_label_scope_repair_before_refuter_stress"
+
+overall_assessment:
+  declaration_closure: "formal_core_closes_relative_to_a_supplied_finite_chain_package"
+  target_or_process_import: "not_detected_as_written"
+  source_extension_classification: "new_ontology_primitive_candidate"
+  physical_admissibility: "not_established"
+  naturality: "valid_only_for_supplied_chain_complexes_and_typed_chain_maps"
+  quotient_uniqueness: "valid_conditionally_for_surjective_discriminators_with_exactly_the_same_kernel_pair"
+  finite_witness: "correct_four_class_quotient_with_incorrect_relation_fragility_interpretation"
+  adoption_status: "blocked_adoption_open_continuation"
+  distance_to_gr_delta: false
+
+dependency_findings:
+  - "Z1(E), B1(E), H1(E), chi_E, and EqCand_E are conservative definitions after E and its differentials are supplied."
+  - "Current ontology does not derive the chain-package family, select its differentials, or establish boundary translations as physically admissible variations."
+  - "AdmVar(E) is syntactically independent of chi_E but both branches share partial_2 as a designed root; this is model-internal non-circularity, not ontological or physical independence."
+  - "The fail-closed wrapper leaves Bottom_src output typing and the phrase otherwise nonseparating H1 secondary and underspecified."
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-028-MATH-001"
+    payload_type: "theorem"
+    name: "translation_label_relation_separation"
+    statement: "For A=Z1(E), B=B1(E), chi:A->A/B, and S_c(z)=z+c, chi(S_c z)=chi(z)+[c]. Thus chi is fixed pointwise iff c lies in B, but for every c in A, z is kernel-pair related to z' iff S_c(z) is kernel-pair related to S_c(z')."
+    proof: "S_c(z)-S_c(z')=z-z', while quotient linearity gives chi(z+c)=chi(z)+[c]."
+    implication: "AdmVar(E) is the pointwise quotient-label stabilizer among translations, not the full kernel-pair relation stabilizer; all translations preserve EqCand_E."
+    claim_status: "draft/control"
+
+  - payload_id: "NMP-RT-20260718-028-MATH-002"
+    payload_type: "countermodel"
+    name: "E_star_out_of_class_translation_reclassification"
+    statement: "For c=e2, all eight individual quotient labels change, but the four two-element blocks are merely permuted and all 64 ordered-pair relation tests are preserved."
+    exact_counts:
+      pointwise_labels_changed: 8
+      ordered_pair_relation_checks: 64
+      relation_mismatches: 0
+    consequence: "S(z)=z+e2 is not a relation-changing sharpness witness. It witnesses failure of strict label fixation and acts by codomain-gauge translation [z]->[z]+[e2]."
+    claim_status: "draft/control"
+
+  - payload_id: "NMP-RT-20260718-028-MATH-003"
+    payload_type: "explicit_witness"
+    name: "genuine_relation_changing_linear_bijection"
+    statement: "On E_star define L(e0)=e0, L(e1)=e0+e2, and L(e2)=e1. L is invertible on Z1=F2^3, but L(e0+e1)=e2 is not in B1=span(e0+e1). Hence 0 is related to e0+e1 while L(0) is not related to L(e0+e1)."
+    scope: "well_typed_source_state_bijection_outside_boundary_moves_and_chain_maps"
+    implication: "A genuine relation-changing out-of-class witness exists, but it is linear rather than translational."
+    claim_status: "draft/control"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-EQSRC-INTRINSIC-DISCRIMINATOR-RELATION-LABEL-001"
+  scope: "source_extension_candidate"
+  failed_object: "claimed_out_of_class_relation_changing_translation"
+  exact_failure: "The candidate conflates pointwise invariance of chi_E with preservation of its kernel-pair relation. Translation by e2 changes quotient labels but preserves and reflects EqCand_E exactly."
+  consequence: "repair_candidate_allowed"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  forbidden_overread: "This local claim-scope obstruction does not refute the kernel-pair construction, prove target import, establish future source-extension impossibility, or reject the theory globally."
+
+scope_guards:
+  naturality: "Homology functoriality is correct after chain packages and chain maps are supplied; it is not physical covariance or ontology-level natural selection."
+  uniqueness: "The theorem supplies an arbitrary codomain bijection, not necessarily a linear pointed or family-natural gauge, and does not select chi_E from current ontology."
+  finite_generalization: "The algebraic theorems hold for admitted finite chain packages, but E_star does not establish physical admissibility, ontology-wide applicability, infinite-system robustness, or general EqSrc."
+  promotion: "No source-law adoption RetainH GenH M_src g_eff matter coupling Einstein equations benchmark promotion or completed derivation."
+
+next_packet_recommendation:
+  role_family: "ontology-formalizer@0.2.0"
+  route_label: "ontology-law-research-packet"
+  packet_count: 1
+  objective: "Repair the proposal-only candidate by separating pointwise discriminator-label stability from kernel-pair relation invariance, correcting or replacing the translation sharpness witness, and preserving the chain-package and physical-admissibility primitive-selection limits."
+  refuter_stress_ready_now: false
+  adoption_requested: false
+  recommendation_only_not_executed: true

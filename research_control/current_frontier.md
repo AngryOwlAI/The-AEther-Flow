@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-027` and `handoff-0752`.
+`RT-20260718-028` and `handoff-0753`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-027` |
-| Latest handoff ID | `handoff-0752` |
-| Current status | `eqsrc_intrinsic_discriminator_admissibility_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption` |
+| Active task ID | `RT-20260718-028` |
+| Latest handoff ID | `handoff-0753` |
+| Current status | `eqsrc_intrinsic_discriminator_admissibility_law_audit_precise_relation_label_obstruction_repair_required_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc distinct chain homology candidate to fresh smuggling audit |
+| Current route family | eqsrc chain homology relation label scope repair before fresh audit |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One fresh Smuggling Auditor packet may audit the exact chain-homology candidate for hidden primitive target process circularity physical-admissibility and scope overreads. |
-| Next recommended action | Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 for hidden chain-package or boundary-law primitive selection target or process import physical-admissibility overread naturality-scope overread and finite-witness generalization. Do not repair adopt stress or promote the candidate. |
+| Required next authority | One Ontology Formalizer packet may produce a proposal-only repair that separately defines pointwise discriminator-value stability and kernel-pair relation preservation corrects or replaces the e2 sharpness witness and routes one fresh audit. |
+| Next recommended action | Run one bounded Ontology Formalizer ontology-law-research-packet to distinguish pointwise discriminator-value stability from kernel-pair relation preservation, correct or replace the e2-translation sharpness witness, and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-027` |
-| Latest research handoff ID | `handoff-0752` |
-| Latest research next action | Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 for hidden chain-package or boundary-law primitive selection target or process import physical-admissibility overread naturality-scope overread and finite-witness generalization. Do not repair adopt stress or promote the candidate. |
+| Latest research task ID | `RT-20260718-028` |
+| Latest research handoff ID | `handoff-0753` |
+| Latest research next action | Run one bounded Ontology Formalizer ontology-law-research-packet to distinguish pointwise discriminator-value stability from kernel-pair relation preservation, correct or replace the e2-translation sharpness witness, and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-027/00_TASK.yaml`.
-- Active task objective: Execute one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 with source-only chain-complex objects, a distinct finite witness, source-automorphism naturality, variation-class independence, conditional uniqueness, finite-variation robustness, and fail-closed branches.
-- Latest handoff path: `research_control/handoffs/handoff-0752.yaml`.
-- Latest handoff summary: RT-20260718-027 formalized proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 on finite F2 chain complexes. It supplies a chain-map naturality theorem a formally independent boundary-move variation class conditional quotient uniqueness finite robustness and an eight-state four-class witness. Physical admissibility and adoption remain unestablished and there is no Distance-to-GR change.
-- Current route family: eqsrc distinct chain homology candidate to fresh smuggling audit.
-- Next recommended action: Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 for hidden chain-package or boundary-law primitive selection target or process import physical-admissibility overread naturality-scope overread and finite-witness generalization. Do not repair adopt stress or promote the candidate.
+- Active task path: `research_control/tasks/RT-20260718-028/00_TASK.yaml`.
+- Active task objective: Execute one fresh bounded Smuggling Auditor ontology-law-research-packet against exact proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 for hidden chain-package or boundary-law primitive selection, target or process import, physical-admissibility overread, naturality-scope overread, conditional-uniqueness overread, finite-witness generalization, and robustness-scope ambiguity without repair adoption stress or promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0753.yaml`.
+- Latest handoff summary: RT-20260718-028 freshly audited exact proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1. No explicit target or process import is detected and the conditional naturality quotient-uniqueness and admitted boundary-move pointwise theorem core survives. Translation by e2 changes every discriminator value but preserves the kernel-pair relation, yielding precise repairable OBST-EQSRC-INTRINSIC-DISCRIMINATOR-RELATION-LABEL-001. Chain-package selection physical admissibility and adoption remain unestablished and there is no Distance-to-GR change.
+- Current route family: eqsrc chain homology relation label scope repair before fresh audit.
+- Next recommended action: Run one bounded Ontology Formalizer ontology-law-research-packet to distinguish pointwise discriminator-value stability from kernel-pair relation preservation, correct or replace the e2-translation sharpness witness, and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 for hidden chain-package or boundary-law primitive selection target or process import physical-admissibility overread naturality-scope overread and finite-witness generalization. Do not repair adopt stress or promote the candidate.
+Run one bounded Ontology Formalizer ontology-law-research-packet to distinguish pointwise discriminator-value stability from kernel-pair relation preservation, correct or replace the e2-translation sharpness witness, and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-027`;
-- latest handoff: `handoff-0752`;
-- current status: `eqsrc_intrinsic_discriminator_admissibility_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption`;
+- active task: `RT-20260718-028`;
+- latest handoff: `handoff-0753`;
+- current status: `eqsrc_intrinsic_discriminator_admissibility_law_audit_precise_relation_label_obstruction_repair_required_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0752.yaml`
-- `research_control/tasks/RT-20260718-027/00_TASK.yaml`
+- `research_control/handoffs/handoff-0753.yaml`
+- `research_control/tasks/RT-20260718-028/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0752*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0753*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

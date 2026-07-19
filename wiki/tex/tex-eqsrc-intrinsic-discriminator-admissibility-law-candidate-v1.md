@@ -18,6 +18,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Generated output path: `wiki/tex/tex-eqsrc-intrinsic-discriminator-admissibility-law-candidate-v1.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-027-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-RECEIPT` `research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_receipt.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-027-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-LAW` `research_control/tasks/RT-20260718-027/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_law.md`
+- Backlink from `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-028/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_smuggling_audit.tex`
 
 ## Validation
 
