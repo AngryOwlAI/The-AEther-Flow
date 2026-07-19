@@ -1,0 +1,65 @@
+artifact_id: "child_phys_math_eqsrc_intrinsic_discriminator_v3_smuggling_audit"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-032"
+job_id: "AJ-RT-20260718-032-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_name: "EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3"
+candidate_path: "research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex"
+candidate_hash: "ed865297c417cadf4d030717d5c1a9c6c84335939c6fe9cee215192050bc30dd"
+authority_boundary: "Audit only. No repair, Refuter stress, adoption, canonical-ontology edit, physical-admissibility claim, or promotion."
+exact_classification: "source_pure_as_written_formal_repair_verified_with_set_vector_space_interpretation_guard"
+recommendation: "one_bounded_refuter_stress_packet"
+overall_assessment:
+  typed_predicates: "well_formed"
+  quotient_factorization: "correct_for_arbitrary_set_maps"
+  linear_specialization: "correct"
+  chain_map_reflection: "correct_iff_induced_H1_injective"
+  finite_witness: "reproduced_exactly"
+  degenerate_cases: "correct"
+  target_or_process_import: "not_detected_as_written"
+  physical_admissibility: "not_established"
+  adoption_status: "blocked_adoption_open_continuation"
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-032-MATH-001"
+    payload_type: "lemma"
+    name: "cross_complex_set_vector_space_boundary_lemma"
+    statement: "For linear G:A_E->A_E', preservation is equivalent to G(B_E) subset B_E'; then the induced quotient map is linear and reflection is equivalent to G^{-1}(B_E')=B_E. For arbitrary functions the factorization theorem is a Set statement."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-032-MATH-002"
+    payload_type: "finite_model"
+    name: "cross_complex_function_census"
+    statement: "For a four-state source with two quotient classes and an eight-state target with four quotient classes, 4096 total functions contain 256 preserving functions and 192 preserving-and-reflecting functions; both theorem mismatch counts are zero."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-032-MATH-003"
+    payload_type: "countermodel"
+    name: "nonlinear_induced_set_map_guard"
+    statement: "With A=K=F2 and B=0, G(z)=z+1 preserves and reflects equality but is not linear. Thus arbitrary-map factorization must not be overread as linear."
+    claim_status: "draft/control"
+finite_checks:
+  four_state_witness:
+    source_states: 4
+    ordered_pairs: 16
+    related_pairs: 8
+    unrelated_pairs: 8
+    mismatches: 0
+    induced_H1: "identity"
+    F1_invertible: false
+  cross_complex_census:
+    total_functions: 4096
+    preserving_functions: 256
+    preserving_and_reflecting_functions: 192
+    preservation_factorization_mismatches: 0
+    reflection_injectivity_mismatches: 0
+scope_guards:
+  category: "General theorem lives in Set; linearity is asserted only in the linear and chain-map specializations."
+  primitive_selection: "The shared differential selects both quotient boundaries and declared moves."
+  physical_scope: "No physical morphism category admissibility covariance reversibility or general EqSrc result is established."
+  promotion: "No ontology source-law downstream GR benchmark or Gate Chair promotion."
+next_packet_recommendation:
+  role_family: "refuter@0.2.0"
+  route_label: "ontology-law-research-packet"
+  packet_count: 1
+  objective: "Stress exact v3 for nontrivial instantiability categorical typing primitive independence degenerate models malformed maps and finite-variation robustness."
+  recommendation_only_not_executed: true

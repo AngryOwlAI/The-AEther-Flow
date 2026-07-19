@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-031`
-- Latest handoff: `handoff-0756`
-- Current status: `eqsrc_intrinsic_discriminator_admissibility_law_v3_cross_complex_reflection_scope_repaired_pending_fresh_smuggling_audit_no_adoption`
+- Active task: `RT-20260718-032`
+- Latest handoff: `handoff-0757`
+- Current status: `eqsrc_intrinsic_discriminator_admissibility_law_v3_audit_passed_at_proposal_scope_pending_bounded_refuter_stress_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-031`
-- Latest research handoff: `handoff-0756`
-- Latest research next action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact proposal-only v3 for typed cross-complex predicates, quotient factorization, induced-H1 reflection, the noninvertible witness, surviving v2 theorem scope, shared-differential primitive selection, target or process import, and physical-admissibility or covariance overread. Do not repair adopt stress or promote the candidate.
+- Latest research task: `RT-20260718-032`
+- Latest research handoff: `handoff-0757`
+- Latest research next action: Run one bounded Refuter ontology-law-research-packet against exact proposal-only v3 for nontrivial source-only instantiability, categorical typing, primitive independence, degenerate models, malformed maps, and finite-variation robustness. Do not repair adopt or promote the candidate.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_intrinsic_discriminator_admissibility_law_v3_smuggling_audit`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress`
+- Role family: `refuter@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Audit the exact proposal-only v3 cross-complex typing and reflection-scope repair before Refuter stress or protected adoption review.
+- Milestone burden: Stress the audited exact proposal-only v3 object before protected adoption review.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `20368b1aca64a5f425b2f03ecfdbc4586298468ee2c541cf4baefef06657df6b`
-- JSON SHA-256: `8152296cd60f5c4f1f05155d0e17fb4d805f16148b9a629ef0768c93202a8068`
+- YAML SHA-256: `839529aea6f72a000d5e2626d8af7ce1041960d543a46b5e9fd24ac6d73ba805`
+- JSON SHA-256: `a8ea54c743fac6488a7e277561cfc6d1c3532b8f52e27b766d515c645770d4b7`
 
 ## Authority Warning
 

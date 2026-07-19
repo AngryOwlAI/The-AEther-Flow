@@ -1,0 +1,113 @@
+% authority: supporting
+% status: draft/control
+% task: RT-20260718-032
+\section{Fresh smuggling audit of the intrinsic-discriminator v3 candidate}
+
+\paragraph{Scope.}
+This is a bounded audit of the exact proposal-only object
+\(\mathrm{EqSrcIntrinsicDiscriminatorAdmissibilityLaw}_{\rm src}^{\rm cand,v3}\).
+It supplies no candidate repair, ontology adoption, physical-admissibility
+claim, general \(\mathrm{EqSrc}\) discharge, or downstream GR promotion.
+
+\subsection{Audit theorem}
+
+Let \(A,A'\) be sets with equivalence relations induced by quotient maps
+\(\chi:A\to K\) and \(\chi':A'\to K'\). For an arbitrary function
+\(G:A\to A'\), relation preservation is equivalent to the existence of a
+unique set map \(\bar G:K\to K'\) satisfying
+\[
+  \chi'G=\bar G\chi .
+\]
+Under this factorization, relation reflection is equivalent to injectivity of
+\(\bar G\). This is a theorem in \(\mathbf{Set}\).
+
+If \(A,A'\) are vector spaces, \(B\subseteq A\), \(B'\subseteq A'\) are
+subspaces, and \(G\) is linear, then preservation is equivalent to
+\[
+  G(B)\subseteq B'.
+\]
+The induced quotient map is then linear, and reflection is equivalent to
+\[
+  G^{-1}(B')=B.
+\]
+
+For a linear chain map \(F:E\to E'\), the chain identities give boundary
+preservation, so \(H_1(F)\) is defined and
+\[
+ \operatorname{RelRefl}(F_1|_{A_E})
+ \iff \ker H_1(F)=0
+ \iff (F_1|_{A_E})^{-1}(B_{E'})=B_E.
+\]
+Thus a chain isomorphism is sufficient but not necessary for reflection.
+
+\subsection{Categorical interpretation guard}
+
+The general factorization theorem does not make \(\bar G\) linear. Take
+\(A=K=\mathbb F_2\), \(B=0\), and \(G(z)=z+1\). Equality is preserved and
+reflected, and the unique induced set map exists, but \(G(0)\ne0\), so it is
+not linear. V3 uses ``map'' in the arbitrary-function theorem and separately
+marks the linear and chain-map specializations. The guard is therefore
+nonblocking.
+
+\subsection{Independent finite checks}
+
+The four-state witness from v3 was independently enumerated. It has four
+states, eight related ordered pairs, eight unrelated ordered pairs, and zero
+preservation or reflection mismatches over all sixteen ordered pairs.
+\(F_1\) is noninvertible while the induced \(H_1(F)\) is the identity.
+
+For a separate cross-complex census, let the source have four states divided
+into two classes of size two and let the destination have eight states divided
+into four classes of size two. Of the \(8^4=4096\) functions:
+\[
+  N_{\rm preserve}=256,\qquad
+  N_{\rm preserve+reflect}=192.
+\]
+Enumeration gives zero mismatches between preservation and quotient
+factorization and zero mismatches between reflection and injectivity of the
+induced quotient map.
+
+The degenerate cases also agree with the theorem. If \(K_E=0\), every induced
+map is injective and reflection holds. If \(K_{E'}=0\), reflection holds
+exactly when \(K_E=0\). An injective nonsurjective \(H_1(F)\) still reflects.
+
+\subsection{Declared-variation orbit lemma}
+
+For the candidate's boundary translations,
+\[
+ z\mathrel{\mathrm{EqCand}_E}z'
+ \iff z'-z\in B_E
+ \iff \exists \tau_c\in\mathrm{AdmVar}(E)\; \tau_c(z)=z'.
+\]
+Therefore relation classes are exactly orbits of the declared translation
+action. Robustness under those moves is true by construction and is not an
+independent physical selection result.
+
+\subsection{Dependency and smuggling audit}
+
+No target atlas, target metric, benchmark success, workflow state, registry
+value, role authority, validator result, handoff, checkpoint, or generated
+derivative supplies a mathematical premise. The construction is source-pure
+as written.
+
+The positive physical burden remains open. Current ontology does not derive
+the chain-package family, differentials, homology discriminator, physical
+morphism category, or admitted variations. Formal naturality for supplied
+chain maps is not physical covariance, gauge equivalence, reversibility, or
+empirical adequacy.
+
+\subsection{Classification and stop}
+
+The audit result is
+\[
+ \texttt{source\_pure\_as\_written\_formal\_repair\_verified\_pending\_bounded\_refuter\_stress}.
+\]
+The source-extension classification is
+\texttt{new\_ontology\_primitive\_candidate}; the status remains
+\texttt{proposal-only} and
+\texttt{blocked\_adoption\_open\_continuation}. General \(\mathrm{EqSrc}\)
+and the Distance-to-GR and metric-use ledgers are unchanged.
+
+The next lawful route is exactly one bounded Refuter stress packet against
+exact v3. Repeating this audit without new mathematical payload requires
+freeze review. No repair, adoption, or promotion is authorized here.
