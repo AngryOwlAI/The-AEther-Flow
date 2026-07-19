@@ -1,0 +1,125 @@
+artifact_id: "child_phys_math_eqsrc_quotient_selector_candidate"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-023"
+job_id: "AJ-RT-20260718-023-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_path: "research_control/tasks/RT-20260718-020/artifacts/eqsrc_family_closure_source_law_candidate_v3.tex"
+candidate_hash: "e7580253bdcfcce83e5181153752e72f597059196eb36cefd0dbe83380e2ad79"
+refuter_path: "research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex"
+refuter_hash: "9f6e92dd2160bafcfb55fc04eac82a26266facf29c04757b2f7ccfdcbb4d9b29"
+result_classification: "positive_proposal_only_candidate_with_qualified_sharpness"
+fatal_internal_gap: false
+exact_v3_compatibility: "PASS conditional on the intended groupoid cancellation meaning of inverse-unit equations"
+adoption_status: "blocked_adoption_open_continuation"
+general_EqSrc_discharged: false
+distance_to_gr_ledger_changed: false
+
+formal_objects_and_maps:
+  family: "F={A0,A1,A2,A3}"
+  group: "G=Z/4Z"
+  subgroup: "H={0,2}"
+  quotient: "Q=G/H isomorphic to Z/2Z with quotient map q:G->Q"
+  profile: "s(A_i)=i"
+  quotient_label: "chi=q composed with s"
+  selector: "Pass(A,B) iff s(B)-s(A) lies in H iff chi(A)=chi(B)"
+  selector_classes:
+    - "{A0,A2}"
+    - "{A1,A3}"
+  ledger:
+    fiber: "Lambda(A,B)={ell_AB} with equality congruence"
+    constructors: "Unique endpoint-compatible identity inverse and composition maps"
+    decision: "L_AB(ell_AB)=Pass iff chi(A)=chi(B)"
+  proxy:
+    fiber: "P(A,B)={p_AB} with equality congruence"
+    constructors: "Unique endpoint-compatible identity inverse and composition maps"
+    decision: "P_AB(p_AB)=Pass"
+  provenance:
+    primitive_leaves: "One endpoint-tagged formal source leaf for A not equal to B and no primitive diagonal leaf"
+    algebra: "Exact-v3 identity inverse and composition term grammar"
+    congruence: "Exact-v3 least constructor congruence with no additional equations"
+    consequence: "Every certificate fiber is nonempty so the ledger selector rather than absence of syntax determines cross-fiber acceptance"
+  negative_control:
+    index_set: "{n}"
+    outcomes: "{Pass,Block} with equality congruence and pass set {Pass}"
+    decision: "delta_n,AB(w)=Pass for every raw certificate"
+  acceptance: "Every certificate in Cert(A,B) is accepted exactly when chi(A)=chi(B)"
+
+proof_steps:
+  nondegeneracy:
+    status: "PASS"
+    reason: "A0 is related to A2 and A1 to A3 while A0 is not related to A1 so the relation is neither equality nor universal."
+  identity:
+    status: "PASS"
+    reason: "s(A)-s(A)=0 lies in H."
+  inverse:
+    status: "PASS"
+    reason: "d in H implies -d in H."
+  composition:
+    status: "PASS"
+    reason: "d1 and d2 in H imply d1+d2 in H."
+  exact_v3_coherence:
+    status: "PASS"
+    reason: "Singleton ledger and proxy constructors satisfy their laws strictly provenance laws hold modulo exact-v3 congruence and constant negative controls make outcome coherence immediate."
+  congruence_invariance:
+    status: "PASS"
+    reason: "Ledger and proxy decisions are constant on singleton component fibers and delta is constant."
+  selector_stability:
+    status: "PASS"
+    variation_class: "V_H=H^F including the identity and 15 nonidentity variations"
+    proof: "For s'(A)=s(A)+h_A with h_A in H the quotient label q(s'(A)) equals q(s(A)) and acceptance is unchanged certificate by certificate."
+    qualification: "The zero variation is retained so the class is composition-closed."
+  relabeling_naturality:
+    status: "PASS under transported structure"
+    proof: "For a bijection sigma transport s by s composed with sigma inverse and reindex all endpoint data; selector values then commute with sigma."
+  automorphism_naturality:
+    status: "PASS"
+    proof: "Every automorphism of Z4 preserves the characteristic subgroup H and induces an automorphism of G/H that preserves quotient-label equality."
+
+counterexample_and_qualified_sharpness:
+  arbitrary_outside_H_variations: "stability can fail"
+  injectivity_preserving_counterexample:
+    variation: "r(A0)=1 r(A1)=3 r(A2)=r(A3)=0"
+    new_profile: "(1,0,2,3)"
+    effect: "A0 related A2 changes from Pass to Block while A1 related A2 changes from Block to Pass."
+  exact_qualification:
+    finding: "Membership of every r(A) in H is sufficient but not necessary."
+    maximal_stable_class: "All additive variations r:F->G for which q(r(A)) is constant over F."
+    witness: "The uniform outside-H shift r(A)=1 for every A preserves the selector."
+    conclusion: "V_H is sharp only against independently varying outside-H quotient components and is a proper subgroup of the maximal stabilizer."
+
+provenance_findings:
+  formal_source_provenance: "COMPLETE for the constructed model"
+  roots:
+    - "Four source-object tokens and the endpoint-tag constructor"
+    - "Finite group table of Z4"
+    - "Subgroup H and profile table s"
+    - "Boolean and outcome constants"
+    - "Endpoint-tagged primitive provenance leaves"
+  dependency_chain: "source roots -> quotient label -> ledger decision -> exact-v3 acceptance"
+  factorization: "No target workflow registry validator benchmark or adoption datum occurs."
+  physical_derivation: "NOT ESTABLISHED"
+  ontology_boundary: "Current ontology does not derive s or H or a physical interpretation of the formal endpoint-tagged certificate data."
+
+limitations:
+  - "Robustness is relative to a variation class defined from the same underived H that defines the selector."
+  - "V_H is sufficient but not maximal."
+  - "Relabeling naturality means equivariance after transporting all source data and not invariance of the fixed profile under arbitrary permutations."
+  - "A formal translation must explicitly include both inverse-cancellation schemes."
+  - "No exact-GR recovery empirical discriminator uniqueness or current-ontology necessity follows."
+
+recommended_next_role:
+  role: "smuggling-auditor@0.2.0"
+  purpose: "Audit the complete source-root DAG transported-naturality claim and distinction between relative stability and underived selector or admissibility choice."
+  requires_human_gate: false
+
+forbidden_conclusions:
+  - "No canonical ontology edit or source-law adoption."
+  - "No general EqSrc discharge."
+  - "No claim that current ontology derives s H or the selector."
+  - "No RetainH GenH or M_src adoption."
+  - "No Distance-to-GR ledger change."
+  - "No matter-coupling or Einstein-equation derivation."
+  - "No benchmark promotion Gate Chair verdict or completed derivation."
+  - "No conclusion beyond this bounded candidate or future source-extension impossibility."

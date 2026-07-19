@@ -1,0 +1,589 @@
+completion_id: "AJC-AJ-RT-20260718-023-001"
+job_id: "AJ-RT-20260718-023-001"
+task_id: "RT-20260718-023"
+decision_id: "DDR-20260718-023"
+status: "completed"
+completed_at: "2026-07-19T11:01:01Z"
+completed_by_role: "candidate-constructor@0.2.0--RT-20260718-023"
+source_role_id: "candidate-constructor"
+source_role_version: "0.2.0"
+plan_task_id: "ordinary_eqsrc_closure_provenance_selector_stability_candidate"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Constructed one proposal-only four-object exact-v3 EqSrc source-rooted quotient selector with nondegenerate classes {A0,A2} and {A1,A3}, a 16-element H-valued admissible variation class, a relative stability proof, transported naturality, and qualified sharpness. Current ontology does not derive the profile subgroup selector or variation class; general EqSrc remains undischarged and the Distance-to-GR ledger is unchanged."
+
+artifacts:
+  - "research_control/tasks/RT-20260718-023/artifacts/child_phys_math_eqsrc_quotient_selector_candidate.yaml"
+  - "research_control/tasks/RT-20260718-023/artifacts/child_phys_phil_eqsrc_quotient_selector_candidate.yaml"
+  - "research_control/tasks/RT-20260718-023/artifacts/parent_conflict_review_eqsrc_quotient_selector_candidate.yaml"
+  - "research_control/tasks/RT-20260718-023/artifacts/parent_fusion_notes_eqsrc_quotient_selector_candidate.md"
+  - "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_receipt.md"
+  - "research_control/tasks/RT-20260718-023/artifacts/validate_eqsrc_source_rooted_quotient_selector_candidate.py"
+  - "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260718-023/artifacts/child_phys_math_eqsrc_quotient_selector_candidate.yaml"
+  - "research_control/tasks/RT-20260718-023/artifacts/child_phys_phil_eqsrc_quotient_selector_candidate.yaml"
+  - "research_control/tasks/RT-20260718-023/artifacts/parent_conflict_review_eqsrc_quotient_selector_candidate.yaml"
+  - "research_control/tasks/RT-20260718-023/artifacts/parent_fusion_notes_eqsrc_quotient_selector_candidate.md"
+  - "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_receipt.md"
+  - "research_control/tasks/RT-20260718-023/artifacts/validate_eqsrc_source_rooted_quotient_selector_candidate.py"
+  - "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_validation.json"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260718-023/00_TASK.yaml"
+  - "research_control/tasks/RT-20260718-023/DDR-20260718-023.md"
+  - "research_control/tasks/RT-20260718-023/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-023/jobs/AJ-RT-20260718-023-001.yaml"
+  - "research_control/tasks/RT-20260718-023/jobs/completions/AJC-AJ-RT-20260718-023-001.yaml"
+  - "research_control/tasks/RT-20260718-023/roles/candidate-constructor@0.2.0--RT-20260718-023.yaml"
+  - "research_control/handoffs/handoff-0748.yaml"
+  - "research_control/handoffs/handoff-0748.md"
+
+extra_read_paths:
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0747.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - "research_control/design/source_equivalence_typed_object_schema_v1.md"
+  - "research_control/design/source_model_zoo_schema_v1.md"
+  - "research_control/design/source_certificate_schema_v1.md"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "research_control/tasks/RT-20260718-020/artifacts/eqsrc_family_closure_source_law_candidate_v3.tex"
+  - "research_control/tasks/RT-20260718-021/artifacts/eqsrc_closure_source_law_v3_smuggling_audit.tex"
+  - "research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true source_object_count=844 relationship_row_count=4193 semantic_row_count=844 vault_row_count=844 local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-020/artifacts/eqsrc_family_closure_source_law_candidate_v3.tex --json | exit_code=0 | object_id=TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V3"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex --json | exit_code=0 | object_id=TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=0 before activation | status=ready active_task=RT-20260718-022 latest_handoff=handoff-0747"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260718-023/artifacts/validate_eqsrc_source_rooted_quotient_selector_candidate.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260718-023/artifacts/validate_eqsrc_source_rooted_quotient_selector_candidate.py --write-report --json | exit_code=0 | status=PASS mechanized_H_variations_checked=16"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | project_system_improvement_required=true"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS project_improvement_signals=0"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS errors=0"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS findings=9"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS findings=9"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check | exit_code=0 | status=pass"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check | exit_code=0 | status=fresh"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json | exit_code=0 | status=PASS errors=0"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500 | exit_code=2 | expected_pre_checkpoint_boundary=legacy_validate_project_control registered_new_paths_not_yet_tracked"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | operational_metrics_only=true physics_claim_authority=false"
+  - "git diff --check | exit_code=0"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 844
+    relationship_row_count: 4193
+    semantic_row_count: 844
+    vault_row_count: 844
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-020/artifacts/eqsrc_family_closure_source_law_candidate_v3.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-020/artifacts/eqsrc_family_closure_source_law_candidate_v3.tex"
+      returned_object_ids:
+        - "TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V3"
+      generated_retrieval_evidence_ids: []
+      navigation_support_object_ids: []
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex"
+      returned_object_ids:
+        - "TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS"
+      generated_retrieval_evidence_ids: []
+      navigation_support_object_ids: []
+  canonical_inspections:
+    - object_id: "TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V3"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-020/artifacts/eqsrc_family_closure_source_law_candidate_v3.tex"
+      source_hash: "e7580253bdcfcce83e5181153752e72f597059196eb36cefd0dbe83380e2ad79"
+    - object_id: "TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex"
+      source_hash: "9f6e92dd2160bafcfb55fc04eac82a26266facf29c04757b2f7ccfdcbb4d9b29"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260718-023/artifacts/child_phys_math_eqsrc_quotient_selector_candidate.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260718-023/artifacts/child_phys_phil_eqsrc_quotient_selector_candidate.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260718-023/artifacts/parent_conflict_review_eqsrc_quotient_selector_candidate.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Both children support the positive bounded candidate. The parent qualified V_H as sufficient but not maximal, bounded naturality to transported data, and preserved the inverse-cancellation and profile-provenance limitations."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260718-023/artifacts/parent_fusion_notes_eqsrc_quotient_selector_candidate.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused candidate preserves exact-v3 lifting nondegenerate quotient classes relative stability transported naturality maximal-stabilizer qualification source-root limitations and every non-adoption boundary."
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Construct one proposal-only nondegenerate source-rooted EqSrc interpretation with a cross-fiber acceptance selector and an explicit nontrivial admissible finite-variation class, prove selector stability and naturality under that class or return a precise scoped obstruction."
+  missing_source_law: "A current-ontology-derived source profile subgroup selector and physically admissible finite-variation stability law for EqSrc."
+  underdetermination_statement: "Current ontology does not derive the proposed profile subgroup quotient selector or admissible variation class."
+  no_go_theorem_status: "not_present"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "EqSrcSourceRootedQuotientSelectorCandidate_v1 defines quotient-label equality for a declared finite source profile in Z4 and lifts it through singleton ledger and proxy fibers endpoint provenance and constant negative controls into exact-v3 acceptance."
+    formal_objects:
+      - "F_src={A0,A1,A2,A3}"
+      - "G=Z/4Z"
+      - "H={0,2}"
+      - "s:F_src->G"
+      - "q:G->G/H"
+      - "V_H=H^F_src"
+      - "exact-v3 ledger proxy provenance certificate and acceptance structures"
+    domains:
+      - "Four declared source objects and all ordered endpoint pairs"
+      - "Objectwise finite profile shifts in the declared 16-element class V_H"
+    maps:
+      - "s(A_i)=i"
+      - "Sel_H(A,B)=Pass iff s(B)-s(A) lies in H"
+      - "L_AB(ell_AB)=Sel_H(A,B)"
+      - "s_h(A)=s(A)+h_A for h_A in H"
+    proof_obligations:
+      - "Fresh Smuggling Auditor review of every source root and profile or subgroup selection"
+      - "Audit of the bounded meaning of admissibility and transported naturality"
+      - "Later Refuter stress only after a clean audit"
+      - "Protected human gate before source-law or ontology adoption"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Preserve exact-GR benchmark status as unpromoted."
+      - "Do not treat the proposal-only quotient selector as general EqSrc."
+      - "Audit source provenance and admissibility before stress or adoption."
+      - "Keep target atlas metric detector benchmark process status and derivatives outside every source definition."
+      - "Require protected human authority before source-law or ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+      - "detector_outcome"
+      - "approval_authority"
+      - "checkpoint_authority"
+    result: "No explicit target or process import appears in the constructed definition tree; independent audit remains required."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No adoption is requested. Any future canonical-ontology candidacy adoption or rejection requires explicit protected human authority after audit stress and selector routing."
+
+source_extension_category: "source_extension_candidate"
+source_extension_status:
+  candidate_created: true
+  current_ontology_derives_candidate: false
+  adopted: false
+  adoption_status: "blocked_adoption_open_continuation"
+  exact_gr_recovery_obligations_open: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - object: "EqSrcSourceRootedQuotientSelectorCandidate_v1"
+      classification: "blocked_adoption_open_continuation"
+      relation_to_current_ontology: "blocked_open"
+      claim_boundary_ref: "CB-EQSRC-CLOSURE-PROVENANCE-SELECTOR-STABILITY-CANDIDATE-001"
+      protected_authority_required: true
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+      blocked_overreads:
+        - "candidate as canonical ontology or adopted source law"
+        - "object labels as derivation of the source profile"
+        - "relative V_H stability as arbitrary finite-variation robustness"
+        - "formal source factorization as physical selection"
+        - "conditional exact-v3 model as general EqSrc discharge"
+        - "Distance-to-GR or downstream GR promotion"
+      notes: "One concrete proposal-only source-extension model was constructed and routed to independent audit."
+
+mathematical_decisiveness_contract:
+  active: true
+  status: "satisfied_by_constructed_candidate"
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - "Four-object finite source family"
+    - "Z4 profile group and proper subgroup H"
+    - "Quotient-label cross-fiber selector"
+    - "Complete exact-v3 certificate interpretation"
+    - "Sixteen-element admissible variation class V_H"
+    - "Maximal additive selector stabilizer"
+  maps:
+    - "s:F_src->Z4"
+    - "q:Z4->Z4/H"
+    - "Sel_H(A,B)=Pass iff q(s(A))=q(s(B))"
+    - "L_AB maps the singleton ledger value to Sel_H(A,B)"
+    - "s_h(A)=s(A)+h_A for h_A in H"
+  proof_obligations:
+    - "Fresh audit of arbitrary-label hidden-target opaque-lookup process-authority and variation-class smuggling"
+    - "Formal translation must display both inverse-cancellation schemes"
+    - "Refuter stress only after a clean audit"
+    - "Protected human gate before adoption"
+  failed_components: []
+  next_required_role: "smuggling-auditor"
+  no_fog_check: true
+  no_fog_explanation: "The packet constructs a four-object Z4 quotient selector that satisfies exact v3 under its intended cancellation equations and proves invariance for all 16 H-valued objectwise shifts. It also characterizes the larger common-coset stabilizer and supplies an injectivity-preserving relation-changing variation outside that stabilizer."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-EQSRC-CLOSURE-PROVENANCE-SELECTOR-STABILITY-CANDIDATE-001"
+
+bridge_attempt_status:
+  bridge_attempted: true
+  bridge_name: "EqSrcSourceRootedQuotientSelectorCandidate_v1"
+  bridge_result: "constructed_candidate"
+  candidate_map: "q composed with s maps each source object to a Z4/H class and exact-v3 ledger acceptance compares those quotient labels"
+  missing_primitive: "Current ontology does not derive G s H or a physical admissibility law for V_H."
+  preserves_blocks: true
+  blocked_outputs:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "general EqSrc discharge"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "M_src adoption"
+    - "g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-023-001"
+    payload_type: "finite_model"
+    name: "Four-object Z4 quotient selector model"
+    summary: "Constructs two nontrivial EqSrc candidate classes and lifts the selector into every exact-v3 certificate component."
+  - payload_id: "NMP-RT-20260718-023-002"
+    payload_type: "theorem"
+    name: "V_H relative stability theorem"
+    summary: "Proves certificate-by-certificate acceptance invariance under all 16 objectwise H-valued profile shifts."
+  - payload_id: "NMP-RT-20260718-023-003"
+    payload_type: "lemma"
+    name: "Transport equivariance"
+    summary: "Proves selector preservation under transported source-object bijections and H-preserving group automorphisms."
+  - payload_id: "NMP-RT-20260718-023-004"
+    payload_type: "explicit_witness"
+    name: "Qualified sharpness countervariation"
+    summary: "Provides an injectivity-preserving profile variation that changes the relation and characterizes the larger common-coset stabilizer."
+
+mathematical_payload_manifest:
+  - payload_id: "MP-RT-20260718-023-001"
+    payload_type: "finite_model"
+    object_name: "EqSrcSourceRootedQuotientSelectorCandidate_v1"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Supplies one nondegenerate exact-v3 source-extension model without adopting its roots or discharging general EqSrc."
+  - payload_id: "MP-RT-20260718-023-002"
+    payload_type: "theorem"
+    object_name: "V_H selector stability certificate"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves relative invariance for an explicit nontrivial finite-variation class."
+  - payload_id: "MP-RT-20260718-023-003"
+    payload_type: "lemma"
+    object_name: "Transport naturality and maximal additive stabilizer"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Bounds the naturality claim and exactly qualifies the chosen stability class."
+  - payload_id: "MP-RT-20260718-023-004"
+    payload_type: "source_extension_classification"
+    object_name: "Proposal-only quotient selector source-extension boundary"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    burden_effect: "selects_next"
+    summary: "Separates formal construction from current-ontology derivation and selects one fresh audit."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "source_equivalence"
+  waiver_decision_id: "DDR-20260718-023"
+  rationale: "The relative stability theorem is accompanied by both a relation-changing variation and a uniform outside-H stabilizer witness that bound the exact claim."
+  slots:
+    - countermodel_slot: "arbitrary_finite_variation_countermodel"
+      status: "satisfied"
+      scope: "An injectivity-preserving shift with independently changing quotient components changes two selector comparisons."
+      result_artifact: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    - countermodel_slot: "chosen_class_maximality_countermodel"
+      status: "satisfied"
+      scope: "A uniform shift by one lies outside V_H but preserves the selector and proves V_H is not maximal."
+      result_artifact: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    - countermodel_slot: "hidden_source_factorization_countermodel"
+      status: "deferred_to_selected_audit"
+      scope: "The next Smuggling Auditor packet must test hidden target opaque lookup label and process roots."
+      result_artifact: "research_control/handoffs/handoff-0748.yaml"
+  theorem_without_countermodel_justification:
+    status: "countermodel_obligations_satisfied"
+    rationale: "The theorem is explicitly relative to V_H and the artifact supplies witnesses both for failure beyond the stabilizer and preservation outside the chosen sufficient subclass."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Construct one proposal-only nondegenerate source-rooted EqSrc interpretation with a cross-fiber acceptance selector and an explicit nontrivial admissible finite-variation class, prove selector stability and naturality under that class or return a precise scoped obstruction."
+  explanation: "One bounded proposal-only exact-v3 quotient-selector model and relative stability theorem were constructed. Current ontology does not derive their source-extension roots, so general EqSrc and all downstream GR burdens remain blocked."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "scoped_source_extension_object"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The packet constructs an unaudited proposal-only source-extension model and relative stability theorem. It does not adopt a premise or discharge general EqSrc."
+  downstream_unlocked:
+    - "bounded_smuggling_audit_of_eqsrc_quotient_selector_candidate"
+  downstream_still_blocked:
+    - "general EqSrc discharge"
+    - "RetainH adoption"
+    - "GenH adoption"
+    - "M_src adoption"
+    - "g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+  explanation: "No Distance-to-GR ledger delta; only one audit packet is unlocked."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; the candidate uses proposal-only source-extension roots and makes no canonical ontology edit"
+  - burden: "Source equivalence EqSrc"
+    status: "one nondegenerate proposal-only model and relative stability theorem constructed pending audit; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged and not adopted"
+  - burden: "GenH"
+    status: "unchanged and not adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged and not adopted"
+  - burden: "g_eff"
+    status: "unchanged; no target or effective metric result"
+  - burden: "matter coupling"
+    status: "blocked and unchanged"
+  - burden: "Einstein equations"
+    status: "blocked and unchanged"
+  - burden: "finite-variation robustness"
+    status: "proved only relative to the declared 16-element H-valued variation class; physical admissibility and general robustness remain unaudited"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark evidence or promotion"
+  - burden: "Gate Chair status"
+    status: "unchanged; no verdict"
+  - burden: "current route freeze or hard-fail status"
+    status: "not frozen; construction added new payload and one fresh concrete-candidate audit remains open while generic signature and abstract stress cycling are barred"
+
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "continue_bridge_facing_candidate_path"
+  obstruction_summary: ""
+  rationale: "The construction directly answers the prior selector and stability obstruction with a concrete model and changes the next burden to audit rather than repeating signature repair or abstract stress."
+  repeated_burdens:
+    - "current ontology does not derive the source profile or subgroup"
+    - "physical admissibility of the finite-variation class remains underived"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-CLOSURE-SOURCE-LAW-SIGNATURE"
+  candidate_freeze_label: "EQSRC-CLOSURE-SOURCE-LAW-SIGNATURE"
+  prior_attempts_considered:
+    - "RT-20260718-015"
+    - "RT-20260718-017"
+    - "RT-20260718-018"
+    - "RT-20260718-019"
+    - "RT-20260718-020"
+    - "RT-20260718-021"
+    - "RT-20260718-022"
+    - "RT-20260718-023"
+  freeze_if:
+    - "The route returns to generic signature repair repeat v3 audit or abstract stress without auditing the concrete selector."
+    - "A later packet treats the object labels profile subgroup or admissibility declaration as current-ontology derivation."
+    - "The same construction burden recurs without new mathematical payload."
+  criteria_evaluated:
+    - "new nondegenerate finite model is present"
+    - "complete exact-v3 certificate lifting is present"
+    - "explicit nontrivial variation class and stability proof are present"
+    - "qualified sharpness and maximal stabilizer are present"
+    - "the next packet is a materially different audit"
+    - "adoption and downstream promotion remain blocked"
+  do_not_freeze_if:
+    - "A concrete source-rooted selector and explicit admissible variation class are constructed and routed to a fresh audit."
+  freeze_decision: "not_frozen"
+  decision_reason: "Continuation is non-orbital because this packet adds the concrete selector and stability data missing from every prior packet and changes the next role to audit of that exact object."
+  rationale: "The candidate is new mathematical payload; freezing the entire route before one independent audit would discard a materially distinct construction while generic cycling is separately barred."
+  next_allowed_route: "smuggling_auditor"
+
+route_cycle_control:
+  cycle_family: "eqsrc_family_closure_source_law"
+  current_cycle_step: "proposal_only_concrete_quotient_selector_candidate"
+  prior_related_tasks:
+    - "RT-20260718-015"
+    - "RT-20260718-017"
+    - "RT-20260718-018"
+    - "RT-20260718-019"
+    - "RT-20260718-020"
+    - "RT-20260718-021"
+    - "RT-20260718-022"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "This packet adds concrete source roots a nondegenerate selector an exact-v3 lifting and an explicit variation theorem. The next packet audits this exact construction and may not repeat generic closure-law work."
+  next_role_consequence: "smuggling-auditor@0.2.0"
+
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  scope: "source_extension_candidate"
+  failed_object: ""
+  exact_failure: ""
+  minimal_counterexample_path: ""
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "downstream_block_preserved"
+  forbidden_overread: "The absence of a new obstruction does not establish adoption general EqSrc downstream GR promotion or current-ontology derivation."
+
+next_recommended_role: "smuggling-auditor@0.2.0"
+next_recommendation: "Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for transitive provenance arbitrary-label hidden-target opaque-lookup process-authority and variation-class smuggling. Do not repair adopt or promote the candidate."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  source_law_adoption_authorized: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff claim or scope expansion"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "global theory rejection"
+    - "future source-extension impossibility"
+  summary: "Formal construction source-root provenance validator PASS role authority and checkpoint state are not physics adoption proof or downstream promotion authority."
+
+project_improvement_signals: []
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight refreshed local retrieval state and exact v3 candidate and Refuter lookups passed."
+      - "Handoff-0747 and the Candidate Constructor one-job overlay were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Two independent child analyses completed."
+      - "Parent conflict review resolved the maximal-stabilizer naturality profile-provenance and inverse-cancellation qualifications with zero additional rounds."
+      - "The four-object quotient selector exact-v3 lifting and relative stability theorem were fused."
+  task_local:
+    status: "PASS"
+    evidence:
+      - "Task-local validator passed with the exact two-class selector matrix all 16 H-valued variations an injectivity-preserving relation-changing countervariation and a uniform outside-H stabilizer witness."
+  parent_child_synthesis:
+    status: "PASS"
+    evidence:
+      - "Two required children completed independently and the parent resolved all tensions with zero additional rounds."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Research-control core and diff validators passed."
+      - "Documentation-impact and changed-file claim-language gates passed with zero hard failures."
+      - "Frontier compact task-index dependency and claim-graph checks passed."
+      - "The deprecated full wrapper reached only the expected pre-checkpoint boundary for registered new paths not yet tracked."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Frontier compact task-index dependency claim-graph and memory derivatives were regenerated and their focused checks passed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap and validate-only passed with nine known local-cache-only findings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-file claim-language validation passed with zero hard failures."

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-022`
-- Latest handoff: `handoff-0747`
-- Current status: `eqsrc_closure_source_law_candidate_v3_refuter_scoped_selector_stability_obstruction_pending_concrete_bridge_no_adoption`
+- Active task: `RT-20260718-023`
+- Latest handoff: `handoff-0748`
+- Current status: `eqsrc_source_rooted_quotient_selector_candidate_constructed_pending_smuggling_audit_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-022`
-- Latest research handoff: `handoff-0747`
-- Latest research next action: Run one bounded Candidate Constructor ontology-law-research-packet to construct a proposal-only nondegenerate provenance-complete source interpretation with a source-rooted cross-fiber acceptance selector and explicit admissible finite-variation class, then prove stability or return a precise scoped obstruction. Do not route another generic closure-law signature repair or repeat audit.
+- Latest research task: `RT-20260718-023`
+- Latest research handoff: `handoff-0748`
+- Latest research next action: Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for transitive source provenance arbitrary-label hidden-target opaque-lookup process-authority and variation-class smuggling. Do not repair adopt or promote the candidate.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_closure_provenance_selector_stability_candidate`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `eqsrc_source_rooted_quotient_selector_smuggling_audit`
+- Role family: `smuggling-auditor@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Construct one proposal-only nondegenerate current-ontology-anchored source interpretation with a provenance-backed cross-fiber acceptance selector and explicit admissible finite-variation stability certificate, or return a precise scoped obstruction.
+- Milestone burden: Audit exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for complete transitive source provenance arbitrary-label hidden-target opaque-lookup process-authority and variation-class smuggling while preserving proposal-only status.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `b6aace49ae84a8c05442bbd52bc864005c9fa6e6e9b28206446d65818d9d94ff`
-- JSON SHA-256: `e6736c5c42db0d7800166d686636def3d4475a8c643ecce0e0e1cabbc0791b1d`
+- YAML SHA-256: `56a63ddbeba12861f9ec3e66ab5fae566791954738436d71d33175e2d14f799b`
+- JSON SHA-256: `c2e0e1680939d6444fb738634bf42dc4e62561983ad11a1fcd899372ce63208d`
 
 ## Authority Warning
 

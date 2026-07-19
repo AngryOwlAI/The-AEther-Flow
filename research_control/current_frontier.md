@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-022` and `handoff-0747`.
+`RT-20260718-023` and `handoff-0748`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-022` |
-| Latest handoff ID | `handoff-0747` |
-| Current status | `eqsrc_closure_source_law_candidate_v3_refuter_scoped_selector_stability_obstruction_pending_concrete_bridge_no_adoption` |
+| Active task ID | `RT-20260718-023` |
+| Latest handoff ID | `handoff-0748` |
+| Current status | `eqsrc_source_rooted_quotient_selector_candidate_constructed_pending_smuggling_audit_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc closure v3 scoped selector obstruction to concrete bridge construction |
+| Current route family | eqsrc concrete quotient selector candidate to fresh smuggling audit |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One Candidate Constructor packet may construct a proposal-only nondegenerate provenance-complete source interpretation, a source-rooted cross-fiber acceptance selector, an explicit admissible finite-variation class, and a stability or naturality certificate or minimal countermodel. |
-| Next recommended action | Run one bounded Candidate Constructor ontology-law-research-packet to construct a proposal-only nondegenerate provenance-complete source interpretation with a source-rooted cross-fiber acceptance selector and explicit admissible finite-variation class, then prove stability or return a precise scoped obstruction. Do not route another generic closure-law signature repair or repeat audit. |
+| Required next authority | One Smuggling Auditor packet may audit exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for declaration closure transitive provenance semantic source factorization arbitrary-label hidden-target opaque-lookup process-authority and variation-class smuggling and return one exact audit classification. |
+| Next recommended action | Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for transitive source provenance arbitrary-label hidden-target opaque-lookup process-authority and variation-class smuggling. Do not repair adopt or promote the candidate. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-022` |
-| Latest research handoff ID | `handoff-0747` |
-| Latest research next action | Run one bounded Candidate Constructor ontology-law-research-packet to construct a proposal-only nondegenerate provenance-complete source interpretation with a source-rooted cross-fiber acceptance selector and explicit admissible finite-variation class, then prove stability or return a precise scoped obstruction. Do not route another generic closure-law signature repair or repeat audit. |
+| Latest research task ID | `RT-20260718-023` |
+| Latest research handoff ID | `handoff-0748` |
+| Latest research next action | Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for transitive source provenance arbitrary-label hidden-target opaque-lookup process-authority and variation-class smuggling. Do not repair adopt or promote the candidate. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-022/00_TASK.yaml`.
-- Active task objective: Execute one bounded Refuter ontology-law-research-packet against exact proposal-only EqSrcClosureLaw_src^cand v3 for nontrivial source-only model existence, transitive source-root provenance, malformed-definition rejection, congruence and accepted-totality coherence, degenerate models, and finite-variation robustness.
-- Latest handoff path: `research_control/handoffs/handoff-0747.yaml`.
-- Latest handoff summary: RT-20260718-022 completed one bounded Refuter stress of exact proposal-only EqSrcClosureLaw_src^cand v3. Under the intended provenance cancellation equations a two-object finite-congruence-quotient source-only witness satisfies the law. Holding its algebraic structure fixed while changing the two off-diagonal ledger-decision entries produces a second full law model and changes the induced relation from universal equivalence to equality. The exact Refuter classification is scoped_obstruction because v3 supplies no current-ontology-derived selector for its primitive decisions and no explicit admissible finite-variation stability law. The candidate remains proposal-only and unadopted general EqSrc remains undischarged and the Distance-to-GR ledger is unchanged.
-- Current route family: eqsrc closure v3 scoped selector obstruction to concrete bridge construction.
-- Next recommended action: Run one bounded Candidate Constructor ontology-law-research-packet to construct a proposal-only nondegenerate provenance-complete source interpretation with a source-rooted cross-fiber acceptance selector and explicit admissible finite-variation class, then prove stability or return a precise scoped obstruction. Do not route another generic closure-law signature repair or repeat audit.
+- Active task path: `research_control/tasks/RT-20260718-023/00_TASK.yaml`.
+- Active task objective: Construct one proposal-only nondegenerate provenance-complete source interpretation with a source-rooted cross-fiber acceptance selector and an explicit nontrivial admissible finite-variation class, then prove selector stability and naturality under that class or return a precise scoped obstruction.
+- Latest handoff path: `research_control/handoffs/handoff-0748.yaml`.
+- Latest handoff summary: RT-20260718-023 constructed one proposal-only four-object exact-v3 EqSrc source-rooted quotient selector. The finite profile in Z4 and subgroup H={0,2} induce the nondegenerate classes {A0,A2} and {A1,A3}. Complete certificate-level lifting satisfies exact v3 under its intended inverse-cancellation schemes. The 16-element class V_H=H^F has a proved relative stability certificate; transported naturality and the larger common-coset stabilizer are characterized, and an injectivity-preserving countervariation shows qualified sharpness. Current ontology does not derive the profile subgroup selector or admissible class. General EqSrc remains undischarged and the Distance-to-GR ledger is unchanged.
+- Current route family: eqsrc concrete quotient selector candidate to fresh smuggling audit.
+- Next recommended action: Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for transitive source provenance arbitrary-label hidden-target opaque-lookup process-authority and variation-class smuggling. Do not repair adopt or promote the candidate.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded Candidate Constructor ontology-law-research-packet to construct a proposal-only nondegenerate provenance-complete source interpretation with a source-rooted cross-fiber acceptance selector and explicit admissible finite-variation class, then prove stability or return a precise scoped obstruction. Do not route another generic closure-law signature repair or repeat audit.
+Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for transitive source provenance arbitrary-label hidden-target opaque-lookup process-authority and variation-class smuggling. Do not repair adopt or promote the candidate.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-022`;
-- latest handoff: `handoff-0747`;
-- current status: `eqsrc_closure_source_law_candidate_v3_refuter_scoped_selector_stability_obstruction_pending_concrete_bridge_no_adoption`;
+- active task: `RT-20260718-023`;
+- latest handoff: `handoff-0748`;
+- current status: `eqsrc_source_rooted_quotient_selector_candidate_constructed_pending_smuggling_audit_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0747.yaml`
-- `research_control/tasks/RT-20260718-022/00_TASK.yaml`
+- `research_control/handoffs/handoff-0748.yaml`
+- `research_control/tasks/RT-20260718-023/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0747*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0748*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
