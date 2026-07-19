@@ -82,6 +82,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V2` `research_control/tasks/RT-20260718-018/artifacts/eqsrc_family_closure_source_law_candidate_v2.tex`
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V3` `research_control/tasks/RT-20260718-020/artifacts/eqsrc_family_closure_source_law_candidate_v3.tex`
 - `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1` `research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex`
+- `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS` `research_control/tasks/RT-20260718-025/artifacts/eqsrc_source_rooted_quotient_selector_refuter_stress.tex`
 - `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-024/artifacts/eqsrc_source_rooted_quotient_selector_smuggling_audit.tex`
 - `TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-108/artifacts/146_CHECKER_REPLAY_CONSUMPTION_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-107/artifacts/145_CHECKER_REPLAY_CONSUMPTION_SMUGGLING_AUDIT.tex`
@@ -903,6 +904,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-023-PARENT-FUSION-NOTES-EQSRC-QUOTIENT-SELECTOR-CANDIDATE` `wiki/markdown/md-research-control-tasks-rt-20260718-023-parent-fusion-notes-eqsrc-quotient-selector-candidate.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-024-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-024-eqsrc-source-rooted-quotient-selector-smuggling-audit-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-024-PARENT-FUSION-NOTES-EQSRC-QUOTIENT-SELECTOR-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-024-parent-fusion-notes-eqsrc-quotient-selector-smuggling-audit.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-025-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-025-eqsrc-source-rooted-quotient-selector-refuter-stress-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-025-PARENT-FUSION-NOTES-EQSRC-QUOTIENT-SELECTOR-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260718-025-parent-fusion-notes-eqsrc-quotient-selector-refuter-stress.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -998,6 +1001,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V2` `wiki/tex/tex-eqsrc-family-closure-source-law-candidate-v2.md`
 - `WIKI-TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V3` `wiki/tex/tex-eqsrc-family-closure-source-law-candidate-v3.md`
 - `WIKI-TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1` `wiki/tex/tex-eqsrc-source-rooted-quotient-selector-candidate-v1.md`
+- `WIKI-TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS` `wiki/tex/tex-eqsrc-source-rooted-quotient-selector-refuter-stress.md`
 - `WIKI-TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-SMUGGLING-AUDIT` `wiki/tex/tex-eqsrc-source-rooted-quotient-selector-smuggling-audit.md`
 - `WIKI-TEX-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/tex/tex-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-TEX-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/tex/tex-legacy-ontology-aether-flow-dynamics.md`
@@ -1656,6 +1660,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-023-PARENT-FUSION-NOTES-EQSRC-QUOTIENT-SELECTOR-CANDIDATE` `research_control/tasks/RT-20260718-023/artifacts/parent_fusion_notes_eqsrc_quotient_selector_candidate.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-024-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260718-024/artifacts/eqsrc_source_rooted_quotient_selector_smuggling_audit_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-024-PARENT-FUSION-NOTES-EQSRC-QUOTIENT-SELECTOR-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-024/artifacts/parent_fusion_notes_eqsrc_quotient_selector_smuggling_audit.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-025-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-025/artifacts/eqsrc_source_rooted_quotient_selector_refuter_stress_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-025-PARENT-FUSION-NOTES-EQSRC-QUOTIENT-SELECTOR-REFUTER-STRESS` `research_control/tasks/RT-20260718-025/artifacts/parent_fusion_notes_eqsrc_quotient_selector_refuter_stress.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

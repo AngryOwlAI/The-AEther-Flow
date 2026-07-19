@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T11:49:02Z`
-- Source fingerprint: `646e8573372a2a91e724faa072d2a5597a4c136ea8ecb906411b613071581836`
-- Nodes: `19165`
-- Edges: `66551`
+- Generated from tracked state as of: `2026-07-19T12:31:40Z`
+- Source fingerprint: `39fd9fe4243a32ccd34982248801051880e2aa9ff147a8c433a0b489dc17f74e`
+- Nodes: `19191`
+- Edges: `66611`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 978 |
+| `completion_yaml` | 979 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 749 |
+| `handoff_yaml` | 750 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 978 |
+| `agent_job` | `support_only` | 979 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10046 |
-| `blocked_burden` | `blocked` | 3652 |
-| `claim_boundary` | `support_only` | 935 |
-| `draft_control_candidate` | `draft_control` | 555 |
+| `artifact` | `support_only` | 10060 |
+| `blocked_burden` | `blocked` | 3653 |
+| `claim_boundary` | `support_only` | 936 |
+| `draft_control_candidate` | `draft_control` | 559 |
 | `draft_control_candidate` | `proposal_only` | 78 |
 | `draft_control_candidate` | `science_draft` | 62 |
-| `frozen_negative` | `frozen_negative` | 109 |
+| `frozen_negative` | `frozen_negative` | 110 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 749 |
+| `handoff` | `support_only` | 750 |
 | `human_gated_object` | `human_gated` | 420 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 67 |
+| `obstruction` | `blocked` | 68 |
 | `obstruction` | `rejected` | 1 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 300 |
+| `source_ontology_object` | `support_only` | 301 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 918 |
+| `task` | `support_only` | 919 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-024`
-- Latest handoff: `handoff-0749`
-- Handoff path: `research_control/handoffs/handoff-0749.yaml`
-- Next action: Run one bounded Refuter ontology-law-research-packet against exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for profile-reassignment nonuniqueness primitive-table provenance independently justified physical admissibility relation-changing source variations and decorated naturality versus physical covariance. Do not repair adopt or promote the candidate.
+- Active task: `RT-20260718-025`
+- Latest handoff: `handoff-0750`
+- Handoff path: `research_control/handoffs/handoff-0750.yaml`
+- Next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently motivated symmetry-breaking source law, a distinct bridge-facing candidate, a local freeze of exact EqSrcSourceRootedQuotientSelectorCandidate_v1, or protected human-gated adoption review. Do not repeat the quotient-table construction, generic signature repair, or source-purity audit.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

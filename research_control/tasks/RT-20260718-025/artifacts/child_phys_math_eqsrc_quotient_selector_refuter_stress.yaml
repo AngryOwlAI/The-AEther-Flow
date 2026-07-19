@@ -1,0 +1,37 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260718-025"
+agent_job_id: "AJ-RT-20260718-025-001"
+scope: "Exact finite stress of proposal-only EqSrcSourceRootedQuotientSelectorCandidate_v1."
+formal_objects:
+  source_set: "{A0,A1,A2,A3}"
+  group: "Z/4Z"
+  subgroup: "H={0,2}"
+  base_profile: "s=(0,1,2,3)"
+  base_partition: "{{A0,A2},{A1,A3}}"
+results:
+  bijective_profile_count: 24
+  distinct_profile_induced_partitions: 3
+  profiles_per_partition: 8
+  bare_object_permutation_stabilizer_size: 8
+  bare_object_partition_orbit_size: 3
+  additive_variation_count: 256
+  full_relation_stabilizer_size: 32
+  declared_V_H_size: 16
+  relation_changing_additive_variations: 224
+  bijective_relation_changing_profiles: 16
+  exact_v3_closure: "conditional_pass_under_both_typed_inverse_cancellation_equations"
+new_mathematical_payload:
+  - "Partition-orbit theorem: the nondegenerate two-plus-two selector has an eight-element S4 stabilizer and a three-element orbit."
+  - "Admissibility-invariance dichotomy: every invariant variation class is a subset of the 32-element answer-preserving stabilizer; any included relation-changing variation refutes robustness."
+  - "Decorated-transport separation: all 24 transports are equivariant after transporting the profile, while only eight active bare-object permutations preserve the fixed selector."
+countermodel:
+  profile_reassignment: "s'=(0,2,1,3) changes {{A0,A2},{A1,A3}} to {{A0,A1},{A2,A3}}."
+  additive_shift: "r=(0,1,3,0) is injectivity-preserving and changes the selected partition."
+classification: "scoped_obstruction"
+failed_premise: "No independently source-justified rule in the inspected current ontology selects the primitive profile and physically admissible variation class."
+limitations:
+  - "The finite results do not prove future source-extension impossibility."
+  - "The internal quotient model and exact-v3 conditional closure are not refuted."
+  - "No global EqSrc or GR conclusion follows."

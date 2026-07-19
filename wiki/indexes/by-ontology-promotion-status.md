@@ -53,6 +53,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V2` `research_control/tasks/RT-20260718-018/artifacts/eqsrc_family_closure_source_law_candidate_v2.tex`
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V3` `research_control/tasks/RT-20260718-020/artifacts/eqsrc_family_closure_source_law_candidate_v3.tex`
 - `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1` `research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex`
+- `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS` `research_control/tasks/RT-20260718-025/artifacts/eqsrc_source_rooted_quotient_selector_refuter_stress.tex`
 - `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-024/artifacts/eqsrc_source_rooted_quotient_selector_smuggling_audit.tex`
 - `TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-108/artifacts/146_CHECKER_REPLAY_CONSUMPTION_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-107/artifacts/145_CHECKER_REPLAY_CONSUMPTION_SMUGGLING_AUDIT.tex`

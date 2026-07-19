@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-024`
-- Latest handoff: `handoff-0749`
-- Current status: `eqsrc_source_rooted_quotient_selector_formal_source_purity_audited_pending_refuter_stress_no_adoption`
+- Active task: `RT-20260718-025`
+- Latest handoff: `handoff-0750`
+- Current status: `eqsrc_source_rooted_quotient_selector_scoped_obstruction_pending_theoretical_selection_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-024`
-- Latest research handoff: `handoff-0749`
-- Latest research next action: Run one bounded Refuter ontology-law-research-packet against exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for profile-reassignment nonuniqueness primitive-table provenance independently justified physical admissibility relation-changing source variations and decorated naturality versus physical covariance. Do not repair adopt or promote the candidate.
+- Latest research task: `RT-20260718-025`
+- Latest research handoff: `handoff-0750`
+- Latest research next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently motivated symmetry-breaking source law, a distinct bridge-facing candidate, a local freeze of exact EqSrcSourceRootedQuotientSelectorCandidate_v1, or protected human-gated adoption review. Do not repeat the quotient-table construction, generic signature repair, or source-purity audit.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_source_rooted_quotient_selector_refuter_stress`
-- Role family: `refuter@0.2.0`
+- Route ID: `eqsrc_quotient_selector_post_obstruction_theoretical_selection`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Stress exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for profile-reassignment nonuniqueness primitive-table provenance independently justified physical admissibility relation-changing source variations and decorated naturality versus physical covariance.
+- Milestone burden: Select the next same-milestone packet after the exact quotient selector's primitive-selection and independent-admissibility scoped obstruction.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `1e6230b8d688d7c6b7c6a6e4e52c6d6d6757c00acd88bd6444dfbbdb7169d451`
-- JSON SHA-256: `8825b7c72530ec56d7e2df83933d8ee5fe4577d249c157bc84373048c2a09016`
+- YAML SHA-256: `0f4cd72acb37e4e2f4df0f3ca9938e2a5bd1a2045c3aac1ccf2214e1910f3711`
+- JSON SHA-256: `f14daaf0e11558ca249bcd07afd4b9cb8e9af722f499a9a50444ff66f0f191b1`
 
 ## Authority Warning
 

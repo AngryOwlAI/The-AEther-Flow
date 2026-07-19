@@ -1,0 +1,298 @@
+% authority: science-draft
+% status: draft/control
+% route: ontology-law-research-packet
+% refuter_loop_classification: scoped_obstruction
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Pass}{\mathsf{Pass}}
+\newcommand{\Block}{\mathsf{Block}}
+\newcommand{\Fsrc}{\mathcal F_{\mathrm{src}}}
+\newcommand{\Sel}{\mathsf{Sel}_{H}}
+\newcommand{\Vary}{\mathcal V_H}
+
+\title{EqSrc Source-Rooted Quotient Selector Candidate v1:\\
+Bounded Refuter Stress}
+\author{Refuter control packet RT-20260718-025}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This draft/control packet stresses exact proposal-only
+\texttt{EqSrcSourceRootedQuotientSelectorCandidate\_v1}. The candidate remains
+source-extension data with
+\texttt{blocked\_adoption\_open\_continuation}. It is not repaired, adopted,
+or promoted here.
+
+\begin{verbatim}
+refuter_loop_classification: scoped_obstruction
+target_milestone: source_equivalence_eqsrc
+candidate_internal_closure: conditional_pass
+bijective_profiles: 24
+distinct_profile_induced_partitions: 3
+profiles_per_partition: 8
+bare_object_permutation_stabilizer: 8
+partition_orbit: 3
+additive_variations: 256
+full_relation_stabilizer: 32
+declared_V_H: 16
+relation_changing_additive_variations: 224
+bijective_relation_changing_profiles: 16
+physical_admissibility: not_independently_derived
+decorated_transport_equivariance: pass
+physical_covariance: not_established
+current_ontology_derives_profile_or_admissibility: false
+general_EqSrc_discharged: false
+distance_to_gr_ledger_changed: false
+adoption_status: blocked_adoption_open_continuation
+\end{verbatim}
+
+\section{Target Claim and Stress Scope}
+
+Let
+\[
+ \Fsrc=\{A_0,A_1,A_2,A_3\},\qquad
+ G=\mathbb Z/4\mathbb Z,\qquad H=\{0,2\},
+\]
+with base profile \(s(A_i)=i\). The candidate defines
+\[
+ \Sel_s(A,B)=\Pass
+ \quad\Longleftrightarrow\quad
+ q(s(A))=q(s(B)),
+\]
+where \(q:G\to G/H\). Its base classes are
+\(\{A_0,A_2\}\) and \(\{A_1,A_3\}\).
+
+The stress attacks only the overread that this exact finite construction,
+without another source law, supplies a uniquely selected current-ontology
+EqSrc relation, an independently justified physical variation class, or
+physical covariance. The internal quotient arithmetic and conditional
+exact-v3 lifting remain legitimate model claims under their displayed
+assumptions.
+
+\section{Profile-Reassignment Nonuniqueness}
+
+\begin{theorem}[Three-partition orbit]
+Among the \(24\) bijections \(s:\Fsrc\to\mathbb Z_4\), the quotient selector
+realizes exactly the three two-plus-two partitions of \(\Fsrc\), with eight
+profiles per partition.
+\end{theorem}
+
+\begin{proof}
+The quotient \(q\circ s\) assigns two objects to each coset. Choosing one
+two-element fiber gives \(\binom42=6\) choices; identifying a fiber with its
+complement leaves three unordered partitions. For a fixed partition, either
+block can be the even coset and each block has two internal assignments, so
+\(2\cdot2\cdot2=8\) profiles realize it.
+\end{proof}
+
+For example,
+\[
+ s=(0,1,2,3)
+ \quad\hbox{selects}\quad
+ \{\{A_0,A_2\},\{A_1,A_3\}\},
+\]
+whereas
+\[
+ s'=(0,2,1,3)
+ \quad\hbox{selects}\quad
+ \{\{A_0,A_1\},\{A_2,A_3\}\}.
+\]
+Both profiles use the same bare objects, group, and subgroup. The current
+ontology inspected for this packet supplies no rule selecting one table.
+
+\section{Active Symmetry Versus Decorated Transport}
+
+\begin{theorem}[Fixed-selector stabilizer]
+The stabilizer of the base two-plus-two partition inside \(S_4\) has eight
+elements, and its orbit has three elements.
+\end{theorem}
+
+\begin{proof}
+A preserving permutation may swap the two elements within each block and may
+swap the two blocks. This gives
+\((S_2\times S_2)\rtimes S_2\), of order \(2\cdot2\cdot2=8\).
+Orbit--stabilizer gives \(24/8=3\), agreeing with the three partitions above.
+\end{proof}
+
+If a permutation \(\varphi\) transports both objects and the full profile,
+then \(s^\varphi=s\circ\varphi^{-1}\) and
+\[
+ \Sel_{s^\varphi}(\varphi A,\varphi B)=\Sel_s(A,B).
+\]
+This identity holds for all \(24\) permutations because the selector-bearing
+decoration is transported with the presentation. By contrast, only the eight
+stabilizer permutations preserve the fixed undecorated relation. The
+transposition exchanging \(A_1\) and \(A_2\) moves the base partition to a
+different orbit element.
+
+Therefore decorated transport equivariance is not an active symmetry of the
+fixed bare-source relation. It establishes neither uniqueness, observer
+independence, empirical invariance, nor physical covariance.
+
+\section{Variation Fragility and the Admissibility Dichotomy}
+
+For \(r:\Fsrc\to G\), let \(s_r=s+r\). The prior audit proved that the full
+additive relation stabilizer is
+\[
+ \operatorname{Stab}_{\mathrm{add}}(\Sel_s)
+ =\{r:q(r(A))\ \hbox{is constant in }A\},
+\]
+which has \(32\) elements. The declared
+\(\Vary=H^{\Fsrc}\) has \(16\) elements and is the zero-coset half.
+
+\begin{proposition}[Admissibility--invariance dichotomy]
+For any proposed variation class \(\mathcal A\subseteq G^{\Fsrc}\), the
+selector is invariant under every member of \(\mathcal A\) if and only if
+\[
+ \mathcal A\subseteq
+ \operatorname{Stab}_{\mathrm{add}}(\Sel_s).
+\]
+Consequently, any class containing one relation-changing shift fails the
+claimed robustness.
+\end{proposition}
+
+\begin{proof}
+The equivalence is the definition of the full stabilizer. The prior exact
+stabilizer theorem identifies that set with the constant quotient-coset
+shifts. Any element outside it changes at least one pair decision.
+\end{proof}
+
+Of the \(256\) additive shifts, \(224\) change the relation. Restricting to
+shifts for which \(s_r\) remains bijective still leaves \(16\) changing
+profiles. The explicit profile reassignment above corresponds to
+\[
+ r=s'-s=(0,1,3,0)\pmod4
+\]
+and changes the partition while preserving bijectivity.
+
+This does not show that the declared \(\Vary\) is mathematically invalid. It
+shows that calling a selector-preserving class ``physically admissible'' is
+not an independent robustness argument unless another source law selects that
+class without using preservation of the desired answer as its criterion.
+Current ontology does not derive such a law in the inspected scope.
+
+\section{Exact-v3 Closure Stress}
+
+Every profile-induced selector is equality of the two quotient labels, hence
+is reflexive, symmetric, and transitive. Singleton ledger, proxy, and negative
+control fibers preserve the candidate's exact-v3 lifting. The stress therefore
+returns a conditional pass under both displayed typed inverse-cancellation
+equations.
+
+This pass concerns internal model closure only. It does not derive the profile,
+admissibility class, or physical interpretation, and it does not discharge
+general EqSrc.
+
+\section{Scoped Obstruction}
+
+The failed premise is:
+
+\begin{quote}
+The inspected current ontology supplies an independently source-justified rule
+that uniquely selects the primitive profile and a physically admissible
+variation class for this candidate.
+\end{quote}
+
+The finite countermodel is the pair \((s,s')\) above together with the
+injectivity-preserving shift \(r=(0,1,3,0)\). The same bare source set and group
+data produce different nondegenerate relations. This blocks using the exact
+candidate alone as a current-ontology-derived or physically necessary EqSrc
+selector.
+
+The obstruction is local. It does not refute the candidate as proposal-only
+source-extension data, prove that no distinct symmetry-breaking source law can
+exist, reject the global ontology, or prove future source-extension
+impossibility.
+
+\section{No-Target-Import and Process Boundary}
+
+The stress uses only the displayed finite source objects, group arithmetic,
+profile tables, permutations, and relation matrices. It imports no target
+topology, smooth atlas, metric, proper time, detector semantics, or benchmark
+success. Registry rows, validators, roles, handoffs, generated derivatives,
+and checkpoint status are navigation or process evidence only and are not
+mathematical premises.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.31\linewidth}p{0.59\linewidth}}
+\toprule
+Burden & Status after this stress\\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit or adoption.\\
+Source equivalence EqSrc & Exact candidate has a scoped primitive-selection and admissibility obstruction; general EqSrc remains undischarged.\\
+RetainH and GenH & Unchanged and unadopted.\\
+ObsLoc and Resp & Unchanged.\\
+\(M_{\mathrm{src}}\) & Unchanged; no source-manifold promotion.\\
+\(g_{\mathrm{eff}}\) & Unchanged; no target or effective metric result.\\
+Matter coupling & Unchanged and blocked.\\
+Einstein equations & Unchanged and blocked.\\
+Finite-variation robustness & Relative stabilizer invariance passes; independent physical admissibility and relation-changing robustness fail in this exact scope.\\
+Benchmark promotion & Blocked; no benchmark promotion.\\
+Gate Chair status & Human-gated and unchanged.\\
+Current route freeze or hard-fail status & Freeze review required for this exact candidate route; global research continuation remains open.\\
+\bottomrule
+\end{longtable}
+
+The Distance-to-GR ledger is unchanged.
+
+\section{Freeze and Route-Cycle Decision}
+
+The exact candidate route has now completed construction, audit, and Refuter
+stress. The stress adds a finite countermodel, an exact \(S_4\) stabilizer and
+orbit theorem, an admissibility--invariance dichotomy, and the active-symmetry
+versus decorated-transport separation. A repeat signature repair, construction
+of the same quotient table, or repeat source-purity audit would orbit.
+
+The decision is \texttt{freeze\_review\_required} for this exact candidate
+route, not a global freeze. One distinct Theoretical Continuation Selector
+packet should choose among:
+\begin{enumerate}[leftmargin=*]
+  \item a genuinely independent symmetry-breaking source law;
+  \item a different bridge-facing source construction;
+  \item a local freeze of this exact quotient-selector route; or
+  \item a protected human-gated adoption review if adoption is actually
+  requested.
+\end{enumerate}
+
+\section{Forbidden Conclusions}
+
+This packet does not establish or authorize:
+\begin{itemize}[leftmargin=*]
+  \item canonical ontology modification, source-law adoption, or rejection;
+  \item candidate repair, general EqSrc, RetainH, GenH, or \(M_{\mathrm{src}}\);
+  \item physical admissibility, physical covariance, or empirical adequacy;
+  \item a target atlas, \(g_{\mathrm{eff}}\), matter coupling, or Einstein
+  equations;
+  \item benchmark promotion, Gate Chair verdict, or completed derivation;
+  \item a global no-go, global theory rejection, or future source-extension
+  impossibility.
+\end{itemize}
+
+\section{Source Materials}
+
+\begin{itemize}[leftmargin=*]
+  \item The proposal-only quotient selector:
+  \texttt{research\_control/tasks/RT-20260718-023/artifacts/}
+  \texttt{eqsrc\_source\_rooted\_quotient\_selector\_candidate\_v1.tex}.
+  \item The independent source-purity audit:
+  \texttt{research\_control/tasks/RT-20260718-024/artifacts/}
+  \texttt{eqsrc\_source\_rooted\_quotient\_selector\_smuggling\_audit.tex}.
+  \item The tracked route:
+  \texttt{research\_control/handoffs/handoff-0749.yaml}.
+\end{itemize}
+
+\end{document}
