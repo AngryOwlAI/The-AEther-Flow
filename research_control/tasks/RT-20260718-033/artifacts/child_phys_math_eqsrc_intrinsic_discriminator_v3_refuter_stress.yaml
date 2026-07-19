@@ -1,0 +1,41 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260718-033"
+agent_job_id: "AJ-RT-20260718-033-001"
+scope: "Exact finite stress of proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3."
+formal_objects:
+  carrier_family: "C2=F2<f>, C1=F2<a,b>, C0=0"
+  differential_family: "partial_2(f) in {0,a,b,a+b}"
+  relation: "x is related to y iff x+y lies in im partial_2"
+results:
+  valid_chain_packages: 4
+  carrier_states: 4
+  distinct_relations: 4
+  equality_relation_ordered_pairs: 4
+  nonzero_differential_relation_ordered_pairs: 8
+  equality_to_nonzero_symmetric_difference: 4
+  distinct_nonzero_symmetric_difference: 8
+  nontrivial_witness_classes: 2
+  nontrivial_witness_class_size: 2
+  declared_translation_group_size: 2
+  all_relations_equivalence: true
+  categorical_set_theorem: "pass"
+  linear_specialization: "pass"
+  chain_map_reflection_criterion: "pass"
+new_mathematical_payload:
+  - "Representation theorem: every F2-linear congruence A/B is realized by a two-truncated chain package with C2=B, C1=A, C0=0, and partial_2 the inclusion."
+  - "Four-differential countermodel: fixed carriers admit four valid differentials and four distinct candidate relations."
+  - "Rank-one variation witness: changing partial_2(f) from 0 to a changes equality to the coset relation modulo <a>."
+  - "Orbit theorem: candidate relation classes are exactly the orbits of the declared boundary-translation group."
+countermodel:
+  source_package: "E0 with partial_2(f)=0"
+  destination_package: "Ea with partial_2(f)=a"
+  chain_map: "F1=id, F2=0, F0=0"
+  result: "Relation preservation holds but reflection fails; induced H1 is the noninjective quotient F2^2 to F2^2/<a>."
+classification: "scoped_obstruction"
+failed_premise: "Current ontology supplies no source-rooted rule selecting the chain package, differential, homology discriminator, or independent physical variation class."
+limitations:
+  - "The finite family does not prove future source-extension impossibility."
+  - "The typed quotient and chain-map theorems are not refuted."
+  - "No general EqSrc or GR conclusion follows."

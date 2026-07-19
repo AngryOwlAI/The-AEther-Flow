@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-032` and `handoff-0757`.
+`RT-20260718-033` and `handoff-0758`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-032` |
-| Latest handoff ID | `handoff-0757` |
-| Current status | `eqsrc_intrinsic_discriminator_admissibility_law_v3_audit_passed_at_proposal_scope_pending_bounded_refuter_stress_no_adoption` |
+| Active task ID | `RT-20260718-033` |
+| Latest handoff ID | `handoff-0758` |
+| Current status | `eqsrc_intrinsic_discriminator_admissibility_law_v3_scoped_differential_selection_obstruction_pending_theoretical_selection_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc intrinsic discriminator v3 refuter stress after fresh audit |
+| Current route family | eqsrc intrinsic discriminator v3 scoped differential selection obstruction to theoretical selection |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One Refuter packet may stress exact proposal-only v3 for source-only instantiability category discipline primitive independence degenerate models malformed maps and finite robustness. |
-| Next recommended action | Run one bounded Refuter ontology-law-research-packet against exact proposal-only v3 for nontrivial source-only instantiability, categorical typing, primitive independence, degenerate models, malformed maps, and finite-variation robustness. Do not repair adopt or promote the candidate. |
+| Required next authority | One Theoretical Continuation Selector packet may compare a source-side chain-package or differential selector primitive, a source-side irrelevance theorem, a distinct scoped no-go question, local freeze of exact v3, and protected human-gated ontology change, then select one bounded next packet. |
+| Next recommended action | Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among a source-side chain-package or differential selector primitive, a source-side irrelevance theorem proving EqSrc independent of chain-package choice, a distinct scoped no-go question, or local freeze of exact v3. Do not repeat v3 construction, audit, or stress. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-032` |
-| Latest research handoff ID | `handoff-0757` |
-| Latest research next action | Run one bounded Refuter ontology-law-research-packet against exact proposal-only v3 for nontrivial source-only instantiability, categorical typing, primitive independence, degenerate models, malformed maps, and finite-variation robustness. Do not repair adopt or promote the candidate. |
+| Latest research task ID | `RT-20260718-033` |
+| Latest research handoff ID | `handoff-0758` |
+| Latest research next action | Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among a source-side chain-package or differential selector primitive, a source-side irrelevance theorem proving EqSrc independent of chain-package choice, a distinct scoped no-go question, or local freeze of exact v3. Do not repeat v3 construction, audit, or stress. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-032/00_TASK.yaml`.
-- Active task objective: Execute one fresh bounded Smuggling Auditor ontology-law-research-packet against exact proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3 for typed cross-complex relation semantics, quotient factorization, induced-H1 reflection, the noninvertible witness, surviving v2 theorem scope, shared-differential primitive selection, target or process import, physical-admissibility and covariance overread, and finite generalization without repair adoption Refuter stress or promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0757.yaml`.
-- Latest handoff summary: RT-20260718-032 freshly audited exact proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3. Typed cross-complex predicates quotient factorization induced-H1 reflection and the noninvertible witness pass. The general theorem is explicitly a Set statement and the linear specialization is separately valid. A 4096-function census has zero theorem mismatches. Current ontology derivation physical admissibility adoption general EqSrc and Distance-to-GR remain unchanged.
-- Current route family: eqsrc intrinsic discriminator v3 refuter stress after fresh audit.
-- Next recommended action: Run one bounded Refuter ontology-law-research-packet against exact proposal-only v3 for nontrivial source-only instantiability, categorical typing, primitive independence, degenerate models, malformed maps, and finite-variation robustness. Do not repair adopt or promote the candidate.
+- Active task path: `research_control/tasks/RT-20260718-033/00_TASK.yaml`.
+- Active task objective: Execute one bounded Refuter ontology-law-research-packet against exact proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3 for nontrivial source-only instantiability, categorical typing, primitive independence, degenerate models, malformed maps, and finite-variation robustness.
+- Latest handoff path: `research_control/handoffs/handoff-0758.yaml`.
+- Latest handoff summary: RT-20260718-033 stressed exact proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3. Nontrivial finite instantiability and the audited typed theorems pass. Fixed carrier spaces admit four valid differentials producing four distinct relations; a rank-one differential change changes the relation, and declared boundary-move robustness is exactly orbit invariance under the group selected by that same differential. Current ontology supplies no independent differential, discriminator, physical-morphism, or variation selector. The exact classification is scoped_obstruction with no ledger change or adoption.
+- Current route family: eqsrc intrinsic discriminator v3 scoped differential selection obstruction to theoretical selection.
+- Next recommended action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among a source-side chain-package or differential selector primitive, a source-side irrelevance theorem proving EqSrc independent of chain-package choice, a distinct scoped no-go question, or local freeze of exact v3. Do not repeat v3 construction, audit, or stress.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded Refuter ontology-law-research-packet against exact proposal-only v3 for nontrivial source-only instantiability, categorical typing, primitive independence, degenerate models, malformed maps, and finite-variation robustness. Do not repair adopt or promote the candidate.
+Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among a source-side chain-package or differential selector primitive, a source-side irrelevance theorem proving EqSrc independent of chain-package choice, a distinct scoped no-go question, or local freeze of exact v3. Do not repeat v3 construction, audit, or stress.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-032`;
-- latest handoff: `handoff-0757`;
-- current status: `eqsrc_intrinsic_discriminator_admissibility_law_v3_audit_passed_at_proposal_scope_pending_bounded_refuter_stress_no_adoption`;
+- active task: `RT-20260718-033`;
+- latest handoff: `handoff-0758`;
+- current status: `eqsrc_intrinsic_discriminator_admissibility_law_v3_scoped_differential_selection_obstruction_pending_theoretical_selection_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0757.yaml`
-- `research_control/tasks/RT-20260718-032/00_TASK.yaml`
+- `research_control/handoffs/handoff-0758.yaml`
+- `research_control/tasks/RT-20260718-033/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0757*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0758*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

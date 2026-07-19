@@ -1,0 +1,523 @@
+completion_id: "AJC-AJ-RT-20260718-033-001"
+job_id: "AJ-RT-20260718-033-001"
+task_id: "RT-20260718-033"
+decision_id: "DDR-20260718-033"
+status: "completed"
+completed_at: "2026-07-19T19:22:49Z"
+completed_by_role: "refuter@0.2.0--RT-20260718-033"
+source_role_id: "refuter"
+source_role_version: "0.2.0"
+plan_task_id: "ordinary_eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Completed one bounded Refuter stress of exact proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3. Nontrivial source-only instantiability and the audited Set, linear, and chain-map theorems pass. A fixed-carrier four-differential family realizes four distinct relations, a rank-one differential change changes the relation, and the declared variation orbits equal the relation classes by construction. Current ontology supplies no independent chain-package, differential, discriminator, physical-morphism, or variation selector. The exact result is scoped_obstruction with blocked_adoption_open_continuation and no Distance-to-GR or metric-use ledger change."
+artifacts:
+  - "research_control/tasks/RT-20260718-033/artifacts/child_phys_math_eqsrc_intrinsic_discriminator_v3_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260718-033/artifacts/child_phys_phil_eqsrc_intrinsic_discriminator_v3_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260718-033/artifacts/parent_conflict_review_eqsrc_intrinsic_discriminator_v3_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260718-033/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_v3_refuter_stress.md"
+  - "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+  - "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress_receipt.md"
+  - "research_control/tasks/RT-20260718-033/artifacts/validate_eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.py"
+  - "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260718-033/**"
+  - "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+  - "research_control/tasks/RT-20260718-033/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_v3_refuter_stress.md"
+  - "research_control/handoffs/handoff-0758.yaml"
+  - "research_control/handoffs/handoff-0758.md"
+  - "research_control/program_state.yaml"
+extra_read_paths:
+  - "research_control/handoffs/handoff-0757.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/refuter_obstruction_schema_v1.md"
+  - "research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex"
+  - "research_control/tasks/RT-20260718-032/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_smuggling_audit.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=PASS refresh_performed=true source_object_count=871 relationship_row_count=4321"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex --json | exit_code=0 | canonical_source_inspected=true source_hash=ed865297c417cadf4d030717d5c1a9c6c84335939c6fe9cee215192050bc30dd"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-032/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_smuggling_audit.tex --json | exit_code=0 | canonical_source_inspected=true source_hash=e0d92aab7bafa9356af83d4110bdb16833639ce0b0ae34a246bac4e108bc8eea"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=0 | status=ready active_task=RT-20260718-032 latest_handoff=handoff-0757"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260718-033/artifacts/validate_eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260718-033/artifacts/validate_eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.py --write-report --json | exit_code=0 | status=PASS fixed_carrier_differentials=4 distinct_relations=4 represented_congruences=5"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary | exit_code=0 | status=PASS error_count=0 warning_count=165"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=0 | status=PASS error_count=0 warning_count=1643"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1478"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500 | exit_code=2 | status=EXPECTED_PRECHECKPOINT_BOUNDARY required_failure_labels=[legacy_validate_project_control] sole_failure_class=registered_new_paths_not_yet_tracked"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=PASS support_only=true"
+  - "git diff --check | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 871
+    relationship_row_count: 4321
+    semantic_row_count: 871
+    vault_row_count: 871
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex"
+      returned_object_ids:
+        - "TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V3"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-032/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_smuggling_audit.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-032/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_smuggling_audit.tex"
+      returned_object_ids:
+        - "TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-SMUGGLING-AUDIT"
+  canonical_inspections:
+    - object_id: "TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V3"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex"
+      source_hash: "ed865297c417cadf4d030717d5c1a9c6c84335939c6fe9cee215192050bc30dd"
+    - object_id: "TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-SMUGGLING-AUDIT"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-032/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_smuggling_audit.tex"
+      source_hash: "e0d92aab7bafa9356af83d4110bdb16833639ce0b0ae34a246bac4e108bc8eea"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260718-033/artifacts/child_phys_math_eqsrc_intrinsic_discriminator_v3_refuter_stress.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260718-033/artifacts/child_phys_phil_eqsrc_intrinsic_discriminator_v3_refuter_stress.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260718-033/artifacts/parent_conflict_review_eqsrc_intrinsic_discriminator_v3_refuter_stress.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Both internal perspectives support the typed-theorem pass, finite differential nonuniqueness, construction-relative robustness boundary, malformed-map qualification, and one scoped obstruction."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260718-033/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_v3_refuter_stress.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused output preserves the representation theorem, fixed-carrier countermodel, rank-one witness, orbit identity, typed malformed-map boundary, and non-global obstruction scope."
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Stress exact audited proposal-only v3 for whether its supplied chain package, differential, homology discriminator, physical morphism category, and variation class are independently selected by current ontology."
+  missing_source_law: "A current-ontology-derived chain-package or differential selector and independently justified physical morphism and variation law for EqSrc."
+  stressed_source_law: "EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3"
+  underdetermination_statement: "Current ontology does not derive the chain package, differential, homology discriminator, physical morphism category, or independently justified variation class."
+  no_go_theorem_status: "scoped_obstruction_only"
+  packet_payload_mode: "candidate_law_refutation"
+  candidate_law_refutation:
+    refuted_candidate: "The standalone current-ontology derivation and independent robustness claim for EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3"
+    refutation_basis: "Fixed source carriers admit four valid differentials producing four distinct relations, while the declared boundary-move group changes with the same differential and therefore supplies only construction-relative robustness."
+    surviving_obligations:
+      - "A source-side chain-package or differential selector may remain possible."
+      - "A source-side irrelevance theorem or distinct scoped no-go may remain possible."
+      - "General EqSrc, exact-GR recovery, and all downstream derivation burdens remain open."
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Select or eliminate dependence on the chain package before any adoption review."
+      - "Keep target atlas, metric, detector, benchmark, process, and derivative status outside every source definition."
+      - "Keep general EqSrc, RetainH, GenH, M_src, g_eff, matter coupling, Einstein equations, and benchmark promotion open."
+      - "Require protected human authority before source-law or ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_topology"
+      - "target_smooth_atlas"
+      - "target_metric"
+      - "proper_time"
+      - "empirical_detector_semantics"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "generated_derivative_authority"
+      - "registry_metadata_authority"
+      - "validator_authority"
+      - "validation_authority"
+      - "role_authority"
+      - "handoff_authority"
+      - "file_order_authority"
+    checked_objects:
+      - "finite chain packages"
+      - "partial_2"
+      - "A_E"
+      - "B_E"
+      - "K_E"
+      - "EqCand_E"
+      - "AdmVar(E)"
+    result: "pass"
+    failure_reason: ""
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No adoption is requested. Theoretical packet selection may continue without a human gate."
+source_extension_category: "source_extension_refuter_stress"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3"
+  item_source_path: "research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex"
+  item_kind: "law target"
+  classification: "blocked_adoption_open_continuation"
+  evidence_paths:
+    - "research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex"
+    - "research_control/tasks/RT-20260718-032/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_smuggling_audit.tex"
+    - "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+  relation_to_current_ontology: "blocked_open"
+  relation_to_target_structures: "No target-side structure is used as a source-definition premise."
+  claim_boundary_id: "CB-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-REFUTER-STRESS-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "Exact v3 is a coherent proposal-only representation scheme with a scoped differential-selection obstruction; blocked adoption with open same-milestone continuation remains."
+  blocked_overreads:
+    - "representational breadth as current-ontology derivation"
+    - "declared orbit invariance as independent physical admissibility"
+    - "typed theorem closure as chain-package selection"
+    - "scoped obstruction as global no-go"
+stress_result:
+  exact_classification: "scoped_obstruction"
+  nontrivial_source_only_instantiability: "pass"
+  categorical_set_theorem: "pass"
+  linear_specialization: "pass"
+  chain_map_reflection_criterion: "pass"
+  fixed_carrier_differentials: 4
+  distinct_candidate_relations: 4
+  rank_one_differential_variation_changes_relation: true
+  declared_variation_orbits_equal_relation_classes: true
+  primitive_independence: "fails_current_ontology_selection"
+  physical_admissibility: "not_independently_justified"
+  degenerate_models: "mathematically_valid_not_physically_selective"
+  malformed_map_branch: "meta_level_without_tagged_error_carrier"
+  candidate_repaired: false
+  candidate_adopted: false
+refuter_loop_classification: "scoped_obstruction"
+loop_risk_decision:
+  category: "scoped_obstruction"
+  next_route: "theoretical_decision_role_selection"
+  obstruction_summary: "Exact v3 represents congruences conditional on a supplied differential, but current ontology does not select that differential or an independent physical variation class."
+  rationale: "Construction, fresh audit, and finite Refuter stress are complete, so one Theoretical Continuation Selector must choose a source-side selector primitive, source-side irrelevance theorem, distinct scoped no-go, or local freeze without repeating the v3 cycle."
+  bridge_or_fail_escalation: true
+  repeated_burdens:
+    - "chain-package and differential selection"
+    - "independently justified physical morphism category"
+    - "independently justified physical variation class"
+  new_payload_present: true
+  generic_formalizer_route_barred: true
+  selected_route: "theoretical_continuation_selector"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-INTRINSIC-DISCRIMINATOR-DIFFERENTIAL-SELECTION"
+  candidate_freeze_label: "EQSRC-INTRINSIC-DISCRIMINATOR-DIFFERENTIAL-SELECTION"
+  prior_attempts_considered:
+    - "RT-20260718-028"
+    - "RT-20260718-029"
+    - "RT-20260718-030"
+    - "RT-20260718-031"
+    - "RT-20260718-032"
+    - "RT-20260718-033"
+  freeze_if:
+    - "A subsequent packet repeats v3 construction, audit, or stress without a source-side selector, irrelevance theorem, or distinct no-go target."
+    - "The same differential-selection and physical-admissibility burdens recur without new mathematical payload."
+  criteria_evaluated:
+    - "Exact v3 has completed construction, fresh audit, and finite Refuter stress."
+    - "The fixed-carrier family proves exact differential-induced relation nonuniqueness."
+    - "The orbit identity proves only construction-relative robustness."
+    - "One cross-role theoretical selection remains materially distinct from the completed v3 cycle."
+  do_not_freeze_if:
+    - "A Theoretical Continuation Selector chooses a source-side selector primitive, source-side irrelevance theorem, distinct scoped no-go, or explicit local freeze."
+  freeze_decision: "not_frozen"
+  decision_reason: "The exact v3 cycle is barred from repetition, while one cross-role theoretical selection remains non-orbital."
+  rationale: "The selector packet must choose a mathematically distinct source-side selector, irrelevance theorem, scoped no-go, or local freeze; it may not repeat v3 construction, audit, or stress."
+  frozen_scope: "exact EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3 construction audit and stress cycle only"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  barred_route: "repeat v3 construction repeat v3 audit or repeat v3 stress without a new selection or irrelevance result"
+  next_allowed_route: "theoretical_selector"
+route_cycle_control:
+  cycle_family: "eqsrc_intrinsic_discriminator_admissibility_law"
+  current_cycle_step: "proposal_only_v3_refuter_scoped_differential_selection_obstruction"
+  prior_related_tasks:
+    - "RT-20260718-028"
+    - "RT-20260718-029"
+    - "RT-20260718-030"
+    - "RT-20260718-031"
+    - "RT-20260718-032"
+    - "RT-20260718-033"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The next packet selects among a source-side selector primitive, source-side irrelevance theorem, distinct scoped no-go, and local freeze instead of repeating exact v3."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0"
+refuter_obstruction_record:
+  obstruction_id: "OB-EQSRC-INTRINSIC-DISCRIMINATOR-DIFFERENTIAL-SELECTION-001"
+  target_claim: "Exact EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3 alone supplies a current-ontology-derived uniquely selected and independently robust EqSrc relation."
+  target_milestone: "source_equivalence_eqsrc"
+  failed_premise: "The inspected current ontology supplies no source-rooted rule selecting the chain package, differential, homology discriminator, physical morphism category, or independently justified variation class."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+  countermodel_scope: "exact_finite_branch"
+  certificate_gap: "missing independent differential-selection and physical-admissibility certificate"
+  source_extension_repair_possible: "repair_possible"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "freeze_review_required"
+    decision_reason: "The exact v3 cycle is fully stressed and a distinct theoretical selector decision is required."
+    next_allowed_route: "theoretical_selector"
+  route_cycle_control:
+    cycle_family: "eqsrc_intrinsic_discriminator_admissibility_law"
+    current_cycle_step: "proposal_only_v3_refuter_scoped_differential_selection_obstruction"
+    prior_related_tasks:
+      - "RT-20260718-031"
+      - "RT-20260718-032"
+      - "RT-20260718-033"
+    cycle_risk: "high"
+    orbit_avoidance_reason: "The finite differential countermodel prevents repetition of exact v3 construction, audit, or stress."
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+  forbidden_conclusions:
+    - "No canonical ontology rejection or adoption follows."
+    - "No general EqSrc no-go follows."
+    - "No RetainH, GenH, or M_src adoption follows."
+    - "No g_eff, matter coupling, or Einstein-equation derivation follows."
+    - "No Distance-to-GR or metric-use ledger change follows."
+    - "No benchmark promotion or completed derivation follows."
+    - "No program-wide no-go conclusion follows."
+    - "No future source-extension impossibility follows."
+obstruction_record:
+  present: true
+  obstruction_id: "OB-EQSRC-INTRINSIC-DISCRIMINATOR-DIFFERENTIAL-SELECTION-001"
+  scope: "source_extension_candidate"
+  failed_object: "independently selected chain differential and physical-admissibility law"
+  exact_failure: "The same finite carrier spaces admit four valid differentials producing four distinct candidate relations, while each differential also defines its own answer-preserving boundary-move group."
+  minimal_counterexample_path: "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "selector_required"
+  forbidden_overread: "This exact scoped obstruction does not reject the global ontology or prove future source-extension impossibility."
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-033-001"
+    payload_type: "theorem"
+    name: "Finite linear-congruence representation theorem"
+    summary: "Every finite F2-linear congruence A/B is realized by a two-truncated chain package with inclusion differential."
+  - payload_id: "NMP-RT-20260718-033-002"
+    payload_type: "countermodel"
+    name: "Fixed-carrier four-differential countermodel"
+    summary: "Four valid differentials on the same carrier spaces produce four distinct candidate relations."
+  - payload_id: "NMP-RT-20260718-033-003"
+    payload_type: "lemma"
+    name: "Boundary-orbit identity"
+    summary: "Candidate relation classes are exactly the orbits of the declared boundary-translation group."
+  - payload_id: "NMP-RT-20260718-033-004"
+    payload_type: "obstruction"
+    name: "Differential-selection and independent-admissibility obstruction"
+    summary: "Current ontology does not select the differential that jointly determines the relation and declared move class."
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Stress exact audited proposal-only v3 for whether its supplied chain package, differential, homology discriminator, physical morphism category, and variation class are independently selected by current ontology."
+  explanation: "The typed mathematics and nontrivial finite instance pass, but a fixed-carrier family proves a scoped differential-selection obstruction."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "obstruction_recorded"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "A scoped obstruction is recorded without adopting a replacement law or changing the Distance-to-GR ledger."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; chain packages differentials homology discriminator physical morphisms and variations remain proposal-only and underived"
+  - burden: "Source equivalence EqSrc"
+    status: "exact v3 has a scoped differential-selection obstruction; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; scoped source-extension discriminator data only"
+  - burden: "M_src"
+    status: "unchanged; no source-manifold promotion"
+  - burden: "g_eff"
+    status: "unchanged; no target or effective metric result"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "passes for declared boundary translations only; independent differential and physical-variation selection remain underived"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark promotion"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact v3 construction audit and stress cycle barred from repetition pending one theoretical selector packet"
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT033-001"
+    payload_type: "theorem"
+    object_name: "Finite linear-congruence representation theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+    burden_effect: "narrows"
+    summary: "Shows that v3 represents every finite F2-linear congruence once a subspace is supplied, without selecting one."
+  - payload_id: "PAYLOAD-RT033-002"
+    payload_type: "countermodel"
+    object_name: "Fixed-carrier four-differential countermodel"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+    burden_effect: "obstructs"
+    summary: "Shows exact differential-induced relation nonuniqueness on fixed carrier spaces."
+  - payload_id: "PAYLOAD-RT033-003"
+    payload_type: "lemma"
+    object_name: "Boundary-orbit identity"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+    burden_effect: "stress_tests"
+    summary: "Identifies declared robustness as exact orbit invariance relative to the selected differential."
+  - payload_id: "PAYLOAD-RT033-004"
+    payload_type: "obstruction"
+    object_name: "Differential-selection and independent-admissibility obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+    burden_effect: "obstructs"
+    summary: "Records the missing current-ontology selector and independent physical-admissibility certificate."
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The finite validator and scoped obstruction authorize no canonical ontology edit, source-law adoption, general EqSrc discharge, M_src adoption, g_eff claim, matter coupling, Einstein equations, benchmark promotion, completed derivation, future source-extension impossibility, or global theory rejection."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "physical admissibility covariance or reversibility established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff claim or scope expansion"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion or Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+next_recommendation:
+  role_id: "theoretical-continuation-selector"
+  role_version: "0.1.0"
+  packet_type: "ontology_law_research_packet"
+  route_label: "ontology-law-research-packet"
+  task_type: "eqsrc_intrinsic_discriminator_v3_post_obstruction_theoretical_selection"
+  objective: "Select one distinct next packet among a source-side chain-package or differential selector primitive, a source-side irrelevance theorem, a distinct scoped no-go question, or local freeze of exact v3."
+  requires_human_gate: false
+  claim_boundary: "Selection-only. No repair, adoption, canonical ontology edit, ledger change, downstream promotion, or global no-go."
+claim_boundary:
+  boundary_id: "CB-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-REFUTER-STRESS-001"
+  allowed_scope: "Exact proposal-only v3 finite stress, differential countermodel, typed theorem checks, malformed-map boundary, source classification, freeze evaluation, and one theoretical selector route."
+  blocked_scope: "Repair, adoption, physical claims, general EqSrc, downstream GR, ledger change, benchmark, Gate Chair, completed derivation, or global no-go."
+  claim_boundary_preserved: true
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress_validation.json"
+  local_validator_report_hash: "22eaf0bb6f38132fd28eeeffad5d27f32f6440a978e3c880563dea9481add17f"
+  stress_artifact_hash: "b46297ba4c62046ebd856cc0ec36f1083e3486f809d5c40a50db61dbcf31877c"
+  validation_status: "PASS"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight refreshed local retrieval and exact v3 and fresh-audit sources were inspected."
+      - "Handoff-0757 and the registered Refuter role were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both internal child perspectives completed."
+      - "Parent conflict review resolved with no revision round."
+      - "The representation theorem, finite countermodel, orbit identity, and claim boundaries were fused."
+  task_local:
+    status: "PASS"
+    evidence:
+      - "The task-local validator passed all finite and control-marker checks."
+      - "The task-local validator report hash is 22eaf0bb6f38132fd28eeeffad5d27f32f6440a978e3c880563dea9481add17f."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Core and diff-scoped research-control validation passed with zero errors."
+      - "Documentation-impact, project-improvement-signal, changed-file claim-language, and whitespace gates passed."
+      - "The full wrapper reached only the expected pre-checkpoint untracked-path boundary."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, claim graph, and memory derivatives were regenerated."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Registered source and memory derivatives were regenerated and validate-only passed."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-surface claim-language validation passed with zero hard failures and historical warnings only."
+next_recommended_action: "Run one bounded Theoretical Continuation Selector ontology-law-research-packet. Do not repeat exact v3 construction, audit, or stress."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

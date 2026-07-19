@@ -1,0 +1,331 @@
+% authority: science-draft
+% status: draft/control
+% route: ontology-law-research-packet
+% refuter_loop_classification: scoped_obstruction
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Ftwo}{\mathbb F_2}
+\newcommand{\EqCand}{\mathsf{EqSrc}^{\mathrm{cand}}}
+\newcommand{\AdmVar}{\mathsf{AdmVar}_{\mathrm{src}}}
+\newcommand{\Bottom}{\mathsf{Bottom}_{\mathrm{src}}}
+
+\title{EqSrc Intrinsic Discriminator and Admissibility Law Candidate v3:\\
+Bounded Refuter Stress}
+\author{Refuter control packet RT-20260718-033}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This draft/control packet stresses exact proposal-only
+\(\mathsf{EqSrcIntrinsicDiscriminatorAdmissibilityLaw}
+_{\mathrm{src}}^{\mathrm{cand},v3}\).
+The candidate remains source-extension data with
+\texttt{blocked\_adoption\_open\_continuation}. It is not repaired, adopted,
+or promoted here.
+
+\begin{verbatim}
+refuter_loop_classification: scoped_obstruction
+target_milestone: source_equivalence_eqsrc
+nontrivial_source_only_instantiability: pass
+typed_set_factorization: pass
+linear_specialization: pass
+chain_map_reflection_criterion: pass
+fixed_carrier_differentials: 4
+distinct_candidate_relations: 4
+rank_one_differential_variation_changes_relation: true
+declared_variation_orbits_equal_relation_classes: true
+physical_admissibility: not_independently_derived
+malformed_map_bottom_branch: meta_level_without_tagged_error_carrier
+current_ontology_derives_chain_package_or_differential: false
+general_EqSrc_discharged: false
+distance_to_gr_ledger_changed: false
+adoption_status: blocked_adoption_open_continuation
+\end{verbatim}
+
+\section{Stress Target and Surviving Formal Core}
+
+For a supplied finite two-truncated chain complex over \(\Ftwo\),
+\[
+ E=\left(C_2(E)\xrightarrow{\partial_2^E}
+ C_1(E)\xrightarrow{\partial_1^E}C_0(E)\right),
+ \qquad \partial_1^E\partial_2^E=0,
+\]
+v3 defines
+\[
+ A_E=\ker\partial_1^E,\qquad
+ B_E=\operatorname{im}\partial_2^E,\qquad
+ K_E=A_E/B_E,
+\]
+and
+\[
+ x\,\EqCand_E\,y
+ \quad\Longleftrightarrow\quad x-y\in B_E.
+\]
+
+The fresh audit already verified the typed factorization theorem in
+\(\mathbf{Set}\), its linear specialization, and the criterion
+\[
+ \operatorname{RelRefl}(F_1|_{A_E})
+ \quad\Longleftrightarrow\quad H_1(F)\text{ is injective}
+\]
+for a chain map \(F:E\to E'\). The present stress preserves those results.
+It attacks only the stronger overread that exact v3 selects its own chain
+package, differential, physical morphisms, or physical admissibility from
+current ontology.
+
+\section{Congruence Representation Without Selection}
+
+\begin{theorem}[Finite linear-congruence representation]
+Let \(A\) be a finite-dimensional \(\Ftwo\)-vector space and \(B\leq A\) a
+subspace. Define a two-truncated chain package by
+\[
+ C_2=B,\qquad C_1=A,\qquad C_0=0,\qquad
+ \partial_2:B\hookrightarrow A,\qquad\partial_1=0.
+\]
+Then the v3 candidate relation is exactly the linear congruence
+\[
+ x\sim_B y\quad\Longleftrightarrow\quad x-y\in B.
+\]
+\end{theorem}
+
+\begin{proof}
+The chain condition is automatic because \(\partial_1=0\).
+Consequently \(A_E=A\) and \(B_E=\operatorname{im}\partial_2=B\), so the
+displayed candidate definition is precisely congruence modulo \(B\).
+\end{proof}
+
+Thus v3 can represent every finite \(\Ftwo\)-linear congruence once \(B\) is
+supplied. The theorem does not select \(B\), a differential realizing it, or
+one congruence as physical source equivalence.
+
+\section{Fixed-Carrier Four-Differential Countermodel}
+
+Let
+\[
+ C_2=\Ftwo\langle f\rangle,\qquad
+ C_1=\Ftwo\langle a,b\rangle,\qquad C_0=0,\qquad \partial_1=0.
+\]
+There are four possible images
+\[
+ \partial_2 f\in\{0,a,b,a+b\}.
+\]
+Each choice is a valid chain package on the same carrier spaces.
+
+\begin{theorem}[Four distinct relations on fixed carriers]
+The four differentials above induce four distinct candidate relations. For
+\(\partial_2f=0\), the relation is equality and has four related ordered
+pairs. For each nonzero image \(v\), the relation is congruence modulo
+\(\langle v\rangle\), has two classes of size two, and has eight related
+ordered pairs.
+\end{theorem}
+
+\begin{proof}
+For the zero differential, \(B=0\). For a nonzero image \(v\),
+\(B=\{0,v\}\), and the four states split into two cosets of \(B\). Distinct
+one-dimensional subspaces of \(\Ftwo^2\) contain different nonzero vectors,
+so they induce distinct pair relations.
+\end{proof}
+
+The symmetric difference between equality and any nonzero-differential
+relation has four ordered pairs. The symmetric difference between two
+distinct nonzero-differential relations has eight ordered pairs. Hence even a
+rank-one change of the differential can change the candidate relation while
+all carrier spaces and the chain condition remain fixed.
+
+\section{Rank-One Chain-Map Witness}
+
+Write \(E_0\) for the zero-differential package and \(E_a\) for the package
+with \(\partial_2f=a\). Define
+\[
+ F_2=0,\qquad F_1=\operatorname{id}_{\Ftwo^2},\qquad F_0=0.
+\]
+This is a chain map \(E_0\to E_a\), since both sides of the degree-two chain
+equation vanish. It preserves the source equality relation, but it does not
+reflect the destination relation: \(0\) and \(a\) are unrelated in \(E_0\)
+and related in \(E_a\). Consistently,
+\[
+ H_1(F):\Ftwo^2\longrightarrow \Ftwo^2/\langle a\rangle
+\]
+is the quotient map and is not injective.
+
+This witness confirms the audited chain-map criterion. Its negative content is
+selection-level: the candidate permits both packages and supplies no
+current-ontology rule choosing between their differentials or relations.
+
+\section{Nontrivial Instantiability and Degenerate Models}
+
+The package \(E_a\) has four states, two equivalence classes, two states per
+class, and a two-element declared boundary-translation group. It is therefore
+a nontrivial source-only finite instance. This passes the requested
+instantiability stress.
+
+Degenerate cases are also mathematically well defined. If \(B=0\), the
+relation is equality. If \(B=A\), the relation is universal. These endpoints
+do not select a physical equivalence, establish completeness, or invalidate
+the intermediate nontrivial instances.
+
+\section{Declared Robustness Is Orbit-Relative}
+
+\begin{theorem}[Boundary-orbit identity]
+For every supplied package \(E\), the equivalence class of \(x\in A_E\) under
+\(\EqCand_E\) is exactly its orbit under translations by \(B_E\):
+\[
+ [x]_{\EqCand_E}
+ =\{x+c:c\in B_E\}
+ =\operatorname{Orb}_{\AdmVar(E)}(x).
+\]
+\end{theorem}
+
+\begin{proof}
+By definition, \(y\EqCand_E x\) if and only if \(y-x\in B_E\), which is
+equivalent to \(y=x+c\) for some boundary \(c\in B_E\).
+\end{proof}
+
+Every declared boundary move therefore preserves the relation exactly. But
+the same supplied differential determines both \(B_E\), hence the relation,
+and the translation group used to certify robustness. The identity is a
+construction-relative theorem. It is not an independent rule selecting
+which differential or variations are physically admissible.
+
+The fixed-carrier family exhibits the limitation explicitly:
+\[
+ \partial_2
+ \longmapsto B_E
+ \longmapsto
+ \left(\EqCand_E,\AdmVar(E)\right).
+\]
+Changing \(\partial_2\) changes both the answer and the answer-preserving move
+class in tandem.
+
+\section{Categorical and Malformed-Map Boundaries}
+
+The general factorization result is a theorem about typed functions in
+\(\mathbf{Set}\). Linearity follows only under the separately declared linear
+hypothesis, and the homology criterion follows for chain maps. These
+categorical statements pass the stress at their exact scope.
+
+A displayed mistyped map is not an element of the typed function space to
+which those theorems apply. Therefore ``return \(\Bottom\) for a mistyped
+map'' is a meta-level rejection rule unless the proposal supplies a tagged
+error carrier and a total operation with that carrier as codomain. This is a
+formalization and certificate gap in the fail-closed interface, not a
+counterexample to the typed theorems.
+
+\section{Scoped Differential-Selection Obstruction}
+
+The failed premise is:
+
+\begin{quote}
+The inspected current ontology supplies a source-rooted law selecting the
+chain package, differential, homology discriminator, physical morphism
+category, and independently justified admissible variation class used by
+exact v3.
+\end{quote}
+
+The four-differential family is a minimal finite countermodel to using exact
+v3 alone as a uniquely selected robust EqSrc relation. The same carrier
+spaces satisfy every chain condition while producing four different
+relations. The representation theorem strengthens the diagnosis: v3 realizes
+a broad family of congruences but contains no internal selector among them.
+
+The obstruction is scoped to current ontology and this proposal. A
+conservative source-side selector primitive, a source-side irrelevance
+theorem, or a distinct construction may remain possible. The lawful status is
+\texttt{blocked\_adoption\_open\_continuation}, not impossibility.
+
+\section{No-Target-Import and Process Boundary}
+
+The stress uses only finite vector spaces, subspaces, linear maps, chain
+conditions, quotient relations, and exhaustive enumeration. It imports no
+target atlas, target topology, target metric, proper time, detector semantics,
+or benchmark success. Registry rows, validators, roles, handoffs, generated
+derivatives, checkpoint status, and commits are provenance or transaction
+evidence only and are not mathematical premises.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.31\linewidth}p{0.59\linewidth}}
+\toprule
+Burden & Status after this stress\\
+\midrule
+Source ontology primitives & Unchanged; chain packages, differentials, homology discriminator, physical morphisms, and variations remain proposal-only and underived.\\
+Source equivalence EqSrc & Exact v3 has a scoped differential-selection obstruction; general EqSrc remains undischarged.\\
+RetainH and GenH & Unchanged and unadopted.\\
+ObsLoc and Resp & Unchanged.\\
+\(M_{\mathrm{src}}\) & Unchanged; no source-manifold promotion.\\
+\(g_{\mathrm{eff}}\) & Unchanged; no target or effective metric result.\\
+Matter coupling & Unchanged and blocked.\\
+Einstein equations & Unchanged and blocked.\\
+Finite-variation robustness & Exact under declared boundary translations; independent differential and physical-variation selection remain underived.\\
+Benchmark promotion & Blocked; no benchmark promotion.\\
+Gate Chair status & Human-gated and unchanged.\\
+Current route freeze or hard-fail status & Exact v3 construction, audit, and stress cycle is barred from repetition pending theoretical selection; global continuation remains open.\\
+\bottomrule
+\end{longtable}
+
+The Distance-to-GR and metric-use ledgers are unchanged.
+
+\section{Freeze and Route-Cycle Decision}
+
+Exact v3 has completed construction, fresh audit, and Refuter stress. This
+packet adds a representation theorem, a four-differential countermodel, a
+rank-one relation-changing chain map, an orbit theorem, and a typed
+malformed-map boundary. Repeating construction, audit, or stress of the same
+object without a new selection law or irrelevance theorem would orbit.
+
+The control value remains \texttt{not\_frozen} only because one distinct
+Theoretical Continuation Selector packet remains available. That packet must
+choose among:
+\begin{enumerate}[leftmargin=*]
+  \item a source-side chain-package or differential selector primitive;
+  \item a source-side irrelevance theorem proving EqSrc independent of the
+  chain-package choice;
+  \item a distinct scoped no-go question for chain-homology discriminators;
+  \item local freeze of this exact v3 line; or
+  \item protected human-gated ontology change if adoption is actually
+  required.
+\end{enumerate}
+
+\section{Forbidden Conclusions}
+
+This packet does not establish or authorize:
+\begin{itemize}[leftmargin=*]
+  \item canonical ontology modification, source-law adoption, or rejection;
+  \item candidate repair, general EqSrc, RetainH, GenH, or \(M_{\mathrm{src}}\);
+  \item physical admissibility, covariance, reversibility, or empirical
+  adequacy;
+  \item a target atlas, \(g_{\mathrm{eff}}\), matter coupling, or Einstein
+  equations;
+  \item Distance-to-GR or metric-use ledger change;
+  \item benchmark promotion, Gate Chair verdict, or completed derivation;
+  \item a global no-go, global theory rejection, or future source-extension
+  impossibility.
+\end{itemize}
+
+\section{Source Materials}
+
+\begin{itemize}[leftmargin=*]
+  \item Exact proposal-only v3:
+  \texttt{research\_control/tasks/RT-20260718-031/artifacts/}
+  \texttt{eqsrc\_intrinsic\_discriminator\_admissibility\_law\_candidate\_v3.tex}.
+  \item Fresh independent audit:
+  \texttt{research\_control/tasks/RT-20260718-032/artifacts/}
+  \texttt{eqsrc\_intrinsic\_discriminator\_admissibility\_law\_v3\_smuggling\_audit.tex}.
+  \item Tracked route:
+  \texttt{research\_control/handoffs/handoff-0757.yaml}.
+\end{itemize}
+
+\end{document}

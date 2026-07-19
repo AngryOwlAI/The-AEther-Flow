@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T18:37:39Z`
-- Source fingerprint: `7c4ad566bfac82054155ab8bf51aab953ca542fe6bb90c8715a758d8c06356b1`
-- Nodes: `19375`
-- Edges: `67050`
+- Generated from tracked state as of: `2026-07-19T19:22:49Z`
+- Source fingerprint: `2fb23ca552d7bcb26e8db0c9efff6c63e101209ce5386efe4b08aa867b4be70f`
+- Nodes: `19395`
+- Edges: `67103`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 986 |
+| `completion_yaml` | 987 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 757 |
+| `handoff_yaml` | 758 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 986 |
+| `agent_job` | `support_only` | 987 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10157 |
-| `blocked_burden` | `blocked` | 3668 |
-| `claim_boundary` | `support_only` | 943 |
-| `draft_control_candidate` | `draft_control` | 582 |
+| `artifact` | `support_only` | 10165 |
+| `blocked_burden` | `blocked` | 3669 |
+| `claim_boundary` | `support_only` | 944 |
+| `draft_control_candidate` | `draft_control` | 586 |
 | `draft_control_candidate` | `proposal_only` | 89 |
 | `draft_control_candidate` | `science_draft` | 62 |
-| `frozen_negative` | `frozen_negative` | 111 |
+| `frozen_negative` | `frozen_negative` | 112 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 757 |
+| `handoff` | `support_only` | 758 |
 | `human_gated_object` | `human_gated` | 421 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 70 |
+| `obstruction` | `blocked` | 71 |
 | `obstruction` | `rejected` | 1 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 307 |
+| `source_ontology_object` | `support_only` | 308 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 926 |
+| `task` | `support_only` | 927 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-032`
-- Latest handoff: `handoff-0757`
-- Handoff path: `research_control/handoffs/handoff-0757.yaml`
-- Next action: Run one bounded Refuter ontology-law-research-packet against exact proposal-only v3 for nontrivial source-only instantiability, categorical typing, primitive independence, degenerate models, malformed maps, and finite-variation robustness. Do not repair adopt or promote the candidate.
+- Active task: `RT-20260718-033`
+- Latest handoff: `handoff-0758`
+- Handoff path: `research_control/handoffs/handoff-0758.yaml`
+- Next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among a source-side chain-package or differential selector primitive, a source-side irrelevance theorem proving EqSrc independent of chain-package choice, a distinct scoped no-go question, or local freeze of exact v3. Do not repeat v3 construction, audit, or stress.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
