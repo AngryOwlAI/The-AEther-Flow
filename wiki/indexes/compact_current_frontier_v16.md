@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-017`
-- Latest handoff: `handoff-0742`
-- Current status: `eqsrc_closure_source_law_candidate_audit_precise_totality_obstruction_repair_required_no_adoption`
+- Active task: `RT-20260718-018`
+- Latest handoff: `handoff-0743`
+- Current status: `eqsrc_closure_source_law_candidate_v2_accepted_totality_repaired_pending_fresh_audit_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-017`
-- Latest research handoff: `handoff-0742`
-- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet to repair proposal-only EqSrcClosureLaw_src^cand with explicit accepted identity inverse-totality and composition-totality clauses plus closed source grammar before fresh Smuggling Auditor review or Refuter stress.
+- Latest research task: `RT-20260718-018`
+- Latest research handoff: `handoff-0743`
+- Latest research next action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet to audit EqSrcClosureLaw_src^cand v2 for hidden target import open grammar circular acceptance process-authority laundering and overread before Refuter stress or any protected adoption consideration.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_closure_candidate_accepted_totality_repair`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `eqsrc_closure_candidate_v2_fresh_smuggling_audit`
+- Role family: `smuggling-auditor@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Repair the proposal-only candidate's accepted identity inverse and composition totality clauses and close source grammar before re-audit.
+- Milestone burden: Audit the repaired accepted-totality quantifiers and closed source grammar before Refuter stress adoption or any general EqSrc claim.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `744ecc4aeafc7f0d9de2798c45b5a046cdee17a4554342ca5703020ecc21f0d0`
-- JSON SHA-256: `c634e7c3add703d0f5c747345727209393648a012846cd18e2275d1a4098a722`
+- YAML SHA-256: `5565a8b6a0bf89886d897b8f75a77d0f013737f714e6b2b6cb77f412e7505557`
+- JSON SHA-256: `5d1820366f4946589ef2909dbafaad1ef33c12d146653f51a4928d3fd5815878`
 
 ## Authority Warning
 
