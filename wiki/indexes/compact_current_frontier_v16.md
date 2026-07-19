@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-030`
-- Latest handoff: `handoff-0755`
-- Current status: `eqsrc_intrinsic_discriminator_admissibility_law_v2_audit_precise_chain_map_reflection_scope_obstruction_repair_required_no_adoption`
+- Active task: `RT-20260718-031`
+- Latest handoff: `handoff-0756`
+- Current status: `eqsrc_intrinsic_discriminator_admissibility_law_v3_cross_complex_reflection_scope_repaired_pending_fresh_smuggling_audit_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-030`
-- Latest research handoff: `handoff-0755`
-- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet to define typed cross-complex relation preservation and reflection replace whole-chain invertibility with induced-H1 injectivity retain chain isomorphism as sufficient rather than necessary and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate.
+- Latest research task: `RT-20260718-031`
+- Latest research handoff: `handoff-0756`
+- Latest research next action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact proposal-only v3 for typed cross-complex predicates, quotient factorization, induced-H1 reflection, the noninvertible witness, surviving v2 theorem scope, shared-differential primitive selection, target or process import, and physical-admissibility or covariance overread. Do not repair adopt stress or promote the candidate.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_intrinsic_discriminator_admissibility_law_cross_complex_reflection_scope_repair`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `eqsrc_intrinsic_discriminator_admissibility_law_v3_smuggling_audit`
+- Role family: `smuggling-auditor@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Repair cross-complex relation typing and chain-map reflection scope while preserving the surviving conditional theorem core and all primitive-selection limits.
+- Milestone burden: Audit the exact proposal-only v3 cross-complex typing and reflection-scope repair before Refuter stress or protected adoption review.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `c0516dc5111190df6d09fa9208a6af305b51a5844d61a130370a188ca0eae91b`
-- JSON SHA-256: `ca5150a4a0c04c6466239c5f0c4b06178ad46894c717a1c3c3355a123dbc5102`
+- YAML SHA-256: `20368b1aca64a5f425b2f03ecfdbc4586298468ee2c541cf4baefef06657df6b`
+- JSON SHA-256: `8152296cd60f5c4f1f05155d0e17fb4d805f16148b9a629ef0768c93202a8068`
 
 ## Authority Warning
 

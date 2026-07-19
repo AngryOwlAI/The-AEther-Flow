@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-030` and `handoff-0755`.
+`RT-20260718-031` and `handoff-0756`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-030` |
-| Latest handoff ID | `handoff-0755` |
-| Current status | `eqsrc_intrinsic_discriminator_admissibility_law_v2_audit_precise_chain_map_reflection_scope_obstruction_repair_required_no_adoption` |
+| Active task ID | `RT-20260718-031` |
+| Latest handoff ID | `handoff-0756` |
+| Current status | `eqsrc_intrinsic_discriminator_admissibility_law_v3_cross_complex_reflection_scope_repaired_pending_fresh_smuggling_audit_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc chain homology cross complex reflection scope repair before fresh audit |
+| Current route family | eqsrc chain homology v3 fresh audit before stress |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One Ontology Formalizer packet may produce a proposal-only repair that types cross-complex relation preservation and reflection replaces whole-chain invertibility with induced-H1 injectivity retains chain isomorphism as sufficient and routes one fresh audit. |
-| Next recommended action | Run one bounded Ontology Formalizer ontology-law-research-packet to define typed cross-complex relation preservation and reflection replace whole-chain invertibility with induced-H1 injectivity retain chain isomorphism as sufficient rather than necessary and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate. |
+| Required next authority | One Smuggling Auditor packet may freshly audit exact proposal-only v3 for typing theorem primitive and claim-scope smuggling and route one lawful next packet. |
+| Next recommended action | Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact proposal-only v3 for typed cross-complex predicates, quotient factorization, induced-H1 reflection, the noninvertible witness, surviving v2 theorem scope, shared-differential primitive selection, target or process import, and physical-admissibility or covariance overread. Do not repair adopt stress or promote the candidate. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-030` |
-| Latest research handoff ID | `handoff-0755` |
-| Latest research next action | Run one bounded Ontology Formalizer ontology-law-research-packet to define typed cross-complex relation preservation and reflection replace whole-chain invertibility with induced-H1 injectivity retain chain isomorphism as sufficient rather than necessary and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate. |
+| Latest research task ID | `RT-20260718-031` |
+| Latest research handoff ID | `handoff-0756` |
+| Latest research next action | Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact proposal-only v3 for typed cross-complex predicates, quotient factorization, induced-H1 reflection, the noninvertible witness, surviving v2 theorem scope, shared-differential primitive selection, target or process import, and physical-admissibility or covariance overread. Do not repair adopt stress or promote the candidate. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-030/00_TASK.yaml`.
-- Active task objective: Execute one fresh bounded Smuggling Auditor ontology-law-research-packet against exact proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v2 for label-relation semantics, typed cross-complex relation preservation and reflection, induced codomain relabeling, ambient linear-witness scope, shared-differential primitive selection, target or process import, physical-admissibility and covariance overread, conditional theorem scope, and finite generalization without repair adoption stress or promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0755.yaml`.
-- Latest handoff summary: RT-20260718-030 freshly audited exact proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v2. No explicit target or process import is detected and the quotient-factorization translation linear-stabilizer corrected e2 ambient L and forward naturality results survive. The candidate correctly states that relation reflection is injectivity of the induced quotient map but its fail-closed branch incorrectly requires whole-chain invertibility. A four-state noninvertible self-chain-map induces identity on H1 and preserves and reflects all 16 relation tests. Cross-complex relation predicates are also untyped. Physical admissibility adoption general EqSrc and Distance-to-GR remain unchanged.
-- Current route family: eqsrc chain homology cross complex reflection scope repair before fresh audit.
-- Next recommended action: Run one bounded Ontology Formalizer ontology-law-research-packet to define typed cross-complex relation preservation and reflection replace whole-chain invertibility with induced-H1 injectivity retain chain isomorphism as sufficient rather than necessary and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate.
+- Active task path: `research_control/tasks/RT-20260718-031/00_TASK.yaml`.
+- Active task objective: Execute one bounded Ontology Formalizer ontology-law-research-packet to produce proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3 that types cross-complex relation preservation and reflection, proves reflection for a chain map exactly when its induced H1 map is injective, retains chain isomorphism as sufficient rather than necessary, repairs the false whole-chain noninvertibility failure rule, preserves every surviving v2 theorem and primitive-selection limit, and routes one fresh audit.
+- Latest handoff path: `research_control/handoffs/handoff-0756.yaml`.
+- Latest handoff summary: RT-20260718-031 produced proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3. It types cross-complex relation preservation and reflection, proves that a chain map reflects exactly when its induced H1 map is injective, retains chain isomorphism as sufficient rather than necessary, and verifies a four-state noninvertible reflecting chain map across all 16 ordered pairs. Current ontology derivation physical admissibility adoption general EqSrc and Distance-to-GR remain unchanged.
+- Current route family: eqsrc chain homology v3 fresh audit before stress.
+- Next recommended action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact proposal-only v3 for typed cross-complex predicates, quotient factorization, induced-H1 reflection, the noninvertible witness, surviving v2 theorem scope, shared-differential primitive selection, target or process import, and physical-admissibility or covariance overread. Do not repair adopt stress or promote the candidate.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded Ontology Formalizer ontology-law-research-packet to define typed cross-complex relation preservation and reflection replace whole-chain invertibility with induced-H1 injectivity retain chain isomorphism as sufficient rather than necessary and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate.
+Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact proposal-only v3 for typed cross-complex predicates, quotient factorization, induced-H1 reflection, the noninvertible witness, surviving v2 theorem scope, shared-differential primitive selection, target or process import, and physical-admissibility or covariance overread. Do not repair adopt stress or promote the candidate.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-030`;
-- latest handoff: `handoff-0755`;
-- current status: `eqsrc_intrinsic_discriminator_admissibility_law_v2_audit_precise_chain_map_reflection_scope_obstruction_repair_required_no_adoption`;
+- active task: `RT-20260718-031`;
+- latest handoff: `handoff-0756`;
+- current status: `eqsrc_intrinsic_discriminator_admissibility_law_v3_cross_complex_reflection_scope_repaired_pending_fresh_smuggling_audit_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0755.yaml`
-- `research_control/tasks/RT-20260718-030/00_TASK.yaml`
+- `research_control/handoffs/handoff-0756.yaml`
+- `research_control/tasks/RT-20260718-031/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0755*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0756*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

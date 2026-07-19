@@ -1,0 +1,87 @@
+artifact_id: "child_phys_math_eqsrc_cross_complex_reflection_scope_repair"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-031"
+job_id: "AJ-RT-20260718-031-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_name: "EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v3"
+authority_boundary: "Proposal-only typing and reflection-scope repair. No audit verdict Refuter stress source-law adoption canonical-ontology edit physical-admissibility claim or promotion."
+
+recommended_result: "candidate_repaired_pending_fresh_smuggling_audit"
+obstruction_disposition: "addressed_in_candidate_not_independently_cleared"
+source_extension_classification: "new_ontology_primitive_candidate"
+adoption_status: "blocked_adoption_open_continuation"
+physical_admissibility_established: false
+distance_to_gr_changed: false
+
+typed_setup:
+  source_package: "E"
+  destination_source_package: "E_prime"
+  source_cycle_space: "A_E=Z1(E)"
+  destination_cycle_space: "A_E_prime=Z1(E_prime)"
+  source_quotient: "K_E=A_E/B_E"
+  destination_quotient: "K_E_prime=A_E_prime/B_E_prime"
+  map_type: "G:A_E->A_E_prime"
+  preservation: "z~_E z_prime implies Gz~_E_prime Gz_prime"
+  reflection: "Gz~_E_prime Gz_prime implies z~_E z_prime"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-031-MATH-001"
+    payload_type: "theorem"
+    name: "typed_cross_complex_quotient_factorization"
+    statement: "For G:A_E->A_E_prime relation preservation is equivalent to a unique induced map bar_G:K_E->K_E_prime satisfying chi_E_prime G=bar_G chi_E. Under this factorization relation reflection is equivalent to injectivity of bar_G."
+    proof: "Define bar_G([z])=[Gz]. Preservation gives well-definedness and quotient surjectivity gives uniqueness. Reflection is exactly the implication bar_G([z])=bar_G([z_prime]) only if [z]=[z_prime]."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-031-MATH-002"
+    payload_type: "theorem"
+    name: "chain_map_reflection_criterion"
+    statement: "A chain map F:E->E_prime always preserves the candidate relation and reflects it iff H1(F) is injective, equivalently iff the inverse image of B_E_prime under F1 restricted to A_E equals B_E."
+    proof: "The chain identities map cycles to cycles and boundaries into boundaries, inducing H1(F). Reflection is ker H1(F)=0."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-031-MATH-003"
+    payload_type: "explicit_witness"
+    name: "noninvertible_reflecting_chain_map"
+    statement: "For C2=<f>, C1=<a,b>, C0=0, partial2(f)=a and F2=0, F1(a)=0, F1(b)=b, the chain map is noninvertible while H1(F)=id on <[b]> and all 16 ordered relation tests agree."
+    claim_status: "draft/control"
+
+chain_isomorphism_scope:
+  sufficient: true
+  necessary: false
+  reason: "A chain isomorphism induces a homology isomorphism, but relation reflection sees only quotient-class coalescence and requires injectivity of H1(F), not degreewise invertibility or surjectivity."
+
+four_state_validation:
+  state_count: 4
+  boundary_count: 2
+  quotient_class_count: 2
+  ordered_pair_checks: 16
+  related_pairs: 8
+  unrelated_pairs: 8
+  relation_mismatches: 0
+  F1_image_size: 2
+  F1_kernel_size: 2
+  F1_invertible: false
+  induced_H1: "identity"
+  induced_H1_injective: true
+
+fail_closed_corrections:
+  - "Reject a preservation claim when typing or quotient factorization fails."
+  - "Reject a reflection claim when the induced quotient map is proved noninjective."
+  - "For a chain map reject reflection exactly when H1(F) is noninjective."
+  - "When injectivity is unproved withhold the reflection certificate rather than assert noninjectivity."
+  - "Absence of a chain isomorphism is inconclusive."
+  - "Failure for one map does not invalidate the candidate relation or forward-preservation theorem globally."
+
+edge_cases:
+  - "If K_E is zero every induced map is injective and reflection holds."
+  - "If K_E_prime is zero reflection holds only when K_E is zero."
+  - "Injective nonsurjective H1(F) gives preservation and reflection without quotient surjectivity."
+  - "Cross-complex pointwise label fixing is ill typed without a separately supplied codomain comparison."
+  - "The repair remains inside the declared finite F2 scope even though the algebraic theorem generalizes."
+
+scope_guards:
+  - "Both E and E_prime are supplied candidate source packages."
+  - "The chain package differential homology discriminator and physical variation class remain underived."
+  - "Chain-map naturality is not physical covariance."
+  - "H1 injectivity is not physical reversibility."
+  - "A fresh Smuggling Auditor review is required before Refuter stress."

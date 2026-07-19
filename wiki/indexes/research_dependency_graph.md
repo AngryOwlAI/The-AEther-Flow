@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T17:07:26Z`
-- Source fingerprint: `69b6c90d05281121057bd0efb19172069231e5885ec0ee656c2a1a2d81ebc459`
-- Nodes: `19323`
-- Edges: `66930`
+- Generated from tracked state as of: `2026-07-19T17:52:37Z`
+- Source fingerprint: `a1357b25faf3ceda89c36739db4e0fb67a143caa99742bf7b7846a7917565651`
+- Nodes: `19354`
+- Edges: `67000`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 984 |
+| `completion_yaml` | 985 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 755 |
+| `handoff_yaml` | 756 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 984 |
+| `agent_job` | `support_only` | 985 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10130 |
-| `blocked_burden` | `blocked` | 3662 |
-| `claim_boundary` | `support_only` | 941 |
-| `draft_control_candidate` | `draft_control` | 577 |
-| `draft_control_candidate` | `proposal_only` | 86 |
+| `artifact` | `support_only` | 10149 |
+| `blocked_burden` | `blocked` | 3663 |
+| `claim_boundary` | `support_only` | 942 |
+| `draft_control_candidate` | `draft_control` | 579 |
+| `draft_control_candidate` | `proposal_only` | 89 |
 | `draft_control_candidate` | `science_draft` | 62 |
-| `frozen_negative` | `frozen_negative` | 110 |
+| `frozen_negative` | `frozen_negative` | 111 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 755 |
+| `handoff` | `support_only` | 756 |
 | `human_gated_object` | `human_gated` | 421 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 305 |
+| `source_ontology_object` | `support_only` | 306 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 924 |
+| `task` | `support_only` | 925 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-030`
-- Latest handoff: `handoff-0755`
-- Handoff path: `research_control/handoffs/handoff-0755.yaml`
-- Next action: Run one bounded Ontology Formalizer ontology-law-research-packet to define typed cross-complex relation preservation and reflection replace whole-chain invertibility with induced-H1 injectivity retain chain isomorphism as sufficient rather than necessary and preserve the underived chain-package and physical-admissibility burdens. Then run a fresh Smuggling Auditor review before Refuter stress. Do not adopt or promote the candidate.
+- Active task: `RT-20260718-031`
+- Latest handoff: `handoff-0756`
+- Handoff path: `research_control/handoffs/handoff-0756.yaml`
+- Next action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact proposal-only v3 for typed cross-complex predicates, quotient factorization, induced-H1 reflection, the noninvertible witness, surviving v2 theorem scope, shared-differential primitive selection, target or process import, and physical-admissibility or covariance overread. Do not repair adopt stress or promote the candidate.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
