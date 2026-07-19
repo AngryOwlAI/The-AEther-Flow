@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-019` and `handoff-0744`.
+`RT-20260718-020` and `handoff-0745`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-019` |
-| Latest handoff ID | `handoff-0744` |
-| Current status | `eqsrc_closure_source_law_candidate_v2_signature_obstruction_repair_required_no_adoption` |
+| Active task ID | `RT-20260718-020` |
+| Latest handoff ID | `handoff-0745` |
+| Current status | `eqsrc_closure_source_law_candidate_v3_signature_noncircularity_repaired_pending_fresh_audit_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc closure v3 exact signature and noncircularity repair |
+| Current route family | eqsrc closure v3 fresh smuggling audit |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One Ontology Formalizer packet may produce a proposal-only v3 with typed proxy constructors or existential witnesses declared component congruences typed negative-control predicates acyclic acceptance dependencies and the preserved accepted-totality theorem core. |
-| Next recommended action | Run one bounded Ontology Formalizer ontology-law-research-packet to produce a proposal-only v3 that declares or explicitly quantifies all proxy witness constructors declares component congruences types negative-control predicates and stratifies acceptance dependencies before fresh Smuggling Auditor review or Refuter stress. |
+| Required next authority | One Smuggling Auditor packet may inspect proposal-only v3 for declaration closure transitive source purity dependency acyclicity congruence invariance accepted-totality sufficiency and overread risk and may record one exact pass obstruction or repair route. |
+| Next recommended action | Run one fresh bounded Smuggling Auditor ontology-law-research-packet against the complete proposal-only v3 signature dependency graph semantic factorization component congruence accepted-totality clauses and proofs before Refuter stress or adoption consideration. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-019` |
-| Latest research handoff ID | `handoff-0744` |
-| Latest research next action | Run one bounded Ontology Formalizer ontology-law-research-packet to produce a proposal-only v3 that declares or explicitly quantifies all proxy witness constructors declares component congruences types negative-control predicates and stratifies acceptance dependencies before fresh Smuggling Auditor review or Refuter stress. |
+| Latest research task ID | `RT-20260718-020` |
+| Latest research handoff ID | `handoff-0745` |
+| Latest research next action | Run one fresh bounded Smuggling Auditor ontology-law-research-packet against the complete proposal-only v3 signature dependency graph semantic factorization component congruence accepted-totality clauses and proofs before Refuter stress or adoption consideration. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-019/00_TASK.yaml`.
-- Active task objective: Execute one fresh bounded Smuggling Auditor ontology-law-research-packet against proposal-only EqSrcClosureLaw_src^cand v2 for hidden target import, open grammar, circular acceptance, process-authority laundering, certificate-as-adoption overread, and formal overstatement.
-- Latest handoff path: `research_control/handoffs/handoff-0744.yaml`.
-- Latest handoff summary: RT-20260718-019 independently audited proposal-only EqSrcClosureLaw_src^cand v2. No explicit target or process import is detected and the repaired accepted identity inverse and composition quantifiers make the conditional equivalence theorem valid under a well-formed interpretation. The advertised closed signature remains incomplete: proxy witness constructors and non-ledger component congruences are undeclared and negative-control predicates lack an explicit typed acyclic dependency boundary. OBST-EQSRC-CLOSURE-SIGNATURE-001 is a precise repairable source-specification obstruction. The candidate remains proposal-only with blocked_adoption_open_continuation and no Distance-to-GR ledger change or physics promotion.
-- Current route family: eqsrc closure v3 exact signature and noncircularity repair.
-- Next recommended action: Run one bounded Ontology Formalizer ontology-law-research-packet to produce a proposal-only v3 that declares or explicitly quantifies all proxy witness constructors declares component congruences types negative-control predicates and stratifies acceptance dependencies before fresh Smuggling Auditor review or Refuter stress.
+- Active task path: `research_control/tasks/RT-20260718-020/00_TASK.yaml`.
+- Active task objective: Execute one bounded Ontology Formalizer ontology-law-research-packet to produce a proposal-only EqSrcClosureLaw_src^cand v3 with a closed typed source signature and acyclic acceptance dependency order while preserving the v2 accepted-totality theorem core.
+- Latest handoff path: `research_control/handoffs/handoff-0745.yaml`.
+- Latest handoff summary: RT-20260718-020 produced proposal-only EqSrcClosureLaw_src^cand v3 with an exact endpoint-indexed source signature typed proxy constructors declared component and outcome congruences total negative-control evaluators on raw certificate fibers and a finite rank-0 through rank-4 dependency order excluding acceptance recursion. It proves statement-level declaration closure acyclic certificate-admissibility totality and the preserved conditional equivalence theorem. OBST-EQSRC-CLOSURE-SIGNATURE-001 is repaired at proposal statement level pending fresh audit. Current ontology does not derive or adopt the candidate general EqSrc remains undischarged and the Distance-to-GR ledger is unchanged.
+- Current route family: eqsrc closure v3 fresh smuggling audit.
+- Next recommended action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against the complete proposal-only v3 signature dependency graph semantic factorization component congruence accepted-totality clauses and proofs before Refuter stress or adoption consideration.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded Ontology Formalizer ontology-law-research-packet to produce a proposal-only v3 that declares or explicitly quantifies all proxy witness constructors declares component congruences types negative-control predicates and stratifies acceptance dependencies before fresh Smuggling Auditor review or Refuter stress.
+Run one fresh bounded Smuggling Auditor ontology-law-research-packet against the complete proposal-only v3 signature dependency graph semantic factorization component congruence accepted-totality clauses and proofs before Refuter stress or adoption consideration.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-019`;
-- latest handoff: `handoff-0744`;
-- current status: `eqsrc_closure_source_law_candidate_v2_signature_obstruction_repair_required_no_adoption`;
+- active task: `RT-20260718-020`;
+- latest handoff: `handoff-0745`;
+- current status: `eqsrc_closure_source_law_candidate_v3_signature_noncircularity_repaired_pending_fresh_audit_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0744.yaml`
-- `research_control/tasks/RT-20260718-019/00_TASK.yaml`
+- `research_control/handoffs/handoff-0745.yaml`
+- `research_control/tasks/RT-20260718-020/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0744*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0745*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

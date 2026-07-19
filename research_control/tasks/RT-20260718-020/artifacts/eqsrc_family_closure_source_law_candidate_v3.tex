@@ -1,0 +1,527 @@
+% authority: science-draft
+% status: proposal-only
+% route: ontology-law-research-packet
+% trigger_classification: derivation_critical_missing_source_law
+% adoption_status: blocked_adoption_open_continuation
+% repair_target: OBST-EQSRC-CLOSURE-SIGNATURE-001
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Cert}{\mathsf{Cert}_{\mathrm{src}}}
+\newcommand{\Accept}{\mathsf{Accept}_{\mathrm{src}}}
+\newcommand{\Law}{\mathsf{EqSrcClosureLaw}^{\mathrm{cand},v3}_{\mathrm{src}}}
+\newcommand{\Block}{\mathsf{Block}}
+\newcommand{\Pass}{\mathsf{Pass}}
+\newcommand{\PiSrc}{\Pi_{\mathrm{src}}}
+
+\title{Proposal-Only EqSrc Closure Source-Law Candidate v3:\\
+Exact Signature and Non-Circular Acceptance Repair}
+\author{Ontology Formalizer control packet RT-20260718-020}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\section{Control Status and Repair Question}
+
+This artifact defines the proposal-only source-extension object \(\Law\).
+Its adoption status is
+\texttt{blocked\_adoption\_open\_continuation}. Current ontology does not
+derive \(\Law\), its signature, its acceptance predicates, or an equivalent
+source-side closure primitive. This artifact is not a canonical ontology edit,
+an adopted law, a general EqSrc result, or downstream physics promotion.
+
+\begin{verbatim}
+candidate_status: proposal-only
+repair_target: OBST-EQSRC-CLOSURE-SIGNATURE-001
+repair_result: statement_level_signature_and_noncircularity_repair_supplied
+proxy_constructor_signature: explicit_and_typed
+component_congruences: explicit_and_typed
+negative_control_domain: explicit_raw_certificate_fiber
+acceptance_dependency_order: finite_acyclic_rank_0_through_rank_4
+acceptance_recursion: forbidden
+source_grammar: declaration_closed_pending_fresh_audit
+accepted_identity_totality: preserved
+accepted_inverse_totality: preserved
+accepted_composition_totality: preserved
+adoption_status: blocked_adoption_open_continuation
+general_EqSrc_discharged: false
+RetainH_adopted: false
+GenH_adopted: false
+distance_to_gr_ledger_changed: false
+next_route: fresh_smuggling_auditor_review
+\end{verbatim}
+
+RT-20260718-019 identified
+\texttt{OBST-EQSRC-CLOSURE-SIGNATURE-001}: version 2 used identity, inverse,
+and composition proxy terms absent from its declared signature; referred to
+undeclared component congruences; and did not type or stratify negative-control
+decisions independently of \(\Accept\). Version 3 supplies the missing
+statement-level declarations and dependency order while preserving the
+accepted-totality theorem core. A fresh independent audit remains required.
+
+\section{Exact Closed Typed Source Signature}
+
+\begin{definition}[Rank-0 source carriers and comparisons]
+Let \(\mathcal F_{\mathrm{src}}\) be a declared set of source objects. For
+every \(A,B\in\mathcal F_{\mathrm{src}}\), declare:
+\begin{enumerate}[leftmargin=*]
+  \item a ledger fiber \(\Lambda(A,B)\) with equivalence relation
+  \(\equiv_{\Lambda}^{A,B}\);
+  \item a proxy fiber \(\mathcal P(A,B)\) with equivalence relation
+  \(\equiv_{\mathcal P}^{A,B}\);
+  \item a set \(\Pi^0(A,B)\) of primitive provenance leaves with equivalence
+  relation \(\equiv_{\Pi^0}^{A,B}\);
+  \item a finite source index set \(\mathcal N_{\mathrm{src}}\), and for every
+  \(n\in\mathcal N_{\mathrm{src}}\), an outcome set \(\mathcal O_n\), an
+  equivalence relation \(\equiv_n\), and an
+  \(\equiv_n\)-saturated pass set \(\mathcal O_n^{\Pass}\subseteq\mathcal O_n\);
+  and
+  \item the Boolean carrier \(\mathbb B=\{\Pass,\Block\}\), with missing,
+  ill-typed, or undefined evaluation interpreted as \(\Block\).
+\end{enumerate}
+All endpoint indices are part of the types. Thus elements of different fibers
+are not comparable unless a displayed map moves them to one common fiber.
+\end{definition}
+
+\begin{definition}[Rank-1 total ledger and proxy constructors]
+The signature declares the following total source maps:
+\[
+\begin{aligned}
+ e_A&\in\Lambda(A,A),&
+ (-)^\dagger_{A,B}&:\Lambda(A,B)\longrightarrow\Lambda(B,A),\\
+ \odot_{A,B,C}&:\Lambda(B,C)\times\Lambda(A,B)
+                 \longrightarrow\Lambda(A,C),\\[2mm]
+ \iota_A&\in\mathcal P(A,A),&
+ \jmath_{A,B}&:\mathcal P(A,B)\longrightarrow\mathcal P(B,A),\\
+ \mu_{A,B,C}&:\mathcal P(B,C)\times\mathcal P(A,B)
+                 \longrightarrow\mathcal P(A,C).
+\end{aligned}
+\]
+Each map respects its displayed component congruence. In particular, if its
+inputs are congruent, its outputs are congruent in the codomain fiber. These
+declarations replace the undeclared v2 expressions
+\(p_{\mathsf{id},A}\), \(p_{\mathsf{inv}}(w)\), and
+\(p_{\mathsf{comp}}(v,w)\) by the typed symbols
+\(\iota_A\), \(\jmath_{A,B}(p_w)\), and
+\(\mu_{A,B,C}(p_v,p_w)\).
+\end{definition}
+
+\begin{definition}[Rank-1 provenance algebra and congruence]
+For every ordered pair \(A,B\), \(\PiSrc(A,B)\) is the least typed term family
+generated by
+\[
+\begin{aligned}
+ \pi\in\Pi^0(A,B)&\Longrightarrow \pi\in\PiSrc(A,B),\\
+ \mathsf{id}[A]&\in\PiSrc(A,A),\\
+ \pi\in\PiSrc(A,B)&\Longrightarrow
+     \mathsf{inv}[\pi]\in\PiSrc(B,A),\\
+ \pi\in\PiSrc(A,B),\ \rho\in\PiSrc(B,C)&\Longrightarrow
+     \mathsf{comp}[\rho,\pi]\in\PiSrc(A,C).
+\end{aligned}
+\]
+The relation \(\equiv_\Pi^{A,B}\) is the least typed constructor congruence
+containing \(\equiv_{\Pi^0}^{A,B}\) and the unit, double-inverse, inverse-unit,
+and associativity equations for these constructors. There are no other
+provenance leaves, constructors, comparison rules, or opaque escape values.
+\end{definition}
+
+\begin{definition}[Rank-2 raw certificate fibers and constructors]
+The raw certificate fiber is the displayed product
+\[
+ \Cert(A,B)=
+ \Lambda(A,B)\times\mathcal P(A,B)\times\PiSrc(A,B).
+\]
+Write \(w=(\lambda_w,p_w,\pi_w):A\to B\). Before acceptance is defined,
+declare the total raw-certificate constructors
+\[
+\begin{aligned}
+ \mathbf 1_A
+   &=(e_A,\iota_A,\mathsf{id}[A])\in\Cert(A,A),\\
+ \mathsf{Inv}_{A,B}(w)
+   &=(\lambda_w^\dagger,\jmath_{A,B}(p_w),
+      \mathsf{inv}[\pi_w])\in\Cert(B,A),\\
+ \mathsf{Comp}_{A,B,C}(v,w)
+   &=(\lambda_v\odot\lambda_w,
+      \mu_{A,B,C}(p_v,p_w),
+      \mathsf{comp}[\pi_v,\pi_w])\in\Cert(A,C).
+\end{aligned}
+\]
+Their domains and codomains are fixed entirely by the endpoint fibers.
+\end{definition}
+
+\begin{definition}[Rank-2 certificate congruence]
+For \(w,w'\in\Cert(A,B)\), first define
+\[
+ w\equiv_{\Cert}^{A,B}w'
+ \quad\Longleftrightarrow\quad
+ \lambda_w\equiv_\Lambda^{A,B}\lambda_{w'}
+ \ \wedge\
+ p_w\equiv_{\mathcal P}^{A,B}p_{w'}
+ \ \wedge\
+ \pi_w\equiv_\Pi^{A,B}\pi_{w'}.
+\]
+This relation is available before any decision map is declared and is an
+equivalence because its three component comparisons are equivalences.
+\end{definition}
+
+\begin{definition}[Rank-2 source-only decision maps]
+For every endpoint pair, declare total maps
+\[
+\begin{aligned}
+ L_{A,B}&:\Lambda(A,B)\longrightarrow\mathbb B,\\
+ P_{A,B}&:\mathcal P(A,B)\longrightarrow\mathbb B,\\
+ \delta_{n,A,B}&:\Cert(A,B)\longrightarrow\mathcal O_n
+   \qquad(n\in\mathcal N_{\mathrm{src}}).
+\end{aligned}
+\]
+Define
+\(\mathsf{LedgerOK}_{A,B}(\lambda)\) by \(L_{A,B}(\lambda)=\Pass\),
+\(\mathsf{ProxyOK}_{A,B}(p)\) by \(P_{A,B}(p)=\Pass\), and
+\[
+ \mathsf{NegPass}_{n,A,B}(w)
+ \quad\Longleftrightarrow\quad
+ \delta_{n,A,B}(w)\in\mathcal O_n^{\Pass}.
+\]
+The negative-control domain is therefore the already displayed raw certificate
+fiber. Each decision map is primitive source data or has a displayed
+rank-\(\leq2\) defining expression. None may mention \(\Accept\),
+\(\Law\), \(\sim_{\mathrm{cand},v3}\), target data, or process authority.
+The maps \(L\), \(P\), and every \(\delta_n\) respect
+\(\equiv_\Lambda\), \(\equiv_{\mathcal P}\), and
+\(\equiv_{\Cert}\), respectively. Therefore
+\[
+\ w\equiv_{\Cert}^{A,B}w'
+\Longrightarrow
+\delta_{n,A,B}(w)\equiv_n\delta_{n,A,B}(w')
+\]
+without defining certificate congruence from negative outcomes. Each pass set
+is saturated, so certificate-congruent inputs have the same pass/block status.
+\end{definition}
+
+\section{Acyclic Acceptance and Source-Purity Guard}
+
+\begin{definition}[Complete definition-dependency order]
+Every nonlogical symbol in the proposal is assigned exactly one rank:
+\begin{longtable}{p{0.10\linewidth}p{0.80\linewidth}}
+\toprule
+Rank & Objects permitted at that rank \\
+\midrule
+0 & Source object, carrier, primitive-leaf, outcome, pass-set, and component-equivalence data. \\
+1 & Total ledger and proxy constructors, the least provenance algebra, and its constructor congruence. \\
+2 & Raw certificate fibers and constructors, certificate congruence, component decision maps, and negative-control predicates. \\
+3 & The acceptance predicate, defined only as the displayed conjunction below. \\
+4 & The candidate law, accepted-totality assertions, induced relation, coherence obligations, and conditional theorems. \\
+\bottomrule
+\end{longtable}
+A defining edge may point only from a lower rank to a strictly higher rank.
+Symbols at one rank may use previously declared symbols at that rank only where
+the defining expression is visibly structural and contains no back-edge.
+In particular, rank-2 decisions cannot depend on rank-3 acceptance or rank-4
+law satisfaction, and no decision or constructor may define
+\(\equiv_{\Cert}\) backward. A proposed interpretation with a missing rank, an
+undeclared symbol, a same-rank semantic recursion, or a backward edge is not an
+interpretation of \(\Law\) and returns \(\Block\).
+\end{definition}
+
+\begin{definition}[Complete no-target and no-process guard]
+For every nonlogical rank-0 through rank-2 symbol \(s\), its declaration must
+include a finite definition tree whose leaves are declared source primitives
+and whose internal nodes are lower-rank source constructors. The forbidden
+leaf and constructor classes are:
+\begin{itemize}[leftmargin=*]
+  \item target atlas, topology, differentiability, transition, target metric,
+  connection, curvature, cone, geodesic, or proper-time data;
+  \item reconstructed geometry, detector outcome, calibration, benchmark
+  success, downstream field equation, or exact-GR comparison;
+  \item generated derivative, registry metadata, role or agent authority,
+  validator result, handoff, checkpoint, approval, adoption, or Gate Chair
+  status; and
+  \item \(\Accept\), \(\Law\), the induced relation, or the truth of any
+  closure, reconstruction, benchmark, or downstream claim.
+\end{itemize}
+An undeclared, opaque, target-derived, process-derived, or cyclic leaf returns
+\(\Block\). Naming a symbol ``source'' is not sufficient. Workflow records may
+prove that this proposal was handled consistently; they cannot populate a
+carrier, constructor, decision, witness, or scientific premise.
+
+The guard is also semantic: holding all declared source leaves fixed while
+varying any target or workflow datum must leave every rank-0 through rank-2
+interpretation, every \(\Accept\) value, and candidate-law satisfaction
+unchanged. Aliases, lookup tables, hashes, learned parameters, opaque oracles,
+proxy labels, provenance leaves, congruence classes, and negative controls are
+classified by their transitive provenance rather than their names. This
+factorization condition distinguishes source-sorted syntax from source-only
+semantics and remains an explicit target for fresh audit.
+\end{definition}
+
+\begin{definition}[Rank-3 acceptance]
+Define the Boolean decision
+\(\Accept_{A,B}:\Cert(A,B)\to\mathbb B\). For a well-formed
+\(w=(\lambda_w,p_w,\pi_w)\in\Cert(A,B)\),
+\[
+\begin{split}
+ \Accept_{A,B}(w)=\Pass\quad\Longleftrightarrow\quad&
+ L_{A,B}(\lambda_w)=\Pass\\
+ &\wedge\ P_{A,B}(p_w)=\Pass\\
+ &\wedge\
+ \bigwedge_{n\in\mathcal N_{\mathrm{src}}}
+ \delta_{n,A,B}(w)\in\mathcal O_n^{\Pass}.
+\end{split}
+\]
+In every other case, \(\Accept_{A,B}(w)=\Block\).
+Endpoint and provenance typing are already enforced by membership in
+\(\Cert(A,B)\). Missing, ill-typed, undefined, conflicting, extra-grammatical,
+or guard-violating data yields \(\Block\).
+Here ``acceptance'' means internal certificate admissibility only; it is not an
+audit pass, human approval, ontology adoption, or benchmark acceptance.
+\end{definition}
+
+\begin{proposition}[Acyclic acceptance is total and non-circular]
+For any fixed rank-0 through rank-2 source signature satisfying the dependency
+order, \(\Accept_{A,B}:\Cert(A,B)\to\mathbb B\) is a uniquely determined total
+function for every endpoint pair.
+\end{proposition}
+
+\begin{proof}
+Each raw certificate has three typed components by the rank-2 product
+definition. The total maps \(L_{A,B}\), \(P_{A,B}\), and
+\(\delta_{n,A,B}\) evaluate those components using only rank-0 through rank-2
+data. The finite set \(\mathcal N_{\mathrm{src}}\) makes the displayed
+conjunction finite. Its Boolean value is therefore unique. No defining path
+returns from ranks 0--2 to rank 3 or 4, so neither \(\Accept(w)\leftrightarrow
+\Accept(w)\) nor \(\Accept(w)\leftrightarrow\neg\Accept(w)\) can arise as a
+component definition. Undefined evaluation is explicitly \(\Block\), proving
+totality and fail-closure.
+\end{proof}
+
+\begin{proposition}[Declaration closure at statement level]
+Every nonlogical term used below is a term of the typed language generated by
+the displayed v3 signature.
+\end{proposition}
+
+\begin{proof}
+The component terms are rank-0 elements. The ledger, proxy, and provenance
+parts of identity, inverse, and composition are generated by the rank-1 maps.
+Their tuples therefore belong to the rank-2 certificate codomains. All
+component comparisons and decision applications use displayed typed maps.
+Rank-3 acceptance is an explicit finite conjunction, and rank-4 clauses apply
+only previously declared terms and predicates. Structural induction on term
+rank covers every occurrence. This is a statement-level closure proof; a
+fresh audit must still test whether the intended interpretations respect the
+source-purity guard.
+\end{proof}
+
+\section{Candidate Accepted-Totality and Coherence Law}
+
+\begin{definition}[Proposal-only candidate closure law v3]
+A declared source signature satisfies \(\Law\) only if the guard and dependency
+order hold and all following rank-4 clauses are true.
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Accepted identity totality.}
+  For every \(A\in\mathcal F_{\mathrm{src}}\),
+  \(\Accept_{A,A}(\mathbf 1_A)=\Pass\).
+
+  \item \textbf{Accepted inverse totality.}
+  For every \(w\in\Cert(A,B)\), if \(\Accept_{A,B}(w)=\Pass\), then
+  \[
+    \Accept_{B,A}(\mathsf{Inv}_{A,B}(w))=\Pass.
+  \]
+
+  \item \textbf{Accepted composition totality.}
+  For all \(w\in\Cert(A,B)\) and \(v\in\Cert(B,C)\), if both are accepted,
+  then
+  \[
+    \Accept_{A,C}(\mathsf{Comp}_{A,B,C}(v,w))=\Pass.
+  \]
+
+  \item \textbf{Congruence and acceptance invariance.}
+  Each \(\equiv_{\Cert}^{A,B}\) is an equivalence, acceptance is constant on
+  its classes, and \(\mathsf{Inv}\) and \(\mathsf{Comp}\) preserve it.
+
+  \item \textbf{Unit compatibility.}
+  For every accepted \(w:A\to B\),
+  \[
+   \mathsf{Comp}(w,\mathbf 1_A)\equiv_{\Cert}w,\qquad
+   \mathsf{Comp}(\mathbf 1_B,w)\equiv_{\Cert}w.
+  \]
+
+  \item \textbf{Inverse compatibility.}
+  For every accepted \(w:A\to B\),
+  \[
+  \mathsf{Inv}(\mathsf{Inv}(w))\equiv_{\Cert}w,\quad
+  \mathsf{Comp}(\mathsf{Inv}(w),w)\equiv_{\Cert}\mathbf 1_A,\quad
+  \mathsf{Comp}(w,\mathsf{Inv}(w))\equiv_{\Cert}\mathbf 1_B.
+  \]
+
+  \item \textbf{Associativity compatibility.}
+  For every composable accepted triple \(w,v,u\),
+  \[
+  \mathsf{Comp}(u,\mathsf{Comp}(v,w))
+  \equiv_{\Cert}
+  \mathsf{Comp}(\mathsf{Comp}(u,v),w).
+  \]
+
+  \item \textbf{Component and negative-outcome coherence.}
+  The ledger, proxy, provenance, and negative-outcome components of the
+  preceding equations agree under
+  \(\equiv_\Lambda,\equiv_{\mathcal P},\equiv_\Pi,\equiv_n\), respectively.
+  This is a substantive candidate-law obligation, not a consequence of naming
+  the constructors.
+
+  \item \textbf{Fail-closed model condition.}
+  If any carrier, constructor, congruence, decision map, definition tree,
+  accepted witness, typing judgment, compatibility equation, or guard
+  obligation is absent or fails, the structure does not satisfy \(\Law\).
+  No target or process datum supplies a default witness.
+\end{enumerate}
+\end{definition}
+
+\section{Conditional Equivalence Theorem}
+
+Define
+\[
+ A\sim_{\mathrm{cand},v3}B
+ \quad\Longleftrightarrow\quad
+ \exists w\in\Cert(A,B)\ \Accept_{A,B}(w)=\Pass.
+\]
+
+\begin{proposition}[Equivalence under the repaired candidate law]
+If a declared source family satisfies every clause of \(\Law\), then
+\(\sim_{\mathrm{cand},v3}\) is an equivalence relation on
+\(\mathcal F_{\mathrm{src}}\).
+\end{proposition}
+
+\begin{proof}
+Accepted identity totality supplies \(\mathbf 1_A:A\to A\) for every \(A\),
+so the relation is reflexive. If an accepted \(w:A\to B\) witnesses
+\(A\sim_{\mathrm{cand},v3}B\), accepted inverse totality supplies the accepted
+\(\mathsf{Inv}(w):B\to A\), proving symmetry. If accepted
+\(w:A\to B\) and \(v:B\to C\) witness the two premises of transitivity,
+accepted composition totality supplies the accepted
+\(\mathsf{Comp}(v,w):A\to C\). All witnesses are rank-2 terms and acceptance
+is the rank-3 source-only conjunction, so the proof contains no hidden witness
+choice or back-reference to the relation being proved.
+\end{proof}
+
+\begin{remark}
+The theorem is conditional on a structure satisfying the proposal. The
+coherence clauses make its certificate algebra groupoid-like modulo declared
+congruence; the coarse equivalence proof itself uses only the three explicit
+accepted-totality clauses. Neither fact shows that current ontology supplies
+or selects such a structure.
+\end{remark}
+
+\section{Obstruction Repair and Fail-Closed Branches}
+
+\paragraph{Exact statement-level repair.}
+Every v2 escape named by \texttt{OBST-EQSRC-CLOSURE-SIGNATURE-001} now has a
+displayed declaration: proxy identity, inverse, and composition are typed
+rank-1 data; ledger, proxy, provenance, outcome, and certificate congruences
+have explicit fibers; negative-control maps have the raw-certificate domain;
+and the finite rank order excludes acceptance recursion. Thus the exact
+signature and non-circularity repair is supplied at proposal statement level,
+pending fresh independent audit.
+
+\paragraph{Missing or ill-typed declaration branch.}
+If a symbol lacks a declared domain or codomain, or a constructor returns an
+element in the wrong endpoint fiber, the structure returns \(\Block\) and is
+not a model of \(\Law\).
+
+\paragraph{Cyclic decision branch.}
+If \(L\), \(P\), or any \(\delta_n\) depends on \(\Accept\), \(\Law\), the
+induced relation, or its own later consequence, the rank condition fails.
+There is no least- or greatest-fixed-point default.
+
+\paragraph{Target or process leaf branch.}
+If any carrier, constructor, congruence, decision, or witness is populated by
+a forbidden target or process class, the complete source-purity guard fails.
+Artifact registration, validation, or checkpointing cannot cure the failure.
+
+\paragraph{Coherence branch.}
+If accepted constructors fail unit, inverse, associativity, component
+congruence, or negative-outcome compatibility, the structure fails \(\Law\)
+even if its coarse accepted-certificate relation happens independently to be
+an equivalence.
+
+\section{Distance-to-GR Matrix and Freeze Evaluation}
+
+\begin{longtable}{p{0.31\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after this proposal-only repair \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit or adoption. \\
+Source equivalence EqSrc & V3 supplies an exact proposal-level signature and non-circularity repair; general EqSrc remains undischarged pending fresh audit, stress, instantiation, and protected adoption. \\
+RetainH & Unchanged and not adopted. \\
+GenH & Unchanged and not adopted. \\
+\(\mathrm{ObsLoc}_{lc}\) & Unchanged. \\
+\(\mathrm{Resp}_{lc}\) & Unchanged. \\
+\(M_{\mathrm{src}}\) & Unchanged and not adopted. \\
+\(g_{\mathrm{eff}}\) & Unchanged; no metric result or scope expansion. \\
+Matter coupling & Blocked and unchanged. \\
+Einstein equations & Blocked and unchanged. \\
+Finite-variation robustness & Unchanged; no robustness theorem follows. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion. \\
+Gate Chair status & Unchanged; no verdict or adoption request. \\
+Current route freeze or hard-fail status & Not frozen; one fresh bounded Smuggling Auditor review of the materially repaired v3 is available. \\
+\bottomrule
+\end{longtable}
+
+The Distance-to-GR ledger is unchanged. The new payload is a
+\texttt{conditional\_theorem\_candidate} and proposal-level source-extension
+object, not an adopted premise or milestone discharge.
+
+This is a repeated EqSrc constructor--audit line, so freeze criteria are
+active. The route is not frozen because v3 adds the exact missing typed maps,
+component congruences, raw-certificate negative-control domain, and a new
+well-foundedness theorem. Freeze review is required if a fresh audit again
+finds undeclared constructor or component-comparison terms, finds an
+acceptance back-edge or semantically opaque same-rank recursion, or proves that
+closing the definition requires a forbidden target or process premise. The
+next action is one audit, not another unreviewed reformulation.
+
+\section{Authority Boundary and Next Route}
+
+The candidate remains \texttt{proposal-only}, \texttt{draft/control}
+source-extension data. Statement-level declaration closure and conditional
+proof do not establish current-ontology derivability, existence of a physical
+instance, naturalness, uniqueness, empirical adequacy, or adoption.
+
+No canonical ontology modification, source-law adoption, general EqSrc,
+RetainH, GenH, \(M_{\mathrm{src}}\), \(g_{\mathrm{eff}}\), matter-coupling,
+Einstein-equation, finite-variation, benchmark, Gate Chair, or
+completed-derivation result follows. No program-level no-go theorem, future
+source-extension impossibility, or global theory rejection is asserted.
+
+The next lawful route is one fresh bounded
+\texttt{smuggling-auditor@0.2.0} ontology-law packet. It must test the complete
+v3 declaration set, the rank graph, source-purity definition trees,
+component-congruence closure, accepted-totality clauses, and theorem proof.
+Refuter stress follows only after that independent audit passes. Any adoption
+remains a separate protected human-gated decision.
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Proposal-only EqSrc closure
+source-law candidate v2: Accepted-totality and closed-grammar repair}
+[Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260718-018/artifacts/
+eqsrc\_family\_closure\_source\_law\_candidate\_v2.tex}.
+
+The AEther-Flow Research Project. (2026b). \emph{EqSrc closure source-law
+candidate v2 smuggling audit} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260718-019/artifacts/
+eqsrc\_closure\_source\_law\_v2\_smuggling\_audit.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{Handoff 0744}
+[Research-control handoff].
+\texttt{research\_control/handoffs/handoff-0744.yaml}.
+
+\end{document}
