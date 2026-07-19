@@ -1,0 +1,546 @@
+completion_id: "AJC-AJ-RT-20260718-037-001"
+job_id: "AJ-RT-20260718-037-001"
+task_id: "RT-20260718-037"
+decision_id: "DDR-20260718-037"
+status: "completed"
+completed_at: "2026-07-19T21:49:14Z"
+completed_by_role: "refuter@0.2.0--RT-20260718-037"
+source_role_id: "refuter"
+source_role_version: "0.2.0"
+plan_task_id: "ordinary_eqsrc_cycle_boundary_selector_law_refuter_stress"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Stressed unchanged exact proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1. Its marked-groupoid theorems survive conditionally. New exact results are the C2<V4<D8 affine hierarchy, full-GL three-line obstruction with equality-versus-universal collapse, a minimal two-point strict orientation-descent countermodel, and characteristic-cardinality branches showing field and parity underselection. Current ontology supplies no independent orientation provenance line selector physical morphism or variation law. The exact classification is scoped_obstruction with local freeze and no Distance-to-GR delta."
+artifacts:
+  - "research_control/tasks/RT-20260718-037/artifacts/child_phys_math_eqsrc_cycle_boundary_selector_law_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260718-037/artifacts/child_phys_phil_eqsrc_cycle_boundary_selector_law_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260718-037/artifacts/parent_conflict_review_eqsrc_cycle_boundary_selector_law_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260718-037/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law_refuter_stress.md"
+  - "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress.tex"
+  - "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress_receipt.md"
+  - "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_countermodel.yaml"
+  - "research_control/tasks/RT-20260718-037/artifacts/validate_eqsrc_cycle_boundary_selector_law_refuter_stress.py"
+  - "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260718-037/**"
+  - "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress.tex"
+  - "research_control/handoffs/handoff-0762.yaml"
+  - "research_control/handoffs/handoff-0762.md"
+  - "research_control/program_state.yaml"
+extra_read_paths:
+  - "research_control/handoffs/handoff-0761.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/refuter_obstruction_schema_v1.md"
+  - "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-036/artifacts/eqsrc_cycle_boundary_selector_law_smuggling_audit.tex"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=PASS refresh_performed=true source_object_count=881 relationship_row_count=4370"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex --json | exit_code=0 | canonical_source_inspected=true source_hash=64901302bd6f37819ebd30aaaebaf39611d2c71c97d45b6cea6a39df11e0df94"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Refuter EqSrcCycleBoundarySelectorLaw three boundary lines complement mark variation gap\" --limit 10 --json | exit_code=0 | returned_object_ids=MD-RESEARCH-CONTROL-TASKS-RT-20260718-036-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-SMUGGLING-AUDIT;MD-RESEARCH-CONTROL-CURRENT-FRONTIER;MD-RESEARCH-CONTROL-TASK-INDEX"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=0 | status=ready active_task=RT-20260718-036 latest_handoff=handoff-0761"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260718-037/artifacts/validate_eqsrc_cycle_boundary_selector_law_refuter_stress.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260718-037/artifacts/validate_eqsrc_cycle_boundary_selector_law_refuter_stress.py --write-report --json | exit_code=0 | status=PASS gl2_order=6 boundary_lines=3 relation_stabilizers=8 label_fixers=4 declared_variations=2"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary | exit_code=0 | status=PASS errors=0 warnings=168"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=0 | status=PASS errors=0 warnings=1646"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | status=PASS documentation_impact_required=true blocked_paths=none"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 finding_count=1478"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500 | exit_code=2 | status=EXPECTED_PRECHECKPOINT_BOUNDARY required_failure_labels=[legacy_validate_project_control] sole_failure_class=registered_new_paths_not_yet_tracked"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format json | exit_code=0 | status=PASS"
+  - "git diff --check | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 881
+    relationship_row_count: 4370
+    semantic_row_count: 881
+    vault_row_count: 881
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  before_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    local_cache_only_warning_count: 9
+  after_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+      returned_object_ids:
+        - "TEX-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-CANDIDATE-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"Refuter EqSrcCycleBoundarySelectorLaw three boundary lines complement mark variation gap\" --limit 10 --json"
+      query_type: "search"
+      query_text: "Refuter EqSrcCycleBoundarySelectorLaw three boundary lines complement mark variation gap"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260718-036-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-SMUGGLING-AUDIT"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "TEX-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-CANDIDATE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+      source_hash: "64901302bd6f37819ebd30aaaebaf39611d2c71c97d45b6cea6a39df11e0df94"
+    - object_id: "TEX-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-SMUGGLING-AUDIT"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-036/artifacts/eqsrc_cycle_boundary_selector_law_smuggling_audit.tex"
+      source_hash: "6169702f60659488e05cf0386afedc4b58b7395926923d5a2d365512182ca78f"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260718-036-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-SMUGGLING-AUDIT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-036/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law_smuggling_audit.md"
+      source_hash: "3e3d789d1e92060b82efe7a9a9cb8730a11c9258c279658d2e3808729c28e264"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "d434a638085a3169081e8a7e99938454b7de8a880cc7c4d9ba4acff37ec2c32d"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "288d7e7411c85671d30f80e5b3ad3cdb95b69e8c54dd16b7f5d2ba95d4f58f88"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260718-037/artifacts/child_phys_math_eqsrc_cycle_boundary_selector_law_refuter_stress.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260718-037/artifacts/child_phys_phil_eqsrc_cycle_boundary_selector_law_refuter_stress.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260718-037/artifacts/parent_conflict_review_eqsrc_cycle_boundary_selector_law_refuter_stress.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Both perspectives support the conditional marked-core pass, minimal strict-descent countermodel, three-line and affine hierarchy results, field-parity underselection, one scoped obstruction, local freeze, and one Theoretical Selector route."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260718-037/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law_refuter_stress.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused stress preserves the conditional marked theorems exact C2/V4/D8 hierarchy three-line collapse minimal orientation-descent countermodel field-cardinality branches provenance limit and non-global scope."
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Stress the audited exact proposal-only marked-source selector for strict orientation descent, line selection, field-cardinality dependence, and independently justified physical morphisms and variations."
+  missing_source_law: "A current-ontology-derived orientation and provenance law, boundary-line selector, field-cardinality rule, physical morphism category, and independently justified admissible variation class."
+  stressed_source_law: "EqSrcCycleBoundarySelectorLaw_src^cand,v1"
+  underdetermination_statement: "Current ontology does not derive the oriented mark provenance, boundary line, field-cardinality package, physical morphism category, or admissible variation class."
+  no_go_theorem_status: "scoped_obstruction_only"
+  packet_payload_mode: "candidate_law_refutation"
+  candidate_law_refutation:
+    refuted_candidate: "The standalone current-ontology derivation, strict orientation-independent descent, and independent physical robustness reading of EqSrcCycleBoundarySelectorLaw_src^cand,v1"
+    refutation_basis: "The minimal two-point complement pair selects distinct relations after orientation forgetting, GL(2,2) permutes every proper line, and the C2/V4/D8 hierarchy lacks an independent physical selector."
+    surviving_obligations:
+      - "The conditional marked-record quotient and naturality theorems survive."
+      - "A richer source-side provenance or orientation law may remain possible."
+      - "A bundle-valued or orientation-descent or irrelevance theorem may remain possible."
+      - "General EqSrc exact-GR recovery and all downstream burdens remain open."
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Select or eliminate dependence on orientation boundary line field and variation class before any adoption review."
+      - "Keep target atlas metric detector benchmark process and derivative status outside every source definition."
+      - "Keep general EqSrc RetainH GenH M_src g_eff matter coupling Einstein equations and benchmark promotion open."
+      - "Require protected human authority before source-law or ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "empirical_detector_semantics"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "validator_authority"
+      - "role_authority"
+      - "handoff_authority"
+      - "validation_authority"
+    checked_objects:
+      - "oriented marked finite records"
+      - "three boundary lines"
+      - "quotient kernel pairs"
+      - "affine subgroup hierarchy"
+      - "field-cardinality branches"
+    result: "pass"
+    failure_reason: ""
+  failure_branches:
+    collapse: "Full line-symmetry intersection gives equality, generated join gives universal relation, and characteristic dividing |P| gives B=A."
+    nonuniqueness: "Three line choices form one GL(2,2) orbit with no invariant proper line."
+    inverse_defect: "No defect inside the marked groupoid; raw orientation reversal changes the selected relation."
+    cocycle_defect: "No defect inside the marked groupoid; strict orientation-forgetting descent fails."
+    variation_fragility: "C2 is a strict subgroup of V4 and D8 with no independent physical selector."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No adoption is requested. Theoretical packet selection may continue without a human gate."
+source_extension_category: "source_extension_refuter_stress"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "EqSrcCycleBoundarySelectorLaw_src^cand,v1"
+  item_source_path: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+  item_kind: "law target"
+  classification: "blocked_adoption_open_continuation"
+  evidence_paths:
+    - "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+    - "research_control/tasks/RT-20260718-036/artifacts/eqsrc_cycle_boundary_selector_law_smuggling_audit.tex"
+    - "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress.tex"
+    - "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_countermodel.yaml"
+  relation_to_current_ontology: "blocked_open"
+  relation_to_target_structures: "No target-side structure is used as a source-definition premise."
+  claim_boundary_id: "CB-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-REFUTER-STRESS-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "Exact candidate v1 is a coherent decorated marked-source proposal with a scoped strict orientation-descent and independent-selection obstruction; blocked adoption with open same-milestone continuation remains."
+  forbidden_overreads:
+    - "marked naturality as physical covariance"
+    - "abstract pair isomorphism as one selected relation on actual source states"
+    - "field parity sufficiency as physical necessity"
+    - "scoped obstruction as global no-go"
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-037-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Exact affine subgroup hierarchy"
+    summary: "C2 declared translations are the center of V4 label fixers inside D8 relation stabilizers within the 24-element affine group."
+  - payload_id: "NMP-RT-20260718-037-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Three-line equality-universal collapse"
+    summary: "Full GL symmetry has no invariant proper line; intersection of all line relations is equality and their join is universal."
+  - payload_id: "NMP-RT-20260718-037-003"
+    payload_type: "countermodel_or_obstruction"
+    name: "Two-point complement orientation-descent countermodel"
+    summary: "Complementary singleton marks on X={0,1} select distinct relations under identity orientation forgetting."
+  - payload_id: "NMP-RT-20260718-037-004"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Characteristic-cardinality branch theorem"
+    summary: "The sum-functional kernel is the candidate line iff field characteristic does not divide mark cardinality and collapses otherwise."
+  - payload_id: "NMP-RT-20260718-037-005"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Finite-field affine hierarchy"
+    summary: "Over F_s the line and AGL relation-stabilizer label-fixer and translation counts are s+1 and s^3(s-1)^2(s+1) s^3(s-1)^2 s^2(s-1) and s."
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Stress the audited exact proposal-only marked-source selector for strict orientation descent, line selection, field-cardinality dependence, and independently justified physical morphisms and variations."
+  explanation: "The conditional decorated algebra survives, but strict orientation descent and independent physical selection fail for exact candidate v1 under a minimal finite countermodel and group-action obstruction."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "obstruction_recorded"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The exact candidate has a scoped obstruction but no source law is adopted and general EqSrc remains undischarged."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; orientation provenance line field physical morphisms and variations remain underived"
+  - burden: "Source equivalence EqSrc"
+    status: "exact candidate v1 has a scoped obstruction; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; no source-observer localization law is supplied or adopted"
+  - burden: "Resp_lc"
+    status: "unchanged; scoped EqSrc source-extension stress does not discharge response localization"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "conditional C2 robustness survives but independent physical variation selection is obstructed"
+  - burden: "benchmark promotion"
+    status: "blocked by missing source law adoption downstream derivation and protected authority"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact candidate v1 construction audit and stress cycle locally frozen; distinct theoretical selection open"
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT037-001"
+    payload_type: "theorem"
+    object_name: "Exact C2 V4 D8 affine subgroup hierarchy"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress.tex"
+    burden_effect: "stress_tests"
+    summary: "Separates declared translations label fixers relation stabilizers and the full affine group with exact structures and counts."
+  - payload_id: "PAYLOAD-RT037-002"
+    payload_type: "theorem"
+    object_name: "Three-line equality-universal selector-erasure theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress.tex"
+    burden_effect: "obstructs"
+    summary: "Shows full unmarked linear symmetry selects no proper line and degenerates under intersection or generated join."
+  - payload_id: "PAYLOAD-RT037-003"
+    payload_type: "countermodel"
+    object_name: "Minimal two-point orientation-descent countermodel"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_countermodel.yaml"
+    burden_effect: "obstructs"
+    summary: "Two complementary singleton marks select different relations on the same state space after orientation forgetting."
+  - payload_id: "PAYLOAD-RT037-004"
+    payload_type: "theorem"
+    object_name: "Characteristic-cardinality and finite-field branch theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress.tex"
+    burden_effect: "narrows"
+    summary: "Classifies sum-functional collapse and generalizes the line and affine counts over finite fields."
+  - payload_id: "PAYLOAD-RT037-005"
+    payload_type: "obstruction"
+    object_name: "Scoped orientation-descent and independent-selection obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress.tex"
+    burden_effect: "freezes"
+    summary: "Locally freezes exact candidate v1 construction audit and stress while preserving open general EqSrc and future source extensions."
+route_cycle_control:
+  cycle_family: "eqsrc_cycle_boundary_selector_law"
+  current_cycle_step: "proposal_only_v1_refuter_scoped_orientation_descent_and_independent_selection_obstruction"
+  prior_related_tasks:
+    - "RT-20260718-034"
+    - "RT-20260718-035"
+    - "RT-20260718-036"
+    - "RT-20260718-037"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The next packet selects among materially distinct provenance variation descent bundle no-go and freeze routes instead of repeating exact candidate v1."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0"
+loop_risk_decision:
+  category: "scoped_obstruction"
+  next_route: "theoretical_decision_role_selection"
+  obstruction_summary: "Exact candidate v1 is conditionally coherent on marked records but fails strict orientation descent and lacks independently selected physical morphisms and variations."
+  rationale: "Construction fresh audit and finite Refuter stress are complete; one Theoretical Continuation Selector must choose a materially distinct provenance variation descent bundle scoped no-go or freeze route without repeating exact candidate v1."
+  bridge_or_fail_escalation: true
+  repeated_burdens:
+    - "orientation and acquisition provenance"
+    - "boundary-line selection"
+    - "independently justified physical morphism and variation classes"
+  new_payload_present: true
+  generic_formalizer_route_barred: true
+  selected_route: "theoretical_continuation_selector"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW"
+  prior_attempts_considered:
+    - "RT-20260718-034"
+    - "RT-20260718-035"
+    - "RT-20260718-036"
+    - "RT-20260718-037"
+  freeze_if:
+    - "The exact candidate v1 construction audit or stress cycle is repeated without a materially different source law theorem or no-go target."
+    - "The same orientation provenance boundary-line and independent-variation burdens recur without new mathematical payload."
+  do_not_freeze_if:
+    - "A Theoretical Continuation Selector chooses a materially distinct provenance variation descent bundle scoped no-go or explicit local-freeze route."
+  freeze_decision: "not_frozen"
+  decision_reason: "Exact candidate v1 repetition is barred, while one cross-role Theoretical Continuation Selector remains materially distinct from its completed construction audit and stress cycle."
+  rationale: "The selector must choose a materially distinct provenance variation descent bundle scoped no-go or explicit freeze route and may not repeat exact candidate v1."
+  criteria_evaluated:
+    - "Exact candidate v1 completed construction fresh audit and finite Refuter stress."
+    - "The two-point complement pair proves strict orientation-descent failure."
+    - "The three-line and affine hierarchy results prove independent selector underdetermination."
+    - "One cross-role theoretical selection remains non-orbital."
+  candidate_freeze_label: "EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW"
+  status_update_path: "research_control/program_state.yaml"
+  next_allowed_route: "theoretical_selector"
+  frozen_scope: "exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 construction audit and stress repetition only"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+refuter_obstruction_record:
+  obstruction_id: "OB-EQSRC-CYCLE-BOUNDARY-DESCENT-001"
+  target_claim: "Exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 alone supplies a current-ontology-derived physically admissible orientation-independent EqSrc selector."
+  target_milestone: "source_equivalence_eqsrc"
+  failed_premise: "The inspected current ontology supplies no source-derived orientation provenance boundary-line selector field-cardinality rule physical morphism category or independent admissible-variation law; complementary admitted orientations select distinct relations after forgetting orientation."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_countermodel.yaml"
+  countermodel_scope: "exact_finite_branch"
+  certificate_gap: "missing orientation-acquisition provenance and independent physical transformation-category certificate"
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "locally_frozen"
+    decision_reason: "Exact candidate v1 has completed construction fresh audit and finite stress with a minimal countermodel."
+    next_allowed_route: "theoretical_selector"
+  route_cycle_control:
+    cycle_family: "eqsrc_cycle_boundary_selector_law"
+    current_cycle_step: "proposal_only_v1_refuter_scoped_orientation_descent_and_independent_selection_obstruction"
+    prior_related_tasks:
+      - "RT-20260718-035"
+      - "RT-20260718-036"
+      - "RT-20260718-037"
+    cycle_risk: "high"
+    orbit_avoidance_reason: "The finite descent countermodel prevents repetition of exact candidate v1 construction audit or stress."
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+  forbidden_conclusions:
+    - "No canonical ontology rejection or adoption follows."
+    - "No general EqSrc no-go follows."
+    - "No physical admissibility or covariance follows."
+    - "No RetainH GenH M_src or g_eff adoption follows."
+    - "No matter coupling or Einstein-equation derivation follows."
+    - "No Distance-to-GR or metric-use ledger change follows."
+    - "No benchmark promotion or completed derivation follows."
+    - "No program-wide no-go conclusion follows."
+    - "No future source-extension impossibility follows."
+obstruction_record:
+  present: true
+  obstruction_id: "OB-EQSRC-CYCLE-BOUNDARY-DESCENT-001"
+  scope: "source_extension_candidate"
+  failed_object: "strict orientation-independent boundary selector and independently physical variation class"
+  exact_failure: "Complementary singleton marks on the minimal two-point carrier select distinct relations after orientation forgetting, while all three proper lines are GL-conjugate and the C2 variation class is not independently selected."
+  minimal_counterexample_path: "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_countermodel.yaml"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "selector_required"
+  forbidden_overread: "This scoped candidate obstruction does not imply a general EqSrc no-go global theory rejection or future source-extension impossibility."
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The stress authorizes no source-law adoption physical-admissibility or covariance claim general EqSrc discharge downstream GR promotion ledger change benchmark promotion completed derivation future-extension impossibility or global rejection."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "physical admissibility or covariance established"
+    - "orientation parity field or variation class physically necessary"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff claim or scope expansion"
+    - "matter coupling or Einstein-equation claim"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion or Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+next_recommendation:
+  role_id: "theoretical-continuation-selector"
+  role_version: "0.1.0"
+  packet_type: "ontology_law_research_packet"
+  route_label: "ontology-law-research-packet"
+  task_type: "eqsrc_cycle_boundary_selector_law_post_obstruction_theoretical_selection"
+  objective: "Choose one materially distinct next packet among an independently sourced orientation and variation construction a bundle-valued or orientation-descent or irrelevance theorem a distinct scoped no-go or local freeze."
+  requires_human_gate: false
+  claim_boundary: "Selection-only. No candidate repair adoption canonical ontology edit ledger change downstream promotion or global no-go."
+claim_boundary:
+  boundary_id: "CB-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-REFUTER-STRESS-001"
+  allowed_scope: "Exact proposal-only stress finite group and field theorems minimal countermodel scoped obstruction local freeze and one Theoretical Selector route."
+  blocked_scope: "Repair adoption physical claims general EqSrc downstream GR ledger benchmark Gate Chair completed derivation or global no-go."
+  claim_boundary_preserved: true
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress_validation.json"
+  local_validator_report_hash: "8796f2730bc91cc058101156a32983cdb921e305245334a6ee2f8088672ee7b0"
+  stress_artifact_hash: "33d2cb4e5950c024eeed8ec93e1de90b583929ba333bfe182b6c8c5972df6220"
+  countermodel_hash: "f3845c3f6c74321d060af3cb8a8a2ef56da01d8ce556f2eca1f97bdccb65e458"
+  validation_status: "PASS"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight refreshed local retrieval and exact candidate audit and parent fusion sources were inspected."
+      - "Handoff-0761 and the registered Refuter role were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both independent child perspectives completed."
+      - "Parent conflict review resolved with no revision round."
+      - "Affine line descent field-cardinality physical limits and authority boundaries were fused."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local validator, core research-control validator, diff validator, documentation-impact validator, project-improvement collector, classifier, claim-language validator, and physics-progress metrics passed."
+      - "Full project-control validation reached the expected pre-checkpoint boundary only because registered new paths are not yet tracked."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Generated frontier, compact frontier, task-index, claim-graph, and dependency-graph derivatives were refreshed; final freshness checks follow receipt stabilization."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap and validate-only checks passed after registering the new sources."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-surface claim-language validation passed with zero hard failures and 1478 historical/contextual warnings."
+next_recommended_action: "Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose a materially distinct route after exact candidate v1's scoped obstruction. Do not repeat repair adopt or promote it."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

@@ -1,0 +1,80 @@
+artifact_id: "child_phys_math_eqsrc_cycle_boundary_selector_law_refuter_stress"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-037"
+job_id: "AJ-RT-20260718-037-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_name: "EqSrcCycleBoundarySelectorLaw_src^cand,v1"
+candidate_path: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+candidate_hash: "64901302bd6f37819ebd30aaaebaf39611d2c71c97d45b6cea6a39df11e0df94"
+audit_path: "research_control/tasks/RT-20260718-036/artifacts/eqsrc_cycle_boundary_selector_law_smuggling_audit.tex"
+audit_hash: "6169702f60659488e05cf0386afedc4b58b7395926923d5a2d365512182ca78f"
+authority_boundary: "Stress only. No repair, adoption, canonical-ontology edit, physical-admissibility claim, general EqSrc discharge, ledger change, or promotion."
+exact_classification: "scoped_obstruction"
+definitions:
+  state_space: "A=F2^2=<p,q>"
+  selected_boundary: "B=<q>"
+  relation: "x R_B y iff x-y is in B"
+  candidate_variations: "T_B={tau_0,tau_q}"
+  label_fixers: "K_B={F in AGL(2,2): pi F=pi}"
+  relation_stabilizers: "H_B={F in AGL(2,2): F preserves R_B}"
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-037-MATH-001"
+    payload_type: "finite_group_theorem"
+    name: "exact_affine_subgroup_chain"
+    statement: "T_B is normal in K_B, K_B is normal in H_B, and T_B=Z(H_B), with T_B=C2, K_B=V4, H_B=D8, AGL(2,2)=S4 and orders 2,4,8,24."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-037-MATH-002"
+    payload_type: "equivariance_obstruction"
+    name: "three_line_equality_universal_collapse"
+    statement: "GL(2,2) acts transitively on the three boundary lines. Their intersection gives equality and their generated join gives the universal relation, so no full-symmetry nondegenerate line quotient remains after selector erasure."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-037-MATH-003"
+    payload_type: "minimal_countermodel"
+    name: "two_point_complement_orientation_descent_failure"
+    statement: "X={0,1} with complementary singleton marks is the minimal admitted carrier; the two orientations select distinct boundary lines and relations under identity identification."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-037-MATH-004"
+    payload_type: "descent_theorem"
+    name: "strict_descent_fails_weak_abstract_isomorphism_survives"
+    statement: "Complement swap transports B_P to B_Q, so abstract pair isomorphism survives, but equality of relations on actual source states after orientation forgetting fails; unequal block sizes need not admit a carrier swap."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-037-MATH-005"
+    payload_type: "field_cardinality_theorem"
+    name: "characteristic_cardinality_and_finite_field_hierarchy"
+    statement: "For char(k)=r, ker ell_P is <q> when r does not divide |P| and all A otherwise. Over F_s the line count and AGL/H/K/T orders are s+1, s^3(s-1)^2(s+1), s^3(s-1)^2, s^2(s-1), and s."
+    claim_status: "draft/control"
+finite_checks:
+  gl2_order: 6
+  nonzero_proper_lines: 3
+  line_orbit_size: 3
+  common_invariant_nonzero_proper_lines: 0
+  affine_group_order: 24
+  relation_stabilizers: 8
+  pointwise_label_fixers: 4
+  candidate_variations: 2
+  relation_changers: 16
+  minimal_carrier_points: 2
+  complement_relation_symmetric_difference: 8
+  relation_stabilizer_element_orders: [1, 2, 2, 2, 2, 2, 4, 4]
+scope_guards:
+  candidate_domain: "Only |P| odd is required. Even carriers admit both complement orientations; odd carriers send the complement to Bottom."
+  weak_descent: "Abstract pair isomorphism does not select one relation on actual source states and is not physical covariance."
+  physical_scope: "No physical criterion selects P, the boundary line, field/parity package, morphism category, or variation class."
+  promotion: "No ontology, source-law, downstream GR, benchmark, Gate Chair, or ledger promotion."
+obstruction_record_recommendation:
+  obstruction_id: "OB-EQSRC-CYCLE-BOUNDARY-DESCENT-001"
+  target_claim: "A nonzero proper boundary line descends equivariantly after the oriented mark is forgotten or complement-changing and full-affine source transformations are admitted."
+  failed_premise: "No independently derived orientation provenance, physical morphism category, or variation law selects one affine-conjugate boundary line."
+  minimal_countermodel_available: true
+  countermodel_scope: "exact_finite_branch"
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+next_packet_recommendation:
+  role_family: "theoretical-continuation-selector@0.1.0"
+  route_label: "ontology-law-research-packet"
+  packet_count: 1
+  objective: "Choose among an independently sourced orientation and variation construction, a bundle-valued or descent theorem route, a distinct scoped no-go, or local freeze of exact v1."
+  recommendation_only_not_executed: true

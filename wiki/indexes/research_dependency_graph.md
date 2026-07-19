@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T21:16:26Z`
-- Source fingerprint: `1885c62b6ce76b342adc78b083af23b2c0b5afd54a591c0b3a6d24ceceeddace`
-- Nodes: `19454`
-- Edges: `67267`
+- Generated from tracked state as of: `2026-07-19T21:49:14Z`
+- Source fingerprint: `93f5eb1e8a449af623e52c18a51b4ab0c05642f2736b8c674ead6d2556c974dd`
+- Nodes: `19473`
+- Edges: `67320`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 990 |
+| `completion_yaml` | 991 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 761 |
+| `handoff_yaml` | 762 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 990 |
+| `agent_job` | `support_only` | 991 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10192 |
+| `artifact` | `support_only` | 10199 |
 | `blocked_burden` | `blocked` | 3676 |
-| `claim_boundary` | `support_only` | 947 |
-| `draft_control_candidate` | `draft_control` | 595 |
+| `claim_boundary` | `support_only` | 948 |
+| `draft_control_candidate` | `draft_control` | 600 |
 | `draft_control_candidate` | `proposal_only` | 91 |
 | `draft_control_candidate` | `science_draft` | 62 |
-| `frozen_negative` | `frozen_negative` | 112 |
+| `frozen_negative` | `frozen_negative` | 113 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 761 |
+| `handoff` | `support_only` | 762 |
 | `human_gated_object` | `human_gated` | 421 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 71 |
+| `obstruction` | `blocked` | 72 |
 | `obstruction` | `rejected` | 1 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 310 |
+| `source_ontology_object` | `support_only` | 311 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 930 |
+| `task` | `support_only` | 931 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-036`
-- Latest handoff: `handoff-0761`
-- Handoff path: `research_control/handoffs/handoff-0761.yaml`
-- Next action: Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three boundary lines, complement and forgetful transformations, the 2/4/8 variation gap, mark provenance, parity and field necessity, and independent physical selection. Do not repair adopt or promote the candidate.
+- Active task: `RT-20260718-037`
+- Latest handoff: `handoff-0762`
+- Handoff path: `research_control/handoffs/handoff-0762.yaml`
+- Next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently sourced orientation and variation construction, a bundle-valued or orientation-descent or irrelevance theorem route, a distinct scoped no-go question, or local freeze. Do not repeat repair adopt or promote exact candidate v1.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

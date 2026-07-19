@@ -1,0 +1,277 @@
+% authority: supporting
+% status: draft/control
+% task: RT-20260718-037
+\section{Refuter stress of the cycle--boundary selector candidate}
+
+\paragraph{Scope.}
+This is one bounded Refuter stress of exact proposal-only
+\(\mathrm{EqSrcCycleBoundarySelectorLaw}_{\rm src}^{\rm cand,v1}\), source
+hash
+\texttt{64901302bd6f37819ebd30aaaebaf39611d2c71c97d45b6cea6a39df11e0df94},
+after the fresh audit with hash
+\texttt{6169702f60659488e05cf0386afedc4b58b7395926923d5a2d365512182ca78f}.
+It supplies no repair, adoption, canonical-ontology edit,
+physical-admissibility claim, general \(\mathrm{EqSrc}\) discharge, ledger
+change, or downstream promotion.
+
+\subsection{Exact conditional core retained}
+
+For an admitted oriented marked record \(S=(X,P)\), put \(Q=X\setminus P\),
+\[
+ p=\mathbf1_P,\qquad q=\mathbf1_Q,\qquad
+ A_S=\operatorname{span}_{\mathbb F_2}\{p,q\},\qquad
+ B_S=\mathbb F_2q.
+\]
+The candidate relation is congruence modulo \(B_S\), and its declared
+variations are translations by \(0\) and \(q\).  Conditional on the supplied
+oriented mark and on the candidate's admitted domain, the quotient
+factorization, marked-bijection naturality, inverse and composition
+certificates, and declared-translation invariance remain valid.  This packet
+does not refute those conditional algebraic statements.
+
+\subsection{Three-line equivariance obstruction}
+
+\paragraph{Proposition (no unmarked equivariant line selector).}
+Let \(A=\mathbb F_2^2\) be supplied without a distinguished basis, mark, or
+line.  Its three nonzero proper subspaces are
+\[
+ L_p=\langle p\rangle,\qquad L_q=\langle q\rangle,\qquad
+ L_d=\langle p+q\rangle .
+\]
+The action of \(\operatorname{GL}(2,2)\) on this set of lines is transitive.
+Consequently no nonzero proper line is invariant under all unmarked linear
+automorphisms, and there is no \(\operatorname{GL}(2,2)\)-equivariant
+constant line selector on the bare two-dimensional presentation.
+
+\paragraph{Proof.}
+Every nonzero vector spans one of the three lines.  Given two nonzero
+vectors, extend each to a basis and map the first basis to the second.  The
+resulting invertible linear map carries the first line to the second.  Hence
+the three lines form one orbit.  A line fixed by the whole group would have a
+singleton orbit, which none has. \(\square\)
+
+This is a presentation-level obstruction, not a claim that the physical
+source gauge group is \(\operatorname{GL}(2,2)\).  It shows that the
+distinguished line enters through the decorated mark or some additional
+source structure; the bare \(A\)-space does not select it.
+
+\paragraph{Corollary (equality--universal collapse after selector erasure).}
+Let \(R_p,R_q,R_d\) be the congruence relations for the three lines.  Their
+intersection is equality because
+\(L_p\cap L_q\cap L_d=\{0\}\).  Their generated join is the universal
+relation because \(L_p+L_q+L_d=A\).  Thus enforcing full line-permuting
+symmetry by intersection or generated join yields the two degenerate
+extremes, not a fourth nondegenerate line quotient.
+
+\subsection{Minimal orientation-descent countermodel}
+
+Take
+\[
+ X=\{0,1\},\qquad P=\{0\},\qquad Q=\{1\}.
+\]
+Both \(S_P=(X,P)\) and \(S_Q=(X,Q)\) satisfy the candidate's odd-mark
+condition.  Under the common identification
+\(A=\operatorname{span}\{p,q\}\),
+\[
+ B_{S_P}=\langle q\rangle,\qquad B_{S_Q}=\langle p\rangle.
+\]
+The first relation has classes
+\(\{0,q\}\), \(\{p,p+q\}\); the second has classes
+\(\{0,p\}\), \(\{q,p+q\}\).  They are distinct.
+
+\paragraph{Proposition (presentation covariance without orientation
+descent).}
+The marked-source functor remains natural within its decorated groupoid, but
+the candidate does not descend through the forgetful operation
+\((X,P)\mapsto(X,\{P,Q\})\) on this even-carrier branch.
+
+\paragraph{Proof.}
+The two orientations have the same forgotten unordered bipartition and the
+same state space under the identity identification, but their selected lines
+and kernel-pair relations differ.  Descent would require the two outputs to
+agree under that identification.  They do not. \(\square\)
+
+This is not an inverse or cocycle defect inside the marked groupoid.
+Identity, inverse, and composition there survive.  The failure is a descent
+failure when orientation is forgotten.  It is therefore invalid to infer
+that orientation is gauge, irrelevant, or safely forgettable.
+
+The linear complement swap \(c(\alpha p+\beta q)=\beta p+\alpha q\)
+transports \(B_{S_P}\) to \(B_{S_Q}\) and satisfies \(c^2=1\).  Hence weak
+descent up to abstract pair isomorphism survives.  It retains only the
+isomorphism class of a two-dimensional space with a line; it does not select
+one relation on actual source states.  When \(|P|\ne|Q|\), no carrier
+bijection exchanges the two blocks, so this algebraic swap need not arise
+from a source transformation at all.
+
+\paragraph{Domain correction.}
+The exact candidate requires odd \(|P|\), not oddness of both blocks.
+Therefore:
+\begin{itemize}
+  \item if \(|X|\) is even, \(Q\) is also odd and the complement orientation
+  is admitted, so the descent countermodel applies;
+  \item if \(|X|\) is odd, \(Q\) is even and only the odd block is admitted,
+  so orientation can be reconstructed from the unordered bipartition on
+  that restricted subdomain and complementing the candidate input changes a
+  defined output into \(\Bottom\); and
+  \item on a bare carrier without a partition, the prior full-symmetric-group
+  obstruction to a nontrivial natural mark remains.
+\end{itemize}
+This corrects the scope of the stress target without editing the candidate or
+the prior audit.
+
+\subsection{Field and cardinality are sufficient, not necessary}
+
+Let \(k\) be a field and retain the two-orbit fixed space
+\(A_k=\operatorname{span}_k\{p,q\}\).  The candidate-style sum functional
+satisfies
+\[
+ \ell_P(\alpha p+\beta q)=|P|\,\alpha\quad\hbox{in }k.
+\]
+
+\paragraph{Proposition (characteristic--cardinality branch theorem).}
+If \(\operatorname{char}(k)\nmid |P|\), then
+\(\ker(\ell_P|_{A_k})=\langle q\rangle\).  If \(k\) has positive
+characteristic dividing \(|P|\), then
+\(\ell_P|_{A_k}=0\), the kernel is all of \(A_k\), and the candidate's
+proper-kernel test fails.
+
+\paragraph{Proof.}
+The displayed formula gives
+\(\ell_P(p)=|P|1_k\) and \(\ell_P(q)=0\).  The coefficient of \(p\) is
+therefore killed exactly when \(|P|1_k=0\). \(\square\)
+
+Thus \(\mathbb F_2\) with odd \(|P|\) is one sufficient branch, not an
+algebraically unique field/parity choice.  Moreover, because every vector in
+\(A_k\) is constant on \(P\), evaluation of that constant,
+\[
+ e_P(\alpha p+\beta q)=\alpha ,
+\]
+is marked-natural and has kernel \(\langle q\rangle\) for every nonempty
+\(P\), without a parity restriction.  This alternative is not adopted or
+installed here.  It demonstrates that the candidate's field and parity
+package is underselected by the desired kernel relation.
+
+\subsection{Exact affine subgroup gap}
+
+For one selected line \(B=\langle q\rangle\), the affine group
+\(\operatorname{AGL}(2,2)\) has 24 elements.  The relation stabilizer is
+\[
+ G_{\rm rel}=\{z\mapsto Lz+t:L(B)=B\},
+\]
+the pointwise quotient-label fixer is
+\[
+ G_{\rm lab}=\{z\mapsto Lz+t:L(B)=B,\ t\in B\},
+\]
+and the declared variation group is
+\[
+ J=\{z\mapsto z+b:b\in B\}.
+\]
+
+\paragraph{Proposition (strict \(2<4<8\) variation hierarchy).}
+\[
+ |J|=2,\qquad |G_{\rm lab}|=4,\qquad |G_{\rm rel}|=8,
+\]
+with strict inclusions
+\[
+ J\cong C_2\;<\;G_{\rm lab}\cong V_4\;<\;
+ G_{\rm rel}\cong D_8.
+\]
+
+\paragraph{Proof.}
+The stabilizer of \(B\) in \(\operatorname{GL}(2,2)\) has two elements.
+Arbitrary translation gives eight relation stabilizers.  Requiring the
+quotient label itself to remain fixed restricts translation to the two
+elements of \(B\), giving four maps; restricting the linear part to the
+identity gives the two declared translations.  The order-four group is
+elementary abelian.  The order-eight semidirect product contains an
+order-four affine element and five involutions, hence is the dihedral group
+of order eight. \(\square\)
+
+More precisely, \(J\triangleleft G_{\rm lab}\triangleleft G_{\rm rel}\),
+\(J=Z(G_{\rm rel})\), and both successive quotients have order two.
+
+All three groups preserve the relation at their stated scope.  The algebra
+therefore does not select \(J\) as the unique exhaustive or physical
+variation class.  Exact kernel-aligned robustness is conditional
+codetermination from the same mark, not an independent physical-selection
+certificate.
+
+\paragraph{Finite-field extension.}
+For \(A=\mathbb F_s^2\), there are \(s+1\) boundary lines and
+\[
+\begin{aligned}
+ |\operatorname{AGL}(2,s)|&=s^3(s-1)^2(s+1),\\
+ |G_{\rm rel}|&=s^3(s-1)^2,\\
+ |G_{\rm lab}|&=s^2(s-1),\\
+ |J_{\rm full}|&=s,
+\end{aligned}
+\]
+where \(J_{\rm full}\) contains all translations along the boundary line.
+The \(s=2\) values are \(24,8,4,2\).  Carrying only the two original
+translations to odd characteristic is not composition-closed; in larger
+characteristic-two fields it is a proper order-two subgroup of the full
+boundary translations.  This generalization reinforces, rather than
+resolves, the missing field and physical-variation selection.
+
+\subsection{Collapse, nonuniqueness, and surviving certificates}
+
+The required failure branches are now explicit:
+\begin{enumerate}
+  \item \emph{collapse:} in positive characteristic dividing \(|P|\), the
+  sum-functional kernel is all of \(A\), so the partial selector fails;
+  \item \emph{nonuniqueness:} the bare two-dimensional space has three
+  symmetry-related proper lines and no full-linear-symmetry invariant one;
+  \item \emph{inverse/cocycle:} no defect occurs inside the exact decorated
+  marked groupoid;
+  \item \emph{orientation descent:} complementary admitted orientations on
+  even carriers produce distinct relations after forgetting orientation;
+  and
+  \item \emph{variation fragility:} \(C_2<V_4<D_8\), with no independent
+  current-ontology rule selecting the smallest class as physical.
+\end{enumerate}
+
+The surviving core is substantial but conditional: marked-source naturality,
+quotient factorization and relation-level uniqueness, and robustness under
+the two declared translations all pass.  What fails is the premise that
+current ontology independently selects the oriented mark, its acquisition
+provenance, the boundary line, the field/cardinality rule, the physical
+morphism category, and the physical variation class.
+
+\subsection{Refuter classification, freeze, and next route}
+
+The exact Refuter classification is
+\[
+ \texttt{scoped\_obstruction}.
+\]
+The minimal countermodel is the two-point even-carrier complement pair above.
+It blocks an orientation-independent, current-ontology-derived, independently
+physical reading of this exact candidate.  It is not a global no-go theorem:
+a richer source-side provenance law, an independently specified variation
+category, an orientation-descent or irrelevance theorem on a justified
+domain, or a distinct source extension may remain possible.
+
+The exact
+\(\mathrm{EqSrcCycleBoundarySelectorLaw}_{\rm src}^{\rm cand,v1}\)
+construction--audit--stress cycle is now
+\texttt{locally\_frozen}.  Repeating its construction, audit, or stress
+without a materially different source law or theorem is barred.  General
+\(\mathrm{EqSrc}\), the milestone, and future source extensions are not
+frozen.
+
+The next lawful route is one bounded
+\texttt{theoretical-continuation-selector@0.1.0}
+\texttt{ontology-law-research-packet}.  It must choose a materially distinct
+source-provenance plus independent-variation witness, an orientation-descent
+or irrelevance theorem, a distinct scoped no-go question, or local freeze.
+It may not repeat, repair, adopt, or promote this exact candidate.
+
+\paragraph{Distance-to-GR and forbidden conclusions.}
+The source-equivalence milestone remains at \texttt{draft object exists};
+general \(\mathrm{EqSrc}\), \(\mathrm{RetainH}\), \(\mathrm{GenH}\),
+\(M_{\rm src}\), \(g_{\rm eff}\), matter coupling, Einstein equations, and
+exact-GR recovery remain open.  Neither authoritative ledger changes.
+No canonical ontology edit, source-law adoption, physical admissibility or
+covariance, benchmark promotion, Gate Chair verdict, completed derivation,
+future source-extension impossibility, program-level no-go, or global theory
+rejection follows.

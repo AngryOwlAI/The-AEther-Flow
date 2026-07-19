@@ -1,0 +1,81 @@
+schema: "eqsrc-cycle-boundary-selector-refuter-countermodel.v1"
+task_id: "RT-20260718-037"
+status: "draft/control"
+support_only: true
+candidate_name: "EqSrcCycleBoundarySelectorLaw_src^cand,v1"
+field: "F2"
+carrier:
+  X: [0, 1]
+orientations:
+  - record: "S_P"
+    mark: [0]
+    complement: [1]
+    basis_coordinates: ["p", "q"]
+    boundary_line: ["0", "q"]
+    relation_classes:
+      - ["0", "q"]
+      - ["p", "p+q"]
+  - record: "S_Q"
+    mark: [1]
+    complement: [0]
+    basis_coordinates: ["q", "p"]
+    boundary_line_under_common_p_q_identification: ["0", "p"]
+    relation_classes_under_common_p_q_identification:
+      - ["0", "p"]
+      - ["q", "p+q"]
+common_state_space:
+  elements: ["0", "p", "q", "p+q"]
+  nonzero_proper_lines:
+    - ["0", "p"]
+    - ["0", "q"]
+    - ["0", "p+q"]
+orientation_forgetting:
+  forgotten_object: "unordered bipartition {{0},{1}} on the same carrier"
+  identification: "identity on the common state space A"
+  selected_lines_equal: false
+  selected_relations_equal: false
+  conclusion: "The exact candidate does not descend through orientation-forgetting on this even-carrier branch."
+unmarked_linear_symmetry:
+  group: "GL(2,2)"
+  group_order: 6
+  orbit_on_nonzero_proper_lines: "one orbit of size 3"
+  common_invariant_nonzero_proper_line: false
+  intersection_relation: "equality"
+  generated_join_relation: "universal"
+  nondegenerate_full_symmetry_selector: false
+affine_variation_hierarchy:
+  affine_group_order: 24
+  relation_stabilizer:
+    order: 8
+    structure: "D8"
+  pointwise_label_fixer:
+    order: 4
+    structure: "V4"
+  declared_candidate_variations:
+    order: 2
+    structure: "C2"
+  strict_inclusions: ["C2<V4", "V4<D8"]
+  normal_chain: ["C2 normal in V4", "V4 normal in D8"]
+  center_of_relation_stabilizer: "declared C2"
+field_cardinality_branches:
+  formula: "ell_P(alpha*p+beta*q)=|P|*alpha in k"
+  noncollapsed: "char(k) does not divide |P|, so ker(ell_P|A)=<q>"
+  collapsed: "positive char(k) divides |P|, so ker(ell_P|A)=A and the candidate partial selector fails its proper-kernel test"
+  alternative_marked_natural_functional: "evaluation of the constant value on P has kernel <q> for every nonempty P"
+finite_field_generalization:
+  boundary_line_count: "s+1"
+  affine_group_order: "s^3(s-1)^2(s+1)"
+  relation_stabilizer_order: "s^3(s-1)^2"
+  pointwise_label_fixer_order: "s^2(s-1)"
+  full_boundary_translation_order: "s"
+scope:
+  exact_classification: "scoped_obstruction"
+  failed_premise: "Current ontology supplies no source-derived orientation provenance, line selector, field/cardinality rule, physical morphism category, or independent admissible-variation class."
+  surviving_core: "The marked-record quotient, marked-bijection naturality, relation-level uniqueness, and declared-translation invariance remain valid conditionally."
+  blocked_overreads:
+    - "global EqSrc no-go"
+    - "future source-extension impossibility"
+    - "candidate or ontology adoption"
+    - "physical covariance or admissibility"
+    - "Distance-to-GR or metric-use ledger change"
+    - "exact-GR recovery or benchmark promotion"
