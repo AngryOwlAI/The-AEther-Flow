@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-020` and `handoff-0745`.
+`RT-20260718-021` and `handoff-0746`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-020` |
-| Latest handoff ID | `handoff-0745` |
-| Current status | `eqsrc_closure_source_law_candidate_v3_signature_noncircularity_repaired_pending_fresh_audit_no_adoption` |
+| Active task ID | `RT-20260718-021` |
+| Latest handoff ID | `handoff-0746` |
+| Current status | `eqsrc_closure_source_law_candidate_v3_audited_pending_refuter_stress_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc closure v3 fresh smuggling audit |
+| Current route family | eqsrc closure v3 bounded refuter stress |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One Smuggling Auditor packet may inspect proposal-only v3 for declaration closure transitive source purity dependency acyclicity congruence invariance accepted-totality sufficiency and overread risk and may record one exact pass obstruction or repair route. |
-| Next recommended action | Run one fresh bounded Smuggling Auditor ontology-law-research-packet against the complete proposal-only v3 signature dependency graph semantic factorization component congruence accepted-totality clauses and proofs before Refuter stress or adoption consideration. |
+| Required next authority | One Refuter packet may stress exact proposal-only v3 for nontrivial source-only model existence transitive provenance malformed-definition rejection congruence accepted-totality coherence degenerate models and finite-variation robustness and may record one exact pass obstruction repair or freeze consequence. |
+| Next recommended action | Run one bounded Refuter ontology-law-research-packet against exact v3 for nontrivial source-only model existence transitive source-root provenance malformed-definition rejection congruence accepted-totality coherence degenerate models and finite-variation robustness. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-020` |
-| Latest research handoff ID | `handoff-0745` |
-| Latest research next action | Run one fresh bounded Smuggling Auditor ontology-law-research-packet against the complete proposal-only v3 signature dependency graph semantic factorization component congruence accepted-totality clauses and proofs before Refuter stress or adoption consideration. |
+| Latest research task ID | `RT-20260718-021` |
+| Latest research handoff ID | `handoff-0746` |
+| Latest research next action | Run one bounded Refuter ontology-law-research-packet against exact v3 for nontrivial source-only model existence transitive source-root provenance malformed-definition rejection congruence accepted-totality coherence degenerate models and finite-variation robustness. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-020/00_TASK.yaml`.
-- Active task objective: Execute one bounded Ontology Formalizer ontology-law-research-packet to produce a proposal-only EqSrcClosureLaw_src^cand v3 with a closed typed source signature and acyclic acceptance dependency order while preserving the v2 accepted-totality theorem core.
-- Latest handoff path: `research_control/handoffs/handoff-0745.yaml`.
-- Latest handoff summary: RT-20260718-020 produced proposal-only EqSrcClosureLaw_src^cand v3 with an exact endpoint-indexed source signature typed proxy constructors declared component and outcome congruences total negative-control evaluators on raw certificate fibers and a finite rank-0 through rank-4 dependency order excluding acceptance recursion. It proves statement-level declaration closure acyclic certificate-admissibility totality and the preserved conditional equivalence theorem. OBST-EQSRC-CLOSURE-SIGNATURE-001 is repaired at proposal statement level pending fresh audit. Current ontology does not derive or adopt the candidate general EqSrc remains undischarged and the Distance-to-GR ledger is unchanged.
-- Current route family: eqsrc closure v3 fresh smuggling audit.
-- Next recommended action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against the complete proposal-only v3 signature dependency graph semantic factorization component congruence accepted-totality clauses and proofs before Refuter stress or adoption consideration.
+- Active task path: `research_control/tasks/RT-20260718-021/00_TASK.yaml`.
+- Active task objective: Execute one fresh bounded Smuggling Auditor ontology-law-research-packet against proposal-only EqSrcClosureLaw_src^cand v3 for declaration closure, source-semantic factorization, congruence invariance, acceptance acyclicity and totality, target or process import, adoption overread, and formal overstatement.
+- Latest handoff path: `research_control/handoffs/handoff-0746.yaml`.
+- Latest handoff summary: RT-20260718-021 freshly audited proposal-only EqSrcClosureLaw_src^cand v3. The exact v2 undeclared-constructor component-congruence negative-control-domain and acceptance-cycle defects do not recur at statement level. Endpoint typing declaration closure dependency acyclicity congruence invariance semantic source factorization accepted-totality and the conditional equivalence theorem pass. The audit adds congruence and factorization lemmas an abstract one-object consistency witness and a countermodel separating coarse equivalence from full coherence. Current ontology does not derive or instantiate the candidate conservativity and physical significance remain unproved general EqSrc remains undischarged and the Distance-to-GR ledger is unchanged.
+- Current route family: eqsrc closure v3 bounded refuter stress.
+- Next recommended action: Run one bounded Refuter ontology-law-research-packet against exact v3 for nontrivial source-only model existence transitive source-root provenance malformed-definition rejection congruence accepted-totality coherence degenerate models and finite-variation robustness.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one fresh bounded Smuggling Auditor ontology-law-research-packet against the complete proposal-only v3 signature dependency graph semantic factorization component congruence accepted-totality clauses and proofs before Refuter stress or adoption consideration.
+Run one bounded Refuter ontology-law-research-packet against exact v3 for nontrivial source-only model existence transitive source-root provenance malformed-definition rejection congruence accepted-totality coherence degenerate models and finite-variation robustness.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-020`;
-- latest handoff: `handoff-0745`;
-- current status: `eqsrc_closure_source_law_candidate_v3_signature_noncircularity_repaired_pending_fresh_audit_no_adoption`;
+- active task: `RT-20260718-021`;
+- latest handoff: `handoff-0746`;
+- current status: `eqsrc_closure_source_law_candidate_v3_audited_pending_refuter_stress_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0745.yaml`
-- `research_control/tasks/RT-20260718-020/00_TASK.yaml`
+- `research_control/handoffs/handoff-0746.yaml`
+- `research_control/tasks/RT-20260718-021/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0745*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0746*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

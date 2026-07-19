@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-020`
-- Latest handoff: `handoff-0745`
-- Current status: `eqsrc_closure_source_law_candidate_v3_signature_noncircularity_repaired_pending_fresh_audit_no_adoption`
+- Active task: `RT-20260718-021`
+- Latest handoff: `handoff-0746`
+- Current status: `eqsrc_closure_source_law_candidate_v3_audited_pending_refuter_stress_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-020`
-- Latest research handoff: `handoff-0745`
-- Latest research next action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against the complete proposal-only v3 signature dependency graph semantic factorization component congruence accepted-totality clauses and proofs before Refuter stress or adoption consideration.
+- Latest research task: `RT-20260718-021`
+- Latest research handoff: `handoff-0746`
+- Latest research next action: Run one bounded Refuter ontology-law-research-packet against exact v3 for nontrivial source-only model existence transitive source-root provenance malformed-definition rejection congruence accepted-totality coherence degenerate models and finite-variation robustness.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_closure_candidate_v3_fresh_smuggling_audit`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `eqsrc_closure_candidate_v3_bounded_refuter_stress`
+- Role family: `refuter@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Freshly audit the proposal-only v3 source signature non-circular dependency order and accepted-totality theorem before Refuter stress.
+- Milestone burden: Stress the audited proposal-only v3 source closure law for nontrivial source-only instantiability provenance congruence accepted-totality coherence and robustness.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `163905432b5f0f4dee073a3ae98c00a87c483937a047f8307f2e2603516b804b`
-- JSON SHA-256: `d311b2a44bc20988f13548f77e0bed1532daf23c72436ed0112ecaedcaa5260f`
+- YAML SHA-256: `c6ea7e07c6112b0cb5dbfd8b576053822a3a05d93b91a363e4ab7f59c0c041d8`
+- JSON SHA-256: `fa17f0115bf016f2cb2fee615d765bace2c31375d817a7a93c8a5774d435b6f9`
 
 ## Authority Warning
 

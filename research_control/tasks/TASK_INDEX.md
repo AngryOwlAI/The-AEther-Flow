@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `f9cfed42236a693f4f48f4a60784db3657d6390e42024c5cdc48bd91db747783`
-- Generated-at source timestamp: `2026-07-19T08:04:38Z`
-- Row count: `978`
+- Source fingerprint: `a4729eed25121dbe223cc1ad6bf9da1f1fb53e7e89a82f9f1d4eac8328ff812b`
+- Generated-at source timestamp: `2026-07-19T09:00:31Z`
+- Row count: `979`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260718-021|RT-20260718-020|2026-07-19T09:00:31Z|2026-07-19T09:16:45Z|eqsrc_closure_source_law_candidate_v3_smuggling_audit|completed|source_equivalence_eqsrc|Freshly audit the proposal-only v3 source signature non-circular dependency order and accepted-totality theorem before Refuter stress.|smuggling-auditor@0.2.0|false|false|9|Run one bounded Refuter ontology-law-research-packet against exact v3 for nontrivial source-only instantiability provenance pressure malformed-definition rejection coherence independence degenerate models and finite-variation robustness.|PASS|research_control/tasks/RT-20260718-021/jobs/completions/AJC-AJ-RT-20260718-021-001.yaml|
 |RT-20260718-020|RT-20260718-019|2026-07-19T08:04:38Z|2026-07-19T08:26:35Z|eqsrc_closure_source_law_candidate_v3_signature_noncircularity_repair|completed|source_equivalence_eqsrc|Repair the proposal-only source signature and non-circular acceptance dependency order while preserving accepted-totality clauses before fresh audit.|ontology-formalizer@0.2.0|false|false|9|Run one fresh bounded Smuggling Auditor ontology-law-research-packet against the complete proposal-only v3 signature dependency graph semantic factorization component congruence accepted-totality clauses and proofs before Refuter stress or adoption consideration.|PASS|research_control/tasks/RT-20260718-020/jobs/completions/AJC-AJ-RT-20260718-020-001.yaml|
 |RT-20260718-019|RT-20260718-018|2026-07-19T07:19:40Z|2026-07-19T07:29:54Z|eqsrc_closure_source_law_candidate_v2_smuggling_audit|completed|source_equivalence_eqsrc|Audit the repaired accepted-totality quantifiers and closed source grammar before Refuter stress, adoption, or any general EqSrc claim.|smuggling-auditor@0.2.0|false|false|9|Run one bounded Ontology Formalizer ontology-law-research-packet to produce a proposal-only v3 signature and non-circularity repair before fresh audit or Refuter stress.|PASS|research_control/tasks/RT-20260718-019/jobs/completions/AJC-AJ-RT-20260718-019-001.yaml|
 |RT-20260718-018|RT-20260718-017|2026-07-19T06:28:23Z|2026-07-19T06:37:40Z|eqsrc_closure_source_law_candidate_accepted_totality_repair|completed|source_equivalence_eqsrc|Repair the proposal-only candidate's accepted identity, inverse, and composition totality clauses and close its source grammar before fresh independent audit.|ontology-formalizer@0.2.0|false|false|9|Run one fresh bounded Smuggling Auditor ontology-law-research-packet before Refuter stress or any protected adoption consideration.|PASS|research_control/tasks/RT-20260718-018/jobs/completions/AJC-AJ-RT-20260718-018-001.yaml|
