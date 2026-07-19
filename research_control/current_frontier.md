@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-035` and `handoff-0760`.
+`RT-20260718-036` and `handoff-0761`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-035` |
-| Latest handoff ID | `handoff-0760` |
-| Current status | `eqsrc_cycle_boundary_selector_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption` |
+| Active task ID | `RT-20260718-036` |
+| Latest handoff ID | `handoff-0761` |
+| Current status | `eqsrc_cycle_boundary_selector_law_conditional_source_purity_audit_pass_pending_bounded_refuter_stress_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc cycle boundary selector law formalization to fresh smuggling audit |
+| Current route family | eqsrc cycle boundary selector law refuter stress after conditional audit |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One Smuggling Auditor packet may inspect the exact candidate and return an audit classification with evidence and one next route. |
-| Next recommended action | Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 for oriented-mark and parity provenance, hidden selector renaming, target or process import, marked-naturality versus physical-covariance overread, variation circularity, and finite-witness generalization. |
+| Required next authority | One Refuter packet may stress the exact candidate for selector nonuniqueness complement and forgetful maps affine stabilizer gap provenance and physical variation independence. |
+| Next recommended action | Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three boundary lines, complement and forgetful transformations, the 2/4/8 variation gap, mark provenance, parity and field necessity, and independent physical selection. Do not repair adopt or promote the candidate. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-035` |
-| Latest research handoff ID | `handoff-0760` |
-| Latest research next action | Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 for oriented-mark and parity provenance, hidden selector renaming, target or process import, marked-naturality versus physical-covariance overread, variation circularity, and finite-witness generalization. |
+| Latest research task ID | `RT-20260718-036` |
+| Latest research handoff ID | `handoff-0761` |
+| Latest research next action | Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three boundary lines, complement and forgetful transformations, the 2/4/8 variation gap, mark provenance, parity and field necessity, and independent physical selection. Do not repair adopt or promote the candidate. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-035/00_TASK.yaml`.
-- Active task objective: Execute one bounded Ontology Formalizer packet to define proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1 as a partial natural selector on odd-oriented-marked finite source records, prove its conditional algebraic properties, supply a relation-changing fixed-carrier witness, and preserve every adoption and downstream claim gate.
-- Latest handoff path: `research_control/handoffs/handoff-0760.yaml`.
-- Latest handoff summary: RT-20260718-035 formalized proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1 on finite odd-oriented-marked records. The mark defines a pre-relation affine action; the fixed space and mark-parity kernel define the quotient relation. Conditional marked naturality, quotient uniqueness, presentation compatibility, affine robustness, and a four-state complementary-mark witness were established. The oriented mark remains underived, adoption is blocked with continuation open, and no ledger or downstream claim changed.
-- Current route family: eqsrc cycle boundary selector law formalization to fresh smuggling audit.
-- Next recommended action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 for oriented-mark and parity provenance, hidden selector renaming, target or process import, marked-naturality versus physical-covariance overread, variation circularity, and finite-witness generalization.
+- Active task path: `research_control/tasks/RT-20260718-036/00_TASK.yaml`.
+- Active task objective: Execute one fresh bounded Smuggling Auditor packet against exact proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1 for oriented-mark provenance, selector nonuniqueness, target or process import, affine-variation scope, marked-naturality versus physical-covariance overread, and finite-witness generalization without repair adoption stress or promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0761.yaml`.
+- Latest handoff summary: RT-20260718-036 freshly audited exact proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1. The displayed definition is source-factorized and acyclic, with no explicit target or process-authority premise. New results are an exact 24/8/4/2/16 affine census, three invariant boundary-line nonuniqueness, a bare-carrier natural-mark obstruction, and a complement-mark family. The mark parity rule and physical variations remain underived. Adoption general EqSrc and both authoritative ledgers are unchanged.
+- Current route family: eqsrc cycle boundary selector law refuter stress after conditional audit.
+- Next recommended action: Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three boundary lines, complement and forgetful transformations, the 2/4/8 variation gap, mark provenance, parity and field necessity, and independent physical selection. Do not repair adopt or promote the candidate.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 for oriented-mark and parity provenance, hidden selector renaming, target or process import, marked-naturality versus physical-covariance overread, variation circularity, and finite-witness generalization.
+Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three boundary lines, complement and forgetful transformations, the 2/4/8 variation gap, mark provenance, parity and field necessity, and independent physical selection. Do not repair adopt or promote the candidate.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-035`;
-- latest handoff: `handoff-0760`;
-- current status: `eqsrc_cycle_boundary_selector_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption`;
+- active task: `RT-20260718-036`;
+- latest handoff: `handoff-0761`;
+- current status: `eqsrc_cycle_boundary_selector_law_conditional_source_purity_audit_pass_pending_bounded_refuter_stress_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0760.yaml`
-- `research_control/tasks/RT-20260718-035/00_TASK.yaml`
+- `research_control/handoffs/handoff-0761.yaml`
+- `research_control/tasks/RT-20260718-036/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0760*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0761*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

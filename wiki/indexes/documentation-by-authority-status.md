@@ -534,6 +534,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-034-PARENT-FUSION-NOTES-EQSRC-CHAIN-DATA-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260718-034-parent-fusion-notes-eqsrc-chain-data-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-035-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-CANDIDATE-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-035-eqsrc-cycle-boundary-selector-law-candidate-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-035-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW` `wiki/markdown/md-research-control-tasks-rt-20260718-035-parent-fusion-notes-eqsrc-cycle-boundary-selector-law.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-036-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-036-eqsrc-cycle-boundary-selector-law-smuggling-audit-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-036-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-036-parent-fusion-notes-eqsrc-cycle-boundary-selector-law-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -924,6 +926,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-034-PARENT-FUSION-NOTES-EQSRC-CHAIN-DATA-SELECTOR` `research_control/tasks/RT-20260718-034/artifacts/parent_fusion_notes_eqsrc_chain_data_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-035-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-CANDIDATE-RECEIPT` `research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-035-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW` `research_control/tasks/RT-20260718-035/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-036-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260718-036/artifacts/eqsrc_cycle_boundary_selector_law_smuggling_audit_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-036-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-036/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

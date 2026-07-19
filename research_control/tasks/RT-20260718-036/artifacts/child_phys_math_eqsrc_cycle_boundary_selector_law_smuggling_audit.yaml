@@ -1,0 +1,67 @@
+artifact_id: "child_phys_math_eqsrc_cycle_boundary_selector_law_smuggling_audit"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-036"
+job_id: "AJ-RT-20260718-036-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_name: "EqSrcCycleBoundarySelectorLaw_src^cand,v1"
+candidate_path: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+candidate_hash: "64901302bd6f37819ebd30aaaebaf39611d2c71c97d45b6cea6a39df11e0df94"
+authority_boundary: "Audit only. No repair, Refuter stress, adoption, canonical-ontology edit, physical-admissibility claim, or promotion."
+exact_classification: "conditional_source_side_audit_pass_with_explicit_mark_parity_selector_nonuniqueness_and_physical_admissibility_limits"
+recommendation: "one_bounded_refuter_stress_packet"
+overall_assessment:
+  dependency_graph: "acyclic_as_written"
+  expanded_signature_source_purity: "passed"
+  current_ontology_derivation: "not_established"
+  variation_independence: "not_established"
+  marked_naturality: "correct_for_decorated_records"
+  physical_covariance: "not_established"
+  adoption_status: "blocked_adoption_open_continuation"
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-036-MATH-001"
+    payload_type: "theorem"
+    name: "exact_affine_relation_stabilizer"
+    statement: "AGL(2,2) has 24 maps; exactly 8 preserve the kernel-pair relation, 4 fix quotient labels pointwise, 2 belong to declared J, and 16 change the relation."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-036-MATH-002"
+    payload_type: "theorem"
+    name: "three_kernel_selector_nonuniqueness"
+    statement: "A_S has exactly three nonzero proper lines and all are marked-automorphism invariant; each supports an acyclic marked-natural quotient and matching translation class, so marked symmetry does not select B_S."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-036-MATH-003"
+    payload_type: "theorem"
+    name: "bare_carrier_mark_obstruction"
+    statement: "A nonempty proper mark cannot be equivariantly assigned to all bare finite carriers under all bijections."
+    claim_status: "draft/control"
+  - payload_id: "NMP-RT-20260718-036-MATH-004"
+    payload_type: "finite_family"
+    name: "complement_mark_generalization"
+    statement: "For every even carrier and every odd proper mark, its odd complement is admitted and induces a distinct boundary line and relation on the same four-state A."
+    claim_status: "draft/control"
+finite_checks:
+  affine_census:
+    affine_bijections: 24
+    relation_stabilizers: 8
+    pointwise_label_fixers: 4
+    candidate_variations: 2
+    relation_changers: 16
+  four_point_witness:
+    states: 4
+    classes: 2
+    class_size: 2
+    ordered_pairs: 16
+    complement_relation_mismatches: 8
+  carrier_minimality: "n=2 already realizes the complement-mark effect"
+scope_guards:
+  selector_nonuniqueness: "Three invariant boundary lines remain available; parity supplies substantive selector data."
+  semantics: "Cycle and boundary names do not establish topological homological or physical meaning."
+  physical_scope: "No physical criterion selects P parity B_S or J_S."
+  promotion: "No ontology source-law downstream GR benchmark or Gate Chair promotion."
+next_packet_recommendation:
+  role_family: "refuter@0.2.0"
+  route_label: "ontology-law-research-packet"
+  packet_count: 1
+  objective: "Stress the three boundary lines complement-mark erasure 2/4/8 stabilizer gap bare-carrier obstruction and absence of an independent physical selector."
+  recommendation_only_not_executed: true

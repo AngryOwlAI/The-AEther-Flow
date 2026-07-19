@@ -18,6 +18,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Generated output path: `wiki/tex/tex-eqsrc-cycle-boundary-selector-law-candidate-v1.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-035-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-CANDIDATE-RECEIPT` `research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_receipt.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-035-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW` `research_control/tasks/RT-20260718-035/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law.md`
+- Backlink from `TEX-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-036/artifacts/eqsrc_cycle_boundary_selector_law_smuggling_audit.tex`
 
 ## Validation
 

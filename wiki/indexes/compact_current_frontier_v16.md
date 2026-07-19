@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-035`
-- Latest handoff: `handoff-0760`
-- Current status: `eqsrc_cycle_boundary_selector_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption`
+- Active task: `RT-20260718-036`
+- Latest handoff: `handoff-0761`
+- Current status: `eqsrc_cycle_boundary_selector_law_conditional_source_purity_audit_pass_pending_bounded_refuter_stress_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-035`
-- Latest research handoff: `handoff-0760`
-- Latest research next action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 for oriented-mark and parity provenance, hidden selector renaming, target or process import, marked-naturality versus physical-covariance overread, variation circularity, and finite-witness generalization.
+- Latest research task: `RT-20260718-036`
+- Latest research handoff: `handoff-0761`
+- Latest research next action: Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three boundary lines, complement and forgetful transformations, the 2/4/8 variation gap, mark provenance, parity and field necessity, and independent physical selection. Do not repair adopt or promote the candidate.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_cycle_boundary_selector_law_smuggling_audit`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `eqsrc_cycle_boundary_selector_law_refuter_stress`
+- Role family: `refuter@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Audit the exact proposal-only marked-source cycle-boundary selector before Refuter stress or protected adoption review.
+- Milestone burden: Stress the audited exact proposal-only marked-source selector before protected adoption review.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `d2103af528dd412bf1ab5a3389ce373c7fa80972b347e502ea55908d240ac749`
-- JSON SHA-256: `6b90763c162611c00d483ea380427a38ec4fbcf525dd3cd0cc4e38f6fd6cc996`
+- YAML SHA-256: `d883f4eaa1a5e3cd98bd6413f5a8cc86c4481febb3ed27e0cbe625f014adaef1`
+- JSON SHA-256: `554e2b921fd3d89d73c8af72094b86444ad40b0627eab9de6b176303bbeb22f5`
 
 ## Authority Warning
 
