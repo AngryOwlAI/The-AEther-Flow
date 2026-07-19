@@ -1,0 +1,582 @@
+completion_id: "AJC-AJ-RT-20260718-035-001"
+job_id: "AJ-RT-20260718-035-001"
+task_id: "RT-20260718-035"
+decision_id: "DDR-20260718-035"
+status: "completed"
+completed_at: "2026-07-19T20:27:55Z"
+completed_by_role: "ontology-formalizer@0.2.0--RT-20260718-035"
+source_role_id: "ontology-formalizer"
+source_role_version: "0.2.0"
+plan_task_id: "ordinary_eqsrc_cycle_boundary_selector_law"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Formalized proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1 on finite odd-oriented-marked records. The mark defines a pre-relation affine action; its fixed space and parity kernel define a partial cycle-boundary selector and candidate kernel pair. The packet proves conditional marked-source naturality, quotient uniqueness, presentation compatibility, and finite robustness, and supplies a four-state relation-changing complementary-mark witness. The oriented mark remains underived, physical admissibility and adoption remain open, and the Distance-to-GR ledger is unchanged."
+
+artifacts:
+  - "research_control/tasks/RT-20260718-035/artifacts/child_phys_math_eqsrc_cycle_boundary_selector_law.yaml"
+  - "research_control/tasks/RT-20260718-035/artifacts/child_phys_phil_eqsrc_cycle_boundary_selector_law.yaml"
+  - "research_control/tasks/RT-20260718-035/artifacts/parent_conflict_review_eqsrc_cycle_boundary_selector_law.yaml"
+  - "research_control/tasks/RT-20260718-035/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law.md"
+  - "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_receipt.md"
+  - "research_control/tasks/RT-20260718-035/artifacts/validate_eqsrc_cycle_boundary_selector_law_candidate.py"
+  - "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_validation.json"
+
+output_paths:
+  - "research_control/tasks/RT-20260718-035/artifacts/child_phys_math_eqsrc_cycle_boundary_selector_law.yaml"
+  - "research_control/tasks/RT-20260718-035/artifacts/child_phys_phil_eqsrc_cycle_boundary_selector_law.yaml"
+  - "research_control/tasks/RT-20260718-035/artifacts/parent_conflict_review_eqsrc_cycle_boundary_selector_law.yaml"
+  - "research_control/tasks/RT-20260718-035/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law.md"
+  - "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_receipt.md"
+  - "research_control/tasks/RT-20260718-035/artifacts/validate_eqsrc_cycle_boundary_selector_law_candidate.py"
+  - "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_validation.json"
+
+extra_read_paths:
+  - "research_control/handoffs/handoff-0759.yaml"
+  - "research_control/handoffs/handoff-0759.md"
+  - "research_control/tasks/RT-20260718-034/artifacts/eqsrc_cycle_boundary_selector_route.yaml"
+  - "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - "research_control/design/source_extension_classification_checklist_v1.md"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core freshness and local retrieval passed after refreshing five local-cache-only findings."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"cycle boundary selector\" --limit 10 --json"
+    status: "PASS"
+    summary: "Resolved the canonical RT-034 selector fusion source for direct inspection."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-2-0-MD --json"
+    status: "PASS"
+    summary: "Resolved the registered Ontology Formalizer role for direct inspection."
+  - command: ".venv/bin/python scripts/research_control/continue_research.py --summary"
+    status: "PASS"
+    summary: "Tracked state required one bounded Ontology Formalizer cycle-boundary selector-law packet."
+  - command: ".venv/bin/python research_control/tasks/RT-20260718-035/artifacts/validate_eqsrc_cycle_boundary_selector_law_candidate.py --write-report --json"
+    status: "PASS"
+    summary: "Mechanized four fixed states, two boundary states, two two-state classes, mark-preserving equivariance, admitted affine robustness, and complementary-mark relation change."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 875
+    relationship_row_count: 4340
+    semantic_row_count: 875
+    vault_row_count: 875
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  before_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    local_cache_only_warning_count: 5
+  after_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"cycle boundary selector\" --limit 10 --json"
+      query_type: "search"
+      query_text: "cycle boundary selector"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260718-034-PARENT-FUSION-NOTES-EQSRC-CHAIN-DATA-SELECTOR"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-2-0-MD --json"
+      query_type: "lookup"
+      query_text: "MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-2-0-MD"
+      returned_object_ids:
+        - "MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-2-0-MD"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260718-034-PARENT-FUSION-NOTES-EQSRC-CHAIN-DATA-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-034/artifacts/parent_fusion_notes_eqsrc_chain_data_selector.md"
+      source_hash: "e68f480d37a6e29798ced140763858c2e4fdb434af2666a5d92bec1af57156c5"
+    - object_id: "MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-2-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+      source_hash: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260718-035/artifacts/child_phys_math_eqsrc_cycle_boundary_selector_law.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260718-035/artifacts/child_phys_phil_eqsrc_cycle_boundary_selector_law.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260718-035/artifacts/parent_conflict_review_eqsrc_cycle_boundary_selector_law.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Parent fusion defined the affine action before the boundary relation, classified the maps as affine rather than linear, limited naturality to marked bijections, and preserved the complementary-mark adverse witness."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260718-035/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused candidate combines the exact marked-source selector, pre-relation affine action, conditional theorems, fixed-carrier adverse witness, explicit failure tags, and every adoption and downstream guard."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "eqsrc"
+  waiver_decision_id: "DDR-20260708-005"
+  slots:
+    - countermodel_slot: "missing_inverse_countermodel"
+      status: "filled"
+      scope: "finite_two_object_source_side_missing_inverse"
+      result_artifact: "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_attempt_receipt.md"
+    - countermodel_slot: "missing_composition_countermodel"
+      status: "filled"
+      scope: "finite_local_composition_closure_removal"
+      result_artifact: "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex"
+    - countermodel_slot: "invariant_ledger_not_family_stable_countermodel"
+      status: "deferred_by_ddr"
+      scope: "invariant_ledger_family_stability_deferred_to_future_dedicated_countermodel_or_repair_packet"
+      result_artifact: "research_control/tasks/RT-20260708-005/artifacts/countermodel_obligation_pilot_report_v1.md"
+    - countermodel_slot: "target_import_needed_countermodel"
+      status: "filled"
+      scope: "source_pure_as_written_hidden_import_screen"
+      result_artifact: "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_receipt.md"
+    - countermodel_slot: "RetainH_needed_countermodel"
+      status: "filled"
+      scope: "H_retention_extension_candidate_definition_needed"
+      result_artifact: "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_receipt.md"
+    - countermodel_slot: "GenH_needed_countermodel"
+      status: "filled"
+      scope: "H_generated_family_extension_candidate_definition_needed"
+      result_artifact: "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_receipt.md"
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Define proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1 with a nondegenerate finite witness and theorem payload or return a precise scoped obstruction."
+  missing_source_law: "A source-derived natural selector of quotient-relevant cycle-boundary data and an independently specified physical variation class sufficient to define and test candidate EqSrc."
+  underdetermination_statement: "Current ontology does not derive the oriented unary mark, marked-record category, parity selector, or physical variation law used by this candidate."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "For an admitted finite odd-oriented-marked record S=(X,P), use the mark to define u_S and an affine F2 action before forming A_S=(F2^X)^Aut(X,P), B_S=ker(ell_P restricted to A_S), and candidate EqSrc as the kernel pair of A_S to A_S/B_S; otherwise return tagged bottom."
+    formal_objects:
+      - "finite odd-oriented-marked source record S=(X,P)"
+      - "mark-preserving source groupoid"
+      - "ambient vector space V_S"
+      - "fixed space A_S"
+      - "mark-parity kernel B_S"
+      - "pre-relation affine action J_S"
+      - "partial selector CycleBoundarySel_src"
+      - "candidate kernel-pair relation EqSrc_cand,S"
+    domains:
+      - "finite sets with nonempty proper odd-cardinality oriented unary marks"
+      - "marked bijections and mark-preserving automorphisms"
+      - "finite F2 source-state modules"
+    maps:
+      - "ell_P,S:V_S->F2"
+      - "J_S(epsilon):a maps to a+epsilon 1_(X minus P)"
+      - "q_S:A_S->A_S/B_S"
+      - "induced quotient maps under marked bijections"
+    proof_obligations:
+      - "source-only provenance and dependency acyclicity"
+      - "exact fixed-space and kernel calculation"
+      - "marked-bijection naturality and automorphism equivariance"
+      - "relation-level quotient uniqueness under the same-kernel hypothesis"
+      - "chain-presentation compatibility without presentation uniqueness"
+      - "finite admitted-affine robustness"
+      - "nondegenerate finite witness with fixed-carrier discrimination"
+      - "fresh target and process smuggling audit before stress or adoption"
+  candidate_law_comparison:
+    candidates:
+      - "odd-oriented-marked source selector"
+      - "repeat exact v3 construction audit or stress"
+      - "direct human-gated adoption review"
+    comparison_basis:
+      - "source-only definitional closure"
+      - "pre-relation variation definition"
+      - "new theorem and witness payload"
+      - "exact-v3 local freeze"
+      - "protected adoption authority"
+    selection_status: "Odd-oriented-marked candidate formalized proposal-only; exact-v3 repetition remains locally frozen and adoption review is premature."
+  candidate_law_refutation:
+    refuted_candidate: "No new candidate is refuted by this formalization."
+    refutation_basis: "The packet constructs a conditional model and records the complementary-mark relation change as its principal adverse witness."
+    surviving_obligations:
+      - "audit oriented-mark provenance and eliminability"
+      - "audit odd-parity choice and hidden selector renaming"
+      - "audit marked naturality versus physical covariance"
+      - "stress any surviving audited law before protected adoption review"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Proposal-only source-side formalization is allowed without adoption authority."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc undischarged until source provenance audit stress and protected adoption burdens are met."
+      - "Keep RetainH GenH M_src g_eff matter coupling Einstein equations and benchmark promotion blocked."
+      - "Do not use desired exact-GR recovery as a premise for selecting the mark parity functional or affine action."
+      - "Require protected human authority before source-law or canonical ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "oriented unary mark"
+      - "fixed and boundary spaces"
+      - "affine action"
+      - "marked-bijection transitions"
+      - "finite witness"
+    result: "pending_fresh_smuggling_audit"
+  atlas_glue_obligations:
+    profile_law: "The selector must be determined by displayed source data rather than a target-facing profile table."
+    selector_law: "Candidate EqSrc is defined only after the partial selector returns A_S and B_S."
+    transition_law: "Marked bijections induce the displayed naturality square."
+    inverse_checks: "Marked-bijection inverses induce inverse fixed-space and quotient maps."
+    cocycle_checks: "Composition of marked bijections induces composition of quotient maps."
+    finite_variation_robustness: "Finite words in the pre-relation affine action preserve the quotient; physical completeness is not claimed."
+  failure_branches:
+    collapse: "Return tagged bottom when the mark is absent degenerate even or the selected pair is not proper."
+    nonuniqueness: "Fail closed when a claimed same-kernel discriminator lacks the unique quotient-codomain factorization."
+    inverse_defect: "Fail closed when an alleged marked isomorphism lacks a typed inverse."
+    cocycle_defect: "Fail closed when marked-transition composition or induced quotient composition fails."
+    variation_fragility: "Fail closed when an admitted affine variation changes the quotient; mark-changing mutations remain outside the robustness theorem."
+  known_risks:
+    - "The oriented mark may be the missing selector under another name."
+    - "Odd parity may be algebraically convenient but physically unjustified."
+    - "Marked-source naturality may be overread as physical covariance."
+    - "The finite witness may not extend to physical source packages."
+  failed_alternatives:
+    - "Repeat exact v3 construction audit or stress is locally frozen."
+    - "Direct source-law adoption review is premature."
+    - "Using desired exact-GR behavior to choose the mark is forbidden target import."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. A later protected decision is required before adopting the law or editing canonical ontology."
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "source_extension_candidate"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - item_id: "EqSrcCycleBoundarySelectorLaw_src^cand,v1"
+      item_source_path: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+      item_kind: "law_target"
+      classification: "new_ontology_primitive_candidate"
+      evidence_paths:
+        - "research_control/handoffs/handoff-0759.yaml"
+        - "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+      relation_to_current_ontology: "missing_primitive"
+      relation_to_target_structures: "none used in the displayed definition tree; fresh audit pending"
+      claim_boundary_ref: "CB-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-CANDIDATE-001"
+      protected_authority_required: true
+      physics_promotion_authorized: false
+      downstream_promotion_authorized: false
+      allowed_conclusion: "Proposal-only new ontology primitive candidate formalized pending fresh smuggling audit."
+      blocked_overreads:
+        - "oriented mark or source-law adoption"
+        - "physical admissibility or covariance established"
+        - "general EqSrc discharge"
+        - "matter coupling or Einstein equations"
+        - "benchmark promotion or completed derivation"
+      next_route_if_blocked: "smuggling-auditor@0.2.0 ontology-law-research-packet"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-035-001"
+    payload_type: "bridge_map_candidate"
+    name: "Odd-oriented-marked cycle-boundary selector"
+    summary: "Defines one partial selector and kernel-pair relation from displayed finite source data."
+  - payload_id: "NMP-RT-20260718-035-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Exact fixed-space and boundary form"
+    summary: "Proves dimensions two and one and identifies the pre-relation affine generator."
+  - payload_id: "NMP-RT-20260718-035-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Marked-source naturality and quotient uniqueness"
+    summary: "Proves the quotient square for marked bijections and conditional same-kernel uniqueness."
+  - payload_id: "NMP-RT-20260718-035-004"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Finite affine robustness"
+    summary: "Proves every finite word in the pre-relation affine action preserves the quotient."
+  - payload_id: "NMP-RT-20260718-035-005"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "Four-state complementary-mark witness"
+    summary: "Exhibits two distinct relations on one carrier under complementary oriented marks."
+
+mathematical_payload_manifest:
+  - payload_id: "MP-RT-20260718-035-001"
+    payload_type: "definition"
+    object_name: "EqSrcCycleBoundarySelectorLaw_src^cand,v1"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Supplies exact marked-source domains maps failure tags and dependency order for one candidate law."
+  - payload_id: "MP-RT-20260718-035-002"
+    payload_type: "theorem"
+    object_name: "Marked-source exact form and naturality"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves the selected spaces and marked-bijection quotient square under explicit hypotheses."
+  - payload_id: "MP-RT-20260718-035-003"
+    payload_type: "theorem"
+    object_name: "Same-kernel quotient uniqueness and affine robustness"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves conditional label uniqueness and robustness for the independently ordered affine action."
+  - payload_id: "MP-RT-20260718-035-004"
+    payload_type: "finite_model"
+    object_name: "Four-state complementary-mark fixed-carrier witness"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Supplies a concrete nondegenerate model and relation-changing source-mark mutation."
+  - payload_id: "MP-RT-20260718-035-005"
+    payload_type: "source_extension_classification"
+    object_name: "Oriented-mark selector adoption boundary"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+    burden_effect: "requires_human_gate"
+    summary: "Classifies the mark and selector as proposal-only pending audit with physical admissibility and adoption unestablished."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Define proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1 with a nondegenerate finite witness and theorem payload or return a precise scoped obstruction."
+  explanation: "The packet supplies a new partial selector, pre-relation affine action, conditional proofs, explicit failure tags, and a four-state adverse witness. It does not establish current-ontology derivation physical admissibility audit stress or adoption."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "conditional_theorem_candidate"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A proposal-only marked-source candidate and conditional theorem packet does not establish an audited stressed or adopted general EqSrc theorem."
+  downstream_unlocked:
+    - "fresh_bounded_marked_selector_smuggling_audit"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "physical_admissibility_established"
+    - "general_EqSrc_discharge"
+    - "RetainH_adoption"
+    - "GenH_adoption"
+    - "M_src_adoption"
+    - "g_eff_scope_change"
+    - "matter_coupling_derivation"
+    - "Einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+  explanation: "The authoritative ledger remains unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; the oriented mark remains proposal-only"
+  - burden: "Source equivalence EqSrc"
+    status: "marked-source selector candidate formalized pending fresh audit; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged scoped source-extension selector data only"
+  - burden: "M_src"
+    status: "unchanged scoped source-only object only; no new adoption"
+  - burden: "g_eff"
+    status: "unchanged scoped source-extension object only; no scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged scoped evidence or precondition only; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "conditional theorem proved only for the proposal's affine class; no general physical robustness"
+  - burden: "benchmark promotion"
+    status: "blocked by missing primitive and protected authority"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact v3 route locally frozen; distinct marked-source route open for one fresh audit"
+
+route_cycle_control:
+  cycle_family: "eqsrc_cycle_boundary_selector_law"
+  current_cycle_step: "marked_source_selector_formalization"
+  prior_related_tasks:
+    - "RT-20260718-031"
+    - "RT-20260718-032"
+    - "RT-20260718-033"
+    - "RT-20260718-034"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The packet moves upstream from exact-v3 differential choice to one explicit partial selector and supplies new proof and relation-changing witness payload."
+  next_role_consequence: "smuggling-auditor@0.2.0 fresh bounded audit of the exact marked-source candidate"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW"
+  candidate_freeze_label: "EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW"
+  prior_attempts_considered:
+    - "RT-20260718-031"
+    - "RT-20260718-032"
+    - "RT-20260718-033"
+    - "RT-20260718-034"
+    - "RT-20260718-035"
+  freeze_if:
+    - "A fresh audit shows that the oriented mark parity selector or affine class merely renames the missing choice or imports target or process data."
+    - "A later stress finds the same collapse nonuniqueness transition or robustness defect without a new repair object."
+  criteria_evaluated:
+    - "a structurally distinct partial selector is present"
+    - "conditional theorem-level results are present"
+    - "a four-state relation-changing witness is present"
+    - "formal independence and physical admissibility are separated"
+    - "adoption and downstream promotion remain blocked"
+  do_not_freeze_if:
+    - "One fresh audit can test the materially new oriented-mark provenance and variation ordering."
+  freeze_decision: "not_frozen"
+  rationale: "The distinct route supplies new auditable mathematical payload and changes the next role from formalization to independent audit."
+  decision_reason: "The distinct route supplies new auditable mathematical payload and changes the next role from formalization to independent audit."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "smuggling_auditor"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The packet formalizes one conditional proposal-only marked-source candidate and authorizes only one fresh audit. It authorizes no mark or source-law adoption physical-admissibility claim general EqSrc discharge downstream GR promotion completed derivation or project-wide rejection conclusion."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "oriented mark or source-law adoption"
+    - "physical admissibility or covariance established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff claim or scope expansion"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+
+next_recommendation:
+  role_id: "smuggling-auditor"
+  role_version: "0.2.0"
+  packet_type: "source_extension_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  task_type: "eqsrc_cycle_boundary_selector_law_smuggling_audit"
+  objective: "Freshly audit exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 for oriented-mark and parity provenance hidden choice renaming target or process import physical-covariance overread variation circularity and finite-witness generalization."
+  requires_human_gate: false
+  claim_boundary: "Audit-only. Do not repair or adopt the candidate edit canonical ontology establish physical admissibility discharge general EqSrc change Distance-to-GR or metric-use ledgers or promote downstream physics."
+
+selected_next_route:
+  route_id: "eqsrc_cycle_boundary_selector_law_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Audit the exact proposal-only marked-source cycle-boundary selector before Refuter stress or protected adoption review."
+  requires_human_gate: false
+  physics_promotion_authorized: false
+  next_action: "Run one bounded fresh Smuggling Auditor audit of the exact candidate."
+
+claim_boundary:
+  boundary_id: "CB-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-CANDIDATE-001"
+  allowed_scope: "One proposal-only marked-source selector pre-relation affine action naturality quotient uniqueness presentation compatibility finite robustness fixed-carrier witness failure tags and fresh audit route."
+  blocked_scope: "Canonical ontology or source-law adoption physical admissibility fresh audit inside this job Refuter stress general EqSrc RetainH GenH M_src g_eff matter coupling Einstein equations benchmark Gate Chair completed derivation or program-level no-go promotion."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_validation.json"
+  local_validator_report_hash: "dfb2244c8a6dc001746d018c6d401fa6bceb05f205b11ca2a986a725ada8c01c"
+  candidate_artifact_hash: "64901302bd6f37819ebd30aaaebaf39611d2c71c97d45b6cea6a39df11e0df94"
+  validation_status: "PASS"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight refreshed local retrieval and canonical selector and role sources were inspected."
+      - "Handoff-0759 and the registered Ontology Formalizer role were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both child perspectives completed."
+      - "The parent conflict review resolved without a revision round."
+      - "The exact law proofs witness variation ordering and authority guards were fused."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local and repository-wide validation is recorded in the governed transaction."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier compact frontier task index claim graph and dependency graph were regenerated."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Registered source and memory derivatives were regenerated and checked."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-file claim-language validation passed with no hard failures."
+
+next_recommended_action: "Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 before Refuter stress or any adoption consideration."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

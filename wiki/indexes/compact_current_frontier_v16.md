@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-034`
-- Latest handoff: `handoff-0759`
-- Current status: `eqsrc_cycle_boundary_selector_law_formalization_selected_exact_v3_cycle_locally_frozen_no_adoption`
+- Active task: `RT-20260718-035`
+- Latest handoff: `handoff-0760`
+- Current status: `eqsrc_cycle_boundary_selector_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-034`
-- Latest research handoff: `handoff-0759`
-- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1 with source-only domains and maps, naturality and automorphism equivariance, fixed-carrier discrimination, a nondegenerate finite witness or precise obstruction, relation-level uniqueness, noncircular independent variations, conditional robustness, and tagged fail-closed branches.
+- Latest research task: `RT-20260718-035`
+- Latest research handoff: `handoff-0760`
+- Latest research next action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 for oriented-mark and parity provenance, hidden selector renaming, target or process import, marked-naturality versus physical-covariance overread, variation circularity, and finite-witness generalization.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_cycle_boundary_selector_law_formalization`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `eqsrc_cycle_boundary_selector_law_smuggling_audit`
+- Role family: `smuggling-auditor@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Define a proposal-only source-local selector of quotient-relevant cycle-boundary data with new witness and theorem payload or return a precise obstruction.
+- Milestone burden: Audit the exact proposal-only marked-source cycle-boundary selector before Refuter stress or protected adoption review.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `4928d559427c5aaef37c0897f7f1bfe69552c8a2d9dae2ade275c97e4dfd086e`
-- JSON SHA-256: `8e049a899737df60f79d2f30d13bf47755f99097f8ae68239022012ebd2c665b`
+- YAML SHA-256: `d2103af528dd412bf1ab5a3389ce373c7fa80972b347e502ea55908d240ac749`
+- JSON SHA-256: `6b90763c162611c00d483ea380427a38ec4fbcf525dd3cd0cc4e38f6fd6cc996`
 
 ## Authority Warning
 

@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T19:59:56Z`
-- Source fingerprint: `85ddbfb0666c408ad7e74c36074993c6aeb2045d0c78e22e8064223960897194`
-- Nodes: `19410`
-- Edges: `67157`
+- Generated from tracked state as of: `2026-07-19T20:27:55Z`
+- Source fingerprint: `68db582fedfcdc945d387924ad692cc27df00e23fd31c64a25f521a2e05e6447`
+- Nodes: `19438`
+- Edges: `67216`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 988 |
+| `completion_yaml` | 989 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 759 |
+| `handoff_yaml` | 760 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 988 |
+| `agent_job` | `support_only` | 989 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10172 |
-| `blocked_burden` | `blocked` | 3671 |
-| `claim_boundary` | `support_only` | 945 |
-| `draft_control_candidate` | `draft_control` | 588 |
-| `draft_control_candidate` | `proposal_only` | 89 |
+| `artifact` | `support_only` | 10185 |
+| `blocked_burden` | `blocked` | 3676 |
+| `claim_boundary` | `support_only` | 946 |
+| `draft_control_candidate` | `draft_control` | 591 |
+| `draft_control_candidate` | `proposal_only` | 91 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 112 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 759 |
+| `handoff` | `support_only` | 760 |
 | `human_gated_object` | `human_gated` | 421 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 308 |
+| `source_ontology_object` | `support_only` | 309 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 928 |
+| `task` | `support_only` | 929 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-034`
-- Latest handoff: `handoff-0759`
-- Handoff path: `research_control/handoffs/handoff-0759.yaml`
-- Next action: Run one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1 with source-only domains and maps, naturality and automorphism equivariance, fixed-carrier discrimination, a nondegenerate finite witness or precise obstruction, relation-level uniqueness, noncircular independent variations, conditional robustness, and tagged fail-closed branches.
+- Active task: `RT-20260718-035`
+- Latest handoff: `handoff-0760`
+- Handoff path: `research_control/handoffs/handoff-0760.yaml`
+- Next action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 for oriented-mark and parity provenance, hidden selector renaming, target or process import, marked-naturality versus physical-covariance overread, variation circularity, and finite-witness generalization.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

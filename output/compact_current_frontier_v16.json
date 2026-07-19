@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0759.yaml",
+    "research_control/handoffs/handoff-0760.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260718-034",
-    "latest_handoff_id": "handoff-0759",
-    "current_status": "eqsrc_cycle_boundary_selector_law_formalization_selected_exact_v3_cycle_locally_frozen_no_adoption",
+    "active_task_id": "RT-20260718-035",
+    "latest_handoff_id": "handoff-0760",
+    "current_status": "eqsrc_cycle_boundary_selector_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260718-034",
-    "latest_research_handoff_id": "handoff-0759",
-    "latest_research_next_action": "Run one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1 with source-only domains and maps, naturality and automorphism equivariance, fixed-carrier discrimination, a nondegenerate finite witness or precise obstruction, relation-level uniqueness, noncircular independent variations, conditional robustness, and tagged fail-closed branches.",
+    "latest_research_task_id": "RT-20260718-035",
+    "latest_research_handoff_id": "handoff-0760",
+    "latest_research_next_action": "Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcCycleBoundarySelectorLaw_src^cand,v1 for oriented-mark and parity provenance, hidden selector renaming, target or process import, marked-naturality versus physical-covariance overread, variation circularity, and finite-witness generalization.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "eqsrc_cycle_boundary_selector_law_formalization",
-    "role_family": "ontology-formalizer@0.2.0",
+    "route_id": "eqsrc_cycle_boundary_selector_law_smuggling_audit",
+    "role_family": "smuggling-auditor@0.2.0",
     "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Define a proposal-only source-local selector of quotient-relevant cycle-boundary data with new witness and theorem payload or return a precise obstruction.",
+    "milestone_burden": "Audit the exact proposal-only marked-source cycle-boundary selector before Refuter stress or protected adoption review.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -323,7 +323,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "cycle_boundary_selector_formalization_selected",
+      "effect": "conditional_theorem_candidate",
       "changed": false,
       "milestone": "source_equivalence_eqsrc",
       "burden_id": "source_equivalence_eqsrc"

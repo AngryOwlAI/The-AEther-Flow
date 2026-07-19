@@ -1,0 +1,392 @@
+% authority: science-draft
+% status: proposal-only
+% route: ontology-law-research-packet
+% trigger_classification: derivation_critical_missing_source_law
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Ftwo}{\mathbb F_2}
+\newcommand{\Sel}{\mathsf{CycleBoundarySel}_{\mathrm{src}}}
+\newcommand{\AdmVar}{\mathsf{AdmVar}_{\mathrm{src}}}
+\newcommand{\EqCand}{\mathsf{EqSrc}^{\mathrm{cand}}}
+\newcommand{\Bottom}{\mathsf{Bottom}_{\mathrm{src}}}
+
+\title{Proposal-Only EqSrc Cycle--Boundary Selector Law Candidate v1:\\
+Marked-Source Naturality, Fixed-Carrier Discrimination, and Robustness}
+\author{Ontology Formalizer control packet RT-20260718-035}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This packet defines
+\(\mathsf{EqSrcCycleBoundarySelectorLaw}^{\mathrm{cand},v1}_{\mathrm{src}}\)
+as a proposal-only source-extension object. Current ontology does not derive
+the unary source mark used below, does not select this marked-record category,
+and does not establish the resulting translations as physically admissible.
+The status is \texttt{proposal-only}, \texttt{source-extension data}, and
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\begin{verbatim}
+candidate_result: candidate_formalized_pending_fresh_smuggling_audit
+candidate_name: EqSrcCycleBoundarySelectorLaw_src^cand,v1
+formal_model: finite_odd_oriented_marked_source_records_over_F2
+partial_selector: CycleBoundarySel_src(S)=(A_S,B_S) or tagged_bottom
+cycle_space: A_S=(F2^X)^Aut(X,P)
+boundary_space: B_S=ker(ell_P restricted to A_S)
+candidate_eqsrc: kernel_pair_of_q_S:A_S->A_S/B_S
+variation_definition_order: source_mark_then_u_then_variations_then_A_then_B_then_relation
+naturality: marked_source_isomorphism_natural
+automorphism_equivariance: proved
+relation_level_uniqueness: unique_up_to_quotient_codomain_bijection
+mark_and_parity_selector_uniqueness: not_claimed
+chain_presentation_uniqueness: not_claimed
+finite_witness: four_point_singleton_mark
+witness_state_count: 4
+witness_class_count: 2
+witness_class_size: 2
+fixed_carrier_alternate_mark_relation_changed: true
+current_ontology_derives_candidate: false
+physical_admissibility_established: false
+candidate_status: proposal-only
+adoption_status: blocked_adoption_open_continuation
+general_EqSrc_discharged: false
+distance_to_gr_ledger_changed: false
+freeze_decision: not_frozen
+next_route: fresh_smuggling_auditor_review
+\end{verbatim}
+
+The exact
+\(\mathsf{EqSrcIntrinsicDiscriminatorAdmissibilityLaw}^{\mathrm{cand},v3}_{\mathrm{src}}\)
+construction--audit--stress cycle remains locally frozen. The present object
+moves upstream: it makes the missing source mark explicit and selects only the
+quotient-relevant pair before any candidate relation is evaluated.
+
+\section{Marked Source-Record Category and Partial Selector}
+
+\begin{definition}[Odd-oriented-marked source record]
+An admitted record is a pair \(S=(X,P)\), where \(X\) is a finite set and
+\[
+ \varnothing\neq P\subsetneq X,\qquad |P|\equiv1\pmod2.
+\]
+A morphism \(f:S\to S'\) is a bijection \(f:X\to X'\) satisfying
+\(f(P)=P'\). These objects and morphisms form the groupoid
+\(\mathsf{FinMark}^{\mathrm{odd},*}_{\mathrm{src}}\).
+
+The oriented mark \(P\), rather than the unordered partition
+\(\{P,X\setminus P\}\), is displayed source data. It is not inferred from a
+desired relation, target geometry, benchmark behavior, or workflow state.
+\end{definition}
+
+\begin{definition}[Pre-relation variation datum]
+For \(S=(X,P)\), set
+\[
+ V_S=\Ftwo^X,\qquad u_S=\mathbf1_{X\setminus P}.
+\]
+Before any fixed space, boundary space, quotient, or relation is evaluated,
+define the affine involutions
+\[
+ J_S(\epsilon):V_S\longrightarrow V_S,\qquad
+ J_S(\epsilon)(a)=a+\epsilon u_S,\qquad \epsilon\in\Ftwo.
+\]
+This gives an affine \(\Ftwo\)-action because
+\(J_S(\epsilon)J_S(\delta)=J_S(\epsilon+\delta)\).
+\end{definition}
+
+\begin{definition}[Cycle--boundary selector]
+Set
+\[
+ G_S=\operatorname{Aut}(X,P),\qquad A_S=V_S^{G_S}.
+\]
+Write
+\[
+ \ell_{P,S}:V_S\longrightarrow\Ftwo,\qquad
+ \ell_{P,S}(a)=\sum_{x\in P}a_x,
+\]
+and define
+\[
+ B_S=\ker\!\left(\ell_{P,S}|_{A_S}\right).
+\]
+The partial law returns
+\[
+ \Sel(S)=(A_S,B_S\subsetneq A_S)
+\]
+when \(S\) is admitted and \(0\subsetneq B_S\subsetneq A_S\); otherwise it
+returns the tagged value \(\Bottom(S)\) and defines no candidate relation.
+\end{definition}
+
+\begin{proposition}[Exact form on the admitted domain]
+Let \(\mathbf 1_P,\mathbf 1_{X\setminus P}\in V_S\) be the two orbit
+indicators. Then
+\[
+ A_S=\operatorname{span}_{\Ftwo}
+ \{\mathbf1_P,\mathbf1_{X\setminus P}\},\qquad
+ B_S=\operatorname{span}_{\Ftwo}\{\mathbf1_{X\setminus P}\}.
+\]
+Consequently \(\dim A_S=2\), \(\dim B_S=1\), and every admitted record
+passes the nondegeneracy test.
+\end{proposition}
+
+\begin{proof}
+The automorphism group is the product of the full symmetric groups on \(P\)
+and \(X\setminus P\), so a fixed vector is constant on each of those two
+orbits. Since \(|P|\) is odd,
+\(\ell_{P,S}(\mathbf1_P)=1\) and
+\(\ell_{P,S}(\mathbf1_{X\setminus P})=0\). The displayed kernel follows.
+\end{proof}
+
+\section{Dependency Order and Independent Variations}
+
+\begin{definition}[Admitted variation class]
+Restrict the already-defined affine action to \(A_S\):
+\[
+ \AdmVar(S)=\{J_S(\epsilon)|_{A_S}:\epsilon\in\Ftwo\}.
+\]
+The exact-form proposition proves \(u_S\in A_S\) and
+\(B_S=\Ftwo u_S\), so these restrictions are affine automorphisms of
+\(A_S\). They are not asserted to be linear endomorphisms.
+\end{definition}
+
+The dependency order is
+\[
+ (X,P)\longrightarrow(V_S,u_S,J_S)
+ \longrightarrow(G_S,A_S,\ell_{P,S})\longrightarrow B_S
+ \longrightarrow q_S\longrightarrow\EqCand_S.
+\]
+Neither \(\EqCand_S\), its stabilizer, a target object, benchmark behavior,
+nor process authority occurs upstream of the affine action, \(B_S\), or the
+candidate relation. This is a formal non-circularity certificate relative to
+the proposed marked record.
+It does not derive the mark from current ontology and does not establish
+physical admissibility.
+
+\section{Candidate Relation and Relation-Level Uniqueness}
+
+\begin{definition}[Candidate relation]
+Let
+\[
+ q_S:A_S\longrightarrow A_S/B_S
+\]
+be the quotient map. Define
+\[
+ a\,\EqCand_S\,a'
+ \quad\Longleftrightarrow\quad
+ q_S(a)=q_S(a')
+ \quad\Longleftrightarrow\quad a-a'\in B_S.
+\]
+\end{definition}
+
+\begin{theorem}[Relation-level quotient uniqueness]
+Let \(d:A_S\to D\) be a surjection such that
+\[
+ d(a)=d(a')\quad\Longleftrightarrow\quad a-a'\in B_S.
+\]
+There is a unique bijection \(\bar d:A_S/B_S\to D\) with
+\(d=\bar d\circ q_S\). Thus the selected relation is unique up to a unique
+relabeling of the quotient codomain under the stated same-kernel hypothesis.
+\end{theorem}
+
+\begin{proof}
+Set \(\bar d([a])=d(a)\). Equality modulo \(B_S\) makes this well defined;
+the exact kernel-pair hypothesis makes it injective; surjectivity is inherited
+from \(d\). Any factorization must take \([a]\) to \(d(a)\).
+\end{proof}
+
+This is not uniqueness of the mark, the source record, or every possible
+selector. In particular, source symmetry alone does not select the oriented
+mark or the parity functional \(\ell_{P,S}\). The theorem is uniqueness of a
+surjective label for one already selected kernel pair.
+
+\section{Naturality and Automorphism Equivariance}
+
+\begin{theorem}[Marked-source naturality]
+For a marked bijection \(f:S\to S'\), let
+\[
+ F_f:V_S\longrightarrow V_{S'},\qquad
+ (F_fa)_{f(x)}=a_x.
+\]
+Then
+\[
+ F_f(A_S)=A_{S'},\qquad F_f(B_S)=B_{S'},
+\]
+and the induced quotient bijection \(\overline F_f\) makes
+\[
+ \boxed{\quad q_{S'}F_f=\overline F_fq_S\quad}
+\]
+commute on \(A_S\). Consequently marked-source isomorphisms preserve and
+reflect \(\EqCand\), and composition, identity, and inverse certificates hold.
+\end{theorem}
+
+\begin{proof}
+Conjugation by \(f\) identifies \(G_S\) with \(G_{S'}\), so \(F_f\) maps
+fixed vectors bijectively. Because \(f(P)=P'\),
+\(\ell_{P',S'}F_f=\ell_{P,S}\), hence \(F_f\) maps the restricted kernels
+bijectively. The quotient square and functorial certificates follow.
+\end{proof}
+
+For \(f\in G_S\), every \(a\in A_S\) is fixed by definition, so the
+automorphism-equivariance claim is exact but weak: the selected state space
+is the fixed space, so the restricted action is pointwise trivial. This
+naturality is only for the displayed marked-source groupoid. It says nothing
+about unmarked carrier bijections, mark-changing maps, or physical covariance
+under an independently justified category of source changes.
+
+\section{Chain-Presentation Compatibility}
+
+The selected pair has a canonical minimal two-truncated presentation
+\[
+ C_2(S)=B_S\xrightarrow{\iota_S}C_1(S)=A_S
+ \xrightarrow{0}C_0(S)=0.
+\]
+Its cycle space is \(A_S\) and its boundary image is \(B_S\). More generally,
+any typed presentation whose cycle space is \(A_S\) and whose boundary image
+is \(B_S\) induces the same quotient and kernel pair.
+
+No uniqueness of \(C_2\), a differential, or a full chain presentation is
+claimed. The selected pair is authoritative only inside this proposal; a
+differential is a presentation of \(B_S\), not a physically selected input.
+An externally supplied presentation with a different boundary image is tagged
+\texttt{presentation\_incompatible}; it does not make the canonical partial
+selector return \(\Bottom\).
+
+\section{Conditional Robustness}
+
+\begin{theorem}[Finite admitted-variation robustness]
+For every \(\epsilon\in\Ftwo\) and \(a\in A_S\),
+\[
+ q_S(J_S(\epsilon)a)=q_S(a).
+\]
+Every finite composition of admitted translations therefore acts trivially
+on \(A_S/B_S\) and preserves \(\EqCand_S\).
+\end{theorem}
+
+\begin{proof}
+The difference \(J_S(\epsilon)a-a=\epsilon u_S\) lies in
+\(B_S=\Ftwo u_S\). Closure under finite composition follows from the affine
+action law.
+\end{proof}
+
+This theorem is intentionally conditional. It is algebraic robustness for a
+variation class derived from the displayed mark before the relation is
+evaluated. It neither proves that nature supplies the mark nor that all
+physically relevant variations are admitted.
+
+\section{Four-Point Witness and Fixed-Carrier Discrimination}
+
+Let \(X=\{0,1,2,3\}\). For \(S_0=(X,\{0\})\), write vectors in coordinate
+order \(0,1,2,3\). Then
+\[
+ A_{S_0}=\{0000,1000,0111,1111\},\qquad
+ B_{S_0}=\{0000,0111\}.
+\]
+The four selected source states form two two-element classes:
+\[
+\begin{array}{c|c}
+\text{quotient label}&\text{class}\\\hline
+0&\{0000,0111\}\\
+1&\{1000,1111\}.
+\end{array}
+\]
+The nonidentity admitted translation toggles \(0111\) and leaves the quotient
+label fixed.
+
+On the same carrier, use the distinct record
+\(S_1=(X,\{1,2,3\})\). It has the same invariant state space but
+\[
+ B_{S_1}=\{0000,1000\},
+\]
+with classes \(\{0000,1000\}\) and \(\{0111,1111\}\). Therefore the two
+explicit source marks select different boundary subspaces and different
+relations on the same carrier. This is a structural marked-record mutation,
+not robustness under every source variation and not evidence that current
+ontology selects either mark. If the physical source gauge may exchange or
+forget the two orientations while preserving the carrier, the candidate
+fails closed until extra source-side provenance distinguishes them.
+
+\section{Fail-Closed Branches}
+
+The proposed law returns \(\Bottom\) and defines no candidate relation when:
+\begin{enumerate}[leftmargin=*]
+  \item the unary mark is absent, empty, full, or even-cardinality;
+  \item the mark is inferred from a desired relation, its stabilizer, target
+  geometry, benchmark success, empirical detector semantics, or process data;
+  \item an alleged morphism is not a bijection or does not preserve the mark;
+  \item the fixed-space or restricted-kernel calculation does not yield
+  \(0\subsetneq B_S\subsetneq A_S\);
+  \item an admitted variation is defined after or from the selected relation;
+  \item naturality, composition, inverse, quotient-factorization, or
+  relation-level uniqueness certification fails;
+  \item an externally supplied chain presentation has the wrong cycle space
+  or boundary image, in which case it is tagged
+  \texttt{presentation\_incompatible} without changing the canonical
+  selector output; or
+  \item any generated derivative, registry, role, validator, handoff,
+  checkpoint, or file ordering is treated as scientific authority.
+\end{enumerate}
+Failure closes only that candidate instance. It does not prove a general
+EqSrc no-go or future source-extension impossibility.
+
+\section{No-Target and No-Process Guard}
+
+The construction depends only on a finite set, an explicit unary source mark,
+finite permutations, \(\Ftwo\) linear algebra, and quotient formation.
+Target atlas, topology, metric, proper time, detector semantics, desired
+exact-GR behavior, registry metadata, role identity, validator output,
+handoff text, checkpoint status, and generated derivatives are excluded from
+the definition tree.
+
+The mark is nevertheless a new underived source primitive candidate. Calling
+the construction source-only does not make that mark ontology-derived or
+physically admissible.
+
+\section{Distance-to-GR, Freeze, and Next Route}
+
+The result is
+\texttt{candidate\_formalized\_pending\_fresh\_smuggling\_audit}. It supplies
+a partial selector definition, naturality and uniqueness theorems, a
+presentation lemma, conditional robustness, and a fixed-carrier witness. It
+does not discharge general EqSrc and does not change the Distance-to-GR or
+metric-use ledgers.
+
+The exact v3 construction--audit--stress route remains locally frozen. This
+distinct marked-source selector route is \texttt{not\_frozen} because it makes
+the missing primitive explicit and provides a new theorem and witness payload.
+
+The next lawful packet is one fresh bounded
+\texttt{smuggling-auditor@0.2.0} audit of this exact candidate. It must test
+whether the mark merely renames the missing differential choice, whether the
+record category or variation class imports target or process data, whether
+formal naturality is overread as physical covariance, and whether the finite
+witness is overgeneralized. It may not repair or adopt the candidate.
+
+\section{Forbidden Conclusions}
+
+This artifact does not authorize canonical ontology modification, source-law
+adoption, derivation of the unary mark, physical-admissibility establishment,
+general EqSrc discharge, RetainH or GenH adoption, \(M_{\mathrm{src}}\)
+adoption, \(g_{\mathrm{eff}}\) scope expansion, matter coupling, Einstein
+equations, benchmark promotion, Gate Chair verdict, completed derivation,
+future source-extension impossibility, program-level no-go, or global theory
+rejection.
+
+\section{Source Materials}
+
+\begin{itemize}[leftmargin=*]
+  \item Handoff 0759 and the RT-20260718-034 selector artifact.
+  \item The registered Ontology Formalizer role contract v0.2.0.
+  \item The source-extension classification checklist and no-target-import
+  guard map.
+  \item Finite group-action and quotient arguments reproduced above.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,63 @@
+artifact_id: "child_phys_math_eqsrc_cycle_boundary_selector_law"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-035"
+job_id: "AJ-RT-20260718-035-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_name: "EqSrcCycleBoundarySelectorLaw_src^cand,v1"
+authority: "science_draft"
+candidate_status: "proposal-only"
+adoption_status: "blocked_adoption_open_continuation"
+recommendation: "fuse_marked_source_selector_then_route_to_fresh_smuggling_audit"
+
+formal_construction:
+  source_record: "finite pair S=(X,P) with nonempty proper odd-cardinality oriented mark P"
+  morphisms: "bijections f:X->X_prime satisfying f(P)=P_prime"
+  ambient_space: "V_S=F2^X"
+  source_automorphisms: "G_S=Aut(X,P)"
+  cycle_space: "A_S=V_S^G_S"
+  parity_map: "ell_P,S(a)=sum over P of a_x modulo 2"
+  boundary_space: "B_S=ker(ell_P,S restricted to A_S)"
+  candidate_relation: "a EqSrc_cand,S a_prime iff a-a_prime lies in B_S"
+  quotient: "q_S:A_S->A_S/B_S"
+
+independent_variations:
+  source_vector: "u_S=1_(X minus P)"
+  definition_order: "S then u_S and affine action then A_S and B_S then q_S and EqSrc_cand"
+  affine_action: "J_S(epsilon)(a)=a+epsilon u_S"
+  derived_compatibility: "B_S=F2 u_S and the action restricts to affine automorphisms of A_S"
+  excluded_dependencies:
+    - "candidate relation or its stabilizer"
+    - "target atlas or target metric"
+    - "benchmark behavior"
+    - "workflow authority"
+  limitation: "formal non-circularity does not establish physical admissibility"
+
+theorems:
+  - theorem_id: "THM-EQSRC-MARKED-EXACT-FORM-001"
+    conclusion: "A_S=span(1_P,1_(X minus P)) and B_S=span(1_(X minus P)); dimensions are 2 and 1."
+  - theorem_id: "THM-EQSRC-MARKED-NATURALITY-001"
+    conclusion: "Marked bijections carry A_S and B_S bijectively and induce a commuting quotient square."
+  - theorem_id: "THM-EQSRC-MARKED-QUOTIENT-UNIQUENESS-001"
+    conclusion: "Every surjective discriminator with the same kernel pair factors uniquely through q_S by a codomain bijection."
+  - theorem_id: "THM-EQSRC-MARKED-ROBUSTNESS-001"
+    conclusion: "Every finite word in the pre-relation affine action preserves q_S and EqSrc_cand,S."
+
+finite_witness:
+  carrier: "X={0,1,2,3}"
+  first_mark: "P={0}"
+  state_space: "{0000,1000,0111,1111}"
+  first_boundary: "{0000,0111}"
+  first_classes: "{{0000,0111},{1000,1111}}"
+  alternate_mark: "P_prime={1,2,3}"
+  alternate_boundary: "{0000,1000}"
+  alternate_classes: "{{0000,1000},{0111,1111}}"
+  result: "same carrier and state space but different boundary subspaces and relations"
+
+mathematical_limits:
+  - "Automorphism equivariance on A_S is exact but weak because A_S is pointwise fixed."
+  - "Naturality covers only marked bijections."
+  - "The quotient uniqueness theorem is conditional on the selected kernel."
+  - "Source symmetry does not force the oriented mark or parity functional."
+  - "No uniqueness of full chain presentation is proved."

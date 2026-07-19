@@ -19,6 +19,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-033-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress_receipt.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-033-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-033/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_v3_refuter_stress.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-034-PARENT-FUSION-NOTES-EQSRC-CHAIN-DATA-SELECTOR` `research_control/tasks/RT-20260718-034/artifacts/parent_fusion_notes_eqsrc_chain_data_selector.md`
+- Backlink from `TEX-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex`
 
 ## Validation
 
