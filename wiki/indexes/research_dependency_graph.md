@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T21:49:14Z`
-- Source fingerprint: `93f5eb1e8a449af623e52c18a51b4ab0c05642f2736b8c674ead6d2556c974dd`
-- Nodes: `19473`
-- Edges: `67320`
+- Generated from tracked state as of: `2026-07-19T22:32:44Z`
+- Source fingerprint: `9f674a4df27a014ee183ddf269c6c3c767813cdba3db1a5743b6de75565e2833`
+- Nodes: `19495`
+- Edges: `67371`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 991 |
+| `completion_yaml` | 992 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 762 |
+| `handoff_yaml` | 763 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 991 |
+| `agent_job` | `support_only` | 992 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10199 |
-| `blocked_burden` | `blocked` | 3676 |
-| `claim_boundary` | `support_only` | 948 |
-| `draft_control_candidate` | `draft_control` | 600 |
-| `draft_control_candidate` | `proposal_only` | 91 |
+| `artifact` | `support_only` | 10208 |
+| `blocked_burden` | `blocked` | 3681 |
+| `claim_boundary` | `support_only` | 949 |
+| `draft_control_candidate` | `draft_control` | 602 |
+| `draft_control_candidate` | `proposal_only` | 92 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 113 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 762 |
-| `human_gated_object` | `human_gated` | 421 |
+| `handoff` | `support_only` | 763 |
+| `human_gated_object` | `human_gated` | 422 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 311 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 931 |
+| `task` | `support_only` | 932 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-037`
-- Latest handoff: `handoff-0762`
-- Handoff path: `research_control/handoffs/handoff-0762.yaml`
-- Next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently sourced orientation and variation construction, a bundle-valued or orientation-descent or irrelevance theorem route, a distinct scoped no-go question, or local freeze. Do not repeat repair adopt or promote exact candidate v1.
+- Active task: `RT-20260718-038`
+- Latest handoff: `handoff-0763`
+- Handoff path: `research_control/handoffs/handoff-0763.yaml`
+- Next action: Run one bounded Ontology Formalizer ontology-law-research-packet to formalize proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1. Define unpointed torsor or projective-line relation-bundle data and associated relations; prove ordering independence cocycle equivariance functoriality pullback strict scalar non-descent no-natural-section and pointed-torsor repair controls; expose provenance parity scalarization and independent-variation failure branches; and do not repair adopt or promote exact candidate v1.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

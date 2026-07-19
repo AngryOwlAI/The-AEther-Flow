@@ -18,6 +18,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Generated output path: `wiki/tex/tex-eqsrc-cycle-boundary-selector-law-refuter-stress.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-037-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress_receipt.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-037-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260718-037/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law_refuter_stress.md`
+- Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-038-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-SELECTOR` `research_control/tasks/RT-20260718-038/artifacts/parent_fusion_notes_eqsrc_orientation_torsor_selector.md`
 
 ## Validation
 

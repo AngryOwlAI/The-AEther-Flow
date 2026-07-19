@@ -1,0 +1,80 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260718-038"
+agent_job_id: "AJ-RT-20260718-038-001"
+scope: "Select one mathematically distinct EqSrc continuation after the exact candidate-v1 orientation-descent and independent-selection obstruction."
+route_ranking:
+  orientation_torsor_relation_bundle:
+    rank: 1
+    status: "selected"
+    reason: "It preserves the unresolved orientation as equivariant source data and permits a new descent theorem without selecting or repairing either frozen scalar fibre."
+  independent_orientation_and_variation_witness:
+    rank: 2
+    status: "deferred"
+    reason: "It remains viable only after richer source data supplies a natural orientation and an independently defined physical variation category."
+  distinct_scoped_no_go:
+    rank: 3
+    status: "deferred"
+    reason: "A no-section or no-scalar-descent theorem would substantially overlap the existing two-point and GL(2,2) obstruction."
+  broader_local_freeze:
+    rank: 4
+    status: "not_selected"
+    reason: "Exact candidate v1 is locally frozen, but a materially distinct constructive bundle-valued route remains available."
+selected_packet:
+  packet_type: "ontology_law_research_packet"
+  payload_family: "orientation_torsor_relation_bundle_descent"
+  route_label: "ontology-law-research-packet"
+  next_execution_role_family: "ontology-formalizer@0.2.0"
+  law_target: "EqSrcOrientationTorsorDescentLaw_src^cand,v1"
+  status_label: "proposal-only"
+  adoption_status: "blocked_adoption_open_continuation"
+  source_extension_category: "source_extension_candidate"
+  source_extension_import_classification: "new_ontology_primitive_candidate"
+formal_target:
+  domain: "Finite source records U=(X,{P,Q}) with a source-derived unordered nonempty bipartition, a declared admissible parity branch, and source morphisms preserving the unordered partition."
+  orientation_torsor: "O_U={(P,Q),(Q,P)} with free C2 action sigma."
+  state_space: "A_U=span_F2{1_P,1_Q}."
+  complement_transport: "c_U(1_P)=1_Q and c_U(1_Q)=1_P with c_U squared equal to identity."
+  fibre_boundary: "For o=(P,Q), B_U,o=span_F2{1_Q}; the opposite fibre is transported by c_U."
+  fibre_relation: "a R_U,o a' exactly when a-a' lies in B_U,o."
+  relation_bundle: "Rcal_U={(o,a,a'):a R_U,o a'} with the diagonal C2 action induced by sigma and c_U."
+  associated_object: "Acal_U=(O_U times A_U)/C2 with descended relation Rbar_U=Rcal_U/C2."
+minimal_finite_witness:
+  carrier: "X={0,1}"
+  unordered_partition: "{{0},{1}}"
+  state_basis: "p=delta_0 and q=delta_1"
+  first_boundary: "span_F2{q}"
+  second_boundary: "span_F2{p}"
+  strict_scalar_descent: "fails because the two relations on the common A=F2^2 are distinct under identity identification"
+  bundle_descent: "passes algebraically because c(p)=q and c(q)=p transport the two relations exactly"
+  natural_section: "absent because the carrier transposition swaps the two orientations"
+strict_descent_verdict:
+  exact_candidate_v1_scalar_descent: "blocked"
+  bundle_valued_descent: "available_for_bounded_formalization"
+  distinction: "The codomain changes from one relation on A_U to an equivariant relation bundle or associated state object; no preferred fibre is selected."
+  scalarization_guard: "The complement-swap invariant diagonal line is a different candidate scalar law, not descent of either candidate-v1 fibre, and requires independent source justification."
+proof_obligations:
+  - "ordering independence of O_U A_U c_U Acal_U and Rbar_U"
+  - "C2 cocycle c_U squared equals identity"
+  - "equivariance of boundary lines and fibre relations"
+  - "functoriality under every admitted unordered-bipartition-preserving source morphism"
+  - "nondegeneracy with dim A_U=2 and dim B_U,o=1 on the admitted branch"
+  - "pullback theorem recovering exactly one fibre relation from each torsor trivialization"
+  - "strict scalar non-descent and no-natural-section theorem on the two-point witness"
+  - "classification of scalarizations separating a new diagonal-line law from descent of candidate v1"
+  - "independent variation provenance before any physical robustness claim"
+failure_branches:
+  - "unordered partition or orientation-torsor provenance is absent"
+  - "the formal complement transport is not an admitted source morphism"
+  - "the downstream burden requires one relation on the original A_U rather than an associated state object"
+  - "a scalarization silently chooses an orientation or replaces the fibre relation"
+  - "variation admissibility is defined from the selected boundary relation"
+  - "parity or tagged-bottom branches fail equivariance"
+  - "target geometry benchmark behavior or process evidence enters the construction"
+classification: "packet_selection"
+distance_to_gr_delta: false
+limitations:
+  - "This child selects a formalization target and does not construct or adopt the law."
+  - "Bundle covariance is mathematical and does not establish physical gauge equivalence covariance or admissible variations."
+  - "General EqSrc and every downstream GR burden remain open."

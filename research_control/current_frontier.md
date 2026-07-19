@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-037` and `handoff-0762`.
+`RT-20260718-038` and `handoff-0763`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-037` |
-| Latest handoff ID | `handoff-0762` |
-| Current status | `eqsrc_cycle_boundary_selector_law_scoped_orientation_descent_and_independent_selection_obstruction_pending_theoretical_selection_no_adoption` |
+| Active task ID | `RT-20260718-038` |
+| Latest handoff ID | `handoff-0763` |
+| Current status | `eqsrc_orientation_torsor_relation_bundle_formalization_selected_exact_candidate_v1_cycle_frozen_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc cycle boundary selector law scoped orientation descent obstruction to theoretical selection |
+| Current route family | eqsrc cycle boundary selector law scoped obstruction to distinct orientation torsor relation bundle formalization |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One Theoretical Continuation Selector packet may compare an independently sourced orientation and variation construction, a bundle-valued or orientation-descent or irrelevance theorem, a distinct scoped no-go, local freeze, and protected human-gated ontology change, then select one bounded next packet. |
-| Next recommended action | Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently sourced orientation and variation construction, a bundle-valued or orientation-descent or irrelevance theorem route, a distinct scoped no-go question, or local freeze. Do not repeat repair adopt or promote exact candidate v1. |
+| Required next authority | One Ontology Formalizer packet may define an unpointed source-side orientation or projective-line torsor, equivariant boundary and relation fibres, an associated state relation object, exact finite pullback and non-descent theorems, source-only morphisms and variations, and tagged failure branches. |
+| Next recommended action | Run one bounded Ontology Formalizer ontology-law-research-packet to formalize proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1. Define unpointed torsor or projective-line relation-bundle data and associated relations; prove ordering independence cocycle equivariance functoriality pullback strict scalar non-descent no-natural-section and pointed-torsor repair controls; expose provenance parity scalarization and independent-variation failure branches; and do not repair adopt or promote exact candidate v1. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-037` |
-| Latest research handoff ID | `handoff-0762` |
-| Latest research next action | Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently sourced orientation and variation construction, a bundle-valued or orientation-descent or irrelevance theorem route, a distinct scoped no-go question, or local freeze. Do not repeat repair adopt or promote exact candidate v1. |
+| Latest research task ID | `RT-20260718-038` |
+| Latest research handoff ID | `handoff-0763` |
+| Latest research next action | Run one bounded Ontology Formalizer ontology-law-research-packet to formalize proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1. Define unpointed torsor or projective-line relation-bundle data and associated relations; prove ordering independence cocycle equivariance functoriality pullback strict scalar non-descent no-natural-section and pointed-torsor repair controls; expose provenance parity scalarization and independent-variation failure branches; and do not repair adopt or promote exact candidate v1. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-037/00_TASK.yaml`.
-- Active task objective: Execute one bounded Refuter ontology-law-research-packet against unchanged exact proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1 for the three competing lines, complement and forgetful transformations, the 2/4/8 affine hierarchy, mark provenance, parity and field necessity, and independent physical selection.
-- Latest handoff path: `research_control/handoffs/handoff-0762.yaml`.
-- Latest handoff summary: RT-20260718-037 stressed unchanged exact proposal-only EqSrcCycleBoundarySelectorLaw_src^cand,v1. The marked-groupoid theorem core survives conditionally. A minimal two-point complement pair proves strict orientation-descent failure; GL(2,2) permutes all three lines; field and parity are sufficient but underselected; and the exact affine hierarchy is C2<V4<D8 within AGL(2,2). Current ontology supplies no independent orientation provenance line selector physical morphism or variation law. The exact result is scoped_obstruction with local freeze and no adoption or ledger change.
-- Current route family: eqsrc cycle boundary selector law scoped orientation descent obstruction to theoretical selection.
-- Next recommended action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently sourced orientation and variation construction, a bundle-valued or orientation-descent or irrelevance theorem route, a distinct scoped no-go question, or local freeze. Do not repeat repair adopt or promote exact candidate v1.
+- Active task path: `research_control/tasks/RT-20260718-038/00_TASK.yaml`.
+- Active task objective: Execute one bounded Theoretical Continuation Selector packet after exact candidate v1's scoped orientation-descent and independent-selection obstruction. Select exactly one materially distinct same-milestone route while preserving both local freezes and every adoption and downstream claim gate.
+- Latest handoff path: `research_control/handoffs/handoff-0763.yaml`.
+- Latest handoff summary: RT-20260718-038 selected one materially distinct proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1 formalization route. Strict scalar descent of exact candidate v1 remains blocked on the minimal two-point witness. The new target retains both orientation fibres in an unpointed C2-equivariant relation bundle or associated state object and requires source-derived unordered-partition provenance, full-symmetry and parity branches, and independently specified morphisms and variations. Exact candidate v1 remains locally frozen. No law was constructed or adopted and no ledger or downstream claim changed.
+- Current route family: eqsrc cycle boundary selector law scoped obstruction to distinct orientation torsor relation bundle formalization.
+- Next recommended action: Run one bounded Ontology Formalizer ontology-law-research-packet to formalize proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1. Define unpointed torsor or projective-line relation-bundle data and associated relations; prove ordering independence cocycle equivariance functoriality pullback strict scalar non-descent no-natural-section and pointed-torsor repair controls; expose provenance parity scalarization and independent-variation failure branches; and do not repair adopt or promote exact candidate v1.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently sourced orientation and variation construction, a bundle-valued or orientation-descent or irrelevance theorem route, a distinct scoped no-go question, or local freeze. Do not repeat repair adopt or promote exact candidate v1.
+Run one bounded Ontology Formalizer ontology-law-research-packet to formalize proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1. Define unpointed torsor or projective-line relation-bundle data and associated relations; prove ordering independence cocycle equivariance functoriality pullback strict scalar non-descent no-natural-section and pointed-torsor repair controls; expose provenance parity scalarization and independent-variation failure branches; and do not repair adopt or promote exact candidate v1.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-037`;
-- latest handoff: `handoff-0762`;
-- current status: `eqsrc_cycle_boundary_selector_law_scoped_orientation_descent_and_independent_selection_obstruction_pending_theoretical_selection_no_adoption`;
+- active task: `RT-20260718-038`;
+- latest handoff: `handoff-0763`;
+- current status: `eqsrc_orientation_torsor_relation_bundle_formalization_selected_exact_candidate_v1_cycle_frozen_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0762.yaml`
-- `research_control/tasks/RT-20260718-037/00_TASK.yaml`
+- `research_control/handoffs/handoff-0763.yaml`
+- `research_control/tasks/RT-20260718-038/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0762*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0763*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
