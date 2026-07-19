@@ -37,11 +37,11 @@ def binding() -> dict:
     }
 
 
-def production_binding() -> dict:
+def production_binding(*, branch: str = "codex/v19-remaining-relay") -> dict:
     return {
         "execution_profile": "production_profile",
         "root": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow",
-        "branch": "codex/v19-remaining-relay",
+        "branch": branch,
         "environment_mode": "local",
         "git_common_dir": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.git",
         "starting_head": "b" * 40,
@@ -570,7 +570,7 @@ class SerializationAndSchemaTests(GoalStateTestCase):
         self.assertEqual(self.store.read(path), record)
         self.assertNotIn(expected, path.read_text(encoding="utf-8").split("# Goal relay record", 1)[1])
 
-    def test_secret_goal_and_main_binding_are_rejected(self):
+    def test_secret_goal_and_acceptance_main_binding_are_rejected(self):
         with self.assertRaises(goal_state.ValidationError):
             self.initialize(goal="use api_key=super-secret-value")
         bad = binding()
@@ -587,6 +587,46 @@ class SerializationAndSchemaTests(GoalStateTestCase):
                 initial_fingerprint=fingerprint("A"),
                 timestamp=BASE_TIME,
             )
+
+    def test_v4_production_profile_main_round_trips(self):
+        path, record = self.store.initialize(
+            goal_text="safe production goal on main",
+            completion_contract=contract(),
+            scope_contract=scope_contract(),
+            reasoning_effort="max",
+            max_continue_passes=2,
+            max_elapsed_minutes=30,
+            repository_binding=production_binding(branch="main"),
+            initial_fingerprint=fingerprint("A"),
+            timestamp=BASE_TIME,
+        )
+        self.assertEqual(record["schema_version"], goal_state.SCHEMA_VERSION)
+        self.assertEqual(record["repository_binding"]["execution_profile"], "production_profile")
+        self.assertEqual(record["repository_binding"]["branch"], "main")
+        self.assertEqual(self.store.read(path), record)
+
+    def test_retained_v1_v3_records_bound_to_main_remain_rejected(self):
+        path, record = self.store.initialize(
+            goal_text="safe production goal on main",
+            completion_contract=contract(),
+            scope_contract=scope_contract(),
+            reasoning_effort="max",
+            max_continue_passes=2,
+            max_elapsed_minutes=30,
+            repository_binding=production_binding(branch="main"),
+            initial_fingerprint=fingerprint("A"),
+            timestamp=BASE_TIME,
+        )
+        for schema_version in (
+            goal_state.LEGACY_SCHEMA_VERSION,
+            goal_state.RETAINED_SCHEMA_VERSION,
+            goal_state.AUTONOMOUS_SCHEMA_VERSION,
+        ):
+            retained = self._retained_record(record, schema_version)
+            path.write_text(goal_state.render_goal(retained), encoding="utf-8")
+            with self.subTest(schema_version=schema_version):
+                with self.assertRaises(goal_state.ValidationError):
+                    self.store.read(path)
 
     def test_production_profile_round_trips_and_unknown_profile_fails_closed(self):
         bad = production_binding()
@@ -1836,6 +1876,23 @@ class RepositoryContractTests(unittest.TestCase):
         self.assertIn("invokes `continue-research` zero times", launcher)
         self.assertIn("invoke `$continue-research` exactly once", recursive)
         self.assertIn("creates zero or one successor", recursive)
+
+    def test_main_branch_policy_is_production_v4_only(self):
+        launcher = (ROOT / ".codex/skills/continue-research-goal/SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        recursive = (
+            ROOT / ".codex/skills/continue-research-continue-goal/SKILL.md"
+        ).read_text(encoding="utf-8")
+        schema = (
+            ROOT / ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn("accept either `main` or a\nbranch under `codex/*`", launcher)
+        self.assertIn("acceptance\nprofile, reject a different root or branch and continue to reject `main`", launcher)
+        self.assertIn("A v4 `production_profile` branch may be `main`", recursive)
+        self.assertIn("an `acceptance_test` branch", recursive)
+        self.assertIn("For new v4 records, `main` is valid only with `production_profile`", schema)
+        self.assertIn("Retained v1-v3 records bound to `main`\nremain invalid", schema)
 
     def test_launcher_acceptance_loop_covers_defaults_edits_and_ambiguous_approval(self):
         launcher = (ROOT / ".codex/skills/continue-research-goal/SKILL.md").read_text(

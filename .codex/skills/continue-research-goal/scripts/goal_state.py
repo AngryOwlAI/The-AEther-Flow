@@ -935,8 +935,11 @@ def validate_record(record: Mapping[str, Any], expected_path: Optional[Path] = N
         raise ValidationError("unsupported repository execution profile")
     if binding["environment_mode"] != "local":
         raise ValidationError("only local environment mode is supported")
-    if binding["branch"] == "main":
-        raise ValidationError("main is not an authorized relay branch")
+    if binding["branch"] == "main" and not (
+        schema_version == SCHEMA_VERSION
+        and binding["execution_profile"] == "production_profile"
+    ):
+        raise ValidationError("main is authorized only for v4 production_profile records")
 
     if schema_version in STRUCTURED_SCHEMA_VERSIONS:
         ledger = record["recovery_ledger"]
@@ -1526,8 +1529,11 @@ class GoalStore:
         binding = copy.deepcopy(dict(repository_binding))
         if binding.get("execution_profile") not in EXECUTION_PROFILES:
             raise ValidationError("unsupported repository execution profile")
-        if binding.get("branch") == "main":
-            raise ValidationError("main is disabled for relay initialization")
+        if (
+            binding.get("branch") == "main"
+            and binding.get("execution_profile") != "production_profile"
+        ):
+            raise ValidationError("main initialization requires production_profile")
         if binding.get("environment_mode") != "local":
             raise ValidationError("relay initialization requires local environment mode")
         token = launcher_token or secrets.token_hex(16)

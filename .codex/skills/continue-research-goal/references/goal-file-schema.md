@@ -124,7 +124,7 @@ guards:
 repository_binding:
   execution_profile: "acceptance_test | production_profile"
   root: "<resolved worktree root>"
-  branch: "<non-main branch>"
+  branch: "<exact acceptance branch | main | codex/* production branch>"
   environment_mode: "local"
   git_common_dir: "<resolved Git common directory>"
   starting_head: "<commit>"
@@ -165,6 +165,12 @@ The schema rejects unexpected fields inside scope contracts, routes,
 dirty-state manifests, standardized work results, recovery-ledger entries, and
 human-intervention records. It may add fail-closed record-level diagnostic
 fields. It may not omit or weaken the semantics above.
+
+For new v4 records, `main` is valid only with `production_profile`;
+`acceptance_test` continues to reject `main`. A production branch is either
+`main` or a branch under `codex/*`. Retained v1-v3 records bound to `main`
+remain invalid and validation-and-summary-only; this policy does not migrate
+historical records.
 
 For v4, JSON `null` independently means no pass-count horizon or no deadline
 horizon. Omitted launcher inputs are serialized as `null`. A finite

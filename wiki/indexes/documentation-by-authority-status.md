@@ -144,6 +144,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-AGENTS-AGENTS` `wiki/markdown/md-agents-agents.md`
 - `WIKI-MD-AGENTS-RESEARCH-CONTROL` `wiki/markdown/md-agents-research-control.md`
 - `WIKI-MD-CLAIM-GATES-PUBLICATION-BRIEF` `wiki/markdown/md-claim-gates-publication-brief.md`
+- `WIKI-MD-CONTINUE-RESEARCH-GOAL-V4-MAIN-PRODUCTION-POLICY` `wiki/markdown/md-continue-research-goal-v4-main-production-policy.md`
 - `WIKI-MD-CONTINUE-RESEARCH-GOAL-V4-REASONING-EFFORT-POLICY` `wiki/markdown/md-continue-research-goal-v4-reasoning-effort-policy.md`
 - `WIKI-MD-CONTRIBUTING` `wiki/markdown/md-contributing.md`
 - `WIKI-MD-DIRECTOR-AGENTJOB-LIFECYCLE-PUBLICATION-BRIEF` `wiki/markdown/md-director-agentjob-lifecycle-publication-brief.md`
@@ -573,6 +574,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-AGENTS` `AGENTS.md`
 - `MD-AGENTS-AGENTS` `.agents/AGENTS.md`
 - `MD-AGENTS-RESEARCH-CONTROL` `research_control/AGENTS.md`
+- `MD-CONTINUE-RESEARCH-GOAL-V4-MAIN-PRODUCTION-POLICY` `research_control/tasks/RT-20260718-014/artifacts/continue_research_goal_v4_main_production_policy.md`
 - `MD-CONTINUE-RESEARCH-GOAL-V4-REASONING-EFFORT-POLICY` `research_control/tasks/RT-20260718-013/artifacts/continue_research_goal_v4_reasoning_effort_policy.md`
 - `MD-CONTRIBUTING` `CONTRIBUTING.md`
 - `MD-EQSRC-FAMILY-CLOSURE-REVIEW-PACKET-SPEC-V1` `markdown/external-review-specs/eqsrc_family_closure_review_packet_spec_v1.md`

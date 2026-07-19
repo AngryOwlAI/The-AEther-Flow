@@ -75,7 +75,7 @@ for the exact relay goal and effective scheduling guards. It binds to:
 
 ```text
 project root: /Volumes/P-SSD/AngryOwl/The-AEther-Flow
-branch: the current non-main branch whose name begins with codex/
+branch: the current main branch or a current branch whose name begins with codex/
 environment mode: local
 execution profile: production_profile
 ```
@@ -89,10 +89,10 @@ tracked files, run research, push, merge, or relax any relay guard.
 Derive and persist the resolved root, Git common directory, branch, starting
 HEAD, saved-project identity, environment mode, and selected execution profile.
 Do not hard-code either repository path in the state helper. For the acceptance
-profile, reject a different root or branch. For the production profile, reject
-a different root or a branch outside `codex/*`. Under both profiles reject
-`main`, a managed-per-step worktree, an ambiguous saved project, or a non-local
-mode.
+profile, reject a different root or branch and continue to reject `main`. For
+the production profile, reject a different root and accept either `main` or a
+branch under `codex/*`. Under both profiles reject a managed-per-step worktree,
+an ambiguous saved project, or a non-local mode.
 
 ## Mandatory Pre-Launch Acceptance Loop
 
@@ -359,8 +359,9 @@ helper revision, and launcher stop reason. Worker prose is telemetry only.
 - Never create more than one initial successor or retry an ambiguous task
   creation.
 - Never fork, continue, hand off, archive, delete, or steer a successor.
-- Never target `main`, push, merge, rebase, open a pull request, install a
-  plugin, create a hook/controller, clean up runtime evidence, or remove the
+- Never treat a production `main` binding as authority to bypass any other
+  relay guard, push, merge, rebase, open a pull request, install a plugin,
+  create a hook/controller, clean up runtime evidence, or remove the
   branch/worktree.
 - Never register, checkpoint, promote, or generate wiki artifacts from runtime
   goal files.

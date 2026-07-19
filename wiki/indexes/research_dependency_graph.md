@@ -7,9 +7,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 - Schema: `research_dependency_graph_v1`
 - Generated from tracked state as of: `2026-07-09T03:11:04Z`
-- Source fingerprint: `4dcbae8395871fa9f08c635e1f18bac185fd41af2b051f7e3c81975f840ad6b8`
-- Nodes: `18895`
-- Edges: `65955`
+- Source fingerprint: `c29a4669fe9b67014d7727eef2585b6a11607b202b3c5f3d5876b60977d25a7f`
+- Nodes: `18912`
+- Edges: `66000`
 
 ## Source Counts
 
@@ -17,7 +17,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 967 |
+| `completion_yaml` | 968 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
@@ -33,11 +33,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 967 |
+| `agent_job` | `support_only` | 968 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 9909 |
-| `blocked_burden` | `blocked` | 3616 |
-| `claim_boundary` | `support_only` | 924 |
+| `artifact` | `support_only` | 9917 |
+| `blocked_burden` | `blocked` | 3622 |
+| `claim_boundary` | `support_only` | 925 |
 | `draft_control_candidate` | `draft_control` | 529 |
 | `draft_control_candidate` | `proposal_only` | 67 |
 | `draft_control_candidate` | `science_draft` | 62 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 291 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 907 |
+| `task` | `support_only` | 908 |
 
 ## Frontier Table
 
@@ -80,6 +80,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 | Claim node | Summary | Source |
 | --- | --- | --- |
+| `blocked_claim:acceptance_main_use` | Blocked claim: acceptance main use | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:accepted_bridge_evidence_as_matter_coupling` | Blocked claim: accepted bridge evidence as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:accepted_evidence_as_adoption` | Blocked claim: accepted evidence as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:accepted_evidence_as_matter_coupling` | Blocked claim: accepted evidence as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,7 +160,6 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:backlog_as_gate_chair_verdict` | Blocked claim: backlog as Gate Chair verdict | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_matter_coupling` | Blocked claim: backlog as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_matter_semantics` | Blocked claim: backlog as matter semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:backlog_as_physics_proof` | Blocked claim: backlog as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 

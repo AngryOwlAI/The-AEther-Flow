@@ -58,7 +58,9 @@ packets; `improve-project-system` owns project-system repair packets.
    UI setting and reconfirm; never change global configuration, self-message,
    silently downgrade, substitute a model, or inherit a default.
 4. Verify the immutable saved-project/root/Git-common-dir/branch/local-mode
-   binding. The branch must not be `main`.
+   binding. A v4 `production_profile` branch may be `main` or begin with
+   `codex/`; an `acceptance_test` branch must remain the exact disposable
+   acceptance branch and must not be `main`.
 5. If the predecessor has not recorded `successor_created`, perform read-only
    polling for no more than `handoff_ready_timeout_seconds`. Do not touch
    tracked research state or claim the generation while waiting. On timeout,
@@ -282,9 +284,9 @@ its unmistakable reader report exactly. Preserve uncertainties exactly.
   pass, send a follow-up to itself, fork, hand off, archive, or delete relay
   evidence.
 - Never steal an expired lease, hand-edit goal state, accept worker prose as
-  proof, bypass a validator/human gate, target `main`, push, merge, rebase,
-  open a pull request, install a plugin/controller/hook, or clean up the
-  worktree or runtime record.
+  proof, treat a production `main` binding as a guard bypass, push, merge,
+  rebase, open a pull request, install a plugin/controller/hook, or clean up
+  the worktree or runtime record.
 - Never repeat a recovery strategy for the same blocker, broaden the scope
   contract, cross into an unlisted task, or execute a repair after any
   dirty-manifest field differs.

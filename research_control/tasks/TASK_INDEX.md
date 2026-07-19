@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `b16d9997e7de35c242e11cf895a836c3d1a5cec7c4d260605bb8c18d6dae873d`
-- Generated-at source timestamp: `2026-07-18T23:18:36Z`
-- Row count: `971`
+- Source fingerprint: `34a1746d0ad4ff6cf9a2d659a72b0e4898aeb4867d01226fed73faa55f70ed8c`
+- Generated-at source timestamp: `2026-07-19T03:27:25Z`
+- Row count: `972`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,7 +16,8 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|RT-20260718-013|RT-20260718-012|2026-07-18T23:18:36Z|2026-07-18T23:18:36Z|continue_research_goal_v4_reasoning_effort_contract|completed|none|Project-system relay-governance implementation only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|3|No further action is required for this bounded implementation; any live relay requires a separate explicit launch and combined acceptance.|PASS|research_control/tasks/RT-20260718-013/jobs/completions/AJC-AJ-RT-20260718-013-001.yaml|
+|RT-20260718-014|RT-20260718-013|2026-07-19T03:27:25Z|2026-07-19T03:35:50Z|continue_research_goal_v4_main_production_policy|completed|none|Project-system relay-governance implementation only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|3|Obtain separate commit authority for a clean validated checkpoint before any explicit live relay invocation on main.|PASS|research_control/tasks/RT-20260718-014/jobs/completions/AJC-AJ-RT-20260718-014-001.yaml|
+|RT-20260718-013|RT-20260718-012|2026-07-18T23:18:36Z|2026-07-18T23:18:36Z|continue_research_goal_v4_reasoning_effort_contract|completed|none|Project-system relay-governance implementation only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|4|No further action is required for this bounded implementation; any live relay requires a separate explicit launch and combined acceptance.|PASS|research_control/tasks/RT-20260718-013/jobs/completions/AJC-AJ-RT-20260718-013-001.yaml|
 |RT-20260718-012|RT-20260718-011|2026-07-18T21:44:28Z|2026-07-18T21:44:28Z|v20_autonomous_goal_relay_v3_policy|completed|none|Project-system relay-governance implementation only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|5|P0-T04 remains outside this single-objective transaction and may begin only through a new explicit user-authorized goal.|PASS|research_control/tasks/RT-20260718-012/jobs/completions/AJC-AJ-RT-20260718-012-001.yaml|
 |RT-20260718-011|RT-20260718-010|2026-07-18T20:18:11Z|2026-07-18T20:18:11Z|v20_recommendation_backlog_materialization|completed|none|Project-system backlog materialization only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|4|Start a new explicitly authorized v20 P0-T03 goal relay; do not reuse this P0-T02 relay.|PASS|research_control/tasks/RT-20260718-011/jobs/completions/AJC-AJ-RT-20260718-011-001.yaml|
 |RT-20260718-010|RT-20260718-008|2026-07-18T16:04:54Z|2026-07-18T16:04:54Z|v20_plan_registration|completed|none|Project-system plan registration only; no derivation milestone is advanced.|project-control-maintainer@0.2.0|false|false|4|Start a new explicitly authorized v20 P0-T02 goal relay to materialize the typed recommendation backlog and dependency DAG.|PASS|research_control/tasks/RT-20260718-010/jobs/completions/AJC-AJ-RT-20260718-010-001.yaml|
