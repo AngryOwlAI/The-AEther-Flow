@@ -1,0 +1,445 @@
+% authority: science-draft
+% status: proposal-only
+% route: ontology-law-research-packet
+% trigger_classification: derivation_critical_missing_source_law
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Ftwo}{\mathbb F_2}
+\newcommand{\EqBundle}{\mathsf{EqSrcOrientationTorsorDescentLaw}^{\mathrm{cand},v1}_{\mathrm{src}}}
+\newcommand{\Bottom}{\mathsf{Bottom}_{\mathrm{src}}}
+
+\title{Proposal-Only EqSrc Orientation-Torsor Descent Law Candidate v1:\\
+Associated-State Descent, Strict Scalar Non-Descent, and Section Controls}
+\author{Ontology Formalizer control packet RT-20260718-039}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This packet defines \(\EqBundle\) as a proposal-only source-extension object.
+Current ontology does not derive the unordered bipartition, its provenance,
+the \(\Ftwo\) block-span model, the both-odd domain, the physical morphism or
+variation category, or downstream observable semantics. The status is
+\texttt{proposal-only}, \texttt{source-extension data}, and
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\begin{verbatim}
+candidate_result: candidate_formalized_pending_fresh_smuggling_audit
+candidate_name: EqSrcOrientationTorsorDescentLaw_src^cand,v1
+formal_model: finite_both_odd_unordered_bipartition_records_over_F2
+orientation_torsor: free_unpointed_C2_torsor
+associated_state: Abar_U=(O_U times A_U)/C2
+associated_relation: Rbar_U=Rcal_U/C2
+bundle_descent: proved_on_admitted_source_groupoid
+strict_scalar_descent_on_original_A_U: disproved
+fibre_pullback: exact_under_each_trivialization
+no_natural_section_scope: categories_with_orientation_exchange_automorphism
+pointed_torsor_repair: equivalent_to_selecting_candidate_v1_fibre
+independent_algebraic_control: constant_one_translation_defined_pre_relation
+full_GL2_2_branch: three_line_projective_orbit_or_tagged_bottom
+diagonal_line_scalarization: distinct_candidate_not_fibre_descent
+current_ontology_derives_candidate: false
+physical_gauge_equivalence_established: false
+physical_admissibility_established: false
+candidate_status: proposal-only
+adoption_status: blocked_adoption_open_continuation
+general_EqSrc_discharged: false
+distance_to_gr_ledger_changed: false
+freeze_decision: not_frozen
+next_route: fresh_smuggling_auditor_review
+\end{verbatim}
+
+The exact
+\(\mathsf{EqSrcIntrinsicDiscriminatorAdmissibilityLaw}^{\mathrm{cand},v3}_{\mathrm{src}}\)
+and
+\(\mathsf{EqSrcCycleBoundarySelectorLaw}^{\mathrm{cand},v1}_{\mathrm{src}}\)
+construction--audit--stress cycles remain locally frozen. The present object
+does not point or repair either scalar candidate. It changes the codomain to
+an unpointed associated state object.
+
+\section{Admitted Unordered Source Records}
+
+\begin{definition}[Admitted record]
+An admitted proposal record is
+\[
+ U=(X,\Pi,\Xi_{\mathrm{src}}),\qquad \Pi=\{P,Q\},
+\]
+where \(X\) is finite,
+\[
+ P,Q\neq\varnothing,\quad P\cap Q=\varnothing,\quad P\cup Q=X,\quad
+ |P|\equiv|Q|\equiv1\pmod2.
+\]
+The datum \(\Pi\) is unordered. A provenance certificate in
+\(\Xi_{\mathrm{src}}\) must be defined independently of every boundary line,
+candidate relation, target object, benchmark result, or process record.
+Merely placing braces around \(P,Q\) or declaring a field in
+\(\Xi_{\mathrm{src}}\) is not a proof that current ontology supplies it.
+\end{definition}
+
+An admitted morphism \(f:U\to U'\) is an independently specified source
+bijection carrying \(\Pi\) setwise to \(\Pi'\) and preserving the declared
+pre-relation source structure. The category is not defined as ``all maps
+preserving the desired relation.'' No claim is made that this proposal
+category is the physical gauge category.
+
+\section{Orientation Torsor, Fibre Data, and Dependency Order}
+
+\begin{definition}[Orientation torsor]
+Set
+\[
+ O_U=\{(P,Q),(Q,P)\}.
+\]
+The group \(C_2=\{1,\sigma\}\) acts freely and transitively by
+\(\sigma(P,Q)=(Q,P)\). No element of \(O_U\) is distinguished.
+\end{definition}
+
+Put \(p=\mathbf1_P\), \(q=\mathbf1_Q\), and
+\[
+ A_U=\operatorname{span}_{\Ftwo}\{p,q\}.
+\]
+For \(o=(P_o,Q_o)\in O_U\), define
+\[
+ B_{U,o}=\Ftwo\mathbf1_{Q_o},\qquad
+ a\,R_{U,o}\,a'\Longleftrightarrow a-a'\in B_{U,o}.
+\]
+Both fibres are exact candidate-v1 boundary relations because both displayed
+first blocks are odd. Define the order-independent complement involution
+\[
+ c_U(\alpha p+\beta q)=\beta p+\alpha q.
+\]
+Then \(c_U^2=1\) and
+\[
+ c_U(B_{U,o})=B_{U,\sigma o}.
+\]
+
+The dependency order is
+\[
+(X,\Pi,\Xi_{\mathrm{src}})
+\longrightarrow(O_U,A_U,c_U,\text{pre-relation controls})
+\longrightarrow B_{U,\bullet}
+\longrightarrow R_{U,\bullet}
+\longrightarrow(\bar A_U,\bar B_U,\bar R_U).
+\]
+This ordering is a conditional non-circularity certificate. It does not
+derive the upstream data from current ontology.
+
+\section{Independent Variation Control}
+
+Before any \(B_{U,o}\) or \(R_{U,o}\) is evaluated, define the
+orientation-blind vector
+\[
+ d_U=\mathbf1_X=p+q
+\]
+and affine involutions
+\[
+ T_U(\epsilon)(a)=a+\epsilon d_U,\qquad \epsilon\in\Ftwo.
+\]
+Because \(c_Ud_U=d_U\), these maps commute with complement transport. After
+the fibre relations have been defined, direct calculation proves that every
+\(T_U(\epsilon)\) preserves both relations. The nonidentity map may exchange
+quotient labels; relation preservation, not pointwise quotient-label
+fixing, is the conclusion.
+
+This two-element family is an orientation-independent algebraic control
+defined before the relation. It is not asserted to be the complete or
+physically admissible variation class. Any richer variation family carried
+by \(\Xi_{\mathrm{src}}\) must be independently acquired, closed under its
+declared operations, transported functorially, and tested for relation
+preservation afterward. It may not be defined from \(B_{U,o}\),
+\(R_{U,o}\), their stabilizers, or a preferred section.
+
+\section{Associated State and Relation Objects}
+
+\begin{definition}[Equivariant bundles]
+Set
+\[
+\mathcal B_U=\{(o,b):o\in O_U,\ b\in B_{U,o}\},
+\]
+\[
+\mathcal R_U=\{(o,a,a'):o\in O_U,\ a-a'\in B_{U,o}\}.
+\]
+The diagonal \(C_2\)-actions are
+\[
+\sigma(o,a)=(\sigma o,c_Ua),\qquad
+\sigma(o,a,a')=(\sigma o,c_Ua,c_Ua').
+\]
+\end{definition}
+
+\begin{definition}[Associated objects]
+Define
+\[
+\bar A_U=(O_U\times A_U)/C_2,\qquad
+\bar B_U=\mathcal B_U/C_2\subset\bar A_U.
+\]
+The associated vector operations are computed after taking the unique
+representatives of all operands over one common \(o\); equivariance makes the
+result independent of that temporary representative. Define
+\[
+[o,a]\,\bar R_U\,[o,a']
+\Longleftrightarrow a-a'\in B_{U,o}.
+\]
+Equivalently, \(\bar R_U\) is the image of
+\(\mathcal R_U/C_2\) in \(\bar A_U\times\bar A_U\).
+\end{definition}
+
+\begin{theorem}[Well-definedness and ordering independence]
+\(\bar A_U\) is a two-dimensional associated \(\Ftwo\)-vector space,
+\(\bar B_U\) is a one-dimensional subspace, and \(\bar R_U\) is its
+kernel-pair congruence. None depends on initially displaying \(\Pi\) as
+\((P,Q)\) rather than \((Q,P)\).
+\end{theorem}
+
+\begin{proof}
+The indicators \(p,q\) are independent because their nonempty supports are
+disjoint. Exchanging their displayed names applies \(c_U\). Since
+\(c_U^2=1\), diagonal representatives related by the exchange give identical
+associated classes and vector operations. The identity
+\(c_U(B_{U,o})=B_{U,\sigma o}\) makes the line and relation quotients
+well defined.
+\end{proof}
+
+\section{Inverse, Cocycle, Equivariance, and Functoriality}
+
+For \(o,o'\in O_U\), let \(t_{o,o'}=1\) when \(o=o'\) and
+\(t_{o,o'}=c_U\) otherwise. Orientation-change parity adds modulo two, so
+\[
+t_{o',o''}t_{o,o'}=t_{o,o''},\qquad
+t_{o',o}=t_{o,o'}^{-1}.
+\]
+Moreover,
+\[
+a\,R_{U,o}\,a'
+\Longleftrightarrow
+c_Ua\,R_{U,\sigma o}\,c_Ua'.
+\]
+
+\begin{theorem}[Admitted-source functoriality]
+For an admitted morphism \(f:U\to U'\), define
+\[
+O_f(P,Q)=(fP,fQ),\qquad
+(F_fa)_{f(x)}=a_x.
+\]
+Then
+\[
+O_f\sigma=\sigma O_f,\quad
+F_fc_U=c_{U'}F_f,\quad
+F_f(B_{U,o})=B_{U',O_f(o)}.
+\]
+Consequently
+\[
+\bar F_f[o,a]=[O_f(o),F_fa]
+\]
+is well defined, preserves and reflects \(\bar R\), and respects identities,
+composition, and inverses.
+\end{theorem}
+
+\begin{proof}
+The bijection carries the two block indicators to the corresponding block
+indicators and therefore intertwines their exchange. It transports the
+opposite-block line in each orientation to the opposite-block line in the
+image orientation. The associated formulas then commute, and functoriality
+is inherited from pushforward of functions.
+\end{proof}
+
+This is exact functoriality inside the admitted proposal category. It is not
+physical covariance. In particular, when \(|P|\neq|Q|\), \(c_U\) need not be
+induced by any carrier bijection.
+
+\section{Fibre Pullback and Strict Scalar Non-Descent}
+
+\begin{theorem}[Exact fibre pullback]
+For every \(o\in O_U\), the map
+\[
+\tau_o:A_U\longrightarrow\bar A_U,\qquad \tau_o(a)=[o,a]
+\]
+is a linear bijection satisfying
+\[
+\tau_{\sigma o}=\tau_oc_U,\qquad
+\tau_o^{-1}(\bar B_U)=B_{U,o},\qquad
+\tau_o^*(\bar R_U)=R_{U,o}.
+\]
+\end{theorem}
+
+\begin{theorem}[Strict scalar non-descent]
+There is no relation \(S_U\) on the original common \(A_U\) whose identity
+pullback equals \(R_{U,o}\) for both orientations.
+\end{theorem}
+
+\begin{proof}
+For \(o=(P,Q)\) and \(\sigma o=(Q,P)\),
+\[
+B_{U,o}=\langle q\rangle\neq\langle p\rangle=B_{U,\sigma o}.
+\]
+The kernel-pair relations of distinct subspaces are distinct. A single
+identity-compared relation equal to both would force their equality. The
+complement map transports one relation to the other, which proves twisted
+bundle descent rather than scalar descent on the original \(A_U\).
+\end{proof}
+
+The associated object therefore changes the codomain and state
+identification. Abstract isomorphism after choosing \(\tau_o\) does not turn
+that choice into a source-derived orientation.
+
+\section{Natural-Section Obstruction and Pointed-Torsor Repair}
+
+\begin{theorem}[Scoped no-natural-section result]
+On any admitted source subcategory containing an object \(U_*\) with an
+orientation-exchange automorphism \(s\), there is no natural section choosing
+one element of every \(O_U\).
+\end{theorem}
+
+\begin{proof}
+Naturality at \(U_*\) would require the chosen orientation to be fixed by
+\(O_s=\sigma\). The free two-element torsor has no fixed point.
+\end{proof}
+
+The qualifier is essential. A set-theoretic section always exists, and a
+restricted category with unequal block sizes, parity asymmetry, or additional
+source decoration may admit a natural pointing. Such data change the route.
+
+\begin{proposition}[Pointed-torsor equivalence]
+A choice \(s(U)\in O_U\) identifies
+\((\bar A_U,\bar R_U)\) with
+\((A_U,R_{U,s(U)})\). Conversely, because the two fibre relations are
+distinct, selecting one fibre relation selects its orientation. Thus a
+preferred section is exactly additional oriented-mark data recovering one
+frozen candidate-v1 fibre.
+\end{proposition}
+
+\section{Two-Point Witness and Exhaustive Finite Checks}
+
+Let \(X=\{0,1\}\), \(P=\{0\}\), \(Q=\{1\}\), and write
+\[
+A=\{0,p,q,p+q\}.
+\]
+For \(o=(P,Q)\),
+\[
+B_o=\{0,q\},\qquad
+A/R_o=\bigl\{\{0,q\},\{p,p+q\}\bigr\}.
+\]
+For \(\sigma o\),
+\[
+B_{\sigma o}=\{0,p\},\qquad
+A/R_{\sigma o}=\bigl\{\{0,p\},\{q,p+q\}\bigr\}.
+\]
+Each relation has eight ordered pairs. The eight elements of \(O\times A\)
+form four diagonal \(C_2\)-orbits, and \(\bar R\) has eight ordered pairs.
+Both trivializations reproduce the displayed fibre tables.
+
+The meet of \(R_o,R_{\sigma o}\) is equality, while the equivalence relation
+generated by their union is universal. The third line
+\[
+L_d=\langle p+q\rangle
+\]
+is complement-invariant and gives a distinct nondegenerate linear
+scalarization. It is not descent of either fibre. This classification concerns
+linear or translation-invariant congruences, not every set-theoretic
+equivalence relation on four points.
+
+\section{Parity, Full-Symmetry, and Fail-Closed Branches}
+
+Both exact candidate-v1 fibres exist only when both block cardinalities are
+odd. If exactly one block is odd, parity points the torsor and the opposite
+candidate-v1 fibre is \(\Bottom\). If both are even, neither exact fibre is
+admitted. Dropping parity or directly defining both lines is a distinct law,
+not descent of exact candidate v1.
+
+If current source data do not independently provide \(\Pi\), the three lines
+of \(\mathbb P^1(\Ftwo)\) form one transitive
+\(\mathrm{GL}(2,2)\)-orbit. The two coordinate lines are not an invariant
+subset. The lawful branch retains that three-line homogeneous space or
+returns the tagged value
+\texttt{partition\_provenance\_absent\_full\_projective\_line\_required}.
+The projective line is not a free \(\mathrm{GL}(2,2)\)-torsor.
+
+The candidate also returns a tagged failure and makes no relation claim when:
+\begin{enumerate}[leftmargin=*]
+  \item the partition is empty, overlapping, incomplete, ordered by hidden
+  choice, or reconstructed from a desired line or relation;
+  \item the torsor action is nonfree or a preferred section is smuggled into
+  notation;
+  \item inverse, cocycle, line transport, relation equivariance, or
+  functoriality fails;
+  \item the admitted source category is defined from relation preservation
+  rather than independently;
+  \item a claimed variation is defined from the fibre line, relation, its
+  stabilizer, a target object, or process data;
+  \item associated-state descent is represented as identity descent on the
+  original state space;
+  \item equality, universal, diagonal-line, or another scalarization is
+  represented as one of the two fibre relations; or
+  \item generated derivatives, registries, roles, validators, handoffs, or
+  checkpoints are treated as scientific authority.
+\end{enumerate}
+
+Failure closes only that candidate instance. It does not prove a general
+EqSrc no-go or future source-extension impossibility.
+
+\section{No-Target and No-Process Guard}
+
+The displayed mathematics uses finite source sets, explicit proposal
+bipartitions, block indicators, \(\Ftwo\) linear algebra, group actions, and
+quotients. Target atlas, topology, metric, proper time, detector semantics,
+desired exact-GR behavior, registry metadata, role identity, validator
+output, handoff text, checkpoint status, and generated derivatives are
+excluded from the definition tree.
+
+The source inputs are nevertheless new underived primitive candidates.
+Source-only syntax does not establish current-ontology derivation or physical
+admissibility.
+
+\section{Distance-to-GR, Freeze, and Next Route}
+
+The result is
+\texttt{candidate\_formalized\_pending\_fresh\_smuggling\_audit}. It supplies
+new associated-object definitions, descent and non-descent theorems, a
+qualified section obstruction, a pointed-repair lemma, an independent
+algebraic variation control, and exhaustive finite symmetry branches. It does
+not discharge general EqSrc and does not change the Distance-to-GR or
+metric-use ledgers.
+
+Both exact prior construction--audit--stress cycles remain locally frozen.
+This materially distinct associated-object route is
+\texttt{not\_frozen} because it changes the codomain and supplies new
+theorem-level payload.
+
+The next lawful packet is one fresh bounded
+\texttt{smuggling-auditor@0.2.0} audit of this exact candidate. It must test
+provenance-as-declaration, identity versus complement descent,
+associated-state substitution, hidden sections, parity stability, reduced
+\(C_2\) versus full \(\mathrm{GL}(2,2)\), scalarization scope, and genuine
+variation independence. It may not repair or adopt the candidate.
+
+\section{Forbidden Conclusions}
+
+This artifact does not authorize canonical ontology modification, source-law
+adoption, physical-gauge equivalence, physical-admissibility establishment,
+general EqSrc discharge, RetainH or GenH adoption,
+\(M_{\mathrm{src}}\) adoption, \(g_{\mathrm{eff}}\) scope expansion, matter
+coupling, Einstein equations, benchmark promotion, Gate Chair verdict,
+completed derivation, future source-extension impossibility, program-level
+no-go, or global theory rejection.
+
+\section{Source Materials}
+
+\begin{itemize}[leftmargin=*]
+  \item Handoff 0763 and the RT-20260718-038 orientation-torsor route.
+  \item Exact candidate-v1 and RT-20260718-037 Refuter stress artifacts.
+  \item The registered Ontology Formalizer role contract v0.2.0.
+  \item The source-extension classification checklist and no-target-import
+  guard map.
+  \item Finite group-action and quotient arguments reproduced above.
+\end{itemize}
+
+\end{document}

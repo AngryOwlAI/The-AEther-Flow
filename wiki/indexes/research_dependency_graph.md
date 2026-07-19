@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T22:32:44Z`
-- Source fingerprint: `9f674a4df27a014ee183ddf269c6c3c767813cdba3db1a5743b6de75565e2833`
-- Nodes: `19495`
-- Edges: `67371`
+- Generated from tracked state as of: `2026-07-19T23:06:34Z`
+- Source fingerprint: `433f1f09a635d6b5efa1334e79d7fc9e90542320fe740526613eb7146d9a6726`
+- Nodes: `19525`
+- Edges: `67430`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 992 |
+| `completion_yaml` | 993 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 763 |
+| `handoff_yaml` | 764 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 992 |
+| `agent_job` | `support_only` | 993 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10208 |
-| `blocked_burden` | `blocked` | 3681 |
-| `claim_boundary` | `support_only` | 949 |
-| `draft_control_candidate` | `draft_control` | 602 |
-| `draft_control_candidate` | `proposal_only` | 92 |
+| `artifact` | `support_only` | 10221 |
+| `blocked_burden` | `blocked` | 3687 |
+| `claim_boundary` | `support_only` | 950 |
+| `draft_control_candidate` | `draft_control` | 605 |
+| `draft_control_candidate` | `proposal_only` | 94 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 113 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 763 |
-| `human_gated_object` | `human_gated` | 422 |
+| `handoff` | `support_only` | 764 |
+| `human_gated_object` | `human_gated` | 423 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 311 |
+| `source_ontology_object` | `support_only` | 312 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 932 |
+| `task` | `support_only` | 933 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-038`
-- Latest handoff: `handoff-0763`
-- Handoff path: `research_control/handoffs/handoff-0763.yaml`
-- Next action: Run one bounded Ontology Formalizer ontology-law-research-packet to formalize proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1. Define unpointed torsor or projective-line relation-bundle data and associated relations; prove ordering independence cocycle equivariance functoriality pullback strict scalar non-descent no-natural-section and pointed-torsor repair controls; expose provenance parity scalarization and independent-variation failure branches; and do not repair adopt or promote exact candidate v1.
+- Active task: `RT-20260718-039`
+- Latest handoff: `handoff-0764`
+- Handoff path: `research_control/handoffs/handoff-0764.yaml`
+- Next action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcOrientationTorsorDescentLaw_src^cand,v1 for provenance-as-declaration identity versus complement descent associated-state substitution hidden sections parity instability reduced C2 versus full GL(2,2) symmetry scalarization scope variation independence target or process import and physical-covariance overread.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

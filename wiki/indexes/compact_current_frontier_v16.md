@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-038`
-- Latest handoff: `handoff-0763`
-- Current status: `eqsrc_orientation_torsor_relation_bundle_formalization_selected_exact_candidate_v1_cycle_frozen_no_adoption`
+- Active task: `RT-20260718-039`
+- Latest handoff: `handoff-0764`
+- Current status: `eqsrc_orientation_torsor_descent_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-038`
-- Latest research handoff: `handoff-0763`
-- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet to formalize proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1. Define unpointed torsor or projective-line relation-bundle data and associated relations; prove ordering independence cocycle equivariance functoriality pullback strict scalar non-descent no-natural-section and pointed-torsor repair controls; expose provenance parity scalarization and independent-variation failure branches; and do not repair adopt or promote exact candidate v1.
+- Latest research task: `RT-20260718-039`
+- Latest research handoff: `handoff-0764`
+- Latest research next action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcOrientationTorsorDescentLaw_src^cand,v1 for provenance-as-declaration identity versus complement descent associated-state substitution hidden sections parity instability reduced C2 versus full GL(2,2) symmetry scalarization scope variation independence target or process import and physical-covariance overread.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_orientation_torsor_relation_bundle_formalization`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `eqsrc_orientation_torsor_descent_law_smuggling_audit`
+- Role family: `smuggling-auditor@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Define proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1 with finite bundle-descent strict scalar non-descent source-provenance and independent-variation payload or return a precise obstruction.
+- Milestone burden: Audit the exact proposal-only unpointed associated-state relation law before Refuter stress or protected adoption review.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `8c0c858084fb7cff9572d6f7dd75132a3edd3d4da0f9a140929b7d1e2f21e6a9`
-- JSON SHA-256: `22ac501ea6cfc6862b16d4609e2f3aff5e771b60114c3ad9a9a61ed10ac0c309`
+- YAML SHA-256: `f05afc496418eb2b28e455e296d0906ee9059fc5472b220a9a172d08582c0b03`
+- JSON SHA-256: `13d39381dae6de3e28e7024c4defd908a4e030092835779c97bf5b0bc32eb8d4`
 
 ## Authority Warning
 

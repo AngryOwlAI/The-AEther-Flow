@@ -19,6 +19,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-037-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress_receipt.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-037-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260718-037/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law_refuter_stress.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-038-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-SELECTOR` `research_control/tasks/RT-20260718-038/artifacts/parent_fusion_notes_eqsrc_orientation_torsor_selector.md`
+- Backlink from `TEX-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex`
 
 ## Validation
 

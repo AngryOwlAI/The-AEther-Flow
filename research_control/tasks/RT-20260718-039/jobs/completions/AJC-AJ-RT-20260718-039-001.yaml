@@ -1,0 +1,628 @@
+completion_id: "AJC-AJ-RT-20260718-039-001"
+job_id: "AJ-RT-20260718-039-001"
+task_id: "RT-20260718-039"
+decision_id: "DDR-20260718-039"
+status: "completed"
+completed_at: "2026-07-19T23:06:34Z"
+completed_by_role: "ontology-formalizer@0.2.0--RT-20260718-039"
+source_role_id: "ontology-formalizer"
+source_role_version: "0.2.0"
+plan_task_id: "ordinary_eqsrc_orientation_torsor_descent_law"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Formalized proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1 on finite both-odd unordered-bipartition records. The packet retains both oriented boundary-line relations in a free C2 bundle and defines one associated-state relation. It proves ordering independence cocycle equivariance source-record functoriality exact fibre pullback strict scalar non-descent a scoped no-natural-section theorem pointed-torsor repair equivalence and finite orientation-blind algebraic robustness. The unordered partition physical morphisms variations and gauge interpretation remain underived adoption remains open and both authoritative ledgers are unchanged."
+
+artifacts:
+  - "research_control/tasks/RT-20260718-039/artifacts/child_phys_math_eqsrc_orientation_torsor_descent_law.yaml"
+  - "research_control/tasks/RT-20260718-039/artifacts/child_phys_phil_eqsrc_orientation_torsor_descent_law.yaml"
+  - "research_control/tasks/RT-20260718-039/artifacts/parent_conflict_review_eqsrc_orientation_torsor_descent_law.yaml"
+  - "research_control/tasks/RT-20260718-039/artifacts/parent_fusion_notes_eqsrc_orientation_torsor_descent_law.md"
+  - "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_receipt.md"
+  - "research_control/tasks/RT-20260718-039/artifacts/validate_eqsrc_orientation_torsor_descent_law_candidate.py"
+  - "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_validation.json"
+
+output_paths:
+  - "research_control/tasks/RT-20260718-039/artifacts/child_phys_math_eqsrc_orientation_torsor_descent_law.yaml"
+  - "research_control/tasks/RT-20260718-039/artifacts/child_phys_phil_eqsrc_orientation_torsor_descent_law.yaml"
+  - "research_control/tasks/RT-20260718-039/artifacts/parent_conflict_review_eqsrc_orientation_torsor_descent_law.yaml"
+  - "research_control/tasks/RT-20260718-039/artifacts/parent_fusion_notes_eqsrc_orientation_torsor_descent_law.md"
+  - "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_receipt.md"
+  - "research_control/tasks/RT-20260718-039/artifacts/validate_eqsrc_orientation_torsor_descent_law_candidate.py"
+  - "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_validation.json"
+
+extra_read_paths:
+  - "research_control/handoffs/handoff-0763.yaml"
+  - "research_control/handoffs/handoff-0763.md"
+  - "research_control/tasks/RT-20260718-038/artifacts/eqsrc_orientation_torsor_descent_route.yaml"
+  - "research_control/tasks/RT-20260718-038/artifacts/parent_fusion_notes_eqsrc_orientation_torsor_selector.md"
+  - "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress.tex"
+  - "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_countermodel.yaml"
+  - "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - "research_control/design/source_extension_classification_checklist_v1.md"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core freshness and local retrieval passed after refreshing five local-cache-only findings."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"EqSrc orientation torsor relation bundle Ontology Formalizer descent\" --limit 20 --json"
+    status: "PASS"
+    summary: "Resolved the canonical RT-038 selector fusion and current-frontier sources for direct inspection."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260718-038-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-SELECTOR --json"
+    status: "PASS"
+    summary: "Resolved and inspected the registered RT-038 parent fusion source."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+    status: "PASS"
+    summary: "Resolved and inspected the registered current frontier source."
+  - command: ".venv/bin/python scripts/research_control/continue_research.py --summary"
+    status: "PASS"
+    summary: "Tracked state required one bounded Ontology Formalizer orientation-torsor relation-bundle packet."
+  - command: ".venv/bin/python research_control/tasks/RT-20260718-039/artifacts/validate_eqsrc_orientation_torsor_descent_law_candidate.py --write-report --json"
+    status: "PASS"
+    summary: "Mechanized four states sixteen pairs two boundary lines two fibre relations four associated-state orbits exact pullbacks complement equivariance strict scalar non-descent the full GL2_2 orbit affine stabilizers parity branches and constant-one control."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 885
+    relationship_row_count: 4389
+    semantic_row_count: 885
+    vault_row_count: 885
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  before_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    local_cache_only_warning_count: 5
+  after_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"EqSrc orientation torsor relation bundle Ontology Formalizer descent\" --limit 20 --json"
+      query_type: "search"
+      query_text: "EqSrc orientation torsor relation bundle Ontology Formalizer descent"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260718-038-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-SELECTOR"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260718-038-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-SELECTOR --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260718-038-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-SELECTOR"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260718-038-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-SELECTOR"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-CURRENT-FRONTIER --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260718-038-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-038/artifacts/parent_fusion_notes_eqsrc_orientation_torsor_selector.md"
+      source_hash: "d78e1693ee809ccedefa73096e5692ce2f23e8c04eb104ffbd5cdd4e6eb4482f"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "12a99a14792481783db502aae4e0557b2867a3558c3792f50c978789e5453a14"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260718-039/artifacts/child_phys_math_eqsrc_orientation_torsor_descent_law.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260718-039/artifacts/child_phys_phil_eqsrc_orientation_torsor_descent_law.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260718-039/artifacts/parent_conflict_review_eqsrc_orientation_torsor_descent_law.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Parent fusion scoped the no-natural-section theorem to exchange-admitting categories separated associated-state descent from identity scalar descent used only an orientation-blind pre-relation control variation and limited scalarization classification to linear congruences."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260718-039/artifacts/parent_fusion_notes_eqsrc_orientation_torsor_descent_law.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused candidate combines the exact unpointed associated-state construction descent and non-descent theorems qualified section result pointed-repair equivalence finite symmetry census independent algebraic control explicit failure tags and every adoption and downstream guard."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "eqsrc"
+  waiver_decision_id: "DDR-20260708-005"
+  slots:
+    - countermodel_slot: "missing_inverse_countermodel"
+      status: "filled"
+      scope: "finite_two_object_source_side_missing_inverse"
+      result_artifact: "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_attempt_receipt.md"
+    - countermodel_slot: "missing_composition_countermodel"
+      status: "filled"
+      scope: "finite_local_composition_closure_removal"
+      result_artifact: "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex"
+    - countermodel_slot: "invariant_ledger_not_family_stable_countermodel"
+      status: "deferred_by_ddr"
+      scope: "invariant_ledger_family_stability_deferred_to_future_dedicated_countermodel_or_repair_packet"
+      result_artifact: "research_control/tasks/RT-20260708-005/artifacts/countermodel_obligation_pilot_report_v1.md"
+    - countermodel_slot: "target_import_needed_countermodel"
+      status: "filled"
+      scope: "source_pure_as_written_hidden_import_screen"
+      result_artifact: "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_receipt.md"
+    - countermodel_slot: "RetainH_needed_countermodel"
+      status: "filled"
+      scope: "H_retention_extension_candidate_definition_needed"
+      result_artifact: "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_receipt.md"
+    - countermodel_slot: "GenH_needed_countermodel"
+      status: "filled"
+      scope: "H_generated_family_extension_candidate_definition_needed"
+      result_artifact: "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_receipt.md"
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Define proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1 with finite bundle-descent strict scalar non-descent source-provenance and independent-variation payload or return a precise obstruction."
+  missing_source_law: "A source-derived unordered bipartition or orientation-relevant structure together with an independently specified physical morphism and variation category sufficient to define and interpret candidate EqSrc."
+  underdetermination_statement: "Current ontology does not derive the unordered bipartition provenance both-odd domain block-span state model physical morphisms physical variations or downstream semantics used by this candidate."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "For an admitted finite both-odd unordered-bipartition record U define the free orientation torsor O_U state space A_U complementary fibre lines and relations complement transport and the associated state line and relation objects without a preferred section; otherwise return a provenance parity symmetry or transport failure tag."
+    formal_objects:
+      - "finite both-odd unordered-bipartition source record U"
+      - "free unpointed C2 orientation torsor O_U"
+      - "block-indicator state space A_U"
+      - "complementary fibre boundary lines B_U,o"
+      - "fibre kernel-pair relations R_U,o"
+      - "complement transport c_U"
+      - "equivariant boundary and relation bundles"
+      - "associated vector space Abar_U boundary line Bbar_U and relation Rbar_U"
+      - "orientation-blind constant-one algebraic variation control"
+    domains:
+      - "finite source records with independently sourced nonempty complementary both-odd blocks"
+      - "unordered-partition bijections declared before relation evaluation"
+      - "tagged full-projective-line or bottom branches when source symmetry is not reduced to C2"
+    maps:
+      - "orientation exchange sigma on O_U"
+      - "complement involution c_U on A_U"
+      - "fibre boundary and relation assignments"
+      - "diagonal C2 quotient maps"
+      - "trivializations tau_o and source-morphism induced maps"
+      - "constant-one affine controls T_U(epsilon)"
+    proof_obligations:
+      - "source-only provenance and dependency acyclicity"
+      - "ordering independence inverse and cocycle"
+      - "line and relation equivariance"
+      - "functoriality under independently admitted source morphisms"
+      - "associated-state well-definedness and exact fibre pullback"
+      - "strict scalar non-descent on the original common state space"
+      - "scoped no-natural-section theorem on exchange-admitting categories"
+      - "pointed-torsor equivalence exposing candidate-v1 repair"
+      - "linear scalarization and full GL(2,2) classification"
+      - "both-odd parity stability and tagged asymmetric branches"
+      - "independent-variation certification and physical-admissibility limitation"
+      - "fresh target and process smuggling audit before stress or adoption"
+  candidate_law_comparison:
+    candidates:
+      - "unpointed orientation-torsor associated-state relation law"
+      - "strict scalar descent of exact candidate v1"
+      - "pointed-torsor repair"
+      - "diagonal-line scalarization"
+      - "full projective-line relation family"
+    comparison_basis:
+      - "strict scalar descent is false"
+      - "complement transport gives exact twisted descent"
+      - "pointing repairs the frozen candidate"
+      - "diagonal scalarization is a distinct law"
+      - "full source symmetry retains all three lines"
+    selection_status: "Unpointed associated-state candidate formalized proposal-only; strict scalar descent remains false pointed repair remains barred and alternate scalarizations remain distinct."
+  candidate_law_refutation:
+    refuted_candidate: "The claim that exact candidate v1 strictly descends to one orientation-independent relation on the original common A_U."
+    refutation_basis: "The complementary one-dimensional fibre kernels and their kernel-pair relations are unequal under identity identification."
+    surviving_obligations:
+      - "audit unordered-partition provenance and eliminability"
+      - "audit associated-state substitution versus legitimate source state identity"
+      - "audit hidden sections parity choice and full-symmetry reduction"
+      - "audit physical morphism and variation independence"
+      - "stress any surviving audited bundle law before protected adoption review"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Proposal-only source-side bundle formalization is allowed without adoption authority."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc undischarged until provenance audit stress and protected adoption burdens are met."
+      - "Keep RetainH GenH M_src g_eff matter coupling Einstein equations and benchmark promotion blocked."
+      - "Do not use desired exact-GR recovery to select a partition section scalarization morphism variation or associated-state interpretation."
+      - "Require protected human authority before source-law or canonical ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "unordered bipartition and provenance certificate"
+      - "orientation torsor state space and complement transport"
+      - "fibre and associated relations"
+      - "source morphism and variation declarations"
+      - "finite witness and scalarizations"
+    result: "pending_fresh_smuggling_audit"
+  atlas_glue_obligations:
+    profile_law: "Retain orientation ambiguity as source-local unpointed data and fail closed when partition provenance is absent."
+    selector_law: "Do not define one scalar EqSrc relation on the original A_U without an independent section or a distinct scalarization law."
+    transition_law: "State source morphisms complement transports and variations before relation evaluation."
+    inverse_checks: "Prove source inverses and complement involution."
+    cocycle_checks: "Prove C2 and source-morphism composition compatibility."
+    finite_variation_robustness: "The constant-one control preserves the relation; physical completeness or admissibility is not claimed."
+  failure_branches:
+    collapse: "Tag equality universal or degenerate fibre outputs rather than promote them as the selected nondegenerate law."
+    nonuniqueness: "Retain the unpointed bundle or full projective-line orbit and do not silently select a section."
+    inverse_defect: "Return a transport obstruction when inverse compatibility fails."
+    cocycle_defect: "Return a composition obstruction when the C2 or source-morphism cocycle fails."
+    variation_fragility: "Return a variation obstruction when independently declared variations fail bundle preservation."
+  known_risks:
+    - "The unordered bipartition may be declared rather than derived."
+    - "The associated state object may substitute a new state identity for the original EqSrc burden."
+    - "A pointed torsor may disguise repair of exact candidate v1."
+    - "Both-odd parity may be algebraically convenient but physically unjustified."
+    - "Reduced C2 symmetry may hide the third GL(2,2) line."
+    - "Bundle functoriality may be overread as physical covariance."
+  failed_alternatives:
+    - "Strict scalar descent of exact candidate v1 is false."
+    - "Pointed-torsor repair is barred by the exact candidate-v1 local freeze."
+    - "Diagonal-line scalarization is a distinct law rather than descent."
+    - "Direct source-law adoption review is premature."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. A later protected decision is required before adopting the law or editing canonical ontology."
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "source_extension_candidate"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - item_id: "EqSrcOrientationTorsorDescentLaw_src^cand,v1"
+      item_source_path: "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+      item_kind: "law_target"
+      classification: "new_ontology_primitive_candidate"
+      evidence_paths:
+        - "research_control/handoffs/handoff-0763.yaml"
+        - "research_control/tasks/RT-20260718-038/artifacts/eqsrc_orientation_torsor_descent_route.yaml"
+        - "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+      relation_to_current_ontology: "missing_primitive"
+      relation_to_target_structures: "none used in the displayed definition tree; fresh audit pending"
+      claim_boundary_ref: "CB-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-CANDIDATE-001"
+      protected_authority_required: true
+      physics_promotion_authorized: false
+      downstream_promotion_authorized: false
+      allowed_conclusion: "Proposal-only new ontology primitive candidate formalized with exact algebraic bundle descent and strict scalar non-descent pending fresh smuggling audit."
+      blocked_overreads:
+        - "unordered partition source-law or associated-state adoption"
+        - "physical gauge equivalence admissibility or covariance established"
+        - "general EqSrc discharge"
+        - "matter coupling or Einstein equations"
+        - "benchmark promotion or completed derivation"
+      next_route_if_blocked: "smuggling-auditor@0.2.0 ontology-law-research-packet"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-039-001"
+    payload_type: "bridge_map_candidate"
+    name: "Unpointed orientation-torsor associated-state relation"
+    summary: "Defines an associated state line and relation without selecting one oriented fibre."
+  - payload_id: "NMP-RT-20260718-039-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Ordering independence cocycle and equivariance"
+    summary: "Proves the C2 quotient and relation bundle are well defined."
+  - payload_id: "NMP-RT-20260718-039-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Source-record functoriality and exact fibre pullback"
+    summary: "Proves associated maps compose and both trivializations recover the exact fibre relations."
+  - payload_id: "NMP-RT-20260718-039-004"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Strict scalar non-descent and scoped section obstruction"
+    summary: "Proves unequal identity-compared fibres and no natural section on exchange-admitting categories."
+  - payload_id: "NMP-RT-20260718-039-005"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Pointed-torsor repair equivalence"
+    summary: "Identifies any preferred fibre as additional orientation data recovering candidate v1."
+  - payload_id: "NMP-RT-20260718-039-006"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "Two-point associated-state descent witness"
+    summary: "Exhausts four states sixteen pairs two fibre relations and four associated orbits."
+  - payload_id: "NMP-RT-20260718-039-007"
+    payload_type: "countermodel_or_obstruction"
+    name: "Parity full-symmetry scalarization and variation branches"
+    summary: "Classifies both-odd admission full GL(2,2) orbit diagonal alternative and pre-relation constant-one control."
+
+mathematical_payload_manifest:
+  - payload_id: "MP-RT-20260718-039-001"
+    payload_type: "definition"
+    object_name: "EqSrcOrientationTorsorDescentLaw_src^cand,v1"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Supplies exact unpointed torsor fibre associated-object domains maps and failure tags."
+  - payload_id: "MP-RT-20260718-039-002"
+    payload_type: "theorem"
+    object_name: "Associated-state well-definedness functoriality and pullback"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves exact bundle descent under explicit source-record hypotheses."
+  - payload_id: "MP-RT-20260718-039-003"
+    payload_type: "theorem"
+    object_name: "Strict scalar non-descent and pointed-repair controls"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+    burden_effect: "obstructs"
+    summary: "Blocks identity scalar descent and exposes any preferred section as candidate-v1 repair."
+  - payload_id: "MP-RT-20260718-039-004"
+    payload_type: "finite_model"
+    object_name: "Two-point orientation-torsor associated-state witness"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Supplies exhaustive finite descent non-descent symmetry and scalarization evidence."
+  - payload_id: "MP-RT-20260718-039-005"
+    payload_type: "source_extension_classification"
+    object_name: "Unordered-partition and associated-state adoption boundary"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+    burden_effect: "requires_human_gate"
+    summary: "Classifies the candidate as proposal-only pending audit with physical interpretation and adoption unestablished."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Define proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1 with finite bundle-descent strict scalar non-descent source-provenance and independent-variation payload or return a precise obstruction."
+  explanation: "The packet supplies a materially distinct associated-state candidate exact conditional proofs explicit failure tags and a two-point witness. It does not establish current-ontology derivation physical gauge interpretation audit stress or adoption."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "conditional_theorem_candidate"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A proposal-only associated-state candidate and conditional theorem packet does not establish an audited stressed adopted or physically interpreted general EqSrc theorem."
+  downstream_unlocked:
+    - "fresh_bounded_orientation_torsor_smuggling_audit"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "physical_gauge_equivalence_established"
+    - "physical_admissibility_established"
+    - "general_EqSrc_discharge"
+    - "RetainH_adoption"
+    - "GenH_adoption"
+    - "M_src_adoption"
+    - "g_eff_scope_change"
+    - "matter_coupling_derivation"
+    - "Einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+  explanation: "The authoritative ledger remains unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; unordered bipartition and associated-state interpretation remain proposal-only"
+  - burden: "Source equivalence EqSrc"
+    status: "associated-state bundle candidate formalized pending fresh audit; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged scoped source-extension relation data only"
+  - burden: "M_src"
+    status: "unchanged scoped source-only object only; no new adoption"
+  - burden: "g_eff"
+    status: "unchanged scoped source-extension object only; no scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged scoped evidence or precondition only; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "conditional relation preservation proved only for one orientation-blind algebraic control; no general physical robustness"
+  - burden: "benchmark promotion"
+    status: "blocked by missing primitive physical interpretation audit stress and protected authority"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact v3 and exact candidate-v1 cycles locally frozen; distinct associated-state route open for one fresh audit"
+
+route_cycle_control:
+  cycle_family: "eqsrc_orientation_torsor_descent_law"
+  current_cycle_step: "associated_state_candidate_formalization"
+  prior_related_tasks:
+    - "RT-20260718-031"
+    - "RT-20260718-032"
+    - "RT-20260718-033"
+    - "RT-20260718-034"
+    - "RT-20260718-035"
+    - "RT-20260718-036"
+    - "RT-20260718-037"
+    - "RT-20260718-038"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The packet changes the codomain to an associated state object and supplies new descent non-descent section scalarization parity and independent-control theorems rather than repairing or repeating exact candidate v1."
+  next_role_consequence: "smuggling-auditor@0.2.0 fresh bounded audit of the exact associated-state candidate"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-ORIENTATION-TORSOR-DESCENT-LAW"
+  candidate_freeze_label: "EQSRC-ORIENTATION-TORSOR-DESCENT-LAW"
+  prior_attempts_considered:
+    - "RT-20260718-031"
+    - "RT-20260718-032"
+    - "RT-20260718-033"
+    - "RT-20260718-034"
+    - "RT-20260718-035"
+    - "RT-20260718-036"
+    - "RT-20260718-037"
+    - "RT-20260718-038"
+    - "RT-20260718-039"
+  freeze_if:
+    - "A fresh audit shows that the unordered partition associated-state substitution or variation class merely renames the missing choice or imports target or process data."
+    - "A later stress finds the same provenance symmetry or physical-interpretation defect without a new repair object."
+  criteria_evaluated:
+    - "a materially distinct associated-state codomain is present"
+    - "conditional theorem-level descent and non-descent results are present"
+    - "a two-point exhaustive witness is present"
+    - "section parity full-symmetry scalarization and variation branches are explicit"
+    - "adoption and downstream promotion remain blocked"
+  do_not_freeze_if:
+    - "One fresh audit can test the materially new associated-state provenance and anti-smuggling burdens."
+  freeze_decision: "not_frozen"
+  rationale: "The distinct route supplies new auditable mathematical payload and changes the next role from formalization to independent audit."
+  decision_reason: "The distinct route supplies new auditable mathematical payload and changes the next role from formalization to independent audit."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  exact_candidate_v1_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "smuggling_auditor"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The packet formalizes one conditional proposal-only associated-state candidate and authorizes only one fresh audit. It authorizes no partition or source-law adoption preferred-section repair physical-gauge claim general EqSrc discharge downstream GR promotion completed derivation or project-wide rejection conclusion."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "unordered partition associated-state or source-law adoption"
+    - "preferred orientation or exact candidate-v1 repair"
+    - "physical gauge equivalence admissibility or covariance established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff claim or scope expansion"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+
+next_recommendation:
+  role_id: "smuggling-auditor"
+  role_version: "0.2.0"
+  packet_type: "source_extension_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  task_type: "eqsrc_orientation_torsor_descent_law_smuggling_audit"
+  objective: "Freshly audit exact EqSrcOrientationTorsorDescentLaw_src^cand,v1 for provenance-as-declaration identity versus complement descent associated-state substitution hidden sections parity instability reduced C2 versus full GL(2,2) symmetry scalarization scope variation independence target or process import and physical-covariance overread."
+  requires_human_gate: false
+  claim_boundary: "Audit-only. Do not repair stress or adopt the candidate edit canonical ontology establish physical gauge equivalence discharge general EqSrc change either authoritative ledger or promote downstream physics."
+
+selected_next_route:
+  route_id: "eqsrc_orientation_torsor_descent_law_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Audit the exact proposal-only unpointed associated-state relation law before Refuter stress or protected adoption review."
+  requires_human_gate: false
+  physics_promotion_authorized: false
+  next_action: "Run one bounded fresh Smuggling Auditor audit of the exact candidate."
+
+claim_boundary:
+  boundary_id: "CB-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-CANDIDATE-001"
+  allowed_scope: "One proposal-only unpointed orientation-torsor relation bundle associated state relation conditional functoriality exact pullback strict scalar non-descent qualified section result pointed-repair equivalence independent algebraic control finite witness failure tags and fresh audit route."
+  blocked_scope: "Preferred-section repair canonical ontology or source-law adoption physical gauge equivalence admissibility fresh audit inside this job Refuter stress general EqSrc RetainH GenH M_src g_eff matter coupling Einstein equations benchmark Gate Chair completed derivation or program-level no-go promotion."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_validation.json"
+  local_validator_report_hash: "f16d74de009df04d17655e7da07536b570c570d9b25a08cbe5061298db9b56a5"
+  candidate_artifact_hash: "81b24c69403c304889a94caec8b2a99a6a360a49f40266764da4cfd3ba4edd5f"
+  validation_status: "PASS"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight refreshed local retrieval and canonical selector and frontier sources were inspected."
+      - "Handoff-0763 and the registered Ontology Formalizer role were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both child perspectives completed."
+      - "The parent conflict review resolved without a revision round."
+      - "The exact associated-object proofs witness variation ordering and authority guards were fused."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The task-local executable validator passed with exhaustive finite counts and no errors."
+      - "Repository-wide research-control validation and changed-diff validation passed with historical warnings only."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current and compact frontier task-index claim-graph and dependency-graph derivatives were regenerated and their checks passed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The registered-source memory bootstrap completed and validate-only freshness passed."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-file claim-language validation passed with no hard failures."
+
+next_recommended_action: "Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcOrientationTorsorDescentLaw_src^cand,v1 before Refuter stress or any adoption consideration."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

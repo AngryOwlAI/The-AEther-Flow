@@ -428,6 +428,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-037-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-037-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260718-037/artifacts/parent_fusion_notes_eqsrc_cycle_boundary_selector_law_refuter_stress.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-038-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-SELECTOR` `research_control/tasks/RT-20260718-038/artifacts/parent_fusion_notes_eqsrc_orientation_torsor_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-039-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-CANDIDATE-RECEIPT` `research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-039-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW` `research_control/tasks/RT-20260718-039/artifacts/parent_fusion_notes_eqsrc_orientation_torsor_descent_law.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -538,6 +540,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-030/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v2_smuggling_audit.tex`
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex`
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-032/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_smuggling_audit.tex`
+- `TEX-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex`
 - `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1` `research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex`
 - `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS` `research_control/tasks/RT-20260718-025/artifacts/eqsrc_source_rooted_quotient_selector_refuter_stress.tex`
 - `TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-024/artifacts/eqsrc_source_rooted_quotient_selector_smuggling_audit.tex`
@@ -1322,6 +1325,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-037-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-REFUTER-STRESS-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-037-eqsrc-cycle-boundary-selector-law-refuter-stress-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-037-PARENT-FUSION-NOTES-EQSRC-CYCLE-BOUNDARY-SELECTOR-LAW-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260718-037-parent-fusion-notes-eqsrc-cycle-boundary-selector-law-refuter-stress.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-038-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260718-038-parent-fusion-notes-eqsrc-orientation-torsor-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-039-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-CANDIDATE-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-039-eqsrc-orientation-torsor-descent-law-candidate-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-039-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW` `wiki/markdown/md-research-control-tasks-rt-20260718-039-parent-fusion-notes-eqsrc-orientation-torsor-descent-law.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1426,6 +1431,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V2-SMUGGLING-AUDIT` `wiki/tex/tex-eqsrc-intrinsic-discriminator-admissibility-law-v2-smuggling-audit.md`
 - `WIKI-TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-REFUTER-STRESS` `wiki/tex/tex-eqsrc-intrinsic-discriminator-admissibility-law-v3-refuter-stress.md`
 - `WIKI-TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-SMUGGLING-AUDIT` `wiki/tex/tex-eqsrc-intrinsic-discriminator-admissibility-law-v3-smuggling-audit.md`
+- `WIKI-TEX-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-CANDIDATE-V1` `wiki/tex/tex-eqsrc-orientation-torsor-descent-law-candidate-v1.md`
 - `WIKI-TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1` `wiki/tex/tex-eqsrc-source-rooted-quotient-selector-candidate-v1.md`
 - `WIKI-TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS` `wiki/tex/tex-eqsrc-source-rooted-quotient-selector-refuter-stress.md`
 - `WIKI-TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-SMUGGLING-AUDIT` `wiki/tex/tex-eqsrc-source-rooted-quotient-selector-smuggling-audit.md`
