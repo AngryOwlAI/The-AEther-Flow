@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T12:31:40Z`
-- Source fingerprint: `39fd9fe4243a32ccd34982248801051880e2aa9ff147a8c433a0b489dc17f74e`
-- Nodes: `19191`
-- Edges: `66611`
+- Generated from tracked state as of: `2026-07-19T13:17:59Z`
+- Source fingerprint: `b00a2e9c44db5f6d492e217ce3143ef1a184d694b644bd2c3337adf60f2914ea`
+- Nodes: `19209`
+- Edges: `66665`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 979 |
+| `completion_yaml` | 980 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 750 |
+| `handoff_yaml` | 751 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 979 |
+| `agent_job` | `support_only` | 980 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10060 |
-| `blocked_burden` | `blocked` | 3653 |
-| `claim_boundary` | `support_only` | 936 |
-| `draft_control_candidate` | `draft_control` | 559 |
-| `draft_control_candidate` | `proposal_only` | 78 |
+| `artifact` | `support_only` | 10069 |
+| `blocked_burden` | `blocked` | 3655 |
+| `claim_boundary` | `support_only` | 937 |
+| `draft_control_candidate` | `draft_control` | 561 |
+| `draft_control_candidate` | `proposal_only` | 79 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 110 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 750 |
+| `handoff` | `support_only` | 751 |
 | `human_gated_object` | `human_gated` | 420 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 301 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 919 |
+| `task` | `support_only` | 920 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-025`
-- Latest handoff: `handoff-0750`
-- Handoff path: `research_control/handoffs/handoff-0750.yaml`
-- Next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently motivated symmetry-breaking source law, a distinct bridge-facing candidate, a local freeze of exact EqSrcSourceRootedQuotientSelectorCandidate_v1, or protected human-gated adoption review. Do not repeat the quotient-table construction, generic signature repair, or source-purity audit.
+- Active task: `RT-20260718-026`
+- Latest handoff: `handoff-0751`
+- Handoff path: `research_control/handoffs/handoff-0751.yaml`
+- Next action: Run one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 with source-only domains and maps at least one finite concrete source-object witness a source-automorphism naturality theorem with proof variation-class independence uniqueness or obstruction finite-variation robustness or obstruction and fail-closed branches. Do not adopt the law or reopen the exact quotient-selector cycle.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

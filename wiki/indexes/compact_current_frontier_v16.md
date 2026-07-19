@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-025`
-- Latest handoff: `handoff-0750`
-- Current status: `eqsrc_source_rooted_quotient_selector_scoped_obstruction_pending_theoretical_selection_no_adoption`
+- Active task: `RT-20260718-026`
+- Latest handoff: `handoff-0751`
+- Current status: `eqsrc_intrinsic_discriminator_admissibility_law_formalization_selected_exact_quotient_route_locally_frozen_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-025`
-- Latest research handoff: `handoff-0750`
-- Latest research next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently motivated symmetry-breaking source law, a distinct bridge-facing candidate, a local freeze of exact EqSrcSourceRootedQuotientSelectorCandidate_v1, or protected human-gated adoption review. Do not repeat the quotient-table construction, generic signature repair, or source-purity audit.
+- Latest research task: `RT-20260718-026`
+- Latest research handoff: `handoff-0751`
+- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 with source-only domains and maps at least one finite concrete source-object witness a source-automorphism naturality theorem with proof variation-class independence uniqueness or obstruction finite-variation robustness or obstruction and fail-closed branches. Do not adopt the law or reopen the exact quotient-selector cycle.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_quotient_selector_post_obstruction_theoretical_selection`
-- Role family: `theoretical-continuation-selector@0.1.0`
+- Route ID: `eqsrc_intrinsic_discriminator_admissibility_law_formalization`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Select the next same-milestone packet after the exact quotient selector's primitive-selection and independent-admissibility scoped obstruction.
+- Milestone burden: Define proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 with new concrete witness and theorem payload or return a precise obstruction.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `0f4cd72acb37e4e2f4df0f3ca9938e2a5bd1a2045c3aac1ccf2214e1910f3711`
-- JSON SHA-256: `f14daaf0e11558ca249bcd07afd4b9cb8e9af722f499a9a50444ff66f0f191b1`
+- YAML SHA-256: `f38429f88b7f35a6c726ef6572271ef4f3289d31df63916c69650946d3e9b994`
+- JSON SHA-256: `21c36b3cf94f38ada3d41596c573d424cb34292fe2de9df28b46d2b2bae22ff1`
 
 ## Authority Warning
 

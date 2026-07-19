@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-025` and `handoff-0750`.
+`RT-20260718-026` and `handoff-0751`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-025` |
-| Latest handoff ID | `handoff-0750` |
-| Current status | `eqsrc_source_rooted_quotient_selector_scoped_obstruction_pending_theoretical_selection_no_adoption` |
+| Active task ID | `RT-20260718-026` |
+| Latest handoff ID | `handoff-0751` |
+| Current status | `eqsrc_intrinsic_discriminator_admissibility_law_formalization_selected_exact_quotient_route_locally_frozen_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc concrete quotient selector scoped obstruction to theoretical selection |
+| Current route family | eqsrc exact quotient selector local freeze to distinct intrinsic discriminator law formalization |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One Theoretical Continuation Selector packet may compare a genuinely independent symmetry-breaking source law, a distinct bridge-facing candidate, local freeze of the exact quotient-selector route, and protected human-gated adoption review, then select one bounded next packet. |
-| Next recommended action | Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently motivated symmetry-breaking source law, a distinct bridge-facing candidate, a local freeze of exact EqSrcSourceRootedQuotientSelectorCandidate_v1, or protected human-gated adoption review. Do not repeat the quotient-table construction, generic signature repair, or source-purity audit. |
+| Required next authority | One Ontology Formalizer packet may define the named proposal-only intrinsic discriminator and admissibility law target and must supply finite witness theorem independence and fail-closed payload or a precise obstruction. |
+| Next recommended action | Run one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 with source-only domains and maps at least one finite concrete source-object witness a source-automorphism naturality theorem with proof variation-class independence uniqueness or obstruction finite-variation robustness or obstruction and fail-closed branches. Do not adopt the law or reopen the exact quotient-selector cycle. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-025` |
-| Latest research handoff ID | `handoff-0750` |
-| Latest research next action | Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently motivated symmetry-breaking source law, a distinct bridge-facing candidate, a local freeze of exact EqSrcSourceRootedQuotientSelectorCandidate_v1, or protected human-gated adoption review. Do not repeat the quotient-table construction, generic signature repair, or source-purity audit. |
+| Latest research task ID | `RT-20260718-026` |
+| Latest research handoff ID | `handoff-0751` |
+| Latest research next action | Run one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 with source-only domains and maps at least one finite concrete source-object witness a source-automorphism naturality theorem with proof variation-class independence uniqueness or obstruction finite-variation robustness or obstruction and fail-closed branches. Do not adopt the law or reopen the exact quotient-selector cycle. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-025/00_TASK.yaml`.
-- Active task objective: Execute one bounded Refuter ontology-law-research-packet against exact proposal-only EqSrcSourceRootedQuotientSelectorCandidate_v1 for profile-reassignment nonuniqueness, primitive-table provenance, independently justified physical admissibility, relation-changing source variations, exact-v3 closure, and decorated naturality versus physical covariance.
-- Latest handoff path: `research_control/handoffs/handoff-0750.yaml`.
-- Latest handoff summary: RT-20260718-025 stressed exact proposal-only EqSrcSourceRootedQuotientSelectorCandidate_v1. The exact classification is scoped_obstruction: three profile-induced partitions, an eight-element active S4 stabilizer, 224 relation-changing additive shifts, and 16 bijective relation-changing profiles show primitive-selection nonuniqueness and variation fragility. Exact-v3 closure passes conditionally. Current ontology supplies no independently source-justified profile or physical-admissibility law, and decorated transport equivariance is not physical covariance. The candidate remains proposal-only; no Distance-to-GR ledger row changes.
-- Current route family: eqsrc concrete quotient selector scoped obstruction to theoretical selection.
-- Next recommended action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently motivated symmetry-breaking source law, a distinct bridge-facing candidate, a local freeze of exact EqSrcSourceRootedQuotientSelectorCandidate_v1, or protected human-gated adoption review. Do not repeat the quotient-table construction, generic signature repair, or source-purity audit.
+- Active task path: `research_control/tasks/RT-20260718-026/00_TASK.yaml`.
+- Active task objective: Execute one bounded Theoretical Continuation Selector packet after the exact quotient-selector construction audit and stress cycle. Select exactly one distinct same-milestone route while preserving the local freeze of the exact candidate cycle and every adoption and downstream claim gate.
+- Latest handoff path: `research_control/handoffs/handoff-0751.yaml`.
+- Latest handoff summary: RT-20260718-026 selected one proposal-only ontology-law-research-packet for EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 with ontology-formalizer@0.2.0 as the next role. The exact EqSrcSourceRootedQuotientSelectorCandidate_v1 construction audit and stress cycle is locally frozen. Current adoption remains blocked with same-milestone continuation open and no Distance-to-GR change.
+- Current route family: eqsrc exact quotient selector local freeze to distinct intrinsic discriminator law formalization.
+- Next recommended action: Run one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 with source-only domains and maps at least one finite concrete source-object witness a source-automorphism naturality theorem with proof variation-class independence uniqueness or obstruction finite-variation robustness or obstruction and fail-closed branches. Do not adopt the law or reopen the exact quotient-selector cycle.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among an independently motivated symmetry-breaking source law, a distinct bridge-facing candidate, a local freeze of exact EqSrcSourceRootedQuotientSelectorCandidate_v1, or protected human-gated adoption review. Do not repeat the quotient-table construction, generic signature repair, or source-purity audit.
+Run one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 with source-only domains and maps at least one finite concrete source-object witness a source-automorphism naturality theorem with proof variation-class independence uniqueness or obstruction finite-variation robustness or obstruction and fail-closed branches. Do not adopt the law or reopen the exact quotient-selector cycle.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-025`;
-- latest handoff: `handoff-0750`;
-- current status: `eqsrc_source_rooted_quotient_selector_scoped_obstruction_pending_theoretical_selection_no_adoption`;
+- active task: `RT-20260718-026`;
+- latest handoff: `handoff-0751`;
+- current status: `eqsrc_intrinsic_discriminator_admissibility_law_formalization_selected_exact_quotient_route_locally_frozen_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0750.yaml`
-- `research_control/tasks/RT-20260718-025/00_TASK.yaml`
+- `research_control/handoffs/handoff-0751.yaml`
+- `research_control/tasks/RT-20260718-026/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0750*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0751*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
