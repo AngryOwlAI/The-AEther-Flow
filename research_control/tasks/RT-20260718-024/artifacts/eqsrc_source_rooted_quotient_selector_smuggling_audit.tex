@@ -1,0 +1,407 @@
+% authority: science-draft
+% status: draft/control
+% route: ontology-law-research-packet
+% audit_result: formal_source_purity_pass_with_primitive_selection_and_admissibility_limits
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Pass}{\mathsf{Pass}}
+\newcommand{\Block}{\mathsf{Block}}
+\newcommand{\Sel}{\mathsf{Sel}_{H}}
+\newcommand{\Vary}{\mathcal V_H}
+\newcommand{\Fsrc}{\mathcal F_{\mathrm{src}}}
+
+\title{EqSrc Source-Rooted Quotient Selector Candidate v1:\\
+Smuggling Audit}
+\author{Smuggling Auditor control packet RT-20260718-024}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This draft/control packet independently audits exact proposal-only
+\texttt{EqSrcSourceRootedQuotientSelectorCandidate\_v1} from
+\texttt{RT-20260718-023}.  The candidate remains source-extension data with
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\begin{verbatim}
+audit_result:
+  formal_source_purity_pass_with_primitive_selection_and_admissibility_limits
+declaration_closure_result: pass_for_exact_declared_finite_model
+transitive_provenance_result: pass_as_explicit_new_source_leaves_only
+arbitrary_label_result: profile_table_is_explicit_unselected_primitive
+hidden_target_result: not_detected
+opaque_lookup_result: no_hidden_lookup_but_s_is_primitive_table
+process_authority_result: not_detected
+variation_class_result: relative_stability_valid_physical_admissibility_unproved
+covariance_result: transported_equivariance_only
+source_extension_classification: new_ontology_primitive_requiring_human_gate
+current_ontology_derivation: not_established
+conservative_definitional_extension: not_established
+general_EqSrc_discharged: false
+RetainH_adopted: false
+GenH_adopted: false
+M_src_adopted: false
+distance_to_gr_ledger_changed: false
+next_route: bounded_refuter_quotient_selector_stress
+\end{verbatim}
+
+The audit passes the candidate's bounded formal source-purity claim because
+every operative value factors through its explicitly declared source tuple
+\((\tau_i,G,H,s)\), and no target or workflow datum is a positive premise.
+The passage is deliberately narrow.  The profile \(s\), group \(G\), subgroup
+\(H\), and designation of \(\Vary\) as admissible are new primitive choices.
+The audit does not derive, select, naturalize, or adopt them.
+
+\section{Audit Questions and Method}
+
+The bounded audit asks:
+\begin{enumerate}[leftmargin=*]
+  \item Is the exact finite dependency graph declared, typed, and acyclic?
+  \item Does every operative map factor through displayed source leaves?
+  \item Do the names \(A_i\) or tokens \(\tau_i\) illicitly determine the
+  numerical profile \(s(A_i)=i\)?
+  \item Is a target value, opaque lookup, learned parameter, or workflow
+  result hidden behind any declared source leaf?
+  \item Does process passage populate or validate any scientific premise?
+  \item Is stability under \(\Vary\) being overread as physical admissibility
+  or unrestricted robustness?
+  \item Is transported relabeling equivariance being overread as a physical
+  covariance or uniqueness principle?
+\end{enumerate}
+
+The method reconstructs the dependency graph, applies a source-factorization
+test, enumerates the finite profile and variation spaces, and separates formal
+model properties from current-ontology and physical-selection claims.
+
+\section{Declaration and Dependency Audit}
+
+The operative graph is
+\[
+ (\tau_i,G,H,s)\longrightarrow q:G\to G/H
+ \longrightarrow \Sel
+ \longrightarrow L_{A,B}
+ \longrightarrow \mathsf{Accept}_{A,B}.
+\]
+Parallel branches supply singleton ledger and proxy fibers, source-token
+provenance terms, and a singleton passing negative-control outcome.  All
+domains and values needed by the finite model are displayed.  Acceptance is a
+downstream Boolean decision and no edge returns from acceptance, the candidate
+law, the induced relation, audit status, or adoption status to an earlier
+node.
+
+The exact-v3 lifting is valid conditional on the intended displayed
+inverse-cancellation equation schemes inherited from the audited and stressed
+v3 packet.  This audit does not reinterpret the word ``inverse'' as an
+unstated equation.  A proof-assistant translation must retain both typed
+inverse-cancellation schemes, define \(\tau_{A_i}:=\tau_i\), and state the
+unique evident primitive-leaf equivalences on the singleton off-diagonal and
+empty diagonal fibers.  These are nonblocking formalization qualifications;
+they create no competing finite interpretation at the displayed
+cardinalities.
+
+\section{Transitive Source-Factorization Audit}
+
+\begin{definition}[Declared-root factorization]
+Let \(\Omega\) be an ambient interpretation space and let
+\[
+ \pi_R:\Omega\to R,\qquad R=(\tau_i,G,H,s),
+\]
+forget target, workflow, and other non-root coordinates.  A candidate value
+\(f:\Omega\to Y\) is declared-root factorized when
+\(f=\bar f\circ\pi_R\) for some \(\bar f:R\to Y\).
+\end{definition}
+
+\begin{lemma}[Finite quotient-selector factorization]
+Every operative value in the displayed selector tree, including
+\(q\), \(\Sel\), \(L_{A,B}\), certificate acceptance, and the induced
+partition, factors through \(\pi_R\).
+\end{lemma}
+
+\begin{proof}
+The quotient map is determined by the declared pair \((G,H)\).
+For each endpoint pair,
+\[
+ \Sel(A,B)=\Pass
+ \quad\Longleftrightarrow\quad
+ q(s(A))=q(s(B)).
+\]
+Thus \(\Sel\) is a finite composition of evaluations of the declared profile,
+group subtraction, and subgroup membership.  The ledger decision equals
+\(\Sel\), while the proxy and negative-control decisions are constant
+\(\Pass\).  The remaining exact-v3 constructors use only displayed endpoint
+tokens and typed term constructors.  Composition along this finite acyclic
+graph preserves factorization.
+\end{proof}
+
+Holding \(R\) fixed while varying a target atlas, topology, metric,
+reconstruction, detector result, benchmark result, registry row, role,
+validator, handoff, checkpoint, approval, or adoption state leaves every
+candidate value unchanged.  That is a valid formal source-purity result for
+the exact proposal as written.
+
+The root audit is equally important: \(s\) is itself a primitive finite table.
+It is not derived from \(\tau_i\), and the candidate explicitly says the
+subscripts on \(A_i\) are notation only.  Consequently the factorization
+result is conditional on admitting \(s\), \(G\), and \(H\) as new source
+leaves.  It is not a transitive derivation of those leaves from current
+ontology.  No hidden target or process origin is detected, but no
+current-ontology origin is established.
+
+\section{Arbitrary-Label and Opaque-Lookup Audit}
+
+\begin{proposition}[Primitive-profile nonuniqueness certificate]
+Keep the four source tokens, \(G=\mathbb Z_4\), and \(H=\{0,2\}\) fixed.
+Among the \(24\) bijective profiles \(s:\Fsrc\to G\), the quotient selector
+realizes all three perfect matchings of four objects.  Each matching is
+realized by eight profiles.
+\end{proposition}
+
+\begin{proof}
+A profile induces the unordered pair of two-element fibers of
+\(q\circ s:\Fsrc\to G/H\).  Choose which two objects map to the even coset:
+there are \(\binom42=6\) choices, and identifying a choice with its complement
+leaves \(3\) unordered matchings.  For a fixed matching, either block may map
+to the even coset; the two objects in each block may be assigned to its two
+group elements in either order.  Hence \(2\cdot2\cdot2=8\) profiles realize
+each matching, accounting for all \(3\cdot8=24\) bijections.
+\end{proof}
+
+This certificate shows precisely what the notation cannot establish.  The
+same source tokens and the same group data support multiple inequivalent
+pairings.  The selected table \(s(A_i)=i\) chooses one pairing as primitive
+data.  It is not an illicit hidden lookup because it is displayed and labeled
+proposal-only, but it is an unselected lookup table in the explanatory sense:
+no source law derives why that table, rather than another, is physically
+privileged.
+
+\begin{lemma}[Bare-set symmetry obstruction]
+An equivalence relation on a bare four-element set that is invariant under
+every permutation is either equality or the universal relation.
+\end{lemma}
+
+\begin{proof}
+If no distinct pair is related, the relation is equality.  If one distinct
+pair is related, the two-transitive action of the symmetric group sends that
+ordered pair to every other ordered distinct pair.  Invariance then relates
+every distinct pair, so the relation is universal.
+\end{proof}
+
+Thus a nondegenerate two-plus-two partition cannot be selected naturally from
+the bare object set alone.  It needs the profile \(s\) or equivalent
+symmetry-breaking source structure.  Transporting that structure under
+relabeling proves equivalence of decorated presentations; it does not remove
+the selection burden.
+
+Once \(G=\mathbb Z_4\) is stipulated, \(H=\{0,2\}\) is the unique subgroup of
+order two and is characteristic.  This reduces subgroup ambiguity conditional
+on \(G\) and the demand for a nontrivial proper quotient.  It does not select
+\(G\), the profile table, or the physical interpretation of either.
+
+\section{Variation-Class and Stabilizer Audit}
+
+\begin{proposition}[Exact formal stabilizer]
+Let \(r:\Fsrc\to G\) and \(s_r=s+r\).  The full pairwise selector matrix is
+unchanged if and only if all \(q(r(A))\) have one common value in \(G/H\).
+The full additive stabilizer therefore has \(32\) elements, while
+\(\Vary=H^{\Fsrc}\) is its \(16\)-element zero-coset subfamily.
+\end{proposition}
+
+\begin{proof}
+Write \(c=q\circ s:\Fsrc\to\mathbb Z_2\) and
+\(d=q\circ r:\Fsrc\to\mathbb Z_2\).  The original and varied selectors are
+the equality kernels of \(c\) and \(c+d\).  Because \(c\) is surjective onto
+two labels, the two equality kernels agree exactly when \(c+d=c\) or
+\(c+d=1-c\).  Equivalently, \(d\) is constant.  There are two choices for its
+common quotient value and, for each object, two representatives of that
+coset, giving \(2\cdot2^4=32\) variations.  Requiring every \(r(A)\in H\)
+selects the \(d=0\) half, of size \(2^4=16\).
+\end{proof}
+
+The candidate's \(\Vary\)-stability theorem is therefore correct, as is its
+qualification that \(\Vary\) is sufficient but not maximal.  Its displayed
+outside-stabilizer variation changes the relation and correctly witnesses
+sharpness.  However, the word ``admissible'' is a primitive designation.
+Neither formal invariance nor the count \(16\) supplies a physical criterion
+that selects \(\Vary\) over the \(32\)-element stabilizer, a smaller class, or
+another source-side perturbation family.  The result is relative mathematical
+stability, not physical admissibility or arbitrary finite-variation
+robustness.
+
+\section{Naturality and Covariance Audit}
+
+Simultaneously transporting the source objects, profile, endpoint-indexed
+fibers, and constructors along a bijection preserves the selector by
+definition.  Likewise, a group automorphism preserving \(H\) preserves
+subgroup membership.  These are correct equivariance statements for
+transported data.
+
+They do not choose the original profile.  In fact, transporting any one of
+the three matchings produces an isomorphic selector presentation.  The
+naturality statement therefore proves representation independence under its
+specified transports, not physical covariance, uniqueness, observer
+independence, empirical invariance, or current-ontology necessity.
+
+\section{Target and Process Authority Audit}
+
+\begin{longtable}{p{0.31\linewidth}p{0.18\linewidth}p{0.43\linewidth}}
+\toprule
+Audit channel & Finding & Reason\\
+\midrule
+target topology, atlas, or metric & not detected & No target geometric datum populates \(G\), \(H\), \(s\), \(q\), or acceptance.\\
+reconstruction, detector, or benchmark & not detected & These are named only as exclusions and do not select a class or variation.\\
+opaque lookup, hash, learned parameter, or oracle & no hidden channel detected & The only table-like selector root is \(s\), which is displayed as a new primitive rather than laundered as derived data.\\
+registry or generated derivative & not detected & Registration and generated memory provide navigation and provenance only.\\
+role, validator, handoff, or checkpoint & not detected & Process passage does not make a mathematical or physical premise true.\\
+approval, adoption, or Gate Chair state & not detected & The proposal and audit keep scientific construction separate from protected adoption authority.\\
+\bottomrule
+\end{longtable}
+
+The audit finds no forbidden target-GR or process-authority import in the
+exact construction.  This finding does not certify a future implementation
+whose primitive table is populated by an undisclosed target-side or workflow
+lookup.
+
+\section{Audit Result and Open Burdens}
+
+The exact fused classification is
+\[
+\boxed{\texttt{
+formal\_source\_purity\_pass\_with\_primitive\_selection\_and\_
+admissibility\_limits}}.
+\]
+The candidate is source-factorized as written and contains no detected hidden
+target or process premise.  Its quotient model, exact-v3 lifting, relative
+stability, full stabilizer qualification, and transported equivariance are
+mathematically coherent within the declared finite data.
+
+The following burdens remain open:
+\begin{itemize}[leftmargin=*]
+  \item derivation or principled selection of \(G\), \(s\), and an
+  admissible variation family from current ontology;
+  \item nonuniqueness among the three profile-induced pairings;
+  \item justification for choosing \(\Vary\) rather than the full stabilizer
+  or another perturbation class;
+  \item robustness under source-side profile changes that are not selected to
+  preserve the answer;
+  \item physical interpretation, empirical adequacy, and exact-GR recovery;
+  and
+  \item a protected human decision before any ontology adoption.
+\end{itemize}
+
+\section{Source-Extension and Adoption Classification}
+
+The packet is not a derivation from current ontology and no conservative
+definitional-extension theorem is supplied.  Because the operative profile
+and selection data are added as substantive roots, the exact classification
+is \texttt{new ontology primitive requiring human gate}.  Until such a gate,
+the artifact remains \texttt{proposal-only} source-extension data with
+\texttt{blocked\_adoption\_open\_continuation}.
+
+The audit result is not a request for adoption.  It authorizes neither
+\texttt{canonical-ontology candidate} status nor any modification of
+canonical ontology.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.31\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after this audit\\
+\midrule
+Source ontology primitives & Unchanged; \(G,H,s,\Vary\) remain unadopted proposal-only additions.\\
+Source equivalence EqSrc & One finite selector is formally source-pure as written but primitively selected; general EqSrc remains undischarged.\\
+RetainH & Unchanged and not adopted.\\
+GenH & Unchanged and not adopted.\\
+\(\mathrm{ObsLoc}_{lc}\) & Unchanged.\\
+\(\mathrm{Resp}_{lc}\) & Unchanged.\\
+\(M_{\mathrm{src}}\) & Unchanged and not adopted.\\
+\(g_{\mathrm{eff}}\) & Unchanged; no effective metric result.\\
+Matter coupling & Blocked and unchanged.\\
+Einstein equations & Blocked and unchanged.\\
+Finite-variation robustness & Relative \(\Vary\)-stability passes; physical admissibility and unrestricted robustness remain open.\\
+Benchmark promotion & Blocked; no benchmark evidence or promotion.\\
+Gate Chair status & Unchanged; no verdict or adoption request.\\
+Current route freeze or hard-fail status & Not frozen; one materially distinct Refuter stress packet is available.\\
+\bottomrule
+\end{longtable}
+
+The Distance-to-GR ledger is unchanged.  The audit advances only the local
+control status of this exact proposal to
+\texttt{candidate\_audited\_pending\_primitive-selection\_stress}.
+
+\section{Freeze and Route-Cycle Evaluation}
+
+The EqSrc constructor--audit--stress line is repetitive enough that freeze
+criteria remain active.  The route is not frozen because this audit adds new
+mathematical payload: the \(24\)-profile/three-matching nonuniqueness
+certificate and the exact \(32\)-element additive-stabilizer theorem.  These
+results expose a materially sharper stress target than the earlier abstract
+signature audit.
+
+Freeze or selector review becomes appropriate if the next Refuter packet
+merely restates primitive underdetermination without a new countermodel,
+stability result, or scoped obstruction, or if it establishes that the
+selected admissibility restriction is answer-preserving by construction
+without any independently motivated source criterion.  Another generic
+signature repair or repeat audit is not the next route.
+
+\section{Forbidden Conclusions}
+
+This audit does not establish:
+\begin{itemize}[leftmargin=*]
+  \item canonical ontology modification or adoption of \(G\), \(H\), \(s\),
+  \(\Vary\), or the candidate law;
+  \item current-ontology derivation or a conservative definitional extension;
+  \item general EqSrc, RetainH, GenH, or \(M_{\mathrm{src}}\);
+  \item physical admissibility, unrestricted robustness, physical covariance,
+  uniqueness, or empirical adequacy;
+  \item a target atlas, \(g_{\mathrm{eff}}\), matter coupling, or Einstein
+  equations;
+  \item benchmark promotion, a Gate Chair verdict, or a completed derivation;
+  \item a global no-go, global theory rejection, or future source-extension
+  impossibility.
+\end{itemize}
+
+\section{Next Route}
+
+Run one bounded \texttt{refuter@0.2.0}
+\texttt{ontology-law-research-packet} against this exact candidate.  It should
+stress profile-induced pairing nonuniqueness, the absence of a
+current-ontology selector for \(G\) and \(s\), the distinction between
+\(\Vary\) and the full additive stabilizer, robustness under
+relation-changing source variations, and whether any independently stated
+source criterion can justify the admissibility class without selecting the
+desired quotient relation by construction.
+
+No human gate is required to run that stress packet.  Refuter passage would
+still not authorize adoption; any ontology or source-law adoption remains a
+separate protected human-gated decision.
+
+\section{Source Materials}
+
+\begin{itemize}[leftmargin=*]
+  \item The proposal-only quotient-selector source:
+  \texttt{research\_control/tasks/RT-20260718-023/artifacts/}
+  \texttt{eqsrc\_source\_rooted\_quotient\_selector\_candidate\_v1.tex}.
+  \item The statement-level exact-v3 smuggling audit:
+  \texttt{research\_control/tasks/RT-20260718-021/artifacts/}
+  \texttt{eqsrc\_closure\_source\_law\_v3\_smuggling\_audit.tex}.
+  \item The exact-v3 Refuter stress:
+  \texttt{research\_control/tasks/RT-20260718-022/artifacts/}
+  \texttt{eqsrc\_closure\_source\_law\_v3\_refuter\_stress.tex}.
+  \item The tracked route:
+  \texttt{research\_control/handoffs/handoff-0748.yaml}.
+\end{itemize}
+
+\end{document}

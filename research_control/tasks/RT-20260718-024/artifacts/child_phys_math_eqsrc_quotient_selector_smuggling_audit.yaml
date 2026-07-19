@@ -1,0 +1,270 @@
+artifact_id: "child_phys_math_eqsrc_quotient_selector_smuggling_audit"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-024"
+job_id: "AJ-RT-20260718-024-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+candidate_hash: "56e22c2ad8fa2fcbfc21bcda2735917d75d7bc611f273a38852cbaa3cc9b2a45"
+prior_v3_audit_path: "research_control/tasks/RT-20260718-021/artifacts/eqsrc_closure_source_law_v3_smuggling_audit.tex"
+prior_v3_audit_hash: "159b29e2412e67f2619682c870a3456266283c207d33db6fbbd2f0dd8767e4d1"
+authority_boundary: "Audit only. No candidate repair, Refuter stress execution, source-law adoption, canonical-ontology edit, claim promotion, or Distance-to-GR ledger change."
+
+exact_classification: "conditional_source_side_audit_pass_with_explicit_profile_primitive_and_physical_admissibility_limit"
+recommendation: "candidate_audited_pending_one_bounded_refuter_stress"
+
+overall_assessment:
+  formal_model_result: "pass_under_the_explicit_exact_v3_inverse_cancellation_reading"
+  declaration_closure_result: "pass_with_nonblocking_formalization_qualifications"
+  dependency_acyclicity_result: "pass_with_independent_selector_and_provenance_roots"
+  explicit_target_or_process_import_result: "not_detected_as_written"
+  arbitrary_label_result: "not_hidden_but_not_eliminated_profile_s_is_explicit_symmetry_breaking_data"
+  opaque_lookup_result: "no_external_oracle_is_called_but_the_extensional_profile_has_no_derivation_from_tau_i_or_current_ontology"
+  variation_result: "V_H_stability_valid_but_relative_and_strictly_smaller_than_the_full_relation_stabilizer"
+  naturality_result: "transport_equivariance_valid_for_decorated_data_not_canonical_bare_object_invariance_or_physical_covariance"
+  physical_admissibility_result: "not_established"
+  current_ontology_derivation_result: "not_established"
+  source_extension_classification: "proposal_only_new_symmetry_breaking_source_primitive_if_adopted"
+  adoption_status: "blocked_adoption_open_continuation"
+  physics_progress_status: "candidate_audited_pending_stress"
+  distance_to_gr_delta: false
+
+evidence_basis:
+  - path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    relevant_lines: "89-115"
+    use: "Declared roots tau_i, G, H, and s, followed by q and Sel_H."
+  - path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    relevant_lines: "117-157"
+    use: "Exact-v3 singleton lifting, provenance grammar, decision maps, and acceptance reduction."
+  - path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    relevant_lines: "176-206"
+    use: "Endpoint-selector closure and bounded exact-v3 model claim."
+  - path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    relevant_lines: "214-303"
+    use: "V_H, relative stability, transported naturality, countervariation, and claimed full additive stabilizer."
+  - path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    relevant_lines: "305-328"
+    use: "Claimed complete dependency tree and no-target guard."
+  - path: "research_control/tasks/RT-20260718-021/artifacts/eqsrc_closure_source_law_v3_smuggling_audit.tex"
+    relevant_lines: "82-125,191-236"
+    use: "Prior statement-level closure, source-factorization criterion, and frozen-lookup provenance warning."
+
+dependency_audit:
+  result: "acyclic_but_the_selector_is_not_derived_from_endpoint_tokens"
+  corrected_graph:
+    selector_branch:
+      - "G,H -> q:G->G/H"
+      - "F_src,s,q -> q composed with s"
+      - "q composed with s -> Sel_H"
+      - "Sel_H -> L_AB"
+    certificate_branch:
+      - "tau_A,tau_B -> primitive leaf pi0_AB by explicit declaration only"
+      - "pi0_AB,id,inv,comp -> Pi_src(A,B)"
+      - "Lambda(A,B),P(A,B),Pi_src(A,B) -> Cert_src(A,B)"
+    constant_decision_branches:
+      - "Boolean Pass -> P_AB"
+      - "singleton outcome o_star and saturated pass set -> delta_nstar,AB"
+    convergence:
+      - "L_AB,P_AB,delta_nstar,AB and Cert_src(A,B) -> Accept_src(A,B)"
+      - "Accept_src and the certificate constructors -> exact-v3 candidate-law satisfaction"
+  transitive_provenance_findings:
+    tau_i:
+      result: "explicit_primitive_source_tokens"
+      qualification: "The tokens root provenance terms only. No displayed map tau_i -> G or tau_i -> s(A_i) exists."
+    G:
+      result: "explicit_auxiliary_finite_group"
+      qualification: "Z/4Z is mathematically well defined, but its physical or current-ontology relevance is supplied rather than derived."
+    H:
+      result: "explicit_subgroup_data"
+      qualification: "Given Z/4Z, H={0,2} is the unique nontrivial proper subgroup. The reason to use the resulting two-class quotient remains supplied rather than physically derived."
+    s:
+      result: "explicit_extensional_profile_primitive"
+      qualification: "The four assignments s(A_i)=i are fully displayed, so there is no operationally opaque oracle call. They are nevertheless an ungrounded four-entry primitive table, independent of tau_i and not derived from current ontology."
+    q:
+      result: "conservative_definition_over_G_and_H"
+      qualification: "The quotient map introduces no additional selection after G and H are fixed."
+    Sel_H:
+      result: "conservative_definition_over_q_and_s"
+      qualification: "The equivalence relation is the kernel pair of q composed with s."
+    L:
+      result: "conservative_exact_v3_ledger_decision_over_Sel_H"
+      qualification: "L_AB is constant on its singleton ledger fiber and imports no later acceptance or law state."
+    Accept_src:
+      result: "acyclic_exact_v3_conjunction"
+      qualification: "Acceptance reduces to Sel_H because the proxy and negative-control branches pass constantly."
+  key_boundary: "Calling the whole construction source-rooted is valid only relative to treating s, G, H, and the endpoint tokens as independent declared source-extension roots. The endpoint tokens do not derive the selector."
+
+declaration_and_exact_v3_audit:
+  declaration_closure:
+    result: "pass_with_nonblocking_formalization_qualification"
+    qualifications:
+      - "A strict transcription should define the abbreviation tau_{A_i}:=tau_i."
+      - "A strict transcription should explicitly declare equality as equiv_Pi0 on each singleton off-diagonal primitive-leaf fiber and the unique equivalence on each empty diagonal primitive-leaf fiber."
+      - "These primitive-leaf equivalences have a unique evident choice at the displayed cardinalities, so the omission creates no competing finite interpretation."
+      - "A proof-assistant translation must state both inverse-cancellation equations, as the candidate itself acknowledges; the word inverse alone is insufficient."
+  exact_v3_lifting:
+    result: "conditional_pass"
+    conditions:
+      - "The provenance congruence contains left and right unit, double inverse, both inverse-cancellation schemes, and associativity."
+      - "Equality is used for the singleton ledger, proxy, and outcome carriers and for the primitive provenance leaves under the evident reading."
+    proof_summary:
+      - "Every certificate over fixed endpoints has the same ledger decision, namely Sel_H(A,B), while proxy and negative-control decisions are Pass."
+      - "Reflexivity, symmetry, and transitivity of subgroup-coset equality imply accepted identity, inverse, and composition totality."
+      - "Singleton ledger and proxy carriers make their unit, inverse, associativity, and congruence equations automatic."
+      - "The stipulated provenance congruence supplies the remaining certificate equations, and constant delta supplies negative-outcome coherence."
+    limitation: "This establishes one formal model of the proposal-only exact-v3 law. It does not derive the signature, roots, selector, or physical interpretation from current ontology."
+
+arbitrary_label_and_lookup_audit:
+  object_subscript_finding:
+    result: "no_hidden_derivation_if_read_as_written"
+    reason: "The candidate explicitly says the A_i subscripts are notation and separately declares s(A_i)=i."
+    qualification: "The separate declaration is substantive symmetry-breaking data; changing it while keeping the bare four-object set fixed can change the selected classes."
+  opaque_lookup_finding:
+    result: "conditional_source_side_only"
+    reason: "The values of s are displayed rather than retrieved from an oracle, target, registry, validator, or workflow record."
+    qualification: "No source-internal formula or witness derives s from tau_i. A future target-derived table could not be made source-pure merely by freezing it and renaming it s; its pre-declaration provenance would still need audit."
+  process_authority_finding:
+    result: "not_detected"
+    reason: "Handoff, validator, registry, role, checkpoint, approval, adoption, and generated-derivative state do not enter any mathematical definition or proof."
+  target_import_finding:
+    result: "not_detected_as_written"
+    reason: "No target atlas, topology, metric, connection, curvature, detector result, benchmark result, matter law, or Einstein equation occurs in the dependency graph."
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-024-MATH-001"
+    payload_type: "lemma"
+    name: "bare_four_object_symmetry_obstruction"
+    statement: "On a bare four-element set, every equivalence relation invariant under the full symmetric group is either equality or the universal relation."
+    proof: "If no distinct pair is related, the relation is equality. If one distinct pair is related, two-transitivity of S4 sends that pair to every other distinct pair, so every distinct pair is related and the relation is universal."
+    implication: "A nondegenerate two-plus-two EqSrc partition cannot be canonical from the bare object set alone. It requires s or equivalent symmetry-breaking source structure. Transporting s under relabeling proves isomorphism of decorated structures, not removal of this burden."
+    burden_effect: "narrows_the_arbitrary_label_burden"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-024/artifacts/child_phys_math_eqsrc_quotient_selector_smuggling_audit.yaml"
+  - payload_id: "NMP-RT-20260718-024-MATH-002"
+    payload_type: "theorem"
+    name: "exact_additive_relation_stabilizer"
+    statement: "For f=q composed with s:F_src->Z/2Z and r:F_src->Z/4Z, the perturbed profile s_r=s+r induces the same equivalence relation as s if and only if q composed with r is constant on F_src."
+    proof: "The forward implication follows because f is surjective with exactly two fibers: any Z/2Z-valued map with the same kernel pair must be f+c for one constant c, hence q(r)=c. The reverse implication follows because adding one common quotient value to both endpoint labels preserves equality."
+    cardinality:
+      all_profile_shifts: 256
+      full_relation_stabilizer: 32
+      V_H: 16
+      index_of_V_H_in_full_stabilizer: 2
+    implication: "V_H is precisely the pointwise quotient-label stabilizer q(r)=0, not the full relation stabilizer. Uniform odd-coset shifts form its other stabilizer coset. The candidate's relative stability and nonmaximality claims are mathematically correct."
+    burden_effect: "sharpens_the_variation_class_claim"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-024/artifacts/child_phys_math_eqsrc_quotient_selector_smuggling_audit.yaml"
+  - payload_id: "NMP-RT-20260718-024-MATH-003"
+    payload_type: "explicit_witness"
+    name: "source_only_profile_reassignment_counterfactual"
+    statement: "The alternate bijective profile s'=(0,2,1,3) on (A0,A1,A2,A3), with the same G and H, induces classes {A0,A1} and {A2,A3} rather than {A0,A2} and {A1,A3}."
+    implication: "Both profiles support the same exact-v3 lifting and the same form of relative-stability theorem. The written framework therefore does not select one partition from source-object cardinality, group structure, or exact-v3 closure alone."
+    target_data_used: false
+    process_authority_used: false
+    burden_effect: "exhibits_profile_selection_underdetermination"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-024/artifacts/child_phys_math_eqsrc_quotient_selector_smuggling_audit.yaml"
+
+variation_and_naturality_audit:
+  V_H:
+    result: "valid_relative_stability_class"
+    exact_meaning: "All sixteen H-valued objectwise shifts preserve q composed with s pointwise."
+    physical_status: "Calling these shifts admissible is a proposal definition, not a theorem of current ontology or an empirical result."
+  full_stabilizer:
+    result: "candidate_characterization_confirmed_and_sharpened"
+    exact_meaning: "Thirty-two shifts with one common quotient coset preserve the relation; V_H has index two in this stabilizer."
+  arbitrary_variations:
+    result: "not_stable"
+    exact_meaning: "Injectivity of the varied profile is insufficient for relation preservation, and independently changing quotient components can alter the partition."
+  transported_object_naturality:
+    result: "pass_in_the_category_of_decorated_finite_source_data"
+    qualification: "The equation Sel^phi(phi A,phi B)=Sel(A,B) transports s, tokens, and all certificate data. It is reindexing equivariance, not invariance of a selector constructed naturally from an undecorated set."
+  group_naturality:
+    result: "pass_but_bounded"
+    qualification: "Aut(Z/4Z) consists of multiplication by 1 and 3, and both preserve H. Uniform translations also preserve the relation but are affine rather than group automorphisms; the candidate does not claim maximality here."
+  covariance_overread:
+    result: "blocked"
+    reason: "No representation of spacetime diffeomorphisms, Lorentz transformations, gauge transformations, target charts, or physical observers is defined. Finite transport equivariance cannot establish physical covariance."
+
+counterfactual_tests:
+  - test_id: "CF-EQSRC-QSEL-001"
+    intervention: "Hold the bare objects, G, H, exact-v3 carriers, and constructors fixed, but replace s=(0,1,2,3) by s'=(0,2,1,3)."
+    observed_mathematical_consequence: "The selected partition changes while formal exact-v3 satisfiability and source-only syntax remain available."
+    audit_consequence: "s is a substantive selector primitive rather than notation."
+  - test_id: "CF-EQSRC-QSEL-002"
+    intervention: "Apply the uniform shift r(A)=1 for every A."
+    observed_mathematical_consequence: "The quotient labels all flip, but every pairwise selector value remains unchanged."
+    audit_consequence: "V_H is sufficient but not the full relation stabilizer."
+  - test_id: "CF-EQSRC-QSEL-003"
+    intervention: "Vary target or workflow data while holding every declared source root, including the table s, fixed."
+    observed_mathematical_consequence: "All downstream definitions remain unchanged by construction."
+    audit_consequence: "This test detects downstream target back-edges but cannot establish the pre-declaration provenance of s. A target-derived table frozen before the test would require an independent origin audit."
+  - test_id: "CF-EQSRC-QSEL-004"
+    intervention: "Relabel the bare objects without transporting s."
+    observed_mathematical_consequence: "A permutation outside the eight-element partition-preserving subgroup can change which fixed object pairs are related."
+    audit_consequence: "The all-bijection naturality claim is valid only because the profile is transported as part of the decorated structure."
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  overall: "proposal_only_new_ontology_primitive_if_adopted"
+  derivation_from_current_ontology: false
+  conservative_definitional_extension_of_current_ontology: false
+  forbidden_target_GR_import: "not_detected_as_written"
+  component_classification:
+    conservative_over_expanded_signature:
+      - "q from G and H"
+      - "Sel_H from q and s"
+      - "L_AB from Sel_H"
+      - "Accept_src from L_AB and the constant passing branches"
+      - "the mathematical set V_H from F_src and H"
+    substantive_new_source_data_if_adopted:
+      - "the profile assignment s"
+      - "the choice that G=Z/4Z and its two-class quotient are physically relevant"
+      - "the designation of V_H or any larger stabilizer as the physically admissible variation class"
+      - "the independence and source semantics assigned to the primitive endpoint tokens"
+  adoption_gate_required: true
+  adoption_requested: false
+  adoption_status: "blocked_adoption_open_continuation"
+  explanation: "The derived maps are conservative definitions only after the expanded data are supplied. The full packet is not a conservative extension of current ontology because current ontology supplies no definition, unique expansion, or conservativity theorem for the profile or admissibility structure."
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-CLOSURE-SOURCE-LAW-SIGNATURE"
+  prior_attempts_considered:
+    - "RT-20260718-021"
+    - "RT-20260718-022"
+    - "RT-20260718-023"
+  freeze_decision: "not_frozen"
+  decision_reason: "The exact candidate passes this bounded audit conditionally, and this audit adds a bare-set symmetry obstruction, an exact 32-element stabilizer theorem, and a profile-reassignment witness. One materially distinct Refuter stress remains available."
+  barred_routes:
+    - "repeat generic exact-v3 signature audit"
+    - "repeat abstract exact-v3 variation stress"
+    - "unreviewed candidate repair"
+    - "source-law or ontology adoption"
+  next_allowed_route: "refuter@0.2.0"
+
+next_packet_recommendation:
+  role_family: "refuter@0.2.0"
+  route_label: "ontology-law-research-packet"
+  packet_count: 1
+  objective: "Stress this exact proposal-only quotient-selector candidate for profile-reassignment underdetermination, semantic provenance of the extensional s table, independence of physical admissibility from selector preservation, exact-v3 formalization under both inverse-cancellation equations, and the distinction between decorated transport equivariance and physical covariance."
+  candidate_repair_authorized: false
+  adoption_requested: false
+  requires_human_gate: false
+  recommendation_only_not_executed: true
+
+forbidden_overreads:
+  - "The conditional audit pass does not show that current ontology derives tau_i, G, H, s, the selector, or an admissible variation class."
+  - "The extensional display of s does not establish intrinsic physical meaning, uniqueness, naturalness, or empirical provenance."
+  - "Endpoint-token provenance does not derive the quotient selector because no tau_i-to-profile map is present."
+  - "V_H stability is not arbitrary finite-variation robustness and does not establish physical admissibility."
+  - "Transported finite-data equivariance is not spacetime, Lorentz, diffeomorphism, gauge, or empirical covariance."
+  - "A formal exact-v3 model does not discharge general EqSrc."
+  - "No RetainH, GenH, M_src, target metric, g_eff, matter-coupling, or Einstein-equation result follows."
+  - "No canonical ontology edit, source-law adoption, benchmark promotion, Gate Chair verdict, or completed derivation is authorized."
+  - "Validator, registry, role, handoff, checkpoint, generated derivative, or file-order status is not mathematical proof."
+  - "The profile-selection underdetermination is scoped; it does not prove future source-extension impossibility, a global no-go theorem, or global theory rejection."
+
+claim_boundary_preserved: true

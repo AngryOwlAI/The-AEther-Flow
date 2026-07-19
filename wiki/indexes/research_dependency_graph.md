@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T11:01:01Z`
-- Source fingerprint: `b92a81dc008af0a62b02f5193acd277f5f17fba3f7523ccf5bb007358e8d41e1`
-- Nodes: `19139`
-- Edges: `66490`
+- Generated from tracked state as of: `2026-07-19T11:49:02Z`
+- Source fingerprint: `646e8573372a2a91e724faa072d2a5597a4c136ea8ecb906411b613071581836`
+- Nodes: `19165`
+- Edges: `66551`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 977 |
+| `completion_yaml` | 978 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 748 |
+| `handoff_yaml` | 749 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 977 |
+| `agent_job` | `support_only` | 978 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10032 |
-| `blocked_burden` | `blocked` | 3650 |
-| `claim_boundary` | `support_only` | 934 |
-| `draft_control_candidate` | `draft_control` | 551 |
-| `draft_control_candidate` | `proposal_only` | 77 |
+| `artifact` | `support_only` | 10046 |
+| `blocked_burden` | `blocked` | 3652 |
+| `claim_boundary` | `support_only` | 935 |
+| `draft_control_candidate` | `draft_control` | 555 |
+| `draft_control_candidate` | `proposal_only` | 78 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 109 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 748 |
+| `handoff` | `support_only` | 749 |
 | `human_gated_object` | `human_gated` | 420 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 299 |
+| `source_ontology_object` | `support_only` | 300 |
 | `task` | `human_gated` | 29 |
-| `task` | `science_draft` | 32 |
-| `task` | `support_only` | 916 |
+| `task` | `science_draft` | 31 |
+| `task` | `support_only` | 918 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-023`
-- Latest handoff: `handoff-0748`
-- Handoff path: `research_control/handoffs/handoff-0748.yaml`
-- Next action: Run one bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for transitive source provenance arbitrary-label hidden-target opaque-lookup process-authority and variation-class smuggling. Do not repair adopt or promote the candidate.
+- Active task: `RT-20260718-024`
+- Latest handoff: `handoff-0749`
+- Handoff path: `research_control/handoffs/handoff-0749.yaml`
+- Next action: Run one bounded Refuter ontology-law-research-packet against exact EqSrcSourceRootedQuotientSelectorCandidate_v1 for profile-reassignment nonuniqueness primitive-table provenance independently justified physical admissibility relation-changing source variations and decorated naturality versus physical covariance. Do not repair adopt or promote the candidate.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
