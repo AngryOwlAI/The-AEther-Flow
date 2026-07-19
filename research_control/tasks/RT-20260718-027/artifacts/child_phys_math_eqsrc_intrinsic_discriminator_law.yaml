@@ -1,0 +1,90 @@
+artifact_id: "child_phys_math_eqsrc_intrinsic_discriminator_law"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-027"
+job_id: "AJ-RT-20260718-027-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_name: "EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1"
+authority: "science_draft"
+candidate_status: "proposal-only"
+adoption_status: "blocked_adoption_open_continuation"
+recommendation: "fuse_chain_homology_law_then_route_to_fresh_smuggling_audit"
+
+formal_construction:
+  source_package: "finite two-truncated chain complex C2 -> C1 -> C0 over F2"
+  chain_condition: "partial_1 partial_2 = 0"
+  state_domain: "Z_1(E)=ker(partial_1)"
+  boundary_subgroup: "B_1(E)=im(partial_2)"
+  discriminator_codomain: "H_1(E;F2)=Z_1(E)/B_1(E)"
+  discriminator: "chi_E(z)=[z]"
+  candidate_relation: "z EqSrc_cand z_prime iff z-z_prime lies in B_1(E)"
+  variation_generators: "T_b(z)=z+partial_2 b"
+  variation_class: "finite compositions of boundary-move generators"
+
+independence_certificate:
+  definition_order: "AdmVar_src is generated before chi_E and EqSrc_cand are evaluated"
+  allowed_dependencies:
+    - "C_2(E)"
+    - "C_1(E)"
+    - "partial_2"
+    - "source addition"
+    - "finite composition"
+  excluded_dependencies:
+    - "chi_E"
+    - "EqSrc_cand"
+    - "answer-preserving stabilizer"
+    - "target atlas or target metric"
+    - "benchmark behavior"
+    - "workflow authority"
+  conclusion: "formal non-circularity inside the proposal only; physical admissibility is not established"
+
+theorems:
+  - theorem_id: "THM-EQSRC-CHAIN-NATURALITY-001"
+    name: "Chain-map discriminator naturality"
+    hypotheses:
+      - "F is a typed chain map"
+      - "E and E_prime satisfy the chain condition"
+    conclusion: "chi_Eprime composed with F_1 equals H_1(F) composed with chi_E"
+    proof: "Chain squares map cycles to cycles and boundaries to boundaries; both sides send z to [F_1 z]."
+  - theorem_id: "THM-EQSRC-QUOTIENT-UNIQUENESS-001"
+    name: "Kernel-pair quotient uniqueness"
+    hypotheses:
+      - "d is surjective"
+      - "d has exactly the boundary-orbit kernel pair"
+    conclusion: "d factors uniquely through chi_E by a codomain bijection"
+    proof: "Define d_bar([z])=d(z); kernel-pair equality proves well-definedness and injectivity, and surjectivity is inherited."
+  - theorem_id: "THM-EQSRC-BOUNDARY-ROBUSTNESS-001"
+    name: "Finite boundary-move robustness"
+    hypotheses:
+      - "variations are finite words in T_b"
+    conclusion: "every finite admitted variation preserves chi_E and EqSrc_cand"
+    proof: "A word adds one total boundary partial_2(sum b_i), which vanishes in H_1."
+
+finite_witness:
+  base_field: "F2"
+  cells: "one vertex v; loop edges e0 e1 e2; one 2-cell f"
+  differentials: "partial_1=0 and partial_2(f)=e0+e1"
+  cycle_count: 8
+  boundary_count: 2
+  class_count: 4
+  class_size: 2
+  admitted_nonidentity_variation: "toggle e0+e1"
+  out_of_class_sharpness_variation: "translate by e2"
+
+fail_closed_branches:
+  - "chain defect"
+  - "non-cycle state"
+  - "nonseparating required witness"
+  - "untyped or non-chain transition"
+  - "naturality failure"
+  - "admitted variation changes discriminator"
+  - "variation definition depends on selected answer"
+  - "quotient uniqueness certificate failure"
+  - "target or process import"
+
+forbidden_overreads:
+  - "No current-ontology derivation or source-law adoption."
+  - "No physical-admissibility theorem."
+  - "No general EqSrc discharge or downstream physics promotion."
+  - "No global no-go or future source-extension impossibility."

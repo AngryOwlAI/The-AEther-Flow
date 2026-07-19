@@ -568,6 +568,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-024-PARENT-FUSION-NOTES-EQSRC-QUOTIENT-SELECTOR-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-024-parent-fusion-notes-eqsrc-quotient-selector-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-025-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-025-eqsrc-source-rooted-quotient-selector-refuter-stress-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-025-PARENT-FUSION-NOTES-EQSRC-QUOTIENT-SELECTOR-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260718-025-parent-fusion-notes-eqsrc-quotient-selector-refuter-stress.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-027-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-027-eqsrc-intrinsic-discriminator-admissibility-law-candidate-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-027-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-LAW` `wiki/markdown/md-research-control-tasks-rt-20260718-027-parent-fusion-notes-eqsrc-intrinsic-discriminator-law.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -927,6 +929,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-024-PARENT-FUSION-NOTES-EQSRC-QUOTIENT-SELECTOR-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-024/artifacts/parent_fusion_notes_eqsrc_quotient_selector_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-025-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-025/artifacts/eqsrc_source_rooted_quotient_selector_refuter_stress_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-025-PARENT-FUSION-NOTES-EQSRC-QUOTIENT-SELECTOR-REFUTER-STRESS` `research_control/tasks/RT-20260718-025/artifacts/parent_fusion_notes_eqsrc_quotient_selector_refuter_stress.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-027-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-RECEIPT` `research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-027-PARENT-FUSION-NOTES-EQSRC-INTRINSIC-DISCRIMINATOR-LAW` `research_control/tasks/RT-20260718-027/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_law.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

@@ -1,0 +1,662 @@
+completion_id: "AJC-AJ-RT-20260718-027-001"
+job_id: "AJ-RT-20260718-027-001"
+task_id: "RT-20260718-027"
+decision_id: "DDR-20260718-027"
+status: "completed"
+completed_at: "2026-07-19T14:58:39Z"
+completed_by_role: "ontology-formalizer@0.2.0--RT-20260718-027"
+source_role_id: "ontology-formalizer"
+source_role_version: "0.2.0"
+plan_task_id: "ordinary_eqsrc_intrinsic_discriminator_admissibility_law"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Formalized proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 on finite two-truncated F2 chain complexes. Cycles are source states boundaries independently generate admissible finite moves and the cycle-to-homology quotient is the candidate discriminator. The packet proves chain-map naturality conditional kernel-pair quotient uniqueness and finite boundary-move robustness and supplies a distinct eight-state four-class witness with out-of-class fragility. Formal independence does not establish physical admissibility. Current ontology does not derive or adopt the law general EqSrc remains undischarged and the Distance-to-GR ledger is unchanged."
+
+artifacts:
+  - "research_control/tasks/RT-20260718-027/artifacts/child_phys_math_eqsrc_intrinsic_discriminator_law.yaml"
+  - "research_control/tasks/RT-20260718-027/artifacts/child_phys_phil_eqsrc_intrinsic_discriminator_law.yaml"
+  - "research_control/tasks/RT-20260718-027/artifacts/parent_conflict_review_eqsrc_intrinsic_discriminator_law.yaml"
+  - "research_control/tasks/RT-20260718-027/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_law.md"
+  - "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_receipt.md"
+  - "research_control/tasks/RT-20260718-027/artifacts/validate_eqsrc_intrinsic_discriminator_admissibility_law_candidate.py"
+  - "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_validation.json"
+
+output_paths:
+  - "research_control/tasks/RT-20260718-027/artifacts/child_phys_math_eqsrc_intrinsic_discriminator_law.yaml"
+  - "research_control/tasks/RT-20260718-027/artifacts/child_phys_phil_eqsrc_intrinsic_discriminator_law.yaml"
+  - "research_control/tasks/RT-20260718-027/artifacts/parent_conflict_review_eqsrc_intrinsic_discriminator_law.yaml"
+  - "research_control/tasks/RT-20260718-027/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_law.md"
+  - "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_receipt.md"
+  - "research_control/tasks/RT-20260718-027/artifacts/validate_eqsrc_intrinsic_discriminator_admissibility_law_candidate.py"
+  - "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_validation.json"
+  - "research_control/tasks/RT-20260718-027/00_TASK.yaml"
+  - "research_control/tasks/RT-20260718-027/DDR-20260718-027.md"
+  - "research_control/tasks/RT-20260718-027/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260718-027/jobs/AJ-RT-20260718-027-001.yaml"
+  - "research_control/tasks/RT-20260718-027/jobs/completions/AJC-AJ-RT-20260718-027-001.yaml"
+  - "research_control/tasks/RT-20260718-027/roles/ontology-formalizer@0.2.0--RT-20260718-027.yaml"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0752.yaml"
+  - "research_control/handoffs/handoff-0752.md"
+
+extra_read_paths:
+  - "research_control/handoffs/handoff-0751.yaml"
+  - "research_control/handoffs/handoff-0751.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - "research_control/design/source_extension_classification_checklist_v1.md"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "research_control/tasks/RT-20260718-026/artifacts/eqsrc_post_obstruction_ontology_law_selector.yaml"
+  - "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-024/artifacts/eqsrc_source_rooted_quotient_selector_smuggling_audit.tex"
+  - "research_control/tasks/RT-20260718-025/artifacts/eqsrc_source_rooted_quotient_selector_refuter_stress.tex"
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core freshness and local retrieval passed after refreshing three local-cache-only findings."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"EqSrc quotient selector obstruction\" --limit 10 --json"
+    status: "PASS"
+    summary: "Resolved the canonical prior candidate audit and Refuter stress sources for direct inspection."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"intrinsic discriminator admissibility law\" --limit 10 --json"
+    status: "PASS"
+    summary: "Resolved the registered Ontology Formalizer role and current route evidence for direct inspection."
+  - command: ".venv/bin/python scripts/research_control/continue_research.py --summary"
+    status: "PASS"
+    summary: "Tracked state required one bounded Ontology Formalizer intrinsic-discriminator law packet."
+  - command: ".venv/bin/python research_control/tasks/RT-20260718-027/artifacts/validate_eqsrc_intrinsic_discriminator_admissibility_law_candidate.py --write-report --json"
+    status: "PASS"
+    summary: "Mechanized eight cycle states two boundary elements four two-element classes admitted boundary robustness and out-of-class sharpness."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "Registered source and generated memory derivatives refreshed."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Memory validation passed with nine known local-only findings."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+    status: "PASS"
+    summary: "Core research-control validation passed with zero errors."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "PASS"
+    summary: "Diff-scoped research-control validation passed with zero errors."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "Documentation-impact receipt passed."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "Project-improvement signal and sidecar validation passed with no emitted task signal."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Changed-file claim-language validation passed with zero hard failures; historical warnings remain."
+  - command: ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+    status: "EXPECTED_PRECHECKPOINT_BOUNDARY"
+    summary: "Deprecated full wrapper reached only the expected pre-checkpoint Git-tracking boundary for newly registered untracked paths; final acceptance remains owned by the governed checkpoint."
+  - command: ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+    status: "PASS"
+    summary: "Operational metrics report completed with physics claim promotion unauthorized."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "No whitespace errors."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 853
+    relationship_row_count: 4235
+    semantic_row_count: 853
+    vault_row_count: 853
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  before_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    local_cache_only_warning_count: 3
+  after_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"EqSrc quotient selector obstruction\" --limit 10 --json"
+      query_type: "search"
+      query_text: "EqSrc quotient selector obstruction"
+      returned_object_ids:
+        - "TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1"
+        - "TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-SMUGGLING-AUDIT"
+        - "TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"intrinsic discriminator admissibility law\" --limit 10 --json"
+      query_type: "search"
+      query_text: "intrinsic discriminator admissibility law"
+      returned_object_ids:
+        - "MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-2-0-MD"
+  canonical_inspections:
+    - object_id: "TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+      source_hash: "56e22c2ad8fa2fcbfc21bcda2735917d75d7bc611f273a38852cbaa3cc9b2a45"
+    - object_id: "TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-SMUGGLING-AUDIT"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-024/artifacts/eqsrc_source_rooted_quotient_selector_smuggling_audit.tex"
+      source_hash: "18373020ae260859ab6a07956a303b9698110ece5a001ef7197618a255acf851"
+    - object_id: "TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-REFUTER-STRESS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-025/artifacts/eqsrc_source_rooted_quotient_selector_refuter_stress.tex"
+      source_hash: "bab770d4dc80464cc9338fcd3fd0e4dc44dd0af326e744d95d84fb57a447c0b0"
+    - object_id: "MD-ROLE-AGENTS-ROLES-PHYSICS-ONTOLOGY-FORMALIZER-V0-2-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+      source_hash: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260718-027/artifacts/child_phys_math_eqsrc_intrinsic_discriminator_law.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260718-027/artifacts/child_phys_phil_eqsrc_intrinsic_discriminator_law.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260718-027/artifacts/parent_conflict_review_eqsrc_intrinsic_discriminator_law.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "The parent resolved intrinsic-language physical-admissibility uniqueness-scope and out-of-class-fragility distinctions without changing the shared claim boundary."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260718-027/artifacts/parent_fusion_notes_eqsrc_intrinsic_discriminator_law.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused candidate combines exact chain domains the homology discriminator an independently generated boundary-move class naturality quotient uniqueness finite robustness a distinct witness and all adoption and downstream guards."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "eqsrc"
+  waiver_decision_id: "DDR-20260708-005"
+  slots:
+    - countermodel_slot: "missing_inverse_countermodel"
+      status: "filled"
+      scope: "finite_two_object_source_side_missing_inverse"
+      result_artifact: "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_attempt_receipt.md"
+    - countermodel_slot: "missing_composition_countermodel"
+      status: "filled"
+      scope: "finite_local_composition_closure_removal"
+      result_artifact: "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex"
+    - countermodel_slot: "invariant_ledger_not_family_stable_countermodel"
+      status: "deferred_by_ddr"
+      scope: "invariant_ledger_family_stability_deferred_to_future_dedicated_countermodel_or_repair_packet"
+      result_artifact: "research_control/tasks/RT-20260708-005/artifacts/countermodel_obligation_pilot_report_v1.md"
+    - countermodel_slot: "target_import_needed_countermodel"
+      status: "filled"
+      scope: "source_pure_as_written_hidden_import_screen"
+      result_artifact: "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_receipt.md"
+    - countermodel_slot: "RetainH_needed_countermodel"
+      status: "filled"
+      scope: "H_retention_extension_candidate_definition_needed"
+      result_artifact: "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_receipt.md"
+    - countermodel_slot: "GenH_needed_countermodel"
+      status: "filled"
+      scope: "H_generated_family_extension_candidate_definition_needed"
+      result_artifact: "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_receipt.md"
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Define proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 with new concrete witness and theorem payload or return a precise obstruction."
+  missing_source_law: "An intrinsic source discriminator and independently specified admissible variation law sufficient to define and test a candidate EqSrc relation."
+  underdetermination_statement: "Current ontology does not derive the finite chain-package discriminator law or establish boundary moves as the physically admissible variation class for EqSrc."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "For a finite two-truncated F2 chain package E use cycles Z1(E) as source states boundaries B1(E) as independently generated finite variation moves and the canonical quotient chi_E:Z1(E)->H1(E) as the intrinsic discriminator; define candidate EqSrc as its kernel pair."
+    formal_objects:
+      - "finite two-truncated source chain package E"
+      - "cycle domain Z1(E)"
+      - "boundary subgroup B1(E)"
+      - "intrinsic codomain H1(E;F2)"
+      - "candidate relation EqSrc_cand,E"
+      - "independently generated variation monoid AdmVar_src(E)"
+      - "transition naturality certificate NatCert_src"
+      - "finite robustness certificate RobCert_src"
+    domains:
+      - "finite F2 vector spaces C2(E) C1(E) C0(E)"
+      - "cycle source states Z1(E)"
+      - "source-local boundary-move parameters C2(E)"
+      - "typed chain maps and chain isomorphisms"
+    maps:
+      - "partial_2 and partial_1"
+      - "chi_E from cycles to first homology"
+      - "T_b from cycles to cycles"
+      - "H1(F) induced by a chain map"
+      - "kernel-pair quotient factorization"
+    proof_obligations:
+      - "chain-map and source-automorphism naturality with proof"
+      - "variation-class definition independent of chi_E EqSrc and its stabilizer"
+      - "uniqueness up to intrinsic codomain gauge under exact kernel-pair hypotheses"
+      - "finite-word boundary-move robustness"
+      - "finite concrete source witness distinct from the frozen quotient table"
+      - "fresh target and process smuggling audit before stress or adoption"
+  candidate_law_comparison:
+    candidates:
+      - "chain-homology discriminator with boundary-move variations"
+      - "repeat exact quotient-table candidate cycle"
+      - "direct human-gated adoption review"
+    comparison_basis:
+      - "source-only definition closure"
+      - "variation-class independence"
+      - "new theorem and witness payload"
+      - "prior exact-route freeze"
+      - "protected adoption authority"
+    selection_status: "Chain-homology candidate formalized proposal-only; repeat exact quotient-table cycle remains locally frozen and adoption review is premature."
+  candidate_law_refutation:
+    refuted_candidate: "No new candidate is refuted by this formalization."
+    refutation_basis: "The packet constructs a conditional mathematical model and records sharpness beyond its admitted variation class."
+    surviving_obligations:
+      - "audit hidden primitive and target or process provenance"
+      - "audit formal independence versus physical admissibility"
+      - "stress collapse nonuniqueness transition defects and out-of-class fragility after audit"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Proposal-only source-side formalization is allowed without adoption authority."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc undischarged until source provenance audit stress and protected adoption burdens are met."
+      - "Keep RetainH GenH M_src g_eff matter coupling Einstein equations and benchmark promotion blocked from this packet."
+      - "Do not use desired exact-GR recovery as a premise for the chain package discriminator or variation class."
+      - "Require a protected human decision before source-law or canonical ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+      - "handoff_authority"
+      - "checkpoint_authority"
+    checked_objects:
+      - "finite source chain package E"
+      - "cycle and boundary spaces"
+      - "homology discriminator"
+      - "boundary-move variation monoid"
+      - "chain-map transitions"
+      - "finite witness"
+    result: "pending_fresh_smuggling_audit"
+  atlas_glue_obligations:
+    profile_law: "The discriminator must be determined by displayed source chain data rather than an arbitrary target-facing profile table."
+    selector_law: "Candidate EqSrc is the kernel pair of the displayed homology discriminator."
+    transition_law: "Typed chain maps induce the displayed naturality square."
+    inverse_checks: "Chain isomorphism inverses induce inverse homology maps."
+    cocycle_checks: "Composition of chain transitions induces composition of homology maps."
+    finite_variation_robustness: "Finite words of independently generated boundary moves preserve the discriminator; out-of-class moves remain outside the theorem."
+  failure_branches:
+    collapse: "Fail closed when the chain condition fails or a required nondegenerate witness has nonseparating homology."
+    nonuniqueness: "Fail closed when a claimed same-kernel discriminator does not factor by a unique codomain bijection."
+    inverse_defect: "Fail closed when an alleged chain isomorphism lacks a typed inverse or its induced inverse certificate."
+    cocycle_defect: "Fail closed when typed transition composition or induced-map composition fails."
+    variation_fragility: "Fail closed when an admitted boundary-move generator changes the discriminator; record out-of-class fragility without overreading it."
+  known_risks:
+    - "Finite chain complexes may be a genuinely new ontology primitive family."
+    - "Boundary moves may be formally independent but physically unjustified."
+    - "Chain-automorphism naturality may be overread as general physical covariance."
+    - "The finite witness may not extend to all source packages."
+  failed_alternatives:
+    - "Repeat quotient-table construction audit or stress is locally frozen."
+    - "Direct source-law adoption review is premature."
+    - "Using desired exact-GR behavior to select homology is forbidden target import."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. A later protected decision is required before adopting the law or editing canonical ontology."
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "source_extension_candidate"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - item_id: "EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1"
+      item_source_path: "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+      item_kind: "law_target"
+      classification: "new_ontology_primitive_candidate"
+      evidence_paths:
+        - "research_control/handoffs/handoff-0751.yaml"
+        - "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+      relation_to_current_ontology: "missing_primitive"
+      relation_to_target_structures: "none used in the displayed definition tree; fresh audit pending"
+      claim_boundary_ref: "CB-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-001"
+      protected_authority_required: true
+      physics_promotion_authorized: false
+      downstream_promotion_authorized: false
+      allowed_conclusion: "Proposal-only new ontology primitive candidate formalized pending fresh smuggling audit."
+      forbidden_overreads:
+        - "source-law adoption"
+        - "physical admissibility established"
+        - "general EqSrc discharge"
+        - "matter coupling or Einstein equations"
+        - "benchmark promotion or completed derivation"
+      next_route_if_blocked: "smuggling-auditor@0.2.0 ontology-law-research-packet"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-027-001"
+    payload_type: "bridge_map_candidate"
+    name: "Chain-homology intrinsic discriminator and boundary-move variation law"
+    summary: "Defines the candidate relation and variation class from displayed finite source chain data in an acyclic order."
+  - payload_id: "NMP-RT-20260718-027-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Source-chain naturality theorem"
+    summary: "Proves the discriminator commutes with typed chain maps and that isomorphisms preserve and reflect the candidate relation."
+  - payload_id: "NMP-RT-20260718-027-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Kernel-pair quotient uniqueness theorem"
+    summary: "Proves conditional uniqueness up to one intrinsic codomain bijection."
+  - payload_id: "NMP-RT-20260718-027-004"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Finite boundary-move robustness theorem"
+    summary: "Proves every finite admitted variation preserves the discriminator."
+  - payload_id: "NMP-RT-20260718-027-005"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "One-vertex three-loop one-two-cell finite witness"
+    summary: "Exhibits eight source states four two-element classes a nonidentity admitted move and an out-of-class relation-changing move."
+
+mathematical_payload_manifest:
+  - payload_id: "MP-RT-20260718-027-001"
+    payload_type: "definition"
+    object_name: "EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Supplies exact source-only domains maps and dependency order for one candidate law."
+  - payload_id: "MP-RT-20260718-027-002"
+    payload_type: "theorem"
+    object_name: "Chain-map discriminator naturality"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves the naturality square and functorial transition certificates under explicit chain-map hypotheses."
+  - payload_id: "MP-RT-20260718-027-003"
+    payload_type: "theorem"
+    object_name: "Kernel-pair quotient uniqueness"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves uniqueness up to codomain gauge under the exact same-kernel and surjectivity hypotheses."
+  - payload_id: "MP-RT-20260718-027-004"
+    payload_type: "theorem"
+    object_name: "Finite boundary-move robustness"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves robustness relative to the independently declared finite boundary-move class."
+  - payload_id: "MP-RT-20260718-027-005"
+    payload_type: "finite_model"
+    object_name: "Eight-state four-class chain-complex witness"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Supplies a concrete witness distinct from the frozen quotient-table presentation and an out-of-class fragility control."
+  - payload_id: "MP-RT-20260718-027-006"
+    payload_type: "source_extension_classification"
+    object_name: "Chain-homology candidate adoption boundary"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+    burden_effect: "requires_human_gate"
+    summary: "Classifies the law as proposal-only pending audit with physical admissibility and adoption unestablished."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Define proposal-only EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 with new concrete witness and theorem payload or return a precise obstruction."
+  explanation: "The packet supplies a materially new formal candidate three proofs an independence certificate and a distinct finite witness. It does not establish current-ontology derivation physical admissibility audit stress or adoption."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "conditional_theorem_candidate"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A proposal-only candidate and conditional theorem packet does not establish an audited stressed or adopted general EqSrc theorem."
+  downstream_unlocked:
+    - "fresh_bounded_chain_homology_candidate_smuggling_audit"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "physical_admissibility_established"
+    - "general_EqSrc_discharge"
+    - "RetainH_adoption"
+    - "GenH_adoption"
+    - "M_src_adoption"
+    - "g_eff_scope_change"
+    - "matter_coupling_derivation"
+    - "Einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+  explanation: "The authoritative ledger remains unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; the finite chain-package law remains proposal-only"
+  - burden: "Source equivalence EqSrc"
+    status: "chain-homology candidate formalized pending fresh audit; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged scoped source-extension selector data only"
+  - burden: "M_src"
+    status: "unchanged scoped source-only object only; no new adoption"
+  - burden: "g_eff"
+    status: "unchanged scoped source-extension object only; no scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged scoped evidence or precondition only; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "conditional theorem proved only for the proposal's boundary-move class; no general physical robustness"
+  - burden: "benchmark promotion"
+    status: "blocked by missing primitive and protected authority"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact quotient-table route locally frozen; distinct chain-homology route open for one fresh audit"
+
+route_cycle_control:
+  cycle_family: "eqsrc_family_closure_source_law"
+  current_cycle_step: "intrinsic_discriminator_admissibility_law_formalization"
+  prior_related_tasks:
+    - "RT-20260718-023"
+    - "RT-20260718-024"
+    - "RT-20260718-025"
+    - "RT-20260718-026"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The packet replaces the frozen profile-table object with a finite chain-complex law and supplies new naturality uniqueness robustness and witness payload."
+  next_role_consequence: "smuggling-auditor@0.2.0 fresh bounded audit of the exact chain-homology candidate"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW"
+  candidate_freeze_label: "EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW"
+  prior_attempts_considered:
+    - "RT-20260718-023"
+    - "RT-20260718-024"
+    - "RT-20260718-025"
+    - "RT-20260718-026"
+    - "RT-20260718-027"
+  freeze_if:
+    - "A fresh audit shows that the chain package or boundary-move class imports target or process data."
+    - "Formal independence is found to depend on the selected relation or its stabilizer."
+    - "A later stress finds the same collapse nonuniqueness transition or robustness defect without a new repair object."
+  criteria_evaluated:
+    - "a structurally distinct formal object is present"
+    - "three theorem-level results are present"
+    - "a distinct eight-state finite witness is present"
+    - "formal independence and physical admissibility are separated"
+    - "adoption and downstream promotion remain blocked"
+  do_not_freeze_if:
+    - "One fresh audit can test the materially new chain-package and boundary-move provenance."
+  freeze_decision: "not_frozen"
+  decision_reason: "The distinct route supplies new auditable mathematical payload and changes role next from formalization to independent audit."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "smuggling_auditor"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  Gate_Chair_verdict_authorized: false
+  completed_derivation_authorized: false
+  downstream_physics_promotion_authorized: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The packet formalizes one conditional proposal-only chain-homology candidate and authorizes only one fresh audit. It authorizes no source-law adoption physical-admissibility claim general EqSrc discharge downstream GR promotion completed derivation or global theory rejection."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "physical admissibility established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff claim or scope expansion"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+
+next_recommendation:
+  role_id: "smuggling-auditor"
+  role_version: "0.2.0"
+  packet_type: "source_extension_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  task_type: "eqsrc_intrinsic_discriminator_admissibility_law_smuggling_audit"
+  objective: "Freshly audit exact EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 for hidden chain-package and boundary-law primitive selection target or process import formal-independence versus physical-admissibility overread naturality-scope overread and finite-witness generalization."
+  requires_human_gate: false
+  claim_boundary: "Audit-only. Do not repair or adopt the candidate edit canonical ontology establish physical admissibility discharge general EqSrc change Distance-to-GR or metric-use ledgers or promote downstream physics."
+
+selected_next_route:
+  route_id: "eqsrc_intrinsic_discriminator_admissibility_law_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Audit the exact proposal-only chain-homology discriminator and boundary-move admissibility law before Refuter stress or protected adoption review."
+  requires_human_gate: false
+  physics_promotion_authorized: false
+  next_action: "Run one bounded fresh Smuggling Auditor audit of the exact candidate."
+
+claim_boundary:
+  boundary_id: "CB-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-001"
+  allowed_scope: "One proposal-only chain-homology discriminator and independently generated boundary-move law naturality quotient uniqueness finite robustness distinct witness fail-closed branches and fresh audit route."
+  blocked_scope: "Canonical ontology or source-law adoption physical admissibility fresh audit inside this job Refuter stress general EqSrc RetainH GenH M_src g_eff matter coupling Einstein equations benchmark Gate Chair completed derivation or program-level no-go promotion."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_validation.json"
+  local_validator_report_hash: "774b5ee68eef765f25711adb5a194b84b4ade36410ae103b34f6fcbdc25dcf48"
+  candidate_artifact_hash: "5f75d981dfa87790db6b3043497f7635ad74253bec84e4257e2f945e573e10e0"
+  validation_status: "PASS"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight refreshed local retrieval and canonical prior candidate audit stress and role sources were inspected."
+      - "Handoff-0751 and the registered Ontology Formalizer role were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both child perspectives completed."
+      - "The parent conflict review resolved with no revision round."
+      - "The exact law proofs witness independence certificate and authority guards were fused."
+  task_local:
+    status: "PASS"
+    evidence:
+      - "Task-local validator mechanized the finite witness boundary robustness and out-of-class sharpness."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Core and diff research-control validation passed with zero errors."
+      - "Documentation-impact project-improvement-signal and changed-file claim-language gates passed."
+      - "The deprecated full wrapper reached only its expected pre-checkpoint tracked-path boundary."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier compact-frontier task-index claim-graph and dependency-graph derivatives were refreshed."
+      - "Focused frontier compact task-index claim-graph and dependency-graph checks passed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Registered source and memory derivatives were regenerated."
+      - "Memory validate-only passed with the known local-only findings."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-file claim-language validation passed with zero hard failures."
+
+next_recommended_action: "Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcIntrinsicDiscriminatorAdmissibilityLaw_src^cand,v1 before Refuter stress or any adoption consideration."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
