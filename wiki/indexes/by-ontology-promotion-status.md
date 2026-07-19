@@ -45,6 +45,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 ## not_applicable
 
+- `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex`
 - `TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-REFUTER-STRESS-TEST` `research_control/tasks/RT-20260614-108/artifacts/146_CHECKER_REPLAY_CONSUMPTION_REFUTER_STRESS_TEST.tex`
 - `TEX-RESEARCH-CONTROL-CHECKER-REPLAY-CONSUMPTION-SMUGGLING-AUDIT` `research_control/tasks/RT-20260614-107/artifacts/145_CHECKER_REPLAY_CONSUMPTION_SMUGGLING_AUDIT.tex`

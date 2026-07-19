@@ -1,0 +1,320 @@
+% authority: science-draft
+% status: draft/control
+% route: ontology-law-research-packet
+% audit_result: source_pure_textually_formally_insufficient_repair_required
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Cert}{\mathsf{Cert}_{\mathrm{src}}}
+\newcommand{\Accept}{\mathsf{Accept}_{\mathrm{src}}}
+\newcommand{\Law}{\mathsf{EqSrcClosureLaw}^{\mathrm{cand}}_{\mathrm{src}}}
+\newcommand{\Block}{\mathsf{Block}}
+
+\title{EqSrc Closure Source-Law Candidate Smuggling Audit v1}
+\author{Smuggling Auditor control packet RT-20260718-017}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This draft/control artifact audits the proposal-only candidate
+\(\Law\) in
+\texttt{research\_control/tasks/RT-20260718-015/artifacts/
+eqsrc\_family\_closure\_source\_law\_candidate\_v1.tex}.
+The candidate remains source-extension data with adoption status
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\begin{verbatim}
+audit_result: source_pure_textually_formally_insufficient_repair_required
+source_purity_result: pass_with_semantic_guard
+formal_sufficiency_result: fail_totality_not_stated
+obstruction_id: OBST-EQSRC-CLOSURE-TOTALITY-001
+next_route: bounded_ontology_formalizer_candidate_repair
+general_EqSrc_discharged: false
+RetainH_adopted: false
+GenH_adopted: false
+distance_to_gr_delta: obstruction_recorded_no_ledger_change
+\end{verbatim}
+
+The audit finds no explicit target atlas, target metric, detector, benchmark,
+registry, role, validator, generated derivative, handoff, or checkpoint
+premise in the candidate. That textual source-purity result does not rescue the
+conditional proposition: the written clauses do not assert the accepted
+identity, inverse, and composition existence/totality used by its proof.
+
+\section{Artifact and Question Under Audit}
+
+The relation under audit is
+\[
+ A\sim_{\mathrm{cand}}B
+ \quad\Longleftrightarrow\quad
+ \exists w\in\Cert(A,B)\ \Accept(w).
+\]
+The candidate then claims that satisfying every candidate-law clause makes
+\(\sim_{\mathrm{cand}}\) an equivalence relation.
+
+The exact audit question is twofold:
+\begin{enumerate}[leftmargin=*]
+  \item Are the vocabulary and proof premises source-defined independently of
+  target or process success?
+  \item Do the clauses, read as written, entail the accepted witnesses needed
+  for reflexivity, symmetry, and transitivity?
+\end{enumerate}
+These questions are independent. A source-pure statement can still be
+formally insufficient.
+
+\section{Audit Method}
+
+The audit separates four statuses:
+\begin{itemize}[leftmargin=*]
+  \item \texttt{not\_detected}: no written premise uses the inspected
+  smuggling channel;
+  \item \texttt{semantic\_guard\_required}: a source-labelled term is not yet
+  closed by an explicit source-only grammar;
+  \item \texttt{formal\_repair\_required}: the proof uses a stronger
+  quantifier or operation property than the clauses state;
+  \item \texttt{fails\_closed}: a forbidden target or process premise is
+  actually required.
+\end{itemize}
+
+``May be accepted only if \(P\)'' is read as the necessary condition
+\(\Accept(x)\Rightarrow P(x)\). It is not read as either existence of \(x\) or
+the sufficient condition \(P(x)\Rightarrow\Accept(x)\). This standard
+quantifier discipline prevents a certificate policy from being laundered into
+a closure theorem.
+
+\section{Source-Purity Audit}
+
+The candidate explicitly excludes target atlas, target metric, detector
+outcome, benchmark result, generated derivative, registry row, role
+declaration, and validator result from certificate evidence. Its no-target
+grammar also requires definitions and witnesses to precede target
+reconstruction. No written proof step invokes any excluded object.
+
+\begin{longtable}{p{0.31\linewidth}p{0.18\linewidth}p{0.43\linewidth}}
+\toprule
+Audit channel & Finding & Reason \\
+\midrule
+target topology or atlas & not detected & No chart, transition map, target topology, or target differentiability predicate is used. \\
+target Lorentzian metric & not detected & No metric, connection, curvature, cone, geodesic, or proper-time normalization supplies a certificate. \\
+detector or empirical protocol & not detected & No detector outcome, calibration table, or empirical acceptance rule is a premise. \\
+benchmark behavior & not detected & Exact-GR recovery or benchmark success does not create a source certificate. \\
+matter or field equations & not detected & No stress-energy, matter action, Einstein equation, or downstream metric result is used. \\
+registry or generated derivative & not detected & Registry and wiki state identify artifacts only; they do not create mathematical witnesses. \\
+role, handoff, or checkpoint & not detected & Execution authority and provenance do not entail certificate existence or acceptance. \\
+validator result & not detected & A validation receipt checks artifact structure; it cannot make a source law true. \\
+\bottomrule
+\end{longtable}
+
+\paragraph{Semantic guard.}
+The phrases ``source-invariant ledger annotations,'' ``permitted proxy incidence,''
+``negative controls,'' and operation ``provenance'' are labelled
+source-side but not given closed domains and decision rules in the candidate.
+No target import is detected as written. A repair must nevertheless define
+these terms entirely in the source grammar, or explicitly bind them to
+already-registered source primitives, so that later implementations cannot
+populate them using target success or process status.
+
+\section{Formal Sufficiency Audit}
+
+\subsection{Identity}
+
+The identity clause asserts
+\(\mathbf 1_A\in\Cert(A,A)\), but does not state
+\(\Accept(\mathbf 1_A)\). Fail-closed acceptance gives necessary conditions
+for acceptance and does not assert that the identity satisfies them.
+Therefore the proof phrase ``accepted identity token'' is stronger than the
+written clause.
+
+\subsection{Inverse}
+
+For \(w\in\Cert(A,B)\), the inverse clause says that
+\(\operatorname{Inv}(w;\pi_{\mathrm{inv}})\) may be accepted only if its
+provenance certifies endpoint reversal and it lies in \(\Cert(B,A)\).
+This constrains any accepted inverse token. It does not assert that, for every
+accepted \(w\), an inverse provenance token exists, passes the guards, and is
+accepted. Therefore symmetry does not follow.
+
+\subsection{Composition}
+
+Likewise the composition clause constrains when a composite token may be
+accepted. It does not assert that every composable pair of accepted
+certificates has an accepted composite in \(\Cert(A,C)\). Therefore
+transitivity does not follow.
+
+\section{Minimal Source-Side Countermodels}
+
+\begin{proposition}[Reflexivity countermodel]
+There is a source-only interpretation satisfying the written identity and
+acceptance-policy clauses for which \(\sim_{\mathrm{cand}}\) is not reflexive.
+\end{proposition}
+
+\begin{proof}
+Let the family be \(\{A\}\), let
+\(\Cert(A,A)=\{\mathbf 1_A\}\), and set
+\(\Accept(\mathbf 1_A)=\mathrm{false}\). The typed identity exists. Every
+fail-closed statement of the form ``accepted only when'' is satisfied
+vacuously. Yet there is no accepted certificate \(A\to A\), so
+\(A\not\sim_{\mathrm{cand}}A\).
+\end{proof}
+
+\begin{proposition}[Symmetry countermodel]
+There is a source-only interpretation satisfying the written one-way inverse
+admissibility condition for which \(\sim_{\mathrm{cand}}\) is not symmetric.
+\end{proposition}
+
+\begin{proof}
+Let the family be \(\{A,B\}\). Give both objects accepted identity tokens,
+take \(\Cert(A,B)=\{w\}\) with \(\Accept(w)=\mathrm{true}\), and take
+\(\Cert(B,A)=\varnothing\). Supply neutral, source-only ledger annotations.
+No inverse token is accepted, so the implication constraining accepted inverse
+tokens is true vacuously. Then \(A\sim_{\mathrm{cand}}B\) but
+\(B\not\sim_{\mathrm{cand}}A\).
+\end{proof}
+
+\begin{proposition}[Transitivity countermodel]
+There is a source-only interpretation satisfying the written one-way
+composition admissibility condition for which \(\sim_{\mathrm{cand}}\) is not
+transitive.
+\end{proposition}
+
+\begin{proof}
+Let the family be \(\{A,B,C\}\), give all objects accepted identities, and give
+accepted certificates \(w:A\to B\) and \(v:B\to C\), but no accepted
+certificate \(A\to C\). Accept no composite token. The restriction on any
+accepted composite is true vacuously. Thus \(A\sim_{\mathrm{cand}}B\) and
+\(B\sim_{\mathrm{cand}}C\), while
+\(A\not\sim_{\mathrm{cand}}C\).
+\end{proof}
+
+These finite models use no target atlas, target metric, detector, benchmark, or
+process authority. They identify a local statement-level obstruction, not a
+global no-go theorem.
+
+\section{Exact Obstruction}
+
+\begin{verbatim}
+obstruction_id: OBST-EQSRC-CLOSURE-TOTALITY-001
+scope: source_extension_candidate
+failed_object: conditional_equivalence_proposition_as_written
+exact_failure: admissibility_filters_do_not_entail_accepted_closure_witnesses
+current_ontology_implication: does_not_derive
+source_extension_implication: repair_allowed
+consequence: repair_candidate_allowed
+\end{verbatim}
+
+The candidate proof imports no target datum, but it does import mathematical
+strength not stated in the definition. Its ``accepted'' identity, inverse, and
+composition operations are treated as total on the relevant accepted
+certificates. The definition supplies at most existence of an unaccepted
+identity token plus necessary conditions on any inverse or composite that
+happens to be accepted.
+
+\section{Required Repair}
+
+Before Refuter stress, a bounded Ontology Formalizer repair should state all
+of the following explicitly:
+\begin{enumerate}[leftmargin=*]
+  \item for every \(A\), \(\Accept(\mathbf 1_A)\);
+  \item for every accepted \(w:A\to B\), existence of source-only
+  \(\pi_{\mathrm{inv}}\) for which
+  \(\Accept(\operatorname{Inv}(w;\pi_{\mathrm{inv}}))\);
+  \item for every composable accepted \(w:A\to B\) and \(v:B\to C\),
+  existence of source-only \(\pi_{\mathrm{comp}}\) for which
+  \(\Accept(\operatorname{Comp}(v,w;\pi_{\mathrm{comp}}))\);
+  \item source-only totality domains for ledger congruence, negative controls,
+  proxy incidence, and provenance;
+  \item the existing endpoint, involution, associativity, fail-closed, and
+  no-target guards as separate soundness conditions.
+\end{enumerate}
+
+These are substantive source-extension axioms, not consequences of a
+validator or of current ontology. The repair may remain proposal-only; any
+adoption stays human-gated.
+
+\section{Audit Result}
+
+The candidate is \texttt{source\_pure\_as\_written} with a
+\texttt{semantic\_guard\_required} for its opaque source-labelled terms.
+It is simultaneously
+\texttt{formally\_insufficient\_as\_written}. The exact result is
+\[
+ \boxed{\texttt{repair\_required\_before\_refuter\_stress}}.
+\]
+
+This result supersedes neither the earlier conditional H1--H7 audit nor its
+source-purity finding. The earlier theorem explicitly supplied closure
+hypotheses. The present candidate attempts to package those hypotheses as a
+law interface, but its modal wording does not yet state their totality.
+
+\section{Distance-to-GR Effect}
+
+\begin{longtable}{p{0.32\linewidth}p{0.54\linewidth}}
+\toprule
+Burden & Status after audit \\
+\midrule
+Source ontology primitives & Unchanged; no canonical ontology edit or adoption. \\
+Source equivalence EqSrc & A precise proposal-level totality obstruction is recorded; general EqSrc remains undischarged. \\
+RetainH and GenH & Unchanged and not adopted. \\
+\(M_{\mathrm{src}}\) and \(g_{\mathrm{eff}}\) & Unchanged; no source-manifold or metric result. \\
+Matter coupling and Einstein equations & Blocked and unchanged. \\
+Finite-variation robustness & Unchanged; the local countermodels are not a robustness theorem. \\
+Benchmark and Gate Chair & Blocked; no promotion or verdict. \\
+Route status & Not frozen; one exact proposal-only repair is available before stress. \\
+\bottomrule
+\end{longtable}
+
+The audit sharpens the obstruction record but does not update the
+Distance-to-GR ledger and unlocks no downstream physics object.
+
+\section{Forbidden Conclusions}
+
+This audit does not establish:
+\begin{itemize}[leftmargin=*]
+  \item canonical ontology modification or source-law adoption;
+  \item general EqSrc discharge;
+  \item RetainH or GenH adoption;
+  \item target atlas, metric, detector, or benchmark authority;
+  \item \(M_{\mathrm{src}}\), \(g_{\mathrm{eff}}\), matter coupling, or
+  Einstein equations;
+  \item benchmark promotion or a Gate Chair verdict;
+  \item completed derivation;
+  \item impossibility of a conservative repair, future source-extension
+  impossibility, or global theory rejection.
+\end{itemize}
+
+\section{Next Route}
+
+The next lawful route is one bounded
+\texttt{ontology-formalizer@0.2.0} proposal-only repair of the same candidate.
+It must add accepted-existence/totality clauses and close the opaque
+source-grammar terms. Refuter stress follows only after that repaired artifact
+passes a fresh Smuggling Auditor check. No human gate is required merely to
+prepare or audit the repair; adoption remains human-gated.
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Proposal-only source-law
+candidate for EqSrc family closure} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260718-015/artifacts/
+eqsrc\_family\_closure\_source\_law\_candidate\_v1.tex}.
+
+The AEther-Flow Research Project. (2026b). \emph{EqSrc family-closure
+smuggling audit v1} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260707-022/artifacts/
+eqsrc\_family\_closure\_smuggling\_audit\_v1.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{Handoff 0741}
+[Research-control handoff].
+\texttt{research\_control/handoffs/handoff-0741.yaml}.
+
+\end{document}

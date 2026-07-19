@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T04:18:22Z`
-- Source fingerprint: `f1a35b8f42b824604a9524c67b5a9a573c95e7da2cee7399e24aa4437392c48d`
-- Nodes: `18935`
-- Edges: `66053`
+- Generated from tracked state as of: `2026-07-19T05:49:28Z`
+- Source fingerprint: `b91d757108376a5d3ceed7b6d741b79b3d78b52926c22dc2117a4db8eec8653e`
+- Nodes: `18986`
+- Edges: `66148`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 969 |
+| `completion_yaml` | 971 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 741 |
+| `handoff_yaml` | 742 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 969 |
+| `agent_job` | `support_only` | 971 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 9929 |
-| `blocked_burden` | `blocked` | 3625 |
-| `claim_boundary` | `support_only` | 926 |
-| `draft_control_candidate` | `draft_control` | 531 |
-| `draft_control_candidate` | `proposal_only` | 69 |
+| `artifact` | `support_only` | 9948 |
+| `blocked_burden` | `blocked` | 3639 |
+| `claim_boundary` | `support_only` | 928 |
+| `draft_control_candidate` | `draft_control` | 534 |
+| `draft_control_candidate` | `proposal_only` | 70 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 109 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 741 |
-| `human_gated_object` | `human_gated` | 415 |
+| `handoff` | `support_only` | 742 |
+| `human_gated_object` | `human_gated` | 420 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 64 |
+| `obstruction` | `blocked` | 65 |
 | `obstruction` | `rejected` | 1 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 28 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 292 |
+| `source_ontology_object` | `support_only` | 293 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 908 |
+| `task` | `support_only` | 910 |
 
 ## Frontier Table
 
@@ -108,6 +108,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:arbitrary_finite_source_package_witness_theorem` | Blocked claim: arbitrary finite-source-package witness theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_finite_variation_overread` | Blocked claim: arbitrary finite-variation overread | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_finite_variation_robustness_proof` | Blocked claim: arbitrary finite-variation robustness proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:arbitrary_output_path_generated_classification` | Blocked claim: arbitrary output-path generated classification | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:article_body_content_change` | Blocked claim: article body content change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:artifact_body_scanning` | Blocked claim: artifact-body scanning | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:atlasglue_src_plus_adoption` | Blocked claim: AtlasGlue_src^+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:backlog_as_execution_of_downstream_tasks` | Blocked claim: backlog as execution of downstream tasks | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_gate_chair_verdict` | Blocked claim: backlog as Gate Chair verdict | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_matter_coupling` | Blocked claim: backlog as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:backlog_as_matter_semantics` | Blocked claim: backlog as matter semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260718-015`
-- Latest handoff: `handoff-0741`
-- Handoff path: `research_control/handoffs/handoff-0741.yaml`
-- Next action: Run one bounded Smuggling Auditor ontology-law-research-packet to audit EqSrcClosureLaw_src^cand for hidden target import process-authority laundering certificate-as-adoption overread and illicit general EqSrc RetainH or GenH promotion.
+- Active task: `RT-20260718-017`
+- Latest handoff: `handoff-0742`
+- Handoff path: `research_control/handoffs/handoff-0742.yaml`
+- Next action: Run one bounded Ontology Formalizer ontology-law-research-packet to repair proposal-only EqSrcClosureLaw_src^cand with explicit accepted identity inverse-totality and composition-totality clauses plus closed source grammar before fresh Smuggling Auditor review or Refuter stress.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

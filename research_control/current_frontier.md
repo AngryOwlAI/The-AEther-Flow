@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-015` and `handoff-0741`.
+`RT-20260718-017` and `handoff-0742`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-015` |
-| Latest handoff ID | `handoff-0741` |
-| Current status | `eqsrc_family_closure_source_law_candidate_constructed_pending_audit_no_adoption` |
+| Active task ID | `RT-20260718-017` |
+| Latest handoff ID | `handoff-0742` |
+| Current status | `eqsrc_closure_source_law_candidate_audit_precise_totality_obstruction_repair_required_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc source law candidate new payload next smuggling audit no generic stress loop |
+| Current route family | eqsrc closure exact accepted totality repair no generic audit or stress loop |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One Smuggling Auditor audit may inspect candidate definitions proof steps provenance ledger semantics fail-closed branches and status language. |
-| Next recommended action | Run one bounded Smuggling Auditor ontology-law-research-packet to audit EqSrcClosureLaw_src^cand for hidden target import process-authority laundering certificate-as-adoption overread and illicit general EqSrc RetainH or GenH promotion. |
+| Required next authority | One Ontology Formalizer packet may repair the proposal-only candidate with explicit accepted identity inverse-totality composition-totality and closed source grammar. |
+| Next recommended action | Run one bounded Ontology Formalizer ontology-law-research-packet to repair proposal-only EqSrcClosureLaw_src^cand with explicit accepted identity inverse-totality and composition-totality clauses plus closed source grammar before fresh Smuggling Auditor review or Refuter stress. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-015` |
-| Latest research handoff ID | `handoff-0741` |
-| Latest research next action | Run one bounded Smuggling Auditor ontology-law-research-packet to audit EqSrcClosureLaw_src^cand for hidden target import process-authority laundering certificate-as-adoption overread and illicit general EqSrc RetainH or GenH promotion. |
+| Latest research task ID | `RT-20260718-017` |
+| Latest research handoff ID | `handoff-0742` |
+| Latest research next action | Run one bounded Ontology Formalizer ontology-law-research-packet to repair proposal-only EqSrcClosureLaw_src^cand with explicit accepted identity inverse-totality and composition-totality clauses plus closed source grammar before fresh Smuggling Auditor review or Refuter stress. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-015/00_TASK.yaml`.
-- Active task objective: Execute one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcClosureLaw_src^cand as a source-side family-closure law interface with explicit identity, inverse-provenance, composition-certificate, ledger-congruence, fail-closed, and no-target-import obligations.
-- Latest handoff path: `research_control/handoffs/handoff-0741.yaml`.
-- Latest handoff summary: RT-20260718-015 constructed proposal-only EqSrcClosureLaw_src^cand with typed source identity inverse-provenance composition-certificate ledger-congruence no-target and fail-closed clauses. The conditional theorem is valid only when all candidate clauses are supplied. Current ontology does not derive the candidate; adoption is blocked and continuation to one bounded Smuggling Auditor audit remains open. No Distance-to-GR ledger change or physics promotion follows.
-- Current route family: eqsrc source law candidate new payload next smuggling audit no generic stress loop.
-- Next recommended action: Run one bounded Smuggling Auditor ontology-law-research-packet to audit EqSrcClosureLaw_src^cand for hidden target import process-authority laundering certificate-as-adoption overread and illicit general EqSrc RetainH or GenH promotion.
+- Active task path: `research_control/tasks/RT-20260718-017/00_TASK.yaml`.
+- Active task objective: Execute one bounded Smuggling Auditor ontology-law-research-packet against proposal-only EqSrcClosureLaw_src^cand for hidden target import, process-authority laundering, certificate-as-adoption overread, and illicit general EqSrc, RetainH, or GenH promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0742.yaml`.
+- Latest handoff summary: RT-20260718-017 audited proposal-only EqSrcClosureLaw_src^cand. No explicit target or process-authority import is detected as written, but identity acceptance and accepted inverse and composition totality are not stated although the proof uses them. Three source-only countermodels establish precise repairable obstruction OBST-EQSRC-CLOSURE-TOTALITY-001. The candidate remains proposal-only with blocked_adoption_open_continuation; no Distance-to-GR ledger change or physics promotion follows.
+- Current route family: eqsrc closure exact accepted totality repair no generic audit or stress loop.
+- Next recommended action: Run one bounded Ontology Formalizer ontology-law-research-packet to repair proposal-only EqSrcClosureLaw_src^cand with explicit accepted identity inverse-totality and composition-totality clauses plus closed source grammar before fresh Smuggling Auditor review or Refuter stress.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded Smuggling Auditor ontology-law-research-packet to audit EqSrcClosureLaw_src^cand for hidden target import process-authority laundering certificate-as-adoption overread and illicit general EqSrc RetainH or GenH promotion.
+Run one bounded Ontology Formalizer ontology-law-research-packet to repair proposal-only EqSrcClosureLaw_src^cand with explicit accepted identity inverse-totality and composition-totality clauses plus closed source grammar before fresh Smuggling Auditor review or Refuter stress.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-015`;
-- latest handoff: `handoff-0741`;
-- current status: `eqsrc_family_closure_source_law_candidate_constructed_pending_audit_no_adoption`;
+- active task: `RT-20260718-017`;
+- latest handoff: `handoff-0742`;
+- current status: `eqsrc_closure_source_law_candidate_audit_precise_totality_obstruction_repair_required_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0741.yaml`
-- `research_control/tasks/RT-20260718-015/00_TASK.yaml`
+- `research_control/handoffs/handoff-0742.yaml`
+- `research_control/tasks/RT-20260718-017/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0741*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0742*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

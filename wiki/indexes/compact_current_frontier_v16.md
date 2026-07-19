@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-015`
-- Latest handoff: `handoff-0741`
-- Current status: `eqsrc_family_closure_source_law_candidate_constructed_pending_audit_no_adoption`
+- Active task: `RT-20260718-017`
+- Latest handoff: `handoff-0742`
+- Current status: `eqsrc_closure_source_law_candidate_audit_precise_totality_obstruction_repair_required_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-015`
-- Latest research handoff: `handoff-0741`
-- Latest research next action: Run one bounded Smuggling Auditor ontology-law-research-packet to audit EqSrcClosureLaw_src^cand for hidden target import process-authority laundering certificate-as-adoption overread and illicit general EqSrc RetainH or GenH promotion.
+- Latest research task: `RT-20260718-017`
+- Latest research handoff: `handoff-0742`
+- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet to repair proposal-only EqSrcClosureLaw_src^cand with explicit accepted identity inverse-totality and composition-totality clauses plus closed source grammar before fresh Smuggling Auditor review or Refuter stress.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `source_extension_smuggling_audit`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `eqsrc_closure_candidate_accepted_totality_repair`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Audit proposal-only EqSrcClosureLaw_src^cand for source purity and authority overread before stress or adoption.
+- Milestone burden: Repair the proposal-only candidate's accepted identity inverse and composition totality clauses and close source grammar before re-audit.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `23f72da04433685e381d3668bf6f13bfabe0c1782084719ab07ee7513a7848c3`
-- JSON SHA-256: `20a04c934e87d4b5c86abcb8d6f4f2e64e5e84d9f02f49ed536684a0680429f7`
+- YAML SHA-256: `744ecc4aeafc7f0d9de2798c45b5a046cdee17a4554342ca5703020ecc21f0d0`
+- JSON SHA-256: `c634e7c3add703d0f5c747345727209393648a012846cd18e2275d1a4098a722`
 
 ## Authority Warning
 
