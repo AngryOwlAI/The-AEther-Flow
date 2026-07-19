@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-021`
-- Latest handoff: `handoff-0746`
-- Current status: `eqsrc_closure_source_law_candidate_v3_audited_pending_refuter_stress_no_adoption`
+- Active task: `RT-20260718-022`
+- Latest handoff: `handoff-0747`
+- Current status: `eqsrc_closure_source_law_candidate_v3_refuter_scoped_selector_stability_obstruction_pending_concrete_bridge_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-021`
-- Latest research handoff: `handoff-0746`
-- Latest research next action: Run one bounded Refuter ontology-law-research-packet against exact v3 for nontrivial source-only model existence transitive source-root provenance malformed-definition rejection congruence accepted-totality coherence degenerate models and finite-variation robustness.
+- Latest research task: `RT-20260718-022`
+- Latest research handoff: `handoff-0747`
+- Latest research next action: Run one bounded Candidate Constructor ontology-law-research-packet to construct a proposal-only nondegenerate provenance-complete source interpretation with a source-rooted cross-fiber acceptance selector and explicit admissible finite-variation class, then prove stability or return a precise scoped obstruction. Do not route another generic closure-law signature repair or repeat audit.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_closure_candidate_v3_bounded_refuter_stress`
-- Role family: `refuter@0.2.0`
+- Route ID: `eqsrc_closure_provenance_selector_stability_candidate`
+- Role family: `candidate-constructor@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Stress the audited proposal-only v3 source closure law for nontrivial source-only instantiability provenance congruence accepted-totality coherence and robustness.
+- Milestone burden: Construct one proposal-only nondegenerate current-ontology-anchored source interpretation with a provenance-backed cross-fiber acceptance selector and explicit admissible finite-variation stability certificate, or return a precise scoped obstruction.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `c6ea7e07c6112b0cb5dbfd8b576053822a3a05d93b91a363e4ab7f59c0c041d8`
-- JSON SHA-256: `fa17f0115bf016f2cb2fee615d765bace2c31375d817a7a93c8a5774d435b6f9`
+- YAML SHA-256: `b6aace49ae84a8c05442bbd52bc864005c9fa6e6e9b28206446d65818d9d94ff`
+- JSON SHA-256: `e6736c5c42db0d7800166d686636def3d4475a8c643ecce0e0e1cabbc0791b1d`
 
 ## Authority Warning
 

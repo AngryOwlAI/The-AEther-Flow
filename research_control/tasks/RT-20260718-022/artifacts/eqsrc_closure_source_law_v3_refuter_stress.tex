@@ -1,0 +1,509 @@
+% authority: science-draft
+% status: draft/control
+% route: ontology-law-research-packet
+% stress_result: scoped_obstruction
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{countermodel}{Countermodel}
+\newtheorem{remark}{Remark}
+\newcommand{\Cert}{\mathsf{Cert}_{\mathrm{src}}}
+\newcommand{\Accept}{\mathsf{Accept}_{\mathrm{src}}}
+\newcommand{\Law}{\mathsf{EqSrcClosureLaw}^{\mathrm{cand},v3}_{\mathrm{src}}}
+\newcommand{\Pass}{\mathsf{Pass}}
+\newcommand{\Block}{\mathsf{Block}}
+\newcommand{\PiSrc}{\Pi_{\mathrm{src}}}
+
+\title{EqSrc Closure Source-Law Candidate v3 Refuter Stress:\\
+Finite-Variation Selection Obstruction}
+\author{Refuter control packet RT-20260718-022}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This artifact stress-tests exact proposal-only \(\Law\) after the fresh
+RT-20260718-021 statement-level audit. The exact Refuter result is
+\[
+  \boxed{\texttt{scoped\_obstruction}}.
+\]
+
+\begin{verbatim}
+stress_result: scoped_obstruction
+refuter_loop_classification: scoped_obstruction
+obstruction_id: OBST-EQSRC-CLOSURE-V3-VARIATION-SELECTOR-001
+nontrivial_abstract_model: finite_congruence_quotient_witness
+current_ontology_instantiation: not_established
+malformed_definition_result: meta_level_model_rejection
+finite_variation_robustness: scoped_obstruction
+candidate_status: proposal-only
+adoption_status: blocked_adoption_open_continuation
+general_EqSrc_discharged: false
+RetainH_adopted: false
+GenH_adopted: false
+distance_to_gr_ledger_changed: false
+next_role: candidate-constructor@0.2.0
+\end{verbatim}
+
+The positive and negative findings are distinct. Exact v3 is internally
+instantiable under its audited groupoid-style provenance reading. It does not,
+however, select which source-equivalence relation current ontology entails,
+and it supplies no admissible-variation or stability law that would make that
+selection robust. The obstruction is local to exact v3 as a standalone robust
+selector. It is not a global no-go theorem and does not establish future
+source-extension impossibility.
+
+\section{Inputs and Stress Method}
+
+The object under stress is
+\texttt{research\_control/tasks/RT-20260718-020/artifacts/
+eqsrc\_family\_closure\_source\_law\_candidate\_v3.tex}.
+The independent audit input is
+\texttt{research\_control/tasks/RT-20260718-021/artifacts/
+eqsrc\_closure\_source\_law\_v3\_smuggling\_audit.tex}.
+
+The stress separates seven questions:
+\begin{enumerate}[leftmargin=*]
+  \item Does a nontrivial source-only interpretation satisfy the full law?
+  \item Does its complete definition graph have transitive source-only
+  provenance?
+  \item Are malformed external inputs blocked at object level, or are
+  malformed interpretations rejected at model level?
+  \item Do congruence invariance, accepted totality, and full coherence imply
+  one another?
+  \item Does the law exclude physically uninformative degenerate models?
+  \item Can two full law models differ by finite source-decision data and
+  induce different object equivalence relations?
+  \item Does any result authorize adoption or downstream promotion?
+\end{enumerate}
+
+The method first constructs the smallest nonidentity abstract witness, then
+holds its carriers, constructors, congruences, provenance grammar, and negative
+controls fixed while changing only a finite symmetric source-decision table.
+This directly distinguishes intra-model congruence invariance from
+inter-model finite-variation stability.
+
+\section{Nontrivial Two-Object Source-Only Witness}
+
+\begin{definition}[Two-object thin-groupoid source interpretation]
+Let \(\mathcal F_{\mathrm{src}}=\{0,1\}\). For each ordered pair \(i,j\), let
+\(\Lambda(i,j)=\{\ell_{ij}\}\) and
+\(\mathcal P(i,j)=\{p_{ij}\}\), each with equality congruence. Use the unique
+endpoint-compatible ledger and proxy identity, inverse, and composition maps.
+
+Declare one primitive source provenance edge
+\[
+ q:0\longrightarrow 1.
+\]
+Generate \(\PiSrc\) by the candidate's identity, inverse, and composition
+grammar. Under its intended groupoid-style unit, inverse-cancellation,
+double-inverse, and associativity equation schemes, every
+\(\PiSrc(i,j)\) has exactly one congruence class. Thus the literal raw term
+grammar is countably infinite, but its endpoint-indexed congruence quotient is
+the finite thin groupoid with one arrow for every ordered pair.
+
+Let \(\mathcal N_{\mathrm{src}}=\{n\}\),
+\(\mathcal O_n=\{\Pass,\Block\}\), and
+\(\mathcal O_n^{\Pass}=\{\Pass\}\). Let every proxy decision and negative
+control pass. Initially let every ledger decision pass:
+\[
+ P_{i,j}(p_{ij})=\Pass,\qquad
+ \delta_{n,i,j}(w)=\Pass,\qquad
+ L_{i,j}(\ell_{ij})=\Pass.
+\]
+\end{definition}
+
+\begin{proposition}[Nontrivial abstract model]
+The displayed interpretation satisfies every clause of \(\Law\), and its
+induced relation is the universal equivalence relation on \(\{0,1\}\).
+\end{proposition}
+
+\begin{proof}
+Every raw certificate is accepted. The unique component constructors respect
+the singleton component congruences. Provenance identity, inverse, and
+composition satisfy the stated groupoid equation schemes modulo
+\(\equiv_{\Pi}\), so certificate unit, inverse, and associativity equations
+hold. Accepted identity, inverse, and composition totality follow. The source
+guard holds by the explicit root construction below. Each endpoint pair has
+an accepted certificate, so the induced relation is universal.
+\end{proof}
+
+\begin{remark}[Exact finiteness qualification]
+This is a finite-object, finite-root, finite-congruence-quotient witness, not a
+finite raw-syntax carrier: nested provenance constructors generate infinitely
+many terms before quotienting. It proves abstract nonidentity instantiability
+only. It is not a current-ontology interpretation, physical model, or empirical
+result.
+\end{remark}
+
+\begin{remark}[Provenance-equation qualification]
+The witness uses the intended reading that the candidate's ``inverse-unit
+equations'' include the two cancellation schemes
+\(\mathsf{comp}[\mathsf{inv}[\pi],\pi]\equiv\mathsf{id}\) and
+\(\mathsf{comp}[\pi,\mathsf{inv}[\pi]]\equiv\mathsf{id}\).
+That reading matches the candidate's full inverse-compatibility clauses and
+the prior audit. A proof-assistant translation must display these schemes.
+If ``inverse-unit'' were read more weakly, the primitive cross-object
+certificate would fail inverse compatibility, yielding a stronger scoped
+formalization obstruction rather than this positive witness.
+\end{remark}
+
+\section{Transitive Source-Root Provenance Stress}
+
+Let the source-root tuple be
+\[
+ S=(0,1,q,\{\ell_{ij}\},\{p_{ij}\},n,\Pass,\Block).
+\]
+Take an ambient interpretation space
+\(\Omega=S_{\mathrm{space}}\times T\times W\), where \(T\) and \(W\) hold
+arbitrary target and workflow coordinates. Every carrier, constructor,
+congruence, decision, and provenance leaf above is a function of the
+projection \(\pi_{\mathrm{src}}:\Omega\to S_{\mathrm{space}}\) alone.
+Every internal node is a typed source constructor. Consequently the complete
+definition graph factors through \(\pi_{\mathrm{src}}\).
+
+No alias, hash, lookup, learned parameter, opaque oracle, target geometry,
+detector value, benchmark outcome, registry field, role identity, validator
+result, handoff, checkpoint, or adoption status populates a root. Holding
+\(S\) fixed while varying \(T\) or \(W\) leaves the model unchanged.
+
+This is a transitive provenance pass for the constructed abstract
+source-extension witness. It is not evidence that current ontology supplies
+\(S\), \(q\), the component fibers, or the decision tables. A declaration that
+these are ``source'' roots establishes the model's formal hygiene, not their
+physical necessity or current-ontology derivation.
+
+\section{Malformed Definitions and Typed Fail Closure}
+
+\begin{proposition}[Typed-domain versus model-level rejection]
+The displayed function
+\[
+ \Accept_{A,B}:\Cert(A,B)\longrightarrow\{\Pass,\Block\}
+\]
+is total on its typed raw-certificate domain. A malformed or ill-typed
+external value is not an element of that domain and therefore does not
+literally receive an object-level \(\Block\) value.
+\end{proposition}
+
+Missing carriers, partial maps, absent definition trees, backward dependency
+edges, endpoint type errors, or forbidden provenance instead make a proposed
+interpretation fail the candidate's model condition. This is sound
+meta-level malformed-interpretation rejection. Object-level rejection of
+arbitrary external inputs would require a separately declared tagged error or
+option carrier. The distinction does not invalidate the typed conditional
+equivalence theorem.
+
+\section{Congruence, Accepted Totality, and Coherence}
+
+Three independence pressures survive the audit:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Congruence does not imply accepted totality.}
+  In a one-object singleton-component structure, make
+  \(L_{A,A}(e_A)=\Block\). Acceptance remains total and congruence-invariant,
+  but accepted identity totality fails.
+
+  \item \textbf{Accepted totality does not imply full coherence.}
+  The RT-20260718-021 two-ledger countermodel accepts every certificate and
+  satisfies identity, inverse, and composition totality, yet constantly
+  identity-valued ledger composition violates unit compatibility on its
+  nonidentity ledger element.
+
+  \item \textbf{Intra-model congruence does not imply inter-model stability.}
+  Congruence invariance says equivalent certificates inside one interpretation
+  share acceptance status. It does not relate two independently admissible
+  source decision maps.
+\end{enumerate}
+
+The full \(\Law\) explicitly requires accepted totality and coherence, so the
+first two pressures are not contradictions in a full model. They show that the
+law's substantive assumptions cannot be recovered merely from acceptance
+typing or congruence.
+
+\section{Degenerate-Model Pressure}
+
+The candidate admits the audited one-object singleton model, the two-object
+universal model above, and the two-object discrete model constructed below.
+More generally, under the intended groupoid reading, a finite equivalence
+relation \(R\) can be represented by choosing a source-rooted spanning forest
+for each \(R\)-class, taking the induced thin-groupoid quotient, and accepting
+exactly the endpoint pairs in \(R\).
+
+Thus \(\Law\) enforces equivalence-style closure on whatever acceptance data
+are supplied, but it does not select which equivalence relation is physically
+meaningful. Degenerate, discrete, and indiscrete relations are all compatible
+with the abstract schema. No naturalness, uniqueness, observable
+discriminator, or exact-GR recovery criterion follows.
+
+\section{Law-Preserving Finite-Variation Countermodel}
+
+\begin{countermodel}[Two-entry source-decision variation]
+Keep every object, carrier, constructor, congruence, provenance term,
+proxy decision, and negative control of the two-object witness fixed.
+Define two ledger-decision interpretations:
+\[
+\begin{array}{c|cc}
+ & i=j & i\ne j\\
+\hline
+\mathcal M_{\mathrm U}:L_{i,j}(\ell_{ij}) & \Pass & \Pass\\
+\mathcal M_{\mathrm D}:L_{i,j}(\ell_{ij}) & \Pass & \Block .
+\end{array}
+\]
+The change consists of the two directed off-diagonal table entries
+\((0,1)\) and \((1,0)\). Both tables are total, source-factorized, and
+congruence-invariant.
+\end{countermodel}
+
+\begin{proposition}[Finite-variation selection obstruction]
+Both \(\mathcal M_{\mathrm U}\) and \(\mathcal M_{\mathrm D}\) satisfy the
+full candidate law, but their induced object relations differ:
+\[
+ \sim_{\mathcal M_{\mathrm U}}=\{0,1\}\times\{0,1\},
+ \qquad
+ \sim_{\mathcal M_{\mathrm D}}=\{(0,0),(1,1)\}.
+\]
+\end{proposition}
+
+\begin{proof}
+The universal model was proved above. In \(\mathcal M_{\mathrm D}\), every
+diagonal certificate is accepted and every off-diagonal certificate is
+blocked. Accepted identity totality holds. The inverse of an accepted loop is
+an accepted loop, and a composable pair of accepted certificates can only
+compose within one endpoint, so accepted inverse and composition totality
+hold. Unit, inverse, and associativity compatibility hold modulo the thin
+groupoid congruence on accepted loops. All decisions remain source-only and
+congruence-invariant. Hence \(\mathcal M_{\mathrm D}\) is also a full model,
+but only identical objects are related.
+\end{proof}
+
+Exact v3 therefore supplies neither:
+\begin{itemize}[leftmargin=*]
+  \item a current-ontology-derived selector fixing \(L\), \(P\), and
+  \(\delta_n\); nor
+  \item a source-side admissible-variation relation, transport certificate,
+  stability law, or naturality condition constraining finite changes to those
+  decisions.
+\end{itemize}
+
+The countermodel refutes only the overread that exact v3 alone selects a
+finite-variation-robust \(\mathrm{EqSrc}\). A narrower variation class could
+restore robustness, but that class and its proof are new source-side payload
+not present in v3.
+
+\section{Refuter Obstruction Record}
+
+\begin{verbatim}
+refuter_obstruction_record:
+  obstruction_id: "OBST-EQSRC-CLOSURE-V3-VARIATION-SELECTOR-001"
+  target_claim: "Exact v3 alone supplies a nontrivial finite-variation-
+    robust source-equivalence selector."
+  target_milestone: "source_equivalence_eqsrc"
+  failed_premise: "No provenance-backed source rule fixes L, P, and delta,
+    and no admissible finite-variation class or stability law constrains
+    finite changes to those decisions."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260718-022/artifacts/
+    eqsrc_closure_source_law_v3_refuter_stress.tex"
+  countermodel_scope: "exact_finite_branch"
+  certificate_gap: "Missing source-rooted cross-fiber acceptance selector
+    and missing certificate that the selected decision is invariant under
+    an explicit admissible variation class."
+  source_extension_repair_possible: "repair_possible"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "not_frozen"
+    decision_reason: "The packet adds a finite congruence-quotient witness
+      and a discriminating finite-decision countermodel. A concrete
+      bridge-facing construction remains available."
+    next_allowed_route: "candidate_constructor"
+  route_cycle_control:
+    cycle_family: "eqsrc_family_closure_source_law"
+    current_cycle_step: "proposal_only_v3_refuter_stress"
+    prior_related_tasks:
+      - "RT-20260718-015"
+      - "RT-20260718-017"
+      - "RT-20260718-018"
+      - "RT-20260718-019"
+      - "RT-20260718-020"
+      - "RT-20260718-021"
+    cycle_risk: "high"
+    orbit_avoidance_reason: "The next packet must construct a concrete
+      provenance-complete selector and admissible variation class; another
+      generic closure-law signature repair or audit is forbidden."
+    next_role_consequence: "candidate-constructor@0.2.0"
+  forbidden_conclusions:
+    - "No canonical ontology edit or source-law adoption."
+    - "No general EqSrc discharge."
+    - "No claim that every v3 interpretation fails."
+    - "No program-level no-go or global theory rejection."
+    - "No future source-extension impossibility."
+    - "No RetainH, GenH, M_src, or g_eff adoption."
+    - "No matter-coupling or Einstein-equation derivation."
+    - "No benchmark promotion, Gate Chair verdict, or completed derivation."
+\end{verbatim}
+
+\section{Stress Result and Loop Classification}
+
+The required one-of-five Refuter loop classification is
+\(\texttt{scoped\_obstruction}\). The obstruction concerns selection and
+finite-variation stability, not abstract consistency:
+\begin{itemize}[leftmargin=*]
+  \item a nonidentity source-only model exists at finite
+  congruence-quotient level under the intended provenance equations;
+  \item exact v3 still permits multiple source-only full models with different
+  induced equivalence relations;
+  \item current ontology supplies no audited rule choosing among them; and
+  \item no admissible variation class or stability certificate is present.
+\end{itemize}
+
+This is new mathematical payload and therefore not
+\texttt{repeated\_unmet\_burdens\_no\_new\_payload}. It does not authorize
+another generic signature repair or another repetition of the same audit.
+
+\section{Source-Extension and Adoption Classification}
+
+The stressed object remains \texttt{proposal-only}, \texttt{draft/control}
+source-extension data. The stress establishes neither current-ontology
+derivation nor conservative definitional extension. It detects no explicit
+target or process import in the written schema. Its obstruction is that the
+primitive source decisions remain unselected and unstabilized.
+
+Current adoption remains blocked while same-milestone continuation stays open:
+\[
+ \texttt{blocked\_adoption\_open\_continuation}.
+\]
+Any canonical-ontology candidate designation, source-law adoption, or
+ontology modification still requires protected human authority. No adoption
+is requested by this packet.
+
+\section{Distance-to-GR Status}
+
+\begin{longtable}{p{0.31\linewidth}p{0.58\linewidth}}
+\toprule
+Burden & Status after this Refuter packet \\
+\midrule
+Source ontology primitives & Unchanged; the witness uses proposal-only source-extension roots. \\
+Source equivalence EqSrc & Exact v3 has a scoped selection and robustness obstruction; general EqSrc remains undischarged. \\
+RetainH & Unchanged and not adopted. \\
+GenH & Unchanged and not adopted. \\
+\(\mathrm{ObsLoc}_{lc}\) & Unchanged. \\
+\(\mathrm{Resp}_{lc}\) & Unchanged. \\
+\(M_{\mathrm{src}}\) & Unchanged and not adopted. \\
+\(g_{\mathrm{eff}}\) & Unchanged; no metric result or scope expansion. \\
+Matter coupling & Blocked and unchanged. \\
+Einstein equations & Blocked and unchanged. \\
+Finite-variation robustness & Not established; the exact finite-decision countermodel changes the induced relation between two full law models. \\
+Benchmark promotion & Blocked; no benchmark evidence or promotion. \\
+Gate Chair status & Unchanged; no verdict or adoption request. \\
+Current route freeze or hard-fail status & Not globally frozen; generic closure-law reformulation is barred and one concrete bridge-facing construction remains open. \\
+\bottomrule
+\end{longtable}
+
+The Distance-to-GR ledger is unchanged. The packet narrows the missing burden
+to a provenance-backed selector plus an explicit admissible variation and
+stability certificate.
+
+\section{Freeze and Route-Cycle Evaluation}
+
+\begin{verbatim}
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-CLOSURE-SOURCE-LAW-SIGNATURE"
+  prior_attempts_considered:
+    - "RT-20260718-015"
+    - "RT-20260718-017"
+    - "RT-20260718-018"
+    - "RT-20260718-019"
+    - "RT-20260718-020"
+    - "RT-20260718-021"
+    - "RT-20260718-022"
+  freeze_if:
+    - "The route returns to generic signature or audit reformulation
+      without selector or variation data."
+    - "A proposed selector merely renames target, workflow, oracle, or
+      opaque imported data."
+    - "No concrete provenance-complete nondegenerate instance is supplied."
+  do_not_freeze_if:
+    - "A concrete source-rooted selector and admissible variation class are
+      constructed and sent to independent audit."
+  freeze_decision: "not_frozen"
+  decision_reason: "Same-milestone continuation remains open through a
+    materially different bridge-facing construction; another generic v3
+    reformulation is disallowed."
+  next_allowed_route: "candidate_constructor"
+\end{verbatim}
+
+The route-cycle risk is high because v1 through v3 required repeated
+construction and audit. It is nevertheless not frozen: this Refuter packet
+adds both a nontrivial congruence-quotient witness and a minimal
+law-preserving variation countermodel. The next packet must change the payload
+class to concrete selector and stability construction.
+
+\section{Forbidden Conclusions}
+
+This result does not establish:
+\begin{itemize}[leftmargin=*]
+  \item failure of every v3 interpretation;
+  \item canonical ontology modification or source-law adoption;
+  \item general \(\mathrm{EqSrc}\) discharge;
+  \item \(\mathrm{RetainH}\), \(\mathrm{GenH}\), or
+  \(M_{\mathrm{src}}\) adoption;
+  \item an effective metric, matter coupling, or Einstein equations;
+  \item finite-variation robustness for a narrower future admissible class;
+  \item benchmark promotion, a Gate Chair verdict, or completed derivation;
+  \item a program-level no-go, global theory rejection, or future
+  source-extension impossibility.
+\end{itemize}
+
+\section{Next Route}
+
+The next lawful route is one bounded
+\texttt{candidate-constructor@0.2.0}
+\texttt{ontology-law-research-packet}. It must construct one proposal-only,
+nondegenerate, provenance-complete source interpretation together with:
+\begin{itemize}[leftmargin=*]
+  \item a source-rooted selector for cross-fiber acceptance;
+  \item an explicit admissible finite-variation class;
+  \item a stability or naturality certificate for that class, or its minimal
+  countermodel; and
+  \item complete separation from target, workflow, registry, validator,
+  adoption, and benchmark authority.
+\end{itemize}
+
+The packet must return either that concrete bridge-facing construction or one
+precise scoped obstruction. It must not produce another generic closure-law
+signature reformulation. No human gate is required to attempt the construction;
+any adoption remains separately human-gated.
+
+\section{Source Materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Proposal-only EqSrc closure
+source-law candidate v3: Exact signature and non-circular acceptance repair}
+[Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260718-020/artifacts/
+eqsrc\_family\_closure\_source\_law\_candidate\_v3.tex}.
+
+The AEther-Flow Research Project. (2026b). \emph{EqSrc closure source-law
+candidate v3 smuggling audit} [Research-control TeX artifact].
+\texttt{research\_control/tasks/RT-20260718-021/artifacts/
+eqsrc\_closure\_source\_law\_v3\_smuggling\_audit.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{Handoff 0746}
+[Research-control handoff].
+\texttt{research\_control/handoffs/handoff-0746.yaml}.
+
+The AEther-Flow Research Project. (2026d). \emph{GR derivation burden map}
+[Research-control note].
+\texttt{research\_control/design/gr\_derivation\_burden\_map.md}.
+
+\end{document}

@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T09:16:45Z`
-- Source fingerprint: `3d0f7be71bb2731188698f4971898491ce408f24d8533c8451e25ce2a0df4b0e`
-- Nodes: `19087`
-- Edges: `66374`
+- Generated from tracked state as of: `2026-07-19T10:07:39Z`
+- Source fingerprint: `411d63ace1b6b097048cc8c7309ccb634010453a783b290347814448412215ec`
+- Nodes: `19113`
+- Edges: `66432`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 975 |
+| `completion_yaml` | 976 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 746 |
+| `handoff_yaml` | 747 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 975 |
+| `agent_job` | `support_only` | 976 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10004 |
-| `blocked_burden` | `blocked` | 3645 |
-| `claim_boundary` | `support_only` | 932 |
-| `draft_control_candidate` | `draft_control` | 545 |
+| `artifact` | `support_only` | 10018 |
+| `blocked_burden` | `blocked` | 3647 |
+| `claim_boundary` | `support_only` | 933 |
+| `draft_control_candidate` | `draft_control` | 548 |
 | `draft_control_candidate` | `proposal_only` | 76 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 109 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 746 |
+| `handoff` | `support_only` | 747 |
 | `human_gated_object` | `human_gated` | 420 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 66 |
+| `obstruction` | `blocked` | 67 |
 | `obstruction` | `rejected` | 1 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 29 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 297 |
+| `source_ontology_object` | `support_only` | 298 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 914 |
+| `task` | `support_only` | 915 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-021`
-- Latest handoff: `handoff-0746`
-- Handoff path: `research_control/handoffs/handoff-0746.yaml`
-- Next action: Run one bounded Refuter ontology-law-research-packet against exact v3 for nontrivial source-only model existence transitive source-root provenance malformed-definition rejection congruence accepted-totality coherence degenerate models and finite-variation robustness.
+- Active task: `RT-20260718-022`
+- Latest handoff: `handoff-0747`
+- Handoff path: `research_control/handoffs/handoff-0747.yaml`
+- Next action: Run one bounded Candidate Constructor ontology-law-research-packet to construct a proposal-only nondegenerate provenance-complete source interpretation with a source-rooted cross-fiber acceptance selector and explicit admissible finite-variation class, then prove stability or return a precise scoped obstruction. Do not route another generic closure-law signature repair or repeat audit.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

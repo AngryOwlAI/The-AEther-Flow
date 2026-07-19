@@ -47,6 +47,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-019/artifacts/eqsrc_closure_source_law_v2_smuggling_audit.tex`
+- `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-021/artifacts/eqsrc_closure_source_law_v3_smuggling_audit.tex`
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex`
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V2` `research_control/tasks/RT-20260718-018/artifacts/eqsrc_family_closure_source_law_candidate_v2.tex`

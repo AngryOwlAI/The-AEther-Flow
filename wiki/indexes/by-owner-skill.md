@@ -560,6 +560,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-020-PARENT-FUSION-NOTES-EQSRC-CLOSURE-V3-SIGNATURE-REPAIR` `wiki/markdown/md-research-control-tasks-rt-20260718-020-parent-fusion-notes-eqsrc-closure-v3-signature-repair.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-021-EQSRC-CLOSURE-SOURCE-LAW-V3-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-021-eqsrc-closure-source-law-v3-smuggling-audit-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-021-PARENT-FUSION-NOTES-EQSRC-CLOSURE-V3-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-021-parent-fusion-notes-eqsrc-closure-v3-smuggling-audit.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-022-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-022-eqsrc-closure-source-law-v3-refuter-stress-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-022-PARENT-FUSION-NOTES-EQSRC-CLOSURE-V3-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260718-022-parent-fusion-notes-eqsrc-closure-v3-refuter-stress.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -649,6 +651,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-PDF-ONTOLOGY-AETHER-FLOW-RELATIVISTIC-RECOVERY` `wiki/pdf/pdf-ontology-aether-flow-relativistic-recovery.md`
 - `WIKI-TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `wiki/tex/tex-eqsrc-closure-source-law-smuggling-audit-v1.md`
 - `WIKI-TEX-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT` `wiki/tex/tex-eqsrc-closure-source-law-v2-smuggling-audit.md`
+- `WIKI-TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS` `wiki/tex/tex-eqsrc-closure-source-law-v3-refuter-stress.md`
 - `WIKI-TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-SMUGGLING-AUDIT` `wiki/tex/tex-eqsrc-closure-source-law-v3-smuggling-audit.md`
 - `WIKI-TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V1` `wiki/tex/tex-eqsrc-family-closure-source-law-candidate-v1.md`
 - `WIKI-TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V2` `wiki/tex/tex-eqsrc-family-closure-source-law-candidate-v2.md`
@@ -1306,6 +1309,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-020-PARENT-FUSION-NOTES-EQSRC-CLOSURE-V3-SIGNATURE-REPAIR` `research_control/tasks/RT-20260718-020/artifacts/parent_fusion_notes_eqsrc_closure_v3_signature_repair.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-021-EQSRC-CLOSURE-SOURCE-LAW-V3-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260718-021/artifacts/eqsrc_closure_source_law_v3_smuggling_audit_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-021-PARENT-FUSION-NOTES-EQSRC-CLOSURE-V3-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-021/artifacts/parent_fusion_notes_eqsrc_closure_v3_smuggling_audit.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-022-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-022-PARENT-FUSION-NOTES-EQSRC-CLOSURE-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-022/artifacts/parent_fusion_notes_eqsrc_closure_v3_refuter_stress.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -1361,6 +1366,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SKILL-TEX-WIKI` `.codex/skills/tex-wiki/SKILL.md`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-019/artifacts/eqsrc_closure_source_law_v2_smuggling_audit.tex`
+- `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-021/artifacts/eqsrc_closure_source_law_v3_smuggling_audit.tex`
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex`
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V2` `research_control/tasks/RT-20260718-018/artifacts/eqsrc_family_closure_source_law_candidate_v2.tex`

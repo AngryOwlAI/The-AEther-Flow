@@ -1,0 +1,132 @@
+artifact_id: "child_phys_math_eqsrc_closure_v3_refuter_stress"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-022"
+job_id: "AJ-RT-20260718-022-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+candidate_path: "research_control/tasks/RT-20260718-020/artifacts/eqsrc_family_closure_source_law_candidate_v3.tex"
+candidate_hash: "e7580253bdcfcce83e5181153752e72f597059196eb36cefd0dbe83380e2ad79"
+audit_path: "research_control/tasks/RT-20260718-021/artifacts/eqsrc_closure_source_law_v3_smuggling_audit.tex"
+audit_hash: "159b29e2412e67f2619682c870a3456266283c207d33db6fbbd2f0dd8767e4d1"
+loop_risk_classification: "scoped_obstruction"
+
+exact_result: "Exact proposal-only v3 is internally instantiable at finite congruence-quotient level, but it does not by itself select a nondegenerate or finite-variation-robust EqSrc. Congruence invariance is intra-model only. Two source-only law models can share all carriers constructors congruences provenance and negative controls while finitely differing in a ledger decision table and inducing different object equivalence relations."
+
+nontrivial_source_only_model:
+  model_id: "EQSRC-V3-THIN-GROUPOID-2"
+  status: "abstract proposal-only source-extension witness"
+  source_objects:
+    - "0"
+    - "1"
+  ledger_fibers: "One element ell_ij in each Lambda(i,j)."
+  proxy_fibers: "One element p_ij in each P(i,j)."
+  primitive_provenance: "One source-rooted edge q:0->1; the inverse and all composites are generated."
+  constructors: "Unique endpoint-compatible identity inverse and composition maps."
+  component_congruences: "Equality on singleton components and the candidate groupoid-style provenance congruence."
+  negative_control:
+    index_set:
+      - "n"
+    outcome_set:
+      - "Pass"
+      - "Block"
+    saturated_pass_set:
+      - "Pass"
+  all_pass_decisions:
+    ledger: "Pass on every endpoint fiber."
+    proxy: "Pass on every endpoint fiber."
+    negative_control: "Pass on every certificate."
+  induced_relation: "Universal relation on {0,1}."
+  law_status: "Satisfies v3 under the intended provenance cancellation equations."
+  finiteness_qualification: "The model is finite after quotienting Pi_src by equiv_Pi with one class per ordered endpoint pair. The literal raw term grammar is countably infinite, so the exact claim is finite congruence-quotient model."
+
+transitive_provenance:
+  result: "pass_for_constructed_abstract_model"
+  source_roots: "Objects, one primitive edge, singleton component values, outcome tokens, and constant source decisions are explicitly enumerated."
+  excluded_channels:
+    - "alias"
+    - "hash"
+    - "lookup"
+    - "learned parameter"
+    - "opaque oracle"
+    - "target datum"
+    - "workflow datum"
+    - "generated derivative"
+  current_ontology_instantiation: "not_established"
+
+provenance_equation_qualification:
+  intended_reading: "The candidate's inverse-unit equations include both inverse-cancellation schemes, consistent with its full inverse-compatibility clauses and the prior audit."
+  weaker_literal_reading: "If inverse-unit means only inverse of identity, the primitive cross-object certificate fails inverse compatibility and produces a stronger scoped formalization obstruction."
+  consequence: "A proof-assistant translation must display the equation schemes. The fused result preserves this as a qualification, not a global no-go."
+
+finite_variation_countermodel:
+  countermodel_id: "CM-EQSRC-V3-TWO-ENTRY-LEDGER-VARIATION"
+  shared_structure: "Use EQSRC-V3-THIN-GROUPOID-2 with identical roots carriers constructors congruences provenance proxy decisions and negative controls."
+  interpretation_universal:
+    ledger_rule: "Pass on all four endpoint fibers."
+    induced_relation: "{0,1} x {0,1}"
+    law_status: "satisfies v3"
+  interpretation_discrete:
+    ledger_rule: "Pass on diagonal fibers and Block on the two off-diagonal fibers."
+    induced_relation: "{(0,0),(1,1)}"
+    law_status: "satisfies v3"
+  variation_size: "Two literal ledger decision entries: 0->1 and 1->0."
+  exact_failure: "V3 supplies no source-side selector provenance certificate admissible variation class or robustness condition choosing the universal or discrete interpretation."
+  robustness_scope: "Refutes invariance under the cheapest symmetric finite congruence-respecting source-decision variation. No broader variation topology is defined by v3."
+
+representation_pressure:
+  statement: "Under the intended groupoid reading, arbitrary finite equivalence relations can be represented at the induced-object level by thin groupoid components and endpoint acceptance tables."
+  consequence: "V3 enforces equivalence closure but does not select which finite equivalence relation is EqSrc."
+
+malformed_definition_result:
+  object_level: "Accept is total only on Cert(A,B); an external malformed value is outside the domain and does not literally receive Block."
+  model_level: "Missing carriers maps definition trees typing judgments or permitted provenance make the proposed interpretation fail the model condition."
+  conclusion: "V3 supports meta-level malformed-interpretation rejection. Object-level rejection would require an ambient tagged error carrier."
+
+independence_results:
+  congruence_vs_totality: "A singleton one-object structure with the identity ledger decision set to Block has total congruence-invariant acceptance but fails accepted identity totality."
+  totality_vs_coherence: "The prior two-ledger all-accepted structure satisfies accepted totality but fails unit compatibility."
+  intra_vs_inter_model: "Certificate congruence controls one interpretation and supplies no stability relation across two congruence-respecting source decision maps."
+
+refuter_obstruction_record:
+  obstruction_id: "OBST-EQSRC-CLOSURE-V3-VARIATION-SELECTOR-001"
+  target_claim: "Exact v3 alone supplies a nontrivial finite-variation-robust source equivalence selector."
+  target_milestone: "source_equivalence_eqsrc"
+  failed_premise: "No provenance-backed source rule fixes L P and delta or declares an admissible finite-variation class, so two law-satisfying source-only interpretations with the same algebraic structure can induce equality and universal EqSrc."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex"
+  countermodel_scope: "exact_finite_branch"
+  certificate_gap: "Missing source-rooted cross-fiber acceptance selector and missing stability certificate for an explicit admissible variation class."
+  source_extension_repair_possible: "repair_possible"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-CLOSURE-SOURCE-LAW-SIGNATURE"
+  freeze_decision: "not_frozen"
+  decision_reason: "This packet adds a finite congruence-quotient witness and a discriminating finite-decision countermodel. Continuation is non-orbital if it changes to concrete bridge-facing selector construction."
+  next_allowed_route: "candidate_constructor"
+
+lawful_next_role:
+  role_family: "candidate-constructor@0.2.0"
+  objective: "Construct one proposal-only provenance-complete nondegenerate source interpretation with a source-side cross-fiber selector and explicit admissible finite-variation class, then prove stability or return its minimal countermodel."
+  requires_human_gate: false
+
+new_mathematical_payload:
+  - payload_type: "explicit_witness"
+    name: "Finite congruence-quotient two-object thin-groupoid model"
+  - payload_type: "countermodel"
+    name: "Two-entry ledger-decision variation from universal to equality EqSrc"
+  - payload_type: "theorem"
+    name: "Finite equivalence-relation representation pressure"
+  - payload_type: "lemma"
+    name: "Congruence accepted-totality coherence independence"
+
+forbidden_conclusions:
+  - "No canonical ontology edit or source-law adoption."
+  - "No general EqSrc discharge."
+  - "No claim that every v3 interpretation fails."
+  - "No program-level no-go or future source-extension impossibility."
+  - "No downstream GR promotion or completed derivation."
