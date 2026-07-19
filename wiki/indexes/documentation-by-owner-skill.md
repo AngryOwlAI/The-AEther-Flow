@@ -554,6 +554,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-017-PARENT-FUSION-NOTES-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-017-parent-fusion-notes-eqsrc-closure-source-law-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-018-EQSRC-CLOSURE-SOURCE-LAW-TOTALITY-REPAIR-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-018-eqsrc-closure-source-law-totality-repair-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-018-PARENT-FUSION-NOTES-EQSRC-CLOSURE-TOTALITY-REPAIR` `wiki/markdown/md-research-control-tasks-rt-20260718-018-parent-fusion-notes-eqsrc-closure-totality-repair.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-019-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-019-eqsrc-closure-source-law-v2-smuggling-audit-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-019-PARENT-FUSION-NOTES-EQSRC-CLOSURE-V2-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-019-parent-fusion-notes-eqsrc-closure-v2-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -899,6 +901,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-017-PARENT-FUSION-NOTES-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-017/artifacts/parent_fusion_notes_eqsrc_closure_source_law_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-018-EQSRC-CLOSURE-SOURCE-LAW-TOTALITY-REPAIR-RECEIPT` `research_control/tasks/RT-20260718-018/artifacts/eqsrc_closure_source_law_totality_repair_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-018-PARENT-FUSION-NOTES-EQSRC-CLOSURE-TOTALITY-REPAIR` `research_control/tasks/RT-20260718-018/artifacts/parent_fusion_notes_eqsrc_closure_totality_repair.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-019-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260718-019/artifacts/eqsrc_closure_source_law_v2_smuggling_audit_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-019-PARENT-FUSION-NOTES-EQSRC-CLOSURE-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-019/artifacts/parent_fusion_notes_eqsrc_closure_v2_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

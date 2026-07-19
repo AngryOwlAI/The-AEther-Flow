@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `62fdee24f16badd76100815b850c1236cc628b5e31de54591db04761d3faf801`
-- Generated-at source timestamp: `2026-07-19T06:28:23Z`
-- Row count: `976`
+- Source fingerprint: `0708773537ccdd72deca6be4ce09aa1034b28c0cb3e1b3330e4ee1aabc7f08b6`
+- Generated-at source timestamp: `2026-07-19T07:19:40Z`
+- Row count: `977`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260718-019|RT-20260718-018|2026-07-19T07:19:40Z|2026-07-19T07:29:54Z|eqsrc_closure_source_law_candidate_v2_smuggling_audit|completed|source_equivalence_eqsrc|Audit the repaired accepted-totality quantifiers and closed source grammar before Refuter stress, adoption, or any general EqSrc claim.|smuggling-auditor@0.2.0|false|false|9|Run one bounded Ontology Formalizer ontology-law-research-packet to produce a proposal-only v3 signature and non-circularity repair before fresh audit or Refuter stress.|PASS|research_control/tasks/RT-20260718-019/jobs/completions/AJC-AJ-RT-20260718-019-001.yaml|
 |RT-20260718-018|RT-20260718-017|2026-07-19T06:28:23Z|2026-07-19T06:37:40Z|eqsrc_closure_source_law_candidate_accepted_totality_repair|completed|source_equivalence_eqsrc|Repair the proposal-only candidate's accepted identity, inverse, and composition totality clauses and close its source grammar before fresh independent audit.|ontology-formalizer@0.2.0|false|false|9|Run one fresh bounded Smuggling Auditor ontology-law-research-packet before Refuter stress or any protected adoption consideration.|PASS|research_control/tasks/RT-20260718-018/jobs/completions/AJC-AJ-RT-20260718-018-001.yaml|
 |RT-20260718-017|RT-20260718-015|2026-07-19T05:41:44Z|2026-07-19T05:49:28Z|eqsrc_closure_source_law_candidate_smuggling_audit|completed|source_equivalence_eqsrc|Audit whether proposal-only EqSrcClosureLaw_src^cand is source-pure and formally sufficient to support its conditional equivalence proposition before repair, stress, adoption, or any general EqSrc claim.|smuggling-auditor@0.2.0|false|false|9|Run one bounded Ontology Formalizer ontology-law-research-packet to repair proposal-only EqSrcClosureLaw_src^cand with explicit accepted identity inverse-totality and composition-totality clauses plus closed source grammar before fresh Smuggling Auditor review or Refuter stress.|PASS|research_control/tasks/RT-20260718-017/jobs/completions/AJC-AJ-RT-20260718-017-001.yaml|
 |RT-20260718-016|RT-20260718-015|2026-07-19T05:02:51Z|2026-07-19T05:08:30Z|compact_frontier_generated_derivative_classifier_repair|completed|none|Project-system classifier repair only; no derivation milestone or scientific burden is advanced.|validator-engineer@0.2.0|false|false|0|After governed checkpoint PASS continue from handoff-0741 with the already-selected Smuggling Auditor audit.|PASS|research_control/tasks/RT-20260718-016/jobs/completions/AJC-AJ-RT-20260718-016-001.yaml|

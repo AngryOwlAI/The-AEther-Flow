@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-018`
-- Latest handoff: `handoff-0743`
-- Current status: `eqsrc_closure_source_law_candidate_v2_accepted_totality_repaired_pending_fresh_audit_no_adoption`
+- Active task: `RT-20260718-019`
+- Latest handoff: `handoff-0744`
+- Current status: `eqsrc_closure_source_law_candidate_v2_signature_obstruction_repair_required_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-018`
-- Latest research handoff: `handoff-0743`
-- Latest research next action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet to audit EqSrcClosureLaw_src^cand v2 for hidden target import open grammar circular acceptance process-authority laundering and overread before Refuter stress or any protected adoption consideration.
+- Latest research task: `RT-20260718-019`
+- Latest research handoff: `handoff-0744`
+- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet to produce a proposal-only v3 that declares or explicitly quantifies all proxy witness constructors declares component congruences types negative-control predicates and stratifies acceptance dependencies before fresh Smuggling Auditor review or Refuter stress.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_closure_candidate_v2_fresh_smuggling_audit`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `eqsrc_closure_candidate_v3_signature_repair`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Audit the repaired accepted-totality quantifiers and closed source grammar before Refuter stress adoption or any general EqSrc claim.
+- Milestone burden: Repair the proposal-only source signature and non-circular acceptance dependency order while preserving accepted-totality clauses before fresh audit.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `5565a8b6a0bf89886d897b8f75a77d0f013737f714e6b2b6cb77f412e7505557`
-- JSON SHA-256: `5d1820366f4946589ef2909dbafaad1ef33c12d146653f51a4928d3fd5815878`
+- YAML SHA-256: `d96bb93f85ed06ce3f48006f4bbccbf637d3f18e3efa1d09279ac5a025c94815`
+- JSON SHA-256: `cc401014fa6121d631fc20414b99cd58783458a02acc02ad1ad85f5685fb6aad`
 
 ## Authority Warning
 
