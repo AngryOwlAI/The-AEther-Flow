@@ -9,6 +9,16 @@ created_by_role: "validator-engineer@0.2.0"
 purpose: "Reviewed scoped contexts for P3-T02 claim-language linter warning overrides."
 scope_note: "These entries do not permit current/public overclaims. They only downgrade explicitly reviewed route-context or bad-example surfaces that quote forbidden phrases as linter targets."
 entries:
+  - entry_id: "ALLOW-V21-P0-T01-GLOBAL-REJECTION-GUARD-CONTEXT"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    class_ids:
+      - "global_no_go_or_rejection_overclaim"
+    surface_class_override: "intentional_bad_example_surfaces"
+    severity_override: "warn_intentional_example"
+    reviewed_by_task_id: "RT-20260720-002"
+    reviewed_by_role: "validator-engineer@0.2.0"
+    scope_rationale: "The two v21 occurrences distinguish local family freeze from global rejection or list global rejection as a forbidden conclusion; neither occurrence asserts a project-wide rejection."
+    expires_after: "P0-T01 registration and reviewed-context revalidation"
   - entry_id: "ALLOW-V15-P8-EFE-PREREQUISITE-PLAN-ROUTE-CONTEXT"
     path: "implementations_plans/recommendations_implementation_plan_continue_task-v15.md"
     class_ids:

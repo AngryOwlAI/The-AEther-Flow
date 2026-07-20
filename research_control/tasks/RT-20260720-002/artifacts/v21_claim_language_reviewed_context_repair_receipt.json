@@ -1,0 +1,87 @@
+{
+  "schema_version": "v21_claim_language_reviewed_context_repair_receipt.v1",
+  "task_id": "RT-20260720-002",
+  "job_id": "AJ-RT-20260720-002-001",
+  "recorded_at": "2026-07-20T17:16:09Z",
+  "status": "PASS",
+  "route": {
+    "worker_skill": "improve-project-system",
+    "route_reason": "repair_validator_reviewed_context_false_positive",
+    "strategy": "repair_v21_claim_language_reviewed_contexts",
+    "invocation_count": 1
+  },
+  "predecessor_failure": {
+    "task_id": "RT-20260720-001",
+    "job_id": "AJ-RT-20260720-001-001",
+    "receipt_path": "research_control/tasks/RT-20260720-001/artifacts/v21_plan_registration_failure_receipt.json",
+    "receipt_sha256": "23fd3bc6f5defb626ca5557a5fc18f0c632a80205078a73be19898c246ad409e",
+    "failed_gate": "claim_language_changed",
+    "hard_fail_count": 2,
+    "finding_lines": [
+      2405,
+      17490
+    ],
+    "class_id": "global_no_go_or_rejection_overclaim"
+  },
+  "repair": {
+    "entry_id": "ALLOW-V21-P0-T01-GLOBAL-REJECTION-GUARD-CONTEXT",
+    "path": "implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+    "class_ids": [
+      "global_no_go_or_rejection_overclaim"
+    ],
+    "surface_class_override": "intentional_bad_example_surfaces",
+    "severity_override": "warn_intentional_example",
+    "wildcard_class_exemption": false,
+    "linter_code_changed": false,
+    "taxonomy_changed": false,
+    "plan_changed": false
+  },
+  "hash_receipts": {
+    "reviewed_contexts_before_sha256": "dcabd34c3e676a2131abab7af63b04834c74db2b228ace97a56e0450844e2df8",
+    "reviewed_contexts_after_sha256": "071b45a2b56ad487d33c7371edb6573c2651a5d818e2017a6cab4656f812da38",
+    "tests_before_sha256": "acf6010b99d96995a5200f9a0b8e69ac82e139419a038b9443b93879da6253b7",
+    "tests_after_sha256": "09d4056b659149d3907da7bbe202a9cb7b7abe4ca6db52052ff7c083850b2fe2",
+    "v21_plan_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "claim_language_linter_sha256": "bd6705ff3f9dd11b77c441510503dad0a49f06cd2a862a25a8aac4e5b32fb65b",
+    "claim_language_taxonomy_sha256": "904c677a846d62f9260e3c0e7c49f4426c39f28ffc53aab20dfb169c9cafcc3f",
+    "program_state_sha256": "f0ba4ffcfed230f370fbb902f5bb8b32e3ec3f4a0c98163cdf810b585f8eb4c7",
+    "handoff_0772_yaml_sha256": "31374c85ee49e457a8b25eaf6d729a0d0e286f1dd53eac184a502044fdd8de0a",
+    "handoff_0772_markdown_sha256": "5a209218082b8c266827d2874bd1fd2c44fb632c1085193a496ad4e4214bf99b"
+  },
+  "validation": {
+    "focused_unit_tests": {
+      "status": "PASS",
+      "test_count": 40
+    },
+    "explicit_v21_scan": {
+      "status": "PASS",
+      "hard_fail_count": 0,
+      "warning_count": 2,
+      "finding_count": 2,
+      "contexts": [
+        "ALLOW-V21-P0-T01-GLOBAL-REJECTION-GUARD-CONTEXT"
+      ]
+    },
+    "changed_claim_language_scan": {
+      "status": "PASS",
+      "hard_fail_count": 0,
+      "warning_count": 1479
+    },
+    "active_research_control_validation": {
+      "status": "PASS"
+    },
+    "git_diff_check": {
+      "status": "PASS"
+    }
+  },
+  "authority_boundary": {
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "canonical_ontology_edit_authorized": false,
+    "source_law_adoption_authorized": false,
+    "p0_t01_executed": false,
+    "p0_t02_executed": false,
+    "p1_t01_executed": false,
+    "next_lawful_action": "Return to the recursive relay for a separately claimed P0-T01 retry."
+  }
+}

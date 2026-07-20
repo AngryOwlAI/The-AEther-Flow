@@ -1,0 +1,58 @@
+{
+  "schema_version": "v21_plan_registration_failure_receipt.v1",
+  "task_id": "RT-20260720-001",
+  "job_id": "AJ-RT-20260720-001-001",
+  "plan_task_id": "P0-T01",
+  "recorded_at": "2026-07-20T16:20:27Z",
+  "status": "BLOCKED",
+  "plan_path": "implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+  "immutable_plan_sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+  "task_local_structural_validation": {
+    "status": "PASS",
+    "finding_count": 0,
+    "phase_count": 17,
+    "work_item_count": 122,
+    "recommendation_count": 72,
+    "attempted_source_registry_row_count": 1
+  },
+  "blocking_validation": {
+    "gate_id": "claim_language_changed",
+    "command": ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json",
+    "status": "FAIL",
+    "hard_fail_count": 2,
+    "warning_count": 1477,
+    "findings": [
+      {
+        "path": "implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+        "line": 2405,
+        "class_id": "global_no_go_or_rejection_overclaim",
+        "matched_text": "global theory rejection",
+        "context": "Preserve the distinction between local family freeze and global theory rejection."
+      },
+      {
+        "path": "implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+        "line": 17490,
+        "class_id": "global_no_go_or_rejection_overclaim",
+        "matched_text": "global theory rejection",
+        "context": "Forbidden-conclusions list item for future source-extension impossibility or global theory rejection."
+      }
+    ]
+  },
+  "authority_analysis": {
+    "plan_edit_rejected": "Changing either line would violate the immutable goal source hash.",
+    "validator_policy_edit_rejected": "The supported reviewed-context policy is under research_control/design and is outside and forbidden by this AgentJob.",
+    "validator_weakening_rejected": "No validator was disabled skipped or weakened.",
+    "second_agentjob_rejected": "This generation authorizes at most one outer AgentJob and that invocation is consumed."
+  },
+  "rollback": {
+    "registration_surfaces_rolled_back": true,
+    "program_state_restored_sha256": "f0ba4ffcfed230f370fbb902f5bb8b32e3ec3f4a0c98163cdf810b585f8eb4c7",
+    "canonical_active_task_id": "RT-20260718-047",
+    "canonical_latest_handoff_id": "handoff-0772",
+    "checkpoint_run": false,
+    "commit_created": false
+  },
+  "required_human_action": "Authorize one separate governed Validator Engineer task to review and add an exact v21 global_no_go_or_rejection_overclaim context entry to research_control/design/claim_language_linter_reviewed_contexts.yaml and then explicitly authorize recovery of this consumed relay generation.",
+  "scientific_claims_changed": false,
+  "distance_to_gr_changed": false
+}

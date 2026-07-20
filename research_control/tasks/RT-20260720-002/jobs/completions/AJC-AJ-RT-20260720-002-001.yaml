@@ -1,0 +1,167 @@
+completion_id: "AJC-AJ-RT-20260720-002-001"
+job_id: "AJ-RT-20260720-002-001"
+task_id: "RT-20260720-002"
+source_role_id: "validator-engineer"
+completed_at: "2026-07-20T17:16:09Z"
+status: "completed"
+objective: "Repair the two exact v21 global-rejection claim-language false positives without editing the immutable plan weakening the linter or changing scientific authority."
+completion_summary: "Added one exact path-and-class reviewed-context entry and one focused regression test. The v21 scan now passes with zero hard failures and two reviewed warnings while unrelated overclaim classes on the same path remain hard failures."
+transaction_status: "repair_completed"
+result_disposition: "completed"
+epistemic_status: "validated_project_system_repair"
+project_system_change_only: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+output_paths:
+  - "research_control/design/claim_language_linter_reviewed_contexts.yaml"
+  - "tests/test_validate_claim_language.py"
+  - "research_control/tasks/RT-20260720-001/**"
+  - "research_control/tasks/RT-20260720-002/00_TASK.yaml"
+  - "research_control/tasks/RT-20260720-002/DDR-20260720-002.md"
+  - "research_control/tasks/RT-20260720-002/artifacts/v21_claim_language_reviewed_context_repair_receipt.json"
+  - "research_control/tasks/RT-20260720-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260720-002/jobs/AJ-RT-20260720-002-001.yaml"
+  - "research_control/tasks/RT-20260720-002/jobs/completions/AJC-AJ-RT-20260720-002-001.yaml"
+  - "research_control/tasks/RT-20260720-002/roles/validator-engineer@0.2.0--RT-20260720-002.yaml"
+command_results:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=WARN local_retrieval_status=WARN source_object_count=908"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"V14 implementation plan registered\" --limit 1 --json | exit_code=0 | returned_object_id=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | active job registration PASS"
+  - ".venv/bin/python -m unittest tests.test_validate_claim_language | exit_code=0 | tests=40"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --json --paths implementations_plans/recommendations_implementation_plan_continue_task-v21.md | exit_code=0 | PASS hard_fail_count=0 warning_count=2"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS hard_fail_count=0 warning_count=1479"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | project_system_improvement_required=true docs_impact_required=true"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - "git diff --check | exit_code=0"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260720-002-001 | initial_exit_code=1 | documentation impact receipt missing generated_derivative_changed after FOLDER_MAP regeneration | index restored"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260720-002-001 | pending governed checkpoint execution"
+validation_status: "PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 2 lease parity branch repository identity predecessor terminal state and exact immutable dirty manifest were verified before claim and consumption."
+      - "The immutable route authorized exactly one improve-project-system worker invocation for the reviewed-context repair."
+      - "Memory status and one targeted V14 canonical precedent were inspected before task registration."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The entry is limited to the exact v21 path and global_no_go_or_rejection_overclaim class."
+      - "The focused test verifies both reviewed lines and verifies that an unrelated Einstein-equation overclaim on the same path still hard-fails."
+      - "The plan linter implementation taxonomy program state and handoff-0772 hashes remain unchanged."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "All 40 focused claim-language tests passed."
+      - "The explicit v21 scan passed with zero hard failures and two reviewed warnings."
+      - "The changed-surface scan passed with zero hard failures."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint command executes after completion recording and must stage only the AgentJob allowlist."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No canonical handoff program-state or current-frontier change is part of this repair."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks are owned by the governed checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The exact v21 path has two warn_intentional_example findings and zero hard failures under the named reviewed context."
+      - "The changed-surface gate has zero hard failures."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system validation repair only."
+  physics_promotion_authorized: false
+  explanation: "This transaction repairs a deterministic reviewed-context false positive and changes no physics source status or Distance-to-GR burden."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: ""
+  rationale: "Validator reviewed-context repair only."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "reviewed-context PASS as physics proof"
+    - "reviewed-context PASS as global theory rejection"
+    - "P0-T01 registration completion"
+    - "P0-T02 or P1-T01 execution"
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "physics claim promotion"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+  summary: "The repair only reclassifies two explicit anti-overclaim guard contexts as reviewed warnings."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 908
+    relationship_row_count: 4500
+    semantic_row_count: 908
+    vault_row_count: 908
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"V14 implementation plan registered\" --limit 1 --json"
+      query_type: "search"
+      query_text: "V14 implementation plan registered"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V14"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v14.md"
+      source_hash: "6687d47a0cfd03a2be28e8e92a58185685347cb9e34a8835a20de22d81992aec"
+  authority_note: "Obsidian wiki notes and .local retrieval caches are navigation layers only and are not authority."
+repair_receipt:
+  path: "research_control/tasks/RT-20260720-002/artifacts/v21_claim_language_reviewed_context_repair_receipt.json"
+  reviewed_entry_id: "ALLOW-V21-P0-T01-GLOBAL-REJECTION-GUARD-CONTEXT"
+  reviewed_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  reviewed_class_id: "global_no_go_or_rejection_overclaim"
+  hard_fail_count_after: 0
+  warning_count_after: 2
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 2
+  passes_consumed: 2
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:2"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+preserved_state:
+  program_state_changed: false
+  scientific_task: "RT-20260718-047"
+  scientific_handoff: "handoff-0772"
+  scientific_route: "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit"
+  distance_to_gr_changed: false
+verdict: "v21_p0_t01_exact_reviewed_context_repair_completed_pending_separate_registration_retry"
+coherent_resolution_summary: "RT-20260720-002 completed the exact v21 reviewed-context repair with one class-specific entry and one focused regression test while preserving every scientific and downstream-execution boundary."
+next_recommendation: "Return to the recursive relay for a separately claimed P0-T01 registration retry."
+documentation_impact_id: "DI-RT-20260720-002-001"

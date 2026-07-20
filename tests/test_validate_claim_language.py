@@ -465,6 +465,48 @@ class ClaimLanguageLinterTests(unittest.TestCase):
         self.assertEqual(report["warning_count"], 1)
         self.assertEqual(report["findings"][0]["context"], "ALLOW-TEST")
 
+    def test_v21_global_rejection_guard_context_is_class_specific(self) -> None:
+        path = "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+        contexts = self.linter.load_reviewed_contexts()
+        reviewed_text = (
+            "Preserve the distinction between local family freeze and global theory rejection.\n"
+            "- future source-extension impossibility or global theory rejection;\n"
+        )
+        findings = self.linter.scan_text_map(
+            {path: reviewed_text},
+            taxonomy=self.taxonomy,
+            reviewed_contexts=contexts,
+            active_handoffs=set(),
+        )
+        report = self.linter.report_dict(findings, scanned_paths=[path])
+
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["hard_fail_count"], 0)
+        self.assertEqual(report["warning_count"], 2)
+        self.assertEqual(
+            {finding["class_id"] for finding in report["findings"]},
+            {"global_no_go_or_rejection_overclaim"},
+        )
+        self.assertEqual(
+            {finding["context"] for finding in report["findings"]},
+            {"ALLOW-V21-P0-T01-GLOBAL-REJECTION-GUARD-CONTEXT"},
+        )
+        self.assertEqual(
+            {finding["severity"] for finding in report["findings"]},
+            {"warn_intentional_example"},
+        )
+
+        unrelated_findings = self.linter.scan_text_map(
+            {path: "GR derived.\n"},
+            taxonomy=self.taxonomy,
+            reviewed_contexts=contexts,
+            active_handoffs=set(),
+        )
+        unrelated_report = self.linter.report_dict(unrelated_findings, scanned_paths=[path])
+        self.assertEqual(unrelated_report["status"], "FAIL")
+        self.assertEqual(unrelated_report["hard_fail_count"], 1)
+        self.assertEqual(unrelated_report["findings"][0]["class_id"], "einstein_equation_overclaim")
+
     def test_json_cli_output(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
