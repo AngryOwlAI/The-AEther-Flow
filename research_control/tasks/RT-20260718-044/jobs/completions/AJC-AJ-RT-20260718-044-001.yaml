@@ -1,0 +1,521 @@
+completion_id: "AJC-AJ-RT-20260718-044-001"
+job_id: "AJ-RT-20260718-044-001"
+task_id: "RT-20260718-044"
+decision_id: "DDR-20260718-044"
+status: "completed"
+completed_at: "2026-07-20T02:18:25Z"
+completed_by_role: "smuggling-auditor@0.2.0--RT-20260718-044"
+source_role_id: "smuggling-auditor"
+source_role_version: "0.2.0"
+plan_task_id: "ordinary_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Freshly audited exact proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. The displayed parity and kernel-pair construction is formally source-factorized and correct on admitted records, with no explicit target-GR or process premise. Exact new results prove universal ordered-partition realization, category-by-preservation non-discrimination, 72 stabilizers versus 264 changers over 336 four-token permutation cases, and 48 of 48 relation-changing single-token transfers. Transition projection root morphism and variation provenance remain underived. The candidate stays proposal-only with blocked_adoption_open_continuation and no Distance-to-GR delta."
+
+artifacts:
+  - "research_control/tasks/RT-20260718-044/artifacts/child_phys_math_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260718-044/artifacts/child_phys_phil_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260718-044/artifacts/parent_conflict_review_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.yaml"
+  - "research_control/tasks/RT-20260718-044/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.md"
+  - "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+  - "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit_receipt.md"
+  - "research_control/tasks/RT-20260718-044/artifacts/validate_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.py"
+  - "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit_validation.json"
+
+output_paths:
+  - "research_control/tasks/RT-20260718-044/**"
+  - "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+  - "research_control/handoffs/handoff-0769.yaml"
+  - "research_control/handoffs/handoff-0769.md"
+  - "research_control/program_state.yaml"
+
+extra_read_paths:
+  - "research_control/handoffs/handoff-0768.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-043/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law.md"
+  - "ontology/tex/aether_flow_foundations.tex"
+
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=PASS refresh_performed=true source_object_count=898 relationship_row_count=4452"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex --json | exit_code=0 | canonical_source_inspected=true source_hash=24992d4b41d64bba860f5cd61d505d6b1ecaad3917e9195e0cbd3d897d955aef"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-043/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law.md --json | exit_code=0 | canonical_source_inspected=true source_hash=6df12c8326bb2ef3689f122387895df625d8e8412729b1eae87badbb252ff9f5"
+  - ".venv/bin/python research_control/tasks/RT-20260718-044/artifacts/validate_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.py --write-report --json | exit_code=0 | status=PASS ordered_partitions_n2_n5=2,6,14,30 permutation_cases=336 relation_stabilizers=72 relation_changers=264 single_token_transfer_cases=48 single_token_relation_changes=48"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary | exit_code=0 | status=PASS error_count=0"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=0 | status=PASS error_count=0"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_compact_current_frontier_v16.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500 | exit_code=2 | status=EXPECTED_PRECHECKPOINT_BOUNDARY required_failure_labels=[legacy_validate_project_control] sole_failure_class=registered_new_paths_not_yet_tracked"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=PASS operational_metrics_only=true"
+  - "git diff --check | exit_code=0 | status=PASS"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 898
+    relationship_row_count: 4452
+    semantic_row_count: 898
+    vault_row_count: 898
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  before_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    local_cache_only_warning_count: 9
+  after_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+      returned_object_ids:
+        - "TEX-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-CANDIDATE-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-043/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law.md --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-043/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260718-043-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW"
+  canonical_inspections:
+    - object_id: "TEX-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-CANDIDATE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+      source_hash: "24992d4b41d64bba860f5cd61d505d6b1ecaad3917e9195e0cbd3d897d955aef"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260718-043-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-043/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law.md"
+      source_hash: "6df12c8326bb2ef3689f122387895df625d8e8412729b1eae87badbb252ff9f5"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260718-044/artifacts/child_phys_math_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260718-044/artifacts/child_phys_phil_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260718-044/artifacts/parent_conflict_review_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Both children support the same conditional formal pass universal partition encoding category-scope nondiscrimination provenance limits proposal-only status and one Refuter route. The terminology was resolved so arbitrary encodability is a non-discrimination result rather than proof of an explicit target import."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260718-044/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused audit preserves the displayed source pass exact universal realization permutation and transfer evidence provenance and covariance limits authority boundary freeze decision and one Refuter route."
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Audit the exact proposal-only rooted-partition source law before Refuter stress or protected adoption review."
+  missing_source_law: "A source-derived law selecting transition certificates event-to-record projection intrinsic root physical morphisms and independently admissible variations for general EqSrc."
+  underdetermination_statement: "Current ontology does not derive the finite transition record projection root certificate physical morphism category or independently admissible physical variation family."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_refutation"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "Given a supplied finite rooted directed record with path-independent parity, define ordered blocks P_U and Q_U, B_U=span_F2{1_Q}, and its kernel relation."
+    formal_objects:
+      - "U=(E,X,D_Phi,pi,C_root,M_U,V_U)"
+      - "P_U and Q_U"
+      - "A_U=span_F2{1_P,1_Q}"
+      - "B_U=span_F2{1_Q}"
+      - "R_U"
+    domains:
+      - "finite admitted rooted directed proposal records"
+    maps:
+      - "pi:E->X"
+      - "admitted source isomorphisms"
+      - "admitted finite variations"
+    proof_obligations:
+      - "independent source-only transition projection and root derivation"
+      - "independent physical morphism and variation categories"
+      - "exact-GR recovery"
+  candidate_law_comparison:
+    candidates:
+      - "all nontrivial ordered finite partitions realized by canonical rooted DAGs"
+      - "relation-stabilizing versus relation-changing token permutations"
+      - "candidate-preserving versus partition-changing variations"
+    comparison_basis:
+      - "admission"
+      - "path parity"
+      - "boundary-line preservation"
+      - "source provenance"
+    selection_status: "not_selected_by_audited_conditions"
+  candidate_law_refutation:
+    refuted_candidate: "Any overread that the admitted record syntax independently selects a source partition, that preservation-defined morphism functoriality establishes physical covariance, that fixed-endpoint lambda relabeling is physical covariance, or that the candidate variation class tests partition-changing robustness."
+    refutation_basis: "Every nontrivial ordered partition is canonically realizable; 264 of 336 four-token permutations change the relation; all 48 valid one-token transfers change it; and the candidate excludes these branches by requiring preservation of relation-determining inputs."
+    surviving_obligations:
+      - "one bounded Refuter stress of the unchanged exact candidate"
+      - "independent provenance and physical category selection"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Audit and Refuter stress may proceed proposal-only; adoption remains protected."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "recover source equivalence without target atlas metric benchmark detector or process import"
+      - "preserve the exact-GR benchmark obligations"
+      - "derive downstream M_src g_eff matter-coupling and Einstein-equation links before promotion"
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  atlas_glue_obligations:
+    profile_law: "not_addressed"
+    selector_law: "finite transition projection and root selector remain underived"
+    transition_law: "D_Phi compatibility with schematic Phi_lambda remains asserted rather than derived"
+    inverse_checks: "not_applicable to the displayed kernel relation"
+    cocycle_checks: "not_applicable to the displayed kernel relation"
+    finite_variation_robustness: "all 48 valid one-token partition transfers change the relation and lie outside the admitted preserving family"
+  failure_branches:
+    collapse: "Every ordered partition can be loaded through freely supplied record data, so admission does not select a unique source relation."
+    nonuniqueness: "At four tokens there are 14 distinct boundary lines and 264 relation-changing permutation cases."
+    inverse_defect: "No inverse defect in admitted source isomorphisms under the stated category."
+    cocycle_defect: "No cocycle claim is made."
+    variation_fragility: "All 48 valid one-token partition transfers change the boundary relation and are excluded from the candidate-preserving variation class."
+  known_risks:
+    - "source-intrinsic labels may be overread as provenance evidence"
+    - "purpose-built functoriality may be overread as physical covariance"
+    - "fixed-endpoint reparameterization may be overread as physical covariance"
+    - "finite validator PASS may be overread as source-law derivation"
+  failed_alternatives:
+    - "Declaration order alone does not distinguish source-derived from desired-partition encoded data."
+    - "Preservation-defined morphisms do not test broader independently selected source maps."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "none in this audit"
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "source_extension_smuggling_audit"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1"
+  item_source_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+  item_kind: "law target"
+  classification: "new_ontology_primitive_candidate"
+  evidence_paths:
+    - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+    - "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+  relation_to_current_ontology: "missing_primitive"
+  relation_to_target_structures: "No explicit target-side structure appears as a displayed source-definition premise; transition projection root and category provenance remain externally guarded and universally encodable."
+  claim_boundary_id: "CB-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-SMUGGLING-AUDIT-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "Exact candidate v1 conditionally passes the displayed source-factorization audit while universal partition encoding category-by-preservation and variation nondiscrimination preserve blocked adoption with open same-milestone continuation."
+  forbidden_overreads:
+    - "source-law adoption"
+    - "physical admissibility or covariance established"
+    - "general EqSrc discharge"
+    - "downstream GR or benchmark promotion"
+  next_route_if_blocked: "refuter@0.2.0 ontology-law-research-packet"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-044-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Universal ordered-partition realization theorem"
+    summary: "Every nontrivial ordered partition of a finite token set is realized by one canonical candidate-admitted rooted DAG."
+  - payload_id: "NMP-RT-20260718-044-002"
+    payload_type: "finite_model"
+    name: "Finite realization census"
+    summary: "All 2, 6, 14, and 30 ordered partitions for sizes two through five are realized with distinct boundary lines."
+  - payload_id: "NMP-RT-20260718-044-003"
+    payload_type: "finite_model"
+    name: "Four-token permutation census"
+    summary: "Across 336 partition-permutation cases, 72 stabilize and 264 change the boundary relation."
+  - payload_id: "NMP-RT-20260718-044-004"
+    payload_type: "countermodel_or_obstruction"
+    name: "Single-token variation branch"
+    summary: "All 48 valid one-token transfers between nonempty blocks change the relation and lie outside the preserving variation class."
+  - payload_id: "NMP-RT-20260718-044-005"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Category-by-preservation lemma"
+    summary: "Relation functoriality is automatic for morphisms already required to preserve the rooted graph and pre-relation data."
+  - payload_id: "NMP-RT-20260718-044-006"
+    payload_type: "source_extension_classification"
+    name: "Rooted-partition law audit boundary"
+    summary: "Preserves new_ontology_primitive_candidate proposal-only and blocked_adoption_open_continuation without an explicit target-GR import finding."
+
+physics_progress_status:
+  status: "candidate_audited_pending_stress"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Audit the exact proposal-only rooted-partition source law before Refuter stress or protected adoption review."
+  explanation: "The displayed theorem core passed conditionally, but universal partition encoding transition projection root provenance physical morphisms physical variations covariance stress and adoption remain open."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "conditional_theorem_candidate"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The candidate passed one conditional source-factorization audit but remains proposal-only unadopted physically uninterpreted and unstressed."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; finite transition projection root morphism and variation selectors remain proposal-only and underived"
+  - burden: "Source equivalence EqSrc"
+    status: "rooted-partition candidate passed one conditional audit pending bounded Refuter stress; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged scoped source-extension relation data only"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "candidate-preserving variations are nondiscriminating and all 48 tested partition-changing transfers change the relation"
+  - burden: "benchmark promotion"
+    status: "blocked by missing primitive stress physical interpretation adoption and protected authority"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact orientation-torsor candidate-v1 route remains locally frozen; one materially distinct rooted-partition Refuter stress remains open"
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT044-001"
+    payload_type: "theorem"
+    object_name: "Universal ordered-partition realization"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+    burden_effect: "audits"
+    summary: "Proves that the admitted record syntax can encode every desired nontrivial ordered finite partition."
+  - payload_id: "PAYLOAD-RT044-002"
+    payload_type: "finite_model"
+    object_name: "Permutation and transfer census"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+    burden_effect: "narrows"
+    summary: "Enumerates exact relation stabilizers changers and partition-changing variations."
+  - payload_id: "PAYLOAD-RT044-003"
+    payload_type: "theorem"
+    object_name: "Category-by-preservation lemma"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+    burden_effect: "narrows"
+    summary: "Separates valid conditional functoriality from independent physical covariance."
+  - payload_id: "PAYLOAD-RT044-004"
+    payload_type: "source_extension_classification"
+    object_name: "Rooted-partition law audit boundary"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+    burden_effect: "requires_human_gate"
+    summary: "Preserves new_ontology_primitive_candidate proposal-only and blocked_adoption_open_continuation."
+
+route_cycle_control:
+  cycle_family: "eqsrc_ordered_motion_rooted_partition_law"
+  current_cycle_step: "conditional_source_audit_pass_pending_refuter_stress"
+  prior_related_tasks:
+    - "RT-20260718-038"
+    - "RT-20260718-039"
+    - "RT-20260718-040"
+    - "RT-20260718-041"
+    - "RT-20260718-042"
+    - "RT-20260718-043"
+    - "RT-20260718-044"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The next role changes from formal audit to adversarial stress of the exact new universal realization provenance category-scope and variation results."
+  next_role_consequence: "refuter@0.2.0"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW"
+  prior_attempts_considered:
+    - "RT-20260718-038"
+    - "RT-20260718-039"
+    - "RT-20260718-040"
+    - "RT-20260718-041"
+    - "RT-20260718-042"
+    - "RT-20260718-043"
+    - "RT-20260718-044"
+  freeze_if:
+    - "The same rooted-partition construction or audit is repeated without new mathematical payload."
+    - "Refuter stress confirms universal encoding and category-scope non-discrimination without a materially new source-selection object."
+  do_not_freeze_if:
+    - "One bounded Refuter packet can adversarially classify the exact newly proved realization provenance and variation findings."
+  freeze_decision: "not_frozen"
+  decision_reason: "Continuation is non-orbital because the next role changes to Refuter and this audit adds exact realization theorem and finite census evidence."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "refuter"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The audit authorizes no source-law adoption physical-admissibility or covariance claim general EqSrc discharge downstream GR promotion ledger change benchmark promotion completed derivation future-extension impossibility or global rejection."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "physical admissibility or covariance established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff claim or scope expansion"
+    - "matter coupling or Einstein-equation claim"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion or Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+
+next_recommendation:
+  role_id: "refuter"
+  role_version: "0.2.0"
+  packet_type: "source_extension_refuter_stress"
+  route_label: "ontology-law-research-packet"
+  task_type: "eqsrc_ordered_motion_rooted_partition_law_refuter_stress"
+  objective: "Stress the unchanged exact candidate for universal partition encoding transition and projection provenance root selection alternative rooted realizations broader source morphisms partition-changing variations sampling truncation and physical-covariance overread."
+  requires_human_gate: false
+  claim_boundary: "Stress-only. No repair adoption canonical ontology edit ledger change downstream promotion or global no-go."
+
+selected_next_route:
+  route_id: "eqsrc_ordered_motion_rooted_partition_law_refuter_stress"
+  route_label: "ontology-law-research-packet"
+  role_family: "refuter@0.2.0"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Stress the unchanged audited rooted-partition relation law before any protected adoption consideration."
+  requires_human_gate: false
+  physics_promotion_authorized: false
+  next_action: "Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate."
+
+claim_boundary:
+  boundary_id: "CB-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-SMUGGLING-AUDIT-001"
+  allowed_scope: "Exact proposal-only audit universal realization category and variation checks source and physical classification freeze evaluation and one Refuter route."
+  blocked_scope: "Candidate repair or stress inside this job adoption physical claims general EqSrc downstream GR ledger change benchmark promotion Gate Chair verdict completed derivation or global no-go."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit_validation.json"
+  local_validator_report_hash: "7c41e2f3ff21b20c0f21d3330aecb46e830282f223c19c8df9e9b786830d1b03"
+  audit_artifact_hash: "36d4f057ad811ce30795a1d8f1a83093b981f7b40221423f291ca81d611deef0"
+  validation_status: "PASS"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight refreshed local retrieval and exact candidate and parent sources were inspected."
+      - "Handoff-0768 and the registered Smuggling Auditor role were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both independent child perspectives completed."
+      - "Parent conflict review resolved with no revision round."
+      - "Universal realization category permutation variation source physical and authority findings were fused."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Research-control core and diff validation passed with zero errors."
+      - "Documentation impact and project-improvement signal validation passed."
+      - "The full compatibility wrapper reached only the expected pre-checkpoint untracked-new-path boundary."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph and claim graph were regenerated and passed freshness checks."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap and validate-only completed successfully."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-surface claim-language validation passed with zero hard failures."
+
+next_recommended_action: "Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate. Do not repair adopt or promote it."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

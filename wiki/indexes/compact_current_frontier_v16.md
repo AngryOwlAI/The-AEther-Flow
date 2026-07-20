@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-043`
-- Latest handoff: `handoff-0768`
-- Current status: `eqsrc_ordered_motion_rooted_partition_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption`
+- Active task: `RT-20260718-044`
+- Latest handoff: `handoff-0769`
+- Current status: `eqsrc_ordered_motion_rooted_partition_law_conditional_source_audit_pass_with_universal_partition_encoding_pending_bounded_refuter_stress_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-043`
-- Latest research handoff: `handoff-0768`
-- Latest research next action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Audit transition projection root morphism and variation provenance sampling truncation parity circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
+- Latest research task: `RT-20260718-044`
+- Latest research handoff: `handoff-0769`
+- Latest research next action: Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for universal partition encoding transition and projection provenance root selection alternative rooted realizations broader source morphisms partition-changing variations sampling truncation and physical-covariance overread. Do not repair, adopt, or promote the candidate.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_ordered_motion_rooted_partition_law_smuggling_audit`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `eqsrc_ordered_motion_rooted_partition_law_refuter_stress`
+- Role family: `refuter@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Audit the exact proposal-only rooted-partition source law before Refuter stress or protected adoption review.
+- Milestone burden: Stress the unchanged audited rooted-partition relation law before any protected adoption consideration.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `e0618cee94113f49cb78c1fddd5425f21d7ffb032e7b168efd1800e984e3f12d`
-- JSON SHA-256: `53ee0e03a5d0b8ac239179030c64dfbf81b15035cd14899ae21ca62ebc7da222`
+- YAML SHA-256: `4e918173b95d5b98420c74fa0bcad634b163b00762457f080bde2401d195c4dc`
+- JSON SHA-256: `d569352695516c4e5ce3584ae924e483267cda3d7370e74d0be322c79cc01078`
 
 ## Authority Warning
 

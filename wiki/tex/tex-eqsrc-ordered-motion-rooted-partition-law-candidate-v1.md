@@ -18,6 +18,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Generated output path: `wiki/tex/tex-eqsrc-ordered-motion-rooted-partition-law-candidate-v1.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-043-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-CANDIDATE-RECEIPT` `research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_receipt.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-043-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW` `research_control/tasks/RT-20260718-043/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law.md`
+- Backlink from `TEX-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex`
 
 ## Validation
 
