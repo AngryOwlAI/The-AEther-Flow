@@ -1,0 +1,61 @@
+artifact_id: "child_phys_math_eqsrc_ordered_motion_rooted_partition_law_refuter_stress"
+authority: "science-draft"
+status: "completed"
+task_id: "RT-20260718-045"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+claim_boundary: "Proposal-only unchanged-candidate Refuter stress. No repair adoption physical-admissibility covariance or promotion authority."
+candidate_hash_verified: "24992d4b41d64bba860f5cd61d505d6b1ecaad3917e9195e0cbd3d897d955aef"
+
+formal_result:
+  classification: "scoped_obstruction"
+  conditional_algebraic_core_survives: true
+  failed_premise: "A unique root side and relation are selected by current source structure rather than loaded proposal data."
+  root_orientation_lemma: "For any structurally admitted connected bipartite transition graph, changing the root within one bipartition side preserves the ordered parity blocks, while changing it to the opposite side exchanges the blocks. The two resulting boundary lines span(1_Q) and span(1_P) are distinct."
+  inverse_defect: "none for the candidate's admitted source isomorphisms"
+  cocycle_defect: "not applicable because the candidate makes no cocycle claim"
+
+four_token_exact_census:
+  loop_free_directed_graphs: 4096
+  graph_root_configurations: 16384
+  admitted_rooted_records: 1088
+  admitted_transition_graphs: 557
+  graphs_with_one_relation: 292
+  graphs_with_two_root_induced_relations: 265
+  root_count_distribution:
+    one: 292
+    two: 108
+    three: 48
+    four: 109
+  rooted_records_by_odd_block_size:
+    one: 96
+    two: 960
+    three: 32
+  rooted_records_per_fixed_partition:
+    odd_block_size_one: 24
+    odd_block_size_two: 160
+    odd_block_size_three: 8
+
+variation_orbit:
+  nontrivial_relations: 14
+  ordered_distinct_relation_changes: 182
+  hamming_distance_counts:
+    one: 48
+    two: 72
+    three: 48
+    four: 14
+  permutation_cases: 336
+  stabilizers: 72
+  changers: 264
+  conclusion: "Every change of the odd block changes the boundary line; the candidate's admitted variation family excludes the complete relation-changing orbit."
+
+countermodel:
+  path: "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml"
+  minimal_scope: "two-token directed cycle"
+  strengthened_scope: "four-token directed cycle"
+  result: "Source symmetry has no invariant singleton root and exchanges two candidate relations."
+
+limitations:
+  - "The census grants the candidate's asserted transition-certificate compatibility and counts only loop-free directed edge sets."
+  - "The census is finite and does not prove a program-level no-go theorem."
+  - "A new source-derived root and transition law could define a distinct candidate after a new selector decision."

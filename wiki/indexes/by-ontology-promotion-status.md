@@ -63,6 +63,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex`
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-V3-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-032/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_smuggling_audit.tex`
 - `TEX-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex`
+- `TEX-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex`
 - `TEX-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex`
 - `TEX-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex`
 - `TEX-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex`

@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `c4fe71afa8e7b5c13a4dcb1083b4243b65814fc75f30c95912aea488c9ef4da8`
-- Generated-at source timestamp: `2026-07-20T02:12:08Z`
-- Row count: `1002`
+- Source fingerprint: `56852c2fa114722180892398cbbeb76867b6a8f4a19b3febbac9dbe5446a30ec`
+- Generated-at source timestamp: `2026-07-20T02:58:55Z`
+- Row count: `1003`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260718-045|RT-20260718-044|2026-07-20T02:58:55Z|2026-07-20T03:05:59Z|eqsrc_ordered_motion_rooted_partition_law_refuter_stress|completed|source_equivalence_eqsrc|Determine whether the unchanged audited rooted-partition proposal supplies a current-ontology-derived unique and physically admissible EqSrc relation under alternative transitions, roots, projections, morphisms, and finite variations while preserving its conditional algebraic core.|refuter@0.2.0|false|false|10|Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose a materially distinct source-derived transition or root-provenance law, source-side irrelevance theorem, scoped no-go, or freeze route. Do not repeat repair adopt or promote exact candidate v1.|PASS|research_control/tasks/RT-20260718-045/jobs/completions/AJC-AJ-RT-20260718-045-001.yaml|
 |RT-20260718-044|RT-20260718-043|2026-07-20T02:12:08Z|2026-07-20T02:18:25Z|eqsrc_ordered_motion_rooted_partition_law_smuggling_audit|completed|source_equivalence_eqsrc|Audit the exact proposal-only rooted-partition source law before Refuter stress or protected adoption review.|smuggling-auditor@0.2.0|false|false|9|Run one bounded Refuter ontology-law-research-packet against the unchanged candidate for universal partition encoding transition projection root provenance broader source morphisms and partition-changing variations. Do not repair adopt or promote the candidate.|PASS|research_control/tasks/RT-20260718-044/jobs/completions/AJC-AJ-RT-20260718-044-001.yaml|
 |RT-20260718-043|RT-20260718-042|2026-07-20T01:27:59Z|2026-07-20T01:37:24Z|eqsrc_ordered_motion_rooted_partition_law_formalization|completed|source_equivalence_eqsrc|Define proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 with exact Phi-compatible record projection root parity positive and negative finite controls or return a precise obstruction.|ontology-formalizer@0.2.0|false|false|8|Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 before Refuter stress or any adoption consideration.|PASS|research_control/tasks/RT-20260718-043/jobs/completions/AJC-AJ-RT-20260718-043-001.yaml|
 |RT-20260718-042|RT-20260718-041|2026-07-20T00:55:46Z|2026-07-20T00:55:46Z|eqsrc_ordered_motion_partition_provenance_route_selector|completed|source_equivalence_eqsrc|Select a source-only continuation that could derive an ordered partition and line pointing from intrinsic ordered-motion provenance or fail closed while preserving the exact candidate-v1 local freeze.|theoretical-continuation-selector@0.1.0|false|false|5|Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Define the exact source objects domains maps positive witness symmetry-negative control and fail-closed branches; do not repair or adopt exact orientation-torsor candidate v1.|PASS|research_control/tasks/RT-20260718-042/jobs/completions/AJC-AJ-RT-20260718-042-001.yaml|

@@ -1,0 +1,495 @@
+completion_id: "AJC-AJ-RT-20260718-045-001"
+job_id: "AJ-RT-20260718-045-001"
+task_id: "RT-20260718-045"
+decision_id: "DDR-20260718-045"
+status: "completed"
+completed_at: "2026-07-20T03:05:59Z"
+completed_by_role: "refuter@0.2.0--RT-20260718-045"
+source_role_id: "refuter"
+source_role_version: "0.2.0"
+plan_task_id: "ordinary_eqsrc_ordered_motion_rooted_partition_law_refuter_stress"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Stressed unchanged exact proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Its conditional rooted parity and kernel-pair algebra survives on loaded admitted records. Exhaustive enumeration of all 4096 loop-free directed graphs on four tokens and four root choices found 1088 admitted rooted records on 557 graphs; 265 graphs admit roots inducing two distinct relations. The directed four-cycle supplies a symmetric countermodel, and all 182 ordered changes among the fourteen nontrivial four-token relations lie outside the candidate-preserving family. The exact classification is scoped_obstruction with local candidate-cycle freeze and no Distance-to-GR delta."
+artifacts:
+  - "research_control/tasks/RT-20260718-045/artifacts/child_phys_math_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260718-045/artifacts/child_phys_phil_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260718-045/artifacts/parent_conflict_review_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260718-045/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.md"
+  - "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex"
+  - "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress_receipt.md"
+  - "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml"
+  - "research_control/tasks/RT-20260718-045/artifacts/validate_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.py"
+  - "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260718-045/**"
+  - "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex"
+  - "research_control/handoffs/handoff-0770.yaml"
+  - "research_control/handoffs/handoff-0770.md"
+  - "research_control/program_state.yaml"
+extra_read_paths:
+  - "research_control/handoffs/handoff-0769.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - "research_control/design/refuter_obstruction_schema_v1.md"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "research_control/design/source_extension_classification_checklist_v1.md"
+  - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+  - "research_control/tasks/RT-20260718-044/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.md"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | status=PASS refresh_performed=true source_object_count=901 relationship_row_count=4467"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json | exit_code=0 | core_validation_status=PASS freshness_status=PASS local_retrieval_status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex --json | exit_code=0 | canonical_source_inspected=true source_hash=24992d4b41d64bba860f5cd61d505d6b1ecaad3917e9195e0cbd3d897d955aef"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex --json | exit_code=0 | canonical_source_inspected=true source_hash=36d4f057ad811ce30795a1d8f1a83093b981f7b40221423f291ca81d611deef0"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=0 | status=ready active_task=RT-20260718-044 latest_handoff=handoff-0769"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260718-045/artifacts/validate_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.py | exit_code=0"
+  - ".venv/bin/python research_control/tasks/RT-20260718-045/artifacts/validate_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.py --write-report --json | exit_code=0 | status=PASS admitted_records=1088 admitted_graphs=557 multi_relation_graphs=265 relation_changes=182"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary | exit_code=0 | status=PASS errors=0 warnings=174"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=0 | status=PASS errors=0 warnings=1652"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | status=PASS signal_count=0"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1478"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500 | exit_code=2 | status=EXPECTED_PRECHECKPOINT_BOUNDARY required_failure_labels=legacy_validate_project_control failure_class=registered_new_paths_not_yet_tracked"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py | exit_code=0 | status=PASS"
+  - "git diff --check | exit_code=0 | status=PASS"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 901
+    relationship_row_count: 4467
+    semantic_row_count: 901
+    vault_row_count: 901
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  before_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    local_cache_only_warning_count: 9
+  after_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+      returned_object_ids:
+        - "TEX-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-CANDIDATE-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+      returned_object_ids:
+        - "TEX-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-SMUGGLING-AUDIT"
+  canonical_inspections:
+    - object_id: "TEX-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-CANDIDATE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+      source_hash: "24992d4b41d64bba860f5cd61d505d6b1ecaad3917e9195e0cbd3d897d955aef"
+    - object_id: "TEX-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-SMUGGLING-AUDIT"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+      source_hash: "36d4f057ad811ce30795a1d8f1a83093b981f7b40221423f291ca81d611deef0"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260718-045/artifacts/child_phys_math_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260718-045/artifacts/child_phys_phil_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260718-045/artifacts/parent_conflict_review_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Both perspectives preserve the conditional kernel-pair core and support the exact rooted-record census, relation nonuniqueness, symmetric cycle countermodel, complete relation-change orbit, scoped obstruction, local cycle freeze, and theoretical-selector route."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260718-045/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused stress preserves conditional algebra while proving the exhaustive census, root-side ambiguity, directed-cycle symmetry, and complete relation-change orbit."
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Determine whether the unchanged audited rooted-partition proposal supplies a current-ontology-derived unique and physically admissible EqSrc relation under alternative transitions, roots, projections, morphisms, and finite variations while preserving its conditional algebraic core."
+  missing_source_law: "A current-ontology-derived transition and event-projection law, intrinsic root or root-irrelevance theorem, physical morphism category, and independently justified source-record variation class."
+  stressed_source_law: "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1"
+  underdetermination_statement: "Current ontology does not derive the finite transition record, event projection, singleton root, physical morphism category, or admissible variation family needed to select one relation."
+  no_go_theorem_status: "scoped_obstruction_only"
+  packet_payload_mode: "candidate_law_refutation"
+  candidate_law_refutation:
+    refuted_candidate: "The current-ontology-derived unique and physically admissible relation-selector reading of EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1"
+    refutation_basis: "The exhaustive four-token census finds 265 admitted transition graphs whose alternative admissible roots induce two distinct relations; the directed four-cycle has no invariant singleton root and exchanges those relations."
+    surviving_obligations:
+      - "The conditional path-parity and kernel-pair theorems survive after the proposal data are loaded."
+      - "A distinct source-derived transition and root-provenance law may remain possible."
+      - "A source-side root- or relation-irrelevance theorem may remain possible."
+      - "General EqSrc, exact-GR recovery, and every downstream burden remain open."
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Select or eliminate dependence on transition, projection, root, physical morphism, and finite-variation declarations before adoption review."
+      - "Keep target atlas, target metric, benchmark success, process state, and derivative status outside every source definition."
+      - "Keep general EqSrc, RetainH, GenH, M_src, g_eff, matter coupling, Einstein equations, and benchmark promotion open."
+      - "Require protected human authority before source-law or ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "finite rooted transition records"
+      - "event-to-token projections"
+      - "rooted parity partitions"
+      - "kernel-pair relations"
+      - "source automorphisms and finite relation changes"
+    result: "pass"
+    failure_reason: ""
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No adoption is requested. Theoretical packet selection may continue without a human gate."
+source_extension_category: "source_extension_refuter_stress"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1"
+  item_source_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+  item_kind: "law target"
+  classification: "blocked_adoption_open_continuation"
+  evidence_paths:
+    - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+    - "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex"
+    - "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex"
+    - "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml"
+  relation_to_current_ontology: "blocked_open"
+  relation_to_target_structures: "No target-side structure is used as a source-definition premise."
+  claim_boundary_id: "CB-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "Exact candidate v1 has a coherent conditional algebraic core and a scoped current-ontology relation-selection and physical-admissibility obstruction; blocked adoption with open same-milestone continuation remains."
+  forbidden_overreads:
+    - "loaded rooted-record naturality as physical covariance"
+    - "admission as intrinsic root or transition selection"
+    - "finite validator success as source-law derivation"
+    - "scoped obstruction as global no-go"
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-045-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Root-side orientation lemma"
+    summary: "Changing the root within one bipartition side preserves the parity relation, while changing it to the opposite side exchanges the blocks and yields the complementary boundary line."
+  - payload_id: "NMP-RT-20260718-045-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Exhaustive four-token rooted-digraph census"
+    summary: "All 4096 loop-free directed graphs and four roots give 1088 admitted rooted records on 557 graphs; 265 graphs induce two relations."
+  - payload_id: "NMP-RT-20260718-045-003"
+    payload_type: "countermodel_or_obstruction"
+    name: "Directed-cycle root-selection countermodel"
+    summary: "The directed four-cycle has a four-root orbit, no invariant singleton root, and two root-induced relations exchanged by source symmetry."
+  - payload_id: "NMP-RT-20260718-045-004"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Complete four-token relation-change orbit"
+    summary: "The fourteen nontrivial relations generate 182 ordered distinct changes with Hamming counts 48, 72, 48, and 14; none is admitted by the candidate-preserving family."
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Determine whether the unchanged audited rooted-partition proposal supplies a current-ontology-derived unique and physically admissible EqSrc relation under alternative transitions, roots, projections, morphisms, and finite variations while preserving its conditional algebraic core."
+  explanation: "The conditional algebra survives, but the proposal and current ontology do not select unique transition, projection, root, morphism, or variation data; 265 admitted four-token graphs provide exact finite relation nonuniqueness."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "obstruction_recorded"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The exact candidate has a scoped obstruction, no source law is adopted, and general EqSrc remains undischarged."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; transition, projection, root, physical morphism, and variation provenance remain underived"
+  - burden: "Source equivalence EqSrc"
+    status: "exact candidate v1 has a scoped relation-selection obstruction; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; no source-observer localization law is supplied or adopted"
+  - burden: "Resp_lc"
+    status: "unchanged; scoped EqSrc source-extension stress does not discharge response localization"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "all 182 relation-changing four-token variations are excluded from the candidate-preserving family"
+  - burden: "benchmark promotion"
+    status: "blocked by missing source-law adoption, downstream derivation, and protected authority"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact candidate v1 construction audit and stress repetition locally frozen; distinct theoretical selection open"
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT045-001"
+    payload_type: "theorem"
+    object_name: "Root-side orientation lemma"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex"
+    burden_effect: "narrows"
+    summary: "Identifies the exact relation effect of moving a root within or across the structural bipartition."
+  - payload_id: "PAYLOAD-RT045-002"
+    payload_type: "finite_model"
+    object_name: "Exhaustive four-token rooted-digraph census"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex"
+    burden_effect: "obstructs"
+    summary: "Counts 1088 admitted rooted records, 557 admitted graphs, and 265 graphs with two root-induced relations."
+  - payload_id: "PAYLOAD-RT045-003"
+    payload_type: "countermodel"
+    object_name: "Directed-cycle root-selection countermodel"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml"
+    burden_effect: "obstructs"
+    summary: "A symmetric directed cycle admits no invariant singleton root and realizes two candidate relations."
+  - payload_id: "PAYLOAD-RT045-004"
+    payload_type: "theorem"
+    object_name: "Complete four-token relation-change orbit"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex"
+    burden_effect: "stress_tests"
+    summary: "Enumerates all 182 ordered distinct relation changes and their exact Hamming-distance distribution."
+  - payload_id: "PAYLOAD-RT045-005"
+    payload_type: "obstruction"
+    object_name: "Scoped current-ontology relation-selection obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex"
+    burden_effect: "freezes"
+    summary: "Locally freezes exact candidate-v1 construction audit and stress repetition while preserving open general EqSrc and future source extensions."
+route_cycle_control:
+  cycle_family: "eqsrc_ordered_motion_rooted_partition_law"
+  current_cycle_step: "proposal_only_v1_refuter_scoped_relation_selection_and_physical_admissibility_obstruction"
+  prior_related_tasks:
+    - "RT-20260718-038"
+    - "RT-20260718-039"
+    - "RT-20260718-040"
+    - "RT-20260718-041"
+    - "RT-20260718-042"
+    - "RT-20260718-043"
+    - "RT-20260718-044"
+    - "RT-20260718-045"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The next packet makes one cross-role decision among source-derived transition or root provenance, source-side irrelevance, a distinct scoped no-go, and local freeze instead of repeating exact candidate v1."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0"
+loop_risk_decision:
+  category: "scoped_obstruction"
+  next_route: "theoretical_decision_role_selection"
+  obstruction_summary: "Exact candidate v1 is conditionally coherent after rooted-record data are loaded, but current ontology and the declared controls do not select a unique transition, projection, root, physical morphism category, or robust relation."
+  rationale: "Construction, fresh audit, and exhaustive Refuter stress are complete; one Theoretical Continuation Selector must choose a materially distinct source-derived provenance, irrelevance, scoped no-go, or freeze route without repeating exact candidate v1."
+  bridge_or_fail_escalation: true
+  repeated_burdens:
+    - "transition and event-projection provenance"
+    - "intrinsic root selection or root irrelevance"
+    - "independently justified physical morphism and source-record variation classes"
+  new_payload_present: true
+  generic_formalizer_route_barred: true
+  selected_route: "theoretical_continuation_selector"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW"
+  prior_attempts_considered:
+    - "RT-20260718-042"
+    - "RT-20260718-043"
+    - "RT-20260718-044"
+    - "RT-20260718-045"
+  freeze_if:
+    - "The exact candidate-v1 construction, audit, or stress cycle is repeated without a materially different source-law theorem or no-go target."
+    - "The same transition, root, projection, morphism, or variation burdens recur without new mathematical payload."
+  do_not_freeze_if:
+    - "A Theoretical Continuation Selector chooses a materially distinct source-derived provenance, irrelevance, scoped no-go, or explicit local-freeze route."
+  freeze_decision: "not_frozen"
+  decision_reason: "Exact candidate-v1 repetition is locally barred, while one cross-role Theoretical Continuation Selector remains materially distinct from its completed construction audit and stress cycle."
+  rationale: "The selector must choose a materially distinct theoretical packet or explicit freeze and may not repeat exact candidate v1."
+  criteria_evaluated:
+    - "Exact candidate v1 completed construction, fresh audit, and exhaustive finite Refuter stress."
+    - "The directed-cycle countermodel supplies root-side relation nonuniqueness."
+    - "The full rooted-digraph census finds 265 admitted graphs with two root-induced relations."
+    - "The complete 182-change orbit shows the admitted variation family excludes every relation change."
+  candidate_freeze_label: "EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW"
+  status_update_path: "research_control/program_state.yaml"
+  next_allowed_route: "theoretical_selector"
+  frozen_scope: "exact EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 construction audit and stress repetition only"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+refuter_obstruction_record:
+  obstruction_id: "OB-EQSRC-ORDERED-MOTION-ROOT-SELECTION-001"
+  target_claim: "Exact EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 supplies a current-ontology-derived unique and physically admissible EqSrc relation."
+  target_milestone: "source_equivalence_eqsrc"
+  failed_premise: "Current ontology and the declared proposal controls supply no independently source-derived transition, projection, root, physical morphism, or variation rule selecting one relation."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml"
+  countermodel_scope: "exact_finite_branch"
+  certificate_gap: "missing transition and projection provenance, intrinsic-root or root-irrelevance certificate, and independent physical transformation-category certificate"
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "locally_frozen"
+    decision_reason: "Exact candidate v1 has completed construction, fresh audit, and exhaustive finite stress with a symmetric root-selection countermodel."
+    next_allowed_route: "theoretical_selector"
+  forbidden_conclusions:
+    - "No canonical ontology rejection or adoption follows."
+    - "No general EqSrc no-go follows."
+    - "No physical admissibility or covariance follows."
+    - "No downstream GR burden is discharged."
+    - "No Distance-to-GR or metric-use ledger change follows."
+    - "No benchmark promotion or completed derivation follows."
+    - "No program-wide no-go or future source-extension impossibility follows."
+obstruction_record:
+  present: true
+  obstruction_id: "OB-EQSRC-ORDERED-MOTION-ROOT-SELECTION-001"
+  scope: "source_extension_candidate"
+  failed_object: "current-ontology-derived unique and physically admissible rooted-partition EqSrc relation"
+  exact_failure: "The exhaustive four-token census finds 265 admitted transition graphs whose alternative roots induce two distinct relations; the directed four-cycle has no invariant singleton root, and the candidate-preserving variation class excludes all 182 relation changes."
+  minimal_counterexample_path: "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "selector_required"
+  forbidden_overread: "This scoped candidate obstruction does not refute the conditional rooted parity theorem, imply a general EqSrc no-go, reject the global theory, or prove future source-extension impossibility."
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The stress authorizes no source-law adoption, g_eff or M_src adoption, physical admissibility or covariance claim, general EqSrc discharge, matter coupling, Einstein equations, ledger change, benchmark promotion, completed derivation, future-extension impossibility, or global theory rejection."
+  forbidden_conclusions:
+    - "canonical ontology edit or source-law adoption"
+    - "physical admissibility or covariance established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff construction or scope expansion"
+    - "matter coupling or Einstein equations"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion or Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+next_recommendation:
+  role_id: "theoretical-continuation-selector"
+  role_version: "0.1.0"
+  packet_type: "ontology_law_research_packet"
+  route_label: "ontology-law-research-packet"
+  task_type: "eqsrc_ordered_motion_rooted_partition_law_post_obstruction_theoretical_selection"
+  objective: "Choose one materially distinct next packet among a genuinely source-derived transition or root-provenance law, a source-side root- or relation-irrelevance theorem, a distinct scoped no-go target, or local freeze."
+  requires_human_gate: false
+  claim_boundary: "Selection-only. No candidate repair adoption canonical ontology edit ledger change downstream promotion or global no-go."
+claim_boundary:
+  boundary_id: "CB-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS-001"
+  allowed_scope: "Exact proposal-only stress, rooted-digraph census, root-side ambiguity countermodel, complete relation-change orbit, one scoped obstruction, local candidate-cycle freeze, and one Theoretical Continuation Selector route."
+  blocked_scope: "Repair adoption physical claims general EqSrc downstream GR ledger change benchmark or Gate Chair promotion completed derivation future-extension impossibility or global no-go."
+  claim_boundary_preserved: true
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress_validation.json"
+  local_validator_report_hash: "983eb0dd308f1648fc9ae9de2e78bd5c74c71d0331e6ac0934f42d2768ba2c94"
+  stress_artifact_hash: "334a69fcb0ccaf91f7f428946202b84678277c70838dbf95f43166ad8d255ca0"
+  countermodel_hash: "9ddce9d042ef187d163043d6c2a98a7d1a796cd01a433d3d258632150a83325e"
+  validation_status: "PASS"
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight refreshed local retrieval, and the exact candidate, audit, handoff, Director role, and Refuter role were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both child perspectives completed, the parent conflict review resolved without conflict, and the finite validator passed."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local validation, core and diff research-control validators, documentation-impact validation, project-improvement-signal parity, and physics-progress metrics passed."
+      - "The deprecated full wrapper reached only the expected pre-checkpoint registered-new-paths-not-yet-tracked boundary."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Generated frontier, compact frontier, task index, dependency graph, claim graph, and their freshness validators passed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap and validate-only checks passed after registering and generating the new source surfaces."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-surface claim-language validation passed with zero hard failures and 1478 historical or contextual warnings."
+next_recommended_action: "Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose a materially distinct source-derived transition or root-provenance law, source-side irrelevance theorem, scoped no-go, or freeze route after exact candidate v1's scoped obstruction. Do not repeat repair adopt or promote it."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

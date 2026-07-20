@@ -601,6 +601,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-043-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW` `wiki/markdown/md-research-control-tasks-rt-20260718-043-parent-fusion-notes-eqsrc-ordered-motion-rooted-partition-law.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-044-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-044-eqsrc-ordered-motion-rooted-partition-law-smuggling-audit-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-044-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260718-044-parent-fusion-notes-eqsrc-ordered-motion-rooted-partition-law-smuggling-audit.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-045-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-045-eqsrc-ordered-motion-rooted-partition-law-refuter-stress-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-045-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260718-045-parent-fusion-notes-eqsrc-ordered-motion-rooted-partition-law-refuter-stress.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -993,6 +995,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-043-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW` `research_control/tasks/RT-20260718-043/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-044-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-044-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-044/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-045-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-045-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260718-045/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

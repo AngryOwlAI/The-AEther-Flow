@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-044` and `handoff-0769`.
+`RT-20260718-045` and `handoff-0770`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-044` |
-| Latest handoff ID | `handoff-0769` |
-| Current status | `eqsrc_ordered_motion_rooted_partition_law_conditional_source_audit_pass_with_universal_partition_encoding_pending_bounded_refuter_stress_no_adoption` |
+| Active task ID | `RT-20260718-045` |
+| Latest handoff ID | `handoff-0770` |
+| Current status | `eqsrc_ordered_motion_rooted_partition_law_scoped_root_and_relation_selection_obstruction_pending_theoretical_selection_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc ordered motion rooted partition candidate to conditional source audit with universal encoding to bounded refuter stress |
+| Current route family | theoretical decision role selection |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One bounded Refuter packet may stress the exact unchanged candidate and return a survival classification or scoped obstruction with one lawful next route. |
-| Next recommended action | Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for universal partition encoding transition and projection provenance root selection alternative rooted realizations broader source morphisms partition-changing variations sampling truncation and physical-covariance overread. Do not repair, adopt, or promote the candidate. |
+| Required next authority | One bounded Theoretical Continuation Selector may choose a materially distinct source-derived provenance, irrelevance, scoped no-go, or explicit freeze packet. |
+| Next recommended action | Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose a materially distinct source-derived transition or root-provenance law, source-side root- or relation-irrelevance theorem, distinct scoped no-go target, or explicit local freeze. Do not repeat repair adopt or promote exact candidate v1. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-044` |
-| Latest research handoff ID | `handoff-0769` |
-| Latest research next action | Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for universal partition encoding transition and projection provenance root selection alternative rooted realizations broader source morphisms partition-changing variations sampling truncation and physical-covariance overread. Do not repair, adopt, or promote the candidate. |
+| Latest research task ID | `RT-20260718-045` |
+| Latest research handoff ID | `handoff-0770` |
+| Latest research next action | Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose a materially distinct source-derived transition or root-provenance law, source-side root- or relation-irrelevance theorem, distinct scoped no-go target, or explicit local freeze. Do not repeat repair adopt or promote exact candidate v1. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-044/00_TASK.yaml`.
-- Active task objective: Execute one fresh bounded Smuggling Auditor packet against exact proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 for transition projection root morphism and variation provenance universal partition realizability sampling truncation parity circularity hidden target or process import validator overread and physical-covariance overread without repair stress adoption or promotion.
-- Latest handoff path: `research_control/handoffs/handoff-0769.yaml`.
-- Latest handoff summary: RT-20260718-044 completed one fresh bounded Smuggling Auditor packet against exact proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. The displayed parity and kernel-pair construction is formally source-factorized and correct on admitted records, with no explicit target-GR or process premise. Every nontrivial ordered finite partition is nevertheless realizable by a canonical admitted rooted DAG. The preservation-defined category is therefore nondiscriminating, 264 of 336 four-token permutation cases change the relation, and all 48 valid one-token transfers change it. Transition projection root morphism and variation provenance remain underived. Adoption remains blocked with open continuation; general EqSrc and both authoritative ledgers are unchanged.
-- Current route family: eqsrc ordered motion rooted partition candidate to conditional source audit with universal encoding to bounded refuter stress.
-- Next recommended action: Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for universal partition encoding transition and projection provenance root selection alternative rooted realizations broader source morphisms partition-changing variations sampling truncation and physical-covariance overread. Do not repair, adopt, or promote the candidate.
+- Active task path: `research_control/tasks/RT-20260718-045/00_TASK.yaml`.
+- Active task objective: Execute one bounded Refuter stress of unchanged exact proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 for structural rooted-record nonuniqueness, root-side ambiguity, transition and projection underdetermination, broader morphism scope, exhaustive partition-changing variations, observer truncation, declaration-order dependence, and physical-covariance overread.
+- Latest handoff path: `research_control/handoffs/handoff-0770.yaml`.
+- Latest handoff summary: RT-20260718-045 completed one bounded Refuter ontology-law-research-packet against unchanged exact proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. The conditional rooted parity and kernel-pair algebra survives on loaded admitted records. Exhausting all 4096 loop-free directed graphs on four tokens and four roots found 1088 admitted rooted records on 557 graphs; 265 graphs admit roots inducing two relations. The directed four-cycle supplies a symmetric root-selection countermodel, and all 182 ordered relation changes are excluded from the candidate-preserving family. This is a scoped obstruction, not a global no-go. Exact candidate-v1 construction audit and stress repetition are locally frozen; adoption remains blocked with open continuation and no Distance-to-GR delta.
+- Current route family: theoretical decision role selection.
+- Next recommended action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose a materially distinct source-derived transition or root-provenance law, source-side root- or relation-irrelevance theorem, distinct scoped no-go target, or explicit local freeze. Do not repeat repair adopt or promote exact candidate v1.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for universal partition encoding transition and projection provenance root selection alternative rooted realizations broader source morphisms partition-changing variations sampling truncation and physical-covariance overread. Do not repair, adopt, or promote the candidate.
+Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose a materially distinct source-derived transition or root-provenance law, source-side root- or relation-irrelevance theorem, distinct scoped no-go target, or explicit local freeze. Do not repeat repair adopt or promote exact candidate v1.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-044`;
-- latest handoff: `handoff-0769`;
-- current status: `eqsrc_ordered_motion_rooted_partition_law_conditional_source_audit_pass_with_universal_partition_encoding_pending_bounded_refuter_stress_no_adoption`;
+- active task: `RT-20260718-045`;
+- latest handoff: `handoff-0770`;
+- current status: `eqsrc_ordered_motion_rooted_partition_law_scoped_root_and_relation_selection_obstruction_pending_theoretical_selection_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0769.yaml`
-- `research_control/tasks/RT-20260718-044/00_TASK.yaml`
+- `research_control/handoffs/handoff-0770.yaml`
+- `research_control/tasks/RT-20260718-045/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0769*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0770*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

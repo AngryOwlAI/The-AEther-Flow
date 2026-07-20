@@ -1,0 +1,205 @@
+% authority: science-draft
+% status: proposal-only
+% route: ontology-law-research-packet
+% trigger_classification: derivation_critical_missing_source_law
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Ftwo}{\mathbb F_2}
+
+\title{Refuter Stress of
+EqSrcOrderedMotionRootedPartitionLaw\(_{\rm src}^{\rm cand,v1}\):\\
+Root-Side Ambiguity, Exhaustive Transition Nonuniqueness, and Variation Orbit}
+\author{Refuter control packet RT-20260718-045}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\section{Control result}
+
+This packet stresses the unchanged exact candidate at
+\texttt{24992d4b41d64bba860f5cd61d505d6b1ecaad3917e9195e0cbd3d897d955aef}.
+Its conditional algebraic core survives: after a finite transition record,
+projection, singleton root, morphism category, and variation family are
+supplied and admitted, path parity, the ordered partition, the line
+\(B_U\), and the kernel-pair relation \(R_U\) are well-defined.
+
+The exact Refuter classification is
+\[
+  \texttt{scoped\_obstruction}.
+\]
+The failed premise is not the kernel-pair theorem. It is the premise that
+current ontology or the unchanged candidate derives source data selecting a
+unique relation. The candidate remains \texttt{proposal-only},
+\texttt{new\_ontology\_primitive\_candidate}, and
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\section{Root-side orientation lemma}
+
+Let \(G=(X,D)\) be a finite directed graph with a root \(r\) from which every
+vertex is reachable. Suppose all directed root-to-vertex paths have a fixed
+parity. Then every directed edge crosses the parity blocks \(P_r,Q_r\).
+The underlying reachable graph is therefore bipartite.
+
+\begin{theorem}[Root-side orientation]
+For a fixed reachable bipartite transition graph, any two structurally
+admissible roots in the same bipartition side induce the same ordered blocks.
+Roots in opposite sides exchange the blocks. Consequently the graph supplies
+at most two candidate boundary lines,
+\[
+ B=\Ftwo\mathbf 1_Q,\qquad B^\vee=\Ftwo\mathbf 1_P.
+\]
+When both blocks are nonempty, these lines and their kernel-pair relations are
+distinct.
+\end{theorem}
+
+\begin{proof}
+A connected bipartite graph has a unique two-coloring up to exchange.
+Root parity selects the color containing the root as even. Moving the root
+within that color preserves the orientation; moving it to the other color
+exchanges \(P\) and \(Q\). Since
+\(\mathbf 1_P\neq\mathbf 1_Q\), their nonzero one-dimensional spans in
+\(\operatorname{span}_{\Ftwo}\{\mathbf 1_P,\mathbf 1_Q\}\) are distinct.
+\end{proof}
+
+\begin{remark}
+A loaded singleton root chooses one orientation and makes the conditional
+candidate unambiguous. The theorem shows why an independent source-derived
+root law is a substantive missing primitive rather than notation.
+\end{remark}
+
+\section{Exhaustive four-token transition census}
+
+The validator enumerates all \(2^{12}=4096\) loop-free directed graphs on four
+labeled tokens and all \(4\) root choices, for \(16384\) graph--root
+configurations. A configuration is counted as structurally admitted exactly
+when every token is root reachable, all root paths have one parity, and both
+parity blocks are nonempty. Transition-certificate provenance is granted as a
+proposal assertion; the census does not manufacture physical provenance.
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Exact quantity & Count \\
+\midrule
+structurally admitted rooted records & 1088 \\
+transition graphs admitting at least one root & 557 \\
+graphs inducing one relation & 292 \\
+graphs whose roots induce two relations & 265 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The admitted-graph root-count distribution is \(292,108,48,109\) for one,
+two, three, and four roots. The edge-count distribution is
+\[
+3{:}64,\quad 4{:}186,\quad 5{:}192,\quad 6{:}88,\quad
+7{:}24,\quad 8{:}3.
+\]
+
+For odd-block sizes \(1,2,3\), the total rooted-record counts are
+\(96,960,32\). Each fixed partition of those sizes has respectively
+\(24,160,8\) rooted transition realizations. Hence relation selection does not
+select unique transition provenance even after the root-oriented partition is
+fixed.
+
+\section{Minimal and symmetric countermodels}
+
+The minimal two-token directed cycle has the swap automorphism and no
+automorphism-invariant singleton root. Loading root \(0\) gives
+\(Q=\{1\}\); loading root \(1\) gives \(Q=\{0\}\). The two boundary lines and
+kernel relations are distinct.
+
+The strengthened directed four-cycle
+\[
+  0\longrightarrow1\longrightarrow2\longrightarrow3\longrightarrow0
+\]
+has four structurally admissible roots. Roots \(0,2\) give
+\(Q=\{1,3\}\), while roots \(1,3\) give \(Q=\{0,2\}\). Its order-four
+automorphism group acts transitively on roots. No singleton root is invariant;
+only the order-two rotation subgroup stabilizes either selected relation.
+
+These controls do not contradict the candidate's explicit fail-closed branch
+for a nonnatural root. They show that the branch is reached unless a new
+source-side root-provenance primitive breaks the symmetry. Selecting the first
+observed token would do so by observer truncation, which the candidate
+correctly forbids.
+
+\section{Complete four-token relation-variation orbit}
+
+There are fourteen nonempty proper odd blocks \(Q\subset\{0,1,2,3\}\).
+Every distinct ordered pair \(Q\to Q'\) changes the boundary line. The
+\(14\cdot13=182\) changes split by Hamming distance as
+\[
+\begin{array}{c|rrrr}
+|Q\triangle Q'| & 1 & 2 & 3 & 4\\
+\hline
+\text{ordered changes} & 48 & 72 & 48 & 14.
+\end{array}
+\]
+Thus the earlier \(48\) single-token transfers are only the first layer of
+the changing orbit. The unchanged candidate admits none of the \(182\) cases
+as relation-preserving variations.
+
+The permutation control independently recovers \(14\cdot24=336\) cases:
+\(72\) stabilize the selected boundary and \(264\) change it. The stabilizer
+orders are \(6,4,6\) for odd-block sizes \(1,2,3\).
+
+\section{Failure-branch classification}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Branch & Result & Exact scope \\
+\midrule
+algebraic collapse & survives & two-class kernel pair on admitted record \\
+selector collapse & obstructed & unrestricted records realize all relations \\
+nonuniqueness & obstructed & 265 graphs support two root-induced relations \\
+inverse defect & none found & admitted source isomorphisms only \\
+cocycle defect & not applicable & no cocycle theorem is claimed \\
+finite variation & fragile & all 182 relation changes excluded \\
+physical covariance & unproved & preserving category is loaded \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The event projection \(\pi=\mathrm{id}\) suffices for every finite control, so
+projection declaration does not reduce the relation family. Likewise,
+certificate compatibility with schematic \(\Phi_\lambda\) is asserted rather
+than derived. Declaration before \(B_U\) is not a provenance certificate.
+
+\section{Obstruction, freeze, and Distance to GR}
+
+The obstruction is local to exact candidate v1 under the current-ontology
+source package. Current ontology does not derive a transition, projection,
+root, physical morphism, or variation law that selects one candidate relation.
+A future conservative source extension may supply such a law; no theorem here
+proves that impossible.
+
+General EqSrc remains undischarged. Source ontology, RetainH, GenH,
+\(M_{\rm src}\), \(g_{\rm eff}\), matter coupling, Einstein equations,
+benchmark promotion, and Gate Chair status are unchanged. The Distance-to-GR
+and metric-use ledgers are unchanged.
+
+Exact candidate-v1 construction, fresh audit, and bounded Refuter stress are
+complete. The cycle is locally frozen: repeating, repairing, or promoting the
+unchanged candidate is barred. This local freeze is not canonical rejection,
+global theory rejection, or future source-extension impossibility.
+
+\section{Required next route}
+
+The next packet is one bounded
+\texttt{theoretical-continuation-selector@0.1.0}
+\texttt{ontology-law-research-packet}. It must select a genuinely
+source-derived transition/root provenance law, a source-side irrelevance
+theorem, or a distinct scoped no-go question with new mathematical payload.
+It may not repeat, repair, adopt, or promote exact candidate v1.
+
+\end{document}
