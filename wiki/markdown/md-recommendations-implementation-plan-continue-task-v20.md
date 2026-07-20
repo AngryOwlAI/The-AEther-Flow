@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19` `implementations_plans/recommendations_implementation_plan_continue_task-v19.md`
 - Generated output path: `wiki/markdown/md-recommendations-implementation-plan-continue-task-v20.md`
+- Backlink from `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21` `implementations_plans/recommendations_implementation_plan_continue_task-v21.md`
 - Backlink from `MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3` `research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md`
 - Backlink from `MD-V20-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/tasks/RT-20260718-011/artifacts/v20_recommendation_backlog_schema.md`
 

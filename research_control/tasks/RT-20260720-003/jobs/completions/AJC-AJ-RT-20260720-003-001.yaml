@@ -1,0 +1,251 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-003-001"
+completion_id: "AJC-AJ-RT-20260720-003-001"
+task_id: "RT-20260720-003"
+decision_id: "DDR-20260720-003"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260720-003"
+status: "completed"
+created_at: "2026-07-20T17:40:33Z"
+started_at: "2026-07-20T17:40:33Z"
+completed_at: "2026-07-20T17:48:36Z"
+objective: "Retry v21 P0-T01 register the exact plan as a canonical draft control dependency source validate its inventory preserve the active scientific handoff and route only to P0-T02."
+completion_summary: "V21 P0-T01 is complete after the separately governed reviewed-context repair. The immutable plan is tracked at its requested path with one canonical project-control source row. Its 17 phases 122 unique work items and V21-R01 through V21-R72 inventory and coverage matrix validate. Handoff-0773 routes only to P0-T02 while RT-20260718-047 and handoff-0772 remain the scientific authority."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_version: "v21"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T01"
+  recommendation_id_range: "V21-R01 through V21-R72"
+  recommendation_count: 72
+  implementation_status: "completed"
+  downstream_tasks_not_implemented:
+    - "P0-T02 and every later v21 work item"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 3
+  passes_consumed: 3
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:3"
+  relay_claim_token: "895c3b926c81c6741c63a9864e359332456547198a0e2607"
+transaction_status: "completed"
+result_disposition: "implemented"
+epistemic_status: "verified_project_control_registration"
+burden_effect: "no_distance_delta"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "v21_p0_t01_plan_registration_retry"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+precondition_repair:
+  task_id: "RT-20260720-002"
+  completion_id: "AJC-AJ-RT-20260720-002-001"
+  checkpoint_commit: "ffc502bd54afcf3f48f7befaabf7c0309645ffdf"
+  repair_scope: "Two exact path-and-class-specific anti-overclaim reviewed contexts."
+  v21_plan_changed: false
+  validator_implementation_changed: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v21"
+  source_recommendation_id_range: "V21-R01 through V21-R72"
+  source_recommendation_count: 72
+  implements_plan_task_id: "P0-T01"
+  implementation_status: "completed"
+  coverage_effect: "documentation"
+  remaining_work:
+    - "P0-T02 through P16-T06 require separate bounded packets under the registered dependency graph."
+scientific_status:
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Register the v21 control program without changing the active source-equivalence scientific burden or its handoff."
+  distance_to_gr_delta:
+    changed: false
+    effect: "no_distance_delta"
+    ledger_row_updated: false
+  assumption_delta: []
+  candidate_ids:
+    - "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1|preserved proposal-only pending fresh audit"
+  theorem_statement_hashes: []
+  new_mathematical_payload: []
+  physics_promotion_authorized: false
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  rationale: "Plan registration is control work and does not discharge the scientific EqSrc burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+outputs_created:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/tasks/RT-20260720-003/artifacts/v21_plan_registration_report.json"
+  - "research_control/tasks/RT-20260720-003/artifacts/v21_plan_source_hash_receipt.json"
+  - "research_control/tasks/RT-20260720-003/artifacts/validate_v21_plan_registration.py"
+  - "research_control/tasks/RT-20260720-003/artifacts/v21_plan_registration_validation_receipt.json"
+  - "research_control/tasks/RT-20260720-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260720-003/jobs/completions/AJC-AJ-RT-20260720-003-001.yaml"
+  - "research_control/handoffs/handoff-0773.yaml"
+  - "research_control/handoffs/handoff-0773.md"
+outputs_updated:
+  - ".gitignore"
+  - "research_control/program_state.yaml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+artifact_evidence:
+  plan_registration_report:
+    path: "research_control/tasks/RT-20260720-003/artifacts/v21_plan_registration_report.json"
+    sha256: "eed1d2c0eea893f623d3dbee89071f10041ba1fc60b629f50a2f16132ea1abf0"
+  source_hash_receipt:
+    path: "research_control/tasks/RT-20260720-003/artifacts/v21_plan_source_hash_receipt.json"
+    sha256: "b6c12b749bd1e24a040b0b6701cbfdbd00ab3617ff94d91540ffa07b6f535c3d"
+  validation_receipt:
+    path: "research_control/tasks/RT-20260720-003/artifacts/v21_plan_registration_validation_receipt.json"
+    sha256: "b8f7bdf2218a6b07f1619a8a973aff21c8e52d2180ab49e6799a947d70ca9f03"
+validation_evidence:
+  task_local_registration_status: "PASS"
+  task_local_finding_count: 0
+  phase_count: 17
+  task_card_count: 122
+  inventory_recommendation_count: 72
+  coverage_recommendation_count: 72
+  source_registry_row_count: 1
+  claim_language_status: "PASS"
+  claim_language_hard_fail_count: 0
+  accepted_plan_guard_warning_count: 2
+  preserved_scientific_handoff: "handoff-0772"
+  next_plan_work_item: "P0-T02"
+  checkpoint_status: "PENDING_GOVERNED_CHECKPOINT"
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | refresh_performed=true final_status=PASS source_object_count=908"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py --json lookup implementations_plans/recommendations_implementation_plan_continue_task-v20.md | exit_code=0 | returned_object_id=MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V20"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=0 | boundary=director_decision_required active_task=RT-20260718-047 latest_handoff=handoff-0772"
+  - ".venv/bin/python research_control/tasks/RT-20260720-003/artifacts/validate_v21_plan_registration.py --write-report --json | exit_code=0 | PASS 17 phases 122 work items 72 inventory IDs 72 coverage IDs one source row"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | docs_impact_required=true project_system_improvement_required=true"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS hard_fail_count=0 warning_count=1479 exact v21 guard contexts downgraded to intentional warnings"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths implementations_plans/recommendations_implementation_plan_continue_task-v21.md research_control/tasks/RT-20260720-003 research_control/program_state.yaml research_control/handoffs/handoff-0773.yaml --explain | exit_code=0 | READY authority=legacy selected_gates=14"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 3 lease parity clean bound branch exact repository identity one saved local project completed predecessor state and one consumed invocation were verified."
+      - "Current relay contracts program state handoff-0772 v20 lineage repair completion burden map and Distance-to-GR ledger were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The immutable plan and registry source hashes agree."
+      - "All 17 phases 122 unique work items and 72 inventory and coverage recommendation IDs agree."
+      - "The task records preserve the plan and scientific non-authority boundary."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local structural registration and changed-source claim-language validation pass."
+      - "The two formerly blocking v21 lines remain unchanged and are now exact intentional-example warnings under the governed repair."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The completion is prepared for one governed checkpoint after final control and documentation validation."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization and validate-only checks run inside the governed checkpoint."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current-frontier compact-frontier dependency-graph task-index and wiki derivatives are regenerated by the governed memory path."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source validation returned zero hard failures and 1479 warnings."
+      - "The two exact v21 anti-overclaim contexts are intentional-example warnings under the RT-20260720-002 repair."
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The separately governed validator repair is complete and this retry found no new project-system defect."
+preserved_state:
+  program_state_changed: true
+  latest_control_handoff: "handoff-0773"
+  scientific_task: "RT-20260718-047"
+  scientific_handoff: "handoff-0772"
+  scientific_route: "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit"
+  first_required_scientific_work_item: "P1-T01"
+  control_handoff_supersedes_scientific_handoff: false
+  distance_to_gr_changed: false
+forbidden_conclusion_summary: "Plan registration goal completion validator PASS handoff or checkpoint commit is not scientific proof and does not authorize P0-T02 execution source-law adoption canonical ontology edit EqSrc discharge metric matter coupling Einstein-equation derivation benchmark promotion Gate Chair verdict publication or completed derivation."
+verdict: "v21_p0_t01_plan_registration_pass_no_physics_delta"
+coherent_resolution_summary: "The immutable v21 plan is now a tracked project-control source with one canonical row complete inventory and coverage verification one control handoff to P0-T02 and no change to scientific authority or status."
+selected_next_route:
+  route_id: "v21_p0_t02_backlog_materialization"
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P0"
+  plan_task_id: "P0-T02"
+  task_name: "Materialize the v21 recommendation backlog and dependency DAG"
+  role_family: "project-control-maintainer@0.2.0"
+  task_type: "v21_backlog_materialization"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Materialize the v21 control backlog without changing the active source-equivalence scientific burden or its handoff."
+  requires_human_gate: false
+  requires_new_goal_record: false
+next_recommendation: "Continue the same recursive relay with one fresh bounded v21 P0-T02 generation; do not reuse this P0-T01 AgentJob."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 908
+    relationship_row_count: 4500
+    semantic_row_count: 908
+    vault_row_count: 908
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py --json lookup implementations_plans/recommendations_implementation_plan_continue_task-v20.md"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v20.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V20"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V20"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v20.md"
+      source_hash: "6ef3fc85f89dcfc71832298a3ff846e0425e93a61a7409801f737c2132f8ba6a"
+  additional_canonical_inspections:
+    - canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+      authority_note: "Direct pre-registration inspection of the ignored immutable v21 plan."
+    - canonical_path: "research_control/tasks/RT-20260720-002/jobs/completions/AJC-AJ-RT-20260720-002-001.yaml"
+      source_hash: "987d7e19e6ac4f786a71de9300c400b905c9fb3d514be9c1790b1f11ecd0524e"
+      authority_note: "Canonical completion evidence for the reviewed-context repair."
+  authority_note: "Generated Obsidian wiki SQLite semantic and .local retrieval surfaces are navigation layers only and are not authority."

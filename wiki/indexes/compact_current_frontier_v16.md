@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-047`
-- Latest handoff: `handoff-0772`
-- Current status: `eqsrc_flow_generated_graded_orbit_root_law_candidate_formalized_pending_fresh_audit_no_adoption`
+- Active task: `RT-20260720-003`
+- Latest handoff: `handoff-0773`
+- Current status: `v21_p0_t01_plan_registered_pending_p0_t02_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-047`
-- Latest research handoff: `handoff-0772`
-- Latest research next action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
+- Latest research task: `RT-20260720-003`
+- Latest research handoff: `handoff-0773`
+- Latest research next action: Run one bounded v21 P0-T02 Project-Control Maintainer packet to materialize the recommendation backlog and dependency DAG. Do not execute P1-T01 and preserve handoff-0772 as its scientific source.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `v21_p0_t02_backlog_materialization`
+- Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Audit the exact proposal-only flow-generated graded-orbit root source law before Refuter stress or protected adoption review.
+- Milestone burden: Materialize the v21 control backlog without changing the active source-equivalence scientific burden or its handoff.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `167b862367ed1ba3225c5cba5a002d6f8d631d4420f23b53c70f094dc553b339`
-- JSON SHA-256: `1027b8650dd22665d5c18ba7da1a22299c8714136934f29016ef6eab7ebaf022`
+- YAML SHA-256: `8db684d642147ada93a75d25c22892fc3c4417ff5c29a758ca07449ba88ed267`
+- JSON SHA-256: `f109c2f18f88296a755310d00eabef2562a75a305f4de16e1200b53f5f07a649`
 
 ## Authority Warning
 

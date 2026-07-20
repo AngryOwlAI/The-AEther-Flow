@@ -645,6 +645,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v18.md`
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v19.md`
 - `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V20` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v20.md`
+- `WIKI-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21` `wiki/markdown/md-recommendations-implementation-plan-continue-task-v21.md`
 - `WIKI-MD-RESEARCH-AGENT-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-research-agent-workflow-publication-brief.md`
 - `WIKI-MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `wiki/markdown/md-research-control-current-frontier.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-POLICY-V1` `wiki/markdown/md-research-control-design-accepted-status-calibration-policy-v1.md`
@@ -1458,6 +1459,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V18` `implementations_plans/recommendations_implementation_plan_continue_task-v18.md`
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V19` `implementations_plans/recommendations_implementation_plan_continue_task-v19.md`
 - `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V20` `implementations_plans/recommendations_implementation_plan_continue_task-v20.md`
+- `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21` `implementations_plans/recommendations_implementation_plan_continue_task-v21.md`
 - `MD-RESEARCH-CONTROL-CURRENT-FRONTIER` `research_control/current_frontier.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-POLICY-V1` `research_control/design/accepted_status_calibration_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ACCEPTED-STATUS-CALIBRATION-SCHEMA-V1` `research_control/design/accepted_status_calibration_schema_v1.md`

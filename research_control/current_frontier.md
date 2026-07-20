@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-047` and `handoff-0772`.
+`RT-20260720-003` and `handoff-0773`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-047` |
-| Latest handoff ID | `handoff-0772` |
-| Current status | `eqsrc_flow_generated_graded_orbit_root_law_candidate_formalized_pending_fresh_audit_no_adoption` |
+| Active task ID | `RT-20260720-003` |
+| Latest handoff ID | `handoff-0773` |
+| Current status | `v21_p0_t01_plan_registered_pending_p0_t02_no_physics_delta` |
 | V16 completed | false |
-| Current route family | eqsrc rooted partition scoped obstruction to flow generated graded orbit root candidate to fresh smuggling audit |
+| Current route family | v21 p0 t02 backlog materialization |
 | Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One fresh Smuggling Auditor may inspect the exact candidate for source provenance circularity hidden target or process imports and overread and return one audit verdict with one lawful next route. |
-| Next recommended action | Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate. |
+| Current burden | `source_equivalence_eqsrc` |
+| Required next authority | One P0-T02 backlog and dependency-DAG materialization packet under the registered immutable v21 plan. |
+| Next recommended action | Run one bounded v21 P0-T02 Project-Control Maintainer packet to materialize the recommendation backlog and dependency DAG. Do not execute P1-T01 and preserve handoff-0772 as its scientific source. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-047` |
-| Latest research handoff ID | `handoff-0772` |
-| Latest research next action | Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate. |
+| Latest research task ID | `RT-20260720-003` |
+| Latest research handoff ID | `handoff-0773` |
+| Latest research next action | Run one bounded v21 P0-T02 Project-Control Maintainer packet to materialize the recommendation backlog and dependency DAG. Do not execute P1-T01 and preserve handoff-0772 as its scientific source. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-047/00_TASK.yaml`.
-- Active task objective: Execute one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1 with an exact source-order monoid action reachability cover graph global minimum graded rank parity partition pointing relation morphism variation package one four-event positive witness and periodic bi-infinite dense multi-minimal non-graded truncation and target-import fail-closed branches.
-- Latest handoff path: `research_control/handoffs/handoff-0772.yaml`.
-- Latest handoff summary: RT-20260718-047 formalized proposal-only EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. On an explicitly proposed source-order monoid action over one full source component, action reachability conditionally derives the cover graph unique global minimum graded rank ordered parity blocks boundary line and kernel-pair relation. Conditional preorder cover-generation minimum naturality rank functoriality ordered-monoid reparameterization and finite-variation theorems were proved. A four-event action chain gives the positive eight-pair relation; periodic bi-infinite dense multi-minimal non-graded observer-truncated target and process branches fail closed. Current ontology does not derive the ordered-action package. Adoption remains blocked with open continuation, exact rooted-partition candidate v1 remains locally frozen, and no ledger or promotion changed.
-- Current route family: eqsrc rooted partition scoped obstruction to flow generated graded orbit root candidate to fresh smuggling audit.
-- Next recommended action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
+- Active task path: `research_control/tasks/RT-20260720-003/00_TASK.yaml`.
+- Active task objective: Retry only v21 P0-T01 after the exact reviewed-context repair register the immutable plan as a canonical draft control dependency source preserve handoff-0772 as scientific authority and route only to P0-T02.
+- Latest handoff path: `research_control/handoffs/handoff-0773.yaml`.
+- Latest handoff summary: RT-20260720-003 completed one post-repair Project-Control Maintainer packet for v21 P0-T01. The immutable plan is tracked with one project-control source row and validates at 17 phases 122 unique work items and V21-R01 through V21-R72. This control handoff routes only to P0-T02. RT-20260718-047 and handoff-0772 remain the scientific authority for P1-T01.
+- Current route family: v21 p0 t02 backlog materialization.
+- Next recommended action: Run one bounded v21 P0-T02 Project-Control Maintainer packet to materialize the recommendation backlog and dependency DAG. Do not execute P1-T01 and preserve handoff-0772 as its scientific source.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
+Run one bounded v21 P0-T02 Project-Control Maintainer packet to materialize the recommendation backlog and dependency DAG. Do not execute P1-T01 and preserve handoff-0772 as its scientific source.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,20 +330,32 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-047`;
-- latest handoff: `handoff-0772`;
-- current status: `eqsrc_flow_generated_graded_orbit_root_law_candidate_formalized_pending_fresh_audit_no_adoption`;
+- active task: `RT-20260720-003`;
+- latest handoff: `handoff-0773`;
+- current status: `v21_p0_t01_plan_registered_pending_p0_t02_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
+- latest handoff validation `checkpoint_transaction`: PENDING_GOVERNED_CHECKPOINT;
+- latest handoff validation `claim_language_changed`: PASS;
+- latest handoff validation `claim_language_hard_fail_count`: 0;
+- latest handoff validation `documentation_impact`: PENDING_FINAL_GATE;
+- latest handoff validation `git_diff_check`: PENDING_FINAL_GATE;
+- latest handoff validation `phase_count`: 17;
+- latest handoff validation `project_improvement_signals`: PENDING_FINAL_GATE;
+- latest handoff validation `recommendation_count`: 72;
+- latest handoff validation `research_control_diff`: PENDING_FINAL_GATE;
+- latest handoff validation `source_registry_row_count`: 1;
+- latest handoff validation `v21_plan_registration`: PASS;
+- latest handoff validation `work_item_count`: 122;
 
 ## Retrieval Warning Status
 
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0772.yaml`
-- `research_control/tasks/RT-20260718-047/00_TASK.yaml`
+- `research_control/handoffs/handoff-0773.yaml`
+- `research_control/tasks/RT-20260720-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +371,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0772*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0773*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
