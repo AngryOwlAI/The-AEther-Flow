@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-040`
-- Latest handoff: `handoff-0765`
-- Current status: `eqsrc_orientation_torsor_descent_law_conditional_formal_audit_pass_pending_bounded_refuter_stress_no_adoption`
+- Active task: `RT-20260718-041`
+- Latest handoff: `handoff-0766`
+- Current status: `eqsrc_orientation_torsor_descent_law_scoped_line_selection_and_physical_admissibility_obstruction_pending_theoretical_selection_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-040`
-- Latest research handoff: `handoff-0765`
-- Latest research next action: Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three equivariant descended lines, associated-state identity retyping, source-exchange trivialization, internal complement, parity under independently justified source variations, reduced versus full symmetry, translation nondiscrimination, and partition provenance. Do not repair, adopt, or promote the candidate.
+- Latest research task: `RT-20260718-041`
+- Latest research handoff: `handoff-0766`
+- Latest research next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among a genuinely source-derived pointing or partition-provenance law, a source-side line-irrelevance theorem, a distinct scoped no-go target, or local freeze. Do not repeat, repair, adopt, or promote exact candidate v1.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_orientation_torsor_descent_law_refuter_stress`
-- Role family: `refuter@0.2.0`
+- Route ID: `eqsrc_orientation_torsor_descent_law_post_obstruction_theoretical_selection`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Stress the unchanged audited associated-state relation law before any protected adoption consideration.
+- Milestone burden: Select the next same-milestone packet after exact candidate v1's scoped current-ontology line-selection and physical-admissibility obstruction.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `f66252a0eaa1f561e10a5f305a70b7d0b99213d65451246d789a113c3b1d9bdb`
-- JSON SHA-256: `c16bf23a7bb300906c6b21d71cbbbcf8ec70bb29ec8cb779ce0026782c0d7674`
+- YAML SHA-256: `ba98362ec2b4e40d4366071686f7ce78bd9db5b305fec96c9ed3480ac26233e0`
+- JSON SHA-256: `69a07035ae0f0aae6e3fd945bafea98dec95f82578bbc9e1c37a6f2378df5ec9`
 
 ## Authority Warning
 

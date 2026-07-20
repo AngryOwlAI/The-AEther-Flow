@@ -1,0 +1,178 @@
+% authority: science-audit
+% status: draft/control
+% task: RT-20260718-041
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Ftwo}{\mathbb F_2}
+
+\title{Refuter Stress of the Proposal-Only EqSrc Orientation-Torsor Descent Law}
+\author{Refuter control packet RT-20260718-041}
+\date{2026-07-20}
+
+\begin{document}
+\maketitle
+
+\section{Scope and exact result}
+
+This packet stresses the unchanged proposal-only object
+\[
+\mathsf{EqSrcOrientationTorsorDescentLaw}^{\mathrm{cand},v1}_{\mathrm{src}}.
+\]
+The candidate source hash is
+\texttt{81b24c69403c304889a94caec8b2a99a6a360a49f40266764da4cfd3ba4edd5f},
+and the fresh audit source hash is
+\texttt{06275c74d2d83ca68e518c755dfdda6f548e927bcc9c47fe4c74794c6fc685f1}.
+
+The exact Refuter classification is \texttt{scoped\_obstruction}. The
+associated-state quotient, strict scalar non-descent on the original common
+state space, exact fibre pullback, orientation cocycle, admitted-source
+functoriality, and declared-translation preservation survive under the
+proposal assumptions. What fails is the stronger reading that those
+assumptions, as derived from current ontology, select the candidate coordinate
+line uniquely or establish it as physically admissible.
+
+\section{Minimal finite record}
+
+Take the admitted two-point record
+\[
+X=\{0,1\},\quad P=\{0\},\quad Q=\{1\},\quad
+A=\operatorname{span}_{\Ftwo}\{p,q\}.
+\]
+Write \(d=p+q\). The three nonzero proper lines are
+\[
+L_p=\langle p\rangle,\qquad
+L_q=\langle q\rangle,\qquad
+L_d=\langle d\rangle.
+\]
+For a line \(L\), define the congruence
+\[
+x\,R_L\,y\quad\Longleftrightarrow\quad x-y\in L.
+\]
+Every \(R_L\) has two equivalence classes of size two and therefore eight
+ordered pairs.
+
+Let \(c(p)=q\), \(c(q)=p\), and \(c(d)=d\). An equivariant line family on the
+two-element orientation torsor is determined by its line over one
+orientation; the opposite fibre is its image under \(c\). Thus the same
+unpointed record supports exactly three families:
+\[
+(L_q,L_p),\qquad(L_p,L_q),\qquad(L_d,L_d).
+\]
+The first is the candidate family. Each family satisfies the same
+orientation-change cocycle, descends to a line on the associated state, and
+pulls back exactly to its two fibre relations.
+
+\begin{theorem}[Three-family nonuniqueness]
+Equivariance, associated-state descent, exact fibre pullback, and cocycle
+consistency do not uniquely select the candidate family.
+\end{theorem}
+\begin{proof}
+The two-dimensional \(\Ftwo\)-space has exactly three nonzero vectors and each
+spans a distinct line. Equivariance uniquely transports any chosen base line
+to the opposite orientation. The three base lines are distinct, so a
+temporary trivialization exhibits three distinct descended lines, all
+satisfying the same formal controls.
+\end{proof}
+
+\section{Full linear and affine census}
+
+\begin{theorem}[Linear orbit]
+\(\operatorname{GL}(2,2)\) has order six and acts transitively on
+\(\{L_p,L_q,L_d\}\). No nonzero proper line is invariant under the full
+linear group.
+\end{theorem}
+\begin{proof}
+An invertible map is determined by the image of an ordered basis: there are
+three choices for the first nonzero image and two remaining choices for the
+second. Given any two nonzero vectors, extend each to a basis and map one
+basis to the other. Hence the three lines form one orbit.
+\end{proof}
+
+\begin{theorem}[Affine stabilizers and their intersection]
+\(\operatorname{AGL}(2,2)\) has order \(24\). For each line \(L\), the
+stabilizer of \(R_L\) has order eight. The intersection of the three
+stabilizers is exactly the four-element translation group.
+\end{theorem}
+\begin{proof}
+An affine map has the form \(x\mapsto Mx+t\), with six choices of \(M\) and
+four of \(t\). It preserves \(R_L\) precisely when \(M(L)=L\), because the
+translation cancels from differences. The linear stabilizer of one line has
+order two, giving \(2\cdot4=8\) affine stabilizers. A linear map stabilizing
+all three lines fixes all three nonzero vectors and is the identity. The
+translation remains arbitrary.
+\end{proof}
+
+\begin{corollary}[Translation nondiscrimination]
+Every translation preserves every one of the three line congruences. The
+candidate's declared translations do not distinguish its line.
+\end{corollary}
+
+The internal complement swaps \(L_p\) and \(L_q\) and fixes \(L_d\). Thus it
+does not select the candidate coordinate line. If complement invariance were
+independently required, it would favor the diagonal instead. The source block
+exchange acts as the identity on associated classes, so its naturality is
+also nondiscriminating.
+
+\begin{proposition}[Selector-erasure extremes]
+The meet of \(R_{L_p},R_{L_q},R_{L_d}\) is equality, with four ordered pairs.
+Their generated join is the universal relation, with sixteen ordered pairs.
+\end{proposition}
+\begin{proof}
+The intersection of the three kernel lines is \(\{0\}\), giving equality.
+Any two distinct lines span \(A\), so alternating steps along their elements
+connect every pair of states, giving the universal transitive closure.
+\end{proof}
+
+\section{Source-record variation and provenance}
+
+The candidate's affine controls act internally on \(A\); they do not vary the
+source record. Moving one point from one nonempty odd block to the other makes
+both resulting block sizes even. If the donor is a singleton, the transfer
+instead leaves an empty block and exits the admitted domain. Hence internal
+translation invariance supplies no robustness theorem for this elementary
+source-record variation.
+
+Current ontology does not derive the unordered partition, its acquisition
+provenance, the both-odd domain, the block-span model, a physical morphism
+category, or an admissible source-record variation category. The final record
+alone cannot distinguish a source-derived partition from one selected to
+produce a preferred relation.
+
+\section{Scoped obstruction and route consequence}
+
+Define
+\[
+\texttt{OB-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001}.
+\]
+Its failed premise is that current ontology and the displayed proposal
+assumptions provide an independently source-derived rule selecting the
+candidate coordinate descended line, together with a physical variation
+category that discriminates it. The two-point record is a minimal
+countermodel to uniqueness under the declared formal controls.
+
+This is not a defect in the conditional associated-state construction and not
+a theorem that every richer source extension fails. A source-derived pointing
+or provenance law, a theorem making line choice physically irrelevant, or a
+distinct scoped no-go target may remain possible.
+
+Candidate status remains \texttt{proposal-only}, \texttt{source-extension
+data}, and \texttt{blocked\_adoption\_open\_continuation}. General
+\(\mathrm{EqSrc}\), all downstream GR burdens, and both authoritative ledgers
+are unchanged. The exact candidate-v1 construction--audit--stress cycle is
+locally frozen. One bounded
+\texttt{theoretical-continuation-selector@0.1.0} packet may select a materially
+distinct next route; it may not repair, adopt, or promote the candidate.
+
+\paragraph{Forbidden conclusions.}
+No canonical ontology rejection or adoption, physical admissibility or
+covariance, general EqSrc no-go, downstream GR derivation, ledger change,
+benchmark promotion, Gate Chair verdict, completed derivation, future
+source-extension impossibility, program-wide no-go, or global theory rejection
+follows.
+
+\end{document}

@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T23:40:44Z`
-- Source fingerprint: `c9525241753396cf783a9bf8ca427be8893429aca976849ecdbaac9cc441a385`
-- Nodes: `19542`
-- Edges: `67482`
+- Generated from tracked state as of: `2026-07-20T00:18:53Z`
+- Source fingerprint: `3ff0d80384186085e064f8efd0c82147abfa9388485dfab3631068081455ef69`
+- Nodes: `19560`
+- Edges: `67535`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 994 |
+| `completion_yaml` | 995 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 765 |
+| `handoff_yaml` | 766 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 994 |
+| `agent_job` | `support_only` | 995 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10228 |
+| `artifact` | `support_only` | 10235 |
 | `blocked_burden` | `blocked` | 3687 |
-| `claim_boundary` | `support_only` | 951 |
-| `draft_control_candidate` | `draft_control` | 609 |
+| `claim_boundary` | `support_only` | 952 |
+| `draft_control_candidate` | `draft_control` | 613 |
 | `draft_control_candidate` | `proposal_only` | 95 |
 | `draft_control_candidate` | `science_draft` | 62 |
-| `frozen_negative` | `frozen_negative` | 113 |
+| `frozen_negative` | `frozen_negative` | 114 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 765 |
+| `handoff` | `support_only` | 766 |
 | `human_gated_object` | `human_gated` | 423 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 72 |
+| `obstruction` | `blocked` | 73 |
 | `obstruction` | `rejected` | 1 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 313 |
+| `source_ontology_object` | `support_only` | 314 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 934 |
+| `task` | `support_only` | 935 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-040`
-- Latest handoff: `handoff-0765`
-- Handoff path: `research_control/handoffs/handoff-0765.yaml`
-- Next action: Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three equivariant descended lines, associated-state identity retyping, source-exchange trivialization, internal complement, parity under independently justified source variations, reduced versus full symmetry, translation nondiscrimination, and partition provenance. Do not repair, adopt, or promote the candidate.
+- Active task: `RT-20260718-041`
+- Latest handoff: `handoff-0766`
+- Handoff path: `research_control/handoffs/handoff-0766.yaml`
+- Next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among a genuinely source-derived pointing or partition-provenance law, a source-side line-irrelevance theorem, a distinct scoped no-go target, or local freeze. Do not repeat, repair, adopt, or promote exact candidate v1.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

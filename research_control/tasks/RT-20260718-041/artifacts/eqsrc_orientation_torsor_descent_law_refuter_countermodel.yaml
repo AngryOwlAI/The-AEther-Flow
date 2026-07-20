@@ -1,0 +1,68 @@
+countermodel_id: "CM-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001"
+obstruction_id: "OB-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001"
+task_id: "RT-20260718-041"
+job_id: "AJ-RT-20260718-041-001"
+status: "draft/control"
+scope: "exact_finite_branch"
+global_no_go: false
+source_record:
+  carrier: ["0", "1"]
+  unordered_partition:
+    - ["0"]
+    - ["1"]
+  both_odd: true
+  orientation_torsor:
+    - ["P", "Q"]
+    - ["Q", "P"]
+state_space:
+  field: "F2"
+  elements:
+    "0": [0, 0]
+    p: [1, 0]
+    q: [0, 1]
+    d: [1, 1]
+  complement:
+    "0": "0"
+    p: q
+    q: p
+    d: d
+line_families:
+  candidate_coordinate:
+    over_PQ: ["0", q]
+    over_QP: ["0", p]
+  reverse_coordinate:
+    over_PQ: ["0", p]
+    over_QP: ["0", q]
+  diagonal:
+    over_PQ: ["0", d]
+    over_QP: ["0", d]
+verified_counts:
+  gl2_order: 6
+  agl2_order: 24
+  line_count: 3
+  relation_ordered_pairs_each: 8
+  affine_stabilizer_order_each: 8
+  common_affine_stabilizer_order: 4
+  common_affine_stabilizer: "all translations and only translations"
+  full_symmetry_line_orbit_size: 3
+  full_symmetry_invariant_proper_lines: 0
+  meet_ordered_pairs: 4
+  join_ordered_pairs: 16
+verified_actions:
+  complement: "swaps coordinate families and fixes diagonal family"
+  source_exchange_on_associated_classes: "identity"
+  translations: "preserve all three line congruences"
+shared_formal_properties:
+  - "C2 equivariance"
+  - "associated-state descent"
+  - "exact fibre pullback"
+  - "orientation-change cocycle"
+  - "preservation by every translation"
+failed_selection_premise: "No current-ontology-derived rule distinguishes the candidate coordinate family from the reverse coordinate or diagonal family."
+parity_domain_stress:
+  operation: "transfer one carrier point from one block to the other"
+  nonempty_result: "odd-odd becomes even-even"
+  singleton_result: "one block becomes empty and the record exits the admitted domain"
+  conclusion: "Declared internal translations do not establish source-record robustness."
+lawful_conclusion: "The candidate's conditional formal core survives, but its current-ontology-derived unique physically admissible selector reading has a scoped obstruction."
+forbidden_overread: "This finite countermodel is not a general EqSrc no-go, a global theory rejection, or a proof that every future source extension fails."

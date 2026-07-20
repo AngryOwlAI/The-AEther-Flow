@@ -1,0 +1,56 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260718-041"
+job_id: "AJ-RT-20260718-041-001"
+status: "completed"
+created_at: "2026-07-20T00:18:53Z"
+claim_boundary_preserved: true
+candidate_name: "EqSrcOrientationTorsorDescentLaw_src^cand,v1"
+candidate_status: "proposal-only"
+source_artifact: "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+audit_artifact: "research_control/tasks/RT-20260718-040/artifacts/eqsrc_orientation_torsor_descent_law_smuggling_audit.tex"
+finite_model:
+  field: "F2"
+  state_space: ["0", "p", "q", "d=p+q"]
+  lines:
+    L_p: ["0", "p"]
+    L_q: ["0", "q"]
+    L_d: ["0", "d"]
+  congruence_rule: "x R_L y iff x-y is in L"
+results:
+  - result_id: "MATH-RT-20260718-041-001"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "The two-dimensional F2 space has exactly three nonzero proper lines, and each base-orientation line generates one C2-equivariant fibre family and hence one descended associated-state line."
+    proof_summary: "Every nonzero vector spans a distinct order-two line. Equivariance uniquely fixes the opposite fibre by complement transport."
+  - result_id: "MATH-RT-20260718-041-002"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "GL(2,2) has order 6 and acts transitively on the three lines; therefore no nonzero proper line is invariant under the full linear symmetry."
+    proof_summary: "An invertible linear map is determined by an ordered basis, giving 3 times 2 equals 6 maps. Any nonzero vector can be sent to any other nonzero vector."
+  - result_id: "MATH-RT-20260718-041-003"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "AGL(2,2) has order 24. Each line congruence has affine stabilizer order 8, and the intersection of all three affine stabilizers is exactly the four-element translation group."
+    proof_summary: "For a fixed line, the linear stabilizer has order 2 and translation is unrestricted. A linear map stabilizing all three lines fixes all three nonzero vectors and is the identity."
+  - result_id: "MATH-RT-20260718-041-004"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "The complement involution swaps L_p and L_q and fixes L_d, while every translation preserves all three congruences."
+    proof_summary: "Complement exchanges the basis vectors and fixes their sum. Translation cancels from pairwise differences."
+  - result_id: "MATH-RT-20260718-041-005"
+    type: "theorem_with_hypotheses_and_proof"
+    statement: "The meet of the three line congruences is equality with four ordered pairs, and their generated join is the universal relation with sixteen ordered pairs."
+    proof_summary: "The line intersection is zero and any two distinct lines span the full two-dimensional space."
+  - result_id: "MATH-RT-20260718-041-006"
+    type: "countermodel_or_obstruction"
+    statement: "One two-point unpointed both-odd record supports three distinct equivariant descended line relations satisfying the same descent, pullback, cocycle, and translation controls."
+    proof_summary: "Take X={0,1}, P={0}, Q={1}; enumerate L_p, L_q, and L_d and transport each by complement."
+classification: "scoped_obstruction"
+obstruction_id: "OB-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001"
+surviving_formal_core:
+  - "associated-state well-definedness"
+  - "strict scalar non-descent on the original common A_U"
+  - "fibre pullback"
+  - "cocycle and admitted-source functoriality"
+  - "declared-translation preservation"
+blocked_reading: "The candidate coordinate descended line is uniquely selected or physically admissible from the current ontology."
+global_no_go: false
+future_source_extension_impossibility: false
+next_route: "theoretical-continuation-selector@0.1.0"
