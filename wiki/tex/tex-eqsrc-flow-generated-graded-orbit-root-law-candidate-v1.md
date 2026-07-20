@@ -18,6 +18,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Generated output path: `wiki/tex/tex-eqsrc-flow-generated-graded-orbit-root-law-candidate-v1.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-047-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW-CANDIDATE-RECEIPT` `research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_receipt.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-047-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW` `research_control/tasks/RT-20260718-047/artifacts/parent_fusion_notes_eqsrc_flow_generated_graded_orbit_root_law.md`
+- Backlink from `TEX-V21-P1-T01-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-009/artifacts/eqsrc_flow_generated_graded_orbit_root_smuggling_audit.tex`
 
 ## Validation
 

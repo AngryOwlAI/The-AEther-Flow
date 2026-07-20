@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-20T20:54:33Z`
-- Source fingerprint: `c48be5e3d21c460d3df096454a3b430f7e9e6d2686b9bdc0532fa5c64b898cc2`
-- Nodes: `19850`
-- Edges: `68257`
+- Generated from tracked state as of: `2026-07-20T21:38:15Z`
+- Source fingerprint: `bafa07d4fd73d48af356059931099d6fbc245f4ebcbe9eb877f91ad82d47179e`
+- Nodes: `19878`
+- Edges: `68310`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1009 |
+| `completion_yaml` | 1010 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 778 |
+| `handoff_yaml` | 779 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1009 |
+| `agent_job` | `support_only` | 1010 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10364 |
-| `blocked_burden` | `blocked` | 3760 |
-| `claim_boundary` | `support_only` | 966 |
-| `draft_control_candidate` | `draft_control` | 633 |
-| `draft_control_candidate` | `proposal_only` | 102 |
+| `artifact` | `support_only` | 10371 |
+| `blocked_burden` | `blocked` | 3771 |
+| `claim_boundary` | `support_only` | 967 |
+| `draft_control_candidate` | `draft_control` | 636 |
+| `draft_control_candidate` | `proposal_only` | 103 |
 | `draft_control_candidate` | `science_draft` | 62 |
-| `frozen_negative` | `frozen_negative` | 115 |
+| `frozen_negative` | `frozen_negative` | 116 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 778 |
+| `handoff` | `support_only` | 779 |
 | `human_gated_object` | `human_gated` | 424 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 318 |
+| `source_ontology_object` | `support_only` | 319 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 949 |
+| `task` | `support_only` | 950 |
 
 ## Frontier Table
 
@@ -104,6 +104,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:alias_or_status_language_as_physics_authority` | Blocked claim: alias or status language as physics authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_claim_promotion` | Blocked claim: approval as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_proof` | Blocked claim: approval as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:arbitrary_encodability_as_explicit_target_import` | Blocked claim: arbitrary encodability as explicit target import | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_finite_dag_witness_theorem` | Blocked claim: arbitrary finite-DAG witness theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_finite_source_package_theorem` | Blocked permission: arbitrary finite source package theorem | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:arbitrary_finite_source_package_witness_theorem` | Blocked claim: arbitrary finite-source-package witness theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:backlog_as_einstein_equations` | Blocked claim: backlog as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_eqsrc_discharge` | Blocked claim: backlog as EqSrc discharge | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_execution_of_downstream_tasks` | Blocked claim: backlog as execution of downstream tasks | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:backlog_as_gate_chair_verdict` | Blocked claim: backlog as Gate Chair verdict | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260720-008`
-- Latest handoff: `handoff-0778`
-- Handoff path: `research_control/handoffs/handoff-0778.yaml`
-- Next action: Run exactly one bounded v21 P1-T01 fresh Smuggling Auditor ontology-law-research-packet against the unchanged EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Do not combine P10-T01, P13-T01, or P13-T03 in the same task.
+- Active task: `RT-20260720-009`
+- Latest handoff: `handoff-0779`
+- Handoff path: `research_control/handoffs/handoff-0779.yaml`
+- Next action: Run exactly one bounded v21 P1-T02 Ontology Formalizer ontology-law-research-packet to group the recent response-token orientation-line root partition and grading candidates into stable families and record exact construction audit stress repair freeze and supersession lineage. Do not execute P1-T03 or repair stress adopt reject or promote any candidate in the same task.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

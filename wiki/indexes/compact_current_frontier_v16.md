@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-008`
-- Latest handoff: `handoff-0778`
-- Current status: `v21_p0_t05_prelaunch_audit_pass_pending_p1_t01_no_physics_delta`
+- Active task: `RT-20260720-009`
+- Latest handoff: `handoff-0779`
+- Current status: `v21_p1_t01_conditional_source_audit_pass_pending_p1_t02_family_lineage_map_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-008`
-- Latest research handoff: `handoff-0778`
-- Latest research next action: Run exactly one bounded v21 P1-T01 fresh Smuggling Auditor ontology-law-research-packet against the unchanged EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Do not combine P10-T01, P13-T01, or P13-T03 in the same task.
+- Latest research task: `RT-20260720-009`
+- Latest research handoff: `handoff-0779`
+- Latest research next action: Run exactly one bounded v21 P1-T02 Ontology Formalizer ontology-law-research-packet to group the recent response-token orientation-line root partition and grading candidates into stable families and record exact construction audit stress repair freeze and supersession lineage. Do not execute P1-T03 or repair stress adopt reject or promote any candidate in the same task.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `v21_p1_t02_candidate_family_lineage_map`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Complete the exact next action authorized by handoff-0772.
+- Milestone burden: Group recent selector candidates into stable families and record exact lineage before family freeze review.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `965d1594c7bfd648360d963d44d427e99e41e31e71f98725d185b9a65d7deace`
-- JSON SHA-256: `9a30cceaa6633f60164683e3b4f968c476713be925e44b9df289a0c0b93d6c25`
+- YAML SHA-256: `e0704f10523c47d1a2c6b29976851786870b41e661b06220cf071a18d230d2e7`
+- JSON SHA-256: `bbc1b5aaa4872a06f13056409c1af3cb15bb8810eca3fa618d4d43d355a9e39c`
 
 ## Authority Warning
 

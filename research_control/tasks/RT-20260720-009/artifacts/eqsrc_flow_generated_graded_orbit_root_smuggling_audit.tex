@@ -1,0 +1,212 @@
+% authority: science-draft
+% status: draft/control
+% route: ontology-law-research-packet
+% trigger_classification: derivation_critical_missing_source_law
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Ftwo}{\mathbb F_2}
+\newcommand{\Candidate}{\mathsf{EqSrcFlowGeneratedGradedOrbitRootLaw}^{\mathrm{cand},v1}_{\mathrm{src}}}
+
+\title{P1-T01 Smuggling Audit of the Proposal-Only\\
+EqSrc Flow-Generated Graded-Orbit Root Law Candidate v1}
+\author{Smuggling Auditor control packet RT-20260720-009}
+\date{2026-07-20}
+
+\begin{document}
+\maketitle
+
+\section{Verdict and authority boundary}
+
+The exact input is the proposal-only candidate artifact with SHA-256
+\texttt{b712552d328f144491bff689b702eba6dc2027ce1cc61c7052adbca84b0639f7}.
+The audit verdict is
+\texttt{conditional\_source\_purity\_pass\_with\_action\_realization\_and\_completeness\_nondiscrimination}.
+The displayed reachability, cover, rank-parity, boundary-line, and kernel-pair
+claims are mathematically correct after every admitted record field is
+supplied. The candidate contains no explicit target-GR import and no explicit
+repository-process premise in those definitions.
+
+That conditional pass does not establish source provenance. The ordered
+action package can realize every nontrivial ordered finite partition, the
+``full component'' condition cannot be certified from the local record alone,
+positivity is named but not axiomatized, and the morphism and variation
+categories preserve the result by construction. These are source-selection
+and robustness obstructions, not evidence of an explicit hidden target import
+and not a global no-go theorem.
+
+The candidate remains \texttt{proposal-only} with
+\texttt{blocked\_adoption\_open\_continuation}. General EqSrc remains
+undischarged. No ontology source, Distance-to-GR ledger, metric-use ledger,
+benchmark, or protected decision changes.
+
+\section{Audited proposal data}
+
+The candidate admits a record
+\[
+ U=(C,\Lambda_+,\oplus,0,\Phi,\mathcal M_U,\mathcal V_U)
+\]
+only after supplying a monoid action, a full action component, antisymmetric
+and locally finite reachability, one global minimum, a common finite
+saturated-chain rank, two nonempty parity blocks, and independently declared
+morphism and variation categories. It then defines
+\[
+ P_U=\{x:\rho_U(x)\equiv0\pmod2\},\qquad
+ Q_U=\{x:\rho_U(x)\equiv1\pmod2\},
+\]
+\[
+ A_U=\operatorname{span}_{\Ftwo}\{\mathbf1_{P_U},\mathbf1_{Q_U}\},
+ \qquad B_U=\Ftwo\mathbf1_{Q_U},
+ \qquad aR_Ua'\Longleftrightarrow a-a'\in B_U.
+\]
+The order of definition is source-facing: no partition or relation is an
+explicit input. The audit therefore distinguishes textual source purity from
+the stronger question whether the admitted action data select rather than
+encode the desired structure.
+
+\section{Universal ordered-partition action realization}
+
+\begin{theorem}[Universal ordered-bipartition action realization]
+Let a finite set (C) have a nontrivial ordered partition (C=P\sqcup Q).
+There is a finite action record admitted by the candidate whose even and odd
+rank blocks are exactly (P) and (Q), respectively.
+\end{theorem}
+
+\begin{proof}
+Choose (r\in P) and (q_*\in Q). Let the free monoid on symbols
+\(\{u_q:q\in Q\}\cup\{v_p:p\in P\setminus\{r\}\}\) act through the
+transformations
+\[
+ u_q(r)=q,\quad u_q(x)=x\ (x\ne r),
+ \qquad
+ v_p(q_*)=p,\quad v_p(x)=x\ (x\ne q_*).
+\]
+The resulting reachability order has (r) as its unique minimum. Its covers
+are precisely (r\lessdot q) for (q\in Q) and
+\(q_*\lessdot p\) for (p\in P\setminus\{r\}). It is finite, locally
+finite, antisymmetric, connected under the undirected closure of action
+steps, and graded with ranks zero on (r), one on (Q), and two on
+\(P\setminus\{r\}). Hence its even block is (P), its odd block is (Q),
+and both are nonempty.
+\end{proof}
+
+For a fixed ordered partition, the construction has (|P||Q|) choices of
+root and bridge. Summed over all ordered nontrivial partitions of an
+(n)-element labeled carrier, the audited parameterization count is
+\[
+ \sum_{\varnothing\ne Q\subsetneq C}|Q|(n-|Q|)
+ =n(n-1)2^{n-2}.
+\]
+For (n=2,3,4,5,6), the partition counts are (2,6,14,30,62), while the
+root--bridge parameterization counts are (2,12,48,160,480).
+
+\begin{remark}[Interpretation]
+The theorem proves arbitrary source-side encodability under freely selected
+action data. It does not prove that the candidate text imports a target
+partition, and it does not prove that no conservative source law could select
+an action. It shows that the current admission conditions do not discriminate
+among the possible ordered partitions.
+\end{remark}
+
+\section{Positivity and component-completeness audit}
+
+The symbol \(\Lambda_+\) and the phrase ``source-order monoid'' suggest a
+positive sector, but the candidate supplies neither an order relation nor
+positive-cone axioms. The action theorems use only a monoid. Thus positivity
+is a name rather than a discharged formal condition. This does not invalidate
+the conditional algebraic relation; it leaves the claimed source-order
+provenance under-specified.
+
+The full-component guard is also not intrinsic to the displayed local tuple.
+Consider
+\[
+ \widetilde C=\{-1,0,1,2,3\},\qquad
+ \widetilde\Phi_n(i)=\min(i+n,3).
+\]
+Its forward-invariant window (C=\{0,1,2,3\}) carries exactly the candidate's
+four-event positive action when restricted. Declared in isolation, that
+window is internally admitted and rooted at zero. Embedded in
+\(\widetilde C\), zero has predecessor (-1), and the full component is
+rooted at (-1). No field of the isolated tuple certifies which ambient
+completion is authoritative. The candidate therefore fails to distinguish a
+full source component from an observationally or procedurally truncated
+forward-invariant tail unless external component provenance is supplied.
+
+This pair does not contradict the candidate's conditional theorem: once the
+full component is genuinely fixed, its global minimum is natural. It shows
+that the admission predicate assumes the very completeness fact needed to
+apply the observer-truncation guard.
+
+\section{Morphism, variation, and finite nondiscrimination checks}
+
+The action-naturality theorem is correct for isomorphisms already required to
+preserve the action. This is category-by-preservation, not physical covariance.
+No independently selected larger source category is tested.
+Likewise, a variation is accepted only when it preserves all admission data
+up to admitted isomorphism; otherwise it returns bottom. Conditional
+fail-closure is coherent, but it is not independent robustness evidence.
+
+On a four-token carrier there are (14) nontrivial ordered partitions and
+(24) permutations, giving (336) partition--permutation cases. Exactly
+(72) stabilize the chosen odd block and (264) change it. Across all valid
+single-token transfers between nonempty blocks, all (48) of (48) change
+the boundary line. The candidate's preservation-defined morphisms and
+variations exclude rather than resolve these relation-changing branches.
+
+\section{Audit matrix}
+
+\begin{center}
+\begin{tabular}{p{0.25\linewidth}p{0.63\linewidth}}
+\toprule
+Question & Finding \\
+\midrule
+Ordered-action provenance & Current ontology does not derive the monoid,
+action, or action selection. Universal action realization shows admission is
+nonselecting across finite ordered partitions. \\
+Positivity & No order or positive-cone axiom is defined; the plus sign is
+not a proved property. \\
+Component selection & ``Full component'' is asserted. A forward-invariant
+tail and its ambient completion are locally indistinguishable without extra
+provenance. \\
+Grading & Rank is well defined conditionally, but the construction can load
+any desired parity partition through the selected action. \\
+Morphisms & Naturality is valid inside a category defined to preserve the
+action; physical covariance is not established. \\
+Variations & Preservation or bottom is fail-closed but does not test
+independently admissible relation-changing variations. \\
+Target or process import & No explicit target-GR, benchmark, validator,
+registry, role, handoff, or file-order premise was found in the mathematical
+definition. Arbitrary encodability is not proof of an explicit import. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Distance-to-GR, freeze review, and next route}
+
+The active burden \texttt{source\_equivalence\_eqsrc} stays at
+\texttt{draft object exists}. The audit adds theorem-level obstruction data
+but no Distance-to-GR delta. Exact-GR recovery, RetainH, GenH,
+\(M_{\rm src}\), \(g_{\rm eff}\), matter coupling, Einstein equations, and
+benchmark validation remain open.
+
+Because this is another member of the response-token, orientation-line,
+root, partition, and grading selection family, a family-level freeze review
+is now required. The exact v21 next work item is \texttt{P1-T02}: one
+Ontology Formalizer packet must record stable family identifiers, assumption
+hashes, construction--audit--stress--repair lineage, freeze decisions, and
+supersession relations. P1-T03, not this audit, decides whether the family is
+frozen or one materially distinct theorem route remains.
+
+This packet does not repair or stress the candidate, declare it adopted or
+rejected, edit canonical ontology, issue a Gate Chair verdict, or assert
+future source-extension impossibility. The candidate remains a
+\texttt{draft/control} and \texttt{proposal-only} source-extension object.
+
+\end{document}

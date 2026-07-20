@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-008` and `handoff-0778`.
+`RT-20260720-009` and `handoff-0779`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-008` |
-| Latest handoff ID | `handoff-0778` |
-| Current status | `v21_p0_t05_prelaunch_audit_pass_pending_p1_t01_no_physics_delta` |
+| Active task ID | `RT-20260720-009` |
+| Latest handoff ID | `handoff-0779` |
+| Current status | `v21_p1_t01_conditional_source_audit_pass_pending_p1_t02_family_lineage_map_no_promotion` |
 | V16 completed | false |
-| Current route family | eqsrc flow generated graded orbit root law smuggling audit |
+| Current route family | v21 p1 t02 candidate family lineage map |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One fresh P1-T01 Smuggling Auditor review of the exact proposal-only candidate preserved by RT-20260718-047 and handoff-0772. |
-| Next recommended action | Run exactly one bounded v21 P1-T01 fresh Smuggling Auditor ontology-law-research-packet against the unchanged EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Do not combine P10-T01, P13-T01, or P13-T03 in the same task. |
+| Required next authority | One P1-T02 Ontology Formalizer packet may construct the stable candidate-family and lineage map required by the v21 plan. |
+| Next recommended action | Run exactly one bounded v21 P1-T02 Ontology Formalizer ontology-law-research-packet to group the recent response-token orientation-line root partition and grading candidates into stable families and record exact construction audit stress repair freeze and supersession lineage. Do not execute P1-T03 or repair stress adopt reject or promote any candidate in the same task. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-008` |
-| Latest research handoff ID | `handoff-0778` |
-| Latest research next action | Run exactly one bounded v21 P1-T01 fresh Smuggling Auditor ontology-law-research-packet against the unchanged EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Do not combine P10-T01, P13-T01, or P13-T03 in the same task. |
+| Latest research task ID | `RT-20260720-009` |
+| Latest research handoff ID | `handoff-0779` |
+| Latest research next action | Run exactly one bounded v21 P1-T02 Ontology Formalizer ontology-law-research-packet to group the recent response-token orientation-line root partition and grading candidates into stable families and record exact construction audit stress repair freeze and supersession lineage. Do not execute P1-T03 or repair stress adopt reject or promote any candidate in the same task. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-008/00_TASK.yaml`.
-- Active task objective: Independently pressure-test v21 recommendation coverage, dependencies, worker-skill boundaries, human gates, stop guards, authority separation, and the exact relay manifest before scientific continuation.
-- Latest handoff path: `research_control/handoffs/handoff-0778.yaml`.
-- Latest handoff summary: RT-20260720-008 completed only v21 P0-T05. A same-context skeptical review found no blocking prelaunch defect across 72 recommendation mappings, 122 work items, 183 dependency edges, worker-skill boundaries, seven human gates, fixed stops, authority separation, and exact scope parity. Four nonblocking observations are preserved; no scientific or protected authority changed.
-- Current route family: eqsrc flow generated graded orbit root law smuggling audit.
-- Next recommended action: Run exactly one bounded v21 P1-T01 fresh Smuggling Auditor ontology-law-research-packet against the unchanged EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Do not combine P10-T01, P13-T01, or P13-T03 in the same task.
+- Active task path: `research_control/tasks/RT-20260720-009/00_TASK.yaml`.
+- Active task objective: Execute exactly one bounded v21 P1-T01 fresh Smuggling Auditor packet against exact proposal-only EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1 for ordered-action provenance positivity component selection grading morphism and variation design observer truncation desired-relation circularity and hidden target or process import without repair stress adoption or promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0779.yaml`.
+- Latest handoff summary: RT-20260720-009 completed only v21 P1-T01. Exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1 conditionally passes textual source purity and its displayed mathematics. A universal action-realization theorem and ambient-completion pair show that freely supplied action and asserted full-component data do not select or intrinsically certify the relation. Positivity physical morphisms and independent variations remain underived. No explicit target or process premise was found; no adoption ledger or promotion changed.
+- Current route family: v21 p1 t02 candidate family lineage map.
+- Next recommended action: Run exactly one bounded v21 P1-T02 Ontology Formalizer ontology-law-research-packet to group the recent response-token orientation-line root partition and grading candidates into stable families and record exact construction audit stress repair freeze and supersession lineage. Do not execute P1-T03 or repair stress adopt reject or promote any candidate in the same task.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P1-T01 fresh Smuggling Auditor ontology-law-research-packet against the unchanged EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Do not combine P10-T01, P13-T01, or P13-T03 in the same task.
+Run exactly one bounded v21 P1-T02 Ontology Formalizer ontology-law-research-packet to group the recent response-token orientation-line root partition and grading candidates into stable families and record exact construction audit stress repair freeze and supersession lineage. Do not execute P1-T03 or repair stress adopt reject or promote any candidate in the same task.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-008`;
-- latest handoff: `handoff-0778`;
-- current status: `v21_p0_t05_prelaunch_audit_pass_pending_p1_t01_no_physics_delta`;
+- active task: `RT-20260720-009`;
+- latest handoff: `handoff-0779`;
+- current status: `v21_p1_t01_conditional_source_audit_pass_pending_p1_t02_family_lineage_map_no_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0778.yaml`
-- `research_control/tasks/RT-20260720-008/00_TASK.yaml`
+- `research_control/handoffs/handoff-0779.yaml`
+- `research_control/tasks/RT-20260720-009/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0778*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0779*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

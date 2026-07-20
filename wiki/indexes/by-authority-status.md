@@ -442,6 +442,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V18-P6-T01-FINITE-TOY-RESPONSE-V2-SOURCE-SPEC` `research_control/tasks/RT-20260708-014/artifacts/finite_toy_response_v2_source_spec.tex`
 - `TEX-V18-P6-T02-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION` `research_control/tasks/RT-20260708-015/artifacts/finite_toy_response_v2_model_or_obstruction.tex`
 - `TEX-V18-P6-T03-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS` `research_control/tasks/RT-20260708-016/artifacts/finite_toy_response_v2_refuter_stress.tex`
+- `TEX-V21-P1-T01-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-009/artifacts/eqsrc_flow_generated_graded_orbit_root_smuggling_audit.tex`
 
 ## explanatory_noncanonical
 
@@ -963,6 +964,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-046-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260718-046-parent-fusion-notes-eqsrc-flow-generated-graded-orbit-root-selector.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-047-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW-CANDIDATE-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-047-eqsrc-flow-generated-graded-orbit-root-law-candidate-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-047-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW` `wiki/markdown/md-research-control-tasks-rt-20260718-047-parent-fusion-notes-eqsrc-flow-generated-graded-orbit-root-law.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-009-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-009-eqsrc-flow-generated-graded-orbit-root-smuggling-audit-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-009-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260720-009-parent-fusion-notes-eqsrc-flow-generated-graded-orbit-root-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1434,6 +1437,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V18-P6-T01-FINITE-TOY-RESPONSE-V2-SOURCE-SPEC` `wiki/tex/tex-v18-p6-t01-finite-toy-response-v2-source-spec.md`
 - `WIKI-TEX-V18-P6-T02-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION` `wiki/tex/tex-v18-p6-t02-finite-toy-response-v2-model-or-obstruction.md`
 - `WIKI-TEX-V18-P6-T03-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS` `wiki/tex/tex-v18-p6-t03-finite-toy-response-v2-refuter-stress.md`
+- `WIKI-TEX-V21-P1-T01-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT` `wiki/tex/tex-v21-p1-t01-eqsrc-flow-generated-graded-orbit-root-smuggling-audit.md`
 
 ## project_control
 
@@ -1776,6 +1780,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-046-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SELECTOR` `research_control/tasks/RT-20260718-046/artifacts/parent_fusion_notes_eqsrc_flow_generated_graded_orbit_root_selector.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-047-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW-CANDIDATE-RECEIPT` `research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-047-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW` `research_control/tasks/RT-20260718-047/artifacts/parent_fusion_notes_eqsrc_flow_generated_graded_orbit_root_law.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-009-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260720-009/artifacts/eqsrc_flow_generated_graded_orbit_root_smuggling_audit_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-009-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-009/artifacts/parent_fusion_notes_eqsrc_flow_generated_graded_orbit_root_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
