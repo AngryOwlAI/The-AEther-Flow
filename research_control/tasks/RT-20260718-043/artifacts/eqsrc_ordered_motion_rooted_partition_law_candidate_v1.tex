@@ -1,0 +1,278 @@
+% authority: science-draft
+% status: proposal-only
+% route: ontology-law-research-packet
+% trigger_classification: derivation_critical_missing_source_law
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Ftwo}{\mathbb F_2}
+\newcommand{\RootLaw}{\mathsf{EqSrcOrderedMotionRootedPartitionLaw}^{\mathrm{cand},v1}_{\mathrm{src}}}
+\newcommand{\Bottom}{\mathsf{Bottom}_{\mathrm{src}}}
+
+\title{Proposal-Only EqSrc Ordered-Motion Rooted Partition Law Candidate v1:\\
+Finite Provenance, Path Parity, Natural Pointing, and Fail-Closed Controls}
+\author{Ontology Formalizer control packet RT-20260718-043}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This packet defines \(\RootLaw\) as a proposal-only source-extension object.
+Current ontology supplies an intentionally schematic intrinsic ordered-motion
+map \(\Phi_\lambda\), but it does not derive the finite record, transition
+certificates, projection, root certificate, path-parity domain, source
+morphism category, physical variation family, or downstream semantics used
+below. The status is \texttt{proposal-only},
+\texttt{new\_ontology\_primitive\_candidate}, and
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\begin{verbatim}
+candidate_result: candidate_formalized_pending_fresh_smuggling_audit
+candidate_name: EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1
+formal_model: finite_Phi_compatible_rooted_directed_records_over_F2
+canonical_Phi_anchor_is_schematic: true
+current_ontology_derives_finite_record_law: false
+positive_control: certified_rooted_two_event_path
+symmetry_negative_control: unrooted_directed_two_cycle
+sampling_window_root_accepted: false
+path_parity: conditional_and_fail_closed
+morphism_naturality: conditional_source_category_only
+finite_variation_robustness: conditional_source_category_only
+physical_covariance_established: false
+physical_admissibility_established: false
+candidate_status: proposal-only
+adoption_status: blocked_adoption_open_continuation
+general_EqSrc_discharged: false
+distance_to_gr_ledger_changed: false
+exact_orientation_torsor_candidate_v1: locally_frozen
+next_route: fresh_smuggling_auditor_review
+\end{verbatim}
+
+\section{Source Data and Dependency Order}
+
+\begin{definition}[Proposal source record]
+A proposal record is
+\[
+ U=(E,X,D_\Phi,\pi,C_{\rm root},\mathcal M_U,\mathcal V_U),
+\]
+with the following source-side data declared before any boundary line or
+relation is formed.
+\begin{enumerate}[label=(\roman*)]
+  \item \(E\) is a finite set of source events and \(X\) a finite nonempty set
+  of record tokens.
+  \item \(\pi:E\twoheadrightarrow X\) is an independently declared
+  event-to-record projection.
+  \item \(D_\Phi\subseteq X\times X\times\mathcal C_\Phi\) is a finite family
+  of directed transition certificates. Each certificate is asserted to be
+  compatible with the order of \(\Phi_\lambda\), is stable under strictly
+  increasing reparameterization of \(\lambda\), and contains no target atlas,
+  metric, proper-time, detector, benchmark, registry, validator, role,
+  handoff, file-order, or task-process premise.
+  \item \(C_{\rm root}\subseteq X\) is a root certificate whose provenance is
+  source intrinsic and natural under the independently admitted source
+  isomorphisms. A sampling-window start is not such a certificate.
+  \item \(\mathcal M_U\) and \(\mathcal V_U\) are independently declared
+  source morphisms and finite variations. They are not defined as precisely
+  the maps that preserve the desired relation.
+\end{enumerate}
+Every datum beyond the schematic \(\Phi_\lambda\) anchor is proposal-only
+source-extension data. Merely placing it in the tuple is not a derivation from
+current ontology.
+\end{definition}
+
+Let \(G_U\) be the directed graph on \(X\) obtained by forgetting the
+certificate labels in \(D_\Phi\).
+
+\begin{definition}[Admission]
+The record \(U\) is \emph{admitted} only when:
+\begin{enumerate}[label=(A\arabic*)]
+  \item \(C_{\rm root}=\{r_U\}\) is a singleton source-intrinsic certificate;
+  \item every token is reachable from \(r_U\) by a directed path in \(G_U\);
+  \item for each \(x\in X\), all directed paths from \(r_U\) to \(x\) have
+  the same length modulo two;
+  \item both parity classes defined below are nonempty;
+  \item every admitted morphism preserves the projection, certified directed
+  edges, root certificate, and declared pre-relation structure; and
+  \item every admitted variation is declared independently and preserves the
+  same source-side admission data.
+\end{enumerate}
+Failure of any item returns a tagged element of \(\Bottom\) rather than a
+candidate relation.
+\end{definition}
+
+\section{Parity, Partition, Pointing, and Relation}
+
+\begin{definition}[Root parity and ordered partition]
+For admitted \(U\), define
+\[
+ \epsilon_U(x)=|\gamma|\pmod 2,
+\]
+where \(\gamma\) is any directed path from \(r_U\) to \(x\). Admission makes
+this independent of \(\gamma\). Set
+\[
+ P_U=\{x:\epsilon_U(x)=0\},\qquad
+ Q_U=\{x:\epsilon_U(x)=1\}.
+\]
+The pair \((P_U,Q_U)\) is ordered by the source root, not by file order,
+observer sampling, benchmark success, or a desired relation.
+\end{definition}
+
+Let \(p_U=\mathbf 1_{P_U}\), \(q_U=\mathbf 1_{Q_U}\), and
+\[
+ A_U=\operatorname{span}_{\Ftwo}\{p_U,q_U\},\qquad
+ B_U=\Ftwo q_U.
+\]
+Because both blocks are nonempty, \(A_U\cong\Ftwo^2\). Define
+\[
+ a\,R_U\,a'\quad\Longleftrightarrow\quad a-a'\in B_U.
+\]
+Thus \(R_U\) is the kernel pair of \(A_U\to A_U/B_U\). This is a
+proposal-only algebraic relation, not general \(\mathsf{EqSrc}\), a physical
+gauge relation, or an empirical equivalence.
+
+\section{Conditional Theorems}
+
+\begin{theorem}[Parity well-definedness and odd-cycle failure]
+On an admitted record, \(\epsilon_U\) is unique, \(\epsilon_U(r_U)=0\), and
+every certified edge \(x\to y\) satisfies
+\(\epsilon_U(y)=\epsilon_U(x)+1\pmod2\). Conversely, if two directed
+root-to-token paths have opposite parity, including the case of a reachable
+odd directed cycle, admission fails.
+\end{theorem}
+\begin{proof}
+Uniqueness is exactly admission item (A3). Appending one directed edge changes
+path length by one. Opposite-parity paths contradict (A3), so the candidate
+returns \texttt{mixed\_path\_parity\_or\_odd\_cycle}.
+\end{proof}
+
+\begin{theorem}[Root and partition naturality]
+Let \(f:U\to U'\) be an admitted source isomorphism. Then
+\(f(r_U)=r_{U'}\), \(\epsilon_{U'}\circ f=\epsilon_U\),
+\(f(P_U)=P_{U'}\), and \(f(Q_U)=Q_{U'}\).
+\end{theorem}
+\begin{proof}
+The singleton root certificate is preserved by definition. Certified paths
+and their lengths are transported edge by edge, so parity and both blocks are
+preserved.
+\end{proof}
+
+\begin{theorem}[Relation functoriality]
+Every admitted source isomorphism induces an \(\Ftwo\)-linear isomorphism
+\(f_*:A_U\to A_{U'}\) with \(f_*(B_U)=B_{U'}\). Hence
+\(aR_Ua'\) if and only if \(f_*(a)R_{U'}f_*(a')\). Identities and
+composites induce identities and composites.
+\end{theorem}
+\begin{proof}
+The prior theorem sends the two indicator generators to their corresponding
+generators. Boundary and relation preservation follow, and functoriality is
+ordinary composition of the induced linear maps.
+\end{proof}
+
+\begin{theorem}[Order-reparameterization invariance]
+If \(h\) is strictly increasing and every transition certificate is relabeled
+from \(\lambda\) to \(h(\lambda)\) without changing its source endpoints,
+then \(G_U\), \(r_U\), \(\epsilon_U\), \((P_U,Q_U)\), \(B_U\), and
+\(R_U\) are unchanged.
+\end{theorem}
+\begin{proof}
+A strictly increasing map preserves the certified order relation and leaves
+the directed graph and all path lengths unchanged.
+\end{proof}
+
+\begin{theorem}[Conditional finite-variation robustness]
+For an independently declared finite variation \(v:U\to U_v\), the candidate
+is preserved only if \(v\) preserves the transition provenance, singleton
+root certificate, reachability, and path parity. If any condition fails, the
+variation returns a bottom tag and no robustness claim is made.
+\end{theorem}
+\begin{proof}
+When the conditions hold, apply root naturality and relation functoriality.
+When one fails, admission is false by definition. This theorem is conditional
+algebraic robustness, not physical stability.
+\end{proof}
+
+\section{Positive Witness and Symmetry-Negative Control}
+
+Take \(E=\{e_0,e_1\}\), \(X=\{x_0,x_1\}\),
+\(\pi(e_i)=x_i\), one certified edge \(x_0\to x_1\), and an independently
+certified source root \(C_{\rm root}=\{x_0\}\). Then
+\[
+ P_U=\{x_0\},\qquad Q_U=\{x_1\},
+\]
+and \(R_U\) has the two classes
+\[
+ \{0,q_U\},\qquad \{p_U,p_U+q_U\}.
+\]
+There are eight ordered related pairs. This is the minimal positive witness.
+
+For the unrooted directed two-cycle \(x_0\rightleftarrows x_1\), the vertex
+exchange is a graph automorphism. No singleton subset is fixed by that
+automorphism. Therefore the undecorated cycle has no natural unique root.
+Adding an observer-selected first sample would decorate the graph, but it
+would be \texttt{observer\_truncation\_root}, not source provenance.
+
+\section{Fail-Closed Branches}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Tag & Exact trigger \\
+\midrule
+\texttt{missing\_transition\_provenance} & no independently defined finite certified transitions \\
+\texttt{observer\_truncation\_root} & root supplied only by sampling or observation start \\
+\texttt{nonunique\_or\_nonnatural\_root} & no unique root or an admitted automorphism moves it \\
+\texttt{mixed\_path\_parity\_or\_odd\_cycle} & opposite-parity root paths or reachable odd cycle \\
+\texttt{empty\_parity\_block} & one ordered block is empty \\
+\texttt{disconnected\_or\_unreachable\_component} & a token is not root reachable \\
+\texttt{morphism\_or\_variation\_naturality\_defect} & an admitted map fails required source preservation \\
+\texttt{target\_or\_process\_import} & target, benchmark, generated, registry, validator, role, handoff, or file-order premise \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Source-Extension and No-Target-Import Classification}
+
+The tuple data \(E,X,D_\Phi,\pi,C_{\rm root},\mathcal M_U,\mathcal V_U\)
+are classified as a \texttt{proposal-only new ontology primitive candidate}.
+The current ontology does not derive this package. No conservative elimination
+into the schematic \(\Phi_\lambda\) statement is proved.
+
+The construction forbids target topology, smooth atlas, target metric, proper
+time, detector semantics, benchmark success, generated derivatives, registry
+metadata, validator status, role identity, handoff state, file order, and
+task process as source premises. Passing the task-local validator establishes
+only the finite mathematical controls encoded there.
+
+\section{Distance-to-GR and Freeze Status}
+
+The `source_equivalence_eqsrc` burden remains at \texttt{draft object exists}.
+No Distance-to-GR or metric-use ledger row changes. General \(\mathsf{EqSrc}\),
+RetainH, GenH, \(M_{\rm src}\), \(g_{\rm eff}\), matter coupling, Einstein
+equations, and benchmark promotion remain blocked.
+
+The exact orientation-torsor candidate-v1 construction--audit--stress route
+remains locally frozen. The present packet is non-orbital because it moves
+upstream to a distinct finite provenance law with a positive witness and
+symmetry-negative control. It does not repair the frozen candidate.
+
+\section{Required Next Route}
+
+The next bounded role is a fresh \texttt{smuggling-auditor@0.2.0}. The audit
+must inspect whether \(D_\Phi\), \(\pi\), \(C_{\rm root}\),
+\(\mathcal M_U\), or \(\mathcal V_U\) merely relabel observer, target,
+benchmark, relation-preservation, or process data; whether projection
+noncircularity and root naturality are substantive; and whether the finite
+theorems are overread as physical covariance or current-ontology derivation.
+No repair, stress, adoption, or promotion is authorized in this packet.
+
+\end{document}

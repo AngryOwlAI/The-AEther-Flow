@@ -1,0 +1,585 @@
+completion_id: "AJC-AJ-RT-20260718-043-001"
+job_id: "AJ-RT-20260718-043-001"
+task_id: "RT-20260718-043"
+decision_id: "DDR-20260718-043"
+status: "completed"
+completed_at: "2026-07-20T01:37:24Z"
+completed_by_role: "ontology-formalizer@0.2.0--RT-20260718-043"
+source_role_id: "ontology-formalizer"
+source_role_version: "0.2.0"
+plan_task_id: "ordinary_eqsrc_ordered_motion_rooted_partition_law"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Formalized proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 on finite Phi-compatible rooted directed records. The packet defines a conditional source-intrinsic root parity ordered partition F2 boundary line and kernel-pair relation; proves conditional parity naturality functoriality monotone-reparameterization and finite-variation results; supplies a rooted two-event positive witness and exact unrooted-cycle sampling parity disconnectedness naturality and target-import failure branches. Current ontology does not derive the finite record package. Adoption remains blocked with open continuation, exact orientation-torsor candidate v1 remains locally frozen, and both authoritative ledgers remain unchanged."
+
+artifacts:
+  - "research_control/tasks/RT-20260718-043/artifacts/child_phys_math_eqsrc_ordered_motion_rooted_partition_law.yaml"
+  - "research_control/tasks/RT-20260718-043/artifacts/child_phys_phil_eqsrc_ordered_motion_rooted_partition_law.yaml"
+  - "research_control/tasks/RT-20260718-043/artifacts/parent_conflict_review_eqsrc_ordered_motion_rooted_partition_law.yaml"
+  - "research_control/tasks/RT-20260718-043/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law.md"
+  - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_receipt.md"
+  - "research_control/tasks/RT-20260718-043/artifacts/validate_eqsrc_ordered_motion_rooted_partition_law_candidate.py"
+  - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_validation.json"
+
+output_paths:
+  - "research_control/tasks/RT-20260718-043/artifacts/child_phys_math_eqsrc_ordered_motion_rooted_partition_law.yaml"
+  - "research_control/tasks/RT-20260718-043/artifacts/child_phys_phil_eqsrc_ordered_motion_rooted_partition_law.yaml"
+  - "research_control/tasks/RT-20260718-043/artifacts/parent_conflict_review_eqsrc_ordered_motion_rooted_partition_law.yaml"
+  - "research_control/tasks/RT-20260718-043/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law.md"
+  - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_receipt.md"
+  - "research_control/tasks/RT-20260718-043/artifacts/validate_eqsrc_ordered_motion_rooted_partition_law_candidate.py"
+  - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_validation.json"
+
+extra_read_paths:
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "research_control/handoffs/handoff-0767.yaml"
+  - "research_control/handoffs/handoff-0767.md"
+  - "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml"
+  - "research_control/tasks/RT-20260718-042/artifacts/parent_fusion_notes_eqsrc_ordered_motion_partition_provenance_selector.md"
+  - "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/mathematical_decisiveness_completion_contract.md"
+  - "research_control/design/source_extension_classification_checklist_v1.md"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core freshness and local retrieval passed after refreshing five local-cache-only findings."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup ontology/tex/aether_flow_foundations.tex --json"
+    status: "PASS"
+    summary: "Resolved and inspected the registered canonical foundations source."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"ordered motion rooted partition provenance\" --limit 10 --json"
+    status: "PASS"
+    summary: "Resolved and inspected the RT-042 selector fusion source."
+  - command: ".venv/bin/python scripts/research_control/continue_research.py --summary"
+    status: "PASS"
+    summary: "Tracked state required one bounded Ontology Formalizer rooted-partition law packet."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260718-043/artifacts/validate_eqsrc_ordered_motion_rooted_partition_law_candidate.py"
+    status: "PASS"
+    summary: "Task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260718-043/artifacts/validate_eqsrc_ordered_motion_rooted_partition_law_candidate.py --write-report --json"
+    status: "PASS"
+    summary: "Validated the rooted two-event relation, zero natural singleton roots on the unrooted two-cycle, fail-closed negative controls, monotone reparameterization, conditional variations, and exhaustive rooted directed-graph censuses through four vertices."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 895
+    relationship_row_count: 4438
+    semantic_row_count: 895
+    vault_row_count: 895
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  before_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    local_cache_only_warning_count: 5
+  after_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup ontology/tex/aether_flow_foundations.tex --json"
+      query_type: "lookup"
+      query_text: "ontology/tex/aether_flow_foundations.tex"
+      returned_object_ids:
+        - "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"ordered motion rooted partition provenance\" --limit 10 --json"
+      query_type: "search"
+      query_text: "ordered motion rooted partition provenance"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260718-042-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-PARTITION-PROVENANCE-SELECTOR"
+  canonical_inspections:
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260718-042-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-PARTITION-PROVENANCE-SELECTOR"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-042/artifacts/parent_fusion_notes_eqsrc_ordered_motion_partition_provenance_selector.md"
+      source_hash: "2ecde6c2f8c4f442200256df42c70a6f83a0596f7ef7a5c14453e36f6f231106"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260718-043/artifacts/child_phys_math_eqsrc_ordered_motion_rooted_partition_law.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260718-043/artifacts/child_phys_phil_eqsrc_ordered_motion_rooted_partition_law.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260718-043/artifacts/parent_conflict_review_eqsrc_ordered_motion_rooted_partition_law.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Parent fusion separated the schematic Phi anchor from every added finite datum, scoped the two-cycle theorem, and kept conditional source-category naturality distinct from physical covariance."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260718-043/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused candidate combines exact rooted-record definitions, conditional theorems, finite witnesses, fail-closed tags, source-extension classification, no-target-import guards, freeze status, and one fresh audit route."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "eqsrc"
+  waiver_decision_id: "DDR-20260708-005"
+  slots:
+    - countermodel_slot: "missing_inverse_countermodel"
+      status: "filled"
+      scope: "finite_two_object_source_side_missing_inverse"
+      result_artifact: "research_control/tasks/RT-20260707-020/artifacts/eqsrc_family_closure_attempt_receipt.md"
+    - countermodel_slot: "missing_composition_countermodel"
+      status: "filled"
+      scope: "finite_local_composition_closure_removal"
+      result_artifact: "research_control/tasks/RT-20260707-023/artifacts/eqsrc_family_closure_refuter_stress_v1.tex"
+    - countermodel_slot: "invariant_ledger_not_family_stable_countermodel"
+      status: "deferred_by_ddr"
+      scope: "invariant_ledger_family_stability_deferred_to_future_dedicated_countermodel_or_repair_packet"
+      result_artifact: "research_control/tasks/RT-20260708-005/artifacts/countermodel_obligation_pilot_report_v1.md"
+    - countermodel_slot: "target_import_needed_countermodel"
+      status: "filled"
+      scope: "source_pure_as_written_hidden_import_screen"
+      result_artifact: "research_control/tasks/RT-20260707-022/artifacts/eqsrc_family_closure_smuggling_audit_receipt.md"
+    - countermodel_slot: "RetainH_needed_countermodel"
+      status: "filled"
+      scope: "H_retention_extension_candidate_definition_needed"
+      result_artifact: "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_receipt.md"
+    - countermodel_slot: "GenH_needed_countermodel"
+      status: "filled"
+      scope: "H_generated_family_extension_candidate_definition_needed"
+      result_artifact: "research_control/tasks/RT-20260707-021/artifacts/retainh_genh_primitive_boundary_receipt.md"
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Define proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 with exact Phi-compatible record projection root parity positive and negative finite controls or return a precise obstruction."
+  missing_source_law: "A source-derived finite record projection natural singleton root parity partition and independently specified morphism and variation category sufficient to define the candidate source equivalence relation."
+  underdetermination_statement: "Current ontology does not derive the finite record projection transition-certificate family natural singleton root parity partition or independent morphism and variation categories used by this candidate."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "For an admitted finite rooted directed source record U define root-path parity, the ordered blocks P_U and Q_U, the indicator state space A_U, the boundary line B_U, and its kernel-pair relation; otherwise return an exact provenance root parity reachability naturality or process-import bottom tag."
+    formal_objects:
+      - "finite source event and record-token sets E and X"
+      - "Phi-compatible directed transition-certificate family D_Phi"
+      - "independently declared event-to-record projection pi"
+      - "source-intrinsic singleton root certificate C_root"
+      - "root parity epsilon_U and ordered partition P_U Q_U"
+      - "indicator state space A_U boundary line B_U and kernel-pair relation R_U"
+      - "independently declared morphism and finite-variation families"
+      - "tagged fail-closed bottom branches"
+    domains:
+      - "finite records with one source-intrinsic singleton root and complete reachability"
+      - "records with path-independent root parity and two nonempty parity blocks"
+      - "source morphisms and variations declared before relation construction"
+    maps:
+      - "event-to-record projection pi"
+      - "root-path parity map epsilon_U"
+      - "induced block-preserving F2-linear morphisms"
+      - "strictly increasing lambda reparameterizations"
+      - "finite source variations preserving the admission data"
+    proof_obligations:
+      - "source-only provenance and dependency acyclicity"
+      - "parity well-definedness and odd-cycle failure"
+      - "root and partition naturality"
+      - "relation functoriality with identity and composition"
+      - "strict monotone reparameterization invariance"
+      - "conditional finite-variation robustness"
+      - "rooted two-event positive witness"
+      - "unrooted two-cycle no-natural-singleton-root control"
+      - "sampling mixed-parity disconnected target and process fail-closed controls"
+      - "fresh target and process smuggling audit before stress or adoption"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc undischarged until provenance audit stress and protected adoption burdens are met."
+      - "Keep RetainH GenH M_src g_eff matter coupling Einstein equations and benchmark promotion blocked."
+      - "Do not use desired exact-GR recovery target time orientation proper time benchmark success or generated control state to define the root partition or relation."
+      - "Require protected human authority before source-law or canonical ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "D_Phi"
+      - "pi"
+      - "C_root"
+      - "M_U"
+      - "V_U"
+      - "epsilon_U"
+      - "P_U and Q_U"
+      - "B_U and R_U"
+    audit_result: "Definition tree is textually source-side and explicitly fails closed on target and process imports; fresh independent smuggling audit remains required."
+  atlas_glue_obligations:
+    profile_law: "Expose the finite source transition projection and root data before partition or relation evaluation and fail closed when their provenance is absent."
+    overlap_law: "Not applicable as atlas glue; the candidate is a finite source-record law and does not construct M_src or g_eff."
+    cocycle_law: "Identity and composition hold only for independently admitted source morphisms."
+    variation_law: "Conditional preservation holds only for independently admitted finite variations."
+  known_risks:
+    - "D_Phi may only relabel the schematic Phi anchor without a substantive source certificate law."
+    - "The projection pi or singleton root may be declared or reverse-engineered rather than source derived."
+    - "The morphism and variation categories may be selected precisely to preserve the relation."
+    - "Conditional source naturality may be overread as physical covariance or admissibility."
+    - "Finite validator success may be overread as ontology or empirical evidence."
+  failed_alternatives:
+    - "Graph structure alone cannot select a natural singleton root on the unrooted directed two-cycle."
+    - "Observer sampling truncation is rejected as root provenance."
+    - "Mixed path parity and disconnected records fail closed."
+    - "Exact orientation-torsor candidate-v1 repair is barred by the local freeze."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. A later protected decision is required before adopting the law or editing canonical ontology."
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "source_extension_candidate"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - item_id: "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1"
+      item_source_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+      item_kind: "law_target"
+      classification: "new_ontology_primitive_candidate"
+      evidence_paths:
+        - "ontology/tex/aether_flow_foundations.tex"
+        - "research_control/handoffs/handoff-0767.yaml"
+        - "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml"
+        - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+      relation_to_current_ontology: "missing_primitive"
+      relation_to_target_structures: "No target structure is used in the displayed definition tree; fresh independent audit remains pending."
+      claim_boundary_ref: "CB-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-001"
+      protected_authority_required: true
+      physics_promotion_authorized: false
+      downstream_promotion_authorized: false
+      allowed_conclusion: "Proposal-only new ontology primitive candidate formalized with conditional finite source-side theorems and controls pending fresh smuggling audit."
+      blocked_overreads:
+        - "current-ontology derivation or source-law adoption"
+        - "physical covariance admissibility or empirical meaning established"
+        - "general EqSrc discharge"
+        - "matter coupling or Einstein equations"
+        - "benchmark promotion or completed derivation"
+        - "future source-extension impossibility or global theory rejection"
+      next_route_if_blocked: "smuggling-auditor@0.2.0 ontology-law-research-packet"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-043-001"
+    payload_type: "bridge_map_candidate"
+    name: "Rooted directed-record partition and relation candidate"
+    summary: "Defines an ordered source partition and kernel-pair relation only after exact finite provenance admission."
+  - payload_id: "NMP-RT-20260718-043-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Parity well-definedness and odd-cycle failure"
+    summary: "Proves path parity on admitted rooted records and fails closed on opposite-parity paths or reachable odd cycles."
+  - payload_id: "NMP-RT-20260718-043-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Root partition and relation naturality"
+    summary: "Proves admitted source isomorphisms preserve the root parity blocks boundary line relation identities and compositions."
+  - payload_id: "NMP-RT-20260718-043-004"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Monotone reparameterization and conditional finite-variation invariance"
+    summary: "Proves conditional invariance under independently admitted source-side reparameterizations and variations."
+  - payload_id: "NMP-RT-20260718-043-005"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "Rooted two-event path and exhaustive small-graph controls"
+    summary: "Supplies the eight-pair positive relation, no-natural-root two-cycle control, and exhaustive rooted graph censuses through four vertices."
+  - payload_id: "NMP-RT-20260718-043-006"
+    payload_type: "countermodel_or_obstruction"
+    name: "Unrooted-cycle sampling parity disconnectedness and target-import branches"
+    summary: "Records exact scoped failures while preserving open continuation for independently decorated source records."
+
+mathematical_payload_manifest:
+  - payload_id: "MP-RT-20260718-043-001"
+    payload_type: "definition"
+    object_name: "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Supplies exact finite record admission partition relation and bottom-tag definitions."
+  - payload_id: "MP-RT-20260718-043-002"
+    payload_type: "theorem"
+    object_name: "Root parity partition and relation naturality theorem package"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves conditional parity functoriality monotone reparameterization and finite-variation statements."
+  - payload_id: "MP-RT-20260718-043-003"
+    payload_type: "explicit_witness"
+    object_name: "Certified rooted two-event path"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_validation.json"
+    burden_effect: "narrows"
+    summary: "Supplies two parity blocks and an eight-pair relation on four indicator states."
+  - payload_id: "MP-RT-20260718-043-004"
+    payload_type: "countermodel"
+    object_name: "Unrooted directed two-cycle natural-root obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+    burden_effect: "obstructs"
+    summary: "Shows graph structure alone has no exchange-invariant singleton root on the two-cycle."
+  - payload_id: "MP-RT-20260718-043-005"
+    payload_type: "finite_model"
+    object_name: "Rooted directed-graph admission census through four vertices"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_validation.json"
+    burden_effect: "narrows"
+    summary: "Exhausts reachability and path-parity admission branches for rooted directed graphs with two through four vertices."
+  - payload_id: "MP-RT-20260718-043-006"
+    payload_type: "source_extension_classification"
+    object_name: "Finite rooted-record source-extension boundary"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+    burden_effect: "requires_human_gate"
+    summary: "Classifies the candidate as proposal-only pending audit with current-ontology derivation physical interpretation and adoption unestablished."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Define proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 with exact Phi-compatible record projection root parity positive and negative finite controls or return a precise obstruction."
+  explanation: "The packet supplies a materially distinct rooted-partition candidate, conditional theorem-level payload, a finite positive witness, and scoped negative controls. It does not establish current-ontology derivation, physical admissibility, audit, stress, or adoption."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "conditional_theorem_candidate"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A proposal-only rooted-record candidate and conditional theorem packet does not establish an audited stressed adopted or physically interpreted general EqSrc theorem."
+  downstream_unlocked:
+    - "fresh_bounded_rooted_partition_smuggling_audit"
+  downstream_still_blocked:
+    - "canonical_ontology_edit"
+    - "source_law_adoption"
+    - "physical_covariance_established"
+    - "physical_admissibility_established"
+    - "general_EqSrc_discharge"
+    - "RetainH_adoption"
+    - "GenH_adoption"
+    - "M_src_adoption"
+    - "g_eff_scope_change"
+    - "matter_coupling_derivation"
+    - "Einstein_equations"
+    - "benchmark_promotion"
+    - "Gate_Chair_verdict"
+    - "completed_derivation"
+  explanation: "The authoritative Distance-to-GR and metric-use ledgers remain unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; finite record projection transition root morphism and variation data remain proposal-only"
+  - burden: "Source equivalence EqSrc"
+    status: "rooted-partition candidate formalized pending fresh audit; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged scoped source-extension relation data only"
+  - burden: "M_src"
+    status: "unchanged; no manifold construction or adoption"
+  - burden: "g_eff"
+    status: "unchanged; no metric construction or scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no matter semantics action or coupling derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "conditional source-record preservation only; no general physical robustness"
+  - burden: "benchmark promotion"
+    status: "blocked by missing primitive provenance audit stress physical interpretation and protected authority"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact orientation-torsor candidate-v1 cycle remains locally frozen; distinct rooted-partition route open for one fresh audit"
+
+route_cycle_control:
+  cycle_family: "eqsrc_ordered_motion_rooted_partition_law"
+  current_cycle_step: "candidate_formalization_pending_fresh_audit"
+  prior_related_tasks:
+    - "RT-20260718-038"
+    - "RT-20260718-039"
+    - "RT-20260718-040"
+    - "RT-20260718-041"
+    - "RT-20260718-042"
+    - "RT-20260718-043"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The packet moves upstream from the frozen orientation-line route to a new finite root-provenance object and supplies new conditional theorems finite controls and exact fail-closed branches."
+  next_role_consequence: "smuggling-auditor@0.2.0 fresh bounded audit of the exact rooted-partition candidate"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-ORIENTATION-TORSOR-DESCENT-LAW"
+  candidate_freeze_label: "EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW"
+  prior_attempts_considered:
+    - "RT-20260718-038"
+    - "RT-20260718-039"
+    - "RT-20260718-040"
+    - "RT-20260718-041"
+    - "RT-20260718-042"
+    - "RT-20260718-043"
+  freeze_if:
+    - "A fresh audit shows that D_Phi pi C_root M_U or V_U merely renames target observer benchmark relation-preservation or process data."
+    - "A later stress finds the same root-provenance defect without a materially new source object or theorem."
+  criteria_evaluated:
+    - "a materially distinct upstream root-provenance object is present"
+    - "conditional theorem-level parity naturality functoriality and variation results are present"
+    - "a rooted two-event positive witness and exact unrooted-cycle control are present"
+    - "sampling mixed-parity disconnected naturality and target-import branches are explicit"
+    - "adoption and downstream promotion remain blocked"
+  do_not_freeze_if:
+    - "One fresh audit can discriminate the new finite provenance premises from relabeled target or process data."
+  freeze_decision: "not_frozen"
+  rationale: "The new candidate supplies auditable mathematical payload and changes the next role from formalization to independent audit."
+  decision_reason: "The new candidate supplies auditable mathematical payload and changes the next role from formalization to independent audit."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  exact_candidate_v1_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "smuggling_auditor"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The packet formalizes one conditional proposal-only rooted-partition candidate and authorizes only one fresh audit. It authorizes no current-ontology derivation source-law adoption exact orientation-torsor repair physical-covariance claim general EqSrc discharge downstream GR promotion completed derivation future-extension impossibility or project-wide rejection conclusion."
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "current-ontology derivation or source-law adoption"
+    - "exact orientation-torsor candidate-v1 repair"
+    - "physical covariance admissibility or empirical meaning established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff claim or scope expansion"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+
+next_recommendation:
+  role_id: "smuggling-auditor"
+  role_version: "0.2.0"
+  packet_type: "source_extension_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  task_type: "eqsrc_ordered_motion_rooted_partition_law_smuggling_audit"
+  objective: "Freshly audit exact EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 for schematic-Phi relabeling transition-certificate projection and root provenance purpose-built morphism or variation categories sampling truncation path-parity circularity target or process import validator overread and physical-covariance overread."
+  requires_human_gate: false
+  claim_boundary: "Audit-only. Do not repair stress or adopt the candidate edit canonical ontology establish physical covariance or admissibility discharge general EqSrc change either authoritative ledger or promote downstream physics."
+
+selected_next_route:
+  route_id: "eqsrc_ordered_motion_rooted_partition_law_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Audit the exact proposal-only rooted-partition source law before Refuter stress or protected adoption review."
+  requires_human_gate: false
+  physics_promotion_authorized: false
+  next_action: "Run one bounded fresh Smuggling Auditor audit of the exact candidate."
+
+claim_boundary:
+  boundary_id: "CB-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-001"
+  allowed_scope: "One proposal-only finite rooted-record law with conditional root parity partition relation morphism reparameterization and variation theorems one rooted-path witness exact symmetry sampling parity disconnectedness naturality and target-import failure branches and one fresh audit route."
+  blocked_scope: "Current-ontology derivation exact orientation-torsor repair canonical ontology or source-law adoption physical covariance admissibility audit verdict inside this job Refuter stress general EqSrc RetainH GenH M_src g_eff matter coupling Einstein equations benchmark Gate Chair completed derivation future-extension impossibility or program-level rejection."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_validation.json"
+  local_validator_report_hash: "6a2e85b141233987a5d908826e41e540b98db134e62a617f160e562e2658e458"
+  candidate_artifact_hash: "24992d4b41d64bba860f5cd61d505d6b1ecaad3917e9195e0cbd3d897d955aef"
+  validation_status: "PASS"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight refreshed local retrieval and the canonical foundations and RT-042 selector sources were inspected."
+      - "Handoff-0767 and the registered Ontology Formalizer role were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both child perspectives completed and the parent conflict review resolved without a revision round."
+      - "The exact definitions conditional proofs finite controls classification freeze and authority guards were fused."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The task-local executable validator passed with exhaustive finite counts and no errors."
+      - "Repository-wide research-control validation and changed-diff validation passed."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run after all source and derivative checks pass."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current and compact frontier task-index claim-graph and dependency-graph derivatives were regenerated and their checks passed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "The registered-source memory bootstrap completed and validate-only freshness passed."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-file claim-language validation passed with no hard failures."
+
+next_recommended_action: "Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 before Refuter stress or any adoption consideration."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false

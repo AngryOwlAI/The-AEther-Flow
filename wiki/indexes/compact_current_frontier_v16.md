@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-042`
-- Latest handoff: `handoff-0767`
-- Current status: `eqsrc_ordered_motion_rooted_partition_provenance_formalization_selected_candidate_v1_frozen_no_adoption`
+- Active task: `RT-20260718-043`
+- Latest handoff: `handoff-0768`
+- Current status: `eqsrc_ordered_motion_rooted_partition_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-042`
-- Latest research handoff: `handoff-0767`
-- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Define the exact source objects domains maps positive witness symmetry-negative control and fail-closed branches; do not repair or adopt exact orientation-torsor candidate v1.
+- Latest research task: `RT-20260718-043`
+- Latest research handoff: `handoff-0768`
+- Latest research next action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Audit transition projection root morphism and variation provenance sampling truncation parity circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_ordered_motion_rooted_partition_provenance_formalization`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `eqsrc_ordered_motion_rooted_partition_law_smuggling_audit`
+- Role family: `smuggling-auditor@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Define proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 with exact Phi-compatible record projection root parity positive and negative finite controls or return a precise obstruction.
+- Milestone burden: Audit the exact proposal-only rooted-partition source law before Refuter stress or protected adoption review.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `5bcf22be421774800e844e906696dc25ebc83239f504a2424a5cb488a1282371`
-- JSON SHA-256: `23fe9d689090b9fdde32781fb3a5d9cecb39dad3656ee3ef25e103881f9b7b1e`
+- YAML SHA-256: `e0618cee94113f49cb78c1fddd5425f21d7ffb032e7b168efd1800e984e3f12d`
+- JSON SHA-256: `53ee0e03a5d0b8ac239179030c64dfbf81b15035cd14899ae21ca62ebc7da222`
 
 ## Authority Warning
 

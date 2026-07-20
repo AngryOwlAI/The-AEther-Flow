@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-042` and `handoff-0767`.
+`RT-20260718-043` and `handoff-0768`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-042` |
-| Latest handoff ID | `handoff-0767` |
-| Current status | `eqsrc_ordered_motion_rooted_partition_provenance_formalization_selected_candidate_v1_frozen_no_adoption` |
+| Active task ID | `RT-20260718-043` |
+| Latest handoff ID | `handoff-0768` |
+| Current status | `eqsrc_ordered_motion_rooted_partition_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc orientation torsor scoped obstruction to ordered motion rooted partition provenance formalization |
+| Current route family | eqsrc orientation torsor scoped obstruction to ordered motion rooted partition candidate to fresh smuggling audit |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One Ontology Formalizer packet may define the exact proposal-only Phi-compatible record projection root certificate parity partition point line relation morphisms variations and bottom tags and prove a positive rooted-path witness plus symmetry-negative and truncation controls. |
-| Next recommended action | Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Define the exact source objects domains maps positive witness symmetry-negative control and fail-closed branches; do not repair or adopt exact orientation-torsor candidate v1. |
+| Required next authority | One fresh Smuggling Auditor may inspect the exact candidate for source provenance circularity hidden target or process imports and overread and return one audit verdict with one lawful next route. |
+| Next recommended action | Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Audit transition projection root morphism and variation provenance sampling truncation parity circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-042` |
-| Latest research handoff ID | `handoff-0767` |
-| Latest research next action | Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Define the exact source objects domains maps positive witness symmetry-negative control and fail-closed branches; do not repair or adopt exact orientation-torsor candidate v1. |
+| Latest research task ID | `RT-20260718-043` |
+| Latest research handoff ID | `handoff-0768` |
+| Latest research next action | Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Audit transition projection root morphism and variation provenance sampling truncation parity circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-042/00_TASK.yaml`.
-- Active task objective: Select exactly one materially distinct same-milestone packet after the exact orientation-torsor candidate's scoped line-selection obstruction without repairing repeating adopting or promoting that candidate.
-- Latest handoff path: `research_control/handoffs/handoff-0767.yaml`.
-- Latest handoff summary: RT-20260718-042 selected one proposal-only ordered-motion rooted partition-provenance ontology-law packet. The target attempts to derive or reject the missing ordered partition before relation construction from a finite Phi-compatible directed source record an independently declared event-to-record projection and a unique source-intrinsic root certificate. A rooted two-event path is the positive control; an unrooted directed two-cycle and sampling-window roots are negative controls. The canonical Phi_lambda anchor is schematic and does not derive the projection root parity morphism or variation data, so the target is a new ontology primitive candidate with blocked adoption and open continuation. Exact orientation-torsor candidate v1 remains locally frozen and no ledger or promotion changed.
-- Current route family: eqsrc orientation torsor scoped obstruction to ordered motion rooted partition provenance formalization.
-- Next recommended action: Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Define the exact source objects domains maps positive witness symmetry-negative control and fail-closed branches; do not repair or adopt exact orientation-torsor candidate v1.
+- Active task path: `research_control/tasks/RT-20260718-043/00_TASK.yaml`.
+- Active task objective: Execute one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 with exact source records projection root certificates parity partitions pointings relations morphisms variations positive and negative finite controls and fail-closed branches.
+- Latest handoff path: `research_control/handoffs/handoff-0768.yaml`.
+- Latest handoff summary: RT-20260718-043 formalized proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. On an explicitly admitted finite Phi-compatible rooted directed record, root-path parity defines ordered blocks P_U and Q_U before the boundary line and kernel-pair relation are formed. Conditional parity naturality functoriality monotone-reparameterization and finite-variation theorems were proved. A rooted two-event path gives the positive eight-pair relation; an unrooted directed two-cycle has no automorphism-invariant singleton root, and sampling mixed-parity disconnected naturality target and process branches fail closed. Current ontology does not derive the finite record package. Adoption remains blocked with open continuation, exact orientation-torsor candidate v1 remains locally frozen, and no ledger or promotion changed.
+- Current route family: eqsrc orientation torsor scoped obstruction to ordered motion rooted partition candidate to fresh smuggling audit.
+- Next recommended action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Audit transition projection root morphism and variation provenance sampling truncation parity circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Define the exact source objects domains maps positive witness symmetry-negative control and fail-closed branches; do not repair or adopt exact orientation-torsor candidate v1.
+Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Audit transition projection root morphism and variation provenance sampling truncation parity circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-042`;
-- latest handoff: `handoff-0767`;
-- current status: `eqsrc_ordered_motion_rooted_partition_provenance_formalization_selected_candidate_v1_frozen_no_adoption`;
+- active task: `RT-20260718-043`;
+- latest handoff: `handoff-0768`;
+- current status: `eqsrc_ordered_motion_rooted_partition_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0767.yaml`
-- `research_control/tasks/RT-20260718-042/00_TASK.yaml`
+- `research_control/handoffs/handoff-0768.yaml`
+- `research_control/tasks/RT-20260718-043/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0767*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0768*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

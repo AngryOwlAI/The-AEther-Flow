@@ -1,0 +1,62 @@
+{
+  "authority": "finite mathematical control only; not ontology or physics authority",
+  "candidate": "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1",
+  "claim_boundary": {
+    "current_ontology_derives_candidate": false,
+    "distance_to_gr_ledger_changed": false,
+    "general_EqSrc_discharged": false,
+    "physical_admissibility_established": false,
+    "physics_promotion_authorized": false
+  },
+  "finite_variation_controls": {
+    "root_not_preserved": "FAIL_CLOSED",
+    "root_preserving_reversal": "PASS"
+  },
+  "negative_controls": {
+    "disconnected_component": "rejected",
+    "mixed_path_parity": "rejected",
+    "sampling_root": "rejected",
+    "target_import": "rejected",
+    "unrooted_two_cycle_natural_singleton_roots": 0
+  },
+  "positive_control": {
+    "name": "certified_rooted_two_event_path",
+    "parity": {
+      "0": 0,
+      "1": 1
+    },
+    "partition": {
+      "even": [
+        0
+      ],
+      "odd": [
+        1
+      ]
+    },
+    "relation_class_count": 2,
+    "relation_pair_count": 8
+  },
+  "root_preserving_automorphism_checks_n3": 42,
+  "schema_version": "eqsrc-ordered-motion-rooted-partition-validation.v1",
+  "small_graph_census": {
+    "n2": {
+      "admitted": 4,
+      "failed_disconnected_or_unreachable_component": 4,
+      "total_rooted_graphs": 8
+    },
+    "n3": {
+      "admitted": 36,
+      "failed_disconnected_or_unreachable_component": 96,
+      "failed_mixed_path_parity_or_odd_cycle": 60,
+      "total_rooted_graphs": 192
+    },
+    "n4": {
+      "admitted": 1088,
+      "failed_disconnected_or_unreachable_component": 4736,
+      "failed_mixed_path_parity_or_odd_cycle": 10560,
+      "total_rooted_graphs": 16384
+    }
+  },
+  "status": "PASS",
+  "strictly_increasing_reparameterization_check": "PASS"
+}
