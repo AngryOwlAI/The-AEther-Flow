@@ -1,0 +1,33 @@
+{
+  "artifact_id": "V21-P0-T01-ALLOWLIST-PARITY-SUPERSESSION-RECEIPT-001",
+  "task_id": "RT-20260720-004",
+  "created_at": "2026-07-20T18:17:45Z",
+  "status": "PASS",
+  "defect": {
+    "predecessor_task_id": "RT-20260720-003",
+    "predecessor_job_id": "AJ-RT-20260720-003-001",
+    "predecessor_execution_role_ref": "project-control-maintainer@0.2.0--RT-20260720-003",
+    "job_sha256": "bfe351ba3b53b2baa51b72006bab8b6a0a9f132ae18e6e38947c3dd1a138389b",
+    "execution_role_sha256": "e0ae8b2cba9a9a293bc793cb95b828a6d4f9113ab29813cb5e1444f8b9fec1c0",
+    "mismatch_kind": "job_only_write_pattern",
+    "job_only_write_pattern": "research_control/tasks/RT-*/jobs/**"
+  },
+  "repair": {
+    "method": "superseding_control_transaction",
+    "predecessor_records_modified": false,
+    "new_task_id": "RT-20260720-004",
+    "new_job_id": "AJ-RT-20260720-004-001",
+    "new_execution_role_ref": "project-control-maintainer@0.2.0--RT-20260720-004",
+    "new_job_and_execution_role_allowlists_equal": true,
+    "retroactive_authority_expansion": false,
+    "validator_implementation_changed": false,
+    "p0_t02_executed": false,
+    "scientific_claims_changed": false
+  },
+  "preserved_authority": {
+    "scientific_task_id": "RT-20260718-047",
+    "scientific_handoff_id": "handoff-0772",
+    "next_control_work_item": "P0-T02",
+    "next_control_handoff_id": "handoff-0774"
+  }
+}

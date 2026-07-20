@@ -1,8 +1,8 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260720-003"
-latest_handoff_id: "handoff-0773"
-current_status: "v21_p0_t01_plan_registered_pending_p0_t02_no_physics_delta"
-claim_boundary_summary: "RT-20260720-003 registers the exact v21 plan as draft control guidance after the separately governed reviewed-context repair. The registration verifies 17 phases 122 immutable work items and V21-R01 through V21-R72. It does not execute P0-T02 or P1-T01 and does not change scientific claims protected authority or either authoritative ledger. RT-20260718-047 and handoff-0772 remain the scientific authority for the fresh proposal-only candidate audit."
+active_task_id: "RT-20260720-004"
+latest_handoff_id: "handoff-0774"
+current_status: "v21_p0_t01_allowlist_parity_superseded_pending_p0_t02_no_physics_delta"
+claim_boundary_summary: "RT-20260720-004 preserves the completed RT-20260720-003 records and supersedes only their blocked active routing snapshot through one AgentJob execution-role and registry write-allowlist parity transaction. It does not execute P0-T02 or P1-T01 and does not change scientific claims protected authority or either authoritative ledger. RT-20260718-047 and handoff-0772 remain the scientific authority for the fresh proposal-only candidate audit."
 next_recommended_action: "Run one bounded v21 P0-T02 Project-Control Maintainer packet to materialize the recommendation backlog and dependency DAG. Do not execute P1-T01 and preserve handoff-0772 as its scientific source."
 
 plan_registration:
@@ -19,6 +19,21 @@ plan_registration:
   scientific_claims_changed: false
   preserved_scientific_task_id: "RT-20260718-047"
   preserved_scientific_handoff_id: "handoff-0772"
+
+allowlist_parity_supersession:
+  task_id: "RT-20260720-004"
+  predecessor_task_id: "RT-20260720-003"
+  predecessor_job_id: "AJ-RT-20260720-003-001"
+  predecessor_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260720-003"
+  predecessor_records_modified: false
+  mismatch_kind: "predecessor_job_only_write_pattern"
+  mismatched_pattern: "research_control/tasks/RT-*/jobs/**"
+  new_job_id: "AJ-RT-20260720-004-001"
+  new_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260720-004"
+  allowlists_equal: true
+  validator_implementation_changed: false
+  p0_t02_executed: false
+  scientific_claims_changed: false
 
 control_claim_boundary:
   allowed_next_scope: "One separately authorized P0-T02 packet may materialize the v21 recommendation backlog and dependency DAG without executing later work items."
@@ -156,7 +171,7 @@ selected_next_route:
   project_system_boundary_authorized_by_plan: true
   physics_promotion_authorized: false
   next_action: "Execute one bounded P0-T02 backlog and dependency-DAG materialization packet."
-  source_handoff: "research_control/handoffs/handoff-0773.yaml"
+  source_handoff: "research_control/handoffs/handoff-0774.yaml"
 
 preserved_scientific_next_packet:
   role_id: "smuggling-auditor"
@@ -194,8 +209,8 @@ project_improvement_bridge:
   required: false
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260720-003"
-  latest_research_handoff_id: "handoff-0773"
+  latest_research_task_id: "RT-20260720-004"
+  latest_research_handoff_id: "handoff-0774"
   latest_research_next_action: "Run one bounded v21 P0-T02 Project-Control Maintainer packet to materialize the recommendation backlog and dependency DAG. Do not execute P1-T01 and preserve handoff-0772 as its scientific source."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"

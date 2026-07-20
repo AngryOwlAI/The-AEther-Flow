@@ -6,16 +6,16 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-003`
-- Latest handoff: `handoff-0773`
-- Current status: `v21_p0_t01_plan_registered_pending_p0_t02_no_physics_delta`
+- Active task: `RT-20260720-004`
+- Latest handoff: `handoff-0774`
+- Current status: `v21_p0_t01_allowlist_parity_superseded_pending_p0_t02_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-003`
-- Latest research handoff: `handoff-0773`
+- Latest research task: `RT-20260720-004`
+- Latest research handoff: `handoff-0774`
 - Latest research next action: Run one bounded v21 P0-T02 Project-Control Maintainer packet to materialize the recommendation backlog and dependency DAG. Do not execute P1-T01 and preserve handoff-0772 as its scientific source.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `8db684d642147ada93a75d25c22892fc3c4417ff5c29a758ca07449ba88ed267`
-- JSON SHA-256: `f109c2f18f88296a755310d00eabef2562a75a305f4de16e1200b53f5f07a649`
+- YAML SHA-256: `2b179018cd74304491eb296ea2b8c754268ee30c297e647725335619a87af33e`
+- JSON SHA-256: `f1d96308017ea2d77b20f368d0a5b7a87186ccbd663b4ca101d31f482847eee2`
 
 ## Authority Warning
 

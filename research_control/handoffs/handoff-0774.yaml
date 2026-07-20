@@ -1,0 +1,128 @@
+handoff_id: "handoff-0774"
+handoff_number: 774
+created_at: "2026-07-20T18:17:45Z"
+task_id: "RT-20260720-004"
+decision_id: "DDR-20260720-004"
+job_id: "AJ-RT-20260720-004-001"
+completion_path: "research_control/tasks/RT-20260720-004/jobs/completions/AJC-AJ-RT-20260720-004-001.yaml"
+completion_hash: "e0104767878d7b28d25c7582540c21c1d779821de2074889ed1de666d6c9a6b7"
+source_task_id: "RT-20260720-004"
+source_job_id: "AJ-RT-20260720-004-001"
+source_completion_id: "AJC-AJ-RT-20260720-004-001"
+status: "ready_for_director"
+summary: "RT-20260720-004 preserved every completed RT-20260720-003 record and superseded only its blocked active routing snapshot with one parity-clean AgentJob execution-role and registry transaction. P0-T02 remains the next unexecuted work item. RT-20260718-047 and handoff-0772 remain the scientific authority for P1-T01."
+next_action: "Run one bounded v21 P0-T02 Project-Control Maintainer packet to materialize the recommendation backlog and dependency DAG. Do not execute P1-T01 and preserve handoff-0772 as its scientific source."
+loop_risk_route: "v21_p0_t02_backlog_materialization"
+claim_boundary:
+  allowed_next_scope: "One P0-T02 backlog and dependency-DAG materialization packet under the registered immutable v21 plan."
+  immutable_predecessor_task: "RT-20260720-003"
+  immutable_predecessor_job: "AJ-RT-20260720-003-001"
+  active_snapshot_superseded: true
+  plan_status: "registered_draft_control"
+  preserved_scientific_task: "RT-20260718-047"
+  preserved_scientific_handoff: "handoff-0772"
+  preserved_scientific_route: "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit"
+  first_required_scientific_work_item: "P1-T01"
+  control_handoff_supersedes_scientific_handoff: false
+  p0_t02_executed: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  proof_authority: false
+  external_publication_authorized: false
+blocked_claims:
+  - "active snapshot supersession as predecessor record mutation"
+  - "allowlist parity as retroactive authority expansion"
+  - "v21 plan as physics proof or scientific authority"
+  - "P0-T01 control repair as P0-T02 or later execution"
+  - "control handoff-0774 as supersession of scientific handoff-0772"
+  - "active EqSrc candidate audit completion"
+  - "canonical ontology edit or source-law adoption"
+  - "general EqSrc discharge"
+  - "metric or matter-coupling adoption"
+  - "Einstein-equation derivation"
+  - "Distance-to-GR progress"
+  - "benchmark promotion or Gate Chair verdict"
+  - "external publication"
+  - "completed derivation"
+allowlist_parity_supersession:
+  predecessor_task_id: "RT-20260720-003"
+  predecessor_job_id: "AJ-RT-20260720-003-001"
+  predecessor_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260720-003"
+  predecessor_records_modified: false
+  mismatch_kind: "predecessor_job_only_write_pattern"
+  mismatched_pattern: "research_control/tasks/RT-*/jobs/**"
+  new_job_id: "AJ-RT-20260720-004-001"
+  new_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260720-004"
+  allowlists_equal: true
+  retroactive_authority_expansion: false
+  validator_implementation_changed: false
+plan_registration:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  status: "registered_draft_control"
+  phase_count: 17
+  work_item_count: 122
+  recommendation_count: 72
+  physics_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v21"
+  source_recommendation_id_range: "V21-R01 through V21-R72"
+  source_recommendation_count: 72
+  implements_plan_task_id: "P0-T01-control-repair"
+  implementation_status: "completed"
+  coverage_effect: "control_repair"
+distance_to_gr:
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  effect: "no_distance_delta"
+  changed: false
+  meaning: "Allowlist-parity routing repair is project-system control work. General EqSrc remains undischarged and the authoritative ledger is unchanged."
+preserved_scientific_route:
+  task_id: "RT-20260718-047"
+  handoff_id: "handoff-0772"
+  candidate_name: "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1"
+  candidate_status: "proposal-only"
+  adoption_status: "blocked_adoption_open_continuation"
+  next_role: "smuggling-auditor@0.2.0"
+  next_plan_work_item: "P1-T01"
+  next_action: "Audit the exact candidate for source provenance circularity hidden target or process imports and overread before any different scientific route."
+selected_next_route:
+  route_id: "v21_p0_t02_backlog_materialization"
+  role_family: "project-control-maintainer@0.2.0"
+  plan_task_id: "P0-T02"
+  task_type: "v21_backlog_materialization"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Materialize the v21 control backlog without changing the active source-equivalence scientific burden or its handoff."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+validation:
+  allowlist_parity: "PASS"
+  predecessor_immutability: "PASS"
+  continue_context_resolution: "PASS"
+  p0_t02_execution_status: "NOT_EXECUTED"
+  documentation_impact: "PENDING_FINAL_GATE"
+  project_improvement_signals: "PENDING_FINAL_GATE"
+  research_control_diff: "PENDING_FINAL_GATE"
+  git_diff_check: "PENDING_FINAL_GATE"
+  checkpoint_transaction: "PENDING_GOVERNED_CHECKPOINT"
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260720-004"
+  latest_research_handoff_id: "handoff-0774"
+  latest_research_next_action: "Run one bounded v21 P0-T02 Project-Control Maintainer packet to materialize the recommendation backlog and dependency DAG. Do not execute P1-T01 and preserve handoff-0772 as its scientific source."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
