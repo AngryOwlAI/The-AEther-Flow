@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-039` and `handoff-0764`.
+`RT-20260718-040` and `handoff-0765`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-039` |
-| Latest handoff ID | `handoff-0764` |
-| Current status | `eqsrc_orientation_torsor_descent_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption` |
+| Active task ID | `RT-20260718-040` |
+| Latest handoff ID | `handoff-0765` |
+| Current status | `eqsrc_orientation_torsor_descent_law_conditional_formal_audit_pass_pending_bounded_refuter_stress_no_adoption` |
 | V16 completed | false |
-| Current route family | eqsrc cycle boundary selector law scoped obstruction to orientation torsor associated state candidate to fresh smuggling audit |
+| Current route family | eqsrc orientation torsor associated state candidate to conditional formal audit to bounded refuter stress |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One fresh Smuggling Auditor packet may inspect the exact associated-state candidate and return an audit classification with evidence and one next route. |
-| Next recommended action | Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcOrientationTorsorDescentLaw_src^cand,v1 for provenance-as-declaration identity versus complement descent associated-state substitution hidden sections parity instability reduced C2 versus full GL(2,2) symmetry scalarization scope variation independence target or process import and physical-covariance overread. |
+| Required next authority | One bounded Refuter packet may stress the exact unchanged associated-state candidate and return a survival classification or scoped obstruction with one next route. |
+| Next recommended action | Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three equivariant descended lines, associated-state identity retyping, source-exchange trivialization, internal complement, parity under independently justified source variations, reduced versus full symmetry, translation nondiscrimination, and partition provenance. Do not repair, adopt, or promote the candidate. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-039` |
-| Latest research handoff ID | `handoff-0764` |
-| Latest research next action | Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcOrientationTorsorDescentLaw_src^cand,v1 for provenance-as-declaration identity versus complement descent associated-state substitution hidden sections parity instability reduced C2 versus full GL(2,2) symmetry scalarization scope variation independence target or process import and physical-covariance overread. |
+| Latest research task ID | `RT-20260718-040` |
+| Latest research handoff ID | `handoff-0765` |
+| Latest research next action | Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three equivariant descended lines, associated-state identity retyping, source-exchange trivialization, internal complement, parity under independently justified source variations, reduced versus full symmetry, translation nondiscrimination, and partition provenance. Do not repair, adopt, or promote the candidate. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-039/00_TASK.yaml`.
-- Active task objective: Execute one bounded Ontology Formalizer packet to define proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1 as an unpointed C2-equivariant relation bundle and associated state relation, prove exact bundle descent and strict scalar non-descent controls, expose provenance parity scalarization and variation branches, and preserve every adoption and downstream claim gate.
-- Latest handoff path: `research_control/handoffs/handoff-0764.yaml`.
-- Latest handoff summary: RT-20260718-039 formalized proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1. The candidate retains both complementary orientation fibres in a free C2 relation bundle and defines one associated-state relation without a preferred section. It proves exact ordering independence cocycle equivariance source-record functoriality fibre pullback strict scalar non-descent a scoped no-natural-section theorem pointed-repair equivalence and finite orientation-blind algebraic robustness. Current ontology does not derive the unordered partition physical morphisms variations or gauge interpretation. Exact prior cycles remain locally frozen and no adoption ledger or downstream claim changed.
-- Current route family: eqsrc cycle boundary selector law scoped obstruction to orientation torsor associated state candidate to fresh smuggling audit.
-- Next recommended action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcOrientationTorsorDescentLaw_src^cand,v1 for provenance-as-declaration identity versus complement descent associated-state substitution hidden sections parity instability reduced C2 versus full GL(2,2) symmetry scalarization scope variation independence target or process import and physical-covariance overread.
+- Active task path: `research_control/tasks/RT-20260718-040/00_TASK.yaml`.
+- Active task objective: Execute one fresh bounded Smuggling Auditor packet against exact proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1 for partition provenance, identity versus complement descent, associated-state substitution, hidden sections, parity stability, reduced C2 versus full GL(2,2) symmetry, scalarization scope, variation independence, target or process import, and physical-covariance overread without repair adoption stress or promotion.
+- Latest handoff path: `research_control/handoffs/handoff-0765.yaml`.
+- Latest handoff summary: RT-20260718-040 completed one fresh bounded Smuggling Auditor packet against exact proposal-only EqSrcOrientationTorsorDescentLaw_src^cand,v1. The displayed source-factorization, associated quotient, relation, fibre pullback, strict scalar non-descent, and no-hidden-section boundary pass conditionally. Exact audit payload shows three equivariant descended line families, identity action of source exchange on associated classes, affine and translation nondiscrimination, and explicit parity and full-symmetry limits. Partition provenance, physical variations, covariance, selection, and adoption remain underived. General EqSrc and both authoritative ledgers are unchanged.
+- Current route family: eqsrc orientation torsor associated state candidate to conditional formal audit to bounded refuter stress.
+- Next recommended action: Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three equivariant descended lines, associated-state identity retyping, source-exchange trivialization, internal complement, parity under independently justified source variations, reduced versus full symmetry, translation nondiscrimination, and partition provenance. Do not repair, adopt, or promote the candidate.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcOrientationTorsorDescentLaw_src^cand,v1 for provenance-as-declaration identity versus complement descent associated-state substitution hidden sections parity instability reduced C2 versus full GL(2,2) symmetry scalarization scope variation independence target or process import and physical-covariance overread.
+Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three equivariant descended lines, associated-state identity retyping, source-exchange trivialization, internal complement, parity under independently justified source variations, reduced versus full symmetry, translation nondiscrimination, and partition provenance. Do not repair, adopt, or promote the candidate.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-039`;
-- latest handoff: `handoff-0764`;
-- current status: `eqsrc_orientation_torsor_descent_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption`;
+- active task: `RT-20260718-040`;
+- latest handoff: `handoff-0765`;
+- current status: `eqsrc_orientation_torsor_descent_law_conditional_formal_audit_pass_pending_bounded_refuter_stress_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0764.yaml`
-- `research_control/tasks/RT-20260718-039/00_TASK.yaml`
+- `research_control/handoffs/handoff-0765.yaml`
+- `research_control/tasks/RT-20260718-040/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0764*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0765*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

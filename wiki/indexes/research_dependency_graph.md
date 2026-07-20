@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-19T23:06:34Z`
-- Source fingerprint: `433f1f09a635d6b5efa1334e79d7fc9e90542320fe740526613eb7146d9a6726`
-- Nodes: `19525`
-- Edges: `67430`
+- Generated from tracked state as of: `2026-07-19T23:40:44Z`
+- Source fingerprint: `c9525241753396cf783a9bf8ca427be8893429aca976849ecdbaac9cc441a385`
+- Nodes: `19542`
+- Edges: `67482`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 993 |
+| `completion_yaml` | 994 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 764 |
+| `handoff_yaml` | 765 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 993 |
+| `agent_job` | `support_only` | 994 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10221 |
+| `artifact` | `support_only` | 10228 |
 | `blocked_burden` | `blocked` | 3687 |
-| `claim_boundary` | `support_only` | 950 |
-| `draft_control_candidate` | `draft_control` | 605 |
-| `draft_control_candidate` | `proposal_only` | 94 |
+| `claim_boundary` | `support_only` | 951 |
+| `draft_control_candidate` | `draft_control` | 609 |
+| `draft_control_candidate` | `proposal_only` | 95 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 113 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 764 |
+| `handoff` | `support_only` | 765 |
 | `human_gated_object` | `human_gated` | 423 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 312 |
+| `source_ontology_object` | `support_only` | 313 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 933 |
+| `task` | `support_only` | 934 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-039`
-- Latest handoff: `handoff-0764`
-- Handoff path: `research_control/handoffs/handoff-0764.yaml`
-- Next action: Run one bounded fresh Smuggling Auditor ontology-law-research-packet against exact EqSrcOrientationTorsorDescentLaw_src^cand,v1 for provenance-as-declaration identity versus complement descent associated-state substitution hidden sections parity instability reduced C2 versus full GL(2,2) symmetry scalarization scope variation independence target or process import and physical-covariance overread.
+- Active task: `RT-20260718-040`
+- Latest handoff: `handoff-0765`
+- Handoff path: `research_control/handoffs/handoff-0765.yaml`
+- Next action: Run one bounded Refuter ontology-law-research-packet against the unchanged exact candidate for the three equivariant descended lines, associated-state identity retyping, source-exchange trivialization, internal complement, parity under independently justified source variations, reduced versus full symmetry, translation nondiscrimination, and partition provenance. Do not repair, adopt, or promote the candidate.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

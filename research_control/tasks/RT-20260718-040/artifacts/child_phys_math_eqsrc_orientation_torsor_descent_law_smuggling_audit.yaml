@@ -1,0 +1,67 @@
+artifact_id: "child_phys_math_eqsrc_orientation_torsor_descent_law_smuggling_audit"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260718-040"
+job_id: "AJ-RT-20260718-040-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+audit_subject: "EqSrcOrientationTorsorDescentLaw_src^cand,v1"
+candidate_hash: "81b24c69403c304889a94caec8b2a99a6a360a49f40266764da4cfd3ba4edd5f"
+audit_classification: "conditional_formal_audit_pass_with_associated_state_retyping_equivariant_line_nonuniqueness_and_variation_nondiscrimination"
+candidate_status: "proposal-only"
+adoption_status: "blocked_adoption_open_continuation"
+
+formal_checks:
+  associated_class_count: 4
+  associated_line_size: 2
+  associated_relation_ordered_pair_count: 8
+  fibre_pullback_mismatches: 0
+  hidden_section_detected: false
+  strict_scalar_descent_on_original_state: false
+  source_exchange_action_on_associated_classes: "identity_on_all_four_classes"
+  orientation_zero_representation_status: "enumeration_gauge_only_not_source_canonical"
+
+equivariant_line_census:
+  nonzero_proper_line_count: 3
+  families:
+    - "L_q over o and L_p over sigma_o"
+    - "L_p over o and L_q over sigma_o"
+    - "L_d over both orientations"
+  distinct_descended_line_count: 3
+  conclusion: "C2 equivariance cocycle consistency and associated descent do not select the candidate line."
+
+finite_symmetry_census:
+  gl2_count: 6
+  agl2_count: 24
+  affine_relation_stabilizers_per_line: 8
+  affine_relation_changers_per_line: 16
+  quotient_label_fixers_per_line: 4
+  affine_line_subset_stabilizers_per_line: 4
+  coordinate_relation_individual_stabilizer: 4
+  unordered_coordinate_relation_pair_stabilizer: 8
+  full_gl2_line_orbit_size: 3
+  linear_line_stabilizer_in_gl2: 2
+  translation_count: 4
+  translations_preserving_each_line_relation: 4
+  candidate_constant_one_controls: 2
+  constant_one_label_action: "T_d fixes quotient labels only for L_d and swaps them for L_p and L_q"
+  conclusion: "The declared translations are independently ordered but nonmaximal and nonselective; they do not distinguish the selected coordinate family from its reverse."
+
+variation_scope:
+  admitted_candidate_morphisms: "setwise unordered-partition-preserving bijections"
+  admitted_parity_result: "both-odd parity is stable under the admitted morphisms"
+  external_one_point_transfer_result: "every tested nonempty one-point transfer exits the both-odd domain"
+  external_transfer_status: "not_an_admitted_candidate_morphism"
+  parity_branches: "odd-even points the torsor and makes the opposite exact fibre bottom; even-even admits neither exact fibre"
+  conclusion: "A physical source-variation category and its robustness remain underived."
+
+mathematical_limits:
+  - "The associated quotient retypes state identity; it does not prove strict scalar descent on the original A_U."
+  - "The source exchange is quotiented to identity and therefore supplies no line-selection evidence."
+  - "The algebraic complement exchanges the coordinate descended lines and fixes the diagonal, but physical admissibility is not established."
+  - "Only zero and the full space are GL(2,2)-invariant linear subspaces; the three-line projective orbit is homogeneous, not a torsor or selector."
+  - "The invariant set partition {0}|(A minus {0}) is an arbitrary set-theoretic equivalence outside the candidate's linear-congruence scope."
+  - "The unordered partition, both-odd domain, block-span model, physical morphisms, and physical variations remain proposal primitives."
+  - "Finite F2^2 consistency does not establish continuum relevance or exact-GR recovery."
+
+recommendation: "route_one_bounded_refuter_stress_of_the_unchanged_candidate"
