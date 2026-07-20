@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260718-046` and `handoff-0771`.
+`RT-20260718-047` and `handoff-0772`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260718-046` |
-| Latest handoff ID | `handoff-0771` |
-| Current status | `eqsrc_flow_generated_graded_orbit_root_formalization_selected_prior_candidate_v1_frozen_no_adoption` |
+| Active task ID | `RT-20260718-047` |
+| Latest handoff ID | `handoff-0772` |
+| Current status | `eqsrc_flow_generated_graded_orbit_root_law_candidate_formalized_pending_fresh_audit_no_adoption` |
 | V16 completed | false |
-| Current route family | ontology law formalization |
+| Current route family | eqsrc rooted partition scoped obstruction to flow generated graded orbit root candidate to fresh smuggling audit |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One Ontology Formalizer packet may define proposal-only ordered action orbit reachability cover minimum rank parity partition point line relation morphisms variations and bottom tags and prove one finite-chain witness plus periodic rootless dense multi-minimal non-graded and truncation controls. |
-| Next recommended action | Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Define the exact ordered action orbit reachability cover rank partition morphism variation positive witness and fail-closed countermodels; do not repair or adopt exact rooted-partition candidate v1. |
+| Required next authority | One fresh Smuggling Auditor may inspect the exact candidate for source provenance circularity hidden target or process imports and overread and return one audit verdict with one lawful next route. |
+| Next recommended action | Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260718-046` |
-| Latest research handoff ID | `handoff-0771` |
-| Latest research next action | Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Define the exact ordered action orbit reachability cover rank partition morphism variation positive witness and fail-closed countermodels; do not repair or adopt exact rooted-partition candidate v1. |
+| Latest research task ID | `RT-20260718-047` |
+| Latest research handoff ID | `handoff-0772` |
+| Latest research next action | Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260718-046/00_TASK.yaml`.
-- Active task objective: Select exactly one materially distinct same-milestone packet after the exact ordered-motion rooted-partition candidate's scoped root and relation-selection obstruction without repairing repeating adopting or promoting that candidate.
-- Latest handoff path: `research_control/handoffs/handoff-0771.yaml`.
-- Latest handoff summary: RT-20260718-046 completed one bounded Theoretical Continuation Selector ontology-law-research-packet after the exact proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 scoped obstruction. It selected EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1, a materially distinct proposal-only target that must derive or reject the transition graph root and rank from a proposed source ordered-monoid action rather than load D_Phi pi or C_root independently. A finite chain is the positive control; periodic bi-infinite dense multi-minimal non-graded and observer-truncated branches fail closed. Current ontology does not derive the new action or orbit structure. Exact candidate-v1 repetition remains locally frozen; adoption remains blocked with open continuation and no Distance-to-GR delta.
-- Current route family: ontology law formalization.
-- Next recommended action: Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Define the exact ordered action orbit reachability cover rank partition morphism variation positive witness and fail-closed countermodels; do not repair or adopt exact rooted-partition candidate v1.
+- Active task path: `research_control/tasks/RT-20260718-047/00_TASK.yaml`.
+- Active task objective: Execute one bounded Ontology Formalizer ontology-law-research-packet to define proposal-only EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1 with an exact source-order monoid action reachability cover graph global minimum graded rank parity partition pointing relation morphism variation package one four-event positive witness and periodic bi-infinite dense multi-minimal non-graded truncation and target-import fail-closed branches.
+- Latest handoff path: `research_control/handoffs/handoff-0772.yaml`.
+- Latest handoff summary: RT-20260718-047 formalized proposal-only EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. On an explicitly proposed source-order monoid action over one full source component, action reachability conditionally derives the cover graph unique global minimum graded rank ordered parity blocks boundary line and kernel-pair relation. Conditional preorder cover-generation minimum naturality rank functoriality ordered-monoid reparameterization and finite-variation theorems were proved. A four-event action chain gives the positive eight-pair relation; periodic bi-infinite dense multi-minimal non-graded observer-truncated target and process branches fail closed. Current ontology does not derive the ordered-action package. Adoption remains blocked with open continuation, exact rooted-partition candidate v1 remains locally frozen, and no ledger or promotion changed.
+- Current route family: eqsrc rooted partition scoped obstruction to flow generated graded orbit root candidate to fresh smuggling audit.
+- Next recommended action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Define the exact ordered action orbit reachability cover rank partition morphism variation positive witness and fail-closed countermodels; do not repair or adopt exact rooted-partition candidate v1.
+Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260718-046`;
-- latest handoff: `handoff-0771`;
-- current status: `eqsrc_flow_generated_graded_orbit_root_formalization_selected_prior_candidate_v1_frozen_no_adoption`;
+- active task: `RT-20260718-047`;
+- latest handoff: `handoff-0772`;
+- current status: `eqsrc_flow_generated_graded_orbit_root_law_candidate_formalized_pending_fresh_audit_no_adoption`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0771.yaml`
-- `research_control/tasks/RT-20260718-046/00_TASK.yaml`
+- `research_control/handoffs/handoff-0772.yaml`
+- `research_control/tasks/RT-20260718-047/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0771*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0772*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

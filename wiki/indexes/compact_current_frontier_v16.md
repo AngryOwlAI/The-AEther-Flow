@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-046`
-- Latest handoff: `handoff-0771`
-- Current status: `eqsrc_flow_generated_graded_orbit_root_formalization_selected_prior_candidate_v1_frozen_no_adoption`
+- Active task: `RT-20260718-047`
+- Latest handoff: `handoff-0772`
+- Current status: `eqsrc_flow_generated_graded_orbit_root_law_candidate_formalized_pending_fresh_audit_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-046`
-- Latest research handoff: `handoff-0771`
-- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Define the exact ordered action orbit reachability cover rank partition morphism variation positive witness and fail-closed countermodels; do not repair or adopt exact rooted-partition candidate v1.
+- Latest research task: `RT-20260718-047`
+- Latest research handoff: `handoff-0772`
+- Latest research next action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_flow_generated_graded_orbit_root_formalization`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit`
+- Role family: `smuggling-auditor@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Define proposal-only EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1 with exact ordered action reachability cover minimum rank positive and negative controls or return a precise obstruction.
+- Milestone burden: Audit the exact proposal-only flow-generated graded-orbit root source law before Refuter stress or protected adoption review.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `bba955c58b80ae9da650de0d9b3c9cd2cf347a38d38fa53023de5fa5685a25e7`
-- JSON SHA-256: `d1871e0ddedd976d1493f12228097701256694849a86312f26ea0e3f0f33169d`
+- YAML SHA-256: `167b862367ed1ba3225c5cba5a002d6f8d631d4420f23b53c70f094dc553b339`
+- JSON SHA-256: `1027b8650dd22665d5c18ba7da1a22299c8714136934f29016ef6eab7ebaf022`
 
 ## Authority Warning
 

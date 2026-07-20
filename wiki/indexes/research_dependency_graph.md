@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-20T03:35:33Z`
-- Source fingerprint: `8c242982359ef4c0299e19e5df3e83a2fe577a0eb48d567c7ffe6038d1bf9cdf`
-- Nodes: `19669`
-- Edges: `67807`
+- Generated from tracked state as of: `2026-07-20T04:18:12Z`
+- Source fingerprint: `b0a9e58a549aef34406ce5593ce056e7dc00c7f4f5ad3bac8a6a18855932e50b`
+- Nodes: `19695`
+- Edges: `67870`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1000 |
+| `completion_yaml` | 1001 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 771 |
+| `handoff_yaml` | 772 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1000 |
+| `agent_job` | `support_only` | 1001 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10280 |
-| `blocked_burden` | `blocked` | 3704 |
-| `claim_boundary` | `support_only` | 957 |
-| `draft_control_candidate` | `draft_control` | 629 |
-| `draft_control_candidate` | `proposal_only` | 100 |
+| `artifact` | `support_only` | 10293 |
+| `blocked_burden` | `blocked` | 3706 |
+| `claim_boundary` | `support_only` | 958 |
+| `draft_control_candidate` | `draft_control` | 633 |
+| `draft_control_candidate` | `proposal_only` | 102 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 115 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 771 |
+| `handoff` | `support_only` | 772 |
 | `human_gated_object` | `human_gated` | 424 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
 | `source_ontology_object` | `canonical_source` | 16 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 317 |
+| `source_ontology_object` | `support_only` | 318 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 940 |
+| `task` | `support_only` | 941 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260718-046`
-- Latest handoff: `handoff-0771`
-- Handoff path: `research_control/handoffs/handoff-0771.yaml`
-- Next action: Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Define the exact ordered action orbit reachability cover rank partition morphism variation positive witness and fail-closed countermodels; do not repair or adopt exact rooted-partition candidate v1.
+- Active task: `RT-20260718-047`
+- Latest handoff: `handoff-0772`
+- Handoff path: `research_control/handoffs/handoff-0772.yaml`
+- Next action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

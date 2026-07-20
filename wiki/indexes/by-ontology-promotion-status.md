@@ -55,6 +55,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex`
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V2` `research_control/tasks/RT-20260718-018/artifacts/eqsrc_family_closure_source_law_candidate_v2.tex`
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V3` `research_control/tasks/RT-20260718-020/artifacts/eqsrc_family_closure_source_law_candidate_v3.tex`
+- `TEX-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex`
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex`
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V2` `research_control/tasks/RT-20260718-029/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v2.tex`
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V3` `research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex`

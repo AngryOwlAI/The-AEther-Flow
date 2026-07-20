@@ -1,0 +1,322 @@
+% authority: science-draft
+% status: proposal-only
+% route: ontology-law-research-packet
+% trigger_classification: derivation_critical_missing_source_law
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Ftwo}{\mathbb F_2}
+\newcommand{\FlowRootLaw}{\mathsf{EqSrcFlowGeneratedGradedOrbitRootLaw}^{\mathrm{cand},v1}_{\mathrm{src}}}
+\newcommand{\Bottom}{\mathsf{Bottom}_{\mathrm{src}}}
+
+\title{Proposal-Only EqSrc Flow-Generated Graded-Orbit Root Law Candidate v1:\\
+Action Reachability, Derived Covers, Global Minima, Rank Parity, and Fail-Closed Countermodels}
+\author{Ontology Formalizer control packet RT-20260718-047}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\section{Control Status}
+
+This packet defines \(\FlowRootLaw\) as a proposal-only source-extension
+object. The canonical foundations source supplies only an intentionally
+schematic ordered-motion map \(\Phi_\lambda:\mathcal A\to\mathcal A\).
+It does not derive the ordered monoid, action law, full action component,
+locally finite reachability order, cover graph, unique global minimum, graded
+rank, source morphism category, variation family, or downstream semantics
+used below. The status is \texttt{proposal-only},
+\texttt{new\_ontology\_primitive\_candidate}, and
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\begin{verbatim}
+candidate_result: candidate_formalized_pending_fresh_smuggling_audit
+candidate_name: EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1
+formal_model: source_order_monoid_actions_with_derived_reachability_covers_and_rank
+canonical_Phi_anchor_is_schematic: true
+current_ontology_derives_ordered_action_law: false
+transition_graph_loaded_independently: false
+root_certificate_loaded_independently: false
+positive_control: four_event_discrete_action_chain
+periodic_control: fail_closed
+bi_infinite_control: fail_closed
+dense_control: fail_closed
+multiple_minimum_control: fail_closed
+non_graded_control: fail_closed
+observer_truncation_control: fail_closed
+morphism_naturality: conditional_source_category_only
+finite_variation_robustness: conditional_source_category_only
+physical_covariance_established: false
+physical_admissibility_established: false
+candidate_status: proposal-only
+adoption_status: blocked_adoption_open_continuation
+general_EqSrc_discharged: false
+distance_to_gr_ledger_changed: false
+exact_rooted_partition_candidate_v1: locally_frozen
+next_route: fresh_smuggling_auditor_review
+\end{verbatim}
+
+\section{Ordered Action Data and Dependency Order}
+
+\begin{definition}[Proposal ordered-action component]
+A proposal record is
+\[
+ U=(C,\Lambda_+,\oplus,0,\Phi,\mathcal M_U,\mathcal V_U),
+\]
+where \((\Lambda_+,\oplus,0)\) is a source-order monoid and
+\(\Phi:\Lambda_+\times C\to C\) obeys
+\[
+ \Phi_0=\operatorname{id}_C,
+ \qquad
+ \Phi_{\sigma\oplus\tau}=\Phi_\sigma\circ\Phi_\tau.
+\]
+The set \(C\) is one full source component under the undirected closure of
+forward action steps. It is not an observer window or a target-selected
+subset. The monoid, action, component, source morphisms \(\mathcal M_U\), and
+variations \(\mathcal V_U\) are declared before any partition, line, or
+relation is evaluated. They contain no target atlas, target metric, proper
+time, detector semantics, benchmark success, generated derivative, registry,
+validator, role, handoff, file-order, or task-process premise.
+\end{definition}
+
+Define action reachability by
+\[
+ x\preceq_\Phi y
+ \quad\Longleftrightarrow\quad
+ \text{there exists }\tau\in\Lambda_+\text{ with }y=\Phi_\tau(x).
+\]
+No transition graph, event projection, or root certificate is independent
+candidate data. When \(\preceq_\Phi\) is a locally finite partial order, its
+cover relation is
+\[
+ x\lessdot_\Phi y
+ \quad\Longleftrightarrow\quad
+ x\prec_\Phi y\text{ and no }z\text{ satisfies }x\prec_\Phi z\prec_\Phi y.
+\]
+
+\begin{definition}[Admission]
+The proposal record \(U\) is admitted only when:
+\begin{enumerate}[label=(A\arabic*)]
+  \item the monoid and action identity/composition laws are source defined;
+  \item action reachability is antisymmetric on the full component \(C\);
+  \item every interval \([x,y]_\Phi\) is finite, so the cover relation is
+  source derived rather than loaded independently;
+  \item \((C,\preceq_\Phi)\) has exactly one global minimum \(r_U\);
+  \item every \(x\in C\) is joined to \(r_U\) by a finite saturated cover
+  chain and all such chains have one common length \(\rho_U(x)\);
+  \item the even and odd rank blocks defined below are both nonempty;
+  \item source morphisms and ordered-monoid reparameterizations are declared
+  independently and preserve the action data; and
+  \item variations are declared independently and either preserve all prior
+  admission data or return a precise bottom tag.
+\end{enumerate}
+Failure of any item returns a tagged element of \(\Bottom\) rather than a
+candidate relation.
+\end{definition}
+
+\section{Derived Rank, Partition, Pointing, and Relation}
+
+For admitted \(U\), define
+\[
+ P_U=\{x\in C:\rho_U(x)\equiv0\pmod2\},
+ \qquad
+ Q_U=\{x\in C:\rho_U(x)\equiv1\pmod2\}.
+\]
+Let \(p_U=\mathbf1_{P_U}\), \(q_U=\mathbf1_{Q_U}\), and
+\[
+ A_U=\operatorname{span}_{\Ftwo}\{p_U,q_U\},
+ \qquad
+ B_U=\Ftwo q_U.
+\]
+Define
+\[
+ a\,R_U\,a'
+ \quad\Longleftrightarrow\quad
+ a-a'\in B_U.
+\]
+This is the kernel pair of \(A_U\to A_U/B_U\). It is a proposal-only
+algebraic relation, not general \(\mathsf{EqSrc}\), physical gauge
+equivalence, or empirical equivalence.
+
+\section{Conditional Theorems}
+
+\begin{theorem}[Reachability preorder and periodicity obstruction]
+The action laws make \(\preceq_\Phi\) reflexive and transitive. If distinct
+\(x,y\in C\) satisfy both \(x\preceq_\Phi y\) and
+\(y\preceq_\Phi x\), admission fails. In particular, every nontrivial
+periodic action orbit fails antisymmetry.
+\end{theorem}
+\begin{proof}
+Identity gives reflexivity and action composition gives transitivity.
+Bidirectional reachability of distinct points contradicts antisymmetry.
+A nontrivial periodic orbit contains such a pair.
+\end{proof}
+
+\begin{theorem}[Locally finite cover generation]
+If \(\preceq_\Phi\) is a locally finite partial order, then every strict
+comparison \(x\prec_\Phi y\) contains a finite saturated chain of cover
+relations from \(x\) to \(y\). Hence the transition graph is determined by
+action reachability and is not an independent input.
+\end{theorem}
+\begin{proof}
+The interval \([x,y]_\Phi\) is finite. A maximal chain in this finite
+interval exists, and consecutive elements in a maximal chain are covers.
+\end{proof}
+
+\begin{theorem}[Global-minimum naturality and truncation guard]
+An admitted action isomorphism sends the unique global minimum of \(U\) to
+the unique global minimum of \(U'\). A point that is minimal only after
+restricting a rootless full component to an observer window is not a global
+minimum and returns \texttt{observer\_truncation\_minimum}.
+\end{theorem}
+\begin{proof}
+An action isomorphism preserves and reflects reachability, hence preserves the
+property of being below every point. Uniqueness identifies the image. A
+window-minimal point with a predecessor outside the window is not minimum in
+the full component.
+\end{proof}
+
+\begin{theorem}[Graded-rank well-definedness]
+Under admission item (A5), \(\rho_U(r_U)=0\), every cover raises rank by one,
+and \(\rho_U(x)\) is independent of the chosen saturated chain. If one point
+admits saturated chains of unequal finite lengths, the candidate returns
+\texttt{non\_graded\_or\_infinite\_rank}.
+\end{theorem}
+\begin{proof}
+The first assertions restate the common-length admission property. Unequal
+lengths make the proposed rank multivalued and therefore block the partition.
+\end{proof}
+
+\begin{theorem}[Action naturality and relation functoriality]
+Let \((f,\alpha):U\to U'\) be an admitted source isomorphism, where
+\(\alpha:\Lambda_+\to\Lambda'_+\) is an ordered-monoid isomorphism and
+\[
+ f(\Phi_\tau x)=\Phi'_{\alpha(\tau)}f(x).
+\]
+Then \(f\) preserves reachability, covers, the unique minimum, rank, parity
+blocks, \(B_U\), and \(R_U\). Induced maps obey identity and composition.
+\end{theorem}
+\begin{proof}
+Equivariance and bijectivity preserve and reflect reachability. Covers and the
+unique minimum are order-theoretic, while saturated-chain lengths are carried
+edge by edge. The indicator generators and kernel pair therefore transport.
+\end{proof}
+
+\begin{theorem}[Ordered-monoid reparameterization invariance]
+If \(\alpha\) is an ordered-monoid automorphism and the relabeled action is
+\(\Phi^\alpha_\tau=\Phi_{\alpha(\tau)}\), then reachability and every derived
+candidate object are unchanged.
+\end{theorem}
+\begin{proof}
+Surjectivity of \(\alpha\) gives the same set of action maps, so the
+reachability relation is identical. All later objects are derived from it.
+\end{proof}
+
+\begin{theorem}[Conditional finite-variation robustness]
+An independently declared variation preserves the candidate only when it
+preserves the ordered action up to admitted isomorphism and preserves every
+admission guard. Otherwise it returns the corresponding bottom tag. This is
+conditional source-category robustness, not physical stability.
+\end{theorem}
+
+\section{Four-Event Positive Witness}
+
+Let \(C=\{e_0,e_1,e_2,e_3\}\), \(\Lambda_+=\mathbb N_0\), and
+\[
+ \Phi_n(e_i)=e_{\min(i+n,3)}.
+\]
+This is a monoid action. Reachability is the four-element chain, its covers
+are \(e_0\lessdot e_1\lessdot e_2\lessdot e_3\), its unique minimum is
+\(e_0\), and \(\rho(e_i)=i\). Thus
+\[
+ P_U=\{e_0,e_2\},\qquad Q_U=\{e_1,e_3\}.
+\]
+The four-element indicator state space has two equivalence classes and eight
+ordered related pairs. This is a finite mathematical witness only.
+
+\section{Exact Countermodels and Fail-Closed Controls}
+
+\begin{enumerate}[label=(C\arabic*)]
+  \item \textbf{Periodic.} On \(\mathbb Z/4\mathbb Z\), let
+  \(\Phi_n([k])=[k+n]\). Distinct points are mutually reachable, so
+  antisymmetry fails.
+  \item \textbf{Bi-infinite.} On \(\mathbb Z\), let
+  \(\Phi_n(k)=k+n\). Reachability is locally finite and graded but has no
+  global minimum.
+  \item \textbf{Dense.} On \(\mathbb Q_{\ge0}\), let
+  \(\Phi_q(x)=x+q\). The interval \([0,1]\) is infinite and every strict
+  pair has a midpoint, so there is no locally finite cover graph.
+  \item \textbf{Multiple minima.} On \(\{a,b,t\}\), let commuting
+  idempotents \(u,v\) satisfy \(u(a)=t\), \(v(b)=t\), and otherwise fix
+  points. The weak action component has two global minima, \(a\) and \(b\).
+  \item \textbf{Non-graded.} Let a free monoid act on
+  \(\{r,a,b,c,t\}\) through generators for the cover steps
+  \(r\to a\to t\) and \(r\to b\to c\to t\), each fixing other points.
+  The unique minimum \(r\) reaches \(t\) by saturated chains of lengths two
+  and three, so rank is not well defined.
+  \item \textbf{Observer truncation.} Restrict the bi-infinite shift to the
+  observed window \(\{0,1,2,3\}\). The apparent first point still has a
+  predecessor in the full source component and is not a source-global root.
+\end{enumerate}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Tag & Exact trigger \\
+\midrule
+\texttt{missing\_ordered\_action} & absent monoid, action, identity, or composition law \\
+\texttt{periodic\_or\_nonantisymmetric\_reachability} & distinct mutually reachable events \\
+\texttt{non\_locally\_finite\_or\_no\_cover\_graph} & an interval is infinite or covers do not generate comparisons \\
+\texttt{no\_global\_minimum} & the full component is rootless \\
+\texttt{nonunique\_global\_minimum} & two or more full-component minima \\
+\texttt{observer\_truncation\_minimum} & minimum exists only after observation or sampling restriction \\
+\texttt{non\_graded\_or\_infinite\_rank} & unequal or nonfinite saturated-chain lengths \\
+\texttt{empty\_parity\_block} & one rank-parity block is empty \\
+\texttt{morphism\_or\_variation\_naturality\_defect} & an admitted map fails action or rank preservation \\
+\texttt{target\_or\_process\_import} & target, benchmark, generated, registry, validator, role, handoff, or file-order premise \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Source-Extension and No-Target-Import Classification}
+
+The ordered monoid, action law, full-component rule, morphism category, and
+variation family are classified as a \texttt{proposal-only new ontology
+primitive candidate}. Current ontology does not derive them. The transition
+graph, minimum, rank, partition, line, and relation are conditional
+consequences only after the proposal data pass the admission guards.
+
+The construction forbids target topology, smooth atlas, target metric, proper
+time, detector semantics, benchmark success, generated derivatives, registry
+metadata, validator status, role identity, handoff state, file order, and task
+process as premises. Task-local validation establishes only the displayed
+finite and symbolic controls.
+
+\section{Distance-to-GR, Freeze, and Required Next Route}
+
+The \texttt{source\_equivalence\_eqsrc} burden remains at
+\texttt{draft object exists}. No Distance-to-GR or metric-use ledger row
+changes. General \(\mathsf{EqSrc}\), RetainH, GenH, \(M_{\rm src}\),
+\(g_{\rm eff}\), matter coupling, Einstein equations, and benchmark promotion
+remain blocked.
+
+The exact \(\mathsf{EqSrcOrderedMotionRootedPartitionLaw}^{\mathrm{cand},v1}\)
+construction--audit--stress cycle remains locally frozen. This packet does
+not reload its independent transition graph, projection, or root certificate;
+those objects are derived or rejected from the proposed action reachability.
+
+The next bounded role is a fresh \texttt{smuggling-auditor@0.2.0}. It must
+audit whether the ordered action, component boundary, monoid positivity,
+morphism category, variation family, or full-component rule imports target,
+observer, benchmark, desired-relation, or process information. No repair,
+stress, adoption, or promotion is authorized in this packet.
+
+\end{document}

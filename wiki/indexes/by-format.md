@@ -442,6 +442,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-045-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-045-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260718-045/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260718-046-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SELECTOR` `research_control/tasks/RT-20260718-046/artifacts/parent_fusion_notes_eqsrc_flow_generated_graded_orbit_root_selector.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-047-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW-CANDIDATE-RECEIPT` `research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260718-047-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW` `research_control/tasks/RT-20260718-047/artifacts/parent_fusion_notes_eqsrc_flow_generated_graded_orbit_root_law.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -545,6 +547,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-015/artifacts/eqsrc_family_closure_source_law_candidate_v1.tex`
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V2` `research_control/tasks/RT-20260718-018/artifacts/eqsrc_family_closure_source_law_candidate_v2.tex`
 - `TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V3` `research_control/tasks/RT-20260718-020/artifacts/eqsrc_family_closure_source_law_candidate_v3.tex`
+- `TEX-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex`
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V1` `research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex`
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V2` `research_control/tasks/RT-20260718-029/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v2.tex`
 - `TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V3` `research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex`
@@ -1356,6 +1359,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-045-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-045-eqsrc-ordered-motion-rooted-partition-law-refuter-stress-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-045-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS` `wiki/markdown/md-research-control-tasks-rt-20260718-045-parent-fusion-notes-eqsrc-ordered-motion-rooted-partition-law-refuter-stress.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-046-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SELECTOR` `wiki/markdown/md-research-control-tasks-rt-20260718-046-parent-fusion-notes-eqsrc-flow-generated-graded-orbit-root-selector.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-047-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW-CANDIDATE-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260718-047-eqsrc-flow-generated-graded-orbit-root-law-candidate-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260718-047-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW` `wiki/markdown/md-research-control-tasks-rt-20260718-047-parent-fusion-notes-eqsrc-flow-generated-graded-orbit-root-law.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1453,6 +1458,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V1` `wiki/tex/tex-eqsrc-family-closure-source-law-candidate-v1.md`
 - `WIKI-TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V2` `wiki/tex/tex-eqsrc-family-closure-source-law-candidate-v2.md`
 - `WIKI-TEX-EQSRC-FAMILY-CLOSURE-SOURCE-LAW-CANDIDATE-V3` `wiki/tex/tex-eqsrc-family-closure-source-law-candidate-v3.md`
+- `WIKI-TEX-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-LAW-CANDIDATE-V1` `wiki/tex/tex-eqsrc-flow-generated-graded-orbit-root-law-candidate-v1.md`
 - `WIKI-TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V1` `wiki/tex/tex-eqsrc-intrinsic-discriminator-admissibility-law-candidate-v1.md`
 - `WIKI-TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V2` `wiki/tex/tex-eqsrc-intrinsic-discriminator-admissibility-law-candidate-v2.md`
 - `WIKI-TEX-EQSRC-INTRINSIC-DISCRIMINATOR-ADMISSIBILITY-LAW-CANDIDATE-V3` `wiki/tex/tex-eqsrc-intrinsic-discriminator-admissibility-law-candidate-v3.md`
