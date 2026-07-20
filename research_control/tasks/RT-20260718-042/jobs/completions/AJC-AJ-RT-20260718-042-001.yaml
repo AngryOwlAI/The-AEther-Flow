@@ -1,0 +1,553 @@
+completion_id: "AJC-AJ-RT-20260718-042-001"
+job_id: "AJ-RT-20260718-042-001"
+task_id: "RT-20260718-042"
+decision_id: "DDR-20260718-042"
+status: "completed"
+completed_at: "2026-07-20T00:55:46Z"
+completed_by_role: "theoretical-continuation-selector@0.1.0--RT-20260718-042"
+source_role_id: "theoretical-continuation-selector"
+source_role_version: "0.1.0"
+plan_task_id: "eqsrc_orientation_torsor_post_obstruction_ordered_motion_provenance_selector"
+objective_result: "completed"
+validation_status: "PASS"
+summary: "Completed one bounded post-obstruction EqSrc theoretical selector. It selected a proposal-only ontology-law-research-packet for EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 with ontology-formalizer@0.2.0 as the next role. The candidate target attempts to derive or fail closed on the missing ordered partition before relation construction using explicit Phi-compatible transition provenance and a source-intrinsic root certificate. Exact orientation-torsor candidate v1 remains locally frozen; adoption remains blocked with same-milestone continuation open; no Distance-to-GR or downstream physics promotion occurred."
+
+artifacts:
+  - "research_control/tasks/RT-20260718-042/artifacts/child_phys_math_eqsrc_ordered_motion_partition_provenance_selector.yaml"
+  - "research_control/tasks/RT-20260718-042/artifacts/child_phys_phil_eqsrc_ordered_motion_partition_provenance_selector.yaml"
+  - "research_control/tasks/RT-20260718-042/artifacts/parent_conflict_review_eqsrc_ordered_motion_partition_provenance_selector.yaml"
+  - "research_control/tasks/RT-20260718-042/artifacts/parent_fusion_notes_eqsrc_ordered_motion_partition_provenance_selector.md"
+  - "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml"
+
+output_paths:
+  - "research_control/tasks/RT-20260718-042/artifacts/child_phys_math_eqsrc_ordered_motion_partition_provenance_selector.yaml"
+  - "research_control/tasks/RT-20260718-042/artifacts/child_phys_phil_eqsrc_ordered_motion_partition_provenance_selector.yaml"
+  - "research_control/tasks/RT-20260718-042/artifacts/parent_conflict_review_eqsrc_ordered_motion_partition_provenance_selector.yaml"
+  - "research_control/tasks/RT-20260718-042/artifacts/parent_fusion_notes_eqsrc_ordered_motion_partition_provenance_selector.md"
+  - "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml"
+
+extra_read_paths:
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-040/artifacts/eqsrc_orientation_torsor_descent_law_smuggling_audit.tex"
+  - "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex"
+  - "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml"
+  - "research_control/tasks/RT-20260718-041/artifacts/parent_fusion_notes_eqsrc_orientation_torsor_descent_law_refuter_stress.md"
+  - "research_control/handoffs/handoff-0766.yaml"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/source_extension_classification_checklist_v1.md"
+  - "research_control/design/no_target_import_guard_map.md"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core freshness and local retrieval passed after refreshing repo-local retrieval state."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex --json"
+    status: "PASS"
+    summary: "Returned the registered canonical Refuter stress object and exact source hash."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"EqSrc orientation torsor line selection theoretical continuation selector\" --limit 10 --json"
+    status: "PASS"
+    summary: "Returned the exact stress and related registered control artifacts for route orientation."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup ontology/tex/aether_flow_foundations.tex --json"
+    status: "PASS"
+    summary: "Returned the canonical foundations source and exact source hash."
+  - command: ".venv/bin/python scripts/research_control/continue_research.py --summary"
+    status: "PASS"
+    summary: "Tracked state required one bounded Theoretical Continuation Selector ontology-law packet."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 894
+    relationship_row_count: 4433
+    semantic_row_count: 894
+    vault_row_count: 894
+  refresh_needed: true
+  refresh_performed: true
+  refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  before_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+  after_status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex"
+      returned_object_ids:
+        - "TEX-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-REFUTER-STRESS"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"EqSrc orientation torsor line selection theoretical continuation selector\" --limit 10 --json"
+      query_type: "search"
+      query_text: "EqSrc orientation torsor line selection theoretical continuation selector"
+      returned_object_ids:
+        - "TEX-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-REFUTER-STRESS"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup ontology/tex/aether_flow_foundations.tex --json"
+      query_type: "lookup"
+      query_text: "ontology/tex/aether_flow_foundations.tex"
+      returned_object_ids:
+        - "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+  canonical_inspections:
+    - object_id: "TEX-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-REFUTER-STRESS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex"
+      source_hash: "a658029cc1da56f776a403ef57582b49ab7bda7bf508dfdf9507c3f638248530"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+    - object_id: "MD-ROLE-AGENTS-ROLES-PHYSICS-THEORETICAL-CONTINUATION-SELECTOR-V0-1-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+      source_hash: "85550a50a4be3fc2b1fbf6e22b22c160b25923944276d0b555e75fb10380ff79"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory index and .local files are retrieval layers only and not authority."
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260718-042/artifacts/child_phys_math_eqsrc_ordered_motion_partition_provenance_selector.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260718-042/artifacts/child_phys_phil_eqsrc_ordered_motion_partition_provenance_selector.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260718-042/artifacts/parent_conflict_review_eqsrc_ordered_motion_partition_provenance_selector.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Both children selected the same constructive route. Parent fusion required an independent source-root certificate so a sampling-window endpoint cannot masquerade as intrinsic provenance."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml"
+    fusion_notes_path: "research_control/tasks/RT-20260718-042/artifacts/parent_fusion_notes_eqsrc_ordered_motion_partition_provenance_selector.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    summary: "The fused decision selects the distinct ordered-motion rooted partition-provenance target and preserves its mathematical physical empirical ontology and authority boundaries."
+
+theoretical_decision_output:
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_payload_family: "ordered_motion_rooted_partition_provenance"
+  route_label: "ontology-law-research-packet"
+  decision_basis: "Exact orientation-torsor candidate v1 completed construction audit and stress and is locally frozen. Its minimal record has a three-line symmetry obstruction. The canonical source provides a schematic ordered-motion anchor but not the finite projection root partition or variation law. A fail-closed rooted directed-record formalization is constructive materially distinct and does not consume adoption authority."
+  theoretical_method: "Compare every handoff-0766 route against constructive preference same-milestone continuity exact local freeze source-only provenance positive and negative finite controls no-target-import guards and protected-authority boundaries."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "Proposal-only formalization can proceed without adoption. A human gate remains required before source-law adoption canonical ontology edit or protected verdict."
+  decision_consequence: "Route one Ontology Formalizer packet that must define Phi-compatible finite records projections root certificates parity partitions pointings relations morphisms variations and tagged failures and must prove a rooted-path positive witness plus an unrooted two-cycle negative control."
+  new_payload_novelty: "The packet moves the burden upstream from selecting one of three lines on an already partitioned record to deriving or rejecting the ordered partition from explicit source-transition provenance."
+  source_extension_category: "source_extension_candidate"
+  source_extension_import_classification: "new_ontology_primitive_candidate"
+  next_execution_role_family: "ontology-formalizer@0.2.0"
+  selected_law_target: "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1"
+  adoption_status: "blocked_adoption_open_continuation"
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Select a source-only continuation that could derive an ordered partition and line pointing from intrinsic ordered-motion provenance or fail closed while preserving the exact candidate-v1 local freeze."
+  missing_source_law: "A source-derived finite ordered-motion record projection source-intrinsic root certificate path-parity partition and independent morphism and variation law sufficient to point an EqSrc line without target or process import."
+  underdetermination_statement: "Current ontology does not derive a finite Phi-compatible source-record projection a source-intrinsic root certificate a path-parity partition a preferred EqSrc line a physical morphism category or an independent variation law."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "On a finite source record U=(X,D_Phi,pi,C_root) with independently declared Phi-compatible transition certificates projection pi and a unique source-intrinsic root r natural under admitted source isomorphisms define parity_r(x) only when every directed path from r to x has the same parity. Set P_U to the even tokens and Q_U to the odd tokens and permit B_U=span_F2{1_Q} only when both blocks are nonempty and all provenance morphism and variation guards pass; otherwise return an exact tagged bottom."
+    formal_objects:
+      - "substrate ordered-motion anchor (A,Phi_lambda)"
+      - "finite source-event and record-token sets"
+      - "Phi-compatible directed transition certificates D_Phi"
+      - "event-to-record projection pi"
+      - "source-intrinsic root certificate C_root"
+      - "path-parity function parity_r or tagged obstruction"
+      - "ordered partition (P_U,Q_U)"
+      - "state space A_U selected line B_U and candidate kernel-pair relation R_U"
+      - "admitted source morphism and independent variation categories"
+      - "typed bottom tags"
+    domains:
+      - "finite or finitely presented source records with explicit source-side transition provenance"
+      - "records with one natural root path-independent parity and two nonempty parity classes"
+      - "tagged failure branches for missing provenance symmetry truncation parity disconnection and import defects"
+    maps:
+      - "source events to record tokens by pi"
+      - "Phi-compatible transition certificate to directed record edge"
+      - "root certificate to unique root"
+      - "rooted path parity to ordered partition"
+      - "ordered partition to candidate line B_U"
+      - "quotient map A_U to A_U/B_U and kernel-pair relation R_U"
+      - "source morphism and independent variation transport maps"
+    proof_obligations:
+      - "source-only provenance and noncircularity for transitions projection root morphisms and variations"
+      - "root uniqueness and automorphism naturality"
+      - "path-parity well-definedness and odd-cycle failure criterion"
+      - "order-preserving lambda reparameterization invariance"
+      - "truncation and sampling-window artifact rejection"
+      - "functoriality of partition line and relation under admitted source morphisms"
+      - "nondegenerate two-event rooted-path positive witness"
+      - "unrooted two-cycle no-natural-root countermodel"
+      - "independent-variation certification and conditional robustness or precise fragility obstruction"
+      - "per-datum source-extension classification and human gate before adoption"
+  candidate_law_comparison:
+    candidates:
+      - "proposal-only ordered-motion rooted partition-provenance law"
+      - "source-side line-irrelevance theorem"
+      - "distinct scoped no-go question"
+      - "broader local freeze"
+      - "protected human-gated ontology change"
+    comparison_basis:
+      - "exact orientation-torsor candidate v1 construction audit and stress are complete"
+      - "three formally equivalent lines remain on the minimal unpointed record"
+      - "the canonical ontology contains a schematic ordered-motion anchor"
+      - "the finite projection root partition and variations remain missing"
+      - "constructive fail-closed non-promotional continuation is available"
+    selection_status: "Proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 formalization selected with ontology-formalizer@0.2.0 as the next role."
+  candidate_law_refutation:
+    refuted_candidate: "No new candidate is refuted by this selector; exact orientation-torsor candidate v1 remains locally frozen after its prior scoped obstruction."
+    refutation_basis: "not_applicable"
+    surviving_obligations:
+      - "formalize the selected ordered-motion partition-provenance target"
+      - "prove both positive and symmetry-negative finite controls"
+      - "audit any nontrivial candidate for source versus process provenance and target import"
+      - "stress any audited candidate before protected adoption review"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "A proposal-only rooted partition-provenance target may be defined without adoption authority."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc undischarged until a theorem audit and stress pass exist."
+      - "Keep RetainH GenH M_src g_eff matter coupling Einstein equations and benchmark promotion blocked."
+      - "Do not use desired exact-GR recovery target time orientation proper time or benchmark success to define transition provenance root parity or line."
+      - "Require audit stress and protected human authority before source-law adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  atlas_glue_obligations:
+    profile_law: "Expose Phi-compatible source-transition and projection data before partition or line evaluation and fail closed when provenance is absent."
+    selector_law: "Select a line only after a unique natural source root and path-independent parity produce a nonempty ordered partition."
+    transition_law: "State functorial source morphisms and source variations independently of the selected line and relation."
+    inverse_checks: "Prove inverse compatibility for every admitted source isomorphism and reject root-moving inverses."
+    cocycle_checks: "Prove composition compatibility for transition projection root parity and partition transports."
+    finite_variation_robustness: "Prove preservation under independently admitted finite source variations or return a fragility obstruction."
+  failure_branches:
+    collapse: "Fail closed if a parity block is empty or the induced relation is only a degenerate branch without explicit admission."
+    nonuniqueness: "Return a root or line nonuniqueness obstruction; do not silently choose a sampling start or coordinate line."
+    inverse_defect: "Return a morphism obstruction when inverse compatibility fails."
+    cocycle_defect: "Return a composition obstruction when source-transition or parity transport fails."
+    variation_fragility: "Return a finite-variation obstruction when independently admitted source variations do not preserve provenance and partition."
+  known_risks:
+    - "Canonical Phi_lambda is schematic and may not determine a finite directed record."
+    - "A unique finite-graph endpoint may be only a sampling-window artifact."
+    - "The event-to-record projection may introduce a new primitive or collapse distinct source events."
+    - "Cycles or multiple paths may make parity ill-defined."
+    - "A mathematically natural pointing may still lack physical admissibility or an independent variation category."
+  failed_alternatives:
+    - "Repeat repair audit or stress of exact orientation-torsor candidate v1 is locally frozen."
+    - "Line irrelevance is not yet a defined theorem target because the physical equivalence or downstream functor is missing."
+    - "A separate broader no-go is deferred while the unrooted symmetry case can serve as a discriminating negative control."
+    - "A broader freeze is premature while a distinct provenance formalization packet remains available."
+    - "Direct protected adoption review is premature."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. A later protected decision is required before adopting the law or editing canonical ontology."
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "source_extension_candidate"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - item_id: "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1"
+      item_source_path: "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml"
+      item_kind: "law_target"
+      classification: "new_ontology_primitive_candidate"
+      evidence_paths:
+        - "ontology/tex/aether_flow_foundations.tex"
+        - "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex"
+        - "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml"
+        - "research_control/handoffs/handoff-0766.yaml"
+      relation_to_current_ontology: "missing_primitive"
+      claim_boundary_ref: "CB-EQSRC-ORDERED-MOTION-PARTITION-PROVENANCE-ROUTE-001"
+      protected_authority_required: true
+      physics_promotion_authorized: false
+      downstream_promotion_authorized: false
+      allowed_conclusion: "Proposal-only ordered-motion rooted partition-provenance primitive candidate selected for bounded formalization."
+      blocked_overreads:
+        - "derived from current ontology"
+        - "repair or adoption of exact orientation-torsor candidate v1"
+        - "physical admissibility covariance or variation robustness"
+        - "general EqSrc discharge"
+        - "matter coupling Einstein equations or benchmark promotion"
+      next_route_if_blocked: "ontology-formalizer@0.2.0 ontology-law-research-packet"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-ORIENTATION-TORSOR-DESCENT-LAW"
+  exact_prior_freeze_label: "EQSRC-INTRINSIC-DISCRIMINATOR-DIFFERENTIAL-SELECTION"
+  prior_attempts_considered:
+    - "RT-20260718-031"
+    - "RT-20260718-032"
+    - "RT-20260718-033"
+    - "RT-20260718-034"
+    - "RT-20260718-035"
+    - "RT-20260718-036"
+    - "RT-20260718-037"
+    - "RT-20260718-038"
+    - "RT-20260718-039"
+    - "RT-20260718-040"
+    - "RT-20260718-041"
+  freeze_if:
+    - "Exact orientation-torsor candidate-v1 construction audit or stress is repeated without a materially different source law theorem."
+    - "The provenance packet calls an observer-selected sampling start an intrinsic source root or chooses the desired line circularly."
+  criteria_evaluated:
+    - "Exact orientation-torsor candidate v1 completed construction fresh audit and exhaustive finite stress."
+    - "The remaining blocker is upstream partition provenance and independent physical variation rather than unperformed candidate-v1 work."
+    - "The selected rooted directed-record target requires new positive negative naturality parity and truncation payload."
+  do_not_freeze_if:
+    - "A distinct ordered-motion provenance law produces a new theorem witness or precise obstruction payload."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The exact orientation-torsor candidate-v1 route is exhausted and locally frozen but a distinct same-milestone provenance formalization remains open."
+  status_update_path: "research_control/program_state.yaml"
+  frozen_scope: "exact EqSrcOrientationTorsorDescentLaw_src^cand,v1 construction audit and stress cycle only"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  barred_route: "repeat repair audit or stress exact candidate v1 or smuggle a sampling-window start into source provenance"
+  next_allowed_route: "theoretical_selector"
+
+route_cycle_control:
+  cycle_family: "eqsrc_orientation_torsor_descent_law"
+  current_cycle_step: "post_scoped_obstruction_ordered_motion_partition_provenance_selected"
+  prior_related_tasks:
+    - "RT-20260718-038"
+    - "RT-20260718-039"
+    - "RT-20260718-040"
+    - "RT-20260718-041"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The selected packet moves upstream to derive or reject partition provenance from a rooted directed source record and requires new positive and symmetry-negative controls instead of repeating line selection on the frozen record."
+  next_role_consequence: "ontology-formalizer@0.2.0"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260718-042-001"
+    payload_type: "packet_selection"
+    name: "EqSrc ordered-motion rooted partition-provenance formalization packet"
+    summary: "Selects one proposal-only source-law target and one next execution-role family."
+  - payload_id: "NMP-RT-20260718-042-002"
+    payload_type: "source_extension_classification"
+    name: "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 classification"
+    summary: "Classifies the target as a proposal-only new ontology primitive candidate with blocked adoption and open continuation."
+  - payload_id: "NMP-RT-20260718-042-003"
+    payload_type: "dependency_map_update"
+    name: "Exact orientation-torsor local freeze and upstream partition-provenance dependency"
+    summary: "Preserves exact candidate-v1 local freeze and requires a distinct source-provenance theorem before any new line audit stress or adoption review."
+
+mathematical_payload_manifest:
+  - payload_id: "MP-RT-20260718-042-001"
+    payload_type: "packet_selection"
+    object_name: "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 formalization packet"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml"
+    burden_effect: "selects_next"
+    summary: "Names one exact rooted directed-record provenance packet and Ontology Formalizer role without constructing deriving or adopting the law."
+  - payload_id: "MP-RT-20260718-042-002"
+    payload_type: "source_extension_classification"
+    object_name: "Proposal-only ordered-motion provenance primitive-candidate classification"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml"
+    burden_effect: "narrows"
+    summary: "Separates the schematic canonical ordered-motion anchor from the missing finite projection root partition morphism and variation primitives."
+  - payload_id: "MP-RT-20260718-042-003"
+    payload_type: "dependency_map_update"
+    object_name: "Exact candidate-v1 local freeze and rooted provenance dependency"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml"
+    burden_effect: "freezes"
+    summary: "Bars repetition or sampling-root repair of exact candidate v1 while opening one distinct formalization route."
+
+physics_progress_status:
+  status: "selector_only_no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Select a source-only continuation that could derive an ordered partition and line pointing from intrinsic ordered-motion provenance or fail closed while preserving the exact candidate-v1 local freeze."
+  explanation: "The selector chose one next packet and preserved local freezes but did not construct derive adopt or prove general EqSrc."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A selector-only provenance-law route decision does not establish a theorem stress pass adopted source law or general EqSrc."
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "RetainH"
+    - "GenH"
+    - "M_src"
+    - "g_eff"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The authoritative ledger remains unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; Phi_lambda remains schematic and finite projection root partition morphisms and variations remain underived"
+  - burden: "Source equivalence EqSrc"
+    status: "one proposal-only ordered-motion rooted partition-provenance formalization packet selected; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; no source-observer localization law is supplied or adopted"
+  - burden: "Resp_lc"
+    status: "unchanged; selector-only EqSrc source-extension routing does not discharge response localization"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "independent source-record variation law remains open and is a mandatory next-packet obligation"
+  - burden: "benchmark promotion"
+    status: "blocked by missing source law adoption downstream derivation and protected authority"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact v3 and exact orientation-torsor candidate-v1 cycles locally frozen; distinct ordered-motion provenance formalization open"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  provenance_law_derivation_authorized: false
+  exact_candidate_v1_repair_authorized: false
+  physical_gauge_equivalence_authorized: false
+  physical_admissibility_establishment_authorized: false
+  general_EqSrc_discharge_authorized: false
+  RetainH_adoption_authorized: false
+  GenH_adoption_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  benchmark_promotion_authorized: false
+  Gate_Chair_verdict_authorized: false
+  completed_derivation_authorized: false
+  downstream_physics_promotion_authorized: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "This completion selects one proposal-only future packet and preserves local freezes. It authorizes no provenance-law derivation exact candidate repair physical interpretation source-law adoption general EqSrc discharge downstream GR claim ledger change benchmark promotion completed derivation or global theory rejection."
+  forbidden_conclusions:
+    - "selected candidate derived from current ontology"
+    - "repair or adoption of exact orientation-torsor candidate v1"
+    - "physical gauge equivalence covariance or admissible variations"
+    - "canonical ontology edit"
+    - "source-law adoption"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff claim"
+    - "matter coupling or Einstein-equation claim"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "future source-extension impossibility"
+    - "global theory rejection"
+
+selected_next_route:
+  route_id: "eqsrc_ordered_motion_rooted_partition_provenance_formalization"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Define proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 with exact Phi-compatible record projection root parity positive and negative finite controls or return a precise obstruction."
+  requires_human_gate: false
+  physics_promotion_authorized: false
+  next_action: "Run one bounded Ontology Formalizer ontology-law-research-packet."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight and canonical source inspections passed."
+      - "Handoff-0766 the exact stress the canonical foundations source and the registered selector role were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both child perspectives selected the same constructive packet and next role."
+      - "Parent fusion resolved the source-root versus sampling-root guard."
+      - "The conflict review has no unresolved conflict."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Research-control core and diff validation passed."
+      - "Documentation-impact project-improvement-signal and changed-file claim-language gates passed."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph and claim graph were regenerated and passed freshness checks."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap and validate-only passed after the selector transaction was synchronized."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-file claim-language validation passed with no hard failures."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  notes: "No project-system issue was emitted by this selector."

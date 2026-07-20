@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-041`
-- Latest handoff: `handoff-0766`
-- Current status: `eqsrc_orientation_torsor_descent_law_scoped_line_selection_and_physical_admissibility_obstruction_pending_theoretical_selection_no_adoption`
+- Active task: `RT-20260718-042`
+- Latest handoff: `handoff-0767`
+- Current status: `eqsrc_ordered_motion_rooted_partition_provenance_formalization_selected_candidate_v1_frozen_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-041`
-- Latest research handoff: `handoff-0766`
-- Latest research next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose among a genuinely source-derived pointing or partition-provenance law, a source-side line-irrelevance theorem, a distinct scoped no-go target, or local freeze. Do not repeat, repair, adopt, or promote exact candidate v1.
+- Latest research task: `RT-20260718-042`
+- Latest research handoff: `handoff-0767`
+- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1. Define the exact source objects domains maps positive witness symmetry-negative control and fail-closed branches; do not repair or adopt exact orientation-torsor candidate v1.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_orientation_torsor_descent_law_post_obstruction_theoretical_selection`
-- Role family: `theoretical-continuation-selector@0.1.0`
+- Route ID: `eqsrc_ordered_motion_rooted_partition_provenance_formalization`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Select the next same-milestone packet after exact candidate v1's scoped current-ontology line-selection and physical-admissibility obstruction.
+- Milestone burden: Define proposal-only EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1 with exact Phi-compatible record projection root parity positive and negative finite controls or return a precise obstruction.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ba98362ec2b4e40d4366071686f7ce78bd9db5b305fec96c9ed3480ac26233e0`
-- JSON SHA-256: `69a07035ae0f0aae6e3fd945bafea98dec95f82578bbc9e1c37a6f2378df5ec9`
+- YAML SHA-256: `5bcf22be421774800e844e906696dc25ebc83239f504a2424a5cb488a1282371`
+- JSON SHA-256: `23fe9d689090b9fdde32781fb3a5d9cecb39dad3656ee3ef25e103881f9b7b1e`
 
 ## Authority Warning
 

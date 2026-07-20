@@ -18,6 +18,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Generated output path: `wiki/tex/tex-eqsrc-orientation-torsor-descent-law-refuter-stress.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-041-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress_receipt.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-041-PARENT-FUSION-NOTES-EQSRC-ORIENTATION-TORSOR-DESCENT-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260718-041/artifacts/parent_fusion_notes_eqsrc_orientation_torsor_descent_law_refuter_stress.md`
+- Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-042-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-PARTITION-PROVENANCE-SELECTOR` `research_control/tasks/RT-20260718-042/artifacts/parent_fusion_notes_eqsrc_ordered_motion_partition_provenance_selector.md`
 
 ## Validation
 

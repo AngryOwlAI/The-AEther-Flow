@@ -1,0 +1,80 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260718-042"
+agent_job_id: "AJ-RT-20260718-042-001"
+scope: "Select one mathematically distinct EqSrc continuation after the exact orientation-torsor candidate's finite line-selection obstruction."
+route_ranking:
+  ordered_motion_rooted_partition_provenance:
+    rank: 1
+    status: "selected"
+    reason: "It attempts to derive the missing ordered partition before relation construction from explicit source-side transition provenance and can fail closed when root or parity data are not natural."
+  source_side_line_irrelevance_theorem:
+    rank: 2
+    status: "deferred"
+    reason: "No independently derived physical equivalence or downstream functor is presently available under which the three line relations could be proved irrelevant."
+  distinct_scoped_no_go:
+    rank: 3
+    status: "deferred"
+    reason: "The unrooted-symmetry obstruction is useful as a mandatory negative control inside a constructive provenance packet rather than as a separate terminal route."
+  broader_local_freeze:
+    rank: 4
+    status: "not_selected"
+    reason: "Exact candidate v1 is locally frozen but a distinct source-provenance theorem target remains available."
+selected_packet:
+  packet_type: "ontology_law_research_packet"
+  payload_family: "ordered_motion_rooted_partition_provenance"
+  route_label: "ontology-law-research-packet"
+  next_execution_role_family: "ontology-formalizer@0.2.0"
+  law_target: "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1"
+  status_label: "proposal-only"
+  adoption_status: "blocked_adoption_open_continuation"
+  source_extension_category: "source_extension_candidate"
+  source_extension_import_classification: "new_ontology_primitive_candidate"
+formal_target:
+  ontology_anchor: "The canonical source names a substrate A and an intentionally schematic intrinsic ordered-motion map Phi_lambda."
+  admitted_record: "A finite source record U=(X,D_Phi,pi,C_root) whose directed transition edges carry explicit Phi-compatible source certificates and whose projection pi from source events to record tokens is declared before relation construction."
+  root_certificate: "C_root must identify a unique source-intrinsic root r that is natural under every admitted source isomorphism; an endpoint created only by observer sampling truncation is inadmissible."
+  parity_domain: "Every record token reachable from r must have the same path-length parity along every directed path from r; mixed parity odd cycles and unreachable components fail closed."
+  ordered_partition: "P_U contains even-parity tokens and Q_U contains odd-parity tokens; both blocks must be nonempty on the admitted branch."
+  selected_line: "A_U=span_F2{1_P,1_Q}; the candidate pointing uses B_U=span_F2{1_Q} only after the ordered partition has passed provenance and naturality checks."
+  relation: "R_U is the kernel pair of A_U to A_U/B_U; this is a downstream candidate of the provenance law and not an adopted EqSrc relation."
+  morphisms: "Admitted source morphisms must preserve directed Phi certificates root provenance projection and parity; variation maps are declared independently of B_U and R_U."
+minimal_positive_control:
+  source_graph: "two source events r and s with one certified directed transition r to s"
+  root: "r with an independently valid source-root certificate"
+  partition: "P={r} and Q={s}"
+  selected_line: "span_F2{1_Q}"
+  required_result: "naturality under rooted directed-record isomorphisms and exact recovery of the pointed two-fibre control"
+mandatory_negative_controls:
+  unrooted_two_cycle: "A directed two-cycle with source-exchange symmetry has no unique invariant root and must return tagged bottom rather than either coordinate line."
+  odd_cycle: "A rooted record with inconsistent path parity must return tagged parity obstruction."
+  truncation_artifact: "A unique indegree-zero endpoint created only by choosing a finite observation window is not source-intrinsic and must return tagged provenance obstruction."
+  disconnected_record: "Unreachable components must be rejected or explicitly bottom-tagged rather than colored arbitrarily."
+proof_obligations:
+  - "typed source-only definitions for Phi-compatible transition certificates finite projections root certificates path parity partitions pointings relations morphisms variations and tagged failures"
+  - "root uniqueness and automorphism-naturality theorem"
+  - "path-parity well-definedness theorem and exact odd-cycle failure criterion"
+  - "order-preserving lambda reparameterization invariance"
+  - "projection and truncation noncircularity theorem or precise obstruction"
+  - "functoriality of the ordered partition and selected line under admitted source morphisms"
+  - "minimal positive rooted-path witness"
+  - "unrooted two-cycle no-natural-root countermodel"
+  - "independent source-variation certification and conditional robustness or precise fragility obstruction"
+  - "classification of each introduced datum as derived conservative candidate or forbidden import"
+  - "human gate before adoption or canonical ontology edit"
+failure_branches:
+  - "Phi-compatible transition provenance is absent or depends on target geometry"
+  - "the finite projection pi is observer-selected or relation-selected"
+  - "the root is nonunique not automorphism-invariant or only a sampling boundary"
+  - "path parity is inconsistent"
+  - "one parity block is empty"
+  - "source morphisms fail root or parity naturality"
+  - "variations are generated from the selected line or relation"
+  - "target atlas metric benchmark empirical detector or process evidence enters the source construction"
+classification: "packet_selection"
+distance_to_gr_delta: false
+limitations:
+  - "This child selects a formalization target and does not construct derive or adopt the law."
+  - "The canonical Phi_lambda is schematic and does not itself supply the finite projection root certificate or variation category."
+  - "A source-intrinsic pointing would not by itself establish physical admissibility general EqSrc or downstream GR recovery."
