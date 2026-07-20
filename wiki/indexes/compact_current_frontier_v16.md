@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260718-045`
-- Latest handoff: `handoff-0770`
-- Current status: `eqsrc_ordered_motion_rooted_partition_law_scoped_root_and_relation_selection_obstruction_pending_theoretical_selection_no_adoption`
+- Active task: `RT-20260718-046`
+- Latest handoff: `handoff-0771`
+- Current status: `eqsrc_flow_generated_graded_orbit_root_formalization_selected_prior_candidate_v1_frozen_no_adoption`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260718-045`
-- Latest research handoff: `handoff-0770`
-- Latest research next action: Run one bounded Theoretical Continuation Selector ontology-law-research-packet to choose a materially distinct source-derived transition or root-provenance law, source-side root- or relation-irrelevance theorem, distinct scoped no-go target, or explicit local freeze. Do not repeat repair adopt or promote exact candidate v1.
+- Latest research task: `RT-20260718-046`
+- Latest research handoff: `handoff-0771`
+- Latest research next action: Run one bounded Ontology Formalizer ontology-law-research-packet for EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Define the exact ordered action orbit reachability cover rank partition morphism variation positive witness and fail-closed countermodels; do not repair or adopt exact rooted-partition candidate v1.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `eqsrc_ordered_motion_rooted_partition_law_post_obstruction_theoretical_selection`
-- Role family: `theoretical-continuation-selector@0.1.0`
+- Route ID: `eqsrc_flow_generated_graded_orbit_root_formalization`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Choose one materially distinct response to the rooted-partition candidate's scoped relation-selection obstruction.
+- Milestone burden: Define proposal-only EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1 with exact ordered action reachability cover minimum rank positive and negative controls or return a precise obstruction.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `411e18cc3861a51c375e961e0a5e8e1176f4c62c20ac68f192f942f696364cd9`
-- JSON SHA-256: `b05eb4fd0ac1cf6da3aaea60f42a73baa4c754ee897902eb7230a59f4983bb20`
+- YAML SHA-256: `bba955c58b80ae9da650de0d9b3c9cd2cf347a38d38fa53023de5fa5685a25e7`
+- JSON SHA-256: `d1871e0ddedd976d1493f12228097701256694849a86312f26ea0e3f0f33169d`
 
 ## Authority Warning
 

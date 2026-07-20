@@ -18,6 +18,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Generated output path: `wiki/tex/tex-eqsrc-ordered-motion-rooted-partition-law-refuter-stress.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-045-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS-RECEIPT` `research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress_receipt.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-045-PARENT-FUSION-NOTES-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW-REFUTER-STRESS` `research_control/tasks/RT-20260718-045/artifacts/parent_fusion_notes_eqsrc_ordered_motion_rooted_partition_law_refuter_stress.md`
+- Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260718-046-PARENT-FUSION-NOTES-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SELECTOR` `research_control/tasks/RT-20260718-046/artifacts/parent_fusion_notes_eqsrc_flow_generated_graded_orbit_root_selector.md`
 
 ## Validation
 
