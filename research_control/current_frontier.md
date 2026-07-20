@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-005` and `handoff-0775`.
+`RT-20260720-006` and `handoff-0776`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-005` |
-| Latest handoff ID | `handoff-0775` |
-| Current status | `v21_p0_t02_backlog_materialized_pending_p0_t03_no_physics_delta` |
+| Active task ID | `RT-20260720-006` |
+| Latest handoff ID | `handoff-0776` |
+| Current status | `v21_p0_t03_starting_baseline_frozen_pending_p0_t04_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v21 p0 t03 starting baseline freeze |
+| Current route family | v21 p0 t04 production launch manifest |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One P0-T03 baseline-freeze packet under the registered immutable v21 plan and materialized dependency graph. |
-| Next recommended action | Run one bounded v21 P0-T03 Process Integrity Auditor packet to freeze the starting scientific operational and source-hash baseline. Do not repair measured drift inside that packet or execute P1-T01. |
+| Required next authority | One P0-T04 launch-manifest packet under the registered immutable v21 plan and materialized backlog. |
+| Next recommended action | Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-005` |
-| Latest research handoff ID | `handoff-0775` |
-| Latest research next action | Run one bounded v21 P0-T03 Process Integrity Auditor packet to freeze the starting scientific operational and source-hash baseline. Do not repair measured drift inside that packet or execute P1-T01. |
+| Latest research task ID | `RT-20260720-006` |
+| Latest research handoff ID | `handoff-0776` |
+| Latest research next action | Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-005/00_TASK.yaml`.
-- Active task objective: Materialize a machine-readable v21 backlog that reproduces all 122 plan tasks their dependencies recommendation mappings routes gates and stop conditions and validate its use as the v4 multi-step scope source.
-- Latest handoff path: `research_control/handoffs/handoff-0775.yaml`.
-- Latest handoff summary: RT-20260720-005 completed v21 P0-T02 by materializing 122 unique tasks across 17 phases and validating an acyclic fully reachable 183-edge dependency graph with direct P16-T01 final-audit and P16-T06 final-disposition coverage for all 72 recommendations. The backlog preserves every worker route human gate and no-authority flag. RT-20260718-047 and handoff-0772 remain the scientific authority.
-- Current route family: v21 p0 t03 starting baseline freeze.
-- Next recommended action: Run one bounded v21 P0-T03 Process Integrity Auditor packet to freeze the starting scientific operational and source-hash baseline. Do not repair measured drift inside that packet or execute P1-T01.
+- Active task path: `research_control/tasks/RT-20260720-006/00_TASK.yaml`.
+- Active task objective: Capture a reproducible before-state snapshot of the scientific frontier, task metrics, candidate families, active route, validators, repository identity, generated-report freshness, and relevant source hashes without repairing measured findings.
+- Latest handoff path: `research_control/handoffs/handoff-0776.yaml`.
+- Latest handoff summary: RT-20260720-006 completed only v21 P0-T03. Five deterministic artifacts freeze the clean 2bf74499 baseline, 1,006 pre-task task and AgentJob records, the ten-stage active-candidate lineage, 13 declared lineage-gap signals, 37 validation gates, and exact source-scope hashes. Pre-existing generated-report drift was measured but not repaired. Handoff-0772 remains the scientific authority.
+- Current route family: v21 p0 t04 production launch manifest.
+- Next recommended action: Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v21 P0-T03 Process Integrity Auditor packet to freeze the starting scientific operational and source-hash baseline. Do not repair measured drift inside that packet or execute P1-T01.
+Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-005`;
-- latest handoff: `handoff-0775`;
-- current status: `v21_p0_t02_backlog_materialized_pending_p0_t03_no_physics_delta`;
+- active task: `RT-20260720-006`;
+- latest handoff: `handoff-0776`;
+- current status: `v21_p0_t03_starting_baseline_frozen_pending_p0_t04_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0775.yaml`
-- `research_control/tasks/RT-20260720-005/00_TASK.yaml`
+- `research_control/handoffs/handoff-0776.yaml`
+- `research_control/tasks/RT-20260720-006/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0775*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0776*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

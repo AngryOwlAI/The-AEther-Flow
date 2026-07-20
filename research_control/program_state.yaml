@@ -1,9 +1,9 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260720-005"
-latest_handoff_id: "handoff-0775"
-current_status: "v21_p0_t02_backlog_materialized_pending_p0_t03_no_physics_delta"
-claim_boundary_summary: "RT-20260720-005 materializes and validates the complete v21 project-control backlog and dependency DAG. It records 122 tasks 183 acyclic edges 72 recommendation mappings worker routes human gates and stop boundaries but executes no pending task and changes no scientific claim protected authority or scientific ledger. RT-20260718-047 and handoff-0772 remain the scientific authority for the fresh proposal-only candidate audit."
-next_recommended_action: "Run one bounded v21 P0-T03 Process Integrity Auditor packet to freeze the starting scientific operational and source-hash baseline. Do not repair measured drift inside that packet or execute P1-T01."
+active_task_id: "RT-20260720-006"
+latest_handoff_id: "handoff-0776"
+current_status: "v21_p0_t03_starting_baseline_frozen_pending_p0_t04_no_physics_delta"
+claim_boundary_summary: "RT-20260720-006 freezes the clean 2bf74499 scientific operational candidate-lineage validator repository generated-report and source-hash before-state. It records pre-existing drift without repair and changes no scientific claim assumption candidate ledger or protected authority. RT-20260718-047 and handoff-0772 remain the scientific authority for the proposal-only candidate audit."
+next_recommended_action: "Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01."
 
 plan_registration:
   task_id: "RT-20260720-003"
@@ -60,14 +60,46 @@ backlog_materialization:
   distance_to_gr_delta_changed: false
   physics_authority: false
 
+starting_baseline:
+  task_id: "RT-20260720-006"
+  plan_task_id: "P0-T03"
+  dependency_task_id: "RT-20260720-005"
+  baseline_commit: "2bf74499efb6d1337e4d7746b1c210e7f36d1ca9"
+  baseline_tree: "320003ac423868b08581c96cca46394f98dd48b8"
+  baseline_path: "research_control/tasks/RT-20260720-006/artifacts/v21_starting_baseline.json"
+  baseline_hash: "062828ace0f7951dff7b4140dba69747dd6a75ffce8dd1828a8a2e8b8c05fe3e"
+  source_manifest_path: "research_control/tasks/RT-20260720-006/artifacts/v21_source_hash_manifest.json"
+  source_manifest_hash: "8be1255708bab6dc969fa7ca8d12821b656591e06ffd774ea3e9d9a2f13e2abb"
+  candidate_inventory_path: "research_control/tasks/RT-20260720-006/artifacts/v21_candidate_family_inventory.json"
+  candidate_inventory_hash: "5058a8eb083f8d961ed9b98ffb9604c52c3d22e9167820abb8976863e2586af3"
+  registered_task_count: 1006
+  registered_agent_job_count: 1006
+  candidate_lineage_stage_count: 10
+  lineage_gap_signal_count: 13
+  validation_gate_count: 37
+  generated_report_findings:
+    physics_progress_metrics_fresh: false
+    ai_methodology_dashboard_fresh: false
+    research_dependency_graph_fresh: false
+    compact_current_frontier_fresh: true
+    repair_performed: false
+  launch_scope_hash_mismatch_paths:
+    - "research_control/program_state.yaml"
+  mismatch_interpretation: "Program state lawfully evolved through P0-T01 and P0-T02; both launch and baseline hashes are retained."
+  p0_t04_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_authority: false
+
 control_claim_boundary:
-  allowed_next_scope: "One fresh bounded P0-T03 packet may capture the v21 starting baseline without repairing measured findings or executing later work items."
+  allowed_next_scope: "One fresh bounded P0-T04 packet may construct the exact human-readable continue-research-goal v4 production launch manifest without initializing a goal or executing later work items."
   blocked_claims:
     - "v21 plan as physics proof or scientific authority"
-    - "P0-T02 backlog materialization as P0-T03 or P1-T01 execution"
+    - "P0-T03 baseline evidence as P0-T04 or P1-T01 execution"
     - "backlog recommendation coverage as implementation evidence for pending tasks"
-    - "control handoff-0775 as supersession of scientific handoff-0772"
+    - "control handoff-0776 as supersession of scientific handoff-0772"
     - "baseline measurement as authorization to repair findings"
+    - "launch manifest as runtime goal initialization"
     - "canonical ontology edit or source-law adoption"
     - "Distance-to-GR progress"
     - "benchmark promotion or Gate Chair verdict"
@@ -189,16 +221,18 @@ preserved_scientific_route:
   source_handoff: "research_control/handoffs/handoff-0772.yaml"
 
 selected_next_route:
-  route_id: "v21_p0_t03_starting_baseline_freeze"
+  route_id: "v21_p0_t04_production_launch_manifest"
   route_label: "ordinary-research-packet"
-  role_family: "process-integrity-auditor@0.1.0"
+  role_family: "director-of-research@0.3.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P0-T04"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Establish before-state evidence for all later scientific and system deltas."
+  milestone_burden: "Bind the plan to the continue-research-goal v4 runtime without launching it from this task."
   requires_human_gate: false
   project_system_boundary_authorized_by_plan: true
   physics_promotion_authorized: false
-  next_action: "Execute one bounded P0-T03 baseline-freeze packet without repairing measured findings."
-  source_handoff: "research_control/handoffs/handoff-0775.yaml"
+  next_action: "Construct the exact human-readable launch packet scope-contract candidate completion contract and prelaunch checklist without initializing a goal."
+  source_handoff: "research_control/handoffs/handoff-0776.yaml"
 
 preserved_scientific_next_packet:
   role_id: "smuggling-auditor"
@@ -209,13 +243,13 @@ preserved_scientific_next_packet:
   objective: "Audit exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1 for schematic-Phi relabeling ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity hidden target or process import validator overread and physical-covariance overread."
 
 required_next_packet:
-  role_id: "process-integrity-auditor"
-  role_version: "0.1.0"
+  role_id: "director-of-research"
+  role_version: "0.3.0"
   packet_count: "1"
   route_label: "ordinary-research-packet"
-  task_type: "v21_starting_baseline_freeze"
-  plan_task_id: "P0-T03"
-  objective: "Capture a reproducible snapshot of the scientific frontier task metrics candidate families active route validators repository identity and relevant source hashes before later v21 implementation."
+  task_type: "v21_production_launch_manifest"
+  plan_task_id: "P0-T04"
+  objective: "Produce the exact human-readable launch packet for one immutable multi-step v21 relay including exact goal text reasoning effort source hashes included work items exclusions and completion contract without initializing a goal."
 
 validation_summary:
   aggregate_status: "PASS"
@@ -230,6 +264,12 @@ validation_summary:
   backlog_direct_recommendation_coverage_complete: true
   backlog_final_audit_coverage_complete: true
   backlog_final_goal_disposition_coverage_complete: true
+  starting_baseline_status: "PASS_WITH_BASELINE_FINDINGS"
+  starting_baseline_commit: "2bf74499efb6d1337e4d7746b1c210e7f36d1ca9"
+  starting_baseline_source_path_count: 81
+  starting_baseline_candidate_lineage_stage_count: 10
+  starting_baseline_lineage_gap_signal_count: 13
+  starting_baseline_finding_repair_performed: false
   candidate_result: "candidate_constructed_pending_audit"
   exact_rooted_partition_candidate_v1_route: "locally_frozen"
   adoption_status: "blocked_adoption_open_continuation"
@@ -243,9 +283,9 @@ project_improvement_bridge:
   required: false
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260720-005"
-  latest_research_handoff_id: "handoff-0775"
-  latest_research_next_action: "Run one bounded v21 P0-T03 Process Integrity Auditor packet to freeze the starting scientific operational and source-hash baseline. Do not repair measured drift inside that packet or execute P1-T01."
+  latest_research_task_id: "RT-20260720-006"
+  latest_research_handoff_id: "handoff-0776"
+  latest_research_next_action: "Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

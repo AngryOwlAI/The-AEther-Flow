@@ -1,0 +1,52 @@
+task_id: "RT-20260720-006"
+task_type: "v21_starting_baseline_freeze"
+status: "completed"
+created_at: "2026-07-20T19:22:41Z"
+updated_at: "2026-07-20T19:31:56Z"
+closed_at: "2026-07-20T19:31:56Z"
+closure_status: "v21_p0_t03_starting_baseline_frozen_pending_p0_t04_no_physics_delta"
+parent_task_id: "RT-20260720-005"
+parent_handoff_id: "handoff-0775"
+current_decision_id: "DDR-20260720-006"
+current_job_id: "AJ-RT-20260720-006-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260720-006"
+requires_human_gate: false
+human_authorization_note: "Generation 6 of the user-authorized immutable v21 relay reached dependency-ready P0-T03 after the governed P0-T02 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T03"
+  plan_task_name: "Freeze the v21 starting scientific, operational, and source-hash baseline"
+  recommendation_ids:
+    - "V21-R01"
+    - "V21-R02"
+    - "V21-R31"
+    - "V21-R43"
+    - "V21-R49"
+    - "V21-R52"
+    - "V21-R53"
+objective: "Capture a reproducible before-state snapshot of the scientific frontier, task metrics, candidate families, active route, validators, repository identity, generated-report freshness, and relevant source hashes without repairing measured findings."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Establish before-state evidence for all later scientific and system deltas."
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V21-P0-T03-STARTING-BASELINE-001"
+claim_boundary:
+  allowed_scope: "P0-T03 task-local immutable baseline evidence, standard control records, one P0-T04 handoff, and policy-required generated derivatives only."
+  ordinary_research_handoff_preserved: "handoff-0772"
+  active_control_handoff_consumed: "handoff-0775"
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  repair_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260720-006/artifacts/v21_starting_baseline.json"
+  - "research_control/tasks/RT-20260720-006/artifacts/v21_starting_baseline.md"
+  - "research_control/tasks/RT-20260720-006/artifacts/v21_candidate_family_inventory.json"
+  - "research_control/tasks/RT-20260720-006/artifacts/v21_source_hash_manifest.json"
+  - "research_control/tasks/RT-20260720-006/artifacts/v21_starting_baseline_receipt.json"
+next_recommended_action: "After governed checkpoint PASS, route one separately bounded P0-T04 launch-manifest generation; do not execute it in this task."
+documentation_impact_id: "DI-RT-20260720-006-001"
+notes: "P0-T03 completed as measurement-only evidence. Pre-existing generated-report and lineage drift are frozen without repair; P0-T04 and P1-T01 remain unexecuted."

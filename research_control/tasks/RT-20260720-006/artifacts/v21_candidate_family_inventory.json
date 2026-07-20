@@ -1,0 +1,402 @@
+{
+  "active_candidate": {
+    "adoption_status": "blocked_adoption_open_continuation",
+    "candidate_id": "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1",
+    "current_ontology_derives_candidate": false,
+    "next_role": "smuggling-auditor@0.2.0",
+    "result": "candidate_constructed_pending_audit",
+    "scientific_authority_handoff": "handoff-0772",
+    "scientific_authority_task": "RT-20260718-047",
+    "status_label": "proposal-only"
+  },
+  "authority_boundary": {
+    "candidate_adoption_authorized": false,
+    "general_eqsrc_discharged": false,
+    "inventory_is_scientific_authority": false,
+    "physics_promotion_authorized": false
+  },
+  "captured_at": "2026-07-20T19:15:34Z",
+  "families": [
+    {
+      "candidate_family": "EqSrcOrientationTorsorDescentLaw_src^cand,v1",
+      "disposition": "scoped_line_selection_obstruction_then_locally_frozen",
+      "global_no_go": false,
+      "obstruction_id": "OB-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001",
+      "stage_task_ids": [
+        "RT-20260718-038",
+        "RT-20260718-039",
+        "RT-20260718-040",
+        "RT-20260718-041"
+      ]
+    },
+    {
+      "candidate_family": "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1",
+      "disposition": "scoped_root_and_relation_selection_obstruction_then_locally_frozen",
+      "global_no_go": false,
+      "obstruction_id": "OB-EQSRC-ORDERED-MOTION-ROOT-SELECTION-001",
+      "stage_task_ids": [
+        "RT-20260718-042",
+        "RT-20260718-043",
+        "RT-20260718-044",
+        "RT-20260718-045"
+      ]
+    },
+    {
+      "candidate_family": "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1",
+      "disposition": "proposal_only_candidate_pending_fresh_audit",
+      "global_no_go": false,
+      "obstruction_id": "",
+      "stage_task_ids": [
+        "RT-20260718-046",
+        "RT-20260718-047"
+      ]
+    }
+  ],
+  "schema_id": "v21_p0_t03_candidate_family_inventory_v1",
+  "source_commit": "2bf74499efb6d1337e4d7746b1c210e7f36d1ca9",
+  "stage_count": 10,
+  "stages": [
+    {
+      "artifacts": [
+        {
+          "path": "research_control/tasks/RT-20260718-038/artifacts/eqsrc_orientation_torsor_descent_route.yaml",
+          "sha256": "72dfe040bb3a57f9e9538edace026c0ef19582a3866ed6846b5c6f7a820480c7"
+        }
+      ],
+      "candidate_family": "EqSrcOrientationTorsorDescentLaw_src^cand,v1",
+      "closure_status": "eqsrc_orientation_torsor_relation_bundle_formalization_selected_exact_candidate_v1_cycle_locally_frozen_no_adoption",
+      "completion": {
+        "path": "research_control/tasks/RT-20260718-038/jobs/completions/AJC-AJ-RT-20260718-038-001.yaml",
+        "sha256": "29b0423e884818c0d33142ad8af34a5d5a573929403f1944ae29814b619246dc"
+      },
+      "handoff": {
+        "path": "research_control/handoffs/handoff-0763.yaml",
+        "sha256": "b44cc650b89a28fe735e9676cf68e125b4d180628c00ce0b7e5f41d7a971295a"
+      },
+      "handoff_id": "handoff-0763",
+      "primary_artifacts": [
+        "research_control/tasks/RT-20260718-038/artifacts/eqsrc_orientation_torsor_descent_route.yaml"
+      ],
+      "role_id": "theoretical-continuation-selector",
+      "stage": "orientation_route_selection",
+      "task_id": "RT-20260718-038",
+      "task_type": "eqsrc_orientation_torsor_descent_route_selector"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex",
+          "sha256": "81b24c69403c304889a94caec8b2a99a6a360a49f40266764da4cfd3ba4edd5f"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_receipt.md",
+          "sha256": "df8ac6f90300f9ac64b8a387c5a1b273d896fe7b21b1f25f7409dcc51c326ee8"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_validation.json",
+          "sha256": "f16d74de009df04d17655e7da07536b570c570d9b25a08cbe5061298db9b56a5"
+        }
+      ],
+      "candidate_family": "EqSrcOrientationTorsorDescentLaw_src^cand,v1",
+      "closure_status": "eqsrc_orientation_torsor_descent_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption",
+      "completion": {
+        "path": "research_control/tasks/RT-20260718-039/jobs/completions/AJC-AJ-RT-20260718-039-001.yaml",
+        "sha256": "543fa4bf7c11892f634cf8efca1166e32e75dc7e014c03dc069aaf452f3b88f0"
+      },
+      "handoff": {
+        "path": "research_control/handoffs/handoff-0764.yaml",
+        "sha256": "138a5d4c6a335b3ce5cc2b1493bfb18ec56c927f5e700b4ee638510b788c33fd"
+      },
+      "handoff_id": "handoff-0764",
+      "primary_artifacts": [
+        "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex",
+        "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_receipt.md",
+        "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_validation.json"
+      ],
+      "role_id": "ontology-formalizer",
+      "stage": "orientation_candidate_construction",
+      "task_id": "RT-20260718-039",
+      "task_type": "eqsrc_orientation_torsor_relation_bundle_formalization"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "research_control/tasks/RT-20260718-040/artifacts/eqsrc_orientation_torsor_descent_law_smuggling_audit.tex",
+          "sha256": "06275c74d2d83ca68e518c755dfdda6f548e927bcc9c47fe4c74794c6fc685f1"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-040/artifacts/eqsrc_orientation_torsor_descent_law_smuggling_audit_receipt.md",
+          "sha256": "582e135676370800c540ca382896943c239557de76d812ff330e93b78f3edec3"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-040/artifacts/eqsrc_orientation_torsor_descent_law_smuggling_audit_validation.json",
+          "sha256": "df796c7ed679d02723245a63f495a359e7443c3ff4bc3ce28a35d21c0bbe2d49"
+        }
+      ],
+      "candidate_family": "EqSrcOrientationTorsorDescentLaw_src^cand,v1",
+      "closure_status": "eqsrc_orientation_torsor_descent_law_conditional_formal_audit_pass_pending_bounded_refuter_stress_no_adoption",
+      "completion": {
+        "path": "research_control/tasks/RT-20260718-040/jobs/completions/AJC-AJ-RT-20260718-040-001.yaml",
+        "sha256": "2c924ce738a8d1c114f39a3264a229cb9bd67502dabc3f45faf1c5f51303d7e8"
+      },
+      "handoff": {
+        "path": "research_control/handoffs/handoff-0765.yaml",
+        "sha256": "2d1ea16b943771482dca7c00c684ca5096ef99aca62366a6945b9d88c83bd042"
+      },
+      "handoff_id": "handoff-0765",
+      "primary_artifacts": [
+        "research_control/tasks/RT-20260718-040/artifacts/eqsrc_orientation_torsor_descent_law_smuggling_audit.tex",
+        "research_control/tasks/RT-20260718-040/artifacts/eqsrc_orientation_torsor_descent_law_smuggling_audit_receipt.md",
+        "research_control/tasks/RT-20260718-040/artifacts/eqsrc_orientation_torsor_descent_law_smuggling_audit_validation.json"
+      ],
+      "role_id": "smuggling-auditor",
+      "stage": "orientation_candidate_audit",
+      "task_id": "RT-20260718-040",
+      "task_type": "eqsrc_orientation_torsor_descent_law_smuggling_audit"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex",
+          "sha256": "a658029cc1da56f776a403ef57582b49ab7bda7bf508dfdf9507c3f638248530"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml",
+          "sha256": "a5bc1af23713145727bfad592a770691b5128d6ce6546966860d80c588a530a6"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress_receipt.md",
+          "sha256": "9e13d58dff6e6e1170c6bb0ce1e7a20c4edc049f3079ec4aa7474e8f67a1ef19"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress_validation.json",
+          "sha256": "c0117cb1280c8a232d2a0a9a4a55f138379be84ad6b91a64433799f80036b37b"
+        }
+      ],
+      "candidate_family": "EqSrcOrientationTorsorDescentLaw_src^cand,v1",
+      "closure_status": "eqsrc_orientation_torsor_descent_law_scoped_line_selection_and_physical_admissibility_obstruction_pending_theoretical_selection_no_adoption",
+      "completion": {
+        "path": "research_control/tasks/RT-20260718-041/jobs/completions/AJC-AJ-RT-20260718-041-001.yaml",
+        "sha256": "0c3cc8393923f9772065f05aaa87d6c565a890dd5247eecaca5e1c5fa6a5bbf6"
+      },
+      "handoff": {
+        "path": "research_control/handoffs/handoff-0766.yaml",
+        "sha256": "36323b375a4840e1e9687f149267de7d2f6bfe7dc874deb1fa1ce03858278aaf"
+      },
+      "handoff_id": "handoff-0766",
+      "primary_artifacts": [
+        "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex",
+        "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml",
+        "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress_receipt.md",
+        "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress_validation.json"
+      ],
+      "role_id": "refuter",
+      "stage": "orientation_candidate_stress_obstruction",
+      "task_id": "RT-20260718-041",
+      "task_type": "eqsrc_orientation_torsor_descent_law_refuter_stress"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml",
+          "sha256": "96b33a0985a01821049889557b8285d491a0363d4dee9b467880c147cb8ed99e"
+        }
+      ],
+      "candidate_family": "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1",
+      "closure_status": "eqsrc_ordered_motion_rooted_partition_provenance_formalization_selected_candidate_v1_frozen_no_adoption",
+      "completion": {
+        "path": "research_control/tasks/RT-20260718-042/jobs/completions/AJC-AJ-RT-20260718-042-001.yaml",
+        "sha256": "2a05f1f8a72540aaa6d7b4439a79b99e86b73ff4386a63db1760048c5312d476"
+      },
+      "handoff": {
+        "path": "research_control/handoffs/handoff-0767.yaml",
+        "sha256": "1fb1ed3d7a96622806c6196f8905af713f4ff5444aabbb83b28181e0921517d3"
+      },
+      "handoff_id": "handoff-0767",
+      "primary_artifacts": [
+        "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml"
+      ],
+      "role_id": "theoretical-continuation-selector",
+      "stage": "rooted_partition_route_selection",
+      "task_id": "RT-20260718-042",
+      "task_type": "eqsrc_ordered_motion_partition_provenance_route_selector"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex",
+          "sha256": "24992d4b41d64bba860f5cd61d505d6b1ecaad3917e9195e0cbd3d897d955aef"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_receipt.md",
+          "sha256": "300a02858c36e80ef8ad78c5bd07ecee0e02eedd88f5368eb5ae46a1a6af136e"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_validation.json",
+          "sha256": "6a2e85b141233987a5d908826e41e540b98db134e62a617f160e562e2658e458"
+        }
+      ],
+      "candidate_family": "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1",
+      "closure_status": "eqsrc_ordered_motion_rooted_partition_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption",
+      "completion": {
+        "path": "research_control/tasks/RT-20260718-043/jobs/completions/AJC-AJ-RT-20260718-043-001.yaml",
+        "sha256": "6fe20bf821d4764e52b54e881cef98d8aa7da3cf363efeeb6faaafa859eb75a3"
+      },
+      "handoff": {
+        "path": "research_control/handoffs/handoff-0768.yaml",
+        "sha256": "3fe888aea7c43aa59f269a8d2417e184d1ab78c1229c51fe617794b47c13e02a"
+      },
+      "handoff_id": "handoff-0768",
+      "primary_artifacts": [
+        "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex",
+        "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_receipt.md",
+        "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_validation.json"
+      ],
+      "role_id": "ontology-formalizer",
+      "stage": "rooted_partition_candidate_construction",
+      "task_id": "RT-20260718-043",
+      "task_type": "eqsrc_ordered_motion_rooted_partition_law_formalization"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex",
+          "sha256": "36d4f057ad811ce30795a1d8f1a83093b981f7b40221423f291ca81d611deef0"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit_receipt.md",
+          "sha256": "070ab9bafcc47a48ac58b4fbda4eb690f2f38241cf7d0370ac62a3ee6d6b4d2b"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit_validation.json",
+          "sha256": "7c41e2f3ff21b20c0f21d3330aecb46e830282f223c19c8df9e9b786830d1b03"
+        }
+      ],
+      "candidate_family": "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1",
+      "closure_status": "eqsrc_ordered_motion_rooted_partition_law_conditional_source_audit_pass_with_universal_partition_encoding_pending_bounded_refuter_stress_no_adoption",
+      "completion": {
+        "path": "research_control/tasks/RT-20260718-044/jobs/completions/AJC-AJ-RT-20260718-044-001.yaml",
+        "sha256": "5c943a1d56735dd77abcdee5fe30918ec883034b10c70c29a2edcb64e93ec3ae"
+      },
+      "handoff": {
+        "path": "research_control/handoffs/handoff-0769.yaml",
+        "sha256": "6c87a9c4961ea137ebb3c3a5879f3e6f22d2eac2b3012f738413f7ec4e9686f5"
+      },
+      "handoff_id": "handoff-0769",
+      "primary_artifacts": [
+        "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex",
+        "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit_receipt.md",
+        "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit_validation.json"
+      ],
+      "role_id": "smuggling-auditor",
+      "stage": "rooted_partition_candidate_audit",
+      "task_id": "RT-20260718-044",
+      "task_type": "eqsrc_ordered_motion_rooted_partition_law_smuggling_audit"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex",
+          "sha256": "334a69fcb0ccaf91f7f428946202b84678277c70838dbf95f43166ad8d255ca0"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml",
+          "sha256": "9ddce9d042ef187d163043d6c2a98a7d1a796cd01a433d3d258632150a83325e"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress_receipt.md",
+          "sha256": "85439bed89b4d50e6dd97b8fb18a41a2b0c718abb832a3572c823d9d6bf31576"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress_validation.json",
+          "sha256": "983eb0dd308f1648fc9ae9de2e78bd5c74c71d0331e6ac0934f42d2768ba2c94"
+        }
+      ],
+      "candidate_family": "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1",
+      "closure_status": "eqsrc_ordered_motion_rooted_partition_law_scoped_root_and_relation_selection_obstruction_pending_theoretical_selection_no_adoption",
+      "completion": {
+        "path": "research_control/tasks/RT-20260718-045/jobs/completions/AJC-AJ-RT-20260718-045-001.yaml",
+        "sha256": "e1b1aa2ccb2a57febc0ca0e661549393173dddd2f78dcffdd222d21577aebc55"
+      },
+      "handoff": {
+        "path": "research_control/handoffs/handoff-0770.yaml",
+        "sha256": "18d24ce1e6df3386025f938c80c1ee0e12e12b3a1f4b2b5b1028751227e2d74e"
+      },
+      "handoff_id": "handoff-0770",
+      "primary_artifacts": [
+        "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex",
+        "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml",
+        "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress_receipt.md",
+        "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress_validation.json"
+      ],
+      "role_id": "refuter",
+      "stage": "rooted_partition_candidate_stress_obstruction",
+      "task_id": "RT-20260718-045",
+      "task_type": "eqsrc_ordered_motion_rooted_partition_law_refuter_stress"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "research_control/tasks/RT-20260718-046/artifacts/eqsrc_flow_generated_graded_orbit_root_route.yaml",
+          "sha256": "e4134961754a593ec88d84a7eaaaafc0fe57758d65e7c486b6d5dd8fa4814e98"
+        }
+      ],
+      "candidate_family": "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1",
+      "closure_status": "eqsrc_flow_generated_graded_orbit_root_formalization_selected_prior_candidate_v1_frozen_no_adoption",
+      "completion": {
+        "path": "research_control/tasks/RT-20260718-046/jobs/completions/AJC-AJ-RT-20260718-046-001.yaml",
+        "sha256": "43b283e09bfacf5a25dd499fb85fb02257ecb243e8b120888ca62135e83e6907"
+      },
+      "handoff": {
+        "path": "research_control/handoffs/handoff-0771.yaml",
+        "sha256": "821b5c9757c5f2604a57db3068be7aada5fd819df6706507b76f4753bee9eb5f"
+      },
+      "handoff_id": "handoff-0771",
+      "primary_artifacts": [
+        "research_control/tasks/RT-20260718-046/artifacts/eqsrc_flow_generated_graded_orbit_root_route.yaml"
+      ],
+      "role_id": "theoretical-continuation-selector",
+      "stage": "flow_generated_graded_orbit_route_selection",
+      "task_id": "RT-20260718-046",
+      "task_type": "eqsrc_flow_generated_graded_orbit_root_route_selector"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex",
+          "sha256": "b712552d328f144491bff689b702eba6dc2027ce1cc61c7052adbca84b0639f7"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_receipt.md",
+          "sha256": "9de712b1fc658fe7b5ca8c7468b43b35a698e7de4efad478e481532a19b48689"
+        },
+        {
+          "path": "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_validation.json",
+          "sha256": "c474339c6fb21b5a9132c0b9b1bf4b0bbe35bf77083d10ec181231e774b986ae"
+        }
+      ],
+      "candidate_family": "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1",
+      "closure_status": "eqsrc_flow_generated_graded_orbit_root_law_candidate_formalized_pending_fresh_smuggling_audit_no_adoption",
+      "completion": {
+        "path": "research_control/tasks/RT-20260718-047/jobs/completions/AJC-AJ-RT-20260718-047-001.yaml",
+        "sha256": "0886a6b5f2ca4cd47e5dfd0908fda7478af2dddda0eb3d9dfced0c04591c007f"
+      },
+      "handoff": {
+        "path": "research_control/handoffs/handoff-0772.yaml",
+        "sha256": "31374c85ee49e457a8b25eaf6d729a0d0e286f1dd53eac184a502044fdd8de0a"
+      },
+      "handoff_id": "handoff-0772",
+      "primary_artifacts": [
+        "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex",
+        "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_receipt.md",
+        "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_validation.json"
+      ],
+      "role_id": "ontology-formalizer",
+      "stage": "flow_generated_graded_orbit_candidate_construction",
+      "task_id": "RT-20260718-047",
+      "task_type": "eqsrc_flow_generated_graded_orbit_root_law_formalization"
+    }
+  ],
+  "target_derivation_milestone": "source_equivalence_eqsrc",
+  "task_id": "RT-20260720-006"
+}

@@ -1,0 +1,133 @@
+handoff_id: "handoff-0776"
+handoff_number: 776
+created_at: "2026-07-20T19:31:56Z"
+task_id: "RT-20260720-006"
+decision_id: "DDR-20260720-006"
+job_id: "AJ-RT-20260720-006-001"
+completion_path: "research_control/tasks/RT-20260720-006/jobs/completions/AJC-AJ-RT-20260720-006-001.yaml"
+completion_hash: "4ce78c1f063cf644ab7b9a7aca1f53c637d4aadcb5145422436f490824f3955f"
+source_task_id: "RT-20260720-006"
+source_job_id: "AJ-RT-20260720-006-001"
+source_completion_id: "AJC-AJ-RT-20260720-006-001"
+status: "ready_for_director"
+summary: "RT-20260720-006 completed only v21 P0-T03. Five deterministic artifacts freeze the clean 2bf74499 baseline, 1,006 pre-task task and AgentJob records, the ten-stage active-candidate lineage, 13 declared lineage-gap signals, 37 validation gates, and exact source-scope hashes. Pre-existing generated-report drift was measured but not repaired. Handoff-0772 remains the scientific authority."
+next_action: "Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01."
+loop_risk_route: "v21_p0_t04_production_launch_manifest"
+claim_boundary:
+  allowed_next_scope: "One P0-T04 launch-manifest packet under the registered immutable v21 plan and materialized backlog."
+  completed_plan_tasks:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+  baseline_path: "research_control/tasks/RT-20260720-006/artifacts/v21_starting_baseline.json"
+  baseline_sha256: "062828ace0f7951dff7b4140dba69747dd6a75ffce8dd1828a8a2e8b8c05fe3e"
+  source_manifest_path: "research_control/tasks/RT-20260720-006/artifacts/v21_source_hash_manifest.json"
+  source_manifest_sha256: "8be1255708bab6dc969fa7ca8d12821b656591e06ffd774ea3e9d9a2f13e2abb"
+  preserved_scientific_task: "RT-20260718-047"
+  preserved_scientific_handoff: "handoff-0772"
+  preserved_scientific_route: "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit"
+  first_required_scientific_work_item: "P1-T01"
+  control_handoff_supersedes_scientific_handoff: false
+  p0_t04_executed: false
+  baseline_finding_repair_performed: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  proof_authority: false
+  external_publication_authorized: false
+blocked_claims:
+  - "baseline counts or validator status as physics proof"
+  - "P0-T03 as P0-T04 or P1-T01 execution"
+  - "baseline measurement as authorization to repair findings"
+  - "launch manifest as runtime goal initialization"
+  - "control handoff as supersession of scientific handoff-0772"
+  - "canonical ontology edit or source-law adoption"
+  - "general EqSrc discharge or Distance-to-GR progress"
+  - "matter-coupling or Einstein-equation derivation"
+  - "benchmark promotion or Gate Chair verdict"
+  - "external publication or completed derivation"
+distance_to_gr:
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  status: "draft object exists"
+  effect: "conditional_theorem_candidate"
+  changed: false
+  meaning: "P0-T03 is project-control measurement and does not discharge general EqSrc or change either scientific ledger."
+baseline_summary:
+  status: "PASS_WITH_BASELINE_FINDINGS"
+  source_commit: "2bf74499efb6d1337e4d7746b1c210e7f36d1ca9"
+  source_tree: "320003ac423868b08581c96cca46394f98dd48b8"
+  source_manifest_record_count: 81
+  goal_scope_path_count: 10
+  candidate_lineage_stage_count: 10
+  registered_task_count: 1006
+  registered_agent_job_count: 1006
+  lineage_gap_signal_count: 13
+  validation_gate_count: 37
+  stale_generated_reports:
+    - "output/physics_progress_metrics.json and Markdown"
+    - "output/ai_methodology_metrics_dashboard.json and Markdown"
+    - "output/research_dependency_graph.json"
+  fresh_generated_reports:
+    - "output/compact_current_frontier_v16.json"
+  repair_performed: false
+selected_next_route:
+  route_id: "v21_p0_t04_production_launch_manifest"
+  route_label: "ordinary-research-packet"
+  role_family: "director-of-research@0.3.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P0-T04"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Bind the plan to the continue-research-goal v4 runtime without launching it from this task."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  next_action: "Construct the exact human-readable launch packet, scope-contract candidate, completion contract, prelaunch checklist, and compact receipt without calling goal initialization."
+  source_handoff: "research_control/handoffs/handoff-0776.yaml"
+preserved_scientific_route:
+  route_id: "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Audit the exact proposal-only flow-generated graded-orbit root source law before Refuter stress or protected adoption review."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Run one bounded fresh Smuggling Auditor audit only when P1-T01 becomes eligible."
+  source_handoff: "research_control/handoffs/handoff-0772.yaml"
+required_next_packet:
+  role_id: "director-of-research"
+  role_version: "0.3.0"
+  packet_count: "1"
+  route_label: "ordinary-research-packet"
+  task_type: "v21_production_launch_manifest"
+  plan_task_id: "P0-T04"
+  objective: "Produce the exact human-readable launch packet for one immutable multi-step v21 relay including exact goal text reasoning effort source hashes included work items exclusions and completion contract."
+validation_summary:
+  aggregate_status: "PASS_WITH_BASELINE_FINDINGS"
+  collector_status: "PASS"
+  focused_metrics_test_count: 12
+  focused_metrics_tests_passed: true
+  baseline_source_paths_present: true
+  baseline_source_hashes_unique: true
+  goal_scope_hash_coverage_complete: true
+  candidate_lineage_inventory_complete: true
+  baseline_finding_repair_performed: false
+  distance_to_gr_ledger_unchanged: true
+  metric_use_ledger_unchanged: true
+  generated_derivatives_non_authority: true
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260720-006"
+  latest_research_handoff_id: "handoff-0776"
+  latest_research_next_action: "Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false

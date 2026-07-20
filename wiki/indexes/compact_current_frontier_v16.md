@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-005`
-- Latest handoff: `handoff-0775`
-- Current status: `v21_p0_t02_backlog_materialized_pending_p0_t03_no_physics_delta`
+- Active task: `RT-20260720-006`
+- Latest handoff: `handoff-0776`
+- Current status: `v21_p0_t03_starting_baseline_frozen_pending_p0_t04_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-005`
-- Latest research handoff: `handoff-0775`
-- Latest research next action: Run one bounded v21 P0-T03 Process Integrity Auditor packet to freeze the starting scientific operational and source-hash baseline. Do not repair measured drift inside that packet or execute P1-T01.
+- Latest research task: `RT-20260720-006`
+- Latest research handoff: `handoff-0776`
+- Latest research next action: Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p0_t03_starting_baseline_freeze`
-- Role family: `process-integrity-auditor@0.1.0`
+- Route ID: `v21_p0_t04_production_launch_manifest`
+- Role family: `director-of-research@0.3.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Establish before-state evidence for all later scientific and system deltas.
+- Milestone burden: Bind the plan to the continue-research-goal v4 runtime without launching it from this task.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `fbc69f999f42d60fe82f3d7d7d17536202b75b0a1fc3bda9715954540616e5b9`
-- JSON SHA-256: `ff5da9b1b03b0355b9863e5c4c5a4f7e652157f6fd23b482c4d00787dde42a3f`
+- YAML SHA-256: `8e91e17d7155cbcc0b5b29f1785fad05f3f52d6a107f23525a244068d4fbe429`
+- JSON SHA-256: `38c4f037f3eba2c57ea563a5c4814c3a7a0d1952e106f69e01f29188eac3f190`
 
 ## Authority Warning
 

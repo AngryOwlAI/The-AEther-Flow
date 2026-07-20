@@ -1,0 +1,307 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-006-001"
+completion_id: "AJC-AJ-RT-20260720-006-001"
+task_id: "RT-20260720-006"
+decision_id: "DDR-20260720-006"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260720-006"
+status: "completed"
+created_at: "2026-07-20T19:22:41Z"
+started_at: "2026-07-20T19:22:41Z"
+completed_at: "2026-07-20T19:31:56Z"
+objective: "Capture and validate the exact v21 P0-T03 scientific, operational, candidate-lineage, validator, repository, generated-report, and source-hash before-state without repairing measured findings."
+completion_summary: "V21 P0-T03 is complete. Five deterministic artifacts freeze the clean 2bf74499 baseline, 1,006 pre-task task and AgentJob records, 10 explicit active-candidate lineage stages, 13 declared lineage-gap signals, 37 validation gates, exact goal-scope hashes, and pre-existing generated-report freshness findings. No measured finding was repaired and no scientific or protected authority changed."
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T03"
+  recommendation_ids:
+    - "V21-R01"
+    - "V21-R02"
+    - "V21-R31"
+    - "V21-R43"
+    - "V21-R49"
+    - "V21-R52"
+    - "V21-R53"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+  downstream_tasks_not_implemented:
+    - "P0-T04 through P16-T06"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 6
+  passes_consumed: 6
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:6"
+  relay_claim_token: "8c96bb6db7ed797414a04f606afcc6748171900d253d87eb"
+transaction_status: "completed"
+result_disposition: "implemented"
+epistemic_status: "verified_measurement_only_baseline"
+burden_effect: "no_distance_delta"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "v21_p0_t03_starting_baseline_freeze"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v21"
+  source_recommendation_ids:
+    - "V21-R01"
+    - "V21-R02"
+    - "V21-R31"
+    - "V21-R43"
+    - "V21-R49"
+    - "V21-R52"
+    - "V21-R53"
+  implements_plan_task_id: "P0-T03"
+  implementation_status: "completed"
+  coverage_effect: "immutable_before_state_evidence"
+physics_progress_status:
+  status: "project_system_starting_baseline_frozen_no_physics_delta"
+  physics_promotion_authorized: false
+  summary: "P0-T03 measures the pre-task research and control state; metrics and validator status are operational evidence only and discharge no physics burden."
+scientific_status:
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Establish before-state evidence for all later scientific and system deltas."
+  distance_to_gr_delta:
+    changed: false
+    effect: "no_distance_delta"
+    ledger_row_updated: false
+  assumption_delta: []
+  candidate_ids:
+    - "EqSrcOrientationTorsorDescentLaw_src^cand,v1|scoped line-selection obstruction and locally frozen"
+    - "EqSrcOrderedMotionRootedPartitionLaw_src^cand,v1|scoped root-and-relation-selection obstruction and locally frozen"
+    - "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1|proposal-only candidate pending fresh audit"
+  theorem_statement_hashes: []
+  new_mathematical_payload: []
+  physics_promotion_authorized: false
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  rationale: "Starting-baseline measurement neither derives a source law nor discharges the general EqSrc burden."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+outputs_created:
+  - "research_control/tasks/RT-20260720-006/00_TASK.yaml"
+  - "research_control/tasks/RT-20260720-006/DDR-20260720-006.md"
+  - "research_control/tasks/RT-20260720-006/artifacts/collect_v21_starting_baseline.py"
+  - "research_control/tasks/RT-20260720-006/artifacts/v21_starting_baseline.json"
+  - "research_control/tasks/RT-20260720-006/artifacts/v21_starting_baseline.md"
+  - "research_control/tasks/RT-20260720-006/artifacts/v21_candidate_family_inventory.json"
+  - "research_control/tasks/RT-20260720-006/artifacts/v21_source_hash_manifest.json"
+  - "research_control/tasks/RT-20260720-006/artifacts/v21_starting_baseline_receipt.json"
+  - "research_control/tasks/RT-20260720-006/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260720-006/jobs/AJ-RT-20260720-006-001.yaml"
+  - "research_control/tasks/RT-20260720-006/jobs/completions/AJC-AJ-RT-20260720-006-001.yaml"
+  - "research_control/tasks/RT-20260720-006/roles/process-integrity-auditor@0.1.0--RT-20260720-006.yaml"
+  - "research_control/handoffs/handoff-0776.yaml"
+  - "research_control/handoffs/handoff-0776.md"
+outputs_updated:
+  - "research_control/program_state.yaml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+artifact_evidence:
+  baseline_json:
+    path: "research_control/tasks/RT-20260720-006/artifacts/v21_starting_baseline.json"
+    sha256: "062828ace0f7951dff7b4140dba69747dd6a75ffce8dd1828a8a2e8b8c05fe3e"
+  baseline_markdown:
+    path: "research_control/tasks/RT-20260720-006/artifacts/v21_starting_baseline.md"
+    sha256: "87f50bc7f2f5eaace9cd867e2bb5c6821b6bd779b902f2f73a76f4ffa544842e"
+  candidate_family_inventory:
+    path: "research_control/tasks/RT-20260720-006/artifacts/v21_candidate_family_inventory.json"
+    sha256: "5058a8eb083f8d961ed9b98ffb9604c52c3d22e9167820abb8976863e2586af3"
+  source_hash_manifest:
+    path: "research_control/tasks/RT-20260720-006/artifacts/v21_source_hash_manifest.json"
+    sha256: "8be1255708bab6dc969fa7ca8d12821b656591e06ffd774ea3e9d9a2f13e2abb"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260720-006/artifacts/v21_starting_baseline_receipt.json"
+    sha256: "5c6c4f40d50434768d4cc4a685bc5532879df39574d6b0ba0492300661d2b61f"
+  collector:
+    path: "research_control/tasks/RT-20260720-006/artifacts/collect_v21_starting_baseline.py"
+    sha256: "e085a8524fb696c9f84f753701633717d2a1f7c8ba3f628f5d844ad7a85f78dd"
+baseline_validation:
+  status: "PASS_WITH_BASELINE_FINDINGS"
+  baseline_commit: "2bf74499efb6d1337e4d7746b1c210e7f36d1ca9"
+  baseline_tree: "320003ac423868b08581c96cca46394f98dd48b8"
+  baseline_dirty_entry_count: 0
+  source_manifest_record_count: 81
+  missing_retained_path_count: 0
+  duplicate_path_conflict_count: 0
+  goal_scope_required_path_count: 10
+  goal_scope_covered_path_count: 10
+  goal_scope_launch_hash_mismatch_count: 1
+  goal_scope_launch_hash_mismatch_paths:
+    - "research_control/program_state.yaml"
+  launch_hash_mismatch_interpretation: "Program state lawfully evolved through P0-T01 and P0-T02; the manifest retains both the immutable launch hash and the baseline hash."
+  candidate_lineage_stage_count: 10
+  registered_task_count: 1006
+  registered_agent_job_count: 1006
+  candidate_signal_packet_count: 199
+  obstruction_signal_packet_count: 44
+  freeze_signal_packet_count: 289
+  candidate_result_missing_completion_count: 11
+  aggregate_lineage_limitation_count: 2
+  total_lineage_gap_signal_count: 13
+  validation_gate_count: 37
+  blocking_validation_gate_count: 28
+  mutating_validation_gate_count: 6
+  repair_performed: false
+generated_report_freshness:
+  status: "PASS_WITH_PREEXISTING_DRIFT_CAPTURED"
+  physics_progress_metrics_fresh: false
+  ai_methodology_dashboard_fresh: false
+  research_dependency_graph_fresh: false
+  compact_current_frontier_fresh: true
+  measured_findings_repaired: false
+  note: "The baseline captures the stale generated reports as before-state evidence. P0-T03 did not refresh or repair them."
+command_results:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | core freshness and local retrieval PASS after local-only refresh"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary | exit_code=0 | active_task=RT-20260720-005 latest_handoff=handoff-0775 next=P0-T03"
+  - ".venv/bin/python research_control/tasks/RT-20260720-006/artifacts/collect_v21_starting_baseline.py --write --json | exit_code=0 | PASS five outputs"
+  - ".venv/bin/python research_control/tasks/RT-20260720-006/artifacts/collect_v21_starting_baseline.py --check --json | exit_code=0 | PASS zero stale outputs"
+  - ".venv/bin/python -m unittest -v tests.test_research_control_metrics tests.test_report_physics_progress_metrics | exit_code=0 | 12 tests PASS"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260720-006 research_control/program_state.yaml research_control/handoffs/handoff-0776.yaml --explain | exit_code=0 | READY 14 selected gates"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | exit_code=0 | written then PASS"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write and --check | exit_code=0 | written then PASS"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | documentation impact required for control registry generated derivative and research-control state changes"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | advisory project-system boundary recognized"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | PASS with two local-only retrieval freshness warnings"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS zero findings"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | PASS zero hard failures with historical warnings"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | PASS with historical warnings"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 6 lease parity, exact saved-project and repository binding, clean main baseline, predecessor checkpoint, immutable route, and the single consumed invocation were verified before activation."
+      - "The v21 plan and backlog, P0-T02 dependency evidence, preserved scientific route, validation policies, metrics definitions, and candidate lineage were inspected."
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "The deterministic collector reproduces five exact artifacts from baseline commit 2bf74499."
+      - "All 81 retained source paths exist with unique hashes; all 10 goal-scope paths are covered."
+      - "The ten-stage active EqSrc lineage and all selected baseline counts match exact expected values."
+  focused_tests:
+    status: "PASS"
+    evidence:
+      - "Twelve focused metrics and support-only-boundary tests pass."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The completion names P0-T03, the exact recommendation set, relay generation, source hashes, findings, no-distance delta, and P0-T04 stop boundary."
+      - "Handoff-0772, all scientific sources, both scientific ledgers, and the measured stale reports remain unchanged."
+  post_write:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Documentation-impact validation passes with zero findings and project-improvement signal validation passes."
+      - "Research-control diff validation passes; its findings are historical warnings rather than errors."
+      - "Changed-source claim-language validation passes with zero hard failures; memory core passes with two local-only freshness warnings."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier and compact-frontier completed-state renderers write and check successfully."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory bootstrap and read-only core validation pass; local-only retrieval freshness warnings remain non-authoritative."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation reports zero hard failures; warnings are historical and advisory."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains required after stable completed-state validation."
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The task-local baseline collector found no workflow defect requiring a separate project-improvement sidecar; measured report drift is preserved for later included v21 work."
+preserved_state:
+  program_state_changed: true
+  latest_control_handoff: "handoff-0776"
+  scientific_task: "RT-20260718-047"
+  scientific_handoff: "handoff-0772"
+  scientific_route: "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit"
+  first_required_scientific_work_item: "P1-T01"
+  control_handoff_supersedes_scientific_handoff: false
+  distance_to_gr_changed: false
+forbidden_conclusion_summary: "The baseline, counts, source hashes, validator PASS, checkpoint, or relay continuation are not scientific proof and do not authorize repair of measured findings, P0-T04 execution inside this task, runtime goal initialization, source-law adoption, canonical ontology edit, EqSrc discharge, physics promotion, benchmark promotion, Gate Chair verdict, publication, or completed derivation."
+selected_next_route:
+  route_id: "v21_p0_t04_production_launch_manifest"
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  phase_id: "P0"
+  plan_task_id: "P0-T04"
+  task_name: "Construct the continue-research-goal v4 production launch manifest"
+  role_family: "director-of-research@0.3.0"
+  worker_skill: "continue-research"
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  next_action: "Continue the same immutable recursive relay with one fresh bounded P0-T04 generation; construct the launch packet but do not initialize another runtime goal."
+verdict: "v21_p0_t03_starting_baseline_frozen_pass_with_preexisting_findings_no_physics_delta"
+coherent_resolution_summary: "RT-20260720-006 deterministically freezes the clean v21 before-state, explicitly preserves pre-existing report and lineage findings without repair, retains all scientific authority and ledgers unchanged, and stops before P0-T04."
+next_recommendation: "Continue the same immutable recursive relay with one fresh bounded v21 P0-T04 generation."
+rollback_or_repair_notes: "If final validation fails, preserve the task evidence and repair only this P0-T03 packet and its registry or derivative rows through a distinct authorized strategy. Do not repair measured baseline findings, mutate prior tasks or execute P0-T04."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 910
+    relationship_row_count: 4510
+    semantic_row_count: 910
+    vault_row_count: 910
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, Obsidian, SQLite, semantic, metrics, dashboard, and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."

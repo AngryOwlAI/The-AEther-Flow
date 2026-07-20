@@ -1,0 +1,263 @@
+{
+  "assumption_delta": [],
+  "authority_flags": {
+    "baseline_finding_repair_authorized": false,
+    "benchmark_promotion_authorized": false,
+    "canonical_ontology_edit_authorized": false,
+    "completed_derivation_authorized": false,
+    "gate_chair_verdict_created": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_claims_changed": false,
+    "source_law_adoption_authorized": false
+  },
+  "candidate_family_inventory": {
+    "active_candidate_id": "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1",
+    "path": "research_control/tasks/RT-20260720-006/artifacts/v21_candidate_family_inventory.json",
+    "sha256": "5058a8eb083f8d961ed9b98ffb9604c52c3d22e9167820abb8976863e2586af3",
+    "stage_count": 10
+  },
+  "captured_at": "2026-07-20T19:15:34Z",
+  "control_state": {
+    "active_task_id": "RT-20260720-005",
+    "current_status": "v21_p0_t02_backlog_materialized_pending_p0_t03_no_physics_delta",
+    "latest_handoff_id": "handoff-0775",
+    "preserved_scientific_handoff_id": "handoff-0772",
+    "preserved_scientific_route": "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit",
+    "preserved_scientific_task_id": "RT-20260718-047",
+    "selected_control_route": "v21_p0_t03_starting_baseline_freeze"
+  },
+  "distance_to_gr": {
+    "active_row": {
+      "accept_criteria": "theorem plus stress pass",
+      "blocking_burden": "general equivalence under variations",
+      "burden_id": "source_equivalence_eqsrc",
+      "control_status": "draft_control_object_exists",
+      "current_status": "draft object exists",
+      "failure_or_freeze_criteria": "freeze route",
+      "last_evidence_path": "research_control/program_state.yaml",
+      "mathematical_status": "general_equivalence_theorem_missing",
+      "milestone": "source_equivalence_eqsrc",
+      "notes": "general EqSrc remains undischarged",
+      "overread_guard": "no_source_law_adoption;no_benchmark_promotion;no_completed_derivation",
+      "physical_status": "downstream_gr_blocked",
+      "promotion_status": "draft_control_only",
+      "required_object": "EqSrc",
+      "updated_at": "2026-06-17T15:46:25Z"
+    },
+    "delta_changed": false,
+    "ledger_path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+    "ledger_sha256": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  },
+  "findings": [
+    {
+      "classification": "preexisting_baseline_drift",
+      "finding_id": "P0-T03-FRESHNESS-METRICS-001",
+      "status": "RECORDED_NOT_REPAIRED",
+      "summary": "Stored physics-progress metrics and methodology dashboard lag the live baseline registries."
+    },
+    {
+      "classification": "preexisting_baseline_drift",
+      "finding_id": "P0-T03-FRESHNESS-GRAPH-001",
+      "status": "RECORDED_NOT_REPAIRED",
+      "summary": "The generated dependency graph stops at RT-20260718-047 and handoff-0772, five tasks and three handoffs behind the baseline control state."
+    },
+    {
+      "classification": "preexisting_baseline_limitation",
+      "finding_id": "P0-T03-LINEAGE-GAPS-001",
+      "status": "RECORDED_NOT_REPAIRED",
+      "summary": "Thirteen lineage-gap signals are frozen: eleven missing normalized candidate results and two aggregate lineage limitations."
+    }
+  ],
+  "forbidden_conclusions": [
+    "baseline or metrics as physics proof",
+    "candidate inventory as adoption",
+    "validator PASS as source authority",
+    "pre-existing drift as a v21 regression",
+    "general EqSrc discharge",
+    "source-law or canonical ontology adoption",
+    "benchmark promotion or Gate Chair verdict",
+    "completed derivation"
+  ],
+  "generated_report_freshness": {
+    "ai_methodology_dashboard": {
+      "classification": "preexisting_baseline_drift",
+      "expected_live_json_sha256": "d2b20d01910d4a2276d2c018dc09c2ce6e1af3d9c81fc3bdcd8f9ef1b313ca90",
+      "expected_live_markdown_sha256": "d0a121037319d9139171612607e7d3d2236224b2f999ab612c9f2c643bdbdb3b",
+      "fresh": false,
+      "stored_json_sha256": "bae5d53e1f43781bc8177e3b04b0d8a733adca0de06fa46d2d981bfe66766f8c",
+      "stored_markdown_sha256": "d6e87ddf0161e3d9ce260a49662dfaeee5d676c9ec5e5c79d17833d13d01cae0"
+    },
+    "compact_current_frontier": {
+      "active_task_id": "RT-20260720-005",
+      "fresh": true,
+      "latest_handoff_id": "handoff-0775"
+    },
+    "physics_progress_metrics": {
+      "classification": "preexisting_baseline_drift",
+      "expected_live_json_sha256": "520a2baf94bfb5ae9fe1ebb5e05595d100475b0691f79b6cc2aba3ba153c53cb",
+      "expected_live_markdown_sha256": "54986f236069b5ca5b1ca89ae84a4f3b9003b5bca9bb7c6ccbe552f0746682df",
+      "fresh": false,
+      "live_as_of": "2026-07-20T18:46:49Z",
+      "live_input_counts": {
+        "active_claim_boundary_rows": 899,
+        "claim_boundary_rows": 963,
+        "completions_read": 1006,
+        "jobs_registered": 1006,
+        "physics_completions_read": 505,
+        "tasks_registered": 1006
+      },
+      "registry_to_report_lag": {
+        "active_claim_boundary_rows": 75,
+        "claim_boundary_rows": 129,
+        "completions_read": 130,
+        "jobs_registered": 129,
+        "physics_completions_read": 32,
+        "tasks_registered": 129
+      },
+      "stored_as_of": "2026-07-09T03:11:04Z",
+      "stored_input_counts": {
+        "active_claim_boundary_rows": 824,
+        "claim_boundary_rows": 834,
+        "completions_read": 876,
+        "jobs_registered": 877,
+        "physics_completions_read": 473,
+        "tasks_registered": 877
+      },
+      "stored_json_sha256": "62eec7cf8a7548b4b8e81bb6a8c483897bd36265a861099432aaff1681e345ed",
+      "stored_markdown_sha256": "005f188471c960e4fd0fcae20bba452c40314eb53d4c7b8a18e3b40cd99d3bac"
+    },
+    "repair_performed": false,
+    "research_dependency_graph": {
+      "classification": "preexisting_baseline_drift",
+      "fresh": false,
+      "generated_at": "2026-07-20T04:18:12Z",
+      "job_node_count": 1001,
+      "job_node_lag": 5,
+      "job_registry_count": 1006,
+      "latest_handoff_node": "handoff-0772",
+      "latest_tracked_handoff": "handoff-0775",
+      "task_node_count": 1001,
+      "task_node_lag": 5,
+      "task_registry_count": 1006
+    },
+    "status": "PASS_WITH_PREEXISTING_DRIFT_CAPTURED"
+  },
+  "goal_scope": {
+    "covered_path_count": 10,
+    "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+    "launch_hash_mismatch_count": 1,
+    "launch_hash_mismatch_paths": [
+      "research_control/program_state.yaml"
+    ],
+    "mismatch_interpretation": "The tracked program state evolved through P0-T01 and P0-T02. The baseline records both the immutable launch hash and the current baseline hash.",
+    "required_path_count": 10,
+    "scope_contract_sha256": "d42e4db415c846892a991594e21da5d58202460f07f3b0325f3c3b6fa9f24eae"
+  },
+  "job_id": "AJ-RT-20260720-006-001",
+  "metrics": {
+    "counts": {
+      "candidate_constructor_role_jobs": 55,
+      "candidate_signal_packets": 199,
+      "freeze_signal_packets": 289,
+      "gate_chair_role_jobs": 31,
+      "obstruction_signal_packets": 44,
+      "refuter_stress_role_jobs": 94,
+      "registered_agent_jobs": 1006,
+      "registered_tasks": 1006,
+      "smuggling_audit_role_jobs": 96,
+      "theoretical_selector_role_jobs": 109
+    },
+    "definitions": {
+      "candidate_signal_packets": "Metrics-reporter candidate signal predicate over baseline completion records.",
+      "freeze_signal_packets": "Metrics-reporter freeze signal predicate over baseline completion records.",
+      "known_lineage_gaps": "Eleven candidate-constructor receipts missing normalized result_type plus two declared aggregate-lineage limitations.",
+      "obstruction_signal_packets": "Metrics-reporter obstruction signal predicate over baseline completion records.",
+      "role_job_counts": "Exact role_id counts in baseline AGENT_JOB_REGISTRY.csv."
+    },
+    "known_lineage_gaps": {
+      "aggregate_lineage_limitation_count": 2,
+      "aggregate_lineage_limitations": [
+        "Audit-to-stress metrics count stage occurrences rather than candidate-linked transitions.",
+        "Historical draft/control stress-survivor lineage is not fully normalized."
+      ],
+      "candidate_result_missing_completion_count": 11,
+      "candidate_result_missing_completion_paths": [
+        "research_control/tasks/RT-20260608-003/jobs/completions/AJC-AJ-RT-20260608-003-001.yaml",
+        "research_control/tasks/RT-20260608-005/jobs/completions/AJC-AJ-RT-20260608-005-001.yaml",
+        "research_control/tasks/RT-20260614-035/jobs/completions/AJC-AJ-RT-20260614-035-001.yaml",
+        "research_control/tasks/RT-20260614-038/jobs/completions/AJC-AJ-RT-20260614-038-001.yaml",
+        "research_control/tasks/RT-20260614-041/jobs/completions/AJC-AJ-RT-20260614-041-001.yaml",
+        "research_control/tasks/RT-20260614-053/jobs/completions/AJC-AJ-RT-20260614-053-001.yaml",
+        "research_control/tasks/RT-20260614-061/jobs/completions/AJC-AJ-RT-20260614-061-001.yaml",
+        "research_control/tasks/RT-20260614-072/jobs/completions/AJC-AJ-RT-20260614-072-001.yaml",
+        "research_control/tasks/RT-20260614-080/jobs/completions/AJC-AJ-RT-20260614-080-001.yaml",
+        "research_control/tasks/RT-20260708-009/jobs/completions/AJC-AJ-RT-20260708-009-001.yaml",
+        "research_control/tasks/RT-20260708-010/jobs/completions/AJC-AJ-RT-20260708-010-001.yaml"
+      ],
+      "repair_performed": false,
+      "total_gap_signal_count": 13
+    }
+  },
+  "plan_task_id": "P0-T03",
+  "recommendation_coverage": {
+    "implementation_status": "baseline_captured",
+    "plan_id": "recommendations_implementation_plan_continue_task-v21",
+    "plan_task_id": "P0-T03",
+    "recommendation_ids": [
+      "V21-R01",
+      "V21-R02",
+      "V21-R31",
+      "V21-R43",
+      "V21-R49",
+      "V21-R52",
+      "V21-R53"
+    ]
+  },
+  "repository_identity": {
+    "branch": "main",
+    "dirty_entry_count": 0,
+    "git_common_dir": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.git",
+    "head": "2bf74499efb6d1337e4d7746b1c210e7f36d1ca9",
+    "origin_main_ahead_count": 4,
+    "origin_main_behind_count": 0,
+    "porcelain": "",
+    "profile": "production_profile",
+    "root": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow",
+    "tracked_blob_count": 12755,
+    "tree": "320003ac423868b08581c96cca46394f98dd48b8"
+  },
+  "runtime_environment": {
+    "dependency_packages": [
+      "PyMuPDF==1.27.2.3",
+      "PyYAML==6.0.3"
+    ],
+    "pip_freeze_sha256": "66c77456edd0c160995bc9d84bee63f568239677b6a2c69496e104d6a079c402",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python_executable": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.venv/bin/python",
+    "python_version": "3.12.13",
+    "requirements_dev_sha256": "d36a504821c016637dfb496f08134fcb44bf027a490abd7132457e8c64253a2a",
+    "requirements_sha256": "7bc3bca027f6d2be2fcb2ca0e3d9568a09c07a6d0d30b774073501da06ced98f"
+  },
+  "schema_id": "v21_p0_t03_starting_baseline_v1",
+  "source_hash_manifest": {
+    "duplicate_path_conflict_count": 0,
+    "missing_retained_path_count": 0,
+    "path": "research_control/tasks/RT-20260720-006/artifacts/v21_source_hash_manifest.json",
+    "record_count": 81,
+    "sha256": "8be1255708bab6dc969fa7ca8d12821b656591e06ffd774ea3e9d9a2f13e2abb"
+  },
+  "status": "PASS_WITH_BASELINE_FINDINGS",
+  "task_id": "RT-20260720-006",
+  "validation_system": {
+    "blocking_gate_count": 28,
+    "execution_authority": "legacy",
+    "gate_count": 37,
+    "manifest_id": "validation-gate-manifest-v1",
+    "manifest_path": "research_control/design/validation_gate_manifest_v1.yaml",
+    "manifest_sha256": "0e757d206b2529a00a2e60cc2b725ab4b10188321a14c75e885cce429de23842",
+    "mutating_gate_count": 6,
+    "operational_evidence_only": true,
+    "schema_id": "validation_gate_manifest_v1"
+  }
+}
