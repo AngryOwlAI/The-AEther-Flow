@@ -1,0 +1,112 @@
+{
+  "artifact_hashes": {
+    "assumption_delta": "7d88dd3765bb41f6ecfdedb7678e770306c94da5a30f93540639ee29392bfdda",
+    "formal_map": "fcffa4e7d89654d3d9c656bc7ab0bde10b28ec3e36f4da4a7139759d036455dc",
+    "inventory": "5a823d46054fa75ee7f5f7814aa76ff52ea3e8d8868547229d5b0b2a26e0685e",
+    "lineage_graph": "ac6e01afde52c7586f9eee25f6fc93d0d519ae5a5c4bb78b874941187a2b3d91"
+  },
+  "checks": [
+    {
+      "check_id": "inventory_shape",
+      "detail": "candidates=7 families=5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "candidate_ids_unique",
+      "detail": "count=7",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_ids_unique",
+      "detail": "count=5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ontology_anchor_hash",
+      "detail": "ontology/tex/aether_flow_foundations.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "candidate_artifact_hashes",
+      "detail": "mismatches=0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_and_assumption_hashes",
+      "detail": "mismatches=0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_duplicate_count",
+      "detail": "expected=0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_membership_partition",
+      "detail": "member_refs=7",
+      "status": "PASS"
+    },
+    {
+      "check_id": "graph_node_parity",
+      "detail": "nodes=7",
+      "status": "PASS"
+    },
+    {
+      "check_id": "graph_edge_count",
+      "detail": "edges=6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "stage_count",
+      "detail": "stages=22",
+      "status": "PASS"
+    },
+    {
+      "check_id": "edge_identity_and_order",
+      "detail": "errors=0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "lineage_acyclic",
+      "detail": "visited=7",
+      "status": "PASS"
+    },
+    {
+      "check_id": "stage_identity_and_hashes",
+      "detail": "errors=0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_delta_parity",
+      "detail": "rows=6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "formal_artifact_boundary",
+      "detail": "missing=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority_and_freeze_boundary",
+      "detail": "P1-T03 reserved; promotion false",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "Structural PASS cannot prove source-law derivation adoption family freeze general EqSrc downstream GR or benchmark promotion. P1-T03 remains reserved.",
+  "counts": {
+    "assumption_delta_rows": 6,
+    "candidate_edges": 6,
+    "candidates": 7,
+    "errors": 0,
+    "exact_duplicates": 0,
+    "families": 5,
+    "stage_records": 22
+  },
+  "errors": [],
+  "operational_evidence_only": true,
+  "physics_promotion_authorized": false,
+  "physics_proof_authority": false,
+  "schema_id": "v21_p1_t02_eqsrc_candidate_family_lineage_validation_v1",
+  "status": "PASS",
+  "task_id": "RT-20260720-010"
+}

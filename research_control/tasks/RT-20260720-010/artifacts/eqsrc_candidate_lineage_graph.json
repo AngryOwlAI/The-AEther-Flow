@@ -1,0 +1,123 @@
+{
+  "schema_id": "v21_p1_t02_eqsrc_candidate_lineage_graph_v1",
+  "status": "draft/control",
+  "task_id": "RT-20260720-010",
+  "superfamily_id": "EQSRC-SUPERFAMILY-CANONICAL-CHOICE",
+  "node_order": {
+    "EQSRC-IDISC-V1": 27,
+    "EQSRC-IDISC-V2": 29,
+    "EQSRC-IDISC-V3": 31,
+    "EQSRC-CYCLE-BOUNDARY-V1": 35,
+    "EQSRC-ORIENTATION-TORSOR-V1": 39,
+    "EQSRC-ROOTED-PARTITION-V1": 43,
+    "EQSRC-GRADED-ORBIT-ROOT-V1": 47
+  },
+  "candidate_edges": [
+    {
+      "edge_id": "EQSRC-LINEAGE-001",
+      "from_candidate_id": "EQSRC-IDISC-V1",
+      "to_candidate_id": "EQSRC-IDISC-V2",
+      "edge_type": "repair_supersedes",
+      "change_class": "semantic_claim_scope_repair",
+      "supersedes": true,
+      "evidence_task_id": "RT-20260718-029",
+      "obstruction_id": "OBST-EQSRC-INTRINSIC-DISCRIMINATOR-RELATION-LABEL-001",
+      "finding": "v2 separates pointwise quotient labels from kernel-pair relation preservation and withdraws the v1 relation-fragility overread."
+    },
+    {
+      "edge_id": "EQSRC-LINEAGE-002",
+      "from_candidate_id": "EQSRC-IDISC-V2",
+      "to_candidate_id": "EQSRC-IDISC-V3",
+      "edge_type": "repair_supersedes",
+      "change_class": "typed_theorem_interface_repair",
+      "supersedes": true,
+      "evidence_task_id": "RT-20260718-031",
+      "obstruction_id": "OBST-EQSRC-INTRINSIC-DISCRIMINATOR-CHAIN-MAP-REFLECTION-001",
+      "finding": "v3 types cross-complex preservation and reflection and replaces whole-chain invertibility with injectivity of the induced H1 map as the exact reflection criterion."
+    },
+    {
+      "edge_id": "EQSRC-LINEAGE-003",
+      "from_candidate_id": "EQSRC-IDISC-V3",
+      "to_candidate_id": "EQSRC-CYCLE-BOUNDARY-V1",
+      "edge_type": "distinct_family_route_successor_after_local_freeze",
+      "change_class": "genuine_source_assumption_change",
+      "supersedes": false,
+      "evidence_task_id": "RT-20260718-034",
+      "evidence_path": "research_control/tasks/RT-20260718-034/artifacts/eqsrc_cycle_boundary_selector_route.yaml",
+      "evidence_sha256": "a322969ea0c754620eb00a7791eccfc38a48a579df3e99811439aa5cb866038a",
+      "finding": "The selector locally freezes the exact v3 cycle and moves from a supplied differential to an explicit odd oriented mark."
+    },
+    {
+      "edge_id": "EQSRC-LINEAGE-004",
+      "from_candidate_id": "EQSRC-CYCLE-BOUNDARY-V1",
+      "to_candidate_id": "EQSRC-ORIENTATION-TORSOR-V1",
+      "edge_type": "distinct_family_route_successor_after_local_freeze",
+      "change_class": "genuine_source_assumption_change",
+      "supersedes": false,
+      "evidence_task_id": "RT-20260718-038",
+      "evidence_path": "research_control/tasks/RT-20260718-038/artifacts/eqsrc_orientation_torsor_descent_route.yaml",
+      "evidence_sha256": "72dfe040bb3a57f9e9538edace026c0ef19582a3866ed6846b5c6f7a820480c7",
+      "finding": "The selector locally freezes exact cycle-boundary v1 and replaces a preferred orientation with an unpointed orientation torsor and associated object."
+    },
+    {
+      "edge_id": "EQSRC-LINEAGE-005",
+      "from_candidate_id": "EQSRC-ORIENTATION-TORSOR-V1",
+      "to_candidate_id": "EQSRC-ROOTED-PARTITION-V1",
+      "edge_type": "distinct_family_route_successor_after_local_freeze",
+      "change_class": "genuine_source_assumption_change",
+      "supersedes": false,
+      "evidence_task_id": "RT-20260718-042",
+      "evidence_path": "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml",
+      "evidence_sha256": "96b33a0985a01821049889557b8285d491a0363d4dee9b467880c147cb8ed99e",
+      "finding": "The selector locally freezes exact orientation-torsor v1 and moves the choice to supplied transition, projection, and singleton-root provenance."
+    },
+    {
+      "edge_id": "EQSRC-LINEAGE-006",
+      "from_candidate_id": "EQSRC-ROOTED-PARTITION-V1",
+      "to_candidate_id": "EQSRC-GRADED-ORBIT-ROOT-V1",
+      "edge_type": "distinct_family_route_successor_after_local_freeze",
+      "change_class": "genuine_source_assumption_change",
+      "supersedes": false,
+      "evidence_task_id": "RT-20260718-046",
+      "evidence_path": "research_control/tasks/RT-20260718-046/artifacts/eqsrc_flow_generated_graded_orbit_root_route.yaml",
+      "evidence_sha256": "e4134961754a593ec88d84a7eaaaafc0fe57758d65e7c486b6d5dd8fa4814e98",
+      "finding": "The selector locally freezes exact rooted-partition v1 and replaces independent graph, projection, and root data with a supplied ordered action, full component, global minimum, and grading."
+    }
+  ],
+  "stage_records": [
+    {"stage_id": "STAGE-027-CONSTRUCT", "candidate_id": "EQSRC-IDISC-V1", "stage_type": "construction", "task_id": "RT-20260718-027", "artifact_path": "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex", "artifact_sha256": "5f75d981dfa87790db6b3043497f7635ad74253bec84e4257e2f945e573e10e0", "disposition": "candidate_constructed_pending_audit"},
+    {"stage_id": "STAGE-028-AUDIT", "candidate_id": "EQSRC-IDISC-V1", "stage_type": "audit_obstruction", "task_id": "RT-20260718-028", "artifact_path": "research_control/tasks/RT-20260718-028/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_smuggling_audit.tex", "artifact_sha256": "6bed298c4386bf2f8e87d9e1279f39d6d883cec66ef462d4a60fb2b50f13fac5", "disposition": "precise_relation_label_obstruction_repair_required"},
+    {"stage_id": "STAGE-029-REPAIR", "candidate_id": "EQSRC-IDISC-V2", "stage_type": "repair_construction", "task_id": "RT-20260718-029", "artifact_path": "research_control/tasks/RT-20260718-029/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v2.tex", "artifact_sha256": "ecae76fc40f30945e9c2e5486481f13f3f50790a8ebb9223da4924d607faa7c4", "disposition": "relation_label_scope_repaired_pending_audit"},
+    {"stage_id": "STAGE-030-AUDIT", "candidate_id": "EQSRC-IDISC-V2", "stage_type": "audit_obstruction", "task_id": "RT-20260718-030", "artifact_path": "research_control/tasks/RT-20260718-030/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v2_smuggling_audit.tex", "artifact_sha256": "c13fe82681d5ab4f208b11e6b163ead62f274736e4b60afc11b18bf738eb0bd5", "disposition": "precise_chain_map_reflection_scope_obstruction_repair_required"},
+    {"stage_id": "STAGE-031-REPAIR", "candidate_id": "EQSRC-IDISC-V3", "stage_type": "repair_construction", "task_id": "RT-20260718-031", "artifact_path": "research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex", "artifact_sha256": "ed865297c417cadf4d030717d5c1a9c6c84335939c6fe9cee215192050bc30dd", "disposition": "cross_complex_reflection_scope_repaired_pending_audit"},
+    {"stage_id": "STAGE-032-AUDIT", "candidate_id": "EQSRC-IDISC-V3", "stage_type": "audit", "task_id": "RT-20260718-032", "artifact_path": "research_control/tasks/RT-20260718-032/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_smuggling_audit.tex", "artifact_sha256": "e0d92aab7bafa9356af83d4110bdb16833639ce0b0ae34a246bac4e108bc8eea", "disposition": "proposal_scope_audit_passed_pending_stress"},
+    {"stage_id": "STAGE-033-STRESS", "candidate_id": "EQSRC-IDISC-V3", "stage_type": "stress_obstruction", "task_id": "RT-20260718-033", "artifact_path": "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex", "artifact_sha256": "b46297ba4c62046ebd856cc0ec36f1083e3486f809d5c40a50db61dbcf31877c", "disposition": "scoped_differential_selection_obstruction"},
+    {"stage_id": "STAGE-034-FREEZE-ROUTE", "candidate_id": "EQSRC-IDISC-V3", "stage_type": "exact_cycle_local_freeze_and_distinct_route", "task_id": "RT-20260718-034", "artifact_path": "research_control/tasks/RT-20260718-034/artifacts/eqsrc_cycle_boundary_selector_route.yaml", "artifact_sha256": "a322969ea0c754620eb00a7791eccfc38a48a579df3e99811439aa5cb866038a", "disposition": "exact_v3_cycle_locally_frozen_no_adoption"},
+    {"stage_id": "STAGE-035-CONSTRUCT", "candidate_id": "EQSRC-CYCLE-BOUNDARY-V1", "stage_type": "construction", "task_id": "RT-20260718-035", "artifact_path": "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex", "artifact_sha256": "64901302bd6f37819ebd30aaaebaf39611d2c71c97d45b6cea6a39df11e0df94", "disposition": "candidate_constructed_pending_audit"},
+    {"stage_id": "STAGE-036-AUDIT", "candidate_id": "EQSRC-CYCLE-BOUNDARY-V1", "stage_type": "audit", "task_id": "RT-20260718-036", "artifact_path": "research_control/tasks/RT-20260718-036/artifacts/eqsrc_cycle_boundary_selector_law_smuggling_audit.tex", "artifact_sha256": "6169702f60659488e05cf0386afedc4b58b7395926923d5a2d365512182ca78f", "disposition": "conditional_source_purity_pass_pending_stress"},
+    {"stage_id": "STAGE-037-STRESS", "candidate_id": "EQSRC-CYCLE-BOUNDARY-V1", "stage_type": "stress_obstruction", "task_id": "RT-20260718-037", "artifact_path": "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress.tex", "artifact_sha256": "33d2cb4e5950c024eeed8ec93e1de90b583929ba333bfe182b6c8c5972df6220", "disposition": "scoped_orientation_descent_and_independent_selection_obstruction"},
+    {"stage_id": "STAGE-038-FREEZE-ROUTE", "candidate_id": "EQSRC-CYCLE-BOUNDARY-V1", "stage_type": "exact_cycle_local_freeze_and_distinct_route", "task_id": "RT-20260718-038", "artifact_path": "research_control/tasks/RT-20260718-038/artifacts/eqsrc_orientation_torsor_descent_route.yaml", "artifact_sha256": "72dfe040bb3a57f9e9538edace026c0ef19582a3866ed6846b5c6f7a820480c7", "disposition": "exact_v1_cycle_locally_frozen_no_adoption"},
+    {"stage_id": "STAGE-039-CONSTRUCT", "candidate_id": "EQSRC-ORIENTATION-TORSOR-V1", "stage_type": "construction", "task_id": "RT-20260718-039", "artifact_path": "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex", "artifact_sha256": "81b24c69403c304889a94caec8b2a99a6a360a49f40266764da4cfd3ba4edd5f", "disposition": "candidate_constructed_pending_audit"},
+    {"stage_id": "STAGE-040-AUDIT", "candidate_id": "EQSRC-ORIENTATION-TORSOR-V1", "stage_type": "audit", "task_id": "RT-20260718-040", "artifact_path": "research_control/tasks/RT-20260718-040/artifacts/eqsrc_orientation_torsor_descent_law_smuggling_audit.tex", "artifact_sha256": "06275c74d2d83ca68e518c755dfdda6f548e927bcc9c47fe4c74794c6fc685f1", "disposition": "conditional_formal_audit_pass_pending_stress"},
+    {"stage_id": "STAGE-041-STRESS", "candidate_id": "EQSRC-ORIENTATION-TORSOR-V1", "stage_type": "stress_obstruction", "task_id": "RT-20260718-041", "artifact_path": "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex", "artifact_sha256": "a658029cc1da56f776a403ef57582b49ab7bda7bf508dfdf9507c3f638248530", "disposition": "scoped_line_selection_and_physical_admissibility_obstruction"},
+    {"stage_id": "STAGE-042-FREEZE-ROUTE", "candidate_id": "EQSRC-ORIENTATION-TORSOR-V1", "stage_type": "exact_cycle_local_freeze_and_distinct_route", "task_id": "RT-20260718-042", "artifact_path": "research_control/tasks/RT-20260718-042/artifacts/eqsrc_ordered_motion_partition_provenance_route.yaml", "artifact_sha256": "96b33a0985a01821049889557b8285d491a0363d4dee9b467880c147cb8ed99e", "disposition": "exact_v1_cycle_locally_frozen_no_adoption"},
+    {"stage_id": "STAGE-043-CONSTRUCT", "candidate_id": "EQSRC-ROOTED-PARTITION-V1", "stage_type": "construction", "task_id": "RT-20260718-043", "artifact_path": "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex", "artifact_sha256": "24992d4b41d64bba860f5cd61d505d6b1ecaad3917e9195e0cbd3d897d955aef", "disposition": "candidate_constructed_pending_audit"},
+    {"stage_id": "STAGE-044-AUDIT", "candidate_id": "EQSRC-ROOTED-PARTITION-V1", "stage_type": "audit", "task_id": "RT-20260718-044", "artifact_path": "research_control/tasks/RT-20260718-044/artifacts/eqsrc_ordered_motion_rooted_partition_law_smuggling_audit.tex", "artifact_sha256": "36d4f057ad811ce30795a1d8f1a83093b981f7b40221423f291ca81d611deef0", "disposition": "conditional_source_audit_pass_with_universal_partition_encoding"},
+    {"stage_id": "STAGE-045-STRESS", "candidate_id": "EQSRC-ROOTED-PARTITION-V1", "stage_type": "stress_obstruction", "task_id": "RT-20260718-045", "artifact_path": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex", "artifact_sha256": "334a69fcb0ccaf91f7f428946202b84678277c70838dbf95f43166ad8d255ca0", "disposition": "scoped_root_and_relation_selection_obstruction"},
+    {"stage_id": "STAGE-046-FREEZE-ROUTE", "candidate_id": "EQSRC-ROOTED-PARTITION-V1", "stage_type": "exact_cycle_local_freeze_and_distinct_route", "task_id": "RT-20260718-046", "artifact_path": "research_control/tasks/RT-20260718-046/artifacts/eqsrc_flow_generated_graded_orbit_root_route.yaml", "artifact_sha256": "e4134961754a593ec88d84a7eaaaafc0fe57758d65e7c486b6d5dd8fa4814e98", "disposition": "exact_v1_cycle_locally_frozen_no_adoption"},
+    {"stage_id": "STAGE-047-CONSTRUCT", "candidate_id": "EQSRC-GRADED-ORBIT-ROOT-V1", "stage_type": "construction", "task_id": "RT-20260718-047", "artifact_path": "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex", "artifact_sha256": "b712552d328f144491bff689b702eba6dc2027ce1cc61c7052adbca84b0639f7", "disposition": "candidate_constructed_pending_audit"},
+    {"stage_id": "STAGE-009-AUDIT", "candidate_id": "EQSRC-GRADED-ORBIT-ROOT-V1", "stage_type": "audit", "task_id": "RT-20260720-009", "artifact_path": "research_control/tasks/RT-20260720-009/artifacts/eqsrc_flow_generated_graded_orbit_root_smuggling_audit.tex", "artifact_sha256": "3d7e49f05727f26ea97a65d88c0323c9721a5f78ebd7e718a6c163fe0fad067b", "disposition": "conditional_source_purity_pass_pending_family_lineage_and_freeze_review"}
+  ],
+  "proof_of_acyclicity": {
+    "method": "strict_construction_ordinal",
+    "statement": "Every candidate edge strictly increases the registered construction ordinal 27 < 29 < 31 < 35 < 39 < 43 < 47; therefore the finite directed graph is acyclic.",
+    "verified": true
+  },
+  "cross_family_supersession_rule": "Cross-family route-successor edges do not assert semantic supersession or identity. They preserve each prior exact-cycle local freeze and its scoped obstruction.",
+  "active_terminal": {
+    "candidate_id": "EQSRC-GRADED-ORBIT-ROOT-V1",
+    "freeze_status": "freeze_review_required",
+    "decision_owner": "P1-T03",
+    "p1_t03_executed": false
+  }
+}

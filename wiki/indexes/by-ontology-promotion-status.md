@@ -384,6 +384,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V18-P6-T02-FINITE-TOY-RESPONSE-V2-MODEL-OR-OBSTRUCTION` `research_control/tasks/RT-20260708-015/artifacts/finite_toy_response_v2_model_or_obstruction.tex`
 - `TEX-V18-P6-T03-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS` `research_control/tasks/RT-20260708-016/artifacts/finite_toy_response_v2_refuter_stress.tex`
 - `TEX-V21-P1-T01-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-009/artifacts/eqsrc_flow_generated_graded_orbit_root_smuggling_audit.tex`
+- `TEX-V21-P1-T02-EQSRC-CANONICAL-CHOICE-FAMILY-MAP` `research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex`
 
 ## superseded
 

@@ -1,0 +1,58 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260720-010"
+agent_job_id: "AJ-RT-20260720-010-001"
+status: "completed"
+completed_at: "2026-07-20T22:37:18Z"
+claim_status: "draft/control"
+recommendation:
+  superfamily_id: "EQSRC-SUPERFAMILY-CANONICAL-CHOICE"
+  family_count: 5
+  candidate_count: 7
+  family_ids:
+    - "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR"
+    - "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE"
+    - "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR"
+    - "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION"
+    - "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT"
+  candidate_ids:
+    - "EQSRC-IDISC-V1"
+    - "EQSRC-IDISC-V2"
+    - "EQSRC-IDISC-V3"
+    - "EQSRC-CYCLE-BOUNDARY-V1"
+    - "EQSRC-ORIENTATION-TORSOR-V1"
+    - "EQSRC-ROOTED-PARTITION-V1"
+    - "EQSRC-GRADED-ORBIT-ROOT-V1"
+  exact_duplicate_count: 0
+  representation_only_edge_count: 0
+  within_family_repair_edge_count: 2
+  distinct_family_route_edge_count: 4
+mathematical_findings:
+  - "The exact candidate graph is acyclic because every registered edge strictly increases construction ordinal 27 < 29 < 31 < 35 < 39 < 43 < 47."
+  - "Intrinsic-discriminator v1 v2 and v3 share a kernel-pair core but differ in theorem payload and repair lineage; they are immutable versions in one family and not duplicates."
+  - "Cross-family edges are genuine source-assumption changes and route succession only; they do not establish identity or semantic supersession."
+  - "Abstractly isomorphic F2^2-by-line instances do not make the laws identical because source domains selector primitives theorem signatures and assumption signatures differ."
+  - "The repeated finite evidence supports a family-level freeze review but not a freeze decision or a global no-go."
+hash_contract:
+  serialization: "UTF-8 canonical JSON with sorted keys and compact separators"
+  theorem_payload_field: "theorem_signature"
+  assumption_payload_field: "assumption_signature"
+  artifact_hash_separate: true
+evidence_paths:
+  - "research_control/tasks/RT-20260718-027/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-029/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v2.tex"
+  - "research_control/tasks/RT-20260718-031/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_candidate_v3.tex"
+  - "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+  - "research_control/tasks/RT-20260718-035/artifacts/eqsrc_cycle_boundary_selector_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_stress.tex"
+  - "research_control/tasks/RT-20260718-039/artifacts/eqsrc_orientation_torsor_descent_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_stress.tex"
+  - "research_control/tasks/RT-20260718-043/artifacts/eqsrc_ordered_motion_rooted_partition_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_stress.tex"
+  - "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex"
+  - "research_control/tasks/RT-20260720-009/artifacts/eqsrc_flow_generated_graded_orbit_root_smuggling_audit.tex"
+authority_boundary:
+  physics_promotion_authorized: false
+  family_freeze_authorized: false
+  p1_t03_reserved: true
+  global_no_go: false

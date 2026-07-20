@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-20T21:38:15Z`
-- Source fingerprint: `bafa07d4fd73d48af356059931099d6fbc245f4ebcbe9eb877f91ad82d47179e`
-- Nodes: `19878`
-- Edges: `68310`
+- Generated from tracked state as of: `2026-07-20T22:45:53Z`
+- Source fingerprint: `0ce324a103b3a9ff0cb6c032c76f15e00d55a583abc877df57526605291cc965`
+- Nodes: `19899`
+- Edges: `68364`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1010 |
+| `completion_yaml` | 1011 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 779 |
+| `handoff_yaml` | 780 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1010 |
+| `agent_job` | `support_only` | 1011 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10371 |
-| `blocked_burden` | `blocked` | 3771 |
-| `claim_boundary` | `support_only` | 967 |
-| `draft_control_candidate` | `draft_control` | 636 |
-| `draft_control_candidate` | `proposal_only` | 103 |
+| `artifact` | `support_only` | 10378 |
+| `blocked_burden` | `blocked` | 3774 |
+| `claim_boundary` | `support_only` | 968 |
+| `draft_control_candidate` | `draft_control` | 638 |
+| `draft_control_candidate` | `proposal_only` | 104 |
 | `draft_control_candidate` | `science_draft` | 62 |
-| `frozen_negative` | `frozen_negative` | 116 |
+| `frozen_negative` | `frozen_negative` | 117 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 779 |
+| `handoff` | `support_only` | 780 |
 | `human_gated_object` | `human_gated` | 424 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -52,12 +52,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `ledger_row` | `science_draft` | 4 |
 | `obstruction` | `blocked` | 74 |
 | `obstruction` | `rejected` | 1 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 30 |
-| `source_ontology_object` | `canonical_source` | 16 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 31 |
+| `source_ontology_object` | `canonical_source` | 17 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 319 |
+| `source_ontology_object` | `support_only` | 320 |
 | `task` | `human_gated` | 29 |
-| `task` | `science_draft` | 31 |
+| `task` | `science_draft` | 32 |
 | `task` | `support_only` | 950 |
 
 ## Frontier Table
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260720-009`
-- Latest handoff: `handoff-0779`
-- Handoff path: `research_control/handoffs/handoff-0779.yaml`
-- Next action: Run exactly one bounded v21 P1-T02 Ontology Formalizer ontology-law-research-packet to group the recent response-token orientation-line root partition and grading candidates into stable families and record exact construction audit stress repair freeze and supersession lineage. Do not execute P1-T03 or repair stress adopt reject or promote any candidate in the same task.
+- Active task: `RT-20260720-010`
+- Latest handoff: `handoff-0780`
+- Handoff path: `research_control/handoffs/handoff-0780.yaml`
+- Next action: Run exactly one bounded v21 P1-T03 Theoretical Continuation Selector packet to decide family-level freeze versus one materially distinct same-milestone theorem route. Do not repair audit stress adopt reject edit ontology change either scientific ledger promote or execute another v21 item in the same task.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

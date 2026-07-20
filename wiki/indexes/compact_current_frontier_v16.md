@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-009`
-- Latest handoff: `handoff-0779`
-- Current status: `v21_p1_t01_conditional_source_audit_pass_pending_p1_t02_family_lineage_map_no_promotion`
+- Active task: `RT-20260720-010`
+- Latest handoff: `handoff-0780`
+- Current status: `v21_p1_t02_five_family_seven_candidate_lineage_map_pass_pending_p1_t03_freeze_review_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-009`
-- Latest research handoff: `handoff-0779`
-- Latest research next action: Run exactly one bounded v21 P1-T02 Ontology Formalizer ontology-law-research-packet to group the recent response-token orientation-line root partition and grading candidates into stable families and record exact construction audit stress repair freeze and supersession lineage. Do not execute P1-T03 or repair stress adopt reject or promote any candidate in the same task.
+- Latest research task: `RT-20260720-010`
+- Latest research handoff: `handoff-0780`
+- Latest research next action: Run exactly one bounded v21 P1-T03 Theoretical Continuation Selector packet to decide family-level freeze versus one materially distinct same-milestone theorem route. Do not repair audit stress adopt reject edit ontology change either scientific ledger promote or execute another v21 item in the same task.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p1_t02_candidate_family_lineage_map`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p1_t03_eqsrc_candidate_family_freeze_review`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Group recent selector candidates into stable families and record exact lineage before family freeze review.
+- Milestone burden: Decide whether the mapped EqSrc selector family should be locally frozen or whether one materially distinct theorem route remains.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `e0704f10523c47d1a2c6b29976851786870b41e661b06220cf071a18d230d2e7`
-- JSON SHA-256: `bbc1b5aaa4872a06f13056409c1af3cb15bb8810eca3fa618d4d43d355a9e39c`
+- YAML SHA-256: `7dcece77d5f58552e2672be98c58d9b8177130f9a6f44eed6b40eb0886ab0175`
+- JSON SHA-256: `0c0b23f5844e06e4875c621c9ceb3c2a4d0d0e568115c106b763dbb21875fa96`
 
 ## Authority Warning
 

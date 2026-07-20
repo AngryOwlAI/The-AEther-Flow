@@ -1,0 +1,555 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-010-001"
+completion_id: "AJC-AJ-RT-20260720-010-001"
+task_id: "RT-20260720-010"
+decision_id: "DDR-20260720-010"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260720-010"
+status: "completed"
+created_at: "2026-07-20T22:19:51Z"
+started_at: "2026-07-20T22:19:51Z"
+completed_at: "2026-07-20T22:45:53Z"
+objective: "Execute only v21 P1-T02: build the proposal-only EqSrc candidate-family inventory, candidate-lineage DAG, family assumption-delta table, and formal family map from the tracked response-token, orientation-line, root, partition, and grading candidate chain."
+completion_summary: "P1-T02 records five stable candidate families, seven immutable candidates, two within-family repair-supersession edges, four cross-family route-successor edges, 22 stage records, six assumption-delta records, zero exact duplicates, and an acyclic construction order. Conditional kernel-pair algebra remains available after distinguished source data are supplied, while current ontology still does not derive the decisive selector, provenance, physical morphism, or variation law. Prior exact-cycle local freezes remain unchanged; the active family is freeze_review_required and P1-T03 owns the separate decision."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T02"
+  recommendation_ids:
+    - "V21-R02"
+    - "V21-R41"
+    - "V21-R52"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+  next_dependency_work_item: "P1-T03"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 10
+  passes_consumed: 10
+  route_work_item_id: "P1-T02"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "theorem_with_hypotheses_and_proof"
+minimum_payload:
+  payload_class: "theorem_with_hypotheses_and_proof"
+  payload_artifact_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex"
+  payload_summary: "Defines the five-family inventory, proves exact-duplicate separation under the registered hash signature, and proves lineage acyclicity from the strict construction order."
+has_new_mathematical_payload: true
+has_finite_local_witness: false
+has_countermodel: false
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-010/artifacts/child_phys_math_eqsrc_candidate_family_lineage.yaml"
+  - "research_control/tasks/RT-20260720-010/artifacts/child_phys_phil_eqsrc_candidate_family_lineage.yaml"
+  - "research_control/tasks/RT-20260720-010/artifacts/parent_conflict_review_eqsrc_candidate_family_lineage.yaml"
+  - "research_control/tasks/RT-20260720-010/artifacts/parent_fusion_notes_eqsrc_candidate_family_lineage.md"
+  - "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_inventory.json"
+  - "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_lineage_graph.json"
+  - "research_control/tasks/RT-20260720-010/artifacts/eqsrc_family_assumption_delta.csv"
+  - "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex"
+  - "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_family_lineage_receipt.md"
+  - "research_control/tasks/RT-20260720-010/artifacts/validate_eqsrc_candidate_family_lineage.py"
+  - "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_family_lineage_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-010/**"
+  - "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex"
+  - "research_control/handoffs/handoff-0780.yaml"
+  - "research_control/handoffs/handoff-0780.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  inventory:
+    path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_inventory.json"
+    sha256: "5a823d46054fa75ee7f5f7814aa76ff52ea3e8d8868547229d5b0b2a26e0685e"
+  lineage_graph:
+    path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_lineage_graph.json"
+    sha256: "ac6e01afde52c7586f9eee25f6fc93d0d519ae5a5c4bb78b874941187a2b3d91"
+  assumption_delta:
+    path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_family_assumption_delta.csv"
+    sha256: "7d88dd3765bb41f6ecfdedb7678e770306c94da5a30f93540639ee29392bfdda"
+  formal_map:
+    path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex"
+    sha256: "fcffa4e7d89654d3d9c656bc7ab0bde10b28ec3e36f4da4a7139759d036455dc"
+  validation:
+    path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_family_lineage_validation.json"
+    sha256: "d9f836e7b54a73eace030e788f10d3ce6a8b94d75f360ac011d2a462d1fd7d82"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260720-010/artifacts/parent_fusion_notes_eqsrc_candidate_family_lineage.md"
+    sha256: "d67fe5e6f5b794853d7ec08764657db6f6c70ff3f23c1435d32b4d6ca2beb6a2"
+  receipt:
+    path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_family_lineage_receipt.md"
+    sha256: "4641b6da561363a461cfb30aff9b9ef1afd5aa34dcd67f831d7f77e55aef2ff8"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-010/artifacts/child_phys_math_eqsrc_candidate_family_lineage.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-010/artifacts/child_phys_phil_eqsrc_candidate_family_lineage.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-010/artifacts/parent_conflict_review_eqsrc_candidate_family_lineage.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    summary: "Both perspectives identify the same five families and scoped recurrent provenance obstruction; no parallel revision round was required."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-010/artifacts/parent_fusion_notes_eqsrc_candidate_family_lineage.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Expose common mathematical structure across candidate cycles."
+  missing_source_law: "A lawful current-ontology selector and provenance law for choosing among differential, orientation, partition, root, action, component, physical-morphism, and variation packages."
+  underdetermination_statement: "Current ontology does not derive the selector, provenance, physical-morphism, or variation law that distinguishes or physically licenses the five inventoried candidate families."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_comparison"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "A typed comparison record over source-side candidate families, their explicit source domains, selector primitives, theorem statements, assumptions, and lineage stages."
+    formal_objects:
+      - "five stable candidate-family records"
+      - "seven immutable candidate records"
+      - "finite directed lineage graph"
+      - "representation-versus-assumption delta relation"
+    domains:
+      - "tracked proposal-only EqSrc selector candidates from RT-20260718-027 through RT-20260718-047"
+      - "tracked P1-T01 audit from RT-20260720-009"
+    maps:
+      - "candidate-to-family membership"
+      - "construction-ordinal map"
+      - "lineage edge relation"
+      - "hash-signature identity map"
+    proof_obligations:
+      - "preserve exact candidate artifact theorem assumption and ontology-anchor hashes"
+      - "prove lineage acyclicity"
+      - "separate repair supersession from distinct-family route succession"
+      - "reserve family-freeze authority to P1-T03"
+  candidate_law_comparison:
+    candidates:
+      - "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR"
+      - "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE"
+      - "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR"
+      - "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION"
+      - "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT"
+    comparison_basis:
+      - "immutable artifact hashes"
+      - "exact theorem-statement hashes"
+      - "canonicalized assumption hashes"
+      - "current ontology anchor hash"
+      - "construction audit stress repair freeze and route lineage"
+    selection_status: "No family is selected or adopted; the active family remains freeze_review_required pending P1-T03."
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Proposal-only comparison is authorized; adoption rejection or canonical ontology change remains human-gated."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "derive a lawful source selector without target atlas metric benchmark detector or process import"
+      - "derive general EqSrc and downstream M_src g_eff matter coupling and Einstein-equation links before promotion"
+      - "recover the exact-GR benchmark within the final validity regime"
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  atlas_glue_obligations:
+    profile_law: "Not established by this source-equivalence family map."
+    selector_law: "The missing current-ontology selector remains open."
+    transition_law: "No atlas transition law is introduced."
+    inverse_checks: "Not applicable at this source-family comparison stage."
+    cocycle_checks: "Not applicable at this source-family comparison stage."
+    finite_variation_robustness: "Physical variation selection remains underived."
+  failure_branches:
+    collapse: "Conditional two-class relations may collapse if supplied selector data degenerate."
+    nonuniqueness: "Five distinct families remain without a lawful current-ontology discriminator."
+    inverse_defect: "No downstream inverse or atlas claim is made."
+    cocycle_defect: "No downstream cocycle claim is made."
+    variation_fragility: "Independently justified physical variation classes remain absent."
+  known_risks:
+    - "Renaming supplied selector data could be mistaken for new source derivation."
+    - "Abstractly similar kernel-pair outputs could be mistaken for exact candidate identity."
+  failed_alternatives:
+    - "Treating cross-family route succession as semantic supersession."
+    - "Treating recurrent scoped underdetermination as a global no-go."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "none in P1-T02"
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "ontology_law_research_packet"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "EQSRC-SUPERFAMILY-CANONICAL-CHOICE"
+  item_source_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_inventory.json"
+  item_kind: "evidence/precondition"
+  classification: "status_boundary_evidence_only"
+  evidence_paths:
+    - "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_inventory.json"
+    - "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_lineage_graph.json"
+    - "research_control/tasks/RT-20260720-010/artifacts/eqsrc_family_assumption_delta.csv"
+    - "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex"
+  relation_to_current_ontology: "evidence_only"
+  relation_to_target_structures: "No target-side structure is used to define or select a family."
+  claim_boundary_id: "CB-V21-P1-T02-EQSRC-CANDIDATE-FAMILY-LINEAGE-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "The family and lineage map is accepted only as scoped comparison and freeze-review evidence."
+  forbidden_overreads:
+    - "source-law adoption or rejection"
+    - "family freeze completed"
+    - "global no-go or future source-extension impossibility"
+    - "physical covariance or general EqSrc established"
+    - "matter-coupling or Einstein-equation derivation"
+    - "benchmark promotion or completed derivation"
+  next_route_if_blocked: "P1-T03 theoretical-continuation-selector@0.1.0 freeze review"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-010-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Hash-signature candidate separation"
+    summary: "Under the declared exact-duplicate signature, the seven tracked candidates form five stable families and no pair is an exact duplicate."
+  - payload_id: "NMP-RT-20260720-010-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Construction-ordinal lineage acyclicity"
+    summary: "Every lineage edge strictly increases construction ordinal 27 < 29 < 31 < 35 < 39 < 43 < 47, so the finite directed graph is acyclic."
+  - payload_id: "NMP-RT-20260720-010-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "EqSrc candidate-family lineage DAG"
+    summary: "Records two within-family repair-supersession edges, four distinct-family route-successor edges, and 22 exact stage records."
+  - payload_id: "NMP-RT-20260720-010-004"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "P1-T02 family-map authority boundary"
+    summary: "Classifies the superfamily map as status-boundary evidence only with blocked adoption and open P1-T03 continuation."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Expose common mathematical structure across candidate cycles."
+  explanation: "P1-T02 adds exact cross-family identity and lineage structure and exposes recurrent selector underdetermination, but it neither selects nor adopts a source law and does not discharge general EqSrc."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "A proposal-only family and lineage map is a control precondition for P1-T03, not a source-law adoption or derivation-burden discharge."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; selector provenance physical morphism and variation primitives remain underived"
+  - burden: "Source equivalence EqSrc"
+    status: "five proposal-only families and seven candidates mapped; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged scoped source-extension relation data only"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "physical variation selection remains underived across all five families"
+  - burden: "benchmark promotion"
+    status: "blocked by missing source selection adoption and downstream derivations"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "prior exact-cycle local freezes preserved; active superfamily requires P1-T03 freeze review"
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT010-001"
+    payload_type: "theorem"
+    object_name: "Hash-signature candidate separation"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex"
+    burden_effect: "narrows"
+    summary: "Separates seven immutable candidates into five stable families with zero exact duplicates under the registered signature."
+  - payload_id: "PAYLOAD-RT010-002"
+    payload_type: "theorem"
+    object_name: "Construction-ordinal lineage acyclicity"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex"
+    burden_effect: "narrows"
+    summary: "Proves the six-edge lineage graph acyclic by strict construction order."
+  - payload_id: "PAYLOAD-RT010-003"
+    payload_type: "dependency_map_update"
+    object_name: "EqSrc candidate-family lineage DAG"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_lineage_graph.json"
+    burden_effect: "no_distance_delta"
+    summary: "Records exact repair, audit, stress, freeze, and distinct-route lineage without semantic overreach."
+  - payload_id: "PAYLOAD-RT010-004"
+    payload_type: "source_extension_classification"
+    object_name: "EqSrc canonical-choice superfamily status boundary"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_inventory.json"
+    burden_effect: "requires_human_gate"
+    summary: "Preserves proposal-only status, blocked adoption, and open P1-T03 continuation."
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p1_t02_family_lineage_map_completed_pending_p1_t03_freeze_review"
+  prior_related_tasks:
+    - "RT-20260718-027 through RT-20260718-047"
+    - "RT-20260720-009"
+    - "RT-20260720-010"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P1-T02 changes the unit of analysis from another candidate cycle to exact cross-family identity, assumption, and lineage structure; P1-T03 must now make the separate freeze-or-distinct-route decision."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0 for v21 P1-T03"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  prior_attempts_considered:
+    - "RT-20260718-027 through RT-20260718-047"
+    - "RT-20260720-009"
+    - "RT-20260720-010"
+  criteria_evaluated:
+    - "Five distinct families recur at the same missing-selector and provenance burden."
+    - "Two within-family repairs materially changed theorem scope while four cross-family routes materially changed source assumptions."
+    - "No current family derives its selector provenance or physical variation law from current ontology."
+  freeze_if:
+    - "P1-T03 finds that every remaining route merely renames supplied selector data without a materially distinct source-side theorem."
+    - "P1-T03 finds no lawful discriminator that avoids the recorded recurrent provenance obstruction."
+  do_not_freeze_if:
+    - "P1-T03 identifies a materially distinct same-milestone theorem route with new testable payload and explicit provenance obligations."
+  freeze_decision: "freeze_review_required"
+  decision_reason: "The family map now supplies the evidence required for review, but P1-T02 lacks authority to make the P1-T03 family-level decision."
+  rationale: "Prior exact-cycle freezes are preserved; the superfamily decision remains open and separately owned."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "freeze_review"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The inventory lineage theorem and validator establish bounded draft/control structure only. They do not prove a global no-go, adopt or reject a law, establish physical covariance or general EqSrc, authorize M_src adoption or g_eff expansion, derive matter coupling or Einstein equations, promote the benchmark, reject the global theory, or complete the derivation."
+  forbidden_conclusions:
+    - "global no-go theorem or future source-extension impossibility"
+    - "global theory rejection"
+    - "canonical ontology edit or source-law adoption or rejection"
+    - "family freeze completed in P1-T02"
+    - "physical admissibility or covariance established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff adoption or scope expansion"
+    - "matter coupling or Einstein-equation derivation"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion or Gate Chair verdict"
+    - "completed derivation"
+
+selected_next_route:
+  route_id: "v21_p1_t03_eqsrc_candidate_family_freeze_review"
+  route_label: "theoretical_continuation_selection"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P1-T03"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Decide whether the mapped EqSrc selector family should be locally frozen or whether one materially distinct theorem route remains."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Evaluate the five-family map and choose exactly one family-level freeze or materially distinct same-milestone continuation route without adoption or promotion."
+  source_handoff: "research_control/handoffs/handoff-0780.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P1-T02-EQSRC-CANDIDATE-FAMILY-LINEAGE-001"
+  allowed_scope: "Exact P1-T02 proposal-only family inventory, immutable candidate identity, lineage DAG, assumption-delta classification, formal family map, and one P1-T03 route."
+  blocked_scope: "Candidate repair audit stress family freeze adoption rejection ontology edit physical claims general EqSrc ledger changes downstream GR benchmark promotion Gate Chair verdict publication completed derivation or global no-go."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_family_lineage_validation.json"
+  local_validator_report_hash: "d9f836e7b54a73eace030e788f10d3ce6a8b94d75f360ac011d2a462d1fd7d82"
+  inventory_hash: "5a823d46054fa75ee7f5f7814aa76ff52ea3e8d8868547229d5b0b2a26e0685e"
+  lineage_graph_hash: "ac6e01afde52c7586f9eee25f6fc93d0d519ae5a5c4bb78b874941187a2b3d91"
+  assumption_delta_hash: "7d88dd3765bb41f6ecfdedb7678e770306c94da5a30f93540639ee29392bfdda"
+  formal_map_hash: "fcffa4e7d89654d3d9c656bc7ab0bde10b28ec3e36f4da4a7139759d036455dc"
+  validation_status: "PASS"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 10 lease parity route identity max effort repository binding clean start predecessor checkpoint and single consumption were verified before work."
+      - "Memory preflight refreshed local retrieval and the exact registered sources and registry rows were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required perspectives completed and the parent conflict review resolved with zero revision rounds."
+      - "The fused artifacts preserve exact identity lineage and non-promotion boundaries."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Repository validation documentation impact signal parity generated freshness and whitespace checks remain required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph and claim graph remain to be regenerated and checked."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap and validate-only remain required after source registration."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 913
+    relationship_row_count: 4525
+    semantic_row_count: 913
+    vault_row_count: 913
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P1-T02 candidate family lineage map\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P1-T02 candidate family lineage map"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"EqSrcFlowGeneratedGradedOrbitRootLaw response token orientation line root partition grading\" --limit 10 --json"
+      query_type: "search"
+      query_text: "EqSrcFlowGeneratedGradedOrbitRootLaw response token orientation line root partition grading"
+      returned_object_ids:
+        - "TEX-V21-P1-T01-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "TEX-V21-P1-T01-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-009/artifacts/eqsrc_flow_generated_graded_orbit_root_smuggling_audit.tex"
+      source_hash: "3d7e49f05727f26ea97a65d88c0323c9721a5f78ebd7e718a6c163fe0fad067b"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "48ff30cba636fe6811a78eb51aede1819abad62963576f3e0445cb12e010e2a7"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "c8a703441ba0d137f29d7b38664b8d57bc343f4c6cfea52330333d55fcb3c3bd"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-010/artifacts/validate_eqsrc_candidate_family_lineage.py | exit_code=0 | PASS"
+  - ".venv/bin/python research_control/tasks/RT-20260720-010/artifacts/validate_eqsrc_candidate_family_lineage.py --write-report --json | exit_code=0 | PASS families=5 candidates=7 edges=6 stages=22 deltas=6 exact_duplicates=0"
+
+next_recommended_action: "Run exactly one v21 P1-T03 Theoretical Continuation Selector packet to decide family-level freeze versus one materially distinct same-milestone theorem route."
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "P1-T02 found a scientific family-level selector and provenance boundary already owned by P1-T03, not a shared project-system defect."

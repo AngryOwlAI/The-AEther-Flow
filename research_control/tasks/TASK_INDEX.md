@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `2e28360c6372d4b3370b3d80c40bb2458596798ac38b2d6521f682d8579ff5f1`
-- Generated-at source timestamp: `2026-07-20T21:32:25Z`
-- Row count: `1014`
+- Source fingerprint: `6aba416b28ef17fc50a66faeb6a9ca742fc3b5354df895faeed9a291f8691a55`
+- Generated-at source timestamp: `2026-07-20T22:19:51Z`
+- Row count: `1015`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260720-010|RT-20260720-009|2026-07-20T22:19:51Z|2026-07-20T22:45:53Z|v21_eqsrc_candidate_family_lineage_map|completed|source_equivalence_eqsrc|Expose common mathematical structure across candidate cycles.|ontology-formalizer@0.2.0|false|false|12|Run exactly one v21 P1-T03 Theoretical Continuation Selector packet to decide family-level freeze versus one materially distinct same-milestone theorem route.|PASS|research_control/tasks/RT-20260720-010/jobs/completions/AJC-AJ-RT-20260720-010-001.yaml|
 |RT-20260720-009|RT-20260720-008|2026-07-20T21:32:25Z|2026-07-20T21:38:15Z|eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit|completed|source_equivalence_eqsrc|Audit the exact proposal-only flow-generated graded-orbit root source law before family-level freeze review or protected adoption review.|smuggling-auditor@0.2.0|false|false|9|Run exactly one v21 P1-T02 Ontology Formalizer packet to group recent response-token orientation-line root partition and grading candidates into stable families with construction audit stress repair freeze and supersession lineage.|PASS|research_control/tasks/RT-20260720-009/jobs/completions/AJC-AJ-RT-20260720-009-001.yaml|
 |RT-20260720-008|RT-20260720-007|2026-07-20T20:48:30Z|2026-07-20T20:54:33Z|v21_independent_prelaunch_audit|completed|source_equivalence_eqsrc|Prove the plan is complete and executable before recursive implementation.|external-red-team-reviewer@0.1.0|false|false|5|Run exactly one bounded P1-T01 fresh Smuggling Auditor ontology-law-research-packet against the unchanged EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1.|PASS|research_control/tasks/RT-20260720-008/jobs/completions/AJC-AJ-RT-20260720-008-001.yaml|
 |RT-20260720-007|RT-20260720-006|2026-07-20T19:57:45Z|2026-07-20T20:08:27Z|v21_production_launch_manifest|completed|source_equivalence_eqsrc|Bind the plan to the continue-research-goal v4 runtime without launching it from this task.|director-of-research@0.3.0|false|false|6|Route one separately bounded P0-T05 independent prelaunch audit; do not execute it or P1-T01 in this task.|PASS|research_control/tasks/RT-20260720-007/jobs/completions/AJC-AJ-RT-20260720-007-001.yaml|

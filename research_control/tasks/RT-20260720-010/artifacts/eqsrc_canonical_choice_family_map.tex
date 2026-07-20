@@ -1,0 +1,260 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+\newcommand{\Ftwo}{\mathbb F_2}
+\newcommand{\Bottom}{\mathsf{Bottom}_{\mathrm{src}}}
+
+\title{V21 P1-T02 Proposal-Only EqSrc Canonical-Choice\\
+Candidate-Family and Lineage Map}
+\author{Ontology Formalizer control packet RT-20260720-010}
+\date{2026-07-20}
+
+\begin{document}
+\maketitle
+
+\section{Control status and exact question}
+
+This artifact executes only v21 work item \texttt{P1-T02}. It assigns stable
+family identities and immutable candidate identities to the recent
+intrinsic-discriminator, cycle-boundary, orientation-torsor,
+rooted-partition, and graded-orbit candidate chain. It records exact
+construction, audit, stress, repair, local-freeze, and route-successor
+lineage without changing any candidate's scientific status.
+
+Every candidate remains \texttt{proposal-only}, \texttt{draft/control}, and
+\texttt{source-extension data}. Current ontology does not derive the
+decisive source-side selector. The adoption status is
+\texttt{blocked\_adoption\_open\_continuation}. This packet does not repair,
+audit, stress, freeze, adopt, reject, or promote a candidate. P1-T03 owns the
+separate family-freeze or materially-distinct-route decision.
+
+\section{Stable family and candidate identities}
+
+\begin{longtable}{p{0.25\linewidth}p{0.22\linewidth}p{0.43\linewidth}}
+\toprule
+Family ID & Candidate IDs & Exact scope \\
+\midrule
+\endfirsthead
+\toprule
+Family ID & Candidate IDs & Exact scope \\
+\midrule
+\endhead
+\texttt{EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR} &
+\texttt{EQSRC-IDISC-V1}, \texttt{-V2}, \texttt{-V3} &
+Finite two-truncated $\Ftwo$ chain packages, homology discriminator,
+boundary subspace, kernel-pair relation, and boundary translations. \\
+\texttt{EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE} &
+\texttt{EQSRC-CYCLE-BOUNDARY-V1} &
+Odd oriented mark, marked automorphisms, invariant state space, odd-mark
+functional, and its kernel line. \\
+\texttt{EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR} &
+\texttt{EQSRC-ORIENTATION-TORSOR-V1} &
+Unordered both-odd bipartition, free $C_2$ orientation torsor, equivariant
+fibre lines, and associated state--relation object. \\
+\texttt{EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION} &
+\texttt{EQSRC-ROOTED-PARTITION-V1} &
+Transition certificates, event projection, singleton root, path parity,
+ordered partition, boundary line, and kernel-pair relation. \\
+\texttt{EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT} &
+\texttt{EQSRC-GRADED-ORBIT-ROOT-V1} &
+Ordered-monoid action, full component, reachability covers, global minimum,
+rank parity, boundary line, and kernel-pair relation. \\
+\bottomrule
+\end{longtable}
+
+The machine-readable inventory stores, for every candidate, the exact source
+artifact SHA-256, a canonical hash of its normalized theorem-statement
+signature, a canonical hash of its assumption signature, and the current
+ontology anchor hash. These hashes are identity and provenance evidence; they
+are not proof or adoption authority.
+
+\begin{definition}[Exact candidate identity and duplication]
+For an inventory entry $c$, let
+\[
+ I(c)=\bigl(\operatorname{id}(c),F(c),v(c),H_{\rm art}(c),
+ H_{\rm thm}(c),H_{\rm asm}(c),H_{\rm ont}(c)\bigr).
+\]
+Two inventory entries are \emph{exact duplicates} only if their artifact,
+theorem-statement, assumption, and ontology-anchor hashes agree. Similar
+names, isomorphic finite instances, or a shared kernel-pair codomain are not
+identity criteria.
+\end{definition}
+
+\section{Exact lineage graph}
+
+The graph contains two within-family repair edges
+\[
+ \texttt{IDISC-V1}\longrightarrow\texttt{IDISC-V2}
+ \longrightarrow\texttt{IDISC-V3}
+\]
+and four distinct-family route-successor edges
+\[
+ \texttt{IDISC-V3}\longrightarrow\texttt{CYCLE-BOUNDARY-V1}
+ \longrightarrow\texttt{ORIENTATION-TORSOR-V1}
+ \longrightarrow\texttt{ROOTED-PARTITION-V1}
+ \longrightarrow\texttt{GRADED-ORBIT-ROOT-V1}.
+\]
+The first two edges are semantic theorem-scope repairs and supersede the
+earlier variant inside one family. The last four edges are materially
+distinct route successors after an exact-cycle local freeze. They do not
+assert cross-family identity or semantic supersession.
+
+\begin{proposition}[Acyclicity of the exact candidate graph]
+The candidate lineage graph recorded by P1-T02 is acyclic.
+\end{proposition}
+
+\begin{proof}
+Assign construction ordinal
+\[
+ 27<29<31<35<39<43<47
+\]
+to the seven candidates in the displayed order. Every registered edge
+strictly increases this ordinal. A directed cycle would give a finite strict
+chain returning to its starting ordinal, which is impossible.
+\end{proof}
+
+\begin{proposition}[No exact duplicates in the bounded inventory]
+No two distinct candidates, and no two distinct families, in the bounded
+P1-T02 inventory are exact duplicates.
+\end{proposition}
+
+\begin{proof}
+The task-local validator recomputes every artifact, theorem-statement,
+assumption, and ontology-anchor hash. Intrinsic-discriminator v1, v2, and v3
+share a core relation constructor but have different theorem and assumption
+signatures after their substantive repairs. Every cross-family pair has a
+different source domain or selector primitive and therefore a different
+assumption signature. Hence no distinct pair satisfies the exact-duplicate
+criterion.
+\end{proof}
+
+\section{Inventory-scoped selector criterion}
+
+\begin{definition}[Line-selected kernel pair]
+Let $A$ be an $\Ftwo$-vector space and let a selector value $s$ determine a
+subspace $B_s\subseteq A$. Define
+\[
+ x\,R_s\,y\quad\Longleftrightarrow\quad x-y\in B_s.
+\]
+This definition is algebraic. It does not state where $s$ comes from or that
+any selector is physically admissible.
+\end{definition}
+
+\begin{theorem}[Distinct selected lines give distinct relations]
+If $B_s\ne B_t$, then $R_s\ne R_t$. Consequently, a candidate's admission
+axioms do not determine a unique relation whenever they admit two selector
+values with distinct selected subspaces.
+\end{theorem}
+
+\begin{proof}
+Choose $b$ in the symmetric difference of $B_s$ and $B_t$; without loss of
+generality $b\in B_s\setminus B_t$. Then $0\,R_s\,b$, while
+$0\not\mathrel{R_t}b$. Thus the relations differ. The second statement is
+the direct application of this witness to the admitted selector values.
+\end{proof}
+
+\begin{remark}[Exact scope]
+This theorem is not the general source-natural selector theorem reserved for
+P2. It is a small algebraic criterion used only to normalize the already
+tracked finite evidence. It does not show that every future source extension
+admits multiple selector values.
+\end{remark}
+
+\section{Tracked finite instantiations and repeated obstruction}
+
+\begin{longtable}{p{0.25\linewidth}p{0.65\linewidth}}
+\toprule
+Family & Tracked bounded evidence \\
+\midrule
+\endfirsthead
+\toprule
+Family & Tracked bounded evidence \\
+\midrule
+\endhead
+Intrinsic discriminator & Exact v3 stress retains four valid differentials
+on fixed carriers that induce different relations; current ontology does not
+select the differential. \\
+Cycle boundary & The bounded stress exposes multiple line choices under the
+broader symmetry and an orientation-descent and independent-selection
+obstruction. \\
+Orientation torsor & The bounded stress exposes multiple equivariant
+descended lines and no source-derived physical line or variation selector. \\
+Rooted partition & Among the enumerated four-token cases, 265 admitted
+transition graphs support two root-induced relations, and all 182 distinct
+ordered odd-block changes change the relation. \\
+Graded orbit & Every nontrivial ordered finite partition is realizable by
+freely supplied action data; the local record also fails to certify its
+ambient component completion. \\
+\bottomrule
+\end{longtable}
+
+The shared obstruction identity is
+\texttt{OB-EQSRC-CANONICAL-CHOICE-SOURCE-PROVENANCE-RECURS-001}.
+It says only that the current ontology does not derive the decisive
+differential, oriented mark, partition line, root, ordered action, component,
+physical morphism, or physical variation selector in these tracked families.
+The finite algebra survives after the data are supplied. No global no-go,
+future-source-extension impossibility, or program-level rejection follows.
+
+\section{Representation versus genuine assumption change}
+
+No registered edge is classified as representation-only. The v1-to-v2 and
+v2-to-v3 intrinsic-discriminator edges preserve the kernel-pair core but make
+substantive semantic and typed-theorem repairs. Each cross-family edge changes
+the supplied source primitives: differential; oriented mark; unordered
+partition and torsor; transition, projection, and root; or ordered action,
+full component, and grading. The task-local assumption-delta table records
+these changes exactly.
+
+\section{Source-extension and no-target classification}
+
+The whole candidate objects are proposal-only new-primitive candidates under
+\texttt{blocked\_adoption\_open\_continuation}. Their conditional algebra is
+not reclassified as derived from current ontology. Prior audits, stresses,
+selector decisions, and this lineage map are status-boundary evidence only.
+
+No target topology, target smooth atlas, target metric, proper time, detector
+semantics, benchmark success, generated derivative, registry row, validator,
+role, handoff, file order, or task-process status is used as a source premise.
+A validator PASS establishes structural consistency only. Absence of explicit
+target or process import does not establish source provenance, physical
+admissibility, or derivation from current ontology.
+
+\section{Distance-to-GR and freeze boundary}
+
+\begin{center}
+\begin{tabular}{p{0.35\linewidth}p{0.5\linewidth}}
+\toprule
+Object & Status after P1-T02 \\
+\midrule
+General $\mathsf{EqSrc}$ & Undischarged; no adopted source law. \\
+Distance-to-GR ledger & Unchanged. \\
+Metric-use ledger & Unchanged. \\
+Prior exact candidate cycles & Existing local freezes preserved exactly. \\
+Active graded-orbit family & \texttt{freeze\_review\_required}; no decision here. \\
+P1-T03 & Dependency-next and not executed by this packet. \\
+Canonical ontology and downstream GR & No edit, adoption, derivation, or promotion authorized. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Conclusion}
+
+P1-T02 creates one auditable family inventory, one acyclic candidate lineage
+graph, and one assumption-delta table. It identifies five stable families,
+seven immutable candidates, no exact duplicates, two within-family repairs,
+and four distinct-family route-successor edges. The recurrent scoped
+obstruction is preserved without overread. P1-T03 must decide whether to
+freeze the families at family level or permit one materially distinct theorem
+route.
+
+\end{document}
