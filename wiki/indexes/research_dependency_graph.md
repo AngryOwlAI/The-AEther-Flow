@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-20T04:18:12Z`
-- Source fingerprint: `b0a9e58a549aef34406ce5593ce056e7dc00c7f4f5ad3bac8a6a18855932e50b`
-- Nodes: `19695`
-- Edges: `67870`
+- Generated from tracked state as of: `2026-07-20T20:54:33Z`
+- Source fingerprint: `c48be5e3d21c460d3df096454a3b430f7e9e6d2686b9bdc0532fa5c64b898cc2`
+- Nodes: `19850`
+- Edges: `68257`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1001 |
+| `completion_yaml` | 1009 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 772 |
+| `handoff_yaml` | 778 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1001 |
+| `agent_job` | `support_only` | 1009 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10293 |
-| `blocked_burden` | `blocked` | 3706 |
-| `claim_boundary` | `support_only` | 958 |
+| `artifact` | `support_only` | 10364 |
+| `blocked_burden` | `blocked` | 3760 |
+| `claim_boundary` | `support_only` | 966 |
 | `draft_control_candidate` | `draft_control` | 633 |
 | `draft_control_candidate` | `proposal_only` | 102 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 115 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 772 |
+| `handoff` | `support_only` | 778 |
 | `human_gated_object` | `human_gated` | 424 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 318 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 31 |
-| `task` | `support_only` | 941 |
+| `task` | `support_only` | 949 |
 
 ## Frontier Table
 
@@ -87,6 +87,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:accepted_evidence_preconditions_as_adopted_objects` | Blocked claim: accepted evidence/preconditions as adopted objects | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:activation_date_mutation` | Blocked permission: activation date mutation | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:active_cache_or_supersedence` | Blocked claim: active cache or supersedence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:active_eqsrc_candidate_mutation` | Blocked permission: active EqSrc candidate mutation | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:active_state_validator_source_edit` | Blocked permission: active-state validator source edit | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:active_supersedence` | Blocked claim: active supersedence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:active_supersedence_or_evidence_deduplication_execution` | Blocked permission: active supersedence or evidence deduplication execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:backlog_as_eqsrc_discharge` | Blocked claim: backlog as EqSrc discharge | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_execution_of_downstream_tasks` | Blocked claim: backlog as execution of downstream tasks | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_gate_chair_verdict` | Blocked claim: backlog as Gate Chair verdict | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:backlog_as_matter_coupling` | Blocked claim: backlog as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260718-047`
-- Latest handoff: `handoff-0772`
-- Handoff path: `research_control/handoffs/handoff-0772.yaml`
-- Next action: Run one fresh bounded Smuggling Auditor ontology-law-research-packet against exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Audit ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity target or process imports validator overread and physical-covariance overread; do not repair stress adopt or promote the candidate.
+- Active task: `RT-20260720-008`
+- Latest handoff: `handoff-0778`
+- Handoff path: `research_control/handoffs/handoff-0778.yaml`
+- Next action: Run exactly one bounded v21 P1-T01 fresh Smuggling Auditor ontology-law-research-packet against the unchanged EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Do not combine P10-T01, P13-T01, or P13-T03 in the same task.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

@@ -1,0 +1,146 @@
+schema_id: "external_red_team_review_artifact_schema_v1"
+schema_path: ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+review_id: "ERT-REVIEW-V21-P0-T05-001"
+task_id: "RT-20260720-008"
+agent_job_id: "AJ-RT-20260720-008-001"
+role_execution_ref: "external-red-team-reviewer@0.1.0--RT-20260720-008"
+reviewed_object_id: "v21-P0-T05-prelaunch-contract-set"
+reviewed_source_paths:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/v21_recommendation_backlog.yaml"
+  - "research_control/tasks/RT-20260720-006/artifacts/v21_source_hash_manifest.json"
+  - "research_control/tasks/RT-20260720-007/artifacts/v21_relay_launch_manifest.md"
+  - "research_control/tasks/RT-20260720-007/artifacts/v21_scope_contract_candidate.json"
+  - "research_control/tasks/RT-20260720-007/artifacts/v21_completion_contract.md"
+  - "research_control/tasks/RT-20260720-007/artifacts/v21_prelaunch_checklist.md"
+  - "research_control/tasks/RT-20260720-007/artifacts/v21_launch_manifest_receipt.json"
+  - "research_control/tasks/RT-20260720-007/jobs/completions/AJC-AJ-RT-20260720-007-001.yaml"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - "research_control/handoffs/handoff-0777.yaml"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/frontier_theorem_inventory.md"
+claim_under_review: "The tracked v21 scope is complete and authority-bounded enough for the existing active relay to advance after P0-T05, with P1-T01 remaining the first scientific task."
+workflow_success_disregarded_as_evidence: true
+validator_success_disregarded_as_evidence: true
+assumptions_read:
+  - "P0-T04 has qualifying finalized canonical completion evidence and handoff-0777 selects exactly P0-T05."
+  - "The active relay scope is immutable, allows no expansion, and permits one worker invocation plus at most one outer AgentJob per generation."
+  - "Project-system validation cannot prove a science claim and science roles cannot silently execute project-system changes."
+  - "A protected work item receives no worker invocation until its exact human authorization exists."
+definitions_read:
+  - "v21 recommendation coverage roles"
+  - "explicit dependency DAG"
+  - "worker_skill and role_family route fields"
+  - "human_intervention_boundary"
+  - "continue-research-goal v4 fixed guards"
+  - "v21 completion contract"
+proof_steps_checked:
+  - "Each V21-R01 through V21-R72 row has a direct task, a direct-task validation path, P16-T01 final coverage audit, and P16-T06 final disposition."
+  - "All 122 unique work items and 183 derived edges form an acyclic graph reachable from P0-T01."
+  - "Every project-system task routes only through improve-project-system and no science/control task does so."
+  - "All seven human gates deny relay-supplied authority and block invocation before exact human authorization."
+  - "The scope candidate exactly matches the backlog work-item IDs, objectives, dependencies, and registered plan hash."
+  - "Null scheduling horizons leave all fixed v4 human-gate, no-progress, repeated-state, validation, capability, and repository stops intact."
+circularity_findings:
+  - "No blocking circular completion criterion was found: P0-T05 establishes prelaunch readiness only, while P16-T01 and P16-T06 remain separate final-evidence tasks."
+hidden_import_findings:
+  - "No blocking target import was found in the control contract; all work-item promotion and proof-authority flags remain false."
+  - "Workflow status, registry status, validator PASS, and relay continuation remain explicitly blocked as scientific evidence."
+notation_overload_findings:
+  - "The word external in the role name must not be read as epistemic independence; P11-T02 owns that classification."
+unproven_equivalence_findings:
+  - "Complete recommendation traceability is not equivalent to completed recommendation implementation."
+  - "Manifest/backlog parity is not equivalent to scientific correctness, source-law adoption, EqSrc discharge, benchmark recovery, or completed GR derivation."
+minimal_countermodel_attempt:
+  attempted: true
+  result: "no_countermodel_found_under_scope"
+  summary: "Attempted failure paths for missing coverage, dependency cycle, cross-worker authority laundering, preauthorization human-gate invocation, scope expansion, and process-as-proof. The explicit contract blocks each tested path; four nonblocking observations remain."
+  artifact_path: "research_control/tasks/RT-20260720-008/artifacts/v21_relay_readiness_verdict.yaml"
+external_mathematical_pressure_points:
+  - "Treat this as a same-context skeptical control review, not independent replication."
+  - "Keep P1-T01 as the selected first scientific packet while preserving other dependency-ready tasks as pending."
+  - "Recompute mutable hashes before any future launch and stop on unexplained drift."
+  - "Require P16-T01 and P16-T06 before claiming full recommendation completion."
+verdict: "no_blocking_defect_found_as_written"
+recommended_next_route: "Run exactly one bounded P1-T01 fresh Smuggling Auditor ontology-law-research-packet against the unchanged graded-orbit root candidate."
+physics_promotion_authorized: false
+audit_checks:
+  recommendation_coverage:
+    status: "PASS"
+    recommendation_count: "72"
+    missing_direct_task_count: "0"
+    missing_validation_path_count: "0"
+    missing_final_audit_count: "0"
+    missing_final_disposition_count: "0"
+  dependency_graph:
+    status: "PASS"
+    node_count: "122"
+    edge_count: "183"
+    acyclic: true
+    all_nodes_reachable: true
+    topological_order_count: "122"
+  worker_skill_boundaries:
+    status: "PASS"
+    route_counts:
+      - "continue-research=83"
+      - "improve-project-system=33"
+      - "none_until_human_authorization=6"
+  human_gates:
+    status: "PASS"
+    gate_count: "7"
+    gate_ids:
+      - "P14-T04"
+      - "P15-T05"
+      - "P15-T07"
+      - "P4-T05"
+      - "P7-T08"
+      - "P8-T07"
+      - "P9-T09"
+    relay_may_supply_human_authority: false
+  relay_manifest_parity:
+    status: "PASS"
+    scope_projection_sha256: "24d4a2e285ee2eea827f14119232475f40fad34985fd6cf6389323344ed4b6bc"
+    backlog_projection_sha256: "24d4a2e285ee2eea827f14119232475f40fad34985fd6cf6389323344ed4b6bc"
+    frozen_backlog_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+    manifest_sha256: "e32b15ffcc84fa084641d1f5ace3e970249d64a9c8e77f42829659bcef4d9348"
+    scope_contract_sha256: "8584bd8a30cd3d3f1bb4159c3062b46d8d2568b066bf3208d18a845a1a024299"
+    completion_contract_sha256: "6e29c625d0242c32f48ab8c295f2a185d4477b322e6808487f34c87c531dda49"
+  stop_guards:
+    status: "PASS"
+    scheduling_horizon: "unlimited_by_null_only"
+    fixed_guards:
+      allow_scope_expansion: "false"
+      max_repeated_state_fingerprints: "1"
+      stop_on_human_gate: "true"
+      stop_on_no_progress: "true"
+      stop_on_repeated_state: "true"
+  authority_separation:
+    status: "PASS"
+    physics_promotion_authorized: false
+    proof_authority: false
+    validator_pass_is_scientific_evidence: false
+findings:
+  - finding_id: "P0-T05-OBS-001"
+    severity: "advisory"
+    status: "nonblocking"
+    finding: "The registered role name external-red-team-reviewer does not establish epistemic independence for this same-context review."
+    exact_repair_route: "P11-T02 defines normalized reviewer-independence and model-diversity classifications; do not relabel this packet as independent replication."
+  - finding_id: "P0-T05-OBS-002"
+    severity: "advisory"
+    status: "nonblocking"
+    finding: "P0 recommendation coverage is traceability and prelaunch pressure, not evidence that downstream recommendation implementations are complete."
+    exact_repair_route: "Preserve every downstream task disposition and require P16-T01 final coverage evidence before any all-recommendations-complete statement."
+  - finding_id: "P0-T05-OBS-003"
+    severity: "informational"
+    status: "nonblocking"
+    finding: "P0-T05 makes four tasks immediately dependency-ready; the existing scientific handoff selects P1-T01 while P10-T01, P13-T01, and P13-T03 remain eligible but unselected."
+    exact_repair_route: "Dispatch only one immutable included work item per generation and preserve the other eligible tasks as pending."
+  - finding_id: "P0-T05-OBS-004"
+    severity: "informational"
+    status: "nonblocking"
+    finding: "The launch packet intentionally retains one explained historical program-state hash mismatch because tracked state evolved before the frozen baseline."
+    exact_repair_route: "Recompute every mutable live source hash before any future launch; never edit an active scope contract to conceal drift."
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+proof_authority: false

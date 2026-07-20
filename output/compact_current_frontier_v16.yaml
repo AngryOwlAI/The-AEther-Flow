@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0777.yaml"
+  - "research_control/handoffs/handoff-0778.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260720-007"
-  latest_handoff_id: "handoff-0777"
-  current_status: "v21_p0_t04_launch_manifest_completed_pending_p0_t05_independent_audit_no_physics_delta"
+  active_task_id: "RT-20260720-008"
+  latest_handoff_id: "handoff-0778"
+  current_status: "v21_p0_t05_prelaunch_audit_pass_pending_p1_t01_no_physics_delta"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260720-007"
-  latest_research_handoff_id: "handoff-0777"
-  latest_research_next_action: "Run one bounded v21 P0-T05 independent prelaunch audit through continue-research. Audit recommendation coverage, dependencies, worker-skill boundaries, human gates, stop guards, authority separation, and the exact relay manifest. Do not execute P1-T01 in the same task."
+  latest_research_task_id: "RT-20260720-008"
+  latest_research_handoff_id: "handoff-0778"
+  latest_research_next_action: "Run exactly one bounded v21 P1-T01 fresh Smuggling Auditor ontology-law-research-packet against the unchanged EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1. Do not combine P10-T01, P13-T01, or P13-T03 in the same task."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p0_t05_independent_prelaunch_audit"
-  role_family: "external-red-team-reviewer@0.1.0"
+  route_id: "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit"
+  role_family: "smuggling-auditor@0.2.0"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Prove the plan is complete and executable before recursive implementation."
+  milestone_burden: "Complete the exact next action authorized by handoff-0772."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false

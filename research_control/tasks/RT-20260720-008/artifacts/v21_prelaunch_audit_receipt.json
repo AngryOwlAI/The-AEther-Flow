@@ -1,0 +1,78 @@
+{
+  "artifact_sha256": {
+    "research_control/tasks/RT-20260720-008/artifacts/v21_prelaunch_red_team_report.yaml": "d3e1cfd9f519e25ccaefac7eaefff8fc646bbd66909240e4154683189cfecd85",
+    "research_control/tasks/RT-20260720-008/artifacts/v21_recommendation_coverage_audit.csv": "5985cfe7cb9f382f27908c2e52d69942ef9ab85735813a0e93476a522416a81b",
+    "research_control/tasks/RT-20260720-008/artifacts/v21_relay_readiness_verdict.yaml": "135b0189d806c98e993b58671bfeb761ec817edcb488a3af209f6f3278fbf19a"
+  },
+  "claim_boundary_summary": "Control-only same-context skeptical review; no science source edit, promotion, proof authority, protected authority, publication, or P1-T01 execution.",
+  "dependency_edge_count": 183,
+  "finding_counts": {
+    "advisory": 2,
+    "blocking": 0,
+    "informational": 2
+  },
+  "human_gate_count": 7,
+  "immediately_eligible_after_p0_t05": [
+    "P1-T01",
+    "P10-T01",
+    "P13-T01",
+    "P13-T03"
+  ],
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P0-T05",
+  "proof_authority": false,
+  "recommendation_count": 72,
+  "result_status": "PASS",
+  "schema_id": "v21_p0_t05_prelaunch_audit_receipt_v1",
+  "selected_next_work_item": "P1-T01",
+  "source_sha256": {
+    ".codex/skills/continue-research-goal/references/goal-file-schema.md": "35b1477ee973f268a7d2e7947a75b247a8294cbf6c4843f031f9f686e1c47018",
+    "implementations_plans/recommendations_implementation_plan_continue_task-v21.md": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "research_control/design/v21_recommendation_backlog.yaml": "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f",
+    "research_control/tasks/RT-20260720-006/artifacts/v21_source_hash_manifest.json": "8be1255708bab6dc969fa7ca8d12821b656591e06ffd774ea3e9d9a2f13e2abb",
+    "research_control/tasks/RT-20260720-007/artifacts/v21_completion_contract.md": "6e29c625d0242c32f48ab8c295f2a185d4477b322e6808487f34c87c531dda49",
+    "research_control/tasks/RT-20260720-007/artifacts/v21_launch_manifest_receipt.json": "c3a3eb603729512eade6dcfb73b5dcabfa47525f2db1676842043533c5ddde6a",
+    "research_control/tasks/RT-20260720-007/artifacts/v21_prelaunch_checklist.md": "cbeb5082cfb7e6bf93ecc3433e73af4757363fb25991d1e186a015ecee134339",
+    "research_control/tasks/RT-20260720-007/artifacts/v21_relay_launch_manifest.md": "e32b15ffcc84fa084641d1f5ace3e970249d64a9c8e77f42829659bcef4d9348",
+    "research_control/tasks/RT-20260720-007/artifacts/v21_scope_contract_candidate.json": "8584bd8a30cd3d3f1bb4159c3062b46d8d2568b066bf3208d18a845a1a024299",
+    "research_control/tasks/RT-20260720-007/jobs/completions/AJC-AJ-RT-20260720-007-001.yaml": "98561527ff6fcacca738b4f21f2628744de92e3197e9f6dbf1df1974779e2f8c"
+  },
+  "task_id": "RT-20260720-008",
+  "validator_results": [
+    {
+      "status": "PASS",
+      "validator_id": "recommendation_coverage"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "dependency_graph"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "worker_skill_boundaries"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "human_gates"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "relay_manifest_parity"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "stop_guards"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "authority_separation"
+    }
+  ],
+  "verdict": "no_blocking_defect_found_as_written",
+  "work_item_count": 122,
+  "worker_skill_counts": {
+    "continue-research": 83,
+    "improve-project-system": 33,
+    "none_until_human_authorization": 6
+  }
+}
