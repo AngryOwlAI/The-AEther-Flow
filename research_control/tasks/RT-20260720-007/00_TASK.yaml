@@ -1,0 +1,50 @@
+task_id: "RT-20260720-007"
+task_type: "v21_production_launch_manifest"
+status: "completed"
+created_at: "2026-07-20T19:57:45Z"
+updated_at: "2026-07-20T20:08:27Z"
+closed_at: "2026-07-20T20:08:27Z"
+closure_status: "v21_p0_t04_launch_manifest_completed_pending_p0_t05_independent_audit_no_physics_delta"
+parent_task_id: "RT-20260720-006"
+parent_handoff_id: "handoff-0776"
+current_decision_id: "DDR-20260720-007"
+current_job_id: "AJ-RT-20260720-007-001"
+role_id: "director-of-research"
+role_version: "0.3.0"
+execution_role_ref: "director-of-research@0.3.0--RT-20260720-007"
+requires_human_gate: false
+human_authorization_note: "Generation 7 of the user-authorized immutable v21 relay reached dependency-ready P0-T04 after the governed P0-T03 checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T04"
+  plan_task_name: "Construct the continue-research-goal v4 production launch manifest"
+  recommendation_ids:
+    - "V21-R34"
+    - "V21-R35"
+    - "V21-R40"
+    - "V21-R44"
+objective: "Construct and validate the exact human-readable v21 continue-research-goal v4 production launch manifest, scope-contract candidate, completion contract, and prelaunch checklist without initializing another goal."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Bind the plan to the continue-research-goal v4 runtime without launching it from this task."
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V21-P0-T04-LAUNCH-MANIFEST-001"
+claim_boundary:
+  allowed_scope: "P0-T04 task-local launch-manifest artifacts, standard control records, one P0-T05 handoff, and policy-required generated derivatives only."
+  active_relay_reconstruction_only: true
+  duplicate_goal_initialization_authorized: false
+  ordinary_research_handoff_preserved: "handoff-0772"
+  active_control_handoff_consumed: "handoff-0776"
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260720-007/artifacts/v21_relay_launch_manifest.md"
+  - "research_control/tasks/RT-20260720-007/artifacts/v21_scope_contract_candidate.json"
+  - "research_control/tasks/RT-20260720-007/artifacts/v21_completion_contract.md"
+  - "research_control/tasks/RT-20260720-007/artifacts/v21_prelaunch_checklist.md"
+  - "research_control/tasks/RT-20260720-007/artifacts/v21_launch_manifest_receipt.json"
+next_recommended_action: "Route one separately bounded P0-T05 independent prelaunch audit; do not execute it or P1-T01 in this task."
+documentation_impact_id: "DI-RT-20260720-007-001"
+notes: "P0-T04 reconstructs and validates the accepted active relay contract as tracked draft/control launch evidence. It creates no runtime goal, successor, scientific claim, or protected authority."

@@ -1,9 +1,9 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260720-006"
-latest_handoff_id: "handoff-0776"
-current_status: "v21_p0_t03_starting_baseline_frozen_pending_p0_t04_no_physics_delta"
-claim_boundary_summary: "RT-20260720-006 freezes the clean 2bf74499 scientific operational candidate-lineage validator repository generated-report and source-hash before-state. It records pre-existing drift without repair and changes no scientific claim assumption candidate ledger or protected authority. RT-20260718-047 and handoff-0772 remain the scientific authority for the proposal-only candidate audit."
-next_recommended_action: "Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01."
+active_task_id: "RT-20260720-007"
+latest_handoff_id: "handoff-0777"
+current_status: "v21_p0_t04_launch_manifest_completed_pending_p0_t05_independent_audit_no_physics_delta"
+claim_boundary_summary: "RT-20260720-007 completed only the v21 P0-T04 human-readable continue-research-goal v4 launch packet. The packet exactly reconstructs the accepted active contract but does not initialize a second runtime goal, execute P0-T05 or P1-T01, alter scientific sources or ledgers, or add protected authority. RT-20260718-047 and handoff-0772 remain the scientific authority for the proposal-only candidate audit."
+next_recommended_action: "Run one bounded v21 P0-T05 independent prelaunch audit through continue-research. Audit recommendation coverage, dependencies, worker-skill boundaries, human gates, stop guards, authority separation, and the exact relay manifest. Do not execute P1-T01 in the same task."
 
 plan_registration:
   task_id: "RT-20260720-003"
@@ -86,20 +86,50 @@ starting_baseline:
   launch_scope_hash_mismatch_paths:
     - "research_control/program_state.yaml"
   mismatch_interpretation: "Program state lawfully evolved through P0-T01 and P0-T02; both launch and baseline hashes are retained."
-  p0_t04_executed: false
+  p0_t04_executed: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_authority: false
+
+launch_manifest:
+  task_id: "RT-20260720-007"
+  plan_task_id: "P0-T04"
+  dependency_task_id: "RT-20260720-006"
+  launch_manifest_path: "research_control/tasks/RT-20260720-007/artifacts/v21_relay_launch_manifest.md"
+  launch_manifest_hash: "e32b15ffcc84fa084641d1f5ace3e970249d64a9c8e77f42829659bcef4d9348"
+  scope_contract_path: "research_control/tasks/RT-20260720-007/artifacts/v21_scope_contract_candidate.json"
+  scope_contract_hash: "8584bd8a30cd3d3f1bb4159c3062b46d8d2568b066bf3208d18a845a1a024299"
+  completion_contract_path: "research_control/tasks/RT-20260720-007/artifacts/v21_completion_contract.md"
+  completion_contract_hash: "6e29c625d0242c32f48ab8c295f2a185d4477b322e6808487f34c87c531dda49"
+  prelaunch_checklist_path: "research_control/tasks/RT-20260720-007/artifacts/v21_prelaunch_checklist.md"
+  prelaunch_checklist_hash: "cbeb5082cfb7e6bf93ecc3433e73af4757363fb25991d1e186a015ecee134339"
+  compact_receipt_path: "research_control/tasks/RT-20260720-007/artifacts/v21_launch_manifest_receipt.json"
+  compact_receipt_hash: "c3a3eb603729512eade6dcfb73b5dcabfa47525f2db1676842043533c5ddde6a"
+  reasoning_effort: "max"
+  scope_mode: "multi_step"
+  work_item_count: 122
+  dependency_edge_count: 183
+  source_hash_count: 10
+  immutable_source_hashes_match_baseline: true
+  baseline_launch_hash_mismatch_paths:
+    - "research_control/program_state.yaml"
+  mismatch_interpretation: "Program state lawfully evolved before the frozen P0-T03 baseline; a future launch must recompute live mutable hashes."
+  runtime_goal_file_inventory_unchanged: true
+  runtime_goal_created_by_task: false
+  initialize_called: false
+  p0_t05_executed: false
   scientific_claims_changed: false
   distance_to_gr_delta_changed: false
   physics_authority: false
 
 control_claim_boundary:
-  allowed_next_scope: "One fresh bounded P0-T04 packet may construct the exact human-readable continue-research-goal v4 production launch manifest without initializing a goal or executing later work items."
+  allowed_next_scope: "One fresh bounded P0-T05 packet may independently audit the completed launch manifest and authority separation without executing P1-T01."
   blocked_claims:
     - "v21 plan as physics proof or scientific authority"
-    - "P0-T03 baseline evidence as P0-T04 or P1-T01 execution"
+    - "P0-T04 launch evidence as P0-T05 or P1-T01 execution"
     - "backlog recommendation coverage as implementation evidence for pending tasks"
-    - "control handoff-0776 as supersession of scientific handoff-0772"
-    - "baseline measurement as authorization to repair findings"
-    - "launch manifest as runtime goal initialization"
+    - "control handoff-0777 as supersession of scientific handoff-0772"
+    - "launch manifest as a second runtime goal"
     - "canonical ontology edit or source-law adoption"
     - "Distance-to-GR progress"
     - "benchmark promotion or Gate Chair verdict"
@@ -221,18 +251,18 @@ preserved_scientific_route:
   source_handoff: "research_control/handoffs/handoff-0772.yaml"
 
 selected_next_route:
-  route_id: "v21_p0_t04_production_launch_manifest"
+  route_id: "v21_p0_t05_independent_prelaunch_audit"
   route_label: "ordinary-research-packet"
-  role_family: "director-of-research@0.3.0"
+  role_family: "external-red-team-reviewer@0.1.0"
   worker_skill: "continue-research"
-  plan_task_id: "P0-T04"
+  plan_task_id: "P0-T05"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Bind the plan to the continue-research-goal v4 runtime without launching it from this task."
+  milestone_burden: "Prove the plan is complete and executable before recursive implementation."
   requires_human_gate: false
   project_system_boundary_authorized_by_plan: true
   physics_promotion_authorized: false
-  next_action: "Construct the exact human-readable launch packet scope-contract candidate completion contract and prelaunch checklist without initializing a goal."
-  source_handoff: "research_control/handoffs/handoff-0776.yaml"
+  next_action: "Independently audit recommendation coverage task dependencies worker-skill boundaries human gates no-progress guards authority separation and the exact relay manifest."
+  source_handoff: "research_control/handoffs/handoff-0777.yaml"
 
 preserved_scientific_next_packet:
   role_id: "smuggling-auditor"
@@ -243,13 +273,13 @@ preserved_scientific_next_packet:
   objective: "Audit exact EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1 for schematic-Phi relabeling ordered-monoid and action provenance full-component selection positivity and grading assumptions purpose-built morphism or variation categories observer truncation desired-relation circularity hidden target or process import validator overread and physical-covariance overread."
 
 required_next_packet:
-  role_id: "director-of-research"
-  role_version: "0.3.0"
+  role_id: "external-red-team-reviewer"
+  role_version: "0.1.0"
   packet_count: "1"
   route_label: "ordinary-research-packet"
-  task_type: "v21_production_launch_manifest"
-  plan_task_id: "P0-T04"
-  objective: "Produce the exact human-readable launch packet for one immutable multi-step v21 relay including exact goal text reasoning effort source hashes included work items exclusions and completion contract without initializing a goal."
+  task_type: "v21_independent_prelaunch_audit"
+  plan_task_id: "P0-T05"
+  objective: "Independently audit recommendation coverage task dependencies worker-skill boundaries human gates no-progress guards authority separation and the exact relay manifest."
 
 validation_summary:
   aggregate_status: "PASS"
@@ -270,6 +300,10 @@ validation_summary:
   starting_baseline_candidate_lineage_stage_count: 10
   starting_baseline_lineage_gap_signal_count: 13
   starting_baseline_finding_repair_performed: false
+  launch_manifest_status: "PASS_VALIDATED_ACTIVE_CONTRACT_RECONSTRUCTION"
+  launch_manifest_work_item_count: 122
+  launch_manifest_dependency_edge_count: 183
+  launch_manifest_runtime_goal_created: false
   candidate_result: "candidate_constructed_pending_audit"
   exact_rooted_partition_candidate_v1_route: "locally_frozen"
   adoption_status: "blocked_adoption_open_continuation"
@@ -283,9 +317,9 @@ project_improvement_bridge:
   required: false
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260720-006"
-  latest_research_handoff_id: "handoff-0776"
-  latest_research_next_action: "Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01."
+  latest_research_task_id: "RT-20260720-007"
+  latest_research_handoff_id: "handoff-0777"
+  latest_research_next_action: "Run one bounded v21 P0-T05 independent prelaunch audit through continue-research. Audit recommendation coverage, dependencies, worker-skill boundaries, human gates, stop guards, authority separation, and the exact relay manifest. Do not execute P1-T01 in the same task."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-006`
-- Latest handoff: `handoff-0776`
-- Current status: `v21_p0_t03_starting_baseline_frozen_pending_p0_t04_no_physics_delta`
+- Active task: `RT-20260720-007`
+- Latest handoff: `handoff-0777`
+- Current status: `v21_p0_t04_launch_manifest_completed_pending_p0_t05_independent_audit_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-006`
-- Latest research handoff: `handoff-0776`
-- Latest research next action: Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01.
+- Latest research task: `RT-20260720-007`
+- Latest research handoff: `handoff-0777`
+- Latest research next action: Run one bounded v21 P0-T05 independent prelaunch audit through continue-research. Audit recommendation coverage, dependencies, worker-skill boundaries, human gates, stop guards, authority separation, and the exact relay manifest. Do not execute P1-T01 in the same task.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p0_t04_production_launch_manifest`
-- Role family: `director-of-research@0.3.0`
+- Route ID: `v21_p0_t05_independent_prelaunch_audit`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Bind the plan to the continue-research-goal v4 runtime without launching it from this task.
+- Milestone burden: Prove the plan is complete and executable before recursive implementation.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `8e91e17d7155cbcc0b5b29f1785fad05f3f52d6a107f23525a244068d4fbe429`
-- JSON SHA-256: `38c4f037f3eba2c57ea563a5c4814c3a7a0d1952e106f69e01f29188eac3f190`
+- YAML SHA-256: `a6d64e15e23c72f00bb86e9dabf401f5fdd2eafd6054ca4ae4d6abd47c92cade`
+- JSON SHA-256: `8a5f4099f6d66cb4e3420f981dd7c51f15016db4b1bed2e99e5581b5e3e91ef6`
 
 ## Authority Warning
 

@@ -1,0 +1,128 @@
+handoff_id: "handoff-0777"
+handoff_number: 777
+created_at: "2026-07-20T20:08:27Z"
+task_id: "RT-20260720-007"
+decision_id: "DDR-20260720-007"
+job_id: "AJ-RT-20260720-007-001"
+completion_path: "research_control/tasks/RT-20260720-007/jobs/completions/AJC-AJ-RT-20260720-007-001.yaml"
+completion_hash: "98561527ff6fcacca738b4f21f2628744de92e3197e9f6dbf1df1974779e2f8c"
+source_task_id: "RT-20260720-007"
+source_job_id: "AJ-RT-20260720-007-001"
+source_completion_id: "AJC-AJ-RT-20260720-007-001"
+status: "ready_for_director"
+summary: "RT-20260720-007 completed only v21 P0-T04. The task-local packet reconstructs the accepted active v4 goal with max reasoning, 122 exact work items, 183 dependency edges, ten immutable source hashes, fixed guards, production binding checks, and the exact completion contract. It created no runtime goal and changed no scientific authority."
+next_action: "Run one bounded v21 P0-T05 independent prelaunch audit through continue-research. Audit recommendation coverage, dependencies, worker-skill boundaries, human gates, stop guards, authority separation, and the exact relay manifest. Do not execute P1-T01 in the same task."
+loop_risk_route: "v21_p0_t05_independent_prelaunch_audit"
+claim_boundary:
+  allowed_next_scope: "One independent P0-T05 prelaunch audit of the completed manifest and its v21 control dependencies."
+  completed_plan_tasks:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+  launch_manifest_path: "research_control/tasks/RT-20260720-007/artifacts/v21_relay_launch_manifest.md"
+  launch_manifest_sha256: "e32b15ffcc84fa084641d1f5ace3e970249d64a9c8e77f42829659bcef4d9348"
+  scope_contract_path: "research_control/tasks/RT-20260720-007/artifacts/v21_scope_contract_candidate.json"
+  scope_contract_sha256: "8584bd8a30cd3d3f1bb4159c3062b46d8d2568b066bf3208d18a845a1a024299"
+  completion_contract_path: "research_control/tasks/RT-20260720-007/artifacts/v21_completion_contract.md"
+  completion_contract_sha256: "6e29c625d0242c32f48ab8c295f2a185d4477b322e6808487f34c87c531dda49"
+  preserved_scientific_task: "RT-20260718-047"
+  preserved_scientific_handoff: "handoff-0772"
+  preserved_scientific_route: "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit"
+  first_required_scientific_work_item: "P1-T01"
+  control_handoff_supersedes_scientific_handoff: false
+  p0_t05_executed: false
+  runtime_goal_created_by_task: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  proof_authority: false
+  external_publication_authorized: false
+blocked_claims:
+  - "launch manifest or scope equality as physics proof"
+  - "P0-T04 as P0-T05 or P1-T01 execution"
+  - "tracked launch packet as a second runtime goal"
+  - "control handoff as supersession of scientific handoff-0772"
+  - "canonical ontology edit or source-law adoption"
+  - "general EqSrc discharge or Distance-to-GR progress"
+  - "matter-coupling or Einstein-equation derivation"
+  - "benchmark promotion or Gate Chair verdict"
+  - "external publication or completed derivation"
+distance_to_gr:
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  status: "draft object exists"
+  effect: "conditional_theorem_candidate"
+  changed: false
+  meaning: "P0-T04 is project-control contract evidence and does not discharge general EqSrc or change either scientific ledger."
+launch_manifest_summary:
+  status: "PASS_VALIDATED_ACTIVE_CONTRACT_RECONSTRUCTION"
+  reasoning_effort: "max"
+  scope_mode: "multi_step"
+  work_item_count: 122
+  dependency_edge_count: 183
+  source_hash_count: 10
+  immutable_source_hashes_match_baseline: true
+  baseline_launch_hash_mismatch_paths:
+    - "research_control/program_state.yaml"
+  baseline_hash_mismatch_interpretation: "Expected tracked program-state evolution before the frozen P0-T03 baseline; a future launch must recompute live mutable hashes."
+  runtime_goal_file_inventory_unchanged: true
+  initialize_called: false
+selected_next_route:
+  route_id: "v21_p0_t05_independent_prelaunch_audit"
+  route_label: "ordinary-research-packet"
+  role_family: "external-red-team-reviewer@0.1.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P0-T05"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prove the plan is complete and executable before recursive implementation."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  next_action: "Independently audit recommendation coverage, task dependencies, worker-skill boundaries, human gates, no-progress guards, authority separation, and the exact relay manifest."
+  source_handoff: "research_control/handoffs/handoff-0777.yaml"
+preserved_scientific_route:
+  route_id: "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Audit the exact proposal-only flow-generated graded-orbit root source law before Refuter stress or protected adoption review."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Run one bounded fresh Smuggling Auditor audit only after P0-T05 makes P1-T01 eligible."
+  source_handoff: "research_control/handoffs/handoff-0772.yaml"
+required_next_packet:
+  role_id: "external-red-team-reviewer"
+  role_version: "0.1.0"
+  packet_count: "1"
+  route_label: "ordinary-research-packet"
+  task_type: "v21_independent_prelaunch_audit"
+  plan_task_id: "P0-T05"
+  objective: "Independently audit recommendation coverage task dependencies worker-skill boundaries human gates no-progress guards authority separation and the exact relay manifest."
+validation_summary:
+  aggregate_status: "PASS"
+  launch_manifest_generator_status: "PASS"
+  scope_contract_exact_match: true
+  completion_contract_exact_match: true
+  work_item_count: 122
+  dependency_edge_count: 183
+  runtime_goal_created_by_task: false
+  distance_to_gr_ledger_unchanged: true
+  metric_use_ledger_unchanged: true
+  generated_derivatives_non_authority: true
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260720-007"
+  latest_research_handoff_id: "handoff-0777"
+  latest_research_next_action: "Run one bounded v21 P0-T05 independent prelaunch audit through continue-research. Audit recommendation coverage, dependencies, worker-skill boundaries, human gates, stop guards, authority separation, and the exact relay manifest. Do not execute P1-T01 in the same task."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false

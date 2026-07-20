@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-006` and `handoff-0776`.
+`RT-20260720-007` and `handoff-0777`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-006` |
-| Latest handoff ID | `handoff-0776` |
-| Current status | `v21_p0_t03_starting_baseline_frozen_pending_p0_t04_no_physics_delta` |
+| Active task ID | `RT-20260720-007` |
+| Latest handoff ID | `handoff-0777` |
+| Current status | `v21_p0_t04_launch_manifest_completed_pending_p0_t05_independent_audit_no_physics_delta` |
 | V16 completed | false |
-| Current route family | v21 p0 t04 production launch manifest |
+| Current route family | v21 p0 t05 independent prelaunch audit |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One P0-T04 launch-manifest packet under the registered immutable v21 plan and materialized backlog. |
-| Next recommended action | Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01. |
+| Required next authority | One independent P0-T05 prelaunch audit of the completed manifest and its v21 control dependencies. |
+| Next recommended action | Run one bounded v21 P0-T05 independent prelaunch audit through continue-research. Audit recommendation coverage, dependencies, worker-skill boundaries, human gates, stop guards, authority separation, and the exact relay manifest. Do not execute P1-T01 in the same task. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-006` |
-| Latest research handoff ID | `handoff-0776` |
-| Latest research next action | Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01. |
+| Latest research task ID | `RT-20260720-007` |
+| Latest research handoff ID | `handoff-0777` |
+| Latest research next action | Run one bounded v21 P0-T05 independent prelaunch audit through continue-research. Audit recommendation coverage, dependencies, worker-skill boundaries, human gates, stop guards, authority separation, and the exact relay manifest. Do not execute P1-T01 in the same task. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-006/00_TASK.yaml`.
-- Active task objective: Capture a reproducible before-state snapshot of the scientific frontier, task metrics, candidate families, active route, validators, repository identity, generated-report freshness, and relevant source hashes without repairing measured findings.
-- Latest handoff path: `research_control/handoffs/handoff-0776.yaml`.
-- Latest handoff summary: RT-20260720-006 completed only v21 P0-T03. Five deterministic artifacts freeze the clean 2bf74499 baseline, 1,006 pre-task task and AgentJob records, the ten-stage active-candidate lineage, 13 declared lineage-gap signals, 37 validation gates, and exact source-scope hashes. Pre-existing generated-report drift was measured but not repaired. Handoff-0772 remains the scientific authority.
-- Current route family: v21 p0 t04 production launch manifest.
-- Next recommended action: Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01.
+- Active task path: `research_control/tasks/RT-20260720-007/00_TASK.yaml`.
+- Active task objective: Construct and validate the exact human-readable v21 continue-research-goal v4 production launch manifest, scope-contract candidate, completion contract, and prelaunch checklist without initializing another goal.
+- Latest handoff path: `research_control/handoffs/handoff-0777.yaml`.
+- Latest handoff summary: RT-20260720-007 completed only v21 P0-T04. The task-local packet reconstructs the accepted active v4 goal with max reasoning, 122 exact work items, 183 dependency edges, ten immutable source hashes, fixed guards, production binding checks, and the exact completion contract. It created no runtime goal and changed no scientific authority.
+- Current route family: v21 p0 t05 independent prelaunch audit.
+- Next recommended action: Run one bounded v21 P0-T05 independent prelaunch audit through continue-research. Audit recommendation coverage, dependencies, worker-skill boundaries, human gates, stop guards, authority separation, and the exact relay manifest. Do not execute P1-T01 in the same task.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v21 P0-T04 Director packet through continue-research to construct the continue-research-goal v4 production launch manifest. Do not initialize a goal or execute P0-T05 or P1-T01.
+Run one bounded v21 P0-T05 independent prelaunch audit through continue-research. Audit recommendation coverage, dependencies, worker-skill boundaries, human gates, stop guards, authority separation, and the exact relay manifest. Do not execute P1-T01 in the same task.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-006`;
-- latest handoff: `handoff-0776`;
-- current status: `v21_p0_t03_starting_baseline_frozen_pending_p0_t04_no_physics_delta`;
+- active task: `RT-20260720-007`;
+- latest handoff: `handoff-0777`;
+- current status: `v21_p0_t04_launch_manifest_completed_pending_p0_t05_independent_audit_no_physics_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0776.yaml`
-- `research_control/tasks/RT-20260720-006/00_TASK.yaml`
+- `research_control/handoffs/handoff-0777.yaml`
+- `research_control/tasks/RT-20260720-007/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0776*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0777*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

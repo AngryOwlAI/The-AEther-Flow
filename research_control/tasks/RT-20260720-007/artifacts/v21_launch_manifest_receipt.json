@@ -1,0 +1,95 @@
+{
+  "artifact_sha256": {
+    "research_control/tasks/RT-20260720-007/artifacts/v21_completion_contract.md": "6e29c625d0242c32f48ab8c295f2a185d4477b322e6808487f34c87c531dda49",
+    "research_control/tasks/RT-20260720-007/artifacts/v21_prelaunch_checklist.md": "cbeb5082cfb7e6bf93ecc3433e73af4757363fb25991d1e186a015ecee134339",
+    "research_control/tasks/RT-20260720-007/artifacts/v21_relay_launch_manifest.md": "e32b15ffcc84fa084641d1f5ace3e970249d64a9c8e77f42829659bcef4d9348",
+    "research_control/tasks/RT-20260720-007/artifacts/v21_scope_contract_candidate.json": "8584bd8a30cd3d3f1bb4159c3062b46d8d2568b066bf3208d18a845a1a024299"
+  },
+  "baseline_launch_hash_match_count": 10,
+  "baseline_launch_hash_mismatch_count": 1,
+  "baseline_launch_hash_mismatch_paths": [
+    "research_control/program_state.yaml"
+  ],
+  "claim_boundary_summary": "Control-only launch-contract reconstruction; no duplicate launch, scientific claim, protected authority, publication, or downstream task execution.",
+  "completion_contract_sha256": "2afe005a4943e5d899efc27e102e8958bdf4f45380a0a41ce6be25d176943685",
+  "dependency_edge_count": 183,
+  "discussion_contract_sha256": "faaacbda65e5b71f5db469002ae839fe18b18fd9fcb43d7e4e35c2d9bf54e396",
+  "finding_counts": {
+    "explained_baseline_launch_hash_drift": 1,
+    "hard_failure": 0,
+    "runtime_goal_inventory_change": 0,
+    "scope_mismatch": 0,
+    "work_item_mismatch": 0
+  },
+  "goal_id": "crg-20260720T161354Z-96bc2664ce31bfe0",
+  "goal_sha256": "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a",
+  "initialize_called": false,
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P0-T04",
+  "proof_authority": false,
+  "reasoning_effort": "max",
+  "recommendation_ids": [
+    "V21-R34",
+    "V21-R35",
+    "V21-R40",
+    "V21-R44"
+  ],
+  "result_status": "PASS_VALIDATED_ACTIVE_CONTRACT_RECONSTRUCTION",
+  "runtime_goal_created_by_task": false,
+  "runtime_goal_file_inventory_unchanged": true,
+  "runtime_goal_files_after": [
+    "goal-crg-20260716T053715Z-47e6f6f5298bb427.md",
+    "goal-crg-20260718T155942Z-87dad29edca8ed6f.md",
+    "goal-crg-20260718T201217Z-0d83f05b0d0bb601.md",
+    "goal-crg-20260719T040950Z-8d47c339cfe1c178.md",
+    "goal-crg-20260720T161354Z-96bc2664ce31bfe0.md"
+  ],
+  "runtime_goal_files_before": [
+    "goal-crg-20260716T053715Z-47e6f6f5298bb427.md",
+    "goal-crg-20260718T155942Z-87dad29edca8ed6f.md",
+    "goal-crg-20260718T201217Z-0d83f05b0d0bb601.md",
+    "goal-crg-20260719T040950Z-8d47c339cfe1c178.md",
+    "goal-crg-20260720T161354Z-96bc2664ce31bfe0.md"
+  ],
+  "schema_id": "v21_p0_t04_launch_manifest_receipt_v1",
+  "scope_contract_sha256": "d42e4db415c846892a991594e21da5d58202460f07f3b0325f3c3b6fa9f24eae",
+  "scope_mode": "multi_step",
+  "source_hash_count": 10,
+  "successor_reserved_by_task": false,
+  "task_id": "RT-20260720-007",
+  "validator_results": [
+    {
+      "status": "PASS",
+      "validator_id": "v21_scope_contract_schema"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "v21_work_item_backlog_parity"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "v21_source_hash_baseline_parity"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "v21_discussion_contract"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "v21_completion_contract"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "v21_fixed_guards"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "v21_repository_binding_checklist"
+    },
+    {
+      "status": "PASS",
+      "validator_id": "v21_no_runtime_goal_created"
+    }
+  ],
+  "work_item_count": 122
+}
