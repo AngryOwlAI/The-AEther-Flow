@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-004`
-- Latest handoff: `handoff-0774`
-- Current status: `v21_p0_t01_allowlist_parity_superseded_pending_p0_t02_no_physics_delta`
+- Active task: `RT-20260720-005`
+- Latest handoff: `handoff-0775`
+- Current status: `v21_p0_t02_backlog_materialized_pending_p0_t03_no_physics_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-004`
-- Latest research handoff: `handoff-0774`
-- Latest research next action: Run one bounded v21 P0-T02 Project-Control Maintainer packet to materialize the recommendation backlog and dependency DAG. Do not execute P1-T01 and preserve handoff-0772 as its scientific source.
+- Latest research task: `RT-20260720-005`
+- Latest research handoff: `handoff-0775`
+- Latest research next action: Run one bounded v21 P0-T03 Process Integrity Auditor packet to freeze the starting scientific operational and source-hash baseline. Do not repair measured drift inside that packet or execute P1-T01.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p0_t02_backlog_materialization`
-- Role family: `project-control-maintainer@0.2.0`
+- Route ID: `v21_p0_t03_starting_baseline_freeze`
+- Role family: `process-integrity-auditor@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Materialize the v21 control backlog without changing the active source-equivalence scientific burden or its handoff.
+- Milestone burden: Establish before-state evidence for all later scientific and system deltas.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `2b179018cd74304491eb296ea2b8c754268ee30c297e647725335619a87af33e`
-- JSON SHA-256: `f1d96308017ea2d77b20f368d0a5b7a87186ccbd663b4ca101d31f482847eee2`
+- YAML SHA-256: `fbc69f999f42d60fe82f3d7d7d17536202b75b0a1fc3bda9715954540616e5b9`
+- JSON SHA-256: `ff5da9b1b03b0355b9863e5c4c5a4f7e652157f6fd23b482c4d00787dde42a3f`
 
 ## Authority Warning
 

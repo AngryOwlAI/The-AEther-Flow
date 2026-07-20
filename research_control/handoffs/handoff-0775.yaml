@@ -1,0 +1,114 @@
+handoff_id: "handoff-0775"
+handoff_number: 775
+created_at: "2026-07-20T18:46:49Z"
+task_id: "RT-20260720-005"
+decision_id: "DDR-20260720-005"
+job_id: "AJ-RT-20260720-005-001"
+completion_path: "research_control/tasks/RT-20260720-005/jobs/completions/AJC-AJ-RT-20260720-005-001.yaml"
+completion_hash: "3cd5e142f88cefa473255beff7620b2274d755210d69f335b05af9e5771b2bf1"
+source_task_id: "RT-20260720-005"
+source_job_id: "AJ-RT-20260720-005-001"
+source_completion_id: "AJC-AJ-RT-20260720-005-001"
+status: "ready_for_director"
+summary: "RT-20260720-005 completed v21 P0-T02 by materializing 122 unique tasks across 17 phases and validating an acyclic fully reachable 183-edge dependency graph with direct P16-T01 final-audit and P16-T06 final-disposition coverage for all 72 recommendations. The backlog preserves every worker route human gate and no-authority flag. RT-20260718-047 and handoff-0772 remain the scientific authority."
+next_action: "Run one bounded v21 P0-T03 Process Integrity Auditor packet to freeze the starting scientific operational and source-hash baseline. Do not repair measured drift inside that packet or execute P1-T01."
+loop_risk_route: "v21_p0_t03_starting_baseline_freeze"
+claim_boundary:
+  allowed_next_scope: "One P0-T03 baseline-freeze packet under the registered immutable v21 plan and materialized dependency graph."
+  completed_plan_tasks:
+    - "P0-T01"
+    - "P0-T02"
+  backlog_path: "research_control/design/v21_recommendation_backlog.yaml"
+  backlog_sha256: "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"
+  schema_path: "research_control/design/v21_recommendation_backlog_schema.md"
+  schema_sha256: "d38c5487b1f1f22928e8e822229fa5b7fc0b3792ba0c1fa1f03fa1af71777cdf"
+  preserved_scientific_task: "RT-20260718-047"
+  preserved_scientific_handoff: "handoff-0772"
+  preserved_scientific_route: "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit"
+  first_required_scientific_work_item: "P1-T01"
+  control_handoff_supersedes_scientific_handoff: false
+  p0_t03_executed: false
+  physics_promotion_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  proof_authority: false
+  external_publication_authorized: false
+blocked_claims:
+  - "backlog or dependency validation as physics proof"
+  - "recommendation coverage as implementation of pending tasks"
+  - "P0-T02 as P0-T03 or P1-T01 execution"
+  - "baseline measurement as authorization to repair findings"
+  - "control handoff as supersession of scientific handoff-0772"
+  - "canonical ontology edit or source-law adoption"
+  - "general EqSrc discharge or Distance-to-GR progress"
+  - "matter-coupling or Einstein-equation derivation"
+  - "benchmark promotion or Gate Chair verdict"
+  - "external publication or completed derivation"
+distance_to_gr:
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  status: "draft object exists"
+  effect: "conditional_theorem_candidate"
+  changed: false
+  meaning: "P0-T02 is project-control materialization and does not discharge general EqSrc or change either scientific ledger."
+selected_next_route:
+  route_id: "v21_p0_t03_starting_baseline_freeze"
+  route_label: "ordinary-research-packet"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P0-T03"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Establish before-state evidence for all later scientific and system deltas."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  next_action: "Capture the exact v21 scientific operational candidate-family validator repository and source-hash baseline without repairing measured findings."
+  source_handoff: "research_control/handoffs/handoff-0775.yaml"
+preserved_scientific_route:
+  route_id: "eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Audit the exact proposal-only flow-generated graded-orbit root source law before Refuter stress or protected adoption review."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Run one bounded fresh Smuggling Auditor audit only when P1-T01 becomes eligible."
+  source_handoff: "research_control/handoffs/handoff-0772.yaml"
+required_next_packet:
+  role_id: "process-integrity-auditor"
+  role_version: "0.1.0"
+  packet_count: "1"
+  route_label: "ordinary-research-packet"
+  task_type: "v21_starting_baseline_freeze"
+  plan_task_id: "P0-T03"
+  objective: "Capture a reproducible snapshot of the scientific frontier task metrics candidate families active route validators repository identity and relevant source hashes before later v21 implementation."
+validation_summary:
+  aggregate_status: "PASS"
+  backlog_item_count: 122
+  phase_count: 17
+  dependency_edge_count: 183
+  dependencies_acyclic: true
+  recommendation_count: 72
+  human_gated_work_item_count: 7
+  direct_recommendation_coverage_complete: true
+  final_audit_coverage_complete: true
+  final_goal_disposition_coverage_complete: true
+  distance_to_gr_ledger_unchanged: true
+  metric_use_ledger_unchanged: true
+  generated_derivatives_non_authority: true
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260720-005"
+  latest_research_handoff_id: "handoff-0775"
+  latest_research_next_action: "Run one bounded v21 P0-T03 Process Integrity Auditor packet to freeze the starting scientific operational and source-hash baseline. Do not repair measured drift inside that packet or execute P1-T01."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false

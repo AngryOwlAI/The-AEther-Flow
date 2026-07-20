@@ -1,0 +1,61 @@
+{
+  "authority": "project_control",
+  "claim_boundary_summary": "P0-T02 materializes and validates v21 control routing data only; it executes no downstream task and creates no physics or protected authority.",
+  "dependency_evidence": {
+    "p0_t01_completion": {
+      "path": "research_control/tasks/RT-20260720-003/jobs/completions/AJC-AJ-RT-20260720-003-001.yaml",
+      "sha256": "55683b6f6f13408f2200b765f2c9e193fb7cfce0ac6e5131fc6c6de44cdb674d"
+    },
+    "p0_t01_registration_report": {
+      "path": "research_control/tasks/RT-20260720-003/artifacts/v21_plan_registration_report.json",
+      "sha256": "eed1d2c0eea893f623d3dbee89071f10041ba1fc60b629f50a2f16132ea1abf0"
+    }
+  },
+  "finding_counts": {
+    "cycles": 0,
+    "dangling_dependencies": 0,
+    "duplicate_task_ids": 0,
+    "missing_direct_recommendation_coverage": 0,
+    "missing_final_audit_coverage": 0,
+    "unreachable_required_tasks": 0,
+    "validator_errors": 0
+  },
+  "result": {
+    "backlog_item_count": 122,
+    "dependency_edge_count": 183,
+    "dependency_independent_work_item_count": 41,
+    "dependencies_acyclic": true,
+    "final_coverage_audit_task_id": "P16-T01",
+    "final_goal_disposition_task_id": "P16-T06",
+    "human_gated_work_item_count": 7,
+    "next_plan_task_id": "P0-T03",
+    "phase_count": 17,
+    "recommendation_count": 72,
+    "role_family_count": 12,
+    "status": "PASS",
+    "worker_skill_counts": {
+      "continue-research": 83,
+      "improve-project-system": 33,
+      "none_until_human_authorization": 6
+    }
+  },
+  "schema_version": "v21_backlog_materialization_receipt.v1",
+  "source_hashes": {
+    "backlog": "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f",
+    "dependency_report": "d5b49274dd84d481b5803c3a2226ac9e2845c2051ebedae9f934d4ba7fdd78f4",
+    "plan": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "schema": "d38c5487b1f1f22928e8e822229fa5b7fc0b3792ba0c1fa1f03fa1af71777cdf",
+    "validator": "2de362b576e79260ff5f74aae513514f61443d0d0e6a5ebc6ef63b94bc8f9637"
+  },
+  "task_id": "RT-20260720-005",
+  "plan_task_id": "P0-T02",
+  "validator_ids": [
+    "v21_backlog_schema_parity",
+    "v21_dependency_graph_integrity",
+    "v21_recommendation_direct_and_final_coverage",
+    "v21_worker_route_integrity",
+    "v21_role_registry_integrity",
+    "v21_human_authority_boundary",
+    "v21_no_physics_authority_boundary"
+  ]
+}

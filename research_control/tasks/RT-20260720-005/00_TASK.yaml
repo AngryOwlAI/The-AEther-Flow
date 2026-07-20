@@ -1,0 +1,56 @@
+task_id: "RT-20260720-005"
+task_type: "v21_recommendation_backlog_materialization"
+status: "completed"
+created_at: "2026-07-20T18:41:34Z"
+updated_at: "2026-07-20T18:46:49Z"
+closed_at: "2026-07-20T18:46:49Z"
+closure_status: "v21_p0_t02_backlog_materialized_pending_p0_t03_no_physics_delta"
+parent_task_id: "RT-20260720-004"
+parent_handoff_id: "handoff-0774"
+current_decision_id: "DDR-20260720-005"
+current_job_id: "AJ-RT-20260720-005-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260720-005"
+requires_human_gate: false
+human_authorization_note: "Generation 5 of the immutable user-requested relay authorizes one continue-research frame for v21 P0-T02 after the parity-clean handoff-0774."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P0"
+  plan_task_id: "P0-T02"
+  plan_task_name: "Materialize the immutable v21 work-item backlog and dependency graph"
+  recommendation_ids:
+    - "V21-R34"
+    - "V21-R35"
+    - "V21-R40"
+    - "V21-R41"
+    - "V21-R44"
+objective: "Materialize a machine-readable v21 backlog that reproduces all 122 plan tasks their dependencies recommendation mappings routes gates and stop conditions and validate its use as the v4 multi-step scope source."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Create the exact dependency source required by continue-research-goal multi-step scope without changing the active source-equivalence scientific burden."
+route_label: "ordinary-research-packet"
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V21-P0-T02-BACKLOG-DAG-001"
+claim_boundary:
+  allowed_scope: "Create and validate only the v21 design backlog schema dependency report compact receipt standard control records one P0-T03 handoff and policy-generated derivatives."
+  completed_dependency_task: "RT-20260720-003"
+  current_control_handoff: "handoff-0774"
+  preserved_scientific_task: "RT-20260718-047"
+  preserved_scientific_handoff: "handoff-0772"
+  p0_t03_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/design/v21_recommendation_backlog.yaml"
+  - "research_control/design/v21_recommendation_backlog_schema.md"
+  - "research_control/tasks/RT-20260720-005/artifacts/v21_backlog_dependency_report.json"
+  - "research_control/tasks/RT-20260720-005/artifacts/v21_backlog_materialization_receipt.json"
+  - "research_control/tasks/RT-20260720-005/artifacts/validate_v21_backlog.py"
+next_recommended_action: "Continue the same immutable recursive relay with one fresh bounded v21 P0-T03 generation. Do not execute P1-T01 and preserve handoff-0772 as its scientific source."
+documentation_impact_id: "DI-RT-20260720-005-001"
+completion_id: "AJC-AJ-RT-20260720-005-001"
+notes: "The backlog records authored future write scopes as data only. It does not grant a future AgentJob authority and does not promote any physics claim."
