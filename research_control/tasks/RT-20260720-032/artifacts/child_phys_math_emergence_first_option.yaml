@@ -1,0 +1,171 @@
+schema_id: "v21_p4_t03_child_phys_math_emergence_first_option_v1"
+status: "draft/control"
+authority_status: "proposal-only"
+task_id: "RT-20260720-032"
+job_id: "AJ-RT-20260720-032-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+candidate_id: "EF-LFPO-OPTION-V1"
+title: "Locally finite process-order emergence-first option"
+
+claim_boundary:
+  positive_claim: "This file defines one mathematically coherent source signature, a finite-fragment composition rule, examples, and explicit reconstruction obligations."
+  status_claim: "The construction is source-extension data at draft/control, proposal-only status."
+  blocked_claims:
+    - "continuum or manifold emergence"
+    - "source-order identification with physical time or physical causal order"
+    - "dimension, topology, differentiability, atlas, metric, measure, clock, matter, or dynamics recovery"
+    - "ontology-regime selection, adoption, rejection, or canonical ontology modification"
+    - "proof, promotion, publication, benchmark, ledger-change, or completed-GR authority"
+
+minimum_source_signature:
+  candidate_tuple: "O_EF^LF := (E, prec)"
+  carrier:
+    symbol: "E"
+    type: "finite or countably infinite set of source event tokens"
+    primitive_content: "equality of tokens only"
+  relation:
+    symbol: "prec"
+    type: "binary relation on E"
+    interpretation: "formal source precedence only; it has no physical time or causal semantics at proposal scope"
+    axioms:
+      irreflexive: "for every x in E, not (x prec x)"
+      transitive: "x prec y and y prec z imply x prec z"
+      local_finiteness: "for x prec y, the open interval I(x,y) := {z in E | x prec z and z prec y} is finite"
+  derived_not_primitive:
+    - "the reflexive closure leq of prec"
+    - "finite intervals, minimal elements, maximal elements, and antichains"
+    - "isomorphism of finite ordered fragments"
+  optional_extensions_not_in_minimum_signature:
+    - "finite labels or internal state alphabets"
+    - "probabilities, amplitudes, action values, or transition weights"
+    - "orientation, scale, units, clocks, detector, or matter labels"
+
+finite_fragment_composition:
+  fragment_type: "A process fragment P = (F, prec_F, i, o) has finite F; prec_F is a strict partial order; i:B_in->F and o:B_out->F are injections from finite interface sets whose images are antichains contained in Min(F) and Max(F), respectively."
+  interface_semantics: "B_in and B_out are algebraic boundaries only; no spatial hypersurface, simultaneity, or physical-time reading is assigned."
+  composability: "P2 is composable after P1 only when a declared bijection phi:B_out(P1)->B_in(P2) matches the interfaces."
+  rule: "Form the disjoint union of the two finite carriers, identify o1(b) with i2(phi(b)), and take the transitive closure of the two internal precedence relations. Retain the composite only when the quotient relation is irreflexive; its input is B_in(P1) and output is B_out(P2)."
+  identity: "For each finite interface B, the fragment with carrier B and empty strict relation is the identity boundary fragment."
+  associativity_scope: "Composition is associative up to order isomorphism because iterated interface quotients and transitive closure give isomorphic finite ordered quotients whenever every intermediate composite is admissible."
+  global_history_relation: "A countable history may be represented as a directed compatible union of finite fragments; local finiteness must be checked and is not guaranteed merely by finite-stage composition."
+  limitation: "This composition calculus supplies syntax and consistency conditions, not a source dynamics or a continuum-limit theorem."
+
+dynamics_target:
+  status: "unfilled"
+  target_type: "A future source law could assign a nonnegative transition kernel K(P -> P') or an amplitude A(P -> P') to admissible one-step fragment extensions."
+  minimum_future_obligations:
+    - "invariance under source-order isomorphism and token relabeling"
+    - "normalization or an explicitly stated replacement composition law"
+    - "cylinder or coarse-graining consistency across finite stages"
+    - "a non-circular rule stated without a target atlas, target metric, target dimension, physical clock, or GR dynamics"
+    - "a proved or tested continuum-limit relationship distinct from merely postulating target behavior"
+  explicit_nonresult: "No K, A, action, probability measure, growth law, or selection rule is supplied or adopted here."
+
+strict_weakness_inventory:
+  audit_kind: "source-signature inventory, not a theorem of continuum emergence or unique logical interpretability"
+  source_primitives_present:
+    - "set membership and equality"
+    - "one locally finite strict partial order"
+  target_structures_absent:
+    dimension: "No dimension function or fixed value, including four, occurs in O_EF^LF."
+    topology: "No open sets, neighborhoods, compactness, connectedness, or spatial slices occur in O_EF^LF."
+    differentiability: "No charts, atlas, transition maps, tangent spaces, derivatives, or smooth fields occur in O_EF^LF."
+    geometry: "No distance, metric tensor, conformal class, signature, connection, curvature, volume form, or scale occurs in O_EF^LF."
+    physical_semantics: "No physical causal cone, time orientation, clock, observer, detector, matter field, coupling, or stress-energy semantics occurs in O_EF^LF."
+    dynamics: "No transition rule, probability, amplitude, action, equation of motion, or Einstein equation occurs in O_EF^LF."
+  conclusion_scope: "The candidate is strictly weaker in declared primitive data than a differentiable Lorentzian target. This syntactic result does not establish that the missing target structures are reconstructible."
+
+finite_source_examples:
+  - example_id: "EX-DIAMOND-4"
+    carrier: ["a", "b", "c", "d"]
+    cover_relations: ["a prec b", "a prec c", "b prec d", "c prec d"]
+    transitive_relations: ["a prec d"]
+    incomparable_pairs: ["b || c"]
+    decomposition: "Compose the fragment a -> {b,c} with the fragment {b,c} -> d along the interface {b,c}."
+    verifies:
+      - "finite local intervals"
+      - "nontrivial antichain and boundary gluing"
+      - "composition without dimension, topology, or metric data"
+    does_not_verify: "No continuum, physical causality, dimension, volume, or dynamics claim follows."
+  - example_id: "EX-TWO-CHAINS-4"
+    carrier: ["p", "q", "r", "s"]
+    cover_relations: ["p prec q", "r prec s"]
+    other_relations: []
+    input_interface: ["p", "r"]
+    output_interface: ["q", "s"]
+    verifies:
+      - "a valid finite fragment may contain incomparable process components"
+      - "the source syntax does not require connectedness or a spatial interpretation"
+    does_not_verify: "Incomparability is not spatial separation, simultaneity, or absence of physical influence."
+
+typed_target_only_realization:
+  target_type: "T = (M, g, o_t, triangleleft_T, R, rho, L, epsilon), where (M,g,o_t) is a target-side time-oriented Lorentzian manifold, triangleleft_T is a declared target chronological or causal comparison relation, R is a target test-region family, and rho, L, epsilon are target calibration data."
+  witness_type: "iota:E -> M is an injective map used only in the predicate Realizes_T(O_EF^LF, iota)."
+  full_predicate_obligations:
+    order_fidelity: "For every x,y in E, x prec y iff iota(x) triangleleft_T iota(y)."
+    target_local_finiteness: "Every target interval in the declared test family contains finitely many points of iota(E)."
+    coarse_counting: "For regions R at target scales at least L, | |iota(E) intersect R| - rho Vol_g(R) | <= epsilon(R), with an explicit statistical or deterministic interpretation."
+    intrinsic_recovery: "Any claimed topology, dimension, smooth structure, conformal structure, metric scale, or dynamics must be reconstructed from source observables and shown compatible with T; target values may not be copied into the source definition."
+    stability_and_uniqueness: "Recovery must be stable under allowed source perturbations and sufficiently unique for the stated claim; otherwise the realization is underdetermined."
+  source_target_separation: "M, g, o_t, triangleleft_T, R, rho, L, epsilon, and iota are evaluation-side data only and are not fields of O_EF^LF."
+  explicit_continuum_target_example:
+    status: "order-fidelity illustration only; not a full continuum-emergence witness"
+    targets:
+      - "T_2 = (R^2, eta_2) with one temporal and one spatial coordinate"
+      - "T_4 = (R^4, eta_4) with one temporal and three spatial coordinates"
+    map_family: "For d in {2,4}, set iota_d(a)=(-2,0,...,0), iota_d(b)=(0,-1/2,0,...,0), iota_d(c)=(0,1/2,0,...,0), and iota_d(d)=(2,0,...,0)."
+    check: "Using strict chronological order in each Minkowski target, the induced order on these four images is exactly EX-DIAMOND-4: b and c are incomparable while all declared diamond relations hold."
+    mathematical_readout: "The same finite source order is compatible with target manifolds of different dimension. Therefore the finite order alone does not select dimension, smoothness, topology, volume scale, or a unique continuum target."
+    blocked_overread: "These finite embeddings do not satisfy the coarse-counting, continuum-limit, stability, uniqueness, or dynamics burdens."
+
+manifoldlikeness_reconstruction_burdens:
+  - burden_id: "ML-01-SCALE-AND-LIMIT"
+    obligation: "Define an intrinsic refinement or growth family and a coarse-graining scale; prove or quantitatively test convergence rather than infer a continuum from one finite order."
+  - burden_id: "ML-02-TOPOLOGY"
+    obligation: "Construct topology from order-intrinsic data, for example a stable family of nerves built from declared order intervals or antichains, and prove persistence and target compatibility without supplying target open sets."
+  - burden_id: "ML-03-DIMENSION"
+    obligation: "Define at least one intrinsic dimension estimator and a stability regime; a stronger result should require agreement of independent estimators and explain why the value four, if recovered, is selected rather than inserted."
+  - burden_id: "ML-04-DIFFERENTIABILITY"
+    obligation: "Recover candidate local coordinates, overlap maps, and regularity classes from source observables; verify compatibility and convergence without using a target atlas as source data."
+  - burden_id: "ML-05-CAUSAL-SEMANTICS-AND-SIGNATURE"
+    obligation: "Supply an independent bridge proving when formal prec corresponds to physical causal or chronological order and when a Lorentzian signature and time orientation are warranted."
+  - burden_id: "ML-06-MEASURE-AND-SCALE"
+    obligation: "Derive or adopt under separate authority a counting-to-volume law, density scale, fluctuation control, and units; local finiteness alone supplies none of these."
+  - burden_id: "ML-07-METRIC-AND-GEOMETRY"
+    obligation: "Show which metric or conformal data are recoverable from reconstructed order and measure, and establish existence, stability, and non-circular uniqueness before using curvature or geodesics."
+  - burden_id: "ML-08-DYNAMICS"
+    obligation: "Provide a source-side evolution or history law and demonstrate that its controlled limit yields the required effective dynamics; exact-GR target equations may be comparison data but not source premises."
+  - burden_id: "ML-09-MANIFOLDLIKENESS-DISCRIMINATOR"
+    obligation: "Define a target-neutral discriminator separating manifoldlike histories from generic locally finite orders, including false-positive, false-negative, and scale-sensitivity analysis."
+  - burden_id: "ML-10-UNIQUENESS"
+    obligation: "Bound non-unique continuum realizations or state a precise equivalence class; the T_2/T_4 illustration shows that finite order-fidelity is insufficient."
+  - burden_id: "ML-11-OPERATIONAL-AND-MATTER-BRIDGE"
+    obligation: "Only after geometry recovery, derive clock, observer, detector, matter, and coupling semantics through separately authorized source laws."
+
+literature_context:
+  use_policy: "Primary sources provide modeling precedents and burden context only; they are not project ontology, task conclusions, or adoption authority."
+  citations:
+    - citation: "Bombelli, L., Lee, J., Meyer, D., & Sorkin, R. D. (1987). Space-time as a causal set. Physical Review Letters, 59(5), 521-524. https://doi.org/10.1103/PhysRevLett.59.521"
+      exact_scope: "Locally finite partial order as a pregeometric modeling precedent only."
+    - citation: "Rideout, D. P., & Sorkin, R. D. (2000). A classical sequential growth dynamics for causal sets. Physical Review D, 61, 024002. https://doi.org/10.1103/PhysRevD.61.024002"
+      exact_scope: "Sequential growth as a dynamics-target precedent only; no growth law is used or adopted."
+    - citation: "Major, S., Rideout, D., & Surya, S. (2007). On recovering continuum topology from a causal set. Journal of Mathematical Physics, 48, 032501. https://doi.org/10.1063/1.2435599"
+      exact_scope: "Topology reconstruction as a burden precedent only; no topology-recovery result is imported."
+
+assumption_delta:
+  removed_from_primitive_status:
+    - "fixed four-dimensionality"
+    - "differentiable-manifold structure"
+    - "ordered motion with S-time or physical-time semantics"
+  retained_as_source_proposal:
+    - "formal token carrier"
+    - "locally finite strict partial order"
+    - "finite algebraic boundary composition"
+  distance_to_gr_delta: "zero; this proposal records an option and open burdens only"
+  disposition: "blocked_adoption_open_continuation"
+
+child_conclusion:
+  result: "A coherent minimum emergence-first option exists at draft/control, proposal-only scope, with explicit finite syntax and target-separated reconstruction obligations."
+  decisive_limit: "No supplied law selects manifoldlike orders, reconstructs a continuum, or resolves the dynamics target."
+  recommended_parent_use: "Fuse the source signature, examples, strict-weakness inventory, and burden list while preserving every blocked claim and leaving P4-T04 comparison outside this task."

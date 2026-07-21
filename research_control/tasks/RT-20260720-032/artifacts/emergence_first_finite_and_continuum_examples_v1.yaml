@@ -1,0 +1,74 @@
+schema_id: "V21-P4-T03-EMERGENCE-FIRST-FINITE-AND-CONTINUUM-EXAMPLES"
+schema_version: "1.0.0"
+task_id: "RT-20260720-032"
+job_id: "AJ-RT-20260720-032-001"
+plan_task_id: "P4-T03"
+status: "draft/control"
+proposal_status: "proposal-only"
+candidate_id: "EF-LFPO-OPTION-V1"
+finite_source_examples:
+  - example_id: "EF-EX-DIAMOND-4"
+    carrier: ["a", "b", "c", "d"]
+    cover_relations: ["a prec b", "a prec c", "b prec d", "c prec d"]
+    transitive_relations: ["a prec d"]
+    incomparable_pairs: ["b || c"]
+    local_finiteness: true
+    composition: "Compose a to {b,c} and {b,c} to d along the interface {b,c}."
+    exact_readout: "Nontrivial antichain and guarded boundary composition exist without dimension topology or metric data."
+    forbidden_overread: "No continuum physical-causality dimension volume or dynamics claim."
+  - example_id: "EF-EX-TWO-CHAINS-4"
+    carrier: ["p", "q", "r", "s"]
+    cover_relations: ["p prec q", "r prec s"]
+    local_finiteness: true
+    input_interface: ["p", "r"]
+    output_interface: ["q", "s"]
+    exact_readout: "The source syntax permits incomparable components and does not assume connectedness."
+    forbidden_overread: "Incomparability is not spatial separation simultaneity or absence of physical influence."
+target_only_continuum_examples:
+  - target_id: "EF-TARGET-MINKOWSKI-2D"
+    target_structure: "T_2 = (R^2, eta_2)"
+    target_dimension: 2
+    map:
+      a: [-2, 0]
+      b: [0, -0.5]
+      c: [0, 0.5]
+      d: [2, 0]
+    target_relation: "strict chronological order"
+    induced_source_order: "EF-EX-DIAMOND-4"
+    target_data_in_source: false
+  - target_id: "EF-TARGET-MINKOWSKI-4D"
+    target_structure: "T_4 = (R^4, eta_4)"
+    target_dimension: 4
+    map:
+      a: [-2, 0, 0, 0]
+      b: [0, -0.5, 0, 0]
+      c: [0, 0.5, 0, 0]
+      d: [2, 0, 0, 0]
+    target_relation: "strict chronological order"
+    induced_source_order: "EF-EX-DIAMOND-4"
+    target_data_in_source: false
+dimension_nonselection_witness:
+  witness_id: "EF-WIT-DIAMOND-DIMENSION-NONSELECTION-001"
+  source_example: "EF-EX-DIAMOND-4"
+  compatible_target_ids:
+    - "EF-TARGET-MINKOWSKI-2D"
+    - "EF-TARGET-MINKOWSKI-4D"
+  exact_result: "The same finite source order is order-faithfully realized in target manifolds of different dimension, so finite order fidelity alone does not select dimension."
+  exact_limit: "This does not prove continuum nonexistence, nonuniqueness for an infinite law-complete source, or impossibility of a future source-defined dimension selector."
+typed_realization_predicate:
+  source_domain: "O_EF^LF = (E,prec)"
+  target_domain: "T = (M,g,o_t,triangleleft_T,R,rho,L,epsilon)"
+  evaluator_map: "iota:E -> M injective"
+  obligations:
+    - "order fidelity"
+    - "target-region local finiteness"
+    - "coarse number-volume agreement with declared errors"
+    - "intrinsic reconstruction rather than copied target values"
+    - "stability and sufficient uniqueness"
+  source_target_separation: "All target structures, calibration values, and iota are evaluator-side only and cannot define source admissibility or dynamics."
+continuum_emergence_status: "not_established"
+counts:
+  finite_source_example_count: 2
+  target_only_continuum_example_count: 2
+  dimension_nonselection_witness_count: 1
+  full_continuum_emergence_witness_count: 0

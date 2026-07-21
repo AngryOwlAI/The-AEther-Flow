@@ -400,6 +400,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P3-T06-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-AUDIT` `research_control/tasks/RT-20260720-027/artifacts/eqsrc_invariant_functor_quotient_smuggling_audit_v1.tex`
 - `TEX-V21-P4-T01-COMPREHENSIVE-SOURCE-ASSUMPTION-LEDGER` `research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex`
 - `TEX-V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ONTOLOGY-OPTION-V1` `research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex`
+- `TEX-V21-P4-T03-EMERGENCE-FIRST-PROCESS-ORDER-ONTOLOGY-OPTION-V1` `research_control/tasks/RT-20260720-032/artifacts/emergence_first_process_order_ontology_option_v1.tex`
 
 ## superseded
 

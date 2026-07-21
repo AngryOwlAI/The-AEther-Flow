@@ -1,0 +1,200 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,longtable,array,enumitem,hyperref}
+\newcommand{\E}{\mathcal E}
+\newcommand{\Proc}{\mathsf{Proc}_{\mathrm{LF}}}
+\title{V21 P4-T03: Emergence-First Locally Finite Process-Order Option}
+\author{Ontology Formalizer parent--child synthesis}
+\date{2026-07-21}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.93\linewidth}{\textbf{Status and authority.}
+This is a \textbf{draft/control, proposal-only} ontology option and
+\textbf{source-extension data}. It is not a canonical-ontology candidate,
+adoption, rejection, Gate Chair decision, continuum-emergence result, proof of
+GR, or publication artifact. Current status is
+\texttt{blocked\_adoption\_open\_continuation}.}}
+\end{center}
+
+\section{Question and exact boundary}
+
+The bounded question is whether one can state a coherent source option that is
+genuinely weaker than a differentiable four-dimensional manifold, so that
+dimension and continuum structure would have to be reconstructed. The answer
+below supplies source syntax, finite controls, and reconstruction obligations.
+It does not show that any continuum emerges or that the source is physical.
+
+No topology, dimension, coordinate, differentiability, atlas, metric, volume,
+physical time, causal cone, clock, matter field, coupling, action, probability,
+or gravitational equation is admitted as source data. The order relation is
+formal source precedence only. P4-T03 does not compare, select, adopt, or reject
+an ontology regime; those remain later and protected questions.
+
+\section{Minimum source signature}
+
+A proposal instance is
+\[
+  \mathfrak O_{\mathrm{EF}}^{\mathrm{LF}}=(E,\prec),
+\]
+where $E$ is a nonempty finite or countably infinite set of source tokens and
+$\prec\,\subseteq E\times E$ satisfies:
+\begin{enumerate}[label=(S\arabic*)]
+  \item irreflexivity: $x\not\prec x$ for every $x\in E$;
+  \item transitivity: $x\prec y\prec z$ implies $x\prec z$;
+  \item local finiteness: if $x\prec y$, then
+  $I(x,y)=\{z\in E:x\prec z\prec y\}$ is finite.
+\end{enumerate}
+The reflexive closure, finite intervals, antichains, minimal and maximal
+elements, and finite-order isomorphisms are derived syntax. Labels,
+probabilities, amplitudes, action values, coordinates, tensor types, units,
+clocks, detectors, and matter species are not in the minimum signature.
+The word ``event'' means only a neutral source token.
+
+\section{Finite process composition}
+
+A process fragment $P=(F,\prec_F,i,o)$ consists of a finite strict partial
+order $(F,\prec_F)$ and injections from finite interface sets
+$i:B_{\mathrm{in}}\to F$ and $o:B_{\mathrm{out}}\to F$. The input image is
+an antichain of minimal elements and the output image is an antichain of
+maximal elements. Interfaces are algebraic boundaries, not spacelike
+hypersurfaces or simultaneity classes.
+
+Given an interface bijection
+$\phi:B_{\mathrm{out}}(P_1)\to B_{\mathrm{in}}(P_2)$, form the disjoint union,
+identify $o_1(b)$ with $i_2(\phi(b))$, and take the transitive closure of the
+two internal orders. The composite is defined only if the quotient relation is
+irreflexive. Identity fragments have carrier equal to the interface and empty
+strict order. On the domain where all intermediate composites are defined,
+iterated quotient and closure is associative up to source-order isomorphism.
+This is a finite algebraic composition certificate, not a physical dynamics,
+continuum limit, or clock evolution.
+
+A countable history may be represented as a compatible directed union of
+finite fragments, but local finiteness of that union must be checked; it does
+not follow automatically from finite-stage admissibility.
+
+\section{Strict-weakness certificate}
+
+\begin{longtable}{p{0.23\linewidth}p{0.29\linewidth}p{0.39\linewidth}}
+\toprule
+Layer & Present in source & Absent and therefore still a burden \\
+\midrule
+\endhead
+Carrier & token equality and membership & topology, neighborhoods,
+connectedness, compactness, spatial slices \\
+Precedence & one locally finite strict order & physical time, causal cones,
+orientation, duration, Lorentzian interval \\
+Composition & finite order interfaces and guarded gluing & chart overlaps,
+smooth transitions, field equations, transition probabilities \\
+Geometry & none & dimension, coordinates, differentiability, tangent spaces,
+metric, signature, connection, curvature, volume, scale \\
+Physics & none & clocks, observers, detectors, matter, coupling, stress energy,
+action, Einstein dynamics, empirical semantics \\
+\bottomrule
+\end{longtable}
+
+Thus the declared primitives are strictly weaker than target manifold
+structure by direct signature inventory. This is a syntactic certificate, not
+a theorem that the missing structures are reconstructible or unique.
+
+\section{Finite controls and target-dimension nonselection}
+
+The four-token diamond has covers
+$a\prec b$, $a\prec c$, $b\prec d$, and $c\prec d$, with $b$ and $c$
+incomparable. It composes two fragments along the interface $\{b,c\}$.
+A second control has two disjoint two-token chains $p\prec q$ and
+$r\prec s$; it shows that connectedness and spatial interpretation are not
+source axioms.
+
+For an evaluator-side illustration only, embed the diamond into Minkowski
+targets $T_2=(\mathbb R^2,\eta_2)$ and $T_4=(\mathbb R^4,\eta_4)$ by
+\[
+ a\mapsto(-2,0,\ldots,0),\quad
+ b\mapsto(0,-\tfrac12,0,\ldots,0),\quad
+ c\mapsto(0,\tfrac12,0,\ldots,0),\quad
+ d\mapsto(2,0,\ldots,0).
+\]
+The strict chronological relation induced on the four images is the same
+diamond in both target dimensions. This finite witness shows only that
+order-fidelity for one finite fragment does not select dimension. It does not
+satisfy a continuum limit, counting law, stability, uniqueness, dynamics, or
+physical-causality burden.
+
+\section{Unfilled dynamics target}
+
+A future source law could assign a transition kernel $K(P\to P')$ or amplitude
+$A(P\to P')$ to admissible fragment extensions. Such a law would have to be
+invariant under source-order isomorphism, state its normalization or
+composition rule, satisfy finite-stage consistency, and be defined without a
+target atlas, target metric, target dimension, physical clock, or GR dynamics.
+No kernel, amplitude, action, history measure, growth rule, or selection rule
+is supplied or adopted here.
+
+\section{Target-only realization obligation}
+
+Let $T=(M,g,o_t,\triangleleft_T,\mathcal R,\rho,L,\epsilon)$ be an entirely
+target-side test object, and let $\iota:E\to M$ be an evaluator-side injection.
+A future realization predicate may test order fidelity, local finiteness in
+declared target regions, coarse number--volume agreement, intrinsic recovery,
+stability, and uniqueness. Every entry of $T$ and the map $\iota$ remain
+outside $\mathfrak O_{\mathrm{EF}}^{\mathrm{LF}}$. They may not define source
+admissibility, source dynamics, or a manifoldlikeness selector.
+
+A lawful continuum claim would require a source-internal family and limit,
+target-neutral manifoldlikeness discriminator, topology recovery, convergent
+dimension estimates, recovered differentiability, a physical-causality bridge,
+measure and scale calibration, metric recovery, uniqueness and stability,
+dynamical typicality, operational semantics, matter coupling, and GR recovery.
+The machine-readable burden map records these eleven layers. No current finite
+example discharges any of them.
+
+\section{Relation to current project ontology and exact GR}
+
+The registered canonical ontology currently uses a four-dimensional
+differentiable substrate as interpretive framing. This task-local option does
+not edit, reject, supersede, or silently reinterpret that authority. It is an
+alternative proposal for later comparison only. The exact-GR benchmark remains
+target-side; its metric, causal structure, matter content, equations, and
+empirical success cannot serve as source premises.
+
+Current ontology does not derive a manifoldlikeness selector, continuum limit,
+source dynamics, or reconstruction chain from the proposed process-order
+signature. That statement is not a no-go theorem: a conservative source-side
+extension remains open, so adoption is blocked while continuation remains open.
+
+\section{Disposition}
+
+P4-T03 is satisfied at proposal scope by one coherent minimum source option,
+guarded composition calculus, two finite controls, a target-dimension
+nonselection witness, and an explicit manifoldlikeness burden map. The
+scientific Distance-to-GR ledger is unchanged because no source package,
+dynamics, reconstruction law, continuum, metric, matter model, coupling, or
+ontology regime is adopted. P4-T04 is now dependency-ready for a separate
+comparative AgentJob. P4-T05 remains human-gated.
+
+\section*{Primary literature context}
+
+Locally finite partial order is used here only as a modeling precedent from
+Bombelli, Lee, Meyer, and Sorkin (1987). Sequential growth is cited only as an
+example that dynamics is a separate additional law (Rideout \& Sorkin, 2000).
+Continuum-topology recovery is cited only as evidence that reconstruction
+requires nontrivial assumptions and tests (Major, Rideout, \& Surya, 2007).
+These sources do not establish this project-specific proposal, physical
+causality, continuum emergence, ontology adoption, or GR recovery.
+
+\begin{enumerate}
+  \item Bombelli, L., Lee, J., Meyer, D., \& Sorkin, R. D. (1987).
+  Space-time as a causal set. \emph{Physical Review Letters, 59}(5), 521--524.
+  \url{https://doi.org/10.1103/PhysRevLett.59.521}
+  \item Rideout, D. P., \& Sorkin, R. D. (2000). A classical sequential
+  growth dynamics for causal sets. \emph{Physical Review D, 61}, 024002.
+  \url{https://doi.org/10.1103/PhysRevD.61.024002}
+  \item Major, S., Rideout, D., \& Surya, S. (2007). On recovering continuum
+  topology from a causal set. \emph{Journal of Mathematical Physics, 48},
+  032501. \url{https://doi.org/10.1063/1.2435599}
+\end{enumerate}
+
+\end{document}

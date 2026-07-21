@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `0438c14f821e12dd77db24f3e94143d1dc37af3e06283435e1ac2004971baeaa`
-- Generated-at source timestamp: `2026-07-21T19:32:55Z`
-- Row count: `1036`
+- Source fingerprint: `c15c0b26eb60b41b34e5994c626c6fe5bcb8ae7c8cf95038aedd286fe1371574`
+- Generated-at source timestamp: `2026-07-21T20:44:41Z`
+- Row count: `1037`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260720-032|RT-20260720-031|2026-07-21T20:44:41Z|2026-07-21T20:59:12Z|v21_emergence_first_pregeometric_ontology_option|completed|source_ontology|Provide the alternative ontology option appropriate to genuine spacetime emergence.|ontology-formalizer@0.2.0|false|false|12|Run exactly one bounded P4-T04 external-primary-literature comparison packet in a separate AgentJob; do not make the protected P4-T05 ontology-regime decision.|PASS|research_control/tasks/RT-20260720-032/jobs/completions/AJC-AJ-RT-20260720-032-001.yaml|
 |RT-20260720-031|RT-20260720-030|2026-07-21T19:32:55Z|2026-07-21T19:46:25Z|v21_continuum_first_premetric_ontology_option|completed|source_ontology|Provide one coherent ontology option without emergence overread.|ontology-formalizer@0.2.0|false|false|10|Run exactly one bounded P4-T03 emergence-first proposal packet in a separate AgentJob; do not compare or select regimes and do not execute P4-T04 in the same job.|PASS|research_control/tasks/RT-20260720-031/jobs/completions/AJC-AJ-RT-20260720-031-001.yaml|
 |RT-20260720-030|RT-20260720-029|2026-07-21T18:31:33Z|2026-07-21T18:42:43Z|v21_comprehensive_source_assumption_ledger|completed|source_ontology|Make assumption debt visible before selecting the ontology regime.|ontology-formalizer@0.2.0|false|false|10|Run exactly one bounded v21 P4-T02 ontology-formalizer packet to specify the continuum-first premetric option at proposal scope; do not treat plan-order execution as ontology-regime adoption and do not execute P4-T03 in the same AgentJob.|PASS|research_control/tasks/RT-20260720-030/jobs/completions/AJC-AJ-RT-20260720-030-001.yaml|
 |RT-20260720-029|RT-20260720-028|2026-07-21T17:51:04Z|2026-07-21T17:55:35Z|project_system_mutable_frontier_inventory_memory_preflight_compatibility_recovery|completed|none|Project-system validator compatibility repair only; preserve the source-equivalence scientific result and all Distance-to-GR boundaries unchanged.|validator-engineer@0.2.0|false|false|1|After governed checkpoint PASS, run one bounded v21 P4-T01 ontology-formalizer packet to build the comprehensive source-assumption ledger without adopting an ontology regime.|PASS|research_control/tasks/RT-20260720-029/jobs/completions/AJC-AJ-RT-20260720-029-001.yaml|
