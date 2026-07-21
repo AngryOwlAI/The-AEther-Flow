@@ -1,0 +1,68 @@
+{
+  "receipt_id": "EQSRC-P3-T04-PROBABILISTIC-DYNAMICAL-SELECTION-RECEIPT-V1",
+  "task_id": "RT-20260720-025",
+  "job_id": "AJ-RT-20260720-025-001",
+  "plan_task_id": "P3-T04",
+  "created_at": "2026-07-21T13:25:41Z",
+  "status": "PASS",
+  "result_classification": "finite_theorem_level_scoped_obstruction_with_conditional_added_provenance_routes",
+  "theorem_results": {
+    "orbit_simplex_classification_proved": true,
+    "unique_invariant_law_iff_transitive_proved": true,
+    "invariant_dirac_iff_fixed_point_proved": true,
+    "no_free_measure_decoder_proved": true,
+    "equivariant_markov_symmetry_preservation_proved": true,
+    "unique_stationary_law_guard_proved": true,
+    "equivariant_unique_global_attractor_fixed_proved": true,
+    "sample_history_provenance_guard_recorded": true
+  },
+  "finite_validation": {
+    "case_count": 8,
+    "check_count": 22,
+    "failed_check_count": 0,
+    "exact_arithmetic": true,
+    "transitive_fixed_point_free_case_count": 4,
+    "multi_orbit_case_count": 4,
+    "existing_fixed_point_positive_control_count": 2,
+    "equivariant_dynamics_case_count": 7,
+    "non_equivariant_selection_control_count": 1,
+    "unique_non_dirac_stationary_control_count": 2
+  },
+  "artifact_hashes": {
+    "theorem_tex": "c71673f1a79f62b7afce6cd55663594419a234ac16c5a737128bb88b9e4e39a4",
+    "machine_spec": "c15878e27e1b924792994515fd497716d181758c3fd4d3f10399fd0af6356277",
+    "finite_controls": "af79e672293183d4491a0524ebea46f799ddd12400385d71ac2049da548c1f92",
+    "child_phys_math": "1628f42ed75fca13f3ff5e5ff7e7feac6698845861baf50a735c3fe1de40b292",
+    "child_phys_phil": "0db0d3a8a8a51de314bb3766f8f8f8c1b7fb25470bdcc2fd39df743a576bf242",
+    "parent_conflict_review": "0706110f553509079f3f318bf09439281340207c7c8b50974e44b6c7ed72f983",
+    "parent_fusion_notes": "27e987bf2d06b3ff350bf3ef8c2fc3b373c0c872918b9b9ccccda1d9fa487021",
+    "validator": "e394956d41231fb52be7b00f1fee46cac66ce96462451c55f9650a6bbd1a6d54",
+    "validation_report": "c1c3e1e2670b9ffb6124848d73166c57b17e2b3665a5ef2837a64ff26b8b1047"
+  },
+  "preserved_authority_hashes": {
+    "ontology_foundations": "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2",
+    "ontology_dynamics": "ee3ae3298ab45111235388b305cbda2143b0314cb90f9b652115f71eb2fb8c6d",
+    "distance_to_gr_ledger": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+    "metric_use_ledger": "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  },
+  "claim_boundary": {
+    "artifact_status": "draft/control",
+    "adoption_status_pair": "blocked_adoption_open_continuation",
+    "probability_law_derived_from_current_ontology": false,
+    "substrate_selector_dynamics_derived": false,
+    "canonical_point_selected": false,
+    "effective_gr_dynamics_used_as_substrate_law": false,
+    "general_eqsrc_discharged": false,
+    "distance_to_gr_delta_changed": false,
+    "p3_t05_executed": false,
+    "physics_promotion_authorized": false,
+    "publication_authorized": false,
+    "global_no_go_authorized": false
+  },
+  "continuation": {
+    "p3_t04_complete": true,
+    "p3_t05_dependency_ready": true,
+    "selected_next_item": "P3-T05",
+    "actual_substrate_dynamics_implementation": "deferred_to_plan_phase_P5"
+  }
+}

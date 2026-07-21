@@ -1,0 +1,203 @@
+{
+  "artifact_id": "EQSRC-PROBABILISTIC-DYNAMICAL-SELECTION-FINITE-CONTROLS-V1",
+  "task_id": "RT-20260720-025",
+  "status": "draft/control",
+  "arithmetic": "exact rational",
+  "cases": [
+    {
+      "case_id": "C1_C2_TRANSITIVE_SWAP",
+      "states": ["a", "b"],
+      "group": [
+        {"id": "e", "permutation": {"a": "a", "b": "b"}},
+        {"id": "g", "permutation": {"a": "b", "b": "a"}}
+      ],
+      "expected_orbits": [["a", "b"]],
+      "expected_fixed_points": [],
+      "expected_invariant_simplex_dimension": 0,
+      "expected_unique_invariant_measure": true,
+      "expected_orbit_uniform_extremes": [{"a": "1/2", "b": "1/2"}],
+      "dynamics": {
+        "kind": "deterministic",
+        "map": {"a": "a", "b": "b"},
+        "expected_equivariant": true,
+        "expected_closed_class_count": 2,
+        "expected_unique_stationary_law": false,
+        "expected_unique_global_point_attractor": null
+      },
+      "initial_law": {"weights": {"a": "1/2", "b": "1/2"}, "expected_invariant": true, "expected_next": {"a": "1/2", "b": "1/2"}},
+      "interpretation": "The invariant law is unique but non-Dirac and the structural fixed locus is empty."
+    },
+    {
+      "case_id": "C2_C3_REGULAR_CYCLE",
+      "states": ["0", "1", "2"],
+      "group": [
+        {"id": "e", "permutation": {"0": "0", "1": "1", "2": "2"}},
+        {"id": "r", "permutation": {"0": "1", "1": "2", "2": "0"}},
+        {"id": "r2", "permutation": {"0": "2", "1": "0", "2": "1"}}
+      ],
+      "expected_orbits": [["0", "1", "2"]],
+      "expected_fixed_points": [],
+      "expected_invariant_simplex_dimension": 0,
+      "expected_unique_invariant_measure": true,
+      "expected_orbit_uniform_extremes": [{"0": "1/3", "1": "1/3", "2": "1/3"}],
+      "dynamics": {
+        "kind": "deterministic",
+        "map": {"0": "1", "1": "2", "2": "0"},
+        "expected_equivariant": true,
+        "expected_closed_class_count": 1,
+        "expected_unique_stationary_law": true,
+        "stationary_laws": [{"0": "1/3", "1": "1/3", "2": "1/3"}],
+        "expected_unique_global_point_attractor": null
+      },
+      "initial_law": {"weights": {"0": "1/3", "1": "1/3", "2": "1/3"}, "expected_invariant": true, "expected_next": {"0": "1/3", "1": "1/3", "2": "1/3"}},
+      "interpretation": "A unique stationary invariant law coexists with periodic point dynamics and no selected point."
+    },
+    {
+      "case_id": "C3_C2_SWAP_PLUS_FIXED_POINT",
+      "states": ["a", "b", "c"],
+      "group": [
+        {"id": "e", "permutation": {"a": "a", "b": "b", "c": "c"}},
+        {"id": "g", "permutation": {"a": "b", "b": "a", "c": "c"}}
+      ],
+      "expected_orbits": [["a", "b"], ["c"]],
+      "expected_fixed_points": ["c"],
+      "expected_invariant_simplex_dimension": 1,
+      "expected_unique_invariant_measure": false,
+      "expected_orbit_uniform_extremes": [{"a": "1/2", "b": "1/2", "c": "0"}, {"a": "0", "b": "0", "c": "1"}],
+      "dynamics": {
+        "kind": "deterministic",
+        "map": {"a": "c", "b": "c", "c": "c"},
+        "expected_equivariant": true,
+        "expected_closed_class_count": 1,
+        "expected_unique_stationary_law": true,
+        "stationary_laws": [{"a": "0", "b": "0", "c": "1"}],
+        "expected_unique_global_point_attractor": "c"
+      },
+      "initial_law": {"weights": {"a": "1/2", "b": "1/2", "c": "0"}, "expected_invariant": true, "expected_next": {"a": "0", "b": "0", "c": "1"}},
+      "interpretation": "Equivariant dynamics can select c only because c was already structurally fixed."
+    },
+    {
+      "case_id": "C4_C2_TWO_DISJOINT_SWAPS",
+      "states": ["a", "b", "c", "d"],
+      "group": [
+        {"id": "e", "permutation": {"a": "a", "b": "b", "c": "c", "d": "d"}},
+        {"id": "g", "permutation": {"a": "b", "b": "a", "c": "d", "d": "c"}}
+      ],
+      "expected_orbits": [["a", "b"], ["c", "d"]],
+      "expected_fixed_points": [],
+      "expected_invariant_simplex_dimension": 1,
+      "expected_unique_invariant_measure": false,
+      "expected_orbit_uniform_extremes": [{"a": "1/2", "b": "1/2", "c": "0", "d": "0"}, {"a": "0", "b": "0", "c": "1/2", "d": "1/2"}],
+      "dynamics": {
+        "kind": "deterministic",
+        "map": {"a": "b", "b": "a", "c": "d", "d": "c"},
+        "expected_equivariant": true,
+        "expected_closed_class_count": 2,
+        "expected_unique_stationary_law": false,
+        "expected_unique_global_point_attractor": null
+      },
+      "initial_law": {"weights": {"a": "1/4", "b": "1/4", "c": "1/4", "d": "1/4"}, "expected_invariant": true, "expected_next": {"a": "1/4", "b": "1/4", "c": "1/4", "d": "1/4"}},
+      "interpretation": "Orbit weights remain free and no equivariant decoder can return a point."
+    },
+    {
+      "case_id": "C5_TRIVIAL_ACTION_THREE_POINTS",
+      "states": ["a", "b", "c"],
+      "group": [{"id": "e", "permutation": {"a": "a", "b": "b", "c": "c"}}],
+      "expected_orbits": [["a"], ["b"], ["c"]],
+      "expected_fixed_points": ["a", "b", "c"],
+      "expected_invariant_simplex_dimension": 2,
+      "expected_unique_invariant_measure": false,
+      "expected_orbit_uniform_extremes": [{"a": "1", "b": "0", "c": "0"}, {"a": "0", "b": "1", "c": "0"}, {"a": "0", "b": "0", "c": "1"}],
+      "dynamics": {
+        "kind": "deterministic",
+        "map": {"a": "a", "b": "a", "c": "a"},
+        "expected_equivariant": true,
+        "expected_closed_class_count": 1,
+        "expected_unique_stationary_law": true,
+        "stationary_laws": [{"a": "1", "b": "0", "c": "0"}],
+        "expected_unique_global_point_attractor": "a"
+      },
+      "initial_law": {"weights": {"a": "0", "b": "1", "c": "0"}, "expected_invariant": true, "expected_next": {"a": "1", "b": "0", "c": "0"}},
+      "interpretation": "With trivial structural action equivariance imposes no unique-law or unique-point choice."
+    },
+    {
+      "case_id": "C6_EQUIVARIANT_TWO_BASIN_DYNAMICS",
+      "states": ["p", "q", "a", "b"],
+      "group": [
+        {"id": "e", "permutation": {"p": "p", "q": "q", "a": "a", "b": "b"}},
+        {"id": "g", "permutation": {"p": "q", "q": "p", "a": "b", "b": "a"}}
+      ],
+      "expected_orbits": [["p", "q"], ["a", "b"]],
+      "expected_fixed_points": [],
+      "expected_invariant_simplex_dimension": 1,
+      "expected_unique_invariant_measure": false,
+      "expected_orbit_uniform_extremes": [{"p": "1/2", "q": "1/2", "a": "0", "b": "0"}, {"p": "0", "q": "0", "a": "1/2", "b": "1/2"}],
+      "dynamics": {
+        "kind": "deterministic",
+        "map": {"p": "a", "q": "b", "a": "a", "b": "b"},
+        "expected_equivariant": true,
+        "expected_closed_class_count": 2,
+        "expected_unique_stationary_law": false,
+        "expected_unique_global_point_attractor": null
+      },
+      "initial_law": {"weights": {"p": "1/2", "q": "1/2", "a": "0", "b": "0"}, "expected_invariant": true, "expected_next": {"p": "0", "q": "0", "a": "1/2", "b": "1/2"}},
+      "interpretation": "The invariant ensemble reaches a symmetric attractor mixture; a sampled initial branch or history supplies run-level provenance."
+    },
+    {
+      "case_id": "C7_EQUIVARIANT_ERGODIC_MARKOV_CHAIN",
+      "states": ["a", "b"],
+      "group": [
+        {"id": "e", "permutation": {"a": "a", "b": "b"}},
+        {"id": "g", "permutation": {"a": "b", "b": "a"}}
+      ],
+      "expected_orbits": [["a", "b"]],
+      "expected_fixed_points": [],
+      "expected_invariant_simplex_dimension": 0,
+      "expected_unique_invariant_measure": true,
+      "expected_orbit_uniform_extremes": [{"a": "1/2", "b": "1/2"}],
+      "dynamics": {
+        "kind": "markov",
+        "matrix": {"a": {"a": "3/4", "b": "1/4"}, "b": {"a": "1/4", "b": "3/4"}},
+        "expected_equivariant": true,
+        "expected_closed_class_count": 1,
+        "expected_unique_stationary_law": true,
+        "stationary_laws": [{"a": "1/2", "b": "1/2"}]
+      },
+      "initial_law": {"weights": {"a": "1", "b": "0"}, "expected_invariant": false, "expected_next": {"a": "3/4", "b": "1/4"}},
+      "interpretation": "A unique attracting stationary law is invariant and non-Dirac; it is not a selected point."
+    },
+    {
+      "case_id": "C8_ASYMMETRIC_DYNAMICS_SELECTS_A",
+      "states": ["a", "b"],
+      "group": [
+        {"id": "e", "permutation": {"a": "a", "b": "b"}},
+        {"id": "g", "permutation": {"a": "b", "b": "a"}}
+      ],
+      "expected_orbits": [["a", "b"]],
+      "expected_fixed_points": [],
+      "expected_invariant_simplex_dimension": 0,
+      "expected_unique_invariant_measure": true,
+      "expected_orbit_uniform_extremes": [{"a": "1/2", "b": "1/2"}],
+      "dynamics": {
+        "kind": "deterministic",
+        "map": {"a": "a", "b": "a"},
+        "expected_equivariant": false,
+        "expected_closed_class_count": 1,
+        "expected_unique_stationary_law": true,
+        "stationary_laws": [{"a": "1", "b": "0"}],
+        "expected_unique_global_point_attractor": "a",
+        "new_provenance": "the non-equivariant transition law D_asym"
+      },
+      "initial_law": {"weights": {"a": "1/2", "b": "1/2"}, "expected_invariant": true, "expected_next": {"a": "1", "b": "0"}},
+      "interpretation": "The unique non-fixed attractor is bought by explicit asymmetry in the dynamics."
+    }
+  ],
+  "authority_flags": {
+    "source_law_adopted": false,
+    "canonical_point_selected": false,
+    "effective_gr_dynamics_used_as_substrate_law": false,
+    "general_eqsrc_discharged": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false
+  }
+}

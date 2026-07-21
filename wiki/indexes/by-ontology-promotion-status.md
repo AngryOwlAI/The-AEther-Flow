@@ -395,6 +395,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P3-T01-EQSRC-SELECTOR-RESOLUTION-TAXONOMY` `research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex`
 - `TEX-V21-P3-T02-EQSRC-SOURCE-EXTENSION-LATTICE` `research_control/tasks/RT-20260720-023/artifacts/eqsrc_source_extension_lattice_v1.tex`
 - `TEX-V21-P3-T03-EQSRC-REPRESENTATIVE-IRRELEVANCE-THEOREM` `research_control/tasks/RT-20260720-024/artifacts/eqsrc_representative_irrelevance_theorem_v1.tex`
+- `TEX-V21-P3-T04-EQSRC-PROBABILISTIC-DYNAMICAL-SELECTION-THEOREM` `research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex`
 
 ## superseded
 

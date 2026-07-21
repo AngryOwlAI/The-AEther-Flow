@@ -1,9 +1,9 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260720-024"
-latest_handoff_id: "handoff-0794"
-current_status: "v21_p3_t03_orbit_factorization_theorem_and_raw_interface_obstruction_completed_p3_t04_selected_no_adoption_or_distance_delta"
-claim_boundary_summary: "RT-20260720-024 completed only v21 P3-T03. For a prospectively declared task-local source-readout family, orbit constancy is exactly quotient factorization and singleton joint image is exactly all-choice equality on a nonempty domain. All six invariant finite subfamilies factor, but every full raw interface has a representative-sensitive readout. This does not establish a complete operational observable algebra, physical gauge, natural family factorization, ontology adoption, general EqSrc, a scientific-ledger delta, promotion, publication, global no-go, or completed derivation."
-next_recommended_action: "Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection."
+active_task_id: "RT-20260720-025"
+latest_handoff_id: "handoff-0795"
+current_status: "v21_p3_t04_finite_probability_dynamics_theorems_and_scoped_obstruction_completed_p3_t05_selected_no_adoption_or_distance_delta"
+claim_boundary_summary: "RT-20260720-025 completed only v21 P3-T04. On finite prospectively declared source-side G-sets, invariant laws form the orbit simplex, invariant Dirac laws and equivariant decoders select only structural fixed points, invariant inputs remain invariant under equivariant Markov dynamics, and an equivariant unique global point attractor is structurally fixed. Eight exact controls distinguish law, stationarity, sample, history, attractor, and deterministic point. This does not derive or adopt a probability law, substrate dynamics, canonical non-fixed point, physical gauge, general EqSrc, a scientific-ledger delta, promotion, publication, global no-go, or completed derivation."
+next_recommended_action: "Run exactly one bounded v21 P3-T05 ontology-formalizer packet constructing a proposal-only quotient-based EqSrc candidate with equivalence and congruence obligations plus positive and negative witness pairs."
 
 plan_registration:
   task_id: "RT-20260720-003"
@@ -834,7 +834,7 @@ source_extension_lattice_result:
   adoption_status: "blocked_adoption_open_continuation"
   p3_t02_executed: true
   p3_t03_executed: false
-  p3_t04_executed: false
+  p3_t04_executed: true
   p3_t03_dependency_ready: true
   p3_t04_dependency_ready: true
   selected_next_plan_task: "P3-T03"
@@ -874,11 +874,54 @@ representative_irrelevance_result:
   general_EqSrc_discharged: false
   adoption_status: "blocked_adoption_open_continuation"
   p3_t03_executed: true
-  p3_t04_executed: false
+  p3_t04_executed: true
   p3_t05_executed: false
   p3_t04_dependency_ready: true
-  p3_t05_dependency_ready: false
+  p3_t05_dependency_ready: true
   selected_next_plan_task: "P3-T04"
+  scientific_claims_changed: true
+  distance_to_gr_delta_changed: false
+  proof_authority: false
+  physics_promotion_authorized: false
+
+probabilistic_dynamical_selection_result:
+  task_id: "RT-20260720-025"
+  plan_task_id: "P3-T04"
+  theorem_id: "EQSRC-PROBABILISTIC-DYNAMICAL-SELECTION-THEOREM-V1"
+  theorem_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+  theorem_hash: "c71673f1a79f62b7afce6cd55663594419a234ac16c5a737128bb88b9e4e39a4"
+  machine_spec_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_spec_v1.yaml"
+  machine_spec_hash: "c15878e27e1b924792994515fd497716d181758c3fd4d3f10399fd0af6356277"
+  finite_controls_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_finite_controls_v1.json"
+  finite_controls_hash: "af79e672293183d4491a0524ebea46f799ddd12400385d71ac2049da548c1f92"
+  compact_receipt_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_compact_receipt.json"
+  compact_receipt_hash: "8c6096bc6fd286bd751f3e52a636233d7fb0ba6a74d041e9805b7841c58efa38"
+  validation_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_validation.json"
+  validation_hash: "c1c3e1e2670b9ffb6124848d73166c57b17e2b3665a5ef2837a64ff26b8b1047"
+  theorem_contract_count: 7
+  finite_case_count: 8
+  task_local_check_count: 22
+  task_local_failed_check_count: 0
+  orbit_simplex_classification_proved: true
+  unique_invariant_law_iff_transitive_proved: true
+  invariant_dirac_iff_fixed_point_proved: true
+  no_free_measure_decoder_proved: true
+  equivariant_markov_symmetry_preservation_proved: true
+  unique_stationary_law_guard_proved: true
+  equivariant_unique_global_attractor_fixed_proved: true
+  sample_history_provenance_guard_recorded: true
+  actual_substrate_dynamics_constructed: false
+  actual_substrate_dynamics_deferred_to_plan_phase_p5: true
+  current_ontology_derives_probability_law: false
+  current_ontology_derives_substrate_selector_dynamics: false
+  effective_gr_dynamics_used_as_substrate_selector_law: false
+  physical_gauge_status_established: false
+  general_EqSrc_discharged: false
+  adoption_status: "blocked_adoption_open_continuation"
+  p3_t04_executed: true
+  p3_t05_executed: false
+  p3_t05_dependency_ready: true
+  selected_next_plan_task: "P3-T05"
   scientific_claims_changed: true
   distance_to_gr_delta_changed: false
   proof_authority: false
@@ -887,21 +930,21 @@ representative_irrelevance_result:
 freeze_criteria_status:
   repeated_burden: true
   freeze_evaluation_required: true
-  active_freeze_label: "EQSRC-P3-T03-RAW-READOUT-REPETITION"
+  active_freeze_label: "EQSRC-P3-T04-FINITE-PROBABILITY-DYNAMICS-REPETITION"
   freeze_decision: "locally_frozen"
-  decision_reason: "P3-T03 completed the exact finite orbit-factorization and raw-interface route. P3-T04 is non-orbital because it must define source-side probability measures and dynamics rather than repeat representative readout tests."
+  decision_reason: "P3-T04 completed the exact finite probability and dynamics specification. P3-T05 is non-orbital because it must construct a candidate EqSrc relation and prove equivalence and congruence obligations rather than repeat selector alternatives."
   status_update_path: "research_control/program_state.yaml"
   exact_prior_route_freeze_preserved: true
-  frozen_scope: "the exact P3-T03 representative domains actions and prospectively declared finite readout tables only"
-  barred_route: "repeat the same finite readout controls without a new interface theorem variation class or countermodel"
+  frozen_scope: "the exact P3-T04 finite structural actions invariant measures equivariant decoders dynamics and eight controls only"
+  barred_route: "repeat the same finite probability or equivariant-dynamics controls without a new source relation construction or new hypotheses"
   next_allowed_route: "none"
-  qualifying_distinct_route: "P3-T04 ontology-law-research-packet"
+  qualifying_distinct_route: "P3-T05 ontology-law-research-packet"
   global_theory_rejection: false
   future_source_extension_impossibility: false
 
 route_cycle_control:
   cycle_family: "eqsrc_selector_candidate_family"
-  current_cycle_step: "p3_t03_orbit_factorization_and_raw_interface_obstruction_completed_p3_t04_selected"
+  current_cycle_step: "p3_t04_finite_probability_dynamics_obstruction_completed_p3_t05_selected"
   prior_related_tasks:
     - "RT-20260718-038"
     - "RT-20260718-039"
@@ -915,53 +958,53 @@ route_cycle_control:
     - "RT-20260718-047"
     - "RT-20260720-009"
     - "RT-20260720-010"
-    - "RT-20260720-011 through RT-20260720-024"
+    - "RT-20260720-011 through RT-20260720-025"
   cycle_risk: "high"
-  orbit_avoidance_reason: "P3-T04 changes the mathematical target to exact source-defined probability and dynamical selection structures instead of repeating representative readout tests or renaming a distinguished choice."
-  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P3-T04 only"
+  orbit_avoidance_reason: "P3-T05 changes the mathematical target to a quotient-based EqSrc relation with equivalence and congruence obligations instead of repeating probability or dynamics selector tests."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P3-T05 only"
 
 preserved_scientific_route:
-  route_id: "v21_p3_t04_probabilistic_dynamical_selector_alternatives"
+  route_id: "v21_p3_t05_quotient_eqsrc_congruence_obligations"
   route_label: "ontology-law-research-packet"
   role_family: "ontology-formalizer@0.2.0"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Prevent future stochastic or symmetry-breaking language from becoming an informal escape hatch."
+  milestone_burden: "Replace ad hoc kernel relations with a general source-equivalence target."
   requires_human_gate: false
   project_system_boundary_authorized_by_plan: false
   physics_promotion_authorized: false
-  next_action: "Run one bounded P3-T04 probability and dynamical selector-alternatives packet."
-  source_handoff: "research_control/handoffs/handoff-0794.yaml"
+  next_action: "Run one bounded P3-T05 quotient-based EqSrc and congruence-obligations packet."
+  source_handoff: "research_control/handoffs/handoff-0795.yaml"
 
 selected_next_route:
-  route_id: "v21_p3_t04_probabilistic_dynamical_selector_alternatives"
+  route_id: "v21_p3_t05_quotient_eqsrc_congruence_obligations"
   route_label: "ontology-law-research-packet"
   role_family: "ontology-formalizer@0.2.0"
   worker_skill: "continue-research"
-  plan_task_id: "P3-T04"
+  plan_task_id: "P3-T05"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Prevent future stochastic or symmetry-breaking language from becoming an informal escape hatch."
+  milestone_burden: "Replace ad hoc kernel relations with a general source-equivalence target."
   requires_human_gate: false
   project_system_boundary_authorized_by_plan: false
   physics_promotion_authorized: false
-  next_action: "Define probability measures on selector spaces and exact dynamical sector-selection structures, test finite uniform-distribution controls, and preserve source provenance and non-adoption boundaries."
-  source_handoff: "research_control/handoffs/handoff-0794.yaml"
+  next_action: "Construct a proposal-only quotient-based EqSrc candidate, prove equivalence obligations conditionally, and state congruence under composition localization and coarse-graining with positive and negative controls."
+  source_handoff: "research_control/handoffs/handoff-0795.yaml"
 
 preserved_scientific_next_packet:
   role_id: "ontology-formalizer"
   role_version: "0.2.0"
   packet_count: "1"
   route_label: "ontology-law-research-packet"
-  task_type: "v21_eqsrc_probabilistic_dynamical_selector_alternatives"
-  objective: "Formalize exact source-defined probability measures and dynamical sector-selection structures and test whether they lawfully replace deterministic selection."
+  task_type: "v21_eqsrc_quotient_relation_congruence_obligations"
+  objective: "Construct a proposal-only quotient-based EqSrc candidate and state exact equivalence and congruence obligations with positive and negative witness pairs."
 
 required_next_packet:
   role_id: "ontology-formalizer"
   role_version: "0.2.0"
   packet_count: "1"
   route_label: "ontology-law-research-packet"
-  task_type: "v21_eqsrc_probabilistic_dynamical_selector_alternatives"
-  plan_task_id: "P3-T04"
-  objective: "Define exact measure equivariance and dynamical selection structures, test what they select, and preserve P3-T05 as dependency-blocked."
+  task_type: "v21_eqsrc_quotient_relation_congruence_obligations"
+  plan_task_id: "P3-T05"
+  objective: "Define a source-only quotient EqSrc candidate, prove relation axioms conditionally, state congruence obligations, and preserve all adoption gates."
 
 validation_summary:
   aggregate_status: "PASS"
@@ -991,7 +1034,7 @@ validation_summary:
   prelaunch_audit_nonblocking_finding_count: 4
   prelaunch_audit_scope_projection_parity: true
   prelaunch_audit_epistemic_independence_claimed: false
-  candidate_result: "orbit_factorization_theorem_and_raw_interface_obstruction_validated_p3_t04_selected"
+  candidate_result: "finite_probability_dynamics_theorems_and_scoped_obstruction_validated_p3_t05_selected"
   exact_rooted_partition_candidate_v1_route: "locally_frozen"
   adoption_status: "blocked_adoption_open_continuation"
   physics_progress_status: "precise_obstruction_found"
@@ -1173,8 +1216,23 @@ validation_summary:
   p3_t03_task_local_check_count: 14
   p3_t03_task_local_failed_check_count: 0
   p3_t03_p3_t04_dependency_ready: true
-  p3_t03_p3_t05_dependency_ready: false
+  p3_t03_p3_t05_dependency_ready: true
   p3_t03_selected_next_plan_task: "P3-T04"
+  p3_t04_executed: true
+  p3_t04_status: "PASS_FINITE_PROBABILITY_DYNAMICS_THEOREMS_WITH_SCOPED_OBSTRUCTION"
+  p3_t04_theorem_id: "EQSRC-PROBABILISTIC-DYNAMICAL-SELECTION-THEOREM-V1"
+  p3_t04_theorem_contract_count: 7
+  p3_t04_finite_case_count: 8
+  p3_t04_task_local_check_count: 22
+  p3_t04_task_local_failed_check_count: 0
+  p3_t04_orbit_simplex_classification_proved: true
+  p3_t04_no_free_measure_decoder_proved: true
+  p3_t04_equivariant_markov_symmetry_preservation_proved: true
+  p3_t04_unique_stationary_law_guard_proved: true
+  p3_t04_equivariant_unique_global_attractor_fixed_proved: true
+  p3_t04_actual_substrate_dynamics_constructed: false
+  p3_t04_p3_t05_dependency_ready: true
+  p3_t04_selected_next_plan_task: "P3-T05"
   distance_to_gr_ledger_unchanged: true
   metric_use_ledger_unchanged: true
   generated_derivatives_non_authority: true
@@ -1184,9 +1242,9 @@ project_improvement_bridge:
   required: false
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260720-024"
-  latest_research_handoff_id: "handoff-0794"
-  latest_research_next_action: "Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection."
+  latest_research_task_id: "RT-20260720-025"
+  latest_research_handoff_id: "handoff-0795"
+  latest_research_next_action: "Run exactly one bounded v21 P3-T05 ontology-formalizer packet constructing a proposal-only quotient-based EqSrc candidate with equivalence and congruence obligations plus positive and negative witness pairs."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

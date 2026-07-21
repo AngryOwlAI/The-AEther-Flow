@@ -1,0 +1,219 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{P3-T04: Finite Probabilistic and Dynamical Selector Alternatives}
+\author{The \AE ther-Flow Research Project\\Draft/control theorem packet}
+\date{2026-07-21}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\linewidth}{\textbf{Status and authority.}
+This artifact is proposal-only source-extension data.  It proves conditional
+finite mathematics; it neither adopts a probability or dynamics law nor
+edits canonical ontology, establishes physical gauge, discharges general
+\(\mathrm{EqSrc}\), changes a scientific ledger, or authorizes promotion.}}
+\end{center}
+
+\section{Question and source-side setup}
+
+The v21 P3-T04 question is whether probability or dynamics can replace a
+missing deterministic selector without silently importing the selection.
+Let a finite group \(G\) act on a nonempty finite selector set \(S\).  All
+sets, actions, laws, decoders, initial data, boundaries, and readouts below
+are declared before any desired downstream branch is inspected.  The action
+is structural; no physical-gauge interpretation is assumed.
+
+\begin{definition}[Probability targets]
+Write
+\[
+ \Delta(S)=\left\{\mu:S\to\mathbb R_{\geq0}:\sum_{s\in S}\mu(s)=1\right\},
+ \qquad (g_*\mu)(s)=\mu(g^{-1}s).
+\]
+A law is \(G\)-invariant when \(g_*\mu=\mu\) for all \(g\).  A point
+law is a Dirac mass \(\delta_s\).  A probability law, a stationary law, a
+realized sample, and the support point of a Dirac law are typed separately.
+\end{definition}
+
+\section{Probability does not provide a free point}
+
+Let \(O_1,\ldots,O_k\) be the \(G\)-orbits in \(S\), and let \(u_O\)
+denote the uniform probability law on orbit \(O\).
+
+\begin{theorem}[Orbit-simplex classification]\label{thm:orbit-simplex}
+The invariant probability laws are exactly
+\[
+ \Delta(S)^G=\operatorname{conv}\{u_{O_1},\ldots,u_{O_k}\}.
+\]
+Every invariant law has the unique form
+\(\mu=\sum_i\alpha_i u_{O_i}\), where
+\(\alpha_i=\mu(O_i)\geq0\) and \(\sum_i\alpha_i=1\).  Hence this
+simplex has affine dimension \(k-1\), and the invariant law is unique if and
+only if the action is transitive.
+\end{theorem}
+
+\begin{proof}
+Invariance makes \(\mu\) constant along every orbit.  If orbit \(O_i\)
+has total mass \(\alpha_i\), each point of that orbit has mass
+\(\alpha_i/|O_i|\).  Conversely, every orbit-uniform law and every convex
+combination of them is invariant.  Disjoint orbit supports make the
+coefficients unique.
+\end{proof}
+
+\begin{corollary}[Invariant Dirac criterion]\label{cor:dirac}
+The Dirac law \(\delta_s\) is invariant if and only if
+\(s\in S^G\), the common fixed locus.  In particular, a transitive action
+on more than one point has a unique invariant law but no invariant point law.
+\end{corollary}
+
+\begin{proof}
+Because \(g_*\delta_s=\delta_{gs}\), invariance is equivalent to
+\(gs=s\) for every \(g\).
+\end{proof}
+
+\begin{theorem}[No-free-measure decoder]\label{thm:decoder}
+Let \(D\subseteq\Delta(S)\) be \(G\)-stable and let
+\(d:D\to S\) be a deterministic equivariant decoder.  If
+\(\mu\in D\) is invariant, then \(d(\mu)\in S^G\).  Thus when
+\(S^G=\varnothing\), no such decoder converts an invariant probability law
+into a lawful distinguished point.
+\end{theorem}
+
+\begin{proof}
+For every \(g\in G\), equivariance and invariance give
+\(g d(\mu)=d(g_*\mu)=d(\mu)\).
+\end{proof}
+
+The theorem does not forbid a prospectively supplied decoder when a fixed
+point exists.  It says that the decoder can return only already-fixed
+structure, and any choice among several fixed points remains extra data.
+
+\section{Dynamics preserves the symmetry burden}
+
+Let \(G\) act on a nonempty finite state space \(\Omega\).  A Markov kernel
+\(P\) is equivariant when
+\(P(gx,gy)=P(x,y)\).  This is equivalent to
+\(g_*(\nu P)=(g_*\nu)P\) for every state law \(\nu\).
+
+\begin{theorem}[Equivariant Markov preservation]\label{thm:markov}
+If \(P\) is equivariant and \(\nu_0\) is invariant, then
+\(\nu_t=\nu_0P^t\) is invariant for every finite \(t\).  If
+\(r:\Omega\to S\) is equivariant, then \(r_*\nu_t\) is invariant.
+Any existing limit of these laws remains invariant.
+\end{theorem}
+
+\begin{proof}
+Commutation of pushforward with one Markov step and induction prove the
+finite-time claim.  Equivariance of \(r\) commutes with pushforward.  The
+finite invariant simplex is closed, so limits remain inside it.
+\end{proof}
+
+\begin{corollary}[Unique stationary-law guard]\label{cor:stationary}
+If an equivariant kernel has a unique stationary law \(\pi\), then \(\pi\)
+is invariant.  It gives a deterministic selected point only if its selector
+readout is a Dirac mass on a \(G\)-fixed point.
+\end{corollary}
+
+\begin{proof}
+For every \(g\), the law \(g_*\pi\) is stationary.  Uniqueness gives
+\(g_*\pi=\pi\), and Corollary~\ref{cor:dirac} handles the Dirac case.
+\end{proof}
+
+Unique stationarity alone does not imply convergence.  Irreducibility and
+aperiodicity, or another explicit convergence condition, must be stated.
+
+\begin{theorem}[Unique global point attractor]\label{thm:attractor}
+Let \(T:\Omega\to\Omega\) be equivariant.  If a point \(a\) is the
+unique global fixed attractor---\(T(a)=a\) and every state reaches \(a\)
+after finitely many iterations---then \(a\in\Omega^G\).  More generally,
+\(G\) transports attractors and their basins into symmetry-related
+attractors and basins.
+\end{theorem}
+
+\begin{proof}
+Equivariance makes \(ga\) fixed and maps every trajectory reaching \(a\)
+to a trajectory reaching \(ga\).  Thus \(ga\) is also a global attractor;
+uniqueness forces \(ga=a\).  The same calculation transports basins.
+\end{proof}
+
+A single run of an invariant stochastic process may end at a non-fixed
+branch.  This does not contradict Theorem~\ref{thm:markov}: the ensemble law
+can remain invariant while the realized initial state or noise history is
+asymmetric.  That history is the datum which distinguishes the run.  Calling
+the breaking ``spontaneous'' does not erase the initial, boundary,
+environmental, limiting, or noise provenance that enters a basin.
+
+\section{Exact finite controls}
+
+The companion JSON artifact enumerates every action, orbit, fixed point,
+transition, closed communicating class, and exact rational law in eight
+controls.  The focused validator reproduces the following outcomes.
+
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Control & Exact structure & Consequence \\
+\midrule
+C1 & \(C_2\) transitive swap & unique uniform law; no fixed point \\
+C2 & \(C_3\) regular cycle & unique stationary uniform law; no point \\
+C3 & swap plus fixed \(c\) & equivariant attraction only to fixed \(c\) \\
+C4 & two swap orbits & free orbit weight; no fixed point \\
+C5 & trivial action & all laws invariant; symmetry chooses nothing \\
+C6 & two equivariant basins & invariant input gives an invariant mixture \\
+C7 & ergodic symmetric kernel & unique attracting law remains non-Dirac \\
+C8 & constant map to \(a\) & point selection purchased by non-equivariance \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+C3 and C5 are positive controls: equivariant dynamics may select a point that
+is already structurally fixed.  C8 is a conditional-selection control: a
+non-fixed point can be selected when asymmetry is written into the transition
+law.  Neither case provides a free selector from the symmetric baseline.
+
+\section{Provenance and interpretation}
+
+A probabilistic or dynamical selector package must separately source:
+\begin{enumerate}[label=(\roman*)]
+ \item the probability space and law \(M\);
+ \item the state space, transition law, and evolution semantics \(D\);
+ \item the initial state or initial law \(I\);
+ \item boundary or asymptotic data \(B\);
+ \item any realized random history, stopping rule, and selector readout.
+\end{enumerate}
+A non-invariant \(I\) or \(B\), a realized history, or a non-equivariant
+\(D\) may conditionally select a branch, but its provenance must be retained.
+The adopted exact-GR effective dynamics in the canonical ontology do not
+supply these substrate selector objects; reusing them here would change their
+declared level and is forbidden.
+
+\section{Scoped conclusion}
+
+For finite prospectively declared source-side models, probability and
+symmetry-respecting dynamics do not create a non-fixed deterministic selector
+for free.  Invariant laws form the orbit simplex, equivariant decoding returns
+only fixed points, invariant inputs remain invariant, and unique global point
+attractors are fixed.  Conditional branch selection remains possible through
+an existing fixed point or separately sourced asymmetry and history.
+
+This is a theorem-level finite scoped obstruction, not a no-go theorem for
+all stochastic dynamics, infinite-volume phases, continuous groups,
+metastability, or future source extensions.  Actual substrate dynamics remain
+unconstructed and are deferred to the registered plan's later P5 construction
+phase.  Adoption remains blocked while continuation is open; P3-T05 is not
+executed by this artifact.
+
+\end{document}

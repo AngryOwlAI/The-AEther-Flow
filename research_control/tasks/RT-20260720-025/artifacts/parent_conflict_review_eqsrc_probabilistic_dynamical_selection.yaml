@@ -1,0 +1,34 @@
+schema_id: "v21_p3_t04_parent_conflict_review_v1"
+task_id: "RT-20260720-025"
+job_id: "AJ-RT-20260720-025-001"
+status: "resolved"
+resolution_rounds: 1
+child_outputs_reviewed:
+  - "research_control/tasks/RT-20260720-025/artifacts/child_phys_math_eqsrc_probabilistic_dynamical_selection.yaml"
+  - "research_control/tasks/RT-20260720-025/artifacts/child_phys_phil_eqsrc_probabilistic_dynamical_selection.yaml"
+conflicts:
+  - conflict_id: "C01_UNIQUE_LAW_VS_POINT"
+    resolution: "Type them separately; a unique law is a point selector only when it is an invariant Dirac law and therefore supported on a structural fixed point."
+  - conflict_id: "C02_STATIONARITY_VS_CONVERGENCE"
+    resolution: "Do not infer convergence from unique stationarity; state and validate convergence only in the explicit ergodic control."
+  - conflict_id: "C03_SAMPLE_VS_CANONICAL_SELECTOR"
+    resolution: "Treat a realized sample or noise path as run-level history provenance rather than a reproducible deterministic natural selector."
+  - conflict_id: "C04_SPONTANEOUS_BREAKING_VS_FREE_BRANCH"
+    resolution: "Require the state boundary environment limiting prescription perturbation or noise history that enters a branch basin; the label spontaneous removes none of that provenance."
+  - conflict_id: "C05_FIXED_ATTRACTOR_VS_NEW_SELECTION"
+    resolution: "An equivariant unique global point attractor must already be structurally fixed; selection of a non-fixed point requires asymmetric law or input data."
+  - conflict_id: "C06_EFFECTIVE_VS_SUBSTRATE_DYNAMICS"
+    resolution: "The canonical exact-GR effective closure dynamics are read-only benchmark dynamics and do not instantiate a source selector transition law."
+  - conflict_id: "C07_OBJECTWISE_VS_NATURAL_FAMILY"
+    resolution: "The finite objectwise results do not establish the P2-T03 full-category equalizer or general source-morphism naturality."
+  - conflict_id: "C08_SCOPED_OBSTRUCTION_VS_GLOBAL_NO_GO"
+    resolution: "Report a finite theorem-level scoped obstruction and conditional added-provenance routes under blocked_adoption_open_continuation."
+resolved_conflict_count: 8
+unresolved_conflicts: []
+authority_result:
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  general_eqsrc_discharge_authorized: false
+  p3_t05_execution_authorized: false
+  physics_promotion_authorized: false
+  publication_authorized: false

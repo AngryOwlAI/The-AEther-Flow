@@ -1,0 +1,160 @@
+schema_id: "v21_p3_t04_child_phys_phil_eqsrc_probabilistic_dynamical_selection_v1"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+task_id: "RT-20260720-025"
+job_id: "AJ-RT-20260720-025-001"
+agent_job_id: "AJ-RT-20260720-025-001"
+authority: "analysis-only internal execution unit; not an AgentJob"
+review_disposition: "PASS_WITH_MATERIAL_SCOPE_CONDITIONS"
+answer_summary: "Probability and dynamics can be lawful source-side alternatives only when their spaces, laws, states, histories, and symmetry behavior are supplied prospectively. An invariant or stationary law is not a selected point; one stochastic realization is not a canonical representative; and current exact effective-GR dynamics are not a substrate selector mechanism."
+
+distinctions:
+  probability_law:
+    definition: "A prospectively declared normalized measure on a typed selector space, together with its measurable structure and structural-group transformation law."
+    establishes: "Relative weights or an ensemble law conditional on the declared measure."
+    does_not_establish: "A deterministic distinguished point, a physical frequency interpretation, or a source derivation of the measure."
+  stationary_law:
+    definition: "A probability law fixed by a declared transition kernel or evolution operator."
+    establishes: "Distributional persistence conditional on the dynamics."
+    does_not_establish: "A unique realized state, a unique trajectory, or a deterministic selector; even a unique stationary law may be non-Dirac."
+  stochastic_sample:
+    definition: "One realized value of a random variable under a declared probability space or noise history."
+    establishes: "A contingent run-level outcome conditional on the law and realization."
+    does_not_establish: "A reproducible canonical representative across runs or a source-natural deterministic choice."
+  history:
+    definition: "An ordered initial-state, transition, boundary, and noise-realization record."
+    establishes: "Conditional provenance for the realized branch when the law maps that history to an outcome."
+    does_not_establish: "A universal selector unless the history-generating law and admissible history class are themselves source-derived."
+  attractor:
+    definition: "An invariant subset or asymptotic regime with a declared basin under a declared dynamics."
+    establishes: "Conditional long-time organization of states in its basin."
+    does_not_establish: "Which of several symmetry-related attractors is realized, nor that asymptotic convergence is a physical source mechanism."
+  phase:
+    definition: "A dynamically or statistically characterized sector, with its order parameter and limiting or boundary prescription declared."
+    establishes: "Conditional sector classification."
+    does_not_establish: "A selected phase without state, boundary, history, or realization provenance; ensemble symmetry can coexist with branch-level asymmetry."
+  selected_point:
+    definition: "A single eligible source-side point produced by a prospectively fixed selector and stable under the admitted structural symmetries."
+    establishes: "Deterministic uniqueness only when the source-side compatibility and fixed-point burdens are met."
+    does_not_establish: "Physical relevance, empirical adequacy, or general EqSrc by itself."
+  physical_mechanism:
+    definition: "A source-derived state space, law, parameter or time semantics, admissible conditions, and bridge showing why the declared evolution or stochastic process applies."
+    establishes: "Mechanistic meaning only to the extent those ingredients and their empirical bridge are justified."
+    does_not_establish: "Ontology adoption, substrate derivation, or empirical support merely because a finite mathematical model is coherent."
+
+source_side_provenance_ledger:
+  - object: "probability measure M"
+    required_provenance: "selector space, sigma algebra or finite powerset, normalized weights, group action, equivariance or invariance rule, and prospective declaration"
+    current_status: "not derived or adopted by current ontology"
+    prohibited_substitute: "uniformity inferred after seeing a desired result or a target-calibrated posterior"
+  - object: "transition kernel or dynamics D"
+    required_provenance: "typed state space, transition rule, evolution parameter semantics, symmetry law, and domain of validity"
+    current_status: "no substrate selector dynamics is derived or adopted"
+    prohibited_substitute: "the effective Einstein equations or the interpretive phrase Aether-flow"
+  - object: "initial state or initial law I"
+    required_provenance: "preparation rule or source-derived state-generating mechanism and its admissible variation class"
+    current_status: "available only as added source-extension data in this packet"
+    prohibited_substitute: "an outcome-selected initial condition"
+  - object: "boundary or asymptotic condition B"
+    required_provenance: "boundary carrier, well-posedness, applicability, and physical or source-side origin"
+    current_status: "available only as an explicit conditional assumption"
+    prohibited_substitute: "a boundary chosen to force the preferred branch"
+  - object: "noise realization or sample history"
+    required_provenance: "sample space, law, filtration or ordering where relevant, and the realized history token"
+    current_status: "a contingent realization can be recorded but is not a canonical point law"
+    prohibited_substitute: "calling the realized sample the selector without the generating package"
+  - object: "phase or attractor selection"
+    required_provenance: "order parameter, basin definition, limiting procedure, stability claim, and branch-entry condition"
+    current_status: "conditional model structure only"
+    prohibited_substitute: "equating existence of symmetry-related phases with a unique selected phase"
+  - object: "non-equivariant law or explicit asymmetry"
+    required_provenance: "named asymmetric term, mark, ordering, environment, boundary, or coupling and its source justification"
+    current_status: "would be a new source-side assumption, not a consequence of the symmetric baseline"
+    prohibited_substitute: "hiding asymmetry in coordinates, labels, random seeds, or post-hoc conventions"
+
+theorem_and_obstruction_interpretations:
+  invariant_measure_orbit_simplex: "For a finite structural group action, invariant measures can summarize orbit weights. Transitivity may make the invariant measure unique, but uniqueness in the probability simplex is a different target type from uniqueness in the point space."
+  no_free_measure_decoder: "If an invariant law is fed to a structurally equivariant deterministic decoder, the decoder output must be structurally fixed. Therefore a fixed-point-free action cannot acquire a deterministic distinguished point merely through an invariant measure."
+  equivariant_dynamics: "An equivariant transition law preserves symmetry of an invariant input law. It cannot produce a non-invariant Dirac law from that input without added asymmetric state, boundary, history, realization, or law data."
+  attractor_guard: "A unique globally attracting point under equivariant deterministic dynamics must be structurally fixed. Multiple symmetry-related attractors move the selection burden to basin-entry provenance."
+  stochastic_realization_guard: "A process may yield one branch in one run while the ensemble remains invariant. That outcome is a history-indexed event, not a cross-run canonical deterministic selector."
+  spontaneous_symmetry_breaking_guard: "A symmetry-broken phase can be modeled conditionally, but branch selection still depends on a limiting state, perturbation, environment, boundary, initial condition, or noise history. The phrase spontaneous does not erase that provenance burden."
+  scope: "These are conditional finite-model theorems and scoped obstructions. They do not prove that all future source-side probability or dynamics packages are impossible."
+
+proposed_controls:
+  - control_id: "PP-C1"
+    construction: "C2 acts by swapping two eligible points; use the unique invariant uniform law."
+    expected_result: "The probability law is unique and non-Dirac while the point fixed locus is empty; no equivariant deterministic decoder selects a point."
+  - control_id: "PP-C2"
+    construction: "C3 acts regularly on three eligible points; use the unique invariant uniform law."
+    expected_result: "A second transitive fixed-point-free case separates probability uniqueness from point uniqueness."
+  - control_id: "PP-C3"
+    construction: "C2 swaps a and b while fixing c."
+    expected_result: "The invariant Dirac law at c exists because c was already structurally fixed; the full invariant-measure family is not unique, so measure language adds no free distinction."
+  - control_id: "PP-C4"
+    construction: "C2 acts on two disjoint two-point orbits."
+    expected_result: "Invariant laws retain a free orbit-weight parameter and no point is fixed, exposing residual probabilistic underdetermination."
+  - control_id: "PP-C5"
+    construction: "Use symmetric two-branch absorbing dynamics with an invariant initial mixture."
+    expected_result: "Individual histories terminate in a branch while the ensemble remains symmetric; the sample is not a canonical selector."
+  - control_id: "PP-C6"
+    construction: "Use the same symmetric dynamics with a declared asymmetric initial state or boundary."
+    expected_result: "A branch may be selected conditionally, but the selection power and provenance reside in I or B rather than D alone."
+  - control_id: "PP-C7"
+    construction: "Add a non-equivariant transition rule that maps every state to one labeled branch."
+    expected_result: "Deterministic selection is possible only because the law contains explicit asymmetry; the control must be recorded as a source extension, not a derivation from the symmetric baseline."
+
+conflicts_and_risks:
+  - conflict: "unique invariant measure versus unique selected point"
+    disposition: "reject identification; keep probability-valued and point-valued targets typed separately"
+  - conflict: "stationary law versus realized state"
+    disposition: "reject identification; require Dirac form and fixed-point compatibility before point language"
+  - conflict: "single stochastic realization versus canonical representative"
+    disposition: "reject identification; record the realization as history-dependent provenance"
+  - conflict: "dynamical convergence versus selection mechanism"
+    disposition: "qualify; require dynamics, basin, initial or boundary data, and physical time semantics"
+  - conflict: "spontaneous symmetry breaking versus provenance-free branch choice"
+    disposition: "reject the provenance-free reading; state the limiting, environmental, state, boundary, or noise assumptions"
+  - conflict: "canonical effective-GR dynamics versus substrate selector dynamics"
+    disposition: "reject substitution; the former is adopted effective closure and the latter remains absent"
+  - conflict: "structural equivariance versus physical gauge"
+    disposition: "reject identification without a separate physical redundancy argument"
+  - conflict: "finite scoped obstruction versus global impossibility"
+    disposition: "retain blocked_adoption_open_continuation and permit future prospectively defined source extensions"
+
+unique_contributions:
+  - "A typed seven-way separation among law, stationary law, sample, history, attractor or phase, selected point, and physical mechanism."
+  - "A provenance audit showing exactly where asymmetry enters even when the equations are called symmetric or the breaking is called spontaneous."
+  - "A reproducibility guard: run-level occurrence is weaker than a canonical selector that must be stable across admissible repetitions and source morphisms."
+  - "An effective-versus-substrate dynamics guard tied directly to the canonical exact-closure manuscript."
+
+shared_consensus:
+  - "The finite probability and dynamics constructions are exact only relative to prospectively declared source-side structures."
+  - "The M, I, B, and D atoms are added source-extension data whose provenance remains open."
+  - "An invariant or stationary probability law is not a deterministic distinguished point."
+  - "Symmetry-respecting evolution cannot manufacture asymmetric deterministic selection from invariant input without an additional asymmetric datum."
+  - "Current ontology does not derive a substrate probability law, selector dynamics, initial-state rule, boundary rule, or noise-history law."
+  - "The valid status is blocked_adoption_open_continuation, not impossibility or adoption."
+
+claim_boundaries:
+  artifact_status: "draft/control"
+  adoption_status: "proposal-only"
+  result_kind: "source-extension data"
+  ontology_model_empirical_separation_preserved: true
+  canonical_ontology_edit_authorized: false
+  source_law_adopted: false
+  probability_law_derived_from_current_ontology: false
+  substrate_selector_dynamics_derived: false
+  effective_gr_dynamics_reinterpreted_as_substrate_selector: false
+  stochastic_sample_is_canonical_point: false
+  stationary_law_is_unique_point: false
+  physical_gauge_established: false
+  empirical_support_established: false
+  general_eqsrc_discharged: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  global_no_go_authorized: false
+  future_source_extension_impossible: false
+  gate_chair_verdict_created: false
+  publication_authorized: false

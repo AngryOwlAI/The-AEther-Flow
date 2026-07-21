@@ -1,0 +1,407 @@
+{
+  "schema_id": "eqsrc_probabilistic_dynamical_selection_validation_v1",
+  "task_id": "RT-20260720-025",
+  "job_id": "AJ-RT-20260720-025-001",
+  "generated_at": "2026-07-21T13:25:41Z",
+  "validation_status": "PASS",
+  "check_count": 22,
+  "failed_check_count": 0,
+  "finite_case_count": 8,
+  "case_summaries": [
+    {
+      "case_id": "C1_C2_TRANSITIVE_SWAP",
+      "state_count": 2,
+      "group_element_count": 2,
+      "orbit_count": 1,
+      "fixed_point_count": 0,
+      "invariant_simplex_dimension": 0,
+      "unique_invariant_measure": true,
+      "dynamics_equivariant": true,
+      "closed_class_count": 2,
+      "unique_stationary_law": false,
+      "unique_global_point_attractor": null,
+      "initial_law_invariant": true
+    },
+    {
+      "case_id": "C2_C3_REGULAR_CYCLE",
+      "state_count": 3,
+      "group_element_count": 3,
+      "orbit_count": 1,
+      "fixed_point_count": 0,
+      "invariant_simplex_dimension": 0,
+      "unique_invariant_measure": true,
+      "dynamics_equivariant": true,
+      "closed_class_count": 1,
+      "unique_stationary_law": true,
+      "unique_global_point_attractor": null,
+      "initial_law_invariant": true
+    },
+    {
+      "case_id": "C3_C2_SWAP_PLUS_FIXED_POINT",
+      "state_count": 3,
+      "group_element_count": 2,
+      "orbit_count": 2,
+      "fixed_point_count": 1,
+      "invariant_simplex_dimension": 1,
+      "unique_invariant_measure": false,
+      "dynamics_equivariant": true,
+      "closed_class_count": 1,
+      "unique_stationary_law": true,
+      "unique_global_point_attractor": "c",
+      "initial_law_invariant": true
+    },
+    {
+      "case_id": "C4_C2_TWO_DISJOINT_SWAPS",
+      "state_count": 4,
+      "group_element_count": 2,
+      "orbit_count": 2,
+      "fixed_point_count": 0,
+      "invariant_simplex_dimension": 1,
+      "unique_invariant_measure": false,
+      "dynamics_equivariant": true,
+      "closed_class_count": 2,
+      "unique_stationary_law": false,
+      "unique_global_point_attractor": null,
+      "initial_law_invariant": true
+    },
+    {
+      "case_id": "C5_TRIVIAL_ACTION_THREE_POINTS",
+      "state_count": 3,
+      "group_element_count": 1,
+      "orbit_count": 3,
+      "fixed_point_count": 3,
+      "invariant_simplex_dimension": 2,
+      "unique_invariant_measure": false,
+      "dynamics_equivariant": true,
+      "closed_class_count": 1,
+      "unique_stationary_law": true,
+      "unique_global_point_attractor": "a",
+      "initial_law_invariant": true
+    },
+    {
+      "case_id": "C6_EQUIVARIANT_TWO_BASIN_DYNAMICS",
+      "state_count": 4,
+      "group_element_count": 2,
+      "orbit_count": 2,
+      "fixed_point_count": 0,
+      "invariant_simplex_dimension": 1,
+      "unique_invariant_measure": false,
+      "dynamics_equivariant": true,
+      "closed_class_count": 2,
+      "unique_stationary_law": false,
+      "unique_global_point_attractor": null,
+      "initial_law_invariant": true
+    },
+    {
+      "case_id": "C7_EQUIVARIANT_ERGODIC_MARKOV_CHAIN",
+      "state_count": 2,
+      "group_element_count": 2,
+      "orbit_count": 1,
+      "fixed_point_count": 0,
+      "invariant_simplex_dimension": 0,
+      "unique_invariant_measure": true,
+      "dynamics_equivariant": true,
+      "closed_class_count": 1,
+      "unique_stationary_law": true,
+      "unique_global_point_attractor": null,
+      "initial_law_invariant": false
+    },
+    {
+      "case_id": "C8_ASYMMETRIC_DYNAMICS_SELECTS_A",
+      "state_count": 2,
+      "group_element_count": 2,
+      "orbit_count": 1,
+      "fixed_point_count": 0,
+      "invariant_simplex_dimension": 0,
+      "unique_invariant_measure": true,
+      "dynamics_equivariant": false,
+      "closed_class_count": 1,
+      "unique_stationary_law": true,
+      "unique_global_point_attractor": "a",
+      "initial_law_invariant": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "spec_status",
+      "status": "PASS",
+      "detail": "draft/control"
+    },
+    {
+      "name": "theorem_contract_inventory",
+      "status": "PASS",
+      "detail": [
+        "DM1_EQUIVARIANT_MARKOV_SYMMETRY_PRESERVATION",
+        "DM2_UNIQUE_STATIONARY_LAW_GUARD",
+        "DM3_GLOBAL_ATTRACTOR_FIXED_POINT",
+        "DM4_SAMPLE_HISTORY_PROVENANCE",
+        "PM1_ORBIT_SIMPLEX_CLASSIFICATION",
+        "PM2_INVARIANT_DIRAC_FIXED_POINT",
+        "PM3_NO_FREE_MEASURE_DECODER"
+      ]
+    },
+    {
+      "name": "spec_authority_flags",
+      "status": "PASS",
+      "detail": {
+        "canonical_ontology_edit_authorized": false,
+        "probability_law_derived_from_current_ontology": false,
+        "substrate_selector_dynamics_derived": false,
+        "effective_gr_dynamics_used_as_substrate_law": false,
+        "source_law_adopted": false,
+        "canonical_point_selected": false,
+        "physical_gauge_established": false,
+        "empirical_probability_interpretation_established": false,
+        "general_eqsrc_discharged": false,
+        "distance_to_gr_delta_changed": false,
+        "p3_t05_executed": false,
+        "physics_promotion_authorized": false,
+        "publication_authorized": false,
+        "global_no_go_authorized": false,
+        "future_source_extension_impossible": false
+      }
+    },
+    {
+      "name": "child_outputs",
+      "status": "PASS",
+      "detail": [
+        "child_phys_math",
+        "child_phys_phil"
+      ]
+    },
+    {
+      "name": "parent_conflict_resolution",
+      "status": "PASS",
+      "detail": {
+        "resolved": 8,
+        "unresolved": []
+      }
+    },
+    {
+      "name": "parent_fusion",
+      "status": "PASS",
+      "detail": "shared consensus and unique contributions preserved"
+    },
+    {
+      "name": "finite_control_inventory",
+      "status": "PASS",
+      "detail": [
+        "C1_C2_TRANSITIVE_SWAP",
+        "C2_C3_REGULAR_CYCLE",
+        "C3_C2_SWAP_PLUS_FIXED_POINT",
+        "C4_C2_TWO_DISJOINT_SWAPS",
+        "C5_TRIVIAL_ACTION_THREE_POINTS",
+        "C6_EQUIVARIANT_TWO_BASIN_DYNAMICS",
+        "C7_EQUIVARIANT_ERGODIC_MARKOV_CHAIN",
+        "C8_ASYMMETRIC_DYNAMICS_SELECTS_A"
+      ]
+    },
+    {
+      "name": "finite_control_C1_C2_TRANSITIVE_SWAP",
+      "status": "PASS",
+      "detail": {
+        "case_id": "C1_C2_TRANSITIVE_SWAP",
+        "state_count": 2,
+        "group_element_count": 2,
+        "orbit_count": 1,
+        "fixed_point_count": 0,
+        "invariant_simplex_dimension": 0,
+        "unique_invariant_measure": true,
+        "dynamics_equivariant": true,
+        "closed_class_count": 2,
+        "unique_stationary_law": false,
+        "unique_global_point_attractor": null,
+        "initial_law_invariant": true
+      }
+    },
+    {
+      "name": "finite_control_C2_C3_REGULAR_CYCLE",
+      "status": "PASS",
+      "detail": {
+        "case_id": "C2_C3_REGULAR_CYCLE",
+        "state_count": 3,
+        "group_element_count": 3,
+        "orbit_count": 1,
+        "fixed_point_count": 0,
+        "invariant_simplex_dimension": 0,
+        "unique_invariant_measure": true,
+        "dynamics_equivariant": true,
+        "closed_class_count": 1,
+        "unique_stationary_law": true,
+        "unique_global_point_attractor": null,
+        "initial_law_invariant": true
+      }
+    },
+    {
+      "name": "finite_control_C3_C2_SWAP_PLUS_FIXED_POINT",
+      "status": "PASS",
+      "detail": {
+        "case_id": "C3_C2_SWAP_PLUS_FIXED_POINT",
+        "state_count": 3,
+        "group_element_count": 2,
+        "orbit_count": 2,
+        "fixed_point_count": 1,
+        "invariant_simplex_dimension": 1,
+        "unique_invariant_measure": false,
+        "dynamics_equivariant": true,
+        "closed_class_count": 1,
+        "unique_stationary_law": true,
+        "unique_global_point_attractor": "c",
+        "initial_law_invariant": true
+      }
+    },
+    {
+      "name": "finite_control_C4_C2_TWO_DISJOINT_SWAPS",
+      "status": "PASS",
+      "detail": {
+        "case_id": "C4_C2_TWO_DISJOINT_SWAPS",
+        "state_count": 4,
+        "group_element_count": 2,
+        "orbit_count": 2,
+        "fixed_point_count": 0,
+        "invariant_simplex_dimension": 1,
+        "unique_invariant_measure": false,
+        "dynamics_equivariant": true,
+        "closed_class_count": 2,
+        "unique_stationary_law": false,
+        "unique_global_point_attractor": null,
+        "initial_law_invariant": true
+      }
+    },
+    {
+      "name": "finite_control_C5_TRIVIAL_ACTION_THREE_POINTS",
+      "status": "PASS",
+      "detail": {
+        "case_id": "C5_TRIVIAL_ACTION_THREE_POINTS",
+        "state_count": 3,
+        "group_element_count": 1,
+        "orbit_count": 3,
+        "fixed_point_count": 3,
+        "invariant_simplex_dimension": 2,
+        "unique_invariant_measure": false,
+        "dynamics_equivariant": true,
+        "closed_class_count": 1,
+        "unique_stationary_law": true,
+        "unique_global_point_attractor": "a",
+        "initial_law_invariant": true
+      }
+    },
+    {
+      "name": "finite_control_C6_EQUIVARIANT_TWO_BASIN_DYNAMICS",
+      "status": "PASS",
+      "detail": {
+        "case_id": "C6_EQUIVARIANT_TWO_BASIN_DYNAMICS",
+        "state_count": 4,
+        "group_element_count": 2,
+        "orbit_count": 2,
+        "fixed_point_count": 0,
+        "invariant_simplex_dimension": 1,
+        "unique_invariant_measure": false,
+        "dynamics_equivariant": true,
+        "closed_class_count": 2,
+        "unique_stationary_law": false,
+        "unique_global_point_attractor": null,
+        "initial_law_invariant": true
+      }
+    },
+    {
+      "name": "finite_control_C7_EQUIVARIANT_ERGODIC_MARKOV_CHAIN",
+      "status": "PASS",
+      "detail": {
+        "case_id": "C7_EQUIVARIANT_ERGODIC_MARKOV_CHAIN",
+        "state_count": 2,
+        "group_element_count": 2,
+        "orbit_count": 1,
+        "fixed_point_count": 0,
+        "invariant_simplex_dimension": 0,
+        "unique_invariant_measure": true,
+        "dynamics_equivariant": true,
+        "closed_class_count": 1,
+        "unique_stationary_law": true,
+        "unique_global_point_attractor": null,
+        "initial_law_invariant": false
+      }
+    },
+    {
+      "name": "finite_control_C8_ASYMMETRIC_DYNAMICS_SELECTS_A",
+      "status": "PASS",
+      "detail": {
+        "case_id": "C8_ASYMMETRIC_DYNAMICS_SELECTS_A",
+        "state_count": 2,
+        "group_element_count": 2,
+        "orbit_count": 1,
+        "fixed_point_count": 0,
+        "invariant_simplex_dimension": 0,
+        "unique_invariant_measure": true,
+        "dynamics_equivariant": false,
+        "closed_class_count": 1,
+        "unique_stationary_law": true,
+        "unique_global_point_attractor": "a",
+        "initial_law_invariant": true
+      }
+    },
+    {
+      "name": "controls_authority_flags",
+      "status": "PASS",
+      "detail": {
+        "source_law_adopted": false,
+        "canonical_point_selected": false,
+        "effective_gr_dynamics_used_as_substrate_law": false,
+        "general_eqsrc_discharged": false,
+        "distance_to_gr_delta_changed": false,
+        "physics_promotion_authorized": false
+      }
+    },
+    {
+      "name": "no_free_measure_positive_controls",
+      "status": "PASS",
+      "detail": "C1 and C2 separate law uniqueness from point selection"
+    },
+    {
+      "name": "fixed_attractor_guard",
+      "status": "PASS",
+      "detail": "C3 selects only the already-fixed point c"
+    },
+    {
+      "name": "symmetric_dynamics_guard",
+      "status": "PASS",
+      "detail": "C6 preserves a symmetric branch mixture"
+    },
+    {
+      "name": "asymmetric_dynamics_provenance",
+      "status": "PASS",
+      "detail": "C8 selection is purchased by a non-equivariant law"
+    },
+    {
+      "name": "theorem_text_contract",
+      "status": "PASS",
+      "detail": [
+        "Orbit-simplex classification",
+        "No-free-measure decoder",
+        "Equivariant Markov preservation",
+        "Unique stationary-law guard",
+        "Unique global point attractor",
+        "blocked while continuation is open",
+        "P3-T05 is not"
+      ]
+    },
+    {
+      "name": "forbidden_overread_absence",
+      "status": "PASS",
+      "detail": [
+        "source law is adopted",
+        "general EqSrc is discharged",
+        "physical gauge is established",
+        "completed derivation"
+      ]
+    }
+  ],
+  "authority_summary": {
+    "source_law_adopted": false,
+    "canonical_point_selected": false,
+    "effective_gr_dynamics_used_as_substrate_law": false,
+    "general_eqsrc_discharged": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false
+  }
+}

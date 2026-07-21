@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-024` and `handoff-0794`.
+`RT-20260720-025` and `handoff-0795`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-024` |
-| Latest handoff ID | `handoff-0794` |
-| Current status | `v21_p3_t03_orbit_factorization_theorem_and_raw_interface_obstruction_completed_p3_t04_selected_no_adoption_or_distance_delta` |
+| Active task ID | `RT-20260720-025` |
+| Latest handoff ID | `handoff-0795` |
+| Current status | `v21_p3_t04_finite_probability_dynamics_theorems_and_scoped_obstruction_completed_p3_t05_selected_no_adoption_or_distance_delta` |
 | V16 completed | false |
-| Current route family | v21 p3 t04 probabilistic dynamical selector alternatives |
+| Current route family | v21 p3 t05 quotient eqsrc congruence obligations |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection. |
-| Required next authority | One P3-T04 ontology-law-research-packet may define exact source-side measure equivariance and dynamical-selection structures, prove what they do and do not select, and test finite uniform-distribution controls without adopting a source law. |
-| Next recommended action | Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P3-T05 ontology-formalizer packet constructing a proposal-only quotient-based EqSrc candidate with equivalence and congruence obligations plus positive and negative witness pairs. |
+| Required next authority | One P3-T05 ontology-law-research-packet may construct a proposal-only quotient-based EqSrc candidate, prove relation axioms conditionally, state congruence obligations, and test positive and negative witness pairs without adopting a source law. |
+| Next recommended action | Run exactly one bounded v21 P3-T05 ontology-formalizer packet constructing a proposal-only quotient-based EqSrc candidate with equivalence and congruence obligations plus positive and negative witness pairs. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-024` |
-| Latest research handoff ID | `handoff-0794` |
-| Latest research next action | Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection. |
+| Latest research task ID | `RT-20260720-025` |
+| Latest research handoff ID | `handoff-0795` |
+| Latest research next action | Run exactly one bounded v21 P3-T05 ontology-formalizer packet constructing a proposal-only quotient-based EqSrc candidate with equivalence and congruence obligations plus positive and negative witness pairs. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-024/00_TASK.yaml`.
-- Active task objective: Execute exactly one bounded v21 P3-T03 Ontology Formalizer packet defining a source-only observable family before representative choice, proving the exact orbit-factorization criterion, and exhaustively testing orientation, root, line, partition, and representative-sensitive finite controls.
-- Latest handoff path: `research_control/handoffs/handoff-0794.yaml`.
-- Latest handoff summary: RT-20260720-024 completed only v21 P3-T03. It proves a conditional orbit-factorization theorem and separates structural-orbit constancy from all-choice equality equivariance natural family compatibility physical gauge and operational completeness. All six invariant finite subfamilies factor; five transitive controls are all-choice constant while the two-orbit control is not. Every raw interface has a representative-sensitive readout giving six scoped countermodels. The focused validator passes 14 checks and the TeX source compiles to five pages. No ontology general EqSrc ledger promotion publication global no-go or completed-derivation status changes.
-- Current route family: v21 p3 t04 probabilistic dynamical selector alternatives.
-- Next recommended action: Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection.
+- Active task path: `research_control/tasks/RT-20260720-025/00_TASK.yaml`.
+- Active task objective: Execute exactly one bounded v21 P3-T04 Ontology Formalizer packet defining source-side probability and dynamical selector structures, proving their exact symmetry and provenance limits, and exhaustively testing finite controls.
+- Latest handoff path: `research_control/handoffs/handoff-0795.yaml`.
+- Latest handoff summary: RT-20260720-025 completed only v21 P3-T04. It proves the exact finite orbit-simplex classification, invariant-Dirac and equivariant-decoder fixed-point criteria, equivariant Markov symmetry preservation, a unique-stationary-law guard, and an equivariant unique-global-attractor fixed-point theorem. Eight exact rational controls pass. Symmetry-respecting probability or dynamics does not manufacture a non-fixed deterministic point from invariant data; selection by an existing fixed point or explicit asymmetry and history remains conditional with provenance retained. Actual substrate dynamics remain unconstructed and deferred to plan phase P5. No ontology general EqSrc ledger promotion publication global no-go or completed-derivation status changes.
+- Current route family: v21 p3 t05 quotient eqsrc congruence obligations.
+- Next recommended action: Run exactly one bounded v21 P3-T05 ontology-formalizer packet constructing a proposal-only quotient-based EqSrc candidate with equivalence and congruence obligations plus positive and negative witness pairs.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection.
+Run exactly one bounded v21 P3-T05 ontology-formalizer packet constructing a proposal-only quotient-based EqSrc candidate with equivalence and congruence obligations plus positive and negative witness pairs.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -344,9 +344,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-024`;
-- latest handoff: `handoff-0794`;
-- current status: `v21_p3_t03_orbit_factorization_theorem_and_raw_interface_obstruction_completed_p3_t04_selected_no_adoption_or_distance_delta`;
+- active task: `RT-20260720-025`;
+- latest handoff: `handoff-0795`;
+- current status: `v21_p3_t04_finite_probability_dynamics_theorems_and_scoped_obstruction_completed_p3_t05_selected_no_adoption_or_distance_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -356,8 +356,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0794.yaml`
-- `research_control/tasks/RT-20260720-024/00_TASK.yaml`
+- `research_control/handoffs/handoff-0795.yaml`
+- `research_control/tasks/RT-20260720-025/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -373,7 +373,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0794*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0795*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

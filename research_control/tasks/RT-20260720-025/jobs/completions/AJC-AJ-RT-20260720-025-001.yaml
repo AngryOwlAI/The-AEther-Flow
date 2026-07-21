@@ -1,0 +1,617 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS"
+job_id: "AJ-RT-20260720-025-001"
+completion_id: "AJC-AJ-RT-20260720-025-001"
+task_id: "RT-20260720-025"
+task_type: "v21_eqsrc_probabilistic_dynamical_selector_alternatives"
+decision_id: "DDR-20260720-025"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260720-025"
+status: "completed"
+created_at: "2026-07-21T13:05:12Z"
+started_at: "2026-07-21T13:05:12Z"
+completed_at: "2026-07-21T13:27:51Z"
+objective: "Execute only v21 P3-T04: define exact probability and dynamical selector alternatives on finite source-side spaces, prove what symmetry-respecting laws can and cannot select, and exhaustively test bounded controls."
+completion_summary: "P3-T04 proves an exact finite orbit-simplex classification, invariant-Dirac and equivariant-decoder fixed-point criteria, symmetry preservation for equivariant Markov dynamics, a unique-stationary-law guard, and an equivariant unique-global-attractor fixed-point theorem. Eight exact rational controls separate probability-law uniqueness, stationary-law uniqueness, stochastic realization, history, and deterministic point selection. Symmetry-respecting probability or dynamics does not manufacture a non-fixed point from invariant data; an existing fixed point or explicitly asymmetric law, initial state, boundary, or realized history can select only with that added provenance retained. Actual substrate dynamics remain unconstructed and deferred to plan phase P5. P3-T05 becomes dependency-ready but is not executed. No ontology EqSrc law scientific ledger promotion publication global no-go or completed derivation changes."
+objective_result: "completed_with_finite_theorem_level_scoped_obstruction_and_conditional_added_provenance_routes"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T04"
+  recommendation_ids:
+    - "V21-R07"
+    - "V21-R12"
+    - "V21-R14"
+    - "V21-R15"
+  implementation_status: "completed"
+  implemented_task_scope: "Finite source-side probability and dynamics specification, exact symmetry theorems, provenance guards, and eight exact controls only."
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "P2-T07"
+    - "P2-T08"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P3-T04"
+  dependency_ready_items:
+    - "P3-T05"
+  selected_next_dependency_work_item: "P3-T05"
+  p3_t04_completed: true
+  p3_t05_dependency_ready: true
+  selection_rationale: "P3-T03 and P3-T04 now both have qualifying finalized mathematical payloads, satisfying P3-T05's direct dependency pair without adopting either proposal."
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256_at_worker_completion: "92d6732a6e8b786e5a4a34312acd6c5678f5ba910de65a8f074ee7af47435ead"
+  generation: 25
+  passes_consumed: 25
+  route_work_item_id: "P3-T04"
+  worker_skill: "continue-research"
+
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "source_side_probability_dynamics_proof"
+minimum_payload:
+  payload_class: "source_side_probability_dynamics_proof"
+  payload_artifact_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+  payload_summary: "Seven exact finite theorem contracts, eight exact rational controls, and an explicit M-D-I-B-history provenance specification."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+  - "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_spec_v1.yaml"
+  - "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_finite_controls_v1.json"
+  - "research_control/tasks/RT-20260720-025/artifacts/child_phys_math_eqsrc_probabilistic_dynamical_selection.yaml"
+  - "research_control/tasks/RT-20260720-025/artifacts/child_phys_phil_eqsrc_probabilistic_dynamical_selection.yaml"
+  - "research_control/tasks/RT-20260720-025/artifacts/parent_conflict_review_eqsrc_probabilistic_dynamical_selection.yaml"
+  - "research_control/tasks/RT-20260720-025/artifacts/parent_fusion_notes_eqsrc_probabilistic_dynamical_selection.md"
+  - "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_compact_receipt.json"
+  - "research_control/tasks/RT-20260720-025/artifacts/validate_eqsrc_probabilistic_dynamical_selection.py"
+  - "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-025/**"
+  - "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+  - "research_control/handoffs/handoff-0795.yaml"
+  - "research_control/handoffs/handoff-0795.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  theorem:
+    object_id: "TEX-V21-P3-T04-EQSRC-PROBABILISTIC-DYNAMICAL-SELECTION-THEOREM"
+    path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+    sha256: "c71673f1a79f62b7afce6cd55663594419a234ac16c5a737128bb88b9e4e39a4"
+  machine_spec:
+    path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_spec_v1.yaml"
+    sha256: "c15878e27e1b924792994515fd497716d181758c3fd4d3f10399fd0af6356277"
+  finite_controls:
+    path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_finite_controls_v1.json"
+    sha256: "af79e672293183d4491a0524ebea46f799ddd12400385d71ac2049da548c1f92"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_compact_receipt.json"
+    sha256: "8c6096bc6fd286bd751f3e52a636233d7fb0ba6a74d041e9805b7841c58efa38"
+  validator:
+    path: "research_control/tasks/RT-20260720-025/artifacts/validate_eqsrc_probabilistic_dynamical_selection.py"
+    sha256: "e394956d41231fb52be7b00f1fee46cac66ce96462451c55f9650a6bbd1a6d54"
+  validation:
+    path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_validation.json"
+    sha256: "c1c3e1e2670b9ffb6124848d73166c57b17e2b3665a5ef2837a64ff26b8b1047"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-025/artifacts/child_phys_math_eqsrc_probabilistic_dynamical_selection.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-025/artifacts/child_phys_phil_eqsrc_probabilistic_dynamical_selection.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-025/artifacts/parent_conflict_review_eqsrc_probabilistic_dynamical_selection.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 8
+    unresolved_conflicts: []
+    summary: "Law versus point stationarity versus convergence sample versus selector attractor provenance effective-versus-substrate dynamics naturality and global-no-go conflicts were resolved without expanding authority."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-025/artifacts/parent_fusion_notes_eqsrc_probabilistic_dynamical_selection.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prevent future stochastic or symmetry-breaking language from becoming an informal escape hatch."
+  missing_source_law: "An adopted source-side measure initial-state boundary realization or substrate dynamics law that selects among non-fixed EqSrc candidates."
+  underdetermination_statement: "Current ontology does not derive the task-local selector spaces structural actions probability measures decoders initial laws boundary laws Markov kernels realized-history laws or substrate selector dynamics used by the conditional packet."
+  no_go_theorem_status: "finite_scoped_obstruction_only"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "draft/control"
+    source_side_definition: "A prospectively declared nonempty finite selector or state space structural group action probability law decoder dynamics initial or boundary datum and history readout."
+    formal_objects:
+      - "finite G-set S and probability simplex Delta(S)"
+      - "orbit-uniform laws and invariant simplex"
+      - "equivariant deterministic decoder"
+      - "finite G-state space Omega and equivariant Markov kernel P"
+      - "deterministic dynamics T attractors basins and histories"
+    domains:
+      - "eight finite source-side selector or state-space controls"
+      - "finite structural group actions and exact rational probability simplices"
+    maps:
+      - "pushforward action g_* on Delta(S)"
+      - "equivariant decoder d from invariant probability data to S"
+      - "equivariant deterministic dynamics T and Markov evolution nu maps to nu P"
+      - "equivariant selector readout r from Omega to S"
+    proof_obligations:
+      - "derive or independently justify M D I B and history provenance"
+      - "prove source-morphism naturality and congruence before general EqSrc"
+      - "provide physical and empirical probability or dynamics bridges"
+      - "obtain protected authority before ontology or source-law adoption"
+  actual_substrate_dynamics_status: "not_available_specification_preserved_implementation_deferred_to_plan_phase_P5"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc open until a source-side relation is constructed audited stress-tested and lawfully adopted."
+      - "Keep M_src g_eff matter coupling Einstein equations exact-GR recovery and benchmark promotion blocked."
+      - "Require target-neutral provenance admissible morphisms variation robustness and physical interpretation."
+      - "Require protected human authority before canonical ontology or source-law adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "finite selector and state spaces"
+      - "structural group actions and probability weights"
+      - "decoders deterministic maps Markov kernels initial data and histories"
+      - "eight exact rational finite controls"
+    audit_result: "No target atlas metric benchmark result candidate reconstruction generated derivative or process metadata defines a probability law dynamics selector or result."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No protected decision is requested in P3-T04."
+    exact_requested_ontology_edit: ""
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-025-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Finite orbit-simplex invariant-Dirac and no-free-measure decoder package"
+    summary: "Classifies every invariant finite probability law and proves exactly when invariant probability data can yield a deterministic symmetry-compatible point."
+  - payload_id: "NMP-RT-20260720-025-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Equivariant finite dynamics symmetry stationary-law and attractor package"
+    summary: "Proves invariant-law preservation unique stationary-law invariance and structural fixedness of an equivariant unique global point attractor."
+  - payload_id: "NMP-RT-20260720-025-003"
+    payload_type: "countermodel_or_obstruction"
+    name: "Eight exact finite probability and dynamics controls"
+    summary: "Separates law point sample history attractor fixed-point and asymmetric-law selection across eight fully enumerated rational cases."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-P3T04-001"
+    payload_type: "theorem"
+    object_name: "finite orbit-simplex and no-free-measure decoder theorem package"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+    burden_effect: "narrows"
+    summary: "Classifies invariant laws exactly and proves that equivariant deterministic decoding of invariant data returns only structural fixed points."
+  - payload_id: "PAYLOAD-P3T04-002"
+    payload_type: "theorem"
+    object_name: "finite equivariant dynamics symmetry and attractor theorem package"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves Markov symmetry preservation stationary-law invariance and structural fixedness of a unique global point attractor."
+  - payload_id: "PAYLOAD-P3T04-003"
+    payload_type: "finite_model"
+    object_name: "eight exact rational probability and dynamics controls"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_finite_controls_v1.json"
+    burden_effect: "stress_tests"
+    summary: "Exhaustively covers transitive multi-orbit fixed-point trivial-action basin ergodic and non-equivariant-selection cases."
+  - payload_id: "PAYLOAD-P3T04-004"
+    payload_type: "obstruction"
+    object_name: "finite no-free-probability-or-equivariant-dynamics obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+    burden_effect: "obstructs"
+    summary: "Invariant data and symmetry-respecting maps cannot yield a non-invariant Dirac selector without added asymmetry or realized history."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prevent future stochastic or symmetry-breaking language from becoming an informal escape hatch."
+  explanation: "The finite probability and dynamics escape routes are now typed and sharply bounded; they do not derive a general EqSrc law or substrate selection mechanism."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P3T04-FINITE-SYMMETRIC-PROBABILITY-DYNAMICS-001"
+  scope: "exact_finite_local_branch"
+  failed_object: "A deterministic non-fixed selector obtained solely from invariant probability data or equivariant finite dynamics"
+  exact_failure: "Invariant laws form the orbit simplex; an equivariant decoder of invariant data and a unique global point attractor of equivariant dynamics can return only a structural fixed point, while invariant input laws remain invariant under equivariant Markov evolution."
+  minimal_counterexample_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_finite_controls_v1.json"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "downstream_block_preserved"
+  forbidden_overread: "This does not prohibit future prospectively defined stochastic dynamics continuous or infinite systems spontaneous symmetry breaking or source-side extensions with independently justified M D I B or history data."
+
+distance_to_gr_delta:
+  changed: false
+  effect: "obstruction_recorded"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The finite probability and dynamics theorems derive or adopt no general EqSrc relation source law or downstream GR object."
+  downstream_unlocked:
+    - "P3-T05 quotient-based EqSrc candidate formalization only"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "P3-T04 closes its task-local specification and obstruction burden but derives or adopts no general source-equivalence law or downstream GR object."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no probability measure dynamics initial-state boundary or history law adopted"
+  - burden: "Source equivalence EqSrc"
+    status: "finite selector-alternative theorems and scoped obstruction recorded; general EqSrc remains open"
+  - burden: "RetainH"
+    status: "unchanged and blocked by missing adopted source-equivalence structure"
+  - burden: "GenH"
+    status: "unchanged and blocked by missing adopted source-equivalence structure"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; no localization or operational probability bridge derived"
+  - burden: "Resp_lc"
+    status: "unchanged; no response law derived"
+  - burden: "M_src"
+    status: "not started by this packet"
+  - burden: "g_eff"
+    status: "not started and blocked"
+  - burden: "matter coupling"
+    status: "not started and blocked"
+  - burden: "Einstein equations"
+    status: "not started and blocked"
+  - burden: "finite-variation robustness"
+    status: "eight finite structural probability and dynamics controls exhausted; general variation and infinite-system robustness remain open"
+  - burden: "benchmark promotion"
+    status: "unchanged and blocked"
+  - burden: "Gate Chair status"
+    status: "unchanged and human-gated"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact P3-T04 finite probability and dynamics repetition locally frozen; P3-T05 is materially distinct"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-P3-T04-FINITE-PROBABILITY-DYNAMICS-REPETITION"
+  prior_attempts_considered:
+    - "RT-20260720-020"
+    - "RT-20260720-022"
+    - "RT-20260720-023"
+    - "RT-20260720-025"
+  freeze_if:
+    - "The same finite invariant-measure or equivariant-dynamics controls recur without a new source relation construction or new hypotheses."
+  do_not_freeze_if:
+    - "P3-T05 constructs and tests a quotient-based EqSrc candidate with explicit congruence obligations."
+    - "A later P5 packet supplies actual prospectively defined substrate dynamics with new provenance."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The exact P3-T04 finite probability and dynamics specification is complete; P3-T05 changes the mathematical object to a candidate source-equivalence relation."
+  next_allowed_route: "none"
+  status_update_path: "research_control/program_state.yaml"
+  no_ledger_update_rationale: "The freeze is task-local and no adopted scientific object changed."
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p3_t04_finite_probability_dynamics_obstruction_complete_p3_t05_selected"
+  prior_related_tasks:
+    - "RT-20260718-038 through RT-20260718-047"
+    - "RT-20260720-009 through RT-20260720-025"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P3-T05 changes the object from selector alternatives to a quotient-based EqSrc relation with equivalence and congruence obligations."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P3-T05"
+
+no_target_import_audit:
+  explicit_target_import_found: false
+  explicit_process_import_found: false
+  checked_objects:
+    - "finite selector and state spaces"
+    - "structural group actions"
+    - "probability weights and invariant laws"
+    - "decoders deterministic maps Markov kernels and histories"
+    - "eight exact finite controls"
+  effective_gr_dynamics_used_as_substrate_selector_law: false
+  audit_result: "No target atlas metric benchmark result candidate reconstruction validator result or effective-GR law defines the packet's source-side objects."
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "P3-T04 creates no ontology adoption probability or substrate dynamics derivation canonical non-fixed point physical gauge empirical probability interpretation general EqSrc scientific-ledger delta M_src adoption g_eff matter coupling Einstein equations benchmark promotion publication unscoped theory-wide rejection or completed derivation."
+  forbidden_conclusions:
+    - "probability law or stationary law as canonical point"
+    - "sample or phase realization as a provenance-free selector"
+    - "effective GR dynamics as substrate selector dynamics"
+    - "ontology measure dynamics or source-law adoption"
+    - "physical gauge or empirical probability interpretation"
+    - "general EqSrc or downstream GR discharge"
+    - "scientific-ledger change"
+    - "Gate Chair verdict publication completed derivation or global no-go"
+    - "global theory rejection or future source-extension impossibility"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_extension_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  independent_replication_claim_authorized: false
+  human_endorsement_claim_authorized: false
+  physical_gauge_claim_authorized: false
+  operational_observable_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 946
+    relationship_row_count: 4690
+    semantic_row_count: 946
+    vault_row_count: 946
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+    before_local_cache_only_warning_count: 5
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"probability measures dynamical selection\" --limit 10 --json"
+      query_type: "search"
+      query_text: "probability measures dynamical selection"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "TEX-V21-P3-T02-EQSRC-SOURCE-EXTENSION-LATTICE"
+        - "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "e6dca3346ec8cc902aab343b9aeb50b24c2243c5898540d48b4bc18380445089"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P3-T02-EQSRC-SOURCE-EXTENSION-LATTICE"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-023/artifacts/eqsrc_source_extension_lattice_v1.tex"
+      source_hash: "b0f539b7a1d53f9cafb93151f6420cbd12077c317e2bba8176442607c0319a85"
+    - object_id: "TEX-V21-P3-T03-EQSRC-REPRESENTATIVE-IRRELEVANCE-THEOREM"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-024/artifacts/eqsrc_representative_irrelevance_theorem_v1.tex"
+      source_hash: "1a08e02c462d4401a3ad75219d7903c598f996d4011105baab31f07ba1dab0d1"
+    - object_id: "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+      source_hash: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "ee3ae3298ab45111235388b305cbda2143b0314cb90f9b652115f71eb2fb8c6d"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and five local-cache warnings were refreshed to a clean local retrieval state with 946 source objects."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-025/artifacts/validate_eqsrc_probabilistic_dynamical_selection.py"
+    status: "PASS"
+    summary: "The task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-025/artifacts/validate_eqsrc_probabilistic_dynamical_selection.py --write-report --json"
+    status: "PASS"
+    summary: "Passed 22 of 22 exact action orbit probability dynamics stationary-class provenance child-fusion and authority checks."
+  - command: "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-025-latex research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+    status: "PASS"
+    summary: "Compiled the registered TeX source twice to a three-page local scratch PDF with resolved references and no warnings."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests"
+    status: "INTERMEDIATE_FAIL"
+    summary: "The first 1006-test run exposed only stale generated-hash references after the completion receipt changed: three failures and one dependent error. The source hash references were corrected before the final rerun."
+  - command: ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+    status: "INTERMEDIATE_FAIL"
+    summary: "The pre-checkpoint full profile reached only the expected tracked-path gate for the new registered TeX and wiki note; core research validation had zero errors and staged full-profile acceptance remained reserved to the governed checkpoint."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests"
+    status: "PASS"
+    summary: "Ran 1006 repository tests in 187.426 seconds with no failures after correcting the stale generated-hash references."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 25 lease parity immutable route identity max reasoning effort repository binding clean start predecessor checkpoint and single consumption were verified before work."
+      - "Memory preflight refreshed only local retrieval state and the registered frontier plan P2-T03 P3-T02 P3-T03 burden ledger foundations and dynamics sources were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required internal perspectives completed and eight conflicts were resolved in one parent synthesis round."
+      - "The task-local validator passes all 22 exact action orbit measure dynamics stationary-class provenance child-fusion and authority checks."
+      - "The registered TeX source compiles to a three-page local scratch PDF with no warnings."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Changed-scope research-control claim-language documentation-impact signal-parity classifier physics-metrics generated-freshness and whitespace checks pass."
+      - "After an intermediate stale-hash diagnostic, the repository unit suite passes all 1006 tests."
+      - "Full-profile staged acceptance remains reserved to the governed checkpoint because newly registered source and wiki paths must first enter the Git index."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph and claim graph were regenerated and pass their freshness checks."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only pass after source registration and derivative regeneration."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports PASS with no hard failures; historical warnings remain nonblocking."
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_validation.json"
+  local_validator_report_hash: "c1c3e1e2670b9ffb6124848d73166c57b17e2b3665a5ef2837a64ff26b8b1047"
+  task_local_check_count: 22
+  task_local_failed_check_count: 0
+  finite_case_count: 8
+  parent_child_synthesis_status: "PASS"
+  latex_compile_status: "PASS"
+  latex_page_count: 3
+  latex_warning_count: 0
+  ontology_foundations_hash_unchanged: true
+  ontology_dynamics_hash_unchanged: true
+  distance_to_gr_ledger_hash_unchanged: true
+  metric_use_ledger_hash_unchanged: true
+  validation_status: "PASS"
+
+validators_run:
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-025/artifacts/validate_eqsrc_probabilistic_dynamical_selection.py"
+  - ".venv/bin/python research_control/tasks/RT-20260720-025/artifacts/validate_eqsrc_probabilistic_dynamical_selection.py --write-report --json"
+  - "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-025-latex research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+
+required_validators:
+  - "memory_preflight"
+  - "task_local_validator"
+  - "latex_compile"
+  - "parent_child_synthesis"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "classify_project_changes"
+  - "project_improvement_signal_parity"
+  - "documentation_impact"
+  - "research_control_validation"
+  - "claim_language"
+  - "full_validation"
+  - "repository_unit_tests"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+documentation_impact:
+  required: true
+  documentation_impact_id: "DI-RT-20260720-025-001"
+  documentation_impact_path: "research_control/tasks/RT-20260720-025/documentation_impact.yaml"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  rationale: "No project-system defect was identified."
+
+selected_next_route:
+  route_id: "v21_p3_t05_quotient_eqsrc_congruence_obligations"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P3-T05"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Replace ad hoc kernel relations with a general source-equivalence target."
+  requires_human_gate: false
+  physics_promotion_authorized: false
+  next_action: "Construct a proposal-only quotient-based EqSrc candidate and state equivalence and congruence obligations with positive and negative witness pairs."
+
+notes: "P3-T04 is complete and locally frozen. P3-T05 is selected but not executed; all protected authority remains blocked."
