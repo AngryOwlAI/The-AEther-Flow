@@ -1,0 +1,40 @@
+schema_id: "v21_p3_t03_child_phys_math_eqsrc_representative_irrelevance_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260720-024"
+job_id: "AJ-RT-20260720-024-001"
+agent_job_id: "AJ-RT-20260720-024-001"
+authority: "analysis-only internal execution unit; not an AgentJob"
+review_disposition: "PASS_WITH_SCOPE_CORRECTIONS"
+answer_summary: "The strongest sound result is mixed: an exact quotient-factorization theorem positive representative independence for prospectively declared invariant or quotient-class source readouts and precise failure for raw orientation root line partition phase and representative-identity readouts."
+formal_results:
+  orbit_factorization: "A readout factors uniquely through D_X/G_X iff it is constant on every G_X orbit."
+  all_choice_equality: "On nonempty D_X all choices agree iff the joint image is a singleton; factorization alone is insufficient on multiple orbits."
+  equivariance: "Equivariance induces a quotient-to-quotient map, not raw equality; raw descent requires pointwise fixed image."
+  invariant_algebra: "Fun(D_X,R)^{G_X} is the largest subalgebra of the full real function algebra whose members factor through D_X/G_X."
+  reynolds_guard: "Finite real Reynolds averaging is linear and idempotent but generally nonmultiplicative and constructs a new invariant readout."
+  family_guard: "Objectwise factorization becomes natural only after congruence and transport compatibility are proved for admitted source morphisms."
+finite_review:
+  group_closures_reproduced: true
+  orbit_partitions_reproduced: true
+  readout_images_reproduced: true
+  raw_sensitive_witness_present_per_case: true
+  multiple_orbit_guard_reproduced: true
+scope_corrections:
+  - "Keep orbit factorization separate from global all-choice equality."
+  - "Apply the nonempty guard to singleton-image claims, not to factorization itself."
+  - "Do not replace a failed raw target post hoc with an invariant target."
+  - "Call the invariant algebra maximal only relative to the prospectively declared ambient scalar algebra."
+  - "Do not identify structural orbits with physical gauge or general EqSrc."
+  - "Route next only to P3-T04; P3-T05 remains dependency-blocked."
+authority_boundary:
+  status: "draft/control"
+  adoption_status: "proposal-only"
+  result_kind: "source-extension data"
+  physical_gauge_established: false
+  operational_observable_established: false
+  general_eqsrc_discharged: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  publication_authorized: false

@@ -1,0 +1,90 @@
+schema_id: "v21_p3_t03_eqsrc_observable_invariance_definition_v1"
+artifact_id: "EQSRC-REPRESENTATIVE-IRRELEVANCE-THEOREM-V1"
+status: "draft/control"
+adoption_status: "proposal-only"
+result_kind: "source-extension data"
+task_id: "RT-20260720-024"
+job_id: "AJ-RT-20260720-024-001"
+plan_task_id: "P3-T03"
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Prefer quotient-level physics over arbitrary gauge fixing when lawful."
+fixed_input_contract:
+  representative_domain: "A nonempty finite set D_X of admissible source-side representatives fixed before evaluation."
+  structural_action: "A finite declared structural automorphism group G_X acting on D_X."
+  observable_family: "A finite family F_X of task-local source readouts f:D_X->A_f, with each codomain and value rule fixed before evaluation of any representative."
+  joint_readout: "O_F(d)=(f(d))_{f in F_X}."
+  orbit_quotient: "q_X:D_X->D_X/G_X."
+  target_exclusions:
+    - "target atlas"
+    - "target metric"
+    - "benchmark success"
+    - "candidate reconstruction"
+    - "validation status"
+    - "registry metadata authority"
+criteria:
+  orbit_factorization:
+    statement: "O_F factors uniquely through q_X iff O_F(g.d)=O_F(d) for every g in G_X and d in D_X."
+    scope: "within each declared structural orbit"
+  all_choice_equality:
+    statement: "Because D_X is nonempty, every admissible representative has the same joint readout iff the image of O_F is a singleton, equivalently the induced quotient readout is constant on D_X/G_X."
+    nonempty_guard_required: true
+  equivariance_guard:
+    statement: "For a G_X-action on the codomain, equivariance gives O_F(g.d)=g.O_F(d), not equality. Equality follows exactly when the image is pointwise fixed; only the codomain-orbit readout [O_F(d)] descends automatically."
+  multiple_orbit_guard:
+    statement: "Orbit factorization does not imply all-choice equality when D_X/G_X has more than one point and the induced quotient readout separates two orbits."
+  selector_image_corollary:
+    statement: "When admissible selectors exist, selector-level representative irrelevance at a declared relation interface is equivalent to a singleton image of the induced selector-to-readout map; an empty selector domain has empty, not unique, image."
+real_valued_invariant_algebra:
+  carrier: "Fun(D_X,R)^{G_X}"
+  interpretation: "the maximal real-valued source-readout subalgebra constant on structural orbits"
+  reynolds_projection: "P_G f(d)=|G_X|^{-1} sum_{g in G_X} f(g.d)"
+  exact_scope: "finite G_X and real-valued readouts only"
+  does_not_apply_to: "arbitrary nonconvex or merely labelled codomains without an averaging operation"
+  adequacy_guard: "Choosing the invariant algebra proves internal factorization but does not prove that it is complete, operationally adequate, empirically meaningful, or sufficient for downstream physics."
+  projection_guard: "The Reynolds projection is linear and idempotent but is generally not multiplicative; applying it to a sensitive readout constructs a new readout rather than proving the original one irrelevant."
+family_naturality_guard:
+  statement: "Objectwise orbit factorization defines a natural quotient-readout family only after the orbit relation and descended readouts are proved compatible with every admitted source morphism."
+  current_status: "not established by the finite P3-T03 controls"
+readout_adequacy_contract:
+  prospective_binding_required: true
+  provenance_required: true
+  interface_completeness_established: false
+  statement: "Representative irrelevance is always relative to a named prospectively declared readout family; the invariant family is not shown to exhaust physical operational or empirical information."
+finite_control_contract:
+  artifact: "eqsrc_representative_irrelevance_orbit_examples_v1.json"
+  required_case_ids:
+    - "RI-C1-ORIENTATION-TORSOR"
+    - "RI-C2-CYCLE-ROOT"
+    - "RI-C3-THREE-LINE"
+    - "RI-C4-ORDERED-PARTITION"
+    - "RI-C5-GRADED-ORBIT-PHASE"
+    - "RI-C6-MULTI-ORBIT-REPRESENTATIVE"
+  complete_group_enumeration_required: true
+  complete_domain_enumeration_required: true
+  raw_interface_requires_sensitive_control: true
+result_summary:
+  invariant_subfamily: "Every declared invariant subfamily factors through the structural orbit quotient in all six bounded controls."
+  raw_interface: "Every bounded raw interface contains at least one source-side representative-sensitive readout and therefore fails full representative irrelevance."
+  multiple_orbit: "The multi-orbit control factors through its two-point quotient but its induced component-class readout is not all-choice constant."
+  marked_singleton_guard: "A P3-T02 marked singleton changes the source domain and is added source structure, not representative irrelevance on the unmarked domain."
+  classification: "scoped_orbit_factorization_theorem_with_raw_interface_countermodels"
+  adoption_status: "blocked_adoption_open_continuation"
+authority_boundary:
+  source_side_task_local_readouts_only: true
+  operational_physical_observables_established: false
+  physical_gauge_established: false
+  physical_covariance_established: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  general_eqsrc_discharged: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  global_no_go_authorized: false
+source_hashes:
+  implementations_plans/recommendations_implementation_plan_continue_task-v21.md: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  research_control/design/gr_derivation_burden_map.md: "6d1df3488be163b72296cf34ee07b979e29b061d508e6a4c271ac3305373aa1f"
+  registries/DISTANCE_TO_GR_LEDGER.csv: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  ontology/tex/aether_flow_foundations.tex: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+  research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex: "4af38c29cc97729cbd4278e5174b4ff3cc76d7921dbf148f953e92c9a3f03d30"
+  research_control/tasks/RT-20260720-023/artifacts/eqsrc_source_extension_lattice_v1.tex: "b0f539b7a1d53f9cafb93151f6420cbd12077c317e2bba8176442607c0319a85"

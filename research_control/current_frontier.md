@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-023` and `handoff-0793`.
+`RT-20260720-024` and `handoff-0794`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-023` |
-| Latest handoff ID | `handoff-0793` |
-| Current status | `v21_p3_t02_typed_source_extension_declaration_lattice_completed_p3_t03_selected_no_adoption_or_distance_delta` |
+| Active task ID | `RT-20260720-024` |
+| Latest handoff ID | `handoff-0794` |
+| Current status | `v21_p3_t03_orbit_factorization_theorem_and_raw_interface_obstruction_completed_p3_t04_selected_no_adoption_or_distance_delta` |
 | V16 completed | false |
-| Current route family | v21 p3 t03 eqsrc representative irrelevance theorem |
+| Current route family | v21 p3 t04 probabilistic dynamical selector alternatives |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P3-T03 ontology-formalizer packet proving or refuting representative irrelevance for orientation root line partition and related choices at an explicit source-observable target. |
-| Required next authority | One P3-T03 ontology-law-research-packet may define an explicit source-observable target and prove factorization or observable independence across all admissible representatives, or return a precise scoped obstruction. |
-| Next recommended action | Run exactly one bounded v21 P3-T03 ontology-formalizer packet proving or refuting representative irrelevance for orientation root line partition and related choices at an explicit source-observable target. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection. |
+| Required next authority | One P3-T04 ontology-law-research-packet may define exact source-side measure equivariance and dynamical-selection structures, prove what they do and do not select, and test finite uniform-distribution controls without adopting a source law. |
+| Next recommended action | Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-023` |
-| Latest research handoff ID | `handoff-0793` |
-| Latest research next action | Run exactly one bounded v21 P3-T03 ontology-formalizer packet proving or refuting representative irrelevance for orientation root line partition and related choices at an explicit source-observable target. |
+| Latest research task ID | `RT-20260720-024` |
+| Latest research handoff ID | `handoff-0794` |
+| Latest research next action | Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-023/00_TASK.yaml`.
-- Active task objective: Execute exactly one bounded v21 P3-T02 Candidate Constructor packet constructing a proposal-only partial order of typed source extensions, explicit assumption costs, and finite symmetry-reduction witnesses for the historical EqSrc obstruction families without adopting any extension or imposing a false total order.
-- Latest handoff path: `research_control/handoffs/handoff-0793.yaml`.
-- Latest handoff summary: RT-20260720-023 completed only v21 P3-T02. It constructed an exact eight-atom Boolean declaration envelope with a separate well-typed reduct guard, ten-axis non-scalar costs, eight finite compatible-fixed-locus controls, and five frozen-family candidate placements. The focused validator passes 19 checks and the TeX source compiles to six pages. No extension is adopted and every ontology physics empirical authority and Distance-to-GR boundary remains unchanged.
-- Current route family: v21 p3 t03 eqsrc representative irrelevance theorem.
-- Next recommended action: Run exactly one bounded v21 P3-T03 ontology-formalizer packet proving or refuting representative irrelevance for orientation root line partition and related choices at an explicit source-observable target.
+- Active task path: `research_control/tasks/RT-20260720-024/00_TASK.yaml`.
+- Active task objective: Execute exactly one bounded v21 P3-T03 Ontology Formalizer packet defining a source-only observable family before representative choice, proving the exact orbit-factorization criterion, and exhaustively testing orientation, root, line, partition, and representative-sensitive finite controls.
+- Latest handoff path: `research_control/handoffs/handoff-0794.yaml`.
+- Latest handoff summary: RT-20260720-024 completed only v21 P3-T03. It proves a conditional orbit-factorization theorem and separates structural-orbit constancy from all-choice equality equivariance natural family compatibility physical gauge and operational completeness. All six invariant finite subfamilies factor; five transitive controls are all-choice constant while the two-orbit control is not. Every raw interface has a representative-sensitive readout giving six scoped countermodels. The focused validator passes 14 checks and the TeX source compiles to five pages. No ontology general EqSrc ledger promotion publication global no-go or completed-derivation status changes.
+- Current route family: v21 p3 t04 probabilistic dynamical selector alternatives.
+- Next recommended action: Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P3-T03 ontology-formalizer packet proving or refuting representative irrelevance for orientation root line partition and related choices at an explicit source-observable target.
+Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -336,22 +336,17 @@ Authorization layers:
 | `canonical_ontology_edit_authorized` | False | extension authorization field |
 | `external_outreach_authorized` | False | extension authorization field |
 | `external_publication_authorized` | False | extension authorization field |
-| `future_source_extension_impossibility_authorized` | False | extension authorization field |
 | `general_EqSrc_discharge_authorized` | False | extension authorization field |
 | `global_no_go_claim_authorized` | False | extension authorization field |
-| `human_endorsement_claim_authorized` | False | extension authorization field |
-| `independent_replication_claim_authorized` | False | extension authorization field |
-| `physical_admissibility_claim_authorized` | False | extension authorization field |
 | `physical_gauge_claim_authorized` | False | extension authorization field |
 | `push_authorized` | False | extension authorization field |
-| `source_extension_adoption_authorized` | False | extension authorization field |
 | `source_law_adoption_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-023`;
-- latest handoff: `handoff-0793`;
-- current status: `v21_p3_t02_typed_source_extension_declaration_lattice_completed_p3_t03_selected_no_adoption_or_distance_delta`;
+- active task: `RT-20260720-024`;
+- latest handoff: `handoff-0794`;
+- current status: `v21_p3_t03_orbit_factorization_theorem_and_raw_interface_obstruction_completed_p3_t04_selected_no_adoption_or_distance_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -361,8 +356,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0793.yaml`
-- `research_control/tasks/RT-20260720-023/00_TASK.yaml`
+- `research_control/handoffs/handoff-0794.yaml`
+- `research_control/tasks/RT-20260720-024/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -378,7 +373,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0793*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0794*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

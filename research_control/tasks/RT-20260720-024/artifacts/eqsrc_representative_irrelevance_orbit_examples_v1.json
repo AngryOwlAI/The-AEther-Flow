@@ -1,0 +1,109 @@
+{
+  "schema_id": "v21_p3_t03_eqsrc_representative_irrelevance_orbit_examples_v1",
+  "artifact_id": "EQSRC-REPRESENTATIVE-IRRELEVANCE-THEOREM-V1",
+  "status": "draft/control",
+  "task_id": "RT-20260720-024",
+  "cases": [
+    {
+      "case_id": "RI-C1-ORIENTATION-TORSOR",
+      "purpose": "Separate unsigned source structure from a signed orientation choice.",
+      "choices": ["minus", "plus"],
+      "group_actions": [[0, 1], [1, 0]],
+      "expected_orbits": [[0, 1]],
+      "observables": [
+        {"observable_id": "unsigned_norm", "source_side_definition": "absolute value of the signed source token", "values": [1, 1], "expected_class": "orbit_invariant"},
+        {"observable_id": "orientation_sign", "source_side_definition": "the signed source orientation token itself", "values": [-1, 1], "expected_class": "representative_sensitive"}
+      ],
+      "expected_invariant_subfamily_all_choice_equal": true,
+      "expected_raw_interface_all_choice_equal": false
+    },
+    {
+      "case_id": "RI-C2-CYCLE-ROOT",
+      "purpose": "Separate unrooted four-cycle data from a chosen root.",
+      "choices": ["v0", "v1", "v2", "v3"],
+      "group_actions": [[0, 1, 2, 3], [1, 2, 3, 0], [2, 3, 0, 1], [3, 0, 1, 2]],
+      "expected_orbits": [[0, 1, 2, 3]],
+      "observables": [
+        {"observable_id": "cycle_length", "source_side_definition": "number of vertices in the unrooted cycle", "values": [4, 4, 4, 4], "expected_class": "orbit_invariant"},
+        {"observable_id": "degree_multiset", "source_side_definition": "sorted degree multiset of the unrooted cycle", "values": ["2,2,2,2", "2,2,2,2", "2,2,2,2", "2,2,2,2"], "expected_class": "orbit_invariant"},
+        {"observable_id": "root_label", "source_side_definition": "label of the chosen source root", "values": [0, 1, 2, 3], "expected_class": "representative_sensitive"},
+        {"observable_id": "distance_to_fixed_v0", "source_side_definition": "graph distance from the chosen root to source vertex v0", "values": [0, 1, 2, 1], "expected_class": "representative_sensitive"}
+      ],
+      "expected_invariant_subfamily_all_choice_equal": true,
+      "expected_raw_interface_all_choice_equal": false
+    },
+    {
+      "case_id": "RI-C3-THREE-LINE",
+      "purpose": "Separate unlabeled line incidence data from a selected line in the three-line F2 control.",
+      "choices": ["L0", "L1", "L2"],
+      "group_actions": [[0, 1, 2], [0, 2, 1], [1, 0, 2], [1, 2, 0], [2, 0, 1], [2, 1, 0]],
+      "expected_orbits": [[0, 1, 2]],
+      "observables": [
+        {"observable_id": "line_dimension", "source_side_definition": "dimension of the selected one-dimensional subspace", "values": [1, 1, 1], "expected_class": "orbit_invariant"},
+        {"observable_id": "other_line_count", "source_side_definition": "number of other one-dimensional subspaces in the finite source control", "values": [2, 2, 2], "expected_class": "orbit_invariant"},
+        {"observable_id": "line_label", "source_side_definition": "identity label of the selected line", "values": ["L0", "L1", "L2"], "expected_class": "representative_sensitive"}
+      ],
+      "expected_invariant_subfamily_all_choice_equal": true,
+      "expected_raw_interface_all_choice_equal": false
+    },
+    {
+      "case_id": "RI-C4-ORDERED-PARTITION",
+      "purpose": "Separate an unordered equal-block partition from the choice of first block.",
+      "choices": ["AB-first", "CD-first"],
+      "group_actions": [[0, 1], [1, 0]],
+      "expected_orbits": [[0, 1]],
+      "observables": [
+        {"observable_id": "unordered_block_sizes", "source_side_definition": "sorted sizes of the two source blocks", "values": ["2,2", "2,2"], "expected_class": "orbit_invariant"},
+        {"observable_id": "first_block_signature", "source_side_definition": "source labels in the declared first block", "values": ["{a,b}", "{c,d}"], "expected_class": "representative_sensitive"}
+      ],
+      "expected_invariant_subfamily_all_choice_equal": true,
+      "expected_raw_interface_all_choice_equal": false
+    },
+    {
+      "case_id": "RI-C5-GRADED-ORBIT-PHASE",
+      "purpose": "Separate cyclic grade-profile data from a chosen phase origin.",
+      "choices": ["g0", "g1", "g2", "g3"],
+      "group_actions": [[0, 1, 2, 3], [1, 2, 3, 0], [2, 3, 0, 1], [3, 0, 1, 2]],
+      "expected_orbits": [[0, 1, 2, 3]],
+      "observables": [
+        {"observable_id": "cyclic_grade_multiset", "source_side_definition": "multiset of four cyclic grade values", "values": ["0,1,2,3", "0,1,2,3", "0,1,2,3", "0,1,2,3"], "expected_class": "orbit_invariant"},
+        {"observable_id": "successor_cycle_length", "source_side_definition": "length of the declared cyclic successor action", "values": [4, 4, 4, 4], "expected_class": "orbit_invariant"},
+        {"observable_id": "phase_origin", "source_side_definition": "source label chosen as absolute phase zero", "values": [0, 1, 2, 3], "expected_class": "representative_sensitive"}
+      ],
+      "expected_invariant_subfamily_all_choice_equal": true,
+      "expected_raw_interface_all_choice_equal": false
+    },
+    {
+      "case_id": "RI-C6-MULTI-ORBIT-REPRESENTATIVE",
+      "purpose": "Show that orbit factorization alone does not imply equality across distinct structural orbits.",
+      "choices": ["x0", "x1", "y0", "y1"],
+      "group_actions": [[0, 1, 2, 3], [1, 0, 3, 2]],
+      "expected_orbits": [[0, 1], [2, 3]],
+      "observables": [
+        {"observable_id": "component_class", "source_side_definition": "which of the two declared source components contains the representative", "values": ["X", "X", "Y", "Y"], "expected_class": "orbit_invariant"},
+        {"observable_id": "component_size", "source_side_definition": "cardinality of the representative's declared source component", "values": [2, 2, 2, 2], "expected_class": "orbit_invariant"},
+        {"observable_id": "representative_label", "source_side_definition": "identity label of the representative inside its component", "values": ["x0", "x1", "y0", "y1"], "expected_class": "representative_sensitive"}
+      ],
+      "expected_invariant_subfamily_all_choice_equal": false,
+      "expected_raw_interface_all_choice_equal": false
+    }
+  ],
+  "expected_summary": {
+    "case_count": 6,
+    "transitive_case_count": 5,
+    "multi_orbit_case_count": 1,
+    "invariant_subfamily_factorization_pass_count": 6,
+    "invariant_subfamily_all_choice_equal_count": 5,
+    "raw_interface_all_choice_equal_count": 0,
+    "raw_interface_countermodel_count": 6
+  },
+  "authority_boundary": {
+    "finite_source_controls_only": true,
+    "operational_physical_observable_established": false,
+    "physical_gauge_established": false,
+    "source_law_adopted": false,
+    "general_eqsrc_discharged": false,
+    "distance_to_gr_delta_changed": false,
+    "global_no_go_authorized": false
+  }
+}

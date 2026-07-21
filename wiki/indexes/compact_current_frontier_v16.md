@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-023`
-- Latest handoff: `handoff-0793`
-- Current status: `v21_p3_t02_typed_source_extension_declaration_lattice_completed_p3_t03_selected_no_adoption_or_distance_delta`
+- Active task: `RT-20260720-024`
+- Latest handoff: `handoff-0794`
+- Current status: `v21_p3_t03_orbit_factorization_theorem_and_raw_interface_obstruction_completed_p3_t04_selected_no_adoption_or_distance_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-023`
-- Latest research handoff: `handoff-0793`
-- Latest research next action: Run exactly one bounded v21 P3-T03 ontology-formalizer packet proving or refuting representative irrelevance for orientation root line partition and related choices at an explicit source-observable target.
+- Latest research task: `RT-20260720-024`
+- Latest research handoff: `handoff-0794`
+- Latest research next action: Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining exact source-side probability measures and dynamical sector-selection structures and testing whether they lawfully replace deterministic selection.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p3_t03_eqsrc_representative_irrelevance_theorem`
+- Route ID: `v21_p3_t04_probabilistic_dynamical_selector_alternatives`
 - Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Determine whether all admissible representatives yield identical declared source observables.
+- Milestone burden: Prevent future stochastic or symmetry-breaking language from becoming an informal escape hatch.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `74da588f2bee695b44dcad42cae0b2fb067c71b4501d5e5831c2435d9cd9bfac`
-- JSON SHA-256: `473d42611abbeb98fd745c0d43de7a1e11ddfe3989ba56916f2e83ed14112923`
+- YAML SHA-256: `1bf65c64bfbec4be03ad6116b1431ace43b6f772e20cc162f5a841f28fd85b55`
+- JSON SHA-256: `e728cdcad68493b884c3cc5868cd19c76231ecfd0774dcf05e16532f97a8a0f0`
 
 ## Authority Warning
 

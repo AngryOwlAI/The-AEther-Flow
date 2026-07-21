@@ -1,0 +1,38 @@
+schema_id: "v21_p3_t03_parent_conflict_review_eqsrc_representative_irrelevance_v1"
+task_id: "RT-20260720-024"
+agent_job_id: "AJ-RT-20260720-024-001"
+status: "resolved"
+resolution_rounds: 1
+resolved_conflict_count: 7
+unresolved_blocking_conflicts: []
+child_records:
+  - "research_control/tasks/RT-20260720-024/artifacts/child_phys_math_eqsrc_representative_irrelevance.yaml"
+  - "research_control/tasks/RT-20260720-024/artifacts/child_phys_phil_eqsrc_representative_irrelevance.yaml"
+resolutions:
+  - conflict_id: "PCR-01"
+    issue: "Orbit factorization could be overread as all-choice equality."
+    resolution: "The theorem and multi-orbit control state the two criteria separately."
+  - conflict_id: "PCR-02"
+    issue: "Equivariance could be overread as raw equality."
+    resolution: "Raw descent now requires fixed image; only codomain-orbit descent is automatic."
+  - conflict_id: "PCR-03"
+    issue: "The invariant algebra could be overread as a complete physical interface."
+    resolution: "The adequacy guard makes completeness operational and empirical claims explicitly unavailable."
+  - conflict_id: "PCR-04"
+    issue: "Reynolds averaging could be overread as preserving the original readout or algebra products."
+    resolution: "The result is restricted to a linear idempotent projection and includes an explicit nonmultiplicative C2 control."
+  - conflict_id: "PCR-05"
+    issue: "Objectwise factorization could be overread as a natural family theorem."
+    resolution: "A congruence and transport-compatibility obligation is stated and remains open."
+  - conflict_id: "PCR-06"
+    issue: "Marked singleton controls could be relabeled as irrelevance."
+    resolution: "They remain added source structure on a changed domain."
+  - conflict_id: "PCR-07"
+    issue: "Structural orbit language could be overread as physical gauge or general EqSrc."
+    resolution: "The theorem preserves structural source-readout terminology and all physical adoption and general EqSrc blocks."
+fused_disposition:
+  result: "scoped_orbit_factorization_theorem_with_raw_interface_countermodels"
+  physics_progress_status: "precise_obstruction_found"
+  adoption_status: "blocked_adoption_open_continuation"
+  next_plan_task: "P3-T04"
+  p3_t05_dependency_ready: false

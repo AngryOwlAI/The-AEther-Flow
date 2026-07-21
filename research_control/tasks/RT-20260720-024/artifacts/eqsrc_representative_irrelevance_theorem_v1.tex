@@ -1,0 +1,310 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,booktabs,longtable}
+\usepackage[margin=0.85in]{geometry}
+\setlength{\emergencystretch}{3em}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\EqSrc}{\ensuremath{\mathrm{EqSrc}}}
+\newcommand{\Fun}{\operatorname{Fun}}
+\newcommand{\im}{\operatorname{im}}
+
+\title{EQSRC-REPRESENTATIVE-IRRELEVANCE-THEOREM-V1\\
+Orbit factorization, invariant source readouts, and scoped countermodels}
+\author{Ontology Formalizer packet RT-20260720-024---draft/control}
+\date{2026-07-21}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This packet answers v21 P3-T03 on an explicit source-side target.  For a
+nonempty finite representative domain $D_X$, a declared structural action
+$G_X\curvearrowright D_X$, and a source-readout family fixed before
+evaluation, the joint readout factors through the orbit quotient exactly when
+it is constant on every structural orbit.  Equality for every admissible
+representative is stronger: the induced quotient readout must itself be
+constant.  The maximal invariant real-valued readout algebra and its finite
+Reynolds projection are proved explicitly.  Six exhaustively enumerated
+controls show that invariant subfamilies factor, while each raw interface
+contains a source-side representative-sensitive readout.  The result is a
+scoped orbit-factorization theorem plus a scoped raw-interface obstruction,
+not physical gauge, operational-observable, ontology-adoption, general
+\EqSrc{}, or promotion authority.
+\end{abstract}
+
+\section{Authority, question, and fixed source-only inputs}
+
+The artifact is \texttt{draft/control}, \texttt{proposal-only}, and
+\texttt{source-extension data}.  It uses the P2-T03 fixed-core relation-image
+criterion, the P3-T01 representative-irrelevance evidence contract, and the
+P3-T02 finite source-extension controls.  Current ontology does not derive or
+adopt the representative domains, structural actions, readout families, orbit
+quotients, or any resulting \EqSrc{} law.  Structural automorphisms are not thereby physical gauge transformations.
+
+The exact question is not whether one can call a structural relabeling
+``gauge.''  It is whether a readout declared independently of the desired
+answer takes equal values on every admissible representative.  The readout
+codomain and rule are therefore fixed before enumeration.  Target atlases,
+target metrics, benchmark success, candidate reconstructions, validator
+status, registry metadata authority, and generated derivatives are excluded
+from the premises.
+
+\begin{definition}[Source-readout package]
+A bounded source-readout package is
+\[
+  \mathcal R_X=(D_X,G_X,\mathcal F_X,O_{\mathcal F},q_X),
+\]
+where $D_X\neq\varnothing$ is a finite set of admissible source-side
+representatives, $G_X$ is a finite declared structural automorphism group
+acting on $D_X$, $\mathcal F_X$ is a finite family of readouts
+$f:D_X\to A_f$ fixed before evaluation,
+\[
+  O_{\mathcal F}(d)=(f(d))_{f\in\mathcal F_X},
+\]
+and $q_X:D_X\to D_X/G_X$ is the structural orbit projection.  These are
+task-local source readouts.  Calling them operational physical observables
+would require a separate source-to-measurement derivation.
+\end{definition}
+
+\section{Exact factorization and equality theorems}
+
+\begin{theorem}[Orbit-factorization criterion]
+\label{thm:factor}
+There is a unique map
+\[
+  \overline O_{\mathcal F}:D_X/G_X\longrightarrow
+  \prod_{f\in\mathcal F_X}A_f
+  \quad\text{with}\quad
+  O_{\mathcal F}=\overline O_{\mathcal F}\circ q_X
+\]
+if and only if
+\[
+  O_{\mathcal F}(g\!\cdot\! d)=O_{\mathcal F}(d)
+  \quad\text{for every }g\in G_X,\ d\in D_X.
+\]
+Equivalently, every member of $\mathcal F_X$ is constant on each structural
+orbit.
+\end{theorem}
+
+\begin{proof}
+If the factorization exists, then $q_X(g\cdot d)=q_X(d)$, so the displayed
+equality follows.  Conversely, orbit constancy makes
+$\overline O_{\mathcal F}([d]):=O_{\mathcal F}(d)$ independent of the chosen
+representative.  Surjectivity of $q_X$ forces uniqueness.
+\end{proof}
+
+\begin{theorem}[All-choice equality criterion]
+\label{thm:allchoice}
+For nonempty $D_X$, every admissible representative has the same joint
+readout if and only if $\im O_{\mathcal F}$ is a singleton.  When Theorem
+\ref{thm:factor} applies, this is equivalent to
+$\overline O_{\mathcal F}$ being constant on all of $D_X/G_X$.
+\end{theorem}
+
+\begin{proof}
+Equality of all values gives one image point.  A singleton image gives
+equality of every pair.  Nonemptiness is required because the image of an
+empty domain is empty, not a uniquely realized value.  Under factorization,
+surjectivity of $q_X$ identifies the two image sets.
+\end{proof}
+
+\begin{remark}[Multiple-orbit guard]
+Orbit factorization removes choice only \emph{within} an orbit.  If
+$D_X/G_X$ contains two points on which $\overline O_{\mathcal F}$ differs,
+then the readout is structurally invariant but not equal for every admissible
+choice.  A quotient theorem and a global unique-image theorem are therefore
+distinct results.
+\end{remark}
+
+\begin{proposition}[Selector-image form]
+Suppose an admissible selector domain $\mathcal S$ is nonempty and a declared
+interface sends $\sigma\in\mathcal S$ to a source-readout section $K_*(\sigma)$.
+All selectors are irrelevant at that interface exactly when
+$\lvert\im K_*\rvert=1$.  If $\mathcal S=\varnothing$, the image is empty and
+there is no realized unique readout.  On the P2-T03 fixed core this reduces
+componentwise to singleton images of the fixed loci under the declared
+interface.
+\end{proposition}
+
+\begin{proof}
+This is Theorem \ref{thm:allchoice} with $D_X=\mathcal S$ and joint map
+$O_{\mathcal F}=K_*$.  The final sentence is the registered P2-T03
+relation-image criterion on the fixed certified core.
+\end{proof}
+
+\section{Equivariance and the invariant real-readout algebra}
+
+\begin{proposition}[Equivariance is not equality]
+Let $G_X$ also act on a codomain $A$ and let $O:D_X\to A$ be equivariant.
+Then
+\[
+  O(g\cdot d)=g\cdot O(d),
+\]
+which does not imply $O(g\cdot d)=O(d)$.  Equality on every orbit holds
+exactly when $\im O\subseteq A^{G_X}$.  The codomain-orbit readout
+$d\mapsto[O(d)]\in A/G_X$ is invariant automatically and therefore descends
+to $D_X/G_X$, but it returns only a structural codomain orbit, not a unique
+raw value.
+\end{proposition}
+
+\begin{proof}
+The first equation is the definition of equivariance.  Comparing it with
+orbit constancy shows that equality requires $g\cdot O(d)=O(d)$ for every
+$g$ and $d$, equivalently pointwise fixed image.  Quotienting the codomain
+makes $[g\cdot O(d)]=[O(d)]$, which proves only the final statement.  A
+nontrivial covariant transformation law therefore transports values rather
+than erasing representative dependence.
+\end{proof}
+
+\begin{theorem}[Maximal invariant real-readout algebra]
+\label{thm:reynolds}
+For finite $G_X$, the invariant subalgebra
+\[
+  \Fun(D_X,\mathbb R)^{G_X}
+\]
+is naturally isomorphic to $\Fun(D_X/G_X,\mathbb R)$.  The operator
+\[
+  (P_Gf)(d)=\frac{1}{|G_X|}\sum_{g\in G_X}f(g\cdot d)
+\]
+is an idempotent linear projection from $\Fun(D_X,\mathbb R)$ onto that
+invariant subalgebra.  It is the identity on invariant readouts.
+\end{theorem}
+
+\begin{proof}
+Theorem \ref{thm:factor} gives the algebra isomorphism by pullback along
+$q_X$.  For $h\in G_X$, left multiplication permutes the finite summation
+index, so $(P_Gf)(h\cdot d)=(P_Gf)(d)$.  If $f$ is invariant, every summand
+equals $f(d)$, hence $P_Gf=f$.  Therefore $P_G^2=P_G$ and its image is exactly
+the invariant subalgebra.
+\end{proof}
+
+The averaging statement is restricted to finite groups and real-valued
+readouts.  It is not a license to average labels, topological sectors,
+nonconvex states, or physical measurement outcomes without a separately
+declared operation and provenance.  Even when $P_Gf$ exists, replacing $f$
+by $P_Gf$ changes the readout contract unless that invariant projection was
+declared prospectively.  The Reynolds projection is linear and idempotent but
+is generally not multiplicative: for the two-point sign readout $s$ under the
+$C_2$ swap, $P_Gs=0$ while $P_G(s^2)=1$.  Averaging therefore constructs a
+new invariant readout; it does not prove the original readout irrelevant.
+
+There is also an adequacy guard.  Selecting
+$\Fun(D_X,\mathbb R)^{G_X}$ and then observing that its members factor is
+mathematically correct but partly definitional.  It does not show that this
+subalgebra is operationally complete, empirically adequate, or sufficient for
+downstream physics.  Those are separate source-to-readout and measurement
+burdens.  Likewise, a P3-T02 marked singleton is added source structure on a
+changed domain, not representative irrelevance on the original unmarked
+domain.
+
+All theorems above are objectwise.  A natural quotient-readout family across
+a source category additionally requires the orbit relation to be a congruence
+for every admitted source morphism and the descended readouts to commute with
+those morphisms.  The finite controls do not establish that family-level
+naturality, nor do they discharge the separately declared descent or
+equalizer obligations for noninvertible arrows.
+
+\section{Complete finite source-side controls}
+
+The companion JSON record lists every group element, every representative,
+and every readout value.  The task-local validator checks closure, inverses,
+orbits, every action--value pair, and the stored summary.  The invariant
+subfamily is fixed separately from the raw interface; no sensitive readout is
+silently discarded after evaluation.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\linewidth}
+                  >{\raggedright\arraybackslash}p{0.20\linewidth}
+                  >{\raggedright\arraybackslash}p{0.24\linewidth}
+                  >{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+Control & Structural orbits & Factoring source readouts & Sensitive source readout\\
+\midrule
+\endhead
+Orientation torsor & one orbit on $\{-1,+1\}$
+& unsigned norm & orientation sign\\
+Four-cycle root & one orbit on four vertices
+& cycle length; degree multiset & root label; distance to fixed $v_0$\\
+Three-line control & one orbit on three lines
+& line dimension; other-line count & selected-line label\\
+Equal-block partition & one orbit on two block orderings
+& unordered block-size multiset & first-block signature\\
+Graded cyclic phase & one orbit on four origins
+& cyclic grade multiset; cycle length & absolute phase origin\\
+Two-component representative & two two-point orbits
+& component class; component size & within-component label\\
+\bottomrule
+\end{longtable}
+
+All six invariant subfamilies factor through their orbit quotients.  In the
+first five transitive controls, the invariant joint readout is also constant
+on every admissible choice.  In the sixth control, component class separates
+the two quotient points, so factorization does not imply all-choice equality.
+Every raw interface contains at least one readout that varies within an orbit;
+therefore every raw interface is an exact bounded countermodel to full
+representative irrelevance.
+
+\section{Result classification and limitations}
+
+The strongest result supported by the packet is
+\texttt{scoped\_orbit\_factorization\_theorem\_with\_raw\_interface\_countermodels}.
+It establishes a nontrivial quotient-level source-readout subalgebra and a
+scoped raw-interface obstruction.  It does not assert that every later
+operational observable must include the sensitive readouts, or that no
+conservative source extension can supply a lawful quotient target.  Conversely,
+the existence of an invariant subalgebra does not prove that it is physically
+complete, operationally measurable, dynamically selected, or robust under the
+full source-variation class.
+
+The status is \texttt{blocked\_adoption\_open\_continuation}: the current
+ontology does not derive or adopt the readout package or a general source
+equivalence, while P3-T04 remains a distinct in-scope probability or dynamics
+packet.  The exact P3-T03 theorem route is complete and should not be repeated
+without a new source-readout family, variation class, theorem, or countermodel.
+
+\section{Distance-to-GR matrix}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.29\linewidth}
+                  >{\raggedright\arraybackslash}p{0.61\linewidth}}
+\toprule
+Burden & P3-T03 status\\
+\midrule
+\endhead
+Source ontology primitives & unchanged; no canonical primitive or readout law adopted\\
+Source equivalence \EqSrc{} & scoped orbit-factorization theorem and raw-interface countermodels; general \EqSrc{} remains open\\
+RetainH and GenH & unchanged and blocked by missing primitives\\
+ObsLoc$_{lc}$ and Resp$_{lc}$ & unchanged; no localization or response law follows\\
+$M_{\rm src}$ and $g_{\rm eff}$ & not started by this packet\\
+Matter coupling and Einstein equations & not started by this packet\\
+Finite-variation robustness & finite exact action enumeration only; general variation robustness remains open\\
+Benchmark promotion and Gate Chair status & unchanged and human-gated\\
+Current route freeze or hard-fail status & exact P3-T03 raw-interface repetition frozen; P3-T04 remains materially distinct\\
+\bottomrule
+\end{longtable}
+
+The new mathematical payload consists of the orbit-factorization theorem, the
+all-choice equality and multiple-orbit guards, the finite invariant-algebra
+projection, and six exhaustive source-side countermodels.  There is no
+scientific Distance-to-GR ledger delta.
+
+\section{Conclusion}
+
+A lawful representative-irrelevance claim requires a source-readout family
+fixed before evaluation and a proof that its joint map is constant on the
+declared representative domain.  Structural orbit invariance is exactly the
+condition for quotient factorization, but it is weaker than global equality
+when multiple orbits remain.  Equivariance is weaker still unless the image is
+pointwise fixed.  The bounded controls exhibit useful invariant source
+subfamilies and simultaneous raw representative sensitivity.  Accordingly,
+the packet completes P3-T03 with a scoped theorem and scoped obstruction only;
+it establishes no physical gauge, operational observable, ontology adoption,
+general \EqSrc{}, downstream GR derivation, promotion, or publication result.
+
+\end{document}
