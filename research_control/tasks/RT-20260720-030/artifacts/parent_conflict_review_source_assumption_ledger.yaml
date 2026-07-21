@@ -1,0 +1,37 @@
+schema_id: "v21_p4_t01_parent_conflict_review_source_assumption_ledger_v1"
+status: "resolved"
+task_id: "RT-20260720-030"
+job_id: "AJ-RT-20260720-030-001"
+reviewed_at: "2026-07-21T18:31:33Z"
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260720-030/artifacts/child_phys_math_source_assumption_ledger.yaml"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260720-030/artifacts/child_phys_phil_source_assumption_ledger.yaml"
+    status: "completed"
+shared_consensus:
+  - "All 27 canonical frontier items require total coverage across thirteen assumption dimensions."
+  - "Structural role and authority status must remain separate."
+  - "Every assumption reference needs canonical provenance or an explicit missing-source or no-premise marker."
+  - "Four-dimensionality, smoothness, and ordered motion are high-impact assumptions rather than derived results."
+  - "Target-side exact-GR structure cannot be imported as a source premise."
+  - "P4-T01 exposes the continuum-first versus emergence-first fork but cannot choose it."
+reviewed_differences:
+  - conflict_id: "PCR-P4T01-001"
+    category: "status_representation"
+    severity: "nonblocking"
+    child_phys_math_position: "Use a product status algebra so validator checks are total and unambiguous."
+    child_phys_phil_position: "Preserve prose qualifications because adopted and primitive have context-sensitive scope."
+    resolution: "Use two normalized axes in the matrix and retain exact scope boundaries in each assumption token and the human-readable report."
+  - conflict_id: "PCR-P4T01-002"
+    category: "next_route"
+    severity: "nonblocking"
+    child_phys_math_position: "Both P4-T02 and P4-T03 become dependency-ready."
+    child_phys_phil_position: "Selecting either next for execution must not be represented as selecting the ontology regime."
+    resolution: "Record both as eligible, route P4-T02 first by plan order for proposal formalization only, and preserve P4-T05 as the protected regime gate."
+resolution_rounds: 0
+unresolved_conflicts: []
+blocking_conflict_present: false
+parent_disposition: "fuse_children_with_two_axis_status_and_proposal_only_next_route"
+validation_status: "PASS"

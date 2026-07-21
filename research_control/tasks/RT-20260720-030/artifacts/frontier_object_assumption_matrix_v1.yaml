@@ -1,0 +1,562 @@
+schema_id: "v21_p4_t01_frontier_object_assumption_matrix_v1"
+status: "draft_control_complete"
+task_id: "RT-20260720-030"
+job_id: "AJ-RT-20260720-030-001"
+claim_boundary_id: "CB-V21-P4-T01-SOURCE-ASSUMPTION-LEDGER-001"
+frontier_inventory_path: "research_control/design/frontier_theorem_inventory.md"
+frontier_inventory_sha256: "5158603122dda2ec768293d5659e51b0d18cbc52689c2caf9a1c266a4d105fce"
+frontier_object_count: 27
+assumption_dimension_count: 13
+matrix_cell_count: 351
+
+status_vocabulary:
+  structural_role:
+    - "primitive"
+    - "derived"
+    - "gauge"
+    - "operational"
+    - "open"
+    - "not_applicable"
+  authority_status:
+    - "adopted"
+    - "proposed"
+    - "open"
+    - "human_gated"
+  interpretation: "Structural role and authority status are independent axes. In particular, primitive does not imply adopted, and documented does not imply derived."
+
+required_dimensions:
+  - "dimension"
+  - "differentiability"
+  - "topology"
+  - "order"
+  - "orientation"
+  - "time_direction"
+  - "metric_form"
+  - "signature"
+  - "scale"
+  - "coupling"
+  - "matter"
+  - "covariance"
+  - "dynamics"
+
+source_catalog:
+  - source_id: "SRC-FOUNDATIONS"
+    path: "ontology/tex/aether_flow_foundations.tex"
+    sha256: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+    authority: "registered_canonical_ontology_source"
+  - source_id: "SRC-DYNAMICS"
+    path: "ontology/tex/aether_flow_dynamics.tex"
+    sha256: "ee3ae3298ab45111235388b305cbda2143b0314cb90f9b652115f71eb2fb8c6d"
+    authority: "registered_canonical_ontology_source"
+  - source_id: "SRC-GEOMETRY"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    sha256: "ad43e3408fe2d9686a52a71de7ab8326668e8f04ebe2d2845986898b7d2c000f"
+    authority: "registered_canonical_ontology_source"
+  - source_id: "SRC-FRONTIER"
+    path: "research_control/design/frontier_theorem_inventory.md"
+    sha256: "5158603122dda2ec768293d5659e51b0d18cbc52689c2caf9a1c266a4d105fce"
+    authority: "registered_control_science_bridge"
+  - source_id: "SRC-DISTANCE"
+    path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    sha256: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+    authority: "canonical_scientific_status_registry"
+  - source_id: "SRC-GLOSSARY"
+    path: "research_control/design/epistemic_category_glossary.md"
+    sha256: "036596ccc2f35b3e0693b08e0968e1ca212b032b426c4f7106e6c766f92bb4a3"
+    authority: "registered_control_vocabulary"
+  - source_id: "SRC-P3T07"
+    path: "research_control/tasks/RT-20260720-028/jobs/completions/AJC-AJ-RT-20260720-028-001.yaml"
+    sha256: "2dd90ce651018ad1053cc5fd9dfe6f0ce117fcba5134fa190fe648823c787007"
+    authority: "canonical_dependency_completion"
+
+assumption_catalog:
+  SRC_DIM_4D:
+    dimension: "dimension"
+    statement: "The interpretive substrate A is posited as four-dimensional."
+    structural_role: "primitive"
+    authority_status: "proposed"
+    provenance: ["SRC-FOUNDATIONS"]
+    high_impact: true
+    downstream_milestones: ["source_ontology", "source_manifold_m_src", "effective_metric_g_eff", "einstein_equations"]
+    boundary: "Registered source text records the posit; it does not derive four-dimensionality or grant protected ontology adoption."
+  TGT_DIM_4D:
+    dimension: "dimension"
+    statement: "The exact-GR benchmark uses a four-dimensional spacetime manifold."
+    structural_role: "primitive"
+    authority_status: "adopted"
+    provenance: ["SRC-FOUNDATIONS", "SRC-GEOMETRY"]
+    high_impact: true
+    downstream_milestones: ["benchmark_promotion", "einstein_equations"]
+    boundary: "Adopted as target-side exact-GR benchmark structure, not derived from source ontology."
+  SRC_DIFF_SMOOTH:
+    dimension: "differentiability"
+    statement: "The substrate is modeled as a differentiable manifold with smooth maps and fields."
+    structural_role: "primitive"
+    authority_status: "proposed"
+    provenance: ["SRC-FOUNDATIONS"]
+    high_impact: true
+    downstream_milestones: ["source_ontology", "source_manifold_m_src", "effective_metric_g_eff", "einstein_equations"]
+    boundary: "Smoothness is assumed in the continuum representation and is not an emergence result."
+  TGT_DIFF_SMOOTH:
+    dimension: "differentiability"
+    statement: "The exact-GR benchmark uses differentiable spacetime, tensor fields, and a compatible connection."
+    structural_role: "primitive"
+    authority_status: "adopted"
+    provenance: ["SRC-GEOMETRY", "SRC-DYNAMICS"]
+    high_impact: false
+    downstream_milestones: ["einstein_equations", "benchmark_promotion"]
+    boundary: "Target-side benchmark assumption only."
+  SRC_TOPOLOGY_OPEN:
+    dimension: "topology"
+    statement: "A manifold topology is presupposed locally, but no source-derived global topology or topology-selection law is supplied."
+    structural_role: "open"
+    authority_status: "open"
+    provenance: ["SRC-FOUNDATIONS"]
+    missing_source_marker: "missing_source_law_global_topology_and_selection"
+    high_impact: false
+    downstream_milestones: ["source_ontology", "source_manifold_m_src", "effective_metric_g_eff"]
+  TGT_TOPOLOGY_GR:
+    dimension: "topology"
+    statement: "The exact-GR benchmark inherits a differentiable-manifold topology; no source recovery theorem is supplied."
+    structural_role: "primitive"
+    authority_status: "adopted"
+    provenance: ["SRC-GEOMETRY"]
+    high_impact: false
+    downstream_milestones: ["benchmark_promotion"]
+    boundary: "Target-side only."
+  SRC_ORDER_PHI:
+    dimension: "order"
+    statement: "Ordered motion Phi_lambda and monotone S-time are proposed source structures."
+    structural_role: "primitive"
+    authority_status: "proposed"
+    provenance: ["SRC-FOUNDATIONS"]
+    high_impact: true
+    downstream_milestones: ["source_ontology", "source_equivalence_eqsrc", "retain_h", "gen_h", "source_manifold_m_src", "effective_metric_g_eff"]
+    boundary: "The order parameter and S-time are not uniquely derived and are not shown to recover physical time."
+  SRC_ORIENTATION_OPEN:
+    dimension: "orientation"
+    statement: "No source-derived spatial or spacetime orientation law is fixed."
+    structural_role: "open"
+    authority_status: "open"
+    provenance: ["SRC-FOUNDATIONS", "SRC-FRONTIER"]
+    missing_source_marker: "missing_source_law_orientation"
+    high_impact: false
+    downstream_milestones: ["source_ontology", "source_equivalence_eqsrc", "source_manifold_m_src"]
+  TGT_ORIENTATION_GR:
+    dimension: "orientation"
+    statement: "Orientation needed by benchmark integrals or slices is inherited from the target-side GR setup."
+    structural_role: "primitive"
+    authority_status: "adopted"
+    provenance: ["SRC-DYNAMICS", "SRC-GEOMETRY"]
+    high_impact: false
+    downstream_milestones: ["einstein_equations", "benchmark_promotion"]
+    boundary: "No source-side orientation recovery follows."
+  SRC_TIME_ORDER:
+    dimension: "time_direction"
+    statement: "Monotone S-time and ordered motion provide a proposed ordering, not a derived Lorentzian time orientation."
+    structural_role: "operational"
+    authority_status: "proposed"
+    provenance: ["SRC-FOUNDATIONS"]
+    high_impact: true
+    downstream_milestones: ["source_ontology", "source_manifold_m_src", "effective_metric_g_eff"]
+    boundary: "The map from source order to physical time direction remains open."
+  TGT_TIME_GR:
+    dimension: "time_direction"
+    statement: "The flow congruence is future-directed and unit timelike relative to the adopted GR metric."
+    structural_role: "operational"
+    authority_status: "adopted"
+    provenance: ["SRC-GEOMETRY"]
+    high_impact: false
+    downstream_milestones: ["effective_metric_g_eff", "benchmark_promotion"]
+    boundary: "Future direction is metric-relative target structure, not a source derivation."
+  SRC_METRIC_OPTIONAL:
+    dimension: "metric_form"
+    statement: "A positive-definite substrate metric G_AB is optional and schematic; it is not used to derive the physical metric."
+    structural_role: "primitive"
+    authority_status: "proposed"
+    provenance: ["SRC-FOUNDATIONS"]
+    high_impact: false
+    downstream_milestones: ["source_manifold_m_src", "effective_metric_g_eff"]
+    boundary: "Optional source metric is neither canonical adoption nor physical metric recovery."
+  SCOPED_GEFF:
+    dimension: "metric_form"
+    statement: "g_eff^(GSC-cand) is a scoped adopted source-extension object with explicit non-promotion guards."
+    structural_role: "derived"
+    authority_status: "adopted"
+    provenance: ["SRC-FRONTIER", "SRC-DISTANCE"]
+    high_impact: false
+    downstream_milestones: ["effective_metric_g_eff", "matter_coupling", "einstein_equations"]
+    boundary: "Not an unscoped Lorentzian physical metric and not a completed source derivation."
+  FINITE_METRIC_TOY:
+    dimension: "metric_form"
+    statement: "Finite metric-response data are toy source-extension evidence under a frozen tag-removal route."
+    structural_role: "derived"
+    authority_status: "proposed"
+    provenance: ["SRC-FRONTIER", "SRC-DISTANCE"]
+    high_impact: false
+    downstream_milestones: ["finite_toy_metric_response", "effective_metric_g_eff"]
+    boundary: "Finite toy response is not a continuum physical metric."
+  TGT_METRIC_GR:
+    dimension: "metric_form"
+    statement: "A Lorentzian metric g_ab is adopted as the exact-GR benchmark geometry."
+    structural_role: "primitive"
+    authority_status: "adopted"
+    provenance: ["SRC-FOUNDATIONS", "SRC-DYNAMICS", "SRC-GEOMETRY"]
+    high_impact: false
+    downstream_milestones: ["effective_metric_g_eff", "matter_coupling", "einstein_equations", "benchmark_promotion"]
+    boundary: "Adopted target-side closure, not derived from substrate structure."
+  SRC_SIGNATURE_OPEN:
+    dimension: "signature"
+    statement: "No source-derived Lorentzian signature-selection law is supplied."
+    structural_role: "open"
+    authority_status: "open"
+    provenance: ["SRC-FOUNDATIONS", "SRC-GEOMETRY"]
+    missing_source_marker: "missing_source_law_signature_selection"
+    high_impact: false
+    downstream_milestones: ["effective_metric_g_eff", "einstein_equations"]
+  TGT_SIGNATURE_GR:
+    dimension: "signature"
+    statement: "Lorentzian signature is inherited from the adopted GR benchmark."
+    structural_role: "primitive"
+    authority_status: "adopted"
+    provenance: ["SRC-GEOMETRY"]
+    high_impact: false
+    downstream_milestones: ["einstein_equations", "benchmark_promotion"]
+    boundary: "Target-side only."
+  SRC_SCALE_OPEN:
+    dimension: "scale"
+    statement: "No source derivation fixes c, G, clock scale, or metric normalization."
+    structural_role: "open"
+    authority_status: "open"
+    provenance: ["SRC-DYNAMICS", "SRC-FRONTIER"]
+    missing_source_marker: "missing_source_law_physical_scale"
+    high_impact: false
+    downstream_milestones: ["effective_metric_g_eff", "matter_coupling", "einstein_equations"]
+  TGT_SCALE_GR:
+    dimension: "scale"
+    statement: "c and G and the benchmark normalization are target-side adopted constants."
+    structural_role: "primitive"
+    authority_status: "adopted"
+    provenance: ["SRC-DYNAMICS"]
+    high_impact: false
+    downstream_milestones: ["einstein_equations", "benchmark_promotion"]
+    boundary: "No source-side explanation or calibration follows."
+  SRC_COUPLING_OPEN:
+    dimension: "coupling"
+    statement: "No source-derived universal matter-coupling law is supplied."
+    structural_role: "open"
+    authority_status: "open"
+    provenance: ["SRC-DYNAMICS", "SRC-FRONTIER", "SRC-DISTANCE"]
+    missing_source_marker: "missing_source_law_universal_coupling"
+    high_impact: false
+    downstream_milestones: ["matter_coupling", "einstein_equations", "benchmark_promotion"]
+  TGT_COUPLING_GR:
+    dimension: "coupling"
+    statement: "Universal minimal coupling to the adopted GR metric is part of the exact benchmark closure."
+    structural_role: "primitive"
+    authority_status: "adopted"
+    provenance: ["SRC-DYNAMICS"]
+    high_impact: false
+    downstream_milestones: ["matter_coupling", "einstein_equations", "benchmark_promotion"]
+    boundary: "It is not derived from source semantics or source dynamics."
+  SRC_MATTER_OPEN:
+    dimension: "matter"
+    statement: "Source matter semantics, detector records, and stress-energy meaning remain underived."
+    structural_role: "open"
+    authority_status: "open"
+    provenance: ["SRC-FRONTIER", "SRC-DISTANCE"]
+    missing_source_marker: "missing_source_law_matter_semantics"
+    high_impact: false
+    downstream_milestones: ["matter_coupling", "einstein_equations", "benchmark_promotion"]
+  TGT_MATTER_GR:
+    dimension: "matter"
+    statement: "A matter action and stress-energy tensor are adopted as target-side benchmark structures."
+    structural_role: "primitive"
+    authority_status: "adopted"
+    provenance: ["SRC-DYNAMICS"]
+    high_impact: false
+    downstream_milestones: ["matter_coupling", "einstein_equations", "benchmark_promotion"]
+    boundary: "No source matter ontology or detector semantics is derived."
+  SRC_COV_STRUCTURAL:
+    dimension: "covariance"
+    statement: "Source-category morphisms and invariance packages provide proposal-level structural covariance only."
+    structural_role: "gauge"
+    authority_status: "proposed"
+    provenance: ["SRC-FRONTIER", "SRC-P3T07"]
+    high_impact: false
+    downstream_milestones: ["source_equivalence_eqsrc", "retain_h", "gen_h", "finite_variation_robustness"]
+    boundary: "Structural automorphism or quotient invariance is not physical gauge or operational equivalence."
+  SRC_COV_OPEN:
+    dimension: "covariance"
+    statement: "No general source-derived physical covariance law is supplied."
+    structural_role: "open"
+    authority_status: "open"
+    provenance: ["SRC-FRONTIER", "SRC-DISTANCE"]
+    missing_source_marker: "missing_source_law_physical_covariance"
+    high_impact: false
+    downstream_milestones: ["source_equivalence_eqsrc", "effective_metric_g_eff", "matter_coupling", "einstein_equations"]
+  TGT_COV_GR:
+    dimension: "covariance"
+    statement: "Diffeomorphism covariance and covariant conservation are adopted within the exact-GR benchmark."
+    structural_role: "gauge"
+    authority_status: "adopted"
+    provenance: ["SRC-DYNAMICS", "SRC-GEOMETRY"]
+    high_impact: false
+    downstream_milestones: ["einstein_equations", "benchmark_promotion"]
+    boundary: "Target-side benchmark covariance is not a source derivation."
+  SRC_DYNAMICS_OPEN:
+    dimension: "dynamics"
+    statement: "A substrate action, equations of motion, and source-to-effective dynamical map remain unspecified."
+    structural_role: "open"
+    authority_status: "open"
+    provenance: ["SRC-DYNAMICS", "SRC-DISTANCE"]
+    missing_source_marker: "missing_source_law_substrate_dynamics"
+    high_impact: false
+    downstream_milestones: ["retain_h", "gen_h", "effective_metric_g_eff", "matter_coupling", "einstein_equations"]
+  TGT_DYNAMICS_GR:
+    dimension: "dynamics"
+    statement: "The Einstein-Hilbert plus matter action and Einstein equations are adopted as exact benchmark closure."
+    structural_role: "derived"
+    authority_status: "adopted"
+    provenance: ["SRC-DYNAMICS"]
+    high_impact: false
+    downstream_milestones: ["einstein_equations", "benchmark_promotion"]
+    boundary: "The target equations are not derived from source ontology."
+  NA_NO_PREMISE:
+    dimension: "any"
+    statement: "The fixed frontier object declares no premise in this assumption dimension."
+    structural_role: "not_applicable"
+    authority_status: "open"
+    provenance: ["SRC-FRONTIER"]
+    missing_source_marker: "explicit_no_premise_in_fixed_object_definition"
+    high_impact: false
+    downstream_milestones: []
+    boundary: "No premise may be inferred from silence."
+
+profiles:
+  source_ontology_profile:
+    dimension: "SRC_DIM_4D"
+    differentiability: "SRC_DIFF_SMOOTH"
+    topology: "SRC_TOPOLOGY_OPEN"
+    order: "SRC_ORDER_PHI"
+    orientation: "SRC_ORIENTATION_OPEN"
+    time_direction: "SRC_TIME_ORDER"
+    metric_form: "SRC_METRIC_OPTIONAL"
+    signature: "SRC_SIGNATURE_OPEN"
+    scale: "SRC_SCALE_OPEN"
+    coupling: "SRC_COUPLING_OPEN"
+    matter: "SRC_MATTER_OPEN"
+    covariance: "SRC_COV_OPEN"
+    dynamics: "SRC_DYNAMICS_OPEN"
+  structural_eqsrc_profile:
+    dimension: "NA_NO_PREMISE"
+    differentiability: "NA_NO_PREMISE"
+    topology: "NA_NO_PREMISE"
+    order: "NA_NO_PREMISE"
+    orientation: "NA_NO_PREMISE"
+    time_direction: "NA_NO_PREMISE"
+    metric_form: "NA_NO_PREMISE"
+    signature: "NA_NO_PREMISE"
+    scale: "NA_NO_PREMISE"
+    coupling: "NA_NO_PREMISE"
+    matter: "NA_NO_PREMISE"
+    covariance: "SRC_COV_STRUCTURAL"
+    dynamics: "NA_NO_PREMISE"
+  missing_source_law_profile:
+    dimension: "NA_NO_PREMISE"
+    differentiability: "NA_NO_PREMISE"
+    topology: "NA_NO_PREMISE"
+    order: "SRC_ORDER_PHI"
+    orientation: "SRC_ORIENTATION_OPEN"
+    time_direction: "SRC_TIME_ORDER"
+    metric_form: "NA_NO_PREMISE"
+    signature: "NA_NO_PREMISE"
+    scale: "NA_NO_PREMISE"
+    coupling: "NA_NO_PREMISE"
+    matter: "NA_NO_PREMISE"
+    covariance: "SRC_COV_STRUCTURAL"
+    dynamics: "SRC_DYNAMICS_OPEN"
+  local_witness_profile:
+    dimension: "NA_NO_PREMISE"
+    differentiability: "NA_NO_PREMISE"
+    topology: "NA_NO_PREMISE"
+    order: "SRC_ORDER_PHI"
+    orientation: "SRC_ORIENTATION_OPEN"
+    time_direction: "SRC_TIME_ORDER"
+    metric_form: "NA_NO_PREMISE"
+    signature: "NA_NO_PREMISE"
+    scale: "NA_NO_PREMISE"
+    coupling: "NA_NO_PREMISE"
+    matter: "NA_NO_PREMISE"
+    covariance: "SRC_COV_STRUCTURAL"
+    dynamics: "SRC_DYNAMICS_OPEN"
+  source_manifold_profile:
+    dimension: "SRC_DIM_4D"
+    differentiability: "SRC_DIFF_SMOOTH"
+    topology: "SRC_TOPOLOGY_OPEN"
+    order: "SRC_ORDER_PHI"
+    orientation: "SRC_ORIENTATION_OPEN"
+    time_direction: "SRC_TIME_ORDER"
+    metric_form: "SRC_METRIC_OPTIONAL"
+    signature: "SRC_SIGNATURE_OPEN"
+    scale: "SRC_SCALE_OPEN"
+    coupling: "SRC_COUPLING_OPEN"
+    matter: "SRC_MATTER_OPEN"
+    covariance: "SRC_COV_STRUCTURAL"
+    dynamics: "SRC_DYNAMICS_OPEN"
+  scoped_metric_profile:
+    dimension: "SRC_DIM_4D"
+    differentiability: "SRC_DIFF_SMOOTH"
+    topology: "SRC_TOPOLOGY_OPEN"
+    order: "SRC_ORDER_PHI"
+    orientation: "SRC_ORIENTATION_OPEN"
+    time_direction: "SRC_TIME_ORDER"
+    metric_form: "SCOPED_GEFF"
+    signature: "SRC_SIGNATURE_OPEN"
+    scale: "SRC_SCALE_OPEN"
+    coupling: "SRC_COUPLING_OPEN"
+    matter: "SRC_MATTER_OPEN"
+    covariance: "SRC_COV_STRUCTURAL"
+    dynamics: "SRC_DYNAMICS_OPEN"
+  matter_bridge_profile:
+    dimension: "TGT_DIM_4D"
+    differentiability: "TGT_DIFF_SMOOTH"
+    topology: "TGT_TOPOLOGY_GR"
+    order: "SRC_ORDER_PHI"
+    orientation: "TGT_ORIENTATION_GR"
+    time_direction: "TGT_TIME_GR"
+    metric_form: "SCOPED_GEFF"
+    signature: "SRC_SIGNATURE_OPEN"
+    scale: "SRC_SCALE_OPEN"
+    coupling: "SRC_COUPLING_OPEN"
+    matter: "SRC_MATTER_OPEN"
+    covariance: "SRC_COV_STRUCTURAL"
+    dynamics: "SRC_DYNAMICS_OPEN"
+  finite_metric_profile:
+    dimension: "NA_NO_PREMISE"
+    differentiability: "NA_NO_PREMISE"
+    topology: "NA_NO_PREMISE"
+    order: "NA_NO_PREMISE"
+    orientation: "NA_NO_PREMISE"
+    time_direction: "NA_NO_PREMISE"
+    metric_form: "FINITE_METRIC_TOY"
+    signature: "NA_NO_PREMISE"
+    scale: "NA_NO_PREMISE"
+    coupling: "NA_NO_PREMISE"
+    matter: "NA_NO_PREMISE"
+    covariance: "SRC_COV_STRUCTURAL"
+    dynamics: "NA_NO_PREMISE"
+  robustness_profile:
+    dimension: "NA_NO_PREMISE"
+    differentiability: "NA_NO_PREMISE"
+    topology: "NA_NO_PREMISE"
+    order: "SRC_ORDER_PHI"
+    orientation: "SRC_ORIENTATION_OPEN"
+    time_direction: "SRC_TIME_ORDER"
+    metric_form: "SCOPED_GEFF"
+    signature: "SRC_SIGNATURE_OPEN"
+    scale: "SRC_SCALE_OPEN"
+    coupling: "SRC_COUPLING_OPEN"
+    matter: "SRC_MATTER_OPEN"
+    covariance: "SRC_COV_STRUCTURAL"
+    dynamics: "SRC_DYNAMICS_OPEN"
+  einstein_target_profile:
+    dimension: "TGT_DIM_4D"
+    differentiability: "TGT_DIFF_SMOOTH"
+    topology: "TGT_TOPOLOGY_GR"
+    order: "SRC_ORDER_PHI"
+    orientation: "TGT_ORIENTATION_GR"
+    time_direction: "TGT_TIME_GR"
+    metric_form: "TGT_METRIC_GR"
+    signature: "TGT_SIGNATURE_GR"
+    scale: "TGT_SCALE_GR"
+    coupling: "TGT_COUPLING_GR"
+    matter: "TGT_MATTER_GR"
+    covariance: "TGT_COV_GR"
+    dynamics: "TGT_DYNAMICS_GR"
+  benchmark_profile:
+    dimension: "TGT_DIM_4D"
+    differentiability: "TGT_DIFF_SMOOTH"
+    topology: "TGT_TOPOLOGY_GR"
+    order: "SRC_ORDER_PHI"
+    orientation: "TGT_ORIENTATION_GR"
+    time_direction: "TGT_TIME_GR"
+    metric_form: "TGT_METRIC_GR"
+    signature: "TGT_SIGNATURE_GR"
+    scale: "TGT_SCALE_GR"
+    coupling: "TGT_COUPLING_GR"
+    matter: "TGT_MATTER_GR"
+    covariance: "TGT_COV_GR"
+    dynamics: "TGT_DYNAMICS_GR"
+
+objects:
+  - {frontier_item_id: "source_ontology_primitives", milestone: "source_ontology", profile: "source_ontology_profile", object_authority_status: "proposed", conclusion: "draft_control_only"}
+  - {frontier_item_id: "source_equivalence_eqsrc", milestone: "source_equivalence_eqsrc", profile: "structural_eqsrc_profile", object_authority_status: "proposed", conclusion: "conditional_theorems_and_local_freezes_general_eqsrc_open"}
+  - {frontier_item_id: "retain_h", milestone: "retain_h", profile: "missing_source_law_profile", object_authority_status: "open", conclusion: "primitive_missing"}
+  - {frontier_item_id: "gen_h", milestone: "gen_h", profile: "missing_source_law_profile", object_authority_status: "open", conclusion: "primitive_missing"}
+  - {frontier_item_id: "obsloc_lc", milestone: "source_localization_obsloc_lc", profile: "local_witness_profile", object_authority_status: "proposed", conclusion: "constructive_local_exact_branch_witness_only"}
+  - {frontier_item_id: "resp_lc", milestone: "response_localization_resp_lc", profile: "local_witness_profile", object_authority_status: "adopted", conclusion: "scoped_source_extension_data_only"}
+  - {frontier_item_id: "m_src_gsc", milestone: "source_manifold_m_src", profile: "source_manifold_profile", object_authority_status: "adopted", conclusion: "scoped_source_only_object"}
+  - {frontier_item_id: "g_eff_gsc_cand", milestone: "effective_metric_g_eff", profile: "scoped_metric_profile", object_authority_status: "adopted", conclusion: "scoped_source_extension_object_not_unscoped_physical_metric"}
+  - {frontier_item_id: "matter_coupling_bridge_target_v1", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "bridge_target_obligations_only"}
+  - {frontier_item_id: "matter_coupling_precondition_evidence", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "scoped_evidence_precondition_only"}
+  - {frontier_item_id: "rr_e_theorem_target_v1", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "theorem_target_only"}
+  - {frontier_item_id: "rr_e_underdetermination_obstruction", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "open", conclusion: "blocked_adoption_open_continuation_not_global_rejection"}
+  - {frontier_item_id: "rr_e_factor_through_conditional_lemma", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "conditional_on_missing_source_law"}
+  - {frontier_item_id: "rr_e_separation_obstruction_witness_v1", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "finite_separation_witness_only"}
+  - {frontier_item_id: "rr_e_transport_completeness_or_invariance_law_v1", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "scoped_evidence_precondition_not_source_law"}
+  - {frontier_item_id: "matter_coupling_precondition_assembly_v1", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "pre_coupling_assembly_evidence_only"}
+  - {frontier_item_id: "source_coupling_law_candidate_cand_v1", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "candidate_evidence_not_coupling_law"}
+  - {frontier_item_id: "ms_stable_partition_precondition_v1", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "stable_partition_precondition_only"}
+  - {frontier_item_id: "ms_stable_matter_semantics_bridge_v1", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "bridge_evidence_not_matter_semantics"}
+  - {frontier_item_id: "source_matter_semantics_adoption_readiness_law_v1", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "adoption_readiness_evidence_not_adoption"}
+  - {frontier_item_id: "positive_source_matter_semantics_target_v1", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "target_grammar_only"}
+  - {frontier_item_id: "positive_ms_profile_v1", milestone: "matter_coupling", profile: "matter_bridge_profile", object_authority_status: "proposed", conclusion: "positive_profile_evidence_only"}
+  - {frontier_item_id: "finite_toy_metric_response", milestone: "finite_toy_metric_response", profile: "finite_metric_profile", object_authority_status: "open", conclusion: "frozen_negative_local_toy_route"}
+  - {frontier_item_id: "finite_variation_robustness", milestone: "finite_variation_robustness", profile: "robustness_profile", object_authority_status: "proposed", conclusion: "conditional_candidate_downstream_gr_blocked"}
+  - {frontier_item_id: "einstein_equations", milestone: "einstein_equations", profile: "einstein_target_profile", object_authority_status: "open", conclusion: "target_equations_adopted_benchmark_source_derivation_not_started"}
+  - {frontier_item_id: "benchmark_promotion", milestone: "benchmark_promotion", profile: "benchmark_profile", object_authority_status: "open", conclusion: "blocked_upstream_burdens_missing"}
+  - {frontier_item_id: "gate_chair_benchmark_closure", milestone: "benchmark_promotion", profile: "benchmark_profile", object_authority_status: "human_gated", conclusion: "protected_verdict_missing"}
+
+high_impact_assumptions:
+  - assumption_id: "SRC_DIM_4D"
+    reason: "Choosing a four-dimensional source manifold removes dimension emergence from the source problem and affects M_src, g_eff, and downstream recovery claims."
+  - assumption_id: "SRC_DIFF_SMOOTH"
+    reason: "Primitive smoothness supplies calculus, fields, and local tensor structure that an emergence-first ontology would instead have to reconstruct."
+  - assumption_id: "SRC_ORDER_PHI"
+    reason: "Ordered motion supplies the proposed source chronology used by retention, generation, localization, and metric-response routes, while its relation to Lorentzian time remains unproved."
+
+circularity_findings:
+  - finding_id: "CIRC-P4T01-001"
+    chain: ["TGT_METRIC_GR", "TGT_TIME_GR", "SRC_TIME_ORDER", "SCOPED_GEFF", "TGT_METRIC_GR"]
+    status: "blocked_upgrade_pattern"
+    explanation: "Using the adopted target metric to define time direction, relabeling that direction as source order, and then using the relabeled order to derive the metric would be circular. Current sources do not license this upgrade."
+  - finding_id: "CIRC-P4T01-002"
+    chain: ["TGT_COUPLING_GR", "TGT_MATTER_GR", "SRC_MATTER_OPEN", "SRC_COUPLING_OPEN", "TGT_COUPLING_GR"]
+    status: "blocked_upgrade_pattern"
+    explanation: "Benchmark coupling cannot define the source matter semantics later invoked to derive that same coupling."
+  - finding_id: "CIRC-P4T01-003"
+    chain: ["TGT_DYNAMICS_GR", "TGT_METRIC_GR", "SRC_DYNAMICS_OPEN", "TGT_DYNAMICS_GR"]
+    status: "target_import_pattern"
+    explanation: "Exact-GR benchmark success cannot serve as the source dynamical law whose claimed output is exact-GR recovery."
+  - finding_id: "CIRC-P4T01-004"
+    chain: ["SRC_DIM_4D", "SRC_DIFF_SMOOTH", "m_src_gsc", "SRC_DIM_4D"]
+    status: "documentation_circularity_guard"
+    explanation: "A scoped source-manifold construction that assumes four-dimensional smoothness cannot count as a derivation of four-dimensional smoothness."
+
+assumption_delta:
+  new_assumptions_introduced: 0
+  assumptions_adopted: 0
+  assumptions_rejected: 0
+  status_upgrades: 0
+  inventory_visibility_delta: "All 27 frontier objects are now mapped to the thirteen required assumption dimensions with normalized status and provenance."
+
+forbidden_conclusions:
+  - "primitive means adopted"
+  - "documented means derived"
+  - "target-side exact-GR structure is a source premise"
+  - "structural invariance is physical gauge"
+  - "scoped source-extension adoption is unscoped physical derivation"
+  - "the ledger selects or rejects an ontology regime"
+  - "the ledger changes the Distance-to-GR status"
+  - "validator PASS creates proof or promotion authority"

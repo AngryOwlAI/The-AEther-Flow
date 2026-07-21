@@ -542,6 +542,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3` `research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md`
 - `MD-V20-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/tasks/RT-20260718-011/artifacts/v20_recommendation_backlog_schema.md`
 - `MD-V21-P1-T05-EQSRC-NATURALITY-PRIMARY-LITERATURE-REVIEW` `research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md`
+- `MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## wiki_markdown
@@ -1081,4 +1082,5 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3` `wiki/markdown/md-v20-goal-relay-execution-policy-v3.md`
 - `WIKI-MD-V20-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-v20-recommendation-backlog-schema.md`
 - `WIKI-MD-V21-P1-T05-EQSRC-NATURALITY-PRIMARY-LITERATURE-REVIEW` `wiki/markdown/md-v21-p1-t05-eqsrc-naturality-primary-literature-review.md`
+- `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`

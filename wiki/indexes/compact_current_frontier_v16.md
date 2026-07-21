@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-029`
-- Latest handoff: `handoff-0799`
-- Current status: `v21_p3_t07_checkpoint_recovered_mutable_frontier_inventory_preflight_compatibility_pass_p4_t01_ready`
+- Active task: `RT-20260720-030`
+- Latest handoff: `handoff-0800`
+- Current status: `v21_p4_t01_assumption_visibility_complete_27_objects_351_cells_no_status_upgrade_no_distance_delta_p4_t02_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-029`
-- Latest research handoff: `handoff-0799`
-- Latest research next action: Run one bounded v21 P4-T01 ontology-formalizer packet to create the comprehensive source-assumption ledger across frontier objects before any protected ontology-regime choice; do not adopt or reject an ontology regime.
+- Latest research task: `RT-20260720-030`
+- Latest research handoff: `handoff-0800`
+- Latest research next action: Run exactly one bounded v21 P4-T02 ontology-formalizer packet to specify the strongest honest continuum-first premetric option at proposal scope. Treat four-dimensional differentiable source structure as explicit primitive debt, leave physical metric clocks matter coupling and dynamics as derivational targets, do not adopt the regime, and do not execute P4-T03 in the same AgentJob.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p4_t01_comprehensive_source_assumption_ledger`
+- Route ID: `v21_p4_t02_continuum_first_premetric_ontology_option`
 - Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_ontology`
-- Milestone burden: Make assumption debt visible before selecting the ontology regime.
+- Milestone burden: Provide one coherent ontology option without emergence overread.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `2f383474ba3d7e0a622ee7d61cbbc71613aebe9fa324906c980e1ac354242bdf`
-- JSON SHA-256: `2751b1154cdbc7bdea090143ac08e86dd1c7ff40992e16e2d57b692668d219dc`
+- YAML SHA-256: `0ad1011b881ebdf654a8fa4788d85147621e1a3d6fdf7b6d33fca08b6822954e`
+- JSON SHA-256: `23bf971a4c0484ed11a18611e4cf03e1d3fd8cb999d8594d6e2ab5ec5a3e659e`
 
 ## Authority Warning
 

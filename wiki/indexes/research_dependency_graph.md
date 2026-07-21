@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-21T16:48:02Z`
-- Source fingerprint: `ed0aceb0b08a327cb44686206b0e43b09260b81afbf301d5807a1295b2977147`
-- Nodes: `20416`
-- Edges: `69412`
+- Generated from tracked state as of: `2026-07-21T18:47:31Z`
+- Source fingerprint: `e49fc4beaf127cbbd8ff5cabd620447d97b8738734ea04de2e30c6fa1663916a`
+- Nodes: `20464`
+- Edges: `69509`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1029 |
+| `completion_yaml` | 1031 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 798 |
+| `handoff_yaml` | 800 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1029 |
+| `agent_job` | `support_only` | 1031 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10545 |
-| `blocked_burden` | `blocked` | 3925 |
-| `claim_boundary` | `support_only` | 986 |
-| `draft_control_candidate` | `draft_control` | 689 |
+| `artifact` | `support_only` | 10560 |
+| `blocked_burden` | `blocked` | 3942 |
+| `claim_boundary` | `support_only` | 988 |
+| `draft_control_candidate` | `draft_control` | 692 |
 | `draft_control_candidate` | `proposal_only` | 110 |
 | `draft_control_candidate` | `science_draft` | 64 |
 | `frozen_negative` | `frozen_negative` | 131 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 798 |
-| `human_gated_object` | `human_gated` | 446 |
+| `handoff` | `support_only` | 800 |
+| `human_gated_object` | `human_gated` | 450 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 37 |
 | `source_ontology_object` | `canonical_source` | 23 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 333 |
+| `source_ontology_object` | `support_only` | 334 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 968 |
+| `task` | `support_only` | 970 |
 
 ## Frontier Table
 
@@ -112,9 +112,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:arbitrary_finite_source_package_witness_theorem` | Blocked claim: arbitrary finite-source-package witness theorem | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_finite_variation_overread` | Blocked claim: arbitrary finite-variation overread | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_finite_variation_robustness_proof` | Blocked claim: arbitrary finite-variation robustness proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:arbitrary_mutable_source_classification` | Blocked permission: arbitrary mutable-source classification | `registries/ROLE_EXECUTION_REGISTRY.csv` |
+| `blocked_claim:arbitrary_mutable_source_exemption` | Blocked claim: arbitrary mutable-source exemption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:arbitrary_output_path_generated_classification` | Blocked claim: arbitrary output-path generated classification | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:article_body_content_change` | Blocked claim: article body content change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:artifact_body_scanning` | Blocked claim: artifact-body scanning | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:assumption_upgrade_by_documentation` | Blocked claim: assumption upgrade by documentation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:atlasglue_src_plus_adoption` | Blocked claim: AtlasGlue_src^+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:atlasglue_srcplus_adoption` | Blocked claim: AtlasGlue_src+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:atlasgluedisc_src_plus_adoption` | Blocked claim: AtlasGlueDisc_src^+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -157,15 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:b_e_as_matter_coupling` | Blocked claim: B_E as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_benchmark_promotion` | Blocked claim: backlog as benchmark promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_completed_derivation` | Blocked claim: backlog as completed derivation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:backlog_as_coupling_law_adoption` | Blocked claim: backlog as coupling-law adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:backlog_as_detector_semantics` | Blocked claim: backlog as detector semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:backlog_as_einstein_equations` | Blocked claim: backlog as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260720-028`
-- Latest handoff: `handoff-0798`
-- Handoff path: `research_control/handoffs/handoff-0798.yaml`
-- Next action: Run one governed improve-project-system recovery for mutable frontier-theorem-inventory memory-preflight compatibility, then revalidate and checkpoint RT-20260720-028; only afterward may P4-T01 become dependency-ready.
+- Active task: `RT-20260720-030`
+- Latest handoff: `handoff-0800`
+- Handoff path: `research_control/handoffs/handoff-0800.yaml`
+- Next action: Run exactly one bounded v21 P4-T02 ontology-formalizer packet to specify the strongest honest continuum-first premetric option at proposal scope. Treat four-dimensional differentiable source structure as explicit primitive debt, leave physical metric clocks matter coupling and dynamics as derivational targets, do not adopt the regime, and do not execute P4-T03 in the same AgentJob.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

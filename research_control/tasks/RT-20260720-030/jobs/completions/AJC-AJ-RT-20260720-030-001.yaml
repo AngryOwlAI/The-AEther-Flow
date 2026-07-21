@@ -1,0 +1,504 @@
+job_id: "AJ-RT-20260720-030-001"
+completion_id: "AJC-AJ-RT-20260720-030-001"
+task_id: "RT-20260720-030"
+task_type: "v21_comprehensive_source_assumption_ledger"
+decision_id: "DDR-20260720-030"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260720-030"
+status: "completed"
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-07-21T18:31:33Z"
+started_at: "2026-07-21T18:31:33Z"
+completed_at: "2026-07-21T18:42:43Z"
+objective: "Execute only v21 P4-T01 by recording normalized status and canonical provenance for thirteen assumption dimensions across every frontier object, identifying circular justification, and preserving the protected ontology-regime choice."
+completion_summary: "P4-T01 registers a complete source-assumption ledger for all 27 canonical frontier-theorem items. Eleven total profiles resolve 351 object-dimension cells to 29 normalized assumption tokens, each with canonical source provenance or an explicit missing-source or no-premise marker. The packet flags four-dimensionality, differentiability, and ordered motion as high-impact assumptions, records nine unresolved ambiguity clusters and four blocked circular-upgrade patterns, and proves the narrow well-foundedness theorem that cyclic provenance or a missing-source terminal cannot create a derived-status certificate. No assumption is introduced, upgraded, adopted, or rejected; no ontology regime is selected; no scientific ledger or downstream GR status changes. P4-T02 is selected next by plan order for proposal formalization only, while P4-T03 remains eligible and P4-T05 remains the protected regime gate."
+objective_result: "assumption_visibility_burden_discharged_no_distance_delta"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 30
+  passes_consumed: 30
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:30"
+  relay_claim_token: "b747abfca415d692e62be8bf529f9876b5767e802f86620b"
+  route_work_item_id: "P4-T01"
+  worker_skill: "continue-research"
+
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "dependency_map_update"
+minimum_payload:
+  payload_class: "dependency_map_update"
+  payload_artifact_path: "research_control/tasks/RT-20260720-030/artifacts/frontier_object_assumption_matrix_v1.yaml"
+  payload_summary: "Complete 27-object by 13-dimension assumption-provenance matrix with explicit missing-source markers and circularity guards."
+has_new_mathematical_payload: true
+has_finite_local_witness: false
+has_countermodel: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T01"
+  recommendation_ids:
+    - "V21-R10"
+    - "V21-R11"
+    - "V21-R12"
+    - "V21-R31"
+    - "V21-R33"
+  implementation_status: "completed"
+  implemented_task_scope: "Source-assumption visibility, provenance, missing-source debt, circularity, and one plan-order successor only."
+  p4_t01_completed: true
+  p4_t02_dependency_ready: true
+  p4_t03_dependency_ready: true
+  selected_next_plan_task: "P4-T02"
+  p4_t02_executed: false
+  p4_t03_executed: false
+  p4_t05_human_gate_preserved: true
+
+artifacts:
+  - "research_control/tasks/RT-20260720-030/artifacts/child_phys_math_source_assumption_ledger.yaml"
+  - "research_control/tasks/RT-20260720-030/artifacts/child_phys_phil_source_assumption_ledger.yaml"
+  - "research_control/tasks/RT-20260720-030/artifacts/parent_conflict_review_source_assumption_ledger.yaml"
+  - "research_control/tasks/RT-20260720-030/artifacts/parent_fusion_notes_source_assumption_ledger.md"
+  - "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+  - "research_control/tasks/RT-20260720-030/artifacts/frontier_object_assumption_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md"
+  - "research_control/tasks/RT-20260720-030/artifacts/source_assumption_ledger_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260720-030/artifacts/validate_source_assumption_ledger_v1.py"
+  - "research_control/tasks/RT-20260720-030/artifacts/source_assumption_ledger_validation_v1.json"
+
+output_paths:
+  - "research_control/tasks/RT-20260720-030/**"
+  - "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+  - "research_control/handoffs/handoff-0800.yaml"
+  - "research_control/handoffs/handoff-0800.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  registered_ledger:
+    path: "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+    sha256: "e50fb9458ee601563a0decc8dc809e719ec4e1d6b62c0682d1175ad2f91a1d90"
+  object_assumption_matrix:
+    path: "research_control/tasks/RT-20260720-030/artifacts/frontier_object_assumption_matrix_v1.yaml"
+    sha256: "bc388c10e941c85356b574afb71e198a82fb2e023cd5d84e97e04c8c20f06a64"
+  ambiguity_report:
+    path: "research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md"
+    sha256: "26228534f5b9aa7ebfb1213faaf4d86e356f52e59da9004a32a18f79eff8630c"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260720-030/artifacts/source_assumption_ledger_compact_receipt_v1.json"
+    sha256: "291c2090e10dd2c960ad3d1f420f3d8ff7e00dbd7e776491b389de3399c2c60c"
+  task_local_validation:
+    path: "research_control/tasks/RT-20260720-030/artifacts/source_assumption_ledger_validation_v1.json"
+    sha256: "3030f61890e761cac8243e5444fe15ee6ffb34a906f3a4f534cf3f2071582a09"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-030/artifacts/child_phys_math_source_assumption_ledger.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-030/artifacts/child_phys_phil_source_assumption_ledger.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-030/artifacts/parent_conflict_review_source_assumption_ledger.yaml"
+    resolution_rounds: 0
+    resolved_conflict_count: 2
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-030/artifacts/parent_fusion_notes_source_assumption_ledger.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Make assumption debt visible before selecting the ontology regime."
+  missing_source_law: "A source-derived law or lawfully adopted primitive package fixing source dimension, differentiable structure, ordered motion, topology, orientation, scale, matter semantics, coupling, covariance, dynamics, and their target-neutral bridge obligations."
+  packet_payload_mode: "candidate_law_comparison"
+  candidate_law_comparison:
+    candidates:
+      - "P4-T02 continuum-first premetric proposal"
+      - "P4-T03 emergence-first proposal"
+    comparison_basis:
+      - "P4-T01 assumption provenance and missing-source debt"
+      - "v21 plan dependency order"
+      - "target-neutrality and exact-GR recovery burden"
+      - "protected ontology-regime authority"
+    selection_status: "P4-T02 selected only as the next proposal packet; neither regime is adopted, rejected, or scientifically preferred."
+  underdetermination_statement: "Current ontology does not derive global source topology, orientation, Lorentzian signature, physical scale, source matter semantics, universal source coupling, physical covariance, substrate dynamics, or the bridge from proposed ordered motion to physical time direction."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "none in P4-T01"
+    exact_requested_ontology_edit: ""
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Do not import the target metric, causal orientation, scale, matter action, coupling, covariance, or Einstein dynamics as source premises."
+      - "Keep general EqSrc, RetainH, GenH, unscoped M_src and g_eff, matter coupling, Einstein-equation derivation, and benchmark promotion blocked."
+      - "Require an acyclic source-to-target bridge with independently sourced premises."
+      - "Require protected human authority before ontology-regime adoption or rejection."
+    distance_to_gr_links:
+      - "source_ontology_primitives"
+      - "general EqSrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "all 27 canonical frontier-inventory objects"
+      - "all thirteen source-assumption dimensions"
+      - "registered ontology foundations and v21 plan dependencies"
+      - "registry, role, validator, handoff, receipt, and generated-derivative surfaces"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-030-001"
+    payload_type: "concrete_certificate_step_families"
+    name: "Assumption-status and provenance certificate family"
+    summary: "Separates structural role from authority status and supplies finite profile-resolved provenance steps for every object-dimension cell."
+  - payload_id: "NMP-RT-20260720-030-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Circular provenance cannot upgrade status"
+    summary: "A finite ranked dependency certificate cannot contain a premise cycle, and a missing-source terminal cannot discharge a derived-status premise."
+  - payload_id: "NMP-RT-20260720-030-003"
+    payload_type: "concrete_certificate_step_families"
+    name: "Complete frontier object-to-assumption matrix"
+    summary: "Maps all 27 frontier items across thirteen assumption dimensions, including downstream dependencies and circularity guards."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-P4T01-001"
+    payload_type: "definition"
+    object_name: "two-axis source-assumption status algebra"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+    burden_effect: "narrows"
+    summary: "Normalizes primitive, derived, gauge, operational, open, adopted, proposed, and human-gated status without collapsing structural and authority axes."
+  - payload_id: "PAYLOAD-P4T01-002"
+    payload_type: "theorem"
+    object_name: "no-circular-provenance-upgrade theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+    burden_effect: "narrows"
+    summary: "Under finite ancestry, strict rank decrease, and canonical primitive-leaf provenance, cycles and unresolved leaves cannot certify derived status."
+  - payload_id: "PAYLOAD-P4T01-003"
+    payload_type: "dependency_map_update"
+    object_name: "27-object by 13-dimension assumption matrix"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-030/artifacts/frontier_object_assumption_matrix_v1.yaml"
+    burden_effect: "discharges"
+    summary: "Discharges only the P4-T01 assumption-visibility burden; no source-law or Distance-to-GR burden is discharged."
+  - payload_id: "PAYLOAD-P4T01-004"
+    payload_type: "packet_selection"
+    object_name: "P4-T02 continuum-first option formalization packet"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md"
+    burden_effect: "selects_next"
+    summary: "Selects plan-order proposal formalization only; P4-T03 remains eligible and P4-T05 remains the protected regime gate."
+
+physics_progress_status:
+  status: "burden_discharged"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Make assumption debt visible before selecting the ontology regime."
+  explanation: "The local assumption-visibility burden is discharged by complete normalized coverage and provenance; no source ontology, law, or downstream physical object is derived or adopted."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  old_status: "P4-T01 assumption ledger dependency-ready; ontology regime unresolved"
+  new_status: "P4-T01 assumption debt explicit; ontology regime still unresolved"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No source primitive, ontology regime, source law, metric, coupling, dynamics, or benchmark status changed."
+  downstream_unlocked:
+    - "P4-T02 continuum-first proposal formalization"
+    - "P4-T03 emergence-first proposal formalization"
+  downstream_still_blocked:
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "RetainH"
+    - "GenH"
+    - "unscoped_source_manifold_m_src"
+    - "unscoped_effective_metric"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+  explanation: "This dependency-map and epistemic theorem packet changes visibility, not physical distance to GR."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "assumption debt explicit; continuum-first versus emergence-first regime unresolved and protected"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; conditional theorem package and local freezes remain, general EqSrc undischarged"
+  - burden: "RetainH"
+    status: "unchanged; missing source primitive"
+  - burden: "GenH"
+    status: "unchanged; missing source primitive"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; constructive local exact-branch witness only"
+  - burden: "Resp_lc"
+    status: "unchanged; scoped source-extension data only"
+  - burden: "M_src"
+    status: "unchanged; scoped source-only object does not derive dimension smoothness topology or target manifold"
+  - burden: "g_eff"
+    status: "unchanged; scoped source-extension object is not an unscoped physical Lorentzian metric"
+  - burden: "matter coupling"
+    status: "unchanged; targets conditional lemmas obstructions and scoped evidence are not matter semantics or coupling"
+  - burden: "Einstein equations"
+    status: "unchanged; target equations adopted as benchmark, source derivation not started"
+  - burden: "finite-variation robustness"
+    status: "unchanged; conditional and downstream GR blocked"
+  - burden: "benchmark promotion"
+    status: "unchanged and blocked"
+  - burden: "Gate Chair status"
+    status: "unchanged and human-gated; no regime or benchmark verdict requested"
+  - burden: "current route freeze or hard-fail status"
+    status: "no new freeze; P4-T02 proposal formalization is materially distinct and P4-T03 remains eligible"
+
+route_cycle_control:
+  cycle_family: "source_ontology_regime_formalization"
+  current_cycle_step: "p4_t01_assumption_visibility_complete_p4_t02_selected"
+  prior_related_tasks:
+    - "RT-20260720-028 P3-T07"
+    - "RT-20260720-029 compatibility recovery"
+  cycle_risk: "low"
+  orbit_avoidance_reason: "P4-T02 must formalize one explicit continuum-first option rather than restate the ledger or claim the protected regime decision."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P4-T02"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "P4-T01 creates no canonical ontology edit or regime selection, source-law adoption or rejection, general EqSrc, RetainH, GenH, unscoped M_src or g_eff, matter semantics, matter coupling, Einstein-equation source derivation, scientific-ledger delta, benchmark promotion, Gate Chair verdict, proof authority, external publication, completed derivation, global theory rejection, global no-go, or future source-extension impossibility. Primitive does not mean adopted; documented does not mean derived; target-side closure is not a source premise."
+  forbidden_conclusions:
+    - "assumption documentation as derivation or adoption"
+    - "continuum-first or emergence-first regime selection"
+    - "target benchmark structure as source premise"
+    - "structural invariance as physical gauge"
+    - "scoped source-extension adoption as unscoped physical derivation"
+    - "Distance-to-GR or downstream GR progress"
+    - "Gate Chair verdict proof authority publication completed derivation or global no-go"
+    - "m_src adoption"
+    - "g_eff adoption"
+    - "matter coupling derivation"
+    - "einstein equations derivation"
+    - "benchmark promotion"
+    - "completed derivation"
+    - "global theory rejection"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_regime_selection_authorized: false
+  physical_gauge_claim_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 951
+    relationship_row_count: 4723
+    semantic_row_count: 951
+    vault_row_count: 951
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+    before_local_cache_only_warning_count: 8
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup ontology/tex/aether_flow_foundations.tex --json"
+      query_type: "lookup"
+      query_text: "ontology/tex/aether_flow_foundations.tex"
+      returned_object_ids:
+        - "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/frontier_theorem_inventory.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/frontier_theorem_inventory.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'P4-T01 comprehensive source assumption ledger' --json"
+      query_type: "search"
+      query_text: "P4-T01 comprehensive source assumption ledger"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/frontier_theorem_inventory.md"
+      source_hash: "5158603122dda2ec768293d5659e51b0d18cbc52689c2caf9a1c266a4d105fce"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core memory validation passed and eight local-only retrieval warnings were refreshed to zero with 951 canonical source objects."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m py_compile research_control/tasks/RT-20260720-030/artifacts/validate_source_assumption_ledger_v1.py"
+    status: "PASS"
+    summary: "The task-local validator compiled successfully."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260720-030/artifacts/validate_source_assumption_ledger_v1.py --write-report --json"
+    status: "PASS"
+    summary: "All 31 exact inventory, total-profile, status, provenance, hash, high-impact, circularity, synthesis, theorem, and receipt checks passed."
+  - command: "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-030-latex research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+    status: "PASS"
+    summary: "The registered four-page TeX ledger compiled successfully; local PDF remains an untracked preview derivative."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 30 lease, route, model, reasoning, repository binding, predecessor checkpoint, and single-consumption parity were verified before work."
+      - "Memory preflight passed after refreshing only local retrieval state, and every required canonical source and direct dependency was inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required child perspectives completed and the parent resolved two nonblocking differences with no unresolved conflict."
+      - "The task-local validator passes 31 of 31 coverage, status, provenance, hash, circularity, theorem, and synthesis checks."
+      - "The TeX ledger compiles successfully."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local scientific checks pass; repository-wide changed-scope, claim-language, documentation-impact, signal-parity, renderer, memory, graph, and selected-test checks are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The transaction is prepared for exactly one governed checkpoint after final validation."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, and claim graph derivatives were refreshed through governed commands."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks pass after canonical source registration."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has no hard findings; historical advisory warnings do not create scientific authority."
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-030/artifacts/source_assumption_ledger_validation_v1.json"
+  local_validator_report_hash: "3030f61890e761cac8243e5444fe15ee6ffb34a906f3a4f534cf3f2071582a09"
+  frontier_object_count: 27
+  assumption_dimension_count: 13
+  matrix_cell_count: 351
+  assumption_token_count: 29
+  high_impact_assumption_count: 3
+  circularity_finding_count: 4
+  unresolved_ambiguity_count: 9
+  task_local_passed_check_count: 31
+  task_local_failed_check_count: 0
+  parent_child_synthesis_status: "PASS"
+  ontology_source_hashes_unchanged: true
+  distance_to_gr_ledger_hash_unchanged: true
+  metric_use_ledger_hash_unchanged: true
+
+validators_run:
+  - "memory_preflight"
+  - "task_local_validator"
+  - "latex_compile"
+  - "parent_child_synthesis"
+  - "frontier_object_coverage"
+  - "normalized_status_vocabulary"
+  - "source_provenance_or_missing_marker"
+  - "circularity_audit"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "classify_project_changes"
+  - "project_improvement_signal_parity"
+  - "documentation_impact"
+  - "research_control_validation"
+  - "claim_language"
+  - "full_validation"
+  - "research_control_test_shard"
+  - "git_diff_check"
+
+documentation_impact:
+  required: true
+  documentation_impact_id: "DI-RT-20260720-030-001"
+  documentation_impact_path: "research_control/tasks/RT-20260720-030/documentation_impact.yaml"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  recursive_goal_recovery_required: false
+  route: "none"
+  rationale: "The packet found no project-system defect; missing scientific premises remain open research burdens."
+
+next_handoff_id: "handoff-0800"
+selected_next_route:
+  route_id: "v21_p4_t02_continuum_first_premetric_ontology_option"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P4-T02"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Provide one coherent ontology option without emergence overread."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  dependency_ready: true
+  executed: false
+  next_action: "Formalize the strongest honest continuum-first premetric proposal in which four-dimensional differentiable source structure is primitive and metric matter coupling and dynamics remain derivational targets; do not adopt the regime or execute P4-T03."

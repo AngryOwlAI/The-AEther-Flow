@@ -1,0 +1,166 @@
+{
+  "schema_id": "v21_p4_t01_source_assumption_ledger_validation_v1",
+  "task_id": "RT-20260720-030",
+  "job_id": "AJ-RT-20260720-030-001",
+  "status": "PASS",
+  "passed_check_count": 31,
+  "failed_check_count": 0,
+  "checks": [
+    {
+      "check_id": "inventory_count",
+      "status": "PASS",
+      "detail": "inventory item count=27"
+    },
+    {
+      "check_id": "object_count",
+      "status": "PASS",
+      "detail": "matrix object count=27"
+    },
+    {
+      "check_id": "unique_objects",
+      "status": "PASS",
+      "detail": "frontier item IDs are unique"
+    },
+    {
+      "check_id": "exact_inventory_coverage",
+      "status": "PASS",
+      "detail": "matrix and canonical inventory IDs match exactly"
+    },
+    {
+      "check_id": "dimension_count",
+      "status": "PASS",
+      "detail": "required dimension count=13"
+    },
+    {
+      "check_id": "declared_matrix_cells",
+      "status": "PASS",
+      "detail": "declared cells=351"
+    },
+    {
+      "check_id": "resolved_matrix_cells",
+      "status": "PASS",
+      "detail": "27 by 13 cells resolve through profiles"
+    },
+    {
+      "check_id": "profiles_total",
+      "status": "PASS",
+      "detail": "profile key differences={}"
+    },
+    {
+      "check_id": "object_profile_refs",
+      "status": "PASS",
+      "detail": "bad object profile refs=0"
+    },
+    {
+      "check_id": "profile_assumption_refs",
+      "status": "PASS",
+      "detail": "bad assumption refs=[]"
+    },
+    {
+      "check_id": "structural_status_vocab",
+      "status": "PASS",
+      "detail": "invalid structural statuses={}"
+    },
+    {
+      "check_id": "assumption_authority_vocab",
+      "status": "PASS",
+      "detail": "invalid assumption authority statuses={}"
+    },
+    {
+      "check_id": "object_authority_vocab",
+      "status": "PASS",
+      "detail": "invalid object authority statuses=[]"
+    },
+    {
+      "check_id": "provenance_or_marker",
+      "status": "PASS",
+      "detail": "assumptions without provenance or marker=[]"
+    },
+    {
+      "check_id": "known_provenance_sources",
+      "status": "PASS",
+      "detail": "unknown source refs=[]"
+    },
+    {
+      "check_id": "canonical_source_hashes",
+      "status": "PASS",
+      "detail": "source hash failures=[]"
+    },
+    {
+      "check_id": "high_impact_dimension",
+      "status": "PASS",
+      "detail": "four-dimensionality is explicitly high impact"
+    },
+    {
+      "check_id": "high_impact_smoothness",
+      "status": "PASS",
+      "detail": "differentiability is explicitly high impact"
+    },
+    {
+      "check_id": "high_impact_order",
+      "status": "PASS",
+      "detail": "ordered motion is explicitly high impact"
+    },
+    {
+      "check_id": "circularity_findings",
+      "status": "PASS",
+      "detail": "circularity finding count=4"
+    },
+    {
+      "check_id": "no_status_upgrade",
+      "status": "PASS",
+      "detail": "no assumption status upgrades"
+    },
+    {
+      "check_id": "no_adoption_delta",
+      "status": "PASS",
+      "detail": "no assumption adoptions"
+    },
+    {
+      "check_id": "ambiguity_count",
+      "status": "PASS",
+      "detail": "ambiguity count=9"
+    },
+    {
+      "check_id": "well_founded_theorem",
+      "status": "PASS",
+      "detail": "ranked no-circular-upgrade theorem present"
+    },
+    {
+      "check_id": "all_objects_in_tex",
+      "status": "PASS",
+      "detail": "all object IDs appear in registered TeX"
+    },
+    {
+      "check_id": "no_external_source",
+      "status": "PASS",
+      "detail": "external-source boundary recorded"
+    },
+    {
+      "check_id": "child_outputs",
+      "status": "PASS",
+      "detail": "child statuses=['completed', 'completed']"
+    },
+    {
+      "check_id": "conflict_resolution",
+      "status": "PASS",
+      "detail": "parent conflict review resolved"
+    },
+    {
+      "check_id": "receipt_object_count",
+      "status": "PASS",
+      "detail": "receipt object count is 27"
+    },
+    {
+      "check_id": "receipt_matrix_cells",
+      "status": "PASS",
+      "detail": "receipt matrix cell count is 351"
+    },
+    {
+      "check_id": "receipt_claim_boundary",
+      "status": "PASS",
+      "detail": "receipt and matrix claim boundary agree"
+    }
+  ],
+  "boundary": "Operational validation only; no physics proof, ontology adoption, or promotion authority."
+}

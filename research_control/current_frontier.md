@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-029` and `handoff-0799`.
+`RT-20260720-030` and `handoff-0800`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-029` |
-| Latest handoff ID | `handoff-0799` |
-| Current status | `v21_p3_t07_checkpoint_recovered_mutable_frontier_inventory_preflight_compatibility_pass_p4_t01_ready` |
+| Active task ID | `RT-20260720-030` |
+| Latest handoff ID | `handoff-0800` |
+| Current status | `v21_p4_t01_assumption_visibility_complete_27_objects_351_cells_no_status_upgrade_no_distance_delta_p4_t02_ready` |
 | V16 completed | false |
-| Current route family | v21 p4 t01 comprehensive source assumption ledger |
+| Current route family | v21 p4 t02 continuum first premetric ontology option |
 | Target derivation milestone | `source_ontology` |
-| Current burden | `source_ontology_primitives`; status: P4-T01 assumption-ledger packet dependency-ready after P3-T07 compatibility recovery |
-| Required next authority | One P4-T01 ontology-law-research-packet may inventory every explicit source-side assumption used by EqSrc, RetainH, GenH, M_src, g_eff, matter coupling, and Einstein-equation frontier objects; classify each assumption by provenance and authority; and identify adoption debt without adopting or rejecting an ontology regime. |
-| Next recommended action | Run one bounded v21 P4-T01 ontology-formalizer packet to create the comprehensive source-assumption ledger across frontier objects before any protected ontology-regime choice; do not adopt or reject an ontology regime. |
+| Current burden | `source_ontology_primitives`; status: P4-T01 assumption debt explicit; continuum-first versus emergence-first regime remains unresolved |
+| Required next authority | One P4-T02 ontology-law-research-packet may formalize a proposal-only continuum-first premetric ontology option in which four-dimensional differentiable source structure is primitive and physical metric operational clocks matter universal coupling and gravitational dynamics remain derivational burdens. |
+| Next recommended action | Run exactly one bounded v21 P4-T02 ontology-formalizer packet to specify the strongest honest continuum-first premetric option at proposal scope. Treat four-dimensional differentiable source structure as explicit primitive debt, leave physical metric clocks matter coupling and dynamics as derivational targets, do not adopt the regime, and do not execute P4-T03 in the same AgentJob. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-029` |
-| Latest research handoff ID | `handoff-0799` |
-| Latest research next action | Run one bounded v21 P4-T01 ontology-formalizer packet to create the comprehensive source-assumption ledger across frontier objects before any protected ontology-regime choice; do not adopt or reject an ontology regime. |
+| Latest research task ID | `RT-20260720-030` |
+| Latest research handoff ID | `handoff-0800` |
+| Latest research next action | Run exactly one bounded v21 P4-T02 ontology-formalizer packet to specify the strongest honest continuum-first premetric option at proposal scope. Treat four-dimensional differentiable source structure as explicit primitive debt, leave physical metric clocks matter coupling and dynamics as derivational targets, do not adopt the regime, and do not execute P4-T03 in the same AgentJob. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-029/00_TASK.yaml`.
-- Active task objective: Add the registered frontier theorem inventory to the established mutable memory-preflight source set, prove the historical-hash compatibility behavior with one focused regression case, preserve the complete RT-20260720-028 scientific payload byte-for-byte, and checkpoint the combined transaction before selecting P4-T01.
-- Latest handoff path: `research_control/handoffs/handoff-0799.yaml`.
-- Latest handoff summary: RT-20260720-029 repaired the exact mutable frontier-theorem-inventory memory-preflight compatibility omission with one validator entry and one focused regression case. The complete RT-20260720-028 P3-T07 scientific payload remains unchanged: five historical families and the exact quotient route remain locally frozen, general EqSrc remains undischarged, and P4-T01 remains the selected next scientific packet. Required precheckpoint validation passes and the combined transaction is ready for governed checkpoint; P4-T01 has not been executed.
-- Current route family: v21 p4 t01 comprehensive source assumption ledger.
-- Next recommended action: Run one bounded v21 P4-T01 ontology-formalizer packet to create the comprehensive source-assumption ledger across frontier objects before any protected ontology-regime choice; do not adopt or reject an ontology regime.
+- Active task path: `research_control/tasks/RT-20260720-030/00_TASK.yaml`.
+- Active task objective: Execute exactly one bounded v21 P4-T01 Ontology Formalizer packet that records normalized status and source provenance for the thirteen required assumption dimensions across every canonical frontier-inventory object, identifies circular justification chains, and leaves ontology-regime selection protected and unexecuted.
+- Latest handoff path: `research_control/handoffs/handoff-0800.yaml`.
+- Latest handoff summary: RT-20260720-030 completed only v21 P4-T01. The registered assumption ledger covers all 27 canonical frontier items across thirteen dimensions through 351 profile-resolved cells and 29 normalized assumption tokens. Every token has canonical provenance or an explicit missing-source or no-premise marker. Four-dimensionality differentiability and ordered motion are high-impact proposed source assumptions; nine ambiguity clusters and four blocked circular-upgrade patterns remain explicit. A narrow ranked-dependency theorem shows that a cycle or missing-source terminal cannot create a derived-status certificate. No assumption ontology regime source law scientific ledger downstream GR object proof authority promotion or publication status changed.
+- Current route family: v21 p4 t02 continuum first premetric ontology option.
+- Next recommended action: Run exactly one bounded v21 P4-T02 ontology-formalizer packet to specify the strongest honest continuum-first premetric option at proposal scope. Treat four-dimensional differentiable source structure as explicit primitive debt, leave physical metric clocks matter coupling and dynamics as derivational targets, do not adopt the regime, and do not execute P4-T03 in the same AgentJob.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run one bounded v21 P4-T01 ontology-formalizer packet to create the comprehensive source-assumption ledger across frontier objects before any protected ontology-regime choice; do not adopt or reject an ontology regime.
+Run exactly one bounded v21 P4-T02 ontology-formalizer packet to specify the strongest honest continuum-first premetric option at proposal scope. Treat four-dimensional differentiable source structure as explicit primitive debt, leave physical metric clocks matter coupling and dynamics as derivational targets, do not adopt the regime, and do not execute P4-T03 in the same AgentJob.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-029`;
-- latest handoff: `handoff-0799`;
-- current status: `v21_p3_t07_checkpoint_recovered_mutable_frontier_inventory_preflight_compatibility_pass_p4_t01_ready`;
+- active task: `RT-20260720-030`;
+- latest handoff: `handoff-0800`;
+- current status: `v21_p4_t01_assumption_visibility_complete_27_objects_351_cells_no_status_upgrade_no_distance_delta_p4_t02_ready`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0799.yaml`
-- `research_control/tasks/RT-20260720-029/00_TASK.yaml`
+- `research_control/handoffs/handoff-0800.yaml`
+- `research_control/tasks/RT-20260720-030/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0799*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0800*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

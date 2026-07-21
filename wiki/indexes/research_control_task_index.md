@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `bcdae9d4724e6cd1ecf0925aa88d4661c782644356a4acbd4e87b6be9c12fd5d`
-- Generated-at source timestamp: `2026-07-21T17:51:04Z`
-- Row count: `1034`
+- Source fingerprint: `5c0bfe899dc1f5fbcbeeaac6c5a44389cb2eb1b90d138b204ae700aec32122bc`
+- Generated-at source timestamp: `2026-07-21T18:31:33Z`
+- Row count: `1035`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260720-030|RT-20260720-029|2026-07-21T18:31:33Z|2026-07-21T18:42:43Z|v21_comprehensive_source_assumption_ledger|completed|source_ontology|Make assumption debt visible before selecting the ontology regime.|ontology-formalizer@0.2.0|false|false|10|Run exactly one bounded v21 P4-T02 ontology-formalizer packet to specify the continuum-first premetric option at proposal scope; do not treat plan-order execution as ontology-regime adoption and do not execute P4-T03 in the same AgentJob.|PASS|research_control/tasks/RT-20260720-030/jobs/completions/AJC-AJ-RT-20260720-030-001.yaml|
 |RT-20260720-029|RT-20260720-028|2026-07-21T17:51:04Z|2026-07-21T17:55:35Z|project_system_mutable_frontier_inventory_memory_preflight_compatibility_recovery|completed|none|Project-system validator compatibility repair only; preserve the source-equivalence scientific result and all Distance-to-GR boundaries unchanged.|validator-engineer@0.2.0|false|false|1|After governed checkpoint PASS, run one bounded v21 P4-T01 ontology-formalizer packet to build the comprehensive source-assumption ledger without adopting an ontology regime.|PASS|research_control/tasks/RT-20260720-029/jobs/completions/AJC-AJ-RT-20260720-029-001.yaml|
 |RT-20260720-028|RT-20260720-027|2026-07-21T16:26:52Z|2026-07-21T17:15:44Z|v21_eqsrc_family_freeze_theorem_inventory_selector|blocked|source_equivalence_eqsrc|Close the route orbit and establish a clean next scientific frontier.|theoretical-continuation-selector@0.1.0|false|false|12|Run one governed improve-project-system recovery for mutable frontier-theorem-inventory memory-preflight compatibility, then revalidate and checkpoint this preserved transaction before P4-T01 becomes eligible.|FAIL|research_control/tasks/RT-20260720-028/jobs/completions/AJC-AJ-RT-20260720-028-001.yaml|
 |RT-20260720-027|RT-20260720-026|2026-07-21T15:18:17Z|2026-07-21T15:35:33Z|v21_eqsrc_invariant_functor_quotient_smuggling_audit_stress|completed|source_equivalence_eqsrc|Determine whether the quotient candidate is a genuine source relation rather than a disguised target or arbitrary partition.|smuggling-auditor@0.2.0|false|false|10|Execute only the dependency-ready P3-T07 family-freeze and EqSrc theorem-inventory integration packet; do not reconstruct or promote the exact P3-T05 candidate.|PASS|research_control/tasks/RT-20260720-027/jobs/completions/AJC-AJ-RT-20260720-027-001.yaml|

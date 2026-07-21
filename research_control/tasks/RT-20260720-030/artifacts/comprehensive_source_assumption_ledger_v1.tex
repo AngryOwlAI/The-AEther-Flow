@@ -1,0 +1,218 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Open}{\mathsf{Open}}
+\newcommand{\Proposed}{\mathsf{Proposed}}
+\newcommand{\Adopted}{\mathsf{Adopted}}
+\newcommand{\HumanGated}{\mathsf{HumanGated}}
+
+\title{Comprehensive Source-Assumption Ledger v1\\
+\large v21 P4-T01 draft/control artifact}
+\author{Ontology Formalizer task RT-20260720-030}
+\date{2026-07-21}
+
+\begin{document}
+\maketitle
+
+\section*{Authority and scope}
+
+This artifact records assumption status and provenance; it does not create or
+upgrade scientific authority.  It is proposal-only, draft/control material.
+The registered ontology sources remain authoritative for their existing
+claims, while the exact-GR metric, matter action, and Einstein dynamics remain
+adopted target-side benchmark closure rather than first-principles source
+derivations.  No canonical ontology is edited, selected, adopted, or rejected.
+No Distance-to-GR row changes.
+
+The machine-readable companion
+\texttt{frontier\_object\_assumption\_matrix\_v1.yaml} contains 27 frontier
+objects, 13 dimensions per object, 351 resolved cells, canonical source
+hashes, and explicit missing-source markers.  This document fixes the formal
+interpretation of that matrix.
+
+\section{Status algebra}
+
+\begin{definition}[Two-axis status]
+For an assumption token $a$, its structural role is
+\[
+ r(a)\in\{\mathsf{Primitive},\mathsf{Derived},\mathsf{Gauge},
+ \mathsf{Operational},\mathsf{Open},\mathsf{NotApplicable}\},
+\]
+and its authority status is
+\[
+ q(a)\in\{\Adopted,\Proposed,\Open,\HumanGated\}.
+\]
+The axes are independent.  In particular,
+\(r(a)=\mathsf{Primitive}\) does not imply \(q(a)=\Adopted\), and the
+existence of a document for $a$ does not imply
+\(r(a)=\mathsf{Derived}\).
+\end{definition}
+
+\begin{definition}[Provenance state]
+Every assumption token has exactly one audit outcome:
+\begin{enumerate}
+  \item one or more canonical source paths with observed SHA-256 hashes; or
+  \item an explicit missing-source or no-premise marker.
+\end{enumerate}
+A missing-source marker makes the debt visible but is not a derivation premise.
+Generated wiki, registry metadata, role identity, validator status, and this
+ledger are not source-side proof premises.
+\end{definition}
+
+\section{Assumption dimensions and principal findings}
+
+The required dimensions are dimension, differentiability, topology, order,
+orientation, time direction, metric form, signature, scale, coupling, matter,
+covariance, and dynamics.  Three source assumptions have especially high
+consequence:
+\begin{enumerate}
+  \item \textbf{Four-dimensionality.}  The foundations posit a
+  four-dimensional substrate.  This is a proposed primitive, not a dimension
+  emergence theorem.
+  \item \textbf{Differentiable smooth structure.}  Smooth manifold, field,
+  and map language is primitive in the continuum representation.  An
+  emergence-first regime would instead owe a reconstruction theorem.
+  \item \textbf{Ordered motion.}  The family $\Phi_\lambda$ and monotone
+  $S$-time provide proposed source order.  Their relation to Lorentzian time
+  orientation is open.
+\end{enumerate}
+
+The source text leaves global topology, orientation, Lorentzian signature,
+physical scale, source matter semantics, universal source coupling, physical
+covariance, and substrate dynamics without a derivation-critical source law.
+The optional positive-definite $G_{AB}$ is schematic.  The Lorentzian
+$g_{ab}$, its causal orientation, $c$, $G$, minimal coupling, matter action,
+and Einstein--Hilbert dynamics are adopted exact-GR benchmark inputs.
+
+\section{Frontier-object coverage}
+
+Table~\ref{tab:objects} lists every item in the canonical frontier theorem
+inventory.  A profile expands to all thirteen dimensions in the companion
+matrix; no unlisted default is permitted.
+
+\small
+\begin{longtable}{@{}p{0.34\textwidth}p{0.18\textwidth}p{0.15\textwidth}p{0.23\textwidth}@{}}
+\caption{Complete frontier-object coverage.}\label{tab:objects}\\
+\toprule
+Frontier item & Profile & Object authority & Bounded conclusion\\
+\midrule
+\endfirsthead
+\toprule
+Frontier item & Profile & Object authority & Bounded conclusion\\
+\midrule
+\endhead
+\texttt{source\_ontology\_primitives} & source ontology & proposed & Draft/control primitives only.\\
+\texttt{source\_equivalence\_eqsrc} & structural EqSrc & proposed & Conditional theorems and local freezes; general EqSrc open.\\
+\texttt{retain\_h} & missing source law & open & Retention primitive missing.\\
+\texttt{gen\_h} & missing source law & open & Generator primitive missing.\\
+\texttt{obsloc\_lc} & local witness & proposed & Constructive local exact-branch witness only.\\
+\texttt{resp\_lc} & local witness & adopted & Scoped source-extension data only.\\
+\texttt{m\_src\_gsc} & source manifold & adopted & Scoped source-only object.\\
+\texttt{g\_eff\_gsc\_cand} & scoped metric & adopted & Scoped object, not unscoped physical metric.\\
+\texttt{matter\_coupling\_bridge\_target\_v1} & matter bridge & proposed & Obligation target only.\\
+\texttt{matter\_coupling\_precondition\_evidence} & matter bridge & proposed & Scoped evidence precondition only.\\
+\texttt{rr\_e\_theorem\_target\_v1} & matter bridge & proposed & Theorem target only.\\
+\texttt{rr\_e\_underdetermination\_obstruction} & matter bridge & open & Adoption blocked; continuation open.\\
+\texttt{rr\_e\_factor\_through\_conditional\_lemma} & matter bridge & proposed & Conditional on missing source law.\\
+\texttt{rr\_e\_separation\_obstruction\_witness\_v1} & matter bridge & proposed & Finite separation witness only.\\
+\texttt{rr\_e\_transport\_completeness\_or\_invariance\_law\_v1} & matter bridge & proposed & Scoped precondition, not source law.\\
+\texttt{matter\_coupling\_precondition\_assembly\_v1} & matter bridge & proposed & Pre-coupling assembly only.\\
+\texttt{source\_coupling\_law\_candidate\_cand\_v1} & matter bridge & proposed & Candidate evidence, not coupling law.\\
+\texttt{ms\_stable\_partition\_precondition\_v1} & matter bridge & proposed & Stable-partition precondition only.\\
+\texttt{ms\_stable\_matter\_semantics\_bridge\_v1} & matter bridge & proposed & Bridge evidence, not matter semantics.\\
+\texttt{source\_matter\_semantics\_adoption\_readiness\_law\_v1} & matter bridge & proposed & Readiness evidence, not adoption.\\
+\texttt{positive\_source\_matter\_semantics\_target\_v1} & matter bridge & proposed & Target grammar only.\\
+\texttt{positive\_ms\_profile\_v1} & matter bridge & proposed & Positive profile evidence only.\\
+\texttt{finite\_toy\_metric\_response} & finite metric & open & Frozen negative toy route.\\
+\texttt{finite\_variation\_robustness} & robustness & proposed & Conditional candidate; downstream GR blocked.\\
+\texttt{einstein\_equations} & Einstein target & open & Benchmark adopted; source derivation not started.\\
+\texttt{benchmark\_promotion} & benchmark & open & Blocked by upstream burdens.\\
+\texttt{gate\_chair\_benchmark\_closure} & benchmark & human-gated & Protected verdict absent.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{No-circular-upgrade theorem}
+
+\begin{definition}[Derivation certificate]
+Let $V$ be a finite set of assumption and result tokens.  An edge
+$y\to x$ means that $x$ uses $y$ as a premise.  A valid derivation
+certificate for $x$ consists of a finite ancestral subgraph $D_x$, a rank
+$h: D_x\to\mathbb{N}$ with $h(y)<h(z)$ for every premise edge $y\to z$,
+and a canonical provenance record for every primitive leaf.  A leaf carrying
+only a missing-source marker is open and cannot serve as a discharged premise.
+\end{definition}
+
+\begin{theorem}[Circular provenance cannot upgrade status]
+If the ancestry of $x$ contains a directed cycle through $x$, or if every
+putative proof of $x$ terminates at a leaf with only a missing-source marker,
+then no valid derivation certificate can change $r(x)$ from primitive,
+proposed, or open to derived.  Documentation of the cycle does not alter this
+conclusion.
+\end{theorem}
+
+\begin{proof}
+Suppose first that a valid certificate exists and that its ancestry contains
+the cycle
+\(x=x_0\to x_1\to\cdots\to x_n=x\).
+The rank condition gives
+\(h(x_0)<h(x_1)<\cdots<h(x_n)=h(x_0)\), a contradiction.  Thus a valid
+well-founded certificate cannot contain the cycle.  In the second case,
+well-foundedness supplies at least one terminal leaf, but the definition
+requires canonical premise provenance at every primitive leaf.  A
+missing-source marker records the absence of that premise and therefore fails
+the base condition.  Adding a ledger entry changes neither the graph nor the
+missing base evidence, so it cannot create a derivation certificate.
+\end{proof}
+
+\begin{corollary}[Target-import guard]
+The adopted exact-GR metric, time orientation, matter action, coupling, or
+dynamics cannot be used as a source premise in a claimed derivation of the
+same target object unless a separate acyclic source-to-target bridge with
+independent canonical premises is supplied.
+\end{corollary}
+
+\section{Circularity audit}
+
+Four blocked upgrade patterns are explicit in the companion matrix:
+\begin{enumerate}
+  \item target metric $\to$ target time direction $\to$ relabeled source
+  order $\to$ effective metric $\to$ target metric;
+  \item benchmark coupling $\to$ benchmark matter semantics $\to$ claimed
+  source matter semantics $\to$ source coupling $\to$ benchmark coupling;
+  \item exact-GR dynamics $\to$ target metric $\to$ claimed source dynamics
+  $\to$ exact-GR recovery; and
+  \item assumed four-dimensional smoothness $\to$ scoped source manifold
+  $\to$ claimed derivation of four-dimensional smoothness.
+\end{enumerate}
+These are dependency-shape guards, not claims that the repository has already
+made the prohibited upgrades.
+
+\section{Result and remaining decision}
+
+The assumption-visibility burden of P4-T01 is discharged: all 27 frontier
+objects have a normalized 13-dimension profile, each assumption reference has
+canonical provenance or an explicit missing-source marker, and downstream
+dependencies and circularity guards are recorded.  The scientific
+Distance-to-GR delta is zero.  The remaining continuum-first versus
+emergence-first ontology choice is not decided here.  P4-T02 and P4-T03 are
+both dependency-ready after this packet, but either remains proposal work
+until the later protected P4-T05 regime gate.
+
+\section*{Canonical inputs}
+
+The fixed input hashes are recorded in the companion matrix.  Principal paths
+are \texttt{ontology/tex/aether\_flow\_foundations.tex},
+\texttt{ontology/tex/aether\_flow\_dynamics.tex},
+\texttt{ontology/tex/aether\_flow\_geometry.tex},
+\texttt{research\_control/design/frontier\_theorem\_inventory.md}, and
+\texttt{registries/DISTANCE\_TO\_GR\_LEDGER.csv}.  No external source was
+used.
+
+\end{document}
