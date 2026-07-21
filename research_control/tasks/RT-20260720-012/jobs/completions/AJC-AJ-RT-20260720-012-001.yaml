@@ -1,0 +1,555 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-012-001"
+completion_id: "AJC-AJ-RT-20260720-012-001"
+task_id: "RT-20260720-012"
+decision_id: "DDR-20260720-012"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260720-012"
+status: "completed"
+created_at: "2026-07-21T00:12:21Z"
+started_at: "2026-07-21T00:14:06Z"
+completed_at: "2026-07-21T00:26:49Z"
+objective: "Execute only v21 P1-T04: formalize the proposal-neutral EqSrc canonical-selection theorem target, notation glossary, prior-countermodel map, finite controls, and exact claim boundary."
+completion_summary: "P1-T04 formalizes EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1 using a source groupoid G, carrier functor A, choice-space functor X, natural relation map K, and natural selector s. It proves the exact groupoid component fixed-point criterion, separates five result branches, supplies five finite controls, and maps five frozen EqSrc candidate families with live source-hash parity. The broader source-category, variation, current-ontology, and physical-admissibility theorem remains open; no selector is constructed, no family is reopened, and both scientific ledgers remain unchanged."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T04"
+  recommendation_ids:
+    - "V21-R03"
+    - "V21-R04"
+    - "V21-R05"
+    - "V21-R06"
+    - "V21-R07"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+  next_dependency_work_item: "P1-T05"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 12
+  passes_consumed: 12
+  route_work_item_id: "P1-T04"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "theorem_with_hypotheses_and_proof"
+minimum_payload:
+  payload_class: "theorem_with_hypotheses_and_proof"
+  payload_artifact_path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+  payload_summary: "Proves natural sections of a Set-valued functor on a groupoid correspond to automorphism-fixed choices on connected-component representatives, then states exact relation-image corollaries and limits."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-012/artifacts/child_phys_math_eqsrc_canonical_selection_naturality_target.yaml"
+  - "research_control/tasks/RT-20260720-012/artifacts/child_phys_phil_eqsrc_canonical_selection_naturality_target.yaml"
+  - "research_control/tasks/RT-20260720-012/artifacts/parent_conflict_review_eqsrc_canonical_selection_naturality_target.yaml"
+  - "research_control/tasks/RT-20260720-012/artifacts/parent_fusion_notes_eqsrc_canonical_selection_naturality_target.md"
+  - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+  - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_notation_glossary.yaml"
+  - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_prior_countermodel_mapping.csv"
+  - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_receipt.md"
+  - "research_control/tasks/RT-20260720-012/artifacts/validate_eqsrc_canonical_selection_naturality_target.py"
+  - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-012/**"
+  - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+  - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_notation_glossary.yaml"
+  - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_prior_countermodel_mapping.csv"
+  - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_receipt.md"
+  - "research_control/handoffs/handoff-0782.yaml"
+  - "research_control/handoffs/handoff-0782.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  theorem_target:
+    path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+    sha256: "c5aaaa70f4d7ce216a35d17af674e94e3f2866c1bdcfb28787a40d9f6636516c"
+  glossary:
+    path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_notation_glossary.yaml"
+    sha256: "6fc1495f6834ae073893d909f63846097787b80fc078b69ae3bc4ec1be93e654"
+  countermodel_map:
+    path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_prior_countermodel_mapping.csv"
+    sha256: "7a762d46db23dd4bfcc2bd677a9bbb8ee47362275b027503fc12392090f18c2a"
+  validation:
+    path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_validation.json"
+    sha256: "ceefd790ac75ae4a4724c0bda86b60bf7d0956da8364f7cb3c4b8f13dde082a7"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260720-012/artifacts/parent_fusion_notes_eqsrc_canonical_selection_naturality_target.md"
+    sha256: "5c1dfa6a63adfeab13a144e7d99e563f69323d1a6460738b6d2b315af32c1280"
+  receipt:
+    path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_receipt.md"
+    sha256: "6ea9aa8ffd6cbd41d2f1913c006e3f236dc84e2af82c7e615e04a414713cdc13"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-012/artifacts/child_phys_math_eqsrc_canonical_selection_naturality_target.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-012/artifacts/child_phys_phil_eqsrc_canonical_selection_naturality_target.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-012/artifacts/parent_conflict_review_eqsrc_canonical_selection_naturality_target.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    summary: "The parent retained the complete groupoid-component proof while explicitly leaving the broader theorem open, and limited choice irrelevance to relation-level constancy rather than physical irrelevance."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-012/artifacts/parent_fusion_notes_eqsrc_canonical_selection_naturality_target.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Replace candidate-specific prose with one shared mathematical burden."
+  missing_source_law: "A current-ontology derivation of the source symmetry domain, admissible choice-space functor, natural selector or relation-level choice-irrelevance law, broader source morphisms, and variation robustness."
+  underdetermination_statement: "Current ontology does not derive the complete source symmetry, admissible choice, natural selection, relation-level irrelevance, broader morphism, and variation package required by the common theorem target."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "draft/control"
+    source_side_definition: "For a declared source groupoid G, a carrier functor A, a choice-space functor X, and a natural map K from choices to carrier equivalence relations, define a natural selector as a section of X and classify existence and relation uniqueness by component fixed loci and their K-images."
+    formal_objects:
+      - "source groupoid G and connected-component representatives"
+      - "carrier functor A and relation functor EqRel(A)"
+      - "choice-space functor X"
+      - "natural choice-to-relation map K"
+      - "natural selector s and automorphism-fixed loci"
+    domains:
+      - "source records and source isomorphisms declared before any distinguished choice"
+      - "admissible roots lines orientations partitions response tokens normalizations ordered actions components and analogous source structures"
+      - "optional broader source morphisms and variations treated as open extensions"
+    maps:
+      - "carrier transport A(f)"
+      - "choice transport X(f)"
+      - "relation transport EqRel(A)(f)"
+      - "choice-to-relation natural transformation K"
+      - "selector natural transformation s"
+    proof_obligations:
+      - "prove the exact groupoid component fixed-point criterion"
+      - "separate no-fixed-point multiple-relation relation-unique and choice-irrelevance branches"
+      - "show automorphism fixedness alone is insufficient for broader noninvertible morphisms"
+      - "derive or obstruct the source domain choice functor selector and variations from registered source theory"
+      - "audit hidden observer benchmark generated registry validator role handoff file-order and process imports"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc undischarged until the broader theorem is proved, audited, stressed, and lawfully adopted."
+      - "Keep RetainH GenH M_src g_eff matter coupling Einstein equations and benchmark promotion blocked."
+      - "Require source definitions independent of desired exact-GR recovery behavior."
+      - "Require protected human authority before source-law or canonical ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "G"
+      - "A"
+      - "X"
+      - "K"
+      - "s"
+      - "source morphisms"
+      - "source variations"
+    audit_result: "Definitions are textually source-side and the task-local validator checks the declared process-import boundary; later independent audit and theorem work remain required."
+  atlas_glue_obligations:
+    profile_law: "Not established; the source selection target constructs no atlas."
+    overlap_law: "Not established; no M_src or overlap law is introduced."
+    cocycle_law: "Not established; groupoid functoriality is not an atlas cocycle derivation."
+    variation_law: "Open beyond independently declared source variations."
+  known_risks:
+    - "A declared choice functor may conceal the preferred datum it is meant to derive."
+    - "A source groupoid may be selected to make fixed points exist or disappear."
+    - "Relation-level constancy may be overread as physical irrelevance."
+    - "Groupoid naturality may be overread as coherence for noninvertible source morphisms or variations."
+  failed_alternatives:
+    - "A free C2 action has no automorphism-fixed choice and no natural selector."
+    - "Two fixed choices with different K-images leave the relation nonunique."
+    - "A point fixed by all object automorphisms can still fail noninvertible-arrow coherence."
+    - "Another candidate-specific family construction is barred by the P1-T03 local freeze."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. A later protected decision is required before adopting any source-selection law or editing canonical ontology."
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "ontology_law_research_packet"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1"
+  item_source_path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+  item_kind: "law_target"
+  classification: "status_boundary_evidence_only"
+  evidence_paths:
+    - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+    - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_notation_glossary.yaml"
+    - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_prior_countermodel_mapping.csv"
+    - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_validation.json"
+  relation_to_current_ontology: "missing_primitive"
+  relation_to_target_structures: "No target-side structure defines the formal source groupoid, choice functor, selector, or relation map."
+  claim_boundary_id: "CB-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "One audit-ready proposal-neutral theorem target and one exact groupoid-component fixed-point theorem are registered; the broader theorem and ontology derivation remain open."
+  forbidden_overreads:
+    - "general selector theorem proved"
+    - "preferred selector constructed"
+    - "frozen family reopened or rejected"
+    - "global no-go or future source-extension impossibility"
+    - "physical covariance admissibility or general EqSrc established"
+    - "downstream GR or benchmark promotion"
+  next_route_if_blocked: "P1-T05 external-red-team-reviewer@0.1.0 external-primary-literature-packet"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-012-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Groupoid component fixed-point criterion"
+    summary: "Proves natural sections of X on a groupoid are in bijection with automorphism-fixed choices at connected-component representatives."
+  - payload_id: "NMP-RT-20260720-012-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Relation-image uniqueness and choice-irrelevance corollary"
+    summary: "Proves distinct fixed-locus K-images give relation nonuniqueness, while a nonempty singleton K-image gives relation-level uniqueness even when selectors are nonunique."
+  - payload_id: "NMP-RT-20260720-012-003"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "Five finite selector controls"
+    summary: "Supplies singleton, free-C2, multiple-relation, constant-K, and noninvertible-arrow controls distinguishing all principal branches."
+  - payload_id: "NMP-RT-20260720-012-004"
+    payload_type: "countermodel_or_obstruction"
+    name: "Automorphism-fixedness insufficiency beyond groupoids"
+    summary: "A two-object category with one noninvertible arrow has a fixed point at its codomain that cannot occur in any natural section."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT012-001"
+    payload_type: "definition"
+    object_name: "EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+    burden_effect: "narrows"
+    summary: "Defines candidate-neutral source, choice, relation, selector, fixed-locus, and broader-coherence objects."
+  - payload_id: "PAYLOAD-RT012-002"
+    payload_type: "theorem"
+    object_name: "Groupoid component fixed-point criterion"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves the natural-section and component fixed-point bijection by evaluation and well-defined transport."
+  - payload_id: "PAYLOAD-RT012-003"
+    payload_type: "theorem"
+    object_name: "Relation-image uniqueness branches"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+    burden_effect: "narrows"
+    summary: "Separates selector existence from relation uniqueness and relation-level choice irrelevance."
+  - payload_id: "PAYLOAD-RT012-004"
+    payload_type: "finite_model"
+    object_name: "Five selector and coherence controls"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_validation.json"
+    burden_effect: "narrows"
+    summary: "Validates five exact finite controls and all five formal branch tags."
+  - payload_id: "PAYLOAD-RT012-005"
+    payload_type: "dependency_map_update"
+    object_name: "Five-family prior-countermodel map"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_prior_countermodel_mapping.csv"
+    burden_effect: "no_distance_delta"
+    summary: "Maps five frozen candidate families to common target branches with live artifact-hash parity and no reopening."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Replace candidate-specific prose with one shared mathematical burden."
+  explanation: "P1-T04 registers the shared theorem target and proves its groupoid-component criterion, but current ontology still does not derive the selector package and the broader theorem remains open."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "conditional_theorem_candidate"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "An audit-ready target and groupoid lemma do not derive or adopt the full source-selection package or discharge general EqSrc."
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The authoritative Distance-to-GR and metric-use ledgers remain unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; source groupoid choice functor selector broader morphisms and variations remain underived"
+  - burden: "Source equivalence EqSrc"
+    status: "groupoid component criterion proved inside an audit-ready target; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; relation-level branch vocabulary only"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no construction or scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "open; groupoid automorphism fixedness does not discharge broader morphism or variation coherence"
+  - burden: "benchmark promotion"
+    status: "blocked by missing full theorem source derivation adoption and downstream derivations"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "five exact candidate families remain locally frozen; common theorem route advances only to bounded P1-T05 literature comparison"
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p1_t04_common_theorem_target_completed_pending_p1_t05_literature_review"
+  prior_related_tasks:
+    - "RT-20260718-027 through RT-20260718-047"
+    - "RT-20260720-009 through RT-20260720-012"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P1-T04 changes the unit of analysis from candidate construction to one common functorial selection theorem target and proves a reusable groupoid criterion without supplying a preferred datum."
+  next_role_consequence: "external-red-team-reviewer@0.1.0 for v21 P1-T05"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  candidate_freeze_label: "EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+  prior_attempts_considered:
+    - "five stable families and seven immutable candidates in P1-T03"
+    - "the P1-T04 common target"
+  criteria_evaluated:
+    - "The target uses candidate-neutral typed objects."
+    - "The groupoid component criterion adds a complete proof."
+    - "Five exact controls discriminate existence uniqueness irrelevance and broader coherence."
+    - "No preferred selector or ontology adoption is supplied."
+  freeze_if:
+    - "Later work merely repeats the groupoid criterion without addressing source-domain derivation broader morphisms variation robustness or relation uniqueness."
+    - "Literature review or proof work finds only representation changes and no materially new theorem burden."
+  do_not_freeze_if:
+    - "P1-T05 identifies a primary theorem or exact adaptation path that narrows the open broader proof."
+  freeze_decision: "not_frozen"
+  decision_reason: "The common target and exact component proof are materially distinct from the five frozen candidate families."
+  rationale: "The route advances to one bounded primary-literature comparison; exact candidate-family freezes remain unchanged."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "external_primary_literature_review"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The registered target and groupoid proof establish bounded draft/control mathematics only. They do not prove the broader theorem, derive or adopt a selector, reopen or reject a frozen family, establish a global no-go or physical covariance, discharge general EqSrc, change scientific ledgers, promote downstream GR claims, or complete the derivation."
+  forbidden_conclusions:
+    - "general canonical-selection theorem proved"
+    - "preferred selector constructed or current-ontology derived"
+    - "frozen family reopened rejected or globally impossible"
+    - "global theory rejection"
+    - "canonical ontology edit or source-law adoption or rejection"
+    - "physical admissibility covariance or empirical meaning established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff adoption or scope expansion"
+    - "matter coupling or Einstein-equation derivation"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion or Gate Chair verdict"
+    - "publication or completed derivation"
+
+selected_next_route:
+  route_id: "v21_p1_t05_eqsrc_naturality_primary_literature_review"
+  route_label: "external-primary-literature-packet"
+  role_family: "external-red-team-reviewer@0.1.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P1-T05"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Ground the general theorem route in existing mathematics and avoid reinventing or overstating known results."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Acquire and compare bounded primary literature on equivariant maps fixed-point obstructions natural transformations anonymous leader election gauge choice quotient constructions and canonical reconstruction."
+  source_handoff: "research_control/handoffs/handoff-0782.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-001"
+  allowed_scope: "Exact P1-T04 proposal-neutral source groupoid choice-space relation-map selector theorem target, proved groupoid component criterion, five controls, prior-family map, and one P1-T05 route."
+  blocked_scope: "General theorem proof by assertion preferred selector construction frozen-family reopening or rejection ontology edit adoption physical claims general EqSrc scientific-ledger changes downstream GR benchmark promotion Gate Chair verdict publication completed derivation or global no-go."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_validation.json"
+  local_validator_report_hash: "ceefd790ac75ae4a4724c0bda86b60bf7d0956da8364f7cb3c4b8f13dde082a7"
+  theorem_target_hash: "c5aaaa70f4d7ce216a35d17af674e94e3f2866c1bdcfb28787a40d9f6636516c"
+  glossary_hash: "6fc1495f6834ae073893d909f63846097787b80fc078b69ae3bc4ec1be93e654"
+  prior_countermodel_map_hash: "7a762d46db23dd4bfcc2bd677a9bbb8ee47362275b027503fc12392090f18c2a"
+  distance_to_gr_ledger_hash: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  metric_use_ledger_hash: "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  validation_status: "PASS"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 12 lease parity, route identity, max effort, repository binding, clean start, predecessor checkpoint, and single consumption were verified before work."
+      - "Memory preflight refreshed local retrieval and canonical source and registry records were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required perspectives completed and two scope tensions were resolved in one parent review round."
+      - "The task-local validator passes all 12 structural, source-hash, finite-control, ledger, and claim-boundary checks."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Repository validation, documentation impact, signal parity, generated freshness, and whitespace checks remain required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, and claim graph remain to be regenerated and checked."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap and validate-only remain required after source registration."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 918
+    relationship_row_count: 4549
+    semantic_row_count: 918
+    vault_row_count: 918
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 7
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P1-T04 EQSRC canonical selection naturality target\" --limit 10 --json"
+      query_type: "search"
+      query_text: "P1-T04 EQSRC canonical selection naturality target"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "79c08d63e8ab929e9e36e9fb19aff4e457fb7ce95cb7a7caf4fb37168aa9dc48"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core, freshness, and local retrieval passed after refreshing seven local-cache-only warnings."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"P1-T04 EQSRC canonical selection naturality target\" --limit 10 --json"
+    status: "PASS"
+    summary: "Resolved and inspected the registered current frontier and its source-registry row."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-012/artifacts/validate_eqsrc_canonical_selection_naturality_target.py"
+    status: "PASS"
+    summary: "Task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-012/artifacts/validate_eqsrc_canonical_selection_naturality_target.py --write-report --json"
+    status: "PASS"
+    summary: "Passed 12 of 12 checks, including five branches, five controls, five live source-hash mappings, both ledger hashes, parent synthesis, and exact claim boundaries."
+
+next_recommended_action: "Run exactly one v21 P1-T05 External Red-Team Reviewer external-primary-literature-packet comparing primary results on naturality, symmetry, leader election, gauge choice, and canonical reconstruction with the registered target."
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "P1-T04 found a scientific theorem-target and literature-routing boundary, not a shared project-system defect."

@@ -1,0 +1,66 @@
+schema_id: "v21_p1_t04_child_phys_math_eqsrc_canonical_selection_naturality_target_v1"
+status: "draft/control"
+task_id: "RT-20260720-012"
+job_id: "AJ-RT-20260720-012-001"
+plan_task_id: "P1-T04"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Replace candidate-specific prose with one shared mathematical burden."
+theorem_target_id: "EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1"
+formalization:
+  source_symmetry_domain: "A source groupoid G fixed before any distinguished choice or relation is evaluated."
+  carrier_functor: "A:G->Set transports source-state carriers by source isomorphisms."
+  choice_space_functor: "X:G->Set transports admissible roots, lines, orientations, partitions, response tokens, normalizations, ordered actions, components, or analogous distinguished structures."
+  relation_functor: "EqRel(A):G->Set transports equivalence relations along the carrier bijections A(f)."
+  choice_to_relation_map: "A natural transformation K:X=>EqRel(A)."
+  natural_selector: "A natural section s:1_G=>X with X(f)(s_S)=s_T for every source isomorphism f:S->T."
+proved_component_criterion:
+  statement: "For one representative S_i of each connected component of G, natural sections of X correspond bijectively to the product of fixed-point sets X(S_i)^Aut(S_i)."
+  proof_outline:
+    - "Naturality forces each selected value at S_i to be fixed by every source automorphism."
+    - "Conversely transport an automorphism-fixed value from S_i to any isomorphic object S."
+    - "Two transports differ by an automorphism of S_i, so fixedness makes the definition independent of transport."
+    - "Functoriality gives naturality and the two constructions are inverse."
+branches:
+  no_fixed_point: "If one component representative has an empty automorphism-fixed locus, no natural selector exists on that component."
+  multiple_relation_fixed_points: "If fixed u and v satisfy K(u) != K(v), source symmetry and naturality alone do not determine a unique relation."
+  choice_irrelevance: "If K is constant on every relevant fixed locus, different natural selectors induce the same relation section."
+  relation_unique_existence: "A nonempty fixed locus with a singleton K-image yields relation uniqueness at the groupoid level, without proving physical admissibility."
+  broader_morphism_or_variation_failure: "For noninvertible source morphisms or independently declared variations, automorphism fixedness is necessary but not sufficient; all coherence and robustness equations remain separate obligations."
+finite_controls:
+  - control_id: "CTRL-POS-UNIQUE-FIXED-001"
+    kind: "positive"
+    construction: "One-object trivial groupoid with singleton choice space."
+    result: "One natural selector and one induced relation."
+  - control_id: "CTRL-NEG-FREE-C2-002"
+    kind: "negative"
+    construction: "One-object groupoid B(C2) acting by swap on a two-element choice space."
+    result: "Empty fixed locus and no natural selector."
+  - control_id: "CTRL-NEG-MULTIREL-003"
+    kind: "negative"
+    construction: "One-object trivial groupoid with two fixed choices mapped by K to two distinct relations."
+    result: "Two natural selectors and relation nonuniqueness."
+  - control_id: "CTRL-POS-IRRELEVANT-004"
+    kind: "positive"
+    construction: "One-object trivial groupoid with two fixed choices and constant K."
+    result: "Selector nonuniqueness but relation-level choice irrelevance."
+  - control_id: "CTRL-NEG-NONINVERTIBLE-005"
+    kind: "negative"
+    construction: "A category with one noninvertible arrow 0->1 and a point at 1 outside the image of X(0->1)."
+    result: "Automorphism fixedness holds but no compatible natural section uses that point."
+added_structure_test: "Supplying a section s, pointing, root, line, orientation, partition, action, component boundary, morphism class, or variation class without a derivation adds the missing choice data rather than resolving it."
+mere_relabeling_test: "A natural bijection h:X=>X' with K'=K after transport preserves section existence and the K-image of fixed loci, so it does not reduce the selection burden."
+open_obligations:
+  - "derive or obstruct the source groupoid and choice functor from registered source theory"
+  - "extend or delimit the theorem beyond isomorphisms to independently declared source morphisms"
+  - "establish relation-level uniqueness or choice irrelevance for the intended family"
+  - "define and test independently justified variation robustness"
+  - "audit hidden target, observer, benchmark, generated, registry, validator, role, handoff, file-order, and task-process imports"
+claim_boundary:
+  general_theorem_proved: false
+  selector_constructed: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  general_eqsrc_discharged: false
+  physics_promotion_authorized: false

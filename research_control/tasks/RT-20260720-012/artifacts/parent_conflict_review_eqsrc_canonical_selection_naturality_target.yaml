@@ -1,0 +1,22 @@
+schema_id: "v21_p1_t04_parent_conflict_review_eqsrc_canonical_selection_naturality_target_v1"
+status: "completed"
+task_id: "RT-20260720-012"
+job_id: "AJ-RT-20260720-012-001"
+plan_task_id: "P1-T04"
+review_rounds: 1
+child_outputs:
+  - "research_control/tasks/RT-20260720-012/artifacts/child_phys_math_eqsrc_canonical_selection_naturality_target.yaml"
+  - "research_control/tasks/RT-20260720-012/artifacts/child_phys_phil_eqsrc_canonical_selection_naturality_target.yaml"
+conflicts:
+  - conflict_id: "C-P1-T04-PROOF-SCOPE-001"
+    math_position: "The groupoid component fixed-point criterion is a theorem with a complete proof."
+    philosophy_position: "The full selector target must remain open and must not be read as current-ontology derivation or physical covariance."
+    resolution: "State and prove only the groupoid component criterion and finite controls; label the broader source-morphism, variation, current-ontology, and physical-admissibility theorem target open."
+    status: "resolved"
+  - conflict_id: "C-P1-T04-CHOICE-IRRELEVANCE-002"
+    math_position: "A nonunique selector can still induce one relation when K is constant on the relevant fixed locus."
+    philosophy_position: "Relation-level constancy is not physical irrelevance unless the observable and morphism scope are independently justified."
+    resolution: "Use the exact label relation-level choice irrelevance and preserve physical-irrelevance proof as a later burden."
+    status: "resolved"
+unresolved_blocking_conflicts: []
+fusion_instruction: "Fuse the typed theorem target, proved component criterion, finite controls, added-structure and relabeling tests, prior-countermodel map, and exact non-promotion boundary into one registered draft/control TeX artifact."

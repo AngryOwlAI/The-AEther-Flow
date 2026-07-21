@@ -1,0 +1,124 @@
+{
+  "aggregate_status": "PASS",
+  "check_count": 12,
+  "checks": [
+    {
+      "check_id": "artifact_set",
+      "detail": "All seven bounded target artifacts exist.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "target_identity",
+      "detail": "Math, philosophy, and glossary records share the registered target identity.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_scope",
+      "detail": "The groupoid component criterion has a proof and the broader theorem target remains explicitly open.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "mathematical_claim_boundary",
+      "detail": "The structured child separates the proved component criterion from the unproved general theorem and constructs no selector.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_vocabulary",
+      "detail": "All five required branch tags are present exactly once.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "finite_controls",
+      "detail": "Five structured finite controls match the TeX target.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ontology_boundary",
+      "detail": "Proposal-only status, blocked adoption, and the protected human gate are preserved.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_synthesis",
+      "detail": "Conflict review and fusion notes retain the exact theorem-target identity and proof boundary.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "prior_countermodel_map",
+      "detail": "Five scoped prior families map to the target with live source-hash parity.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "distance_ledger_unchanged",
+      "detail": "Distance-to-GR ledger retains the launch hash.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_ledger_unchanged",
+      "detail": "Metric-use ledger retains the launch hash.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_language",
+      "detail": "The target blocks proof, rejection, EqSrc discharge, and promotion overreads while naming only P1-T05 next.",
+      "status": "PASS"
+    }
+  ],
+  "failure_count": 0,
+  "job_id": "AJ-RT-20260720-012-001",
+  "ledger_receipts": {
+    "distance_to_gr_sha256": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+    "metric_use_sha256": "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  },
+  "metrics": {
+    "branch_count": 5,
+    "distance_to_gr_delta_changed": false,
+    "finite_control_count": 5,
+    "general_theorem_proved": false,
+    "mapped_family_count": 5,
+    "metric_use_ledger_changed": false,
+    "physics_promotion_authorized": false,
+    "proved_component_criterion_count": 1,
+    "selector_constructed": false
+  },
+  "plan_task_id": "P1-T04",
+  "schema_id": "v21_p1_t04_eqsrc_canonical_selection_naturality_target_validation_v1",
+  "source_receipts": [
+    {
+      "actual_sha256": "b46297ba4c62046ebd856cc0ec36f1083e3486f809d5c40a50db61dbcf31877c",
+      "branch": "multiple_relation_fixed_points",
+      "expected_sha256": "b46297ba4c62046ebd856cc0ec36f1083e3486f809d5c40a50db61dbcf31877c",
+      "family_id": "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR",
+      "path": "research_control/tasks/RT-20260718-033/artifacts/eqsrc_intrinsic_discriminator_admissibility_law_v3_refuter_stress.tex"
+    },
+    {
+      "actual_sha256": "f3845c3f6c74321d060af3cb8a8a2ef56da01d8ce556f2eca1f97bdccb65e458",
+      "branch": "no_fixed_point",
+      "expected_sha256": "f3845c3f6c74321d060af3cb8a8a2ef56da01d8ce556f2eca1f97bdccb65e458",
+      "family_id": "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE",
+      "path": "research_control/tasks/RT-20260718-037/artifacts/eqsrc_cycle_boundary_selector_law_refuter_countermodel.yaml"
+    },
+    {
+      "actual_sha256": "a5bc1af23713145727bfad592a770691b5128d6ce6546966860d80c588a530a6",
+      "branch": "multiple_relation_fixed_points",
+      "expected_sha256": "a5bc1af23713145727bfad592a770691b5128d6ce6546966860d80c588a530a6",
+      "family_id": "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR",
+      "path": "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml"
+    },
+    {
+      "actual_sha256": "9ddce9d042ef187d163043d6c2a98a7d1a796cd01a433d3d258632150a83325e",
+      "branch": "no_fixed_point",
+      "expected_sha256": "9ddce9d042ef187d163043d6c2a98a7d1a796cd01a433d3d258632150a83325e",
+      "family_id": "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION",
+      "path": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml"
+    },
+    {
+      "actual_sha256": "3d7e49f05727f26ea97a65d88c0323c9721a5f78ebd7e718a6c163fe0fad067b",
+      "branch": "morphism_or_variation_failure",
+      "expected_sha256": "3d7e49f05727f26ea97a65d88c0323c9721a5f78ebd7e718a6c163fe0fad067b",
+      "family_id": "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT",
+      "path": "research_control/tasks/RT-20260720-009/artifacts/eqsrc_flow_generated_graded_orbit_root_smuggling_audit.tex"
+    }
+  ],
+  "task_id": "RT-20260720-012",
+  "theorem_target_id": "EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1"
+}

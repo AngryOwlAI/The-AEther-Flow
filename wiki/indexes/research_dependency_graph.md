@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-20T23:32:50Z`
-- Source fingerprint: `102d3d900e8e283d925d7586998c154df5dc6c04a6e2cdd365a6b17d755deb3a`
-- Nodes: `19919`
-- Edges: `68418`
+- Generated from tracked state as of: `2026-07-21T00:26:49Z`
+- Source fingerprint: `3f2069c1d12f04934a4cf809e4bd652853b4ec41beab39b2e0f28662a022b02d`
+- Nodes: `19943`
+- Edges: `68477`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1012 |
+| `completion_yaml` | 1013 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 781 |
+| `handoff_yaml` | 782 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1012 |
+| `agent_job` | `support_only` | 1013 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10384 |
-| `blocked_burden` | `blocked` | 3777 |
-| `claim_boundary` | `support_only` | 969 |
-| `draft_control_candidate` | `draft_control` | 640 |
+| `artifact` | `support_only` | 10392 |
+| `blocked_burden` | `blocked` | 3780 |
+| `claim_boundary` | `support_only` | 970 |
+| `draft_control_candidate` | `draft_control` | 643 |
 | `draft_control_candidate` | `proposal_only` | 104 |
 | `draft_control_candidate` | `science_draft` | 62 |
-| `frozen_negative` | `frozen_negative` | 117 |
+| `frozen_negative` | `frozen_negative` | 118 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 781 |
+| `handoff` | `support_only` | 782 |
 | `human_gated_object` | `human_gated` | 424 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -52,13 +52,13 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `ledger_row` | `science_draft` | 4 |
 | `obstruction` | `blocked` | 75 |
 | `obstruction` | `rejected` | 2 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 31 |
-| `source_ontology_object` | `canonical_source` | 20 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 32 |
+| `source_ontology_object` | `canonical_source` | 23 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 320 |
+| `source_ontology_object` | `support_only` | 321 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 951 |
+| `task` | `support_only` | 952 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260720-011`
-- Latest handoff: `handoff-0781`
-- Handoff path: `research_control/handoffs/handoff-0781.yaml`
-- Next action: Run exactly one bounded v21 P1-T04 Ontology Formalizer ontology-law-research-packet to formalize EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1. Do not reopen an exact family, prove or adopt the target by assertion, edit canonical ontology, change either scientific ledger, promote, or execute another v21 item in the same task.
+- Active task: `RT-20260720-012`
+- Latest handoff: `handoff-0782`
+- Handoff path: `research_control/handoffs/handoff-0782.yaml`
+- Next action: Run exactly one bounded v21 P1-T05 External Red-Team Reviewer external-primary-literature-packet comparing established results on naturality, symmetry, equivariant selection, anonymous leader election, gauge choice, quotient construction, and canonical reconstruction with the registered theorem target. Do not treat analogy as proof, reopen a frozen family, edit ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

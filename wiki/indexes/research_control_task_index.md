@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `7bc2f794c72954806be5b92b79fb2f3ca5e3682dbf32381004a4a7a23a96dde5`
-- Generated-at source timestamp: `2026-07-20T23:21:40Z`
-- Row count: `1016`
+- Source fingerprint: `08c93d5b4d2c667211992c925e94972ca6e3039b3fc7e58daf19ef166b4abc02`
+- Generated-at source timestamp: `2026-07-21T00:12:21Z`
+- Row count: `1017`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260720-012|RT-20260720-011|2026-07-21T00:12:21Z|2026-07-21T00:26:49Z|v21_eqsrc_canonical_selection_naturality_target|completed|source_equivalence_eqsrc|Replace candidate-specific prose with one shared mathematical burden.|ontology-formalizer@0.2.0|false|false|11|Run exactly one bounded v21 P1-T05 External Red-Team Reviewer external-primary-literature-packet comparing established naturality, symmetry, leader-election, gauge-choice, and canonical-reconstruction results with the registered target.|PASS|research_control/tasks/RT-20260720-012/jobs/completions/AJC-AJ-RT-20260720-012-001.yaml|
 |RT-20260720-011|RT-20260720-010|2026-07-20T23:21:40Z|2026-07-20T23:32:50Z|v21_eqsrc_canonical_choice_family_freeze_decision|completed|source_equivalence_eqsrc|Prevent another representation-level loop while preserving honest continuation.|theoretical-continuation-selector@0.1.0|false|false|10|Run exactly one bounded v21 P1-T04 Ontology Formalizer ontology-law-research-packet to formalize EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1. Do not reopen an exact family, prove or adopt the target by assertion, edit canonical ontology, change either scientific ledger, promote, or execute another v21 item in the same task.|PASS|research_control/tasks/RT-20260720-011/jobs/completions/AJC-AJ-RT-20260720-011-001.yaml|
 |RT-20260720-010|RT-20260720-009|2026-07-20T22:19:51Z|2026-07-20T22:45:53Z|v21_eqsrc_candidate_family_lineage_map|completed|source_equivalence_eqsrc|Expose common mathematical structure across candidate cycles.|ontology-formalizer@0.2.0|false|false|11|Run exactly one v21 P1-T03 Theoretical Continuation Selector packet to decide family-level freeze versus one materially distinct same-milestone theorem route.|PASS|research_control/tasks/RT-20260720-010/jobs/completions/AJC-AJ-RT-20260720-010-001.yaml|
 |RT-20260720-009|RT-20260720-008|2026-07-20T21:32:25Z|2026-07-20T21:38:15Z|eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit|completed|source_equivalence_eqsrc|Audit the exact proposal-only flow-generated graded-orbit root source law before family-level freeze review or protected adoption review.|smuggling-auditor@0.2.0|false|false|9|Run exactly one v21 P1-T02 Ontology Formalizer packet to group recent response-token orientation-line root partition and grading candidates into stable families with construction audit stress repair freeze and supersession lineage.|PASS|research_control/tasks/RT-20260720-009/jobs/completions/AJC-AJ-RT-20260720-009-001.yaml|

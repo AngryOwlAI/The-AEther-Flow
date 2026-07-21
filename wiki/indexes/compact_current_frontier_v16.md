@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-011`
-- Latest handoff: `handoff-0781`
-- Current status: `v21_p1_t03_five_eqsrc_canonical_choice_families_locally_frozen_p1_t04_selected_no_promotion`
+- Active task: `RT-20260720-012`
+- Latest handoff: `handoff-0782`
+- Current status: `v21_p1_t04_eqsrc_canonical_selection_target_audit_ready_groupoid_component_criterion_proved_general_target_open_p1_t05_selected_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-011`
-- Latest research handoff: `handoff-0781`
-- Latest research next action: Run exactly one bounded v21 P1-T04 Ontology Formalizer ontology-law-research-packet to formalize EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1. Do not reopen an exact family, prove or adopt the target by assertion, edit canonical ontology, change either scientific ledger, promote, or execute another v21 item in the same task.
+- Latest research task: `RT-20260720-012`
+- Latest research handoff: `handoff-0782`
+- Latest research next action: Run exactly one bounded v21 P1-T05 External Red-Team Reviewer external-primary-literature-packet comparing established results on naturality, symmetry, equivariant selection, anonymous leader election, gauge choice, quotient construction, and canonical reconstruction with the registered theorem target. Do not treat analogy as proof, reopen a frozen family, edit ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p1_t04_eqsrc_canonical_selection_naturality_target`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p1_t05_eqsrc_naturality_primary_literature_review`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Replace candidate-specific prose with one shared mathematical burden.
+- Milestone burden: Ground the general theorem route in existing mathematics and avoid reinventing or overstating known results.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `9621be991c5377a7b3d516df676bafb9960341f7132799199250c45f7751444d`
-- JSON SHA-256: `ae84d184643d344ec7d0f0ed4bd81b5b66466554590c92e4ec32a0c0cd8782bc`
+- YAML SHA-256: `7a26709809741a58a96be2fe01a64cf601a805cdad0a1d36060b71765d8278dd`
+- JSON SHA-256: `e19b0b4fd87645ba154742550b69c128504efb1a406668116a96753838812893`
 
 ## Authority Warning
 

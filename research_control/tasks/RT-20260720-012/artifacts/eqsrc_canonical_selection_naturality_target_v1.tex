@@ -1,0 +1,254 @@
+% authority: science-draft
+% status: draft/control
+% route: ontology-law-research-packet
+% trigger_classification: derivation_critical_missing_source_law
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\EqRel}{\mathsf{EqRel}}
+\newcommand{\Aut}{\operatorname{Aut}}
+
+\title{V21 P1-T04 Proposal-Neutral EqSrc Canonical-Selection\\
+Naturality Theorem Target v1}
+\author{Ontology Formalizer control packet RT-20260720-012}
+\date{2026-07-20}
+
+\begin{document}
+\maketitle
+
+\section{Control status and exact burden}
+
+This artifact executes only v21 work item \texttt{P1-T04}. It replaces
+candidate-specific selector prose with one common mathematical target for
+roots, lines, orientations, partitions, response tokens, normalizations,
+ordered actions, components, and analogous distinguished structures. The
+target identifier is
+\texttt{EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1}.
+
+The record is \texttt{draft/control}, \texttt{proposal-only}, and
+\texttt{source-extension data}. Its adoption status is
+\texttt{blocked\_adoption\_open\_continuation}. Current ontology does not
+derive the source groupoid, the choice-space functor, a natural selector, a
+physical morphism category, or a variation law. This packet proves one exact
+groupoid lemma below; it does not prove the broader theorem target, construct
+a preferred selector, adopt a source law, edit canonical ontology, or
+discharge general \(\mathsf{EqSrc}\).
+
+\section{Proposal-neutral source data}
+
+\begin{definition}[Source symmetry domain]
+Let \(\mathcal G\) be a small groupoid whose objects are admitted source
+records and whose arrows are source isomorphisms declared before any
+distinguished choice or candidate relation is evaluated. Let
+\[
+ A:\mathcal G\longrightarrow\mathsf{Set}
+\]
+be a carrier functor. For an arrow \(f:S\to T\), transport an equivalence
+relation \(R\) on \(A(S)\) to the relation \(f_*R\) on \(A(T)\) by
+\[
+ y\,(f_*R)\,y'
+ \quad\Longleftrightarrow\quad
+ A(f)^{-1}(y)\,R\,A(f)^{-1}(y').
+\]
+Because every arrow of \(\mathcal G\) is invertible, this defines a functor
+\(\EqRel(A):\mathcal G\to\mathsf{Set}\).
+\end{definition}
+
+\begin{definition}[Choice space, relation map, and selector]
+Let \(X:\mathcal G\to\mathsf{Set}\) assign the admissible distinguished
+structures. Let
+\[
+ K:X\Longrightarrow\EqRel(A)
+\]
+be a natural transformation that maps each choice to its induced candidate
+relation. A \emph{natural selector} is a natural transformation
+\[
+ s:1_{\mathcal G}\Longrightarrow X,
+ \qquad X(f)(s_S)=s_T
+\]
+for every \(f:S\to T\), where \(1_{\mathcal G}\) is the constant singleton
+functor. These data are the theorem target, not current-ontology conclusions.
+\end{definition}
+
+\section{Exact groupoid component criterion}
+
+Choose one representative \(S_i\) from each connected component of
+\(\mathcal G\), and write
+\[
+ X(S_i)^{\Aut_{\mathcal G}(S_i)}
+ =\{x\in X(S_i):X(g)x=x\text{ for every }g\in\Aut_{\mathcal G}(S_i)\}.
+\]
+
+\begin{theorem}[Component fixed-point criterion]
+There is a bijection
+\[
+ \operatorname{Nat}(1_{\mathcal G},X)
+ \cong
+ \prod_i X(S_i)^{\Aut_{\mathcal G}(S_i)}.
+\]
+Thus a natural selector exists exactly when every component representative
+has a nonempty automorphism-fixed locus.
+\end{theorem}
+
+\begin{proof}
+Given a natural selector \(s\), naturality at an automorphism
+\(g:S_i\to S_i\) gives \(X(g)s_{S_i}=s_{S_i}\). Evaluation therefore maps
+\(s\) into the displayed product.
+
+Conversely, choose \(x_i\) in each fixed locus. For any object \(S\) in the
+component of \(S_i\), choose an isomorphism \(u:S_i\to S\) and set
+\(s_S=X(u)x_i\). If \(v:S_i\to S\) is another choice, then
+\(v^{-1}u\in\Aut_{\mathcal G}(S_i)\), so
+\[
+ X(u)x_i=X(v)X(v^{-1}u)x_i=X(v)x_i.
+\]
+The value is therefore independent of transport. For any \(f:S\to T\),
+the composite \(fu:S_i\to T\) is a permitted transport, hence
+\(X(f)s_S=X(fu)x_i=s_T\). This defines a natural selector. Evaluation and
+transport are inverse constructions.
+\end{proof}
+
+\begin{corollary}[No-fixed-point branch]
+If one component representative has an empty fixed locus, no natural
+selector exists on that component.
+\end{corollary}
+
+\begin{corollary}[Relation image branches]
+For a component representative \(S_i\), let
+\[
+ \mathcal R_i=K_{S_i}\bigl(X(S_i)^{\Aut(S_i)}\bigr).
+\]
+If \(\mathcal R_i\) contains two relations, source symmetry and naturality do
+not determine a unique relation. If the fixed locus is nonempty and
+\(\mathcal R_i\) is a singleton, the induced relation is unique on the
+groupoid component even if the selector is not. The latter is a
+choice-irrelevance result, not physical admissibility.
+\end{corollary}
+
+\begin{proof}
+The theorem transports every fixed choice to a natural selector on its
+component, and naturality of \(K\) transports its relation. Distinct elements
+of \(\mathcal R_i\) therefore give distinct natural relation sections, while
+a singleton image makes every natural selector induce the same relation.
+\end{proof}
+
+\section{What remains open}
+
+The component theorem is sufficient only for the declared source groupoid.
+For a broader category containing noninvertible source morphisms, a family of
+componentwise automorphism-fixed choices need not satisfy all arrow
+coherence equations. Independently declared variations add still further
+robustness equations. Accordingly, the full theorem target remains open
+until a packet:
+\begin{enumerate}[label=(O\arabic*)]
+  \item derives or obstructs the source domain and \(X\) from registered
+  source theory;
+  \item states and checks every noninvertible-morphism coherence equation;
+  \item proves relation uniqueness or choice irrelevance for the intended
+  domain;
+  \item defines an independently justified variation family and tests
+  robustness; and
+  \item audits hidden target, observer, benchmark, generated, registry,
+  validator, role, handoff, file-order, and task-process imports.
+\end{enumerate}
+
+Supplying a section, root, line, orientation, partition, response token,
+normalization, action, component boundary, morphism class, or variation class
+without deriving it adds the missing choice data. It does not resolve the
+selection burden. Likewise, a natural isomorphism \(h:X\Rightarrow X'\) that
+preserves \(K\) transports natural sections and fixed-locus relation images
+bijectively; it is a relabeling, not a reduction of the burden.
+
+\section{Finite controls}
+
+\begin{longtable}{p{0.22\linewidth}p{0.68\linewidth}}
+\toprule
+Control & Exact result \\
+\midrule
+\endfirsthead
+\toprule
+Control & Exact result \\
+\midrule
+\endhead
+\texttt{CTRL-POS-UNIQUE-FIXED-001} & A one-object trivial groupoid with
+singleton \(X\) has exactly one selector and one induced relation. \\
+\texttt{CTRL-NEG-FREE-C2-002} & In the one-object groupoid \(B(C_2)\), let
+the nonidentity element swap two choices. The fixed locus is empty, so no
+natural selector exists. \\
+\texttt{CTRL-NEG-MULTIREL-003} & A one-object trivial groupoid with two
+choices and two distinct \(K\)-images has two selectors and relation
+nonuniqueness. \\
+\texttt{CTRL-POS-IRRELEVANT-004} & The same two-choice groupoid with constant
+\(K\) has selector nonuniqueness but relation-level choice irrelevance. \\
+\texttt{CTRL-NEG-NONINVERTIBLE-005} & In the category
+\(0\xrightarrow{a}1\), take \(X(0)=\{p\}\), \(X(1)=\{q,r\}\), and
+\(X(a)(p)=q\). All automorphism actions are trivial, so \(r\) is fixed, but
+no natural section can use \(r\) at object 1. Automorphism fixedness alone is
+not sufficient beyond groupoids. \\
+\bottomrule
+\end{longtable}
+
+\section{Prior countermodel map}
+
+\begin{longtable}{p{0.25\linewidth}p{0.16\linewidth}p{0.49\linewidth}}
+\toprule
+Tracked family & Target branch & Scoped evidence \\
+\midrule
+\endfirsthead
+\toprule
+Tracked family & Target branch & Scoped evidence \\
+\midrule
+\endhead
+Intrinsic discriminator & Multiple relation fixed points & Four valid
+differentials on fixed carriers induce four relations; current ontology does
+not choose the differential. \\
+Cycle-boundary line & No fixed point & Forgetting the mark exposes full
+\(\mathrm{GL}(2,2)\) symmetry with no invariant proper line. \\
+Orientation torsor & Multiple relation fixed points & Three equivariant
+descended line families survive conditional algebra while full symmetry
+selects none. \\
+Rooted partition & No fixed point & Directed-cycle symmetry has no invariant
+singleton root, and admitted roots induce different relations. \\
+Graded-orbit root & Morphism or variation failure & A freely supplied action
+realizes every nontrivial ordered finite partition, while an isolated window
+does not establish ambient-component completeness. \\
+\bottomrule
+\end{longtable}
+
+These are mappings into a shared vocabulary, not new proofs about the full
+domain. The five exact candidate families and seven immutable candidates
+remain locally frozen. The map does not reject them, reopen them, prove a
+global no-go, or preclude a conservative future source extension.
+
+\section{Source purity and Distance-to-GR boundary}
+
+The source records, arrows, carrier functor, choice spaces, relation map, and
+variations must be defined without target topology, target atlas, target
+metric, proper time, detector semantics, benchmark success, generated
+derivatives, registries, validators, roles, handoffs, file order, or task
+process. A validator PASS checks only the packet's structural and finite
+claims.
+
+The \texttt{source\_equivalence\_eqsrc} milestone remains at
+\texttt{draft object exists}. General \(\mathsf{EqSrc}\), \(M_{\rm src}\),
+\(g_{\rm eff}\), matter coupling, Einstein equations, exact-GR recovery, and
+benchmark promotion remain blocked. The Distance-to-GR and metric-use
+ledgers are unchanged. No canonical ontology edit, candidate adoption or
+rejection, Gate Chair verdict, publication, or external action is authorized.
+
+The next dependency-ready v21 item is \texttt{P1-T05}, a bounded literature
+review of natural operations and no-natural-choice results. It may compare
+the registered target with primary sources but may not convert literature
+analogy into project proof or adoption.
+
+\end{document}

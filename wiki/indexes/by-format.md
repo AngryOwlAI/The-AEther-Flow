@@ -452,6 +452,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-010-PARENT-FUSION-NOTES-EQSRC-CANDIDATE-FAMILY-LINEAGE` `research_control/tasks/RT-20260720-010/artifacts/parent_fusion_notes_eqsrc_candidate_family_lineage.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-011-EQSRC-CANONICAL-CHOICE-FAMILY-FREEZE-RECEIPT` `research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-011-PARENT-FUSION-NOTES-EQSRC-CANONICAL-CHOICE-FAMILY-FREEZE` `research_control/tasks/RT-20260720-011/artifacts/parent_fusion_notes_eqsrc_canonical_choice_family_freeze.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-RECEIPT` `research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-PARENT-FUSION-NOTES-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `research_control/tasks/RT-20260720-012/artifacts/parent_fusion_notes_eqsrc_canonical_selection_naturality_target.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -931,6 +933,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V18-P6-T03-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS` `research_control/tasks/RT-20260708-016/artifacts/finite_toy_response_v2_refuter_stress.tex`
 - `TEX-V21-P1-T01-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-009/artifacts/eqsrc_flow_generated_graded_orbit_root_smuggling_audit.tex`
 - `TEX-V21-P1-T02-EQSRC-CANONICAL-CHOICE-FAMILY-MAP` `research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex`
+- `TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex`
 
 ## wiki_markdown
 
@@ -1379,6 +1382,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-010-PARENT-FUSION-NOTES-EQSRC-CANDIDATE-FAMILY-LINEAGE` `wiki/markdown/md-research-control-tasks-rt-20260720-010-parent-fusion-notes-eqsrc-candidate-family-lineage.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-011-EQSRC-CANONICAL-CHOICE-FAMILY-FREEZE-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-011-eqsrc-canonical-choice-family-freeze-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-011-PARENT-FUSION-NOTES-EQSRC-CANONICAL-CHOICE-FAMILY-FREEZE` `wiki/markdown/md-research-control-tasks-rt-20260720-011-parent-fusion-notes-eqsrc-canonical-choice-family-freeze.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-012-eqsrc-canonical-selection-naturality-target-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-PARENT-FUSION-NOTES-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `wiki/markdown/md-research-control-tasks-rt-20260720-012-parent-fusion-notes-eqsrc-canonical-selection-naturality-target.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1852,3 +1857,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V18-P6-T03-FINITE-TOY-RESPONSE-V2-REFUTER-STRESS` `wiki/tex/tex-v18-p6-t03-finite-toy-response-v2-refuter-stress.md`
 - `WIKI-TEX-V21-P1-T01-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT` `wiki/tex/tex-v21-p1-t01-eqsrc-flow-generated-graded-orbit-root-smuggling-audit.md`
 - `WIKI-TEX-V21-P1-T02-EQSRC-CANONICAL-CHOICE-FAMILY-MAP` `wiki/tex/tex-v21-p1-t02-eqsrc-canonical-choice-family-map.md`
+- `WIKI-TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `wiki/tex/tex-v21-p1-t04-eqsrc-canonical-selection-naturality-target.md`
