@@ -1,0 +1,571 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-014-001"
+completion_id: "AJC-AJ-RT-20260720-014-001"
+task_id: "RT-20260720-014"
+task_type: "v21_eqsrc_source_category_formalization"
+decision_id: "DDR-20260720-014"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260720-014"
+status: "completed"
+created_at: "2026-07-21T02:08:00Z"
+started_at: "2026-07-21T02:08:00Z"
+completed_at: "2026-07-21T02:24:40Z"
+objective: "Execute only v21 P2-T01: define the target-neutral source category, admissible morphisms, certified isomorphisms, automorphism actions, eligible-choice family interface, and independent variation schema."
+completion_summary: "P2-T01 registers EQSRC-SOURCE-CATEGORY-DEFINITION-V1: a target-neutral typed source category with candidate-blind morphisms, certified isomorphisms, structural automorphism actions, an eligible-choice family interface, noninvertible variance branches, and independent variations. It proves category closure and core relation-transport/action functoriality, records explicit inverse provenance, and validates four finite controls. The selector theorem, physical gauge interpretation, current-ontology derivation, general EqSrc, and all downstream promotions remain open or blocked."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T01"
+  recommendation_ids:
+    - "V21-R03"
+    - "V21-R04"
+    - "V21-R08"
+    - "V21-R09"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+  next_dependency_work_item: "P2-T02"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 14
+  passes_consumed: 14
+  route_work_item_id: "P2-T01"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "theorem_with_hypotheses_and_proof"
+minimum_payload:
+  payload_class: "theorem_with_hypotheses_and_proof"
+  payload_artifact_path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+  payload_summary: "Proves category closure and functorial transport of carrier equivalence relations on the certified invertible core, yielding structural automorphism actions without proving a selector theorem."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-014/artifacts/child_phys_math_eqsrc_source_category.yaml"
+  - "research_control/tasks/RT-20260720-014/artifacts/child_phys_phil_eqsrc_source_category.yaml"
+  - "research_control/tasks/RT-20260720-014/artifacts/parent_conflict_review_eqsrc_source_category.yaml"
+  - "research_control/tasks/RT-20260720-014/artifacts/parent_fusion_notes_eqsrc_source_category.md"
+  - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+  - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_morphism_variation_schema.yaml"
+  - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_finite_examples.json"
+  - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_receipt.md"
+  - "research_control/tasks/RT-20260720-014/artifacts/validate_eqsrc_source_category_definition.py"
+  - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-014/**"
+  - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+  - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_morphism_variation_schema.yaml"
+  - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_finite_examples.json"
+  - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_receipt.md"
+  - "research_control/handoffs/handoff-0784.yaml"
+  - "research_control/handoffs/handoff-0784.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  source_category:
+    path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+    sha256: "00d7e14b76ac4fa01b834739646fe03012c2b82326a158064b27cdbe916be268"
+  morphism_variation_schema:
+    path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_morphism_variation_schema.yaml"
+    sha256: "963520b97b25fc3f7406ae7729c98966a6676c583dae60dd101d0b0d32e5d227"
+  finite_examples:
+    path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_finite_examples.json"
+    sha256: "ec7bbf82c797fd9e23314c32284e9f40332d0b9ee5164ab1d09d9e813a445b9e"
+  validation:
+    path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_validation.json"
+    sha256: "8eeff627e63bbaa57b3a5d8c3dad09f2fbe1b0d2385e4907814548eb0eadc3d6"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260720-014/artifacts/parent_fusion_notes_eqsrc_source_category.md"
+    sha256: "9178a9defcf74cccd00849c626f58c6df148a51cc0e36c4b490454d409a235f6"
+  receipt:
+    path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_receipt.md"
+    sha256: "e7b7b47d9e0015cd538e2aca7eb1ab7ffae838fcb58eebc9718415a19bae2d21"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-014/artifacts/child_phys_math_eqsrc_source_category.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-014/artifacts/child_phys_phil_eqsrc_source_category.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-014/artifacts/parent_conflict_review_eqsrc_source_category.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    summary: "The parent restricted covariant relation transport to the core, declined to infer extension conservativity from a reduct functor, separated structural automorphisms from physical gauge, and kept S_chi as eligible choices rather than a selected section."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-014/artifacts/parent_fusion_notes_eqsrc_source_category.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Supply the missing formal domain for the selector theorem."
+  missing_source_law: "A current-ontology derivation of the exact source-record category, candidate-blind admissible morphisms, certified isomorphisms, structural automorphism actions, eligible-choice functor, and variation family."
+  underdetermination_statement: "Current ontology does not derive the proposed source-record category, admissible morphism class, physical gauge groupoid, or variation family."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "For a fixed target-neutral typed signature Sigma, define admitted source records and candidate-blind structure-preserving maps as C_Sigma, require explicit inverse-provenance for Core(C_Sigma), and define eligible-choice and relation interfaces only relative to this declared domain."
+    formal_objects:
+      - "target-neutral typed source signature Sigma"
+      - "admitted source category C_Sigma"
+      - "certified core groupoid G_Sigma"
+      - "carrier functor A"
+      - "eligible-choice functor S_chi on the core"
+      - "relation interface K and independently declared variations"
+    domains:
+      - "semantic source records admitted before candidate evaluation"
+      - "candidate-blind homomorphism embedding quotient and isomorphism profiles"
+      - "certified invertible core for covariant relation transport"
+      - "independent variation records with fail-closed outcomes"
+    maps:
+      - "typed structural morphisms f_s"
+      - "explicit inverse-certified isomorphisms u and u_inverse"
+      - "carrier transport A(u)"
+      - "eligible-choice transport S_chi(u)"
+      - "relation transport u_* and arbitrary-map pullback f^*"
+      - "target-neutral extension forgetful functor U_i"
+    proof_obligations:
+      - "derive or justify the signature object-admission and arrow-admission predicates from registered source theory"
+      - "prove any P2-T02 selector is natural on the unchanged declared domain"
+      - "state exact preservation reflection quotient or undefined behavior for every noninvertible arrow"
+      - "prove any extension called conservative has an elimination or model-conservativity argument"
+      - "derive any claimed physical gauge comparison and variation robustness independently"
+      - "audit hidden target observer benchmark generated registry validator role handoff file-order and process imports"
+  candidate_law_comparison:
+    candidates: []
+    comparison_basis: []
+    selection_status: "not_applicable_to_payload_mode"
+  candidate_law_refutation:
+    refuted_candidate: ""
+    refutation_basis: ""
+    surviving_obligations: []
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "A proposal-only formal domain may be defined without protected authority; adoption or canonical ontology change remains human-gated."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc undischarged until the selector theorem domain derivation audit stress and lawful adoption are complete."
+      - "Keep M_src g_eff matter coupling Einstein equations exact-GR recovery and benchmark promotion blocked."
+      - "Require source object and arrow definitions independent of desired exact-GR behavior."
+      - "Require protected human authority before source-law or canonical ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "Sigma"
+      - "C_Sigma"
+      - "G_Sigma"
+      - "A"
+      - "S_chi"
+      - "K"
+      - "source morphisms and variations"
+    audit_result: "The task-local validator confirms textual source-side boundaries and immutable ontology and ledger hashes; later independent smuggling audit remains required before any adoption."
+  atlas_glue_obligations:
+    profile_law: "Not established; the source category defines no atlas profile."
+    selector_law: "Open and reserved for P2-T02 on the unchanged declared domain."
+    transition_law: "Not established; no atlas or transition functions are introduced."
+    inverse_checks: "Structural isomorphisms require explicit left and right inverse-provenance receipts."
+    cocycle_checks: "Category associativity is proved but is not an atlas cocycle derivation."
+    finite_variation_robustness: "Open; variations are typed independently and no physical robustness law is asserted."
+  failure_branches:
+    collapse: "A noninvertible collapse enlarges relation pullback and cannot reuse bijective transport silently."
+    nonuniqueness: "The category definition supplies no preferred object of S_chi and proves no selector uniqueness."
+    inverse_defect: "An arrow without both inverse equations fails certification and remains outside the core."
+    cocycle_defect: "No atlas cocycle is claimed; category composition cannot discharge it."
+    variation_fragility: "Variation behavior is undefined unless a typed preserved changed or bottom outcome is recorded."
+  known_risks:
+    - "Arrow admission may be restricted post hoc until a desired candidate becomes natural."
+    - "Structural automorphisms may be overread as physical gauge transformations."
+    - "A loaded mark or action may be overread as current-ontology derivation."
+    - "A reduct functor may be overread as a conservativity proof."
+    - "Core functoriality may be overread as the P2-T02 selector theorem or general EqSrc."
+  failed_alternatives:
+    - "Covariant direct-image relation transport on all noninvertible maps is rejected as non-neutral without an added closure law."
+    - "Calling every target-neutral extension conservative is rejected without an elimination proof."
+    - "Calling structural automorphisms gauge transformations is rejected without independent physical semantics."
+    - "Calling the eligible-choice functor a selector is rejected because a natural section remains missing."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. A later protected decision is required before adopting the proposed source category or editing canonical ontology."
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "ontology_law_research_packet"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "EQSRC-SOURCE-CATEGORY-DEFINITION-V1"
+  item_source_path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+  item_kind: "law_target"
+  classification: "new_ontology_primitive_candidate"
+  evidence_paths:
+    - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+    - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_morphism_variation_schema.yaml"
+    - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_finite_examples.json"
+    - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_validation.json"
+  relation_to_current_ontology: "missing_primitive"
+  relation_to_target_structures: "No target topology atlas metric detector benchmark or desired recovery behavior defines object or arrow admission."
+  claim_boundary_id: "CB-V21-P2-T01-EQSRC-SOURCE-CATEGORY-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "One target-neutral proposal-only formal source domain and one exact core transport theorem are registered; adoption, selector proof, physical interpretation, and general EqSrc remain open."
+  forbidden_overreads:
+    - "source category derived from or adopted into current ontology"
+    - "natural selector constructed or theorem proved"
+    - "structural automorphisms established as physical gauge"
+    - "noninvertible relation transport derived without an added law"
+    - "frozen family reopened or rejected"
+    - "global no-go or future source-extension impossibility"
+    - "general EqSrc or downstream GR promotion"
+  next_route_if_blocked: "P2-T02 ontology-formalizer@0.2.0 ontology-law-research-packet"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-014-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Category closure and core relation-transport/action functoriality"
+    summary: "Proves identities composition and associativity for the admitted category and functorial equivalence-relation transport on its certified invertible core."
+  - payload_id: "NMP-RT-20260720-014-002"
+    payload_type: "explicit_inverse_provenance_tokens"
+    name: "Certified source-isomorphism inverse schema"
+    summary: "Requires forward inverse structure checks both inverse equations candidate-blind admission identity and empty target inputs."
+  - payload_id: "NMP-RT-20260720-014-003"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "Four source-category and variance controls"
+    summary: "Enumerates GL(2,2), directed C4, the ordered four-chain, and two noninvertible relation-variance guards."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT014-001"
+    payload_type: "definition"
+    object_name: "EQSRC-SOURCE-CATEGORY-DEFINITION-V1"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+    burden_effect: "narrows"
+    summary: "Defines target-neutral admitted records morphisms certified core eligible-choice family relation interface variations and extension boundaries."
+  - payload_id: "PAYLOAD-RT014-002"
+    payload_type: "theorem"
+    object_name: "Core relation-transport and action functoriality theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves the category and certified-core transport laws without proving a natural selector."
+  - payload_id: "PAYLOAD-RT014-003"
+    payload_type: "finite_model"
+    object_name: "Four finite category action and noninvertible variance controls"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_validation.json"
+    burden_effect: "narrows"
+    summary: "Mechanically validates 36 GL(2,2) compositions 16 C4 compositions 64 chain action cases and two relation-variance guards."
+  - payload_id: "PAYLOAD-RT014-004"
+    payload_type: "source_extension_classification"
+    object_name: "Proposal-only target-neutral source-category candidate"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_morphism_variation_schema.yaml"
+    burden_effect: "no_distance_delta"
+    summary: "Classifies the formal domain as a new ontology primitive candidate pending derivation audit and protected adoption authority."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Supply the missing formal domain for the selector theorem."
+  explanation: "P2-T01 supplies an exact proposal-only domain and proves core functoriality, but current ontology does not derive or adopt that domain and the selector theorem remains open."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "conditional_theorem_candidate"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A proposal-only source category and core theorem neither derive nor adopt the complete selector package and do not discharge general EqSrc."
+  downstream_unlocked:
+    - "P2-T02 natural-selector theorem packet only"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The authoritative Distance-to-GR and metric-use ledgers remain unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "proposal-only source category and morphism schema registered; current-ontology derivation and adoption remain open"
+  - burden: "Source equivalence EqSrc"
+    status: "formal domain and core transport theorem supplied; natural selector theorem and general EqSrc remain undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; relation transport is formal control only"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no construction or scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "open; independent variation records are defined but no physical robustness theorem is proved"
+  - burden: "benchmark promotion"
+    status: "blocked by missing selector theorem source derivation adoption audit stress and downstream derivations"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "five exact candidate families remain locally frozen; common theorem route advances only to bounded P2-T02"
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p2_t01_source_category_defined_pending_p2_t02_selector_theorem"
+  prior_related_tasks:
+    - "RT-20260718-027 through RT-20260718-047"
+    - "RT-20260720-009 through RT-20260720-014"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P2-T01 changes the mathematical object from candidate families or literature analogy to one exact target-neutral category, proves its closure and core action theorem, and adds executable variance guards without selecting a candidate."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P2-T02"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  candidate_freeze_label: "EQSRC-SOURCE-CATEGORY-DEFINITION"
+  prior_attempts_considered:
+    - "five stable families and seven immutable candidates in P1-T03"
+    - "the P1-T04 common target and groupoid criterion"
+    - "the P1-T05 eight-source literature basis"
+    - "the P2-T01 exact source category and core theorem"
+  criteria_evaluated:
+    - "Objects and arrows are fixed before candidate evaluation."
+    - "Core relation transport and automorphism actions have a complete proof."
+    - "Four finite controls include noninvertible variance guards."
+    - "No selector or ontology adoption is supplied."
+  freeze_if:
+    - "Later work changes the category or arrow class after observing a desired selector."
+    - "Later work repeats core functoriality without proving or refuting the P2-T02 fixed-point condition."
+  do_not_freeze_if:
+    - "P2-T02 proves or refutes the exact natural-section and fixed-point condition on the unchanged P2-T01 domain."
+  freeze_decision: "not_frozen"
+  decision_reason: "The proposal-neutral category and variance theorem are materially distinct from all frozen distinguished-choice families and create the exact input required by P2-T02."
+  rationale: "The route advances to P2-T02 while every exact candidate-family freeze remains unchanged."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "ontology-formalizer"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The registered formal domain and core theorem establish bounded draft/control mathematics only. They do not construct or prove a selector, derive or adopt the domain from current ontology, establish physical gauge meaning, reopen a frozen family, discharge general EqSrc, change scientific ledgers, promote downstream GR claims, or complete the derivation."
+  forbidden_conclusions:
+    - "source category derived from or adopted into current ontology"
+    - "natural selector constructed or P2-T02 theorem proved"
+    - "eligible-choice family as a selected section"
+    - "structural automorphisms as physical gauge transformations"
+    - "reduct functor as conservativity proof"
+    - "noninvertible covariant relation transport without an added law"
+    - "frozen family reopened rejected or globally impossible"
+    - "global theory rejection or future source-extension impossibility"
+    - "physical admissibility covariance or empirical meaning established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "M_src g_eff matter coupling or Einstein-equation derivation"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+
+selected_next_route:
+  route_id: "v21_p2_t02_eqsrc_natural_selector_fixed_point"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P2-T02"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "State the exact mathematical condition that prior candidate cycles repeatedly violate."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Define a natural selector as a section of S_chi on the unchanged P2-T01 core and prove or refute the exact automorphism fixed-point condition with finite positive and negative controls."
+  source_handoff: "research_control/handoffs/handoff-0784.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P2-T01-EQSRC-SOURCE-CATEGORY-001"
+  allowed_scope: "Exact P2-T01 target-neutral source-category morphism isomorphism automorphism eligible-choice relation-transport variation and extension definitions, one core functoriality theorem, four finite controls, and one P2-T02 route."
+  blocked_scope: "Selector construction or theorem proof post hoc arrow restriction physical gauge claims frozen-family reopening ontology edit adoption general EqSrc scientific-ledger changes downstream GR benchmark promotion Gate Chair verdict publication completed derivation or global no-go."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_validation.json"
+  local_validator_report_hash: "8eeff627e63bbaa57b3a5d8c3dad09f2fbe1b0d2385e4907814548eb0eadc3d6"
+  source_category_hash: "00d7e14b76ac4fa01b834739646fe03012c2b82326a158064b27cdbe916be268"
+  morphism_variation_schema_hash: "963520b97b25fc3f7406ae7729c98966a6676c583dae60dd101d0b0d32e5d227"
+  finite_examples_hash: "ec7bbf82c797fd9e23314c32284e9f40332d0b9ee5164ab1d09d9e813a445b9e"
+  distance_to_gr_ledger_hash: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  metric_use_ledger_hash: "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  canonical_ontology_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+  latex_compile_status: "PASS"
+  validation_status: "PASS"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  selector_construction_authorized: false
+  selector_theorem_claim_authorized: false
+  physical_gauge_claim_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 14 lease parity immutable route identity max reasoning effort repository binding clean start predecessor checkpoint and single consumption were verified before work."
+      - "The memory preflight refreshed local retrieval and the registered P1-T04 theorem target plus source-registry row were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required perspectives completed and four mathematical versus ontology conflicts were resolved in one parent review round."
+      - "The task-local validator passes all 20 category morphism inverse variance finite source-hash ledger ontology synthesis and claim-boundary checks."
+      - "The registered TeX source compiles successfully to a five-page local scratch PDF."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Repository validation documentation impact signal parity generated freshness and whitespace checks remain required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph and claim graph remain to be regenerated and checked."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap and validate-only remain required after source registration."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 924
+    relationship_row_count: 4578
+    semantic_row_count: 924
+    vault_row_count: 924
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_local_cache_only_warning_count: 9
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py --json lookup TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+      query_type: "lookup"
+      query_text: "TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+      returned_object_ids:
+        - "TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+  canonical_inspections:
+    - object_id: "TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+      source_hash: "c5aaaa70f4d7ce216a35d17af674e94e3f2866c1bdcfb28787a40d9f6636516c"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and nine local-cache-only freshness warnings were refreshed to a clean local retrieval state."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py --json lookup TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+    status: "PASS"
+    summary: "Resolved and inspected the registered P1-T04 theorem target and its TeX source-registry row."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-014/artifacts/validate_eqsrc_source_category_definition.py"
+    status: "PASS"
+    summary: "The task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-014/artifacts/validate_eqsrc_source_category_definition.py --write-report --json"
+    status: "PASS"
+    summary: "Passed 20 of 20 checks across category identity closure inverse provenance relation variance four finite controls synthesis source hashes both ledgers canonical ontology and claim boundaries."
+  - command: "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-014-latex research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+    status: "PASS"
+    summary: "Compiled the registered TeX source to a five-page local scratch PDF; nonfatal box warnings remain in long identifiers and narrow table columns."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  rationale: "The result is a bounded scientific formal-domain and theorem packet, not a project-system defect."

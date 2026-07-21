@@ -1,0 +1,155 @@
+schema_id: "EQSRC-SOURCE-MORPHISM-VARIATION-SCHEMA-V1"
+source_category_id: "EQSRC-SOURCE-CATEGORY-DEFINITION-V1"
+task_id: "RT-20260720-014"
+plan_task_id: "P2-T01"
+status_label: "draft/control"
+claim_status: "proposal-only"
+source_extension_status: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Supply the missing formal domain for the selector theorem."
+current_ontology_statement: "Current ontology does not derive the proposed source-record category, admissible morphism class, physical gauge groupoid, or variation family."
+
+signature:
+  symbol: "Sigma"
+  target_neutral: true
+  components:
+    - "typed source sorts"
+    - "source operations"
+    - "source relations"
+    - "source provenance fields"
+
+objects:
+  form: "(X, alpha_X)"
+  semantic_record: "small admitted Sigma-structure"
+  admission_certificate: "alpha_X"
+  admission_precedes_candidate_evaluation: true
+  serialization_is_scientific_object: false
+
+morphisms:
+  form: "(f_s, rho_f)"
+  candidate_blind: true
+  target_inputs: []
+  required_preservation:
+    - "types"
+    - "declared operations"
+    - "declared relations according to arrow profile"
+    - "declared source provenance"
+  profiles:
+    - "homomorphism"
+    - "embedding"
+    - "quotient"
+    - "isomorphism"
+  identity_closed: true
+  composition_closed: true
+  mixed_composition_rule: "retain only the weakest profile justified by both factors"
+
+isomorphism_certificate:
+  certificate_type: "explicit_inverse_provenance_token"
+  required_fields:
+    - "source_record_id"
+    - "target_record_id"
+    - "forward_map_encoding"
+    - "inverse_map_encoding"
+    - "forward_structure_check"
+    - "inverse_structure_check"
+    - "left_inverse_check"
+    - "right_inverse_check"
+    - "admission_rule_id"
+    - "admission_rule_hash"
+    - "candidate_blind"
+    - "target_inputs"
+  candidate_blind: true
+  target_inputs: []
+  proof_authority: false
+
+core_groupoid:
+  notation: "G_Sigma = Core(C_Sigma)"
+  objects: "all admitted source records"
+  arrows: "certified categorical isomorphisms only"
+  automorphism_definition: "Aut_CSigma(X) = G_Sigma(X,X)"
+  structural_automorphism_implies_physical_gauge: false
+
+candidate_family:
+  notation: "S_chi"
+  defined_on: "core_groupoid_only"
+  object_meaning: "eligible choices, not a selected choice"
+  requires_candidate_universe_functor: true
+  eligibility_isomorphism_invariant: true
+  natural_selector_constructed: false
+  selector_theorem_status: "reserved_for_P2-T02"
+
+relation_transport:
+  carrier_functor: "A:C_Sigma->Set"
+  invertible_core_transport: "u_*R=(A(u) x A(u))[R]"
+  equivariance_obligation: "K_Y(S_chi(u)d)=u_*K_X(d)"
+  core_covariant: true
+  arbitrary_noninvertible_covariant: false
+  arbitrary_map_pullback: "f^*R={(x,x') | (f(x),f(x')) in R}"
+  permitted_noninvertible_modes:
+    - "preservation"
+    - "exact_reflection"
+    - "proved_quotient_or_span_specific_transport"
+    - "undefined"
+  exact_reflection_kernel_obligation: "ker A(f) subseteq K_X(d)"
+
+variations:
+  structural_morphism_by_default: false
+  declaration_precedes_candidate_evaluation: true
+  required_fields:
+    - "source_record_before"
+    - "source_record_after"
+    - "changed_fields"
+    - "preserved_fields"
+    - "admission_conditions"
+    - "outcome"
+  allowed_outcomes:
+    - "preserved"
+    - "changed"
+    - "bottom(tag)"
+  category_status: "not_assumed_until_identity_and_composition_are_proved"
+  physical_perturbation_status: "not_established"
+
+transformation_taxonomy:
+  structural_automorphism: "invertible semantic endomorphism preserving every declared Sigma-field"
+  physical_gauge_transformation: "requires separately derived state, dynamics or constraints, observables, and redundancy interpretation"
+  presentation_relabeling: "isomorphism only when every typed field and provenance datum is transported"
+  serialization_change: "outside the scientific source category"
+
+source_extensions:
+  interface: "target-neutral signature embedding with forgetful functor U_i:C_SigmaPlus->C_Sigma"
+  reduct_implies_conservative: false
+  conservative_label_requires_elimination_proof: true
+  selector_relevant_mark_default_classification: "new_ontology_primitive_candidate"
+  added_mark_symmetry_reduction: "added structure, not spontaneous or dynamical symmetry breaking"
+
+forbidden_inputs:
+  - "target topology"
+  - "target atlas"
+  - "target metric"
+  - "proper time"
+  - "detector or observer semantics"
+  - "benchmark fit or desired GR recovery"
+  - "candidate reconstruction"
+  - "generated derivatives"
+  - "registry or validator state"
+  - "role, handoff, file-order, or task-process state"
+  - "the desired selector or K-image"
+
+finite_examples:
+  - "FIN-ORIENTATION-F2-001"
+  - "FIN-DIRECTED-C4-002"
+  - "FIN-ORDERED-CHAIN4-003"
+  - "FIN-NONINVERTIBLE-004"
+
+claim_boundary:
+  selector_constructed: false
+  selector_theorem_proved: false
+  physical_gauge_groupoid_derived: false
+  physical_covariance_established: false
+  general_EqSrc_discharged: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  scientific_ledger_change_authorized: false
+  physics_promotion_authorized: false
+  next_plan_task: "P2-T02"

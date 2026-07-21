@@ -1,0 +1,59 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260720-014"
+plan_task_id: "P2-T01"
+source_category_id: "EQSRC-SOURCE-CATEGORY-DEFINITION-V1"
+status: "completed"
+claim_status: "draft/control"
+recommendation:
+  category:
+    signature: "fixed target-neutral typed source signature Sigma"
+    objects: "admitted Sigma-structures with source-provenance and admission certificates fixed before candidate evaluation"
+    morphisms: "candidate-blind typed structure-preserving maps with source-only admissibility receipts"
+    core: "G_Sigma = Core(C_Sigma)"
+    automorphisms: "Aut_CSigma(X) = G_Sigma(X,X)"
+  closure_obligations:
+    identity: "f o id_X = f and id_Y o f = f"
+    associativity: "h o (g o f) = (h o g) o f"
+    profile_rule: "a composite retains only the weakest profile justified by both factors"
+  inverse_provenance:
+    payload_class: "explicit_inverse_provenance_tokens"
+    required_checks:
+      - "forward and inverse structure preservation"
+      - "left and right inverse equations"
+      - "source and target record identity"
+      - "candidate-blind admission-rule identity"
+      - "empty target-input list"
+  relation_variance:
+    core_transport: "covariant image under carrier bijections"
+    arbitrary_map_transport: "canonical contravariant pullback only"
+    direct_image_warning: "raw direct image may fail equivalence-relation axioms on the target"
+    exact_reflection_consequence: "ker A(f) subseteq source relation"
+  proved_theorem:
+    name: "Core relation-transport and action functoriality"
+    payload_class: "theorem_with_hypotheses_and_proof"
+    theorem_scope: "core groupoid relation transport, automorphism actions, and K naturality only"
+    selector_theorem_proved: false
+  finite_controls:
+    - "FIN-ORIENTATION-F2-001"
+    - "FIN-DIRECTED-C4-002"
+    - "FIN-ORDERED-CHAIN4-003"
+    - "FIN-NONINVERTIBLE-004"
+  principal_risks:
+    - "selecting morphisms after observing a desired candidate or relation"
+    - "extending bijective relation transport to noninvertible arrows"
+    - "treating a loaded action or root as ontology-derived"
+    - "treating finite controls as global EqSrc proof"
+claim_boundary:
+  selector_constructed: false
+  selector_theorem_proved: false
+  physical_gauge_status_established: false
+  current_ontology_derivation_established: false
+  general_EqSrc_discharged: false
+  physics_promotion_authorized: false
+source_anchors:
+  - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+  - "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md"
+  - "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml"
+  - "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml"
+  - "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex"

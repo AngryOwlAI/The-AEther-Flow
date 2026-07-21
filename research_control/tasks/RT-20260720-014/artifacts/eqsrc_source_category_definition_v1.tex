@@ -1,0 +1,343 @@
+% authority: science-draft
+% status: draft/control
+% route: ontology-law-research-packet
+% trigger_classification: derivation_critical_missing_source_law
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\Core}{\operatorname{Core}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\EqRel}{\mathsf{EqRel}}
+\newcommand{\Set}{\mathsf{Set}}
+
+\title{V21 P2-T01 Target-Neutral EqSrc Source Category,\\
+Morphism, and Automorphism Definition v1}
+\author{Ontology Formalizer control packet RT-20260720-014}
+\date{2026-07-20}
+
+\begin{document}
+\maketitle
+
+\section{Control status and exact burden}
+
+This artifact executes only v21 work item \texttt{P2-T01}. Its identifier is
+\texttt{EQSRC-SOURCE-CATEGORY-DEFINITION-V1}. It supplies a precise formal
+domain in which the P1-T04 selector target can later be stated: admitted
+source records, candidate-blind morphisms, certified isomorphisms,
+automorphism actions, eligible-choice families, relation transport on the
+invertible core, independently declared variations, and target-neutral
+extension interfaces.
+
+The record is \texttt{draft/control}, \texttt{proposal-only}, and
+\texttt{source-extension data}. Current ontology does not derive the proposed
+source-record category, admissible morphism class, physical gauge groupoid,
+or variation family. Adoption is
+\texttt{blocked\_adoption\_open\_continuation}. The definitions below are
+mathematically exact relative to their stated hypotheses; their identification
+with the physical source theory is not established. No selector is
+constructed, no frozen candidate family is reopened, and no source law or
+canonical ontology change is adopted.
+
+\section{Four layers that must remain distinct}
+
+Fix a target-neutral, many-sorted signature
+\(\Sigma=(\mathsf{Sort},\mathsf{Fun},\mathsf{Rel},\mathsf{Type})\). The
+following layers are distinct.
+
+\begin{enumerate}[label=(L\arabic*)]
+  \item The registered canonical ontology states what source structure is
+  currently authorized.
+  \item A proposal-only \(\Sigma\)-record schema states mathematical fields,
+  admission predicates, and provenance obligations that may exceed current
+  ontology.
+  \item A semantic model interprets the schema. A presentation gives names to
+  its elements and fields.
+  \item A serialization stores a presentation in a file. Whitespace, key
+  order, file path, registry order, timestamp, validator state, and task state
+  are not scientific objects or arrows.
+\end{enumerate}
+
+Loading a root, line, orientation, partition, action, grading, measure,
+observer choice, or selector-relevant mark into layer L2 or L3 does not derive
+it from L1. Two serializations may encode one semantic model without defining
+a structural arrow or a physical equivalence.
+
+\section{The proposed source category}
+
+\begin{definition}[Admitted source record]
+Let \(\mathsf{Adm}_{\Sigma}(X)\) be a predicate on \(\Sigma\)-structures whose
+inputs are fixed source fields and source-provenance data only. An object of
+\(\mathcal C_{\Sigma}\) is a pair \((X,\alpha_X)\), where \(X\) is a small
+\(\Sigma\)-structure and \(\alpha_X\) is an admission certificate. The
+predicate and certificate are evaluated before any eligible choice, selected
+choice, induced equivalence relation, target geometry, or desired benchmark
+outcome is inspected.
+\end{definition}
+
+\begin{definition}[Candidate-blind structural morphism]
+A morphism \(f:(X,\alpha_X)\to(Y,\alpha_Y)\) is a family of typed functions
+\(f_s:X_s\to Y_s\), one for each source sort, together with a source-only
+admissibility receipt \(\rho_f\), such that:
+\begin{enumerate}[label=(M\arabic*)]
+  \item every declared operation is preserved exactly;
+  \item every declared relation is preserved in the direction specified by
+  the arrow profile;
+  \item source provenance required by the arrow profile is preserved; and
+  \item the arrow profile and \(\rho_f\) are fixed without reference to an
+  eligible or preferred choice, a \(K\)-image, target-side data, or process
+  metadata.
+\end{enumerate}
+Arrow profiles may distinguish homomorphisms, embeddings, quotients, and
+isomorphisms. A composite receives only the weakest profile justified by both
+factors; no stronger profile is inferred from a desired result.
+\end{definition}
+
+\begin{proposition}[Category closure]
+If the admitted arrow profiles contain the typed identity on every object and
+are closed under componentwise function composition and receipt composition,
+then the admitted records and morphisms form a category
+\(\mathcal C_{\Sigma}\).
+\end{proposition}
+
+\begin{proof}
+Typed identity functions preserve every operation, relation, and provenance
+field and satisfy the declared identity receipt. Componentwise composites of
+typed structure-preserving maps again preserve the same fields. Function
+identity and associativity give
+\[
+f\circ\mathrm{id}_X=f,\qquad
+\mathrm{id}_Y\circ f=f,\qquad
+h\circ(g\circ f)=(h\circ g)\circ f.
+\]
+Closure of receipt composition supplies an admitted certificate for each
+composite. These are exactly the category axioms.
+\end{proof}
+
+\begin{definition}[Certified isomorphism and automorphism]
+An isomorphism \(u:X\to Y\) is an admitted morphism accompanied by an explicit
+inverse-provenance token
+\[
+\iota_u=(u^{-1},c_{\rm fwd},c_{\rm inv},c_L,c_R,r_{\rm adm}),
+\]
+where the two maps pass the declared structure checks,
+\(c_L\) verifies \(u^{-1}u=\mathrm{id}_X\), \(c_R\) verifies
+\(uu^{-1}=\mathrm{id}_Y\), and \(r_{\rm adm}\) identifies the candidate-blind
+admission rule. The token records exact source and target identities and has
+empty target-input fields. It is audit evidence for the inverse, not
+independent scientific authority.
+
+The core \(\mathcal G_{\Sigma}=\Core(\mathcal C_{\Sigma})\) has all objects and
+only certified isomorphisms. A structural automorphism is an element of
+\(\Aut_{\mathcal C_{\Sigma}}(X)=\mathcal G_{\Sigma}(X,X)\).
+\end{definition}
+
+\section{Carrier, eligible choices, and relation interface}
+
+Let \(A:\mathcal C_{\Sigma}\to\Set\) be a declared carrier functor. On the
+core, let \(D:\mathcal G_{\Sigma}\to\Set\) be a candidate-universe functor and
+let \(\chi_X\) be a candidate-blind eligibility predicate satisfying
+\[
+\chi_X(d)\Longleftrightarrow
+\chi_Y(D(u)d)
+\quad\text{for every }u:X\overset{\sim}{\longrightarrow}Y.
+\]
+Define
+\[
+S_{\chi}(X)=\{d\in D(X):\chi_X(d)\}.
+\]
+The symbol \(S_{\chi}(X)\) denotes eligible choices only. It is not a
+selector. A selector would be a natural section
+\(1_{\mathcal G_{\Sigma}}\Rightarrow S_{\chi}\), whose existence or uniqueness
+is P2-T02 work.
+
+If an eligible choice induces a carrier equivalence relation, record maps
+\[
+K_X:S_{\chi}(X)\longrightarrow\EqRel(A(X)).
+\]
+On an isomorphism \(u:X\to Y\), define
+\[
+u_*R=(A(u)\times A(u))[R].
+\]
+The exact equivariance obligation is
+\[
+K_Y(S_{\chi}(u)d)=u_*K_X(d).
+\]
+This obligation may be checked without selecting one element of
+\(S_{\chi}(X)\).
+
+\begin{theorem}[Core relation-transport and action functoriality]
+Assume \(\mathcal C_{\Sigma}\) is a category and
+\(A:\mathcal C_{\Sigma}\to\Set\) is a functor. Define
+\(E_A(X)=\EqRel(A(X))\) and, for \(u\) in
+\(\mathcal G_{\Sigma}\), define \(E_A(u)(R)=u_*R\). Then
+\(\mathcal G_{\Sigma}\) is a groupoid and
+\[
+E_A:\mathcal G_{\Sigma}\longrightarrow\Set
+\]
+is a functor. Consequently, \(\Aut(X)\) acts on \(A(X)\), on
+\(E_A(X)\), and on every functorially supplied \(S_{\chi}(X)\). A family
+\(K_X\) satisfying the displayed equivariance equation is precisely a natural
+transformation \(S_{\chi}\Rightarrow E_A\).
+\end{theorem}
+
+\begin{proof}
+Identities and composites of isomorphisms are isomorphisms, and the categorical
+inverse is unique, so the core is a groupoid. Since \(A(u)\) is bijective with
+inverse \(A(u^{-1})\), image under \(A(u)\times A(u)\) preserves reflexivity,
+symmetry, and transitivity. Functoriality of \(A\) gives
+\[
+(\mathrm{id}_X)_*R=R,
+\qquad
+(v\circ u)_*R=v_*(u_*R),
+\qquad
+(u^{-1})_*=(u_*)^{-1}.
+\]
+The group-action laws are the one-object restrictions of these functor laws.
+Invariance of \(\chi\) makes \(S_{\chi}\) a subfunctor of \(D\), and the
+equivariance square is exactly the naturality square for \(K\).
+\end{proof}
+
+This theorem proves only the formal category, core, relation-transport, and
+action laws under stated hypotheses. It does not prove the P1-T04 natural
+selector theorem, selector existence, relation uniqueness, current-ontology
+derivation, physical covariance, or physical admissibility.
+
+\section{Noninvertible arrows and variations}
+
+For an arbitrary carrier map \(f:A(X)\to A(Y)\), equivalence relations have a
+canonical contravariant pullback
+\[
+f^*R=\{(x,x'):(f(x),f(x'))\in R\}.
+\]
+There is no neutral covariant transport on all noninvertible maps. A raw direct
+image can fail reflexivity on the full codomain and can fail transitivity when
+images of distinct source classes overlap. Taking an equivalence closure adds
+an extra rule. Any future extension of \(S_{\chi}\) or \(K\) to a
+noninvertible arrow must declare exactly one of:
+\begin{enumerate}[label=(N\arabic*)]
+  \item preservation,
+  \(K_X(d)\subseteq f^*K_Y(S(f)d)\);
+  \item exact reflection,
+  \(K_X(d)=f^*K_Y(S(f)d)\), which implies
+  \(\ker A(f)\subseteq K_X(d)\);
+  \item a proved quotient- or span-specific transport law; or
+  \item \texttt{undefined}, which fails closed.
+\end{enumerate}
+
+A variation is independently declared typed change data
+\(\nu:X\rightsquigarrow X'\), not automatically a structural morphism. A
+variation record names changed fields, preserved fields, admission conditions,
+and one outcome among \texttt{preserved}, \texttt{changed}, or
+\(\bot(\texttt{tag})\). A variation category may be formed only after its own
+identity and composition receipts are proved. Algebraic translations or
+relabelings that preserve every line are controls, not physical perturbations.
+
+\section{Transformation taxonomy and extensions}
+
+\begin{longtable}{p{0.24\linewidth}p{0.66\linewidth}}
+\toprule
+Transformation & Exact status \\
+\midrule
+\endfirsthead
+\toprule
+Transformation & Exact status \\
+\midrule
+\endhead
+Structural automorphism & Invertible semantic endomorphism preserving every
+declared \(\Sigma\)-field. Its status is relative to the proposed signature. \\
+Physical gauge transformation & Requires a separately derived or adopted state
+space, dynamics or constraints, observables, and a proof that the action is
+physical redundancy. No inclusion from structural automorphisms is presumed. \\
+Presentation or token relabeling & A passive reindexing is an isomorphism only
+when all typed mathematical data and provenance are transported. Labels that
+carry order, orientation, identity, or provenance cannot be permuted freely. \\
+Serialization change & Whitespace, file movement, key order, registry order,
+timestamps, validation, roles, handoffs, and task state are outside
+\(\mathcal C_{\Sigma}\). \\
+\bottomrule
+\end{longtable}
+
+For a target-neutral signature embedding \(i:\Sigma\hookrightarrow\Sigma^+\),
+an enriched proposal may have a forgetful functor
+\[
+U_i:\mathcal C_{\Sigma^+}\longrightarrow\mathcal C_{\Sigma}.
+\]
+This establishes only a reduct interface. It does not prove logical
+conservativity. An abbreviation with an explicit elimination proof may be
+classified as a \texttt{conservative\_definitional\_extension}; an added root,
+orientation, action, dynamics, probability measure, or selector-relevant mark
+is otherwise a \texttt{new\_ontology\_primitive\_candidate}. Symmetry reduction
+caused by adding a mark is added structure, not spontaneous or dynamical
+symmetry breaking.
+
+\section{Mechanically checked finite instantiations}
+
+\begin{longtable}{p{0.24\linewidth}p{0.66\linewidth}}
+\toprule
+Control & Exact scoped result \\
+\midrule
+\endfirsthead
+\toprule
+Control & Exact scoped result \\
+\midrule
+\endhead
+\texttt{FIN-ORIENTATION-F2-001} & On \(\mathbb F_2^2\), the six elements of
+\(\mathrm{GL}(2,2)\) form a group and act transitively on the three nonzero
+one-dimensional subspaces. No line is fixed by the full action. This
+instantiates the orientation-torsor family without selecting a line. \\
+\texttt{FIN-DIRECTED-C4-002} & The four rotations of the directed cycle form
+\(C_4\), act transitively on four candidate roots, and have no common fixed
+root. Adding a root reduces symmetry by loaded structure and is not a
+derivation. \\
+\texttt{FIN-ORDERED-CHAIN4-003} & The saturating action
+\(\Phi_n(i)=\min(i+n,3)\) satisfies the monoid action laws. The only
+action-preserving bijection is the identity, and the loaded order has a unique
+minimum. This is a positive mathematical control, not current-ontology or
+physical selection. \\
+\texttt{FIN-NONINVERTIBLE-004} & Inclusion of a singleton into a two-point set
+makes raw direct image of equality non-reflexive on the codomain. Collapse of
+two points to one pulls equality back to the universal relation. The
+isomorphism transport formula therefore cannot be extended silently. \\
+\bottomrule
+\end{longtable}
+
+The task-local validator enumerates all group tables, inverse checks, actions,
+fixed loci, chain automorphisms, action laws, relation-pair counts, and the two
+noninvertible guards. The finite controls validate the schema only. They do not
+prove global applicability, a selector theorem, physical gauge status, or
+general \(\mathsf{EqSrc}\).
+
+\section{Source purity, recovery obligations, and next step}
+
+Object admission, morphism admission, candidate eligibility, variation
+admission, and extension data fail closed if they use target topology, target
+atlas, target metric, proper time, detector or observer semantics, benchmark
+fit, desired GR recovery, candidate reconstruction, generated derivatives,
+registries, validators, roles, handoffs, file order, or task process. Arrows may
+not be defined post hoc as ``the maps preserving the desired \(K\)-image.''
+
+Any later adopted source category would still have to preserve source-only
+provenance, exact-GR recovery obligations, independent auditability, and every
+downstream derivation gate. The \texttt{source\_equivalence\_eqsrc} milestone
+remains at \texttt{draft object exists}. General \(\mathsf{EqSrc}\),
+\(M_{\rm src}\), \(g_{\rm eff}\), matter coupling, Einstein equations,
+exact-GR recovery, and benchmark promotion remain blocked. Both scientific
+ledgers and canonical ontology are unchanged.
+
+The only next dependency-ready v21 item is \texttt{P2-T02}: prove or refute the
+source-natural selector theorem on this declared formal domain. P2-T02 must not
+alter the category after observing the desired selector, treat
+\(S_{\chi}(X)\) as a selected section, or infer physical gauge meaning from a
+structural automorphism.
+
+\end{document}

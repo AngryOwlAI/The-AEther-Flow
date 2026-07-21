@@ -456,6 +456,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-PARENT-FUSION-NOTES-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `research_control/tasks/RT-20260720-012/artifacts/parent_fusion_notes_eqsrc_canonical_selection_naturality_target.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-013-EQSRC-NATURALITY-PRIMARY-LITERATURE-RECEIPT` `research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-013-PARENT-FUSION-NOTES-EQSRC-NATURALITY-LITERATURE-REVIEW` `research_control/tasks/RT-20260720-013/artifacts/parent_fusion_notes_eqsrc_naturality_literature_review.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-014-EQSRC-SOURCE-CATEGORY-DEFINITION-RECEIPT` `research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-014-PARENT-FUSION-NOTES-EQSRC-SOURCE-CATEGORY` `research_control/tasks/RT-20260720-014/artifacts/parent_fusion_notes_eqsrc_source_category.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -980,6 +982,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-PARENT-FUSION-NOTES-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `wiki/markdown/md-research-control-tasks-rt-20260720-012-parent-fusion-notes-eqsrc-canonical-selection-naturality-target.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-013-EQSRC-NATURALITY-PRIMARY-LITERATURE-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-013-eqsrc-naturality-primary-literature-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-013-PARENT-FUSION-NOTES-EQSRC-NATURALITY-LITERATURE-REVIEW` `wiki/markdown/md-research-control-tasks-rt-20260720-013-parent-fusion-notes-eqsrc-naturality-literature-review.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-014-EQSRC-SOURCE-CATEGORY-DEFINITION-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-014-eqsrc-source-category-definition-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-014-PARENT-FUSION-NOTES-EQSRC-SOURCE-CATEGORY` `wiki/markdown/md-research-control-tasks-rt-20260720-014-parent-fusion-notes-eqsrc-source-category.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
