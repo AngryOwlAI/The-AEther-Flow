@@ -696,6 +696,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-SKILL-USER-MODIFIED-PROJECT` `wiki/markdown/md-skill-user-modified-project.md`
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER` `wiki/markdown/md-skill-visual-explainer.md`
 - `WIKI-MD-SKILL-VISUAL-EXPLAINER-SUBSKILL-MERMAID-DOCUMENTATION` `wiki/markdown/md-skill-visual-explainer-subskill-mermaid-documentation.md`
+- `WIKI-MD-SOUL` `wiki/markdown/md-soul.md`
 - `WIKI-MD-SOURCE-AUTHORITY-PUBLICATION-BRIEF` `wiki/markdown/md-source-authority-publication-brief.md`
 - `WIKI-MD-TECHNICAL-REQUIREMENTS-PUBLICATION-BRIEF` `wiki/markdown/md-technical-requirements-publication-brief.md`
 - `WIKI-MD-V12-P0-BASELINE-SUMMARY` `wiki/markdown/md-v12-p0-baseline-summary.md`
@@ -1104,6 +1105,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-SCHEMA-ROLE-SCHEMA` `.agents/schemas/ROLE_SCHEMA.md`
 - `MD-SCHEMA-VALIDATION-STATUS-LAYER-SCHEMA` `.agents/schemas/VALIDATION_STATUS_LAYER_SCHEMA.md`
 - `MD-SKILL-PROJECT-MEMORY-SYSTEM` `.codex/skills/project-memory-system/SKILL.md`
+- `MD-SOUL` `SOUL.md`
 - `MD-V12-P0-BASELINE-SUMMARY` `research_control/tasks/RT-20260629-030/artifacts/v12_p0_baseline_summary.md`
 - `MD-V12-P4-T01-SOURCE-EXTENSION-DEPENDENCY-EXTRACTION` `research_control/tasks/RT-20260629-043/artifacts/source_extension_dependency_extraction_v1.md`
 - `MD-V12-P4-T02-SOURCE-EXTENSION-MINIMIZATION-TARGET` `research_control/tasks/RT-20260629-044/artifacts/source_extension_minimization_target_v1.md`

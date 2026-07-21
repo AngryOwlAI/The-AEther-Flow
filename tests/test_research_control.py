@@ -970,6 +970,7 @@ class ResearchControlTests(unittest.TestCase):
 
     def test_memory_preflight_allows_historical_mutable_contract_hashes(self) -> None:
         for object_id in [
+            "MD-AGENTS",
             "MD-SKILL-CONTINUE-RESEARCH",
             "MD-SKILL-CONTINUE-RESEARCH-CONTINUE-GOAL",
             "MD-SKILL-CONTINUE-RESEARCH-GOAL",

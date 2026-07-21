@@ -22,7 +22,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 
 | Folder | Category | CSV Relation | Wiki Relation | Research Role |
 | --- | --- | --- | --- | --- |
-| `.` | `control authority` | CONTENT_SEMANTIC_REGISTRY: 955; FILE_OBJECT_REGISTRY: 3820; HTML_EXPLAINER_REGISTRY: 19; MARKDOWN_SOURCE_REGISTRY: 518; OBSIDIAN_VAULT_REGISTRY: 955; PDF_DERIVATIVE_REGISTRY: 16; TEX_SOURCE_REGISTRY: 402; WIKI_ARTIFACT_REGISTRY: 955 | 955 generated wiki note(s) point back to sources here. | Repository front door for project identity, instructions, validation, and generated folder classification. |
+| `.` | `control authority` | CONTENT_SEMANTIC_REGISTRY: 956; FILE_OBJECT_REGISTRY: 3824; HTML_EXPLAINER_REGISTRY: 19; MARKDOWN_SOURCE_REGISTRY: 519; OBSIDIAN_VAULT_REGISTRY: 956; PDF_DERIVATIVE_REGISTRY: 16; TEX_SOURCE_REGISTRY: 402; WIKI_ARTIFACT_REGISTRY: 956 | 956 generated wiki note(s) point back to sources here. | Repository front door for project identity, instructions, validation, and generated folder classification. |
 | `.agents` | `control authority` | FILE_OBJECT_REGISTRY: 47; MARKDOWN_SOURCE_REGISTRY: 47 | 47 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
 | `.codex` | `tooling` | FILE_OBJECT_REGISTRY: 20; MARKDOWN_SOURCE_REGISTRY: 20 | 20 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
 | `.github` | `reserved lane` | No registered object rows. | No direct generated wiki notes. | Reserved for future project material; currently not active authority. |
@@ -41,7 +41,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `scripts` | `tooling` | FILE_OBJECT_REGISTRY: 3; MARKDOWN_SOURCE_REGISTRY: 3 | 3 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
 | `tests` | `tooling` | FILE_OBJECT_REGISTRY: 1; MARKDOWN_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
 | `tex_shared` | `canonical source` | FILE_OBJECT_REGISTRY: 1; MARKDOWN_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Provides authored source material used by the research workflow. |
-| `wiki` | `generated derivative` | FILE_OBJECT_REGISTRY: 955; WIKI_ARTIFACT_REGISTRY: 955 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
+| `wiki` | `generated derivative` | FILE_OBJECT_REGISTRY: 956; WIKI_ARTIFACT_REGISTRY: 956 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
 | `.agents/roles` | `control authority` | FILE_OBJECT_REGISTRY: 35; MARKDOWN_SOURCE_REGISTRY: 35 | 35 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
 | `.agents/schemas` | `control authority` | FILE_OBJECT_REGISTRY: 11; MARKDOWN_SOURCE_REGISTRY: 11 | 11 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
 | `.codex/agents` | `tooling` | FILE_OBJECT_REGISTRY: 1; MARKDOWN_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Operates or tests the research memory/control workflow. |
@@ -75,7 +75,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `tests/support` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `wiki/html` | `generated derivative` | FILE_OBJECT_REGISTRY: 19; WIKI_ARTIFACT_REGISTRY: 19 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
 | `wiki/indexes` | `generated derivative` | No registered object rows. | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
-| `wiki/markdown` | `generated derivative` | FILE_OBJECT_REGISTRY: 518; WIKI_ARTIFACT_REGISTRY: 518 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
+| `wiki/markdown` | `generated derivative` | FILE_OBJECT_REGISTRY: 519; WIKI_ARTIFACT_REGISTRY: 519 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
 | `wiki/pdf` | `generated derivative` | FILE_OBJECT_REGISTRY: 16; WIKI_ARTIFACT_REGISTRY: 16 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
 | `wiki/tex` | `generated derivative` | FILE_OBJECT_REGISTRY: 402; WIKI_ARTIFACT_REGISTRY: 402 | Generated wiki metadata lives here; edit sources and registries instead. | Makes registered objects easier to browse without changing authority. |
 | `.agents/roles/physics` | `control authority` | FILE_OBJECT_REGISTRY: 11; MARKDOWN_SOURCE_REGISTRY: 11 | 11 generated wiki note(s) point back to sources here. | Defines permitted agent behavior and claim boundaries. |
@@ -1129,6 +1129,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260720-030` | `control authority` | FILE_OBJECT_REGISTRY: 2; MARKDOWN_SOURCE_REGISTRY: 1; TEX_SOURCE_REGISTRY: 1 | 2 generated wiki note(s) point back to sources here. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260720-031` | `control authority` | FILE_OBJECT_REGISTRY: 1; TEX_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260720-032` | `control authority` | FILE_OBJECT_REGISTRY: 1; TEX_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260721-001` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `scripts/research_control/mechanized_checks` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `scripts/research_control/support_formalization` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `scripts/validation/adapters` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -4177,6 +4178,8 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260720-032/artifacts` | `control authority` | FILE_OBJECT_REGISTRY: 1; TEX_SOURCE_REGISTRY: 1 | 1 generated wiki note(s) point back to sources here. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260720-032/jobs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260720-032/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260721-001/jobs` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260721-001/roles` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `tests/fixtures/dependency_graph/synthetic_repo` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/memory_system/mini_repo` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/obsidian_wiki/mini_repo` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
@@ -5261,6 +5264,7 @@ Generated folder map. Not canonical authority. Update source files, registry row
 | `research_control/tasks/RT-20260720-030/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260720-031/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `research_control/tasks/RT-20260720-032/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
+| `research_control/tasks/RT-20260721-001/jobs/completions` | `control authority` | No registered object rows. | No direct generated wiki notes. | Runs bounded proposal, audit, refutation, repair, and handoff transactions. |
 | `tests/fixtures/dependency_graph/synthetic_repo/registries` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/dependency_graph/synthetic_repo/research_control` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |
 | `tests/fixtures/memory_system/mini_repo/ontology` | `tooling` | No registered object rows. | No direct generated wiki notes. | Operates or tests the research memory/control workflow. |

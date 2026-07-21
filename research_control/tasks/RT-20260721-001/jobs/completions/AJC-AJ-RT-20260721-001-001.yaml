@@ -1,0 +1,161 @@
+completion_id: "AJC-AJ-RT-20260721-001-001"
+job_id: "AJ-RT-20260721-001-001"
+task_id: "RT-20260721-001"
+decision_id: "DDR-20260721-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260721-001"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-21T22:38:14Z"
+started_at: "2026-07-21T22:38:14Z"
+completed_at: "2026-07-21T22:49:01Z"
+objective: "Integrate only the exact human-authored AGENTS.md README.md and SOUL.md guidance transaction, add MD-AGENTS to the established mutable memory-preflight compatibility set with one focused regression case, register SOUL.md, refresh governed derivatives, validate, and checkpoint without changing physics or relay routing state."
+completion_summary: "The human-authored AGENTS.md README.md and SOUL.md wording is preserved with one checkpoint-required trailing-space normalization in a SOUL.md heading. MD-AGENTS now uses the established historical mutable-source compatibility rule with one focused regression addition, MD-SOUL is registered as project-control agent guidance, and generated memory and wiki derivatives are synchronized. No physics source, scientific ledger, program state, handoff, or relay route changed."
+transaction_status: "completed"
+result_disposition: "implemented"
+epistemic_status: "verified_project_system_source_integration"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "human_authored_soul_guidance_registration_and_exact_memory_preflight_compatibility"
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+source_basis:
+  - "AGENTS.md"
+  - "README.md"
+  - "SOUL.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/user-modified-project/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".codex/skills/project-memory-system/SKILL.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - ".agents/schemas/EXECUTION_ROLE_SCHEMA.md"
+  - "research_control/design/validation_obligation_resolution_policy_v1.md"
+  - "research_control/design/agent_validation_output_consumption_policy_v1.md"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+validator_repair:
+  status: "PASS"
+  mutable_object_id: "MD-AGENTS"
+  production_path: "scripts/research_control/validate_research_control.py"
+  regression_path: "tests/test_research_control.py"
+  compatibility_scope: "historical completed tasks only; the active program task still requires the current source hash"
+  broader_exemptions_added: false
+registration_evidence:
+  status: "PASS"
+  object_id: "MD-SOUL"
+  canonical_path: "SOUL.md"
+  source_sha256: "bde009787dd94f6648853649da82ac5163cabc45e425117be9e69eb0c354ef8a"
+  source_registry: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  generated_wiki_path: "wiki/markdown/md-soul.md"
+output_paths:
+  - "scripts/research_control/validate_research_control.py"
+  - "tests/test_research_control.py"
+  - "AGENTS.md"
+  - "README.md"
+  - "SOUL.md"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "wiki/markdown/md-agents.md"
+  - "wiki/markdown/md-readme.md"
+  - "wiki/markdown/md-soul.md"
+  - "research_control/tasks/RT-20260721-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260721-001/jobs/completions/AJC-AJ-RT-20260721-001-001.yaml"
+command_results:
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m py_compile scripts/research_control/validate_research_control.py | exit_code=0 | PASS"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control.ResearchControlTests.test_memory_preflight_allows_historical_mutable_contract_hashes | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only | exit_code=0 | PASS"
+  - "make PYTHON=.venv/bin/python test-memory | exit_code=0 | PASS tests=96"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -q tests.test_research_control | exit_code=0 | PASS"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS findings=0"
+  - "git diff --check | exit_code=0 | PASS"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The user-authored files, Git state, classifier, resolver, memory preflight, source registries, and exact role boundary were inspected before integration."
+      - "The first changed-scope validator run isolated the missing MD-AGENTS mutable-source entry rather than an unrelated source or physics defect."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The production mutable-source set and its existing focused regression loop each add exactly MD-AGENTS."
+      - "MD-SOUL resolves to the normalized SOUL.md source with the byte-equal registered hash and project-control agent-guidance status."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused mutable-source regression, the research-control test shard, all 96 memory tests, repository unit tests, memory validation, documentation impact, signal parity, and whitespace checks pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The completion is prepared for exactly one governed checkpoint after final staged acceptance."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Generated wiki notes and documentation indexes were refreshed only through the approved memory synchronizer."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and read-only core validation pass; local retrieval remains non-authoritative."
+  claim_language_linter:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "No physics or scientific claim-language source changed."
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+documentation_impact:
+  status: "PASS"
+  receipt_path: "research_control/tasks/RT-20260721-001/documentation_impact.yaml"
+  source_documentation_updated: true
+  no_op_rationale: "not_applicable"
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The bounded human-modified-project route directly carries the exact source-governance repair and no additional project-system signal was emitted."
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "Agent persona guidance, source registration, generated derivatives, tests, and validation receipts are project-system evidence only."
+forbidden_conclusion_summary: "SOUL guidance integration, memory-preflight compatibility, registry synchronization, validation, or checkpoint evidence is not physics proof and does not authorize ontology adoption or rejection, scientific-ledger change, source-law adoption, metric or matter reconstruction, GR derivation, benchmark promotion, Gate Chair verdict, publication, or completed derivation."
+verdict: "human_authored_soul_guidance_integrated_no_physics_or_relay_delta"
+coherent_resolution_summary: "The formerly unknown SOUL.md path is governed as registered project-control agent guidance, historical AGENTS memory-preflight snapshots remain valid under the existing mutable-source rule, and the human-authored wording is preserved with one checkpoint-required trailing-space normalization."
+next_recommendation: "After the governed checkpoint succeeds, explicitly recover and resume goal crg-20260720T161354Z-96bc2664ce31bfe0 at its unchanged P4-T04 route."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 955
+    relationship_row_count: 4742
+    semantic_row_count: 955
+    vault_row_count: 955
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/AGENTS.md --json"
+      query_type: "lookup"
+      query_text: "research_control/AGENTS.md"
+      returned_object_ids:
+        - "MD-AGENTS-RESEARCH-CONTROL"
+  canonical_inspections:
+    - object_id: "MD-AGENTS-RESEARCH-CONTROL"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/AGENTS.md"
+      source_hash: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+  authority_note: "The registered scoped AGENTS source is canonical project-control authority; wiki, semantic, Obsidian, relationship, and .local retrieval surfaces are navigation layers only and are not authority."

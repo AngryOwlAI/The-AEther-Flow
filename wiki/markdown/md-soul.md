@@ -1,22 +1,22 @@
-# WIKI-MD-AGENTS
+# WIKI-MD-SOUL
 
 Generated metadata note. Not canonical authority. Update the source file and registry row, then regenerate.
 
 ## Source
 
-- Source object: `MD-AGENTS`
-- Source path: `AGENTS.md`
+- Source object: `MD-SOUL`
+- Source path: `SOUL.md`
 - Format: `markdown`
-- Role: `agent_guidance`
+- Role: `agent_persona_guidance`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
-- Source hash: `3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29`
+- Source hash: `bde009787dd94f6648853649da82ac5163cabc45e425117be9e69eb0c354ef8a`
 
 ## Related Objects
 
-- Generated output path: `wiki/markdown/md-agents.md`
+- Generated output path: `wiki/markdown/md-soul.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-21T22:46:02Z`
+- Last validated at: `2026-07-21T22:38:14Z`
