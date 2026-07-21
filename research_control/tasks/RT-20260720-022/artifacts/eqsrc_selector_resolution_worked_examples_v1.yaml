@@ -1,0 +1,176 @@
+schema_id: "EQSRC-SELECTOR-RESOLUTION-WORKED-EXAMPLES-V1"
+taxonomy_id: "EQSRC-SELECTOR-RESOLUTION-TAXONOMY-V1"
+task_id: "RT-20260720-022"
+status: "draft/control"
+example_count: 5
+examples:
+  - example_id: "SRX-AS-C2-MARK-001"
+    title: "A declared mark resolves a two-choice swap only on the extended source domain"
+    baseline_domain: "One-object groupoid BC2 acting on D={plus,minus} by the nontrivial swap."
+    burden_statement: "Produce a deterministic invariant point of D."
+    requested_result_kind: "deterministic_point_or_representative"
+    baseline_result: "D^C2 is empty, so the baseline has no deterministic invariant point selector."
+    mechanism:
+      extension: "Add a mark m in D to each source object and restrict morphisms to those preserving m."
+      selector: "sigma(X,m)=m"
+      naturality: "Every extended-domain morphism preserves m, so sigma is natural on that domain."
+    primary_class: "added_source_structure"
+    supporting_classes: ["scoped_obstruction"]
+    overlap_rationale: "The obstruction remains true on the baseline; the positive result uses new static source data."
+    assumption_delta:
+      - assumption_id: "AS-MARK-01"
+        introduced_structure: "distinguished eligible mark m"
+        source_provenance: "prospectively declared extension datum"
+        baseline_derivation_status: "not derived by current ontology"
+        symmetry_effect: "reduces C2 to the stabilizer of m"
+        target_dependence_check: "fails if m is populated by reading the desired downstream answer; otherwise requires independent source meaning"
+        necessity_or_minimality_status: "not established; owned by P3-T02"
+        reversibility_or_reopening_condition: "forget m to recover the obstructed baseline"
+    status_axes:
+      definition_status: "explicit finite control"
+      existence_status: "proved on extended domain only"
+      uniqueness_status: "unique conditional on m"
+      naturality_status: "proved for mark-preserving morphisms"
+      covariance_status: "structural only; physical covariance unclaimed"
+      robustness_status: "not assessed"
+      dynamics_status: "absent"
+      operational_status: "absent"
+      empirical_status: "untested"
+      authority_status: "proposal-only; not adopted"
+  - example_id: "SRX-RI-CONSTANT-K-002"
+    title: "Two admissible representatives induce one relation value"
+    baseline_domain: "A fixed component with two admissible selectors sigma_a and sigma_b."
+    burden_statement: "Define the downstream relation section R without choosing between sigma_a and sigma_b."
+    requested_result_kind: "downstream_observable_or_relation"
+    mechanism:
+      observable_map: "K(a)=K(b)=R"
+      factorization: "K factors through the terminal quotient of {a,b}; equivalently K composed with every admissible selector is the same natural section."
+      domain_guard: "At least one admissible selector exists."
+    primary_class: "representative_irrelevance"
+    supporting_classes: []
+    overlap_rationale: "No added mark, dynamics, or probability law is needed; the downstream burden disappears by factorization."
+    assumption_delta: []
+    status_axes:
+      definition_status: "explicit finite control"
+      existence_status: "two selectors exist and one relation image exists"
+      uniqueness_status: "selector nonunique; induced relation unique"
+      naturality_status: "conditional on the declared natural K interface"
+      covariance_status: "structural only; physical covariance unclaimed"
+      robustness_status: "requires all admissible choices, not a sample"
+      dynamics_status: "absent"
+      operational_status: "absent"
+      empirical_status: "untested"
+      authority_status: "proposal-only; not adopted"
+  - example_id: "SRX-DSB-DOUBLE-WELL-003"
+    title: "Symmetric dynamics selects a branch only with declared initial data"
+    baseline_domain: "Real state y with C2 action y maps to -y and symmetric potential V(y)=(y^2-1)^2/4."
+    burden_statement: "Obtain a selected asymptotic branch plus or minus one."
+    requested_result_kind: "dynamically_selected_state_or_sector"
+    mechanism:
+      evolution: "dy/dt=y-y^3"
+      state_data: "finite initial value y(0)=y0"
+      selection: "For y0>0 the attracting limit is plus one; for y0<0 it is minus one; y0=0 is the unstable symmetric fixed point."
+      covariance: "Sign reversal maps the positive-data solution to the negative-data solution."
+      stability_scope: "The two nonzero equilibria are linearly stable and the zero equilibrium is unstable."
+    primary_class: "dynamical_symmetry_breaking"
+    supporting_classes: ["added_source_structure"]
+    overlap_rationale: "The evolution law and initial state are extra source-side inputs, while the branch is selected through their dynamics."
+    assumption_delta:
+      - assumption_id: "DSB-ODE-01"
+        introduced_structure: "state coordinate, evolution law, time parameter, and initial datum"
+        source_provenance: "toy control construction"
+        baseline_derivation_status: "not derived by current ontology"
+        symmetry_effect: "equations remain C2-equivariant while nonzero initial data select a branch"
+        target_dependence_check: "initial sign must not be chosen from the desired downstream answer"
+        necessity_or_minimality_status: "not established; owned by P3-T02 and P3-T04"
+        reversibility_or_reopening_condition: "remove evolution or initial data to recover the static burden"
+    status_axes:
+      definition_status: "explicit toy dynamical control"
+      existence_status: "solutions and limits stated for finite initial data"
+      uniqueness_status: "unique trajectory for each y0; no source-free branch uniqueness"
+      naturality_status: "not a categorical selector theorem"
+      covariance_status: "C2 equivariance only; physical covariance unclaimed"
+      robustness_status: "branch stable away from the separatrix y0=0"
+      dynamics_status: "explicit toy ODE"
+      operational_status: "absent"
+      empirical_status: "untested"
+      authority_status: "proposal-only toy; not ontology-derived"
+  - example_id: "SRX-PS-C3-UNIFORM-004"
+    title: "A transitive three-cycle has an invariant distribution but no invariant point"
+    baseline_domain: "C3 acts transitively on D={0,1,2} by cyclic permutation."
+    burden_statement: "Provide a source-natural probability law on D."
+    requested_result_kind: "probability_law_or_kernel"
+    mechanism:
+      measurable_space: "finite discrete D"
+      probability_law: "mu(i)=1/3 for each i in D"
+      invariance: "Every C3 permutation preserves mu."
+      uniqueness: "Transitivity forces every invariant probability mass to be equal, so mu is the unique invariant probability law."
+      sampling_semantics: "A sample requires additional random input and is not a deterministic invariant point."
+    primary_class: "probabilistic_selection"
+    supporting_classes: []
+    overlap_rationale: "The result target is distributional; no deterministic representative is claimed."
+    assumption_delta:
+      - assumption_id: "PS-MEASURE-01"
+        introduced_structure: "probability-law result type and sampling semantics"
+        source_provenance: "finite symmetry control"
+        baseline_derivation_status: "not a source probability law derived by current ontology"
+        symmetry_effect: "preserves the full C3 action"
+        target_dependence_check: "uniform weights follow from declared transitivity and normalization, not a preferred outcome"
+        necessity_or_minimality_status: "unique among C3-invariant probability laws on this finite control"
+        reversibility_or_reopening_condition: "change the action, measurable target, or measure principle"
+    status_axes:
+      definition_status: "explicit finite probability control"
+      existence_status: "proved"
+      uniqueness_status: "unique law; sampled point nonunique"
+      naturality_status: "C3-invariant on the declared control"
+      covariance_status: "structural only; physical covariance unclaimed"
+      robustness_status: "finite exact control only"
+      dynamics_status: "absent"
+      operational_status: "sampling semantics declared but no physical apparatus"
+      empirical_status: "untested"
+      authority_status: "proposal-only; not adopted"
+  - example_id: "SRX-SO-C2-EMPTY-FIXED-005"
+    title: "No deterministic invariant point exists on the fixed two-choice swap domain"
+    baseline_domain: "One-object groupoid BC2 acting on D={a,b} by the nontrivial swap."
+    burden_statement: "Produce a deterministic total C2-equivariant point selector without changing the domain or target."
+    requested_result_kind: "scoped_disposition"
+    mechanism:
+      theorem: "Natural point selectors are fixed points, but D^C2 is empty."
+      quantified_scope: "the fixed BC2 domain, the swap action, deterministic total point-valued selection, and unchanged variation class"
+      failed_positive_predicates:
+        added_source_structure: "not attempted in the fixed-domain claim"
+        representative_irrelevance: "no downstream K factorization is supplied"
+        dynamical_symmetry_breaking: "no dynamics or state data are supplied"
+        probabilistic_selection: "no probability-law target is requested"
+      reopening_criteria:
+        - "prospectively declare source extension data"
+        - "prove downstream representative irrelevance"
+        - "supply source dynamics and state or boundary data"
+        - "change the target to a source-defined probability law"
+        - "change the declared source action or variation class with provenance"
+    primary_class: "scoped_obstruction"
+    supporting_classes: []
+    overlap_rationale: "No positive resolution class is established in this packet."
+    assumption_delta: []
+    status_axes:
+      definition_status: "finite theorem control"
+      existence_status: "deterministic point selector disproved on scope"
+      uniqueness_status: "inapplicable because existence fails"
+      naturality_status: "failure proved for the declared action"
+      covariance_status: "structural only; physical covariance unclaimed"
+      robustness_status: "exact under the fixed domain and action"
+      dynamics_status: "outside scope"
+      operational_status: "absent"
+      empirical_status: "untested"
+      authority_status: "proposal-only scoped obstruction; no global no-go"
+class_coverage:
+  added_source_structure: 1
+  representative_irrelevance: 1
+  dynamical_symmetry_breaking: 1
+  probabilistic_selection: 1
+  scoped_obstruction: 1
+authority_guards:
+  canonical_ontology_edit_authorized: false
+  physics_promotion_authorized: false
+  scientific_ledger_change_authorized: false
+  global_no_go_authorized: false

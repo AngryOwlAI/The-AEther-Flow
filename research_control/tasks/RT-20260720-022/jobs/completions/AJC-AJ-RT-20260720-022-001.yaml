@@ -1,0 +1,675 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS"
+job_id: "AJ-RT-20260720-022-001"
+completion_id: "AJC-AJ-RT-20260720-022-001"
+task_id: "RT-20260720-022"
+task_type: "v21_lawful_selector_resolution_taxonomy"
+decision_id: "DDR-20260720-022"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260720-022"
+status: "completed"
+created_at: "2026-07-21T09:58:08Z"
+started_at: "2026-07-21T09:58:08Z"
+completed_at: "2026-07-21T10:18:09Z"
+objective: "Execute only v21 P3-T01: define a normalized five-class selector-resolution taxonomy with exact evidence predicates primary/supporting overlap rules assumption costs route consequences worked controls and fail-closed validation."
+completion_summary: "P3-T01 defines exactly five proposal-only primary selector-resolution classes: added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction. Two independent child syntheses were fused into one theorem-backed RI-PS-DSB-AS-SO normal form that returns exactly one primary class or fails closed. The schema requires nonvacuous irrelevance explicit dynamics or measures componentwise assumption costs five claim layers ten status axes and exact authority guards. Five worked controls classify one-to-one. Only P3-T02 is dependency-ready; P3-T03 still depends on P3-T02. No class is adopted and no ontology EqSrc ledger physical-gauge promotion publication global-no-go or completed-derivation status changes."
+objective_result: "completed"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T01"
+  recommendation_ids:
+    - "V21-R07"
+    - "V21-R30"
+    - "V21-R32"
+    - "V21-R33"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "P2-T07"
+    - "P2-T08"
+    - "P3-T01"
+  next_dependency_work_item: "P3-T02"
+  p3_t03_dependency_ready: false
+  p3_t03_dependency_blocker: "P3-T02 is not yet completed."
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 22
+  passes_consumed: 22
+  route_work_item_id: "P3-T01"
+
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "theorem_with_hypotheses_and_proof"
+minimum_payload:
+  payload_class: "theorem_with_hypotheses_and_proof"
+  payload_artifact_path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex"
+  payload_summary: "A complete hash-bound burden record with one result type and evidence-complete typed predicate receives exactly one primary class under RI-PS-DSB-AS-SO precedence or the fail-closed unclassified result."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex"
+  - "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_decision_schema_v1.yaml"
+  - "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_worked_examples_v1.yaml"
+  - "research_control/tasks/RT-20260720-022/artifacts/child_phys_math_eqsrc_selector_resolution_taxonomy.yaml"
+  - "research_control/tasks/RT-20260720-022/artifacts/child_phys_phil_eqsrc_selector_resolution_taxonomy.yaml"
+  - "research_control/tasks/RT-20260720-022/artifacts/parent_conflict_review_eqsrc_selector_resolution_taxonomy.yaml"
+  - "research_control/tasks/RT-20260720-022/artifacts/parent_fusion_notes_eqsrc_selector_resolution_taxonomy.md"
+  - "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_compact_receipt.json"
+  - "research_control/tasks/RT-20260720-022/artifacts/validate_eqsrc_selector_resolution_taxonomy.py"
+  - "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-022/**"
+  - "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex"
+  - "research_control/handoffs/handoff-0792.yaml"
+  - "research_control/handoffs/handoff-0792.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  taxonomy:
+    object_id: "TEX-V21-P3-T01-EQSRC-SELECTOR-RESOLUTION-TAXONOMY"
+    path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex"
+    sha256: "4af38c29cc97729cbd4278e5174b4ff3cc76d7921dbf148f953e92c9a3f03d30"
+  decision_schema:
+    path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_decision_schema_v1.yaml"
+    sha256: "db9002d2535a62668b634c11f26a4badf72f24dffb502cf1a4b6ea9320e7d7a8"
+  worked_examples:
+    path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_worked_examples_v1.yaml"
+    sha256: "c97e76df2afec017a45cddd6185789bd1d94f6ab73b9762c4040f8d6fc8eb161"
+  math_child:
+    path: "research_control/tasks/RT-20260720-022/artifacts/child_phys_math_eqsrc_selector_resolution_taxonomy.yaml"
+    sha256: "df9e478bee797339a634211d444d462b7afe07c90b28a791bc3e79f38b8fae2a"
+  philosophy_child:
+    path: "research_control/tasks/RT-20260720-022/artifacts/child_phys_phil_eqsrc_selector_resolution_taxonomy.yaml"
+    sha256: "a3ddee77187ab6fbd91e4c2a63e6e92738dcd0baca5739acda5ade232219cada"
+  conflict_review:
+    path: "research_control/tasks/RT-20260720-022/artifacts/parent_conflict_review_eqsrc_selector_resolution_taxonomy.yaml"
+    sha256: "7d8684927c91bec9ef43a0ae2c7b8acca32a83cff2d9b771a2b3a6802b43759a"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260720-022/artifacts/parent_fusion_notes_eqsrc_selector_resolution_taxonomy.md"
+    sha256: "c5448bb22519ec4a2777407937e92f215a8c78df4572f0228c73df0a2554f9e0"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_compact_receipt.json"
+    sha256: "698d4d81b745a8bb8a472e20cac8fd7f3447430231a76752692ec584b53cf930"
+  validator:
+    path: "research_control/tasks/RT-20260720-022/artifacts/validate_eqsrc_selector_resolution_taxonomy.py"
+    sha256: "c410227c80a72d90ed7fdc22cda977522cf9baa986975574d3d181ba51858503"
+  validation:
+    path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_validation.json"
+    sha256: "069d08be8073945729d73fe2b23219370b059b0dd84d1d81c4acea594b1d9bb6"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-022/artifacts/child_phys_math_eqsrc_selector_resolution_taxonomy.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-022/artifacts/child_phys_phil_eqsrc_selector_resolution_taxonomy.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-022/artifacts/parent_conflict_review_eqsrc_selector_resolution_taxonomy.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 5
+    unresolved_conflicts: []
+    summary: "Target granularity assumption-cost representation RI nonvacuity dynamics-label strength and overlap precedence were resolved without changing the five-class set or protected authority."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-022/artifacts/parent_fusion_notes_eqsrc_selector_resolution_taxonomy.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Turn the selector theorem into an actionable research decision framework."
+  missing_source_law: "An adopted source-side law choosing or eliminating selector-relevant representative data."
+  underdetermination_statement: "Current ontology does not derive a selector-resolution law, quotient-sufficiency theorem, selection dynamics, or probability law."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_comparison"
+  candidate_law_comparison:
+    candidates:
+      - "added source structure"
+      - "representative irrelevance"
+      - "dynamical symmetry breaking"
+      - "probabilistic selection"
+      - "scoped obstruction"
+    comparison_basis:
+      - "typed evidence predicate and failure mode"
+      - "result type and primary-versus-supporting overlap rule"
+      - "componentwise assumption cost"
+      - "claim layer and adoption status"
+    selection_status: "normalized_route_classes_only_no_class_selected_adopted_rejected_or_reopened"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc undischarged until a source-side selector route is derived or lawfully adopted, independently audited, and stress-tested."
+      - "Keep M_src, g_eff, matter coupling, Einstein equations, exact-GR recovery, and benchmark promotion blocked."
+      - "Keep every class predicate independent of target atlas, target metric, benchmark outcome, and process metadata."
+      - "Require protected human authority before source-law, selector-law, or canonical ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "five typed class predicates"
+      - "five worked controls"
+      - "RI-PS-DSB-AS-SO primary-order normal form"
+    audit_result: "The task-local validator confirms source-hash parity and rejects target or process evidence in every primary-class predicate."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No protected decision is requested in P3-T01; any later adoption requires an exact human gate."
+    exact_requested_ontology_edit: ""
+
+selector_resolution_taxonomy_result:
+  taxonomy_id: "EQSRC-SELECTOR-RESOLUTION-TAXONOMY-V1"
+  status: "draft/control"
+  adoption_status: "proposal-only"
+  exact_primary_classes:
+    - "added_source_structure"
+    - "representative_irrelevance"
+    - "dynamical_symmetry_breaking"
+    - "probabilistic_selection"
+    - "scoped_obstruction"
+  primary_class_count: 5
+  primary_order:
+    - "representative_irrelevance"
+    - "probabilistic_selection"
+    - "dynamical_symmetry_breaking"
+    - "added_source_structure"
+    - "scoped_obstruction"
+  primary_cardinality: 1
+  unclassified_fails_closed: true
+  ambiguous_fails_closed: true
+  supporting_classes_require_overlap_rationale: true
+  nonvacuous_representative_irrelevance_required: true
+  explicit_dynamics_or_state_required: true
+  explicit_measure_or_kernel_required: true
+  scoped_reopening_criteria_required: true
+  assumption_cost_vector_component_count: 10
+  status_axis_count: 10
+  claim_layer_count: 5
+  worked_example_count: 5
+  child_control_count: 7
+  task_local_check_count: 15
+  task_local_failed_check_count: 0
+  latex_compile_status: "PASS"
+  p3_t01_executed: true
+  p3_t02_executed: false
+  p3_t03_executed: false
+  current_ontology_derives_taxonomy_mechanisms: false
+  physical_gauge_status_established: false
+  general_EqSrc_discharged: false
+  scientific_ledgers_changed: false
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-022-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Deterministic five-class primary-class normal form"
+    summary: "Under the evidence-complete input contract, RI-PS-DSB-AS-SO precedence returns exactly one primary class or the fail-closed unclassified result."
+    hypotheses:
+      - "The source burden record and target type are fixed and hash-bound."
+      - "Each asserted class predicate carries complete typed evidence."
+      - "Representative irrelevance is nonvacuous and probability or dynamics labels include their required mechanism data."
+    conclusion: "The finite ordered predicate list has one least satisfied index when nonempty, and its explicit else branch prevents unsupported classification."
+    proof_summary: "Finite order gives uniqueness of the least satisfied predicate; evidence completeness and the else branch make ambiguity or missing support fail closed."
+    limitation: "The theorem proves classification determinism under the input contract, not physical truth, ontology completeness, mechanism adoption, or general EqSrc."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260720-022-001"
+    payload_type: "theorem"
+    object_name: "Deterministic five-class primary-class normal form"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex"
+    burden_effect: "narrows"
+    summary: "Turns the selector theorem into an exact normalized decision rule with evidence-complete branches and fail-closed output."
+  - payload_id: "PAYLOAD-RT-20260720-022-002"
+    payload_type: "definition"
+    object_name: "Five selector-resolution evidence predicates and componentwise cost type system"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_decision_schema_v1.yaml"
+    burden_effect: "narrows"
+    summary: "Defines required evidence failure conditions overlap rules claim layers status axes and authority guards for all five classes."
+  - payload_id: "PAYLOAD-RT-20260720-022-003"
+    payload_type: "finite_model"
+    object_name: "Five one-class controls plus two child overlap controls"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_worked_examples_v1.yaml"
+    burden_effect: "stress_tests"
+    summary: "Checks marked C2 constant-K double-well C3 probability and fixed-domain obstruction classifications while preserving overlap evidence."
+  - payload_id: "PAYLOAD-RT-20260720-022-004"
+    payload_type: "dependency_map_update"
+    object_name: "P3-T01 completion and P3-T02 dependency route"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_compact_receipt.json"
+    burden_effect: "selects_next"
+    summary: "Makes only P3-T02 immediately ready; P3-T03 and P3-T04 remain dependency-blocked."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Turn the selector theorem into an actionable research decision framework."
+  explanation: "P3-T01 supplies a proposal-only decision framework and new normal-form theorem. It does not derive or adopt a source selector package or general EqSrc."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A proposal-only taxonomy does not derive or adopt the source category selector mechanisms or general EqSrc."
+  downstream_unlocked:
+    - "P3-T02 minimal source-extension lattice only"
+  downstream_still_blocked:
+    - "P3-T03 representative-irrelevance theorem until P3-T02 completes"
+    - "P3-T04 probability or dynamics alternatives until P3-T02 completes"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "Both authoritative scientific ledgers remain unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "proposal category selector mechanisms and extensions remain unadopted"
+  - burden: "Source equivalence EqSrc"
+    status: "five-class decision taxonomy exists; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; taxonomy labels provide no localized response law"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no construction or promotion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "open; finite controls validate classification logic only"
+  - burden: "benchmark promotion"
+    status: "blocked by missing selector-law adoption, general EqSrc, and downstream derivations"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact candidate-family freezes preserved; P3-T02 is a distinct source-extension-lattice construction"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  prior_attempts_considered:
+    - "RT-20260718-038 through RT-20260718-047"
+    - "RT-20260720-009 through RT-20260720-022"
+  freeze_if:
+    - "A future packet repeats the five-class definitions without new lattice theorem candidate construction factorization or measure or dynamics evidence."
+    - "An inventoried frozen distinguished-choice family is renamed or repackaged without a recorded reopening criterion."
+  do_not_freeze_if:
+    - "P3-T02 constructs and mechanically checks a source-extension partial order with new assumption and symmetry-reduction payload."
+    - "A future packet proves an evidence-complete RI PS DSB AS or SO result on a newly declared hash-bound burden."
+  freeze_decision: "not_frozen"
+  decision_reason: "P3-T02 is non-orbital because it must construct a partial order over exact additions and compute finite symmetry reductions rather than repeat taxonomy prose."
+  next_allowed_route: "candidate_constructor"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p3_t01_taxonomy_completed_p3_t02_extension_lattice_selected"
+  prior_related_tasks:
+    - "RT-20260718-038 through RT-20260718-047"
+    - "RT-20260720-009 through RT-20260720-022"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P3-T01 ends classification ambiguity; P3-T02 must add a mechanically checked partial order and finite symmetry-reduction evidence rather than another candidate narrative."
+  next_role_consequence: "candidate-constructor@0.2.0 for v21 P3-T02 only"
+
+selected_next_route:
+  route_id: "v21_p3_t02_minimal_source_extension_lattice"
+  route_label: "ontology-law-research-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P3-T02"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make the mathematical and ontological price of each selector repair explicit."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Order roots orientations gradings measures states boundary data and dynamics by a mechanically checked assumption-inclusion partial order and finite symmetry reduction without forcing incomparable additions into a false total order."
+  source_handoff: "research_control/handoffs/handoff-0792.yaml"
+
+claim_boundary:
+  allowed_claims:
+    - "P3-T01 defines exactly five normalized primary route classes."
+    - "The normal form is deterministic under its declared completeness and evidence hypotheses."
+    - "Five finite or toy controls classify consistently."
+    - "Only P3-T02 is immediately dependency-ready."
+  forbidden_claims:
+    - "a class label as ontology or source-law adoption"
+    - "added source structure as derived from the baseline ontology"
+    - "representative irrelevance without nonvacuous factorization or complete declared independence"
+    - "structural automorphisms as physical gauge"
+    - "an invariant probability law as a deterministic point"
+    - "a branch as dynamically selected without explicit evolution state data and stability"
+    - "a scoped obstruction as future source-extension impossibility or global theory rejection"
+    - "P3-T02 P3-T03 or P3-T04 execution"
+    - "general EqSrc discharge or scientific-ledger change"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+  claim_status: "draft/control"
+  adoption_status: "proposal-only"
+  physics_promotion_authorized: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "P3-T01 classifies lawful route evidence and creates no ontology adoption physical-gauge claim general EqSrc discharge scientific-ledger delta downstream GR promotion publication global no-go or completed derivation."
+  forbidden_conclusions:
+    - "current ontology derives or adopts any of the five mechanisms"
+    - "the taxonomy establishes a physical gauge quotient"
+    - "the taxonomy supplies empirical adequacy or exact-GR derivation"
+    - "P3-T02 P3-T03 or P3-T04 is complete"
+    - "general EqSrc or downstream GR is discharged"
+    - "M_src adoption"
+    - "g_eff construction or promotion"
+    - "matter coupling derivation"
+    - "Einstein equations derivation"
+    - "a scoped obstruction is global"
+    - "future source-extension impossibility or global theory rejection"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+
+no_target_import_audit:
+  explicit_target_import_found: false
+  explicit_process_import_found: false
+  distinction: "The taxonomy is defined from source-domain selector output and route types. Task roles validators registries handoffs and desired GR outcomes provide no scientific premise."
+no_target_import_audit_scope:
+  forbidden_source_classes:
+    - "target_atlas"
+    - "target_metric"
+    - "benchmark_success"
+    - "candidate_reconstruction"
+    - "generated_derivative"
+    - "registry_metadata_authority"
+    - "role_authority"
+    - "validation_authority"
+  result: "No target or process import is present in the formal class predicates; future class applications still require their own audit."
+
+human_gate_request:
+  required_before_adoption: true
+  requested_decision: "none in P3-T01"
+  exact_requested_ontology_edit: ""
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  independent_replication_claim_authorized: false
+  human_endorsement_claim_authorized: false
+  physical_gauge_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  theorem_or_atlas_repair_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 22 lease parity, immutable route identity, max reasoning effort, repository binding, clean start, predecessor checkpoint, and single consumption were verified before work."
+      - "Memory preflight refreshed local retrieval and inspected the registered current frontier and v21 implementation plan."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required child perspectives completed and five conflicts were resolved in one parent review round."
+      - "The task-local validator passes all 15 taxonomy, schema, worked-control, source-hash, synthesis, and claim-boundary checks."
+      - "The registered TeX source compiles successfully to a five-page local scratch PDF."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Memory, renderer, graph, project-change, signal-parity, documentation-impact, and whitespace checks were executed before the aggregate validation repair."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains to run after the repaired completed-state validations pass."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, and claim graph were regenerated and checked before aggregate validation."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only both passed after source registration."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passed after replacing one literal overclaim trigger in the current handoff with equivalent scoped prohibition language."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 943
+    relationship_row_count: 4673
+    semantic_row_count: 943
+    vault_row_count: 943
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 3
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+    refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"lawful selector resolution classes added source structure representative irrelevance dynamical symmetry breaking probabilistic selection scoped obstruction\" --limit 10 --json"
+      query_type: "search"
+      query_text: "lawful selector resolution classes added source structure representative irrelevance dynamical symmetry breaking probabilistic selection scoped obstruction"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "7c7b0d0721675c78bbf312603db332d1f7e3c10a6ce2ca0bedba25e1684a1b10"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian wiki, semantic SQLite, and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and three local-cache-only freshness warnings were refreshed to a clean local retrieval state."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"lawful selector resolution classes added source structure representative irrelevance dynamical symmetry breaking probabilistic selection scoped obstruction\" --limit 10 --json"
+    status: "PASS"
+    summary: "Resolved and inspected the registered current frontier and v21 implementation plan."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-022/artifacts/validate_eqsrc_selector_resolution_taxonomy.py"
+    status: "PASS"
+    summary: "The task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-022/artifacts/validate_eqsrc_selector_resolution_taxonomy.py --write-report --json"
+    status: "PASS"
+    summary: "Passed 15 of 15 checks across five-class exactness, evidence completeness, overlap guards, worked controls, source hashes, synthesis, and claim boundaries."
+  - command: "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-022-latex research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex"
+    status: "PASS"
+    summary: "Compiled the registered TeX source to a five-page local scratch PDF."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "Regenerated tracked memory derivatives and registries after source registration."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Validated tracked memory sources, registries, relationships, and generated derivatives."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "Confirmed an empty project-improvement signal set with registry parity."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "Validated the task-local documentation-impact receipt against the deterministic classifier."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "No current-control hard failures remain; historical warnings do not expand P3-T01 authority."
+
+source_hash_parity:
+  status: "PASS"
+  checked_source_count: 9
+  distance_to_gr_ledger_hash: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  canonical_ontology_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+  p2_t03_theorem_hash: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  p2_t07_stress_hash: "d519bcc9534af3b2ca3e3d44604bd56bf72c425e0d06322c33cc7e66abfd2b49"
+  p2_t08_review_hash: "25e8e0ec587c72c3d2d7f2269ba2646986828393054f98ce4e82dc9da5b52645"
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_validation.json"
+  local_validator_report_hash: "069d08be8073945729d73fe2b23219370b059b0dd84d1d81c4acea594b1d9bb6"
+  task_local_check_count: 15
+  task_local_failed_check_count: 0
+  latex_compile_status: "PASS"
+  latex_page_count: 5
+  validation_status: "PASS"
+  final_repository_validation_status: "PASS"
+
+validators_run:
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-022/artifacts/validate_eqsrc_selector_resolution_taxonomy.py"
+  - ".venv/bin/python research_control/tasks/RT-20260720-022/artifacts/validate_eqsrc_selector_resolution_taxonomy.py --write-report --json"
+  - "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-022-latex research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - "git diff --check"
+required_validators:
+  - "task_local_validator"
+  - "latex_compile"
+  - "five_class_exactness"
+  - "class_evidence_completeness"
+  - "overlap_and_primary_class_guards"
+  - "worked_example_consistency"
+  - "source_hash_parity"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_validation"
+  - "full_research_control_validation"
+  - "physics_progress_metrics"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+documentation_impact_id: "DI-RT-20260720-022-001"
+documentation_update_required: true
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  rationale: "No project-system defect was identified."
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260720-022"
+  latest_research_handoff_id: "handoff-0792"
+  latest_research_next_action: "Run exactly one bounded v21 P3-T02 candidate-constructor packet constructing the minimal source-extension lattice for roots orientations gradings measures states boundary data and dynamics with a mechanically checked partial order and finite symmetry reductions."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+notes: "Completed only P3-T01. The governed checkpoint remains the final transaction step and does not broaden scientific authority."

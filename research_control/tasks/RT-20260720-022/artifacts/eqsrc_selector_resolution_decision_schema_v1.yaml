@@ -1,0 +1,223 @@
+schema_id: "EQSRC-SELECTOR-RESOLUTION-DECISION-SCHEMA-V1"
+taxonomy_id: "EQSRC-SELECTOR-RESOLUTION-TAXONOMY-V1"
+task_id: "RT-20260720-022"
+plan_task_id: "P3-T01"
+status: "draft/control"
+adoption_status: "proposal-only"
+purpose: "Normalize one declared canonical-choice burden into exactly one primary lawful resolution class while retaining justified supporting mechanisms."
+input_contract:
+  required_fields:
+    - "record_id"
+    - "baseline_domain"
+    - "baseline_domain_hashes"
+    - "burden_statement"
+    - "requested_result_kind"
+    - "eligible_choice_space"
+    - "declared_symmetry_or_morphism_scope"
+    - "downstream_observable_or_relation"
+    - "mechanism_claims"
+    - "evidence_refs"
+    - "assumption_delta"
+    - "assumption_cost_vector"
+    - "claim_layer_status"
+    - "authority_flags"
+  requested_result_kind_enum:
+    - "downstream_observable_or_relation"
+    - "deterministic_point_or_representative"
+    - "probability_law_or_kernel"
+    - "dynamically_selected_state_or_sector"
+    - "scoped_disposition"
+  fail_closed_conditions:
+    - "baseline domain or its source hashes are absent"
+    - "the target result kind is absent or ambiguous"
+    - "a mechanism claim lacks its class-specific evidence"
+    - "an assumption delta is omitted or labeled as a derivation without evidence"
+    - "more than one primary class is supplied"
+    - "no primary class is supported"
+    - "a supporting class lacks an overlap rationale"
+    - "a protected authority flag is true without its exact authorization record"
+status_axes:
+  required:
+    - "definition_status"
+    - "existence_status"
+    - "uniqueness_status"
+    - "naturality_status"
+    - "covariance_status"
+    - "robustness_status"
+    - "dynamics_status"
+    - "operational_status"
+    - "empirical_status"
+    - "authority_status"
+  rule: "No value on one axis entails a stronger value on another axis."
+claim_layer_status:
+  required_layers:
+    - "ontology"
+    - "model"
+    - "physical"
+    - "empirical"
+    - "authority"
+  rule: "A model-layer class predicate does not establish any stronger ontology, physical, empirical, or authority-layer conclusion."
+primary_classes:
+  - class_id: "added_source_structure"
+    short_code: "AS"
+    result_kind: "deterministic_point_or_representative"
+    decision_predicate: "A target-neutral static source extension is declared before evaluation, its provenance and symmetry reduction are explicit, and a natural selector exists on the extended domain because of that added datum."
+    necessary_evidence:
+      - "baseline and extended source signatures"
+      - "forgetful or reduct map from the extension to the baseline"
+      - "declared extension provenance independent of the desired target answer"
+      - "automorphism or morphism change induced by the added datum"
+      - "selector construction and naturality proof on the extended domain"
+      - "assumption-strength and minimality cost"
+    rejection_conditions:
+      - "the extension records the desired answer without independent source meaning"
+      - "the selector is only defined on the baseline while using undeclared data"
+      - "naturality on the extended morphism class is unproved"
+    route_consequence: "Send candidate additions to P3-T02 for assumption-strength and symmetry-reduction ordering."
+  - class_id: "representative_irrelevance"
+    short_code: "RI"
+    result_kind: "downstream_observable_or_relation"
+    decision_predicate: "The downstream observable or relation is proved independent of every admissible representative or selector, so no point selection is needed."
+    necessary_evidence:
+      - "complete admissible choice or selector domain"
+      - "a factorization through an orbit or quotient, or an all-choice equality proof"
+      - "naturality or congruence of the induced quotient-level object"
+      - "nonempty-domain guard when a singleton image is claimed"
+    rejection_conditions:
+      - "irrelevance is asserted by calling the symmetry gauge"
+      - "only sampled representatives agree"
+      - "the image is called unique when no admissible selector exists"
+    route_consequence: "Send the factorization burden to P3-T03 after P3-T02 is complete."
+  - class_id: "dynamical_symmetry_breaking"
+    short_code: "DSB"
+    result_kind: "dynamically_selected_state_or_sector"
+    decision_predicate: "An explicit source-side evolution law plus declared state, initial or boundary data yields a selected state, orbit, phase, or sector with a stated stability and covariance regime."
+    necessary_evidence:
+      - "source state space and symmetry action"
+      - "evolution law or action with well-posedness regime"
+      - "initial, boundary, phase, or state data and their provenance"
+      - "selection or asymptotic convergence theorem within a declared regime"
+      - "stability and robustness statement"
+      - "equivariance or explicit symmetry-breaking statement"
+    rejection_conditions:
+      - "a static minimizer is called dynamically selected without an evolution law"
+      - "branch choice is hidden in initial or boundary data"
+      - "stability or selection regime is absent"
+    route_consequence: "Send exact dynamics and state-data requirements to P3-T04 after P3-T02."
+  - class_id: "probabilistic_selection"
+    short_code: "PS"
+    result_kind: "probability_law_or_kernel"
+    decision_predicate: "A normalized source-defined probability measure or Markov kernel is natural or invariant on the declared domain; the result is distributional rather than a deterministic point."
+    necessary_evidence:
+      - "measurable eligible-choice spaces"
+      - "normalized probability measures or Markov kernels"
+      - "source provenance of the measure or kernel"
+      - "naturality, equivariance, or stationarity proof"
+      - "sampling semantics and seed or noise boundary when samples are used"
+      - "uniqueness or nonuniqueness status of the law"
+    rejection_conditions:
+      - "an invariant distribution is reported as a canonical point"
+      - "uniformity is assumed without a finite symmetry or other source-side measure principle"
+      - "sampling dependence is omitted"
+    route_consequence: "Send exact measure or kernel requirements to P3-T04 after P3-T02."
+  - class_id: "scoped_obstruction"
+    short_code: "SO"
+    result_kind: "scoped_disposition"
+    decision_predicate: "A theorem or exhaustive countermodel establishes failure for an exact mechanism, source domain, morphism or variation class, and result kind; no positive class is established in that same packet."
+    necessary_evidence:
+      - "exact quantified domain and mechanism"
+      - "theorem with hypotheses and proof or an exhaustive bounded countermodel"
+      - "failed positive-class predicates"
+      - "preserved negative result"
+      - "specific reopening criteria"
+    rejection_conditions:
+      - "a fixed-domain result is generalized to every future source extension"
+      - "absence of local data is treated as an impossibility proof"
+      - "a failed candidate is reported as failure of the whole research program"
+    route_consequence: "Preserve the scoped negative result and reopen only under a named changed assumption, domain, target, or mechanism."
+normalization_algorithm:
+  candidate_predicates:
+    RI: "requested_result_kind is downstream_observable_or_relation and the representative-independence evidence predicate passes"
+    PS: "requested_result_kind is probability_law_or_kernel and the probability evidence predicate passes"
+    DSB: "requested_result_kind is dynamically_selected_state_or_sector and the dynamics evidence predicate passes"
+    AS: "requested_result_kind is deterministic_point_or_representative and the added-structure evidence predicate passes"
+    SO: "requested_result_kind is scoped_disposition and the scoped-obstruction evidence predicate passes while no positive predicate is asserted as established"
+  ordered_primary_rule:
+    - "Choose RI when the downstream burden is eliminated without selecting a representative."
+    - "Otherwise choose PS when the claimed result is a probability law or kernel, even if the measure is added structure."
+    - "Otherwise choose DSB when a state or sector is selected by explicit evolution, even if state or boundary data are added structure."
+    - "Otherwise choose AS when a deterministic point selector depends on a declared static source extension."
+    - "Otherwise choose SO only for an established scoped negative disposition."
+    - "Otherwise reject the record as unclassified."
+  uniqueness_rule: "Exactly one ordered branch must be the primary class. Other satisfied predicates may be listed only as supporting classes with an explicit overlap rationale and assumption cost."
+  overlap_examples:
+    - primary: "probabilistic_selection"
+      supporting: ["added_source_structure"]
+      rationale: "The measure is additional source data, but the scientific output is a probability law rather than a point."
+    - primary: "dynamical_symmetry_breaking"
+      supporting: ["added_source_structure"]
+      rationale: "The evolution and state data extend the baseline, but selection is attributed to the declared dynamics."
+    - primary: "representative_irrelevance"
+      supporting: ["scoped_obstruction"]
+      rationale: "A deterministic selector may remain obstructed, while the actual downstream relation factors through the quotient and needs no selector."
+assumption_cost_fields:
+  required:
+    - "assumption_id"
+    - "introduced_structure"
+    - "source_provenance"
+    - "baseline_derivation_status"
+    - "symmetry_effect"
+    - "target_dependence_check"
+    - "necessity_or_minimality_status"
+    - "reversibility_or_reopening_condition"
+assumption_cost_vector:
+  comparison_rule: "Compare components without collapsing unlike assumptions to an unsupported scalar; preserve incomparability."
+  required_components:
+    source_signature_delta:
+      allowed_values: ["none", "conservative_definitional_extension", "new_source_primitive", "protected_ontology_change"]
+    selector_or_readout_law_delta:
+      allowed_values: ["none", "conditional_theorem_only", "new_proposal_law", "protected_adoption"]
+    state_or_boundary_data_delta:
+      allowed_values: ["none", "declared_state", "declared_initial_or_boundary_data", "uncontrolled_hidden_state"]
+    dynamics_delta:
+      allowed_values: ["none", "declared_deterministic_evolution", "declared_stochastic_evolution", "missing"]
+    probability_delta:
+      allowed_values: ["none", "finite_simplex", "measure_space_and_kernel", "unspecified_randomness"]
+    variation_class_delta:
+      allowed_values: ["none", "declared_restriction", "declared_extension", "undeclared_change"]
+    set_theoretic_choice_delta:
+      allowed_values: ["none", "finite_choice", "supplied_choice_tuple", "explicit_choice_principle", "unacknowledged"]
+    empirical_calibration_delta:
+      allowed_values: ["none", "proposal_only_parameter", "empirically_calibrated_input", "missing_required_calibration"]
+    target_import_risk:
+      allowed_values: ["none_found_under_audit", "open", "target_correlated_input", "forbidden_target_import"]
+    human_authority_required:
+      allowed_values: ["no_for_classification", "yes_for_adoption", "yes_before_evaluation_can_continue"]
+  fail_values:
+    - "protected_ontology_change without exact human authority"
+    - "protected_adoption without exact human authority"
+    - "uncontrolled_hidden_state"
+    - "missing required dynamics"
+    - "unspecified_randomness"
+    - "undeclared variation change"
+    - "unacknowledged choice"
+    - "missing required calibration"
+    - "forbidden target import"
+authority_guards:
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  physical_gauge_claim_authorized: false
+  scientific_ledger_change_authorized: false
+  physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  publication_authorized: false
+  completed_derivation_claim_authorized: false
+  global_no_go_authorized: false
+completion_contract:
+  primary_class_count: 1
+  supporting_class_count: "zero_or_more"
+  exact_class_count: 5
+  unclassified_is_valid: false
+  ambiguous_is_valid: false
+  class_label_implies_adoption: false
+  next_dependency_ready_item: "P3-T02"

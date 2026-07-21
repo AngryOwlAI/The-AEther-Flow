@@ -452,6 +452,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS` `research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex`
 - `TEX-V21-P2-T06-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_v1.tex`
 - `TEX-V21-P2-T07-EQSRC-SELECTOR-THEOREM-REFUTER-STRESS` `research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex`
+- `TEX-V21-P3-T01-EQSRC-SELECTOR-RESOLUTION-TAXONOMY` `research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1477,6 +1478,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS` `wiki/tex/tex-v21-p2-t04-eqsrc-finite-countermodel-atlas.md`
 - `WIKI-TEX-V21-P2-T06-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `wiki/tex/tex-v21-p2-t06-eqsrc-selector-theorem-smuggling-audit.md`
 - `WIKI-TEX-V21-P2-T07-EQSRC-SELECTOR-THEOREM-REFUTER-STRESS` `wiki/tex/tex-v21-p2-t07-eqsrc-selector-theorem-refuter-stress.md`
+- `WIKI-TEX-V21-P3-T01-EQSRC-SELECTOR-RESOLUTION-TAXONOMY` `wiki/tex/tex-v21-p3-t01-eqsrc-selector-resolution-taxonomy.md`
 
 ## project_control
 

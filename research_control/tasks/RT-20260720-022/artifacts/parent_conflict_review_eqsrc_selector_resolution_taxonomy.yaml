@@ -1,0 +1,67 @@
+artifact_id: "PARENT-CONFLICT-REVIEW-EQSRC-SELECTOR-RESOLUTION-TAXONOMY-001"
+taxonomy_id: "EQSRC-SELECTOR-RESOLUTION-TAXONOMY-V1"
+task_id: "RT-20260720-022"
+job_id: "AJ-RT-20260720-022-001"
+status: "completed"
+resolution_rounds: 1
+reviewed_children:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260720-022/artifacts/child_phys_math_eqsrc_selector_resolution_taxonomy.yaml"
+    sha256: "df9e478bee797339a634211d444d462b7afe07c90b28a791bc3e79f38b8fae2a"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260720-022/artifacts/child_phys_phil_eqsrc_selector_resolution_taxonomy.yaml"
+    sha256: "a3ddee77187ab6fbd91e4c2a63e6e92738dcd0baca5739acda5ade232219cada"
+    status: "completed"
+shared_consensus:
+  - "The lawful primary class set is exactly added_source_structure, representative_irrelevance, dynamical_symmetry_breaking, probabilistic_selection, and scoped_obstruction."
+  - "A valid terminal record has exactly one primary class; unclassified or ambiguous records fail closed."
+  - "The primary order is representative irrelevance, probabilistic selection, dynamical symmetry breaking, added source structure, then scoped obstruction."
+  - "Supporting classes retain auxiliary mechanisms and their independent evidence and assumption costs."
+  - "Representative irrelevance must be nonvacuous and prove complete declared output independence or quotient factorization."
+  - "Dynamics and probability require explicit state, evolution, measure, kernel, and interpretation data appropriate to the claim."
+  - "A scoped obstruction never globalizes beyond its proved domain and quantifiers."
+  - "No class label supplies ontology adoption, physical-gauge meaning, empirical adequacy, general EqSrc discharge, Distance-to-GR progress, promotion, or publication authority."
+conflicts:
+  - conflict_id: "PCR-01-TARGET-TYPE-GRANULARITY"
+    math_position: "Distinguish six fine-grained target types, including deterministic downstream output and quotient observable."
+    philosophy_position: "Classify by the operative resolution and the claim layer actually discharged."
+    resolution: "The fused machine schema uses five top-level requested-result kinds aligned to the five primary branches, with quotient and deterministic downstream outputs represented under downstream_observable_or_relation and further typed in mechanism evidence."
+    preservation: "The mathematical fine distinctions remain mandatory evidence fields and cannot be erased by the top-level enum."
+    status: "resolved"
+  - conflict_id: "PCR-02-ASSUMPTION-COST-REPRESENTATION"
+    math_position: "Use a componentwise assumption-cost vector and preserve incomparability."
+    philosophy_position: "Track provenance, ontology status, physical meaning, empirical bridge, and authority separately."
+    resolution: "The fused schema requires both per-assumption provenance records and a componentwise vector; it separately requires ontology, model, physical, empirical, and authority claim-layer status."
+    preservation: "No scalar ranking is introduced; P3-T02 owns any partial ordering."
+    status: "resolved"
+  - conflict_id: "PCR-03-IRRELEVANCE-NONVACUITY"
+    math_position: "A singleton K-image is not meaningful when the selector domain is empty; require nonvacuous existence or a lift-free quotient construction."
+    philosophy_position: "One relation map is not automatically a complete physical observable algebra or physical gauge quotient."
+    resolution: "The fused RI predicate requires nonempty admissible selectors or a unique lift-free quotient output, complete declared all-choice independence, and explicit limits on physical or empirical interpretation."
+    status: "resolved"
+  - conflict_id: "PCR-04-DYNAMICS-LABEL-STRENGTH"
+    math_position: "Reserve symmetry-breaking language for an equivariant law with a non-invariant realized state; otherwise use dynamics-mediated selection."
+    philosophy_position: "Distinguish spontaneous, explicit, boundary-induced, and noise-induced breaking before physical interpretation."
+    resolution: "DSB remains the plan-mandated route class, while the fused taxonomy requires the weaker dynamics-mediated description unless equivariant-law and non-invariant-state evidence is established; physical terminology remains separately gated."
+    status: "resolved"
+  - conflict_id: "PCR-05-OVERLAP-AND-PRIMARY-CLASS"
+    math_position: "Apply the deterministic precedence rule and retain seven controls, including overlap cases."
+    philosophy_position: "The primary class names the operative resolution; supporting classes expose auxiliary costs and do not inherit evidence."
+    resolution: "The fused normal form implements the shared order, preserves supporting classes with overlap rationales, includes one required control per primary class, and retains the additional overlap controls in the mathematical child plus schema examples."
+    status: "resolved"
+unresolved_blocking_conflicts: []
+parent_decision:
+  synthesis_status: "resolved"
+  fused_taxonomy_path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex"
+  decision_schema_path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_decision_schema_v1.yaml"
+  worked_examples_path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_worked_examples_v1.yaml"
+  next_dependency_ready_item: "P3-T02"
+  p3_t03_dependency_ready: false
+  rationale: "P3-T03 also depends on P3-T02, so only P3-T02 is immediately ready."
+authority_guards:
+  ontology_modification_authorized: false
+  source_law_adoption_authorized: false
+  physics_promotion_authorized: false
+  scientific_ledger_change_authorized: false
+  global_no_go_authorized: false

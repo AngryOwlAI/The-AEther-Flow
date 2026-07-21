@@ -1,0 +1,549 @@
+artifact_id: "CHILD-PHYS-MATH-EQSRC-SELECTOR-RESOLUTION-TAXONOMY-001"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260720-022"
+job_id: "AJ-RT-20260720-022-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+created_at: "2026-07-21T10:18:00Z"
+
+authority:
+  artifact_status: "draft/control"
+  proposal_status: "proposal-only"
+  adoption_status: "blocked_adoption_open_continuation"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Turn the selector theorem into an actionable research decision framework."
+  exact_gr_status: "benchmark_unchanged_and_not_recovered_by_this_artifact"
+  current_ontology_status: "No class, selector law, variation class, dynamics, probability law, quotient, or source extension is derived or adopted by this child artifact."
+  distance_to_gr_delta: false
+  permitted_use: "Bounded mathematical input to the P3-T01 parent synthesis only."
+
+source_contract:
+  fixed_core_theorem:
+    path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    sha256: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+    reused_result: "On the declared certified groupoid G and eligible-choice functor S, deterministic natural point selectors are isomorphic to the product of automorphism fixed loci; downstream relation images are unique only under the stated K-image criterion."
+  refuter_stress:
+    path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex"
+    sha256: "d519bcc9534af3b2ca3e3d44604bd56bf72c425e0d06322c33cc7e66abfd2b49"
+    reused_result: "Stochastic selectors, added marks, partial maps, and altered variation classes are domain changes, not counterexamples to the deterministic theorem."
+  burden_map:
+    path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "6d1df3488be163b72296cf34ee07b979e29b061d508e6a4c271ac3305373aa1f"
+  canonical_ontology:
+    path: "ontology/tex/aether_flow_foundations.tex"
+    sha256: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+    access: "read_only"
+
+declared_mathematical_universe:
+  frozen_problem_record: "B = (G, S, E, K, V, T), where G is the declared source-variation groupoid, S:G->Set is the eligible-choice functor, E:G->Set is the downstream-output functor when present, K:S=>E is the declared readout, V records the admitted variation scope, and T states the success target."
+  deterministic_selector_space: "Sel(B) = Nat(1_G,S)."
+  deterministic_output_map: "K_*:Sel(B)->Nat(1_G,E), with K_*(sigma)=K composed with sigma."
+  probability_extension: "Delta S is the declared probability-measure functor obtained from S only after its measurable or finite-set semantics have been supplied."
+  evidence_domain: "Every classification is relative to an explicitly hashed B and to an explicit target T; changing any component creates a new evaluation domain."
+  target_types:
+    - "deterministic_point"
+    - "deterministic_downstream_output"
+    - "quotient_or_observable"
+    - "dynamically_realized_branch"
+    - "probability_law_or_distributional_output"
+    - "scoped_route_disposition"
+
+global_classification_invariants:
+  exact_class_set:
+    - "added_source_structure"
+    - "representative_irrelevance"
+    - "dynamical_symmetry_breaking"
+    - "probabilistic_selection"
+    - "scoped_obstruction"
+  class_count: 5
+  primary_cardinality: "A valid resolved record has exactly one primary class. An unresolved or invalid record has no primary class, never a guessed class."
+  supporting_cardinality: "Zero or more evidence-complete supporting classes may be recorded, but they do not replace or weaken the primary burden."
+  domain_parity: "All predicates in one classification must be evaluated on the same declared problem record B unless an extension or reduct map is explicitly part of the evidence."
+  no_label_only_resolution: "A class name is not evidence; every required predicate must be discharged or the class evaluates false."
+  no_authority_upgrade: "Mathematical satisfaction of a class predicate supplies a route classification only, not ontology adoption, physical admissibility, gauge status, benchmark recovery, or publication authority."
+  no_globalization: "A counterexample or obstruction may be generalized only to the exact quantified family proved."
+
+assumption_cost_schema:
+  policy: "Record a vector with evidence; do not collapse unlike assumptions to one scalar score."
+  required_fields:
+    source_signature_delta:
+      allowed_values:
+        - "none"
+        - "conservative_definitional_extension"
+        - "new_source_primitive"
+        - "protected_ontology_change"
+    selector_or_readout_law_delta:
+      allowed_values:
+        - "none"
+        - "conditional_theorem_only"
+        - "new_proposal_law"
+        - "protected_adoption"
+    state_or_boundary_data_delta:
+      allowed_values:
+        - "none"
+        - "declared_state"
+        - "declared_initial_or_boundary_data"
+        - "uncontrolled_hidden_state"
+    dynamics_delta:
+      allowed_values:
+        - "none"
+        - "declared_deterministic_evolution"
+        - "declared_stochastic_evolution"
+        - "missing"
+    probability_delta:
+      allowed_values:
+        - "none"
+        - "finite_simplex"
+        - "measure_space_and_kernel"
+        - "unspecified_randomness"
+    variation_class_delta:
+      allowed_values:
+        - "none"
+        - "declared_restriction"
+        - "declared_extension"
+        - "undeclared_change"
+    set_theoretic_choice_delta:
+      allowed_values:
+        - "none"
+        - "finite_choice"
+        - "supplied_choice_tuple"
+        - "explicit_choice_principle"
+        - "unacknowledged"
+    empirical_calibration_delta:
+      allowed_values:
+        - "none"
+        - "proposal_only_parameter"
+        - "empirically_calibrated_input"
+        - "missing_required_calibration"
+    target_import_risk:
+      allowed_values:
+        - "none_found_under_audit"
+        - "open"
+        - "target_correlated_input"
+        - "forbidden_target_import"
+    human_authority_required:
+      allowed_values:
+        - "no_for_classification"
+        - "yes_for_adoption"
+        - "yes_before_evaluation_can_continue"
+  comparison_rule: "Compare vectors componentwise and preserve incomparability. Any forbidden, hidden, missing-required, or unacknowledged value fails the proposed constructive route."
+
+resolution_classes:
+  added_source_structure:
+    class_id: "added_source_structure"
+    abbreviation: "AS"
+    mathematical_role: "A prospectively declared source extension supplies new target-neutral structure on which a deterministic natural selector becomes definable."
+    formal_predicate:
+      name: "P_ASS"
+      satisfied_only_if:
+        - "There is an explicitly declared extended problem B' and a forgetful or reduct map U:B'->B identifying exactly what new source data were added."
+        - "The extended eligible-choice object S' and admitted variations V' are specified, including their compatibility with U."
+        - "A deterministic selector sigma' in Nat(1_G',S') is constructed and its naturality is proved for every arrow in the declared extended variation scope."
+        - "The new datum has transitive source-side provenance and passes a no-target-import audit; it is not merely the desired answer encoded as a mark, alias, lookup, or target-derived label."
+        - "The result states whether the extension is conservative-definitional or a new source primitive and records the resulting assumption-cost vector."
+      not_sufficient:
+        - "Changing coordinates or proof representatives without changing the source object."
+        - "Restricting the variation group while leaving the restriction undeclared."
+        - "Exhibiting one selected example without a naturality proof."
+        - "Naming a target-correlated mark whose source provenance is absent."
+    evidence_burden:
+      required_objects:
+        - "extended source signature and object class"
+        - "forgetful or reduct map"
+        - "extended variation class"
+        - "selector definition"
+        - "naturality theorem with hypotheses and proof"
+        - "source-provenance chain"
+        - "no-target-import and anti-alias audit"
+        - "assumption-cost vector"
+      failure_conditions:
+        - "No explicit reduct map exists."
+        - "The selector fails on one admitted arrow."
+        - "The extension records the desired selection without an independent source-side rule."
+        - "The original and extended domains are conflated."
+    route_consequence_if_primary: "Route to bounded source-extension candidate audit and stress; do not call the extension adopted."
+    minimum_assumption_cost:
+      source_signature_delta_allowed_minima:
+        - "conservative_definitional_extension"
+        - "new_source_primitive"
+      selector_or_readout_law_delta: "new_proposal_law"
+      target_import_risk: "must_be_none_found_under_audit"
+      human_authority_required: "yes_for_adoption"
+
+  representative_irrelevance:
+    class_id: "representative_irrelevance"
+    abbreviation: "RI"
+    mathematical_role: "The declared downstream target is independent of which admissible representative is used, so selecting a representative is unnecessary for that target."
+    formal_predicate:
+      name: "P_RI"
+      branches:
+        selector_image_branch:
+          requirements:
+            - "Sel(B) is nonempty."
+            - "There is a natural output section rho such that K_*(sigma)=rho for every sigma in Sel(B)."
+            - "The universal quantifier covers every admitted component and every admitted selector, not only sampled representatives."
+        quotient_branch:
+          requirements:
+            - "There is a declared natural quotient q:S=>Q and a natural map K_bar:Q=>E with K=K_bar composed with q."
+            - "A unique relevant quotient section rho_Q is constructed without choosing a lift in S."
+            - "The downstream section K_bar composed with rho_Q is therefore computable without a representative selector."
+      satisfied_only_if:
+        - "At least one branch is proved."
+        - "The declared target T is the downstream output or quotient observable, not the unresolved point representative itself."
+        - "Existence is not inferred from an empty image; vacuous constancy is disallowed."
+        - "Any noninvertible-arrow or full-category coherence equations in scope are also discharged."
+      not_sufficient:
+        - "Two tested selectors happen to agree."
+        - "K is constant on one component but not all admitted components."
+        - "Sel(B) is empty, so its image is empty."
+        - "A quotient is named without a factorization theorem or unique quotient output."
+    evidence_burden:
+      required_objects:
+        - "nonvacuous existence proof or lift-free quotient construction"
+        - "global factorization or K-image singleton theorem"
+        - "all-component and all-selector quantifiers"
+        - "target-type declaration"
+        - "full-scope coherence proof"
+        - "assumption-cost vector"
+      failure_conditions:
+        - "The output changes for one admissible representative."
+        - "The proof uses an unacknowledged choice of representative."
+        - "The declared scientific target still requires a point-valued selector."
+        - "The claimed uniqueness is vacuous because no admissible realization exists."
+    route_consequence_if_primary: "Route to proof and stress of the factorization or observable-independence theorem; no added selector law is needed for the declared downstream target."
+    minimum_assumption_cost:
+      source_signature_delta: "none_if_existing_K_is_sufficient"
+      selector_or_readout_law_delta_allowed_minima:
+        - "conditional_theorem_only"
+        - "new_proposal_law"
+      target_import_risk: "must_be_none_found_under_audit"
+      human_authority_required: "no_for_classification"
+
+  dynamical_symmetry_breaking:
+    class_id: "dynamical_symmetry_breaking"
+    abbreviation: "DSB"
+    mathematical_role: "A declared source-side evolution and state or boundary record produces a branch through an equivariant dynamical mechanism."
+    formal_predicate:
+      name: "P_DSB"
+      satisfied_only_if:
+        - "A state functor Z, evolution Phi_t or a well-defined evolution relation, and a readout r:Z->S are explicitly declared."
+        - "Existence and the required uniqueness or branch semantics of the evolution are proved on the stated validity domain."
+        - "The evolution is equivariant under every admitted source variation, with the transformation law for states and initial or boundary data stated."
+        - "A declared initial state, boundary condition, instability, attractor, or basin condition yields the reported branch; its dependence on those data is explicit."
+        - "The selected state is non-invariant under the relevant symmetry while the law is equivariant, or the packet uses the weaker and accurately named dynamics-mediated selection label."
+        - "Stability, basin boundaries, degeneracies, and exceptional states are evaluated."
+      not_sufficient:
+        - "Writing a symmetric potential without state or boundary data."
+        - "Selecting a minimum by hand."
+        - "Calling a static added mark dynamical."
+        - "Assuming the initial condition secretly carries the desired target answer without recording its provenance and cost."
+    evidence_burden:
+      required_objects:
+        - "state space or state functor"
+        - "evolution law"
+        - "well-posedness statement"
+        - "equivariance theorem"
+        - "initial or boundary data provenance"
+        - "branch readout"
+        - "stability or basin analysis"
+        - "exceptional-set analysis"
+        - "assumption-cost vector"
+      failure_conditions:
+        - "Dynamics preserve the symmetry and no symmetry-breaking state datum is supplied."
+        - "Multiple branches remain with no declared realized-state semantics."
+        - "The readout is not natural under an admitted variation."
+        - "The required dynamics or state datum is absent from the source record."
+    route_consequence_if_primary: "Route to a bounded dynamics and stability packet, with any new dynamics or state datum separately classified as source-extension data."
+    minimum_assumption_cost:
+      state_or_boundary_data_delta_allowed_minima:
+        - "declared_state"
+        - "declared_initial_or_boundary_data"
+      dynamics_delta: "declared_deterministic_evolution"
+      source_signature_delta: "record_if_state_or_law_is_new"
+      human_authority_required: "yes_for_adoption"
+
+  probabilistic_selection:
+    class_id: "probabilistic_selection"
+    abbreviation: "PS"
+    mathematical_role: "A natural probability law or stochastic kernel is the declared resolved output, without misrepresenting it as a deterministic invariant point."
+    formal_predicate:
+      name: "P_PS"
+      satisfied_only_if:
+        - "A finite simplex, measurable probability functor, or Markov-kernel category is explicitly defined on the declared source domain."
+        - "A probability-valued natural section mu:1_G=>Delta S or an equivariant normalized kernel is constructed."
+        - "Normalization, positivity, measurability when needed, and pushforward naturality are proved."
+        - "The packet states whether the output is a distribution, an expectation, or a sampled realization and supplies sampling or random-seed semantics when a realization is claimed."
+        - "The declared success target T is probability-valued or is proved to be uniquely determined by the probability law."
+        - "Any uniqueness, stationarity, ergodicity, or convergence assertion is separately proved rather than inferred from invariance."
+      not_sufficient:
+        - "An invariant measure exists but the required target remains a deterministic point."
+        - "Weights are unnormalized or chosen from target data."
+        - "A random draw is invoked without a probability space or kernel."
+        - "Orbit averaging is called a deterministic selector."
+    evidence_burden:
+      required_objects:
+        - "probability carrier and sigma algebra when nonfinite"
+        - "natural measure or kernel"
+        - "normalization and positivity proof"
+        - "pushforward naturality proof"
+        - "distribution-versus-realization declaration"
+        - "downstream sufficiency theorem"
+        - "randomness provenance and assumption-cost vector"
+      failure_conditions:
+        - "The law is not invariant or natural under an admitted variation."
+        - "The distribution leaves the declared downstream target underdetermined."
+        - "A deterministic output is extracted by an undeclared tie-breaker."
+        - "The measure or kernel changes the problem domain without declaring the extension."
+    route_consequence_if_primary: "Route to a bounded probability-law and stochastic-semantics packet; retain the deterministic no-selector result on the original point-valued domain."
+    minimum_assumption_cost:
+      probability_delta_allowed_minima:
+        - "finite_simplex"
+        - "measure_space_and_kernel"
+      selector_or_readout_law_delta: "new_proposal_law"
+      target_import_risk: "must_be_none_found_under_audit"
+      human_authority_required: "yes_for_adoption"
+
+  scoped_obstruction:
+    class_id: "scoped_obstruction"
+    abbreviation: "SO"
+    mathematical_role: "A theorem or countermodel rules out a precisely quantified selector mechanism on a declared domain and thereby supports a bounded route disposition."
+    formal_predicate:
+      name: "P_SO"
+      satisfied_only_if:
+        - "The obstructed claim, domain, quantifiers, assumptions, and variation class are explicit."
+        - "A proof or an auditable countermodel establishes nonexistence, nonuniqueness, incoherence, or failure of sufficiency for that exact claim."
+        - "The minimal failed premise or empty fixed locus, equalizer defect, counterexample, or independence witness is identified."
+        - "Known escapes and domain-changing repairs are listed."
+        - "Reopening criteria state which new datum, law, scope, theorem, or authority would make a genuinely different packet."
+        - "The conclusion uses scoped language and does not claim global impossibility unless a separately quantified global theorem has actually been proved."
+      not_sufficient:
+        - "A constructive attempt did not work."
+        - "No local datum is currently available."
+        - "One finite countermodel is generalized to every ontology or future source extension."
+        - "Validation failure is used as a scientific obstruction."
+    evidence_burden:
+      required_objects:
+        - "exact target proposition"
+        - "scope and assumption ledger"
+        - "proof or executable countermodel"
+        - "minimal failed premise"
+        - "known escape routes"
+        - "reopening criteria"
+        - "route consequence"
+        - "assumption-cost vector"
+      failure_conditions:
+        - "The proof does not cover one stated case."
+        - "The countermodel lies outside the stated domain."
+        - "The conclusion is stronger than its quantifiers."
+        - "A conservative source-side continuation remains possible but is described as impossible."
+    route_consequence_if_primary: "Freeze or retire only the proved scoped mechanism when repetition criteria are met; preserve open continuation for materially new source extensions or laws."
+    minimum_assumption_cost:
+      source_signature_delta: "none_for_the_obstruction_theorem"
+      selector_or_readout_law_delta: "conditional_theorem_only"
+      human_authority_required: "no_for_scoped_classification"
+
+primary_class_decision_normal_form:
+  rule_id: "NF-EQSRC-RESOLUTION-PRIMARY-001"
+  status: "proposal-only mathematical normal form"
+  inputs:
+    - "one hashed problem record B"
+    - "one declared target type T"
+    - "truth values and evidence references for P_ASS, P_RI, P_DSB, P_PS, and P_SO"
+    - "one complete assumption-cost vector for each satisfied predicate"
+  prechecks:
+    - "Reject the record if the five class identifiers are not exact and unique."
+    - "Reject the record if domains are mixed without explicit extension or reduct maps."
+    - "Reject the record if any asserted predicate lacks one required evidence object."
+    - "Reject the record if a protected ontology change or target import is hidden."
+  ordered_rule:
+    - order: 1
+      primary: "representative_irrelevance"
+      condition: "P_RI is proved and the declared downstream target is discharged without choosing a representative."
+      rationale: "If the target factors through a representative-independent output, other choice-producing mechanisms are unnecessary assumptions for that target."
+    - order: 2
+      primary: "probabilistic_selection"
+      condition: "P_PS is proved and the declared target is a probability law, distributional output, or a downstream quantity proved uniquely determined by that law."
+      rationale: "The codomain and success criterion are probability-valued, so a stochastic mechanism is not misclassified as point selection."
+    - order: 3
+      primary: "dynamical_symmetry_breaking"
+      condition: "P_DSB is proved and the declared branch is produced by the stated source-side evolution from declared state or boundary data."
+      rationale: "The operative selector mechanism is evolution; newly added dynamics or state data remain supporting ASS evidence and visible costs."
+    - order: 4
+      primary: "added_source_structure"
+      condition: "P_ASS is proved and a static prospective source extension is the operative reason a deterministic selector exists."
+      rationale: "The resolution is constructive but depends on added source structure rather than dynamics or probability."
+    - order: 5
+      primary: "scoped_obstruction"
+      condition: "P_SO is proved, no preceding predicate discharges the declared target, and the intended result is a bounded route disposition."
+      rationale: "An obstruction is primary only when the packet resolves which scoped route fails; it does not manufacture a constructive selector."
+  else_result: "unclassified_unresolved"
+  supporting_class_rule: "Every other satisfied predicate may be recorded as supporting only with its evidence and cost vector. A failed subroute may carry supporting scoped_obstruction, and PS or DSB commonly carries supporting added_source_structure."
+  exact_one_guard: "Select the first satisfied ordered condition and exactly one primary class. If two records reach different primaries, at least one target declaration, domain map, or predicate judgement differs and must be reconciled before fusion."
+
+normal_form_proposition:
+  payload_type: "theorem_with_hypotheses_and_proof"
+  name: "Deterministic primary-class normal form"
+  hypotheses:
+    - "H1: The problem record B and target T are fixed and hashed."
+    - "H2: Each of the five class predicates is evaluated with complete evidence on B or through an explicit extension or reduct map."
+    - "H3: P_RI is nonvacuous."
+    - "H4: P_PS is used only for a probability-sufficient target."
+    - "H5: P_DSB identifies an explicit evolution and state or boundary record."
+    - "H6: P_ASS passes source provenance and no-target-import checks."
+    - "H7: P_SO is limited to its proved quantifiers."
+    - "H8: The ordered rule above is applied without manual override."
+  conclusion: "The rule returns either exactly one primary class or the fail-closed result unclassified_unresolved; it never returns two primary classes."
+  proof:
+    - "The prechecks either reject the record or yield five well-defined Boolean predicate judgements."
+    - "A finite ordered list has a unique least index among its satisfied conditions."
+    - "The rule assigns the class at that least index, so at most one primary class is returned."
+    - "If no condition is satisfied, the explicit else branch returns unclassified_unresolved, so no unsupported class is guessed."
+    - "If a condition is satisfied, the least-index class is returned, so exactly one primary is returned."
+    - "Supporting classes do not alter primary cardinality because they occupy a separate field."
+  limitation: "The proposition proves classification determinism, not physical truth, ontology admissibility, or completeness of the five classes for every conceivable future theory."
+
+worked_controls:
+  - control_id: "WC-ASS-TWO-POINT-MARK"
+    declared_domain: "C2 acts on D={0,1} by swapping the two points; the unmarked fixed locus is empty."
+    construction: "Extend the source with a prospective mark m=0, require automorphisms to preserve m, and restrict eligibility to {m}."
+    audit_steps:
+      - "The reduct that forgets m returns the unmarked swap problem."
+      - "The marked automorphism group fixes m."
+      - "The selector sigma=m is natural on the marked domain."
+      - "The mark must still pass independent source-provenance and no-target-import audit."
+    predicate_results:
+      added_source_structure: "satisfied_conditionally_on_mark_provenance"
+      representative_irrelevance: "not_evidenced"
+      dynamical_symmetry_breaking: "false_no_dynamics"
+      probabilistic_selection: "false_deterministic_target"
+      scoped_obstruction: "supporting_for_unmarked_domain_only"
+    primary_class: "added_source_structure"
+    assumption_cost_summary: "New mark and restricted mark-preserving variation class; adoption remains human-gated."
+
+  - control_id: "WC-RI-CONSTANT-READOUT"
+    declared_domain: "The trivial group acts on D={0,1}; both values are deterministic natural selectors. Let E={e} and K(0)=K(1)=e."
+    construction: "For every sigma in Sel(B), K_*(sigma) is the same natural output section e."
+    audit_steps:
+      - "Sel(B) has two elements and is therefore nonempty."
+      - "The K-image is the singleton {e}."
+      - "The target is declared to be the downstream E-output, not the point in D."
+    predicate_results:
+      added_source_structure: "false_no_extension"
+      representative_irrelevance: "satisfied_by_nonvacuous_singleton_K_image"
+      dynamical_symmetry_breaking: "false_no_dynamics"
+      probabilistic_selection: "false_no_probability_law"
+      scoped_obstruction: "false_no_route_failure"
+    primary_class: "representative_irrelevance"
+    failure_variant: "If K is injective instead of constant, the two selectors give two outputs and RI fails."
+
+  - control_id: "WC-DSB-DOUBLE-WELL"
+    declared_domain: "The Z2 action sends x to -x on the state line. Evolution is dx/dt=x-x^3 and readout maps the stable equilibria +1 and -1 to two eligible branches."
+    construction: "For x0>0 the trajectory tends to +1; for x0<0 it tends to -1; x0=0 is an exceptional unstable equilibrium."
+    audit_steps:
+      - "The vector field is Z2-equivariant."
+      - "The signs of nonzero initial states define two invariant basins exchanged by Z2."
+      - "The selected equilibrium depends on the declared initial state."
+      - "Without x0 or an equivalent boundary record, the symmetric dynamics alone does not select a branch."
+    predicate_results:
+      added_source_structure: "supporting_if_dynamics_or_initial_state_is_new_source_data"
+      representative_irrelevance: "not_evidenced_without_a_constant_downstream_readout"
+      dynamical_symmetry_breaking: "satisfied_on_the_extended_state_record"
+      probabilistic_selection: "false_deterministic_evolution"
+      scoped_obstruction: "supporting_for_the_state-free_symmetric_problem_only"
+    primary_class: "dynamical_symmetry_breaking"
+    assumption_cost_summary: "Adds an evolution law and signed initial-state datum; no claim is made that current ontology supplies either."
+
+  - control_id: "WC-PS-C3-UNIFORM"
+    declared_domain: "C3 acts transitively on D={0,1,2} by cyclic rotation."
+    construction: "mu=(delta_0+delta_1+delta_2)/3 is fixed under pushforward by every element of C3."
+    audit_steps:
+      - "D has no invariant point because the action is transitive and |D|>1."
+      - "mu is normalized, positive, and invariant."
+      - "The declared target is the invariant probability law, not a deterministic point."
+      - "A sampled realization would require an additional probability space or random-seed semantics."
+    predicate_results:
+      added_source_structure: "supporting_for_probability_semantics"
+      representative_irrelevance: "not_evidenced_for_point_output"
+      dynamical_symmetry_breaking: "false_no_dynamics"
+      probabilistic_selection: "satisfied_for_distributional_target"
+      scoped_obstruction: "supporting_for_deterministic_point_selection"
+    primary_class: "probabilistic_selection"
+    assumption_cost_summary: "Adds the finite probability simplex and distributional success criterion while preserving the deterministic point obstruction."
+
+  - control_id: "WC-SO-TWO-POINT-SWAP"
+    declared_domain: "C2 acts transitively and nontrivially on D={0,1}; the target is a deterministic invariant point selector on this fixed unmarked domain."
+    construction: "The fixed locus D^C2 is empty, hence Nat(1_BC2,D) is empty."
+    audit_steps:
+      - "Each point is moved by the nonidentity group element."
+      - "The fixed-point selector classification therefore proves nonexistence."
+      - "Added marks, probability-valued outputs, dynamics, or a different variation group are explicit domain-changing escape routes."
+    predicate_results:
+      added_source_structure: "false_on_fixed_unmarked_domain"
+      representative_irrelevance: "false_vacuous_empty_selector_image_disallowed"
+      dynamical_symmetry_breaking: "false_no_dynamics"
+      probabilistic_selection: "false_for_deterministic_point_target"
+      scoped_obstruction: "satisfied_for_exact_fixed_domain"
+    primary_class: "scoped_obstruction"
+    reopening_criteria: "A prospectively declared source extension, dynamics, probability target, quotient target, or altered variation scope creates a new packet; none refutes this scoped theorem."
+
+  - control_id: "WC-OVERLAP-RI-OVERRIDES-DSB"
+    declared_domain: "Use the double-well dynamics control, but let K send both stable equilibria to the same downstream output e and declare e as the target."
+    construction: "The dynamics selects a branch, while K is constant over every realized and admissible branch."
+    predicate_results:
+      added_source_structure: "supporting"
+      representative_irrelevance: "satisfied_and_target_discharging"
+      dynamical_symmetry_breaking: "satisfied_but_unnecessary_for_declared_output"
+      probabilistic_selection: "false"
+      scoped_obstruction: "not_primary"
+    primary_class: "representative_irrelevance"
+    overlap_rationale: "The downstream target is computable without branch selection, so the normal form exposes the dynamics as an unnecessary supporting assumption for that target."
+
+  - control_id: "WC-OVERLAP-PS-OVERRIDES-STOCHASTIC-DYNAMICS"
+    declared_domain: "A declared equivariant Markov chain on the C3 control converges to the unique uniform stationary law, and the target is that law."
+    construction: "The transition kernel supplies dynamics, but the resolved codomain is the stationary probability distribution."
+    predicate_results:
+      added_source_structure: "supporting_for_kernel_and_probability_carrier"
+      representative_irrelevance: "not_evidenced"
+      dynamical_symmetry_breaking: "supporting_only_if_a_realized_branch_is_also_analyzed"
+      probabilistic_selection: "satisfied_and_target_discharging"
+      scoped_obstruction: "supporting_for_deterministic_point_selection"
+    primary_class: "probabilistic_selection"
+    overlap_rationale: "The target is a probability law; calling the stationary law a broken-symmetry point would change its type."
+
+machine_audit_requirements:
+  exact_class_count: 5
+  exact_class_ids_required: true
+  one_primary_or_fail_closed: true
+  evidence_reference_required_for_each_satisfied_predicate: true
+  full_assumption_cost_vector_required_for_parent_output: true
+  target_type_required: true
+  domain_hash_required: true
+  extension_map_required_when_domain_changes: true
+  vacuous_representative_irrelevance_forbidden: true
+  deterministic_probability_conflation_forbidden: true
+  undeclared_variation_change_forbidden: true
+  unscoped_obstruction_language_forbidden: true
+
+new_mathematical_payload:
+  payload_type: "theorem_with_hypotheses_and_proof"
+  name: "Deterministic five-class primary-class normal form with fail-closed output"
+  decisiveness: "The ordered rule gives a reproducible primary classification while preserving every supporting mechanism and assumption cost."
+
+key_conclusions:
+  - "The five classes are mechanism-distinct only after the target type and problem domain are fixed."
+  - "Representative irrelevance is nonvacuous output factorization, not absence of selectors."
+  - "Dynamical and probabilistic resolutions require explicit state, evolution, measure, kernel, or sampling semantics and do not refute the fixed deterministic selector theorem."
+  - "Added source structure requires a reduct map and a no-target-import audit."
+  - "Scoped obstruction is a valid route result only at its proved quantifiers and must carry reopening criteria."
+  - "The normal form assigns exactly one primary class and preserves overlaps as supporting classes with visible assumption costs."
+
+forbidden_conclusions:
+  - "No class is adopted."
+  - "No selector law is derived from current ontology."
+  - "No structural automorphism is identified with physical gauge."
+  - "No scoped obstruction is a global no-go theorem."
+  - "No future source extension is declared impossible."
+  - "No general EqSrc theorem is discharged."
+  - "No source metric, effective metric, matter coupling, Einstein equation, exact-GR recovery, or benchmark promotion follows."
+  - "No human-gated ontology or publication decision is made."

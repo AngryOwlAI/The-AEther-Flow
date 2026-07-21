@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-021`
-- Latest handoff: `handoff-0791`
-- Current status: `v21_p2_t08_blind_internal_review_no_blocking_defect_human_review_action_recorded_p3_t01_selected_no_adoption_or_promotion`
+- Active task: `RT-20260720-022`
+- Latest handoff: `handoff-0792`
+- Current status: `v21_p3_t01_five_class_selector_resolution_taxonomy_completed_p3_t02_selected_no_adoption_or_distance_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-021`
-- Latest research handoff: `handoff-0791`
-- Latest research next action: Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction.
+- Latest research task: `RT-20260720-022`
+- Latest research handoff: `handoff-0792`
+- Latest research next action: Run exactly one bounded v21 P3-T02 candidate-constructor packet constructing the minimal source-extension lattice for roots orientations gradings measures states boundary data and dynamics with a mechanically checked partial order and finite symmetry reductions.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p3_t01_lawful_selector_resolution_taxonomy`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p3_t02_minimal_source_extension_lattice`
+- Role family: `candidate-constructor@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Turn the selector theorem into an actionable research decision framework.
+- Milestone burden: Make the mathematical and ontological price of each selector repair explicit.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ae0c1a66c9b22a7409ce2e26c242895d1c7cac26f90055e36688b61cd840b21d`
-- JSON SHA-256: `9f7e13b60eb4c8ce586761136c90209ef1e172360905a611cdc7cc30e22fcfe3`
+- YAML SHA-256: `02e4e13a14746e2d5d79871dbded4e9a4a5208b7851e050d639646fb6488c59e`
+- JSON SHA-256: `d138ee2c97d9d35c6aa9e97a4e8b29dd9339386fb8abc61af20ea7cfd061ec31`
 
 ## Authority Warning
 

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-021` and `handoff-0791`.
+`RT-20260720-022` and `handoff-0792`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-021` |
-| Latest handoff ID | `handoff-0791` |
-| Current status | `v21_p2_t08_blind_internal_review_no_blocking_defect_human_review_action_recorded_p3_t01_selected_no_adoption_or_promotion` |
+| Active task ID | `RT-20260720-022` |
+| Latest handoff ID | `handoff-0792` |
+| Current status | `v21_p3_t01_five_class_selector_resolution_taxonomy_completed_p3_t02_selected_no_adoption_or_distance_delta` |
 | V16 completed | false |
-| Current route family | v21 p3 t01 lawful selector resolution taxonomy |
+| Current route family | v21 p3 t02 minimal source extension lattice |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction. |
-| Required next authority | One P3-T01 ontology-law-research-packet may define and normalize the five lawful selector-resolution classes and their route consequences without adopting any class or selector law. |
-| Next recommended action | Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P3-T02 candidate-constructor packet constructing the minimal source-extension lattice for roots orientations gradings measures states boundary data and dynamics with a mechanically checked partial order and finite symmetry reductions. |
+| Required next authority | One P3-T02 ontology-law-research-packet may construct a proposal-only source-extension partial order assumption-cost table and finite symmetry-reduction witnesses without adopting any extension or forcing incomparable costs into a total order. |
+| Next recommended action | Run exactly one bounded v21 P3-T02 candidate-constructor packet constructing the minimal source-extension lattice for roots orientations gradings measures states boundary data and dynamics with a mechanically checked partial order and finite symmetry reductions. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-021` |
-| Latest research handoff ID | `handoff-0791` |
-| Latest research next action | Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction. |
+| Latest research task ID | `RT-20260720-022` |
+| Latest research handoff ID | `handoff-0792` |
+| Latest research next action | Run exactly one bounded v21 P3-T02 candidate-constructor packet constructing the minimal source-extension lattice for roots orientations gradings measures states boundary data and dynamics with a mechanically checked partial order and finite symmetry reductions. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-021/00_TASK.yaml`.
-- Active task objective: Execute exactly one bounded v21 P2-T08 External Red-Team Reviewer packet that exposes the unchanged P2-T03 theorem package to context-stripped blind internal and bounded fresh-context different-model review, preserves disagreements, and records a precise independent-human-review acquisition action without claiming external replication.
-- Latest handoff path: `research_control/handoffs/handoff-0791.yaml`.
-- Latest handoff summary: RT-20260720-021 completed only v21 P2-T08. Three context-stripped internal AI review arms found no blocking defect or in-scope countermodel, while preserving five nonblocking clarification families and route disagreements. No arm is human or external; a precise human-review acquisition action remains recorded.
-- Current route family: v21 p3 t01 lawful selector resolution taxonomy.
-- Next recommended action: Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction.
+- Active task path: `research_control/tasks/RT-20260720-022/00_TASK.yaml`.
+- Active task objective: Execute exactly one bounded v21 P3-T01 Ontology Formalizer packet defining a normalized five-class selector-resolution taxonomy with exact evidence burdens overlap rules assumption costs route consequences and worked controls without adopting any class or selector law.
+- Latest handoff path: `research_control/handoffs/handoff-0792.yaml`.
+- Latest handoff summary: RT-20260720-022 completed only v21 P3-T01. A theorem-backed machine schema normalizes complete selector burdens into exactly one of five primary classes or fails closed. Two independent child perspectives were fused; five conflicts were resolved; five controls classify one-to-one; and every ontology physics empirical authority and Distance-to-GR boundary remains unchanged.
+- Current route family: v21 p3 t02 minimal source extension lattice.
+- Next recommended action: Run exactly one bounded v21 P3-T02 candidate-constructor packet constructing the minimal source-extension lattice for roots orientations gradings measures states boundary data and dynamics with a mechanically checked partial order and finite symmetry reductions.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction.
+Run exactly one bounded v21 P3-T02 candidate-constructor packet constructing the minimal source-extension lattice for roots orientations gradings measures states boundary data and dynamics with a mechanically checked partial order and finite symmetry reductions.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -347,9 +347,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-021`;
-- latest handoff: `handoff-0791`;
-- current status: `v21_p2_t08_blind_internal_review_no_blocking_defect_human_review_action_recorded_p3_t01_selected_no_adoption_or_promotion`;
+- active task: `RT-20260720-022`;
+- latest handoff: `handoff-0792`;
+- current status: `v21_p3_t01_five_class_selector_resolution_taxonomy_completed_p3_t02_selected_no_adoption_or_distance_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -359,8 +359,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0791.yaml`
-- `research_control/tasks/RT-20260720-021/00_TASK.yaml`
+- `research_control/handoffs/handoff-0792.yaml`
+- `research_control/tasks/RT-20260720-022/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -376,7 +376,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0791*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0792*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
