@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-21T07:00:19Z`
-- Source fingerprint: `8d837353e6880d3616c872e1d6c81512e56c4379ac7865aec16cbd3fa85054a2`
-- Nodes: `20160`
-- Edges: `68911`
+- Generated from tracked state as of: `2026-07-21T07:54:37Z`
+- Source fingerprint: `2a368ba3049b65ff6a42cc7bdeeec985de6181bb451fa39287acdff1b4d9e50c`
+- Nodes: `20191`
+- Edges: `68971`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1020 |
+| `completion_yaml` | 1021 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 789 |
+| `handoff_yaml` | 790 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1020 |
+| `agent_job` | `support_only` | 1021 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10469 |
-| `blocked_burden` | `blocked` | 3848 |
-| `claim_boundary` | `support_only` | 977 |
-| `draft_control_candidate` | `draft_control` | 661 |
+| `artifact` | `support_only` | 10478 |
+| `blocked_burden` | `blocked` | 3859 |
+| `claim_boundary` | `support_only` | 978 |
+| `draft_control_candidate` | `draft_control` | 663 |
 | `draft_control_candidate` | `proposal_only` | 110 |
-| `draft_control_candidate` | `science_draft` | 63 |
-| `frozen_negative` | `frozen_negative` | 123 |
+| `draft_control_candidate` | `science_draft` | 64 |
+| `frozen_negative` | `frozen_negative` | 124 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 789 |
+| `handoff` | `support_only` | 790 |
 | `human_gated_object` | `human_gated` | 432 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 75 |
+| `obstruction` | `blocked` | 76 |
 | `obstruction` | `rejected` | 2 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 33 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 34 |
 | `source_ontology_object` | `canonical_source` | 23 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 326 |
+| `source_ontology_object` | `support_only` | 327 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 959 |
+| `task` | `support_only` | 960 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260720-019`
-- Latest handoff: `handoff-0789`
-- Handoff path: `research_control/handoffs/handoff-0789.yaml`
-- Next action: Run exactly one bounded v21 P2-T07 Refuter packet stressing the unchanged audited theorem under nonfaithful actions partial morphisms multiple components stochastic selectors added marks and altered variation classes. Treat the two uncorrected P2-T04 K metrics as unavailable for selector-induced relation claims and preserve every ontology scientific-ledger proof-authority promotion publication and completed-derivation block.
+- Active task: `RT-20260720-020`
+- Latest handoff: `handoff-0790`
+- Handoff path: `research_control/handoffs/handoff-0790.yaml`
+- Next action: Run exactly one bounded v21 P2-T08 external-review-packet. Give a context-stripped theorem assumptions proof formalization audit and countermodel package to blind internal and epistemically independent reviewers, preserve disagreement, and grant no adoption proof-authority or promotion status.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

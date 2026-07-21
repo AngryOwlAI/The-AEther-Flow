@@ -1,0 +1,113 @@
+{
+  "schema_id": "eqsrc-selector-theorem-stress-cases.v1",
+  "task_id": "RT-20260720-020",
+  "plan_task_id": "P2-T07",
+  "status": "draft/control",
+  "result_classification": "scoped_obstruction",
+  "theorem_input": {
+    "path": "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex",
+    "sha256": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  },
+  "audit_input": {
+    "path": "research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_v1.tex",
+    "sha256": "d093d7b0afbe322cf537644de54f17156ea2427fcc0988f4fc8fb305e93a0f76"
+  },
+  "stress_cases": [
+    {
+      "case_id": "STRESS-NONFAITHFUL-KLEIN-QUOTIENT",
+      "stress_class": "nonfaithful_action",
+      "carrier": [0, 1],
+      "action": {
+        "e": [0, 1],
+        "a": [1, 0],
+        "b": [0, 1],
+        "ab": [1, 0]
+      },
+      "action_kernel": ["e", "b"],
+      "faithful_quotient_action": {
+        "identity_coset": [0, 1],
+        "swap_coset": [1, 0]
+      },
+      "full_action_fixed_locus": [],
+      "quotient_action_fixed_locus": [],
+      "classification": "theorem_survives",
+      "reason": "Fixedness depends on the image permutation group, so quotienting the action kernel preserves the fixed locus."
+    },
+    {
+      "case_id": "STRESS-PARTIAL-SWAP-DOMAIN",
+      "stress_class": "partial_morphism",
+      "carrier": [0, 1],
+      "partial_domain": [0],
+      "partial_map": {"0": 1},
+      "is_total_set_map": false,
+      "has_groupoid_inverse": false,
+      "classification": "outside_theorem_domain",
+      "reason": "A partial operation is not an arrow of the declared Set-valued groupoid action without a separately supplied partial-action category and naturality law."
+    },
+    {
+      "case_id": "STRESS-MULTICOMPONENT-PRODUCT",
+      "stress_class": "multiple_components",
+      "finite_factor_profiles": [
+        {"fixed_locus_sizes": [2, 0], "selector_product_size": 0},
+        {"fixed_locus_sizes": [2, 1], "selector_product_size": 2}
+      ],
+      "infinite_family_choice_guard_preserved": true,
+      "classification": "theorem_survives",
+      "reason": "A multiple fixed locus does not imply global multiplicity when a complementary factor is empty; factorwise nonemptiness for an arbitrary infinite family still needs a product element or suitable choice principle."
+    },
+    {
+      "case_id": "STRESS-STOCHASTIC-TRANSITIVE-C3",
+      "stress_class": "stochastic_selector",
+      "carrier": [0, 1, 2],
+      "generator": [1, 2, 0],
+      "deterministic_fixed_locus": [],
+      "invariant_probability": ["1/3", "1/3", "1/3"],
+      "invariant_probability_verified": true,
+      "classification": "stronger_overread_refuted",
+      "reason": "A transitive three-point orbit has no invariant point but has an invariant uniform probability measure; the deterministic theorem is not a stochastic no-go theorem."
+    },
+    {
+      "case_id": "STRESS-ADDED-MARK-SWAP",
+      "stress_class": "added_mark",
+      "unmarked_carrier": [0, 1],
+      "unmarked_action_generator": [1, 0],
+      "unmarked_fixed_locus": [],
+      "marked_value": 0,
+      "mark_preserving_group": ["identity"],
+      "marked_eligible_singleton": [0],
+      "marked_fixed_locus": [0],
+      "classification": "new_source_extension_domain",
+      "reason": "A selector-relevant mark changes the source object, automorphism group, or eligibility set; a mark that records the answer relocates rather than derives the selection burden."
+    },
+    {
+      "case_id": "STRESS-ALTERED-VARIATION-SUBGROUP",
+      "stress_class": "altered_variation_class",
+      "carrier": [0, 1],
+      "full_group_generator": [1, 0],
+      "full_group_fixed_locus": [],
+      "restricted_identity_subgroup_fixed_locus": [0, 1],
+      "fixed_locus_monotonicity": "D^G subseteq D^H for H subseteq G",
+      "classification": "scope_fragility_not_theorem_failure",
+      "reason": "Narrowing the admitted variation group can create fixed points and widening it can remove them; choosing the variation class is separate source-law data."
+    }
+  ],
+  "ontology_law_failure_branches": {
+    "collapse": "Stochastic orbit averaging collapses point distinctions into one invariant distribution without producing an invariant point.",
+    "nonuniqueness": "The identity-only variation subgroup leaves both choices fixed.",
+    "inverse_defect": "The partial-map fixture lacks a total inverse and is not an arrow of the certified groupoid.",
+    "cocycle_defect": "No partial-action composition or naturality cocycle is supplied for the partial-map fixture.",
+    "finite_variation_fragility": "Changing the admitted variation group from the swap group to its identity subgroup changes the fixed locus from empty to two points."
+  },
+  "authority": {
+    "adoption_status": "blocked_adoption_open_continuation",
+    "canonical_ontology_edit_authorized": false,
+    "source_law_adoption_authorized": false,
+    "general_EqSrc_discharged": false,
+    "distance_to_gr_ledger_changed": false,
+    "metric_use_ledger_changed": false,
+    "proof_authority": false,
+    "physics_promotion_authorized": false,
+    "global_no_go_claim_authorized": false,
+    "future_source_extension_impossibility_authorized": false
+  }
+}

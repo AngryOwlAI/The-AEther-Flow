@@ -1,0 +1,617 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-020-001"
+completion_id: "AJC-AJ-RT-20260720-020-001"
+task_id: "RT-20260720-020"
+task_type: "v21_eqsrc_selector_theorem_refuter_stress"
+decision_id: "DDR-20260720-020"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260720-020"
+status: "completed"
+created_at: "2026-07-21T07:50:31Z"
+started_at: "2026-07-21T07:50:31Z"
+completed_at: "2026-07-21T07:54:37Z"
+objective: "Execute only v21 P2-T07: stress the unchanged audited deterministic selector theorem under nonfaithful actions partial morphisms multiple components stochastic selectors added marks and altered variation classes with the P2-T04 metric-use guard preserved."
+completion_summary: "The unchanged deterministic total-groupoid theorem survives nonfaithful actions and multiple components with its exact product and choice guards. A transitive C3 action has no invariant point but has an invariant uniform probability measure, refuting only a stochastic overread. Partial maps require a new partial-action law; added marks and altered variation classes change source-side data. The exact result is scoped_obstruction, P2-T08 is selected, and no adoption ledger proof-authority or promotion change follows."
+objective_result: "completed_as_scoped_obstruction"
+refuter_loop_classification: "scoped_obstruction"
+stress_result:
+  result_type: "scoped_obstruction"
+  deterministic_theorem_survives: true
+  stronger_stochastic_overread_survives: false
+  partial_action_extension_established: false
+loop_risk_decision:
+  category: "scoped_obstruction"
+  next_route: "refuter_scoped_no_go_or_obstruction"
+  obstruction_summary: "The fixed theorem survives, but its deterministic point-valued total-groupoid conclusion cannot be extended unchanged to stochastic partial marked or altered-variation domains."
+  rationale: "P2-T07 adds two exact lemmas six stress cases and a stochastic boundary countermodel. The plan-selected P2-T08 context-stripped independent review is materially distinct from another construction audit or stress cycle."
+  repeated_burdens:
+    - "current ontology does not derive the proposal category or variation class"
+    - "partial stochastic and marked extensions require distinct source-side laws"
+    - "independent review remains required before any adoption"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T07"
+  recommendation_ids:
+    - "V21-R03"
+    - "V21-R05"
+    - "V21-R07"
+    - "V21-R30"
+  implementation_status: "completed_as_scoped_obstruction"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "P2-T07"
+  next_dependency_work_item: "P2-T08"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 20
+  passes_consumed: 20
+  route_work_item_id: "P2-T07"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "scoped_obstruction"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "source_extension_classification"
+minimum_payload:
+  payload_class: "source_extension_classification"
+  payload_artifact_path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex"
+  payload_summary: "Stress matrix supplies faithful-quotient and variation-subgroup propositions, component controls, a stochastic boundary countermodel, and partial/marked scope guards."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-020/artifacts/child_phys_math_eqsrc_selector_theorem_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260720-020/artifacts/child_phys_phil_eqsrc_selector_theorem_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260720-020/artifacts/parent_conflict_review_eqsrc_selector_theorem_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260720-020/artifacts/parent_fusion_notes_eqsrc_selector_theorem_refuter_stress.md"
+  - "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_stress_cases.json"
+  - "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_compact_receipt.json"
+  - "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_receipt.md"
+  - "research_control/tasks/RT-20260720-020/artifacts/validate_eqsrc_selector_theorem_refuter_stress.py"
+  - "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-020/**"
+  - "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_stress_cases.json"
+  - "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_compact_receipt.json"
+  - "research_control/handoffs/handoff-0790.yaml"
+  - "research_control/handoffs/handoff-0790.md"
+  - "research_control/program_state.yaml"
+artifact_evidence:
+  theorem:
+    path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    sha256: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  audit:
+    path: "research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_v1.tex"
+    sha256: "d093d7b0afbe322cf537644de54f17156ea2427fcc0988f4fc8fb305e93a0f76"
+  fused_stress:
+    path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex"
+    sha256: "d519bcc9534af3b2ca3e3d44604bd56bf72c425e0d06322c33cc7e66abfd2b49"
+  stress_cases:
+    path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_stress_cases.json"
+    sha256: "4b7bc68f625b119060b5abf09066c99a55235fa2676aaa4d01b293ae43eb3bf5"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_compact_receipt.json"
+    sha256: "2dfd8b4b5a72917e3340ed813c3478f90e3fb4fb6f03628d38ae1fdbf74e0cc2"
+  validation:
+    path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_validation.json"
+    sha256: "1d6e6eccc45aec30bd8620c0b5bcb7ab619468f69c3137c55504cd736893ecb4"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260720-020/artifacts/parent_fusion_notes_eqsrc_selector_theorem_refuter_stress.md"
+    sha256: "cf3a2d107ca40e0d39e7a520d1850a62e93ba056cdc2debb2e8588ef45598a71"
+  receipt:
+    path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_receipt.md"
+    sha256: "ac1ada9ad93b990e520439911423e73bc2aef95d49789209f6fb87bb94160691"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-020/artifacts/child_phys_math_eqsrc_selector_theorem_refuter_stress.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-020/artifacts/child_phys_phil_eqsrc_selector_theorem_refuter_stress.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-020/artifacts/parent_conflict_review_eqsrc_selector_theorem_refuter_stress.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    summary: "The parent separated deterministic theorem survival from stochastic partial marked and variation-altered boundary failures."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-020/artifacts/parent_fusion_notes_eqsrc_selector_theorem_refuter_stress.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+stress_scope:
+  stress_case_count: 6
+  failure_branch_count: 5
+  deterministic_theorem_survives: true
+  nonfaithful_fixed_locus_preserved: true
+  multiple_component_product_guard_preserved: true
+  stochastic_overread_refuted: true
+  partial_action_extension_established: false
+  added_mark_changes_domain: true
+  variation_subgroup_monotonicity_established: true
+  p2_t04_uncorrected_metrics_used: false
+  blocking_fixed_theorem_defect_count: 0
+
+refuter_obstruction_record:
+  obstruction_id: "OB-P2T07-DETERMINISTIC-DOMAIN-OVERREAD-001"
+  target_claim: "The fixed deterministic total-groupoid no-selector theorem also excludes invariant stochastic selectors partial-action selectors marked-domain selectors and selectors under altered variation classes."
+  target_milestone: "source_equivalence_eqsrc"
+  failed_premise: "The broader claim silently changes the selector codomain or declared source category and variation data while treating the original point-valued total-groupoid hypotheses as unchanged."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_stress_cases.json"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "No adopted partial-action composition and cocycle law, probability-valued selector law, selector-relevant mark provenance, or current-ontology derivation of the altered variation class."
+  source_extension_repair_possible: "repair_possible"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "not_frozen"
+    decision_reason: "P2-T08 is a materially distinct blind and independent review rather than another construction or stress cycle."
+    next_allowed_route: "freeze_review"
+  route_cycle_control:
+    cycle_family: "eqsrc_selector_candidate_family"
+    current_cycle_step: "p2_t07_refuter_stress_complete"
+    prior_related_tasks:
+      - "RT-20260720-014 through RT-20260720-020"
+    cycle_risk: "high"
+    orbit_avoidance_reason: "The stress adds exact faithful-quotient and subgroup lemmas plus a stochastic boundary countermodel, and next requires context-stripped independent review."
+    next_role_consequence: "external-red-team-reviewer@0.1.0"
+  forbidden_conclusions:
+    - "No canonical ontology edit or source-law adoption."
+    - "No refutation of the fixed deterministic theorem."
+    - "No general EqSrc discharge."
+    - "No physical-gauge identification."
+    - "No scientific-ledger change or proof authority."
+    - "No global theory rejection or future source-extension impossibility."
+    - "No benchmark promotion Gate Chair verdict publication or completed derivation."
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-P2T07-DETERMINISTIC-DOMAIN-OVERREAD-001"
+  scope: "source_extension_candidate"
+  failed_object: "Unqualified extension of the deterministic point-selector theorem across changed codomains arrow semantics marks and variation classes"
+  exact_failure: "The transitive C3 action has no invariant point but has an invariant uniform probability measure, while partial and marked cases require changed theorem data."
+  minimal_counterexample_path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_stress_cases.json"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "new_primitive_required"
+  forbidden_overread: "This scoped boundary result neither refutes the fixed deterministic theorem nor proves global theory rejection or future source-extension impossibility."
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-020-001"
+    payload_type: "lemma"
+    name: "Faithful-quotient fixed-locus invariance"
+    summary: "For an action with kernel N, D^G equals D^(G/N), so nonfaithfulness leaves the theorem unchanged."
+  - payload_id: "NMP-RT-20260720-020-002"
+    payload_type: "lemma"
+    name: "Variation-subgroup fixed-locus monotonicity"
+    summary: "For H subseteq G, D^G is a subset of D^H, and the inclusion can be strict."
+  - payload_id: "NMP-RT-20260720-020-003"
+    payload_type: "countermodel"
+    name: "Transitive C3 stochastic-selector boundary"
+    summary: "No invariant point exists on the three-point orbit, but the uniform probability measure is invariant."
+  - payload_id: "NMP-RT-20260720-020-004"
+    payload_type: "obstruction"
+    name: "Partial-action inverse and cocycle applicability gap"
+    summary: "A proper partial map is outside the declared Set-valued groupoid until new composition inverse-domain and naturality laws are supplied."
+  - payload_id: "NMP-RT-20260720-020-005"
+    payload_type: "finite_model"
+    name: "Component-product and marked-domain boundary matrix"
+    summary: "Finite controls preserve empty-complement and multiplicity guards and show how a mark changes the source domain."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT020-001"
+    payload_type: "lemma"
+    object_name: "Faithful-quotient fixed-locus invariance"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex"
+    burden_effect: "stress_tests"
+    summary: "Shows that the fixed-point theorem does not assume a faithful group action."
+  - payload_id: "PAYLOAD-RT020-002"
+    payload_type: "countermodel"
+    object_name: "STRESS-STOCHASTIC-TRANSITIVE-C3"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_stress_cases.json"
+    burden_effect: "obstructs"
+    summary: "Refutes the probability-valued overread while leaving the point-valued theorem intact."
+  - payload_id: "PAYLOAD-RT020-003"
+    payload_type: "obstruction"
+    object_name: "Deterministic-domain overread obstruction"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex"
+    burden_effect: "narrows"
+    summary: "Separates theorem survival from changed partial stochastic marked and variation-class domains."
+  - payload_id: "PAYLOAD-RT020-004"
+    payload_type: "packet_selection"
+    object_name: "P2-T08 blind independent review route"
+    claim_status: "control"
+    source_path: "research_control/handoffs/handoff-0790.yaml"
+    burden_effect: "selects_next"
+    summary: "Routes context-stripped review instead of another selector construction or stress cycle."
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Determine the precise robustness and limits of the general theorem."
+  missing_source_law: "A current-ontology derivation of the source category variation class selector codomain and any partial stochastic or marked extension laws."
+  underdetermination_statement: "Current ontology does not derive the proposal source category variation class deterministic selector package or altered partial stochastic and marked extensions."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_refutation"
+  candidate_law_refutation:
+    refuted_candidate: "The overread that the deterministic total-groupoid theorem excludes all stochastic partial marked and altered-variation selectors."
+    refuted_overread: "A probability-valued invariant can exist without an invariant point, and partial or marked models require different declared source laws."
+    refutation_basis: "Six exact finite cases plus faithful-quotient and variation-subgroup propositions."
+    surviving_obligations:
+      - "P2-T08 blind and epistemically independent review"
+      - "current-ontology derivation or protected adoption of the source category and variation class"
+      - "separate partial stochastic or marked laws before applying such extensions"
+  failure_branch_stress:
+    collapse: "covered"
+    nonuniqueness: "covered"
+    inverse_defect: "covered"
+    cocycle_defect: "covered"
+    finite_variation_fragility: "covered"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Proposal-only stress and review may proceed; ontology adoption and physical-gauge identification remain human-gated."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "derive general source equivalence without target atlas metric benchmark observer or process import"
+      - "derive downstream M_src g_eff matter coupling and Einstein-equation links before promotion"
+      - "recover the exact-GR benchmark within the final validity regime"
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+  no_target_import_audit:
+    explicit_target_import_found: false
+    explicit_process_import_found: false
+    p2_t04_uncorrected_metrics_used: false
+    distinction: "All stress inputs are finite source-side action and selector-codomain controls; no target or process datum selects a result."
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    result: "No target or process import appears in the six stress cases; all altered-domain conclusions remain proposal-only."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "none in P2-T07"
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "source_extension_refuter_stress"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "EQSRC-SELECTOR-THEOREM-REFUTER-STRESS-V1"
+  item_source_path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex"
+  item_kind: "refuter stress on proposal source-extension theorem"
+  classification: "status_boundary_evidence_only"
+  relation_to_current_ontology: "missing_primitive"
+  relation_to_target_structures: "No target atlas metric observer benchmark physical-gauge or process input occurs in the stress cases."
+  claim_boundary_id: "CB-V21-P2-T07-EQSRC-THEOREM-STRESS-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "The deterministic theorem survives on its declared total groupoid domain, while stochastic partial marked and variation-altered overreads require distinct source laws or fail."
+  forbidden_overreads:
+    - "fixed theorem refuted"
+    - "proposal category or variation class derived or adopted"
+    - "structural automorphisms are physical gauge"
+    - "stochastic selector existence discharges deterministic or physical selection"
+    - "general EqSrc or downstream GR discharge"
+  next_route_if_blocked: "P2-T08 external-red-team-reviewer@0.1.0"
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Determine the precise robustness and limits of the general theorem."
+  explanation: "P2-T07 preserves the deterministic theorem and records a scoped obstruction to broader stochastic partial marked and variation-altered readings; P2-T08 is dependency-ready."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "obstruction_recorded"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A proposal-only theorem stress calibrates scope but neither derives nor adopts the proposal domain or selector nor discharges general EqSrc."
+  downstream_unlocked:
+    - "P2-T08 blind independent review"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "Both authoritative scientific ledgers remain unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "proposal category variation class selector codomain and altered-domain laws remain unadopted"
+  - burden: "Source equivalence EqSrc"
+    status: "deterministic theorem stress complete with scoped overread obstruction; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "historical finite controls preserved without route reopening"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no construction or scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "variation-class dependence is explicit; P2-T08 independent review remains required"
+  - burden: "benchmark promotion"
+    status: "blocked by missing source derivation adoption review and downstream derivations"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact candidate-family freezes preserved; P2-T08 is a distinct context-stripped review route"
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p2_t07_refuter_stress_complete_with_scoped_overread_obstruction_pending_p2_t08_independent_review"
+  prior_related_tasks:
+    - "RT-20260614-055"
+    - "RT-20260718-041"
+    - "RT-20260718-045"
+    - "RT-20260718-047"
+    - "RT-20260720-014 through RT-20260720-020"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P2-T07 adds two exact lemmas, six stress cases, and a stochastic boundary countermodel; P2-T08 strips route context and independently reviews the fixed package."
+  next_role_consequence: "external-red-team-reviewer@0.1.0 for v21 P2-T08 only"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  candidate_freeze_label: "EQSRC-P2-T07-DETERMINISTIC-DOMAIN-STRESS"
+  prior_attempts_considered:
+    - "five stable families and seven immutable candidates in P1-T03"
+    - "P2-T03 complete deterministic proposal theorem"
+    - "P2-T04 finite atlas"
+    - "P2-T05 bounded Lean kernel"
+    - "P2-T06 independent audit"
+    - "P2-T07 altered-domain stress"
+  freeze_if:
+    - "Later work repeats the same six stress classes without materially distinct review or new source-law evidence."
+    - "Later work presents a changed selector codomain or variation class as though it refuted the fixed theorem."
+  do_not_freeze_if:
+    - "P2-T08 executes context-stripped blind and epistemically independent review of the complete package."
+  criteria_evaluated:
+    - "two new mathematical lemmas are present"
+    - "six required altered-domain stress cases are present"
+    - "a minimal stochastic boundary countermodel is present"
+    - "the deterministic theorem survives its declared domain"
+    - "P2-T08 is materially distinct context-stripped independent review"
+  freeze_decision: "not_frozen"
+  decision_reason: "P2-T08 is materially distinct review evidence not conditioned on the current verdict or route history."
+  rationale: "Do not freeze the review route because it tests the complete package without route-history conditioning; freeze repetition of the same construction audit or six-class stress without new evidence."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "freeze_review"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The scoped obstruction calibrates the deterministic theorem domain and supplies boundary cases only. It does not refute the fixed theorem adopt source laws identify gauge discharge EqSrc change ledgers promote publish or complete the derivation."
+  forbidden_conclusions:
+    - "proposal category variation class selector interface or altered-domain laws derived from or adopted into current ontology"
+    - "structural automorphisms are physical gauge transformations"
+    - "stochastic invariant measure is a deterministic point selector"
+    - "partial map is already covered by the certified groupoid theorem"
+    - "added answer-bearing mark derives rather than encodes selection"
+    - "fixed deterministic theorem refuted"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "M_src g_eff matter coupling or Einstein-equation derivation"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+    - "future source-extension impossibility or global theory rejection"
+
+selected_next_route:
+  route_id: "v21_p2_t08_eqsrc_selector_theorem_blind_independent_review"
+  route_label: "external-review-packet"
+  role_family: "external-red-team-reviewer@0.1.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P2-T08"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Obtain review evidence not conditioned on task verdict or route history."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Prepare a context-stripped selector-theorem package and obtain blind internal plus epistemically independent review with explicit disagreement preservation."
+  source_handoff: "research_control/handoffs/handoff-0790.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P2-T07-EQSRC-THEOREM-STRESS-001"
+  allowed_scope: "Exact P2-T07 stress of six declared altered-domain classes, finite boundary cases, one scoped obstruction, freeze evaluation, and one P2-T08 route."
+  blocked_scope: "Prior-artifact repair uncorrected P2-T04 metric use P2-T08 execution ontology edit or adoption physical gauge general EqSrc scientific-ledger change downstream GR proof authority benchmark promotion Gate Chair verdict publication completed derivation or global no-go."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_validation.json"
+  local_validator_report_hash: "1d6e6eccc45aec30bd8620c0b5bcb7ab619468f69c3137c55504cd736893ecb4"
+  fused_stress_hash: "d519bcc9534af3b2ca3e3d44604bd56bf72c425e0d06322c33cc7e66abfd2b49"
+  stress_cases_hash: "4b7bc68f625b119060b5abf09066c99a55235fa2676aaa4d01b293ae43eb3bf5"
+  compact_receipt_hash: "2dfd8b4b5a72917e3340ed813c3478f90e3fb4fb6f03628d38ae1fdbf74e0cc2"
+  task_local_check_count: 29
+  task_local_failed_check_count: 0
+  validation_status: "PASS"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  theorem_or_atlas_repair_authorized: false
+  physical_gauge_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 20 lease parity immutable route identity max reasoning repository binding predecessor checkpoint clean start and single consumption were verified before work."
+      - "Memory preflight refreshed local retrieval and the registered P2-T03 theorem plus P2-T06 audit were inspected."
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "All 29 source-hash finite-action product stochastic partial marked variation branch and authority checks pass."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required perspectives completed and the parent resolved theorem survival versus altered-domain boundary claims in one synthesis round."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Repository validation documentation impact signal parity generated freshness and whitespace checks remain required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph and claim graph remain to be regenerated and checked."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap and validate-only remain required after source registration."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 942
+    relationship_row_count: 4669
+    semantic_row_count: 942
+    vault_row_count: 942
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 9
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+      returned_object_ids:
+        - "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+  canonical_inspections:
+    - object_id: "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+      source_hash: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+    - object_id: "TEX-V21-P2-T06-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_v1.tex"
+      source_hash: "d093d7b0afbe322cf537644de54f17156ea2427fcc0988f4fc8fb305e93a0f76"
+  external_primary_sources: []
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and nine local-cache-only freshness warnings were refreshed to a clean local retrieval state with 942 source objects."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex --json"
+    status: "PASS"
+    summary: "Resolved the registered P2-T03 theorem object and inspected its canonical TeX source-registry record and source file."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-020/artifacts/validate_eqsrc_selector_theorem_refuter_stress.py"
+    status: "PASS"
+    summary: "Task-local validator syntax passes."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-020/artifacts/validate_eqsrc_selector_theorem_refuter_stress.py --write-report --json"
+    status: "PASS"
+    summary: "Passed 29 of 29 source-hash finite-action product stochastic partial marked variation branch and authority checks."
+
+next_recommended_action: "Run exactly one v21 P2-T08 external-review-packet that provides a context-stripped theorem package to blind internal and epistemically independent reviewers before adoption."
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The result is task-local scientific scope calibration and supplies no shared project-system defect."

@@ -1111,6 +1111,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `wiki/tex/tex-v21-p2-t03-eqsrc-no-selector-nonuniqueness-theorem.md`
 - `WIKI-TEX-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS` `wiki/tex/tex-v21-p2-t04-eqsrc-finite-countermodel-atlas.md`
 - `WIKI-TEX-V21-P2-T06-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `wiki/tex/tex-v21-p2-t06-eqsrc-selector-theorem-smuggling-audit.md`
+- `WIKI-TEX-V21-P2-T07-EQSRC-SELECTOR-THEOREM-REFUTER-STRESS` `wiki/tex/tex-v21-p2-t07-eqsrc-selector-theorem-refuter-stress.md`
 
 ## obsidian-wiki
 
@@ -1924,6 +1925,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex`
 - `TEX-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS` `research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex`
 - `TEX-V21-P2-T06-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_v1.tex`
+- `TEX-V21-P2-T07-EQSRC-SELECTOR-THEOREM-REFUTER-STRESS` `research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex`
 
 ## user-modified-project
 

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-019`
-- Latest handoff: `handoff-0789`
-- Current status: `v21_p2_t06_conditional_source_purity_pass_with_precise_p2_t04_k_metric_scope_defect_p2_t07_selected_no_adoption_or_promotion`
+- Active task: `RT-20260720-020`
+- Latest handoff: `handoff-0790`
+- Current status: `v21_p2_t07_scoped_obstruction_to_broader_selector_overreads_deterministic_theorem_survives_p2_t08_selected_no_adoption_or_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-019`
-- Latest research handoff: `handoff-0789`
-- Latest research next action: Run exactly one bounded v21 P2-T07 Refuter packet stressing the unchanged audited theorem under nonfaithful actions partial morphisms multiple components stochastic selectors added marks and altered variation classes. Treat the two uncorrected P2-T04 K metrics as unavailable for selector-induced relation claims and preserve every ontology scientific-ledger proof-authority promotion publication and completed-derivation block.
+- Latest research task: `RT-20260720-020`
+- Latest research handoff: `handoff-0790`
+- Latest research next action: Run exactly one bounded v21 P2-T08 external-review-packet. Give a context-stripped theorem assumptions proof formalization audit and countermodel package to blind internal and epistemically independent reviewers, preserve disagreement, and grant no adoption proof-authority or promotion status.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p2_t07_eqsrc_selector_theorem_refuter_stress`
-- Role family: `refuter@0.2.0`
+- Route ID: `v21_p2_t08_eqsrc_selector_theorem_blind_independent_review`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Determine the precise robustness and limits of the general theorem.
+- Milestone burden: Obtain review evidence not conditioned on task verdict or route history.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `cc63f1efea19ade7d61250ab761086ecd4e6ba20ad6d4ff43472d1dc2b26b726`
-- JSON SHA-256: `60da617927b520e3f459e5118038e580c223be71ffef6cbcf9bc0b16a302ebaf`
+- YAML SHA-256: `bf0ae37923d27c62bdcb1e06b6b06209182505ec3ecce10fe4f9187354752cb2`
+- JSON SHA-256: `a58aa5b38ce1e0f204381514242f659f01b0c57aa3a872e3ede013b213bb0e35`
 
 ## Authority Warning
 
