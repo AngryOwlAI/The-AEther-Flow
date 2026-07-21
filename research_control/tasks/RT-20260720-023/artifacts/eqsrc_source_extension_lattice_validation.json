@@ -1,0 +1,108 @@
+{
+  "schema_id": "v21_p3_t02_eqsrc_source_extension_lattice_validation_v1",
+  "lattice_id": "EQSRC-SOURCE-EXTENSION-LATTICE-V1",
+  "task_id": "RT-20260720-023",
+  "job_id": "AJ-RT-20260720-023-001",
+  "status": "PASS",
+  "check_count": 19,
+  "pass_count": 19,
+  "fail_count": 0,
+  "checks": [
+    {
+      "check_id": "artifact_set",
+      "detail": "All ten fused, machine, child, review, and compact-receipt artifacts exist.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "packet_identity_and_status",
+      "detail": "Machine artifacts share the exact lattice identity and proposal-only status.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boolean_declaration_envelope_exactness",
+      "detail": "Exhaustive B8 enumeration has 256 nodes, 1024 covers, and exact binomial ranks.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "lattice_laws_exhaustive",
+      "detail": "Meet, join, absorption, and complement laws hold for every ordered node pair.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "typing_and_reduct_guard",
+      "detail": "Eight distinct atom types are exact and B8 is explicitly only a declaration envelope.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "declared_incomparabilities",
+      "detail": "Five exact inclusion-incomparable pairs include the differential-versus-grading guard.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "multidimensional_cost_contract",
+      "detail": "All eight atoms have ten bounded burden components, no scalarization field, and a protected-adoption burden.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "cost_vector_incomparability_control",
+      "detail": "Measure and dynamics atoms remain incomparable under the declared componentwise burden order.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "finite_stabilizer_and_fixed_locus_witnesses",
+      "detail": "Eight finite group-action witnesses reproduce every group, stabilizer, fixed-locus, and compatibility count.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "target_type_and_dynamics_controls",
+      "detail": "Uniform probability, dynamics-only failure, and linked-state-plus-dynamics selection stay distinct.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "provenance_and_physical_admissibility_guard",
+      "detail": "Formal uniqueness is explicitly separated from source provenance and physical admissibility.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_family_placements",
+      "detail": "Five frozen families occupy five exact candidate nodes and retain explicit unmet obligations.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_minimality_and_authority",
+      "detail": "Minimality is finite-witness-local and every reopening, adoption, ranking, ledger, EqSrc, and no-go authority remains false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parallel_child_outputs",
+      "detail": "Both bounded internal perspectives completed without independent AgentJob authority.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_conflict_review_and_fusion",
+      "detail": "Six child conflicts resolve in one round and the fused typing guard is explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_structure_claim_boundary_and_decisiveness",
+      "detail": "The TeX construction is structurally complete and reports payload, bridge, obstruction, freeze, and authority boundaries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "global_authority_boundary",
+      "detail": "Ontology, adoption, physical, empirical, EqSrc, ledger, promotion, no-go, and downstream-execution flags remain false.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash_parity",
+      "detail": "Nine fixed plan, ontology, theorem, family, fixture, taxonomy, burden, and ledger sources retain exact hashes.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "compact_receipt_parity",
+      "detail": "Compact receipt identities, hashes, counts, authority flags, and next dependency are exact.",
+      "status": "PASS"
+    }
+  ],
+  "authority_note": "PASS is finite task-local consistency evidence only and creates no protected scientific authority."
+}

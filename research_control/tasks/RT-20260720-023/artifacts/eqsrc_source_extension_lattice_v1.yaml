@@ -1,0 +1,128 @@
+schema_id: "v21_p3_t02_eqsrc_source_extension_lattice_v1"
+lattice_id: "EQSRC-SOURCE-EXTENSION-LATTICE-V1"
+status: "draft/control"
+adoption_status: "proposal-only"
+result_kind: "source-extension data"
+task_id: "RT-20260720-023"
+job_id: "AJ-RT-20260720-023-001"
+plan_task_id: "P3-T02"
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Make the mathematical and ontological price of each selector repair explicit."
+base_object:
+  symbol: "X"
+  description: "One fixed source object with its declared eligible deterministic choice set D(X) and structural automorphism group G_X."
+  theorem_anchor: "P2-T03 fixed-core selector product theorem"
+  mutation_authorized: false
+atoms:
+  - code: "R"
+    atom_id: "root_partition_provenance"
+    datum_type: "distinguished root, ordered block, or independently sourced partition provenance"
+    direct_effect: "restricts compatible choices and replaces G_X by the datum stabilizer"
+    does_not_establish: "source derivation, physical admissibility, or ontology adoption"
+  - code: "O"
+    atom_id: "orientation_line_datum"
+    datum_type: "orientation, signed mark, associated line, or fibre datum"
+    direct_effect: "breaks automorphisms that reverse the declared orientation or move the declared line"
+    does_not_establish: "physical handedness, gauge status, or empirical orientation"
+  - code: "Q"
+    atom_id: "differential_discriminator_law"
+    datum_type: "supplied differential, quotient discriminator, or discriminating readout law"
+    direct_effect: "restricts choices to the declared discriminator fibre"
+    does_not_establish: "a source-side derivation of the differential or discriminator"
+  - code: "G"
+    atom_id: "grading_order_datum"
+    datum_type: "absolute grade, rank, order label, or declared minimum"
+    direct_effect: "restricts choices to the declared grade or order class"
+    does_not_establish: "a source-side derivation of the grading or order"
+  - code: "M"
+    atom_id: "measure_kernel_datum"
+    datum_type: "probability measure, stochastic kernel, or readout law"
+    direct_effect: "can select an invariant distribution even when no deterministic point is fixed"
+    does_not_establish: "a deterministic point selector, Born-type interpretation, or empirical calibration"
+  - code: "I"
+    atom_id: "state_initial_datum"
+    datum_type: "initial state, history sector, or state preparation"
+    direct_effect: "can select one branch under a declared evolution law"
+    does_not_establish: "a universal source law or state-preparation mechanism"
+  - code: "B"
+    atom_id: "boundary_asymptotic_datum"
+    datum_type: "boundary value, asymptotic condition, or terminal condition"
+    direct_effect: "can restrict a boundary-value problem to one compatible branch"
+    does_not_establish: "physical boundary provenance or universal applicability"
+  - code: "D"
+    atom_id: "dynamics_transition_law"
+    datum_type: "transition relation, evolution law, ordered action, or flow"
+    direct_effect: "defines histories and can transmit state or boundary data to a selected branch"
+    does_not_establish: "symmetry breaking by itself, physical admissibility, or empirical adequacy"
+order:
+  carrier_definition: "L_decl = P({R,O,Q,G,M,I,B,D})"
+  relation_definition: "E <= F iff E is a subset of F"
+  interpretation: "F declares every atom label declared by E, and possibly more; this is a syntactic declaration envelope."
+  node_count: 256
+  cover_count: 1024
+  rank_counts: [1, 8, 28, 56, 70, 56, 28, 8, 1]
+  bottom: []
+  top: ["R", "O", "Q", "G", "M", "I", "B", "D"]
+  meet: "set intersection"
+  join: "set union"
+  complement: "set complement in {R,O,Q,G,M,I,B,D}"
+  false_total_order_forbidden: true
+  scientific_preference_encoded: false
+typing_and_reduct_guard:
+  admissible_subposet: "L_adm(X,T) = {E in L_decl : WellTyped_X,T(E)}"
+  scientific_extension_order: "E precedes F only when a target-neutral reduct from F to E exists over the fixed baseline and requested target type."
+  full_boolean_physical_realizability_claimed: false
+  admissible_subposet_must_be_a_lattice: false
+  prerequisite_examples:
+    - "M requires a measurable choice space and normalization law."
+    - "I and B require a declared state or boundary carrier."
+    - "D requires a state space, action or time parameter, and well-posed transition semantics."
+    - "O selects a line only when an explicit equivariant orientation-or-mark-to-line map is supplied."
+    - "Q and G are distinct: a chain differential or quotient discriminator is not merely a grading."
+extension_record_contract:
+  datum_symbol: "e_E"
+  package_stabilizer: "H_E = intersection over a in E of Stab_GX(e_a)"
+  compatible_set: "C_E = intersection over a in E of C_a, with C_empty = D(X)"
+  compatible_fixed_locus: "Fix_E = {d in C_E : h.d = d for every h in H_E}"
+  deterministic_selector_criterion: "The extended finite object has exactly one compatible deterministic selector iff |Fix_E| = 1."
+  stochastic_selector_boundary: "An H_E-invariant probability law can exist when Fix_E is empty; this is a probability-valued selector, not a deterministic point selector."
+  monotonicity_warning: "Adding atoms weakly reduces the stabilizer and can shrink compatibility, but neither operation alone guarantees uniqueness."
+cost_contract:
+  artifact: "eqsrc_source_extension_assumption_costs_v1.csv"
+  scale: "0 absent, 1 low declared delta, 2 material declared delta, 3 dominant declared delta"
+  aggregation: "componentwise maximum only"
+  comparison: "componentwise Pareto comparison may leave packages incomparable"
+  scalar_sum_authorized: false
+  scientific_ranking_authorized: false
+required_incomparabilities:
+  - left: ["R"]
+    right: ["O"]
+    reason: "root provenance and orientation provenance are different typed assumptions"
+  - left: ["M"]
+    right: ["D"]
+    reason: "a probability law and a dynamics law alter different contracts"
+  - left: ["I"]
+    right: ["B"]
+    reason: "initial-state and boundary-value formulations are not mutually implied"
+  - left: ["R", "O"]
+    right: ["R", "D"]
+    reason: "line-orientation and transition-law repairs remain incomparable above a shared root datum"
+  - left: ["Q"]
+    right: ["G"]
+    reason: "a differential or discriminator law is not a grading or order datum"
+downstream_boundaries:
+  representative_irrelevance_owner: "P3-T03"
+  dynamics_and_probability_owner: "P3-T04"
+  execution_of_downstream_items: false
+authority_boundary:
+  classification: "blocked_adoption_open_continuation"
+  canonical_ontology_edit_authorized: false
+  source_extension_adoption_authorized: false
+  source_law_adoption_authorized: false
+  physical_gauge_established: false
+  physical_admissibility_established: false
+  empirical_support_established: false
+  general_eqsrc_discharged: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  global_no_go_authorized: false

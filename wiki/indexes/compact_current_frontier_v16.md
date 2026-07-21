@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-022`
-- Latest handoff: `handoff-0792`
-- Current status: `v21_p3_t01_five_class_selector_resolution_taxonomy_completed_p3_t02_selected_no_adoption_or_distance_delta`
+- Active task: `RT-20260720-023`
+- Latest handoff: `handoff-0793`
+- Current status: `v21_p3_t02_typed_source_extension_declaration_lattice_completed_p3_t03_selected_no_adoption_or_distance_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-022`
-- Latest research handoff: `handoff-0792`
-- Latest research next action: Run exactly one bounded v21 P3-T02 candidate-constructor packet constructing the minimal source-extension lattice for roots orientations gradings measures states boundary data and dynamics with a mechanically checked partial order and finite symmetry reductions.
+- Latest research task: `RT-20260720-023`
+- Latest research handoff: `handoff-0793`
+- Latest research next action: Run exactly one bounded v21 P3-T03 ontology-formalizer packet proving or refuting representative irrelevance for orientation root line partition and related choices at an explicit source-observable target.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p3_t02_minimal_source_extension_lattice`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v21_p3_t03_eqsrc_representative_irrelevance_theorem`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Make the mathematical and ontological price of each selector repair explicit.
+- Milestone burden: Determine whether all admissible representatives yield identical declared source observables.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `02e4e13a14746e2d5d79871dbded4e9a4a5208b7851e050d639646fb6488c59e`
-- JSON SHA-256: `d138ee2c97d9d35c6aa9e97a4e8b29dd9339386fb8abc61af20ea7cfd061ec31`
+- YAML SHA-256: `74da588f2bee695b44dcad42cae0b2fb067c71b4501d5e5831c2435d9cd9bfac`
+- JSON SHA-256: `473d42611abbeb98fd745c0d43de7a1e11ddfe3989ba56916f2e83ed14112923`
 
 ## Authority Warning
 

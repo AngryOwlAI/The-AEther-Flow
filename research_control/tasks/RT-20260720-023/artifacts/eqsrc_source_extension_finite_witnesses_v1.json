@@ -1,0 +1,172 @@
+{
+  "schema_id": "v21_p3_t02_eqsrc_source_extension_finite_witnesses_v1",
+  "lattice_id": "EQSRC-SOURCE-EXTENSION-LATTICE-V1",
+  "status": "draft/control",
+  "task_id": "RT-20260720-023",
+  "point_witnesses": [
+    {
+      "witness_id": "W1-C2-DISTINGUISHED-ROOT",
+      "purpose": "A root datum removes a two-point swap obstruction.",
+      "extension_atoms": ["R"],
+      "choice_labels": ["x0", "x1"],
+      "group_generators": [[1, 0]],
+      "stabilizer_generators": [],
+      "compatible_choice_indices": [0],
+      "expected": {
+        "base_group_order": 2,
+        "stabilizer_order": 1,
+        "base_fixed_indices": [],
+        "compatible_fixed_indices": [0],
+        "deterministic_selector_count": 1
+      },
+      "source_provenance_established": false,
+      "physical_admissibility_established": false
+    },
+    {
+      "witness_id": "W2-S3-DISTINGUISHED-LINE",
+      "purpose": "A distinguished line reduces the transitive three-line action to its order-two stabilizer.",
+      "extension_atoms": ["O"],
+      "choice_labels": ["L0", "L1", "L2"],
+      "group_generators": [[1, 0, 2], [1, 2, 0]],
+      "stabilizer_generators": [[0, 2, 1]],
+      "compatible_choice_indices": [0],
+      "expected": {
+        "base_group_order": 6,
+        "stabilizer_order": 2,
+        "base_fixed_indices": [],
+        "compatible_fixed_indices": [0],
+        "deterministic_selector_count": 1
+      },
+      "source_provenance_established": false,
+      "physical_admissibility_established": false
+    },
+    {
+      "witness_id": "W3-C4-ABSOLUTE-GRADING",
+      "purpose": "An absolute grade-zero declaration removes cyclic relabelling on four grades.",
+      "extension_atoms": ["G"],
+      "choice_labels": ["g0", "g1", "g2", "g3"],
+      "group_generators": [[1, 2, 3, 0]],
+      "stabilizer_generators": [],
+      "compatible_choice_indices": [0],
+      "expected": {
+        "base_group_order": 4,
+        "stabilizer_order": 1,
+        "base_fixed_indices": [],
+        "compatible_fixed_indices": [0],
+        "deterministic_selector_count": 1
+      },
+      "source_provenance_established": false,
+      "physical_admissibility_established": false
+    },
+    {
+      "witness_id": "W4-C3-UNIFORM-MEASURE",
+      "purpose": "An invariant measure selects one probability law while leaving every point unfixed.",
+      "extension_atoms": ["M"],
+      "choice_labels": ["p0", "p1", "p2"],
+      "group_generators": [[1, 2, 0]],
+      "stabilizer_generators": [[1, 2, 0]],
+      "compatible_choice_indices": [0, 1, 2],
+      "probability_weights": ["1/3", "1/3", "1/3"],
+      "expected": {
+        "base_group_order": 3,
+        "stabilizer_order": 3,
+        "base_fixed_indices": [],
+        "compatible_fixed_indices": [],
+        "deterministic_selector_count": 0,
+        "invariant_probability_selector_count": 1
+      },
+      "source_provenance_established": false,
+      "physical_admissibility_established": false
+    },
+    {
+      "witness_id": "W5-C2-EQUIVARIANT-DYNAMICS-ONLY",
+      "purpose": "Symmetric dynamics alone preserves a two-branch obstruction.",
+      "extension_atoms": ["D"],
+      "choice_labels": ["minus", "plus"],
+      "group_generators": [[1, 0]],
+      "stabilizer_generators": [[1, 0]],
+      "compatible_choice_indices": [0, 1],
+      "expected": {
+        "base_group_order": 2,
+        "stabilizer_order": 2,
+        "base_fixed_indices": [],
+        "compatible_fixed_indices": [],
+        "deterministic_selector_count": 0
+      },
+      "source_provenance_established": false,
+      "physical_admissibility_established": false
+    },
+    {
+      "witness_id": "W6-C2-INITIAL-STATE-WITH-DYNAMICS",
+      "purpose": "An initial-state datum plus declared dynamics selects one branch on the finite model.",
+      "extension_atoms": ["I", "D"],
+      "choice_labels": ["minus", "plus"],
+      "group_generators": [[1, 0]],
+      "stabilizer_generators": [],
+      "compatible_choice_indices": [0],
+      "expected": {
+        "base_group_order": 2,
+        "stabilizer_order": 1,
+        "base_fixed_indices": [],
+        "compatible_fixed_indices": [0],
+        "deterministic_selector_count": 1
+      },
+      "source_provenance_established": false,
+      "physical_admissibility_established": false
+    },
+    {
+      "witness_id": "W7-C3-ARBITRARY-MARK-CONTROL",
+      "purpose": "A syntactic mark yields a formal point selector but fails the source-provenance and physical-admissibility burdens.",
+      "extension_atoms": ["R"],
+      "choice_labels": ["a0", "a1", "a2"],
+      "group_generators": [[1, 2, 0]],
+      "stabilizer_generators": [],
+      "compatible_choice_indices": [0],
+      "expected": {
+        "base_group_order": 3,
+        "stabilizer_order": 1,
+        "base_fixed_indices": [],
+        "compatible_fixed_indices": [0],
+        "deterministic_selector_count": 1
+      },
+      "source_provenance_established": false,
+      "physical_admissibility_established": false,
+      "counts_as_lawful_source_extension_witness": false
+    },
+    {
+      "witness_id": "W8-C2-DISCRIMINATOR-FIBRE",
+      "purpose": "A supplied discriminator with a declared zero fibre selects one point while leaving the discriminator's source provenance open.",
+      "extension_atoms": ["Q"],
+      "choice_labels": ["q0", "q1"],
+      "group_generators": [[1, 0]],
+      "stabilizer_generators": [],
+      "compatible_choice_indices": [0],
+      "expected": {
+        "base_group_order": 2,
+        "stabilizer_order": 1,
+        "base_fixed_indices": [],
+        "compatible_fixed_indices": [0],
+        "deterministic_selector_count": 1
+      },
+      "source_provenance_established": false,
+      "physical_admissibility_established": false
+    }
+  ],
+  "cross_witness_findings": {
+    "formal_unique_point_witnesses": 6,
+    "deterministic_failure_witnesses": 2,
+    "probability_without_point_witnesses": 1,
+    "provenance_failure_controls": 1,
+    "dynamics_alone_sufficient": false,
+    "formal_selection_implies_physical_admissibility": false
+  },
+  "authority_boundary": {
+    "finite_model_only": true,
+    "source_derivation_established": false,
+    "physical_gauge_established": false,
+    "physical_admissibility_established": false,
+    "extension_adoption_authorized": false,
+    "general_eqsrc_discharged": false,
+    "distance_to_gr_delta_changed": false
+  }
+}

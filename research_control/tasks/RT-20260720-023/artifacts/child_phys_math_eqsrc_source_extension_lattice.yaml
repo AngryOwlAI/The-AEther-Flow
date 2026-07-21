@@ -1,0 +1,48 @@
+schema_id: "v21_p3_t02_child_phys_math_eqsrc_source_extension_lattice_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260720-023"
+job_id: "AJ-RT-20260720-023-001"
+authority: "analysis-only internal execution unit; not an AgentJob"
+recommended_declaration_model:
+  atom_codes: ["R", "O", "G", "M", "I", "B", "D"]
+  carrier: "power set ordered by inclusion"
+  node_count: 128
+  cover_count: 448
+  rank_counts: [1, 7, 21, 35, 35, 21, 7, 1]
+  caveat: "This was a first-pass assumption-accounting envelope; the parent must resolve whether differential and grading data need separate types."
+selector_criterion:
+  stabilizer: "H_E = intersection of the datum stabilizers"
+  compatibility_fibre: "D_E(e_E)"
+  compatible_fixed_locus: "Sigma(E,e_E) = D_E(e_E) intersect Fix(H_E)"
+  classification:
+    empty: "obstruction"
+    singleton: "unique compatible deterministic selector"
+    multiple: "residual underdetermination"
+  key_warning: "A smaller stabilizer enlarges the raw fixed locus, so symmetry reduction alone does not imply uniqueness."
+finite_controls:
+  - "C2 root mark: base fixed locus empty; compatible marked-root fibre singleton."
+  - "GL(2,F2) on three lines: group order 6; a distinguished-line stabilizer has order 2 and fixes that line."
+  - "C4 absolute grading: cyclic base action has no fixed point; unique declared grade-zero fibre is singleton."
+  - "C3 uniform measure: unique invariant distribution can coexist with no fixed point."
+  - "V4 root-versus-orientation construction: incomparable singleton packages can have a uniquely selecting join."
+  - "C2 state plus dynamics: dynamics alone does not select; linked state and evolution can."
+  - "Arbitrary mark: formal uniqueness can merely relocate the unexplained choice."
+recommended_falsifiers:
+  - "exhaustively verify nodes, covers, ranks, lattice laws, and incomparabilities"
+  - "verify stabilizer intersections and invariant compatibility fibres"
+  - "separate point, relation, and distribution targets"
+  - "reject monotone-uniqueness inference from stabilizer reduction"
+  - "preserve the noninvertible equalizer guard outside finite group actions"
+  - "reject scalar ranking and arbitrary decorations without provenance"
+limits:
+  - "finite controls do not establish continuous-group, locality, covariance, regularity, or variational claims"
+  - "the declaration envelope does not prove physical realizability"
+  - "no atom is adopted and general EqSrc remains open"
+authority_boundary:
+  source_extension_adoption_authorized: false
+  physical_admissibility_established: false
+  general_eqsrc_discharged: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false

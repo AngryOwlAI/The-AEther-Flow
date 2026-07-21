@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-21T10:18:09Z`
-- Source fingerprint: `c7e4264d61e4712dd6755aefda0a5ed75f72574680c779afffc44724ea4c7365`
-- Nodes: `20244`
-- Edges: `69083`
+- Generated from tracked state as of: `2026-07-21T11:28:45Z`
+- Source fingerprint: `eddb8d79f76ebd6e021dcc929fd405d2992e434a47ef928e7586fb470e989204`
+- Nodes: `20279`
+- Edges: `69143`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1023 |
+| `completion_yaml` | 1024 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 792 |
+| `handoff_yaml` | 793 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1023 |
+| `agent_job` | `support_only` | 1024 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10493 |
-| `blocked_burden` | `blocked` | 3874 |
-| `claim_boundary` | `support_only` | 980 |
-| `draft_control_candidate` | `draft_control` | 669 |
+| `artifact` | `support_only` | 10503 |
+| `blocked_burden` | `blocked` | 3887 |
+| `claim_boundary` | `support_only` | 981 |
+| `draft_control_candidate` | `draft_control` | 671 |
 | `draft_control_candidate` | `proposal_only` | 110 |
 | `draft_control_candidate` | `science_draft` | 64 |
-| `frozen_negative` | `frozen_negative` | 125 |
+| `frozen_negative` | `frozen_negative` | 126 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 792 |
-| `human_gated_object` | `human_gated` | 439 |
+| `handoff` | `support_only` | 793 |
+| `human_gated_object` | `human_gated` | 440 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
 | `obstruction` | `blocked` | 76 |
-| `obstruction` | `rejected` | 2 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 34 |
+| `obstruction` | `rejected` | 3 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 36 |
 | `source_ontology_object` | `canonical_source` | 23 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 328 |
+| `source_ontology_object` | `support_only` | 329 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 962 |
+| `task` | `support_only` | 963 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260720-022`
-- Latest handoff: `handoff-0792`
-- Handoff path: `research_control/handoffs/handoff-0792.yaml`
-- Next action: Run exactly one bounded v21 P3-T02 candidate-constructor packet constructing the minimal source-extension lattice for roots orientations gradings measures states boundary data and dynamics with a mechanically checked partial order and finite symmetry reductions.
+- Active task: `RT-20260720-023`
+- Latest handoff: `handoff-0793`
+- Handoff path: `research_control/handoffs/handoff-0793.yaml`
+- Next action: Run exactly one bounded v21 P3-T03 ontology-formalizer packet proving or refuting representative irrelevance for orientation root line partition and related choices at an explicit source-observable target.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

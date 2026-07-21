@@ -1,0 +1,340 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\Stab}{\operatorname{Stab}}
+\newcommand{\Pow}{\mathcal{P}}
+\newcommand{\EqSrc}{\ensuremath{\mathrm{EqSrc}}}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\title{P3-T02: A Typed Source-Extension Declaration Lattice\\
+for the \EqSrc{} Selector Obstruction}
+\author{Candidate Constructor packet RT-20260720-023}
+\date{2026-07-21}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\begin{minipage}{0.93\linewidth}
+\textbf{Artifact identity:} EQSRC-SOURCE-EXTENSION-LATTICE-V1.
+\textbf{Status:} draft/control, proposal-only, source-extension data.
+This packet constructs and tests candidate extension records.  It does not
+adopt an extension, edit canonical ontology, establish physical gauge or
+admissibility, discharge general \(\EqSrc\), change the Distance-to-GR ledger,
+promote a benchmark, or authorize publication.
+\end{minipage}}
+\end{center}
+
+\section{Question, baseline, and result}
+
+The fixed P2-T03 theorem reduces objectwise deterministic selector existence
+on a finite structural-automorphism core to a fixed-locus problem.  P3-T01
+then distinguishes added source structure from representative irrelevance,
+dynamics-mediated selection, probability-valued selection, and scoped
+obstruction.  P3-T02 asks a narrower constructive question:
+
+\begin{quote}
+Which typed assumptions can be declared as candidate source extensions, how
+are their assumption burdens partially ordered, and what finite calculation
+shows whether a declared extension removes, preserves, or changes the selector
+obstruction?
+\end{quote}
+
+The result has three parts.  First, an eight-atom Boolean object gives an exact
+syntactic declaration envelope.  Second, a well-typed, target-dependent reduct
+predicate cuts out the scientifically meaningful extension subposet.  Third,
+an extension selects a deterministic point on a finite object exactly when
+its compatible stabilizer-fixed locus is a singleton.  None of these results
+derives the declared extension from the current \AE ther-flow ontology.
+
+\section{Typed declaration atoms}
+
+Let
+\[
+ {\cal A}=\{R,O,Q,G,M,I,B,D\}.
+\]
+The codes are bookkeeping labels with the following exact meanings.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.07\linewidth}
+                  >{\raggedright\arraybackslash}p{0.31\linewidth}
+                  >{\raggedright\arraybackslash}p{0.51\linewidth}}
+\toprule
+Code & Declared datum or law & Boundary that remains open\\
+\midrule
+\endhead
+\(R\) & distinguished root, ordered block, or partition provenance
+& source derivation, preserving morphisms, and physical provenance\\
+\(O\) & orientation, signed mark, associated line, or fibre datum
+& an orientation-to-line map where needed, physical handedness, and gauge status\\
+\(Q\) & differential, quotient discriminator, or discriminating readout law
+& derivation of the differential or discriminator and its variation law\\
+\(G\) & absolute grade, rank, order label, or declared minimum
+& derivation of the grading; a parity grade need not have a unique minimum\\
+\(M\) & normalized measure, stochastic kernel, or readout law
+& deterministic point selection, operational meaning, and calibration\\
+\(I\) & initial state, preparation, or history sector
+& a universal law or a source-derived preparation mechanism\\
+\(B\) & boundary value, asymptotic condition, or terminal condition
+& boundary provenance, well-posedness, and universal applicability\\
+\(D\) & transition relation, evolution law, ordered action, or flow
+& symmetry breaking by itself, physical time, and empirical adequacy\\
+\bottomrule
+\end{longtable}
+
+The separation \(Q\neq G\) is deliberate.  A chain differential or quotient
+discriminator is not merely a grading, and an ordered monoid action is not
+thereby physical time evolution.  Likewise, the three-line finite witness
+below uses an explicit line mark.  An orientation-to-line claim would require
+an additional equivariant map and is not inferred by terminology.
+
+\section{The declaration envelope and admissible reduct order}
+
+\begin{definition}[Syntactic declaration envelope]
+The declaration envelope is
+\[
+ {\cal L}_{\mathrm{decl}}=(\Pow({\cal A}),\subseteq).
+\]
+For \(E,F\subseteq{\cal A}\),
+\[
+ E\wedge F=E\cap F,\qquad E\vee F=E\cup F.
+\]
+The rank of \(E\) is \(|E|\).  Rank is a count of declared atom types, not a
+scientific cost, plausibility score, or adoption rank.
+\end{definition}
+
+\begin{proposition}[Exact finite envelope]
+\({\cal L}_{\mathrm{decl}}\) is the Boolean lattice \(B_8\).  It has 256 nodes,
+1024 directed cover edges, and rank sizes
+\[
+ (1,8,28,56,70,56,28,8,1).
+\]
+\end{proposition}
+
+\begin{proof}
+There are \(2^8=256\) subsets.  A directed cover adds exactly one absent atom.
+Counting pairs \((E,a)\) with \(a\notin E\) gives
+\(\sum_E(8-|E|)=8\,2^7=1024\).  Rank \(k\) has
+\(\binom{8}{k}\) elements, giving the displayed sequence.  Intersection,
+union, and complement in \({\cal A}\) supply the Boolean operations.
+\end{proof}
+
+\begin{definition}[Well-typed admissible subposet]
+Fix a source baseline \(X\) and requested target type \(T\).  Let
+\[
+ {\cal L}_{\mathrm{adm}}(X,T)
+ =\{E\in{\cal L}_{\mathrm{decl}}:\operatorname{WellTyped}_{X,T}(E)\}.
+\]
+For realized extensions \(e_E,e_F\), scientific assumption strength requires
+a target-neutral reduct \(e_F\to e_E\) over the same baseline and target.
+Boolean inclusion is a necessary declaration check, not by itself proof of
+such a reduct.
+\end{definition}
+
+Measures require measurable structure; states and boundaries require their
+carriers; dynamics requires a state space and transition semantics; and
+orientation-to-line claims require an explicit map.  Consequently
+\({\cal L}_{\mathrm{adm}}(X,T)\) need not be all of \(B_8\) and need not be
+closed under Boolean meet or join.  The Boolean theorem is therefore an exact
+accounting result, not a physical-realizability theorem.
+
+\section{Compatible fixed-locus criterion}
+
+Let a finite structural automorphism group \(K_X\) act on an eligible
+deterministic choice set \({\cal D}(X)\).  For a realized extension package
+\(e_E=(e_a)_{a\in E}\), define
+\[
+ H_E=\Stab_{K_X}(e_E)
+     =\bigcap_{a\in E}\Stab_{K_X}(e_a).
+\]
+Let \(C_E(e_E)\subseteq{\cal D}(X)\) be the choices compatible with the
+declared extension.  Compatibility must be \(H_E\)-stable.  Define
+\[
+ \Sigma(E,e_E)=C_E(e_E)\cap\Fix_{{\cal D}(X)}(H_E).
+\]
+
+\begin{proposition}[Finite compatible-selector trichotomy]
+On the one-object finite groupoid of the realized extended object,
+\[
+\begin{array}{rcl}
+|\Sigma(E,e_E)|=0 &\Longleftrightarrow& \text{no compatible deterministic selector},\\
+|\Sigma(E,e_E)|=1 &\Longleftrightarrow& \text{one unique compatible deterministic selector},\\
+|\Sigma(E,e_E)|>1 &\Longleftrightarrow& \text{residual deterministic underdetermination}.
+\end{array}
+\]
+\end{proposition}
+
+\begin{proof}
+A deterministic choice on the extended object is natural under its structural
+automorphisms exactly when it is fixed by every element of \(H_E\).  It is
+admissible for the declared extension exactly when it lies in \(C_E(e_E)\).
+Thus the set of compatible natural choices is precisely \(\Sigma(E,e_E)\);
+the three conclusions follow from its cardinality.
+\end{proof}
+
+\paragraph{Essential non-monotonicity guard.}
+If \(E\subseteq F\), then \(H_F\leq H_E\), hence
+\(\Fix(H_E)\subseteq\Fix(H_F)\): reducing symmetry can enlarge the raw fixed
+locus.  Uniqueness is therefore not monotone in declaration inclusion.
+Compatibility must perform substantive work.  For noninvertible morphisms the
+full P2-T03 equalizer guard remains necessary; the stabilizer formula here is
+only the finite group-action case.
+
+\paragraph{Different target types.}
+An invariant probability law can be unique while the deterministic point
+fixed locus is empty.  A relation image can likewise be unique while its point
+representatives are not.  Point, probability, and relation targets must not be
+interchanged.  P3-T03 owns representative-irrelevance proofs, and P3-T04 owns
+dynamical and probabilistic selection theorems; this packet executes neither.
+
+\section{Multidimensional assumption costs}
+
+Each atom has a ten-component burden vector recorded in
+\texttt{eqsrc\_source\_extension\_assumption\_costs\_v1.csv}.  Components
+separately track source-signature, selector/readout, state/boundary, dynamics,
+probability, variation-class, functoriality, empirical-calibration,
+target-import, and protected-authority burdens.  Levels \(0,1,2,3\) are
+within-axis declarations only.  Package aggregation is componentwise maximum.
+No component sum, weighted score, or lexicographic preference is authorized.
+
+Thus, for example,
+\[
+ \{Q\}\parallel\{G\},\qquad
+ \{M\}\parallel\{D\},\qquad
+ \{I\}\parallel\{B\},\qquad
+ \{R,O\}\parallel\{R,D\}.
+\]
+These are genuine declaration incomparabilities.  They are not claims that
+the packages are equally plausible or empirically supported.
+
+\section{Finite witnesses}
+
+The machine witness artifact reproduces the following exact values.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.23\linewidth}
+                  >{\raggedright\arraybackslash}p{0.11\linewidth}
+                  >{\raggedright\arraybackslash}p{0.13\linewidth}
+                  >{\raggedright\arraybackslash}p{0.13\linewidth}
+                  >{\raggedright\arraybackslash}p{0.29\linewidth}}
+\toprule
+Witness & Package & \(|K_X|\) & \(|H_E|\) & Result\\
+\midrule
+\endhead
+\texttt{W1} \(C_2\) root swap & \(R\) & 2 & 1
+& one compatible fixed point; root provenance remains absent\\
+\texttt{W2} three explicit lines & \(O\) & 6 & 2
+& the marked line is the unique compatible fixed line\\
+\texttt{W3} \(C_4\) absolute grading & \(G\) & 4 & 1
+& unique declared grade-zero point; absolute zero is supplied\\
+\texttt{W4} \(C_3\) uniform measure & \(M\) & 3 & 3
+& no fixed point, but one invariant uniform distribution\\
+\texttt{W5} symmetric two-branch dynamics & \(D\) & 2 & 2
+& no fixed point; dynamics alone does not select a branch\\
+\texttt{W6} state plus dynamics & \(I,D\) & 2 & 1
+& one linked branch on the finite model\\
+\texttt{W7} arbitrary \(C_3\) mark & \(R\) & 3 & 1
+& formal singleton, rejected as a provenance/admissibility control\\
+\texttt{W8} \(C_2\) discriminator fibre & \(Q\) & 2 & 1
+& one declared zero-fibre point; discriminator provenance remains absent\\
+\bottomrule
+\end{longtable}
+
+For \texttt{W2}, \(K_X\cong\mathrm{GL}(2,\mathbb F_2)\cong S_3\) acts
+transitively on the three one-dimensional subspaces of \(\mathbb F_2^2\).
+Orbit--stabilizer gives a marked-line stabilizer of order \(6/3=2\), and that
+stabilizer fixes exactly the marked line.  This is a line-mark calculation,
+not a physical-orientation claim.
+
+For \texttt{W4}, \(C_3\) acts regularly on three points, so no point is fixed.
+The normalized invariant weights satisfy
+\[
+ (w_0,w_1,w_2)=(w_2,w_0,w_1),\qquad
+ w_0+w_1+w_2=1,
+\]
+and hence \(w_0=w_1=w_2=1/3\).  This proves one invariant distribution only.
+
+\section{Placement of the five frozen historical families}
+
+The table gives candidate cores minimal only on the named task-local finite
+witness and within the eight-atom library.  The full family obligations in
+\texttt{eqsrc\_source\_extension\_historical\_placements\_v1.yaml} remain
+unmet.  No row reopens a frozen family.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.33\linewidth}
+                  >{\raggedright\arraybackslash}p{0.13\linewidth}
+                  >{\raggedright\arraybackslash}p{0.43\linewidth}}
+\toprule
+Historical family & Candidate core & Principal obligations still absent\\
+\midrule
+\endhead
+Intrinsic discriminator & \(\{Q\}\)
+& derivation of differential/discriminator, morphisms, physical variations, and non-finite robustness\\
+Cycle-boundary line & \(\{O\}\)
+& derivation of oriented mark and mark-to-line law, variation scope, and physical meaning\\
+Orientation torsor & \(\{R,O\}\)
+& partition provenance, equivariant line selection, physical morphisms, and variations\\
+Rooted partition & \(\{R,D\}\)
+& transition projection, root provenance, path-parity admission, functoriality, and variations\\
+Graded orbit root & \(\{G,D\}\)
+& ordered action, full component, positivity, unique minimum, common grading, morphisms, and variations\\
+\bottomrule
+\end{longtable}
+
+The last row does not double-count \(R\): if the declared ordered action and
+grading actually prove a unique global minimum, the root is derived
+conditionally inside that package.  The proof burden remains open.
+
+\section{Distance-to-GR and freeze evaluation}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.28\linewidth}
+                  >{\raggedright\arraybackslash}p{0.62\linewidth}}
+\toprule
+Required field & P3-T02 result\\
+\midrule
+\endhead
+Target derivation milestone & \texttt{source\_equivalence\_eqsrc}\\
+Milestone burden & make the mathematical and ontological price of each selector repair explicit\\
+New mathematical payload & exact \(B_8\) declaration envelope; well-typed reduct guard; compatible fixed-locus trichotomy; eight finite calculations\\
+Existence status & task-local declaration object and finite witnesses exist\\
+Uniqueness status & unique compatible selectors exist only on specified witnesses; no unique scientific extension is selected\\
+Naturality/covariance status & objectwise finite automorphism checks only; full naturality, noninvertible equalizers, and physical covariance remain open\\
+Source derivation status & current ontology does not derive \(R,O,Q,G,M,I,B,\) or \(D\) as adopted structures\\
+Bridge attempt status & candidate extension space constructed; no extension adopted and no general \(\EqSrc\) bridge completed\\
+Obstruction location & source-side provenance, typing, admissible morphisms/variations, and protected adoption\\
+Distance-to-GR delta & none; the scientific ledger remains unchanged\\
+\bottomrule
+\end{longtable}
+
+The repeated-family freeze remains in force.  P3-T02 is materially distinct
+because it constructs a typed cross-family accounting object and finite
+criterion rather than another family candidate.  Its result is
+\texttt{blocked\_adoption\_open\_continuation}: adoption is human-gated, while
+same-milestone theorem work remains open.  The packet proves neither that an
+extension is impossible nor that any extension is physically preferred.
+
+\section{Conclusion}
+
+The smallest defensible conclusion is:
+
+\begin{quote}
+Under a declared, well-typed finite extension and compatible-choice functor,
+the realized object has one deterministic selector exactly when its compatible
+stabilizer-fixed locus is a singleton.  The eight-atom Boolean object
+exhaustively records declaration combinations, while the admissible reduct
+subposet and multidimensional cost vectors preserve typing and genuine
+incomparability.  Current ontology does not derive or adopt any of these
+extensions.
+\end{quote}
+
+P3-T03 is the next dependency-ready theorem packet.  It may ask when different
+representatives become irrelevant at a declared target, but it must not infer
+physical gauge or observable equivalence from structural symmetry alone.
+
+\end{document}

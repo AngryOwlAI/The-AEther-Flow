@@ -1,0 +1,70 @@
+schema_id: "v21_p3_t02_eqsrc_source_extension_historical_placements_v1"
+lattice_id: "EQSRC-SOURCE-EXTENSION-LATTICE-V1"
+status: "draft/control"
+task_id: "RT-20260720-023"
+placement_scope: "finite witness packages for the five frozen v21 P1 historical families"
+minimality_scope: "minimal only on the declared task-local witness models; not a universal theorem and not a reopening criterion"
+families:
+  - family_id: "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR"
+    member_candidate_ids: ["EQSRC-IDISC-V1", "EQSRC-IDISC-V2", "EQSRC-IDISC-V3"]
+    current_ontology_status: "missing_package_differential_and_physical_variation_selector"
+    candidate_package: ["Q"]
+    finite_witness_id: "W8-C2-DISCRIMINATOR-FIBRE"
+    additional_unmet_obligations:
+      - "derive the differential or discriminator from current ontology"
+      - "define admissible morphisms and physical variations"
+      - "show robustness beyond the finite witness"
+    family_freeze_preserved: true
+  - family_id: "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE"
+    member_candidate_ids: ["EQSRC-CYCLE-BOUNDARY-V1"]
+    current_ontology_status: "missing_oriented_mark_and_independent_variation_selector"
+    candidate_package: ["O"]
+    finite_witness_id: "W2-S3-DISTINGUISHED-LINE"
+    additional_unmet_obligations:
+      - "derive the oriented mark or associated line from current ontology"
+      - "define admissible independent variations"
+      - "show physical rather than merely structural orientation"
+    family_freeze_preserved: true
+  - family_id: "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR"
+    member_candidate_ids: ["EQSRC-ORIENTATION-TORSOR-V1"]
+    current_ontology_status: "missing_partition_provenance_line_selection_and_physical_variation_law"
+    candidate_package: ["R", "O"]
+    finite_witness_id: "W2-S3-DISTINGUISHED-LINE"
+    additional_unmet_obligations:
+      - "derive partition provenance and line selection jointly"
+      - "define physical morphisms and variation law"
+      - "separate relation descent from scalar-fibre selection"
+    family_freeze_preserved: true
+  - family_id: "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION"
+    member_candidate_ids: ["EQSRC-ROOTED-PARTITION-V1"]
+    current_ontology_status: "missing_transition_projection_root_morphism_and_variation_laws"
+    candidate_package: ["R", "D"]
+    finite_witness_id: "W1-C2-DISTINGUISHED-ROOT"
+    additional_unmet_obligations:
+      - "derive transition projection and singleton-root provenance"
+      - "prove path-parity admission and functoriality"
+      - "define physical variations"
+    family_freeze_preserved: true
+  - family_id: "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT"
+    member_candidate_ids: ["EQSRC-GRADED-ORBIT-ROOT-V1"]
+    current_ontology_status: "missing_ordered_action_component_positivity_morphism_and_variation_provenance"
+    candidate_package: ["G", "D"]
+    finite_witness_id: "W3-C4-ABSOLUTE-GRADING"
+    additional_unmet_obligations:
+      - "derive the ordered action and full source component"
+      - "derive positivity, unique root, and common grading; do not double-count a root that follows from a proved unique minimum"
+      - "define admissible morphisms and physical variations"
+    family_freeze_preserved: true
+cross_family_findings:
+  - "The five packages occupy four distinct lattice nodes because the two orientation-line families require different provenance scope."
+  - "Q, O, R+D, R+O, and G+D are not placed in a scientific preference order."
+  - "The differential/discriminator atom Q is distinct from the grading atom G; neither is a proxy for the other."
+  - "Every placement supplies data that current ontology does not yet derive."
+authority_boundary:
+  family_reopening_authorized: false
+  canonical_ontology_edit_authorized: false
+  extension_adoption_authorized: false
+  scientific_ranking_authorized: false
+  general_eqsrc_discharged: false
+  distance_to_gr_delta_changed: false
+  global_no_go_authorized: false
