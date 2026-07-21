@@ -1,0 +1,44 @@
+artifact_id: "PARENT-CONFLICT-REVIEW-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-V1"
+artifact_type: "parent_child_synthesis_conflict_review"
+task_id: "RT-20260720-026"
+job_id: "AJ-RT-20260720-026-001"
+status: "resolved"
+resolution_rounds: 1
+child_outputs:
+  - "research_control/tasks/RT-20260720-026/artifacts/child_phys_math_eqsrc_invariant_functor_quotient.yaml"
+  - "research_control/tasks/RT-20260720-026/artifacts/child_phys_phil_eqsrc_invariant_functor_quotient.yaml"
+resolved_conflict_count: 8
+resolved_conflicts:
+  - conflict_id: "C01_OBJECT_RELATION_VERSUS_CATEGORY_QUOTIENT"
+    issue: "The phrase quotient EqSrc could be overread as a quotient category."
+    resolution: "Define only the object-isomorphism kernel relation and its object quotient; state that a morphism quotient requires new compatible arrow data."
+  - conflict_id: "C02_SIZE_OF_OBJECT_QUOTIENT"
+    issue: "An unrestricted object quotient may conceal a universe-size assumption."
+    resolution: "Require a small source category or a fixed universe-small object collection."
+  - conflict_id: "C03_COMPOSITION_TYPING"
+    issue: "Object equivalence alone does not type interfaces or partial composition."
+    resolution: "Prove congruence only for declared bifunctors with an invertible comparison and retain interface-domain obligations for partial operations."
+  - conflict_id: "C04_LOCALIZATION_PRESERVATION_REFLECTION"
+    issue: "Source localization factorization and additional codomain localization have different reflection behavior."
+    resolution: "State exact forward preservation from factorization and require isomorphism reflection before inferring localized-object isomorphism or reversing an additional target localization."
+  - conflict_id: "C05_COARSE_GRAINING_SCOPE"
+    issue: "Information-losing coarse graining can create new equivalences."
+    resolution: "Restrict exact preservation to a declared natural factorization square and never claim reflection without an explicit iso-reflection premise."
+  - conflict_id: "C06_VARIATION_GENERALITY"
+    issue: "One child used strict invariant naturality while the other supplied a transported-invariant template."
+    resolution: "Prove the strict natural-isomorphism special case and record the generalized transport template with a separate reflection guard."
+  - conflict_id: "C07_BETTI_PAIR_FUNCTORIALITY"
+    issue: "A bare Betti pair is an object classifier rather than an adequate functor on arbitrary graph maps."
+    resolution: "Use integral H_0 and H_1 as the functor into finitely generated abelian groups and use Betti pairs only to compute object isomorphism classes in the finite witness set."
+  - conflict_id: "C08_MATHEMATICAL_VERSUS_PHYSICAL_EQUIVALENCE"
+    issue: "Invariant-image isomorphism could be overread as observational or gauge equivalence."
+    resolution: "Add an explicit theorem-level logical guard and require a separately derived operational completeness and physical interpretation bridge."
+unresolved_conflicts: []
+authority_result:
+  canonical_ontology_edit_authorized: false
+  source_law_adopted: false
+  physical_equivalence_established: false
+  general_eqsrc_discharged: false
+  p3_t06_executed: false
+  physics_promotion_authorized: false
+parent_disposition: "Fuse one proposal-only invariant-functor object relation with conditional congruence theorems finite witnesses explicit countercontrols and open adoption burdens."

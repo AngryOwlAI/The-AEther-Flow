@@ -1,0 +1,157 @@
+artifact_id: "child_phys_phil_eqsrc_invariant_functor_quotient"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260720-026"
+job_id: "AJ-RT-20260720-026-001"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+plan_task_id: "P3-T05"
+result_classification: "positive_bounded_mathematical_candidate_with_open_physical_and_ontological_burdens"
+
+candidate_assessed:
+  name: "EqSrc invariant-functor kernel relation"
+  formal_schema: "For a prospectively fixed source category C, category D, and functor I:C->D, define A ~_I B iff I(A) is isomorphic to I(B) in D."
+  mathematical_kind: "kernel relation of the object map from C to isomorphism classes of D"
+  candidate_status: "proposal-only"
+  artifact_status: "draft/control"
+  ontology_status: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  current_ontology_instantiation: "not_established"
+
+prospective_definition_guard:
+  required_precommitments:
+    - "Fix the source-object category C, including its objects, morphisms, and equality conventions, before evaluating desired EqSrc pairs."
+    - "Fix D, its isomorphism notion, and the complete definition and provenance of I before inspecting desired equivalence-class labels or benchmark outcomes."
+    - "Fix every admitted composition, localization class W, coarse-graining map, and variation endofunctor together with its comparison data before testing congruence."
+    - "Require the complete definition graph of C, D, I, W, coarse-graining, variation, and comparison maps to factor through declared source-side roots or target-neutral mathematical structure."
+  post_hoc_failure_condition: "If I is chosen or modified so that its image-isomorphism classes reproduce an already desired partition, the construction merely encodes those class labels and fails the P3-T05 evidential burden."
+  constant_and_identity_extremes: "A constant functor induces the universal relation and an identity-like functor induces source isomorphism; their availability proves that the schema alone does not select a physically meaningful EqSrc."
+  target_atlas_independence_test: "Hold all declared source roots fixed and vary every target atlas, target metric, candidate reconstruction, detector outcome, benchmark result, registry state, validator result, and workflow decision. C, D, I, and every relation value must remain unchanged."
+  qualification: "Calling D target-neutral is insufficient by itself; transitive provenance must exclude a disguised target partition, opaque lookup, learned target proxy, or workflow label."
+
+equivalence_and_congruence_interpretation:
+  equivalence_relation:
+    assessment: "conditionally valid"
+    reason: "Identity, inverse, and composition of isomorphisms in D establish reflexivity, symmetry, and transitivity for ~_I once C, D, and I are well-defined."
+    limitation: "This is a theorem about the declared mathematical classifier, not evidence that current ontology selects that classifier."
+  source_composition:
+    assessment: "requires a typed operation and comparison theorem"
+    object_operation_case: "For a declared bifunctor or monoidal operation tensor on C, congruence follows only when I carries it to an operation on D through specified invertible comparison maps; object equivalence alone does not make an untyped word composition meaningful."
+    morphism_composition_guard: "Because ~_I is initially a relation on objects, ordinary categorical composition of morphisms is not automatically an operation on its equivalence classes. Any arrow-level quotient requires separately typed hom-set or groupoid data."
+  preservation_reflection_rule: "Every operation claim must say separately whether equivalence is preserved forward and reflected backward; preservation never entails reflection without an explicit iso-reflection or conservativity hypothesis."
+
+localization_analysis:
+  meaning: "Localization formally inverts a prospectively declared class W of source morphisms."
+  preservation_condition: "If I sends every arrow in W to an isomorphism and factors through the localization by a functor I_bar, then the I-based relation is coherently representable after localization."
+  reflection_condition: "Equivalence detected after localization reflects the original relation only when the factor or localization comparison is iso-reflecting on the relevant objects."
+  principal_risk: "Localization may create new isomorphisms or erase distinctions, so a post-localization equivalence cannot be pulled back as exact source equivalence without the reflection premise."
+  physical_qualification: "The class W is not physically admissible merely because a localization exists mathematically."
+
+coarse_graining_analysis:
+  meaning: "A coarse-graining is a prospectively declared information-losing source map or functor Q together with a comparison between I and an invariant J on the coarse domain."
+  preservation_condition: "A natural isomorphism or another sufficient invertible comparison J composed with Q approximately equal to I supports forward preservation of ~_I."
+  reflection_condition: "Reflection requires Q or the comparison to be iso-reflecting on the declared domain; ordinary coarse-graining is expected to identify additional objects and therefore usually does not reflect equivalence."
+  principal_risk: "Treating arbitrary coarse-graining as exact congruence can collapse the relation toward universality and conceal physically relevant source distinctions."
+  physical_qualification: "Mathematical information loss is not evidence that the lost information is gauge, unobservable, or dynamically irrelevant."
+
+variation_naturality_analysis:
+  meaning: "An admissible variation is a prospectively declared endofunctor or action on C, not any finite edit that happens to preserve a desired answer."
+  sufficient_structure: "For each admitted variation V, provide an autoequivalence T_V of D or another typed transport together with a natural isomorphism I composed with V approximately equal to T_V composed with I."
+  consequence: "The comparison transports I-image isomorphisms and therefore preserves the relation within the declared variation class."
+  limits:
+    - "A noninvertible natural transformation does not by itself provide equivalence in both directions."
+    - "Naturality under a chosen variation class does not establish robustness under arbitrary source changes."
+    - "Mathematical transport naturality is not physical covariance or empirical invariance."
+
+mathematics_physics_separation:
+  mathematical_object_equivalence: "A ~_I B means only that the chosen invariant functor cannot distinguish A and B up to isomorphism in D."
+  physical_observational_equivalence: "Physical observational equivalence would additionally require a source-to-observation or source-to-measurement derivation and evidence that I is complete for every operationally admissible readout in the stated regime."
+  false_positive_risk: "An incomplete I may identify source objects that differ in a physically relevant but unrecorded feature."
+  false_negative_risk: "An over-detailed I may distinguish source objects whose differences are physically gauge or observationally irrelevant."
+  gauge_guard: "No structural isomorphism, quotient, homology equality, or functorial invariance may be called physical gauge without a separately derived physical interpretation."
+  exact_gr_boundary: "The canonical exact-GR operational closure does not retroactively make an arbitrary source invariant operationally complete or derive EqSrc from substrate variables."
+
+current_ontology_assessment:
+  derives:
+    - "A proposed four-dimensional substrate and its intrinsic ordered-motion map at foundations scope."
+    - "Observed-space and S-time placeholders with explicitly incomplete microphysical definitions."
+    - "Adopted exact-GR effective dynamics at the operational level, explicitly separated from substrate derivation."
+  does_not_derive:
+    - "The source category C or a complete microphysical source-object domain."
+    - "The morphisms, monoidal or composition operations, localizing class W, coarse-graining maps, or admissible variation class required by this candidate."
+    - "The category D, the invariant functor I, or a source law selecting either one."
+    - "Iso-reflection, operational completeness, physical gauge meaning, empirical adequacy, or exact-GR recovery for the induced relation."
+  underdetermination_statement: "Current ontology does not derive the displayed invariant functor or select its induced object relation. This leaves same-milestone source-extension continuation open; it does not imply that EqSrc is impossible or that no conservative source-side candidate can exist."
+
+finite_witness_interpretation:
+  proposed_model: "Finite source graphs classified by the prospectively declared integral Betti-pair functor I(G)=(beta_0(G),beta_1(G))."
+  positive_pair: "A triangle C3 and square C4 both have Betti pair (1,1), so they witness a nonidentity related pair."
+  negative_pair: "A triangle C3 has (1,1) while a path P3 has (1,0), so they witness that the relation is not universal."
+  additional_control: "Two disjoint edges have (2,0), displaying sensitivity to connected-component number."
+  operation_controls:
+    disjoint_union: "Betti pairs add componentwise, giving a bounded composition-congruence witness for disjoint union."
+    edge_subdivision: "Subdivision preserves the graph homotopy type and Betti pair, furnishing a bounded positive variation control."
+    bridge_contraction: "Contracting a bridge preserves the Betti pair in the declared finite graph domain, furnishing another bounded positive control."
+    cycle_edge_deletion: "Deleting an edge on a cycle changes beta_1 and is therefore a negative control; it must not be silently included in an exact relation-preserving variation class."
+  epistemic_scope: "These controls demonstrate formal nontriviality, discriminating power, and selected operation behavior only. Betti equality collapses many nonisomorphic graphs and supplies no physical reason to identify them."
+  non_generalization_rule: "No finite graph witness licenses a claim about the full Aether substrate category, physical observational equivalence, arbitrary localization, arbitrary coarse-graining, or general EqSrc."
+
+falsifiers_and_stop_conditions:
+  - id: "F-PHIL-01"
+    condition: "The desired equivalence classes, target atlas, benchmark fit, or workflow labels are used to define or tune I."
+    consequence: "Reject the candidate as post-hoc or target-smuggled for this packet."
+  - id: "F-PHIL-02"
+    condition: "The complete definition graph for C, D, I, or an operation comparison lacks source-only or target-neutral provenance."
+    consequence: "Stop; source-purity has not been established."
+  - id: "F-PHIL-03"
+    condition: "A claimed composition operation is not typed as a functorial operation or lacks invertible comparison data."
+    consequence: "Do not claim composition congruence."
+  - id: "F-PHIL-04"
+    condition: "I fails to invert an arrow placed in W or fails to factor through the declared localization."
+    consequence: "Do not claim localization preservation."
+  - id: "F-PHIL-05"
+    condition: "A localization or coarse-graining identifies an I-distinct pair while reflection is claimed."
+    consequence: "The reflection claim is refuted; retain at most the supported forward-preservation result."
+  - id: "F-PHIL-06"
+    condition: "An admitted variation lacks a natural invertible transport comparison."
+    consequence: "Do not claim relation naturality for that variation."
+  - id: "F-PHIL-07"
+    condition: "A finite witness is promoted as physically meaningful solely because the invariant calculation passes."
+    consequence: "Stop; mathematical and physical equivalence have been conflated."
+  - id: "F-PHIL-08"
+    condition: "The candidate is described as derived from or selected by current ontology without new canonical evidence."
+    consequence: "Stop; the permitted result remains proposal-only source-extension data."
+
+authority_and_status_vocabulary:
+  draft_control: "draft/control"
+  proposal_scope: "proposal-only"
+  constructed_payload: "source-extension data"
+  canonical_ontology_candidate: "not assigned; designation canonical-ontology candidate requires separate protected authority"
+  adopted: "false; no source law or ontology modification is adopted"
+  rejected: "false; this packet does not issue a protected rejection or establish a global no-go"
+  human_gated: "Ontology modification, canonical-ontology candidate designation, adoption, rejection, and Gate Chair verdict remain human-gated."
+  gate_chair_status: "unchanged"
+  general_EqSrc_discharged: false
+  scientific_ledger_changed: false
+  physics_promotion_authorized: false
+
+scoped_continuation_recommendation:
+  p3_t05_disposition: "Complete P3-T05 only if the parent artifact states the relation prospectively, proves the conditional equivalence and typed preservation claims, guards every reflection claim, and passes its finite positive and negative controls."
+  adoption_disposition: "blocked_adoption_open_continuation"
+  next_plan_item: "P3-T06"
+  next_role: "smuggling-auditor@0.2.0"
+  next_scope: "Audit the unchanged candidate for disguised target partitions, post-hoc invariant choice, operation-class smuggling, preservation/reflection conflation, and physical-equivalence overread."
+  requires_human_gate_to_attempt_audit: false
+  p3_t06_executed_here: false
+  recommendation: "Proceed only to the bounded P3-T06 audit after qualifying P3-T05 completion; do not adopt, repair, or promote the candidate in this child output."
+
+forbidden_conclusions:
+  - "No canonical ontology modification or canonical-ontology candidate designation."
+  - "No source-law adoption or rejection."
+  - "No general EqSrc discharge or proof that the current ontology selects I."
+  - "No identification of mathematical image isomorphism with physical observational equivalence or physical gauge."
+  - "No unqualified localization, coarse-graining, composition, or variation congruence."
+  - "No scientific Distance-to-GR ledger change."
+  - "No RetainH, GenH, M_src, target metric, matter-coupling, or Einstein-equation derivation."
+  - "No benchmark promotion, Gate Chair verdict, completed derivation, global no-go, global theory rejection, or future source-extension impossibility."
+  - "No P3-T06 execution."

@@ -1,0 +1,154 @@
+{
+  "artifact_id": "EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-FINITE-WITNESSES-V1",
+  "task_id": "RT-20260720-026",
+  "status": "draft/control",
+  "model": "finite undirected simple graphs with Betti-pair invariant H=(beta_0,beta_1)",
+  "graphs": [
+    {
+      "graph_id": "C3_TRIANGLE",
+      "vertices": ["0", "1", "2"],
+      "edges": [["0", "1"], ["1", "2"], ["0", "2"]],
+      "expected_invariant": [1, 1]
+    },
+    {
+      "graph_id": "C4_SQUARE",
+      "vertices": ["0", "1", "2", "3"],
+      "edges": [["0", "1"], ["1", "2"], ["2", "3"], ["0", "3"]],
+      "expected_invariant": [1, 1]
+    },
+    {
+      "graph_id": "P3_PATH",
+      "vertices": ["0", "1", "2"],
+      "edges": [["0", "1"], ["1", "2"]],
+      "expected_invariant": [1, 0]
+    },
+    {
+      "graph_id": "K2_EDGE",
+      "vertices": ["a", "b"],
+      "edges": [["a", "b"]],
+      "expected_invariant": [1, 0]
+    },
+    {
+      "graph_id": "TWO_EDGES",
+      "vertices": ["a", "b", "c", "d"],
+      "edges": [["a", "b"], ["c", "d"]],
+      "expected_invariant": [2, 0]
+    },
+    {
+      "graph_id": "C3_PLUS_K2",
+      "vertices": ["t0", "t1", "t2", "e0", "e1"],
+      "edges": [["t0", "t1"], ["t1", "t2"], ["t0", "t2"], ["e0", "e1"]],
+      "expected_invariant": [2, 1]
+    },
+    {
+      "graph_id": "C4_PLUS_K2",
+      "vertices": ["s0", "s1", "s2", "s3", "e0", "e1"],
+      "edges": [["s0", "s1"], ["s1", "s2"], ["s2", "s3"], ["s0", "s3"], ["e0", "e1"]],
+      "expected_invariant": [2, 1]
+    },
+    {
+      "graph_id": "TRIANGLE_WITH_TAIL",
+      "vertices": ["0", "1", "2", "3"],
+      "edges": [["0", "1"], ["1", "2"], ["0", "2"], ["2", "3"]],
+      "expected_invariant": [1, 1]
+    },
+    {
+      "graph_id": "C3_RELABELED",
+      "vertices": ["x", "y", "z"],
+      "edges": [["x", "y"], ["y", "z"], ["x", "z"]],
+      "expected_invariant": [1, 1]
+    },
+    {
+      "graph_id": "POINT",
+      "vertices": ["p"],
+      "edges": [],
+      "expected_invariant": [1, 0]
+    }
+  ],
+  "relation_checks": [
+    {
+      "check_id": "R_POSITIVE_NONISOMORPHIC_CYCLES",
+      "left": "C3_TRIANGLE",
+      "right": "C4_SQUARE",
+      "expected_related": true,
+      "interpretation": "Nonisomorphic graphs can have isomorphic invariant images."
+    },
+    {
+      "check_id": "R_NEGATIVE_CYCLE_VS_TREE",
+      "left": "C3_TRIANGLE",
+      "right": "P3_PATH",
+      "expected_related": false,
+      "interpretation": "A cycle and a tree are separated by beta_1."
+    },
+    {
+      "check_id": "R_NEGATIVE_COMPONENT_COUNT",
+      "left": "K2_EDGE",
+      "right": "TWO_EDGES",
+      "expected_related": false,
+      "interpretation": "The invariant detects the component-count difference."
+    }
+  ],
+  "operation_checks": [
+    {
+      "check_id": "O_COMPOSITION_DISJOINT_UNION",
+      "operation_class": "composition",
+      "before_pair": ["C3_TRIANGLE", "C4_SQUARE"],
+      "after_pair": ["C3_PLUS_K2", "C4_PLUS_K2"],
+      "exact_admissible": true,
+      "expected_preserves_relation": true,
+      "interpretation": "Disjoint union adds Betti pairs and preserves the positive relation."
+    },
+    {
+      "check_id": "O_LOCALIZATION_EDGE_SUBDIVISION",
+      "operation_class": "localization",
+      "before_pair": ["C3_TRIANGLE", "C3_TRIANGLE"],
+      "after_pair": ["C3_TRIANGLE", "C4_SQUARE"],
+      "exact_admissible": true,
+      "expected_preserves_relation": true,
+      "interpretation": "Subdividing one cycle edge preserves graph homology."
+    },
+    {
+      "check_id": "O_COARSE_GRAINING_BRIDGE_CONTRACTION",
+      "operation_class": "coarse_graining",
+      "before_pair": ["TRIANGLE_WITH_TAIL", "C3_TRIANGLE"],
+      "after_pair": ["C3_TRIANGLE", "C3_TRIANGLE"],
+      "exact_admissible": true,
+      "expected_preserves_relation": true,
+      "interpretation": "Contracting the declared bridge preserves the Betti pair."
+    },
+    {
+      "check_id": "O_VARIATION_RELABELING",
+      "operation_class": "variation",
+      "before_pair": ["C3_TRIANGLE", "C4_SQUARE"],
+      "after_pair": ["C3_RELABELED", "C4_SQUARE"],
+      "exact_admissible": true,
+      "expected_preserves_relation": true,
+      "interpretation": "A source relabeling is an isomorphism and preserves H."
+    },
+    {
+      "check_id": "O_INEXACT_CYCLE_EDGE_DELETION",
+      "operation_class": "coarse_graining",
+      "before_pair": ["C3_TRIANGLE", "C4_SQUARE"],
+      "after_pair": ["P3_PATH", "C4_SQUARE"],
+      "exact_admissible": false,
+      "expected_preserves_relation": false,
+      "interpretation": "Arbitrary edge deletion changes beta_1 and is excluded from exact congruence."
+    },
+    {
+      "check_id": "O_INEXACT_CYCLE_COLLAPSE",
+      "operation_class": "coarse_graining",
+      "before_pair": ["C3_TRIANGLE", "C4_SQUARE"],
+      "after_pair": ["POINT", "C4_SQUARE"],
+      "exact_admissible": false,
+      "expected_preserves_relation": false,
+      "interpretation": "Collapsing a cycle to a point shows that coarse graining does not preserve this relation automatically."
+    }
+  ],
+  "authority_flags": {
+    "source_law_adopted": false,
+    "physical_equivalence_established": false,
+    "general_eqsrc_discharged": false,
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false
+  }
+}

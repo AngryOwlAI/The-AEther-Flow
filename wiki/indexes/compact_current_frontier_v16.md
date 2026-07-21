@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-025`
-- Latest handoff: `handoff-0795`
-- Current status: `v21_p3_t04_finite_probability_dynamics_theorems_and_scoped_obstruction_completed_p3_t05_selected_no_adoption_or_distance_delta`
+- Active task: `RT-20260720-026`
+- Latest handoff: `handoff-0796`
+- Current status: `v21_p3_t05_proposal_only_invariant_functor_relation_completed_p3_t06_audit_selected_no_adoption_or_distance_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-025`
-- Latest research handoff: `handoff-0795`
-- Latest research next action: Run exactly one bounded v21 P3-T05 ontology-formalizer packet constructing a proposal-only quotient-based EqSrc candidate with equivalence and congruence obligations plus positive and negative witness pairs.
+- Latest research task: `RT-20260720-026`
+- Latest research handoff: `handoff-0796`
+- Latest research next action: Run exactly one bounded v21 P3-T06 smuggling-auditor packet auditing and stressing the unchanged registered P3-T05 candidate.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p3_t05_quotient_eqsrc_congruence_obligations`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p3_t06_audit_stress_invariant_functor_eqsrc_candidate`
+- Role family: `smuggling-auditor@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Replace ad hoc kernel relations with a general source-equivalence target.
+- Milestone burden: Determine whether the quotient candidate is a genuine source relation rather than a disguised target or arbitrary partition.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ae959564bd9b33b81ef2a10c4bb08fe636492f2df64a74d9934f444f1dd24363`
-- JSON SHA-256: `e9c1cbe995e9519eac037597f9fcf3a26cfac8e7dc10796f593dae8df7d0e5b3`
+- YAML SHA-256: `d3bb363d5093c3560d1685e8e5dcf9a86465dc5d889924f835ca85feaccbb31d`
+- JSON SHA-256: `45fd655f5e050c05d627f67ccf44170eedad9f31809a29121d54d974bfb46116`
 
 ## Authority Warning
 

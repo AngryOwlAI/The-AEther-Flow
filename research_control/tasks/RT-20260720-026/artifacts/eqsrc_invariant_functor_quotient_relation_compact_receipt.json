@@ -1,0 +1,65 @@
+{
+  "receipt_id": "EQSRC-P3-T05-INVARIANT-FUNCTOR-QUOTIENT-RELATION-RECEIPT-V1",
+  "task_id": "RT-20260720-026",
+  "job_id": "AJ-RT-20260720-026-001",
+  "plan_task_id": "P3-T05",
+  "created_at": "2026-07-21T14:34:01Z",
+  "status": "PASS",
+  "result_classification": "proposal_only_invariant_functor_relation_candidate_pending_audit",
+  "theorem_results": {
+    "object_kernel_equivalence_proved": true,
+    "conditional_composition_congruence_proved": true,
+    "localization_preservation_proved_with_reflection_guard": true,
+    "coarse_graining_preservation_proved_with_reflection_guard": true,
+    "variation_naturality_proved_conditionally": true,
+    "physical_equivalence_guard_proved_logically": true
+  },
+  "finite_validation": {
+    "graph_count": 10,
+    "relation_check_count": 3,
+    "operation_check_count": 6,
+    "positive_relation_count": 1,
+    "negative_relation_count": 2,
+    "exact_operation_class_count": 4,
+    "inexact_coarse_graining_countercontrol_count": 2,
+    "failed_check_count": 0
+  },
+  "artifact_hashes": {
+    "candidate_tex": "badc60c72ff16f84fe88568b825ff738a8f160a225f011715f027c1da2cfa1c3",
+    "machine_spec": "9c40dd2a83c5d9ee25a62c977b5b47eb5e2770890c8a7aa90dbe342cc7936ad1",
+    "finite_witnesses": "6f101a2b3e7bc808e165349ab9cab33f44fcb671d2eb3f294ac8bf6071d38ecd",
+    "child_phys_math": "717caca59ec5897ab8133de8c57f581b58eecb290045e87031ac3fdfc878f57a",
+    "child_phys_phil": "8945a14e1ad250e58c3529ea8d49371019b9df05c166cef248406ea66dec8ebc",
+    "parent_conflict_review": "9905357df52f0beb00f6174a01ff8047337fcc38c37453d6cd2d8c81c09d6491",
+    "parent_fusion_notes": "89eb8d459ffbce8d8ba0a7b36c740b666eec6a147111e17948c5ff336e3041a8",
+    "validator": "f2db3665426479e68e7c0a0850e978f3add2234340e4b64ef83954f96eb0d630",
+    "validation_report": "5437394c80015b356edd24e68d8502062983dc40bd7b5263541b0285edf6ed3a"
+  },
+  "preserved_authority_hashes": {
+    "ontology_foundations": "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2",
+    "distance_to_gr_ledger": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+    "metric_use_ledger": "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  },
+  "claim_boundary": {
+    "artifact_status": "draft/control",
+    "candidate_status": "proposal-only",
+    "adoption_status_pair": "blocked_adoption_open_continuation",
+    "source_category_derived_from_current_ontology": false,
+    "invariant_functor_derived_from_current_ontology": false,
+    "physical_equivalence_established": false,
+    "source_law_adopted": false,
+    "general_eqsrc_discharged": false,
+    "distance_to_gr_delta_changed": false,
+    "p3_t06_executed": false,
+    "physics_promotion_authorized": false,
+    "publication_authorized": false,
+    "global_no_go_authorized": false
+  },
+  "continuation": {
+    "p3_t05_complete": true,
+    "p3_t06_dependency_ready": true,
+    "selected_next_item": "P3-T06",
+    "selected_next_role": "smuggling-auditor@0.2.0",
+    "candidate_must_remain_unchanged_during_audit": true
+  }
+}

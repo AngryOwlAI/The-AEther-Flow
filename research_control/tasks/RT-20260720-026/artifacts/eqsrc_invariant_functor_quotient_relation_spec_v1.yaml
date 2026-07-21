@@ -1,0 +1,105 @@
+schema_id: "eqsrc_invariant_functor_quotient_relation_spec_v1"
+artifact_id: "EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-SPEC-V1"
+task_id: "RT-20260720-026"
+plan_task_id: "P3-T05"
+status: "draft/control"
+adoption_status: "proposal-only"
+result_kind: "source-extension data and conditional source-equivalence candidate"
+scope: "prospectively declared source categories and target-neutral invariant functors"
+
+candidate_relation:
+  symbol: "sim_I"
+  definition: "For objects A and B of C define A sim_I B iff I(A) is isomorphic to I(B) in D."
+  source_category: "C"
+  invariant_category: "D"
+  invariant_functor: "I:C->D"
+  prospective_definition: true
+  uses_desired_class_labels: false
+  target_atlas_used: false
+  target_metric_used: false
+  benchmark_result_used: false
+  invariant_inputs:
+    - "source objects and source morphisms in C"
+    - "a source-typed functor I fixed before any candidate pair is evaluated"
+    - "isomorphisms internal to D"
+  excluded_inputs:
+    - "desired EqSrc class membership"
+    - "target-atlas labels"
+    - "benchmark agreement"
+    - "candidate reconstruction output"
+
+assumptions:
+  - id: "A1"
+    statement: "C and D are categories and I is a functor fixed prospectively on the declared source domain."
+  - id: "A2"
+    statement: "The relation compares invariant images by isomorphism in D and not by a target-selected label."
+  - id: "A3"
+    statement: "Every claimed operation law names its comparison map and whether only preservation or also reflection is proved."
+  - id: "A4"
+    statement: "Structural source equivalence is not interpreted as physical observational equivalence without a separately derived physical bridge."
+  - id: "A5"
+    statement: "The current canonical ontology does not derive the source category C the invariant functor I or the admissible operation classes used here."
+
+theorem_contracts:
+  - theorem_id: "IFQ1_KERNEL_EQUIVALENCE"
+    hypotheses: "C and D are categories and I:C->D is a functor"
+    conclusion: "sim_I is reflexive symmetric and transitive on objects of C"
+  - theorem_id: "IFQ2_MONOIDAL_COMPOSITION_CONGRUENCE"
+    hypotheses: "C and D carry declared binary composition products and I has a natural isomorphism I(A tensor B) congruent to I(A) boxtimes I(B)"
+    conclusion: "A sim_I A' and B sim_I B' imply A tensor B sim_I A' tensor B'"
+  - theorem_id: "IFQ3_LOCALIZATION_PRESERVATION"
+    hypotheses: "I sends every arrow in W to an isomorphism and factors through C[W^-1]"
+    conclusion: "W-zigzag equivalence implies sim_I; the converse needs the factor functor to reflect isomorphisms"
+  - theorem_id: "IFQ4_COARSE_GRAINING_PRESERVATION"
+    hypotheses: "Q:C->Cbar is a declared coarse-graining functor and I is naturally isomorphic to Ibar composed with Q"
+    conclusion: "sim_I is preserved by Q; reflection needs Ibar or the relevant comparison to reflect isomorphisms"
+  - theorem_id: "IFQ5_VARIATION_NATURALITY"
+    hypotheses: "V:C->C is an admissible variation and alpha:I composed with V => I is a natural isomorphism"
+    conclusion: "A sim_I B iff V(A) sim_I V(B)"
+  - theorem_id: "IFQ6_PHYSICAL_BRIDGE_GUARD"
+    hypotheses: "Only IFQ1 through IFQ5 and finite source witnesses are available"
+    conclusion: "No physical observational equivalence gauge redundancy or adopted EqSrc law follows"
+
+operation_obligations:
+  composition:
+    preservation: "proved conditionally under a strong comparison isomorphism"
+    reflection: "not claimed in general"
+  localization:
+    preservation: "proved when I inverts W"
+    reflection: "requires explicit isomorphism reflection by the factored invariant"
+  coarse_graining:
+    preservation: "proved only for declared Q with I naturally factoring through Q"
+    reflection: "requires explicit isomorphism reflection and is not automatic"
+  variation:
+    preservation: "proved under a natural isomorphism I composed with V => I"
+    reflection: "follows for the same V when the natural isomorphism is invertible"
+
+finite_instantiation:
+  source_domain: "finite one-dimensional CW complexes represented by the undirected simple graphs listed in the witness artifact with declared cellular maps"
+  invariant: "H(G)=(H_0(G;Z),H_1(G;Z)) with ranks beta_0 and beta_1=|E|-|V|+beta_0"
+  invariant_codomain: "Ab_fg x Ab_fg; on finite graphs the two free-abelian-group isomorphism classes are determined by the Betti pair"
+  relation: "G sim_H G' iff their integral H_0 and H_1 groups are isomorphic equivalently iff their Betti pairs are equal"
+  purpose: "bounded positive negative and operation witnesses only"
+  generalization_guard: "The finite graph model does not establish the candidate for the physical substrate or for arbitrary source categories."
+
+authority_flags:
+  canonical_ontology_edit_authorized: false
+  source_category_derived_from_current_ontology: false
+  invariant_functor_derived_from_current_ontology: false
+  admissible_operations_derived_from_current_ontology: false
+  physical_equivalence_bridge_established: false
+  source_law_adopted: false
+  canonical_ontology_candidate_promoted: false
+  general_eqsrc_discharged: false
+  distance_to_gr_delta_changed: false
+  p3_t06_executed: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  global_no_go_authorized: false
+  future_source_extension_impossible: false
+
+continuation:
+  adoption_status_pair: "blocked_adoption_open_continuation"
+  next_dependency_ready_item_after_completion: "P3-T06"
+  next_item_status: "selected_not_executed"
+  unresolved_burden: "Derive or justify C I and admissible operations from source-side ontology then audit and stress the candidate before any protected adoption decision."

@@ -1,0 +1,228 @@
+artifact_id: "child_phys_math_eqsrc_invariant_functor_quotient"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260720-026"
+job_id: "AJ-RT-20260720-026-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+completed_at: "2026-07-21T14:28:22Z"
+plan_task_id: "P3-T05"
+result_classification: "positive_proposal_only_invariant_functor_kernel_candidate_with_conditional_congruence_and_reflection_guards"
+fatal_internal_gap: false
+adoption_status: "blocked_adoption_open_continuation"
+general_EqSrc_discharged: false
+physical_observational_equivalence_established: false
+distance_to_gr_ledger_changed: false
+
+source_evidence:
+  plan:
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P3-T05 objective and P3-T03/P3-T04 dependency boundary"
+  representative_irrelevance:
+    path: "research_control/tasks/RT-20260720-024/artifacts/eqsrc_representative_irrelevance_theorem_v1.tex"
+    sha256: "1a08e02c462d4401a3ad75219d7903c598f996d4011105baab31f07ba1dab0d1"
+    use: "orbit-factorization versus all-choice-equality distinction and family-level congruence warning"
+  probabilistic_dynamical_selection:
+    path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+    sha256: "c71673f1a79f62b7afce6cd55663594419a234ac16c5a737128bb88b9e4e39a4"
+    use: "prospective declaration and source-provenance guard; no stochastic or dynamical selector is imported"
+  closure_refuter:
+    path: "research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex"
+    sha256: "9f6e92dd2160bafcfb55fc04eac82a26266facf29c04757b2f7ccfdcbb4d9b29"
+    use: "intra-model congruence does not imply inter-model stability"
+  quotient_selector_candidate:
+    path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+    sha256: "56e22c2ad8fa2fcbfc21bcda2735917d75d7bc611f273a38852cbaa3cc9b2a45"
+    use: "scoped quotient stability and transport-naturality precedent without adopting its profile or subgroup"
+
+prospective_declaration_guard:
+  declaration_time: "The source category, target category, invariant functor, admitted operations, localizations, coarse-grainings, and variations must be fixed before any desired equivalence classes or downstream target success are inspected."
+  prohibited_construction: "Do not define I from desired EqSrc class labels, a target atlas, a target metric, a successful reconstruction, benchmark agreement, or validator outcomes."
+  mathematical_name: "object-isomorphism kernel relation of a prospectively fixed functor"
+  name_warning: "This is not a kernel pair on morphisms and does not by itself construct a categorical quotient or a physical gauge groupoid."
+
+formal_candidate:
+  universe_condition: "C is a small category, or is locally small with a fixed universe-small object collection S contained in Obj(C), so the quotient set below exists in the declared universe."
+  source_category: "C, whose objects are proposal-only source objects and whose morphisms are prospectively declared source morphisms."
+  target_category: "D, an ordinary category; only its object isomorphisms are used by the base relation."
+  invariant_functor: "I:C->D, prospectively fixed and source-defined."
+  core_groupoid: "D^iso is the maximal subgroupoid of D."
+  component_map: "pi_0(I):Obj(C)->pi_0(D^iso), A maps to the isomorphism class [I(A)]."
+  relation: "For A,B in Obj(C), define A ~_I B iff there exists an isomorphism alpha:I(A)->I(B) in D."
+  quotient: "Obj(C)/~_I is the set of fibers of pi_0(I); this is only an object quotient unless additional morphism-congruence data are supplied."
+  source_only_status: "Source-only is conditional on a separate provenance audit showing that C, D, I, and every comparison map were defined without target import."
+
+equivalence_relation_theorem:
+  status: "PASS under the formal_candidate assumptions"
+  reflexivity:
+    witness: "id_{I(A)}:I(A)->I(A)"
+    proof: "The identity morphism is an isomorphism, so A ~_I A."
+  symmetry:
+    witness: "alpha^{-1}:I(B)->I(A)"
+    proof: "If alpha witnesses A ~_I B, its inverse witnesses B ~_I A."
+  transitivity:
+    witness: "beta composed with alpha:I(A)->I(C)"
+    proof: "If alpha witnesses A ~_I B and beta witnesses B ~_I C, their composite is an isomorphism and witnesses A ~_I C."
+  exact_scope: "This proves an equivalence relation on the declared object collection. It says nothing about physical observability, admissibility, completeness of I, or a quotient of hom-sets."
+
+composition_congruence_theorem:
+  status: "PASS only under an explicit operation-compatibility hypothesis"
+  total_operation_form:
+    source_operation: "A bifunctor tensor:C x C->C."
+    target_operation: "A bifunctor box:D x D->D."
+    comparison: "A natural isomorphism phi_{A,A'}:I(A) box I(A')->I(A tensor A')."
+    theorem: "If A ~_I B via alpha and A' ~_I B' via beta, then A tensor A' ~_I B tensor B'."
+    witness: "phi_{B,B'} composed with (alpha box beta) composed with phi_{A,A'}^{-1}."
+    proof: "Bifunctors send pairs of isomorphisms to isomorphisms, and a composite of isomorphisms is an isomorphism."
+  partial_operation_guard:
+    requirement: "For a partial source composition, equivalence replacements must preserve the domain of composability, and the comparison isomorphism must be defined for every admitted composable pair."
+    warning: "An object relation alone does not ensure that replacing endpoints preserves an interface, boundary, typing judgment, or gluing datum."
+  strong_monoidal_special_case: "A strong monoidal I supplies the comparison above and therefore makes ~_I a monoidal object congruence. A merely lax comparison need not be invertible and does not prove the claim."
+  morphism_quotient_limit: "No congruence on parallel source morphisms is defined. A category-level quotient needs a compatible morphism relation and well-defined identities and composition."
+
+transport_template:
+  setup: "Let F:C->C' transform source objects, let K:D->D' transform invariant values, let I':C'->D' be the post-transform invariant, and let eta:I' composed with F => K composed with I be a natural isomorphism."
+  preservation_witness: "For alpha:I(A)->I(B), eta_B^{-1} composed with K(alpha) composed with eta_A is an isomorphism I'(F(A))->I'(F(B))."
+  preservation: "A ~_I B implies F(A) ~_{I'} F(B)."
+  reflection_condition: "The converse holds only when K reflects isomorphisms between the relevant objects I(A) and I(B)."
+  failure_mode: "If K identifies or inverts additional structure, F(A) ~_{I'} F(B) may hold even though A is not ~_I B."
+
+localization_obligations:
+  status: "preservation proved under factorization; reflection separately guarded"
+  source_localization:
+    data: "A class W of source morphisms and localization Q:C->C[W^{-1}]."
+    factorization_requirement: "I sends every w in W to an isomorphism in D, so the localization universal property supplies I_bar:C[W^{-1}]->D and a natural isomorphism I_bar composed with Q => I."
+    exact_same_target_result: "With unchanged target D, A ~_I B iff Q(A) ~_{I_bar} Q(B); the natural-isomorphism comparison proves both directions on original objects."
+  generalized_localization:
+    data: "If invariant values are also sent through K:D->D_loc and I_loc composed with Q is naturally isomorphic to K composed with I, preservation follows from the transport template."
+    reflection_guard: "Reflection requires K to reflect isomorphisms on the image of I. A target localization usually fails this because it deliberately turns selected non-isomorphisms into isomorphisms."
+    counterexample: "Take D with objects x,y and a non-invertible arrow w:x->y. Localizing D at w makes K(x) isomorphic to K(y), although x and y were not isomorphic. Objects A,B with I(A)=x and I(B)=y become equivalent only after localization."
+  no_factorization_guard: "If some w in W is sent by I to a non-isomorphism, I does not factor through C[W^{-1}] into unchanged D; no localization theorem may be claimed from this candidate."
+
+coarse_graining_obligations:
+  status: "preservation proved under natural factorization; reflection separately guarded"
+  data: "A source coarse-graining F:C->C_cg, a target coarse-graining K:D->D_cg, a post-coarse invariant I_cg:C_cg->D_cg, and a natural isomorphism I_cg composed with F => K composed with I."
+  preservation: "A ~_I B implies F(A) ~_{I_cg} F(B)."
+  reflection_guard: "F(A) ~_{I_cg} F(B) implies A ~_I B only if K reflects isomorphisms on the relevant invariant images."
+  counterexample: "The forgetful functor from finite colored sets to finite sets sends differently colored one-point objects, which are not color-preserving isomorphic, to isomorphic uncolored one-point sets. Thus ordinary information-losing coarse-graining is not reflective."
+  operational_warning: "Calling a coarse-graining admissible for exact EqSrc is an additional source-law choice; it is not implied by information loss or by preservation alone."
+
+variation_naturality_obligations:
+  status: "PASS only for a prospectively declared compatible variation family"
+  single_variation:
+    data: "An endofunctor T_v:C->C, a functor J_v:D->D, and a natural isomorphism theta_v:I composed with T_v => J_v composed with I."
+    preservation_witness: "theta_{v,B}^{-1} composed with J_v(alpha) composed with theta_{v,A}."
+    theorem: "A ~_I B implies T_v(A) ~_I T_v(B)."
+  coherent_family:
+    requirements:
+      - "T_e and J_e are coherently identified with identity functors."
+      - "The comparison for a composite variation uv agrees with the pasted comparisons for u and v."
+      - "The declared variation class is closed under the compositions for which stability is claimed."
+  reflection_guard: "If T_v and J_v are autoequivalences with compatible inverses, preservation applies in both directions. For general endofunctors, only preservation follows."
+  strict_invariance_special_case: "When J_v is the identity and theta_v:I composed with T_v => I, each invariant image is naturally unchanged under v."
+  counterexample: "Without theta_v, functoriality of I alone supplies no relation between I(T_v(A)) and I(T_v(B)); an arbitrary variation can split an existing ~_I class."
+  interpretation_guard: "Mathematical naturality under a declared variation is not physical covariance, physical gauge invariance, or empirical robustness."
+
+finite_graph_homology_model:
+  status: "exact finite witness model only; not the definition of general EqSrc"
+  source_category: "Finite one-dimensional CW complexes regarded as finite graphs, with declared cellular maps."
+  target_category: "The product category Ab_fg x Ab_fg of finitely generated abelian groups."
+  invariant_functor: "I(G)=(H_0(G;Z),H_1(G;Z))."
+  object_classification: "For a finite graph, H_0 and H_1 are free abelian; I(G) is classified by the Betti pair (beta_0,beta_1)."
+  exact_formula: "beta_0 is the number of connected components and beta_1=|E|-|V|+beta_0."
+  monoidal_operation: "Disjoint union on graphs and direct sum on homology; the canonical isomorphism H_k(G disjoint_union H) isomorphic to H_k(G) direct_sum H_k(H) makes I strong symmetric monoidal."
+  positive_witness:
+    left: "triangle C3 with (|V|,|E|,beta_0,beta_1)=(3,3,1,1)"
+    right: "square C4 with (4,4,1,1)"
+    conclusion: "C3 ~_I C4 although the finite combinatorial graphs are not isomorphic."
+  negative_witness:
+    left: "triangle C3 with (beta_0,beta_1)=(1,1)"
+    right: "three-vertex path P3 with (1,0)"
+    conclusion: "C3 is not ~_I P3."
+  disconnected_control:
+    object: "two disjoint single edges 2K2"
+    value: "(beta_0,beta_1)=(2,0)"
+    use: "Checks that component count is retained and the invariant is not merely cycle rank."
+  composition_positive_control:
+    premises:
+      - "C3 ~_I C4 because both have (1,1)."
+      - "P3 ~_I P4 because both paths have (1,0)."
+    composites: "C3 disjoint_union P3 and C4 disjoint_union P4 both have (2,1)."
+    conclusion: "The strong-monoidal congruence theorem is realized exactly for disjoint union."
+  composition_negative_control:
+    pair: "C3 disjoint_union K1 has (2,1), while P3 disjoint_union K1 has (2,0)."
+    conclusion: "Disjoint union does not erase a negative premise."
+  localization_positive_control:
+    operation: "Subdivide one edge of C3 to obtain C4."
+    result: "The subdivision is a homotopy equivalence and induces isomorphisms on H_0 and H_1, so it may belong to W for the source-localization special case."
+  coarse_graining_positive_control:
+    operation: "Contract the pendant bridge in a triangle-with-one-pendant-edge graph."
+    before_and_after: "Both the four-vertex four-edge graph and C3 have (1,1)."
+    qualification: "This is a declared homotopy-preserving operation witness, not a theorem that arbitrary graph simplification is exact."
+  destructive_operation_control:
+    operation: "Delete one cycle edge from C3 to obtain P3."
+    change: "beta_1 changes from 1 to 0."
+    conclusion: "Cycle-edge deletion is not admissible as an exact ~_I-preserving operation in this model."
+  variation_control:
+    admitted: "Graph relabelings, cellular isomorphisms, and any prospectively fixed variation functor equipped with a natural homology isomorphism."
+    excluded: "Arbitrary edits, simplifications, or edge deletions without a natural comparison certificate."
+
+counterexamples_and_sharpness:
+  same_invariant_not_same_structure: "C3 and C4 have isomorphic H_0/H_1 images but are not isomorphic as combinatorial graphs. The candidate intentionally forgets graph-level detail."
+  incomplete_interface_data: "Betti pairs do not encode marked boundaries or attaching maps. Equal-invariant components can yield different results under gluing; Mayer-Vietoris maps are additional interface data. Therefore disjoint-union congruence does not generalize to arbitrary gluing."
+  lax_monoidal_failure: "A non-invertible lax comparison I(A) box I(B)->I(A tensor B) does not transport an isomorphism back to the composite invariant and cannot prove composition congruence."
+  localization_nonreflection: "A codomain localization can create new invariant-image isomorphisms."
+  coarse_graining_nonreflection: "A forgetful functor can merge previously distinct invariant images."
+  variation_without_naturality: "An arbitrary source endofunctor can split an equivalence class because no comparison with I is available."
+  object_vs_arrow_gap: "Object equivalence does not define when two source arrows are equivalent, so no category quotient or composition of equivalence classes of arrows follows."
+  physical_overread: "Even a complete invariant for a chosen mathematical source category would not establish equality of detector responses or physical observational equivalence without a separately derived source-to-measurement functor and adequacy theorem."
+
+assumption_inventory:
+  base_equivalence:
+    - "A universe-small declared source-object domain."
+    - "A category D with ordinary isomorphisms."
+    - "A prospectively fixed source-defined functor I:C->D."
+  composition:
+    - "Declared source and target bifunctors."
+    - "An invertible natural comparison, including interface typing for partial operations."
+  localization:
+    - "A declared class W and a factorization comparison."
+    - "Iso-reflection only when a reverse implication is claimed after additional target localization."
+  coarse_graining:
+    - "A natural factorization square."
+    - "Iso-reflection only when a reverse implication is claimed."
+  variation:
+    - "Declared variation functors and coherent natural-isomorphism comparisons."
+  graph_model:
+    - "Finite one-dimensional CW graphs and integral homology."
+    - "Only the explicitly declared operation and variation classes."
+
+limits:
+  - "The current ontology does not derive C, D, I, the operation classes, W, the coarse-graining square, or the variation comparisons."
+  - "The relation is a proposal-only mathematical object equivalence, not physical observational equivalence."
+  - "No completeness, faithfulness, uniqueness, empirical adequacy, or exact-GR recovery property of I is established."
+  - "The finite graph-homology model is a bounded witness and cannot be generalized to arbitrary source categories."
+  - "H_0/H_1 is deliberately insensitive to combinatorial details and marked interfaces."
+  - "Preservation is not reflection unless the relevant target functor reflects isomorphisms."
+  - "Object congruence under disjoint union is not a morphism congruence and not arbitrary gluing congruence."
+  - "No probability law, dynamical selector, physical gauge structure, source manifold, metric, matter coupling, or field equation is supplied."
+
+recommended_parent_fusion:
+  theorem_core: "Present ~_I as the fiber relation of Obj(C)->pi_0(D^iso), then prove equivalence in three lines."
+  obligation_table: "Separate base equivalence, strong-monoidal composition, source localization, generalized localization, coarse-graining, and coherent variations; state preservation and reflection in different columns."
+  finite_controls: "Use integral graph homology only as a machine-checkable witness suite with C3/C4 positive, C3/P3 negative, disjoint-union congruence, subdivision and bridge-contraction preservation, and cycle-edge-deletion failure."
+  strongest_honest_conclusion: "A nontrivial proposal-only invariant-functor object relation with exact conditional closure theorems and explicit counterexamples; adoption and general EqSrc remain open."
+  next_route: "P3-T06 may audit and stress the unchanged candidate after parent fusion completes; this child does not execute P3-T06."
+
+forbidden_conclusions:
+  - "No canonical ontology candidate, ontology edit, source-law adoption, or source-law rejection."
+  - "No definition of I from desired class labels or downstream target success."
+  - "No general EqSrc discharge."
+  - "No mathematical equivalence as physical observational equivalence."
+  - "No arbitrary localization or coarse-graining reflection."
+  - "No arbitrary gluing or morphism congruence."
+  - "No claim that current ontology derives the graph model or the invariant functor."
+  - "No Distance-to-GR or metric-use ledger change."
+  - "No source manifold, metric, matter-coupling, Einstein-equation, benchmark, Gate Chair, publication, or completed-derivation claim."
+  - "No P3-T06 execution and no future source-extension impossibility."

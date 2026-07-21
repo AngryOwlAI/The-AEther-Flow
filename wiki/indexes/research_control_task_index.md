@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `ed1de1c6e0ae75b89b5af7d3441a7db56d5dee4bdfd955352f3ef719d47b8cfb`
-- Generated-at source timestamp: `2026-07-21T13:05:12Z`
-- Row count: `1030`
+- Source fingerprint: `f83847235eb592b3db33b7ce7a9dba714dcb33ddf9d3a224bf860a4a6bd528e3`
+- Generated-at source timestamp: `2026-07-21T14:18:13Z`
+- Row count: `1031`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260720-026|RT-20260720-025|2026-07-21T14:18:13Z|2026-07-21T14:34:01Z|v21_eqsrc_invariant_functor_quotient_relation|completed|source_equivalence_eqsrc|Replace ad hoc kernel relations with a general source-equivalence target.|ontology-formalizer@0.2.0|false|false|11|Run exactly one bounded v21 P3-T06 smuggling-auditor packet auditing and stressing the unchanged P3-T05 candidate.|PASS|research_control/tasks/RT-20260720-026/jobs/completions/AJC-AJ-RT-20260720-026-001.yaml|
 |RT-20260720-025|RT-20260720-024|2026-07-21T13:05:12Z|2026-07-21T13:27:51Z|v21_eqsrc_probabilistic_dynamical_selector_alternatives|completed|source_equivalence_eqsrc|Prevent future stochastic or symmetry-breaking language from becoming an informal escape hatch.|ontology-formalizer@0.2.0|false|false|11|Run exactly one bounded v21 P3-T05 ontology-formalizer packet constructing a proposal-only quotient-based EqSrc candidate and its congruence obligations.|PASS|research_control/tasks/RT-20260720-025/jobs/completions/AJC-AJ-RT-20260720-025-001.yaml|
 |RT-20260720-024|RT-20260720-023|2026-07-21T12:06:10Z|2026-07-21T12:19:34Z|v21_eqsrc_representative_irrelevance_theorem|completed|source_equivalence_eqsrc|Prefer quotient-level physics over arbitrary gauge fixing when lawful.|ontology-formalizer@0.2.0|false|false|10|Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining and testing source-side probability and dynamical selector alternatives.|PASS|research_control/tasks/RT-20260720-024/jobs/completions/AJC-AJ-RT-20260720-024-001.yaml|
 |RT-20260720-023|RT-20260720-022|2026-07-21T11:08:20Z|2026-07-21T11:28:45Z|v21_eqsrc_source_extension_lattice_construction|completed|source_equivalence_eqsrc|Make the mathematical and ontological price of each selector repair explicit.|candidate-constructor@0.2.0|false|false|13|Run exactly one bounded v21 P3-T03 ontology-formalizer packet proving or refuting representative irrelevance for orientation root line partition and related choices at an explicit source-observable target.|PASS|research_control/tasks/RT-20260720-023/jobs/completions/AJC-AJ-RT-20260720-023-001.yaml|

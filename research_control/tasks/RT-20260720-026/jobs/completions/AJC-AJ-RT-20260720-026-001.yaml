@@ -1,0 +1,650 @@
+validation_status: "PASS"
+final_repository_validation_status: "PASS"
+job_id: "AJ-RT-20260720-026-001"
+completion_id: "AJC-AJ-RT-20260720-026-001"
+task_id: "RT-20260720-026"
+task_type: "v21_eqsrc_invariant_functor_quotient_relation"
+decision_id: "DDR-20260720-026"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260720-026"
+status: "completed"
+created_at: "2026-07-21T14:18:13Z"
+started_at: "2026-07-21T14:18:13Z"
+completed_at: "2026-07-21T14:34:01Z"
+objective: "Execute only v21 P3-T05: define a proposal-only source invariant-functor quotient relation, prove its conditional equivalence and congruence properties, and mechanically check finite positive and negative witnesses."
+completion_summary: "P3-T05 constructs the proposal-only relation A sim_I B iff I(A) is isomorphic to I(B) for a prospectively fixed source-typed functor. It proves reflexivity symmetry and transitivity; conditional composition congruence; localization and coarse-graining preservation with explicit isomorphism-reflection guards; and conditional variation naturality. An integral graph-homology instantiation passes ten graph calculations three relation checks and six operation checks including two destructive coarse-graining countercontrols. The construction is an object relation rather than a morphism quotient and is not physical observational equivalence. Current ontology derives none of C D I or the admissible operation package. P3-T06 becomes dependency-ready but is not executed. No ontology EqSrc law scientific-ledger promotion publication global no-go or completed-derivation status changes."
+objective_result: "completed_proposal_only_candidate_pending_source_provenance_audit_and_refuter_stress"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T05"
+  recommendation_ids:
+    - "V21-R08"
+    - "V21-R09"
+    - "V21-R12"
+    - "V21-R17"
+  implementation_status: "completed"
+  implemented_task_scope: "Proposal-only invariant-functor object relation conditional congruence theorems and bounded graph-homology witnesses only."
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "P2-T07"
+    - "P2-T08"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P3-T04"
+    - "P3-T05"
+  dependency_ready_items:
+    - "P3-T06"
+  selected_next_dependency_work_item: "P3-T06"
+  p3_t05_completed: true
+  p3_t06_dependency_ready: true
+  selection_rationale: "The candidate now has a stable registered source hash finite controls and conditional theorem record suitable for an unchanged-candidate source-provenance audit and bounded stress."
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256_at_worker_completion: "776cde1123235b36bf65e74bfe3e6962087093bcd42972013a5364118ce95fe5"
+  generation: 26
+  passes_consumed: 26
+  route_work_item_id: "P3-T05"
+  worker_skill: "continue-research"
+
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "source_equivalence_candidate_and_conditional_theorem"
+minimum_payload:
+  payload_class: "source_equivalence_candidate_and_conditional_theorem"
+  payload_artifact_path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+  payload_summary: "One invariant-functor object relation six conditional theorem contracts ten finite graph witnesses and explicit non-preservation countercontrols."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+  - "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_spec_v1.yaml"
+  - "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_finite_witnesses_v1.json"
+  - "research_control/tasks/RT-20260720-026/artifacts/child_phys_math_eqsrc_invariant_functor_quotient.yaml"
+  - "research_control/tasks/RT-20260720-026/artifacts/child_phys_phil_eqsrc_invariant_functor_quotient.yaml"
+  - "research_control/tasks/RT-20260720-026/artifacts/parent_conflict_review_eqsrc_invariant_functor_quotient.yaml"
+  - "research_control/tasks/RT-20260720-026/artifacts/parent_fusion_notes_eqsrc_invariant_functor_quotient.md"
+  - "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_compact_receipt.json"
+  - "research_control/tasks/RT-20260720-026/artifacts/validate_eqsrc_invariant_functor_quotient.py"
+  - "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-026/**"
+  - "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+  - "research_control/handoffs/handoff-0796.yaml"
+  - "research_control/handoffs/handoff-0796.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  candidate:
+    object_id: "TEX-V21-P3-T05-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-CANDIDATE"
+    path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+    sha256: "badc60c72ff16f84fe88568b825ff738a8f160a225f011715f027c1da2cfa1c3"
+  machine_spec:
+    path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_spec_v1.yaml"
+    sha256: "9c40dd2a83c5d9ee25a62c977b5b47eb5e2770890c8a7aa90dbe342cc7936ad1"
+  finite_witnesses:
+    path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_finite_witnesses_v1.json"
+    sha256: "6f101a2b3e7bc808e165349ab9cab33f44fcb671d2eb3f294ac8bf6071d38ecd"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_compact_receipt.json"
+    sha256: "054257870091a6e6726d0266169c277d6f6328d54124e7564f533de1831851e8"
+  validator:
+    path: "research_control/tasks/RT-20260720-026/artifacts/validate_eqsrc_invariant_functor_quotient.py"
+    sha256: "f2db3665426479e68e7c0a0850e978f3add2234340e4b64ef83954f96eb0d630"
+  validation:
+    path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_validation.json"
+    sha256: "5437394c80015b356edd24e68d8502062983dc40bd7b5263541b0285edf6ed3a"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-026/artifacts/child_phys_math_eqsrc_invariant_functor_quotient.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-026/artifacts/child_phys_phil_eqsrc_invariant_functor_quotient.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-026/artifacts/parent_conflict_review_eqsrc_invariant_functor_quotient.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 8
+    unresolved_conflicts: []
+    summary: "Object-versus-arrow quotient size operation typing localization coarse-graining variation functoriality finite-model functoriality and physical-interpretation conflicts were resolved without authority expansion."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-026/artifacts/parent_fusion_notes_eqsrc_invariant_functor_quotient.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Replace ad hoc kernel relations with a general source-equivalence target."
+  missing_source_law: "A source-derived category invariant functor and admissible operation package sufficient to define and interpret a general EqSrc relation."
+  underdetermination_statement: "Current ontology does not derive the source category invariant functor or admissible composition localization coarse-graining and variation classes used by the proposal."
+  no_go_theorem_status: "not_claimed"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "draft/control"
+    source_side_definition: "A prospectively declared category C and category D with a source-typed functor I fixed before pair evaluation; two source objects are related exactly when their I-images are isomorphic."
+    formal_objects:
+      - "categories C and D and a universe-small source-object collection"
+      - "functor I:C->D and the maximal isomorphism groupoid of D"
+      - "declared composition localization coarse-graining and variation comparison data"
+    domains:
+      - "the prospectively declared source-object collection"
+      - "ten finite one-dimensional CW graph controls for the bounded witness model"
+    maps:
+      - "object-class map A maps to the isomorphism class of I(A)"
+      - "strong operation comparison for conditional composition congruence"
+      - "localization coarse-graining and variation natural comparison maps"
+    proof_obligations:
+      - "audit transitive source provenance of C D I and every comparison map"
+      - "stress incomplete-invariant misclassification and operation-class closure"
+      - "derive a physical observation bridge and completeness theorem before physical equivalence"
+      - "obtain protected authority before ontology or source-law adoption"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc open until the candidate is audited stressed and lawfully adopted."
+      - "Keep M_src g_eff matter coupling Einstein equations exact-GR recovery and benchmark promotion blocked."
+      - "Require target-neutral provenance finite-variation robustness and a physical interpretation bridge."
+      - "Require protected human authority before canonical ontology or source-law adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "categories functors invariant images and comparison isomorphisms"
+      - "finite graph objects integral homology groups and Betti calculations"
+      - "positive negative exact-operation and destructive-operation controls"
+    audit_result: "No forbidden source class defines the candidate relation or finite witness outcomes; P3-T06 remains the independent provenance audit."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No protected decision is requested in P3-T05; separate human-gated authority is required before any canonical-ontology candidate designation adoption or rejection."
+    exact_requested_ontology_edit: ""
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-026-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Invariant-functor object-kernel equivalence and congruence package"
+    summary: "Proves equivalence plus conditional composition localization coarse-graining and variation behavior with preservation and reflection separated."
+  - payload_id: "NMP-RT-20260720-026-002"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "Integral graph-homology witness atlas"
+    summary: "Computes ten finite source graphs and nine relation or operation checks using exact integer Betti arithmetic."
+  - payload_id: "NMP-RT-20260720-026-003"
+    payload_type: "countermodel_or_obstruction"
+    name: "Arbitrary coarse-graining non-preservation controls"
+    summary: "Cycle-edge deletion and cycle collapse show that information loss alone does not supply exact congruence."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-P3T05-001"
+    payload_type: "definition"
+    object_name: "prospective invariant-functor object relation"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Defines A sim_I B by isomorphism of invariant images without desired class labels."
+  - payload_id: "PAYLOAD-P3T05-002"
+    payload_type: "theorem"
+    object_name: "equivalence and conditional congruence theorem package"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves exact object-equivalence axioms and typed preservation results while guarding every reflection claim."
+  - payload_id: "PAYLOAD-P3T05-003"
+    payload_type: "finite_model"
+    object_name: "finite integral graph-homology controls"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_finite_witnesses_v1.json"
+    burden_effect: "stress_tests"
+    summary: "Supplies nonidentity positive pairs nonuniversal negative pairs and exact operation controls."
+  - payload_id: "PAYLOAD-P3T05-004"
+    payload_type: "countermodel"
+    object_name: "inexact coarse-graining countercontrols"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_finite_witnesses_v1.json"
+    burden_effect: "obstructs"
+    summary: "Shows arbitrary edge deletion and cycle collapse do not preserve the finite candidate relation."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Replace ad hoc kernel relations with a general source-equivalence target."
+  explanation: "A proposal-only general object-relation schema and conditional theorem package now exist with finite controls; provenance completeness physical meaning stress and protected adoption remain open."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "conditional_theorem_candidate"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "proposal-only conditional candidate pending audit and stress"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No source category invariant functor general EqSrc law or physical equivalence was derived or adopted."
+  downstream_unlocked:
+    - "P3-T06 source-provenance audit and bounded stress only"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "P3-T05 closes its proposal-construction burden but does not change the canonical scientific ledger."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; current ontology derives none of C D I or the admissible operation package"
+  - burden: "Source equivalence EqSrc"
+    status: "proposal-only invariant-functor object relation constructed pending audit stress physical bridge and protected adoption"
+  - burden: "RetainH"
+    status: "unchanged and blocked by missing adopted source-equivalence structure"
+  - burden: "GenH"
+    status: "unchanged and blocked by missing adopted source-equivalence structure"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; mathematical localization is not an operational observation bridge"
+  - burden: "Resp_lc"
+    status: "unchanged; no detector or response law derived"
+  - burden: "M_src"
+    status: "not started by this packet"
+  - burden: "g_eff"
+    status: "not started and blocked"
+  - burden: "matter coupling"
+    status: "not started and blocked"
+  - burden: "Einstein equations"
+    status: "not started and blocked"
+  - burden: "finite-variation robustness"
+    status: "four exact finite operation classes and two non-preservation controls checked; general robustness remains open"
+  - burden: "benchmark promotion"
+    status: "unchanged and blocked"
+  - burden: "Gate Chair status"
+    status: "unchanged and human-gated"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact P3-T05 candidate construction locally complete; P3-T06 unchanged-candidate audit is materially distinct"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-P3-T05-INVARIANT-FUNCTOR-CANDIDATE-CONSTRUCTION-REPETITION"
+  prior_attempts_considered:
+    - "RT-20260718-022"
+    - "RT-20260718-023"
+    - "RT-20260720-024"
+    - "RT-20260720-025"
+    - "RT-20260720-026"
+  freeze_if:
+    - "The same candidate construction or graph-homology controls recur without an audit stress result or new source derivation."
+  do_not_freeze_if:
+    - "P3-T06 audits and stresses the unchanged candidate."
+    - "A later packet supplies source-derived category functor operation or physical-bridge structure."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The exact P3-T05 construction is complete; P3-T06 changes the task to source-provenance audit and bounded stress."
+  next_allowed_route: "none"
+  status_update_path: "research_control/program_state.yaml"
+  no_ledger_update_rationale: "The freeze is task-local and no adopted scientific object changed."
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p3_t05_invariant_functor_candidate_complete_p3_t06_audit_selected"
+  prior_related_tasks:
+    - "RT-20260718-038 through RT-20260718-047"
+    - "RT-20260720-009 through RT-20260720-026"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P3-T06 must hold the candidate hash fixed and audit target import incomplete invariants and operation-class smuggling rather than construct another relation."
+  next_role_consequence: "smuggling-auditor@0.2.0 for v21 P3-T06"
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "eqsrc"
+  waiver_decision_id: "DDR-20260720-026"
+  slots:
+    - countermodel_slot: "missing_inverse_countermodel"
+      status: "not_applicable_by_ddr"
+      scope: "IFQ1 derives inverse witnesses from isomorphism in D"
+      result_artifact: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+      notes: "DDR-20260720-026 bounds the relation to ordinary isomorphisms whose inverses are part of the theorem proof."
+    - countermodel_slot: "missing_composition_countermodel"
+      status: "filled"
+      scope: "operation compatibility and arbitrary coarse-graining non-preservation"
+      result_artifact: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_finite_witnesses_v1.json"
+      notes: "Exact disjoint union passes while two destructive operations fail."
+    - countermodel_slot: "invariant_ledger_not_family_stable_countermodel"
+      status: "deferred_by_ddr"
+      scope: "cross-family stability belongs to unchanged-candidate P3-T06 stress"
+      result_artifact: "research_control/tasks/RT-20260720-026/artifacts/parent_conflict_review_eqsrc_invariant_functor_quotient.yaml"
+      notes: "DDR-20260720-026 constructs only the candidate and selects P3-T06 for stress."
+    - countermodel_slot: "target_import_needed_countermodel"
+      status: "filled"
+      scope: "constant identity and post-hoc functor extremes show schema underdetermination"
+      result_artifact: "research_control/tasks/RT-20260720-026/artifacts/child_phys_phil_eqsrc_invariant_functor_quotient.yaml"
+      notes: "The candidate remains conditional until P3-T06 verifies transitive source provenance."
+    - countermodel_slot: "RetainH_needed_countermodel"
+      status: "deferred_by_ddr"
+      scope: "RetainH remains downstream of an audited and adopted EqSrc relation"
+      result_artifact: "research_control/tasks/RT-20260720-026/DDR-20260720-026.md"
+      notes: "DDR-20260720-026 blocks RetainH discharge."
+    - countermodel_slot: "GenH_needed_countermodel"
+      status: "deferred_by_ddr"
+      scope: "GenH remains downstream of an audited and adopted EqSrc relation"
+      result_artifact: "research_control/tasks/RT-20260720-026/DDR-20260720-026.md"
+      notes: "DDR-20260720-026 blocks GenH discharge."
+
+no_target_import_audit:
+  explicit_target_import_found: false
+  explicit_process_import_found: false
+  checked_objects:
+    - "source category invariant category and functor declaration"
+    - "composition localization coarse-graining and variation comparisons"
+    - "integral graph homology and finite witnesses"
+  audit_result: "The construction is prospectively source-typed and contains explicit no-target guards; independent transitive provenance audit remains P3-T06."
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "P3-T05 creates no ontology adoption physical gauge physical observational equivalence general EqSrc discharge scientific-ledger delta M_src adoption g_eff matter coupling Einstein equations benchmark promotion Gate Chair verdict external publication completed derivation global theory rejection or future source-extension impossibility."
+  forbidden_conclusions:
+    - "canonical ontology edit source-law adoption or canonical-ontology candidate designation"
+    - "mathematical invariant-image isomorphism as physical gauge or physical observational equivalence"
+    - "general EqSrc discharge or proof that current ontology derives I"
+    - "arbitrary composition localization coarse-graining or variation congruence"
+    - "scientific-ledger change or downstream GR discharge"
+    - "benchmark promotion Gate Chair verdict external publication or completed derivation"
+    - "global theory rejection global no-go or future source-extension impossibility"
+    - "P3-T06 as already executed"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_extension_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  independent_replication_claim_authorized: false
+  human_endorsement_claim_authorized: false
+  physical_gauge_claim_authorized: false
+  operational_observable_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 947
+    relationship_row_count: 4702
+    semantic_row_count: 947
+    vault_row_count: 947
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+    before_local_cache_only_warning_count: 5
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"quotient EqSrc congruence\" --limit 10 --json"
+      query_type: "search"
+      query_text: "quotient EqSrc congruence"
+      returned_object_ids:
+        - "TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS"
+        - "TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1"
+  canonical_inspections:
+    - object_id: "TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex"
+      source_hash: "9f6e92dd2160bafcfb55fc04eac82a26266facf29c04757b2f7ccfdcbb4d9b29"
+    - object_id: "TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260718-023/artifacts/eqsrc_source_rooted_quotient_selector_candidate_v1.tex"
+      source_hash: "56e22c2ad8fa2fcbfc21bcda2735917d75d7bc611f273a38852cbaa3cc9b2a45"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P3-T03-EQSRC-REPRESENTATIVE-IRRELEVANCE-THEOREM"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-024/artifacts/eqsrc_representative_irrelevance_theorem_v1.tex"
+      source_hash: "1a08e02c462d4401a3ad75219d7903c598f996d4011105baab31f07ba1dab0d1"
+    - object_id: "TEX-V21-P3-T04-EQSRC-PROBABILISTIC-DYNAMICAL-SELECTION-THEOREM"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+      source_hash: "c71673f1a79f62b7afce6cd55663594419a234ac16c5a737128bb88b9e4e39a4"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and five local-cache warnings were refreshed to a clean local retrieval state with 947 source objects."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-026/artifacts/validate_eqsrc_invariant_functor_quotient.py"
+    status: "PASS"
+    summary: "The task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-026/artifacts/validate_eqsrc_invariant_functor_quotient.py --write-report --json"
+    status: "PASS"
+    summary: "Passed ten graph calculations three relation checks six operation checks six theorem markers child synthesis and authority guards."
+  - command: "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-026-latex research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+    status: "PASS"
+    summary: "Compiled the registered TeX source twice to a four-page local scratch PDF with resolved references and no warnings."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "Regenerated tracked memory registries wiki notes and indexes from registered canonical sources."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Confirmed tracked memory registries and derivatives are fresh."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+    summary: "Scanned 18 changed claim surfaces with zero hard failures; 1488 historical warnings remain nonblocking."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+    status: "PASS"
+    summary: "Core research-control validation completed with zero errors and 210 historical warnings."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "PASS"
+    summary: "Changed-scope research-control validation completed with zero errors and 1698 historical warnings."
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS"
+    summary: "Classified the control registry documentation registry generated derivative and research-control changes for the affected validation profile."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "Validated project-improvement signal parity with no new signal emitted."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "Validated the explicit documentation-impact receipt against every live source change."
+  - command: ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+    status: "INTERMEDIATE_FAIL"
+    summary: "The pre-checkpoint full profile reached only the expected tracked-path gate for the new registered TeX and wiki note; staged acceptance remains reserved to the governed checkpoint."
+  - command: ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+    status: "PASS"
+    summary: "Generated the physics-progress report without changing scientific authority or ledgers."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests"
+    status: "PASS"
+    summary: "Ran 1006 repository tests in 175.291 seconds with no failures."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 26 lease parity immutable route identity max reasoning effort repository binding clean start predecessor checkpoint and single consumption were verified before work."
+      - "Memory preflight refreshed only local retrieval state and the registered plan prior quotient artifacts dependencies burden ledger and foundations source were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required internal perspectives completed and eight conflicts were resolved in one parent synthesis round."
+      - "The task-local validator passes all graph relation operation theorem child-fusion and authority checks."
+      - "The registered TeX source compiles to a four-page local scratch PDF with resolved references and no warnings."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Changed-scope research-control claim-language documentation-impact signal-parity classifier physics-metrics generated-freshness and whitespace checks pass."
+      - "The repository unit suite passes all 1006 tests."
+      - "Full-profile staged acceptance remains reserved to the governed checkpoint because newly registered source and wiki paths must first enter the Git index."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph and claim graph were regenerated and passed their freshness checks before completion-receipt finalization."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only passed after source registration; they will be refreshed once more after completion-receipt finalization."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation reports PASS with zero hard failures; historical warnings remain nonblocking."
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_validation.json"
+  local_validator_report_hash: "5437394c80015b356edd24e68d8502062983dc40bd7b5263541b0285edf6ed3a"
+  graph_count: 10
+  relation_check_count: 3
+  operation_check_count: 6
+  task_local_failed_check_count: 0
+  parent_child_synthesis_status: "PASS"
+  latex_compile_status: "PASS"
+  latex_page_count: 4
+  latex_warning_count: 0
+  ontology_foundations_hash_unchanged: true
+  distance_to_gr_ledger_hash_unchanged: true
+  metric_use_ledger_hash_unchanged: true
+  validation_status: "PASS"
+
+validators_run:
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-026/artifacts/validate_eqsrc_invariant_functor_quotient.py"
+  - ".venv/bin/python research_control/tasks/RT-20260720-026/artifacts/validate_eqsrc_invariant_functor_quotient.py --write-report --json"
+  - "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-026-latex research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --json-summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests"
+  - "git diff --check"
+
+required_validators:
+  - "memory_preflight"
+  - "task_local_validator"
+  - "latex_compile"
+  - "parent_child_synthesis"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "classify_project_changes"
+  - "project_improvement_signal_parity"
+  - "documentation_impact"
+  - "research_control_validation"
+  - "claim_language"
+  - "full_validation"
+  - "repository_unit_tests"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+documentation_impact:
+  required: true
+  documentation_impact_id: "DI-RT-20260720-026-001"
+  documentation_impact_path: "research_control/tasks/RT-20260720-026/documentation_impact.yaml"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  rationale: "No project-system defect was identified."
+
+selected_next_route:
+  route_id: "v21_p3_t06_audit_stress_invariant_functor_eqsrc_candidate"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P3-T06"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Determine whether the quotient candidate is a genuine source relation rather than a disguised target or arbitrary partition."
+  requires_human_gate: false
+  physics_promotion_authorized: false
+  next_action: "Audit and stress the unchanged registered P3-T05 candidate for source provenance incomplete-invariant misclassification operation-class smuggling and physical-equivalence overread."
+
+notes: "P3-T05 is complete and locally frozen as a proposal construction. P3-T06 is selected but not executed; all protected authority remains blocked."

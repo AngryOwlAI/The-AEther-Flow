@@ -1,0 +1,71 @@
+{
+  "schema_id": "eqsrc_invariant_functor_quotient_relation_validation_v1",
+  "artifact_id": "EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-VALIDATION-V1",
+  "task_id": "RT-20260720-026",
+  "generated_at": "2026-07-21T14:32:09.754245Z",
+  "status": "PASS",
+  "graph_count": 10,
+  "relation_check_count": 3,
+  "operation_check_count": 6,
+  "theorem_contract_count": 6,
+  "relation_results": [
+    {
+      "check_id": "R_POSITIVE_NONISOMORPHIC_CYCLES",
+      "actual_related": true
+    },
+    {
+      "check_id": "R_NEGATIVE_CYCLE_VS_TREE",
+      "actual_related": false
+    },
+    {
+      "check_id": "R_NEGATIVE_COMPONENT_COUNT",
+      "actual_related": false
+    }
+  ],
+  "operation_results": [
+    {
+      "check_id": "O_COMPOSITION_DISJOINT_UNION",
+      "before_related": true,
+      "after_related": true,
+      "actual_preserves_relation": true,
+      "exact_admissible": true
+    },
+    {
+      "check_id": "O_LOCALIZATION_EDGE_SUBDIVISION",
+      "before_related": true,
+      "after_related": true,
+      "actual_preserves_relation": true,
+      "exact_admissible": true
+    },
+    {
+      "check_id": "O_COARSE_GRAINING_BRIDGE_CONTRACTION",
+      "before_related": true,
+      "after_related": true,
+      "actual_preserves_relation": true,
+      "exact_admissible": true
+    },
+    {
+      "check_id": "O_VARIATION_RELABELING",
+      "before_related": true,
+      "after_related": true,
+      "actual_preserves_relation": true,
+      "exact_admissible": true
+    },
+    {
+      "check_id": "O_INEXACT_CYCLE_EDGE_DELETION",
+      "before_related": true,
+      "after_related": false,
+      "actual_preserves_relation": false,
+      "exact_admissible": false
+    },
+    {
+      "check_id": "O_INEXACT_CYCLE_COLLAPSE",
+      "before_related": true,
+      "after_related": false,
+      "actual_preserves_relation": false,
+      "exact_admissible": false
+    }
+  ],
+  "errors": [],
+  "authority": "task-local finite verification only; no ontology adoption or physical-equivalence authority"
+}

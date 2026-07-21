@@ -1,0 +1,284 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newcommand{\EqI}{\mathrel{\sim_I}}
+
+\title{P3-T05 Draft/Control Candidate:\\
+Invariant-Functor Quotient Relation and Congruence Obligations}
+\author{Ontology Formalizer task overlay, RT-20260720-026}
+\date{21 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\linewidth}{
+\textbf{Authority and status.}
+This is a \textbf{proposal-only} source-extension construction with status
+\texttt{draft/control}.  It is not an adopted source law, not a canonical
+ontology edit, not a general discharge of \(\mathrm{EqSrc}\), and not physical
+observational equivalence.  Its adoption status is
+\texttt{blocked\_adoption\_open\_continuation}.  The construction supplies a
+mathematical candidate and bounded controls only; every protected scientific,
+Gate Chair, benchmark, and publication decision remains unavailable here.
+}}
+\end{center}
+
+\section{Question and prospective construction}
+
+The P3-T05 question is whether a general source-side equivalence target can be
+formulated without reusing the ad hoc kernel relations of earlier finite
+selector families and without defining an invariant from the desired
+equivalence classes.  The smallest proposal-neutral answer is the kernel pair,
+at object level, of a prospectively fixed invariant functor.
+
+\begin{definition}[Invariant-functor relation]
+Let \(\mathcal C\) and \(\mathcal D\) be categories and let
+\(I:\mathcal C\to\mathcal D\) be a functor fixed before any pair of source
+objects is evaluated.  Work either with a small \(\mathcal C\), or with a
+fixed universe-small object collection inside a locally small category.  For
+\(A,B\in\operatorname{Ob}(\mathcal C)\), define
+\begin{equation}
+  A\EqI B
+  \quad\Longleftrightarrow\quad
+  I(A)\cong I(B)\quad\text{in }\mathcal D .
+  \label{eq:kernel-relation}
+\end{equation}
+The inputs are source objects, source morphisms, the prospectively declared
+functor \(I\), and isomorphisms internal to \(\mathcal D\).  Desired class
+labels, a target atlas, a target metric, benchmark success, and candidate
+reconstruction output are excluded from the definition.
+\end{definition}
+
+The word ``invariant'' here has no independent authority.  It abbreviates a
+declared functor whose source typing, target neutrality, and admissible domain
+must be justified separately.  Equation~\eqref{eq:kernel-relation} would be
+circular if \(I\) were built by assigning the same value exactly to objects
+already desired to be equivalent.  Prospectivity is therefore part of the
+construction, not an optional provenance note.
+
+\section{Exact conditional results}
+
+\begin{theorem}[\texttt{IFQ1\_KERNEL\_EQUIVALENCE}]
+For any functor \(I:\mathcal C\to\mathcal D\), the relation \(\EqI\) is an
+equivalence relation on \(\operatorname{Ob}(\mathcal C)\).
+\end{theorem}
+\begin{proof}
+For every object \(A\), the identity \(1_{I(A)}\) proves \(A\EqI A\), so the
+relation is reflexive.  If \(\phi:I(A)\to I(B)\) is an isomorphism, then
+\(\phi^{-1}\) proves \(B\EqI A\), so it is symmetric.  If
+\(\phi:I(A)\to I(B)\) and \(\psi:I(B)\to I(C)\) are isomorphisms, then
+\(\psi\circ\phi\) proves \(A\EqI C\), so it is transitive.
+\end{proof}
+
+\begin{theorem}[\texttt{IFQ2\_MONOIDAL\_COMPOSITION\_CONGRUENCE}]
+Suppose \(\mathcal C\) and \(\mathcal D\) have declared binary operations
+\(\otimes\) and \(\boxtimes\), the latter is functorial in both arguments, and
+there is a natural comparison isomorphism
+\[
+  \mu_{A,B}:I(A\otimes B)\xrightarrow{\cong} I(A)\boxtimes I(B).
+\]
+Then \(A\EqI A'\) and \(B\EqI B'\) imply
+\(A\otimes B\EqI A'\otimes B'\).
+\end{theorem}
+\begin{proof}
+Choose isomorphisms \(\phi:I(A)\to I(A')\) and
+\(\psi:I(B)\to I(B')\).  Bifunctoriality makes
+\(\phi\boxtimes\psi\) an isomorphism.  The composite
+\[
+ I(A\otimes B)
+ \xrightarrow{\mu_{A,B}}
+ I(A)\boxtimes I(B)
+ \xrightarrow{\phi\boxtimes\psi}
+ I(A')\boxtimes I(B')
+ \xrightarrow{\mu_{A',B'}^{-1}}
+ I(A'\otimes B')
+\]
+is an isomorphism, which is the required congruence witness.
+\end{proof}
+
+The theorem proves preservation under the declared composition operation.  It
+does not prove cancellation or reflection: those require independent
+properties of \(\boxtimes\) and \(I\).
+
+\begin{theorem}[\texttt{IFQ3\_LOCALIZATION\_PRESERVATION}]
+Let \(W\) be a declared class of arrows of \(\mathcal C\), let
+\(L:\mathcal C\to\mathcal C[W^{-1}]\) be a localization, and suppose
+\(I=\bar I\circ L\) up to natural isomorphism.  If \(L(A)\cong L(B)\), then
+\(A\EqI B\).  The converse follows only if \(\bar I\) reflects isomorphisms
+on the relevant image.
+\end{theorem}
+\begin{proof}
+A functor sends an isomorphism \(L(A)\cong L(B)\) to an isomorphism
+\(\bar I L(A)\cong\bar I L(B)\), and the factorization comparisons identify
+these objects with \(I(A)\) and \(I(B)\).  Conversely, an isomorphism between
+\(\bar I L(A)\) and \(\bar I L(B)\) implies one between \(L(A)\) and
+\(L(B)\) precisely when the stated isomorphism-reflection property holds.
+\end{proof}
+
+\begin{theorem}[\texttt{IFQ4\_COARSE\_GRAINING\_PRESERVATION}]
+Let \(Q:\mathcal C\to\bar{\mathcal C}\) be a prospectively declared
+coarse-graining functor and suppose there is a functor
+\(\bar I:\bar{\mathcal C}\to\mathcal D\) with a natural isomorphism
+\(I\cong\bar I\circ Q\).  Then \(A\EqI B\) is equivalent to
+\(\bar I(QA)\cong\bar I(QB)\), so the relation is preserved by this declared
+factorizing coarse graining.  No such conclusion follows for an arbitrary
+coarse-graining operation.  Reflection of isomorphism in
+\(\bar{\mathcal C}\) requires \(\bar I\) to reflect isomorphisms.
+\end{theorem}
+\begin{proof}
+Conjugating an isomorphism \(I(A)\cong I(B)\) by the two components of the
+natural comparison gives an isomorphism
+\(\bar I(QA)\cong\bar I(QB)\), and the inverse conjugation gives the reverse
+implication.  Recovering \(QA\cong QB\) from that image isomorphism is the
+separate reflection condition.
+\end{proof}
+
+\begin{theorem}[\texttt{IFQ5\_VARIATION\_NATURALITY}]
+Let \(V:\mathcal C\to\mathcal C\) be an admissible source variation and let
+\(\alpha:I\circ V\Rightarrow I\) be a natural isomorphism.  Then
+\[
+  A\EqI B\quad\Longleftrightarrow\quad V(A)\EqI V(B).
+\]
+\end{theorem}
+\begin{proof}
+Conjugate any \(I(A)\cong I(B)\) by
+\(\alpha_A:I(VA)\cong I(A)\) and
+\(\alpha_B:I(VB)\cong I(B)\) to obtain an isomorphism
+\(I(VA)\cong I(VB)\).  Conjugating with the inverse components proves the
+reverse implication.
+\end{proof}
+
+More generally, if \(V:\mathcal C\to\mathcal C'\),
+\(K:\mathcal D\to\mathcal D'\), and
+\(I':\mathcal C'\to\mathcal D'\) admit a natural isomorphism
+\(I'V\cong KI\), then \(\EqI\) is preserved by \(V\).  Reflection requires
+\(K\) to reflect isomorphisms on the relevant invariant images.  The displayed
+theorem is the strict same-invariant special case \(I'=I\) and
+\(K=1_{\mathcal D}\).
+
+\begin{proposition}[\texttt{IFQ6\_PHYSICAL\_BRIDGE\_GUARD}]
+The preceding category-theoretic results do not establish physical
+observational equivalence, physical gauge redundancy, dynamical
+interchangeability, or empirical indistinguishability.
+\end{proposition}
+\begin{proof}
+The hypotheses name only categories, functors, comparison isomorphisms, and
+source operations.  None supplies an observation map, measurement semantics,
+matter response, dynamical law, empirical tolerance, or proof that the
+structural arrows are physical redundancies.  Those conclusions therefore do
+not follow from the stated premises.
+\end{proof}
+
+\section{Finite graph-homology witness model}
+
+The machine-checkable instantiation regards the finite undirected simple graphs
+listed in the companion JSON artifact as finite one-dimensional CW complexes
+with declared cellular maps.  Integral homology gives the actual functor
+\[
+  H=(H_0(-;\mathbb Z),H_1(-;\mathbb Z)):
+  \mathcal G_{\mathrm{fin}}\longrightarrow
+  \mathbf{Ab}_{\mathrm{fg}}\times\mathbf{Ab}_{\mathrm{fg}}.
+\]
+For these graphs its object-isomorphism class is computed by
+\[
+ H(G)=(\beta_0(G),\beta_1(G)),\qquad
+ \beta_1(G)=|E(G)|-|V(G)|+\beta_0(G),
+\]
+where the displayed pair records the ranks of the two free abelian groups.
+Thus \(G\sim_HG'\) exactly when their Betti pairs agree.  This model is a
+bounded witness to the abstract contracts; it is not the proposed physical
+substrate invariant.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.25\linewidth}
+                >{\raggedright\arraybackslash}p{0.22\linewidth}
+                >{\raggedright\arraybackslash}p{0.41\linewidth}}
+\toprule
+Control & Exact result & Logical use \\
+\midrule
+Triangle versus square & \((1,1)=(1,1)\) & Positive pair: nonisomorphic source
+objects may have equal invariant images. \\
+Triangle versus three-vertex path & \((1,1)\ne(1,0)\) & Negative pair: the
+invariant separates a cycle from a tree. \\
+One edge versus two disjoint edges & \((1,0)\ne(2,0)\) & Negative pair:
+component count remains visible. \\
+Disjoint-union context & both become \((2,1)\) & Composition congruence in
+the additive finite model. \\
+Cycle-edge subdivision & \((1,1)\) is preserved & Declared localization
+witness. \\
+Pendant-bridge contraction & \((1,1)\) is preserved & Declared exact
+coarse-graining witness. \\
+Graph relabeling & \((1,1)\) is preserved & Variation naturality witness. \\
+Cycle-edge deletion or cycle collapse & \(\beta_1\) changes & Countercontrols:
+arbitrary coarse graining is not exact. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The finite model also illustrates why preservation and reflection must be
+separated.  A coarse map may forget a cycle and merge previously distinct
+invariant images; equality after information loss does not reconstruct
+equality before it.  The abstract theorems therefore never infer reflection
+from the word ``coarse graining.''
+
+\section{Relationship to P3-T03 and P3-T04}
+
+P3-T03 established a conditional factorization result for observables that
+are constant on declared structural orbits and supplied countermodels for raw
+representative-sensitive interfaces.  P3-T04 established finite probability
+and dynamics guards showing that invariant laws or equivariant evolution do
+not freely manufacture a non-fixed representative.  The present construction
+does not modify either result.  It shifts the target from choosing one
+representative to comparing source objects through a prospectively declared
+functor.  The earlier results motivate operation and interpretation guards but
+do not derive \(\mathcal C\), \(I\), or the admissible operations used here.
+
+\section{Ontology, interpretation, and falsifiers}
+
+The current canonical ontology does not derive the source category
+\(\mathcal C\), the invariant category \(\mathcal D\), the functor \(I\), the
+localizing class \(W\), the composition comparison \(\mu\), the coarse functor
+\(Q\), or the variation class \(V\).  Hence current adoption is blocked while
+same-milestone research continuation remains open.  This is
+underdetermination, not a theorem of impossibility.
+
+The candidate must be rejected or revised on its declared domain if any of the
+following occurs:
+\begin{enumerate}
+  \item \(I\) cannot be defined without desired EqSrc labels, target-atlas
+  data, or benchmark outcomes;
+  \item a claimed composition operation lacks a functorial comparison
+  isomorphism or yields an explicit congruence counterexample;
+  \item a claimed localizing arrow is not inverted by \(I\);
+  \item a claimed exact coarse graining does not admit the stated
+  factorization, as in the cycle-deletion controls;
+  \item an admissible variation lacks the required natural comparison; or
+  \item a physical interpretation is asserted without independently derived
+  observation, matter-response, or gauge-redundancy structure.
+\end{enumerate}
+
+\section{Distance-to-GR and continuation disposition}
+
+This packet adds mathematical payload but changes no Distance-to-GR ledger
+entry.  The active milestone remains \texttt{source\_equivalence\_eqsrc}; the
+burden remains to replace ad hoc kernel relations with a general
+source-equivalence target that is source-derived, audited, stress-tested, and
+lawfully adopted.  \(M_{\mathrm{src}}\), \(g_{\mathrm{eff}}\), matter
+coupling, the Einstein equations, exact-GR recovery, and benchmark promotion
+remain downstream and unestablished.
+
+P3-T05 can complete only as a proposal-only conditional relation packet with
+finite witnesses.  The dependency-ready next item is P3-T06, an audit for
+circularity, imported ontology, and hidden target dependence.  P3-T06 is
+selected but not executed here.
+
+\end{document}
