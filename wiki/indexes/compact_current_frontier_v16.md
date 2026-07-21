@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-016`
-- Latest handoff: `handoff-0786`
-- Current status: `v21_p2_t03_complete_core_selector_theorem_proved_p2_t04_selected_no_adoption_or_promotion`
+- Active task: `RT-20260720-017`
+- Latest handoff: `handoff-0787`
+- Current status: `v21_p2_t04_finite_countermodel_atlas_complete_p2_t05_selected_no_adoption_or_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-016`
-- Latest research handoff: `handoff-0786`
-- Latest research next action: Run exactly one bounded v21 P2-T04 Candidate Constructor ontology-law-research-packet integrating the historical finite countermodels under the P2-T03 theorem while preserving each source artifact, scope, negative-result provenance, and the distinction between direct theorem instance and non-instance. Preserve P2-T05 proof encoding, P2-T06 audit, and P2-T07 stress ownership; do not alter the P2-T01 domain, infer physical gauge, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
+- Latest research task: `RT-20260720-017`
+- Latest research handoff: `handoff-0787`
+- Latest research next action: Run exactly one bounded v21 P2-T05 Ontology Formalizer formal-proof packet mechanizing the selector theorem core in a proof assistant with a reproducible proof receipt. Preserve proposal-only status, immutable historical provenance, all exact-family freezes, P2-T06 independent Smuggling Auditor ownership, P2-T07 independent Refuter ownership, scientific-ledger status, and every downstream claim block.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p2_t04_eqsrc_historical_countermodel_integration`
-- Role family: `candidate-constructor@0.2.0`
+- Route ID: `v21_p2_t05_eqsrc_selector_theorem_formal_proof`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Demonstrate theorem scope and preserve negative-result provenance.
+- Milestone burden: Provide machine-checked mathematical evidence for the theorem core.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `2c3c951c4602bac369ccbc284bff4ade5e66b8d0277e1252b7bea0de95bf9bff`
-- JSON SHA-256: `a0fc631117b06530bbf6826df44bb4ccc03d09202253bbf8baa9f8201c69e6d0`
+- YAML SHA-256: `d456e73465e49f6422e08f7eecf76ca9c9b38014e4d677e2028bbef327fc994b`
+- JSON SHA-256: `0cb23a924b1095f08a4c4727308d4e54bee9641c385e65aa203b1e07a94aa6fa`
 
 ## Authority Warning
 

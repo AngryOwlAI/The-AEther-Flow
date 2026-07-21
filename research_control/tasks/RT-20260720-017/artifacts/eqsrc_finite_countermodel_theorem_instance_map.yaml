@@ -1,0 +1,96 @@
+schema_id: "eqsrc-finite-countermodel-theorem-instance-map.v1"
+map_id: "EQSRC-FINITE-COUNTERMODEL-THEOREM-INSTANCE-MAP-V1"
+atlas_id: "EQSRC-FINITE-COUNTERMODEL-ATLAS-V1"
+theorem_id: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+status: "draft/control"
+theorem_interface:
+  frozen_domain: "unchanged P2-T01 certified-isomorphism core"
+  selector_space: "Nat(1_GSigma,S_chi)"
+  component_coordinate: "Fix_Aut(X)(S_chi(X))"
+  direct_no_selector_conclusion: "an empty fixed locus makes the core selector product empty"
+  uniqueness_conclusion: "one fixed choice on the one represented component gives one core selector"
+  multiplicity_conclusion: "two fixed choices on the one represented component give two core selectors"
+  relation_image_guard: "K may preserve or collapse selector multiplicity"
+mapping:
+  - fixture_id: "FX-RESP-XEMPTY-SIGN-SWAP"
+    source_family: "response_tag"
+    theorem_status: "direct_theorem_instance"
+    satisfied_hypotheses: ["source object fixed", "finite structural action fixed", "eligible sign choices fixed"]
+    exact_conclusion: "no_core_selector"
+    preserved_result: "NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION"
+  - fixture_id: "FX-RESP-XEMPTY-TOKEN-SWAP"
+    source_family: "response_tag"
+    theorem_status: "direct_theorem_instance"
+    satisfied_hypotheses: ["source object fixed", "finite structural action fixed", "eligible token choices fixed"]
+    exact_conclusion: "no_core_selector"
+    preserved_result: "NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION"
+  - fixture_id: "FX-RESP-TAGGED-SINGLETON"
+    source_family: "response_tag"
+    theorem_status: "fixed_point_positive_control"
+    satisfied_hypotheses: ["explicit tags supplied as source data", "singleton eligible response"]
+    exact_conclusion: "unique_core_selector_control"
+    preserved_result: "tag dependence, not current-ontology derivation"
+  - fixture_id: "FX-ORIENTATION-GL2-LINES"
+    source_family: "orientation_line"
+    theorem_status: "direct_theorem_instance"
+    satisfied_hypotheses: ["three eligible lines fixed before evaluation", "GL(2,2) source action fixed"]
+    exact_conclusion: "no_core_selector"
+    preserved_result: "OB-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001"
+  - fixture_id: "FX-ROOTED-TWO-CYCLE"
+    source_family: "rooted_partition"
+    theorem_status: "direct_theorem_instance"
+    satisfied_hypotheses: ["two eligible roots fixed before evaluation", "cycle automorphism action fixed"]
+    exact_conclusion: "no_core_selector"
+    preserved_result: "CM-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-001"
+  - fixture_id: "FX-ROOTED-FOUR-CYCLE"
+    source_family: "rooted_partition"
+    theorem_status: "direct_theorem_instance"
+    satisfied_hypotheses: ["four eligible roots fixed before evaluation", "C4 automorphism action fixed"]
+    exact_conclusion: "no_core_selector"
+    preserved_result: "four_token_directed_cycle_strengthening"
+  - fixture_id: "FX-ROOTED-LOADED-SINGLETON"
+    source_family: "rooted_partition"
+    theorem_status: "fixed_point_positive_control"
+    satisfied_hypotheses: ["root certificate supplied", "root-preserving eligible space is singleton"]
+    exact_conclusion: "unique_core_selector_control"
+    preserved_result: "conditional kernel-pair core after a supplied root"
+  - fixture_id: "FX-GRADED-FOUR-CHAIN"
+    source_family: "graded_orbit"
+    theorem_status: "fixed_point_positive_control"
+    satisfied_hypotheses: ["proposal action admitted", "unique minimum e0 derived conditionally", "singleton eligible root"]
+    exact_conclusion: "unique_core_selector_control"
+    preserved_result: "four_event_discrete_action_chain"
+  - fixture_id: "FX-TRIVIAL-TWO-CHOICE-MULTIPLE-FIXED"
+    source_family: "theorem_control"
+    theorem_status: "multiple_fixed_point_control"
+    satisfied_hypotheses: ["one represented component", "trivial action", "two eligible fixed choices"]
+    exact_conclusion: "multiple_core_selectors_control"
+    preserved_result: "EQSRC-P2-T03-K-IMAGE-GUARD"
+  - fixture_id: "FX-GRADED-PERIODIC-C4-GUARD"
+    source_family: "graded_orbit"
+    theorem_status: "guarded_non_instance"
+    failed_precondition: "action reachability is nonantisymmetric"
+    exact_conclusion: "guarded_non_instance_periodic_or_nonantisymmetric_reachability"
+    preserved_result: "periodic_control fail_closed"
+  - fixture_id: "FX-GRADED-MULTIPLE-MINIMA-GUARD"
+    source_family: "graded_orbit"
+    theorem_status: "guarded_non_instance"
+    failed_precondition: "the proposal admission rule requires a unique global minimum"
+    exact_conclusion: "guarded_non_instance_nonunique_global_minimum"
+    preserved_result: "multiple_minimum_control fail_closed"
+  - fixture_id: "FX-GRADED-NONGRADED-GUARD"
+    source_family: "graded_orbit"
+    theorem_status: "guarded_non_instance"
+    failed_precondition: "rank is multivalued before the eligible selector space is formed"
+    exact_conclusion: "guarded_non_instance_non_graded_or_infinite_rank"
+    preserved_result: "non_graded_control fail_closed"
+claim_boundary:
+  current_ontology_derives_selector_package: false
+  structural_automorphisms_are_physical_gauge: false
+  physical_covariance_established: false
+  source_law_adopted: false
+  general_EqSrc_discharged: false
+  distance_to_gr_ledger_changed: false
+  metric_use_ledger_changed: false
+  physics_promotion_authorized: false
+  exact_family_freezes_reopened: false

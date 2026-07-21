@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-21T04:20:30Z`
-- Source fingerprint: `b62d03e930864dc22306362684ac590deb87db14223e61e890ec77a191d5a6b1`
-- Nodes: `20062`
-- Edges: `68726`
+- Generated from tracked state as of: `2026-07-21T05:07:00Z`
+- Source fingerprint: `6ed652820501dbeefce2a1e4caa64c161b6763f0a25f1dc352e6217948985c64`
+- Nodes: `20096`
+- Edges: `68789`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1017 |
+| `completion_yaml` | 1018 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 786 |
+| `handoff_yaml` | 787 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1017 |
+| `agent_job` | `support_only` | 1018 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10433 |
-| `blocked_burden` | `blocked` | 3817 |
-| `claim_boundary` | `support_only` | 974 |
-| `draft_control_candidate` | `draft_control` | 654 |
-| `draft_control_candidate` | `proposal_only` | 108 |
+| `artifact` | `support_only` | 10444 |
+| `blocked_burden` | `blocked` | 3828 |
+| `claim_boundary` | `support_only` | 975 |
+| `draft_control_candidate` | `draft_control` | 656 |
+| `draft_control_candidate` | `proposal_only` | 109 |
 | `draft_control_candidate` | `science_draft` | 62 |
-| `frozen_negative` | `frozen_negative` | 122 |
+| `frozen_negative` | `frozen_negative` | 123 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 786 |
-| `human_gated_object` | `human_gated` | 427 |
+| `handoff` | `support_only` | 787 |
+| `human_gated_object` | `human_gated` | 429 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -52,13 +52,13 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `ledger_row` | `science_draft` | 4 |
 | `obstruction` | `blocked` | 75 |
 | `obstruction` | `rejected` | 2 |
-| `source_extension_evidence_precondition` | `source_extension_evidence` | 32 |
+| `source_extension_evidence_precondition` | `source_extension_evidence` | 33 |
 | `source_ontology_object` | `canonical_source` | 23 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 324 |
+| `source_ontology_object` | `support_only` | 325 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 956 |
+| `task` | `support_only` | 957 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260720-016`
-- Latest handoff: `handoff-0786`
-- Handoff path: `research_control/handoffs/handoff-0786.yaml`
-- Next action: Run exactly one bounded v21 P2-T04 Candidate Constructor ontology-law-research-packet integrating the historical finite countermodels under the P2-T03 theorem while preserving each source artifact, scope, negative-result provenance, and the distinction between direct theorem instance and non-instance. Preserve P2-T05 proof encoding, P2-T06 audit, and P2-T07 stress ownership; do not alter the P2-T01 domain, infer physical gauge, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
+- Active task: `RT-20260720-017`
+- Latest handoff: `handoff-0787`
+- Handoff path: `research_control/handoffs/handoff-0787.yaml`
+- Next action: Run exactly one bounded v21 P2-T05 Ontology Formalizer formal-proof packet mechanizing the selector theorem core in a proof assistant with a reproducible proof receipt. Preserve proposal-only status, immutable historical provenance, all exact-family freezes, P2-T06 independent Smuggling Auditor ownership, P2-T07 independent Refuter ownership, scientific-ledger status, and every downstream claim block.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

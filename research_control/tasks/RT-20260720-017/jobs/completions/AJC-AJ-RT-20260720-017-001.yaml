@@ -1,0 +1,651 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-017-001"
+completion_id: "AJC-AJ-RT-20260720-017-001"
+task_id: "RT-20260720-017"
+task_type: "v21_eqsrc_historical_countermodel_integration"
+decision_id: "DDR-20260720-017"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260720-017"
+status: "completed"
+created_at: "2026-07-21T04:57:55Z"
+started_at: "2026-07-21T04:57:55Z"
+completed_at: "2026-07-21T05:07:00Z"
+objective: "Execute only v21 P2-T04: construct and validate a provenance-preserving finite atlas mapping the response-tag, orientation-line, rooted-partition, and graded-orbit families into the exact P2-T03 theorem coordinates."
+completion_summary: "P2-T04 registers EQSRC-FINITE-COUNTERMODEL-ATLAS-V1. It encodes twelve fixtures across four historical families as five direct empty-fixed theorem instances, three fixed-point-positive controls, one multiple-fixed control, and three guarded noninstances; independently recomputes finite groups, orbits, fixed sets, K images, and applicable historical counts; and leaves ontology, physical gauge, exact-family freezes, general EqSrc, scientific ledgers, and promotion unchanged."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T04"
+  recommendation_ids:
+    - "V21-R02"
+    - "V21-R06"
+    - "V21-R41"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+  next_dependency_work_item: "P2-T05"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 17
+  passes_consumed: 17
+  route_work_item_id: "P2-T04"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "finite_concrete_source_object_witnesses"
+minimum_payload:
+  payload_class: "finite_concrete_source_object_witnesses"
+  payload_artifact_path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+  payload_summary: "Constructs a twelve-fixture theorem atlas with explicit groups, choice sets, orbit decompositions, fixed sets, K images, source pins, and instance boundaries."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-017/artifacts/child_phys_math_eqsrc_finite_countermodel_atlas.yaml"
+  - "research_control/tasks/RT-20260720-017/artifacts/child_phys_phil_eqsrc_finite_countermodel_atlas.yaml"
+  - "research_control/tasks/RT-20260720-017/artifacts/parent_conflict_review_eqsrc_finite_countermodel_atlas.yaml"
+  - "research_control/tasks/RT-20260720-017/artifacts/parent_fusion_notes_eqsrc_finite_countermodel_atlas.md"
+  - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+  - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json"
+  - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_theorem_instance_map.yaml"
+  - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_receipt.md"
+  - "research_control/tasks/RT-20260720-017/artifacts/validate_eqsrc_finite_countermodel_atlas.py"
+  - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-017/**"
+  - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+  - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json"
+  - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_theorem_instance_map.yaml"
+  - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_receipt.md"
+  - "research_control/handoffs/handoff-0787.yaml"
+  - "research_control/handoffs/handoff-0787.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  atlas:
+    path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+    sha256: "4a7c84ecf769b19e92b2b2dffd7224ddd4e1e02e4cc93cff797d01fa0e1bc62b"
+  fixtures:
+    path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json"
+    sha256: "e8ced96541fa941e5a3b4ceaa8d7b48204acf7ca8ec342ac6b23dbbf5c470a73"
+  theorem_instance_map:
+    path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_theorem_instance_map.yaml"
+    sha256: "7fbd64b7f0fbcc474b32c85da68a7c4bb841f824edfdbbbd25d116da7ba2c5be"
+  validation:
+    path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_validation.json"
+    sha256: "8a6734a25c32fec66992ddb99dd5f526f0cb088963b789770eed782ccf02e1fb"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260720-017/artifacts/parent_fusion_notes_eqsrc_finite_countermodel_atlas.md"
+    sha256: "7cb048ad7e9d2e55dbda01de24f313035ed9576243ca64a6db3e66e1d3ae9e50"
+  receipt:
+    path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_receipt.md"
+    sha256: "46805fdd92313d6921aa6cec929d597432186570caa2813aef46929669d2a3c6"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-017/artifacts/child_phys_math_eqsrc_finite_countermodel_atlas.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-017/artifacts/child_phys_phil_eqsrc_finite_countermodel_atlas.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-017/artifacts/parent_conflict_review_eqsrc_finite_countermodel_atlas.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    summary: "The parent separated supplied-data positives from current-ontology derivation, guarded noninstances from theorem countermodels, root multiplicity from relation multiplicity, and source symmetry from file or process metadata."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-017/artifacts/parent_fusion_notes_eqsrc_finite_countermodel_atlas.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Demonstrate theorem scope and preserve negative-result provenance."
+  missing_source_law: "A current-ontology derivation of a deterministic source-natural selector or source-side discriminator sufficient to make the declared fixed loci nonempty and relation-determining without supplied distinguishing data."
+  underdetermination_statement: "Current ontology does not derive the P2-T01 selector package, a preferred fixed point, the response tags, the rooted-partition root certificate, or the proposal graded ordered-action law."
+  no_go_theorem_status: "scoped_finite_empty_fixed_instances_only"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_comparison"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "The atlas compares immutable finite source records through their declared structural group action on eligible choices and the resulting orbit, fixed-set, and K-image data."
+    formal_objects:
+      - "finite structural groups G"
+      - "eligible-choice sets D"
+      - "orbit decompositions and fixed sets D^G"
+      - "relation maps K where present"
+    domains:
+      - "unchanged historical finite source records"
+      - "unchanged P2-T03 certified-core theorem interface"
+    maps:
+      - "historical record to theorem-coordinate fixture"
+      - "eligible choices to induced relation images"
+    proof_obligations:
+      - "P2-T05 machine-check the theorem core"
+      - "P2-T06 independently audit source morphisms automorphisms choice spaces and metadata exclusion"
+      - "P2-T07 stress altered categories actions and noninvertible arrows"
+  candidate_law_comparison:
+    candidates:
+      - "response-tag family"
+      - "orientation-line family"
+      - "rooted-partition family"
+      - "graded-orbit family"
+    comparison_basis:
+      - "immutable source identifiers and hashes"
+      - "automorphism group and eligible-choice space"
+      - "orbit decomposition and fixed set"
+      - "K-image cardinality and stabilizer where applicable"
+      - "direct instance positive control multiple-fixed control or guarded noninstance status"
+    selection_status: "historical_families_integrated_no_candidate_selected_adopted_rejected_or_reopened"
+  candidate_law_refutation:
+    refuted_candidate: ""
+    refutation_basis: ""
+    surviving_obligations: []
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "A proposal-only finite comparison atlas may be constructed without protected authority; adoption and ontology change remain human-gated."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc undischarged until source-domain derivation or adoption lawful selector status independent audit stress and downstream gates are complete."
+      - "Keep M_src g_eff matter coupling Einstein equations exact-GR recovery and benchmark promotion blocked."
+      - "Keep selector evidence independent of target atlas target metric benchmark observer process validator registry role and handoff metadata."
+      - "Require protected human authority before source-law selector-law or canonical ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "twelve fixture group actions"
+      - "four historical source families"
+      - "K maps on response orientation root and theorem controls"
+    audit_result: "The task-local validator confirms source-hash parity and excludes file or process symmetry; P2-T06 retains independent smuggling-audit authority."
+  atlas_glue_obligations:
+    profile_law: "Not established; this is a finite theorem atlas, not a spacetime atlas."
+    selector_law: "Empty, singleton, and multiple fixed-set branches are classified conditionally; current-ontology derivation and adoption remain open."
+    transition_law: "Not established."
+    inverse_checks: "Finite permutation groups are closed independently from declared generators."
+    cocycle_checks: "Not established; no spacetime cocycle is claimed."
+    finite_variation_robustness: "Open; historical finite counts and fixtures do not prove physical variation robustness."
+  failure_branches:
+    collapse: "An empty fixed set blocks a deterministic selector on the declared core."
+    nonuniqueness: "A two-element fixed set produces two selectors while K may preserve or collapse their relation images."
+    inverse_defect: "Not tested beyond declared finite automorphism groups; P2-T07 retains altered-category stress."
+    cocycle_defect: "No atlas cocycle is claimed."
+    variation_fragility: "Tagged and supplied-root positives remain dependent on explicit distinguishing data."
+  known_risks:
+    - "A supplied tag or root may be overread as current-ontology derivation."
+    - "Structural automorphisms may be overread as physical gauge."
+    - "Guarded noninstances may be overread as theorem countermodels."
+    - "Selector multiplicity may be conflated with relation-image multiplicity."
+    - "File or process metadata may be smuggled into a symmetry or selector premise."
+  failed_alternatives:
+    - "Using file naming or serialization order as source symmetry is rejected."
+    - "Calling proposal-admission failures theorem countermodels is rejected."
+    - "Calling supplied-data positive controls current-ontology derivations is rejected."
+    - "Treating four root choices as four relation images is rejected."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. A later protected decision is required before adopting a selector law, source extension, or canonical ontology edit."
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "ontology_law_research_packet"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "EQSRC-FINITE-COUNTERMODEL-ATLAS-V1"
+  item_source_path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+  item_kind: "evidence/precondition"
+  classification: "status_boundary_evidence_only"
+  evidence_paths:
+    - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+    - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json"
+    - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_theorem_instance_map.yaml"
+    - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_validation.json"
+  relation_to_current_ontology: "evidence_only"
+  relation_to_target_structures: "No target topology atlas metric detector benchmark observer process or desired recovery behavior defines a fixture group action or selector conclusion."
+  claim_boundary_id: "CB-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "Accepted only as scoped evidence that the P2-T03 theorem uniformly classifies the named finite proposal records while preserving their original result scope."
+  forbidden_overreads:
+    - "selector package derived from or adopted into current ontology"
+    - "structural automorphisms established as physical gauge"
+    - "frozen family reopened adopted rejected or globally impossible"
+    - "general EqSrc or downstream GR promotion"
+  next_route_if_blocked: "P2-T05 formal-proof-packet"
+
+bridge_attempt_status:
+  status: "not_applicable_eqsrc_theorem_integration"
+  candidate_map: "immutable historical finite source record to automorphism-group choice-space orbit fixed-set and K-image theorem coordinates"
+  missing_primitive: "deterministic source-natural selector or source-side discriminator derived by current ontology"
+  preserves_blocks: "Preserves canonical ontology edit source-law and selector-law adoption physical gauge general EqSrc M_src g_eff matter coupling Einstein equations benchmark Gate Chair and completed-derivation blocks."
+  explanation: "This packet constructs a finite theorem atlas and does not attempt an observer-readout g_eff or matter-coupling bridge."
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - "EQSRC-FINITE-COUNTERMODEL-ATLAS-V1"
+    - "twelve finite group-action fixtures"
+    - "EQSRC-FINITE-COUNTERMODEL-THEOREM-INSTANCE-MAP-V1"
+    - "direct instance positive control multiple-fixed control and guarded noninstance classification"
+  maps:
+    - "declared group generators to finite group closure orbit decomposition and fixed set"
+    - "eligible selector choices to K-image cardinalities and stabilizers"
+    - "historical source identifiers to exact P2-T03 theorem hypotheses and conclusions"
+  proof_obligations:
+    - "P2-T05 machine-check the P2-T03 theorem core"
+    - "P2-T06 independently audit the domain morphism automorphism choice-space and metadata guards"
+    - "P2-T07 independently stress altered categories actions and noninvertible arrows"
+  failed_components: []
+  next_required_role: "none"
+  no_fog_check: true
+  no_fog_explanation: "The task constructed one twelve-fixture finite atlas, reproduced the applicable historical finite counts, independently recomputed every fixture group orbit fixed set and K image, and classified each record without changing its provenance or claim status."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "CB-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS-001"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-017-001"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "Twelve-fixture EqSrc finite countermodel atlas"
+    summary: "Encodes four historical families with explicit structural groups, eligible choices, orbit decompositions, fixed sets, K images, and instance boundaries."
+  - payload_id: "NMP-RT-20260720-017-002"
+    payload_type: "finite_model"
+    name: "Fixed-point and multiple-fixed controls"
+    summary: "Provides three singleton fixed-point-positive controls and one two-fixed-choice control with injective and constant K branches."
+  - payload_id: "NMP-RT-20260720-017-003"
+    payload_type: "countermodel"
+    name: "Five direct empty-fixed theorem instances"
+    summary: "Integrates response sign and token swaps, orientation lines, and two- and four-cycle root actions without changing their historical scope."
+  - payload_id: "NMP-RT-20260720-017-004"
+    payload_type: "source_extension_classification"
+    name: "Direct-instance versus guarded-noninstance classification"
+    summary: "Separates admitted theorem instances from periodic, multiple-minimum, and non-graded proposal admission failures."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT017-001"
+    payload_type: "finite_model"
+    object_name: "EQSRC-FINITE-COUNTERMODEL-ATLAS-V1"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+    burden_effect: "narrows"
+    summary: "Constructs the required provenance-preserving atlas over four historical finite families."
+  - payload_id: "PAYLOAD-RT017-002"
+    payload_type: "countermodel"
+    object_name: "Five direct empty-fixed theorem instances"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json"
+    burden_effect: "narrows"
+    summary: "Shows exactly which fixed-core hypotheses and empty-fixed conclusions apply to each admitted historical object."
+  - payload_id: "PAYLOAD-RT017-003"
+    payload_type: "finite_model"
+    object_name: "Singleton and multiple-fixed selector controls"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json"
+    burden_effect: "narrows"
+    summary: "Validates one-selector and multiple-selector branches and separates selector from relation-image multiplicity."
+  - payload_id: "PAYLOAD-RT017-004"
+    payload_type: "source_extension_classification"
+    object_name: "Guarded noninstance theorem map"
+    claim_status: "source-extension data"
+    source_path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_theorem_instance_map.yaml"
+    burden_effect: "narrows"
+    summary: "Preserves fail-closed proposal controls outside the theorem domain without misclassifying them as countermodels."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "eqsrc"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: "historical_empty_fixed_instances"
+      status: "discharged"
+      scope: "response sign/token, GL(2,2) lines, directed C2 and C4 roots"
+      result_artifact: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json"
+      obstruction_id: "EQSRC-P2-T04-HISTORICAL-EMPTY-FIXED"
+      local_countermodel_claim: "Each admitted transitive action has no fixed eligible choice and therefore no deterministic core selector."
+      forbidden_overread: "No physical-gauge result global ontology no-go or future-extension impossibility follows."
+    - countermodel_slot: "fixed_point_positive_controls"
+      status: "discharged"
+      scope: "explicit tags supplied root and proposal four-chain minimum"
+      result_artifact: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json"
+      obstruction_id: ""
+      local_countermodel_claim: "Each singleton eligible fixed set gives one conditional core selector."
+      forbidden_overread: "Supplied or proposal data are not current-ontology derivations."
+    - countermodel_slot: "multiple_fixed_relation_image_separation"
+      status: "discharged"
+      scope: "trivial two-choice action with injective and constant K"
+      result_artifact: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json"
+      obstruction_id: "EQSRC-P2-T03-K-IMAGE-GUARD"
+      local_countermodel_claim: "Two selectors may induce two or one relation images depending on K."
+      forbidden_overread: "Neither branch establishes general EqSrc."
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  scope: "not_applicable_to_global_status"
+  failed_object: ""
+  exact_failure: ""
+  minimal_counterexample_path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json"
+  current_ontology_implication: "not_applicable"
+  source_extension_implication: "not_applicable"
+  consequence: "Historical scoped obstructions are integrated without a new program-wide obstruction verdict."
+  forbidden_overread: "global theory rejection or future source-extension impossibility"
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Demonstrate theorem scope and preserve negative-result provenance."
+  explanation: "P2-T04 constructs and validates the required finite atlas and sharpens theorem scope, but current ontology derives or adopts neither the proposal domain nor a selector and general EqSrc remains open."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "scoped_evidence_precondition"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A provenance-preserving finite theorem atlas neither derives nor adopts the domain or selector and does not discharge general EqSrc."
+  downstream_unlocked:
+    - "P2-T05 proof-assistant encoding"
+  downstream_still_blocked:
+    - "P2-T06 until P2-T05 is complete"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The authoritative Distance-to-GR and metric-use ledgers remain unchanged."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "proposal-only selector package and historical source extensions remain unadopted"
+  - burden: "Source equivalence EqSrc"
+    status: "finite theorem atlas complete; source derivation adoption proof encoding audit stress and general EqSrc remain open"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "response-tag historical obstruction integrated without route reopening"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no construction or scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "open; finite atlas and reproduced counts do not prove physical robustness"
+  - burden: "benchmark promotion"
+    status: "blocked by missing source derivation adoption proof encoding independent audit stress and downstream derivations"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "five exact candidate families remain locally frozen; P2-T05 is a distinct formal-proof route"
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p2_t04_historical_finite_atlas_complete_pending_p2_t05_formal_proof"
+  prior_related_tasks:
+    - "RT-20260614-055"
+    - "RT-20260718-041"
+    - "RT-20260718-045"
+    - "RT-20260718-047"
+    - "RT-20260720-014 through RT-20260720-017"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P2-T04 adds one cross-family machine atlas, explicit instance boundaries, independently recomputed groups and historical counts, and metadata exclusion without renaming or repairing a frozen candidate."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P2-T05 formal-proof packet"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  candidate_freeze_label: "EQSRC-FINITE-COUNTERMODEL-ATLAS"
+  prior_attempts_considered:
+    - "five stable families and seven immutable candidates in P1-T03"
+    - "P2-T03 complete fixed-core theorem"
+    - "P2-T04 finite historical atlas"
+  criteria_evaluated:
+    - "Every historical source hash and identifier remained unchanged."
+    - "Twelve fixtures cover the four selected families and required positive and multiple-fixed controls."
+    - "All finite groups orbits fixed sets K images and applicable historical counts reproduce."
+    - "No source-domain adoption physical-gauge inference or global theory rejection is supplied."
+  freeze_if:
+    - "Later work repeats the finite atlas without proof encoding independent audit or stress."
+    - "Later work changes a historical source record or action after observing a desired selector."
+  do_not_freeze_if:
+    - "P2-T05 supplies a proof-assistant encoding and reproducible proof receipt."
+    - "P2-T06 supplies the planned independent smuggling audit after both dependencies complete."
+  freeze_decision: "not_frozen"
+  decision_reason: "P2-T05 is non-orbital because it must produce machine-checked theorem-core evidence rather than another finite-family repackaging."
+  rationale: "Exact family freezes remain unchanged while a distinct formal-proof dependency advances."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "smuggling_auditor"
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The P2-T03 theorem and four historical source families have immutable hash parity."
+    - "Twelve fixtures and the theorem-instance map classify exact finite actions and conclusions."
+    - "All 92 task-local checks and TeX compilation pass."
+  open_or_blocked_physical_targets:
+    - "current-ontology derivation or lawful adoption of the source domain and selector law"
+    - "physical gauge interpretation covariance and variation robustness"
+    - "general EqSrc M_src g_eff matter coupling Einstein equations and exact-GR recovery"
+  forbidden_overread:
+    - "finite atlas or validator PASS as ontology adoption physical proof benchmark progress or completed derivation"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The finite atlas is scoped proposal evidence only. It does not derive or adopt the selector package, establish physical gauge or covariance, reopen a frozen family, discharge general EqSrc, change scientific ledgers, authorize M_src adoption or g_eff, derive matter coupling or Einstein equations, promote a benchmark, complete the derivation, or reject the global theory."
+  forbidden_conclusions:
+    - "selector package derived from or adopted into current ontology"
+    - "structural automorphisms as physical gauge transformations"
+    - "supplied tags or roots as derived source laws"
+    - "guarded noninstances as theorem countermodels"
+    - "file process validator registry role or handoff metadata as source symmetry"
+    - "frozen family reopened adopted rejected or globally impossible"
+    - "global theory rejection or future source-extension impossibility"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff construction or scope expansion"
+    - "matter coupling derivation"
+    - "Einstein-equation derivation"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+
+selected_next_route:
+  route_id: "v21_p2_t05_eqsrc_selector_theorem_formal_proof"
+  route_label: "formal-proof-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P2-T05"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Provide machine-checked mathematical evidence for the theorem core."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Mechanize the selector theorem core in a proof assistant with a reproducible proof receipt while preserving all proposal-only and downstream claim blocks."
+  source_handoff: "research_control/handoffs/handoff-0787.yaml"
+claim_boundary:
+  boundary_id: "CB-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS-001"
+  allowed_scope: "Exact P2-T04 finite atlas, twelve fixtures, theorem-instance map, independent finite recomputation, historical provenance preservation, metadata exclusion, and one P2-T05 route."
+  blocked_scope: "Historical artifact change, file or process symmetry, P2-T05 encoding, P2-T06 audit, P2-T07 stress, physical gauge claims, frozen-family reopening, ontology edit or adoption, general EqSrc, scientific-ledger changes, downstream GR promotion, Gate Chair verdict, publication, completed derivation, or global no-go."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_validation.json"
+  local_validator_report_hash: "8a6734a25c32fec66992ddb99dd5f526f0cb088963b789770eed782ccf02e1fb"
+  atlas_hash: "4a7c84ecf769b19e92b2b2dffd7224ddd4e1e02e4cc93cff797d01fa0e1bc62b"
+  fixtures_hash: "e8ced96541fa941e5a3b4ceaa8d7b48204acf7ca8ec342ac6b23dbbf5c470a73"
+  theorem_instance_map_hash: "7fbd64b7f0fbcc474b32c85da68a7c4bb841f824edfdbbbd25d116da7ba2c5be"
+  distance_to_gr_ledger_hash: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  metric_use_ledger_hash: "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  canonical_ontology_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+  task_local_check_count: 92
+  latex_compile_status: "PASS"
+  validation_status: "PASS"
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  selector_construction_authorized: false
+  physical_gauge_claim_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 17 lease parity immutable route identity max reasoning effort repository binding clean start predecessor checkpoint and single consumption were verified before work."
+      - "Memory preflight refreshed local retrieval and the registered P2-T03 theorem object plus its TeX source-registry row was inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required internal perspectives completed and four mathematical versus ontology conflicts were resolved in one parent synthesis round."
+      - "The task-local validator passes all 92 source-hash fixture group orbit fixed-set K-image historical-count instance-map and claim-boundary checks."
+      - "The registered TeX source compiles successfully twice to a four-page local scratch PDF."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Repository validation documentation impact signal parity generated freshness and whitespace checks remain required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph and claim graph remain to be regenerated and checked."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap and validate-only remain required after source registration."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 933
+    relationship_row_count: 4626
+    semantic_row_count: 933
+    vault_row_count: 933
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 9
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+      returned_object_ids:
+        - "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+  canonical_inspections:
+    - object_id: "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+      source_hash: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and nine local-cache-only freshness warnings were refreshed to a clean local retrieval state with 933 source objects."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM --json"
+    status: "PASS"
+    summary: "Resolved and inspected the registered P2-T03 theorem and its TeX source-registry row."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-017/artifacts/validate_eqsrc_finite_countermodel_atlas.py"
+    status: "PASS"
+    summary: "The task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-017/artifacts/validate_eqsrc_finite_countermodel_atlas.py --write-report --json"
+    status: "PASS"
+    summary: "Passed 92 of 92 source-hash fixture group orbit fixed-set K-image aggregate instance-map historical-count and claim-boundary checks."
+  - command: "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-017-latex research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+    status: "PASS"
+    summary: "Compiled the registered TeX source twice to a four-page local scratch PDF."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  rationale: "The result is a bounded scientific finite-atlas and theorem-instance packet, not a project-system defect."

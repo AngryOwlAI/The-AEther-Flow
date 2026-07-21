@@ -449,6 +449,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION` `research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex`
 - `TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex`
 - `TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex`
+- `TEX-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS` `research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -986,6 +987,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-015-PARENT-FUSION-NOTES-EQSRC-NATURAL-SELECTOR-FIXED-POINT` `wiki/markdown/md-research-control-tasks-rt-20260720-015-parent-fusion-notes-eqsrc-natural-selector-fixed-point.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-016-EQSRC-NO-SELECTOR-NONUNIQUENESS-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-016-eqsrc-no-selector-nonuniqueness-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-016-PARENT-FUSION-NOTES-EQSRC-NO-SELECTOR-NONUNIQUENESS` `wiki/markdown/md-research-control-tasks-rt-20260720-016-parent-fusion-notes-eqsrc-no-selector-nonuniqueness.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-017-EQSRC-FINITE-COUNTERMODEL-ATLAS-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-017-eqsrc-finite-countermodel-atlas-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-017-PARENT-FUSION-NOTES-EQSRC-FINITE-COUNTERMODEL-ATLAS` `wiki/markdown/md-research-control-tasks-rt-20260720-017-parent-fusion-notes-eqsrc-finite-countermodel-atlas.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1464,6 +1467,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION` `wiki/tex/tex-v21-p2-t01-eqsrc-source-category-definition.md`
 - `WIKI-TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `wiki/tex/tex-v21-p2-t02-eqsrc-natural-selector-fixed-point-condition.md`
 - `WIKI-TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `wiki/tex/tex-v21-p2-t03-eqsrc-no-selector-nonuniqueness-theorem.md`
+- `WIKI-TEX-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS` `wiki/tex/tex-v21-p2-t04-eqsrc-finite-countermodel-atlas.md`
 
 ## project_control
 
@@ -1822,6 +1826,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-015-PARENT-FUSION-NOTES-EQSRC-NATURAL-SELECTOR-FIXED-POINT` `research_control/tasks/RT-20260720-015/artifacts/parent_fusion_notes_eqsrc_natural_selector_fixed_point.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-016-EQSRC-NO-SELECTOR-NONUNIQUENESS-RECEIPT` `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-016-PARENT-FUSION-NOTES-EQSRC-NO-SELECTOR-NONUNIQUENESS` `research_control/tasks/RT-20260720-016/artifacts/parent_fusion_notes_eqsrc_no_selector_nonuniqueness.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-017-EQSRC-FINITE-COUNTERMODEL-ATLAS-RECEIPT` `research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-017-PARENT-FUSION-NOTES-EQSRC-FINITE-COUNTERMODEL-ATLAS` `research_control/tasks/RT-20260720-017/artifacts/parent_fusion_notes_eqsrc_finite_countermodel_atlas.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

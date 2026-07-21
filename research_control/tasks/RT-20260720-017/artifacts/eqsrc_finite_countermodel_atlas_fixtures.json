@@ -1,0 +1,351 @@
+{
+  "schema_id": "eqsrc-finite-countermodel-atlas-fixtures.v1",
+  "atlas_id": "EQSRC-FINITE-COUNTERMODEL-ATLAS-V1",
+  "theorem_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1",
+  "status": "draft/control",
+  "authority": "Finite mathematical control data only; not ontology, physical-gauge, covariance, or promotion authority.",
+  "source_hashes": {
+    "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae",
+    "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex": "b589c29e440750e0dacaebb5d2ad86fd5bf0b593b7e27645052fcbf55839a161",
+    "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml": "a5bc1af23713145727bfad592a770691b5128d6ce6546966860d80c588a530a6",
+    "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml": "9ddce9d042ef187d163043d6c2a98a7d1a796cd01a433d3d258632150a83325e",
+    "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex": "b712552d328f144491bff689b702eba6dc2027ce1cc61c7052adbca84b0639f7"
+  },
+  "forbidden_apparent_symmetry_sources": [
+    "file_name",
+    "file_order",
+    "repository_path",
+    "serialization_order",
+    "agent_process_state",
+    "handoff_state",
+    "validator_order",
+    "registry_order"
+  ],
+  "fixtures": [
+    {
+      "fixture_id": "FX-RESP-XEMPTY-SIGN-SWAP",
+      "family": "response_tag",
+      "preserved_source_ids": [
+        "RT-20260614-055",
+        "TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST",
+        "X_empty",
+        "NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION"
+      ],
+      "source_path": "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex",
+      "theorem_status": "direct_theorem_instance",
+      "hypothesis_status": "admitted_core_action",
+      "admitted": true,
+      "source_extension_status": "current_untagged_toy_record",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["epsilon_plus", "epsilon_minus"],
+      "generators": [[1, 0]],
+      "relation_maps": {"response_sign": ["plus", "minus"]},
+      "expected": {
+        "group_order": 2,
+        "orbits": [[0, 1]],
+        "fixed_indices": [],
+        "relation_image_sizes": {"response_sign": 2},
+        "relation_stabilizer_orders": {"response_sign": 1},
+        "conclusion": "no_core_selector"
+      }
+    },
+    {
+      "fixture_id": "FX-RESP-XEMPTY-TOKEN-SWAP",
+      "family": "response_tag",
+      "preserved_source_ids": [
+        "RT-20260614-055",
+        "TEX-RESEARCH-CONTROL-RESP-LC-FINITE-TOY-METRIC-RESPONSE-MODEL-REFUTER-STRESS-TEST",
+        "X_empty",
+        "NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION"
+      ],
+      "source_path": "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex",
+      "theorem_status": "direct_theorem_instance",
+      "hypothesis_status": "admitted_core_action",
+      "admitted": true,
+      "source_extension_status": "current_untagged_toy_record",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["tau_ab", "tau_ba"],
+      "generators": [[1, 0]],
+      "relation_maps": {"token_assignment": ["ab", "ba"]},
+      "expected": {
+        "group_order": 2,
+        "orbits": [[0, 1]],
+        "fixed_indices": [],
+        "relation_image_sizes": {"token_assignment": 2},
+        "relation_stabilizer_orders": {"token_assignment": 1},
+        "conclusion": "no_core_selector"
+      }
+    },
+    {
+      "fixture_id": "FX-RESP-TAGGED-SINGLETON",
+      "family": "response_tag",
+      "preserved_source_ids": [
+        "RT-20260614-055",
+        "F_toy",
+        "X_plus"
+      ],
+      "source_path": "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex",
+      "theorem_status": "fixed_point_positive_control",
+      "hypothesis_status": "admitted_after_explicit_source_tags",
+      "admitted": true,
+      "source_extension_status": "explicit_tag_data_only",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["stored_epsilon_lambda_tau"],
+      "generators": [],
+      "relation_maps": {"toy_response": ["stored_response"]},
+      "expected": {
+        "group_order": 1,
+        "orbits": [[0]],
+        "fixed_indices": [0],
+        "relation_image_sizes": {"toy_response": 1},
+        "relation_stabilizer_orders": {"toy_response": 1},
+        "conclusion": "unique_core_selector_control"
+      }
+    },
+    {
+      "fixture_id": "FX-ORIENTATION-GL2-LINES",
+      "family": "orientation_line",
+      "preserved_source_ids": [
+        "RT-20260718-041",
+        "CM-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001",
+        "OB-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001"
+      ],
+      "source_path": "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml",
+      "theorem_status": "direct_theorem_instance",
+      "hypothesis_status": "admitted_core_action",
+      "admitted": true,
+      "source_extension_status": "proposal_only_orientation_torsor_record",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["L_p", "L_q", "L_d"],
+      "generators": [[1, 0, 2], [1, 2, 0]],
+      "relation_maps": {"line_congruence": ["R_p", "R_q", "R_d"]},
+      "expected": {
+        "group_order": 6,
+        "orbits": [[0, 1, 2]],
+        "fixed_indices": [],
+        "relation_image_sizes": {"line_congruence": 3},
+        "relation_stabilizer_orders": {"line_congruence": 1},
+        "conclusion": "no_core_selector"
+      }
+    },
+    {
+      "fixture_id": "FX-ROOTED-TWO-CYCLE",
+      "family": "rooted_partition",
+      "preserved_source_ids": [
+        "RT-20260718-045",
+        "CM-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-001",
+        "minimal_two_token_directed_cycle"
+      ],
+      "source_path": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml",
+      "theorem_status": "direct_theorem_instance",
+      "hypothesis_status": "admitted_core_action",
+      "admitted": true,
+      "source_extension_status": "unloaded_root_choice",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["root_0", "root_1"],
+      "generators": [[1, 0]],
+      "relation_maps": {"root_induced_relation": ["R_0", "R_1"]},
+      "expected": {
+        "group_order": 2,
+        "orbits": [[0, 1]],
+        "fixed_indices": [],
+        "relation_image_sizes": {"root_induced_relation": 2},
+        "relation_stabilizer_orders": {"root_induced_relation": 1},
+        "conclusion": "no_core_selector"
+      }
+    },
+    {
+      "fixture_id": "FX-ROOTED-FOUR-CYCLE",
+      "family": "rooted_partition",
+      "preserved_source_ids": [
+        "RT-20260718-045",
+        "CM-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-001",
+        "four_token_directed_cycle_strengthening"
+      ],
+      "source_path": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml",
+      "theorem_status": "direct_theorem_instance",
+      "hypothesis_status": "admitted_core_action",
+      "admitted": true,
+      "source_extension_status": "unloaded_root_choice",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["root_0", "root_1", "root_2", "root_3"],
+      "generators": [[1, 2, 3, 0]],
+      "relation_maps": {"root_induced_relation": ["R_even_02", "R_even_13", "R_even_02", "R_even_13"]},
+      "expected": {
+        "group_order": 4,
+        "orbits": [[0, 1, 2, 3]],
+        "fixed_indices": [],
+        "relation_image_sizes": {"root_induced_relation": 2},
+        "relation_stabilizer_orders": {"root_induced_relation": 2},
+        "conclusion": "no_core_selector"
+      }
+    },
+    {
+      "fixture_id": "FX-ROOTED-LOADED-SINGLETON",
+      "family": "rooted_partition",
+      "preserved_source_ids": [
+        "RT-20260718-045",
+        "CM-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-001",
+        "loaded_root_certificate"
+      ],
+      "source_path": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml",
+      "theorem_status": "fixed_point_positive_control",
+      "hypothesis_status": "admitted_after_supplied_root",
+      "admitted": true,
+      "source_extension_status": "root_certificate_supplied_not_derived",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["supplied_root"],
+      "generators": [],
+      "relation_maps": {"root_induced_relation": ["supplied_relation"]},
+      "expected": {
+        "group_order": 1,
+        "orbits": [[0]],
+        "fixed_indices": [0],
+        "relation_image_sizes": {"root_induced_relation": 1},
+        "relation_stabilizer_orders": {"root_induced_relation": 1},
+        "conclusion": "unique_core_selector_control"
+      }
+    },
+    {
+      "fixture_id": "FX-GRADED-FOUR-CHAIN",
+      "family": "graded_orbit",
+      "preserved_source_ids": [
+        "RT-20260718-047",
+        "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1",
+        "four_event_discrete_action_chain"
+      ],
+      "source_path": "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex",
+      "theorem_status": "fixed_point_positive_control",
+      "hypothesis_status": "admitted_proposal_action",
+      "admitted": true,
+      "source_extension_status": "proposal_only_ordered_action",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["unique_minimum_e0"],
+      "generators": [],
+      "relation_maps": {"rank_parity_relation": ["even_02_odd_13"]},
+      "expected": {
+        "group_order": 1,
+        "orbits": [[0]],
+        "fixed_indices": [0],
+        "relation_image_sizes": {"rank_parity_relation": 1},
+        "relation_stabilizer_orders": {"rank_parity_relation": 1},
+        "conclusion": "unique_core_selector_control"
+      }
+    },
+    {
+      "fixture_id": "FX-TRIVIAL-TWO-CHOICE-MULTIPLE-FIXED",
+      "family": "theorem_control",
+      "preserved_source_ids": [
+        "RT-20260720-016",
+        "EQSRC-P2-T03-K-IMAGE-GUARD"
+      ],
+      "source_path": "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex",
+      "theorem_status": "multiple_fixed_point_control",
+      "hypothesis_status": "admitted_core_action",
+      "admitted": true,
+      "source_extension_status": "theorem_control_only",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["choice_a", "choice_b"],
+      "generators": [],
+      "relation_maps": {
+        "K_injective": ["R_a", "R_b"],
+        "K_constant": ["R", "R"]
+      },
+      "expected": {
+        "group_order": 1,
+        "orbits": [[0], [1]],
+        "fixed_indices": [0, 1],
+        "relation_image_sizes": {"K_injective": 2, "K_constant": 1},
+        "relation_stabilizer_orders": {"K_injective": 1, "K_constant": 1},
+        "conclusion": "multiple_core_selectors_control"
+      }
+    },
+    {
+      "fixture_id": "FX-GRADED-PERIODIC-C4-GUARD",
+      "family": "graded_orbit",
+      "preserved_source_ids": [
+        "RT-20260718-047",
+        "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1",
+        "periodic_control"
+      ],
+      "source_path": "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex",
+      "theorem_status": "guarded_non_instance",
+      "hypothesis_status": "fails_antisymmetry_before_selector_domain",
+      "admitted": false,
+      "source_extension_status": "proposal_guard_bottom",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["root_0", "root_1", "root_2", "root_3"],
+      "generators": [[1, 2, 3, 0]],
+      "relation_maps": {},
+      "expected": {
+        "group_order": 4,
+        "orbits": [[0, 1, 2, 3]],
+        "fixed_indices": [],
+        "relation_image_sizes": {},
+        "relation_stabilizer_orders": {},
+        "conclusion": "guarded_non_instance_periodic_or_nonantisymmetric_reachability"
+      }
+    },
+    {
+      "fixture_id": "FX-GRADED-MULTIPLE-MINIMA-GUARD",
+      "family": "graded_orbit",
+      "preserved_source_ids": [
+        "RT-20260718-047",
+        "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1",
+        "multiple_minimum_control"
+      ],
+      "source_path": "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex",
+      "theorem_status": "guarded_non_instance",
+      "hypothesis_status": "fails_unique_minimum_before_selector_domain",
+      "admitted": false,
+      "source_extension_status": "proposal_guard_bottom",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["minimum_a", "minimum_b"],
+      "generators": [[1, 0]],
+      "relation_maps": {},
+      "expected": {
+        "group_order": 2,
+        "orbits": [[0, 1]],
+        "fixed_indices": [],
+        "relation_image_sizes": {},
+        "relation_stabilizer_orders": {},
+        "conclusion": "guarded_non_instance_nonunique_global_minimum"
+      }
+    },
+    {
+      "fixture_id": "FX-GRADED-NONGRADED-GUARD",
+      "family": "graded_orbit",
+      "preserved_source_ids": [
+        "RT-20260718-047",
+        "EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1",
+        "non_graded_control"
+      ],
+      "source_path": "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex",
+      "theorem_status": "guarded_non_instance",
+      "hypothesis_status": "fails_common_rank_before_selector_domain",
+      "admitted": false,
+      "source_extension_status": "proposal_guard_bottom",
+      "symmetry_basis": "source_structure",
+      "selection_space": ["rank_length_2", "rank_length_3"],
+      "generators": [],
+      "relation_maps": {},
+      "expected": {
+        "group_order": 1,
+        "orbits": [[0], [1]],
+        "fixed_indices": [0, 1],
+        "relation_image_sizes": {},
+        "relation_stabilizer_orders": {},
+        "conclusion": "guarded_non_instance_non_graded_or_infinite_rank"
+      }
+    }
+  ],
+  "aggregate_expectations": {
+    "fixture_count": 12,
+    "historical_family_count": 4,
+    "direct_theorem_instance_count": 5,
+    "fixed_point_positive_control_count": 3,
+    "multiple_fixed_point_control_count": 1,
+    "guarded_non_instance_count": 3,
+    "file_or_process_symmetry_fixture_count": 0
+  }
+}

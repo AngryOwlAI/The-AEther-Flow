@@ -1,0 +1,30 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+question: "How do the named finite families instantiate the P2-T03 fixed-locus theorem without changing their source data or historical conclusions?"
+result:
+  theorem_coordinate: "For one represented component, the selector space is the fixed set of the declared automorphism action on the eligible-choice set."
+  direct_empty_fixed_instances:
+    - "X_empty sign swap: C2 acts transitively on two signs; fixed set empty."
+    - "X_empty token swap: C2 acts transitively on two token maps; fixed set empty."
+    - "orientation lines: GL(2,2) of order 6 acts transitively on three lines; fixed set empty."
+    - "two-cycle roots: C2 acts transitively on two roots; fixed set empty."
+    - "four-cycle roots: C4 acts transitively on four roots; fixed set empty while K has two images."
+  positive_controls:
+    - "explicit tagged response singleton: one fixed choice"
+    - "supplied-root singleton: one fixed choice"
+    - "admitted four-chain unique minimum: one fixed choice"
+  multiple_fixed_control: "The trivial group on two choices fixes both; injective K has two images and constant K has one."
+  guarded_noninstances:
+    - "periodic C4 fails antisymmetry"
+    - "two minima fail unique-minimum admission"
+    - "unequal saturated-chain lengths fail graded-rank admission"
+  independently_reproduced_counts:
+    orientation: {gl2_order: 6, agl2_order: 24, line_orbit_size: 3, invariant_line_count: 0}
+    rooted_four_cycle: {automorphism_group_order: 4, root_orbit_size: 4, relation_image_count: 2, relation_stabilizer_order: 2}
+    rooted_graph_census: {loop_free_graphs: 4096, rooted_records: 1088, admitted_graphs: 557, multi_relation_graphs: 265}
+    graded_unary_actions: {n1: 1, n2: 4, n3: 27, n4: 256}
+limitations:
+  - "Finite group calculations do not establish physical covariance or physical gauge."
+  - "Positive controls with tags or roots show conditional sufficiency, not current-ontology derivation."
+  - "Guarded noninstances test candidate admission rules and are not counterexamples to the P2-T03 theorem."

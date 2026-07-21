@@ -1,0 +1,576 @@
+{
+  "artifact_hashes": {
+    "atlas": "4a7c84ecf769b19e92b2b2dffd7224ddd4e1e02e4cc93cff797d01fa0e1bc62b",
+    "fixtures": "e8ced96541fa941e5a3b4ceaa8d7b48204acf7ca8ec342ac6b23dbbf5c470a73",
+    "theorem_instance_map": "7fbd64b7f0fbcc474b32c85da68a7c4bb841f824edfdbbbd25d116da7ba2c5be"
+  },
+  "atlas_id": "EQSRC-FINITE-COUNTERMODEL-ATLAS-V1",
+  "authority": "Finite operational evidence only; not ontology, physical-gauge, covariance, proof-assistant, or promotion authority.",
+  "checks": {
+    "aggregate::direct_theorem_instance": true,
+    "aggregate::fixed_point_positive_control": true,
+    "aggregate::fixture_count": true,
+    "aggregate::fixture_ids_unique": true,
+    "aggregate::guarded_non_instance": true,
+    "aggregate::historical_family_count": true,
+    "aggregate::multiple_fixed_point_control": true,
+    "aggregate::no_file_or_process_symmetry": true,
+    "atlas::required_claim_boundaries": true,
+    "fixture::FX-GRADED-FOUR-CHAIN::classification": true,
+    "fixture::FX-GRADED-FOUR-CHAIN::fixed": true,
+    "fixture::FX-GRADED-FOUR-CHAIN::group_order": true,
+    "fixture::FX-GRADED-FOUR-CHAIN::orbits": true,
+    "fixture::FX-GRADED-FOUR-CHAIN::relation_images": true,
+    "fixture::FX-GRADED-FOUR-CHAIN::relation_stabilizers": true,
+    "fixture::FX-GRADED-MULTIPLE-MINIMA-GUARD::classification": true,
+    "fixture::FX-GRADED-MULTIPLE-MINIMA-GUARD::fixed": true,
+    "fixture::FX-GRADED-MULTIPLE-MINIMA-GUARD::group_order": true,
+    "fixture::FX-GRADED-MULTIPLE-MINIMA-GUARD::orbits": true,
+    "fixture::FX-GRADED-MULTIPLE-MINIMA-GUARD::relation_images": true,
+    "fixture::FX-GRADED-MULTIPLE-MINIMA-GUARD::relation_stabilizers": true,
+    "fixture::FX-GRADED-NONGRADED-GUARD::classification": true,
+    "fixture::FX-GRADED-NONGRADED-GUARD::fixed": true,
+    "fixture::FX-GRADED-NONGRADED-GUARD::group_order": true,
+    "fixture::FX-GRADED-NONGRADED-GUARD::orbits": true,
+    "fixture::FX-GRADED-NONGRADED-GUARD::relation_images": true,
+    "fixture::FX-GRADED-NONGRADED-GUARD::relation_stabilizers": true,
+    "fixture::FX-GRADED-PERIODIC-C4-GUARD::classification": true,
+    "fixture::FX-GRADED-PERIODIC-C4-GUARD::fixed": true,
+    "fixture::FX-GRADED-PERIODIC-C4-GUARD::group_order": true,
+    "fixture::FX-GRADED-PERIODIC-C4-GUARD::orbits": true,
+    "fixture::FX-GRADED-PERIODIC-C4-GUARD::relation_images": true,
+    "fixture::FX-GRADED-PERIODIC-C4-GUARD::relation_stabilizers": true,
+    "fixture::FX-ORIENTATION-GL2-LINES::classification": true,
+    "fixture::FX-ORIENTATION-GL2-LINES::fixed": true,
+    "fixture::FX-ORIENTATION-GL2-LINES::group_order": true,
+    "fixture::FX-ORIENTATION-GL2-LINES::orbits": true,
+    "fixture::FX-ORIENTATION-GL2-LINES::relation_images": true,
+    "fixture::FX-ORIENTATION-GL2-LINES::relation_stabilizers": true,
+    "fixture::FX-RESP-TAGGED-SINGLETON::classification": true,
+    "fixture::FX-RESP-TAGGED-SINGLETON::fixed": true,
+    "fixture::FX-RESP-TAGGED-SINGLETON::group_order": true,
+    "fixture::FX-RESP-TAGGED-SINGLETON::orbits": true,
+    "fixture::FX-RESP-TAGGED-SINGLETON::relation_images": true,
+    "fixture::FX-RESP-TAGGED-SINGLETON::relation_stabilizers": true,
+    "fixture::FX-RESP-XEMPTY-SIGN-SWAP::classification": true,
+    "fixture::FX-RESP-XEMPTY-SIGN-SWAP::fixed": true,
+    "fixture::FX-RESP-XEMPTY-SIGN-SWAP::group_order": true,
+    "fixture::FX-RESP-XEMPTY-SIGN-SWAP::orbits": true,
+    "fixture::FX-RESP-XEMPTY-SIGN-SWAP::relation_images": true,
+    "fixture::FX-RESP-XEMPTY-SIGN-SWAP::relation_stabilizers": true,
+    "fixture::FX-RESP-XEMPTY-TOKEN-SWAP::classification": true,
+    "fixture::FX-RESP-XEMPTY-TOKEN-SWAP::fixed": true,
+    "fixture::FX-RESP-XEMPTY-TOKEN-SWAP::group_order": true,
+    "fixture::FX-RESP-XEMPTY-TOKEN-SWAP::orbits": true,
+    "fixture::FX-RESP-XEMPTY-TOKEN-SWAP::relation_images": true,
+    "fixture::FX-RESP-XEMPTY-TOKEN-SWAP::relation_stabilizers": true,
+    "fixture::FX-ROOTED-FOUR-CYCLE::classification": true,
+    "fixture::FX-ROOTED-FOUR-CYCLE::fixed": true,
+    "fixture::FX-ROOTED-FOUR-CYCLE::group_order": true,
+    "fixture::FX-ROOTED-FOUR-CYCLE::orbits": true,
+    "fixture::FX-ROOTED-FOUR-CYCLE::relation_images": true,
+    "fixture::FX-ROOTED-FOUR-CYCLE::relation_stabilizers": true,
+    "fixture::FX-ROOTED-LOADED-SINGLETON::classification": true,
+    "fixture::FX-ROOTED-LOADED-SINGLETON::fixed": true,
+    "fixture::FX-ROOTED-LOADED-SINGLETON::group_order": true,
+    "fixture::FX-ROOTED-LOADED-SINGLETON::orbits": true,
+    "fixture::FX-ROOTED-LOADED-SINGLETON::relation_images": true,
+    "fixture::FX-ROOTED-LOADED-SINGLETON::relation_stabilizers": true,
+    "fixture::FX-ROOTED-TWO-CYCLE::classification": true,
+    "fixture::FX-ROOTED-TWO-CYCLE::fixed": true,
+    "fixture::FX-ROOTED-TWO-CYCLE::group_order": true,
+    "fixture::FX-ROOTED-TWO-CYCLE::orbits": true,
+    "fixture::FX-ROOTED-TWO-CYCLE::relation_images": true,
+    "fixture::FX-ROOTED-TWO-CYCLE::relation_stabilizers": true,
+    "fixture::FX-TRIVIAL-TWO-CHOICE-MULTIPLE-FIXED::classification": true,
+    "fixture::FX-TRIVIAL-TWO-CHOICE-MULTIPLE-FIXED::fixed": true,
+    "fixture::FX-TRIVIAL-TWO-CHOICE-MULTIPLE-FIXED::group_order": true,
+    "fixture::FX-TRIVIAL-TWO-CHOICE-MULTIPLE-FIXED::orbits": true,
+    "fixture::FX-TRIVIAL-TWO-CHOICE-MULTIPLE-FIXED::relation_images": true,
+    "fixture::FX-TRIVIAL-TWO-CHOICE-MULTIPLE-FIXED::relation_stabilizers": true,
+    "instance_map::coverage": true,
+    "instance_map::status_and_conclusion_parity": true,
+    "map::claim_boundaries": true,
+    "reproduce::graded_unary_action_census": true,
+    "reproduce::orientation_counts": true,
+    "reproduce::rooted_graph_census": true,
+    "source_hash::research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex": true,
+    "source_hash::research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml": true,
+    "source_hash::research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml": true,
+    "source_hash::research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex": true,
+    "source_hash::research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex": true
+  },
+  "claim_boundary": {
+    "current_ontology_derives_selector_package": false,
+    "distance_to_gr_ledger_changed": false,
+    "exact_family_freezes_reopened": false,
+    "general_EqSrc_discharged": false,
+    "metric_use_ledger_changed": false,
+    "physical_covariance_established": false,
+    "physics_promotion_authorized": false,
+    "source_law_adopted": false,
+    "structural_automorphisms_are_physical_gauge": false
+  },
+  "counts": {
+    "check_count": 92,
+    "direct_theorem_instance_count": 5,
+    "failed_check_count": 0,
+    "fixed_point_positive_control_count": 3,
+    "fixture_count": 12,
+    "guarded_non_instance_count": 3,
+    "historical_family_count": 4,
+    "multiple_fixed_point_control_count": 1,
+    "passed_check_count": 92
+  },
+  "failed_checks": [],
+  "fixture_results": {
+    "FX-GRADED-FOUR-CHAIN": {
+      "conclusion": "unique_core_selector_control",
+      "fixed_indices": [
+        0
+      ],
+      "group_elements": [
+        [
+          0
+        ]
+      ],
+      "group_order": 1,
+      "orbits": [
+        [
+          0
+        ]
+      ],
+      "relation_image_sizes": {
+        "rank_parity_relation": 1
+      },
+      "relation_stabilizer_orders": {
+        "rank_parity_relation": 1
+      },
+      "theorem_status": "fixed_point_positive_control"
+    },
+    "FX-GRADED-MULTIPLE-MINIMA-GUARD": {
+      "conclusion": "guarded_non_instance_nonunique_global_minimum",
+      "fixed_indices": [],
+      "group_elements": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "group_order": 2,
+      "orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "relation_image_sizes": {},
+      "relation_stabilizer_orders": {},
+      "theorem_status": "guarded_non_instance"
+    },
+    "FX-GRADED-NONGRADED-GUARD": {
+      "conclusion": "guarded_non_instance_non_graded_or_infinite_rank",
+      "fixed_indices": [
+        0,
+        1
+      ],
+      "group_elements": [
+        [
+          0,
+          1
+        ]
+      ],
+      "group_order": 1,
+      "orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "relation_image_sizes": {},
+      "relation_stabilizer_orders": {},
+      "theorem_status": "guarded_non_instance"
+    },
+    "FX-GRADED-PERIODIC-C4-GUARD": {
+      "conclusion": "guarded_non_instance_periodic_or_nonantisymmetric_reachability",
+      "fixed_indices": [],
+      "group_elements": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          1,
+          2
+        ]
+      ],
+      "group_order": 4,
+      "orbits": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "relation_image_sizes": {},
+      "relation_stabilizer_orders": {},
+      "theorem_status": "guarded_non_instance"
+    },
+    "FX-ORIENTATION-GL2-LINES": {
+      "conclusion": "no_core_selector",
+      "fixed_indices": [],
+      "group_elements": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "group_order": 6,
+      "orbits": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "relation_image_sizes": {
+        "line_congruence": 3
+      },
+      "relation_stabilizer_orders": {
+        "line_congruence": 1
+      },
+      "theorem_status": "direct_theorem_instance"
+    },
+    "FX-RESP-TAGGED-SINGLETON": {
+      "conclusion": "unique_core_selector_control",
+      "fixed_indices": [
+        0
+      ],
+      "group_elements": [
+        [
+          0
+        ]
+      ],
+      "group_order": 1,
+      "orbits": [
+        [
+          0
+        ]
+      ],
+      "relation_image_sizes": {
+        "toy_response": 1
+      },
+      "relation_stabilizer_orders": {
+        "toy_response": 1
+      },
+      "theorem_status": "fixed_point_positive_control"
+    },
+    "FX-RESP-XEMPTY-SIGN-SWAP": {
+      "conclusion": "no_core_selector",
+      "fixed_indices": [],
+      "group_elements": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "group_order": 2,
+      "orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "relation_image_sizes": {
+        "response_sign": 2
+      },
+      "relation_stabilizer_orders": {
+        "response_sign": 1
+      },
+      "theorem_status": "direct_theorem_instance"
+    },
+    "FX-RESP-XEMPTY-TOKEN-SWAP": {
+      "conclusion": "no_core_selector",
+      "fixed_indices": [],
+      "group_elements": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "group_order": 2,
+      "orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "relation_image_sizes": {
+        "token_assignment": 2
+      },
+      "relation_stabilizer_orders": {
+        "token_assignment": 1
+      },
+      "theorem_status": "direct_theorem_instance"
+    },
+    "FX-ROOTED-FOUR-CYCLE": {
+      "conclusion": "no_core_selector",
+      "fixed_indices": [],
+      "group_elements": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          1,
+          2
+        ]
+      ],
+      "group_order": 4,
+      "orbits": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "relation_image_sizes": {
+        "root_induced_relation": 2
+      },
+      "relation_stabilizer_orders": {
+        "root_induced_relation": 2
+      },
+      "theorem_status": "direct_theorem_instance"
+    },
+    "FX-ROOTED-LOADED-SINGLETON": {
+      "conclusion": "unique_core_selector_control",
+      "fixed_indices": [
+        0
+      ],
+      "group_elements": [
+        [
+          0
+        ]
+      ],
+      "group_order": 1,
+      "orbits": [
+        [
+          0
+        ]
+      ],
+      "relation_image_sizes": {
+        "root_induced_relation": 1
+      },
+      "relation_stabilizer_orders": {
+        "root_induced_relation": 1
+      },
+      "theorem_status": "fixed_point_positive_control"
+    },
+    "FX-ROOTED-TWO-CYCLE": {
+      "conclusion": "no_core_selector",
+      "fixed_indices": [],
+      "group_elements": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "group_order": 2,
+      "orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "relation_image_sizes": {
+        "root_induced_relation": 2
+      },
+      "relation_stabilizer_orders": {
+        "root_induced_relation": 1
+      },
+      "theorem_status": "direct_theorem_instance"
+    },
+    "FX-TRIVIAL-TWO-CHOICE-MULTIPLE-FIXED": {
+      "conclusion": "multiple_core_selectors_control",
+      "fixed_indices": [
+        0,
+        1
+      ],
+      "group_elements": [
+        [
+          0,
+          1
+        ]
+      ],
+      "group_order": 1,
+      "orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "relation_image_sizes": {
+        "K_constant": 1,
+        "K_injective": 2
+      },
+      "relation_stabilizer_orders": {
+        "K_constant": 1,
+        "K_injective": 1
+      },
+      "theorem_status": "multiple_fixed_point_control"
+    }
+  },
+  "independent_recomputations": {
+    "graded_unary_action_census": {
+      "n1": {
+        "classification_counts": {
+          "empty_parity_block": 1
+        },
+        "total_actions": 1
+      },
+      "n2": {
+        "classification_counts": {
+          "admitted": 2,
+          "not_full_action_component": 1,
+          "periodic_or_nonantisymmetric_reachability": 1
+        },
+        "total_actions": 4
+      },
+      "n3": {
+        "classification_counts": {
+          "admitted": 6,
+          "nonunique_global_minimum": 3,
+          "not_full_action_component": 10,
+          "periodic_or_nonantisymmetric_reachability": 8
+        },
+        "total_actions": 27
+      },
+      "n4": {
+        "classification_counts": {
+          "admitted": 24,
+          "nonunique_global_minimum": 40,
+          "not_full_action_component": 114,
+          "periodic_or_nonantisymmetric_reachability": 78
+        },
+        "total_actions": 256
+      }
+    },
+    "orientation": {
+      "agl2_order": 24,
+      "fixed_line_count": 0,
+      "gl2_order": 6,
+      "line_count": 3,
+      "line_orbit_size": 3
+    },
+    "rooted_graph_census": {
+      "admitted_rooted_records": 1088,
+      "admitted_transition_graphs": 557,
+      "edge_count_distribution": {
+        "3": 64,
+        "4": 186,
+        "5": 192,
+        "6": 88,
+        "7": 24,
+        "8": 3
+      },
+      "graph_root_configurations": 16384,
+      "graphs_with_one_relation": 292,
+      "graphs_with_two_relations": 265,
+      "loop_free_directed_graphs": 4096,
+      "odd_block_size_distribution": {
+        "1": 96,
+        "2": 960,
+        "3": 32
+      },
+      "root_count_distribution": {
+        "1": 292,
+        "2": 108,
+        "3": 48,
+        "4": 109
+      }
+    }
+  },
+  "schema_id": "eqsrc-finite-countermodel-atlas-validation.v1",
+  "status": "PASS",
+  "task_id": "RT-20260720-017"
+}

@@ -1,0 +1,234 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Sel}{\operatorname{Sel}}
+\newcommand{\Eqs}{\mathsf{EqSrc}}
+\title{EQSRC-FINITE-COUNTERMODEL-ATLAS-V1\\
+Finite Models and Countermodels of the Fixed-Core Selector Theorem}
+\author{Candidate Constructor task overlay, RT-20260720-017}
+\date{2026-07-21}
+
+\begin{document}
+\maketitle
+
+\section{Status and exact scope}
+
+This artifact executes only v21 work item P2-T04. It integrates four named
+historical finite families under
+\texttt{EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1} while preserving
+their original identifiers, hypotheses, negative-result scope, and freeze
+status. The atlas is \texttt{draft/control}, \texttt{proposal-only}, and
+\texttt{source-extension data}. It neither supersedes the source artifacts nor
+reopens a frozen candidate family.
+
+The automorphisms below are structural permutations of declared finite source
+data. They are not physical gauge transformations. Fixed-point and orbit
+calculations are finite mathematical controls, not evidence of physical
+covariance, physical admissibility, ontology adoption, general \(\Eqs\), or
+Distance-to-GR progress.
+
+\begin{verbatim}
+atlas_id: EQSRC-FINITE-COUNTERMODEL-ATLAS-V1
+plan_task_id: P2-T04
+result: constructed_candidate
+fixture_count: 12
+historical_family_count: 4
+direct_theorem_instance_count: 5
+fixed_point_positive_control_count: 3
+multiple_fixed_point_control_count: 1
+guarded_non_instance_count: 3
+current_ontology_derives_selector_package: false
+structural_automorphisms_are_physical_gauge: false
+exact_family_freezes_reopened: false
+distance_to_gr_ledger_changed: false
+metric_use_ledger_changed: false
+physics_promotion_authorized: false
+adoption_status: blocked_adoption_open_continuation
+\end{verbatim}
+
+\section{Common theorem coordinates}
+
+Hold the P2-T01 certified-isomorphism core \(\mathcal G_\Sigma\), eligible
+choice functor \(S_\chi\), structural actions, and relation map \(K\) fixed
+before evaluating any desired outcome. For one represented connected
+component with representative \(X\), the P2-T03 theorem gives
+\[
+ \Sel_\chi\;\cong\;
+ \Fix_{\Aut_{\mathcal G_\Sigma}(X)}\!\bigl(S_\chi(X)\bigr).
+\]
+Thus an empty fixed set gives no deterministic source-natural selector, a
+singleton fixed set gives one selector, and two fixed choices give two
+selectors. The induced relation count is separately the cardinality of the
+\(K\)-image and may be smaller than the selector count.
+
+Each admitted atlas record fixes the following data before calculation:
+\begin{enumerate}[label=(H\arabic*)]
+  \item one finite source object or represented component;
+  \item its eligible-choice set \(D\);
+  \item a structurally declared automorphism group \(G\curvearrowright D\);
+  \item the orbit decomposition and fixed set \(D^G\); and
+  \item any relation map \(K:D\to\mathcal R\), kept distinct from selection.
+\end{enumerate}
+The three guarded noninstances fail a proposal admission rule before the
+eligible selector domain is formed. They preserve fail-closed controls but do
+not count as counterexamples to the P2-T03 theorem.
+
+In the controlled vocabulary used below, a \emph{direct theorem instance}
+meets the fixed-core hypotheses exactly, while a guarded noninstance does not.
+Structural automorphisms are not physical gauge transformations. The atlas
+also includes one explicit multiple-fixed control.
+
+\section{Atlas summary}
+
+\small
+\begin{longtable}{p{0.21\linewidth}p{0.15\linewidth}p{0.12\linewidth}p{0.13\linewidth}p{0.29\linewidth}}
+\toprule
+Fixture & Status & \(|G|,|D^G|\) & Orbits & Exact conclusion \\
+\midrule
+\endfirsthead
+\toprule
+Fixture & Status & \(|G|,|D^G|\) & Orbits & Exact conclusion \\
+\midrule
+\endhead
+\texttt{RESP-XEMPTY-SIGN} & direct & \(2,0\) & \(2\) & no invariant sign selector \\
+\texttt{RESP-XEMPTY-TOKEN} & direct & \(2,0\) & \(2\) & no invariant token-map selector \\
+\texttt{RESP-TAGGED} & positive & \(1,1\) & \(1\) & one supplied-tag response control \\
+\texttt{ORIENTATION-GL2} & direct & \(6,0\) & \(3\) & no invariant proper line \\
+\texttt{ROOTED-C2} & direct & \(2,0\) & \(2\) & no invariant singleton root \\
+\texttt{ROOTED-C4} & direct & \(4,0\) & \(4\) & no root selector; two \(K\)-images \\
+\texttt{ROOTED-LOADED} & positive & \(1,1\) & \(1\) & one selector after a root is supplied \\
+\texttt{GRADED-CHAIN4} & positive & \(1,1\) & \(1\) & one conditional unique-minimum selector \\
+\texttt{TRIVIAL-TWO} & multiple & \(1,2\) & \(1+1\) & two selectors; \(K\)-image one or two \\
+\texttt{GRADED-PERIODIC} & guarded & \(4,0\) & \(4\) & noninstance: antisymmetry fails \\
+\texttt{GRADED-MULTIMIN} & guarded & \(2,0\) & \(2\) & noninstance: unique minimum fails \\
+\texttt{GRADED-NONGRADED} & guarded & \(1,2\) & \(1+1\) & noninstance: rank is multivalued \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Response-tag family}
+
+The preserved source is the Refuter stress artifact from
+\texttt{RT-20260614-055}, including
+\(F_{\rm toy}=\{X_+,X_{\rm flip},X_{\rm scale},X_{\rm token},X_\emptyset\}\)
+and freeze label \texttt{NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION}.
+On \(X_\emptyset\), sign reversal acts transitively on
+\(\{\varepsilon_+,\varepsilon_-\}\), and token relabeling acts transitively
+on \(\{\tau_{ab},\tau_{ba}\}\). Both fixed sets are empty, so each is a
+direct one-component instance of the no-selector branch.
+
+For a tagged member such as \(X_+\), the stored
+\((\varepsilon,\lambda,\tau)\) is a singleton eligible response under the
+tag-preserving record. This is a fixed-point-positive control only. It confirms
+conditional sufficiency of explicit tags; it does not derive those tags from
+the untagged record and does not repair tag-erasure fragility.
+
+\section{Orientation-line family}
+
+Preserve
+\texttt{CM-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001} and
+\texttt{OB-EQSRC-ORIENTATION-TORSOR-LINE-SELECTION-001} from
+\texttt{RT-20260718-041}. The eligible choices are the three nonzero proper
+lines of \(\mathbb F_2^2\). The six matrices of
+\(\mathrm{GL}(2,2)\) act transitively on these lines, so their single orbit has
+size three and the fixed set is empty. The affine group has order 24; each line
+relation has eight ordered pairs, each affine stabilizer has order eight, and
+their common stabilizer is the translation group of order four. These counts
+are reproduced independently by the task-local validator.
+
+The theorem therefore recovers the exact line-selection obstruction on the
+declared proposal core. It does not turn structural \(\mathrm{GL}(2,2)\)
+symmetry into physical gauge, nor does it prove a global source-extension
+no-go.
+
+\section{Rooted-partition family}
+
+Preserve \texttt{CM-EQSRC-ORDERED-MOTION-ROOTED-PARTITION-001} from
+\texttt{RT-20260718-045}. On the two-token directed cycle, the order-two
+automorphism swaps the two eligible roots. The unique orbit has size two and
+the fixed set is empty. On the directed four-cycle, rotations form \(C_4\),
+act transitively on four eligible roots, and again leave no root fixed.
+
+The four roots induce only two parity relations:
+\[
+ K(0)=K(2)=R_{02},\qquad K(1)=K(3)=R_{13}.
+\]
+The relation stabilizer has order two. Hence this historical example also
+instantiates the P2-T03 warning that selector multiplicity and relation-image
+multiplicity are distinct.
+
+If a root certificate is supplied in advance, the root-preserving eligible
+space is a singleton and gives one conditional selector and one relation. This
+is a positive control, not a derivation of root provenance. The original
+rooted-partition construction--audit--stress cycle remains locally frozen.
+
+The validator also independently reproduces the historical four-token census:
+4096 loop-free directed graphs, 1088 admitted rooted records, 557 admitted
+graphs, 292 one-relation graphs, and 265 two-relation graphs.
+
+\section{Graded-orbit family}
+
+Preserve
+\texttt{EqSrcFlowGeneratedGradedOrbitRootLaw\_src\string^cand,v1} from
+\texttt{RT-20260718-047}. Its admitted four-event action chain has unique
+minimum \(e_0\), ranks \(0,1,2,3\), and parity blocks
+\(\{e_0,e_2\}\) and \(\{e_1,e_3\}\). The automorphism group of the ordered
+chain is trivial and the eligible minimum is a singleton, so this is a
+fixed-point-positive theorem control. The ordered action remains a
+proposal-only source extension not derived by current ontology.
+
+Three finite controls remain outside the admitted selector domain:
+\begin{itemize}
+  \item the periodic four-cycle fails antisymmetric reachability;
+  \item the three-point action with minima \(a,b\) fails unique-minimum
+        admission; and
+  \item the five-point example with saturated path lengths two and three fails
+        graded-rank admission.
+\end{itemize}
+Their action and choice counts are retained, but their exact status is
+\emph{guarded noninstance}. The validator reproduces the original unary-action
+census for carrier sizes one through four.
+
+\section{Multiple-fixed and relation-image control}
+
+Let a trivial group act on \(D=\{a,b\}\). Then
+\(D^G=D\), so the one-component theorem gives two selectors. For an injective
+map \(K_{\rm inj}\), the induced relation image has size two. For a constant
+map \(K_{\rm const}\), it has size one. This is the required multiple-fixed
+control and directly prevents the overread ``multiple selectors imply multiple
+relations.''
+
+\section{Provenance and excluded pseudo-symmetries}
+
+Every fixture cites its original task and immutable object or candidate ID.
+The machine fixture manifest also pins the five controlling source hashes.
+No group generator depends on a file name, file order, repository path,
+serialization order, registry order, validator order, agent role, handoff, or
+process state. Such metadata may help retrieve a record but cannot be source
+structure or selector evidence.
+
+The atlas does not change the historical result vocabulary. Direct instances
+remain scoped obstructions on their declared proposal domains. Positive
+controls remain conditional on supplied proposal data. Guarded noninstances
+remain fail-closed. No entry is adopted, rejected globally, or promoted.
+
+\section{Distance-to-GR and next burden}
+
+The active milestone remains \texttt{source\_equivalence\_eqsrc} and the
+authoritative status remains \texttt{draft object exists}. The atlas
+demonstrates theorem scope and preserves negative-result provenance, but it
+does not derive or adopt the P2-T01 category, selector package, physical gauge
+meaning, or general \(\Eqs\). It changes neither scientific ledger.
+
+The next dependency-ready v21 item is P2-T05, the proof-assistant encoding of
+the selector theorem core. P2-T06 remains dependent on both P2-T04 and P2-T05
+and retains the independent Smuggling Auditor role. P2-T07 retains independent
+Refuter stress. This atlas executes none of those later tasks.
+
+\end{document}
