@@ -1,0 +1,177 @@
+schema_id: "v21_p1_t03_eqsrc_canonical_choice_family_freeze_manifest_v1"
+status: "draft/control"
+task_id: "RT-20260720-011"
+job_id: "AJ-RT-20260720-011-001"
+plan_task_id: "P1-T03"
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Prevent another representation-level loop while preserving honest continuation."
+superfamily_id: "EQSRC-SUPERFAMILY-CANONICAL-CHOICE"
+active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+freeze_record_id: "FRZ-RT-20260720-011-EQSRC-CANONICAL-CHOICE-SUPERFAMILY"
+freeze_scope: "The five stable families and seven immutable candidates inventoried by RT-20260720-010 only."
+freeze_decision: "all_five_exact_families_locally_frozen"
+family_count: 5
+candidate_count: 7
+qualification_test:
+  qualifying_route_classes:
+    - "general_theorem"
+    - "current_ontology_derivation"
+    - "physical_irrelevance_theorem"
+    - "material_ledger_delta"
+  disqualifying_rule: "A route that merely supplies, renames, repackages, or moves the preferred response token, normalization, line, orientation, partition, root, action, component, morphism, or variation datum fails."
+  family_result: "Every exact family fails the qualifying-route test."
+  distinct_route_result: "P1-T04 qualifies only as a proposal-neutral general selector-theorem target; it does not reopen or continue an exact candidate family."
+families:
+  - family_id: "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR"
+    member_freeze_id: "FRZ-RT-20260720-011-EQSRC-INTRINSIC-DISCRIMINATOR"
+    scoped_freeze_label: "EQSRC-FAMILY-FREEZE-IDISC-V21-P1-T03"
+    member_candidate_ids:
+      - "EQSRC-IDISC-V1"
+      - "EQSRC-IDISC-V2"
+      - "EQSRC-IDISC-V3"
+    evidence_tasks:
+      - "RT-20260718-027"
+      - "RT-20260718-028"
+      - "RT-20260718-029"
+      - "RT-20260718-030"
+      - "RT-20260718-031"
+      - "RT-20260718-032"
+      - "RT-20260718-033"
+      - "RT-20260718-034"
+    prior_disposition: "Exact v3 line locally frozen after a scoped differential-selection obstruction; v1 and v2 are superseded repairs."
+    supplied_choice: "finite chain package, differential, response or discriminator label, normalization, boundary subspace, and physical variation selector"
+    new_assumption_payload: false
+    materially_distinct_selector_resolution: false
+    qualification_result: "fail"
+    final_disposition: "family_locally_frozen"
+    reason: "The repairs corrected relation-label and typed-reflection scope but no tracked proof derives the chain package, differential, or physical variation selector from current ontology."
+  - family_id: "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE"
+    member_freeze_id: "FRZ-RT-20260720-011-EQSRC-CYCLE-BOUNDARY-LINE"
+    scoped_freeze_label: "EQSRC-FAMILY-FREEZE-CYCLE-BOUNDARY-V21-P1-T03"
+    member_candidate_ids:
+      - "EQSRC-CYCLE-BOUNDARY-V1"
+    evidence_tasks:
+      - "RT-20260718-035"
+      - "RT-20260718-036"
+      - "RT-20260718-037"
+      - "RT-20260718-038"
+    prior_disposition: "Exact v1 line locally frozen after scoped orientation-descent and independent-selection obstructions."
+    supplied_choice: "odd oriented mark and independent variation selector"
+    new_assumption_payload: true
+    materially_distinct_selector_resolution: false
+    qualification_result: "fail"
+    final_disposition: "family_locally_frozen"
+    reason: "Replacing a differential with an oriented mark changes source assumptions but leaves the preferred mark and variation provenance underived."
+  - family_id: "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR"
+    member_freeze_id: "FRZ-RT-20260720-011-EQSRC-ORIENTATION-TORSOR"
+    scoped_freeze_label: "EQSRC-FAMILY-FREEZE-ORIENTATION-TORSOR-V21-P1-T03"
+    member_candidate_ids:
+      - "EQSRC-ORIENTATION-TORSOR-V1"
+    evidence_tasks:
+      - "RT-20260718-039"
+      - "RT-20260718-040"
+      - "RT-20260718-041"
+      - "RT-20260718-042"
+    prior_disposition: "Exact v1 line locally frozen after scoped line-selection and physical-admissibility obstructions."
+    supplied_choice: "unordered odd bipartition, associated-line selection, physical morphism, and variation law"
+    new_assumption_payload: true
+    materially_distinct_selector_resolution: false
+    qualification_result: "fail"
+    final_disposition: "family_locally_frozen"
+    reason: "Removing a preferred scalar orientation does not derive the partition provenance, associated line, or physical morphism and variation law."
+  - family_id: "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION"
+    member_freeze_id: "FRZ-RT-20260720-011-EQSRC-ROOTED-PARTITION"
+    scoped_freeze_label: "EQSRC-FAMILY-FREEZE-ROOTED-PARTITION-V21-P1-T03"
+    member_candidate_ids:
+      - "EQSRC-ROOTED-PARTITION-V1"
+    evidence_tasks:
+      - "RT-20260718-043"
+      - "RT-20260718-044"
+      - "RT-20260718-045"
+      - "RT-20260718-046"
+    prior_disposition: "Exact v1 line locally frozen after scoped root- and relation-selection obstructions."
+    supplied_choice: "transition certificates, event projection, singleton root, morphism category, and variation law"
+    new_assumption_payload: true
+    materially_distinct_selector_resolution: false
+    qualification_result: "fail"
+    final_disposition: "family_locally_frozen"
+    reason: "Admissible supplied roots can induce different relations, so moving choice into a root certificate does not resolve canonical selection."
+  - family_id: "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT"
+    member_freeze_id: "FRZ-RT-20260720-011-EQSRC-GRADED-ORBIT-ROOT"
+    scoped_freeze_label: "EQSRC-FAMILY-FREEZE-GRADED-ORBIT-ROOT-V21-P1-T03"
+    member_candidate_ids:
+      - "EQSRC-GRADED-ORBIT-ROOT-V1"
+    evidence_tasks:
+      - "RT-20260718-047"
+      - "RT-20260720-009"
+      - "RT-20260720-010"
+    prior_disposition: "Conditional source-purity pass pending P1-T03 family freeze review."
+    supplied_choice: "ordered action, full-component assertion, positivity, unique root, common grading, morphism category, and variation law"
+    new_assumption_payload: true
+    materially_distinct_selector_resolution: false
+    qualification_result: "fail"
+    final_disposition: "family_locally_frozen"
+    reason: "The supplied action package can realize every nontrivial ordered finite partition and current ontology does not select that action, certify the full component, axiomatize positivity, or derive physical morphisms and variations."
+barred_routes:
+  - route_id: "BAR-EQSRC-FAMILY-REPEAT-001"
+    applies_to: "all_five_frozen_families"
+    match_rule: "repeat any construction-audit-stress-repair cycle whose output belongs to an inventoried family without satisfying a reopening criterion"
+    disposition: "fail_closed_requires_reopening_evidence"
+  - route_id: "BAR-EQSRC-CHOICE-RENAME-002"
+    applies_to: "all_five_frozen_families"
+    match_rule: "rename or repackage a supplied differential, response token, normalization, line, orientation, partition, root, action, component, morphism, or variation selector"
+    disposition: "fail_closed_requires_reopening_evidence"
+  - route_id: "BAR-EQSRC-CHOICE-UPSTREAM-003"
+    applies_to: "all_five_frozen_families"
+    match_rule: "move the preferred choice upstream into an unproved source datum while preserving the same downstream selection function"
+    disposition: "fail_closed_requires_reopening_evidence"
+  - route_id: "BAR-EQSRC-GENERIC-LOOP-004"
+    applies_to: "same_milestone_selector_work"
+    match_rule: "launch a generic selector-formalizer cycle without the stable P1-T04 proposal-neutral theorem target"
+    disposition: "barred"
+  - route_id: "BAR-EQSRC-CONTROL-AUTHORITY-005"
+    applies_to: "all_routes"
+    match_rule: "use validators, registries, task state, generated derivatives, or repository ordering as source-side selector or proof authority"
+    disposition: "forbidden_target_or_process_import"
+reopening_criteria:
+  - criterion_id: "REOPEN-EQSRC-CURRENT-ONTOLOGY-DERIVATION-001"
+    qualification_class: "current_ontology_derivation"
+    evidence_required: "A tracked proof derives the decisive selector and its morphism and variation behavior from registered current ontology without added primitives or target import."
+    opens: "only the exact family whose missing selector is derived"
+  - criterion_id: "REOPEN-EQSRC-GENERAL-SELECTOR-THEOREM-002"
+    qualification_class: "general_theorem"
+    evidence_required: "A tracked proposal-neutral theorem establishes existence, uniqueness, naturality, fixed-point, or obstruction conditions for the relevant selector class and maps the exact family to those hypotheses."
+    opens: "a theorem-directed audit or construction packet, not automatic family adoption"
+  - criterion_id: "REOPEN-EQSRC-PHYSICAL-IRRELEVANCE-003"
+    qualification_class: "physical_irrelevance_theorem"
+    evidence_required: "A tracked source-side theorem proves that every admissible choice yields the same declared physical observable or equivalence class under independently justified physical morphisms."
+    opens: "only the family and observable covered by the theorem"
+  - criterion_id: "REOPEN-EQSRC-MATERIAL-LEDGER-DELTA-004"
+    qualification_class: "material_ledger_delta"
+    evidence_required: "A separately authorized tracked result changes the active derivation burden in an independently validated way; validator or task-count changes do not qualify."
+    opens: "only the route named by the authoritative changed burden"
+  - criterion_id: "REOPEN-EQSRC-PROTECTED-ONTOLOGY-AUTHORITY-005"
+    qualification_class: "human_gate"
+    evidence_required: "Explicit protected human Gate Chair authority names the exact ontology proposal and scope."
+    opens: "only the authorized protected decision; no implicit promotion"
+next_allowed_route:
+  plan_task_id: "P1-T04"
+  route_id: "EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1"
+  route_class: "general_theorem"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  materially_distinct: true
+  distinction: "The target studies selectors and their naturality, fixed points, existence, uniqueness, and obstruction branches across all distinguished-structure spaces; it does not propose another selected response token, line, orientation, partition, root, or action."
+  constructs_theorem_now: false
+authority_boundary:
+  classification: "blocked_adoption_open_continuation"
+  local_family_freeze: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  general_eqsrc_discharged: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false

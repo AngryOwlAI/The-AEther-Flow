@@ -1,0 +1,94 @@
+{
+  "artifact_hashes": {
+    "child_phys_math": "e66dead094ddfc476790641a741bc7ed45faa526ee48266956451caefbd44a21",
+    "child_phys_phil": "33e3b54e3f3f358f4247ee065bbb0a15ebff80ab7e530d9ca0cc31e2b8894822",
+    "conflict_review": "6b5c09617b5130892ef3014fad404293c4b4f0e6ed01a3bbbf8bc53fe14eb2b1",
+    "decision": "fb970e941392eb001c28fdccf3724db4cd9906754793833369d1aff0a5c12403",
+    "freeze_manifest": "fc0d36a7ea96b6aaaafced309c73c6bb2e71d969ee679d5c286afc2753a95b43",
+    "fusion_notes": "a44080364ce98af6b30c6d759462995589153ffb84acf4061a7b61a693ea9511"
+  },
+  "checks": [
+    {
+      "check_id": "family_and_candidate_identity",
+      "detail": "families=5 candidates=7",
+      "status": "PASS"
+    },
+    {
+      "check_id": "freeze_labels_unique_and_scoped",
+      "detail": "labels=5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_exact_families_frozen",
+      "detail": "expected five failed family routes",
+      "status": "PASS"
+    },
+    {
+      "check_id": "qualification_and_distinct_route",
+      "detail": "EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1",
+      "status": "PASS"
+    },
+    {
+      "check_id": "barred_routes_machine_readable",
+      "detail": "routes=5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "reopening_criteria_explicit",
+      "detail": "criteria=5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "single_theoretical_route_decision",
+      "detail": "P1-T04",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_target_interface",
+      "detail": "branches=5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_evidence_hashes",
+      "detail": "mismatches=0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "scientific_ledgers_unchanged",
+      "detail": "mismatches=0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_and_authority_boundary",
+      "detail": "local freeze only; promotion false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_child_synthesis",
+      "detail": "two children completed; conflicts resolved",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fusion_boundary",
+      "detail": "missing=[]",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "PASS validates a scoped family freeze and one P1-T04 theorem-target route only. It is not proof, ontology adoption or rejection, general EqSrc discharge, ledger progress, downstream GR, or promotion authority.",
+  "counts": {
+    "barred_routes": 5,
+    "candidates_frozen": 7,
+    "errors": 0,
+    "families_frozen": 5,
+    "qualifying_next_routes": 1,
+    "reopening_criteria": 5
+  },
+  "errors": [],
+  "job_id": "AJ-RT-20260720-011-001",
+  "operational_evidence_only": true,
+  "physics_promotion_authorized": false,
+  "physics_proof_authority": false,
+  "schema_id": "v21_p1_t03_eqsrc_canonical_choice_family_freeze_validation_v1",
+  "status": "PASS",
+  "task_id": "RT-20260720-011"
+}

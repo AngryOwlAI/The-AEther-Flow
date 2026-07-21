@@ -1,9 +1,9 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260720-010"
-latest_handoff_id: "handoff-0780"
-current_status: "v21_p1_t02_five_family_seven_candidate_lineage_map_pass_pending_p1_t03_freeze_review_no_promotion"
-claim_boundary_summary: "RT-20260720-010 completed only v21 P1-T02. Five stable families contain seven immutable candidates with two within-family repair-supersession edges four distinct-family route-successor edges zero exact duplicates and an acyclic construction order. Current ontology still does not derive the decisive selector provenance physical morphism or variation law. Prior exact-cycle freezes remain unchanged and P1-T03 owns the family-level decision."
-next_recommended_action: "Run exactly one bounded v21 P1-T03 Theoretical Continuation Selector packet to decide family-level freeze versus one materially distinct same-milestone theorem route. Do not repair audit stress adopt reject edit ontology change either scientific ledger promote or execute another v21 item in the same task."
+active_task_id: "RT-20260720-011"
+latest_handoff_id: "handoff-0781"
+current_status: "v21_p1_t03_five_eqsrc_canonical_choice_families_locally_frozen_p1_t04_selected_no_promotion"
+claim_boundary_summary: "RT-20260720-011 completed only v21 P1-T03. Five tracked EqSrc canonical-choice families and seven immutable candidates are locally frozen under unique scoped labels. P1-T04 is selected as the only materially distinct proposal-neutral selector-naturality theorem target. The freeze is not rejection or a global no-go and changes no ontology or scientific ledger."
+next_recommended_action: "Run exactly one bounded v21 P1-T04 Ontology Formalizer ontology-law-research-packet to formalize EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1. Do not reopen an exact family, prove or adopt the target by assertion, edit canonical ontology, change either scientific ledger, promote, or execute another v21 item in the same task."
 
 plan_registration:
   task_id: "RT-20260720-003"
@@ -216,23 +216,57 @@ p1_t02_candidate_family_lineage:
   lineage_acyclic: true
   construction_order: "27 < 29 < 31 < 35 < 39 < 43 < 47"
   recurrent_obstruction: "Conditional kernel-pair algebra survives supplied distinguished source data while current ontology does not derive the selector provenance physical morphism or variation law."
-  active_family_freeze_decision: "freeze_review_required"
+  active_family_freeze_decision: "locally_frozen_by_p1_t03"
   p1_t02_executed: true
-  p1_t03_executed: false
+  p1_t03_executed: true
+  scientific_claims_changed: true
+  distance_to_gr_delta_changed: false
+  physics_authority: false
+
+p1_t03_canonical_choice_family_freeze_decision:
+  task_id: "RT-20260720-011"
+  plan_task_id: "P1-T03"
+  dependency_task_id: "RT-20260720-010"
+  decision_path: "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_decision.yaml"
+  decision_hash: "fb970e941392eb001c28fdccf3724db4cd9906754793833369d1aff0a5c12403"
+  freeze_manifest_path: "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_manifest.yaml"
+  freeze_manifest_hash: "fc0d36a7ea96b6aaaafced309c73c6bb2e71d969ee679d5c286afc2753a95b43"
+  validation_path: "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_validation.json"
+  validation_hash: "7022e40d19263eb34c414c35161f576f6626fab64553116cdf502a2717637d00"
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  freeze_record_id: "FRZ-RT-20260720-011-EQSRC-CANONICAL-CHOICE-SUPERFAMILY"
+  stable_family_count: 5
+  immutable_candidate_count: 7
+  locally_frozen_family_count: 5
+  qualifying_exact_family_route_count: 0
+  machine_readable_barred_route_count: 5
+  explicit_reopening_criteria_count: 5
+  selected_theorem_target_id: "EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1"
+  selected_next_plan_task: "P1-T04"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  current_ontology_derives_selector: false
+  theorem_target_formalized: false
+  theorem_target_proved: false
+  local_family_freeze: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  p1_t03_executed: true
+  p1_t04_executed: false
   scientific_claims_changed: true
   distance_to_gr_delta_changed: false
   physics_authority: false
 
 control_claim_boundary:
-  allowed_next_scope: "One bounded P1-T03 Theoretical Continuation Selector packet may decide family-level freeze versus one materially distinct same-milestone theorem route without repair audit stress adoption rejection ontology edit or promotion."
+  allowed_next_scope: "One bounded P1-T04 Ontology Formalizer packet may state the proposal-neutral canonical-selection naturality theorem target and map prior controls without choosing a selector, proving the theorem, reopening an exact family, adopting ontology, changing a scientific ledger, or promoting."
   blocked_claims:
     - "v21 plan as physics proof or scientific authority"
-    - "P1-T02 family-lineage evidence as P1-T03 execution or a completed freeze decision"
+    - "P1-T04 target as a formalized or proved theorem"
     - "backlog recommendation coverage as implementation evidence for pending tasks"
     - "external-red-team-reviewer role label as epistemic independence"
     - "action encodability as proof of explicit target import or a global no-go"
     - "conditional source purity as source-law derivation"
-    - "family freeze outside P1-T03"
+    - "exact-family reopening without a recorded criterion"
     - "launch manifest as a second runtime goal"
     - "canonical ontology edit or source-law adoption"
     - "Distance-to-GR progress"
@@ -279,7 +313,7 @@ candidate_result:
   family_map_task_id: "RT-20260720-010"
   family_map_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex"
   family_map_hash: "fcffa4e7d89654d3d9c656bc7ab0bde10b28ec3e36f4da4a7139759d036455dc"
-  family_map_result: "five_stable_families_seven_candidates_zero_exact_duplicates_pending_p1_t03_freeze_review"
+  family_map_result: "five_stable_families_seven_candidates_zero_exact_duplicates_all_locally_frozen_by_p1_t03"
 
 exact_prior_route_freeze:
   active_freeze_label: "EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW"
@@ -290,10 +324,10 @@ exact_prior_route_freeze:
   future_source_extension_impossibility: false
 
 claim_boundary:
-  allowed_next_scope: "One P1-T03 Theoretical Continuation Selector may evaluate the five-family lineage map and choose family freeze or one materially distinct same-milestone theorem route without candidate repair audit stress adoption rejection or promotion."
+  allowed_next_scope: "One P1-T04 Ontology Formalizer may formalize the proposal-neutral common canonical-selection theorem target without constructing a preferred selector, reopening an exact family, adopting ontology, changing either scientific ledger, or promoting."
   blocked_claims:
     - "candidate derived from current ontology without proof"
-    - "candidate repair stress adoption or rejection inside the lineage task"
+    - "candidate construction repair audit stress adoption or rejection inside a frozen family without reopening evidence"
     - "repair or adoption of exact rooted-partition candidate v1"
     - "observer sampling repository process benchmark or validator status as source provenance"
     - "canonical ontology edit or source-law adoption"
@@ -304,7 +338,7 @@ claim_boundary:
     - "benchmark promotion or Gate Chair verdict"
     - "completed derivation"
     - "future source-extension impossibility or global theory rejection"
-    - "P1-T02 family map as the P1-T03 freeze decision"
+    - "P1-T04 theorem target as a proved theorem or derived selector"
   scientific_claims_changed: true
   proof_authority: false
   support_only: true
@@ -316,25 +350,26 @@ distance_to_gr:
   status: "draft object exists"
   effect: "no_distance_delta"
   changed: false
-  meaning: "The proposal-only family and lineage map narrows candidate identity and recurrent-obstruction structure but does not discharge general EqSrc. Both authoritative ledgers remain unchanged."
+  meaning: "The scoped family freeze and P1-T04 theorem-target selection prevent another candidate loop but do not prove or adopt a selector or discharge general EqSrc. Both authoritative ledgers remain unchanged."
 
 freeze_criteria_status:
   repeated_burden: true
   freeze_evaluation_required: true
   active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
-  freeze_decision: "freeze_review_required"
-  decision_reason: "P1-T02 completed the five-family lineage map and exposed recurrent selector and provenance underdetermination. P1-T03 must now decide family freeze or one materially distinct theorem route."
+  freeze_decision: "locally_frozen"
+  decision_reason: "All five exact families fail the P1-T03 qualification test. P1-T04 remains open only because it targets the common natural-selector theorem rather than another family member."
   status_update_path: "research_control/program_state.yaml"
   exact_prior_route_freeze_preserved: true
-  frozen_scope: "all prior exact-cycle local freezes remain unchanged; no superfamily freeze has yet been made"
-  barred_route: "repeat a prior exact candidate cycle or rename supplied selector data without the P1-T03 materially-distinct-route decision"
-  next_allowed_route: "freeze_review"
+  frozen_scope: "five stable families and seven immutable candidates in the P1-T02 inventory only"
+  barred_route: "repeat rename repackage or move upstream an inventoried distinguished choice without a recorded reopening criterion"
+  next_allowed_route: "none"
+  qualifying_distinct_route: "P1-T04 EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1"
   global_theory_rejection: false
   future_source_extension_impossibility: false
 
 route_cycle_control:
-  cycle_family: "eqsrc_selector_candidate_family"
-  current_cycle_step: "p1_t02_family_lineage_map_completed_pending_p1_t03_freeze_review"
+  cycle_family: "eqsrc_canonical_choice_superfamily"
+  current_cycle_step: "p1_t03_five_family_freeze_and_p1_t04_theorem_target_selection"
   prior_related_tasks:
     - "RT-20260718-038"
     - "RT-20260718-039"
@@ -349,51 +384,51 @@ route_cycle_control:
     - "RT-20260720-009"
     - "RT-20260720-010"
   cycle_risk: "high"
-  orbit_avoidance_reason: "P1-T03 must use the completed stable family map to make a freeze-or-materially-distinct-route decision rather than launch another renamed candidate cycle."
-  next_role_consequence: "theoretical-continuation-selector@0.1.0 for v21 P1-T03"
+  orbit_avoidance_reason: "All inventoried exact family cycles are frozen. P1-T04 changes the object of study to a proposal-neutral source-natural selector and relation-uniqueness theorem target."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P1-T04 only"
 
 preserved_scientific_route:
-  route_id: "v21_p1_t03_eqsrc_candidate_family_freeze_review"
-  route_label: "theoretical_continuation_selection"
-  role_family: "theoretical-continuation-selector@0.1.0"
+  route_id: "v21_p1_t04_eqsrc_canonical_selection_naturality_target"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Decide whether the mapped EqSrc selector family should be locally frozen or whether one materially distinct theorem route remains."
+  milestone_burden: "Replace candidate-specific prose with one shared mathematical burden."
   requires_human_gate: false
   project_system_boundary_authorized_by_plan: false
   physics_promotion_authorized: false
-  next_action: "Run one bounded P1-T03 family freeze review selector packet."
-  source_handoff: "research_control/handoffs/handoff-0780.yaml"
+  next_action: "Run one bounded P1-T04 formalization packet for EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1."
+  source_handoff: "research_control/handoffs/handoff-0781.yaml"
 
 selected_next_route:
-  route_id: "v21_p1_t03_eqsrc_candidate_family_freeze_review"
-  route_label: "theoretical_continuation_selection"
-  role_family: "theoretical-continuation-selector@0.1.0"
+  route_id: "v21_p1_t04_eqsrc_canonical_selection_naturality_target"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
   worker_skill: "continue-research"
-  plan_task_id: "P1-T03"
+  plan_task_id: "P1-T04"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Decide whether the mapped EqSrc selector family should be locally frozen or whether one materially distinct theorem route remains."
+  milestone_burden: "Replace candidate-specific prose with one shared mathematical burden."
   requires_human_gate: false
   project_system_boundary_authorized_by_plan: false
   physics_promotion_authorized: false
-  next_action: "Evaluate the five-family map and choose exactly one family-level freeze or materially distinct same-milestone continuation route."
-  source_handoff: "research_control/handoffs/handoff-0780.yaml"
+  next_action: "Formalize the common source-natural selector fixed-point relation-uniqueness and irrelevance theorem target without choosing a preferred structure."
+  source_handoff: "research_control/handoffs/handoff-0781.yaml"
 
 preserved_scientific_next_packet:
-  role_id: "theoretical-continuation-selector"
-  role_version: "0.1.0"
+  role_id: "ontology-formalizer"
+  role_version: "0.2.0"
   packet_count: "1"
-  route_label: "theoretical_continuation_selection"
-  task_type: "v21_eqsrc_candidate_family_freeze_review"
-  objective: "Decide family-level freeze versus one materially distinct same-milestone theorem route from the completed five-family lineage map."
+  route_label: "ontology-law-research-packet"
+  task_type: "v21_eqsrc_canonical_selection_problem_formalization"
+  objective: "Formalize the proposal-neutral common canonical-selection naturality theorem target."
 
 required_next_packet:
-  role_id: "theoretical-continuation-selector"
-  role_version: "0.1.0"
+  role_id: "ontology-formalizer"
+  role_version: "0.2.0"
   packet_count: "1"
-  route_label: "theoretical_continuation_selection"
-  task_type: "v21_eqsrc_candidate_family_freeze_review"
-  plan_task_id: "P1-T03"
-  objective: "Decide family-level freeze versus one materially distinct same-milestone theorem route from the completed five-family lineage map."
+  route_label: "ontology-law-research-packet"
+  task_type: "v21_eqsrc_canonical_selection_problem_formalization"
+  plan_task_id: "P1-T04"
+  objective: "Write one proposal-neutral theorem target covering selectors of roots lines orientations partitions response tokens normalizations and analogous distinguished structures."
 
 validation_summary:
   aggregate_status: "PASS"
@@ -437,7 +472,14 @@ validation_summary:
   p1_t02_exact_duplicate_count: 0
   p1_t02_lineage_acyclic: true
   p1_t02_executed: true
-  p1_t03_executed: false
+  p1_t03_executed: true
+  p1_t03_family_freeze_status: "PASS"
+  p1_t03_locally_frozen_family_count: 5
+  p1_t03_immutable_candidate_count: 7
+  p1_t03_barred_route_count: 5
+  p1_t03_reopening_criteria_count: 5
+  p1_t03_selected_theorem_target: "EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1"
+  p1_t04_executed: false
   distance_to_gr_ledger_unchanged: true
   metric_use_ledger_unchanged: true
   generated_derivatives_non_authority: true
@@ -447,9 +489,9 @@ project_improvement_bridge:
   required: false
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260720-010"
-  latest_research_handoff_id: "handoff-0780"
-  latest_research_next_action: "Run exactly one bounded v21 P1-T03 Theoretical Continuation Selector packet to decide family-level freeze versus one materially distinct same-milestone theorem route. Do not repair audit stress adopt reject edit ontology change either scientific ledger promote or execute another v21 item in the same task."
+  latest_research_task_id: "RT-20260720-011"
+  latest_research_handoff_id: "handoff-0781"
+  latest_research_next_action: "Run exactly one bounded v21 P1-T04 Ontology Formalizer ontology-law-research-packet to formalize EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1. Do not reopen an exact family, prove or adopt the target by assertion, edit canonical ontology, change either scientific ledger, promote, or execute another v21 item in the same task."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

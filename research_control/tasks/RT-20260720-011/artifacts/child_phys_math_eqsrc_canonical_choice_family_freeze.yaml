@@ -1,0 +1,40 @@
+schema_id: "v21_p1_t03_child_phys_math_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+task_id: "RT-20260720-011"
+job_id: "AJ-RT-20260720-011-001"
+decision: "freeze_all_five_tracked_families_and_route_only_p1_t04"
+family_findings:
+  - family_id: "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR"
+    disposition: "family_locally_frozen"
+    basis: "Four valid differentials on fixed carriers produce four distinct relations; the family represents finite linear congruences but selects none."
+  - family_id: "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE"
+    disposition: "family_locally_frozen"
+    basis: "Three lines form one GL(2,2) orbit; complementary orientations can yield distinct relations and declared variation robustness does not select a physical line."
+  - family_id: "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR"
+    disposition: "family_locally_frozen"
+    basis: "Three distinct equivariant line families satisfy the same descent, pullback, and cocycle controls; no source-derived line or physical variation category distinguishes them."
+  - family_id: "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION"
+    disposition: "family_locally_frozen"
+    basis: "Of 557 admitted four-token graphs, 265 permit two root-induced relations; all 182 distinct ordered odd-block changes alter the relation."
+  - family_id: "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT"
+    disposition: "family_locally_frozen"
+    basis: "The assumption change is genuine but moves choice upstream: every nontrivial ordered finite partition is action-realizable, full-component completeness lacks local certification, positivity is unaxiomatized, and morphisms and variations preserve by construction."
+p1_t04_evaluation:
+  qualifies: true
+  theorem_target_id: "EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1"
+  materially_distinct: true
+  method: "source_natural_choice_functor_and_automorphism_fixed_point_analysis"
+  required_branches:
+    - "no_fixed_point"
+    - "multiple_fixed_points_with_distinct_relations"
+    - "choice_or_physical_relation_irrelevance"
+  theorem_proved: false
+limits:
+  tracked_hash_anchored_scope_only: true
+  global_no_go: false
+  future_source_extension_impossibility: false
+  ledger_delta: false
+  ontology_adoption: false
+  physics_promotion_authorized: false

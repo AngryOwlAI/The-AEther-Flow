@@ -18,6 +18,8 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Generated output path: `wiki/tex/tex-v21-p1-t02-eqsrc-canonical-choice-family-map.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260720-010-EQSRC-CANDIDATE-FAMILY-LINEAGE-RECEIPT` `research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_family_lineage_receipt.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260720-010-PARENT-FUSION-NOTES-EQSRC-CANDIDATE-FAMILY-LINEAGE` `research_control/tasks/RT-20260720-010/artifacts/parent_fusion_notes_eqsrc_candidate_family_lineage.md`
+- Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260720-011-EQSRC-CANONICAL-CHOICE-FAMILY-FREEZE-RECEIPT` `research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_receipt.md`
+- Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260720-011-PARENT-FUSION-NOTES-EQSRC-CANONICAL-CHOICE-FAMILY-FREEZE` `research_control/tasks/RT-20260720-011/artifacts/parent_fusion_notes_eqsrc_canonical_choice_family_freeze.md`
 
 ## Validation
 

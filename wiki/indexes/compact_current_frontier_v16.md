@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-010`
-- Latest handoff: `handoff-0780`
-- Current status: `v21_p1_t02_five_family_seven_candidate_lineage_map_pass_pending_p1_t03_freeze_review_no_promotion`
+- Active task: `RT-20260720-011`
+- Latest handoff: `handoff-0781`
+- Current status: `v21_p1_t03_five_eqsrc_canonical_choice_families_locally_frozen_p1_t04_selected_no_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-010`
-- Latest research handoff: `handoff-0780`
-- Latest research next action: Run exactly one bounded v21 P1-T03 Theoretical Continuation Selector packet to decide family-level freeze versus one materially distinct same-milestone theorem route. Do not repair audit stress adopt reject edit ontology change either scientific ledger promote or execute another v21 item in the same task.
+- Latest research task: `RT-20260720-011`
+- Latest research handoff: `handoff-0781`
+- Latest research next action: Run exactly one bounded v21 P1-T04 Ontology Formalizer ontology-law-research-packet to formalize EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1. Do not reopen an exact family, prove or adopt the target by assertion, edit canonical ontology, change either scientific ledger, promote, or execute another v21 item in the same task.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p1_t03_eqsrc_candidate_family_freeze_review`
-- Role family: `theoretical-continuation-selector@0.1.0`
+- Route ID: `v21_p1_t04_eqsrc_canonical_selection_naturality_target`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Decide whether the mapped EqSrc selector family should be locally frozen or whether one materially distinct theorem route remains.
+- Milestone burden: Replace candidate-specific prose with one shared mathematical burden.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `7dcece77d5f58552e2672be98c58d9b8177130f9a6f44eed6b40eb0886ab0175`
-- JSON SHA-256: `0c0b23f5844e06e4875c621c9ceb3c2a4d0d0e568115c106b763dbb21875fa96`
+- YAML SHA-256: `9621be991c5377a7b3d516df676bafb9960341f7132799199250c45f7751444d`
+- JSON SHA-256: `ae84d184643d344ec7d0f0ed4bd81b5b66466554590c92e4ec32a0c0cd8782bc`
 
 ## Authority Warning
 

@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `6aba416b28ef17fc50a66faeb6a9ca742fc3b5354df895faeed9a291f8691a55`
-- Generated-at source timestamp: `2026-07-20T22:19:51Z`
-- Row count: `1015`
+- Source fingerprint: `7bc2f794c72954806be5b92b79fb2f3ca5e3682dbf32381004a4a7a23a96dde5`
+- Generated-at source timestamp: `2026-07-20T23:21:40Z`
+- Row count: `1016`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,7 +16,8 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|RT-20260720-010|RT-20260720-009|2026-07-20T22:19:51Z|2026-07-20T22:45:53Z|v21_eqsrc_candidate_family_lineage_map|completed|source_equivalence_eqsrc|Expose common mathematical structure across candidate cycles.|ontology-formalizer@0.2.0|false|false|12|Run exactly one v21 P1-T03 Theoretical Continuation Selector packet to decide family-level freeze versus one materially distinct same-milestone theorem route.|PASS|research_control/tasks/RT-20260720-010/jobs/completions/AJC-AJ-RT-20260720-010-001.yaml|
+|RT-20260720-011|RT-20260720-010|2026-07-20T23:21:40Z|2026-07-20T23:32:50Z|v21_eqsrc_canonical_choice_family_freeze_decision|completed|source_equivalence_eqsrc|Prevent another representation-level loop while preserving honest continuation.|theoretical-continuation-selector@0.1.0|false|false|10|Run exactly one bounded v21 P1-T04 Ontology Formalizer ontology-law-research-packet to formalize EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1. Do not reopen an exact family, prove or adopt the target by assertion, edit canonical ontology, change either scientific ledger, promote, or execute another v21 item in the same task.|PASS|research_control/tasks/RT-20260720-011/jobs/completions/AJC-AJ-RT-20260720-011-001.yaml|
+|RT-20260720-010|RT-20260720-009|2026-07-20T22:19:51Z|2026-07-20T22:45:53Z|v21_eqsrc_candidate_family_lineage_map|completed|source_equivalence_eqsrc|Expose common mathematical structure across candidate cycles.|ontology-formalizer@0.2.0|false|false|11|Run exactly one v21 P1-T03 Theoretical Continuation Selector packet to decide family-level freeze versus one materially distinct same-milestone theorem route.|PASS|research_control/tasks/RT-20260720-010/jobs/completions/AJC-AJ-RT-20260720-010-001.yaml|
 |RT-20260720-009|RT-20260720-008|2026-07-20T21:32:25Z|2026-07-20T21:38:15Z|eqsrc_flow_generated_graded_orbit_root_law_smuggling_audit|completed|source_equivalence_eqsrc|Audit the exact proposal-only flow-generated graded-orbit root source law before family-level freeze review or protected adoption review.|smuggling-auditor@0.2.0|false|false|9|Run exactly one v21 P1-T02 Ontology Formalizer packet to group recent response-token orientation-line root partition and grading candidates into stable families with construction audit stress repair freeze and supersession lineage.|PASS|research_control/tasks/RT-20260720-009/jobs/completions/AJC-AJ-RT-20260720-009-001.yaml|
 |RT-20260720-008|RT-20260720-007|2026-07-20T20:48:30Z|2026-07-20T20:54:33Z|v21_independent_prelaunch_audit|completed|source_equivalence_eqsrc|Prove the plan is complete and executable before recursive implementation.|external-red-team-reviewer@0.1.0|false|false|5|Run exactly one bounded P1-T01 fresh Smuggling Auditor ontology-law-research-packet against the unchanged EqSrcFlowGeneratedGradedOrbitRootLaw_src^cand,v1.|PASS|research_control/tasks/RT-20260720-008/jobs/completions/AJC-AJ-RT-20260720-008-001.yaml|
 |RT-20260720-007|RT-20260720-006|2026-07-20T19:57:45Z|2026-07-20T20:08:27Z|v21_production_launch_manifest|completed|source_equivalence_eqsrc|Bind the plan to the continue-research-goal v4 runtime without launching it from this task.|director-of-research@0.3.0|false|false|6|Route one separately bounded P0-T05 independent prelaunch audit; do not execute it or P1-T01 in this task.|PASS|research_control/tasks/RT-20260720-007/jobs/completions/AJC-AJ-RT-20260720-007-001.yaml|

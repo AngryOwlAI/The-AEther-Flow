@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-20T22:45:53Z`
-- Source fingerprint: `0ce324a103b3a9ff0cb6c032c76f15e00d55a583abc877df57526605291cc965`
-- Nodes: `19899`
-- Edges: `68364`
+- Generated from tracked state as of: `2026-07-20T23:32:50Z`
+- Source fingerprint: `102d3d900e8e283d925d7586998c154df5dc6c04a6e2cdd365a6b17d755deb3a`
+- Nodes: `19919`
+- Edges: `68418`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1011 |
+| `completion_yaml` | 1012 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 780 |
+| `handoff_yaml` | 781 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,32 +33,32 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1011 |
+| `agent_job` | `support_only` | 1012 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10378 |
-| `blocked_burden` | `blocked` | 3774 |
-| `claim_boundary` | `support_only` | 968 |
-| `draft_control_candidate` | `draft_control` | 638 |
+| `artifact` | `support_only` | 10384 |
+| `blocked_burden` | `blocked` | 3777 |
+| `claim_boundary` | `support_only` | 969 |
+| `draft_control_candidate` | `draft_control` | 640 |
 | `draft_control_candidate` | `proposal_only` | 104 |
 | `draft_control_candidate` | `science_draft` | 62 |
 | `frozen_negative` | `frozen_negative` | 117 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 780 |
+| `handoff` | `support_only` | 781 |
 | `human_gated_object` | `human_gated` | 424 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 74 |
-| `obstruction` | `rejected` | 1 |
+| `obstruction` | `blocked` | 75 |
+| `obstruction` | `rejected` | 2 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 31 |
-| `source_ontology_object` | `canonical_source` | 17 |
+| `source_ontology_object` | `canonical_source` | 20 |
 | `source_ontology_object` | `rejected` | 50 |
 | `source_ontology_object` | `support_only` | 320 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 950 |
+| `task` | `support_only` | 951 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260720-010`
-- Latest handoff: `handoff-0780`
-- Handoff path: `research_control/handoffs/handoff-0780.yaml`
-- Next action: Run exactly one bounded v21 P1-T03 Theoretical Continuation Selector packet to decide family-level freeze versus one materially distinct same-milestone theorem route. Do not repair audit stress adopt reject edit ontology change either scientific ledger promote or execute another v21 item in the same task.
+- Active task: `RT-20260720-011`
+- Latest handoff: `handoff-0781`
+- Handoff path: `research_control/handoffs/handoff-0781.yaml`
+- Next action: Run exactly one bounded v21 P1-T04 Ontology Formalizer ontology-law-research-packet to formalize EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1. Do not reopen an exact family, prove or adopt the target by assertion, edit canonical ontology, change either scientific ledger, promote, or execute another v21 item in the same task.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
