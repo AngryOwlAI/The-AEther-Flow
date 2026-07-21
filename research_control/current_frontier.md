@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-017` and `handoff-0787`.
+`RT-20260720-018` and `handoff-0788`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-017` |
-| Latest handoff ID | `handoff-0787` |
-| Current status | `v21_p2_t04_finite_countermodel_atlas_complete_p2_t05_selected_no_adoption_or_promotion` |
+| Active task ID | `RT-20260720-018` |
+| Latest handoff ID | `handoff-0788` |
+| Current status | `v21_p2_t05_machine_checked_theorem_core_complete_p2_t06_selected_no_adoption_or_promotion` |
 | V16 completed | false |
-| Current route family | v21 p2 t05 eqsrc selector theorem formal proof |
+| Current route family | v21 p2 t06 eqsrc selector theorem smuggling audit |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One P2-T05 Ontology Formalizer formal-proof packet may mechanize the P2-T03 theorem core and cite the P2-T04 atlas as finite test data without adopting the domain or executing independent audit or stress. |
-| Next recommended action | Run exactly one bounded v21 P2-T05 Ontology Formalizer formal-proof packet mechanizing the selector theorem core in a proof assistant with a reproducible proof receipt. Preserve proposal-only status, immutable historical provenance, all exact-family freezes, P2-T06 independent Smuggling Auditor ownership, P2-T07 independent Refuter ownership, scientific-ledger status, and every downstream claim block. |
+| Required next authority | One P2-T06 Smuggling Auditor packet may independently audit the fixed P2-T03 theorem statement, P2-T04 finite atlas, and P2-T05 Lean translation without repairing, adopting, promoting, or stressing the theorem. |
+| Next recommended action | Run exactly one bounded v21 P2-T06 Smuggling Auditor packet reviewing the P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and file or process metadata. Preserve P2-T07 independent Refuter ownership and every ontology, scientific-ledger, proof-authority, promotion, publication, and completed-derivation block. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-017` |
-| Latest research handoff ID | `handoff-0787` |
-| Latest research next action | Run exactly one bounded v21 P2-T05 Ontology Formalizer formal-proof packet mechanizing the selector theorem core in a proof assistant with a reproducible proof receipt. Preserve proposal-only status, immutable historical provenance, all exact-family freezes, P2-T06 independent Smuggling Auditor ownership, P2-T07 independent Refuter ownership, scientific-ledger status, and every downstream claim block. |
+| Latest research task ID | `RT-20260720-018` |
+| Latest research handoff ID | `handoff-0788` |
+| Latest research next action | Run exactly one bounded v21 P2-T06 Smuggling Auditor packet reviewing the P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and file or process metadata. Preserve P2-T07 independent Refuter ownership and every ontology, scientific-ledger, proof-authority, promotion, publication, and completed-derivation block. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-017/00_TASK.yaml`.
-- Active task objective: Execute exactly one bounded v21 P2-T04 Candidate Constructor packet recasting the response-tag, orientation-line, rooted-partition, and graded-orbit examples as explicit models, countermodels, positive controls, or guarded noninstances of the P2-T03 theorem while preserving immutable provenance and all claim boundaries.
-- Latest handoff path: `research_control/handoffs/handoff-0787.yaml`.
-- Latest handoff summary: RT-20260720-017 completed only v21 P2-T04. It registered EQSRC-FINITE-COUNTERMODEL-ATLAS-V1 with twelve machine fixtures across the response-tag, orientation-line, rooted-partition, and graded-orbit families: five direct empty-fixed theorem instances, three fixed-point-positive controls, one multiple-fixed control, and three guarded noninstances. All 92 task-local checks pass while ontology adoption, physical gauge, exact-family freezes, scientific ledgers, general EqSrc, and promotion remain open, blocked, or unchanged.
-- Current route family: v21 p2 t05 eqsrc selector theorem formal proof.
-- Next recommended action: Run exactly one bounded v21 P2-T05 Ontology Formalizer formal-proof packet mechanizing the selector theorem core in a proof assistant with a reproducible proof receipt. Preserve proposal-only status, immutable historical provenance, all exact-family freezes, P2-T06 independent Smuggling Auditor ownership, P2-T07 independent Refuter ownership, scientific-ledger status, and every downstream claim block.
+- Active task path: `research_control/tasks/RT-20260720-018/00_TASK.yaml`.
+- Active task objective: Execute exactly one bounded v21 P2-T05 Ontology Formalizer packet encoding the finite-group selector-obstruction core in pinned Lean 4, including fixed points, invariant selectors, empty and multiple fixed-locus results, the transitive-action corollary, and one preserved historical finite countermodel.
+- Latest handoff path: `research_control/handoffs/handoff-0788.yaml`.
+- Latest handoff summary: RT-20260720-018 completed only v21 P2-T05. A task-local pinned Lean 4.30.0 capsule machine-checks six finite-group selector-kernel results, including the exact P2-T04 sign-swap fixture and a multiple-fixed control. Two clean builds produced the same proof-object hash and all six axiom reports are empty. This discharges only the bounded mechanization burden; ontology adoption, translation fidelity, physical gauge, general EqSrc, scientific ledgers, proof authority, and promotion remain open, blocked, or unchanged.
+- Current route family: v21 p2 t06 eqsrc selector theorem smuggling audit.
+- Next recommended action: Run exactly one bounded v21 P2-T06 Smuggling Auditor packet reviewing the P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and file or process metadata. Preserve P2-T07 independent Refuter ownership and every ontology, scientific-ledger, proof-authority, promotion, publication, and completed-derivation block.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P2-T05 Ontology Formalizer formal-proof packet mechanizing the selector theorem core in a proof assistant with a reproducible proof receipt. Preserve proposal-only status, immutable historical provenance, all exact-family freezes, P2-T06 independent Smuggling Auditor ownership, P2-T07 independent Refuter ownership, scientific-ledger status, and every downstream claim block.
+Run exactly one bounded v21 P2-T06 Smuggling Auditor packet reviewing the P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and file or process metadata. Preserve P2-T07 independent Refuter ownership and every ontology, scientific-ledger, proof-authority, promotion, publication, and completed-derivation block.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-017`;
-- latest handoff: `handoff-0787`;
-- current status: `v21_p2_t04_finite_countermodel_atlas_complete_p2_t05_selected_no_adoption_or_promotion`;
+- active task: `RT-20260720-018`;
+- latest handoff: `handoff-0788`;
+- current status: `v21_p2_t05_machine_checked_theorem_core_complete_p2_t06_selected_no_adoption_or_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0787.yaml`
-- `research_control/tasks/RT-20260720-017/00_TASK.yaml`
+- `research_control/handoffs/handoff-0788.yaml`
+- `research_control/tasks/RT-20260720-018/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0787*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0788*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

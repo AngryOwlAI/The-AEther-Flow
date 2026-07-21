@@ -1,0 +1,19 @@
+schema_id: "parent-child-conflict-review.v1"
+task_id: "RT-20260720-018"
+agent_job_id: "AJ-RT-20260720-018-001"
+status: "resolved"
+resolution_rounds: 1
+children_reviewed:
+  - "child_phys_math"
+  - "child_phys_phil"
+conflicts:
+  - conflict_id: "SCOPE-FULL-GROUPOID-VS-FINITE-CORE"
+    physicist_mathematician_position: "The checked finite-group action kernel proves the transitive and fixed-locus core requested by P2-T05."
+    physicist_philosopher_position: "The result must not be presented as mechanizing every P2-T03 groupoid or full-category statement."
+    resolution: "Record bounded burden discharge for the finite-group theorem core and preserve the omitted full-groupoid and equalizer statements as explicit limitations, not failures or implied theorems."
+  - conflict_id: "KERNEL-CHECK-VS-PHYSICAL-PROOF"
+    physicist_mathematician_position: "The Lean kernel reports no axiom dependencies for six named theorems."
+    physicist_philosopher_position: "No-axiom kernel output does not supply ontology physical admissibility or independent translation audit."
+    resolution: "Use the exact status machine-checked under task-local definitions and block all ontology gauge ledger promotion and publication overreads."
+unresolved_blocking_conflicts: []
+pass_allowed: true

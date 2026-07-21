@@ -1,0 +1,48 @@
+schema_id: "parent-child-physics-output.v1"
+task_id: "RT-20260720-018"
+agent_job_id: "AJ-RT-20260720-018-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+question: "What smallest Lean kernel faithfully captures the finite-group selector obstruction, its empty and multiple fixed-locus branches, the transitive corollary, and one immutable historical control?"
+formal_objects:
+  - "GroupData G with identity multiplication inverse and group laws"
+  - "Action G D group with identity and multiplication action laws"
+  - "Fixed action x"
+  - "InvariantSelector action as the subtype of fixed choices"
+  - "Transitive action"
+machine_checked_results:
+  - theorem: "empty_fixed_iff_no_invariant_selector"
+    result: "The fixed locus is empty exactly when the invariant-selector subtype is uninhabited."
+  - theorem: "fixed_choice_unique_of_transitive"
+    result: "A fixed choice in a transitive action equals every eligible choice."
+  - theorem: "no_invariant_selector_of_transitive_distinct"
+    result: "A transitive action with two distinct choices has no invariant selector."
+  - theorem: "multiple_fixed_gives_multiple_selectors"
+    result: "Two distinct fixed choices yield two distinct invariant selectors."
+  - theorem: "historical_sign_swap_no_invariant_selector"
+    result: "The exact C2 sign-swap control has no invariant selector."
+  - theorem: "trivial_action_has_multiple_selectors"
+    result: "The trivial two-choice control has at least two invariant selectors."
+historical_countermodel:
+  fixture_id: "FX-RESP-XEMPTY-SIGN-SWAP"
+  source_path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json"
+  preserved_source_hash: "e8ced96541fa941e5a3b4ceaa8d7b48204acf7ca8ec342ac6b23dbbf5c470a73"
+  translation:
+    group: "C2 with identity e and involution s"
+    eligible_choices: "Bool, representing epsilon_plus and epsilon_minus"
+    generator_action: "s acts by Boolean negation"
+    theorem_status: "direct_theorem_instance"
+build_evidence:
+  lean_version: "4.30.0"
+  source_sha256: "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+  proof_object_sha256: "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a"
+  independent_clean_build_count: 2
+  byte_equal_proof_objects: true
+  theorem_axiom_reports: 6
+  undeclared_axiom_count: 0
+limitations:
+  - "This mechanizes the one-object finite-group action core, not the full P2-T03 groupoid product classification or noninvertible equalizer guard."
+  - "The translation from tracked mathematical prose and fixtures is not independently audited here; P2-T06 retains that ownership."
+  - "No current-ontology derivation, physical-gauge interpretation, general EqSrc discharge, or Distance-to-GR delta follows."
+blocking_conflicts: []

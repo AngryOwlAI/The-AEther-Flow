@@ -1,0 +1,485 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-018-001"
+completion_id: "AJC-AJ-RT-20260720-018-001"
+task_id: "RT-20260720-018"
+task_type: "v21_eqsrc_selector_theorem_formal_proof"
+decision_id: "DDR-20260720-018"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260720-018"
+status: "completed"
+created_at: "2026-07-21T05:53:19Z"
+started_at: "2026-07-21T05:53:19Z"
+completed_at: "2026-07-21T06:04:29Z"
+objective: "Execute only v21 P2-T05: mechanize the finite-group selector-obstruction core in pinned Lean 4 with reproducible source, lock, clean-build, axiom, and proof-object receipts."
+completion_summary: "P2-T05 supplies a task-local Lean 4.30.0 proof capsule for the finite-group selector kernel. Six named results machine-check with no reported axioms, two clean builds produce the same proof-object hash, and the exact P2-T04 sign-swap fixture is preserved. The result discharges only the bounded mechanization burden; it does not establish translation fidelity, current-ontology derivation, physical gauge, general EqSrc, proof authority, scientific-ledger progress, or promotion."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T05"
+  recommendation_ids:
+    - "V21-R03"
+    - "V21-R05"
+    - "V21-R39"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+  next_dependency_work_item: "P2-T06"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 18
+  passes_consumed: 18
+  route_work_item_id: "P2-T05"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "theorem_with_hypotheses_and_proof"
+minimum_payload:
+  payload_class: "theorem_with_hypotheses_and_proof"
+  payload_artifact_path: "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+  payload_summary: "Machine-checks the declared one-object finite-group action core, fixed-locus obstruction, transitive corollary, multiple-fixed result, and one preserved historical finite countermodel."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-018/artifacts/child_phys_math_eqsrc_selector_formal_proof.yaml"
+  - "research_control/tasks/RT-20260720-018/artifacts/child_phys_phil_eqsrc_selector_formal_proof.yaml"
+  - "research_control/tasks/RT-20260720-018/artifacts/parent_conflict_review_eqsrc_selector_formal_proof.yaml"
+  - "research_control/tasks/RT-20260720-018/artifacts/parent_fusion_notes_eqsrc_selector_formal_proof.md"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/lean-toolchain"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/toolchain-lock.json"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/build_proof.sh"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/README.md"
+  - "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_compact_receipt.json"
+  - "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_receipt.md"
+  - "research_control/tasks/RT-20260720-018/artifacts/validate_eqsrc_selector_formal_proof.py"
+  - "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-018/**"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/lean-toolchain"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/toolchain-lock.json"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/build_proof.sh"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/README.md"
+  - "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_compact_receipt.json"
+  - "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_receipt.md"
+  - "research_control/handoffs/handoff-0788.yaml"
+  - "research_control/handoffs/handoff-0788.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  proof_source:
+    path: "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+    sha256: "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+  proof_object:
+    format: "Lean olean"
+    sha256: "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a"
+    clean_build_count: 2
+    byte_reproducible: true
+  toolchain_lock:
+    path: "research_control/tasks/RT-20260720-018/artifacts/proof/toolchain-lock.json"
+    sha256: "bad311d77fc08c7d5347156401dcd565d1d96d8b8177e13713bbec1f1e78905d"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_compact_receipt.json"
+    sha256: "6002a30ee83516e9a4f3feac61ddc2b9229e342bd963481b95ccf57865ba0641"
+  receipt:
+    path: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_receipt.md"
+    sha256: "a37add9b420c502a344401ba2ad36737ff70add99fa114272735aae8e4f834d3"
+  validation:
+    path: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_validation.json"
+    sha256: "9628e6ca789aff6df0da5039f51f3661ce50cab0461927650fe4b49f5aec9932"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260720-018/artifacts/parent_fusion_notes_eqsrc_selector_formal_proof.md"
+    sha256: "e98ca466cefcf460bd8d55a6d194301c70bf403083cd7234a1565f2b146d444c"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-018/artifacts/child_phys_math_eqsrc_selector_formal_proof.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-018/artifacts/child_phys_phil_eqsrc_selector_formal_proof.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-018/artifacts/parent_conflict_review_eqsrc_selector_formal_proof.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    summary: "The parent separated kernel checking from translation fidelity, proposal-domain adoption, physical-gauge interpretation, general EqSrc, proof authority, and promotion."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+    fusion_notes_path: "research_control/tasks/RT-20260720-018/artifacts/parent_fusion_notes_eqsrc_selector_formal_proof.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-018-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Lean finite-group selector kernel"
+    summary: "Defines minimal group data, a left action, fixed choices, invariant selectors, and transitivity; machine-checks empty-fixed, transitive, and multiple-fixed results under explicit hypotheses with no reported axioms."
+  - payload_id: "NMP-RT-20260720-018-002"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "C2 sign-swap countermodel and trivial-action control"
+    summary: "Machine-checks the exact FX-RESP-XEMPTY-SIGN-SWAP empty-fixed countermodel and a two-choice trivial-action multiple-selector control."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT018-001"
+    payload_type: "definition"
+    object_name: "GroupData Action Fixed InvariantSelector Transitive"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+    burden_effect: "narrows"
+    summary: "Declares the exact minimal mathematical structures used by the one-object finite-group selector core."
+  - payload_id: "PAYLOAD-RT018-002"
+    payload_type: "theorem"
+    object_name: "Axiom-free finite selector obstruction theorem family"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+    burden_effect: "discharges"
+    summary: "Machine-checks six named results and records a byte-reproducible proof-object hash."
+  - payload_id: "PAYLOAD-RT018-003"
+    payload_type: "finite_model"
+    object_name: "FX-RESP-XEMPTY-SIGN-SWAP C2 action"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+    burden_effect: "narrows"
+    summary: "Preserves the exact historical fixture identity and checks its no-invariant-selector conclusion."
+  - payload_id: "PAYLOAD-RT018-004"
+    payload_type: "finite_model"
+    object_name: "Trivial two-choice multiple-fixed control"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+    burden_effect: "narrows"
+    summary: "Checks that two distinct fixed choices yield two distinct invariant selectors."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "eqsrc"
+  waiver_decision_id: "DDR-20260720-018"
+  slots:
+    - countermodel_slot: "missing_inverse_countermodel"
+      status: "deferred_by_ddr"
+      scope: "full P2-T03 groupoid and noninvertible-arrow boundary outside the one-object finite-group kernel"
+      result_artifact: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_receipt.md"
+    - countermodel_slot: "missing_composition_countermodel"
+      status: "deferred_by_ddr"
+      scope: "full connected-component product and arrow-coherence boundary outside P2-T05"
+      result_artifact: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_receipt.md"
+    - countermodel_slot: "invariant_ledger_not_family_stable_countermodel"
+      status: "filled"
+      scope: "exact C2 sign-swap action with empty fixed locus"
+      result_artifact: "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+    - countermodel_slot: "target_import_needed_countermodel"
+      status: "pending"
+      scope: "independent source-purity and translation audit reserved for P2-T06"
+      result_artifact: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_receipt.md"
+    - countermodel_slot: "RetainH_needed_countermodel"
+      status: "deferred_by_ddr"
+      scope: "RetainH remains downstream and outside the finite selector kernel"
+      result_artifact: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_receipt.md"
+    - countermodel_slot: "GenH_needed_countermodel"
+      status: "deferred_by_ddr"
+      scope: "GenH remains downstream and outside the finite selector kernel"
+      result_artifact: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_receipt.md"
+
+physics_progress_status:
+  status: "burden_discharged"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Provide machine-checked mathematical evidence for the theorem core."
+  explanation: "The bounded P2-T05 mechanization burden is discharged by a reproducible Lean build and explicit no-axiom reports. Translation fidelity, current-ontology derivation, physical admissibility, independent audit, and general EqSrc remain open."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "scoped_evidence_precondition"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A machine-checked proposal theorem core neither derives nor adopts the proposal domain or selector and does not discharge general EqSrc."
+  downstream_unlocked:
+    - "P2-T06 independent theorem smuggling audit"
+  downstream_still_blocked:
+    - "P11-T03 until P10-T01 is complete"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "Both authoritative scientific ledgers remain unchanged."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "proposal-only selector package remains unadopted"
+  - burden: "Source equivalence EqSrc"
+    status: "finite-group theorem core machine-checked; source derivation adoption independent audit stress and general EqSrc remain open"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "one historical response sign-swap fixture machine-checked without route reopening"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no construction or scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "open; finite proof checking does not establish physical robustness"
+  - burden: "benchmark promotion"
+    status: "blocked by missing source derivation adoption independent audit stress and downstream derivations"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact candidate-family freezes remain; P2-T06 is a distinct independent audit route"
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p2_t05_finite_selector_kernel_machine_checked_pending_p2_t06_independent_audit"
+  prior_related_tasks:
+    - "RT-20260614-055"
+    - "RT-20260718-041"
+    - "RT-20260718-045"
+    - "RT-20260718-047"
+    - "RT-20260720-014 through RT-20260720-018"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P2-T05 adds a pinned proof-assistant source, two byte-reproducible clean builds, six explicit axiom reports, and one exact historical fixture encoding rather than renaming or repairing a frozen selector candidate."
+  next_role_consequence: "smuggling-auditor@0.2.0 for v21 P2-T06 only"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  candidate_freeze_label: "EQSRC-P2-T05-FORMAL-PROOF"
+  prior_attempts_considered:
+    - "five stable families and seven immutable candidates in P1-T03"
+    - "P2-T03 complete proposal fixed-core theorem"
+    - "P2-T04 historical finite atlas"
+    - "P2-T05 machine-checked finite selector kernel"
+  criteria_evaluated:
+    - "The P2-T03 source hash and P2-T04 fixture hash remain unchanged."
+    - "Two fresh builds produced the same proof-object hash."
+    - "Six named theorem axiom reports are empty."
+    - "No proposal-domain adoption, translation audit, or physical interpretation is supplied."
+  freeze_if:
+    - "Later work repeats the same proof encoding without independent audit, stress, or a materially new theorem burden."
+    - "Later work changes the theorem domain or historical fixture after observing a desired result."
+  do_not_freeze_if:
+    - "P2-T06 performs the planned independent hidden-selection and target-import audit."
+    - "P2-T07 later stresses the audited theorem under the registered weakened and strengthened categories."
+  freeze_decision: "not_frozen"
+  decision_reason: "P2-T06 is non-orbital because it tests source-provenance integrity and translation fidelity independently of the formal proof construction."
+  rationale: "The bounded formal-proof burden is complete while the independent audit burden is materially distinct and dependency-ready."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "smuggling_auditor"
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The tracked Lean source hash is fixed and two clean builds reproduce one proof-object hash."
+    - "Six named theorem axiom reports state no dependencies."
+    - "The exact P2-T04 sign-swap fixture identity and both dependency hashes are preserved."
+  open_or_blocked_physical_targets:
+    - "current-ontology derivation or lawful adoption of the source domain and selector law"
+    - "independent source-purity audit physical gauge interpretation covariance and variation robustness"
+    - "general EqSrc M_src g_eff matter coupling Einstein equations and exact-GR recovery"
+  forbidden_overread:
+    - "kernel checking or validator PASS as ontology adoption physical proof proof authority benchmark progress or completed derivation"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The machine-checked finite-group kernel does not authorize canonical ontology edit, selector-law adoption, physical gauge, general EqSrc, M_src adoption, g_eff, matter coupling, Einstein-equation derivation, scientific-ledger change, benchmark promotion, Gate Chair verdict, publication, completed derivation, future source-extension impossibility, or global theory rejection."
+  forbidden_conclusions:
+    - "proposal domain or selector derived from or adopted into current ontology"
+    - "kernel checking as independent translation audit or proof authority"
+    - "structural automorphisms as physical gauge transformations"
+    - "historical fixture as general physical covariance or admissibility"
+    - "frozen family reopened adopted rejected or globally impossible"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff construction or scope expansion"
+    - "matter coupling derivation"
+    - "Einstein-equation derivation"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+    - "future source-extension impossibility or global theory rejection"
+
+claim_boundary:
+  boundary_id: "CB-V21-P2-T05-EQSRC-FORMAL-PROOF-001"
+  allowed_scope: "Exact P2-T05 task-local Lean source, pinned tool lock, two clean builds, proof-object and axiom receipts, one historical finite fixture, and selection of P2-T06 without executing it."
+  blocked_scope: "Permanent proof tooling, P2-T03 or P2-T04 changes, translation-audit conclusion, P2-T06 execution, P2-T07 stress, physical gauge, frozen-family reopening, ontology edit or adoption, general EqSrc, scientific-ledger changes, downstream GR promotion, proof authority, Gate Chair verdict, publication, completed derivation, or global no-go."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_validation.json"
+  local_validator_report_hash: "9628e6ca789aff6df0da5039f51f3661ce50cab0461927650fe4b49f5aec9932"
+  proof_source_hash: "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+  proof_object_hash: "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a"
+  p2_t03_theorem_hash: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  p2_t04_fixtures_hash: "e8ced96541fa941e5a3b4ceaa8d7b48204acf7ca8ec342ac6b23dbbf5c470a73"
+  distance_to_gr_ledger_hash: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  metric_use_ledger_hash: "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  canonical_ontology_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+  task_local_check_count: 25
+  clean_build_count: 2
+  theorem_axiom_report_count: 6
+  theorem_with_axiom_dependency_count: 0
+  validation_status: "PASS"
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  selector_construction_authorized: false
+  physical_gauge_claim_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 18 lease parity, immutable route identity, max reasoning effort, repository binding, predecessor checkpoint, clean start, and single consumption were verified before work."
+      - "Memory preflight refreshed local retrieval and the registered P2-T03 theorem plus P2-T04 atlas were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required internal perspectives completed and the parent resolved proof-versus-interpretation boundaries in one synthesis round."
+      - "Two independent clean Lean builds produced the same proof-object hash and six no-axiom reports."
+      - "The task-local validator passes all 25 source, dependency, syntax-boundary, theorem, tool, proof-object, fixture-identity, and axiom-report checks."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Repository validation, documentation impact, signal parity, generated freshness, and whitespace checks remain required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, and claim graph remain to be regenerated and checked."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap and validate-only remain required after Markdown source registration."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 936
+    relationship_row_count: 4640
+    semantic_row_count: 936
+    vault_row_count: 936
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 9
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search selector theorem --limit 10 --json"
+      query_type: "search"
+      query_text: "selector theorem"
+      returned_object_ids:
+        - "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex --json"
+      query_type: "lookup"
+      query_text: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+      returned_object_ids:
+        - "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+  canonical_inspections:
+    - object_id: "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+      source_hash: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+    - object_id: "TEX-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+      source_hash: "4a7c84ecf769b19e92b2b2dffd7224ddd4e1e02e4cc93cff797d01fa0e1bc62b"
+  external_primary_sources:
+    - title: "Lean 4.30.0"
+      publisher: "Lean FRO"
+      url: "https://github.com/leanprover/lean4/releases/tag/v4.30.0"
+      claim_scope: "Official release identity and published macOS ARM64 archive digest only."
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and nine local-cache-only freshness warnings were refreshed to a clean local retrieval state with 936 source objects."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search selector theorem --limit 10 --json"
+    status: "PASS"
+    summary: "Resolved the generated theorem wiki object, then inspected its canonical TeX source-registry record and source file."
+  - command: "shasum -a 256 .local/rt-20260720-018-lean/lean-4.30.0-darwin_aarch64.tar.zst"
+    status: "PASS"
+    summary: "Observed the official published macOS ARM64 Lean archive digest 072dca4a38fbc0d3cedb96fea886cc243b424f2bd16247596200b9a9ab93f0f5."
+  - command: "sh research_control/tasks/RT-20260720-018/artifacts/proof/build_proof.sh"
+    status: "PASS"
+    summary: "Two independent fresh build directories produced byte-identical proof objects with SHA-256 3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-018/artifacts/validate_eqsrc_selector_formal_proof.py --write-report --json"
+    status: "PASS"
+    summary: "Passed 25 of 25 source-hash, dependency-hash, theorem-presence, source-boundary, tool-version, proof-object, historical-fixture, and axiom-report checks."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  rationale: "The task used an ignored task-local tool cache and produced a bounded scientific proof capsule; no project-system defect or permanent dependency was introduced."

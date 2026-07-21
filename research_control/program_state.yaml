@@ -1,9 +1,9 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260720-017"
-latest_handoff_id: "handoff-0787"
-current_status: "v21_p2_t04_finite_countermodel_atlas_complete_p2_t05_selected_no_adoption_or_promotion"
-claim_boundary_summary: "RT-20260720-017 completed only v21 P2-T04. EQSRC-FINITE-COUNTERMODEL-ATLAS-V1 integrates twelve fixtures across four historical families as five direct empty-fixed theorem instances, three fixed-point-positive controls, one multiple-fixed control, and three guarded noninstances. All 92 task-local checks pass. Current ontology does not derive or adopt the selector package; structural automorphisms are not physical gauge; no historical source or freeze changed; no scientific-ledger delta, promotion, or publication is authorized."
-next_recommended_action: "Run exactly one bounded v21 P2-T05 Ontology Formalizer formal-proof packet mechanizing the selector theorem core in a proof assistant with a reproducible proof receipt. Preserve proposal-only status, immutable historical provenance, all exact-family freezes, P2-T06 independent Smuggling Auditor ownership, P2-T07 independent Refuter ownership, scientific-ledger status, and every downstream claim block."
+active_task_id: "RT-20260720-018"
+latest_handoff_id: "handoff-0788"
+current_status: "v21_p2_t05_machine_checked_theorem_core_complete_p2_t06_selected_no_adoption_or_promotion"
+claim_boundary_summary: "RT-20260720-018 completed only v21 P2-T05. Pinned Lean 4.30.0 machine-checks six finite-group selector-kernel results; two clean builds reproduce proof-object SHA-256 3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a and all six axiom reports are empty. This discharges only the bounded mechanization burden. Current ontology does not derive or adopt the proposal domain or selector; independent translation audit, physical gauge, general EqSrc, proof authority, scientific-ledger delta, promotion, and publication remain blocked or unchanged."
+next_recommended_action: "Run exactly one bounded v21 P2-T06 Smuggling Auditor packet reviewing the P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and file or process metadata. Preserve P2-T07 independent Refuter ownership and every ontology, scientific-ledger, proof-authority, promotion, publication, and completed-derivation block."
 
 plan_registration:
   task_id: "RT-20260720-003"
@@ -464,8 +464,50 @@ p2_t04_finite_countermodel_atlas:
   distance_to_gr_delta_changed: false
   physics_authority: false
 
+p2_t05_selector_formal_proof:
+  task_id: "RT-20260720-018"
+  plan_task_id: "P2-T05"
+  formalization_id: "EQSRC-SELECTOR-KERNEL-LEAN-V1"
+  proof_source_path: "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+  proof_source_hash: "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+  proof_object_hash: "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a"
+  toolchain_lock_path: "research_control/tasks/RT-20260720-018/artifacts/proof/toolchain-lock.json"
+  toolchain_lock_hash: "bad311d77fc08c7d5347156401dcd565d1d96d8b8177e13713bbec1f1e78905d"
+  compact_receipt_path: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_compact_receipt.json"
+  compact_receipt_hash: "6002a30ee83516e9a4f3feac61ddc2b9229e342bd963481b95ccf57865ba0641"
+  receipt_path: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_receipt.md"
+  receipt_hash: "a37add9b420c502a344401ba2ad36737ff70add99fa114272735aae8e4f834d3"
+  validation_path: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_validation.json"
+  validation_hash: "9628e6ca789aff6df0da5039f51f3661ce50cab0461927650fe4b49f5aec9932"
+  lean_version: "4.30.0"
+  lean_release_commit: "d024af099ca4bf2c86f649261ebf59565dc8c622"
+  lean_archive_hash: "072dca4a38fbc0d3cedb96fea886cc243b424f2bd16247596200b9a9ab93f0f5"
+  clean_build_count: 2
+  proof_object_byte_reproducible: true
+  named_theorem_count: 6
+  theorem_axiom_report_count: 6
+  theorem_with_axiom_dependency_count: 0
+  task_local_check_count: 25
+  task_local_failed_check_count: 0
+  historical_fixture_ids:
+    - "FX-RESP-XEMPTY-SIGN-SWAP"
+  full_p2_t03_mechanized: false
+  independent_translation_audit_complete: false
+  current_ontology_derives_selector_package: false
+  physical_gauge_status_established: false
+  selector_law_adopted: false
+  selected_next_plan_task: "P2-T06"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  p2_t05_executed: true
+  p2_t06_executed: false
+  scientific_claims_changed: true
+  distance_to_gr_delta_changed: false
+  proof_authority: false
+  physics_authority: false
+
 control_claim_boundary:
-  allowed_next_scope: "One bounded P2-T05 Ontology Formalizer formal-proof packet may mechanize the P2-T03 theorem core and cite the P2-T04 atlas as finite test data while preserving proposal-only status and P2-T06 and P2-T07 ownership."
+  allowed_next_scope: "One bounded P2-T06 Smuggling Auditor packet may independently audit the fixed P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and file or process metadata while preserving P2-T07 ownership."
   blocked_claims:
     - "v21 plan as physics proof or scientific authority"
     - "the broader P1-T04 theorem as proved or current-ontology derived"
@@ -489,8 +531,8 @@ control_claim_boundary:
     - "multiple fixed points at one object as multiple global selectors"
     - "selector uniqueness as relation-image uniqueness"
     - "an added mark as derived or dynamical symmetry breaking"
-    - "P2-T05 formal proof as already complete"
-    - "P2-T06 audit or P2-T07 stress as complete"
+    - "kernel checking as independent translation fidelity proof authority or physical proof"
+    - "P2-T06 audit or P2-T07 stress as already complete"
   scientific_claims_changed: true
   proof_authority: false
   physics_promotion_authorized: false
@@ -533,9 +575,9 @@ candidate_result:
   exact_family_freezes_reopened: false
   requires_human_gate: false
   distance_to_gr_ledger_changed: false
-  selected_next_plan_task: "P2-T05"
-  selected_next_role_family: "ontology-formalizer@0.2.0"
-  selected_next_route_label: "formal-proof-packet"
+  selected_next_plan_task: "P2-T06"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
 
 exact_prior_route_freeze:
   active_freeze_label: "EQSRC-ORDERED-MOTION-ROOTED-PARTITION-LAW"
@@ -546,7 +588,7 @@ exact_prior_route_freeze:
   future_source_extension_impossibility: false
 
 claim_boundary:
-  allowed_next_scope: "One P2-T05 Ontology Formalizer may mechanize the selector theorem core in a proof assistant and produce a reproducible proof receipt while preserving proposal-only status and all later-role boundaries."
+  allowed_next_scope: "One P2-T06 Smuggling Auditor may independently audit source morphisms, automorphisms, selection spaces, the P2-T05 translation, and metadata guards and return one verdict without repair, adoption, stress, or promotion."
   blocked_claims:
     - "candidate derived from current ontology without proof"
     - "candidate construction repair audit stress adoption or rejection inside a frozen family without reopening evidence"
@@ -574,7 +616,7 @@ claim_boundary:
     - "supplied tags or roots as derived source laws"
     - "guarded noninstances as theorem countermodels"
     - "file or process metadata as source symmetry"
-    - "P2-T05 encoding P2-T06 audit or P2-T07 stress as already complete"
+    - "P2-T06 audit or P2-T07 stress as already complete"
   scientific_claims_changed: true
   proof_authority: false
   support_only: true
@@ -586,26 +628,26 @@ distance_to_gr:
   status: "draft object exists"
   effect: "scoped_evidence_precondition"
   changed: false
-  meaning: "P2-T04 completes the provenance-preserving finite theorem atlas but does not derive or adopt the proposal domain or a selector or discharge general EqSrc. Both authoritative ledgers remain unchanged."
+  meaning: "P2-T05 discharges the bounded proof-assistant burden but does not derive or adopt the proposal domain or selector, independently audit the translation, or discharge general EqSrc. Both authoritative ledgers remain unchanged."
 
 freeze_criteria_status:
   repeated_burden: true
   freeze_evaluation_required: true
   active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
   freeze_decision: "not_frozen"
-  decision_reason: "P2-T04 is materially distinct from the frozen candidate families because it integrates immutable examples under the completed theorem and reproduces their finite counts; P2-T05 is distinct machine-proof work."
+  decision_reason: "P2-T05 supplied distinct machine-checked evidence; P2-T06 is non-orbital because it independently tests translation and source-provenance integrity rather than repeating theorem construction or candidate repackaging."
   status_update_path: "research_control/program_state.yaml"
   exact_prior_route_freeze_preserved: true
   frozen_scope: "five stable families and seven immutable candidates in the P1-T02 inventory only"
   barred_route: "repeat rename repackage or move upstream an inventoried distinguished choice without a recorded reopening criterion"
-  next_allowed_route: "P2-T05 proof-assistant encoding"
-  qualifying_distinct_route: "P2-T05 formal-proof-packet"
+  next_allowed_route: "P2-T06 independent Smuggling Auditor audit"
+  qualifying_distinct_route: "P2-T06 ontology-law-research-packet"
   global_theory_rejection: false
   future_source_extension_impossibility: false
 
 route_cycle_control:
   cycle_family: "eqsrc_canonical_choice_superfamily"
-  current_cycle_step: "p2_t04_historical_finite_atlas_complete_pending_p2_t05_formal_proof"
+  current_cycle_step: "p2_t05_finite_selector_kernel_machine_checked_pending_p2_t06_independent_audit"
   prior_related_tasks:
     - "RT-20260718-038"
     - "RT-20260718-039"
@@ -620,51 +662,51 @@ route_cycle_control:
     - "RT-20260720-009"
     - "RT-20260720-010"
   cycle_risk: "high"
-  orbit_avoidance_reason: "All inventoried exact family cycles remain frozen. P2-T04 adds a twelve-fixture cross-family atlas, explicit instance boundaries, independent group calculations, reproduced historical counts, and metadata exclusion without renaming or repairing a candidate."
-  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P2-T05 only"
+  orbit_avoidance_reason: "All inventoried exact family cycles remain frozen. P2-T05 adds pinned machine-checked source, two byte-reproducible clean builds, six axiom reports, and one exact historical fixture encoding without renaming or repairing a candidate."
+  next_role_consequence: "smuggling-auditor@0.2.0 for v21 P2-T06 only"
 
 preserved_scientific_route:
-  route_id: "v21_p2_t05_eqsrc_selector_theorem_formal_proof"
-  route_label: "formal-proof-packet"
-  role_family: "ontology-formalizer@0.2.0"
+  route_id: "v21_p2_t06_eqsrc_selector_theorem_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Provide machine-checked mathematical evidence for the theorem core."
+  milestone_burden: "Establish source-provenance integrity of the theorem statement and proof."
   requires_human_gate: false
   project_system_boundary_authorized_by_plan: false
   physics_promotion_authorized: false
-  next_action: "Run one bounded P2-T05 proof-assistant encoding packet for the P2-T03 theorem core."
-  source_handoff: "research_control/handoffs/handoff-0787.yaml"
+  next_action: "Run one bounded P2-T06 independent theorem smuggling audit."
+  source_handoff: "research_control/handoffs/handoff-0788.yaml"
 
 selected_next_route:
-  route_id: "v21_p2_t05_eqsrc_selector_theorem_formal_proof"
-  route_label: "formal-proof-packet"
-  role_family: "ontology-formalizer@0.2.0"
+  route_id: "v21_p2_t06_eqsrc_selector_theorem_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
   worker_skill: "continue-research"
-  plan_task_id: "P2-T05"
+  plan_task_id: "P2-T06"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Provide machine-checked mathematical evidence for the theorem core."
+  milestone_burden: "Establish source-provenance integrity of the theorem statement and proof."
   requires_human_gate: false
   project_system_boundary_authorized_by_plan: false
   physics_promotion_authorized: false
-  next_action: "Mechanize the selector theorem core in a proof assistant with a reproducible proof receipt."
-  source_handoff: "research_control/handoffs/handoff-0787.yaml"
+  next_action: "Audit the fixed theorem, atlas, and Lean translation for hidden selection, target import, category engineering, semantic mismatch, and file or process metadata without repair or promotion."
+  source_handoff: "research_control/handoffs/handoff-0788.yaml"
 
 preserved_scientific_next_packet:
-  role_id: "ontology-formalizer"
+  role_id: "smuggling-auditor"
   role_version: "0.2.0"
   packet_count: "1"
-  route_label: "formal-proof-packet"
-  task_type: "v21_eqsrc_selector_theorem_formal_proof"
-  objective: "Mechanize the selector theorem core in a proof assistant and produce a reproducible proof receipt without adopting the proposal domain or selector."
+  route_label: "ontology-law-research-packet"
+  task_type: "v21_eqsrc_selector_theorem_smuggling_audit"
+  objective: "Independently audit the fixed theorem, atlas, and Lean translation for hidden selection, target import, category engineering, and file or process metadata without repair or promotion."
 
 required_next_packet:
-  role_id: "ontology-formalizer"
+  role_id: "smuggling-auditor"
   role_version: "0.2.0"
   packet_count: "1"
-  route_label: "formal-proof-packet"
-  task_type: "v21_eqsrc_selector_theorem_formal_proof"
-  plan_task_id: "P2-T05"
-  objective: "Mechanize the selector theorem core in a proof assistant and produce a reproducible proof receipt without adopting the proposal domain or selector."
+  route_label: "ontology-law-research-packet"
+  task_type: "v21_eqsrc_selector_theorem_smuggling_audit"
+  plan_task_id: "P2-T06"
+  objective: "Independently audit the fixed theorem, atlas, and Lean translation for hidden selection, target import, category engineering, and file or process metadata without repair or promotion."
 
 validation_summary:
   aggregate_status: "PASS"
@@ -694,10 +736,10 @@ validation_summary:
   prelaunch_audit_nonblocking_finding_count: 4
   prelaunch_audit_scope_projection_parity: true
   prelaunch_audit_epistemic_independence_claimed: false
-  candidate_result: "historical_finite_atlas_constructed_pending_formal_proof"
+  candidate_result: "historical_finite_atlas_and_machine_checked_core_complete_pending_independent_audit"
   exact_rooted_partition_candidate_v1_route: "locally_frozen"
   adoption_status: "blocked_adoption_open_continuation"
-  physics_progress_status: "no_distance_delta"
+  physics_progress_status: "bounded_mechanization_burden_discharged_no_distance_delta"
   p1_t01_audit_status: "PASS"
   p1_t01_explicit_target_import_found: false
   p1_t01_universal_action_realization_proved: true
@@ -772,7 +814,19 @@ validation_summary:
   p2_t04_historical_source_hashes_match: true
   p2_t04_file_or_process_symmetry_fixture_count: 0
   p2_t04_exact_family_freezes_reopened: false
-  p2_t05_executed: false
+  p2_t05_executed: true
+  p2_t05_status: "PASS"
+  p2_t05_formalization_id: "EQSRC-SELECTOR-KERNEL-LEAN-V1"
+  p2_t05_lean_version: "4.30.0"
+  p2_t05_clean_build_count: 2
+  p2_t05_proof_object_byte_reproducible: true
+  p2_t05_named_theorem_count: 6
+  p2_t05_theorem_axiom_report_count: 6
+  p2_t05_theorem_with_axiom_dependency_count: 0
+  p2_t05_task_local_check_count: 25
+  p2_t05_task_local_failed_check_count: 0
+  p2_t05_independent_translation_audit_complete: false
+  p2_t06_executed: false
   distance_to_gr_ledger_unchanged: true
   metric_use_ledger_unchanged: true
   generated_derivatives_non_authority: true
@@ -782,9 +836,9 @@ project_improvement_bridge:
   required: false
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260720-017"
-  latest_research_handoff_id: "handoff-0787"
-  latest_research_next_action: "Run exactly one bounded v21 P2-T05 Ontology Formalizer formal-proof packet mechanizing the selector theorem core in a proof assistant with a reproducible proof receipt. Preserve proposal-only status, immutable historical provenance, all exact-family freezes, P2-T06 independent Smuggling Auditor ownership, P2-T07 independent Refuter ownership, scientific-ledger status, and every downstream claim block."
+  latest_research_task_id: "RT-20260720-018"
+  latest_research_handoff_id: "handoff-0788"
+  latest_research_next_action: "Run exactly one bounded v21 P2-T06 Smuggling Auditor packet reviewing the P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and file or process metadata. Preserve P2-T07 independent Refuter ownership and every ontology, scientific-ledger, proof-authority, promotion, publication, and completed-derivation block."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

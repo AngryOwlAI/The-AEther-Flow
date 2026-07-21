@@ -1,0 +1,161 @@
+{
+  "check_count": 25,
+  "checks": [
+    {
+      "check_id": "source_sha256",
+      "evidence": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p2_t03_source_sha256",
+      "evidence": {
+        "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae",
+        "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json": "e8ced96541fa941e5a3b4ceaa8d7b48204acf7ca8ec342ac6b23dbbf5c470a73"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "p2_t04_fixture_sha256",
+      "evidence": {
+        "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae",
+        "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json": "e8ced96541fa941e5a3b4ceaa8d7b48204acf7ca8ec342ac6b23dbbf5c470a73"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_sorry",
+      "evidence": [],
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_admit",
+      "evidence": [],
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_axiom_declaration",
+      "evidence": [],
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_unsafe_declaration",
+      "evidence": [],
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_present:empty_fixed_iff_no_invariant_selector",
+      "evidence": "empty_fixed_iff_no_invariant_selector",
+      "status": "PASS"
+    },
+    {
+      "check_id": "axiom_query_present:empty_fixed_iff_no_invariant_selector",
+      "evidence": "empty_fixed_iff_no_invariant_selector",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_present:fixed_choice_unique_of_transitive",
+      "evidence": "fixed_choice_unique_of_transitive",
+      "status": "PASS"
+    },
+    {
+      "check_id": "axiom_query_present:fixed_choice_unique_of_transitive",
+      "evidence": "fixed_choice_unique_of_transitive",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_present:no_invariant_selector_of_transitive_distinct",
+      "evidence": "no_invariant_selector_of_transitive_distinct",
+      "status": "PASS"
+    },
+    {
+      "check_id": "axiom_query_present:no_invariant_selector_of_transitive_distinct",
+      "evidence": "no_invariant_selector_of_transitive_distinct",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_present:multiple_fixed_gives_multiple_selectors",
+      "evidence": "multiple_fixed_gives_multiple_selectors",
+      "status": "PASS"
+    },
+    {
+      "check_id": "axiom_query_present:multiple_fixed_gives_multiple_selectors",
+      "evidence": "multiple_fixed_gives_multiple_selectors",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_present:historical_sign_swap_no_invariant_selector",
+      "evidence": "historical_sign_swap_no_invariant_selector",
+      "status": "PASS"
+    },
+    {
+      "check_id": "axiom_query_present:historical_sign_swap_no_invariant_selector",
+      "evidence": "historical_sign_swap_no_invariant_selector",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_present:trivial_action_has_multiple_selectors",
+      "evidence": "trivial_action_has_multiple_selectors",
+      "status": "PASS"
+    },
+    {
+      "check_id": "axiom_query_present:trivial_action_has_multiple_selectors",
+      "evidence": "trivial_action_has_multiple_selectors",
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_fixture_identity",
+      "evidence": "FX-RESP-XEMPTY-SIGN-SWAP",
+      "status": "PASS"
+    },
+    {
+      "check_id": "lean_binary_present",
+      "evidence": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.local/rt-20260720-018-lean/toolchain/lean-4.30.0-darwin_aarch64/bin/lean",
+      "status": "PASS"
+    },
+    {
+      "check_id": "lean_version",
+      "evidence": "Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+      "status": "PASS"
+    },
+    {
+      "check_id": "proof_object_sha256",
+      "evidence": "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a",
+      "status": "PASS"
+    },
+    {
+      "check_id": "axiom_report_count",
+      "evidence": [
+        "'EqSrcSelectorKernel.empty_fixed_iff_no_invariant_selector' does not depend on any axioms",
+        "'EqSrcSelectorKernel.fixed_choice_unique_of_transitive' does not depend on any axioms",
+        "'EqSrcSelectorKernel.no_invariant_selector_of_transitive_distinct' does not depend on any axioms",
+        "'EqSrcSelectorKernel.multiple_fixed_gives_multiple_selectors' does not depend on any axioms",
+        "'EqSrcSelectorKernel.historical_sign_swap_no_invariant_selector' does not depend on any axioms",
+        "'EqSrcSelectorKernel.trivial_action_has_multiple_selectors' does not depend on any axioms"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_reported_axiom_dependencies",
+      "evidence": [
+        "'EqSrcSelectorKernel.empty_fixed_iff_no_invariant_selector' does not depend on any axioms",
+        "'EqSrcSelectorKernel.fixed_choice_unique_of_transitive' does not depend on any axioms",
+        "'EqSrcSelectorKernel.no_invariant_selector_of_transitive_distinct' does not depend on any axioms",
+        "'EqSrcSelectorKernel.multiple_fixed_gives_multiple_selectors' does not depend on any axioms",
+        "'EqSrcSelectorKernel.historical_sign_swap_no_invariant_selector' does not depend on any axioms",
+        "'EqSrcSelectorKernel.trivial_action_has_multiple_selectors' does not depend on any axioms"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary": {
+    "general_eqsrc_discharged": false,
+    "machine_checked_under_declared_definitions": true,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  },
+  "failure_count": 0,
+  "job_id": "AJ-RT-20260720-018-001",
+  "schema_id": "eqsrc-selector-formal-proof-validation.v1",
+  "status": "PASS",
+  "task_id": "RT-20260720-018"
+}

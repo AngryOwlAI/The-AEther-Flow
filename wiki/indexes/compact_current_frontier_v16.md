@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-017`
-- Latest handoff: `handoff-0787`
-- Current status: `v21_p2_t04_finite_countermodel_atlas_complete_p2_t05_selected_no_adoption_or_promotion`
+- Active task: `RT-20260720-018`
+- Latest handoff: `handoff-0788`
+- Current status: `v21_p2_t05_machine_checked_theorem_core_complete_p2_t06_selected_no_adoption_or_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-017`
-- Latest research handoff: `handoff-0787`
-- Latest research next action: Run exactly one bounded v21 P2-T05 Ontology Formalizer formal-proof packet mechanizing the selector theorem core in a proof assistant with a reproducible proof receipt. Preserve proposal-only status, immutable historical provenance, all exact-family freezes, P2-T06 independent Smuggling Auditor ownership, P2-T07 independent Refuter ownership, scientific-ledger status, and every downstream claim block.
+- Latest research task: `RT-20260720-018`
+- Latest research handoff: `handoff-0788`
+- Latest research next action: Run exactly one bounded v21 P2-T06 Smuggling Auditor packet reviewing the P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and file or process metadata. Preserve P2-T07 independent Refuter ownership and every ontology, scientific-ledger, proof-authority, promotion, publication, and completed-derivation block.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p2_t05_eqsrc_selector_theorem_formal_proof`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p2_t06_eqsrc_selector_theorem_smuggling_audit`
+- Role family: `smuggling-auditor@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Provide machine-checked mathematical evidence for the theorem core.
+- Milestone burden: Establish source-provenance integrity of the theorem statement and proof.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `d456e73465e49f6422e08f7eecf76ca9c9b38014e4d677e2028bbef327fc994b`
-- JSON SHA-256: `0cb23a924b1095f08a4c4727308d4e54bee9641c385e65aa203b1e07a94aa6fa`
+- YAML SHA-256: `7638bb8f3badd1a15e80a95afe6bf717a577537db1903b115c74933149190bf0`
+- JSON SHA-256: `b166f96dda0e3ec41e1c5e111b84f5c33884c12c6ed81e5a9ea1990594b1ec30`
 
 ## Authority Warning
 

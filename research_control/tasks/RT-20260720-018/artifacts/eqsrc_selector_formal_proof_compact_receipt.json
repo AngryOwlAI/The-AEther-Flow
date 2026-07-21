@@ -1,0 +1,60 @@
+{
+  "authority": {
+    "canonical_ontology_changed": false,
+    "distance_to_gr_ledger_changed": false,
+    "general_eqsrc_discharged": false,
+    "metric_use_ledger_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  },
+  "build": {
+    "archive_sha256_observed": "072dca4a38fbc0d3cedb96fea886cc243b424f2bd16247596200b9a9ab93f0f5",
+    "archive_sha256_published": "072dca4a38fbc0d3cedb96fea886cc243b424f2bd16247596200b9a9ab93f0f5",
+    "clean_build_count": 2,
+    "dependency_count": 1,
+    "proof_object_byte_reproducible": true,
+    "proof_object_sha256": "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a",
+    "source_sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356",
+    "status": "PASS",
+    "tool_commit": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+    "tool_version": "Lean 4.30.0"
+  },
+  "claim_boundary_summary": "Machine-checked under task-local definitions and hypotheses; no ontology derivation or adoption, physical-gauge interpretation, independent semantic audit, general EqSrc discharge, ledger change, promotion, publication, or completed derivation.",
+  "formalization": {
+    "custom_axiom_declaration_count": 0,
+    "fixed_locus_result_count": 2,
+    "group_action_definition_count": 2,
+    "historical_fixture_ids": [
+      "FX-RESP-XEMPTY-SIGN-SWAP"
+    ],
+    "historical_fixture_count": 1,
+    "named_theorem_count": 6,
+    "sorry_or_admit_count": 0,
+    "theorem_axiom_report_count": 6,
+    "theorems_with_axiom_dependencies": 0,
+    "transitive_corollary_count": 1,
+    "unsafe_declaration_count": 0
+  },
+  "job_id": "AJ-RT-20260720-018-001",
+  "plan_task_id": "P2-T05",
+  "recommendation_ids": [
+    "V21-R03",
+    "V21-R05",
+    "V21-R39"
+  ],
+  "schema_id": "eqsrc-selector-formal-proof-compact-receipt.v1",
+  "source_dependencies": {
+    "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae",
+    "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json": "e8ced96541fa941e5a3b4ceaa8d7b48204acf7ca8ec342ac6b23dbbf5c470a73"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260720-018",
+  "validator_ids": [
+    "lean_archive_digest",
+    "lean_clean_build",
+    "lean_axiom_report",
+    "proof_object_hash",
+    "task_local_validator"
+  ],
+  "work_item_status": "completed"
+}
