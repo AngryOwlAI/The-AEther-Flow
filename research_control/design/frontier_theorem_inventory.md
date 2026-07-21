@@ -24,6 +24,9 @@ snapshots, generated dependency graphs, semantic extracts, Obsidian notes, and
   `handoff-0439`.
 - P7-T02 v14 live-core population: `RT-20260702-013`, adding explicit
   v14 fields and separate tracked matter-semantics/precondition rows.
+- P3-T07 v21 EqSrc integration: `RT-20260720-028`, synchronizing the
+  registered selector theorem, exact historical-family freezes, quotient
+  adequacy freeze, and one non-promotional P4-T01 route selection.
 - Schema source:
   `research_control/design/frontier_theorem_inventory_schema_v1.md`.
 - Inventory source:
@@ -105,59 +108,146 @@ benchmark closure, or completed derivation.
 ### Item 2: source_equivalence_eqsrc
 
 - `frontier_item_id`: `source_equivalence_eqsrc`
-- `frontier_item_class`: `missing_theorem`
+- `frontier_item_class`: `theorem;obstruction;frozen_negative_route;missing_theorem`
 - `milestone`: `source_equivalence_eqsrc`
-- `object_type`: `missing_theorem`
-- `object_or_claim_name`: `EqSrc` draft and undischarged status.
+- `object_type`: `theorem;obstruction;frozen_negative_route;missing_theorem`
+- `object_or_claim_name`: `EqSrc` selector-theorem package, historical-family
+  freezes, quotient-candidate status, and still-undischarged general burden.
 - `status_layer_summary`:
-  - `control_status`: `draft_control_object_exists`
-  - `mathematical_status`: `general_equivalence_theorem_missing`
-  - `physical_status`: `downstream_gr_blocked`
-  - `promotion_status`: `draft_control_only`
-  - `overread_guard`: `no_source_law_adoption;no_benchmark_promotion;no_completed_derivation`
-- `three_tier_classification`: `open_or_blocked_physical_target`.
-- `linter_status`: `PASS`; P7-T02 inventory population claim-language scan.
-- `overread_guard`: `no_source_law_adoption;no_benchmark_promotion;no_completed_derivation`
-- `source_artifact_path`: `registries/DISTANCE_TO_GR_LEDGER.csv` row
-  `source_equivalence_eqsrc`; `research_control/design/gr_derivation_burden_map.md`.
-- `authority_level`: `registry_row;registered_control_markdown;draft_control`
-- `source_authority_type`: `distance_to_gr_ledger_row;registered_markdown_control`
+  - `control_status`: `proposal_theorem_package_and_local_freezes_recorded`
+  - `mathematical_status`: `conditional_selector_theorem_valid_scoped_obstructions_and_local_freezes_general_eqsrc_missing`
+  - `physical_status`: `no_physical_observational_equivalence_or_gauge_and_downstream_gr_blocked`
+  - `promotion_status`: `draft_control_only_no_promotion`
+  - `overread_guard`: `no_source_law_adoption;no_global_theory_rejection;no_future_source_extension_impossibility;no_benchmark_promotion;no_completed_derivation`
+- `three_tier_classification`: `mixed_with_explicit_boundaries`.
+- `linter_status`: `PASS`; P3-T07 task-local, inventory, and changed-claim
+  validation.
+- `overread_guard`: `no_canonical_ontology_edit;no_source_law_adoption;no_global_theory_rejection;no_future_source_extension_impossibility;no_benchmark_promotion;no_completed_derivation`
+- `source_artifact_path`:
+  `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex`;
+  `research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_v1.tex`;
+  `research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex`;
+  `research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_receipt.md`;
+  `research_control/tasks/RT-20260720-024/artifacts/eqsrc_representative_irrelevance_theorem_v1.tex`;
+  `research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex`;
+  `research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex`;
+  `research_control/tasks/RT-20260720-027/artifacts/eqsrc_invariant_functor_quotient_smuggling_audit_v1.tex`;
+  `registries/DISTANCE_TO_GR_LEDGER.csv` row `source_equivalence_eqsrc`.
+- `authority_level`: `registered_tex_artifact;registered_control_markdown;registry_row;draft_control`
+- `source_authority_type`: `registered_tex_artifact;refuter_artifact;registered_markdown_control;distance_to_gr_ledger_row`
 - `assumptions`:
-  - General source equivalence under variations remains a required upstream
-    burden.
-  - Local or finite witnesses do not discharge the general equivalence theorem.
-- `definitions_used`: `EqSrc`; source equivalence; source variation;
-  draft/control burden.
-- `definitions_introduced`: `none`; the row summarizes an open equivalence burden.
-- `theorem_like_claims`: Missing general source-equivalence theorem under the declared variation regime.
-- `statement_or_decision`: `EqSrc` has draft object status, but the general
-  equivalence theorem remains missing.
-- `mathematical_conclusion`: none_supplied; the theorem is open.
-- `audits_passed`: `none`.
-- `stress_results`: `none`.
-- `gate_chair_results`: `none`.
-- `fail_closed_branches`: `none`.
-- `known_obstructions`: General `EqSrc` theorem remains undischarged; local witnesses do not supply it.
+  - The selector theorem fixes a small proposal groupoid, a Set-valued
+    eligible-choice functor, component representatives and transports, and a
+    separately supplied relation-valued natural transformation before
+    selector evaluation.
+  - Full-category extension needs separately supplied noninvertible-arrow
+    coherence; arbitrary-family existence needs an actual product element.
+  - The representative-irrelevance theorem concerns declared source readouts,
+    not a complete operational observable algebra or physical gauge.
+  - The quotient candidate is conditional on prospectively fixed category,
+    functor, operation, comparison, and variation data.
+  - General source equivalence under independently justified variations
+    remains an upstream burden; local and finite results do not discharge it.
+- `definitions_used`: `EqSrc`; source-natural deterministic selector;
+  automorphism fixed locus; selector-induced relation image; source readout
+  orbit factorization; invariant-functor image-isomorphism kernel; local
+  family freeze; draft/control burden.
+- `definitions_introduced`: `none`; P3-T07 only synchronizes registered
+  theorem, obstruction, freeze, and missing-theorem status.
+- `theorem_like_claims`:
+  - Deterministic total selectors on the certified proposal core are
+    classified by a product of automorphism fixed loci.
+  - Empty fixed loci give scoped no-selector obstructions; distinct relation
+    images in a multiple fixed locus give qualified nonuniqueness.
+  - Declared source readouts factor through representative orbits under the
+    P3-T03 assumptions, without proving physical irrelevance.
+  - The P3-T05 invariant-functor kernel is a conditional mathematical
+    equivalence relation under IFQ1--IFQ6, not an adopted or general `EqSrc`.
+- `statement_or_decision`: The general selector theorem subsumes the shared
+  selector-existence, fixed-point, naturality, and relation-image-nonuniqueness
+  coordinates of the five exact historical families without reopening or
+  adopting them. All five families remain locally frozen. The exact P3-T05
+  quotient candidate is conditionally valid but locally frozen for adequacy
+  after arbitrary-partition and interface-descent stress. General `EqSrc` remains undischarged.
+- `mathematical_conclusion`: On the fixed proposal domain, selector space is
+  the product of representative automorphism fixed loci with the stated
+  choice and full-category guards. This narrows deterministic selector and
+  relation-image claims, but does not derive the proposal domain, a physical
+  equivalence, or general `EqSrc`.
+- `audits_passed`:
+  - P2-T06 found no hidden target or process import in the fixed theorem text,
+    subject to declared-domain provenance and a scoped P2-T04 metric defect.
+  - P3-T06 found the quotient theorem conditionally source-pure under its
+    stated hypotheses while leaving its functor and operation data underived.
+- `stress_results`:
+  - P2-T07 preserved the deterministic theorem under nonfaithful actions and
+    multiple components, excluded partial maps from its declared domain, and
+    refuted stochastic and altered-variation overreads.
+  - P3-T06 proved every finite partition can be a prospective functor kernel
+    and supplied a marked-interface operation countermodel.
+- `gate_chair_results`: `none`; no ontology proposal, source law, or physical
+  equivalence has an adoption or rejection verdict. P2-T08 was internal AI red-team review, not independent external human review or replication.
+- `fail_closed_branches`:
+  - Five exact historical families remain under their P1-T03 local freeze
+    labels and reopening criteria.
+  - The exact P3-T05 generic quotient schema remains locally frozen until its
+    source-derivation, nontriviality, interface-descent, and physical-bridge
+    criteria are met.
+- `known_obstructions`:
+  - Current ontology does not derive the family-specific discriminator,
+    orientation, partition, root, ordered action, component, morphism, or
+    variation packages.
+  - The quotient candidate admits arbitrary finite partitions and lacks
+    general interface-descent evidence.
+  - Structural invariance, quotienting, or readout factorization is not by
+    itself physical observational equivalence or gauge.
 - `physical_non_conclusions`:
-  - No source law is adopted.
-  - No downstream GR, benchmark, or completed-derivation claim follows.
-- `forbidden_overread`: Local or finite witness status as the general `EqSrc` theorem.
-- `downstream_blocked_targets`: RetainH, GenH, robust source-manifold obligations, downstream GR recovery.
+  - No canonical ontology or source law is adopted or rejected.
+  - No mathematical quotient or structural automorphism is identified with
+    physical observational equivalence or gauge.
+  - No general `EqSrc`, RetainH, GenH, source manifold, effective metric,
+    matter-coupling, Einstein-equation, benchmark, or completed-derivation
+    claim follows.
+  - Local freezes do not imply global theory rejection or future
+    source-extension impossibility.
+- `forbidden_overread`: Conditional selector, factorization, or quotient
+  theorems as ontology-derived physical `EqSrc`; local family or candidate
+  freezes as global no-go; internal AI review as external human validation.
+- `downstream_blocked_targets`: General `EqSrc`; RetainH; GenH; robust
+  source-manifold obligations; effective metric; matter coupling; Einstein
+  equations; benchmark promotion; Gate Chair closure; completed derivation.
 - `allowed_reuse`:
-  - Use as an upstream dependency for RetainH, GenH, finite-variation, and
-    source-manifold obligations.
+  - Reuse the fixed-point theorem only with its proposal-domain, product, and
+    full-category guards.
+  - Reuse historical family and quotient results as scoped negative-route
+    evidence with exact identities and reopening criteria.
+  - Use this inventory item as an upstream dependency and source-assumption
+    checklist for P4-T01.
 - `blocked_reuse`:
-  - Do not treat any local branch, task completion, renderer, or registry PASS
-    as the general `EqSrc` theorem.
-- `dependency_items`: `source_ontology_primitives`
-- `missing_theorem_or_primitive`: General source-equivalence theorem under the
-  declared variation regime.
-- `next_theorem_needed`: General source-equivalence theorem under the declared variation regime.
-- `candidate_next_task`: Future bounded theorem or obstruction packet only if
-  selected by live continue-research routing.
-- `overread_guard`: `no_source_law_adoption;no_benchmark_promotion;no_completed_derivation`
-- `external_review_notes`: This is an open theorem burden, not a negative
-  result.
+  - Do not reconstruct or rename a frozen family or the exact P3-T05
+    candidate without satisfying a named reopening criterion.
+  - Do not treat task completion, validators, generated derivatives, or
+    registry state as source-side selection or proof authority.
+  - Do not infer physical gauge, operational indistinguishability, general
+    `EqSrc`, or downstream GR recovery from the scoped theorems.
+- `dependency_items`: `source_ontology_primitives`; `RT-20260720-010` through
+  `RT-20260720-028`; `registries/DISTANCE_TO_GR_LEDGER.csv` row
+  `source_equivalence_eqsrc`.
+- `missing_theorem_or_primitive`: A source-derived or lawfully adopted
+  selector and variation regime, or an independently justified physical
+  irrelevance and interface-completeness theorem sufficient for general
+  `EqSrc`.
+- `next_theorem_needed`: Source-derived selector, morphism, and variation law,
+  or a physical irrelevance and interface-completeness theorem under
+  independently justified observable semantics.
+- `candidate_next_task`: `P4-T01` comprehensive source-assumption ledger;
+  this inventory update does not execute it.
+- `overread_guard`: `no_canonical_ontology_edit;no_source_law_adoption;no_global_theory_rejection;no_future_source_extension_impossibility;no_benchmark_promotion;no_completed_derivation`
+- `external_review_notes`: Check the fixed proposal-domain assumptions,
+  product and baseline-selector guards, P2-T04 metric naming defect, lack of
+  independent external human review, family-specific source-derivation debt,
+  quotient interface countermodel, and strict separation between structural
+  invariance and physical equivalence.
 
 ### Item 3: retain_h
 

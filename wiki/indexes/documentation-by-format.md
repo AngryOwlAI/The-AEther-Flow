@@ -469,6 +469,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-018-PROOF-README-EQSRC-SELECTOR-FORMAL-PROOF` `research_control/tasks/RT-20260720-018/artifacts/proof/README.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-019-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-019-PARENT-FUSION-NOTES-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-019/artifacts/parent_fusion_notes_eqsrc_selector_theorem_smuggling_audit.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-028-EQSRC-FAMILY-FREEZE-AND-FRONTIER-DECISION-RECEIPT` `research_control/tasks/RT-20260720-028/artifacts/eqsrc_family_freeze_and_frontier_decision_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-028-PARENT-FUSION-NOTES-EQSRC-FAMILY-FREEZE-INVENTORY` `research_control/tasks/RT-20260720-028/artifacts/parent_fusion_notes_eqsrc_family_freeze_inventory.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -1006,6 +1008,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-018-PROOF-README-EQSRC-SELECTOR-FORMAL-PROOF` `wiki/markdown/md-research-control-tasks-rt-20260720-018-proof-readme-eqsrc-selector-formal-proof.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-019-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-019-eqsrc-selector-theorem-smuggling-audit-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-019-PARENT-FUSION-NOTES-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260720-019-parent-fusion-notes-eqsrc-selector-theorem-smuggling-audit.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-028-EQSRC-FAMILY-FREEZE-AND-FRONTIER-DECISION-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-028-eqsrc-family-freeze-and-frontier-decision-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-028-PARENT-FUSION-NOTES-EQSRC-FAMILY-FREEZE-INVENTORY` `wiki/markdown/md-research-control-tasks-rt-20260720-028-parent-fusion-notes-eqsrc-family-freeze-inventory.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`

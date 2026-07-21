@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-027`
-- Latest handoff: `handoff-0797`
-- Current status: `v21_p3_t06_conditional_local_source_purity_pass_arbitrary_partition_and_interface_obstruction_exact_candidate_locally_frozen_p3_t07_selected_no_adoption_or_distance_delta`
+- Active task: `RT-20260720-029`
+- Latest handoff: `handoff-0799`
+- Current status: `v21_p3_t07_checkpoint_recovered_mutable_frontier_inventory_preflight_compatibility_pass_p4_t01_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-027`
-- Latest research handoff: `handoff-0797`
-- Latest research next action: Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate.
+- Latest research task: `RT-20260720-029`
+- Latest research handoff: `handoff-0799`
+- Latest research next action: Run one bounded v21 P4-T01 ontology-formalizer packet to create the comprehensive source-assumption ledger across frontier objects before any protected ontology-regime choice; do not adopt or reject an ontology regime.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p3_t07_eqsrc_family_freeze_and_theorem_inventory`
-- Role family: `theoretical-continuation-selector@0.1.0`
-- Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Close the route orbit and establish a clean next scientific frontier.
+- Route ID: `v21_p4_t01_comprehensive_source_assumption_ledger`
+- Role family: `ontology-formalizer@0.2.0`
+- Target milestone: `source_ontology`
+- Milestone burden: Make assumption debt visible before selecting the ontology regime.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ca47a92fd2b510693d9f93f737ae587fde4dfb692894462d5d317ddaaaaa13c0`
-- JSON SHA-256: `d279fe0eca9f06ce8431e6d76ffb10fe1cd89e17b94624405ede83cbc9f7e289`
+- YAML SHA-256: `2f383474ba3d7e0a622ee7d61cbbc71613aebe9fa324906c980e1ac354242bdf`
+- JSON SHA-256: `2751b1154cdbc7bdea090143ac08e86dd1c7ff40992e16e2d57b692668d219dc`
 
 ## Authority Warning
 

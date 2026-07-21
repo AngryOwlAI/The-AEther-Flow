@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-027` and `handoff-0797`.
+`RT-20260720-029` and `handoff-0799`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-027` |
-| Latest handoff ID | `handoff-0797` |
-| Current status | `v21_p3_t06_conditional_local_source_purity_pass_arbitrary_partition_and_interface_obstruction_exact_candidate_locally_frozen_p3_t07_selected_no_adoption_or_distance_delta` |
+| Active task ID | `RT-20260720-029` |
+| Latest handoff ID | `handoff-0799` |
+| Current status | `v21_p3_t07_checkpoint_recovered_mutable_frontier_inventory_preflight_compatibility_pass_p4_t01_ready` |
 | V16 completed | false |
-| Current route family | v21 p3 t07 eqsrc family freeze and theorem inventory |
-| Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate. |
-| Required next authority | One P3-T07 ontology-law-research-packet may record which historical EqSrc candidate families are subsumed frozen or still open, update the theorem inventory, and select one clean next frontier while preserving negative results and explicit reopening criteria. |
-| Next recommended action | Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate. |
+| Current route family | v21 p4 t01 comprehensive source assumption ledger |
+| Target derivation milestone | `source_ontology` |
+| Current burden | `source_ontology_primitives`; status: P4-T01 assumption-ledger packet dependency-ready after P3-T07 compatibility recovery |
+| Required next authority | One P4-T01 ontology-law-research-packet may inventory every explicit source-side assumption used by EqSrc, RetainH, GenH, M_src, g_eff, matter coupling, and Einstein-equation frontier objects; classify each assumption by provenance and authority; and identify adoption debt without adopting or rejecting an ontology regime. |
+| Next recommended action | Run one bounded v21 P4-T01 ontology-formalizer packet to create the comprehensive source-assumption ledger across frontier objects before any protected ontology-regime choice; do not adopt or reject an ontology regime. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-027` |
-| Latest research handoff ID | `handoff-0797` |
-| Latest research next action | Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate. |
+| Latest research task ID | `RT-20260720-029` |
+| Latest research handoff ID | `handoff-0799` |
+| Latest research next action | Run one bounded v21 P4-T01 ontology-formalizer packet to create the comprehensive source-assumption ledger across frontier objects before any protected ontology-regime choice; do not adopt or reject an ontology regime. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-027/00_TASK.yaml`.
-- Active task objective: Execute exactly one bounded v21 P3-T06 Smuggling Auditor packet that holds the registered P3-T05 candidate hash fixed, audits transitive source provenance and hidden target or process imports, and performs the plan-authorized paired non-promotional stress of arbitrary-partition, incomplete-invariant, interface-composition, relabeling, component, and quotient-collapse cases.
-- Latest handoff path: `research_control/handoffs/handoff-0797.yaml`.
-- Latest handoff summary: RT-20260720-027 completed only v21 P3-T06 against the byte-fixed P3-T05 candidate. IFQ1 through IFQ6 survive under their stated hypotheses and no explicit target or process input was found. A finite discrete theorem proves every finite partition is a prospective functor image-isomorphism kernel including identity and universal extremes. Graph stress preserves relabeling and component controls but exposes incomplete invariant collapse. Marked K2 and P3 inputs share H=(1,0), while endpoint-edge addition leaves K2 at (1,0) and sends P3 to C3 at (1,1); therefore arbitrary interface operation congruence fails without the comparison data required by IFQ2. The exact generic schema is locally frozen under four reopening evidence classes. No repair adoption rejection physical EqSrc ledger promotion publication global no-go or completed derivation occurred.
-- Current route family: v21 p3 t07 eqsrc family freeze and theorem inventory.
-- Next recommended action: Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate.
+- Active task path: `research_control/tasks/RT-20260720-029/00_TASK.yaml`.
+- Active task objective: Add the registered frontier theorem inventory to the established mutable memory-preflight source set, prove the historical-hash compatibility behavior with one focused regression case, preserve the complete RT-20260720-028 scientific payload byte-for-byte, and checkpoint the combined transaction before selecting P4-T01.
+- Latest handoff path: `research_control/handoffs/handoff-0799.yaml`.
+- Latest handoff summary: RT-20260720-029 repaired the exact mutable frontier-theorem-inventory memory-preflight compatibility omission with one validator entry and one focused regression case. The complete RT-20260720-028 P3-T07 scientific payload remains unchanged: five historical families and the exact quotient route remain locally frozen, general EqSrc remains undischarged, and P4-T01 remains the selected next scientific packet. Required precheckpoint validation passes and the combined transaction is ready for governed checkpoint; P4-T01 has not been executed.
+- Current route family: v21 p4 t01 comprehensive source assumption ledger.
+- Next recommended action: Run one bounded v21 P4-T01 ontology-formalizer packet to create the comprehensive source-assumption ledger across frontier objects before any protected ontology-regime choice; do not adopt or reject an ontology regime.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate.
+Run one bounded v21 P4-T01 ontology-formalizer packet to create the comprehensive source-assumption ledger across frontier objects before any protected ontology-regime choice; do not adopt or reject an ontology regime.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-027`;
-- latest handoff: `handoff-0797`;
-- current status: `v21_p3_t06_conditional_local_source_purity_pass_arbitrary_partition_and_interface_obstruction_exact_candidate_locally_frozen_p3_t07_selected_no_adoption_or_distance_delta`;
+- active task: `RT-20260720-029`;
+- latest handoff: `handoff-0799`;
+- current status: `v21_p3_t07_checkpoint_recovered_mutable_frontier_inventory_preflight_compatibility_pass_p4_t01_ready`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0797.yaml`
-- `research_control/tasks/RT-20260720-027/00_TASK.yaml`
+- `research_control/handoffs/handoff-0799.yaml`
+- `research_control/tasks/RT-20260720-029/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0797*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0799*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

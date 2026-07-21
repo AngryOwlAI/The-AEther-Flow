@@ -1,0 +1,215 @@
+schema_id: "v21_p3_t07_eqsrc_historical_family_freeze_ledger_v1"
+status: "draft/control"
+task_id: "RT-20260720-028"
+job_id: "AJ-RT-20260720-028-001"
+plan_task_id: "P3-T07"
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Close the route orbit and establish a clean next scientific frontier."
+classification_scope: "The five immutable v21 P1 historical families plus the exact P3-T05 invariant-functor quotient candidate; this is scoped control classification, not ontology adoption or global rejection."
+source_snapshots:
+  family_inventory:
+    path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_inventory.json"
+    sha256: "5a823d46054fa75ee7f5f7814aa76ff52ea3e8d8868547229d5b0b2a26e0685e"
+  prior_freeze_manifest:
+    path: "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_manifest.yaml"
+    sha256: "fc0d36a7ea96b6aaaafced309c73c6bb2e71d969ee679d5c286afc2753a95b43"
+  general_selector_theorem:
+    object_id: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+    path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    sha256: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  selector_theorem_audit:
+    path: "research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_v1.tex"
+    sha256: "d093d7b0afbe322cf537644de54f17156ea2427fcc0988f4fc8fb305e93a0f76"
+  selector_theorem_stress:
+    path: "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_stress_cases.json"
+    sha256: "4b7bc68f625b119060b5abf09066c99a55235fa2676aaa4d01b293ae43eb3bf5"
+  source_extension_placements:
+    path: "research_control/tasks/RT-20260720-023/artifacts/eqsrc_source_extension_historical_placements_v1.yaml"
+    sha256: "b0d5a6f5df55799ab49f85cd1a002728a938fd643cc4c8cb8dbe1483d37d35b2"
+  representative_irrelevance_theorem:
+    object_id: "EQSRC-REPRESENTATIVE-IRRELEVANCE-THEOREM-V1"
+    path: "research_control/tasks/RT-20260720-024/artifacts/eqsrc_representative_irrelevance_theorem_v1.tex"
+    sha256: "1a08e02c462d4401a3ad75219d7903c598f996d4011105baab31f07ba1dab0d1"
+  probabilistic_dynamical_theorem:
+    object_id: "EQSRC-PROBABILISTIC-DYNAMICAL-SELECTION-THEOREM-V1"
+    path: "research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex"
+    sha256: "c71673f1a79f62b7afce6cd55663594419a234ac16c5a737128bb88b9e4e39a4"
+  quotient_candidate:
+    object_id: "EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-CANDIDATE-V1"
+    path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+    sha256: "badc60c72ff16f84fe88568b825ff738a8f160a225f011715f027c1da2cfa1c3"
+  quotient_audit:
+    object_id: "TEX-V21-P3-T06-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-AUDIT"
+    path: "research_control/tasks/RT-20260720-027/artifacts/eqsrc_invariant_functor_quotient_smuggling_audit_v1.tex"
+    sha256: "0e3991d70dd7754149821d132808062dd5bf153c810086629686e45593c78c1c"
+  quotient_stress:
+    path: "research_control/tasks/RT-20260720-027/artifacts/eqsrc_invariant_functor_quotient_stress_cases_v1.json"
+    sha256: "0f307c3bb437d260ccf123e28d5fbd3144052bb8e6a0a7a910b72d3ae6b5ac08"
+family_count: 5
+candidate_count: 7
+locally_frozen_family_count: 5
+reopened_family_count: 0
+still_open_exact_family_count: 0
+historical_artifacts_preserved: true
+shared_selector_theorem_result:
+  theorem_status: "conditionally_valid_on_fixed_proposal_domain"
+  selector_classification: "Deterministic total source-natural selectors on the certified groupoid core are classified by the product of automorphism fixed loci, subject to an actual product element and separately supplied full-category coherence."
+  obstruction_scope: "Empty fixed loci obstruct deterministic point selectors; multiple fixed loci with distinct K-images and a nonempty complementary product give relation-image nonuniqueness."
+  subsumption_scope: "The theorem subsumes the shared selector-existence, fixed-point, naturality, and relation-image-nonuniqueness coordinates of the five families; it does not derive any family's distinguished source data, morphism class, variation law, or physical semantics."
+  stochastic_scope: "not_covered; the transitive C3 stress case has no invariant point but does have an invariant uniform probability measure"
+  physical_scope: "not_physical_gauge_or_observational_equivalence"
+  proof_authority: false
+reopening_criteria:
+  - criterion_id: "REOPEN-EQSRC-CURRENT-ONTOLOGY-DERIVATION-001"
+    qualification_class: "current_ontology_derivation"
+    evidence_required: "A tracked proof derives the decisive selector and its morphism and variation behavior from registered current ontology without added primitives or target import."
+    opens: "only the exact family whose missing selector is derived"
+  - criterion_id: "REOPEN-EQSRC-GENERAL-SELECTOR-THEOREM-002"
+    qualification_class: "general_theorem"
+    evidence_required: "A tracked proposal-neutral theorem establishes existence, uniqueness, naturality, fixed-point, or obstruction conditions for the relevant selector class and maps the exact family to those hypotheses."
+    opens: "a theorem-directed audit or construction packet, not automatic family adoption"
+    current_evaluation: "satisfied only for theorem-directed analysis already performed; no family adoption or automatic reopening follows"
+  - criterion_id: "REOPEN-EQSRC-PHYSICAL-IRRELEVANCE-003"
+    qualification_class: "physical_irrelevance_theorem"
+    evidence_required: "A tracked source-side theorem proves that every admissible choice yields the same declared physical observable or equivalence class under independently justified physical morphisms."
+    opens: "only the family and observable covered by the theorem"
+  - criterion_id: "REOPEN-EQSRC-MATERIAL-LEDGER-DELTA-004"
+    qualification_class: "material_ledger_delta"
+    evidence_required: "A separately authorized tracked result changes the active derivation burden in an independently validated way; validator or task-count changes do not qualify."
+    opens: "only the route named by the authoritative changed burden"
+  - criterion_id: "REOPEN-EQSRC-PROTECTED-ONTOLOGY-AUTHORITY-005"
+    qualification_class: "human_gate"
+    evidence_required: "Explicit protected human Gate Chair authority names the exact ontology proposal and scope."
+    opens: "only the authorized protected decision; no implicit promotion"
+families:
+  - family_id: "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR"
+    member_candidate_ids: ["EQSRC-IDISC-V1", "EQSRC-IDISC-V2", "EQSRC-IDISC-V3"]
+    scoped_freeze_label: "EQSRC-FAMILY-FREEZE-IDISC-V21-P1-T03"
+    shared_obstruction_coordinate: "fixed-locus existence and K-image nonuniqueness for a supplied discriminator or response-choice space"
+    theorem_subsumption_status: "shared_selector_coordinate_subsumed"
+    family_specific_open_obligations:
+      - "derive the chain package, differential, or discriminator from current ontology"
+      - "derive admissible morphisms and physical variations"
+      - "show robustness beyond the declared finite controls"
+    reopening_evaluation:
+      current_ontology_derivation: "unmet"
+      general_selector_theorem: "mapped_and_audited_but_not_automatic_reopening"
+      physical_irrelevance_theorem: "unmet"
+      material_ledger_delta: "unmet"
+      protected_ontology_authority: "unmet"
+    reopened: false
+    final_disposition: "family_locally_frozen"
+    global_no_go: false
+  - family_id: "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE"
+    member_candidate_ids: ["EQSRC-CYCLE-BOUNDARY-V1"]
+    scoped_freeze_label: "EQSRC-FAMILY-FREEZE-CYCLE-BOUNDARY-V21-P1-T03"
+    shared_obstruction_coordinate: "automorphism fixed-locus obstruction for a selected oriented mark or boundary line"
+    theorem_subsumption_status: "shared_selector_coordinate_subsumed"
+    family_specific_open_obligations:
+      - "derive the oriented mark or associated line from current ontology"
+      - "derive admissible independent variations"
+      - "show physical rather than merely structural orientation"
+    reopening_evaluation:
+      current_ontology_derivation: "unmet"
+      general_selector_theorem: "mapped_and_audited_but_not_automatic_reopening"
+      physical_irrelevance_theorem: "unmet"
+      material_ledger_delta: "unmet"
+      protected_ontology_authority: "unmet"
+    reopened: false
+    final_disposition: "family_locally_frozen"
+    global_no_go: false
+  - family_id: "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR"
+    member_candidate_ids: ["EQSRC-ORIENTATION-TORSOR-V1"]
+    scoped_freeze_label: "EQSRC-FAMILY-FREEZE-ORIENTATION-TORSOR-V21-P1-T03"
+    shared_obstruction_coordinate: "natural line or section selection and relation-image uniqueness on an unpointed orientation torsor"
+    theorem_subsumption_status: "shared_selector_coordinate_subsumed"
+    family_specific_open_obligations:
+      - "derive partition provenance and associated-line selection"
+      - "derive independently justified physical morphisms and variations"
+      - "separate relation descent from scalar-fibre selection"
+    reopening_evaluation:
+      current_ontology_derivation: "unmet"
+      general_selector_theorem: "mapped_and_audited_but_not_automatic_reopening"
+      physical_irrelevance_theorem: "unmet"
+      material_ledger_delta: "unmet"
+      protected_ontology_authority: "unmet"
+    reopened: false
+    final_disposition: "family_locally_frozen"
+    global_no_go: false
+  - family_id: "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION"
+    member_candidate_ids: ["EQSRC-ROOTED-PARTITION-V1"]
+    scoped_freeze_label: "EQSRC-FAMILY-FREEZE-ROOTED-PARTITION-V21-P1-T03"
+    shared_obstruction_coordinate: "transitive root-choice fixed-locus obstruction and relation nonuniqueness under supplied roots"
+    theorem_subsumption_status: "shared_selector_coordinate_subsumed"
+    family_specific_open_obligations:
+      - "derive transition projection and singleton-root provenance"
+      - "prove path-parity admission and functoriality"
+      - "derive admissible physical variations"
+    reopening_evaluation:
+      current_ontology_derivation: "unmet"
+      general_selector_theorem: "mapped_and_audited_but_not_automatic_reopening"
+      physical_irrelevance_theorem: "unmet"
+      material_ledger_delta: "unmet"
+      protected_ontology_authority: "unmet"
+    reopened: false
+    final_disposition: "family_locally_frozen"
+    global_no_go: false
+  - family_id: "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT"
+    member_candidate_ids: ["EQSRC-GRADED-ORBIT-ROOT-V1"]
+    scoped_freeze_label: "EQSRC-FAMILY-FREEZE-GRADED-ORBIT-ROOT-V21-P1-T03"
+    shared_obstruction_coordinate: "fixed-locus and relation-image classification for supplied ordered-action, component, grading, and root choices"
+    theorem_subsumption_status: "shared_selector_coordinate_subsumed"
+    family_specific_open_obligations:
+      - "derive the ordered action and full source component"
+      - "derive positivity, unique root, and common grading"
+      - "derive admissible morphisms and physical variations"
+    reopening_evaluation:
+      current_ontology_derivation: "unmet"
+      general_selector_theorem: "mapped_and_audited_but_not_automatic_reopening"
+      physical_irrelevance_theorem: "unmet"
+      material_ledger_delta: "unmet"
+      protected_ontology_authority: "unmet"
+    reopened: false
+    final_disposition: "family_locally_frozen"
+    global_no_go: false
+quotient_route:
+  candidate_id: "EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-CANDIDATE-V1"
+  candidate_sha256: "badc60c72ff16f84fe88568b825ff738a8f160a225f011715f027c1da2cfa1c3"
+  conditional_theorem_status: "valid_under_IFQ1_through_IFQ6_hypotheses"
+  source_purity_status: "conditional_local_pass"
+  source_derivation_status: "not_derived_from_current_ontology"
+  adequacy_status: "obstructed_by_arbitrary_partition_capacity_and_missing_interface_descent"
+  scoped_freeze_label: "EQSRC-P3-T05-INVARIANT-FUNCTOR-EXACT-CANDIDATE-ADEQUACY-FREEZE"
+  final_disposition: "exact_candidate_locally_frozen"
+  reopening_criteria:
+    - "source-derived or lawfully authorized C, D, and I free of forbidden inputs"
+    - "nontriviality, minimality, or uniqueness evidence excluding arbitrary partitions and identity or constant extremes"
+    - "complete interface or explicit quotient-descent comparison certificates for every intended operation"
+    - "separately derived physical observation, matter-response, dynamics, and gauge bridge before physical interpretation"
+  physical_observational_equivalence_established: false
+  general_eqsrc_discharged: false
+  global_no_go: false
+authority_boundary:
+  classification: "blocked_adoption_open_continuation"
+  exact_family_reconstruction_authorized: false
+  quotient_candidate_reconstruction_authorized: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  physical_equivalence_or_gauge_authorized: false
+  general_eqsrc_discharged: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  external_publication_authorized: false
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+next_distinct_frontier:
+  plan_task_id: "P4-T01"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  objective: "Create the comprehensive source-assumption ledger before any protected ontology-regime choice."
+  materially_distinct: true
+  distinction: "P4-T01 inventories assumption provenance across frontier objects and does not reconstruct a selector family or quotient candidate."
+  requires_human_gate: false
+  execute_now: false

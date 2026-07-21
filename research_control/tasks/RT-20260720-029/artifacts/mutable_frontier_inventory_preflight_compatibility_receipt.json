@@ -1,0 +1,54 @@
+{
+  "schema_id": "mutable-frontier-inventory-preflight-compatibility-receipt.v1",
+  "task_id": "RT-20260720-029",
+  "job_id": "AJ-RT-20260720-029-001",
+  "status": "PASS",
+  "created_at": "2026-07-21T17:55:35Z",
+  "diagnosis": {
+    "failed_gate": "research_control_diff",
+    "pre_repair_status": "FAIL_74_MUTABLE_INVENTORY_PREFLIGHT_COMPATIBILITY",
+    "blocker_path": "research_control/tasks/RT-20260720-028/artifacts/validation_blocker_mutable_inventory_preflight_v1.yaml",
+    "blocker_sha256": "cb105f85a1aa3c8069f80dc8c93483c7f3ce85f5340fe5ee7bc6b66a0458c759",
+    "root_cause": "The registered mutable frontier theorem inventory object ID was absent from the validator's existing mutable memory-preflight source set."
+  },
+  "repair": {
+    "object_id": "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY",
+    "canonical_path": "research_control/design/frontier_theorem_inventory.md",
+    "canonical_source_sha256": "5158603122dda2ec768293d5659e51b0d18cbc52689c2caf9a1c266a4d105fce",
+    "validator_path": "scripts/research_control/validate_research_control.py",
+    "validator_sha256": "275df59b7207b9a39b25fcea063bbed9bae017eccb80a3f7e21ee4139f473954",
+    "test_path": "tests/test_research_control.py",
+    "test_sha256": "d26bb3161187abf4f9c76a0bc9bb9445fee9341ec5240ae4eb9a3a58ad75b457",
+    "production_line_count": 1,
+    "test_line_count": 1
+  },
+  "behavior": {
+    "historical_mutable_snapshot_hash_allowed": true,
+    "active_task_current_hash_required": true,
+    "immutable_source_current_hash_required": true,
+    "unknown_or_arbitrary_mutable_source_allowed": false
+  },
+  "preserved_predecessor": {
+    "task_id": "RT-20260720-028",
+    "job_id": "AJ-RT-20260720-028-001",
+    "completion_sha256": "2dd90ce651018ad1053cc5fd9dfe6f0ce117fcba5134fa190fe648823c787007",
+    "handoff_yaml_sha256": "0bf09b81e2c31576358ffba941069feb1aafc6259529440289cd52642b40734e",
+    "handoff_markdown_sha256": "cb4e5a817fa54b247c03cb7e30e527156e7e63f0144e4f77811563b796a07f28",
+    "scientific_payload_changed": false
+  },
+  "focused_validation": {
+    "test": "tests.test_research_control.ResearchControlTests.test_memory_preflight_allows_historical_mutable_contract_hashes",
+    "status": "PASS",
+    "validator_test_module_status": "PASS",
+    "p3_t07_task_local_status": "PASS",
+    "p3_t07_task_local_check_count": 36,
+    "p3_t07_task_local_failed_check_count": 0
+  },
+  "authority_boundary": {
+    "project_system_change_only": true,
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "p4_t01_executed": false
+  }
+}

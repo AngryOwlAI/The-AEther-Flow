@@ -1,0 +1,661 @@
+validation_status: "FAIL"
+final_repository_validation_status: "FAIL"
+job_id: "AJ-RT-20260720-028-001"
+completion_id: "AJC-AJ-RT-20260720-028-001"
+task_id: "RT-20260720-028"
+task_type: "v21_eqsrc_family_freeze_theorem_inventory_selector"
+decision_id: "DDR-20260720-028"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260720-028"
+status: "blocked"
+created_at: "2026-07-21T16:26:52Z"
+started_at: "2026-07-21T16:26:52Z"
+completed_at: "2026-07-21T17:15:44Z"
+objective: "Execute only v21 P3-T07 by integrating immutable historical EqSrc family, selector-theorem, audit, stress, representative-irrelevance, probabilistic-dynamical, and quotient evidence; preserve or narrow scoped freezes; synchronize frontier theorem inventory Item 2; and select one clean P4 frontier without reconstruction, adoption, rejection, promotion, or P4-T01 execution."
+completion_summary: "The P3-T07 scientific payload independently cross-checked five historical canonical-choice families containing seven immutable candidates and preserved every local freeze. The general P2-T03 selector theorem subsumes shared fixed-point, naturality, and relation-image coordinates but supplies no family-specific source data; P3-T05 remains conditionally valid and P3-T06 keeps the exact generic quotient adequacy route locally frozen. General EqSrc remains undischarged. The canonical frontier theorem inventory is synchronized and the 36 task-local checks pass. The required repository validator nevertheless fails because the mutable registered inventory is not exempted for immutable historical memory-preflight snapshots. That project-system repair is outside this AgentJob, so no checkpoint ran and P4-T01 remains pending. No ontology, physical-equivalence, scientific-ledger, promotion, Gate Chair, proof-authority, publication, global theory rejection, global-no-go, or completed-derivation status changes; no_global_theory_rejection remains active."
+objective_result: "scientific_payload_complete_control_checkpoint_blocked_by_mutable_inventory_preflight_compatibility"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T07"
+  recommendation_ids:
+    - "V21-R01"
+    - "V21-R02"
+    - "V21-R35"
+    - "V21-R41"
+    - "V21-R50"
+  implementation_status: "blocked_precheckpoint_scientific_payload_complete"
+  implemented_task_scope: "Historical family-freeze integration, exact quotient-freeze preservation, canonical frontier theorem inventory synchronization, and one next-frontier selection only."
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "P2-T07"
+    - "P2-T08"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P3-T04"
+    - "P3-T05"
+    - "P3-T06"
+  dependency_ready_items: []
+  selected_next_dependency_work_item: "none_until_project_system_repair_and_checkpoint"
+  p3_t07_completed: false
+  p3_t07_scientific_payload_complete: true
+  p3_t07_checkpoint_complete: false
+  p4_t01_dependency_ready: false
+  p4_t01_pending_after_repair_and_checkpoint: true
+  p4_t01_executed: false
+  selection_rationale: "P4-T01 is the first non-orbital dependency successor; it inventories source assumptions before any protected ontology-regime decision and does not reconstruct a selector family or quotient candidate."
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256_at_worker_completion: "f81dc6ed282f61f86abbacf7054b8dd694c0295e688bf0c1501cd2a51bffa5b5"
+  generation: 28
+  passes_consumed: 28
+  route_work_item_id: "P3-T07"
+  worker_skill: "continue-research"
+
+transaction_status: "blocked_precheckpoint_project_system_repair_required"
+result_disposition: "scientific_payload_complete_control_checkpoint_blocked"
+checkpoint_commit: "none_validation_failed"
+is_physics_task: true
+payload_class: "dependency_map_update"
+minimum_payload:
+  payload_class: "dependency_map_update"
+  payload_artifact_path: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_historical_family_freeze_ledger_v1.yaml"
+  payload_summary: "One source-backed five-family freeze ledger, exact quotient-freeze disposition, theorem-inventory update, and single P4-T01 packet selection."
+has_new_mathematical_payload: true
+has_finite_local_witness: false
+has_countermodel: false
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-028/artifacts/child_phys_math_eqsrc_family_freeze_inventory.yaml"
+  - "research_control/tasks/RT-20260720-028/artifacts/child_phys_phil_eqsrc_family_freeze_inventory.yaml"
+  - "research_control/tasks/RT-20260720-028/artifacts/parent_conflict_review_eqsrc_family_freeze_inventory.yaml"
+  - "research_control/tasks/RT-20260720-028/artifacts/parent_fusion_notes_eqsrc_family_freeze_inventory.md"
+  - "research_control/tasks/RT-20260720-028/artifacts/eqsrc_historical_family_freeze_ledger_v1.yaml"
+  - "research_control/tasks/RT-20260720-028/artifacts/eqsrc_next_frontier_decision_v1.yaml"
+  - "research_control/tasks/RT-20260720-028/artifacts/eqsrc_family_freeze_inventory_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260720-028/artifacts/eqsrc_family_freeze_and_frontier_decision_receipt.md"
+  - "research_control/tasks/RT-20260720-028/artifacts/validate_eqsrc_family_freeze_inventory_integration.py"
+  - "research_control/tasks/RT-20260720-028/artifacts/eqsrc_family_freeze_inventory_validation.json"
+  - "research_control/tasks/RT-20260720-028/artifacts/validation_blocker_mutable_inventory_preflight_v1.yaml"
+  - "research_control/design/frontier_theorem_inventory.md"
+output_paths:
+  - "research_control/tasks/RT-20260720-028/**"
+  - "research_control/tasks/RT-20260720-028/artifacts/eqsrc_family_freeze_and_frontier_decision_receipt.md"
+  - "research_control/design/frontier_theorem_inventory.md"
+  - "research_control/handoffs/handoff-0798.yaml"
+  - "research_control/handoffs/handoff-0798.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  child_phys_math:
+    path: "research_control/tasks/RT-20260720-028/artifacts/child_phys_math_eqsrc_family_freeze_inventory.yaml"
+    sha256: "92dc5c3da8615d3dfca9ba2a63c34401f9e18ff4b387101ce5a21f208b58c7d5"
+  child_phys_phil:
+    path: "research_control/tasks/RT-20260720-028/artifacts/child_phys_phil_eqsrc_family_freeze_inventory.yaml"
+    sha256: "780755d8416623c863aa8b09801c610cb01a16db61715797b933d8f3056eb694"
+  family_freeze_ledger:
+    path: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_historical_family_freeze_ledger_v1.yaml"
+    sha256: "a22ef8ed6393072dd382abc7ee550e8d06eecc97be496b8d87b6ae29b1c67b4d"
+  next_frontier_decision:
+    path: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_next_frontier_decision_v1.yaml"
+    sha256: "655368a1681553063812b2e28d7dd2abdb5a8b8fc8d1aff13f3deffe1b139ce8"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_family_freeze_inventory_compact_receipt_v1.json"
+    sha256: "e6879f7c02f59a2f21146e2ae91080599668ca5e7853f135f082c65cc45781e4"
+  fused_receipt:
+    path: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_family_freeze_and_frontier_decision_receipt.md"
+    sha256: "5e811dd17cf26b401a4de491db21cf2d9abd39f37702b3bd7d7c61a313e62c9c"
+  frontier_theorem_inventory:
+    path: "research_control/design/frontier_theorem_inventory.md"
+    sha256: "5158603122dda2ec768293d5659e51b0d18cbc52689c2caf9a1c266a4d105fce"
+  validation_blocker:
+    path: "research_control/tasks/RT-20260720-028/artifacts/validation_blocker_mutable_inventory_preflight_v1.yaml"
+    sha256: "cb105f85a1aa3c8069f80dc8c93483c7f3ce85f5340fe5ee7bc6b66a0458c759"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-028/artifacts/child_phys_math_eqsrc_family_freeze_inventory.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-028/artifacts/child_phys_phil_eqsrc_family_freeze_inventory.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-028/artifacts/parent_conflict_review_eqsrc_family_freeze_inventory.yaml"
+    resolution_rounds: 0
+    resolved_conflict_count: 2
+    unresolved_conflicts: []
+    summary: "The parent preserved the distinction between theorem-coordinate subsumption and exact family reopening, and made P4-T01 dependency-ready only after qualifying finalization."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_family_freeze_and_frontier_decision_receipt.md"
+    fusion_notes_path: "research_control/tasks/RT-20260720-028/artifacts/parent_fusion_notes_eqsrc_family_freeze_inventory.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Close the route orbit and establish a clean next scientific frontier."
+  missing_source_law: "A source-derived selector, morphism and variation package or a separately justified physical irrelevance and interface-completeness law sufficient to define general EqSrc without target import."
+  underdetermination_statement: "Current ontology does not derive the family-specific selector data, admissible morphisms, variation laws, invariant functor, interface-completeness law, or physical irrelevance bridge needed for general EqSrc."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_comparison"
+  candidate_law_comparison:
+    candidates:
+      - "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR"
+      - "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE"
+      - "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR"
+      - "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION"
+      - "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT"
+      - "EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-CANDIDATE-V1"
+    comparison_basis:
+      - "current-ontology derivation"
+      - "general selector theorem mapping"
+      - "physical irrelevance or interface completeness"
+      - "material scientific-ledger delta"
+      - "protected ontology authority"
+    selection_status: "no_candidate_selected_all_exact_lines_locally_frozen_p4_t01_assumption_ledger_selected"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc open until a nonarbitrary source-derived relation is audited, stressed, and lawfully adopted."
+      - "Keep RetainH, GenH, M_src, g_eff, matter coupling, Einstein equations, exact-GR recovery, and benchmark promotion blocked."
+      - "Require target-neutral provenance, finite-variation robustness, interface descent, and a physical bridge."
+      - "Require protected human authority before canonical-ontology candidate designation, source-law adoption, or rejection."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "RetainH"
+      - "GenH"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "five historical canonical-choice families and seven immutable members"
+      - "general selector theorem, audit, stress, and formalization boundaries"
+      - "representative irrelevance and probabilistic-dynamical theorem limits"
+      - "invariant-functor quotient conditional theorem and adequacy obstruction"
+      - "registry, role, validator, handoff, receipt, and generated-derivative surfaces"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "none in P3-T07"
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "ontology_law_research_packet"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - item_id: "EQSRC-P3-T07-HISTORICAL-FAMILY-FREEZE-INTEGRATION"
+      item_source_path: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_historical_family_freeze_ledger_v1.yaml"
+      item_kind: "dependency_map_update"
+      classification: "status_boundary_evidence_only"
+      relation_to_current_ontology: "evidence_only"
+      claim_boundary_id: "CB-V21-P3-T07-EQSRC-FAMILY-FREEZE-INVENTORY-001"
+      protected_authority_required: false
+      physics_promotion_authorized: false
+      downstream_promotion_authorized: false
+      allowed_conclusion: "The selector theorem maps shared coordinates, while all five exact family freezes and their family-specific burdens remain active."
+      blocked_overreads:
+        - "theorem subsumption as family reopening or adoption"
+        - "finite controls as general EqSrc proof"
+        - "structural invariance as physical equivalence or gauge"
+        - "registry or validator status as scientific authority"
+        - "downstream GR discharge"
+    - item_id: "EQSRC-P3-T07-P4-T01-PACKET-SELECTION"
+      item_source_path: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_next_frontier_decision_v1.yaml"
+      item_kind: "packet_selection"
+      classification: "blocked_adoption_open_continuation"
+      relation_to_current_ontology: "blocked_open"
+      claim_boundary_id: "CB-V21-P3-T07-EQSRC-FAMILY-FREEZE-INVENTORY-001"
+      protected_authority_required: false
+      physics_promotion_authorized: false
+      downstream_promotion_authorized: false
+      allowed_conclusion: "P4-T01 is dependency-ready as a non-promotional source-assumption ledger packet and is not executed here."
+      blocked_overreads:
+        - "P4-T01 as already executed"
+        - "assumption inventory as ontology adoption or rejection"
+        - "Gate Chair decision as justified"
+        - "general EqSrc or downstream GR discharge"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-028-001"
+    payload_type: "dependency_map_update"
+    name: "Historical EqSrc family freeze and theorem-subsumption ledger"
+    summary: "Maps five exact locally frozen family lines and seven immutable candidates to the shared selector theorem while preserving every family-specific missing source burden."
+  - payload_id: "NMP-RT-20260720-028-002"
+    payload_type: "source_extension_classification"
+    name: "Conditional quotient validity and adequacy-freeze separation"
+    summary: "Separates IFQ1 through IFQ6 conditional theorem validity from the exact generic quotient route's arbitrary-partition and interface-descent adequacy obstruction."
+  - payload_id: "NMP-RT-20260720-028-003"
+    payload_type: "packet_selection"
+    name: "P4-T01 comprehensive source-assumption ledger selection"
+    summary: "Selects the first dependency-ready non-orbital packet without executing it or promoting any scientific object."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-P3T07-001"
+    payload_type: "dependency_map_update"
+    object_name: "five-family EqSrc freeze ledger"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_historical_family_freeze_ledger_v1.yaml"
+    burden_effect: "freezes"
+    summary: "All five exact historical canonical-choice families remain locally frozen; shared theorem-coordinate subsumption is not automatic reopening."
+  - payload_id: "PAYLOAD-P3T07-002"
+    payload_type: "source_extension_classification"
+    object_name: "quotient conditional-validity versus adequacy disposition"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_family_freeze_and_frontier_decision_receipt.md"
+    burden_effect: "narrows"
+    summary: "The conditional quotient theorem is retained while the exact generic adequacy route stays locally frozen."
+  - payload_id: "PAYLOAD-P3T07-003"
+    payload_type: "packet_selection"
+    object_name: "P4-T01 comprehensive source-assumption ledger packet"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_next_frontier_decision_v1.yaml"
+    burden_effect: "selects_next"
+    summary: "Selects one materially distinct source-ontology assumption-ledger packet and leaves it unexecuted."
+
+physics_progress_status:
+  status: "selector_only_no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Close the route orbit and establish a clean next scientific frontier."
+  explanation: "The packet integrates existing theorem and obstruction evidence, preserves scoped freezes, updates a control inventory, and selects P4-T01 without constructing or adopting an EqSrc relation."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "frozen_negative"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "historical families and exact quotient route locally frozen with P3-T07 selected"
+  new_status: "historical families and exact quotient route remain locally frozen with P4-T01 assumption ledger selected"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No source-derived or adopted EqSrc object or downstream physical object changed; this is a selector-only dependency-map update."
+  downstream_unlocked:
+    - "P4-T01 comprehensive source-assumption ledger only"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "RetainH"
+    - "GenH"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "P3-T07 closes repeat routing through the exact frozen EqSrc candidate orbit but does not change the canonical Distance-to-GR ledger."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; family-specific selector, morphism, variation, functor, interface, and physical-bridge primitives remain underived"
+  - burden: "Source equivalence EqSrc"
+    status: "all five historical families and the exact generic quotient adequacy route are locally frozen; general EqSrc remains undischarged"
+  - burden: "RetainH"
+    status: "unchanged and blocked"
+  - burden: "GenH"
+    status: "unchanged and blocked"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; no observation bridge follows"
+  - burden: "Resp_lc"
+    status: "unchanged; no response bridge follows"
+  - burden: "M_src"
+    status: "not advanced"
+  - burden: "g_eff"
+    status: "not advanced and blocked"
+  - burden: "matter coupling"
+    status: "not advanced and blocked"
+  - burden: "Einstein equations"
+    status: "not advanced and blocked"
+  - burden: "finite-variation robustness"
+    status: "historical variation obligations and quotient interface descent remain open"
+  - burden: "benchmark promotion"
+    status: "unchanged and blocked"
+  - burden: "Gate Chair status"
+    status: "unchanged and human-gated; no decision justified"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact historical family and quotient-candidate repeat routes frozen; P4-T01 assumption ledger is materially distinct"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  freeze_decision: "freeze_route"
+  candidate_freeze_label: "EQSRC-P3-T07-HISTORICAL-FAMILY-AND-EXACT-QUOTIENT-ROUTE-FREEZE"
+  criteria_evaluated:
+    - "current ontology derivation"
+    - "general selector theorem mapped to the exact family"
+    - "physical irrelevance or interface-completeness theorem"
+    - "material scientific-ledger delta"
+    - "protected ontology authority"
+  rationale: "No exact historical family satisfies an automatic reopening criterion, and the exact generic quotient route still lacks source derivation, nontriviality, complete interface descent, and a physical bridge."
+  next_allowed_route: "theoretical_selector"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p3_t07_five_family_freezes_preserved_exact_quotient_route_frozen_p4_t01_selected"
+  prior_related_tasks:
+    - "RT-20260718-038 through RT-20260718-047"
+    - "RT-20260720-009 through RT-20260720-028"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P4-T01 changes the object of work to a comprehensive assumption-provenance ledger and may not reconstruct, repair, or rename an exact frozen EqSrc family or quotient candidate."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P4-T01"
+
+theoretical_decision_output:
+  selected_next_packet_type: "ontology_law_research_packet"
+  decision_basis: "All five immutable historical families remain locally frozen after their shared selector coordinates were mapped, the exact quotient adequacy route remains locally frozen, and P4-T01 is the first non-orbital dependency successor."
+  theoretical_method: "Source-backed integration of immutable family identity, selector theorem and audit limits, representative-irrelevance and probabilistic-dynamical limits, quotient adequacy obstruction, and the v21 dependency graph."
+  preserves_claim_blocks: "All ontology, physical-equivalence, general EqSrc, scientific-ledger, promotion, publication, proof-authority, and completed-derivation blocks remain active."
+  requires_human_gate: false
+  human_gate_reason: "No exact protected ontology proposal is being adopted, rejected, or promoted."
+  decision_consequence: "P4-T01 becomes dependency-ready and P3-T07 does not execute it."
+  new_payload_novelty: "First unified dependency map from five immutable family freezes and the exact quotient adequacy freeze to the source-assumption ledger frontier."
+  selected_next_plan_task: "P4-T01"
+  next_execution_role_family: "ontology-formalizer@0.2.0"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "P3-T07 creates no canonical ontology edit, source-law adoption or rejection, physical equivalence or gauge, general EqSrc discharge, scientific-ledger delta, RetainH, GenH, M_src adoption, g_eff, matter coupling, Einstein equations, benchmark promotion, Gate Chair verdict, proof authority, external publication, completed derivation, global theory rejection, global no-go, or future source-extension impossibility; the no_global_theory_rejection guard remains active. Validator PASS, registry status, role authority, generated derivatives, and checkpoint status remain operational evidence only."
+  forbidden_conclusions:
+    - "theorem-coordinate subsumption as exact family reopening, adoption, or rejection"
+    - "conditional quotient theorem validity as general EqSrc adequacy"
+    - "mathematical quotienting or invariance as physical observational equivalence or gauge"
+    - "general EqSrc or downstream GR discharge"
+    - "scientific-ledger change"
+    - "P4-T01 as already executed"
+    - "Gate Chair verdict, proof authority, publication, completed derivation, or global no-go"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_extension_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  independent_replication_claim_authorized: false
+  human_endorsement_claim_authorized: false
+  physical_gauge_claim_authorized: false
+  operational_observable_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 949
+    relationship_row_count: 4713
+    semantic_row_count: 949
+    vault_row_count: 949
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+    before_local_cache_only_warning_count: 5
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search EqSrc selector theorem family freeze quotient inventory --limit 10 --json"
+      query_type: "search"
+      query_text: "EqSrc selector theorem family freeze quotient inventory"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260720-010-PARENT-FUSION-NOTES-EQSRC-CANDIDATE-FAMILY-LINEAGE"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P3-T06-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-AUDIT --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P3-T06-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-AUDIT"
+      returned_object_ids:
+        - "TEX-V21-P3-T06-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-AUDIT"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260720-010-PARENT-FUSION-NOTES-EQSRC-CANDIDATE-FAMILY-LINEAGE"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-010/artifacts/parent_fusion_notes_eqsrc_candidate_family_lineage.md"
+      source_hash: "d67fe5e6f5b794853d7ec08764657db6f6c70ff3f23c1435d32b4d6ca2beb6a2"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "7e1fffea17dac446a841c989c7a619820d669edf9c268645aa2d065703fd50df"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/frontier_theorem_inventory.md"
+      source_hash: "5158603122dda2ec768293d5659e51b0d18cbc52689c2caf9a1c266a4d105fce"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P3-T06-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-AUDIT"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-027/artifacts/eqsrc_invariant_functor_quotient_smuggling_audit_v1.tex"
+      source_hash: "0e3991d70dd7754149821d132808062dd5bf153c810086629686e45593c78c1c"
+  authority_note: "Generated Obsidian wiki, semantic SQLite, and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and five local-cache warnings were refreshed to a clean local retrieval state with 949 source objects."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m py_compile research_control/tasks/RT-20260720-028/artifacts/validate_eqsrc_family_freeze_inventory_integration.py"
+    status: "PASS"
+    summary: "The task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-028/artifacts/validate_eqsrc_family_freeze_inventory_integration.py --write-report --json"
+    status: "PASS"
+    summary: "The bounded source-hash, family-identity, freeze, child-consensus, inventory, authority, and next-route checks passed."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "Regenerated tracked memory registries, Markdown wiki notes, and indexes from registered canonical sources."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Confirmed tracked memory registries and generated derivatives are fresh."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "FAIL"
+    summary: "Required validation reports exactly 74 blocking findings: 37 historical memory-preflight hashes do not match the current registry row and the same 37 are stale against the mutable canonical frontier theorem inventory. No current-task allowlist or state-drift error remains."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "NOT_RUN_AFTER_HARD_STOP"
+    summary: "Not run after the required research-control validation stop condition."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "NOT_RUN_AFTER_HARD_STOP"
+    summary: "Not run after the required research-control validation stop condition."
+  - command: ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+    status: "NOT_RUN_AFTER_HARD_STOP"
+    summary: "Not run because the narrower required gate already failed."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests"
+    status: "NOT_RUN_AFTER_HARD_STOP"
+    summary: "Not run because the narrower required gate already failed."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "The working diff contains no whitespace errors."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 28 lease, route, model, reasoning, repository binding, predecessor checkpoint, and single-consumption parity were verified before work."
+      - "Memory preflight refreshed only local retrieval state and inspected canonical family, inventory, plan, and quotient-audit sources."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required child perspectives completed and agreed on five family freezes, the quotient boundary, general EqSrc status, and P4-T01 selection."
+      - "The task-local validator passes its immutable-hash, identity, freeze, synthesis, inventory, authority, and next-route checks."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "Task-local, renderer, graph, memory-bootstrap, memory-validate-only, and whitespace checks pass."
+      - "Required changed-scope research-control validation fails on mutable frontier-theorem-inventory compatibility for immutable historical memory-preflight snapshots."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "Checkpoint was not attempted because required precheckpoint validation failed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, and claim graph were regenerated and pass freshness or schema checks."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only pass after canonical Markdown source registration."
+  claim_language_linter:
+    status: "NOT_RUN"
+    evidence:
+      - "Not run after the required research-control validation hard stop."
+
+validation_evidence:
+  task_local_validator:
+    command: ".venv/bin/python research_control/tasks/RT-20260720-028/artifacts/validate_eqsrc_family_freeze_inventory_integration.py --write-report --json"
+    status: "PASS"
+    passed_check_count: 36
+    failed_check_count: 0
+  final_repository_validation:
+    status: "FAIL"
+    error_count: 74
+    run_id: "RESEARCH-CONTROL-DIFF-007C7A3C94C7DE44"
+    note: "The transaction is blocked before checkpoint by one project-system compatibility defect: mutable frontier-theorem-inventory updates invalidate 37 immutable historical memory-preflight snapshots under current validator policy, producing one registry mismatch and one stale-hash error per snapshot."
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-028/artifacts/eqsrc_family_freeze_inventory_validation.json"
+  local_validator_report_hash: "edcb06a06b91f1e8a5f186c65a85c5ac2ad1589ee1af69795c84ae74004693fa"
+  family_count: 5
+  candidate_count: 7
+  locally_frozen_family_count: 5
+  reopened_family_count: 0
+  quotient_candidate_locally_frozen: true
+  selected_next_plan_task: "P4-T01"
+  task_local_passed_check_count: 36
+  task_local_failed_check_count: 0
+  parent_child_synthesis_status: "PASS"
+  ontology_foundations_hash_unchanged: true
+  distance_to_gr_ledger_hash_unchanged: true
+  metric_use_ledger_hash_unchanged: true
+  validation_status: "FAIL"
+  strict_research_control_diff:
+    status: "FAIL"
+    error_count: 74
+    historical_registry_hash_mismatch_count: 37
+    historical_stale_canonical_hash_count: 37
+    current_task_or_state_error_count: 0
+    run_id: "RESEARCH-CONTROL-DIFF-007C7A3C94C7DE44"
+    blocker_receipt: "research_control/tasks/RT-20260720-028/artifacts/validation_blocker_mutable_inventory_preflight_v1.yaml"
+
+validators_run:
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m py_compile research_control/tasks/RT-20260720-028/artifacts/validate_eqsrc_family_freeze_inventory_integration.py"
+  - ".venv/bin/python research_control/tasks/RT-20260720-028/artifacts/validate_eqsrc_family_freeze_inventory_integration.py --write-report --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check"
+  - ".venv/bin/python scripts/research_control/validate_claim_graph_v1.py --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - "git diff --check"
+
+required_validators:
+  - "memory_preflight"
+  - "task_local_validator"
+  - "parent_child_synthesis"
+  - "family_freeze_inventory_agreement"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "classify_project_changes"
+  - "project_improvement_signal_parity"
+  - "documentation_impact"
+  - "research_control_validation"
+  - "claim_language"
+  - "full_validation"
+  - "repository_unit_tests"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+
+documentation_impact:
+  required: true
+  documentation_impact_id: "DI-RT-20260720-028-001"
+  documentation_impact_path: "research_control/tasks/RT-20260720-028/documentation_impact.yaml"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  recursive_goal_recovery_required: true
+  route: "continue-goal recovery via improve-project-system"
+  sidecar_emitted: false
+  rationale: "A project-system validator compatibility defect was identified after the scientific payload completed. No sidecar is authorized by the current AgentJob; the recursive goal recovery route must carry the exact dirty transaction."
+
+next_handoff_id: "handoff-0798"
+selected_next_route:
+  route_id: "v21_p4_t01_comprehensive_source_assumption_ledger"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P4-T01"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Make assumption debt visible before selecting the ontology regime."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  pending_after_repair_and_checkpoint: true
+  dependency_ready: false
+  next_action: "Preserve P4-T01 without execution until governed project-system repair, revalidation, and checkpoint of RT-20260720-028 succeed."
