@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-21T06:04:29Z`
-- Source fingerprint: `1414c4629d13c1f83fa133cc6ec9b3f7b62434d3d2b29482ddb27a38aac4d30e`
-- Nodes: `20130`
-- Edges: `68852`
+- Generated from tracked state as of: `2026-07-21T07:00:19Z`
+- Source fingerprint: `8d837353e6880d3616c872e1d6c81512e56c4379ac7865aec16cbd3fa85054a2`
+- Nodes: `20160`
+- Edges: `68911`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1019 |
+| `completion_yaml` | 1020 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 788 |
+| `handoff_yaml` | 789 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1019 |
+| `agent_job` | `support_only` | 1020 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10458 |
-| `blocked_burden` | `blocked` | 3838 |
-| `claim_boundary` | `support_only` | 976 |
-| `draft_control_candidate` | `draft_control` | 659 |
+| `artifact` | `support_only` | 10469 |
+| `blocked_burden` | `blocked` | 3848 |
+| `claim_boundary` | `support_only` | 977 |
+| `draft_control_candidate` | `draft_control` | 661 |
 | `draft_control_candidate` | `proposal_only` | 110 |
-| `draft_control_candidate` | `science_draft` | 62 |
+| `draft_control_candidate` | `science_draft` | 63 |
 | `frozen_negative` | `frozen_negative` | 123 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 788 |
-| `human_gated_object` | `human_gated` | 431 |
+| `handoff` | `support_only` | 789 |
+| `human_gated_object` | `human_gated` | 432 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 33 |
 | `source_ontology_object` | `canonical_source` | 23 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 325 |
+| `source_ontology_object` | `support_only` | 326 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 958 |
+| `task` | `support_only` | 959 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260720-018`
-- Latest handoff: `handoff-0788`
-- Handoff path: `research_control/handoffs/handoff-0788.yaml`
-- Next action: Run exactly one bounded v21 P2-T06 Smuggling Auditor packet reviewing the P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and file or process metadata. Preserve P2-T07 independent Refuter ownership and every ontology, scientific-ledger, proof-authority, promotion, publication, and completed-derivation block.
+- Active task: `RT-20260720-019`
+- Latest handoff: `handoff-0789`
+- Handoff path: `research_control/handoffs/handoff-0789.yaml`
+- Next action: Run exactly one bounded v21 P2-T07 Refuter packet stressing the unchanged audited theorem under nonfaithful actions partial morphisms multiple components stochastic selectors added marks and altered variation classes. Treat the two uncorrected P2-T04 K metrics as unavailable for selector-induced relation claims and preserve every ontology scientific-ledger proof-authority promotion publication and completed-derivation block.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

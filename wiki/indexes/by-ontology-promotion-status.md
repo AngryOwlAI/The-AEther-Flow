@@ -390,6 +390,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex`
 - `TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex`
 - `TEX-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS` `research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex`
+- `TEX-V21-P2-T06-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_v1.tex`
 
 ## superseded
 

@@ -467,6 +467,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-018-EQSRC-SELECTOR-FORMAL-PROOF-RECEIPT` `research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-018-PARENT-FUSION-NOTES-EQSRC-SELECTOR-FORMAL-PROOF` `research_control/tasks/RT-20260720-018/artifacts/parent_fusion_notes_eqsrc_selector_formal_proof.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-018-PROOF-README-EQSRC-SELECTOR-FORMAL-PROOF` `research_control/tasks/RT-20260720-018/artifacts/proof/README.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-019-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT-RECEIPT` `research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-019-PARENT-FUSION-NOTES-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-019/artifacts/parent_fusion_notes_eqsrc_selector_theorem_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -952,6 +954,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex`
 - `TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex`
 - `TEX-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS` `research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex`
+- `TEX-V21-P2-T06-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_v1.tex`
 
 ## wiki_markdown
 
@@ -1415,6 +1418,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-018-EQSRC-SELECTOR-FORMAL-PROOF-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-018-eqsrc-selector-formal-proof-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-018-PARENT-FUSION-NOTES-EQSRC-SELECTOR-FORMAL-PROOF` `wiki/markdown/md-research-control-tasks-rt-20260720-018-parent-fusion-notes-eqsrc-selector-formal-proof.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-018-PROOF-README-EQSRC-SELECTOR-FORMAL-PROOF` `wiki/markdown/md-research-control-tasks-rt-20260720-018-proof-readme-eqsrc-selector-formal-proof.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-019-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-019-eqsrc-selector-theorem-smuggling-audit-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-019-PARENT-FUSION-NOTES-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260720-019-parent-fusion-notes-eqsrc-selector-theorem-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1894,3 +1899,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `wiki/tex/tex-v21-p2-t02-eqsrc-natural-selector-fixed-point-condition.md`
 - `WIKI-TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `wiki/tex/tex-v21-p2-t03-eqsrc-no-selector-nonuniqueness-theorem.md`
 - `WIKI-TEX-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS` `wiki/tex/tex-v21-p2-t04-eqsrc-finite-countermodel-atlas.md`
+- `WIKI-TEX-V21-P2-T06-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `wiki/tex/tex-v21-p2-t06-eqsrc-selector-theorem-smuggling-audit.md`

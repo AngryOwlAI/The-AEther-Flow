@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-018`
-- Latest handoff: `handoff-0788`
-- Current status: `v21_p2_t05_machine_checked_theorem_core_complete_p2_t06_selected_no_adoption_or_promotion`
+- Active task: `RT-20260720-019`
+- Latest handoff: `handoff-0789`
+- Current status: `v21_p2_t06_conditional_source_purity_pass_with_precise_p2_t04_k_metric_scope_defect_p2_t07_selected_no_adoption_or_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-018`
-- Latest research handoff: `handoff-0788`
-- Latest research next action: Run exactly one bounded v21 P2-T06 Smuggling Auditor packet reviewing the P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and file or process metadata. Preserve P2-T07 independent Refuter ownership and every ontology, scientific-ledger, proof-authority, promotion, publication, and completed-derivation block.
+- Latest research task: `RT-20260720-019`
+- Latest research handoff: `handoff-0789`
+- Latest research next action: Run exactly one bounded v21 P2-T07 Refuter packet stressing the unchanged audited theorem under nonfaithful actions partial morphisms multiple components stochastic selectors added marks and altered variation classes. Treat the two uncorrected P2-T04 K metrics as unavailable for selector-induced relation claims and preserve every ontology scientific-ledger proof-authority promotion publication and completed-derivation block.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p2_t06_eqsrc_selector_theorem_smuggling_audit`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `v21_p2_t07_eqsrc_selector_theorem_refuter_stress`
+- Role family: `refuter@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Establish source-provenance integrity of the theorem statement and proof.
+- Milestone burden: Determine the precise robustness and limits of the general theorem.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `7638bb8f3badd1a15e80a95afe6bf717a577537db1903b115c74933149190bf0`
-- JSON SHA-256: `b166f96dda0e3ec41e1c5e111b84f5c33884c12c6ed81e5a9ea1990594b1ec30`
+- YAML SHA-256: `cc63f1efea19ade7d61250ab761086ecd4e6ba20ad6d4ff43472d1dc2b26b726`
+- JSON SHA-256: `60da617927b520e3f459e5118038e580c223be71ffef6cbcf9bc0b16a302ebaf`
 
 ## Authority Warning
 

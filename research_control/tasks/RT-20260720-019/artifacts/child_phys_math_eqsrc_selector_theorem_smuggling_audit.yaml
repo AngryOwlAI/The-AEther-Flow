@@ -1,0 +1,56 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260720-019"
+status: "completed"
+shared_claim_boundary: "CB-V21-P2-T06-EQSRC-THEOREM-AUDIT-001"
+verdict: "conditional_source_purity_pass_with_precise_p2_t04_k_metric_scope_defect"
+findings:
+  - id: "MATH-AUD-001"
+    class: "theorem_correctness"
+    statement: "The certified-core selector-product bijection choice qualification multiplicity criterion K-image theorem and full-category equalizer guard are mathematically correct under the stated assumptions."
+    evidence:
+      path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+      lines: "89-233"
+  - id: "MATH-AUD-002"
+    class: "domain_provenance"
+    statement: "The signature arrow profiles candidate universe eligibility and certified core are declared proposal inputs; no post-hoc selector-preserving arrow definition is observed but physical completeness of the category is not proved."
+    evidence:
+      path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+      lines: "77-176,215-266,320-327"
+  - id: "MATH-AUD-003"
+    class: "p2_t04_raw_image_scope_defect"
+    statement: "The P2-T04 validator computes relation_image_sizes as raw K(D) over all eligible choices although P2-T03 relation sections use K(F) and global selectors; empty-fixed fixtures can therefore report nonempty raw K(D) while selector-induced Im K_* is empty."
+    evidence:
+      path: "research_control/tasks/RT-20260720-017/artifacts/validate_eqsrc_finite_countermodel_atlas.py"
+      lines: "320-336"
+    counterexample:
+      fixture_id: "FX-ROOTED-FOUR-CYCLE"
+      fixed_indices: []
+      raw_K_D_image_size: 2
+      selector_induced_image_size: 0
+  - id: "MATH-AUD-004"
+    class: "p2_t04_action_kernel_terminology_defect"
+    statement: "relation_stabilizer_order counts group elements fixing every K-label under the induced action, hence the kernel order of the action on K(D), not generally an individual-relation stabilizer order."
+    evidence:
+      path: "research_control/tasks/RT-20260720-017/artifacts/validate_eqsrc_finite_countermodel_atlas.py"
+      lines: "74-80"
+  - id: "MATH-AUD-005"
+    class: "lean_translation"
+    statement: "The Lean definitions and six results faithfully encode the one-object fixed-point kernel and two finite controls but do not encode the multi-component product K-image theorem full-category equalizer or choice qualification."
+    evidence:
+      path: "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+      lines: "1-175"
+repair_specification:
+  theorem_source_change_required: false
+  required_before_p2_t04_metric_reuse:
+    - "Rename relation_image_sizes to eligible_choice_K_image_sizes."
+    - "Report K(F) or selector-induced image size separately."
+    - "Rename relation_stabilizer_order to K_image_action_kernel_order."
+    - "Validate K-equivariance or fibre preservation for the interpreted action."
+limits:
+  - "No target metric atlas gauge observer benchmark file-order or process-state premise was found."
+  - "The audit does not establish ontology derivation physical admissibility general EqSrc or proof authority."
+recommended_next_work_item: "P2-T07"
+recommended_next_role: "refuter@0.2.0"
+next_route_guard: "Do not use the uncorrected P2-T04 K metrics as selector-induced relation evidence."
+physics_promotion_authorized: false

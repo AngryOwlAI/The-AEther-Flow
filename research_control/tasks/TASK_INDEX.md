@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `52c2ea6df1ac1fe9805366f9b9ac8bd48f8948508535193230423c3d952e91bb`
-- Generated-at source timestamp: `2026-07-21T05:53:19Z`
-- Row count: `1023`
+- Source fingerprint: `424a1285ee3dc793ebb86c22c2f9f9cace7f11c9dbecd8e66727ffa7599b9d9f`
+- Generated-at source timestamp: `2026-07-21T06:49:38Z`
+- Row count: `1024`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260720-019|RT-20260720-018|2026-07-21T06:49:38Z|2026-07-21T07:00:19Z|v21_eqsrc_selector_theorem_smuggling_audit|completed|source_equivalence_eqsrc|Establish source-provenance integrity of the theorem statement and proof.|smuggling-auditor@0.2.0|false|false|12|Run exactly one bounded v21 P2-T07 Refuter packet stressing the unchanged audited theorem under nonfaithful actions partial morphisms multiple components stochastic selectors added marks and altered variation classes without using the uncorrected P2-T04 K metrics as selector-induced relation evidence.|PASS|research_control/tasks/RT-20260720-019/jobs/completions/AJC-AJ-RT-20260720-019-001.yaml|
 |RT-20260720-018|RT-20260720-017|2026-07-21T05:53:19Z|2026-07-21T06:04:29Z|v21_eqsrc_selector_theorem_formal_proof|completed|source_equivalence_eqsrc|Provide machine-checked mathematical evidence for the theorem core.|ontology-formalizer@0.2.0|false|false|14|Run exactly one bounded v21 P2-T06 Smuggling Auditor packet reviewing the P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and process metadata.|PASS|research_control/tasks/RT-20260720-018/jobs/completions/AJC-AJ-RT-20260720-018-001.yaml|
 |RT-20260720-017|RT-20260720-016|2026-07-21T04:57:55Z|2026-07-21T05:07:00Z|v21_eqsrc_historical_countermodel_integration|completed|source_equivalence_eqsrc|Demonstrate theorem scope and preserve negative-result provenance.|candidate-constructor@0.2.0|false|false|11|Run exactly one bounded v21 P2-T05 Ontology Formalizer formal-proof packet mechanizing the selector theorem core while preserving proposal-only status, all frozen-family boundaries, and P2-T06 independent audit ownership.|PASS|research_control/tasks/RT-20260720-017/jobs/completions/AJC-AJ-RT-20260720-017-001.yaml|
 |RT-20260720-016|RT-20260720-015|2026-07-21T04:02:36Z|2026-07-21T04:20:30Z|v21_eqsrc_no_selector_nonuniqueness_theorem|completed|source_equivalence_eqsrc|Resolve the common selection obstruction at theorem level.|ontology-formalizer@0.2.0|false|false|12|Run exactly one bounded v21 P2-T04 Candidate Constructor packet integrating the historical finite countermodels under the theorem while preserving provenance and all ontology, audit, stress, ledger, and promotion boundaries.|PASS|research_control/tasks/RT-20260720-016/jobs/completions/AJC-AJ-RT-20260720-016-001.yaml|

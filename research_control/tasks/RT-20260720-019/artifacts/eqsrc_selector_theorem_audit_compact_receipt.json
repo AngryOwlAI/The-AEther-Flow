@@ -1,0 +1,60 @@
+{
+  "authority": {
+    "canonical_ontology_changed": false,
+    "distance_to_gr_ledger_changed": false,
+    "general_eqsrc_discharged": false,
+    "metric_use_ledger_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "theorem_repair_required": false,
+    "p2_t04_metric_repair_required_before_reuse": true,
+    "p2_t04_metric_repair_executed": false
+  },
+  "claim_boundary_summary": "Source-purity audit PASS applies only to the fixed proposal domain and bounded Lean kernel; it does not derive or adopt the category, selector interface, finite actions, physical gauge, general EqSrc, or any downstream GR object.",
+  "finding_counts": {
+    "audited_assumptions": 10,
+    "audited_definitions": 8,
+    "blocking_defects": 0,
+    "explicit_process_imports": 0,
+    "explicit_target_imports": 0,
+    "faithfully_mechanized_layers": 4,
+    "material_nonblocking_limitations": 4,
+    "scoped_p2_t04_metric_defects": 2,
+    "semantic_alias_tests": 10,
+    "unmechanized_general_layers": 4
+  },
+  "job_id": "AJ-RT-20260720-019-001",
+  "next_plan_task_id": "P2-T07",
+  "plan_task_id": "P2-T06",
+  "recommendation_ids": [
+    "V21-R03",
+    "V21-R04",
+    "V21-R55",
+    "V21-R63"
+  ],
+  "schema_id": "eqsrc-selector-theorem-audit-compact-receipt.v1",
+  "source_dependencies": {
+    "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex": "00d7e14b76ac4fa01b834739646fe03012c2b82326a158064b27cdbe916be268",
+    "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_morphism_variation_schema.yaml": "963520b97b25fc3f7406ae7729c98966a6676c583dae60dd101d0b0d32e5d227",
+    "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex": "7611533f40b61b8a32da327add3646b95c604f858adba54c40378b6f29d5067a",
+    "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_assumptions.yaml": "f043a5998bb180ad4bca7037f1f7def836a156d009a69bfaf1304eb86bc390cf",
+    "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae",
+    "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_fixtures.json": "e8ced96541fa941e5a3b4ceaa8d7b48204acf7ca8ec342ac6b23dbbf5c470a73",
+    "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex": "4a7c84ecf769b19e92b2b2dffd7224ddd4e1e02e4cc93cff797d01fa0e1bc62b",
+    "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_theorem_instance_map.yaml": "7fbd64b7f0fbcc474b32c85da68a7c4bb841f824edfdbbbd25d116da7ba2c5be",
+    "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_validation.json": "9628e6ca789aff6df0da5039f51f3661ce50cab0461927650fe4b49f5aec9932",
+    "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+  },
+  "status": "PASS_CONDITIONAL_WITH_SCOPED_DEFECT",
+  "task_id": "RT-20260720-019",
+  "task_local_validator_status": "PASS",
+  "validator_ids": [
+    "source_hash_identity",
+    "assumption_and_definition_coverage",
+    "semantic_alias_guards",
+    "prose_to_lean_scope_match",
+    "authority_boundary"
+  ],
+  "verdict": "conditional_source_purity_pass_with_precise_p2_t04_k_metric_scope_defect",
+  "work_item_status": "completed"
+}
