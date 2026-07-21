@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-014`
-- Latest handoff: `handoff-0784`
-- Current status: `v21_p2_t01_eqsrc_source_category_defined_core_functoriality_proved_p2_t02_selected_no_selector_or_promotion`
+- Active task: `RT-20260720-015`
+- Latest handoff: `handoff-0785`
+- Current status: `v21_p2_t02_eqsrc_fixed_point_necessity_proved_p2_t03_selected_no_adoption_or_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-014`
-- Latest research handoff: `handoff-0784`
-- Latest research next action: Run exactly one bounded v21 P2-T02 Ontology Formalizer ontology-law-research-packet defining natural selectors as sections of S_chi on the unchanged P2-T01 core and proving or refuting the invariant fixed-point condition. Do not alter the category after observing a desired selector, treat structural automorphisms as physical gauge, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
+- Latest research task: `RT-20260720-015`
+- Latest research handoff: `handoff-0785`
+- Latest research next action: Run exactly one bounded v21 P2-T03 Ontology Formalizer ontology-law-research-packet stating and proving the complete no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers. Preserve P2-T06 audit and P2-T07 stress ownership; do not alter the P2-T01 domain after observing an outcome, infer physical gauge meaning, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,7 +26,7 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p2_t02_eqsrc_natural_selector_fixed_point`
+- Route ID: `v21_p2_t03_eqsrc_no_selector_nonuniqueness_theorem`
 - Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
 - Milestone burden: State the exact mathematical condition that prior candidate cycles repeatedly violate.
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `edeb8568e5af05546612a1adf677d6f0b39b215482b7493f4e41e14248554362`
-- JSON SHA-256: `8a06d85b3f0a17092d29dff3aca6f25ef32c751aab57deece4ca06a1f2afc069`
+- YAML SHA-256: `eb959af1202c3d1316850a22b73415c54d0eecd92419370bf25066b28fb04342`
+- JSON SHA-256: `511ea476953f30665b06c75cb345ec056ee098addd7689ab207cfb1a220fd3f2`
 
 ## Authority Warning
 

@@ -1,0 +1,59 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260720-015"
+plan_task_id: "P2-T02"
+theorem_id: "EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION-V1"
+status: "completed"
+claim_status: "draft/control"
+unchanged_domain:
+  category: "C_Sigma from P2-T01"
+  core: "G_Sigma = Core(C_Sigma)"
+  eligible_choice_functor: "S_chi:G_Sigma->Set"
+  post_hoc_domain_change_permitted: false
+definitions:
+  selector_space: "Sel_chi = Nat(1_GSigma,S_chi)"
+  naturality: "S_chi(u)(sigma_X)=sigma_Y for every certified isomorphism u:X->Y"
+  fixed_locus: "F_X = {d in S_chi(X) | S_chi(g)d=d for every g in Aut_GSigma(X)}"
+  relation_image: "R_X = K_X(F_X), when K is present"
+proved_result:
+  name: "Necessary automorphism fixed-point condition"
+  payload_class: "theorem_with_hypotheses_and_proof"
+  statement: "Every natural selector sigma has sigma_X in F_X for every object X."
+  proof_step: "Apply naturality to each automorphism g:X->X; the constant singleton functor sends g to the identity."
+branch_analysis:
+  empty_fixed_locus: "No natural selector exists on the component containing X, hence none exists on the full groupoid."
+  singleton_fixed_locus: "Any selector is forced at X, but existence and global coherence are not thereby proved."
+  multiple_fixed_locus: "Automorphism naturality alone does not determine a unique value at X; global multiplicity does not follow without component coherence."
+  constant_K_image: "Selector-level nonuniqueness may coexist with relation-level choice irrelevance."
+  multiple_K_images: "Source symmetry does not determine a unique relation at X."
+added_data_lemma:
+  reduct_map: "U_*:Aut_SigmaPlus(XPlus)->Aut_Sigma(X)"
+  image_group: "H_XPlus = image(U_*)"
+  stabilizer_relation: "H_XPlus is a subgroup of the stabilizer of every preserved added mark"
+  fixed_locus_relation: "If the choice set is unchanged and the action restricts exactly, Fix_Aut(S) is a subset of Fix_H(S)."
+  lift_warning: "Equality with the full mark stabilizer requires every mark-preserving reduct automorphism to lift."
+  comparison_warning: "If the extension changes the choice space, no monotonicity follows without an explicit equivariant comparison map."
+finite_controls:
+  - "GL(2,2) on three lines: six automorphisms and empty fixed locus"
+  - "directed C4 on four roots: four rotations and empty fixed locus"
+  - "ordered chain4 with singleton minimum: trivial automorphism group and one fixed choice"
+  - "trivial two-choice groupoid: two fixed choices; injective versus constant K separates selector and relation uniqueness"
+  - "marked GL(2,2) line: order-two stabilizer fixes exactly the mark"
+  - "marked C4 root: trivial stabilizer fixes all four unchanged eligible roots"
+  - "one noninvertible arrow: objectwise fixedness does not imply full-category coherence"
+reserved_for_p2_t03:
+  - "complete general no-selector and nonuniqueness theorem"
+  - "global connected-component quantifiers and any choice-set assumptions"
+  - "general group-action and categorical equivalence packaging"
+  - "multi-family subsumption"
+claim_boundary:
+  p2_t01_domain_changed: false
+  complete_p2_t03_theorem_proved: false
+  structural_automorphisms_identified_as_physical_gauge: false
+  current_ontology_derivation_established: false
+  general_EqSrc_discharged: false
+  physics_promotion_authorized: false
+source_anchors:
+  - "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+  - "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"

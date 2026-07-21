@@ -1,0 +1,613 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-015-001"
+completion_id: "AJC-AJ-RT-20260720-015-001"
+task_id: "RT-20260720-015"
+task_type: "v21_eqsrc_natural_selector_fixed_point"
+decision_id: "DDR-20260720-015"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260720-015"
+status: "completed"
+created_at: "2026-07-21T03:05:25Z"
+started_at: "2026-07-21T03:05:25Z"
+completed_at: "2026-07-21T03:20:07Z"
+objective: "Execute only v21 P2-T02: define deterministic source-natural selectors on the unchanged P2-T01 certified core and derive the necessary invariant fixed-point condition with finite positive empty-fixed and multiple-fixed controls."
+completion_summary: "P2-T02 registers EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION-V1. It defines a natural selector as a natural transformation from the singleton functor to S_chi on the unchanged P2-T01 core, proves objectwise automorphism fixed-point necessity and an added-data stabilizer lemma, separates selector from relation-image uniqueness, and validates seven finite controls. The complete P2-T03 theorem, physical gauge interpretation, ontology derivation or adoption, general EqSrc, and all downstream promotions remain open or blocked."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T02"
+  recommendation_ids:
+    - "V21-R03"
+    - "V21-R05"
+    - "V21-R09"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+  next_dependency_work_item: "P2-T03"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 15
+  passes_consumed: 15
+  route_work_item_id: "P2-T02"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "theorem_with_hypotheses_and_proof"
+minimum_payload:
+  payload_class: "theorem_with_hypotheses_and_proof"
+  payload_artifact_path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+  payload_summary: "Defines natural selectors on the unchanged P2-T01 core and proves that every selected value is fixed by the declared structural automorphism group."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-015/artifacts/child_phys_math_eqsrc_natural_selector_fixed_point.yaml"
+  - "research_control/tasks/RT-20260720-015/artifacts/child_phys_phil_eqsrc_natural_selector_fixed_point.yaml"
+  - "research_control/tasks/RT-20260720-015/artifacts/parent_conflict_review_eqsrc_natural_selector_fixed_point.yaml"
+  - "research_control/tasks/RT-20260720-015/artifacts/parent_fusion_notes_eqsrc_natural_selector_fixed_point.md"
+  - "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+  - "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_controls.json"
+  - "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_receipt.md"
+  - "research_control/tasks/RT-20260720-015/artifacts/validate_eqsrc_natural_selector_fixed_point_condition.py"
+  - "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-015/**"
+  - "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+  - "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_controls.json"
+  - "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_receipt.md"
+  - "research_control/handoffs/handoff-0785.yaml"
+  - "research_control/handoffs/handoff-0785.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  theorem:
+    path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+    sha256: "7611533f40b61b8a32da327add3646b95c604f858adba54c40378b6f29d5067a"
+  controls:
+    path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_controls.json"
+    sha256: "3c0c85fd10eb6939cdcb88d31033ce6a587959260a9275089d5c21a6c0eadcde"
+  validation:
+    path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_validation.json"
+    sha256: "8249264b7ce14d459dab57121dbccb0bed2685ba2adc0a12a57c4243dd0a8bf3"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260720-015/artifacts/parent_fusion_notes_eqsrc_natural_selector_fixed_point.md"
+    sha256: "babd227cf740890b662d7c8fa9eb1b8a273a90f88fff4cca6dc7c2ccacaefb7d"
+  receipt:
+    path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_receipt.md"
+    sha256: "4e337b8eb52ba4b0d543a81ee419ec2c546d3c7a42ff4dab9b3198c260ae37c4"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-015/artifacts/child_phys_math_eqsrc_natural_selector_fixed_point.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-015/artifacts/child_phys_phil_eqsrc_natural_selector_fixed_point.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-015/artifacts/parent_conflict_review_eqsrc_natural_selector_fixed_point.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    summary: "The parent made natural-transformation notation primary, confined the new proof to fixed-point necessity, separated local from global multiplicity and selector from K-image uniqueness, and classified added marks as source-extension data rather than physical symmetry breaking."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-015/artifacts/parent_fusion_notes_eqsrc_natural_selector_fixed_point.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "State the exact mathematical condition that prior candidate cycles repeatedly violate."
+  missing_source_law: "A current-ontology derivation of a deterministic source-natural selector on the declared source category or of source-side structure sufficient to make the required fixed loci nonempty and coherent."
+  underdetermination_statement: "Current ontology does not derive the P2-T01 category, eligible-choice functor, natural selector, selector-relevant added marks, or a physical gauge groupoid."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "On the unchanged certified-isomorphism core G_Sigma and eligible-choice functor S_chi, a deterministic source-natural selector is sigma in Nat(1_GSigma,S_chi); naturality forces sigma_X into the Aut(X)-fixed locus for every object X."
+    formal_objects:
+      - "unchanged P2-T01 core groupoid G_Sigma"
+      - "unchanged eligible-choice functor S_chi"
+      - "selector space Sel_chi = Nat(1_GSigma,S_chi)"
+      - "fixed locus F_X"
+      - "relation image R_X = K_X(F_X)"
+      - "enriched reduct image subgroup H_XPlus"
+    domains:
+      - "certified source isomorphisms fixed before selector evaluation"
+      - "eligible choices fixed before selector evaluation"
+      - "target-neutral source-extension comparison under explicit hypotheses"
+    maps:
+      - "natural selector components sigma_X"
+      - "choice transport S_chi(u)"
+      - "relation map K_X"
+      - "automorphism reduct homomorphism U_*"
+    proof_obligations:
+      - "derive or adopt the P2-T01 domain and any selector-relevant source data before physical use"
+      - "state complete global component and relation-image quantifiers in P2-T03"
+      - "audit hidden choice target import post-hoc arrow changes and false conservativity in P2-T06"
+      - "stress altered categories actions and noninvertible arrows in P2-T07"
+      - "derive any physical gauge comparison independently"
+  candidate_law_comparison:
+    candidates: []
+    comparison_basis: []
+    selection_status: "not_applicable_to_necessary_condition_packet"
+  candidate_law_refutation:
+    refuted_candidate: ""
+    refutation_basis: ""
+    surviving_obligations: []
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "A proposal-only conditional theorem may be proved without protected authority; adoption and ontology change remain human-gated."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc undischarged until domain derivation selector existence audit stress and lawful adoption are complete."
+      - "Keep M_src g_eff matter coupling Einstein equations exact-GR recovery and benchmark promotion blocked."
+      - "Keep selector data independent of target metric topology benchmark observer and process metadata."
+      - "Require protected human authority before source-law or canonical ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "G_Sigma"
+      - "S_chi"
+      - "sigma"
+      - "F_X"
+      - "R_X"
+      - "H_XPlus"
+    audit_result: "The task-local validator confirms frozen source hashes and textual boundaries; P2-T06 retains the independent smuggling audit."
+  atlas_glue_obligations:
+    profile_law: "Not established; no atlas profile is introduced."
+    selector_law: "Fixed-point necessity is proved only on the proposal core; selector existence and ontology derivation remain open."
+    transition_law: "Not established; no atlas transition functions are introduced."
+    inverse_checks: "Inherited from the unchanged P2-T01 certified core."
+    cocycle_checks: "Not established; naturality on the core is not an atlas cocycle derivation."
+    finite_variation_robustness: "Open; seven controls do not prove physical variation robustness."
+  failure_branches:
+    collapse: "An empty fixed locus blocks a selector on the declared component but is not a global ontology no-go."
+    nonuniqueness: "Multiple fixed choices show only that automorphism naturality does not locally force uniqueness; K-image uniqueness is separate."
+    inverse_defect: "An arrow without P2-T01 inverse certification remains outside the selector core."
+    cocycle_defect: "No atlas cocycle is claimed or discharged."
+    variation_fragility: "Objectwise fixedness need not satisfy added noninvertible-arrow coherence."
+  known_risks:
+    - "Objects arrows eligibility or actions may be changed after observing a desired selector."
+    - "A desired choice may be loaded into S_chi and called derived."
+    - "Structural automorphisms may be overread as physical gauge transformations."
+    - "A stabilizer restriction may be overread as dynamical symmetry breaking or conservativity."
+    - "Local multiple fixed points may be overread as multiple global selectors or relation images."
+  failed_alternatives:
+    - "Treating a singleton fixed locus as a standalone global existence proof is rejected."
+    - "Treating multiple fixed points at one object as proof of multiple global selectors is rejected."
+    - "Calling a non-eliminable selector-relevant mark derived symmetry breaking is rejected."
+    - "Extending the core theorem to noninvertible arrows without added coherence is rejected."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. A later protected decision is required before adopting any selector law or editing canonical ontology."
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "ontology_law_research_packet"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION-V1"
+  item_source_path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+  item_kind: "law_target"
+  classification: "new_ontology_primitive_candidate"
+  evidence_paths:
+    - "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+    - "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_controls.json"
+    - "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_validation.json"
+  relation_to_current_ontology: "missing_primitive"
+  relation_to_target_structures: "No target topology atlas metric detector benchmark observer or desired recovery behavior defines the selector or fixed locus."
+  claim_boundary_id: "CB-V21-P2-T02-EQSRC-NATURAL-SELECTOR-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "Every natural selector on the unchanged proposal core takes automorphism-fixed values; empty fixed loci obstruct selection and multiple fixed loci do not locally force uniqueness."
+  forbidden_overreads:
+    - "P2-T01 domain or selector derived from or adopted into current ontology"
+    - "complete P2-T03 theorem already proved"
+    - "structural automorphisms established as physical gauge"
+    - "added mark established as derived or dynamical symmetry breaking"
+    - "frozen family reopened or rejected"
+    - "global no-go or future source-extension impossibility"
+    - "general EqSrc or downstream GR promotion"
+  next_route_if_blocked: "P2-T03 ontology-formalizer@0.2.0 ontology-law-research-packet"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-015-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Necessary automorphism fixed-point condition"
+    summary: "Proves that every natural selector value lies in the fixed locus of the declared structural automorphism action."
+  - payload_id: "NMP-RT-20260720-015-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Added-mark stabilizer and fixed-locus inclusion"
+    summary: "Proves image-subgroup and fixed-locus inclusions when a reduct preserves a mark and restricts an unchanged action."
+  - payload_id: "NMP-RT-20260720-015-003"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "Seven selector fixed-point and coherence controls"
+    summary: "Enumerates empty singleton multiple stabilizer relation-image disconnected and noninvertible branches."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT015-001"
+    payload_type: "definition"
+    object_name: "EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION-V1"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+    burden_effect: "narrows"
+    summary: "Defines natural selectors fixed loci relation images and exact branch semantics on the unchanged P2-T01 core."
+  - payload_id: "PAYLOAD-RT015-002"
+    payload_type: "theorem"
+    object_name: "Necessary automorphism fixed-point theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves objectwise fixed-point necessity without claiming the complete P2-T03 theorem."
+  - payload_id: "PAYLOAD-RT015-003"
+    payload_type: "lemma"
+    object_name: "Added-mark stabilizer lemma"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+    burden_effect: "narrows"
+    summary: "Separates mathematical stabilizer restriction from ontology derivation and physical symmetry breaking."
+  - payload_id: "PAYLOAD-RT015-004"
+    payload_type: "finite_model"
+    object_name: "Seven selector fixed-point controls"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_validation.json"
+    burden_effect: "narrows"
+    summary: "Mechanically validates empty singleton multiple relation-image added-mark disconnected and noninvertible branches."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "eqsrc"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: "empty_fixed_existence_obstruction"
+      status: "discharged"
+      scope: "one-object GL(2,2) and directed C4 groupoids"
+      result_artifact: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_validation.json"
+      obstruction_id: "EQSRC-P2-T02-EMPTY-FIXED"
+      local_countermodel_claim: "The declared action has no fixed choice and therefore no natural selector on that component."
+      forbidden_overread: "No global ontology no-go or future-extension impossibility is proved."
+    - countermodel_slot: "local_multiple_not_global_multiplicity"
+      status: "discharged"
+      scope: "disjoint union of a two-fixed component and an empty-fixed component"
+      result_artifact: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_validation.json"
+      obstruction_id: "EQSRC-P2-T02-GLOBAL-MULTIPLICITY-GUARD"
+      local_countermodel_claim: "Multiple fixed points on one component do not imply multiple global selectors."
+      forbidden_overread: "The control does not prove a complete component theorem."
+    - countermodel_slot: "noninvertible_coherence"
+      status: "discharged"
+      scope: "two objects and one noninvertible arrow"
+      result_artifact: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_validation.json"
+      obstruction_id: "EQSRC-P2-T02-NONINVERTIBLE-GUARD"
+      local_countermodel_claim: "Objectwise fixedness alone does not imply coherence beyond the core."
+      forbidden_overread: "No claim about every noninvertible extension is made."
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  scope: "not_applicable_to_global_status"
+  failed_object: ""
+  exact_failure: ""
+  minimal_counterexample_path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_validation.json"
+  current_ontology_implication: "not_applicable"
+  source_extension_implication: "not_applicable"
+  consequence: "Conditional finite obstructions are recorded without a global obstruction verdict."
+  forbidden_overread: "program-wide no-go or future source-extension impossibility"
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "State the exact mathematical condition that prior candidate cycles repeatedly violate."
+  explanation: "P2-T02 proves the necessary condition on a proposal-only domain, but current ontology derives neither the domain nor a selector and the complete P2-T03 theorem remains open."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "conditional_theorem_candidate"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A necessary theorem on a proposal-only domain neither derives nor adopts a selector and does not discharge general EqSrc."
+  downstream_unlocked:
+    - "P2-T03 complete no-selector and nonuniqueness theorem packet only"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The authoritative Distance-to-GR and metric-use ledgers remain unchanged."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "proposal-only domain and selector condition registered; current-ontology derivation and adoption remain open"
+  - burden: "Source equivalence EqSrc"
+    status: "fixed-point necessity proved on proposal core; complete theorem selector existence audit stress and general EqSrc remain open"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; K-image separation is formal control only"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no construction or scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "open; seven finite controls do not prove physical robustness"
+  - burden: "benchmark promotion"
+    status: "blocked by missing complete theorem source derivation adoption audit stress and downstream derivations"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "five exact candidate families remain locally frozen; common theorem route advances only to bounded P2-T03"
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p2_t02_fixed_point_necessity_proved_pending_p2_t03_complete_theorem"
+  prior_related_tasks:
+    - "RT-20260718-027 through RT-20260718-047"
+    - "RT-20260720-009 through RT-20260720-015"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P2-T02 holds the P2-T01 domain fixed, proves the exact necessary condition, records local-versus-global and K-image guards, and does not rename or repair an inventoried candidate family."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P2-T03"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  candidate_freeze_label: "EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION"
+  prior_attempts_considered:
+    - "five stable families and seven immutable candidates in P1-T03"
+    - "the P1-T04 component theorem target"
+    - "the P1-T05 eight-source literature basis"
+    - "the P2-T01 exact source category"
+    - "the P2-T02 fixed-point necessity theorem"
+  criteria_evaluated:
+    - "The P2-T01 domain and action remained unchanged."
+    - "Fixed-point necessity has a complete proof."
+    - "Seven controls cover empty singleton multiple stabilizer relation-image disconnected and noninvertible branches."
+    - "No complete global theorem selector construction or ontology adoption is supplied."
+  freeze_if:
+    - "Later work repeats fixed-point necessity without adding the P2-T03 global theorem."
+    - "Later work changes the domain or action after observing a desired selector."
+  do_not_freeze_if:
+    - "P2-T03 states and proves the complete no-selector and nonuniqueness theorem with explicit global and K-image quantifiers."
+  freeze_decision: "not_frozen"
+  decision_reason: "The necessary theorem and controls are materially distinct and create the exact input required by P2-T03."
+  rationale: "The common theorem route advances to P2-T03 while every exact candidate-family freeze remains unchanged."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "ontology-formalizer"
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "P2-T01 proposal core and eligible-choice action are fixed inputs with live hash parity."
+    - "Fixed-point necessity and the added-data stabilizer inclusion are proved under explicit hypotheses."
+    - "Seven finite controls pass mechanical enumeration."
+  open_or_blocked_physical_targets:
+    - "current-ontology derivation or lawful adoption of the source domain and selector law"
+    - "physical gauge interpretation and covariance"
+    - "general EqSrc M_src g_eff matter coupling Einstein equations and exact-GR recovery"
+  forbidden_overread:
+    - "proposal theorem as ontology adoption physical proof benchmark progress or completed derivation"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The fixed-point theorem establishes bounded draft/control mathematics only. It does not construct a selector, prove the complete P2-T03 theorem, derive or adopt the domain, establish physical gauge meaning, reopen a frozen family, discharge general EqSrc, change scientific ledgers, promote downstream GR claims, or complete the derivation."
+  forbidden_conclusions:
+    - "P2-T01 domain or selector derived from or adopted into current ontology"
+    - "complete P2-T03 theorem already proved"
+    - "structural automorphisms as physical gauge transformations"
+    - "added mark as derived or dynamical symmetry breaking"
+    - "reduct functor as conservativity proof"
+    - "frozen family reopened rejected or globally impossible"
+    - "global theory rejection or future source-extension impossibility"
+    - "physical admissibility covariance or empirical meaning established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "M_src g_eff matter coupling or Einstein-equation derivation"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+
+selected_next_route:
+  route_id: "v21_p2_t03_eqsrc_no_selector_nonuniqueness_theorem"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P2-T03"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "State the exact mathematical condition that prior candidate cycles repeatedly violate."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "State and prove the complete no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers while preserving P2-T06 audit and P2-T07 stress ownership."
+  source_handoff: "research_control/handoffs/handoff-0785.yaml"
+claim_boundary:
+  boundary_id: "CB-V21-P2-T02-EQSRC-NATURAL-SELECTOR-001"
+  allowed_scope: "Exact P2-T02 selector definition fixed-point necessity proof empty singleton multiple and K-image branches added-data stabilizer lemma seven finite controls and one P2-T03 route."
+  blocked_scope: "Post-hoc domain change complete P2-T03 theorem P2-T06 audit P2-T07 stress physical gauge claims frozen-family reopening ontology edit adoption general EqSrc scientific-ledger changes downstream GR benchmark promotion Gate Chair verdict publication completed derivation or global no-go."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_validation.json"
+  local_validator_report_hash: "8249264b7ce14d459dab57121dbccb0bed2685ba2adc0a12a57c4243dd0a8bf3"
+  theorem_hash: "7611533f40b61b8a32da327add3646b95c604f858adba54c40378b6f29d5067a"
+  controls_hash: "3c0c85fd10eb6939cdcb88d31033ce6a587959260a9275089d5c21a6c0eadcde"
+  distance_to_gr_ledger_hash: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  metric_use_ledger_hash: "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  canonical_ontology_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+  latex_compile_status: "PASS"
+  validation_status: "PASS"
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  selector_construction_authorized: false
+  complete_selector_theorem_claim_authorized: false
+  physical_gauge_claim_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 15 lease parity immutable route identity max reasoning effort repository binding clean start predecessor checkpoint and single consumption were verified before work."
+      - "Memory preflight refreshed local retrieval and both registered P1-T04 and P2-T01 source objects plus registry rows were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required perspectives completed and five mathematical versus ontology conflicts were resolved in one parent review round."
+      - "The task-local validator passes all 21 theorem branch finite source-hash ledger ontology synthesis and claim-boundary checks."
+      - "The registered TeX source compiles successfully to a five-page local scratch PDF without box warnings."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Repository validation documentation impact signal parity generated freshness and whitespace checks remain required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph and claim graph remain to be regenerated and checked."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap and validate-only remain required after source registration."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 927
+    relationship_row_count: 4592
+    semantic_row_count: 927
+    vault_row_count: 927
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_local_cache_only_warning_count: 9
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+      returned_object_ids:
+        - "TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION"
+      returned_object_ids:
+        - "TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION"
+  canonical_inspections:
+    - object_id: "TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+      source_hash: "c5aaaa70f4d7ce216a35d17af674e94e3f2866c1bdcfb28787a40d9f6636516c"
+    - object_id: "TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+      source_hash: "00d7e14b76ac4fa01b834739646fe03012c2b82326a158064b27cdbe916be268"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and nine local-cache-only freshness warnings were refreshed to a clean local retrieval state."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET --json"
+    status: "PASS"
+    summary: "Resolved and inspected the registered P1-T04 theorem target and its TeX source-registry row."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION --json"
+    status: "PASS"
+    summary: "Resolved and inspected the registered P2-T01 source-category definition and its TeX source-registry row."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-015/artifacts/validate_eqsrc_natural_selector_fixed_point_condition.py"
+    status: "PASS"
+    summary: "The task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-015/artifacts/validate_eqsrc_natural_selector_fixed_point_condition.py --write-report --json"
+    status: "PASS"
+    summary: "Passed 21 of 21 checks across theorem identity fixed-point proof branch separation added-data lemma seven controls synthesis source hashes both ledgers canonical ontology and claim boundaries."
+  - command: "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-015-latex research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+    status: "PASS"
+    summary: "Compiled the registered TeX source to a five-page local scratch PDF without box warnings."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  rationale: "The result is a bounded scientific theorem and finite-control packet, not a project-system defect."

@@ -1,0 +1,75 @@
+{
+  "claim_status": "draft/control",
+  "controls": [
+    {
+      "control_id": "SEL-GL2-LINES-EMPTY-001",
+      "expected_automorphism_count": 6,
+      "expected_choice_count": 3,
+      "expected_fixed_choice_count": 0,
+      "expected_selector_count_on_one_object_component": 0,
+      "interpretation": "empty fixed locus obstructs a selector on the declared component",
+      "source_artifact": "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml",
+      "source_sha256": "a5bc1af23713145727bfad592a770691b5128d6ce6546966860d80c588a530a6"
+    },
+    {
+      "control_id": "SEL-C4-ROOTS-EMPTY-002",
+      "expected_automorphism_count": 4,
+      "expected_choice_count": 4,
+      "expected_fixed_choice_count": 0,
+      "expected_selector_count_on_one_object_component": 0,
+      "interpretation": "empty fixed locus obstructs a selector on the declared component",
+      "source_artifact": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml",
+      "source_sha256": "9ddce9d042ef187d163043d6c2a98a7d1a796cd01a433d3d258632150a83325e"
+    },
+    {
+      "control_id": "SEL-CHAIN4-UNIQUE-003",
+      "expected_automorphism_count": 1,
+      "expected_choice_count": 1,
+      "expected_fixed_choice_count": 1,
+      "expected_selector_count_on_one_object_component": 1,
+      "interpretation": "a singleton loaded minimum is a unique selector only in this proposal control",
+      "source_artifact": "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex",
+      "source_sha256": "b712552d328f144491bff689b702eba6dc2027ce1cc61c7052adbca84b0639f7"
+    },
+    {
+      "control_id": "SEL-TRIVIAL-TWO-CHOICE-004",
+      "expected_automorphism_count": 1,
+      "expected_choice_count": 2,
+      "expected_fixed_choice_count": 2,
+      "expected_injective_K_image_count": 2,
+      "expected_constant_K_image_count": 1,
+      "interpretation": "naturality alone does not choose uniquely and relation-level uniqueness is separate"
+    },
+    {
+      "control_id": "SEL-MARKED-GL2-STABILIZER-005",
+      "expected_base_automorphism_count": 6,
+      "expected_image_stabilizer_count": 2,
+      "expected_fixed_choice_count_under_stabilizer": 1,
+      "interpretation": "a loaded line reduces the group and fixes the loaded line but remains added source data"
+    },
+    {
+      "control_id": "SEL-MARKED-C4-STABILIZER-006",
+      "expected_base_automorphism_count": 4,
+      "expected_image_stabilizer_count": 1,
+      "expected_fixed_choice_count_under_stabilizer": 4,
+      "interpretation": "group reduction alone does not imply selector uniqueness"
+    },
+    {
+      "control_id": "SEL-NONINVERTIBLE-COHERENCE-GUARD-007",
+      "expected_objectwise_fixed_assignments": 2,
+      "expected_coherent_assignments": 1,
+      "interpretation": "objectwise automorphism fixedness does not imply coherence after extending beyond the core",
+      "source_artifact": "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex",
+      "source_sha256": "c5aaaa70f4d7ce216a35d17af674e94e3f2866c1bdcfb28787a40d9f6636516c"
+    }
+  ],
+  "general_EqSrc_discharged": false,
+  "ontology_modification_authorized": false,
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P2-T02",
+  "p2_t01_source_category_id": "EQSRC-SOURCE-CATEGORY-DEFINITION-V1",
+  "p2_t01_source_category_sha256": "00d7e14b76ac4fa01b834739646fe03012c2b82326a158064b27cdbe916be268",
+  "schema_id": "EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONTROLS-V1",
+  "task_id": "RT-20260720-015",
+  "theorem_id": "EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION-V1"
+}

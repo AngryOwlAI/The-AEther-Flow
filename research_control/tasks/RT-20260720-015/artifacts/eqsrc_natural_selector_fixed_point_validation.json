@@ -1,0 +1,201 @@
+{
+  "aggregate_status": "PASS",
+  "check_count": 21,
+  "checks": [
+    {
+      "check_id": "artifact_set",
+      "detail": "All seven bounded theorem and synthesis artifacts exist.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_identity",
+      "detail": "Controls, children, conflict review, and fusion share the exact theorem identity.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_structure",
+      "detail": "The TeX source has balanced braces and a complete document envelope.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixed_point_theorem",
+      "detail": "The natural-selector definition and necessary fixed-point theorem are explicit with proof.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "branch_separation",
+      "detail": "Singleton, multiple, global-coherence, and relation-image branches are separated.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "added_data_lemma",
+      "detail": "The stabilizer and fixed-locus inclusions retain explicit source-extension status.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_outputs",
+      "detail": "Both parallel perspectives completed under the shared unchanged-domain and no-promotion boundary.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_synthesis",
+      "detail": "One parent review round resolved every child conflict.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "frozen_source_hashes",
+      "detail": "P1 controls and the unchanged P2-T01 domain retain live hash parity.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "gl2_empty_fixed_control",
+      "detail": "GL(2,2) closes with six elements and has no fixed line among three choices.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "c4_empty_fixed_control",
+      "detail": "Directed C4 has four rotations and no fixed root.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "chain_unique_control",
+      "detail": "The ordered chain control has a trivial automorphism group and singleton eligible minimum.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "multiple_fixed_and_K_control",
+      "detail": "Two fixed choices separate selector multiplicity from injective and constant K images.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "marked_gl2_stabilizer_control",
+      "detail": "The marked-line stabilizer has order two and fixes exactly that line.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "marked_c4_nonunique_control",
+      "detail": "The marked-root stabilizer is trivial and fixes all four unchanged eligible roots.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "noninvertible_coherence_guard",
+      "detail": "Only one of two objectwise fixed assignments satisfies the noninvertible-arrow coherence equation.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "global_multiplicity_guard",
+      "detail": "A multiple-fixed component plus an empty-fixed component has no global selector.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "canonical_ontology_unchanged",
+      "detail": "Canonical ontology retains its launch hash.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "distance_ledger_unchanged",
+      "detail": "Distance-to-GR ledger retains its launch hash.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_ledger_unchanged",
+      "detail": "Metric-use ledger retains its launch hash.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_language",
+      "detail": "The artifact preserves underdetermination, adoption, next-ownership, gauge, and ledger boundaries.",
+      "status": "PASS"
+    }
+  ],
+  "failure_count": 0,
+  "finite_metrics": {
+    "directed_c4": {
+      "automorphism_count": 4,
+      "choice_count": 4,
+      "fixed_choice_count": 0
+    },
+    "disconnected_counterexample": {
+      "empty_fixed_component_selector_count": 0,
+      "global_selector_count": 0,
+      "multiple_fixed_component_selector_count": 2
+    },
+    "gl2_lines": {
+      "automorphism_count": 6,
+      "choice_count": 3,
+      "closed": true,
+      "fixed_choice_count": 0,
+      "identity_present": true
+    },
+    "marked_c4": {
+      "base_automorphism_count": 4,
+      "fixed_choice_count_under_stabilizer": 4,
+      "image_stabilizer_count": 1
+    },
+    "marked_gl2": {
+      "base_automorphism_count": 6,
+      "fixed_choice_count_under_stabilizer": 1,
+      "image_stabilizer_count": 2
+    },
+    "noninvertible_guard": {
+      "coherent_assignments": 1,
+      "objectwise_fixed_assignments": 2
+    },
+    "ordered_chain4": {
+      "automorphism_count": 1,
+      "choice_count": 1,
+      "fixed_choice_count": 1
+    },
+    "trivial_two_choice": {
+      "automorphism_count": 1,
+      "choice_count": 2,
+      "constant_K_image_count": 1,
+      "fixed_choice_count": 2,
+      "injective_K_image_count": 2
+    }
+  },
+  "job_id": "AJ-RT-20260720-015-001",
+  "ledger_receipts": {
+    "canonical_ontology_sha256": "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2",
+    "distance_to_gr_sha256": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+    "metric_use_sha256": "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  },
+  "metrics": {
+    "added_data_lemma_count": 1,
+    "complete_p2_t03_theorem_proved": false,
+    "finite_control_count": 7,
+    "fixed_point_necessity_theorem_count": 1,
+    "general_EqSrc_discharged": false,
+    "p2_t01_domain_changed": false,
+    "physics_promotion_authorized": false
+  },
+  "plan_task_id": "P2-T02",
+  "schema_id": "v21_p2_t02_eqsrc_natural_selector_fixed_point_validation_v1",
+  "source_receipts": [
+    {
+      "actual_sha256": "a5bc1af23713145727bfad592a770691b5128d6ce6546966860d80c588a530a6",
+      "control_id": "SEL-GL2-LINES-EMPTY-001",
+      "expected_sha256": "a5bc1af23713145727bfad592a770691b5128d6ce6546966860d80c588a530a6",
+      "path": "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml"
+    },
+    {
+      "actual_sha256": "9ddce9d042ef187d163043d6c2a98a7d1a796cd01a433d3d258632150a83325e",
+      "control_id": "SEL-C4-ROOTS-EMPTY-002",
+      "expected_sha256": "9ddce9d042ef187d163043d6c2a98a7d1a796cd01a433d3d258632150a83325e",
+      "path": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml"
+    },
+    {
+      "actual_sha256": "b712552d328f144491bff689b702eba6dc2027ce1cc61c7052adbca84b0639f7",
+      "control_id": "SEL-CHAIN4-UNIQUE-003",
+      "expected_sha256": "b712552d328f144491bff689b702eba6dc2027ce1cc61c7052adbca84b0639f7",
+      "path": "research_control/tasks/RT-20260718-047/artifacts/eqsrc_flow_generated_graded_orbit_root_law_candidate_v1.tex"
+    },
+    {
+      "actual_sha256": "c5aaaa70f4d7ce216a35d17af674e94e3f2866c1bdcfb28787a40d9f6636516c",
+      "control_id": "SEL-NONINVERTIBLE-COHERENCE-GUARD-007",
+      "expected_sha256": "c5aaaa70f4d7ce216a35d17af674e94e3f2866c1bdcfb28787a40d9f6636516c",
+      "path": "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+    }
+  ],
+  "theorem_id": "EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION-V1"
+}

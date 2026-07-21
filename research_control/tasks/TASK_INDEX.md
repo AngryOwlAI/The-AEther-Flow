@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `75ffb3191d364a38f4d549f7518c84dc25983b8623bb396f3e24b387e8ae71d2`
-- Generated-at source timestamp: `2026-07-21T02:08:00Z`
-- Row count: `1019`
+- Source fingerprint: `dc16540908e3e31e6e9b62b2d1cc23213d175c3d1715b7f3afa1bda97d2c242e`
+- Generated-at source timestamp: `2026-07-21T03:05:25Z`
+- Row count: `1020`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260720-015|RT-20260720-014|2026-07-21T03:05:25Z|2026-07-21T03:20:07Z|v21_eqsrc_natural_selector_fixed_point|completed|source_equivalence_eqsrc|State the exact mathematical condition that prior candidate cycles repeatedly violate.|ontology-formalizer@0.2.0|false|false|10|After validated completion, run exactly one bounded v21 P2-T03 Ontology Formalizer packet stating the complete no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers; preserve P2-T06 audit and P2-T07 stress ownership and all ontology, ledger, and promotion blocks.|PASS|research_control/tasks/RT-20260720-015/jobs/completions/AJC-AJ-RT-20260720-015-001.yaml|
 |RT-20260720-014|RT-20260720-013|2026-07-21T02:08:00Z|2026-07-21T02:24:40Z|v21_eqsrc_source_category_formalization|completed|source_equivalence_eqsrc|Supply the missing formal domain for the selector theorem.|ontology-formalizer@0.2.0|false|false|11|Run exactly one bounded v21 P2-T02 Ontology Formalizer ontology-law-research-packet defining natural selectors and the invariant fixed-point condition on the P2-T01 domain; do not alter the domain after observing a desired selector, infer physical gauge meaning, reopen a frozen family, adopt ontology, change scientific ledgers, promote, or execute another v21 item.|PASS|research_control/tasks/RT-20260720-014/jobs/completions/AJC-AJ-RT-20260720-014-001.yaml|
 |RT-20260720-013|RT-20260720-012|2026-07-21T01:17:33Z|2026-07-21T01:24:43Z|v21_eqsrc_naturality_primary_literature_review|completed|source_equivalence_eqsrc|Ground the general theorem route in existing mathematics and avoid reinventing or overstating known results.|external-red-team-reviewer@0.1.0|false|false|11|Run exactly one bounded v21 P2-T01 Ontology Formalizer packet defining the source category, admissible morphisms, and automorphism actions while preserving the P1-T03 freezes and all no-promotion boundaries.|PASS|research_control/tasks/RT-20260720-013/jobs/completions/AJC-AJ-RT-20260720-013-001.yaml|
 |RT-20260720-012|RT-20260720-011|2026-07-21T00:12:21Z|2026-07-21T00:26:49Z|v21_eqsrc_canonical_selection_naturality_target|completed|source_equivalence_eqsrc|Replace candidate-specific prose with one shared mathematical burden.|ontology-formalizer@0.2.0|false|false|11|Run exactly one bounded v21 P1-T05 External Red-Team Reviewer external-primary-literature-packet comparing established naturality, symmetry, leader-election, gauge-choice, and canonical-reconstruction results with the registered target.|PASS|research_control/tasks/RT-20260720-012/jobs/completions/AJC-AJ-RT-20260720-012-001.yaml|

@@ -1,0 +1,302 @@
+% authority: science-draft
+% status: draft/control
+% route: ontology-law-research-packet
+% trigger_classification: derivation_critical_missing_source_law
+% adoption_status: blocked_adoption_open_continuation
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+\newcommand{\Core}{\operatorname{Core}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Nat}{\operatorname{Nat}}
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\Set}{\mathsf{Set}}
+\newcommand{\EqSrc}{\mathsf{EqSrc}}
+
+\title{V21 P2-T02 EqSrc Natural-Selector\\
+Fixed-Point Condition v1}
+\author{Ontology Formalizer control packet RT-20260720-015}
+\date{2026-07-20}
+
+\begin{document}
+\maketitle
+
+\section{Control status and exact burden}
+
+This artifact executes only v21 work item \texttt{P2-T02}. Its identifier is
+\texttt{EQSRC-NATURAL-SELECTOR-}\allowbreak
+\texttt{FIXED-POINT-CONDITION-V1}. The exact burden is
+to define deterministic source-natural selection on the already declared
+P2-T01 core and derive the necessary automorphism fixed-point condition. The
+P2-T01 objects, arrows, admission receipts, certified isomorphisms,
+eligibility predicate, choice functor, relation interface, and automorphism
+actions remain unchanged.
+
+The record is \texttt{draft/control}, \texttt{proposal-only}, and
+\texttt{source-extension data}. Current ontology does not derive the P2-T01
+source category, its eligible-choice functor, a natural selector, or a
+physical gauge groupoid. Adoption is
+\texttt{blocked\_adoption\_open\_continuation}. The theorem below is exact
+relative to the declared proposal domain; it is not ontology adoption,
+physical covariance, empirical recovery, general \(\EqSrc\), or benchmark
+progress.
+
+\section{Frozen input domain}
+
+Let
+\[
+  \mathcal G_\Sigma=\Core(\mathcal C_\Sigma)
+\]
+be the certified-isomorphism core defined by P2-T01. Let
+\[
+  S_\chi:\mathcal G_\Sigma\longrightarrow\Set
+\]
+be its eligible-choice functor. For each certified isomorphism
+\(u:X\to Y\), the map \(S_\chi(u)\) is exactly the action already declared
+by P2-T01. This packet does not remove an arrow, add an arrow, modify
+\(\chi\), alter \(S_\chi\), or redefine an action after inspecting a desired
+choice or induced relation.
+
+Let \(1_{\mathcal G_\Sigma}:\mathcal G_\Sigma\to\Set\) be the constant
+singleton functor. It sends every object to \(\{\star\}\) and every arrow to
+the identity of that singleton.
+
+\begin{definition}[Deterministic source-natural selector]
+A deterministic source-natural selector is a natural transformation
+\[
+  \sigma:1_{\mathcal G_\Sigma}\Longrightarrow S_\chi.
+\]
+Equivalently, it is a family \(\sigma_X\in S_\chi(X)\) satisfying
+\[
+  S_\chi(u)(\sigma_X)=\sigma_Y
+  \qquad\text{for every certified isomorphism }u:X\to Y.
+\]
+The selector space is
+\[
+  \operatorname{Sel}_\chi
+  :=\Nat(1_{\mathcal G_\Sigma},S_\chi).
+\]
+It is equivalently the space of natural sections of the unique natural map
+\(S_\chi\to1_{\mathcal G_\Sigma}\). The word ``deterministic'' means only
+single-valued; it asserts neither computability nor a physical determinism
+principle.
+\end{definition}
+
+\begin{definition}[Invariant fixed locus and relation image]
+For each object \(X\), define
+\[
+ F_X:=S_\chi(X)^{\Aut_{\mathcal G_\Sigma}(X)}
+ =\{d\in S_\chi(X):S_\chi(g)d=d\text{ for every }
+ g\in\Aut_{\mathcal G_\Sigma}(X)\}.
+\]
+If the P2-T01 natural relation map \(K_X\) is present, define separately
+\[
+  \mathcal R_X:=K_X(F_X).
+\]
+The sets \(F_X\) and \(\mathcal R_X\) answer different questions: the first
+concerns selected source choices, while the second concerns their induced
+relation images.
+\end{definition}
+
+\section{Necessary fixed-point theorem}
+
+\begin{theorem}[Necessary automorphism fixed-point condition]
+If \(\sigma\in\operatorname{Sel}_\chi\), then
+\[
+  \sigma_X\in F_X
+\]
+for every object \(X\) of \(\mathcal G_\Sigma\).
+\end{theorem}
+
+\begin{proof}
+Fix an object \(X\) and an arbitrary
+\(g\in\Aut_{\mathcal G_\Sigma}(X)\). Naturality of \(\sigma\) gives
+\[
+  S_\chi(g)\circ\sigma_X
+  =\sigma_X\circ1_{\mathcal G_\Sigma}(g).
+\]
+The singleton functor sends \(g\) to the identity. Evaluating the displayed
+equality at \(\star\) therefore yields
+\[
+  S_\chi(g)(\sigma_X)=\sigma_X.
+\]
+Because \(g\) was arbitrary, \(\sigma_X\) lies in \(F_X\).
+\end{proof}
+
+\begin{corollary}[Empty-fixed obstruction]
+If \(F_X=\varnothing\) for any object \(X\), then no natural selector exists
+on the connected component containing \(X\), and consequently
+\(\operatorname{Sel}_\chi=\varnothing\) on the full groupoid.
+\end{corollary}
+
+\begin{proof}
+A selector on the component, or on the full groupoid, would restrict at
+\(X\) to an element of \(F_X\), contradicting emptiness.
+\end{proof}
+
+\begin{remark}[Singleton and multiple fixed loci]
+If \(|F_X|=1\), every selector, if one exists, is forced at \(X\). This is a
+local uniqueness statement, not an existence proof. If \(|F_X|>1\),
+automorphism naturality alone does not distinguish a unique value at \(X\).
+It does not follow that the full groupoid has multiple selectors: another
+component may have an empty fixed locus, or additional coherence may fail.
+Likewise \(|F_X|>1\) can coexist with \(|\mathcal R_X|=1\) when \(K_X\) is
+constant or noninjective on \(F_X\).
+\end{remark}
+
+On a connected groupoid component, the prior P1-T04 artifact proves that
+evaluation at a representative gives a bijection from natural sections to
+the representative fixed locus. This packet cites that result and does not
+relabel it as a new complete general theorem. P2-T03 retains the general
+no-selector and nonuniqueness theorem, global component quantifiers, any
+choice-set assumptions for infinitely many components, and the complete
+relation-image classification. Extending from the core to noninvertible
+arrows also requires additional coherence equations not proved here.
+
+\section{Added source data and stabilizers}
+
+Let \(\Sigma^+\) be an enriched proposal signature and
+\[
+ U:\mathcal G_{\Sigma^+}\longrightarrow\mathcal G_\Sigma
+\]
+a target-neutral reduct functor. Let \(X^+\) reduce to \(X\). The induced
+map on automorphisms is
+\[
+ U_*:\Aut_{\Sigma^+}(X^+)\longrightarrow\Aut_\Sigma(X),
+ \qquad H_{X^+}:=\operatorname{im}U_*.
+\]
+
+\begin{proposition}[Added-mark stabilizer and fixed-locus inclusion]
+Suppose \(X^+\) contains an added mark \(m\) preserved by every enriched
+automorphism. Then
+\[
+ H_{X^+}\leq\operatorname{Stab}_{\Aut_\Sigma(X)}(m).
+\]
+If, additionally, the eligible-choice set is unchanged and the enriched
+action is exactly the restriction of the base action to \(H_{X^+}\), then
+\[
+ S_\chi(X)^{\Aut_\Sigma(X)}
+ \subseteq S_\chi(X)^{H_{X^+}}.
+\]
+\end{proposition}
+
+\begin{proof}
+Functoriality of \(U\) makes \(U_*\) a group homomorphism. Every enriched
+automorphism preserves \(m\); hence every reduct in its image lies in the
+stabilizer of \(m\). For the second statement, a point fixed by every element
+of the base group is fixed by every element of its subgroup \(H_{X^+}\).
+\end{proof}
+
+Equality with the full mark stabilizer requires every mark-preserving reduct
+automorphism to lift; identifying the enriched automorphism group with that
+stabilizer also requires faithfulness on automorphisms. The inclusion can be
+strict, and reducing a group need not create a fixed point or a unique one.
+If the extension changes the choice space, no fixed-locus comparison follows
+without an explicit equivariant comparison map.
+
+A pure presentation or serialization relabeling adds no scientific structure.
+An eliminable abbreviation is a
+\texttt{conservative\_definitional\_extension} only when an explicit
+elimination proof exists. A non-eliminable root, line, orientation, order,
+grading, action, name, random seed, measure, normalization, response token,
+or selector-relevant mark is a
+\texttt{new\_ontology\_primitive\_candidate} with status
+\texttt{draft/control}, \texttt{proposal-only}, and
+\texttt{source-extension data}. If the mark is the desired choice itself,
+the construction is circular. None of these cases is, by mathematics alone,
+spontaneous, dynamical, or physical symmetry breaking.
+
+\section{Finite controls}
+
+The task-local validator enumerates the following controls.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\textwidth}
+                  >{\raggedright\arraybackslash}p{0.30\textwidth}
+                  >{\raggedright\arraybackslash}p{0.38\textwidth}}
+\toprule
+Control & Exact count & Bounded consequence \\
+\midrule
+\endhead
+\(\mathrm{GL}(2,2)\) lines & Six automorphisms act on three lines; no
+common fixed line. & Empty fixed locus obstructs a selector on this one-object
+component. \\
+Directed \(C_4\) roots & Four rotations act on four roots; no common fixed
+root. & Empty fixed locus obstructs a selector on this one-object component. \\
+Ordered four-chain & The source-declared eligible set is the singleton global
+minimum and the structural automorphism group is trivial. & Exactly one fixed
+choice and one selector exist in this proposal control. \\
+Trivial two-choice object & Both choices are fixed; injective \(K\) has two
+images and constant \(K\) has one. & Naturality alone does not select uniquely;
+relation-level uniqueness is independent. \\
+Marked \(\mathrm{GL}(2,2)\) line & The image stabilizer has order two and
+fixes exactly the marked line. & Added data can enlarge a fixed locus, but the
+mark remains loaded source structure. \\
+Marked \(C_4\) root & The stabilizer is trivial and therefore fixes all four
+unchanged eligible roots. & Symmetry reduction alone does not imply uniqueness. \\
+Noninvertible coherence guard & Two objectwise fixed assignments exist but
+only one respects the declared noninvertible arrow. & Automorphism fixedness
+does not establish full-category coherence. \\
+\bottomrule
+\end{longtable}
+
+A disconnected counterexample guards one further overread: the disjoint union
+of a trivial one-object groupoid with two fixed choices and a one-object
+\(C_2\)-groupoid acting freely on two choices has no global selector. Thus
+multiple fixed points on one component do not imply multiple selectors on the
+full groupoid.
+
+The controls are mathematical enumerations. They are not observations,
+predictions, physical gauge evidence, or exact-GR recovery evidence.
+
+\section{Claim boundary and next ownership}
+
+The proved payload is only the necessary fixed-point theorem and the bounded
+added-data lemma on the unchanged P2-T01 proposal domain. Structural
+automorphisms are defined relative to \(\Sigma\); they are not physical gauge
+transformations without separately derived or adopted states, dynamics or
+constraints, observables, and a redundancy interpretation.
+
+No object, arrow, eligibility rule, \(K\)-map, or automorphism action was
+selected after observing a desired result. No exact candidate family was
+reopened or rejected. No source law or canonical ontology change is adopted.
+General \(\EqSrc\), \(M_{\rm src}\), \(g_{\rm eff}\), matter coupling,
+Einstein equations, benchmark promotion, Gate Chair authority, publication,
+and completed derivation remain blocked. Both scientific ledgers remain
+unchanged.
+
+P2-T03 owns the complete no-selector and nonuniqueness theorem. P2-T06 owns an
+independent audit for hidden choice, target import, post-hoc category
+engineering, and false conservativity. P2-T07 owns independent stress under
+weakened or strengthened categories, altered actions, noninvertible arrows,
+and theorem-boundary countermodels. Protected human gates retain ontology or
+source-law adoption, physical-gauge identification, benchmark promotion, and
+Gate Chair decisions.
+
+\section{Source record}
+
+The formal terminology follows the registered P1-T05 primary-literature
+review and its source-specific transfer limits. Natural transformations are
+used in the standard categorical sense of Eilenberg and Mac Lane (1945).
+Project-specific theorem and boundary authority comes from the registered
+P1-T04 target, the P2-T01 source-category definition, the v21 plan, and
+handoff-0784, not from analogy alone.
+
+\begin{thebibliography}{9}
+\bibitem{eilenberg-maclane-1945}
+Eilenberg, S., \& Mac Lane, S. (1945). General theory of natural
+equivalences. \emph{Transactions of the American Mathematical Society, 58},
+231--294. \url{https://doi.org/10.1090/S0002-9947-1945-0013131-6}
+\end{thebibliography}
+
+\end{document}

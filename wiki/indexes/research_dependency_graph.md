@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-21T02:24:40Z`
-- Source fingerprint: `973458d2da3171ce74f6b17872d469a48ea61deed880f487b3c954f46324e814`
-- Nodes: `19999`
-- Edges: `68595`
+- Generated from tracked state as of: `2026-07-21T03:20:07Z`
+- Source fingerprint: `dfeb758ffb842891bd6f629e34b7ffb9a40c8702d9525c1fb34bb157643dbd6e`
+- Nodes: `20031`
+- Edges: `68660`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1015 |
+| `completion_yaml` | 1016 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 784 |
+| `handoff_yaml` | 785 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1015 |
+| `agent_job` | `support_only` | 1016 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10413 |
-| `blocked_burden` | `blocked` | 3796 |
-| `claim_boundary` | `support_only` | 972 |
-| `draft_control_candidate` | `draft_control` | 647 |
-| `draft_control_candidate` | `proposal_only` | 106 |
+| `artifact` | `support_only` | 10422 |
+| `blocked_burden` | `blocked` | 3808 |
+| `claim_boundary` | `support_only` | 973 |
+| `draft_control_candidate` | `draft_control` | 650 |
+| `draft_control_candidate` | `proposal_only` | 107 |
 | `draft_control_candidate` | `science_draft` | 62 |
-| `frozen_negative` | `frozen_negative` | 120 |
+| `frozen_negative` | `frozen_negative` | 121 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 784 |
-| `human_gated_object` | `human_gated` | 426 |
+| `handoff` | `support_only` | 785 |
+| `human_gated_object` | `human_gated` | 427 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 32 |
 | `source_ontology_object` | `canonical_source` | 23 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 322 |
+| `source_ontology_object` | `support_only` | 323 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 954 |
+| `task` | `support_only` | 955 |
 
 ## Frontier Table
 
@@ -92,6 +92,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:active_supersedence` | Blocked claim: active supersedence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:active_supersedence_or_evidence_deduplication_execution` | Blocked permission: active supersedence or evidence deduplication execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:active_teaching_packet_fallback_revival` | Blocked claim: active teaching-packet fallback revival | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:added_mark_as_derived_symmetry_breaking` | Blocked claim: added mark as derived symmetry breaking | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:advisory_formatting_scripts_as_canonical_content_law` | Blocked claim: advisory formatting scripts as canonical content law | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:advisory_metric_authority` | Blocked permission: advisory metric authority | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:advisory_metrics_as_hard_gates` | Blocked claim: advisory metrics as hard gates | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:backlog_as_detector_semantics` | Blocked claim: backlog as detector semantics | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_einstein_equations` | Blocked claim: backlog as Einstein equations | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:backlog_as_eqsrc_discharge` | Blocked claim: backlog as EqSrc discharge | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:backlog_as_execution_of_downstream_tasks` | Blocked claim: backlog as execution of downstream tasks | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260720-014`
-- Latest handoff: `handoff-0784`
-- Handoff path: `research_control/handoffs/handoff-0784.yaml`
-- Next action: Run exactly one bounded v21 P2-T02 Ontology Formalizer ontology-law-research-packet defining natural selectors as sections of S_chi on the unchanged P2-T01 core and proving or refuting the invariant fixed-point condition. Do not alter the category after observing a desired selector, treat structural automorphisms as physical gauge, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
+- Active task: `RT-20260720-015`
+- Latest handoff: `handoff-0785`
+- Handoff path: `research_control/handoffs/handoff-0785.yaml`
+- Next action: Run exactly one bounded v21 P2-T03 Ontology Formalizer ontology-law-research-packet stating and proving the complete no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers. Preserve P2-T06 audit and P2-T07 stress ownership; do not alter the P2-T01 domain after observing an outcome, infer physical gauge meaning, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
