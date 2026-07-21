@@ -1,0 +1,226 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array,enumitem,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newcommand{\A}{\mathcal A}
+\newcommand{\C}{\mathcal C}
+\newcommand{\G}{\mathcal G}
+\newcommand{\TGR}{\mathcal T_{\mathrm{GR}}}
+\title{V21 P4-T02: Continuum-First Premetric Ontology Option}
+\author{Ontology Formalizer parent--child synthesis}
+\date{2026-07-21}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.93\linewidth}{\textbf{Status and authority.}
+This is a \textbf{draft/control, proposal-only} ontology option. It is not a
+canonical-ontology candidate, adoption, rejection, Gate Chair decision,
+physical derivation, proof of GR, or publication artifact. The current
+adoption status is \texttt{blocked\_adoption\_open\_continuation}.}}
+\end{center}
+
+\section{Question and claim boundary}
+
+The bounded question is whether one can state a coherent continuum-first
+source option while displaying, rather than concealing, its primitive debt.
+The answer below treats a four-dimensional topology and smooth structure as
+primitive. Consequently, emergence of a bare differentiable manifold is not a
+target \emph{within this branch}. This branch choice is not an ontology-regime
+selection: the emergence-first P4-T03 option remains open, and only a later
+protected comparison may recommend adoption or rejection.
+
+No target Lorentzian metric, causal cone, target atlas, clock, matter action,
+coupling, Einstein equation, or benchmark success is admitted as source data.
+The order parameter introduced below is not declared to be physical time, and
+source automorphisms are not declared to be physical gauge transformations.
+
+\section{Typed proposal}
+
+\begin{definition}[Continuum-first premetric source option]
+A proposal instance is the typed tuple
+\[
+  \mathfrak O_{\mathrm{CF}}^{\mathrm{pre}}
+  = (\A,\tau,\mathcal S,\Lambda,\Phi,
+      \{\pi_i:E_i\!\to\!\A\}_{i\in I},\C_{\mathrm{adm}},\G_{\mathrm{src}}),
+\]
+with the following meanings.
+\begin{enumerate}[label=(\roman*)]
+  \item $(\A,\tau)$ is a Hausdorff, second-countable, boundaryless
+  topological manifold locally homeomorphic to $\mathbb R^4$. Its topology,
+  dimension, separation properties, countability condition, and absence of
+  boundary are explicit proposal primitives, not derived conclusions.
+  \item $\mathcal S$ is a chosen maximal $C^\infty$ atlas on $\A$. It is
+  primitive debt; the proposal contains no atlas-selection or smooth-emergence
+  theorem.
+  \item $\Lambda=(\mathbb R_{\ge 0},+,0)$ is an ordered parameter monoid and
+  $\Phi:\Lambda\times\A\to\A$ is a smooth action by source self-maps, with
+  $\Phi_0=\mathrm{id}_{\A}$ and
+  $\Phi_{\lambda+\mu}=\Phi_\lambda\circ\Phi_\mu$. Invertibility, completeness,
+  and generator existence are not assumed. This is structural
+  ordered motion only; no operational clock interpretation is supplied.
+  \item Each $\pi_i:E_i\to\A$ is a declared smooth finite-rank fibre bundle.
+  A source configuration is a tuple of smooth sections
+  $Q=(Q_i)_{i\in I}\in\prod_i\Gamma(E_i)$.
+  \item $\C_{\mathrm{adm}}\subseteq\prod_i\Gamma(E_i)$ is a declared
+  admissibility class specified by source-side predicates. The present packet
+  types this slot but does not invent a source action, equation of motion, or
+  probability law.
+  \item $\G_{\mathrm{src}}$ is a declared groupoid of bundle automorphisms
+  over diffeomorphisms of $\A$ that preserves $\C_{\mathrm{adm}}$ and the
+  structural order action. It records structural equivalence only. Calling it
+  physical gauge would require an independent observable or redundancy theorem.
+\end{enumerate}
+\end{definition}
+
+The tuple is deliberately \emph{premetric}. It contains no Lorentzian or
+Riemannian metric, conformal class, affine connection, Hodge operator, volume
+form, causal order, time orientation, tetrad, clock functional, physical unit
+scale, matter interpretation, universal coupling, source action, or
+gravitational field equation. Orientation, connectedness, global topology
+beyond the selected $\tau$, completeness of $\Phi$, and boundary variants are
+also separate assumptions rather than silent consequences.
+
+\section{Assumption and burden interface}
+
+The machine-readable companion table records every primitive and open burden.
+The essential separation is:
+\begin{longtable}{p{0.22\linewidth}p{0.25\linewidth}p{0.44\linewidth}}
+\toprule
+Class & Object & Exact status \\
+\midrule
+\endhead
+Primitive debt & $(\A,\tau)$ and dimension $4$ & Proposal-only source topology;
+not emergent and not adopted. \\
+Primitive debt & $\mathcal S$ & Proposal-only maximal smooth atlas; no
+selection theorem. \\
+Primitive debt & $(\Lambda,\Phi)$ & Structural ordered action; not physical
+time or a clock. \\
+Typed slots & $E_i,Q,\C_{\mathrm{adm}},\G_{\mathrm{src}}$ & Source-side
+field syntax and structural equivalence; dynamics and physical meaning open. \\
+Derivational target & $g_{\mathrm{phys}}$ & Existence, Lorentzian signature,
+normalization, uniqueness, and source dependence all open. \\
+Derivational target & clocks and causality & Operational clock map, causal
+cones, time orientation, and calibration open. \\
+Derivational target & matter and coupling & Matter semantics, source matter
+objects, universal coupling, constants, and backreaction open. \\
+Derivational target & dynamics & Source action or evolution law, variational
+principle, conservation bridge, and Einstein dynamics open. \\
+Protected decision & ontology regime & Continuum-first is only one option;
+P4-T03 and the later human-gated decision remain open. \\
+\bottomrule
+\end{longtable}
+
+\section{New mathematical payload: normalization underdetermination}
+
+\begin{theorem}[Order invariance does not fix metric normalization]
+Let $\mathfrak O_{\mathrm{CF}}^{\mathrm{pre}}$ be a proposal instance. Suppose,
+in addition to that premetric tuple, that a smooth Lorentzian metric $g$ on
+$\A$ exists and satisfies
+\[
+   \Phi_\lambda^{*}g=g\qquad\text{for every }\lambda\in\Lambda.
+\]
+If no independent scale-selection law is added, then Lorentzian signature and
+order invariance do not uniquely normalize the metric tensor: for every
+constant $c>0$, the tensor $g_c=c^2g$ is Lorentzian and
+$\Phi_\lambda$-invariant, and $g_c\ne g_d$ whenever $c\ne d$.
+\end{theorem}
+
+\begin{proof}
+Multiplication of a nondegenerate symmetric bilinear form by the positive
+number $c^2$ preserves nondegeneracy and signature, so $g_c$ is Lorentzian.
+Pullback is linear, hence
+\[
+  \Phi_\lambda^*g_c
+  =\Phi_\lambda^*(c^2g)
+  =c^2\Phi_\lambda^*g
+  =c^2g=g_c.
+\]
+If $c\ne d$, then $c^2\ne d^2$. Since a Lorentzian metric is not the zero
+tensor, there are $p\in\A$ and $v,w\in T_p\A$ with
+$g_p(v,w)\ne0$, so $(g_c)_p(v,w)\ne(g_d)_p(v,w)$. Thus the stated
+conditions admit a continuum of distinct tensor normalizations.
+\end{proof}
+
+The theorem is intentionally narrow. It does not prove that any Lorentzian
+metric exists, that nonconstant conformal freedom survives, that constant
+rescalings are physically inequivalent, or that a future source-side law
+cannot select a scale. It proves only that the continuum-first primitives plus
+the two added properties ``Lorentzian'' and ``order invariant'' do not by
+themselves supply a unique normalized metric or an operational clock scale.
+
+\section{Relation to the exact-GR interpretive manifold}
+
+Let $\TGR$ denote the target-side class of exact-GR interpretive structures,
+schematically
+\[
+  T=(M,g,u,\Psi_{\mathrm{matter}},\nabla,\ldots),
+\]
+satisfying the project's currently adopted exact-GR benchmark at the effective level. The
+continuum-first option does not place any such $T$ in the source tuple.
+Instead it exposes an unfilled realization contract
+\[
+ \mathfrak R_{\mathrm{CF}}
+ \;\subseteq\;
+ \bigl(\C_{\mathrm{adm}}/\G_{\mathrm{src}}\bigr)
+ \times \bigl(\TGR/\mathrm{Diff}\bigr).
+\]
+No nonemptiness, totality, existence, uniqueness, or dynamics theorem for this
+relation is claimed. A lawful bridge must, at minimum:
+\begin{enumerate}[label=(B\arabic*)]
+  \item construct or select a Lorentzian metric and its signature and scale
+  from source-side data without using a target metric as input;
+  \item construct operational clocks, causal orientation, and observable
+  calibration rather than relabel $\lambda$ as physical time;
+  \item type matter, derive universal coupling and backreaction, and recover
+  the target conservation interface;
+  \item provide source dynamics and prove recovery of the Einstein equations
+  in the stated validity regime;
+  \item either construct a map $\iota:\A\to M$ and justify its relevant
+  equivalence properties, or construct $M$ separately and state the relation.
+  The bare equality $\A=M$ is not an allowed bridge proof;
+  \item recover the exact-GR benchmark without treating benchmark success,
+  target coordinates, a target atlas, or validation status as source evidence.
+\end{enumerate}
+
+Thus the branch removes only the burden of deriving a bare four-dimensional
+smooth arena. It does not remove the physical-spacetime identification burden
+or any metric, clock, matter, coupling, or dynamics burden.
+
+\section{Allowed and blocked conclusions}
+
+Allowed descriptions include: \emph{draft/control}, \emph{proposal-only},
+\emph{continuum-first option}, \emph{smooth four-dimensional source arena},
+\emph{premetric}, \emph{primitive assumption}, \emph{structural order
+action}, \emph{structural automorphism}, \emph{bridge obligation}, and
+\texttt{blocked\_adoption\_open\_continuation}.
+
+Blocked descriptions include: adopted ontology; emergent manifold; physical
+time derived from $\Phi$; physical gauge established; physical metric, clock,
+matter, coupling, or Einstein equations derived; source and exact-GR manifolds
+identified by fiat; GR derived; exact-GR benchmark promoted; P4-T03 rejected;
+Gate Chair verdict; completed derivation; global no-go; or future
+source-extension impossibility.
+
+\section{Disposition}
+
+P4-T02 is satisfied at proposal scope by a coherent, typed, explicitly
+premetric option and a theorem that exposes one unavoidable scale-selection
+burden. The scientific Distance-to-GR ledger is unchanged because no primitive
+package, bridge law, metric, clock, matter model, coupling, or dynamics is
+adopted. The logical plan-order continuation is the independent P4-T03
+emergence-first proposal. P4-T04 comparative audit remains dependency-blocked
+until P4-T03 also has a qualifying completion.
+
+\section*{Internal source basis}
+
+This packet is grounded in the registered ontology foundations, dynamics, and
+geometry sources; the v21 implementation plan; the GR derivation burden map;
+the frontier theorem inventory; the epistemic category glossary; and the
+P4-T01 source-assumption ledger. No external source is used, and no generated
+derivative is treated as authority.
+
+\end{document}

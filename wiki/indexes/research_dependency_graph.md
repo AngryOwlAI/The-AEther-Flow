@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-21T18:47:31Z`
-- Source fingerprint: `e49fc4beaf127cbbd8ff5cabd620447d97b8738734ea04de2e30c6fa1663916a`
-- Nodes: `20464`
-- Edges: `69509`
+- Generated from tracked state as of: `2026-07-21T19:46:25Z`
+- Source fingerprint: `b67554411cdaca9e3d736c448d14efd4349582a2e4685094832132b328864b5c`
+- Nodes: `20491`
+- Edges: `69561`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1031 |
+| `completion_yaml` | 1032 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 800 |
+| `handoff_yaml` | 801 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1031 |
+| `agent_job` | `support_only` | 1032 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10560 |
-| `blocked_burden` | `blocked` | 3942 |
-| `claim_boundary` | `support_only` | 988 |
-| `draft_control_candidate` | `draft_control` | 692 |
+| `artifact` | `support_only` | 10568 |
+| `blocked_burden` | `blocked` | 3952 |
+| `claim_boundary` | `support_only` | 989 |
+| `draft_control_candidate` | `draft_control` | 695 |
 | `draft_control_candidate` | `proposal_only` | 110 |
 | `draft_control_candidate` | `science_draft` | 64 |
 | `frozen_negative` | `frozen_negative` | 131 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 800 |
-| `human_gated_object` | `human_gated` | 450 |
+| `handoff` | `support_only` | 801 |
+| `human_gated_object` | `human_gated` | 451 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 37 |
 | `source_ontology_object` | `canonical_source` | 23 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 334 |
+| `source_ontology_object` | `support_only` | 335 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 970 |
+| `task` | `support_only` | 971 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260720-030`
-- Latest handoff: `handoff-0800`
-- Handoff path: `research_control/handoffs/handoff-0800.yaml`
-- Next action: Run exactly one bounded v21 P4-T02 ontology-formalizer packet to specify the strongest honest continuum-first premetric option at proposal scope. Treat four-dimensional differentiable source structure as explicit primitive debt, leave physical metric clocks matter coupling and dynamics as derivational targets, do not adopt the regime, and do not execute P4-T03 in the same AgentJob.
+- Active task: `RT-20260720-031`
+- Latest handoff: `handoff-0801`
+- Handoff path: `research_control/handoffs/handoff-0801.yaml`
+- Next action: Run exactly one bounded v21 P4-T03 ontology-formalizer packet to specify the strongest honest emergence-first pregeometric option at proposal scope. Keep spacetime dimension topology differentiability metric clocks matter coupling and dynamics as emergence burdens, do not compare or select regimes, and do not execute P4-T04 in the same AgentJob.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

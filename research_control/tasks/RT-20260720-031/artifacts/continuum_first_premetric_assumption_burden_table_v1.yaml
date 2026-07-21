@@ -1,0 +1,120 @@
+schema_id: "V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ASSUMPTION-BURDEN-TABLE"
+schema_version: "1.0.0"
+task_id: "RT-20260720-031"
+job_id: "AJ-RT-20260720-031-001"
+plan_task_id: "P4-T02"
+status: "draft/control"
+proposal_status: "proposal-only"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Provide one coherent ontology option without emergence overread."
+
+primitive_assumptions:
+  - assumption_id: "CF-PRIM-TOPOLOGY-001"
+    object: "(A,tau)"
+    statement: "A is a Hausdorff second-countable boundaryless topological manifold locally homeomorphic to R^4."
+    structural_role: "primitive"
+    authority_status: "proposed"
+    debt: "The topology, dimension four, separation, countability, and boundary choice are assumed; no source derivation or selection law is supplied."
+    target_import: false
+  - assumption_id: "CF-PRIM-SMOOTH-001"
+    object: "S"
+    statement: "S is a chosen maximal C-infinity atlas on A."
+    structural_role: "primitive"
+    authority_status: "proposed"
+    debt: "Differentiability is primitive; no atlas-selection or smooth-emergence theorem is supplied."
+    target_import: false
+  - assumption_id: "CF-PRIM-ORDER-001"
+    object: "(Lambda,Phi)"
+    statement: "Lambda is the nonnegative additive parameter monoid and Phi is a smooth monoid action by source self-maps."
+    structural_role: "primitive"
+    authority_status: "proposed"
+    debt: "The action is structural ordered motion only; its generator, completeness extension, operational clock meaning, and physical time direction are not derived."
+    target_import: false
+  - assumption_id: "CF-PRIM-FIELDS-001"
+    object: "{E_i -> A}"
+    statement: "A finite declared family of smooth fibre-bundle types supplies the source-field syntax."
+    structural_role: "primitive"
+    authority_status: "proposed"
+    debt: "Bundle types and their physical interpretation require independent source-side justification."
+    target_import: false
+  - assumption_id: "CF-PRIM-ADMISSIBILITY-001"
+    object: "C_adm"
+    statement: "C_adm is a declared source-side admissibility class of smooth section tuples."
+    structural_role: "primitive"
+    authority_status: "proposed"
+    debt: "Admissibility predicates are typed but no action, dynamics, probability, stability, or empirical selection law is supplied."
+    target_import: false
+  - assumption_id: "CF-PRIM-AUTOMORPHISM-001"
+    object: "G_src"
+    statement: "G_src is a declared groupoid of source bundle automorphisms preserving admissibility and the structural order action."
+    structural_role: "primitive"
+    authority_status: "proposed"
+    debt: "Only structural equivalence is defined; physical gauge requires an independent observable-redundancy theorem."
+    target_import: false
+
+explicit_nonassumptions:
+  - "orientation or time orientation"
+  - "connectedness or a global topology-selection principle beyond the chosen tau"
+  - "Lorentzian metric, conformal class, affine connection, Hodge operator, or volume form"
+  - "causal cones, operational clocks, unit normalization, or physical time"
+  - "matter interpretation, matter action, universal coupling, constants, or backreaction"
+  - "source action, equations of motion, probability law, or gravitational dynamics"
+  - "identity of A with the exact-GR target manifold M"
+  - "physical gauge or covariance from structural automorphisms"
+  - "ontology-regime adoption or rejection"
+
+remaining_burdens:
+  - burden_id: "CF-BURDEN-METRIC-001"
+    object: "g_phys"
+    status: "open"
+    required_result: "A source-only construction or selection law for metric existence, Lorentzian signature, normalization, uniqueness or equivalence class, and source dependence."
+    forbidden_shortcut: "Importing the exact-GR target metric, causal structure, or benchmark success."
+  - burden_id: "CF-BURDEN-CLOCK-001"
+    object: "operational clocks and causality"
+    status: "open"
+    required_result: "An operational clock functional, calibration rule, causal orientation, and relation between the structural order parameter and measured proper time."
+    forbidden_shortcut: "Relabeling lambda as physical time or assuming target proper time."
+  - burden_id: "CF-BURDEN-MATTER-001"
+    object: "matter semantics"
+    status: "open"
+    required_result: "Source-side matter objects, observable semantics, and recovery of target matter degrees of freedom."
+    forbidden_shortcut: "Treating target stress-energy or benchmark matter fields as source premises."
+  - burden_id: "CF-BURDEN-COUPLING-001"
+    object: "universal coupling"
+    status: "open"
+    required_result: "A universal source-to-matter coupling law, constants, backreaction, and conservation interface."
+    forbidden_shortcut: "Assuming minimal coupling or the target matter action."
+  - burden_id: "CF-BURDEN-DYNAMICS-001"
+    object: "gravitational dynamics"
+    status: "open"
+    required_result: "A source action or evolution law and a derivation theorem recovering Einstein dynamics in a stated validity regime."
+    forbidden_shortcut: "Assuming the Einstein equations because the exact-GR benchmark is adopted target-side."
+  - burden_id: "CF-BURDEN-BRIDGE-001"
+    object: "R_CF"
+    status: "open"
+    required_result: "A nonempty, target-neutral realization relation from source equivalence classes to exact-GR target structures, including a justified map or construction relating A and M."
+    forbidden_shortcut: "Declaring A equals M or importing a target atlas by fiat."
+  - burden_id: "CF-BURDEN-REGIME-001"
+    object: "ontology regime"
+    status: "human-gated"
+    required_result: "Complete P4-T03, comparative audit, stress and model-discrimination work, then use the protected Gate Chair path."
+    forbidden_shortcut: "Treating completion of P4-T02 as continuum-first adoption or emergence-first rejection."
+
+mathematical_payload:
+  payload_id: "NMP-RT-20260720-031-002"
+  payload_type: "theorem_with_hypotheses_and_proof"
+  name: "Order invariance does not fix metric normalization"
+  source_path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+  burden_effect: "narrows"
+  exact_scope: "Conditional on existence of an order-invariant Lorentzian metric and absence of an independent scale-selection law, positive constant rescalings remain distinct order-invariant Lorentzian tensors."
+  forbidden_overread: "No metric-existence theorem, physical-inequivalence theorem, global no-go, or future source-extension impossibility is claimed."
+
+counts:
+  primitive_assumption_count: 6
+  explicit_nonassumption_count: 9
+  remaining_burden_count: 7
+  adopted_assumption_count: 0
+  derived_physical_object_count: 0
+  scientific_ledger_change_count: 0
+  physics_promotion_count: 0

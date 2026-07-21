@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-030`
-- Latest handoff: `handoff-0800`
-- Current status: `v21_p4_t01_assumption_visibility_complete_27_objects_351_cells_no_status_upgrade_no_distance_delta_p4_t02_ready`
+- Active task: `RT-20260720-031`
+- Latest handoff: `handoff-0801`
+- Current status: `v21_p4_t02_continuum_first_premetric_candidate_complete_proposal_only_no_distance_delta_p4_t03_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-030`
-- Latest research handoff: `handoff-0800`
-- Latest research next action: Run exactly one bounded v21 P4-T02 ontology-formalizer packet to specify the strongest honest continuum-first premetric option at proposal scope. Treat four-dimensional differentiable source structure as explicit primitive debt, leave physical metric clocks matter coupling and dynamics as derivational targets, do not adopt the regime, and do not execute P4-T03 in the same AgentJob.
+- Latest research task: `RT-20260720-031`
+- Latest research handoff: `handoff-0801`
+- Latest research next action: Run exactly one bounded v21 P4-T03 ontology-formalizer packet to specify the strongest honest emergence-first pregeometric option at proposal scope. Keep spacetime dimension topology differentiability metric clocks matter coupling and dynamics as emergence burdens, do not compare or select regimes, and do not execute P4-T04 in the same AgentJob.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p4_t02_continuum_first_premetric_ontology_option`
+- Route ID: `v21_p4_t03_emergence_first_pregeometric_ontology_option`
 - Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_ontology`
-- Milestone burden: Provide one coherent ontology option without emergence overread.
+- Milestone burden: Provide one coherent emergence-first option with explicit pregeometric burdens.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `0ad1011b881ebdf654a8fa4788d85147621e1a3d6fdf7b6d33fca08b6822954e`
-- JSON SHA-256: `23bf971a4c0484ed11a18611e4cf03e1d3fd8cb999d8594d6e2ab5ec5a3e659e`
+- YAML SHA-256: `6c019e66ed2e18ab1cd4485675b7f4aa4be9e3e6fd7222e70883007f9196621d`
+- JSON SHA-256: `257b0195a3900b92c6d4256f2b6bb69480bfbe26a068b51a4b5ec144e76a87a3`
 
 ## Authority Warning
 

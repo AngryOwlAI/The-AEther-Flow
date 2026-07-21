@@ -1,0 +1,718 @@
+job_id: "AJ-RT-20260720-031-001"
+completion_id: "AJC-AJ-RT-20260720-031-001"
+task_id: "RT-20260720-031"
+task_type: "v21_continuum_first_premetric_ontology_option"
+decision_id: "DDR-20260720-031"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260720-031"
+status: "completed"
+validation_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT"
+created_at: "2026-07-21T19:32:55Z"
+started_at: "2026-07-21T19:32:55Z"
+completed_at: "2026-07-21T19:46:25Z"
+objective: "Execute only v21 P4-T02 by defining one coherent proposal-only continuum-first premetric source option with explicit primitive debt and open physical burdens."
+completion_summary: "P4-T02 constructs one typed continuum-first premetric option in which a boundaryless smooth four-dimensional source arena, ordered source action, field-bundle syntax, admissible configurations, and structural automorphisms are proposal primitives. A conditional theorem proves that if one order-invariant Lorentzian metric exists then positive constant rescalings remain order-invariant Lorentzian tensors, so the stated data do not uniquely normalize a metric. The source-to-exact-GR realization relation remains unfilled, and metric existence, causal structure, operational clocks, matter semantics, universal coupling, and gravitational dynamics remain open. The option is draft/control and proposal-only; no regime, ontology, scientific ledger, or downstream GR status is adopted. P4-T03 is selected next while P4-T04 remains dependency-blocked."
+objective_result: "continuum_first_premetric_candidate_constructed_proposal_only_no_distance_delta"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "2372a002b897b1c91b330626e8e7e13688f94aa669a66468101275380b3f61d6"
+  generation: 31
+  passes_consumed: 31
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:31"
+  handoff_token: "301ea456d935de2770890d709316748321a4af72c5d1073e"
+  relay_claim_token: "bd8694024fd5984a6170c646d81de6af0209d8e94d4c10a5"
+  route_hash: "2987c9473a41f610ccf598381bf376845fee3f249b2a0172fbcf58bd79b8b5fb"
+  route_work_item_id: "P4-T02"
+  worker_skill: "continue-research"
+  authorized_worker_invocation_count: 1
+  consumed_worker_invocation_count: 1
+
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "theorem_with_hypotheses_and_proof"
+minimum_payload:
+  payload_class: "theorem_with_hypotheses_and_proof"
+  payload_artifact_path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+  payload_summary: "Conditional constant-rescaling theorem plus one typed proposal-only continuum-first premetric source option and unfilled source-to-exact-GR realization relation."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+external_red_team_finding_requires_integration: false
+physics_promotion_authorized: false
+proof_authority: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T02"
+  recommendation_ids:
+    - "V21-R10"
+    - "V21-R11"
+    - "V21-R12"
+    - "V21-R13"
+    - "V21-R61"
+  implementation_status: "completed"
+  implemented_task_scope: "One continuum-first premetric ontology option, explicit assumptions and burdens, claim vocabulary, conditional theorem, bridge obligations, validation, and one future route only."
+  p4_t01_completed: true
+  p4_t02_completed: true
+  p4_t02_candidate_status: "draft/control proposal-only"
+  p4_t03_dependency_ready: true
+  p4_t03_executed: false
+  p4_t04_dependency_ready: false
+  p4_t04_blocked_by:
+    - "P4-T03"
+  selected_next_plan_task: "P4-T03"
+  p4_t05_human_gate_preserved: true
+
+artifacts:
+  - "research_control/tasks/RT-20260720-031/artifacts/child_phys_math_continuum_first_option.yaml"
+  - "research_control/tasks/RT-20260720-031/artifacts/child_phys_phil_continuum_first_option.yaml"
+  - "research_control/tasks/RT-20260720-031/artifacts/parent_conflict_review_continuum_first_option.yaml"
+  - "research_control/tasks/RT-20260720-031/artifacts/parent_fusion_notes_continuum_first_option.md"
+  - "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+  - "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_assumption_burden_table_v1.yaml"
+  - "research_control/tasks/RT-20260720-031/artifacts/continuum_first_claim_vocabulary_v1.yaml"
+  - "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260720-031/artifacts/validate_continuum_first_premetric_option_v1.py"
+  - "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_validation_v1.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-031/**"
+  - "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+  - "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_assumption_burden_table_v1.yaml"
+  - "research_control/tasks/RT-20260720-031/artifacts/continuum_first_claim_vocabulary_v1.yaml"
+  - "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_compact_receipt_v1.json"
+  - "research_control/handoffs/handoff-0801.yaml"
+  - "research_control/handoffs/handoff-0801.md"
+  - "research_control/program_state.yaml"
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+    sha256: "7d408e527015f4e7c09df90277282c284f299fb705cbd4917a22e62ab3e0d1f8"
+    object_id: "TEX-V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ONTOLOGY-OPTION-V1"
+  - path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_assumption_burden_table_v1.yaml"
+    sha256: "e9ea3e0f5864f941bc7d624e4364c758ac8417c54dd0f2fa5d3867fd2d1a5266"
+  - path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_claim_vocabulary_v1.yaml"
+    sha256: "68331e6cd8146443f1c88d7b49b230a05a700da153a1763481175d12509c8e45"
+  - path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_compact_receipt_v1.json"
+    sha256: "f3d1beb08155116cb997280c959d8a74bf90b5e2a9f31f353950a0186269043d"
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-031/artifacts/child_phys_math_continuum_first_option.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-031/artifacts/child_phys_phil_continuum_first_option.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260720-031/artifacts/parent_conflict_review_continuum_first_option.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+    blocking_conflict_present: false
+  fusion_policy:
+    fused_output_path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-031/artifacts/parent_fusion_notes_continuum_first_option.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-031/artifacts/child_phys_math_continuum_first_option.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-031/artifacts/child_phys_phil_continuum_first_option.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-031/artifacts/parent_conflict_review_continuum_first_option.yaml"
+    resolution_rounds: 0
+    resolved_conflict_count: 3
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-031/artifacts/parent_fusion_notes_continuum_first_option.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Provide one coherent ontology option without emergence overread."
+  missing_source_law: "A source-only realization law R_CF selecting or constructing physical metric normalization, operational clocks, matter semantics, universal coupling, and gravitational dynamics from the continuum-first premetric source tuple."
+  underdetermination_statement: "Current ontology does not derive a physical Lorentzian metric, its normalization, operational clocks, matter semantics, universal coupling, gravitational dynamics, or a source-to-exact-GR realization law from the proposed continuum-first premetric primitives."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "O_CF^pre is a typed smooth four-dimensional premetric source tuple; R_CF is an unfilled realization relation from source equivalence classes to exact-GR target equivalence classes."
+    formal_objects:
+      - "A with topology tau and maximal smooth atlas S"
+      - "ordered parameter monoid Lambda and smooth action Phi"
+      - "source bundles E_i and admissible configurations C_adm"
+      - "structural automorphism groupoid G_src"
+      - "unfilled realization relation R_CF"
+    domains:
+      - "C_adm/G_src"
+      - "T_GR/Diff"
+    maps:
+      - "Phi: Lambda x A -> A"
+      - "R_CF subset (C_adm/G_src) x (T_GR/Diff), specified but not constructed as nonempty or total"
+    proof_obligations:
+      - "construct or select a Lorentzian physical metric without target-metric import"
+      - "derive operational clocks causal orientation and calibration"
+      - "derive source matter semantics universal coupling and backreaction"
+      - "supply source dynamics and recover Einstein equations in a stated regime"
+      - "construct and justify the carrier relation between A and M rather than identify them by fiat"
+      - "recover the exact-GR benchmark without benchmark success as a source premise"
+  candidate_law_comparison:
+    candidates:
+      - "P4-T02 continuum-first premetric proposal"
+      - "P4-T03 emergence-first pregeometric proposal not yet executed"
+    comparison_basis:
+      - "primitive debt"
+      - "bridge burden"
+      - "target-neutrality"
+      - "future empirical discriminators"
+    selection_status: "No comparison or regime selection in P4-T02."
+  candidate_law_refutation:
+    refuted_candidate: "none"
+    refutation_basis: "No candidate is refuted; the theorem exposes one normalization burden only."
+    surviving_obligations:
+      - "all physical metric clock matter coupling dynamics and regime obligations"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Proposal-only definition and theorem are authorized; adoption or rejection remains human-gated."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Recover a Lorentzian metric including signature normalization and causal structure from source data."
+      - "Recover operational clocks matter semantics universal coupling conservation and Einstein dynamics."
+      - "Construct the source-to-target carrier relation without target atlas or identity-by-fiat."
+      - "Preserve exact-GR target behavior in the stated regime without using benchmark success as a source premise."
+      - "Require protected human authority before ontology-regime adoption or benchmark promotion."
+    distance_to_gr_links:
+      - "source_ontology_primitives"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "O_CF^pre primitive tuple"
+      - "constant-rescaling theorem"
+      - "R_CF realization contract"
+      - "assumption and burden table"
+      - "claim vocabulary"
+  atlas_glue_obligations:
+    profile_law: "Not constructed in P4-T02; any future local profiles must be source-defined rather than copied from a target atlas."
+    selector_law: "Not constructed; no target chart or benchmark-success selector may choose source profiles."
+    transition_law: "Not constructed; any transition law used by a future bridge must be derived from source structures."
+    inverse_checks: "No bridge inverse exists; source-target recovery and inverse properties remain open."
+    cocycle_checks: "No bridge cocycle is claimed; any future cover construction must prove it independently."
+    finite_variation_robustness: "Not established; the constant-rescaling theorem only supplies an exact two-metric normalization witness."
+  failure_branches:
+    collapse: "If admissible source distinctions collapse under G_src, the realization relation may fail to encode observables; no remedy is assumed."
+    nonuniqueness: "The pair g and 4g already witnesses tensor-normalization nonuniqueness under the theorem hypotheses."
+    inverse_defect: "No inverse or recovery map for R_CF is supplied."
+    cocycle_defect: "No source-to-target atlas gluing theorem is supplied."
+    variation_fragility: "Robustness under source-field and topology variations remains open."
+  known_risks:
+    - "primitive smooth structure may be misreported as emergent"
+    - "order may be misreported as physical time"
+    - "structural automorphism may be misreported as physical gauge"
+    - "shared dimension may be misreported as source-target identity"
+    - "a conditional theorem may be misreported as a physical metric derivation or no-go"
+  failed_alternatives:
+    - "identity A equals M by fiat is blocked"
+    - "target-metric or benchmark-success import is blocked"
+    - "continuum-first adoption from formal coherence alone is blocked"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "none in P4-T02"
+    exact_requested_ontology_edit: ""
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-031-001"
+    payload_type: "bridge_map_candidate"
+    name: "Continuum-first premetric realization contract R_CF"
+    summary: "Types a target-neutral relation from source equivalence classes to exact-GR target structures while leaving existence totality uniqueness dynamics and carrier-map obligations open."
+  - payload_id: "NMP-RT-20260720-031-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Order invariance does not fix metric normalization"
+    summary: "Conditional on one order-invariant Lorentzian metric, positive constant rescalings supply a continuum of distinct invariant Lorentzian tensors."
+  - payload_id: "NMP-RT-20260720-031-003"
+    payload_type: "concrete_certificate_step_families"
+    name: "Continuum-first primitive-and-burden certificate"
+    summary: "Records six proposal primitives, nine nonassumptions, seven remaining burdens, fourteen allowed claims, and eighteen blocked overreads."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-P4T02-001"
+    payload_type: "definition"
+    object_name: "continuum-first premetric source option O_CF^pre and realization relation R_CF"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+    burden_effect: "narrows"
+    summary: "Constructs one coherent option and types the exact remaining bridge without adopting it."
+  - payload_id: "PAYLOAD-P4T02-002"
+    payload_type: "theorem"
+    object_name: "order-invariant metric normalization underdetermination theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves only that signature and order invariance do not uniquely fix tensor normalization."
+  - payload_id: "PAYLOAD-P4T02-003"
+    payload_type: "dependency_map_update"
+    object_name: "continuum-first assumption and burden table"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_assumption_burden_table_v1.yaml"
+    burden_effect: "no_distance_delta"
+    summary: "Makes primitive debt and downstream burdens explicit without a scientific status change."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Provide one coherent ontology option without emergence overread."
+  explanation: "One internally typed continuum-first premetric option exists at proposal scope. Formal coherence and a conditional theorem do not select, adopt, or physically validate the option."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  old_status: "P4-T01 assumption debt explicit; continuum-first and emergence-first regimes unresolved"
+  new_status: "P4-T02 continuum-first option formalized at proposal scope; regime unresolved and P4-T03 still open"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No source primitive package, ontology regime, bridge law, metric, clock, matter semantics, coupling, dynamics, or benchmark status was adopted."
+  downstream_unlocked:
+    - "P4-T03 emergence-first proposal formalization remains dependency-ready"
+  downstream_still_blocked:
+    - "P4-T04 comparative audit pending P4-T03"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "unscoped_source_manifold_m_src"
+    - "unscoped_effective_metric"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+  explanation: "P4-T02 changes proposal completeness and burden visibility, not physical distance to GR."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "continuum-first option is a draft object; no primitive package or ontology regime is adopted"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; conditional theorem package and local freezes remain, general EqSrc undischarged"
+  - burden: "RetainH"
+    status: "unchanged; missing source primitive"
+  - burden: "GenH"
+    status: "unchanged; missing source primitive"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; constructive local exact-branch witness only"
+  - burden: "Resp_lc"
+    status: "unchanged; scoped source-extension data only"
+  - burden: "M_src"
+    status: "unchanged; the proposed source arena is not an adopted or derived physical spacetime"
+  - burden: "g_eff"
+    status: "unchanged; metric existence signature normalization uniqueness and bridge remain open"
+  - burden: "matter coupling"
+    status: "unchanged; field-bundle syntax supplies no matter semantics or universal coupling"
+  - burden: "Einstein equations"
+    status: "unchanged; no source action variation or recovery theorem"
+  - burden: "finite-variation robustness"
+    status: "unchanged; source and bridge robustness remain open"
+  - burden: "benchmark promotion"
+    status: "unchanged and blocked"
+  - burden: "Gate Chair status"
+    status: "unchanged and human-gated; no regime or benchmark verdict requested"
+  - burden: "current route freeze or hard-fail status"
+    status: "no new freeze; P4-T03 is the distinct independent option packet"
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "other"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: "assumption_deletion_countermodel"
+      status: "filled"
+      scope: "Delete conditional metric existence from the normalization theorem."
+      result_artifact: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+      obstruction_id: ""
+      local_countermodel_claim: "Without a Lorentzian metric hypothesis there is no metric object to rescale, so the proof fails closed and supplies no existence conclusion."
+      forbidden_overread: "This does not prove metric impossibility, ontology rejection, downstream GR failure, benchmark failure, or a program-wide no-go."
+    - countermodel_slot: "missing_inverse_or_left_inverse_countermodel"
+      status: "filled"
+      scope: "The theorem uses no inverse, while the proposed realization relation has no recovery inverse."
+      result_artifact: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_assumption_burden_table_v1.yaml"
+      obstruction_id: ""
+      local_countermodel_claim: "No inverse is required for constant rescaling, and no inverse may be inferred for the unfilled source-to-target relation."
+      forbidden_overread: "Absence of a bridge inverse is not ontology rejection, source-law adoption, downstream GR proof, or a global no-go."
+    - countermodel_slot: "missing_composition_or_closure_countermodel"
+      status: "filled"
+      scope: "Remove monoid-composition use from the pointwise pullback-invariance calculation."
+      result_artifact: "research_control/tasks/RT-20260720-031/artifacts/child_phys_math_continuum_first_option.yaml"
+      obstruction_id: ""
+      local_countermodel_claim: "The rescaling calculation is pointwise in lambda and does not establish source-family closure, bridge composition, or dynamics."
+      forbidden_overread: "The local robustness of this calculation is not general EqSrc, bridge closure, benchmark recovery, or proof authority."
+    - countermodel_slot: "nonunique_selector_countermodel"
+      status: "filled"
+      scope: "Metric normalization selector under Lorentzian signature and Phi invariance."
+      result_artifact: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+      obstruction_id: ""
+      local_countermodel_claim: "The explicit pair g and 4g satisfies the same stated metric conditions but has distinct tensor normalization."
+      forbidden_overread: "This pair does not prove physical inequivalence, metric impossibility, ontology rejection, or future scale-law impossibility."
+    - countermodel_slot: "finite_variation_fragility_countermodel"
+      status: "filled"
+      scope: "Smallest explicit two-element normalization witness family {g,4g}."
+      result_artifact: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_compact_receipt_v1.json"
+      obstruction_id: ""
+      local_countermodel_claim: "Two positive constant normalizations already defeat uniqueness under the theorem hypotheses; broader source variation robustness remains untested."
+      forbidden_overread: "A two-metric witness is not a finite physical model, benchmark failure, completed derivation, or program-wide conclusion."
+    - countermodel_slot: "hidden_target_import_countermodel"
+      status: "filled"
+      scope: "Audit whether the conditional metric is the exact-GR target metric or benchmark data."
+      result_artifact: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_claim_vocabulary_v1.yaml"
+      obstruction_id: ""
+      local_countermodel_claim: "The proof quantifies over an arbitrary hypothesized Lorentzian metric and explicitly does not construct it from target data; target import remains blocked."
+      forbidden_overread: "Passing the import audit does not derive a metric, matter coupling, Einstein equations, benchmark recovery, or ontology adoption."
+    - countermodel_slot: "accepted_evidence_overread_countermodel"
+      status: "filled"
+      scope: "Operational validation and exact-GR benchmark evidence versus scientific authority."
+      result_artifact: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_claim_vocabulary_v1.yaml"
+      obstruction_id: ""
+      local_countermodel_claim: "Validator PASS, registry presence, and exact-GR target acceptance do not make the source proposal adopted or derived."
+      forbidden_overread: "Accepted target evidence and operational checks are not source-law adoption, downstream GR proof, benchmark promotion, or completed derivation."
+
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  scope: "current_ontology_only"
+  failed_object: ""
+  exact_failure: ""
+  minimal_counterexample_path: ""
+  current_ontology_implication: "not_applicable"
+  source_extension_implication: "not_applicable"
+  consequence: "downstream_block_preserved"
+  forbidden_overread: "The normalization witness is a local underdetermination result, not a route freeze or global theory rejection."
+
+route_cycle_control:
+  cycle_family: "source_ontology_regime_formalization"
+  current_cycle_step: "p4_t02_continuum_first_candidate_complete_p4_t03_selected"
+  prior_related_tasks:
+    - "RT-20260720-030 P4-T01 assumption ledger"
+  cycle_risk: "low"
+  orbit_avoidance_reason: "P4-T02 introduces a typed option, theorem, bridge contract, and exact burden table; P4-T03 must construct the distinct emergence-first option rather than restate this packet."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P4-T03"
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: false
+  active_freeze_label: ""
+  prior_attempts_considered:
+    - "RT-20260720-030"
+  freeze_if:
+    - "The same continuum-first option is repeated without a new payload or P4-T03 comparison input."
+  do_not_freeze_if:
+    - "P4-T03 constructs the distinct emergence-first option or a later comparison produces new discriminating content."
+  freeze_decision: "not_frozen"
+  decision_reason: "The task contributes a new candidate, theorem, and bridge contract and routes to a distinct plan dependency."
+  next_allowed_route: "theoretical_selector"
+
+bridge_attempt_status:
+  candidate_map: "R_CF subset (C_adm/G_src) x (T_GR/Diff), typed but unfilled"
+  missing_primitive: "source-only metric-scale clock matter coupling dynamics and carrier realization law"
+  preserves_blocks: "No target import, ontology adoption, physical metric, matter coupling, Einstein-equation derivation, or benchmark promotion."
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "continuum-first ontology adoption or regime selection"
+    - "emergence-first rejection or P4-T03 completion"
+    - "source arena and exact-GR target manifold identity by fiat"
+    - "physical time from the order parameter"
+    - "physical gauge from structural automorphisms"
+    - "M_src adoption"
+    - "g_eff or physical metric derivation"
+    - "operational clock or causal structure derivation"
+    - "matter semantics or universal coupling derivation"
+    - "matter coupling derivation or adoption"
+    - "Einstein-equation derivation"
+    - "scientific ledger change"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "proof authority or publication authority"
+    - "completed derivation"
+    - "program-wide no-go or global theory rejection"
+    - "future source-extension impossibility"
+  summary: "Formal coherence, the conditional normalization theorem, validator PASS, role authority, registry presence, generated derivatives, and the exact-GR target benchmark do not adopt this option or establish any downstream physical derivation."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_regime_selection_authorized: false
+  physical_gauge_claim_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects:
+    - "No new object; existing exact-GR target benchmark remains unchanged."
+  accepted_evidence_preconditions:
+    - "P4-T01 assumption ledger completion and canonical source hashes"
+    - "typed parent-child proposal plus conditional theorem proof"
+  open_or_blocked_physical_targets:
+    - "physical metric signature normalization and uniqueness"
+    - "causal structure and operational clocks"
+    - "matter semantics universal coupling and backreaction"
+    - "source dynamics Einstein-equation recovery and benchmark promotion"
+  forbidden_overread:
+    - "proposal coherence as ontology adoption"
+    - "conditional tensor theorem as physical metric derivation or no-go"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 953
+    relationship_row_count: 4734
+    semantic_row_count: 953
+    vault_row_count: 953
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    before_local_cache_only_warning_count: 7
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'continuum first premetric differentiable substrate' --json"
+      query_type: "search"
+      query_text: "continuum first premetric differentiable substrate"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup ontology/tex/aether_flow_foundations.tex --json"
+      query_type: "lookup"
+      query_text: "ontology/tex/aether_flow_foundations.tex"
+      returned_object_ids:
+        - "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/frontier_theorem_inventory.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/frontier_theorem_inventory.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/frontier_theorem_inventory.md"
+      source_hash: "5158603122dda2ec768293d5659e51b0d18cbc52689c2caf9a1c266a4d105fce"
+  authority_note: "Generated Obsidian, wiki, semantic, relationship, and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core memory validation passed and seven local-only retrieval warnings were refreshed to zero with 953 canonical source objects."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m py_compile research_control/tasks/RT-20260720-031/artifacts/validate_continuum_first_premetric_option_v1.py"
+    status: "PASS"
+    summary: "The task-local validator compiles successfully."
+  - command: "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-031-latex research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+    status: "PASS"
+    summary: "The four-page TeX candidate compiles successfully; the local PDF is an untracked preview derivative."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research_control/tasks/RT-20260720-031/artifacts/validate_continuum_first_premetric_option_v1.py --write-report --json"
+    status: "PASS"
+    summary: "All 64 exact path identity synthesis primitive burden vocabulary theorem hash source-boundary completion and handoff checks passed."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "Tracked memory derivatives were regenerated from canonical sources with 953 source objects, 4734 relationships, and no local-retrieval warning."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Canonical memory and generated-derivative integrity passed; five diagnostic findings were nonblocking."
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS"
+    summary: "The live classifier reported the exact five documentation-impact reason codes and no blocked paths."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "Project-improvement signal parity passed with no emitted sidecar because the completion contains no project-system defect signal."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "The documentation-impact receipt matches the live classifier and required validator evidence."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS_WITH_WARNINGS"
+    summary: "Changed-scope claim-language validation reported zero hard failures; 1493 advisory findings are historical or blocked-claim phrase matches."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "PASS"
+    summary: "Research-control core, active-state, authority, residue, and changed-diff validation passed."
+  - command: ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+    status: "EXPECTED_PRECHECKPOINT_BLOCK"
+    summary: "The deprecated wrapper reached only the expected untracked-registered-path barrier; the governed checkpoint owns exact staging and final staged validation."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest -v tests.test_research_control"
+    status: "EXPECTED_PRECHECKPOINT_BLOCK"
+    summary: "The shard reached one active-state fixture error because live validation rejects untracked registered paths before the routing snapshot call; all preceding tests passed and the checkpoint will establish tracked state."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "No whitespace errors were found in the working-tree diff."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 31 lease, route, model, maximum reasoning, repository binding, predecessor checkpoint, and single-consumption parity were verified before work."
+      - "Memory preflight passed after refreshing only local retrieval state, and every required canonical source and direct dependency was inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required child perspectives completed and the parent resolved three nonblocking differences with no unresolved conflict."
+      - "The conditional theorem includes hypotheses, proof, a two-metric nonuniqueness witness, common countermodel slots, and exact forbidden overreads."
+      - "The TeX candidate compiles successfully."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, changed-scope claim-language, documentation-impact, signal-parity, renderer, memory, graph, core research-control, and whitespace checks pass."
+      - "The legacy full wrapper and one live-state test stop only because newly registered paths are intentionally untracked until the governed checkpoint stages them."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The transaction is prepared for exactly one governed checkpoint after final validation."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, and claim graph derivatives were refreshed and their freshness checks passed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks pass after canonical TeX registration."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard findings; advisory warnings remain non-authoritative."
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_validation_v1.json"
+  local_validator_report_hash: "813832cd8e284efa0f55b5dfd272238931369f969661b5784c5e2433889a8b1f"
+  task_local_passed_check_count: 64
+  task_local_failed_check_count: 0
+  primitive_assumption_count: 6
+  explicit_nonassumption_count: 9
+  remaining_burden_count: 7
+  allowed_claim_count: 14
+  blocked_claim_count: 18
+  new_mathematical_payload_count: 3
+  conditional_theorem_count: 1
+  bridge_obligation_count: 6
+  countermodel_slot_count: 7
+  parent_child_synthesis_status: "PASS"
+  ontology_source_hashes_unchanged: true
+  distance_to_gr_ledger_hash_unchanged: true
+  metric_use_ledger_hash_unchanged: true
+
+validators_run:
+  - "memory_preflight"
+  - "validator_py_compile"
+  - "latex_compile"
+  - "task_local_validator"
+  - "parent_child_synthesis"
+  - "primitive_debt_explicit"
+  - "premetric_no_target_import"
+  - "metric_normalization_theorem"
+  - "assumption_and_burden_table"
+  - "allowed_and_blocked_claim_vocabulary"
+  - "exact_gr_relation_boundary"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "classify_project_changes"
+  - "project_improvement_signal_parity"
+  - "documentation_impact"
+  - "claim_language"
+  - "research_control_validation"
+  - "full_validation_precheckpoint_tracking_barrier"
+  - "research_control_test_shard_precheckpoint_tracking_barrier"
+  - "git_diff_check"
+
+documentation_impact:
+  required: true
+  documentation_impact_id: "DI-RT-20260720-031-001"
+  documentation_impact_path: "research_control/tasks/RT-20260720-031/documentation_impact.yaml"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  recursive_goal_recovery_required: false
+  route: "none"
+  rationale: "The packet identifies open scientific bridge burdens but no project-system defect."
+
+next_handoff_id: "handoff-0801"
+selected_next_route:
+  route_id: "v21_p4_t03_emergence_first_pregeometric_ontology_option"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P4-T03"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Provide one coherent emergence-first option with explicit pregeometric burdens."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  dependency_ready: true
+  executed: false
+  next_action: "Formalize one proposal-only emergence-first pregeometric option in a separate AgentJob; do not compare, select, adopt, or reject either ontology regime inside P4-T03."
+
+verdict: "P4-T02 candidate constructed at proposal scope with no Distance-to-GR delta; P4-T03 is the next distinct dependency-ready plan item."
