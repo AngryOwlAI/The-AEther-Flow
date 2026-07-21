@@ -1,0 +1,50 @@
+schema_id: "eqsrc-selector-theorem-independent-human-review-acquisition.v1"
+packet_id: "EQSRC-P2-T08-HUMAN-REVIEW-ACQUISITION-001"
+status: "action_available_not_executed"
+review_target_id: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+blind_packet_path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_blind_review_packet_v1.md"
+genuine_external_human_review_completed: false
+external_outreach_performed: false
+endorsement_claimed: false
+task_execution_requires_human_gate: false
+external_review_completion_requires_human_action: true
+reason: "The automated packet can provide blinded internal AI pressure but cannot establish outside human review or independent replication."
+precise_human_action:
+  owner: "human project steward"
+  action: "Select one mathematically qualified reviewer who did not author the theorem packet and has not read prior task verdicts; send only the frozen blind packet; request a signed provenance declaration and strict-YAML review using the packet response contract; then place the received report and consent-to-store record in a newly authorized task-local path."
+  acceptance_evidence:
+    - "reviewer identity or pseudonymous credential record retained under the human's privacy decision"
+    - "human_status=true"
+    - "no prior task-verdict or route-history access declared before review"
+    - "blind packet SHA-256 recorded"
+    - "review start and receipt timestamps recorded"
+    - "conflicts of interest declared"
+    - "verbatim reviewer report stored without outcome-conditioned editing"
+    - "any follow-up questions and revisions preserved as an audit trail"
+  prohibited_shortcuts:
+    - "treating an internal agent or role label as an external reviewer"
+    - "treating a different model configuration as independent replication"
+    - "briefing the reviewer on prior verdicts before the first report"
+    - "selectively retaining only favorable findings"
+    - "inferring endorsement from silence or nonresponse"
+reviewer_qualification_criteria:
+  required:
+    - "working competence in category theory or equivariant mathematics"
+    - "ability to audit choice-sensitive product arguments"
+    - "willingness to state assumptions and countermodel attempts explicitly"
+  preferred:
+    - "experience with natural transformations or group actions"
+    - "no prior participation in the theorem construction"
+independence_classification:
+  desired: "external_human_blind_review"
+  currently_available: "bounded_internal_ai_review_only"
+  independent_replication_claim_authorized: false
+  limitation: "Provider and training dependence of automated reviewers is not measured; no external human report exists."
+result_handling:
+  favorable_report_effect: "review evidence only; no ontology adoption proof authority or promotion"
+  adverse_report_effect: "route the precise defect to a bounded repair or freeze decision without editing prior artifacts in place"
+  disagreement_policy: "preserve all disagreements and assumption deltas"
+physics_promotion_authorized: false
+canonical_ontology_edit_authorized: false
+source_law_adoption_authorized: false
+proof_authority: false

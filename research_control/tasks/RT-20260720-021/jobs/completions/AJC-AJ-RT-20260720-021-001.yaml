@@ -1,0 +1,435 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-021-001"
+completion_id: "AJC-AJ-RT-20260720-021-001"
+task_id: "RT-20260720-021"
+task_type: "v21_eqsrc_selector_theorem_blind_independent_review"
+decision_id: "DDR-20260720-021"
+role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260720-021"
+status: "completed"
+created_at: "2026-07-21T08:43:08Z"
+started_at: "2026-07-21T08:43:08Z"
+completed_at: "2026-07-21T09:05:06Z"
+objective: "Execute only v21 P2-T08: prepare a context-stripped fixed-source theorem packet, obtain blind internal and bounded fresh-context different-model critique, preserve disagreements and provenance, and record a precise external-human-review acquisition action without claiming external replication."
+completion_summary: "P2-T08 froze a context-stripped theorem packet and obtained three blind internal AI critiques, including a different task-facing model configuration. All arms independently returned no_blocking_defect_found_as_written and found no countermodel retaining all declared assumptions. Five nonblocking clarification families and every route disagreement remain recorded. No arm is human or external, so a precise human-review acquisition action remains. The theorem stays draft/control proposal-only and blocked_adoption_open_continuation; P3-T01 is selected with no ontology adoption proof authority physics promotion publication or Distance-to-GR delta."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T08"
+  recommendation_ids:
+    - "V21-R36"
+    - "V21-R37"
+    - "V21-R38"
+    - "V21-R68"
+    - "V21-R71"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "P2-T07"
+    - "P2-T08"
+  next_dependency_work_item: "P3-T01"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 21
+  passes_consumed: 21
+  route_work_item_id: "P2-T08"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "attack_fixture"
+minimum_payload:
+  payload_class: "attack_fixture"
+  payload_artifact_path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_external_red_team_review_v1.yaml"
+  payload_summary: "Three context-stripped AI review arms independently pressure the fixed selector theorem and preserve exact assumption semantic and route disagreements without manufacturing external replication."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: false
+external_red_team_finding_requires_integration: true
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_blind_review_packet_v1.md"
+  - "research_control/tasks/RT-20260720-021/artifacts/child_phys_math_eqsrc_selector_theorem_review.yaml"
+  - "research_control/tasks/RT-20260720-021/artifacts/child_phys_phil_eqsrc_selector_theorem_review.yaml"
+  - "research_control/tasks/RT-20260720-021/artifacts/fresh_context_different_model_eqsrc_selector_theorem_review.yaml"
+  - "research_control/tasks/RT-20260720-021/artifacts/parent_conflict_review_eqsrc_selector_theorem_review.yaml"
+  - "research_control/tasks/RT-20260720-021/artifacts/parent_fusion_notes_eqsrc_selector_theorem_review.md"
+  - "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_review_disagreement_matrix.yaml"
+  - "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_external_red_team_review_v1.yaml"
+  - "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_independent_human_review_acquisition.yaml"
+  - "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_review_compact_receipt.json"
+  - "research_control/tasks/RT-20260720-021/artifacts/validate_eqsrc_selector_theorem_review.py"
+  - "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_review_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-021/**"
+  - "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_external_red_team_review_v1.yaml"
+  - "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_independent_human_review_acquisition.yaml"
+  - "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_review_disagreement_matrix.yaml"
+  - "research_control/handoffs/handoff-0791.yaml"
+  - "research_control/handoffs/handoff-0791.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  blind_packet:
+    path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_blind_review_packet_v1.md"
+    sha256: "07cd421844f3317985f54660311b34bd92bdd6eed621a3d3b5aca28f73706a2e"
+  fused_review:
+    path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_external_red_team_review_v1.yaml"
+    sha256: "25e8e0ec587c72c3d2d7f2269ba2646986828393054f98ce4e82dc9da5b52645"
+  disagreement_matrix:
+    path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_review_disagreement_matrix.yaml"
+    sha256: "66a6bed029cd46b31a1a0210f9ffa2730385ddc00c181a5d1a718ddf5773fbba"
+  human_review_acquisition:
+    path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_independent_human_review_acquisition.yaml"
+    sha256: "c887206755ccabca92096c6118e6a71e3e95594d28909f7239b49cde0fbf2d80"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_review_compact_receipt.json"
+    sha256: "5cb26a0f659d8c1740841b94645cfd0e578170839cd093dac915890255e86f6a"
+  validation:
+    path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_review_validation.json"
+    sha256: "02d990f06e3337f35059978c0b289a651750b8a1dd8583ffe3b8e89d34ab5c97"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260720-021/artifacts/parent_fusion_notes_eqsrc_selector_theorem_review.md"
+    sha256: "7c155a2a2dbab60abbf29e4192c8532feb24a8bcea960c3af034989c33abac12"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-021/artifacts/child_phys_math_eqsrc_selector_theorem_review.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-021/artifacts/child_phys_phil_eqsrc_selector_theorem_review.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-021/artifacts/parent_conflict_review_eqsrc_selector_theorem_review.yaml"
+    disagreement_matrix_path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_review_disagreement_matrix.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    summary: "The parent preserved terminal-functor strict-extension constructive-choice semantic-notation and next-route differences. Only schema tokens were normalized after the independent audits."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_external_red_team_review_v1.yaml"
+    fusion_notes_path: "research_control/tasks/RT-20260720-021/artifacts/parent_fusion_notes_eqsrc_selector_theorem_review.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+additional_review_outputs:
+  - execution_unit_id: "fresh_context_different_model"
+    perspective: "different_task_facing_model_red_team"
+    output_path: "research_control/tasks/RT-20260720-021/artifacts/fresh_context_different_model_eqsrc_selector_theorem_review.yaml"
+    status: "completed"
+    independence_limit: "Fresh task context and a different task-facing model configuration do not establish outside-human review or independent replication."
+
+external_red_team_result:
+  reviewed_object_id: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+  review_mode: "blinded_internal_multi_arm_with_precise_external_human_acquisition_action"
+  verdict: "no_blocking_defect_found_as_written"
+  blind_review_count: 3
+  blocking_defect_count: 0
+  nonblocking_clarification_count: 5
+  unresolved_disagreement_count: 0
+  minimal_countermodel_attempt_count: 3
+  in_scope_countermodel_count: 0
+  actual_external_human_review_completed: false
+  independent_replication_completed: false
+  precise_human_action_recorded: true
+  human_action_path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_independent_human_review_acquisition.yaml"
+  calibrated_theorem_status: "draft/control proposal-only conditionally correct on the declared domain"
+  adoption_status: "blocked_adoption_open_continuation"
+  workflow_success_disregarded_as_scientific_evidence: true
+  validator_success_disregarded_as_scientific_evidence: true
+  role_and_model_separation_disregarded_as_external_replication: true
+  finding_requires_integration: true
+  exact_finding: "The conditional mathematical package survived three blind internal AI critiques; the remaining findings are explicit terminal-functor strict-extension choice-foundation K-image semantic and formalization-scope guards."
+  narrowest_continuation: "P3-T01 must normalize the five lawful selector-resolution classes while retaining every review boundary and without adopting a selector law."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260720-021-001"
+    payload_type: "finite_model"
+    object_name: "One-object idempotent equalizer pressure model"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_review_disagreement_matrix.yaml"
+    burden_effect: "stress_tests"
+    summary: "Three independently constructed one-object models realize two core selectors one selector-induced K image and one full-category selector exactly as the claims predict."
+  - payload_id: "PAYLOAD-RT-20260720-021-002"
+    payload_type: "dependency_map_update"
+    object_name: "P2-T08 review disposition and P3-T01 route"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_external_red_team_review_v1.yaml"
+    burden_effect: "audits"
+    summary: "Calibrates the theorem without adoption and selects the plan-defined five-class decision taxonomy as the direct successor."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Obtain review evidence not conditioned on task verdict or route history."
+  explanation: "P2-T08 supplies blinded internal AI review evidence and an exact human-review acquisition action. It does not derive or adopt the proposal category selector law or general EqSrc."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "review_calibration_only"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A nonblocking review verdict of a proposal-only conditional theorem is not ontology derivation adoption or general EqSrc discharge."
+  downstream_unlocked:
+    - "P3-T01 lawful selector-resolution taxonomy only"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The authoritative Distance-to-GR and metric-use ledgers remain unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "proposal category selector interface K and extension remain unadopted"
+  - burden: "Source equivalence EqSrc"
+    status: "conditional selector theorem blind internal review complete; general EqSrc remains undischarged"
+  - burden: "RetainH GenH ObsLoc_lc and Resp_lc"
+    status: "unchanged"
+  - burden: "M_src g_eff matter coupling Einstein equations and benchmark promotion"
+    status: "unchanged and blocked"
+  - burden: "finite-variation robustness"
+    status: "variation-class dependence preserved as a scope guard"
+  - burden: "Gate Chair status"
+    status: "human-gated and unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "exact candidate-family freezes preserved; P3-T01 is a distinct decision-taxonomy route"
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p2_t08_blind_internal_review_completed_p3_t01_selected"
+  prior_related_tasks:
+    - "RT-20260718-038 through RT-20260718-047"
+    - "RT-20260720-009 through RT-20260720-021"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P2-T08 changes evidence mode to context-stripped multi-arm review and records five independent resolution classes for P3-T01 rather than reconstructing or renaming a frozen selector candidate."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P3-T01"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  candidate_freeze_label: "EQSRC-P2-T08-REVIEW-REPETITION"
+  prior_attempts_considered:
+    - "five stable families and seven immutable candidates in P1-T03"
+    - "P2-T03 complete conditional theorem"
+    - "P2-T04 finite atlas"
+    - "P2-T05 bounded Lean core"
+    - "P2-T06 smuggling audit"
+    - "P2-T07 altered-domain stress"
+    - "P2-T08 three-arm blinded internal review"
+  freeze_if:
+    - "Later work repeats internal review of the unchanged packet without new independence evidence or a materially distinct mathematical burden."
+  do_not_freeze_if:
+    - "P3-T01 formalizes the five lawful response classes and exact route consequences."
+    - "A genuine outside human review arrives under the acquisition receipt."
+  freeze_decision: "not_frozen"
+  decision_reason: "P3-T01 is non-orbital because it converts the reviewed obstruction space into a normalized decision taxonomy rather than repeating review construction audit or stress."
+  rationale: "Freeze repetition of unchanged internal review; permit P3-T01 and a receipt-backed genuine outside review."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "theoretical_selector"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The blinded internal review calibrates a proposal-only conditional theorem and records human-review acquisition only. It does not create external replication ontology adoption proof authority scientific-ledger progress publication or completed derivation."
+  forbidden_conclusions:
+    - "internal role or model separation as external human review or independent replication"
+    - "clean review as ontology adoption or source-law derivation"
+    - "structural automorphisms as physical gauge transformations"
+    - "singleton im K_* as uniqueness of all natural or physical relations"
+    - "bounded Lean core as proof of the full theorem or its physical meaning"
+    - "probabilistic partial marked or altered-variation conclusions transferred unchanged"
+    - "general EqSrc discharge"
+    - "M_src g_eff matter coupling or Einstein-equation derivation"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+    - "future source-extension impossibility or global theory rejection"
+
+selected_next_route:
+  route_id: "v21_p3_t01_lawful_selector_resolution_taxonomy"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P3-T01"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Turn the selector theorem into an actionable research decision framework."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Define the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction."
+  source_handoff: "research_control/handoffs/handoff-0791.yaml"
+
+claim_boundary:
+  boundary_id: "CB-V21-P2-T08-EQSRC-THEOREM-REVIEW-001"
+  allowed_scope: "P2-T08 context-stripped internal AI review provenance disagreement preservation human-review acquisition and one P3-T01 route."
+  blocked_scope: "Prior-source repair external outreach human endorsement independent-replication claim ontology adoption physical-gauge identification general EqSrc scientific-ledger change downstream GR proof authority benchmark promotion Gate Chair verdict publication completed derivation or global no-go."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_review_validation.json"
+  local_validator_report_hash: "02d990f06e3337f35059978c0b289a651750b8a1dd8583ffe3b8e89d34ab5c97"
+  fused_review_hash: "25e8e0ec587c72c3d2d7f2269ba2646986828393054f98ce4e82dc9da5b52645"
+  disagreement_matrix_hash: "66a6bed029cd46b31a1a0210f9ffa2730385ddc00c181a5d1a718ddf5773fbba"
+  compact_receipt_hash: "5cb26a0f659d8c1740841b94645cfd0e578170839cd093dac915890255e86f6a"
+  task_local_check_count: 49
+  task_local_failed_check_count: 0
+  external_red_team_schema_status: "PASS"
+  validation_status: "PASS"
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  theorem_or_atlas_repair_authorized: false
+  independent_replication_claim_authorized: false
+  human_endorsement_claim_authorized: false
+  physical_gauge_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 21 lease parity immutable route identity max reasoning repository binding predecessor checkpoint clean start and single consumption were verified before work."
+      - "Memory preflight refreshed local retrieval and inspected the registered theorem plus reviewer-role sources."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Three blind internal AI review arms completed and every substantive disagreement has an explicit parent disposition."
+      - "The task-local validator passes 49 of 49 fixed-hash context-stripping provenance disagreement acquisition and authority checks."
+      - "The strict external red-team artifact schema validator passes the fused review."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Repository validation documentation impact signal parity generated freshness and whitespace checks remain required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph and claim graph remain to be regenerated and checked."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap and validate-only remain required after final control-state materialization."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 943
+    relationship_row_count: 4673
+    semantic_row_count: 943
+    vault_row_count: 943
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_local_cache_only_warning_count: 5
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+      returned_object_ids:
+        - "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD --json"
+      query_type: "lookup"
+      query_text: "MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD"
+      returned_object_ids:
+        - "MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD"
+  canonical_inspections:
+    - object_id: "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+      source_hash: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+    - object_id: "MD-ROLE-AGENTS-ROLES-PHYSICS-EXTERNAL-RED-TEAM-REVIEWER-V0-1-0-MD"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/roles/physics/external-red-team-reviewer.v0.1.0.md"
+      source_hash: "b49de89caa4cb4f98f959e0ba7168a8223797679e5d0ab3c4700c14a5de9ace7"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and five local-cache-only freshness warnings were refreshed to a clean local retrieval state."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-021/artifacts/validate_eqsrc_selector_theorem_review.py"
+    status: "PASS"
+    summary: "The task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-021/artifacts/validate_eqsrc_selector_theorem_review.py --write-report --json"
+    status: "PASS"
+    summary: "Passed 49 of 49 fixed-hash context-stripping reviewer-provenance disagreement acquisition compact-receipt and authority checks."
+  - command: ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py --json research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_external_red_team_review_v1.yaml"
+    status: "PASS"
+    summary: "The fused artifact passes the strict external-red-team review schema with physics_promotion_authorized false."
+
+next_recommended_action: "Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes while preserving every P2-T08 review boundary and granting no ontology adoption or promotion."
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  rationale: "The result is a bounded scientific review and route calibration, not a project-system defect."

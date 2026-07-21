@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-020`
-- Latest handoff: `handoff-0790`
-- Current status: `v21_p2_t07_scoped_obstruction_to_broader_selector_overreads_deterministic_theorem_survives_p2_t08_selected_no_adoption_or_promotion`
+- Active task: `RT-20260720-021`
+- Latest handoff: `handoff-0791`
+- Current status: `v21_p2_t08_blind_internal_review_no_blocking_defect_human_review_action_recorded_p3_t01_selected_no_adoption_or_promotion`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-020`
-- Latest research handoff: `handoff-0790`
-- Latest research next action: Run exactly one bounded v21 P2-T08 external-review-packet. Give a context-stripped theorem assumptions proof formalization audit and countermodel package to blind internal and epistemically independent reviewers, preserve disagreement, and grant no adoption proof-authority or promotion status.
+- Latest research task: `RT-20260720-021`
+- Latest research handoff: `handoff-0791`
+- Latest research next action: Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p2_t08_eqsrc_selector_theorem_blind_independent_review`
-- Role family: `external-red-team-reviewer@0.1.0`
+- Route ID: `v21_p3_t01_lawful_selector_resolution_taxonomy`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Obtain review evidence not conditioned on task verdict or route history.
+- Milestone burden: Turn the selector theorem into an actionable research decision framework.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `bf0ae37923d27c62bdcb1e06b6b06209182505ec3ecce10fe4f9187354752cb2`
-- JSON SHA-256: `a58aa5b38ce1e0f204381514242f659f01b0c57aa3a872e3ede013b213bb0e35`
+- YAML SHA-256: `ae0c1a66c9b22a7409ce2e26c242895d1c7cac26f90055e36688b61cd840b21d`
+- JSON SHA-256: `9f7e13b60eb4c8ce586761136c90209ef1e172360905a611cdc7cc30e22fcfe3`
 
 ## Authority Warning
 

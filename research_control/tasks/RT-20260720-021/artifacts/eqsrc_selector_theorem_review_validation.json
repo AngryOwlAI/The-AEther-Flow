@@ -1,0 +1,261 @@
+{
+  "actual_external_human_review_completed": false,
+  "blind_review_count": 3,
+  "check_count": 49,
+  "checks": [
+    {
+      "detail": "expected=d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae actual=d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae",
+      "name": "hash_theorem",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected=4a7c84ecf769b19e92b2b2dffd7224ddd4e1e02e4cc93cff797d01fa0e1bc62b actual=4a7c84ecf769b19e92b2b2dffd7224ddd4e1e02e4cc93cff797d01fa0e1bc62b",
+      "name": "hash_finite_atlas",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected=6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356 actual=6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356",
+      "name": "hash_lean_source",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected=d093d7b0afbe322cf537644de54f17156ea2427fcc0988f4fc8fb305e93a0f76 actual=d093d7b0afbe322cf537644de54f17156ea2427fcc0988f4fc8fb305e93a0f76",
+      "name": "hash_audit",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected=d519bcc9534af3b2ca3e3d44604bd56bf72c425e0d06322c33cc7e66abfd2b49 actual=d519bcc9534af3b2ca3e3d44604bd56bf72c425e0d06322c33cc7e66abfd2b49",
+      "name": "hash_stress",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected=07cd421844f3317985f54660311b34bd92bdd6eed621a3d3b5aca28f73706a2e actual=07cd421844f3317985f54660311b34bd92bdd6eed621a3d3b5aca28f73706a2e",
+      "name": "hash_blind_packet",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected=d38748ebf3bfee7c1a3d16aac11d07bbd321f6b4e9deb24a7c7b4877636549ff actual=d38748ebf3bfee7c1a3d16aac11d07bbd321f6b4e9deb24a7c7b4877636549ff",
+      "name": "hash_child_phys_math",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected=bc10ed35f6fe34bf4e3b3520694c64ae36d1fb5d5bd8c3e21641c292fcad78f4 actual=bc10ed35f6fe34bf4e3b3520694c64ae36d1fb5d5bd8c3e21641c292fcad78f4",
+      "name": "hash_child_phys_phil",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected=24cc23ccc7671f28bfa9d7dc9ecd493d1a8d2d989354a9a942e886c7dd0596b8 actual=24cc23ccc7671f28bfa9d7dc9ecd493d1a8d2d989354a9a942e886c7dd0596b8",
+      "name": "hash_fresh_context_different_model",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected=66a6bed029cd46b31a1a0210f9ffa2730385ddc00c181a5d1a718ddf5773fbba actual=66a6bed029cd46b31a1a0210f9ffa2730385ddc00c181a5d1a718ddf5773fbba",
+      "name": "hash_disagreement_matrix",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected=25e8e0ec587c72c3d2d7f2269ba2646986828393054f98ce4e82dc9da5b52645 actual=25e8e0ec587c72c3d2d7f2269ba2646986828393054f98ce4e82dc9da5b52645",
+      "name": "hash_fused_review",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected=c887206755ccabca92096c6118e6a71e3e95594d28909f7239b49cde0fbf2d80 actual=c887206755ccabca92096c6118e6a71e3e95594d28909f7239b49cde0fbf2d80",
+      "name": "hash_human_review_acquisition",
+      "status": "PASS"
+    },
+    {
+      "detail": "forbidden tokens=[]",
+      "name": "blind_packet_context_stripping",
+      "status": "PASS"
+    },
+    {
+      "detail": "nonclaims present",
+      "name": "blind_packet_nonclaim_boundary",
+      "status": "PASS"
+    },
+    {
+      "detail": "review requirements present",
+      "name": "blind_packet_response_contract",
+      "status": "PASS"
+    },
+    {
+      "detail": "no_blocking_defect_found_as_written",
+      "name": "child_phys_math_verdict",
+      "status": "PASS"
+    },
+    {
+      "detail": "must be false",
+      "name": "child_phys_math_promotion_false",
+      "status": "PASS"
+    },
+    {
+      "detail": "{\"configuration_qualification\": \"the task-facing configuration was reported by the orchestration context and was not independently verified by the reviewer.\", \"context_inheritance\": \"no inherited conversation context was used in the mathematical audit.\", \"coordination_metadata_received\": [\"after the mathematical audit, the coordinator supplied the exact verdict schema label and the p3-t01 route label; no mathematical conclusion or prior review content was supplied.\"], \"declared_conflicts\": [], \"",
+      "name": "child_phys_math_nonhuman",
+      "status": "PASS"
+    },
+    {
+      "detail": "{\"configuration_qualification\": \"the task-facing configuration was reported by the orchestration context and was not independently verified by the reviewer.\", \"context_inheritance\": \"no inherited conversation context was used in the mathematical audit.\", \"coordination_metadata_received\": [\"after the mathematical audit, the coordinator supplied the exact verdict schema label and the p3-t01 route label; no mathematical conclusion or prior review content was supplied.\"], \"declared_conflicts\": [], \"",
+      "name": "child_phys_math_not_external_replication",
+      "status": "PASS"
+    },
+    {
+      "detail": "blind packet is the declared file input",
+      "name": "child_phys_math_blind_file_scope",
+      "status": "PASS"
+    },
+    {
+      "detail": "no_blocking_defect_found_as_written",
+      "name": "child_phys_phil_verdict",
+      "status": "PASS"
+    },
+    {
+      "detail": "must be false",
+      "name": "child_phys_phil_promotion_false",
+      "status": "PASS"
+    },
+    {
+      "detail": "{\"context_inheritance\": \"no inherited substantive conversation context was used.\", \"declared_conflicts\": [], \"files_accessed\": [\"/volumes/p-ssd/angryowl/the-aether-flow/research_control/tasks/rt-20260720-021/artifacts/eqsrc_selector_theorem_blind_review_packet_v1.md\"], \"human_status\": \"not human; no human-reviewer status is claimed.\", \"independence_limitations\": [\"this is an internal ai review, not external replication.\", \"independence from other project reviews is procedural blindness only.\", \"",
+      "name": "child_phys_phil_nonhuman",
+      "status": "PASS"
+    },
+    {
+      "detail": "{\"context_inheritance\": \"no inherited substantive conversation context was used.\", \"declared_conflicts\": [], \"files_accessed\": [\"/volumes/p-ssd/angryowl/the-aether-flow/research_control/tasks/rt-20260720-021/artifacts/eqsrc_selector_theorem_blind_review_packet_v1.md\"], \"human_status\": \"not human; no human-reviewer status is claimed.\", \"independence_limitations\": [\"this is an internal ai review, not external replication.\", \"independence from other project reviews is procedural blindness only.\", \"",
+      "name": "child_phys_phil_not_external_replication",
+      "status": "PASS"
+    },
+    {
+      "detail": "blind packet is the declared file input",
+      "name": "child_phys_phil_blind_file_scope",
+      "status": "PASS"
+    },
+    {
+      "detail": "no_blocking_defect_found_as_written",
+      "name": "fresh_context_different_model_verdict",
+      "status": "PASS"
+    },
+    {
+      "detail": "must be false",
+      "name": "fresh_context_different_model_promotion_false",
+      "status": "PASS"
+    },
+    {
+      "detail": "{\"context_inheritance\": \"fresh context with no inherited conversation\", \"declared_conflicts\": [], \"files_accessed\": [\"research_control/tasks/rt-20260720-021/artifacts/eqsrc_selector_theorem_blind_review_packet_v1.md\"], \"human_status\": \"non-human\", \"independence_limitations\": \"separation is bounded and different-model-config only. shared provider and training dependence are unknown. this is neither external human review nor independent replication.\", \"model_family\": \"openai gpt-5.6-terra\", \"revie",
+      "name": "fresh_context_different_model_nonhuman",
+      "status": "PASS"
+    },
+    {
+      "detail": "{\"context_inheritance\": \"fresh context with no inherited conversation\", \"declared_conflicts\": [], \"files_accessed\": [\"research_control/tasks/rt-20260720-021/artifacts/eqsrc_selector_theorem_blind_review_packet_v1.md\"], \"human_status\": \"non-human\", \"independence_limitations\": \"separation is bounded and different-model-config only. shared provider and training dependence are unknown. this is neither external human review nor independent replication.\", \"model_family\": \"openai gpt-5.6-terra\", \"revie",
+      "name": "fresh_context_different_model_not_external_replication",
+      "status": "PASS"
+    },
+    {
+      "detail": "blind packet is the declared file input",
+      "name": "fresh_context_different_model_blind_file_scope",
+      "status": "PASS"
+    },
+    {
+      "detail": "three review arms",
+      "name": "matrix_three_arms",
+      "status": "PASS"
+    },
+    {
+      "detail": "no unresolved conflicts",
+      "name": "matrix_no_unresolved",
+      "status": "PASS"
+    },
+    {
+      "detail": "must be false",
+      "name": "matrix_external_false",
+      "status": "PASS"
+    },
+    {
+      "detail": "at least four preserved differences",
+      "name": "matrix_preserves_differences",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing=[]",
+      "name": "fused_required_fields",
+      "status": "PASS"
+    },
+    {
+      "detail": "no_blocking_defect_found_as_written",
+      "name": "fused_verdict",
+      "status": "PASS"
+    },
+    {
+      "detail": "must be false",
+      "name": "fused_promotion_false",
+      "status": "PASS"
+    },
+    {
+      "detail": "external review absent",
+      "name": "fused_external_false",
+      "status": "PASS"
+    },
+    {
+      "detail": "zero blocking defects",
+      "name": "fused_no_blocking_defects",
+      "status": "PASS"
+    },
+    {
+      "detail": "all protected authority fields false",
+      "name": "fused_protected_authority_false",
+      "status": "PASS"
+    },
+    {
+      "detail": "no manufactured external completion",
+      "name": "acquisition_external_false",
+      "status": "PASS"
+    },
+    {
+      "detail": "no outreach performed",
+      "name": "acquisition_no_outreach",
+      "status": "PASS"
+    },
+    {
+      "detail": "action plus receipt criteria",
+      "name": "acquisition_precise_action",
+      "status": "PASS"
+    },
+    {
+      "detail": "must be false",
+      "name": "acquisition_promotion_false",
+      "status": "PASS"
+    },
+    {
+      "detail": "no_blocking_defect_found_as_written",
+      "name": "compact_result_parity",
+      "status": "PASS"
+    },
+    {
+      "detail": "three arms",
+      "name": "compact_review_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "must be false",
+      "name": "compact_external_false",
+      "status": "PASS"
+    },
+    {
+      "detail": "all fixed hashes copied exactly",
+      "name": "compact_hash_parity",
+      "status": "PASS"
+    },
+    {
+      "detail": "must be false",
+      "name": "compact_promotion_false",
+      "status": "PASS"
+    }
+  ],
+  "failed_check_count": 0,
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P2-T08",
+  "precise_human_action_recorded": true,
+  "recommended_next_route": "P3-T01",
+  "result_status": "no_blocking_defect_found_as_written",
+  "schema_id": "eqsrc-selector-theorem-review-validation.v1",
+  "status": "PASS",
+  "task_id": "RT-20260720-021"
+}

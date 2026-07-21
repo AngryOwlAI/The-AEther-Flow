@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-020` and `handoff-0790`.
+`RT-20260720-021` and `handoff-0791`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-020` |
-| Latest handoff ID | `handoff-0790` |
-| Current status | `v21_p2_t07_scoped_obstruction_to_broader_selector_overreads_deterministic_theorem_survives_p2_t08_selected_no_adoption_or_promotion` |
+| Active task ID | `RT-20260720-021` |
+| Latest handoff ID | `handoff-0791` |
+| Current status | `v21_p2_t08_blind_internal_review_no_blocking_defect_human_review_action_recorded_p3_t01_selected_no_adoption_or_promotion` |
 | V16 completed | false |
-| Current route family | v21 p2 t08 eqsrc selector theorem blind independent review |
-| Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One P2-T08 external-review-packet may prepare a context-stripped selector-theorem package and record blind internal plus epistemically independent review findings and disagreements. |
-| Next recommended action | Run exactly one bounded v21 P2-T08 external-review-packet. Give a context-stripped theorem assumptions proof formalization audit and countermodel package to blind internal and epistemically independent reviewers, preserve disagreement, and grant no adoption proof-authority or promotion status. |
+| Current route family | v21 p3 t01 lawful selector resolution taxonomy |
+| Target derivation milestone | none; this is project-control tooling work |
+| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction. |
+| Required next authority | One P3-T01 ontology-law-research-packet may define and normalize the five lawful selector-resolution classes and their route consequences without adopting any class or selector law. |
+| Next recommended action | Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-020` |
-| Latest research handoff ID | `handoff-0790` |
-| Latest research next action | Run exactly one bounded v21 P2-T08 external-review-packet. Give a context-stripped theorem assumptions proof formalization audit and countermodel package to blind internal and epistemically independent reviewers, preserve disagreement, and grant no adoption proof-authority or promotion status. |
+| Latest research task ID | `RT-20260720-021` |
+| Latest research handoff ID | `handoff-0791` |
+| Latest research next action | Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-020/00_TASK.yaml`.
-- Active task objective: Execute exactly one bounded v21 P2-T07 Refuter packet stressing the unchanged audited deterministic selector theorem under nonfaithful actions partial morphisms multiple components stochastic selectors added marks and altered variation classes while preserving the P2-T04 metric-use guard.
-- Latest handoff path: `research_control/handoffs/handoff-0790.yaml`.
-- Latest handoff summary: RT-20260720-020 completed only v21 P2-T07. The deterministic total-groupoid theorem survives nonfaithful actions and multiple components. A transitive C3 orbit has no invariant point but has an invariant uniform probability measure; partial maps, added marks, and altered variation classes require changed source-side laws or domains. The exact result is scoped_obstruction to broader overreads, not refutation or adoption of the fixed theorem.
-- Current route family: v21 p2 t08 eqsrc selector theorem blind independent review.
-- Next recommended action: Run exactly one bounded v21 P2-T08 external-review-packet. Give a context-stripped theorem assumptions proof formalization audit and countermodel package to blind internal and epistemically independent reviewers, preserve disagreement, and grant no adoption proof-authority or promotion status.
+- Active task path: `research_control/tasks/RT-20260720-021/00_TASK.yaml`.
+- Active task objective: Execute exactly one bounded v21 P2-T08 External Red-Team Reviewer packet that exposes the unchanged P2-T03 theorem package to context-stripped blind internal and bounded fresh-context different-model review, preserves disagreements, and records a precise independent-human-review acquisition action without claiming external replication.
+- Latest handoff path: `research_control/handoffs/handoff-0791.yaml`.
+- Latest handoff summary: RT-20260720-021 completed only v21 P2-T08. Three context-stripped internal AI review arms found no blocking defect or in-scope countermodel, while preserving five nonblocking clarification families and route disagreements. No arm is human or external; a precise human-review acquisition action remains recorded.
+- Current route family: v21 p3 t01 lawful selector resolution taxonomy.
+- Next recommended action: Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P2-T08 external-review-packet. Give a context-stripped theorem assumptions proof formalization audit and countermodel package to blind internal and epistemically independent reviewers, preserve disagreement, and grant no adoption proof-authority or promotion status.
+Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -326,13 +326,30 @@ No validation-layer split is recorded in the latest handoff.
 
 Authorization layers:
 
-No authorization-layer split is recorded in the latest handoff.
+| Authorization field | Value | Meaning |
+| --- | --- | --- |
+| `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
+| `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
+| `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
+| `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
+| `Gate_Chair_verdict_authorized` | False | extension authorization field |
+| `canonical_ontology_edit_authorized` | False | extension authorization field |
+| `external_outreach_authorized` | False | extension authorization field |
+| `external_publication_authorized` | False | extension authorization field |
+| `future_source_extension_impossibility_authorized` | False | extension authorization field |
+| `general_EqSrc_discharge_authorized` | False | extension authorization field |
+| `global_no_go_claim_authorized` | False | extension authorization field |
+| `human_endorsement_claim_authorized` | False | extension authorization field |
+| `independent_replication_claim_authorized` | False | extension authorization field |
+| `physical_gauge_claim_authorized` | False | extension authorization field |
+| `push_authorized` | False | extension authorization field |
+| `source_law_adoption_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-020`;
-- latest handoff: `handoff-0790`;
-- current status: `v21_p2_t07_scoped_obstruction_to_broader_selector_overreads_deterministic_theorem_survives_p2_t08_selected_no_adoption_or_promotion`;
+- active task: `RT-20260720-021`;
+- latest handoff: `handoff-0791`;
+- current status: `v21_p2_t08_blind_internal_review_no_blocking_defect_human_review_action_recorded_p3_t01_selected_no_adoption_or_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +359,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0790.yaml`
-- `research_control/tasks/RT-20260720-020/00_TASK.yaml`
+- `research_control/handoffs/handoff-0791.yaml`
+- `research_control/tasks/RT-20260720-021/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +376,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0790*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0791*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

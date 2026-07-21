@@ -1,0 +1,183 @@
+schema_version: "eqsrc_selector_theorem_blind_review_v1"
+packet_id: "EQSRC-SELECTOR-THEOREM-BLIND-PACKET-V1"
+review_date: "2026-07-21"
+reviewer_provenance:
+  reviewer_role: "child_phys_math"
+  reviewer_kind: "AI mathematical reviewer"
+  provider: "OpenAI"
+  model_family: "GPT-5 family"
+  task_facing_configuration: "OpenAI gpt-5.6-sol"
+  configuration_qualification: "The task-facing configuration was reported by the orchestration context and was not independently verified by the reviewer."
+  human_status: "No human reviewer status; this review was produced by an AI reviewer."
+  context_inheritance: "No inherited conversation context was used in the mathematical audit."
+  files_accessed:
+    - "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_blind_review_packet_v1.md"
+  other_files_accessed: []
+  coordination_metadata_received:
+    - "After the mathematical audit, the coordinator supplied the exact verdict schema label and the P3-T01 route label; no mathematical conclusion or prior review content was supplied."
+  declared_conflicts: []
+  independence_limitations:
+    - "This is an internal blinded review, not an external replication."
+    - "Shared-provider, shared-training-data, and statistical independence from other reviewers are unknown."
+    - "The reviewer did not independently inspect the six fixed inputs, the Lean source, or the reported build receipt."
+
+assumptions_read:
+  - id: "A01"
+    assessment: "Used only as the declaration that the reviewed domain is a fixed small groupoid core."
+  - id: "A02"
+    assessment: "Used only as the declaration that S is a fixed covariant Set-valued functor."
+  - id: "A03"
+    assessment: "Essential for the displayed coordinate inverse: representatives and every transport tau_X are supplied data, so their existence is not silently derived by global choice."
+  - id: "A04"
+    assessment: "Correctly confines choice to the converse from factorwise nonemptiness to possession of a global product element."
+  - id: "A05"
+    assessment: "Essential and sufficient for the K-image claim."
+  - id: "A06"
+    assessment: "Essential for Claim 3; the claim is conditional on an actually supplied full-category extension."
+  - id: "A07"
+    assessment: "Matches the elements selected by a natural transformation from the constant singleton functor: one total deterministic point at every object."
+  - id: "A08"
+    assessment: "Correctly prevents altered signatures, eligibility sets, actions, K, or variation groups from being presented as counterexamples to the fixed problem."
+  - id: "A09"
+    assessment: "No physical-gauge meaning is used in any proof."
+  - id: "A10"
+    assessment: "No ontology derivation is inferred from the categorical results."
+
+definitions_read:
+  - "small groupoid G and component set I = pi_0(G)"
+  - "representatives r_i and supplied transports tau_X"
+  - "automorphism groups H_i"
+  - "fixed loci F_i = S(r_i)^{H_i}"
+  - "selector set Sel(G) = Nat(1_G, S)"
+  - "natural transformation K: S => E and induced map K_*"
+  - "representative image sets R_i = K_{r_i}(F_i)"
+  - "full-category extension overline S and its naturality equalizer"
+
+proof_steps_checked:
+  - step: "Claim 1 evaluation lands in each fixed locus."
+    result: "correct"
+    reason: "Naturality at every h in Aut(r_i) gives S(h)(sigma_{r_i}) = sigma_{r_i}."
+  - step: "Claim 1 reconstruction from a product tuple."
+    result: "correct"
+    reason: "For f: X -> Y, X and Y lie in the same component and a = tau_Y^{-1} f tau_X is an automorphism of r_i; fixedness under a proves naturality."
+  - step: "Claim 1 two-sided inverse."
+    result: "correct"
+    reason: "Identity transport recovers each representative coordinate, and naturality at tau_X recovers every component of the original selector."
+  - step: "Claim 1 emptiness, singleton, and multiplicity consequences."
+    result: "correct"
+    reason: "The singleton direction uses the existing unique product tuple as a baseline for coordinate replacement; the at-least-two equivalence correctly includes a nonempty complementary product."
+  - step: "Claim 1 choice qualification."
+    result: "correct in ordinary classical Set"
+    reason: "The bijection consumes an already existing product tuple. Factorwise nonemptiness alone is not used to manufacture a tuple for an arbitrary infinite family."
+  - step: "Claim 2 forward implication."
+    result: "correct"
+    reason: "Singleton representative K-images determine equal composites at all objects by naturality of K along tau_X."
+  - step: "Claim 2 converse implication."
+    result: "correct"
+    reason: "The assumed baseline selector supplies every complementary coordinate; replacing one coordinate by a point with a different representative K-image yields a second image under K_*."
+  - step: "Claim 2 image scope."
+    result: "correctly bounded"
+    reason: "The proof neither identifies im(K_*) with a product of the R_i without fibre choices nor claims surjectivity onto all natural E-sections."
+  - step: "Claim 3 restriction injectivity."
+    result: "correct"
+    reason: "A wide core has the same objects, and natural transformations are determined by their object components."
+  - step: "Claim 3 equalizer characterization."
+    result: "correct"
+    reason: "Claim 1 supplies exactly the core-natural component families, and the displayed equation is exactly naturality for each additional arrow of C."
+
+required_question_answers:
+  mathematical_typing: "All substantive maps and equations are well typed under the standard convention that 1_G is the constant singleton functor and that 'extends' means overline S restricts literally to S on the specified wide-core inclusion."
+  connectedness_and_choice: "No connectedness assumption is used. Componentwise reconstruction is valid, and no choice is hidden after the representatives, transports, and a product element are treated as supplied data."
+  exact_uniqueness_quantification: "The iff statements are exact. In particular, the at-least-two criterion needs both a two-point factor and an inhabited complementary product, as stated."
+  selector_versus_relation_multiplicity: "Claim 2 correctly permits multiple selectors with a singleton K_* image and uses the nonempty-selector hypothesis precisely to obtain a baseline tuple."
+  full_category_guard: "Claim 3 is conditional and does not construct or presuppose an absent extension; once the extension is supplied, the equations characterize its full natural sections."
+  target_imports: "No target topology, target metric, physical-gauge semantics, empirical detector semantics, or desired benchmark behavior occurs in the derivation."
+  minimal_countermodel_result: "No countermodel was found while retaining all declared assumptions and the deterministic total point-valued scope."
+
+findings:
+  circularity_findings: []
+  hidden_import_findings: []
+  notation_overload_findings:
+    - severity: "nonblocking"
+      finding: "The symbol 1_G is standard but not explicitly defined in the packet; defining it as the constant singleton functor would make the selector typing self-contained."
+    - severity: "nonblocking"
+      finding: "The notation S(r_i)^{H_i} should be read as a fixed-point set for the action h |-> S(h), not as an unconstrained exponential object."
+    - severity: "nonblocking"
+      finding: "A raw expression such as K(D) would be ambiguous and should not replace R_i = K_{r_i}(F_i); im(K_*) is a set of natural transformations, not a raw pointwise image. The packet itself does not make this substitution."
+    - severity: "nonblocking"
+      finding: "In raw boundary case 1, 'action kernel' denotes the two-element subgroup acting trivially, not an individual point stabilizer. In case 6, H is a subgroup and D^H is its common fixed locus."
+  unproven_equivalence_findings: []
+  typing_clarifications:
+    - severity: "nonblocking"
+      finding: "For Claim 3, 'overline S extends S' should continue to mean that the specified wide-core inclusion is identity on objects and that overline S restricted to G equals S. If only a naturally isomorphic restriction were intended, a chosen comparison isomorphism would be needed in the displayed formula."
+  choice_qualifications:
+    - severity: "nonblocking"
+      finding: "In ordinary classical Set, finite I suffices for finite choice. If foundation-neutral constructive semantics are intended, the exact finite-enumeration or finite-choice principle should be stated. This does not affect the packet's classical Set result."
+  k_image_logic_findings:
+    - severity: "nonblocking"
+      finding: "Calling elements of Nat(1_G, E) 'relation sections' has semantic content only if E has separately supplied relation semantics. The proved statement is the singleton criterion for the image of K_* for an arbitrary Set-valued E."
+  equalizer_guard_findings:
+    - severity: "nonblocking"
+      finding: "The equations may be imposed for all arrows as written; equations for invertible core arrows are redundant because membership in the product of fixed loci already enforces them."
+
+minimal_countermodel_attempt:
+  objective: "Try to falsify one of the three claims while retaining every declared assumption, total deterministic Set maps, and point-valued selectors."
+  construction:
+    groupoid: "Let G have one object star and only its identity arrow. Then I is a singleton, r = star, tau_star = identity, and H is trivial."
+    selector_functor: "Let S(star) = {0, 1} with the identity action, so F = {0, 1}."
+    image_functor: "Let E(star) = {e} and let K be the unique constant map; naturality on G is automatic."
+    full_category: "Let C add one noninvertible idempotent p with p composed with p equal to p. Define overline S(p)(0) = 0 and overline S(p)(1) = 0; this is a total deterministic Set map and overline S restricts to S on G."
+    scope_controls: "Treat G, S, E, K, C, overline S, representatives, and transports as fixed proposal inputs with no gauge or ontology interpretation. The singleton component set satisfies the finite-choice qualification."
+  computed_results:
+    - "Sel(G) has exactly the two selectors 0 and 1, matching F."
+    - "R is the singleton {e}, and im(K_*) is a singleton despite selector multiplicity."
+    - "Nat(1_C, overline S) contains only 0 because overline S(p)(x) = x holds exactly at x = 0; the displayed equalizer selects exactly that tuple."
+  counterexample_found: false
+  conclusion: "The smallest nontrivial combined stress case confirms rather than refutes all three claims. Attempts based on probabilistic values, partial arrows, source marks, or changed variation groups necessarily alter a declared assumption or the functorial codomain."
+
+assumption_deltas:
+  required_additions: []
+  nonblocking_explicitness_additions:
+    - "Define 1_G explicitly as the constant singleton functor."
+    - "State that the wide-core inclusion is identity on objects and overline S restricted to G equals S on the nose."
+    - "If constructive rather than ordinary classical Set foundations are intended, state the finite-choice convention used in A04."
+  assumptions_that_can_be_weakened_for_the_abstract_theorem:
+    - "A01 can be weakened from the fixed certified core to any small groupoid once project-specific scope is removed."
+    - "A02 can be weakened from the fixed eligible-choice functor to any covariant Set-valued functor."
+    - "A08 through A10 are scope and interpretation guards, not mathematical premises of the classification proofs."
+  assumptions_that_must_be_retained_for_the_stated_forms:
+    - "Supplied representatives and transports, or an equivalent coordinate-free formulation."
+    - "An available product tuple for constructing a global selector."
+    - "Naturality of K and nonemptiness of Sel(G) for the Claim 2 iff."
+    - "A specified full-category extension for Claim 3."
+
+formalization_scope_findings:
+  - "The reported Lean capsule covers only the one-object finite-group fragment and therefore does not independently validate the multi-component product, arbitrary choice qualification, K-image theorem, or full-category equalizer."
+  - "The packet states this limitation accurately; no formalization overread is needed to establish the paper proof, which was checked directly here."
+
+raw_boundary_case_findings:
+  - case: 1
+    assessment: "Consistent. Quotienting by an action kernel preserves the effective action and hence preserves the empty fixed locus in this example."
+  - case: 2
+    assessment: "Out of scope. A partial map is neither a total Set map nor an invertible groupoid arrow, so it cannot refute Claims 1 or 2 and does not instantiate Claim 3 as written."
+  - case: 3
+    assessment: "Confirms the complementary-product qualification: profiles (2,0) and (2,1) yield zero and two global tuples."
+  - case: 4
+    assessment: "Changing from points to probability distributions can create an invariant value where no invariant point exists. The abstract classification still applies to the new functor, but point-valued obstruction conclusions do not transfer unchanged."
+  - case: 5
+    assessment: "Adding a mark changes the proposal signature, eligible set, and admitted automorphisms; the new fixed point is not a counterexample to the original fixed inputs."
+  - case: 6
+    assessment: "Restricting from G to a subgroup H can enlarge the fixed locus, while quotienting by a kernel that already acts trivially preserves it. Results must be recomputed after the variation group changes."
+
+scope_overread_findings:
+  - "Claim 1 classifies deterministic total point-valued selectors only; it does not rule out invariant probability-valued selectors."
+  - "Claim 2 proves uniqueness only inside im(K_*), not uniqueness of every natural E-section and not a physical relation unless relation semantics are separately supplied."
+  - "Claim 3 gives a conditional equalizer after an extension is supplied; it neither proves that an extension exists nor selects one."
+  - "The theorem supplies no ontology, physical gauge, detector, metric, coupling, Einstein-equation, exact-GR, benchmark, adoption, or publication conclusion."
+  - "Altered source marks, admitted variation groups, codomains, or partial-arrow semantics define different problems and cannot be used to strengthen or refute the fixed-input theorem without an explicit assumption delta."
+
+verdict: "no_blocking_defect_found_as_written"
+verdict_rationale: "All three claims and their stated qualifications are mathematically correct under the declared assumptions and standard Set/category conventions. The findings above are nonblocking explicitness and semantic-scope clarifications, not proof defects."
+blocking_defects: []
+recommended_next_route: "P3-T01"
+physics_promotion_authorized: false

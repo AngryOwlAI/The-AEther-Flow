@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `f9c1bb9805fc1c9a4bceff560fcdd8ca69809b9c401d5272e3320b3c70d85c92`
-- Generated-at source timestamp: `2026-07-21T07:50:31Z`
-- Row count: `1025`
+- Source fingerprint: `b5f08e465d15f66c71b0728a5d1866db14738bd7acd98d3685a7ec41b91eea2b`
+- Generated-at source timestamp: `2026-07-21T08:43:08Z`
+- Row count: `1026`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260720-021|RT-20260720-020|2026-07-21T08:43:08Z|2026-07-21T09:05:06Z|v21_eqsrc_selector_theorem_blind_independent_review|completed|source_equivalence_eqsrc|Obtain review evidence not conditioned on task verdict or route history.|external-red-team-reviewer@0.1.0|false|false|12|Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes without adopting a class or selector law.|PASS|research_control/tasks/RT-20260720-021/jobs/completions/AJC-AJ-RT-20260720-021-001.yaml|
 |RT-20260720-020|RT-20260720-019|2026-07-21T07:50:31Z|2026-07-21T07:54:37Z|v21_eqsrc_selector_theorem_refuter_stress|completed|source_equivalence_eqsrc|Determine the precise robustness and limits of the general theorem.|refuter@0.2.0|false|false|10|Run exactly one bounded v21 P2-T08 external-review-packet that gives context-stripped theorem assumptions proof formalization audit and countermodels to blind internal and epistemically independent reviewers before any adoption.|PASS|research_control/tasks/RT-20260720-020/jobs/completions/AJC-AJ-RT-20260720-020-001.yaml|
 |RT-20260720-019|RT-20260720-018|2026-07-21T06:49:38Z|2026-07-21T07:00:19Z|v21_eqsrc_selector_theorem_smuggling_audit|completed|source_equivalence_eqsrc|Establish source-provenance integrity of the theorem statement and proof.|smuggling-auditor@0.2.0|false|false|12|Run exactly one bounded v21 P2-T07 Refuter packet stressing the unchanged audited theorem under nonfaithful actions partial morphisms multiple components stochastic selectors added marks and altered variation classes without using the uncorrected P2-T04 K metrics as selector-induced relation evidence.|PASS|research_control/tasks/RT-20260720-019/jobs/completions/AJC-AJ-RT-20260720-019-001.yaml|
 |RT-20260720-018|RT-20260720-017|2026-07-21T05:53:19Z|2026-07-21T06:04:29Z|v21_eqsrc_selector_theorem_formal_proof|completed|source_equivalence_eqsrc|Provide machine-checked mathematical evidence for the theorem core.|ontology-formalizer@0.2.0|false|false|14|Run exactly one bounded v21 P2-T06 Smuggling Auditor packet reviewing the P2-T03 theorem, P2-T04 atlas, and P2-T05 Lean translation for hidden selection, target import, category engineering, and process metadata.|PASS|research_control/tasks/RT-20260720-018/jobs/completions/AJC-AJ-RT-20260720-018-001.yaml|

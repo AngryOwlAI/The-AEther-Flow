@@ -1,0 +1,149 @@
+schema_id: "external_red_team_review_artifact_schema_v1"
+schema_path: ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+review_id: "ERT-REVIEW-20260721-P2-T08-001"
+task_id: "RT-20260720-021"
+agent_job_id: "AJ-RT-20260720-021-001"
+role_execution_ref: "external-red-team-reviewer@0.1.0--RT-20260720-021"
+review_mode: "blinded_internal_multi_arm_with_precise_external_human_acquisition_action"
+reviewed_object_id: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+reviewed_source_paths:
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_assumptions.yaml"
+  - "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+  - "research_control/tasks/RT-20260720-018/artifacts/proof/README.md"
+  - "research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex"
+claim_under_review: "For a fixed small groupoid and fixed Set-valued eligible-choice functor with supplied component coordinates, deterministic total point-valued natural selectors are classified by the product of automorphism fixed loci; selector-induced relation-image uniqueness and full-category extension claims hold only under their explicit additional hypotheses."
+assumptions_read:
+  - "The review domain is a fixed small groupoid and its component set is a set."
+  - "The eligible-choice assignment is a fixed covariant Set-valued functor."
+  - "One representative and transport to every object are supplied as proof coordinates."
+  - "A product element rather than factorwise nonemptiness alone is required for arbitrary global existence."
+  - "Relation-image claims require a supplied functor E and natural transformation K."
+  - "Full-category claims require a separately supplied extension over noninvertible arrows."
+  - "Selectors are deterministic total and point-valued on the fixed domain."
+  - "Objects arrows eligibility actions and K are fixed before selector evaluation."
+  - "Structural automorphisms carry no assumed physical-gauge semantics."
+  - "All category selector coordinate and extension data remain proposal inputs rather than ontology-derived objects."
+definitions_read:
+  - "component set representatives and certified transports"
+  - "automorphism groups H_i"
+  - "fixed loci F_i"
+  - "selector space Nat(1_G,S)"
+  - "natural transformation K and induced map K_*"
+  - "coordinate image sets R_i"
+  - "conditional full-category extension and naturality equalizer"
+proof_steps_checked:
+  - "Naturality at representative automorphisms places evaluation values in fixed loci."
+  - "Conjugating any groupoid arrow by supplied transports produces a representative automorphism."
+  - "Fixedness removes that automorphism and proves reconstructed-family naturality."
+  - "Identity transports and naturality along transports prove the two constructions inverse."
+  - "Empty singleton and multiple-selector consequences follow from the product bijection with the stated complementary-product guard."
+  - "The choice-sensitive existence converse is separated from factorwise nonemptiness."
+  - "Naturality of K makes K composed with a selector a natural section."
+  - "A baseline selector supplies complementary coordinates for the relation-image converse."
+  - "Wideness makes restriction of natural transformations injective because object components are retained."
+  - "The displayed equations are exactly the additional naturality requirements for noninvertible arrows."
+circularity_findings: []
+hidden_import_findings: []
+notation_overload_findings:
+  - "Define 1_G explicitly as the constant singleton functor to remove component-map versus selected-point ambiguity."
+  - "Keep R_i=K_{r_i}(F_i) and im K_* distinct from any unqualified raw K(D)."
+  - "Keep an action kernel distinct from an individual point stabilizer."
+  - "Calling E-elements relation sections supplies no physical relation or detector semantics."
+unproven_equivalence_findings:
+  - "Structural automorphism invariance is not equivalent here to physical gauge or empirical indistinguishability."
+  - "A singleton im K_* is not equivalent to a singleton Nat(1_G,E) because K_* need not be surjective."
+  - "The coordinate image sets are not proved to assemble as a product description of im K_* for arbitrary infinite families."
+  - "The bounded one-object Lean fragment is not equivalent to a formal proof of the multi-component K-image or full-category claims."
+minimal_countermodel_attempt:
+  attempted: true
+  result: "no_countermodel_found_under_scope"
+  summary: "All three arms independently used a one-object wide core with two fixed choices, a constant K-image, and a noninvertible idempotent whose action fixes exactly one choice. The model realizes two core selectors, one selector-induced relation section, and one full-category selector exactly as the three claims predict. Probabilistic partial marked and altered-variation attempts change declared assumptions rather than refute the fixed-domain theorem."
+  artifact_path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_review_disagreement_matrix.yaml"
+external_mathematical_pressure_points:
+  - "State explicitly that 1_G is the constant singleton functor."
+  - "State that the full-category extension restricts to S strictly; if only naturally isomorphic add explicit comparison transports."
+  - "Retain the available-product qualification and specify finite-choice foundations if constructive semantics are intended."
+  - "Retain the baseline-selector hypothesis adjacent to every relation-image converse."
+  - "Keep im K_* distinct from all natural E-sections and from any physical relation semantics."
+  - "Consider a later bounded formalization expansion only if downstream use needs machine checking beyond the existing finite one-object core."
+verdict: "no_blocking_defect_found_as_written"
+recommended_next_route: "P3-T01 lawful selector-resolution taxonomy"
+physics_promotion_authorized: false
+reviewer_provenance:
+  actual_external_human_review_completed: false
+  independent_replication_completed: false
+  blind_internal_review_completed: true
+  arms:
+    - reviewer_id: "child_phys_math"
+      human_status: false
+      model_family: "OpenAI gpt-5.6-sol task-facing configuration"
+      prior_project_context_access: false
+      files_accessed:
+        - "blind packet only"
+      conflicts: []
+    - reviewer_id: "child_phys_phil"
+      human_status: false
+      model_family: "OpenAI gpt-5.6-sol task-facing configuration"
+      prior_project_context_access: false
+      files_accessed:
+        - "blind packet only"
+      conflicts: []
+    - reviewer_id: "fresh_context_different_model"
+      human_status: false
+      model_family: "OpenAI gpt-5.6-terra task-facing configuration"
+      prior_project_context_access: false
+      files_accessed:
+        - "blind packet only"
+      conflicts: []
+  shared_limitations:
+    - "All arms are internal AI review."
+    - "Shared provider training dependence and statistical independence are unknown."
+    - "Model or role separation is not external human review or independent replication."
+  human_review_acquisition_path: "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_independent_human_review_acquisition.yaml"
+finding_dispositions:
+  blocking_defect_count: 0
+  nonblocking_clarification_count: 5
+  unresolved_disagreement_count: 0
+  theorem_calibration: "conditionally correct on the declared proposal domain with nonblocking explicitness and semantic-scope pressure preserved"
+  adoption_status: "blocked_adoption_open_continuation"
+scope_overread_findings:
+  - "Probability-valued selectors are a different functorial codomain and are not blocked by the point-selector theorem."
+  - "Partial arrows require a different category and naturality law."
+  - "Source marks and variation-group changes alter the source problem and require recomputation."
+  - "The theorem does not derive the proposal domain selector law ontology physical semantics or any downstream GR object."
+no_target_import_audit_scope:
+  forbidden_source_classes:
+    - "target_topology"
+    - "target_smooth_atlas"
+    - "target_metric"
+    - "proper_time"
+    - "empirical_detector_semantics"
+    - "benchmark_success"
+    - "generated_derivative_authority"
+    - "registry_metadata_authority"
+    - "validator_authority"
+    - "role_authority"
+    - "handoff_authority"
+    - "file_order_authority"
+  checked_objects:
+    - "proposal groupoid"
+    - "eligible-choice functor"
+    - "fixed loci"
+    - "selector product"
+    - "K-image"
+    - "full-category equalizer"
+  result: "pass"
+  failure_reason: ""
+authority_boundary:
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  general_EqSrc_discharged: false
+  distance_to_gr_ledger_changed: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  gate_chair_verdict_authorized: false
+  publication_authorized: false
+  completed_derivation_authorized: false

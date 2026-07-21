@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-21T07:54:37Z`
-- Source fingerprint: `2a368ba3049b65ff6a42cc7bdeeec985de6181bb451fa39287acdff1b4d9e50c`
-- Nodes: `20191`
-- Edges: `68971`
+- Generated from tracked state as of: `2026-07-21T09:05:06Z`
+- Source fingerprint: `2437440a3a2151736d7f6a87cd0b533f721f9983321d3e333a246990ef87236a`
+- Nodes: `20214`
+- Edges: `69026`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1021 |
+| `completion_yaml` | 1022 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 790 |
+| `handoff_yaml` | 791 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1021 |
+| `agent_job` | `support_only` | 1022 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10478 |
-| `blocked_burden` | `blocked` | 3859 |
-| `claim_boundary` | `support_only` | 978 |
-| `draft_control_candidate` | `draft_control` | 663 |
+| `artifact` | `support_only` | 10485 |
+| `blocked_burden` | `blocked` | 3866 |
+| `claim_boundary` | `support_only` | 979 |
+| `draft_control_candidate` | `draft_control` | 665 |
 | `draft_control_candidate` | `proposal_only` | 110 |
 | `draft_control_candidate` | `science_draft` | 64 |
-| `frozen_negative` | `frozen_negative` | 124 |
+| `frozen_negative` | `frozen_negative` | 125 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 790 |
-| `human_gated_object` | `human_gated` | 432 |
+| `handoff` | `support_only` | 791 |
+| `human_gated_object` | `human_gated` | 434 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 327 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 960 |
+| `task` | `support_only` | 961 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260720-020`
-- Latest handoff: `handoff-0790`
-- Handoff path: `research_control/handoffs/handoff-0790.yaml`
-- Next action: Run exactly one bounded v21 P2-T08 external-review-packet. Give a context-stripped theorem assumptions proof formalization audit and countermodel package to blind internal and epistemically independent reviewers, preserve disagreement, and grant no adoption proof-authority or promotion status.
+- Active task: `RT-20260720-021`
+- Latest handoff: `handoff-0791`
+- Handoff path: `research_control/handoffs/handoff-0791.yaml`
+- Next action: Run exactly one bounded v21 P3-T01 ontology-law-research-packet defining the five lawful selector-resolution classes for added source structure representative irrelevance dynamical symmetry breaking probabilistic selection and scoped obstruction.
 
 This graph is navigational support only; inspect the cited sources before using any claim.
