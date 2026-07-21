@@ -961,6 +961,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P3-T03-EQSRC-REPRESENTATIVE-IRRELEVANCE-THEOREM` `research_control/tasks/RT-20260720-024/artifacts/eqsrc_representative_irrelevance_theorem_v1.tex`
 - `TEX-V21-P3-T04-EQSRC-PROBABILISTIC-DYNAMICAL-SELECTION-THEOREM` `research_control/tasks/RT-20260720-025/artifacts/eqsrc_probabilistic_dynamical_selection_theorem_v1.tex`
 - `TEX-V21-P3-T05-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-CANDIDATE` `research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex`
+- `TEX-V21-P3-T06-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-AUDIT` `research_control/tasks/RT-20260720-027/artifacts/eqsrc_invariant_functor_quotient_smuggling_audit_v1.tex`
 
 ## wiki_markdown
 
@@ -1912,3 +1913,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P3-T03-EQSRC-REPRESENTATIVE-IRRELEVANCE-THEOREM` `wiki/tex/tex-v21-p3-t03-eqsrc-representative-irrelevance-theorem.md`
 - `WIKI-TEX-V21-P3-T04-EQSRC-PROBABILISTIC-DYNAMICAL-SELECTION-THEOREM` `wiki/tex/tex-v21-p3-t04-eqsrc-probabilistic-dynamical-selection-theorem.md`
 - `WIKI-TEX-V21-P3-T05-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-CANDIDATE` `wiki/tex/tex-v21-p3-t05-eqsrc-invariant-functor-quotient-relation-candidate.md`
+- `WIKI-TEX-V21-P3-T06-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-AUDIT` `wiki/tex/tex-v21-p3-t06-eqsrc-invariant-functor-quotient-audit.md`

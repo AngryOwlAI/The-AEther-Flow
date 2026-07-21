@@ -16,6 +16,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `TEX-V21-P3-T03-EQSRC-REPRESENTATIVE-IRRELEVANCE-THEOREM;TEX-V21-P3-T04-EQSRC-PROBABILISTIC-DYNAMICAL-SELECTION-THEOREM;TEX-EQSRC-SOURCE-ROOTED-QUOTIENT-SELECTOR-CANDIDATE-V1` ``
 - Generated output path: `wiki/tex/tex-v21-p3-t05-eqsrc-invariant-functor-quotient-relation-candidate.md`
+- Backlink from `TEX-V21-P3-T06-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-AUDIT` `research_control/tasks/RT-20260720-027/artifacts/eqsrc_invariant_functor_quotient_smuggling_audit_v1.tex`
 
 ## Validation
 

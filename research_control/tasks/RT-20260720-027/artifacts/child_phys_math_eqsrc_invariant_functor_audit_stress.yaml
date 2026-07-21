@@ -1,0 +1,412 @@
+artifact_id: "child_phys_math_eqsrc_invariant_functor_audit_stress"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260720-027"
+job_id: "AJ-RT-20260720-027-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+completed_at: "2026-07-21T15:29:12Z"
+plan_task_id: "P3-T06"
+role_id: "smuggling-auditor"
+role_version: "0.2.0"
+candidate_change_performed: false
+result_classification: "conditional_theorem_valid_with_arbitrary_partition_and_marked_interface_adequacy_obstructions"
+decisive_scoped_disposition: "local_freeze_as_generic_kernel_schema_pending_source_derived_invariant_and_operation_completeness_certificates"
+adoption_status: "blocked_adoption_open_continuation"
+fatal_internal_gap: false
+general_EqSrc_discharged: false
+physical_observational_equivalence_established: false
+physics_promotion_authorized: false
+proof_authority: false
+
+immutable_input_evidence:
+  implementation_plan:
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    use: "P3-T06 objective, stress classes, disposition vocabulary, and P3-T07 dependency boundary"
+  smuggling_auditor_role:
+    path: ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+    sha256: "2ec5a542caffa90a54d11f0c03630fde839e92f4917d5dbd55b80b724a46c882"
+    use: "source-provenance, operation-smuggling, incomplete-invariant, and physical-overread audit boundary"
+  active_agent_job:
+    path: "research_control/tasks/RT-20260720-027/jobs/AJ-RT-20260720-027-001.yaml"
+    sha256_at_child_start: "c1822cc938a28f92fdc11f6ee61e3998abddf116f7646a0ffaae93ad978e820a"
+    use: "immutable P3-T06 scope and child ownership"
+  director_decision:
+    path: "research_control/tasks/RT-20260720-027/DDR-20260720-027.md"
+    sha256_at_child_start: "663666221ee5077a0dc58b8eb998cc56be4e6bd06f72a9fbb042ac5202715bed"
+    use: "unchanged-candidate requirement and bounded stress target"
+  candidate:
+    object_id: "TEX-V21-P3-T05-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-CANDIDATE"
+    path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+    sha256: "badc60c72ff16f84fe88568b825ff738a8f160a225f011715f027c1da2cfa1c3"
+    use: "unchanged definitions, IFQ1 through IFQ6, and graph-homology instantiation"
+  machine_spec:
+    path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_spec_v1.yaml"
+    sha256: "9c40dd2a83c5d9ee25a62c977b5b47eb5e2770890c8a7aa90dbe342cc7936ad1"
+    use: "machine-readable assumptions, theorem contracts, and authority flags"
+  finite_witnesses:
+    path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_finite_witnesses_v1.json"
+    sha256: "6f101a2b3e7bc808e165349ab9cab33f44fcb671d2eb3f294ac8bf6071d38ecd"
+    use: "fixed graph objects, Betti values, and existing operation controls"
+  dependency_completion:
+    path: "research_control/tasks/RT-20260720-026/jobs/completions/AJC-AJ-RT-20260720-026-001.yaml"
+    sha256: "ac959bea2c7ed6aa752ae5ebf9848f77dfe0106a8e8b57cee0a80fe2f65fb502"
+    use: "P3-T05 completion scope and unresolved source-equivalence burden"
+
+scope_and_assumptions:
+  - id: "A-MATH-01"
+    statement: "The candidate is audited byte-for-byte as registered; no repair, reconstruction, or replacement is performed."
+  - id: "A-MATH-02"
+    statement: "For the arbitrary-partition theorem, C_X is the finite discrete category on a finite set X, so its only arrows are object identities."
+  - id: "A-MATH-03"
+    statement: "Prospectively fixed means fixed before pair evaluation; it is not by itself a source-provenance or non-circularity theorem."
+  - id: "A-MATH-04"
+    statement: "For graph stress, finite undirected simple graphs are treated as one-dimensional CW complexes and H(G) is represented by the exact Betti pair (beta_0,beta_1)."
+  - id: "A-MATH-05"
+    statement: "The marked-interface operation acts on graphs with two distinct declared endpoints and adds their simple edge when absent, leaving the graph unchanged when that edge already exists."
+  - id: "A-MATH-06"
+    statement: "All conclusions are mathematical draft/control findings; no source law, ontology, physical interpretation, or promotion authority is supplied."
+
+conditional_kernel_equivalence_audit:
+  theorem_id: "IFQ1_KERNEL_EQUIVALENCE"
+  status: "PASS under the stated category and functor hypotheses"
+  relation: "A sim_I B iff I(A) is isomorphic to I(B) in D."
+  proof_check:
+    reflexivity:
+      witness: "identity morphism id_{I(A)}"
+      conclusion: "I(A) is isomorphic to itself, hence A sim_I A."
+    symmetry:
+      witness: "inverse alpha^{-1}:I(B)->I(A) of an isomorphism alpha:I(A)->I(B)"
+      conclusion: "A sim_I B implies B sim_I A."
+    transitivity:
+      witness: "composite beta composed with alpha:I(A)->I(C)"
+      conclusion: "A sim_I B and B sim_I C imply A sim_I C."
+  logical_scope:
+    establishes:
+      - "an equivalence relation on the declared source-object collection"
+      - "the fiber relation of the map A maps to the isomorphism class of I(A)"
+    does_not_establish:
+      - "that I is selected or derived by the current source ontology"
+      - "that the induced partition is complete for source observables"
+      - "a congruence for operations lacking the candidate's explicit comparison hypotheses"
+      - "an equivalence relation on source morphisms or a category quotient"
+      - "physical observational equivalence, physical gauge, or empirical adequacy"
+
+conditional_composition_audit:
+  theorem_id: "IFQ2_MONOIDAL_COMPOSITION_CONGRUENCE"
+  status: "PASS as a conditional theorem; applicability remains operation-specific"
+  checked_derivation: >-
+    Given alpha:I(A)->I(A') and beta:I(B)->I(B'), bifunctoriality makes
+    alpha boxtimes beta an isomorphism. Conjugation by the declared invertible
+    comparisons mu_{A,B} and mu_{A',B'} yields an isomorphism from
+    I(A tensor B) to I(A' tensor B').
+  indispensable_hypotheses:
+    - "a typed source bifunctor or binary operation tensor"
+    - "a typed target bifunctor boxtimes"
+    - "invertible comparison maps natural on the declared domain"
+    - "interface or composability data retained strongly enough for those maps to exist"
+  sharpness: "Absent any one of these hypotheses, IFQ2 makes no congruence claim."
+
+arbitrary_partition_realization_theorem:
+  theorem_id: "P3T06_FINITE_DISCRETE_PARTITION_REALIZATION"
+  status: "PROVED"
+  statement: >-
+    For every finite set X and every partition P of X, there are finite
+    discrete categories C_X and D_P and a prospectively fixed functor
+    I_P:C_X->D_P whose image-isomorphism kernel is exactly P.
+  construction:
+    source_category: "C_X has object set X and only identity arrows."
+    invariant_category: "D_P has one object for each block of P and only identity arrows."
+    object_map: "I_P(x) is the unique block [x]_P containing x."
+    arrow_map: "I_P(id_x)=id_[x]_P; this is the unique possible arrow map."
+  proof: >-
+    The arrow assignment preserves identities and composition, so I_P is a
+    functor. Because D_P is discrete, I_P(x) is isomorphic to I_P(y) if and
+    only if I_P(x)=I_P(y). By construction this equality holds if and only if
+    x and y lie in the same block of P. Therefore x sim_{I_P} y exactly when
+    x and y are related by P.
+  empty_case: >-
+    If X is empty, its unique empty partition is realized by the unique
+    functor between empty discrete categories. The two extremes below concern
+    nonempty X.
+  extremes:
+    identity:
+      partition: "all singleton blocks"
+      construction: "D_P=C_X and I_P is the identity functor"
+      induced_relation: "equality of objects, equivalently isomorphism in the discrete source category"
+    constant:
+      partition: "one block X"
+      construction: "D_P is the terminal one-object discrete category and I_P is the unique constant functor"
+      induced_relation: "the universal relation on X"
+  three_object_exhaustion:
+    object_set: ["a", "b", "c"]
+    bell_number: 5
+    realized_partitions:
+      - "{{a},{b},{c}}"
+      - "{{a,b},{c}}"
+      - "{{a,c},{b}}"
+      - "{{b,c},{a}}"
+      - "{{a,b,c}}"
+  deduction: >-
+    The abstract schema plus pairwise prospectivity imposes no restriction on
+    which finite object partition can occur. It proves a relation once I is
+    supplied, but does not select I or distinguish a source-derived invariant
+    from an arbitrary precommitted classifier. This is a candidate-adequacy
+    obstruction, not a contradiction in IFQ1.
+
+fixed_graph_homology_audit:
+  invariant: "H(G)=(beta_0(G),beta_1(G)) with beta_1=|E|-|V|+beta_0"
+  status: "exact on the fixed finite graph model and incomplete for graph or marked-interface structure"
+  relabeling:
+    check_id: "MATH_RELABELING_INVARIANCE"
+    result: "PASS"
+    reasoning: >-
+      A graph relabeling is an isomorphism, preserving vertex count, edge
+      count, connected components, and cycle rank. Hence it preserves both
+      Betti values and the H-kernel relation.
+    scope_guard: "This covers graph isomorphism, not arbitrary source edits."
+  component_sensitivity:
+    check_id: "MATH_COMPONENT_SENSITIVITY"
+    result: "PASS"
+    controls:
+      - "K2 has H=(1,0)."
+      - "Two disjoint K2 components have H=(2,0)."
+    deduction: "beta_0 prevents collapse across differing numbers of connected components."
+  quotient_collapse:
+    check_id: "MATH_QUOTIENT_COLLAPSE"
+    result: "OBSTRUCTION"
+    families:
+      - "Every finite connected tree has H=(1,0), regardless of size, degree sequence, branching, or marked endpoints."
+      - "Every simple cycle C_n for n>=3 has H=(1,1), regardless of cycle length."
+      - "C3, C4, and a triangle with a pendant tree all have H=(1,1) although their combinatorial structures differ."
+    deduction: >-
+      The quotient is non-universal and component-sensitive, but each Betti
+      class contains unboundedly many nonisomorphic graphs. Nontriviality is
+      therefore much weaker than completeness.
+  incomplete_invariant_behavior:
+    check_id: "MATH_INCOMPLETE_INVARIANT"
+    result: "OBSTRUCTION"
+    missing_information:
+      - "vertex count and degree sequence"
+      - "adjacency and branching pattern"
+      - "marked endpoints or boundary inclusions"
+      - "attaching maps and incidence data used by gluing operations"
+    consequence: >-
+      Equal Betti pairs need not support substitutability under operations
+      whose outcome depends on any omitted data. A complete operation claim
+      needs an enriched invariant or an independent comparison certificate.
+
+marked_interface_counterexample:
+  counterexample_id: "P3T06_MARKED_ENDPOINT_EDGE_ADDITION"
+  status: "REPRODUCIBLE CONGRUENCE COUNTEREXAMPLE FOR THE UNGUARDED OPERATION"
+  domain: "finite undirected simple graphs equipped with an ordered pair of distinct marked vertices"
+  invariant: "forget the marks and compute H=(beta_0,beta_1)"
+  operation:
+    name: "E"
+    definition: >-
+      E(G;s,t) adds the simple edge {s,t} if it is absent and otherwise leaves
+      G unchanged. The same marked-endpoint rule is applied to every input.
+  left_input:
+    object: "(K2;a,b), with a and b the two endpoints"
+    vertices: ["a", "b"]
+    edges: ["{a,b}"]
+    invariant_before: [1, 0]
+    operation_effect: "{a,b} is already present, so E(K2;a,b)=K2"
+    invariant_after: [1, 0]
+  right_input:
+    object: "(P3;0,2), with 0 and 2 the path endpoints"
+    vertices: ["0", "1", "2"]
+    edges: ["{0,1}", "{1,2}"]
+    invariant_before: [1, 0]
+    operation_effect: "{0,2} is absent, so E(P3;0,2)=C3"
+    invariant_after: [1, 1]
+  exact_calculation:
+    left_before: "beta_0=1 and beta_1=1-2+1=0"
+    right_before: "beta_0=1 and beta_1=2-3+1=0"
+    left_after: "beta_0=1 and beta_1=1-2+1=0"
+    right_after: "beta_0=1 and beta_1=3-3+1=1"
+  conclusion: >-
+    The inputs are H-equivalent but their E-images are not H-equivalent.
+    Thus the H-kernel is not a congruence for this marked-interface operation.
+  why_ifq2_is_not_refuted: >-
+    IFQ2 asserts congruence only after a typed source operation, a target
+    bifunctor, and natural invertible comparison maps have been supplied. The
+    marked-edge operation is not accompanied by such comparison data. Indeed,
+    the computed split proves that no H-only comparison satisfying IFQ2 can
+    exist on a domain containing these inputs and this operation: IFQ2 would
+    otherwise force equal output invariant classes. The theorem remains valid;
+    its hypotheses are simply not met.
+  unary_variation_reading: >-
+    If E is treated as a unary variation, the same computation rules out a
+    natural isomorphism H composed with E => H on this domain, so IFQ5 is also
+    inapplicable rather than false.
+  interface_completeness_consequence: >-
+    Betti data omit whether the marked endpoints are already adjacent. That
+    one omitted bit changes whether edge addition creates a cycle. Therefore
+    graph homology alone cannot justify arbitrary gluing, attachment, or
+    marked-interface substitutability.
+
+layered_assessment:
+  theorem_validity:
+    status: "PASS"
+    finding: "IFQ1 is correct; IFQ2 is correct under its explicit comparison-data hypotheses."
+  candidate_adequacy:
+    status: "PRECISE SCOPED OBSTRUCTION"
+    finding: >-
+      As an unchanged generic EqSrc candidate, the schema is underselective:
+      every finite partition is realizable. Its fixed graph-homology instance
+      is additionally incomplete for marked-interface operations.
+  source_derivation:
+    status: "NOT ESTABLISHED"
+    finding: >-
+      The audited packet supplies no source-ontology derivation selecting C,
+      D, I, or the admissible comparison package. Prospectivity is necessary
+      for auditability but does not supply such a derivation.
+  physical_meaning:
+    status: "NOT ESTABLISHED"
+    finding: >-
+      Image isomorphism and Betti equality provide no detector semantics,
+      matter response, dynamics, empirical tolerance, or proof of gauge
+      redundancy. No physical-equivalence inference follows.
+
+findings:
+  - finding_id: "F-MATH-01"
+    severity: "informational"
+    class: "conditional_theorem_validity"
+    result: "IFQ1 and the explicitly conditional IFQ2 proof are mathematically sound."
+  - finding_id: "F-MATH-02"
+    severity: "major"
+    class: "arbitrary_partition_realizability"
+    result: "Every finite partition is the image-isomorphism kernel of a prospectively fixed functor on a finite discrete source category."
+  - finding_id: "F-MATH-03"
+    severity: "major"
+    class: "incomplete_invariant"
+    result: "The graph-homology instance collapses all connected trees and all connected unicyclic graphs within their respective Betti classes."
+  - finding_id: "F-MATH-04"
+    severity: "major"
+    class: "operation_smuggling"
+    result: "K2 and P3 are initially H-equivalent but marked-endpoint edge addition maps them to H-inequivalent outputs."
+  - finding_id: "F-MATH-05"
+    severity: "guard"
+    class: "theorem_scope"
+    result: "The counterexample blocks an arbitrary operation overread; it does not refute IFQ2 because the required comparison data are absent."
+  - finding_id: "F-MATH-06"
+    severity: "guard"
+    class: "interpretation"
+    result: "Mathematical kernel equivalence remains separate from source derivation and physical observational equivalence."
+
+checks:
+  - check_id: "CANDIDATE_HASH_FIXED"
+    result: "PASS at child inspection"
+    evidence: "badc60c72ff16f84fe88568b825ff738a8f160a225f011715f027c1da2cfa1c3"
+  - check_id: "IFQ1_PROOF"
+    result: "PASS"
+    evidence: "identity, inverse, and composition witnesses checked"
+  - check_id: "IFQ2_CONDITIONAL_PROOF"
+    result: "PASS"
+    evidence: "bifunctorial transport conjugated by invertible comparison maps"
+  - check_id: "FINITE_PARTITION_REALIZATION"
+    result: "PASS"
+    evidence: "explicit discrete-category construction and five partitions on three objects"
+  - check_id: "IDENTITY_AND_CONSTANT_EXTREMES"
+    result: "PASS"
+    evidence: "singleton partition gives identity relation; one-block partition gives universal relation"
+  - check_id: "GRAPH_RELABELING"
+    result: "PASS"
+    evidence: "graph isomorphism preserves beta_0 and beta_1"
+  - check_id: "GRAPH_COMPONENT_SENSITIVITY"
+    result: "PASS"
+    evidence: "K2 has (1,0) while two disjoint edges have (2,0)"
+  - check_id: "GRAPH_QUOTIENT_COLLAPSE"
+    result: "OBSTRUCTION REPRODUCED"
+    evidence: "all connected trees map to (1,0); cycles C_n map to (1,1)"
+  - check_id: "MARKED_INTERFACE_EDGE_ADDITION"
+    result: "OBSTRUCTION REPRODUCED"
+    evidence: "K2 maps (1,0)->(1,0), while P3 maps (1,0)->(1,1)"
+
+consensus_propositions_for_parent_fusion:
+  - proposition_id: "CP-MATH-01"
+    statement: "Retain the conditional equivalence theorem as valid and unchanged."
+  - proposition_id: "CP-MATH-02"
+    statement: "Prospective fixation is a timing guard, not a theorem selecting a source-meaningful functor."
+  - proposition_id: "CP-MATH-03"
+    statement: "The generic kernel schema can realize identity, universal, and every intermediate finite partition."
+  - proposition_id: "CP-MATH-04"
+    statement: "The graph-homology witness is nontrivial and component-sensitive but incomplete for combinatorial and marked-interface structure."
+  - proposition_id: "CP-MATH-05"
+    statement: "No operation congruence may be inferred without the exact comparison data named by IFQ2 or IFQ5."
+  - proposition_id: "CP-MATH-06"
+    statement: "The strongest honest disposition is a local freeze of the unchanged generic schema, with source-derived selection and operation-completeness burdens left open."
+
+unique_contribution:
+  payload_id: "NMP-RT-20260720-027-CHILD-MATH-001"
+  payload_type: "theorem_and_counterexample_pair"
+  name: "Finite arbitrary-partition realization theorem and marked-interface split"
+  summary: >-
+    Proves that prospectively fixed functor kernels realize every finite
+    partition, then gives an exact K2/P3 marked-endpoint operation showing
+    that equal graph homology does not descend through an unrecorded interface
+    operation. Together these locate the obstruction in candidate selection
+    and completeness rather than in the conditional equivalence theorem.
+  burden_effect: "obstructs unchanged generic adequacy while preserving theorem validity"
+
+unresolved_limitations:
+  - "No source-derived rule selecting C, D, or I has been supplied or tested."
+  - "No completeness criterion for source observables has been specified."
+  - "No interface-enriched invariant or universal comparison theorem has been constructed."
+  - "The marked-interface counterexample is finite and scoped; it is not a global no-go for all invariant functors or all source extensions."
+  - "No physical observation functor, dynamics, matter response, gauge criterion, or exact-GR recovery bridge is present."
+  - "This child artifact does not execute P3-T07 or decide historical family status."
+
+reopening_criteria:
+  - criterion_id: "R-MATH-01"
+    requirement: "Provide a source-side derivation or independently motivated selection theorem for C, D, and I that does not encode desired EqSrc classes, target data, benchmark outcomes, registry metadata, role authority, or validator results."
+  - criterion_id: "R-MATH-02"
+    requirement: "State a source-observable adequacy or completeness burden and show that the selected I satisfies it on a declared domain, with explicit false-positive and false-negative controls."
+  - criterion_id: "R-MATH-03"
+    requirement: "For each admitted composition, variation, localization, or coarse-graining operation, supply the exact typed comparison or reflection certificate required by the relevant conditional theorem."
+  - criterion_id: "R-MATH-04"
+    requirement: "For marked or glued systems, enrich I with sufficient interface data or restrict the operation class so the K2/P3 split is excluded by proved hypotheses rather than by assertion."
+  - criterion_id: "R-MATH-05"
+    requirement: "Before any physical-equivalence claim, separately derive measurement semantics and demonstrate operational completeness in the stated regime."
+  - criterion_id: "R-MATH-06"
+    requirement: "Obtain protected human authority before any canonical-ontology candidate designation, adoption, rejection, or ontology edit."
+
+recommended_parent_disposition:
+  theorem_record: "retain unchanged as a valid conditional mathematical schema"
+  generic_candidate_status: "locally frozen at draft/control because arbitrary-partition realizability defeats selection adequacy"
+  graph_homology_status: "retain only as bounded source-extension data and a stress model; do not treat it as interface-complete"
+  continuation_status: "blocked_adoption_open_continuation"
+  next_plan_boundary: "P3-T07 may be routed only after the parent completes and validates P3-T06; it is not executed here."
+
+authority_and_forbidden_conclusions:
+  protected_claims_made: false
+  candidate_modified: false
+  source_law_adopted: false
+  source_law_rejected: false
+  canonical_ontology_candidate_designated: false
+  canonical_ontology_edited: false
+  physical_equivalence_established: false
+  physical_gauge_established: false
+  general_eqsrc_discharged: false
+  distance_to_gr_ledger_changed: false
+  target_atlas_or_metric_used_as_evidence: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  publication_authorized: false
+  global_no_go_claimed: false
+  global_theory_rejection_claimed: false
+  future_source_extension_impossible_claimed: false
+  completed_gr_derivation_claimed: false
+  p3_t07_executed: false
+
+forbidden_conclusions:
+  - "No inference that IFQ1 or IFQ2 is false."
+  - "No inference that every invariant functor is arbitrary or physically inadequate."
+  - "No inference that a source-derived complete invariant cannot exist."
+  - "No inference that graph homology is a physical substrate invariant."
+  - "No arbitrary composition, gluing, localization, coarse-graining, or variation congruence."
+  - "No identification of image isomorphism with physical observational equivalence or gauge."
+  - "No canonical ontology candidate, adoption, rejection, ontology edit, or protected Gate Chair decision."
+  - "No source manifold, effective metric, matter coupling, Einstein equation, benchmark, publication, or completed-derivation promotion."

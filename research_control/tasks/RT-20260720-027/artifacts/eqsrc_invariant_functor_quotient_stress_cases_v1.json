@@ -1,0 +1,152 @@
+{
+  "schema_id": "eqsrc-invariant-functor-quotient-stress-cases.v1",
+  "artifact_id": "EQSRC-INVARIANT-FUNCTOR-QUOTIENT-STRESS-CASES-V1",
+  "task_id": "RT-20260720-027",
+  "plan_task_id": "P3-T06",
+  "status": "draft/control",
+  "candidate_identity": {
+    "path": "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex",
+    "sha256": "badc60c72ff16f84fe88568b825ff738a8f160a225f011715f027c1da2cfa1c3",
+    "machine_spec_sha256": "9c40dd2a83c5d9ee25a62c977b5b47eb5e2770890c8a7aa90dbe342cc7936ad1",
+    "finite_witnesses_sha256": "6f101a2b3e7bc808e165349ab9cab33f44fcb671d2eb3f294ac8bf6071d38ecd",
+    "modified_by_audit": false
+  },
+  "arbitrary_partition_realization": {
+    "theorem_id": "P3T06_FINITE_DISCRETE_PARTITION_REALIZATION",
+    "statement": "For every partition Pi of a finite set X, the discrete category on X admits a prospectively fixed functor to a discrete category whose image-isomorphism kernel is exactly Pi.",
+    "construction": "Use one target object for each block of Pi, map every source object to its block, and map each identity to the identity of that block. In a discrete target category two image objects are isomorphic exactly when their block labels are equal.",
+    "source_category": {
+      "kind": "finite_discrete_category",
+      "objects": ["a", "b", "c"],
+      "nonidentity_morphisms": []
+    },
+    "partition_count": 5,
+    "partitions": [
+      {
+        "partition_id": "PI-3-DISCRETE",
+        "blocks": [["a"], ["b"], ["c"]],
+        "object_map": {"a": "q0", "b": "q1", "c": "q2"},
+        "target_objects": ["q0", "q1", "q2"],
+        "kernel_pair_count": 3,
+        "extreme": "identity"
+      },
+      {
+        "partition_id": "PI-AB-C",
+        "blocks": [["a", "b"], ["c"]],
+        "object_map": {"a": "q0", "b": "q0", "c": "q1"},
+        "target_objects": ["q0", "q1"],
+        "kernel_pair_count": 5,
+        "extreme": "none"
+      },
+      {
+        "partition_id": "PI-AC-B",
+        "blocks": [["a", "c"], ["b"]],
+        "object_map": {"a": "q0", "b": "q1", "c": "q0"},
+        "target_objects": ["q0", "q1"],
+        "kernel_pair_count": 5,
+        "extreme": "none"
+      },
+      {
+        "partition_id": "PI-A-BC",
+        "blocks": [["a"], ["b", "c"]],
+        "object_map": {"a": "q0", "b": "q1", "c": "q1"},
+        "target_objects": ["q0", "q1"],
+        "kernel_pair_count": 5,
+        "extreme": "none"
+      },
+      {
+        "partition_id": "PI-3-INDISCRETE",
+        "blocks": [["a", "b", "c"]],
+        "object_map": {"a": "q0", "b": "q0", "c": "q0"},
+        "target_objects": ["q0"],
+        "kernel_pair_count": 9,
+        "extreme": "constant"
+      }
+    ],
+    "audit_consequence": "Prospective fixation is a necessary provenance condition but is not a mathematical discriminator: by itself it excludes neither the identity relation nor the universal relation nor any intermediate finite partition. Independent source derivation or admissibility evidence for I is still required."
+  },
+  "graph_homology_stress": {
+    "invariant": "H(G)=(beta_0,beta_1), beta_1=|E|-|V|+beta_0",
+    "graphs": [
+      {"graph_id": "C3", "vertices": ["0", "1", "2"], "edges": [["0", "1"], ["1", "2"], ["0", "2"]], "expected_invariant": [1, 1]},
+      {"graph_id": "C4", "vertices": ["0", "1", "2", "3"], "edges": [["0", "1"], ["1", "2"], ["2", "3"], ["0", "3"]], "expected_invariant": [1, 1]},
+      {"graph_id": "K2_MARKED", "vertices": ["a", "b"], "edges": [["a", "b"]], "marked_endpoints": ["a", "b"], "expected_invariant": [1, 0]},
+      {"graph_id": "P3_MARKED", "vertices": ["0", "1", "2"], "edges": [["0", "1"], ["1", "2"]], "marked_endpoints": ["0", "2"], "expected_invariant": [1, 0]},
+      {"graph_id": "POINT", "vertices": ["p"], "edges": [], "expected_invariant": [1, 0]},
+      {"graph_id": "TWO_EDGES", "vertices": ["a", "b", "c", "d"], "edges": [["a", "b"], ["c", "d"]], "expected_invariant": [2, 0]},
+      {"graph_id": "C3_RELABELED", "vertices": ["x", "y", "z"], "edges": [["x", "y"], ["y", "z"], ["x", "z"]], "expected_invariant": [1, 1]}
+    ],
+    "cases": [
+      {
+        "case_id": "STRESS-INCOMPLETE-CYCLE-LENGTH",
+        "class": "incomplete_invariant",
+        "left": "C3",
+        "right": "C4",
+        "same_invariant": true,
+        "distinguishing_source_fact": "vertex and edge counts differ",
+        "consequence": "H is not complete for finite-graph isomorphism or all source observables."
+      },
+      {
+        "case_id": "STRESS-QUOTIENT-COLLAPSE-TREES",
+        "class": "quotient_collapse",
+        "members": ["K2_MARKED", "P3_MARKED", "POINT"],
+        "same_invariant": true,
+        "consequence": "All connected finite trees in this bounded sample collapse to (1,0), including objects with different marked-interface behavior."
+      },
+      {
+        "case_id": "STRESS-RELABELING",
+        "class": "relabeling",
+        "left": "C3",
+        "right": "C3_RELABELED",
+        "same_invariant": true,
+        "consequence": "The fixed homology invariant correctly ignores a pure graph relabeling."
+      },
+      {
+        "case_id": "STRESS-COMPONENT-SENSITIVITY",
+        "class": "component_change",
+        "left": "K2_MARKED",
+        "right": "TWO_EDGES",
+        "same_invariant": false,
+        "consequence": "beta_0 prevents total collapse across component count."
+      }
+    ]
+  },
+  "marked_interface_counterexample": {
+    "countermodel_id": "P3T06-MARKED-ENDPOINT-EDGE-ADDITION",
+    "domain": "finite simple graphs with an ordered pair of distinct marked endpoints",
+    "operation": "E adds the simple edge between the two marked endpoints if absent and otherwise leaves the graph unchanged",
+    "left_input": "K2_MARKED",
+    "right_input": "P3_MARKED",
+    "input_invariants": {"left": [1, 0], "right": [1, 0], "related": true},
+    "left_output": {"graph": "K2", "invariant": [1, 0], "reason": "the marked endpoints are already adjacent"},
+    "right_output": {"graph": "C3", "invariant": [1, 1], "reason": "the new endpoint edge closes one cycle"},
+    "outputs_related": false,
+    "direct_refutation_of_IFQ2": false,
+    "why_not_IFQ2_refutation": "No natural comparison isomorphism I(EG) congruent to a target-side operation on I(G) is supplied; the countermodel demonstrates failure of that missing premise rather than failure of the conditional theorem.",
+    "scoped_obstruction": "The object invariant forgets endpoint adjacency, so an interface-sensitive operation does not descend to the H-kernel quotient. Arbitrary composition or later-dynamics congruence cannot be inferred without interface-completeness or explicit comparison data."
+  },
+  "disposition": {
+    "verdict": "conditional_local_source_purity_pass_with_arbitrary_partition_and_interface_completeness_obstruction",
+    "theorem_validity": "IFQ1 through IFQ6 remain conditionally valid on their stated hypotheses.",
+    "candidate_adequacy": "The schema is a mathematically valid kernel template but is not yet a discriminating or operation-complete source-equivalence law.",
+    "source_derivation": "Current ontology derives none of C, D, I, the marked-interface structure, or the admissible comparison package.",
+    "physical_meaning": "No physical observational equivalence or gauge conclusion follows.",
+    "exact_candidate_status": "proposal-only source-extension data; exact construction locally frozen pending independent source derivation and completeness evidence",
+    "next_plan_task_id": "P3-T07"
+  },
+  "authority": {
+    "candidate_modified": false,
+    "canonical_ontology_changed": false,
+    "source_law_adopted": false,
+    "source_law_rejected": false,
+    "physical_equivalence_established": false,
+    "general_eqsrc_discharged": false,
+    "distance_to_gr_ledger_changed": false,
+    "metric_use_ledger_changed": false,
+    "P3_T07_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authorized": false,
+    "global_no_go_authorized": false
+  }
+}

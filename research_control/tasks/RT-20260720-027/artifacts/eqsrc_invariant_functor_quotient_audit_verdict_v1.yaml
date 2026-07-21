@@ -1,0 +1,118 @@
+schema_id: "eqsrc-invariant-functor-quotient-audit-verdict.v1"
+verdict_id: "EQSRC-INVARIANT-FUNCTOR-QUOTIENT-AUDIT-VERDICT-V1"
+task_id: "RT-20260720-027"
+plan_task_id: "P3-T06"
+status: "PASS_CONDITIONAL_WITH_SCOPED_OBSTRUCTION_AND_LOCAL_FREEZE"
+audit_verdict: "conditional_local_source_purity_pass_with_arbitrary_partition_and_interface_completeness_obstruction"
+candidate_identity:
+  object_id: "TEX-V21-P3-T05-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-CANDIDATE"
+  path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+  sha256: "badc60c72ff16f84fe88568b825ff738a8f160a225f011715f027c1da2cfa1c3"
+  machine_spec_sha256: "9c40dd2a83c5d9ee25a62c977b5b47eb5e2770890c8a7aa90dbe342cc7936ad1"
+  finite_witnesses_sha256: "6f101a2b3e7bc808e165349ab9cab33f44fcb671d2eb3f294ac8bf6071d38ecd"
+  completion_sha256: "ac959bea2c7ed6aa752ae5ebf9848f77dfe0106a8e8b57cee0a80fe2f65fb502"
+  unchanged_across_audit: true
+source_pure_as_written:
+  status: true
+  explicit_target_import_count: 0
+  explicit_process_import_count: 0
+  scope: "The direct definitions and conditional proofs use only declared source-typed categories functors internal isomorphisms and explicit comparison data."
+  provenance_limit: "Textual source typing and prospective declaration do not independently derive or justify C D I or the operation package from current ontology."
+theorem_validity:
+  IFQ1_kernel_equivalence: "PASS"
+  IFQ2_monoidal_composition_congruence: "PASS_CONDITIONAL_COMPARISON_REQUIRED"
+  IFQ3_localization_preservation: "PASS_CONDITIONAL_REFLECTION_SEPARATED"
+  IFQ4_coarse_graining_preservation: "PASS_CONDITIONAL_FACTORIZATION_REQUIRED"
+  IFQ5_variation_naturality: "PASS_CONDITIONAL_NATURAL_ISOMORPHISM_REQUIRED"
+  IFQ6_physical_bridge_guard: "PASS"
+  candidate_theorem_repair_required: false
+stress_results:
+  finite_discrete_partition_realization_proved: true
+  three_object_partition_count: 5
+  identity_functor_extreme_realized: true
+  constant_functor_extreme_realized: true
+  graph_relabeling_control_passed: true
+  component_sensitivity_control_passed: true
+  incomplete_invariant_pair_count: 2
+  marked_interface_countermodel_count: 1
+  arbitrary_interface_congruence_established: false
+  IFQ2_refuted: false
+findings:
+  - finding_id: "AUD-P3T06-001"
+    class: "direct_source_purity"
+    severity: "none_found"
+    disposition: "conditional_pass"
+    statement: "No desired EqSrc label target atlas target metric benchmark result registry row role output validator result or process state appears as a mathematical input in the fixed relation or theorem proofs."
+  - finding_id: "AUD-P3T06-002"
+    class: "source_provenance_gap"
+    severity: "material_nonblocking"
+    disposition: "preserve_open_burden"
+    statement: "The current ontology does not derive C D I or the admissible operation and comparison package, so source purity as written is not source-law derivation."
+  - finding_id: "AUD-P3T06-003"
+    class: "arbitrary_partition_capacity"
+    severity: "scoped_obstruction"
+    disposition: "block_discriminating_relation_overread"
+    statement: "On a finite discrete source category every object partition is the image-isomorphism kernel of a prospectively fixed functor, including identity and universal extremes; prospectivity alone therefore supplies no mathematical selection principle."
+  - finding_id: "AUD-P3T06-004"
+    class: "incomplete_invariant"
+    severity: "scoped_obstruction"
+    disposition: "require_completeness_scope"
+    statement: "Integral graph homology identifies nonisomorphic cycles and all connected trees in the bounded sample, so it is not complete for all source facts or interfaces."
+  - finding_id: "AUD-P3T06-005"
+    class: "marked_interface_operation"
+    severity: "scoped_countermodel"
+    disposition: "block_arbitrary_operation_congruence"
+    statement: "K2 and P3 with marked endpoints have equal Betti pairs, but adding the endpoint edge leaves K2 acyclic and turns P3 into C3; the H-kernel relation is not preserved by that interface-sensitive operation."
+  - finding_id: "AUD-P3T06-006"
+    class: "conditional_theorem_scope"
+    severity: "none_found"
+    disposition: "preserve_theorem"
+    statement: "The marked-interface countermodel does not refute IFQ2 because its comparison-isomorphism hypothesis is absent; it identifies exactly why that premise cannot be omitted."
+  - finding_id: "AUD-P3T06-007"
+    class: "physical_interpretation"
+    severity: "material_nonblocking"
+    disposition: "preserve_block"
+    statement: "Image isomorphism is mathematical equivalence only and supplies no observation map matter response dynamics empirical tolerance or physical-gauge redundancy."
+finding_counts:
+  blocking_theorem_defect_count: 0
+  material_nonblocking_limitation_count: 2
+  scoped_obstruction_count: 2
+  scoped_countermodel_count: 1
+  explicit_target_import_count: 0
+  explicit_process_import_count: 0
+  finite_partition_count: 5
+  operation_stress_count: 4
+candidate_disposition:
+  exact_status_vocabulary:
+    construction_status: "draft/control"
+    adoption_status: "proposal-only"
+    payload_status: "source-extension data"
+  disposition: "locally_frozen_as_generic_kernel_schema_pending_source_derivation_and_operation_completeness"
+  scope: "The exact P3-T05 construction must not be reconstructed or reused as a general EqSrc result under new notation."
+  not_a_global_rejection: true
+  blocked_adoption_open_continuation: true
+  reopening_criteria:
+    - "A source-side derivation or separately authorized adoption candidate fixes C D and I without desired EqSrc labels target-atlas data benchmark outcomes registries roles validators or process state."
+    - "A nontriviality or minimality principle excludes arbitrary finite partitions and the identity and constant extremes on the intended domain."
+    - "A declared complete interface or explicit comparison maps show that every intended composition variation localization coarse-graining and later-dynamics operation descends to the quotient."
+    - "A separately derived physical bridge supplies observation matter-response dynamical and gauge semantics before any physical-equivalence interpretation."
+next_route:
+  plan_task_id: "P3-T07"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  route_label: "ontology-law-research-packet"
+  reason: "Freeze exact superseded or repeatedly obstructed EqSrc families preserve reopening criteria update the theorem inventory and select one clean next frontier without adopting or rejecting a source law."
+authority:
+  current_ontology_derives_candidate_package: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  candidate_repair_executed: false
+  P3_T07_executed: false
+  physical_equivalence_established: false
+  general_eqsrc_discharged: false
+  distance_to_gr_ledger_changed: false
+  metric_use_ledger_changed: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  external_publication_authorized: false
+  global_no_go_authorized: false

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-026` and `handoff-0796`.
+`RT-20260720-027` and `handoff-0797`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-026` |
-| Latest handoff ID | `handoff-0796` |
-| Current status | `v21_p3_t05_proposal_only_invariant_functor_relation_completed_p3_t06_audit_selected_no_adoption_or_distance_delta` |
+| Active task ID | `RT-20260720-027` |
+| Latest handoff ID | `handoff-0797` |
+| Current status | `v21_p3_t06_conditional_local_source_purity_pass_arbitrary_partition_and_interface_obstruction_exact_candidate_locally_frozen_p3_t07_selected_no_adoption_or_distance_delta` |
 | V16 completed | false |
-| Current route family | v21 p3 t06 audit stress invariant functor eqsrc candidate |
+| Current route family | v21 p3 t07 eqsrc family freeze and theorem inventory |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P3-T06 smuggling-auditor packet auditing and stressing the unchanged registered P3-T05 candidate. |
-| Required next authority | One P3-T06 ontology-law-research-packet may hold the candidate hash fixed and audit source provenance morphism scope negative controls nontriviality incomplete-invariant misclassification operation-class smuggling and physical-equivalence overread without repair or adoption. |
-| Next recommended action | Run exactly one bounded v21 P3-T06 smuggling-auditor packet auditing and stressing the unchanged registered P3-T05 candidate. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate. |
+| Required next authority | One P3-T07 ontology-law-research-packet may record which historical EqSrc candidate families are subsumed frozen or still open, update the theorem inventory, and select one clean next frontier while preserving negative results and explicit reopening criteria. |
+| Next recommended action | Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-026` |
-| Latest research handoff ID | `handoff-0796` |
-| Latest research next action | Run exactly one bounded v21 P3-T06 smuggling-auditor packet auditing and stressing the unchanged registered P3-T05 candidate. |
+| Latest research task ID | `RT-20260720-027` |
+| Latest research handoff ID | `handoff-0797` |
+| Latest research next action | Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-026/00_TASK.yaml`.
-- Active task objective: Execute exactly one bounded v21 P3-T05 Ontology Formalizer packet defining a proposal-only source invariant-functor quotient relation, proving conditional equivalence and congruence properties, and checking finite positive and negative witnesses.
-- Latest handoff path: `research_control/handoffs/handoff-0796.yaml`.
-- Latest handoff summary: RT-20260720-026 completed only v21 P3-T05. It defines the proposal-only object relation A sim_I B iff I(A) is isomorphic to I(B) for a prospectively fixed source-typed functor and proves equivalence plus conditional composition localization coarse-graining and variation behavior with preservation separated from reflection. Ten finite graph objects three relation checks and six operation checks pass including two non-preservation controls. The result is not a morphism quotient or physical observational equivalence. Current ontology derives none of C D I or the admissible operation package. No ontology general EqSrc ledger promotion publication global no-go or completed-derivation status changes.
-- Current route family: v21 p3 t06 audit stress invariant functor eqsrc candidate.
-- Next recommended action: Run exactly one bounded v21 P3-T06 smuggling-auditor packet auditing and stressing the unchanged registered P3-T05 candidate.
+- Active task path: `research_control/tasks/RT-20260720-027/00_TASK.yaml`.
+- Active task objective: Execute exactly one bounded v21 P3-T06 Smuggling Auditor packet that holds the registered P3-T05 candidate hash fixed, audits transitive source provenance and hidden target or process imports, and performs the plan-authorized paired non-promotional stress of arbitrary-partition, incomplete-invariant, interface-composition, relabeling, component, and quotient-collapse cases.
+- Latest handoff path: `research_control/handoffs/handoff-0797.yaml`.
+- Latest handoff summary: RT-20260720-027 completed only v21 P3-T06 against the byte-fixed P3-T05 candidate. IFQ1 through IFQ6 survive under their stated hypotheses and no explicit target or process input was found. A finite discrete theorem proves every finite partition is a prospective functor image-isomorphism kernel including identity and universal extremes. Graph stress preserves relabeling and component controls but exposes incomplete invariant collapse. Marked K2 and P3 inputs share H=(1,0), while endpoint-edge addition leaves K2 at (1,0) and sends P3 to C3 at (1,1); therefore arbitrary interface operation congruence fails without the comparison data required by IFQ2. The exact generic schema is locally frozen under four reopening evidence classes. No repair adoption rejection physical EqSrc ledger promotion publication global no-go or completed derivation occurred.
+- Current route family: v21 p3 t07 eqsrc family freeze and theorem inventory.
+- Next recommended action: Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P3-T06 smuggling-auditor packet auditing and stressing the unchanged registered P3-T05 candidate.
+Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -326,27 +326,13 @@ No validation-layer split is recorded in the latest handoff.
 
 Authorization layers:
 
-| Authorization field | Value | Meaning |
-| --- | --- | --- |
-| `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
-| `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
-| `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
-| `Gate_Chair_verdict_authorized` | False | extension authorization field |
-| `canonical_ontology_edit_authorized` | False | extension authorization field |
-| `external_outreach_authorized` | False | extension authorization field |
-| `external_publication_authorized` | False | extension authorization field |
-| `general_EqSrc_discharge_authorized` | False | extension authorization field |
-| `global_no_go_claim_authorized` | False | extension authorization field |
-| `physical_gauge_claim_authorized` | False | extension authorization field |
-| `push_authorized` | False | extension authorization field |
-| `source_law_adoption_authorized` | False | extension authorization field |
+No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-026`;
-- latest handoff: `handoff-0796`;
-- current status: `v21_p3_t05_proposal_only_invariant_functor_relation_completed_p3_t06_audit_selected_no_adoption_or_distance_delta`;
+- active task: `RT-20260720-027`;
+- latest handoff: `handoff-0797`;
+- current status: `v21_p3_t06_conditional_local_source_purity_pass_arbitrary_partition_and_interface_obstruction_exact_candidate_locally_frozen_p3_t07_selected_no_adoption_or_distance_delta`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -356,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0796.yaml`
-- `research_control/tasks/RT-20260720-026/00_TASK.yaml`
+- `research_control/handoffs/handoff-0797.yaml`
+- `research_control/tasks/RT-20260720-027/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -373,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0796*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0797*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-026`
-- Latest handoff: `handoff-0796`
-- Current status: `v21_p3_t05_proposal_only_invariant_functor_relation_completed_p3_t06_audit_selected_no_adoption_or_distance_delta`
+- Active task: `RT-20260720-027`
+- Latest handoff: `handoff-0797`
+- Current status: `v21_p3_t06_conditional_local_source_purity_pass_arbitrary_partition_and_interface_obstruction_exact_candidate_locally_frozen_p3_t07_selected_no_adoption_or_distance_delta`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-026`
-- Latest research handoff: `handoff-0796`
-- Latest research next action: Run exactly one bounded v21 P3-T06 smuggling-auditor packet auditing and stressing the unchanged registered P3-T05 candidate.
+- Latest research task: `RT-20260720-027`
+- Latest research handoff: `handoff-0797`
+- Latest research next action: Run exactly one bounded v21 P3-T07 theoretical-continuation-selector packet to freeze or preserve historical EqSrc families, update the theorem inventory, and select one clean next frontier without reconstructing the exact P3-T05 candidate.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p3_t06_audit_stress_invariant_functor_eqsrc_candidate`
-- Role family: `smuggling-auditor@0.2.0`
+- Route ID: `v21_p3_t07_eqsrc_family_freeze_and_theorem_inventory`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Determine whether the quotient candidate is a genuine source relation rather than a disguised target or arbitrary partition.
+- Milestone burden: Close the route orbit and establish a clean next scientific frontier.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `d3bb363d5093c3560d1685e8e5dcf9a86465dc5d889924f835ca85feaccbb31d`
-- JSON SHA-256: `45fd655f5e050c05d627f67ccf44170eedad9f31809a29121d54d974bfb46116`
+- YAML SHA-256: `ca47a92fd2b510693d9f93f737ae587fde4dfb692894462d5d317ddaaaaa13c0`
+- JSON SHA-256: `d279fe0eca9f06ce8431e6d76ffb10fe1cd89e17b94624405ede83cbc9f7e289`
 
 ## Authority Warning
 

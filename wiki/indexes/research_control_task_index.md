@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `f83847235eb592b3db33b7ce7a9dba714dcb33ddf9d3a224bf860a4a6bd528e3`
-- Generated-at source timestamp: `2026-07-21T14:18:13Z`
-- Row count: `1031`
+- Source fingerprint: `7b03addc9677cea593afc28d56d3bc5a7d074f372947fa300de9ffcba6b5c7de`
+- Generated-at source timestamp: `2026-07-21T15:18:17Z`
+- Row count: `1032`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260720-027|RT-20260720-026|2026-07-21T15:18:17Z|2026-07-21T15:35:33Z|v21_eqsrc_invariant_functor_quotient_smuggling_audit_stress|completed|source_equivalence_eqsrc|Determine whether the quotient candidate is a genuine source relation rather than a disguised target or arbitrary partition.|smuggling-auditor@0.2.0|false|false|11|Execute only the dependency-ready P3-T07 family-freeze and EqSrc theorem-inventory integration packet; do not reconstruct or promote the exact P3-T05 candidate.|PASS|research_control/tasks/RT-20260720-027/jobs/completions/AJC-AJ-RT-20260720-027-001.yaml|
 |RT-20260720-026|RT-20260720-025|2026-07-21T14:18:13Z|2026-07-21T14:34:01Z|v21_eqsrc_invariant_functor_quotient_relation|completed|source_equivalence_eqsrc|Replace ad hoc kernel relations with a general source-equivalence target.|ontology-formalizer@0.2.0|false|false|11|Run exactly one bounded v21 P3-T06 smuggling-auditor packet auditing and stressing the unchanged P3-T05 candidate.|PASS|research_control/tasks/RT-20260720-026/jobs/completions/AJC-AJ-RT-20260720-026-001.yaml|
 |RT-20260720-025|RT-20260720-024|2026-07-21T13:05:12Z|2026-07-21T13:27:51Z|v21_eqsrc_probabilistic_dynamical_selector_alternatives|completed|source_equivalence_eqsrc|Prevent future stochastic or symmetry-breaking language from becoming an informal escape hatch.|ontology-formalizer@0.2.0|false|false|11|Run exactly one bounded v21 P3-T05 ontology-formalizer packet constructing a proposal-only quotient-based EqSrc candidate and its congruence obligations.|PASS|research_control/tasks/RT-20260720-025/jobs/completions/AJC-AJ-RT-20260720-025-001.yaml|
 |RT-20260720-024|RT-20260720-023|2026-07-21T12:06:10Z|2026-07-21T12:19:34Z|v21_eqsrc_representative_irrelevance_theorem|completed|source_equivalence_eqsrc|Prefer quotient-level physics over arbitrary gauge fixing when lawful.|ontology-formalizer@0.2.0|false|false|10|Run exactly one bounded v21 P3-T04 ontology-formalizer packet defining and testing source-side probability and dynamical selector alternatives.|PASS|research_control/tasks/RT-20260720-024/jobs/completions/AJC-AJ-RT-20260720-024-001.yaml|
