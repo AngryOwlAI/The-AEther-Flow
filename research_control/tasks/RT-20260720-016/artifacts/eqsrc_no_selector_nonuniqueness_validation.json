@@ -1,0 +1,221 @@
+{
+  "aggregate_status": "PASS",
+  "check_count": 26,
+  "checks": [
+    {
+      "check_id": "artifact_set",
+      "detail": "All nine bounded theorem, ledger, synthesis, control, and receipt artifacts exist.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "theorem_identity",
+      "detail": "All bounded artifacts share the exact theorem identity.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_structure",
+      "detail": "The TeX source has balanced braces and a complete document envelope.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "classification_proof",
+      "detail": "The evaluation bijection, inverse, and naturality conjugation step are explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "global_choice_and_multiplicity",
+      "detail": "Choice assumptions and the complementary-product multiplicity quantifier are explicit.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "relation_image_separation",
+      "detail": "Selector and induced-relation uniqueness are separated, including the empty-image branch.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "full_category_equalizer",
+      "detail": "The full-category result is an explicitly conditional equalizer subset.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_ledger",
+      "detail": "The formal ledger contains all ten uniquely identified assumptions and no promotion.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "corollary_manifest",
+      "detail": "The corollary manifest contains all eight typed consequences and blocked extensions.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_outputs",
+      "detail": "Both internal perspectives completed under the shared unchanged-domain boundary.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_synthesis",
+      "detail": "One parent synthesis round resolved all five conflicts.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "frozen_source_hashes",
+      "detail": "The unchanged P2 inputs and three historical controls retain live hash parity.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "empty_groupoid_control",
+      "detail": "The empty product has one vacuous selector.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "gl2_empty_fixed_control",
+      "detail": "GL(2,2) has six elements and no fixed line among three choices.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "c4_empty_fixed_control",
+      "detail": "C4 rotations have no fixed root among four choices.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "finite_toy_empty_fixed_control",
+      "detail": "Sign reversal and token swap each leave no fixed response choice.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "multiple_fixed_K_control",
+      "detail": "Injective and constant K separate selector and relation-image multiplicity.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "global_multiplicity_guard",
+      "detail": "A multiple component plus an empty component has no global selector.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "noninvertible_equalizer_control",
+      "detail": "One noninvertible equation reduces two core selectors to one.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "transitive_singleton_control",
+      "detail": "A transitive singleton has one fixed point.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "bounded_counterexample_search",
+      "detail": "All 341 factor-size cases through four components satisfy the finite theorem equivalences.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "canonical_ontology_unchanged",
+      "detail": "Canonical ontology retains its launch hash.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "distance_ledger_unchanged",
+      "detail": "Distance-to-GR ledger retains its launch hash.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metric_ledger_unchanged",
+      "detail": "Metric-use ledger retains its launch hash.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_language",
+      "detail": "The artifact preserves proposal, adoption, gauge, ledger, ownership, and continuation boundaries.",
+      "status": "PASS"
+    },
+    {
+      "check_id": "prior_obstruction_subsumption",
+      "detail": "Three prior finite obstruction families appear as bounded theorem instances.",
+      "status": "PASS"
+    }
+  ],
+  "failure_count": 0,
+  "finite_metrics": {
+    "bounded_theorem_search": {
+      "case_count": 341,
+      "failure_count": 0,
+      "failures": []
+    },
+    "directed_c4": {
+      "automorphism_count": 4,
+      "choice_count": 4,
+      "fixed_choice_count": 0
+    },
+    "disconnected_multiple_empty": {
+      "factor_sizes": [
+        2,
+        0
+      ],
+      "global_selector_count": 0
+    },
+    "empty_groupoid": {
+      "component_count": 0,
+      "selector_count": 1
+    },
+    "finite_toy": {
+      "sign_fixed_choice_count": 0,
+      "token_fixed_choice_count": 0
+    },
+    "gl2_lines": {
+      "automorphism_count": 6,
+      "choice_count": 3,
+      "fixed_choice_count": 0
+    },
+    "noninvertible_equalizer": {
+      "core_selector_count": 2,
+      "full_selector_count": 1
+    },
+    "transitive_singleton": {
+      "choice_count": 1,
+      "fixed_choice_count": 1
+    },
+    "trivial_two_choice": {
+      "constant_K_image_count": 1,
+      "injective_K_image_count": 2,
+      "selector_count": 2
+    }
+  },
+  "job_id": "AJ-RT-20260720-016-001",
+  "ledger_receipts": {
+    "canonical_ontology_sha256": "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2",
+    "distance_to_gr_sha256": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+    "metric_use_sha256": "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  },
+  "metrics": {
+    "assumption_count": 10,
+    "complete_core_theorem_count": 3,
+    "corollary_count": 8,
+    "finite_control_count": 8,
+    "general_EqSrc_discharged": false,
+    "p2_t01_domain_changed": false,
+    "physics_promotion_authorized": false,
+    "prior_obstruction_count": 3
+  },
+  "plan_task_id": "P2-T03",
+  "schema_id": "v21_p2_t03_eqsrc_no_selector_nonuniqueness_validation_v1",
+  "source_receipts": [
+    {
+      "actual_sha256": "a5bc1af23713145727bfad592a770691b5128d6ce6546966860d80c588a530a6",
+      "control_id": "NS-GL2-LINES-EMPTY-002",
+      "expected_sha256": "a5bc1af23713145727bfad592a770691b5128d6ce6546966860d80c588a530a6",
+      "path": "research_control/tasks/RT-20260718-041/artifacts/eqsrc_orientation_torsor_descent_law_refuter_countermodel.yaml"
+    },
+    {
+      "actual_sha256": "9ddce9d042ef187d163043d6c2a98a7d1a796cd01a433d3d258632150a83325e",
+      "control_id": "NS-C4-ROOTS-EMPTY-003",
+      "expected_sha256": "9ddce9d042ef187d163043d6c2a98a7d1a796cd01a433d3d258632150a83325e",
+      "path": "research_control/tasks/RT-20260718-045/artifacts/eqsrc_ordered_motion_rooted_partition_law_refuter_countermodel.yaml"
+    },
+    {
+      "actual_sha256": "b589c29e440750e0dacaebb5d2ad86fd5bf0b593b7e27645052fcbf55839a161",
+      "control_id": "NS-FINITE-TOY-SIGN-TOKEN-EMPTY-004",
+      "expected_sha256": "b589c29e440750e0dacaebb5d2ad86fd5bf0b593b7e27645052fcbf55839a161",
+      "path": "research_control/tasks/RT-20260614-055/artifacts/96_RESP_LC_FINITE_TOY_METRIC_RESPONSE_MODEL_REFUTER_STRESS_TEST.tex"
+    }
+  ],
+  "theorem_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+}

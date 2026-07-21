@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-015` and `handoff-0785`.
+`RT-20260720-016` and `handoff-0786`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-015` |
-| Latest handoff ID | `handoff-0785` |
-| Current status | `v21_p2_t02_eqsrc_fixed_point_necessity_proved_p2_t03_selected_no_adoption_or_promotion` |
+| Active task ID | `RT-20260720-016` |
+| Latest handoff ID | `handoff-0786` |
+| Current status | `v21_p2_t03_complete_core_selector_theorem_proved_p2_t04_selected_no_adoption_or_promotion` |
 | V16 completed | false |
-| Current route family | v21 p2 t03 eqsrc no selector nonuniqueness theorem |
+| Current route family | v21 p2 t04 eqsrc historical countermodel integration |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One P2-T03 Ontology Formalizer packet may state and prove the complete no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers on the unchanged registered P2-T01 domain. |
-| Next recommended action | Run exactly one bounded v21 P2-T03 Ontology Formalizer ontology-law-research-packet stating and proving the complete no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers. Preserve P2-T06 audit and P2-T07 stress ownership; do not alter the P2-T01 domain after observing an outcome, infer physical gauge meaning, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task. |
+| Required next authority | One P2-T04 Candidate Constructor packet may integrate the named historical finite countermodels under the P2-T03 theorem while preserving provenance and classifying exact theorem instances versus guarded non-instances. |
+| Next recommended action | Run exactly one bounded v21 P2-T04 Candidate Constructor ontology-law-research-packet integrating the historical finite countermodels under the P2-T03 theorem while preserving each source artifact, scope, negative-result provenance, and the distinction between direct theorem instance and non-instance. Preserve P2-T05 proof encoding, P2-T06 audit, and P2-T07 stress ownership; do not alter the P2-T01 domain, infer physical gauge, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-015` |
-| Latest research handoff ID | `handoff-0785` |
-| Latest research next action | Run exactly one bounded v21 P2-T03 Ontology Formalizer ontology-law-research-packet stating and proving the complete no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers. Preserve P2-T06 audit and P2-T07 stress ownership; do not alter the P2-T01 domain after observing an outcome, infer physical gauge meaning, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task. |
+| Latest research task ID | `RT-20260720-016` |
+| Latest research handoff ID | `handoff-0786` |
+| Latest research next action | Run exactly one bounded v21 P2-T04 Candidate Constructor ontology-law-research-packet integrating the historical finite countermodels under the P2-T03 theorem while preserving each source artifact, scope, negative-result provenance, and the distinction between direct theorem instance and non-instance. Preserve P2-T05 proof encoding, P2-T06 audit, and P2-T07 stress ownership; do not alter the P2-T01 domain, infer physical gauge, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-015/00_TASK.yaml`.
-- Active task objective: Execute exactly one bounded v21 P2-T02 Ontology Formalizer packet defining deterministic source-natural selectors on the unchanged P2-T01 core and deriving the necessary invariant fixed-point condition with finite positive, empty-fixed, and multiple-fixed controls.
-- Latest handoff path: `research_control/handoffs/handoff-0785.yaml`.
-- Latest handoff summary: RT-20260720-015 completed only v21 P2-T02. It registered EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION-V1, defined source-natural selectors on the unchanged P2-T01 core, proved objectwise automorphism fixed-point necessity and an added-data stabilizer lemma, separated selector from relation-image uniqueness, and validated seven controls while keeping the complete P2-T03 theorem, ontology adoption, physical gauge, scientific ledgers, and promotions open or blocked.
-- Current route family: v21 p2 t03 eqsrc no selector nonuniqueness theorem.
-- Next recommended action: Run exactly one bounded v21 P2-T03 Ontology Formalizer ontology-law-research-packet stating and proving the complete no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers. Preserve P2-T06 audit and P2-T07 stress ownership; do not alter the P2-T01 domain after observing an outcome, infer physical gauge meaning, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
+- Active task path: `research_control/tasks/RT-20260720-016/00_TASK.yaml`.
+- Active task objective: Execute exactly one bounded v21 P2-T03 Ontology Formalizer packet proving the complete core-groupoid no-selector and nonuniqueness theorem with explicit component-choice, full-category coherence, and K-image quantifiers on the unchanged P2-T01 domain.
+- Latest handoff path: `research_control/handoffs/handoff-0786.yaml`.
+- Latest handoff summary: RT-20260720-016 completed only v21 P2-T03. It registered EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1 and proved, on the unchanged P2-T01 certified core, the selector-product bijection, empty-factor obstruction, globally qualified nonuniqueness criterion, K-image theorem, and conditional full-category equalizer theorem. Ten assumptions, eight corollaries, eight controls, 341 bounded cases, and three bounded historical instances pass while ontology adoption, physical gauge, scientific ledgers, general EqSrc, and promotion remain open or blocked.
+- Current route family: v21 p2 t04 eqsrc historical countermodel integration.
+- Next recommended action: Run exactly one bounded v21 P2-T04 Candidate Constructor ontology-law-research-packet integrating the historical finite countermodels under the P2-T03 theorem while preserving each source artifact, scope, negative-result provenance, and the distinction between direct theorem instance and non-instance. Preserve P2-T05 proof encoding, P2-T06 audit, and P2-T07 stress ownership; do not alter the P2-T01 domain, infer physical gauge, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P2-T03 Ontology Formalizer ontology-law-research-packet stating and proving the complete no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers. Preserve P2-T06 audit and P2-T07 stress ownership; do not alter the P2-T01 domain after observing an outcome, infer physical gauge meaning, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
+Run exactly one bounded v21 P2-T04 Candidate Constructor ontology-law-research-packet integrating the historical finite countermodels under the P2-T03 theorem while preserving each source artifact, scope, negative-result provenance, and the distinction between direct theorem instance and non-instance. Preserve P2-T05 proof encoding, P2-T06 audit, and P2-T07 stress ownership; do not alter the P2-T01 domain, infer physical gauge, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-015`;
-- latest handoff: `handoff-0785`;
-- current status: `v21_p2_t02_eqsrc_fixed_point_necessity_proved_p2_t03_selected_no_adoption_or_promotion`;
+- active task: `RT-20260720-016`;
+- latest handoff: `handoff-0786`;
+- current status: `v21_p2_t03_complete_core_selector_theorem_proved_p2_t04_selected_no_adoption_or_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0785.yaml`
-- `research_control/tasks/RT-20260720-015/00_TASK.yaml`
+- `research_control/handoffs/handoff-0786.yaml`
+- `research_control/tasks/RT-20260720-016/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0785*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0786*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

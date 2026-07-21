@@ -1,0 +1,643 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-016-001"
+completion_id: "AJC-AJ-RT-20260720-016-001"
+task_id: "RT-20260720-016"
+task_type: "v21_eqsrc_no_selector_nonuniqueness_theorem"
+decision_id: "DDR-20260720-016"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260720-016"
+status: "completed"
+created_at: "2026-07-21T04:02:36Z"
+started_at: "2026-07-21T04:02:36Z"
+completed_at: "2026-07-21T04:20:30Z"
+objective: "Execute only v21 P2-T03: prove the complete core-groupoid no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers on the unchanged P2-T01 domain, plus the full-category coherence guard."
+completion_summary: "P2-T03 registers EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1. On the unchanged P2-T01 certified core, it proves the selector-product bijection, empty-factor obstruction, globally qualified nonuniqueness criterion, K-image theorem, and conditional full-category equalizer theorem; records ten assumptions, eight corollaries, eight controls, and three bounded historical instances; and leaves ontology adoption, physical gauge, general EqSrc, scientific ledgers, and promotion open or blocked."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T03"
+  recommendation_ids:
+    - "V21-R03"
+    - "V21-R05"
+    - "V21-R30"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+  next_dependency_work_item: "P2-T04"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 16
+  passes_consumed: 16
+  route_work_item_id: "P2-T03"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "theorem_with_hypotheses_and_proof"
+minimum_payload:
+  payload_class: "theorem_with_hypotheses_and_proof"
+  payload_artifact_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+  payload_summary: "Proves the exact component fixed-locus product classification, empty-factor obstruction, globally qualified nonuniqueness criterion, K-image theorem, and full-category equalizer guard."
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: true
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-016/artifacts/child_phys_math_eqsrc_no_selector_nonuniqueness.yaml"
+  - "research_control/tasks/RT-20260720-016/artifacts/child_phys_phil_eqsrc_no_selector_nonuniqueness.yaml"
+  - "research_control/tasks/RT-20260720-016/artifacts/parent_conflict_review_eqsrc_no_selector_nonuniqueness.yaml"
+  - "research_control/tasks/RT-20260720-016/artifacts/parent_fusion_notes_eqsrc_no_selector_nonuniqueness.md"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_assumptions.yaml"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_corollaries.yaml"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_controls.json"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_receipt.md"
+  - "research_control/tasks/RT-20260720-016/artifacts/validate_eqsrc_no_selector_nonuniqueness.py"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-016/**"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_assumptions.yaml"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_corollaries.yaml"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_controls.json"
+  - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_receipt.md"
+  - "research_control/handoffs/handoff-0786.yaml"
+  - "research_control/handoffs/handoff-0786.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  theorem:
+    path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    sha256: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  assumptions:
+    path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_assumptions.yaml"
+    sha256: "f043a5998bb180ad4bca7037f1f7def836a156d009a69bfaf1304eb86bc390cf"
+  corollaries:
+    path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_corollaries.yaml"
+    sha256: "ee8a2f2797e007cbdbb74bfc7d175a4bbd54c9566a9385b3794a211992876e2b"
+  controls:
+    path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_controls.json"
+    sha256: "a151c7521dd8e5151d92b167f1cb15943783bd0ede035bf7ebff378c9f7f0d9d"
+  validation:
+    path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_validation.json"
+    sha256: "6a22aed4a2ab1dd2a7079d71252e2f97e85f0298661d560a84628deaceb9c9af"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260720-016/artifacts/parent_fusion_notes_eqsrc_no_selector_nonuniqueness.md"
+    sha256: "68582d649118a97346637e167c920efddf517eecccd0ca146af2424fd0e074dd"
+  receipt:
+    path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_receipt.md"
+    sha256: "0b041ad2afd4cfb0e6974b1128910d8d41af183276eaf074bc147f668e6adc8d"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-016/artifacts/child_phys_math_eqsrc_no_selector_nonuniqueness.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-016/artifacts/child_phys_phil_eqsrc_no_selector_nonuniqueness.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-016/artifacts/parent_conflict_review_eqsrc_no_selector_nonuniqueness.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    summary: "The parent made the Cartesian product statement unconditional, confined factorwise existence to explicit choice hypotheses, added the complementary-product quantifier, separated K-image uniqueness, and qualified completeness by the fixed proposal core."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260720-016/artifacts/parent_fusion_notes_eqsrc_no_selector_nonuniqueness.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Resolve the common selection obstruction at theorem level."
+  missing_source_law: "A current-ontology derivation of a deterministic source-natural selector or of source-side structure sufficient to make the declared fixed loci nonempty, coherent, and relation-determining."
+  underdetermination_statement: "Current ontology does not derive the P2-T01 category, eligible-choice functor, natural selector, relation map, proof coordinates, or selector-relevant source structure."
+  no_go_theorem_status: "scoped_core_no_selector_theorem_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    source_side_definition: "On the unchanged certified-isomorphism core G_Sigma, deterministic source-natural selectors are Nat(1_GSigma,S_chi) and are classified by the Cartesian product of representative automorphism fixed loci."
+    formal_objects:
+      - "unchanged P2-T01 core groupoid G_Sigma"
+      - "unchanged eligible-choice functor S_chi"
+      - "component representatives r_i and proof transports tau_X"
+      - "fixed loci F_i and selector space Sel_chi"
+      - "relation interface K and induced map K_*"
+      - "conditional full-category equalizer"
+    domains:
+      - "certified source isomorphisms fixed before selector evaluation"
+      - "eligible choices and structural actions fixed before selector evaluation"
+      - "full category only under an explicitly supplied functor extension"
+    maps:
+      - "evaluation from selectors to the product of fixed loci"
+      - "reconstruction sigma_X=S_chi(tau_X)x_[X]"
+      - "induced relation map K_*"
+      - "noninvertible-arrow coherence maps"
+    proof_obligations:
+      - "derive or adopt the proposal domain and any selector-relevant source data before physical use"
+      - "integrate historical examples under the theorem in P2-T04"
+      - "encode and independently reproduce the proof in P2-T05"
+      - "audit hidden choice target import post-hoc domain changes and false conservativity in P2-T06"
+      - "stress altered categories actions and noninvertible arrows in P2-T07"
+      - "derive any physical gauge comparison independently"
+  candidate_law_comparison:
+    candidates: []
+    comparison_basis: []
+    selection_status: "not_applicable_to_theorem_packet"
+  candidate_law_refutation:
+    refuted_candidate: ""
+    refutation_basis: ""
+    surviving_obligations: []
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "A proposal-only conditional theorem may be proved without protected authority; adoption and ontology change remain human-gated."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep general EqSrc undischarged until source-domain derivation or adoption, lawful selector status, independent audit, stress, and downstream gates are complete."
+      - "Keep M_src, g_eff, matter coupling, Einstein equations, exact-GR recovery, and benchmark promotion blocked."
+      - "Keep selector data independent of target metric, topology, benchmark, observer, process, validator, and registry metadata."
+      - "Require protected human authority before source-law or canonical ontology adoption."
+    distance_to_gr_links:
+      - "source_equivalence_eqsrc"
+      - "M_src"
+      - "g_eff"
+      - "matter coupling"
+      - "Einstein equations"
+      - "benchmark promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+    checked_objects:
+      - "G_Sigma"
+      - "S_chi"
+      - "I and r_i"
+      - "F_i"
+      - "Sel_chi"
+      - "K_*"
+    audit_result: "The task-local validator confirms frozen source hashes and textual boundaries; P2-T06 retains the independent smuggling audit."
+  atlas_glue_obligations:
+    profile_law: "Not established; no atlas profile is introduced."
+    selector_law: "The core selector classification is proved conditionally; current-ontology derivation, adoption, and existence remain open."
+    transition_law: "Not established; no atlas transition functions are introduced."
+    inverse_checks: "The proof uses only the unchanged P2-T01 certified isomorphisms."
+    cocycle_checks: "Not established; core naturality is not an atlas cocycle derivation."
+    finite_variation_robustness: "Open; eight controls and 341 bounded cases do not prove physical variation robustness."
+  failure_branches:
+    collapse: "An empty representative fixed locus makes the core selector product empty on the declared proposal domain."
+    nonuniqueness: "A multiple fixed locus plus a nonempty complementary product gives multiple selectors; K may preserve or collapse that multiplicity."
+    inverse_defect: "An arrow without P2-T01 inverse certification lies outside the core and requires the full-category equalizer equations."
+    cocycle_defect: "No atlas cocycle is claimed or discharged."
+    variation_fragility: "Core selector tuples may fail noninvertible-arrow coherence."
+  known_risks:
+    - "A global choice function may be imported silently for an infinite component family."
+    - "Objects, arrows, eligibility, actions, or K may be changed after observing a desired result."
+    - "A desired choice may be loaded into source data and called derived."
+    - "Structural automorphisms may be overread as physical gauge transformations."
+    - "Selector multiplicity may be conflated with relation-image multiplicity."
+    - "Core completeness may be overread as full-category or current-ontology completeness."
+  failed_alternatives:
+    - "Unqualified factorwise nonemptiness as global selector existence is rejected."
+    - "Local multiple fixed points as unconditional global multiplicity are rejected."
+    - "Selector nonuniqueness as automatic relation nonuniqueness is rejected."
+    - "Core fixedness as full-category sufficiency is rejected."
+    - "Anonymous finite structure as a physical or distributed-computing no-go is rejected."
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No gate is requested now. A later protected decision is required before adopting a selector law, source extension, or canonical ontology edit."
+    exact_requested_ontology_edit: ""
+
+source_extension_category: "ontology_law_research_packet"
+source_extension_classification_required: true
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+  item_source_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+  item_kind: "law_target"
+  classification: "new_ontology_primitive_candidate"
+  evidence_paths:
+    - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_assumptions.yaml"
+    - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_corollaries.yaml"
+    - "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_validation.json"
+  relation_to_current_ontology: "missing_primitive"
+  relation_to_target_structures: "No target topology, atlas, metric, detector, benchmark, observer, or desired recovery behavior defines the core, selector, fixed loci, or relation map."
+  claim_boundary_id: "CB-V21-P2-T03-EQSRC-NO-SELECTOR-001"
+  protected_authority_required: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "On the unchanged proposal core, selectors are exactly fixed-locus product elements; an empty factor obstructs selection, globally qualified multiple fixed points yield nonuniqueness, K may preserve or collapse multiplicity, and full-category naturality adds noninvertible coherence."
+  forbidden_overreads:
+    - "P2-T01 domain or selector derived from or adopted into current ontology"
+    - "factorwise nonemptiness as unconditional existence for arbitrary infinite components"
+    - "structural automorphisms established as physical gauge"
+    - "frozen family reopened or rejected"
+    - "global no-go or future source-extension impossibility"
+    - "general EqSrc or downstream GR promotion"
+  next_route_if_blocked: "P2-T04 candidate-constructor@0.2.0 ontology-law-research-packet"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260720-016-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Complete certified-core selector classification"
+    summary: "Proves the evaluation bijection between natural selectors and the product of component fixed loci, including exact existence, uniqueness, and multiplicity branches."
+  - payload_id: "NMP-RT-20260720-016-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Selector versus induced-relation uniqueness"
+    summary: "Proves the exact K-image branch under an existing global selector and separates choice irrelevance from relation nonuniqueness."
+  - payload_id: "NMP-RT-20260720-016-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Full-category equalizer guard"
+    summary: "Identifies full-category selectors as core product elements satisfying all noninvertible-arrow equations."
+  - payload_id: "NMP-RT-20260720-016-004"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "Eight controls and 341 bounded product cases"
+    summary: "Validates empty, transitive, K-image, disconnected, noninvertible, and three historical obstruction branches."
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT016-001"
+    payload_type: "definition"
+    object_name: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+    claim_status: "proposal-only"
+    source_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    burden_effect: "narrows"
+    summary: "Defines component coordinates, fixed loci, selector product, K-image map, and conditional full-category equalizer on the unchanged proposal domain."
+  - payload_id: "PAYLOAD-RT016-002"
+    payload_type: "theorem"
+    object_name: "Complete certified-core selector classification"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    burden_effect: "obstructs"
+    summary: "Proves that an empty fixed-locus factor blocks deterministic source-natural selection on the declared core and gives exact global uniqueness and multiplicity criteria."
+  - payload_id: "PAYLOAD-RT016-003"
+    payload_type: "theorem"
+    object_name: "Relation-image uniqueness theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    burden_effect: "narrows"
+    summary: "Separates selector multiplicity from induced-relation multiplicity through K_*."
+  - payload_id: "PAYLOAD-RT016-004"
+    payload_type: "theorem"
+    object_name: "Full-category equalizer guard"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    burden_effect: "narrows"
+    summary: "States the exact additional coherence equations if the choice functor extends over noninvertible arrows."
+  - payload_id: "PAYLOAD-RT016-005"
+    payload_type: "finite_model"
+    object_name: "Eight theorem controls and bounded counterexample search"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_validation.json"
+    burden_effect: "narrows"
+    summary: "Mechanically validates eight named controls and 341 factor-size cases with no finite theorem violation."
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "eqsrc"
+  waiver_decision_id: ""
+  slots:
+    - countermodel_slot: "empty_fixed_existence_obstruction"
+      status: "discharged"
+      scope: "GL(2,2), directed C4, and finite-toy sign/token one-object groupoids"
+      result_artifact: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_validation.json"
+      obstruction_id: "EQSRC-P2-T03-EMPTY-FIXED"
+      local_countermodel_claim: "Each declared transitive action on more than one choice has empty fixed locus and no core selector."
+      forbidden_overread: "No global ontology no-go or future-extension impossibility is proved."
+    - countermodel_slot: "local_multiple_not_global_multiplicity"
+      status: "discharged"
+      scope: "factor-size family [2,0]"
+      result_artifact: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_validation.json"
+      obstruction_id: "EQSRC-P2-T03-GLOBAL-MULTIPLICITY-GUARD"
+      local_countermodel_claim: "A multiple fixed component plus an empty component has no global selector."
+      forbidden_overread: "The multiple factor alone does not imply global existence."
+    - countermodel_slot: "selector_relation_image_separation"
+      status: "discharged"
+      scope: "trivial two-choice action with injective and constant K"
+      result_artifact: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_validation.json"
+      obstruction_id: "EQSRC-P2-T03-K-IMAGE-GUARD"
+      local_countermodel_claim: "Two selectors may induce either two or one relation sections depending on K."
+      forbidden_overread: "Neither branch establishes general EqSrc."
+    - countermodel_slot: "noninvertible_coherence"
+      status: "discharged"
+      scope: "two objects, identity cores, and one noninvertible arrow"
+      result_artifact: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_validation.json"
+      obstruction_id: "EQSRC-P2-T03-NONINVERTIBLE-EQUALIZER"
+      local_countermodel_claim: "Two core selectors reduce to one full-category selector."
+      forbidden_overread: "No universal noninvertible transport law is claimed."
+obstruction_record:
+  present: false
+  obstruction_id: ""
+  scope: "not_applicable_to_global_status"
+  failed_object: ""
+  exact_failure: ""
+  minimal_counterexample_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_validation.json"
+  current_ontology_implication: "not_applicable"
+  source_extension_implication: "not_applicable"
+  consequence: "Scoped theorem obstructions are recorded without a program-wide obstruction verdict."
+  forbidden_overread: "global theory rejection or future source-extension impossibility"
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Resolve the common selection obstruction at theorem level."
+  explanation: "P2-T03 proves the complete certified-core theorem and sharpens the common obstruction, but current ontology derives or adopts neither the domain nor a selector and general EqSrc remains open."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "conditional_theorem_candidate"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A complete conditional theorem on a proposal-only domain neither derives nor adopts the domain or selector and does not discharge general EqSrc."
+  downstream_unlocked:
+    - "P2-T04 historical finite-countermodel integration"
+    - "P2-T05 proof-assistant encoding"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The authoritative Distance-to-GR and metric-use ledgers remain unchanged."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "proposal-only domain and selector theorem registered; current-ontology derivation and adoption remain open"
+  - burden: "Source equivalence EqSrc"
+    status: "complete fixed-core selector product obstruction and nonuniqueness theorem proved conditionally; source derivation adoption integration audit stress and general EqSrc remain open"
+  - burden: "RetainH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "GenH"
+    status: "unchanged; not supplied or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged"
+  - burden: "Resp_lc"
+    status: "unchanged; K-image theorem is formal control only"
+  - burden: "M_src"
+    status: "unchanged; no adoption"
+  - burden: "g_eff"
+    status: "unchanged; no construction or scope expansion"
+  - burden: "matter coupling"
+    status: "unchanged; no derivation"
+  - burden: "Einstein equations"
+    status: "not started; unchanged"
+  - burden: "finite-variation robustness"
+    status: "open; eight controls and 341 bounded cases do not prove physical robustness"
+  - burden: "benchmark promotion"
+    status: "blocked by missing source derivation adoption integration independent audit stress and downstream derivations"
+  - burden: "Gate Chair status"
+    status: "human-gated; unchanged"
+  - burden: "current route freeze or hard-fail status"
+    status: "five exact candidate families remain locally frozen; the common theorem route advances to distinct P2-T04 integration"
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p2_t03_complete_core_theorem_proved_pending_historical_integration"
+  prior_related_tasks:
+    - "RT-20260718-027 through RT-20260718-047"
+    - "RT-20260720-009 through RT-20260720-016"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P2-T03 adds the exact product classification, global choice and complementary-product quantifiers, K-image theorem, full-category equalizer, and bounded controls without renaming or repairing a frozen candidate."
+  next_role_consequence: "candidate-constructor@0.2.0 for v21 P2-T04"
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  candidate_freeze_label: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM"
+  prior_attempts_considered:
+    - "five stable families and seven immutable candidates in P1-T03"
+    - "the P1-T04 component theorem target"
+    - "the P1-T05 primary-literature basis"
+    - "the P2-T01 exact source category"
+    - "the P2-T02 fixed-point necessity theorem"
+    - "the P2-T03 complete certified-core theorem"
+  criteria_evaluated:
+    - "The P2-T01 domain and action remained unchanged."
+    - "The component product classification has a complete proof with explicit choice assumptions."
+    - "The K-image and full-category branches are explicit."
+    - "Eight controls and 341 factor-size cases pass."
+    - "No source-domain adoption or global theory rejection is supplied."
+  freeze_if:
+    - "Later work repeats the theorem without adding provenance integration, proof encoding, independent audit, or stress."
+    - "Later work changes the domain or action after observing a desired selector."
+  do_not_freeze_if:
+    - "P2-T04 integrates the historical finite countermodels under the theorem while preserving provenance."
+    - "P2-T05 supplies proof-assistant encoding and a reproducible proof receipt."
+  freeze_decision: "not_frozen"
+  decision_reason: "P2-T04 is non-orbital because it must integrate named historical controls and preserve their distinct provenance under the newly proved theorem."
+  rationale: "The common theorem is complete relative to the core; exact candidate-family freezes remain unchanged while the distinct integration route advances."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "candidate_constructor"
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "P2-T01 proposal core, eligible-choice action, and P2-T02 interface are fixed inputs with live hash parity."
+    - "The selector-product, K-image, and full-category equalizer theorems are proved under ten explicit assumptions."
+    - "Eight named controls and 341 bounded product cases pass mechanical validation."
+  open_or_blocked_physical_targets:
+    - "current-ontology derivation or lawful adoption of the source domain and selector law"
+    - "physical gauge interpretation and covariance"
+    - "general EqSrc, M_src, g_eff, matter coupling, Einstein equations, and exact-GR recovery"
+  forbidden_overread:
+    - "proposal theorem as ontology adoption, physical proof, benchmark progress, or completed derivation"
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The theorem establishes complete conditional mathematics only on the unchanged proposal core. It does not derive or adopt that domain, construct a current-ontology selector, establish physical gauge meaning, reopen a frozen family, discharge general EqSrc, change scientific ledgers, promote downstream GR claims, or complete the derivation."
+  forbidden_conclusions:
+    - "P2-T01 domain or selector derived from or adopted into current ontology"
+    - "factorwise nonemptiness as unconditional selector existence for arbitrary infinite components"
+    - "structural automorphisms as physical gauge transformations"
+    - "an added mark as derived or dynamical symmetry breaking"
+    - "a reduct functor as conservativity proof"
+    - "a frozen family reopened, rejected, or globally impossible"
+    - "global theory rejection or future source-extension impossibility"
+    - "physical admissibility, covariance, or empirical meaning established"
+    - "general EqSrc discharge"
+    - "M_src adoption"
+    - "g_eff, matter coupling, or Einstein-equation derivation"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion, Gate Chair verdict, publication, or completed derivation"
+
+selected_next_route:
+  route_id: "v21_p2_t04_eqsrc_historical_countermodel_integration"
+  route_label: "ontology-law-research-packet"
+  role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P2-T04"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Demonstrate theorem scope and preserve negative-result provenance."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Unify the historical finite countermodels under the P2-T03 theorem while preserving each source artifact, scope, negative-result provenance, and all ontology, ledger, audit, stress, and promotion boundaries."
+  source_handoff: "research_control/handoffs/handoff-0786.yaml"
+claim_boundary:
+  boundary_id: "CB-V21-P2-T03-EQSRC-NO-SELECTOR-001"
+  allowed_scope: "Exact P2-T03 fixed-core selector-product theorem, explicit choice and global multiplicity quantifiers, K-image theorem, full-category equalizer, assumptions, corollaries, controls, three bounded prior instances, and one P2-T04 route."
+  blocked_scope: "Post-hoc domain change, P2-T04 detailed integration, P2-T05 encoding, P2-T06 audit, P2-T07 stress, physical gauge claims, frozen-family reopening, ontology edit or adoption, general EqSrc, scientific-ledger changes, downstream GR promotion, Gate Chair verdict, publication, completed derivation, or global no-go."
+  claim_boundary_preserved: true
+
+validation_receipts:
+  local_validator_report: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_validation.json"
+  local_validator_report_hash: "6a22aed4a2ab1dd2a7079d71252e2f97e85f0298661d560a84628deaceb9c9af"
+  theorem_hash: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  assumptions_hash: "f043a5998bb180ad4bca7037f1f7def836a156d009a69bfaf1304eb86bc390cf"
+  corollaries_hash: "ee8a2f2797e007cbdbb74bfc7d175a4bbd54c9566a9385b3794a211992876e2b"
+  controls_hash: "a151c7521dd8e5151d92b167f1cb15943783bd0ede035bf7ebff378c9f7f0d9d"
+  distance_to_gr_ledger_hash: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  metric_use_ledger_hash: "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+  canonical_ontology_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+  latex_compile_status: "PASS"
+  validation_status: "PASS"
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  selector_construction_authorized: false
+  physical_gauge_claim_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 16 lease parity, immutable route identity, max reasoning effort, repository binding, clean start, predecessor checkpoint, and single consumption were verified before work."
+      - "Memory preflight refreshed local retrieval and the registered P2-T02 theorem object plus its TeX source-registry row was inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required internal perspectives completed and five mathematical versus ontology conflicts were resolved in one parent synthesis round."
+      - "The task-local validator passes all 26 theorem, assumption, corollary, finite, bounded-search, source-hash, ledger, ontology, synthesis, and claim-boundary checks."
+      - "The registered TeX source compiles successfully to a five-page local scratch PDF with resolved cross-references."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Repository validation, documentation impact, signal parity, generated freshness, and whitespace checks remain required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, and claim graph remain to be regenerated and checked."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap and validate-only remain required after source registration."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 930
+    relationship_row_count: 4606
+    semantic_row_count: 930
+    vault_row_count: 930
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 9
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION --json"
+      query_type: "lookup"
+      query_text: "TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION"
+      returned_object_ids:
+        - "TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION"
+  canonical_inspections:
+    - object_id: "TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+      source_hash: "7611533f40b61b8a32da327add3646b95c604f858adba54c40378b6f29d5067a"
+  authority_note: "Generated Obsidian wiki, semantic SQLite, and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and nine local-cache-only freshness warnings were refreshed to a clean local retrieval state with 930 source objects."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION --json"
+    status: "PASS"
+    summary: "Resolved and inspected the registered P2-T02 theorem and its TeX source-registry row."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-016/artifacts/validate_eqsrc_no_selector_nonuniqueness.py"
+    status: "PASS"
+    summary: "The task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-016/artifacts/validate_eqsrc_no_selector_nonuniqueness.py --write-report --json"
+    status: "PASS"
+    summary: "Passed 26 of 26 checks across theorem identity, full proof, choice and global quantifiers, K-image and equalizer branches, ten assumptions, eight corollaries, eight controls, 341 bounded cases, synthesis, source hashes, both ledgers, canonical ontology, and claim boundaries."
+  - command: "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260720-016-latex research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    status: "PASS"
+    summary: "Compiled the registered TeX source twice to a five-page local scratch PDF with resolved references."
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  rationale: "The result is a bounded scientific theorem and finite-control packet, not a project-system defect."

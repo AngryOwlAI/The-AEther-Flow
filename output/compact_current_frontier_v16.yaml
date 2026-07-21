@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0785.yaml"
+  - "research_control/handoffs/handoff-0786.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260720-015"
-  latest_handoff_id: "handoff-0785"
-  current_status: "v21_p2_t02_eqsrc_fixed_point_necessity_proved_p2_t03_selected_no_adoption_or_promotion"
+  active_task_id: "RT-20260720-016"
+  latest_handoff_id: "handoff-0786"
+  current_status: "v21_p2_t03_complete_core_selector_theorem_proved_p2_t04_selected_no_adoption_or_promotion"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260720-015"
-  latest_research_handoff_id: "handoff-0785"
-  latest_research_next_action: "Run exactly one bounded v21 P2-T03 Ontology Formalizer ontology-law-research-packet stating and proving the complete no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers. Preserve P2-T06 audit and P2-T07 stress ownership; do not alter the P2-T01 domain after observing an outcome, infer physical gauge meaning, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task."
+  latest_research_task_id: "RT-20260720-016"
+  latest_research_handoff_id: "handoff-0786"
+  latest_research_next_action: "Run exactly one bounded v21 P2-T04 Candidate Constructor ontology-law-research-packet integrating the historical finite countermodels under the P2-T03 theorem while preserving each source artifact, scope, negative-result provenance, and the distinction between direct theorem instance and non-instance. Preserve P2-T05 proof encoding, P2-T06 audit, and P2-T07 stress ownership; do not alter the P2-T01 domain, infer physical gauge, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p2_t03_eqsrc_no_selector_nonuniqueness_theorem"
-  role_family: "ontology-formalizer@0.2.0"
+  route_id: "v21_p2_t04_eqsrc_historical_countermodel_integration"
+  role_family: "candidate-constructor@0.2.0"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "State the exact mathematical condition that prior candidate cycles repeatedly violate."
+  milestone_burden: "Demonstrate theorem scope and preserve negative-result provenance."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false

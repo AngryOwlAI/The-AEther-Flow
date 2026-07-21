@@ -1,0 +1,318 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\G}{\mathcal G_{\Sigma}}
+\newcommand{\C}{\mathcal C_{\Sigma}}
+\newcommand{\Sel}{\operatorname{Sel}_{\chi}}
+\newcommand{\Nat}{\operatorname{Nat}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Img}{\operatorname{im}}
+
+\title{EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1\\
+General no-selector and nonuniqueness theorems on the fixed certified core}
+\author{The Aether-Flow Research Project---draft/control}
+\date{2026-07-21}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+On the unchanged proposal-only certified-isomorphism core fixed by P2-T01,
+this packet classifies deterministic source-natural selectors as a product of
+automorphism fixed loci. It proves the empty-fixed obstruction, gives the
+globally quantified nonuniqueness criterion, separates selector multiplicity
+from multiplicity of induced relation sections, and states the extra equalizer
+equations required by noninvertible arrows. The proof is complete relative
+to the declared core, functor, component-coordinate data, and set-theoretic
+assumptions. It does not derive or adopt those inputs from current ontology.
+\end{abstract}
+
+\section{Authority and fixed domain}
+
+This artifact is \texttt{draft/control}, \texttt{proposal-only}, and
+\texttt{source-extension data}. Its adoption status is
+\texttt{blocked\_adoption\_open\_continuation}. The source category,
+eligible-choice functor, certified core, and relation interface are exactly
+the P2-T01 objects inspected by P2-T02; they are fixed before selector
+evaluation. Proof coordinates introduced below are mathematical coordinates
+for the classification and are not added source marks.
+
+Current ontology does not derive or adopt \(\C\), \(\G\), \(S_\chi\),
+\(K\), a selector, the component-coordinate data, or any selector-relevant
+extension. Structural automorphisms in \(\G\) are not thereby physical
+gauge transformations. Both scientific ledgers remain unchanged.
+
+\section{Declared objects and assumptions}
+
+Let \(\G=\operatorname{Core}(\C)\) be the small, wide groupoid of the
+unchanged P2-T01 proposal category, and let
+\[
+  S_\chi:\G\longrightarrow \mathbf{Set}
+\]
+be its unchanged eligible-choice functor. Let \(I=\pi_0(\G)\) be a set of
+connected components. Supply one representative \(r_i\) for each
+\(i\in I\), and for every object \(X\) in component \(i=[X]\), supply a
+certified isomorphism
+\[
+  \tau_X:r_i\longrightarrow X,
+  \qquad \tau_{r_i}=1_{r_i}.
+\]
+Define
+\[
+  H_i:=\Aut_{\G}(r_i),
+  \qquad
+  F_i:=S_\chi(r_i)^{H_i}
+      =\{x\in S_\chi(r_i):S_\chi(h)x=x\text{ for all }h\in H_i\},
+\]
+and
+\[
+  \Sel(\G):=\Nat(1_{\G},S_\chi).
+\]
+The complete machine-readable assumption ledger is stored beside this source.
+The representative and transport data can be replaced by any other supplied
+coordinates without changing the reconstructed selector: the difference is
+an automorphism that fixes the representative value.
+
+\section{Core classification, obstruction, and nonuniqueness}
+
+\begin{theorem}[Complete certified-core selector classification]
+\label{thm:classification}
+Evaluation at the supplied component representatives is a bijection
+\[
+  \operatorname{ev}:\Sel(\G)\xrightarrow{\;\cong\;}
+  \prod_{i\in I}F_i,
+  \qquad
+  \sigma\longmapsto (\sigma_{r_i})_{i\in I}.
+\]
+Its inverse sends \(x=(x_i)_{i\in I}\) to
+\[
+  \sigma^x_X:=S_\chi(\tau_X)(x_{[X]}).
+\]
+Consequently:
+\begin{enumerate}[label=(\alph*)]
+  \item \(\Sel(\G)=\varnothing\) if and only if
+        \(\prod_{i\in I}F_i=\varnothing\).
+  \item If any \(F_i\) is empty, no deterministic source-natural selector
+        exists on \(\G\).
+  \item If every \(F_i\) is nonempty, a selector exists exactly when a
+        product element (equivalently, a choice function for this family) is
+        available. Finite \(I\), a supplied choice tuple, or an explicitly
+        assumed suitable axiom of choice is sufficient.
+  \item \(\Sel(\G)\) has exactly one element if and only if every \(F_i\)
+        is a singleton.
+  \item \(\lvert\Sel(\G)\rvert\geq2\) if and only if there is an
+        \(i\in I\) with \(\lvert F_i\rvert\geq2\) and
+        \(\prod_{j\neq i}F_j\neq\varnothing\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+If \(\sigma:1_{\G}\Rightarrow S_\chi\) is natural and \(h\in H_i\),
+naturality at \(h:r_i\to r_i\) gives
+\(S_\chi(h)(\sigma_{r_i})=\sigma_{r_i}\). Thus evaluation lands in the
+stated product.
+
+Conversely, let \(x\in\prod_iF_i\) and define \(\sigma^x\) by the displayed
+formula. For any \(f:X\to Y\) in \(\G\), the two objects lie in one
+component \(i\), and
+\[
+  a:=\tau_Y^{-1}f\tau_X\in H_i.
+\]
+Since \(x_i\in F_i\),
+\[
+  S_\chi(f)\sigma^x_X
+  =S_\chi(f\tau_X)x_i
+  =S_\chi(\tau_Y a)x_i
+  =S_\chi(\tau_Y)x_i
+  =\sigma^x_Y.
+\]
+Hence \(\sigma^x\) is natural. At \(r_i\), the identity transport gives
+\(\sigma^x_{r_i}=x_i\). In the other direction, naturality of \(\sigma\)
+at \(\tau_X\) gives
+\(\sigma_X=S_\chi(\tau_X)(\sigma_{r_i})\). The two maps are inverse.
+
+Parts (a)--(c) follow from the bijection and the definition of a Cartesian
+product. This wording is deliberate: in ZF, arbitrary factorwise
+nonemptiness need not supply a product element. For (d), a product of
+singletons has its unique coordinatewise member. Conversely, if the product
+has one member, no factor is empty, and replacing one coordinate of that
+member by any other value shows that each factor is a singleton. For (e),
+two product tuples differ in some coordinate and either tuple supplies a
+member of the complementary product. Conversely, combine two distinct
+values in \(F_i\) with one complementary tuple.
+\end{proof}
+
+\begin{remark}[Exact scope of the fixed-point phrase]
+The unconditional obstruction is componentwise: one empty \(F_i\) kills the
+global product. The converse claim that no selector implies an empty fixed
+locus is valid for finite \(I\), under a supplied product element, or under
+a declared suitable choice principle; it is not asserted without that
+qualification. A multiple fixed locus alone also does not imply global
+multiplicity when another component has an empty fixed locus.
+\end{remark}
+
+\section{Relation-image theorem}
+
+Suppose the unchanged core also carries a functor \(E_A:\G\to\mathbf{Set}\)
+and a natural transformation \(K:S_\chi\Rightarrow E_A\). Define
+\[
+  K_*:\Sel(\G)\longrightarrow\Nat(1_{\G},E_A),
+  \qquad K_*(\sigma):=K\circ\sigma,
+\]
+and \(R_i:=K_{r_i}(F_i)\).
+
+\begin{theorem}[Relation-image uniqueness]
+\label{thm:kimage}
+The map \(K_*\) is well-defined. If \(\Sel(\G)\neq\varnothing\), then
+\(\lvert\Img K_*\rvert=1\) if and only if every \(R_i\) is a singleton.
+In particular, if some \(F_i\) contains two points with distinct
+\(K_{r_i}\)-images, then two global selectors induce different natural
+relation sections; a sufficient condition is that \(K_{r_i}\) is injective
+on a multiple fixed locus. If every \(R_i\) is a singleton, selector
+multiplicity is relation-level choice irrelevance rather than relation
+nonuniqueness.
+\end{theorem}
+
+\begin{proof}
+Naturality of \(K\) and \(\sigma\) makes their composite natural. Fix one
+global selector, hence one product tuple, as a baseline. If every \(R_i\) is
+a singleton, any two selector tuples have identical \(K\)-images at all
+representatives and therefore at all objects. Conversely, if
+\(K_{r_i}(x_i)\neq K_{r_i}(x_i')\) for two points of one \(F_i\), replace
+only the \(i\)-coordinate of the baseline tuple. Theorem
+\ref{thm:classification} reconstructs two selectors whose induced relation
+sections differ at \(r_i\).
+\end{proof}
+
+The theorem does not assert
+\(\Img K_*=\prod_iR_i\) for an arbitrary infinite family without the needed
+simultaneous fibre choices. Nor does it assert that every natural relation
+section lies in \(\Img K_*\). If \(\Sel(\G)=\varnothing\), its image is
+empty, not a uniquely selected relation.
+
+\section{Noninvertible-arrow coherence}
+
+\begin{theorem}[Full-category equalizer guard]
+\label{thm:equalizer}
+Assume, only conditionally, that \(S_\chi\) extends to a functor
+\(\overline S_\chi:\C\to\mathbf{Set}\) whose restriction to the wide core
+is \(S_\chi\). Then restriction is injective and identifies
+\(\Nat(1_{\C},\overline S_\chi)\) with the subset of
+\(\prod_iF_i\) satisfying
+\[
+  \overline S_\chi(f)
+  \bigl(S_\chi(\tau_X)x_{[X]}\bigr)
+  =S_\chi(\tau_Y)x_{[Y]}
+\]
+for every arrow \(f:X\to Y\) of \(\C\), including every noninvertible
+arrow. Thus core fixedness is necessary but need not be sufficient for
+full-category naturality.
+\end{theorem}
+
+\begin{proof}
+The core is wide, so restriction retains every object component and is
+injective. Theorem \ref{thm:classification} expresses each restricted
+selector through its representative tuple. Naturality for the remaining
+arrows is exactly the displayed family of equations, proving both inclusion
+and sufficiency.
+\end{proof}
+
+No \(K\)-claim is extended beyond the core without an explicitly declared
+noninvertible relation-transport law. P2-T01 did not adopt a neutral such law
+for arbitrary noninvertible maps.
+
+\section{Group actions and anonymous finite structures}
+
+\begin{corollary}[One-object group-action form]
+For a group \(G\), its one-object groupoid \(BG\), and a \(G\)-set \(D\),
+\[
+  \Nat(1_{BG},D)\cong D^G.
+\]
+Thus the categorical statement and the invariant-point statement are the
+same theorem in the one-object case.
+\end{corollary}
+
+\begin{corollary}[Transitive action]
+\label{cor:transitive}
+If a nonempty \(G\)-set \(D\) is transitive and \(|D|>1\), then
+\(D^G=\varnothing\), so no deterministic invariant point selector exists.
+A transitive singleton has exactly one selector.
+\end{corollary}
+
+\begin{proof}
+A fixed point has singleton orbit. Transitivity makes its orbit all of
+\(D\), contradicting \(|D|>1\).
+\end{proof}
+
+\begin{corollary}[Anonymous finite-structure form]
+Let \(X\) be a fixed finite source structure with no distinguished
+selector-relevant mark, and let its declared structural automorphism group
+act transitively on an eligible finite candidate set \(D_X\) with
+\(|D_X|>1\). No deterministic isomorphism-invariant point selector exists
+on that component.
+\end{corollary}
+
+This last statement is only about the declared structural action. It is not
+a distributed-computing leader-election theorem, a randomized-selection
+result, a dynamical no-go, an empirical claim, or a physical-gauge claim.
+
+\section{Bounded subsumption of prior obstructions}
+
+The following are direct finite instances of Corollary
+\ref{cor:transitive}; their full provenance-rich integration remains owned by
+P2-T04.
+\begin{enumerate}
+  \item \textbf{Orientation/line control.} \(\mathrm{GL}(2,2)\) has six
+        elements and acts transitively on the three one-dimensional subspaces
+        of \(\mathbb F_2^2\). The fixed locus is empty, so no invariant line
+        selector exists on that declared component.
+  \item \textbf{Directed four-cycle root control.} The four rotations of
+        \(C_4\) act transitively on four root choices. The fixed locus is
+        empty, so no natural root selector exists on the unmarked cycle.
+  \item \textbf{Untagged finite-toy sign/token control.} Sign reversal on
+        \(\{+1,-1\}\), and separately a nontrivial token swap on the two
+        corresponding token assignments, fixes the untagged source record
+        while exchanging every eligible response choice. Each fixed locus is
+        empty, so a no-new-source-data equivariant totalization is obstructed.
+\end{enumerate}
+A trivial two-choice action supplies the complementary nonuniqueness control:
+the fixed locus has two elements; an injective \(K\) yields two relation
+sections, whereas a constant \(K\) collapses them to one.
+
+\section{Exact limitations and Distance-to-GR status}
+
+The theorem does not prohibit prospectively declared source extensions,
+dynamical state selection, randomized selection or invariant probability
+measures, or quotient-level observables. A target-neutral extension may
+change an automorphism group or fixed locus, but it is new source-extension
+data and does not refute the theorem on the original domain. An extension
+that directly records the desired answer merely relocates the selection
+burden.
+
+No current-ontology derivation or adoption, physical gauge identification,
+family reopening or rejection, general \(EqSrc\) discharge, \(M_{\rm src}\)
+or \(g_{\rm eff}\) construction, matter coupling, Einstein-equation
+derivation, exact-GR recovery, benchmark promotion, Gate Chair verdict,
+publication authority, or completed derivation follows. P2-T06 owns the
+independent smuggling audit and P2-T07 owns the independent stress test.
+The target milestone remains \texttt{source\_equivalence\_eqsrc}; the result
+is a precise theorem-level obstruction with no Distance-to-GR ledger delta.
+
+\section*{Reference}
+
+Eilenberg, S., \& Mac Lane, S. (1945). General theory of natural
+equivalences. \emph{Transactions of the American Mathematical Society, 58},
+231--294. \url{https://doi.org/10.1090/S0002-9947-1945-0013131-6}
+
+\end{document}

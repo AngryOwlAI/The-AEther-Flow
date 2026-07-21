@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-21T03:20:07Z`
-- Source fingerprint: `dfeb758ffb842891bd6f629e34b7ffb9a40c8702d9525c1fb34bb157643dbd6e`
-- Nodes: `20031`
-- Edges: `68660`
+- Generated from tracked state as of: `2026-07-21T04:20:30Z`
+- Source fingerprint: `b62d03e930864dc22306362684ac590deb87db14223e61e890ec77a191d5a6b1`
+- Nodes: `20062`
+- Edges: `68726`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1016 |
+| `completion_yaml` | 1017 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 785 |
+| `handoff_yaml` | 786 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,17 +33,17 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1016 |
+| `agent_job` | `support_only` | 1017 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10422 |
-| `blocked_burden` | `blocked` | 3808 |
-| `claim_boundary` | `support_only` | 973 |
-| `draft_control_candidate` | `draft_control` | 650 |
-| `draft_control_candidate` | `proposal_only` | 107 |
+| `artifact` | `support_only` | 10433 |
+| `blocked_burden` | `blocked` | 3817 |
+| `claim_boundary` | `support_only` | 974 |
+| `draft_control_candidate` | `draft_control` | 654 |
+| `draft_control_candidate` | `proposal_only` | 108 |
 | `draft_control_candidate` | `science_draft` | 62 |
-| `frozen_negative` | `frozen_negative` | 121 |
+| `frozen_negative` | `frozen_negative` | 122 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 785 |
+| `handoff` | `support_only` | 786 |
 | `human_gated_object` | `human_gated` | 427 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
@@ -55,10 +55,10 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 32 |
 | `source_ontology_object` | `canonical_source` | 23 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 323 |
+| `source_ontology_object` | `support_only` | 324 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 955 |
+| `task` | `support_only` | 956 |
 
 ## Frontier Table
 
@@ -163,9 +163,9 @@ Authority notice: This generated dependency graph is navigational support only. 
 
 ## Route Continuity
 
-- Active task: `RT-20260720-015`
-- Latest handoff: `handoff-0785`
-- Handoff path: `research_control/handoffs/handoff-0785.yaml`
-- Next action: Run exactly one bounded v21 P2-T03 Ontology Formalizer ontology-law-research-packet stating and proving the complete no-selector and nonuniqueness theorem with explicit global component and K-image quantifiers. Preserve P2-T06 audit and P2-T07 stress ownership; do not alter the P2-T01 domain after observing an outcome, infer physical gauge meaning, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
+- Active task: `RT-20260720-016`
+- Latest handoff: `handoff-0786`
+- Handoff path: `research_control/handoffs/handoff-0786.yaml`
+- Next action: Run exactly one bounded v21 P2-T04 Candidate Constructor ontology-law-research-packet integrating the historical finite countermodels under the P2-T03 theorem while preserving each source artifact, scope, negative-result provenance, and the distinction between direct theorem instance and non-instance. Preserve P2-T05 proof encoding, P2-T06 audit, and P2-T07 stress ownership; do not alter the P2-T01 domain, infer physical gauge, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

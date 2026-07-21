@@ -1,0 +1,45 @@
+schema_id: "EQSRC-NO-SELECTOR-NONUNIQUENESS-COROLLARY-LIST-V1"
+theorem_id: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+task_id: "RT-20260720-016"
+status: "draft/control"
+corollaries:
+  - corollary_id: "NS-C01"
+    name: "empty_fixed_component_obstruction"
+    statement: "If one representative fixed locus F_i is empty, the global deterministic source-natural selector space is empty."
+    assumptions: ["NS-A01", "NS-A02", "NS-A03", "NS-A07", "NS-A08"]
+  - corollary_id: "NS-C02"
+    name: "globally_qualified_nonuniqueness"
+    statement: "If one F_i has at least two elements and the complementary product is nonempty, at least two global selectors exist."
+    assumptions: ["NS-A01", "NS-A02", "NS-A03", "NS-A07", "NS-A08"]
+  - corollary_id: "NS-C03"
+    name: "relation_image_nonuniqueness"
+    statement: "Distinct K-images in a multiple F_i plus a complementary product yield distinct induced natural relation sections."
+    assumptions: ["NS-A01", "NS-A02", "NS-A03", "NS-A05", "NS-A07", "NS-A08"]
+  - corollary_id: "NS-C04"
+    name: "relation_level_choice_irrelevance"
+    statement: "When a selector exists and every component image K_i(F_i) is a singleton, all selectors induce the same relation section."
+    assumptions: ["NS-A01", "NS-A02", "NS-A03", "NS-A05", "NS-A07", "NS-A08"]
+  - corollary_id: "NS-C05"
+    name: "one_object_group_action_equivalence"
+    statement: "For a G-set D, natural selectors on BG are exactly invariant elements D^G."
+    assumptions: ["NS-A01", "NS-A02", "NS-A07"]
+  - corollary_id: "NS-C06"
+    name: "transitive_action_obstruction"
+    statement: "A transitive action on more than one candidate has empty fixed locus and no deterministic invariant point selector."
+    assumptions: ["NS-A01", "NS-A02", "NS-A07", "NS-A09"]
+  - corollary_id: "NS-C07"
+    name: "anonymous_finite_structure_obstruction"
+    statement: "A declared structural automorphism group acting transitively on more than one eligible candidate of an unmarked finite structure forbids a deterministic isomorphism-invariant point selector."
+    assumptions: ["NS-A01", "NS-A02", "NS-A07", "NS-A08", "NS-A09"]
+  - corollary_id: "NS-C08"
+    name: "full_category_equalizer_guard"
+    statement: "Full-category selectors are exactly core selector tuples satisfying every declared noninvertible-arrow coherence equation."
+    assumptions: ["NS-A01", "NS-A02", "NS-A03", "NS-A06", "NS-A07", "NS-A08"]
+corollary_count: 8
+blocked_extensions:
+  - "randomized selection"
+  - "dynamical state selection"
+  - "quotient-level observable selection"
+  - "physical gauge identification"
+  - "general EqSrc discharge"
+physics_promotion_authorized: false

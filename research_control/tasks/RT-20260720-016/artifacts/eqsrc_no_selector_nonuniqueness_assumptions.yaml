@@ -1,0 +1,68 @@
+schema_id: "EQSRC-NO-SELECTOR-NONUNIQUENESS-ASSUMPTION-LEDGER-V1"
+theorem_id: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+task_id: "RT-20260720-016"
+status: "draft/control"
+assumptions:
+  - assumption_id: "NS-A01"
+    statement: "G_Sigma is the unchanged small wide certified-isomorphism core fixed by P2-T01."
+    status: "declared_proposal_input"
+    used_for: ["all_core_theorems"]
+    source: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+    consequence_if_removed: "The component and automorphism classification has no fixed domain."
+  - assumption_id: "NS-A02"
+    statement: "S_chi:G_Sigma->Set is the unchanged covariant eligible-choice functor."
+    status: "declared_proposal_input"
+    used_for: ["fixed_loci", "selector_space", "reconstruction"]
+    source: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+    consequence_if_removed: "No natural selector or group action is typed."
+  - assumption_id: "NS-A03"
+    statement: "I=pi_0(G_Sigma) is a set and one representative r_i plus certified transports tau_X:r_i->X are supplied as proof coordinates."
+    status: "declared_proof_coordinate"
+    used_for: ["product_bijection", "inverse_formula"]
+    source: "this_packet"
+    consequence_if_removed: "Use a skeleton-equivalent formulation; no source mark or selector datum may be inferred."
+  - assumption_id: "NS-A04"
+    statement: "For the converse from factorwise nonemptiness to global existence, I is finite, a product tuple is supplied, or a suitable choice principle is explicitly assumed."
+    status: "conditional_set_theoretic_assumption"
+    used_for: ["factorwise_existence_converse"]
+    source: "this_packet"
+    consequence_if_removed: "Retain only Sel empty iff the Cartesian product is empty and the one-way empty-factor obstruction."
+  - assumption_id: "NS-A05"
+    statement: "The core relation interface consists of a functor E_A and natural transformation K:S_chi=>E_A."
+    status: "conditional_declared_proposal_input"
+    used_for: ["K_image_theorem"]
+    source: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+    consequence_if_removed: "Selector classification remains, but no induced-relation claim is typed."
+  - assumption_id: "NS-A06"
+    statement: "Any full-category result additionally assumes a specified functor extension over every noninvertible arrow."
+    status: "conditional_extension_assumption"
+    used_for: ["full_category_equalizer"]
+    source: "this_packet"
+    consequence_if_removed: "Only the certified-core theorem remains."
+  - assumption_id: "NS-A07"
+    statement: "A selector is deterministic, total on the declared domain, and point-valued."
+    status: "definition_scope"
+    used_for: ["all_no_selector_claims"]
+    source: "research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex"
+    consequence_if_removed: "Randomized, partial, dynamical, or quotient-valued rules are outside the theorem."
+  - assumption_id: "NS-A08"
+    statement: "Objects, arrows, eligibility, actions, and K are fixed before evaluating selector existence or uniqueness."
+    status: "claim_boundary"
+    used_for: ["domain_integrity"]
+    source: "research_control/handoffs/handoff-0785.yaml"
+    consequence_if_removed: "Post-selection domain engineering can trivialize the theorem and is forbidden."
+  - assumption_id: "NS-A09"
+    statement: "Automorphisms are structural symmetries of the proposal signature only."
+    status: "interpretation_boundary"
+    used_for: ["all_corollaries"]
+    source: "research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex"
+    consequence_if_removed: "No physical gauge interpretation is licensed."
+  - assumption_id: "NS-A10"
+    statement: "Current ontology does not derive or adopt the category, selector interface, K map, proof coordinates, or added source data."
+    status: "proposal_only_boundary"
+    used_for: ["adoption_status", "distance_to_gr"]
+    source: "ontology/tex/aether_flow_foundations.tex"
+    consequence_if_removed: "A separate human-gated ontology decision and proof would be required."
+assumption_count: 10
+ontology_modification_authorized: false
+physics_promotion_authorized: false

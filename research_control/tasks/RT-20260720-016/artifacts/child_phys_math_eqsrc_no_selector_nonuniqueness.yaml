@@ -1,0 +1,43 @@
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260720-016"
+plan_task_id: "P2-T03"
+theorem_id: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+status: "completed"
+claim_status: "draft/control"
+review_disposition: "PASS_WITH_REQUIRED_GLOBAL_QUANTIFIERS"
+findings:
+  - finding_id: "PM-P2T03-001"
+    result: "With supplied component representatives and transports, evaluation gives Sel_G isomorphic to the Cartesian product of representative fixed loci."
+    proof_step: "The inverse sigma_X=S(tau_X)x_[X] is natural because tau_Y^-1 f tau_X is an automorphism fixing x_[X]."
+  - finding_id: "PM-P2T03-002"
+    result: "Sel_G is empty exactly when the Cartesian product is empty; an empty factor is always sufficient."
+    boundary: "The converse from all factors nonempty requires finite indexing, a supplied product tuple, or an explicit suitable choice principle."
+  - finding_id: "PM-P2T03-003"
+    result: "Global multiplicity is equivalent to one multiple factor plus a nonempty complementary product."
+    boundary: "A local multiple fixed locus alone does not imply any global selector."
+  - finding_id: "PM-P2T03-004"
+    result: "K_* maps global selectors to natural relation sections, and component K-images determine whether selector multiplicity survives at relation level once a baseline selector exists."
+    boundary: "Do not identify the global image with a product of component images without simultaneous fibre choices."
+  - finding_id: "PM-P2T03-005"
+    result: "If S extends beyond the core, full-category selectors form the equalizer subset satisfying every noninvertible-arrow equation."
+    boundary: "Core fixedness is not full-category sufficiency."
+edge_controls:
+  - "empty groupoid has one vacuous selector"
+  - "multiple fixed component plus empty fixed component has no global selector"
+  - "trivial two-choice action with injective and constant K"
+  - "two core assignments reduced to one by a noninvertible arrow"
+  - "transitive singleton is the exception to the transitive-action obstruction"
+prior_obstruction_subsumption:
+  - "GL(2,2) acts transitively on three lines, so the fixed locus is empty"
+  - "C4 rotations act transitively on four roots, so the fixed locus is empty"
+  - "finite-toy sign reversal and token swap exchange all response choices"
+claim_boundary:
+  proposal_only: true
+  source_extension_data: true
+  adoption_status: "blocked_adoption_open_continuation"
+  p2_t01_domain_changed: false
+  structural_automorphisms_identified_as_physical_gauge: false
+  general_EqSrc_discharged: false
+  physics_promotion_authorized: false
+unresolved_blocking_findings: []
