@@ -1,0 +1,22 @@
+task_id: "RT-20260720-013"
+review_id: "PCR-V21-P1-T05-EQSRC-NATURALITY-LITERATURE-V1"
+status: "resolved"
+resolution_rounds: 1
+inputs:
+  - "research_control/tasks/RT-20260720-013/artifacts/child_phys_math_eqsrc_naturality_literature_review.yaml"
+  - "research_control/tasks/RT-20260720-013/artifacts/child_phys_phil_eqsrc_naturality_literature_review.yaml"
+conflicts:
+  - conflict_id: "C01"
+    issue: "Whether local slice existence should be recorded as a selector construction route."
+    resolution: "Record it only as a local tool candidate; require a separate global-section or gluing theorem."
+  - conflict_id: "C02"
+    issue: "Whether anonymous leader-election impossibility is a general fixed-point theorem for EqSrc."
+    resolution: "Retain it as a model-specific obstruction analogue until exact source-category hypotheses are proved."
+  - conflict_id: "C03"
+    issue: "Whether quotient reduction or Tannaka reconstruction eliminates the need for source-law derivation."
+    resolution: "No. Both routes require independently derived actions, invariants, or enriched data."
+unresolved_conflicts: []
+selected_route:
+  plan_task_id: "P2-T01"
+  rationale: "Every reusable branch first needs an exact source category, admissible morphisms, and automorphism actions."
+claim_boundary: "Established literature results remain scoped to their own hypotheses and are not project proofs, ontology authority, physical covariance, or promotion evidence."

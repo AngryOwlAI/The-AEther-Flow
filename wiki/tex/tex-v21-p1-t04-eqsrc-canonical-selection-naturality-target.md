@@ -18,6 +18,7 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Generated output path: `wiki/tex/tex-v21-p1-t04-eqsrc-canonical-selection-naturality-target.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-RECEIPT` `research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_receipt.md`
 - Backlink from `MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-PARENT-FUSION-NOTES-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `research_control/tasks/RT-20260720-012/artifacts/parent_fusion_notes_eqsrc_canonical_selection_naturality_target.md`
+- Backlink from `MD-V21-P1-T05-EQSRC-NATURALITY-PRIMARY-LITERATURE-REVIEW` `research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md`
 
 ## Validation
 

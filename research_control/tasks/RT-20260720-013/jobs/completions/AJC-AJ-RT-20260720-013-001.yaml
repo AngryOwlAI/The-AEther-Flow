@@ -1,0 +1,410 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260720-013-001"
+completion_id: "AJC-AJ-RT-20260720-013-001"
+task_id: "RT-20260720-013"
+task_type: "v21_eqsrc_naturality_primary_literature_review"
+decision_id: "DDR-20260720-013"
+role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260720-013"
+status: "completed"
+created_at: "2026-07-21T01:17:33Z"
+started_at: "2026-07-21T01:18:02Z"
+completed_at: "2026-07-21T01:24:43Z"
+objective: "Execute only v21 P1-T05: compare bounded primary literature with the registered EqSrc naturality target and select the narrowest P2 proof route."
+completion_summary: "P1-T05 compares eight primary sources through exact hypothesis, established conclusion, reuse class, required AEther-Flow adaptation, and forbidden-overread fields. It separates formal naturality, anonymous-election obstruction, added symmetry-breaking resources, local slices, global gauge obstruction, quotient reduction, physical spontaneous breaking, and representation-based reconstruction. The result selects P2-T01 because every reusable branch first requires an exact source category, admissible morphisms, and automorphism actions. Literature resemblance is not project proof; no selector, ontology edit, ledger delta, promotion, or publication is authorized."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T05"
+  recommendation_ids:
+    - "V21-R03"
+    - "V21-R06"
+    - "V21-R07"
+    - "V21-R30"
+    - "V21-R68"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+  next_dependency_work_item: "P2-T01"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 13
+  passes_consumed: 13
+  route_work_item_id: "P1-T05"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "attack_fixture"
+minimum_payload:
+  payload_class: "attack_fixture"
+  payload_artifact_path: "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md"
+  payload_summary: "Eight-source adversarial literature fixture maps exact adjacent theorems to reusable structure, required adaptation, and blocked overreads, then selects P2-T01 without claiming a project proof."
+has_new_mathematical_payload: false
+has_finite_local_witness: false
+has_countermodel: false
+external_red_team_finding_requires_integration: true
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260720-013/artifacts/child_phys_math_eqsrc_naturality_literature_review.yaml"
+  - "research_control/tasks/RT-20260720-013/artifacts/child_phys_phil_eqsrc_naturality_literature_review.yaml"
+  - "research_control/tasks/RT-20260720-013/artifacts/parent_conflict_review_eqsrc_naturality_literature_review.yaml"
+  - "research_control/tasks/RT-20260720-013/artifacts/parent_fusion_notes_eqsrc_naturality_literature_review.md"
+  - "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md"
+  - "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_bibliography.yaml"
+  - "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_claim_comparison_matrix.csv"
+  - "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_receipt.md"
+  - "research_control/tasks/RT-20260720-013/artifacts/validate_eqsrc_naturality_primary_literature.py"
+  - "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_validation.json"
+output_paths:
+  - "research_control/tasks/RT-20260720-013/**"
+  - "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md"
+  - "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_bibliography.yaml"
+  - "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_claim_comparison_matrix.csv"
+  - "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_receipt.md"
+  - "research_control/handoffs/handoff-0783.yaml"
+  - "research_control/handoffs/handoff-0783.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  literature_review:
+    path: "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md"
+    sha256: "0206681a534ce7470175630beb0aee05c487c5bacc4114b35a436961c04eed74"
+  bibliography:
+    path: "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_bibliography.yaml"
+    sha256: "f8af576abd78d9ebd9c6f82071865ac55ccbd0bc45995fbc5d4e7e8e59b132e8"
+  comparison_matrix:
+    path: "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_claim_comparison_matrix.csv"
+    sha256: "f2a92d0754842eea20f9612254083cdde73911fcb7c18bb3348c4a60db25475f"
+  validation:
+    path: "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_validation.json"
+    sha256: "f6113a3fd3ccdef6d9e9bfef3a34453fd3ca98039c160ef2becd2bf998c29b00"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260720-013/artifacts/parent_fusion_notes_eqsrc_naturality_literature_review.md"
+    sha256: "ea2cf26879f312a8a6981f67af79e2a4459a2ff87f394b1fe1e77958c4d53558"
+  receipt:
+    path: "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_receipt.md"
+    sha256: "231b73b7dc310b20a8f77e16e5bada0edd2f16bacd08677cffb375ad0a3df862"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260720-013/artifacts/child_phys_math_eqsrc_naturality_literature_review.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260720-013/artifacts/child_phys_phil_eqsrc_naturality_literature_review.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260720-013/artifacts/parent_conflict_review_eqsrc_naturality_literature_review.yaml"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+    summary: "The parent retained local slices as local tools, anonymous-election results as model-specific analogues, and quotient or reconstruction routes as requiring independently derived source structure."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md"
+    fusion_notes_path: "research_control/tasks/RT-20260720-013/artifacts/parent_fusion_notes_eqsrc_naturality_literature_review.md"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+literature_review_result:
+  review_id: "EQSRC-NATURALITY-PRIMARY-LITERATURE-REVIEW-V1"
+  status_label: "draft/control"
+  established_literature_source_count: 8
+  claim_comparison_row_count: 8
+  terminology_conflict_count: 5
+  source_ids:
+    - "EML-1945-NATURAL-EQUIVALENCES"
+    - "ANGLUIN-1980-ANONYMOUS-NETWORKS"
+    - "ITAI-RODEH-1981-SYMMETRY-BREAKING"
+    - "PALAIS-1961-SLICES"
+    - "SINGER-1978-GRIBOV"
+    - "MARSDEN-WEINSTEIN-1974-REDUCTION"
+    - "GOLDSTONE-SALAM-WEINBERG-1962-BROKEN-SYMMETRIES"
+    - "TANNAKA-1939-DUALITY"
+  reusable_results:
+    - "category functor and mapping-wise naturality vocabulary"
+    - "symmetry and explicit added-resource classification"
+    - "local-slice versus global-section separation"
+    - "topology-dependent global gauge obstruction pattern"
+    - "quotient-first invariant construction route"
+    - "enriched invariant-data reconstruction route"
+  project_adaptations_required:
+    - "define the exact source category and admissible morphisms"
+    - "derive automorphism actions and any broader noninvertible maps"
+    - "separate selector existence from relation-image uniqueness"
+    - "prove topology regularity gluing or global obstruction hypotheses when invoked"
+    - "derive any state dynamics randomness orientation or representation data rather than importing it"
+  novel_project_obligations_remaining:
+    - "the broader source-natural selector theorem"
+    - "current-ontology derivation of the selector package"
+    - "variation robustness and physical admissibility"
+    - "general EqSrc discharge"
+  direct_project_proof_created: false
+  ontology_authority_created: false
+  proof_authority: false
+
+external_red_team_result:
+  workflow_success_disregarded_as_scientific_evidence: true
+  validator_success_disregarded_as_scientific_evidence: true
+  registry_role_and_handoff_authority_disregarded_as_scientific_evidence: true
+  finding_requires_integration: true
+  exact_finding: "The P1-T04 target is not redundant with one established theorem. Its reusable components split across naturality, operational symmetry, local slices, global section obstruction, quotient reduction, physical state breaking, and enriched reconstruction, each with incompatible extra hypotheses."
+  narrowest_repair_or_continuation: "P2-T01 must define the source category, admissible morphisms, and automorphism actions before any general proof attempt."
+  countermodel_status: "not_constructed_in_literature_scope"
+  not_enough_assumptions_result: "Current project records do not yet derive the topology, action, information, state, dynamics, or enriched invariant data needed to instantiate the adjacent source theorems."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260720-013-001"
+    payload_type: "dependency_map_update"
+    object_name: "Eight-source exact-hypothesis literature comparison"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md"
+    burden_effect: "audits"
+    summary: "Separates direct formal reuse, model-specific analogues, topology-dependent obstructions, and added-structure routes without importing their conclusions."
+  - payload_id: "PAYLOAD-RT-20260720-013-002"
+    payload_type: "packet_selection"
+    object_name: "P2-T01 exact source-category formalization route"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260720-013/artifacts/parent_fusion_notes_eqsrc_naturality_literature_review.md"
+    burden_effect: "selects_next"
+    summary: "Selects exact source objects morphisms and automorphism actions as the common missing prerequisite for all four proof branches."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Ground the general theorem route in existing mathematics and avoid reinventing or overstating known results."
+  explanation: "P1-T05 creates a bounded literature basis and selects the source-category formalization route, but it neither derives nor adopts the selector package and does not discharge general EqSrc."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "literature_basis_only"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "draft object exists"
+  new_status: "draft object exists"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A primary-literature basis and route selection do not derive or adopt the selector package or discharge general EqSrc."
+  downstream_unlocked:
+    - "P2-T01 source-category formalization only"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "The authoritative Distance-to-GR and metric-use ledgers remain unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; source category morphisms actions selector and variations remain underived"
+  - burden: "Source equivalence EqSrc"
+    status: "literature basis completed; general EqSrc remains undischarged"
+  - burden: "M_src g_eff matter coupling Einstein equations and benchmark promotion"
+    status: "unchanged and blocked"
+
+route_cycle_control:
+  cycle_family: "eqsrc_selector_candidate_family"
+  current_cycle_step: "p1_t05_primary_literature_basis_completed_p2_t01_selected"
+  prior_related_tasks:
+    - "RT-20260718-027 through RT-20260718-047"
+    - "RT-20260720-009 through RT-20260720-013"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "P1-T05 changes the evidence mode from candidate or theorem-target construction to eight-source primary-literature comparison and identifies the exact source-category prerequisite shared by four distinct proof branches."
+  next_role_consequence: "ontology-formalizer@0.2.0 for v21 P2-T01"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "EQSRC-SELECTOR-CANDIDATE-FAMILY"
+  candidate_freeze_label: "EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+  prior_attempts_considered:
+    - "five stable families and seven immutable candidates in P1-T03"
+    - "the P1-T04 common target and groupoid criterion"
+    - "the P1-T05 eight-source literature basis"
+  freeze_if:
+    - "Later work repeats analogy-only literature comparison without defining or proving new source-category structure."
+    - "P2 formalization merely renames a frozen distinguished choice."
+  do_not_freeze_if:
+    - "P2-T01 defines auditable source objects morphisms and automorphism actions without importing a preferred selector."
+  freeze_decision: "not_frozen"
+  decision_reason: "The literature review identifies a materially narrower non-orbital prerequisite: exact source-category and action definitions before theorem proof."
+  rationale: "The route advances to P2-T01 while every exact candidate-family freeze remains unchanged."
+  status_update_path: "research_control/program_state.yaml"
+  exact_prior_route_freeze_preserved: true
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+  next_allowed_route: "source_category_formalization"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  summary: "The literature basis narrows the next proof route but creates no project proof, selector, ontology authority, scientific-ledger delta, general EqSrc discharge, or downstream promotion."
+  forbidden_conclusions:
+    - "literature analogy as the AEther-Flow selector theorem"
+    - "preferred selector constructed or current-ontology derived"
+    - "local slice as a global natural representative"
+    - "Singer obstruction as a universal EqSrc no-go"
+    - "randomness state or representation data as source-derived without proof"
+    - "frozen family reopened rejected or globally impossible"
+    - "global theory rejection or future source-extension impossibility"
+    - "canonical ontology edit or source-law adoption or rejection"
+    - "physical admissibility covariance or empirical meaning established"
+    - "general EqSrc discharge"
+    - "M_src g_eff matter coupling or Einstein-equation derivation"
+    - "Distance-to-GR or metric-use ledger change"
+    - "benchmark promotion Gate Chair verdict publication or completed derivation"
+
+selected_next_route:
+  route_id: "v21_p2_t01_eqsrc_source_category_formalization"
+  route_label: "ontology-law-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P2-T01"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Supply the missing formal domain for the selector theorem."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  next_action: "Define the exact source category, admissible morphisms, and automorphism actions before attempting the broader selector theorem."
+  source_handoff: "research_control/handoffs/handoff-0783.yaml"
+
+validation_summary:
+  aggregate_status: "PASS"
+  task_local_validator_status: "PASS"
+  task_local_check_count: 21
+  primary_source_count: 8
+  comparison_matrix_row_count: 8
+  apa7_source_scope_status: "PASS"
+  parent_child_synthesis_status: "PASS"
+  claim_boundary_status: "PASS"
+  distance_to_gr_ledger_unchanged: true
+  metric_use_ledger_unchanged: true
+  canonical_ontology_unchanged: true
+  generated_derivatives_non_authority: true
+  physics_promotion_authorized: false
+  proof_authority: false
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_admissibility_claim_authorized: false
+  general_EqSrc_discharge_authorized: false
+  M_src_adoption_authorized: false
+  matter_coupling_derivation_authorized: false
+  einstein_equation_derivation_authorized: false
+  Gate_Chair_verdict_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 13 lease parity, immutable route identity, max reasoning effort, repository binding, clean start, predecessor checkpoint, and single consumption were verified before work."
+      - "The memory preflight refreshed local retrieval and the registered P1-T04 theorem target plus source-registry row were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required perspectives completed and five terminology-transfer conflicts were resolved in one parent review round."
+      - "The task-local validator passes all 21 source-scope, APA-locator, comparison-parity, immutable-hash, synthesis, ledger, and claim-boundary checks."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Repository validation, documentation impact, signal parity, generated freshness, and whitespace checks remain required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains to run after stable completed-state validation."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, and claim graph remain to be regenerated and checked."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory bootstrap and validate-only remain required after source registration."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 921
+    relationship_row_count: 4563
+    semantic_row_count: 921
+    vault_row_count: 921
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    before_local_cache_only_warning_count: 9
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py --json lookup TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+      query_type: "lookup"
+      query_text: "TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+      returned_object_ids:
+        - "TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+  canonical_inspections:
+    - object_id: "TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex"
+      source_hash: "c5aaaa70f4d7ce216a35d17af674e94e3f2866c1bdcfb28787a40d9f6636516c"
+  authority_note: "Generated Obsidian wiki semantic SQLite and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core validation passed and nine local-cache-only freshness warnings were refreshed to a clean local retrieval state."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py --json lookup TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET"
+    status: "PASS"
+    summary: "Resolved and inspected the registered P1-T04 theorem target and its TeX source-registry row."
+  - command: ".venv/bin/python -m py_compile research_control/tasks/RT-20260720-013/artifacts/validate_eqsrc_naturality_primary_literature.py"
+    status: "PASS"
+    summary: "The task-local validator compiled successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260720-013/artifacts/validate_eqsrc_naturality_primary_literature.py --write-report --json"
+    status: "PASS"
+    summary: "Passed 21 of 21 checks across eight primary sources, APA locator metadata, topic coverage, comparison parity, synthesis, immutable source hashes, both ledgers, and ontology preservation."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  rationale: "The result is a scientific literature basis and proof-route decision, not a project-system defect."

@@ -454,6 +454,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-011-PARENT-FUSION-NOTES-EQSRC-CANONICAL-CHOICE-FAMILY-FREEZE` `research_control/tasks/RT-20260720-011/artifacts/parent_fusion_notes_eqsrc_canonical_choice_family_freeze.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-RECEIPT` `research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-PARENT-FUSION-NOTES-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `research_control/tasks/RT-20260720-012/artifacts/parent_fusion_notes_eqsrc_canonical_selection_naturality_target.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-013-EQSRC-NATURALITY-PRIMARY-LITERATURE-RECEIPT` `research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_receipt.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260720-013-PARENT-FUSION-NOTES-EQSRC-NATURALITY-LITERATURE-REVIEW` `research_control/tasks/RT-20260720-013/artifacts/parent_fusion_notes_eqsrc_naturality_literature_review.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -524,6 +526,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V12-P4-T02-SOURCE-EXTENSION-MINIMIZATION-TARGET` `research_control/tasks/RT-20260629-044/artifacts/source_extension_minimization_target_v1.md`
 - `MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3` `research_control/tasks/RT-20260718-012/artifacts/v20_goal_relay_execution_policy.md`
 - `MD-V20-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/tasks/RT-20260718-011/artifacts/v20_recommendation_backlog_schema.md`
+- `MD-V21-P1-T05-EQSRC-NATURALITY-PRIMARY-LITERATURE-REVIEW` `research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## wiki_markdown
@@ -975,6 +978,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-011-PARENT-FUSION-NOTES-EQSRC-CANONICAL-CHOICE-FAMILY-FREEZE` `wiki/markdown/md-research-control-tasks-rt-20260720-011-parent-fusion-notes-eqsrc-canonical-choice-family-freeze.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-012-eqsrc-canonical-selection-naturality-target-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-012-PARENT-FUSION-NOTES-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `wiki/markdown/md-research-control-tasks-rt-20260720-012-parent-fusion-notes-eqsrc-canonical-selection-naturality-target.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-013-EQSRC-NATURALITY-PRIMARY-LITERATURE-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-013-eqsrc-naturality-primary-literature-receipt.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-013-PARENT-FUSION-NOTES-EQSRC-NATURALITY-LITERATURE-REVIEW` `wiki/markdown/md-research-control-tasks-rt-20260720-013-parent-fusion-notes-eqsrc-naturality-literature-review.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1045,4 +1050,5 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V12-P4-T02-SOURCE-EXTENSION-MINIMIZATION-TARGET` `wiki/markdown/md-v12-p4-t02-source-extension-minimization-target.md`
 - `WIKI-MD-V20-GOAL-RELAY-EXECUTION-POLICY-V3` `wiki/markdown/md-v20-goal-relay-execution-policy-v3.md`
 - `WIKI-MD-V20-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-v20-recommendation-backlog-schema.md`
+- `WIKI-MD-V21-P1-T05-EQSRC-NATURALITY-PRIMARY-LITERATURE-REVIEW` `wiki/markdown/md-v21-p1-t05-eqsrc-naturality-primary-literature-review.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`

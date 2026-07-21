@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-012` and `handoff-0782`.
+`RT-20260720-013` and `handoff-0783`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-012` |
-| Latest handoff ID | `handoff-0782` |
-| Current status | `v21_p1_t04_eqsrc_canonical_selection_target_audit_ready_groupoid_component_criterion_proved_general_target_open_p1_t05_selected_no_promotion` |
+| Active task ID | `RT-20260720-013` |
+| Latest handoff ID | `handoff-0783` |
+| Current status | `v21_p1_t05_eqsrc_naturality_primary_literature_basis_completed_p2_t01_selected_no_project_proof_or_promotion` |
 | V16 completed | false |
-| Current route family | v21 p1 t05 eqsrc naturality primary literature review |
+| Current route family | v21 p2 t01 eqsrc source category formalization |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: draft object exists |
-| Required next authority | One P1-T05 External Red-Team Reviewer packet may acquire and compare bounded primary literature, record exact hypotheses and conclusions, and recommend a P2 proof route without adopting project ontology or treating analogy as proof. |
-| Next recommended action | Run exactly one bounded v21 P1-T05 External Red-Team Reviewer external-primary-literature-packet comparing established results on naturality, symmetry, equivariant selection, anonymous leader election, gauge choice, quotient construction, and canonical reconstruction with the registered theorem target. Do not treat analogy as proof, reopen a frozen family, edit ontology, change scientific ledgers, promote, or execute another v21 item in the same task. |
+| Required next authority | One P2-T01 Ontology Formalizer packet may define source objects, admissible morphisms, and automorphism actions in target-neutral source-side notation while preserving every literature transfer limit and freeze. |
+| Next recommended action | Run exactly one bounded v21 P2-T01 Ontology Formalizer ontology-law-research-packet defining the source category, admissible morphisms, and automorphism actions. Do not treat the P1-T05 literature as proof, construct or import a preferred selector, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-012` |
-| Latest research handoff ID | `handoff-0782` |
-| Latest research next action | Run exactly one bounded v21 P1-T05 External Red-Team Reviewer external-primary-literature-packet comparing established results on naturality, symmetry, equivariant selection, anonymous leader election, gauge choice, quotient construction, and canonical reconstruction with the registered theorem target. Do not treat analogy as proof, reopen a frozen family, edit ontology, change scientific ledgers, promote, or execute another v21 item in the same task. |
+| Latest research task ID | `RT-20260720-013` |
+| Latest research handoff ID | `handoff-0783` |
+| Latest research next action | Run exactly one bounded v21 P2-T01 Ontology Formalizer ontology-law-research-packet defining the source category, admissible morphisms, and automorphism actions. Do not treat the P1-T05 literature as proof, construct or import a preferred selector, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-012/00_TASK.yaml`.
-- Active task objective: Execute exactly one bounded v21 P1-T04 Ontology Formalizer packet that writes the proposal-neutral EqSrc canonical-selection theorem target, notation glossary, prior-countermodel map, finite controls, and exact claim boundary.
-- Latest handoff path: `research_control/handoffs/handoff-0782.yaml`.
-- Latest handoff summary: RT-20260720-012 completed only v21 P1-T04. It registered EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET-V1, proved the groupoid component fixed-point criterion, separated five result branches, supplied five finite controls, and mapped five frozen candidate families with live source-hash parity. The broader theorem remains open, no preferred selector was constructed, and neither scientific ledger changed.
-- Current route family: v21 p1 t05 eqsrc naturality primary literature review.
-- Next recommended action: Run exactly one bounded v21 P1-T05 External Red-Team Reviewer external-primary-literature-packet comparing established results on naturality, symmetry, equivariant selection, anonymous leader election, gauge choice, quotient construction, and canonical reconstruction with the registered theorem target. Do not treat analogy as proof, reopen a frozen family, edit ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
+- Active task path: `research_control/tasks/RT-20260720-013/00_TASK.yaml`.
+- Active task objective: Execute exactly one bounded v21 P1-T05 External Red-Team Reviewer packet that compares primary literature on naturality, symmetry, anonymous election, gauge choice, quotient construction, spontaneous symmetry breaking, and canonical reconstruction with the registered EqSrc target.
+- Latest handoff path: `research_control/handoffs/handoff-0783.yaml`.
+- Latest handoff summary: RT-20260720-013 completed only v21 P1-T05. It compared eight primary sources through exact hypotheses, conclusions, reuse classes, required AEther-Flow adaptations, and forbidden overreads; controlled five terminology conflicts; and selected P2-T01. Literature resemblance was not treated as project proof, no selector was constructed, every exact candidate-family freeze remains in force, and neither scientific ledger changed.
+- Current route family: v21 p2 t01 eqsrc source category formalization.
+- Next recommended action: Run exactly one bounded v21 P2-T01 Ontology Formalizer ontology-law-research-packet defining the source category, admissible morphisms, and automorphism actions. Do not treat the P1-T05 literature as proof, construct or import a preferred selector, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P1-T05 External Red-Team Reviewer external-primary-literature-packet comparing established results on naturality, symmetry, equivariant selection, anonymous leader election, gauge choice, quotient construction, and canonical reconstruction with the registered theorem target. Do not treat analogy as proof, reopen a frozen family, edit ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
+Run exactly one bounded v21 P2-T01 Ontology Formalizer ontology-law-research-packet defining the source category, admissible morphisms, and automorphism actions. Do not treat the P1-T05 literature as proof, construct or import a preferred selector, reopen a frozen family, edit or adopt ontology, change scientific ledgers, promote, or execute another v21 item in the same task.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-012`;
-- latest handoff: `handoff-0782`;
-- current status: `v21_p1_t04_eqsrc_canonical_selection_target_audit_ready_groupoid_component_criterion_proved_general_target_open_p1_t05_selected_no_promotion`;
+- active task: `RT-20260720-013`;
+- latest handoff: `handoff-0783`;
+- current status: `v21_p1_t05_eqsrc_naturality_primary_literature_basis_completed_p2_t01_selected_no_project_proof_or_promotion`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0782.yaml`
-- `research_control/tasks/RT-20260720-012/00_TASK.yaml`
+- `research_control/handoffs/handoff-0783.yaml`
+- `research_control/tasks/RT-20260720-013/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0782*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0783*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

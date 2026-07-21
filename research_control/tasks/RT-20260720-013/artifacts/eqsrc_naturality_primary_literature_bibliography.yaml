@@ -1,0 +1,73 @@
+bibliography_id: "BIB-V21-P1-T05-EQSRC-NATURALITY-PRIMARY-LITERATURE-V1"
+task_id: "RT-20260720-013"
+status: "draft/control"
+authority: "external_primary_literature_metadata_and_scoped_paraphrase"
+created_at: "2026-07-21T01:17:33Z"
+primary_source_count: 8
+quotation_count: 0
+source_entries:
+  - source_id: "EML-1945-NATURAL-EQUIVALENCES"
+    topics: ["naturality", "functors", "natural transformations"]
+    primary_source: true
+    citation_apa7: "Eilenberg, S., & Mac Lane, S. (1945). General theory of natural equivalences. Transactions of the American Mathematical Society, 58, 231–294. https://doi.org/10.1090/S0002-9947-1945-0013131-6"
+    publisher_url: "https://www.ams.org/journals/tran/1945-058-00/S0002-9947-1945-0013131-6/"
+    exact_hypotheses: "Specified categories, functors on both objects and mappings, and component maps required to commute with every mapping in the declared category."
+    established_conclusion: "Naturality is a simultaneous coherence condition across the declared mappings; an objectwise isomorphism need not be natural."
+    transfer_boundary: "Supplies formal vocabulary and a warning against objectwise choice. It does not establish an EqSrc selector or determine the project source category."
+  - source_id: "ANGLUIN-1980-ANONYMOUS-NETWORKS"
+    topics: ["symmetry", "anonymous processors", "leader election"]
+    primary_source: true
+    citation_apa7: "Angluin, D. (1980). Local and global properties in networks of processors (Extended abstract). In Proceedings of the twelfth annual ACM symposium on Theory of computing (pp. 82–93). Association for Computing Machinery. https://doi.org/10.1145/800141.804655"
+    publisher_url: "https://dl.acm.org/doi/10.1145/800141.804655"
+    exact_hypotheses: "A network model with processors designed without network-specific identity knowledge and identical processors at equal port degree, required to guarantee a global function over the admitted connected networks."
+    established_conclusion: "Local indistinguishability and graph-cover symmetry constrain which global functions can be guaranteed; anonymous election is obstructed on symmetric instances."
+    transfer_boundary: "Provides a model-specific operational symmetry obstruction, not a theorem about the project source functor or physical covariance."
+  - source_id: "ITAI-RODEH-1981-SYMMETRY-BREAKING"
+    topics: ["leader election", "randomization", "symmetry-breaking resource"]
+    primary_source: true
+    citation_apa7: "Itai, A., & Rodeh, M. (1981). Symmetry breaking in distributive networks. In 22nd Annual Symposium on Foundations of Computer Science (pp. 150–158). IEEE. https://doi.org/10.1109/SFCS.1981.41"
+    publisher_url: "https://doi.org/10.1109/SFCS.1981.41"
+    exact_hypotheses: "An anonymous ring of indistinguishable processors communicating along the ring; the analyzed constructive algorithms add independent randomness and, for stated bounds, knowledge of ring size."
+    established_conclusion: "No deterministic algorithm elects a unique leader under the symmetric anonymous assumptions, while probabilistic algorithms can elect one with bounded expected resource use under added assumptions."
+    transfer_boundary: "Shows that a successful selector can depend on an explicit symmetry-breaking resource. Randomness or size knowledge is added structure, not canonical source derivation."
+  - source_id: "PALAIS-1961-SLICES"
+    topics: ["equivariant geometry", "local slices", "proper actions"]
+    primary_source: true
+    citation_apa7: "Palais, R. S. (1961). On the existence of slices for actions of non-compact Lie groups. Annals of Mathematics, 73(2), 295–323. https://doi.org/10.2307/1970335"
+    publisher_url: "https://www.jstor.org/stable/1970335"
+    exact_hypotheses: "A Lie group acting on a Cartan G-space; equivalently in the paper's theorem, compact isotropy together with a slice at every point. Proper G-spaces are a controlled subclass."
+    established_conclusion: "Under the scoped action hypotheses, slices exist locally through points and yield invariant-neighborhood structure."
+    transfer_boundary: "A local slice is not a global cross-section, a unique orbit representative, or a natural selector across an independently defined source category."
+  - source_id: "SINGER-1978-GRIBOV"
+    topics: ["gauge choice", "global section obstruction", "topology"]
+    primary_source: true
+    citation_apa7: "Singer, I. M. (1978). Some remarks on the Gribov ambiguity. Communications in Mathematical Physics, 60, 7–12. https://doi.org/10.1007/BF01609471"
+    publisher_url: "https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-60/issue-1/Some-remarks-on-the-Gribov-ambiguity/cmp/1103904019.full"
+    exact_hypotheses: "Connections on a principal bundle over the four-sphere with compact nonabelian structure group, acted on by the gauge-transformation group, with continuity required of the orbit representative choice."
+    established_conclusion: "No continuous choice of exactly one connection from each gauge orbit exists in the studied setting."
+    transfer_boundary: "An exact topology-dependent obstruction to global gauge fixing, not a universal no-selector theorem and not evidence that every EqSrc source extension is impossible."
+  - source_id: "MARSDEN-WEINSTEIN-1974-REDUCTION"
+    topics: ["quotient construction", "symplectic reduction", "invariants"]
+    primary_source: true
+    citation_apa7: "Marsden, J. E., & Weinstein, A. (1974). Reduction of symplectic manifolds with symmetry. Reports on Mathematical Physics, 5(1), 121–130. https://doi.org/10.1016/0034-4877(74)90021-4"
+    publisher_url: "https://www.sciencedirect.com/science/article/pii/0034487774900214"
+    exact_hypotheses: "A symplectic system equipped with symmetry data and the reduction construction specified in the paper, including the relevant group action and level-set/orbit structure."
+    established_conclusion: "Reduced symplectic manifolds can be constructed from systems with symmetries without making a distinguished representative the reduced object."
+    transfer_boundary: "Supports quotient-first investigation only after the project defines its source action and relation. It neither supplies EqSrc nor proves relation-image uniqueness."
+  - source_id: "GOLDSTONE-SALAM-WEINBERG-1962-BROKEN-SYMMETRIES"
+    topics: ["spontaneous symmetry breaking", "vacuum state", "dynamical structure"]
+    primary_source: true
+    citation_apa7: "Goldstone, J., Salam, A., & Weinberg, S. (1962). Broken symmetries. Physical Review, 127(3), 965–970. https://doi.org/10.1103/PhysRev.127.965"
+    publisher_url: "https://journals.aps.org/pr/abstract/10.1103/PhysRev.127.965"
+    exact_hypotheses: "A continuous symmetry of the Lagrangian together with the alternative that the vacuum is or is not invariant under that transformation, in the quantum-field-theoretic setting analyzed."
+    established_conclusion: "If the continuous Lagrangian symmetry is not shared by the vacuum, the theorem yields massless spin-zero excitations under the paper's assumptions."
+    transfer_boundary: "Spontaneous breaking presupposes state and dynamical structure. It does not turn an arbitrary representative into a source-natural canonical choice or supply AEther-Flow dynamics."
+  - source_id: "TANNAKA-1939-DUALITY"
+    topics: ["canonical reconstruction", "representations", "duality"]
+    primary_source: true
+    citation_apa7: "Tannaka, T. (1939). Über den Dualitätssatz der nichtkommutativen topologischen Gruppen. Tohoku Mathematical Journal, 45, 1–12. https://www.jstage.jst.go.jp/article/tmj1911/45/0/45_0_1/_article"
+    publisher_url: "https://www.jstage.jst.go.jp/article/tmj1911/45/0/45_0_1/_article"
+    exact_hypotheses: "A bicompact group and its sufficiently rich continuous bounded representation data, with the compatibility operations used to form the dual semigroup and its representations."
+    established_conclusion: "The paper proves a duality/reconstruction result for bicompact noncommutative groups from the compatible total representation structure."
+    transfer_boundary: "Reconstruction uses enriched invariant data and compatibility laws; it is not a choice of one orbit representative and does not reconstruct the project source category from current ontology."
+literature_project_boundary: "Every established conclusion above remains scoped to its source hypotheses. Cross-domain similarities are route-selection evidence only, never proof, ontology authority, physical covariance, or promotion authority for AEther-Flow."
