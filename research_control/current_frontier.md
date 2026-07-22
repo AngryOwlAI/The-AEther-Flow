@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260721-005` and `handoff-0806`.
+`RT-20260721-006` and `handoff-0807`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260721-005` |
-| Latest handoff ID | `handoff-0806` |
-| Current status | `v21_p10_t03_immutable_candidate_identity_lineage_complete_no_history_or_physics_delta_p10_t04_ready` |
+| Active task ID | `RT-20260721-006` |
+| Latest handoff ID | `handoff-0807` |
+| Current status | `v21_p10_t04_append_only_attempt_history_complete_no_history_or_physics_delta_p10_t05_ready` |
 | V16 completed | false |
 | Current route family | construction or implementation (project system) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v21 append only research attempt rework ledger |
-| Required next authority | One P10-T04 project-control packet may define an append-only research attempt and rework ledger schema event records redaction policy report generator validators and standard control receipts. |
-| Next recommended action | Run exactly one bounded v21 P10-T04 project-system packet in a separate AgentJob. Create an append-only research attempt and rework ledger covering failures auditor findings validator failures repairs abandoned attempts supersessions compute metadata and final dispositions without replacing canonical scientific artifacts. Do not execute P4-T05. |
+| Current burden | none for physics derivation; live control burden is v21 canonical event store generated view architecture |
+| Required next authority | One P10-T05 project-system design packet may compare JSONL SQLite and hybrid storage, select an append-only canonical event-store architecture, define event identity generated-view transaction migration and rollback contracts, and stop before cutover. |
+| Next recommended action | Run exactly one bounded v21 P10-T05 project-system architecture packet in a separate AgentJob after the P10-T04 checkpoint. Specify the canonical event store and generated-view architecture without cutover. Do not execute P4-T05. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260721-005` |
-| Latest research handoff ID | `handoff-0806` |
-| Latest research next action | Run exactly one bounded v21 P10-T04 project-system packet in a separate AgentJob. Create an append-only research attempt and rework ledger covering failures auditor findings validator failures repairs abandoned attempts supersessions compute metadata and final dispositions without replacing canonical scientific artifacts. Do not execute P4-T05. |
+| Latest research task ID | `RT-20260721-006` |
+| Latest research handoff ID | `handoff-0807` |
+| Latest research next action | Run exactly one bounded v21 P10-T05 project-system architecture packet in a separate AgentJob after the P10-T04 checkpoint. Specify the canonical event store and generated-view architecture without cutover. Do not execute P4-T05. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260721-005/00_TASK.yaml`.
-- Active task objective: Implement machine-readable immutable candidate and family identities statement assumption ontology and artifact hash anchors typed lifecycle stages and acyclic supersession or route-successor edges; seed the recent EqSrc candidate families from canonical historical evidence without rewriting that evidence.
-- Latest handoff path: `research_control/handoffs/handoff-0806.yaml`.
-- Latest handoff summary: RT-20260721-005 completed only v21 P10-T03. It registered a task-local machine contract and immutable registry seeded exactly from tracked P1 EqSrc evidence: five families seven existing candidate IDs twenty-two observed stages six acyclic edges five family-freeze events and one explicit non-inferred absence. Fifty-three checks pass and lifecycle metrics now use immutable candidate IDs. The seed records seven of seven candidates reaching audit four of seven reaching observed stress and zero of four stressed candidates surviving their scoped-obstruction dispositions. Historical sources ontology scientific ledgers P4-T05 Distance-to-GR and all adoption rejection promotion proof and publication authority remain unchanged.
+- Active task path: `research_control/tasks/RT-20260721-006/00_TASK.yaml`.
+- Active task objective: Create a task-local append-only attempt-event schema and hash-chained historical ledger that exposes tracked validation failures audit findings repairs supersessions compute-metadata availability and final dispositions without rewriting source records or treating process evidence as physics evidence.
+- Latest handoff path: `research_control/handoffs/handoff-0807.yaml`.
+- Latest handoff summary: RT-20260721-006 completed only v21 P10-T04. It created one task-local append-only event schema and redaction policy, an eight-event SHA-256 hash chain bound to eight exact tracked source files, deterministic validation and reporting, and one explicit non-inferred absence for the unsupported abandoned-event class. The source set records one attempt start one validation failure one audit finding two repairs one supersession zero abandoned events and two completions. Ten focused tests pass, privacy findings and physics-result events are zero, and historical sources scientific ledgers ontology P4-T05 Distance-to-GR plus all promotion proof publication and completed-derivation authority remain unchanged.
 - Current route family: construction or implementation (project system).
-- Next recommended action: Run exactly one bounded v21 P10-T04 project-system packet in a separate AgentJob. Create an append-only research attempt and rework ledger covering failures auditor findings validator failures repairs abandoned attempts supersessions compute metadata and final dispositions without replacing canonical scientific artifacts. Do not execute P4-T05.
+- Next recommended action: Run exactly one bounded v21 P10-T05 project-system architecture packet in a separate AgentJob after the P10-T04 checkpoint. Specify the canonical event store and generated-view architecture without cutover. Do not execute P4-T05.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P10-T04 project-system packet in a separate AgentJob. Create an append-only research attempt and rework ledger covering failures auditor findings validator failures repairs abandoned attempts supersessions compute metadata and final dispositions without replacing canonical scientific artifacts. Do not execute P4-T05.
+Run exactly one bounded v21 P10-T05 project-system architecture packet in a separate AgentJob after the P10-T04 checkpoint. Specify the canonical event store and generated-view architecture without cutover. Do not execute P4-T05.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,23 +320,20 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 9 | receipt complete |
+| `PASS` | 6 | receipt complete |
 | `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 37 was validated claimed consumed once and executed under its immutable continue-research route. |
+| `pre_execution` | PASS | receipt complete | Generation 38 was validated claimed consumed once and executed under its immutable continue-research route. |
+| `completion_internal` | PASS | receipt complete | The ledger schema chain source references event classifications explicit absence and privacy boundary pass focused validation. |
 | `post_write` | PASS | receipt complete | Focused tests documentation impact project-improvement parity research-control memory and diff gates are required before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | Governed checkpoint remains the final transaction gate. |
-| `renderer` | PASS | receipt complete | Task-index current-frontier physics-progress dependency and claim-graph derivatives are required fresh before checkpoint. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | The governed checkpoint remains the final transaction gate. |
+| `renderer` | PASS | receipt complete | Task-local report task-index current-frontier and memory derivatives are required fresh before checkpoint. |
 | `memory_bootstrap` | PASS | receipt complete | Tracked memory bootstrap and read-only validation are required before checkpoint. |
 | `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation is required to report no hard failure before checkpoint. |
-| `candidate_metrics` | PASS | receipt complete | Lifecycle metrics use immutable candidate IDs and exclude explicit absence from observed stages. |
-| `historical_seed` | PASS | receipt complete | P1 inventory graph and freeze source hashes match and no historical source changed. |
-| `identity_contract` | PASS | receipt complete | Candidate and family identity hashes recompute exactly from the declared canonical JSON fields. |
-| `lineage_graph` | PASS | receipt complete | All endpoint bindings stage artifact hashes transition rules and acyclicity checks pass. |
 
 Authorization layers:
 
@@ -351,14 +348,15 @@ Authorization layers:
 | `candidate_rejection_authorized` | False | extension authorization field |
 | `historical_record_rewrite_authorized` | False | extension authorization field |
 | `missing_history_inference_authorized` | False | extension authorization field |
+| `private_material_capture_authorized` | False | extension authorization field |
 | `proof_authority` | False | extension authorization field |
 | `publication_authority` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260721-005`;
-- latest handoff: `handoff-0806`;
-- current status: `v21_p10_t03_immutable_candidate_identity_lineage_complete_no_history_or_physics_delta_p10_t04_ready`;
+- active task: `RT-20260721-006`;
+- latest handoff: `handoff-0807`;
+- current status: `v21_p10_t04_append_only_attempt_history_complete_no_history_or_physics_delta_p10_t05_ready`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -368,8 +366,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0806.yaml`
-- `research_control/tasks/RT-20260721-005/00_TASK.yaml`
+- `research_control/handoffs/handoff-0807.yaml`
+- `research_control/tasks/RT-20260721-006/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -385,7 +383,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0806*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0807*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

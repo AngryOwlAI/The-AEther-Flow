@@ -1,0 +1,404 @@
+{
+  "schema_id": "v21_research_attempt_ledger_v1",
+  "ledger_id": "V21-RESEARCH-ATTEMPT-LEDGER-001",
+  "task_id": "RT-20260721-006",
+  "plan_task_id": "P10-T04",
+  "status": "draft/control",
+  "revision": 1,
+  "sealed_at": "2026-07-22T03:17:26Z",
+  "append_only": true,
+  "chain_algorithm": "sha256-canonical-json-v1",
+  "schema_path": "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_event_schema.md",
+  "schema_sha256": "92e91a4d89ee26a85d011fc1199feecf3fb9dc472337efb5f4a1d5c30b823202",
+  "redaction_policy_path": "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_redaction_policy.md",
+  "redaction_policy_sha256": "40ec1d912b3771e564208ef1980d8f6fd5a39dbade3a986b38057d38c448197c",
+  "candidate_registry_path": "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json",
+  "candidate_registry_sha256": "788289c942bdcc5fff2f1337998f50d2b6fe89ca541de65a0ae24a651da97489",
+  "build_compute_metadata": {
+    "availability": "recorded",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "environment": "local Codex desktop",
+    "cost_availability": "not_available",
+    "cost_value": null,
+    "cost_currency": "not_available",
+    "authority": "operational telemetry only"
+  },
+  "explicit_absences": [
+    {
+      "absence_id": "ABS-V21-ATTEMPT-ABANDONED-001",
+      "event_type": "abandoned",
+      "reason": "No canonical abandoned disposition was located in the bounded source set; no history was constructed.",
+      "source_search_scope": "RT-20260712-005, RT-20260712-007, RT-20260720-001 through RT-20260720-004, and RT-20260720-009 tracked task records",
+      "inference_performed": false
+    }
+  ],
+  "authority_boundary": {
+    "scientific_claims_changed": false,
+    "candidate_adoption_authorized": false,
+    "candidate_rejection_authorized": false,
+    "ontology_edit_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authority": false,
+    "completed_derivation_authorized": false
+  },
+  "events": [
+    {
+      "event_id": "AEV-0001",
+      "sequence": 1,
+      "event_type": "superseded",
+      "occurred_at": "2026-07-13T01:29:00Z",
+      "task_id": "RT-20260712-005",
+      "job_id": "AJ-RT-20260712-005-001",
+      "candidate_ids": [],
+      "source_refs": [
+        {
+          "path": "research_control/tasks/RT-20260712-005/jobs/completions/AJC-AJ-RT-20260712-005-001.yaml",
+          "sha256": "fcc9efef38b9ac7bfc883d8c0607a43dde8c4f0e8e12aa3c23450dae450b66db"
+        }
+      ],
+      "summary": "The stale checkpoint scope was terminalized without execution and assigned to replacement task RT-20260712-007.",
+      "disposition": "superseded",
+      "evidence_domain": "process",
+      "physics_result": false,
+      "finalized": true,
+      "related_event_ids": [],
+      "compute_metadata": {
+        "availability": "not_recorded",
+        "model": "not_recorded",
+        "reasoning_effort": "not_recorded",
+        "environment": "not_recorded",
+        "cost_availability": "not_recorded",
+        "cost_value": null,
+        "cost_currency": "not_recorded"
+      },
+      "authority": {
+        "scientific_claims_changed": false,
+        "candidate_adoption_authorized": false,
+        "candidate_rejection_authorized": false,
+        "ontology_edit_authorized": false,
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "publication_authority": false,
+        "completed_derivation_authorized": false
+      },
+      "prior_event_hash": "",
+      "payload_sha256": "c674093768ff8c846ad84d0da3fe7b6c8e8a4a7c5a6ee51211c6db80a5a8ccb2",
+      "event_hash": "613fdd26638b716a46c3db16bfc7634480e2b9a3d9b81a28232f060a2ac5deee"
+    },
+    {
+      "event_id": "AEV-0002",
+      "sequence": 2,
+      "event_type": "completed",
+      "occurred_at": "2026-07-13T01:45:24Z",
+      "task_id": "RT-20260712-007",
+      "job_id": "AJ-RT-20260712-007-001",
+      "candidate_ids": [],
+      "source_refs": [
+        {
+          "path": "research_control/tasks/RT-20260712-007/jobs/completions/AJC-AJ-RT-20260712-007-001.yaml",
+          "sha256": "561c65ee9e527e8db994ba1b8498df19ab73f94a9e0f91fa643725c5f07bbe3b"
+        }
+      ],
+      "summary": "The replacement integration validated the combined checkpoint scope while preserving no-physics-delta boundaries.",
+      "disposition": "completed",
+      "evidence_domain": "process",
+      "physics_result": false,
+      "finalized": true,
+      "related_event_ids": [
+        "AEV-0001"
+      ],
+      "compute_metadata": {
+        "availability": "not_recorded",
+        "model": "not_recorded",
+        "reasoning_effort": "not_recorded",
+        "environment": "not_recorded",
+        "cost_availability": "not_recorded",
+        "cost_value": null,
+        "cost_currency": "not_recorded"
+      },
+      "authority": {
+        "scientific_claims_changed": false,
+        "candidate_adoption_authorized": false,
+        "candidate_rejection_authorized": false,
+        "ontology_edit_authorized": false,
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "publication_authority": false,
+        "completed_derivation_authorized": false
+      },
+      "prior_event_hash": "613fdd26638b716a46c3db16bfc7634480e2b9a3d9b81a28232f060a2ac5deee",
+      "payload_sha256": "ec20976c0ae8e94b57e872dc09bf328c04d668e4a5b288d628735775f2eda6c0",
+      "event_hash": "3d0890814581f08653ef1e8b6506a40524c266865bf15c0bd0a72095bfa7a6ea"
+    },
+    {
+      "event_id": "AEV-0003",
+      "sequence": 3,
+      "event_type": "attempt_started",
+      "occurred_at": "2026-07-20T16:20:27Z",
+      "task_id": "RT-20260720-001",
+      "job_id": "AJ-RT-20260720-001-001",
+      "candidate_ids": [],
+      "source_refs": [
+        {
+          "path": "research_control/tasks/RT-20260720-001/00_TASK.yaml",
+          "sha256": "c0a3e2e6d5f670fa7ae3fd2dd6044fdf3d46cab21dd7d696d04f101ba81a38d1"
+        }
+      ],
+      "summary": "The first v21 plan-registration transaction activated one bounded project-control attempt.",
+      "disposition": "active",
+      "evidence_domain": "process",
+      "physics_result": false,
+      "finalized": true,
+      "related_event_ids": [],
+      "compute_metadata": {
+        "availability": "not_recorded",
+        "model": "not_recorded",
+        "reasoning_effort": "not_recorded",
+        "environment": "not_recorded",
+        "cost_availability": "not_recorded",
+        "cost_value": null,
+        "cost_currency": "not_recorded"
+      },
+      "authority": {
+        "scientific_claims_changed": false,
+        "candidate_adoption_authorized": false,
+        "candidate_rejection_authorized": false,
+        "ontology_edit_authorized": false,
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "publication_authority": false,
+        "completed_derivation_authorized": false
+      },
+      "prior_event_hash": "3d0890814581f08653ef1e8b6506a40524c266865bf15c0bd0a72095bfa7a6ea",
+      "payload_sha256": "aa11d467306099a1a482145d0ef46ee846c8ee3ab6e171bd419e208045edaf55",
+      "event_hash": "5e772f3eb3134b18a3d6a0c237b9b96f146e804dbbb7bb2b1fd59f40d82676be"
+    },
+    {
+      "event_id": "AEV-0004",
+      "sequence": 4,
+      "event_type": "validation_failed",
+      "occurred_at": "2026-07-20T16:20:27Z",
+      "task_id": "RT-20260720-001",
+      "job_id": "AJ-RT-20260720-001-001",
+      "candidate_ids": [],
+      "source_refs": [
+        {
+          "path": "research_control/tasks/RT-20260720-001/artifacts/v21_plan_registration_failure_receipt.json",
+          "sha256": "23fd3bc6f5defb626ca5557a5fc18f0c632a80205078a73be19898c246ad409e"
+        }
+      ],
+      "summary": "Changed-source claim-language validation recorded two hard findings and blocked the registration transaction.",
+      "disposition": "blocked",
+      "evidence_domain": "process",
+      "physics_result": false,
+      "finalized": true,
+      "related_event_ids": [
+        "AEV-0003"
+      ],
+      "compute_metadata": {
+        "availability": "not_recorded",
+        "model": "not_recorded",
+        "reasoning_effort": "not_recorded",
+        "environment": "not_recorded",
+        "cost_availability": "not_recorded",
+        "cost_value": null,
+        "cost_currency": "not_recorded"
+      },
+      "authority": {
+        "scientific_claims_changed": false,
+        "candidate_adoption_authorized": false,
+        "candidate_rejection_authorized": false,
+        "ontology_edit_authorized": false,
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "publication_authority": false,
+        "completed_derivation_authorized": false
+      },
+      "prior_event_hash": "5e772f3eb3134b18a3d6a0c237b9b96f146e804dbbb7bb2b1fd59f40d82676be",
+      "payload_sha256": "e84fe957a6771f39737f55d9ce3a8ad7fd272ae98e0fe2490408c7bb8777d5ef",
+      "event_hash": "001a8a46ffaa08211710d067b2687a219cd2dce66d428b4bc8323b58e6b260f1"
+    },
+    {
+      "event_id": "AEV-0005",
+      "sequence": 5,
+      "event_type": "repair_applied",
+      "occurred_at": "2026-07-20T17:16:09Z",
+      "task_id": "RT-20260720-002",
+      "job_id": "AJ-RT-20260720-002-001",
+      "candidate_ids": [],
+      "source_refs": [
+        {
+          "path": "research_control/tasks/RT-20260720-002/artifacts/v21_claim_language_reviewed_context_repair_receipt.json",
+          "sha256": "83eec52dd96085d30956d04655f3c39e089171ba25f26d70b41e38d0d576bb21"
+        }
+      ],
+      "summary": "An exact reviewed-context repair resolved the two false-positive findings without changing the immutable plan.",
+      "disposition": "completed",
+      "evidence_domain": "process",
+      "physics_result": false,
+      "finalized": true,
+      "related_event_ids": [
+        "AEV-0004"
+      ],
+      "compute_metadata": {
+        "availability": "not_recorded",
+        "model": "not_recorded",
+        "reasoning_effort": "not_recorded",
+        "environment": "not_recorded",
+        "cost_availability": "not_recorded",
+        "cost_value": null,
+        "cost_currency": "not_recorded"
+      },
+      "authority": {
+        "scientific_claims_changed": false,
+        "candidate_adoption_authorized": false,
+        "candidate_rejection_authorized": false,
+        "ontology_edit_authorized": false,
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "publication_authority": false,
+        "completed_derivation_authorized": false
+      },
+      "prior_event_hash": "001a8a46ffaa08211710d067b2687a219cd2dce66d428b4bc8323b58e6b260f1",
+      "payload_sha256": "14bda643ebdd3154398e8edc143a197e21a422638436a2332a4b86c425626ab2",
+      "event_hash": "6439c7addfc1657aa504b0b9c2c7a03c3d5acf9342041351227cb221679a991d"
+    },
+    {
+      "event_id": "AEV-0006",
+      "sequence": 6,
+      "event_type": "completed",
+      "occurred_at": "2026-07-20T17:48:36Z",
+      "task_id": "RT-20260720-003",
+      "job_id": "AJ-RT-20260720-003-001",
+      "candidate_ids": [],
+      "source_refs": [
+        {
+          "path": "research_control/tasks/RT-20260720-003/jobs/completions/AJC-AJ-RT-20260720-003-001.yaml",
+          "sha256": "55683b6f6f13408f2200b765f2c9e193fb7cfce0ac6e5131fc6c6de44cdb674d"
+        }
+      ],
+      "summary": "The retried v21 plan-registration transaction completed with verified project-control registration.",
+      "disposition": "completed",
+      "evidence_domain": "process",
+      "physics_result": false,
+      "finalized": true,
+      "related_event_ids": [
+        "AEV-0005"
+      ],
+      "compute_metadata": {
+        "availability": "not_recorded",
+        "model": "not_recorded",
+        "reasoning_effort": "not_recorded",
+        "environment": "not_recorded",
+        "cost_availability": "not_recorded",
+        "cost_value": null,
+        "cost_currency": "not_recorded"
+      },
+      "authority": {
+        "scientific_claims_changed": false,
+        "candidate_adoption_authorized": false,
+        "candidate_rejection_authorized": false,
+        "ontology_edit_authorized": false,
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "publication_authority": false,
+        "completed_derivation_authorized": false
+      },
+      "prior_event_hash": "6439c7addfc1657aa504b0b9c2c7a03c3d5acf9342041351227cb221679a991d",
+      "payload_sha256": "16c396067da1336c99902e88eaa0ae584f75b8757a0c42613afb6aaae929abfc",
+      "event_hash": "902551117a9c540b2d5147327b4e38677b47283c1e13be03e4faafca7f73ee80"
+    },
+    {
+      "event_id": "AEV-0007",
+      "sequence": 7,
+      "event_type": "repair_applied",
+      "occurred_at": "2026-07-20T18:17:45Z",
+      "task_id": "RT-20260720-004",
+      "job_id": "AJ-RT-20260720-004-001",
+      "candidate_ids": [],
+      "source_refs": [
+        {
+          "path": "research_control/tasks/RT-20260720-004/artifacts/allowlist_parity_supersession_receipt.json",
+          "sha256": "d64411ec8611b5d85ba8c7d51908624335300364df4a26827e5d468c0cec29ab"
+        }
+      ],
+      "summary": "A superseding control transaction repaired job-to-role write-allowlist parity without modifying predecessor records.",
+      "disposition": "completed",
+      "evidence_domain": "process",
+      "physics_result": false,
+      "finalized": true,
+      "related_event_ids": [
+        "AEV-0006"
+      ],
+      "compute_metadata": {
+        "availability": "not_recorded",
+        "model": "not_recorded",
+        "reasoning_effort": "not_recorded",
+        "environment": "not_recorded",
+        "cost_availability": "not_recorded",
+        "cost_value": null,
+        "cost_currency": "not_recorded"
+      },
+      "authority": {
+        "scientific_claims_changed": false,
+        "candidate_adoption_authorized": false,
+        "candidate_rejection_authorized": false,
+        "ontology_edit_authorized": false,
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "publication_authority": false,
+        "completed_derivation_authorized": false
+      },
+      "prior_event_hash": "902551117a9c540b2d5147327b4e38677b47283c1e13be03e4faafca7f73ee80",
+      "payload_sha256": "2e601a0f74c51973808491a9ff9c8ef1415dc80ea0e9b6df91171dbde4dc79c8",
+      "event_hash": "c0aeec6c12c5d56497763e0a888aa465fdd993450bfc20e86b062239a48bdaf0"
+    },
+    {
+      "event_id": "AEV-0008",
+      "sequence": 8,
+      "event_type": "audit_finding",
+      "occurred_at": "2026-07-20T21:38:15Z",
+      "task_id": "RT-20260720-009",
+      "job_id": "AJ-RT-20260720-009-001",
+      "candidate_ids": [
+        "EQSRC-GRADED-ORBIT-ROOT-V1"
+      ],
+      "source_refs": [
+        {
+          "path": "research_control/tasks/RT-20260720-009/artifacts/eqsrc_flow_generated_graded_orbit_root_smuggling_audit_validation.json",
+          "sha256": "166b33769f5faf60050ed602656ade3fe0809cd23235d162c2500f65d2f86a29"
+        }
+      ],
+      "summary": "A bounded audit recorded action realization and a completeness limitation for the graded-orbit-root candidate.",
+      "disposition": "finding_recorded",
+      "evidence_domain": "scientific_review",
+      "physics_result": false,
+      "finalized": true,
+      "related_event_ids": [],
+      "compute_metadata": {
+        "availability": "not_recorded",
+        "model": "not_recorded",
+        "reasoning_effort": "not_recorded",
+        "environment": "not_recorded",
+        "cost_availability": "not_recorded",
+        "cost_value": null,
+        "cost_currency": "not_recorded"
+      },
+      "authority": {
+        "scientific_claims_changed": false,
+        "candidate_adoption_authorized": false,
+        "candidate_rejection_authorized": false,
+        "ontology_edit_authorized": false,
+        "physics_promotion_authorized": false,
+        "proof_authority": false,
+        "publication_authority": false,
+        "completed_derivation_authorized": false
+      },
+      "prior_event_hash": "c0aeec6c12c5d56497763e0a888aa465fdd993450bfc20e86b062239a48bdaf0",
+      "payload_sha256": "880a1d9877d8ebced9fa42c9e8122edb0d547b4040a2d870dd938c615a730166",
+      "event_hash": "604dfa5cfe197a402c576f226dd2776e1929fca24993ba144e207324b35c3717"
+    }
+  ]
+}

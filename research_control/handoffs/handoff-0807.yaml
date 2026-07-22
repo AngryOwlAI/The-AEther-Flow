@@ -1,0 +1,221 @@
+handoff_id: "handoff-0807"
+handoff_number: 807
+created_at: "2026-07-22T03:33:49Z"
+task_id: "RT-20260721-006"
+decision_id: "DDR-20260721-006"
+job_id: "AJ-RT-20260721-006-001"
+completion_path: "research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml"
+completion_hash: "9fbd8bbda9b3ffaae441763a5874d7e78a4dfd189a612c4430e95fabb8a8f2d3"
+source_task_id: "RT-20260721-006"
+source_job_id: "AJ-RT-20260721-006-001"
+source_completion_id: "AJC-AJ-RT-20260721-006-001"
+status: "ready_for_director"
+summary: "RT-20260721-006 completed only v21 P10-T04. It created one task-local append-only event schema and redaction policy, an eight-event SHA-256 hash chain bound to eight exact tracked source files, deterministic validation and reporting, and one explicit non-inferred absence for the unsupported abandoned-event class. The source set records one attempt start one validation failure one audit finding two repairs one supersession zero abandoned events and two completions. Ten focused tests pass, privacy findings and physics-result events are zero, and historical sources scientific ledgers ontology P4-T05 Distance-to-GR plus all promotion proof publication and completed-derivation authority remain unchanged."
+next_action: "Run exactly one bounded v21 P10-T05 project-system architecture packet in a separate AgentJob after the P10-T04 checkpoint. Specify the canonical event store and generated-view architecture without cutover. Do not execute P4-T05."
+loop_risk_route: "v21_p10_t05_canonical_event_store_generated_view_architecture"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260721-006"
+  latest_research_handoff_id: "handoff-0807"
+  latest_research_next_action: "Run exactly one bounded v21 P10-T05 project-system architecture packet in a separate AgentJob after the P10-T04 checkpoint. Specify the canonical event store and generated-view architecture without cutover. Do not execute P4-T05."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One P10-T05 project-system design packet may compare JSONL SQLite and hybrid storage, select an append-only canonical event-store architecture, define event identity generated-view transaction migration and rollback contracts, and stop before cutover."
+  newly_completed_plan_task: "P10-T04"
+  p10_t04_dependency_completion_path: "research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml"
+  p10_t04_dependency_completion_hash: "9fbd8bbda9b3ffaae441763a5874d7e78a4dfd189a612c4430e95fabb8a8f2d3"
+  p10_t03_completed: true
+  p10_t04_completed: true
+  p10_t05_dependency_ready: true
+  p10_t05_selected_next: true
+  p10_t05_executed: false
+  event_count: 8
+  source_reference_count: 8
+  attempt_started_count: 1
+  validation_failed_count: 1
+  audit_finding_count: 1
+  repair_applied_count: 2
+  superseded_count: 1
+  abandoned_count: 0
+  completed_count: 2
+  explicit_absence_count: 1
+  privacy_finding_count: 0
+  physics_result_count: 0
+  historical_source_mutation_count: 0
+  missing_history_inference_count: 0
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  ontology_regime_selected: false
+  ontology_regime_adopted: false
+  scientific_ledger_change_count: 0
+  physics_promotion_authorized: false
+  proof_authority: false
+  blocked_claims:
+    - "historical process or scientific source rewritten or reinterpreted"
+    - "missing attempt inferred as an observed event"
+    - "private material or authentication data captured"
+    - "validator or process evidence treated as physics evidence"
+    - "P10-T05 or another successor executed inside P10-T04"
+    - "P4-T05 ontology-regime decision or Gate Chair verdict"
+    - "canonical ontology or scientific-ledger edit"
+    - "source-law adoption physical metric matter coupling Einstein equations exact-GR derivation or benchmark promotion"
+    - "external publication proof authority completed derivation or global no-go"
+
+attempt_history_result:
+  schema_id: "v21_research_attempt_ledger_v1"
+  schema_object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-006-V21-ATTEMPT-EVENT-SCHEMA"
+  schema_path: "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_event_schema.md"
+  schema_sha256: "92e91a4d89ee26a85d011fc1199feecf3fb9dc472337efb5f4a1d5c30b823202"
+  redaction_policy_object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-006-V21-ATTEMPT-HISTORY-REDACTION-POLICY"
+  redaction_policy_path: "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_redaction_policy.md"
+  redaction_policy_sha256: "40ec1d912b3771e564208ef1980d8f6fd5a39dbade3a986b38057d38c448197c"
+  ledger_path: "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+  ledger_sha256: "f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2"
+  report_path: "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_report.md"
+  report_sha256: "82c3a6f810451eed404ade73481b85e91674bfd7ff00c22499b5f6abe43d55f2"
+  validator_path: "research_control/tasks/RT-20260721-006/artifacts/validate_v21_attempt_ledger.py"
+  validator_sha256: "70ca9e16a6cfcd391fb9f8a8b8b098ed223ffbfcb3f4c89d1d8a65ae00a989fe"
+  validation_path: "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_validation.json"
+  validation_sha256: "316d52625fe2698cec2bee138dd952b366ca080a00f0f52068b0500cd1f641da"
+  compact_receipt_path: "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_compact_receipt.json"
+  compact_receipt_sha256: "ec0749ed7dbd61b7091f37e444aaf4a0cfdfee12ad1976f7a2de4e82f81244dd"
+  chain_algorithm: "sha256-canonical-json-v1"
+  head_event_hash: "604dfa5cfe197a402c576f226dd2776e1929fca24993ba144e207324b35c3717"
+  event_count: 8
+  source_reference_count: 8
+  candidate_link_count: 1
+  explicit_absence_count: 1
+  privacy_finding_count: 0
+  physics_result_count: 0
+  historic_compute_metadata_not_recorded_count: 8
+  build_compute_metadata_recorded: true
+  result_boundary: "Project-control history and scientific-review indexing only; no source replacement scientific claim ontology Distance-to-GR or protected authority delta."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Expose the evolutionary history hidden by PASS-only completion records."
+  explanation: "P10-T04 added attempt-history controls and operational reporting only; it supplied no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_project_control_attempt_history_only"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No scientific object source law ontology regime metric matter semantics coupling Einstein dynamics or benchmark status changed."
+  downstream_unlocked:
+    - "P10-T05 canonical event-store architecture design under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+required_next_packet:
+  task_type: "v21_canonical_event_store_generated_view_architecture"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "integration_or_selection"
+    milestone: "source_equivalence_eqsrc"
+    candidate_family: "not_applicable"
+    result_kind: "implemented_and_validated_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+selected_next_route:
+  route_id: "v21_p10_t05_canonical_event_store_generated_view_architecture"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P10-T05"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Reduce authority drift among multiple manually synchronized surfaces."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  executed: false
+  next_action: "Design the append-only canonical event store and generated-view architecture without performing a cutover or executing protected P4-T05."
+  source_handoff: "research_control/handoffs/handoff-0807.yaml"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 38 was validated claimed consumed once and executed under its immutable continue-research route."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The ledger schema chain source references event classifications explicit absence and privacy boundary pass focused validation."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused tests documentation impact project-improvement parity research-control memory and diff gates are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-local report task-index current-frontier and memory derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and read-only validation are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+authorization_layers:
+  historical_record_rewrite_authorized: false
+  missing_history_inference_authorized: false
+  private_material_capture_authorized: false
+  candidate_adoption_authorized: false
+  candidate_rejection_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  proof_authority: false
+  publication_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P10-T04 completed its included project-system work without an incidental shared-system defect."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one bounded P10-T05 project-system architecture packet after the P10-T04 governed checkpoint succeeds."
+  this_handoff_does_not_authorize:
+    - "P10-T05 execution inside the completed P10-T04 AgentJob"
+    - "event-store cutover or replacement of existing canonical sources"
+    - "historical source mutation reinterpretation or inferred events"
+    - "candidate adoption rejection promotion or scientific truth inference from process history"
+    - "P4-T05 ontology-regime selection or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"

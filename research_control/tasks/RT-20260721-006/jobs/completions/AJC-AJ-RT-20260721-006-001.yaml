@@ -1,0 +1,302 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260721-006-001"
+completion_id: "AJC-AJ-RT-20260721-006-001"
+task_id: "RT-20260721-006"
+task_type: "v21_append_only_research_attempt_rework_ledger"
+decision_id: "DDR-20260721-006"
+role_id: "project-control-maintainer"
+source_role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260721-006"
+status: "completed"
+created_at: "2026-07-22T03:17:26Z"
+started_at: "2026-07-22T03:17:26Z"
+completed_at: "2026-07-22T03:33:49Z"
+objective: "Implement and validate only v21 P10-T04 append-only source-linked attempt and rework history with redaction controls operational reporting and explicit separation of process evidence from physics evidence."
+completion_summary: "P10-T04 created one registered task-local event schema and redaction policy, an eight-event append-only ledger bound to eight exact tracked source hashes, deterministic validation and reporting, one explicit non-inferred absence for the unsupported abandoned class, and ten focused tests. The ledger records one attempt start, one validation failure, one audit finding, two repairs, one supersession, zero abandoned events, and two completions. All events remain project-control or review history with physics_result false; historical sources, science authority, ontology, P4-T05, and Distance-to-GR remain unchanged."
+objective_result: "completed"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T04"
+  recommendation_ids:
+    - "V21-R42"
+    - "V21-R53"
+    - "V21-R69"
+  implementation_status: "completed"
+  completed_v21_tasks_added:
+    - "P10-T04"
+  next_dependency_ready_work_item: "P10-T05"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 38
+  passes_consumed: 37
+  route_work_item_id: "P10-T04"
+  route_worker_skill: "continue-research"
+
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "v21_p10_t04_append_only_attempt_history"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+attempt_history_result:
+  schema_id: "v21_research_attempt_ledger_v1"
+  schema_object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-006-V21-ATTEMPT-EVENT-SCHEMA"
+  schema_path: "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_event_schema.md"
+  schema_sha256: "92e91a4d89ee26a85d011fc1199feecf3fb9dc472337efb5f4a1d5c30b823202"
+  redaction_policy_object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-006-V21-ATTEMPT-HISTORY-REDACTION-POLICY"
+  redaction_policy_path: "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_redaction_policy.md"
+  redaction_policy_sha256: "40ec1d912b3771e564208ef1980d8f6fd5a39dbade3a986b38057d38c448197c"
+  ledger_path: "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+  ledger_sha256: "f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2"
+  report_path: "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_report.md"
+  report_sha256: "82c3a6f810451eed404ade73481b85e91674bfd7ff00c22499b5f6abe43d55f2"
+  validator_path: "research_control/tasks/RT-20260721-006/artifacts/validate_v21_attempt_ledger.py"
+  validator_sha256: "70ca9e16a6cfcd391fb9f8a8b8b098ed223ffbfcb3f4c89d1d8a65ae00a989fe"
+  validation_path: "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_validation.json"
+  validation_sha256: "316d52625fe2698cec2bee138dd952b366ca080a00f0f52068b0500cd1f641da"
+  compact_receipt_path: "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_compact_receipt.json"
+  compact_receipt_sha256: "ec0749ed7dbd61b7091f37e444aaf4a0cfdfee12ad1976f7a2de4e82f81244dd"
+  event_count: 8
+  source_reference_count: 8
+  candidate_link_count: 1
+  head_event_hash: "604dfa5cfe197a402c576f226dd2776e1929fca24993ba144e207324b35c3717"
+  head_prefix_event_count: 0
+  event_type_counts:
+    attempt_started: 1
+    validation_failed: 1
+    audit_finding: 1
+    repair_applied: 2
+    superseded: 1
+    abandoned: 0
+    completed: 2
+  explicit_absence_count: 1
+  explicit_absence_event_type: "abandoned"
+  missing_history_inference_count: 0
+  privacy_finding_count: 0
+  physics_result_count: 0
+  historical_record_mutation_count: 0
+  historical_record_deletion_count: 0
+  historic_compute_metadata_not_recorded_count: 8
+  build_compute_metadata_recorded: true
+  build_model: "gpt-5.6-sol"
+  build_reasoning_effort: "max"
+  build_environment: "local Codex desktop"
+  build_cost_availability: "not_available"
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P10-T04 indexes already tracked process and review records and adds no scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked:
+    - "EQSRC-GRADED-ORBIT-ROOT-V1"
+  theorem_ids_created: []
+  identity_note: "The single candidate link reuses the immutable P10-T03 identity and creates no candidate theorem adoption rejection or promotion."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260721-006/00_TASK.yaml"
+  - "research_control/tasks/RT-20260721-006/DDR-20260721-006.md"
+  - "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_event_schema.md"
+  - "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json"
+  - "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_redaction_policy.md"
+  - "research_control/tasks/RT-20260721-006/artifacts/render_v21_attempt_report.py"
+  - "research_control/tasks/RT-20260721-006/artifacts/validate_v21_attempt_ledger.py"
+  - "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_report.md"
+  - "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_validation.json"
+  - "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_compact_receipt.json"
+  - "tests/test_attempt_history.py"
+  - "research_control/tasks/RT-20260721-006/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260721-006/jobs/AJ-RT-20260721-006-001.yaml"
+  - "research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml"
+  - "research_control/tasks/RT-20260721-006/roles/project-control-maintainer@0.2.0--RT-20260721-006.yaml"
+  - "research_control/handoffs/handoff-0807.yaml"
+  - "research_control/handoffs/handoff-0807.md"
+outputs_updated:
+  - "output/compact_current_frontier_v16.json"
+  - "output/compact_current_frontier_v16.yaml"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Expose the evolutionary history hidden by PASS-only completion records."
+  explanation: "P10-T04 adds source-linked project-control history and operational metrics only; it supplies no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  rationale: "Attempt-history controls do not discharge source-equivalence or downstream GR burdens."
+  downstream_unlocked:
+    - "P10-T05 canonical event-store architecture design under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  historical_record_rewrite_authorized: false
+  missing_history_inference_authorized: false
+  private_material_capture_authorized: false
+  candidate_adoption_authorized: false
+  candidate_rejection_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 38 route identity lease parity max effort repository binding clean start predecessor terminal state and single consumption were verified before work."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Eight finalized events have contiguous identity exact source hashes valid type-disposition pairs and a recomputed SHA-256 chain."
+      - "One absent event class is explicit and non-inferred; all protected authority flags and physics_result fields are false."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local write check report check ten focused tests and standard transaction validators pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The deterministic task-local report validation receipt current frontier task index and memory derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "process or validator failure as physics failure"
+    - "validator PASS as scientific proof"
+    - "unrecorded attempt reconstructed as history"
+    - "candidate adoption rejection or promotion"
+    - "P10-T05 execution inside P10-T04"
+    - "P4-T05 ontology-regime decision or Gate Chair verdict"
+    - "canonical ontology or scientific-ledger edit"
+    - "source-law adoption benchmark promotion publication or completed derivation"
+  summary: "P10-T04 is an operational project-control history only and grants no scientific or protected conclusion."
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260721-006/artifacts/validate_v21_attempt_ledger.py --write --json | exit_code=0 | status=PASS event_count=8 source_ref_count=8 privacy_finding_count=0"
+  - ".venv/bin/python research_control/tasks/RT-20260721-006/artifacts/render_v21_attempt_report.py --write --json | exit_code=0 | status=PASS event_count=8"
+  - ".venv/bin/python research_control/tasks/RT-20260721-006/artifacts/validate_v21_attempt_ledger.py --check --json | exit_code=0 | status=PASS head_event_hash=604dfa5cfe197a402c576f226dd2776e1929fca24993ba144e207324b35c3717"
+  - ".venv/bin/python research_control/tasks/RT-20260721-006/artifacts/render_v21_attempt_report.py --check --json | exit_code=0 | status=PASS deterministic=true"
+  - ".venv/bin/python -m unittest -v tests.test_attempt_history | exit_code=0 | tests=10"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260721-006 tests/test_attempt_history.py research_control/program_state.yaml research_control/handoffs/handoff-0807.yaml --explain | exit_code=0 | status=READY selected_gates=15"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | exit_code=0 | status=PASS latest_handoff_id=handoff-0807"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write and --check plus validate_compact_current_frontier_v16.py --json | exit_code=0 | status=PASS next_route_id=v21_p10_t05_canonical_event_store_generated_view_architecture"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | status=PASS row_count=1043"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | project_system_improvement_required=true docs_impact_required=true blocked_path_count=0"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json | exit_code=0 | status=ready boundary=project_system_agent_job_required resolver_is_advisory=true"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | status=PASS findings=0"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | exit_code=0 | status=PASS hard_fail_count=0 warning_count=1490"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=0 | status=PASS"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | exit_code=0 | status=PASS"
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json | exit_code=0 | final_status=PASS source_object_count=965 relationship_row_count=4784"
+  - "git diff --check | exit_code=0 | status=PASS"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 963
+    relationship_row_count: 4775
+    semantic_row_count: 963
+    vault_row_count: 963
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  unused_query_attempts:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P10-T04 append-only research attempt rework ledger --limit 10 --json"
+      query_text: "P10-T04 append-only research attempt rework ledger"
+      result_note: "The parser treated the hyphenated token as a column expression; no result was returned or used."
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory and .local are retrieval layers only and not authority; canonical tracked sources and registry rows govern."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P10-T04 completed its included project-system work without an incidental shared-system defect."
+
+verdict: "validated_append_only_attempt_history_no_physics_delta"
+coherent_resolution_summary: "P10-T04 now exposes eight exact tracked process and review events through one immutable hash chain and deterministic report while preserving all canonical source and scientific authority boundaries."
+next_recommendation: "After the governed checkpoint succeeds, run one separate bounded P10-T05 architecture-design AgentJob; do not execute P4-T05."
