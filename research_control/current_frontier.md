@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260721-008` and `handoff-0809`.
+`RT-20260722-001` and `handoff-0811`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260721-008` |
-| Latest handoff ID | `handoff-0809` |
-| Current status | `v21_p10_t06_shadow_pilot_complete_zero_mismatch_no_cutover_p10_t08_selected` |
+| Active task ID | `RT-20260722-001` |
+| Latest handoff ID | `handoff-0811` |
+| Current status | `p10_t08_compatibility_repair_pass_combined_transaction_ready_for_checkpoint_p10_t07_selected` |
 | V16 completed | false |
-| Current route family | construction or implementation (project system) |
-| Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v21 generate current burden status |
-| Required next authority | One fresh P10-T08 project-system packet may separate stable burden definitions from current values and generate bounded current status from authoritative ledger and live state with freshness validation. It may not cut over the event store or change scientific or protected authority. |
-| Next recommended action | After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05. |
+| Current route family | benchmark or recovery (project system) |
+| Target derivation milestone | `source_equivalence_eqsrc` |
+| Current burden | `source_equivalence_eqsrc`; status: P10-T07 content-addressed artifact identity and path policy selected after P10-T08 compatibility recovery |
+| Required next authority | One bounded P10-T07 project-control-maintainer packet may define stable artifact paths and content-addressed references without rewriting historical paths, but only after the combined P10-T08 compatibility-repair transaction checkpoints. |
+| Next recommended action | After governed checkpoint PASS, run one bounded P10-T07 project-control-maintainer packet for stable artifact paths and content-addressed references without rewriting historical paths. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260721-008` |
-| Latest research handoff ID | `handoff-0809` |
-| Latest research next action | After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05. |
+| Latest research task ID | `RT-20260722-001` |
+| Latest research handoff ID | `handoff-0811` |
+| Latest research next action | After governed checkpoint PASS, run one bounded P10-T07 project-control-maintainer packet for stable artifact paths and content-addressed references without rewriting historical paths. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260721-008/00_TASK.yaml`.
-- Active task objective: Build and validate only a task-local non-authoritative shadow pilot pinned to commit 0cfe0fe53f31ea2e1d3855d397ba30258dd4f444 that ingests the bounded RT-20260721-005 through RT-20260721-007 control slice and candidate lineage then deterministically regenerates task candidate handoff and status views with exact parity and loss receipts without changing any live reader writer registry or authority surface.
-- Latest handoff path: `research_control/handoffs/handoff-0809.yaml`.
-- Latest handoff summary: not recorded.
-- Current route family: construction or implementation (project system).
-- Next recommended action: After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05.
+- Active task path: `research_control/tasks/RT-20260722-001/00_TASK.yaml`.
+- Active task objective: Add the registered GR derivation burden map to the established mutable memory-preflight source set, prove historical-hash compatibility with one focused regression case, preserve the complete RT-20260721-009 P10-T08 payload byte-for-byte, and checkpoint the combined transaction before P10-T07.
+- Latest handoff path: `research_control/handoffs/handoff-0811.yaml`.
+- Latest handoff summary: RT-20260722-001 repaired the exact mutable GR-derivation-burden-map memory-preflight compatibility omission with one validator entry and one focused regression case. The complete RT-20260721-009 P10-T08 payload remains preserved: ten stable definitions, all 14 ledger burdens, six source bindings, twelve internal checks, and 11 focused tests remain valid. Required precheckpoint validation passes and the combined transaction is ready for governed checkpoint. P10-T07 remains the selected next project-system packet and has not been executed.
+- Current route family: benchmark or recovery (project system).
+- Next recommended action: After governed checkpoint PASS, run one bounded P10-T07 project-control-maintainer packet for stable artifact paths and content-addressed references without rewriting historical paths.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05.
+After governed checkpoint PASS, run one bounded P10-T07 project-control-maintainer packet for stable artifact paths and content-addressed references without rewriting historical paths.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -318,52 +318,21 @@ completion or handoff says so.
 
 Layer status summary:
 
-| Status | Count | Meaning |
-| --- | --- | --- |
-| `PASS` | 6 | receipt complete |
-| `PENDING` | 1 | open item; evidence must explain why |
+No validation-layer status summary is available.
 
 Validation layers:
 
-| Validation layer | Status | Meaning | Evidence |
-| --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 40 was validated claimed consumed once and executed under its immutable continue-research route. |
-| `completion_internal` | PASS | receipt complete | Pinned source hashes event identity hash chain deterministic views exact field accounting SQLite queries and no-cutover boundaries pass 13 internal checks and 13 focused tests. |
-| `post_write` | PASS | receipt complete | Focused tests documentation impact project-improvement parity research-control memory and diff gates are required before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | The governed checkpoint remains the final transaction gate. |
-| `renderer` | PASS | receipt complete | Task-local views task-index current-frontier compact-frontier and memory derivatives are required fresh before checkpoint. |
-| `memory_bootstrap` | PASS | receipt complete | Tracked memory bootstrap and read-only validation are required before checkpoint. |
-| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation is required to report no hard failure before checkpoint. |
+No validation-layer split is recorded in the latest handoff.
 
 Authorization layers:
 
-| Authorization field | Value | Meaning |
-| --- | --- | --- |
-| `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not_applicable | exact scope of protected review authority |
-| `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
-| `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
-| `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
-| `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
-| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
-| `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
-| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
-| `candidate_adoption_authorized` | False | extension authorization field |
-| `candidate_rejection_authorized` | False | extension authorization field |
-| `dual_write_authorized` | False | extension authorization field |
-| `event_store_cutover_authorized` | False | extension authorization field |
-| `event_store_pilot_authorized` | True | extension authorization field |
-| `event_store_pilot_completed` | True | extension authorization field |
-| `event_store_writer_authorized` | False | extension authorization field |
-| `proof_authority` | False | extension authorization field |
-| `publication_authority` | False | extension authorization field |
-| `reader_cutover_authorized` | False | extension authorization field |
+No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260721-008`;
-- latest handoff: `handoff-0809`;
-- current status: `v21_p10_t06_shadow_pilot_complete_zero_mismatch_no_cutover_p10_t08_selected`;
+- active task: `RT-20260722-001`;
+- latest handoff: `handoff-0811`;
+- current status: `p10_t08_compatibility_repair_pass_combined_transaction_ready_for_checkpoint_p10_t07_selected`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -373,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0809.yaml`
-- `research_control/tasks/RT-20260721-008/00_TASK.yaml`
+- `research_control/handoffs/handoff-0811.yaml`
+- `research_control/tasks/RT-20260722-001/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -390,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0809*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0811*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

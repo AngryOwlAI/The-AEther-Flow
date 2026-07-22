@@ -1,0 +1,319 @@
+validation_status: "FAIL"
+final_repository_validation_status: "FAIL"
+job_id: "AJ-RT-20260721-009-001"
+completion_id: "AJC-AJ-RT-20260721-009-001"
+task_id: "RT-20260721-009"
+task_type: "v21_generate_current_burden_status"
+decision_id: "DDR-20260721-009"
+role_id: "project-control-maintainer"
+source_role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260721-009"
+status: "completed"
+created_at: "2026-07-22T05:57:57Z"
+started_at: "2026-07-22T05:57:57Z"
+completed_at: "2026-07-22T06:26:35Z"
+objective: "Implement and validate only v21 P10-T08 by separating authored stable burden definitions from mutable status and generating one exact freshness-bound reader view from the Distance-to-GR ledger program state and latest handoff without changing scientific status or protected authority."
+completion_summary: "P10-T08 produced a complete task-local payload: ten stable milestone definitions and authored dependencies are separated from mutable status, the legacy inline Current Status column is removed with exact Git provenance, and one noncanonical view renders all 14 authoritative Distance-to-GR burdens from six tracked sources. Twelve internal checks and 11 focused mutation tests pass. Required repository validation nevertheless fails because the mutable registered burden map is absent from the validator's mutable memory-preflight source set, so immutable historical snapshots are compared with the new current hash. The repair lies outside this AgentJob, no checkpoint ran, and P10-T07 remains selected but execution-pending. No ledger row scientific status event-store surface ontology protected gate or promotion authority changed."
+objective_result: "task_local_payload_complete_checkpoint_blocked"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T08"
+  recommendation_ids:
+    - "V21-R49"
+    - "V21-R50"
+  implementation_status: "validation_blocked"
+  completed_v21_tasks_added: []
+  selected_plan_work_item_pending_after_recovery: "P10-T07"
+  p10_t09_dependency_ready: false
+  p10_t09_blocked_by:
+    - "P10-T07"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 41
+  passes_consumed: 40
+  route_work_item_id: "P10-T08"
+  route_worker_skill: "continue-research"
+
+transaction_status: "blocked_precheckpoint_project_system_repair_required"
+result_disposition: "project_system_payload_complete_control_checkpoint_blocked"
+checkpoint_commit: "none_validation_failed"
+project_system_change_only: true
+project_system_scope: "v21_p10_t08_generated_current_burden_status"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+burden_status_result:
+  schema_id: "v21_current_burden_status_compact_receipt_v1"
+  status: "PASS_TASK_LOCAL_GENERATED_VIEW_REPOSITORY_CHECKPOINT_BLOCKED"
+  source_commit: "2c5fb02fd8fff9b449ab10a328d7c881b13ef546"
+  historical_map_source_commit: "2c5fb02fd8fff9b449ab10a328d7c881b13ef546"
+  historical_map_sha256: "6d1df3488be163b72296cf34ee07b979e29b061d508e6a4c271ac3305373aa1f"
+  stable_definitions_path: "research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml"
+  stable_definitions_sha256: "2ca5990c40419f4d8838d2f2ffc94ab694bda7ad002fe930ae2cf2e56209c400"
+  renderer_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py"
+  renderer_sha256: "1f6cbca61261c3e4a961f55041f0c8d48c7ed5984bdac4e81b129b88cd36478d"
+  validator_path: "research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py"
+  validator_sha256: "8fde051d82840d267e058b29ed8f2cf1a569d00144da288c3a1e8aaf595f3673"
+  focused_test_path: "tests/test_current_burden_status.py"
+  focused_test_sha256: "b0cd838527f44e4ef8601b46ffe65d872c8ba416ddc0b8dcce6596ce0095c48b"
+  generated_output_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  migration_receipt_path: "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  validation_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  compact_receipt_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  authoritative_ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  authoritative_ledger_pre_and_post_sha256: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  definition_count: 10
+  burden_count: 14
+  source_hash_count: 6
+  internal_check_count: 12
+  failed_check_count: 0
+  focused_test_count: 11
+  focused_test_failure_count: 0
+  stale_fixture_rejected: true
+  deterministic_rebuild_passed: true
+  ledger_rows_mutated: 0
+  scientific_statuses_reinterpreted: 0
+  generated_status_is_independent_authority: false
+  event_store_cutover_authorized: false
+  p4_t05_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  checkpoint_complete: false
+  plan_completion_finalized: false
+  validation_blocker_path: "research_control/tasks/RT-20260721-009/artifacts/validation_blocker_mutable_burden_map_preflight_v1.yaml"
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P10-T08 changes project-control source separation and generated freshness evidence only; it adds no scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  identity_note: "No candidate or theorem was created adopted rejected promoted or scientifically reclassified."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260721-009/00_TASK.yaml"
+  - "research_control/tasks/RT-20260721-009/DDR-20260721-009.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py"
+  - "research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/validation_blocker_mutable_burden_map_preflight_v1.yaml"
+  - "tests/test_current_burden_status.py"
+  - "research_control/tasks/RT-20260721-009/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260721-009/jobs/AJ-RT-20260721-009-001.yaml"
+  - "research_control/tasks/RT-20260721-009/jobs/completions/AJC-AJ-RT-20260721-009-001.yaml"
+  - "research_control/tasks/RT-20260721-009/roles/project-control-maintainer@0.2.0--RT-20260721-009.yaml"
+  - "research_control/handoffs/handoff-0810.yaml"
+  - "research_control/handoffs/handoff-0810.md"
+outputs_updated:
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Eliminate stale duplicated status prose."
+  explanation: "P10-T08 adds project-control generated-view and freshness evidence only; it supplies no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No scientific object source law ontology regime metric matter semantics coupling Einstein dynamics or benchmark status changed."
+  downstream_unlocked:
+    - "P10-T09 after independent P10-T07 completion"
+    - "P13-T07 after its other dependencies complete"
+  downstream_still_blocked:
+    - "P10-T09 until P10-T07 completes"
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 41 route identity lease parity max effort repository binding clean start predecessor terminal state and single consumption were verified before work."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "A fresh rebuild covers ten stable definitions and all 14 unique ledger burdens with twelve checks and zero failures."
+      - "Eleven focused mutation tests reject stale duplicate missing unmapped cyclic and contradictory inputs."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "Task-local renderer validator and focused tests pass, but research-control diff validation fails on mutable burden-map memory-preflight compatibility."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "No governed checkpoint ran because required repository validation failed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The task-local status view current frontier task index compact frontier and memory derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "authored dependency as proof of scientific sufficiency"
+    - "generated current status as independent scientific authority"
+    - "control status as ontology adoption"
+    - "mathematical status as physical interpretation"
+    - "validator PASS as proof or promotion authority"
+    - "P10-T07 or P10-T09 executed inside P10-T08"
+    - "P4-T05 ontology-regime decision or Gate Chair verdict"
+    - "physics promotion benchmark promotion publication proof completed derivation or global no-go"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json and --check --json | status=PASS definitions=10 burdens=14 drift=0"
+  - ".venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --write --json and --check --json | status=PASS checks=12 failures=0 stale_fixture_rejected=true"
+  - ".venv/bin/python -m unittest -v tests.test_current_burden_status | exit_code=0 | tests=11 failures=0"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/design/gr_derivation_burden_map.md research_control/tasks/RT-20260721-009 tests/test_current_burden_status.py research_control/program_state.yaml research_control/handoffs/handoff-0810.yaml --explain | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write and --check plus validate_compact_current_frontier_v16.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json and resolve_project_improvement.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | exit_code=1 | status=FAIL errors=162 at detection; mutable burden-map historical memory-preflight compatibility blocks checkpoint"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | required before checkpoint"
+  - "git diff --check | required before checkpoint"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 969
+    relationship_row_count: 4801
+    semantic_row_count: 969
+    vault_row_count: 969
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/gr_derivation_burden_map.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/gr_derivation_burden_map.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/gr_derivation_burden_map.md"
+      source_hash: "dfc9339e94fd3efb40a9e4ead46dd9c48f1345c665fa4e5a47a2d030cabcd833"
+      pre_change_source_hash: "6d1df3488be163b72296cf34ee07b979e29b061d508e6a4c271ac3305373aa1f"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory and .local are retrieval layers only and not authority; canonical tracked sources and registry rows govern."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  route: "continue-goal recovery via improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260721-009/artifacts/validation_blocker_mutable_burden_map_preflight_v1.yaml"
+  reason: "The P10-T08 AgentJob does not authorize shared-validator edits. The recursive goal recovery helper must carry the exact dirty transaction into one governed mutable-source compatibility repair."
+
+next_research_route:
+  plan_task_id: "P10-T07"
+  task_type: "v21_content_addressed_artifact_identity_and_path_policy"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  reason: "P10-T07 remains the selected plan successor but may not execute until the P10-T08 compatibility repair revalidates and checkpoints the preserved transaction."
+  requires_human_gate: false
+  plan_dependency_ready: true
+  execution_ready: false
+  pending_after_repair_and_checkpoint: true
+  executed: false
+
+claim_boundary:
+  allowed_claims:
+    - "P10-T08 task-local payload completed one authored stable-definition source and one noncanonical generated status view"
+    - "All 14 current ledger burdens render with exact source provenance and freshness checks"
+    - "P10-T07 is selected but execution-pending after repair and checkpoint"
+  blocked_claims:
+    - "generated current status as independent authority"
+    - "ledger or scientific status mutation"
+    - "P10-T07 or P10-T09 execution"
+    - "P4-T05 execution ontology adoption physics promotion proof publication or completed derivation"
+  this_completion_authorizes: "No new plan packet. It preserves the complete dirty P10-T08 payload for one governed mutable burden-map memory-preflight compatibility recovery, revalidation, and checkpoint."
+  this_completion_does_not_authorize: "Shared-validator repair inside P10-T08, P10-T07 or P10-T09 execution before recovery and checkpoint, event-store cutover, scientific or ontology mutation, protected gate action, physics promotion, proof, publication, or completed derivation."

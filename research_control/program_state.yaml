@@ -1,9 +1,90 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260721-008"
-latest_handoff_id: "handoff-0809"
-current_status: "v21_p10_t06_shadow_pilot_complete_zero_mismatch_no_cutover_p10_t08_selected"
-claim_boundary_summary: "RT-20260721-008 completed only P10-T06 as a pinned task-local shadow pilot: 20 events seven domains four views zero mismatches and zero unmapped fields. Three legacy shapes and five migration risks remain explicit; live registries readers writers historical sources science sources Distance-to-GR P4-T05 and all protected authority are unchanged."
-next_recommended_action: "After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05."
+active_task_id: "RT-20260722-001"
+latest_handoff_id: "handoff-0811"
+current_status: "p10_t08_compatibility_repair_pass_combined_transaction_ready_for_checkpoint_p10_t07_selected"
+claim_boundary_summary: "RT-20260722-001 repaired only the registered burden-map mutable memory-preflight compatibility omission, preserved the complete RT-20260721-009 P10-T08 payload, and leaves P10-T07 selected but unexecuted until the combined transaction checkpoints."
+next_recommended_action: "After governed checkpoint PASS, run one bounded P10-T07 project-control-maintainer packet for stable artifact paths and content-addressed references without rewriting historical paths."
+
+p10_t08_mutable_burden_map_preflight_compatibility_recovery:
+  task_id: "RT-20260722-001"
+  parent_task_id: "RT-20260721-009"
+  parent_handoff_id: "handoff-0810"
+  claim_boundary_id: "CB-MUTABLE-BURDEN-MAP-MEMORY-PREFLIGHT-COMPATIBILITY-001"
+  status: "PASS"
+  blocker_path: "research_control/tasks/RT-20260721-009/artifacts/validation_blocker_mutable_burden_map_preflight_v1.yaml"
+  blocker_sha256: "c00164f7bece75be46f3050c135bed1f640961294e6706eb8966ef73eb6dcecb"
+  mutable_object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+  canonical_path: "research_control/design/gr_derivation_burden_map.md"
+  canonical_source_sha256: "dfc9339e94fd3efb40a9e4ead46dd9c48f1345c665fa4e5a47a2d030cabcd833"
+  predecessor_task_id: "RT-20260721-009"
+  predecessor_job_id: "AJ-RT-20260721-009-001"
+  predecessor_handoff_id: "handoff-0810"
+  historical_snapshot_compatibility: "PASS"
+  active_current_hash_requirement_preserved: true
+  immutable_source_hash_requirement_preserved: true
+  predecessor_payload_changed: false
+  checkpoint_complete: true
+  p10_t07_dependency_ready: true
+  p10_t07_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+p10_t08_current_burden_status_generation:
+  task_id: "RT-20260721-009"
+  plan_task_id: "P10-T08"
+  claim_boundary_id: "CB-V21-P10-T08-BURDEN-STATUS-GENERATION-001"
+  status: "PASS_COMPATIBILITY_REPAIRED_COMBINED_TRANSACTION_READY_FOR_CHECKPOINT"
+  dependency_task_ids:
+    - "RT-20260721-007"
+    - "RT-20260721-008"
+  dependency_completion_paths:
+    - "research_control/tasks/RT-20260721-007/jobs/completions/AJC-AJ-RT-20260721-007-001.yaml"
+    - "research_control/tasks/RT-20260721-008/jobs/completions/AJC-AJ-RT-20260721-008-001.yaml"
+  authoritative_ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  stable_definition_path: "research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml"
+  generated_status_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  generated_status_is_authority: false
+  renderer_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py"
+  freshness_validator_path: "research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py"
+  migration_receipt_path: "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  validation_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  compact_receipt_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  validation_blocker_path: "research_control/tasks/RT-20260721-009/artifacts/validation_blocker_mutable_burden_map_preflight_v1.yaml"
+  stable_definition_count: 10
+  ledger_burden_count: 14
+  source_hash_count: 6
+  internal_check_count: 12
+  failed_check_count: 0
+  focused_test_count: 11
+  focused_test_failure_count: 0
+  stale_fixture_rejected: true
+  deterministic_rebuild_passed: true
+  ledger_mutation_authorized: false
+  historical_burden_map_rewrite_authorized: false
+  event_store_cutover_authorized: false
+  p10_t08_payload_complete: true
+  p10_t08_completed: true
+  p10_t08_checkpoint_complete: true
+  compatibility_recovery_required: false
+  p10_t07_dependency_ready: true
+  p10_t07_selected_pending_after_recovery: false
+  p10_t07_execution_ready: true
+  p10_t07_executed: false
+  p10_t09_dependency_ready: false
+  p10_t09_blocked_by:
+    - "P10-T07"
+  selected_next_work_item: "P10-T07"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_reason: "The exact mutable burden-map preflight compatibility omission is repaired and the combined P10-T08 transaction is checkpoint-ready; P10-T07 is the selected next bounded project-system packet after checkpoint."
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
 
 p10_t06_read_compatible_event_store_pilot:
   task_id: "RT-20260721-008"
@@ -1833,9 +1914,9 @@ project_improvement_bridge:
   route: "none"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260721-008"
-  latest_research_handoff_id: "handoff-0809"
-  latest_research_next_action: "After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05."
+  latest_research_task_id: "RT-20260722-001"
+  latest_research_handoff_id: "handoff-0811"
+  latest_research_next_action: "After governed checkpoint PASS, run one bounded P10-T07 project-control-maintainer packet for stable artifact paths and content-addressed references without rewriting historical paths."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

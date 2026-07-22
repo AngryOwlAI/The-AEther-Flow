@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260721-008`
-- Latest handoff: `handoff-0809`
-- Current status: `v21_p10_t06_shadow_pilot_complete_zero_mismatch_no_cutover_p10_t08_selected`
+- Active task: `RT-20260722-001`
+- Latest handoff: `handoff-0811`
+- Current status: `p10_t08_compatibility_repair_pass_combined_transaction_ready_for_checkpoint_p10_t07_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260721-008`
-- Latest research handoff: `handoff-0809`
-- Latest research next action: After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05.
+- Latest research task: `RT-20260722-001`
+- Latest research handoff: `handoff-0811`
+- Latest research next action: After governed checkpoint PASS, run one bounded P10-T07 project-control-maintainer packet for stable artifact paths and content-addressed references without rewriting historical paths.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p10_t08_generate_current_burden_status`
+- Route ID: `v21_p10_t07_content_addressed_artifact_identity_and_path_policy`
 - Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Eliminate stale duplicated status prose.
+- Milestone burden: Improve portability and referential stability.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `d82cb37ea682074af50026ba057434844e995d942c65387203acf763c8342c88`
-- JSON SHA-256: `fc9dc35ef877b628b299e973fe80d0047a314922ea5a50ba77f1e7685d022da4`
+- YAML SHA-256: `12f62a73281efe02736a724a4f4dc869be0894cffa9204045df857b2c885a149`
+- JSON SHA-256: `7dfb5ce1e111b8cdb9519c5ee6d7b32159b867bff20f5b5aef985b8ceab2b47e`
 
 ## Authority Warning
 

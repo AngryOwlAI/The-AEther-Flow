@@ -18,18 +18,52 @@ Reference: Project review memo. (2026, June 17). *Review project goal
 
 ## Required Milestone Chain
 
-| Milestone | Required Object | Current Status | Blocking Burden | Accept Criteria | Failure Or Freeze Criteria |
+This table contains authored stable definitions only. It deliberately contains
+no current-status or next-action value. Those values change with tracked state
+and are rendered through the generation contract below.
+
+| Milestone | Required Object | Depends On | Blocking Burden Definition | Accept Criteria Definition | Failure Or Freeze Definition |
 | --- | --- | --- | --- | --- | --- |
-| `source_ontology` | primitive substrate data | draft object exists | canonical adoption rules | source-only definitions with claim boundaries | human-gated ontology change |
-| `source_equivalence_eqsrc` | `EqSrc` | draft object exists | equivalence under variations | theorem plus stress pass | freeze route |
-| `source_localization_obsloc_lc` | `ObsLoc_lc` | constructive witness exists | robustness and exact-branch limits | concrete witness plus audit | freeze route |
-| `response_localization_resp_lc` | `Resp_lc` | blocked by missing primitive | selector data `o^R`, `nu^R`, `kappa^R` | source-only witness or admissible extension | `NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION` or human gate |
-| `source_manifold_m_src` | `M_src` | not started | response/localization bridge | construction theorem | freeze route |
-| `effective_metric_g_eff` | `g_eff` | not started | metric law | source-to-metric map | freeze route |
-| `matter_coupling` | universal coupling | not started | response semantics | coupling derivation | freeze route |
-| `einstein_equations` | field equations | not started | dynamics/action/variation | derivation theorem | freeze route |
-| `benchmark_promotion` | exact-GR benchmark | human-gated | all prior objects | Gate Chair approval | human gate |
-| `finite_toy_metric_response` | finite source-to-response toy model | not started | minimal finite response analogue | source set, response relation, toy metric analogue, invariance checks | route frozen or redesigned before full GR |
+| `source_ontology` | primitive substrate data | none | canonical adoption rules | source-only definitions with claim boundaries | human-gated ontology change |
+| `source_equivalence_eqsrc` | `EqSrc` and supporting source-equivalence objects | `source_ontology` | equivalence under variations | theorem plus stress pass | freeze route |
+| `source_localization_obsloc_lc` | `ObsLoc_lc` | `source_equivalence_eqsrc` | robustness and exact-branch limits | concrete witness plus audit | freeze route |
+| `response_localization_resp_lc` | `Resp_lc` | `source_localization_obsloc_lc` | selector data `o^R`, `nu^R`, `kappa^R` | source-only witness or admissible extension | `NDCL-RESP-LC-SELECTOR-UNDERDETERMINATION` or human gate |
+| `source_manifold_m_src` | `M_src` | `response_localization_resp_lc` | response/localization bridge | construction theorem | freeze route |
+| `effective_metric_g_eff` | `g_eff` | `source_manifold_m_src` | metric law | source-to-metric map | freeze route |
+| `matter_coupling` | universal coupling | `effective_metric_g_eff` | response semantics | coupling derivation | freeze route |
+| `einstein_equations` | field equations | `matter_coupling` | dynamics/action/variation | derivation theorem | freeze route |
+| `benchmark_promotion` | exact-GR benchmark and Gate Chair status | `einstein_equations` | all prior objects and protected verdict authority | explicit human-gated Gate Chair approval | human gate |
+| `finite_toy_metric_response` | finite source-to-response toy model | `source_equivalence_eqsrc` | minimal finite response analogue | source set, response relation, toy metric analogue, invariance checks | route frozen or redesigned before full GR |
+
+## Generated Current-Status Contract
+
+The one generated current-status view for this map is:
+
+`research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md`
+
+It is a reader surface, not independent authority. The renderer reads current
+values only from `registries/DISTANCE_TO_GR_LEDGER.csv`,
+`research_control/program_state.yaml`, and the latest handoff named by program
+state. It also records the active task count and exact source hashes. The
+task-local stable definition source is:
+
+`research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`
+
+<!-- stable-burden-definitions-sha256: 2ca5990c40419f4d8838d2f2ffc94ab694bda7ad002fe930ae2cf2e56209c400 -->
+<!-- historical-map-source-commit: 2c5fb02fd8fff9b449ab10a328d7c881b13ef546 -->
+<!-- historical-map-sha256: 6d1df3488be163b72296cf34ee07b979e29b061d508e6a4c271ac3305373aa1f -->
+
+Regenerate and validate with:
+
+```zsh
+.venv/bin/python research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py --write --json
+.venv/bin/python research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py --check --json
+```
+
+Any source-hash drift, missing or duplicate ledger burden, unmapped milestone,
+program-state/handoff disagreement, or changed generated bytes fails closed.
+Git retains the pre-refactor map at the exact source commit and hash recorded
+above.
 
 ## Distance-to-GR Ledger
 

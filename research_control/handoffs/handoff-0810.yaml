@@ -1,0 +1,235 @@
+validation_status: "FAIL"
+handoff_id: "handoff-0810"
+task_id: "RT-20260721-009"
+job_id: "AJ-RT-20260721-009-001"
+completion_id: "AJC-AJ-RT-20260721-009-001"
+completion_path: "research_control/tasks/RT-20260721-009/jobs/completions/AJC-AJ-RT-20260721-009-001.yaml"
+completion_sha256: "ef29dde08062224f03ca7be10cf140db4ffcaf614b46adb3182f4f58da0d61d7"
+status: "blocked_validation"
+created_at: "2026-07-22T06:26:35Z"
+parent_handoff_id: "handoff-0809"
+plan_task_id: "P10-T08"
+source_role_id: "project-control-maintainer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260721-009"
+handoff_summary: "P10-T08 produced a task-locally valid payload: ten stable authored burden definitions are separated from mutable status, all 14 ledger burdens render from six tracked sources, and twelve internal checks plus 11 focused tests pass. Required repository validation fails because the mutable registered burden map is absent from the mutable memory-preflight source set, so immutable historical snapshots are compared with the new current hash. The repair lies outside this AgentJob, no checkpoint ran, and P10-T07 remains selected but execution-pending. No ledger scientific ontology event-store or protected-authority state changed."
+next_action: "Run one governed improve-project-system recovery for mutable burden-map memory-preflight compatibility, then revalidate and checkpoint the preserved P10-T08 transaction; only afterward execute P10-T07."
+current_claim_boundary: "CB-V21-P10-T08-BURDEN-STATUS-GENERATION-001"
+loop_risk_route: "project_system_mutable_burden_map_preflight_compatibility_recovery"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260721-009"
+  latest_research_handoff_id: "handoff-0810"
+  latest_research_next_action: "Run one governed improve-project-system recovery for mutable burden-map memory-preflight compatibility, then revalidate and checkpoint the preserved P10-T08 transaction; only afterward execute P10-T07."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "No new plan packet is execution-ready. Preserve the dirty P10-T08 transaction for one governed mutable burden-map memory-preflight compatibility repair, revalidation, and checkpoint; P10-T07 remains pending."
+  task_local_payload_plan_task: "P10-T08"
+  p10_t05_dependency_completion_path: "research_control/tasks/RT-20260721-007/jobs/completions/AJC-AJ-RT-20260721-007-001.yaml"
+  p10_t05_dependency_completion_hash: "2517f883a575fa8e82379f91d59b2cb4ba85f1f8da7d64a2a2373907b8ec3de2"
+  p10_t06_dependency_completion_path: "research_control/tasks/RT-20260721-008/jobs/completions/AJC-AJ-RT-20260721-008-001.yaml"
+  p10_t06_dependency_completion_hash: "cb1460ade8b8525c810c70316595800082ace8de561e01db55e6daa2edba5f03"
+  p10_t08_completion_path: "research_control/tasks/RT-20260721-009/jobs/completions/AJC-AJ-RT-20260721-009-001.yaml"
+  p10_t08_completion_hash: "ef29dde08062224f03ca7be10cf140db4ffcaf614b46adb3182f4f58da0d61d7"
+  stable_definition_count: 10
+  ledger_burden_count: 14
+  source_hash_count: 6
+  internal_check_count: 12
+  failed_check_count: 0
+  focused_test_count: 11
+  focused_test_failure_count: 0
+  stale_fixture_rejected: true
+  deterministic_rebuild_passed: true
+  ledger_row_mutation_count: 0
+  scientific_status_reinterpretation_count: 0
+  generated_status_is_authority: false
+  p10_t08_payload_complete: true
+  p10_t08_completed: false
+  p10_t08_checkpoint_complete: false
+  p10_t07_dependency_ready: true
+  p10_t07_selected_pending_after_recovery: true
+  p10_t07_execution_ready: false
+  p10_t07_executed: false
+  p10_t09_dependency_ready: false
+  p10_t09_blocked_by:
+    - "P10-T07"
+    - "P10-T08 checkpoint"
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  scientific_ledger_change_count: 0
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  blocked_claims:
+    - "generated current status treated as independent scientific or control authority"
+    - "authored dependency treated as proof of scientific sufficiency"
+    - "control status treated as ontology adoption or mathematical status as physical interpretation"
+    - "validator PASS treated as scientific proof or promotion authority"
+    - "P10-T07 or P10-T09 execution inside P10-T08"
+    - "P4-T05 ontology-regime decision or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"
+
+burden_status_result:
+  schema_id: "v21_current_burden_status_compact_receipt_v1"
+  status: "PASS_TASK_LOCAL_GENERATED_VIEW_REPOSITORY_CHECKPOINT_BLOCKED"
+  historical_map_source_commit: "2c5fb02fd8fff9b449ab10a328d7c881b13ef546"
+  historical_map_sha256: "6d1df3488be163b72296cf34ee07b979e29b061d508e6a4c271ac3305373aa1f"
+  stable_definitions_path: "research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml"
+  stable_definitions_sha256: "2ca5990c40419f4d8838d2f2ffc94ab694bda7ad002fe930ae2cf2e56209c400"
+  renderer_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py"
+  renderer_sha256: "1f6cbca61261c3e4a961f55041f0c8d48c7ed5984bdac4e81b129b88cd36478d"
+  validator_path: "research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py"
+  validator_sha256: "8fde051d82840d267e058b29ed8f2cf1a569d00144da288c3a1e8aaf595f3673"
+  generated_output_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  migration_receipt_path: "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  validation_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  compact_receipt_path: "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  validation_blocker_path: "research_control/tasks/RT-20260721-009/artifacts/validation_blocker_mutable_burden_map_preflight_v1.yaml"
+  authoritative_ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  authoritative_ledger_sha256: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  definition_count: 10
+  burden_count: 14
+  internal_check_count: 12
+  focused_test_count: 11
+  ledger_rows_mutated: 0
+  generated_status_is_independent_authority: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Eliminate stale duplicated status prose."
+  explanation: "P10-T08 adds project-control source-separation and freshness evidence only; it supplies no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_project_control_generated_view_only"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No scientific object source law ontology regime metric matter semantics coupling Einstein dynamics or benchmark status changed."
+  downstream_unlocked:
+    - "P10-T09 after independent P10-T07 completion"
+    - "P13-T07 after its other dependencies complete"
+  downstream_still_blocked:
+    - "P10-T09 until P10-T07 completes"
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+required_next_packet:
+  task_type: "v21_content_addressed_artifact_identity_and_path_policy"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "construction_or_implementation"
+    milestone: "source_equivalence_eqsrc"
+    candidate_family: "not_applicable"
+    result_kind: "implemented_and_validated_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+selected_next_route:
+  route_id: "v21_p10_t07_content_addressed_artifact_identity_and_path_policy"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P10-T07"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Improve portability and referential stability."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  plan_dependency_ready: true
+  execution_ready: false
+  pending_after_repair_and_checkpoint: true
+  executed: false
+  next_action: "Preserve P10-T07 selection without execution until the P10-T08 compatibility defect is repaired, required validation passes, and the combined transaction is checkpointed."
+  source_handoff: "research_control/handoffs/handoff-0810.yaml"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 41 was validated claimed consumed once and executed under its immutable continue-research route."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Ten stable definitions all 14 ledger burdens six source hashes twelve internal checks and 11 focused tests pass."
+  post_write:
+    status: "FAIL"
+    evidence:
+      - "Task-local renderer validator and focused tests pass, but repository validation fails on mutable burden-map memory-preflight compatibility."
+  post_checkpoint:
+    status: "NOT_RUN"
+    evidence:
+      - "No governed checkpoint ran because required repository validation failed."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The task-local status view task index current frontier compact frontier and memory derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and read-only validation are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: true
+  route: "continue-goal recovery via improve-project-system"
+  blocker_path: "research_control/tasks/RT-20260721-009/artifacts/validation_blocker_mutable_burden_map_preflight_v1.yaml"
+  reason: "No project-improvement sidecar is authorized in this AgentJob. The recursive goal recovery helper must carry the validator compatibility defect and exact dirty transaction."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "No new plan packet. It preserves the complete P10-T08 payload and P10-T07 selection while the recursive relay seeks separately governed project-system recovery."
+  this_handoff_does_not_authorize:
+    - "P10-T07 execution before successful repair revalidation and checkpoint of P10-T08"
+    - "validator or historical-record edits under the blocked P10-T08 AgentJob"
+    - "P10-T09 integration audit"
+    - "event-store writer dual-write reader registry or authority cutover"
+    - "generated status or validator PASS as scientific or protected authority"
+    - "candidate adoption rejection promotion or scientific truth inference"
+    - "P4-T05 ontology-regime selection or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"

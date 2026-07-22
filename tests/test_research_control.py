@@ -979,6 +979,7 @@ class ResearchControlTests(unittest.TestCase):
             "MD-README-TESTS",
             "MD-CONTRIBUTING",
             "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY",
+            "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
         ]:
             with self.subTest(object_id=object_id):
                 root, receipt = self.memory_preflight_fixture(

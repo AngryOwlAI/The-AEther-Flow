@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0809.yaml",
+    "research_control/handoffs/handoff-0811.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260721-008",
-    "latest_handoff_id": "handoff-0809",
-    "current_status": "v21_p10_t06_shadow_pilot_complete_zero_mismatch_no_cutover_p10_t08_selected",
+    "active_task_id": "RT-20260722-001",
+    "latest_handoff_id": "handoff-0811",
+    "current_status": "p10_t08_compatibility_repair_pass_combined_transaction_ready_for_checkpoint_p10_t07_selected",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260721-008",
-    "latest_research_handoff_id": "handoff-0809",
-    "latest_research_next_action": "After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05.",
+    "latest_research_task_id": "RT-20260722-001",
+    "latest_research_handoff_id": "handoff-0811",
+    "latest_research_next_action": "After governed checkpoint PASS, run one bounded P10-T07 project-control-maintainer packet for stable artifact paths and content-addressed references without rewriting historical paths.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p10_t08_generate_current_burden_status",
+    "route_id": "v21_p10_t07_content_addressed_artifact_identity_and_path_policy",
     "role_family": "project-control-maintainer@0.2.0",
     "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Eliminate stale duplicated status prose.",
+    "milestone_burden": "Improve portability and referential stability.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -325,8 +325,8 @@
     "delta": {
       "effect": "no_distance_delta",
       "changed": false,
-      "milestone": "none",
-      "burden_id": "none"
+      "milestone": "source_equivalence_eqsrc",
+      "burden_id": "source_equivalence_eqsrc"
     },
     "high_risk_rows": [
       {
@@ -607,15 +607,7 @@
   },
   "validation": {
     "latest_required_status": "PASS",
-    "pending_layers": [
-      {
-        "layer": "post_checkpoint",
-        "status": "PENDING",
-        "evidence": [
-          "The governed checkpoint remains the final transaction gate."
-        ]
-      }
-    ]
+    "pending_layers": []
   },
   "authority_warning": {
     "snapshot_only_not_authority": true

@@ -1,0 +1,51 @@
+{
+  "active_task_id": "RT-20260722-001",
+  "authority": {
+    "distance_to_gr_ledger_is_authority": true,
+    "generated_status_is_independent_authority": false,
+    "latest_handoff_is_routing_authority": true,
+    "physics_promotion_authorized": false,
+    "program_state_is_live_state_authority": true,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "burden_count": 14,
+  "checks": {
+    "definition_dependency_acyclic": "PASS",
+    "generated_view_non_authority": "PASS",
+    "historical_map_provenance": "PASS",
+    "ledger_burden_uniqueness": "PASS",
+    "ledger_definition_coverage": "PASS",
+    "program_state_handoff_identity": "PASS",
+    "program_state_handoff_next_action": "PASS",
+    "source_hash_freshness": "PASS",
+    "stable_definition_schema": "PASS"
+  },
+  "definition_count": 10,
+  "generated_output_path": "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md",
+  "generated_output_sha256": "366e1c5bf7967bc5d2a60a397ee58d463d1b358ac16a10421e1ecb7392c6258b",
+  "historical_map_sha256": "6d1df3488be163b72296cf34ee07b979e29b061d508e6a4c271ac3305373aa1f",
+  "historical_map_source_commit": "2c5fb02fd8fff9b449ab10a328d7c881b13ef546",
+  "latest_handoff_id": "handoff-0811",
+  "migration": {
+    "current_values_are_generated": true,
+    "historical_map_preserved_by_git_identity": true,
+    "ledger_rows_mutated": 0,
+    "legacy_inline_current_status_removed": true,
+    "scientific_statuses_reinterpreted": 0,
+    "stable_definitions_remain_authored": true
+  },
+  "schema_id": "v21_burden_status_migration_receipt_v1",
+  "source_commit": "2c5fb02fd8fff9b449ab10a328d7c881b13ef546",
+  "source_hashes": {
+    "registries/DISTANCE_TO_GR_LEDGER.csv": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+    "registries/RESEARCH_TASK_REGISTRY.csv": "2ce6e15cd1a1c55261b16a9a5af8ee637410da671b01be0f847478b108fe06f3",
+    "research_control/design/gr_derivation_burden_map.md": "dfc9339e94fd3efb40a9e4ead46dd9c48f1345c665fa4e5a47a2d030cabcd833",
+    "research_control/handoffs/handoff-0811.yaml": "96e75f4d1531ad15d41253ded0448850c24949e9e9b655758ce2bf4467f584a0",
+    "research_control/program_state.yaml": "116fe6a382a04c0cbfc61df2334f102fc648afaefedd75d7ce35e363ae2c128d",
+    "research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml": "2ca5990c40419f4d8838d2f2ffc94ab694bda7ad002fe930ae2cf2e56209c400"
+  },
+  "status": "PASS",
+  "status_generation_time": "2026-07-22T06:59:28Z",
+  "task_count": 1043
+}

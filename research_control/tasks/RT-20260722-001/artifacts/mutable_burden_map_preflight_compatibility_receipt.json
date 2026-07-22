@@ -1,0 +1,59 @@
+{
+  "authority_boundary": {
+    "physics_promotion_authorized": false,
+    "project_system_change_only": true,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "behavior": {
+    "active_task_current_hash_required": true,
+    "historical_mutable_snapshot_hash_allowed": true,
+    "immutable_source_current_hash_required": true,
+    "unknown_or_arbitrary_mutable_source_allowed": false
+  },
+  "created_at": "2026-07-22T06:59:28Z",
+  "diagnosis": {
+    "blocker_path": "research_control/tasks/RT-20260721-009/artifacts/validation_blocker_mutable_burden_map_preflight_v1.yaml",
+    "blocker_sha256": "c00164f7bece75be46f3050c135bed1f640961294e6706eb8966ef73eb6dcecb",
+    "failed_gate": "research_control_diff",
+    "pre_repair_status": "FAIL_158_MUTABLE_BURDEN_MAP_PREFLIGHT_COMPATIBILITY",
+    "root_cause": "The registered mutable GR derivation burden-map object ID was absent from the validator's existing mutable memory-preflight source set."
+  },
+  "focused_validation": {
+    "focused_regression_status": "PASS",
+    "p10_t08_focused_test_count": 11,
+    "p10_t08_focused_test_status": "PASS",
+    "p10_t08_task_local_check_count": 12,
+    "p10_t08_task_local_status": "PASS",
+    "test": "tests.test_research_control.ResearchControlTests.test_memory_preflight_allows_historical_mutable_contract_hashes",
+    "validator_test_module_status": "PASS"
+  },
+  "job_id": "AJ-RT-20260722-001-001",
+  "preserved_predecessor": {
+    "completion_sha256": "ef29dde08062224f03ca7be10cf140db4ffcaf614b46adb3182f4f58da0d61d7",
+    "declared_generated_current_status_outputs_may_refresh": true,
+    "handoff_markdown_sha256": "9af23bd68fee24669b8836d89767fa731a195f1447f61d1a014bab658e190360",
+    "handoff_yaml_sha256": "f291997a96f66a29b718fefd7594abdd73c1e483b2846a5c6ab75f12d5f3dc39",
+    "job_id": "AJ-RT-20260721-009-001",
+    "stable_definitions_sha256": "2ca5990c40419f4d8838d2f2ffc94ab694bda7ad002fe930ae2cf2e56209c400",
+    "stable_sources_completion_and_handoff_changed": false,
+    "task_id": "RT-20260721-009"
+  },
+  "repair": {
+    "canonical_path": "research_control/design/gr_derivation_burden_map.md",
+    "canonical_source_sha256": "dfc9339e94fd3efb40a9e4ead46dd9c48f1345c665fa4e5a47a2d030cabcd833",
+    "object_id": "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
+    "production_line_count": 1,
+    "routing_fixture_line_count": 1,
+    "routing_fixture_path": "tests/test_current_burden_status.py",
+    "routing_fixture_sha256": "337f10b57dc9ae63f519d27db15ab1d62ee1d0bfe1249f8b4249fa20c097d743",
+    "test_line_count": 1,
+    "test_path": "tests/test_research_control.py",
+    "test_sha256": "a72fbc769952f6a7fa9311eb12b7ade719ce6027f7fc55fae2e175fb08826efa",
+    "validator_path": "scripts/research_control/validate_research_control.py",
+    "validator_sha256": "12a9523f284070e1c615a915a2930a8bc7d6002bbc739817f158f1aa0ef73f0d"
+  },
+  "schema_id": "mutable-burden-map-preflight-compatibility-receipt.v1",
+  "status": "PASS",
+  "task_id": "RT-20260722-001"
+}

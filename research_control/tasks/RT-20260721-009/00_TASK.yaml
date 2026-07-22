@@ -1,0 +1,73 @@
+validation_status: "FAIL"
+task_id: "RT-20260721-009"
+task_type: "v21_generate_current_burden_status"
+title: "Generate current burden status from the ledger and live state"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "integration_or_selection"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "not_applicable"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "blocked"
+created_at: "2026-07-22T05:57:57Z"
+updated_at: "2026-07-22T06:26:35Z"
+closed_at: "2026-07-22T06:26:35Z"
+parent_task_id: "RT-20260721-008"
+parent_handoff_id: "handoff-0809"
+current_decision_id: "DDR-20260721-009"
+current_job_id: "AJ-RT-20260721-009-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260721-009"
+requires_human_gate: false
+human_authorization_note: "Generation 41 of the immutable user-requested v21 relay and handoff-0809 authorize one bounded P10-T08 project-system burden-status generation packet."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T08"
+  plan_task_name: "Generate current burden status from the ledger and live state"
+  recommendation_ids:
+    - "V21-R49"
+    - "V21-R50"
+objective: "Refactor the GR derivation burden map so stable definitions and dependencies remain authored while one deterministic current-status view is generated from the authoritative Distance-to-GR ledger program state and latest handoff with exact freshness evidence."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Eliminate stale duplicated status prose."
+route_label: "ordinary-research-packet"
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V21-P10-T08-BURDEN-STATUS-GENERATION-001"
+claim_boundary:
+  allowed_scope: "Implement only P10-T08 through one authored stable-definition source one task-local deterministic status renderer one task-local freshness validator one generated current-status view one migration and compact receipt focused tests the authored burden-map separation standard control records one next handoff and policy-generated derivatives."
+  completed_dependency_tasks:
+    - "RT-20260721-007"
+    - "RT-20260721-008"
+  current_handoff: "handoff-0809"
+  distance_to_gr_ledger_is_authority: true
+  program_state_is_live_state_authority: true
+  latest_handoff_is_routing_authority: true
+  generated_status_is_independent_authority: false
+  ledger_mutation_authorized: false
+  event_store_cutover_authorized: false
+  p4_t05_preserved_human_gate: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_renderer.py"
+  - "research_control/tasks/RT-20260721-009/artifacts/validate_v21_current_burden_status.py"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+closure_status: "p10_t08_payload_complete_checkpoint_blocked_mutable_burden_map_preflight_compatibility"
+summary: "P10-T08 task-local payload is complete and passes twelve checks plus 11 focused tests, but required repository validation fails because the mutable registered burden map is not exempted for immutable historical memory-preflight snapshots. No checkpoint ran and P10-T07 remains pending."
+next_recommended_action: "Run one governed improve-project-system recovery for mutable burden-map memory-preflight compatibility, then revalidate and checkpoint the preserved P10-T08 transaction; only afterward execute P10-T07."
+documentation_impact_id: "DI-RT-20260721-009-001"
+completion_id: "AJC-AJ-RT-20260721-009-001"
+project_improvement_signals: []
+notes: "P10-T08 payload complete but blocked before checkpoint by a shared validator compatibility omission. Preserve the exact dirty transaction for one recovery; P10-T07 and P10-T09 remain unexecuted."

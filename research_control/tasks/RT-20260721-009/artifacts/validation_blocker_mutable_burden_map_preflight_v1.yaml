@@ -1,0 +1,58 @@
+schema_id: "v21_mutable_memory_preflight_compatibility_blocker_v1"
+blocker_id: "BLOCK-P10-T08-MUTABLE-BURDEN-MAP-PREFLIGHT-001"
+task_id: "RT-20260721-009"
+job_id: "AJ-RT-20260721-009-001"
+plan_task_id: "P10-T08"
+detected_at: "2026-07-22T06:26:35Z"
+status: "blocked_precheckpoint_project_system_repair_required"
+failing_command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff"
+observed_error_count_at_detection: 162
+observed_warning_count_at_detection: 1719
+receipt_path: ".local/validation-receipts/working-sha256-a33a516e345e896b3f1596cc13d2b552ee3fb305afa3b7b398a9a6a65718f995/RESEARCH-CONTROL-DIFF-A33A516E345E896B/full.json"
+post_cleanup_compatibility_error_count: 158
+post_cleanup_noncompatibility_error_count: 0
+post_cleanup_receipt_path: ".local/validation-receipts/working-sha256-166688f5940b5733adc46889e17eebe17cb7fb7f1b9c5d4edb9b198354171734/RESEARCH-CONTROL-DIFF-166688F5940B5733/full.json"
+mutable_source:
+  object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+  canonical_path: "research_control/design/gr_derivation_burden_map.md"
+  registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  historical_source_sha256: "6d1df3488be163b72296cf34ee07b979e29b061d508e6a4c271ac3305373aa1f"
+  current_source_sha256: "dfc9339e94fd3efb40a9e4ead46dd9c48f1345c665fa4e5a47a2d030cabcd833"
+  intentionally_mutable: true
+  mutation_authorized_by: "v21 P10-T08 exact burden-map refactor objective and AJ-RT-20260721-009-001 allowlist"
+defect:
+  location: "scripts/research_control/validate_research_control.py"
+  symbol: "MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS"
+  missing_object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+  behavior: "The validator compares the current mutable map hash against immutable historical job and completion memory-preflight snapshots, so a lawful registered-source update invalidates historical receipts."
+  current_active_hash_requirement_must_remain: true
+  immutable_nonmutable_source_hash_requirement_must_remain: true
+  historical_receipt_rewrite_authorized: false
+required_recovery:
+  route: "repair_mutable_burden_map_memory_preflight_compatibility_v1"
+  worker_skill: "improve-project-system"
+  role_family: "validator-engineer@0.2.0"
+  exact_code_change: "Add only MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP to the established mutable memory-preflight source set."
+  focused_regression: "Prove historical snapshots of the mutable burden map remain valid while the active task must bind the current hash and immutable registered sources remain exact."
+  preserved_transaction: "Keep the complete RT-20260721-009 P10-T08 payload and ledger bytes unchanged, rerun every required gate, refresh derivatives, and checkpoint the combined transaction."
+  next_plan_item_after_recovery: "P10-T07"
+  next_plan_item_executed: false
+task_local_evidence:
+  renderer_status: "PASS"
+  validation_status: "PASS"
+  stable_definition_count: 10
+  burden_count: 14
+  internal_check_count: 12
+  focused_test_count: 11
+  focused_test_failure_count: 0
+  stale_fixture_rejected: true
+  ledger_rows_mutated: 0
+authority_boundary:
+  p10_t08_payload_complete: true
+  p10_t08_checkpoint_complete: false
+  p10_t08_plan_completion_finalized: false
+  p10_t07_execution_ready: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  historical_record_rewrite_authorized: false
