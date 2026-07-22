@@ -1440,7 +1440,7 @@ class ResearchControlTests(unittest.TestCase):
         self.assertEqual(status["ordinary_route_guard"]["status"], "PASS")
         self.assertEqual(
             status["ordinary_route_guard"]["selected_plan_task_id"],
-            "P14-T01",
+            "P14-T02",
         )
         self.assertIn("dependency_graph_summary", status)
         graph_summary = status["dependency_graph_summary"]

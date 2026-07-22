@@ -1,0 +1,231 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260722-017-001"
+completion_id: "AJC-AJ-RT-20260722-017-001"
+task_id: "RT-20260722-017"
+task_type: "p14_t01_route_transition_assertion_compatibility_repair"
+decision_id: "DDR-20260722-017"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260722-017"
+status: "completed"
+created_at: "2026-07-22T21:08:00Z"
+started_at: "2026-07-22T21:08:00Z"
+completed_at: "2026-07-22T21:08:00Z"
+objective: "Repair only the stale P14-T01 selected-route expectation in the Director-context test and preserve authoritative P14-T01 completion and P14-T02 routing bytes."
+completion_summary: "The one stale expected route now reads P14-T02. The focused test and all 141 tests in tests.test_research_control pass while handoff-0826 program state the P14-T01 completion and scientific ledgers remain unchanged."
+objective_result: "met"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 58
+  passes_consumed: 57
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:58"
+  relay_claim_token: "82530facafc6200029f8fe12f4b396f70752c710b4113d2a"
+  immutable_route_hash: "cebb68e3e49b4d1c2fa917a4b22c523bec7feb445ccf9c38297e8e790bbf8968"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented_and_validated_project_system_repair"
+work_item_status: "repair_completed"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "One research-control regression expectation task-local evidence standard control records and generated memory derivatives only."
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "tests/test_research_control.py"
+      - "research_control/tasks/RT-20260722-017/artifacts/p14_t01_route_transition_assertion_repair_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the focused Director-context regression expects P14-T02 and passes"
+      - "the research-control test shard passes without changing authoritative routing sources"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0825"
+  selected_plan_task_id: "P14-T01"
+  guard_outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+repair_evidence:
+  receipt_path: "research_control/tasks/RT-20260722-017/artifacts/p14_t01_route_transition_assertion_repair_receipt.json"
+  test_path: "tests/test_research_control.py"
+  test_sha256_before: "a7f28115322da33fc7428fb896ec11de1c04892253e5532cdf1d74a49cb23147"
+  test_sha256_after: "f16eb239cdd8885e06aedf9caf3d34057fb1ca441cfa97ea9968e84487e870d2"
+  changed_literal_count: 1
+  stale_expected_plan_task_id: "P14-T01"
+  authoritative_selected_plan_task_id: "P14-T02"
+  focused_test_status: "PASS"
+  research_control_test_shard_status: "PASS_141_OF_141"
+preserved_state:
+  predecessor_task_id: "RT-20260722-016"
+  predecessor_completion_sha256: "0cb2132e8fcc718f60bc84ea8ba2692a871bb30cd9cfb679d48214c1d4e7a699"
+  handoff_0826_sha256: "35359a4a2c10b3cc9209a00ed1725ca940406c2aea4cbd44d55420cb4ea860a0"
+  program_state_sha256: "54a6a46424fb75e560767e8657c872ac030acb69905f9d51c58a2ec42120bfa3"
+  program_state_changed: false
+  handoff_0826_changed: false
+  scientific_payload_changed: false
+  scientific_ledger_changed: false
+command_results:
+  - command: ".venv/bin/python -m unittest -v tests.test_research_control.ResearchControlTests.test_continue_research_reports_director_context_packet"
+    status: "PASS"
+  - command: ".venv/bin/python -m unittest -v tests.test_research_control"
+    status: "PASS_141_OF_141"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+  - command: "git diff --check"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260722-017-001"
+    status: "BLOCKED_UNRELATED_LIVE_FIXTURES_INDEX_RESTORED"
+    finding: "1170 tests ran; only test_event_store_architecture and test_v21_p10_migration_readiness failed on pre-existing P10 live-fixture drift."
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260722-017-001 --legacy-validation"
+    status: "PENDING_REGISTERED_FALLBACK"
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 58 lease parity repository identity exact clean dirty manifest predecessor completion and immutable route were verified before the one worker invocation."
+      - "The focused failure was reobserved as exactly P14-T01 versus authoritative P14-T02."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exactly one expected-route literal changed."
+      - "The before and after test hashes are bound in the task-local receipt."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The focused test and the full research-control test shard pass."
+      - "Handoff-0826 and program state retain their pre-repair hashes."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The default compare checkpoint restored the index after two unrelated P10 live-fixture failures and named --legacy-validation as its supported fallback."
+      - "One legacy-compatibility checkpoint follows the passing repair-specific and staged control gates."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint owns final tracked memory synchronization and validation."
+  renderer:
+    status: "NOT_APPLICABLE"
+    evidence:
+      - "The repair changes no program-state handoff or renderer input."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The changed-surface claim-language gate has no hard finding."
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+distance_to_gr_delta:
+  effect: "no_distance_delta"
+  changed: false
+  ledger_row_updated: false
+  milestone: "none"
+  burden_id: "none"
+  rationale: "A stale test expectation is project-system validation work only."
+selected_next_route:
+  route_id: "v21_p14_t02_non_empirical_ontology_success_criteria"
+  route_label: "philosophy-foundations-packet"
+  role_family: "external-red-team-reviewer@0.1.0"
+  worker_skill: "continue-research"
+  plan_task_id: "P14-T02"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Give an empirically equivalent ontology a disciplined evaluation framework."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: false
+  physics_promotion_authorized: false
+  dependency_ready_after_checkpoint: true
+  executed: false
+next_recommendation: "Return to the recursive relay for a separately claimed P14-T02 packet after this checkpoint succeeds."
+forbidden_conclusion_summary: "Test compatibility checkpoint readiness and selected-route consistency are not science P14-T02 execution ontology authority physical interpretation proof publication promotion or completed derivation."
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 992
+    relationship_row_count: 4901
+    semantic_row_count: 992
+    vault_row_count: 992
+    local_cache_only_warning_count: 5
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'P14 T01 P14 T02 selected next work item' --limit 10 --json"
+      query_type: "search"
+      query_text: "P14 T01 P14 T02 selected next work item"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated Obsidian wiki semantic relationship and .local retrieval surfaces are navigation layers only and are not authority."
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "The recursive relay directly carries the exact deterministic compatibility blocker and no additional signal is needed."
+documentation_impact_id: "DI-RT-20260722-017-001"
+coherent_resolution_summary: "RT-20260722-017 repairs exactly one stale route expectation and preserves every scientific and live-routing boundary."

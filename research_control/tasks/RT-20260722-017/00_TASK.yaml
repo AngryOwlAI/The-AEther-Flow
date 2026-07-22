@@ -1,0 +1,61 @@
+validation_status: "PASS"
+task_id: "RT-20260722-017"
+task_type: "p14_t01_route_transition_assertion_compatibility_repair"
+title: "Repair the completed P14-T01 route-transition assertion"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "not_applicable"
+  candidate_family: "not_applicable"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-22T21:08:00Z"
+updated_at: "2026-07-22T21:08:00Z"
+closed_at: "2026-07-22T21:08:00Z"
+parent_task_id: "RT-20260722-016"
+parent_handoff_id: "handoff-0826"
+current_decision_id: "DDR-20260722-017"
+current_job_id: "AJ-RT-20260722-017-001"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260722-017"
+requires_human_gate: false
+human_authorization_note: "Generation 58 of the immutable user-requested relay authorizes exactly one improve-project-system invocation for the named P14-T01 route-transition compatibility repair."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P14"
+  plan_task_id: "P14-T01"
+  plan_task_name: "Define four distinct project-success categories"
+  repair_only: true
+objective: "Replace the one stale P14-T01 expected route in the Director-context regression with authoritative P14-T02 and preserve every completed P14-T01 scientific and routing source byte."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system validator compatibility repair only with no Distance-to-GR or scientific-status delta."
+route_label: "repair_p14_t01_route_transition_assertion_generation_58"
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+project_system_change_only: true
+claim_boundary_id: "CB-V21-P14-T01-ROUTE-TRANSITION-ASSERTION-REPAIR-001"
+claim_boundary:
+  allowed_scope: "One literal test expectation one task-local repair receipt standard control records and generated memory derivatives."
+  predecessor_task_id: "RT-20260722-016"
+  predecessor_handoff_id: "handoff-0826"
+  authoritative_selected_plan_task_id: "P14-T02"
+  program_state_changed: false
+  handoff_0826_changed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  physics_promotion_authorized: false
+  p14_t02_execution_authorized: false
+output_artifacts:
+  - "tests/test_research_control.py"
+  - "research_control/tasks/RT-20260722-017/artifacts/p14_t01_route_transition_assertion_repair_receipt.json"
+documentation_impact_id: "DI-RT-20260722-017-001"
+completion_id: "AJC-AJ-RT-20260722-017-001"
+project_improvement_signals: []
+closure_status: "p14_t01_route_transition_assertion_repaired_p14_t02_remains_selected_unexecuted"
+summary: "The sole stale Director-context route expectation now follows authoritative handoff-0826 and no scientific or live routing source changed."
+next_recommended_action: "Return control to the recursive relay so one fresh P14-T02 packet may be considered separately."
