@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260721-006`
-- Latest handoff: `handoff-0807`
-- Current status: `v21_p10_t04_append_only_attempt_history_complete_no_history_or_physics_delta_p10_t05_ready`
+- Active task: `RT-20260721-007`
+- Latest handoff: `handoff-0808`
+- Current status: `v21_p10_t05_hybrid_event_store_architecture_complete_no_activation_p10_t06_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260721-006`
-- Latest research handoff: `handoff-0807`
-- Latest research next action: Run exactly one bounded v21 P10-T05 project-system architecture packet in a separate AgentJob after the P10-T04 checkpoint. Specify the canonical event store and generated-view architecture without cutover. Do not execute P4-T05.
+- Latest research task: `RT-20260721-007`
+- Latest research handoff: `handoff-0808`
+- Latest research next action: After the P10-T05 governed checkpoint succeeds, run exactly one bounded v21 P10-T06 validator-engineer project-system AgentJob for a non-authoritative read-compatible event-store pilot. Do not cut over authority or execute protected P4-T05.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p10_t05_canonical_event_store_generated_view_architecture`
-- Role family: `project-control-maintainer@0.2.0`
+- Route ID: `v21_p10_t06_read_compatible_event_store_pilot`
+- Role family: `validator-engineer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Reduce authority drift among multiple manually synchronized surfaces.
+- Milestone burden: Prove feasibility and parity before migration.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `9581b8ecde1de8250c79016fefc585a88c9340982d18483928f3ead22186c56d`
-- JSON SHA-256: `8b8c9be1dcd560e49c4c118d9b60eb15307f1b675542cc152635015477ecdd03`
+- YAML SHA-256: `ac9edbe0c4d5f507c67e3b14050ebe8fe86f290cd3c00324455ce104a1d82b58`
+- JSON SHA-256: `ddbb9a51cb240e1e34038860e4c5946fc42fea7a3ccfa11e863f0a0ef6a451b7`
 
 ## Authority Warning
 

@@ -1,0 +1,74 @@
+validation_status: "PASS"
+task_id: "RT-20260721-007"
+task_type: "v21_canonical_event_store_generated_view_architecture"
+title: "Design the canonical event store and generated-view architecture"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "integration_or_selection"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "not_applicable"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-22T04:12:33Z"
+updated_at: "2026-07-22T04:26:46Z"
+closed_at: "2026-07-22T04:26:46Z"
+parent_task_id: "RT-20260721-006"
+parent_handoff_id: "handoff-0807"
+current_decision_id: "DDR-20260721-007"
+current_job_id: "AJ-RT-20260721-007-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260721-007"
+requires_human_gate: false
+human_authorization_note: "Generation 39 of the immutable user-requested v21 relay and handoff-0807 authorize one bounded P10-T05 project-system architecture packet."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T05"
+  plan_task_name: "Design the canonical event store and generated-view architecture"
+  recommendation_ids:
+    - "V21-R46"
+    - "V21-R47"
+    - "V21-R49"
+    - "V21-R50"
+objective: "Select and specify one append-only canonical project-control event-store architecture for task decision candidate claim validation authority and handoff events, with deterministic CSV and Markdown generated views, exact authority separation, and explicit transaction migration and rollback contracts, without implementing a pilot or cutover."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Reduce authority drift among multiple manually synchronized surfaces."
+route_label: "ordinary-research-packet"
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V21-P10-T05-EVENT-STORE-ARCHITECTURE-001"
+claim_boundary:
+  allowed_scope: "Define and validate only the P10-T05 task-local architecture decision event schema generated-view contract migration and rollback plan machine contract compact receipt focused tests standard control records one next handoff and policy-generated derivatives."
+  completed_dependency_tasks:
+    - "RT-20260721-005"
+    - "RT-20260721-006"
+  current_handoff: "handoff-0807"
+  event_store_pilot_authorized: false
+  event_store_cutover_authorized: false
+  legacy_registry_authority_changed: false
+  registered_science_authority_changed: false
+  p4_t05_preserved_human_gate: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_decision.md"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_schema.md"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_generated_view_contract.md"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_migration_rollback_plan.md"
+  - "research_control/tasks/RT-20260721-007/artifacts/validate_v21_event_store_architecture.py"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  - "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+closure_status: "p10_t05_hybrid_event_store_architecture_selected_no_activation_p10_t06_selected"
+summary: "P10-T05 selected and validated a future hybrid tracked-JSONL plus generated-SQLite project-control event-store architecture with 13 exact source bindings eight event domains ten non-authoritative generated views explicit transaction migration rollback and historical-readability contracts and no pilot cutover or science-authority change."
+next_recommended_action: "After the P10-T05 governed checkpoint succeeds, run one separate bounded P10-T06 validator-engineer pilot for a read-compatible event-store slice. Do not cut over authority or execute protected P4-T05."
+documentation_impact_id: "DI-RT-20260721-007-001"
+completion_id: "AJC-AJ-RT-20260721-007-001"
+project_improvement_signals: []
+notes: "Completed only P10-T05 design; P10-T06 and P10-T07 remain unexecuted and every current scientific and protected authority boundary remains unchanged."

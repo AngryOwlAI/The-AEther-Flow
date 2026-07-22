@@ -1,0 +1,206 @@
+{
+  "activation_state": {
+    "canonical_event_store_active": false,
+    "dual_write_active": false,
+    "legacy_registry_authority_changed": false,
+    "migration_executed": false,
+    "pilot_executed": false,
+    "reader_cutover_executed": false,
+    "sqlite_tracked": false
+  },
+  "check_count": 36,
+  "checks": [
+    {
+      "evidence": "selected=['hybrid_tracked_jsonl_plus_generated_sqlite']",
+      "name": "exactly_one_architecture_selected",
+      "status": "PASS"
+    },
+    {
+      "evidence": "options=['hybrid_tracked_jsonl_plus_generated_sqlite', 'sqlite_only', 'tracked_jsonl_only']",
+      "name": "storage_comparison_complete",
+      "status": "PASS"
+    },
+    {
+      "evidence": "activation_state={'canonical_event_store_active': False, 'dual_write_active': False, 'legacy_registry_authority_changed': False, 'migration_executed': False, 'pilot_executed': False, 'reader_cutover_executed': False, 'sqlite_tracked': False}",
+      "name": "pilot_and_cutover_not_executed",
+      "status": "PASS"
+    },
+    {
+      "evidence": "canonical text history and generated local query index are separated",
+      "name": "tracked_jsonl_and_disposable_sqlite",
+      "status": "PASS"
+    },
+    {
+      "evidence": "identity_basis_fields=['event_domain', 'event_schema_id', 'event_type', 'operation_id', 'payload', 'source_refs', 'subject_id']",
+      "name": "deterministic_content_identity",
+      "status": "PASS"
+    },
+    {
+      "evidence": "Finalized events are immutable. Corrections are new correction events that reference superseded_event_ids and never rewrite or delete history.",
+      "name": "append_only_corrections",
+      "status": "PASS"
+    },
+    {
+      "evidence": "required_field_count=14",
+      "name": "event_envelope_complete",
+      "status": "PASS"
+    },
+    {
+      "evidence": "domains=['agent_job', 'authority', 'candidate', 'claim', 'decision', 'handoff', 'task', 'validation']",
+      "name": "required_event_domains_present",
+      "status": "PASS"
+    },
+    {
+      "evidence": "views=['agent_job_registry', 'claim_boundary_registry', 'current_frontier', 'director_decision_registry', 'frontier_theorem_inventory', 'operational_dashboard', 'research_task_registry', 'sqlite_query_index', 'task_index_csv', 'task_index_markdown']",
+      "name": "required_generated_views_present",
+      "status": "PASS"
+    },
+    {
+      "evidence": "view_count=10",
+      "name": "generated_views_non_authoritative_and_deterministic",
+      "status": "PASS"
+    },
+    {
+      "evidence": "sqlite_view=[{'id': 'sqlite_query_index', 'path': '.local/research_control/project_control_events.sqlite3', 'format': 'sqlite', 'projection_key': 'event_id', 'sort': ['sequence'], 'authority': False, 'deterministic': True, 'activation': 'future_pilot_local_only'}]",
+      "name": "sqlite_is_local_cache",
+      "status": "PASS"
+    },
+    {
+      "evidence": "byte-level determinism, explicit parity, and theorem authority are specified",
+      "name": "projection_determinism_and_parity",
+      "status": "PASS"
+    },
+    {
+      "evidence": "write_order=['acquire_single_writer_lock', 'verify_expected_manifest_head', 'stage_new_segment_in_worktree', 'recompute_event_chain_and_manifest', 'render_all_required_views_and_receipts', 'run_parity_and_authority_validators', 'create_one_Git_checkpoint_commit', 'release_lock']",
+      "name": "single_writer_checkpoint_transaction",
+      "status": "PASS"
+    },
+    {
+      "evidence": "single writer, CAS recovery, pinned readers, and no raw segment merge",
+      "name": "concurrency_and_reader_pinning",
+      "status": "PASS"
+    },
+    {
+      "evidence": "phase_statuses={design: completed_by_this_packet, bounded_shadow_pilot: not_executed, historical_backfill_and_dual_read: not_authorized, legacy_format_projection_parity: not_authorized, reader_cutover: not_authorized, legacy_source_retention: not_authorized}",
+      "name": "migration_is_shadow_then_explicit_cutover",
+      "status": "PASS"
+    },
+    {
+      "evidence": "rollback retains committed events and legacy text surfaces",
+      "name": "rollback_preserves_history_and_legacy_readability",
+      "status": "PASS"
+    },
+    {
+      "evidence": "registered TeX and Gate Chair authority remain outside event-store projections",
+      "name": "authority_hierarchy_preserved",
+      "status": "PASS"
+    },
+    {
+      "evidence": "next_route={'dependency_ready_task': 'P10-T06', 'task_name': 'Pilot one event-store slice and prove read compatibility', 'executed_by_this_packet': False, 'also_dependency_ready': ['P10-T07']}",
+      "name": "next_route_is_unexecuted_p10_t06",
+      "status": "PASS"
+    },
+    {
+      "evidence": "binding_count=13 unique_count=13",
+      "name": "source_bindings_unique_and_bounded",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087 actual=4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "name": "source_hash::implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f actual=849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f",
+      "name": "source_hash::research_control/design/v21_recommendation_backlog.yaml",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=1d32a4bb55c2087f0be70b22a12cda3b77f3d45d645e67853f40c31d0c48cf7f actual=1d32a4bb55c2087f0be70b22a12cda3b77f3d45d645e67853f40c31d0c48cf7f",
+      "name": "source_hash::research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=788289c942bdcc5fff2f1337998f50d2b6fe89ca541de65a0ae24a651da97489 actual=788289c942bdcc5fff2f1337998f50d2b6fe89ca541de65a0ae24a651da97489",
+      "name": "source_hash::research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=11d7217198d106cf48a57c082e0ef23f3209d29597fb6ec532159085d7db6168 actual=11d7217198d106cf48a57c082e0ef23f3209d29597fb6ec532159085d7db6168",
+      "name": "source_hash::research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_schema.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=9fbd8bbda9b3ffaae441763a5874d7e78a4dfd189a612c4430e95fabb8a8f2d3 actual=9fbd8bbda9b3ffaae441763a5874d7e78a4dfd189a612c4430e95fabb8a8f2d3",
+      "name": "source_hash::research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2 actual=f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2",
+      "name": "source_hash::research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=92e91a4d89ee26a85d011fc1199feecf3fb9dc472337efb5f4a1d5c30b823202 actual=92e91a4d89ee26a85d011fc1199feecf3fb9dc472337efb5f4a1d5c30b823202",
+      "name": "source_hash::research_control/tasks/RT-20260721-006/artifacts/v21_attempt_event_schema.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=40ec1d912b3771e564208ef1980d8f6fd5a39dbade3a986b38057d38c448197c actual=40ec1d912b3771e564208ef1980d8f6fd5a39dbade3a986b38057d38c448197c",
+      "name": "source_hash::research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_redaction_policy.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=b594a23d4c688374e0c557552af715c302147586ffd035fb82b58aa558f922ae actual=b594a23d4c688374e0c557552af715c302147586ffd035fb82b58aa558f922ae",
+      "name": "source_hash::scripts/research_control/report_physics_progress_metrics.py",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=7f01e0e6267bcb43c96c087c7dfd06b8a10ed6450c194324232019485c95a6ca actual=7f01e0e6267bcb43c96c087c7dfd06b8a10ed6450c194324232019485c95a6ca",
+      "name": "source_hash::scripts/research_control/render_current_frontier.py",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=aa495487e6cb39d1b8b17718207b8ddea70959474115f4a79494919790f79152 actual=aa495487e6cb39d1b8b17718207b8ddea70959474115f4a79494919790f79152",
+      "name": "source_hash::scripts/research_control/render_task_index.py",
+      "status": "PASS"
+    },
+    {
+      "evidence": "expected=0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61 actual=0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+      "name": "source_hash::registries/DISTANCE_TO_GR_LEDGER.csv",
+      "status": "PASS"
+    },
+    {
+      "evidence": "missing_tokens=[]",
+      "name": "document_contract::v21_event_store_architecture_decision.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": "missing_tokens=[]",
+      "name": "document_contract::v21_event_store_schema.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": "missing_tokens=[]",
+      "name": "document_contract::v21_generated_view_contract.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": "missing_tokens=[]",
+      "name": "document_contract::v21_event_store_migration_rollback_plan.md",
+      "status": "PASS"
+    }
+  ],
+  "contract_sha256": "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51",
+  "event_domain_count": 8,
+  "failed_check_count": 0,
+  "failed_checks": [],
+  "generated_view_count": 10,
+  "passed_check_count": 36,
+  "plan_task_id": "P10-T05",
+  "schema_id": "v21_event_store_architecture_validation_v1",
+  "selected_architecture": "hybrid_tracked_jsonl_plus_generated_sqlite",
+  "source_binding_count": 13,
+  "status": "PASS",
+  "task_id": "RT-20260721-007"
+}

@@ -596,6 +596,10 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260721-005-V21-CANDIDATE-LINEAGE-SCHEMA` `wiki/markdown/md-research-control-tasks-rt-20260721-005-v21-candidate-lineage-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260721-006-V21-ATTEMPT-EVENT-SCHEMA` `wiki/markdown/md-research-control-tasks-rt-20260721-006-v21-attempt-event-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260721-006-V21-ATTEMPT-HISTORY-REDACTION-POLICY` `wiki/markdown/md-research-control-tasks-rt-20260721-006-v21-attempt-history-redaction-policy.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION` `wiki/markdown/md-research-control-tasks-rt-20260721-007-v21-event-store-architecture-decision.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-MIGRATION-ROLLBACK-PLAN` `wiki/markdown/md-research-control-tasks-rt-20260721-007-v21-event-store-migration-rollback-plan.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-SCHEMA` `wiki/markdown/md-research-control-tasks-rt-20260721-007-v21-event-store-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-GENERATED-VIEW-CONTRACT` `wiki/markdown/md-research-control-tasks-rt-20260721-007-v21-generated-view-contract.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1046,6 +1050,10 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260721-005-V21-CANDIDATE-LINEAGE-SCHEMA` `research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_schema.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260721-006-V21-ATTEMPT-EVENT-SCHEMA` `research_control/tasks/RT-20260721-006/artifacts/v21_attempt_event_schema.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260721-006-V21-ATTEMPT-HISTORY-REDACTION-POLICY` `research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_redaction_policy.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION` `research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_decision.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-MIGRATION-ROLLBACK-PLAN` `research_control/tasks/RT-20260721-007/artifacts/v21_event_store_migration_rollback_plan.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-SCHEMA` `research_control/tasks/RT-20260721-007/artifacts/v21_event_store_schema.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-GENERATED-VIEW-CONTRACT` `research_control/tasks/RT-20260721-007/artifacts/v21_generated_view_contract.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`

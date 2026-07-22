@@ -1,0 +1,488 @@
+{
+  "schema_id": "v21_project_control_event_store_architecture_v1",
+  "task_id": "RT-20260721-007",
+  "plan_task_id": "P10-T05",
+  "status": "design_selected_not_activated",
+  "selected_architecture": "hybrid_tracked_jsonl_plus_generated_sqlite",
+  "decision_scope": "project_control_only",
+  "activation_state": {
+    "canonical_event_store_active": false,
+    "dual_write_active": false,
+    "legacy_registry_authority_changed": false,
+    "migration_executed": false,
+    "pilot_executed": false,
+    "reader_cutover_executed": false,
+    "sqlite_tracked": false
+  },
+  "source_bindings": [
+    {
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v21.md",
+      "sha256": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+      "purpose": "P10-T05 architecture requirements"
+    },
+    {
+      "path": "research_control/design/v21_recommendation_backlog.yaml",
+      "sha256": "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f",
+      "purpose": "dependency and successor routing"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml",
+      "sha256": "1d32a4bb55c2087f0be70b22a12cda3b77f3d45d645e67853f40c31d0c48cf7f",
+      "purpose": "P10-T03 finalized dependency receipt"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json",
+      "sha256": "788289c942bdcc5fff2f1337998f50d2b6fe89ca541de65a0ae24a651da97489",
+      "purpose": "candidate event projection precedent"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_schema.md",
+      "sha256": "11d7217198d106cf48a57c082e0ef23f3209d29597fb6ec532159085d7db6168",
+      "purpose": "candidate identity and lifecycle precedent"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-006/jobs/completions/AJC-AJ-RT-20260721-006-001.yaml",
+      "sha256": "9fbd8bbda9b3ffaae441763a5874d7e78a4dfd189a612c4430e95fabb8a8f2d3",
+      "purpose": "P10-T04 finalized dependency receipt"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json",
+      "sha256": "f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2",
+      "purpose": "append-only event-chain precedent"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_event_schema.md",
+      "sha256": "92e91a4d89ee26a85d011fc1199feecf3fb9dc472337efb5f4a1d5c30b823202",
+      "purpose": "attempt event and source-link precedent"
+    },
+    {
+      "path": "research_control/tasks/RT-20260721-006/artifacts/v21_attempt_history_redaction_policy.md",
+      "sha256": "40ec1d912b3771e564208ef1980d8f6fd5a39dbade3a986b38057d38c448197c",
+      "purpose": "redaction and privacy precedent"
+    },
+    {
+      "path": "scripts/research_control/report_physics_progress_metrics.py",
+      "sha256": "b594a23d4c688374e0c557552af715c302147586ffd035fb82b58aa558f922ae",
+      "purpose": "dashboard consumer precedent"
+    },
+    {
+      "path": "scripts/research_control/render_current_frontier.py",
+      "sha256": "7f01e0e6267bcb43c96c087c7dfd06b8a10ed6450c194324232019485c95a6ca",
+      "purpose": "frontier generated-view precedent"
+    },
+    {
+      "path": "scripts/research_control/render_task_index.py",
+      "sha256": "aa495487e6cb39d1b8b17718207b8ddea70959474115f4a79494919790f79152",
+      "purpose": "task index generated-view precedent"
+    },
+    {
+      "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
+      "sha256": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+      "purpose": "protected scientific ledger non-migration boundary"
+    }
+  ],
+  "architecture_options": [
+    {
+      "id": "tracked_jsonl_only",
+      "selected": false,
+      "canonical_write_model": "append_only_tracked_jsonl",
+      "query_model": "full_replay_or_generated_flat_views",
+      "strengths": [
+        "human-reviewable Git diffs",
+        "portable content hashes",
+        "simple historical recovery"
+      ],
+      "risks": [
+        "slow ad hoc joins at scale",
+        "every consumer must implement replay semantics"
+      ],
+      "disposition": "not_selected_because_query_index_is_needed"
+    },
+    {
+      "id": "sqlite_only",
+      "selected": false,
+      "canonical_write_model": "sqlite_transactions",
+      "query_model": "indexed_relational_queries",
+      "strengths": [
+        "strong local transactions",
+        "fast joins and aggregate queries"
+      ],
+      "risks": [
+        "binary diffs are not reviewable",
+        "merge and historical readability are poor in Git",
+        "database files invite accidental authority ambiguity"
+      ],
+      "disposition": "rejected_as_canonical_tracked_format"
+    },
+    {
+      "id": "hybrid_tracked_jsonl_plus_generated_sqlite",
+      "selected": true,
+      "canonical_write_model": "append_only_tracked_jsonl_after_explicit_future_cutover",
+      "query_model": "deterministic_generated_sqlite_and_flat_views",
+      "strengths": [
+        "reviewable portable canonical history",
+        "fast disposable local queries",
+        "deterministic CSV and Markdown compatibility views",
+        "clean rollback to tracked legacy sources"
+      ],
+      "risks": [
+        "requires parity validation between replay and projections",
+        "requires an explicit single-writer transaction protocol"
+      ],
+      "disposition": "selected_for_future_pilot_and_separately_authorized_cutover"
+    }
+  ],
+  "authority_contract": {
+    "current_project_control_authority": "existing_tracked_control_sources_and_registries_until_explicit_cutover",
+    "future_event_store_authority": "project_control_events_only_after_explicit_human_or_plan_authorized_cutover",
+    "registered_tex_authority_preserved": true,
+    "gate_chair_authority_preserved": true,
+    "generated_views_are_authority": false,
+    "generated_sqlite_is_authority": false,
+    "event_payload_is_scientific_proof": false,
+    "event_payload_may_replace_science_source": false,
+    "science_reference_rule": "Events may reference a registered scientific object by object_id path and exact source_hash but may not embed a stronger interpretation or replace the source.",
+    "protected_status_rule": "Candidate adoption rejection ontology change benchmark promotion and Gate Chair verdict remain valid only through their existing protected authority artifacts."
+  },
+  "canonical_encoding": {
+    "container": "segmented_json_lines",
+    "record_encoding": "UTF-8",
+    "record_serialization": "RFC_8785_JSON_Canonicalization_Scheme",
+    "line_ending": "LF",
+    "floating_point_payloads": "forbidden_use_decimal_strings_with_declared_units",
+    "segment_naming": "events-<first_sequence_12d>-<last_sequence_12d>.jsonl",
+    "manifest_format": "canonical_json",
+    "sqlite_role": "generated_disposable_query_index",
+    "sqlite_tracking": "untracked_local_cache",
+    "view_build_time_rule": "No wall-clock build timestamp participates in generated content."
+  },
+  "event_identity": {
+    "event_schema_id": "v21_project_control_event_v1",
+    "event_id_format": "EVT-V21-<sha256_64hex>",
+    "event_id_preimage": "RFC8785 canonical JSON of identity_basis",
+    "identity_basis_fields": [
+      "event_schema_id",
+      "event_domain",
+      "event_type",
+      "subject_id",
+      "operation_id",
+      "source_refs",
+      "payload"
+    ],
+    "operation_id_rule": "Producer-supplied stable idempotency key unique within the subject and event type.",
+    "sequence_rule": "Global sequence is assigned only while holding the writer lock and equals prior manifest last_sequence plus one.",
+    "chain_rule": "event_hash is SHA-256 over canonical event content excluding event_hash; prior_event_hash must equal the manifest head hash or GENESIS for sequence one.",
+    "duplicate_rule": "An existing event_id with byte-identical content is an idempotent no-op; any differing content is a hard conflict.",
+    "correction_rule": "Finalized events are immutable. Corrections are new correction events that reference superseded_event_ids and never rewrite or delete history."
+  },
+  "event_envelope": {
+    "required_fields": [
+      "event_schema_id",
+      "event_id",
+      "sequence",
+      "prior_event_hash",
+      "event_hash",
+      "event_domain",
+      "event_type",
+      "subject_id",
+      "operation_id",
+      "effective_at",
+      "actor_role_ref",
+      "source_refs",
+      "payload",
+      "authority"
+    ],
+    "source_ref_required_fields": [
+      "object_id",
+      "path",
+      "sha256",
+      "authority_status"
+    ],
+    "authority_required_fields": [
+      "project_control_only",
+      "scientific_claims_changed",
+      "physics_promotion_authorized",
+      "proof_authority"
+    ],
+    "time_rule": "effective_at is source-derived RFC3339 UTC metadata and is excluded from ordering; sequence defines replay order.",
+    "null_rule": "Absent optional data is omitted rather than encoded as null.",
+    "extension_rule": "Unknown schema_id or event_type is a hard read error until an explicit compatible schema upgrade exists."
+  },
+  "event_domains": [
+    {
+      "id": "task",
+      "subject_id_rule": "task_id with RT- prefix",
+      "event_types": ["task_created", "task_activated", "task_completed", "task_blocked", "task_corrected"],
+      "legacy_projection": "registries/RESEARCH_TASK_REGISTRY.csv"
+    },
+    {
+      "id": "decision",
+      "subject_id_rule": "decision_id with DDR- prefix",
+      "event_types": ["decision_created", "decision_activated", "decision_completed", "decision_superseded", "decision_corrected"],
+      "legacy_projection": "registries/DIRECTOR_DECISION_REGISTRY.csv"
+    },
+    {
+      "id": "agent_job",
+      "subject_id_rule": "job_id with AJ- prefix",
+      "event_types": ["job_created", "job_started", "job_completed", "job_blocked", "job_corrected"],
+      "legacy_projection": "registries/AGENT_JOB_REGISTRY.csv"
+    },
+    {
+      "id": "candidate",
+      "subject_id_rule": "registered or schema-declared stable candidate_id",
+      "event_types": ["candidate_created", "candidate_revised", "candidate_superseded", "candidate_review_recorded", "candidate_corrected"],
+      "legacy_projection": "task_local_candidate_lineage_views"
+    },
+    {
+      "id": "claim",
+      "subject_id_rule": "claim_boundary_id with CB- prefix",
+      "event_types": ["claim_boundary_created", "claim_boundary_activated", "claim_boundary_closed", "claim_boundary_corrected"],
+      "legacy_projection": "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+    },
+    {
+      "id": "validation",
+      "subject_id_rule": "stable validator invocation or validation receipt id",
+      "event_types": ["validation_started", "validation_passed", "validation_failed", "validation_invalidated", "validation_corrected"],
+      "legacy_projection": "task_completion_and_validation_receipts"
+    },
+    {
+      "id": "authority",
+      "subject_id_rule": "stable tracked human-gate or authority artifact id",
+      "event_types": ["authority_requested", "authority_granted", "authority_denied", "authority_expired", "authority_corrected"],
+      "legacy_projection": "tracked_human_gate_and_authority_artifacts"
+    },
+    {
+      "id": "handoff",
+      "subject_id_rule": "handoff_id with handoff- prefix",
+      "event_types": ["handoff_created", "handoff_consumed", "handoff_superseded", "handoff_corrected"],
+      "legacy_projection": "research_control/handoffs"
+    }
+  ],
+  "generated_views": [
+    {
+      "id": "research_task_registry",
+      "path": "registries/RESEARCH_TASK_REGISTRY.csv",
+      "format": "csv",
+      "projection_key": "task_id",
+      "sort": ["task_id"],
+      "authority": false,
+      "deterministic": true,
+      "activation": "future_cutover_only"
+    },
+    {
+      "id": "director_decision_registry",
+      "path": "registries/DIRECTOR_DECISION_REGISTRY.csv",
+      "format": "csv",
+      "projection_key": "decision_id",
+      "sort": ["decision_id"],
+      "authority": false,
+      "deterministic": true,
+      "activation": "future_cutover_only"
+    },
+    {
+      "id": "agent_job_registry",
+      "path": "registries/AGENT_JOB_REGISTRY.csv",
+      "format": "csv",
+      "projection_key": "job_id",
+      "sort": ["job_id"],
+      "authority": false,
+      "deterministic": true,
+      "activation": "future_cutover_only"
+    },
+    {
+      "id": "claim_boundary_registry",
+      "path": "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+      "format": "csv",
+      "projection_key": "claim_boundary_id",
+      "sort": ["claim_boundary_id"],
+      "authority": false,
+      "deterministic": true,
+      "activation": "future_cutover_only"
+    },
+    {
+      "id": "current_frontier",
+      "path": "research_control/current_frontier.md",
+      "format": "markdown",
+      "projection_key": "singleton_current_state",
+      "sort": ["sequence"],
+      "authority": false,
+      "deterministic": true,
+      "activation": "future_cutover_only"
+    },
+    {
+      "id": "task_index_csv",
+      "path": "research_control/tasks/TASK_INDEX.csv",
+      "format": "csv",
+      "projection_key": "task_id",
+      "sort": ["task_id"],
+      "authority": false,
+      "deterministic": true,
+      "activation": "future_cutover_only"
+    },
+    {
+      "id": "task_index_markdown",
+      "path": "research_control/tasks/TASK_INDEX.md",
+      "format": "markdown",
+      "projection_key": "task_id",
+      "sort": ["task_id"],
+      "authority": false,
+      "deterministic": true,
+      "activation": "future_cutover_only"
+    },
+    {
+      "id": "frontier_theorem_inventory",
+      "path": "research_control/design/frontier_theorem_inventory.md",
+      "format": "markdown",
+      "projection_key": "registered_science_object_id",
+      "sort": ["registered_science_object_id"],
+      "authority": false,
+      "deterministic": true,
+      "activation": "reference_projection_only_never_science_authority"
+    },
+    {
+      "id": "operational_dashboard",
+      "path": "output/project_control_event_metrics.json",
+      "format": "json",
+      "projection_key": "metric_id",
+      "sort": ["metric_id"],
+      "authority": false,
+      "deterministic": true,
+      "activation": "future_cutover_only"
+    },
+    {
+      "id": "sqlite_query_index",
+      "path": ".local/research_control/project_control_events.sqlite3",
+      "format": "sqlite",
+      "projection_key": "event_id",
+      "sort": ["sequence"],
+      "authority": false,
+      "deterministic": true,
+      "activation": "future_pilot_local_only"
+    }
+  ],
+  "projection_contract": {
+    "input": "manifest-ordered validated JSONL events",
+    "replay_order": ["sequence", "event_id"],
+    "latest_state_rule": "Fold events by domain reducer; corrections apply only through explicit supersedes references.",
+    "determinism_rule": "Same manifest hash and renderer version must produce byte-identical tracked views.",
+    "provenance_rule": "Every generated view carries or has an adjacent receipt containing manifest hash renderer hash row count and output hash.",
+    "parity_rule": "Before any cutover, generated legacy-format views must match the authoritative legacy source under a field-level allowlist and report every unmapped field.",
+    "failure_rule": "Unknown events hash mismatch sequence gap duplicate conflicting identity projection ambiguity or output drift fail closed and publish no replacement view.",
+    "theorem_inventory_rule": "The theorem inventory may project identifiers status and exact source references only; the registered TeX source remains scientific authority."
+  },
+  "transaction_contract": {
+    "unit": "one_Git_commit_containing_events_manifest_views_and_receipts",
+    "writer_lock": "repo_common_dir/research-control-event-store.lock",
+    "expected_head_compare_and_swap": true,
+    "preconditions": [
+      "clean_or_exact_authorized_dirty_manifest",
+      "manifest_head_matches_expected_sequence_and_hash",
+      "all source_refs resolve with exact hashes",
+      "all event identities and authority flags validate"
+    ],
+    "write_order": [
+      "acquire_single_writer_lock",
+      "verify_expected_manifest_head",
+      "stage_new_segment_in_worktree",
+      "recompute_event_chain_and_manifest",
+      "render_all_required_views_and_receipts",
+      "run_parity_and_authority_validators",
+      "create_one_Git_checkpoint_commit",
+      "release_lock"
+    ],
+    "failure_atomicity": "A failure before checkpoint leaves no authoritative transaction; staged worktree files are diagnostic only and must not be consumed as canonical events.",
+    "multi_file_visibility": "Readers accept only a manifest and views from the same committed transaction receipt."
+  },
+  "concurrency_contract": {
+    "writers": "single_writer",
+    "lock_scope": "repository_common_dir",
+    "stale_lock_rule": "Recovery requires recorded owner identity checkpoint probe and explicit compare-and-swap against the committed manifest; age alone cannot break a lock.",
+    "reader_rule": "Readers pin one Git revision and one manifest hash for the full query.",
+    "merge_rule": "Concurrent branches may propose events, but integration rebases identities and sequence under the one writer; direct segment merge is forbidden.",
+    "idempotency_rule": "operation_id plus deterministic event_id prevents duplicate logical writes."
+  },
+  "migration_contract": {
+    "mode": "shadow_then_explicit_cutover",
+    "phases": [
+      {
+        "id": "design",
+        "owner_task": "P10-T05",
+        "status": "completed_by_this_packet",
+        "writes_authorized": false
+      },
+      {
+        "id": "bounded_shadow_pilot",
+        "owner_task": "P10-T06",
+        "status": "not_executed",
+        "writes_authorized": false
+      },
+      {
+        "id": "historical_backfill_and_dual_read",
+        "owner_task": "future_separately_authorized_task",
+        "status": "not_authorized",
+        "writes_authorized": false
+      },
+      {
+        "id": "legacy_format_projection_parity",
+        "owner_task": "future_separately_authorized_task",
+        "status": "not_authorized",
+        "writes_authorized": false
+      },
+      {
+        "id": "reader_cutover",
+        "owner_task": "explicit_cutover_authority_required",
+        "status": "not_authorized",
+        "writes_authorized": false
+      },
+      {
+        "id": "legacy_source_retention",
+        "owner_task": "post_cutover_governance",
+        "status": "not_authorized",
+        "writes_authorized": false
+      }
+    ],
+    "historical_import_rule": "Backfill emits source-linked imported events in deterministic legacy order and never rewrites the original tracked files.",
+    "pilot_slice_rule": "P10-T06 may select one read-compatible project-control slice only after a fresh AgentJob; this contract does not select or implement that slice.",
+    "cutover_gate": "A separate explicit authority record must name readers writers parity receipts rollback checkpoint and effective Git revision."
+  },
+  "rollback_contract": {
+    "trigger_conditions": [
+      "parity_failure",
+      "unknown_event_schema",
+      "event_chain_or_manifest_failure",
+      "projection_nondeterminism",
+      "authority_boundary_violation",
+      "reader_or_writer_regression"
+    ],
+    "pre_cutover_action": "Discard local SQLite and generated shadow views; continue using existing tracked sources and registries.",
+    "post_cutover_action": "Pin readers to the recorded last-known-good legacy-authority revision and disable event-store writers through a new authority event and checkpoint.",
+    "history_rule": "Do not delete or mutate committed events; record rollback and any correction as new events.",
+    "legacy_readability_rule": "Retain pre-cutover registries handoffs task files and their Git history indefinitely; no migration phase may make historical checkout dependent on SQLite.",
+    "recovery_gate": "Resume only after the failing invariant has a focused regression test and a new explicit cutover or resume decision."
+  },
+  "validation_contract": {
+    "required_checks": [
+      "exactly_one_architecture_selected",
+      "source_hash_exactness",
+      "required_event_domains_present",
+      "deterministic_content_identity",
+      "append_only_corrections",
+      "generated_views_non_authoritative",
+      "sqlite_untracked_and_disposable",
+      "single_writer_compare_and_swap",
+      "transaction_checkpoint_atomicity",
+      "migration_has_no_implicit_cutover",
+      "rollback_preserves_history",
+      "registered_tex_and_gate_chair_authority_preserved",
+      "pilot_and_cutover_not_executed"
+    ],
+    "expected_result": "PASS",
+    "failure_mode": "fail_closed"
+  },
+  "next_route": {
+    "dependency_ready_task": "P10-T06",
+    "task_name": "Pilot one event-store slice and prove read compatibility",
+    "executed_by_this_packet": false,
+    "also_dependency_ready": ["P10-T07"]
+  }
+}

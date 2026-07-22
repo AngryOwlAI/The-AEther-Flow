@@ -1,9 +1,67 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260721-006"
-latest_handoff_id: "handoff-0807"
-current_status: "v21_p10_t04_append_only_attempt_history_complete_no_history_or_physics_delta_p10_t05_ready"
-claim_boundary_summary: "RT-20260721-006 completed only P10-T04 with eight immutable source-linked process and review events one explicit non-inferred abandoned-event absence a valid hash chain deterministic reporting and zero privacy or physics-result findings. Historical sources scientific ledgers ontology P4-T05 Distance-to-GR and all promotion proof publication and completed-derivation authority remain unchanged."
-next_recommended_action: "Run exactly one bounded v21 P10-T05 project-system architecture packet in a separate AgentJob after the P10-T04 checkpoint. Specify the canonical event store and generated-view architecture without cutover. Do not execute P4-T05."
+active_task_id: "RT-20260721-007"
+latest_handoff_id: "handoff-0808"
+current_status: "v21_p10_t05_hybrid_event_store_architecture_complete_no_activation_p10_t06_selected"
+claim_boundary_summary: "RT-20260721-007 completed only P10-T05 design by selecting a future hybrid tracked-JSONL plus generated-SQLite architecture. No event-store pilot ingestion migration reader switch cutover legacy-authority change science-source edit P4-T05 action or protected authority occurred."
+next_recommended_action: "After the P10-T05 governed checkpoint succeeds, run exactly one bounded v21 P10-T06 validator-engineer project-system AgentJob for a non-authoritative read-compatible event-store pilot. Do not cut over authority or execute protected P4-T05."
+
+p10_t05_canonical_event_store_architecture:
+  task_id: "RT-20260721-007"
+  plan_task_id: "P10-T05"
+  claim_boundary_id: "CB-V21-P10-T05-EVENT-STORE-ARCHITECTURE-001"
+  status: "PASS_DESIGN_SELECTED_NOT_ACTIVATED"
+  selected_architecture: "hybrid_tracked_jsonl_plus_generated_sqlite"
+  contract_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+  contract_hash: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+  architecture_decision_object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION"
+  architecture_decision_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_decision.md"
+  architecture_decision_hash: "15584ad6a4592a2b3e401a2b081a5e05a4f3d407ab5611e5fa65ffe2b386b67f"
+  event_schema_object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-SCHEMA"
+  event_schema_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_schema.md"
+  event_schema_hash: "43d65e6773902b692e2d98f2e4c7319deb4c0c8277b0d7d200727e6456ec3959"
+  generated_view_contract_object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-GENERATED-VIEW-CONTRACT"
+  generated_view_contract_path: "research_control/tasks/RT-20260721-007/artifacts/v21_generated_view_contract.md"
+  generated_view_contract_hash: "1aaf5cba3fab6567ce4d10260d6227e2341cb5b97f1a6107a01fa647237d7653"
+  migration_rollback_object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-MIGRATION-ROLLBACK-PLAN"
+  migration_rollback_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_migration_rollback_plan.md"
+  migration_rollback_hash: "5b7d3915b6ee29edda193b7062b528c8f5d663a91160f2e5b9f69f2b47a9e8a0"
+  validation_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_validation.json"
+  validation_hash: "4ccc01d886ca3207b5d693d127dacb69d65b6ed24b2882cc29c740dad64946d6"
+  compact_receipt_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_compact_receipt.json"
+  compact_receipt_hash: "85198d997113d90ecd71a250c59838f04380b12c3238ab5d4d2df5c3460c407b"
+  source_binding_count: 13
+  event_domain_count: 8
+  generated_view_count: 10
+  architecture_check_count: 36
+  architecture_failed_check_count: 0
+  focused_test_count: 10
+  focused_test_failure_count: 0
+  canonical_event_store_active: false
+  pilot_authorized: false
+  pilot_executed: false
+  migration_executed: false
+  dual_write_active: false
+  cutover_authorized: false
+  reader_cutover_executed: false
+  existing_registry_authority_changed: false
+  generated_views_are_authority: false
+  generated_sqlite_is_authority: false
+  registered_science_authority_changed: false
+  registered_tex_authority_preserved: true
+  gate_chair_authority_preserved: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  p10_t05_completed: true
+  p10_t06_dependency_ready: true
+  p10_t07_dependency_ready: true
+  selected_next_work_item: "P10-T06"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_reason: "P10-T06 depends only on the qualifying P10-T05 completion and directly pilots the selected architecture for read parity before any migration; P10-T07 remains dependency-ready but unexecuted."
 
 p10_t01_normalized_status_assumption_schemas:
   task_id: "RT-20260721-003"
@@ -1720,9 +1778,9 @@ project_improvement_bridge:
   route: "none"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260721-005"
-  latest_research_handoff_id: "handoff-0806"
-  latest_research_next_action: "Run exactly one bounded v21 P10-T04 project-system packet in a separate AgentJob. Create an append-only research attempt and rework ledger covering failures auditor findings validator failures repairs abandoned attempts supersessions compute metadata and final dispositions without replacing canonical scientific artifacts. Do not execute P4-T05."
+  latest_research_task_id: "RT-20260721-007"
+  latest_research_handoff_id: "handoff-0808"
+  latest_research_next_action: "After the P10-T05 governed checkpoint succeeds, run exactly one bounded v21 P10-T06 validator-engineer project-system AgentJob for a non-authoritative read-compatible event-store pilot. Do not cut over authority or execute protected P4-T05."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
