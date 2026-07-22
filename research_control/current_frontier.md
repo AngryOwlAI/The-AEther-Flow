@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260721-002` and `handoff-0803`.
+`RT-20260721-003` and `handoff-0804`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260721-002` |
-| Latest handoff ID | `handoff-0803` |
-| Current status | `v21_p4_t04_comparative_decision_evidence_complete_no_regime_decision_no_distance_delta_p10_t01_ready` |
+| Active task ID | `RT-20260721-003` |
+| Latest handoff ID | `handoff-0804` |
+| Current status | `v21_p10_t01_normalized_status_assumption_schemas_complete_no_history_or_physics_delta_p10_t02_ready` |
 | V16 completed | false |
-| Current route family | v21 p10 t01 normalized assumption and scientific status schemas |
+| Current route family | v21 p10 t02 orthogonal task taxonomy |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries. |
-| Required next authority | One P10-T01 project-control packet may define normalized assumption-provenance and scientific-status schemas, mapped legacy compatibility fields, fail-closed validators and fixtures, and standard control receipts. It may not reinterpret historical claims or change physics status. |
-| Next recommended action | Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records. |
+| Required next authority | One P10-T02 project-control packet may define stable orthogonal task-taxonomy fields, a task-local adapter or fixtures, exact compatibility behavior, and standard control receipts. |
+| Next recommended action | Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260721-002` |
-| Latest research handoff ID | `handoff-0803` |
-| Latest research next action | Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries. |
+| Latest research task ID | `RT-20260721-003` |
+| Latest research handoff ID | `handoff-0804` |
+| Latest research next action | Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260721-002/00_TASK.yaml`.
-- Active task objective: Execute exactly one bounded v21 P4-T04 External Red-Team Reviewer packet comparing the fixed P4-T02 continuum-first and P4-T03 emergence-first proposal options through explicit criteria, primary literature, and weight-sensitivity analysis without selecting or adopting an ontology regime.
-- Latest handoff path: `research_control/handoffs/handoff-0803.yaml`.
-- Latest handoff summary: RT-20260721-002 completed only v21 P4-T04. It compared the fixed P4-T02 continuum-first and P4-T03 emergence-first proposal options through five explicit criteria, seven parent weight scenarios, an independent mathematical replication, a balanced ten-source primary-literature matrix, downstream M_src/g_eff/matter/dynamics/formalization/exact-GR analysis, and resolved parent-child synthesis. Continuum-first is the conditional lower-risk near-term scaffold; emergence-first is the conditional higher-risk higher-explanatory-ambition branch. The baseline margin is 0.100, the score-difference vector has mixed signs, admissible priorities rank both options, and plausible scoring uncertainty crosses zero. No robust winner, ontology selection, adoption, rejection, P4-T05 execution, scientific-ledger delta, promotion, or publication follows.
-- Current route family: v21 p10 t01 normalized assumption and scientific status schemas.
-- Next recommended action: Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries.
+- Active task path: `research_control/tasks/RT-20260721-003/00_TASK.yaml`.
+- Active task objective: Create machine-readable assumption-provenance and multidimensional scientific-status schemas with additive legacy compatibility fields fail-closed contradictions and positive and negative fixtures without reinterpreting historical claims.
+- Latest handoff path: `research_control/handoffs/handoff-0804.yaml`.
+- Latest handoff summary: RT-20260721-003 completed only v21 P10-T01. It registered two control schemas with embedded machine-readable JSON contracts for assumption provenance and ten orthogonal scientific-status dimensions. The task-local validator matched 8 positive fixtures, 28 negative fixtures, and all 6 legacy mappings with zero unexpected results. Unknown enums, contradictory structures, unsupported proof or empirical status, unscoped negative status, protected-authority substitutions, historical rewrites, and implicit promotion fail closed. No historical record, science source, scientific ledger, ontology, P4-T05 state, Distance-to-GR burden, or physics authority changed.
+- Current route family: v21 p10 t02 orthogonal task taxonomy.
+- Next recommended action: Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries.
+Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260721-002`;
-- latest handoff: `handoff-0803`;
-- current status: `v21_p4_t04_comparative_decision_evidence_complete_no_regime_decision_no_distance_delta_p10_t01_ready`;
+- active task: `RT-20260721-003`;
+- latest handoff: `handoff-0804`;
+- current status: `v21_p10_t01_normalized_status_assumption_schemas_complete_no_history_or_physics_delta_p10_t02_ready`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0803.yaml`
-- `research_control/tasks/RT-20260721-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-0804.yaml`
+- `research_control/tasks/RT-20260721-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0803*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0804*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

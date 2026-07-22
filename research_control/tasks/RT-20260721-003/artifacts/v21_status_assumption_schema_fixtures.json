@@ -1,0 +1,563 @@
+{
+  "fixture_schema_id": "v21_status_assumption_schema_fixtures_v1",
+  "task_id": "RT-20260721-003",
+  "job_id": "AJ-RT-20260721-003-001",
+  "claim_boundary_id": "CB-V21-P10-T01-STATUS-ASSUMPTION-SCHEMAS-001",
+  "base_records": {
+    "assumption": {
+      "schema_id": "v21_assumption_ledger_schema_v1",
+      "record_id": "ASSUMPTION-FIXTURE-BASE",
+      "assumption_id": "SRC-FIXTURE-PRIMITIVE",
+      "subject_id": "SOURCE-FIXTURE",
+      "statement": "A source-side structure is posited for bounded fixture validation.",
+      "assumption_kind": "primitive",
+      "subject_scope": "source",
+      "derivation_role": "source_premise",
+      "disposition": "active",
+      "authority_status": "proposal_only",
+      "project_status_label": "proposal-only",
+      "provenance": {
+        "provenance_kind": "registered_canonical_science",
+        "source_refs": [
+          "TEX-SOURCE-FIXTURE"
+        ],
+        "source_hashes": {
+          "TEX-SOURCE-FIXTURE": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "missing_reason": "",
+        "constructed_from": []
+      },
+      "derivation": {
+        "dependency_ids": [],
+        "certificate_refs": []
+      },
+      "blocking": {
+        "burden_ids": [],
+        "continuation_status": "not_applicable"
+      },
+      "refutation": {
+        "scope": "",
+        "evidence_refs": [],
+        "global_no_go_established": false
+      },
+      "authority": {
+        "authority_kind": "registered_control",
+        "authority_refs": [
+          "research_control/fixture-authority.yaml"
+        ],
+        "authority_scope": "proposal-only source premise fixture",
+        "gate_id": ""
+      },
+      "legacy_compatibility": {
+        "raw_label": null,
+        "source_record_ref": "",
+        "mapped_fields": {},
+        "mapping_authority": "compatibility_only",
+        "historical_record_rewritten": false
+      },
+      "authorization_layers": {
+        "scoped_evidence_status_change_authorized": false,
+        "source_object_status_change_authorized": false,
+        "source_extension_object_status_change_authorized": false,
+        "source_law_adoption_authorized": false,
+        "matter_semantics_adoption_authorized": false,
+        "detector_semantics_adoption_authorized": false,
+        "coupling_law_adoption_authorized": false,
+        "matter_coupling_derivation_authorized": false,
+        "matter_coupling_adoption_authorized": false,
+        "stress_energy_semantics_authorized": false,
+        "matter_action_authorized": false,
+        "einstein_equation_derivation_authorized": false,
+        "benchmark_promotion_authorized": false,
+        "completed_derivation_authorized": false,
+        "downstream_physics_promotion_authorized": false,
+        "authority_scope": "",
+        "authority_source_path": "",
+        "blocked_downstream_claims": []
+      },
+      "forbidden_conclusions": [
+        "No ontology adoption, source-law adoption, or downstream physics promotion follows."
+      ]
+    },
+    "scientific_status": {
+      "schema_id": "v21_scientific_status_schema_v1",
+      "record_id": "STATUS-FIXTURE-BASE",
+      "subject_id": "SOURCE-EXTENSION-FIXTURE",
+      "subject_scope": "source_extension",
+      "candidate_ids": [
+        "CAND-FIXTURE-001"
+      ],
+      "theorem_ids": [],
+      "dimensions": {
+        "existence": "candidate",
+        "uniqueness": "not_assessed",
+        "naturality": "not_assessed",
+        "covariance": "coordinate_scoped",
+        "robustness": "not_assessed",
+        "dynamics": "proposed",
+        "operational_meaning": "absent",
+        "empirical_status": "untested",
+        "mathematical_status": "heuristic",
+        "authority": "proposal_only"
+      },
+      "evidence_by_dimension": {
+        "existence": [],
+        "uniqueness": [],
+        "naturality": [],
+        "covariance": [],
+        "robustness": [],
+        "dynamics": [],
+        "operational_meaning": [],
+        "empirical_status": [],
+        "mathematical_status": [],
+        "authority": []
+      },
+      "refutation": {
+        "scope": "",
+        "evidence_refs": [],
+        "global_no_go_established": false
+      },
+      "authority": {
+        "authority_kind": "registered_control",
+        "authority_refs": [
+          "research_control/fixture-authority.yaml"
+        ],
+        "authority_scope": "proposal-only source-extension fixture",
+        "gate_id": ""
+      },
+      "legacy_compatibility": {
+        "raw_label": null,
+        "source_record_ref": "",
+        "mapped_fields": {},
+        "mapping_authority": "compatibility_only",
+        "historical_record_rewritten": false
+      },
+      "authorization_layers": {
+        "scoped_evidence_status_change_authorized": false,
+        "source_object_status_change_authorized": false,
+        "source_extension_object_status_change_authorized": false,
+        "source_law_adoption_authorized": false,
+        "matter_semantics_adoption_authorized": false,
+        "detector_semantics_adoption_authorized": false,
+        "coupling_law_adoption_authorized": false,
+        "matter_coupling_derivation_authorized": false,
+        "matter_coupling_adoption_authorized": false,
+        "stress_energy_semantics_authorized": false,
+        "matter_action_authorized": false,
+        "einstein_equation_derivation_authorized": false,
+        "benchmark_promotion_authorized": false,
+        "completed_derivation_authorized": false,
+        "downstream_physics_promotion_authorized": false,
+        "authority_scope": "",
+        "authority_source_path": "",
+        "blocked_downstream_claims": []
+      },
+      "forbidden_conclusions": [
+        "No physical metric, ontology adoption, benchmark promotion, or completed derivation follows."
+      ]
+    }
+  },
+  "assumption_cases": [
+    {
+      "fixture_id": "A-PASS-BASE-PRIMITIVE",
+      "expected_status": "PASS",
+      "expected_error_ids": [],
+      "set": {},
+      "delete": []
+    },
+    {
+      "fixture_id": "A-PASS-DERIVED-WITH-CERTIFICATE",
+      "expected_status": "PASS",
+      "expected_error_ids": [],
+      "set": {
+        "/record_id": "ASSUMPTION-FIXTURE-DERIVED",
+        "/assumption_id": "SRC-FIXTURE-DERIVED",
+        "/assumption_kind": "derived",
+        "/derivation_role": "derived_consequence",
+        "/derivation/dependency_ids": ["SRC-FIXTURE-PRIMITIVE"],
+        "/derivation/certificate_refs": ["THEOREM-FIXTURE-001"]
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-PASS-MISSING-SOURCE-EXPLICIT",
+      "expected_status": "PASS",
+      "expected_error_ids": [],
+      "set": {
+        "/record_id": "ASSUMPTION-FIXTURE-MISSING-SOURCE",
+        "/provenance/provenance_kind": "missing_source",
+        "/provenance/source_refs": [],
+        "/provenance/source_hashes": {},
+        "/provenance/missing_reason": "Current ontology does not derive the named selector.",
+        "/authority_status": "control_only",
+        "/project_status_label": "draft/control"
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-PASS-TARGET-BENCHMARK-ONLY",
+      "expected_status": "PASS",
+      "expected_error_ids": [],
+      "set": {
+        "/record_id": "ASSUMPTION-FIXTURE-BENCHMARK",
+        "/assumption_kind": "benchmark",
+        "/subject_scope": "target_benchmark",
+        "/derivation_role": "target_benchmark_only"
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-UNKNOWN-KIND",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_known_enums"],
+      "set": {"/assumption_kind": "axiomatic_magic"},
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-REGISTERED-PROVENANCE-WITHOUT-SOURCE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_provenance_source_required"],
+      "set": {
+        "/provenance/source_refs": [],
+        "/provenance/source_hashes": {}
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-MISSING-SOURCE-WITH-CITATION",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_missing_source_exclusive"],
+      "set": {
+        "/provenance/provenance_kind": "missing_source",
+        "/provenance/missing_reason": "Missing derivation-critical selector."
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-DERIVED-WITHOUT-CERTIFICATE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_derived_certificate_required"],
+      "set": {
+        "/assumption_kind": "derived",
+        "/derivation_role": "derived_consequence"
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-KIND-ROLE-MISMATCH",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_kind_role_alignment"],
+      "set": {"/derivation_role": "derived_consequence"},
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-BENCHMARK-SMUGGLED-AS-SOURCE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_benchmark_target_only"],
+      "set": {
+        "/assumption_kind": "benchmark",
+        "/derivation_role": "target_benchmark_only",
+        "/subject_scope": "source"
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-BLOCKED-WITHOUT-BURDEN",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_blocked_burden_required"],
+      "set": {"/disposition": "blocked_adoption_open_continuation"},
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-REJECTED-WITHOUT-SCOPE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_refutation_scope_required"],
+      "set": {
+        "/disposition": "rejected",
+        "/authority_status": "rejected",
+        "/project_status_label": "rejected"
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-HUMAN-GATE-UNNAMED",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_human_gate_required"],
+      "set": {
+        "/disposition": "human_gated",
+        "/authority_status": "human_gated",
+        "/project_status_label": "human-gated"
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-CANONICAL-CANDIDATE-WITHOUT-PROTECTED-GATE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_protected_candidate_required"],
+      "set": {
+        "/authority_status": "canonical_ontology_candidate",
+        "/project_status_label": "canonical-ontology candidate"
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-SOURCE-ADOPTED-WITHOUT-PROTECTED-AUTHORITY",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_adoption_authority_required"],
+      "set": {
+        "/disposition": "adopted",
+        "/authority_status": "adopted",
+        "/project_status_label": "adopted"
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-LEGACY-MAPPING-MUTATED",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_legacy_mapping_exact"],
+      "set": {
+        "/legacy_compatibility/raw_label": "accepted",
+        "/legacy_compatibility/source_record_ref": "research_control/historical.yaml",
+        "/legacy_compatibility/mapped_fields": {
+          "control_disposition": "adopted",
+          "authority_status": "adopted"
+        }
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-HISTORICAL-REWRITE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_legacy_raw_preserved"],
+      "set": {"/legacy_compatibility/historical_record_rewritten": true},
+      "delete": []
+    },
+    {
+      "fixture_id": "A-FAIL-IMPLICIT-PROMOTION",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["assumption_no_implicit_physics_promotion"],
+      "set": {"/authorization_layers/downstream_physics_promotion_authorized": true},
+      "delete": []
+    }
+  ],
+  "scientific_status_cases": [
+    {
+      "fixture_id": "S-PASS-BASE-PROPOSAL",
+      "expected_status": "PASS",
+      "expected_error_ids": [],
+      "set": {},
+      "delete": []
+    },
+    {
+      "fixture_id": "S-PASS-CONSTRUCTED-SOURCE-EXTENSION-DATA",
+      "expected_status": "PASS",
+      "expected_error_ids": [],
+      "set": {
+        "/record_id": "STATUS-FIXTURE-CONSTRUCTED",
+        "/dimensions/existence": "constructed",
+        "/dimensions/mathematical_status": "computed",
+        "/dimensions/authority": "source_extension_data",
+        "/evidence_by_dimension/existence": ["ARTIFACT-FIXTURE-CONSTRUCTION"],
+        "/evidence_by_dimension/mathematical_status": ["COMPUTATION-FIXTURE-001"],
+        "/evidence_by_dimension/authority": ["CONTROL-FIXTURE-001"]
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "S-PASS-PROVED-WITHOUT-PROMOTION",
+      "expected_status": "PASS",
+      "expected_error_ids": [],
+      "set": {
+        "/record_id": "STATUS-FIXTURE-PROVED",
+        "/dimensions/existence": "established",
+        "/dimensions/uniqueness": "conditional_unique",
+        "/dimensions/mathematical_status": "proved",
+        "/dimensions/authority": "scoped_evidence",
+        "/theorem_ids": ["THEOREM-FIXTURE-001"],
+        "/evidence_by_dimension/existence": ["THEOREM-FIXTURE-001"],
+        "/evidence_by_dimension/uniqueness": ["THEOREM-FIXTURE-001"],
+        "/evidence_by_dimension/mathematical_status": ["THEOREM-FIXTURE-001"],
+        "/evidence_by_dimension/authority": ["CONTROL-FIXTURE-001"]
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "S-PASS-TARGET-BENCHMARK-ADOPTION-WITH-SOURCE",
+      "expected_status": "PASS",
+      "expected_error_ids": [],
+      "set": {
+        "/record_id": "STATUS-FIXTURE-TARGET-BENCHMARK",
+        "/subject_scope": "target_benchmark",
+        "/dimensions/existence": "established",
+        "/dimensions/authority": "adopted",
+        "/evidence_by_dimension/existence": ["TEX-TARGET-BENCHMARK"],
+        "/evidence_by_dimension/authority": ["TEX-TARGET-BENCHMARK"],
+        "/authority/authority_kind": "registered_canonical_science",
+        "/authority/authority_refs": ["TEX-TARGET-BENCHMARK"],
+        "/authority/authority_scope": "target-side exact-GR benchmark only"
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-UNKNOWN-ENUM",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_known_enums"],
+      "set": {"/dimensions/robustness": "probably_good"},
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-UNKNOWN-DIMENSION",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_known_enums"],
+      "set": {"/dimensions/overall_confidence": "high"},
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-MISSING-REQUIRED-SUBJECT",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_required_paths"],
+      "set": {},
+      "delete": ["/subject_id"]
+    },
+    {
+      "fixture_id": "S-FAIL-CONSTRUCTED-WITHOUT-EVIDENCE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_dimension_evidence_required"],
+      "set": {"/dimensions/existence": "constructed"},
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-ABSENT-BUT-UNIQUE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_existence_consistency"],
+      "set": {
+        "/dimensions/existence": "absent",
+        "/dimensions/uniqueness": "unique",
+        "/evidence_by_dimension/uniqueness": ["THEOREM-FIXTURE-ABSENT"]
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-UNIQUE-CANDIDATE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_unique_requires_existence"],
+      "set": {
+        "/dimensions/uniqueness": "unique",
+        "/evidence_by_dimension/uniqueness": ["THEOREM-FIXTURE-UNIQUE"]
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-PROVED-WITHOUT-THEOREM-ID",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_proof_reference_required"],
+      "set": {
+        "/dimensions/mathematical_status": "proved",
+        "/evidence_by_dimension/mathematical_status": ["ARTIFACT-WITHOUT-THEOREM-ID"]
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-EMPIRICALLY-SUPPORTED-WITHOUT-EVIDENCE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_empirical_evidence_required"],
+      "set": {"/dimensions/empirical_status": "supported"},
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-REFUTED-WITHOUT-SCOPE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_refutation_scope_required"],
+      "set": {
+        "/dimensions/covariance": "refuted",
+        "/evidence_by_dimension/covariance": ["COUNTEREXAMPLE-FIXTURE-001"]
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-HUMAN-GATE-UNNAMED",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_human_gate_required"],
+      "set": {
+        "/dimensions/authority": "human_gated",
+        "/evidence_by_dimension/authority": ["CONTROL-FIXTURE-GATE-PENDING"]
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-CANONICAL-CANDIDATE-WITHOUT-PROTECTED-GATE",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_protected_candidate_required"],
+      "set": {
+        "/dimensions/authority": "canonical_ontology_candidate",
+        "/evidence_by_dimension/authority": ["CONTROL-FIXTURE-CANDIDATE"]
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-SOURCE-ADOPTION-WITHOUT-PROTECTED-AUTHORITY",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_adoption_authority_required"],
+      "set": {
+        "/subject_scope": "source",
+        "/dimensions/authority": "adopted",
+        "/evidence_by_dimension/authority": ["CONTROL-FIXTURE-ADOPTION"]
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-LEGACY-MAPPING-MUTATED",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_legacy_mapping_exact"],
+      "set": {
+        "/legacy_compatibility/raw_label": "evidence",
+        "/legacy_compatibility/source_record_ref": "research_control/historical.yaml",
+        "/legacy_compatibility/mapped_fields": {
+          "control_disposition": "proof",
+          "authority": "adopted"
+        }
+      },
+      "delete": []
+    },
+    {
+      "fixture_id": "S-FAIL-IMPLICIT-PROMOTION",
+      "expected_status": "FAIL",
+      "expected_error_ids": ["scientific_status_no_implicit_physics_promotion"],
+      "set": {"/authorization_layers/downstream_physics_promotion_authorized": true},
+      "delete": []
+    }
+  ],
+  "legacy_mapping_cases": [
+    {
+      "raw_label": "accepted",
+      "expected_assumption_mapping": {"control_disposition": "historical_accepted", "authority_status": "context_required"},
+      "expected_scientific_mapping": {"control_disposition": "historical_accepted", "authority": "context_required"}
+    },
+    {
+      "raw_label": "draft",
+      "expected_assumption_mapping": {"control_disposition": "draft_control", "authority_status": "control_only"},
+      "expected_scientific_mapping": {"control_disposition": "draft_control", "authority": "control_only"}
+    },
+    {
+      "raw_label": "evidence",
+      "expected_assumption_mapping": {"control_disposition": "evidence_recorded", "authority_status": "context_required"},
+      "expected_scientific_mapping": {"control_disposition": "evidence_recorded", "authority": "context_required"}
+    },
+    {
+      "raw_label": "proposal",
+      "expected_assumption_mapping": {"control_disposition": "proposal_only", "authority_status": "proposal_only"},
+      "expected_scientific_mapping": {"control_disposition": "proposal_only", "authority": "proposal_only"}
+    },
+    {
+      "raw_label": "adopted",
+      "expected_assumption_mapping": {"control_disposition": "historical_adopted", "authority_status": "context_required"},
+      "expected_scientific_mapping": {"control_disposition": "historical_adopted", "authority": "context_required"}
+    },
+    {
+      "raw_label": "frozen",
+      "expected_assumption_mapping": {"control_disposition": "frozen_negative", "authority_status": "frozen_negative"},
+      "expected_scientific_mapping": {"control_disposition": "frozen_negative", "authority": "frozen_negative"}
+    }
+  ],
+  "boundary": "Fixtures test operational schema behavior only; they are not scientific evidence, adoption, proof, or promotion authority."
+}

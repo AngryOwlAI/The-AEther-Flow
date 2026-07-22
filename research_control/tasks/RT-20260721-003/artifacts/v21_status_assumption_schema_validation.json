@@ -1,0 +1,710 @@
+{
+  "schema_id": "v21_status_assumption_schema_validation_v1",
+  "task_id": "RT-20260721-003",
+  "job_id": "AJ-RT-20260721-003-001",
+  "claim_boundary_id": "CB-V21-P10-T01-STATUS-ASSUMPTION-SCHEMAS-001",
+  "status": "PASS",
+  "source_hashes": {
+    "research_control/design/v21_assumption_ledger_schema.md": "c05a72e3c2da9c8908e1f11284c3c98932b6627c47ffe55abcba41bf272739db",
+    "research_control/design/v21_scientific_status_schema.md": "cc8225283cef43e0072445162cb76facdd6d98f65ac9854e999b69977e26f8d6",
+    "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_fixtures.json": "831718b021e4232da5a305a2713b63a7c3c26bca0c22b8609903e5d999b5c4c6",
+    "research_control/tasks/RT-20260721-003/artifacts/validate_v21_status_assumption_schemas.py": "24569c7d54651deb15af757f39d4b20812ab2dcf13bfdac459d6b4ef796653ed"
+  },
+  "passed_check_count": 12,
+  "failed_check_count": 0,
+  "fixture_counts": {
+    "assumption_total": 18,
+    "assumption_positive": 4,
+    "assumption_negative": 14,
+    "scientific_status_total": 18,
+    "scientific_status_positive": 4,
+    "scientific_status_negative": 14,
+    "legacy_mapping_total": 6,
+    "unexpected_fixture_results": 0
+  },
+  "checks": [
+    {
+      "check_id": "assumption_schema_id",
+      "status": "PASS",
+      "detail": "v21_assumption_ledger_schema_v1"
+    },
+    {
+      "check_id": "scientific_status_schema_id",
+      "status": "PASS",
+      "detail": "v21_scientific_status_schema_v1"
+    },
+    {
+      "check_id": "scientific_status_axes",
+      "status": "PASS",
+      "detail": "all ten orthogonal dimensions are declared"
+    },
+    {
+      "check_id": "assumption_legacy_labels",
+      "status": "PASS",
+      "detail": "six exact legacy labels"
+    },
+    {
+      "check_id": "scientific_status_legacy_labels",
+      "status": "PASS",
+      "detail": "six exact legacy labels"
+    },
+    {
+      "check_id": "authorization_layers_aligned",
+      "status": "PASS",
+      "detail": "both schemas use the fifteen v16 authorization booleans"
+    },
+    {
+      "check_id": "assumption_fixture_expectations",
+      "status": "PASS",
+      "detail": "unexpected fixtures=[]"
+    },
+    {
+      "check_id": "scientific_status_fixture_expectations",
+      "status": "PASS",
+      "detail": "unexpected fixtures=[]"
+    },
+    {
+      "check_id": "legacy_compatibility_fixtures",
+      "status": "PASS",
+      "detail": "all six raw labels map exactly"
+    },
+    {
+      "check_id": "no_implicit_physics_promotion",
+      "status": "PASS",
+      "detail": "proved fixture passes with all promotion flags false"
+    },
+    {
+      "check_id": "unknown_enum_fail_closed",
+      "status": "PASS",
+      "detail": "unknown enums and dimensions fail closed"
+    },
+    {
+      "check_id": "contradictions_fail_closed",
+      "status": "PASS",
+      "detail": "selected structural and authority contradictions fail closed"
+    }
+  ],
+  "assumption_fixture_results": [
+    {
+      "fixture_id": "A-PASS-BASE-PRIMITIVE",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "expected_error_ids": [],
+      "actual_error_ids": [],
+      "expectation_met": true,
+      "errors": []
+    },
+    {
+      "fixture_id": "A-PASS-DERIVED-WITH-CERTIFICATE",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "expected_error_ids": [],
+      "actual_error_ids": [],
+      "expectation_met": true,
+      "errors": []
+    },
+    {
+      "fixture_id": "A-PASS-MISSING-SOURCE-EXPLICIT",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "expected_error_ids": [],
+      "actual_error_ids": [],
+      "expectation_met": true,
+      "errors": []
+    },
+    {
+      "fixture_id": "A-PASS-TARGET-BENCHMARK-ONLY",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "expected_error_ids": [],
+      "actual_error_ids": [],
+      "expectation_met": true,
+      "errors": []
+    },
+    {
+      "fixture_id": "A-FAIL-UNKNOWN-KIND",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_known_enums"
+      ],
+      "actual_error_ids": [
+        "assumption_known_enums"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_known_enums",
+          "detail": "unknown enum values: {'assumption_kind': 'axiomatic_magic'}"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-REGISTERED-PROVENANCE-WITHOUT-SOURCE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_provenance_source_required"
+      ],
+      "actual_error_ids": [
+        "assumption_provenance_source_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_provenance_source_required",
+          "detail": "non-missing provenance requires keyed source refs and SHA-256 hashes"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-MISSING-SOURCE-WITH-CITATION",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_missing_source_exclusive"
+      ],
+      "actual_error_ids": [
+        "assumption_missing_source_exclusive"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_missing_source_exclusive",
+          "detail": "missing_source must not carry source refs or hashes"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-DERIVED-WITHOUT-CERTIFICATE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_derived_certificate_required"
+      ],
+      "actual_error_ids": [
+        "assumption_derived_certificate_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_derived_certificate_required",
+          "detail": "derived record requires dependencies and certificate refs"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-KIND-ROLE-MISMATCH",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_kind_role_alignment"
+      ],
+      "actual_error_ids": [
+        "assumption_kind_role_alignment"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_kind_role_alignment",
+          "detail": "primitive has incompatible derivation role"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-BENCHMARK-SMUGGLED-AS-SOURCE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_benchmark_target_only"
+      ],
+      "actual_error_ids": [
+        "assumption_benchmark_target_only"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_benchmark_target_only",
+          "detail": "benchmark records are target-benchmark-only"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-BLOCKED-WITHOUT-BURDEN",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_blocked_burden_required"
+      ],
+      "actual_error_ids": [
+        "assumption_blocked_burden_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_blocked_burden_required",
+          "detail": "blocked adoption requires burdens and open-continuation status"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-REJECTED-WITHOUT-SCOPE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_refutation_scope_required"
+      ],
+      "actual_error_ids": [
+        "assumption_refutation_scope_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_refutation_scope_required",
+          "detail": "negative disposition requires exact refutation scope and evidence"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-HUMAN-GATE-UNNAMED",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_human_gate_required"
+      ],
+      "actual_error_ids": [
+        "assumption_human_gate_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_human_gate_required",
+          "detail": "human-gated status requires a named gate and control reference"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-CANONICAL-CANDIDATE-WITHOUT-PROTECTED-GATE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_protected_candidate_required"
+      ],
+      "actual_error_ids": [
+        "assumption_protected_candidate_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_protected_candidate_required",
+          "detail": "canonical-ontology candidate requires protected human-gate authority"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-SOURCE-ADOPTED-WITHOUT-PROTECTED-AUTHORITY",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_adoption_authority_required"
+      ],
+      "actual_error_ids": [
+        "assumption_adoption_authority_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_adoption_authority_required",
+          "detail": "adoption requires exact protected or target-benchmark authority"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-LEGACY-MAPPING-MUTATED",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_legacy_mapping_exact"
+      ],
+      "actual_error_ids": [
+        "assumption_legacy_mapping_exact"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_legacy_mapping_exact",
+          "detail": "legacy mapping differs for accepted"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-HISTORICAL-REWRITE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_legacy_raw_preserved"
+      ],
+      "actual_error_ids": [
+        "assumption_legacy_raw_preserved"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_legacy_raw_preserved",
+          "detail": "historical_record_rewritten must be false"
+        }
+      ]
+    },
+    {
+      "fixture_id": "A-FAIL-IMPLICIT-PROMOTION",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "assumption_no_implicit_physics_promotion"
+      ],
+      "actual_error_ids": [
+        "assumption_no_implicit_physics_promotion"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "assumption_no_implicit_physics_promotion",
+          "detail": "true authorization fields lack exact protected authority: ['downstream_physics_promotion_authorized']"
+        }
+      ]
+    }
+  ],
+  "scientific_status_fixture_results": [
+    {
+      "fixture_id": "S-PASS-BASE-PROPOSAL",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "expected_error_ids": [],
+      "actual_error_ids": [],
+      "expectation_met": true,
+      "errors": []
+    },
+    {
+      "fixture_id": "S-PASS-CONSTRUCTED-SOURCE-EXTENSION-DATA",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "expected_error_ids": [],
+      "actual_error_ids": [],
+      "expectation_met": true,
+      "errors": []
+    },
+    {
+      "fixture_id": "S-PASS-PROVED-WITHOUT-PROMOTION",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "expected_error_ids": [],
+      "actual_error_ids": [],
+      "expectation_met": true,
+      "errors": []
+    },
+    {
+      "fixture_id": "S-PASS-TARGET-BENCHMARK-ADOPTION-WITH-SOURCE",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "expected_error_ids": [],
+      "actual_error_ids": [],
+      "expectation_met": true,
+      "errors": []
+    },
+    {
+      "fixture_id": "S-FAIL-UNKNOWN-ENUM",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_known_enums"
+      ],
+      "actual_error_ids": [
+        "scientific_status_known_enums"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_known_enums",
+          "detail": "unknown enum values or dimensions: {'robustness': 'probably_good'}"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-UNKNOWN-DIMENSION",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_known_enums"
+      ],
+      "actual_error_ids": [
+        "scientific_status_known_enums"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_known_enums",
+          "detail": "unknown enum values or dimensions: {'dimension_keys': ['overall_confidence']}"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-MISSING-REQUIRED-SUBJECT",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_required_paths"
+      ],
+      "actual_error_ids": [
+        "scientific_status_required_paths"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_required_paths",
+          "detail": "missing paths: ['subject_id']"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-CONSTRUCTED-WITHOUT-EVIDENCE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_dimension_evidence_required"
+      ],
+      "actual_error_ids": [
+        "scientific_status_dimension_evidence_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_dimension_evidence_required",
+          "detail": "strong statuses lack dimension evidence: ['existence']"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-ABSENT-BUT-UNIQUE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_existence_consistency"
+      ],
+      "actual_error_ids": [
+        "scientific_status_existence_consistency",
+        "scientific_status_unique_requires_existence"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_existence_consistency",
+          "detail": "absent conflicts with ['uniqueness=unique']"
+        },
+        {
+          "rule_id": "scientific_status_unique_requires_existence",
+          "detail": "unique requires established existence"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-UNIQUE-CANDIDATE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_unique_requires_existence"
+      ],
+      "actual_error_ids": [
+        "scientific_status_unique_requires_existence"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_unique_requires_existence",
+          "detail": "unique requires established existence"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-PROVED-WITHOUT-THEOREM-ID",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_proof_reference_required"
+      ],
+      "actual_error_ids": [
+        "scientific_status_proof_reference_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_proof_reference_required",
+          "detail": "proved requires at least one theorem id"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-EMPIRICALLY-SUPPORTED-WITHOUT-EVIDENCE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_empirical_evidence_required"
+      ],
+      "actual_error_ids": [
+        "scientific_status_dimension_evidence_required",
+        "scientific_status_empirical_evidence_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_dimension_evidence_required",
+          "detail": "strong statuses lack dimension evidence: ['empirical_status']"
+        },
+        {
+          "rule_id": "scientific_status_empirical_evidence_required",
+          "detail": "empirical status requires empirical evidence"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-REFUTED-WITHOUT-SCOPE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_refutation_scope_required"
+      ],
+      "actual_error_ids": [
+        "scientific_status_refutation_scope_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_refutation_scope_required",
+          "detail": "negative statuses require exact scope and evidence: ['covariance']"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-HUMAN-GATE-UNNAMED",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_human_gate_required"
+      ],
+      "actual_error_ids": [
+        "scientific_status_human_gate_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_human_gate_required",
+          "detail": "human-gated authority requires a named gate and control reference"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-CANONICAL-CANDIDATE-WITHOUT-PROTECTED-GATE",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_protected_candidate_required"
+      ],
+      "actual_error_ids": [
+        "scientific_status_protected_candidate_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_protected_candidate_required",
+          "detail": "canonical-ontology candidate requires protected human-gate authority"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-SOURCE-ADOPTION-WITHOUT-PROTECTED-AUTHORITY",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_adoption_authority_required"
+      ],
+      "actual_error_ids": [
+        "scientific_status_adoption_authority_required"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_adoption_authority_required",
+          "detail": "adoption requires exact protected or target-benchmark authority"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-LEGACY-MAPPING-MUTATED",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_legacy_mapping_exact"
+      ],
+      "actual_error_ids": [
+        "scientific_status_legacy_mapping_exact"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_legacy_mapping_exact",
+          "detail": "legacy mapping differs for evidence"
+        }
+      ]
+    },
+    {
+      "fixture_id": "S-FAIL-IMPLICIT-PROMOTION",
+      "expected_status": "FAIL",
+      "actual_status": "FAIL",
+      "expected_error_ids": [
+        "scientific_status_no_implicit_physics_promotion"
+      ],
+      "actual_error_ids": [
+        "scientific_status_no_implicit_physics_promotion"
+      ],
+      "expectation_met": true,
+      "errors": [
+        {
+          "rule_id": "scientific_status_no_implicit_physics_promotion",
+          "detail": "true authorization fields lack exact protected authority: ['downstream_physics_promotion_authorized']"
+        }
+      ]
+    }
+  ],
+  "legacy_mapping_results": [
+    {
+      "raw_label": "accepted",
+      "assumption_mapping_exact": true,
+      "scientific_mapping_exact": true
+    },
+    {
+      "raw_label": "draft",
+      "assumption_mapping_exact": true,
+      "scientific_mapping_exact": true
+    },
+    {
+      "raw_label": "evidence",
+      "assumption_mapping_exact": true,
+      "scientific_mapping_exact": true
+    },
+    {
+      "raw_label": "proposal",
+      "assumption_mapping_exact": true,
+      "scientific_mapping_exact": true
+    },
+    {
+      "raw_label": "adopted",
+      "assumption_mapping_exact": true,
+      "scientific_mapping_exact": true
+    },
+    {
+      "raw_label": "frozen",
+      "assumption_mapping_exact": true,
+      "scientific_mapping_exact": true
+    }
+  ],
+  "boundary": "Operational schema validation only; no historical rewrite, scientific proof, ontology adoption, or physics promotion authority."
+}

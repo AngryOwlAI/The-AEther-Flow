@@ -1,0 +1,88 @@
+{
+  "schema_id": "v21_status_assumption_schema_compact_receipt_v1",
+  "task_id": "RT-20260721-003",
+  "job_id": "AJ-RT-20260721-003-001",
+  "plan_task_id": "P10-T01",
+  "claim_boundary_id": "CB-V21-P10-T01-STATUS-ASSUMPTION-SCHEMAS-001",
+  "result_status": "PASS",
+  "source_hashes": {
+    "research_control/design/v21_assumption_ledger_schema.md": "c05a72e3c2da9c8908e1f11284c3c98932b6627c47ffe55abcba41bf272739db",
+    "research_control/design/v21_scientific_status_schema.md": "cc8225283cef43e0072445162cb76facdd6d98f65ac9854e999b69977e26f8d6",
+    "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_fixtures.json": "831718b021e4232da5a305a2713b63a7c3c26bca0c22b8609903e5d999b5c4c6",
+    "research_control/tasks/RT-20260721-003/artifacts/validate_v21_status_assumption_schemas.py": "24569c7d54651deb15af757f39d4b20812ab2dcf13bfdac459d6b4ef796653ed"
+  },
+  "finding_counts": {
+    "schema_contracts": 2,
+    "orthogonal_scientific_status_dimensions": 10,
+    "authorization_boolean_fields": 15,
+    "legacy_labels_mapped": 6,
+    "positive_fixtures": 8,
+    "negative_fixtures": 28,
+    "unexpected_fixture_results": 0,
+    "failed_validator_checks": 0
+  },
+  "validator_ids": [
+    "assumption_required_paths",
+    "assumption_known_enums",
+    "assumption_kind_role_alignment",
+    "assumption_provenance_source_required",
+    "assumption_missing_source_exclusive",
+    "assumption_derived_certificate_required",
+    "assumption_benchmark_target_only",
+    "assumption_blocked_burden_required",
+    "assumption_refutation_scope_required",
+    "assumption_human_gate_required",
+    "assumption_protected_candidate_required",
+    "assumption_adoption_authority_required",
+    "assumption_project_label_exact",
+    "assumption_legacy_mapping_exact",
+    "assumption_legacy_raw_preserved",
+    "assumption_authorization_explicit",
+    "assumption_no_implicit_physics_promotion",
+    "scientific_status_required_paths",
+    "scientific_status_known_enums",
+    "scientific_status_dimension_evidence_required",
+    "scientific_status_existence_consistency",
+    "scientific_status_unique_requires_existence",
+    "scientific_status_proof_reference_required",
+    "scientific_status_empirical_evidence_required",
+    "scientific_status_refutation_scope_required",
+    "scientific_status_human_gate_required",
+    "scientific_status_protected_candidate_required",
+    "scientific_status_adoption_authority_required",
+    "scientific_status_legacy_mapping_exact",
+    "scientific_status_legacy_raw_preserved",
+    "scientific_status_authorization_explicit",
+    "scientific_status_no_implicit_physics_promotion"
+  ],
+  "recommendation_ids": [
+    "V21-R31",
+    "V21-R32",
+    "V21-R33",
+    "V21-R61",
+    "V21-R63"
+  ],
+  "assumption_delta": {
+    "historical_records_rewritten": 0,
+    "existing_assumptions_reclassified": 0,
+    "assumptions_adopted": 0,
+    "new_schema_contracts": 2
+  },
+  "candidate_or_theorem_identities": {
+    "candidate_ids_created": [],
+    "theorem_ids_created": [],
+    "note": "P10-T01 defines schemas and fixtures only."
+  },
+  "authority_flags": {
+    "scientific_claims_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "historical_record_rewrite_authorized": false
+  },
+  "forbidden_conclusions": [
+    "Schema or validator PASS does not prove any scientific proposition.",
+    "Legacy compatibility mappings do not reinterpret historical claims.",
+    "No ontology, source law, metric, coupling, Einstein equation, benchmark, or completed derivation is adopted or promoted."
+  ],
+  "claim_boundary_summary": "P10-T01 implements additive project-control schemas, fixtures, and validation only; all protected scientific authority remains unchanged."
+}

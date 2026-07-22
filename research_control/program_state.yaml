@@ -1,9 +1,49 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260721-002"
-latest_handoff_id: "handoff-0803"
-current_status: "v21_p4_t04_comparative_decision_evidence_complete_no_regime_decision_no_distance_delta_p10_t01_ready"
-claim_boundary_summary: "RT-20260721-002 completed only P4-T04 by comparing the fixed P4-T02 and P4-T03 proposal options through five criteria, seven parent sensitivity scenarios, an independent mathematical replication, ten balanced primary sources, downstream burden analysis, and resolved parent-child synthesis. The small continuum-first baseline lead is nonrobust; neither option dominates, is selected, adopted, or rejected. P4-T05 remains human-gated, both scientific ledgers are unchanged, and no downstream physical status changed."
-next_recommended_action: "Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries."
+active_task_id: "RT-20260721-003"
+latest_handoff_id: "handoff-0804"
+current_status: "v21_p10_t01_normalized_status_assumption_schemas_complete_no_history_or_physics_delta_p10_t02_ready"
+claim_boundary_summary: "RT-20260721-003 completed only P10-T01 by registering embedded machine-readable assumption-provenance and ten-axis scientific-status contracts. Eight positive, twenty-eight negative, and six legacy-mapping fixtures matched expectation with no unexpected result. Historical records, science sources, scientific ledgers, ontology, P4-T05, Distance-to-GR, and all promotion authority remain unchanged."
+next_recommended_action: "Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records."
+
+p10_t01_normalized_status_assumption_schemas:
+  task_id: "RT-20260721-003"
+  plan_task_id: "P10-T01"
+  claim_boundary_id: "CB-V21-P10-T01-STATUS-ASSUMPTION-SCHEMAS-001"
+  assumption_schema_object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-ASSUMPTION-LEDGER-SCHEMA"
+  assumption_schema_path: "research_control/design/v21_assumption_ledger_schema.md"
+  assumption_schema_hash: "c05a72e3c2da9c8908e1f11284c3c98932b6627c47ffe55abcba41bf272739db"
+  scientific_status_schema_object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA"
+  scientific_status_schema_path: "research_control/design/v21_scientific_status_schema.md"
+  scientific_status_schema_hash: "cc8225283cef43e0072445162cb76facdd6d98f65ac9854e999b69977e26f8d6"
+  fixtures_path: "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_fixtures.json"
+  fixtures_hash: "831718b021e4232da5a305a2713b63a7c3c26bca0c22b8609903e5d999b5c4c6"
+  validation_path: "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_validation.json"
+  validation_hash: "2f5d25115907396ab10b3af7d4ac20969cd59d781a0c0df9f6a0fb7e66639277"
+  compact_receipt_path: "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_compact_receipt.json"
+  compact_receipt_hash: "f99cf78d96676d97fe7f800b36c0eeac6d344282c10aa78226ebe76064aac607"
+  schema_contract_count: 2
+  orthogonal_scientific_status_dimension_count: 10
+  explicit_authorization_boolean_count: 15
+  legacy_label_count: 6
+  positive_fixture_count: 8
+  negative_fixture_count: 28
+  unexpected_fixture_result_count: 0
+  unknown_enum_fail_closed: true
+  contradiction_fail_closed: true
+  implicit_physics_promotion_fail_closed: true
+  historical_record_rewrite_count: 0
+  assumptions_adopted: 0
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  p10_t01_completed: true
+  p10_t02_dependency_ready: true
+  selected_next_work_item: "P10-T02"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_reason: "P10-T02 depends only on the qualifying P10-T01 completion and is the direct taxonomy-normalization successor."
 
 p4_t04_ontology_regime_comparative_audit:
   task_id: "RT-20260721-002"
@@ -1539,9 +1579,9 @@ project_improvement_bridge:
   route: "none"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260721-002"
-  latest_research_handoff_id: "handoff-0803"
-  latest_research_next_action: "Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries."
+  latest_research_task_id: "RT-20260721-003"
+  latest_research_handoff_id: "handoff-0804"
+  latest_research_next_action: "Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

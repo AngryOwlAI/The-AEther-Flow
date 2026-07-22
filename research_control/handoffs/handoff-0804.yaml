@@ -1,0 +1,137 @@
+handoff_id: "handoff-0804"
+handoff_number: 804
+created_at: "2026-07-22T00:35:30Z"
+task_id: "RT-20260721-003"
+decision_id: "DDR-20260721-003"
+job_id: "AJ-RT-20260721-003-001"
+completion_path: "research_control/tasks/RT-20260721-003/jobs/completions/AJC-AJ-RT-20260721-003-001.yaml"
+completion_hash: "28ea88fbfbecd144b7b742152be0fab44cafd0b8ac21869d9ad6be105f2f7305"
+source_task_id: "RT-20260721-003"
+source_job_id: "AJ-RT-20260721-003-001"
+source_completion_id: "AJC-AJ-RT-20260721-003-001"
+status: "ready_for_director"
+summary: "RT-20260721-003 completed only v21 P10-T01. It registered two control schemas with embedded machine-readable JSON contracts for assumption provenance and ten orthogonal scientific-status dimensions. The task-local validator matched 8 positive fixtures, 28 negative fixtures, and all 6 legacy mappings with zero unexpected results. Unknown enums, contradictory structures, unsupported proof or empirical status, unscoped negative status, protected-authority substitutions, historical rewrites, and implicit promotion fail closed. No historical record, science source, scientific ledger, ontology, P4-T05 state, Distance-to-GR burden, or physics authority changed."
+next_action: "Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records."
+loop_risk_route: "v21_p10_t02_orthogonal_task_taxonomy"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260721-003"
+  latest_research_handoff_id: "handoff-0804"
+  latest_research_next_action: "Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One P10-T02 project-control packet may define stable orthogonal task-taxonomy fields, a task-local adapter or fixtures, exact compatibility behavior, and standard control receipts."
+  newly_completed_plan_task: "P10-T01"
+  p10_t01_dependency_completion_path: "research_control/tasks/RT-20260721-003/jobs/completions/AJC-AJ-RT-20260721-003-001.yaml"
+  p10_t01_dependency_completion_hash: "28ea88fbfbecd144b7b742152be0fab44cafd0b8ac21869d9ad6be105f2f7305"
+  p10_t01_completed: true
+  p10_t02_dependency_ready: true
+  p10_t02_selected_next: true
+  p10_t02_executed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  ontology_regime_selected: false
+  ontology_regime_adopted: false
+  historical_record_rewrite_count: 0
+  scientific_ledger_change_count: 0
+  physics_promotion_authorized: false
+  proof_authority: false
+  blocked_claims:
+    - "historical status or task record rewritten or reinterpreted"
+    - "P10-T02 or any other successor executed inside P10-T01"
+    - "P4-T05 ontology-regime decision or Gate Chair verdict"
+    - "canonical ontology or scientific-ledger edit"
+    - "schema validator or checkpoint as scientific truth evidence"
+    - "source-law adoption physical metric matter coupling Einstein equations exact-GR derivation or benchmark promotion"
+    - "external publication proof authority or completed derivation"
+
+normalized_schema_result:
+  assumption_schema_object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-ASSUMPTION-LEDGER-SCHEMA"
+  assumption_schema_path: "research_control/design/v21_assumption_ledger_schema.md"
+  assumption_schema_sha256: "c05a72e3c2da9c8908e1f11284c3c98932b6627c47ffe55abcba41bf272739db"
+  scientific_status_schema_object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA"
+  scientific_status_schema_path: "research_control/design/v21_scientific_status_schema.md"
+  scientific_status_schema_sha256: "cc8225283cef43e0072445162cb76facdd6d98f65ac9854e999b69977e26f8d6"
+  fixtures_path: "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_fixtures.json"
+  fixtures_sha256: "831718b021e4232da5a305a2713b63a7c3c26bca0c22b8609903e5d999b5c4c6"
+  validation_path: "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_validation.json"
+  validation_sha256: "2f5d25115907396ab10b3af7d4ac20969cd59d781a0c0df9f6a0fb7e66639277"
+  compact_receipt_path: "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_compact_receipt.json"
+  compact_receipt_sha256: "f99cf78d96676d97fe7f800b36c0eeac6d344282c10aa78226ebe76064aac607"
+  schema_contract_count: 2
+  scientific_status_dimension_count: 10
+  authorization_boolean_count: 15
+  legacy_mapping_count: 6
+  positive_fixture_count: 8
+  negative_fixture_count: 28
+  unexpected_fixture_result_count: 0
+  task_local_validation_status: "PASS"
+  history_rewritten: false
+  result_boundary: "Operational schema contract only; no scientific status or authority delta."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Implement the semantic control foundation without changing the scientific burden."
+  explanation: "P10-T01 added control schemas and fixtures only; it did not supply a source-equivalence theorem or downstream physics result."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No scientific object, source law, ontology regime, metric, matter semantics, coupling, Einstein dynamics, or benchmark status changed."
+  downstream_unlocked:
+    - "P10-T02 task-taxonomy normalization under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+selected_next_route:
+  route_id: "v21_p10_t02_orthogonal_task_taxonomy"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P10-T02"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make task analytics and routing generalizable."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  executed: false
+  next_action: "Normalize task taxonomy into orthogonal work_kind milestone candidate_family result_kind authority and scope fields with additive historical compatibility."
+  source_handoff: "research_control/handoffs/handoff-0804.yaml"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P10-T01 completed its included project-system work without an incidental shared-system defect."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one bounded P10-T02 project-system packet after the P10-T01 governed checkpoint succeeds."
+  this_handoff_does_not_authorize:
+    - "P10-T02 execution inside the completed P10-T01 AgentJob"
+    - "bulk migration or historical reinterpretation"
+    - "P4-T05 ontology-regime selection or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority or completed derivation"

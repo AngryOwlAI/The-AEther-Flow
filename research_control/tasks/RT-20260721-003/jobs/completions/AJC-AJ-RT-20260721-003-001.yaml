@@ -1,0 +1,415 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260721-003-001"
+completion_id: "AJC-AJ-RT-20260721-003-001"
+task_id: "RT-20260721-003"
+task_type: "v21_normalized_scientific_status_assumption_schemas"
+decision_id: "DDR-20260721-003"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260721-003"
+status: "completed"
+created_at: "2026-07-22T00:16:50Z"
+started_at: "2026-07-22T00:16:50Z"
+completed_at: "2026-07-22T00:35:30Z"
+objective: "Implement and validate only the v21 P10-T01 assumption-provenance and multidimensional scientific-status schemas with additive legacy compatibility and no historical reinterpretation or physics authority change."
+completion_summary: "P10-T01 created two registered control schemas whose embedded JSON contracts define normalized assumption provenance and ten orthogonal scientific-status dimensions. A task-local validator parsed both contracts and matched 8 positive fixtures, 28 negative fixtures, and all 6 exact legacy mappings with zero unexpected results. Unknown enums, structural contradictions, unsupported proofs, unscoped refutations, protected-authority substitutions, historical rewrites, and implicit physics promotion fail closed. No historical record, science source, scientific ledger, ontology, P4-T05 gate, or physical status changed."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T01"
+  recommendation_ids:
+    - "V21-R31"
+    - "V21-R32"
+    - "V21-R33"
+    - "V21-R61"
+    - "V21-R63"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "P2-T07"
+    - "P2-T08"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P3-T04"
+    - "P3-T05"
+    - "P3-T06"
+    - "P3-T07"
+    - "P4-T01"
+    - "P4-T02"
+    - "P4-T03"
+    - "P4-T04"
+    - "P10-T01"
+  next_dependency_ready_work_item: "P10-T02"
+  next_work_item_executed: false
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 35
+  passes_consumed: 34
+  route_work_item_id: "P10-T01"
+  route_worker_skill: "continue-research"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "v21_p10_t01_normalized_assumption_and_scientific_status_schemas"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v21"
+  recommendation_ids:
+    - "V21-R31"
+    - "V21-R32"
+    - "V21-R33"
+    - "V21-R61"
+    - "V21-R63"
+  implements_plan_task_id: "P10-T01"
+  implementation_status: "completed"
+  coverage_effect: "normalized_schema_foundation_only"
+  downstream_recommendations_completed_by_this_task: false
+
+schema_result:
+  assumption_schema:
+    object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-ASSUMPTION-LEDGER-SCHEMA"
+    schema_id: "v21_assumption_ledger_schema_v1"
+    path: "research_control/design/v21_assumption_ledger_schema.md"
+    sha256: "c05a72e3c2da9c8908e1f11284c3c98932b6627c47ffe55abcba41bf272739db"
+    normalized_kind_count: 4
+    exact_legacy_label_count: 6
+    historical_records_rewritten: 0
+  scientific_status_schema:
+    object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA"
+    schema_id: "v21_scientific_status_schema_v1"
+    path: "research_control/design/v21_scientific_status_schema.md"
+    sha256: "cc8225283cef43e0072445162cb76facdd6d98f65ac9854e999b69977e26f8d6"
+    orthogonal_dimension_count: 10
+    dimensions:
+      - "existence"
+      - "uniqueness"
+      - "naturality"
+      - "covariance"
+      - "robustness"
+      - "dynamics"
+      - "operational_meaning"
+      - "empirical_status"
+      - "mathematical_status"
+      - "authority"
+    authorization_boolean_count: 15
+  legacy_compatibility:
+    raw_labels:
+      - "accepted"
+      - "draft"
+      - "evidence"
+      - "proposal"
+      - "adopted"
+      - "frozen"
+    migration_mode: "additive_raw_preserved"
+    mapping_authority: "compatibility_only"
+    historical_record_rewritten: false
+  validation:
+    validation_path: "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_validation.json"
+    validation_sha256: "2f5d25115907396ab10b3af7d4ac20969cd59d781a0c0df9f6a0fb7e66639277"
+    compact_receipt_path: "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_compact_receipt.json"
+    compact_receipt_sha256: "f99cf78d96676d97fe7f800b36c0eeac6d344282c10aa78226ebe76064aac607"
+    positive_fixture_count: 8
+    negative_fixture_count: 28
+    legacy_mapping_fixture_count: 6
+    passed_check_count: 12
+    failed_check_count: 0
+    unexpected_fixture_result_count: 0
+    unknown_enum_fail_closed: true
+    contradictory_combination_fail_closed: true
+    implicit_physics_promotion_fail_closed: true
+
+assumption_delta:
+  changed: false
+  historical_records_rewritten: 0
+  existing_assumptions_reclassified: 0
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P10-T01 defines a future-facing additive schema and fixtures only."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  theorem_ids_created: []
+  identity_note: "No scientific candidate or theorem was created; fixture identities are non-authoritative test data."
+
+outputs_created:
+  - "research_control/design/v21_assumption_ledger_schema.md"
+  - "research_control/design/v21_scientific_status_schema.md"
+  - "research_control/tasks/RT-20260721-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260721-003/DDR-20260721-003.md"
+  - "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_fixtures.json"
+  - "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_validation.json"
+  - "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_compact_receipt.json"
+  - "research_control/tasks/RT-20260721-003/artifacts/validate_v21_status_assumption_schemas.py"
+  - "research_control/tasks/RT-20260721-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260721-003/jobs/AJ-RT-20260721-003-001.yaml"
+  - "research_control/tasks/RT-20260721-003/jobs/completions/AJC-AJ-RT-20260721-003-001.yaml"
+  - "research_control/tasks/RT-20260721-003/roles/project-control-maintainer@0.2.0--RT-20260721-003.yaml"
+  - "research_control/handoffs/handoff-0804.yaml"
+  - "research_control/handoffs/handoff-0804.md"
+outputs_updated:
+  - "research_control/program_state.yaml"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+
+artifact_evidence:
+  assumption_schema:
+    path: "research_control/design/v21_assumption_ledger_schema.md"
+    sha256: "c05a72e3c2da9c8908e1f11284c3c98932b6627c47ffe55abcba41bf272739db"
+  scientific_status_schema:
+    path: "research_control/design/v21_scientific_status_schema.md"
+    sha256: "cc8225283cef43e0072445162cb76facdd6d98f65ac9854e999b69977e26f8d6"
+  fixtures:
+    path: "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_fixtures.json"
+    sha256: "831718b021e4232da5a305a2713b63a7c3c26bca0c22b8609903e5d999b5c4c6"
+  validator:
+    path: "research_control/tasks/RT-20260721-003/artifacts/validate_v21_status_assumption_schemas.py"
+    sha256: "24569c7d54651deb15af757f39d4b20812ab2dcf13bfdac459d6b4ef796653ed"
+  validation:
+    path: "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_validation.json"
+    sha256: "2f5d25115907396ab10b3af7d4ac20969cd59d781a0c0df9f6a0fb7e66639277"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_compact_receipt.json"
+    sha256: "f99cf78d96676d97fe7f800b36c0eeac6d344282c10aa78226ebe76064aac607"
+
+fixed_input_evidence:
+  p0_t05_completion:
+    path: "research_control/tasks/RT-20260720-008/jobs/completions/AJC-AJ-RT-20260720-008-001.yaml"
+    sha256: "58f143cce059bb0d28c19f2542b3f7d7892e04c3b7573c468220c41dc932d2fc"
+  source_assumption_ledger:
+    path: "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+    sha256: "e50fb9458ee601563a0decc8dc809e719ec4e1d6b62c0682d1175ad2f91a1d90"
+    changed: false
+  predecessor_handoff:
+    path: "research_control/handoffs/handoff-0803.yaml"
+    sha256: "da35e125afcc8587007ea59897147246f6521bdf176469c6d238fdf74134f6d7"
+  distance_to_gr_ledger:
+    path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    changed: false
+  metric_use_ledger:
+    path: "registries/METRIC_USE_LEDGER.csv"
+    changed: false
+
+scientific_status:
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Implement the semantic control foundation for the v21 research program without changing the source-equivalence scientific burden."
+  status: "project_control_schema_completed_no_physics_delta"
+  distance_to_gr_delta:
+    changed: false
+    effect: "no_distance_delta"
+    ledger_row_updated: false
+  candidate_ids: []
+  theorem_statement_hashes: []
+  new_mathematical_payload: []
+  physics_promotion_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  milestone: "source_equivalence_eqsrc"
+  burden_id: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  rationale: "A project-control schema does not discharge any source-equivalence or downstream GR burden."
+
+authorization_layers:
+  scientific_claims_changed: false
+  historical_record_rewrite_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  scoped_evidence_status_change_authorized: false
+  source_object_status_change_authorized: false
+  source_extension_object_status_change_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  benchmark_promotion_authorized: false
+  downstream_physics_promotion_authorized: false
+  completed_derivation_authorized: false
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 35 route identity, lease parity, max effort, repository binding, clean start, predecessor terminal state, and single consumption were verified before work."
+  task_local_validator:
+    status: "PASS"
+    evidence:
+      - "Both embedded JSON contracts parse and all 12 focused checks pass."
+      - "Eight positive, twenty-eight negative, and six legacy-mapping fixtures match expectation with zero unexpected results."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The completion records P10-T01, five recommendation IDs, schema and fixture hashes, assumption delta, no candidate or theorem identity, authority flags, and forbidden conclusions."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Affected validation, documentation impact, project-improvement parity, research-control, and whitespace gates are required to pass before checkpoint."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier, compact-frontier, task-index, dependency, and claim graph derivatives are required to be fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and read-only validation are required to pass before checkpoint; generated retrieval surfaces remain non-authoritative."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+  authority_boundary:
+    status: "PASS"
+    evidence:
+      - "Strong mathematical fixture status passes with every promotion flag false."
+      - "Unauthorized adoption, protected candidacy, historical rewrite, and implicit promotion fixtures fail closed."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+
+required_validators:
+  - "memory_preflight"
+  - "v21_assumption_schema"
+  - "v21_scientific_status_schema"
+  - "v21_legacy_compatibility"
+  - "v21_unknown_enum_fail_closed"
+  - "v21_contradiction_fail_closed"
+  - "v21_no_implicit_physics_promotion"
+  - "affected_validation_plan"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "memory_sync"
+  - "memory_core"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260721-003/artifacts/validate_v21_status_assumption_schemas.py --write --json | exit_code=0 | PASS two contracts and 36 positive or negative fixture cases"
+  - ".venv/bin/python research_control/tasks/RT-20260721-003/artifacts/validate_v21_status_assumption_schemas.py --check --json | exit_code=0 | PASS zero stale task-local outputs"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/design/v21_assumption_ledger_schema.md research_control/design/v21_scientific_status_schema.md research_control/tasks/RT-20260721-003 research_control/program_state.yaml research_control/handoffs/handoff-0804.yaml --explain | exit_code=0 | READY affected gates"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | PASS"
+  - ".venv/bin/python -m unittest -v tests.test_research_control | exit_code=0 | PASS after bounded repair of the completion receipt and stale derivatives exposed by the initial fail-closed run"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | documentation impact and project-system accounting required"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 958
+    relationship_row_count: 4755
+    semantic_row_count: 958
+    vault_row_count: 958
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search assumption provenance scientific status --limit 10 --json"
+      query_type: "search"
+      query_text: "assumption provenance scientific status"
+      returned_object_ids:
+        - "TEX-V21-P4-T01-COMPREHENSIVE-SOURCE-ASSUMPTION-LEDGER"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "TEX-V21-P4-T01-COMPREHENSIVE-SOURCE-ASSUMPTION-LEDGER"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+      source_hash: "e50fb9458ee601563a0decc8dc809e719ec4e1d6b62c0682d1175ad2f91a1d90"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "5529b9143fb0bd120adfdc72f1d0904a75a3813977e55a06d03ee0783bad4217"
+      preflight_source_hash: "cd6c3c0ddda8ba87b1f122fbd4f948bab46a6351eff3d2f9ed585589d6bfffc1"
+      source_hash_refresh_reason: "The active task lawfully regenerated the mutable current-frontier source while preserving its exact preflight hash."
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Generated wiki, semantic, SQLite, Obsidian, and .local retrieval surfaces are navigation or diagnostic layers only and are not authority."
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required"
+  rationale: "P10-T01 implemented its included project-control schemas without finding an incidental shared-system defect."
+
+preserved_state:
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  ontology_regime_selected: false
+  ontology_regime_adopted: false
+  scientific_ledgers_changed: false
+  distance_to_gr_changed: false
+
+selected_next_route:
+  route_id: "v21_p10_t02_orthogonal_task_taxonomy"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P10-T02"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make task analytics and routing generalizable."
+  requires_human_gate: false
+  dependency_ready: true
+  executed: false
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  next_action: "Normalize task taxonomy into orthogonal work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and historical raw fields."
+  source_handoff: "research_control/handoffs/handoff-0804.yaml"
+
+forbidden_conclusion_summary: "P10-T01 schema registration, fixture PASS, memory regeneration, checkpoint, or relay continuation is not historical claim reinterpretation, scientific proof, ontology selection or adoption, source-law adoption, physical metric or matter-coupling derivation, Einstein-equation recovery, benchmark promotion, protected human authority, publication, or completed derivation."

@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260721-002`
-- Latest handoff: `handoff-0803`
-- Current status: `v21_p4_t04_comparative_decision_evidence_complete_no_regime_decision_no_distance_delta_p10_t01_ready`
+- Active task: `RT-20260721-003`
+- Latest handoff: `handoff-0804`
+- Current status: `v21_p10_t01_normalized_status_assumption_schemas_complete_no_history_or_physics_delta_p10_t02_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260721-002`
-- Latest research handoff: `handoff-0803`
-- Latest research next action: Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries.
+- Latest research task: `RT-20260721-003`
+- Latest research handoff: `handoff-0804`
+- Latest research next action: Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p10_t01_normalized_assumption_and_scientific_status_schemas`
+- Route ID: `v21_p10_t02_orthogonal_task_taxonomy`
 - Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Implement the semantic control foundation for the v21 research program.
+- Milestone burden: Make task analytics and routing generalizable.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ad926b8d20f42e00d0b05bb1f1533081e7cf32eec9a4fcde931b90ed8cdb9087`
-- JSON SHA-256: `4e5ebec4902cc6163497c1157aa12418755aa8ad7594835801475e90c6155544`
+- YAML SHA-256: `902eb3bff8b14e16b3c4d6083d33b75e2b8b39c25f26f8becce678cb8a138d3f`
+- JSON SHA-256: `e16ab5663b6f6de6e1449eb5a908053777f0870ad7fbac08bc29b2b686250869`
 
 ## Authority Warning
 

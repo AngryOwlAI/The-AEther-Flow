@@ -218,7 +218,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-V19-LEGACY-VALIDATION-INVOCATION-GRAPH` `research_control/design/v19_legacy_validation_invocation_graph.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-OVERHEAD-BACKLOG-SCHEMA` `research_control/design/v19_validation_overhead_backlog_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET` `research_control/design/v19_validation_performance_and_safety_budget.md`
+- `MD-RESEARCH-CONTROL-DESIGN-V21-ASSUMPTION-LEDGER-SCHEMA` `research_control/design/v21_assumption_ledger_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V21-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v21_recommendation_backlog_schema.md`
+- `MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `research_control/design/v21_scientific_status_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `research_control/design/validation_cache_contract_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `research_control/design/validation_change_family_taxonomy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-MATRIX-V1` `research_control/design/validation_change_matrix_v1.md`
@@ -1185,7 +1187,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V19-LEGACY-VALIDATION-INVOCATION-GRAPH` `wiki/markdown/md-research-control-design-v19-legacy-validation-invocation-graph.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-OVERHEAD-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v19-validation-overhead-backlog-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V19-VALIDATION-PERFORMANCE-AND-SAFETY-BUDGET` `wiki/markdown/md-research-control-design-v19-validation-performance-and-safety-budget.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-ASSUMPTION-LEDGER-SCHEMA` `wiki/markdown/md-research-control-design-v21-assumption-ledger-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v21-recommendation-backlog-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `wiki/markdown/md-research-control-design-v21-scientific-status-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `wiki/markdown/md-research-control-design-validation-cache-contract-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `wiki/markdown/md-research-control-design-validation-change-family-taxonomy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-MATRIX-V1` `wiki/markdown/md-research-control-design-validation-change-matrix-v1.md`
