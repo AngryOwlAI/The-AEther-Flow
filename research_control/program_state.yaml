@@ -1,9 +1,58 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260722-001"
-latest_handoff_id: "handoff-0811"
-current_status: "p10_t08_compatibility_repair_pass_combined_transaction_ready_for_checkpoint_p10_t07_selected"
-claim_boundary_summary: "RT-20260722-001 repaired only the registered burden-map mutable memory-preflight compatibility omission, preserved the complete RT-20260721-009 P10-T08 payload, and leaves P10-T07 selected but unexecuted until the combined transaction checkpoints."
-next_recommended_action: "After governed checkpoint PASS, run one bounded P10-T07 project-control-maintainer packet for stable artifact paths and content-addressed references without rewriting historical paths."
+active_task_id: "RT-20260722-002"
+latest_handoff_id: "handoff-0812"
+current_status: "p10_t07_artifact_identity_path_policy_pass_p10_t09_selected"
+claim_boundary_summary: "RT-20260722-002 completed only a prospective portable-path policy, full-SHA-256 reference pilot, and non-destructive migration guidance; every historical path and authority surface remains unchanged, and P10-T09 is selected but unexecuted until checkpoint."
+next_recommended_action: "After the P10-T07 governed checkpoint succeeds, run exactly one bounded P10-T09 process-integrity-auditor project-system AgentJob to audit normalized schemas, lineage, attempt history, the event-store pilot, path policy, and generated burden status. Do not cut over authority or execute protected P4-T05."
+
+p10_t07_artifact_identity_path_policy:
+  task_id: "RT-20260722-002"
+  parent_task_id: "RT-20260722-001"
+  parent_handoff_id: "handoff-0811"
+  plan_task_id: "P10-T07"
+  claim_boundary_id: "CB-V21-P10-T07-ARTIFACT-IDENTITY-PATH-POLICY-001"
+  status: "PASS_PROSPECTIVE_POLICY_AND_PILOT_NO_HISTORICAL_MIGRATION"
+  policy_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_path_policy.md"
+  policy_sha256: "43ced31d8740c7901b8818ce98b9ccc58050f9938580632687bac7169c6383cb"
+  tool_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py"
+  tool_sha256: "55472b473fc7c626cb1bd777f76acdb5d91493740443ac93749461835ad04754"
+  migration_guidance_path: "research_control/tasks/RT-20260722-002/artifacts/migration_guidance.md"
+  migration_guidance_sha256: "a0fd7a6297e381fa02e2c5038e0e8bd05de02d3e7ab53b1aa08605dce9669bbc"
+  manifest_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  manifest_sha256: "a39babc489dbce361ab7cbfcc8a7cda6347a633d0bc9c820b40a97a2433a26d0"
+  validation_path: "research_control/tasks/RT-20260722-002/artifacts/validation.json"
+  validation_sha256: "0b8d4ae048aa5af1df14b381cf3d02b71cb77901c909157fc28ae34b5dabe2a7"
+  compact_receipt_path: "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  compact_receipt_sha256: "ae292e51d0a61f72234480be8734103d58002d5d0476e9add34054e3758bdcdb"
+  content_reference_count: 3
+  internal_check_count: 13
+  failed_check_count: 0
+  focused_test_count: 12
+  focused_test_failure_count: 0
+  path_policy_application: "prospective_only"
+  full_sha256_identity_required: true
+  stable_aliases_are_authority: false
+  content_copies_are_authority: false
+  historical_paths_changed: false
+  historical_references_rewritten: false
+  shared_linter_integrated: false
+  event_store_cutover_authorized: false
+  legacy_registry_authority_changed: false
+  p10_t07_completed: true
+  p10_t08_completed: true
+  p10_t09_dependency_ready: true
+  p10_t09_selected: true
+  p10_t09_executed: false
+  selected_next_work_item: "P10-T09"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_reason: "P10-T09 now has qualifying P10-T07 and P10-T08 completions and is the direct non-promotional integration audit for the completed P10 data-model components."
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
 
 p10_t08_mutable_burden_map_preflight_compatibility_recovery:
   task_id: "RT-20260722-001"

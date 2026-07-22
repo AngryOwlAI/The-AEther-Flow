@@ -1,0 +1,345 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260722-002-001"
+completion_id: "AJC-AJ-RT-20260722-002-001"
+task_id: "RT-20260722-002"
+task_type: "v21_content_addressed_artifact_identity_and_path_policy"
+decision_id: "DDR-20260722-002"
+role_id: "project-control-maintainer"
+source_role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-002"
+status: "completed"
+created_at: "2026-07-22T07:44:30Z"
+started_at: "2026-07-22T07:44:30Z"
+completed_at: "2026-07-22T07:52:58Z"
+objective: "Implement and validate only v21 P10-T07 by defining prospective portable artifact paths full content identities stable manifest aliases metadata titles and non-destructive migration guidance without moving historical artifacts or changing any scientific or protected authority."
+completion_summary: "P10-T07 defines a prospective cross-platform path policy, provides a deterministic task-local linter and full-SHA-256 reference resolver, materializes three verified immutable pilot copies, and documents a non-destructive migration route. Thirteen internal checks and twelve focused tests pass. Historical paths and authority remain unchanged; aliases are manifest conveniences only."
+objective_result: "completed"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T07"
+  recommendation_ids:
+    - "V21-R48"
+    - "V21-R58"
+  implementation_status: "completed"
+  completed_v21_tasks_added:
+    - "P10-T07"
+  next_dependency_ready_work_item: "P10-T09"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "b148afe96bed4c5068cc114723c0f23bf6a990184cb82099c05b890c66455170"
+  generation: 43
+  passes_consumed: 42
+  route_work_item_id: "P10-T07"
+  route_worker_skill: "continue-research"
+
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "v21_p10_t07_artifact_identity_and_path_policy"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+artifact_identity_result:
+  schema_id: "artifact_identity_policy_v1"
+  status: "prospective_policy_and_pilot_pass"
+  policy_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_path_policy.md"
+  policy_sha256: "43ced31d8740c7901b8818ce98b9ccc58050f9938580632687bac7169c6383cb"
+  tool_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py"
+  tool_sha256: "55472b473fc7c626cb1bd777f76acdb5d91493740443ac93749461835ad04754"
+  migration_guidance_path: "research_control/tasks/RT-20260722-002/artifacts/migration_guidance.md"
+  migration_guidance_sha256: "a0fd7a6297e381fa02e2c5038e0e8bd05de02d3e7ab53b1aa08605dce9669bbc"
+  manifest_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  manifest_sha256: "a39babc489dbce361ab7cbfcc8a7cda6347a633d0bc9c820b40a97a2433a26d0"
+  validation_path: "research_control/tasks/RT-20260722-002/artifacts/validation.json"
+  validation_sha256: "0b8d4ae048aa5af1df14b381cf3d02b71cb77901c909157fc28ae34b5dabe2a7"
+  compact_receipt_path: "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  compact_receipt_sha256: "ae292e51d0a61f72234480be8734103d58002d5d0476e9add34054e3758bdcdb"
+  test_path: "tests/test_artifact_identity_policy.py"
+  test_sha256: "13d7fe67dfeeaf8d262794484cabe44a0fe735aa013d476972b184603ecb599d"
+  content_reference_count: 3
+  internal_check_count: 13
+  internal_failed_check_count: 0
+  focused_test_count: 12
+  focused_test_failure_count: 0
+  maximum_repo_relative_characters: 180
+  maximum_repo_relative_utf8_bytes: 220
+  maximum_component_characters: 96
+  maximum_component_utf8_bytes: 120
+  maximum_alias_characters: 48
+  digest_algorithm: "sha256"
+  digest_encoding: "lowercase_full_64_hex"
+  normalization: "NFC"
+  historical_paths_changed: false
+  historical_references_rewritten: false
+  aliases_are_authority: false
+  content_copies_are_authority: false
+  shared_linter_integrated: false
+  event_store_cutover_authorized: false
+  legacy_registry_authority_changed: false
+
+content_reference_pilot:
+  - stable_alias: "event-architecture-v1"
+    content_sha256: "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51"
+    source_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json"
+    content_path: "research_control/tasks/RT-20260722-002/artifacts/ca/e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51.json"
+  - stable_alias: "event-schema-v1"
+    content_sha256: "43d65e6773902b692e2d98f2e4c7319deb4c0c8277b0d7d200727e6456ec3959"
+    source_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_schema.md"
+    content_path: "research_control/tasks/RT-20260722-002/artifacts/ca/43d65e6773902b692e2d98f2e4c7319deb4c0c8277b0d7d200727e6456ec3959.md"
+  - stable_alias: "generated-view-v1"
+    content_sha256: "1aaf5cba3fab6567ce4d10260d6227e2341cb5b97f1a6107a01fa647237d7653"
+    source_path: "research_control/tasks/RT-20260721-007/artifacts/v21_generated_view_contract.md"
+    content_path: "research_control/tasks/RT-20260722-002/artifacts/ca/1aaf5cba3fab6567ce4d10260d6227e2341cb5b97f1a6107a01fa647237d7653.md"
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P10-T07 changes project-control artifact identity conventions only and adds no scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  identity_note: "No scientific candidate or theorem identity is created or changed."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260722-002/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-002/DDR-20260722-002.md"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_path_policy.md"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py"
+  - "research_control/tasks/RT-20260722-002/artifacts/migration_guidance.md"
+  - "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/validation.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/1aaf5cba3fab6567ce4d10260d6227e2341cb5b97f1a6107a01fa647237d7653.md"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/43d65e6773902b692e2d98f2e4c7319deb4c0c8277b0d7d200727e6456ec3959.md"
+  - "research_control/tasks/RT-20260722-002/artifacts/ca/e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51.json"
+  - "tests/test_artifact_identity_policy.py"
+  - "research_control/tasks/RT-20260722-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260722-002/jobs/AJ-RT-20260722-002-001.yaml"
+  - "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml"
+  - "research_control/tasks/RT-20260722-002/roles/project-control-maintainer@0.2.0--RT-20260722-002.yaml"
+  - "research_control/handoffs/handoff-0812.yaml"
+  - "research_control/handoffs/handoff-0812.md"
+outputs_updated:
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/compact_current_frontier_v16.json"
+  - "output/compact_current_frontier_v16.yaml"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Improve portability and referential stability."
+  explanation: "P10-T07 supplies project-control policy and validation only; it adds no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  rationale: "Artifact portability and identity conventions do not discharge source-equivalence or downstream GR burdens."
+  downstream_unlocked:
+    - "P10-T09 non-promotional systems audit under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  event_store_cutover_authorized: false
+  historical_path_rewrite_authorized: false
+  candidate_adoption_authorized: false
+  candidate_rejection_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 43 route identity, lease parity, max effort, repository binding, clean start, predecessor inactivity, and single consumption were verified before work."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The prospective policy and task-local tool pass 13 path, normalization, collision, full-hash, reference-resolution, and historical-preservation checks plus 12 focused tests."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local check, affected-plan, documentation-impact, project-improvement, claim-language, research-control, and diff validations are required to pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate and does not weaken the current PASS evidence."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index, current-frontier, compact-frontier, and policy-generated derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "prospective path policy treated as historical migration or rewrite"
+    - "stable alias or content-addressed copy treated as canonical authority"
+    - "short digest treated as complete identity"
+    - "P10-T09 audit or P13-T04 cutover executed inside P10-T07"
+    - "validator PASS treated as scientific proof"
+    - "P4-T05 ontology-regime decision or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof completed derivation or global no-go"
+  historical_paths_changed: false
+  aliases_are_authority: false
+  event_store_cutover_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py --write --json | exit_code=0 | status=PASS checks=13 failures=0 references=3"
+  - ".venv/bin/python research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py --check --json | exit_code=0 | status=PASS drift=0"
+  - ".venv/bin/python -m unittest -v tests.test_artifact_identity_policy | exit_code=0 | tests=12 failures=0"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260722-002 tests/test_artifact_identity_policy.py research_control/program_state.yaml research_control/handoffs/handoff-0812.yaml --explain | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write and --check plus validate_compact_current_frontier_v16.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json and resolve_project_improvement.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | required before checkpoint"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | required before checkpoint"
+  - "git diff --check | required before checkpoint"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 969
+    relationship_row_count: 4801
+    semantic_row_count: 969
+    vault_row_count: 969
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search stable artifact paths --limit 10 --json"
+      query_type: "search"
+      query_text: "stable artifact paths"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search content addressed references --limit 10 --json"
+      query_type: "search"
+      query_text: "content addressed references"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "0aca4cc68fb1b7a89309248c4207f7e73f5e672cd2e72e7b6b01ef0a6bd1a59b"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  additional_canonical_inspections:
+    - canonical_path: "research_control/program_state.yaml"
+      source_hash: "116fe6a382a04c0cbfc61df2334f102fc648afaefedd75d7ce35e363ae2c128d"
+    - canonical_path: "research_control/handoffs/handoff-0811.yaml"
+      source_hash: "96e75f4d1531ad15d41253ded0448850c24949e9e9b655758ce2bf4467f584a0"
+    - canonical_path: "research_control/tasks/RT-20260721-007/jobs/completions/AJC-AJ-RT-20260721-007-001.yaml"
+      source_hash: "2517f883a575fa8e82379f91d59b2cb4ba85f1f8da7d64a2a2373907b8ec3de2"
+    - canonical_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      source_hash: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory and .local are retrieval layers only and not authority; canonical tracked sources and registry rows govern."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P10-T07 completed its included project-system policy and pilot without detecting an incidental shared-system defect."
+
+next_research_route:
+  status: "dependency_ready"
+  plan_task_id: "P10-T09"
+  task_name: "Audit event, lineage, taxonomy, and status migration readiness"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  route_label: "ordinary-research-packet"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Determine whether the data-model modernization is safe for broader rollout."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  executed: false
+  selection_reason: "P10-T09 now has qualifying P10-T07 and P10-T08 completions and is the direct non-promotional integration audit for the completed P10 data-model components."
+
+documentation_impact_id: "DI-RT-20260722-002-001"
+documentation_impact_path: "research_control/tasks/RT-20260722-002/documentation_impact.yaml"
+completion_record_path: "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml"
+handoff_id: "handoff-0812"
+handoff_path: "research_control/handoffs/handoff-0812.yaml"

@@ -1,0 +1,99 @@
+{
+  "aliases_are_authority": false,
+  "check_count": 13,
+  "checks": [
+    {
+      "check_id": "reference_count",
+      "detail": "references=3",
+      "status": "PASS"
+    },
+    {
+      "check_id": "stable_alias_unique",
+      "detail": "aliases=3 unique=3",
+      "status": "PASS"
+    },
+    {
+      "check_id": "stable_alias_syntax",
+      "detail": "all aliases use the bounded portable syntax",
+      "status": "PASS"
+    },
+    {
+      "check_id": "portable_content_paths",
+      "detail": "all content paths pass prospective portability policy",
+      "status": "PASS"
+    },
+    {
+      "check_id": "casefold_unique",
+      "detail": "content paths are unique after NFC casefold",
+      "status": "PASS"
+    },
+    {
+      "check_id": "full_sha256_identity",
+      "detail": "every identity carries one exact full SHA-256 digest",
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_source_integrity",
+      "detail": "every historical source exists at its original path with its pinned digest",
+      "status": "PASS"
+    },
+    {
+      "check_id": "content_copy_integrity",
+      "detail": "every task-local copy resolves to the full recorded digest",
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_paths_preserved",
+      "detail": "manifest records no historical path mutation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "alias_non_authority",
+      "detail": "aliases remain non-authoritative manifest keys",
+      "status": "PASS"
+    },
+    {
+      "check_id": "science_non_authority",
+      "detail": "pilot creates no scientific or promotion authority",
+      "status": "PASS"
+    },
+    {
+      "check_id": "cross_platform_negative_fixtures",
+      "detail": "fixtures=8",
+      "status": "PASS"
+    },
+    {
+      "check_id": "casefold_collision_fixture",
+      "detail": "case-insensitive collision fails closed",
+      "status": "PASS"
+    }
+  ],
+  "cross_platform_profiles": {
+    "linux": "bounded UTF-8 component and repository-relative path fixtures",
+    "macos": "NFC and casefold collision fixtures plus bounded UTF-8 components",
+    "windows": "legacy path budget reserved names forbidden characters separators and trailing-character fixtures"
+  },
+  "failed_check_count": 0,
+  "findings": [],
+  "historical_paths_changed": false,
+  "physics_promotion_authorized": false,
+  "policy": {
+    "digest_algorithm": "sha256",
+    "digest_hex_chars": 64,
+    "max_component_chars": 96,
+    "max_component_utf8_bytes": 120,
+    "max_filename_chars": 96,
+    "max_filename_utf8_bytes": 120,
+    "max_relative_path_chars": 180,
+    "max_relative_path_utf8_bytes": 220,
+    "max_stable_alias_chars": 48,
+    "normalization": "NFC",
+    "schema_id": "artifact_path_policy_v1",
+    "separator": "/"
+  },
+  "proof_authority": false,
+  "reference_count": 3,
+  "schema_id": "artifact_identity_validation_v1",
+  "scientific_claims_changed": false,
+  "status": "PASS"
+}

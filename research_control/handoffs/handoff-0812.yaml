@@ -1,0 +1,213 @@
+validation_status: "PASS"
+handoff_id: "handoff-0812"
+task_id: "RT-20260722-002"
+job_id: "AJ-RT-20260722-002-001"
+completion_id: "AJC-AJ-RT-20260722-002-001"
+completion_path: "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml"
+completion_sha256: "71595f97c4b3c8ed06d5e735a0f23269d210e40909b09301818af011e551b2a4"
+status: "ready_for_director"
+created_at: "2026-07-22T07:52:58Z"
+parent_handoff_id: "handoff-0811"
+plan_task_id: "P10-T07"
+source_role_id: "project-control-maintainer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-002"
+handoff_summary: "P10-T07 completed a prospective portable-path policy, deterministic task-local linter, three-reference full-SHA-256 pilot, non-destructive migration guidance, 13 internal checks, and 12 focused tests. Every historical path and current authority surface remains unchanged. P10-T09 is dependency-ready and selected as the post-checkpoint non-promotional systems audit."
+next_action: "After the P10-T07 governed checkpoint succeeds, run exactly one bounded P10-T09 process-integrity-auditor project-system AgentJob to audit normalized schemas, lineage, attempt history, the event-store pilot, path policy, and generated burden status. Do not cut over authority or execute protected P4-T05."
+current_claim_boundary: "CB-V21-P10-T07-ARTIFACT-IDENTITY-PATH-POLICY-001"
+loop_risk_route: "v21_p10_t09_data_model_migration_readiness_audit"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260722-002"
+  latest_research_handoff_id: "handoff-0812"
+  latest_research_next_action: "After the P10-T07 governed checkpoint succeeds, run exactly one bounded P10-T09 process-integrity-auditor project-system AgentJob to audit normalized schemas, lineage, attempt history, the event-store pilot, path policy, and generated burden status. Do not cut over authority or execute protected P4-T05."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh P10-T09 project-system packet may perform a non-promotional integration audit of the completed P10 data-model artifacts and report rollout readiness or exact blockers without cutover or historical rewrite."
+  newly_completed_plan_task: "P10-T07"
+  p10_t07_dependency_completion_path: "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml"
+  p10_t07_dependency_completion_hash: "71595f97c4b3c8ed06d5e735a0f23269d210e40909b09301818af011e551b2a4"
+  p10_t07_completed: true
+  p10_t08_completed: true
+  p10_t09_dependency_ready: true
+  p10_t09_selected_next: true
+  p10_t09_executed: false
+  prospective_policy_only: true
+  content_reference_count: 3
+  internal_check_count: 13
+  internal_failed_check_count: 0
+  focused_test_count: 12
+  focused_test_failure_count: 0
+  historical_paths_changed: false
+  historical_references_rewritten: false
+  aliases_are_authority: false
+  content_copies_are_authority: false
+  shared_linter_integrated: false
+  event_store_cutover_authorized: false
+  legacy_registry_authority_changed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  scientific_ledger_change_count: 0
+  physics_promotion_authorized: false
+  proof_authority: false
+  blocked_claims:
+    - "prospective path policy treated as historical migration or rewrite"
+    - "stable alias or content-addressed copy treated as canonical authority"
+    - "short digest treated as complete identity"
+    - "P10-T09 audit or P13-T04 cutover executed inside P10-T07"
+    - "generated view or validator PASS treated as scientific proof"
+    - "P4-T05 ontology-regime decision or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"
+
+artifact_identity_result:
+  schema_id: "artifact_identity_policy_v1"
+  status: "prospective_policy_and_pilot_pass"
+  policy_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_path_policy.md"
+  policy_sha256: "43ced31d8740c7901b8818ce98b9ccc58050f9938580632687bac7169c6383cb"
+  tool_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_identity.py"
+  tool_sha256: "55472b473fc7c626cb1bd777f76acdb5d91493740443ac93749461835ad04754"
+  migration_guidance_path: "research_control/tasks/RT-20260722-002/artifacts/migration_guidance.md"
+  migration_guidance_sha256: "a0fd7a6297e381fa02e2c5038e0e8bd05de02d3e7ab53b1aa08605dce9669bbc"
+  manifest_path: "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json"
+  manifest_sha256: "a39babc489dbce361ab7cbfcc8a7cda6347a633d0bc9c820b40a97a2433a26d0"
+  validation_path: "research_control/tasks/RT-20260722-002/artifacts/validation.json"
+  validation_sha256: "0b8d4ae048aa5af1df14b381cf3d02b71cb77901c909157fc28ae34b5dabe2a7"
+  compact_receipt_path: "research_control/tasks/RT-20260722-002/artifacts/compact_receipt.json"
+  compact_receipt_sha256: "ae292e51d0a61f72234480be8734103d58002d5d0476e9add34054e3758bdcdb"
+  test_path: "tests/test_artifact_identity_policy.py"
+  test_sha256: "13d7fe67dfeeaf8d262794484cabe44a0fe735aa013d476972b184603ecb599d"
+  policy_application: "prospective_only"
+  digest_algorithm: "full_sha256"
+  stable_alias_role: "non_authoritative_manifest_convenience"
+  authority_boundary: "Project-control policy and pilot only; existing canonical sources, registries, registered TeX, and human Gate Chair artifacts retain their authority."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Improve portability and referential stability."
+  explanation: "P10-T07 added project-control policy and validation only and supplied no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_project_control_policy_only"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No scientific object, source law, ontology regime, metric, matter semantics, coupling, Einstein dynamics, or benchmark status changed."
+  downstream_unlocked:
+    - "P10-T09 non-promotional systems audit under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+required_next_packet:
+  task_type: "v21_data_model_migration_readiness_audit"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "audit_or_review"
+    milestone: "source_equivalence_eqsrc"
+    candidate_family: "not_applicable"
+    result_kind: "implemented_and_validated_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+selected_next_route:
+  route_id: "v21_p10_t09_data_model_migration_readiness_audit"
+  route_label: "ordinary-research-packet"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P10-T09"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Determine whether the data-model modernization is safe for broader rollout."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  executed: false
+  next_action: "Audit the normalized schemas, candidate lineage, attempt history, event-store pilot, prospective path policy, and generated burden status for consistency and migration readiness without cutover."
+  source_handoff: "research_control/handoffs/handoff-0812.yaml"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 43 was validated, claimed, consumed once, and executed under its immutable continue-research route."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The prospective policy and task-local reference pilot pass 13 internal checks and 12 focused tests with zero historical path changes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused tests, documentation impact, project-improvement, claim-language, research-control, memory, and diff gates are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index, current-frontier, compact-frontier, and memory derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and read-only validation are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P10-T07 completed its included project-system policy and pilot without an incidental shared-system defect."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one bounded P10-T09 non-promotional systems audit after the P10-T07 governed checkpoint succeeds."
+  this_handoff_does_not_authorize:
+    - "P10-T09 execution inside the completed P10-T07 AgentJob"
+    - "historical artifact path move rewrite deletion or backfill"
+    - "event-store dual write reader switch registry replacement or cutover"
+    - "stable alias or content copy as canonical authority"
+    - "generated status or validator PASS as scientific or protected authority"
+    - "candidate adoption rejection promotion or scientific truth inference"
+    - "P4-T05 ontology-regime selection or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"
