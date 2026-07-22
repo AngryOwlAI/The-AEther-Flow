@@ -201,6 +201,77 @@ This gate validates identity, evidence presence, and exact source hashes. It
 does not prove evidence true, adopt a primitive or candidate, infer a global
 no-go result, modify ontology, or authorize physics promotion.
 
+## Prospective Dual-Budget Allocation
+
+Every AgentJob created at or after `2026-07-22T18:10:44Z` must include a
+`dual_budget_allocation` block conforming to
+`research_control/tasks/RT-20260722-014/artifacts/dual_budget_policy_v1.md`.
+Historical jobs without the block remain readable. This is a project-control
+accounting and acceptance gate, not a scientific claim gate.
+
+The four categories are `physics_bearing`, `system_bearing`, `mixed`, and
+`support_only`. Every job names exactly one `primary_budget`, and the two task
+count credits must be 0 or 1 and sum to exactly 1. Mixed jobs must declare
+nonempty, disjoint output and acceptance sets in both lanes; their secondary
+lane does not create a second task-count credit.
+
+```yaml
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "research_control/tasks/<task>/artifacts/scientific-result.tex"
+    project_system:
+      - "research_control/tasks/<task>/artifacts/checker.py"
+  acceptance_criteria:
+    physics:
+      - "bounded scientific obligation is discharged"
+    project_system:
+      - "checker fixture matrix passes"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort: {status: "not_measured", unit: "seconds"}
+      compute: {status: "not_measured", unit: ""}
+    project_system:
+      elapsed_effort: {status: "not_measured", unit: "seconds"}
+      compute: {status: "not_measured", unit: ""}
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+```
+
+Missing elapsed effort or compute is `not_measured` with the `value` key
+omitted (or JSON null in JSON surfaces); it is never represented as numeric
+zero. An active blocked-physics exception needs
+a stable ID, tracked repository-relative evidence path, and exact SHA-256. It
+does not transfer project-system work into the physics budget.
+
+A prospective completion must include `dual_budget_result_v1`, preserve the
+admitted category, primary credit, lane-separated observed outputs and
+accepted criteria, and the four false authority flags. System and support
+success must keep `distance_to_gr_delta.changed: false`.
+
+The existing three-project-system-task threshold remains advisory in P12-T03.
+P12-T04 owns the later ordinary-route hard guard.
+
 For every future physics research AgentJob created after
 `2026-06-17T15:46:25Z`, the job must also include:
 

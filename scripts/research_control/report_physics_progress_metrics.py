@@ -10,6 +10,7 @@ import json
 import sys
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -96,6 +97,12 @@ SUPPORT_ONLY_CHECKER_REPORT_GLOB = "research_control/tasks/*/artifacts/*checker_
 SUPPORT_ONLY_BOUNDARY_REQUIRED_PHRASES = ("support-only", "not proof authority")
 AI_METHODOLOGY_TAXONOMY_PATH = "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
 PHYSICS_PAYLOAD_RATIO_POLICY_PATH = "research_control/design/physics_payload_ratio_policy_v1.md"
+DUAL_BUDGET_POLICY_PATH = (
+    "research_control/tasks/RT-20260722-014/artifacts/dual_budget_policy_v1.md"
+)
+DUAL_BUDGET_DASHBOARD_SCHEMA_PATH = (
+    "research_control/tasks/RT-20260722-014/artifacts/budget_dashboard_schema_v1.md"
+)
 CANDIDATE_LINEAGE_REGISTRY_PATH = (
     "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json"
 )
@@ -394,6 +401,7 @@ def completion_record(
     obstruction = dict_value(completion.get("obstruction_record"))
     forbidden = dict_value(completion.get("forbidden_conclusion_summary"))
     completion_path = row.get("completion_path", "")
+    job_doc = load_yaml_document(repo_root, row.get("job_path", ""))
 
     return {
         "task_id": first_nonblank(completion.get("task_id"), row.get("task_id", "")),
@@ -433,6 +441,9 @@ def completion_record(
         ),
         "bridge_attempt_present": bridge_attempt_present(completion),
         "source_extension_category": source_extension_category(completion),
+        "job_support_only": bool_value(job_doc.get("support_only")) is True,
+        "dual_budget_allocation": dict_value(job_doc.get("dual_budget_allocation")),
+        "dual_budget_result": dict_value(completion.get("dual_budget_result")),
     }
 
 
@@ -879,6 +890,285 @@ def collect_physics_payload_ratio_diagnostics(
             "ai_system_diagnostics_only": True,
             "does_not_rank_physics_truth": True,
             "not_physics_proof": True,
+            "physics_claim_promotion_authorized": False,
+            "benchmark_promotion_authorized": False,
+            "gate_chair_verdict_created": False,
+            "completed_derivation_authorized": False,
+        },
+    }
+
+
+def _dual_budget_timestamp(value: object) -> datetime | None:
+    text = string_value(value)
+    if not text:
+        return None
+    try:
+        parsed = datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def _dual_budget_elapsed_seconds(record: dict[str, Any]) -> float | None:
+    started = _dual_budget_timestamp(record.get("created_at"))
+    completed = _dual_budget_timestamp(record.get("completed_at"))
+    if not started or not completed or completed < started:
+        return None
+    return round((completed - started).total_seconds(), 3)
+
+
+def _dual_budget_lane_lists(value: object) -> dict[str, list[str]]:
+    source = value if isinstance(value, dict) else {}
+    result: dict[str, list[str]] = {}
+    for budget in ("physics", "project_system"):
+        items = source.get(budget, [])
+        result[budget] = (
+            [string_value(item) for item in items if string_value(item)]
+            if isinstance(items, list)
+            else []
+        )
+    return result
+
+
+def _dual_budget_measurement_status(measured: int, missing: int) -> str:
+    if measured and missing:
+        return "partially_measured"
+    if measured:
+        return "measured"
+    return "not_measured"
+
+
+def _dual_budget_number(value: object) -> float | None:
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    if isinstance(value, str):
+        try:
+            return float(value.strip())
+        except ValueError:
+            return None
+    return None
+
+
+def collect_dual_budget_dashboard(
+    completion_records: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Build separate support-only accounting lanes without inferring physics truth."""
+
+    categories: Counter[str] = Counter()
+    explicit_count = 0
+    legacy_count = 0
+    blocked_exception_count = 0
+    single_credit_ok = True
+    mixed_outputs_ok = True
+    mixed_criteria_ok = True
+    missing_compute_zero_ok = True
+    system_science_authority_ok = True
+    lanes: dict[str, dict[str, Any]] = {
+        budget: {
+            "task_count_credit": 0,
+            "elapsed_measured_record_count": 0,
+            "elapsed_not_measured_record_count": 0,
+            "elapsed_seconds": 0.0,
+            "compute_measured_record_count": 0,
+            "compute_not_measured_record_count": 0,
+            "compute_values_by_unit": defaultdict(float),
+            "declared_durable_output_count": 0,
+            "durable_output_measured_record_count": 0,
+            "durable_output_not_measured_record_count": 0,
+            "declared_acceptance_criterion_count": 0,
+            "acceptance_measured_record_count": 0,
+            "acceptance_not_measured_record_count": 0,
+        }
+        for budget in ("physics", "project_system")
+    }
+
+    for record in completion_records:
+        allocation = dict_value(record.get("dual_budget_allocation"))
+        result = dict_value(record.get("dual_budget_result"))
+        explicit = bool(allocation)
+        if explicit:
+            explicit_count += 1
+            category = string_value(allocation.get("category")) or "unclassified"
+            primary = string_value(allocation.get("primary_budget"))
+            credits_source = dict_value(allocation.get("task_count_credit"))
+            credits = {
+                budget: int_value(credits_source.get(budget), -1)
+                for budget in ("physics", "project_system")
+            }
+            outputs = _dual_budget_lane_lists(
+                result.get("observed_durable_outputs")
+                if result
+                else allocation.get("expected_durable_outputs")
+            )
+            criteria = _dual_budget_lane_lists(
+                result.get("accepted_criteria")
+                if result
+                else allocation.get("acceptance_criteria")
+            )
+            measurements = dict_value(
+                result.get("resource_measurement")
+                if result
+                else allocation.get("resource_measurement")
+            )
+            exception = dict_value(allocation.get("blocked_physics_exception"))
+            if exception.get("active") is True:
+                blocked_exception_count += 1
+        else:
+            legacy_count += 1
+            category = "physics_bearing" if record.get("is_physics") is True else "system_bearing"
+            if record.get("job_support_only") is True and record.get("is_physics") is not True:
+                category = "support_only"
+            primary = "physics" if category == "physics_bearing" else "project_system"
+            credits = {
+                "physics": 1 if primary == "physics" else 0,
+                "project_system": 1 if primary == "project_system" else 0,
+            }
+            outputs = {"physics": [], "project_system": []}
+            criteria = {"physics": [], "project_system": []}
+            measurements = {}
+
+        categories[category] += 1
+        if (
+            any(value not in {0, 1} for value in credits.values())
+            or sum(credits.values()) != 1
+            or primary not in credits
+            or credits.get(primary) != 1
+        ):
+            single_credit_ok = False
+        if set(outputs["physics"]) & set(outputs["project_system"]):
+            mixed_outputs_ok = False
+        if set(criteria["physics"]) & set(criteria["project_system"]):
+            mixed_criteria_ok = False
+        if category in {"system_bearing", "support_only"} and (
+            outputs["physics"]
+            or criteria["physics"]
+            or record.get("delta_changed") is True
+        ):
+            system_science_authority_ok = False
+
+        for budget in ("physics", "project_system"):
+            lane = lanes[budget]
+            credit = credits.get(budget, 0)
+            if credit in {0, 1}:
+                lane["task_count_credit"] += credit
+
+            if explicit:
+                lane["declared_durable_output_count"] += len(outputs[budget])
+                lane["durable_output_measured_record_count"] += 1
+                lane["declared_acceptance_criterion_count"] += len(criteria[budget])
+                lane["acceptance_measured_record_count"] += 1
+                lane_measurements = dict_value(measurements.get(budget))
+                elapsed = dict_value(lane_measurements.get("elapsed_effort"))
+                compute = dict_value(lane_measurements.get("compute"))
+                elapsed_value = _dual_budget_number(elapsed.get("value"))
+                compute_value = _dual_budget_number(compute.get("value"))
+                if string_value(elapsed.get("status")) == "measured" and elapsed_value is not None:
+                    lane["elapsed_measured_record_count"] += 1
+                    lane["elapsed_seconds"] += elapsed_value
+                else:
+                    lane["elapsed_not_measured_record_count"] += 1
+                if string_value(compute.get("status")) == "measured" and compute_value is not None:
+                    lane["compute_measured_record_count"] += 1
+                    unit = string_value(compute.get("unit")) or "unspecified"
+                    lane["compute_values_by_unit"][unit] += compute_value
+                else:
+                    lane["compute_not_measured_record_count"] += 1
+                    if string_value(compute.get("status")) == "not_measured" and compute.get(
+                        "value"
+                    ) is not None:
+                        missing_compute_zero_ok = False
+            elif credit == 1:
+                elapsed_seconds = _dual_budget_elapsed_seconds(record)
+                if elapsed_seconds is None:
+                    lane["elapsed_not_measured_record_count"] += 1
+                else:
+                    lane["elapsed_measured_record_count"] += 1
+                    lane["elapsed_seconds"] += elapsed_seconds
+                lane["compute_not_measured_record_count"] += 1
+                lane["durable_output_not_measured_record_count"] += 1
+                lane["acceptance_not_measured_record_count"] += 1
+
+    rendered_lanes: dict[str, Any] = {}
+    for budget, lane in lanes.items():
+        elapsed_measured = lane.pop("elapsed_measured_record_count")
+        elapsed_missing = lane.pop("elapsed_not_measured_record_count")
+        elapsed_seconds = round(lane.pop("elapsed_seconds"), 3)
+        compute_measured = lane.pop("compute_measured_record_count")
+        compute_missing = lane.pop("compute_not_measured_record_count")
+        compute_values = {
+            key: round(value, 6)
+            for key, value in sorted(lane.pop("compute_values_by_unit").items())
+        }
+        output_measured = lane.pop("durable_output_measured_record_count")
+        output_missing = lane.pop("durable_output_not_measured_record_count")
+        acceptance_measured = lane.pop("acceptance_measured_record_count")
+        acceptance_missing = lane.pop("acceptance_not_measured_record_count")
+        rendered_lanes[budget] = {
+            **lane,
+            "elapsed_effort": {
+                "status": _dual_budget_measurement_status(elapsed_measured, elapsed_missing),
+                "value_seconds": elapsed_seconds if elapsed_measured else None,
+                "measured_record_count": elapsed_measured,
+                "not_measured_record_count": elapsed_missing,
+            },
+            "compute": {
+                "status": _dual_budget_measurement_status(compute_measured, compute_missing),
+                "values_by_unit": compute_values,
+                "measured_record_count": compute_measured,
+                "not_measured_record_count": compute_missing,
+            },
+            "durable_outputs": {
+                "status": _dual_budget_measurement_status(output_measured, output_missing),
+                "declared_count": lane["declared_durable_output_count"],
+                "measured_record_count": output_measured,
+                "not_measured_record_count": output_missing,
+            },
+            "acceptance_criteria": {
+                "status": _dual_budget_measurement_status(
+                    acceptance_measured, acceptance_missing
+                ),
+                "declared_count": lane["declared_acceptance_criterion_count"],
+                "measured_record_count": acceptance_measured,
+                "not_measured_record_count": acceptance_missing,
+            },
+        }
+
+    return {
+        "schema_id": "dual_budget_dashboard_v1",
+        "status": "measured",
+        "policy_source_path": DUAL_BUDGET_POLICY_PATH,
+        "dashboard_schema_path": DUAL_BUDGET_DASHBOARD_SCHEMA_PATH,
+        "record_count": len(completion_records),
+        "prospective_allocation_record_count": explicit_count,
+        "legacy_classified_record_count": legacy_count,
+        "category_counts": dict(sorted(categories.items())),
+        "lanes": rendered_lanes,
+        "blocked_physics_exception_count": blocked_exception_count,
+        "integrity": {
+            "single_primary_credit_status": "pass" if single_credit_ok else "fail",
+            "mixed_output_disjointness_status": "pass" if mixed_outputs_ok else "fail",
+            "mixed_acceptance_disjointness_status": "pass" if mixed_criteria_ok else "fail",
+            "missing_compute_zero_coercion_status": (
+                "pass" if missing_compute_zero_ok else "fail"
+            ),
+            "system_science_authority_separation_status": (
+                "pass" if system_science_authority_ok else "fail"
+            ),
+        },
+        "advisory_route_ratio": {
+            "project_system_run_threshold": 3,
+            "threshold_is_hard_gate_in_this_policy": False,
+            "ordinary_route_guard_owner": "P12-T04",
+        },
+        "authority_boundary": {
+            "dashboard_is_support_only": True,
+            "does_not_rank_physics_truth": True,
+            "system_success_counts_as_physics": False,
+            "system_success_counts_as_distance_to_gr": False,
             "physics_claim_promotion_authorized": False,
             "benchmark_promotion_authorized": False,
             "gate_chair_verdict_created": False,
@@ -2205,6 +2495,7 @@ def build_report(
         route_orbit_risk_metrics,
         diagnostic_warnings,
     )
+    dual_budget_dashboard = collect_dual_budget_dashboard(completion_records)
     separation_violations = scientific_metric_key_violations(scientific_progress_metrics)
     metrics = {
         "operational_validation_metrics": operational_validation_metrics,
@@ -2213,6 +2504,7 @@ def build_report(
         "route_orbit_risk_metrics": route_orbit_risk_metrics,
         "candidate_lineage_metrics": candidate_lineage_metrics,
         "physics_payload_ratio_diagnostics": physics_payload_ratio_diagnostics,
+        "dual_budget_dashboard": dual_budget_dashboard,
         "physics_progress_integration_metrics": physics_progress_integration_metrics,
         "ai_research_agent_methodology_metrics": ai_research_agent_methodology_metrics,
         "diagnostic_warnings": diagnostic_warnings,
@@ -2249,6 +2541,8 @@ def build_report(
             "research_control/tasks/*/jobs/completions/*.yaml",
             AI_METHODOLOGY_TAXONOMY_PATH,
             PHYSICS_PAYLOAD_RATIO_POLICY_PATH,
+            DUAL_BUDGET_POLICY_PATH,
+            DUAL_BUDGET_DASHBOARD_SCHEMA_PATH,
             CANDIDATE_LINEAGE_REGISTRY_PATH,
         ]
         + (
@@ -2261,6 +2555,7 @@ def build_report(
             "scoreboards_are_separated": True,
             "ai_methodology_metrics_are_support_only": True,
             "physics_payload_ratio_diagnostics_are_support_only": True,
+            "dual_budget_dashboard_is_support_only": True,
             "physics_claim_promotion_authorized": False,
             "metrics_report_not_physics_proof": True,
             "validation_status_is_not_physics_evidence": True,
@@ -2274,6 +2569,7 @@ def build_report(
             "AI research-agent methodology metrics are support-only diagnostics and cannot be used as proof, source-law adoption, benchmark promotion, or Gate Chair verdicts.",
             "Candidate-lineage metrics are keyed by immutable candidate IDs and preserve explicit historical absences; they remain support-only project-control evidence and do not adopt or reject a candidate.",
             "Physics-payload ratio diagnostics are AI-system diagnostics only; they do not rank physics truth.",
+            "Dual-budget dashboard values are operational accounting; system success, missing-resource markers, and lane counts are not physics evidence or Distance-to-GR progress.",
             "Validator failure history is not a durable event log, so this report does not infer blocked violation counts from past terminal output.",
         ],
     }
@@ -2410,6 +2706,19 @@ def render_markdown(report: dict[str, Any]) -> str:
             "These metrics are AI-system diagnostics only. They do not rank physics truth, authorize proof, promote a benchmark, create a Gate Chair verdict, or complete a derivation.",
             "",
             *render_table(metrics["physics_payload_ratio_diagnostics"]["metrics"]),
+            "",
+            "## Dual-Budget Dashboard",
+            "",
+            "This dashboard separates physics and project-system task credit, elapsed effort, compute, durable outputs, and acceptance accounting. It is support-only and system success never creates physics or Distance-to-GR credit.",
+            "",
+            *render_table(
+                {
+                    "physics": metrics["dual_budget_dashboard"]["lanes"]["physics"],
+                    "project_system": metrics["dual_budget_dashboard"]["lanes"]["project_system"],
+                    "integrity": metrics["dual_budget_dashboard"]["integrity"],
+                    "category_counts": metrics["dual_budget_dashboard"]["category_counts"],
+                }
+            ),
             "",
             "## Physics-Progress Integration Metrics",
             "",

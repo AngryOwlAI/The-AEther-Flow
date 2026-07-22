@@ -312,6 +312,31 @@ class PhysicsProgressMetricsTests(unittest.TestCase):
         self.assertIn("## Physics-Payload Ratio Diagnostics", markdown)
         self.assertIn("AI-system diagnostics only", markdown)
         self.assertIn("do not rank physics truth", markdown)
+        self.assertIn("## Dual-Budget Dashboard", markdown)
+        self.assertIn("system success never creates physics or Distance-to-GR credit", markdown)
+
+    def test_dual_budget_dashboard_keeps_one_task_credit_per_legacy_record(self) -> None:
+        report = self.reporter.build_report(self.make_repo())
+        dashboard = report["metrics"]["dual_budget_dashboard"]
+
+        self.assertEqual(dashboard["record_count"], 3)
+        self.assertEqual(dashboard["prospective_allocation_record_count"], 0)
+        self.assertEqual(dashboard["lanes"]["physics"]["task_count_credit"], 1)
+        self.assertEqual(
+            dashboard["lanes"]["project_system"]["task_count_credit"], 2
+        )
+        self.assertEqual(dashboard["integrity"]["single_primary_credit_status"], "pass")
+        self.assertEqual(
+            dashboard["integrity"]["system_science_authority_separation_status"],
+            "pass",
+        )
+        self.assertEqual(
+            dashboard["lanes"]["project_system"]["compute"]["status"],
+            "not_measured",
+        )
+        self.assertFalse(
+            dashboard["authority_boundary"]["system_success_counts_as_distance_to_gr"]
+        )
 
     def test_project_system_detection_prefers_explicit_normalized_scope(self) -> None:
         task = {

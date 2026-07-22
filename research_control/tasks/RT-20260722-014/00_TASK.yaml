@@ -1,0 +1,77 @@
+validation_status: "PASS"
+task_id: "RT-20260722-014"
+task_type: "v21_dual_budget_policy"
+title: "Separate physics and research-operating-system budgets"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "not_applicable"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-22T18:10:44Z"
+updated_at: "2026-07-22T18:25:46Z"
+closed_at: "2026-07-22T18:25:46Z"
+parent_task_id: "RT-20260722-013"
+parent_handoff_id: "handoff-0823"
+current_decision_id: "DDR-20260722-014"
+current_job_id: "AJ-RT-20260722-014-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-014"
+requires_human_gate: false
+human_authorization_note: "Generation 55 of the immutable user-requested v21 relay and handoff-0823 authorize exactly one dependency-ready P12-T03 project-system packet under the immutable continue-research worker route."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P12"
+  plan_task_id: "P12-T03"
+  plan_task_name: "Separate physics and research-operating-system budgets"
+  recommendation_ids:
+    - "V21-R44"
+    - "V21-R45"
+    - "V21-R51"
+    - "V21-R69"
+objective: "Implement prospective dual-budget classification, accounting, acceptance, dashboard, and hard separation controls so project-system success cannot be reported as physics or Distance-to-GR progress."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Separate operating-system capacity from evidence that discharges the EqSrc burden."
+route_label: "ordinary-research-packet"
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+claim_boundary_id: "CB-V21-P12-T03-DUAL-BUDGET-001"
+claim_boundary:
+  allowed_scope: "Implement only P12-T03 task-local policy schema fixtures validator reports receipts shared evaluator AgentJob validation Director context metrics dashboard focused tests standard control records and one next handoff."
+  dependency_task_ids:
+    - "RT-20260721-004"
+    - "RT-20260722-012"
+  current_handoff: "handoff-0823"
+  admission_is_prospective: true
+  historical_records_unchanged: true
+  mixed_tasks_require_disjoint_outputs: true
+  one_primary_task_count_credit: true
+  missing_compute_is_not_zero: true
+  p12_t04_route_guard_reserved: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260722-014/artifacts/dual_budget_policy_v1.md"
+  - "research_control/tasks/RT-20260722-014/artifacts/budget_dashboard_schema_v1.md"
+  - "research_control/tasks/RT-20260722-014/artifacts/fixtures/dual_budget_cases.json"
+  - "research_control/tasks/RT-20260722-014/artifacts/validate_dual_budget_policy.py"
+  - "research_control/tasks/RT-20260722-014/artifacts/dual_budget_validation_report.json"
+  - "research_control/tasks/RT-20260722-014/artifacts/dual_budget_compact_receipt.json"
+  - "scripts/research_control/dual_budget_policy.py"
+  - "tests/test_dual_budget_policy.py"
+closure_status: "p12_t03_completed_dual_budget_separation_no_scientific_credit"
+summary: "P12-T03 completed four-category dual-budget accounting one primary task credit lane-separated resources outputs and acceptance twelve passing fixtures and no scientific or protected authority change."
+next_recommended_action: "Run exactly one bounded P12-T04 project-control-maintainer project-system AgentJob to implement the three-system-task ordinary-route guard while preserving evidence-bound exceptions and scientific-handoff authority."
+documentation_impact_id: "DI-RT-20260722-014-001"
+completion_id: "AJC-AJ-RT-20260722-014-001"
+project_improvement_signals: []
+notes: "P12-T03 is project-system governance only; P12-T04 retains ownership of the ordinary-route consecutive-task guard."

@@ -1414,6 +1414,21 @@ class ResearchControlTests(unittest.TestCase):
         self.assertFalse(
             status["family_freeze_policy"]["distinct_theorem_or_ontology_branch_blocked"]
         )
+        self.assertEqual(
+            status["dual_budget_policy"]["policy_id"],
+            "dual_budget_policy_v1",
+        )
+        self.assertEqual(
+            status["dual_budget_policy"]["ordinary_route_guard_owner"],
+            "P12-T04",
+        )
+        self.assertEqual(
+            status["dual_budget_policy"]["task_count_rule"],
+            "exactly_one_primary_budget_credit",
+        )
+        self.assertFalse(
+            status["dual_budget_policy"]["system_success_counts_as_distance_to_gr"]
+        )
         self.assertIn("dependency_graph_summary", status)
         graph_summary = status["dependency_graph_summary"]
         self.assertEqual(graph_summary["active_task"], program_state["active_task_id"])

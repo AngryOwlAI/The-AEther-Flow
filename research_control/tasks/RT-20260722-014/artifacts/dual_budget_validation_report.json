@@ -1,0 +1,172 @@
+{
+  "blocked_physics_exception_evidence_enforced": true,
+  "case_count": 12,
+  "category_coverage": [
+    "mixed",
+    "physics_bearing",
+    "support_only",
+    "system_bearing"
+  ],
+  "category_coverage_complete": true,
+  "dashboard_schema_path": "research_control/tasks/RT-20260722-014/artifacts/budget_dashboard_schema_v1.md",
+  "dashboard_schema_sha256": "4bc1927de4ab652d3ec5be2a2d4689531794f9edb3412c42904fbf308c017102",
+  "failed_case_count": 0,
+  "fixture_path": "research_control/tasks/RT-20260722-014/artifacts/fixtures/dual_budget_cases.json",
+  "fixture_sha256": "db25f73bd971269e8592e204ef18a78445514b355a4e524582700b5768b1b698",
+  "missing_compute_zero_coercion_blocked": true,
+  "mixed_acceptance_disjointness_enforced": true,
+  "mixed_output_disjointness_enforced": true,
+  "p12_t04_route_guard_implemented": false,
+  "passed_case_count": 12,
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P12-T03",
+  "policy": {
+    "active_after": "2026-07-22T18:10:44Z",
+    "budgets": [
+      "physics",
+      "project_system"
+    ],
+    "categories": [
+      "mixed",
+      "physics_bearing",
+      "support_only",
+      "system_bearing"
+    ],
+    "existing_three_task_threshold": "advisory_in_p12_t03",
+    "missing_compute_representation": "not_measured_never_zero",
+    "mixed_acceptance_rule": "physics_and_project_system_criteria_are_disjoint",
+    "mixed_output_rule": "physics_and_project_system_paths_are_disjoint",
+    "ordinary_route_guard_owner": "P12-T04",
+    "physics_promotion_authorized": false,
+    "policy_id": "dual_budget_policy_v1",
+    "reporting_dimensions": [
+      "compute",
+      "durable_outputs",
+      "elapsed_effort",
+      "task_count"
+    ],
+    "result_schema_id": "dual_budget_result_v1",
+    "schema_id": "dual_budget_allocation_v1",
+    "system_success_counts_as_distance_to_gr": false,
+    "system_success_counts_as_physics": false,
+    "task_count_rule": "exactly_one_primary_budget_credit",
+    "theorem_truth_evaluated": false
+  },
+  "policy_path": "research_control/tasks/RT-20260722-014/artifacts/dual_budget_policy_v1.md",
+  "policy_sha256": "6ca1f01158d9a5846f318b75a4f4e90ddc66161e6f596962093607b1e8bc8835",
+  "results": [
+    {
+      "case_id": "system_bearing_admitted",
+      "error_count": 0,
+      "expected_status": "admitted",
+      "observed_status": "admitted",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "physics_bearing_admitted",
+      "error_count": 0,
+      "expected_status": "admitted",
+      "observed_status": "admitted",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "mixed_admitted_one_primary_credit",
+      "error_count": 0,
+      "expected_status": "admitted",
+      "observed_status": "admitted",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "support_only_admitted",
+      "error_count": 0,
+      "expected_status": "admitted",
+      "observed_status": "admitted",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "double_task_credit_rejected",
+      "error_count": 1,
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "mixed_shared_output_rejected",
+      "error_count": 1,
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "mixed_shared_criterion_rejected",
+      "error_count": 1,
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "system_claims_physics_output_rejected",
+      "error_count": 1,
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "blocked_physics_exception_without_evidence_rejected",
+      "error_count": 2,
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "blocked_physics_exception_with_evidence_admitted",
+      "error_count": 0,
+      "expected_status": "admitted",
+      "observed_status": "admitted",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "missing_compute_coerced_to_zero_rejected",
+      "error_count": 1,
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "system_success_as_physics_rejected",
+      "error_count": 1,
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    }
+  ],
+  "schema_id": "dual_budget_validation_report_v1",
+  "single_primary_credit_enforced": true,
+  "source_error_count": 0,
+  "source_errors": [],
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v21.md": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "research_control/design/ai_research_agent_metrics_taxonomy_v1.md": "bb373ae346c855695d0002605410b2113e6aa9a703bce90604c549a66222e439",
+    "research_control/design/physics_payload_admission_policy_v1.md": "a390d0e2cde7160de25c239f7750b1a752edda61bdfdf1b6866079549e58fd0f",
+    "research_control/design/physics_payload_ratio_policy_v1.md": "0bf6b607a8f93b05e6e67c5a6676c0f889cb28f9a6c81db9c6c508e5f486d213",
+    "research_control/tasks/RT-20260721-004/jobs/completions/AJC-AJ-RT-20260721-004-001.yaml": "535b8ed27d9551ec9009e1254dc7e15c65d35ca9796b607962180be9f5d284f4",
+    "research_control/tasks/RT-20260722-012/jobs/completions/AJC-AJ-RT-20260722-012-001.yaml": "eee6b42ae304e15620c6df4e9216127f86730b8d2c693b21ca05bea97c7931b4"
+  },
+  "status": "PASS",
+  "system_success_counts_as_distance_to_gr": false,
+  "system_success_counts_as_physics": false,
+  "task_id": "RT-20260722-014",
+  "theorem_truth_evaluated": false
+}

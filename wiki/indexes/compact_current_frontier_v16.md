@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-013`
-- Latest handoff: `handoff-0823`
-- Current status: `p12_t02_family_freeze_policy_complete_p12_t03_selected`
+- Active task: `RT-20260722-014`
+- Latest handoff: `handoff-0824`
+- Current status: `p12_t03_dual_budget_policy_complete_p12_t04_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-013`
-- Latest research handoff: `handoff-0823`
-- Latest research next action: Run exactly one bounded P12-T03 project-control-maintainer project-system AgentJob to separate physics-bearing and research-operating-system budgets without counting system success as Distance-to-GR progress.
+- Latest research task: `RT-20260722-014`
+- Latest research handoff: `handoff-0824`
+- Latest research next action: Run exactly one bounded P12-T04 project-control-maintainer project-system AgentJob to implement the three-system-task ordinary-route guard while preserving evidence-bound control-failure exceptions and scientific-handoff authority.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p12_t03_dual_budget_policy`
+- Route ID: `v21_p12_t04_three_system_task_guard`
 - Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Prevent easier-to-validate system work from crowding out physics.
+- Milestone burden: Maintain a healthy proof-to-process balance.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `68bca530d7679682787c2959dbb02fe944d1457d5d56182398c067dcf156cbc7`
-- JSON SHA-256: `3aacfc2b390ff4da8b756d74e5b53342153fcc9c2b218713ae5023fd4905967a`
+- YAML SHA-256: `76065191835c59c9cfcaa02ae0982e821a904058c1330c57855832384dec3212`
+- JSON SHA-256: `2e43ad1c1136c654c1077c3281727695dc20fd8a28cb8f13a45a286d42f2bda5`
 
 ## Authority Warning
 

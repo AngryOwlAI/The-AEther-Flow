@@ -10,14 +10,14 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 - Role: `schema_contract`
 - Authority status: `project_control`
 - Owner skill: `project-memory-system`
-- Source hash: `cf341fc2a8164c7cd62dc4dd61762fc8bd8814d19f6c97e613b690a0f9adb39a`
+- Source hash: `39cb592e9fb6c489f855537aebf05d629eaed8dd8acd6ebdf9ba488e29d67781`
 
 ## Related Objects
 
-- Related source: `MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-ADMISSION-POLICY-V1` `research_control/design/physics_payload_admission_policy_v1.md`
+- Related source: `MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-ADMISSION-POLICY-V1;MD-RESEARCH-CONTROL-TASKS-RT-20260722-014-DUAL-BUDGET-POLICY-V1` ``
 - Generated output path: `wiki/markdown/md-schema-agent-job-schema.md`
 
 ## Validation
 
 - Validation status: `PASS`
-- Last validated at: `2026-07-22T17:47:08Z`
+- Last validated at: `2026-07-22T18:25:46Z`

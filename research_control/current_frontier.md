@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260722-013` and `handoff-0823`.
+`RT-20260722-014` and `handoff-0824`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260722-013` |
-| Latest handoff ID | `handoff-0823` |
-| Current status | `p12_t02_family_freeze_policy_complete_p12_t03_selected` |
+| Active task ID | `RT-20260722-014` |
+| Latest handoff ID | `handoff-0824` |
+| Current status | `p12_t03_dual_budget_policy_complete_p12_t04_selected` |
 | V16 completed | false |
 | Current route family | construction or implementation (project system) |
 | Target derivation milestone | `source_equivalence_eqsrc` |
 | Current burden | `source_equivalence_eqsrc`; status: unchanged_project_system_control_only |
-| Required next authority | One fresh P12-T03 project-system packet may separate physics-bearing and system-bearing budgets without relabeling project-system output as scientific progress. |
-| Next recommended action | Run exactly one bounded P12-T03 project-control-maintainer project-system AgentJob to separate physics-bearing and research-operating-system budgets without counting system success as Distance-to-GR progress. |
+| Required next authority | One fresh P12-T04 project-system packet may implement the ordinary-route consecutive-system-task guard without treating guard implementation as physics progress. |
+| Next recommended action | Run exactly one bounded P12-T04 project-control-maintainer project-system AgentJob to implement the three-system-task ordinary-route guard while preserving evidence-bound control-failure exceptions and scientific-handoff authority. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260722-013` |
-| Latest research handoff ID | `handoff-0823` |
-| Latest research next action | Run exactly one bounded P12-T03 project-control-maintainer project-system AgentJob to separate physics-bearing and research-operating-system budgets without counting system success as Distance-to-GR progress. |
+| Latest research task ID | `RT-20260722-014` |
+| Latest research handoff ID | `handoff-0824` |
+| Latest research next action | Run exactly one bounded P12-T04 project-control-maintainer project-system AgentJob to implement the three-system-task ordinary-route guard while preserving evidence-bound control-failure exceptions and scientific-handoff authority. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260722-013/00_TASK.yaml`.
-- Active task objective: Implement prospective machine-readable family and same-assumption repetition checks that bar renamed candidate cycles while admitting only evidence-based reopening or a materially distinct branch.
-- Latest handoff path: `research_control/handoffs/handoff-0823.yaml`.
-- Latest handoff summary: P12-T02 implemented prospective exact family and same-assumption matching that blocks repeated or renamed candidate cycles without tracked reopening evidence while preserving materially distinct investigations and the local-freeze versus global-no-go boundary.
+- Active task path: `research_control/tasks/RT-20260722-014/00_TASK.yaml`.
+- Active task objective: Implement prospective dual-budget classification, accounting, acceptance, dashboard, and hard separation controls so project-system success cannot be reported as physics or Distance-to-GR progress.
+- Latest handoff path: `research_control/handoffs/handoff-0824.yaml`.
+- Latest handoff summary: P12-T03 implemented prospective four-category dual-budget allocation with one primary task credit lane-separated resource output and acceptance reporting mixed-work disjointness evidence-bound exceptions and a support-only dashboard.
 - Current route family: construction or implementation (project system).
-- Next recommended action: Run exactly one bounded P12-T03 project-control-maintainer project-system AgentJob to separate physics-bearing and research-operating-system budgets without counting system success as Distance-to-GR progress.
+- Next recommended action: Run exactly one bounded P12-T04 project-control-maintainer project-system AgentJob to implement the three-system-task ordinary-route guard while preserving evidence-bound control-failure exceptions and scientific-handoff authority.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded P12-T03 project-control-maintainer project-system AgentJob to separate physics-bearing and research-operating-system budgets without counting system success as Distance-to-GR progress.
+Run exactly one bounded P12-T04 project-control-maintainer project-system AgentJob to implement the three-system-task ordinary-route guard while preserving evidence-bound control-failure exceptions and scientific-handoff authority.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -337,17 +337,17 @@ Authorization layers:
 | `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
 | `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
-| `p12_t03_project_system_packet_authorized` | False | extension authorization field |
+| `p12_t04_project_system_packet_authorized` | False | extension authorization field |
 | `project_control_change_authorized` | True | extension authorization field |
-| `project_control_change_scope` | P12-T02 completion only | extension authorization field |
+| `project_control_change_scope` | P12-T03 completion only | extension authorization field |
 | `proof_authority` | False | extension authorization field |
 | `publication_authority` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260722-013`;
-- latest handoff: `handoff-0823`;
-- current status: `p12_t02_family_freeze_policy_complete_p12_t03_selected`;
+- active task: `RT-20260722-014`;
+- latest handoff: `handoff-0824`;
+- current status: `p12_t03_dual_budget_policy_complete_p12_t04_selected`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -357,8 +357,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0823.yaml`
-- `research_control/tasks/RT-20260722-013/00_TASK.yaml`
+- `research_control/handoffs/handoff-0824.yaml`
+- `research_control/tasks/RT-20260722-014/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -374,7 +374,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0823*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0824*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

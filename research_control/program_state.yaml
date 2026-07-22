@@ -1,9 +1,69 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260722-013"
-latest_handoff_id: "handoff-0823"
-current_status: "p12_t02_family_freeze_policy_complete_p12_t03_selected"
-claim_boundary_summary: "RT-20260722-013 completed P12-T02 with five source-bound EqSrc family freezes exact family and assumption matching eleven passing fixtures evidence-based reopening materially distinct branch preservation and no global no-go scientific or protected authority change."
-next_recommended_action: "Run exactly one bounded P12-T03 project-control-maintainer project-system AgentJob to separate physics-bearing and research-operating-system budgets without counting system success as Distance-to-GR progress."
+active_task_id: "RT-20260722-014"
+latest_handoff_id: "handoff-0824"
+current_status: "p12_t03_dual_budget_policy_complete_p12_t04_selected"
+claim_boundary_summary: "RT-20260722-014 completed P12-T03 with four budget categories one primary task credit lane-separated elapsed compute outputs and acceptance mixed-work disjointness evidence-bound exceptions and no scientific or protected authority change."
+next_recommended_action: "Run exactly one bounded P12-T04 project-control-maintainer project-system AgentJob to implement the three-system-task ordinary-route guard while preserving evidence-bound control-failure exceptions and scientific-handoff authority."
+
+p12_t03_dual_budget_policy:
+  task_id: "RT-20260722-014"
+  parent_task_id: "RT-20260722-013"
+  parent_handoff_id: "handoff-0823"
+  plan_task_id: "P12-T03"
+  claim_boundary_id: "CB-V21-P12-T03-DUAL-BUDGET-001"
+  status: "PASS_PROJECT_CONTROL_ONLY"
+  completion_path: "research_control/tasks/RT-20260722-014/jobs/completions/AJC-AJ-RT-20260722-014-001.yaml"
+  completion_sha256: "27d66ddaa5413acc4b4f86206996e87108c382aced8f2fe5fcbda88b066b91bd"
+  handoff_id: "handoff-0824"
+  policy_path: "research_control/tasks/RT-20260722-014/artifacts/dual_budget_policy_v1.md"
+  policy_sha256: "6ca1f01158d9a5846f318b75a4f4e90ddc66161e6f596962093607b1e8bc8835"
+  dashboard_schema_path: "research_control/tasks/RT-20260722-014/artifacts/budget_dashboard_schema_v1.md"
+  dashboard_schema_sha256: "4bc1927de4ab652d3ec5be2a2d4689531794f9edb3412c42904fbf308c017102"
+  evaluator_path: "scripts/research_control/dual_budget_policy.py"
+  evaluator_sha256: "e22660f5d9663124ffcd695c541a781c4fbbafe868d28de44055dcd0f6fa9b6e"
+  validation_path: "research_control/tasks/RT-20260722-014/artifacts/dual_budget_validation_report.json"
+  validation_sha256: "03732b26ff2d88e887c4dce0b793cbb21f1c2df07570bf33b82fac9d63cd2082"
+  compact_receipt_path: "research_control/tasks/RT-20260722-014/artifacts/dual_budget_compact_receipt.json"
+  compact_receipt_sha256: "23d9d6c9cb792b6aea570a9fbee0493cc1498fd110b90b40accb3e376f4bdd76"
+  category_count: 4
+  fixture_case_count: 12
+  fixture_pass_count: 12
+  fixture_failure_count: 0
+  exactly_one_primary_task_credit: true
+  mixed_outputs_and_criteria_disjoint: true
+  elapsed_effort_separated: true
+  compute_separated: true
+  missing_compute_is_not_zero: true
+  durable_outputs_separated: true
+  acceptance_separated: true
+  blocked_physics_exception_evidence_required: true
+  dashboard_support_only: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  p12_t03_completed: true
+  p12_t04_dependency_ready: true
+  p12_t04_selected: true
+  p12_t04_executed: false
+  p12_t05_dependency_ready: true
+  p12_t05_selected: false
+  selected_next_work_item: "P12-T04"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_reason: "P12-T04 depends only on the now-qualifying P12-T03 completion and precedes also-ready P12-T05 in v21 plan order."
+  p10_broader_rollout_frozen: true
+  p10_blocker_ids:
+    - "P10-AUDIT-F001"
+    - "P10-AUDIT-F002"
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  scientific_claims_changed: false
+  scientific_ledger_change_count: 0
+  distance_to_gr_delta_changed: false
+  physical_interpretation_authorized: false
+  ontology_adoption_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
 
 p12_t02_family_freeze_reopening_policy:
   task_id: "RT-20260722-013"

@@ -489,6 +489,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260722-003-V21-P10-HISTORICAL-READABILITY-REPORT` `research_control/tasks/RT-20260722-003/artifacts/v21_p10_historical_readability_report.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260722-003-V21-P10-INTEGRATION-AUDIT` `research_control/tasks/RT-20260722-003/artifacts/v21_p10_integration_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260722-003-V21-P10-ROLLBACK-CUTOVER-RECOMMENDATION` `research_control/tasks/RT-20260722-003/artifacts/v21_p10_rollback_cutover_recommendation.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260722-014-BUDGET-DASHBOARD-SCHEMA-V1` `research_control/tasks/RT-20260722-014/artifacts/budget_dashboard_schema_v1.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260722-014-DUAL-BUDGET-POLICY-V1` `research_control/tasks/RT-20260722-014/artifacts/dual_budget_policy_v1.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -1061,6 +1063,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260722-003-V21-P10-HISTORICAL-READABILITY-REPORT` `wiki/markdown/md-research-control-tasks-rt-20260722-003-v21-p10-historical-readability-report.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260722-003-V21-P10-INTEGRATION-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260722-003-v21-p10-integration-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260722-003-V21-P10-ROLLBACK-CUTOVER-RECOMMENDATION` `wiki/markdown/md-research-control-tasks-rt-20260722-003-v21-p10-rollback-cutover-recommendation.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260722-014-BUDGET-DASHBOARD-SCHEMA-V1` `wiki/markdown/md-research-control-tasks-rt-20260722-014-budget-dashboard-schema-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260722-014-DUAL-BUDGET-POLICY-V1` `wiki/markdown/md-research-control-tasks-rt-20260722-014-dual-budget-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`

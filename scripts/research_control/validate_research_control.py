@@ -37,6 +37,10 @@ from project_improvement_handoff_validation import (  # noqa: E402
 from scripts.research_control.physics_payload_admission import (  # noqa: E402
     evaluate_agent_job_admission,
 )
+from scripts.research_control.dual_budget_policy import (  # noqa: E402
+    evaluate_dual_budget_allocation,
+    evaluate_dual_budget_completion,
+)
 from scripts.validation.models import (  # noqa: E402
     ValidationFinding as CommonValidationFinding,
     ValidationGateResult,
@@ -2436,6 +2440,12 @@ def validate_agent_jobs(
         )
         for error in admission["errors"]:
             report.error(f"{row['job_path']}: physics-payload admission: {error}")
+        dual_budget = evaluate_dual_budget_allocation(
+            job,
+            created_at=row.get("created_at", ""),
+        )
+        for error in dual_budget["errors"]:
+            report.error(f"{row['job_path']}: dual-budget allocation: {error}")
         validate_parent_child_decomposition(report, row, job)
         validate_future_physics_job_authority(report, row, job)
         if row["completion_path"]:
@@ -3313,6 +3323,15 @@ def validate_completion(report: ValidationReport, job_row: dict[str, str], path:
     except StrictYamlError as exc:
         report.error(f"{job_path_text}: {exc}")
         return
+    dual_budget = evaluate_dual_budget_completion(
+        job_contract,
+        completion,
+        created_at=job_row.get("created_at", ""),
+    )
+    for error in dual_budget["errors"]:
+        report.error(
+            f"{path.relative_to(REPO_ROOT).as_posix()}: dual-budget completion: {error}"
+        )
     validate_parent_child_completion(report, job_row, job_contract, completion, path)
     validate_loop_control_completion(report, job_row, job_contract, completion, path)
     validate_mathematical_decisiveness_completion(

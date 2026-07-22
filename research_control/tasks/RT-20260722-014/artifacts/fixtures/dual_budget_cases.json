@@ -1,0 +1,135 @@
+{
+  "schema_id": "dual_budget_fixture_matrix_v1",
+  "task_id": "RT-20260722-014",
+  "created_at": "2026-07-22T18:10:44Z",
+  "base_job": {
+    "created_at": "2026-07-22T18:10:44Z",
+    "dual_budget_allocation": {
+      "schema_id": "dual_budget_allocation_v1",
+      "policy_id": "dual_budget_policy_v1",
+      "category": "system_bearing",
+      "primary_budget": "project_system",
+      "task_count_credit": {"physics": 0, "project_system": 1},
+      "expected_durable_outputs": {
+        "physics": [],
+        "project_system": ["research_control/tasks/FIXTURE/system.md"]
+      },
+      "acceptance_criteria": {
+        "physics": [],
+        "project_system": ["system criterion passes"]
+      },
+      "reporting_dimensions": [
+        "task_count",
+        "elapsed_effort",
+        "compute",
+        "durable_outputs"
+      ],
+      "resource_measurement": {
+        "physics": {
+          "elapsed_effort": {"status": "not_measured", "value": null, "unit": "seconds"},
+          "compute": {"status": "not_measured", "value": null, "unit": ""}
+        },
+        "project_system": {
+          "elapsed_effort": {"status": "not_measured", "value": null, "unit": "seconds"},
+          "compute": {"status": "not_measured", "value": null, "unit": ""}
+        }
+      },
+      "blocked_physics_exception": {
+        "active": false,
+        "exception_id": "",
+        "evidence_path": "",
+        "evidence_sha256": ""
+      },
+      "authority_limits": {
+        "system_success_counts_as_physics": false,
+        "system_success_counts_as_distance_to_gr": false,
+        "validator_pass_counts_as_physics": false,
+        "route_selection_counts_as_physics": false
+      }
+    }
+  },
+  "cases": [
+    {"case_id": "system_bearing_admitted", "expected_status": "admitted"},
+    {
+      "case_id": "physics_bearing_admitted",
+      "expected_status": "admitted",
+      "job_patch": {"dual_budget_allocation": {
+        "category": "physics_bearing",
+        "primary_budget": "physics",
+        "task_count_credit": {"physics": 1, "project_system": 0},
+        "expected_durable_outputs": {"physics": ["research_control/tasks/FIXTURE/result.tex"], "project_system": []},
+        "acceptance_criteria": {"physics": ["bounded proof obligation discharged"], "project_system": []}
+      }}
+    },
+    {
+      "case_id": "mixed_admitted_one_primary_credit",
+      "expected_status": "admitted",
+      "job_patch": {"dual_budget_allocation": {
+        "category": "mixed",
+        "primary_budget": "physics",
+        "task_count_credit": {"physics": 1, "project_system": 0},
+        "expected_durable_outputs": {
+          "physics": ["research_control/tasks/FIXTURE/result.tex"],
+          "project_system": ["research_control/tasks/FIXTURE/checker.py"]
+        },
+        "acceptance_criteria": {
+          "physics": ["bounded proof obligation discharged"],
+          "project_system": ["checker fixture passes"]
+        }
+      }}
+    },
+    {
+      "case_id": "support_only_admitted",
+      "expected_status": "admitted",
+      "job_patch": {"dual_budget_allocation": {"category": "support_only"}}
+    },
+    {
+      "case_id": "double_task_credit_rejected",
+      "expected_status": "rejected",
+      "job_patch": {"dual_budget_allocation": {"task_count_credit": {"physics": 1, "project_system": 1}}}
+    },
+    {
+      "case_id": "mixed_shared_output_rejected",
+      "expected_status": "rejected",
+      "job_patch": {"dual_budget_allocation": {
+        "category": "mixed",
+        "expected_durable_outputs": {"physics": ["shared.md"], "project_system": ["shared.md"]},
+        "acceptance_criteria": {"physics": ["physics pass"], "project_system": ["system pass"]}
+      }}
+    },
+    {
+      "case_id": "mixed_shared_criterion_rejected",
+      "expected_status": "rejected",
+      "job_patch": {"dual_budget_allocation": {
+        "category": "mixed",
+        "expected_durable_outputs": {"physics": ["physics.md"], "project_system": ["system.md"]},
+        "acceptance_criteria": {"physics": ["shared pass"], "project_system": ["shared pass"]}
+      }}
+    },
+    {
+      "case_id": "system_claims_physics_output_rejected",
+      "expected_status": "rejected",
+      "job_patch": {"dual_budget_allocation": {"expected_durable_outputs": {"physics": ["result.tex"], "project_system": ["system.md"]}}}
+    },
+    {
+      "case_id": "blocked_physics_exception_without_evidence_rejected",
+      "expected_status": "rejected",
+      "job_patch": {"dual_budget_allocation": {"blocked_physics_exception": {"active": true, "exception_id": "BPE-1", "evidence_path": "", "evidence_sha256": ""}}}
+    },
+    {
+      "case_id": "blocked_physics_exception_with_evidence_admitted",
+      "expected_status": "admitted",
+      "job_patch": {"dual_budget_allocation": {"blocked_physics_exception": {"active": true, "exception_id": "BPE-2", "evidence_path": "fixtures/control-gate.yaml", "evidence_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}}
+    },
+    {
+      "case_id": "missing_compute_coerced_to_zero_rejected",
+      "expected_status": "rejected",
+      "job_patch": {"dual_budget_allocation": {"resource_measurement": {"project_system": {"compute": {"status": "not_measured", "value": 0, "unit": ""}}}}}
+    },
+    {
+      "case_id": "system_success_as_physics_rejected",
+      "expected_status": "rejected",
+      "job_patch": {"dual_budget_allocation": {"authority_limits": {"system_success_counts_as_physics": true}}}
+    }
+  ]
+}

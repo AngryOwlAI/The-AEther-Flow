@@ -16,7 +16,6 @@ Generated metadata note. Not canonical authority. Update the source file and reg
 
 - Related source: `MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21;MD-RESEARCH-CONTROL-DESIGN-MINIMUM-PHYSICS-PAYLOAD-SCHEMA-V1;MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1;MD-SCHEMA-AGENT-JOB-SCHEMA` ``
 - Generated output path: `wiki/markdown/md-research-control-design-physics-payload-admission-policy-v1.md`
-- Backlink from `MD-SCHEMA-AGENT-JOB-SCHEMA` `.agents/schemas/AGENT_JOB_SCHEMA.md`
 
 ## Validation
 
