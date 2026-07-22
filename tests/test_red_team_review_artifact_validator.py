@@ -19,6 +19,68 @@ class RedTeamReviewArtifactValidatorTests(unittest.TestCase):
         receipt = validator.validate_review_file(FIXTURE_DIR / "valid_minimal.yaml")
         self.assertEqual(receipt["verdict"], "no_blocking_defect_found_as_written")
         self.assertFalse(receipt["physics_promotion_authorized"])
+        self.assertFalse(receipt["review_context_present"])
+        self.assertEqual(
+            receipt["review_context_classification"], "legacy_unclassified"
+        )
+
+    def test_review_context_fixture_passes(self) -> None:
+        receipt = validator.validate_review_file(
+            FIXTURE_DIR / "valid_review_context.yaml"
+        )
+        self.assertTrue(receipt["review_context_present"])
+        self.assertEqual(
+            receipt["review_context_classification"], "blind_same_model_review"
+        )
+
+    def test_each_normalized_review_class_passes(self) -> None:
+        fixtures = {
+            "valid_same_context_review.yaml": "same_context_role_review",
+            "valid_review_context.yaml": "blind_same_model_review",
+            "valid_different_model_review.yaml": "different_model_review",
+            "valid_human_expert_review.yaml": "human_expert_review",
+            "valid_independent_replication.yaml": "independent_replication",
+            "unknown_review_context.yaml": "unknown",
+        }
+        for filename, classification in fixtures.items():
+            with self.subTest(filename=filename):
+                receipt = validator.validate_review_file(FIXTURE_DIR / filename)
+                self.assertEqual(
+                    receipt["review_context_classification"], classification
+                )
+
+    def test_unknown_review_context_is_explicit(self) -> None:
+        receipt = validator.validate_review_file(
+            FIXTURE_DIR / "unknown_review_context.yaml"
+        )
+        self.assertTrue(receipt["review_context_present"])
+        self.assertEqual(receipt["review_context_classification"], "unknown")
+
+    def test_false_external_wording_fails(self) -> None:
+        with self.assertRaises(validator.RedTeamReviewValidationError) as context:
+            validator.validate_review_file(FIXTURE_DIR / "false_external_wording.yaml")
+        self.assertIn("external_review_completed", str(context.exception))
+
+    def test_false_independent_replication_wording_fails(self) -> None:
+        with self.assertRaises(validator.RedTeamReviewValidationError) as context:
+            validator.validate_review_file(
+                FIXTURE_DIR / "false_independent_replication.yaml"
+            )
+        self.assertIn("independent_replication_completed", str(context.exception))
+
+    def test_historical_review_remains_readable(self) -> None:
+        receipt = validator.validate_review_file(
+            REPO_ROOT
+            / "research_control"
+            / "tasks"
+            / "RT-20260720-021"
+            / "artifacts"
+            / "eqsrc_selector_theorem_external_red_team_review_v1.yaml"
+        )
+        self.assertFalse(receipt["review_context_present"])
+        self.assertEqual(
+            receipt["review_context_classification"], "legacy_unclassified"
+        )
 
     def test_missing_required_field_fails(self) -> None:
         with self.assertRaises(validator.RedTeamReviewValidationError) as context:
@@ -51,6 +113,10 @@ class RedTeamReviewArtifactValidatorTests(unittest.TestCase):
         parsed = json.loads(result.stdout)
         self.assertEqual(parsed["status"], "PASS")
         self.assertFalse(parsed["physics_promotion_authorized"])
+        self.assertEqual(
+            parsed["review_context_classification_counts"],
+            {"legacy_unclassified": 1},
+        )
 
     def test_cli_json_failure_receipt(self) -> None:
         result = subprocess.run(

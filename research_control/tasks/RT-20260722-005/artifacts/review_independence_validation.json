@@ -1,0 +1,187 @@
+{
+  "artifact_hashes": {
+    ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md": "0466b3f03bb9dbe27723c196fce4856a0352a4cd92e6ae00faa58fdc36d7c6b8",
+    "research_control/tasks/RT-20260722-005/artifacts/review_claim_language_rules.md": "3d8d597d47e6cdffea38a6248fd44f389c3eca77c6b9a722561529e14427bfe8",
+    "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md": "6167db6a8c1d67f96bd14aaf52f18fb3666cca1c78b0a42ddc614bc7b56f4ce7",
+    "research_control/tasks/RT-20260722-005/artifacts/review_metadata_schema.md": "278c3b3c2d98c86f83e4cede0dcc3f44cb1583aed2e0c75c78e69a02234b80d7",
+    "research_control/tasks/RT-20260722-005/artifacts/validate_review_independence_taxonomy.py": "5c7ee503b2955e6902146156629d937007114832518f179975afe0c1860b0044",
+    "research_control/tasks/RT-20260722-005/roles/project-control-maintainer@0.2.0--RT-20260722-005.yaml": "a555a4e2780770d8e1a7f0a3b9169ed063bb246fd9a4285ab3cf21c52e8417e5",
+    "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml": "e785805b869b6ee611690a72b150e70a6eb7711d5e6437eaace932a6243cfdbb",
+    "scripts/research_control/validate_red_team_review_artifact.py": "cbadb1292ac6553ea209b5b021585d43a67a3fa8a20dbe330bbc1336d224297f",
+    "tests/fixtures/research_control/red_team_review/false_external_wording.yaml": "0d2a29b1dcd479b3668685b8eaece501dcffffa8af823986710130973c6c0ebc",
+    "tests/fixtures/research_control/red_team_review/false_independent_replication.yaml": "fbb0a1a55d6f145957f096e012f9b5cae257528f71b0817eabbf8a70c8dbfbe3",
+    "tests/fixtures/research_control/red_team_review/unknown_review_context.yaml": "eb0468ab5901a59f016d84d997ee53319c89d448995fd3c47adbad9f8ae33d0d",
+    "tests/fixtures/research_control/red_team_review/valid_different_model_review.yaml": "27b7ff2e09968b3c61c44c1a1619766a958f645c19a41c314fb979a26022c3ce",
+    "tests/fixtures/research_control/red_team_review/valid_human_expert_review.yaml": "0d57e306d17532bbf4a3fdd6f4ef109d140dc14682974666ca513fd0638aefa1",
+    "tests/fixtures/research_control/red_team_review/valid_independent_replication.yaml": "f67ab4a331ba9ba9718d89f675f57145c0c87bd42d953d80db799efe8b9a3775",
+    "tests/fixtures/research_control/red_team_review/valid_review_context.yaml": "cebca07c8a7468da4aaef4c6c76b74e6bdcd3866764d726e2b4e469d821520e5",
+    "tests/fixtures/research_control/red_team_review/valid_same_context_review.yaml": "4b49e52674edec5682ae874b5370526fad7436f786369237c1d455de931b5088",
+    "tests/test_red_team_review_artifact_validator.py": "a73565b1bcb816110cc24d8efd536a00287b1bb6ceeb5fb726f1000eeae7b0f8"
+  },
+  "check_count": 24,
+  "checks": [
+    {
+      "check_id": "central_classification_token_exactness",
+      "detail": "central validator exposes exactly the six P11-T02 classification tokens",
+      "status": "PASS"
+    },
+    {
+      "check_id": "central_dimension_exactness",
+      "detail": "central validator exposes exactly seven independence dimensions",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_classification_coverage",
+      "detail": "taxonomy contains all normalized classifications",
+      "status": "PASS"
+    },
+    {
+      "check_id": "taxonomy_dimension_coverage",
+      "detail": "taxonomy contains all seven independence dimensions",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metadata_schema_classification_coverage",
+      "detail": "metadata_schema contains all normalized classifications",
+      "status": "PASS"
+    },
+    {
+      "check_id": "metadata_schema_dimension_coverage",
+      "detail": "metadata_schema contains all seven independence dimensions",
+      "status": "PASS"
+    },
+    {
+      "check_id": "execution_role_classification_coverage",
+      "detail": "execution_role contains all normalized classifications",
+      "status": "PASS"
+    },
+    {
+      "check_id": "execution_role_dimension_coverage",
+      "detail": "execution_role contains all seven independence dimensions",
+      "status": "PASS"
+    },
+    {
+      "check_id": "shared_schema_classification_coverage",
+      "detail": "shared_schema contains all normalized classifications",
+      "status": "PASS"
+    },
+    {
+      "check_id": "shared_schema_dimension_coverage",
+      "detail": "shared_schema contains all seven independence dimensions",
+      "status": "PASS"
+    },
+    {
+      "check_id": "shared_template_classification_coverage",
+      "detail": "shared_template contains all normalized classifications",
+      "status": "PASS"
+    },
+    {
+      "check_id": "shared_template_dimension_coverage",
+      "detail": "shared_template contains all seven independence dimensions",
+      "status": "PASS"
+    },
+    {
+      "check_id": "unknown_fail_closed_documented",
+      "detail": "missing evidence is explicitly classified as unknown",
+      "status": "PASS"
+    },
+    {
+      "check_id": "legacy_compatibility_documented",
+      "detail": "historical artifacts remain readable without retroactive strengthening",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_language_rules_complete",
+      "detail": "claim-language rules separate review, external provenance, and replication",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_same_context_role_review",
+      "detail": "expected=same_context_role_review observed=same_context_role_review",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_blind_same_model_review",
+      "detail": "expected=blind_same_model_review observed=blind_same_model_review",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_different_model_review",
+      "detail": "expected=different_model_review observed=different_model_review",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_human_expert_review",
+      "detail": "expected=human_expert_review observed=human_expert_review",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_independent_replication",
+      "detail": "expected=independent_replication observed=independent_replication",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_unknown",
+      "detail": "expected=unknown observed=unknown",
+      "status": "PASS"
+    },
+    {
+      "check_id": "legacy_review_readability",
+      "detail": "tests/fixtures/research_control/red_team_review/valid_minimal.yaml=legacy_unclassified; research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_external_red_team_review_v1.yaml=legacy_unclassified",
+      "status": "PASS"
+    },
+    {
+      "check_id": "external_wording_guard",
+      "detail": "expected_field=review_context.claims.external_review_completed issue_fields=['review_context.claims.external_review_completed', 'review_context.claims']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "replication_wording_guard",
+      "detail": "expected_field=review_context.claims.independent_replication_completed issue_fields=['review_context.claims.independent_replication_completed', 'review_context.claims.independent_replication_completed']",
+      "status": "PASS"
+    }
+  ],
+  "classification_count": 6,
+  "external_review_completed_by_task": false,
+  "failed_check_count": 0,
+  "independence_dimension_count": 7,
+  "independent_replication_completed_by_task": false,
+  "legacy_artifact_count": 2,
+  "legacy_observations": {
+    "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_external_red_team_review_v1.yaml": "legacy_unclassified",
+    "tests/fixtures/research_control/red_team_review/valid_minimal.yaml": "legacy_unclassified"
+  },
+  "observed_classifications": {
+    "tests/fixtures/research_control/red_team_review/unknown_review_context.yaml": "unknown",
+    "tests/fixtures/research_control/red_team_review/valid_different_model_review.yaml": "different_model_review",
+    "tests/fixtures/research_control/red_team_review/valid_human_expert_review.yaml": "human_expert_review",
+    "tests/fixtures/research_control/red_team_review/valid_independent_replication.yaml": "independent_replication",
+    "tests/fixtures/research_control/red_team_review/valid_review_context.yaml": "blind_same_model_review",
+    "tests/fixtures/research_control/red_team_review/valid_same_context_review.yaml": "same_context_role_review"
+  },
+  "passing_fixture_count": 6,
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P11-T02",
+  "proof_authority": false,
+  "recommendation_ids": [
+    "V21-R37",
+    "V21-R38",
+    "V21-R43",
+    "V21-R68"
+  ],
+  "rejected_fixture_count": 2,
+  "rejected_fixture_issue_fields": {
+    "tests/fixtures/research_control/red_team_review/false_external_wording.yaml": [
+      "review_context.claims.external_review_completed",
+      "review_context.claims"
+    ],
+    "tests/fixtures/research_control/red_team_review/false_independent_replication.yaml": [
+      "review_context.claims.independent_replication_completed",
+      "review_context.claims.independent_replication_completed"
+    ]
+  },
+  "review_executed": false,
+  "reviewer_independence_proven": false,
+  "schema_id": "v21_review_independence_validation_v1",
+  "status": "PASS"
+}

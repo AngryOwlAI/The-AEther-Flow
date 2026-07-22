@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0814.yaml",
+    "research_control/handoffs/handoff-0815.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260722-004",
-    "latest_handoff_id": "handoff-0814",
-    "current_status": "p11_t01_blind_review_protocol_complete_p11_t02_selected",
+    "active_task_id": "RT-20260722-005",
+    "latest_handoff_id": "handoff-0815",
+    "current_status": "p11_t02_review_context_classification_complete_p11_t04_selected",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260722-004",
-    "latest_research_handoff_id": "handoff-0814",
-    "latest_research_next_action": "Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Require explicit unknown when evidence is absent and do not infer independence from role names packet redaction validator status or internal model separation.",
+    "latest_research_task_id": "RT-20260722-005",
+    "latest_research_handoff_id": "handoff-0815",
+    "latest_research_next_action": "Run exactly one bounded P11-T04 validator-engineer project-system AgentJob to build the semantic-smuggling adversarial fixture suite. Require deterministic alias split-encoding equivalent-form misleading-certificate and prompt-level fixtures with measured false positives and false negatives.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p11_t02_reviewer_independence_model_diversity_classifications",
-    "role_family": "project-control-maintainer@0.2.0",
+    "route_id": "v21_p11_t04_semantic_smuggling_adversarial_fixture_suite",
+    "role_family": "validator-engineer@0.2.0",
     "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Prevent internal role diversity from being mislabeled as epistemic independence.",
+    "milestone_burden": "Test whether source-purity controls survive semantic rather than lexical attacks.",
     "requires_human_gate": false
   },
   "claim_boundary": {

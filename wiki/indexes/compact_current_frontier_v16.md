@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-004`
-- Latest handoff: `handoff-0814`
-- Current status: `p11_t01_blind_review_protocol_complete_p11_t02_selected`
+- Active task: `RT-20260722-005`
+- Latest handoff: `handoff-0815`
+- Current status: `p11_t02_review_context_classification_complete_p11_t04_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-004`
-- Latest research handoff: `handoff-0814`
-- Latest research next action: Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Require explicit unknown when evidence is absent and do not infer independence from role names packet redaction validator status or internal model separation.
+- Latest research task: `RT-20260722-005`
+- Latest research handoff: `handoff-0815`
+- Latest research next action: Run exactly one bounded P11-T04 validator-engineer project-system AgentJob to build the semantic-smuggling adversarial fixture suite. Require deterministic alias split-encoding equivalent-form misleading-certificate and prompt-level fixtures with measured false positives and false negatives.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p11_t02_reviewer_independence_model_diversity_classifications`
-- Role family: `project-control-maintainer@0.2.0`
+- Route ID: `v21_p11_t04_semantic_smuggling_adversarial_fixture_suite`
+- Role family: `validator-engineer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Prevent internal role diversity from being mislabeled as epistemic independence.
+- Milestone burden: Test whether source-purity controls survive semantic rather than lexical attacks.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `37aab296a93c737c0903f5a221a1bd780f5feb35a1a8256799f3796a8bcc446a`
-- JSON SHA-256: `6638fe0b8715000c165abe79308b79881c4d4f2e7b3b6fc04fcec9a738d8f2ed`
+- YAML SHA-256: `03f81dace4b8b884c6032e7e41017d6f2c210500ba2edaea413181d5584448ed`
+- JSON SHA-256: `a89624a798e5d88716ce92007bea00108c912a878ddb6f517623231991d1affb`
 
 ## Authority Warning
 

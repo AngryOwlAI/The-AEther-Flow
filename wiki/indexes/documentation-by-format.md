@@ -562,6 +562,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P1-T05-EQSRC-NATURALITY-PRIMARY-LITERATURE-REVIEW` `research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md`
 - `MD-V21-P11-T01-BLIND-REVIEW-PACKET-SCHEMA` `research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_schema.md`
 - `MD-V21-P11-T01-REVIEWER-INSTRUCTIONS` `research_control/tasks/RT-20260722-004/artifacts/reviewer_instructions.md`
+- `MD-V21-P11-T02-REVIEW-CLAIM-LANGUAGE-RULES` `research_control/tasks/RT-20260722-005/artifacts/review_claim_language_rules.md`
+- `MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY` `research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md`
+- `MD-V21-P11-T02-REVIEW-METADATA-SCHEMA` `research_control/tasks/RT-20260722-005/artifacts/review_metadata_schema.md`
 - `MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md`
 - `MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
@@ -1123,6 +1126,9 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P1-T05-EQSRC-NATURALITY-PRIMARY-LITERATURE-REVIEW` `wiki/markdown/md-v21-p1-t05-eqsrc-naturality-primary-literature-review.md`
 - `WIKI-MD-V21-P11-T01-BLIND-REVIEW-PACKET-SCHEMA` `wiki/markdown/md-v21-p11-t01-blind-review-packet-schema.md`
 - `WIKI-MD-V21-P11-T01-REVIEWER-INSTRUCTIONS` `wiki/markdown/md-v21-p11-t01-reviewer-instructions.md`
+- `WIKI-MD-V21-P11-T02-REVIEW-CLAIM-LANGUAGE-RULES` `wiki/markdown/md-v21-p11-t02-review-claim-language-rules.md`
+- `WIKI-MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY` `wiki/markdown/md-v21-p11-t02-review-independence-taxonomy.md`
+- `WIKI-MD-V21-P11-T02-REVIEW-METADATA-SCHEMA` `wiki/markdown/md-v21-p11-t02-review-metadata-schema.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
 - `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`

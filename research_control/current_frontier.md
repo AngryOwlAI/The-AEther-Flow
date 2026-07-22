@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260722-004` and `handoff-0814`.
+`RT-20260722-005` and `handoff-0815`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260722-004` |
-| Latest handoff ID | `handoff-0814` |
-| Current status | `p11_t01_blind_review_protocol_complete_p11_t02_selected` |
+| Active task ID | `RT-20260722-005` |
+| Latest handoff ID | `handoff-0815` |
+| Current status | `p11_t02_review_context_classification_complete_p11_t04_selected` |
 | V16 completed | false |
 | Current route family | audit or review (project system) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v21 reviewer independence model diversity classifications |
-| Required next authority | One fresh P11-T02 project-system packet may define calibrated reviewer-independence and model-diversity classifications without executing a review or claiming independence from P11-T01 evidence. |
-| Next recommended action | Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Require explicit unknown when evidence is absent and do not infer independence from role names packet redaction validator status or internal model separation. |
+| Current burden | none for physics derivation; live control burden is v21 semantic smuggling adversarial fixture suite |
+| Required next authority | One fresh P11-T04 project-system packet may build and measure a semantic-smuggling adversarial fixture suite without claiming semantic completeness or scientific proof. |
+| Next recommended action | Run exactly one bounded P11-T04 validator-engineer project-system AgentJob to build the semantic-smuggling adversarial fixture suite. Require deterministic alias split-encoding equivalent-form misleading-certificate and prompt-level fixtures with measured false positives and false negatives. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260722-004` |
-| Latest research handoff ID | `handoff-0814` |
-| Latest research next action | Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Require explicit unknown when evidence is absent and do not infer independence from role names packet redaction validator status or internal model separation. |
+| Latest research task ID | `RT-20260722-005` |
+| Latest research handoff ID | `handoff-0815` |
+| Latest research next action | Run exactly one bounded P11-T04 validator-engineer project-system AgentJob to build the semantic-smuggling adversarial fixture suite. Require deterministic alias split-encoding equivalent-form misleading-certificate and prompt-level fixtures with measured false positives and false negatives. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260722-004/00_TASK.yaml`.
-- Active task objective: Define and validate a reproducible context-separation protocol that preserves scientific assumptions source hashes and exact excerpts while removing workflow verdict route validator and internal-confidence metadata from blind reviewer packets.
-- Latest handoff path: `research_control/handoffs/handoff-0814.yaml`.
+- Active task path: `research_control/tasks/RT-20260722-005/00_TASK.yaml`.
+- Active task objective: Define and enforce normalized review-context classifications with seven explicit independence dimensions, fail-closed unknown states, backward-compatible historical readability, and calibrated external-review and independent-replication wording.
+- Latest handoff path: `research_control/handoffs/handoff-0815.yaml`.
 - Latest handoff summary: not recorded.
 - Current route family: audit or review (project system).
-- Next recommended action: Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Require explicit unknown when evidence is absent and do not infer independence from role names packet redaction validator status or internal model separation.
+- Next recommended action: Run exactly one bounded P11-T04 validator-engineer project-system AgentJob to build the semantic-smuggling adversarial fixture suite. Require deterministic alias split-encoding equivalent-form misleading-certificate and prompt-level fixtures with measured false positives and false negatives.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Require explicit unknown when evidence is absent and do not infer independence from role names packet redaction validator status or internal model separation.
+Run exactly one bounded P11-T04 validator-engineer project-system AgentJob to build the semantic-smuggling adversarial fixture suite. Require deterministic alias split-encoding equivalent-form misleading-certificate and prompt-level fixtures with measured false positives and false negatives.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,8 +327,8 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 45 was validated claimed consumed once and executed under its immutable continue-research route. |
-| `completion_internal` | PASS | receipt complete | The protocol passes fifteen checks and eleven focused tests with zero leak findings while preserving all three fixture assumptions. |
+| `pre_execution` | PASS | receipt complete | Generation 46 was validated claimed consumed once and executed under its immutable continue-research route. |
+| `completion_internal` | PASS | receipt complete | Twenty-four internal checks and twelve focused tests pass across six classes seven dimensions two negative claim guards and two legacy witnesses. |
 | `post_write` | PASS | receipt complete | Focused tests documentation impact project-improvement claim-language research-control memory and diff gates are required before checkpoint. |
 | `post_checkpoint` | PENDING | open item; evidence must explain why | The governed checkpoint remains the final transaction gate. |
 | `renderer` | PASS | receipt complete | Task-index current-frontier compact-frontier and memory derivatives are required fresh before checkpoint. |
@@ -352,13 +352,13 @@ Authorization layers:
 | `proof_authority` | False | extension authorization field |
 | `publication_authority` | False | extension authorization field |
 | `review_execution_authorized` | False | extension authorization field |
-| `reviewer_independence_classification_authorized` | False | extension authorization field |
+| `reviewer_independence_classification_authorized` | True | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260722-004`;
-- latest handoff: `handoff-0814`;
-- current status: `p11_t01_blind_review_protocol_complete_p11_t02_selected`;
+- active task: `RT-20260722-005`;
+- latest handoff: `handoff-0815`;
+- current status: `p11_t02_review_context_classification_complete_p11_t04_selected`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -368,8 +368,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0814.yaml`
-- `research_control/tasks/RT-20260722-004/00_TASK.yaml`
+- `research_control/handoffs/handoff-0815.yaml`
+- `research_control/tasks/RT-20260722-005/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -385,7 +385,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0814*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0815*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

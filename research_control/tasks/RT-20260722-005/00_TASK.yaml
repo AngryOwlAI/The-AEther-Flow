@@ -1,0 +1,70 @@
+validation_status: "PASS"
+task_id: "RT-20260722-005"
+task_type: "v21_reviewer_independence_model_diversity_classifications"
+title: "Define reviewer independence and model-diversity classifications"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "audit_or_review"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "not_applicable"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-22T10:04:00Z"
+updated_at: "2026-07-22T10:18:10Z"
+parent_task_id: "RT-20260722-004"
+parent_handoff_id: "handoff-0814"
+current_decision_id: "DDR-20260722-005"
+current_job_id: "AJ-RT-20260722-005-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-005"
+requires_human_gate: false
+human_authorization_note: "Generation 46 of the immutable user-requested v21 relay and handoff-0814 authorize exactly one bounded dependency-ready P11-T02 project-system packet."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P11"
+  plan_task_id: "P11-T02"
+  plan_task_name: "Define reviewer independence and model-diversity classifications"
+  recommendation_ids:
+    - "V21-R37"
+    - "V21-R38"
+    - "V21-R43"
+    - "V21-R68"
+objective: "Define and enforce normalized review-context classifications with seven explicit independence dimensions, fail-closed unknown states, backward-compatible historical readability, and calibrated external-review and independent-replication wording."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Prevent internal role diversity from being mislabeled as epistemic independence."
+route_label: "ordinary-research-packet"
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V21-P11-T02-REVIEW-INDEPENDENCE-CLASSIFICATION-001"
+claim_boundary:
+  allowed_scope: "Implement only P11-T02 task-local taxonomy schema claim-language rules validation receipts and backward-compatible shared reviewer role schema template validator fixtures and focused tests."
+  dependency_task_ids:
+    - "RT-20260722-004"
+  current_handoff: "handoff-0814"
+  review_execution_authorized: false
+  external_outreach_authorized: false
+  reviewer_independence_claim_authorized_without_evidence: false
+  historical_review_rewrite_authorized: false
+  p10_repair_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md"
+  - "research_control/tasks/RT-20260722-005/artifacts/review_metadata_schema.md"
+  - "research_control/tasks/RT-20260722-005/artifacts/review_claim_language_rules.md"
+  - "research_control/tasks/RT-20260722-005/artifacts/validate_review_independence_taxonomy.py"
+  - "research_control/tasks/RT-20260722-005/artifacts/review_independence_validation.json"
+  - "research_control/tasks/RT-20260722-005/artifacts/review_independence_compact_receipt.json"
+closure_status: "p11_t02_completed_review_context_classification_pass"
+summary: "P11-T02 completed six normalized review-context classes and seven explicit independence dimensions with fail-closed unknowns legacy readability and guarded external-review or replication wording; no review or scientific claim was executed."
+next_recommended_action: "Run one fresh bounded P11-T04 adversarial semantic-smuggling test-suite packet; P11-T01 and P11-T02 are now both qualifying completions."
+documentation_impact_id: "DI-RT-20260722-005-001"
+completion_id: "AJC-AJ-RT-20260722-005-001"
+project_improvement_signals: []
+notes: "P11-T02 is control-only; shared review contracts changed additively, historical artifacts remain legacy_unclassified, and no independence or replication result is inferred."

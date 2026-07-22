@@ -1,9 +1,70 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260722-004"
-latest_handoff_id: "handoff-0814"
-current_status: "p11_t01_blind_review_protocol_complete_p11_t02_selected"
-claim_boundary_summary: "RT-20260722-004 completed P11-T01 under a task-local project-system boundary; the deterministic blind packet preserves assumptions source hashes exact excerpts and claim limits while excluding process metadata, and no review independence science or protected authority is claimed."
-next_recommended_action: "Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Require explicit unknown when evidence is absent and do not infer independence from role names packet redaction validator status or internal model separation."
+active_task_id: "RT-20260722-005"
+latest_handoff_id: "handoff-0815"
+current_status: "p11_t02_review_context_classification_complete_p11_t04_selected"
+claim_boundary_summary: "RT-20260722-005 completed P11-T02 under an additive project-system boundary; six review-context classes and seven provenance dimensions now fail closed to unknown and guard external-review or replication wording while legacy artifacts remain readable, and no review science independence proof or protected authority is claimed."
+next_recommended_action: "Run exactly one bounded P11-T04 validator-engineer project-system AgentJob to build the semantic-smuggling adversarial fixture suite. Require deterministic alias split-encoding equivalent-form misleading-certificate and prompt-level fixtures with measured false positives and false negatives."
+
+p11_t02_review_independence_model_diversity_classifications:
+  task_id: "RT-20260722-005"
+  parent_task_id: "RT-20260722-004"
+  parent_handoff_id: "handoff-0814"
+  plan_task_id: "P11-T02"
+  claim_boundary_id: "CB-V21-P11-T02-REVIEW-INDEPENDENCE-CLASSIFICATION-001"
+  status: "PASS_REVIEW_CONTEXT_CLASSIFICATION_AND_CLAIM_GUARDS"
+  completion_path: "research_control/tasks/RT-20260722-005/jobs/completions/AJC-AJ-RT-20260722-005-001.yaml"
+  handoff_id: "handoff-0815"
+  taxonomy_path: "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md"
+  taxonomy_sha256: "6167db6a8c1d67f96bd14aaf52f18fb3666cca1c78b0a42ddc614bc7b56f4ce7"
+  metadata_schema_path: "research_control/tasks/RT-20260722-005/artifacts/review_metadata_schema.md"
+  metadata_schema_sha256: "278c3b3c2d98c86f83e4cede0dcc3f44cb1583aed2e0c75c78e69a02234b80d7"
+  claim_rules_path: "research_control/tasks/RT-20260722-005/artifacts/review_claim_language_rules.md"
+  claim_rules_sha256: "3d8d597d47e6cdffea38a6248fd44f389c3eca77c6b9a722561529e14427bfe8"
+  validator_path: "research_control/tasks/RT-20260722-005/artifacts/validate_review_independence_taxonomy.py"
+  validator_sha256: "5c7ee503b2955e6902146156629d937007114832518f179975afe0c1860b0044"
+  validation_path: "research_control/tasks/RT-20260722-005/artifacts/review_independence_validation.json"
+  validation_sha256: "7f43350e614baa6d6447ba28037f9793f8448d7bb88812ad5c2597e88f76aa7e"
+  compact_receipt_path: "research_control/tasks/RT-20260722-005/artifacts/review_independence_compact_receipt.json"
+  compact_receipt_sha256: "5749c32352fc7c56e05d37fac04ec1837219078b8480cb4ffda4e907dbe1d7b7"
+  classification_count: 6
+  independence_dimension_count: 7
+  passing_fixture_count: 6
+  rejected_fixture_count: 2
+  legacy_artifact_count: 2
+  internal_check_count: 24
+  failed_check_count: 0
+  focused_test_count: 12
+  focused_test_failure_count: 0
+  unknown_fail_closed: true
+  legacy_review_readability_passed: true
+  unsupported_external_wording_rejected: true
+  unsupported_independent_replication_wording_rejected: true
+  review_executed: false
+  reviewer_independence_proven: false
+  external_review_completed_by_task: false
+  independent_replication_completed_by_task: false
+  p11_t01_completed: true
+  p11_t02_completed: true
+  p11_t04_dependency_ready: true
+  p11_t04_selected: true
+  p11_t04_executed: false
+  p11_t05_dependency_ready: false
+  p11_t05_blocked_by:
+    - "P11-T04"
+  selected_next_work_item: "P11-T04"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "validator-engineer@0.2.0"
+  selected_next_reason: "P11-T04 now has qualifying P11-T01 and P11-T02 completions and is the direct adversarial test of source-purity controls against semantic rather than lexical target imports."
+  p10_broader_rollout_frozen: true
+  p10_blocker_ids:
+    - "P10-AUDIT-F001"
+    - "P10-AUDIT-F002"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
 
 p11_t01_blind_review_context_separation_protocol:
   task_id: "RT-20260722-004"

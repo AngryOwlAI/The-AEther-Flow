@@ -50,6 +50,43 @@ promotion, or completed-derivation status.
 - `freeze_recommended`
 - `external_expert_review_required`
 
+## Additive review-context contract
+
+New review artifacts include a `review_context` map. Artifacts created before
+this additive contract remain valid and are reported by the validator as
+`legacy_unclassified`; they are not retroactively relabeled.
+
+The map has these fields:
+
+- `schema_id`: exactly `v21_review_context_v1`.
+- `classification`: one of `same_context_role_review`,
+  `blind_same_model_review`, `different_model_review`,
+  `human_expert_review`, `independent_replication`, or `unknown`.
+- `reviewer_kind`: one of `human`, `ai`, `mixed`, or `unknown`.
+- `blind_packet_received`: boolean.
+- `prior_context_access`: one of `same_context`, `blind_packet_only`,
+  `fresh_context`, `partial`, `unknown`, or `not_applicable`.
+- `review_executed`: boolean.
+- `replication_executed`: boolean.
+- `dimensions`: exactly the seven keys `model_family`, `prompt_context`,
+  `data_access`, `institution`, `human_authorship`, `code_base`, and `method`.
+  Every dimension records `relationship` as `same`, `different`,
+  `independent`, `not_applicable`, or `unknown`, plus a nonempty `evidence`
+  statement.
+- `evidence_paths`: repo-relative canonical evidence paths, or `[]` when the
+  class is explicitly `unknown` and no evidence exists.
+- `limitations`: explicit limitations, or `[]` when none are known.
+- `claims`: booleans `external_review_completed`,
+  `human_expert_review_completed`, and
+  `independent_replication_completed`.
+
+Different roles or model configurations are not automatically independent.
+`human_expert_review` requires human provenance and evidence.
+`independent_replication` requires an executed replication plus independent
+data-access, code-base, and method evidence. Missing evidence fails closed to
+`unknown`. Positive external-review or independent-replication wording is
+invalid unless the structured class and evidence support it.
+
 ## Minimal Countermodel Attempt
 
 `minimal_countermodel_attempt` must be a map with:
@@ -71,4 +108,5 @@ one or more strict-YAML red-team review artifacts and emits a JSON receipt.
 Passing this schema means only that the review artifact has the required shape
 and preserves `physics_promotion_authorized: false`. It does not imply that the
 review is scientifically correct, that a claim is proven, or that a defect is
-resolved.
+resolved. Review-context validation records provenance calibration only; it
+does not create epistemic independence or scientific authority.

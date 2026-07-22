@@ -1,0 +1,282 @@
+completion_id: "AJC-AJ-RT-20260722-005-001"
+job_id: "AJ-RT-20260722-005-001"
+task_id: "RT-20260722-005"
+decision_id: "DDR-20260722-005"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-005"
+status: "completed"
+completed_at: "2026-07-22T10:18:10Z"
+validation_status: "PASS"
+result_summary: "P11-T02 completed six normalized review-context classifications and seven independent provenance dimensions with fail-closed unknown handling two legacy-readability witnesses guarded external-review and independent-replication language twenty-four passing internal checks and twelve focused tests."
+plan_task_id: "P11-T02"
+recommendation_ids:
+  - "V21-R37"
+  - "V21-R38"
+  - "V21-R43"
+  - "V21-R68"
+claim_boundary_id: "CB-V21-P11-T02-REVIEW-INDEPENDENCE-CLASSIFICATION-001"
+artifacts:
+  taxonomy_path: "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md"
+  taxonomy_sha256: "6167db6a8c1d67f96bd14aaf52f18fb3666cca1c78b0a42ddc614bc7b56f4ce7"
+  metadata_schema_path: "research_control/tasks/RT-20260722-005/artifacts/review_metadata_schema.md"
+  metadata_schema_sha256: "278c3b3c2d98c86f83e4cede0dcc3f44cb1583aed2e0c75c78e69a02234b80d7"
+  claim_rules_path: "research_control/tasks/RT-20260722-005/artifacts/review_claim_language_rules.md"
+  claim_rules_sha256: "3d8d597d47e6cdffea38a6248fd44f389c3eca77c6b9a722561529e14427bfe8"
+  validator_path: "research_control/tasks/RT-20260722-005/artifacts/validate_review_independence_taxonomy.py"
+  validator_sha256: "5c7ee503b2955e6902146156629d937007114832518f179975afe0c1860b0044"
+  validation_path: "research_control/tasks/RT-20260722-005/artifacts/review_independence_validation.json"
+  validation_sha256: "7f43350e614baa6d6447ba28037f9793f8448d7bb88812ad5c2597e88f76aa7e"
+  compact_receipt_path: "research_control/tasks/RT-20260722-005/artifacts/review_independence_compact_receipt.json"
+  compact_receipt_sha256: "5749c32352fc7c56e05d37fac04ec1837219078b8480cb4ffda4e907dbe1d7b7"
+  execution_role_path: "research_control/tasks/RT-20260722-005/roles/project-control-maintainer@0.2.0--RT-20260722-005.yaml"
+  execution_role_sha256: "a555a4e2780770d8e1a7f0a3b9169ed063bb246fd9a4285ab3cf21c52e8417e5"
+  shared_schema_path: ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+  shared_schema_sha256: "0466b3f03bb9dbe27723c196fce4856a0352a4cd92e6ae00faa58fdc36d7c6b8"
+  shared_template_path: "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  shared_template_sha256: "e785805b869b6ee611690a72b150e70a6eb7711d5e6437eaace932a6243cfdbb"
+  central_validator_path: "scripts/research_control/validate_red_team_review_artifact.py"
+  central_validator_sha256: "cbadb1292ac6553ea209b5b021585d43a67a3fa8a20dbe330bbc1336d224297f"
+  focused_test_path: "tests/test_red_team_review_artifact_validator.py"
+  focused_test_sha256: "a73565b1bcb816110cc24d8efd536a00287b1bb6ceeb5fb726f1000eeae7b0f8"
+  classification_count: 6
+  independence_dimension_count: 7
+  passing_fixture_count: 6
+  rejected_fixture_count: 2
+  legacy_artifact_count: 2
+  internal_check_count: 24
+  failed_check_count: 0
+  focused_test_count: 12
+  focused_test_failure_count: 0
+  legacy_review_readability_passed: true
+  unsupported_external_wording_rejected: true
+  unsupported_independent_replication_wording_rejected: true
+  review_executed: false
+  reviewer_independence_proven: false
+  source_science_mutated: false
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P11-T02 classifies review provenance metadata and changes no scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  theorem_source_referenced: []
+  identity_note: "No scientific candidate theorem or derivation object was created or modified."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260722-005/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-005/DDR-20260722-005.md"
+  - "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md"
+  - "research_control/tasks/RT-20260722-005/artifacts/review_metadata_schema.md"
+  - "research_control/tasks/RT-20260722-005/artifacts/review_claim_language_rules.md"
+  - "research_control/tasks/RT-20260722-005/artifacts/validate_review_independence_taxonomy.py"
+  - "research_control/tasks/RT-20260722-005/artifacts/review_independence_validation.json"
+  - "research_control/tasks/RT-20260722-005/artifacts/review_independence_compact_receipt.json"
+  - "tests/fixtures/research_control/red_team_review/valid_same_context_review.yaml"
+  - "tests/fixtures/research_control/red_team_review/valid_review_context.yaml"
+  - "tests/fixtures/research_control/red_team_review/valid_different_model_review.yaml"
+  - "tests/fixtures/research_control/red_team_review/valid_human_expert_review.yaml"
+  - "tests/fixtures/research_control/red_team_review/valid_independent_replication.yaml"
+  - "tests/fixtures/research_control/red_team_review/unknown_review_context.yaml"
+  - "tests/fixtures/research_control/red_team_review/false_external_wording.yaml"
+  - "tests/fixtures/research_control/red_team_review/false_independent_replication.yaml"
+  - "research_control/tasks/RT-20260722-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260722-005/jobs/AJ-RT-20260722-005-001.yaml"
+  - "research_control/tasks/RT-20260722-005/jobs/completions/AJC-AJ-RT-20260722-005-001.yaml"
+  - "research_control/tasks/RT-20260722-005/roles/project-control-maintainer@0.2.0--RT-20260722-005.yaml"
+  - "research_control/handoffs/handoff-0815.yaml"
+  - "research_control/handoffs/handoff-0815.md"
+outputs_updated:
+  - ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md"
+  - "research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml"
+  - "scripts/research_control/validate_red_team_review_artifact.py"
+  - "tests/test_red_team_review_artifact_validator.py"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/compact_current_frontier_v16.json"
+  - "output/compact_current_frontier_v16.yaml"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "registries/AGENT_ROLE_REGISTRY.csv"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prevent internal role diversity from being mislabeled as epistemic independence."
+  explanation: "P11-T02 adds review-provenance controls only and supplies no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Review provenance classification does not discharge or worsen a physics burden."
+  downstream_unlocked:
+    - "P11-T04 semantic-smuggling adversarial test suite under one fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P11-T06 until P11-T05 also completes"
+    - "broader P10 data-model rollout until P10-AUDIT-F001 and P10-AUDIT-F002 are repaired"
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 46 route identity lease parity max effort repository binding clean start predecessor inactivity and single consumption were verified before work."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The taxonomy receipt passes twenty-four checks across six classes seven dimensions two negative claim guards and two legacy-readability witnesses."
+      - "Twelve focused tests pass with zero failures."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Affected-plan documentation-impact project-improvement claim-language research-control memory and diff validations are required to pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier compact-frontier and policy-generated derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+forbidden_conclusion_summary:
+  summary: "Classification consistency is not review execution or epistemic independence and does not authorize M_src adoption g_eff matter coupling Einstein dynamics benchmark promotion completed derivation or global theory rejection."
+  forbidden_conclusions:
+    - "role diversity packet blindness or different model configuration treated as external review or independence"
+    - "human review treated as independent replication without a separate evidenced reconstruction"
+    - "validator fixture test or checkpoint PASS treated as scientific proof correctness endorsement or publication"
+    - "classification metadata treated as M_src adoption g_eff construction matter coupling or Einstein equations derivation"
+    - "P11-T04 P11-T06 P10 repair or P4-T05 executed inside P11-T02"
+    - "physics promotion benchmark promotion completed derivation or global theory rejection"
+  source_artifacts_mutated: false
+  review_executed: false
+  reviewer_independence_proven: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260722-005/artifacts/validate_review_independence_taxonomy.py --write --json | exit_code=0 | status=PASS checks=24 failures=0 classes=6 dimensions=7"
+  - ".venv/bin/python research_control/tasks/RT-20260722-005/artifacts/validate_review_independence_taxonomy.py --check --json | exit_code=0 | status=PASS drift=0"
+  - ".venv/bin/python -m unittest -v tests.test_red_team_review_artifact_validator | exit_code=0 | tests=12 failures=0"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths .agents/roles/physics/external-red-team-reviewer.v0.1.0.md .agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md research_control/templates/RED_TEAM_REVIEW_ARTIFACT_TEMPLATE.yaml scripts/research_control/validate_red_team_review_artifact.py tests/test_red_team_review_artifact_validator.py research_control/tasks/RT-20260722-005 research_control/program_state.yaml research_control/handoffs/handoff-0815.yaml --explain | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write and --check plus validate_compact_current_frontier_v16.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json and resolve_project_improvement.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | required before checkpoint"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | required before checkpoint"
+  - "git diff --check | required before checkpoint"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 976
+    relationship_row_count: 4835
+    semantic_row_count: 976
+    vault_row_count: 976
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search reviewer independence model diversity --limit 10 --json"
+      query_type: "search"
+      query_text: "reviewer independence model diversity"
+      returned_object_ids:
+        - "MD-V21-P11-T01-REVIEWER-INSTRUCTIONS"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-V21-P11-T01-REVIEWER-INSTRUCTIONS"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-004/artifacts/reviewer_instructions.md"
+      source_hash: "9969f834aa08caeed85592c8bd99d6b9d02c6c2cffa41b14873777299a67aead"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "a1c85b654057c9b587d042275d97aa3fc1bee03e3e9b18cfa7238e6d35f60934"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "5382153d97ed433853bab6d10c4cdf67f272ce19e1b3ff5a1a9bf8f6c12e297d"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory and .local are retrieval layers only and are not authority; canonical tracked sources and registry rows govern."
+
+project_improvement_signals: []
+next_recommended_action: "Run one fresh bounded P11-T04 semantic-smuggling adversarial test-suite packet after the governed P11-T02 checkpoint."

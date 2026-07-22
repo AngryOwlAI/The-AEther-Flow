@@ -25,6 +25,45 @@ status_being_tested:
   promotion_status: ""
   overread_guard: ""
 claim_under_review: ""
+review_context:
+  schema_id: "v21_review_context_v1"
+  # one of: same_context_role_review, blind_same_model_review,
+  # different_model_review, human_expert_review, independent_replication, unknown
+  classification: "unknown"
+  reviewer_kind: "unknown"
+  blind_packet_received: false
+  prior_context_access: "unknown"
+  review_executed: false
+  replication_executed: false
+  dimensions:
+    model_family:
+      relationship: "unknown"
+      evidence: "No model-family evidence recorded."
+    prompt_context:
+      relationship: "unknown"
+      evidence: "No prompt-context evidence recorded."
+    data_access:
+      relationship: "unknown"
+      evidence: "No data-access evidence recorded."
+    institution:
+      relationship: "unknown"
+      evidence: "No institutional evidence recorded."
+    human_authorship:
+      relationship: "unknown"
+      evidence: "No human-authorship evidence recorded."
+    code_base:
+      relationship: "unknown"
+      evidence: "No code-base evidence recorded."
+    method:
+      relationship: "unknown"
+      evidence: "No method evidence recorded."
+  evidence_paths: []
+  limitations:
+    - "Review-context evidence is absent; classification remains unknown."
+  claims:
+    external_review_completed: false
+    human_expert_review_completed: false
+    independent_replication_completed: false
 workflow_success_disregarded_as_evidence: true
 validator_success_disregarded_as_evidence: true
 assumptions_read:
