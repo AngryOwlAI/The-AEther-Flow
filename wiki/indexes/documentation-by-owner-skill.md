@@ -727,6 +727,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P11-T02-REVIEW-CLAIM-LANGUAGE-RULES` `wiki/markdown/md-v21-p11-t02-review-claim-language-rules.md`
 - `WIKI-MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY` `wiki/markdown/md-v21-p11-t02-review-independence-taxonomy.md`
 - `WIKI-MD-V21-P11-T02-REVIEW-METADATA-SCHEMA` `wiki/markdown/md-v21-p11-t02-review-metadata-schema.md`
+- `WIKI-MD-V21-P11-T03-PROOF-ARTIFACT-REGISTRY-SCHEMA` `wiki/markdown/md-v21-p11-t03-proof-artifact-registry-schema.md`
+- `WIKI-MD-V21-P11-T03-TRUSTED-FOUNDATION-POLICY` `wiki/markdown/md-v21-p11-t03-trusted-foundation-policy.md`
 - `WIKI-MD-V21-P11-T04-SEMANTIC-SMUGGLING-CHECKER-COMPARISON` `wiki/markdown/md-v21-p11-t04-semantic-smuggling-checker-comparison.md`
 - `WIKI-MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY` `wiki/markdown/md-v21-p11-t05-positive-provenance-operational-meaning-gate-policy.md`
 - `WIKI-MD-V21-P11-T06-REVIEWER-AGREEMENT-METRIC-SPECIFICATION` `wiki/markdown/md-v21-p11-t06-reviewer-agreement-metric-specification.md`
@@ -1159,6 +1161,8 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P11-T02-REVIEW-CLAIM-LANGUAGE-RULES` `research_control/tasks/RT-20260722-005/artifacts/review_claim_language_rules.md`
 - `MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY` `research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md`
 - `MD-V21-P11-T02-REVIEW-METADATA-SCHEMA` `research_control/tasks/RT-20260722-005/artifacts/review_metadata_schema.md`
+- `MD-V21-P11-T03-PROOF-ARTIFACT-REGISTRY-SCHEMA` `research_control/tasks/RT-20260722-009/artifacts/proof_artifact_registry_schema.md`
+- `MD-V21-P11-T03-TRUSTED-FOUNDATION-POLICY` `research_control/tasks/RT-20260722-009/artifacts/trusted_foundation_policy.md`
 - `MD-V21-P11-T04-SEMANTIC-SMUGGLING-CHECKER-COMPARISON` `research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.md`
 - `MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY` `research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md`
 - `MD-V21-P11-T06-REVIEWER-AGREEMENT-METRIC-SPECIFICATION` `research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_metric_specification.md`

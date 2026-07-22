@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-008`
-- Latest handoff: `handoff-0818`
-- Current status: `p11_t06_reviewer_metrics_complete_p11_t03_selected`
+- Active task: `RT-20260722-009`
+- Latest handoff: `handoff-0819`
+- Current status: `p11_t03_proof_evidence_integration_complete_p11_t07_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-008`
-- Latest research handoff: `handoff-0818`
-- Latest research next action: Run exactly one bounded P11-T03 validator-engineer project-system AgentJob to integrate proof-assistant evidence into research-control records without promoting physical interpretations.
+- Latest research task: `RT-20260722-009`
+- Latest research handoff: `handoff-0819`
+- Latest research next action: Run exactly one bounded P11-T07 external-red-team-reviewer science AgentJob to pilot blind packets independence classification proof evidence semantic-smuggling checks positive-provenance gates and reviewer metrics on the selector theorem and one scoped metric or matter object without treating review as proof promotion or independent replication.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p11_t03_proof_assistant_evidence_integration`
-- Role family: `validator-engineer@0.2.0`
+- Route ID: `v21_p11_t07_independent_review_pilot`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Make mechanized proof evidence durable and correctly scoped.
+- Milestone burden: Validate the new scientific QA system on high-value claims.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `cee3ac96f7f858816e1421d713a8f8218bb34f3ac18c1d45940bba32fc44af97`
-- JSON SHA-256: `e582d73a36a59b7f675024311059baf33b3fe1b9a853b518d1c6e330e1314e2f`
+- YAML SHA-256: `822e386c2a4af33832c24f83425403a848ffcf531d4f7bd30ab7791fe54edcb4`
+- JSON SHA-256: `d5cb129f85cce9c52ed1311279356a20d1328f1a0e54a9e3cbfe81fc96042be4`
 
 ## Authority Warning
 

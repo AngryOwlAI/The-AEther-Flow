@@ -1,0 +1,297 @@
+{
+  "base_record": {
+    "authorization_layers": {
+      "benchmark_promotion_authorized": false,
+      "completed_derivation_authorized": false,
+      "downstream_physics_promotion_authorized": false,
+      "proof_authority": false,
+      "publication_authority": false
+    },
+    "build": {
+      "adapter_id": "p2_t05_lean_build_evidence_migration_v1",
+      "clean_build_count": 2,
+      "proof_object_byte_reproducible": true,
+      "proof_object_hash_verified": true,
+      "proof_object_sha256": "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a",
+      "result_status": "PASS",
+      "script_path": "research_control/tasks/RT-20260720-018/artifacts/proof/build_proof.sh",
+      "script_sha256": "ed5d4d63b803737aafa4761a740aa4f3046e61f678a1c5d1841d94cc5cbf0e36",
+      "source_hash_verified": true,
+      "validation_receipt_path": "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_validation.json",
+      "validation_receipt_sha256": "9628e6ca789aff6df0da5039f51f3661ce50cab0461927650fe4b49f5aec9932"
+    },
+    "claim_boundary": {
+      "authority_status": "proposal_only",
+      "external_review_completed": false,
+      "independent_replication_completed": false,
+      "mathematical_status": "machine_checked_scoped",
+      "ontology_adoption_authorized": false,
+      "physical_interpretation_authorized": false,
+      "physics_promotion_authorized": false,
+      "proof_authority": false
+    },
+    "forbidden_conclusions": [
+      "validator PASS as proof authority",
+      "formalization as physical interpretation",
+      "ontology adoption",
+      "physics promotion",
+      "completed derivation",
+      "external review or independent replication",
+      "general EqSrc discharge",
+      "future source-extension impossibility",
+      "global theory rejection"
+    ],
+    "proof_objects": [
+      {
+        "artifact_id": "EQSRC-SELECTOR-KERNEL-LEAN-V1-OLEAN",
+        "clean_build_count": 2,
+        "format": "Lean olean",
+        "reproducible": true,
+        "retained_path": "",
+        "retention_status": "hashed_untracked_build_output",
+        "sha256": "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a"
+      }
+    ],
+    "proof_sources": [
+      {
+        "language": "Lean 4",
+        "path": "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean",
+        "role": "task-local formal encoding",
+        "sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+      }
+    ],
+    "record_id": "PROOF-EVIDENCE-P2-T05-LEAN-001",
+    "schema_id": "v21_proof_evidence_record_v1",
+    "subject": {
+      "claim_status": "proposal-only",
+      "theorem_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1",
+      "theorem_scope": "finite-group selector-kernel consequences under the exact P2-T03 hypotheses"
+    },
+    "theorem_statement": {
+      "authority_status": "tracked_task_science",
+      "path": "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex",
+      "sha256": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+    },
+    "toolchain": {
+      "archive_name": "lean-4.30.0-darwin_aarch64.tar.zst",
+      "archive_sha256": "072dca4a38fbc0d3cedb96fea886cc243b424f2bd16247596200b9a9ab93f0f5",
+      "dependencies": [],
+      "lock_path": "research_control/tasks/RT-20260720-018/artifacts/proof/toolchain-lock.json",
+      "lock_sha256": "bad311d77fc08c7d5347156401dcd565d1d96d8b8177e13713bbec1f1e78905d",
+      "release_commit": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+      "release_tag": "v4.30.0",
+      "tool": "Lean",
+      "version": "4.30.0"
+    },
+    "trusted_foundation": {
+      "admitted_axioms": [],
+      "allowed_admitted_axioms": [],
+      "allowed_foundations": [
+        "Lean 4 core kernel"
+      ],
+      "forbidden_declaration_scan": {
+        "admit": false,
+        "custom_axiom": false,
+        "sorry": false,
+        "unsafe": false
+      },
+      "foundation_version": "Lean 4.30.0",
+      "kernel": "Lean 4 kernel",
+      "policy_id": "v21_proof_evidence_trusted_foundation_policy_v1",
+      "status": "no_reported_axiom_dependencies",
+      "theorem_axiom_report_count": 6,
+      "theorem_with_axiom_dependency_count": 0
+    }
+  },
+  "cases": [
+    {
+      "case_id": "p2_t05_migration_pass",
+      "expected_status": "PASS_MACHINE_CHECKED_NO_AXIOM_DEPENDENCIES",
+      "mutations": [],
+      "verify_live_files": true
+    },
+    {
+      "case_id": "declared_axiom_warning",
+      "expected_status": "PASS_WITH_FORMAL_ASSUMPTION_WARNING",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "trusted_foundation.allowed_admitted_axioms",
+          "value": [
+            "example.scoped_axiom"
+          ]
+        },
+        {
+          "op": "set",
+          "path": "trusted_foundation.admitted_axioms",
+          "value": [
+            "example.scoped_axiom"
+          ]
+        },
+        {
+          "op": "set",
+          "path": "trusted_foundation.theorem_with_axiom_dependency_count",
+          "value": 1
+        },
+        {
+          "op": "set",
+          "path": "trusted_foundation.status",
+          "value": "warning_admitted_axioms_present"
+        },
+        {
+          "op": "set",
+          "path": "claim_boundary.mathematical_status",
+          "value": "machine_checked_with_formal_assumption_warning"
+        }
+      ],
+      "verify_live_files": false
+    },
+    {
+      "case_id": "source_hash_mismatch_fails",
+      "expected_status": "FAIL",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "proof_sources.0.sha256",
+          "value": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "verify_live_files": true
+    },
+    {
+      "case_id": "missing_trust_metadata_fails",
+      "expected_status": "FAIL",
+      "mutations": [
+        {
+          "op": "remove",
+          "path": "trusted_foundation.kernel"
+        }
+      ],
+      "verify_live_files": false
+    },
+    {
+      "case_id": "undeclared_axiom_fails",
+      "expected_status": "FAIL",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "trusted_foundation.admitted_axioms",
+          "value": [
+            "undeclared.axiom"
+          ]
+        },
+        {
+          "op": "set",
+          "path": "trusted_foundation.theorem_with_axiom_dependency_count",
+          "value": 1
+        },
+        {
+          "op": "set",
+          "path": "trusted_foundation.status",
+          "value": "warning_admitted_axioms_present"
+        },
+        {
+          "op": "set",
+          "path": "claim_boundary.mathematical_status",
+          "value": "machine_checked_with_formal_assumption_warning"
+        }
+      ],
+      "verify_live_files": false
+    },
+    {
+      "case_id": "formal_gap_fails",
+      "expected_status": "FAIL",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "trusted_foundation.forbidden_declaration_scan.sorry",
+          "value": true
+        }
+      ],
+      "verify_live_files": false
+    },
+    {
+      "case_id": "single_build_reproducibility_claim_fails",
+      "expected_status": "FAIL",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "proof_objects.0.clean_build_count",
+          "value": 1
+        },
+        {
+          "op": "set",
+          "path": "build.clean_build_count",
+          "value": 1
+        }
+      ],
+      "verify_live_files": false
+    },
+    {
+      "case_id": "proof_object_hash_disagreement_fails",
+      "expected_status": "FAIL",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "build.proof_object_sha256",
+          "value": "1111111111111111111111111111111111111111111111111111111111111111"
+        }
+      ],
+      "verify_live_files": false
+    },
+    {
+      "case_id": "proof_authority_promotion_fails",
+      "expected_status": "FAIL",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "claim_boundary.proof_authority",
+          "value": true
+        },
+        {
+          "op": "set",
+          "path": "authorization_layers.proof_authority",
+          "value": true
+        }
+      ],
+      "verify_live_files": false
+    },
+    {
+      "case_id": "generated_source_path_fails",
+      "expected_status": "FAIL",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "theorem_statement.path",
+          "value": "wiki/tex/generated-theorem.tex"
+        }
+      ],
+      "verify_live_files": true
+    },
+    {
+      "case_id": "release_commit_receipt_mismatch_fails",
+      "expected_status": "FAIL",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "toolchain.release_commit",
+          "value": "0000000000000000000000000000000000000000"
+        }
+      ],
+      "verify_live_files": true
+    },
+    {
+      "case_id": "trust_receipt_count_mismatch_fails",
+      "expected_status": "FAIL",
+      "mutations": [
+        {
+          "op": "set",
+          "path": "trusted_foundation.theorem_axiom_report_count",
+          "value": 5
+        }
+      ],
+      "verify_live_files": true
+    }
+  ],
+  "schema_id": "v21_proof_evidence_fixture_suite_v1"
+}

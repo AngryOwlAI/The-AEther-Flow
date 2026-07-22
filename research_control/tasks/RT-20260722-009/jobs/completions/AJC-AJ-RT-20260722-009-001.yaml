@@ -1,0 +1,306 @@
+completion_id: "AJC-AJ-RT-20260722-009-001"
+job_id: "AJ-RT-20260722-009-001"
+task_id: "RT-20260722-009"
+decision_id: "DDR-20260722-009"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260722-009"
+status: "completed"
+completed_at: "2026-07-22T13:33:51Z"
+validation_status: "PASS"
+result_summary: "P11-T03 completed a layered proof-evidence record schema trusted-foundation policy and deterministic adapter. The live P2-T05 migration binds theorem formal-source proof-object toolchain release trust and receipt evidence by exact hashes. Twelve fixtures yield one axiom-free machine-check PASS one formal-assumption warning and ten fail-closed results; fourteen focused tests pass. No proof authority physical interpretation ontology adoption science delta review replication or promotion was issued."
+plan_task_id: "P11-T03"
+recommendation_ids:
+  - "V21-R39"
+  - "V21-R56"
+  - "V21-R66"
+claim_boundary_id: "CB-V21-P11-T03-PROOF-EVIDENCE-001"
+
+artifacts:
+  schema_path: "research_control/tasks/RT-20260722-009/artifacts/proof_artifact_registry_schema.md"
+  schema_sha256: "bbca4a9b028868d61a4d01a6fe0af68008c8fb98952b3745b828805d5b788ce2"
+  trusted_foundation_policy_path: "research_control/tasks/RT-20260722-009/artifacts/trusted_foundation_policy.md"
+  trusted_foundation_policy_sha256: "d901cc120276a22c81fe20dd104b6b2293e215ecf4b33469dd29230e99b7a545"
+  adapter_path: "research_control/tasks/RT-20260722-009/artifacts/proof_build_adapter.py"
+  adapter_sha256: "5026418a203e65dddc75399ee0f6b2385b7492f02eb0c32a71a70fbc8c1e7376"
+  fixtures_path: "research_control/tasks/RT-20260722-009/artifacts/proof_evidence_fixtures.json"
+  fixtures_sha256: "cf209773195e52d06effabf7dbe0461cec1d0a1d3456aa2076ee2c8fc168f057"
+  validation_report_path: "research_control/tasks/RT-20260722-009/artifacts/proof_evidence_validation_report.json"
+  validation_report_sha256: "a5c52daeef31ab25ad2d422f6b01977086cf07935bdae952688a16c061dbc3b7"
+  compact_receipt_path: "research_control/tasks/RT-20260722-009/artifacts/proof_evidence_compact_receipt.json"
+  compact_receipt_sha256: "dc1518be22a1628336e01362ebbc375379ee2ce536147da346af41f2c0cc78c0"
+  focused_test_path: "tests/test_proof_evidence_registration.py"
+  focused_test_sha256: "49f708b21d52dc3a17cfd1d054f25e50024db9428091d1df9b9ba96a656d79b4"
+  execution_role_path: "research_control/tasks/RT-20260722-009/roles/validator-engineer@0.2.0--RT-20260722-009.yaml"
+  execution_role_sha256: "fab32b4e1de3830f5a5ac68f207483fc26349a06e27ce8f7852a6c5420b72159"
+  dependency_p2_t05_completion_path: "research_control/tasks/RT-20260720-018/jobs/completions/AJC-AJ-RT-20260720-018-001.yaml"
+  dependency_p2_t05_completion_sha256: "92a32a9124b2ce1ac7b0d3769b1adf2f9d6a8a6f032d2bc0e900025a4123554d"
+  dependency_p10_t01_completion_path: "research_control/tasks/RT-20260721-003/jobs/completions/AJC-AJ-RT-20260721-003-001.yaml"
+  dependency_p10_t01_completion_sha256: "28ea88fbfbecd144b7b742152be0fab44cafd0b8ac21869d9ad6be105f2f7305"
+  migrated_theorem_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+  migrated_theorem_sha256: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  migrated_proof_source_path: "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean"
+  migrated_proof_source_sha256: "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+  migrated_toolchain_lock_path: "research_control/tasks/RT-20260720-018/artifacts/proof/toolchain-lock.json"
+  migrated_toolchain_lock_sha256: "bad311d77fc08c7d5347156401dcd565d1d96d8b8177e13713bbec1f1e78905d"
+  migrated_build_script_path: "research_control/tasks/RT-20260720-018/artifacts/proof/build_proof.sh"
+  migrated_build_script_sha256: "ed5d4d63b803737aafa4761a740aa4f3046e61f678a1c5d1841d94cc5cbf0e36"
+  migrated_validation_receipt_path: "research_control/tasks/RT-20260720-018/artifacts/eqsrc_selector_formal_proof_validation.json"
+  migrated_validation_receipt_sha256: "9628e6ca789aff6df0da5039f51f3661ce50cab0461927650fe4b49f5aec9932"
+  migrated_proof_object_sha256: "3fff7e0bff2e331400ba52305a2f34e3deb93f2b85ac1e3850a1625ef6bd468a"
+  lean_version: "4.30.0"
+  lean_release_commit: "d024af099ca4bf2c86f649261ebf59565dc8c622"
+  lean_archive_sha256: "072dca4a38fbc0d3cedb96fea886cc243b424f2bd16247596200b9a9ab93f0f5"
+  clean_build_count: 2
+  theorem_axiom_report_count: 6
+  theorem_with_axiom_dependency_count: 0
+  fixture_count: 12
+  machine_checked_no_axiom_dependency_pass_count: 1
+  formal_assumption_warning_count: 1
+  fail_closed_fixture_count: 10
+  unexpected_fixture_result_count: 0
+  focused_test_count: 14
+  focused_test_failure_count: 0
+  deterministic_rebuild_passed: true
+  source_science_mutated: false
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P11-T03 registers existing formal assumptions and warning semantics; it adopts no scientific premise ontology assumption source law or physical interpretation."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  theorem_source_referenced:
+    - "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+  proof_evidence_record_ids_created:
+    - "PROOF-EVIDENCE-P2-T05-LEAN-001"
+  identity_note: "The exact existing P2 theorem and Lean evidence are migrated into a new control record without rewriting the theorem formal source proof output or their scientific status."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260722-009/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-009/DDR-20260722-009.md"
+  - "research_control/tasks/RT-20260722-009/artifacts/proof_artifact_registry_schema.md"
+  - "research_control/tasks/RT-20260722-009/artifacts/trusted_foundation_policy.md"
+  - "research_control/tasks/RT-20260722-009/artifacts/proof_build_adapter.py"
+  - "research_control/tasks/RT-20260722-009/artifacts/proof_evidence_fixtures.json"
+  - "research_control/tasks/RT-20260722-009/artifacts/proof_evidence_validation_report.json"
+  - "research_control/tasks/RT-20260722-009/artifacts/proof_evidence_compact_receipt.json"
+  - "tests/test_proof_evidence_registration.py"
+  - "research_control/tasks/RT-20260722-009/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260722-009/jobs/AJ-RT-20260722-009-001.yaml"
+  - "research_control/tasks/RT-20260722-009/jobs/completions/AJC-AJ-RT-20260722-009-001.yaml"
+  - "research_control/tasks/RT-20260722-009/roles/validator-engineer@0.2.0--RT-20260722-009.yaml"
+  - "research_control/handoffs/handoff-0819.yaml"
+  - "research_control/handoffs/handoff-0819.md"
+outputs_updated:
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/compact_current_frontier_v16.json"
+  - "output/compact_current_frontier_v16.yaml"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make mechanized proof evidence durable and correctly scoped."
+  explanation: "P11-T03 supplies durable formal-evidence metadata and validation machinery but no new mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Formal-evidence registration neither discharges nor worsens the source-equivalence physics burden and changes no theorem statement or scientific status."
+  downstream_unlocked:
+    - "P11-T07 after all P11-T03 P11-T04 P11-T05 and P11-T06 dependencies are qualifying completions"
+  downstream_still_blocked:
+    - "broader P10 data-model rollout until P10-AUDIT-F001 and P10-AUDIT-F002 are repaired"
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  proof_evidence_registration_authorized: true
+  proof_authority: false
+  review_execution_authorized: false
+  independent_replication_completed: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 50 route identity lease parity max effort repository binding clean start predecessor completion and single consumption were verified before work."
+      - "P2-T05 and P10-T01 completion hashes match the immutable task boundary."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Twelve fixtures resolve to one scoped machine-check PASS one visible formal-assumption warning and ten expected fail-closed outcomes with zero unexpected results."
+      - "Fourteen focused tests pass and deterministic regeneration reports zero drift."
+      - "The live migration cross-checks theorem formal source proof object tool version release commit trust reports and forbidden-declaration receipt evidence."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Affected-plan documentation-impact project-improvement claim-language research-control memory and diff validations are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier compact-frontier and policy-generated derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+forbidden_conclusion_summary:
+  summary: "Mechanized build evidence is layered project-control evidence and not proof authority theorem translation fidelity physical interpretation ontology adoption scientific promotion review replication publication or completed derivation."
+  forbidden_conclusions:
+    - "validator PASS treated as proof authority theorem truth or translation fidelity"
+    - "formalization or proof-object identity treated as physical interpretation empirical support or source-law adoption"
+    - "formal failure treated as physical refutation ontology impossibility or global no-go"
+    - "m_src adoption or source-law adoption"
+    - "g_eff or effective metric promotion"
+    - "matter coupling or Einstein equation derivation"
+    - "external review independent replication benchmark promotion publication or completed derivation"
+    - "P11-T07 P11-T08 P12-T05 P10 repair or P4-T05 executed inside P11-T03"
+  source_artifacts_mutated: false
+  review_executed: false
+  scientific_status_changed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260722-009/artifacts/proof_build_adapter.py --write --json | exit_code=0 | status=PASS fixtures=12 machine_check_pass=1 warning=1 fail_closed=10 unexpected=0"
+  - ".venv/bin/python -m unittest -v tests.test_proof_evidence_registration | exit_code=0 | tests=14 failures=0"
+  - ".venv/bin/python research_control/tasks/RT-20260722-009/artifacts/proof_build_adapter.py --check --json | required before checkpoint"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260722-009 tests/test_proof_evidence_registration.py research_control/program_state.yaml research_control/handoffs/handoff-0819.yaml --explain | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write and --check plus validate_compact_current_frontier_v16.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json and resolve_project_improvement.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | required before checkpoint"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | required before checkpoint"
+  - "git diff --check | required before checkpoint"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 982
+    relationship_row_count: 4859
+    semantic_row_count: 982
+    vault_row_count: 982
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 5
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search proof assistant evidence registration --limit 10 --json"
+      query_type: "search"
+      query_text: "proof assistant evidence registration"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup research_control/design/v21_scientific_status_schema.md --json"
+      query_type: "lookup"
+      query_text: "research_control/design/v21_scientific_status_schema.md"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "62225adcd74fbf1a464e0590ea17d5996a3466e9c6458ac397a034a938da81d5"
+      preflight_source_hash: "3b469e8f567cad76a509bf26d6cc89b7bf85eb6980eb35f458ef41f048b22766"
+      source_hash_refresh_reason: "The active task lawfully regenerated the mutable current-frontier source; the exact preflight hash remains preserved above."
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/v21_scientific_status_schema.md"
+      source_hash: "cc8225283cef43e0072445162cb76facdd6d98f65ac9854e999b69977e26f8d6"
+  authority_note: "Obsidian wiki semantic relationship and .local surfaces are retrieval layers only and not authority; registered canonical sources and tracked control state governed the task."
+
+next_work_item:
+  plan_task_id: "P11-T07"
+  task_type: "v21_independent_review_pilot"
+  role_family: "external-red-team-reviewer@0.1.0"
+  worker_skill: "continue-research"
+  route_label: "external-review-packet"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Validate the new scientific QA system on high-value claims."
+  dependency_ready: true
+  executed: false
+  physics_promotion_authorized: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P11-T03 is the direct planned project-system packet and completed without an incidental reliability finding requiring a separate sidecar."
