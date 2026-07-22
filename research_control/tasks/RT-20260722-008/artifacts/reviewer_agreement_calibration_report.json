@@ -1,0 +1,659 @@
+{
+  "authority_boundary": {
+    "consensus_sets_scientific_status": false,
+    "external_review_completed_by_task": false,
+    "independent_replication_completed_by_task": false,
+    "metric_threshold_sets_scientific_status": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authority": false,
+    "review_executed_by_task": false
+  },
+  "blinded_configuration_comparison": {
+    "agreement_optimization_forbidden": true,
+    "configuration_summaries": [
+      {
+        "assessed_axis_count": 9,
+        "configuration_blind_id": "cfg-a",
+        "finding_axis_count": 2,
+        "high_or_critical_axis_count": 0,
+        "not_assessed_axis_count": 1,
+        "review_context_classes": [
+          "blind_same_model_review",
+          "same_context_role_review"
+        ],
+        "review_count": 2,
+        "reviewed_object_count": 2,
+        "unique_finding_categories": [
+          "omission",
+          "scope_overreach"
+        ],
+        "unresolved_finding_axis_count": 2
+      },
+      {
+        "assessed_axis_count": 10,
+        "configuration_blind_id": "cfg-b",
+        "finding_axis_count": 4,
+        "high_or_critical_axis_count": 3,
+        "not_assessed_axis_count": 0,
+        "review_context_classes": [
+          "different_model_review",
+          "same_context_role_review"
+        ],
+        "review_count": 2,
+        "reviewed_object_count": 2,
+        "unique_finding_categories": [
+          "counterexample",
+          "evidence_gap",
+          "interpretation_mismatch",
+          "scope_overreach"
+        ],
+        "unresolved_finding_axis_count": 4
+      },
+      {
+        "assessed_axis_count": 5,
+        "configuration_blind_id": "cfg-c",
+        "finding_axis_count": 4,
+        "high_or_critical_axis_count": 3,
+        "not_assessed_axis_count": 0,
+        "review_context_classes": [
+          "human_expert_review"
+        ],
+        "review_count": 1,
+        "reviewed_object_count": 1,
+        "unique_finding_categories": [
+          "counterexample",
+          "interpretation_mismatch",
+          "omission",
+          "scope_overreach"
+        ],
+        "unresolved_finding_axis_count": 3
+      },
+      {
+        "assessed_axis_count": 3,
+        "configuration_blind_id": "cfg-d",
+        "finding_axis_count": 2,
+        "high_or_critical_axis_count": 0,
+        "not_assessed_axis_count": 2,
+        "review_context_classes": [
+          "unknown"
+        ],
+        "review_count": 1,
+        "reviewed_object_count": 1,
+        "unique_finding_categories": [
+          "ambiguity",
+          "evidence_gap"
+        ],
+        "unresolved_finding_axis_count": 2
+      }
+    ],
+    "ranking_forbidden": true,
+    "winner": null
+  },
+  "calibration_mode": "synthetic_calibration",
+  "errors": [],
+  "false_consensus_risks": [
+    {
+      "axis": "theorem_validity",
+      "correlated_or_unknown_dimensions": [
+        "model_family",
+        "prompt_context",
+        "data_access",
+        "institution",
+        "human_authorship",
+        "code_base",
+        "method"
+      ],
+      "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+      "review_context_classes": [
+        "same_context_role_review"
+      ],
+      "review_ids": [
+        "CAL-REVIEW-TAXONOMY-001",
+        "CAL-REVIEW-TAXONOMY-002"
+      ],
+      "reviewed_object_id": "MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY",
+      "risk_id": "FALSE-CONSENSUS:MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY:theorem_validity",
+      "scientific_status_effect": "none"
+    },
+    {
+      "axis": "assumptions",
+      "correlated_or_unknown_dimensions": [
+        "model_family",
+        "prompt_context",
+        "data_access",
+        "institution",
+        "human_authorship",
+        "code_base",
+        "method"
+      ],
+      "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+      "review_context_classes": [
+        "same_context_role_review"
+      ],
+      "review_ids": [
+        "CAL-REVIEW-TAXONOMY-001",
+        "CAL-REVIEW-TAXONOMY-002"
+      ],
+      "reviewed_object_id": "MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY",
+      "risk_id": "FALSE-CONSENSUS:MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY:assumptions",
+      "scientific_status_effect": "none"
+    },
+    {
+      "axis": "countermodels",
+      "correlated_or_unknown_dimensions": [
+        "model_family",
+        "prompt_context",
+        "data_access",
+        "institution",
+        "human_authorship",
+        "code_base",
+        "method"
+      ],
+      "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+      "review_context_classes": [
+        "same_context_role_review"
+      ],
+      "review_ids": [
+        "CAL-REVIEW-TAXONOMY-001",
+        "CAL-REVIEW-TAXONOMY-002"
+      ],
+      "reviewed_object_id": "MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY",
+      "risk_id": "FALSE-CONSENSUS:MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY:countermodels",
+      "scientific_status_effect": "none"
+    },
+    {
+      "axis": "physical_interpretation",
+      "correlated_or_unknown_dimensions": [
+        "model_family",
+        "prompt_context",
+        "data_access",
+        "institution",
+        "human_authorship",
+        "code_base",
+        "method"
+      ],
+      "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+      "review_context_classes": [
+        "same_context_role_review"
+      ],
+      "review_ids": [
+        "CAL-REVIEW-TAXONOMY-001",
+        "CAL-REVIEW-TAXONOMY-002"
+      ],
+      "reviewed_object_id": "MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY",
+      "risk_id": "FALSE-CONSENSUS:MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY:physical_interpretation",
+      "scientific_status_effect": "none"
+    },
+    {
+      "axis": "claim_scope",
+      "correlated_or_unknown_dimensions": [
+        "model_family",
+        "prompt_context",
+        "data_access",
+        "institution",
+        "human_authorship",
+        "code_base",
+        "method"
+      ],
+      "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+      "review_context_classes": [
+        "same_context_role_review"
+      ],
+      "review_ids": [
+        "CAL-REVIEW-TAXONOMY-001",
+        "CAL-REVIEW-TAXONOMY-002"
+      ],
+      "reviewed_object_id": "MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY",
+      "risk_id": "FALSE-CONSENSUS:MD-V21-P11-T02-REVIEW-INDEPENDENCE-TAXONOMY:claim_scope",
+      "scientific_status_effect": "none"
+    }
+  ],
+  "metrics": {
+    "assessment_disagreement_count": 13,
+    "axis_count": 5,
+    "coverage_gap_pair_axis_count": 8,
+    "eligible_pair_axis_comparison_count": 27,
+    "exact_assessment_agreement_count": 14,
+    "exact_assessment_agreement_rate": 0.518519,
+    "false_consensus_risk_count": 5,
+    "review_execution_count": 0,
+    "review_record_count": 6,
+    "reviewed_object_count": 2,
+    "synthetic_calibration_record_count": 6,
+    "unknown_independence_record_count": 1,
+    "unresolved_conflict_count": 13
+  },
+  "review_axes": [
+    "theorem_validity",
+    "assumptions",
+    "countermodels",
+    "physical_interpretation",
+    "claim_scope"
+  ],
+  "review_context_class_summaries": [
+    {
+      "classification": "same_context_role_review",
+      "disagreement": 0,
+      "eligible": 5,
+      "exact": 5,
+      "exact_agreement_rate": 1.0,
+      "review_count": 2
+    },
+    {
+      "classification": "blind_same_model_review",
+      "disagreement": 0,
+      "eligible": 0,
+      "exact": 0,
+      "exact_agreement_rate": null,
+      "review_count": 1
+    },
+    {
+      "classification": "different_model_review",
+      "disagreement": 0,
+      "eligible": 0,
+      "exact": 0,
+      "exact_agreement_rate": null,
+      "review_count": 1
+    },
+    {
+      "classification": "human_expert_review",
+      "disagreement": 0,
+      "eligible": 0,
+      "exact": 0,
+      "exact_agreement_rate": null,
+      "review_count": 1
+    },
+    {
+      "classification": "independent_replication",
+      "disagreement": 0,
+      "eligible": 0,
+      "exact": 0,
+      "exact_agreement_rate": null,
+      "review_count": 0
+    },
+    {
+      "classification": "unknown",
+      "disagreement": 0,
+      "eligible": 0,
+      "exact": 0,
+      "exact_agreement_rate": null,
+      "review_count": 1
+    }
+  ],
+  "review_context_pair_summaries": [
+    {
+      "disagreement": 2,
+      "eligible": 4,
+      "exact": 2,
+      "exact_agreement_rate": 0.5,
+      "pair_class": "blind_same_model_review__x__different_model_review"
+    },
+    {
+      "disagreement": 2,
+      "eligible": 4,
+      "exact": 2,
+      "exact_agreement_rate": 0.5,
+      "pair_class": "blind_same_model_review__x__human_expert_review"
+    },
+    {
+      "disagreement": 2,
+      "eligible": 3,
+      "exact": 1,
+      "exact_agreement_rate": 0.333333,
+      "pair_class": "blind_same_model_review__x__unknown"
+    },
+    {
+      "disagreement": 3,
+      "eligible": 5,
+      "exact": 2,
+      "exact_agreement_rate": 0.4,
+      "pair_class": "different_model_review__x__human_expert_review"
+    },
+    {
+      "disagreement": 2,
+      "eligible": 3,
+      "exact": 1,
+      "exact_agreement_rate": 0.333333,
+      "pair_class": "different_model_review__x__unknown"
+    },
+    {
+      "disagreement": 2,
+      "eligible": 3,
+      "exact": 1,
+      "exact_agreement_rate": 0.333333,
+      "pair_class": "human_expert_review__x__unknown"
+    },
+    {
+      "disagreement": 0,
+      "eligible": 5,
+      "exact": 5,
+      "exact_agreement_rate": 1.0,
+      "pair_class": "same_context_role_review__x__same_context_role_review"
+    }
+  ],
+  "schema_id": "v21_reviewer_agreement_metric_report_v1",
+  "source_hashes": {
+    ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md": "0466b3f03bb9dbe27723c196fce4856a0352a4cd92e6ae00faa58fdc36d7c6b8",
+    "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md": "6167db6a8c1d67f96bd14aaf52f18fb3666cca1c78b0a42ddc614bc7b56f4ce7",
+    "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md": "7d679cbcbc05bf771333ba7d3afddb351159b87d0edd92e720942428389b62c6",
+    "research_control/tasks/RT-20260722-008/artifacts/build_reviewer_agreement_report.py": "21f000888bd338135e61c5e111cd26311ae8a191610856aeaa2b38bfee077d89",
+    "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_metric_specification.md": "5a2df535c773ee74ad0926fb4100162453bf394e5e47a80df256d52e922593e2",
+    "research_control/tasks/RT-20260722-008/artifacts/reviewer_metric_calibration_fixtures.json": "7081bf4dd21abff154c2e04fae4b092ae449420c04a2229704b80ff3b4aaf78f"
+  },
+  "status": "PASS",
+  "unresolved_conflicts": [
+    {
+      "axis": "assumptions",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:assumptions:CAL-REVIEW-POLICY-001:CAL-REVIEW-POLICY-002",
+      "left_assessment": {
+        "finding_category": "omission",
+        "resolution_status": "unresolved",
+        "severity": "medium",
+        "verdict": "concern"
+      },
+      "left_configuration_blind_id": "cfg-a",
+      "left_context_class": "blind_same_model_review",
+      "left_review_id": "CAL-REVIEW-POLICY-001",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "evidence_gap",
+        "resolution_status": "unresolved",
+        "severity": "high",
+        "verdict": "repair_required"
+      },
+      "right_configuration_blind_id": "cfg-b",
+      "right_context_class": "different_model_review",
+      "right_review_id": "CAL-REVIEW-POLICY-002",
+      "unresolved": true
+    },
+    {
+      "axis": "physical_interpretation",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:physical_interpretation:CAL-REVIEW-POLICY-001:CAL-REVIEW-POLICY-002",
+      "left_assessment": {
+        "finding_category": "no_finding",
+        "resolution_status": "no_finding",
+        "severity": "none",
+        "verdict": "clear"
+      },
+      "left_configuration_blind_id": "cfg-a",
+      "left_context_class": "blind_same_model_review",
+      "left_review_id": "CAL-REVIEW-POLICY-001",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "interpretation_mismatch",
+        "resolution_status": "unresolved",
+        "severity": "high",
+        "verdict": "repair_required"
+      },
+      "right_configuration_blind_id": "cfg-b",
+      "right_context_class": "different_model_review",
+      "right_review_id": "CAL-REVIEW-POLICY-002",
+      "unresolved": true
+    },
+    {
+      "axis": "physical_interpretation",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:physical_interpretation:CAL-REVIEW-POLICY-001:CAL-REVIEW-POLICY-003",
+      "left_assessment": {
+        "finding_category": "no_finding",
+        "resolution_status": "no_finding",
+        "severity": "none",
+        "verdict": "clear"
+      },
+      "left_configuration_blind_id": "cfg-a",
+      "left_context_class": "blind_same_model_review",
+      "left_review_id": "CAL-REVIEW-POLICY-001",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "interpretation_mismatch",
+        "resolution_status": "unresolved",
+        "severity": "high",
+        "verdict": "repair_required"
+      },
+      "right_configuration_blind_id": "cfg-c",
+      "right_context_class": "human_expert_review",
+      "right_review_id": "CAL-REVIEW-POLICY-003",
+      "unresolved": true
+    },
+    {
+      "axis": "claim_scope",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:claim_scope:CAL-REVIEW-POLICY-001:CAL-REVIEW-POLICY-003",
+      "left_assessment": {
+        "finding_category": "scope_overreach",
+        "resolution_status": "unresolved",
+        "severity": "medium",
+        "verdict": "concern"
+      },
+      "left_configuration_blind_id": "cfg-a",
+      "left_context_class": "blind_same_model_review",
+      "left_review_id": "CAL-REVIEW-POLICY-001",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "scope_overreach",
+        "resolution_status": "unresolved",
+        "severity": "high",
+        "verdict": "blocking"
+      },
+      "right_configuration_blind_id": "cfg-c",
+      "right_context_class": "human_expert_review",
+      "right_review_id": "CAL-REVIEW-POLICY-003",
+      "unresolved": true
+    },
+    {
+      "axis": "physical_interpretation",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:physical_interpretation:CAL-REVIEW-POLICY-001:CAL-REVIEW-POLICY-004",
+      "left_assessment": {
+        "finding_category": "no_finding",
+        "resolution_status": "no_finding",
+        "severity": "none",
+        "verdict": "clear"
+      },
+      "left_configuration_blind_id": "cfg-a",
+      "left_context_class": "blind_same_model_review",
+      "left_review_id": "CAL-REVIEW-POLICY-001",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "ambiguity",
+        "resolution_status": "unresolved",
+        "severity": "unknown",
+        "verdict": "concern"
+      },
+      "right_configuration_blind_id": "cfg-d",
+      "right_context_class": "unknown",
+      "right_review_id": "CAL-REVIEW-POLICY-004",
+      "unresolved": true
+    },
+    {
+      "axis": "claim_scope",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:claim_scope:CAL-REVIEW-POLICY-001:CAL-REVIEW-POLICY-004",
+      "left_assessment": {
+        "finding_category": "scope_overreach",
+        "resolution_status": "unresolved",
+        "severity": "medium",
+        "verdict": "concern"
+      },
+      "left_configuration_blind_id": "cfg-a",
+      "left_context_class": "blind_same_model_review",
+      "left_review_id": "CAL-REVIEW-POLICY-001",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "evidence_gap",
+        "resolution_status": "unresolved",
+        "severity": "unknown",
+        "verdict": "concern"
+      },
+      "right_configuration_blind_id": "cfg-d",
+      "right_context_class": "unknown",
+      "right_review_id": "CAL-REVIEW-POLICY-004",
+      "unresolved": true
+    },
+    {
+      "axis": "assumptions",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:assumptions:CAL-REVIEW-POLICY-002:CAL-REVIEW-POLICY-003",
+      "left_assessment": {
+        "finding_category": "evidence_gap",
+        "resolution_status": "unresolved",
+        "severity": "high",
+        "verdict": "repair_required"
+      },
+      "left_configuration_blind_id": "cfg-b",
+      "left_context_class": "different_model_review",
+      "left_review_id": "CAL-REVIEW-POLICY-002",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "omission",
+        "resolution_status": "resolved",
+        "severity": "medium",
+        "verdict": "concern"
+      },
+      "right_configuration_blind_id": "cfg-c",
+      "right_context_class": "human_expert_review",
+      "right_review_id": "CAL-REVIEW-POLICY-003",
+      "unresolved": true
+    },
+    {
+      "axis": "countermodels",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:countermodels:CAL-REVIEW-POLICY-002:CAL-REVIEW-POLICY-003",
+      "left_assessment": {
+        "finding_category": "counterexample",
+        "resolution_status": "unresolved",
+        "severity": "high",
+        "verdict": "concern"
+      },
+      "left_configuration_blind_id": "cfg-b",
+      "left_context_class": "different_model_review",
+      "left_review_id": "CAL-REVIEW-POLICY-002",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "counterexample",
+        "resolution_status": "unresolved",
+        "severity": "critical",
+        "verdict": "blocking"
+      },
+      "right_configuration_blind_id": "cfg-c",
+      "right_context_class": "human_expert_review",
+      "right_review_id": "CAL-REVIEW-POLICY-003",
+      "unresolved": true
+    },
+    {
+      "axis": "claim_scope",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:claim_scope:CAL-REVIEW-POLICY-002:CAL-REVIEW-POLICY-003",
+      "left_assessment": {
+        "finding_category": "scope_overreach",
+        "resolution_status": "unresolved",
+        "severity": "medium",
+        "verdict": "concern"
+      },
+      "left_configuration_blind_id": "cfg-b",
+      "left_context_class": "different_model_review",
+      "left_review_id": "CAL-REVIEW-POLICY-002",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "scope_overreach",
+        "resolution_status": "unresolved",
+        "severity": "high",
+        "verdict": "blocking"
+      },
+      "right_configuration_blind_id": "cfg-c",
+      "right_context_class": "human_expert_review",
+      "right_review_id": "CAL-REVIEW-POLICY-003",
+      "unresolved": true
+    },
+    {
+      "axis": "physical_interpretation",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:physical_interpretation:CAL-REVIEW-POLICY-002:CAL-REVIEW-POLICY-004",
+      "left_assessment": {
+        "finding_category": "interpretation_mismatch",
+        "resolution_status": "unresolved",
+        "severity": "high",
+        "verdict": "repair_required"
+      },
+      "left_configuration_blind_id": "cfg-b",
+      "left_context_class": "different_model_review",
+      "left_review_id": "CAL-REVIEW-POLICY-002",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "ambiguity",
+        "resolution_status": "unresolved",
+        "severity": "unknown",
+        "verdict": "concern"
+      },
+      "right_configuration_blind_id": "cfg-d",
+      "right_context_class": "unknown",
+      "right_review_id": "CAL-REVIEW-POLICY-004",
+      "unresolved": true
+    },
+    {
+      "axis": "claim_scope",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:claim_scope:CAL-REVIEW-POLICY-002:CAL-REVIEW-POLICY-004",
+      "left_assessment": {
+        "finding_category": "scope_overreach",
+        "resolution_status": "unresolved",
+        "severity": "medium",
+        "verdict": "concern"
+      },
+      "left_configuration_blind_id": "cfg-b",
+      "left_context_class": "different_model_review",
+      "left_review_id": "CAL-REVIEW-POLICY-002",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "evidence_gap",
+        "resolution_status": "unresolved",
+        "severity": "unknown",
+        "verdict": "concern"
+      },
+      "right_configuration_blind_id": "cfg-d",
+      "right_context_class": "unknown",
+      "right_review_id": "CAL-REVIEW-POLICY-004",
+      "unresolved": true
+    },
+    {
+      "axis": "physical_interpretation",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:physical_interpretation:CAL-REVIEW-POLICY-003:CAL-REVIEW-POLICY-004",
+      "left_assessment": {
+        "finding_category": "interpretation_mismatch",
+        "resolution_status": "unresolved",
+        "severity": "high",
+        "verdict": "repair_required"
+      },
+      "left_configuration_blind_id": "cfg-c",
+      "left_context_class": "human_expert_review",
+      "left_review_id": "CAL-REVIEW-POLICY-003",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "ambiguity",
+        "resolution_status": "unresolved",
+        "severity": "unknown",
+        "verdict": "concern"
+      },
+      "right_configuration_blind_id": "cfg-d",
+      "right_context_class": "unknown",
+      "right_review_id": "CAL-REVIEW-POLICY-004",
+      "unresolved": true
+    },
+    {
+      "axis": "claim_scope",
+      "conflict_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY:claim_scope:CAL-REVIEW-POLICY-003:CAL-REVIEW-POLICY-004",
+      "left_assessment": {
+        "finding_category": "scope_overreach",
+        "resolution_status": "unresolved",
+        "severity": "high",
+        "verdict": "blocking"
+      },
+      "left_configuration_blind_id": "cfg-c",
+      "left_context_class": "human_expert_review",
+      "left_review_id": "CAL-REVIEW-POLICY-003",
+      "reviewed_object_id": "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY",
+      "right_assessment": {
+        "finding_category": "evidence_gap",
+        "resolution_status": "unresolved",
+        "severity": "unknown",
+        "verdict": "concern"
+      },
+      "right_configuration_blind_id": "cfg-d",
+      "right_context_class": "unknown",
+      "right_review_id": "CAL-REVIEW-POLICY-004",
+      "unresolved": true
+    }
+  ]
+}

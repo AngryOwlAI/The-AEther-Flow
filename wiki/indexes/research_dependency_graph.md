@@ -6,10 +6,10 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-07-22T10:18:10Z`
-- Source fingerprint: `f727c63a5996b038982d61b49b884816aa81ed45793b5b8382856d6e4b50aa32`
-- Nodes: `20791`
-- Edges: `70266`
+- Generated from tracked state as of: `2026-07-22T12:49:00Z`
+- Source fingerprint: `a032c811782a3cd651e361fbf0bbad62328b737a873702d3dadb5e73866dfb58`
+- Nodes: `20845`
+- Edges: `70421`
 
 ## Source Counts
 
@@ -17,11 +17,11 @@ Authority notice: This generated dependency graph is navigational support only. 
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1047 |
+| `completion_yaml` | 1050 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 815 |
+| `handoff_yaml` | 818 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -33,18 +33,18 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 7 |
-| `agent_job` | `support_only` | 1047 |
+| `agent_job` | `support_only` | 1050 |
 | `artifact` | `canonical_source` | 86 |
-| `artifact` | `support_only` | 10686 |
-| `blocked_burden` | `blocked` | 4053 |
-| `claim_boundary` | `support_only` | 1004 |
+| `artifact` | `support_only` | 10707 |
+| `blocked_burden` | `blocked` | 4070 |
+| `claim_boundary` | `support_only` | 1007 |
 | `draft_control_candidate` | `draft_control` | 702 |
 | `draft_control_candidate` | `proposal_only` | 110 |
 | `draft_control_candidate` | `science_draft` | 64 |
 | `frozen_negative` | `frozen_negative` | 131 |
 | `gate_chair_verdict` | `human_gated` | 31 |
-| `handoff` | `support_only` | 815 |
-| `human_gated_object` | `human_gated` | 465 |
+| `handoff` | `support_only` | 818 |
+| `human_gated_object` | `human_gated` | 469 |
 | `ledger_row` | `accepted_scoped` | 5 |
 | `ledger_row` | `blocked` | 4 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -58,7 +58,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `source_ontology_object` | `support_only` | 336 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 32 |
-| `task` | `support_only` | 986 |
+| `task` | `support_only` | 989 |
 
 ## Frontier Table
 
@@ -100,6 +100,7 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:agent_native_authority` | Blocked claim: Agent-Native authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_change` | Blocked claim: AgentJob allowlist change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:agentjob_allowlist_expansion` | Blocked claim: AgentJob allowlist expansion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:agreement_or_consensus_as_truth` | Blocked claim: agreement or consensus as truth | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:ai_validator_pass_as_physics_proof` | Blocked claim: AI validator PASS as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_map_as_ledger_authority` | Blocked claim: alias map as ledger authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_map_as_physics_proof` | Blocked claim: alias map as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -159,13 +160,12 @@ Authority notice: This generated dependency graph is navigational support only. 
 | `blocked_claim:autonomous_gate_chair_route` | Blocked claim: autonomous Gate Chair route | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:autonomous_scientific_authority` | Blocked claim: autonomous scientific authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:autonomous_scientific_authority_claim` | Blocked claim: autonomous scientific authority claim | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:b_e_as_matter_coupling` | Blocked claim: B_E as matter coupling | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260722-005`
-- Latest handoff: `handoff-0815`
-- Handoff path: `research_control/handoffs/handoff-0815.yaml`
-- Next action: Run exactly one bounded P11-T04 validator-engineer project-system AgentJob to build the semantic-smuggling adversarial fixture suite. Require deterministic alias split-encoding equivalent-form misleading-certificate and prompt-level fixtures with measured false positives and false negatives.
+- Active task: `RT-20260722-008`
+- Latest handoff: `handoff-0818`
+- Handoff path: `research_control/handoffs/handoff-0818.yaml`
+- Next action: Run exactly one bounded P11-T03 validator-engineer project-system AgentJob to integrate proof-assistant evidence into research-control records without promoting physical interpretations.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

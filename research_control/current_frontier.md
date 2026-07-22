@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260722-007` and `handoff-0817`.
+`RT-20260722-008` and `handoff-0818`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260722-007` |
-| Latest handoff ID | `handoff-0817` |
-| Current status | `p11_t05_positive_provenance_gate_complete_p11_t06_selected` |
+| Active task ID | `RT-20260722-008` |
+| Latest handoff ID | `handoff-0818` |
+| Current status | `p11_t06_reviewer_metrics_complete_p11_t03_selected` |
 | V16 completed | false |
-| Current route family | formalization or theorem (project system) |
+| Current route family | audit or review (project system) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v21 reviewer disagreement agreement metrics |
-| Required next authority | One fresh P11-T06 project-system packet may define and validate calibrated reviewer disagreement and agreement metrics without executing scientific promotion or treating consensus as proof. |
-| Next recommended action | Run exactly one bounded P11-T06 project-control-maintainer project-system AgentJob to create reviewer disagreement and agreement metrics at theorem validity assumptions countermodels physical interpretation and claim scope without treating consensus as proof. |
+| Current burden | none for physics derivation; live control burden is v21 proof assistant evidence integration |
+| Required next authority | One fresh P11-T03 project-system packet may define and validate proof-artifact registration build and trust-base evidence without promoting physical interpretation. |
+| Next recommended action | Run exactly one bounded P11-T03 validator-engineer project-system AgentJob to integrate proof-assistant evidence into research-control records without promoting physical interpretations. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260722-007` |
-| Latest research handoff ID | `handoff-0817` |
-| Latest research next action | Run exactly one bounded P11-T06 project-control-maintainer project-system AgentJob to create reviewer disagreement and agreement metrics at theorem validity assumptions countermodels physical interpretation and claim scope without treating consensus as proof. |
+| Latest research task ID | `RT-20260722-008` |
+| Latest research handoff ID | `handoff-0818` |
+| Latest research next action | Run exactly one bounded P11-T03 validator-engineer project-system AgentJob to integrate proof-assistant evidence into research-control records without promoting physical interpretations. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260722-007/00_TASK.yaml`.
-- Active task objective: Implement and validate a fail-closed Gate B and Gate C evidence policy requiring source derivation uniqueness or a defined quotient naturality dynamics operational systems robustness and appropriately provenanced review in addition to no-target purity.
-- Latest handoff path: `research_control/handoffs/handoff-0817.yaml`.
+- Active task path: `research_control/tasks/RT-20260722-008/00_TASK.yaml`.
+- Active task objective: Measure reviewer findings across theorem validity assumptions countermodels physical interpretation and claim scope while preserving lineage independence classes unresolved conflicts and false-consensus risk without treating consensus as proof.
+- Latest handoff path: `research_control/handoffs/handoff-0818.yaml`.
 - Latest handoff summary: not recorded.
-- Current route family: formalization or theorem (project system).
-- Next recommended action: Run exactly one bounded P11-T06 project-control-maintainer project-system AgentJob to create reviewer disagreement and agreement metrics at theorem validity assumptions countermodels physical interpretation and claim scope without treating consensus as proof.
+- Current route family: audit or review (project system).
+- Next recommended action: Run exactly one bounded P11-T03 validator-engineer project-system AgentJob to integrate proof-assistant evidence into research-control records without promoting physical interpretations.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded P11-T06 project-control-maintainer project-system AgentJob to create reviewer disagreement and agreement metrics at theorem validity assumptions countermodels physical interpretation and claim scope without treating consensus as proof.
+Run exactly one bounded P11-T03 validator-engineer project-system AgentJob to integrate proof-assistant evidence into research-control records without promoting physical interpretations.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -337,17 +337,17 @@ Authorization layers:
 | `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
 | `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
+| `metric_definition_authorized` | True | extension authorization field |
 | `p10_repair_authorized` | False | extension authorization field |
-| `policy_definition_authorized` | True | extension authorization field |
 | `proof_authority` | False | extension authorization field |
 | `publication_authority` | False | extension authorization field |
 | `review_execution_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260722-007`;
-- latest handoff: `handoff-0817`;
-- current status: `p11_t05_positive_provenance_gate_complete_p11_t06_selected`;
+- active task: `RT-20260722-008`;
+- latest handoff: `handoff-0818`;
+- current status: `p11_t06_reviewer_metrics_complete_p11_t03_selected`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -357,8 +357,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0817.yaml`
-- `research_control/tasks/RT-20260722-007/00_TASK.yaml`
+- `research_control/handoffs/handoff-0818.yaml`
+- `research_control/tasks/RT-20260722-008/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -374,7 +374,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0817*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0818*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

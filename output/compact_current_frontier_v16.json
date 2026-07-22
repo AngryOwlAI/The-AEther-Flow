@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0817.yaml",
+    "research_control/handoffs/handoff-0818.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260722-007",
-    "latest_handoff_id": "handoff-0817",
-    "current_status": "p11_t05_positive_provenance_gate_complete_p11_t06_selected",
+    "active_task_id": "RT-20260722-008",
+    "latest_handoff_id": "handoff-0818",
+    "current_status": "p11_t06_reviewer_metrics_complete_p11_t03_selected",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260722-007",
-    "latest_research_handoff_id": "handoff-0817",
-    "latest_research_next_action": "Run exactly one bounded P11-T06 project-control-maintainer project-system AgentJob to create reviewer disagreement and agreement metrics at theorem validity assumptions countermodels physical interpretation and claim scope without treating consensus as proof.",
+    "latest_research_task_id": "RT-20260722-008",
+    "latest_research_handoff_id": "handoff-0818",
+    "latest_research_next_action": "Run exactly one bounded P11-T03 validator-engineer project-system AgentJob to integrate proof-assistant evidence into research-control records without promoting physical interpretations.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p11_t06_reviewer_disagreement_agreement_metrics",
-    "role_family": "project-control-maintainer@0.2.0",
+    "route_id": "v21_p11_t03_proof_assistant_evidence_integration",
+    "role_family": "validator-engineer@0.2.0",
     "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Evaluate review diversity and correlated-agent risk.",
+    "milestone_burden": "Make mechanized proof evidence durable and correctly scoped.",
     "requires_human_gate": false
   },
   "claim_boundary": {

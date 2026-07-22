@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-007`
-- Latest handoff: `handoff-0817`
-- Current status: `p11_t05_positive_provenance_gate_complete_p11_t06_selected`
+- Active task: `RT-20260722-008`
+- Latest handoff: `handoff-0818`
+- Current status: `p11_t06_reviewer_metrics_complete_p11_t03_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-007`
-- Latest research handoff: `handoff-0817`
-- Latest research next action: Run exactly one bounded P11-T06 project-control-maintainer project-system AgentJob to create reviewer disagreement and agreement metrics at theorem validity assumptions countermodels physical interpretation and claim scope without treating consensus as proof.
+- Latest research task: `RT-20260722-008`
+- Latest research handoff: `handoff-0818`
+- Latest research next action: Run exactly one bounded P11-T03 validator-engineer project-system AgentJob to integrate proof-assistant evidence into research-control records without promoting physical interpretations.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p11_t06_reviewer_disagreement_agreement_metrics`
-- Role family: `project-control-maintainer@0.2.0`
+- Route ID: `v21_p11_t03_proof_assistant_evidence_integration`
+- Role family: `validator-engineer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Evaluate review diversity and correlated-agent risk.
+- Milestone burden: Make mechanized proof evidence durable and correctly scoped.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `9fc4ca620cca8c726c8edc9c9cee79d0cd755d301c49aef8e07438eb22a501b5`
-- JSON SHA-256: `f6349d9233c0e1a8905c04a4553b6642819c8dda830ba9924672fcc7a86f1e95`
+- YAML SHA-256: `cee3ac96f7f858816e1421d713a8f8218bb34f3ac18c1d45940bba32fc44af97`
+- JSON SHA-256: `e582d73a36a59b7f675024311059baf33b3fe1b9a853b518d1c6e330e1314e2f`
 
 ## Authority Warning
 
