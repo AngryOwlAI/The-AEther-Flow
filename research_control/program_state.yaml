@@ -1,9 +1,86 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260722-005"
-latest_handoff_id: "handoff-0815"
-current_status: "p11_t02_review_context_classification_complete_p11_t04_selected"
-claim_boundary_summary: "RT-20260722-005 completed P11-T02 under an additive project-system boundary; six review-context classes and seven provenance dimensions now fail closed to unknown and guard external-review or replication wording while legacy artifacts remain readable, and no review science independence proof or protected authority is claimed."
-next_recommended_action: "Run exactly one bounded P11-T04 validator-engineer project-system AgentJob to build the semantic-smuggling adversarial fixture suite. Require deterministic alias split-encoding equivalent-form misleading-certificate and prompt-level fixtures with measured false positives and false negatives."
+active_task_id: "RT-20260722-006"
+latest_handoff_id: "handoff-0816"
+current_status: "p11_t04_semantic_smuggling_suite_complete_p11_t05_selected"
+claim_boundary_summary: "RT-20260722-006 completed P11-T04 under a task-local project-system boundary; a deterministic nineteen-fixture corpus measures eleven lexical misses and zero bounded-probe fixture errors without claiming semantic completeness changing production policy validating science executing review or exercising protected authority."
+next_recommended_action: "Run exactly one bounded P11-T05 project-control-maintainer project-system AgentJob to implement the positive-provenance and operational-meaning gate. Require explicit source derivation uniqueness or quotient status dynamics operational systems robustness and independent-review evidence while treating no-target purity and validator PASS as insufficient for physical promotion."
+
+p11_t04_semantic_smuggling_adversarial_fixture_suite:
+  task_id: "RT-20260722-006"
+  parent_task_id: "RT-20260722-005"
+  parent_handoff_id: "handoff-0815"
+  plan_task_id: "P11-T04"
+  claim_boundary_id: "CB-V21-P11-T04-SEMANTIC-SMUGGLING-SUITE-001"
+  status: "PASS_CORPUS_BOUNDED_SEMANTIC_SMUGGLING_FIXTURE_SUITE"
+  completion_path: "research_control/tasks/RT-20260722-006/jobs/completions/AJC-AJ-RT-20260722-006-001.yaml"
+  completion_sha256: "c5f0a2fd66b31f854e911e608a3095b731c210a90dd061a0fdca25419f079379"
+  handoff_id: "handoff-0816"
+  catalog_path: "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_fixture_catalog.json"
+  catalog_sha256: "c5065183173a7e9e6ac139d74e3cbb37db2ca3079fb8c5219000fe29abc9d0f1"
+  mutator_path: "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_mutator.py"
+  mutator_sha256: "92512b6b09f105541d43bed542c798e91329d727c23bb62b77832f805601dbd8"
+  comparison_path: "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.json"
+  comparison_sha256: "6ec8e7d616d1b399e2990376ac16925b61ca06d39a0277fe453f738022f4b3ef"
+  validator_path: "research_control/tasks/RT-20260722-006/artifacts/validate_p11_t04_semantic_smuggling_suite.py"
+  validator_sha256: "b9a11b5bc4818a79263bf0e2a241672c25e2879a2dad8e1632a259fd215f3575"
+  validation_path: "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_validation.json"
+  validation_sha256: "2e81deb36fe1750ed8c9c362c29228ded29930e74cf25000a8a39176d1d5d12c"
+  compact_receipt_path: "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_compact_receipt.json"
+  compact_receipt_sha256: "6c5f956eb538a88fe3ff25f831dec4494a6220fdf757f7a7b22135e18709adb7"
+  corpus_sha256: "74be83abec6dd93f76ef7864346d8586a842cc0baeebf9d6474eef46e66be2c9"
+  attack_classes:
+    - "direct_import_control"
+    - "alias_or_euphemism"
+    - "split_encoding"
+    - "positional_array"
+    - "equivalent_mathematical_form"
+    - "misleading_no_target_certificate"
+    - "validator_as_proof"
+    - "prompt_level_interpretation"
+  attack_class_count: 8
+  attack_fixture_count: 13
+  benign_fixture_count: 6
+  fixture_count: 19
+  lexical_true_positive_count: 2
+  lexical_false_negative_count: 11
+  lexical_false_positive_count: 0
+  lexical_true_negative_count: 6
+  semantic_true_positive_count: 13
+  semantic_false_negative_count: 0
+  semantic_false_positive_count: 0
+  semantic_true_negative_count: 6
+  internal_check_count: 22
+  failed_check_count: 0
+  focused_test_count: 10
+  focused_test_failure_count: 0
+  deterministic_rebuild_passed: true
+  production_linter_changed: false
+  semantic_completeness_claimed: false
+  review_executed: false
+  p10_t01_completion_path: "research_control/tasks/RT-20260721-003/jobs/completions/AJC-AJ-RT-20260721-003-001.yaml"
+  p10_t01_completion_sha256: "28ea88fbfbecd144b7b742152be0fab44cafd0b8ac21869d9ad6be105f2f7305"
+  p10_t01_completed: true
+  p11_t04_completed: true
+  p11_t05_dependency_ready: true
+  p11_t05_selected: true
+  p11_t05_executed: false
+  p11_t06_dependency_ready: false
+  p11_t06_blocked_by:
+    - "P11-T05"
+  selected_next_work_item: "P11-T05"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_reason: "P11-T05 now has qualifying P10-T01 and P11-T04 completions and is the direct control gate that makes positive source provenance dynamics operational meaning robustness and separately evidenced review necessary in addition to source purity."
+  p10_broader_rollout_frozen: true
+  p10_blocker_ids:
+    - "P10-AUDIT-F001"
+    - "P10-AUDIT-F002"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
 
 p11_t02_review_independence_model_diversity_classifications:
   task_id: "RT-20260722-005"

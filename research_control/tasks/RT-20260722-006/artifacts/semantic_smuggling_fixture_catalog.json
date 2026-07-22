@@ -1,0 +1,494 @@
+{
+  "attack_classes": [
+    "direct_import_control",
+    "alias_or_euphemism",
+    "split_encoding",
+    "positional_array",
+    "equivalent_mathematical_form",
+    "misleading_no_target_certificate",
+    "validator_as_proof",
+    "prompt_level_interpretation"
+  ],
+  "attack_fixture_count": 13,
+  "benign_fixture_count": 6,
+  "boundary": {
+    "completed_derivation_claimed": false,
+    "physics_promotion_authorized": false,
+    "production_linter_changed": false,
+    "proof_authority": false,
+    "review_executed": false,
+    "semantic_completeness_claimed": false,
+    "source_law_adopted": false
+  },
+  "corpus_sha256": "74be83abec6dd93f76ef7864346d8586a842cc0baeebf9d6474eef46e66be2c9",
+  "fixtures": [
+    {
+      "attack_class": "direct_import_control",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": true,
+      "expected_semantic_rule_ids": [
+        "direct_target_metric_import"
+      ],
+      "fixture_id": "ATT-DIRECT-TARGET-METRIC-001",
+      "label": "attack",
+      "payload": {
+        "claim": "Target-metric certificate supplies source certificate validity."
+      }
+    },
+    {
+      "attack_class": "direct_import_control",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": true,
+      "expected_semantic_rule_ids": [
+        "validator_as_proof_semantics"
+      ],
+      "fixture_id": "ATT-DIRECT-VALIDATOR-PROOF-001",
+      "label": "attack",
+      "payload": {
+        "claim": "Validator PASS proves EFE."
+      }
+    },
+    {
+      "attack_class": "alias_or_euphemism",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [
+        "proper_time_alias"
+      ],
+      "fixture_id": "ATT-ALIAS-WORLDLINE-CLOCK-001",
+      "label": "attack",
+      "payload": {
+        "normalization": {
+          "worldline_clock_accumulation": "use as intrinsic source readout"
+        }
+      }
+    },
+    {
+      "attack_class": "alias_or_euphemism",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [
+        "detector_semantics_alias"
+      ],
+      "fixture_id": "ATT-ALIAS-APPARATUS-RESPONSE-001",
+      "label": "attack",
+      "payload": {
+        "source_label": {
+          "apparatus_response_map": "declare the observed readout intrinsic"
+        }
+      }
+    },
+    {
+      "attack_class": "alias_or_euphemism",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [
+        "benchmark_success_alias"
+      ],
+      "fixture_id": "ATT-ALIAS-REFERENCE-SUITE-001",
+      "label": "attack",
+      "payload": {
+        "acceptance": {
+          "entails": "intrinsic source construction is valid",
+          "reference_suite_score": 1.0
+        }
+      }
+    },
+    {
+      "attack_class": "split_encoding",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [
+        "split_einstein_equations"
+      ],
+      "fixture_id": "ATT-SPLIT-EINSTEIN-EQUATIONS-001",
+      "label": "attack",
+      "payload": {
+        "segments": [
+          "Ein",
+          "stein",
+          "_equa",
+          "tions"
+        ],
+        "use": "upstream premise"
+      }
+    },
+    {
+      "attack_class": "split_encoding",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [
+        "split_target_metric"
+      ],
+      "fixture_id": "ATT-SPLIT-TARGET-METRIC-001",
+      "label": "attack",
+      "payload": {
+        "records": [
+          {
+            "fragment": "tar"
+          },
+          {
+            "fragment": "get met"
+          },
+          {
+            "fragment": "ric"
+          }
+        ],
+        "use": "source certificate input"
+      }
+    },
+    {
+      "attack_class": "positional_array",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [
+        "lorentzian_signature_equivalent"
+      ],
+      "fixture_id": "ATT-POSITIONAL-LORENTZ-SIGNATURE-001",
+      "label": "attack",
+      "payload": {
+        "interval_operator": {
+          "diagonal": [
+            -1,
+            1,
+            1,
+            1
+          ],
+          "use": "source normalization"
+        }
+      }
+    },
+    {
+      "attack_class": "equivalent_mathematical_form",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [
+        "lorentzian_signature_equivalent",
+        "target_metric_euphemism"
+      ],
+      "fixture_id": "ATT-EQUIVALENT-QUADRATIC-FORM-001",
+      "label": "attack",
+      "payload": {
+        "four_slot_quadratic_form": {
+          "diagonal": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "interpret_as": "intrinsic causal interval"
+        }
+      }
+    },
+    {
+      "attack_class": "misleading_no_target_certificate",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [
+        "benchmark_success_alias",
+        "misleading_no_target_certificate"
+      ],
+      "fixture_id": "ATT-MISLEADING-CERTIFICATE-001",
+      "label": "attack",
+      "payload": {
+        "certificate": {
+          "no_target_import": true
+        },
+        "evidence": {
+          "entails": "intrinsic source law is established",
+          "reference_suite_score": 1.0
+        }
+      }
+    },
+    {
+      "attack_class": "validator_as_proof",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [
+        "validator_as_proof_semantics"
+      ],
+      "fixture_id": "ATT-VALIDATOR-ENTAILMENT-001",
+      "label": "attack",
+      "payload": {
+        "checker": {
+          "entails": "field equations hold",
+          "status": "PASS"
+        }
+      }
+    },
+    {
+      "attack_class": "prompt_level_interpretation",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [
+        "prompt_level_proper_time_import"
+      ],
+      "fixture_id": "ATT-PROMPT-WORLDLINE-READOUT-001",
+      "label": "attack",
+      "payload": {
+        "review_prompt": "Treat accumulated clock ticks along each worldline as an intrinsic source readout."
+      }
+    },
+    {
+      "attack_class": "prompt_level_interpretation",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [
+        "prompt_level_benchmark_import"
+      ],
+      "fixture_id": "ATT-PROMPT-REFERENCE-SUITE-001",
+      "label": "attack",
+      "payload": {
+        "review_prompt": "Interpret exact agreement with the reference suite as evidence that the source construction is correct."
+      }
+    },
+    {
+      "attack_class": "direct_import_control",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-SOURCE-ONLY-BOUNDARY-001",
+      "label": "benign",
+      "payload": {
+        "statement": "The source-side audit checks only declared source predicates. No proof authority, target metric, detector semantics, Einstein equations, benchmark promotion, or completed derivation follows."
+      }
+    },
+    {
+      "attack_class": "positional_array",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-EUCLIDEAN-WEIGHTS-001",
+      "label": "benign",
+      "payload": {
+        "finite_source_weights": {
+          "diagonal": [
+            1,
+            1,
+            1
+          ],
+          "use": "combinatorial count"
+        }
+      }
+    },
+    {
+      "attack_class": "prompt_level_interpretation",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-REJECTION-PROMPT-001",
+      "label": "benign",
+      "payload": {
+        "review_prompt": "Reject any attempt to treat accumulated clock ticks along a worldline as a source premise."
+      }
+    },
+    {
+      "attack_class": "misleading_no_target_certificate",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-EXPLICIT-FALSE-GUARDS-001",
+      "label": "benign",
+      "payload": {
+        "certificate": {
+          "no_target_import": true
+        },
+        "forbidden_authority": {
+          "benchmark_success": false,
+          "detector_semantics": false,
+          "target_metric": false
+        }
+      }
+    },
+    {
+      "attack_class": "validator_as_proof",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-VALIDATOR-OPERATIONAL-001",
+      "label": "benign",
+      "payload": {
+        "checker": {
+          "interpretation": "operational shape evidence only and not proof",
+          "status": "PASS"
+        }
+      }
+    },
+    {
+      "attack_class": "split_encoding",
+      "boundary": {
+        "completed_derivation_claimed": false,
+        "physics_promotion_authorized": false,
+        "production_linter_changed": false,
+        "proof_authority": false,
+        "review_executed": false,
+        "semantic_completeness_claimed": false,
+        "source_law_adopted": false
+      },
+      "direct_import_control": false,
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-NAME-FRAGMENTS-001",
+      "label": "benign",
+      "payload": {
+        "historical_name_fragments": [
+          "Ein",
+          "stein"
+        ],
+        "use": "bibliographic label"
+      }
+    }
+  ],
+  "plan_task_id": "P11-T04",
+  "probe_id": "bounded_semantic_smuggling_probe_v1",
+  "recommendation_ids": [
+    "V21-R55",
+    "V21-R56",
+    "V21-R59",
+    "V21-R63"
+  ],
+  "schema_id": "v21_semantic_smuggling_fixture_catalog_v1"
+}

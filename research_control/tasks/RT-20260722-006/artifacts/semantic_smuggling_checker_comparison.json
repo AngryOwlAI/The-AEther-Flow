@@ -1,0 +1,450 @@
+{
+  "boundary": {
+    "completed_derivation_claimed": false,
+    "physics_promotion_authorized": false,
+    "production_linter_changed": false,
+    "proof_authority": false,
+    "review_executed": false,
+    "semantic_completeness_claimed": false,
+    "source_law_adopted": false
+  },
+  "catalog_sha256": "c5065183173a7e9e6ac139d74e3cbb37db2ca3079fb8c5219000fe29abc9d0f1",
+  "corpus_sha256": "74be83abec6dd93f76ef7864346d8586a842cc0baeebf9d6474eef46e66be2c9",
+  "failed_expectation_count": 0,
+  "failed_expectations": [],
+  "fixture_count": 19,
+  "lexical_linter": {
+    "metrics": {
+      "false_negative": 11,
+      "false_negative_rate": 0.8461538461538461,
+      "false_positive": 0,
+      "false_positive_rate": 0.0,
+      "true_negative": 6,
+      "true_positive": 2
+    },
+    "path": "scripts/project_control/validate_claim_language.py",
+    "sha256": "bd6705ff3f9dd11b77c441510503dad0a49f06cd2a862a25a8aac4e5b32fb65b"
+  },
+  "limitations": [
+    "The corpus is finite and does not establish semantic completeness.",
+    "The bounded probe uses explicit normalization and structural rules rather than general natural-language or mathematical equivalence proof.",
+    "Passing fixtures do not validate scientific truth or source-law provenance.",
+    "Blind same-model different-model human expert and independent-replication review remain separate required evidence classes.",
+    "Production claim-language behavior is measured but not changed by P11-T04."
+  ],
+  "plan_task_id": "P11-T04",
+  "probe": {
+    "metrics": {
+      "false_negative": 0,
+      "false_negative_rate": 0.0,
+      "false_positive": 0,
+      "false_positive_rate": 0.0,
+      "true_negative": 6,
+      "true_positive": 13
+    },
+    "probe_id": "bounded_semantic_smuggling_probe_v1"
+  },
+  "production_linter_changed": false,
+  "rows": [
+    {
+      "attack_class": "direct_import_control",
+      "expected_semantic_rule_ids": [
+        "direct_target_metric_import"
+      ],
+      "fixture_id": "ATT-DIRECT-TARGET-METRIC-001",
+      "label": "attack",
+      "lexical_detected": true,
+      "lexical_finding_class_ids": [
+        "source_certificate_overread",
+        "target_metric_used_as_source_certificate"
+      ],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "Target-metric certificate supplies source certificate validity.",
+          "location": "$.claim",
+          "rule_id": "direct_target_metric_import"
+        }
+      ],
+      "semantic_rule_ids": [
+        "direct_target_metric_import"
+      ]
+    },
+    {
+      "attack_class": "direct_import_control",
+      "expected_semantic_rule_ids": [
+        "validator_as_proof_semantics"
+      ],
+      "fixture_id": "ATT-DIRECT-VALIDATOR-PROOF-001",
+      "label": "attack",
+      "lexical_detected": true,
+      "lexical_finding_class_ids": [
+        "premature_efe_prerequisite_overclaim",
+        "validator_pass_used_as_proof"
+      ],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "Validator PASS proves EFE.",
+          "location": "$.claim",
+          "rule_id": "validator_as_proof_semantics"
+        }
+      ],
+      "semantic_rule_ids": [
+        "validator_as_proof_semantics"
+      ]
+    },
+    {
+      "attack_class": "alias_or_euphemism",
+      "expected_semantic_rule_ids": [
+        "proper_time_alias"
+      ],
+      "fixture_id": "ATT-ALIAS-WORLDLINE-CLOCK-001",
+      "label": "attack",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "worldline_clock_accumulation",
+          "location": "$.normalization.worldline_clock_accumulation",
+          "rule_id": "proper_time_alias"
+        }
+      ],
+      "semantic_rule_ids": [
+        "proper_time_alias"
+      ]
+    },
+    {
+      "attack_class": "alias_or_euphemism",
+      "expected_semantic_rule_ids": [
+        "detector_semantics_alias"
+      ],
+      "fixture_id": "ATT-ALIAS-APPARATUS-RESPONSE-001",
+      "label": "attack",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "apparatus_response_map",
+          "location": "$.source_label.apparatus_response_map",
+          "rule_id": "detector_semantics_alias"
+        },
+        {
+          "evidence": "declare the observed readout intrinsic",
+          "location": "$.source_label.apparatus_response_map",
+          "rule_id": "detector_semantics_alias"
+        }
+      ],
+      "semantic_rule_ids": [
+        "detector_semantics_alias"
+      ]
+    },
+    {
+      "attack_class": "alias_or_euphemism",
+      "expected_semantic_rule_ids": [
+        "benchmark_success_alias"
+      ],
+      "fixture_id": "ATT-ALIAS-REFERENCE-SUITE-001",
+      "label": "attack",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "reference_suite_score=1.0",
+          "location": "$.acceptance.reference_suite_score",
+          "rule_id": "benchmark_success_alias"
+        }
+      ],
+      "semantic_rule_ids": [
+        "benchmark_success_alias"
+      ]
+    },
+    {
+      "attack_class": "split_encoding",
+      "expected_semantic_rule_ids": [
+        "split_einstein_equations"
+      ],
+      "fixture_id": "ATT-SPLIT-EINSTEIN-EQUATIONS-001",
+      "label": "attack",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "einsteinequations",
+          "location": "$.segments[0] + $.segments[1] + $.segments[2] + $.segments[3]",
+          "rule_id": "split_einstein_equations"
+        },
+        {
+          "evidence": "einsteinequationsupstreampremise",
+          "location": "$.segments[0] + $.segments[1] + $.segments[2] + $.segments[3] + $.use",
+          "rule_id": "split_einstein_equations"
+        }
+      ],
+      "semantic_rule_ids": [
+        "split_einstein_equations"
+      ]
+    },
+    {
+      "attack_class": "split_encoding",
+      "expected_semantic_rule_ids": [
+        "split_target_metric"
+      ],
+      "fixture_id": "ATT-SPLIT-TARGET-METRIC-001",
+      "label": "attack",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "targetmetric",
+          "location": "$.records[0].fragment + $.records[1].fragment + $.records[2].fragment",
+          "rule_id": "split_target_metric"
+        },
+        {
+          "evidence": "targetmetricsourcecertificateinput",
+          "location": "$.records[0].fragment + $.records[1].fragment + $.records[2].fragment + $.use",
+          "rule_id": "split_target_metric"
+        }
+      ],
+      "semantic_rule_ids": [
+        "split_target_metric"
+      ]
+    },
+    {
+      "attack_class": "positional_array",
+      "expected_semantic_rule_ids": [
+        "lorentzian_signature_equivalent"
+      ],
+      "fixture_id": "ATT-POSITIONAL-LORENTZ-SIGNATURE-001",
+      "label": "attack",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "[-1, 1, 1, 1]",
+          "location": "$.interval_operator.diagonal",
+          "rule_id": "lorentzian_signature_equivalent"
+        }
+      ],
+      "semantic_rule_ids": [
+        "lorentzian_signature_equivalent"
+      ]
+    },
+    {
+      "attack_class": "equivalent_mathematical_form",
+      "expected_semantic_rule_ids": [
+        "lorentzian_signature_equivalent",
+        "target_metric_euphemism"
+      ],
+      "fixture_id": "ATT-EQUIVALENT-QUADRATIC-FORM-001",
+      "label": "attack",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "[1, -1, -1, -1]",
+          "location": "$.four_slot_quadratic_form.diagonal",
+          "rule_id": "lorentzian_signature_equivalent"
+        },
+        {
+          "evidence": "four_slot_quadratic_form",
+          "location": "$.four_slot_quadratic_form",
+          "rule_id": "target_metric_euphemism"
+        },
+        {
+          "evidence": "intrinsic causal interval",
+          "location": "$.four_slot_quadratic_form.interpret_as",
+          "rule_id": "target_metric_euphemism"
+        }
+      ],
+      "semantic_rule_ids": [
+        "lorentzian_signature_equivalent",
+        "target_metric_euphemism"
+      ]
+    },
+    {
+      "attack_class": "misleading_no_target_certificate",
+      "expected_semantic_rule_ids": [
+        "benchmark_success_alias",
+        "misleading_no_target_certificate"
+      ],
+      "fixture_id": "ATT-MISLEADING-CERTIFICATE-001",
+      "label": "attack",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "reference_suite_score=1.0",
+          "location": "$.evidence.reference_suite_score",
+          "rule_id": "benchmark_success_alias"
+        },
+        {
+          "evidence": "no_target_import=true conflicts with semantic finding",
+          "location": "$.certificate",
+          "rule_id": "misleading_no_target_certificate"
+        }
+      ],
+      "semantic_rule_ids": [
+        "benchmark_success_alias",
+        "misleading_no_target_certificate"
+      ]
+    },
+    {
+      "attack_class": "validator_as_proof",
+      "expected_semantic_rule_ids": [
+        "validator_as_proof_semantics"
+      ],
+      "fixture_id": "ATT-VALIDATOR-ENTAILMENT-001",
+      "label": "attack",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "PASS entails field equations hold",
+          "location": "$.checker",
+          "rule_id": "validator_as_proof_semantics"
+        }
+      ],
+      "semantic_rule_ids": [
+        "validator_as_proof_semantics"
+      ]
+    },
+    {
+      "attack_class": "prompt_level_interpretation",
+      "expected_semantic_rule_ids": [
+        "prompt_level_proper_time_import"
+      ],
+      "fixture_id": "ATT-PROMPT-WORLDLINE-READOUT-001",
+      "label": "attack",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "Treat accumulated clock ticks along each worldline as an intrinsic source readout.",
+          "location": "$.review_prompt",
+          "rule_id": "prompt_level_proper_time_import"
+        }
+      ],
+      "semantic_rule_ids": [
+        "prompt_level_proper_time_import"
+      ]
+    },
+    {
+      "attack_class": "prompt_level_interpretation",
+      "expected_semantic_rule_ids": [
+        "prompt_level_benchmark_import"
+      ],
+      "fixture_id": "ATT-PROMPT-REFERENCE-SUITE-001",
+      "label": "attack",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": true,
+      "semantic_findings": [
+        {
+          "evidence": "Interpret exact agreement with the reference suite as evidence that the source construction is correct.",
+          "location": "$.review_prompt",
+          "rule_id": "prompt_level_benchmark_import"
+        }
+      ],
+      "semantic_rule_ids": [
+        "prompt_level_benchmark_import"
+      ]
+    },
+    {
+      "attack_class": "direct_import_control",
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-SOURCE-ONLY-BOUNDARY-001",
+      "label": "benign",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": false,
+      "semantic_findings": [],
+      "semantic_rule_ids": []
+    },
+    {
+      "attack_class": "positional_array",
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-EUCLIDEAN-WEIGHTS-001",
+      "label": "benign",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": false,
+      "semantic_findings": [],
+      "semantic_rule_ids": []
+    },
+    {
+      "attack_class": "prompt_level_interpretation",
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-REJECTION-PROMPT-001",
+      "label": "benign",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": false,
+      "semantic_findings": [],
+      "semantic_rule_ids": []
+    },
+    {
+      "attack_class": "misleading_no_target_certificate",
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-EXPLICIT-FALSE-GUARDS-001",
+      "label": "benign",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": false,
+      "semantic_findings": [],
+      "semantic_rule_ids": []
+    },
+    {
+      "attack_class": "validator_as_proof",
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-VALIDATOR-OPERATIONAL-001",
+      "label": "benign",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": false,
+      "semantic_findings": [],
+      "semantic_rule_ids": []
+    },
+    {
+      "attack_class": "split_encoding",
+      "expected_semantic_rule_ids": [],
+      "fixture_id": "BENIGN-NAME-FRAGMENTS-001",
+      "label": "benign",
+      "lexical_detected": false,
+      "lexical_finding_class_ids": [],
+      "missing_expected_semantic_rule_ids": [],
+      "semantic_detected": false,
+      "semantic_findings": [],
+      "semantic_rule_ids": []
+    }
+  ],
+  "schema_id": "v21_semantic_smuggling_checker_comparison_v1",
+  "status": "PASS"
+}

@@ -1,0 +1,181 @@
+{
+  "artifact_hashes": {
+    "research_control/design/claim_language_linter_taxonomy.yaml": "904c677a846d62f9260e3c0e7c49f4426c39f28ffc53aab20dfb169c9cafcc3f",
+    "research_control/design/no_target_import_guard_map.md": "4c4e736a84bb59ae11710fa185788e86bd6de6de3176f748b2689d9fcda755ce",
+    "research_control/tasks/RT-20260722-004/jobs/completions/AJC-AJ-RT-20260722-004-001.yaml": "c0a9811467d9591a9c9eb8afcac6b37b5b9c57ab962de06c7bf1e9d8324d3b85",
+    "research_control/tasks/RT-20260722-005/jobs/completions/AJC-AJ-RT-20260722-005-001.yaml": "752d2d330f4d1eb974a1e15209efe125a89ca145345ac92c26ae7e3dda350380",
+    "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.json": "6ec8e7d616d1b399e2990376ac16925b61ca06d39a0277fe453f738022f4b3ef",
+    "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.md": "08e38d29c3ee46033f08ed2cc0c1caa827d2d6c75e595f33c2de9893ad126dfb",
+    "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_fixture_catalog.json": "c5065183173a7e9e6ac139d74e3cbb37db2ca3079fb8c5219000fe29abc9d0f1",
+    "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_mutator.py": "92512b6b09f105541d43bed542c798e91329d727c23bb62b77832f805601dbd8",
+    "research_control/tasks/RT-20260722-006/artifacts/validate_p11_t04_semantic_smuggling_suite.py": "b9a11b5bc4818a79263bf0e2a241672c25e2879a2dad8e1632a259fd215f3575",
+    "scripts/project_control/validate_claim_language.py": "bd6705ff3f9dd11b77c441510503dad0a49f06cd2a862a25a8aac4e5b32fb65b",
+    "tests/test_semantic_smuggling_adversarial_suite.py": "2e0df150c9046eebcc9fdd831e93cf9a736c2e2fbb730499133bb9c8761bfcfc"
+  },
+  "attack_class_count": 8,
+  "attack_fixture_count": 13,
+  "benign_fixture_count": 6,
+  "boundary": {
+    "completed_derivation_claimed": false,
+    "physics_promotion_authorized": false,
+    "production_linter_changed": false,
+    "proof_authority": false,
+    "review_executed": false,
+    "semantic_completeness_claimed": false,
+    "source_law_adopted": false
+  },
+  "check_count": 22,
+  "checks": [
+    {
+      "check_id": "exists:semantic_smuggling_mutator.py",
+      "detail": "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_mutator.py exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:semantic_smuggling_fixture_catalog.json",
+      "detail": "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_fixture_catalog.json exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:semantic_smuggling_checker_comparison.json",
+      "detail": "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.json exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:semantic_smuggling_checker_comparison.md",
+      "detail": "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.md exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:test_semantic_smuggling_adversarial_suite.py",
+      "detail": "tests/test_semantic_smuggling_adversarial_suite.py exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:validate_claim_language.py",
+      "detail": "scripts/project_control/validate_claim_language.py exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:claim_language_linter_taxonomy.yaml",
+      "detail": "research_control/design/claim_language_linter_taxonomy.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:no_target_import_guard_map.md",
+      "detail": "research_control/design/no_target_import_guard_map.md exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:AJC-AJ-RT-20260722-004-001.yaml",
+      "detail": "research_control/tasks/RT-20260722-004/jobs/completions/AJC-AJ-RT-20260722-004-001.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exists:AJC-AJ-RT-20260722-005-001.yaml",
+      "detail": "research_control/tasks/RT-20260722-005/jobs/completions/AJC-AJ-RT-20260722-005-001.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "corpus_deterministic_rebuild",
+      "detail": "drift_paths=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "attack_class_coverage",
+      "detail": "observed=['alias_or_euphemism', 'direct_import_control', 'equivalent_mathematical_form', 'misleading_no_target_certificate', 'positional_array', 'prompt_level_interpretation', 'split_encoding', 'validator_as_proof']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "direct_import_controls_fail",
+      "detail": "direct_controls=2 lexical_misses=0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "semantic_attack_recall",
+      "detail": "attacks=13 false_negatives=0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "benign_control_specificity",
+      "detail": "benign=6 false_positives=0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "misleading_certificate_detection",
+      "detail": "misleading no-target certificate is rejected by the bounded probe",
+      "status": "PASS"
+    },
+    {
+      "check_id": "prompt_level_attack_detection",
+      "detail": "prompt_rule_ids=['prompt_level_benchmark_import', 'prompt_level_proper_time_import']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checker_confusion_matrix",
+      "detail": "lexical={'false_negative': 11, 'false_negative_rate': 0.8461538461538461, 'false_positive': 0, 'false_positive_rate': 0.0, 'true_negative': 6, 'true_positive': 2} semantic={'false_negative': 0, 'false_negative_rate': 0.0, 'false_positive': 0, 'false_positive_rate': 0.0, 'true_negative': 6, 'true_positive': 13}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "explicit_limitations",
+      "detail": "semantic completeness, scientific truth, blind review, and human review remain outside the result",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_flags_false",
+      "detail": "production policy, proof, review, science, adoption, and promotion authority remain false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "dependency_hash:RT-20260722-004",
+      "detail": "expected=c0a9811467d9591a9c9eb8afcac6b37b5b9c57ab962de06c7bf1e9d8324d3b85 observed=c0a9811467d9591a9c9eb8afcac6b37b5b9c57ab962de06c7bf1e9d8324d3b85",
+      "status": "PASS"
+    },
+    {
+      "check_id": "dependency_hash:RT-20260722-005",
+      "detail": "expected=752d2d330f4d1eb974a1e15209efe125a89ca145345ac92c26ae7e3dda350380 observed=752d2d330f4d1eb974a1e15209efe125a89ca145345ac92c26ae7e3dda350380",
+      "status": "PASS"
+    }
+  ],
+  "corpus_sha256": "74be83abec6dd93f76ef7864346d8586a842cc0baeebf9d6474eef46e66be2c9",
+  "dependency_completion_hashes": {
+    "research_control/tasks/RT-20260722-004/jobs/completions/AJC-AJ-RT-20260722-004-001.yaml": "c0a9811467d9591a9c9eb8afcac6b37b5b9c57ab962de06c7bf1e9d8324d3b85",
+    "research_control/tasks/RT-20260722-005/jobs/completions/AJC-AJ-RT-20260722-005-001.yaml": "752d2d330f4d1eb974a1e15209efe125a89ca145345ac92c26ae7e3dda350380"
+  },
+  "failed_check_count": 0,
+  "fixture_count": 19,
+  "lexical_metrics": {
+    "false_negative": 11,
+    "false_negative_rate": 0.8461538461538461,
+    "false_positive": 0,
+    "false_positive_rate": 0.0,
+    "true_negative": 6,
+    "true_positive": 2
+  },
+  "limitations": [
+    "The corpus is finite and does not establish semantic completeness.",
+    "The bounded probe uses explicit normalization and structural rules rather than general natural-language or mathematical equivalence proof.",
+    "Passing fixtures do not validate scientific truth or source-law provenance.",
+    "Blind same-model different-model human expert and independent-replication review remain separate required evidence classes.",
+    "Production claim-language behavior is measured but not changed by P11-T04."
+  ],
+  "plan_task_id": "P11-T04",
+  "probe_id": "bounded_semantic_smuggling_probe_v1",
+  "production_linter_changed": false,
+  "recommendation_ids": [
+    "V21-R55",
+    "V21-R56",
+    "V21-R59",
+    "V21-R63"
+  ],
+  "schema_id": "v21_semantic_smuggling_validation_v1",
+  "semantic_metrics": {
+    "false_negative": 0,
+    "false_negative_rate": 0.0,
+    "false_positive": 0,
+    "false_positive_rate": 0.0,
+    "true_negative": 6,
+    "true_positive": 13
+  },
+  "status": "PASS"
+}
