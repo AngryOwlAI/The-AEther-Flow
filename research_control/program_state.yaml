@@ -1,9 +1,69 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260722-014"
-latest_handoff_id: "handoff-0824"
-current_status: "p12_t03_dual_budget_policy_complete_p12_t04_selected"
-claim_boundary_summary: "RT-20260722-014 completed P12-T03 with four budget categories one primary task credit lane-separated elapsed compute outputs and acceptance mixed-work disjointness evidence-bound exceptions and no scientific or protected authority change."
-next_recommended_action: "Run exactly one bounded P12-T04 project-control-maintainer project-system AgentJob to implement the three-system-task ordinary-route guard while preserving evidence-bound control-failure exceptions and scientific-handoff authority."
+active_task_id: "RT-20260722-015"
+latest_handoff_id: "handoff-0825"
+current_status: "p12_t04_ordinary_route_guard_complete_p14_t01_selected"
+claim_boundary_summary: "RT-20260722-015 completed P12-T04 with a prospective threshold-three hard route guard advisory warning exact all-ready-science-blocked exceptions ordinary-handoff authority and P14-T01 selection with no scientific or protected authority change."
+next_recommended_action: "Run exactly one bounded v21 P14-T01 ontology-formalizer philosophy-foundations AgentJob to define four distinct project-success categories without upgrading current claims or executing any other work item."
+
+p12_t04_ordinary_route_guard:
+  task_id: "RT-20260722-015"
+  parent_task_id: "RT-20260722-014"
+  parent_handoff_id: "handoff-0824"
+  plan_task_id: "P12-T04"
+  claim_boundary_id: "CB-V21-P12-T04-ORDINARY-ROUTE-GUARD-001"
+  status: "PASS_PROJECT_CONTROL_ONLY"
+  completion_path: "research_control/tasks/RT-20260722-015/jobs/completions/AJC-AJ-RT-20260722-015-001.yaml"
+  completion_sha256: "2905355e651980cb29a8a2f12542831113c2e93f5f4876b092ff85f975d86abc"
+  handoff_id: "handoff-0825"
+  policy_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+  policy_sha256: "c0c4df98c0020fbb274a4c895e6d5749c2166397e6e419a63c7b6737f2ee3a96"
+  exception_schema_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_exception_schema_v1.md"
+  exception_schema_sha256: "960b342388549b2a64626c24556315302d3e6889fba404f92d6f1b48294b88ef"
+  evaluator_path: "scripts/research_control/ordinary_route_guard.py"
+  evaluator_sha256: "ff015c8906a244b2f25d81c2d278187995c76fe3e9e385f46a2cafc3cc1dac75"
+  validation_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_validation_report.json"
+  validation_sha256: "6dfd2a1c941ec26051f46d5b6e7494efea9590d6b1f8d87b4bafa0c73763c950"
+  compact_receipt_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_compact_receipt.json"
+  compact_receipt_sha256: "7589ba370c72e8854f7af67bd589e3a6cfbab3554cb602977a94a3661a93744b"
+  threshold: 3
+  warning_at: 2
+  completed_project_system_run_length: 5
+  fixture_case_count: 12
+  fixture_pass_count: 12
+  fixture_failure_count: 0
+  prospective_hard_guard_enforced: true
+  historical_records_unchanged: true
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  all_ready_science_accounting_enforced: true
+  exceptions_hash_bound: true
+  stale_untracked_and_partial_exception_rejected: true
+  dependency_ready_science_plan_task_ids:
+    - "P4-T05"
+    - "P14-T01"
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  p14_t01_dependency_ready: true
+  p14_t01_selected: true
+  p14_t01_executed: false
+  selected_next_work_item: "P14-T01"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "philosophy-foundations-packet"
+  selected_next_reason: "The completed five-task project-system run exceeds the hard threshold; P14-T01 is dependency-ready executable science while P4-T05 remains human-gated."
+  p10_broader_rollout_frozen: true
+  p10_blocker_ids:
+    - "P10-AUDIT-F001"
+    - "P10-AUDIT-F002"
+  scientific_claims_changed: false
+  scientific_ledger_change_count: 0
+  distance_to_gr_delta_changed: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physical_interpretation_authorized: false
+  ontology_adoption_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
 
 p12_t03_dual_budget_policy:
   task_id: "RT-20260722-014"
@@ -43,7 +103,7 @@ p12_t03_dual_budget_policy:
   p12_t03_completed: true
   p12_t04_dependency_ready: true
   p12_t04_selected: true
-  p12_t04_executed: false
+  p12_t04_executed: true
   p12_t05_dependency_ready: true
   p12_t05_selected: false
   selected_next_work_item: "P12-T04"

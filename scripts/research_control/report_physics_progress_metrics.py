@@ -103,6 +103,9 @@ DUAL_BUDGET_POLICY_PATH = (
 DUAL_BUDGET_DASHBOARD_SCHEMA_PATH = (
     "research_control/tasks/RT-20260722-014/artifacts/budget_dashboard_schema_v1.md"
 )
+ORDINARY_ROUTE_GUARD_POLICY_PATH = (
+    "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+)
 CANDIDATE_LINEAGE_REGISTRY_PATH = (
     "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json"
 )
@@ -872,6 +875,17 @@ def collect_physics_payload_ratio_diagnostics(
             route_orbit_risk_metrics.get("same_burden_repetition_count", 0)
         ),
     }
+    diagnostics["ordinary_route_guard_status"] = {
+        "policy_id": "ordinary_route_guard_policy_v1",
+        "policy_source_path": ORDINARY_ROUTE_GUARD_POLICY_PATH,
+        "warning_at": 2,
+        "hard_threshold": 3,
+        "prospective_hard_gate_active": True,
+        "current_run_requires_physics_route_or_exception": (
+            diagnostics["project_system_task_run_length"] >= 3
+        ),
+        "system_work_counts_as_physics": False,
+    }
 
     return {
         "schema_id": "physics_payload_ratio_route_history_metrics_v1",
@@ -1163,6 +1177,9 @@ def collect_dual_budget_dashboard(
             "project_system_run_threshold": 3,
             "threshold_is_hard_gate_in_this_policy": False,
             "ordinary_route_guard_owner": "P12-T04",
+            "separate_prospective_hard_guard_active": True,
+            "separate_guard_policy_id": "ordinary_route_guard_policy_v1",
+            "separate_guard_policy_path": ORDINARY_ROUTE_GUARD_POLICY_PATH,
         },
         "authority_boundary": {
             "dashboard_is_support_only": True,
@@ -2543,6 +2560,7 @@ def build_report(
             PHYSICS_PAYLOAD_RATIO_POLICY_PATH,
             DUAL_BUDGET_POLICY_PATH,
             DUAL_BUDGET_DASHBOARD_SCHEMA_PATH,
+            ORDINARY_ROUTE_GUARD_POLICY_PATH,
             CANDIDATE_LINEAGE_REGISTRY_PATH,
         ]
         + (

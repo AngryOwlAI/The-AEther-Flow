@@ -1,0 +1,147 @@
+{
+  "authority_boundary": {
+    "distance_to_gr_delta_changed": false,
+    "physics_promotion_authorized": false,
+    "project_control_only": true,
+    "proof_authority": false,
+    "scientific_claims_changed": false
+  },
+  "case_results": [
+    {
+      "case_id": "below_threshold_system_route_pass",
+      "error_ids": [],
+      "expected_status": "PASS",
+      "matches_expected": true,
+      "observed_status": "PASS",
+      "warning_ids": []
+    },
+    {
+      "case_id": "advisory_warning_before_hard_block",
+      "error_ids": [],
+      "expected_status": "WARN",
+      "matches_expected": true,
+      "observed_status": "WARN",
+      "warning_ids": [
+        "ordinary_route_guard_threshold_next"
+      ]
+    },
+    {
+      "case_id": "threshold_physics_route_pass",
+      "error_ids": [],
+      "expected_status": "PASS",
+      "matches_expected": true,
+      "observed_status": "PASS",
+      "warning_ids": []
+    },
+    {
+      "case_id": "above_threshold_physics_route_pass",
+      "error_ids": [],
+      "expected_status": "PASS",
+      "matches_expected": true,
+      "observed_status": "PASS",
+      "warning_ids": []
+    },
+    {
+      "case_id": "threshold_system_route_without_exception_fail",
+      "error_ids": [
+        "active_exception_receipt_required"
+      ],
+      "expected_status": "FAIL",
+      "matches_expected": true,
+      "observed_status": "FAIL",
+      "warning_ids": []
+    },
+    {
+      "case_id": "all_ready_science_human_gated_exception_pass",
+      "error_ids": [],
+      "expected_status": "PASS",
+      "matches_expected": true,
+      "observed_status": "PASS",
+      "warning_ids": []
+    },
+    {
+      "case_id": "active_control_failure_exception_pass",
+      "error_ids": [],
+      "expected_status": "PASS",
+      "matches_expected": true,
+      "observed_status": "PASS",
+      "warning_ids": []
+    },
+    {
+      "case_id": "partial_ready_science_accounting_fail",
+      "error_ids": [
+        "exception_does_not_account_for_all_ready_science"
+      ],
+      "expected_status": "FAIL",
+      "matches_expected": true,
+      "observed_status": "FAIL",
+      "warning_ids": []
+    },
+    {
+      "case_id": "stale_exception_evidence_hash_fail",
+      "error_ids": [
+        "blocked_route_P4-T05_evidence_hash_mismatch"
+      ],
+      "expected_status": "FAIL",
+      "matches_expected": true,
+      "observed_status": "FAIL",
+      "warning_ids": []
+    },
+    {
+      "case_id": "untracked_exception_evidence_fail",
+      "error_ids": [
+        "blocked_route_P14-T01_evidence_path_not_tracked"
+      ],
+      "expected_status": "FAIL",
+      "matches_expected": true,
+      "observed_status": "FAIL",
+      "warning_ids": []
+    },
+    {
+      "case_id": "sidecar_substitution_fail",
+      "error_ids": [
+        "project_system_sidecar_supersedes_must_be_false"
+      ],
+      "expected_status": "FAIL",
+      "matches_expected": true,
+      "observed_status": "FAIL",
+      "warning_ids": []
+    },
+    {
+      "case_id": "human_gated_route_without_authority_fail",
+      "error_ids": [
+        "selected_physics_route_requires_unprovided_human_gate"
+      ],
+      "expected_status": "FAIL",
+      "matches_expected": true,
+      "observed_status": "FAIL",
+      "warning_ids": []
+    }
+  ],
+  "fixture_case_count": 12,
+  "fixture_failure_count": 0,
+  "fixture_pass_count": 12,
+  "generated_at": "2026-07-22T19:00:53Z",
+  "implements_plan_task_id": "P12-T04",
+  "policy_id": "ordinary_route_guard_policy_v1",
+  "schema_id": "ordinary_route_guard_validation_report_v1",
+  "source_hashes": {
+    "evaluator": "ff015c8906a244b2f25d81c2d278187995c76fe3e9e385f46a2cafc3cc1dac75",
+    "exception_schema": "960b342388549b2a64626c24556315302d3e6889fba404f92d6f1b48294b88ef",
+    "fixture_suite": "a4084f66a8947bd8a804dc82e2b942a1452acbf287b602cf86dce81a3e92f055",
+    "policy": "c0c4df98c0020fbb274a4c895e6d5749c2166397e6e419a63c7b6737f2ee3a96"
+  },
+  "status": "PASS",
+  "validated_controls": [
+    "below_threshold_pass",
+    "advisory_warning_before_hard_block",
+    "physics_bearing_selection",
+    "missing_exception_rejection",
+    "all_ready_science_accounting",
+    "human_gate_blocking",
+    "active_control_failure_evidence",
+    "stale_hash_rejection",
+    "untracked_evidence_rejection",
+    "sidecar_substitution_rejection"
+  ]
+}

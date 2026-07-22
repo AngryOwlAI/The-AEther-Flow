@@ -1,0 +1,103 @@
+{
+  "schema_id": "ordinary_route_guard_fixture_suite_v1",
+  "policy_id": "ordinary_route_guard_policy_v1",
+  "cases": [
+    {
+      "case_id": "below_threshold_system_route_pass",
+      "run_length": 1,
+      "selected_kind": "project_system",
+      "ready_set": "mixed",
+      "exception_mode": "inactive",
+      "expected_status": "PASS"
+    },
+    {
+      "case_id": "advisory_warning_before_hard_block",
+      "run_length": 2,
+      "selected_kind": "project_system",
+      "ready_set": "mixed",
+      "exception_mode": "inactive",
+      "expected_status": "WARN"
+    },
+    {
+      "case_id": "threshold_physics_route_pass",
+      "run_length": 3,
+      "selected_kind": "physics",
+      "ready_set": "mixed",
+      "exception_mode": "inactive",
+      "expected_status": "PASS"
+    },
+    {
+      "case_id": "above_threshold_physics_route_pass",
+      "run_length": 5,
+      "selected_kind": "physics",
+      "ready_set": "mixed",
+      "exception_mode": "inactive",
+      "expected_status": "PASS"
+    },
+    {
+      "case_id": "threshold_system_route_without_exception_fail",
+      "run_length": 3,
+      "selected_kind": "project_system",
+      "ready_set": "mixed",
+      "exception_mode": "inactive",
+      "expected_status": "FAIL"
+    },
+    {
+      "case_id": "all_ready_science_human_gated_exception_pass",
+      "run_length": 3,
+      "selected_kind": "project_system",
+      "ready_set": "human_gate_only",
+      "exception_mode": "valid_human_gate",
+      "expected_status": "PASS"
+    },
+    {
+      "case_id": "active_control_failure_exception_pass",
+      "run_length": 4,
+      "selected_kind": "project_system",
+      "ready_set": "unblocked_only",
+      "exception_mode": "valid_control_failure",
+      "expected_status": "PASS"
+    },
+    {
+      "case_id": "partial_ready_science_accounting_fail",
+      "run_length": 3,
+      "selected_kind": "project_system",
+      "ready_set": "mixed",
+      "exception_mode": "partial",
+      "expected_status": "FAIL"
+    },
+    {
+      "case_id": "stale_exception_evidence_hash_fail",
+      "run_length": 3,
+      "selected_kind": "project_system",
+      "ready_set": "human_gate_only",
+      "exception_mode": "stale_hash",
+      "expected_status": "FAIL"
+    },
+    {
+      "case_id": "untracked_exception_evidence_fail",
+      "run_length": 3,
+      "selected_kind": "project_system",
+      "ready_set": "unblocked_only",
+      "exception_mode": "untracked",
+      "expected_status": "FAIL"
+    },
+    {
+      "case_id": "sidecar_substitution_fail",
+      "run_length": 3,
+      "selected_kind": "physics",
+      "ready_set": "mixed",
+      "exception_mode": "inactive",
+      "sidecar_supersedes": true,
+      "expected_status": "FAIL"
+    },
+    {
+      "case_id": "human_gated_route_without_authority_fail",
+      "run_length": 3,
+      "selected_kind": "human_gate",
+      "ready_set": "human_gate_only",
+      "exception_mode": "inactive",
+      "expected_status": "FAIL"
+    }
+  ]
+}

@@ -19,6 +19,10 @@ from pathlib import Path
 try:
     from dual_budget_policy import dual_budget_policy
     from family_freeze_admission import family_freeze_policy
+    from ordinary_route_guard import (
+        evaluate_research_handoff_guard,
+        ordinary_route_guard_policy,
+    )
     from physics_payload_admission import admission_policy as physics_payload_admission_policy
     from report_physics_progress_metrics import build_report as build_physics_progress_report
     from resolve_latest_handoff import resolve_latest
@@ -34,6 +38,10 @@ try:
 except ImportError:  # pragma: no cover
     from scripts.research_control.dual_budget_policy import dual_budget_policy
     from scripts.research_control.family_freeze_admission import family_freeze_policy
+    from scripts.research_control.ordinary_route_guard import (
+        evaluate_research_handoff_guard,
+        ordinary_route_guard_policy,
+    )
     from scripts.research_control.physics_payload_admission import (
         admission_policy as physics_payload_admission_policy,
     )
@@ -68,6 +76,7 @@ STOP_CONDITIONS = [
     "selected role needs authority expansion",
     "job would touch paths outside its allowlist",
     "canonical ontology change or other protected authority requires human gate",
+    "ordinary-route guard fails after three consecutive project-system tasks",
 ]
 
 
@@ -768,6 +777,19 @@ def continuation_status(
     jobs_waiting = routing_payload["jobs_waiting"]
     route_orbit_diagnostics = routing_payload["route_orbit_diagnostics"]
     graph_summary = routing_payload["dependency_graph_summary"]
+    ordinary_route_guard = evaluate_research_handoff_guard(
+        read_handoff_payload(latest),
+        REPO_ROOT,
+    )
+    if ordinary_route_guard.get("status") == "FAIL":
+        return {
+            "status": "blocked",
+            "boundary": "blocked",
+            "reason": "ordinary-route guard failed",
+            "ordinary_route_guard": ordinary_route_guard,
+            "validation_errors": ordinary_route_guard.get("errors", []),
+            "checkpoint_required_after_execution": False,
+        }
 
     boundary = "director_decision_required"
     protected_gate = routing_payload.get("protected_gate", {})
@@ -827,6 +849,8 @@ def continuation_status(
         "physics_payload_admission_policy": physics_payload_admission_policy(),
         "family_freeze_policy": family_freeze_policy(),
         "dual_budget_policy": dual_budget_policy(),
+        "ordinary_route_guard_policy": ordinary_route_guard_policy(),
+        "ordinary_route_guard": ordinary_route_guard,
         "required_authority_surfaces": routing_payload["required_authority_surfaces"],
         "stop_conditions": STOP_CONDITIONS,
         "validation_errors": [],

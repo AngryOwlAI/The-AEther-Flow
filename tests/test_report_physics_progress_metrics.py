@@ -305,6 +305,11 @@ class PhysicsProgressMetricsTests(unittest.TestCase):
         self.assertEqual(metrics["theorem_countermodel_candidate_count"], 1)
         self.assertEqual(metrics["candidate_construction_count"], 1)
         self.assertEqual(metrics["physics_bearing_to_project_system_task_ratio"], 0.5)
+        guard = metrics["ordinary_route_guard_status"]
+        self.assertEqual(guard["policy_id"], "ordinary_route_guard_policy_v1")
+        self.assertTrue(guard["prospective_hard_gate_active"])
+        self.assertFalse(guard["current_run_requires_physics_route_or_exception"])
+        self.assertFalse(guard["system_work_counts_as_physics"])
 
     def test_markdown_renders_payload_ratio_non_truth_ranking_guard(self) -> None:
         markdown = self.reporter.render_markdown(self.reporter.build_report(self.make_repo()))
@@ -336,6 +341,9 @@ class PhysicsProgressMetricsTests(unittest.TestCase):
         )
         self.assertFalse(
             dashboard["authority_boundary"]["system_success_counts_as_distance_to_gr"]
+        )
+        self.assertTrue(
+            dashboard["advisory_route_ratio"]["separate_prospective_hard_guard_active"]
         )
 
     def test_project_system_detection_prefers_explicit_normalized_scope(self) -> None:

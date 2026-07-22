@@ -1429,6 +1429,19 @@ class ResearchControlTests(unittest.TestCase):
         self.assertFalse(
             status["dual_budget_policy"]["system_success_counts_as_distance_to_gr"]
         )
+        self.assertEqual(
+            status["ordinary_route_guard_policy"]["policy_id"],
+            "ordinary_route_guard_policy_v1",
+        )
+        self.assertEqual(
+            status["ordinary_route_guard_policy"]["enforcement"],
+            "prospective_hard_failure",
+        )
+        self.assertEqual(status["ordinary_route_guard"]["status"], "PASS")
+        self.assertEqual(
+            status["ordinary_route_guard"]["selected_plan_task_id"],
+            "P14-T01",
+        )
         self.assertIn("dependency_graph_summary", status)
         graph_summary = status["dependency_graph_summary"]
         self.assertEqual(graph_summary["active_task"], program_state["active_task_id"])

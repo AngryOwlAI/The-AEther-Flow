@@ -269,8 +269,54 @@ admitted category, primary credit, lane-separated observed outputs and
 accepted criteria, and the four false authority flags. System and support
 success must keep `distance_to_gr_delta.changed: false`.
 
-The existing three-project-system-task threshold remains advisory in P12-T03.
-P12-T04 owns the later ordinary-route hard guard.
+The P12-T03 accounting evaluator remains the normalized source for budget
+classification. P12-T04 activates the separate prospective ordinary-route
+hard guard described below.
+
+## Prospective Ordinary-Route Guard Admission
+
+Every AgentJob created after `2026-07-22T19:00:53Z` must include an
+`ordinary_route_guard_admission` block conforming to the P12-T04 policy under
+`research_control/tasks/RT-20260722-015/artifacts/`. The P12-T04
+implementation AgentJob at the exact activation instant and all earlier jobs
+remain readable without this block.
+
+The admission binds the job to the immediately preceding ordinary research
+handoff. That handoff must contain a passing `ordinary_route_guard` evaluation
+whose selected v21 plan task is the job's `plan_task_id`. The handoff must be a
+tracked regular YAML file at its exact SHA-256. A project-improvement sidecar
+cannot replace or supersede it.
+
+```yaml
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0000"
+  source_handoff_path: "research_control/handoffs/handoff-0000.yaml"
+  source_handoff_sha256: "lowercase sha256"
+  selected_plan_task_id: "P0-T00"
+  guard_outcome: "physics_bearing_route_selected"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+```
+
+After three consecutive completed project-system tasks, the ordinary handoff
+must select a dependency-ready physics-bearing v21 task. A project-system task
+may instead be selected only with an `ordinary_route_exception_receipt_v1`
+that accounts for every dependency-ready science task and binds each active
+blocking control failure to a tracked exact hash. `human_gate_required` is
+verified directly against the registered v21 backlog. Other allowed failure
+classes require an `ordinary_route_control_failure_v1` evidence record.
+
+The guard emits an advisory warning at two consecutive project-system tasks
+and hard-fails at three. It is project-control routing evidence only: neither a
+passing guard, an exception, nor a selected physics route is scientific proof,
+physics progress, Distance-to-GR progress, ontology authority, or promotion.
 
 For every future physics research AgentJob created after
 `2026-06-17T15:46:25Z`, the job must also include:

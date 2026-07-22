@@ -41,6 +41,10 @@ from scripts.research_control.dual_budget_policy import (  # noqa: E402
     evaluate_dual_budget_allocation,
     evaluate_dual_budget_completion,
 )
+from scripts.research_control.ordinary_route_guard import (  # noqa: E402
+    evaluate_agent_job_route_admission,
+    evaluate_research_handoff_guard,
+)
 from scripts.validation.models import (  # noqa: E402
     ValidationFinding as CommonValidationFinding,
     ValidationGateResult,
@@ -2446,6 +2450,15 @@ def validate_agent_jobs(
         )
         for error in dual_budget["errors"]:
             report.error(f"{row['job_path']}: dual-budget allocation: {error}")
+        ordinary_route = evaluate_agent_job_route_admission(
+            job,
+            created_at=row.get("created_at", ""),
+            repo_root=REPO_ROOT,
+        )
+        for error in ordinary_route["errors"]:
+            report.error(f"{row['job_path']}: ordinary-route admission: {error}")
+        for warning in ordinary_route.get("warnings", []):
+            report.warn(f"{row['job_path']}: ordinary-route admission: {warning}")
         validate_parent_child_decomposition(report, row, job)
         validate_future_physics_job_authority(report, row, job)
         if row["completion_path"]:
@@ -5528,6 +5541,17 @@ def validate_handoffs(
             data,
             yaml_path.relative_to(REPO_ROOT).as_posix(),
         )
+        ordinary_route = evaluate_research_handoff_guard(data, REPO_ROOT)
+        for error in ordinary_route["errors"]:
+            report.error(
+                f"{yaml_path.relative_to(REPO_ROOT).as_posix()}: "
+                f"ordinary-route guard: {error}"
+            )
+        for warning in ordinary_route.get("warnings", []):
+            report.warn(
+                f"{yaml_path.relative_to(REPO_ROOT).as_posix()}: "
+                f"ordinary-route guard: {warning}"
+            )
         validate_loop_control_handoff(report, data, jobs, yaml_path)
     if numbers and numbers != list(range(min(numbers), max(numbers) + 1)):
         report.error("handoff IDs must be monotonic without gaps")
