@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260722-015` and `handoff-0825`.
+`RT-20260722-016` and `handoff-0826`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260722-015` |
-| Latest handoff ID | `handoff-0825` |
-| Current status | `p12_t04_ordinary_route_guard_complete_p14_t01_selected` |
+| Active task ID | `RT-20260722-016` |
+| Latest handoff ID | `handoff-0826` |
+| Current status | `p14_t01_success_categories_complete_p14_t02_selected` |
 | V16 completed | false |
-| Current route family | construction or implementation (project system) |
-| Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: unchanged_project_system_control_only |
-| Required next authority | One fresh P14-T01 physics-bearing philosophy-foundations packet may define four distinct project-success categories at proposal-neutral claim-boundary scope after the P12-T04 checkpoint. |
-| Next recommended action | Run exactly one bounded v21 P14-T01 ontology-formalizer philosophy-foundations AgentJob to define four distinct project-success categories without upgrading current claims or executing any other work item. |
+| Current route family | formalization or theorem (scientific) |
+| Target derivation milestone | none; this is project-control tooling work |
+| Current burden | none for physics derivation; live control burden is v21 non empirical ontology success criteria |
+| Required next authority | One P14-T02 external-red-team-reviewer packet may define and stress non-empirical ontology success criteria compare alternatives and assess the current program without scalar scoring or claim promotion. |
+| Next recommended action | Run exactly one bounded v21 P14-T02 external-red-team-reviewer philosophy-foundations AgentJob to define non-empirical ontology success criteria with evidence examples counterexamples alternative comparison and no scalar score workflow-metric substitution claim upgrade or P14-T03 execution. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260722-015` |
-| Latest research handoff ID | `handoff-0825` |
-| Latest research next action | Run exactly one bounded v21 P14-T01 ontology-formalizer philosophy-foundations AgentJob to define four distinct project-success categories without upgrading current claims or executing any other work item. |
+| Latest research task ID | `RT-20260722-016` |
+| Latest research handoff ID | `handoff-0826` |
+| Latest research next action | Run exactly one bounded v21 P14-T02 external-red-team-reviewer philosophy-foundations AgentJob to define non-empirical ontology success criteria with evidence examples counterexamples alternative comparison and no scalar score workflow-metric substitution claim upgrade or P14-T03 execution. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260722-015/00_TASK.yaml`.
-- Active task objective: Implement a prospective hard route guard that requires a physics-bearing ordinary task after three consecutive project-system tasks unless tracked hash-bound evidence shows every dependency-ready scientific route is blocked by a lawful control failure.
-- Latest handoff path: `research_control/handoffs/handoff-0825.yaml`.
-- Latest handoff summary: P12-T04 implemented the prospective threshold-three ordinary-route hard guard with independent normalized history and v21 readiness derivation exact all-ready-science-blocked exception evidence future AgentJob admission and twelve passing fixtures.
-- Current route family: construction or implementation (project system).
-- Next recommended action: Run exactly one bounded v21 P14-T01 ontology-formalizer philosophy-foundations AgentJob to define four distinct project-success categories without upgrading current claims or executing any other work item.
+- Active task path: `research_control/tasks/RT-20260722-016/00_TASK.yaml`.
+- Active task objective: Define necessary and insufficient evidence for interpretive redescription formal or categorical equivalence genuine emergence and empirical novelty then map current exact-GR and conditional quotient-EqSrc work without upgrading any claim.
+- Latest handoff path: `research_control/handoffs/handoff-0826.yaml`.
+- Latest handoff summary: P14-T01 completed four independent project-success evidence predicates and a finite theorem showing that none implies another by default. Current exact-GR work has only interpretive redescription met; its source-to-GR formal-equivalence coordinate is indeterminate and its emergence and empirical-novelty coordinates are not met at the declared scope. General quotient-EqSrc formal equivalence remains indeterminate pending an exact structure-preserving proof. No ontology scientific ledger Distance-to-GR protected authority promotion proof publication or completed-derivation status changed.
+- Current route family: formalization or theorem (scientific).
+- Next recommended action: Run exactly one bounded v21 P14-T02 external-red-team-reviewer philosophy-foundations AgentJob to define non-empirical ontology success criteria with evidence examples counterexamples alternative comparison and no scalar score workflow-metric substitution claim upgrade or P14-T03 execution.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P14-T01 ontology-formalizer philosophy-foundations AgentJob to define four distinct project-success categories without upgrading current claims or executing any other work item.
+Run exactly one bounded v21 P14-T02 external-red-team-reviewer philosophy-foundations AgentJob to define non-empirical ontology success criteria with evidence examples counterexamples alternative comparison and no scalar score workflow-metric substitution claim upgrade or P14-T03 execution.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -326,28 +326,13 @@ No validation-layer split is recorded in the latest handoff.
 
 Authorization layers:
 
-| Authorization field | Value | Meaning |
-| --- | --- | --- |
-| `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | not_applicable | exact scope of protected review authority |
-| `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
-| `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
-| `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
-| `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
-| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
-| `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
-| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
-| `p14_t01_physics_packet_authorized` | False | extension authorization field |
-| `project_control_change_authorized` | True | extension authorization field |
-| `project_control_change_scope` | P12-T04 completion only | extension authorization field |
-| `proof_authority` | False | extension authorization field |
-| `publication_authority` | False | extension authorization field |
+No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260722-015`;
-- latest handoff: `handoff-0825`;
-- current status: `p12_t04_ordinary_route_guard_complete_p14_t01_selected`;
+- active task: `RT-20260722-016`;
+- latest handoff: `handoff-0826`;
+- current status: `p14_t01_success_categories_complete_p14_t02_selected`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -357,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0825.yaml`
-- `research_control/tasks/RT-20260722-015/00_TASK.yaml`
+- `research_control/handoffs/handoff-0826.yaml`
+- `research_control/tasks/RT-20260722-016/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -374,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0825*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0826*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

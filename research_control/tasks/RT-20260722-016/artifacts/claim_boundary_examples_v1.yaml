@@ -1,0 +1,47 @@
+schema_id: "p14_t01_claim_boundary_examples_v1"
+status: "draft/control"
+task_id: "RT-20260722-016"
+category_examples:
+  interpretive_redescription:
+    allowed:
+      - "Within the declared exact-GR benchmark domain the AEther-flow vocabulary is an interpretive redescription with the same operational predictions."
+      - "This mapping supplies an explanatory dictionary; it does not establish ontology adoption."
+    disallowed:
+      - "Exact-GR agreement proves that the AEther substrate physically exists."
+      - "A renamed variable is by itself an interpretive equivalence certificate."
+  formal_or_categorical_equivalence:
+    allowed:
+      - "Formal equivalence is established only for the named systems hypotheses functors and preservation profile proved by the cited theorem."
+      - "The quotient-EqSrc construction remains conditional until its structure-preserving theorem is proved."
+    disallowed:
+      - "Similar equations prove categorical equivalence."
+      - "A scoped quotient candidate proves general EqSrc equivalence."
+  genuine_emergence:
+    allowed:
+      - "Emergence requires a non-circular source-to-effective construction with regime robustness and target-independence evidence."
+      - "The current packet does not establish genuine spacetime emergence."
+    disallowed:
+      - "Embedding source data in a target manifold proves that the manifold emerged."
+      - "Ontology adoption by stipulation is a derivation of effective geometry."
+  empirical_novelty:
+    allowed:
+      - "Empirical novelty requires a distinct operational prediction or constraint outside what the exact-GR benchmark already fixes."
+      - "No independent low-energy signature is established by the present exact-GR redescription."
+    disallowed:
+      - "A new interpretation is automatically a new empirical prediction."
+      - "Exact benchmark recovery is empirical novelty."
+cross_category_guards:
+  - "interpretive_redescription does not imply formal_or_categorical_equivalence"
+  - "formal_or_categorical_equivalence does not imply genuine_emergence"
+  - "genuine_emergence does not imply empirical_novelty"
+  - "empirical_novelty does not imply interpretive_redescription"
+  - "no directed cross-category implication is automatic"
+authority_limits:
+  canonical_ontology_modified: false
+  physical_interpretation_established: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_claimed: false

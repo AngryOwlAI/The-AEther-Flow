@@ -386,6 +386,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P1-T01-EQSRC-FLOW-GENERATED-GRADED-ORBIT-ROOT-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-009/artifacts/eqsrc_flow_generated_graded_orbit_root_smuggling_audit.tex`
 - `TEX-V21-P1-T02-EQSRC-CANONICAL-CHOICE-FAMILY-MAP` `research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex`
 - `TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex`
+- `TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES` `research_control/tasks/RT-20260722-016/artifacts/four_project_success_categories_v1.tex`
 - `TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION` `research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex`
 - `TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex`
 - `TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex`

@@ -1,0 +1,426 @@
+artifact_id: "CHILD-PHYS-PHIL-V21-P14-T01-SUCCESS-CATEGORIES-V1"
+artifact_type: "parent_child_synthesis_child_output"
+schema_version: "1.0.0"
+task_id: "RT-20260722-016"
+job_id: "AJ-RT-20260722-016-001"
+plan_task_id: "P14-T01"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+status: "completed"
+authority: "draft/control"
+created_at: "2026-07-22T20:04:41Z"
+claim_boundary_id: "CB-V21-P14-T01-SUCCESS-CATEGORIES-001"
+purpose: >-
+  Supply reader-clear conceptual definitions, evidence obligations, overread
+  guards, and conservative current-status mappings for four independent kinds
+  of project success. This artifact supplies philosophy-side synthesis input;
+  it is not itself a physics theorem, scientific-status change, or authority
+  decision.
+
+source_basis:
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md#P14-T01"
+  - "research_control/tasks/RT-20260722-016/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-016/jobs/AJ-RT-20260722-016-001.yaml"
+  - "research_control/tasks/RT-20260722-016/roles/ontology-formalizer@0.2.0--RT-20260722-016.yaml"
+  - "research_control/design/v21_scientific_status_schema.md"
+  - "research_control/design/epistemic_category_glossary.md"
+  - "research_control/design/public_status_exists_does_not_exist_source_spec.md"
+  - "research_control/design/scoped_positive_claim_vocabulary.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "ontology/tex/aether_flow_geometry.tex"
+
+classification_frame:
+  subject_rule: >-
+    Each classification names the exact claim package, comparison baseline,
+    domain, assumptions, and evidence scope. A result can satisfy more than one
+    category only when each category has its own evidence; a label never
+    transfers merely because the labels are discussed together.
+  predicate_rule: >-
+    The four categories are independent evidence predicates rather than rungs
+    on one ladder. No default implication is admitted between them. Any claimed
+    implication requires a separate theorem or argument whose assumptions and
+    scope are recorded.
+  status_rule: >-
+    Category classification answers what kind of result is supported. It does
+    not by itself set existence, uniqueness, naturality, covariance,
+    robustness, dynamics, operational meaning, empirical support,
+    mathematical proof, or authority status in the v21 scientific-status
+    schema.
+  cooccurrence_rule: >-
+    Logical independence is not mutual exclusion. A future result may qualify
+    for several categories, but only after satisfying the evidence obligations
+    of every category claimed.
+
+categories:
+  interpretive_redescription:
+    reader_definition: >-
+      The operative mathematical law and its observable consequences are kept
+      fixed in a declared scope, while a new explanatory or ontological
+      dictionary says what the established structures might mean or be about.
+    technical_test: >-
+      Relative to a named benchmark B and claim package P, interpretive
+      redescription requires an explicit interpretation map from structures of
+      B to proposed explanatory roles, together with evidence that P does not
+      alter the benchmark law or operational predictions in the stated domain.
+    necessary_evidence:
+      - id: "IR-N1"
+        requirement: "A named benchmark and an exact domain in which its operative law and observables are retained."
+      - id: "IR-N2"
+        requirement: "An explicit, stable interpretation or ontology dictionary rather than a bare change of terminology."
+      - id: "IR-N3"
+        requirement: "A source-backed statement of what is unchanged operationally and what is added only at the explanatory level."
+      - id: "IR-N4"
+        requirement: "An authority boundary distinguishing a proposed interpretation from an established physical ontology or first-principles derivation."
+    insufficient_evidence_and_overread_guards:
+      - "Merely renaming variables without a coherent explanatory dictionary is insufficient."
+      - "Exact agreement with a benchmark alone is insufficient; interpretive content must be stated."
+      - "Adopting or reusing a target law is not evidence that the law was derived from source primitives."
+      - "A formal dictionary does not establish that the proposed ontology is physically real, unique, natural, or adopted."
+      - "Interpretive redescription does not imply formal equivalence, genuine emergence, or empirical novelty."
+    concise_claim_template: >-
+      In scope D, P retains benchmark B's operative law and predictions while
+      supplying the proposed interpretive dictionary I; no source derivation,
+      ontology establishment, or novel prediction follows from that fact.
+
+  formal_or_categorical_equivalence:
+    reader_definition: >-
+      Two specified mathematical presentations carry the same declared
+      structure in the precise sense established by an exact theorem, not
+      merely because their equations look alike or selected examples agree.
+    technical_test: >-
+      The claim identifies the objects, morphisms, signatures, and preserved
+      structure, then proves an isomorphism, equivalence, quotient universal
+      property, or other exact equivalence notion appropriate to the declared
+      category. The proof must state its hypotheses and the level at which the
+      equivalence holds.
+    necessary_evidence:
+      - id: "FE-N1"
+        requirement: "Named source and target structures or categories, including their objects, morphisms, and relevant operations or relations."
+      - id: "FE-N2"
+        requirement: "An exact equivalence notion and comparison maps, functors, or quotient maps with declared domains and codomains."
+      - id: "FE-N3"
+        requirement: "A proof that the comparison preserves the stated structure; categorical claims also require the relevant identity, composition, and inverse or quasi-inverse obligations."
+      - id: "FE-N4"
+        requirement: "A theorem identifier, explicit assumptions, proof scope, and recorded limitations, including whether the result is object-level, morphism-level, conditional, local, or global."
+      - id: "FE-N5"
+        requirement: "If empirical equivalence is additionally claimed, a separate operational map showing that observables and measurement semantics are preserved."
+    insufficient_evidence_and_overread_guards:
+      - "Similar notation, identical-looking equations, matching finite fixtures, or validator PASS is insufficient."
+      - "An object-kernel equivalence alone is insufficient for a categorical equivalence when the morphism quotient and composition laws are not constructed."
+      - "A conditional theorem cannot be reported outside its hypotheses or upgraded from local to general scope."
+      - "Formal equivalence does not decide which presentation is ontologically true, physically selected, or emergent."
+      - "Formal equivalence does not by itself create a distinct empirical prediction or constraint."
+      - "Formal or categorical equivalence does not imply interpretive redescription, genuine emergence, or empirical novelty."
+    concise_claim_template: >-
+      Under hypotheses H and for the declared structures S and T, theorem Thm
+      proves equivalence E at scope L; no ontology, emergence, or empirical
+      conclusion follows beyond the structures explicitly preserved by E.
+
+  genuine_emergence:
+    reader_definition: >-
+      A target effective structure, law, or physical semantics is obtained from
+      lower-level source primitives and source dynamics rather than inserted as
+      an assumption, adopted from the target theory, or supplied only as an
+      interpretive analogy.
+    technical_test: >-
+      A non-circular derivation or reconstruction begins with independently
+      specified source primitives and rules, produces the target effective
+      structure in a stated regime, and shows that the result is sufficiently
+      stable under the declared admissible variations or coarse-graining
+      choices. A physical-emergence claim also requires a source-backed bridge
+      to operational meaning.
+    necessary_evidence:
+      - id: "GE-N1"
+        requirement: "Explicit source primitives, source dynamics or construction rules, and their authority status."
+      - id: "GE-N2"
+        requirement: "A derivation, reconstruction, limit, or coarse-graining map that yields the named target effective structure."
+      - id: "GE-N3"
+        requirement: "A no-smuggling argument showing that the target structure, selector, law, or empirical fit was not encoded in the source assumptions."
+      - id: "GE-N4"
+        requirement: "The regime of validity, approximation or limiting assumptions, and failure conditions."
+      - id: "GE-N5"
+        requirement: "Robustness or invariance evidence under the explicitly declared admissible changes needed for the claimed kind of emergence."
+      - id: "GE-N6"
+        requirement: "For a physical claim, an operational bridge connecting derived effective variables to observables or measurement semantics."
+    insufficient_evidence_and_overread_guards:
+      - "Embedding a target model into source notation or adopting the target law as effective dynamics is insufficient."
+      - "A source-purity audit without a positive derivation is insufficient."
+      - "A quotient, interpretation map, finite witness, or formal equivalence alone is insufficient."
+      - "A schematic induced-geometry formula whose crucial maps are postulated is not a completed emergence result."
+      - "A source-derived mathematical object does not become a physical object without the required operational bridge and authority."
+      - "Genuine emergence does not imply interpretive redescription, formal equivalence, or empirical novelty."
+    concise_claim_template: >-
+      From source primitives S and source rules D, derivation R yields effective
+      target T in regime Q with robustness class V and operational bridge O;
+      the claim is limited to those assumptions and that regime.
+
+  empirical_novelty:
+    reader_definition: >-
+      The proposal supplies a testable observable prediction or constraint that
+      is not already fixed by the named benchmark in the same operational
+      domain.
+    technical_test: >-
+      The claim specifies an observable and measurement protocol, derives a
+      prediction or constraint, and demonstrates by explicit comparison that
+      it differs from or narrows the benchmark's allowed outcomes. Novelty is
+      about distinct empirical content; confirmation or truth is a separate
+      empirical-status question.
+    necessary_evidence:
+      - id: "EN-N1"
+        requirement: "A named observable, operational definition, measurement protocol, and test domain."
+      - id: "EN-N2"
+        requirement: "A source-backed prediction, exclusion, correlation, scaling law, or parameter constraint with declared assumptions and uncertainty."
+      - id: "EN-N3"
+        requirement: "An explicit benchmark comparison showing that the content is not already entailed by, freely adjustable within, or merely reparameterized from the benchmark."
+      - id: "EN-N4"
+        requirement: "A falsification or discrimination condition stating what observation would distinguish or constrain the proposal."
+    insufficient_evidence_and_overread_guards:
+      - "A new explanation of unchanged benchmark predictions is not empirical novelty."
+      - "A renamed parameter or alternative coordinates with the same observable range are insufficient."
+      - "Compatibility with existing data is not novelty and is not independent empirical support for the interpretation."
+      - "An unmeasurable variable, unspecified detector semantics, or unconstrained fitted parameter is insufficient."
+      - "A novel prediction need not be confirmed; novelty does not imply empirical support, physical truth, or ontology adoption."
+      - "Empirical novelty does not imply interpretive redescription, formal equivalence, or genuine emergence."
+    concise_claim_template: >-
+      Under assumptions H, P predicts or constrains observable O in domain D in
+      a way not fixed by benchmark B, with discriminator F; confirmation and
+      authority status remain separate questions.
+
+default_non_implication:
+  statement: >-
+    No one of the four category predicates entails any other by default. Four
+    exclusive conceptual fixtures witness all twelve directed
+    non-implications. These fixtures are task-local logical controls, not claims
+    that the illustrated physical systems exist.
+  directed_non_implication_count: 12
+  fixtures:
+    - fixture_id: "IR-ONLY"
+      description: >-
+        A framework keeps a benchmark law and every operational prediction
+        fixed while offering a proposed explanatory dictionary. No distinct
+        formal presentation is related by an equivalence theorem, no target is
+        derived from source dynamics, and no new observable is predicted.
+      true_categories:
+        - "interpretive_redescription"
+      false_categories:
+        - "formal_or_categorical_equivalence"
+        - "genuine_emergence"
+        - "empirical_novelty"
+    - fixture_id: "FE-ONLY"
+      description: >-
+        Two abstract categories are proved equivalent by explicit functors and
+        natural isomorphisms, but neither is presented as a deeper ontology,
+        neither is derived as an effective limit of the other, and neither has
+        empirical observables.
+      true_categories:
+        - "formal_or_categorical_equivalence"
+      false_categories:
+        - "interpretive_redescription"
+        - "genuine_emergence"
+        - "empirical_novelty"
+    - fixture_id: "GE-ONLY"
+      description: >-
+        A finite source dynamics non-circularly yields a stable coarse-grained
+        combinatorial structure. The many-to-one map is not an equivalence, no
+        retained benchmark receives a new interpretation, and no operational
+        observable is assigned.
+      true_categories:
+        - "genuine_emergence"
+      false_categories:
+        - "interpretive_redescription"
+        - "formal_or_categorical_equivalence"
+        - "empirical_novelty"
+    - fixture_id: "EN-ONLY"
+      description: >-
+        A phenomenological correction predicts a discriminating observable
+        departure from a benchmark, but it supplies no alternative ontology,
+        no equivalence theorem, and no source-to-effective derivation.
+      true_categories:
+        - "empirical_novelty"
+      false_categories:
+        - "interpretive_redescription"
+        - "formal_or_categorical_equivalence"
+        - "genuine_emergence"
+
+claim_boundary_examples:
+  allowed:
+    - example_id: "ALLOW-IR-CURRENT-EXACT-GR"
+      category: "interpretive_redescription"
+      phrase: >-
+        The current exact-GR line supplies a proposed AEther-flow interpretive
+        dictionary while retaining GR's effective law and observable content;
+        it does not derive GR from substrate primitives or establish the
+        proposed ontology as physical fact.
+    - example_id: "ALLOW-FE-CONDITIONAL"
+      category: "formal_or_categorical_equivalence"
+      phrase: >-
+        At the exact scope of a named theorem, the declared source and quotient
+        structures may be called formally equivalent only when the proof
+        establishes the required structure-preserving maps and their stated
+        object- and morphism-level obligations.
+    - example_id: "ALLOW-FE-EQSRC-CURRENT"
+      category: "formal_or_categorical_equivalence"
+      phrase: >-
+        The current quotient-EqSrc packet proves scoped object-kernel and
+        conditional congruence results, but it does not construct the full
+        morphism quotient, establish physical observational equivalence, or
+        discharge general EqSrc.
+    - example_id: "ALLOW-GE-FUTURE-CONDITIONAL"
+      category: "genuine_emergence"
+      phrase: >-
+        A future result would qualify as emergence only if an explicit source
+        derivation yields the effective structure without target import and
+        records its regime, robustness, and any required operational bridge.
+    - example_id: "ALLOW-EN-FUTURE-CONDITIONAL"
+      category: "empirical_novelty"
+      phrase: >-
+        A future extension would qualify as empirically novel only if it
+        predicts or constrains a specified observable beyond what exact GR
+        already fixes in the same domain.
+  disallowed:
+    - example_id: "BLOCK-IR-AS-DERIVATION"
+      phrase: "AEther-flow's exact agreement with GR proves that GR emerges from the substrate."
+      reason: "Conflates interpretive redescription and adopted effective closure with genuine emergence and derivation."
+    - example_id: "BLOCK-IR-AS-ONTOLOGY-FACT"
+      phrase: "The exact-GR line establishes the AEther-flow ontology as physical reality."
+      reason: "A proposed interpretive dictionary supplies no protected ontology-adoption or physical-establishment authority."
+    - example_id: "BLOCK-EQSRC-AS-GENERAL-EQUIVALENCE"
+      phrase: "The quotient fixtures prove categorical equivalence and solve EqSrc in general."
+      reason: "Finite fixtures and object-kernel results do not construct the full morphism quotient or discharge general EqSrc."
+    - example_id: "BLOCK-EQUIVALENCE-AS-EMERGENCE"
+      phrase: "Because two formalisms are categorically equivalent, one genuinely emerges from the other."
+      reason: "Equivalence is symmetric up to the declared structure; emergence requires an independently sourced, directional, non-circular derivation."
+    - example_id: "BLOCK-EXPLANATORY-AS-EMPIRICAL-NOVELTY"
+      phrase: "The interpretation is empirically novel because it offers a different explanation of the same GR predictions."
+      reason: "Explanatory novelty is not a distinct operational prediction or constraint."
+    - example_id: "BLOCK-VALIDATOR-AS-SCIENCE"
+      phrase: "The validator PASS proves the four categories are physically correct and authorizes promotion."
+      reason: "Validator receipts support control integrity only, not scientific proof, ontology adoption, or promotion."
+
+current_status_mapping:
+  exact_gr_active_line:
+    overall_classification: "interpretive_redescription_only"
+    interpretive_redescription:
+      status: "supported_at_declared_exact_closure_scope"
+      basis:
+        - "The operative effective gravitational law and observable content are explicitly retained as GR."
+        - "The AEther-flow material supplies a congruence-based and ontology-facing explanatory dictionary."
+        - "The controlling status sources keep the ontology proposed and the substrate derivation incomplete."
+    formal_or_categorical_equivalence:
+      status: "not_established_for_the_source_ontology_to_gr_relation"
+      reason: >-
+        Operational identity of the adopted effective law is not an exact
+        source-to-target equivalence theorem and does not prove a categorical
+        relation between substrate ontology and GR.
+    genuine_emergence:
+      status: "not_established"
+      reason: >-
+        The exact-GR effective law is adopted in the active line; it has not
+        been derived non-circularly from explicit substrate primitives and
+        dynamics.
+    empirical_novelty:
+      status: "not_met_in_current_exact_closure_scope"
+      reason: >-
+        The current source states that the predictive content is exactly GR and
+        supplies no independent low-energy non-GR observable signature.
+    blocked_overread: >-
+      This mapping does not establish the ontology, derive GR, create an
+      independent prediction, promote the exact-GR benchmark, or complete the
+      project derivation.
+
+  quotient_eqsrc_line:
+    overall_classification: "scoped_conditional_formal_results_without_general_equivalence"
+    formal_or_categorical_equivalence:
+      status: "conditional_and_subclaim_scoped_only"
+      supported_subclaims:
+        - "Object-kernel equivalence is proved at the recorded P3-T05 scope."
+        - "Composition congruence and variation naturality have only their recorded conditional scope."
+        - "The P3-T07 record preserves a valid conditional quotient theorem."
+      unmet_for_general_category:
+        - "The morphism quotient is not constructed."
+        - "Physical observational equivalence is not established."
+        - "General EqSrc is not discharged."
+        - "The exact quotient candidate is locally frozen absent declared reopening evidence."
+      reporting_rule: >-
+        Apply formal-equivalence language only to the exact proved subclaim,
+        hypotheses, and structure level. Do not label the quotient-EqSrc line
+        categorically equivalent in general.
+    interpretive_redescription:
+      status: "not_inferred_from_quotient_results"
+    genuine_emergence:
+      status: "not_inferred_from_quotient_results"
+    empirical_novelty:
+      status: "not_inferred_from_quotient_results"
+    blocked_overread: >-
+      No source-law adoption, current-ontology derivation of the quotient
+      package, physical selection, general EqSrc proof, empirical equivalence,
+      emergence, novelty, benchmark promotion, or completed derivation follows.
+
+assumption_delta:
+  physical_or_ontological_assumptions_added: []
+  control_conventions_added:
+    - "Treat the four success categories as independent evidence predicates unless a separate implication theorem is proved."
+    - "Require a directional, non-circular source derivation and declared robustness for the project-control label genuine emergence."
+    - "Reserve empirical novelty for operational content distinct from a named benchmark, while keeping empirical confirmation as a separate status dimension."
+  scope_note: >-
+    These are task-local claim-classification conventions. They do not change
+    source ontology, physics dynamics, observables, or any protected authority.
+
+ambiguity_risks:
+  - risk_id: "RISK-EXACT-IDENTITY"
+    risk: "Exact operational identity may be mistaken for a source-to-target equivalence theorem."
+    mitigation: "Name the compared structures and require the exact theorem level before using equivalence language."
+  - risk_id: "RISK-OBJECT-VS-CATEGORY"
+    risk: "Object-level quotient or kernel results may be overread as categorical equivalence."
+    mitigation: "Record object, morphism, identity, composition, inverse, and universal-property obligations separately."
+  - risk_id: "RISK-EMERGENCE-METAPHOR"
+    risk: "Words such as effective, induced, appearance, or manifestation may be mistaken for a derivation."
+    mitigation: "Require the explicit source-to-target derivation, no-smuggling check, regime, and robustness evidence."
+  - risk_id: "RISK-NOVELTY-POLYSEMY"
+    risk: "Conceptual, explanatory, mathematical, and empirical novelty may be collapsed."
+    mitigation: "Use empirical novelty only when a distinct operational prediction or constraint and benchmark comparison exist."
+  - risk_id: "RISK-NECESSARY-AS-SUFFICIENT"
+    risk: "Meeting a checklist may be treated as automatic truth, proof, or authority."
+    mitigation: "Keep evidence sufficiency, theorem validity, empirical support, and protected authority as separately reviewed questions."
+  - risk_id: "RISK-INDEPENDENCE-AS-EXCLUSION"
+    risk: "Logical independence may be mistaken for a ban on multi-category results."
+    mitigation: "Permit co-classification only when each category's independent evidence obligations are met."
+  - risk_id: "RISK-CURRENT-MAP-AS-PERMANENT"
+    risk: "The current mapping may be read as a global no-go for future work."
+    mitigation: "State that it is a present, source-scoped classification and can change only with new tracked evidence and authority."
+
+authority_limits:
+  artifact_is_task_local_draft_control: true
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  canonical_ontology_edited: false
+  ontology_adoption_authorized: false
+  physical_interpretation_established: false
+  source_law_adopted: false
+  general_eqsrc_proved: false
+  physical_observational_equivalence_established: false
+  emergence_established_for_current_exact_gr: false
+  empirical_novelty_established_for_current_exact_gr: false
+  benchmark_promotion_authorized: false
+  proof_authority_created: false
+  publication_authority_created: false
+  completed_derivation_authorized: false
+
+forbidden_conclusions:
+  - "No canonical ontology adoption or modification."
+  - "No establishment of the AEther-flow interpretation as physical reality."
+  - "No general EqSrc proof or unqualified categorical-equivalence claim."
+  - "No current source derivation of exact GR, effective geometry, matter coupling, or Einstein equations."
+  - "No empirical novelty from exact-GR redescription alone."
+  - "No Distance-to-GR ledger delta."
+  - "No scientific promotion, protected Gate Chair verdict, proof authority, publication authority, or completed derivation."
+  - "No global impossibility result or rejection of future source-extension work."
+
+parent_fusion_recommendations:
+  - "Preserve the simple reader definitions alongside exact evidence predicates."
+  - "Use four exclusive fixtures to witness all twelve directed non-implications."
+  - "Keep the current exact-GR mapping at interpretive_redescription_only."
+  - "Report quotient-EqSrc results only at their exact proved subclaim and hypothesis scope."
+  - "Make clear that categories can co-occur when independently evidenced, but no category upgrades another automatically."

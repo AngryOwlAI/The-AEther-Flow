@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-015`
-- Latest handoff: `handoff-0825`
-- Current status: `p12_t04_ordinary_route_guard_complete_p14_t01_selected`
+- Active task: `RT-20260722-016`
+- Latest handoff: `handoff-0826`
+- Current status: `p14_t01_success_categories_complete_p14_t02_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-015`
-- Latest research handoff: `handoff-0825`
-- Latest research next action: Run exactly one bounded v21 P14-T01 ontology-formalizer philosophy-foundations AgentJob to define four distinct project-success categories without upgrading current claims or executing any other work item.
+- Latest research task: `RT-20260722-016`
+- Latest research handoff: `handoff-0826`
+- Latest research next action: Run exactly one bounded v21 P14-T02 external-red-team-reviewer philosophy-foundations AgentJob to define non-empirical ontology success criteria with evidence examples counterexamples alternative comparison and no scalar score workflow-metric substitution claim upgrade or P14-T03 execution.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p14_t01_success_category_definitions`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p14_t02_non_empirical_ontology_success_criteria`
+- Role family: `external-red-team-reviewer@0.1.0`
 - Target milestone: `source_ontology`
-- Milestone burden: Prevent exact-GR adoption equivalence emergence and novelty from sharing one success label.
+- Milestone burden: Give an empirically equivalent ontology a disciplined evaluation framework.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `816393368177948267db322f6aa181c05328da067002170b618783ab08b99d7d`
-- JSON SHA-256: `1f9249189a132444e3fe791efacc44d26c5083b47d60c33de24eafa92eb1c6cf`
+- YAML SHA-256: `11a8a6b035acece81cf63974d9f945f5f96e4e56c8107b6af6011aea6699d34c`
+- JSON SHA-256: `934fda6a8726f78308a93938919a5f3e6ed5d25e5739bff56633c14d684fa730`
 
 ## Authority Warning
 

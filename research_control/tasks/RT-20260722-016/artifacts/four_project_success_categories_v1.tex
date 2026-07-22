@@ -1,0 +1,165 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,enumitem,tabularx,hyperref}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newcommand{\IR}{\mathsf{IR}}
+\newcommand{\FE}{\mathsf{FE}}
+\newcommand{\GE}{\mathsf{GE}}
+\newcommand{\EN}{\mathsf{EN}}
+\title{Four Project-Success Categories and Their Evidence Obligations\\\large P14-T01 task-local draft/control formalization}
+\author{The AEther-Flow Research Project}
+\date{22 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This task-local packet separates interpretive redescription, formal or
+categorical equivalence, genuine emergence, and empirical novelty.  Each
+category has its own evidence certificate.  A finite countermodel theorem
+shows that none implies another by default.  The classification is
+proposal-neutral: it does not edit ontology, promote a physical
+interpretation, change the Distance-to-GR ledger, or establish a completed
+derivation.
+\end{abstract}
+
+\section{Scope and status algebra}
+Let $x$ be a precisely scoped project claim and let $E(x)$ be the tracked
+evidence available for that claim.  Define four predicates
+\[
+  \IR(x),\quad \FE(x),\quad \GE(x),\quad \EN(x),
+\]
+and the tri-valued status vector
+\[
+  \Sigma(x)=(s_{\IR},s_{\FE},s_{\GE},s_{\EN})
+  \in\{\texttt{met},\texttt{not\_met},\texttt{indeterminate}\}^{4}.
+\]
+Here \texttt{not\_met} means that the declared evidence obligation is not
+satisfied; it is not an impossibility theorem.  \texttt{indeterminate} means
+that the scoped record does not currently decide the obligation.  No status
+component is copied into another component.
+
+\section{Four independent evidence certificates}
+
+\begin{definition}[Interpretive redescription, \texorpdfstring{$\IR$}{IR}]
+A claim satisfies \emph{interpretive redescription} on an operational domain
+$D$ only when it supplies (i) an explicit dictionary between the benchmark
+formalism and the proposed interpretive vocabulary, (ii) a declared domain
+and approximation regime, and (iii) evidence that the mapped description
+preserves the benchmark's operational predictions on $D$.  The certificate
+may explain the same successful formalism differently; it does not thereby
+establish ontology adoption, categorical equivalence, emergence, or empirical
+novelty.
+\end{definition}
+
+Necessary evidence is a typed dictionary, a scope statement, and an
+operational-preservation witness.  Merely renaming variables, drawing an
+analogy, matching a few equations, or asserting that the interpretation is
+intuitive is insufficient.
+
+\begin{definition}[Formal or categorical equivalence, \texorpdfstring{$\FE$}{FE}]
+A claim satisfies \emph{formal or categorical equivalence} only relative to
+declared formal systems or categories $\mathcal C$ and $\mathcal D$, a
+preservation profile $\Pi$, and hypotheses $H$.  Its certificate contains a
+proved isomorphism or an equivalence of categories: functors
+$F\colon\mathcal C\to\mathcal D$ and $G\colon\mathcal D\to\mathcal C$
+with the required natural isomorphisms, together with a proof that the
+structures named in $\Pi$ are preserved (and reflected when claimed).
+\end{definition}
+
+Necessary evidence is an exact theorem identity, hypotheses, maps or functors,
+proof obligations, and the preservation/reflection profile.  Similar
+equations, equal parameter counts, a suggestive quotient, numerical agreement,
+or shared terminology is insufficient.  A quotient-EqSrc construction enters
+this category only when its declared equivalence theorem is actually proved.
+
+\begin{definition}[Genuine emergence, \texorpdfstring{$\GE$}{GE}]
+A claim satisfies \emph{genuine emergence} only when effective target
+structure or semantics are derived from source primitives by a non-circular
+reconstruction, coarse-graining, or limiting map.  The certificate names the
+source signature, target object, bridge map, regime or scale, robustness
+conditions, and a target-independence audit showing that the target structure
+was not assumed in the source data.
+\end{definition}
+
+Necessary evidence is a source-to-effective construction plus regime,
+robustness, and non-circularity evidence.  An interpretive dictionary, a
+target embedding, a hand-chosen target atlas, formal equivalence alone, or
+ontology adoption by stipulation is insufficient.
+
+\begin{definition}[Empirical novelty, \texorpdfstring{$\EN$}{EN}]
+A claim satisfies \emph{empirical novelty} only when it identifies a distinct,
+falsifiable operational prediction or constraint not already fixed by the
+declared benchmark.  Its certificate names an observable, test domain,
+benchmark prediction set, project prediction set, a nonempty distinguishing
+region or constraint, and uncertainty or identifiability conditions.
+\end{definition}
+
+Necessary evidence is an operational discriminator and a testable distinction.
+Exact benchmark recovery, parameter relabeling, a new visualisation, a formal
+equivalence, or a metaphysical preference is insufficient.
+
+\section{Default non-implication theorem}
+
+\begin{proposition}[SC4-NONIMPLICATION-THEOREM-V1]
+Under the evidence-certificate definitions above, and absent an additional
+task-specific implication theorem, no one of $\IR,\FE,\GE,\EN$ implies any
+other.  Thus for every ordered pair $A\ne B$ there is a finite admissible
+evidence world in which $A$ is met and $B$ is not met.
+\end{proposition}
+
+\begin{proof}
+Consider four one-hot evidence worlds.  In $w_{\IR}$ an exact benchmark
+reformulation has a typed interpretive dictionary and operational preservation,
+but no categorical theorem, source reconstruction, or distinct prediction.
+In $w_{\FE}$ two abstract formal categories have a proved structure-preserving
+equivalence, but no benchmark interpretation, source-to-effective derivation,
+or empirical content.  In $w_{\GE}$ a many-to-one source model robustly
+reconstructs an effective target, but is neither an interpretive rewriting nor
+an equivalence and produces no benchmark-distinguishing prediction.  In
+$w_{\EN}$ a phenomenological rule gives a distinct falsifiable prediction but
+supplies no interpretive dictionary, formal equivalence, or source derivation.
+The truth vectors are respectively
+\[
+ (1,0,0,0),\quad(0,1,0,0),\quad(0,0,1,0),\quad(0,0,0,1).
+\]
+For any ordered pair $A\ne B$, the world whose sole met component is $A$
+is a countermodel to $A\Rightarrow B$.  All twelve directed implications
+therefore fail by default.  A later scoped theorem may prove an implication
+under additional hypotheses, but it must name and discharge those hypotheses.
+\end{proof}
+
+The proposition is a task-local claim-logic result, not a theorem about nature
+and not proof that any future source extension is impossible.
+
+\section{Current project mapping}
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.20\linewidth}cccc>{\raggedright\arraybackslash}X}
+\toprule
+Claim instance & $\IR$ & $\FE$ & $\GE$ & $\EN$ & Reason \\
+\midrule
+Current exact-GR benchmark line & met & indeterminate & not met & not met & The work redescribes an operationally exact-GR benchmark; no source-to-GR formal-equivalence theorem is presently established, and the line supplies neither source-derived emergence nor a distinct prediction. \\
+General quotient-EqSrc equivalence & indeterminate & indeterminate & not met & not met & A formal-equivalence status is conditional on a proved quotient/functor theorem with its preservation profile; scoped candidates do not discharge the general burden. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The first row is limited to benchmark-level interpretive redescription.  Its
+formal-equivalence coordinate is indeterminate, not refuted: no scoped
+source-to-GR equivalence certificate presently decides it.  The row
+does not establish a physical gauge interpretation, a source law, $M_{\rm
+src}$, $g_{\rm eff}$, matter coupling, Einstein-equation derivation, or
+benchmark promotion.  The second row is deliberately conditional: a future
+proof changes only the scoped $\FE$ component it actually establishes.
+
+\section{Authority boundary}
+These definitions and the non-implication proposition are `draft/control'.
+They add no ontology or physical assumption.  They do not modify canonical
+ontology, adopt or reject a source extension, infer theorem truth from a
+validator, change scientific ledgers, authorize publication, or claim a
+completed first-principles derivation of general relativity.
+
+\end{document}

@@ -1,0 +1,504 @@
+schema_id: "p14_t01_child_phys_math_success_categories_v1"
+schema_version: 1
+artifact_id: "P14-T01-CHILD-PHYS-MATH-SUCCESS-CATEGORIES-V1"
+task_id: "RT-20260722-016"
+job_id: "AJ-RT-20260722-016-001"
+plan_task_id: "P14-T01"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "draft/control"
+authority: "task_local_science_draft"
+created_at: "2026-07-22T20:04:55Z"
+claim_boundary_id: "CB-V21-P14-T01-SUCCESS-CATEGORIES-001"
+payload:
+  payload_id: "SC4-NONIMPLICATION-THEOREM-V1"
+  payload_type: "theorem_with_hypotheses_and_proof"
+  candidate_family: "V21-P14-SUCCESS-CATEGORY-LOGIC-V1"
+  scope: "A task-local, scope-indexed evidence logic for four project-success categories."
+  physics_status: "No physical or ontological status changes follow from this formal payload."
+
+source_basis:
+  - citation_label: "The AEther-Flow Research Project (2026a)"
+    title: "Recommendations implementation plan for continue-research, v21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    use: "P14-T01 objective, required category split, mappings, and claim boundary."
+  - citation_label: "The AEther-Flow Research Project (2026b)"
+    title: "V21 scientific status schema"
+    path: "research_control/design/v21_scientific_status_schema.md"
+    use: "Orthogonal evidence dimensions and fail-closed status discipline."
+  - citation_label: "The AEther-Flow Research Project (2026c)"
+    title: "Epistemic category glossary"
+    path: "research_control/design/epistemic_category_glossary.md"
+    use: "Interpretation, derivation, evidence, authority, and overread distinctions."
+  - citation_label: "The AEther-Flow Research Project (2026d)"
+    title: "Scoped positive claim vocabulary"
+    path: "research_control/design/scoped_positive_claim_vocabulary.md"
+    use: "Current source-object, evidence/precondition, and promotion boundaries."
+  - citation_label: "The AEther-Flow Research Project (2026e)"
+    title: "AEther-flow foundations"
+    path: "ontology/tex/aether_flow_foundations.tex"
+    use: "Exact operational GR relation, interpretive scope, open microphysical derivation, and absent independent low-energy signature."
+  - citation_label: "The AEther-Flow Research Project (2026f)"
+    title: "AEther-flow geometry"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    use: "Congruence dictionary as interpretive deepening inside exact closure, not source derivation or a second low-energy law."
+
+formal_framework:
+  result_domain: "Let R be the class of scoped project results together with their declared assumptions, evidence references, and comparison domain."
+  scope_rule: "Every predicate is evaluated on a pair (r,s), where r is a result and s is the exact theorem, regime, operational, and authority scope."
+  category_order:
+    - "interpretive_redescription"
+    - "formal_or_categorical_equivalence"
+    - "genuine_emergence"
+    - "empirical_novelty"
+  category_symbols:
+    interpretive_redescription: "I(r,s)"
+    formal_or_categorical_equivalence: "F(r,s)"
+    genuine_emergence: "G(r,s)"
+    empirical_novelty: "N(r,s)"
+  status_domain:
+    - "met"
+    - "not_met"
+    - "indeterminate"
+  status_vector:
+    notation: "S(r,s) = (sigma_I, sigma_F, sigma_G, sigma_N)"
+    codomain: "{met, not_met, indeterminate}^4"
+    order:
+      - "interpretive_redescription"
+      - "formal_or_categorical_equivalence"
+      - "genuine_emergence"
+      - "empirical_novelty"
+  evaluation_rule:
+    met: "Every necessary evidence obligation for the category has an exact in-scope reference and no cited evidence contradicts that obligation."
+    not_met: "At least one necessary obligation has an exact in-scope failure or counterevidence reference; a scoped not_met value is not a global no-go."
+    indeterminate: "The available evidence neither discharges every necessary obligation nor records an in-scope failure. Missing evidence is indeterminate rather than refutation."
+  independence_rule: "The four coordinates are evaluated separately. No value in one coordinate supplies a value in another without a separately stated and proved cross-category theorem."
+  non_ordinal_rule: "The vector is not a ladder or scalar score; multiple coordinates may be met, not_met, or indeterminate simultaneously."
+
+evidence_atoms:
+  interpretive_redescription:
+    - "I1_operational_benchmark_relation"
+    - "I2_interpretive_dictionary"
+    - "I3_scope_and_non_derivation_guard"
+  formal_or_categorical_equivalence:
+    - "F1_declared_formal_domains"
+    - "F2_explicit_structure_maps"
+    - "F3_equivalence_theorem_with_proof"
+    - "F4_structure_preservation_in_scope"
+  genuine_emergence:
+    - "G1_independent_source_primitives_and_dynamics"
+    - "G2_non_circular_reconstruction_map"
+    - "G3_effective_target_derivation"
+    - "G4_regime_and_robustness"
+    - "G5_no_target_import"
+  empirical_novelty:
+    - "N1_operational_observable_or_constraint"
+    - "N2_benchmark_difference"
+    - "N3_nonempty_discriminating_domain"
+    - "N4_falsifiable_measurement_map"
+
+definitions:
+  interpretive_redescription:
+    symbol: "I"
+    exact_definition: >-
+      I(r,s) is met exactly when r preserves or explicitly adopts the benchmark
+      operational law and prediction content in scope s, supplies a declared
+      dictionary that redescribes benchmark structures or phenomena in proposed
+      explanatory or ontological language, and states that the dictionary is not
+      a source derivation, physical-establishment verdict, or novel low-energy law.
+    predicate_formula: "I(r,s) := I1(r,s) AND I2(r,s) AND I3(r,s)."
+    necessary_evidence:
+      - evidence_id: "I1_operational_benchmark_relation"
+        requirement: "An exact source-backed statement of which benchmark law, structure, observables, or predictions are retained, adopted, or put in correspondence in scope s."
+        reason: "A redescription must identify what is being redescribed rather than merely reuse suggestive words."
+      - evidence_id: "I2_interpretive_dictionary"
+        requirement: "An explicit map from the proposed explanatory vocabulary to benchmark structures or observer-accessible phenomena."
+        reason: "The interpretive content lies in the dictionary, not in operational change."
+      - evidence_id: "I3_scope_and_non_derivation_guard"
+        requirement: "Declared assumptions and scope plus explicit guards against reading adoption, compatibility, or a dictionary as source derivation, empirical novelty, or established ontology."
+        reason: "The category classifies a redescription and cannot silently acquire a stronger success claim."
+    explicit_insufficient_evidence:
+      - insufficiency_id: "I-INS-01"
+        evidence_alone: "A vocabulary substitution or metaphor without a typed dictionary."
+        why_insufficient: "It does not identify a controlled relation to benchmark objects or phenomena."
+      - insufficiency_id: "I-INS-02"
+        evidence_alone: "Exact-GR benchmark agreement without an explanatory dictionary."
+        why_insufficient: "Agreement alone is benchmark status, not an interpretation."
+      - insufficiency_id: "I-INS-03"
+        evidence_alone: "A formal equivalence theorem by itself."
+        why_insufficient: "Formal maps need not carry any proposed explanatory or ontological reading."
+      - insufficiency_id: "I-INS-04"
+        evidence_alone: "A validator, registry row, role record, generated derivative, or commit."
+        why_insufficient: "These are control evidence and cannot establish interpretive content or physical truth."
+    does_not_imply:
+      - "formal_or_categorical_equivalence"
+      - "genuine_emergence"
+      - "empirical_novelty"
+
+  formal_or_categorical_equivalence:
+    symbol: "F"
+    exact_definition: >-
+      F(r,s) is met exactly when the two declared formal systems, theories,
+      categories, groupoids, or quotient presentations are connected by explicit
+      typed maps and an in-scope theorem proves the selected equivalence criterion
+      while preserving every structure named in s. For categorical equivalence,
+      this requires proved quasi-inverse functors with natural isomorphisms, or an
+      equivalent proved full-faithful-essentially-surjective criterion. For a
+      quotient presentation, the relation and congruence obligations must be
+      proved before the quotient can support an equivalence claim.
+    predicate_formula: "F(r,s) := F1(r,s) AND F2(r,s) AND F3(r,s) AND F4(r,s)."
+    necessary_evidence:
+      - evidence_id: "F1_declared_formal_domains"
+        requirement: "Exact definitions of both formal domains, their objects, morphisms or operations, admissible variations, assumptions, and comparison scope."
+        reason: "Equivalence has no content until its domains and retained structure are fixed."
+      - evidence_id: "F2_explicit_structure_maps"
+        requirement: "Typed maps, functors, translations, quotient projections, or inverse data connecting the declared domains."
+        reason: "Similarity of notation does not provide an equivalence witness."
+      - evidence_id: "F3_equivalence_theorem_with_proof"
+        requirement: "A theorem identity, exact hypotheses, and proof of the chosen isomorphism, bi-interpretation, quotient-equivalence, or categorical-equivalence criterion."
+        reason: "Formal equivalence is conditional on proof rather than on intent, resemblance, or successful validation."
+      - evidence_id: "F4_structure_preservation_in_scope"
+        requirement: "A proved preservation statement for every named structure, composition law, admissible variation, invariant, or observable included in scope s."
+        reason: "An object-level bijection or quotient relation can discard the structure relevant to the claim."
+    quotient_eqsrc_specific_obligations:
+      - "Prove reflexivity, symmetry, and transitivity of EqSrc on the declared source domain."
+      - "Prove EqSrc is a congruence for every declared composition, morphism action, and admissible variation."
+      - "Define the quotient map and prove the stated quotient universal or invariant property."
+      - "If categorical equivalence is claimed, prove quasi-inverse functors and natural isomorphisms, or prove full faithfulness and essential surjectivity."
+      - "Name exactly which source invariants and structures survive the quotient and which do not."
+    explicit_insufficient_evidence:
+      - insufficiency_id: "F-INS-01"
+        evidence_alone: "Identical equations, matched symbols, numerical agreement, or shared predictions."
+        why_insufficient: "These can occur without an invertible or structure-preserving formal relationship."
+      - insufficiency_id: "F-INS-02"
+        evidence_alone: "A bijection between objects with no morphism, operation, or variation preservation proof."
+        why_insufficient: "Object cardinality does not establish equivalence of structured systems."
+      - insufficiency_id: "F-INS-03"
+        evidence_alone: "An EqSrc candidate or quotient notation whose equivalence and congruence obligations remain open."
+        why_insufficient: "Writing a quotient does not prove that the relation is lawful or structure preserving."
+      - insufficiency_id: "F-INS-04"
+        evidence_alone: "Interpretive redescription, exact-GR adoption, or benchmark compatibility."
+        why_insufficient: "Operational identity or a dictionary is not a theorem about formal domains and maps."
+      - insufficiency_id: "F-INS-05"
+        evidence_alone: "A validator PASS, successful compilation, registration, or checkpoint."
+        why_insufficient: "Process integrity does not supply the theorem proof."
+    does_not_imply:
+      - "interpretive_redescription"
+      - "genuine_emergence"
+      - "empirical_novelty"
+
+  genuine_emergence:
+    symbol: "G"
+    exact_definition: >-
+      G(r,s) is met exactly when independently specified source primitives and
+      source dynamics produce, through a non-circular reconstruction,
+      coarse-graining, limit, or effective map, the named target structures or
+      laws in a declared regime; the derivation does not import the target as a
+      premise; and the result has the stated robustness or universality evidence.
+    predicate_formula: "G(r,s) := G1(r,s) AND G2(r,s) AND G3(r,s) AND G4(r,s) AND G5(r,s)."
+    necessary_evidence:
+      - evidence_id: "G1_independent_source_primitives_and_dynamics"
+        requirement: "Source objects, state space, laws or dynamics, constraints, and admissible variations are defined independently of the target effective structure."
+        reason: "Emergence requires an explanatory source from which the target can arise."
+      - evidence_id: "G2_non_circular_reconstruction_map"
+        requirement: "A typed reconstruction, coarse-graining, limiting, or effective map is defined without target-atlas, target-metric, target-law, or desired-outcome import."
+        reason: "A map that assumes the target only restates it."
+      - evidence_id: "G3_effective_target_derivation"
+        requirement: "A derivation or theorem shows that the named effective target structures or laws follow in the declared regime from the source assumptions and map."
+        reason: "A candidate bridge or suggestive resemblance is not emergence."
+      - evidence_id: "G4_regime_and_robustness"
+        requirement: "The approximation, scale, limit, error bounds, perturbation class, and robustness or universality scope are stated and supported."
+        reason: "An isolated finite witness does not establish a stable effective regime."
+      - evidence_id: "G5_no_target_import"
+        requirement: "A source-provenance audit establishes within its exact scope that the target conclusion was not inserted through definitions, selectors, boundary data, or representative choice."
+        reason: "Source purity is necessary for a genuine derivational direction."
+    explicit_insufficient_evidence:
+      - insufficiency_id: "G-INS-01"
+        evidence_alone: "An interpretive dictionary laid over an adopted target theory."
+        why_insufficient: "The target law remains an input rather than a source-derived output."
+      - insufficiency_id: "G-INS-02"
+        evidence_alone: "Formal or categorical equivalence."
+        why_insufficient: "Equivalence is symmetric at the relevant formal level and does not by itself provide explanatory asymmetry, source dynamics, a coarse-graining regime, or robustness."
+      - insufficiency_id: "G-INS-03"
+        evidence_alone: "A source-pure definition or absence of an identified target import."
+        why_insufficient: "No-target purity does not positively derive the target."
+      - insufficiency_id: "G-INS-04"
+        evidence_alone: "One finite, local, or toy witness without a regime and robustness theorem."
+        why_insufficient: "A witness may show consistency or possibility while leaving effective emergence open."
+      - insufficiency_id: "G-INS-05"
+        evidence_alone: "Ontology adoption, physical interpretation, or validator success."
+        why_insufficient: "Authority and process state cannot replace a source-to-target derivation."
+    does_not_imply:
+      - "interpretive_redescription"
+      - "formal_or_categorical_equivalence"
+      - "empirical_novelty"
+
+  empirical_novelty:
+    symbol: "N"
+    exact_definition: >-
+      N(r,s) is met exactly when r defines an operational observable or empirical
+      constraint, proves or computes a difference from the exact-GR benchmark or
+      other declared comparator on a nonempty discriminating domain, and supplies
+      a falsifiable map from model quantities to a possible measurement or bound.
+      Empirical novelty does not itself mean that the prediction is empirically
+      supported.
+    predicate_formula: "N(r,s) := N1(r,s) AND N2(r,s) AND N3(r,s) AND N4(r,s)."
+    necessary_evidence:
+      - evidence_id: "N1_operational_observable_or_constraint"
+        requirement: "A detector-level observable, experimental quantity, or empirical constraint is defined with units, domain, and operational semantics where applicable."
+        reason: "A formal variable is not automatically observable."
+      - evidence_id: "N2_benchmark_difference"
+        requirement: "An exact comparison shows a prediction, allowed range, correlation, or constraint not already fixed by the declared benchmark in scope s."
+        reason: "A reparameterization of identical empirical content is not novel."
+      - evidence_id: "N3_nonempty_discriminating_domain"
+        requirement: "At least one admissible parameter, state, regime, or dataset domain can distinguish the result from the benchmark beyond declared uncertainty."
+        reason: "A difference with no possible discriminating case is not empirical novelty."
+      - evidence_id: "N4_falsifiable_measurement_map"
+        requirement: "The result states how a measurement or bound could disagree with the prediction and thereby constrain or refute the claim in scope s."
+        reason: "Novelty must be empirically addressable rather than merely conceptually different."
+    explicit_insufficient_evidence:
+      - insufficiency_id: "N-INS-01"
+        evidence_alone: "A different ontology, explanatory story, or interpretive dictionary with exact-GR predictions."
+        why_insufficient: "Conceptual difference without an operational difference is not empirical novelty."
+      - insufficiency_id: "N-INS-02"
+        evidence_alone: "A formally different parametrization whose observables agree identically after translation."
+        why_insufficient: "The empirical content remains unchanged."
+      - insufficiency_id: "N-INS-03"
+        evidence_alone: "An extra symbol, field, or free parameter without detector semantics and a discriminating regime."
+        why_insufficient: "Additional formal structure need not yield a testable prediction or constraint."
+      - insufficiency_id: "N-INS-04"
+        evidence_alone: "Formal equivalence, genuine emergence, or source derivation."
+        why_insufficient: "A derivational achievement may recover only the benchmark predictions."
+      - insufficiency_id: "N-INS-05"
+        evidence_alone: "Compatibility with existing data."
+        why_insufficient: "Compatibility neither distinguishes the proposal nor establishes a novel empirical commitment."
+    does_not_imply:
+      - "interpretive_redescription"
+      - "formal_or_categorical_equivalence"
+      - "genuine_emergence"
+
+non_implication_proposition:
+  proposition_id: "SC4-PROP-NO-DEFAULT-IMPLICATION-V1"
+  name: "Four-category default non-implication"
+  statement: >-
+    For every ordered pair of distinct category predicates X and Y in
+    {I,F,G,N}, the four-category definitions alone do not entail
+    forall (r,s), X(r,s) implies Y(r,s).
+  theorem_scope: "Task-local propositional evidence logic only; this is not a theorem about the truth of the AEther-flow ontology or any physical model."
+  hypotheses:
+    - hypothesis_id: "H1_scope_indexing"
+      statement: "All evidence atoms and status values are evaluated in an explicit common scope s."
+    - hypothesis_id: "H2_no_cross_category_axiom"
+      statement: "No cross-category implication is assumed; any such implication requires a separate theorem with additional hypotheses."
+    - hypothesis_id: "H3_distinct_obligation_sets"
+      statement: "Each category has at least one necessary evidence atom not supplied merely by satisfying another category."
+    - hypothesis_id: "H4_consistent_one_hot_worlds"
+      statement: "The four finite evidence worlds below satisfy the target category obligations and include an explicit failure witness for every non-target category."
+  proof:
+    proof_kind: "finite_countermodel_proof"
+    steps:
+      - "Fix distinct predicates X and Y."
+      - "Select the one-hot world w_X whose status vector marks X met and every other category, including Y, not_met."
+      - "The world supplies all necessary evidence atoms for X and an explicit in-scope failure of at least one necessary obligation for each non-target predicate."
+      - "Therefore X is true and Y is false in w_X, so X implies Y is not valid under H1-H4."
+      - "Because X was arbitrary and each one-hot world refutes its three outgoing implications, the four worlds witness all twelve directed non-implications."
+    conclusion: "No category implies another by default. A later cross-category implication is lawful only under separately declared hypotheses and proof."
+  proof_status: "proved_within_declared_task_local_logic"
+  proof_authority_created: false
+
+finite_countermodels:
+  world_count: 4
+  directed_non_implication_count: 12
+  completeness_argument: "There are 4 * 3 = 12 ordered pairs of distinct categories. Each one-hot world witnesses the three pairs whose antecedent is its sole met category."
+  worlds:
+    - world_id: "w_I"
+      finite_construction: "One exact benchmark law B, one proposed dictionary d from three explanatory labels to three B-structures, and explicit non-derivation guards."
+      present_evidence_atoms:
+        - "I1_operational_benchmark_relation"
+        - "I2_interpretive_dictionary"
+        - "I3_scope_and_non_derivation_guard"
+      explicit_failure_witnesses:
+        formal_or_categorical_equivalence: "No equivalence theorem or structure-preserving inverse data is supplied."
+        genuine_emergence: "The benchmark law B is adopted as an input rather than derived from source dynamics."
+        empirical_novelty: "Every operational prediction equals B and no distinct constraint is supplied."
+      status_vector:
+        interpretive_redescription: "met"
+        formal_or_categorical_equivalence: "not_met"
+        genuine_emergence: "not_met"
+        empirical_novelty: "not_met"
+      witnesses:
+        - "interpretive_redescription !-> formal_or_categorical_equivalence"
+        - "interpretive_redescription !-> genuine_emergence"
+        - "interpretive_redescription !-> empirical_novelty"
+
+    - world_id: "w_F"
+      finite_construction: "Two finite one-object categories whose finite endomorphism monoids are explicitly isomorphic, with the isomorphism and inverse proved structure preserving."
+      present_evidence_atoms:
+        - "F1_declared_formal_domains"
+        - "F2_explicit_structure_maps"
+        - "F3_equivalence_theorem_with_proof"
+        - "F4_structure_preservation_in_scope"
+      explicit_failure_witnesses:
+        interpretive_redescription: "The categories are uninterpreted and no explanatory or ontological dictionary is proposed."
+        genuine_emergence: "Neither category is generated from independent source dynamics; the relation is symmetric formal equivalence."
+        empirical_novelty: "No operational observable, benchmark, detector map, or empirical domain is defined."
+      status_vector:
+        interpretive_redescription: "not_met"
+        formal_or_categorical_equivalence: "met"
+        genuine_emergence: "not_met"
+        empirical_novelty: "not_met"
+      witnesses:
+        - "formal_or_categorical_equivalence !-> interpretive_redescription"
+        - "formal_or_categorical_equivalence !-> genuine_emergence"
+        - "formal_or_categorical_equivalence !-> empirical_novelty"
+
+    - world_id: "w_G"
+      finite_construction: "A finite source automaton with a many-to-one coarse-graining whose macrostate transition law is derived and invariant under a declared finite perturbation class."
+      present_evidence_atoms:
+        - "G1_independent_source_primitives_and_dynamics"
+        - "G2_non_circular_reconstruction_map"
+        - "G3_effective_target_derivation"
+        - "G4_regime_and_robustness"
+        - "G5_no_target_import"
+      explicit_failure_witnesses:
+        interpretive_redescription: "No adopted benchmark or explanatory dictionary is part of the construction."
+        formal_or_categorical_equivalence: "The coarse-graining is many-to-one and no inverse or categorical-equivalence theorem exists."
+        empirical_novelty: "The macrovariables have no detector semantics or comparison with an empirical benchmark."
+      status_vector:
+        interpretive_redescription: "not_met"
+        formal_or_categorical_equivalence: "not_met"
+        genuine_emergence: "met"
+        empirical_novelty: "not_met"
+      witnesses:
+        - "genuine_emergence !-> interpretive_redescription"
+        - "genuine_emergence !-> formal_or_categorical_equivalence"
+        - "genuine_emergence !-> empirical_novelty"
+
+    - world_id: "w_N"
+      finite_construction: "A finite two-outcome experiment with one phenomenological correction delta != 0 that shifts a measured probability away from the benchmark on a declared parameter interval."
+      present_evidence_atoms:
+        - "N1_operational_observable_or_constraint"
+        - "N2_benchmark_difference"
+        - "N3_nonempty_discriminating_domain"
+        - "N4_falsifiable_measurement_map"
+      explicit_failure_witnesses:
+        interpretive_redescription: "No explanatory ontology or benchmark-preserving dictionary is supplied."
+        formal_or_categorical_equivalence: "The operational probability differs from the benchmark, and no equivalence theorem is claimed."
+        genuine_emergence: "The correction is phenomenological and is not derived from independent source primitives or dynamics."
+      status_vector:
+        interpretive_redescription: "not_met"
+        formal_or_categorical_equivalence: "not_met"
+        genuine_emergence: "not_met"
+        empirical_novelty: "met"
+      witnesses:
+        - "empirical_novelty !-> interpretive_redescription"
+        - "empirical_novelty !-> formal_or_categorical_equivalence"
+        - "empirical_novelty !-> genuine_emergence"
+
+current_status_mappings:
+  exact_gr_line:
+    subject: "Current exact-GR AEther-flow line in the inspected canonical sources."
+    scope: "Exact operational GR closure plus the congruence-based interpretive dictionary; no claim beyond the inspected source scope."
+    status_vector:
+      interpretive_redescription: "met"
+      formal_or_categorical_equivalence: "indeterminate"
+      genuine_emergence: "not_met"
+      empirical_novelty: "not_met"
+    coordinate_reasons:
+      interpretive_redescription: "The sources state exact operational GR content and give an explicit AEther-flow/congruence dictionary while distinguishing interpretation from first-principles derivation."
+      formal_or_categorical_equivalence: "No separately identified structure-preserving equivalence theorem is supplied by the inspected basis; exact adoption or operational identity cannot be upgraded to formal equivalence."
+      genuine_emergence: "The sources explicitly state that the effective metric law and observer-accessible structure are not yet derived from substrate microphysics."
+      empirical_novelty: "The foundations source explicitly states that the predictive content is exactly GR and carries no independent low-energy non-GR observable signature."
+    rendering_rule: "Only interpretive_redescription is met. Indeterminate formal equivalence must not be rendered as met, and the two scoped not_met values are not global impossibility claims."
+    prohibited_upgrades:
+      - "established physical ontology"
+      - "completed substrate derivation"
+      - "formal or categorical equivalence theorem"
+      - "independent empirical novelty"
+
+  quotient_eqsrc_candidate:
+    subject: "Any quotient-based EqSrc candidate before discharge of its equivalence, congruence, and preservation obligations."
+    status_vector:
+      interpretive_redescription: "indeterminate"
+      formal_or_categorical_equivalence: "indeterminate"
+      genuine_emergence: "indeterminate"
+      empirical_novelty: "indeterminate"
+    formal_mapping_rule: "A quotient symbol, invariant family, or EqSrc proposal is not enough to mark formal_or_categorical_equivalence met."
+    no_negative_overread: "Indeterminate means unproved in the stated evidence basis, not refuted and not impossible."
+
+  quotient_eqsrc_if_proved:
+    subject: "A later quotient-based EqSrc result after an exact theorem discharges the declared equivalence, congruence, quotient, and structure-preservation obligations."
+    conditional_status_vector:
+      interpretive_redescription: "indeterminate"
+      formal_or_categorical_equivalence: "met"
+      genuine_emergence: "indeterminate"
+      empirical_novelty: "indeterminate"
+    condition: "F1, F2, F3, and F4 are each supported by exact in-scope theorem and proof references, including all quotient-EqSrc-specific obligations relevant to the claim."
+    scope_guard: "The met value applies only to the exact objects, morphisms, variations, invariants, and theorem scope proved."
+    non_implication_guard: "Even a proved quotient-EqSrc formal equivalence supplies neither genuine emergence nor empirical novelty nor an interpretive redescription without their separate evidence."
+
+  quotient_eqsrc_if_refuted_in_scope:
+    subject: "A quotient-based EqSrc candidate with an exact scoped counterexample or theorem refuting a necessary equivalence obligation."
+    conditional_status_vector:
+      interpretive_redescription: "indeterminate"
+      formal_or_categorical_equivalence: "not_met"
+      genuine_emergence: "indeterminate"
+      empirical_novelty: "indeterminate"
+    scope_guard: "The negative value is limited to the exact candidate, assumptions, and obligation refuted; it is not a general EqSrc no-go theorem."
+
+assumptions:
+  - assumption_id: "A1_scope_explicit"
+    statement: "Every category judgment names the exact result and scope; unscoped category labels are invalid."
+  - assumption_id: "A2_evidence_local"
+    statement: "Evidence discharges only the coordinate whose necessary obligation it directly supports unless a separate theorem proves a cross-coordinate implication."
+  - assumption_id: "A3_missing_is_not_refuted"
+    statement: "Absence of a proof or datum yields indeterminate unless an exact in-scope failure is recorded."
+  - assumption_id: "A4_categories_can_coexist"
+    statement: "Logical independence does not mean mutual exclusion; one result may meet any subset of the four categories when each subset member has its own evidence."
+  - assumption_id: "A5_authority_orthogonal"
+    statement: "Scientific or control authority is orthogonal to the four category coordinates and is never inferred from them."
+  - assumption_id: "A6_no_new_physics_premise"
+    statement: "This artifact adds no ontology, dynamics, source law, matter semantics, detector semantics, coupling, metric, or empirical premise."
+
+authority_limits:
+  draft_control_only: true
+  category_definitions_are_task_local: true
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  canonical_ontology_modified: false
+  canonical_ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  physical_interpretation_established: false
+  general_eqsrc_proved: false
+  quotient_eqsrc_equivalence_asserted_without_proof: false
+  matter_coupling_derived_or_adopted: false
+  einstein_equations_derived: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  protected_gate_authority_created: false
+  publication_authority_created: false
+  completed_derivation_authorized: false
+
+forbidden_conclusions:
+  - "The exact-GR line is more than interpretive redescription on the evidence inspected here."
+  - "Operational identity with GR is by itself a formal or categorical equivalence proof."
+  - "A quotient notation or EqSrc candidate is a proved equivalence."
+  - "Formal equivalence is genuine emergence."
+  - "Source purity alone is genuine emergence."
+  - "Interpretive or ontological difference is empirical novelty."
+  - "Exact-GR compatibility empirically supports the substrate interpretation."
+  - "Any scoped not_met value is a global no-go theorem or program-wide rejection."
+  - "A validator, registry, generated derivative, role, checkpoint, or commit is scientific proof."
+  - "This child artifact adopts ontology, establishes physical interpretation, proves general EqSrc, changes a scientific ledger, promotes a benchmark, authorizes publication, or completes the GR derivation."
+
+handoff_to_parent:
+  shared_consensus_candidate:
+    - "Use the scope-indexed status vector S(r,s) in {met,not_met,indeterminate}^4."
+    - "Keep necessary evidence and explicit insufficiency guards distinct for every category."
+    - "Use the four one-hot worlds as a complete finite witness set for all twelve directed non-implications."
+    - "Render the current exact-GR line as interpretive_redescription met only; formal equivalence remains unestablished, emergence is absent in current scope, and independent low-energy novelty is absent."
+    - "Render quotient EqSrc as formal equivalence only after an exact structure-preserving proof discharges its relation, congruence, quotient, and theorem obligations."
+  limitations_to_preserve:
+    - "The countermodel proposition proves independence only in the declared task-local evidence logic."
+    - "The current-status mapping is bounded to the inspected source statements and does not adjudicate future evidence."
+    - "No category value supplies protected authority or a Distance-to-GR change."

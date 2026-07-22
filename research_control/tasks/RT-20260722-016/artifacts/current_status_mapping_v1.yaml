@@ -1,0 +1,60 @@
+schema_id: "p14_t01_current_status_mapping_v1"
+status: "draft/control"
+task_id: "RT-20260722-016"
+status_domain:
+  - "met"
+  - "not_met"
+  - "indeterminate"
+component_order:
+  - "interpretive_redescription"
+  - "formal_or_categorical_equivalence"
+  - "genuine_emergence"
+  - "empirical_novelty"
+mappings:
+  - mapping_id: "CURRENT-EXACT-GR-BENCHMARK-LINE"
+    claim_scope: "Current AEther-flow exact-GR benchmark line within its declared operational domain"
+    status_vector:
+      interpretive_redescription: "met"
+      formal_or_categorical_equivalence: "indeterminate"
+      genuine_emergence: "not_met"
+      empirical_novelty: "not_met"
+    evidence_basis:
+      - "A declared interpretive dictionary redescribes the exact-GR benchmark while preserving benchmark operational predictions."
+      - "No source-to-GR formal or categorical equivalence theorem presently decides that separate coordinate."
+    not_met_is_not_impossibility: true
+    forbidden_overread: "Benchmark-level redescription is not ontology adoption physical interpretation emergence empirical novelty or completed derivation."
+  - mapping_id: "GENERAL-QUOTIENT-EQSRC-EQUIVALENCE"
+    claim_scope: "General quotient-EqSrc formal or categorical equivalence"
+    status_vector:
+      interpretive_redescription: "indeterminate"
+      formal_or_categorical_equivalence: "indeterminate"
+      genuine_emergence: "not_met"
+      empirical_novelty: "not_met"
+    conditional_upgrade_rule: "Set formal_or_categorical_equivalence to met only for the exact scope of a proved quotient or functor theorem with declared hypotheses and preservation or reflection profile."
+    scoped_results_do_not_discharge_general_burden: true
+    not_met_is_not_impossibility: true
+    forbidden_overread: "A candidate quotient similar equations or scoped theorem does not prove general EqSrc equivalence emergence novelty or ontology adoption."
+distance_to_gr:
+  target_derivation_milestone: "source_ontology"
+  burden_id: "source_ontology"
+  changed: false
+  ledger_row_updated: false
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  physical_interpretation_established: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_claimed: false
