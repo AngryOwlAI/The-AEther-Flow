@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260722-018` and `handoff-0827`.
+`RT-20260722-019` and `handoff-0828`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260722-018` |
-| Latest handoff ID | `handoff-0827` |
-| Current status | `p14_t02_non_empirical_ontology_success_criteria_complete_p14_t03_selected` |
+| Active task ID | `RT-20260722-019` |
+| Latest handoff ID | `handoff-0828` |
+| Current status | `p14_t03_no_target_necessary_but_insufficient_policy_complete_p14_t05_selected` |
 | V16 completed | false |
-| Current route family | formalization or theorem (scientific audit) |
+| Current route family | construction or implementation (scientific) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v21 necessary but not sufficient no target policy |
-| Required next authority | One P14-T03 ontology-formalizer packet may integrate a necessary-but-not-sufficient no-target policy positive-evidence requirements worked examples and Gate A through D mapping without claim promotion. |
-| Next recommended action | Run exactly one bounded v21 P14-T03 ontology-formalizer philosophy-foundations AgentJob to integrate a necessary-but-not-sufficient no-target policy with positive provenance dynamics uniqueness or quotient status operational meaning and robustness requirements. |
+| Current burden | none for physics derivation; live control burden is v21 scoped negative result minimum extension success pathway |
+| Required next authority | One P14-T05 ontology-formalizer packet may define exact negative-result strength scope reopening and minimum-extension success criteria without globalizing scoped results or changing physical and protected authority. |
+| Next recommended action | Run exactly one bounded v21 P14-T05 ontology-formalizer philosophy-foundations AgentJob to formalize the scoped no-go and minimum-extension success pathway without globalizing local results or changing claim authority. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260722-018` |
-| Latest research handoff ID | `handoff-0827` |
-| Latest research next action | Run exactly one bounded v21 P14-T03 ontology-formalizer philosophy-foundations AgentJob to integrate a necessary-but-not-sufficient no-target policy with positive provenance dynamics uniqueness or quotient status operational meaning and robustness requirements. |
+| Latest research task ID | `RT-20260722-019` |
+| Latest research handoff ID | `handoff-0828` |
+| Latest research next action | Run exactly one bounded v21 P14-T05 ontology-formalizer philosophy-foundations AgentJob to formalize the scoped no-go and minimum-extension success pathway without globalizing local results or changing claim authority. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260722-018/00_TASK.yaml`.
-- Active task objective: Define operational evidence obligations for assumption compression unification inevitability explanatory depth dimension or signature explanation matter or quantum connection and problem-solving fertility; prohibit scalar substitution; compare fixed alternatives and assess the current program honestly.
-- Latest handoff path: `research_control/handoffs/handoff-0827.yaml`.
-- Latest handoff summary: P14-T02 completed a seven-coordinate non-compensatory ontology-success evaluation framework. The current source-grounded profile is six not_met coordinates and one indeterminate problem-solving-fertility coordinate. A not_met value is an unmet present certificate rather than impossibility. Neither fixed proposal-only alternative is selected adopted rejected or ranked. No canonical ontology scientific ledger Distance-to-GR status protected authority physical interpretation promotion proof publication or derivation claim changed.
-- Current route family: formalization or theorem (scientific audit).
-- Next recommended action: Run exactly one bounded v21 P14-T03 ontology-formalizer philosophy-foundations AgentJob to integrate a necessary-but-not-sufficient no-target policy with positive provenance dynamics uniqueness or quotient status operational meaning and robustness requirements.
+- Active task path: `research_control/tasks/RT-20260722-019/00_TASK.yaml`.
+- Active task objective: Define no-target purity as a necessary structural-admissibility condition that remains insufficient for physical interpretation or Gate A through D readiness without positive provenance dynamics uniqueness or quotient status operational meaning robustness and separately authorized review and verdict evidence.
+- Latest handoff path: `research_control/handoffs/handoff-0828.yaml`.
+- Latest handoff summary: P14-T03 completed a task-local conjunction theorem and policy in which bounded no-target purity is necessary structural-admissibility evidence but insufficient for Gate A through D review readiness. Seven positive-evidence dimensions and gate-specific burdens remain non-compensatory, and protected authority remains separate after evidence completion. Seventeen finite worlds and six worked examples preserve source-pure mathematics and all current scoped statuses. No ontology scientific-ledger Distance-to-GR protected-authority physical-promotion proof publication or completed-derivation status changed.
+- Current route family: construction or implementation (scientific).
+- Next recommended action: Run exactly one bounded v21 P14-T05 ontology-formalizer philosophy-foundations AgentJob to formalize the scoped no-go and minimum-extension success pathway without globalizing local results or changing claim authority.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P14-T03 ontology-formalizer philosophy-foundations AgentJob to integrate a necessary-but-not-sufficient no-target policy with positive provenance dynamics uniqueness or quotient status operational meaning and robustness requirements.
+Run exactly one bounded v21 P14-T05 ontology-formalizer philosophy-foundations AgentJob to formalize the scoped no-go and minimum-extension success pathway without globalizing local results or changing claim authority.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260722-018`;
-- latest handoff: `handoff-0827`;
-- current status: `p14_t02_non_empirical_ontology_success_criteria_complete_p14_t03_selected`;
+- active task: `RT-20260722-019`;
+- latest handoff: `handoff-0828`;
+- current status: `p14_t03_no_target_necessary_but_insufficient_policy_complete_p14_t05_selected`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0827.yaml`
-- `research_control/tasks/RT-20260722-018/00_TASK.yaml`
+- `research_control/handoffs/handoff-0828.yaml`
+- `research_control/tasks/RT-20260722-019/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0827*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0828*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

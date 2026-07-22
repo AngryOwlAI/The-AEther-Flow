@@ -1,0 +1,419 @@
+job_id: "AJ-RT-20260722-019-001"
+task_id: "RT-20260722-019"
+decision_id: "DDR-20260722-019"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260722-019"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-22T23:02:14Z"
+started_at: "2026-07-22T23:02:14Z"
+completed_at: "2026-07-22T23:15:35Z"
+requires_human_gate: false
+human_authorization_id: ""
+objective: "Execute only v21 P14-T03 by formalizing a necessary-but-not-sufficient no-target policy, positive-evidence predicates, a theorem with finite countermodels, current-status-preserving examples, and a Gate A through D mapping."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Align philosophical and scientific claim policy."
+route_label: "philosophy-foundations-packet"
+route_reason: "Handoff-0827 and the ordinary-route guard select dependency-ready P14-T03 after P11-T05 and P14-T01 completed."
+plan_task_id: "P14-T03"
+recommendation_ids:
+  - "V21-R31"
+  - "V21-R33"
+  - "V21-R56"
+  - "V21-R63"
+  - "V21-R67"
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "V21-P14-NO-TARGET-POSITIVE-READINESS-LOGIC-V1"
+  assumption_delta:
+    - "Adds no ontology or physical assumption; introduces a task-local conjunction model separating no-target purity from positive readiness and protected authority."
+  materiality_basis: "Creates the first P14 theorem and countermodel packet proving that source-purity certificates cannot by themselves establish Gate A through D evidence completeness or physical meaning."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY"
+    - "TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES"
+    - "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    - "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex"
+    - "research_control/tasks/RT-20260722-019/artifacts/worked_candidate_examples_v1.yaml"
+    - "research_control/tasks/RT-20260722-019/artifacts/gate_a_d_positive_evidence_mapping_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v21_p14_t03_no_target_positive_readiness_policy"
+  family_id: "V21-P14-NO-TARGET-POSITIVE-READINESS-LOGIC-V1"
+  family_identity_sha256: "3aae8afe9c9a29f325cc592a9800426ca79e5584f2d4936ab982c0f2fb0d5ae8"
+  assumption_sha256es:
+    - "092e0a5ec967414a0e6a8b2e8415e760a21463262422b6cf6ffc21b230258a72"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex"
+      - "research_control/tasks/RT-20260722-019/artifacts/worked_candidate_examples_v1.yaml"
+      - "research_control/tasks/RT-20260722-019/artifacts/gate_a_d_positive_evidence_mapping_v1.yaml"
+    project_system:
+      - "research_control/tasks/RT-20260722-019/artifacts/validate_no_target_sufficiency_policy.py"
+      - "research_control/tasks/RT-20260722-019/artifacts/no_target_sufficiency_validation_report.json"
+  acceptance_criteria:
+    physics:
+      - "no-target purity is a necessary structural-admissibility conjunct and not a sufficient physical-readiness certificate"
+      - "a theorem and finite countermodels separate no-target purity from positive provenance and protected authority"
+      - "current scoped object examples retain their canonical statuses"
+      - "Gate A through D mapping preserves downstream blocks and human gates"
+    project_system:
+      - "task-local deterministic checker validates the policy examples mapping and authority limits"
+      - "validation receipts do not count as physics evidence"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0827"
+  source_handoff_path: "research_control/handoffs/handoff-0827.yaml"
+  source_handoff_sha256: "3d658113c6eaf10210c50a55aa5ac8acfdfd9aa1bb30b3ffdc71a7231f1d5b66"
+  selected_plan_task_id: "P14-T03"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "derive bounded child questions from the Ontology Formalizer role"
+      - "enforce shared claim boundary and source restrictions"
+      - "review child outputs for conflicts"
+      - "fuse one registered no-target sufficiency artifact"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260722-019/artifacts/child_phys_math_no_target_sufficiency.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260722-019/artifacts/child_phys_phil_no_target_sufficiency.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260722-019/artifacts/parent_conflict_review_no_target_sufficiency.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260722-019/artifacts/parent_fusion_notes_no_target_sufficiency.md"
+    fused_output_path: "research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0827.yaml"
+  - "research_control/handoffs/handoff-0827.md"
+  - "research_control/tasks/RT-20260722-007/**"
+  - "research_control/tasks/RT-20260722-016/**"
+  - "research_control/tasks/RT-20260722-018/**"
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "ontology/tex/aether_flow_geometry.tex"
+  - "registries/**"
+allowed_write_paths:
+  - "research_control/tasks/RT-20260722-019/**"
+  - "research_control/handoffs/handoff-0828.yaml"
+  - "research_control/handoffs/handoff-0828.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/TEX_SOURCE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+allowed_generated_paths:
+  - ".local/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+  - ".agents/roles/**"
+  - "research_control/tasks/RT-20260722-007/**"
+  - "research_control/tasks/RT-20260722-016/**"
+  - "research_control/tasks/RT-20260722-018/**"
+allowed_source_classes:
+  - "registered_science_sources_read_only"
+  - "registered_control_sources"
+  - "tracked_research_control_state"
+  - "task_local_science_draft"
+  - "task_local_control_evidence"
+  - "role_contract"
+  - "registry"
+  - "generated_memory_derivative"
+forbidden_source_classes:
+  - "candidate_reconstruction"
+  - "canonical_ontology_write"
+  - "no_target_purity_as_positive_provenance"
+  - "source_pure_mathematics_as_physical_readiness"
+  - "validator_or_checkpoint_as_physics_evidence"
+  - "formal_similarity_as_equivalence_proof"
+  - "equivalence_as_emergence"
+  - "redescription_as_empirical_novelty"
+  - "source_law_adoption"
+  - "scientific_ledger_mutation"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "gate_chair_verdict"
+  - "publication_authority"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "generated_derivative_authority"
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python research_control/tasks/RT-20260722-019/artifacts/validate_no_target_sufficiency_policy.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260722-019/artifacts/validate_no_target_sufficiency_policy.py --check --json"
+  - "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.local/rt-20260722-019-latex research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260722-019 research_control/program_state.yaml research_control/handoffs/handoff-0828.yaml --explain"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python -m unittest tests.test_research_control"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260722-019-001"
+  - "git diff --check"
+required_validators:
+  - "memory_preflight"
+  - "dependency_completion_hashes"
+  - "canonical_source_hashes"
+  - "physics_payload_admission"
+  - "family_freeze_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "parent_child_synthesis"
+  - "no_target_necessity_and_insufficiency"
+  - "positive_evidence_dimension_mapping"
+  - "worked_candidate_status_preservation"
+  - "gate_a_d_mapping"
+  - "latex_compile"
+  - "task_local_validator"
+  - "memory_bootstrap"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_validation"
+  - "research_control_test_shard"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "research_control/tasks/RT-20260722-019/artifacts/child_phys_math_no_target_sufficiency.yaml"
+  - "research_control/tasks/RT-20260722-019/artifacts/child_phys_phil_no_target_sufficiency.yaml"
+  - "research_control/tasks/RT-20260722-019/artifacts/parent_conflict_review_no_target_sufficiency.yaml"
+  - "research_control/tasks/RT-20260722-019/artifacts/parent_fusion_notes_no_target_sufficiency.md"
+  - "research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex"
+  - "research_control/tasks/RT-20260722-019/artifacts/worked_candidate_examples_v1.yaml"
+  - "research_control/tasks/RT-20260722-019/artifacts/gate_a_d_positive_evidence_mapping_v1.yaml"
+  - "research_control/tasks/RT-20260722-019/artifacts/validate_no_target_sufficiency_policy.py"
+  - "research_control/tasks/RT-20260722-019/artifacts/no_target_sufficiency_validation_report.json"
+  - "research_control/tasks/RT-20260722-019/artifacts/no_target_sufficiency_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-019/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml"
+  - "research_control/handoffs/handoff-0828.yaml"
+  - "research_control/handoffs/handoff-0828.md"
+  - "research_control/program_state.yaml"
+claim_boundary: "CB-V21-P14-T03-NO-TARGET-SUFFICIENCY-001"
+documentation_impact_id: "DI-RT-20260722-019-001"
+completion_id: "AJC-AJ-RT-20260722-019-001"
+dependency_evidence:
+  - task_id: "RT-20260722-007"
+    plan_task_id: "P11-T05"
+    completion_path: "research_control/tasks/RT-20260722-007/jobs/completions/AJC-AJ-RT-20260722-007-001.yaml"
+    completion_sha256: "fc47c54cefe9f6f3dd7a6a279c41b81fec8816e2bd72c4e58f2856b433dea3dd"
+    checkpoint_commit: "e95385e8027ebcb3fe52d9bf3daf35ff3398f15a"
+  - task_id: "RT-20260722-016"
+    plan_task_id: "P14-T01"
+    completion_path: "research_control/tasks/RT-20260722-016/jobs/completions/AJC-AJ-RT-20260722-016-001.yaml"
+    completion_sha256: "0cb2132e8fcc718f60bc84ea8ba2692a871bb30cd9cfb679d48214c1d4e7a699"
+    checkpoint_commit: "3046ee172f1cd5b0454a613b2130447ceb55496e"
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 993
+    relationship_row_count: 4905
+    semantic_row_count: 993
+    vault_row_count: 993
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v21.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_geometry.tex"
+      source_hash: "ad43e3408fe2d9686a52a71de7ab8326668e8f04ebe2d2845986898b7d2c000f"
+    - object_id: "MD-V21-P11-T05-POSITIVE-PROVENANCE-OPERATIONAL-MEANING-GATE-POLICY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md"
+      source_hash: "7d679cbcbc05bf771333ba7d3afddb351159b87d0edd92e720942428389b62c6"
+    - object_id: "TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-016/artifacts/four_project_success_categories_v1.tex"
+      source_hash: "03d2658ad7a1508776ed25f1b00b7446c04f8c76e16b2f1acfd7e6c06ddaf00e"
+  authority_note: "Obsidian wiki semantic relationship and .local surfaces are retrieval layers only and are not authority; registered canonical sources and tracked control state govern this task."
+stop_conditions:
+  - "canonical ontology edit or protected authority required"
+  - "dependency hash or source identity mismatch"
+  - "unresolved parent-child blocking conflict"
+  - "policy rejects source-pure mathematics or overreads no-target purity"
+  - "unexpected write outside the AgentJob allowlist"
+  - "required validator or checkpoint failure without a separate authorized repair route"

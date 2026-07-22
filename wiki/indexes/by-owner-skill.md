@@ -1147,6 +1147,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `wiki/tex/tex-v21-p1-t04-eqsrc-canonical-selection-naturality-target.md`
 - `WIKI-TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES` `wiki/tex/tex-v21-p14-t01-project-success-categories.md`
 - `WIKI-TEX-V21-P14-T02-NON-EMPIRICAL-ONTOLOGY-SUCCESS-CRITERIA-V1` `wiki/tex/tex-v21-p14-t02-non-empirical-ontology-success-criteria-v1.md`
+- `WIKI-TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1` `wiki/tex/tex-v21-p14-t03-no-target-positive-sufficiency-policy-v1.md`
 - `WIKI-TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION` `wiki/tex/tex-v21-p2-t01-eqsrc-source-category-definition.md`
 - `WIKI-TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `wiki/tex/tex-v21-p2-t02-eqsrc-natural-selector-fixed-point-condition.md`
 - `WIKI-TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `wiki/tex/tex-v21-p2-t03-eqsrc-no-selector-nonuniqueness-theorem.md`
@@ -2011,6 +2012,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P1-T04-EQSRC-CANONICAL-SELECTION-NATURALITY-TARGET` `research_control/tasks/RT-20260720-012/artifacts/eqsrc_canonical_selection_naturality_target_v1.tex`
 - `TEX-V21-P14-T01-PROJECT-SUCCESS-CATEGORIES` `research_control/tasks/RT-20260722-016/artifacts/four_project_success_categories_v1.tex`
 - `TEX-V21-P14-T02-NON-EMPIRICAL-ONTOLOGY-SUCCESS-CRITERIA-V1` `research_control/tasks/RT-20260722-018/artifacts/non_empirical_ontology_success_criteria_v1.tex`
+- `TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1` `research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex`
 - `TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION` `research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex`
 - `TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex`
 - `TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex`

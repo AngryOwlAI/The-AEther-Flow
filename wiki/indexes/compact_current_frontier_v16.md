@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-018`
-- Latest handoff: `handoff-0827`
-- Current status: `p14_t02_non_empirical_ontology_success_criteria_complete_p14_t03_selected`
+- Active task: `RT-20260722-019`
+- Latest handoff: `handoff-0828`
+- Current status: `p14_t03_no_target_necessary_but_insufficient_policy_complete_p14_t05_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-018`
-- Latest research handoff: `handoff-0827`
-- Latest research next action: Run exactly one bounded v21 P14-T03 ontology-formalizer philosophy-foundations AgentJob to integrate a necessary-but-not-sufficient no-target policy with positive provenance dynamics uniqueness or quotient status operational meaning and robustness requirements.
+- Latest research task: `RT-20260722-019`
+- Latest research handoff: `handoff-0828`
+- Latest research next action: Run exactly one bounded v21 P14-T05 ontology-formalizer philosophy-foundations AgentJob to formalize the scoped no-go and minimum-extension success pathway without globalizing local results or changing claim authority.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p14_t03_necessary_but_not_sufficient_no_target_policy`
+- Route ID: `v21_p14_t05_scoped_negative_result_minimum_extension_success_pathway`
 - Role family: `ontology-formalizer@0.2.0`
-- Target milestone: `source_ontology`
-- Milestone burden: Align philosophical and scientific claim policy.
+- Target milestone: `source_equivalence_eqsrc`
+- Milestone burden: Ensure negative science can close a line without becoming global theory rejection.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `dd2b1b4de60b8363c5d52530f1b4105fa41accde05d02bad48e9c44b77028c71`
-- JSON SHA-256: `0f7ac06d457272dd94ce5e90fd9b6bd77f33ba0bdb3c02d2160878ee931160fc`
+- YAML SHA-256: `48c50a99c19d83c589e54c0e70f78cca3f5ab38b97f4f5c7b30e1ef1aff09aa6`
+- JSON SHA-256: `2be64bc96e68ee0037f127cfd1fb1e10ed54ab6c66b42a40ec0155f85b5c98c9`
 
 ## Authority Warning
 

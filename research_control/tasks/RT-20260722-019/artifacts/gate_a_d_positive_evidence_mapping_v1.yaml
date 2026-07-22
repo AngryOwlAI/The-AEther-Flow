@@ -1,0 +1,124 @@
+schema_id: "v21_p14_t03_gate_a_d_positive_evidence_mapping_v1"
+task_id: "RT-20260722-019"
+job_id: "AJ-RT-20260722-019-001"
+status: "draft/control"
+policy_theorem_id: "NT-POSITIVE-SUFFICIENCY-THEOREM-V1"
+shared_policy:
+  no_target_purity_required_for_evidence_complete: true
+  no_target_purity_sufficient_for_evidence_complete: false
+  validator_receipt_sufficient_for_evidence_complete: false
+  evidence_complete_is_protected_verdict: false
+  protected_verdict_required_after_evidence_completion: true
+  one_gate_auto_satisfies_downstream_gate: false
+positive_dimension_order:
+  - "source_derivation"
+  - "uniqueness_or_quotient"
+  - "naturality"
+  - "dynamics"
+  - "operational_systems"
+  - "robustness"
+  - "independent_review"
+gates:
+  gate_a:
+    purpose: "source theory readiness"
+    minimum_evidence:
+      - "ontology regime decided under its required authority"
+      - "source objects and morphisms defined"
+      - "source dynamics explicit"
+      - "EqSrc or quotient status established"
+      - "admissible variations, observables, and automorphism analysis complete"
+      - "audit, stress, and independent review complete"
+    positive_dimension_application:
+      source_derivation: "source primitives and laws are traced to exact source premises"
+      uniqueness_or_quotient: "residual multiplicity is resolved or an exact quotient is defined"
+      naturality: "source construction is choice-controlled"
+      dynamics: "source dynamics are explicit and evidenced"
+      operational_systems: "source observables or protocols are defined without target labels"
+      robustness: "source result survives declared variations"
+      independent_review: "executed review has adequate provenance"
+    current_verdict: "not_issued_by_p14_t03"
+    blocked_overread: "No metric or downstream promotion."
+  gate_b:
+    purpose: "effective geometry readiness"
+    minimum_evidence:
+      - "causal or characteristic structure derived"
+      - "conformal structure justified"
+      - "scale operationally calibrated"
+      - "Lorentzian signature and nondegeneracy established"
+      - "transformation law and uniqueness up to declared equivalence established"
+      - "robustness and propagation meaning established"
+    positive_dimension_application:
+      source_derivation: "P11-T05 status source_derived"
+      uniqueness_or_quotient: "P11-T05 status unique or quotient_defined"
+      naturality: "P11-T05 status derived"
+      dynamics: "P11-T05 status derived or validated"
+      operational_systems: "P11-T05 status constructed or validated"
+      robustness: "P11-T05 status robust"
+      independent_review: "P11-T05 status human_expert_review or independent_replication"
+    current_verdict: "not_issued_by_p14_t03"
+    blocked_overread: "No matter coupling or field equations."
+  gate_c:
+    purpose: "matter-coupling readiness"
+    minimum_evidence:
+      - "source matter ontology and dynamics defined"
+      - "operational devices constructed"
+      - "common propagation geometry proved"
+      - "universal coupling, matter action, stress-energy, and conservation established"
+      - "equivalence-principle status, audit, stress, and independent review complete"
+    positive_dimension_application:
+      source_derivation: "P11-T05 status source_derived"
+      uniqueness_or_quotient: "P11-T05 status unique or quotient_defined"
+      naturality: "P11-T05 status derived"
+      dynamics: "P11-T05 status validated"
+      operational_systems: "P11-T05 status validated"
+      robustness: "P11-T05 status robust"
+      independent_review: "P11-T05 status human_expert_review or independent_replication"
+    current_verdict: "not_issued_by_p14_t03"
+    blocked_overread: "No Einstein equations or benchmark promotion."
+  gate_d:
+    purpose: "Einstein-sector readiness"
+    minimum_evidence:
+      - "one closure route selected and its assumptions satisfied"
+      - "effective gravitational action or constraint structure derived"
+      - "field equations obtained"
+      - "constraints, modes, hyperbolicity, stability, and corrections established"
+      - "audit and independent review complete"
+    positive_dimension_application:
+      source_derivation: "the closure chain traces through source-derived geometry and matter inputs"
+      uniqueness_or_quotient: "closure and residual equivalence are exact in scope"
+      naturality: "no unrecorded closure choice imports the target"
+      dynamics: "field dynamics and constraint propagation are derived and tested in scope"
+      operational_systems: "the equations connect to the already-evidenced matter and detector protocols"
+      robustness: "hyperbolicity, stability, corrections, and declared variations are controlled"
+      independent_review: "executed review covers the complete closure chain"
+    current_verdict: "not_issued_by_p14_t03"
+    blocked_overread: "No benchmark or completed-derivation promotion."
+theorem_inventory_guidance:
+  no_target_and_positive_dimensions_separate: true
+  required_fields:
+    - "theorem_or_candidate_id"
+    - "claim_scope"
+    - "no_target_status"
+    - "no_target_search_scope"
+    - "positive_dimension_statuses"
+    - "source_hashes"
+    - "assumption_boundary"
+    - "quotient_or_uniqueness_status"
+    - "operational_protocol_refs"
+    - "robustness_scope"
+    - "review_provenance"
+    - "protected_authority_status"
+  no_target_pass_auto_promotes: false
+  finite_countermodel_globalizes: false
+authority_limits:
+  gate_a_verdict_issued: false
+  gate_b_verdict_issued: false
+  gate_c_verdict_issued: false
+  gate_d_verdict_issued: false
+  canonical_ontology_modified: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_claimed: false

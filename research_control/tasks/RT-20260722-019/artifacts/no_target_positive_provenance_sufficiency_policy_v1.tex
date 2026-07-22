@@ -1,0 +1,202 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,tabularx,array}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\NT}{\mathsf{NT}}
+\newcommand{\Ready}{\mathsf{Ready}}
+\newcommand{\Review}{\mathsf{Review}}
+\newcommand{\Promote}{\mathsf{Promote}}
+\newcommand{\Pos}{\mathsf{Pos}}
+
+\title{P14-T03 No-Target and Positive-Provenance Sufficiency Policy v1}
+\author{The AEther-Flow Research-Control Project}
+\date{July 22, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This task-local draft/control policy fixes the logical role of a no-target
+certificate.  Source purity is necessary for a physical-readiness record, but
+it is not positive provenance and cannot by itself establish physical meaning,
+emergence, Gate A through D readiness, or promotion.  Readiness additionally
+requires gate-scoped evidence for source derivation, uniqueness or an explicit
+quotient, naturality, dynamics, operational systems, robustness, and
+appropriately provenanced independent review.  Even an evidence-complete record
+requires a separately authorized protected verdict.  The policy preserves the
+current status of all inspected objects and does not reject source-pure
+mathematics.
+\end{abstract}
+
+\section{Authority and source boundary}
+
+This artifact executes only v21 P14-T03 under task RT-20260722-019.  It is not
+canonical ontology, a source law, a physical gauge theorem, a Gate Chair
+decision, proof authority, a scientific-ledger change, or a completed
+first-principles derivation of general relativity.  Its source basis is the
+registered v21 implementation plan, the P11-T05 positive-provenance policy, the
+P14-T01 success-category theorem, and the registered foundations and geometry
+manuscripts.  No external source is used.
+
+The foundations and geometry manuscripts distinguish exact-GR \emph{adoption}
+from substrate \emph{derivation}.  P14-T01 separately types interpretive
+redescription, formal or categorical equivalence, genuine emergence, and
+empirical novelty.  P11-T05 supplies seven positive-evidence dimensions and
+states that neither a no-target certificate nor an operational validator
+receipt completes a physical-readiness record.
+
+\section{Logical policy}
+
+Let $x$ be a typed, scoped claim record and let $g\in\{A,B,C,D\}$ be a
+declared readiness gate.  Every predicate below is evaluated only in the scope
+and against the source hashes carried by $x$.
+
+\begin{definition}[No-target certificate]
+$\NT(x)$ means that an audit has shown, within its declared search and
+variation scope, that the construction does not use a prohibited target
+benchmark, target atlas, target metric, validator result, checkpoint, or test
+receipt as a source premise.  It certifies structural admissibility in that
+scope.  It neither supplies a source derivation nor assigns physical meaning.
+\end{definition}
+
+\begin{definition}[Positive-evidence vector]
+The positive-evidence vector is
+\[
+ \Pos_g(x)=(D_s,U_q,N,D_y,O,R,I)_g,
+\]
+where the coordinates respectively denote gate-adequate certificates for
+source derivation, uniqueness or a defined quotient, naturality, dynamics,
+operational systems, robustness, and independent review.  A coordinate is true
+only when its typed evidence meets the minimum status for gate $g$; missing,
+not-applicable, assumed, proposed, conditional, or merely specified evidence
+does not silently become complete.
+\end{definition}
+
+\begin{definition}[Evidence completeness and protected promotion]
+Let $S_g(x)$ mean that the record is well typed for gate $g$, has exact source
+and scope identity, and satisfies the gate-specific burdens listed below.  Set
+\[
+ \Ready_g(x) := \NT(x)\wedge S_g(x)\wedge
+ D_s(x)\wedge U_q(x)\wedge N(x)\wedge D_y(x)\wedge
+ O(x)\wedge R(x)\wedge I(x).
+\]
+$\Ready_g(x)$ means only ``evidence complete for a separately authorized gate
+review.''  If $V_g(x)$ denotes a valid protected verdict with exact authority,
+then
+\[
+ \Promote_g(x) := \Ready_g(x)\wedge V_g(x).
+\]
+Operational validators may check the shape and internal consistency of these
+records, but do not make any conjunct true as scientific evidence.
+\end{definition}
+
+\begin{proposition}[NT-POSITIVE-SUFFICIENCY-THEOREM-V1]
+For every well-typed record $x$ and gate $g$:
+\begin{enumerate}
+  \item $\Ready_g(x)\Rightarrow\NT(x)$;
+  \item $\NT(x)\not\Rightarrow\Ready_g(x)$;
+  \item $\Ready_g(x)\not\Rightarrow\Promote_g(x)$; and
+  \item no individual positive coordinate is supplied by $\NT(x)$.
+\end{enumerate}
+Thus no-target purity is necessary but insufficient for evidence completeness,
+and evidence completeness is itself insufficient for protected promotion.
+\end{proposition}
+
+\begin{proof}
+The first implication is immediate from the conjunction defining
+$\Ready_g$.  For the second, take the finite evidence world
+\[
+ w_{\NT}=(\NT,S_g,D_s,U_q,N,D_y,O,R,I,V_g)
+        =(1,1,0,0,0,0,0,0,0,0).
+\]
+It has a valid no-target certificate but no positive-evidence certificate, so
+$\Ready_g=0$.  For the third, take
+\[
+ w_{\Review}=(1,1,1,1,1,1,1,1,1,0).
+\]
+This record is review-ready, but $V_g=0$, hence $\Promote_g=0$.  Finally, for
+each positive coordinate $P$ use the two worlds $w_{\NT}$ and
+$w_{\NT,P}$, the latter differing only by $P=1$.  Both satisfy $\NT$, while
+only one satisfies $P$, so $\NT\not\Rightarrow P$.  These are finite logical
+countermodels to overreading a purity certificate; they are not models of
+nature and not no-go theorems about future source extensions.
+\end{proof}
+
+\begin{corollary}[Source-pure mathematics remains admissible]
+If $\NT(x)=1$ while one or more positive coordinates are missing, $x$ may
+remain valid scoped mathematics, a proposal-only construction, source-extension
+data, or a draft/control theorem.  The policy blocks only the stronger physical
+or protected conclusion; it does not reject the mathematical result.
+\end{corollary}
+
+\section{Gate A through D evidence mapping}
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.10\linewidth}>{\raggedright\arraybackslash}p{0.27\linewidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{0.18\linewidth}}
+\toprule
+Gate & Gate-specific burden & How the positive vector applies & Blocked overread \\
+\midrule
+A & Source ontology, objects and morphisms, dynamics, EqSrc or quotient status, variations, observables, automorphisms, audit, stress, and review. & Source derivation, uniqueness/quotient, naturality, dynamics, robustness, and review must be evidenced at source scope; operational systems must identify source observables or protocols rather than target labels. & No metric or downstream promotion. \\
+B & Derived causal/conformal structure, calibrated scale, signature, nondegeneracy, transformation law, uniqueness up to declared equivalence, robustness, and propagation meaning. & All seven coordinates use the P11-T05 Gate B ready statuses.  A target-independent tensor formula is not yet an effective physical metric. & No matter coupling or field equations. \\
+C & Source matter ontology and dynamics, devices, common propagation geometry, universal coupling, action, stress-energy, conservation, equivalence-principle status, audit, stress, and review. & All seven coordinates use the stricter P11-T05 Gate C statuses, including validated dynamics and operational systems. & No Einstein equations or benchmark promotion. \\
+D & Selected closure route, satisfied assumptions, derived action or constraints, field equations, modes, hyperbolicity, stability, corrections, audit, and review. & Source provenance must extend through geometry and matter inputs; uniqueness/quotient, dynamics, operational meaning, robustness, and review remain explicit rather than inherited from exact-GR agreement. & No benchmark or completed-derivation promotion. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+No Gate A through D verdict is issued here.  Each gate retains its own protected
+authority and a narrow result at one gate does not satisfy a downstream gate.
+
+\section{Status-preserving applications}
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}X}
+\toprule
+Object class & Preserved status & Policy consequence \\
+\midrule
+$M_{\rm src}$ & Scoped source-only adopted object. & Its name or source scope does not by itself establish a completed source theory, a unique physical realization, dynamics, operational meaning, or Gate A readiness. \\
+Scoped metric records & Scoped source-extension objects, not an unscoped Lorentzian $g_{\rm eff}$. & A no-target or source-purity result does not establish Gate B's causal, scale, signature, uniqueness, operational, robustness, and review burdens. \\
+Matter profiles & Scoped evidence and preconditions, not physical matter coupling. & Source-pure profiles do not construct devices, universal coupling, an action, stress-energy, conservation, or Gate C readiness. \\
+Selector and quotient candidates & Proposal-only or draft/control in their exact recorded scopes; scoped negative results remain scoped. & Equivariance or target independence does not establish a physical gauge, source-law adoption, unique selection, operational semantics, or general EqSrc completion. \\
+Exact-GR benchmark line & Interpretive redescription in the P14-T01 mapping. & Exact recovery remains target-side benchmark evidence; it is not source derivation, emergence, empirical novelty, or Gate D closure. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The machine-readable examples accompanying this paper do not change any
+canonical status.  ``Not assessed'' remains distinct from ``failed,'' and an
+unmet present evidence obligation is not an impossibility theorem.
+
+\section{Overread controls and theorem-inventory guidance}
+
+The following formulations are blocked unless their independent evidence is
+present: ``target independent, therefore physical''; ``source pure, therefore
+emergent''; ``equivariant, therefore gauge''; ``validator passed, therefore
+proved''; ``exact-GR, therefore derived''; and ``evidence complete, therefore
+adopted.''
+
+Future theorem-inventory rows should record no-target status separately from
+the seven positive coordinates, the gate and scope, exact source hashes,
+assumption and quotient boundaries, operational protocol references,
+robustness domain, review provenance, scientific status, and protected
+authority.  A no-target PASS must never auto-fill a positive coordinate.  A
+finite countermodel or scoped obstruction must retain its scope and reopening
+conditions rather than becoming a global theory rejection.
+
+\section{Conclusion}
+
+The policy supplies a claim-logic theorem and finite countermodels, not a new physical law.
+It closes the P14-T03 policy burden at draft/control scope while
+leaving all physical derivation routes open.  Canonical ontology, scientific
+status, Distance-to-GR ledgers, Gate Chair authority, proof authority,
+publication authority, and benchmark or completed-derivation status remain
+unchanged.
+
+\end{document}

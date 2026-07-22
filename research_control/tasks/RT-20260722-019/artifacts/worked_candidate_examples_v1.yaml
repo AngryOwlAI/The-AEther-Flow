@@ -1,0 +1,157 @@
+schema_id: "v21_p14_t03_worked_candidate_examples_v1"
+task_id: "RT-20260722-019"
+job_id: "AJ-RT-20260722-019-001"
+status: "draft/control"
+policy_theorem_id: "NT-POSITIVE-SUFFICIENCY-THEOREM-V1"
+dimension_order:
+  - "source_derivation"
+  - "uniqueness_or_quotient"
+  - "naturality"
+  - "dynamics"
+  - "operational_systems"
+  - "robustness"
+  - "independent_review"
+status_semantics:
+  not_assessed: "No bounded evidence record inspected here establishes either pass or failure."
+  missing: "The present record lacks the required evidence; this is not an impossibility theorem."
+  scoped: "Evidence exists only in the named scope and does not auto-promote the object."
+examples:
+  - example_id: "P14T03-EX-NT-ONLY"
+    object_class: "finite source-pure mathematical candidate"
+    source_status_before: "draft/control"
+    source_status_after: "draft/control"
+    no_target_purity:
+      status: "passed_in_declared_finite_scope"
+      role: "necessary_structural_admissibility"
+    positive_dimensions:
+      source_derivation: "missing"
+      uniqueness_or_quotient: "missing"
+      naturality: "missing"
+      dynamics: "missing"
+      operational_systems: "missing"
+      robustness: "missing"
+      independent_review: "missing"
+    evidence_complete_for_gate_review: false
+    physical_promotion_authorized: false
+    policy_outcome: "Retain the source-pure mathematics in scope; block physical interpretation, emergence, and promotion."
+    forbidden_overread: "Target-independent therefore physical."
+  - example_id: "P14T03-EX-MSRC"
+    object_class: "M_src"
+    source_status_before: "scoped source-only adopted object"
+    source_status_after: "scoped source-only adopted object"
+    no_target_purity:
+      status: "passed_in_exact_scoped_adoption_record"
+      role: "necessary_scoped_admissibility_but_insufficient_for_gate_a"
+    positive_dimensions:
+      source_derivation: "scoped"
+      uniqueness_or_quotient: "not_assessed"
+      naturality: "not_assessed"
+      dynamics: "missing"
+      operational_systems: "missing"
+      robustness: "not_assessed"
+      independent_review: "not_assessed"
+    evidence_complete_for_gate_review: false
+    physical_promotion_authorized: false
+    policy_outcome: "Preserve the adopted source-only scope and its fail-closed no-target discipline; do not read either as completion of Gate A."
+    forbidden_overread: "A named source manifold is a complete or uniquely physical source theory."
+  - example_id: "P14T03-EX-SCOPED-METRIC"
+    object_class: "scoped metric structure record"
+    source_status_before: "scoped source-extension object, not an unscoped Lorentzian g_eff"
+    source_status_after: "scoped source-extension object, not an unscoped Lorentzian g_eff"
+    no_target_purity:
+      status: "not_assessed"
+      role: "would_be_necessary_but_insufficient"
+    positive_dimensions:
+      source_derivation: "scoped"
+      uniqueness_or_quotient: "not_assessed"
+      naturality: "not_assessed"
+      dynamics: "missing"
+      operational_systems: "missing"
+      robustness: "not_assessed"
+      independent_review: "not_assessed"
+    evidence_complete_for_gate_review: false
+    physical_promotion_authorized: false
+    policy_outcome: "Retain the scoped source-extension status; require the full Gate B burden before unscoped effective-metric language."
+    forbidden_overread: "A source-pure tensor formula is already the operational metric."
+  - example_id: "P14T03-EX-MATTER-PROFILE"
+    object_class: "matter profile"
+    source_status_before: "scoped evidence and precondition, not physical matter coupling"
+    source_status_after: "scoped evidence and precondition, not physical matter coupling"
+    no_target_purity:
+      status: "not_assessed"
+      role: "would_be_necessary_but_insufficient"
+    positive_dimensions:
+      source_derivation: "not_assessed"
+      uniqueness_or_quotient: "not_assessed"
+      naturality: "not_assessed"
+      dynamics: "missing"
+      operational_systems: "missing"
+      robustness: "not_assessed"
+      independent_review: "not_assessed"
+    evidence_complete_for_gate_review: false
+    physical_promotion_authorized: false
+    policy_outcome: "Preserve the evidence-only status; do not infer devices, universal coupling, action, stress-energy, or Gate C readiness."
+    forbidden_overread: "A clean matter profile is a derived universal matter coupling."
+  - example_id: "P14T03-EX-SELECTOR"
+    object_class: "selector or quotient candidate family"
+    source_status_before: "proposal-only or draft/control in each exact recorded scope"
+    source_status_after: "proposal-only or draft/control in each exact recorded scope"
+    no_target_purity:
+      status: "scoped_or_not_assessed_by_candidate"
+      role: "necessary_when_claiming_physical_readiness_but_not_sufficient"
+    positive_dimensions:
+      source_derivation: "scoped"
+      uniqueness_or_quotient: "scoped"
+      naturality: "scoped"
+      dynamics: "missing"
+      operational_systems: "missing"
+      robustness: "not_assessed"
+      independent_review: "not_assessed"
+    evidence_complete_for_gate_review: false
+    physical_promotion_authorized: false
+    policy_outcome: "Preserve exact theorem, obstruction, candidate, freeze, and reopening scopes; do not infer physical gauge or adopted selector law."
+    forbidden_overread: "Equivariance or quotient structure is automatically physical gauge or general EqSrc completion."
+  - example_id: "P14T03-EX-REVIEW-READY-NO-VERDICT"
+    object_class: "finite policy countermodel"
+    source_status_before: "hypothetical control record"
+    source_status_after: "hypothetical control record"
+    no_target_purity:
+      status: "passed"
+      role: "necessary_structural_admissibility"
+    positive_dimensions:
+      source_derivation: "gate_ready"
+      uniqueness_or_quotient: "gate_ready"
+      naturality: "gate_ready"
+      dynamics: "gate_ready"
+      operational_systems: "gate_ready"
+      robustness: "gate_ready"
+      independent_review: "gate_ready"
+    evidence_complete_for_gate_review: true
+    protected_gate_verdict_present: false
+    physical_promotion_authorized: false
+    policy_outcome: "Eligible only for a separately authorized protected review."
+    forbidden_overread: "Evidence complete therefore adopted or physically promoted."
+inventory_guidance:
+  required_separate_fields:
+    - "no_target_status_and_scope"
+    - "positive_dimension_statuses"
+    - "gate_and_claim_scope"
+    - "source_hashes"
+    - "assumption_and_quotient_boundary"
+    - "operational_protocol_refs"
+    - "robustness_domain"
+    - "review_provenance"
+    - "scientific_status"
+    - "protected_authority"
+  auto_fill_positive_dimensions_from_no_target: false
+  globalize_scoped_obstruction: false
+claim_boundary:
+  source_pure_mathematics_rejected: false
+  canonical_ontology_modified: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  gate_verdict_issued: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_claimed: false
