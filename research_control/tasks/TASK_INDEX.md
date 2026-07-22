@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `49fde617c082c1d004c5a0e63fcb162ca87a5739dfe13593d63265755ceafd44`
-- Generated-at source timestamp: `2026-07-22T14:21:13Z`
-- Row count: `1056`
+- Source fingerprint: `7c9ab842e7b711d3b96c903aaeb9a9aac49d6231b0970adb198c42693ce0d4f8`
+- Generated-at source timestamp: `2026-07-22T15:39:03Z`
+- Row count: `1057`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260722-011|RT-20260722-010|2026-07-22T15:39:03Z|2026-07-22T15:47:40Z|Audit scientific QA non-regression and authority boundaries|v21_scientific_qa_non_regression_audit|audit_or_review|source_equivalence_eqsrc|not_applicable|implemented_and_validated_or_precisely_blocked|project_control|project_system|explicit|high|completed|source_equivalence_eqsrc|Close P11 with a safe rollout decision.|process-integrity-auditor@0.1.0|false|false|6|Run exactly one bounded P12-T01 project-control-maintainer project-system AgentJob to implement the physics-payload admission gate while preserving lawful negative source-acquisition and precise-obstruction research.|PASS|research_control/tasks/RT-20260722-011/jobs/completions/AJC-AJ-RT-20260722-011-001.yaml|
 |RT-20260722-010|RT-20260722-009|2026-07-22T14:21:13Z|2026-07-22T14:38:32Z|Run an independent-review pilot on the selector theorem and one scoped metric object|v21_independent_review_pilot|audit_or_review|source_equivalence_eqsrc|not_applicable|audit_verdict_or_precise_repair|science_draft|scientific_audit|explicit|high|completed|source_equivalence_eqsrc|Validate the new scientific QA system on high-value claims.|external-red-team-reviewer@0.1.0|false|false|22|Run P11-T08 through improve-project-system to audit QA non-regression, authority boundaries, historical compatibility, and safe rollout.|PASS|research_control/tasks/RT-20260722-010/jobs/completions/AJC-AJ-RT-20260722-010-001.yaml|
 |RT-20260722-009|RT-20260722-008|2026-07-22T13:33:51Z|2026-07-22T13:33:51Z|Integrate proof-assistant evidence into research-control records|v21_proof_assistant_evidence_integration|integration_or_selection|source_equivalence_eqsrc|not_applicable|implemented_and_validated_or_precisely_blocked|project_control|project_system|explicit|high|completed|source_equivalence_eqsrc|Make mechanized proof evidence durable and correctly scoped.|validator-engineer@0.2.0|false|false|7|Run exactly one bounded P11-T07 external-red-team-reviewer project-system pilot using eligible P11 control evidence without treating review as proof promotion or independent replication.|PASS|research_control/tasks/RT-20260722-009/jobs/completions/AJC-AJ-RT-20260722-009-001.yaml|
 |RT-20260722-008|RT-20260722-007|2026-07-22T12:44:29Z|2026-07-22T12:49:00Z|Create reviewer disagreement and agreement metrics|v21_reviewer_disagreement_agreement_metrics|audit_or_review|source_equivalence_eqsrc|not_applicable|implemented_and_validated_or_precisely_blocked|project_control|project_system|explicit|high|completed|source_equivalence_eqsrc|Evaluate review diversity and correlated-agent risk.|project-control-maintainer@0.2.0|false|false|6|Run exactly one bounded P11-T03 validator-engineer project-system AgentJob to integrate proof-assistant evidence into research-control records without promoting physical interpretations.|PASS|research_control/tasks/RT-20260722-008/jobs/completions/AJC-AJ-RT-20260722-008-001.yaml|

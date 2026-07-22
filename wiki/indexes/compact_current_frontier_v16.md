@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-010`
-- Latest handoff: `handoff-0820`
-- Current status: `p11_t07_independent_review_pilot_complete_p11_t08_selected`
+- Active task: `RT-20260722-011`
+- Latest handoff: `handoff-0821`
+- Current status: `p11_t08_scientific_qa_audit_complete_bounded_rollout_two_repairs_required_p12_t01_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-010`
-- Latest research handoff: `handoff-0820`
-- Latest research next action: Run exactly one bounded P11-T08 process-integrity-auditor project-system AgentJob to audit P11 scientific-QA non-regression, false external labels, leaked verdicts, checker-as-proof and consensus-as-proof paths, blind-packet self-containment, semantic-probe boundary false positives, historical compatibility, source-registry authority, and rollout safety without changing scientific status.
+- Latest research task: `RT-20260722-011`
+- Latest research handoff: `handoff-0821`
+- Latest research next action: Run exactly one bounded P12-T01 project-control-maintainer project-system AgentJob to implement the physics-payload admission gate with positive and negative fixtures legacy readability and no theorem-truth inference while preserving lawful negative source-acquisition and precise-obstruction research.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p11_t08_scientific_qa_non_regression_audit`
-- Role family: `process-integrity-auditor@0.1.0`
+- Route ID: `v21_p12_t01_physics_payload_admission_gate`
+- Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Close P11 with a safe rollout decision.
+- Milestone burden: Reduce low-value selector and obligation packet proliferation.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `e740da40babd71b722e3b6cc19713d6e1387b3b27bb7d1b36beeae3d674ded83`
-- JSON SHA-256: `3ed94b95d71d39a8963ff93e11d0d0e518fe086ecf53f684a4c13706e2fab3fc`
+- YAML SHA-256: `b60752b6cba6a252e53286dba2fd629e9bb5703923f6853e14c7ff0c7862d1e3`
+- JSON SHA-256: `715974c653b452057c9aabc4af2967f6a55eead444d3ebc3e84392b06086a08b`
 
 ## Authority Warning
 

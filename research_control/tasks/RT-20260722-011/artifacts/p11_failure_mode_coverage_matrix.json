@@ -1,0 +1,222 @@
+{
+  "authority_flags": {
+    "distance_to_gr_delta_changed": false,
+    "external_review_completed": false,
+    "human_expert_review_completed": false,
+    "independent_replication_completed": false,
+    "physics_promotion_authorized": false,
+    "predecessor_artifacts_mutated": false,
+    "proof_authority": false,
+    "publication_authority": false,
+    "scientific_claims_changed": false,
+    "source_registry_authority_changed": false
+  },
+  "case_count": 14,
+  "cases": [
+    {
+      "case_id": "P11-QA-C001",
+      "expected_control": "all P11 completion hashes remain exact",
+      "failure_mode": "dependency drift",
+      "observed_evidence": "mismatches={}",
+      "rollout_effect": "block rollout on any mismatch",
+      "status": "PASS"
+    },
+    {
+      "case_id": "P11-QA-C002",
+      "expected_control": "strict review validator rejects unsupported externality",
+      "failure_mode": "false external-review label",
+      "observed_evidence": "issue_fields=['review_context.claims.external_review_completed', 'review_context.claims']",
+      "rollout_effect": "critical fail-closed gate",
+      "status": "PASS"
+    },
+    {
+      "case_id": "P11-QA-C003",
+      "expected_control": "strict review validator rejects unsupported replication",
+      "failure_mode": "false independent-replication label",
+      "observed_evidence": "issue_fields=['review_context.claims.independent_replication_completed', 'review_context.claims.independent_replication_completed']",
+      "rollout_effect": "critical fail-closed gate",
+      "status": "PASS"
+    },
+    {
+      "case_id": "P11-QA-C004",
+      "expected_control": "all four P11-T07 review records validate with exact context classes",
+      "failure_mode": "live review schema regression",
+      "observed_evidence": "artifact_count=4 classes={'blind_same_model_review': 2, 'same_context_role_review': 2}",
+      "rollout_effect": "critical live-evidence gate",
+      "status": "PASS"
+    },
+    {
+      "case_id": "P11-QA-C005",
+      "expected_control": "blind-packet scan rejects process-result keys",
+      "failure_mode": "leaked task verdict",
+      "observed_evidence": "findings=[{'kind': 'forbidden_key', 'location': '$.task_verdict', 'match': 'task_verdict'}]",
+      "rollout_effect": "critical context-separation gate",
+      "status": "PASS"
+    },
+    {
+      "case_id": "P11-QA-F001",
+      "expected_control": "parent closure review and one bounded packet-repair loop remain mandatory",
+      "failure_mode": "scientific self-containment is not enforced by process-redaction validation",
+      "observed_evidence": "initial_finding=P11-T07-PACKET-OMISSION-001 repair_scope=task_local_blind_packet_only",
+      "rollout_effect": "bounded use only; unattended packet rollout frozen pending repair",
+      "status": "PASS_LIMITATION_IDENTIFIED"
+    },
+    {
+      "case_id": "P11-QA-C006",
+      "expected_control": "positive-provenance fixtures remain incomplete or invalid",
+      "failure_mode": "checker or validator PASS treated as proof",
+      "observed_evidence": "fixtures={k: positive_rows.get(k) for k in ('NEG-VALIDATOR-PASS-ONLY-001', 'NEG-VALIDATOR-RECEIPT-AS-PREMISE-001')}",
+      "rollout_effect": "critical promotion-shortcut gate",
+      "status": "PASS"
+    },
+    {
+      "case_id": "P11-QA-C007",
+      "expected_control": "correlated-agent risks and disagreements remain visible with no status effect",
+      "failure_mode": "consensus treated as proof",
+      "observed_evidence": "false_consensus=7 disagreements=3 status_effect=False",
+      "rollout_effect": "critical truth-inference gate",
+      "status": "PASS"
+    },
+    {
+      "case_id": "P11-QA-C008",
+      "expected_control": "proof metadata preserves failures assumptions and false authority flags",
+      "failure_mode": "proof evidence promotes ontology or physics",
+      "observed_evidence": "status=PASS proof_authority=False physics_promotion=False",
+      "rollout_effect": "critical proof-scope gate",
+      "status": "PASS"
+    },
+    {
+      "case_id": "P11-QA-F002",
+      "expected_control": "live findings require bounded disposition and may not automatically veto or promote",
+      "failure_mode": "bounded semantic probe overflags explicit negative boundary language",
+      "observed_evidence": "raw=43 boundary_false_positive=43 confirmed=0",
+      "rollout_effect": "advisory use only; unattended semantic veto frozen pending calibration",
+      "status": "PASS_LIMITATION_IDENTIFIED"
+    },
+    {
+      "case_id": "P11-QA-C009",
+      "expected_control": "legacy records remain readable as legacy_unclassified",
+      "failure_mode": "historical artifact unreadability or retroactive strengthening",
+      "observed_evidence": "observed={'tests/fixtures/research_control/red_team_review/valid_minimal.yaml': 'legacy_unclassified', 'research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_external_red_team_review_v1.yaml': 'legacy_unclassified'}",
+      "rollout_effect": "critical compatibility gate",
+      "status": "PASS"
+    },
+    {
+      "case_id": "P11-QA-C010",
+      "expected_control": "canonical control and draft-science rows retain exact current hashes and declared authority",
+      "failure_mode": "source registry authority drift",
+      "observed_evidence": "checked=8",
+      "rollout_effect": "critical authority gate",
+      "status": "PASS"
+    },
+    {
+      "case_id": "P11-QA-C011",
+      "expected_control": "wiki derivatives remain generated_noncanonical",
+      "failure_mode": "generated derivative treated as source authority",
+      "observed_evidence": "matched=8 authorities=['generated_noncanonical']",
+      "rollout_effect": "critical authority gate",
+      "status": "PASS"
+    },
+    {
+      "case_id": "P11-QA-C012",
+      "expected_control": "every protected and scientific change flag remains false",
+      "failure_mode": "audit itself escalates authority",
+      "observed_evidence": "flags={'external_review_completed': False, 'human_expert_review_completed': False, 'independent_replication_completed': False, 'scientific_claims_changed': False, 'distance_to_gr_delta_changed': False, 'source_registry_authority_changed': False, 'predecessor_artifacts_mutated': False, 'proof_authority': False, 'physics_promotion_authorized': False, 'publication_authority': False}",
+      "rollout_effect": "critical audit-boundary gate",
+      "status": "PASS"
+    }
+  ],
+  "failed_case_count": 0,
+  "finding_ids": [
+    "P11-QA-F001",
+    "P11-QA-F002"
+  ],
+  "limitation_count": 2,
+  "mandatory_guardrails": [
+    "Every blind packet requires a parent scientific self-containment review before review execution and at most two bounded repair rounds.",
+    "The P11 semantic probe is advisory on live claim-bearing artifacts; every finding requires bounded disposition and cannot automatically set scientific status.",
+    "Review context classes remain exact provenance labels; only human_expert_review or independent_replication evidence may support their corresponding claims.",
+    "Validator proof-build or reviewer agreement evidence never supplies theorem truth physical interpretation ontology adoption or promotion authority."
+  ],
+  "observations": {
+    "review_receipt": {
+      "authority_boundary": "shape_validation_only_no_proof_authority_no_gate_chair_authority",
+      "checked_artifact_count": 4,
+      "checked_artifacts": [
+        {
+          "artifact_path": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260722-010/artifacts/blind_same_model_selector_review.yaml",
+          "physics_promotion_authorized": false,
+          "recommended_next_route": "Accept the repaired packet at the blind internal mathematical-review layer and route self-containment and correlated-review limitations to P11-T08.",
+          "review_context_classification": "blind_same_model_review",
+          "review_context_present": true,
+          "reviewed_object_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1",
+          "reviewed_source_path_count": 1,
+          "verdict": "no_blocking_defect_found_as_written"
+        },
+        {
+          "artifact_path": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260722-010/artifacts/blind_same_model_geff_review.yaml",
+          "physics_promotion_authorized": false,
+          "recommended_next_route": "Retain the exact draft/control source-record claim and route physical-readiness gaps to P11-T08; no source edit or promotion follows.",
+          "review_context_classification": "blind_same_model_review",
+          "review_context_present": true,
+          "reviewed_object_id": "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1",
+          "reviewed_source_path_count": 1,
+          "verdict": "no_blocking_defect_found_as_written"
+        },
+        {
+          "artifact_path": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260722-010/artifacts/same_context_selector_review.yaml",
+          "physics_promotion_authorized": false,
+          "recommended_next_route": "Route notation bounded-formalization and correlated-review false-consensus warnings to P11-T08; no selector-theorem repair is required.",
+          "review_context_classification": "same_context_role_review",
+          "review_context_present": true,
+          "reviewed_object_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1",
+          "reviewed_source_path_count": 5,
+          "verdict": "no_blocking_defect_found_as_written"
+        },
+        {
+          "artifact_path": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260722-010/artifacts/same_context_geff_review.yaml",
+          "physics_promotion_authorized": false,
+          "recommended_next_route": "Keep the record draft/control and route certificate circularity physical-name overread operational nonidentifiability and the positive-gate block to P11-T08; do not send it to protected Gate B review.",
+          "review_context_classification": "same_context_role_review",
+          "review_context_present": true,
+          "reviewed_object_id": "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1",
+          "reviewed_source_path_count": 4,
+          "verdict": "no_blocking_defect_found_as_written"
+        }
+      ],
+      "physics_promotion_authorized": false,
+      "review_context_classification_counts": {
+        "blind_same_model_review": 2,
+        "same_context_role_review": 2
+      },
+      "schema_id": "external_red_team_review_artifact_schema_v1",
+      "schema_path": ".agents/schemas/EXTERNAL_RED_TEAM_REVIEW_ARTIFACT_SCHEMA.md",
+      "status": "PASS"
+    },
+    "source_authority": {
+      "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex": "authority=draft_control_artifact hash_match=True",
+      "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex": "authority=draft_control_artifact hash_match=True",
+      "research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_schema.md": "authority=project_control hash_match=True",
+      "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md": "authority=project_control hash_match=True",
+      "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_checker_comparison.md": "authority=project_control hash_match=True",
+      "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md": "authority=project_control hash_match=True",
+      "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_metric_specification.md": "authority=project_control hash_match=True",
+      "research_control/tasks/RT-20260722-009/artifacts/proof_artifact_registry_schema.md": "authority=project_control hash_match=True"
+    }
+  },
+  "plan_task_id": "P11-T08",
+  "recommendation_ids": [
+    "V21-R36",
+    "V21-R37",
+    "V21-R38",
+    "V21-R39",
+    "V21-R55",
+    "V21-R56",
+    "V21-R63",
+    "V21-R68"
+  ],
+  "rollout_disposition": "BOUNDED_ROLLOUT_WITH_GUARDRAILS_UNATTENDED_AUTOMATION_FROZEN",
+  "schema_id": "v21_p11_scientific_qa_failure_mode_matrix_v1",
+  "status": "PASS",
+  "task_id": "RT-20260722-011"
+}

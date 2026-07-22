@@ -1,0 +1,322 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260722-011-001"
+completion_id: "AJC-AJ-RT-20260722-011-001"
+task_id: "RT-20260722-011"
+task_type: "v21_scientific_qa_non_regression_audit"
+decision_id: "DDR-20260722-011"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260722-011"
+status: "completed"
+created_at: "2026-07-22T15:39:03Z"
+started_at: "2026-07-22T15:39:03Z"
+completed_at: "2026-07-22T15:47:40Z"
+objective: "Audit completed P11 controls and pilot evidence for critical negative-fixture closure historical readability source authority promotion shortcuts and safe bounded rollout without implementing predecessor repairs or changing science."
+completion_summary: "P11-T08 passed twelve critical controls across fourteen failure-mode cases, preserved two explicit repair obligations, approved bounded later-gate use under four guardrails, and froze unattended blind-packet generation and automatic semantic veto without changing scientific or protected authority."
+objective_result: "met_with_bounded_rollout_and_two_separate_repairs_required"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_task_id: "P11-T08"
+  phase_id: "P11"
+  recommendation_ids:
+    - "V21-R36"
+    - "V21-R37"
+    - "V21-R38"
+    - "V21-R39"
+    - "V21-R55"
+    - "V21-R56"
+    - "V21-R63"
+    - "V21-R68"
+  expected_result_kind: "implemented_and_validated_or_precisely_blocked"
+  observed_result_kind: "implemented_and_validated_with_bounded_repairs_required"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 52
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:52"
+  immutable_route_hash: "b524b8fca070e03d5e02c1ef0b42964d78f2a9c890c53582dca57535421e7499"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "bounded_rollout_two_repairs_required_unattended_automation_frozen"
+work_item_status: "completed"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "task-local P11 non-regression audit failure-mode matrix rollout verdict standard control records and generated derivatives only"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+audit_result:
+  status: "PASS_BOUNDED_ROLLOUT_TWO_REPAIRS_REQUIRED"
+  matrix_case_count: 14
+  critical_case_count: 12
+  failed_case_count: 0
+  repair_required_count: 2
+  repair_obligation_ids:
+    - "P11-QA-F001"
+    - "P11-QA-F002"
+  rollout_disposition: "BOUNDED_ROLLOUT_WITH_GUARDRAILS_UNATTENDED_AUTOMATION_FROZEN"
+  mandatory_guardrail_count: 4
+  unattended_blind_packet_automation_authorized: false
+  automatic_semantic_veto_authorized: false
+  bounded_later_gate_use_authorized: true
+  bounded_later_gate_use_scope: "Only under the four task-local mandatory guardrails; this is project-control use authority and not scientific promotion authority."
+  audit_path: "research_control/tasks/RT-20260722-011/artifacts/p11_scientific_qa_integration_audit.md"
+  audit_sha256: "340fd7aed8a304b27ece042c89de9cf18c4ee14a9d5feb71ef3af298b3227301"
+  matrix_path: "research_control/tasks/RT-20260722-011/artifacts/p11_failure_mode_coverage_matrix.json"
+  matrix_sha256: "6c5ca92259e21ac3c25ce8467e62469593a576c52db05f500cb9b8d54c0c7337"
+  verdict_path: "research_control/tasks/RT-20260722-011/artifacts/p11_rollout_or_repair_verdict.md"
+  verdict_sha256: "7a5ced3f7aa4315df9731669f4d1e366d0911b6c75d59db2e45599a4bf9815ac"
+  validation_path: "research_control/tasks/RT-20260722-011/artifacts/p11_scientific_qa_validation.json"
+  validation_sha256: "821601a58b00ca9bcb72fe47550ce997211f9f8bb6d51b625271fe4b7c85291d"
+  compact_receipt_path: "research_control/tasks/RT-20260722-011/artifacts/p11_scientific_qa_compact_receipt.json"
+  compact_receipt_sha256: "e99347c8ad1864deda009bdbedabdc79553992d976030477fb3975dc5dce7368"
+
+blocking_findings: []
+repair_required_findings:
+  - finding_id: "P11-QA-F001"
+    finding: "Process-context redaction validation does not prove scientific dependency closure or packet self-containment."
+    repair_obligation: "Add an explicit scientific-dependency closure contract and negative omission fixtures before unattended blind-packet use."
+    interim_guardrail: "Require parent scientific self-containment review before review execution and no more than two bounded repair rounds."
+  - finding_id: "P11-QA-F002"
+    finding: "The bounded semantic probe produced forty-three boundary false positives on one live packet and is not calibrated as an automatic veto."
+    repair_obligation: "Add boundary-aware negation handling span deduplication and live-artifact calibration fixtures before automatic veto use."
+    interim_guardrail: "Treat every live semantic finding as advisory evidence requiring explicit bounded disposition."
+
+assumption_delta:
+  new_assumptions: []
+  removed_assumptions: []
+  changed_assumptions: []
+  note: "The audit adds no physics assumption and changes no reviewed scientific source."
+candidate_or_theorem_identities:
+  reviewed_only:
+    - "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+    - "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1"
+  adopted: []
+  rejected: []
+  promoted: []
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260722-011/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-011/DDR-20260722-011.md"
+  - "research_control/tasks/RT-20260722-011/roles/process-integrity-auditor@0.1.0--RT-20260722-011.yaml"
+  - "research_control/tasks/RT-20260722-011/jobs/AJ-RT-20260722-011-001.yaml"
+  - "research_control/tasks/RT-20260722-011/artifacts/p11_scientific_qa_integration_audit.md"
+  - "research_control/tasks/RT-20260722-011/artifacts/p11_failure_mode_coverage_matrix.json"
+  - "research_control/tasks/RT-20260722-011/artifacts/p11_rollout_or_repair_verdict.md"
+  - "research_control/tasks/RT-20260722-011/artifacts/validate_p11_scientific_qa_non_regression.py"
+  - "research_control/tasks/RT-20260722-011/artifacts/p11_scientific_qa_validation.json"
+  - "research_control/tasks/RT-20260722-011/artifacts/p11_scientific_qa_compact_receipt.json"
+  - "tests/test_p11_scientific_qa_non_regression.py"
+  - "research_control/tasks/RT-20260722-011/documentation_impact.yaml"
+  - "research_control/handoffs/handoff-0821.yaml"
+  - "research_control/handoffs/handoff-0821.md"
+outputs_updated:
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory wiki graph and registry derivatives"
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Close P11 with a safe rollout decision."
+  explanation: "The project-system audit changes no source law scientific object metric coupling dynamics field equation benchmark or derivation burden."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P11-T08 is a project-system audit with no scientific-status change."
+  downstream_unlocked:
+    - "bounded later-gate use of P11 controls under four guardrails"
+  downstream_still_blocked:
+    - "unattended blind-packet automation pending P11-QA-F001 repair"
+    - "automatic semantic veto pending P11-QA-F002 repair"
+    - "protected Gate B review readiness"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  bounded_project_control_use_authorized: true
+  bounded_project_control_use_scope: "P11 controls may be used in later bounded gates only with all four guardrails and without unattended blind-packet or automatic semantic-veto behavior."
+  predecessor_repair_authorized: false
+  external_review_completed: false
+  human_expert_review_completed: false
+  independent_replication_completed: false
+  proof_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 52 immutable route lease repository identity max reasoning effort clean start predecessor inactivity and single consumption were verified before work."
+      - "P11-T07 is finalized at the exact handoff-bound completion hash."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local validator passes fourteen of fourteen matrix cases with twelve critical passes and two explicit limitations."
+      - "Five focused P11-T08 tests and seventy existing P11 control tests pass."
+      - "Four live review artifacts strict-validate and two historical artifacts remain readable as legacy_unclassified."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Affected-plan documentation-impact project-improvement claim-language research-control memory and diff validations are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate; no unattended automation is authorized."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier compact-frontier and policy-generated derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+forbidden_conclusion_summary:
+  theorem_truth_from_audit: false
+  scientific_status_from_validation: false
+  external_review_from_internal_ai_review: false
+  independent_replication_from_context_separation: false
+  proof_authority_from_formal_build: false
+  ontology_or_source_law_adopted: false
+  physical_metric_or_interpretation_adopted: false
+  physics_promotion_authorized: false
+  completed_derivation_claimed: false
+  summary: "The audit establishes bounded project-control readiness only and preserves all scientific and protected claim gates."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    result: "Freshness and local retrieval were refreshed from WARN to PASS; core validation remained PASS."
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-011/artifacts/validate_p11_scientific_qa_non_regression.py --write --json"
+    status: "PASS"
+    result: "Fourteen cases, zero failures, two explicit repair limitations."
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-011/artifacts/validate_p11_scientific_qa_non_regression.py --check --json"
+    status: "PASS"
+    result: "All three generated task-local outputs are byte-current."
+  - command: ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py <four P11-T07 review paths> --json"
+    status: "PASS"
+    result: "Four artifacts validate with exact two-plus-two context classification and no physics promotion."
+  - command: ".venv/bin/python -m unittest -v tests.test_p11_scientific_qa_non_regression"
+    status: "PASS"
+    result: "Five tests passed."
+  - command: ".venv/bin/python -m unittest tests.test_v21_blind_review_protocol tests.test_red_team_review_artifact_validator tests.test_semantic_smuggling_adversarial_suite tests.test_positive_provenance_operational_gate tests.test_reviewer_agreement_metrics tests.test_proof_evidence_registration"
+    status: "PASS"
+    result: "Seventy tests passed."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 984
+    relationship_row_count: 4867
+    semantic_row_count: 984
+    vault_row_count: 984
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search blind review positive provenance source authority promotion shortcuts --limit 10 --json"
+      query_type: "search"
+      query_text: "blind review positive provenance source authority promotion shortcuts"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  unused_query_observations:
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      result_note: "The query also returned a generated task index; it was not treated as canonical authority or listed as a canonical return."
+  unused_query_attempts:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search P11-T08 scientific QA non-regression authority boundaries --limit 10 --json"
+      query_text: "P11-T08 scientific QA non-regression authority boundaries"
+      result_note: "The parser treated the hyphenated token as a column expression; no result was returned or used."
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "282b2fa6eb0f17385da6ea5c6952e6c2ea19acc7791506b01476b153afac0142"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  additional_canonical_inspections:
+    - canonical_path: "research_control/program_state.yaml"
+      source_hash: "64d084d780466a7de6c5f496c7764c7d16583ee05857b7569de2444752486708"
+    - canonical_path: "research_control/handoffs/handoff-0820.yaml"
+      source_hash: "44954b2aa20d7d69af3f84b53090ffe426d33b5c545054df04c11805c96dbc79"
+    - canonical_path: "research_control/tasks/RT-20260722-010/jobs/completions/AJC-AJ-RT-20260722-010-001.yaml"
+      source_hash: "09b6fdca28128bd37908cb5e0dbc2c81b0b9af569db0490fed1fb7e32c6b2e46"
+    - canonical_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      source_hash: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory and .local are retrieval layers only and not authority; canonical tracked sources and registry rows govern."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "The two P11 limitations are planned bounded-repair obligations preserved in the normal P11-T08 handoff; no incidental project-improvement sidecar is required."
+next_research_route:
+  selected_next_plan_task: "P12-T01"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  dependency_ready: true
+  executed: false
+  rationale: "P12-T01 has qualifying P10-T01 and P10-T02 completions and is the first dependency-ready P12 governance packet after P11 closure."
+documentation_impact_id: "DI-RT-20260722-011-001"
+documentation_impact_path: "research_control/tasks/RT-20260722-011/documentation_impact.yaml"
+completion_record_path: "research_control/tasks/RT-20260722-011/jobs/completions/AJC-AJ-RT-20260722-011-001.yaml"
+handoff_id: "handoff-0821"
+handoff_path: "research_control/handoffs/handoff-0821.yaml"
