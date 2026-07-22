@@ -1,0 +1,390 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260721-008-001"
+completion_id: "AJC-AJ-RT-20260721-008-001"
+task_id: "RT-20260721-008"
+task_type: "v21_read_compatible_event_store_pilot"
+decision_id: "DDR-20260721-008"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260721-008"
+status: "completed"
+created_at: "2026-07-22T05:04:54Z"
+started_at: "2026-07-22T05:04:54Z"
+completed_at: "2026-07-22T05:20:54Z"
+objective: "Implement and validate only v21 P10-T06 as a pinned task-local non-authoritative event-store shadow pilot over RT-20260721-005 through RT-20260721-007 with deterministic task candidate handoff and status views exact parity and loss receipts and a disposable SQLite index without any reader writer registry or authority cutover."
+completion_summary: "P10-T06 imported a clean pinned project-control slice into 20 full-SHA-256 hash-chained shadow events across task decision AgentJob candidate claim validation and handoff domains; generated four deterministic task-local compatibility views; rebuilt a disposable untracked SQLite query index; and produced exact field-accounting and compact receipts. Thirteen internal checks and 13 focused mutation tests pass with zero mismatches and zero unmapped fields. Three legacy shapes and five migration risks remain explicit. No event-store writer dual write reader switch registry replacement history rewrite science delta candidate disposition P4-T05 action or protected authority occurred."
+objective_result: "completed"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T06"
+  recommendation_ids:
+    - "V21-R46"
+    - "V21-R47"
+    - "V21-R49"
+  implementation_status: "completed"
+  completed_v21_tasks_added:
+    - "P10-T06"
+  next_dependency_ready_work_item: "P10-T08"
+  also_dependency_ready_work_items:
+    - "P10-T07"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 40
+  passes_consumed: 39
+  route_work_item_id: "P10-T06"
+  route_worker_skill: "continue-research"
+
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "v21_p10_t06_read_compatible_event_store_shadow_pilot"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+pilot_result:
+  schema_id: "v21_event_store_pilot_compact_receipt_v1"
+  pilot_id: "PILOT-V21-P10-T06-001"
+  status: "PASS_SHADOW_PILOT_NO_CUTOVER"
+  pinned_source_commit: "0cfe0fe53f31ea2e1d3855d397ba30258dd4f444"
+  selected_task_ids:
+    - "RT-20260721-005"
+    - "RT-20260721-006"
+    - "RT-20260721-007"
+  fixture_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_fixture.json"
+  fixture_sha256: "12e194d32839a3486c176f8e54deb8929672608f1dba0c72b936b2cc363a94d1"
+  renderer_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot.py"
+  renderer_sha256: "afae3572298ea68c370767144e7b2ca28b22eff4314957332ed3d620ba8f3327"
+  event_stream_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_events.jsonl"
+  event_stream_sha256: "ea578d7e6e15e70841248038bcf95deca19ca1c143ecd84b176c036d0d8c7acf"
+  manifest_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_manifest.json"
+  manifest_sha256: "700c79969cb828356fa0261736372c1eec5abefff38807b858456566eab27652"
+  task_view_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_task_view.csv"
+  task_view_sha256: "afed4e6298a795cf2c00eec8899506db7eadeee4824f753bee7656273c11ae7d"
+  candidate_view_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_candidate_view.json"
+  candidate_view_sha256: "31a1fbf1fafaa0f008967a9cebaf3ddbecbd714baf5633f8bea90460de5aece2"
+  handoff_view_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_handoff_view.md"
+  handoff_view_sha256: "d480c978f8500e0a85ee44ab6e67285f61be251c19cc3c01eeed0980050975ff"
+  status_view_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_status_view.md"
+  status_view_sha256: "dd81c4f60e83ae0cb3144afdfb50e918080b9e5f22f581c55a2d7413a7181f50"
+  parity_receipt_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_parity_receipt.json"
+  parity_receipt_sha256: "9db5382ee676bd2ae16bab405fff9093f6ad56ce9be50acb341c78ccf72a6203"
+  compact_receipt_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_compact_receipt.json"
+  compact_receipt_sha256: "72714921225cfbd1354421b58ffd8c5c38a4941d0544a4008e0a8b7d19d6c40a"
+  test_path: "tests/test_event_store_pilot.py"
+  test_sha256: "8082ca006dc7876f4c1ace8f2503e1177e8c2359096db96656c3add52ef29933"
+  source_count: 12
+  event_count: 20
+  event_domain_count: 7
+  event_domain_counts:
+    task: 3
+    decision: 3
+    agent_job: 3
+    candidate: 1
+    claim: 3
+    validation: 4
+    handoff: 3
+  generated_view_count: 4
+  internal_check_count: 13
+  failed_check_count: 0
+  focused_test_count: 13
+  focused_test_failure_count: 0
+  mismatch_count: 0
+  unmapped_field_count: 0
+  unsupported_legacy_shape_count: 3
+  migration_risk_count: 5
+  head_event_hash: "70deeeb5a6a330002657e5fa43196c2c3a2de0ea94d89fe99d6acafac3658713"
+  deterministic_rebuild_passed: true
+  sqlite_rebuild_passed: true
+  sqlite_tracked: false
+  event_store_writer_active: false
+  dual_write_active: false
+  reader_cutover_active: false
+  legacy_registry_authority_changed: false
+  generated_views_are_authority: false
+  generated_sqlite_is_authority: false
+  historical_record_rewrite_count: 0
+  registered_science_authority_changed: false
+  candidate_adoption_authorized: false
+  candidate_rejection_authorized: false
+  p4_t05_executed: false
+  scientific_claims_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  build_model: "gpt-5.6-sol"
+  build_reasoning_effort: "max"
+  build_environment: "local Codex desktop"
+  build_cost_availability: "not_available"
+
+migration_findings:
+  qualifying_feasibility_result: true
+  exact_parity_result: "PASS_WITH_EXPLICIT_OUT_OF_SLICE_AND_LEGACY_SHAPE_ACCOUNTING"
+  legacy_shapes:
+    - "handoff summary and completion hash aliases require a versioned reducer"
+    - "legacy task-registry reverse chronology conflicts with an underspecified task_id sort direction"
+    - "legacy YAML binary-float scalars require declared decimal-string normalization"
+  migration_risks:
+    - "production compatibility order must be specified per consumer"
+    - "handoff alias reducers must retain source-schema provenance"
+    - "semantic Markdown parity must remain bound to machine-readable field receipts"
+    - "concurrent writer correction and protected-authority paths remain untested and unauthorized"
+    - "numeric normalization requires a versioned units and consumer-type contract"
+  cutover_readiness: "not_authorized_and_not_established"
+  next_required_evidence: "Separate explicitly authorized writer concurrency correction authority and migration work remains required before any cutover."
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P10-T06 tests project-control storage and projection feasibility only and adds no scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked:
+    - "EQSRC-IDISC-V1"
+    - "EQSRC-IDISC-V2"
+    - "EQSRC-IDISC-V3"
+    - "EQSRC-CYCLE-BOUNDARY-V1"
+    - "EQSRC-ORIENTATION-TORSOR-V1"
+    - "EQSRC-ROOTED-PARTITION-V1"
+    - "EQSRC-GRADED-ORBIT-ROOT-V1"
+  theorem_ids_created: []
+  identity_note: "The pilot preserves the complete existing candidate-lineage control document as a non-authoritative projection; it creates adopts rejects or scientifically reclassifies no candidate or theorem."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260721-008/00_TASK.yaml"
+  - "research_control/tasks/RT-20260721-008/DDR-20260721-008.md"
+  - "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_fixture.json"
+  - "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot.py"
+  - "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_events.jsonl"
+  - "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_manifest.json"
+  - "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_task_view.csv"
+  - "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_candidate_view.json"
+  - "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_handoff_view.md"
+  - "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_status_view.md"
+  - "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_parity_receipt.json"
+  - "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_compact_receipt.json"
+  - "tests/test_event_store_pilot.py"
+  - "research_control/tasks/RT-20260721-008/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260721-008/jobs/AJ-RT-20260721-008-001.yaml"
+  - "research_control/tasks/RT-20260721-008/jobs/completions/AJC-AJ-RT-20260721-008-001.yaml"
+  - "research_control/tasks/RT-20260721-008/roles/validator-engineer@0.2.0--RT-20260721-008.yaml"
+  - "research_control/handoffs/handoff-0809.yaml"
+  - "research_control/handoffs/handoff-0809.md"
+outputs_updated:
+  - "output/compact_current_frontier_v16.json"
+  - "output/compact_current_frontier_v16.yaml"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prove feasibility and parity before migration."
+  explanation: "P10-T06 adds project-control shadow-pilot and migration-risk evidence only; it supplies no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  rationale: "A read-compatible event-store pilot does not discharge source-equivalence or downstream GR burdens."
+  downstream_unlocked:
+    - "P10-T08 generated current burden status under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  event_store_pilot_authorized: true
+  event_store_pilot_completed: true
+  event_store_cutover_authorized: false
+  event_store_writer_authorized: false
+  dual_write_authorized: false
+  reader_cutover_authorized: false
+  historical_record_rewrite_authorized: false
+  candidate_adoption_authorized: false
+  candidate_rejection_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 40 route identity lease parity max effort repository binding clean start predecessor terminal state and single consumption were verified before work."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Twenty pinned source-linked events four views and the disposable SQLite replay pass 13 deterministic identity chain source parity field-accounting and no-cutover checks."
+      - "Thirteen focused tests cover deterministic rebuild identity chain source drift projection parity SQLite rebuild decimal normalization authority boundaries and drift detection."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The pilot write and check commands focused tests affected validation plan documentation impact project-improvement research-control memory and diff gates are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "The deterministic task-local views current frontier task index compact frontier and memory derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "shadow pilot as event-store cutover or activation"
+    - "task-local JSONL SQLite CSV Markdown JSON or receipt as live project-control or science authority"
+    - "event or validator PASS as scientific proof"
+    - "historical record rewrite inferred missing event or lossless general migration claim"
+    - "candidate adoption rejection or scientific truth inference from project-control events"
+    - "P10-T08 or another successor executed inside P10-T06"
+    - "P4-T05 ontology-regime decision or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof completed derivation or global no-go"
+  event_store_cutover_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot.py --write --json | exit_code=0 | status=PASS events=20 domains=7 views=4 mismatch=0 unmapped=0"
+  - ".venv/bin/python research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot.py --check --json | exit_code=0 | status=PASS drift=0"
+  - ".venv/bin/python -m unittest -v tests.test_event_store_pilot | exit_code=0 | tests=13 failures=0"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260721-008 tests/test_event_store_pilot.py research_control/program_state.yaml research_control/handoffs/handoff-0809.yaml --explain | exit_code=0 | status=READY selected_gates=15"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write and --check plus validate_compact_current_frontier_v16.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json and resolve_project_improvement.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | required before checkpoint"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | required before checkpoint"
+  - "git diff --check | required before checkpoint"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 969
+    relationship_row_count: 4801
+    semantic_row_count: 969
+    vault_row_count: 969
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search event store architecture generated view pilot --limit 10 --json"
+      query_type: "search"
+      query_text: "event store architecture generated view pilot"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION --json"
+      query_type: "lookup"
+      query_text: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-007-V21-EVENT-STORE-ARCHITECTURE-DECISION"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_decision.md"
+      source_hash: "15584ad6a4592a2b3e401a2b081a5e05a4f3d407ab5611e5fa65ffe2b386b67f"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory and .local are retrieval layers only and not authority; canonical tracked sources and registry rows govern."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P10-T06 completed its included project-system pilot without an incidental shared-system defect."
+
+next_research_route:
+  status: "dependency_ready"
+  plan_task_id: "P10-T08"
+  task_name: "Generate current burden status from the ledger and live state"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  route_label: "ordinary-research-packet"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Eliminate stale duplicated status prose."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  dependency_ready: true
+  executed: false
+  selection_reason: "P10-T08 now has qualifying P10-T05 and P10-T06 completion evidence and is the sole successor named by the P10-T06 handoff rule; P10-T07 remains independently dependency-ready but unexecuted."
+
+documentation_impact_id: "DI-RT-20260721-008-001"
+documentation_impact_path: "research_control/tasks/RT-20260721-008/documentation_impact.yaml"
+completion_record_path: "research_control/tasks/RT-20260721-008/jobs/completions/AJC-AJ-RT-20260721-008-001.yaml"
+handoff_id: "handoff-0809"
+handoff_path: "research_control/handoffs/handoff-0809.yaml"

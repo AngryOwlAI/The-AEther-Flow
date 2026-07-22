@@ -1,9 +1,64 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260721-007"
-latest_handoff_id: "handoff-0808"
-current_status: "v21_p10_t05_hybrid_event_store_architecture_complete_no_activation_p10_t06_selected"
-claim_boundary_summary: "RT-20260721-007 completed only P10-T05 design by selecting a future hybrid tracked-JSONL plus generated-SQLite architecture. No event-store pilot ingestion migration reader switch cutover legacy-authority change science-source edit P4-T05 action or protected authority occurred."
-next_recommended_action: "After the P10-T05 governed checkpoint succeeds, run exactly one bounded v21 P10-T06 validator-engineer project-system AgentJob for a non-authoritative read-compatible event-store pilot. Do not cut over authority or execute protected P4-T05."
+active_task_id: "RT-20260721-008"
+latest_handoff_id: "handoff-0809"
+current_status: "v21_p10_t06_shadow_pilot_complete_zero_mismatch_no_cutover_p10_t08_selected"
+claim_boundary_summary: "RT-20260721-008 completed only P10-T06 as a pinned task-local shadow pilot: 20 events seven domains four views zero mismatches and zero unmapped fields. Three legacy shapes and five migration risks remain explicit; live registries readers writers historical sources science sources Distance-to-GR P4-T05 and all protected authority are unchanged."
+next_recommended_action: "After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05."
+
+p10_t06_read_compatible_event_store_pilot:
+  task_id: "RT-20260721-008"
+  plan_task_id: "P10-T06"
+  claim_boundary_id: "CB-V21-P10-T06-EVENT-STORE-PILOT-001"
+  status: "PASS_SHADOW_PILOT_NO_CUTOVER"
+  pinned_source_commit: "0cfe0fe53f31ea2e1d3855d397ba30258dd4f444"
+  selected_task_ids:
+    - "RT-20260721-005"
+    - "RT-20260721-006"
+    - "RT-20260721-007"
+  current_authority: "legacy_tracked_control_sources_and_registries"
+  event_store_pilot_authorized: true
+  event_store_cutover_authorized: false
+  dual_write_active: false
+  reader_cutover_executed: false
+  live_registry_replacement_executed: false
+  historical_backfill_executed: false
+  sqlite_role: "ignored_disposable_task_query_index"
+  fixture_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_fixture.json"
+  fixture_hash: "12e194d32839a3486c176f8e54deb8929672608f1dba0c72b936b2cc363a94d1"
+  renderer_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot.py"
+  renderer_hash: "afae3572298ea68c370767144e7b2ca28b22eff4314957332ed3d620ba8f3327"
+  event_stream_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_events.jsonl"
+  event_stream_hash: "ea578d7e6e15e70841248038bcf95deca19ca1c143ecd84b176c036d0d8c7acf"
+  manifest_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_manifest.json"
+  manifest_hash: "700c79969cb828356fa0261736372c1eec5abefff38807b858456566eab27652"
+  parity_receipt_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_parity_receipt.json"
+  parity_receipt_hash: "9db5382ee676bd2ae16bab405fff9093f6ad56ce9be50acb341c78ccf72a6203"
+  compact_receipt_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_compact_receipt.json"
+  compact_receipt_hash: "72714921225cfbd1354421b58ffd8c5c38a4941d0544a4008e0a8b7d19d6c40a"
+  source_count: 12
+  event_count: 20
+  event_domain_count: 7
+  generated_view_count: 4
+  internal_check_count: 13
+  focused_test_count: 13
+  failed_check_count: 0
+  focused_test_failure_count: 0
+  mismatch_count: 0
+  unmapped_field_count: 0
+  unsupported_legacy_shape_count: 3
+  migration_risk_count: 5
+  deterministic_rebuild_passed: true
+  sqlite_rebuild_passed: true
+  p10_t06_completed: true
+  p10_t08_dependency_ready: true
+  selected_next_work_item: "P10-T08"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_reason: "P10-T08 depends exactly on qualifying P10-T05 and P10-T06 completions and is the direct ledger-to-live-state generated-status successor named by the P10-T06 handoff rule."
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
 
 p10_t05_canonical_event_store_architecture:
   task_id: "RT-20260721-007"
@@ -1778,9 +1833,9 @@ project_improvement_bridge:
   route: "none"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260721-007"
-  latest_research_handoff_id: "handoff-0808"
-  latest_research_next_action: "After the P10-T05 governed checkpoint succeeds, run exactly one bounded v21 P10-T06 validator-engineer project-system AgentJob for a non-authoritative read-compatible event-store pilot. Do not cut over authority or execute protected P4-T05."
+  latest_research_task_id: "RT-20260721-008"
+  latest_research_handoff_id: "handoff-0809"
+  latest_research_next_action: "After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

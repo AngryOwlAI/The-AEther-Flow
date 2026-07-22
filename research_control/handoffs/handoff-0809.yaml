@@ -1,0 +1,245 @@
+validation_status: "PASS"
+handoff_id: "handoff-0809"
+task_id: "RT-20260721-008"
+job_id: "AJ-RT-20260721-008-001"
+completion_id: "AJC-AJ-RT-20260721-008-001"
+completion_path: "research_control/tasks/RT-20260721-008/jobs/completions/AJC-AJ-RT-20260721-008-001.yaml"
+completion_sha256: "cb1460ade8b8525c810c70316595800082ace8de561e01db55e6daa2edba5f03"
+status: "ready_for_director"
+created_at: "2026-07-22T05:20:54Z"
+parent_handoff_id: "handoff-0808"
+plan_task_id: "P10-T06"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260721-008"
+handoff_summary: "P10-T06 completed a pinned task-local non-authoritative event-store shadow pilot over RT-20260721-005 through RT-20260721-007. Twenty source-linked events across seven domains regenerate four deterministic task candidate handoff and status views; 13 internal checks and 13 focused tests pass with zero mismatches and zero unmapped fields. Three legacy shapes and five migration risks remain explicit. No writer dual write reader switch registry replacement historical rewrite science delta candidate disposition P4-T05 action or protected authority occurred. P10-T08 is selected as the now dependency-ready successor."
+next_action: "After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05."
+current_claim_boundary: "CB-V21-P10-T06-EVENT-STORE-PILOT-001"
+loop_risk_route: "v21_p10_t08_generate_current_burden_status"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260721-008"
+  latest_research_handoff_id: "handoff-0809"
+  latest_research_next_action: "After the P10-T06 governed checkpoint succeeds, run exactly one bounded v21 P10-T08 project-system AgentJob to generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff. Do not cut over the event store or execute protected P4-T05."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh P10-T08 project-system packet may separate stable burden definitions from current values and generate bounded current status from authoritative ledger and live state with freshness validation. It may not cut over the event store or change scientific or protected authority."
+  newly_completed_plan_task: "P10-T06"
+  p10_t05_dependency_completion_path: "research_control/tasks/RT-20260721-007/jobs/completions/AJC-AJ-RT-20260721-007-001.yaml"
+  p10_t05_dependency_completion_hash: "2517f883a575fa8e82379f91d59b2cb4ba85f1f8da7d64a2a2373907b8ec3de2"
+  p10_t06_dependency_completion_path: "research_control/tasks/RT-20260721-008/jobs/completions/AJC-AJ-RT-20260721-008-001.yaml"
+  p10_t06_dependency_completion_hash: "cb1460ade8b8525c810c70316595800082ace8de561e01db55e6daa2edba5f03"
+  p10_t05_completed: true
+  p10_t06_completed: true
+  p10_t08_dependency_ready: true
+  p10_t08_selected_next: true
+  p10_t08_executed: false
+  p10_t07_dependency_ready: true
+  p10_t07_executed: false
+  pinned_source_commit: "0cfe0fe53f31ea2e1d3855d397ba30258dd4f444"
+  source_count: 12
+  event_count: 20
+  event_domain_count: 7
+  generated_view_count: 4
+  internal_check_count: 13
+  failed_check_count: 0
+  focused_test_count: 13
+  focused_test_failure_count: 0
+  mismatch_count: 0
+  unmapped_field_count: 0
+  unsupported_legacy_shape_count: 3
+  migration_risk_count: 5
+  deterministic_rebuild_passed: true
+  sqlite_rebuild_passed: true
+  canonical_event_store_active: false
+  event_store_pilot_executed: true
+  migration_executed: false
+  event_store_writer_active: false
+  dual_write_active: false
+  reader_cutover_executed: false
+  legacy_registry_authority_changed: false
+  generated_views_are_authority: false
+  generated_sqlite_is_authority: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  ontology_regime_selected: false
+  ontology_regime_adopted: false
+  scientific_ledger_change_count: 0
+  physics_promotion_authorized: false
+  proof_authority: false
+  blocked_claims:
+    - "P10-T06 shadow pilot treated as event-store cutover or live activation"
+    - "task-local JSONL SQLite CSV Markdown JSON or receipt treated as live project-control or science authority"
+    - "event or validator PASS treated as scientific proof"
+    - "zero mismatch in the bounded slice treated as general migration readiness"
+    - "historical control or science source rewritten inferred or reinterpreted"
+    - "candidate adoption rejection promotion or scientific truth inferred from project-control events"
+    - "P4-T05 ontology-regime decision or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"
+
+pilot_result:
+  schema_id: "v21_event_store_pilot_compact_receipt_v1"
+  pilot_id: "PILOT-V21-P10-T06-001"
+  status: "PASS_SHADOW_PILOT_NO_CUTOVER"
+  fixture_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_fixture.json"
+  fixture_sha256: "12e194d32839a3486c176f8e54deb8929672608f1dba0c72b936b2cc363a94d1"
+  renderer_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot.py"
+  renderer_sha256: "afae3572298ea68c370767144e7b2ca28b22eff4314957332ed3d620ba8f3327"
+  event_stream_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_events.jsonl"
+  event_stream_sha256: "ea578d7e6e15e70841248038bcf95deca19ca1c143ecd84b176c036d0d8c7acf"
+  manifest_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_manifest.json"
+  manifest_sha256: "700c79969cb828356fa0261736372c1eec5abefff38807b858456566eab27652"
+  parity_receipt_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_parity_receipt.json"
+  parity_receipt_sha256: "9db5382ee676bd2ae16bab405fff9093f6ad56ce9be50acb341c78ccf72a6203"
+  compact_receipt_path: "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_compact_receipt.json"
+  compact_receipt_sha256: "72714921225cfbd1354421b58ffd8c5c38a4941d0544a4008e0a8b7d19d6c40a"
+  head_event_hash: "70deeeb5a6a330002657e5fa43196c2c3a2de0ea94d89fe99d6acafac3658713"
+  source_count: 12
+  event_count: 20
+  domain_count: 7
+  view_count: 4
+  internal_check_count: 13
+  focused_test_count: 13
+  mismatch_count: 0
+  unmapped_field_count: 0
+  unsupported_legacy_shape_count: 3
+  migration_risk_count: 5
+  authority_boundary: "Task-local project-control feasibility and risk evidence only; current tracked control sources registered TeX and Gate Chair artifacts retain their authority."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prove feasibility and parity before migration."
+  explanation: "P10-T06 added project-control shadow-pilot and migration-risk evidence only; it supplied no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_project_control_shadow_pilot_only"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No scientific object source law ontology regime metric matter semantics coupling Einstein dynamics or benchmark status changed."
+  downstream_unlocked:
+    - "P10-T08 generated current burden status under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+required_next_packet:
+  task_type: "v21_generate_current_burden_status"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "integration_or_selection"
+    milestone: "source_equivalence_eqsrc"
+    candidate_family: "not_applicable"
+    result_kind: "implemented_and_validated_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+selected_next_route:
+  route_id: "v21_p10_t08_generate_current_burden_status"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P10-T08"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Eliminate stale duplicated status prose."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  executed: false
+  next_action: "Generate current burden status from the authoritative Distance-to-GR ledger program state and latest handoff under a fresh bounded AgentJob; preserve stable burden definitions and every scientific and protected authority."
+  source_handoff: "research_control/handoffs/handoff-0809.yaml"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 40 was validated claimed consumed once and executed under its immutable continue-research route."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Pinned source hashes event identity hash chain deterministic views exact field accounting SQLite queries and no-cutover boundaries pass 13 internal checks and 13 focused tests."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused tests documentation impact project-improvement parity research-control memory and diff gates are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-local views task-index current-frontier compact-frontier and memory derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and read-only validation are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+authorization_layers:
+  event_store_pilot_authorized: true
+  event_store_pilot_completed: true
+  event_store_cutover_authorized: false
+  event_store_writer_authorized: false
+  dual_write_authorized: false
+  reader_cutover_authorized: false
+  candidate_adoption_authorized: false
+  candidate_rejection_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P10-T06 completed its included project-system work without an incidental shared-system defect."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one bounded P10-T08 project-system generated-current-burden-status packet after the P10-T06 governed checkpoint succeeds."
+  this_handoff_does_not_authorize:
+    - "P10-T08 execution inside the completed P10-T06 AgentJob"
+    - "event-store writer dual-write reader registry or authority cutover"
+    - "historical source mutation reinterpretation or inferred events"
+    - "generated view SQLite event record or validator PASS as scientific authority"
+    - "candidate adoption rejection promotion or scientific truth inference from project-control events"
+    - "P4-T05 ontology-regime selection or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"
