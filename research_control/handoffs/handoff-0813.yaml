@@ -1,0 +1,207 @@
+validation_status: "PASS"
+handoff_id: "handoff-0813"
+task_id: "RT-20260722-003"
+job_id: "AJ-RT-20260722-003-001"
+completion_id: "AJC-AJ-RT-20260722-003-001"
+completion_path: "research_control/tasks/RT-20260722-003/jobs/completions/AJC-AJ-RT-20260722-003-001.yaml"
+completion_sha256: "d381a8fd8f8867cbd5789c46c38f0967d69c0fd83a67e6592bf2d21c37b40715"
+status: "ready_for_director"
+created_at: "2026-07-22T08:40:11Z"
+parent_handoff_id: "handoff-0812"
+plan_task_id: "P10-T09"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260722-003"
+handoff_summary: "P10-T09 completed a non-promotional migration-readiness audit. Six components remain stable and every bounded historical sample resolves. Broader rollout is frozen on exact P10-T04 sealed-receipt HEAD drift and P10-T08 unmanaged live-view drift; no predecessor bytes authority or science changed. P11-T01 is dependency-ready and independent of migration success."
+next_action: "Run exactly one bounded P11-T01 project-control-maintainer project-system AgentJob to define a reproducible blind-review and context-separation protocol that strips task verdict, route history, validator status, and internal confidence while preserving assumptions and source hashes. Do not claim reviewer independence, repair the frozen P10 blockers, cut over authority, or execute protected P4-T05."
+current_claim_boundary: "CB-V21-P10-T09-MIGRATION-READINESS-AUDIT-001"
+loop_risk_route: "v21_p11_t01_blind_review_context_separation_protocol"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260722-003"
+  latest_research_handoff_id: "handoff-0813"
+  latest_research_next_action: "Run exactly one bounded P11-T01 project-control-maintainer project-system AgentJob to define a reproducible blind-review and context-separation protocol that strips task verdict, route history, validator status, and internal confidence while preserving assumptions and source hashes. Do not claim reviewer independence, repair the frozen P10 blockers, cut over authority, or execute protected P4-T05."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh P11-T01 project-system packet may define and validate blind-review packet separation without claiming reviewer independence or executing either frozen P10 repair."
+  newly_completed_plan_task: "P10-T09"
+  p10_t09_completion_path: "research_control/tasks/RT-20260722-003/jobs/completions/AJC-AJ-RT-20260722-003-001.yaml"
+  p10_t09_completed: true
+  p10_audit_passed: true
+  broader_p10_rollout_frozen: true
+  blocker_ids:
+    - "P10-AUDIT-F001"
+    - "P10-AUDIT-F002"
+  component_pass_count: 6
+  component_blocker_count: 2
+  historical_sample_status: "PASS"
+  unresolved_historical_sample_count: 0
+  predecessor_artifacts_mutated: false
+  historical_records_rewritten: false
+  event_store_cutover_authorized: false
+  legacy_registry_authority_changed: false
+  p11_t01_dependency_ready: true
+  p11_t01_selected_next: true
+  p11_t01_executed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  scientific_ledger_change_count: 0
+  physics_promotion_authorized: false
+  proof_authority: false
+  blocked_claims:
+    - "audit PASS treated as broader data-model rollout or cutover authority"
+    - "lifecycle defect treated as physics refutation"
+    - "historical readability treated as independent review or proof"
+    - "generated view or validator PASS treated as scientific authority"
+    - "P10 repair P11-T01 or P4-T05 executed inside P10-T09"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"
+
+migration_readiness_result:
+  schema_id: "v21_p10_migration_readiness_validation_v1"
+  status: "PASS_AUDIT_FREEZE_BROADER_ROLLOUT"
+  rollout_disposition: "FREEZE_BROADER_ROLLOUT_REPAIR_REQUIRED"
+  audit_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_integration_audit.md"
+  audit_sha256: "721351dfa0d3268d26bfbaee4409f84b487b755c9c5c185fd9c41130db3856ff"
+  historical_readability_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_historical_readability_report.md"
+  historical_readability_sha256: "cf6072baba6960892a1fa763c83fd664ee1688f292f627b24ab7f7ccdfc0ad7e"
+  rollback_cutover_recommendation_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_rollback_cutover_recommendation.md"
+  rollback_cutover_recommendation_sha256: "6d1061cf5646d470f87e5d5bd140934efca858c5435b40680eb4a39f2e58a3ba"
+  validation_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_validation.json"
+  validation_sha256: "cdcd907f4ad237118eab65f06f364263da08285456514605a0308bc203f7a6e6"
+  compact_receipt_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_compact_receipt.json"
+  compact_receipt_sha256: "db3410f2c166562a4cc8636011eeda15b7cb8f051c3917fea21b370e4da2ddb6"
+  authority_boundary: "Project-system audit and freeze disposition only; tracked legacy control sources registered science and protected human gates retain authority."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Determine whether the data-model modernization is safe for broader rollout."
+  explanation: "P10-T09 adds audit evidence and a project-system freeze only and supplies no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_project_system_audit_only"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No scientific object source law ontology regime metric matter semantics coupling Einstein dynamics or benchmark status changed."
+  downstream_unlocked:
+    - "P11-T01 blind-review and context-separation protocol under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "broader P10 data-model rollout until P10-AUDIT-F001 and P10-AUDIT-F002 are repaired"
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+required_next_packet:
+  task_type: "v21_blind_review_context_separation_protocol"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "audit_or_review"
+    milestone: "source_equivalence_eqsrc"
+    candidate_family: "not_applicable"
+    result_kind: "implemented_and_validated_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+selected_next_route:
+  route_id: "v21_p11_t01_blind_review_context_separation_protocol"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P11-T01"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Reduce correlated confirmation and workflow-authority bias."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  dependency_independent_of_p10_rollout: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  executed: false
+  next_action: "Define included scientific material and forbidden process metadata then generate reproducible blind packets that preserve assumptions and source hashes without claiming reviewer independence."
+  source_handoff: "research_control/handoffs/handoff-0813.yaml"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 44 was validated claimed consumed once and executed under its immutable continue-research route."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The audit passes twelve checks eight focused tests and sixty-six P10 component tests while preserving two exact lifecycle blockers."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused tests documentation impact project-improvement claim-language research-control memory and diff gates are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier compact-frontier and memory derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and read-only validation are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+authorization_layers:
+  event_store_cutover_authorized: false
+  predecessor_repair_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "The two blockers are the direct planned P10-T09 audit disposition and remain frozen for later bounded repair; no incidental sidecar route supersedes this research handoff."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one bounded P11-T01 blind-review and context-separation protocol after the P10-T09 governed checkpoint succeeds."
+  this_handoff_does_not_authorize:
+    - "P10-AUDIT-F001 or P10-AUDIT-F002 repair"
+    - "event-store dual write reader switch registry replacement backfill or cutover"
+    - "historical path or control-record rewrite"
+    - "generated view validator or audit PASS as scientific or protected authority"
+    - "reviewer independence claim before P11-T02 classification evidence"
+    - "P4-T05 ontology-regime selection or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"

@@ -1,0 +1,376 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260722-003-001"
+completion_id: "AJC-AJ-RT-20260722-003-001"
+task_id: "RT-20260722-003"
+task_type: "v21_data_model_migration_readiness_audit"
+decision_id: "DDR-20260722-003"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260722-003"
+status: "completed"
+created_at: "2026-07-22T08:30:30Z"
+started_at: "2026-07-22T08:30:30Z"
+completed_at: "2026-07-22T08:40:11Z"
+objective: "Execute only v21 P10-T09 by auditing normalized schemas lineage attempt history the event-store pilot path policy and generated burden status for lossless readability integrity authority safety and broader-rollout readiness without implementing repairs or cutover."
+completion_summary: "P10-T09 completed a non-promotional integration audit. Six P10 components remain stable and all bounded historical samples resolve. Broader rollout is frozen on two exact lifecycle defects: the P10-T04 sealed receipt changes after its ledger enters HEAD and the P10-T08 live burden view lacks recurring governed regeneration ownership. No predecessor artifact authority or science changed."
+objective_result: "completed_audit_freeze_broader_rollout"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T09"
+  recommendation_ids:
+    - "V21-R31"
+    - "V21-R32"
+    - "V21-R33"
+    - "V21-R40"
+    - "V21-R41"
+    - "V21-R42"
+    - "V21-R46"
+    - "V21-R47"
+    - "V21-R48"
+    - "V21-R49"
+    - "V21-R50"
+  implementation_status: "completed_with_broader_rollout_frozen"
+  completed_v21_tasks_added:
+    - "P10-T09"
+  next_dependency_ready_work_item: "P11-T01"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 44
+  passes_consumed: 43
+  route_work_item_id: "P10-T09"
+  route_worker_skill: "continue-research"
+  route_sha256: "65e2e7739671bb37b03280c2703252f7437ed34bcf242cc89e98e778647a74a6"
+
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "audit_completed_freeze_broader_rollout"
+work_item_status: "completed"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "v21_p10_t09_migration_readiness_audit"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+migration_readiness_result:
+  schema_id: "v21_p10_migration_readiness_validation_v1"
+  status: "PASS_AUDIT_FREEZE_BROADER_ROLLOUT"
+  rollout_disposition: "FREEZE_BROADER_ROLLOUT_REPAIR_REQUIRED"
+  audit_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_integration_audit.md"
+  audit_sha256: "721351dfa0d3268d26bfbaee4409f84b487b755c9c5c185fd9c41130db3856ff"
+  historical_readability_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_historical_readability_report.md"
+  historical_readability_sha256: "cf6072baba6960892a1fa763c83fd664ee1688f292f627b24ab7f7ccdfc0ad7e"
+  rollback_cutover_recommendation_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_rollback_cutover_recommendation.md"
+  rollback_cutover_recommendation_sha256: "6d1061cf5646d470f87e5d5bd140934efca858c5435b40680eb4a39f2e58a3ba"
+  validator_path: "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  validator_sha256: "5e8d1684abfd28c6f62a3e83f7ab2b98aa0b27db0d18d150e5a84f165ede0c6f"
+  validation_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_validation.json"
+  validation_sha256: "cdcd907f4ad237118eab65f06f364263da08285456514605a0308bc203f7a6e6"
+  compact_receipt_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_compact_receipt.json"
+  compact_receipt_sha256: "db3410f2c166562a4cc8636011eeda15b7cb8f051c3917fea21b370e4da2ddb6"
+  test_path: "tests/test_v21_p10_migration_readiness.py"
+  test_sha256: "74da755344ff0734c6ca30a8eeac689eeda124502708d6798276ffa8cf8a7f4a"
+  component_pass_count: 6
+  component_blocker_count: 2
+  audit_check_count: 12
+  audit_failed_check_count: 0
+  focused_test_count: 8
+  focused_test_failure_count: 0
+  p10_component_test_count: 66
+  p10_component_test_failure_count: 0
+  historical_sample_status: "PASS"
+  unresolved_historical_sample_count: 0
+  event_store_cutover_authorized: false
+  predecessor_artifacts_mutated: false
+  historical_records_rewritten: false
+  legacy_registry_authority_changed: false
+
+blocking_findings:
+  - finding_id: "P10-AUDIT-F001"
+    component: "P10-T04"
+    status: "BLOCKER_POST_CHECKPOINT_RECEIPT_DRIFT"
+    evidence: "The eight-event chain validates while the sealed validation receipt changes from HEAD-prefix count 0 before checkpoint to 8 after the ledger enters HEAD."
+    repair_obligation: "Separate immutable sealed-receipt rendering from live HEAD-prefix checking and preserve live prefix evidence outside the sealed artifact."
+    rollout_effect: "FREEZE"
+  - finding_id: "P10-AUDIT-F002"
+    component: "P10-T08"
+    status: "BLOCKER_UNMANAGED_LIVE_VIEW_DRIFT"
+    evidence: "The ten definitions and fourteen burdens remain structurally valid while program state and task-registry hashes advance without a recurring governed regeneration owner."
+    repair_obligation: "Move live burden status to a centrally regenerated surface or add an explicit governed sync owner while preserving the closed migration receipt."
+    rollout_effect: "FREEZE"
+
+historical_readability:
+  status: "PASS"
+  historical_task_classification_count: 1040
+  candidate_count: 7
+  candidate_family_count: 5
+  candidate_lineage_edge_count: 6
+  attempt_event_count: 8
+  event_store_source_count: 12
+  event_store_event_count: 20
+  event_store_view_count: 4
+  event_store_mismatch_count: 0
+  event_store_unmapped_field_count: 0
+  unsupported_legacy_shape_count: 3
+  documented_migration_risk_count: 5
+  content_reference_count: 3
+  burden_definition_count: 10
+  burden_count: 14
+  unresolved_sample_count: 0
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P10-T09 audits project-control artifacts and adds no scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  identity_note: "The audit reads existing identities and creates no scientific candidate or theorem."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260722-003/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-003/DDR-20260722-003.md"
+  - "research_control/tasks/RT-20260722-003/artifacts/v21_p10_integration_audit.md"
+  - "research_control/tasks/RT-20260722-003/artifacts/v21_p10_historical_readability_report.md"
+  - "research_control/tasks/RT-20260722-003/artifacts/v21_p10_rollback_cutover_recommendation.md"
+  - "research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py"
+  - "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_validation.json"
+  - "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_compact_receipt.json"
+  - "tests/test_v21_p10_migration_readiness.py"
+  - "research_control/tasks/RT-20260722-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260722-003/jobs/AJ-RT-20260722-003-001.yaml"
+  - "research_control/tasks/RT-20260722-003/jobs/completions/AJC-AJ-RT-20260722-003-001.yaml"
+  - "research_control/tasks/RT-20260722-003/roles/process-integrity-auditor@0.1.0--RT-20260722-003.yaml"
+  - "research_control/handoffs/handoff-0813.yaml"
+  - "research_control/handoffs/handoff-0813.md"
+outputs_updated:
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/compact_current_frontier_v16.json"
+  - "output/compact_current_frontier_v16.yaml"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Determine whether the data-model modernization is safe for broader rollout."
+  explanation: "P10-T09 supplies project-system audit evidence only and adds no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  rationale: "Migration readiness and freshness lifecycle defects do not discharge or worsen a physics burden."
+  downstream_unlocked:
+    - "P11-T01 blind-review and context-separation protocol under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "broader P10 data-model rollout until P10-AUDIT-F001 and P10-AUDIT-F002 are repaired"
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  event_store_cutover_authorized: false
+  historical_record_rewrite_authorized: false
+  predecessor_repair_authorized: false
+  candidate_adoption_authorized: false
+  candidate_rejection_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 44 route identity lease parity max effort repository binding clean start predecessor inactivity and single consumption were verified before work."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The deterministic audit reports six stable components two exact lifecycle blockers twelve audit checks and zero failed audit checks."
+      - "Eight focused audit tests and sixty-six P10 component tests pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local check affected-plan documentation-impact project-improvement claim-language research-control and diff validations are required to pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate and no rollout occurs before either repair."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier compact-frontier and policy-generated derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "audit PASS treated as broader data-model cutover authority"
+    - "lifecycle defect treated as physics refutation"
+    - "historical readability treated as independent review or proof"
+    - "generated view or validator treated as scientific authority"
+    - "P10 repair P11-T01 or P4-T05 executed inside P10-T09"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof completed derivation or global no-go"
+  predecessor_artifacts_mutated: false
+  historical_records_rewritten: false
+  event_store_cutover_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py --write --json | exit_code=0 | audit=PASS disposition=FREEZE_BROADER_ROLLOUT_REPAIR_REQUIRED blockers=2 failures=0"
+  - ".venv/bin/python research_control/tasks/RT-20260722-003/artifacts/validate_v21_p10_migration_readiness.py --check --json | exit_code=0 | status=PASS drift=0"
+  - ".venv/bin/python -m unittest -v tests.test_v21_p10_migration_readiness | exit_code=0 | tests=8 failures=0"
+  - ".venv/bin/python -m unittest tests.test_task_taxonomy tests.test_candidate_lineage tests.test_attempt_history tests.test_event_store_architecture tests.test_event_store_pilot tests.test_current_burden_status tests.test_artifact_identity_policy | exit_code=0 | tests=66 failures=0"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260722-003 tests/test_v21_p10_migration_readiness.py research_control/program_state.yaml research_control/handoffs/handoff-0813.yaml --explain | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write and --check plus validate_compact_current_frontier_v16.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json and resolve_project_improvement.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | required before checkpoint"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | required before checkpoint"
+  - "git diff --check | required before checkpoint"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 971
+    relationship_row_count: 4810
+    semantic_row_count: 971
+    vault_row_count: 971
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search normalized schemas lineage attempt history event store pilot path policy burden status --limit 10 --json"
+      query_type: "search"
+      query_text: "normalized schemas lineage attempt history event store pilot path policy burden status"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "e4ce601a5ef227f6337b69f0661596d990b25d634e26221d70b4ac0cb3adcb0f"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "f48ea72afe3a3463d8837da3502e9de8ecda7042328bf9cdb0e3f1958c2ffa4d"
+  additional_canonical_inspections:
+    - canonical_path: "research_control/program_state.yaml"
+      source_hash: "41e3a0b0550671cbef2774968ff913668ff8617e04144e4b9f9c17728fe8b2a8"
+    - canonical_path: "research_control/handoffs/handoff-0812.yaml"
+      source_hash: "4830aac840691aa9c2aa384794eaa819001b06796e64161e6b2c51b3d8870456"
+    - canonical_path: "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml"
+      source_hash: "71595f97c4b3c8ed06d5e735a0f23269d210e40909b09301818af011e551b2a4"
+    - canonical_path: "research_control/tasks/RT-20260721-009/jobs/completions/AJC-AJ-RT-20260721-009-001.yaml"
+      source_hash: "ef29dde08062224f03ca7be10cf140db4ffcaf614b46adb3182f4f58da0d61d7"
+    - canonical_path: "research_control/tasks/RT-20260722-001/jobs/completions/AJC-AJ-RT-20260722-001-001.yaml"
+      source_hash: "e1743f1c5ddf2d4a401c90effda5493e34fc52021de76b3507ec8da884941e5f"
+    - canonical_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      source_hash: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory and .local are retrieval layers only and not authority; canonical tracked sources and registry rows govern."
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "The two blockers are the direct planned P10-T09 audit disposition and are preserved as explicit freeze conditions; this AgentJob does not execute their repair."
+
+next_research_route:
+  status: "dependency_ready"
+  plan_task_id: "P11-T01"
+  task_name: "Define the blind-review and context-separation protocol"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  route_label: "ordinary-research-packet"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Reduce correlated confirmation and workflow-authority bias."
+  requires_human_gate: false
+  project_system_boundary_authorized_by_plan: true
+  dependency_independent_of_p10_rollout: true
+  executed: false
+  selection_reason: "P11-T01 has qualifying P0-T05 and P10-T01 dependencies and remains independent of the frozen broader P10 rollout."
+
+documentation_impact_id: "DI-RT-20260722-003-001"
+documentation_impact_path: "research_control/tasks/RT-20260722-003/documentation_impact.yaml"
+completion_record_path: "research_control/tasks/RT-20260722-003/jobs/completions/AJC-AJ-RT-20260722-003-001.yaml"
+handoff_id: "handoff-0813"
+handoff_path: "research_control/handoffs/handoff-0813.yaml"

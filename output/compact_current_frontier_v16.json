@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0812.yaml",
+    "research_control/handoffs/handoff-0813.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260722-002",
-    "latest_handoff_id": "handoff-0812",
-    "current_status": "p10_t07_artifact_identity_path_policy_pass_p10_t09_selected",
+    "active_task_id": "RT-20260722-003",
+    "latest_handoff_id": "handoff-0813",
+    "current_status": "p10_t09_migration_readiness_audit_complete_broader_rollout_frozen_p11_t01_selected",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260722-002",
-    "latest_research_handoff_id": "handoff-0812",
-    "latest_research_next_action": "After the P10-T07 governed checkpoint succeeds, run exactly one bounded P10-T09 process-integrity-auditor project-system AgentJob to audit normalized schemas, lineage, attempt history, the event-store pilot, path policy, and generated burden status. Do not cut over authority or execute protected P4-T05.",
+    "latest_research_task_id": "RT-20260722-003",
+    "latest_research_handoff_id": "handoff-0813",
+    "latest_research_next_action": "Run exactly one bounded P11-T01 project-control-maintainer project-system AgentJob to define a reproducible blind-review and context-separation protocol that strips task verdict, route history, validator status, and internal confidence while preserving assumptions and source hashes. Do not claim reviewer independence, repair the frozen P10 blockers, cut over authority, or execute protected P4-T05.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p10_t09_data_model_migration_readiness_audit",
-    "role_family": "process-integrity-auditor@0.1.0",
+    "route_id": "v21_p11_t01_blind_review_context_separation_protocol",
+    "role_family": "project-control-maintainer@0.2.0",
     "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Determine whether the data-model modernization is safe for broader rollout.",
+    "milestone_burden": "Reduce correlated confirmation and workflow-authority bias.",
     "requires_human_gate": false
   },
   "claim_boundary": {

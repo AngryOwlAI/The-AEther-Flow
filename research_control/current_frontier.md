@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260722-002` and `handoff-0812`.
+`RT-20260722-003` and `handoff-0813`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260722-002` |
-| Latest handoff ID | `handoff-0812` |
-| Current status | `p10_t07_artifact_identity_path_policy_pass_p10_t09_selected` |
+| Active task ID | `RT-20260722-003` |
+| Latest handoff ID | `handoff-0813` |
+| Current status | `p10_t09_migration_readiness_audit_complete_broader_rollout_frozen_p11_t01_selected` |
 | V16 completed | false |
-| Current route family | construction or implementation (project system) |
+| Current route family | audit or review (project system) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v21 data model migration readiness audit |
-| Required next authority | One fresh P10-T09 project-system packet may perform a non-promotional integration audit of the completed P10 data-model artifacts and report rollout readiness or exact blockers without cutover or historical rewrite. |
-| Next recommended action | After the P10-T07 governed checkpoint succeeds, run exactly one bounded P10-T09 process-integrity-auditor project-system AgentJob to audit normalized schemas, lineage, attempt history, the event-store pilot, path policy, and generated burden status. Do not cut over authority or execute protected P4-T05. |
+| Current burden | none for physics derivation; live control burden is v21 blind review context separation protocol |
+| Required next authority | One fresh P11-T01 project-system packet may define and validate blind-review packet separation without claiming reviewer independence or executing either frozen P10 repair. |
+| Next recommended action | Run exactly one bounded P11-T01 project-control-maintainer project-system AgentJob to define a reproducible blind-review and context-separation protocol that strips task verdict, route history, validator status, and internal confidence while preserving assumptions and source hashes. Do not claim reviewer independence, repair the frozen P10 blockers, cut over authority, or execute protected P4-T05. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260722-002` |
-| Latest research handoff ID | `handoff-0812` |
-| Latest research next action | After the P10-T07 governed checkpoint succeeds, run exactly one bounded P10-T09 process-integrity-auditor project-system AgentJob to audit normalized schemas, lineage, attempt history, the event-store pilot, path policy, and generated burden status. Do not cut over authority or execute protected P4-T05. |
+| Latest research task ID | `RT-20260722-003` |
+| Latest research handoff ID | `handoff-0813` |
+| Latest research next action | Run exactly one bounded P11-T01 project-control-maintainer project-system AgentJob to define a reproducible blind-review and context-separation protocol that strips task verdict, route history, validator status, and internal confidence while preserving assumptions and source hashes. Do not claim reviewer independence, repair the frozen P10 blockers, cut over authority, or execute protected P4-T05. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260722-002/00_TASK.yaml`.
-- Active task objective: Design and implement short stable artifact paths metadata titles a path-portability linter content-addressed references and non-destructive migration guidance for new artifacts while preserving every historical path and authority boundary.
-- Latest handoff path: `research_control/handoffs/handoff-0812.yaml`.
+- Active task path: `research_control/tasks/RT-20260722-003/00_TASK.yaml`.
+- Active task objective: Audit the completed P10 normalized schemas candidate lineage attempt history event-store pilot prospective path policy and generated burden status for referential integrity historical readability append-only behavior authority safety and broader-rollout readiness without cutover or historical rewrite.
+- Latest handoff path: `research_control/handoffs/handoff-0813.yaml`.
 - Latest handoff summary: not recorded.
-- Current route family: construction or implementation (project system).
-- Next recommended action: After the P10-T07 governed checkpoint succeeds, run exactly one bounded P10-T09 process-integrity-auditor project-system AgentJob to audit normalized schemas, lineage, attempt history, the event-store pilot, path policy, and generated burden status. Do not cut over authority or execute protected P4-T05.
+- Current route family: audit or review (project system).
+- Next recommended action: Run exactly one bounded P11-T01 project-control-maintainer project-system AgentJob to define a reproducible blind-review and context-separation protocol that strips task verdict, route history, validator status, and internal confidence while preserving assumptions and source hashes. Do not claim reviewer independence, repair the frozen P10 blockers, cut over authority, or execute protected P4-T05.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-After the P10-T07 governed checkpoint succeeds, run exactly one bounded P10-T09 process-integrity-auditor project-system AgentJob to audit normalized schemas, lineage, attempt history, the event-store pilot, path policy, and generated burden status. Do not cut over authority or execute protected P4-T05.
+Run exactly one bounded P11-T01 project-control-maintainer project-system AgentJob to define a reproducible blind-review and context-separation protocol that strips task verdict, route history, validator status, and internal confidence while preserving assumptions and source hashes. Do not claim reviewer independence, repair the frozen P10 blockers, cut over authority, or execute protected P4-T05.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -327,11 +327,11 @@ Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 43 was validated, claimed, consumed once, and executed under its immutable continue-research route. |
-| `completion_internal` | PASS | receipt complete | The prospective policy and task-local reference pilot pass 13 internal checks and 12 focused tests with zero historical path changes. |
-| `post_write` | PASS | receipt complete | Focused tests, documentation impact, project-improvement, claim-language, research-control, memory, and diff gates are required before checkpoint. |
+| `pre_execution` | PASS | receipt complete | Generation 44 was validated claimed consumed once and executed under its immutable continue-research route. |
+| `completion_internal` | PASS | receipt complete | The audit passes twelve checks eight focused tests and sixty-six P10 component tests while preserving two exact lifecycle blockers. |
+| `post_write` | PASS | receipt complete | Focused tests documentation impact project-improvement claim-language research-control memory and diff gates are required before checkpoint. |
 | `post_checkpoint` | PENDING | open item; evidence must explain why | The governed checkpoint remains the final transaction gate. |
-| `renderer` | PASS | receipt complete | Task-index, current-frontier, compact-frontier, and memory derivatives are required fresh before checkpoint. |
+| `renderer` | PASS | receipt complete | Task-index current-frontier compact-frontier and memory derivatives are required fresh before checkpoint. |
 | `memory_bootstrap` | PASS | receipt complete | Tracked memory bootstrap and read-only validation are required before checkpoint. |
 | `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation is required to report no hard failure before checkpoint. |
 
@@ -348,14 +348,16 @@ Authorization layers:
 | `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
 | `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
+| `event_store_cutover_authorized` | False | extension authorization field |
+| `predecessor_repair_authorized` | False | extension authorization field |
 | `proof_authority` | False | extension authorization field |
 | `publication_authority` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260722-002`;
-- latest handoff: `handoff-0812`;
-- current status: `p10_t07_artifact_identity_path_policy_pass_p10_t09_selected`;
+- active task: `RT-20260722-003`;
+- latest handoff: `handoff-0813`;
+- current status: `p10_t09_migration_readiness_audit_complete_broader_rollout_frozen_p11_t01_selected`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -365,8 +367,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0812.yaml`
-- `research_control/tasks/RT-20260722-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-0813.yaml`
+- `research_control/tasks/RT-20260722-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -382,7 +384,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0812*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0813*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

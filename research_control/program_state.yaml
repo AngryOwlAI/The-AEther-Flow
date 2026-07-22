@@ -1,9 +1,63 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260722-002"
-latest_handoff_id: "handoff-0812"
-current_status: "p10_t07_artifact_identity_path_policy_pass_p10_t09_selected"
-claim_boundary_summary: "RT-20260722-002 completed only a prospective portable-path policy, full-SHA-256 reference pilot, and non-destructive migration guidance; every historical path and authority surface remains unchanged, and P10-T09 is selected but unexecuted until checkpoint."
-next_recommended_action: "After the P10-T07 governed checkpoint succeeds, run exactly one bounded P10-T09 process-integrity-auditor project-system AgentJob to audit normalized schemas, lineage, attempt history, the event-store pilot, path policy, and generated burden status. Do not cut over authority or execute protected P4-T05."
+active_task_id: "RT-20260722-003"
+latest_handoff_id: "handoff-0813"
+current_status: "p10_t09_migration_readiness_audit_complete_broader_rollout_frozen_p11_t01_selected"
+claim_boundary_summary: "RT-20260722-003 completed the P10 migration-readiness audit under a read-only predecessor boundary; six components remain stable, two lifecycle blockers freeze broader rollout, and no repair, cutover, historical rewrite, scientific change, or protected authority occurred."
+next_recommended_action: "Run exactly one bounded P11-T01 project-control-maintainer project-system AgentJob to define a reproducible blind-review and context-separation protocol that strips task verdict, route history, validator status, and internal confidence while preserving assumptions and source hashes. Do not claim reviewer independence, repair the frozen P10 blockers, cut over authority, or execute protected P4-T05."
+
+p10_t09_migration_readiness_audit:
+  task_id: "RT-20260722-003"
+  parent_task_id: "RT-20260722-002"
+  parent_handoff_id: "handoff-0812"
+  plan_task_id: "P10-T09"
+  claim_boundary_id: "CB-V21-P10-T09-MIGRATION-READINESS-AUDIT-001"
+  status: "PASS_AUDIT_FREEZE_BROADER_ROLLOUT"
+  completion_path: "research_control/tasks/RT-20260722-003/jobs/completions/AJC-AJ-RT-20260722-003-001.yaml"
+  handoff_id: "handoff-0813"
+  audit_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_integration_audit.md"
+  audit_sha256: "721351dfa0d3268d26bfbaee4409f84b487b755c9c5c185fd9c41130db3856ff"
+  historical_readability_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_historical_readability_report.md"
+  historical_readability_sha256: "cf6072baba6960892a1fa763c83fd664ee1688f292f627b24ab7f7ccdfc0ad7e"
+  rollback_cutover_recommendation_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_rollback_cutover_recommendation.md"
+  rollback_cutover_recommendation_sha256: "6d1061cf5646d470f87e5d5bd140934efca858c5435b40680eb4a39f2e58a3ba"
+  validation_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_validation.json"
+  validation_sha256: "cdcd907f4ad237118eab65f06f364263da08285456514605a0308bc203f7a6e6"
+  compact_receipt_path: "research_control/tasks/RT-20260722-003/artifacts/v21_p10_migration_readiness_compact_receipt.json"
+  compact_receipt_sha256: "db3410f2c166562a4cc8636011eeda15b7cb8f051c3917fea21b370e4da2ddb6"
+  component_pass_count: 6
+  component_blocker_count: 2
+  audit_check_count: 12
+  audit_failed_check_count: 0
+  focused_test_count: 8
+  p10_component_test_count: 66
+  historical_sample_status: "PASS"
+  unresolved_historical_sample_count: 0
+  rollout_disposition: "FREEZE_BROADER_ROLLOUT_REPAIR_REQUIRED"
+  blocker_ids:
+    - "P10-AUDIT-F001"
+    - "P10-AUDIT-F002"
+  p10_t07_completed: true
+  p10_t08_completed: true
+  p10_t09_completed: true
+  predecessor_artifacts_read_only: true
+  predecessor_artifacts_mutated: false
+  repair_implementation_authorized: false
+  event_store_cutover_authorized: false
+  legacy_registry_authority_changed: false
+  historical_records_rewritten: false
+  p11_t01_dependency_ready: true
+  p11_t01_selected: true
+  p11_t01_executed: false
+  selected_next_work_item: "P11-T01"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_reason: "P11-T01 has qualifying P0-T05 and P10-T01 dependencies and is independent of the frozen broader P10 rollout."
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
 
 p10_t07_artifact_identity_path_policy:
   task_id: "RT-20260722-002"

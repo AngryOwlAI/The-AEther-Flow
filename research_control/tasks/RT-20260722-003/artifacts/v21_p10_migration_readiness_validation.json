@@ -1,0 +1,204 @@
+{
+  "audit_status": "PASS",
+  "authority_flags": {
+    "distance_to_gr_delta_changed": false,
+    "event_store_cutover_authorized": false,
+    "generated_view_is_science_authority": false,
+    "historical_records_rewritten": false,
+    "legacy_registry_authority_changed": false,
+    "physics_promotion_authorized": false,
+    "predecessor_artifacts_mutated": false,
+    "proof_authority": false,
+    "publication_authority": false,
+    "scientific_claims_changed": false
+  },
+  "check_count": 12,
+  "checks": [
+    {
+      "check_id": "p10_source_hash_exactness",
+      "status": "PASS"
+    },
+    {
+      "check_id": "normalized_schema_contracts",
+      "status": "PASS"
+    },
+    {
+      "check_id": "candidate_lineage_integrity",
+      "status": "PASS"
+    },
+    {
+      "check_id": "attempt_event_hash_chain",
+      "status": "PASS"
+    },
+    {
+      "check_id": "attempt_history_post_checkpoint_stability",
+      "status": "PASS_BLOCKER_IDENTIFIED"
+    },
+    {
+      "check_id": "event_store_architecture_contract",
+      "status": "PASS"
+    },
+    {
+      "check_id": "event_store_pilot_parity",
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_sample_readability",
+      "status": "PASS"
+    },
+    {
+      "check_id": "artifact_identity_referential_integrity",
+      "status": "PASS"
+    },
+    {
+      "check_id": "burden_status_freshness",
+      "status": "PASS_BLOCKER_IDENTIFIED"
+    },
+    {
+      "check_id": "generated_view_non_authority",
+      "status": "PASS"
+    },
+    {
+      "check_id": "cutover_freeze_disposition",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_id": "CB-V21-P10-T09-MIGRATION-READINESS-AUDIT-001",
+  "claim_boundary_summary": "P10-T09 completed a non-promotional audit and froze broader data-model rollout on two exact lifecycle defects; no predecessor bytes or authority changed.",
+  "component_status_counts": {
+    "blocker": 2,
+    "pass": 6
+  },
+  "components": [
+    {
+      "component": "P10-T01",
+      "status": "PASS"
+    },
+    {
+      "component": "P10-T02",
+      "historical_task_count": 1040,
+      "low_confidence_count": 694,
+      "status": "PASS"
+    },
+    {
+      "component": "P10-T03",
+      "status": "PASS"
+    },
+    {
+      "committed_head_prefix_count": 0,
+      "component": "P10-T04",
+      "diagnosis": "The ledger and eight-event SHA-256 chain validate, but the sealed validation receipt recorded a zero HEAD prefix before checkpoint and deterministically expects eight after the ledger enters HEAD.",
+      "event_count": 8,
+      "finding_id": "P10-AUDIT-F001",
+      "hash_chain_status": "PASS",
+      "live_head_prefix_count": 8,
+      "status": "BLOCKER_POST_CHECKPOINT_RECEIPT_DRIFT"
+    },
+    {
+      "component": "P10-T05",
+      "status": "PASS"
+    },
+    {
+      "component": "P10-T06",
+      "migration_risk_count": 5,
+      "mismatch_count": 0,
+      "status": "PASS",
+      "unmapped_field_count": 0,
+      "unsupported_legacy_shape_count": 3
+    },
+    {
+      "component": "P10-T07",
+      "content_reference_count": 3,
+      "status": "PASS"
+    },
+    {
+      "active_task_advanced": true,
+      "burden_count": 14,
+      "component": "P10-T08",
+      "definition_count": 10,
+      "diagnosis": "The burden definitions and ledger mapping remain structurally valid, but the task-local current-status Markdown and receipt are coupled to advancing program state and task-registry inputs without a governed recurring regeneration owner.",
+      "finding_id": "P10-AUDIT-F002",
+      "latest_handoff_advanced": true,
+      "stale_live_input_paths": [
+        "registries/RESEARCH_TASK_REGISTRY.csv",
+        "research_control/program_state.yaml"
+      ],
+      "status": "BLOCKER_UNMANAGED_LIVE_VIEW_DRIFT",
+      "structural_status": "PASS",
+      "task_count_advanced": true
+    }
+  ],
+  "failed_check_count": 0,
+  "finding_counts": {
+    "blocker": 2,
+    "informational": 0,
+    "warning": 0
+  },
+  "findings": [
+    {
+      "component": "P10-T04",
+      "cutover_effect": "FREEZE",
+      "finding": "Sealed validation output changes after the ledger enters HEAD.",
+      "finding_id": "P10-AUDIT-F001",
+      "repair_obligation": "Separate immutable sealed-receipt rendering from live HEAD-prefix checking; preserve the event chain and emit live prefix evidence outside the sealed artifact.",
+      "severity": "BLOCKER"
+    },
+    {
+      "component": "P10-T08",
+      "cutover_effect": "FREEZE",
+      "finding": "The live burden-status view has no recurring governed regeneration owner.",
+      "finding_id": "P10-AUDIT-F002",
+      "repair_obligation": "Move live status to a centrally regenerated output or add an explicit governed sync owner while keeping the closed migration receipt immutable.",
+      "severity": "BLOCKER"
+    }
+  ],
+  "historical_samples": {
+    "attempt_event_count": 8,
+    "burden_count": 14,
+    "burden_definition_count": 10,
+    "candidate_count": 7,
+    "candidate_family_count": 5,
+    "candidate_lineage_edge_count": 6,
+    "content_reference_count": 3,
+    "event_store_event_count": 20,
+    "event_store_source_count": 12,
+    "event_store_view_count": 4,
+    "status": "PASS",
+    "taxonomy_historical_tasks": 1040,
+    "unresolved_sample_count": 0
+  },
+  "job_id": "AJ-RT-20260722-003-001",
+  "next_dependency_independent_work_item": "P11-T01",
+  "plan_task_id": "P10-T09",
+  "recommendation_ids": [
+    "V21-R31",
+    "V21-R32",
+    "V21-R33",
+    "V21-R40",
+    "V21-R41",
+    "V21-R42",
+    "V21-R46",
+    "V21-R47",
+    "V21-R48",
+    "V21-R49",
+    "V21-R50"
+  ],
+  "rollout_disposition": "FREEZE_BROADER_ROLLOUT_REPAIR_REQUIRED",
+  "schema_id": "v21_p10_migration_readiness_validation_v1",
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v21.md": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "research_control/tasks/RT-20260721-003/artifacts/v21_status_assumption_schema_compact_receipt.json": "f99cf78d96676d97fe7f800b36c0eeac6d344282c10aa78226ebe76064aac607",
+    "research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_compact_receipt.json": "2687a11e8f9b0bf4a1431a9ba7aea511c3daea810b918db21a5404b20b8df977",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_compact_receipt.json": "92a0a538cd7a1bd8cd8b4b996976a9a5c0f23bb129ca49a322b1ef3f4d21825d",
+    "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json": "f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2",
+    "research_control/tasks/RT-20260721-007/artifacts/v21_event_store_architecture_contract.json": "e22bde41e45def27a32d99bdf4ca9e6517a2acedbf18393cac22e172b9423c51",
+    "research_control/tasks/RT-20260721-008/artifacts/v21_event_store_pilot_parity_receipt.json": "9db5382ee676bd2ae16bab405fff9093f6ad56ce9be50acb341c78ccf72a6203",
+    "research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml": "2ca5990c40419f4d8838d2f2ffc94ab694bda7ad002fe930ae2cf2e56209c400",
+    "research_control/tasks/RT-20260721-009/jobs/completions/AJC-AJ-RT-20260721-009-001.yaml": "ef29dde08062224f03ca7be10cf140db4ffcaf614b46adb3182f4f58da0d61d7",
+    "research_control/tasks/RT-20260722-001/jobs/completions/AJC-AJ-RT-20260722-001-001.yaml": "e1743f1c5ddf2d4a401c90effda5493e34fc52021de76b3507ec8da884941e5f",
+    "research_control/tasks/RT-20260722-002/artifacts/artifact_refs.json": "a39babc489dbce361ab7cbfcc8a7cda6347a633d0bc9c820b40a97a2433a26d0",
+    "research_control/tasks/RT-20260722-002/jobs/completions/AJC-AJ-RT-20260722-002-001.yaml": "71595f97c4b3c8ed06d5e735a0f23269d210e40909b09301818af011e551b2a4"
+  },
+  "task_id": "RT-20260722-003",
+  "work_item_status": "completed"
+}
