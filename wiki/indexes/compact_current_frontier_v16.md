@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260721-004`
-- Latest handoff: `handoff-0805`
-- Current status: `v21_p10_t02_orthogonal_task_taxonomy_complete_no_history_or_physics_delta_p10_t03_ready`
+- Active task: `RT-20260721-005`
+- Latest handoff: `handoff-0806`
+- Current status: `v21_p10_t03_immutable_candidate_identity_lineage_complete_no_history_or_physics_delta_p10_t04_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260721-004`
-- Latest research handoff: `handoff-0805`
-- Latest research next action: Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks.
+- Latest research task: `RT-20260721-005`
+- Latest research handoff: `handoff-0806`
+- Latest research next action: Run exactly one bounded v21 P10-T04 project-system packet in a separate AgentJob. Create an append-only research attempt and rework ledger covering failures auditor findings validator failures repairs abandoned attempts supersessions compute metadata and final dispositions without replacing canonical scientific artifacts. Do not execute P4-T05.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p10_t03_immutable_candidate_identity_lineage`
+- Route ID: `v21_p10_t04_append_only_research_attempt_rework_ledger`
 - Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Make candidate lifecycle evidence referentially exact.
+- Milestone burden: Expose the evolutionary history hidden by PASS-only completion records.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `16281b23c4f1940ca9d738eff863204faa4fed14e3b19cb42d88e242624f269d`
-- JSON SHA-256: `0062479560ad6967b16ebb8197b612413a33840a9e43755436b07e50fd5f4119`
+- YAML SHA-256: `afeed90e95569557a865ab40f592bcf39e65100e105710551df201eb1c90af3d`
+- JSON SHA-256: `c7a6a0c3a455c24bf80e9dced982206404bd14c8ad5c03ec67ae9f6186c0e683`
 
 ## Authority Warning
 

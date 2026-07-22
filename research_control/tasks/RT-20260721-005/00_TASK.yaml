@@ -1,0 +1,69 @@
+validation_status: "PASS"
+task_id: "RT-20260721-005"
+task_type: "v21_immutable_candidate_identity_lineage"
+title: "Create immutable candidate identity and lineage records"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "eqsrc_canonical_choice"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-22T02:21:42Z"
+updated_at: "2026-07-22T02:38:48Z"
+closed_at: "2026-07-22T02:38:48Z"
+parent_task_id: "RT-20260721-004"
+parent_handoff_id: "handoff-0805"
+current_decision_id: "DDR-20260721-005"
+current_job_id: "AJ-RT-20260721-005-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260721-005"
+requires_human_gate: false
+human_authorization_note: "Generation 37 of the immutable user-requested v21 relay and handoff-0805 authorize one bounded P10-T03 project-system packet."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T03"
+  plan_task_name: "Create immutable candidate identity and lineage records"
+  recommendation_ids:
+    - "V21-R02"
+    - "V21-R41"
+    - "V21-R52"
+objective: "Implement machine-readable immutable candidate and family identities statement assumption ontology and artifact hash anchors typed lifecycle stages and acyclic supersession or route-successor edges; seed the recent EqSrc candidate families from canonical historical evidence without rewriting that evidence."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Make candidate lifecycle evidence referentially exact."
+route_label: "ordinary-research-packet"
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V21-P10-T03-CANDIDATE-LINEAGE-001"
+claim_boundary:
+  allowed_scope: "Define and validate only the P10-T03 task-local identity contract lineage registry historical seed validator focused metrics integration standard control records one next handoff and policy-generated derivatives."
+  completed_dependency_tasks:
+    - "RT-20260721-003"
+    - "RT-20260721-004"
+  current_handoff: "handoff-0805"
+  historical_records_mutated: false
+  historical_lineage_inferred_when_missing: false
+  p4_t05_preserved_human_gate: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_schema.md"
+  - "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json"
+  - "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json"
+  - "research_control/tasks/RT-20260721-005/artifacts/validate_v21_candidate_lineage.py"
+  - "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_validation.json"
+  - "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_compact_receipt.json"
+closure_status: "p10_t03_candidate_lineage_complete_no_history_or_physics_delta_p10_t04_selected"
+summary: "Created registered immutable identity and lineage evidence for five EqSrc families seven candidates twenty-two stages six acyclic edges five family freezes and one explicit absence; 53 checks pass with no history mutation or protected authority."
+next_recommended_action: "Run exactly one bounded v21 P10-T04 project-system packet in a separate AgentJob to create an append-only research attempt and rework ledger. Do not execute P4-T05 or replace canonical scientific artifacts."
+documentation_impact_id: "DI-RT-20260721-005-001"
+completion_id: "AJC-AJ-RT-20260721-005-001"
+project_improvement_signals: []
+notes: "This additive project-control packet completed P10-T03 only. It created no candidate adoption rejection scientific-status delta promotion or P4-T05 authority."

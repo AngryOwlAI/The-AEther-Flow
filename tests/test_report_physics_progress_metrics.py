@@ -361,6 +361,51 @@ class PhysicsProgressMetricsTests(unittest.TestCase):
 
         self.assertFalse(result)
 
+    def test_live_candidate_lineage_metrics_are_keyed_by_immutable_ids(self) -> None:
+        lineage = self.reporter.collect_candidate_lineage_metrics(REPO_ROOT)
+
+        self.assertEqual(lineage["status"], "measured")
+        self.assertEqual(len(lineage["candidate_ids"]), 7)
+        self.assertEqual(
+            lineage["metrics"]["candidate_to_audit_conversion"]["value"],
+            1.0,
+        )
+        self.assertEqual(
+            lineage["metrics"]["audit_to_stress_survival"]["value"],
+            0.5714,
+        )
+        self.assertEqual(
+            lineage["metrics"]["stress_survival_rate"]["value"],
+            0.0,
+        )
+        self.assertEqual(len(lineage["explicit_absences"]), 1)
+        self.assertFalse(lineage["authority_boundary"]["candidate_adoption_authorized"])
+
+    def test_ai_methodology_uses_exact_lineage_when_available(self) -> None:
+        lineage = self.reporter.collect_candidate_lineage_metrics(REPO_ROOT)
+        report = self.reporter.collect_ai_research_agent_methodology_metrics(
+            [],
+            [],
+            {},
+            {},
+            {},
+            [],
+            lineage,
+        )
+        lifecycle = report["metrics"]
+
+        self.assertEqual(lifecycle["candidate_to_audit_conversion"]["status"], "measured")
+        self.assertEqual(lifecycle["audit_to_stress_survival"]["status"], "measured")
+        self.assertEqual(lifecycle["stress_survival_rate"]["status"], "measured")
+        self.assertIn(
+            "EQSRC-GRADED-ORBIT-ROOT-V1",
+            lifecycle["audit_to_stress_survival"]["breakdown"]["denominator_candidate_ids"],
+        )
+        self.assertNotIn(
+            "EQSRC-GRADED-ORBIT-ROOT-V1",
+            lifecycle["audit_to_stress_survival"]["breakdown"]["numerator_candidate_ids"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,110 @@
+{
+  "schema_id": "v21_candidate_lineage_registry_v1",
+  "contract_schema_id": "v21_candidate_identity_lineage_v1",
+  "status": "draft/control",
+  "task_id": "RT-20260721-005",
+  "plan_task_id": "P10-T03",
+  "revision": 1,
+  "append_only": true,
+  "schema_path": "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_schema.md",
+  "schema_sha256": "11d7217198d106cf48a57c082e0ef23f3209d29597fb6ec532159085d7db6168",
+  "historical_seed_path": "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json",
+  "historical_seed_sha256": "8cf49a04b90d02f8439b54e138257cc5c56b2a72ba2b26c43c5b1b9a5dba78a0",
+  "collection_hashes": {
+    "families_sha256": "744cd35ce8ba74355b920ae5cf668a3d46f09458d458e28f2f158ffd0e6d66ff",
+    "candidates_sha256": "e9fc198e4e562923191a1a91242d223a2e37811300911c3d75217ed408e33f57",
+    "lineage_edges_sha256": "b6492b9a933306547899c6fe144850867614e534b52cecad7843f08f1704c152",
+    "stage_records_sha256": "c62a730c80c2d3aa318d7105c90f327d2018624348da3d111447bdb9d4a8d015",
+    "family_events_sha256": "c0aa53ddbf9a19e3fddef063bba5173035685e6a85835605d5747a92b7a0af1a",
+    "explicit_absences_sha256": "1a62cc021f6aad25f9c52a7053f915e534ebe1891cb0f3a9b6c3ab5557c05014"
+  },
+  "family_identity_index": {
+    "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR": "ce8f10b3bc6b2b31baa637bbb56ea7a5120091757f0badbd5a26e87351993bb1",
+    "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE": "0921f15d36cef3162678e21c6c1c70326bc64ce3e5e7af4fb35ed3345bcd10ed",
+    "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR": "22a64c21829267153cac770cc047219e2236f7e8a05909f27c4c7933809c89bc",
+    "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION": "c3aa6ce4e3370a3329e03cf6ea88dcf5952657a6825814d6c4f35c30be7f2d21",
+    "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT": "dc77f3b9dc5039af91132d5633c77333b50b7a6148974e0db6945f5f2617bc62"
+  },
+  "candidate_identity_index": {
+    "EQSRC-IDISC-V1": "82aeea488ea96078147f1125edc5ba6b4038f105aa9756035216faa2465a5d09",
+    "EQSRC-IDISC-V2": "b84ff91c70eb7812f2e75cb9ef19eb6edb59b20261d15f4734733b00db3e2e0f",
+    "EQSRC-IDISC-V3": "83ea378d84ff1d55da9ec524578d6da1e719be0bb9549f7612930aeeb7c7727d",
+    "EQSRC-CYCLE-BOUNDARY-V1": "55298ee79bd8398092ed4b4e9b7ffa14beb97f14f9eb310a63d5b4c78fbb639b",
+    "EQSRC-ORIENTATION-TORSOR-V1": "c442afc00def290d3ed8563a667513af71b7bf12124e46472f7ca75e69cc7e25",
+    "EQSRC-ROOTED-PARTITION-V1": "8cfc07890ec96667ef7c41440efb9953698a7b25d8a6a2fe92cbd1ea52cb4d5b",
+    "EQSRC-GRADED-ORBIT-ROOT-V1": "52611afebe146e997788a9e12e09d58ba385e6e1cb3b801c335e9c60546839e5"
+  },
+  "lineage_edge_ids": [
+    "EQSRC-LINEAGE-001",
+    "EQSRC-LINEAGE-002",
+    "EQSRC-LINEAGE-003",
+    "EQSRC-LINEAGE-004",
+    "EQSRC-LINEAGE-005",
+    "EQSRC-LINEAGE-006"
+  ],
+  "stage_ids": [
+    "STAGE-027-CONSTRUCT",
+    "STAGE-028-AUDIT",
+    "STAGE-029-REPAIR",
+    "STAGE-030-AUDIT",
+    "STAGE-031-REPAIR",
+    "STAGE-032-AUDIT",
+    "STAGE-033-STRESS",
+    "STAGE-034-FREEZE-ROUTE",
+    "STAGE-035-CONSTRUCT",
+    "STAGE-036-AUDIT",
+    "STAGE-037-STRESS",
+    "STAGE-038-FREEZE-ROUTE",
+    "STAGE-039-CONSTRUCT",
+    "STAGE-040-AUDIT",
+    "STAGE-041-STRESS",
+    "STAGE-042-FREEZE-ROUTE",
+    "STAGE-043-CONSTRUCT",
+    "STAGE-044-AUDIT",
+    "STAGE-045-STRESS",
+    "STAGE-046-FREEZE-ROUTE",
+    "STAGE-047-CONSTRUCT",
+    "STAGE-009-AUDIT"
+  ],
+  "family_event_ids": [
+    "FAMILY-FREEZE-P1-T03-001",
+    "FAMILY-FREEZE-P1-T03-002",
+    "FAMILY-FREEZE-P1-T03-003",
+    "FAMILY-FREEZE-P1-T03-004",
+    "FAMILY-FREEZE-P1-T03-005"
+  ],
+  "explicit_absence_ids": [
+    "ABS-EQSRC-GRADED-ORBIT-STRESS-001"
+  ],
+  "record_counts": {
+    "families": 5,
+    "candidates": 7,
+    "lineage_edges": 6,
+    "candidate_stages": 22,
+    "family_events": 5,
+    "explicit_absences": 1,
+    "adoption_events": 0,
+    "rejection_events": 0,
+    "semantic_supersession_edges": 2,
+    "cross_family_route_successor_edges": 4
+  },
+  "metrics_policy": {
+    "key_by_immutable_candidate_id": true,
+    "explicit_absences_count_as_observed": false,
+    "family_events_do_not_create_candidate_stages": true,
+    "validator_success_is_physics_evidence": false
+  },
+  "authority_boundary": {
+    "record_kind": "project_control",
+    "historical_records_mutated": false,
+    "missing_history_inferred": false,
+    "scientific_claims_changed": false,
+    "distance_to_gr_delta_changed": false,
+    "candidate_adoption_authorized": false,
+    "candidate_rejection_authorized": false,
+    "ontology_edit_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authority": false
+  }
+}

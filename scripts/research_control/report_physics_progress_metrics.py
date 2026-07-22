@@ -5,9 +5,10 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import sys
-from collections import Counter
+from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -95,6 +96,9 @@ SUPPORT_ONLY_CHECKER_REPORT_GLOB = "research_control/tasks/*/artifacts/*checker_
 SUPPORT_ONLY_BOUNDARY_REQUIRED_PHRASES = ("support-only", "not proof authority")
 AI_METHODOLOGY_TAXONOMY_PATH = "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
 PHYSICS_PAYLOAD_RATIO_POLICY_PATH = "research_control/design/physics_payload_ratio_policy_v1.md"
+CANDIDATE_LINEAGE_REGISTRY_PATH = (
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json"
+)
 AI_METHODOLOGY_REQUIRED_METRICS = (
     "overclaim_catch_rate",
     "underclaim_warning_rate",
@@ -901,6 +905,200 @@ def ratio(numerator: Any, denominator: Any) -> float | None:
     return round(float(numerator) / float(denominator), 4)
 
 
+def canonical_json_sha256(value: Any) -> str:
+    payload = json.dumps(
+        value,
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+    ).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+def collect_candidate_lineage_metrics(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
+    """Read validated immutable candidate IDs as support-only lifecycle evidence."""
+
+    repo_root = Path(repo_root)
+    registry_path = repo_root / CANDIDATE_LINEAGE_REGISTRY_PATH
+    authority_boundary = {
+        "record_kind": "project_control",
+        "candidate_lifecycle_metrics_are_support_only": True,
+        "scientific_claims_changed": False,
+        "distance_to_gr_delta_changed": False,
+        "candidate_adoption_authorized": False,
+        "candidate_rejection_authorized": False,
+        "physics_promotion_authorized": False,
+        "metrics_report_not_physics_proof": True,
+    }
+    unavailable = {
+        "schema_id": "candidate_lineage_metrics_v1",
+        "status": "not_measured",
+        "registry_path": CANDIDATE_LINEAGE_REGISTRY_PATH,
+        "historical_seed_path": "",
+        "candidate_ids": [],
+        "candidate_lifecycle": {},
+        "metrics": {},
+        "explicit_absences": [],
+        "errors": [],
+        "authority_boundary": authority_boundary,
+    }
+    if not registry_path.is_file():
+        unavailable["errors"] = ["candidate lineage registry is not present"]
+        return unavailable
+
+    try:
+        registry = json.loads(registry_path.read_text(encoding="utf-8"))
+        seed_relative = str(registry.get("historical_seed_path", ""))
+        seed_path = repo_root / seed_relative
+        seed = json.loads(seed_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, TypeError) as exc:
+        unavailable["status"] = "invalid"
+        unavailable["errors"] = [f"candidate lineage registry could not be loaded: {exc}"]
+        return unavailable
+
+    errors: list[str] = []
+    if hashlib.sha256(seed_path.read_bytes()).hexdigest() != registry.get(
+        "historical_seed_sha256"
+    ):
+        errors.append("historical seed hash mismatch")
+
+    collection_key_map = {
+        "families_sha256": "families",
+        "candidates_sha256": "candidates",
+        "lineage_edges_sha256": "lineage_edges",
+        "stage_records_sha256": "stage_records",
+        "family_events_sha256": "family_events",
+        "explicit_absences_sha256": "explicit_absences",
+    }
+    collection_hashes = registry.get("collection_hashes", {})
+    for hash_key, seed_key in collection_key_map.items():
+        if canonical_json_sha256(seed.get(seed_key, [])) != collection_hashes.get(hash_key):
+            errors.append(f"{seed_key} collection hash mismatch")
+
+    candidates = seed.get("candidates", [])
+    stages = seed.get("stage_records", [])
+    edges = seed.get("lineage_edges", [])
+    family_events = seed.get("family_events", [])
+    explicit_absences = seed.get("explicit_absences", [])
+    if not all(
+        isinstance(value, list)
+        for value in (candidates, stages, edges, family_events, explicit_absences)
+    ):
+        errors.append("lineage seed collections must be arrays")
+        candidates, stages, edges, family_events, explicit_absences = [], [], [], [], []
+
+    candidate_index = registry.get("candidate_identity_index", {})
+    candidate_by_id = {
+        str(candidate.get("immutable_candidate_id", "")): candidate
+        for candidate in candidates
+        if candidate.get("immutable_candidate_id")
+    }
+    if set(candidate_by_id) != set(candidate_index):
+        errors.append("candidate identity index does not cover the seed exactly")
+    for candidate_id, candidate in candidate_by_id.items():
+        if candidate.get("candidate_identity_sha256") != candidate_index.get(candidate_id):
+            errors.append(f"candidate identity binding mismatch for {candidate_id}")
+
+    stages_by_candidate: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for stage in stages:
+        candidate_id = str(stage.get("candidate_id", ""))
+        if candidate_id not in candidate_by_id:
+            errors.append(f"stage references unknown candidate {candidate_id}")
+            continue
+        if stage.get("candidate_identity_sha256") != candidate_index.get(candidate_id):
+            errors.append(f"stage identity binding mismatch for {stage.get('stage_id', '')}")
+        stages_by_candidate[candidate_id].append(stage)
+
+    superseded_by: dict[str, str] = {}
+    for edge in edges:
+        source = str(edge.get("from_candidate_id", ""))
+        target = str(edge.get("to_candidate_id", ""))
+        if source not in candidate_by_id or target not in candidate_by_id:
+            errors.append(f"lineage edge {edge.get('edge_id', '')} has an unknown endpoint")
+            continue
+        if edge.get("supersedes") is True:
+            superseded_by[source] = target
+
+    frozen_terminal_ids = {
+        str(candidate_id)
+        for event in family_events
+        if event.get("event_kind") == "freeze"
+        for candidate_id in event.get("terminal_candidate_ids", [])
+    }
+    candidate_lifecycle: dict[str, dict[str, Any]] = {}
+    constructed_ids: list[str] = []
+    audited_ids: list[str] = []
+    stressed_ids: list[str] = []
+    stress_survivor_ids: list[str] = []
+    for candidate_id in sorted(candidate_by_id):
+        candidate_stages = sorted(
+            stages_by_candidate.get(candidate_id, []),
+            key=lambda stage: int(stage.get("sequence", 0)),
+        )
+        stage_ids_by_kind: dict[str, list[str]] = defaultdict(list)
+        for stage in candidate_stages:
+            stage_ids_by_kind[str(stage.get("stage_kind", ""))].append(
+                str(stage.get("stage_id", ""))
+            )
+        has_construction = bool(
+            stage_ids_by_kind.get("construction") or stage_ids_by_kind.get("repair")
+        )
+        has_audit = bool(stage_ids_by_kind.get("audit"))
+        has_stress = bool(stage_ids_by_kind.get("stress"))
+        stress_survived = any(
+            stage.get("stage_kind") == "stress"
+            and "obstruction" not in str(stage.get("source_stage_type", ""))
+            and "obstruction" not in str(stage.get("disposition", ""))
+            for stage in candidate_stages
+        )
+        if has_construction:
+            constructed_ids.append(candidate_id)
+        if has_audit:
+            audited_ids.append(candidate_id)
+        if has_stress:
+            stressed_ids.append(candidate_id)
+        if stress_survived:
+            stress_survivor_ids.append(candidate_id)
+        candidate_lifecycle[candidate_id] = {
+            "candidate_identity_sha256": candidate_index.get(candidate_id, ""),
+            "family_id": candidate_by_id[candidate_id].get("family_id", ""),
+            "stage_ids_by_kind": dict(sorted(stage_ids_by_kind.items())),
+            "superseded_by_candidate_id": superseded_by.get(candidate_id),
+            "family_freeze_recorded": candidate_id in frozen_terminal_ids,
+            "stress_survived_as_draft_control": stress_survived,
+        }
+
+    metric_values = {
+        "candidate_to_audit_conversion": {
+            "numerator_candidate_ids": sorted(audited_ids),
+            "denominator_candidate_ids": sorted(constructed_ids),
+            "value": ratio(len(audited_ids), len(constructed_ids)),
+        },
+        "audit_to_stress_survival": {
+            "numerator_candidate_ids": sorted(stressed_ids),
+            "denominator_candidate_ids": sorted(audited_ids),
+            "value": ratio(len(stressed_ids), len(audited_ids)),
+        },
+        "stress_survival_rate": {
+            "numerator_candidate_ids": sorted(stress_survivor_ids),
+            "denominator_candidate_ids": sorted(stressed_ids),
+            "value": ratio(len(stress_survivor_ids), len(stressed_ids)),
+        },
+    }
+    return {
+        "schema_id": "candidate_lineage_metrics_v1",
+        "status": "invalid" if errors else "measured",
+        "registry_path": CANDIDATE_LINEAGE_REGISTRY_PATH,
+        "historical_seed_path": seed_relative,
+        "candidate_ids": sorted(candidate_by_id),
+        "candidate_lifecycle": candidate_lifecycle,
+        "metrics": metric_values,
+        "explicit_absences": explicit_absences,
+        "errors": errors,
+        "authority_boundary": authority_boundary,
+    }
+
+
 def ai_metric_record(
     metric_id: str,
     status: str,
@@ -962,6 +1160,7 @@ def collect_ai_research_agent_methodology_metrics(
     payload_density_metrics: dict[str, Any],
     route_orbit_risk_metrics: dict[str, Any],
     diagnostic_warnings: list[dict[str, Any]],
+    candidate_lineage_metrics: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Build support-only AI research-agent methodology diagnostics for v17 P12-T02."""
     calculation_window = "all tracked completion records and task registry rows available at report generation"
@@ -1038,6 +1237,122 @@ def collect_ai_research_agent_methodology_metrics(
     mathematical_payload_items = int(overall_payload.get("mathematical_payload_item_count", 0))
     process_receipt_items = int(overall_payload.get("process_only_item_count", 0))
 
+    lineage = candidate_lineage_metrics or {}
+    lineage_ready = lineage.get("status") == "measured"
+    lineage_metric_values = lineage.get("metrics", {}) if lineage_ready else {}
+    lineage_evidence = [
+        str(lineage.get("registry_path", "")),
+        str(lineage.get("historical_seed_path", "")),
+    ]
+    absence_ids = [
+        str(item.get("absence_id", ""))
+        for item in lineage.get("explicit_absences", [])
+        if isinstance(item, dict) and item.get("absence_id")
+    ]
+
+    if lineage_ready:
+        candidate_to_audit = lineage_metric_values["candidate_to_audit_conversion"]
+        audited_candidate_ids = candidate_to_audit["numerator_candidate_ids"]
+        constructed_candidate_ids = candidate_to_audit["denominator_candidate_ids"]
+        candidate_to_audit_record = ai_metric_record(
+            "candidate_to_audit_conversion",
+            counted_status(len(audited_candidate_ids), len(constructed_candidate_ids)),
+            len(audited_candidate_ids),
+            len(constructed_candidate_ids),
+            "P10-T03 immutable EqSrc historical seed",
+            lineage_evidence,
+            "Exact immutable candidate IDs replace the former aggregate completion-stage proxy; an audit stage is counted only when bound to the same candidate identity hash.",
+            candidate_to_audit["value"],
+            breakdown={
+                "numerator_candidate_ids": audited_candidate_ids,
+                "denominator_candidate_ids": constructed_candidate_ids,
+                "explicit_absence_ids": absence_ids,
+            },
+        )
+
+        audit_to_stress = lineage_metric_values["audit_to_stress_survival"]
+        stressed_candidate_ids = audit_to_stress["numerator_candidate_ids"]
+        audit_denominator_ids = audit_to_stress["denominator_candidate_ids"]
+        audit_to_stress_record = ai_metric_record(
+            "audit_to_stress_survival",
+            counted_status(len(stressed_candidate_ids), len(audit_denominator_ids)),
+            len(stressed_candidate_ids),
+            len(audit_denominator_ids),
+            "P10-T03 immutable EqSrc historical seed",
+            lineage_evidence,
+            "Exact candidate-keyed lineage counts only observed stress stages; the explicit graded-orbit stress absence is not inferred as a pass or failure.",
+            audit_to_stress["value"],
+            breakdown={
+                "numerator_candidate_ids": stressed_candidate_ids,
+                "denominator_candidate_ids": audit_denominator_ids,
+                "explicit_absence_ids": absence_ids,
+            },
+        )
+
+        stress_survival = lineage_metric_values["stress_survival_rate"]
+        stress_survivor_ids = stress_survival["numerator_candidate_ids"]
+        stress_denominator_ids = stress_survival["denominator_candidate_ids"]
+        stress_survival_record = ai_metric_record(
+            "stress_survival_rate",
+            counted_status(len(stress_survivor_ids), len(stress_denominator_ids)),
+            len(stress_survivor_ids),
+            len(stress_denominator_ids),
+            "P10-T03 immutable EqSrc historical seed",
+            lineage_evidence,
+            "The seeded stressed candidates all carry scoped obstruction dispositions; local freeze remains preserved and is not relabeled as survival adoption rejection or global no-go.",
+            stress_survival["value"],
+            breakdown={
+                "numerator_candidate_ids": stress_survivor_ids,
+                "denominator_candidate_ids": stress_denominator_ids,
+                "explicit_absence_ids": absence_ids,
+            },
+        )
+    else:
+        candidate_to_audit_record = ai_metric_record(
+            "candidate_to_audit_conversion",
+            counted_status(len(audit_eligible), len(candidate_outputs)),
+            len(audit_eligible) if candidate_outputs else None,
+            len(candidate_outputs) if candidate_outputs else None,
+            calculation_window,
+            taxonomy_evidence + [
+                record.get("completion_path", "")
+                for record in candidate_outputs
+                if record.get("completion_path")
+            ],
+            "Candidate outputs are counted as audit-eligible only when tracked fields expose candidate result or pending-audit status.",
+            ratio(len(audit_eligible), len(candidate_outputs)),
+        )
+        audit_to_stress_record = ai_metric_record(
+            "audit_to_stress_survival",
+            counted_status(len(stress_records), len(audit_records), partial=True),
+            len(stress_records) if audit_records else None,
+            len(audit_records) if audit_records else None,
+            calculation_window,
+            taxonomy_evidence + [
+                record.get("completion_path", "")
+                for record in audit_records + stress_records
+                if record.get("completion_path")
+            ],
+            "This is an aggregate route-stage proxy because no valid immutable candidate-lineage snapshot is available.",
+            ratio(len(stress_records), len(audit_records)),
+            "Partial because the current completion records count stage occurrences, not candidate-linked transitions.",
+        )
+        stress_survival_record = ai_metric_record(
+            "stress_survival_rate",
+            counted_status(len(stress_survivors), len(stress_records), partial=True),
+            len(stress_survivors) if stress_records else None,
+            len(stress_records) if stress_records else None,
+            calculation_window,
+            taxonomy_evidence + [
+                record.get("completion_path", "")
+                for record in stress_records
+                if record.get("completion_path")
+            ],
+            "Stress survival is counted only as a non-promotional candidate-status outcome.",
+            ratio(len(stress_survivors), len(stress_records)),
+            "Partial because no valid immutable candidate-lineage snapshot is available.",
+        )
+
     metric_records = {
         "overclaim_catch_rate": ai_metric_record(
             "overclaim_catch_rate",
@@ -1099,50 +1414,9 @@ def collect_ai_research_agent_methodology_metrics(
                 int(payload_density_metrics.get("physics_completions_read", 0)),
             ),
         ),
-        "candidate_to_audit_conversion": ai_metric_record(
-            "candidate_to_audit_conversion",
-            counted_status(len(audit_eligible), len(candidate_outputs)),
-            len(audit_eligible) if candidate_outputs else None,
-            len(candidate_outputs) if candidate_outputs else None,
-            calculation_window,
-            taxonomy_evidence + [
-                record.get("completion_path", "")
-                for record in candidate_outputs
-                if record.get("completion_path")
-            ],
-            "Candidate outputs are counted as audit-eligible only when tracked fields expose candidate result or pending-audit status.",
-            ratio(len(audit_eligible), len(candidate_outputs)),
-        ),
-        "audit_to_stress_survival": ai_metric_record(
-            "audit_to_stress_survival",
-            counted_status(len(stress_records), len(audit_records), partial=True),
-            len(stress_records) if audit_records else None,
-            len(audit_records) if audit_records else None,
-            calculation_window,
-            taxonomy_evidence + [
-                record.get("completion_path", "")
-                for record in audit_records + stress_records
-                if record.get("completion_path")
-            ],
-            "This is an aggregate route-stage proxy; candidate lineage across audit and stress is not yet deterministic.",
-            ratio(len(stress_records), len(audit_records)),
-            "Partial because the current completion records count stage occurrences, not candidate-linked transitions.",
-        ),
-        "stress_survival_rate": ai_metric_record(
-            "stress_survival_rate",
-            counted_status(len(stress_survivors), len(stress_records), partial=True),
-            len(stress_survivors) if stress_records else None,
-            len(stress_records) if stress_records else None,
-            calculation_window,
-            taxonomy_evidence + [
-                record.get("completion_path", "")
-                for record in stress_records
-                if record.get("completion_path")
-            ],
-            "Stress survival is counted only as a non-promotional candidate-status outcome.",
-            ratio(len(stress_survivors), len(stress_records)),
-            "Partial because draft/control survivor lineage is not fully normalized across historical receipts.",
-        ),
+        "candidate_to_audit_conversion": candidate_to_audit_record,
+        "audit_to_stress_survival": audit_to_stress_record,
+        "stress_survival_rate": stress_survival_record,
         "human_gate_load": ai_metric_record(
             "human_gate_load",
             "measured",
@@ -1912,6 +2186,7 @@ def build_report(
         completion_records,
         scientific_payload_density_report,
     )
+    candidate_lineage_metrics = collect_candidate_lineage_metrics(repo_root)
     ai_research_agent_methodology_metrics = collect_ai_research_agent_methodology_metrics(
         completion_records,
         task_rows,
@@ -1919,6 +2194,7 @@ def build_report(
         payload_density_metrics,
         route_orbit_risk_metrics,
         diagnostic_warnings,
+        candidate_lineage_metrics,
     )
     physics_payload_ratio_diagnostics = collect_physics_payload_ratio_diagnostics(
         repo_root,
@@ -1935,6 +2211,7 @@ def build_report(
         "scientific_progress_metrics": scientific_progress_metrics,
         "payload_density_metrics": payload_density_metrics,
         "route_orbit_risk_metrics": route_orbit_risk_metrics,
+        "candidate_lineage_metrics": candidate_lineage_metrics,
         "physics_payload_ratio_diagnostics": physics_payload_ratio_diagnostics,
         "physics_progress_integration_metrics": physics_progress_integration_metrics,
         "ai_research_agent_methodology_metrics": ai_research_agent_methodology_metrics,
@@ -1972,7 +2249,13 @@ def build_report(
             "research_control/tasks/*/jobs/completions/*.yaml",
             AI_METHODOLOGY_TAXONOMY_PATH,
             PHYSICS_PAYLOAD_RATIO_POLICY_PATH,
-        ],
+            CANDIDATE_LINEAGE_REGISTRY_PATH,
+        ]
+        + (
+            [str(candidate_lineage_metrics["historical_seed_path"])]
+            if candidate_lineage_metrics.get("historical_seed_path")
+            else []
+        ),
         "authority_boundary": {
             "metrics_are_operational": True,
             "scoreboards_are_separated": True,
@@ -1989,6 +2272,7 @@ def build_report(
             "Scientific progress metrics are counts of tracked science-claim fields and must still cite source artifacts before any claim is reused.",
             "Obstruction reuse is measured by completion-level obstruction IDs and later completion references.",
             "AI research-agent methodology metrics are support-only diagnostics and cannot be used as proof, source-law adoption, benchmark promotion, or Gate Chair verdicts.",
+            "Candidate-lineage metrics are keyed by immutable candidate IDs and preserve explicit historical absences; they remain support-only project-control evidence and do not adopt or reject a candidate.",
             "Physics-payload ratio diagnostics are AI-system diagnostics only; they do not rank physics truth.",
             "Validator failure history is not a durable event log, so this report does not infer blocked violation counts from past terminal output.",
         ],
@@ -2114,6 +2398,12 @@ def render_markdown(report: dict[str, Any]) -> str:
             "## Route-Orbit Risk Metrics",
             "",
             *render_table(metrics["route_orbit_risk_metrics"]),
+            "",
+            "## Candidate Lineage Metrics",
+            "",
+            "These lifecycle metrics are keyed by immutable candidate IDs and preserve explicit historical absences. They are project-control diagnostics only and do not adopt, reject, or promote a candidate.",
+            "",
+            *render_table(metrics["candidate_lineage_metrics"]["metrics"]),
             "",
             "## Physics-Payload Ratio Diagnostics",
             "",

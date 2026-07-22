@@ -1,0 +1,462 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260721-005-001"
+completion_id: "AJC-AJ-RT-20260721-005-001"
+task_id: "RT-20260721-005"
+task_type: "v21_immutable_candidate_identity_lineage"
+decision_id: "DDR-20260721-005"
+role_id: "project-control-maintainer"
+source_role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260721-005"
+status: "completed"
+created_at: "2026-07-22T02:21:42Z"
+started_at: "2026-07-22T02:21:42Z"
+completed_at: "2026-07-22T02:38:48Z"
+objective: "Implement and validate only v21 P10-T03 immutable candidate and family identity records typed lifecycle lineage historical EqSrc seed evidence and exact candidate-keyed metrics."
+completion_summary: "P10-T03 created a registered task-local machine contract historical seed immutable registry and fail-closed validator for five EqSrc families seven existing candidate IDs twenty-two observed stages six acyclic lineage edges five family-freeze events and one explicit non-inferred stage absence. Fifty-three validation checks pass. Candidate lifecycle metrics now bind to immutable IDs: seven of seven observed candidates reached audit four of seven reached observed stress and zero of four stressed candidates survived their recorded scoped-obstruction disposition. Historical sources ontology scientific ledgers P4-T05 Distance-to-GR and every adoption rejection promotion proof and publication authority remain unchanged."
+objective_result: "completed"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T03"
+  recommendation_ids:
+    - "V21-R02"
+    - "V21-R41"
+    - "V21-R52"
+  implementation_status: "completed"
+  completed_v21_tasks_added:
+    - "P10-T03"
+  next_dependency_ready_work_item: "P10-T04"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 37
+  passes_consumed: 36
+  route_work_item_id: "P10-T03"
+  route_worker_skill: "continue-research"
+
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "v21_p10_t03_immutable_candidate_identity_lineage"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v21"
+  recommendation_ids:
+    - "V21-R02"
+    - "V21-R41"
+    - "V21-R52"
+  implements_plan_task_id: "P10-T03"
+  implementation_status: "completed"
+  coverage_effect: "immutable_candidate_identity_and_lineage_control_only"
+  downstream_recommendations_completed_by_this_task: false
+
+candidate_lineage_result:
+  contract_schema_id: "v21_candidate_identity_lineage_v1"
+  schema_object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-005-V21-CANDIDATE-LINEAGE-SCHEMA"
+  schema_path: "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_schema.md"
+  schema_sha256: "11d7217198d106cf48a57c082e0ef23f3209d29597fb6ec532159085d7db6168"
+  historical_seed_path: "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json"
+  historical_seed_sha256: "8cf49a04b90d02f8439b54e138257cc5c56b2a72ba2b26c43c5b1b9a5dba78a0"
+  registry_path: "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json"
+  registry_sha256: "788289c942bdcc5fff2f1337998f50d2b6fe89ca541de65a0ae24a651da97489"
+  validator_path: "research_control/tasks/RT-20260721-005/artifacts/validate_v21_candidate_lineage.py"
+  validator_sha256: "fc65d115bf3d988b1fed59d2211cebe4812d7a5bf04a7e1725a240c4354af03b"
+  validation_path: "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_validation.json"
+  validation_sha256: "9323760e532acf2560342eeb1c47bd558dc861ab6d05c8db1ed40cb117c3ef8d"
+  compact_receipt_path: "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_compact_receipt.json"
+  compact_receipt_sha256: "92a0a538cd7a1bd8cd8b4b996976a9a5c0f23bb129ca49a322b1ef3f4d21825d"
+  family_count: 5
+  candidate_count: 7
+  observed_stage_count: 22
+  lineage_edge_count: 6
+  semantic_supersession_edge_count: 2
+  cross_family_route_successor_edge_count: 4
+  family_freeze_event_count: 5
+  explicit_absence_count: 1
+  validation_check_count: 53
+  validation_failed_check_count: 0
+  graph_acyclic: true
+  all_stage_artifact_hashes_match: true
+  all_candidate_identity_hashes_match: true
+  all_endpoint_identity_hashes_match: true
+  historical_source_mutation_count: 0
+  missing_history_inference_count: 0
+  adoption_event_count: 0
+  rejection_event_count: 0
+
+candidate_metric_result:
+  report_path: "scripts/research_control/report_physics_progress_metrics.py"
+  report_source_sha256: "b594a23d4c688374e0c557552af715c302147586ffd035fb82b58aa558f922ae"
+  metric_schema_id: "candidate_lineage_metrics_v1"
+  metric_key: "immutable_candidate_id"
+  candidate_to_audit_conversion:
+    numerator_candidate_count: 7
+    denominator_candidate_count: 7
+    value: 1.0
+  audit_to_stress_survival:
+    numerator_candidate_count: 4
+    denominator_candidate_count: 7
+    value: 0.5714
+  stress_survival_rate:
+    numerator_candidate_count: 0
+    denominator_candidate_count: 4
+    value: 0.0
+  explicit_absence_counted_as_observed: false
+  result_boundary: "Support-only project-control lifecycle diagnostics; no candidate truth adoption rejection promotion or scientific progress delta."
+
+historical_seed_population:
+  source_inventory_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_inventory.json"
+  source_inventory_sha256: "5a823d46054fa75ee7f5f7814aa76ff52ea3e8d8868547229d5b0b2a26e0685e"
+  source_lineage_graph_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_lineage_graph.json"
+  source_lineage_graph_sha256: "ac6e01afde52c7586f9eee25f6fc93d0d519ae5a5c4bb78b874941187a2b3d91"
+  source_family_freeze_receipt_path: "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_receipt.md"
+  source_family_freeze_receipt_sha256: "a4f2aa26f344b1537651a2506589b11d6745e062c61cfc75b06d0a6ac8c705a8"
+  source_ontology_anchor_path: "ontology/tex/aether_flow_foundations.tex"
+  source_ontology_anchor_sha256: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+  source_files_changed: false
+  explicit_absence_id: "ABS-EQSRC-GRADED-ORBIT-STRESS-001"
+  explicit_absence_reason: "No candidate-level stress packet exists in tracked lineage before P1-T03 family freeze; no stress result was inferred."
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P10-T03 records exact hashes of already tracked candidate assumptions and does not add remove adopt or reinterpret a scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_registered:
+    - "EQSRC-IDISC-V1"
+    - "EQSRC-IDISC-V2"
+    - "EQSRC-IDISC-V3"
+    - "EQSRC-CYCLE-BOUNDARY-V1"
+    - "EQSRC-ORIENTATION-TORSOR-V1"
+    - "EQSRC-ROOTED-PARTITION-V1"
+    - "EQSRC-GRADED-ORBIT-ROOT-V1"
+  family_ids_registered:
+    - "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR"
+    - "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE"
+    - "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR"
+    - "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION"
+    - "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT"
+  theorem_ids_created: []
+  identity_note: "P10-T03 created project-control identity records for existing proposal-only candidates; it created no new scientific candidate theorem adoption rejection or promotion."
+
+mathematical_payload_manifest: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260721-005/00_TASK.yaml"
+  - "research_control/tasks/RT-20260721-005/DDR-20260721-005.md"
+  - "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_schema.md"
+  - "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json"
+  - "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json"
+  - "research_control/tasks/RT-20260721-005/artifacts/validate_v21_candidate_lineage.py"
+  - "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_validation.json"
+  - "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_compact_receipt.json"
+  - "tests/test_candidate_lineage.py"
+  - "research_control/tasks/RT-20260721-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260721-005/jobs/AJ-RT-20260721-005-001.yaml"
+  - "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml"
+  - "research_control/tasks/RT-20260721-005/roles/project-control-maintainer@0.2.0--RT-20260721-005.yaml"
+  - "research_control/handoffs/handoff-0806.yaml"
+  - "research_control/handoffs/handoff-0806.md"
+outputs_updated:
+  - "scripts/research_control/report_physics_progress_metrics.py"
+  - "tests/test_report_physics_progress_metrics.py"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+
+fixed_input_evidence:
+  p10_t01_completion:
+    path: "research_control/tasks/RT-20260721-003/jobs/completions/AJC-AJ-RT-20260721-003-001.yaml"
+    sha256: "28ea88fbfbecd144b7b742152be0fab44cafd0b8ac21869d9ad6be105f2f7305"
+  p10_t02_completion:
+    path: "research_control/tasks/RT-20260721-004/jobs/completions/AJC-AJ-RT-20260721-004-001.yaml"
+    sha256: "535b8ed27d9551ec9009e1254dc7e15c65d35ca9796b607962180be9f5d284f4"
+  predecessor_handoff:
+    path: "research_control/handoffs/handoff-0805.yaml"
+    sha256: "44cc21c7fb562cfcc4e1431909f42b1e56ec5b9777be8165f1eaa2ce5fe09eae"
+  source_plan:
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  distance_to_gr_ledger:
+    path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    changed: false
+  historical_candidate_sources:
+    changed: false
+
+physics_progress_status:
+  status: "project_control_candidate_lineage_completed_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make candidate lifecycle evidence referentially exact."
+  explanation: "P10-T03 supplies immutable project-control references and support-only lifecycle metrics; it supplies no new source-equivalence theorem candidate law or downstream physics result."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  rationale: "Identity and lineage metadata do not discharge source-equivalence or downstream GR burdens."
+  downstream_unlocked:
+    - "P10-T04 append-only research attempt and rework ledger under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  scientific_claims_changed: false
+  historical_record_rewrite_authorized: false
+  missing_history_inference_authorized: false
+  candidate_adoption_authorized: false
+  candidate_rejection_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  source_object_status_change_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  benchmark_promotion_authorized: false
+  downstream_physics_promotion_authorized: false
+  completed_derivation_authorized: false
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 37 route identity lease parity max effort repository binding clean start predecessor terminal state and single consumption were verified before work."
+  candidate_identity_contract:
+    status: "PASS"
+    evidence:
+      - "Seven candidate hashes and five family hashes recompute from the exact canonical JSON bases."
+      - "Changed statement assumption ontology artifact family or version content changes the identity digest and requires a new candidate ID."
+  historical_lineage_seed:
+    status: "PASS"
+    evidence:
+      - "Five families seven candidates six edges and twenty-two stages match the P1 source inventory and graph."
+      - "One missing graded-orbit stress stage is explicit and is not counted as observed."
+  lineage_graph:
+    status: "PASS"
+    evidence:
+      - "Every edge binds endpoint identity hashes strictly increases construction ordinal and leaves cross-family route successors non-superseding."
+      - "The directed graph is acyclic."
+  candidate_metrics:
+    status: "PASS"
+    evidence:
+      - "Candidate-to-audit audit-to-stress and stress-survival metrics use immutable candidate IDs rather than aggregate task occurrences."
+  focused_tests:
+    status: "PASS"
+    evidence:
+      - "Ten candidate-lineage and physics-progress metrics tests pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Affected validation documentation impact project-improvement parity research-control and whitespace gates are required to pass before checkpoint."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The completion records exact P10-T03 recommendation coverage hashes finding counts authority flags and forbidden conclusions."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier task-index physics-progress dependency and claim-graph derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and read-only validation are required before checkpoint; retrieval surfaces remain non-authoritative."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+
+required_validators:
+  - ".venv/bin/python research_control/tasks/RT-20260721-005/artifacts/validate_v21_candidate_lineage.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260721-005/artifacts/validate_v21_candidate_lineage.py --check --json"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format json"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format json --output output/physics_progress_metrics.json"
+  - ".venv/bin/python scripts/research_control/report_physics_progress_metrics.py --format markdown --output output/physics_progress_metrics.md"
+  - ".venv/bin/python -m unittest -v tests.test_candidate_lineage tests.test_report_physics_progress_metrics"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260721-005 scripts/research_control/report_physics_progress_metrics.py tests/test_candidate_lineage.py tests/test_report_physics_progress_metrics.py research_control/program_state.yaml research_control/handoffs/handoff-0806.yaml --explain"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "historical candidate source rewrite or reinterpretation"
+    - "missing lineage inferred as an observed stage"
+    - "candidate adoption or rejection"
+    - "canonical ontology edit"
+    - "P4-T05 execution or ontology-regime selection"
+    - "scientific-ledger change"
+    - "source-law adoption"
+    - "M_src or g_eff establishment"
+    - "matter coupling or Einstein-equation derivation"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "proof or publication authority"
+    - "completed derivation or program-wide no-go"
+  summary: "P10-T03 is referential project control only. Validator and metric PASS do not create scientific evidence or protected authority."
+  physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 962
+    relationship_row_count: 4771
+    semantic_row_count: 962
+    vault_row_count: 962
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search immutable candidate identity lineage --limit 10 --json"
+      query_type: "search"
+      query_text: "immutable candidate identity lineage"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260720-010-EQSRC-CANDIDATE-FAMILY-LINEAGE-RECEIPT"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260720-010-PARENT-FUSION-NOTES-EQSRC-CANDIDATE-FAMILY-LINEAGE"
+        - "TEX-V21-P1-T02-EQSRC-CANONICAL-CHOICE-FAMILY-MAP"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260720-010-EQSRC-CANDIDATE-FAMILY-LINEAGE-RECEIPT"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_family_lineage_receipt.md"
+      source_hash: "4641b6da561363a461cfb30aff9b9ef1afd5aa34dcd67f831d7f77e55aef2ff8"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260720-010-PARENT-FUSION-NOTES-EQSRC-CANDIDATE-FAMILY-LINEAGE"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-010/artifacts/parent_fusion_notes_eqsrc_candidate_family_lineage.md"
+      source_hash: "d67fe5e6f5b794853d7ec08764657db6f6c70ff3f23c1435d32b4d6ca2beb6a2"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "d995d94d47a678e01129b95888edddbfd8e7fd5f93f42b0f631f3a21216e28e5"
+      preflight_source_hash: "75d20cc3aae5a212c080b0bc370e129a3c810d57cedea5dbd4506861b034f89e"
+      source_hash_refresh_reason: "The active task lawfully regenerated the mutable current-frontier source; the exact preflight hash remains preserved above."
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P1-T02-EQSRC-CANONICAL-CHOICE-FAMILY-MAP"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_map.tex"
+      source_hash: "fcffa4e7d89654d3d9c656bc7ab0bde10b28ec3e36f4da4a7139759d036455dc"
+  additional_canonical_inspections:
+    - canonical_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_canonical_choice_family_inventory.json"
+      source_hash: "5a823d46054fa75ee7f5f7814aa76ff52ea3e8d8868547229d5b0b2a26e0685e"
+    - canonical_path: "research_control/tasks/RT-20260720-010/artifacts/eqsrc_candidate_lineage_graph.json"
+      source_hash: "ac6e01afde52c7586f9eee25f6fc93d0d519ae5a5c4bb78b874941187a2b3d91"
+    - canonical_path: "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_receipt.md"
+      source_hash: "a4f2aa26f344b1537651a2506589b11d6745e062c61cfc75b06d0a6ac8c705a8"
+    - canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory and .local are retrieval layers only and not authority; canonical tracked sources and registry rows govern."
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260721-005/artifacts/validate_v21_candidate_lineage.py --check --json | exit_code=0 | PASS 53 checks 0 failures 0 artifact mismatches"
+  - ".venv/bin/python -m unittest -v tests.test_candidate_lineage tests.test_report_physics_progress_metrics | exit_code=0 | PASS 10 tests"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths <P10-T03 paths> --explain | exit_code=0 | READY affected profile 15 selected gates"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | exit_code=0 | PASS active RT-20260721-005 handoff-0806 P10-T04 next"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write and --check | exit_code=0 | PASS P10-T04 route current"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | project-system and documentation impact required with exact live reason codes"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --json --changed | exit_code=0 | PASS 0 hard failures"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json-summary | exit_code=0 | PASS 0 findings"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary | exit_code=0 | PASS 0 errors"
+  - "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py | exit_code=0 | PASS"
+  - "git diff --check | exit_code=0 | PASS"
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P10-T03 completed its explicitly authorized project-system work without discovering an incidental shared-system defect outside the AgentJob."
+
+selected_next_route:
+  route_id: "v21_p10_t04_append_only_research_attempt_rework_ledger"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P10-T04"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Expose the evolutionary history hidden by PASS-only completion records."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  executed: false
+  source_completion_dependencies:
+    - "AJC-AJ-RT-20260721-004-001"
+    - "AJC-AJ-RT-20260721-005-001"
+  next_action: "Create one append-only research attempt and rework ledger in a fresh bounded P10-T04 AgentJob without replacing canonical scientific artifacts or executing P4-T05."
+
+notes: "This completion closes exactly one outer AgentJob. It does not invoke improve-project-system separately and it stops before P10-T04."
