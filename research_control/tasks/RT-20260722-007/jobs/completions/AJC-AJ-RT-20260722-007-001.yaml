@@ -1,0 +1,304 @@
+completion_id: "AJC-AJ-RT-20260722-007-001"
+job_id: "AJ-RT-20260722-007-001"
+task_id: "RT-20260722-007"
+decision_id: "DDR-20260722-007"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-007"
+status: "completed"
+completed_at: "2026-07-22T11:58:12Z"
+validation_status: "PASS"
+result_summary: "P11-T05 completed a fail-closed seven-dimension positive-provenance policy with exact Gate B and Gate C evidence extensions. Eighteen contract checks and twenty-seven fixtures pass with zero unexpected results; three positive controls are evidence-complete, twenty-four cases are blocked or invalid, no-target-only and validator-only evidence cannot complete a gate, and valid scoped candidates remain representable. Eleven focused tests pass. This is control evidence only and no review, protected verdict, scientific claim, or physical promotion was executed."
+plan_task_id: "P11-T05"
+recommendation_ids:
+  - "V21-R19"
+  - "V21-R24"
+  - "V21-R33"
+  - "V21-R56"
+  - "V21-R63"
+  - "V21-R67"
+claim_boundary_id: "CB-V21-P11-T05-POSITIVE-PROVENANCE-GATE-001"
+
+artifacts:
+  policy_path: "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md"
+  policy_sha256: "7d679cbcbc05bf771333ba7d3afddb351159b87d0edd92e720942428389b62c6"
+  extensions_path: "research_control/tasks/RT-20260722-007/artifacts/gate_b_c_positive_provenance_extensions.json"
+  extensions_sha256: "ac3f3e874814c81e953a2eb9553a5129129126aae74f415912162e1ef6118228"
+  fixtures_path: "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_gate_fixtures.json"
+  fixtures_sha256: "76aff1e8d8f78eac1061009aa01989ebb4a53b2cd82ae5813ebf18bb395c7bb6"
+  validator_path: "research_control/tasks/RT-20260722-007/artifacts/validate_positive_provenance_gate.py"
+  validator_sha256: "0ba6d2923fa2ce5d9302725189afc54111552bafd1e06cb49dc041d7751d6827"
+  validation_path: "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_gate_validation.json"
+  validation_sha256: "b85433b003f0aa7304120a4a88f089d179f9755218c225173b4ae295b921f8b9"
+  compact_receipt_path: "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_gate_compact_receipt.json"
+  compact_receipt_sha256: "5074272b0e89e754e2ee2bf85a00aa0f3a5b961d282dfa21873a334b64578155"
+  focused_test_path: "tests/test_positive_provenance_operational_gate.py"
+  focused_test_sha256: "f09776acf637ce7b04df12f64e7273cf1d6c0fde876c5c50f54112187bef3428"
+  execution_role_path: "research_control/tasks/RT-20260722-007/roles/project-control-maintainer@0.2.0--RT-20260722-007.yaml"
+  execution_role_sha256: "3c1a25325b8d1c6b094fee896b5f37f1d7eca7fe35d4fa41a76e21ebf8d4960f"
+  dependency_p10_t01_completion_path: "research_control/tasks/RT-20260721-003/jobs/completions/AJC-AJ-RT-20260721-003-001.yaml"
+  dependency_p10_t01_completion_sha256: "28ea88fbfbecd144b7b742152be0fab44cafd0b8ac21869d9ad6be105f2f7305"
+  dependency_p11_t04_completion_path: "research_control/tasks/RT-20260722-006/jobs/completions/AJC-AJ-RT-20260722-006-001.yaml"
+  dependency_p11_t04_completion_sha256: "c5f0a2fd66b31f854e911e608a3095b731c210a90dd061a0fdca25419f079379"
+  contract_dimension_count: 7
+  review_surface_count: 4
+  gate_profile_count: 2
+  contract_check_count: 18
+  fixture_count: 27
+  expected_valid_fixture_count: 12
+  expected_invalid_fixture_count: 15
+  evidence_complete_fixture_count: 3
+  blocked_or_invalid_fixture_count: 24
+  unexpected_fixture_result_count: 0
+  focused_test_count: 11
+  focused_test_failure_count: 0
+  deterministic_rebuild_passed: true
+  no_target_only_blocked: true
+  validator_only_blocked: true
+  scoped_candidate_representable: true
+  review_executed: false
+  protected_gate_verdict_issued: false
+  source_science_mutated: false
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P11-T05 defines a prospective project-control evidence contract and changes no scientific premise or ontology assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  theorem_source_referenced: []
+  identity_note: "Fixture identifiers are synthetic control examples; no scientific candidate theorem metric coupling field equation or derivation object was created or modified."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260722-007/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-007/DDR-20260722-007.md"
+  - "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md"
+  - "research_control/tasks/RT-20260722-007/artifacts/gate_b_c_positive_provenance_extensions.json"
+  - "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_gate_fixtures.json"
+  - "research_control/tasks/RT-20260722-007/artifacts/validate_positive_provenance_gate.py"
+  - "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_gate_validation.json"
+  - "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_gate_compact_receipt.json"
+  - "tests/test_positive_provenance_operational_gate.py"
+  - "research_control/tasks/RT-20260722-007/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260722-007/jobs/AJ-RT-20260722-007-001.yaml"
+  - "research_control/tasks/RT-20260722-007/jobs/completions/AJC-AJ-RT-20260722-007-001.yaml"
+  - "research_control/tasks/RT-20260722-007/roles/project-control-maintainer@0.2.0--RT-20260722-007.yaml"
+  - "research_control/handoffs/handoff-0817.yaml"
+  - "research_control/handoffs/handoff-0817.md"
+outputs_updated:
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/compact_current_frontier_v16.json"
+  - "output/compact_current_frontier_v16.yaml"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Make positive physical evidence a first-class gate."
+  explanation: "P11-T05 supplies a prospective evidence policy and no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "effective_metric_g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A project-control gate contract neither discharges nor worsens an effective-metric physics burden."
+  downstream_unlocked:
+    - "P11-T06 reviewer disagreement and agreement metrics under one fresh bounded project-system AgentJob"
+    - "P14-T03 only after its other dependency P14-T01 is also a qualifying completion"
+  downstream_still_blocked:
+    - "P11-T07 until P11-T03 and P11-T06 also complete"
+    - "broader P10 data-model rollout until P10-AUDIT-F001 and P10-AUDIT-F002 are repaired"
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  policy_definition_authorized: true
+  review_execution_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 48 route identity lease parity max effort repository binding clean start predecessor inactivity and single consumption were verified before work."
+      - "P10-T01 and P11-T04 completion hashes match the immutable task boundary."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Eighteen machine-contract checks and twenty-seven fixtures pass with zero unexpected results."
+      - "Eleven focused tests pass and deterministic regeneration reports zero drift."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Affected-plan documentation-impact project-improvement claim-language research-control memory and diff validations are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier compact-frontier and policy-generated derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+forbidden_conclusion_summary:
+  summary: "Gate evidence completeness is not scientific correctness proof source-law derivation review endorsement or protected promotion authority."
+  forbidden_conclusions:
+    - "no-target purity or validator PASS treated as positive provenance"
+    - "target benchmark agreement treated as source derivation"
+    - "same-context blind or different-model review treated as independent review"
+    - "evidence_complete_for_gate_review treated as a Gate Chair verdict"
+    - "fixture performance treated as source dynamics operational meaning or robustness evidence for a real candidate"
+    - "P11-T06 P11-T07 P14-T03 P10 repair or P4-T05 executed inside P11-T05"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"
+  source_artifacts_mutated: false
+  review_executed: false
+  protected_gate_verdict_issued: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260722-007/artifacts/validate_positive_provenance_gate.py --write --json | exit_code=0 | status=PASS checks=18 fixtures=27 unexpected=0 evidence_complete=3 blocked_or_invalid=24"
+  - ".venv/bin/python -m unittest -v tests.test_positive_provenance_operational_gate | exit_code=0 | tests=11 failures=0"
+  - ".venv/bin/python research_control/tasks/RT-20260722-007/artifacts/validate_positive_provenance_gate.py --check --json | exit_code=0 | status=PASS drift=0"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260722-007 tests/test_positive_provenance_operational_gate.py research_control/program_state.yaml research_control/handoffs/handoff-0817.yaml --explain | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write and --check plus validate_compact_current_frontier_v16.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json and resolve_project_improvement.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | required before checkpoint"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | required before checkpoint"
+  - "git diff --check | required before checkpoint"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 980
+    relationship_row_count: 4851
+    semantic_row_count: 980
+    vault_row_count: 980
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search positive provenance operational meaning --limit 10 --json"
+      query_type: "search"
+      query_text: "positive provenance operational meaning"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RESEARCH-CONTROL-DESIGN-CLAIM-GRAPH-SCHEMA-V1"
+        - "MD-RESEARCH-CONTROL-DESIGN-V21-ASSUMPTION-LEDGER-SCHEMA"
+        - "TEX-V21-P3-T01-EQSRC-SELECTOR-RESOLUTION-TAXONOMY"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "d255911169051f3d5d7ea96569a1c8c9301c8ef1eb1d9bc23a93ab9d7a71f65a"
+      preflight_source_hash: "32d269cb3bc9a84f73100f17d0ddd61686afe787bc81bbea491112b54033c528"
+      source_hash_refresh_reason: "The active task lawfully regenerated the mutable current-frontier source; the exact preflight hash remains preserved above."
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-CLAIM-GRAPH-SCHEMA-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/claim_graph_schema_v1.md"
+      source_hash: "75d0af627600582f48f951901d933eb1cbc524a18a3135b306907a415bbacf7c"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-ASSUMPTION-LEDGER-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/v21_assumption_ledger_schema.md"
+      source_hash: "c05a72e3c2da9c8908e1f11284c3c98932b6627c47ffe55abcba41bf272739db"
+    - object_id: "TEX-V21-P3-T01-EQSRC-SELECTOR-RESOLUTION-TAXONOMY"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-022/artifacts/eqsrc_selector_resolution_taxonomy_v1.tex"
+      source_hash: "4af38c29cc97729cbd4278e5174b4ff3cc76d7921dbf148f953e92c9a3f03d30"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian wiki semantic relationship and .local surfaces are retrieval layers only and not authority; registered canonical sources and tracked control state governed the task."
+
+next_work_item:
+  plan_task_id: "P11-T06"
+  task_type: "v21_reviewer_disagreement_agreement_metrics"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Evaluate review diversity and correlated-agent risk."
+  dependency_ready: true
+  executed: false
+  physics_promotion_authorized: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P11-T05 is the direct planned project-system packet and completed without an incidental reliability finding requiring a separate sidecar."

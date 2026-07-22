@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0816.yaml"
+  - "research_control/handoffs/handoff-0817.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260722-006"
-  latest_handoff_id: "handoff-0816"
-  current_status: "p11_t04_semantic_smuggling_suite_complete_p11_t05_selected"
+  active_task_id: "RT-20260722-007"
+  latest_handoff_id: "handoff-0817"
+  current_status: "p11_t05_positive_provenance_gate_complete_p11_t06_selected"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260722-006"
-  latest_research_handoff_id: "handoff-0816"
-  latest_research_next_action: "Run exactly one bounded P11-T05 project-control-maintainer project-system AgentJob to implement the positive-provenance and operational-meaning gate. Require explicit source derivation uniqueness or quotient status dynamics operational systems robustness and independent-review evidence while treating no-target purity and validator PASS as insufficient for physical promotion."
+  latest_research_task_id: "RT-20260722-007"
+  latest_research_handoff_id: "handoff-0817"
+  latest_research_next_action: "Run exactly one bounded P11-T06 project-control-maintainer project-system AgentJob to create reviewer disagreement and agreement metrics at theorem validity assumptions countermodels physical interpretation and claim scope without treating consensus as proof."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p11_t05_positive_provenance_operational_meaning_gate"
+  route_id: "v21_p11_t06_reviewer_disagreement_agreement_metrics"
   role_family: "project-control-maintainer@0.2.0"
-  target_derivation_milestone: "effective_metric_g_eff"
-  milestone_burden: "Make positive physical evidence a first-class gate."
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Evaluate review diversity and correlated-agent risk."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -521,10 +521,6 @@ metric_use_ledger:
     scoped_obstruction: "2"
 validation:
   latest_required_status: "PASS"
-  pending_layers:
-    - layer: "post_checkpoint"
-      status: "PENDING"
-      evidence:
-        - "The governed checkpoint remains the final transaction gate."
+  pending_layers: []
 authority_warning:
   snapshot_only_not_authority: true

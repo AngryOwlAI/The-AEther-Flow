@@ -1,0 +1,134 @@
+{
+  "authority_boundary": {
+    "evidence_completion_is_gate_verdict": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "review_executed_by_extension": false
+  },
+  "gate_profiles": {
+    "gate_b": {
+      "allowed_review_surfaces": [
+        "effective_metric",
+        "detector_semantics"
+      ],
+      "blocked_downstream": [
+        "matter_coupling",
+        "field_equations"
+      ],
+      "ready_statuses": {
+        "dynamics": [
+          "derived",
+          "validated"
+        ],
+        "independent_review": [
+          "human_expert_review",
+          "independent_replication"
+        ],
+        "naturality": [
+          "derived"
+        ],
+        "operational_systems": [
+          "constructed",
+          "validated"
+        ],
+        "robustness": [
+          "robust"
+        ],
+        "source_derivation": [
+          "source_derived"
+        ],
+        "uniqueness_or_quotient": [
+          "unique",
+          "quotient_defined"
+        ]
+      },
+      "title": "Effective geometry readiness evidence extension"
+    },
+    "gate_c": {
+      "allowed_review_surfaces": [
+        "matter_coupling",
+        "field_equations"
+      ],
+      "blocked_downstream": [
+        "einstein_equations_derivation",
+        "benchmark_promotion"
+      ],
+      "ready_statuses": {
+        "dynamics": [
+          "validated"
+        ],
+        "independent_review": [
+          "human_expert_review",
+          "independent_replication"
+        ],
+        "naturality": [
+          "derived"
+        ],
+        "operational_systems": [
+          "validated"
+        ],
+        "robustness": [
+          "robust"
+        ],
+        "source_derivation": [
+          "source_derived"
+        ],
+        "uniqueness_or_quotient": [
+          "unique",
+          "quotient_defined"
+        ]
+      },
+      "title": "Matter-coupling readiness evidence extension"
+    }
+  },
+  "policy_flags": {
+    "core_dimension_not_applicable_can_complete_gate": false,
+    "gate_evidence_completion_is_physical_promotion": false,
+    "no_target_purity_required_for_evidence_complete": true,
+    "no_target_purity_sufficient_for_evidence_complete": false,
+    "not_applicable_distinct_from_missing": true,
+    "protected_gate_verdict_required_after_evidence_completion": true,
+    "scoped_candidates_remain_representable": true,
+    "validator_pass_sufficient_for_evidence_complete": false
+  },
+  "review_surface_integration": {
+    "detector_semantics": [
+      "source_derivation",
+      "uniqueness_or_quotient",
+      "naturality",
+      "dynamics",
+      "operational_systems",
+      "robustness",
+      "independent_review"
+    ],
+    "effective_metric": [
+      "source_derivation",
+      "uniqueness_or_quotient",
+      "naturality",
+      "dynamics",
+      "operational_systems",
+      "robustness",
+      "independent_review"
+    ],
+    "field_equations": [
+      "source_derivation",
+      "uniqueness_or_quotient",
+      "naturality",
+      "dynamics",
+      "operational_systems",
+      "robustness",
+      "independent_review"
+    ],
+    "matter_coupling": [
+      "source_derivation",
+      "uniqueness_or_quotient",
+      "naturality",
+      "dynamics",
+      "operational_systems",
+      "robustness",
+      "independent_review"
+    ]
+  },
+  "schema_id": "v21_gate_b_c_positive_provenance_extensions_v1",
+  "source_contract_id": "v21_positive_provenance_operational_meaning_gate_v1"
+}

@@ -1,0 +1,209 @@
+handoff_id: "handoff-0817"
+task_id: "RT-20260722-007"
+job_id: "AJ-RT-20260722-007-001"
+completion_id: "AJC-AJ-RT-20260722-007-001"
+completion_path: "research_control/tasks/RT-20260722-007/jobs/completions/AJC-AJ-RT-20260722-007-001.yaml"
+completion_sha256: "fc47c54cefe9f6f3dd7a6a279c41b81fec8816e2bd72c4e58f2856b433dea3dd"
+status: "ready_for_director"
+created_at: "2026-07-22T11:58:12Z"
+parent_handoff_id: "handoff-0816"
+plan_task_id: "P11-T05"
+source_role_id: "project-control-maintainer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-007"
+handoff_summary: "P11-T05 completed a fail-closed seven-dimension positive-provenance policy with exact Gate B and Gate C extensions. Eighteen contract checks and twenty-seven fixtures pass with zero unexpected results; three controls are evidence-complete and twenty-four are blocked or invalid. No-target-only and validator-only evidence cannot complete a gate, scoped candidates remain representable, and no review protected verdict or physical promotion was executed."
+next_action: "Run exactly one bounded P11-T06 project-control-maintainer project-system AgentJob to create reviewer disagreement and agreement metrics at theorem validity assumptions countermodels physical interpretation and claim scope without treating consensus as proof."
+current_claim_boundary: "CB-V21-P11-T05-POSITIVE-PROVENANCE-GATE-001"
+loop_risk_route: "v21_p11_t06_reviewer_disagreement_agreement_metrics"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260722-007"
+  latest_research_handoff_id: "handoff-0817"
+  latest_research_next_action: "Run exactly one bounded P11-T06 project-control-maintainer project-system AgentJob to create reviewer disagreement and agreement metrics at theorem validity assumptions countermodels physical interpretation and claim scope without treating consensus as proof."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh P11-T06 project-system packet may define and validate calibrated reviewer disagreement and agreement metrics without executing scientific promotion or treating consensus as proof."
+  newly_completed_plan_task: "P11-T05"
+  p11_t05_completion_path: "research_control/tasks/RT-20260722-007/jobs/completions/AJC-AJ-RT-20260722-007-001.yaml"
+  p11_t05_completion_sha256: "fc47c54cefe9f6f3dd7a6a279c41b81fec8816e2bd72c4e58f2856b433dea3dd"
+  p11_t05_completed: true
+  gate_policy_status: "PASS_POSITIVE_PROVENANCE_GATE_CONTROL_ONLY"
+  gate_profile_count: 2
+  review_surface_count: 4
+  contract_dimension_count: 7
+  contract_check_count: 18
+  fixture_count: 27
+  evidence_complete_fixture_count: 3
+  blocked_or_invalid_fixture_count: 24
+  unexpected_fixture_result_count: 0
+  focused_test_count: 11
+  focused_test_failure_count: 0
+  no_target_only_blocked: true
+  validator_only_blocked: true
+  scoped_candidate_representable: true
+  not_applicable_distinct_from_missing: true
+  review_executed: false
+  protected_gate_verdict_issued: false
+  p11_t02_completion_path: "research_control/tasks/RT-20260722-005/jobs/completions/AJC-AJ-RT-20260722-005-001.yaml"
+  p11_t02_completion_sha256: "752d2d330f4d1eb974a1e15209efe125a89ca145345ac92c26ae7e3dda350380"
+  p11_t02_completed: true
+  p11_t06_dependency_ready: true
+  p11_t06_selected_next: true
+  p11_t06_executed: false
+  p11_t07_dependency_ready: false
+  p11_t07_blocked_by:
+    - "P11-T03"
+    - "P11-T06"
+  p14_t03_dependency_ready: false
+  p14_t03_blocked_by:
+    - "P14-T01"
+  p10_broader_rollout_frozen: true
+  p10_blocker_ids:
+    - "P10-AUDIT-F001"
+    - "P10-AUDIT-F002"
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  scientific_ledger_change_count: 0
+  physics_promotion_authorized: false
+  proof_authority: false
+  blocked_claims:
+    - "no-target purity validator PASS checkpoint PASS or proof build treated as positive provenance"
+    - "target benchmark agreement treated as source derivation"
+    - "same-context blind or different-model review treated as independent review"
+    - "evidence completeness treated as a Gate Chair verdict"
+    - "P11-T06 P11-T07 P14-T03 P10 repair or P4-T05 executed inside P11-T05"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"
+
+positive_provenance_gate_result:
+  schema_id: "v21_positive_provenance_operational_meaning_gate_v1"
+  status: "PASS_POSITIVE_PROVENANCE_GATE_CONTROL_ONLY"
+  policy_path: "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md"
+  policy_sha256: "7d679cbcbc05bf771333ba7d3afddb351159b87d0edd92e720942428389b62c6"
+  extensions_path: "research_control/tasks/RT-20260722-007/artifacts/gate_b_c_positive_provenance_extensions.json"
+  extensions_sha256: "ac3f3e874814c81e953a2eb9553a5129129126aae74f415912162e1ef6118228"
+  fixtures_path: "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_gate_fixtures.json"
+  fixtures_sha256: "76aff1e8d8f78eac1061009aa01989ebb4a53b2cd82ae5813ebf18bb395c7bb6"
+  validator_path: "research_control/tasks/RT-20260722-007/artifacts/validate_positive_provenance_gate.py"
+  validator_sha256: "0ba6d2923fa2ce5d9302725189afc54111552bafd1e06cb49dc041d7751d6827"
+  validation_path: "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_gate_validation.json"
+  validation_sha256: "b85433b003f0aa7304120a4a88f089d179f9755218c225173b4ae295b921f8b9"
+  compact_receipt_path: "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_gate_compact_receipt.json"
+  compact_receipt_sha256: "5074272b0e89e754e2ee2bf85a00aa0f3a5b961d282dfa21873a334b64578155"
+  required_dimensions:
+    - "source_derivation"
+    - "uniqueness_or_quotient"
+    - "naturality"
+    - "dynamics"
+    - "operational_systems"
+    - "robustness"
+    - "independent_review"
+  review_surfaces:
+    - "effective_metric"
+    - "detector_semantics"
+    - "matter_coupling"
+    - "field_equations"
+  authority_boundary: "Control evidence completeness for later protected review only; no review execution Gate Chair verdict scientific adoption physical promotion proof publication or completed-derivation authority."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Make positive physical evidence a first-class gate."
+  explanation: "P11-T05 adds a project-control evidence policy only and supplies no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_project_system_policy_only"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "effective_metric_g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No source object law metric detector matter coupling field equation or benchmark status changed."
+  downstream_unlocked:
+    - "P11-T06 reviewer disagreement and agreement metrics under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P11-T07 until P11-T03 and P11-T06 complete"
+    - "P14-T03 until P14-T01 completes"
+    - "broader P10 data-model rollout until P10-AUDIT-F001 and P10-AUDIT-F002 are repaired"
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+required_next_packet:
+  task_type: "v21_reviewer_disagreement_agreement_metrics"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "audit_or_review"
+    milestone: "source_equivalence_eqsrc"
+    candidate_family: "not_applicable"
+    result_kind: "implemented_and_validated_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+selected_next_route:
+  route_id: "v21_p11_t06_reviewer_disagreement_agreement_metrics"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P11-T06"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Evaluate review diversity and correlated-agent risk."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  executed: false
+  next_action: "Define reviewer findings and disagreement metrics across theorem validity assumptions countermodels physical interpretation and claim scope while keeping consensus distinct from proof."
+  source_handoff: "research_control/handoffs/handoff-0817.yaml"
+
+authorization_layers:
+  policy_definition_authorized: true
+  review_execution_authorized: false
+  p10_repair_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P11-T05 is the direct planned project-system packet and completed without an incidental reliability finding requiring a separate sidecar."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one bounded P11-T06 reviewer disagreement and agreement metrics packet after the P11-T05 governed checkpoint succeeds."
+  this_handoff_does_not_authorize:
+    - "review execution reviewer commitment or external outreach"
+    - "consensus agreement or metric threshold treated as proof"
+    - "candidate promotion based on source purity validator PASS or evidence-completeness classification"
+    - "P11-T07 P14-T03 P10 repair or P4-T05 execution"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"

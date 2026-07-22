@@ -1,0 +1,562 @@
+{
+  "schema_id": "v21_positive_provenance_gate_fixture_suite_v1",
+  "base_records": {
+    "gate_b_complete": {
+      "schema_id": "v21_positive_provenance_operational_meaning_gate_v1",
+      "record_id": "PPG-GATE-B-BASE-001",
+      "gate_id": "gate_b",
+      "subject_id": "CANDIDATE-EFFECTIVE-GEOMETRY-EXAMPLE",
+      "subject_scope": "scoped_candidate",
+      "review_surface": "effective_metric",
+      "no_target_purity": {
+        "status": "passed",
+        "evidence_refs": ["NO-TARGET-AUDIT-EXAMPLE"]
+      },
+      "validator_receipts": ["VALIDATOR-RECEIPT-EXAMPLE"],
+      "dimensions": {
+        "source_derivation": {
+          "status": "source_derived",
+          "evidence_refs": ["THEOREM-SOURCE-DERIVATION-EXAMPLE"],
+          "source_refs": ["SOURCE-ONTOLOGY-EXAMPLE", "SOURCE-DYNAMICS-EXAMPLE"],
+          "source_hashes": {
+            "SOURCE-ONTOLOGY-EXAMPLE": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "SOURCE-DYNAMICS-EXAMPLE": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          },
+          "premise_kinds": ["source_ontology", "derived_source_consequence"],
+          "not_applicable_reason": ""
+        },
+        "uniqueness_or_quotient": {
+          "status": "unique",
+          "evidence_refs": ["THEOREM-UNIQUENESS-EXAMPLE"],
+          "quotient_scope": "",
+          "not_applicable_reason": ""
+        },
+        "naturality": {
+          "status": "derived",
+          "evidence_refs": ["THEOREM-NATURALITY-EXAMPLE"],
+          "not_applicable_reason": ""
+        },
+        "dynamics": {
+          "status": "derived",
+          "evidence_refs": ["THEOREM-DYNAMICS-EXAMPLE"],
+          "not_applicable_reason": ""
+        },
+        "operational_systems": {
+          "status": "constructed",
+          "evidence_refs": ["OPERATIONAL-CONSTRUCTION-EXAMPLE"],
+          "device_or_protocol_refs": ["PROTOCOL-CLOCK-EXAMPLE"],
+          "not_applicable_reason": ""
+        },
+        "robustness": {
+          "status": "robust",
+          "evidence_refs": ["ROBUSTNESS-ANALYSIS-EXAMPLE"],
+          "perturbation_scope": "Declared finite source-parameter neighborhood.",
+          "not_applicable_reason": ""
+        },
+        "independent_review": {
+          "status": "human_expert_review",
+          "evidence_refs": ["REVIEW-PROVENANCE-EXAMPLE"],
+          "review_artifact_refs": ["REVIEW-ARTIFACT-EXAMPLE"],
+          "not_applicable_reason": ""
+        }
+      },
+      "review_executed": true,
+      "outcome": "evidence_complete_for_gate_review",
+      "authority": {
+        "status": "scoped_evidence",
+        "authority_refs": ["CONTROL-POLICY-P11-T05"],
+        "protected_gate_id": "Gate-B"
+      },
+      "physics_promotion_authorized": false,
+      "forbidden_conclusions": [
+        "Evidence completion is not a protected Gate Chair verdict.",
+        "Validator PASS is not proof or physical promotion."
+      ]
+    },
+    "gate_c_complete": {
+      "schema_id": "v21_positive_provenance_operational_meaning_gate_v1",
+      "record_id": "PPG-GATE-C-BASE-001",
+      "gate_id": "gate_c",
+      "subject_id": "CANDIDATE-MATTER-COUPLING-EXAMPLE",
+      "subject_scope": "scoped_candidate",
+      "review_surface": "matter_coupling",
+      "no_target_purity": {
+        "status": "passed",
+        "evidence_refs": ["NO-TARGET-AUDIT-MATTER-EXAMPLE"]
+      },
+      "validator_receipts": ["VALIDATOR-RECEIPT-MATTER-EXAMPLE"],
+      "dimensions": {
+        "source_derivation": {
+          "status": "source_derived",
+          "evidence_refs": ["THEOREM-SOURCE-MATTER-DERIVATION-EXAMPLE"],
+          "source_refs": ["SOURCE-MATTER-ONTOLOGY-EXAMPLE", "SOURCE-MATTER-DYNAMICS-EXAMPLE"],
+          "source_hashes": {
+            "SOURCE-MATTER-ONTOLOGY-EXAMPLE": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "SOURCE-MATTER-DYNAMICS-EXAMPLE": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          },
+          "premise_kinds": ["source_ontology", "derived_source_consequence"],
+          "not_applicable_reason": ""
+        },
+        "uniqueness_or_quotient": {
+          "status": "quotient_defined",
+          "evidence_refs": ["THEOREM-MATTER-QUOTIENT-EXAMPLE"],
+          "quotient_scope": "Equivalence classes under the declared source gauge action.",
+          "not_applicable_reason": ""
+        },
+        "naturality": {
+          "status": "derived",
+          "evidence_refs": ["THEOREM-MATTER-NATURALITY-EXAMPLE"],
+          "not_applicable_reason": ""
+        },
+        "dynamics": {
+          "status": "validated",
+          "evidence_refs": ["SOURCE-MATTER-DYNAMICS-VALIDATION-EXAMPLE"],
+          "not_applicable_reason": ""
+        },
+        "operational_systems": {
+          "status": "validated",
+          "evidence_refs": ["OPERATIONAL-DETECTOR-VALIDATION-EXAMPLE"],
+          "device_or_protocol_refs": ["PROTOCOL-DETECTOR-EXAMPLE"],
+          "not_applicable_reason": ""
+        },
+        "robustness": {
+          "status": "robust",
+          "evidence_refs": ["MATTER-ROBUSTNESS-ANALYSIS-EXAMPLE"],
+          "perturbation_scope": "Declared coupling and source-state perturbation family.",
+          "not_applicable_reason": ""
+        },
+        "independent_review": {
+          "status": "independent_replication",
+          "evidence_refs": ["REPLICATION-PROVENANCE-EXAMPLE"],
+          "review_artifact_refs": ["REPLICATION-ARTIFACT-EXAMPLE"],
+          "not_applicable_reason": ""
+        }
+      },
+      "review_executed": true,
+      "outcome": "evidence_complete_for_gate_review",
+      "authority": {
+        "status": "scoped_evidence",
+        "authority_refs": ["CONTROL-POLICY-P11-T05"],
+        "protected_gate_id": "Gate-C"
+      },
+      "physics_promotion_authorized": false,
+      "forbidden_conclusions": [
+        "Evidence completion is not Einstein-equation or benchmark authority.",
+        "Independent replication does not itself adopt an ontology or coupling."
+      ]
+    },
+    "scoped_candidate": {
+      "schema_id": "v21_positive_provenance_operational_meaning_gate_v1",
+      "record_id": "PPG-SCOPED-CANDIDATE-BASE-001",
+      "gate_id": "gate_b",
+      "subject_id": "SCOPED-MATHEMATICAL-CANDIDATE-EXAMPLE",
+      "subject_scope": "scoped_candidate",
+      "review_surface": "effective_metric",
+      "no_target_purity": {
+        "status": "passed",
+        "evidence_refs": ["NO-TARGET-AUDIT-SCOPED-EXAMPLE"]
+      },
+      "validator_receipts": ["VALIDATOR-PASS-SCOPED-EXAMPLE"],
+      "dimensions": {
+        "source_derivation": {
+          "status": "proposed",
+          "evidence_refs": ["DRAFT-SOURCE-CONSTRUCTION-EXAMPLE"],
+          "source_refs": ["SOURCE-EXTENSION-DRAFT-EXAMPLE"],
+          "source_hashes": {
+            "SOURCE-EXTENSION-DRAFT-EXAMPLE": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+          },
+          "premise_kinds": ["source_extension"],
+          "not_applicable_reason": ""
+        },
+        "uniqueness_or_quotient": {
+          "status": "multiple_unresolved",
+          "evidence_refs": [],
+          "quotient_scope": "",
+          "not_applicable_reason": ""
+        },
+        "naturality": {
+          "status": "assumed",
+          "evidence_refs": [],
+          "not_applicable_reason": ""
+        },
+        "dynamics": {
+          "status": "proposed",
+          "evidence_refs": [],
+          "not_applicable_reason": ""
+        },
+        "operational_systems": {
+          "status": "missing",
+          "evidence_refs": [],
+          "device_or_protocol_refs": [],
+          "not_applicable_reason": ""
+        },
+        "robustness": {
+          "status": "missing",
+          "evidence_refs": [],
+          "perturbation_scope": "",
+          "not_applicable_reason": ""
+        },
+        "independent_review": {
+          "status": "missing",
+          "evidence_refs": [],
+          "review_artifact_refs": [],
+          "not_applicable_reason": ""
+        }
+      },
+      "review_executed": false,
+      "outcome": "not_ready",
+      "authority": {
+        "status": "control_only",
+        "authority_refs": ["CONTROL-POLICY-P11-T05"],
+        "protected_gate_id": "Gate-B"
+      },
+      "physics_promotion_authorized": false,
+      "forbidden_conclusions": [
+        "A valid scoped candidate is not physically ready.",
+        "No-target and validator receipts do not fill missing positive evidence."
+      ]
+    }
+  },
+  "cases": [
+    {
+      "fixture_id": "POS-GATE-B-UNIQUE-001",
+      "base": "gate_b_complete",
+      "set": {},
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": true,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": []
+    },
+    {
+      "fixture_id": "POS-GATE-B-QUOTIENT-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/record_id": "PPG-GATE-B-QUOTIENT-001",
+        "/dimensions/uniqueness_or_quotient/status": "quotient_defined",
+        "/dimensions/uniqueness_or_quotient/quotient_scope": "Declared source-gauge orbit quotient."
+      },
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": true,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": []
+    },
+    {
+      "fixture_id": "POS-GATE-C-REPLICATION-001",
+      "base": "gate_c_complete",
+      "set": {},
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": true,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": []
+    },
+    {
+      "fixture_id": "POS-SCOPED-CANDIDATE-REPRESENTABLE-001",
+      "base": "scoped_candidate",
+      "set": {},
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": ["uniqueness_or_quotient", "naturality", "dynamics", "operational_systems", "robustness", "independent_review"]
+    },
+    {
+      "fixture_id": "NEG-NO-TARGET-ONLY-001",
+      "base": "scoped_candidate",
+      "set": {
+        "/dimensions/source_derivation/status": "missing",
+        "/dimensions/source_derivation/evidence_refs": [],
+        "/dimensions/source_derivation/source_refs": [],
+        "/dimensions/source_derivation/source_hashes": {},
+        "/dimensions/source_derivation/premise_kinds": []
+      },
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": ["source_derivation", "uniqueness_or_quotient", "naturality", "dynamics", "operational_systems", "robustness", "independent_review"]
+    },
+    {
+      "fixture_id": "NEG-VALIDATOR-PASS-ONLY-001",
+      "base": "scoped_candidate",
+      "set": {
+        "/no_target_purity/status": "not_assessed",
+        "/no_target_purity/evidence_refs": [],
+        "/dimensions/source_derivation/status": "missing",
+        "/dimensions/source_derivation/evidence_refs": [],
+        "/dimensions/source_derivation/source_refs": [],
+        "/dimensions/source_derivation/source_hashes": {},
+        "/dimensions/source_derivation/premise_kinds": []
+      },
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": ["no_target_purity", "source_derivation", "uniqueness_or_quotient", "naturality", "dynamics", "operational_systems", "robustness", "independent_review"]
+    },
+    {
+      "fixture_id": "NEG-TARGET-BENCHMARK-AS-PREMISE-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/source_derivation/premise_kinds": ["target_benchmark"]
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_source_premises_source_only"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-VALIDATOR-RECEIPT-AS-PREMISE-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/source_derivation/premise_kinds": ["validator_receipt"]
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_source_premises_source_only"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-MISSING-SOURCE-HASH-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/source_derivation/source_hashes": {}
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_source_hashes_required"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-QUOTIENT-WITHOUT-SCOPE-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/uniqueness_or_quotient/status": "quotient_defined",
+        "/dimensions/uniqueness_or_quotient/quotient_scope": ""
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_quotient_scope_required"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-NOT-APPLICABLE-WITHOUT-REASON-001",
+      "base": "scoped_candidate",
+      "set": {
+        "/dimensions/naturality/status": "not_applicable",
+        "/dimensions/naturality/not_applicable_reason": ""
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_not_applicable_reason_required"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-NOT-APPLICABLE-WITH-REASON-001",
+      "base": "scoped_candidate",
+      "set": {
+        "/dimensions/naturality/status": "not_applicable",
+        "/dimensions/naturality/not_applicable_reason": "The draft has not yet defined a naturality claim."
+      },
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": ["naturality"]
+    },
+    {
+      "fixture_id": "NEG-DYNAMICS-PROPOSED-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/dynamics/status": "proposed",
+        "/dimensions/dynamics/evidence_refs": ["DRAFT-DYNAMICS-EXAMPLE"],
+        "/outcome": "not_ready"
+      },
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": ["dynamics"]
+    },
+    {
+      "fixture_id": "NEG-OPERATIONAL-MISSING-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/operational_systems/status": "missing",
+        "/dimensions/operational_systems/evidence_refs": [],
+        "/dimensions/operational_systems/device_or_protocol_refs": [],
+        "/outcome": "not_ready"
+      },
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": ["operational_systems"]
+    },
+    {
+      "fixture_id": "NEG-OPERATIONAL-NO-PROTOCOL-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/operational_systems/device_or_protocol_refs": []
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_operational_refs_required"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-ROBUSTNESS-CONDITIONAL-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/robustness/status": "conditional",
+        "/outcome": "not_ready"
+      },
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": ["robustness"]
+    },
+    {
+      "fixture_id": "NEG-ROBUSTNESS-NO-SCOPE-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/robustness/perturbation_scope": ""
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_robustness_scope_required"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-SAME-CONTEXT-REVIEW-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/independent_review/status": "same_context_role_review",
+        "/outcome": "not_ready"
+      },
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": ["independent_review"]
+    },
+    {
+      "fixture_id": "NEG-DIFFERENT-MODEL-REVIEW-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/independent_review/status": "different_model_review",
+        "/outcome": "not_ready"
+      },
+      "delete": [],
+      "expected_valid": true,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": [],
+      "expected_blocker_ids": ["independent_review"]
+    },
+    {
+      "fixture_id": "NEG-REVIEW-NOT-EXECUTED-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/review_executed": false
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_review_evidence_required"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-REVIEW-ARTIFACT-MISSING-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/independent_review/review_artifact_refs": []
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_review_evidence_required"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-MISCLAIMED-EVIDENCE-COMPLETE-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/dimensions/dynamics/status": "proposed",
+        "/dimensions/dynamics/evidence_refs": ["DRAFT-DYNAMICS-EXAMPLE"]
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_outcome_matches_evidence"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-PHYSICS-PROMOTION-TRUE-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/physics_promotion_authorized": true
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_no_implicit_physics_promotion"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-UNKNOWN-ENUM-001",
+      "base": "scoped_candidate",
+      "set": {
+        "/dimensions/dynamics/status": "looks_good"
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_known_enums"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-UNKNOWN-TOP-LEVEL-FIELD-001",
+      "base": "scoped_candidate",
+      "set": {
+        "/promotion_confidence": 1.0
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_exact_shape"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-GATE-SURFACE-MISMATCH-001",
+      "base": "gate_b_complete",
+      "set": {
+        "/review_surface": "field_equations"
+      },
+      "delete": [],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_gate_surface_alignment"],
+      "expected_blocker_ids": ["record_invalid"]
+    },
+    {
+      "fixture_id": "NEG-MISSING-REQUIRED-PATH-001",
+      "base": "scoped_candidate",
+      "set": {},
+      "delete": ["/dimensions/operational_systems/device_or_protocol_refs"],
+      "expected_valid": false,
+      "expected_evidence_complete": false,
+      "expected_rule_ids": ["positive_gate_required_paths"],
+      "expected_blocker_ids": ["record_invalid"]
+    }
+  ]
+}
