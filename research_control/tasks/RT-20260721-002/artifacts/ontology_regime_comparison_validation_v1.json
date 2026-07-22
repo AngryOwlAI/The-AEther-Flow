@@ -1,0 +1,457 @@
+{
+  "artifact_hashes": {
+    "research_control/tasks/RT-20260721-002/artifacts/child_phys_math_ontology_regime_comparison.yaml": "df1a57a025fac93058f16d5d368c2a82dd90011745ea6bbea3c2bac903acdb59",
+    "research_control/tasks/RT-20260721-002/artifacts/child_phys_phil_ontology_regime_comparison.yaml": "e6c794c8fdd500a9f85f5e9382d6634ec84f10476d42bfb19769dcca60d7fa17",
+    "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md": "5dd5526ebdce949ff121f4aa2785e665e006b5e9fec5f8b1d72877d7da26b7ae",
+    "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_criteria_weight_sensitivity_v1.yaml": "13327d4ef88ab70fa4741a40ca298ae3eba4e6e0fb278c6e9bfca7c20f47ed84",
+    "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_external_literature_matrix_v1.csv": "e3c3bfa29e4743a5e6863a9179b07908803b502281e1cf5e6e891d2e73676f73",
+    "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_primary_literature_bibliography_v1.yaml": "c43e0316ad26d936004e7bcf2754c4752e96fcf9804bfd712534efe691e3625f",
+    "research_control/tasks/RT-20260721-002/artifacts/parent_conflict_review_ontology_regime_comparison.yaml": "69166330419ff4c229d91e9f14c86ac5ee90284ace1816d9f651386d34000535",
+    "research_control/tasks/RT-20260721-002/artifacts/parent_fusion_notes_ontology_regime_comparison.md": "b5f55dd8f01aa839c0a1d307b32366e0f4a753daed4d89509d7a1e529192c6c8"
+  },
+  "checks": [
+    {
+      "check_id": "primary_source_count",
+      "detail": "observed=10 expected=10",
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_sources_primary",
+      "detail": "every source must be primary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "balanced_source_sides",
+      "detail": "expected five sources per comparison side",
+      "status": "PASS"
+    },
+    {
+      "check_id": "apa7_metadata",
+      "detail": "every APA 7 entry must include a stable HTTPS locator",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_scope_fields",
+      "detail": "hypotheses conclusion and transfer boundary are required",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_quotations",
+      "detail": "review must use scoped paraphrase rather than quotations",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_row_count",
+      "detail": "observed=10 expected=10",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_schema",
+      "detail": "columns=['aeether_flow_adaptation_needed', 'comparison_side', 'established_conclusion', 'exact_hypotheses', 'forbidden_overread', 'reuse_class', 'source_id', 'source_url', 'topic']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_source_parity",
+      "detail": "bibliography and matrix source IDs must match",
+      "status": "PASS"
+    },
+    {
+      "check_id": "matrix_side_parity",
+      "detail": "matrix must remain balanced",
+      "status": "PASS"
+    },
+    {
+      "check_id": "criterion_count",
+      "detail": "observed=5 expected=5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "criterion_order",
+      "detail": "criterion order must be fixed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "difference_vector",
+      "detail": "computed=[-2.5, 2.5, -2.0, 1.5, 2.0] declared=[-2.5, 2.5, -2.0, 1.5, 2.0]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "mixed_sign_non_dominance",
+      "detail": "difference_vector=[-2.5, 2.5, -2.0, 1.5, 2.0]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "baseline_balanced_research_weight_sum",
+      "detail": "sum=1.0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "baseline_balanced_research_cf_total",
+      "detail": "computed=3.475 declared=3.475",
+      "status": "PASS"
+    },
+    {
+      "check_id": "baseline_balanced_research_ef_total",
+      "detail": "computed=3.375 declared=3.375",
+      "status": "PASS"
+    },
+    {
+      "check_id": "baseline_balanced_research_difference",
+      "detail": "computed=0.10000000000000009 declared=0.1",
+      "status": "PASS"
+    },
+    {
+      "check_id": "baseline_balanced_research_ranking",
+      "detail": "computed=continuum_first declared=continuum_first",
+      "status": "PASS"
+    },
+    {
+      "check_id": "equal_weights_weight_sum",
+      "detail": "sum=1.0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "equal_weights_cf_total",
+      "detail": "computed=3.6 declared=3.6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "equal_weights_ef_total",
+      "detail": "computed=3.3000000000000003 declared=3.3",
+      "status": "PASS"
+    },
+    {
+      "check_id": "equal_weights_difference",
+      "detail": "computed=0.2999999999999998 declared=0.3",
+      "status": "PASS"
+    },
+    {
+      "check_id": "equal_weights_ranking",
+      "detail": "computed=continuum_first declared=continuum_first",
+      "status": "PASS"
+    },
+    {
+      "check_id": "near_term_derivational_delivery_weight_sum",
+      "detail": "sum=1.0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "near_term_derivational_delivery_cf_total",
+      "detail": "computed=4.05 declared=4.05",
+      "status": "PASS"
+    },
+    {
+      "check_id": "near_term_derivational_delivery_ef_total",
+      "detail": "computed=2.875 declared=2.875",
+      "status": "PASS"
+    },
+    {
+      "check_id": "near_term_derivational_delivery_difference",
+      "detail": "computed=1.1749999999999998 declared=1.175",
+      "status": "PASS"
+    },
+    {
+      "check_id": "near_term_derivational_delivery_ranking",
+      "detail": "computed=continuum_first declared=continuum_first",
+      "status": "PASS"
+    },
+    {
+      "check_id": "literature_centered_risk_control_weight_sum",
+      "detail": "sum=1.0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "literature_centered_risk_control_cf_total",
+      "detail": "computed=3.8249999999999997 declared=3.825",
+      "status": "PASS"
+    },
+    {
+      "check_id": "literature_centered_risk_control_ef_total",
+      "detail": "computed=3.1999999999999997 declared=3.2",
+      "status": "PASS"
+    },
+    {
+      "check_id": "literature_centered_risk_control_difference",
+      "detail": "computed=0.625 declared=0.625",
+      "status": "PASS"
+    },
+    {
+      "check_id": "literature_centered_risk_control_ranking",
+      "detail": "computed=continuum_first declared=continuum_first",
+      "status": "PASS"
+    },
+    {
+      "check_id": "formalization_first_weight_sum",
+      "detail": "sum=1.0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "formalization_first_cf_total",
+      "detail": "computed=4.05 declared=4.05",
+      "status": "PASS"
+    },
+    {
+      "check_id": "formalization_first_ef_total",
+      "detail": "computed=2.775 declared=2.775",
+      "status": "PASS"
+    },
+    {
+      "check_id": "formalization_first_difference",
+      "detail": "computed=1.275 declared=1.275",
+      "status": "PASS"
+    },
+    {
+      "check_id": "formalization_first_ranking",
+      "detail": "computed=continuum_first declared=continuum_first",
+      "status": "PASS"
+    },
+    {
+      "check_id": "emergence_ambition_weight_sum",
+      "detail": "sum=1.0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "emergence_ambition_cf_total",
+      "detail": "computed=2.925 declared=2.925",
+      "status": "PASS"
+    },
+    {
+      "check_id": "emergence_ambition_ef_total",
+      "detail": "computed=3.9 declared=3.9",
+      "status": "PASS"
+    },
+    {
+      "check_id": "emergence_ambition_difference",
+      "detail": "computed=-0.9750000000000001 declared=-0.975",
+      "status": "PASS"
+    },
+    {
+      "check_id": "emergence_ambition_ranking",
+      "detail": "computed=emergence_first declared=emergence_first",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_economy_first_weight_sum",
+      "detail": "sum=1.0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_economy_first_cf_total",
+      "detail": "computed=2.85 declared=2.85",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_economy_first_ef_total",
+      "detail": "computed=3.9 declared=3.9",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_economy_first_difference",
+      "detail": "computed=-1.0499999999999998 declared=-1.05",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_economy_first_ranking",
+      "detail": "computed=emergence_first declared=emergence_first",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ranking_flip_coverage",
+      "detail": "rankings=['continuum_first', 'emergence_first']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "nonrobust_conclusion",
+      "detail": "aggregate preference must be marked nonrobust",
+      "status": "PASS"
+    },
+    {
+      "check_id": "math_child_ready",
+      "detail": "math child must pass at comparative-decision-evidence scope",
+      "status": "PASS"
+    },
+    {
+      "check_id": "phil_child_ready",
+      "detail": "philosophy child must be ready for fusion",
+      "status": "PASS"
+    },
+    {
+      "check_id": "phil_revision_review",
+      "detail": "philosophy child must record focused revision review",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_fixed_hash_p4t02",
+      "detail": "math child P4-T02 source hash must be current",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_fixed_hash_p4t03",
+      "detail": "math child P4-T03 source hash must be current",
+      "status": "PASS"
+    },
+    {
+      "check_id": "conflict_resolution",
+      "detail": "parent conflict review must resolve all conflicts",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parallel_revision",
+      "detail": "focused child revision round must be complete",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fusion_boundary",
+      "detail": "fusion must preserve non-selection and non-dominance",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_phrase_260250d7",
+      "detail": "Neither fixed option scientifically dominates the other",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_phrase_a28c278f",
+      "detail": "engineering compatibility only",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_phrase_000b7898",
+      "detail": "Source dynamics is the common decisive absence",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_phrase_d9ba35da",
+      "detail": "does not execute it",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_phrase_df45ead5",
+      "detail": "Distance-to-GR ledger",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_phrase_e45f9a3b",
+      "detail": "blocked_adoption_open_continuation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_reference_ehlers",
+      "detail": "missing reference surname Ehlers",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_reference_hawking",
+      "detail": "missing reference surname Hawking",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_reference_malament",
+      "detail": "missing reference surname Malament",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_reference_connes",
+      "detail": "missing reference surname Connes",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_reference_brunetti",
+      "detail": "missing reference surname Brunetti",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_reference_bombelli",
+      "detail": "missing reference surname Bombelli",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_reference_rideout",
+      "detail": "missing reference surname Rideout",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_reference_major",
+      "detail": "missing reference surname Major",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_reference_benincasa",
+      "detail": "missing reference surname Benincasa",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_reference_ambj\u00f8rn",
+      "detail": "missing reference surname Ambj\u00f8rn",
+      "status": "PASS"
+    },
+    {
+      "check_id": "immutable_672f20d9",
+      "detail": "observed=e50fb9458ee601563a0decc8dc809e719ec4e1d6b62c0682d1175ad2f91a1d90 expected=e50fb9458ee601563a0decc8dc809e719ec4e1d6b62c0682d1175ad2f91a1d90",
+      "status": "PASS"
+    },
+    {
+      "check_id": "immutable_b89eae7a",
+      "detail": "observed=7d408e527015f4e7c09df90277282c284f299fb705cbd4917a22e62ab3e0d1f8 expected=7d408e527015f4e7c09df90277282c284f299fb705cbd4917a22e62ab3e0d1f8",
+      "status": "PASS"
+    },
+    {
+      "check_id": "immutable_7b803536",
+      "detail": "observed=121e86bd8609863ca79fd21d1cf9b5ee855057bc5a0804927946911f1222d6f5 expected=121e86bd8609863ca79fd21d1cf9b5ee855057bc5a0804927946911f1222d6f5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "immutable_c633a8e2",
+      "detail": "observed=b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2 expected=b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2",
+      "status": "PASS"
+    },
+    {
+      "check_id": "immutable_3ca21525",
+      "detail": "observed=ee3ae3298ab45111235388b305cbda2143b0314cb90f9b652115f71eb2fb8c6d expected=ee3ae3298ab45111235388b305cbda2143b0314cb90f9b652115f71eb2fb8c6d",
+      "status": "PASS"
+    },
+    {
+      "check_id": "immutable_0e8be1dc",
+      "detail": "observed=ad43e3408fe2d9686a52a71de7ab8326668e8f04ebe2d2845986898b7d2c000f expected=ad43e3408fe2d9686a52a71de7ab8326668e8f04ebe2d2845986898b7d2c000f",
+      "status": "PASS"
+    },
+    {
+      "check_id": "immutable_df8b749c",
+      "detail": "observed=0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61 expected=0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+      "status": "PASS"
+    },
+    {
+      "check_id": "immutable_795d76df",
+      "detail": "observed=a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf expected=a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary": "Operational validation of P4-T04 comparative decision evidence only; no ontology-regime selection adoption rejection canonical edit Distance-to-GR delta or promotion authority.",
+  "failures": [],
+  "immutable_surface_hashes": {
+    "ontology/tex/aether_flow_dynamics.tex": "ee3ae3298ab45111235388b305cbda2143b0314cb90f9b652115f71eb2fb8c6d",
+    "ontology/tex/aether_flow_foundations.tex": "b14c99501bdb2b9fad0702df3a41230a4bf3bd279ee660c31329e1d33e577fa2",
+    "ontology/tex/aether_flow_geometry.tex": "ad43e3408fe2d9686a52a71de7ab8326668e8f04ebe2d2845986898b7d2c000f",
+    "registries/DISTANCE_TO_GR_LEDGER.csv": "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61",
+    "registries/METRIC_USE_LEDGER.csv": "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf",
+    "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex": "e50fb9458ee601563a0decc8dc809e719ec4e1d6b62c0682d1175ad2f91a1d90",
+    "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex": "7d408e527015f4e7c09df90277282c284f299fb705cbd4917a22e62ab3e0d1f8",
+    "research_control/tasks/RT-20260720-032/artifacts/emergence_first_process_order_ontology_option_v1.tex": "121e86bd8609863ca79fd21d1cf9b5ee855057bc5a0804927946911f1222d6f5"
+  },
+  "metrics": {
+    "baseline_difference": 0.1,
+    "check_count": 83,
+    "criterion_count": 5,
+    "matrix_row_count": 10,
+    "primary_source_count": 10,
+    "ranking_set": [
+      "continuum_first",
+      "emergence_first"
+    ],
+    "robust_preference": false,
+    "scenario_count": 7
+  },
+  "plan_task_id": "P4-T04",
+  "status": "PASS",
+  "task_id": "RT-20260721-002"
+}

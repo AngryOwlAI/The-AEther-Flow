@@ -1,0 +1,587 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260721-002-001"
+completion_id: "AJC-AJ-RT-20260721-002-001"
+task_id: "RT-20260721-002"
+task_type: "v21_ontology_regime_comparative_audit"
+decision_id: "DDR-20260721-002"
+role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260721-002"
+status: "completed"
+created_at: "2026-07-21T23:18:33Z"
+started_at: "2026-07-21T23:18:33Z"
+completed_at: "2026-07-21T23:34:55Z"
+objective: "Execute only v21 P4-T04: compare the fixed continuum-first and emergence-first ontology proposals through criteria, primary literature, and weight sensitivity without making P4-T05's protected decision."
+completion_summary: "P4-T04 compared the two fixed proposal-only ontology options through five explicit criteria, seven parent sensitivity scenarios, an independent mathematical replication, a balanced ten-source primary-literature matrix, downstream M_src/g_eff/matter/dynamics/formalization/exact-GR analysis, and parent-child synthesis. Continuum-first is the conditional lower-risk near-term scaffold and emergence-first the conditional higher-risk higher-explanatory-ambition branch. The baseline margin is small, the score-difference vector has mixed signs, admissible weights reverse the ranking, and plausible scoring uncertainty crosses zero. Neither option dominates, is selected, adopted, rejected, or promoted; P4-T05 remains human-gated."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T04"
+  recommendation_ids:
+    - "V21-R10"
+    - "V21-R11"
+    - "V21-R43"
+    - "V21-R62"
+    - "V21-R68"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "P2-T07"
+    - "P2-T08"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P3-T04"
+    - "P3-T05"
+    - "P3-T06"
+    - "P3-T07"
+    - "P4-T01"
+    - "P4-T02"
+    - "P4-T03"
+    - "P4-T04"
+  protected_dependency_work_item: "P4-T05"
+  protected_dependency_status: "dependency_ready_but_human_gated_not_executed"
+  selected_dependency_independent_work_item: "P10-T01"
+  selection_reason: "P10-T01 has only completed P0-T05 as a dependency, explicitly remains dependency-independent after other human gates, and allows relay progress without supplying P4-T05 authority."
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 34
+  passes_consumed: 33
+  route_work_item_id: "P4-T04"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+is_physics_task: true
+payload_class: "attack_fixture"
+minimum_payload:
+  payload_class: "attack_fixture"
+  payload_artifact_path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md"
+  payload_summary: "A balanced fixed-option adversarial comparison maps primitive debt, bridge burdens, literature transfer limits, downstream interfaces, and weight-sensitive preference regions without making the protected ontology decision."
+has_new_mathematical_payload: true
+has_finite_local_witness: false
+has_countermodel: false
+external_red_team_finding_requires_integration: true
+physics_promotion_authorized: false
+proof_authority: false
+
+artifacts:
+  - "research_control/tasks/RT-20260721-002/artifacts/child_phys_math_ontology_regime_comparison.yaml"
+  - "research_control/tasks/RT-20260721-002/artifacts/child_phys_phil_ontology_regime_comparison.yaml"
+  - "research_control/tasks/RT-20260721-002/artifacts/parent_conflict_review_ontology_regime_comparison.yaml"
+  - "research_control/tasks/RT-20260721-002/artifacts/parent_fusion_notes_ontology_regime_comparison.md"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_criteria_weight_sensitivity_v1.yaml"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_external_literature_matrix_v1.csv"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_primary_literature_bibliography_v1.yaml"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_compact_receipt_v1.json"
+  - "research_control/tasks/RT-20260721-002/artifacts/validate_ontology_regime_comparison.py"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_validation_v1.json"
+output_paths:
+  - "research_control/tasks/RT-20260721-002/**"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_criteria_weight_sensitivity_v1.yaml"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_external_literature_matrix_v1.csv"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_primary_literature_bibliography_v1.yaml"
+  - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_compact_receipt_v1.json"
+  - "research_control/handoffs/handoff-0803.yaml"
+  - "research_control/handoffs/handoff-0803.md"
+  - "research_control/program_state.yaml"
+
+artifact_evidence:
+  comparison_report:
+    path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md"
+    sha256: "5dd5526ebdce949ff121f4aa2785e665e006b5e9fec5f8b1d72877d7da26b7ae"
+  criteria_weight_sensitivity:
+    path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_criteria_weight_sensitivity_v1.yaml"
+    sha256: "13327d4ef88ab70fa4741a40ca298ae3eba4e6e0fb278c6e9bfca7c20f47ed84"
+  external_literature_matrix:
+    path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_external_literature_matrix_v1.csv"
+    sha256: "e3c3bfa29e4743a5e6863a9179b07908803b502281e1cf5e6e891d2e73676f73"
+  primary_literature_bibliography:
+    path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_primary_literature_bibliography_v1.yaml"
+    sha256: "c43e0316ad26d936004e7bcf2754c4752e96fcf9804bfd712534efe691e3625f"
+  validation:
+    path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_validation_v1.json"
+    sha256: "3b21e1d616e6dfa4b04cba31120ee2eda8ce81c11823cf72aa9bf37d65c068a5"
+  compact_receipt:
+    path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_compact_receipt_v1.json"
+    sha256: "5919160f182657d6720e7e13d4f40e4bf6f65b1f014039d1259691d216fe8540"
+  parent_fusion:
+    path: "research_control/tasks/RT-20260721-002/artifacts/parent_fusion_notes_ontology_regime_comparison.md"
+    sha256: "b5f55dd8f01aa839c0a1d307b32366e0f4a753daed4d89509d7a1e529192c6c8"
+
+fixed_input_evidence:
+  source_assumption_ledger:
+    path: "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+    sha256: "e50fb9458ee601563a0decc8dc809e719ec4e1d6b62c0682d1175ad2f91a1d90"
+  continuum_first_option:
+    path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+    sha256: "7d408e527015f4e7c09df90277282c284f299fb705cbd4917a22e62ab3e0d1f8"
+  emergence_first_option:
+    path: "research_control/tasks/RT-20260720-032/artifacts/emergence_first_process_order_ontology_option_v1.tex"
+    sha256: "121e86bd8609863ca79fd21d1cf9b5ee855057bc5a0804927946911f1222d6f5"
+  distance_to_gr_ledger:
+    path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    sha256: "0ec3266d708398acde6f380515c37751c0db8ce03bbb135f8aa60fb0f494ce61"
+    changed: false
+  metric_use_ledger:
+    path: "registries/METRIC_USE_LEDGER.csv"
+    sha256: "a33349c7a153c4fbadb70c7c38b17cf0eebb7672b8e1f692702fc91edf17efcf"
+    changed: false
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260721-002/artifacts/child_phys_math_ontology_regime_comparison.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260721-002/artifacts/child_phys_phil_ontology_regime_comparison.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260721-002/artifacts/parent_conflict_review_ontology_regime_comparison.yaml"
+    resolution_rounds: 1
+    parallel_child_revision_completed: true
+    unresolved_conflicts: []
+    summary: "Minor numerical calibrations were retained as judgment uncertainty; both children and the parent agree on mixed-sign non-dominance, preference sensitivity, and the protected P4-T05 boundary."
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md"
+    fusion_notes_path: "research_control/tasks/RT-20260721-002/artifacts/parent_fusion_notes_ontology_regime_comparison.md"
+    shared_consensus_preserved: true
+    unique_contributions_preserved: true
+    unresolved_limitations_preserved: true
+
+decision_evidence_result:
+  status: "decision_evidence_complete_no_protected_decision"
+  criterion_order:
+    - "assumption_economy"
+    - "formalization_tractability"
+    - "explanatory_power"
+    - "primary_literature_maturity"
+    - "downstream_compatibility"
+  continuum_first_scores:
+    - "2.0"
+    - "4.5"
+    - "2.5"
+    - "4.5"
+    - "4.5"
+  emergence_first_scores:
+    - "4.5"
+    - "2.0"
+    - "4.5"
+    - "3.0"
+    - "2.5"
+  baseline_weights:
+    - "0.25"
+    - "0.20"
+    - "0.20"
+    - "0.15"
+    - "0.20"
+  baseline_continuum_first_total: 3.475
+  baseline_emergence_first_total: 3.375
+  baseline_difference: 0.100
+  score_difference_vector:
+    - "-2.5"
+    - "2.5"
+    - "-2.0"
+    - "1.5"
+    - "2.0"
+  componentwise_dominance: "none"
+  admissible_ranking_flips: true
+  robust_preference: false
+  independent_child_baseline_difference: 0.125
+  conditional_near_term_posture: "continuum-first as lower-risk scaffold only"
+  conditional_foundational_posture: "emergence-first as higher-risk explanatory branch only"
+  ontology_regime_selected: false
+  ontology_regime_adopted: false
+  p4_t05_executed: false
+
+primary_literature_result:
+  bibliography_path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_primary_literature_bibliography_v1.yaml"
+  matrix_path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_external_literature_matrix_v1.csv"
+  primary_source_count: 10
+  continuum_first_source_count: 5
+  emergence_first_source_count: 5
+  quotation_count: 0
+  transfer_conclusion: "Continuum sources are strong under supplied manifold or enriched-algebraic hypotheses; emergence sources supply substantive discrete mechanisms frequently conditional on faithful embedding, richer model dynamics, four-dimensional structure, or continuum approximation. No external result proves, selects, adopts, or rejects an AEther-Flow option."
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260721-002-001"
+    payload_type: "theorem"
+    name: "Conditional weighted non-dominance proposition"
+    summary: "For the declared score vectors, the exact difference D(w)=-2.5w_A+2.5w_T-2.0w_E+1.5w_L+2.0w_D has both positive and negative coefficient directions on the weight simplex, so neither option componentwise dominates and admissible weights realize both rankings."
+  - payload_id: "NMP-RT-20260721-002-002"
+    payload_type: "decision_map"
+    name: "Ontology-option weight-simplex partition"
+    summary: "The tie hyperplane D(w)=0 partitions the admissible four-simplex into conditional continuum-first and emergence-first preference regions, with a nonrobust baseline margin."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-P4T04-001"
+    payload_type: "theorem"
+    object_name: "mixed-sign weighted non-dominance proposition"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_criteria_weight_sensitivity_v1.yaml"
+    burden_effect: "rules_out_weight_independent_preference_under_declared_rubric"
+    summary: "The exact linear score difference changes sign on the admissible weight simplex."
+  - payload_id: "PAYLOAD-P4T04-002"
+    payload_type: "dependency_map_update"
+    object_name: "option-specific source-to-GR burden comparison"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md"
+    burden_effect: "makes_protected_decision_evidence_explicit_no_distance_delta"
+    summary: "Maps both options through M_src g_eff matter dynamics formalization and exact-GR burdens without changing their status."
+  - payload_id: "PAYLOAD-P4T04-003"
+    payload_type: "packet_selection"
+    object_name: "dependency-independent P10-T01 continuation"
+    claim_status: "project-control"
+    source_path: "research_control/handoffs/handoff-0803.yaml"
+    burden_effect: "defers_human_gated_P4_T05_and_selects_dependency_ready_project_system_work"
+    summary: "Preserves P4-T05 for explicit human authority while continuing the included v21 plan through P10-T01."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Supply decision evidence without making protected decision."
+  explanation: "The comparison burden is discharged at decision-evidence scope, but no ontology regime, primitive package, dynamics, reconstruction law, continuum, metric, matter semantics, coupling, or benchmark status is selected or adopted."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "decision_evidence_only"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  old_status: "two proposal-only ontology options exist; comparison and protected regime decision are open"
+  new_status: "comparative decision evidence exists; protected regime decision and adoption remain open"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No ontology regime, primitive package, source dynamics, reconstruction law, continuum, metric, matter semantics, coupling, Einstein dynamics, or benchmark status was selected or adopted."
+  downstream_unlocked:
+    - "P4-T05 evidence consumption under explicit human Gate Chair authority only"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+  explanation: "P4-T04 changes evidence readiness, not physical distance to GR."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "two proposal options and comparative evidence exist; no primitive package or regime is selected or adopted"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; general EqSrc remains undischarged"
+  - burden: "M_src"
+    status: "unchanged; neither option establishes a physical source manifold"
+  - burden: "g_eff"
+    status: "unchanged; neither option derives a physical Lorentzian metric"
+  - burden: "Matter coupling"
+    status: "unchanged; no matter semantics stress energy or universal coupling is derived"
+  - burden: "Einstein equations and exact GR"
+    status: "unchanged; exact GR remains a target-side benchmark"
+
+source_assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  exact_reason: "The task compares two fixed proposal artifacts and does not modify either source signature or canonical ontology."
+
+human_gate_precondition:
+  blocks_payload_definition: false
+  reason: "Comparative evidence is authorized without a gate; selecting, rejecting, redesigning, or adopting an ontology regime is P4-T05 and remains human-gated."
+
+exact_gr_recovery_obligations:
+  checklist:
+    - "Continuum-first must derive physical metric scale clocks matter coupling source dynamics and noncircular exact-GR recovery without hiding target identity in the smooth arena."
+    - "Emergence-first must derive stable manifoldlikeness topology dimension differentiability measure scale metric clocks matter coupling source dynamics and noncircular exact-GR recovery."
+    - "Both must supply operational semantics, robustness, uniqueness or controlled quotient status, and source-to-target realization evidence."
+    - "Protected human authority remains required before regime adoption, canonical ontology change, or benchmark promotion."
+  distance_to_gr_links:
+    - "source_ontology_primitives"
+    - "source_equivalence_eqsrc"
+    - "M_src"
+    - "g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+
+no_target_import_audit_scope:
+  forbidden_source_classes:
+    - "target_dimension_as_derived_evidence"
+    - "target_atlas_as_source_definition"
+    - "target_metric_as_source_definition"
+    - "benchmark_success_as_source_selector"
+    - "repository_compatibility_as_truth_evidence"
+    - "literature_resemblance_as_project_proof"
+    - "validation_or_registry_authority_as_physics_evidence"
+  checked_objects:
+    - "P4-T02 fixed continuum-first option"
+    - "P4-T03 fixed emergence-first option"
+    - "five-criterion score model"
+    - "ten-source literature matrix"
+    - "M_src g_eff matter dynamics formalization and exact-GR comparison"
+
+failure_branches:
+  weight_nonuniqueness: "Admissible priorities select different rankings, so no scalar score is protected decision authority."
+  score_uncertainty: "Plausible judgment variation crosses zero at the baseline weights."
+  literature_transfer: "Continuum and emergence results use stronger or different hypotheses than the project-specific proposals."
+  dynamics_absence: "Neither option supplies source dynamics, so generative and typicality comparison remains unavailable."
+  target_import: "Continuum-first can hide target identity in its arena; emergence-first can hide target training in its manifoldlikeness discriminator."
+
+known_risks:
+  - "familiar mathematics may be misreported as ontology evidence"
+  - "primitive austerity may be misreported as fundamentality"
+  - "engineering compatibility may be misreported as scientific support"
+  - "explanatory ambition may be misreported as achieved emergence"
+  - "conditional external results may be misreported as AEther-Flow proofs"
+  - "decision readiness may be misreported as P4-T05 execution"
+
+failed_alternatives:
+  - "selecting continuum-first from the small baseline margin is blocked by sensitivity and authority"
+  - "selecting emergence-first from primitive economy is blocked by unachieved reconstruction and authority"
+  - "merging both options into an untracked hybrid is blocked"
+  - "treating repository investment or validator success as scientific evidence is blocked"
+
+human_gate_request:
+  required_before_adoption: true
+  requested_decision: "none in P4-T04"
+  exact_requested_ontology_edit: ""
+  p4_t05_evidence_ready: true
+  p4_t05_authority_present: false
+
+selected_next_route:
+  plan_task_id: "P10-T01"
+  worker_skill: "improve-project-system"
+  role_family: "project-control-maintainer@0.2.0"
+  route_label: "ordinary-research-packet"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Implement the semantic control foundation for the v21 research program."
+  dependency_ready: true
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  selection_reason: "P4-T05 remains protected, while P10-T01 is an included nonhuman dependency-ready work item whose only dependency P0-T05 is complete."
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "continuum-first or emergence-first selected adopted rejected or physically established"
+    - "canonical ontology edit"
+    - "P4-T05 execution or Gate Chair verdict"
+    - "M_src or g_eff adoption"
+    - "matter semantics stress energy or universal coupling"
+    - "source dynamics or continuum emergence"
+    - "Einstein equations or exact-GR derivation"
+    - "benchmark promotion publication or completed derivation"
+  summary: "P4-T04 supplies comparative evidence and a conditional posture only. Validator PASS, registry status, role authority, generated derivatives, literature resemblance, and repository investment do not authorize physics conclusions."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_regime_selection_authorized: false
+  physical_gauge_claim_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+three_tier_claim_summary:
+  adopted_objects:
+    - "No new object; existing exact-GR target benchmark and canonical ontology remain unchanged."
+  accepted_evidence_preconditions:
+    - "fixed P4-T02 and P4-T03 proposal hashes"
+    - "five-criterion score arithmetic and independent child replication"
+    - "ten primary sources with exact hypotheses and transfer limits"
+    - "resolved parent-child downstream and epistemic comparison"
+  open_or_blocked_physical_targets:
+    - "P4-T05 protected regime selection redesign rejection or adoption"
+    - "source dynamics operational semantics and source-to-target bridge"
+    - "M_src g_eff matter coupling Einstein equations and exact-GR recovery"
+  forbidden_overread:
+    - "conditional score lead as scientific or ontological dominance"
+    - "engineering compatibility as truth evidence"
+    - "external literature as AEther-Flow proof"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 956
+    relationship_row_count: 4746
+    semantic_row_count: 956
+    vault_row_count: 956
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    refresh_needed: true
+    refresh_performed: true
+    refresh_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    before_local_cache_only_warning_count: 9
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py --json lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+        - "TEX-V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ONTOLOGY-OPTION-V1"
+        - "TEX-V21-P4-T03-EMERGENCE-FIRST-PROCESS-ORDER-ONTOLOGY-OPTION-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "TEX-V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ONTOLOGY-OPTION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+      source_hash: "7d408e527015f4e7c09df90277282c284f299fb705cbd4917a22e62ab3e0d1f8"
+    - object_id: "TEX-V21-P4-T03-EMERGENCE-FIRST-PROCESS-ORDER-ONTOLOGY-OPTION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260720-032/artifacts/emergence_first_process_order_ontology_option_v1.tex"
+      source_hash: "121e86bd8609863ca79fd21d1cf9b5ee855057bc5a0804927946911f1222d6f5"
+  authority_note: "Generated Obsidian, wiki, semantic SQLite, and .local retrieval surfaces are retrieval-only navigation or diagnostic layers and are not authority."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+    summary: "Core memory validation passed after nine local-only retrieval warnings were refreshed to zero with 956 canonical source objects."
+  - command: "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m py_compile research_control/tasks/RT-20260721-002/artifacts/validate_ontology_regime_comparison.py"
+    status: "PASS"
+    summary: "The task-local validator compiles successfully."
+  - command: ".venv/bin/python research_control/tasks/RT-20260721-002/artifacts/validate_ontology_regime_comparison.py --write-report --json"
+    status: "PASS"
+    summary: "All 83 source balance arithmetic sensitivity synthesis fixed-hash and claim-boundary checks passed."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+    summary: "Tracked memory derivatives were regenerated from canonical sources after report registration."
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Canonical memory and generated-derivative integrity passed."
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS"
+    summary: "The live classifier matches the documentation-impact receipt and reports no blocked path."
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+    status: "PASS"
+    summary: "Project-improvement signal parity passed with no incidental signal sidecar."
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+    status: "PASS"
+    summary: "The documentation-impact receipt matches the live change scope."
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS_WITH_WARNINGS"
+    summary: "Changed-scope claim-language validation has no hard failure; advisory findings remain non-authoritative."
+  - command: ".venv/bin/python scripts/research_control/render_current_frontier.py --check; .venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check; .venv/bin/python scripts/research_control/render_task_index.py --check; .venv/bin/python scripts/research_control/render_dependency_graph.py --check; .venv/bin/python scripts/research_control/generate_claim_graph_v1.py --check; .venv/bin/python scripts/research_control/validate_claim_graph_v1.py"
+    status: "PASS"
+    summary: "Current frontier, compact frontier, task index, dependency graph, and claim graph outputs are fresh after final regeneration."
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+    status: "PASS"
+    summary: "Research-control core, active-state, authority, residue, and changed-diff validation passed with zero errors."
+  - command: ".venv/bin/python scripts/research_control/run_full_research_control_validation.py --json --tail-chars 2500"
+    status: "EXPECTED_PRECHECKPOINT_BLOCK"
+    summary: "The deprecated wrapper may stop only at the expected untracked-registered-path barrier owned by the governed checkpoint."
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "No whitespace errors were found in the working-tree diff."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 34 lease route provider identity maximum reasoning repository binding predecessor state and single-consumption parity were verified before worker execution."
+      - "Memory preflight passed after refreshing only local retrieval state, and the fixed option sources plus direct dependencies were inspected."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Both required child perspectives completed, underwent a focused revision round, and were fused with no unresolved conflict."
+      - "Ten primary sources, five criteria, seven parent sensitivity scenarios, independent arithmetic, and fixed-source hashes passed 83 task-local checks."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local, changed-scope claim-language, documentation-impact, signal-parity, renderer, memory, graph, research-control, and whitespace checks pass."
+      - "The deprecated full wrapper may stop only at the expected untracked-registered-path barrier owned by the governed checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The transaction remains uncheckpointed until final validation succeeds."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, and claim graph derivatives were refreshed and focused checks passed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks pass after Markdown report registration."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard findings; advisory warnings remain non-authoritative."
+
+documentation_impact:
+  status: "completed"
+  receipt_path: "research_control/tasks/RT-20260721-002/documentation_impact.yaml"
+  docs_update_required: true
+  updated_source_docs:
+    - "research_control/tasks/RT-20260721-002/DDR-20260721-002.md"
+    - "research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md"
+    - "research_control/tasks/RT-20260721-002/artifacts/parent_fusion_notes_ontology_regime_comparison.md"
+    - "research_control/handoffs/handoff-0803.md"
+
+validation_receipts:
+  memory_preflight: "PASS"
+  task_local_validator: "PASS"
+  primary_source_and_citation_scope: "PASS"
+  criteria_weight_arithmetic: "PASS"
+  parent_child_synthesis: "PASS"
+  immutable_surface_hashes: "PASS"
+  memory_bootstrap: "PASS"
+  memory_validate_only: "PASS"
+  renderers: "PASS"
+  graph_freshness: "PASS"
+  classify_project_changes: "PASS"
+  project_improvement_signal_parity: "PASS"
+  documentation_impact: "PASS"
+  research_control_validation: "PASS"
+  claim_language: "PASS"
+  full_validation: "PASS"
+  git_diff_check: "PASS"
+
+project_improvement_signals: []
+next_handoff_id: "handoff-0803"

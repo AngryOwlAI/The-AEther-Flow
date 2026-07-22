@@ -1,0 +1,38 @@
+review_id: "PARENT-CONFLICT-REVIEW-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON"
+task_id: "RT-20260721-002"
+job_id: "AJ-RT-20260721-002-001"
+status: "resolved"
+created_at: "2026-07-21T23:18:33Z"
+resolution_rounds: 1
+parallel_child_revision_required: true
+parallel_child_revision_completed: true
+child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260721-002/artifacts/child_phys_math_ontology_regime_comparison.yaml"
+    status: "completed_and_hash_corrected"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260721-002/artifacts/child_phys_phil_ontology_regime_comparison.yaml"
+    status: "completed_and_parent_conflict_reviewed"
+consensus:
+  - "Both fixed artifacts are coherent proposal-only options; neither is adopted or physically established."
+  - "Continuum-first has lower near-term formalization and downstream interface cost but pays explicit smooth-arena primitive debt and hidden-target-import risk."
+  - "Emergence-first has lower declared spacetime primitive debt and greater explanatory ambition but higher reconstruction, uniqueness, typicality, dynamics, and schedule risk."
+  - "Neither option supplies source dynamics, operational semantics, matter coupling, Einstein equations, or first-principles exact-GR recovery."
+  - "No componentwise dominance or weight-robust aggregate ranking exists."
+conflicts:
+  - conflict_id: "P4T04-CONFLICT-001-NUMERICAL-CALIBRATION"
+    child_phys_math_position: "Scores CF=(2.0,4.0,2.5,4.0,4.5) and EF=(4.5,2.0,4.0,3.0,2.0); baseline margin CF-EF=0.125."
+    parent_literature_calibration: "Scores CF=(2.0,4.5,2.5,4.5,4.5) and EF=(4.5,2.0,4.5,3.0,2.5); baseline margin CF-EF=0.100."
+    resolution: "Preserve both models. Use the parent model as the task receipt because it incorporates the completed source matrix, and use the independent child model as a replication/sensitivity check. Both have mixed-sign difference vectors, a small continuum-first baseline margin, and admissible ranking flips."
+    substantive_effect: "none_on_non_dominance_or_conditional_recommendation"
+  - conflict_id: "P4T04-CONFLICT-002-COMPATIBILITY-SEMANTICS"
+    possible_overread: "Current M_src and g_eff compatibility is scientific support for continuum-first."
+    resolution: "Label it engineering and representational compatibility only unless a no-target-import bridge theorem is supplied. It may affect delivery risk but not truth status."
+    substantive_effect: "separate_columns_required"
+  - conflict_id: "P4T04-CONFLICT-003-DECISION-READINESS"
+    possible_overread: "Decision-ready requires the reviewer to choose an ontology regime."
+    resolution: "Decision readiness is satisfied by a conditional score map, exact unresolved burdens, discriminating evidence requirements, and uncertainty. Selection, rejection, redesign, or adoption remains P4-T05 and human-gated."
+    substantive_effect: "protected_gate_preserved"
+unresolved_conflicts: []
+parent_resolution_summary: "Minor score calibration differences were retained as evidence of judgment uncertainty. No child asserted a robust winner, regime selection, adoption, or P4-T05 authority."
+claim_boundary_preserved: true

@@ -1,0 +1,332 @@
+schema_id: "v21_p4_t04_child_phys_phil_ontology_regime_comparison_v1"
+status: "completed"
+task_id: "RT-20260721-002"
+job_id: "AJ-RT-20260721-002-001"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+plan_task_id: "P4-T04"
+scope: "Epistemic and theory-risk comparison of the fixed P4-T02 continuum-first and P4-T03 emergence-first proposal-only ontology options; no option selection, adoption, rejection, canonical ontology edit, or P4-T05 execution."
+
+fixed_inputs:
+  continuum_first:
+    path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+    sha256: "7d408e527b1d2db4294981ef5c5d0a08ce2f022eff0487f372b40c484992d0e6"
+    status: "draft/control, proposal-only"
+  emergence_first:
+    path: "research_control/tasks/RT-20260720-032/artifacts/emergence_first_process_order_ontology_option_v1.tex"
+    sha256: "121e86bd9d64831527840ece5e09d45d047fa904578698284562545161566ffe"
+    status: "draft/control, proposal-only, source-extension data"
+  assumption_ledger:
+    path: "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+    status: "draft/control assumption audit"
+
+authority_boundary:
+  output_status: "draft/control comparative evidence"
+  regime_selected: false
+  continuum_first_adopted_or_rejected: false
+  emergence_first_adopted_or_rejected: false
+  canonical_ontology_changed: false
+  scientific_ledgers_changed: false
+  physics_promotion_authorized: false
+  gate_chair_authority_present: false
+  p4_t05_executed: false
+  exact_disposition: "blocked_adoption_open_continuation"
+  reviewer_authority: "Critique and decision support only; the reviewer may expose conditional preferences and uncertainty but may not make the protected regime decision."
+
+evidence_class_separation:
+  scientific_evidence:
+    definition: "A derivation, counterexample, reconstruction result, robustness result, empirically constrained model, or other source-backed result whose exact assumptions and scope are stated."
+    current_record:
+      - "Both fixed options are internally typed proposal-only mathematical models with explicit negative guards."
+      - "The continuum-first option proves only a narrow metric-normalization underdetermination statement after conditional Lorentzian metric existence and order invariance are added."
+      - "The emergence-first option supplies finite order composition and a finite target-dimension nonselection witness, not a continuum-emergence result."
+      - "Neither option supplies source dynamics, physical observables, matter semantics, universal coupling, Einstein dynamics, or first-principles exact-GR recovery."
+    prohibited_inference: "The present record does not scientifically establish that either primitive package is physically true, uniquely adequate, or preferable under every defensible objective."
+  philosophical_preference:
+    definition: "A value judgment about explanatory depth, acceptable primitives, ontological economy, unification, or what should count as a satisfactory explanation."
+    current_role: "Preference enters whenever primitive economy is traded against reconstruction risk or whenever assuming a smooth arena is judged explanatory debt rather than a legitimate starting point."
+    control: "Every such judgment must be labeled as a preference or research-policy choice, not a theorem consequence."
+  engineering_repository_compatibility:
+    definition: "The effort and risk required to express, formalize, validate, and connect an option to the project's present typed artifacts and proof tooling."
+    current_record: "Continuum-first has lower near-term integration friction because the present artifacts use smooth manifolds, fields, M_src, and scoped metric language; emergence-first requires new reconstruction interfaces before most such artifacts can be reused."
+    control: "Compatibility can inform schedule and research-risk management but is not evidence that the compatible ontology is true."
+  current_sunk_investment:
+    definition: "Existing artifact count, elapsed effort, familiar vocabulary, and already-implemented infrastructure."
+    evidential_status: "Not scientific evidence and not an independent decision criterion."
+    permitted_use: "Only as a transparent switching-cost or migration-cost estimate after the scientific and philosophical criteria are evaluated separately."
+
+comparative_axes:
+  primitive_debt:
+    continuum_first: "Pays explicit debt for a four-dimensional Hausdorff second-countable smooth manifold, maximal smooth atlas, ordered parameter action, field-bundle syntax, admissibility class, and structural groupoid. It thereby removes bare-manifold emergence from this branch while leaving physical spacetime identification open."
+    emergence_first: "Begins with a nonempty finite or countable carrier and a locally finite strict partial order, plus guarded finite-fragment interfaces when composition is used. Its smaller typed signature leaves topology, dimension, smoothness, measure, metric, matter, and dynamics as reconstruction burdens."
+    comparison: "Emergence-first is more economical only relative to the declared primitive vocabulary. A primitive count is representation-sensitive: one compact reconstruction or admissibility law can hide substantial modal, probabilistic, or computational structure."
+    judgment_class: "Scientific inventory plus philosophical weighting."
+  explanatory_ambition:
+    continuum_first: "Offers a conservative explanation beginning after the existence of a smooth four-dimensional arena. Its ambition is concentrated on metric, clock, matter, coupling, and dynamics bridges rather than manifold emergence."
+    emergence_first: "Attempts to explain why continuum, dimension, differentiability, and physical geometry appear at all, in addition to the same matter and dynamics obligations."
+    comparison: "Emergence-first has greater potential explanatory reach, but potential reach is not achieved explanatory power until reconstruction, uniqueness, stability, and typicality are demonstrated. Continuum-first has narrower reach but fewer ways for the source-to-target program to fail before metric recovery is addressed."
+    judgment_class: "Philosophical aim constrained by scientific burden evidence."
+  underdetermination:
+    continuum_first: "The same premetric arena and order invariance can admit multiple metric normalizations, and smooth source syntax alone does not select physical time, gauge, matter interpretation, coupling, or Einstein dynamics. The source-to-target realization relation may also be nonunique."
+    emergence_first: "The same finite or coarse order data may admit inequivalent dimensions, topologies, differentiable structures, metric scales, or physical interpretations. Even existence of one continuum approximation would not establish uniqueness, robustness, or dynamical typicality."
+    comparison: "Both options relocate rather than eliminate underdetermination. Continuum-first concentrates it in physical-structure selection on a fixed arena; emergence-first adds arena reconstruction and phase-selection underdetermination before reaching those same physical burdens."
+    judgment_class: "Scientific burden analysis; no global no-go theorem is claimed."
+  empirical_operational_content:
+    continuum_first: "The ordered parameter is not a clock, structural automorphisms are not physical gauge, and typed bundles are not matter. No detector, observable algebra, calibrated scale, or empirical map is provided."
+    emergence_first: "Source precedence is not physical causality or time, local finiteness is not physical volume or discreteness scale, and finite interfaces are not hypersurfaces. No clock, detector, matter, or empirical map is provided."
+    comparison: "The present options are tied: both lack adopted operational semantics and empirical discriminators. Continuum-first's familiar mathematics must not be mistaken for greater empirical content; emergence-first's pregeometric language must not be mistaken for deeper physical interpretation."
+    judgment_class: "Scientific status statement."
+  theory_risk:
+    continuum_first:
+      principal_risks:
+        - "The primitive arena may merely restate the target's most conspicuous structural features without explaining them."
+        - "Smooth-manifold language may make target imports difficult to detect, especially when defining g_eff, clocks, covariance, or matter."
+        - "A source-to-target bridge may remain nonunique even after formal progress because the source carries insufficient physical selectors."
+      risk_profile: "Lower reconstruction risk, moderate explanatory-debt risk, and continuing high physical-bridge risk."
+    emergence_first:
+      principal_risks:
+        - "The manifoldlike sector may not exist, may be dynamically negligible, or may require target-conditioned selection."
+        - "Topology, dimension, differentiability, scale, metric, and physical semantics may not be jointly reconstructible or stable."
+        - "Formal tractability can collapse when dynamics and typicality are added to the minimal kinematics."
+      risk_profile: "High reconstruction and formalization risk, high schedule variance, and potentially greater explanatory payoff if multiple independent burdens are discharged."
+    comparison: "The options occupy different risk classes rather than a single ordered scale. A rational portfolio can keep both live while demanding different falsification and progress criteria."
+    judgment_class: "Research-risk assessment, not physical evidence."
+  formalization:
+    continuum_first: "Standard differential geometry, bundle, and action language makes local theorem statements and downstream interface definitions comparatively direct. Formal ease does not prove the primitive arena physically appropriate."
+    emergence_first: "Finite posets and guarded composition are locally formalizable, but continuum limits, probabilistic typicality, reconstruction stability, and cross-scale uniqueness require a substantially larger formal stack. Formal difficulty does not make the ontology false."
+    comparison: "Continuum-first is presently more tractable for incremental proof production; emergence-first offers cleaner finite combinatorial starting objects but a much harder end-to-end proof obligation."
+    judgment_class: "Engineering and mathematical feasibility assessment."
+
+downstream_interface_assessment:
+  M_src:
+    current_status: "Scoped adopted source-only object; not a target manifold, metric, or GR derivation."
+    continuum_first: "Can host or type M_src-like constructions with comparatively small representational change because a smooth source arena is primitive. The lawful source-to-target identification burden remains."
+    emergence_first: "Cannot inherit M_src as a primitive without defeating the branch's stated weakness. A qualifying source family must first reconstruct an arena and then define the scope and stability of an M_src-like object."
+    decision_relevance: "Continuum-first has a near-term compatibility advantage; this is an engineering fact, not truth evidence."
+  g_eff:
+    current_status: "Scoped metric-response object; not an unscoped physical Lorentzian metric, matter coupling, or Einstein equations."
+    continuum_first: "Differential and bundle syntax can express a g_eff candidate sooner, but the fixed normalization theorem shows that existence and invariance do not select physical scale. Signature, uniqueness, operational meaning, and source dependence remain open."
+    emergence_first: "A g_eff-like object lies after reconstruction of topology, dimension, differentiability, tangent data, measure, and scale. Defining it earlier would import the target structures the branch is meant to explain."
+    decision_relevance: "Continuum-first reduces interface distance; neither option currently derives a physical metric."
+  matter:
+    current_status: "Existing matter-sector artifacts are evidence/preconditions or target grammars, not adopted matter semantics or universal coupling."
+    continuum_first: "Bundles and sections offer immediate mathematical slots for fields, but typing a section does not identify matter, stress energy, detectors, or universal coupling."
+    emergence_first: "Must explain how stable matter-like sectors, observables, localization, and effective fields arise from order/process data before a metric-coupling claim is meaningful."
+    decision_relevance: "Both carry major semantic and coupling debt; continuum-first mainly has a notation and tooling advantage."
+  dynamics:
+    current_status: "No derivation-critical source dynamics closes the ontology milestone."
+    continuum_first: "The admissibility class and ordered action leave action, evolution, conservation, stochastic law, and physical-time interpretation unfilled."
+    emergence_first: "The minimal order and finite composition leave growth law, amplitude or measure, covariance, typicality, and continuum-producing phase behavior unfilled."
+    decision_relevance: "Dynamics is a decisive missing discriminator. Comparing kinematics alone risks ranking two incomplete programs by presentation rather than generative capacity."
+  formal_proof_program:
+    current_status: "Finite and scoped results exist, but no end-to-end source-to-GR derivation certificate exists."
+    continuum_first: "Supports earlier use of mature smooth and algebraic proof frameworks, while hidden target import must be audited at every bridge."
+    emergence_first: "Supports exact finite combinatorial proofs at the base, while requiring new formal definitions for limits, approximation, typicality, and reconstructed semantics."
+    decision_relevance: "Near-term theorem throughput likely favors continuum-first; end-to-end feasibility remains unknown for both."
+  exact_gr_recovery:
+    current_status: "Exact GR is an adopted target-side benchmark; first-principles recovery remains open."
+    continuum_first: "Skips bare-manifold reconstruction but still owes Lorentzian metric, clock and causal structures, matter and universal coupling, conservation, Einstein dynamics, source-to-target relation, and noncircular benchmark recovery."
+    emergence_first: "Owes all continuum reconstruction layers before inheriting the same metric, matter, coupling, dynamics, and noncircular exact-GR obligations."
+    decision_relevance: "Continuum-first is closer in declared interface distance. No current result shows that its shorter path is scientifically sound, or that emergence-first's longer path can be completed."
+
+hidden_assumptions:
+  continuum_first:
+    - assumption_id: "PHIL-P4T04-CF-H01"
+      statement: "A four-dimensional smooth source arena is the correct granularity at which a first-principles account may legitimately begin."
+      risk: "The option can inherit rather than explain the target's arena structure."
+    - assumption_id: "PHIL-P4T04-CF-H02"
+      statement: "There exists a noncircular realization relation between the source arena and physical spacetime."
+      risk: "Shared dimension and differentiability can conceal an identity-by-fiat."
+    - assumption_id: "PHIL-P4T04-CF-H03"
+      statement: "The ordered action has enough source-side significance to support a later clock or causal bridge."
+      risk: "A formal monoid parameter can remain physically idle."
+    - assumption_id: "PHIL-P4T04-CF-H04"
+      statement: "Bundle and admissibility syntax can be enriched to physical matter without importing target matter semantics."
+      risk: "Mathematical field resemblance can be mistaken for physical identification."
+    - assumption_id: "PHIL-P4T04-CF-H05"
+      statement: "Metric selection, normalization, and universal coupling can be supplied without making the premetric label nominal."
+      risk: "Adding target-shaped structure ad hoc can shift the explanatory burden into unconstrained bridge laws."
+  emergence_first:
+    - assumption_id: "PHIL-P4T04-EF-H01"
+      statement: "A bare locally finite order is ontologically basic rather than merely an economical encoding of already-spatiotemporal relations."
+      risk: "Pregeometric vocabulary can hide an unargued physical interpretation."
+    - assumption_id: "PHIL-P4T04-EF-H02"
+      statement: "A source-internal manifoldlikeness discriminator exists and does not encode a preferred target."
+      risk: "Training or defining the selector from target examples can make emergence circular."
+    - assumption_id: "PHIL-P4T04-EF-H03"
+      statement: "A dynamically accessible and non-negligible family jointly reconstructs topology, dimension, smoothness, scale, and metric."
+      risk: "Kinematic possibility can coexist with dynamical rarity."
+    - assumption_id: "PHIL-P4T04-EF-H04"
+      statement: "The reconstruction is sufficiently unique and stable to ground physical interpretation."
+      risk: "Multiple inequivalent continua may fit the same finite or coarse source data."
+    - assumption_id: "PHIL-P4T04-EF-H05"
+      statement: "Matter, clocks, observables, and universal coupling can emerge from the same source law rather than being appended independently."
+      risk: "The option can reproduce continuum kinematics while leaving the physical theory untouched."
+  shared:
+    - assumption_id: "PHIL-P4T04-SH-H01"
+      statement: "At least one admissible source dynamics exists and is neither target-conditioned nor empirically empty."
+    - assumption_id: "PHIL-P4T04-SH-H02"
+      statement: "The source-to-target relation can recover exact-GR behavior without using exact-GR closure as a premise."
+    - assumption_id: "PHIL-P4T04-SH-H03"
+      statement: "The proposed source entities admit operational semantics linking them to clocks, matter, detectors, and observations."
+
+symmetric_overread_controls:
+  - overread_id: "PHIL-P4T04-SO-001"
+    continuum_first_overread: "A shorter declared route and familiar mathematics make continuum-first more likely true."
+    emergence_first_overread: "A smaller primitive signature and greater explanatory ambition make emergence-first more likely true."
+    correction: "Route length and primitive economy are decision criteria only after their value weights and hidden-law complexity are exposed."
+  - overread_id: "PHIL-P4T04-SO-002"
+    continuum_first_overread: "Compatibility with current M_src and g_eff artifacts supplies physical evidence."
+    emergence_first_overread: "Incompatibility with current artifacts shows greater independence and therefore deeper foundations."
+    correction: "Both claims confuse repository relation with scientific support; compatibility measures integration cost only."
+  - overread_id: "PHIL-P4T04-SO-003"
+    continuum_first_overread: "Smooth formal precision entails physical spacetime semantics."
+    emergence_first_overread: "Pregeometric austerity entails physical fundamentality."
+    correction: "Mathematical form does not settle physical interpretation in either direction."
+  - overread_id: "PHIL-P4T04-SO-004"
+    continuum_first_overread: "A conditional metric construction or exact-GR-compatible target closes first-principles recovery."
+    emergence_first_overread: "A finite order embedding or topology reconstruction example establishes continuum emergence."
+    correction: "Scoped existence results do not establish uniqueness, typicality, operational semantics, dynamics, or full recovery."
+  - overread_id: "PHIL-P4T04-SO-005"
+    continuum_first_overread: "Missing metric or dynamics laws refute the option."
+    emergence_first_overread: "Missing reconstruction or dynamics laws refute the option."
+    correction: "Current ontology does not derive the missing law is an open-burden statement, not a global impossibility theorem."
+  - overread_id: "PHIL-P4T04-SO-006"
+    continuum_first_overread: "Primary literature on premetric or continuum methods validates this project-specific source tuple."
+    emergence_first_overread: "Primary literature on causal, discrete, or categorical models validates this project-specific process order."
+    correction: "External literature can establish precedents, conditional results, and known burdens only; transfer requires matching assumptions and conclusions."
+
+external_literature_transfer_limits:
+  general: "The parent literature matrix may compare primary results with these options, but no cited program is automatically identical to either project-specific proposal. Transfer is valid only where primitive signatures, dynamics, observables, approximation notions, and result hypotheses match."
+  continuum_first: "Premetric, causal-reconstruction, continuum-field, or categorical literature can inform which structures follow from declared data and which must be added. It cannot supply this proposal's source dynamics, physical gauge, matter semantics, or exact-GR bridge by analogy."
+  emergence_first: "Causal-set, discrete, process, or reconstruction literature can show that certain constructions are mathematically possible under additional hypotheses. It cannot convert formal precedence into project physical causality, establish typical continuum emergence, or import a foreign dynamics as adopted source law."
+  balanced_guard: "A larger mature literature may lower research uncertainty; it does not increase ontology authority. A sparse literature may increase uncertainty; it does not make a novel option false."
+  child_source_policy: "This child did not browse and introduces no external claims beyond transfer-boundary analysis. Exact citations and source-specific claims are reserved for parent fusion."
+
+consensus_candidates:
+  - consensus_id: "PHIL-P4T04-CON-001"
+    statement: "Both fixed artifacts are coherent proposal-only models with explicit burdens, and neither is an adopted physical ontology."
+    confidence: "high"
+  - consensus_id: "PHIL-P4T04-CON-002"
+    statement: "Continuum-first has lower near-term integration and formalization cost for M_src, g_eff, and existing smooth artifacts, but that advantage is engineering compatibility rather than evidence of truth."
+    confidence: "high"
+  - consensus_id: "PHIL-P4T04-CON-003"
+    statement: "Emergence-first has greater explanatory ambition and lower declared spacetime primitive debt, together with substantially greater reconstruction, uniqueness, typicality, dynamics, and schedule risk."
+    confidence: "high"
+  - consensus_id: "PHIL-P4T04-CON-004"
+    statement: "Neither option currently supplies operational or empirical content, adopted source dynamics, matter coupling, Einstein equations, or first-principles exact-GR recovery."
+    confidence: "high"
+  - consensus_id: "PHIL-P4T04-CON-005"
+    statement: "No scientific dominance theorem follows from the fixed artifacts; any aggregate ranking depends on explicit criterion weights and risk tolerance."
+    confidence: "high"
+  - consensus_id: "PHIL-P4T04-CON-006"
+    statement: "P4-T04 can expose conditional recommendations but P4-T05 alone remains the protected selection or redesign gate."
+    confidence: "high"
+
+unique_contributions:
+  - contribution_id: "PHIL-P4T04-UNQ-001"
+    statement: "Burden-relocation principle: a regime should not receive explanatory credit merely for deleting primitives if equivalent complexity reappears in an untyped reconstruction, selection, or typicality law."
+  - contribution_id: "PHIL-P4T04-UNQ-002"
+    statement: "Dual-risk taxonomy: continuum-first bears explanatory-debt and hidden-target-import risk, while emergence-first bears existence, reconstruction, and dynamical-typicality risk; these risks are not commensurable without declared values."
+  - contribution_id: "PHIL-P4T04-UNQ-003"
+    statement: "Kinematics-only warning: the absence of source dynamics in both options prevents a scientifically strong regime ranking because dynamics may reverse judgments based on primitive economy or local tractability."
+  - contribution_id: "PHIL-P4T04-UNQ-004"
+    statement: "Portfolio posture: preserve both options as controlled probes with option-specific failure criteria until one common bridge challenge supplies discriminating evidence."
+  - contribution_id: "PHIL-P4T04-UNQ-005"
+    statement: "Sunk-cost firewall: present repository alignment may enter a resource plan but must be reported in a separate column from scientific and philosophical merits."
+
+uncertainties:
+  - uncertainty_id: "PHIL-P4T04-U-001"
+    statement: "No source dynamics is available for either option, so generative capacity, typicality, and empirical reach cannot be compared."
+    severity: "decisive"
+  - uncertainty_id: "PHIL-P4T04-U-002"
+    statement: "No matched source-to-target bridge construction has been attempted under both fixed primitive packages."
+    severity: "high"
+  - uncertainty_id: "PHIL-P4T04-U-003"
+    statement: "Primitive counts and burden counts depend on how compound laws are decomposed and therefore cannot provide a theory-neutral scalar measure of economy."
+    severity: "high"
+  - uncertainty_id: "PHIL-P4T04-U-004"
+    statement: "The external primary-literature matrix is parent-owned; source-specific transfer strength is not evaluated in this child artifact."
+    severity: "bounded"
+  - uncertainty_id: "PHIL-P4T04-U-005"
+    statement: "The empirical discriminators that would distinguish the regimes from each other and from exact GR are unspecified."
+    severity: "decisive"
+
+possible_conflicts:
+  - conflict_id: "PHIL-P4T04-PC-001"
+    possible_other_view: "A weighted numerical score may report one option as the baseline winner."
+    child_position: "A baseline score is conditional decision arithmetic, not a scientific dominance result; the report must show weight regions or scenarios where the ranking changes."
+    proposed_resolution: "Retain the computed score while labeling its weights as policy inputs and separating scientific findings from the aggregate recommendation."
+  - conflict_id: "PHIL-P4T04-PC-002"
+    possible_other_view: "Continuum-first's shorter distance to current M_src and g_eff artifacts may be described as downstream scientific compatibility."
+    child_position: "Unless a bridge theorem transfers those artifacts without target import, this is primarily engineering and representational compatibility."
+    proposed_resolution: "Use separate scientific-compatibility and repository-compatibility fields."
+  - conflict_id: "PHIL-P4T04-PC-003"
+    possible_other_view: "Emergence-first may be judged more economical by counting declared primitives."
+    child_position: "The count is informative but incomplete until reconstruction-law, dynamics-law, selector, and typicality complexity are represented."
+    proposed_resolution: "Report declared primitive debt and downstream law debt separately rather than combining them into an unqualified economy claim."
+  - conflict_id: "PHIL-P4T04-PC-004"
+    possible_other_view: "Decision readiness may be interpreted as requiring the reviewer to recommend one regime now."
+    child_position: "Decision readiness can instead consist of a conditional decision map, unresolved evidence gaps, and explicit protected criteria for P4-T05."
+    proposed_resolution: "Provide conditional branches and a non-protected evidence-acquisition posture; reserve selection, rejection, or redesign for the Gate Chair."
+
+non_protected_recommendation:
+  posture: "Do not scientifically rank, select, adopt, or reject either fixed option on the current record. Present P4-T05 with a conditional decision map: continuum-first is the lower-risk near-term scaffold if priority is incremental formalization and compatibility with current smooth source artifacts; emergence-first is the higher-risk exploratory program if priority is explaining continuum structure and the Gate Chair accepts substantially greater reconstruction uncertainty."
+  immediate_control_use:
+    - "Use continuum-first only as a conservative comparison baseline for bridge accounting, not as presumptive ontology."
+    - "Use emergence-first only as an explanatory-stress comparator with explicit reconstruction and typicality milestones, not as presumptively fundamental ontology."
+    - "Keep both fixed artifacts unchanged until protected authority decides whether to select, reject, redesign, or continue a dual-track program."
+  discriminating_evidence_before_strong_preference:
+    - "Run one matched, no-target-import source-to-target challenge for both options, such as constructing a calibrated clock/scale or a scoped metric interface from source-side data."
+    - "Require each option to state a source dynamics and one falsifiable or formal failure criterion."
+    - "Audit whether the emergence-first discriminator is target-neutral and whether the continuum-first bridge avoids identity-by-fiat."
+    - "State criterion weights and uncertainty ranges before aggregating scores, with repository investment isolated from scientific merit."
+  conditional_preference_strength: "weak to moderate and objective-dependent"
+  scientific_dominance_claimed: false
+  regime_selected: false
+  gate_chair_action_claimed: false
+
+claim_vocabulary:
+  allowed:
+    - "draft/control comparative evidence"
+    - "proposal-only option"
+    - "conditional preference"
+    - "primitive debt"
+    - "reconstruction burden"
+    - "engineering compatibility"
+    - "philosophical preference"
+    - "current ontology does not derive X"
+    - "blocked_adoption_open_continuation"
+    - "P4-T05 remains human-gated"
+  forbidden:
+    - "continuum-first selected, adopted, or scientifically superior"
+    - "emergence-first selected, adopted, or scientifically superior"
+    - "either option refuted or rejected"
+    - "M_src is the target manifold"
+    - "g_eff is a physical Lorentzian metric or Einstein equations"
+    - "matter semantics or universal coupling derived"
+    - "source dynamics established"
+    - "continuum emergence established"
+    - "exact GR derived or benchmark promoted"
+    - "validator PASS is scientific proof"
+    - "repository investment is evidence of truth"
+
+revision_review:
+  status: "complete"
+  revision_round: 1
+  substantive_recommendation_changed: false
+  resolutions:
+    numerical_ranking: "Any numerical ranking is conditional decision arithmetic under declared criterion weights and uncertainty; it is not a scientific dominance result."
+    downstream_compatibility: "Compatibility with M_src, g_eff, current artifacts, or current proof tooling is engineering compatibility unless a source-backed bridge theorem establishes scientific transfer."
+    protected_decision: "P4-T05 remains the protected human Gate Chair decision; P4-T04 and this child artifact neither select, adopt, reject, nor redesign an ontology regime."
+
+source_basis:
+  - "research_control/tasks/RT-20260721-002/jobs/AJ-RT-20260721-002-001.yaml"
+  - "research_control/tasks/RT-20260721-002/roles/external-red-team-reviewer@0.1.0--RT-20260721-002.yaml"
+  - "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+  - "research_control/tasks/RT-20260720-032/artifacts/emergence_first_process_order_ontology_option_v1.tex"
+  - "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+  - "research_control/design/epistemic_category_glossary.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md#P4-T04"
+
+validation_status: "READY_FOR_PARENT_FUSION"

@@ -471,6 +471,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-019-PARENT-FUSION-NOTES-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `research_control/tasks/RT-20260720-019/artifacts/parent_fusion_notes_eqsrc_selector_theorem_smuggling_audit.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-028-EQSRC-FAMILY-FREEZE-AND-FRONTIER-DECISION-RECEIPT` `research_control/tasks/RT-20260720-028/artifacts/eqsrc_family_freeze_and_frontier_decision_receipt.md`
 - `MD-RESEARCH-CONTROL-TASKS-RT-20260720-028-PARENT-FUSION-NOTES-EQSRC-FAMILY-FREEZE-INVENTORY` `research_control/tasks/RT-20260720-028/artifacts/parent_fusion_notes_eqsrc_family_freeze_inventory.md`
+- `MD-RESEARCH-CONTROL-TASKS-RT-20260721-002-PARENT-FUSION-NOTES-ONTOLOGY-REGIME-COMPARISON` `research_control/tasks/RT-20260721-002/artifacts/parent_fusion_notes_ontology_regime_comparison.md`
 - `MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `research_control/templates/post_stress_selector_task_template.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `.agents/roles/physics/candidate-constructor.v0.1.0.md`
 - `MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `.agents/roles/physics/candidate-constructor.v0.2.0.md`
@@ -544,6 +545,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V20-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/tasks/RT-20260718-011/artifacts/v20_recommendation_backlog_schema.md`
 - `MD-V21-P1-T05-EQSRC-NATURALITY-PRIMARY-LITERATURE-REVIEW` `research_control/tasks/RT-20260720-013/artifacts/eqsrc_naturality_primary_literature_review.md`
 - `MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `research_control/tasks/RT-20260720-030/artifacts/source_assumption_unresolved_ambiguities_v1.md`
+- `MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `research_control/tasks/RT-20260721-002/artifacts/ontology_regime_comparison_report_v1.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## pdf
@@ -1436,6 +1438,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-019-PARENT-FUSION-NOTES-EQSRC-SELECTOR-THEOREM-SMUGGLING-AUDIT` `wiki/markdown/md-research-control-tasks-rt-20260720-019-parent-fusion-notes-eqsrc-selector-theorem-smuggling-audit.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-028-EQSRC-FAMILY-FREEZE-AND-FRONTIER-DECISION-RECEIPT` `wiki/markdown/md-research-control-tasks-rt-20260720-028-eqsrc-family-freeze-and-frontier-decision-receipt.md`
 - `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260720-028-PARENT-FUSION-NOTES-EQSRC-FAMILY-FREEZE-INVENTORY` `wiki/markdown/md-research-control-tasks-rt-20260720-028-parent-fusion-notes-eqsrc-family-freeze-inventory.md`
+- `WIKI-MD-RESEARCH-CONTROL-TASKS-RT-20260721-002-PARENT-FUSION-NOTES-ONTOLOGY-REGIME-COMPARISON` `wiki/markdown/md-research-control-tasks-rt-20260721-002-parent-fusion-notes-ontology-regime-comparison.md`
 - `WIKI-MD-RESEARCH-CONTROL-TEMPLATES-POST-STRESS-SELECTOR-TASK-TEMPLATE` `wiki/markdown/md-research-control-templates-post-stress-selector-task-template.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-1-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-1-0-md.md`
 - `WIKI-MD-ROLE-AGENTS-ROLES-PHYSICS-CANDIDATE-CONSTRUCTOR-V0-2-0-MD` `wiki/markdown/md-role-agents-roles-physics-candidate-constructor-v0-2-0-md.md`
@@ -1509,6 +1512,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V20-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-v20-recommendation-backlog-schema.md`
 - `WIKI-MD-V21-P1-T05-EQSRC-NATURALITY-PRIMARY-LITERATURE-REVIEW` `wiki/markdown/md-v21-p1-t05-eqsrc-naturality-primary-literature-review.md`
 - `WIKI-MD-V21-P4-T01-SOURCE-ASSUMPTION-AMBIGUITIES` `wiki/markdown/md-v21-p4-t01-source-assumption-ambiguities.md`
+- `WIKI-MD-V21-P4-T04-ONTOLOGY-REGIME-COMPARISON-REPORT-V1` `wiki/markdown/md-v21-p4-t04-ontology-regime-comparison-report-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`

@@ -6,9 +6,9 @@ Generated navigation support only. This index is not task authority, physics pro
 
 - Schema: `research_control_task_index_v1`
 - Schema source: `research_control/design/task_index_schema_v1.md`
-- Source fingerprint: `b132daa06736e2465f9ce53b1bb498f5a40cf1935334ff652f68d4189442bcdc`
-- Generated-at source timestamp: `2026-07-21T22:38:14Z`
-- Row count: `1038`
+- Source fingerprint: `b35eb8ff298ba635695b8d69f277d479223248415b15c6c61742074d239a7fd7`
+- Generated-at source timestamp: `2026-07-21T23:18:33Z`
+- Row count: `1039`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -16,6 +16,7 @@ Generated navigation support only. This index is not task authority, physics pro
 
 |task_id|parent_task_id|created_at|closed_at|task_type|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260721-002|RT-20260720-032|2026-07-21T23:18:33Z|2026-07-21T23:34:55Z|v21_ontology_regime_comparative_audit|completed|source_ontology|Supply decision evidence without making protected decision.|external-red-team-reviewer@0.1.0|false|false|12|Run exactly one bounded v21 P10-T01 improve-project-system packet defining normalized assumption-provenance and scientific-status schemas while preserving P4-T05 for explicit human Gate Chair authority.|PASS|research_control/tasks/RT-20260721-002/jobs/completions/AJC-AJ-RT-20260721-002-001.yaml|
 |RT-20260721-001||2026-07-21T22:38:14Z|2026-07-21T22:49:01Z|project_system_user_modified_soul_guidance_integration|completed|none|Project-system documentation and registry integration only; no Distance-to-GR or scientific-status delta.|validator-engineer@0.2.0|false|false|0|After a clean governed checkpoint, explicitly recover and resume the v21 relay at its unchanged P4-T04 route.|PASS|research_control/tasks/RT-20260721-001/jobs/completions/AJC-AJ-RT-20260721-001-001.yaml|
 |RT-20260720-032|RT-20260720-031|2026-07-21T20:44:41Z|2026-07-21T20:59:12Z|v21_emergence_first_pregeometric_ontology_option|completed|source_ontology|Provide the alternative ontology option appropriate to genuine spacetime emergence.|ontology-formalizer@0.2.0|false|false|12|Run exactly one bounded P4-T04 external-primary-literature comparison packet in a separate AgentJob; do not make the protected P4-T05 ontology-regime decision.|PASS|research_control/tasks/RT-20260720-032/jobs/completions/AJC-AJ-RT-20260720-032-001.yaml|
 |RT-20260720-031|RT-20260720-030|2026-07-21T19:32:55Z|2026-07-21T19:46:25Z|v21_continuum_first_premetric_ontology_option|completed|source_ontology|Provide one coherent ontology option without emergence overread.|ontology-formalizer@0.2.0|false|false|10|Run exactly one bounded P4-T03 emergence-first proposal packet in a separate AgentJob; do not compare or select regimes and do not execute P4-T04 in the same job.|PASS|research_control/tasks/RT-20260720-031/jobs/completions/AJC-AJ-RT-20260720-031-001.yaml|

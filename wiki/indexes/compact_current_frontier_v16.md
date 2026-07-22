@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260720-032`
-- Latest handoff: `handoff-0802`
-- Current status: `v21_p4_t03_emergence_first_process_order_candidate_complete_proposal_only_no_distance_delta_p4_t04_ready`
+- Active task: `RT-20260721-002`
+- Latest handoff: `handoff-0803`
+- Current status: `v21_p4_t04_comparative_decision_evidence_complete_no_regime_decision_no_distance_delta_p10_t01_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260720-032`
-- Latest research handoff: `handoff-0802`
-- Latest research next action: Run exactly one bounded v21 P4-T04 external-red-team-reviewer packet in a separate AgentJob. Compare the fixed P4-T02 and P4-T03 proposal options using explicit scientific mathematical engineering and primary-literature criteria, include weight-sensitivity and uncertainty, but do not make the protected P4-T05 ontology-regime decision or edit canonical ontology.
+- Latest research task: `RT-20260721-002`
+- Latest research handoff: `handoff-0803`
+- Latest research next action: Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p4_t04_ontology_regime_comparative_external_review`
-- Role family: `external-red-team-reviewer@0.1.0`
-- Target milestone: `source_ontology`
-- Milestone burden: Supply decision evidence without making the protected decision.
+- Route ID: `v21_p10_t01_normalized_assumption_and_scientific_status_schemas`
+- Role family: `project-control-maintainer@0.2.0`
+- Target milestone: `source_equivalence_eqsrc`
+- Milestone burden: Implement the semantic control foundation for the v21 research program.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `ea12f98990050b9603faf08e759bb330ed95ec205dc051505a75c78e886a7a0d`
-- JSON SHA-256: `729250a6feef62c11920c1bdab535f5c15ff0e61c2e18693dbaf753d077a0e9e`
+- YAML SHA-256: `ad926b8d20f42e00d0b05bb1f1533081e7cf32eec9a4fcde931b90ed8cdb9087`
+- JSON SHA-256: `4e5ebec4902cc6163497c1157aa12418755aa8ad7594835801475e90c6155544`
 
 ## Authority Warning
 

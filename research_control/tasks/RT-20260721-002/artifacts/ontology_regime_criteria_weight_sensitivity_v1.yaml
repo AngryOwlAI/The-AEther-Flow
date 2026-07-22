@@ -1,0 +1,112 @@
+analysis_id: "P4-T04-ONTOLOGY-REGIME-CRITERIA-WEIGHT-SENSITIVITY-V1"
+task_id: "RT-20260721-002"
+status: "draft/control"
+claim_status: "proposal-only decision evidence"
+score_scale:
+  minimum: 0.0
+  maximum: 5.0
+  interpretation: "Higher is better on the named criterion; scores are comparative judgments tied to the two fixed proposal artifacts, not measurements of truth."
+criteria:
+  - criterion_id: "assumption_economy"
+    definition: "Rewards fewer source primitives and less target-like structure supplied at the start; does not count hidden recovery burdens as discharged."
+    continuum_first_score: 2.0
+    emergence_first_score: 4.5
+    rationale: "P4-T02 openly assumes four-dimensional smooth manifold structure, an atlas, bundles, fields, and a groupoid; P4-T03 begins with locally finite strict order plus guarded composition."
+  - criterion_id: "formalization_tractability"
+    definition: "Rewards current availability of precise tools for source fields, transformations, local analysis, and theorem construction."
+    continuum_first_score: 4.5
+    emergence_first_score: 2.0
+    rationale: "P4-T02 is immediately compatible with differential geometry and the current theorem stack; P4-T03 must first construct topology, dimension, smoothness, observables, and dynamics."
+  - criterion_id: "explanatory_power"
+    definition: "Rewards how much target spacetime structure would be explained rather than assumed if the option's open burdens were eventually discharged."
+    continuum_first_score: 2.5
+    emergence_first_score: 4.5
+    rationale: "P4-T02 does not explain topology, dimension, or differentiability; P4-T03 aims to make them emergent, although it has not yet achieved that aim."
+  - criterion_id: "primary_literature_maturity"
+    definition: "Rewards directly applicable, theorem-level primary literature while discounting results conditional on already having the target structure."
+    continuum_first_score: 4.5
+    emergence_first_score: 3.0
+    rationale: "Continuum constructive and reconstruction theorems are mature under explicit assumptions; discrete-emergence literature offers substantive mechanisms but many bridge results assume faithful continuum approximation or richer model structure."
+  - criterion_id: "downstream_compatibility"
+    definition: "Rewards near-term compatibility with the current M_src, g_eff, matter, dynamics, formalization, and exact-GR benchmark programme; this is engineering cost, not evidence of truth."
+    continuum_first_score: 4.5
+    emergence_first_score: 2.5
+    rationale: "P4-T02 can host the existing differential-geometric pipeline directly; P4-T03 requires a reconstruction bridge before most current downstream objects are well-typed."
+score_difference_model:
+  option_order: "continuum_first minus emergence_first"
+  criterion_order:
+    - "assumption_economy"
+    - "formalization_tractability"
+    - "explanatory_power"
+    - "primary_literature_maturity"
+    - "downstream_compatibility"
+  difference_vector: [-2.5, 2.5, -2.0, 1.5, 2.0]
+  weight_domain: "w_i >= 0 and sum_i w_i = 1"
+  formula: "D(w) = -2.5*w_assumption + 2.5*w_formalization - 2.0*w_explanation + 1.5*w_literature + 2.0*w_downstream"
+  partition:
+    continuum_first_preferred: "D(w) > 0"
+    tie: "D(w) = 0"
+    emergence_first_preferred: "D(w) < 0"
+  formal_result: "Because the difference vector has both positive and negative components, neither option weakly dominates the other over the admissible weight simplex."
+scenarios:
+  - scenario_id: "baseline_balanced_research"
+    weights: {assumption_economy: 0.25, formalization_tractability: 0.20, explanatory_power: 0.20, primary_literature_maturity: 0.15, downstream_compatibility: 0.20}
+    continuum_first_total: 3.475
+    emergence_first_total: 3.375
+    difference: 0.100
+    ranking: "continuum_first"
+  - scenario_id: "equal_weights"
+    weights: {assumption_economy: 0.20, formalization_tractability: 0.20, explanatory_power: 0.20, primary_literature_maturity: 0.20, downstream_compatibility: 0.20}
+    continuum_first_total: 3.600
+    emergence_first_total: 3.300
+    difference: 0.300
+    ranking: "continuum_first"
+  - scenario_id: "near_term_derivational_delivery"
+    weights: {assumption_economy: 0.10, formalization_tractability: 0.25, explanatory_power: 0.10, primary_literature_maturity: 0.20, downstream_compatibility: 0.35}
+    continuum_first_total: 4.050
+    emergence_first_total: 2.875
+    difference: 1.175
+    ranking: "continuum_first"
+  - scenario_id: "literature_centered_risk_control"
+    weights: {assumption_economy: 0.15, formalization_tractability: 0.15, explanatory_power: 0.15, primary_literature_maturity: 0.35, downstream_compatibility: 0.20}
+    continuum_first_total: 3.825
+    emergence_first_total: 3.200
+    difference: 0.625
+    ranking: "continuum_first"
+  - scenario_id: "formalization_first"
+    weights: {assumption_economy: 0.10, formalization_tractability: 0.40, explanatory_power: 0.10, primary_literature_maturity: 0.15, downstream_compatibility: 0.25}
+    continuum_first_total: 4.050
+    emergence_first_total: 2.775
+    difference: 1.275
+    ranking: "continuum_first"
+  - scenario_id: "emergence_ambition"
+    weights: {assumption_economy: 0.35, formalization_tractability: 0.10, explanatory_power: 0.35, primary_literature_maturity: 0.10, downstream_compatibility: 0.10}
+    continuum_first_total: 2.925
+    emergence_first_total: 3.900
+    difference: -0.975
+    ranking: "emergence_first"
+  - scenario_id: "assumption_economy_first"
+    weights: {assumption_economy: 0.50, formalization_tractability: 0.10, explanatory_power: 0.20, primary_literature_maturity: 0.10, downstream_compatibility: 0.10}
+    continuum_first_total: 2.850
+    emergence_first_total: 3.900
+    difference: -1.050
+    ranking: "emergence_first"
+sensitivity_conclusion:
+  baseline_margin: 0.100
+  worst_case_score_uncertainty_if_each_option_score_varies_by_half_point: 1.000
+  robust_preference: false
+  conclusion: "The baseline ordering is much smaller than plausible rubric uncertainty and flips under admissible priorities. The comparison supports conditional research postures, not a scientific dominance theorem or P4-T05 decision."
+independent_child_replication:
+  source_path: "research_control/tasks/RT-20260721-002/artifacts/child_phys_math_ontology_regime_comparison.yaml"
+  continuum_first_scores: [2.0, 4.0, 2.5, 4.0, 4.5]
+  emergence_first_scores: [4.5, 2.0, 4.0, 3.0, 2.0]
+  difference_vector: [-2.5, 2.0, -1.5, 1.0, 2.5]
+  baseline_difference: 0.125
+  exact_local_flip: "Move 0.025 weight from downstream compatibility to assumption economy."
+  conclusion: "The independent calibration preserves the mixed-sign non-dominance result, narrow continuum-first baseline lead, and admissible ranking flips."
+forbidden_overreads:
+  - "A higher weighted score establishes ontology truth."
+  - "Repository compatibility is scientific evidence."
+  - "Explanatory ambition counts as achieved emergence."
+  - "Literature maturity proves transfer to AEther-Flow."
+  - "This analysis selects, adopts, or rejects an ontology regime."

@@ -1,0 +1,411 @@
+schema_id: "V21-P4-T04-CHILD-PHYS-MATH-ONTOLOGY-REGIME-COMPARISON"
+schema_version: "1.0.0"
+task_id: "RT-20260721-002"
+job_id: "AJ-RT-20260721-002-001"
+plan_task_id: "P4-T04"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "draft/control"
+proposal_status: "proposal-only comparison"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Supply decision evidence without making protected decision."
+scope: "Independent mathematical and physics comparison of the fixed P4-T02 continuum-first and P4-T03 emergence-first proposal artifacts; no ontology selection, adoption, rejection, source modification, or P4-T05 execution."
+
+independence_statement:
+  scoring_origin: "The scores, baseline weights, uncertainty intervals, and sensitivity scenarios in this child artifact were constructed independently for the child_phys_math track from the fixed repository sources named below."
+  external_literature_boundary: "No external source was searched or independently cited in this child track. Primary-literature evidence and transfer limits remain for parent fusion."
+  truth_guard: "Repository investment, file count, implementation order, and current artifact count are excluded as evidence that either ontology is physically true."
+
+fixed_source_basis:
+  - object_id: "TEX-V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ONTOLOGY-OPTION-V1"
+    path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_ontology_option_v1.tex"
+    observed_sha256: "7d408e527015f4e7c09df90277282c284f299fb705cbd4917a22e62ab3e0d1f8"
+    use: "Fixed continuum-first definition, normalization-underdetermination theorem, bridge obligations, and claim boundary."
+  - object_id: "TEX-V21-P4-T03-EMERGENCE-FIRST-PROCESS-ORDER-ONTOLOGY-OPTION-V1"
+    path: "research_control/tasks/RT-20260720-032/artifacts/emergence_first_process_order_ontology_option_v1.tex"
+    observed_sha256: "121e86bd8609863ca79fd21d1cf9b5ee855057bc5a0804927946911f1222d6f5"
+    use: "Fixed emergence-first definition, guarded composition, dimension-nonselection witness, reconstruction obligations, and claim boundary."
+  - object_id: "V21-P4-T02-CONTINUUM-FIRST-PREMETRIC-ASSUMPTION-BURDEN-TABLE"
+    path: "research_control/tasks/RT-20260720-031/artifacts/continuum_first_premetric_assumption_burden_table_v1.yaml"
+    use: "Six proposal primitive packages and seven remaining burdens."
+  - object_id: "V21-P4-T03-EMERGENCE-FIRST-MANIFOLDLIKENESS-BURDEN-MAP"
+    path: "research_control/tasks/RT-20260720-032/artifacts/emergence_first_manifoldlikeness_burden_map_v1.yaml"
+    use: "Two primitive packages and eleven open reconstruction burdens."
+  - object_id: "V21-P4-T01-COMPREHENSIVE-SOURCE-ASSUMPTION-LEDGER-V1"
+    path: "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+    use: "Two-axis assumption status, target-import guard, and current downstream-object status."
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    use: "P4-T04 criteria and decision-evidence boundary."
+
+fixed_option_inventory:
+  continuum_first:
+    identifier: "CF-PREMETRIC-OPTION-V1"
+    minimum_description: "A four-dimensional Hausdorff, second-countable, boundaryless smooth manifold with a structural ordered action, smooth bundle syntax, an admissibility class, and a structural automorphism groupoid, but no physical metric, clock, matter semantics, coupling, or dynamics."
+    primitive_package_count: 6
+    remaining_burden_count: 7
+    adopted_primitive_count: 0
+    derived_physical_object_count: 0
+    principal_advantage: "A mature smooth arena is already available for differential and bundle constructions."
+    principal_cost: "Dimension, topology, smoothness, field syntax, admissibility, and structural equivalence are assumed rather than explained."
+  emergence_first:
+    identifier: "EF-LFPO-OPTION-V1"
+    minimum_description: "A nonempty finite or countably infinite token set with one locally finite strict partial order, plus guarded finite-fragment composition, but no topology, dimension, differentiability, metric, physical causality, matter, or dynamics."
+    primitive_package_count: 2
+    remaining_burden_count: 11
+    adopted_primitive_count: 0
+    reconstructed_continuum_layer_count: 0
+    principal_advantage: "The declared source signature does not presuppose target manifold structure."
+    principal_cost: "Every manifoldlike, metric, operational, matter, dynamical, and GR layer remains to be reconstructed and controlled."
+  count_interpretation: "The counts expose different locations of assumption debt. They are not commensurate proof lengths, probabilities of truth, or sufficient statistics for ontology choice."
+
+scoring_rubric:
+  scale:
+    minimum: 0.0
+    maximum: 5.0
+    direction: "Higher is more favorable for the stated criterion."
+    anchors:
+      "0.0": "No present support at proposal scope, or an unbounded unresolved obstacle dominates the criterion."
+      "1.0": "Weak present support; most relevant burdens are undefined or uncontrolled."
+      "2.0": "Some coherent structure exists, but major criterion-specific burdens remain."
+      "3.0": "Mixed evidence with a usable core and substantial unresolved burdens."
+      "4.0": "Strong present support with identifiable but bounded remaining burdens."
+      "5.0": "Very strong present support at the fixed proposal scope; this still does not mean physical truth or adoption."
+  criteria:
+    assumption_economy:
+      definition: "How little target-like spacetime structure and ancillary source structure is postulated before any derivation begins."
+      guard: "Counts inform the score, but ontological parsimony is not equated with truth."
+    formalization_tractability:
+      definition: "How tractable the full declared source-to-target burden appears for precise definitions, proofs, counterexamples, and controlled computations, not merely how easy the bare source syntax is to state."
+      guard: "A finite combinatorial syntax can be easy while its continuum and dynamics program remains difficult."
+    explanatory_power:
+      definition: "How much target structure the option could explain rather than assume, discounted when that explanatory reach is only aspirational and has no current reconstruction theorem."
+      guard: "Ambition is credited conditionally, not counted as achieved emergence."
+    primary_literature_maturity:
+      definition: "Expected maturity of directly relevant mathematical and physical precedent, subject to parent verification of primary sources and exact transfer limits."
+      guard: "This child score is provisional because the child did not perform the authorized literature review."
+    downstream_compatibility:
+      definition: "How directly the option can interface, as a research scaffold, with the existing scoped M_src, g_eff, matter-interface, dynamics, and exact-GR target artifacts without importing those artifacts as source premises."
+      guard: "Compatibility measures engineering reuse and burden alignment, never physical correctness."
+
+independent_scores:
+  assumption_economy:
+    continuum_first:
+      score: 2.0
+      plausible_interval: [1.5, 2.5]
+      evidence: "Six proposal primitive packages include four-dimensional topology, smooth structure, ordered action, bundle types, admissibility, and a structural automorphism groupoid."
+      judgment: "The option is coherent but carries substantial target-adjacent arena debt."
+    emergence_first:
+      score: 4.5
+      plausible_interval: [4.0, 5.0]
+      evidence: "The minimum signature has two packages, token carrier and locally finite strict partial order, with topology, dimension, differentiability, metric, matter, and dynamics explicitly absent."
+      judgment: "The signature is strongly parsimonious, although local finiteness and order remain substantive primitives."
+    difference_continuum_minus_emergence: -2.5
+  formalization_tractability:
+    continuum_first:
+      score: 4.0
+      plausible_interval: [3.5, 4.5]
+      evidence: "Smooth manifolds, bundles, sections, pullbacks, and groupoids give immediately typed mathematics; the option already proves a bounded metric-normalization result."
+      judgment: "Metric selection, physical semantics, source dynamics, and the realization relation remain hard, so the score is below maximal."
+    emergence_first:
+      score: 2.0
+      plausible_interval: [1.5, 2.5]
+      evidence: "Finite partial orders and guarded composition are precise, but eleven reconstruction layers remain open and a countable directed union need not preserve local finiteness automatically."
+      judgment: "Bare syntax is highly formalizable; the full source-to-GR proof program is presently much less tractable."
+    difference_continuum_minus_emergence: 2.0
+  explanatory_power:
+    continuum_first:
+      score: 2.5
+      plausible_interval: [2.0, 3.0]
+      evidence: "The branch can seek source explanations for metric, clocks, matter, coupling, and dynamics, but it cannot explain the assumed four-dimensional smooth arena."
+      judgment: "Its explanatory target is substantial yet structurally narrower."
+    emergence_first:
+      score: 4.0
+      plausible_interval: [3.5, 4.5]
+      evidence: "If successful, the branch could explain topology, dimension, smoothness, causal and metric structure, matter interfaces, and dynamics from weaker source data."
+      judgment: "The score reflects conditional explanatory reach, discounted because zero continuum layers are currently reconstructed."
+    difference_continuum_minus_emergence: -1.5
+  primary_literature_maturity:
+    continuum_first:
+      score: 4.0
+      plausible_interval: [3.5, 4.5]
+      evidence: "The option uses standard continuum differential and bundle structures, but the project-specific tuple and source-to-GR bridge remain proposal-only."
+      judgment: "Direct support for mathematical tools is expected to be strong; support for this ontology or its physical bridge is not presumed."
+    emergence_first:
+      score: 3.0
+      plausible_interval: [2.5, 3.5]
+      evidence: "The fixed P4-T03 source identifies causal-set precedents for locally finite order, growth dynamics, and topology-recovery tests, while explicitly denying that those sources complete continuum or GR recovery."
+      judgment: "There is a serious research program, but the burden chain is less mature than its minimum syntax. Parent literature review may revise this score."
+    difference_continuum_minus_emergence: 1.0
+  downstream_compatibility:
+    continuum_first:
+      score: 4.5
+      plausible_interval: [4.0, 5.0]
+      evidence: "A smooth four-dimensional arena supports the mathematical types used by scoped source-manifold, tensor, bundle, metric-response, and matter-interface artifacts."
+      judgment: "The compatibility is high as scaffolding, but no identification with M_src or transfer of physical authority follows."
+    emergence_first:
+      score: 2.0
+      plausible_interval: [1.5, 2.5]
+      evidence: "The minimum source signature has no topology, tangent space, tensor, metric, field, action, or operational semantics on which current downstream constructions could directly live."
+      judgment: "Most current artifacts can serve only as target-side tests until a reconstruction map exists."
+    difference_continuum_minus_emergence: 2.5
+
+baseline_weight_model:
+  weight_semantics: "Weights express a decision-maker's research priorities. They are judgments, not probabilities, likelihoods, or scientific constants."
+  weights:
+    assumption_economy: 0.25
+    formalization_tractability: 0.20
+    explanatory_power: 0.20
+    primary_literature_maturity: 0.15
+    downstream_compatibility: 0.20
+  weight_sum: 1.00
+  continuum_first_contributions:
+    assumption_economy: 0.500
+    formalization_tractability: 0.800
+    explanatory_power: 0.500
+    primary_literature_maturity: 0.600
+    downstream_compatibility: 0.900
+  emergence_first_contributions:
+    assumption_economy: 1.125
+    formalization_tractability: 0.400
+    explanatory_power: 0.800
+    primary_literature_maturity: 0.450
+    downstream_compatibility: 0.400
+  continuum_first_weighted_score: 3.300
+  emergence_first_weighted_score: 3.175
+  difference_continuum_minus_emergence: 0.125
+  baseline_ranking: "continuum_first_by_0.125"
+  interpretation: "The baseline lead is small and preference-sensitive. It supports at most a conditional near-term scaffold recommendation, not a scientific or ontological verdict."
+
+weighted_difference_hyperplane:
+  simplex_definition: "Let w=(w_A,w_T,w_E,w_L,w_D), with every component nonnegative and w_A+w_T+w_E+w_L+w_D=1. This five-weight domain is mathematically the four-simplex Delta^4; 'five-simplex' is used only informally if it means five criteria."
+  score_difference_vector_continuum_minus_emergence:
+    assumption_economy: -2.5
+    formalization_tractability: 2.0
+    explanatory_power: -1.5
+    primary_literature_maturity: 1.0
+    downstream_compatibility: 2.5
+  full_equation: "Delta(w) = -2.5*w_A + 2.0*w_T - 1.5*w_E + 1.0*w_L + 2.5*w_D."
+  reduced_equation_using_w_D: "Delta(w) = 2.5 - 5.0*w_A - 0.5*w_T - 4.0*w_E - 1.5*w_L, where w_D=1-w_A-w_T-w_E-w_L."
+  tie_hyperplane: "Delta(w)=0."
+  continuum_first_halfspace: "Delta(w)>0."
+  emergence_first_halfspace: "Delta(w)<0."
+  formal_status: "The partition is an exact arithmetic consequence of the declared scores. The scores themselves are auditable judgments, so the hyperplane is not a theorem about nature or about ontology truth."
+  non_dominance_certificate: "The difference vector has both positive and negative entries: emergence-first leads on assumption economy and explanatory power, while continuum-first leads on tractability, provisional literature maturity, and downstream compatibility. Therefore no option componentwise dominates the other under this rubric."
+
+sensitivity_scenarios:
+  - scenario_id: "SENS-01-BASELINE"
+    purpose: "balanced decision-support baseline"
+    weights: {assumption_economy: 0.25, formalization_tractability: 0.20, explanatory_power: 0.20, primary_literature_maturity: 0.15, downstream_compatibility: 0.20}
+    weight_sum: 1.00
+    continuum_first_score: 3.300
+    emergence_first_score: 3.175
+    difference_continuum_minus_emergence: 0.125
+    ranking: "continuum_first"
+  - scenario_id: "SENS-02-EQUAL"
+    purpose: "equal criterion weights"
+    weights: {assumption_economy: 0.20, formalization_tractability: 0.20, explanatory_power: 0.20, primary_literature_maturity: 0.20, downstream_compatibility: 0.20}
+    weight_sum: 1.00
+    continuum_first_score: 3.400
+    emergence_first_score: 3.100
+    difference_continuum_minus_emergence: 0.300
+    ranking: "continuum_first"
+  - scenario_id: "SENS-03-ECONOMY-EXPLANATION"
+    purpose: "prioritize primitive economy and explanatory ambition"
+    weights: {assumption_economy: 0.35, formalization_tractability: 0.10, explanatory_power: 0.35, primary_literature_maturity: 0.10, downstream_compatibility: 0.10}
+    weight_sum: 1.00
+    continuum_first_score: 2.825
+    emergence_first_score: 3.675
+    difference_continuum_minus_emergence: -0.850
+    ranking: "emergence_first"
+  - scenario_id: "SENS-04-TRACTABILITY-COMPATIBILITY"
+    purpose: "prioritize near-term formal and engineering risk"
+    weights: {assumption_economy: 0.10, formalization_tractability: 0.35, explanatory_power: 0.10, primary_literature_maturity: 0.10, downstream_compatibility: 0.35}
+    weight_sum: 1.00
+    continuum_first_score: 3.825
+    emergence_first_score: 2.550
+    difference_continuum_minus_emergence: 1.275
+    ranking: "continuum_first"
+  - scenario_id: "SENS-05-LITERATURE-AND-FORMALIZATION"
+    purpose: "prioritize externally anchored mathematical development"
+    weights: {assumption_economy: 0.10, formalization_tractability: 0.30, explanatory_power: 0.15, primary_literature_maturity: 0.30, downstream_compatibility: 0.15}
+    weight_sum: 1.00
+    continuum_first_score: 3.650
+    emergence_first_score: 2.850
+    difference_continuum_minus_emergence: 0.800
+    ranking: "continuum_first"
+  - scenario_id: "SENS-06-RADICAL-EMERGENCE"
+    purpose: "strongly prioritize ontological economy and explanatory reach"
+    weights: {assumption_economy: 0.45, formalization_tractability: 0.05, explanatory_power: 0.40, primary_literature_maturity: 0.05, downstream_compatibility: 0.05}
+    weight_sum: 1.00
+    continuum_first_score: 2.525
+    emergence_first_score: 3.975
+    difference_continuum_minus_emergence: -1.450
+    ranking: "emergence_first"
+  - scenario_id: "SENS-07-BALANCED-FOUNDATIONAL"
+    purpose: "moderately favor economy and explanation while retaining all criteria"
+    weights: {assumption_economy: 0.30, formalization_tractability: 0.15, explanatory_power: 0.30, primary_literature_maturity: 0.10, downstream_compatibility: 0.15}
+    weight_sum: 1.00
+    continuum_first_score: 3.025
+    emergence_first_score: 3.450
+    difference_continuum_minus_emergence: -0.425
+    ranking: "emergence_first"
+  - scenario_id: "SENS-08-ENGINEERING-FIRST"
+    purpose: "strongly prioritize immediate downstream reuse"
+    weights: {assumption_economy: 0.05, formalization_tractability: 0.25, explanatory_power: 0.05, primary_literature_maturity: 0.15, downstream_compatibility: 0.50}
+    weight_sum: 1.00
+    continuum_first_score: 4.075
+    emergence_first_score: 2.375
+    difference_continuum_minus_emergence: 1.700
+    ranking: "continuum_first"
+
+local_fragility_checks:
+  - perturbation: "Move delta weight from downstream compatibility to assumption economy, holding other weights fixed."
+    difference_rule: "Delta_new = 0.125 - 5.0*delta."
+    exact_tie_delta: 0.025
+    conclusion: "A 2.5 percentage-point transfer flips the baseline; the baseline ordering is locally fragile."
+  - perturbation: "Move delta weight from formalization tractability to explanatory power, holding other weights fixed."
+    difference_rule: "Delta_new = 0.125 - 3.5*delta."
+    exact_tie_delta: 0.0357142857
+    exact_fraction: "1/28"
+    conclusion: "A roughly 3.57 percentage-point transfer flips the baseline."
+
+score_uncertainty:
+  interval_semantics: "Plausible judgment range under the same fixed evidence, not a statistical confidence or posterior interval."
+  baseline_difference_interval_continuum_minus_emergence: [-0.875, 1.125]
+  interval_calculation: "For each criterion, subtract the emergence upper endpoint from the continuum lower endpoint for the minimum, and subtract the emergence lower endpoint from the continuum upper endpoint for the maximum; then apply baseline weights."
+  consequence: "The baseline uncertainty interval crosses zero. Neither proposal has a robust quantitative lead."
+  dominant_uncertainties:
+    - "How strongly to credit potential explanation when no reconstruction theorem currently exists."
+    - "Whether formalization tractability should emphasize bare source syntax or the entire source-to-GR chain."
+    - "How the parent primary-literature review changes the literature-maturity scores after exact transfer limits are applied."
+    - "Whether downstream compatibility deserves decision weight beyond project planning, given that it is not evidence of physical truth."
+
+downstream_physics_audit:
+  M_src:
+    continuum_first:
+      formal_consequence: "The proposal supplies a smooth four-dimensional carrier on which a source-manifold-like object can be typed."
+      open_burden: "No authorized identification A=M_src, no proof that the existing scoped M_src object instantiates the proposal, and no physical-space interpretation follows."
+      judgment: "High mathematical compatibility and low migration cost, but compatibility is not evidential support for ontology truth."
+    emergence_first:
+      formal_consequence: "The minimum signature has no manifold object, topology, dimension, or differentiable structure."
+      open_burden: "M_src must be reconstructed or related through a target-separated realization map with topology, dimension, differentiability, stability, and uniqueness controls."
+      judgment: "Existing M_src work is primarily evaluator-side evidence until that reconstruction exists."
+  g_eff:
+    continuum_first:
+      formal_consequence: "Metric tensors can be typed on the smooth carrier, but the fixed theorem shows that Lorentzian signature plus order invariance does not fix constant normalization."
+      open_burden: "Metric existence, Lorentzian signature, physical scale, uniqueness or equivalence class, clock calibration, and source dependence remain open."
+      judgment: "The route shortens the type-construction path but does not derive a physical effective metric."
+    emergence_first:
+      formal_consequence: "No tangent spaces, tensor fields, conformal structure, measure, or metric exist in the minimum source signature."
+      open_burden: "A source-only chain must recover causal semantics, measure and scale, dimension, differentiability, conformal and metric data, stability, and uniqueness before g_eff is available."
+      judgment: "The route offers deeper potential explanation at substantially higher reconstruction risk."
+  matter:
+    continuum_first:
+      formal_consequence: "Smooth bundles and sections provide field syntax."
+      open_burden: "Bundle type does not supply matter semantics, observables, universal coupling, constants, conservation, or backreaction. Existing target matter or stress-energy cannot be imported as source premises."
+      judgment: "The proposal is a convenient host for current matter-interface formalism, not a matter derivation."
+    emergence_first:
+      formal_consequence: "The minimum signature contains no matter species, local field values, observables, detector semantics, or coupling."
+      open_burden: "Matter must be added source-side or reconstructed while preserving target neutrality, followed by universal-coupling and backreaction results."
+      judgment: "The burden is larger and may force a richer source signature, reducing the initial economy advantage."
+  dynamics:
+    continuum_first:
+      formal_consequence: "A structural monoid action and admissibility slot are typed, but neither is a source action, equation of motion, probability law, physical time, or clock."
+      open_burden: "Supply a source law, conservation bridge, physical interpretation, and Einstein-recovery theorem without relabeling Phi or importing target dynamics."
+      judgment: "The continuum calculus is ready, while physical law selection remains wholly open."
+    emergence_first:
+      formal_consequence: "A partial order and guarded fragment composition do not define a growth kernel, amplitude, action, ensemble, or typicality measure."
+      open_burden: "Supply an isomorphism-invariant source dynamics with consistency, normalization or composition, manifoldlike typicality, effective dynamics, and no target-conditioned selection."
+      judgment: "Dynamics is both scientifically central and a severe bottleneck; a successful law could connect explanatory economy to testable structure."
+  exact_GR_recovery:
+    continuum_first:
+      formal_consequence: "Assuming a smooth four-dimensional arena removes only the burden of deriving a bare arena within this branch."
+      open_burden: "A nonempty target-neutral realization relation, metric and clocks, matter and coupling, source dynamics, conservation, and Einstein-equation recovery in a stated regime remain unproved."
+      judgment: "This is the lower-risk engineering route to formulate bridge theorems, but exact-GR recovery is still distant."
+    emergence_first:
+      formal_consequence: "The fixed finite examples and dimension-nonselection witness do not establish a continuum limit, four dimensions, physical causality, or GR."
+      open_burden: "All eleven reconstruction layers plus source dynamics, operational semantics, matter coupling, and Einstein recovery must form an acyclic source-to-target chain."
+      judgment: "This is the higher-risk, higher-potential-explanation route; no current result establishes a favorable probability of completion."
+  distance_to_GR_delta: "zero for both fixed proposal-only options"
+
+formal_consequence_vs_judgment:
+  formal_consequences:
+    - "The continuum-first fixed artifact contains six declared primitive packages and seven recorded remaining burdens."
+    - "The emergence-first fixed artifact contains two declared primitive packages and eleven recorded open reconstruction burdens."
+    - "The continuum-first normalization theorem leaves a positive constant-rescaling family whenever an invariant Lorentzian metric exists and no independent scale-selection law is added."
+    - "The emergence-first diamond witness has the same induced finite chronological order in two-dimensional and four-dimensional Minkowski target examples; that finite order-fidelity test therefore does not select dimension."
+    - "Conditional on the declared scores, Delta(w) and its tie hyperplane are exact linear arithmetic, and the supplied sensitivity totals follow by dot product."
+    - "Because the score-difference vector has mixed signs, neither option componentwise dominates under this rubric."
+  judgments:
+    - "Every score, plausible interval, and criterion weight."
+    - "The degree to which unachieved explanatory reach should be credited."
+    - "The assessment that continuum-first is lower-risk for near-term formal development."
+    - "The assessment that emergence-first has greater conditional explanatory reach."
+    - "Any recommendation about research allocation or ontology regime."
+
+disagreements_and_expected_parent_checks:
+  - issue: "Explanatory-power scoring"
+    child_position: "Credit emergence-first substantially, but discount it to 4.0 because zero continuum layers are reconstructed."
+    possible_alternative: "A stricter demonstrated-results rubric could score emergence-first lower and would strengthen the continuum-first baseline lead."
+  - issue: "Formalization-tractability scope"
+    child_position: "Score the full source-to-GR burden, not only the minimal syntax; this yields continuum-first 4.0 and emergence-first 2.0."
+    possible_alternative: "Scoring only source syntax would narrow or reverse this criterion."
+  - issue: "Literature maturity"
+    child_position: "Provisional continuum-first 4.0 and emergence-first 3.0."
+    possible_alternative: "Parent primary-source transfer audit may revise both values; no child-side external verification was performed."
+  - issue: "Downstream compatibility"
+    child_position: "Treat it as planning evidence only and explicitly bar its use as truth evidence."
+    possible_alternative: "A foundational ontology decision could assign this criterion zero weight, which moves the ranking toward emergence-first."
+
+recommendation:
+  robust_winner: "none"
+  baseline_result: "continuum-first leads by 0.125 under the declared baseline, but the lead is smaller than the stated judgment uncertainty and flips under modest lawful reweighting."
+  conditional_near_term_route: "If the protected decision-maker prioritizes tractable bridge construction and compatibility with current mathematical artifacts, continuum-first is the lower-risk research scaffold. This does not select or adopt it."
+  conditional_foundational_route: "If the protected decision-maker prioritizes deriving rather than assuming continuum structure and accepts a much larger reconstruction program, emergence-first is the more aligned exploratory branch. This does not select or adopt it."
+  decision_ready_message: "The evidence supports a transparent risk-preference choice, not a theorem-driven ontology verdict. Require the Gate Chair to state weights or lexicographic priorities explicitly; otherwise the comparison is underdetermined."
+  preferred_research_portfolio_if_no_gate_decision: "Use continuum-first for bounded near-term formal bridge work while retaining emergence-first as a separate high-risk reconstruction program; do not merge the primitives into an untracked hybrid ontology."
+  confidence: "moderate in the tradeoff structure; low in any single aggregate ranking"
+
+claim_boundary:
+  allowed_conclusions:
+    - "proposal-only comparison"
+    - "conditional score ranking"
+    - "preference-sensitive recommendation"
+    - "continuum-first has higher near-term tractability and compatibility under this rubric"
+    - "emergence-first has higher primitive economy and conditional explanatory reach under this rubric"
+    - "no robust winner"
+    - "blocked_adoption_open_continuation"
+  blocked_conclusions:
+    - "continuum-first ontology selected, adopted, proved, or physically true"
+    - "emergence-first ontology selected, adopted, proved, or physically true"
+    - "either option rejected"
+    - "repository investment establishes truth"
+    - "M_src, g_eff, matter, coupling, dynamics, or Einstein equations derived"
+    - "continuum, four dimensions, physical causality, or a physical metric emerged"
+    - "exact GR derived or benchmark promoted"
+    - "P4-T05 executed"
+    - "Gate Chair verdict"
+    - "global no-go or future source-extension impossibility"
+  physics_promotion_authorized: false
+  proof_authority_created: false
+  ontology_selection_authorized: false
+  ontology_adoption_authorized: false
+  p4_t05_executed: false
+
+child_disposition:
+  result: "PASS_AT_COMPARATIVE_DECISION_EVIDENCE_SCOPE"
+  finding_count: 5
+  findings:
+    - "The options relocate, rather than eliminate, assumption debt: six continuum primitives versus eleven emergence reconstruction burdens."
+    - "The baseline score difference is only 0.125 in favor of continuum-first."
+    - "The exact weight hyperplane partitions the admissible weight simplex, and supplied scenarios rank both options in different lawful regions."
+    - "No downstream object is derived or promoted under either fixed option."
+    - "The honest output is a conditional risk-preference map with no robust winner and no ontology decision."
+  unresolved_limitation_count: 3
+  unresolved_limitations:
+    - "Primary-literature maturity requires parent verification and exact claim-transfer analysis."
+    - "Scores and weights remain judgments even when their arithmetic is exact."
+    - "No empirical discriminator or completed source dynamics currently assigns scientific likelihood to either option."
+  recommended_parent_use: "Recompute all dot products, fuse verified primary-literature evidence, preserve the hyperplane and uncertainty disclosure, and keep the P4-T05 protected decision outside this AgentJob."

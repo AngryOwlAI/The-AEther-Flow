@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260720-032` and `handoff-0802`.
+`RT-20260721-002` and `handoff-0803`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260720-032` |
-| Latest handoff ID | `handoff-0802` |
-| Current status | `v21_p4_t03_emergence_first_process_order_candidate_complete_proposal_only_no_distance_delta_p4_t04_ready` |
+| Active task ID | `RT-20260721-002` |
+| Latest handoff ID | `handoff-0803` |
+| Current status | `v21_p4_t04_comparative_decision_evidence_complete_no_regime_decision_no_distance_delta_p10_t01_ready` |
 | V16 completed | false |
-| Current route family | v21 p4 t04 ontology regime comparative external review |
+| Current route family | v21 p10 t01 normalized assumption and scientific status schemas |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P4-T04 external-red-team-reviewer packet in a separate AgentJob. Compare the fixed P4-T02 and P4-T03 proposal options using explicit scientific mathematical engineering and primary-literature criteria, include weight-sensitivity and uncertainty, but do not make the protected P4-T05 ontology-regime decision or edit canonical ontology. |
-| Required next authority | One P4-T04 external-primary-literature packet may compare the fixed P4-T02 and P4-T03 proposal-only options, perform criteria-weight sensitivity analysis, and issue a decision-ready recommendation with explicit uncertainty without making the protected decision. |
-| Next recommended action | Run exactly one bounded v21 P4-T04 external-red-team-reviewer packet in a separate AgentJob. Compare the fixed P4-T02 and P4-T03 proposal options using explicit scientific mathematical engineering and primary-literature criteria, include weight-sensitivity and uncertainty, but do not make the protected P4-T05 ontology-regime decision or edit canonical ontology. |
+| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries. |
+| Required next authority | One P10-T01 project-control packet may define normalized assumption-provenance and scientific-status schemas, mapped legacy compatibility fields, fail-closed validators and fixtures, and standard control receipts. It may not reinterpret historical claims or change physics status. |
+| Next recommended action | Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260720-032` |
-| Latest research handoff ID | `handoff-0802` |
-| Latest research next action | Run exactly one bounded v21 P4-T04 external-red-team-reviewer packet in a separate AgentJob. Compare the fixed P4-T02 and P4-T03 proposal options using explicit scientific mathematical engineering and primary-literature criteria, include weight-sensitivity and uncertainty, but do not make the protected P4-T05 ontology-regime decision or edit canonical ontology. |
+| Latest research task ID | `RT-20260721-002` |
+| Latest research handoff ID | `handoff-0803` |
+| Latest research next action | Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260720-032/00_TASK.yaml`.
-- Active task objective: Execute exactly one bounded v21 P4-T03 Ontology Formalizer packet that specifies a genuinely weaker emergence-first source ontology and makes every continuum-reconstruction burden explicit without importing target manifold structure or selecting an ontology regime.
-- Latest handoff path: `research_control/handoffs/handoff-0802.yaml`.
-- Latest handoff summary: RT-20260720-032 completed only v21 P4-T03. One draft/control proposal-only emergence-first option now defines the minimum source signature O_EF^LF=(E,prec), guarded finite-interface composition, an unfilled dynamics target, two finite source controls, two target-only continuum examples, one finite dimension-nonselection witness, and eleven explicit manifoldlikeness burdens. The source contains no topology dimension differentiability atlas metric measure physical causality clock matter coupling or dynamics. The same finite diamond order embeds into evaluator-side two- and four-dimensional Minkowski targets, showing only that finite order fidelity does not select dimension. No continuum emergence, ontology selection or adoption, scientific-ledger delta, proof, promotion, or downstream GR result follows.
-- Current route family: v21 p4 t04 ontology regime comparative external review.
-- Next recommended action: Run exactly one bounded v21 P4-T04 external-red-team-reviewer packet in a separate AgentJob. Compare the fixed P4-T02 and P4-T03 proposal options using explicit scientific mathematical engineering and primary-literature criteria, include weight-sensitivity and uncertainty, but do not make the protected P4-T05 ontology-regime decision or edit canonical ontology.
+- Active task path: `research_control/tasks/RT-20260721-002/00_TASK.yaml`.
+- Active task objective: Execute exactly one bounded v21 P4-T04 External Red-Team Reviewer packet comparing the fixed P4-T02 continuum-first and P4-T03 emergence-first proposal options through explicit criteria, primary literature, and weight-sensitivity analysis without selecting or adopting an ontology regime.
+- Latest handoff path: `research_control/handoffs/handoff-0803.yaml`.
+- Latest handoff summary: RT-20260721-002 completed only v21 P4-T04. It compared the fixed P4-T02 continuum-first and P4-T03 emergence-first proposal options through five explicit criteria, seven parent weight scenarios, an independent mathematical replication, a balanced ten-source primary-literature matrix, downstream M_src/g_eff/matter/dynamics/formalization/exact-GR analysis, and resolved parent-child synthesis. Continuum-first is the conditional lower-risk near-term scaffold; emergence-first is the conditional higher-risk higher-explanatory-ambition branch. The baseline margin is 0.100, the score-difference vector has mixed signs, admissible priorities rank both options, and plausible scoring uncertainty crosses zero. No robust winner, ontology selection, adoption, rejection, P4-T05 execution, scientific-ledger delta, promotion, or publication follows.
+- Current route family: v21 p10 t01 normalized assumption and scientific status schemas.
+- Next recommended action: Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P4-T04 external-red-team-reviewer packet in a separate AgentJob. Compare the fixed P4-T02 and P4-T03 proposal options using explicit scientific mathematical engineering and primary-literature criteria, include weight-sensitivity and uncertainty, but do not make the protected P4-T05 ontology-regime decision or edit canonical ontology.
+Run exactly one bounded v21 P10-T01 improve-project-system packet in a separate AgentJob. Define machine-readable assumption-provenance and multidimensional scientific-status schemas, map historical vocabulary through compatibility fields without rewriting history, add fail-closed fixtures and validators, and preserve all physics and P4-T05 authority boundaries.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260720-032`;
-- latest handoff: `handoff-0802`;
-- current status: `v21_p4_t03_emergence_first_process_order_candidate_complete_proposal_only_no_distance_delta_p4_t04_ready`;
+- active task: `RT-20260721-002`;
+- latest handoff: `handoff-0803`;
+- current status: `v21_p4_t04_comparative_decision_evidence_complete_no_regime_decision_no_distance_delta_p10_t01_ready`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0802.yaml`
-- `research_control/tasks/RT-20260720-032/00_TASK.yaml`
+- `research_control/handoffs/handoff-0803.yaml`
+- `research_control/tasks/RT-20260721-002/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0802*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0803*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
