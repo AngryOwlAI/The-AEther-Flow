@@ -1,7 +1,7 @@
 schema_id: "compact_current_frontier_v16"
 generated_from:
   - "research_control/program_state.yaml"
-  - "research_control/handoffs/handoff-0804.yaml"
+  - "research_control/handoffs/handoff-0805.yaml"
   - "registries/DISTANCE_TO_GR_LEDGER.csv"
   - "registries/METRIC_USE_LEDGER.csv"
   - "research_control/current_frontier.md"
@@ -9,16 +9,16 @@ generated_from:
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
 active_state:
-  active_task_id: "RT-20260721-003"
-  latest_handoff_id: "handoff-0804"
-  current_status: "v21_p10_t01_normalized_status_assumption_schemas_complete_no_history_or_physics_delta_p10_t02_ready"
+  active_task_id: "RT-20260721-004"
+  latest_handoff_id: "handoff-0805"
+  current_status: "v21_p10_t02_orthogonal_task_taxonomy_complete_no_history_or_physics_delta_p10_t03_ready"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260721-003"
-  latest_research_handoff_id: "handoff-0804"
-  latest_research_next_action: "Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records."
+  latest_research_task_id: "RT-20260721-004"
+  latest_research_handoff_id: "handoff-0805"
+  latest_research_next_action: "Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -26,10 +26,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v21_p10_t02_orthogonal_task_taxonomy"
+  route_id: "v21_p10_t03_immutable_candidate_identity_lineage"
   role_family: "project-control-maintainer@0.2.0"
   target_derivation_milestone: "source_equivalence_eqsrc"
-  milestone_burden: "Make task analytics and routing generalizable."
+  milestone_burden: "Make candidate lifecycle evidence referentially exact."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -276,7 +276,7 @@ distance_to_gr:
   delta:
     effect: "no_distance_delta"
     changed: false
-    milestone: "matter_coupling"
+    milestone: "none"
     burden_id: "none"
   high_risk_rows:
     - burden_id: "m_src"
@@ -521,6 +521,10 @@ metric_use_ledger:
     scoped_obstruction: "2"
 validation:
   latest_required_status: "PASS"
-  pending_layers: []
+  pending_layers:
+    - layer: "post_checkpoint"
+      status: "PENDING"
+      evidence:
+        - "Governed checkpoint remains the final transaction gate."
 authority_warning:
   snapshot_only_not_authority: true

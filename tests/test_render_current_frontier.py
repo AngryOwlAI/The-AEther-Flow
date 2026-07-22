@@ -195,6 +195,27 @@ class RenderCurrentFrontierTests(unittest.TestCase):
             encoding="utf-8",
         )
 
+    def test_route_family_prefers_explicit_normalized_taxonomy(self) -> None:
+        task = {
+            "task_type": "legacy_free_form_value",
+            "task_taxonomy": {
+                "schema_id": "v21_task_taxonomy_v1",
+                "work_kind": "integration_or_selection",
+                "milestone": "source_equivalence_eqsrc",
+                "candidate_family": "not_applicable",
+                "result_kind": "implemented_and_validated_or_precisely_blocked",
+                "authority": "project_control",
+                "scope": "project_system",
+            },
+        }
+
+        route = self.renderer.route_family_text(
+            {"loop_risk_route": "legacy_loop_route"},
+            task,
+        )
+
+        self.assertEqual(route, "integration or selection (project system)")
+
     def test_render_payload_contains_authoritative_state_and_boundaries(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

@@ -20,6 +20,7 @@ if str(SCRIPT_DIR) not in sys.path:
 
 from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
 import report_scientific_payload_density as scientific_payload_density  # noqa: E402
+import task_taxonomy  # noqa: E402
 
 
 PHYSICS_AUTHORITY_LEVELS = {"science_draft", "human_gated"}
@@ -568,7 +569,21 @@ def is_project_system_task(
     task_doc: dict[str, Any],
     job_doc: dict[str, Any],
     role: dict[str, str] | None,
+    plan_item: dict[str, Any] | None = None,
 ) -> bool:
+    normalized = task_taxonomy.classify_task(
+        task_doc,
+        task_row,
+        job_doc,
+        role or {},
+        plan_item or {},
+    )
+    if normalized["scope"] in {"project_system", "routing"}:
+        return True
+    if normalized["authority"] in PROJECT_SYSTEM_AUTHORITY_LEVELS:
+        return True
+    if normalized["scope"] in {"scientific", "scientific_audit", "human_gate"}:
+        return False
     task_type = " ".join(
         [
             task_row.get("task_type", ""),
@@ -612,7 +627,28 @@ def task_has_theorem_countermodel_candidate_signal(
     task_row: dict[str, str],
     task_doc: dict[str, Any],
     payload_row: dict[str, Any],
+    job_doc: dict[str, Any] | None = None,
+    role: dict[str, str] | None = None,
+    plan_item: dict[str, Any] | None = None,
 ) -> bool:
+    normalized = task_taxonomy.classify_task(
+        task_doc,
+        task_row,
+        job_doc or {},
+        role or {},
+        plan_item or {},
+    )
+    normalized_signal = (
+        normalized["scope"] in {"scientific", "scientific_audit", "human_gate", "mixed"}
+        and (
+            normalized["work_kind"] == "formalization_or_theorem"
+            or normalized["result_kind"] in {
+                "candidate_or_precise_obstruction",
+                "theorem_or_precise_obstruction",
+            }
+            or normalized["candidate_family"] not in {"not_applicable", "unknown"}
+        )
+    )
     task_text = " ".join(
         [
             task_row.get("task_type", ""),
@@ -622,11 +658,17 @@ def task_has_theorem_countermodel_candidate_signal(
             record.get("text", ""),
         ]
     ).lower()
-    return (
-        has_payload_classes(payload_row, THEOREM_COUNTERMODEL_CLASSES)
+    structured_signal = (
+        normalized_signal
+        or has_payload_classes(payload_row, THEOREM_COUNTERMODEL_CLASSES)
         or has_candidate_signal(record)
         or has_obstruction_signal(record)
-        or any(token in task_text for token in ("theorem", "lemma", "proposition", "countermodel", "candidate"))
+    )
+    if normalized["taxonomy_source"] in {"explicit", "plan_metadata"}:
+        return structured_signal
+    return structured_signal or any(
+        token in task_text
+        for token in ("theorem", "lemma", "proposition", "countermodel", "candidate")
     )
 
 
@@ -643,6 +685,10 @@ def classify_payload_ratio_route_history(
         if row.get("task_id")
     }
     payload_by_task_id = task_payload_row_by_task_id(payload_report)
+    try:
+        plan_items = task_taxonomy.load_plan_items(repo_root)
+    except task_taxonomy.TaskTaxonomyError:
+        plan_items = {}
 
     rows: list[dict[str, Any]] = []
     for record in sorted(completion_records, key=lambda item: (item.get("created_at", ""), item.get("job_id", ""))):
@@ -652,6 +698,7 @@ def classify_payload_ratio_route_history(
         task_doc = load_yaml_document(repo_root, f"{task_path}/00_TASK.yaml") if task_path else {}
         job_doc = load_yaml_document(repo_root, record.get("job_path", ""))
         role = roles.get(role_key(record.get("role_id", ""), record.get("role_version", "")))
+        plan_item = plan_items.get(task_taxonomy.plan_task_id(task_doc), {})
         payload_row = payload_by_task_id.get(task_id, {})
         math_payload_count = task_payload_item_count(record, payload_row)
         candidate_signal = has_candidate_signal(record)
@@ -660,6 +707,9 @@ def classify_payload_ratio_route_history(
             task_row,
             task_doc,
             payload_row,
+            job_doc,
+            role,
+            plan_item,
         )
         physics_bearing = (
             record.get("is_physics") is True
@@ -670,7 +720,20 @@ def classify_payload_ratio_route_history(
                 or has_obstruction_signal(record)
             )
         )
-        project_system = is_project_system_task(task_row, task_doc, job_doc, role) and not physics_bearing
+        normalized = task_taxonomy.classify_task(
+            task_doc,
+            task_row,
+            job_doc,
+            role or {},
+            plan_item,
+        )
+        project_system = is_project_system_task(
+            task_row,
+            task_doc,
+            job_doc,
+            role,
+            plan_item,
+        ) and not physics_bearing
         support_only = project_system or bool_value(job_doc.get("support_only")) is True
 
         rows.append(
@@ -679,6 +742,14 @@ def classify_payload_ratio_route_history(
                 "job_id": record.get("job_id", ""),
                 "role_id": record.get("role_id", ""),
                 "task_type": first_nonblank(task_row.get("task_type", ""), task_doc.get("task_type")),
+                "work_kind": normalized["work_kind"],
+                "milestone": normalized["milestone"],
+                "candidate_family": normalized["candidate_family"],
+                "result_kind": normalized["result_kind"],
+                "authority": normalized["authority"],
+                "scope": normalized["scope"],
+                "taxonomy_source": normalized["taxonomy_source"],
+                "taxonomy_confidence": normalized["taxonomy_confidence"],
                 "completed_at": record.get("completed_at", ""),
                 "project_system_task": project_system,
                 "physics_bearing_task": physics_bearing,

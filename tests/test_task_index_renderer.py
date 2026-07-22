@@ -53,9 +53,14 @@ class TaskIndexRendererTests(unittest.TestCase):
         for path in (completion_root, registries, design, root / "wiki" / "indexes"):
             path.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(
-            REPO_ROOT / "research_control" / "design" / "task_index_schema_v1.md",
-            design / "task_index_schema_v1.md",
+            REPO_ROOT / self.renderer.SCHEMA_PATH,
+            root / self.renderer.SCHEMA_PATH,
         )
+        shutil.copyfile(
+            REPO_ROOT / "research_control" / "design" / "v21_task_taxonomy_policy.md",
+            design / "v21_task_taxonomy_policy.md",
+        )
+        (design / "v21_recommendation_backlog.yaml").write_text("items: []\n", encoding="utf-8")
         (task_root / "00_TASK.yaml").write_text(
             "\n".join(
                 [
@@ -125,6 +130,16 @@ class TaskIndexRendererTests(unittest.TestCase):
                 [
                     "job_id,task_id,decision_id,role_id,role_version,job_path,completion_path,status,allowed_write_paths,output_paths,validation_status,created_at,started_at,completed_at,requires_human_gate,notes",
                     f'{job_id},{task_id},{decision_id},validator-engineer,0.2.0,research_control/tasks/{task_id}/jobs/{job_id}.yaml,research_control/tasks/{task_id}/jobs/completions/AJC-{job_id}.yaml,completed,scripts/research_control/validate_task_index.py,tests/test_task_index_renderer.py,PASS,2026-07-06T00:00:00Z,2026-07-06T00:00:00Z,2026-07-06T00:01:00Z,false,Fixture job',
+                    "",
+                ]
+            ),
+            encoding="utf-8",
+        )
+        (registries / "AGENT_ROLE_REGISTRY.csv").write_text(
+            "\n".join(
+                [
+                    "role_id,version,role_name,role_kind,role_contract_path,authority_level,status,may_execute_autonomously,may_create_outputs,may_modify_sources,may_promote_claims,requires_human_gate,default_output_format,default_validators,created_at,updated_at,notes",
+                    "validator-engineer,0.2.0,Validator Engineer,project_system_validation,,project_control,active,true,true,true,false,false,yaml,,2026-07-06T00:00:00Z,2026-07-06T00:00:00Z,Fixture role",
                     "",
                 ]
             ),
@@ -249,6 +264,59 @@ class TaskIndexRendererTests(unittest.TestCase):
 
         self.assertEqual(report.errors, [])
         self.assertIn("missing_field", {warning.code for warning in report.warnings})
+
+    def test_validator_rejects_missing_normalized_fields_for_new_task(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.make_fixture_repo(root)
+            task_yaml = root / "research_control" / "tasks" / "RT-20260706-999" / "00_TASK.yaml"
+            task_yaml.write_text(
+                task_yaml.read_text(encoding="utf-8").replace(
+                    'created_at: "2026-07-06T00:00:00Z"',
+                    f'created_at: "{self.renderer.task_taxonomy.EFFECTIVE_AT}"',
+                ),
+                encoding="utf-8",
+            )
+            self.render_outputs(root)
+
+            report = self.validator.validate_task_index(root)
+
+        self.assertIn("taxonomy_required_missing", {error.code for error in report.errors})
+
+    def test_renderer_prefers_explicit_taxonomy_and_preserves_raw_fields(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.make_fixture_repo(root)
+            task_yaml = root / "research_control" / "tasks" / "RT-20260706-999" / "00_TASK.yaml"
+            task_yaml.write_text(
+                task_yaml.read_text(encoding="utf-8")
+                .replace(
+                    'task_type: "research_control_task_index_validator"',
+                    'task_type: "research_control_task_index_validator"\n'
+                    'title: "Readable fixture title"\n'
+                    'task_taxonomy:\n'
+                    '  schema_id: "v21_task_taxonomy_v1"\n'
+                    '  work_kind: "integration_or_selection"\n'
+                    '  milestone: "matter_coupling"\n'
+                    '  candidate_family: "not_applicable"\n'
+                    '  result_kind: "implemented_and_validated_or_precisely_blocked"\n'
+                    '  authority: "project_control"\n'
+                    '  scope: "project_system"',
+                )
+                .replace(
+                    'created_at: "2026-07-06T00:00:00Z"',
+                    f'created_at: "{self.renderer.task_taxonomy.EFFECTIVE_AT}"',
+                ),
+                encoding="utf-8",
+            )
+
+            row = self.renderer.build_index(root)["rows"][0]
+
+        self.assertEqual(row["title"], "Readable fixture title")
+        self.assertEqual(row["task_type"], "research_control_task_index_validator")
+        self.assertEqual(row["work_kind"], "integration_or_selection")
+        self.assertEqual(row["scope"], "project_system")
+        self.assertEqual(row["taxonomy_source"], "explicit")
 
     def test_common_adapter_preserves_297_warnings_and_pass_semantics(self) -> None:
         report = self.validator.TaskIndexValidationReport(repo_root=REPO_ROOT)

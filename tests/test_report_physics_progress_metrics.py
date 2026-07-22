@@ -313,6 +313,54 @@ class PhysicsProgressMetricsTests(unittest.TestCase):
         self.assertIn("AI-system diagnostics only", markdown)
         self.assertIn("do not rank physics truth", markdown)
 
+    def test_project_system_detection_prefers_explicit_normalized_scope(self) -> None:
+        task = {
+            "task_id": "RT-NORMALIZED",
+            "task_type": "validator_schema_control",
+            "task_taxonomy": {
+                "schema_id": "v21_task_taxonomy_v1",
+                "work_kind": "formalization_or_theorem",
+                "milestone": "source_equivalence_eqsrc",
+                "candidate_family": "eqsrc_fixture",
+                "result_kind": "theorem_or_precise_obstruction",
+                "authority": "science_draft",
+                "scope": "scientific",
+            },
+        }
+
+        result = self.reporter.is_project_system_task(
+            {"task_type": "validator_schema_control"},
+            task,
+            {},
+            {"authority_level": "project_control", "role_kind": "project_system_validation"},
+        )
+
+        self.assertFalse(result)
+
+    def test_project_system_formalization_does_not_count_as_science_signal(self) -> None:
+        task = {
+            "task_id": "RT-PROJECT-FORMALIZATION",
+            "task_type": "schema_formalization",
+            "task_taxonomy": {
+                "schema_id": "v21_task_taxonomy_v1",
+                "work_kind": "formalization_or_theorem",
+                "milestone": "source_equivalence_eqsrc",
+                "candidate_family": "not_applicable",
+                "result_kind": "implemented_and_validated_or_precisely_blocked",
+                "authority": "project_control",
+                "scope": "project_system",
+            },
+        }
+
+        result = self.reporter.task_has_theorem_countermodel_candidate_signal(
+            {"progress_status": "", "candidate_result_type": "", "text": ""},
+            {"task_type": "schema_formalization"},
+            task,
+            {},
+        )
+
+        self.assertFalse(result)
+
 
 if __name__ == "__main__":
     unittest.main()

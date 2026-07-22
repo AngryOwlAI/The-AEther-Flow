@@ -16,6 +16,7 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
+import task_taxonomy  # noqa: E402
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -940,6 +941,12 @@ def route_family_text(handoff: dict[str, Any], task: dict[str, Any]) -> str:
     loop_route = text_value(handoff.get("loop_risk_route"))
     if task_type == "p1_generated_current_state_report":
         return "P1 active-state repair: deterministic current-frontier renderer completed; final P8 validation remains required"
+    if isinstance(task.get("task_taxonomy"), dict):
+        normalized = task_taxonomy.classify_task(task)
+        if not normalized["errors"]:
+            work_kind = normalized["work_kind"].replace("_", " ")
+            scope = normalized["scope"].replace("_", " ")
+            return f"{work_kind} ({scope})"
     if loop_route:
         return loop_route.replace("_", " ")
     return text_value(task.get("task_type")) or "tracked continue-research route"
@@ -1072,6 +1079,7 @@ def build_state(repo_root: Path) -> dict[str, Any]:
         "ledger_path": LEDGER_PATH,
         "metric_use_ledger_path": METRIC_USE_LEDGER_PATH,
         "active_task": active_task,
+        "active_task_taxonomy": task_taxonomy.classify_task(active_task),
         "latest_handoff": latest_handoff,
         "v16_completed": bool_value(latest_handoff.get("v16_completed")),
         "distance_to_gr_rows": ledger_rows,

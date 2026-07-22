@@ -212,6 +212,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16` `research_control/design/target_import_attack_fixture_catalog_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16` `research_control/design/target_import_attack_taxonomy_v16.md`
 - `MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1` `research_control/design/task_index_schema_v1.md`
+- `MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V2` `research_control/design/task_index_schema_v2.md`
 - `MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `research_control/design/three_tier_claim_convention.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V17-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v17_recommendation_backlog_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V18-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v18_recommendation_backlog_schema.md`
@@ -221,6 +222,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-V21-ASSUMPTION-LEDGER-SCHEMA` `research_control/design/v21_assumption_ledger_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V21-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v21_recommendation_backlog_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `research_control/design/v21_scientific_status_schema.md`
+- `MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `research_control/design/v21_task_taxonomy_policy.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `research_control/design/validation_cache_contract_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `research_control/design/validation_change_family_taxonomy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-MATRIX-V1` `research_control/design/validation_change_matrix_v1.md`
@@ -757,6 +759,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-FIXTURE-CATALOG-V16` `wiki/markdown/md-research-control-design-target-import-attack-fixture-catalog-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-TARGET-IMPORT-ATTACK-TAXONOMY-V16` `wiki/markdown/md-research-control-design-target-import-attack-taxonomy-v16.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V1` `wiki/markdown/md-research-control-design-task-index-schema-v1.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V2` `wiki/markdown/md-research-control-design-task-index-schema-v2.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-THREE-TIER-CLAIM-CONVENTION` `wiki/markdown/md-research-control-design-three-tier-claim-convention.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V17-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v17-recommendation-backlog-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V18-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v18-recommendation-backlog-schema.md`
@@ -766,6 +769,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-ASSUMPTION-LEDGER-SCHEMA` `wiki/markdown/md-research-control-design-v21-assumption-ledger-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v21-recommendation-backlog-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `wiki/markdown/md-research-control-design-v21-scientific-status-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `wiki/markdown/md-research-control-design-v21-task-taxonomy-policy.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `wiki/markdown/md-research-control-design-validation-cache-contract-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `wiki/markdown/md-research-control-design-validation-change-family-taxonomy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-MATRIX-V1` `wiki/markdown/md-research-control-design-validation-change-matrix-v1.md`

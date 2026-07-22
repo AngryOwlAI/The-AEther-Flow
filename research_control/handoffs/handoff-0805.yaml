@@ -1,0 +1,220 @@
+handoff_id: "handoff-0805"
+handoff_number: 805
+created_at: "2026-07-22T01:38:23Z"
+task_id: "RT-20260721-004"
+decision_id: "DDR-20260721-004"
+job_id: "AJ-RT-20260721-004-001"
+completion_path: "research_control/tasks/RT-20260721-004/jobs/completions/AJC-AJ-RT-20260721-004-001.yaml"
+completion_hash: "535b8ed27d9551ec9009e1254dc7e15c65d35ca9796b607962180be9f5d284f4"
+source_task_id: "RT-20260721-004"
+source_job_id: "AJ-RT-20260721-004-001"
+source_completion_id: "AJC-AJ-RT-20260721-004-001"
+status: "ready_for_director"
+summary: "RT-20260721-004 completed only v21 P10-T02. It registered a six-field machine-readable task-taxonomy policy and additive 24-column task-index v2 implemented a shared read-only compatibility adapter and made task-index physics-progress and current-frontier reports prefer normalized metadata. The historical report covers all 1,041 tracked task directories: 1 explicit 341 plan-derived 694 low-confidence legacy and 5 unknown-source views with explicit unknown-field counts zero post-policy errors zero historical source mutations and zero stronger-science inferences. Raw historical task records science sources scientific ledgers ontology P4-T05 Distance-to-GR and every protected authority remain unchanged."
+next_action: "Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks."
+loop_risk_route: "v21_p10_t03_immutable_candidate_identity_lineage"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260721-004"
+  latest_research_handoff_id: "handoff-0805"
+  latest_research_next_action: "Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One P10-T03 project-control packet may define immutable candidate and family identities statement assumption and ontology hashes stage transitions supersession edges validators and standard control receipts."
+  newly_completed_plan_task: "P10-T02"
+  p10_t02_dependency_completion_path: "research_control/tasks/RT-20260721-004/jobs/completions/AJC-AJ-RT-20260721-004-001.yaml"
+  p10_t02_dependency_completion_hash: "535b8ed27d9551ec9009e1254dc7e15c65d35ca9796b607962180be9f5d284f4"
+  p10_t02_completed: true
+  p10_t03_dependency_ready: true
+  p10_t03_selected_next: true
+  p10_t03_executed: false
+  historical_task_directory_count: 1041
+  historical_source_mutation_count: 0
+  stronger_science_inference_count: 0
+  explicit_required_error_count: 0
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  ontology_regime_selected: false
+  ontology_regime_adopted: false
+  scientific_ledger_change_count: 0
+  physics_promotion_authorized: false
+  proof_authority: false
+  blocked_claims:
+    - "historical task record rewritten or reinterpreted"
+    - "taxonomy classification treated as scientific status or authority"
+    - "P10-T03 or any other successor executed inside P10-T02"
+    - "P4-T05 ontology-regime decision or Gate Chair verdict"
+    - "canonical ontology or scientific-ledger edit"
+    - "validator checkpoint or candidate identity as scientific truth evidence"
+    - "source-law adoption physical metric matter coupling Einstein equations exact-GR derivation or benchmark promotion"
+    - "external publication proof authority or completed derivation"
+
+task_taxonomy_result:
+  taxonomy_schema_id: "v21_task_taxonomy_v1"
+  taxonomy_policy_object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY"
+  taxonomy_policy_path: "research_control/design/v21_task_taxonomy_policy.md"
+  taxonomy_policy_sha256: "7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"
+  task_index_schema_object_id: "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V2"
+  task_index_schema_path: "research_control/design/task_index_schema_v2.md"
+  task_index_schema_sha256: "4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"
+  adapter_path: "scripts/research_control/task_taxonomy.py"
+  adapter_sha256: "e03bb7974f17003b2786e2e68d3057a6239872c75c8684b63ec2b8deb853bae0"
+  historical_report_path: "research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_historical_classification_report.json"
+  historical_report_sha256: "7e79f8eef3e14e8aa4c0a99550758cae655e2e200db2336e4d46c3b206c7b05e"
+  compact_receipt_path: "research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_compact_receipt.json"
+  compact_receipt_sha256: "2687a11e8f9b0bf4a1431a9ba7aea511c3daea810b918db21a5404b20b8df977"
+  normalized_fields:
+    - "work_kind"
+    - "milestone"
+    - "candidate_family"
+    - "result_kind"
+    - "authority"
+    - "scope"
+  task_index_column_count: 24
+  tracked_task_directory_count: 1041
+  explicit_source_count: 1
+  plan_metadata_source_count: 341
+  legacy_compatibility_source_count: 694
+  unknown_source_count: 5
+  low_confidence_count: 694
+  explicit_required_error_count: 0
+  historical_source_mutation_count: 0
+  stronger_science_inference_count: 0
+  result_boundary: "Operational task classification only; no scientific status authority adoption proof or promotion delta."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make task analytics and routing generalizable without changing the scientific burden."
+  explanation: "P10-T02 added task-control policy adapter and derived reports only; it supplied no source-equivalence theorem or downstream physics result."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_project_control_taxonomy_only"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No scientific object source law ontology regime metric matter semantics coupling Einstein dynamics or benchmark status changed."
+  downstream_unlocked:
+    - "P10-T03 immutable candidate identity and lineage records under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+required_next_packet:
+  task_type: "v21_immutable_candidate_identity_lineage"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "construction_or_implementation"
+    milestone: "source_equivalence_eqsrc"
+    candidate_family: "not_applicable"
+    result_kind: "implemented_and_validated_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+selected_next_route:
+  route_id: "v21_p10_t03_immutable_candidate_identity_lineage"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P10-T03"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make candidate lifecycle evidence referentially exact."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  executed: false
+  next_action: "Create immutable candidate and family identities exact hashes stage transitions and supersession edges without adopting or promoting any candidate."
+  source_handoff: "research_control/handoffs/handoff-0805.yaml"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 36 was validated claimed consumed once and executed under its immutable route."
+  taxonomy_contract:
+    status: "PASS"
+    evidence:
+      - "Six controlled fields explicit-new-task requirements and ambiguity-to-unknown behavior pass focused tests."
+  historical_classification:
+    status: "PASS"
+    evidence:
+      - "All 1,041 tracked task directories are represented with zero mutation and zero stronger-science inference."
+  task_index:
+    status: "PASS"
+    evidence:
+      - "Task-index v2 has 24 exact columns and zero hard validation errors."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Completion records P10-T02 recommendation coverage hashes unknown counts authority flags and forbidden conclusions."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused tests documentation impact project-improvement parity research-control memory and diff gates are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier physics-progress dependency and claim-graph derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and read-only validation are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+authorization_layers:
+  historical_record_rewrite_authorized: false
+  historical_science_strengthening_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  proof_authority: false
+  publication_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P10-T02 completed its included project-system work without an incidental shared-system defect."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one bounded P10-T03 project-system packet after the P10-T02 governed checkpoint succeeds."
+  this_handoff_does_not_authorize:
+    - "P10-T03 execution inside the completed P10-T02 AgentJob"
+    - "historical task mutation or reinterpretation"
+    - "candidate adoption promotion or scientific truth inference from identity metadata"
+    - "P4-T05 ontology-regime selection or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority or completed derivation"

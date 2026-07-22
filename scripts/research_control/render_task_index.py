@@ -16,15 +16,17 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 from strict_yaml import StrictYamlError, load as load_yaml  # noqa: E402
+import task_taxonomy  # noqa: E402
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-SCHEMA_ID = "research_control_task_index_v1"
-SCHEMA_PATH = "research_control/design/task_index_schema_v1.md"
+SCHEMA_ID = "research_control_task_index_v2"
+SCHEMA_PATH = "research_control/design/task_index_schema_v2.md"
 TASKS_ROOT = "research_control/tasks"
 RESEARCH_TASK_REGISTRY_PATH = "registries/RESEARCH_TASK_REGISTRY.csv"
 AGENT_JOB_REGISTRY_PATH = "registries/AGENT_JOB_REGISTRY.csv"
 DIRECTOR_DECISION_REGISTRY_PATH = "registries/DIRECTOR_DECISION_REGISTRY.csv"
+AGENT_ROLE_REGISTRY_PATH = "registries/AGENT_ROLE_REGISTRY.csv"
 DEFAULT_CSV_PATH = "research_control/tasks/TASK_INDEX.csv"
 DEFAULT_MARKDOWN_PATH = "research_control/tasks/TASK_INDEX.md"
 DEFAULT_WIKI_MARKDOWN_PATH = "wiki/indexes/research_control_task_index.md"
@@ -38,7 +40,16 @@ HEADER = [
     "parent_task_id",
     "created_at",
     "closed_at",
+    "title",
     "task_type",
+    "work_kind",
+    "milestone",
+    "candidate_family",
+    "result_kind",
+    "authority",
+    "scope",
+    "taxonomy_source",
+    "taxonomy_confidence",
     "status",
     "target_derivation_milestone",
     "milestone_burden",
@@ -147,6 +158,14 @@ def rows_by_task(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
     return output
 
 
+def rows_by_role(rows: list[dict[str, str]]) -> dict[tuple[str, str], dict[str, str]]:
+    return {
+        (text_value(row.get("role_id")), text_value(row.get("version"))): row
+        for row in rows
+        if text_value(row.get("role_id")) and text_value(row.get("version"))
+    }
+
+
 def registry_task_ids(task_registry_rows: list[dict[str, str]]) -> set[str]:
     return {text_value(row.get("task_id")) for row in task_registry_rows if text_value(row.get("task_id"))}
 
@@ -241,12 +260,22 @@ def build_index(repo_root: Path) -> dict[str, Any]:
     task_registry_rows = read_csv_rows(repo_root, RESEARCH_TASK_REGISTRY_PATH)
     job_registry_rows = read_csv_rows(repo_root, AGENT_JOB_REGISTRY_PATH)
     decision_registry_rows = read_csv_rows(repo_root, DIRECTOR_DECISION_REGISTRY_PATH)
+    role_registry_rows = read_csv_rows(repo_root, AGENT_ROLE_REGISTRY_PATH)
     task_registry = rows_by_task(task_registry_rows)
+    role_registry = rows_by_role(role_registry_rows)
+    try:
+        plan_items = task_taxonomy.load_plan_items(repo_root)
+        task_taxonomy.load_policy(repo_root)
+    except task_taxonomy.TaskTaxonomyError as exc:
+        raise TaskIndexError(str(exc)) from exc
     source_paths = [
         SCHEMA_PATH,
+        task_taxonomy.POLICY_PATH,
+        task_taxonomy.BACKLOG_PATH,
         RESEARCH_TASK_REGISTRY_PATH,
         AGENT_JOB_REGISTRY_PATH,
         DIRECTOR_DECISION_REGISTRY_PATH,
+        AGENT_ROLE_REGISTRY_PATH,
     ]
     task_ids = sorted(registry_task_ids(task_registry_rows) | task_dir_ids(repo_root))
     rows: list[dict[str, str]] = []
@@ -283,12 +312,46 @@ def build_index(repo_root: Path) -> dict[str, Any]:
         if registry_row.get("status") and task.get("status") and registry_row.get("status") != task.get("status"):
             issues.append(issue("status_conflict", task_yaml_path, task_id, "00_TASK.yaml and registry status differ"))
 
+        role_id = first_text(job.get("role_id"), job_registry.get("role_id"), task.get("role_id"))
+        role_version = first_text(
+            job.get("role_version"),
+            job_registry.get("role_version"),
+            task.get("role_version"),
+        )
+        taxonomy = task_taxonomy.classify_task(
+            task,
+            registry_row,
+            job,
+            role_registry.get((role_id, role_version), {}),
+            plan_items.get(task_taxonomy.plan_task_id(task), {}),
+        )
+        for error in taxonomy["errors"]:
+            issues.append(
+                issue(
+                    "taxonomy_invalid"
+                    if isinstance(task.get("task_taxonomy"), dict)
+                    else "taxonomy_required_missing",
+                    task_yaml_path,
+                    task_id,
+                    error,
+                )
+            )
+
         row = {
             "task_id": task_id,
             "parent_task_id": first_text(task.get("parent_task_id"), registry_row.get("parent_task_id")),
             "created_at": first_text(task.get("created_at"), registry_row.get("created_at")),
             "closed_at": first_text(task.get("closed_at"), registry_row.get("closed_at")),
+            "title": taxonomy["title"],
             "task_type": first_text(task.get("task_type"), registry_row.get("task_type")),
+            "work_kind": taxonomy["work_kind"],
+            "milestone": taxonomy["milestone"],
+            "candidate_family": taxonomy["candidate_family"],
+            "result_kind": taxonomy["result_kind"],
+            "authority": taxonomy["authority"],
+            "scope": taxonomy["scope"],
+            "taxonomy_source": taxonomy["taxonomy_source"],
+            "taxonomy_confidence": taxonomy["taxonomy_confidence"],
             "status": status,
             "target_derivation_milestone": first_text(
                 task.get("target_derivation_milestone"),

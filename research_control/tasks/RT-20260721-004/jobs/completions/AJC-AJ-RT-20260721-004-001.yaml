@@ -1,0 +1,398 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260721-004-001"
+completion_id: "AJC-AJ-RT-20260721-004-001"
+task_id: "RT-20260721-004"
+task_type: "v21_orthogonal_task_taxonomy"
+decision_id: "DDR-20260721-004"
+role_id: "project-control-maintainer"
+source_role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260721-004"
+status: "completed"
+created_at: "2026-07-22T01:19:45Z"
+started_at: "2026-07-22T01:19:45Z"
+completed_at: "2026-07-22T01:38:23Z"
+objective: "Implement and validate only v21 P10-T02 stable orthogonal task taxonomy additive compatibility parsing non-mutating historical classification and normalized-field-first reporting."
+completion_summary: "P10-T02 registered a six-field machine-readable task-taxonomy policy and additive 24-column task-index v2; implemented one shared read-only compatibility adapter; updated task-index physics-progress and current-frontier reporting to prefer normalized fields; and classified all 1,041 tracked task directories. The final report records 1 explicit 341 plan-derived 694 low-confidence legacy and 5 unknown-source classifications with explicit unknown-field counts zero post-policy task errors zero historical source mutations and zero stronger-science inferences. Raw historical task records science sources scientific ledgers ontology P4-T05 Distance-to-GR and every protected authority remain unchanged."
+objective_result: "completed"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T02"
+  recommendation_ids:
+    - "V21-R40"
+    - "V21-R43"
+    - "V21-R51"
+  implementation_status: "completed"
+  completed_v21_tasks_to_date:
+    - "P0-T01"
+    - "P0-T02"
+    - "P0-T03"
+    - "P0-T04"
+    - "P0-T05"
+    - "P1-T01"
+    - "P1-T02"
+    - "P1-T03"
+    - "P1-T04"
+    - "P1-T05"
+    - "P2-T01"
+    - "P2-T02"
+    - "P2-T03"
+    - "P2-T04"
+    - "P2-T05"
+    - "P2-T06"
+    - "P2-T07"
+    - "P2-T08"
+    - "P3-T01"
+    - "P3-T02"
+    - "P3-T03"
+    - "P3-T04"
+    - "P3-T05"
+    - "P3-T06"
+    - "P3-T07"
+    - "P4-T01"
+    - "P4-T02"
+    - "P4-T03"
+    - "P4-T04"
+    - "P10-T01"
+    - "P10-T02"
+  next_dependency_ready_work_item: "P10-T03"
+  next_work_item_executed: false
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 36
+  passes_consumed: 35
+  route_work_item_id: "P10-T02"
+  route_worker_skill: "continue-research"
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "v21_p10_t02_orthogonal_task_taxonomy"
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+recommendation_coverage:
+  source_plan_id: "recommendations_implementation_plan_continue_task-v21"
+  recommendation_ids:
+    - "V21-R40"
+    - "V21-R43"
+    - "V21-R51"
+  implements_plan_task_id: "P10-T02"
+  implementation_status: "completed"
+  coverage_effect: "orthogonal_task_taxonomy_and_compatibility_only"
+  downstream_recommendations_completed_by_this_task: false
+
+task_taxonomy_result:
+  taxonomy_policy_object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY"
+  taxonomy_policy_path: "research_control/design/v21_task_taxonomy_policy.md"
+  taxonomy_policy_sha256: "7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"
+  taxonomy_schema_id: "v21_task_taxonomy_v1"
+  effective_at: "2026-07-22T01:19:45Z"
+  fields:
+    - "work_kind"
+    - "milestone"
+    - "candidate_family"
+    - "result_kind"
+    - "authority"
+    - "scope"
+  task_index_schema_object_id: "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V2"
+  task_index_schema_path: "research_control/design/task_index_schema_v2.md"
+  task_index_schema_sha256: "4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"
+  task_index_schema_id: "research_control_task_index_v2"
+  task_index_column_count: 24
+  adapter_path: "scripts/research_control/task_taxonomy.py"
+  adapter_sha256: "e03bb7974f17003b2786e2e68d3057a6239872c75c8684b63ec2b8deb853bae0"
+  raw_title_preserved: true
+  raw_task_type_preserved: true
+  new_tasks_require_explicit_taxonomy: true
+  ambiguity_disposition: "unknown"
+  classification_is_scientific_status: false
+  classification_can_strengthen_science: false
+  classification_can_promote_claims: false
+
+historical_classification_result:
+  report_path: "research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_historical_classification_report.json"
+  report_sha256: "7e79f8eef3e14e8aa4c0a99550758cae655e2e200db2336e4d46c3b206c7b05e"
+  report_canonical_payload_sha256: "2f20b8136b5d15752698be082c8d0d2e0c1af7abe8efa871e5e2f4ae8ad3d248"
+  compact_receipt_path: "research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_compact_receipt.json"
+  compact_receipt_sha256: "2687a11e8f9b0bf4a1431a9ba7aea511c3daea810b918db21a5404b20b8df977"
+  tracked_task_directory_count: 1041
+  historical_task_count: 1040
+  explicit_required_task_count: 1
+  explicit_required_error_count: 0
+  source_counts:
+    explicit: 1
+    plan_metadata: 341
+    legacy_compatibility: 694
+    unknown: 5
+  confidence_counts:
+    high: 247
+    medium: 95
+    low: 694
+    unknown: 5
+  unknown_field_counts:
+    work_kind: 200
+    milestone: 409
+    candidate_family: 494
+    result_kind: 200
+    authority: 7
+    scope: 5
+  raw_task_type_preserved_count: 1037
+  readable_title_count: 385
+  historical_source_mutation_count: 0
+  stronger_science_inference_count: 0
+  historical_records_rewritten: 0
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P10-T02 changes task-control metadata and derived reporting only."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  theorem_ids_created: []
+  identity_note: "No scientific candidate or theorem was created; candidate_family is operational task metadata only."
+
+mathematical_payload_manifest: []
+
+outputs_created:
+  - "research_control/design/v21_task_taxonomy_policy.md"
+  - "research_control/design/task_index_schema_v2.md"
+  - "scripts/research_control/task_taxonomy.py"
+  - "tests/test_task_taxonomy.py"
+  - "research_control/tasks/RT-20260721-004/00_TASK.yaml"
+  - "research_control/tasks/RT-20260721-004/DDR-20260721-004.md"
+  - "research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_historical_classification_report.json"
+  - "research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_compact_receipt.json"
+  - "research_control/tasks/RT-20260721-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260721-004/jobs/AJ-RT-20260721-004-001.yaml"
+  - "research_control/tasks/RT-20260721-004/jobs/completions/AJC-AJ-RT-20260721-004-001.yaml"
+  - "research_control/tasks/RT-20260721-004/roles/project-control-maintainer@0.2.0--RT-20260721-004.yaml"
+  - "research_control/handoffs/handoff-0805.yaml"
+  - "research_control/handoffs/handoff-0805.md"
+outputs_updated:
+  - "scripts/research_control/render_task_index.py"
+  - "scripts/research_control/validate_task_index.py"
+  - "scripts/research_control/report_physics_progress_metrics.py"
+  - "scripts/research_control/render_current_frontier.py"
+  - "tests/test_task_index_renderer.py"
+  - "tests/test_report_physics_progress_metrics.py"
+  - "tests/test_render_current_frontier.py"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/physics_progress_metrics.json"
+  - "output/physics_progress_metrics.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+
+fixed_input_evidence:
+  p10_t01_completion:
+    path: "research_control/tasks/RT-20260721-003/jobs/completions/AJC-AJ-RT-20260721-003-001.yaml"
+    sha256: "28ea88fbfbecd144b7b742152be0fab44cafd0b8ac21869d9ad6be105f2f7305"
+  predecessor_handoff:
+    path: "research_control/handoffs/handoff-0804.yaml"
+    sha256: "95442d3f6d60645559955b8264a2e4b407b55de0b6b5a1cbcaa8929a0353ce33"
+  source_plan:
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  distance_to_gr_ledger:
+    path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    changed: false
+  historical_task_sources:
+    changed: false
+
+physics_progress_status:
+  status: "project_control_taxonomy_completed_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Make task analytics and routing generalizable without changing the scientific burden."
+  explanation: "P10-T02 supplies operational classification and reporting contracts only; it supplies no source-equivalence theorem or downstream physics result."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  rationale: "A project-control task taxonomy does not discharge source-equivalence or downstream GR burdens."
+
+authorization_layers:
+  scientific_claims_changed: false
+  historical_record_rewrite_authorized: false
+  historical_science_strengthening_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  source_object_status_change_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  benchmark_promotion_authorized: false
+  downstream_physics_promotion_authorized: false
+  completed_derivation_authorized: false
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 36 route identity lease parity max effort repository binding clean start predecessor terminal state and single consumption were verified before work."
+  taxonomy_contract:
+    status: "PASS"
+    evidence:
+      - "Embedded policy JSON equals the executable v1 contract and the post-policy task has all six valid explicit fields."
+  historical_classification:
+    status: "PASS"
+    evidence:
+      - "All 1,041 tracked task directories are represented with source confidence and unknown counts."
+      - "Historical source mutation count and stronger-science inference count are both zero."
+  task_index:
+    status: "PASS"
+    evidence:
+      - "Task-index v2 has 24 exact columns 1,041 rows zero hard errors and 297 preserved historical warnings."
+  focused_tests:
+    status: "PASS"
+    evidence:
+      - "Twenty-seven taxonomy task-index physics-progress and current-frontier tests pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Affected validation documentation impact project-improvement parity research-control and whitespace gates are required to pass before checkpoint."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The completion records P10-T02 recommendation coverage exact taxonomy and report hashes historical counts authority flags and forbidden conclusions."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier task-index physics-progress dependency and claim-graph derivatives are required to be fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and read-only validation are required to pass before checkpoint; retrieval surfaces remain non-authoritative."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+  authority_boundary:
+    status: "PASS"
+    evidence:
+      - "The taxonomy contains no acceptance adoption proof promotion or truth field."
+      - "Explicit project-system formalization does not inflate theorem or candidate metrics."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+
+required_validators:
+  - "memory_preflight"
+  - "v21_task_taxonomy_schema"
+  - "v21_new_task_normalized_fields"
+  - "v21_historical_parse_coverage"
+  - "v21_no_historical_mutation"
+  - "v21_no_science_strengthening"
+  - "task_index_v2"
+  - "normalized_reporting_preference"
+  - "focused_unit_tests"
+  - "affected_validation_plan"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "memory_sync"
+  - "memory_core"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+command_results:
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --write-report research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_historical_classification_report.json --write-receipt research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_compact_receipt.json --json | exit_code=0 | PASS 1041 tasks 0 required errors 0 mutations 0 stronger-science inferences"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | exit_code=0 | PASS 1041 rows 24 columns"
+  - ".venv/bin/python scripts/research_control/validate_task_index.py --summary | exit_code=0 | PASS 0 errors 297 historical warnings"
+  - ".venv/bin/python -m unittest -v tests.test_task_taxonomy tests.test_task_index_renderer tests.test_report_physics_progress_metrics tests.test_render_current_frontier | exit_code=0 | PASS 27 tests"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths <P10-T02 paths> --explain | exit_code=0 | READY full fallback"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json | exit_code=0 | project-system and documentation impact required with zero blocked paths"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | exit_code=0 | PASS"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | exit_code=0 | PASS after exact live-path and reason-code reconciliation"
+  - "git diff --check | exit_code=0 | PASS"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 960
+    relationship_row_count: 4763
+    semantic_row_count: 960
+    vault_row_count: 960
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search Normalize the task taxonomy into orthogonal machine fields --limit 10 --json"
+      query_type: "search"
+      query_text: "Normalize the task taxonomy into orthogonal machine fields"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      retrieval_only_evidence_ids:
+        - "SEMANTIC-MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "75d20cc3aae5a212c080b0bc370e129a3c810d57cedea5dbd4506861b034f89e"
+      preflight_source_hash: "5529b9143fb0bd120adfdc72f1d0904a75a3813977e55a06d03ee0783bad4217"
+      source_hash_refresh_reason: "The active task lawfully regenerated the mutable current-frontier source; the exact preflight hash remains preserved above."
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory and .local are retrieval layers only and not authority."
+
+forbidden_conclusion_summary:
+  historical_records_rewritten: false
+  historical_science_strengthened: false
+  ontology_regime_selected: false
+  ontology_regime_adopted: false
+  source_law_adopted: false
+  scientific_ledger_changed: false
+  p4_t05_executed: false
+  physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  proof_authority: false
+  publication_authority: false
+  completed_derivation_authorized: false
+
+next_recommendation: "Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks."
+project_improvement_signals: []
+out_of_scope_remaining_work:
+  - "P4-T05 and its dependency-descending science work remain included but protected by the human ontology-regime gate; P10-T03 is the next dependency-ready direct successor."
+  - "Candidate-lineage implementation ontology selection or adoption canonical science edits scientific-ledger changes physical derivation benchmark promotion publication outreach push and additional v21 items were not authorized or executed in generation 36."
+notes: "This completion records one P10-T02 project-control packet only; validator PASS is operational evidence and not scientific proof or promotion authority."

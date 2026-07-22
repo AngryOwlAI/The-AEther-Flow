@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260721-003` and `handoff-0804`.
+`RT-20260721-004` and `handoff-0805`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260721-003` |
-| Latest handoff ID | `handoff-0804` |
-| Current status | `v21_p10_t01_normalized_status_assumption_schemas_complete_no_history_or_physics_delta_p10_t02_ready` |
+| Active task ID | `RT-20260721-004` |
+| Latest handoff ID | `handoff-0805` |
+| Current status | `v21_p10_t02_orthogonal_task_taxonomy_complete_no_history_or_physics_delta_p10_t03_ready` |
 | V16 completed | false |
-| Current route family | v21 p10 t02 orthogonal task taxonomy |
+| Current route family | integration or selection (project system) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden follows the next action: Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records. |
-| Required next authority | One P10-T02 project-control packet may define stable orthogonal task-taxonomy fields, a task-local adapter or fixtures, exact compatibility behavior, and standard control receipts. |
-| Next recommended action | Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records. |
+| Current burden | none for physics derivation; live control burden is v21 immutable candidate identity lineage |
+| Required next authority | One P10-T03 project-control packet may define immutable candidate and family identities statement assumption and ontology hashes stage transitions supersession edges validators and standard control receipts. |
+| Next recommended action | Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260721-003` |
-| Latest research handoff ID | `handoff-0804` |
-| Latest research next action | Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records. |
+| Latest research task ID | `RT-20260721-004` |
+| Latest research handoff ID | `handoff-0805` |
+| Latest research next action | Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260721-003/00_TASK.yaml`.
-- Active task objective: Create machine-readable assumption-provenance and multidimensional scientific-status schemas with additive legacy compatibility fields fail-closed contradictions and positive and negative fixtures without reinterpreting historical claims.
-- Latest handoff path: `research_control/handoffs/handoff-0804.yaml`.
-- Latest handoff summary: RT-20260721-003 completed only v21 P10-T01. It registered two control schemas with embedded machine-readable JSON contracts for assumption provenance and ten orthogonal scientific-status dimensions. The task-local validator matched 8 positive fixtures, 28 negative fixtures, and all 6 legacy mappings with zero unexpected results. Unknown enums, contradictory structures, unsupported proof or empirical status, unscoped negative status, protected-authority substitutions, historical rewrites, and implicit promotion fail closed. No historical record, science source, scientific ledger, ontology, P4-T05 state, Distance-to-GR burden, or physics authority changed.
-- Current route family: v21 p10 t02 orthogonal task taxonomy.
-- Next recommended action: Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records.
+- Active task path: `research_control/tasks/RT-20260721-004/00_TASK.yaml`.
+- Active task objective: Define stable orthogonal task-taxonomy fields and controlled vocabularies; add a fail-closed compatibility adapter; classify historical tasks without mutation; expose unknown and low-confidence results; and make reports prefer normalized fields while preserving readable titles and raw task_type values.
+- Latest handoff path: `research_control/handoffs/handoff-0805.yaml`.
+- Latest handoff summary: RT-20260721-004 completed only v21 P10-T02. It registered a six-field machine-readable task-taxonomy policy and additive 24-column task-index v2 implemented a shared read-only compatibility adapter and made task-index physics-progress and current-frontier reports prefer normalized metadata. The historical report covers all 1,041 tracked task directories: 1 explicit 341 plan-derived 694 low-confidence legacy and 5 unknown-source views with explicit unknown-field counts zero post-policy errors zero historical source mutations and zero stronger-science inferences. Raw historical task records science sources scientific ledgers ontology P4-T05 Distance-to-GR and every protected authority remain unchanged.
+- Current route family: integration or selection (project system).
+- Next recommended action: Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records.
+Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -318,21 +318,45 @@ completion or handoff says so.
 
 Layer status summary:
 
-No validation-layer status summary is available.
+| Status | Count | Meaning |
+| --- | --- | --- |
+| `PASS` | 9 | receipt complete |
+| `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
-No validation-layer split is recorded in the latest handoff.
+| Validation layer | Status | Meaning | Evidence |
+| --- | --- | --- | --- |
+| `pre_execution` | PASS | receipt complete | Generation 36 was validated claimed consumed once and executed under its immutable route. |
+| `completion_internal` | PASS | receipt complete | Completion records P10-T02 recommendation coverage hashes unknown counts authority flags and forbidden conclusions. |
+| `post_write` | PASS | receipt complete | Focused tests documentation impact project-improvement parity research-control memory and diff gates are required before checkpoint. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | Governed checkpoint remains the final transaction gate. |
+| `renderer` | PASS | receipt complete | Task-index current-frontier physics-progress dependency and claim-graph derivatives are required fresh before checkpoint. |
+| `memory_bootstrap` | PASS | receipt complete | Tracked memory bootstrap and read-only validation are required before checkpoint. |
+| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation is required to report no hard failure before checkpoint. |
+| `historical_classification` | PASS | receipt complete | All 1,041 tracked task directories are represented with zero mutation and zero stronger-science inference. |
+| `task_index` | PASS | receipt complete | Task-index v2 has 24 exact columns and zero hard validation errors. |
+| `taxonomy_contract` | PASS | receipt complete | Six controlled fields explicit-new-task requirements and ambiguity-to-unknown behavior pass focused tests. |
 
 Authorization layers:
 
-No authorization-layer split is recorded in the latest handoff.
+| Authorization field | Value | Meaning |
+| --- | --- | --- |
+| `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
+| `protected_scoped_gate_review_scope` | not_applicable | exact scope of protected review authority |
+| `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
+| `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
+| `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
+| `historical_record_rewrite_authorized` | False | extension authorization field |
+| `historical_science_strengthening_authorized` | False | extension authorization field |
+| `proof_authority` | False | extension authorization field |
+| `publication_authority` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260721-003`;
-- latest handoff: `handoff-0804`;
-- current status: `v21_p10_t01_normalized_status_assumption_schemas_complete_no_history_or_physics_delta_p10_t02_ready`;
+- active task: `RT-20260721-004`;
+- latest handoff: `handoff-0805`;
+- current status: `v21_p10_t02_orthogonal_task_taxonomy_complete_no_history_or_physics_delta_p10_t03_ready`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +366,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0804.yaml`
-- `research_control/tasks/RT-20260721-003/00_TASK.yaml`
+- `research_control/handoffs/handoff-0805.yaml`
+- `research_control/tasks/RT-20260721-004/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +383,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0804*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0805*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

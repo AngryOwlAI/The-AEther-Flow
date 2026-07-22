@@ -1,0 +1,66 @@
+validation_status: "PASS"
+task_id: "RT-20260721-004"
+task_type: "v21_orthogonal_task_taxonomy"
+title: "Normalize the task taxonomy into orthogonal machine fields"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "integration_or_selection"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "not_applicable"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-22T01:19:45Z"
+updated_at: "2026-07-22T01:38:23Z"
+closed_at: "2026-07-22T01:38:23Z"
+parent_task_id: "RT-20260721-003"
+parent_handoff_id: "handoff-0804"
+current_decision_id: "DDR-20260721-004"
+current_job_id: "AJ-RT-20260721-004-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260721-004"
+requires_human_gate: false
+human_authorization_note: "Generation 36 of the immutable user-requested v21 relay and handoff-0804 authorize one bounded P10-T02 project-system packet."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P10"
+  plan_task_id: "P10-T02"
+  plan_task_name: "Normalize the task taxonomy into orthogonal machine fields"
+  recommendation_ids:
+    - "V21-R40"
+    - "V21-R43"
+    - "V21-R51"
+objective: "Define stable orthogonal task-taxonomy fields and controlled vocabularies; add a fail-closed compatibility adapter; classify historical tasks without mutation; expose unknown and low-confidence results; and make reports prefer normalized fields while preserving readable titles and raw task_type values."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Make task analytics and routing generalizable without changing any scientific burden."
+route_label: "ordinary-research-packet"
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V21-P10-T02-TASK-TAXONOMY-001"
+claim_boundary:
+  allowed_scope: "Define and validate only the P10-T02 task-taxonomy policy shared adapter additive task-index v2 fields historical classification report focused reporting integration standard control records one P10-T03 handoff and policy-generated derivatives."
+  completed_dependency_task: "RT-20260721-003"
+  current_handoff: "handoff-0804"
+  historical_records_mutated: false
+  historical_science_strengthening_allowed: false
+  p4_t05_preserved_human_gate: true
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/design/v21_task_taxonomy_policy.md"
+  - "research_control/design/task_index_schema_v2.md"
+  - "scripts/research_control/task_taxonomy.py"
+  - "research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_historical_classification_report.json"
+  - "research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_compact_receipt.json"
+closure_status: "p10_t02_taxonomy_complete_no_history_or_physics_delta_p10_t03_selected"
+summary: "Defined and registered the six-field v21 task taxonomy and additive task-index v2; classified 1,041 tracked task directories with 694 low-confidence legacy views while recording zero historical mutations zero stronger-science inferences and zero required-field errors."
+next_recommended_action: "Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks."
+documentation_impact_id: "DI-RT-20260721-004-001"
+completion_id: "AJC-AJ-RT-20260721-004-001"
+project_improvement_signals: []
+notes: "The taxonomy is additive project-control metadata. It does not reinterpret historical records or create scientific promotion authority."

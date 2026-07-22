@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260721-003`
-- Latest handoff: `handoff-0804`
-- Current status: `v21_p10_t01_normalized_status_assumption_schemas_complete_no_history_or_physics_delta_p10_t02_ready`
+- Active task: `RT-20260721-004`
+- Latest handoff: `handoff-0805`
+- Current status: `v21_p10_t02_orthogonal_task_taxonomy_complete_no_history_or_physics_delta_p10_t03_ready`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260721-003`
-- Latest research handoff: `handoff-0804`
-- Latest research next action: Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records.
+- Latest research task: `RT-20260721-004`
+- Latest research handoff: `handoff-0805`
+- Latest research next action: Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p10_t02_orthogonal_task_taxonomy`
+- Route ID: `v21_p10_t03_immutable_candidate_identity_lineage`
 - Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Make task analytics and routing generalizable.
+- Milestone burden: Make candidate lifecycle evidence referentially exact.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `902eb3bff8b14e16b3c4d6083d33b75e2b8b39c25f26f8becce678cb8a138d3f`
-- JSON SHA-256: `e16ab5663b6f6de6e1449eb5a908053777f0870ad7fbac08bc29b2b686250869`
+- YAML SHA-256: `16281b23c4f1940ca9d738eff863204faa4fed14e3b19cb42d88e242624f269d`
+- JSON SHA-256: `0062479560ad6967b16ebb8197b612413a33840a9e43755436b07e50fd5f4119`
 
 ## Authority Warning
 

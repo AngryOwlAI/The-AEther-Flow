@@ -24,9 +24,9 @@ from typing import Any
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
-REPORT_SCHEMA_ID = "research_control_task_index_validation_report_v1"
+REPORT_SCHEMA_ID = "research_control_task_index_validation_report_v2"
 VALIDATOR_NAME = "scripts/research_control/validate_task_index.py"
-VALIDATOR_VERSION = "v1"
+VALIDATOR_VERSION = "v2"
 
 for import_path in (REPO_ROOT, SCRIPT_DIR):
     if str(import_path) not in sys.path:
@@ -53,6 +53,8 @@ HARD_RENDERER_ISSUES = {
     "malformed_yaml",
     "missing_completion",
     "status_conflict",
+    "taxonomy_invalid",
+    "taxonomy_required_missing",
 }
 SUPPORT_ONLY_ROLE_PREFIXES = (
     "documentation-curator@",
@@ -188,6 +190,8 @@ class TaskIndexValidationReport:
                 "source_task_directory_existence",
                 "completion_path_existence_for_completed_jobs",
                 "task_status_compatibility",
+                "new_task_normalized_taxonomy",
+                "normalized_fields_preferred_with_raw_fields_preserved",
                 "support_only_physics_delta_false",
                 "forbidden_task_index_overread_language",
                 "historical_metadata_issues_reported_not_invented",
@@ -216,6 +220,10 @@ def row_signature(rows: list[dict[str, str]]) -> list[dict[str, str]]:
 
 
 def support_only_row(row: dict[str, str]) -> bool:
+    if row.get("scope") in {"project_system", "routing"}:
+        return True
+    if row.get("authority") in {"process_control", "project_control", "routing_control"}:
+        return True
     role_family = row.get("role_family", "").lower()
     task_type = row.get("task_type", "").lower()
     if role_family.startswith(SUPPORT_ONLY_ROLE_PREFIXES):
@@ -294,7 +302,7 @@ def validate_task_index(repo_root: Path = REPO_ROOT) -> TaskIndexValidationRepor
     if actual_header != render_task_index.HEADER:
         report.error(
             "required_header_mismatch",
-            "Generated task-index CSV header does not match task_index_schema_v1.",
+            "Generated task-index CSV header does not match task_index_schema_v2.",
             path=render_task_index.DEFAULT_CSV_PATH,
             value=",".join(actual_header),
         )

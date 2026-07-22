@@ -1,9 +1,9 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260721-003"
-latest_handoff_id: "handoff-0804"
-current_status: "v21_p10_t01_normalized_status_assumption_schemas_complete_no_history_or_physics_delta_p10_t02_ready"
-claim_boundary_summary: "RT-20260721-003 completed only P10-T01 by registering embedded machine-readable assumption-provenance and ten-axis scientific-status contracts. Eight positive, twenty-eight negative, and six legacy-mapping fixtures matched expectation with no unexpected result. Historical records, science sources, scientific ledgers, ontology, P4-T05, Distance-to-GR, and all promotion authority remain unchanged."
-next_recommended_action: "Run exactly one bounded v21 P10-T02 project-system packet in a separate AgentJob. Normalize task taxonomy into stable work_kind, milestone, candidate_family, result_kind, authority, and scope fields while preserving human-readable titles and raw historical fields. Do not bulk-migrate or reinterpret historical records."
+active_task_id: "RT-20260721-004"
+latest_handoff_id: "handoff-0805"
+current_status: "v21_p10_t02_orthogonal_task_taxonomy_complete_no_history_or_physics_delta_p10_t03_ready"
+claim_boundary_summary: "RT-20260721-004 completed only P10-T02 by registering six orthogonal task fields a shared read-only adapter and additive task-index v2. All 1,041 tracked task directories are represented with visible source confidence and unknown counts; post-policy errors historical mutations and stronger-science inferences are zero. Historical tasks science sources scientific ledgers ontology P4-T05 Distance-to-GR and all promotion authority remain unchanged."
+next_recommended_action: "Run exactly one bounded v21 P10-T03 project-system packet in a separate AgentJob. Create immutable candidate identity and lineage records with candidate IDs family IDs statement hashes assumption hashes ontology hashes stage transitions and supersession edges. Do not execute P4-T05 or reinterpret historical tasks."
 
 p10_t01_normalized_status_assumption_schemas:
   task_id: "RT-20260721-003"
@@ -44,6 +44,53 @@ p10_t01_normalized_status_assumption_schemas:
   selected_next_work_item: "P10-T02"
   selected_next_worker_skill: "improve-project-system"
   selected_next_reason: "P10-T02 depends only on the qualifying P10-T01 completion and is the direct taxonomy-normalization successor."
+
+p10_t02_orthogonal_task_taxonomy:
+  task_id: "RT-20260721-004"
+  plan_task_id: "P10-T02"
+  claim_boundary_id: "CB-V21-P10-T02-TASK-TAXONOMY-001"
+  taxonomy_policy_object_id: "MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY"
+  taxonomy_policy_path: "research_control/design/v21_task_taxonomy_policy.md"
+  taxonomy_policy_hash: "7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"
+  task_index_schema_object_id: "MD-RESEARCH-CONTROL-DESIGN-TASK-INDEX-SCHEMA-V2"
+  task_index_schema_path: "research_control/design/task_index_schema_v2.md"
+  task_index_schema_hash: "4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"
+  adapter_path: "scripts/research_control/task_taxonomy.py"
+  adapter_hash: "e03bb7974f17003b2786e2e68d3057a6239872c75c8684b63ec2b8deb853bae0"
+  historical_report_path: "research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_historical_classification_report.json"
+  historical_report_hash: "7e79f8eef3e14e8aa4c0a99550758cae655e2e200db2336e4d46c3b206c7b05e"
+  compact_receipt_path: "research_control/tasks/RT-20260721-004/artifacts/v21_task_taxonomy_compact_receipt.json"
+  compact_receipt_hash: "2687a11e8f9b0bf4a1431a9ba7aea511c3daea810b918db21a5404b20b8df977"
+  normalized_fields:
+    - "work_kind"
+    - "milestone"
+    - "candidate_family"
+    - "result_kind"
+    - "authority"
+    - "scope"
+  task_index_column_count: 24
+  tracked_task_directory_count: 1041
+  historical_task_count: 1040
+  explicit_source_count: 1
+  plan_metadata_source_count: 341
+  legacy_compatibility_source_count: 694
+  unknown_source_count: 5
+  low_confidence_count: 694
+  explicit_required_error_count: 0
+  historical_source_mutation_count: 0
+  stronger_science_inference_count: 0
+  raw_historical_records_rewritten: 0
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  p10_t02_completed: true
+  p10_t03_dependency_ready: true
+  selected_next_work_item: "P10-T03"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_reason: "P10-T03 depends exactly on qualifying P10-T01 and P10-T02 completions and is the direct candidate-identity successor."
 
 p4_t04_ontology_regime_comparative_audit:
   task_id: "RT-20260721-002"
