@@ -77,6 +77,65 @@ empty placeholders. The expected vocabulary includes `canonical_ontology_write`,
 `completed_derivation_claim`, and `generated_derivative_authority`, with
 additional packet-specific forbidden classes as needed.
 
+## Prospective Physics-Payload Admission
+
+Every AgentJob created after `2026-07-22T16:24:16Z` must include a
+`physics_payload_admission` block conforming to
+`research_control/design/physics_payload_admission_policy_v1.md`. Historical
+AgentJobs without the block remain readable and valid.
+
+The validator derives the expected path independently from the task taxonomy
+and selected role. Tasks with scope `scientific`, `scientific_audit`, or
+`mixed`, and jobs assigned to a physics role, use `admission_path: physics`.
+Other jobs use `admission_path: project_system`. Declaring a different path is
+an error.
+
+All records require:
+
+```yaml
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "proof_step"
+  candidate_family: "named candidate or source family"
+  assumption_delta:
+    - "explicit new removed narrowed or unchanged assumption"
+  materiality_basis: "why this expected artifact is new payload"
+  source_basis:
+    - "canonical object ID or source path"
+  expected_artifact_paths:
+    - "repo-relative output path"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+```
+
+Physics `payload_type` values are `theorem`, `proof_step`, `countermodel`,
+`source_law`, `external_result`, `independent_replication`,
+`justified_ledger_delta`, `source_acquisition`, `precise_obstruction`,
+`finite_witness`, `source_model`, `candidate_construction`, and
+`route_decision`. `source_acquisition` additionally requires
+`payload_details.acquisition_target` and `primary_source_requirement: true`.
+`precise_obstruction` requires `payload_details.obstruction_scope` and
+`global_no_go_claimed: false`. `route_decision` requires a real new decision
+identity and evidence that it was not already encoded.
+
+Project-system jobs use `payload_type: not_applicable`,
+`candidate_family: not_applicable`, and a nonblank
+`project_system_justification`. They do not count as physics progress.
+
+This is an admission-shape gate. It does not evaluate theorem truth, validate a
+candidate or source law, change scientific status, or authorize promotion.
+
 For every future physics research AgentJob created after
 `2026-06-17T15:46:25Z`, the job must also include:
 

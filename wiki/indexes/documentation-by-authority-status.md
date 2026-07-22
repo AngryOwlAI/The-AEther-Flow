@@ -295,6 +295,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `wiki/markdown/md-research-control-design-no-target-import-guard-map.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `wiki/markdown/md-research-control-design-obstruction-and-freeze-control.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-ONE-QUESTION-RED-TEAM-PACKET-V16` `wiki/markdown/md-research-control-design-one-question-red-team-packet-v16.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-ADMISSION-POLICY-V1` `wiki/markdown/md-research-control-design-physics-payload-admission-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1` `wiki/markdown/md-research-control-design-physics-payload-ratio-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-POSITIVE-SEMANTICS-REQUIREMENT-NOTE` `wiki/markdown/md-research-control-design-positive-semantics-requirement-note.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC` `wiki/markdown/md-research-control-design-public-status-exists-does-not-exist-source-spec.md`
@@ -767,6 +768,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-NO-TARGET-IMPORT-GUARD-MAP` `research_control/design/no_target_import_guard_map.md`
 - `MD-RESEARCH-CONTROL-DESIGN-OBSTRUCTION-AND-FREEZE-CONTROL` `research_control/design/obstruction_and_freeze_control.md`
 - `MD-RESEARCH-CONTROL-DESIGN-ONE-QUESTION-RED-TEAM-PACKET-V16` `research_control/design/one_question_red_team_packet_v16.md`
+- `MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-ADMISSION-POLICY-V1` `research_control/design/physics_payload_admission_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1` `research_control/design/physics_payload_ratio_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-POSITIVE-SEMANTICS-REQUIREMENT-NOTE` `research_control/design/positive_semantics_requirement_note.md`
 - `MD-RESEARCH-CONTROL-DESIGN-PUBLIC-STATUS-EXISTS-DOES-NOT-EXIST-SOURCE-SPEC` `research_control/design/public_status_exists_does_not_exist_source_spec.md`

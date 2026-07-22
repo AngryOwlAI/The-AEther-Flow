@@ -1,0 +1,72 @@
+validation_status: "PASS"
+task_id: "RT-20260722-012"
+task_type: "v21_physics_payload_admission_gate"
+title: "Enforce prospective physics-payload admission"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "not_applicable"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-22T16:31:01Z"
+updated_at: "2026-07-22T16:43:56Z"
+closed_at: "2026-07-22T16:43:56Z"
+parent_task_id: "RT-20260722-011"
+parent_handoff_id: "handoff-0821"
+current_decision_id: "DDR-20260722-012"
+current_job_id: "AJ-RT-20260722-012-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-012"
+requires_human_gate: false
+human_authorization_note: "Generation 53 of the immutable user-requested v21 relay and handoff-0821 authorize exactly one bounded dependency-ready P12-T01 project-system packet under the immutable continue-research worker route."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P12"
+  plan_task_id: "P12-T01"
+  plan_task_name: "Introduce physics-payload admission gates"
+  recommendation_ids:
+    - "V21-R08"
+    - "V21-R40"
+    - "V21-R52"
+objective: "Implement a prospective AgentJob admission gate that requires a materially new physics payload or an explicitly bounded source-acquisition or precise-obstruction route while routing project-system work separately and inferring no theorem truth."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Prevent process-only research packets from being admitted as physics progress while preserving honest source acquisition and scoped obstruction work."
+route_label: "ordinary-research-packet"
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V21-P12-T01-PHYSICS-PAYLOAD-ADMISSION-001"
+claim_boundary:
+  allowed_scope: "Implement only P12-T01 prospective policy schema evaluator validator integration fixtures focused tests standard control records and one next handoff."
+  dependency_task_ids:
+    - "RT-20260721-003"
+    - "RT-20260721-004"
+  current_handoff: "handoff-0821"
+  admission_is_prospective: true
+  historical_jobs_remain_readable: true
+  source_acquisition_preserved: true
+  precise_obstruction_preserved: true
+  theorem_truth_inferred: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/design/physics_payload_admission_policy_v1.md"
+  - "scripts/research_control/physics_payload_admission.py"
+  - "research_control/tasks/RT-20260722-012/artifacts/validate_physics_payload_admission.py"
+  - "research_control/tasks/RT-20260722-012/artifacts/fixtures/physics_payload_admission_cases.json"
+  - "research_control/tasks/RT-20260722-012/artifacts/physics_payload_admission_report.json"
+  - "research_control/tasks/RT-20260722-012/artifacts/physics_payload_admission_compact_receipt.json"
+  - "tests/test_physics_payload_admission.py"
+closure_status: "p12_t01_completed_prospective_admission_gate_no_truth_or_promotion"
+summary: "P12-T01 completed prospective hard-failure admission with thirteen physics payload types a separate project-system path ten passing fixtures historical readability and no scientific or protected authority change."
+next_recommended_action: "Run exactly one bounded P12-T02 family-freeze and evidence-based reopening project-system AgentJob."
+documentation_impact_id: "DI-RT-20260722-012-001"
+completion_id: "AJC-AJ-RT-20260722-012-001"
+project_improvement_signals: []
+notes: "The gate evaluates declared packet materiality and authority boundaries; it does not validate theorem truth or promote any scientific result."

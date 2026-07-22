@@ -1,0 +1,201 @@
+{
+  "schema_id": "physics_payload_admission_fixture_v1",
+  "cases": [
+    {
+      "case_id": "legacy_missing_block",
+      "created_at": "2026-07-22T16:00:00Z",
+      "role_id": "candidate-constructor",
+      "task": {"task_taxonomy": {"scope": "scientific"}},
+      "job": {},
+      "expected_status": "legacy_readable"
+    },
+    {
+      "case_id": "prospective_missing_block",
+      "created_at": "2026-07-22T17:00:00Z",
+      "role_id": "candidate-constructor",
+      "task": {"task_taxonomy": {"scope": "scientific"}},
+      "job": {},
+      "expected_status": "rejected"
+    },
+    {
+      "case_id": "proof_step_admitted",
+      "created_at": "2026-07-22T17:00:00Z",
+      "role_id": "candidate-constructor",
+      "task": {"task_taxonomy": {"scope": "scientific"}},
+      "job": {
+        "physics_payload_admission": {
+          "schema_id": "physics_payload_admission_v1",
+          "policy_id": "physics_payload_admission_policy_v1",
+          "admission_path": "physics",
+          "payload_type": "proof_step",
+          "candidate_family": "source-equivalence response family",
+          "assumption_delta": ["Narrow regularity to the recorded finite support class."],
+          "materiality_basis": "Construct an unrecorded proof step under the narrowed assumptions.",
+          "source_basis": ["research_control/design/frontier_theorem_inventory.md"],
+          "expected_artifact_paths": ["research_control/tasks/RT-TEST/artifacts/proof_step.md"],
+          "process_receipts_excluded_from_payload": ["validator_pass", "checkpoint_pass", "documentation_receipt", "role_or_route_selection"],
+          "authority_limits": {"theorem_truth_inferred": false, "scientific_status_changed": false, "ontology_or_source_law_adopted": false, "distance_to_gr_changed": false, "physics_promotion_authorized": false}
+        }
+      },
+      "expected_status": "admitted"
+    },
+    {
+      "case_id": "source_acquisition_admitted",
+      "created_at": "2026-07-22T17:00:00Z",
+      "role_id": "refuter",
+      "task": {"task_taxonomy": {"scope": "scientific_audit"}},
+      "job": {
+        "physics_payload_admission": {
+          "schema_id": "physics_payload_admission_v1",
+          "policy_id": "physics_payload_admission_policy_v1",
+          "admission_path": "physics",
+          "payload_type": "source_acquisition",
+          "candidate_family": "external source-equivalence comparison family",
+          "assumption_delta": ["Keep the current ontology fixed while acquiring missing primary comparison evidence."],
+          "materiality_basis": "Acquire a named missing datum from primary literature.",
+          "source_basis": ["research_control/design/frontier_theorem_inventory.md"],
+          "expected_artifact_paths": ["research_control/tasks/RT-TEST/artifacts/source_packet.md"],
+          "payload_details": {"acquisition_target": "primary theorem and hypotheses for the comparison class", "primary_source_requirement": true},
+          "process_receipts_excluded_from_payload": ["validator_pass", "checkpoint_pass", "documentation_receipt", "role_or_route_selection"],
+          "authority_limits": {"theorem_truth_inferred": false, "scientific_status_changed": false, "ontology_or_source_law_adopted": false, "distance_to_gr_changed": false, "physics_promotion_authorized": false}
+        }
+      },
+      "expected_status": "admitted"
+    },
+    {
+      "case_id": "precise_obstruction_admitted",
+      "created_at": "2026-07-22T17:00:00Z",
+      "role_id": "refuter",
+      "task": {"task_taxonomy": {"scope": "scientific_audit"}},
+      "job": {
+        "physics_payload_admission": {
+          "schema_id": "physics_payload_admission_v1",
+          "policy_id": "physics_payload_admission_policy_v1",
+          "admission_path": "physics",
+          "payload_type": "precise_obstruction",
+          "candidate_family": "finite diagonal response family",
+          "assumption_delta": ["Hold the recorded finite-family assumptions fixed and test one unresolved branch."],
+          "materiality_basis": "Record an exact scoped failure with surviving continuation obligations.",
+          "source_basis": ["research_control/design/frontier_theorem_inventory.md"],
+          "expected_artifact_paths": ["research_control/tasks/RT-TEST/artifacts/obstruction.md"],
+          "payload_details": {"obstruction_scope": "the named finite diagonal response family only", "global_no_go_claimed": false},
+          "process_receipts_excluded_from_payload": ["validator_pass", "checkpoint_pass", "documentation_receipt", "role_or_route_selection"],
+          "authority_limits": {"theorem_truth_inferred": false, "scientific_status_changed": false, "ontology_or_source_law_adopted": false, "distance_to_gr_changed": false, "physics_promotion_authorized": false}
+        }
+      },
+      "expected_status": "admitted"
+    },
+    {
+      "case_id": "selector_only_rejected",
+      "created_at": "2026-07-22T17:00:00Z",
+      "role_id": "theoretical-continuation-selector",
+      "task": {"task_taxonomy": {"scope": "scientific"}},
+      "job": {
+        "physics_payload_admission": {
+          "schema_id": "physics_payload_admission_v1",
+          "policy_id": "physics_payload_admission_policy_v1",
+          "admission_path": "physics",
+          "payload_type": "route_decision",
+          "candidate_family": "existing route matrix",
+          "assumption_delta": ["Keep the encoded route assumptions unchanged."],
+          "materiality_basis": "Restate the current route.",
+          "source_basis": ["research_control/program_state.yaml"],
+          "expected_artifact_paths": ["research_control/tasks/RT-TEST/artifacts/selector.md"],
+          "payload_details": {"resolves_new_route_decision": false, "decision_identity": "existing-route", "not_already_encoded_evidence": ""},
+          "process_receipts_excluded_from_payload": ["validator_pass", "checkpoint_pass", "documentation_receipt", "role_or_route_selection"],
+          "authority_limits": {"theorem_truth_inferred": false, "scientific_status_changed": false, "ontology_or_source_law_adopted": false, "distance_to_gr_changed": false, "physics_promotion_authorized": false}
+        }
+      },
+      "expected_status": "rejected"
+    },
+    {
+      "case_id": "process_receipt_rejected_as_physics",
+      "created_at": "2026-07-22T17:00:00Z",
+      "role_id": "candidate-constructor",
+      "task": {"task_taxonomy": {"scope": "scientific"}},
+      "job": {
+        "physics_payload_admission": {
+          "schema_id": "physics_payload_admission_v1",
+          "policy_id": "physics_payload_admission_policy_v1",
+          "admission_path": "physics",
+          "payload_type": "validator_pass",
+          "candidate_family": "candidate A",
+          "assumption_delta": ["Keep candidate assumptions fixed."],
+          "materiality_basis": "A validator passed.",
+          "source_basis": ["validator receipt"],
+          "expected_artifact_paths": ["receipt.json"],
+          "process_receipts_excluded_from_payload": ["validator_pass", "checkpoint_pass", "documentation_receipt", "role_or_route_selection"],
+          "authority_limits": {"theorem_truth_inferred": false, "scientific_status_changed": false, "ontology_or_source_law_adopted": false, "distance_to_gr_changed": false, "physics_promotion_authorized": false}
+        }
+      },
+      "expected_status": "rejected"
+    },
+    {
+      "case_id": "project_system_admitted_separately",
+      "created_at": "2026-07-22T17:00:00Z",
+      "role_id": "project-control-maintainer",
+      "task": {"task_taxonomy": {"scope": "project_system"}},
+      "job": {
+        "physics_payload_admission": {
+          "schema_id": "physics_payload_admission_v1",
+          "policy_id": "physics_payload_admission_policy_v1",
+          "admission_path": "project_system",
+          "payload_type": "not_applicable",
+          "candidate_family": "not_applicable",
+          "assumption_delta": ["Change only the validator contract and preserve physics assumptions."],
+          "materiality_basis": "Implement a named control repair.",
+          "source_basis": ["AGENT_JOB_SCHEMA.md"],
+          "expected_artifact_paths": ["scripts/control_repair.py"],
+          "project_system_justification": "The output is validator machinery and not a physics result.",
+          "process_receipts_excluded_from_payload": ["validator_pass", "checkpoint_pass", "documentation_receipt", "role_or_route_selection"],
+          "authority_limits": {"theorem_truth_inferred": false, "scientific_status_changed": false, "ontology_or_source_law_adopted": false, "distance_to_gr_changed": false, "physics_promotion_authorized": false}
+        }
+      },
+      "expected_status": "admitted"
+    },
+    {
+      "case_id": "project_system_mislabeled_physics",
+      "created_at": "2026-07-22T17:00:00Z",
+      "role_id": "project-control-maintainer",
+      "task": {"task_taxonomy": {"scope": "project_system"}},
+      "job": {
+        "physics_payload_admission": {
+          "schema_id": "physics_payload_admission_v1",
+          "policy_id": "physics_payload_admission_policy_v1",
+          "admission_path": "physics",
+          "payload_type": "proof_step",
+          "candidate_family": "candidate A",
+          "assumption_delta": ["No physics change; validator only."],
+          "materiality_basis": "Implement validator machinery.",
+          "source_basis": ["AGENT_JOB_SCHEMA.md"],
+          "expected_artifact_paths": ["scripts/control_repair.py"],
+          "process_receipts_excluded_from_payload": ["validator_pass", "checkpoint_pass", "documentation_receipt", "role_or_route_selection"],
+          "authority_limits": {"theorem_truth_inferred": false, "scientific_status_changed": false, "ontology_or_source_law_adopted": false, "distance_to_gr_changed": false, "physics_promotion_authorized": false}
+        }
+      },
+      "expected_status": "rejected"
+    },
+    {
+      "case_id": "authority_overread_rejected",
+      "created_at": "2026-07-22T17:00:00Z",
+      "role_id": "candidate-constructor",
+      "task": {"task_taxonomy": {"scope": "scientific"}},
+      "job": {
+        "physics_payload_admission": {
+          "schema_id": "physics_payload_admission_v1",
+          "policy_id": "physics_payload_admission_policy_v1",
+          "admission_path": "physics",
+          "payload_type": "theorem",
+          "candidate_family": "candidate A",
+          "assumption_delta": ["Add one explicit bounded assumption."],
+          "materiality_basis": "State a new conditional theorem candidate.",
+          "source_basis": ["canonical source"],
+          "expected_artifact_paths": ["theorem.md"],
+          "process_receipts_excluded_from_payload": ["validator_pass", "checkpoint_pass", "documentation_receipt", "role_or_route_selection"],
+          "authority_limits": {"theorem_truth_inferred": true, "scientific_status_changed": false, "ontology_or_source_law_adopted": false, "distance_to_gr_changed": false, "physics_promotion_authorized": false}
+        }
+      },
+      "expected_status": "rejected"
+    }
+  ]
+}

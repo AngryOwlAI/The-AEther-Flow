@@ -34,6 +34,9 @@ from project_improvement_handoff_validation import (  # noqa: E402
     conditional_checkpoint_sidecar_paths,
     validate_project_improvement_handoffs as validate_project_improvement_handoff_records,
 )
+from scripts.research_control.physics_payload_admission import (  # noqa: E402
+    evaluate_agent_job_admission,
+)
 from scripts.validation.models import (  # noqa: E402
     ValidationFinding as CommonValidationFinding,
     ValidationGateResult,
@@ -462,6 +465,7 @@ MUTABLE_MEMORY_PREFLIGHT_SOURCE_OBJECT_IDS = {
     "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY",
     "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP",
     "MD-RESEARCH-CONTROL-DESIGN-VALIDATION-COMMAND-INVENTORY-V16",
+    "MD-SCHEMA-AGENT-JOB-SCHEMA",
     "MD-SKILL-CONTINUE-RESEARCH",
     "MD-SKILL-CONTINUE-RESEARCH-CONTINUE-GOAL",
     "MD-SKILL-CONTINUE-RESEARCH-GOAL",
@@ -2415,6 +2419,23 @@ def validate_agent_jobs(
                 if reason:
                     report.error(f"{row['job_path']}: invalid {field_name} entry {item}: {reason}")
         validate_memory_preflight(report, row, job, row["job_path"])
+        task_record: dict[str, Any] = {}
+        task_record_path = CONTROL_DIR / "tasks" / row["task_id"] / "00_TASK.yaml"
+        if task_record_path.exists():
+            try:
+                loaded_task = load_yaml(task_record_path)
+                if isinstance(loaded_task, dict):
+                    task_record = loaded_task
+            except StrictYamlError as exc:
+                report.error(f"{row['job_path']}: cannot evaluate physics-payload admission: {exc}")
+        admission = evaluate_agent_job_admission(
+            job,
+            task_record,
+            created_at=row.get("created_at", ""),
+            role_id=row.get("role_id", ""),
+        )
+        for error in admission["errors"]:
+            report.error(f"{row['job_path']}: physics-payload admission: {error}")
         validate_parent_child_decomposition(report, row, job)
         validate_future_physics_job_authority(report, row, job)
         if row["completion_path"]:

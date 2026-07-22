@@ -1,0 +1,147 @@
+{
+  "case_count": 10,
+  "failed_case_count": 0,
+  "fixture_path": "research_control/tasks/RT-20260722-012/artifacts/fixtures/physics_payload_admission_cases.json",
+  "fixture_sha256": "251843c191062b7b6d1302ac801a3ae1971f29481a1d04db066f193c0e791a22",
+  "passed_case_count": 10,
+  "physics_promotion_authorized": false,
+  "policy": {
+    "active_after": "2026-07-22T16:24:16Z",
+    "enforcement": "hard_failure",
+    "historical_jobs_without_block": "legacy_readable",
+    "physics_promotion_authorized": false,
+    "physics_task_scopes": [
+      "mixed",
+      "scientific",
+      "scientific_audit"
+    ],
+    "policy_id": "physics_payload_admission_policy_v1",
+    "precise_obstruction_allowed": true,
+    "project_system_path_separate": true,
+    "qualifying_payload_types": [
+      "candidate_construction",
+      "countermodel",
+      "external_result",
+      "finite_witness",
+      "independent_replication",
+      "justified_ledger_delta",
+      "precise_obstruction",
+      "proof_step",
+      "route_decision",
+      "source_acquisition",
+      "source_law",
+      "source_model",
+      "theorem"
+    ],
+    "schema_id": "physics_payload_admission_v1",
+    "selector_only_requires_new_unencoded_decision": true,
+    "source_acquisition_allowed": true,
+    "theorem_truth_evaluated": false
+  },
+  "results": [
+    {
+      "case_id": "legacy_missing_block",
+      "error_count": 0,
+      "expected_admission_path": "physics",
+      "expected_status": "legacy_readable",
+      "observed_status": "legacy_readable",
+      "passed": true,
+      "payload_type": "",
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "prospective_missing_block",
+      "error_count": 1,
+      "expected_admission_path": "physics",
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "payload_type": "",
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "proof_step_admitted",
+      "error_count": 0,
+      "expected_admission_path": "physics",
+      "expected_status": "admitted",
+      "observed_status": "admitted",
+      "passed": true,
+      "payload_type": "proof_step",
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "source_acquisition_admitted",
+      "error_count": 0,
+      "expected_admission_path": "physics",
+      "expected_status": "admitted",
+      "observed_status": "admitted",
+      "passed": true,
+      "payload_type": "source_acquisition",
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "precise_obstruction_admitted",
+      "error_count": 0,
+      "expected_admission_path": "physics",
+      "expected_status": "admitted",
+      "observed_status": "admitted",
+      "passed": true,
+      "payload_type": "precise_obstruction",
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "selector_only_rejected",
+      "error_count": 2,
+      "expected_admission_path": "physics",
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "payload_type": "route_decision",
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "process_receipt_rejected_as_physics",
+      "error_count": 1,
+      "expected_admission_path": "physics",
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "payload_type": "validator_pass",
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "project_system_admitted_separately",
+      "error_count": 0,
+      "expected_admission_path": "project_system",
+      "expected_status": "admitted",
+      "observed_status": "admitted",
+      "passed": true,
+      "payload_type": "not_applicable",
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "project_system_mislabeled_physics",
+      "error_count": 4,
+      "expected_admission_path": "project_system",
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "payload_type": "proof_step",
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "authority_overread_rejected",
+      "error_count": 1,
+      "expected_admission_path": "physics",
+      "expected_status": "rejected",
+      "observed_status": "rejected",
+      "passed": true,
+      "payload_type": "theorem",
+      "theorem_truth_evaluated": false
+    }
+  ],
+  "schema_id": "physics_payload_admission_report_v1",
+  "scientific_claims_changed": false,
+  "status": "PASS",
+  "theorem_truth_evaluated": false
+}

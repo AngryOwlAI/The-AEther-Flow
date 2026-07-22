@@ -1,9 +1,68 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260722-011"
-latest_handoff_id: "handoff-0821"
-current_status: "p11_t08_scientific_qa_audit_complete_bounded_rollout_two_repairs_required_p12_t01_selected"
-claim_boundary_summary: "RT-20260722-011 completed P11-T08 with twelve critical non-regression passes and two explicit repair obligations; P11 controls are approved for bounded later-gate use under four guardrails while unattended blind-packet and automatic semantic-veto automation remain frozen, with no scientific or protected authority change."
-next_recommended_action: "Run exactly one bounded P12-T01 project-control-maintainer project-system AgentJob to implement the physics-payload admission gate with positive and negative fixtures legacy readability and no theorem-truth inference while preserving lawful negative source-acquisition and precise-obstruction research."
+active_task_id: "RT-20260722-012"
+latest_handoff_id: "handoff-0822"
+current_status: "p12_t01_physics_payload_admission_complete_p12_t02_selected"
+claim_boundary_summary: "RT-20260722-012 completed P12-T01 with a prospective hard-failure admission contract thirteen controlled physics payload types a separate project-system path ten passing fixtures historical readability lawful source-acquisition and scoped-obstruction preservation and no scientific or protected authority change."
+next_recommended_action: "Run exactly one bounded P12-T02 project-control-maintainer project-system AgentJob to implement family-level freeze and evidence-based reopening policy from qualifying P10-T03 and P12-T01 completions without turning a scoped freeze into a global no-go."
+
+p12_t01_physics_payload_admission_gate:
+  task_id: "RT-20260722-012"
+  parent_task_id: "RT-20260722-011"
+  parent_handoff_id: "handoff-0821"
+  plan_task_id: "P12-T01"
+  claim_boundary_id: "CB-V21-P12-T01-PHYSICS-PAYLOAD-ADMISSION-001"
+  status: "PASS_PROJECT_CONTROL_ONLY"
+  completion_path: "research_control/tasks/RT-20260722-012/jobs/completions/AJC-AJ-RT-20260722-012-001.yaml"
+  completion_sha256: "eee6b42ae304e15620c6df4e9216127f86730b8d2c693b21ca05bea97c7931b4"
+  handoff_id: "handoff-0822"
+  policy_object_id: "MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-ADMISSION-POLICY-V1"
+  policy_path: "research_control/design/physics_payload_admission_policy_v1.md"
+  policy_sha256: "a390d0e2cde7160de25c239f7750b1a752edda61bdfdf1b6866079549e58fd0f"
+  agent_job_schema_path: ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  agent_job_schema_sha256: "89cbc3d671860c30fa38f56fdb4db768b4ae820a55c385d175061670d31d296e"
+  evaluator_path: "scripts/research_control/physics_payload_admission.py"
+  evaluator_sha256: "e17e20805106a556dea305819845b205f213bc30c5d2efd6a6402a6708f03dc8"
+  validation_path: "research_control/tasks/RT-20260722-012/artifacts/physics_payload_admission_report.json"
+  validation_sha256: "01599b670aa33468ef8759197aa226914b2647f7c2f06eda3af1ae830f590d19"
+  compact_receipt_path: "research_control/tasks/RT-20260722-012/artifacts/physics_payload_admission_compact_receipt.json"
+  compact_receipt_sha256: "18ea0d6af59887d74c08e7c449366d8d90e921750dc4b775d32eeee18f2e258e"
+  qualifying_physics_payload_type_count: 13
+  fixture_case_count: 10
+  fixture_pass_count: 10
+  fixture_failure_count: 0
+  prospective_enforcement: "hard_failure"
+  historical_missing_block_status: "legacy_readable"
+  project_system_path_separate: true
+  source_acquisition_preserved: true
+  precise_obstruction_preserved: true
+  selector_only_requires_new_unencoded_decision: true
+  theorem_truth_evaluated: false
+  scientific_claims_changed: false
+  scientific_ledger_change_count: 0
+  distance_to_gr_delta_changed: false
+  p12_t01_completed: true
+  p12_t02_dependency_ready: true
+  p12_t02_selected: true
+  p12_t02_executed: false
+  p12_t03_dependency_ready: true
+  p12_t03_selected: false
+  p10_t03_completion_path: "research_control/tasks/RT-20260721-005/jobs/completions/AJC-AJ-RT-20260721-005-001.yaml"
+  p10_t03_completion_sha256: "1d32a4bb55c2087f0be70b22a12cda3b77f3d45d645e67853f40c31d0c48cf7f"
+  selected_next_work_item: "P12-T02"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_reason: "P12-T02 is first in plan order among newly dependency-ready P12 successors and has qualifying P10-T03 and P12-T01 completions."
+  p10_broader_rollout_frozen: true
+  p10_blocker_ids:
+    - "P10-AUDIT-F001"
+    - "P10-AUDIT-F002"
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  physical_interpretation_authorized: false
+  ontology_adoption_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
 
 p11_t08_scientific_qa_non_regression_audit:
   task_id: "RT-20260722-011"
@@ -43,7 +102,7 @@ p11_t08_scientific_qa_non_regression_audit:
   p11_t08_completed: true
   p12_t01_dependency_ready: true
   p12_t01_selected: true
-  p12_t01_executed: false
+  p12_t01_executed: true
   selected_next_work_item: "P12-T01"
   selected_next_worker_skill: "improve-project-system"
   selected_next_role_family: "project-control-maintainer@0.2.0"

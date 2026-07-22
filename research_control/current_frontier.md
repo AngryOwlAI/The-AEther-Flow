@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260722-011` and `handoff-0821`.
+`RT-20260722-012` and `handoff-0822`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260722-011` |
-| Latest handoff ID | `handoff-0821` |
-| Current status | `p11_t08_scientific_qa_audit_complete_bounded_rollout_two_repairs_required_p12_t01_selected` |
+| Active task ID | `RT-20260722-012` |
+| Latest handoff ID | `handoff-0822` |
+| Current status | `p12_t01_physics_payload_admission_complete_p12_t02_selected` |
 | V16 completed | false |
-| Current route family | audit or review (project system) |
+| Current route family | construction or implementation (project system) |
 | Target derivation milestone | `source_equivalence_eqsrc` |
-| Current burden | `source_equivalence_eqsrc`; status: unchanged_project_system_audit_only |
-| Required next authority | One fresh P12-T01 project-system packet may implement and validate the physics-payload admission gate without deciding theorem truth or changing scientific status. |
-| Next recommended action | Run exactly one bounded P12-T01 project-control-maintainer project-system AgentJob to implement the physics-payload admission gate with positive and negative fixtures legacy readability and no theorem-truth inference while preserving lawful negative source-acquisition and precise-obstruction research. |
+| Current burden | `source_equivalence_eqsrc`; status: unchanged_project_system_control_only |
+| Required next authority | One fresh P12-T02 project-system packet may implement family-level freeze and evidence-based reopening controls without changing scientific status or treating a scoped family freeze as a global no-go. |
+| Next recommended action | Run exactly one bounded P12-T02 project-control-maintainer project-system AgentJob to implement family-level freeze and evidence-based reopening policy from qualifying P10-T03 and P12-T01 completions without turning a scoped freeze into a global no-go. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260722-011` |
-| Latest research handoff ID | `handoff-0821` |
-| Latest research next action | Run exactly one bounded P12-T01 project-control-maintainer project-system AgentJob to implement the physics-payload admission gate with positive and negative fixtures legacy readability and no theorem-truth inference while preserving lawful negative source-acquisition and precise-obstruction research. |
+| Latest research task ID | `RT-20260722-012` |
+| Latest research handoff ID | `handoff-0822` |
+| Latest research next action | Run exactly one bounded P12-T02 project-control-maintainer project-system AgentJob to implement family-level freeze and evidence-based reopening policy from qualifying P10-T03 and P12-T01 completions without turning a scoped freeze into a global no-go. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260722-011/00_TASK.yaml`.
-- Active task objective: Audit the completed P11 blind-review diversity-label proof-evidence semantic-smuggling positive-provenance and reviewer-metric controls for historical readability source authority promotion shortcuts and safe bounded rollout without modifying predecessor controls or scientific status.
-- Latest handoff path: `research_control/handoffs/handoff-0821.yaml`.
-- Latest handoff summary: not recorded.
-- Current route family: audit or review (project system).
-- Next recommended action: Run exactly one bounded P12-T01 project-control-maintainer project-system AgentJob to implement the physics-payload admission gate with positive and negative fixtures legacy readability and no theorem-truth inference while preserving lawful negative source-acquisition and precise-obstruction research.
+- Active task path: `research_control/tasks/RT-20260722-012/00_TASK.yaml`.
+- Active task objective: Implement a prospective AgentJob admission gate that requires a materially new physics payload or an explicitly bounded source-acquisition or precise-obstruction route while routing project-system work separately and inferring no theorem truth.
+- Latest handoff path: `research_control/handoffs/handoff-0822.yaml`.
+- Latest handoff summary: P12-T01 implemented a prospective hard-failure physics-payload admission contract with thirteen controlled physics payload types a separate project-system path ten passing deterministic fixtures legacy readability and explicit source-acquisition obstruction and non-promotion guards.
+- Current route family: construction or implementation (project system).
+- Next recommended action: Run exactly one bounded P12-T02 project-control-maintainer project-system AgentJob to implement family-level freeze and evidence-based reopening policy from qualifying P10-T03 and P12-T01 completions without turning a scoped freeze into a global no-go.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded P12-T01 project-control-maintainer project-system AgentJob to implement the physics-payload admission gate with positive and negative fixtures legacy readability and no theorem-truth inference while preserving lawful negative source-acquisition and precise-obstruction research.
+Run exactly one bounded P12-T02 project-control-maintainer project-system AgentJob to implement family-level freeze and evidence-based reopening policy from qualifying P10-T03 and P12-T01 completions without turning a scoped freeze into a global no-go.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -337,22 +337,18 @@ Authorization layers:
 | `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
 | `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
-| `bounded_project_control_use_authorized` | True | extension authorization field |
-| `bounded_project_control_use_scope` | P11 controls may be used in later bounded gates only under all four guardrails. | extension authorization field |
-| `external_review_completed` | False | extension authorization field |
-| `human_expert_review_completed` | False | extension authorization field |
-| `independent_replication_completed` | False | extension authorization field |
-| `p10_repair_authorized` | False | extension authorization field |
-| `p11_repair_authorized` | False | extension authorization field |
-| `p12_t01_project_system_packet_authorized` | False | extension authorization field |
+| `p12_t02_project_system_packet_authorized` | False | extension authorization field |
+| `p12_t03_project_system_packet_authorized` | False | extension authorization field |
+| `project_control_change_authorized` | True | extension authorization field |
+| `project_control_change_scope` | P12-T01 completion only | extension authorization field |
 | `proof_authority` | False | extension authorization field |
 | `publication_authority` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260722-011`;
-- latest handoff: `handoff-0821`;
-- current status: `p11_t08_scientific_qa_audit_complete_bounded_rollout_two_repairs_required_p12_t01_selected`;
+- active task: `RT-20260722-012`;
+- latest handoff: `handoff-0822`;
+- current status: `p12_t01_physics_payload_admission_complete_p12_t02_selected`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -362,8 +358,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0821.yaml`
-- `research_control/tasks/RT-20260722-011/00_TASK.yaml`
+- `research_control/handoffs/handoff-0822.yaml`
+- `research_control/tasks/RT-20260722-012/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -379,7 +375,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0821*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0822*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

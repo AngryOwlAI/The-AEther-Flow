@@ -1390,6 +1390,21 @@ class ResearchControlTests(unittest.TestCase):
             status["gr_derivation_roadmap_policy"]["policy_id"],
             "gr_derivation_roadmap_v1",
         )
+        self.assertEqual(
+            status["physics_payload_admission_policy"]["policy_id"],
+            "physics_payload_admission_policy_v1",
+        )
+        self.assertEqual(
+            status["physics_payload_admission_policy"]["enforcement"],
+            "hard_failure",
+        )
+        self.assertEqual(
+            status["physics_payload_admission_policy"]["historical_jobs_without_block"],
+            "legacy_readable",
+        )
+        self.assertFalse(
+            status["physics_payload_admission_policy"]["theorem_truth_evaluated"]
+        )
         self.assertIn("dependency_graph_summary", status)
         graph_summary = status["dependency_graph_summary"]
         self.assertEqual(graph_summary["active_task"], program_state["active_task_id"])

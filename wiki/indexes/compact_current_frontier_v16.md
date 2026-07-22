@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-011`
-- Latest handoff: `handoff-0821`
-- Current status: `p11_t08_scientific_qa_audit_complete_bounded_rollout_two_repairs_required_p12_t01_selected`
+- Active task: `RT-20260722-012`
+- Latest handoff: `handoff-0822`
+- Current status: `p12_t01_physics_payload_admission_complete_p12_t02_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-011`
-- Latest research handoff: `handoff-0821`
-- Latest research next action: Run exactly one bounded P12-T01 project-control-maintainer project-system AgentJob to implement the physics-payload admission gate with positive and negative fixtures legacy readability and no theorem-truth inference while preserving lawful negative source-acquisition and precise-obstruction research.
+- Latest research task: `RT-20260722-012`
+- Latest research handoff: `handoff-0822`
+- Latest research next action: Run exactly one bounded P12-T02 project-control-maintainer project-system AgentJob to implement family-level freeze and evidence-based reopening policy from qualifying P10-T03 and P12-T01 completions without turning a scoped freeze into a global no-go.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p12_t01_physics_payload_admission_gate`
+- Route ID: `v21_p12_t02_family_freeze_and_reopening_policy`
 - Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Reduce low-value selector and obligation packet proliferation.
+- Milestone burden: Enforce the scientific lesson of the current EqSrc orbit.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `b60752b6cba6a252e53286dba2fd629e9bb5703923f6853e14c7ff0c7862d1e3`
-- JSON SHA-256: `715974c653b452057c9aabc4af2967f6a55eead444d3ebc3e84392b06086a08b`
+- YAML SHA-256: `f95a4ab58aea73124b09ffa686dc546b7dd449a34c68d4b80c8e3d863b177df4`
+- JSON SHA-256: `f79fe7b227ce29d7297b524bf8c7c1c5e5a3b0af2f77cc01723b79f5b6b7da77`
 
 ## Authority Warning
 
