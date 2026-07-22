@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-016`
-- Latest handoff: `handoff-0826`
-- Current status: `p14_t01_success_categories_complete_p14_t02_selected`
+- Active task: `RT-20260722-018`
+- Latest handoff: `handoff-0827`
+- Current status: `p14_t02_non_empirical_ontology_success_criteria_complete_p14_t03_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-016`
-- Latest research handoff: `handoff-0826`
-- Latest research next action: Run exactly one bounded v21 P14-T02 external-red-team-reviewer philosophy-foundations AgentJob to define non-empirical ontology success criteria with evidence examples counterexamples alternative comparison and no scalar score workflow-metric substitution claim upgrade or P14-T03 execution.
+- Latest research task: `RT-20260722-018`
+- Latest research handoff: `handoff-0827`
+- Latest research next action: Run exactly one bounded v21 P14-T03 ontology-formalizer philosophy-foundations AgentJob to integrate a necessary-but-not-sufficient no-target policy with positive provenance dynamics uniqueness or quotient status operational meaning and robustness requirements.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p14_t02_non_empirical_ontology_success_criteria`
-- Role family: `external-red-team-reviewer@0.1.0`
+- Route ID: `v21_p14_t03_necessary_but_not_sufficient_no_target_policy`
+- Role family: `ontology-formalizer@0.2.0`
 - Target milestone: `source_ontology`
-- Milestone burden: Give an empirically equivalent ontology a disciplined evaluation framework.
+- Milestone burden: Align philosophical and scientific claim policy.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `11a8a6b035acece81cf63974d9f945f5f96e4e56c8107b6af6011aea6699d34c`
-- JSON SHA-256: `934fda6a8726f78308a93938919a5f3e6ed5d25e5739bff56633c14d684fa730`
+- YAML SHA-256: `dd2b1b4de60b8363c5d52530f1b4105fa41accde05d02bad48e9c44b77028c71`
+- JSON SHA-256: `0f7ac06d457272dd94ce5e90fd9b6bd77f33ba0bdb3c02d2160878ee931160fc`
 
 ## Authority Warning
 

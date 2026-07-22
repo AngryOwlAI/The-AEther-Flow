@@ -1,0 +1,287 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,tabularx,array,enumitem,hyperref}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Met}{\texttt{met}}
+\newcommand{\NotMet}{\texttt{not\_met}}
+\newcommand{\Indet}{\texttt{indeterminate}}
+\newcommand{\AC}{\mathsf{AC}}
+\newcommand{\UN}{\mathsf{UN}}
+\newcommand{\IV}{\mathsf{IV}}
+\newcommand{\ED}{\mathsf{ED}}
+\newcommand{\DS}{\mathsf{DS}}
+\newcommand{\MQ}{\mathsf{MQ}}
+\newcommand{\PF}{\mathsf{PF}}
+
+\title{Non-Empirical Ontology Success Criteria\\
+\large P14-T02 task-local draft/control formalization}
+\author{The AEther-Flow Research Project}
+\date{22 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This packet defines seven independent, non-compensatory evidence criteria for
+assessing an ontology that is empirically equivalent to a benchmark:
+assumption compression, unification, inevitability, explanatory depth,
+dimension-and-signature explanation, matter-or-quantum connection, and
+problem-solving fertility.  Each coordinate requires its own evidence
+certificate and is reported with a tri-valued status rather than a score.
+Applied to the current AEther-Flow record, six obligations are not met and
+problem-solving fertility remains indeterminate.  These are present evidence
+statuses, not impossibility results.  The packet does not select or modify an
+ontology, change scientific ledgers, promote a claim, or establish a
+first-principles derivation of general relativity.
+\end{abstract}
+
+\section{Scope, comparator, and status algebra}
+
+Let \(x\) be a precisely scoped ontology proposal, let \(B\) be a declared
+benchmark such as ordinary general relativity on the exact-GR operational
+domain, and let \(E(x)\) be the source-backed evidence admitted for \(x\).
+Empirical equivalence to \(B\) fixes the operational comparison; it is not
+itself evidence that \(x\) has additional non-empirical value.
+
+\begin{definition}[Tri-valued evidence status]
+For each criterion \(c\), define
+\[
+ s_c(x\mid B)\in
+ S=\{\Met,\NotMet,\Indet\}.
+\]
+The value \(\Met\) requires a complete criterion-specific evidence
+certificate.  The value \(\NotMet\) means that at least one declared
+obligation is known to be unsatisfied in the present record; it is not a theorem of impossibility.
+The value \(\Indet\) means that the available
+source record does not decide whether the complete obligation is satisfied.
+\end{definition}
+
+\begin{definition}[Evidence certificate]
+A certificate for criterion \(c\) is a tuple
+\[
+ \operatorname{Cert}_{c}(x\mid B)
+   =(H_c,P_c,W_c,A_c,R_c),
+\]
+where \(H_c\) states the scope and hypotheses, \(P_c\) is an acyclic
+source-to-result premise map, \(W_c\) is a criterion-specific witness or
+theorem, \(A_c\) compares relevant alternatives and the benchmark, and
+\(R_c\) records robustness and failure conditions.  A validator, registry
+row, task status, artifact count, role label, or narrative assertion cannot
+replace \(P_c\) or \(W_c\).
+\end{definition}
+
+The non-empirical evidence vector is
+\[
+ \Gamma(x\mid B)=
+ (s_{\AC},s_{\UN},s_{\IV},s_{\ED},s_{\DS},s_{\MQ},s_{\PF})\in S^7.
+\]
+Its coordinates are not probabilities, utilities, or measurements of truth.
+
+\section{Seven criterion families}
+
+\begin{definition}[Assumption compression, \(\AC\)]
+Assumption compression is met only when a common consequence set is recovered
+from a demonstrably smaller or less independent source premise basis than the
+benchmark-relative formulation, with an explicit translation and an audit
+showing that removed premises do not return inside bridge maps, boundary
+conditions, selectors, or reconstruction rules.
+\end{definition}
+An admissible example is an acyclic derivation that replaces several
+independent postulates by one source law and proves the old postulates as
+corollaries.  Renaming GR variables while adding a substrate vocabulary is a
+counterexample: it can preserve every benchmark premise while increasing the
+unproved source debt.
+
+\begin{definition}[Unification, \(\UN\)]
+Unification is met only when the same independently specified source
+structure or law derives at least two previously separate result families,
+including their compatibility relation, without merely placing them in one
+document or notation.
+\end{definition}
+A single source dynamics that yields both geometrical response and matter
+coupling under shared hypotheses would be relevant evidence.  A common
+glossary, common role, common data format, or shared exact-GR action is not a
+unification certificate.
+
+\begin{definition}[Inevitability, \(\IV\)]
+Inevitability is met only relative to a declared admissible alternative class.
+The certificate must prove uniqueness up to a stated equivalence, or prove
+robust dynamical selection with nonzero basin or measure under source-only
+conditions.  Every selector, quotient, gauge, and boundary choice must be
+identified.
+\end{definition}
+A uniqueness theorem over a source-defined candidate class is positive
+evidence.  Choosing one representative, atlas, dimension, signature, or
+normalization because it reproduces the target is a counterexample.
+
+\begin{definition}[Explanatory depth, \(\ED\)]
+Explanatory depth is met only when the source model supplies a non-circular
+mechanism or dependency structure that answers contrastive and
+counterfactual questions not answered by the benchmark description alone.
+The certificate must name interventions or controlled variations, their
+source-side consequences, and the limits of the explanation.
+\end{definition}
+Deriving why a stable target structure changes under a specified source
+variation is relevant evidence.  Narrative coherence, intuitive imagery,
+familiar mathematics, or a dictionary that leaves every benchmark dependency
+unchanged is insufficient.
+
+\begin{definition}[Dimension-and-signature explanation, \(\DS\)]
+This criterion has two mandatory subcertificates.  The dimension certificate
+must derive the effective dimension and exclude or control relevant
+alternatives.  The signature certificate must derive Lorentzian signature,
+time orientation, and the appropriate invariance class from source-only
+structure.  Both must be stable under the declared variations and neither may
+assume a four-dimensional smooth Lorentzian target.
+\end{definition}
+A source theorem selecting a four-dimensional Lorentzian effective sector
+with stability bounds could satisfy the criterion.  Positing a
+four-dimensional differentiable substrate, or importing the target metric and
+then reading off its signature, does not.
+
+\begin{definition}[Matter-or-quantum connection, \(\MQ\)]
+Matter-or-quantum connection is met only when source primitives construct a
+typed matter or quantum sector, its dynamics and observables, and a controlled
+bridge to the benchmark limit.  If coupling is claimed, universality,
+conservation, operational semantics, and robustness must be discharged in the
+same declared scope.
+\end{definition}
+Deriving representations, coupling, and a tested low-energy limit from a
+source law is relevant evidence.  Inserting the ordinary matter action,
+stress-energy tensor, detector semantics, Hilbert space, or quantum rule by
+hand is not.
+
+\begin{definition}[Problem-solving fertility, \(\PF\)]
+Problem-solving fertility is met only when the ontology enables an
+independently checkable result on a predeclared problem: a new theorem,
+constraint, countermodel, calculation, or empirical discriminator whose
+dependence on the ontology is explicit and whose value is not reducible to
+workflow output.
+\end{definition}
+A source principle that resolves a previously open construction problem and
+survives independent checking is relevant evidence.  Counts of agents,
+artifacts, candidates, validators, commits, or PASS receipts are
+counterexamples.
+
+\section{Non-compensation and comparison rule}
+
+\begin{proposition}[NEO-NONCOMPENSATION-PROPOSITION-V1]
+Under the certificate semantics above, no weighted sum of criterion labels is
+a sufficient non-empirical success certificate.  In particular, a met
+coordinate cannot discharge a missing witness, circular premise map, or
+failed source boundary in another coordinate.
+\end{proposition}
+
+\begin{proof}
+Each status \(\Met\) is defined by the existence of a typed,
+criterion-specific certificate.  A weighted sum retains only assigned numeric
+labels and weights; it does not retain the premise graph, witness, alternative
+class, robustness conditions, or source authority.  Two records can therefore
+receive the same sum while one contains a valid certificate and the other
+contains a circular or target-importing surrogate.  Conversely, increasing a
+different coordinate can raise the sum without supplying the missing
+certificate.  The sum is therefore not sufficient for any coordinate and
+cannot authorize success.  Reporting must remain coordinate-wise, with
+uncertainty and vetoing defects explicit.
+\end{proof}
+
+Pairwise comparison is permitted only by displaying both evidence vectors,
+their certificate scopes, and any strict coordinate-wise advantage supported
+by source evidence.  Mixed vectors remain incomparable.  Aesthetic
+preference, engineering convenience, or chosen weights may inform protected
+human deliberation but are not scientific evidence and do not select an
+ontology.
+
+\section{Current source-grounded assessment}
+
+The current exact-GR line is already classified as an interpretive
+redescription, not a completed substrate derivation.  The comprehensive
+assumption ledger records four-dimensionality and differentiability as
+premises, leaves Lorentzian signature, physical scale, source matter
+semantics, universal source coupling, physical covariance, and substrate
+dynamics without derivation-critical source laws, and records the target GR
+action as adopted benchmark closure.  The fixed continuum-first and
+emergence-first options are proposal-only alternatives; the comparative audit
+found neither scientifically dominant.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.25\linewidth}
+  >{\raggedright\arraybackslash}p{0.14\linewidth}
+  >{\raggedright\arraybackslash}X}
+\toprule
+Criterion & Status & Present evidence boundary \\
+\midrule
+Assumption compression & \NotMet & No acyclic certificate shows fewer independent premises than the exact-GR baseline; key source and bridge obligations remain open. \\
+Unification & \NotMet & A common substrate vocabulary is present, but no source law derives geometry and matter or quantum structure together. \\
+Inevitability & \NotMet & Multiple proposal-only regimes and selector choices remain; no source-only uniqueness or robust-selection theorem chooses among them. \\
+Explanatory depth & \NotMet & The interpretive dictionary is disciplined, but no source mechanism currently supplies the required counterfactual dependency certificate. \\
+Dimension and signature & \NotMet & Four-dimensionality is posited in the canonical foundations, while Lorentzian signature belongs to adopted exact-GR closure rather than a source-only derivation. \\
+Matter or quantum connection & \NotMet & Ordinary matter coupling is adopted in the benchmark; source matter semantics, coupling, and a quantum bridge remain open. \\
+Problem-solving fertility & \Indet & The program has task-local mathematical results and obstructions, but their ontology-dependent, independently reusable problem-solving value has not been established. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Thus
+\[
+\Gamma(\text{current AEther-Flow}\mid\text{GR})
+=(\NotMet,\NotMet,\NotMet,\NotMet,\NotMet,\NotMet,\Indet).
+\]
+This vector does not retract the established exact-GR interpretive
+redescription, and it does not prove that future source extensions cannot
+improve any coordinate.
+
+\section{Material evidence that would improve the record}
+
+\begin{enumerate}[leftmargin=*]
+  \item \(\AC\): an acyclic premise map and comparison proof showing a genuine
+  reduction of independent assumptions without hidden reintroduction.
+  \item \(\UN\): one source law deriving at least two currently separate
+  sectors and their compatibility conditions.
+  \item \(\IV\): a source-defined uniqueness theorem or robust dynamical
+  selection result over explicit alternatives.
+  \item \(\ED\): a mechanism with controlled source interventions and novel
+  contrastive consequences.
+  \item \(\DS\): separate source-only dimension and Lorentzian-signature
+  theorems with stability and non-target-import audits.
+  \item \(\MQ\): source-derived matter or quantum structure with dynamics,
+  observables, coupling where claimed, and a controlled benchmark limit.
+  \item \(\PF\): an ontology-dependent result on a predeclared problem that is
+  independently checked and not reducible to process output.
+\end{enumerate}
+
+\section{Authority boundary}
+
+This is a task-local science-audit result with status
+\texttt{draft/control}.  It does not edit or reinterpret canonical ontology,
+select or reject the continuum-first or emergence-first proposal, adopt a
+source law, change the Distance-to-GR ledger, establish physical gauge status,
+derive matter or quantum physics, promote a benchmark, authorize publication,
+issue a Gate Chair verdict, execute P14-T03, or claim a completed derivation.
+
+\section*{Source materials}
+
+The AEther-Flow Research Project. (2026a). \emph{Ontology: Foundations}
+[Canonical ontology source].
+\texttt{ontology/tex/aether\_flow\_foundations.tex}.
+
+The AEther-Flow Research Project. (2026b). \emph{Comprehensive
+source-assumption ledger v1} [Task-local draft/control artifact].
+\texttt{research\_control/tasks/RT-20260720-030/artifacts/
+comprehensive\_source\_assumption\_ledger\_v1.tex}.
+
+The AEther-Flow Research Project. (2026c). \emph{P4-T04 comparative audit of
+the continuum-first and emergence-first ontology options} [Science-audit
+artifact].
+\texttt{research\_control/tasks/RT-20260721-002/artifacts/
+ontology\_regime\_comparison\_report\_v1.md}.
+
+The AEther-Flow Research Project. (2026d). \emph{Four project-success
+categories and their evidence obligations} [Task-local draft/control
+formalization].
+\texttt{research\_control/tasks/RT-20260722-016/artifacts/
+four\_project\_success\_categories\_v1.tex}.
+
+\end{document}

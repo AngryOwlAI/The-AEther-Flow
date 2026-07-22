@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260722-016` and `handoff-0826`.
+`RT-20260722-018` and `handoff-0827`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260722-016` |
-| Latest handoff ID | `handoff-0826` |
-| Current status | `p14_t01_success_categories_complete_p14_t02_selected` |
+| Active task ID | `RT-20260722-018` |
+| Latest handoff ID | `handoff-0827` |
+| Current status | `p14_t02_non_empirical_ontology_success_criteria_complete_p14_t03_selected` |
 | V16 completed | false |
-| Current route family | formalization or theorem (scientific) |
+| Current route family | formalization or theorem (scientific audit) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v21 non empirical ontology success criteria |
-| Required next authority | One P14-T02 external-red-team-reviewer packet may define and stress non-empirical ontology success criteria compare alternatives and assess the current program without scalar scoring or claim promotion. |
-| Next recommended action | Run exactly one bounded v21 P14-T02 external-red-team-reviewer philosophy-foundations AgentJob to define non-empirical ontology success criteria with evidence examples counterexamples alternative comparison and no scalar score workflow-metric substitution claim upgrade or P14-T03 execution. |
+| Current burden | none for physics derivation; live control burden is v21 necessary but not sufficient no target policy |
+| Required next authority | One P14-T03 ontology-formalizer packet may integrate a necessary-but-not-sufficient no-target policy positive-evidence requirements worked examples and Gate A through D mapping without claim promotion. |
+| Next recommended action | Run exactly one bounded v21 P14-T03 ontology-formalizer philosophy-foundations AgentJob to integrate a necessary-but-not-sufficient no-target policy with positive provenance dynamics uniqueness or quotient status operational meaning and robustness requirements. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260722-016` |
-| Latest research handoff ID | `handoff-0826` |
-| Latest research next action | Run exactly one bounded v21 P14-T02 external-red-team-reviewer philosophy-foundations AgentJob to define non-empirical ontology success criteria with evidence examples counterexamples alternative comparison and no scalar score workflow-metric substitution claim upgrade or P14-T03 execution. |
+| Latest research task ID | `RT-20260722-018` |
+| Latest research handoff ID | `handoff-0827` |
+| Latest research next action | Run exactly one bounded v21 P14-T03 ontology-formalizer philosophy-foundations AgentJob to integrate a necessary-but-not-sufficient no-target policy with positive provenance dynamics uniqueness or quotient status operational meaning and robustness requirements. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260722-016/00_TASK.yaml`.
-- Active task objective: Define necessary and insufficient evidence for interpretive redescription formal or categorical equivalence genuine emergence and empirical novelty then map current exact-GR and conditional quotient-EqSrc work without upgrading any claim.
-- Latest handoff path: `research_control/handoffs/handoff-0826.yaml`.
-- Latest handoff summary: P14-T01 completed four independent project-success evidence predicates and a finite theorem showing that none implies another by default. Current exact-GR work has only interpretive redescription met; its source-to-GR formal-equivalence coordinate is indeterminate and its emergence and empirical-novelty coordinates are not met at the declared scope. General quotient-EqSrc formal equivalence remains indeterminate pending an exact structure-preserving proof. No ontology scientific ledger Distance-to-GR protected authority promotion proof publication or completed-derivation status changed.
-- Current route family: formalization or theorem (scientific).
-- Next recommended action: Run exactly one bounded v21 P14-T02 external-red-team-reviewer philosophy-foundations AgentJob to define non-empirical ontology success criteria with evidence examples counterexamples alternative comparison and no scalar score workflow-metric substitution claim upgrade or P14-T03 execution.
+- Active task path: `research_control/tasks/RT-20260722-018/00_TASK.yaml`.
+- Active task objective: Define operational evidence obligations for assumption compression unification inevitability explanatory depth dimension or signature explanation matter or quantum connection and problem-solving fertility; prohibit scalar substitution; compare fixed alternatives and assess the current program honestly.
+- Latest handoff path: `research_control/handoffs/handoff-0827.yaml`.
+- Latest handoff summary: P14-T02 completed a seven-coordinate non-compensatory ontology-success evaluation framework. The current source-grounded profile is six not_met coordinates and one indeterminate problem-solving-fertility coordinate. A not_met value is an unmet present certificate rather than impossibility. Neither fixed proposal-only alternative is selected adopted rejected or ranked. No canonical ontology scientific ledger Distance-to-GR status protected authority physical interpretation promotion proof publication or derivation claim changed.
+- Current route family: formalization or theorem (scientific audit).
+- Next recommended action: Run exactly one bounded v21 P14-T03 ontology-formalizer philosophy-foundations AgentJob to integrate a necessary-but-not-sufficient no-target policy with positive provenance dynamics uniqueness or quotient status operational meaning and robustness requirements.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P14-T02 external-red-team-reviewer philosophy-foundations AgentJob to define non-empirical ontology success criteria with evidence examples counterexamples alternative comparison and no scalar score workflow-metric substitution claim upgrade or P14-T03 execution.
+Run exactly one bounded v21 P14-T03 ontology-formalizer philosophy-foundations AgentJob to integrate a necessary-but-not-sufficient no-target policy with positive provenance dynamics uniqueness or quotient status operational meaning and robustness requirements.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -330,9 +330,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260722-016`;
-- latest handoff: `handoff-0826`;
-- current status: `p14_t01_success_categories_complete_p14_t02_selected`;
+- active task: `RT-20260722-018`;
+- latest handoff: `handoff-0827`;
+- current status: `p14_t02_non_empirical_ontology_success_criteria_complete_p14_t03_selected`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +342,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0826.yaml`
-- `research_control/tasks/RT-20260722-016/00_TASK.yaml`
+- `research_control/handoffs/handoff-0827.yaml`
+- `research_control/tasks/RT-20260722-018/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +359,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0826*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0827*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
