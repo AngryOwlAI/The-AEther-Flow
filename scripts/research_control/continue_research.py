@@ -17,6 +17,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 try:
+    from family_freeze_admission import family_freeze_policy
     from physics_payload_admission import admission_policy as physics_payload_admission_policy
     from report_physics_progress_metrics import build_report as build_physics_progress_report
     from resolve_latest_handoff import resolve_latest
@@ -30,6 +31,7 @@ try:
         theoretical_continuation_policy,
     )
 except ImportError:  # pragma: no cover
+    from scripts.research_control.family_freeze_admission import family_freeze_policy
     from scripts.research_control.physics_payload_admission import (
         admission_policy as physics_payload_admission_policy,
     )
@@ -821,6 +823,7 @@ def continuation_status(
         "parent_child_decomposition_policy": parent_child_decomposition_policy(),
         "gr_derivation_roadmap_policy": gr_derivation_roadmap_policy(),
         "physics_payload_admission_policy": physics_payload_admission_policy(),
+        "family_freeze_policy": family_freeze_policy(),
         "required_authority_surfaces": routing_payload["required_authority_surfaces"],
         "stop_conditions": STOP_CONDITIONS,
         "validation_errors": [],

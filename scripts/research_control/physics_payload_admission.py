@@ -6,6 +6,13 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Any
 
+try:
+    from family_freeze_admission import evaluate_family_freeze_admission
+except ImportError:  # pragma: no cover - package import path for tests
+    from scripts.research_control.family_freeze_admission import (
+        evaluate_family_freeze_admission,
+    )
+
 
 SCHEMA_ID = "physics_payload_admission_v1"
 POLICY_ID = "physics_payload_admission_policy_v1"
@@ -230,6 +237,15 @@ def evaluate_agent_job_admission(
             if not str(details.get("not_already_encoded_evidence", "")).strip():
                 errors.append("route_decision requires not_already_encoded_evidence")
 
+    family_freeze = evaluate_family_freeze_admission(
+        job,
+        expected_admission_path=expected_path,
+        created_at=effective_created_at,
+    )
+    errors.extend(
+        f"family freeze: {error}" for error in family_freeze.get("errors", [])
+    )
+
     return {
         "status": "rejected" if errors else "admitted",
         "required": active,
@@ -238,4 +254,5 @@ def evaluate_agent_job_admission(
         "payload_type": payload_type,
         "errors": errors,
         "theorem_truth_evaluated": False,
+        "family_freeze_admission": family_freeze,
     }

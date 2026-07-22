@@ -1,0 +1,80 @@
+{
+  "schema_id": "family_freeze_registry_v1",
+  "status": "draft/control",
+  "task_id": "RT-20260722-013",
+  "plan_task_id": "P12-T02",
+  "target_derivation_milestone": "source_equivalence_eqsrc",
+  "source_hashes": {
+    "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_manifest.yaml": "fc0d36a7ea96b6aaaafced309c73c6bb2e71d969ee679d5c286afc2753a95b43",
+    "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_receipt.md": "a4f2aa26f344b1537651a2506589b11d6745e062c61cfc75b06d0a6ac8c705a8",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json": "8cf49a04b90d02f8439b54e138257cc5c56b2a72ba2b26c43c5b1b9a5dba78a0",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json": "788289c942bdcc5fff2f1337998f50d2b6fe89ca541de65a0ae24a651da97489",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_schema.md": "11d7217198d106cf48a57c082e0ef23f3209d29597fb6ec532159085d7db6168"
+  },
+  "freezes": [
+    {
+      "freeze_id": "FAMILY-FREEZE-P1-T03-001",
+      "family_id": "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR",
+      "family_identity_sha256": "ce8f10b3bc6b2b31baa637bbb56ea7a5120091757f0badbd5a26e87351993bb1",
+      "candidate_ids": ["EQSRC-IDISC-V1", "EQSRC-IDISC-V2", "EQSRC-IDISC-V3"],
+      "candidate_identity_sha256es": [
+        "82aeea488ea96078147f1125edc5ba6b4038f105aa9756035216faa2465a5d09",
+        "b84ff91c70eb7812f2e75cb9ef19eb6edb59b20261d15f4734733b00db3e2e0f",
+        "83ea378d84ff1d55da9ec524578d6da1e719be0bb9549f7612930aeeb7c7727d"
+      ],
+      "assumption_sha256es": [
+        "de418613b597dede504de9429b730665974cc49eb1c9847927d1954077c1a03a",
+        "91c9b46ccd335686c13823350e37a07a86e3f30402f47785b120919e2a37632a",
+        "b09b1e381b0d10a3611d2852f84ed48dee22858a23315f6af8cacbff0fbdd471"
+      ],
+      "disposition": "family_locally_frozen_no_adoption_no_global_no_go"
+    },
+    {
+      "freeze_id": "FAMILY-FREEZE-P1-T03-002",
+      "family_id": "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE",
+      "family_identity_sha256": "0921f15d36cef3162678e21c6c1c70326bc64ce3e5e7af4fb35ed3345bcd10ed",
+      "candidate_ids": ["EQSRC-CYCLE-BOUNDARY-V1"],
+      "candidate_identity_sha256es": ["55298ee79bd8398092ed4b4e9b7ffa14beb97f14f9eb310a63d5b4c78fbb639b"],
+      "assumption_sha256es": ["24d055c55392a41759630c6c29239b35fe0acc43a02d6959311e445844ba5cc9"],
+      "disposition": "family_locally_frozen_no_adoption_no_global_no_go"
+    },
+    {
+      "freeze_id": "FAMILY-FREEZE-P1-T03-003",
+      "family_id": "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR",
+      "family_identity_sha256": "22a64c21829267153cac770cc047219e2236f7e8a05909f27c4c7933809c89bc",
+      "candidate_ids": ["EQSRC-ORIENTATION-TORSOR-V1"],
+      "candidate_identity_sha256es": ["c442afc00def290d3ed8563a667513af71b7bf12124e46472f7ca75e69cc7e25"],
+      "assumption_sha256es": ["2793258988382c65605d22501a79e15853dd2a7d58451042719b72451b35f266"],
+      "disposition": "family_locally_frozen_no_adoption_no_global_no_go"
+    },
+    {
+      "freeze_id": "FAMILY-FREEZE-P1-T03-004",
+      "family_id": "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION",
+      "family_identity_sha256": "c3aa6ce4e3370a3329e03cf6ea88dcf5952657a6825814d6c4f35c30be7f2d21",
+      "candidate_ids": ["EQSRC-ROOTED-PARTITION-V1"],
+      "candidate_identity_sha256es": ["8cfc07890ec96667ef7c41440efb9953698a7b25d8a6a2fe92cbd1ea52cb4d5b"],
+      "assumption_sha256es": ["be387e4af7cc4f95bf55493908d2f806569f005452bb3c4bf386c40013851b8d"],
+      "disposition": "family_locally_frozen_no_adoption_no_global_no_go"
+    },
+    {
+      "freeze_id": "FAMILY-FREEZE-P1-T03-005",
+      "family_id": "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT",
+      "family_identity_sha256": "dc77f3b9dc5039af91132d5633c77333b50b7a6148974e0db6945f5f2617bc62",
+      "candidate_ids": ["EQSRC-GRADED-ORBIT-ROOT-V1"],
+      "candidate_identity_sha256es": ["52611afebe146e997788a9e12e09d58ba385e6e1cb3b801c335e9c60546839e5"],
+      "assumption_sha256es": ["58c5c912adb0bcdf992cc724cd15637d554e57b1ee76b90ca92477314d37ce36"],
+      "disposition": "family_locally_frozen_no_adoption_no_global_no_go"
+    }
+  ],
+  "barred_route_kinds": ["rename_or_repackage"],
+  "reopening_classes": ["new_primitive", "new_theorem", "new_variation_class", "protected_decision"],
+  "authority_flags": {
+    "historical_records_mutated": false,
+    "global_no_go_inferred": false,
+    "candidate_adoption_authorized": false,
+    "ontology_edit_authorized": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_authority": false
+  }
+}

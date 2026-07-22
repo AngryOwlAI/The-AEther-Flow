@@ -1,0 +1,205 @@
+{
+  "case_count": 11,
+  "failed_case_count": 0,
+  "fixture_evidence_is_production_authority": false,
+  "fixture_path": "research_control/tasks/RT-20260722-013/artifacts/fixtures/family_freeze_route_cases.json",
+  "fixture_sha256": "2545e75f90a315c07519f5575d8e822782b05436db97407785a835e1b356044c",
+  "freeze_count": 5,
+  "global_no_go_inferred": false,
+  "historical_sources_unchanged": true,
+  "local_family_freeze_preserved": true,
+  "passed_case_count": 11,
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P12-T02",
+  "policy": {
+    "active_after": "2026-07-22T17:25:51Z",
+    "candidate_cycle_route_kinds": [
+      "candidate_audit",
+      "candidate_construction",
+      "candidate_repair",
+      "candidate_stress"
+    ],
+    "distinct_branch_route_kinds": [
+      "precise_obstruction",
+      "primitive_investigation",
+      "source_acquisition",
+      "theorem_investigation",
+      "variation_class_investigation"
+    ],
+    "distinct_theorem_or_ontology_branch_blocked": false,
+    "enforcement": "hard_failure_for_repeated_candidate_cycles",
+    "frozen_family_count": 5,
+    "historical_jobs_without_block": "legacy_readable",
+    "local_freeze_is_global_no_go": false,
+    "match_fields": [
+      "family_id",
+      "family_identity_sha256",
+      "assumption_sha256"
+    ],
+    "physics_promotion_authorized": false,
+    "policy_id": "family_freeze_reopening_policy_v1",
+    "renamed_or_repackaged_route_admitted": false,
+    "reopening_classes": [
+      "new_primitive",
+      "new_theorem",
+      "new_variation_class",
+      "protected_decision"
+    ],
+    "schema_id": "family_freeze_route_admission_v1",
+    "theorem_truth_evaluated": false
+  },
+  "results": [
+    {
+      "case_id": "frozen_family_repeat_blocked",
+      "error_count": 10,
+      "expected_status": "rejected",
+      "match_reasons": [
+        "assumption_sha256",
+        "family_id",
+        "family_identity_sha256"
+      ],
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "renamed_same_assumption_blocked",
+      "error_count": 10,
+      "expected_status": "rejected",
+      "match_reasons": [
+        "assumption_sha256"
+      ],
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "rename_or_repackage_always_barred",
+      "error_count": 1,
+      "expected_status": "rejected",
+      "match_reasons": [
+        "assumption_sha256",
+        "family_id",
+        "family_identity_sha256"
+      ],
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "new_theorem_reopening_admitted",
+      "error_count": 0,
+      "expected_status": "admitted_reopened",
+      "match_reasons": [
+        "assumption_sha256",
+        "family_id",
+        "family_identity_sha256"
+      ],
+      "observed_status": "admitted_reopened",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "malformed_theorem_reopening_blocked",
+      "error_count": 2,
+      "expected_status": "rejected",
+      "match_reasons": [
+        "assumption_sha256",
+        "family_id",
+        "family_identity_sha256"
+      ],
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "distinct_theorem_branch_admitted_without_reopening",
+      "error_count": 0,
+      "expected_status": "admitted_distinct_branch",
+      "match_reasons": [
+        "assumption_sha256",
+        "family_id",
+        "family_identity_sha256"
+      ],
+      "observed_status": "admitted_distinct_branch",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "unfrozen_family_admitted",
+      "error_count": 0,
+      "expected_status": "admitted_unfrozen",
+      "match_reasons": [],
+      "observed_status": "admitted_unfrozen",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "new_primitive_reopening_admitted",
+      "error_count": 0,
+      "expected_status": "admitted_reopened",
+      "match_reasons": [
+        "assumption_sha256",
+        "family_id",
+        "family_identity_sha256"
+      ],
+      "observed_status": "admitted_reopened",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "new_variation_class_reopening_admitted",
+      "error_count": 0,
+      "expected_status": "admitted_reopened",
+      "match_reasons": [
+        "assumption_sha256",
+        "family_id",
+        "family_identity_sha256"
+      ],
+      "observed_status": "admitted_reopened",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "protected_decision_without_gate_blocked",
+      "error_count": 1,
+      "expected_status": "rejected",
+      "match_reasons": [
+        "assumption_sha256",
+        "family_id",
+        "family_identity_sha256"
+      ],
+      "observed_status": "rejected",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    },
+    {
+      "case_id": "protected_decision_with_gate_admitted",
+      "error_count": 0,
+      "expected_status": "admitted_reopened",
+      "match_reasons": [
+        "assumption_sha256",
+        "family_id",
+        "family_identity_sha256"
+      ],
+      "observed_status": "admitted_reopened",
+      "passed": true,
+      "theorem_truth_evaluated": false
+    }
+  ],
+  "schema_id": "family_freeze_validation_report_v1",
+  "seed_error_count": 0,
+  "seed_errors": [],
+  "seed_path": "research_control/tasks/RT-20260722-013/artifacts/family_freeze_historical_seed.json",
+  "seed_sha256": "7e9d70103303e33e626665e998546d1cc9fd31b28429dabe55ca515691856b43",
+  "source_hashes": {
+    "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_manifest.yaml": "fc0d36a7ea96b6aaaafced309c73c6bb2e71d969ee679d5c286afc2753a95b43",
+    "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_receipt.md": "a4f2aa26f344b1537651a2506589b11d6745e062c61cfc75b06d0a6ac8c705a8",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json": "8cf49a04b90d02f8439b54e138257cc5c56b2a72ba2b26c43c5b1b9a5dba78a0",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json": "788289c942bdcc5fff2f1337998f50d2b6fe89ca541de65a0ae24a651da97489",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_schema.md": "11d7217198d106cf48a57c082e0ef23f3209d29597fb6ec532159085d7db6168"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260722-013",
+  "theorem_truth_evaluated": false
+}

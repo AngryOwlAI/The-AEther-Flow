@@ -136,6 +136,71 @@ Project-system jobs use `payload_type: not_applicable`,
 This is an admission-shape gate. It does not evaluate theorem truth, validate a
 candidate or source law, change scientific status, or authorize promotion.
 
+## Prospective Family-Freeze Admission
+
+Every physics-facing AgentJob created after `2026-07-22T17:25:51Z` must also
+include a `family_freeze_admission` block conforming to the task-local P12-T02
+policy and seed under `research_control/tasks/RT-20260722-013/artifacts/`.
+Historical jobs remain readable, and project-system jobs remain on the
+separate physics-payload `project_system` path.
+
+The validator independently matches exact `family_id`,
+`family_identity_sha256`, and `assumption_sha256es` against the five seeded
+EqSrc family freezes. A matching candidate construction, audit, stress, or
+repair route requires already tracked evidence in exactly one reopening class:
+`new_primitive`, `new_theorem`, `new_variation_class`, or
+`protected_decision`. Renaming or repackaging is barred. A materially distinct
+theorem, primitive, variation-class, source-acquisition, or precise-
+obstruction investigation may proceed without reopening when it explicitly
+preserves the local freeze and does not reconstruct the frozen candidate.
+
+```yaml
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "stable route identity"
+  family_id: "candidate family identity"
+  family_identity_sha256: "lowercase sha256"
+  assumption_sha256es:
+    - "lowercase sha256"
+  route_kind: "candidate_construction"
+  detected_match_basis:
+    - "family_id"
+    - "family_identity_sha256"
+    - "assumption_sha256"
+  reopening:
+    requested: true
+    class: "new_theorem"
+    evidence_id: "stable evidence identity"
+    evidence_path: "repo/relative/tracked/path"
+    evidence_sha256: "lowercase sha256"
+    material_delta: "why the evidence changes this exact route"
+    opens_exact_family_id: "candidate family identity"
+    automatic_adoption: false
+    theorem_truth_inferred: false
+    protected_human_authority: false
+    theorem_id: "exact theorem identity"
+    proposal_neutral: true
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+```
+
+For an unmatched family, `reopening.requested` is false. For a matched
+materially distinct investigation, supply `distinct_branch.branch_identity`,
+`material_difference_basis`, `reconstructs_frozen_candidate: false`, and
+nonempty `expected_artifact_paths`, while keeping `reopening.requested: false`.
+Protected decisions additionally require an exact human-gate identity and an
+AgentJob that remains human-gated.
+
+This gate validates identity, evidence presence, and exact source hashes. It
+does not prove evidence true, adopt a primitive or candidate, infer a global
+no-go result, modify ontology, or authorize physics promotion.
+
 For every future physics research AgentJob created after
 `2026-06-17T15:46:25Z`, the job must also include:
 

@@ -1405,6 +1405,15 @@ class ResearchControlTests(unittest.TestCase):
         self.assertFalse(
             status["physics_payload_admission_policy"]["theorem_truth_evaluated"]
         )
+        self.assertEqual(
+            status["family_freeze_policy"]["policy_id"],
+            "family_freeze_reopening_policy_v1",
+        )
+        self.assertEqual(status["family_freeze_policy"]["frozen_family_count"], 5)
+        self.assertFalse(status["family_freeze_policy"]["local_freeze_is_global_no_go"])
+        self.assertFalse(
+            status["family_freeze_policy"]["distinct_theorem_or_ontology_branch_blocked"]
+        )
         self.assertIn("dependency_graph_summary", status)
         graph_summary = status["dependency_graph_summary"]
         self.assertEqual(graph_summary["active_task"], program_state["active_task_id"])

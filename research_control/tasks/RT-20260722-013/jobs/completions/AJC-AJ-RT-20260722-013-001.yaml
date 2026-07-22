@@ -1,0 +1,343 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260722-013-001"
+completion_id: "AJC-AJ-RT-20260722-013-001"
+task_id: "RT-20260722-013"
+task_type: "v21_family_freeze_reopening_policy"
+decision_id: "DDR-20260722-013"
+role_id: "project-control-maintainer"
+source_role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-013"
+status: "completed"
+created_at: "2026-07-22T17:25:51Z"
+started_at: "2026-07-22T17:25:51Z"
+completed_at: "2026-07-22T17:38:53Z"
+objective: "Execute only v21 P12-T02 by implementing and validating prospective family-freeze and evidence-based reopening controls without evaluating theorem truth or changing scientific authority."
+completion_summary: "P12-T02 implemented prospective exact family and same-assumption matching that blocks repeated or renamed candidate cycles unless tracked primitive theorem variation-class or protected-decision evidence reopens the exact family while leaving materially distinct investigations open."
+objective_result: "met"
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_task_id: "P12-T02"
+  phase_id: "P12"
+  recommendation_ids:
+    - "V21-R01"
+    - "V21-R02"
+    - "V21-R35"
+    - "V21-R41"
+  expected_result_kind: "implemented_and_validated_or_precisely_blocked"
+  observed_result_kind: "implemented_and_validated"
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  generation: 54
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:54"
+  immutable_route_hash: "60073130819438941df02406ef8d8acdfac149ba0d994ea97fcc332fc5351e16"
+  worker_skill: "continue-research"
+  worker_invocation_count: 1
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "implemented_and_validated_project_control_only"
+work_item_status: "completed"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: true
+project_system_scope: "Prospective family identity repetition and evidence reopening policy schema seed evaluator admission integration fixtures tests standard control records and generated derivatives only."
+project_system_boundary_authorized_by_plan: true
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+family_freeze_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  status: "PASS"
+  enforcement: "hard_failure_for_repeated_candidate_cycles"
+  active_after: "2026-07-22T17:25:51Z"
+  frozen_family_count: 5
+  fixture_case_count: 11
+  fixture_pass_count: 11
+  fixture_failure_count: 0
+  exact_family_id_match: true
+  family_identity_hash_match: true
+  same_assumption_hash_match: true
+  repeated_candidate_cycles_blocked: true
+  renamed_or_repackaged_routes_blocked: true
+  reopening_classes:
+    - "new_primitive"
+    - "new_theorem"
+    - "new_variation_class"
+    - "protected_decision"
+  materially_distinct_theorem_branch_preserved: true
+  source_acquisition_preserved: true
+  precise_obstruction_preserved: true
+  historical_sources_unchanged: true
+  local_family_freeze_preserved: true
+  global_no_go_inferred: false
+  theorem_truth_evaluated: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+  policy_path: "research_control/tasks/RT-20260722-013/artifacts/family_freeze_policy_v1.md"
+  policy_sha256: "2dab890a3550768693b23ebbcfde49fb9fb60fdc13ed8acce2c1241b4d1ff487"
+  registry_schema_path: "research_control/tasks/RT-20260722-013/artifacts/family_freeze_registry_schema_v1.md"
+  registry_schema_sha256: "f8f9d8e1a6b3687cdc810e8b7ad73f1598632878d497669b079a252e310c87fd"
+  historical_seed_path: "research_control/tasks/RT-20260722-013/artifacts/family_freeze_historical_seed.json"
+  historical_seed_sha256: "7e9d70103303e33e626665e998546d1cc9fd31b28429dabe55ca515691856b43"
+  evaluator_path: "scripts/research_control/family_freeze_admission.py"
+  evaluator_sha256: "3355bb3a1e7aa4f3f38ba506efe801c7857d1d09a9c3d4b1c926664704414729"
+  fixture_path: "research_control/tasks/RT-20260722-013/artifacts/fixtures/family_freeze_route_cases.json"
+  fixture_sha256: "2545e75f90a315c07519f5575d8e822782b05436db97407785a835e1b356044c"
+  validation_report_path: "research_control/tasks/RT-20260722-013/artifacts/family_freeze_validation_report.json"
+  validation_report_sha256: "660382dd28e09a312f56e51d041c6696671b2e23d732afafaa1909298e9a023a"
+  compact_receipt_path: "research_control/tasks/RT-20260722-013/artifacts/family_freeze_compact_receipt.json"
+  compact_receipt_sha256: "8cf45328b414fc8a4f40892acab114bfba39f2fec24740a4616bf4cd783a6970"
+  agent_job_schema_path: ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  agent_job_schema_sha256: "cf341fc2a8164c7cd62dc4dd61762fc8bd8814d19f6c97e613b690a0f9adb39a"
+  payload_evaluator_path: "scripts/research_control/physics_payload_admission.py"
+  payload_evaluator_sha256: "c075f618be3b67c5c5d6e40436be0a10926bad1009526fae91385c51050bc893"
+  Director_context_path: "scripts/research_control/continue_research.py"
+  Director_context_sha256: "bf97fcf153a7b12bd0a69fd2e8ee88c43976bc28687f46027aeb6e64650d90db"
+
+historical_source_hashes:
+  - path: "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_manifest.yaml"
+    sha256: "fc0d36a7ea96b6aaaafced309c73c6bb2e71d969ee679d5c286afc2753a95b43"
+  - path: "research_control/tasks/RT-20260720-011/artifacts/eqsrc_canonical_choice_family_freeze_receipt.md"
+    sha256: "a4f2aa26f344b1537651a2506589b11d6745e062c61cfc75b06d0a6ac8c705a8"
+  - path: "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_historical_seed.json"
+    sha256: "8cf49a04b90d02f8439b54e138257cc5c56b2a72ba2b26c43c5b1b9a5dba78a0"
+  - path: "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json"
+    sha256: "788289c942bdcc5fff2f1337998f50d2b6fe89ca541de65a0ae24a651da97489"
+  - path: "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_schema.md"
+    sha256: "11d7217198d106cf48a57c082e0ef23f3209d29597fb6ec532159085d7db6168"
+
+assumption_delta:
+  new_assumptions: []
+  removed_assumptions: []
+  changed_assumptions: []
+  project_control_assumption: "A prospective route that repeats a frozen family identity or exact assumption hash must present tracked reopening evidence or remain a materially distinct investigation; this is a routing-control rule and not a physics assumption."
+candidate_or_theorem_identities:
+  created: []
+  adopted: []
+  rejected: []
+  promoted: []
+  seeded_control_family_ids:
+    - "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR"
+    - "EQSRC-CANONICAL-CHOICE-CYCLE-BOUNDARY-LINE"
+    - "EQSRC-CANONICAL-CHOICE-ORIENTATION-TORSOR"
+    - "EQSRC-CANONICAL-CHOICE-ROOTED-PARTITION"
+    - "EQSRC-CANONICAL-CHOICE-GRADED-ORBIT-ROOT"
+  note: "The five identities are copied control references to prior locally frozen families and are not new candidates adoptions rejections or theorem results."
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260722-013/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-013/DDR-20260722-013.md"
+  - "research_control/tasks/RT-20260722-013/roles/project-control-maintainer@0.2.0--RT-20260722-013.yaml"
+  - "research_control/tasks/RT-20260722-013/jobs/AJ-RT-20260722-013-001.yaml"
+  - "research_control/tasks/RT-20260722-013/artifacts/family_freeze_policy_v1.md"
+  - "research_control/tasks/RT-20260722-013/artifacts/family_freeze_registry_schema_v1.md"
+  - "research_control/tasks/RT-20260722-013/artifacts/family_freeze_historical_seed.json"
+  - "research_control/tasks/RT-20260722-013/artifacts/validate_family_freeze_policy.py"
+  - "research_control/tasks/RT-20260722-013/artifacts/fixtures/family_freeze_route_cases.json"
+  - "research_control/tasks/RT-20260722-013/artifacts/family_freeze_validation_report.json"
+  - "research_control/tasks/RT-20260722-013/artifacts/family_freeze_compact_receipt.json"
+  - "scripts/research_control/family_freeze_admission.py"
+  - "tests/test_family_freeze_admission.py"
+  - "research_control/tasks/RT-20260722-013/documentation_impact.yaml"
+  - "research_control/handoffs/handoff-0823.yaml"
+  - "research_control/handoffs/handoff-0823.md"
+outputs_updated:
+  - ".agents/schemas/AGENT_JOB_SCHEMA.md"
+  - "scripts/research_control/physics_payload_admission.py"
+  - "scripts/research_control/continue_research.py"
+  - "tests/test_research_control.py"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory wiki graph and registry derivatives"
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Enforce the scientific lesson of the current EqSrc orbit."
+  explanation: "The family-freeze gate changes project-control routing and validation only; it creates no source object theorem metric coupling dynamics field equation or benchmark evidence."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P12-T02 is project-system route governance and changes no scientific evidence or burden status."
+  downstream_unlocked:
+    - "prospective family-freeze admission before repeated candidate routing"
+    - "P12-T03 separate physics and project-system budgets"
+  downstream_still_blocked:
+    - "protected Gate B review readiness"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  project_control_change_authorized: true
+  project_control_change_scope: "P12-T02 only"
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 54 route lease repository identity max reasoning effort clean start predecessor inactivity and single consumption were verified before work."
+      - "P10-T03 and P12-T01 are finalized at the exact handoff-bound completion hashes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The deterministic task-local validator passes five source-bound family freezes and eleven positive and negative route cases."
+      - "The live P12-T02 AgentJob remains on the separate project-system physics-payload path."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused tests affected-plan documentation-impact project-improvement claim-language research-control memory and diff validations are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate and will commit only an allowlisted validated tree."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier compact-frontier and policy-generated derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation must report no hard failure before checkpoint."
+
+forbidden_conclusion_summary:
+  local_family_freeze_as_global_no_go: false
+  renamed_notation_as_new_evidence: false
+  validator_pass_as_scientific_status: false
+  route_selection_as_physics_progress: false
+  project_system_work_as_physics_payload: false
+  theorem_truth_inferred: false
+  ontology_or_source_law_adopted: false
+  candidate_adopted_or_rejected: false
+  scientific_ledger_changed: false
+  physical_metric_or_interpretation_adopted: false
+  physics_promotion_authorized: false
+  completed_derivation_claimed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 987
+    relationship_row_count: 4880
+    semantic_row_count: 987
+    vault_row_count: 987
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search family freeze reopening policy --limit 10 --json"
+      query_type: "search"
+      query_text: "family freeze reopening policy"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-AI-RESEARCH-AGENT-METRICS-TAXONOMY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/ai_research_agent_metrics_taxonomy_v1.md"
+      source_hash: "bb373ae346c855695d0002605410b2113e6aa9a703bce90604c549a66222e439"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-RATIO-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/physics_payload_ratio_policy_v1.md"
+      source_hash: "0bf6b607a8f93b05e6e67c5a6676c0f889cb28f9a6c81db9c6c508e5f486d213"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-FRONTIER-THEOREM-INVENTORY"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/frontier_theorem_inventory.md"
+      source_hash: "5158603122dda2ec768293d5659e51b0d18cbc52689c2caf9a1c266a4d105fce"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260721-005-V21-CANDIDATE-LINEAGE-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_schema.md"
+      source_hash: "11d7217198d106cf48a57c082e0ef23f3209d29597fb6ec532159085d7db6168"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-PHYSICS-PAYLOAD-ADMISSION-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/physics_payload_admission_policy_v1.md"
+      source_hash: "a390d0e2cde7160de25c239f7750b1a752edda61bdfdf1b6866079549e58fd0f"
+  authority_note: "Obsidian wiki semantic relationship and .local surfaces are retrieval layers only and not authority; registered canonical sources and tracked control state govern this task."
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-013/artifacts/validate_family_freeze_policy.py --write --json"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260722-013/artifacts/validate_family_freeze_policy.py --check --json"
+    status: "PASS"
+  - command: ".venv/bin/python -m unittest -v tests.test_family_freeze_admission tests.test_physics_payload_admission tests.test_research_control"
+    status: "PASS"
+  - command: ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths <P12-T02 allowlist> --explain"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff"
+    status: "PASS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+  - command: "git diff --check"
+    status: "PASS"
+
+project_improvement_signals: []
+next_recommended_action: "Run exactly one bounded P12-T03 project-control-maintainer project-system AgentJob to separate physics-bearing and research-operating-system budgets without counting system success as Distance-to-GR progress."
+notes: "P12-T02 is a project-control completion. Family identity and reopening status are operational routing evidence only and cannot establish theorem truth physical interpretation ontology adoption benchmark promotion publication global no-go or completed derivation."

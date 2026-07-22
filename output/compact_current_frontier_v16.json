@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0822.yaml",
+    "research_control/handoffs/handoff-0823.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260722-012",
-    "latest_handoff_id": "handoff-0822",
-    "current_status": "p12_t01_physics_payload_admission_complete_p12_t02_selected",
+    "active_task_id": "RT-20260722-013",
+    "latest_handoff_id": "handoff-0823",
+    "current_status": "p12_t02_family_freeze_policy_complete_p12_t03_selected",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260722-012",
-    "latest_research_handoff_id": "handoff-0822",
-    "latest_research_next_action": "Run exactly one bounded P12-T02 project-control-maintainer project-system AgentJob to implement family-level freeze and evidence-based reopening policy from qualifying P10-T03 and P12-T01 completions without turning a scoped freeze into a global no-go.",
+    "latest_research_task_id": "RT-20260722-013",
+    "latest_research_handoff_id": "handoff-0823",
+    "latest_research_next_action": "Run exactly one bounded P12-T03 project-control-maintainer project-system AgentJob to separate physics-bearing and research-operating-system budgets without counting system success as Distance-to-GR progress.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p12_t02_family_freeze_and_reopening_policy",
+    "route_id": "v21_p12_t03_dual_budget_policy",
     "role_family": "project-control-maintainer@0.2.0",
     "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Enforce the scientific lesson of the current EqSrc orbit.",
+    "milestone_burden": "Prevent easier-to-validate system work from crowding out physics.",
     "requires_human_gate": false
   },
   "claim_boundary": {

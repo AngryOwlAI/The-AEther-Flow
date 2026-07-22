@@ -1,0 +1,229 @@
+{
+  "schema_id": "family_freeze_route_fixture_matrix_v1",
+  "fixture_mode": true,
+  "production_evidence_verification_implied": false,
+  "created_at": "2026-07-22T17:25:52Z",
+  "expected_admission_path": "physics",
+  "base_job": {
+    "requires_human_gate": false,
+    "family_freeze_admission": {
+      "schema_id": "family_freeze_route_admission_v1",
+      "policy_id": "family_freeze_reopening_policy_v1",
+      "route_id": "FIXTURE-ROUTE-001",
+      "family_id": "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR",
+      "family_identity_sha256": "ce8f10b3bc6b2b31baa637bbb56ea7a5120091757f0badbd5a26e87351993bb1",
+      "assumption_sha256es": ["b09b1e381b0d10a3611d2852f84ed48dee22858a23315f6af8cacbff0fbdd471"],
+      "route_kind": "candidate_construction",
+      "detected_match_basis": ["assumption_sha256", "family_id", "family_identity_sha256"],
+      "reopening": {
+        "requested": false,
+        "class": "none"
+      },
+      "authority_limits": {
+        "local_family_freeze_preserved": true,
+        "global_no_go_claimed": false,
+        "automatic_candidate_adoption": false,
+        "theorem_truth_inferred": false,
+        "ontology_modified": false,
+        "physics_promotion_authorized": false
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "frozen_family_repeat_blocked",
+      "expected_status": "rejected",
+      "job_patch": {}
+    },
+    {
+      "case_id": "renamed_same_assumption_blocked",
+      "expected_status": "rejected",
+      "job_patch": {
+        "family_freeze_admission": {
+          "route_id": "FIXTURE-ROUTE-002",
+          "family_id": "RENAMED-DISCRIMINATOR-FAMILY",
+          "family_identity_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "detected_match_basis": ["assumption_sha256"]
+        }
+      }
+    },
+    {
+      "case_id": "rename_or_repackage_always_barred",
+      "expected_status": "rejected",
+      "job_patch": {
+        "family_freeze_admission": {
+          "route_id": "FIXTURE-ROUTE-003",
+          "route_kind": "rename_or_repackage"
+        }
+      }
+    },
+    {
+      "case_id": "new_theorem_reopening_admitted",
+      "expected_status": "admitted_reopened",
+      "job_patch": {
+        "family_freeze_admission": {
+          "route_id": "FIXTURE-ROUTE-004",
+          "reopening": {
+            "requested": true,
+            "class": "new_theorem",
+            "evidence_id": "FIXTURE-THEOREM-001",
+            "evidence_path": "fixtures/synthetic_theorem_evidence.json",
+            "evidence_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "material_delta": "A proposal-neutral selector theorem is now tracked and maps this exact family to explicit hypotheses.",
+            "opens_exact_family_id": "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR",
+            "automatic_adoption": false,
+            "theorem_truth_inferred": false,
+            "protected_human_authority": false,
+            "theorem_id": "THM-FIXTURE-GENERAL-SELECTOR-001",
+            "proposal_neutral": true
+          }
+        }
+      }
+    },
+    {
+      "case_id": "malformed_theorem_reopening_blocked",
+      "expected_status": "rejected",
+      "job_patch": {
+        "family_freeze_admission": {
+          "route_id": "FIXTURE-ROUTE-005",
+          "reopening": {
+            "requested": true,
+            "class": "new_theorem",
+            "evidence_id": "FIXTURE-THEOREM-002",
+            "evidence_path": "fixtures/synthetic_theorem_evidence.json",
+            "evidence_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "material_delta": "Renamed notation without a theorem identity.",
+            "opens_exact_family_id": "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR",
+            "automatic_adoption": false,
+            "theorem_truth_inferred": false,
+            "protected_human_authority": false,
+            "theorem_id": "",
+            "proposal_neutral": false
+          }
+        }
+      }
+    },
+    {
+      "case_id": "distinct_theorem_branch_admitted_without_reopening",
+      "expected_status": "admitted_distinct_branch",
+      "job_patch": {
+        "family_freeze_admission": {
+          "route_id": "FIXTURE-ROUTE-006",
+          "route_kind": "theorem_investigation",
+          "distinct_branch": {
+            "branch_identity": "THM-TARGET-FIXTURE-NATURALITY-001",
+            "material_difference_basis": "Studies proposal-neutral selector existence and naturality rather than reconstructing a preferred response token.",
+            "reconstructs_frozen_candidate": false,
+            "expected_artifact_paths": ["research_control/tasks/FIXTURE/artifacts/theorem_target.tex"]
+          }
+        }
+      }
+    },
+    {
+      "case_id": "unfrozen_family_admitted",
+      "expected_status": "admitted_unfrozen",
+      "job_patch": {
+        "family_freeze_admission": {
+          "route_id": "FIXTURE-ROUTE-007",
+          "family_id": "EQSRC-NEW-MATERIALLY-DISTINCT-FAMILY",
+          "family_identity_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "assumption_sha256es": ["cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"],
+          "detected_match_basis": []
+        }
+      }
+    },
+    {
+      "case_id": "new_primitive_reopening_admitted",
+      "expected_status": "admitted_reopened",
+      "job_patch": {
+        "family_freeze_admission": {
+          "route_id": "FIXTURE-ROUTE-008",
+          "reopening": {
+            "requested": true,
+            "class": "new_primitive",
+            "evidence_id": "FIXTURE-PRIMITIVE-001",
+            "evidence_path": "fixtures/synthetic_primitive_evidence.json",
+            "evidence_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "material_delta": "A proposal-only source primitive changes the exact assumption basis.",
+            "opens_exact_family_id": "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR",
+            "automatic_adoption": false,
+            "theorem_truth_inferred": false,
+            "protected_human_authority": false,
+            "primitive_id": "PRIM-FIXTURE-001",
+            "canonical_ontology_modified": false,
+            "materially_distinct": true
+          }
+        }
+      }
+    },
+    {
+      "case_id": "new_variation_class_reopening_admitted",
+      "expected_status": "admitted_reopened",
+      "job_patch": {
+        "family_freeze_admission": {
+          "route_id": "FIXTURE-ROUTE-009",
+          "reopening": {
+            "requested": true,
+            "class": "new_variation_class",
+            "evidence_id": "FIXTURE-VARIATION-001",
+            "evidence_path": "fixtures/synthetic_variation_evidence.json",
+            "evidence_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "material_delta": "An independently based physical variation class changes the admissible response problem.",
+            "opens_exact_family_id": "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR",
+            "automatic_adoption": false,
+            "theorem_truth_inferred": false,
+            "protected_human_authority": false,
+            "variation_class_id": "VAR-FIXTURE-001",
+            "independent_physical_basis": "A separately tracked source-side variation definition.",
+            "materially_distinct": true
+          }
+        }
+      }
+    },
+    {
+      "case_id": "protected_decision_without_gate_blocked",
+      "expected_status": "rejected",
+      "job_patch": {
+        "family_freeze_admission": {
+          "route_id": "FIXTURE-ROUTE-010",
+          "reopening": {
+            "requested": true,
+            "class": "protected_decision",
+            "evidence_id": "FIXTURE-GATE-001",
+            "evidence_path": "fixtures/synthetic_gate_evidence.json",
+            "evidence_sha256": "9999999999999999999999999999999999999999999999999999999999999999",
+            "material_delta": "A protected decision would name the exact scope.",
+            "opens_exact_family_id": "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR",
+            "automatic_adoption": false,
+            "theorem_truth_inferred": false,
+            "protected_human_authority": true,
+            "human_gate_id": "GATE-FIXTURE-001"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "protected_decision_with_gate_admitted",
+      "expected_status": "admitted_reopened",
+      "job_patch": {
+        "requires_human_gate": true,
+        "family_freeze_admission": {
+          "route_id": "FIXTURE-ROUTE-011",
+          "reopening": {
+            "requested": true,
+            "class": "protected_decision",
+            "evidence_id": "FIXTURE-GATE-002",
+            "evidence_path": "fixtures/synthetic_gate_evidence.json",
+            "evidence_sha256": "9999999999999999999999999999999999999999999999999999999999999999",
+            "material_delta": "A protected decision names this exact family and no broader scope.",
+            "opens_exact_family_id": "EQSRC-CANONICAL-CHOICE-INTRINSIC-DISCRIMINATOR",
+            "automatic_adoption": false,
+            "theorem_truth_inferred": false,
+            "protected_human_authority": true,
+            "human_gate_id": "GATE-FIXTURE-002"
+          }
+        }
+      }
+    }
+  ]
+}

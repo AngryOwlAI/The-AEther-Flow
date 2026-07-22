@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-012`
-- Latest handoff: `handoff-0822`
-- Current status: `p12_t01_physics_payload_admission_complete_p12_t02_selected`
+- Active task: `RT-20260722-013`
+- Latest handoff: `handoff-0823`
+- Current status: `p12_t02_family_freeze_policy_complete_p12_t03_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-012`
-- Latest research handoff: `handoff-0822`
-- Latest research next action: Run exactly one bounded P12-T02 project-control-maintainer project-system AgentJob to implement family-level freeze and evidence-based reopening policy from qualifying P10-T03 and P12-T01 completions without turning a scoped freeze into a global no-go.
+- Latest research task: `RT-20260722-013`
+- Latest research handoff: `handoff-0823`
+- Latest research next action: Run exactly one bounded P12-T03 project-control-maintainer project-system AgentJob to separate physics-bearing and research-operating-system budgets without counting system success as Distance-to-GR progress.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p12_t02_family_freeze_and_reopening_policy`
+- Route ID: `v21_p12_t03_dual_budget_policy`
 - Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Enforce the scientific lesson of the current EqSrc orbit.
+- Milestone burden: Prevent easier-to-validate system work from crowding out physics.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `f95a4ab58aea73124b09ffa686dc546b7dd449a34c68d4b80c8e3d863b177df4`
-- JSON SHA-256: `f79fe7b227ce29d7297b524bf8c7c1c5e5a3b0af2f77cc01723b79f5b6b7da77`
+- YAML SHA-256: `68bca530d7679682787c2959dbb02fe944d1457d5d56182398c067dcf156cbc7`
+- JSON SHA-256: `3aacfc2b390ff4da8b756d74e5b53342153fcc9c2b218713ae5023fd4905967a`
 
 ## Authority Warning
 
