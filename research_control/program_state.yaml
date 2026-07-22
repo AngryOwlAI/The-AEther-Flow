@@ -1,9 +1,73 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260722-003"
-latest_handoff_id: "handoff-0813"
-current_status: "p10_t09_migration_readiness_audit_complete_broader_rollout_frozen_p11_t01_selected"
-claim_boundary_summary: "RT-20260722-003 completed the P10 migration-readiness audit under a read-only predecessor boundary; six components remain stable, two lifecycle blockers freeze broader rollout, and no repair, cutover, historical rewrite, scientific change, or protected authority occurred."
-next_recommended_action: "Run exactly one bounded P11-T01 project-control-maintainer project-system AgentJob to define a reproducible blind-review and context-separation protocol that strips task verdict, route history, validator status, and internal confidence while preserving assumptions and source hashes. Do not claim reviewer independence, repair the frozen P10 blockers, cut over authority, or execute protected P4-T05."
+active_task_id: "RT-20260722-004"
+latest_handoff_id: "handoff-0814"
+current_status: "p11_t01_blind_review_protocol_complete_p11_t02_selected"
+claim_boundary_summary: "RT-20260722-004 completed P11-T01 under a task-local project-system boundary; the deterministic blind packet preserves assumptions source hashes exact excerpts and claim limits while excluding process metadata, and no review independence science or protected authority is claimed."
+next_recommended_action: "Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Require explicit unknown when evidence is absent and do not infer independence from role names packet redaction validator status or internal model separation."
+
+p11_t01_blind_review_context_separation_protocol:
+  task_id: "RT-20260722-004"
+  parent_task_id: "RT-20260722-003"
+  parent_handoff_id: "handoff-0813"
+  plan_task_id: "P11-T01"
+  claim_boundary_id: "CB-V21-P11-T01-BLIND-REVIEW-CONTEXT-SEPARATION-001"
+  status: "PASS_REPRODUCIBLE_CONTEXT_SEPARATION"
+  completion_path: "research_control/tasks/RT-20260722-004/jobs/completions/AJC-AJ-RT-20260722-004-001.yaml"
+  handoff_id: "handoff-0814"
+  schema_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_schema.md"
+  schema_sha256: "3a725ee94070137eb8d01f50a54f38cd898f5381aad45b10ddb5acbbf24a91b1"
+  builder_path: "research_control/tasks/RT-20260722-004/artifacts/build_blind_review_packet.py"
+  builder_sha256: "b51f39ed3f8fb90b844c19dc4b8694bf798ec9d9b39e5d550c5994d8c1fb9dc1"
+  validator_path: "research_control/tasks/RT-20260722-004/artifacts/validate_blind_review_packet.py"
+  validator_sha256: "e8e8af175734f0f30bf8bc6a96fd547854fe24fa16eb09eef65b866a245854ff"
+  reviewer_instructions_path: "research_control/tasks/RT-20260722-004/artifacts/reviewer_instructions.md"
+  reviewer_instructions_sha256: "9969f834aa08caeed85592c8bd99d6b9d02c6c2cffa41b14873777299a67aead"
+  packet_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_fixture.json"
+  packet_sha256: "1af24289381cd26ee9acb4fbc74155307e04e621a2873e1ebc5defa5a03bd187"
+  context_manifest_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_context_manifest_fixture.json"
+  context_manifest_sha256: "e170a498ba38a6ed13b5c9029298e10ff22352821bdbf991bec9c66b635493eb"
+  validation_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_validation.json"
+  validation_sha256: "1e9454a315fad8e1e7806a9d3bb77dcda91ec79cf257de45ebfeb700e4d3b942"
+  compact_receipt_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_compact_receipt.json"
+  compact_receipt_sha256: "7e577bd8758633963fb198a983793c89f2673105402987e9a577a86fb3f3ad24"
+  source_binding_count: 1
+  assumption_count: 3
+  scientific_material_count: 4
+  claim_boundary_count: 2
+  withheld_process_field_count: 8
+  internal_check_count: 15
+  failed_check_count: 0
+  leak_finding_count: 0
+  focused_test_count: 11
+  focused_test_failure_count: 0
+  deterministic_rebuild_passed: true
+  source_hashes_preserved: true
+  source_excerpts_preserved: true
+  review_metadata_separate: true
+  reviewer_independence_claimed: false
+  review_executed: false
+  source_artifacts_mutated: false
+  p11_t01_completed: true
+  p11_t02_dependency_ready: true
+  p11_t02_selected: true
+  p11_t02_executed: false
+  p11_t04_dependency_ready: false
+  p11_t04_blocked_by:
+    - "P11-T02"
+  selected_next_work_item: "P11-T02"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_reason: "P11-T02 depends exactly on the qualifying P11-T01 completion and owns calibrated reviewer-independence and model-diversity labels before the P11-T04 adversarial suite."
+  p10_broader_rollout_frozen: true
+  p10_blocker_ids:
+    - "P10-AUDIT-F001"
+    - "P10-AUDIT-F002"
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
 
 p10_t09_migration_readiness_audit:
   task_id: "RT-20260722-003"

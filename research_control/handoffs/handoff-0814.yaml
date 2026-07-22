@@ -1,0 +1,222 @@
+validation_status: "PASS"
+handoff_id: "handoff-0814"
+task_id: "RT-20260722-004"
+job_id: "AJ-RT-20260722-004-001"
+completion_id: "AJC-AJ-RT-20260722-004-001"
+completion_path: "research_control/tasks/RT-20260722-004/jobs/completions/AJC-AJ-RT-20260722-004-001.yaml"
+completion_sha256: "c0a9811467d9591a9c9eb8afcac6b37b5b9c57ab962de06c7bf1e9d8324d3b85"
+status: "ready_for_director"
+created_at: "2026-07-22T09:35:03Z"
+parent_handoff_id: "handoff-0813"
+plan_task_id: "P11-T01"
+source_role_id: "project-control-maintainer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-004"
+handoff_summary: "P11-T01 completed a deterministic task-local blind-review protocol. The fixture preserves three assumptions four exact excerpts one full source hash and two claim boundaries while keeping eight process fields outside the packet. Fifteen checks and eleven tests pass with zero leak findings; no review independence science or protected authority is claimed."
+next_action: "Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Require explicit unknown when evidence is absent and do not infer independence from role names packet redaction validator status or internal model separation."
+current_claim_boundary: "CB-V21-P11-T01-BLIND-REVIEW-CONTEXT-SEPARATION-001"
+loop_risk_route: "v21_p11_t02_reviewer_independence_model_diversity_classifications"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260722-004"
+  latest_research_handoff_id: "handoff-0814"
+  latest_research_next_action: "Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Require explicit unknown when evidence is absent and do not infer independence from role names packet redaction validator status or internal model separation."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One fresh P11-T02 project-system packet may define calibrated reviewer-independence and model-diversity classifications without executing a review or claiming independence from P11-T01 evidence."
+  newly_completed_plan_task: "P11-T01"
+  p11_t01_completion_path: "research_control/tasks/RT-20260722-004/jobs/completions/AJC-AJ-RT-20260722-004-001.yaml"
+  p11_t01_completed: true
+  protocol_status: "PASS_REPRODUCIBLE_CONTEXT_SEPARATION"
+  source_binding_count: 1
+  assumption_count: 3
+  scientific_material_count: 4
+  claim_boundary_count: 2
+  withheld_process_field_count: 8
+  internal_check_count: 15
+  failed_check_count: 0
+  leak_finding_count: 0
+  focused_test_count: 11
+  deterministic_rebuild_passed: true
+  source_hashes_preserved: true
+  source_excerpts_preserved: true
+  review_metadata_separate: true
+  reviewer_independence_claimed: false
+  review_executed: false
+  source_artifacts_mutated: false
+  p11_t02_dependency_ready: true
+  p11_t02_selected_next: true
+  p11_t02_executed: false
+  p11_t04_dependency_ready: false
+  p11_t04_blocked_by:
+    - "P11-T02"
+  p10_broader_rollout_frozen: true
+  p10_blocker_ids:
+    - "P10-AUDIT-F001"
+    - "P10-AUDIT-F002"
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  scientific_ledger_change_count: 0
+  physics_promotion_authorized: false
+  proof_authority: false
+  blocked_claims:
+    - "packet redaction treated as reviewer independence model diversity or external replication"
+    - "validator or test PASS treated as theorem proof scientific correctness or promotion"
+    - "source hash treated as endorsement or reviewer context"
+    - "P11-T02 P11-T04 P10 repair or P4-T05 executed inside P11-T01"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"
+
+blind_review_protocol_result:
+  schema_id: "v21_blind_review_packet_v1"
+  status: "PASS_REPRODUCIBLE_CONTEXT_SEPARATION"
+  schema_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_schema.md"
+  schema_sha256: "3a725ee94070137eb8d01f50a54f38cd898f5381aad45b10ddb5acbbf24a91b1"
+  builder_path: "research_control/tasks/RT-20260722-004/artifacts/build_blind_review_packet.py"
+  builder_sha256: "b51f39ed3f8fb90b844c19dc4b8694bf798ec9d9b39e5d550c5994d8c1fb9dc1"
+  validator_path: "research_control/tasks/RT-20260722-004/artifacts/validate_blind_review_packet.py"
+  validator_sha256: "e8e8af175734f0f30bf8bc6a96fd547854fe24fa16eb09eef65b866a245854ff"
+  reviewer_instructions_path: "research_control/tasks/RT-20260722-004/artifacts/reviewer_instructions.md"
+  reviewer_instructions_sha256: "9969f834aa08caeed85592c8bd99d6b9d02c6c2cffa41b14873777299a67aead"
+  packet_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_fixture.json"
+  packet_sha256: "1af24289381cd26ee9acb4fbc74155307e04e621a2873e1ebc5defa5a03bd187"
+  context_manifest_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_context_manifest_fixture.json"
+  context_manifest_sha256: "e170a498ba38a6ed13b5c9029298e10ff22352821bdbf991bec9c66b635493eb"
+  validation_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_validation.json"
+  validation_sha256: "1e9454a315fad8e1e7806a9d3bb77dcda91ec79cf257de45ebfeb700e4d3b942"
+  compact_receipt_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_compact_receipt.json"
+  compact_receipt_sha256: "7e577bd8758633963fb198a983793c89f2673105402987e9a577a86fb3f3ad24"
+  authority_boundary: "Project-system context-separation evidence only; source science registered authority protected human gates and later independence classification remain unchanged."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Reduce correlated confirmation and workflow-authority bias."
+  explanation: "P11-T01 adds review-context controls only and supplies no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr:
+  milestone: "none"
+  burden_id: "none"
+  status: "unchanged_project_system_protocol_only"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "No scientific object source law ontology regime metric matter semantics coupling Einstein dynamics or benchmark status changed."
+  downstream_unlocked:
+    - "P11-T02 reviewer independence and model-diversity classifications under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P11-T04 until P11-T02 completes"
+    - "broader P10 data-model rollout until P10-AUDIT-F001 and P10-AUDIT-F002 are repaired"
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+required_next_packet:
+  task_type: "v21_reviewer_independence_model_diversity_classifications"
+  task_taxonomy:
+    schema_id: "v21_task_taxonomy_v1"
+    work_kind: "audit_or_review"
+    milestone: "source_equivalence_eqsrc"
+    candidate_family: "not_applicable"
+    result_kind: "implemented_and_validated_or_precisely_blocked"
+    authority: "project_control"
+    scope: "project_system"
+
+selected_next_route:
+  route_id: "v21_p11_t02_reviewer_independence_model_diversity_classifications"
+  route_label: "ordinary-research-packet"
+  role_family: "project-control-maintainer@0.2.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P11-T02"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Prevent internal role diversity from being mislabeled as epistemic independence."
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  project_system_boundary_authorized_by_plan: true
+  physics_promotion_authorized: false
+  dependency_ready: true
+  executed: false
+  next_action: "Define normalized same-context blind same-model different-model human-expert and independent-replication classifications with explicit unknown states and calibrated claim language."
+  source_handoff: "research_control/handoffs/handoff-0814.yaml"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 45 was validated claimed consumed once and executed under its immutable continue-research route."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The protocol passes fifteen checks and eleven focused tests with zero leak findings while preserving all three fixture assumptions."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused tests documentation impact project-improvement claim-language research-control memory and diff gates are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier compact-frontier and memory derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and read-only validation are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+authorization_layers:
+  reviewer_independence_classification_authorized: false
+  review_execution_authorized: false
+  p10_repair_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P11-T01 is the direct planned project-system packet and completed without incidental reliability findings that require a separate sidecar."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "Director consideration of one bounded P11-T02 reviewer-independence and model-diversity classification packet after the P11-T01 governed checkpoint succeeds."
+  this_handoff_does_not_authorize:
+    - "review execution reviewer commitment or external outreach"
+    - "an independence label inferred from role names blind packet formatting source hashes validator PASS or internal model separation"
+    - "P11-T04 semantic-smuggling suite before P11-T02 completion"
+    - "P10-AUDIT-F001 or P10-AUDIT-F002 repair"
+    - "P4-T05 ontology-regime selection or Gate Chair verdict"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"

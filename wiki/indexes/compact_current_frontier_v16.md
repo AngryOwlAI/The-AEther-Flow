@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-003`
-- Latest handoff: `handoff-0813`
-- Current status: `p10_t09_migration_readiness_audit_complete_broader_rollout_frozen_p11_t01_selected`
+- Active task: `RT-20260722-004`
+- Latest handoff: `handoff-0814`
+- Current status: `p11_t01_blind_review_protocol_complete_p11_t02_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-003`
-- Latest research handoff: `handoff-0813`
-- Latest research next action: Run exactly one bounded P11-T01 project-control-maintainer project-system AgentJob to define a reproducible blind-review and context-separation protocol that strips task verdict, route history, validator status, and internal confidence while preserving assumptions and source hashes. Do not claim reviewer independence, repair the frozen P10 blockers, cut over authority, or execute protected P4-T05.
+- Latest research task: `RT-20260722-004`
+- Latest research handoff: `handoff-0814`
+- Latest research next action: Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Require explicit unknown when evidence is absent and do not infer independence from role names packet redaction validator status or internal model separation.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p11_t01_blind_review_context_separation_protocol`
+- Route ID: `v21_p11_t02_reviewer_independence_model_diversity_classifications`
 - Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Reduce correlated confirmation and workflow-authority bias.
+- Milestone burden: Prevent internal role diversity from being mislabeled as epistemic independence.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `a8ae39a4eaaa2e35d8de8888b443fb35046c670d396540aa6f2ebdf6ece030f6`
-- JSON SHA-256: `d93bbf969b575cf3cdca2bab2793c234f90af0a8f33f3330e1f5bfd2643d44e1`
+- YAML SHA-256: `37aab296a93c737c0903f5a221a1bd780f5feb35a1a8256799f3796a8bcc446a`
+- JSON SHA-256: `6638fe0b8715000c165abe79308b79881c4d4f2e7b3b6fc04fcec9a738d8f2ed`
 
 ## Authority Warning
 

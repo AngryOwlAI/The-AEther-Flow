@@ -1,0 +1,96 @@
+{
+  "schema_id": "v21_blind_review_source_manifest_v1",
+  "packet_id": "BLIND-SELECTOR-KERNEL-FIXTURE-001",
+  "review_target": {
+    "scientific_scope": "Finite-group action conditions for existence, uniqueness, and nonexistence of invariant selectors.",
+    "title": "Finite-group invariant-selector kernel"
+  },
+  "sources": [
+    {
+      "blind_source_id": "EQSRC-SELECTOR-KERNEL-LEAN-V1",
+      "path": "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean",
+      "sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+    }
+  ],
+  "assumption_register": [
+    {
+      "assumption_id": "A-GROUP-DATA-001",
+      "statement": "The declared operations satisfy the group laws listed in GroupData."
+    },
+    {
+      "assumption_id": "A-LEFT-ACTION-001",
+      "statement": "The declared action satisfies identity and multiplication compatibility."
+    },
+    {
+      "assumption_id": "A-TRANSITIVE-DISTINCT-001",
+      "statement": "For the nonexistence result, the action is transitive and the eligible-choice type contains two distinct choices."
+    }
+  ],
+  "scientific_material": [
+    {
+      "assumption_ids": [
+        "A-GROUP-DATA-001",
+        "A-LEFT-ACTION-001"
+      ],
+      "content": "/-- An eligible choice is fixed when every declared structural action fixes it. -/\ndef Fixed {G : Type u} {D : Type v} {group : GroupData G}\n    (action : Action G D group) (x : D) : Prop :=\n  ∀ g, action.act g x = x\n\n/-- In the one-object groupoid core, an invariant selector is exactly a fixed choice. -/\ndef InvariantSelector {G : Type u} {D : Type v} {group : GroupData G}\n    (action : Action G D group) : Type v :=\n  {x : D // Fixed action x}\n\n/-- The declared action is transitive when any eligible choice can reach any other. -/\ndef Transitive {G : Type u} {D : Type v} {group : GroupData G}\n    (action : Action G D group) : Prop :=\n  ∀ x y, ∃ g, action.act g x = y",
+      "kind": "definitions",
+      "material_id": "MAT-DEFINITIONS-001",
+      "provenance_kind": "source_excerpt",
+      "source_id": "EQSRC-SELECTOR-KERNEL-LEAN-V1"
+    },
+    {
+      "assumption_ids": [
+        "A-GROUP-DATA-001",
+        "A-LEFT-ACTION-001"
+      ],
+      "content": "/-- Empty fixed locus is equivalent to absence of an invariant selector. -/\ntheorem empty_fixed_iff_no_invariant_selector\n    {G : Type u} {D : Type v} {group : GroupData G}\n    (action : Action G D group) :\n    (¬ ∃ x, Fixed action x) ↔ ¬ Nonempty (InvariantSelector action) := by\n  constructor\n  · intro hFixed hSelector\n    rcases hSelector with ⟨selector⟩\n    exact hFixed ⟨selector.1, selector.2⟩\n  · intro hSelector hFixed\n    rcases hFixed with ⟨x, hx⟩\n    exact hSelector ⟨⟨x, hx⟩⟩",
+      "kind": "theorem_and_proof",
+      "material_id": "MAT-EMPTY-FIXED-001",
+      "provenance_kind": "source_excerpt",
+      "source_id": "EQSRC-SELECTOR-KERNEL-LEAN-V1"
+    },
+    {
+      "assumption_ids": [
+        "A-GROUP-DATA-001",
+        "A-LEFT-ACTION-001",
+        "A-TRANSITIVE-DISTINCT-001"
+      ],
+      "content": "/-- A transitive action on a type with two distinct choices has no invariant selector. -/\ntheorem no_invariant_selector_of_transitive_distinct\n    {G : Type u} {D : Type v} {group : GroupData G}\n    {action : Action G D group}\n    (hTransitive : Transitive action) {a b : D} (hDistinct : a ≠ b) :\n    ¬ Nonempty (InvariantSelector action) := by\n  intro hSelector\n  rcases hSelector with ⟨selector⟩\n  have ha : a = selector.1 :=\n    fixed_choice_unique_of_transitive hTransitive selector.2 a\n  have hb : b = selector.1 :=\n    fixed_choice_unique_of_transitive hTransitive selector.2 b\n  exact hDistinct (ha.trans hb.symm)",
+      "kind": "theorem_and_proof",
+      "material_id": "MAT-TRANSITIVE-NO-SELECTOR-001",
+      "provenance_kind": "source_excerpt",
+      "source_id": "EQSRC-SELECTOR-KERNEL-LEAN-V1"
+    },
+    {
+      "assumption_ids": [
+        "A-GROUP-DATA-001",
+        "A-LEFT-ACTION-001"
+      ],
+      "content": "/-- Two distinct fixed choices produce two distinct invariant selectors. -/\ntheorem multiple_fixed_gives_multiple_selectors\n    {G : Type u} {D : Type v} {group : GroupData G}\n    {action : Action G D group}\n    {x y : D} (hx : Fixed action x) (hy : Fixed action y) (hDistinct : x ≠ y) :\n    ∃ sx sy : InvariantSelector action, sx ≠ sy := by\n  refine ⟨⟨x, hx⟩, ⟨y, hy⟩, ?_⟩\n  intro hEqual\n  exact hDistinct (congrArg Subtype.val hEqual)",
+      "kind": "positive_control",
+      "material_id": "MAT-MULTIPLE-FIXED-001",
+      "provenance_kind": "source_excerpt",
+      "source_id": "EQSRC-SELECTOR-KERNEL-LEAN-V1"
+    }
+  ],
+  "claim_boundary": [
+    {
+      "boundary_id": "BOUNDARY-CONDITIONAL-FINITE-001",
+      "statement": "The supplied results are conditional finite-group statements and do not establish that a physical ontology supplies the declared group, action, eligible choices, or selector."
+    },
+    {
+      "boundary_id": "BOUNDARY-NO-PHYSICS-PROMOTION-001",
+      "statement": "A structural action is not thereby a physical gauge action, and this packet does not establish general EqSrc, downstream physics, publication, benchmark promotion, or a completed derivation."
+    }
+  ],
+  "process_metadata": {
+    "task_id": "RT-20260722-004",
+    "job_id": "AJ-RT-20260722-004-001",
+    "plan_task_id": "P11-T01",
+    "route_history": "dependency_ready_in_scope",
+    "validator_status": "PASS",
+    "task_verdict": "completed",
+    "internal_confidence": "high",
+    "handoff_id": "handoff-0814"
+  }
+}

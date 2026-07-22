@@ -1,0 +1,41 @@
+{
+  "artifact_hashes": {
+    "packet_builder": "b51f39ed3f8fb90b844c19dc4b8694bf798ec9d9b39e5d550c5994d8c1fb9dc1",
+    "redaction_validator": "e8e8af175734f0f30bf8bc6a96fd547854fe24fa16eb09eef65b866a245854ff",
+    "reviewer_instructions": "9969f834aa08caeed85592c8bd99d6b9d02c6c2cffa41b14873777299a67aead",
+    "schema": "3a725ee94070137eb8d01f50a54f38cd898f5381aad45b10ddb5acbbf24a91b1",
+    "source_manifest": "5611934fe83d1bb6ac04902935fffb3b13654bdd7f92b9ad9ff7482b66e9b200"
+  },
+  "assumption_count": 3,
+  "check_count": 15,
+  "claim_boundary_summary": "Reproducible context separation only; no reviewer-independence, proof, ontology, physics, publication, benchmark, or completed-derivation authority.",
+  "context_sha256": "e170a498ba38a6ed13b5c9029298e10ff22352821bdbf991bec9c66b635493eb",
+  "failed_check_count": 0,
+  "leak_finding_count": 0,
+  "material_count": 4,
+  "packet_sha256": "1af24289381cd26ee9acb4fbc74155307e04e621a2873e1ebc5defa5a03bd187",
+  "physics_promotion_authorized": false,
+  "plan_task_id": "P11-T01",
+  "proof_authority": false,
+  "recommendation_ids": [
+    "V21-R36",
+    "V21-R38",
+    "V21-R51"
+  ],
+  "reviewer_independence_claimed": false,
+  "schema_id": "v21_blind_review_compact_receipt_v1",
+  "source_hashes": {
+    "EQSRC-SELECTOR-KERNEL-LEAN-V1": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+  },
+  "status": "PASS",
+  "validator_ids": [
+    "source_manifest_rebuild",
+    "packet_canonical_rebuild",
+    "context_canonical_rebuild",
+    "forbidden_key_scan",
+    "forbidden_value_scan",
+    "assumption_register_exact",
+    "packet_context_path_separation",
+    "no_independence_claim"
+  ]
+}

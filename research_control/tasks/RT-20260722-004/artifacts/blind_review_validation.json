@@ -1,0 +1,95 @@
+{
+  "assumption_count": 3,
+  "check_count": 15,
+  "checks": [
+    {
+      "check_id": "source_manifest_rebuild",
+      "detail": "source hashes and excerpts verified",
+      "status": "PASS"
+    },
+    {
+      "check_id": "packet_canonical_rebuild",
+      "detail": "packet equals deterministic rebuild",
+      "status": "PASS"
+    },
+    {
+      "check_id": "context_canonical_rebuild",
+      "detail": "context equals deterministic rebuild",
+      "status": "PASS"
+    },
+    {
+      "check_id": "forbidden_key_scan",
+      "detail": "recursive key scan",
+      "status": "PASS"
+    },
+    {
+      "check_id": "forbidden_value_scan",
+      "detail": "recursive value scan",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumption_register_exact",
+      "detail": "all and only source assumptions retained",
+      "status": "PASS"
+    },
+    {
+      "check_id": "assumptions_referenced",
+      "detail": "every assumption is attached to material",
+      "status": "PASS"
+    },
+    {
+      "check_id": "context_packet_hash",
+      "detail": "context binds exact packet bytes",
+      "status": "PASS"
+    },
+    {
+      "check_id": "packet_context_path_separation",
+      "detail": "packet and context paths differ",
+      "status": "PASS"
+    },
+    {
+      "check_id": "context_separation_flag",
+      "detail": "separation declared",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_independence_claim",
+      "detail": "independence remains unclassified",
+      "status": "PASS"
+    },
+    {
+      "check_id": "withheld_field_names_exact",
+      "detail": "withheld process fields recorded by name",
+      "status": "PASS"
+    },
+    {
+      "check_id": "withheld_metadata_hash",
+      "detail": "withheld metadata bound without exposing values",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_paths_withheld",
+      "detail": "repository paths absent from blind packet",
+      "status": "PASS"
+    },
+    {
+      "check_id": "claim_boundary_exact",
+      "detail": "claim boundaries retained",
+      "status": "PASS"
+    }
+  ],
+  "context_sha256": "e170a498ba38a6ed13b5c9029298e10ff22352821bdbf991bec9c66b635493eb",
+  "failed_check_count": 0,
+  "findings": [],
+  "leak_finding_count": 0,
+  "material_count": 4,
+  "packet_sha256": "1af24289381cd26ee9acb4fbc74155307e04e621a2873e1ebc5defa5a03bd187",
+  "physics_promotion_authorized": false,
+  "proof_authority": false,
+  "reviewer_independence_claimed": false,
+  "schema_id": "v21_blind_review_validation_v1",
+  "source_hashes": {
+    "EQSRC-SELECTOR-KERNEL-LEAN-V1": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+  },
+  "status": "PASS"
+}

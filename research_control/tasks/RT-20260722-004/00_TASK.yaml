@@ -1,0 +1,73 @@
+validation_status: "PASS"
+task_id: "RT-20260722-004"
+task_type: "v21_blind_review_context_separation_protocol"
+title: "Define the blind-review and context-separation protocol"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "audit_or_review"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "not_applicable"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-07-22T09:28:17Z"
+updated_at: "2026-07-22T09:35:03Z"
+closed_at: "2026-07-22T09:35:03Z"
+parent_task_id: "RT-20260722-003"
+parent_handoff_id: "handoff-0813"
+current_decision_id: "DDR-20260722-004"
+current_job_id: "AJ-RT-20260722-004-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-004"
+requires_human_gate: false
+human_authorization_note: "Generation 45 of the immutable user-requested v21 relay and handoff-0813 authorize exactly one bounded dependency-ready P11-T01 project-system packet."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P11"
+  plan_task_id: "P11-T01"
+  plan_task_name: "Define the blind-review and context-separation protocol"
+  recommendation_ids:
+    - "V21-R36"
+    - "V21-R38"
+    - "V21-R51"
+objective: "Define and validate a reproducible context-separation protocol that preserves scientific assumptions source hashes and exact excerpts while removing workflow verdict route validator and internal-confidence metadata from blind reviewer packets."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Reduce correlated confirmation and workflow-authority bias."
+route_label: "ordinary-research-packet"
+project_system_change_only: true
+project_system_boundary_authorized_by_plan: true
+claim_boundary_id: "CB-V21-P11-T01-BLIND-REVIEW-CONTEXT-SEPARATION-001"
+claim_boundary:
+  allowed_scope: "Implement only task-local P11-T01 schema builder redaction validator reviewer instructions fixtures tests control records and required generated derivatives."
+  dependency_task_ids:
+    - "RT-20260720-008"
+    - "RT-20260721-003"
+  current_handoff: "handoff-0813"
+  source_artifact_mutation_authorized: false
+  review_execution_authorized: false
+  reviewer_independence_claim_authorized: false
+  p10_repair_authorized: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_schema.md"
+  - "research_control/tasks/RT-20260722-004/artifacts/build_blind_review_packet.py"
+  - "research_control/tasks/RT-20260722-004/artifacts/validate_blind_review_packet.py"
+  - "research_control/tasks/RT-20260722-004/artifacts/reviewer_instructions.md"
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_source_fixture.json"
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_fixture.json"
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_context_manifest_fixture.json"
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_validation.json"
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_compact_receipt.json"
+closure_status: "p11_t01_blind_review_protocol_complete_p11_t02_selected"
+summary: "P11-T01 completed a deterministic task-local blind-packet protocol with exact source and assumption retention fifteen passing checks eleven passing tests zero leak findings and no reviewer-independence or scientific-authority claim."
+next_recommended_action: "Run exactly one bounded P11-T02 project-control-maintainer project-system AgentJob to define reviewer-independence and model-diversity classifications. Preserve explicit unknown states and do not infer independence from role names packet redaction or validation success."
+documentation_impact_id: "DI-RT-20260722-004-001"
+completion_id: "AJC-AJ-RT-20260722-004-001"
+project_improvement_signals: []
+notes: "Completed and expired after P11-T01 artifacts validation and P11-T02 selection; no review was executed and no P10 repair protected gate or science source was changed."

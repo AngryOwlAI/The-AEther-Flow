@@ -1,0 +1,46 @@
+{
+  "blind_packet_sha256": "1af24289381cd26ee9acb4fbc74155307e04e621a2873e1ebc5defa5a03bd187",
+  "context_manifest_separate_from_packet": true,
+  "packet_id": "BLIND-SELECTOR-KERNEL-FIXTURE-001",
+  "reviewer_independence_claimed": false,
+  "reviewer_not_received": {
+    "process_metadata_field_names": [
+      "handoff_id",
+      "internal_confidence",
+      "job_id",
+      "plan_task_id",
+      "route_history",
+      "task_id",
+      "task_verdict",
+      "validator_status"
+    ],
+    "process_metadata_sha256": "bf2c2abf92156c4c3069f54acffe73654209274b9af811a1386a6e2b752715cb",
+    "source_paths_withheld": true
+  },
+  "reviewer_received": {
+    "assumption_ids": [
+      "A-GROUP-DATA-001",
+      "A-LEFT-ACTION-001",
+      "A-TRANSITIVE-DISTINCT-001"
+    ],
+    "claim_boundary_ids": [
+      "BOUNDARY-CONDITIONAL-FINITE-001",
+      "BOUNDARY-NO-PHYSICS-PROMOTION-001"
+    ],
+    "material_ids": [
+      "MAT-DEFINITIONS-001",
+      "MAT-EMPTY-FIXED-001",
+      "MAT-TRANSITIVE-NO-SELECTOR-001",
+      "MAT-MULTIPLE-FIXED-001"
+    ],
+    "scientific_material_sha256": "9460632a51e0b368e44b05c3719c6280e213d1ff65f246254a76e8f127abac8c",
+    "source_bindings": [
+      {
+        "blind_source_id": "EQSRC-SELECTOR-KERNEL-LEAN-V1",
+        "path": "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean",
+        "sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+      }
+    ]
+  },
+  "schema_id": "v21_blind_review_context_manifest_v1"
+}

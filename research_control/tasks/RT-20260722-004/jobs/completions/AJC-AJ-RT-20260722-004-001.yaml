@@ -1,0 +1,267 @@
+completion_id: "AJC-AJ-RT-20260722-004-001"
+job_id: "AJ-RT-20260722-004-001"
+task_id: "RT-20260722-004"
+decision_id: "DDR-20260722-004"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260722-004"
+status: "completed"
+completed_at: "2026-07-22T09:35:03Z"
+validation_status: "PASS"
+result_summary: "P11-T01 completed a deterministic blind-review packet and separate context-manifest protocol that preserves three assumptions four exact scientific excerpts one source hash and two claim boundaries while rejecting process leaks and making no reviewer-independence claim."
+plan_task_id: "P11-T01"
+recommendation_ids:
+  - "V21-R36"
+  - "V21-R38"
+  - "V21-R51"
+claim_boundary_id: "CB-V21-P11-T01-BLIND-REVIEW-CONTEXT-SEPARATION-001"
+artifacts:
+  schema_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_schema.md"
+  schema_sha256: "3a725ee94070137eb8d01f50a54f38cd898f5381aad45b10ddb5acbbf24a91b1"
+  reviewer_instructions_path: "research_control/tasks/RT-20260722-004/artifacts/reviewer_instructions.md"
+  reviewer_instructions_sha256: "9969f834aa08caeed85592c8bd99d6b9d02c6c2cffa41b14873777299a67aead"
+  source_manifest_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_source_fixture.json"
+  source_manifest_sha256: "5611934fe83d1bb6ac04902935fffb3b13654bdd7f92b9ad9ff7482b66e9b200"
+  builder_path: "research_control/tasks/RT-20260722-004/artifacts/build_blind_review_packet.py"
+  builder_sha256: "b51f39ed3f8fb90b844c19dc4b8694bf798ec9d9b39e5d550c5994d8c1fb9dc1"
+  validator_path: "research_control/tasks/RT-20260722-004/artifacts/validate_blind_review_packet.py"
+  validator_sha256: "e8e8af175734f0f30bf8bc6a96fd547854fe24fa16eb09eef65b866a245854ff"
+  packet_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_fixture.json"
+  packet_sha256: "1af24289381cd26ee9acb4fbc74155307e04e621a2873e1ebc5defa5a03bd187"
+  context_manifest_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_context_manifest_fixture.json"
+  context_manifest_sha256: "e170a498ba38a6ed13b5c9029298e10ff22352821bdbf991bec9c66b635493eb"
+  validation_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_validation.json"
+  validation_sha256: "1e9454a315fad8e1e7806a9d3bb77dcda91ec79cf257de45ebfeb700e4d3b942"
+  compact_receipt_path: "research_control/tasks/RT-20260722-004/artifacts/blind_review_compact_receipt.json"
+  compact_receipt_sha256: "7e577bd8758633963fb198a983793c89f2673105402987e9a577a86fb3f3ad24"
+  test_path: "tests/test_v21_blind_review_protocol.py"
+  test_sha256: "cb61e90f64f8a03aecf629c0cfff978ecf4eaca474a4d684fa35ec1078f2c622"
+  source_binding_count: 1
+  assumption_count: 3
+  scientific_material_count: 4
+  claim_boundary_count: 2
+  withheld_process_field_count: 8
+  internal_check_count: 15
+  failed_check_count: 0
+  leak_finding_count: 0
+  focused_test_count: 11
+  focused_test_failure_count: 0
+  deterministic_rebuild_passed: true
+  source_excerpt_exactness_passed: true
+  packet_context_separate: true
+  reviewer_independence_claimed: false
+  review_executed: false
+  source_artifacts_mutated: false
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "P11-T01 transports three declared assumptions into a blind fixture but adopts or changes no scientific assumption."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked: []
+  theorem_ids_created: []
+  theorem_source_referenced:
+    - "EQSRC-SELECTOR-KERNEL-LEAN-V1"
+  identity_note: "The fixture references an unchanged prior finite-group selector kernel through a blind alias and full source hash; it creates no scientific identity."
+
+mathematical_payload_manifest: []
+new_mathematical_payload: []
+
+outputs_created:
+  - "research_control/tasks/RT-20260722-004/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-004/DDR-20260722-004.md"
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_schema.md"
+  - "research_control/tasks/RT-20260722-004/artifacts/reviewer_instructions.md"
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_source_fixture.json"
+  - "research_control/tasks/RT-20260722-004/artifacts/build_blind_review_packet.py"
+  - "research_control/tasks/RT-20260722-004/artifacts/validate_blind_review_packet.py"
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_packet_fixture.json"
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_context_manifest_fixture.json"
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_validation.json"
+  - "research_control/tasks/RT-20260722-004/artifacts/blind_review_compact_receipt.json"
+  - "tests/test_v21_blind_review_protocol.py"
+  - "research_control/tasks/RT-20260722-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260722-004/jobs/AJ-RT-20260722-004-001.yaml"
+  - "research_control/tasks/RT-20260722-004/jobs/completions/AJC-AJ-RT-20260722-004-001.yaml"
+  - "research_control/tasks/RT-20260722-004/roles/project-control-maintainer@0.2.0--RT-20260722-004.yaml"
+  - "research_control/handoffs/handoff-0814.yaml"
+  - "research_control/handoffs/handoff-0814.md"
+outputs_updated:
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/compact_current_frontier_v16.json"
+  - "output/compact_current_frontier_v16.yaml"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+physics_progress_status:
+  status: "documentation_or_control_only_no_physics_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Reduce correlated confirmation and workflow-authority bias."
+  explanation: "P11-T01 supplies project-system review-context tooling only and adds no mathematical or physics payload."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  rationale: "Review-context separation does not discharge or worsen any physics burden."
+  downstream_unlocked:
+    - "P11-T02 reviewer independence and model-diversity classifications under a fresh bounded project-system AgentJob"
+  downstream_still_blocked:
+    - "P11-T04 until P11-T02 also completes"
+    - "broader P10 data-model rollout until P10-AUDIT-F001 and P10-AUDIT-F002 are repaired"
+    - "P4-T05 protected ontology-regime decision"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  proof_authority: false
+  publication_authority: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 45 route identity lease parity max effort repository binding clean start predecessor inactivity and single consumption were verified before work."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The deterministic fixture passes fifteen internal checks with zero failures and zero leak findings."
+      - "Eleven focused tests cover deterministic rebuild source drift excerpt drift key leaks value leaks assumption loss context co-location and false independence."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Task-local check affected-plan documentation-impact project-improvement claim-language research-control and diff validations are required to pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier compact-frontier and policy-generated derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+forbidden_conclusion_summary:
+  forbidden_conclusions:
+    - "packet redaction treated as reviewer independence or model diversity"
+    - "validator or test PASS treated as theorem proof or scientific correctness"
+    - "source hash treated as scientific endorsement"
+    - "context separation treated as external replication"
+    - "P11-T02 P11-T04 P10 repair or P4-T05 executed inside P11-T01"
+    - "canonical ontology source-law or scientific-ledger edit"
+    - "physics promotion benchmark promotion publication proof authority completed derivation or global no-go"
+  source_artifacts_mutated: false
+  review_executed: false
+  reviewer_independence_claimed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260722-004/artifacts/build_blind_review_packet.py --json | exit_code=0 | status=PASS packet_sha256=1af24289381cd26ee9acb4fbc74155307e04e621a2873e1ebc5defa5a03bd187 context_sha256=e170a498ba38a6ed13b5c9029298e10ff22352821bdbf991bec9c66b635493eb"
+  - ".venv/bin/python research_control/tasks/RT-20260722-004/artifacts/validate_blind_review_packet.py --write --json | exit_code=0 | status=PASS checks=15 failures=0 leaks=0"
+  - ".venv/bin/python research_control/tasks/RT-20260722-004/artifacts/validate_blind_review_packet.py --check --json | exit_code=0 | status=PASS drift=0"
+  - ".venv/bin/python -m unittest -v tests.test_v21_blind_review_protocol | exit_code=0 | tests=11 failures=0"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260722-004 tests/test_v21_blind_review_protocol.py research_control/program_state.yaml research_control/handoffs/handoff-0814.yaml --explain | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write and --check plus validate_compact_current_frontier_v16.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write and --check | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json and resolve_project_improvement.py --json | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py | required before checkpoint"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | required before checkpoint"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | required before checkpoint"
+  - "git diff --check | required before checkpoint"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 974
+    relationship_row_count: 4825
+    semantic_row_count: 974
+    vault_row_count: 974
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search blind review context separation --limit 10 --json"
+      query_type: "search"
+      query_text: "blind review context separation"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "08cffa8fd6d9d97991b08aa2549d1c0db65ad3ea7117907f66bacfc1eaac46b4"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "5382153d97ed433853bab6d10c4cdf67f272ce19e1b3ff5a1a9bf8f6c12e297d"
+  authority_note: "Obsidian wiki notes semantic extracts SQLite memory and .local are retrieval layers only and not authority; canonical tracked sources and registry rows govern."
+
+project_improvement_signals: []
+notes: "Completed and expired after the bounded P11-T01 protocol with no review execution independence classification source mutation scientific delta or protected authority."
