@@ -1,0 +1,58 @@
+{
+  "blind_packet_sha256": "0fcf59d623b5de0e9778ba3f32219c4319b58097d2fc07c7903c3f8b2b3edfe9",
+  "context_manifest_separate_from_packet": true,
+  "packet_id": "V21-PILOT-SELECTOR-BLIND-V1",
+  "reviewer_independence_claimed": false,
+  "reviewer_not_received": {
+    "process_metadata_field_names": [
+      "internal_workflow_state",
+      "plan_task_id",
+      "prior_review_task_id",
+      "proof_evidence_task_id",
+      "selected_route",
+      "task_id"
+    ],
+    "process_metadata_sha256": "21fb95c88ea5a5548d3cfdc90904c28c1d9856cdef865bb5f3456a2687c051e4",
+    "source_paths_withheld": true
+  },
+  "reviewer_received": {
+    "assumption_ids": [
+      "SEL-A01",
+      "SEL-A02",
+      "SEL-A03",
+      "SEL-A04",
+      "SEL-A05",
+      "SEL-A06",
+      "SEL-A07",
+      "SEL-A08"
+    ],
+    "claim_boundary_ids": [
+      "SEL-B01",
+      "SEL-B02",
+      "SEL-B03"
+    ],
+    "material_ids": [
+      "SEL-M01",
+      "SEL-M02",
+      "SEL-M03A",
+      "SEL-M03",
+      "SEL-M04",
+      "SEL-M05A",
+      "SEL-M05"
+    ],
+    "scientific_material_sha256": "92dcedaaa9a05ec214670586808fb194ce11bb64271817f55a8dfe91fdd4c11d",
+    "source_bindings": [
+      {
+        "blind_source_id": "SRC-SEL-THEOREM",
+        "path": "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex",
+        "sha256": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+      },
+      {
+        "blind_source_id": "SRC-SEL-LEAN",
+        "path": "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean",
+        "sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+      }
+    ]
+  },
+  "schema_id": "v21_blind_review_context_manifest_v1"
+}

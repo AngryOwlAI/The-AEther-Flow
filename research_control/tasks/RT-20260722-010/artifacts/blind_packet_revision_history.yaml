@@ -1,0 +1,35 @@
+schema_id: "v21_p11_t07_blind_packet_revision_history_v1"
+task_id: "RT-20260722-010"
+packet_id: "V21-PILOT-SELECTOR-BLIND-V1"
+resolution_round_count: 1
+max_resolution_rounds: 2
+initial_packet_sha256: "9fcd2c3c41d595f42f856792b3c1384d9d4bcbee92d07fed80e85948b12ecd08"
+initial_finding:
+  finding_id: "P11-T07-PACKET-OMISSION-001"
+  classification: "packet_self_containment_defect"
+  summary: "The initial packet stated the relation-image theorem without defining K_* or R_i and exposed a final formal theorem without its local type and lemma dependencies."
+  theorem_defect_claimed: false
+  scientific_source_defect_claimed: false
+  initial_packet_level_countermodel: "A reviewer could assign R_i independently because the packet omitted its definition; this pressured the packet only."
+repair:
+  scope: "task_local_blind_packet_only"
+  added_exact_excerpts:
+    - "K_* and R_i definitions"
+    - "GroupData Action Fixed InvariantSelector and Transitive definitions"
+    - "empty-fixed and fixed-choice supporting lemmas"
+  reviewed_science_source_edited: false
+  context_metadata_added_to_blind_packet: false
+final_packet_sha256: "0fcf59d623b5de0e9778ba3f32219c4319b58097d2fc07c7903c3f8b2b3edfe9"
+final_context_manifest_sha256: "24211c1a64967190e60b7cc5d5c27620494f20fa53ca1a4228df80947aef3e30"
+final_validation:
+  deterministic_rebuild: "PASS"
+  leak_finding_count: 0
+  failed_check_count: 0
+final_review:
+  verdict: "no_blocking_defect_found_as_written"
+  initial_packet_level_countermodel_survived: false
+  reason: "The restored definition R_i=K_{r_i}(F_i) prevents the arbitrary reassignment used in the initial packet-level pressure case."
+disposition: "Preserve as direct evidence that context redaction alone does not guarantee scientific self-containment; route that control limitation to P11-T08."
+physics_promotion_authorized: false
+external_review_completed: false
+independent_replication_completed: false

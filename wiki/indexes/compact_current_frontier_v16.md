@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-009`
-- Latest handoff: `handoff-0819`
-- Current status: `p11_t03_proof_evidence_integration_complete_p11_t07_selected`
+- Active task: `RT-20260722-010`
+- Latest handoff: `handoff-0820`
+- Current status: `p11_t07_independent_review_pilot_complete_p11_t08_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-009`
-- Latest research handoff: `handoff-0819`
-- Latest research next action: Run exactly one bounded P11-T07 external-red-team-reviewer science AgentJob to pilot blind packets independence classification proof evidence semantic-smuggling checks positive-provenance gates and reviewer metrics on the selector theorem and one scoped metric or matter object without treating review as proof promotion or independent replication.
+- Latest research task: `RT-20260722-010`
+- Latest research handoff: `handoff-0820`
+- Latest research next action: Run exactly one bounded P11-T08 process-integrity-auditor project-system AgentJob to audit P11 scientific-QA non-regression, false external labels, leaked verdicts, checker-as-proof and consensus-as-proof paths, blind-packet self-containment, semantic-probe boundary false positives, historical compatibility, source-registry authority, and rollout safety without changing scientific status.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p11_t07_independent_review_pilot`
-- Role family: `external-red-team-reviewer@0.1.0`
+- Route ID: `v21_p11_t08_scientific_qa_non_regression_audit`
+- Role family: `process-integrity-auditor@0.1.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Validate the new scientific QA system on high-value claims.
+- Milestone burden: Close P11 with a safe rollout decision.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `822e386c2a4af33832c24f83425403a848ffcf531d4f7bd30ab7791fe54edcb4`
-- JSON SHA-256: `d5cb129f85cce9c52ed1311279356a20d1328f1a0e54a9e3cbfe81fc96042be4`
+- YAML SHA-256: `e740da40babd71b722e3b6cc19713d6e1387b3b27bb7d1b36beeae3d674ded83`
+- JSON SHA-256: `3ed94b95d71d39a8963ff93e11d0d0e518fe086ecf53f684a4c13706e2fab3fc`
 
 ## Authority Warning
 

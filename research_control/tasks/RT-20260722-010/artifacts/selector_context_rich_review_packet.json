@@ -1,0 +1,61 @@
+{
+  "schema_id": "v21_pilot_context_rich_review_packet_v1",
+  "packet_id": "V21-PILOT-SELECTOR-CONTEXT-V1",
+  "blind_packet": {
+    "path": "research_control/tasks/RT-20260722-010/artifacts/selector_blind_review_packet.json",
+    "sha256": "0fcf59d623b5de0e9778ba3f32219c4319b58097d2fc07c7903c3f8b2b3edfe9"
+  },
+  "review_target": {
+    "object_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1",
+    "claim_under_review": "The representative-evaluation product classification, conditional relation-image singleton criterion, and conditional full-category equalizer are correct on the declared deterministic total point-valued domain; no ontology or physical conclusion follows.",
+    "source_paths": [
+      "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex",
+      "research_control/tasks/RT-20260720-018/artifacts/proof/SelectorKernel.lean",
+      "research_control/tasks/RT-20260720-019/artifacts/eqsrc_selector_theorem_smuggling_audit_v1.tex",
+      "research_control/tasks/RT-20260720-020/artifacts/eqsrc_selector_theorem_refuter_stress_v1.tex"
+    ],
+    "source_hashes": {
+      "theorem": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae",
+      "lean_kernel": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356",
+      "smuggling_audit": "d093d7b0afbe322cf537644de54f17156ea2427fcc0988f4fc8fb305e93a0f76",
+      "refuter_stress": "d519bcc9534af3b2ca3e3d44604bd56bf72c425e0d06322c33cc7e66abfd2b49"
+    }
+  },
+  "prior_internal_evidence": {
+    "prior_blind_review_path": "research_control/tasks/RT-20260720-021/artifacts/eqsrc_selector_theorem_external_red_team_review_v1.yaml",
+    "prior_blind_review_effect": "Internal review evidence only; it does not settle the present pilot and must not be treated as proof.",
+    "proof_evidence_receipt_path": "research_control/tasks/RT-20260722-009/artifacts/proof_evidence_compact_receipt.json",
+    "proof_evidence_receipt_sha256": "dc1518be22a1628336e01362ebbc375379ee2ce536147da346af41f2c0cc78c0",
+    "proof_evidence_scope": "One axiom-free machine check is recorded for the encoded one-object kernel; translation fidelity and the remaining theorem clauses are not established by that receipt."
+  },
+  "qa_controls": {
+    "blind_packet_receipt_path": "research_control/tasks/RT-20260722-004/artifacts/blind_review_compact_receipt.json",
+    "independence_taxonomy_path": "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md",
+    "semantic_smuggling_receipt_path": "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_compact_receipt.json",
+    "positive_provenance_policy_path": "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md",
+    "review_metric_specification_path": "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_metric_specification.md"
+  },
+  "review_questions": [
+    "Are the classification inverse, choice qualification, relation-image converse, and strict-extension equalizer exactly typed?",
+    "Does the bounded formal kernel support only the one-object fragment it actually encodes?",
+    "Do prior audit or process receipts introduce circularity, hidden imports, or authority laundering when read as context rather than premises?",
+    "Can a countermodel retain every declared assumption, or does every pressure case require an explicit assumption delta?",
+    "Which findings require a theorem repair and which are only scope or notation clarifications?"
+  ],
+  "review_context_assignment": {
+    "classification": "same_context_role_review",
+    "reviewer_kind": "ai",
+    "prior_context_access": "same_context",
+    "external_review_completed": false,
+    "human_expert_review_completed": false,
+    "independent_replication_completed": false
+  },
+  "authority_boundary": {
+    "workflow_success_as_evidence": false,
+    "validator_success_as_evidence": false,
+    "proof_authority": false,
+    "physics_promotion_authorized": false,
+    "ontology_adoption_authorized": false,
+    "general_eqsrc_discharge_authorized": false
+  }
+}

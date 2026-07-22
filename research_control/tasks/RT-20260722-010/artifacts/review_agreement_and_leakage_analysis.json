@@ -1,0 +1,735 @@
+{
+  "authority_boundary": {
+    "consensus_sets_scientific_status": false,
+    "external_review_completed": false,
+    "human_expert_review_completed": false,
+    "independent_replication_completed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false
+  },
+  "blind_packet_revision": {
+    "disposition": "Preserve as direct evidence that context redaction alone does not guarantee scientific self-containment; route that control limitation to P11-T08.",
+    "external_review_completed": false,
+    "final_context_manifest_sha256": "24211c1a64967190e60b7cc5d5c27620494f20fa53ca1a4228df80947aef3e30",
+    "final_packet_sha256": "0fcf59d623b5de0e9778ba3f32219c4319b58097d2fc07c7903c3f8b2b3edfe9",
+    "final_review": {
+      "initial_packet_level_countermodel_survived": false,
+      "reason": "The restored definition R_i=K_{r_i}(F_i) prevents the arbitrary reassignment used in the initial packet-level pressure case.",
+      "verdict": "no_blocking_defect_found_as_written"
+    },
+    "final_validation": {
+      "deterministic_rebuild": "PASS",
+      "failed_check_count": "0",
+      "leak_finding_count": "0"
+    },
+    "independent_replication_completed": false,
+    "initial_finding": {
+      "classification": "packet_self_containment_defect",
+      "finding_id": "P11-T07-PACKET-OMISSION-001",
+      "initial_packet_level_countermodel": "A reviewer could assign R_i independently because the packet omitted its definition; this pressured the packet only.",
+      "scientific_source_defect_claimed": false,
+      "summary": "The initial packet stated the relation-image theorem without defining K_* or R_i and exposed a final formal theorem without its local type and lemma dependencies.",
+      "theorem_defect_claimed": false
+    },
+    "initial_packet_sha256": "9fcd2c3c41d595f42f856792b3c1384d9d4bcbee92d07fed80e85948b12ecd08",
+    "max_resolution_rounds": "2",
+    "packet_id": "V21-PILOT-SELECTOR-BLIND-V1",
+    "physics_promotion_authorized": false,
+    "repair": {
+      "added_exact_excerpts": [
+        "K_* and R_i definitions",
+        "GroupData Action Fixed InvariantSelector and Transitive definitions",
+        "empty-fixed and fixed-choice supporting lemmas"
+      ],
+      "context_metadata_added_to_blind_packet": false,
+      "reviewed_science_source_edited": false,
+      "scope": "task_local_blind_packet_only"
+    },
+    "resolution_round_count": "1",
+    "schema_id": "v21_p11_t07_blind_packet_revision_history_v1",
+    "task_id": "RT-20260722-010"
+  },
+  "blind_packet_validation": {
+    "geff": {
+      "assumption_count": 8,
+      "context_sha256": "ce4a030be0e03fa79703f514a9a4ac55fe572e8c3fb97366e77b60ed318b5d64",
+      "failed_check_count": 0,
+      "leak_finding_count": 0,
+      "material_count": 5,
+      "packet_sha256": "dc2ae06719690428d00b1d4e795156fe5d4fb796d52aee6f5c7a51998388317f",
+      "status": "PASS"
+    },
+    "selector": {
+      "assumption_count": 8,
+      "context_sha256": "24211c1a64967190e60b7cc5d5c27620494f20fa53ca1a4228df80947aef3e30",
+      "failed_check_count": 0,
+      "leak_finding_count": 0,
+      "material_count": 7,
+      "packet_sha256": "0fcf59d623b5de0e9778ba3f32219c4319b58097d2fc07c7903c3f8b2b3edfe9",
+      "status": "PASS"
+    }
+  },
+  "finding_disposition": {
+    "disposition_ids": [
+      "GEFF-BLIND-OPID-001",
+      "GEFF-BLIND-PHYSICS-001",
+      "GEFF-BLIND-TYPES-001",
+      "GEFF-BLIND-TYPING-001",
+      "GEFF-CONTEXT-OPID-001",
+      "GEFF-CONTEXT-PHYSICS-001",
+      "GEFF-CONTEXT-SCOPE-001",
+      "GEFF-CONTEXT-TYPING-001",
+      "SEL-BLIND-NOTATION-001",
+      "SEL-CONTEXT-NOTATION-001",
+      "SEL-CONTEXT-OPERATIONAL-001"
+    ],
+    "finding_ids": [
+      "GEFF-BLIND-OPID-001",
+      "GEFF-BLIND-PHYSICS-001",
+      "GEFF-BLIND-TYPES-001",
+      "GEFF-BLIND-TYPING-001",
+      "GEFF-CONTEXT-OPID-001",
+      "GEFF-CONTEXT-PHYSICS-001",
+      "GEFF-CONTEXT-SCOPE-001",
+      "GEFF-CONTEXT-TYPING-001",
+      "SEL-BLIND-NOTATION-001",
+      "SEL-CONTEXT-NOTATION-001",
+      "SEL-CONTEXT-OPERATIONAL-001"
+    ],
+    "undisposed_finding_ids": []
+  },
+  "parent_synthesis": {
+    "blocking_scientific_conflict_count": 0,
+    "child_execution_units": [
+      "child_phys_math",
+      "child_phys_phil"
+    ],
+    "false_consensus_risk_count": 7,
+    "mode": "parent_child_parallel_synthesis",
+    "preserved_metric_disagreement_count": 3,
+    "resolution_round_count": 1
+  },
+  "plan_task_id": "P11-T07",
+  "review_context_classification_counts": {
+    "blind_same_model_review": 2,
+    "same_context_role_review": 2
+  },
+  "review_record_count": 4,
+  "reviewed_object_count": 2,
+  "reviewer_metric_aggregate": {
+    "blinded_configuration_comparison": {
+      "agreement_optimization_forbidden": true,
+      "configuration_summaries": [
+        {
+          "assessed_axis_count": 10,
+          "configuration_blind_id": "cfg-blind-packet",
+          "finding_axis_count": 5,
+          "high_or_critical_axis_count": 2,
+          "not_assessed_axis_count": 0,
+          "review_context_classes": [
+            "blind_same_model_review"
+          ],
+          "review_count": 2,
+          "reviewed_object_count": 2,
+          "unique_finding_categories": [
+            "ambiguity",
+            "evidence_gap",
+            "interpretation_mismatch",
+            "omission"
+          ],
+          "unresolved_finding_axis_count": 5
+        },
+        {
+          "assessed_axis_count": 10,
+          "configuration_blind_id": "cfg-context-rich",
+          "finding_axis_count": 6,
+          "high_or_critical_axis_count": 3,
+          "not_assessed_axis_count": 0,
+          "review_context_classes": [
+            "same_context_role_review"
+          ],
+          "review_count": 2,
+          "reviewed_object_count": 2,
+          "unique_finding_categories": [
+            "ambiguity",
+            "evidence_gap",
+            "interpretation_mismatch",
+            "omission",
+            "scope_overreach"
+          ],
+          "unresolved_finding_axis_count": 6
+        }
+      ],
+      "ranking_forbidden": true,
+      "winner": null
+    },
+    "false_consensus_risks": [
+      {
+        "axis": "theorem_validity",
+        "correlated_or_unknown_dimensions": [
+          "model_family",
+          "institution",
+          "human_authorship",
+          "code_base"
+        ],
+        "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+        "review_context_classes": [
+          "blind_same_model_review",
+          "same_context_role_review"
+        ],
+        "review_ids": [
+          "blind_same_model_selector_review",
+          "same_context_selector_review"
+        ],
+        "reviewed_object_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1",
+        "risk_id": "FALSE-CONSENSUS:EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1:theorem_validity",
+        "scientific_status_effect": "none"
+      },
+      {
+        "axis": "assumptions",
+        "correlated_or_unknown_dimensions": [
+          "model_family",
+          "institution",
+          "human_authorship",
+          "code_base"
+        ],
+        "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+        "review_context_classes": [
+          "blind_same_model_review",
+          "same_context_role_review"
+        ],
+        "review_ids": [
+          "blind_same_model_selector_review",
+          "same_context_selector_review"
+        ],
+        "reviewed_object_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1",
+        "risk_id": "FALSE-CONSENSUS:EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1:assumptions",
+        "scientific_status_effect": "none"
+      },
+      {
+        "axis": "countermodels",
+        "correlated_or_unknown_dimensions": [
+          "model_family",
+          "institution",
+          "human_authorship",
+          "code_base"
+        ],
+        "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+        "review_context_classes": [
+          "blind_same_model_review",
+          "same_context_role_review"
+        ],
+        "review_ids": [
+          "blind_same_model_selector_review",
+          "same_context_selector_review"
+        ],
+        "reviewed_object_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1",
+        "risk_id": "FALSE-CONSENSUS:EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1:countermodels",
+        "scientific_status_effect": "none"
+      },
+      {
+        "axis": "claim_scope",
+        "correlated_or_unknown_dimensions": [
+          "model_family",
+          "institution",
+          "human_authorship",
+          "code_base"
+        ],
+        "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+        "review_context_classes": [
+          "blind_same_model_review",
+          "same_context_role_review"
+        ],
+        "review_ids": [
+          "blind_same_model_selector_review",
+          "same_context_selector_review"
+        ],
+        "reviewed_object_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1",
+        "risk_id": "FALSE-CONSENSUS:EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1:claim_scope",
+        "scientific_status_effect": "none"
+      },
+      {
+        "axis": "assumptions",
+        "correlated_or_unknown_dimensions": [
+          "model_family",
+          "institution",
+          "human_authorship",
+          "code_base"
+        ],
+        "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+        "review_context_classes": [
+          "blind_same_model_review",
+          "same_context_role_review"
+        ],
+        "review_ids": [
+          "blind_same_model_geff_review",
+          "same_context_geff_review"
+        ],
+        "reviewed_object_id": "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1",
+        "risk_id": "FALSE-CONSENSUS:GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1:assumptions",
+        "scientific_status_effect": "none"
+      },
+      {
+        "axis": "countermodels",
+        "correlated_or_unknown_dimensions": [
+          "model_family",
+          "institution",
+          "human_authorship",
+          "code_base"
+        ],
+        "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+        "review_context_classes": [
+          "blind_same_model_review",
+          "same_context_role_review"
+        ],
+        "review_ids": [
+          "blind_same_model_geff_review",
+          "same_context_geff_review"
+        ],
+        "reviewed_object_id": "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1",
+        "risk_id": "FALSE-CONSENSUS:GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1:countermodels",
+        "scientific_status_effect": "none"
+      },
+      {
+        "axis": "physical_interpretation",
+        "correlated_or_unknown_dimensions": [
+          "model_family",
+          "institution",
+          "human_authorship",
+          "code_base"
+        ],
+        "reason": "Exact agreement is present but no human-expert or independent-replication record breaks the recorded shared or unknown dependency structure.",
+        "review_context_classes": [
+          "blind_same_model_review",
+          "same_context_role_review"
+        ],
+        "review_ids": [
+          "blind_same_model_geff_review",
+          "same_context_geff_review"
+        ],
+        "reviewed_object_id": "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1",
+        "risk_id": "FALSE-CONSENSUS:GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1:physical_interpretation",
+        "scientific_status_effect": "none"
+      }
+    ],
+    "metrics": {
+      "assessment_disagreement_count": 3,
+      "axis_count": 5,
+      "coverage_gap_pair_axis_count": 0,
+      "eligible_pair_axis_comparison_count": 10,
+      "exact_assessment_agreement_count": 7,
+      "exact_assessment_agreement_rate": 0.7,
+      "false_consensus_risk_count": 7,
+      "review_execution_count": 4,
+      "review_record_count": 4,
+      "reviewed_object_count": 2,
+      "synthetic_calibration_record_count": 0,
+      "unknown_independence_record_count": 0,
+      "unresolved_conflict_count": 3
+    },
+    "review_context_class_summaries": [
+      {
+        "classification": "same_context_role_review",
+        "disagreement": 0,
+        "eligible": 0,
+        "exact": 0,
+        "exact_agreement_rate": null,
+        "review_count": 2
+      },
+      {
+        "classification": "blind_same_model_review",
+        "disagreement": 0,
+        "eligible": 0,
+        "exact": 0,
+        "exact_agreement_rate": null,
+        "review_count": 2
+      },
+      {
+        "classification": "different_model_review",
+        "disagreement": 0,
+        "eligible": 0,
+        "exact": 0,
+        "exact_agreement_rate": null,
+        "review_count": 0
+      },
+      {
+        "classification": "human_expert_review",
+        "disagreement": 0,
+        "eligible": 0,
+        "exact": 0,
+        "exact_agreement_rate": null,
+        "review_count": 0
+      },
+      {
+        "classification": "independent_replication",
+        "disagreement": 0,
+        "eligible": 0,
+        "exact": 0,
+        "exact_agreement_rate": null,
+        "review_count": 0
+      },
+      {
+        "classification": "unknown",
+        "disagreement": 0,
+        "eligible": 0,
+        "exact": 0,
+        "exact_agreement_rate": null,
+        "review_count": 0
+      }
+    ],
+    "review_context_pair_summaries": [
+      {
+        "disagreement": 3,
+        "eligible": 10,
+        "exact": 7,
+        "exact_agreement_rate": 0.7,
+        "pair_class": "blind_same_model_review__x__same_context_role_review"
+      }
+    ],
+    "unresolved_conflicts": [
+      {
+        "axis": "physical_interpretation",
+        "conflict_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1:physical_interpretation:blind_same_model_selector_review:same_context_selector_review",
+        "left_assessment": {
+          "finding_category": "no_finding",
+          "resolution_status": "no_finding",
+          "severity": "none",
+          "verdict": "clear"
+        },
+        "left_configuration_blind_id": "cfg-blind-packet",
+        "left_context_class": "blind_same_model_review",
+        "left_review_id": "blind_same_model_selector_review",
+        "reviewed_object_id": "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1",
+        "right_assessment": {
+          "finding_category": "evidence_gap",
+          "resolution_status": "unresolved",
+          "severity": "high",
+          "verdict": "blocking"
+        },
+        "right_configuration_blind_id": "cfg-context-rich",
+        "right_context_class": "same_context_role_review",
+        "right_review_id": "same_context_selector_review",
+        "unresolved": true
+      },
+      {
+        "axis": "theorem_validity",
+        "conflict_id": "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1:theorem_validity:blind_same_model_geff_review:same_context_geff_review",
+        "left_assessment": {
+          "finding_category": "ambiguity",
+          "resolution_status": "unresolved",
+          "severity": "low",
+          "verdict": "concern"
+        },
+        "left_configuration_blind_id": "cfg-blind-packet",
+        "left_context_class": "blind_same_model_review",
+        "left_review_id": "blind_same_model_geff_review",
+        "reviewed_object_id": "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1",
+        "right_assessment": {
+          "finding_category": "no_finding",
+          "resolution_status": "no_finding",
+          "severity": "none",
+          "verdict": "clear"
+        },
+        "right_configuration_blind_id": "cfg-context-rich",
+        "right_context_class": "same_context_role_review",
+        "right_review_id": "same_context_geff_review",
+        "unresolved": true
+      },
+      {
+        "axis": "claim_scope",
+        "conflict_id": "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1:claim_scope:blind_same_model_geff_review:same_context_geff_review",
+        "left_assessment": {
+          "finding_category": "no_finding",
+          "resolution_status": "no_finding",
+          "severity": "none",
+          "verdict": "clear"
+        },
+        "left_configuration_blind_id": "cfg-blind-packet",
+        "left_context_class": "blind_same_model_review",
+        "left_review_id": "blind_same_model_geff_review",
+        "reviewed_object_id": "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1",
+        "right_assessment": {
+          "finding_category": "scope_overreach",
+          "resolution_status": "unresolved",
+          "severity": "medium",
+          "verdict": "concern"
+        },
+        "right_configuration_blind_id": "cfg-context-rich",
+        "right_context_class": "same_context_role_review",
+        "right_review_id": "same_context_geff_review",
+        "unresolved": true
+      }
+    ]
+  },
+  "schema_id": "v21_p11_t07_review_agreement_and_leakage_analysis_v1",
+  "semantic_smuggling_probe": {
+    "boundary_false_positive_count": 43,
+    "confirmed_smuggling_count": 0,
+    "probe_scope": "Bounded P11-T04 semantic probe applied to the four pilot packets; this is not a semantic-completeness check.",
+    "raw_finding_count": 43,
+    "rows": [
+      {
+        "artifact_path": "research_control/tasks/RT-20260722-010/artifacts/selector_blind_review_packet.json",
+        "artifact_sha256": "0fcf59d623b5de0e9778ba3f32219c4319b58097d2fc07c7903c3f8b2b3edfe9",
+        "boundary_false_positive_count": 0,
+        "confirmed_smuggling_count": 0,
+        "disposition": "No bounded-probe finding.",
+        "findings": [],
+        "raw_finding_count": 0,
+        "rule_ids": []
+      },
+      {
+        "artifact_path": "research_control/tasks/RT-20260722-010/artifacts/geff_blind_review_packet.json",
+        "artifact_sha256": "dc2ae06719690428d00b1d4e795156fe5d4fb796d52aee6f5c7a51998388317f",
+        "boundary_false_positive_count": 43,
+        "confirmed_smuggling_count": 0,
+        "disposition": "No semantic-smuggling finding confirmed. Fail-closed or explicit negative metric language triggered the bounded probe and remains a P11-T08 false-positive pressure point.",
+        "findings": [
+          {
+            "evidence": "\\begin{definition}[Declared Source Package]\nA declared source package for this packet is a tuple\n\\[\nE_{\\mathrm{decl}} =\n(\\Gbeta,\\MetricDataCand(E;\\Gbeta),\\SigScaleCont(E),\\MetricFormAssign(E),\n\\Tsrc(E),\\rho_E),\n\\]\nwhere \\(\\rho_E\\) is a receipt that the package is used only inside the declared\nsource-extension scope. If any required component is absent, ambiguous outside\nthe declared source scope, or dependent on target metric, atlas, proper-time,\ndetector, or benchmark semantics, the package evaluates to \\(\\BottomSrc\\).\n\\end{definition}",
+            "location": "$.scientific_material[0].content",
+            "rule_id": "direct_target_metric_import"
+          },
+          {
+            "evidence": "missingambiguousortargetdependentslotsfailclosedtoabottomvalueorapreciseobstructionlabelgeffa05theassembledobjectisadraftcontrolsourcerecordnotanadoptedsourcelaworphysicalmetricgeffa06nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissupplied",
+            "location": "$.assumption_register[3].statement + $.assumption_register[4].assumption_id + $.assumption_register[4].statement + $.assumption_register[5].assumption_id + $.assumption_register[5].statement",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa05theassembledobjectisadraftcontrolsourcerecordnotanadoptedsourcelaworphysicalmetricgeffa06nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissupplied",
+            "location": "$.assumption_register[4].assumption_id + $.assumption_register[4].statement + $.assumption_register[5].assumption_id + $.assumption_register[5].statement",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa05theassembledobjectisadraftcontrolsourcerecordnotanadoptedsourcelaworphysicalmetricgeffa06nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissuppliedgeffa07",
+            "location": "$.assumption_register[4].assumption_id + $.assumption_register[4].statement + $.assumption_register[5].assumption_id + $.assumption_register[5].statement + $.assumption_register[6].assumption_id",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "theassembledobjectisadraftcontrolsourcerecordnotanadoptedsourcelaworphysicalmetricgeffa06nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissupplied",
+            "location": "$.assumption_register[4].statement + $.assumption_register[5].assumption_id + $.assumption_register[5].statement",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "theassembledobjectisadraftcontrolsourcerecordnotanadoptedsourcelaworphysicalmetricgeffa06nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissuppliedgeffa07",
+            "location": "$.assumption_register[4].statement + $.assumption_register[5].assumption_id + $.assumption_register[5].statement + $.assumption_register[6].assumption_id",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "theassembledobjectisadraftcontrolsourcerecordnotanadoptedsourcelaworphysicalmetricgeffa06nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissuppliedgeffa07theconstructionisconfinedtothedeclaredbetaseparatedmarkedfinitegraphcontext",
+            "location": "$.assumption_register[4].statement + $.assumption_register[5].assumption_id + $.assumption_register[5].statement + $.assumption_register[6].assumption_id + $.assumption_register[6].statement",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa06nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissupplied",
+            "location": "$.assumption_register[5].assumption_id + $.assumption_register[5].statement",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa06nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissuppliedgeffa07",
+            "location": "$.assumption_register[5].assumption_id + $.assumption_register[5].statement + $.assumption_register[6].assumption_id",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa06nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissuppliedgeffa07theconstructionisconfinedtothedeclaredbetaseparatedmarkedfinitegraphcontext",
+            "location": "$.assumption_register[5].assumption_id + $.assumption_register[5].statement + $.assumption_register[6].assumption_id + $.assumption_register[6].statement",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa06nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissuppliedgeffa07theconstructionisconfinedtothedeclaredbetaseparatedmarkedfinitegraphcontextgeffa08",
+            "location": "$.assumption_register[5].assumption_id + $.assumption_register[5].statement + $.assumption_register[6].assumption_id + $.assumption_register[6].statement + $.assumption_register[7].assumption_id",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissuppliedgeffa07",
+            "location": "$.assumption_register[5].statement + $.assumption_register[6].assumption_id",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissuppliedgeffa07theconstructionisconfinedtothedeclaredbetaseparatedmarkedfinitegraphcontext",
+            "location": "$.assumption_register[5].statement + $.assumption_register[6].assumption_id + $.assumption_register[6].statement",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissuppliedgeffa07theconstructionisconfinedtothedeclaredbetaseparatedmarkedfinitegraphcontextgeffa08",
+            "location": "$.assumption_register[5].statement + $.assumption_register[6].assumption_id + $.assumption_register[6].statement + $.assumption_register[7].assumption_id",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "nomattercouplingactionfieldequationdetectorprotocolpropertimeinterpretationorbenchmarkresultissuppliedgeffa07theconstructionisconfinedtothedeclaredbetaseparatedmarkedfinitegraphcontextgeffa08reviewshoulddistinguishwellformedsourcerecordassemblyfrompositivephysicalprovenance",
+            "location": "$.assumption_register[5].statement + $.assumption_register[6].assumption_id + $.assumption_register[6].statement + $.assumption_register[7].assumption_id + $.assumption_register[7].statement",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa01geffa02geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition",
+            "location": "$.scientific_material[0].assumption_ids[0] + $.scientific_material[0].assumption_ids[1] + $.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa02geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition",
+            "location": "$.scientific_material[0].assumption_ids[1] + $.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa02geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00",
+            "location": "$.scientific_material[0].assumption_ids[1] + $.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition",
+            "location": "$.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00",
+            "location": "$.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackage",
+            "location": "$.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition",
+            "location": "$.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00",
+            "location": "$.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackage",
+            "location": "$.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackagegeffm01",
+            "location": "$.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind + $.scientific_material[0].material_id",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00",
+            "location": "$.scientific_material[0].content + $.scientific_material[0].content_sha256",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackage",
+            "location": "$.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackagegeffm01",
+            "location": "$.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind + $.scientific_material[0].material_id",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackagegeffm01sourceexcerpt",
+            "location": "$.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind + $.scientific_material[0].material_id + $.scientific_material[0].provenance_kind",
+            "rule_id": "split_proper_time"
+          },
+          {
+            "evidence": "geffa01geffa02geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition",
+            "location": "$.scientific_material[0].assumption_ids[0] + $.scientific_material[0].assumption_ids[1] + $.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "geffa02geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition",
+            "location": "$.scientific_material[0].assumption_ids[1] + $.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "geffa02geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00",
+            "location": "$.scientific_material[0].assumption_ids[1] + $.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition",
+            "location": "$.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00",
+            "location": "$.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "geffa04geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackage",
+            "location": "$.scientific_material[0].assumption_ids[2] + $.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition",
+            "location": "$.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00",
+            "location": "$.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackage",
+            "location": "$.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "geffa07begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackagegeffm01",
+            "location": "$.scientific_material[0].assumption_ids[3] + $.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind + $.scientific_material[0].material_id",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00",
+            "location": "$.scientific_material[0].content + $.scientific_material[0].content_sha256",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackage",
+            "location": "$.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackagegeffm01",
+            "location": "$.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind + $.scientific_material[0].material_id",
+            "rule_id": "split_target_metric"
+          },
+          {
+            "evidence": "begindefinitiondeclaredsourcepackageadeclaredsourcepackageforthispacketisatupleemathrmdeclgbetametricdatacandegbetasigscalecontemetricformassignetsrcerhoewhererhoeisareceiptthatthepackageisusedonlyinsidethedeclaredsourceextensionscopeifanyrequiredcomponentisabsentambiguousoutsidethedeclaredsourcescopeordependentontargetmetricatlaspropertimedetectororbenchmarksemanticsthepackageevaluatestobottomsrcenddefinition635d86234b1ee8a445ba2d6592b74b43ddc298d912b8e72b0345b984b6773f00declaredsourcepackagegeffm01sourceexcerpt",
+            "location": "$.scientific_material[0].content + $.scientific_material[0].content_sha256 + $.scientific_material[0].kind + $.scientific_material[0].material_id + $.scientific_material[0].provenance_kind",
+            "rule_id": "split_target_metric"
+          }
+        ],
+        "raw_finding_count": 43,
+        "rule_ids": [
+          "direct_target_metric_import",
+          "split_proper_time",
+          "split_target_metric"
+        ]
+      },
+      {
+        "artifact_path": "research_control/tasks/RT-20260722-010/artifacts/selector_context_rich_review_packet.json",
+        "artifact_sha256": "e20a2b1cd06d99e709a69df1c198e1b4d8de2bae5e124e9295dfac55fa20f05f",
+        "boundary_false_positive_count": 0,
+        "confirmed_smuggling_count": 0,
+        "disposition": "No bounded-probe finding.",
+        "findings": [],
+        "raw_finding_count": 0,
+        "rule_ids": []
+      },
+      {
+        "artifact_path": "research_control/tasks/RT-20260722-010/artifacts/geff_context_rich_review_packet.json",
+        "artifact_sha256": "6825e13c2f59a62940915d7961896d979cd6ed24ff76254a1225bbb03e75e951",
+        "boundary_false_positive_count": 0,
+        "confirmed_smuggling_count": 0,
+        "disposition": "No bounded-probe finding.",
+        "findings": [],
+        "raw_finding_count": 0,
+        "rule_ids": []
+      }
+    ],
+    "shortcoming": "The bounded probe overflags explicit fail-closed or negated target-metric and proper-time language and emits many duplicate split-window findings."
+  },
+  "status": "PASS"
+}

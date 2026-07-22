@@ -1,0 +1,115 @@
+{
+  "schema_id": "v21_blind_review_source_manifest_v1",
+  "packet_id": "V21-PILOT-GEFF-BLIND-V1",
+  "review_target": {
+    "title": "Scoped source-side effective-metric candidate and its physical-overread boundary",
+    "scientific_scope": "Audit whether the ten-slot source record is well formed under its declared inputs and identify the smallest missing assumptions for any physical effective-metric reading."
+  },
+  "sources": [
+    {
+      "blind_source_id": "SRC-GEFF-CANDIDATE",
+      "path": "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex",
+      "sha256": "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef"
+    }
+  ],
+  "assumption_register": [
+    {
+      "assumption_id": "GEFF-A01",
+      "statement": "The carrier, form, signature-scale-continuity tokens, transition record, and certificates are supplied source-extension inputs inside a declared finite scope."
+    },
+    {
+      "assumption_id": "GEFF-A02",
+      "statement": "The source metric-form record is not assumed to be a target Lorentzian metric or an operational spacetime metric."
+    },
+    {
+      "assumption_id": "GEFF-A03",
+      "statement": "Transition data state a source-side transport obligation and do not establish target covariance."
+    },
+    {
+      "assumption_id": "GEFF-A04",
+      "statement": "Missing, ambiguous, or target-dependent slots fail closed to a bottom value or a precise obstruction label."
+    },
+    {
+      "assumption_id": "GEFF-A05",
+      "statement": "The assembled object is a draft/control source record, not an adopted source law or physical metric."
+    },
+    {
+      "assumption_id": "GEFF-A06",
+      "statement": "No matter coupling, action, field equation, detector protocol, proper-time interpretation, or benchmark result is supplied."
+    },
+    {
+      "assumption_id": "GEFF-A07",
+      "statement": "The construction is confined to the declared beta-separated marked finite-graph context."
+    },
+    {
+      "assumption_id": "GEFF-A08",
+      "statement": "Review should distinguish well-formed source-record assembly from positive physical provenance."
+    }
+  ],
+  "scientific_material": [
+    {
+      "material_id": "GEFF-M01",
+      "kind": "declared_source_package",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-GEFF-CANDIDATE",
+      "assumption_ids": ["GEFF-A01", "GEFF-A02", "GEFF-A04", "GEFF-A07"],
+      "content": "\\begin{definition}[Declared Source Package]\nA declared source package for this packet is a tuple\n\\[\nE_{\\mathrm{decl}} =\n(\\Gbeta,\\MetricDataCand(E;\\Gbeta),\\SigScaleCont(E),\\MetricFormAssign(E),\n\\Tsrc(E),\\rho_E),\n\\]\nwhere \\(\\rho_E\\) is a receipt that the package is used only inside the declared\nsource-extension scope. If any required component is absent, ambiguous outside\nthe declared source scope, or dependent on target metric, atlas, proper-time,\ndetector, or benchmark semantics, the package evaluates to \\(\\BottomSrc\\).\n\\end{definition}"
+    },
+    {
+      "material_id": "GEFF-M02",
+      "kind": "candidate_definition",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-GEFF-CANDIDATE",
+      "assumption_ids": ["GEFF-A01", "GEFF-A02", "GEFF-A03", "GEFF-A04", "GEFF-A05", "GEFF-A07", "GEFF-A08"],
+      "content": "\\begin{definition}[Draft/Control Candidate Record]\nFor a declared source package \\(E_{\\mathrm{decl}}\\), define the audit-ready\ncandidate record\n\\[\n  \\geffCand(E;\\Gbeta,\\Tsrc(E)) =\n  (D_E,Q_E,S_E,\\Theta_E,N_E,B_E,F_E,C_E,O_E,L_E)\n\\]\nwhen all non-bottom source slots below are supplied:\n\\begin{itemize}\n  \\item \\(D_E\\): the scoped source carrier from the accepted\n  \\(\\mathrm{MetricData}(E)\\) evidence;\n  \\item \\(Q_E := \\Qsrc(E)\\): the source metric-form record from scoped\n  \\(\\MetricFormAssign\\) evidence/precondition;\n  \\item \\(S_E\\): the source signature, scale, and continuity token record from\n  scoped \\(\\SigScaleCont\\) evidence/precondition;\n  \\item \\(\\Theta_E\\): the declared source transition/transport record\n  associated with \\(\\Tsrc(E)\\);\n  \\item \\(N_E\\): the source nondegeneracy or controlled-bottom certificate;\n  \\item \\(B_E\\): the fail-closed bottom rule sending underdetermined or\n  target-importing cases to \\(\\BottomSrc\\);\n  \\item \\(F_E\\): the finite-scope receipt tying the construction to the\n  declared beta-separated marked finite-graph context only;\n  \\item \\(C_E\\): the no-target-import certificate;\n  \\item \\(O_E\\): the obstruction fallback label family\n  \\(\\OBGEFF\\mbox{-}*\\);\n  \\item \\(L_E\\): the limitation record stating draft/control only, pending\n  Smuggling Auditor audit.\n\\end{itemize}\nIf any slot fails, the construction returns either \\(\\BottomSrc\\) or the\nminimal precise obstruction label in \\(O_E\\).\n\\end{definition}"
+    },
+    {
+      "material_id": "GEFF-M03",
+      "kind": "assembly_lemma",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-GEFF-CANDIDATE",
+      "assumption_ids": ["GEFF-A01", "GEFF-A04", "GEFF-A05"],
+      "content": "\\begin{lemma}[Source-Record Assembly]\nIf \\(D_E\\), \\(Q_E\\), \\(S_E\\), \\(\\Theta_E\\), \\(N_E\\), \\(B_E\\), \\(F_E\\),\n\\(C_E\\), \\(O_E\\), and \\(L_E\\) are all supplied by the accepted scoped evidence\nstack and declared source-side transition data, then\n\\(\\geffCand(E;\\Gbeta,\\Tsrc(E))\\) is a well-formed draft/control source-side\nrecord.\n\\end{lemma}"
+    },
+    {
+      "material_id": "GEFF-M04",
+      "kind": "transition_scope_lemma",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-GEFF-CANDIDATE",
+      "assumption_ids": ["GEFF-A02", "GEFF-A03", "GEFF-A05", "GEFF-A06"],
+      "content": "\\begin{lemma}[Source-Transition Audit Obligation]\nThe tuple \\((Q_E,S_E,\\Theta_E)\\) states only a source-side transport obligation\nunder declared transitions. It is not a proof of target covariance, not an\nadoption of \\(\\MetricFormAssign\\) or \\(\\SigScaleCont\\) as source law, and not a\nfield-equation statement.\n\\end{lemma}"
+    },
+    {
+      "material_id": "GEFF-M05",
+      "kind": "constructor_result",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-GEFF-CANDIDATE",
+      "assumption_ids": ["GEFF-A01", "GEFF-A04", "GEFF-A05", "GEFF-A06", "GEFF-A07", "GEFF-A08"],
+      "content": "\\begin{proposition}[Candidate Constructor Result]\nUnder the accepted scoped evidence stack and declared source-side transition\ndata inspected in this packet, the previous obstruction\n\\[\n\\OBGEFF\\mbox{-}\\mathrm{SOURCE\\mbox{-}METRIC\\mbox{-}FORM\\mbox{-}UNDERDETERMINED}\n\\]\nis narrowed: a draft/control source-side candidate record\n\\(\\geffCand(E;\\Gbeta,\\Tsrc(E))\\) can be assembled as above. The result is\n\\emph{constructed\\_candidate\\_pending\\_audit}.\n\\end{proposition}"
+    }
+  ],
+  "claim_boundary": [
+    {
+      "boundary_id": "GEFF-B01",
+      "statement": "Separate the narrow claim that a typed source record can be assembled from the stronger claim that a physical effective metric has been derived."
+    },
+    {
+      "boundary_id": "GEFF-B02",
+      "statement": "Identify the smallest missing assumptions for uniqueness, naturality, dynamics, operational meaning, robustness, or physical interpretation."
+    },
+    {
+      "boundary_id": "GEFF-B03",
+      "statement": "Do not infer adoption, matter coupling, field equations, benchmark recovery, or any protected scientific conclusion."
+    }
+  ],
+  "process_metadata": {
+    "task_id": "RT-20260722-010",
+    "plan_task_id": "P11-T07",
+    "prior_candidate_task_id": "RT-20260614-216",
+    "prior_audit_task_id": "RT-20260614-217",
+    "prior_stress_task_id": "RT-20260614-218",
+    "positive_provenance_task_id": "RT-20260722-007",
+    "selected_route": "external-review-packet",
+    "internal_workflow_state": "generation-51-active"
+  }
+}

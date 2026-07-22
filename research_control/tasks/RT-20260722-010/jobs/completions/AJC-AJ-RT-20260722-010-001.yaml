@@ -1,0 +1,530 @@
+completion_id: "AJC-AJ-RT-20260722-010-001"
+job_id: "AJ-RT-20260722-010-001"
+task_id: "RT-20260722-010"
+task_type: "v21_independent_review_pilot"
+decision_id: "DDR-20260722-010"
+role_id: "external-red-team-reviewer"
+source_role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260722-010"
+status: "completed"
+created_at: "2026-07-22T14:21:13Z"
+started_at: "2026-07-22T14:21:13Z"
+completed_at: "2026-07-22T14:38:32Z"
+validation_status: "PASS"
+objective: "Execute only v21 P11-T07 by reviewing the selector theorem and scoped g_eff record through blind_same_model_review and same_context_role_review arms and testing the completed QA controls without promoting either object."
+completion_summary: "P11-T07 exercised four internal AI reviews across two honestly labeled context classes on the selector theorem and scoped g_eff source record. The repaired blind packets rebuild with zero process leaks, all four review artifacts pass the strict schema, and no blocking defect was found in either exact scoped claim. The pilot preserves three assessment disagreements, seven false-consensus risks, forty-three calibrated semantic boundary false positives, all seven Gate B blockers, and a new finite two-extension operational nonidentifiability witness. No external human review, independent replication, proof authority, metric adoption, physics promotion, or Distance-to-GR delta was created."
+objective_result: "completed_bounded_internal_review_pilot_with_repairs_routed"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P11"
+  plan_task_id: "P11-T07"
+  recommendation_ids:
+    - "V21-R36"
+    - "V21-R37"
+    - "V21-R38"
+    - "V21-R39"
+    - "V21-R55"
+    - "V21-R63"
+    - "V21-R68"
+    - "V21-R69"
+  implementation_status: "completed_with_bounded_repair_recommendations"
+  completed_v21_tasks_added:
+    - "P11-T07"
+  next_dependency_ready_work_item: "P11-T08"
+  next_work_item_executed: false
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 51
+  passes_consumed: 50
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:51"
+  handoff_token: "64e3e1d40c11a907aeee54ecdde9646707aaaac45215cd90"
+  relay_claim_token: "4d6561747313328e09e1e9e3681f44262262c3bf0c0fec33"
+  route_work_item_id: "P11-T07"
+  route_worker_skill: "continue-research"
+  route_sha256: "65e1ec62a4598daa82a84a67118fe84c94d2ffe0b4f0118236637b722d8fa1f6"
+
+transaction_status: "completed_pending_governed_checkpoint"
+result_disposition: "review_pilot_completed_repairs_routed"
+work_item_status: "completed"
+checkpoint_commit: "pending_governed_checkpoint"
+project_system_change_only: false
+project_system_boundary_authorized_by_plan: false
+scientific_claims_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+external_review_completed: false
+human_expert_review_completed: false
+independent_replication_completed: false
+
+dependency_evidence:
+  p11_t03_completion_path: "research_control/tasks/RT-20260722-009/jobs/completions/AJC-AJ-RT-20260722-009-001.yaml"
+  p11_t03_completion_sha256: "853d66f154dca54edbbd5f86adff2b974a4a14d72967682c1a701728df345bf8"
+  p11_t04_completion_path: "research_control/tasks/RT-20260722-006/jobs/completions/AJC-AJ-RT-20260722-006-001.yaml"
+  p11_t04_completion_sha256: "c5f0a2fd66b31f854e911e608a3095b731c210a90dd061a0fdca25419f079379"
+  p11_t05_completion_path: "research_control/tasks/RT-20260722-007/jobs/completions/AJC-AJ-RT-20260722-007-001.yaml"
+  p11_t05_completion_sha256: "fc47c54cefe9f6f3dd7a6a279c41b81fec8816e2bd72c4e58f2856b433dea3dd"
+  p11_t06_completion_path: "research_control/tasks/RT-20260722-008/jobs/completions/AJC-AJ-RT-20260722-008-001.yaml"
+  p11_t06_completion_sha256: "4a1a2c041b97c3e8c712bae9be55e0e08de64c712aaf5f6fc275f33f20cfa494"
+
+review_pilot_result:
+  schema_id: "v21_p11_t07_independent_review_pilot_validation_v1"
+  status: "PASS"
+  reviewed_object_count: 2
+  review_record_count: 4
+  review_context_class_count: 2
+  review_context_classes:
+    blind_same_model_review: 2
+    same_context_role_review: 2
+  reviewed_objects:
+    - object_id: "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+      object_path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+      object_sha256: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+      exact_scoped_verdict: "no_blocking_defect_found_as_written"
+      scientific_status_changed: false
+    - object_id: "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1"
+      object_path: "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+      object_sha256: "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef"
+      exact_scoped_verdict: "no_blocking_defect_found_as_written"
+      payload_status: "draft/control"
+      physical_metric_reading_supported: false
+      scientific_status_changed: false
+  blind_packet_revision_count: 1
+  blind_packet_rebuild_status: "PASS"
+  blind_packet_process_leak_count: 0
+  selector_initial_packet_sha256: "9fcd2c3c41d595f42f856792b3c1384d9d4bcbee92d07fed80e85948b12ecd08"
+  selector_final_packet_sha256: "0fcf59d623b5de0e9778ba3f32219c4319b58097d2fc07c7903c3f8b2b3edfe9"
+  selector_packet_repair_scope: "task_local_blind_packet_only"
+  reviewed_science_source_edited: false
+  resolution_round_count: 1
+  max_resolution_rounds: 2
+  strict_review_schema_status: "PASS_4_OF_4"
+  all_findings_disposed: true
+  finding_count: 11
+  blocking_scientific_conflict_count: 0
+  parent_child_mode: "parent_child_parallel_synthesis"
+  external_review_completed: false
+  human_expert_review_completed: false
+  independent_replication_completed: false
+  proof_authority: false
+  physics_promotion_authorized: false
+
+parent_child_synthesis:
+  parent_conflict_review_path: "research_control/tasks/RT-20260722-010/artifacts/parent_conflict_review_p11_t07.yaml"
+  parent_conflict_review_sha256: "f7f25eba050bed49bc48235dec9166c7ff77f82aca3205f2bd8b73751f2fa5c8"
+  parent_fusion_notes_path: "research_control/tasks/RT-20260722-010/artifacts/parent_fusion_notes_p11_t07.md"
+  parent_fusion_notes_sha256: "76966dd02b018e63a5d283e564b44a7aed9a6e8c541a8058b4765983b8ec8346"
+  child_execution_units:
+    - "child_phys_math"
+    - "child_phys_phil"
+  required_child_output_count: 4
+  completed_child_output_count: 4
+  blocking_conflict_found: false
+  preserved_metric_disagreement_count: 3
+  false_consensus_risk_count: 7
+  resolution_round_count: 1
+  unique_contributions_preserved: true
+
+reviewer_metrics:
+  review_record_count: 4
+  reviewed_object_count: 2
+  axis_count: 5
+  eligible_pair_axis_comparison_count: 10
+  exact_assessment_agreement_count: 7
+  assessment_disagreement_count: 3
+  exact_assessment_agreement_rate: 0.7
+  coverage_gap_pair_axis_count: 0
+  unresolved_conflict_count: 3
+  false_consensus_risk_count: 7
+  unknown_independence_record_count: 0
+  consensus_sets_scientific_status: false
+
+semantic_smuggling_result:
+  raw_finding_count: 43
+  calibrated_boundary_false_positive_count: 43
+  confirmed_smuggling_count: 0
+  limitation: "The current probe flags explicit fail-closed boundary language and duplicate split-window matches; P11-T08 must test this control limitation."
+  checker_as_proof: false
+
+positive_provenance_delta:
+  subject_id: "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1"
+  gate_id: "gate_b"
+  readiness_before: "not_ready"
+  readiness_after: "not_ready"
+  readiness_changed: false
+  review_evidence_change: "missing_to_blind_same_model_review"
+  protected_gate_review_ready: false
+  remaining_blockers:
+    - "source_derivation"
+    - "uniqueness_or_quotient"
+    - "naturality"
+    - "dynamics"
+    - "operational_systems"
+    - "robustness"
+    - "independent_review"
+
+minimum_payload:
+  minimum_payload_schema_id: "minimum_physics_payload_schema_v1"
+  source_task_id: "RT-20260722-010"
+  source_job_id: "AJ-RT-20260722-010-001"
+  source_completion_path: "research_control/tasks/RT-20260722-010/jobs/completions/AJC-AJ-RT-20260722-010-001.yaml"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Validate the new scientific QA system on high-value claims."
+  payload_class: "explicit_finite_witness"
+  payload_status: "draft/control"
+  payload_artifact_path: "research_control/tasks/RT-20260722-010/artifacts/operational_nonidentifiability_witness.md"
+  payload_summary: "A one-protocol two-readout construction shows that the same ten-slot source reduct admits two operational enrichments when no protocol or response law is supplied."
+  payload_source_basis:
+    - "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+    - "research_control/tasks/RT-20260722-010/artifacts/blind_same_model_geff_review.yaml"
+    - "research_control/tasks/RT-20260722-010/artifacts/same_context_geff_review.yaml"
+  process_receipts_excluded:
+    - "validator_status"
+    - "registry_row"
+    - "handoff_status"
+    - "approval_status"
+    - "generated_derivative"
+  physics_promotion_authorized: false
+  proof_authority: false
+payload_class: "explicit_finite_witness"
+payload_artifact_path: "research_control/tasks/RT-20260722-010/artifacts/operational_nonidentifiability_witness.md"
+payload_summary: "Finite two-extension witness for operational nonidentifiability of the scoped source record under its current assumptions."
+payload_source_basis:
+  - "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex"
+process_receipts_excluded:
+  - "validator_status"
+  - "registry_row"
+  - "handoff_status"
+  - "approval_status"
+  - "generated_derivative"
+is_physics_task: true
+has_new_mathematical_payload: true
+has_finite_local_witness: true
+has_countermodel: false
+has_source_model: false
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-P11-T07-OPERATIONAL-NONIDENTIFIABILITY-001"
+    payload_type: "explicit_witness"
+    object_name: "finite two-extension operational nonidentifiability witness"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260722-010/artifacts/operational_nonidentifiability_witness.md"
+    source_sha256: "275dc3c916d04824fec0317f95d343e971397ecda1a8e972651e377885d93f9c"
+    burden_effect: "no_distance_delta"
+    summary: "For any fixed ten-slot source record T, P={*} and Y={0,1} admit R_T^(0)(*)=0 and R_T^(1)(*)=1 because the current candidate supplies no protocol/readout constraint; this witnesses missing assumptions for a stronger physical reading only."
+new_mathematical_payload:
+  - payload_id: "PAYLOAD-P11-T07-OPERATIONAL-NONIDENTIFIABILITY-001"
+    payload_type: "explicit_finite_witness"
+    path: "research_control/tasks/RT-20260722-010/artifacts/operational_nonidentifiability_witness.md"
+    sha256: "275dc3c916d04824fec0317f95d343e971397ecda1a8e972651e377885d93f9c"
+    status: "draft/control"
+    result: "not_enough_assumptions_for_stronger_physical_reading"
+    countermodel_to_scoped_record_assembly: false
+    global_no_go: false
+
+assumption_delta:
+  changed: false
+  assumptions_added: []
+  assumptions_removed: []
+  assumptions_adopted: 0
+  exact_reason: "The finite witness exposes missing operational structure but adopts no protocol response law source extension metric semantics or ontology premise."
+
+candidate_or_theorem_identities:
+  candidate_ids_created: []
+  candidate_ids_linked:
+    - "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1"
+  theorem_ids_created: []
+  theorem_source_referenced:
+    - "EQSRC-NO-NATURAL-SELECTOR-NONUNIQUENESS-THEOREM-V1"
+  identity_note: "The pilot reviews two fixed existing identities and creates only a task-local missing-assumption witness; it does not change either object's scientific status."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Validate the new scientific QA system on high-value claims."
+  explanation: "The pilot adds a finite operational nonidentifiability witness and calibrated review evidence while preserving the existing selector theorem and scoped source-record status; it does not discharge the source-equivalence burden."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_equivalence_eqsrc"
+  milestone: "source_equivalence_eqsrc"
+  old_status: "selector theorem and scoped g_eff source record remain proposal-only inputs with Gate B not ready"
+  new_status: "same scientific status with internal review evidence and an operational missing-assumption witness"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Internal review and a missing-assumption witness do not adopt a source law metric operational semantics coupling dynamics field equations or benchmark status."
+  downstream_unlocked:
+    - "P11-T08 scientific QA non-regression audit"
+  downstream_still_blocked:
+    - "protected Gate B review readiness"
+    - "ontology_regime_adoption"
+    - "general_eqsrc"
+    - "source_manifold_m_src"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+
+freeze_criteria_status:
+  repeated_burden: false
+  scoped_obstruction: false
+  freeze_evaluation_required: false
+  freeze_decision: "not_frozen"
+  decision_reason: "The task produced a distinct finite witness and concrete P11-T08 control repairs, so it is not a no-payload repeated-burden cycle."
+  next_allowed_route: "none"
+
+route_cycle_control:
+  cycle_family: "p11_scientific_qa"
+  current_cycle_step: "external_red_team_review_pilot"
+  prior_related_tasks:
+    - "RT-20260722-009"
+    - "RT-20260722-006"
+    - "RT-20260722-007"
+    - "RT-20260722-008"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "The pilot supplied new live-review evidence, one finite witness, and exact control failures for the P11 closing audit rather than re-running a prior review packet."
+  next_role_consequence: "process-integrity-auditor"
+
+authorization_layers:
+  review_execution_authorized: true
+  review_execution_scope: "four task-local internal AI review artifacts across two exact review context classes"
+  external_human_review_authorized: false
+  external_review_completed: false
+  human_expert_review_completed: false
+  independent_replication_completed: false
+  proof_evidence_inspection_authorized: true
+  proof_authority: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  physical_interpretation_authorized: false
+  ontology_adoption_authorized: false
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  publication_authority: false
+
+artifacts:
+  selector_blind_packet_path: "research_control/tasks/RT-20260722-010/artifacts/selector_blind_review_packet.json"
+  selector_blind_packet_sha256: "0fcf59d623b5de0e9778ba3f32219c4319b58097d2fc07c7903c3f8b2b3edfe9"
+  selector_context_packet_path: "research_control/tasks/RT-20260722-010/artifacts/selector_context_rich_review_packet.json"
+  selector_context_packet_sha256: "e20a2b1cd06d99e709a69df1c198e1b4d8de2bae5e124e9295dfac55fa20f05f"
+  geff_blind_packet_path: "research_control/tasks/RT-20260722-010/artifacts/geff_blind_review_packet.json"
+  geff_blind_packet_sha256: "dc2ae06719690428d00b1d4e795156fe5d4fb796d52aee6f5c7a51998388317f"
+  geff_context_packet_path: "research_control/tasks/RT-20260722-010/artifacts/geff_context_rich_review_packet.json"
+  geff_context_packet_sha256: "6825e13c2f59a62940915d7961896d979cd6ed24ff76254a1225bbb03e75e951"
+  blind_selector_review_path: "research_control/tasks/RT-20260722-010/artifacts/blind_same_model_selector_review.yaml"
+  blind_selector_review_sha256: "eac1a662b3df3878746f712dffcb7244cc1069948837d4e844a67b71be7ecb7b"
+  blind_geff_review_path: "research_control/tasks/RT-20260722-010/artifacts/blind_same_model_geff_review.yaml"
+  blind_geff_review_sha256: "d4dad810f3ec1b7a7c0938be25ed0a72f67a7babb1e94276e4a6960afa4c1163"
+  context_selector_review_path: "research_control/tasks/RT-20260722-010/artifacts/same_context_selector_review.yaml"
+  context_selector_review_sha256: "c254f61a940e3ddd3a7d5a8bf1c7b59b8962935cec3f5e263e01561c2199fc68"
+  context_geff_review_path: "research_control/tasks/RT-20260722-010/artifacts/same_context_geff_review.yaml"
+  context_geff_review_sha256: "1873ac180bd25c07fb9d5ece9b690f2778ac1a56fc3ba47e3a25a60e1ed99c57"
+  revision_history_path: "research_control/tasks/RT-20260722-010/artifacts/blind_packet_revision_history.yaml"
+  revision_history_sha256: "96476d1dd4daee31a0b8aa72c165e6359e80dfa9171172684ede8e90c2adaf92"
+  agreement_analysis_path: "research_control/tasks/RT-20260722-010/artifacts/review_agreement_and_leakage_analysis.json"
+  agreement_analysis_sha256: "8e57d7813843fd9f383a930773876018c64cc622763960277052e789c01808b4"
+  positive_provenance_delta_path: "research_control/tasks/RT-20260722-010/artifacts/positive_provenance_readiness_delta.json"
+  positive_provenance_delta_sha256: "c27ae6536231521a23cf8f86519582547dd824f2e66d37df9d5d9026b4e452ab"
+  operational_witness_path: "research_control/tasks/RT-20260722-010/artifacts/operational_nonidentifiability_witness.md"
+  operational_witness_sha256: "275dc3c916d04824fec0317f95d343e971397ecda1a8e972651e377885d93f9c"
+  repair_recommendations_path: "research_control/tasks/RT-20260722-010/artifacts/p11_t07_repair_recommendations.md"
+  repair_recommendations_sha256: "1ff81f60185ac08d75d2717ef0aa6636f221ec8d030fbf0f81959319e29240dd"
+  validator_path: "research_control/tasks/RT-20260722-010/artifacts/validate_p11_t07_independent_review_pilot.py"
+  validator_sha256: "77e971c7f4d0646cecc41a6b45afa42dd19aa69127dd9c76a63adfbe0c3bc497"
+  validation_path: "research_control/tasks/RT-20260722-010/artifacts/p11_t07_pilot_validation.json"
+  validation_sha256: "16266575550ad994ce36c774eee98a31676515a59fed871d22c0bf8d28be3663"
+  compact_receipt_path: "research_control/tasks/RT-20260722-010/artifacts/p11_t07_pilot_compact_receipt.json"
+  compact_receipt_sha256: "c2e75930a7544fd6b244a3af735d7c953efdd71e8678ae2a8799117d4b520d77"
+
+outputs_created:
+  - "research_control/tasks/RT-20260722-010/00_TASK.yaml"
+  - "research_control/tasks/RT-20260722-010/DDR-20260722-010.md"
+  - "research_control/tasks/RT-20260722-010/artifacts/blind_packet_revision_history.yaml"
+  - "research_control/tasks/RT-20260722-010/artifacts/blind_same_model_geff_review.yaml"
+  - "research_control/tasks/RT-20260722-010/artifacts/blind_same_model_selector_review.yaml"
+  - "research_control/tasks/RT-20260722-010/artifacts/geff_blind_context_manifest.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/geff_blind_review_packet.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/geff_blind_source_manifest.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/geff_context_rich_review_packet.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/operational_nonidentifiability_witness.md"
+  - "research_control/tasks/RT-20260722-010/artifacts/p11_t07_pilot_compact_receipt.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/p11_t07_pilot_validation.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/p11_t07_repair_recommendations.md"
+  - "research_control/tasks/RT-20260722-010/artifacts/parent_conflict_review_p11_t07.yaml"
+  - "research_control/tasks/RT-20260722-010/artifacts/parent_fusion_notes_p11_t07.md"
+  - "research_control/tasks/RT-20260722-010/artifacts/positive_provenance_readiness_delta.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/review_agreement_and_leakage_analysis.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/same_context_geff_review.yaml"
+  - "research_control/tasks/RT-20260722-010/artifacts/same_context_selector_review.yaml"
+  - "research_control/tasks/RT-20260722-010/artifacts/selector_blind_context_manifest.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/selector_blind_review_packet.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/selector_blind_source_manifest.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/selector_context_rich_review_packet.json"
+  - "research_control/tasks/RT-20260722-010/artifacts/validate_p11_t07_independent_review_pilot.py"
+  - "research_control/tasks/RT-20260722-010/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260722-010/jobs/AJ-RT-20260722-010-001.yaml"
+  - "research_control/tasks/RT-20260722-010/jobs/completions/AJC-AJ-RT-20260722-010-001.yaml"
+  - "research_control/tasks/RT-20260722-010/roles/external-red-team-reviewer@0.1.0--RT-20260722-010.yaml"
+  - "research_control/handoffs/handoff-0820.yaml"
+  - "research_control/handoffs/handoff-0820.md"
+outputs_updated:
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/compact_current_frontier_v16.json"
+  - "output/compact_current_frontier_v16.yaml"
+  - "wiki/indexes/compact_current_frontier_v16.md"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "policy-generated memory and wiki derivatives"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 51 immutable route lease repository identity max reasoning effort clean start and single consumption were verified before the one worker invocation."
+      - "P11-T03 P11-T04 P11-T05 and P11-T06 completion hashes match the immutable dependency boundary."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local validator passes 26 of 26 checks and both blind packets rebuild deterministically with zero process-context leaks."
+      - "All four review artifacts pass the strict external-red-team artifact schema while declaring internal AI provenance only."
+      - "All eleven review findings have dispositions; three metric disagreements and seven false-consensus risks remain explicit."
+      - "The finite operational witness is new mathematical payload and is not counted as a countermodel to the narrow source-record assembly claim."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Affected-plan documentation-impact project-improvement claim-language research-control memory and diff validations are required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "The governed checkpoint remains the final transaction gate."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task-index current-frontier compact-frontier and policy-generated derivatives are required fresh before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks are required before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation is required to report no hard failure before checkpoint."
+
+command_results:
+  - ".venv/bin/python research_control/tasks/RT-20260722-010/artifacts/validate_p11_t07_independent_review_pilot.py --write --json | exit_code=0 | status=PASS checks=26 failures=0"
+  - ".venv/bin/python research_control/tasks/RT-20260722-010/artifacts/validate_p11_t07_independent_review_pilot.py --check --json | exit_code=0 | status=PASS checks=26 failures=0"
+  - ".venv/bin/python scripts/research_control/validate_red_team_review_artifact.py ... | exit_code=0 | status=PASS artifacts=4"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths research_control/tasks/RT-20260722-010 research_control/program_state.yaml research_control/handoffs/handoff-0820.yaml --explain | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/validate_minimum_physics_payload.py --live --json | required before checkpoint"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff | required before checkpoint"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py and --validate-only | required before checkpoint"
+  - "git diff --check | required before checkpoint"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 984
+    relationship_row_count: 4867
+    semantic_row_count: 984
+    vault_row_count: 984
+    local_cache_only_warning_count: 0
+  local_retrieval_refresh:
+    command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+    refresh_needed: true
+    refresh_performed: true
+    before_core_validation_status: "PASS"
+    before_freshness_status: "WARN"
+    before_local_retrieval_status: "WARN"
+    before_local_cache_only_warning_count: 7
+    after_core_validation_status: "PASS"
+    after_freshness_status: "PASS"
+    after_local_retrieval_status: "PASS"
+    after_local_cache_only_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search semantic smuggling positive provenance proof evidence reviewer metrics --limit 10 --json"
+      query_type: "search"
+      query_text: "semantic smuggling positive provenance proof evidence reviewer metrics"
+      returned_object_ids:
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+  additional_query_receipts:
+    - query: "P11-T07 blind packets external red team reviewer"
+      result: "No result because the literal hyphenated search term was rejected by the local FTS query parser; no scientific inference was drawn."
+    - query: "selector theorem scoped metric matter object blind review"
+      result: "Returned the current frontier theorem audit stress task index and v21 plan."
+  canonical_inspections:
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "ea7186322fb0a570f05af6ffb85ddb7c907dd5342a53fde0e41975700a56cdf8"
+      preflight_source_hash: "62225adcd74fbf1a464e0590ea17d5996a3466e9c6458ac397a034a938da81d5"
+      source_hash_refresh_reason: "The task lawfully regenerated the mutable current frontier; the preflight hash remains preserved separately."
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V21"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+      source_hash: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  authority_note: "Obsidian semantic relationship and .local surfaces are retrieval support only and not authority; registered canonical sources and tracked control state governed the task."
+
+next_work_item:
+  plan_task_id: "P11-T08"
+  task_type: "v21_scientific_qa_non_regression_audit"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  route_label: "ordinary-research-packet"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Close P11 with a safe rollout decision."
+  dependency_ready: true
+  executed: false
+  physics_promotion_authorized: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "P11-T08 is the directly planned project-system closing audit; task-local QA limitations are routed through the ordinary next handoff rather than an incidental sidecar."
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  summary: "Internal AI review and validator agreement are bounded QA evidence only; they do not prove or promote either reviewed object."
+  forbidden_conclusions:
+    - "blind same-model or same-context role review labeled external human review or independent replication"
+    - "review agreement or validator PASS treated as proof theorem truth scientific status or protected Gate B readiness"
+    - "the selector theorem treated as ontology derivation or an adopted natural selector"
+    - "the scoped g_eff source record treated as a physical effective metric"
+    - "the operational nonidentifiability witness treated as a countermodel to narrow record assembly or a global no-go theorem"
+    - "source-law or ontology adoption"
+    - "matter coupling or Einstein-equation derivation"
+    - "Distance-to-GR milestone discharge benchmark promotion publication or completed derivation"
+    - "P11-T08 executed inside P11-T07"
+  reviewed_science_sources_mutated: false
+  scientific_ledger_change_count: 0
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false

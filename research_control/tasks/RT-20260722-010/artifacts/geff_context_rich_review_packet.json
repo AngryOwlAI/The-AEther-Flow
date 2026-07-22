@@ -1,0 +1,59 @@
+{
+  "schema_id": "v21_pilot_context_rich_review_packet_v1",
+  "packet_id": "V21-PILOT-GEFF-CONTEXT-V1",
+  "blind_packet": {
+    "path": "research_control/tasks/RT-20260722-010/artifacts/geff_blind_review_packet.json",
+    "sha256": "dc2ae06719690428d00b1d4e795156fe5d4fb796d52aee6f5c7a51998388317f"
+  },
+  "review_target": {
+    "object_id": "GEFF-GSC-SCOPED-SOURCE-RECORD-CANDIDATE-V1",
+    "claim_under_review": "The ten-slot source-side candidate is a well-formed draft/control record when every declared slot is supplied and fail-closed; those facts are not enough to establish an adopted or physical effective metric.",
+    "source_paths": [
+      "research_control/tasks/RT-20260614-216/artifacts/245_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_OR_OBSTRUCTION.tex",
+      "research_control/tasks/RT-20260614-217/artifacts/246_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_SMUGGLING_AUDIT.tex",
+      "research_control/tasks/RT-20260614-218/artifacts/247_NONBOTTOM_METRICDATA_WITNESS_SRC_GSC_POST_GATE_METRICFORMASSIGN_GEFF_CANDIDATE_REFUTER_STRESS_TEST.tex"
+    ],
+    "source_hashes": {
+      "candidate": "dd30573519ed1df66b3800d29ee0adc9fcc94d9c8d3b9b5a7fcffde503d5f0ef",
+      "smuggling_audit": "c7071ec3efb285d0db35902987bb0814544fc0250055a906385749c2b1da6b10",
+      "refuter_stress": "f2a92b6807cb676f91573456c1d3c3ffd0a1e9734c3444c3212e15f280b10e73"
+    }
+  },
+  "prior_internal_evidence": {
+    "source_purity_observation": "The existing audit found the source record pure as written, conditional on its declared source-only readings.",
+    "stress_observation": "The existing stress packet retained the candidate only as a finite-scope source record with fail-closed behavior.",
+    "positive_provenance_policy_path": "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md",
+    "positive_provenance_policy_sha256": "7d679cbcbc05bf771333ba7d3afddb351159b87d0edd92e720942428389b62c6"
+  },
+  "qa_controls": {
+    "blind_packet_receipt_path": "research_control/tasks/RT-20260722-004/artifacts/blind_review_compact_receipt.json",
+    "independence_taxonomy_path": "research_control/tasks/RT-20260722-005/artifacts/review_independence_taxonomy.md",
+    "semantic_smuggling_receipt_path": "research_control/tasks/RT-20260722-006/artifacts/semantic_smuggling_compact_receipt.json",
+    "positive_provenance_policy_path": "research_control/tasks/RT-20260722-007/artifacts/positive_provenance_operational_meaning_gate_policy.md",
+    "review_metric_specification_path": "research_control/tasks/RT-20260722-008/artifacts/reviewer_agreement_metric_specification.md"
+  },
+  "review_questions": [
+    "Is the ten-slot tuple well formed under the declared source-extension inputs and fail-closed rule?",
+    "Does the construction derive any uniqueness, naturality, dynamics, operational protocol, robustness, or physical metric semantics?",
+    "Can two distinct operational interpretations share the same source-record tuple because no readout or response map is supplied?",
+    "Do source-purity, stress survival, or checker receipts get laundered into positive physical provenance?",
+    "What is the narrowest repair or missing-assumption certificate for a physical effective-metric reading?"
+  ],
+  "review_context_assignment": {
+    "classification": "same_context_role_review",
+    "reviewer_kind": "ai",
+    "prior_context_access": "same_context",
+    "external_review_completed": false,
+    "human_expert_review_completed": false,
+    "independent_replication_completed": false
+  },
+  "authority_boundary": {
+    "workflow_success_as_evidence": false,
+    "validator_success_as_evidence": false,
+    "proof_authority": false,
+    "physics_promotion_authorized": false,
+    "geff_adoption_authorized": false,
+    "matter_coupling_authorized": false,
+    "field_equation_authorized": false
+  }
+}

@@ -1,0 +1,30 @@
+schema_id: "parent-conflict-review.v1"
+task_id: "RT-20260722-010"
+status: "completed"
+child_output_count: 4
+required_child_output_count: 4
+all_required_children_completed: true
+reviewed_paths:
+  - "research_control/tasks/RT-20260722-010/artifacts/blind_same_model_selector_review.yaml"
+  - "research_control/tasks/RT-20260722-010/artifacts/blind_same_model_geff_review.yaml"
+  - "research_control/tasks/RT-20260722-010/artifacts/same_context_selector_review.yaml"
+  - "research_control/tasks/RT-20260722-010/artifacts/same_context_geff_review.yaml"
+conflict_review_path: "research_control/tasks/RT-20260722-010/artifacts/review_agreement_and_leakage_analysis.json"
+shared_verdict: "no_blocking_defect_found_as_written_for_exact_scoped_claims"
+blocking_conflict_found: false
+unresolved_conflict_count: 0
+preserved_metric_disagreement_count: 3
+resolution_round_count: 1
+max_resolution_rounds: 2
+parallel_child_revision_required: true
+revision_scope: "One selector blind-packet self-containment repair; no reviewed science source changed."
+preserve_unique_contributions: true
+preserve_unresolved_limitations: true
+reviewer_independence_classifications:
+  - "blind_same_model_review"
+  - "same_context_role_review"
+external_review_completed: false
+human_expert_review_completed: false
+independent_replication_completed: false
+physics_promotion_authorized: false
+reason: "Both arms accepted the exact scoped claims after the task-local selector packet repair. They preserve different physical-interpretation and claim-scope assessments, which are useful metric disagreements rather than contradictory theorem verdicts."

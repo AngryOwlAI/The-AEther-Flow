@@ -1,0 +1,167 @@
+{
+  "assumption_register": [
+    {
+      "assumption_id": "SEL-A01",
+      "statement": "The reviewed core is a small wide groupoid and the eligible-choice assignment is a fixed covariant Set-valued functor."
+    },
+    {
+      "assumption_id": "SEL-A02",
+      "statement": "One representative per connected component and one certified transport from the representative to every object are supplied coordinates."
+    },
+    {
+      "assumption_id": "SEL-A03",
+      "statement": "A product tuple, finite component set, or an explicit suitable choice principle is required where factorwise nonemptiness is used to obtain a global selector."
+    },
+    {
+      "assumption_id": "SEL-A04",
+      "statement": "The relation-image statement uses a supplied Set-valued functor and a natural transformation from eligible choices."
+    },
+    {
+      "assumption_id": "SEL-A05",
+      "statement": "The full-category statement is conditional on a separately supplied strict extension whose restriction to the wide core is the original functor."
+    },
+    {
+      "assumption_id": "SEL-A06",
+      "statement": "Selectors are deterministic, total, and point-valued on the declared domain."
+    },
+    {
+      "assumption_id": "SEL-A07",
+      "statement": "Structural automorphisms are not assumed to be physical gauge transformations."
+    },
+    {
+      "assumption_id": "SEL-A08",
+      "statement": "The bounded formal kernel covers a one-object finite-group fragment and is not evidence for the multi-component, relation-image, or full-category claims."
+    }
+  ],
+  "claim_boundary": [
+    {
+      "boundary_id": "SEL-B01",
+      "statement": "Evaluate the written categorical implications only under the declared fixed inputs and exact choice qualifications."
+    },
+    {
+      "boundary_id": "SEL-B02",
+      "statement": "Do not infer an ontology-derived selector, physical gauge identification, general source equivalence, metric, coupling, field equation, or benchmark conclusion."
+    },
+    {
+      "boundary_id": "SEL-B03",
+      "statement": "Treat the bounded formal kernel as evidence about only its encoded one-object fragment."
+    }
+  ],
+  "packet_id": "V21-PILOT-SELECTOR-BLIND-V1",
+  "review_target": {
+    "scientific_scope": "Audit the componentwise fixed-locus classification, relation-image theorem, conditional full-category equalizer, and the bounded one-object formal kernel.",
+    "source_bindings": [
+      {
+        "sha256": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae",
+        "source_id": "SRC-SEL-THEOREM"
+      },
+      {
+        "sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356",
+        "source_id": "SRC-SEL-LEAN"
+      }
+    ],
+    "title": "Certified-core selector classification and its exact interpretation boundary"
+  },
+  "schema_id": "v21_blind_review_packet_v1",
+  "scientific_material": [
+    {
+      "assumption_ids": [
+        "SEL-A01",
+        "SEL-A02",
+        "SEL-A06"
+      ],
+      "content": "Let \\(I=\\pi_0(\\G)\\) be a set of\nconnected components. Supply one representative \\(r_i\\) for each\n\\(i\\in I\\), and for every object \\(X\\) in component \\(i=[X]\\), supply a\ncertified isomorphism\n\\[\n  \\tau_X:r_i\\longrightarrow X,\n  \\qquad \\tau_{r_i}=1_{r_i}.\n\\]\nDefine\n\\[\n  H_i:=\\Aut_{\\G}(r_i),\n  \\qquad\n  F_i:=S_\\chi(r_i)^{H_i}\n      =\\{x\\in S_\\chi(r_i):S_\\chi(h)x=x\\text{ for all }h\\in H_i\\},\n\\]\nand\n\\[\n  \\Sel(\\G):=\\Nat(1_{\\G},S_\\chi).\n\\]",
+      "content_sha256": "a30a938917703507da8e6f058add1fce2981d0ba7a128407f0cc943fd9b82678",
+      "kind": "definitions",
+      "material_id": "SEL-M01",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-SEL-THEOREM",
+      "source_sha256": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+    },
+    {
+      "assumption_ids": [
+        "SEL-A01",
+        "SEL-A02",
+        "SEL-A03",
+        "SEL-A06"
+      ],
+      "content": "\\begin{theorem}[Complete certified-core selector classification]\n\\label{thm:classification}\nEvaluation at the supplied component representatives is a bijection\n\\[\n  \\operatorname{ev}:\\Sel(\\G)\\xrightarrow{\\;\\cong\\;}\n  \\prod_{i\\in I}F_i,\n  \\qquad\n  \\sigma\\longmapsto (\\sigma_{r_i})_{i\\in I}.\n\\]\nIts inverse sends \\(x=(x_i)_{i\\in I}\\) to\n\\[\n  \\sigma^x_X:=S_\\chi(\\tau_X)(x_{[X]}).\n\\]\nConsequently:\n\\begin{enumerate}[label=(\\alph*)]\n  \\item \\(\\Sel(\\G)=\\varnothing\\) if and only if\n        \\(\\prod_{i\\in I}F_i=\\varnothing\\).\n  \\item If any \\(F_i\\) is empty, no deterministic source-natural selector\n        exists on \\(\\G\\).\n  \\item If every \\(F_i\\) is nonempty, a selector exists exactly when a\n        product element (equivalently, a choice function for this family) is\n        available. Finite \\(I\\), a supplied choice tuple, or an explicitly\n        assumed suitable axiom of choice is sufficient.\n  \\item \\(\\Sel(\\G)\\) has exactly one element if and only if every \\(F_i\\)\n        is a singleton.\n  \\item \\(\\lvert\\Sel(\\G)\\rvert\\geq2\\) if and only if there is an\n        \\(i\\in I\\) with \\(\\lvert F_i\\rvert\\geq2\\) and\n        \\(\\prod_{j\\neq i}F_j\\neq\\varnothing\\).\n\\end{enumerate}\n\\end{theorem}",
+      "content_sha256": "d8a7f613df08c413a1534dd2c5e628805fb13e45c984733912637b1d08aec71e",
+      "kind": "theorem_and_proof",
+      "material_id": "SEL-M02",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-SEL-THEOREM",
+      "source_sha256": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+    },
+    {
+      "assumption_ids": [
+        "SEL-A04",
+        "SEL-A06"
+      ],
+      "content": "Suppose the unchanged core also carries a functor \\(E_A:\\G\\to\\mathbf{Set}\\)\nand a natural transformation \\(K:S_\\chi\\Rightarrow E_A\\). Define\n\\[\n  K_*:\\Sel(\\G)\\longrightarrow\\Nat(1_{\\G},E_A),\n  \\qquad K_*(\\sigma):=K\\circ\\sigma,\n\\]\nand \\(R_i:=K_{r_i}(F_i)\\).",
+      "content_sha256": "3a0d4ef4ae1e0152e348056666d46538900ef158bce9fbe25eb2901af829f62a",
+      "kind": "relation_image_definitions",
+      "material_id": "SEL-M03A",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-SEL-THEOREM",
+      "source_sha256": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+    },
+    {
+      "assumption_ids": [
+        "SEL-A03",
+        "SEL-A04",
+        "SEL-A06"
+      ],
+      "content": "\\begin{theorem}[Relation-image uniqueness]\n\\label{thm:kimage}\nThe map \\(K_*\\) is well-defined. If \\(\\Sel(\\G)\\neq\\varnothing\\), then\n\\(\\lvert\\Img K_*\\rvert=1\\) if and only if every \\(R_i\\) is a singleton.\nIn particular, if some \\(F_i\\) contains two points with distinct\n\\(K_{r_i}\\)-images, then two global selectors induce different natural\nrelation sections; a sufficient condition is that \\(K_{r_i}\\) is injective\non a multiple fixed locus. If every \\(R_i\\) is a singleton, selector\nmultiplicity is relation-level choice irrelevance rather than relation\nnonuniqueness.\n\\end{theorem}",
+      "content_sha256": "9d734d83dba7381b9dc6cab35e4c5f786bd3ec9744b918329b3b025cb84bdd6b",
+      "kind": "relation_image_theorem",
+      "material_id": "SEL-M03",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-SEL-THEOREM",
+      "source_sha256": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+    },
+    {
+      "assumption_ids": [
+        "SEL-A01",
+        "SEL-A02",
+        "SEL-A05",
+        "SEL-A06"
+      ],
+      "content": "\\begin{theorem}[Full-category equalizer guard]\n\\label{thm:equalizer}\nAssume, only conditionally, that \\(S_\\chi\\) extends to a functor\n\\(\\overline S_\\chi:\\C\\to\\mathbf{Set}\\) whose restriction to the wide core\nis \\(S_\\chi\\). Then restriction is injective and identifies\n\\(\\Nat(1_{\\C},\\overline S_\\chi)\\) with the subset of\n\\(\\prod_iF_i\\) satisfying\n\\[\n  \\overline S_\\chi(f)\n  \\bigl(S_\\chi(\\tau_X)x_{[X]}\\bigr)\n  =S_\\chi(\\tau_Y)x_{[Y]}\n\\]\nfor every arrow \\(f:X\\to Y\\) of \\(\\C\\), including every noninvertible\narrow. Thus core fixedness is necessary but need not be sufficient for\nfull-category naturality.\n\\end{theorem}",
+      "content_sha256": "277f59d08242cac4088002f5e5dc32b93cfadbea84632d4dd4b8d5c6b4c6f942",
+      "kind": "conditional_equalizer_theorem",
+      "material_id": "SEL-M04",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-SEL-THEOREM",
+      "source_sha256": "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+    },
+    {
+      "assumption_ids": [
+        "SEL-A06",
+        "SEL-A07",
+        "SEL-A08"
+      ],
+      "content": "structure GroupData (G : Type u) where\n  one : G\n  mul : G → G → G\n  inv : G → G\n  one_mul : ∀ g, mul one g = g\n  mul_one : ∀ g, mul g one = g\n  mul_assoc : ∀ g h k, mul (mul g h) k = mul g (mul h k)\n  inv_mul : ∀ g, mul (inv g) g = one\n  mul_inv : ∀ g, mul g (inv g) = one\n\n/-- A left action of the declared group data on an eligible-choice type. -/\nstructure Action (G : Type u) (D : Type v) (group : GroupData G) where\n  act : G → D → D\n  one_act : ∀ x, act group.one x = x\n  mul_act : ∀ g h x, act (group.mul g h) x = act g (act h x)\n\n/-- An eligible choice is fixed when every declared structural action fixes it. -/\ndef Fixed {G : Type u} {D : Type v} {group : GroupData G}\n    (action : Action G D group) (x : D) : Prop :=\n  ∀ g, action.act g x = x\n\n/-- In the one-object groupoid core, an invariant selector is exactly a fixed choice. -/\ndef InvariantSelector {G : Type u} {D : Type v} {group : GroupData G}\n    (action : Action G D group) : Type v :=\n  {x : D // Fixed action x}\n\n/-- The declared action is transitive when any eligible choice can reach any other. -/\ndef Transitive {G : Type u} {D : Type v} {group : GroupData G}\n    (action : Action G D group) : Prop :=\n  ∀ x y, ∃ g, action.act g x = y\n\n/-- Empty fixed locus is equivalent to absence of an invariant selector. -/\ntheorem empty_fixed_iff_no_invariant_selector\n    {G : Type u} {D : Type v} {group : GroupData G}\n    (action : Action G D group) :\n    (¬ ∃ x, Fixed action x) ↔ ¬ Nonempty (InvariantSelector action) := by\n  constructor\n  · intro hFixed hSelector\n    rcases hSelector with ⟨selector⟩\n    exact hFixed ⟨selector.1, selector.2⟩\n  · intro hSelector hFixed\n    rcases hFixed with ⟨x, hx⟩\n    exact hSelector ⟨⟨x, hx⟩⟩\n\n/-- Under transitivity, any fixed choice equals every eligible choice. -/\ntheorem fixed_choice_unique_of_transitive\n    {G : Type u} {D : Type v} {group : GroupData G}\n    {action : Action G D group}\n    (hTransitive : Transitive action) {x : D} (hFixed : Fixed action x)\n    (y : D) : y = x := by\n  rcases hTransitive x y with ⟨g, hg⟩\n  calc\n    y = action.act g x := hg.symm\n    _ = x := hFixed g",
+      "content_sha256": "df747f642d2ac46e295ea7f2e56c4b0fb610321d0275431394ee78232725a732",
+      "kind": "bounded_formal_kernel_definitions",
+      "material_id": "SEL-M05A",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-SEL-LEAN",
+      "source_sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+    },
+    {
+      "assumption_ids": [
+        "SEL-A06",
+        "SEL-A07",
+        "SEL-A08"
+      ],
+      "content": "theorem no_invariant_selector_of_transitive_distinct\n    {G : Type u} {D : Type v} {group : GroupData G}\n    {action : Action G D group}\n    (hTransitive : Transitive action) {a b : D} (hDistinct : a ≠ b) :\n    ¬ Nonempty (InvariantSelector action) := by\n  intro hSelector\n  rcases hSelector with ⟨selector⟩\n  have ha : a = selector.1 :=\n    fixed_choice_unique_of_transitive hTransitive selector.2 a\n  have hb : b = selector.1 :=\n    fixed_choice_unique_of_transitive hTransitive selector.2 b\n  exact hDistinct (ha.trans hb.symm)",
+      "content_sha256": "75164b5fedb4820e1460ba9262d7ab16e389de044c91fe015aaa315f65a25599",
+      "kind": "bounded_formal_kernel",
+      "material_id": "SEL-M05",
+      "provenance_kind": "source_excerpt",
+      "source_id": "SRC-SEL-LEAN",
+      "source_sha256": "6f23c92d72779e4fc5b13f56b34a8709ece2dfec27f7ce767170ed54d3d9f356"
+    }
+  ]
+}

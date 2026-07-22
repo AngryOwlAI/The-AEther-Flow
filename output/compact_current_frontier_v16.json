@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0819.yaml",
+    "research_control/handoffs/handoff-0820.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260722-009",
-    "latest_handoff_id": "handoff-0819",
-    "current_status": "p11_t03_proof_evidence_integration_complete_p11_t07_selected",
+    "active_task_id": "RT-20260722-010",
+    "latest_handoff_id": "handoff-0820",
+    "current_status": "p11_t07_independent_review_pilot_complete_p11_t08_selected",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260722-009",
-    "latest_research_handoff_id": "handoff-0819",
-    "latest_research_next_action": "Run exactly one bounded P11-T07 external-red-team-reviewer science AgentJob to pilot blind packets independence classification proof evidence semantic-smuggling checks positive-provenance gates and reviewer metrics on the selector theorem and one scoped metric or matter object without treating review as proof promotion or independent replication.",
+    "latest_research_task_id": "RT-20260722-010",
+    "latest_research_handoff_id": "handoff-0820",
+    "latest_research_next_action": "Run exactly one bounded P11-T08 process-integrity-auditor project-system AgentJob to audit P11 scientific-QA non-regression, false external labels, leaked verdicts, checker-as-proof and consensus-as-proof paths, blind-packet self-containment, semantic-probe boundary false positives, historical compatibility, source-registry authority, and rollout safety without changing scientific status.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v21_p11_t07_independent_review_pilot",
-    "role_family": "external-red-team-reviewer@0.1.0",
+    "route_id": "v21_p11_t08_scientific_qa_non_regression_audit",
+    "role_family": "process-integrity-auditor@0.1.0",
     "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Validate the new scientific QA system on high-value claims.",
+    "milestone_burden": "Close P11 with a safe rollout decision.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -325,8 +325,8 @@
     "delta": {
       "effect": "no_distance_delta",
       "changed": false,
-      "milestone": "none",
-      "burden_id": "none"
+      "milestone": "source_equivalence_eqsrc",
+      "burden_id": "source_equivalence_eqsrc"
     },
     "high_risk_rows": [
       {

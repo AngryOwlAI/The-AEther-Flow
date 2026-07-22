@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260722-009` and `handoff-0819`.
+`RT-20260722-010` and `handoff-0820`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260722-009` |
-| Latest handoff ID | `handoff-0819` |
-| Current status | `p11_t03_proof_evidence_integration_complete_p11_t07_selected` |
+| Active task ID | `RT-20260722-010` |
+| Latest handoff ID | `handoff-0820` |
+| Current status | `p11_t07_independent_review_pilot_complete_p11_t08_selected` |
 | V16 completed | false |
-| Current route family | integration or selection (project system) |
-| Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v21 independent review pilot |
-| Required next authority | One fresh P11-T07 external-review packet may exercise the completed P11-T03 P11-T04 P11-T05 and P11-T06 QA controls on the selector theorem and one scoped metric or matter object while preserving reviewer-access provenance and every protected authority boundary. |
-| Next recommended action | Run exactly one bounded P11-T07 external-red-team-reviewer science AgentJob to pilot blind packets independence classification proof evidence semantic-smuggling checks positive-provenance gates and reviewer metrics on the selector theorem and one scoped metric or matter object without treating review as proof promotion or independent replication. |
+| Current route family | audit or review (scientific audit) |
+| Target derivation milestone | `source_equivalence_eqsrc` |
+| Current burden | `source_equivalence_eqsrc`; status: unchanged_internal_review_and_missing_assumption_witness_only |
+| Required next authority | One fresh P11-T08 project-system audit may test the completed P11 controls and pilot evidence for non-regression, historical readability, source authority, and promotion shortcuts, then recommend rollout, bounded repair, or freeze. |
+| Next recommended action | Run exactly one bounded P11-T08 process-integrity-auditor project-system AgentJob to audit P11 scientific-QA non-regression, false external labels, leaked verdicts, checker-as-proof and consensus-as-proof paths, blind-packet self-containment, semantic-probe boundary false positives, historical compatibility, source-registry authority, and rollout safety without changing scientific status. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260722-009` |
-| Latest research handoff ID | `handoff-0819` |
-| Latest research next action | Run exactly one bounded P11-T07 external-red-team-reviewer science AgentJob to pilot blind packets independence classification proof evidence semantic-smuggling checks positive-provenance gates and reviewer metrics on the selector theorem and one scoped metric or matter object without treating review as proof promotion or independent replication. |
+| Latest research task ID | `RT-20260722-010` |
+| Latest research handoff ID | `handoff-0820` |
+| Latest research next action | Run exactly one bounded P11-T08 process-integrity-auditor project-system AgentJob to audit P11 scientific-QA non-regression, false external labels, leaked verdicts, checker-as-proof and consensus-as-proof paths, blind-packet self-containment, semantic-probe boundary false positives, historical compatibility, source-registry authority, and rollout safety without changing scientific status. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260722-009/00_TASK.yaml`.
-- Active task objective: Define and validate durable proof-evidence records for theorem sources proof sources proof objects toolchains trusted foundations and reproducible builds while keeping formal evidence distinct from physical interpretation and protected authority.
-- Latest handoff path: `research_control/handoffs/handoff-0819.yaml`.
+- Active task path: `research_control/tasks/RT-20260722-010/00_TASK.yaml`.
+- Active task objective: Exercise blind packets independence classification proof evidence semantic-smuggling checks positive-provenance gates and reviewer metrics on the selector theorem and the scoped g_eff source-record candidate without treating any internal review as proof promotion external review or independent replication.
+- Latest handoff path: `research_control/handoffs/handoff-0820.yaml`.
 - Latest handoff summary: not recorded.
-- Current route family: integration or selection (project system).
-- Next recommended action: Run exactly one bounded P11-T07 external-red-team-reviewer science AgentJob to pilot blind packets independence classification proof evidence semantic-smuggling checks positive-provenance gates and reviewer metrics on the selector theorem and one scoped metric or matter object without treating review as proof promotion or independent replication.
+- Current route family: audit or review (scientific audit).
+- Next recommended action: Run exactly one bounded P11-T08 process-integrity-auditor project-system AgentJob to audit P11 scientific-QA non-regression, false external labels, leaked verdicts, checker-as-proof and consensus-as-proof paths, blind-packet self-containment, semantic-probe boundary false positives, historical compatibility, source-registry authority, and rollout safety without changing scientific status.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded P11-T07 external-red-team-reviewer science AgentJob to pilot blind packets independence classification proof evidence semantic-smuggling checks positive-provenance gates and reviewer metrics on the selector theorem and one scoped metric or matter object without treating review as proof promotion or independent replication.
+Run exactly one bounded P11-T08 process-integrity-auditor project-system AgentJob to audit P11 scientific-QA non-regression, false external labels, leaked verdicts, checker-as-proof and consensus-as-proof paths, blind-packet self-containment, semantic-probe boundary false positives, historical compatibility, source-registry authority, and rollout safety without changing scientific status.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -337,18 +337,20 @@ Authorization layers:
 | `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
 | `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
+| `external_review_completed` | False | extension authorization field |
+| `human_expert_review_completed` | False | extension authorization field |
 | `independent_replication_completed` | False | extension authorization field |
+| `internal_review_execution_completed` | True | extension authorization field |
 | `p10_repair_authorized` | False | extension authorization field |
+| `p11_t08_project_system_audit_authorized` | False | extension authorization field |
 | `proof_authority` | False | extension authorization field |
-| `proof_evidence_registration_authorized` | True | extension authorization field |
 | `publication_authority` | False | extension authorization field |
-| `review_execution_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260722-009`;
-- latest handoff: `handoff-0819`;
-- current status: `p11_t03_proof_evidence_integration_complete_p11_t07_selected`;
+- active task: `RT-20260722-010`;
+- latest handoff: `handoff-0820`;
+- current status: `p11_t07_independent_review_pilot_complete_p11_t08_selected`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -358,8 +360,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0819.yaml`
-- `research_control/tasks/RT-20260722-009/00_TASK.yaml`
+- `research_control/handoffs/handoff-0820.yaml`
+- `research_control/tasks/RT-20260722-010/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -375,7 +377,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0819*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0820*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
