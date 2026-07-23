@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260723-002`
-- Latest handoff: `handoff-0835`
-- Current status: `p15_t01_p10_t07_identity_and_rt001_routing_snapshot_recovery_complete_p15_t03_selected`
+- Active task: `RT-20260723-003`
+- Latest handoff: `handoff-0836`
+- Current status: `p15_t03_selector_minimum_extension_theorem_manuscript_complete_p12_t05_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260723-002`
-- Latest research handoff: `handoff-0835`
-- Latest research next action: Run exactly one bounded v21 P15-T03 ontology-formalizer publication-preparation AgentJob to prepare the no-natural-selector and minimum-extension theorem paper while preserving scoped theorem and no-global-no-go boundaries.
+- Latest research task: `RT-20260723-003`
+- Latest research handoff: `handoff-0836`
+- Latest research next action: Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p15_t03_no_natural_selector_minimum_extension_theorem_paper`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `v21_p12_t05_durable_scientific_quality_metrics`
+- Role family: `project-control-maintainer@0.2.0`
 - Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Publish the strongest near-term general result rather than another candidate record.
+- Milestone burden: Reduce Goodhart pressure from packet counts.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `52ba0bea3a396ff1e47e620fc50077e28a24be4ad850d8cc072647fdcb3c6f4e`
-- JSON SHA-256: `2b9fdfaea924a6b10f4d8f1ea3a184a81a90a212758e3cda10696d2a3f924a8a`
+- YAML SHA-256: `b144e547d29d51433acf4f466778a63b73ad7b252b9275bed6c795a3a7ac6a11`
+- JSON SHA-256: `841cf9a40b82b0963fa9c937c1e64a1845463f73a63eeed6d75d36daea055257`
 
 ## Authority Warning
 

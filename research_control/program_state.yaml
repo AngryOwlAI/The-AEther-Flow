@@ -1,9 +1,69 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260723-002"
-latest_handoff_id: "handoff-0835"
-current_status: "p15_t01_p10_t07_identity_and_rt001_routing_snapshot_recovery_complete_p15_t03_selected"
-claim_boundary_summary: "RT-20260723-002 completed the exact generation-67 project-system recovery with three deterministic P10-T07 identity outputs, byte-preserved predecessor content, RT-001 role snapshot parity, literal handoff-0834 identity, and all pre-checkpoint gates PASS. No P15-T01 scientific byte or authority changed."
-next_recommended_action: "Run exactly one bounded v21 P15-T03 ontology-formalizer publication-preparation AgentJob to prepare the no-natural-selector and minimum-extension theorem paper while preserving scoped theorem and no-global-no-go boundaries."
+active_task_id: "RT-20260723-003"
+latest_handoff_id: "handoff-0836"
+current_status: "p15_t03_selector_minimum_extension_theorem_manuscript_complete_p12_t05_selected"
+claim_boundary_summary: "RT-20260723-003 completed one registered proposal-only selector and minimum-extension theorem manuscript, finite data, proof archive, internal review, and resolved two-child synthesis. General EqSrc, physical gauge, ontology, ledgers, Distance-to-GR, publication, and proof authority remain unchanged."
+next_recommended_action: "Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress."
+
+p15_t03_selector_minimum_extension_theorem_manuscript:
+  task_id: "RT-20260723-003"
+  parent_task_id: "RT-20260723-002"
+  parent_handoff_id: "handoff-0835"
+  plan_task_id: "P15-T03"
+  claim_boundary_id: "CB-V21-P15-T03-SELECTOR-MINIMUM-EXTENSION-MANUSCRIPT-001"
+  status: "PASS_PRECHECKPOINT_READY_FOR_NORMAL_CHECKPOINT"
+  route_label: "publication-preparation-packet"
+  selected_role_family: "ontology-formalizer@0.2.0"
+  selected_worker_skill: "continue-research"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Publish the strongest near-term general result rather than another candidate record."
+  dependency_ready: true
+  dependency_plan_task_ids:
+    - "P2-T08"
+    - "P3-T07"
+    - "P14-T05"
+  manuscript_path: "research_control/tasks/RT-20260723-003/artifacts/selector_minimum_extension_theorem_manuscript_v1.tex"
+  manuscript_sha256: "348fba00dc68f7791ffec4fb3edb8d70bc7db18cfd405f052572a639c51b62fa"
+  proof_archive_path: "research_control/tasks/RT-20260723-003/artifacts/selector_theorem_proof_archive_v1.yaml"
+  proof_archive_sha256: "978260b30ed921d5d34ba4229876d48b80744e5c92c5373397341a030774743d"
+  countermodel_data_path: "research_control/tasks/RT-20260723-003/artifacts/selector_theorem_countermodel_data_v1.json"
+  countermodel_data_sha256: "a3017cef419a7e6f82e6afe136fbc8d5d039d19836ec7f76793163059a525aff"
+  review_packet_path: "research_control/tasks/RT-20260723-003/artifacts/selector_minimum_extension_review_packet_v1.yaml"
+  review_packet_sha256: "05f9e49f3fa422c0c96930cb4a8e9d3f163fed41635fd51b673de9c37652a383"
+  completion_path: "research_control/tasks/RT-20260723-003/jobs/completions/AJC-AJ-RT-20260723-003-001.yaml"
+  completion_sha256: "c18ae55f4b4723a799ae081eb29b23c368af44f01e5d27ae7b2a7cd5873fb476"
+  handoff_id: "handoff-0836"
+  handoff_sha256: "d586db91bd207f5cb81b1d6d579fa80d2a17d43b7f825d7444c6287afcc11c43"
+  task_local_validation_status: "PASS_103_CHECKS"
+  latex_compile_status: "PASS_9_PAGES"
+  child_execution_count: 2
+  conflict_review_status: "RESOLVED"
+  unresolved_conflict_count: 0
+  checkpoint_status: "PENDING_NORMAL_GOVERNED_CHECKPOINT"
+  checkpoint_committed: false
+  current_adoption_status: "blocked_adoption_open_continuation"
+  same_milestone_continuation_open: true
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  p12_t05_dependency_ready: true
+  p12_t05_selected: true
+  p12_t05_executed: false
+  selected_next_work_item: "P12-T05"
+  selected_next_worker_skill: "improve-project-system"
+  selected_next_role_family: "project-control-maintainer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  general_eqsrc_discharged: false
+  physical_gauge_established: false
+  future_extension_impossibility_established: false
+  independent_external_review_present: false
+  scientific_status_changed: false
+  scientific_ledger_change_count: 0
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
 
 p15_t01_p10_t07_identity_routing_snapshot_recovery:
   task_id: "RT-20260723-002"

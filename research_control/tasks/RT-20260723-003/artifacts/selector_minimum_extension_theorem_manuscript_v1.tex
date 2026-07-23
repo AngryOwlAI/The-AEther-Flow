@@ -1,0 +1,625 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\G}{\mathcal G}
+\newcommand{\C}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\Nat}{\operatorname{Nat}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\Img}{\operatorname{im}}
+\newcommand{\Sel}{\operatorname{Sel}}
+\newcommand{\EqI}{\mathrel{\sim_I}}
+
+\title{Natural Selection Under Symmetry:\\
+Fixed-Point Obstructions, Finite Countermodels, and Minimum Extensions}
+\author{The Aether-Flow Research Project---draft/control}
+\date{23 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\begin{minipage}{0.93\linewidth}
+\textbf{Status and authority.}
+This manuscript is a task-local \texttt{draft/control},
+\texttt{proposal-only} science artifact.  It integrates previously registered
+mathematical results without adopting a source category, selector law,
+quotient, physical gauge, or ontology extension.  It does not establish
+general source equivalence (\(\mathrm{EqSrc}\)), a global no-go theorem,
+future-extension impossibility, proof authority, peer review, submission
+eligibility, publication authority, benchmark promotion, or a completed
+derivation of general relativity.
+\end{minipage}}
+\end{center}
+
+\begin{abstract}
+Let a small groupoid act functorially on sets of eligible choices.  Natural
+deterministic selectors are classified by a product of automorphism-fixed
+loci, which gives exact existence, uniqueness, and nonuniqueness criteria.
+A natural map from choices to relation data supplies a separate criterion for
+uniqueness of the induced relation, so representative nonuniqueness need not
+imply relational nonuniqueness.  Finite sign, line, root, grading, and
+relation-image models exhibit the alternatives.  We then organize candidate
+repairs in a typed eight-atom declaration envelope and prove that, inside any
+finite sound obstruction-clause model, every successful repair contains an
+inclusion-minimal hitting signature.  Finally, we compare representative
+selection with conditional quotient-first constructions and expose their
+source-derivation, interface-descent, and physical-interpretation burdens.
+The results are exact on their declared mathematical domains.  They do not
+derive those domains from the current Aether-Flow ontology or establish a
+universal physical obstruction.
+\end{abstract}
+
+\section{Question and contribution}
+
+Many structural models present a family of mathematically equivalent-looking
+descriptions and then require either one distinguished representative or a
+representative-free object.  The basic question is:
+\begin{quote}
+When can a choice be made coherently under every admitted structural
+isomorphism, when is that choice unique, and what additional structure is
+unavoidably declared when the answer is negative?
+\end{quote}
+
+The first result below is stated without project-specific vocabulary.  The
+later sections instantiate it on finite source models, relate failures to a
+typed extension envelope, and compare selection with a quotient route.  The
+individual category-theoretic ingredients are not claimed here as new.  This
+internal draft is a project-specific, source-traced synthesis of the
+fixed-locus classification, finite countermodels,
+minimum-extension logic, and conditional quotient implications, with their
+claim boundaries made explicit.
+
+\section{Natural selectors on a groupoid}
+
+\subsection{Data}
+
+Let \(\G\) be a small groupoid and let
+\[
+  S:\G\longrightarrow\mathbf{Set}
+\]
+be a functor.  Write \(I=\pi_0(\G)\) for the set of connected components.
+For each \(i\in I\), supply a representative object \(r_i\).  For every
+object \(X\) in component \(i=[X]\), supply an isomorphism
+\[
+  \tau_X:r_i\longrightarrow X,\qquad \tau_{r_i}=1_{r_i}.
+\]
+Define
+\[
+  H_i:=\Aut_{\G}(r_i),\qquad
+  F_i:=S(r_i)^{H_i}
+  =\{x\in S(r_i):S(h)x=x\ \text{for every }h\in H_i\}.
+\]
+A deterministic natural selector is a natural transformation
+\[
+  \sigma:1_{\G}\Rightarrow S,
+\]
+where \(1_{\G}\) is the constant singleton functor.  Let
+\(\Sel(\G,S):=\Nat(1_{\G},S)\).
+
+\begin{theorem}[Fixed-locus classification]
+\label{thm:classification}
+Evaluation at the supplied representatives is a bijection
+\[
+  \Sel(\G,S)\xrightarrow{\;\cong\;}\prod_{i\in I}F_i,\qquad
+  \sigma\longmapsto(\sigma_{r_i})_{i\in I}.
+\]
+The inverse sends \(x=(x_i)_{i\in I}\) to
+\[
+  \sigma^x_X=S(\tau_X)(x_{[X]}).
+\]
+\end{theorem}
+
+\begin{proof}
+If \(\sigma\) is natural and \(h\in H_i\), naturality at
+\(h:r_i\to r_i\) gives \(S(h)(\sigma_{r_i})=\sigma_{r_i}\); evaluation
+therefore lands in the stated product.
+
+Conversely, take \(x\in\prod_iF_i\).  For an isomorphism \(f:X\to Y\) in
+component \(i\), set
+\[
+  a:=\tau_Y^{-1}f\tau_X\in H_i.
+\]
+Because \(x_i\) is fixed by \(H_i\),
+\[
+  S(f)\sigma^x_X
+  =S(f\tau_X)x_i
+  =S(\tau_Ya)x_i
+  =S(\tau_Y)x_i
+  =\sigma^x_Y.
+\]
+Thus \(\sigma^x\) is natural.  Its value at \(r_i\) is \(x_i\).
+Conversely, naturality of \(\sigma\) at \(\tau_X\) gives
+\(\sigma_X=S(\tau_X)(\sigma_{r_i})\), so evaluation and reconstruction are
+inverse.
+\end{proof}
+
+\begin{corollary}[Existence and uniqueness]
+\label{cor:existence}
+The following statements hold.
+\begin{enumerate}[label=(\alph*)]
+  \item \(\Sel(\G,S)=\varnothing\) exactly when
+        \(\prod_iF_i=\varnothing\).
+  \item If some \(F_i\) is empty, then no selector exists.
+  \item If every \(F_i\) is nonempty, a selector exists exactly when a product
+        element is available.  This is automatic for finite \(I\), for a
+        supplied tuple, or under a declared suitable choice principle.
+  \item Exactly one selector exists if and only if every \(F_i\) is a
+        singleton.
+  \item At least two selectors exist if and only if some \(F_i\) contains two
+        points and the complementary product
+        \(\prod_{j\ne i}F_j\) is nonempty.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Apply elementary product-set facts to
+Theorem~\ref{thm:classification}.  The qualification in (c) is essential:
+in ZF, factorwise nonemptiness of an arbitrary family does not itself supply
+a product element.
+\end{proof}
+
+\begin{remark}[What the theorem does not say]
+The automorphisms are the arrows declared structural in \(\G\).  The theorem
+does not show that they are physical gauge transformations.  A fixed point is
+a coherent mathematical choice relative to the supplied functor; it is not
+thereby source-derived, physically preferred, operationally measurable, or
+empirically adequate.
+\end{remark}
+
+\subsection{Relation images are a separate question}
+
+Let \(E:\G\to\mathbf{Set}\) be another functor and let
+\(K:S\Rightarrow E\) be a natural transformation.  Composition defines
+\[
+  K_*:\Sel(\G,S)\longrightarrow\Nat(1_{\G},E),\qquad
+  K_*(\sigma)=K\circ\sigma .
+\]
+Write \(R_i=K_{r_i}(F_i)\).
+
+\begin{theorem}[Relation-image uniqueness]
+\label{thm:relation-image}
+The map \(K_*\) is well defined.  If \(\Sel(\G,S)\ne\varnothing\), then
+\[
+  |\Img K_*|=1
+  \quad\Longleftrightarrow\quad
+  |R_i|=1\ \text{for every }i\in I.
+\]
+Thus multiple selectors can induce one relation section, while two fixed
+choices with distinct \(K\)-images produce distinct relation sections when
+the complementary product is nonempty.
+\end{theorem}
+
+\begin{proof}
+Naturality of \(K\) makes \(K\circ\sigma\) natural.  Under
+Theorem~\ref{thm:classification}, the representative values of
+\(K_*(\sigma)\) are exactly \(K_{r_i}(x_i)\).  If every \(R_i\) is a
+singleton, all selector tuples have the same relation values.  Conversely,
+if some \(R_i\) contains two values, combine their preimages with one tuple
+from the nonempty complementary product to obtain two selector tuples whose
+relation sections differ at \(r_i\).
+\end{proof}
+
+\subsection{Noninvertible arrows add equalizer obligations}
+
+Let \(\C\) be a small category with wide core \(\G=\operatorname{Core}(\C)\),
+and let \(S:\C\to\mathbf{Set}\).
+
+\begin{theorem}[Full-category equalizer guard]
+\label{prop:equalizer}
+Restriction gives an injection
+\[
+  \Nat(1_{\C},S)\hookrightarrow\Nat(1_{\G},S).
+\]
+Its image consists exactly of the core selectors satisfying
+\[
+  S(f)(\sigma_X)=\sigma_Y
+\]
+for every noninvertible arrow \(f:X\to Y\) of \(\C\).
+\end{theorem}
+
+\begin{proof}
+The wide core has every object, so two natural transformations agreeing after
+restriction have identical components.  A core selector extends to
+\(\C\) precisely when its components satisfy the remaining naturality
+equations.
+\end{proof}
+
+The fixed-locus product therefore classifies the groupoid core.  It is not a
+substitute for the additional equalizer checks on a larger category.
+
+\section{Finite countermodels and positive controls}
+
+The companion JSON file reproduces the following finite calculations.  They
+are examples on declared mathematical actions, not physical systems.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\linewidth}
+                  >{\raggedright\arraybackslash}p{0.18\linewidth}
+                  >{\raggedright\arraybackslash}p{0.47\linewidth}}
+\toprule
+Model & Exact fixed-locus result & Consequence \\
+\midrule
+\endhead
+Sign swap & \(C_2\) acts transitively on two signs; fixed set empty
+& No selector on that declared one-object groupoid. \\
+Tagged singleton & trivial action on one supplied tag
+& One conditional selector; tag provenance is an added assumption. \\
+Three lines in \(\mathbb F_2^2\) & \(\mathrm{GL}(2,2)\) has order \(6\),
+acts transitively on three lines; fixed set empty
+& No invariant line selector under the full declared action. \\
+Marked line & its stabilizer has order \(2\) and fixes exactly the mark
+& One conditional selector after adding line data. \\
+Two-cycle root & \(C_2\) swaps two roots; fixed set empty
+& No root selector on the unmarked cycle. \\
+Four-cycle root & \(C_4\) acts transitively on four roots; fixed set empty
+& No root selector; the four candidates nevertheless fall into two declared
+parity relation classes. \\
+Loaded root & root-preserving choice space is a singleton
+& One conditional selector; root provenance remains open. \\
+Graded four-chain & order automorphisms are trivial and grade zero is unique
+& One conditional minimum; the grading is supplied structure. \\
+Trivial two-choice control & two fixed points
+& Two selectors.  An injective \(K\) gives two relation images while a
+constant \(K\) gives one. \\
+\bottomrule
+\end{longtable}
+
+These controls isolate three logically different outcomes: an empty fixed
+locus obstructs a selector; a singleton fixed locus gives a conditional
+unique selector; and a multiple fixed locus leaves representative
+underdetermination.  The last row directly prevents the invalid inference
+``multiple selectors imply multiple relations.''
+For the empty-fixed-locus rows, pointwise \(K\)-values may still be available
+on eligible choices, but they are not elements of \(\operatorname{Img}K_*\):
+the domain of \(K_*\) is empty because no natural selector exists.  The
+companion data therefore records eligible relation values separately from
+induced natural relation sections.
+
+\section{A typed extension envelope}
+
+Suppose a failed selector construction is repaired by declaring additional
+source-side structure.  Use the eight bookkeeping atoms
+\[
+  \mathcal A=\{R,O,Q,G,M,I,B,D\},
+\]
+standing respectively for root/partition data, orientation/line data,
+quotient/discriminator data, grade/order data, measure/kernel data,
+initial-state data, boundary data, and transition/evolution data.
+
+\begin{proposition}[Exact declaration envelope]
+\label{prop:b8}
+The syntactic declaration envelope
+\[
+  \mathcal L_{\mathrm{decl}}=(\mathcal P(\mathcal A),\subseteq)
+\]
+is the Boolean lattice \(B_8\).  It has \(256\) nodes, \(1024\) directed
+cover edges, and rank sizes
+\[
+  (1,8,28,56,70,56,28,8,1).
+\]
+\end{proposition}
+
+\begin{proof}
+There are \(2^8=256\) subsets.  A cover adds one absent atom, so the number
+of directed covers is
+\(\sum_{E\subseteq\mathcal A}(8-|E|)=8\,2^7=1024\).
+Rank \(k\) has \(\binom{8}{k}\) nodes.
+\end{proof}
+
+Boolean inclusion is only a declaration check.  Scientific assumption
+strength requires a well-typed reduct between realized extensions over the
+same baseline and target.  The admissible extension poset need not be all of
+\(B_8\), and the Boolean rank is neither a plausibility score nor an adoption
+rank.
+
+For a finite structural automorphism group \(K_X\) acting on eligible choices
+\(\mathcal D(X)\), let an extension package \(e_E\) have stabilizer
+\[
+  H_E=\bigcap_{a\in E}\operatorname{Stab}_{K_X}(e_a)
+\]
+and an \(H_E\)-stable compatible-choice set \(C_E(e_E)\).  Define
+\[
+  \Sigma(E,e_E)=C_E(e_E)\cap\Fix_{\mathcal D(X)}(H_E).
+\]
+
+\begin{proposition}[Compatible fixed-locus trichotomy]
+On the realized one-object finite groupoid,
+\[
+\begin{array}{rcl}
+|\Sigma|=0 &\Longleftrightarrow& \text{no compatible deterministic selector},\\
+|\Sigma|=1 &\Longleftrightarrow& \text{one compatible deterministic selector},\\
+|\Sigma|>1 &\Longleftrightarrow& \text{residual deterministic underdetermination}.
+\end{array}
+\]
+\end{proposition}
+
+\begin{proof}
+A compatible natural choice is exactly an element satisfying both
+compatibility and stabilizer-fixedness.
+\end{proof}
+
+Uniqueness is not monotone under declaration inclusion: a larger package may
+reduce the stabilizer and thereby enlarge the raw fixed locus.  Compatibility
+and typing must do substantive work.
+
+\section{Finite minimum extensions}
+
+Let \(U\) be a finite declared universe of extension capabilities.  Let
+\(J=\{1,\dots,n\}\) index obstruction burdens, with each nonempty
+\(C_j\subseteq U\) listing capabilities that can discharge burden \(j\).
+For \(E\subseteq U\), define
+\[
+  \operatorname{Esc}(E)
+  \quad\Longleftrightarrow\quad
+  E\cap C_j\ne\varnothing\ \text{for every }j\in J.
+\]
+
+\begin{theorem}[Finite minimum-extension signatures]
+\label{thm:hitting}
+For finite \(U\) and nonempty clauses \(C_j\):
+\begin{enumerate}[label=(\alph*)]
+  \item \(\operatorname{Esc}(E)\) holds exactly when \(E\) is a hitting set
+        of \(\{C_j:j\in J\}\);
+  \item every escaping \(E\) contains an inclusion-minimal escaping subset;
+  \item the collection
+        \[
+          \mathcal H_{\min}
+          =\{H\subseteq U:\operatorname{Esc}(H)
+          \text{ and no proper subset of }H\text{ escapes}\}
+        \]
+        is finite and nonempty; and
+  \item every successful construction represented in a sound clause model
+        realizes at least one \(H\in\mathcal H_{\min}\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Part (a) is the definition of a hitting set.  Starting from a finite escaping
+\(E\), delete any dispensable element while the escape predicate remains
+true.  Finite descent terminates at an inclusion-minimal escaping subset,
+proving (b).  The powerset of \(U\) is finite and \(U\) hits every nonempty
+clause, so minimal members exist and form a finite nonempty family, proving
+(c).  If a successful construction has a capability set represented in
+\(U\) and the clauses are sound for the exact question, its set escapes; (b)
+then supplies the required minimal subset.
+\end{proof}
+
+\begin{example}[Two-clause control]
+Let \(U=\{d,n,q\}\),
+\[
+  C_1=\{d,q\},\qquad C_2=\{n,q\}.
+\]
+Then
+\[
+  \mathcal H_{\min}=\bigl\{\{q\},\{d,n\}\bigr\}.
+\]
+The empty set and the singletons \(\{d\}\) and \(\{n\}\) fail.  Here \(d\)
+may stand for a source-derived discriminator, \(n\) for naturality and
+variation structure, and \(q\) for a quotient with interface descent.  The
+labels are capability bookkeeping, not adopted laws.
+\end{example}
+
+\begin{proposition}[Incomplete-universe guard]
+If a capability \(u_\star\) or a sound discharge mechanism is omitted from
+\(U\) or from every relevant clause, Theorem~\ref{thm:hitting} gives no
+verdict about extensions using \(u_\star\).  The theorem therefore cannot
+establish future-extension impossibility without a separate completeness
+result.
+\end{proposition}
+
+\begin{proof}
+The theorem quantifies only over subsets of \(U\).  An omitted capability is
+outside that quantified universe.
+\end{proof}
+
+``Minimum'' here always means inclusion-minimal in the declared finite model.
+It does not mean physically sufficient, least ontological change, empirically
+preferred, or authorized for adoption.
+
+\section{Quotient-first alternatives and their burdens}
+
+Representative choice is not the only mathematical route.  Let
+\(I:\C\to\D\) be a functor fixed before any object pair is evaluated and
+define
+\[
+  A\EqI B\quad\Longleftrightarrow\quad I(A)\cong I(B).
+\]
+
+\begin{proposition}[Kernel equivalence]
+The relation \(\EqI\) is an equivalence relation on the objects of \(\C\).
+\end{proposition}
+
+\begin{proof}
+Identity, inverse, and composition of isomorphisms in \(\D\) give
+reflexivity, symmetry, and transitivity.
+\end{proof}
+
+Further properties are conditional:
+\begin{enumerate}
+  \item a monoidal congruence requires declared operations and natural
+        comparison isomorphisms
+        \(I(A\otimes B)\cong I(A)\boxtimes I(B)\);
+  \item localization preservation requires \(I\) to factor through the
+        localization, while the converse requires isomorphism reflection;
+  \item exact coarse-graining preservation requires a factorization
+        \(I\cong\bar I Q\), while recovering equality before coarse graining
+        again requires reflection; and
+  \item variation invariance requires a declared natural isomorphism
+        \(IV\Rightarrow I\) (or its typed two-category analogue).
+\end{enumerate}
+
+The requirement of prospective fixation is necessary for auditability but is
+not sufficient for source derivation.  For any partition \(\Pi\) of a finite
+set \(X\), discrete
+categories and a functor sending each \(x\) to its block realize exactly that
+partition as a kernel relation.  The three-element set has five partitions,
+including the identity and universal relations.  Thus an independently
+derived admissibility or nontriviality principle is still needed.
+
+The marked-interface control is equally important.  Integral graph homology
+assigns both a marked edge \(K_2\) and a marked three-vertex path \(P_3\) the
+pair \((\beta_0,\beta_1)=(1,0)\).  If an operation adds an edge between the
+marked endpoints when absent, it leaves \(K_2\) at \((1,0)\) but turns the
+path into a cycle with \((1,1)\).  The homology kernel forgot the interface
+fact needed by the operation.  This does not refute the conditional
+congruence theorem; it exhibits failure of a missing descent premise.
+
+Consequently, a quotient route needs at least a source-derived functor,
+noncircular admissibility, descent for intended interfaces and operations,
+adequate preservation/reflection results, and a separate operational bridge.
+A mathematical quotient alone is not physical gauge, observational
+equivalence, or general \(\mathrm{EqSrc}\).
+
+\section{Relation to established literature}
+
+Eilenberg and Mac Lane's formulation of natural transformations supplies the
+coherence vocabulary and the distinction between objectwise and natural
+comparisons \cite{eilenberg1945}.  Anonymous-network election results show,
+within their own computational hypotheses, how symmetry and added resources
+constrain unique choice \cite{angluin1980,itai1981}; they are analogies, not
+proofs about the source functor used here.
+
+Palais proves local slice results under scoped Lie-group action hypotheses
+\cite{palais1961}, whereas Singer proves a topology-dependent obstruction to a
+continuous global gauge choice in a particular gauge-theory setting
+\cite{singer1978}.  Neither result licenses a universal EqSrc obstruction.
+Marsden and Weinstein exemplify quotient-first reduction under symplectic
+reduction hypotheses \cite{marsden1974}; their construction motivates the
+alternative route but does not supply this project's source action or
+operational equivalence.  Tannaka's reconstruction result illustrates that
+canonical reconstruction can require enriched compatible invariant data
+\cite{tannaka1939}, not merely a bare orbit set.
+
+Accordingly, the manuscript makes no priority claim for naturality,
+fixed-point obstructions, group-action examples, hitting sets, or quotient
+constructions individually.  Its novelty claim is limited to the
+project-specific integrated presentation and its explicit transfer and
+authority guards.  A broader novelty claim would require a dedicated,
+independent literature review beyond this internal packet.
+
+\section{Foundations and physical interpretation}
+
+The current canonical Aether-Flow ontology supplies an exact-GR interpretive
+benchmark, but it does not derive the category \(\C\), its core \(\G\), the
+choice functor \(S\), the transformation \(K\), the extension atoms, or the
+invariant functor \(I\) used here.  The mathematical results therefore have
+the status \texttt{blocked\_adoption\_open\_continuation}: the present
+ontology does not derive the required selector or quotient structures, while
+same-milestone research remains open.
+
+Four distinctions must be retained:
+\begin{enumerate}
+  \item structural isomorphism is not automatically physical gauge;
+  \item representative irrelevance is not automatically operational
+        equivalence;
+  \item a source-extension declaration is not an ontology adoption; and
+  \item exact downstream agreement with GR is not a first-principles
+        substrate derivation.
+\end{enumerate}
+
+No Distance-to-GR ledger row changes.  General \(\mathrm{EqSrc}\), an
+unscoped effective metric, matter coupling, source-derived Einstein
+equations, benchmark promotion, and a completed derivation remain outside the
+proved domain.
+
+\section{Reproducibility and review status}
+
+The task-local proof archive records each theorem, proof method, source hash,
+and limitation.  The companion JSON records nine fixed-point examples, all
+five partitions of a three-element set, the marked-interface countermodel,
+the \(B_8\) counts, and the two minimum signatures of the finite control.
+A deterministic checker recomputes these counts and verifies source hashes,
+required scope language, and authority flags.  Such validation checks
+consistency; it does not create scientific truth or proof authority.
+
+The associated review packet is a same-context internal source-trace and
+scope review.  It is not blind independent human review, peer review, or
+submission authorization.  External contact, release, and publication remain
+human-gated.
+
+\section{Conclusion}
+
+On a declared groupoid and Set-valued choice functor, natural deterministic
+selectors are exactly products of automorphism-fixed loci.  This yields
+precise obstruction and uniqueness criteria, while a separate relation map
+decides whether representative differences survive at the relation level.
+Finite examples expose the alternatives and the assumptions that repair them.
+Inside a finite sound clause model, every repair contains an
+inclusion-minimal hitting signature, but no conclusion follows about omitted
+capabilities.  Quotient-first constructions can avoid representative choice
+only after their functorial, interface, source-derivation, and operational
+burdens are met.
+
+These are scoped mathematical results and an internal integrated manuscript,
+not a global rejection of source-equivalence research.  The next scientific
+step remains a separately governed plan decision; this manuscript neither
+executes it nor supplies protected publication authority.
+
+\begin{thebibliography}{99}
+
+\bibitem{angluin1980}
+Angluin, D. (1980).
+Local and global properties in networks of processors (Extended abstract).
+In \emph{Proceedings of the twelfth annual ACM symposium on Theory of
+computing} (pp.~82--93). Association for Computing Machinery.
+\url{https://doi.org/10.1145/800141.804655}
+
+\bibitem{eilenberg1945}
+Eilenberg, S., \& Mac Lane, S. (1945).
+General theory of natural equivalences.
+\emph{Transactions of the American Mathematical Society, 58}, 231--294.
+\url{https://doi.org/10.1090/S0002-9947-1945-0013131-6}
+
+\bibitem{itai1981}
+Itai, A., \& Rodeh, M. (1981).
+Symmetry breaking in distributive networks.
+In \emph{22nd Annual Symposium on Foundations of Computer Science}
+(pp.~150--158). IEEE.
+\url{https://doi.org/10.1109/SFCS.1981.41}
+
+\bibitem{marsden1974}
+Marsden, J. E., \& Weinstein, A. (1974).
+Reduction of symplectic manifolds with symmetry.
+\emph{Reports on Mathematical Physics, 5}(1), 121--130.
+\url{https://doi.org/10.1016/0034-4877(74)90021-4}
+
+\bibitem{palais1961}
+Palais, R. S. (1961).
+On the existence of slices for actions of non-compact Lie groups.
+\emph{Annals of Mathematics, 73}(2), 295--323.
+\url{https://doi.org/10.2307/1970335}
+
+\bibitem{singer1978}
+Singer, I. M. (1978).
+Some remarks on the Gribov ambiguity.
+\emph{Communications in Mathematical Physics, 60}, 7--12.
+\url{https://doi.org/10.1007/BF01609471}
+
+\bibitem{tannaka1939}
+Tannaka, T. (1939).
+\emph{\"Uber den Dualit\"atssatz der nichtkommutativen topologischen Gruppen}.
+Tohoku Mathematical Journal, 45, 1--12.
+\url{https://www.jstage.jst.go.jp/article/tmj1911/45/0/45_0_1/_article}
+
+\end{thebibliography}
+
+\end{document}

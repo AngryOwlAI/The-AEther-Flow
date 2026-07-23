@@ -1,0 +1,112 @@
+schema_id: "selector_minimum_extension_proof_archive_v1"
+schema_version: 1
+artifact_id: "P15-T03-SELECTOR-MINIMUM-EXTENSION-PROOF-ARCHIVE-V1"
+task_id: "RT-20260723-003"
+job_id: "AJ-RT-20260723-003-001"
+plan_task_id: "P15-T03"
+status: "draft/control"
+claim_status: "proposal-only"
+authority: "task_local_proof_reproduction_not_proof_authority"
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Publish the strongest near-term general result rather than another candidate record."
+
+source_basis:
+  - object_id: "TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM"
+    path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    sha256: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  - object_id: "TEX-V21-P2-T04-EQSRC-FINITE-COUNTERMODEL-ATLAS"
+    path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+    sha256: "4a7c84ecf769b19e92b2b2dffd7224ddd4e1e02e4cc93cff797d01fa0e1bc62b"
+  - object_id: "TEX-V21-P3-T02-EQSRC-SOURCE-EXTENSION-LATTICE"
+    path: "research_control/tasks/RT-20260720-023/artifacts/eqsrc_source_extension_lattice_v1.tex"
+    sha256: "b0f539b7a1d53f9cafb93151f6420cbd12077c317e2bba8176442607c0319a85"
+  - object_id: "TEX-V21-P3-T05-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-RELATION-CANDIDATE"
+    path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+    sha256: "badc60c72ff16f84fe88568b825ff738a8f160a225f011715f027c1da2cfa1c3"
+  - object_id: "TEX-V21-P3-T06-EQSRC-INVARIANT-FUNCTOR-QUOTIENT-AUDIT"
+    path: "research_control/tasks/RT-20260720-027/artifacts/eqsrc_invariant_functor_quotient_smuggling_audit_v1.tex"
+    sha256: "0e3991d70dd7754149821d132808062dd5bf153c810086629686e45593c78c1c"
+  - object_id: "TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1"
+    path: "research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex"
+    sha256: "a5b59ddf497659097783e8e8dcd9c4de1726652265b0b53cab007da233f34aa3"
+
+formal_objects:
+  groupoid: "A small groupoid G."
+  eligible_choice_functor: "A functor S:G->Set."
+  connected_components: "A set I=pi_0(G) with supplied representative r_i and transport tau_X:r_i->X in each component."
+  automorphism_fixed_locus: "F_i=S(r_i)^{Aut_G(r_i)}."
+  selector_space: "Nat(1_G,S)."
+  relation_interface: "An optional natural transformation K:S=>E into another Set-valued functor."
+  extension_universe: "A finite declared capability set U with nonempty obstruction clauses C_j."
+  quotient_candidate: "A prospectively fixed functor I:C->D and the object relation A~_I B iff I(A) is isomorphic to I(B)."
+
+proof_obligations:
+  - theorem_id: "SEL-CORE-CLASSIFICATION-V1"
+    statement: "Evaluation at component representatives is a bijection Nat(1_G,S) congruent to the product of fixed loci F_i."
+    proof_method: "Naturality forces representative values to be automorphism-fixed. Supplied transports reconstruct a natural selector and automorphism invariance makes the reconstruction transport-independent."
+    status: "reproduced_with_full_proof"
+    scope_guard: "Arbitrary factorwise nonemptiness does not imply a product element in ZF without a supplied tuple finite component set or suitable choice principle."
+  - theorem_id: "SEL-EXISTENCE-UNIQUENESS-COROLLARIES-V1"
+    statement: "An empty factor obstructs selectors. A selector is unique exactly when every fixed locus is a singleton. Multiple selectors require one multiple fixed locus plus a nonempty complementary product."
+    proof_method: "Apply elementary product-set facts to the classification bijection."
+    status: "reproduced_with_full_proof"
+    scope_guard: "Objectwise fixed points do not automatically solve additional equalizer equations from noninvertible arrows."
+  - theorem_id: "SEL-RELATION-IMAGE-UNIQUENESS-V1"
+    statement: "When selectors exist the image of K_* has one element exactly when every K(F_i) is a singleton."
+    proof_method: "Naturality makes K compose with selectors. Representative evaluation identifies relation-section variability componentwise."
+    status: "reproduced_with_full_proof"
+    scope_guard: "Selector multiplicity and relation-image multiplicity are distinct."
+  - theorem_id: "SEL-FULL-CATEGORY-EQUALIZER-GUARD-V1"
+    statement: "Selectors on a category C inject into selectors on its wide core G and are exactly the core selectors satisfying the remaining naturality equalizers."
+    proof_method: "Restriction to the wide core is injective because it retains all objects. Naturality along every noninvertible arrow supplies the additional equations."
+    status: "reproduced_with_proof_sketch"
+    scope_guard: "The fixed-locus product classifies the groupoid core only unless the equalizer obligations are checked."
+  - theorem_id: "SEL-B8-DECLARATION-ENVELOPE-V1"
+    statement: "The powerset of eight declaration atoms is B8 with 256 nodes 1024 directed cover edges and rank sizes 1 8 28 56 70 56 28 8 1."
+    proof_method: "Count subsets cover pairs and binomial coefficients."
+    status: "reproduced_with_finite_calculation"
+    scope_guard: "Boolean inclusion is syntactic declaration order and not by itself scientific assumption strength."
+  - theorem_id: "SEL-COMPATIBLE-FIXED-LOCUS-TRICHOTOMY-V1"
+    statement: "For a realized finite extension the compatible selector set is the intersection of its compatibility set with the stabilizer fixed locus and cardinalities zero one and greater than one give obstruction uniqueness and residual underdetermination."
+    proof_method: "A compatible natural choice is exactly an element satisfying both predicates."
+    status: "reproduced_with_proof"
+    scope_guard: "Uniqueness is not monotone under declaration inclusion because reducing the stabilizer may enlarge the raw fixed locus."
+  - theorem_id: "SEL-MINIMUM-EXTENSION-HITTING-SET-V1"
+    statement: "Every escaping signature in a finite sound clause model contains an inclusion-minimal escaping signature and the family of minima is finite and nonempty."
+    proof_method: "Delete dispensable elements until finite descent terminates. The full finite universe hits every nonempty clause."
+    status: "reproduced_with_full_proof"
+    scope_guard: "The result is necessary routing structure only. Omitted capabilities and unsound clauses are outside its quantifiers."
+  - theorem_id: "SEL-INVARIANT-FUNCTOR-QUOTIENT-CONDITIONALS-V1"
+    statement: "A prospectively fixed invariant functor defines an equivalence relation and declared monoidal localization coarse-graining and variation structures preserve it under the stated comparison hypotheses."
+    proof_method: "Use identity inverse and composition of isomorphisms and conjugation by the declared natural comparison isomorphisms."
+    status: "reproduced_with_conditional_proof_summary"
+    scope_guard: "Reflection interface descent source derivation operational meaning and physical gauge require separate premises."
+
+finite_reproduction:
+  countermodel_path: "research_control/tasks/RT-20260723-003/artifacts/selector_theorem_countermodel_data_v1.json"
+  fixed_point_example_count: 9
+  arbitrary_partition_count_on_three_elements: 5
+  extension_lattice_node_count: 256
+  extension_lattice_cover_edge_count: 1024
+  minimum_extension_signatures:
+    - ["q"]
+    - ["d", "n"]
+  marked_interface_countermodel_present: true
+
+limitations:
+  - "The project source category and choice functor are proposal-only and are not derived by current canonical ontology."
+  - "Structural automorphisms are not thereby physical gauge transformations."
+  - "A source-defined quotient candidate is not general EqSrc without source derivation interface completeness and an operational bridge."
+  - "The finite capability universe is deliberately incomplete and cannot support future-extension impossibility."
+  - "This archive reproduces proofs for internal checking and does not create protected proof or publication authority."
+
+authority_limits:
+  theorem_truth_inferred_from_validator: false
+  scientific_status_changed: false
+  general_eqsrc_discharged: false
+  ontology_or_source_law_adopted: false
+  physical_gauge_established: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  global_no_go_claimed: false

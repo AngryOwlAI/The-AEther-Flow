@@ -994,6 +994,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P14-T02-NON-EMPIRICAL-ONTOLOGY-SUCCESS-CRITERIA-V1` `research_control/tasks/RT-20260722-018/artifacts/non_empirical_ontology_success_criteria_v1.tex`
 - `TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1` `research_control/tasks/RT-20260722-019/artifacts/no_target_positive_provenance_sufficiency_policy_v1.tex`
 - `TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1` `research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex`
+- `TEX-V21-P15-T03-SELECTOR-MINIMUM-EXTENSION-THEOREM-MANUSCRIPT-V1` `research_control/tasks/RT-20260723-003/artifacts/selector_minimum_extension_theorem_manuscript_v1.tex`
 - `TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION` `research_control/tasks/RT-20260720-014/artifacts/eqsrc_source_category_definition_v1.tex`
 - `TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `research_control/tasks/RT-20260720-015/artifacts/eqsrc_natural_selector_fixed_point_condition_v1.tex`
 - `TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex`
@@ -1993,6 +1994,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P14-T02-NON-EMPIRICAL-ONTOLOGY-SUCCESS-CRITERIA-V1` `wiki/tex/tex-v21-p14-t02-non-empirical-ontology-success-criteria-v1.md`
 - `WIKI-TEX-V21-P14-T03-NO-TARGET-POSITIVE-SUFFICIENCY-POLICY-V1` `wiki/tex/tex-v21-p14-t03-no-target-positive-sufficiency-policy-v1.md`
 - `WIKI-TEX-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1` `wiki/tex/tex-v21-p14-t05-negative-result-success-pathway-v1.md`
+- `WIKI-TEX-V21-P15-T03-SELECTOR-MINIMUM-EXTENSION-THEOREM-MANUSCRIPT-V1` `wiki/tex/tex-v21-p15-t03-selector-minimum-extension-theorem-manuscript-v1.md`
 - `WIKI-TEX-V21-P2-T01-EQSRC-SOURCE-CATEGORY-DEFINITION` `wiki/tex/tex-v21-p2-t01-eqsrc-source-category-definition.md`
 - `WIKI-TEX-V21-P2-T02-EQSRC-NATURAL-SELECTOR-FIXED-POINT-CONDITION` `wiki/tex/tex-v21-p2-t02-eqsrc-natural-selector-fixed-point-condition.md`
 - `WIKI-TEX-V21-P2-T03-EQSRC-NO-SELECTOR-NONUNIQUENESS-THEOREM` `wiki/tex/tex-v21-p2-t03-eqsrc-no-selector-nonuniqueness-theorem.md`

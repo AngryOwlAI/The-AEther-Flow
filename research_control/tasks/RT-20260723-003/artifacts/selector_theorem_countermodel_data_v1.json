@@ -1,0 +1,185 @@
+{
+  "schema_id": "selector_minimum_extension_countermodel_data_v1",
+  "schema_version": 1,
+  "artifact_id": "P15-T03-SELECTOR-MINIMUM-EXTENSION-COUNTERMODEL-DATA-V1",
+  "task_id": "RT-20260723-003",
+  "job_id": "AJ-RT-20260723-003-001",
+  "status": "draft/control",
+  "claim_status": "proposal-only",
+  "target_derivation_milestone": "source_equivalence_eqsrc",
+  "examples": [
+    {
+      "example_id": "SIGN-SWAP-EMPTY-FIXED-LOCUS",
+      "family": "response_tag",
+      "group": "C2",
+      "group_order": 2,
+      "eligible_choices": ["plus", "minus"],
+      "orbit_sizes": [2],
+      "fixed_choices": [],
+      "selector_count": 0,
+      "eligible_relation_value_count": 2,
+      "induced_natural_relation_section_count": 0,
+      "result": "scoped_no_selector_on_declared_action"
+    },
+    {
+      "example_id": "TAGGED-SINGLETON-POSITIVE-CONTROL",
+      "family": "response_tag",
+      "group": "trivial",
+      "group_order": 1,
+      "eligible_choices": ["declared_tag"],
+      "orbit_sizes": [1],
+      "fixed_choices": ["declared_tag"],
+      "selector_count": 1,
+      "eligible_relation_value_count": 1,
+      "induced_natural_relation_section_count": 1,
+      "result": "conditional_unique_selector"
+    },
+    {
+      "example_id": "GL2-F2-THREE-LINES",
+      "family": "orientation_line",
+      "group": "GL(2,F2)",
+      "group_order": 6,
+      "eligible_choices": ["L1", "L2", "L3"],
+      "orbit_sizes": [3],
+      "fixed_choices": [],
+      "selector_count": 0,
+      "eligible_relation_value_count": 3,
+      "induced_natural_relation_section_count": 0,
+      "result": "scoped_no_selector_on_declared_action"
+    },
+    {
+      "example_id": "MARKED-LINE-STABILIZER",
+      "family": "orientation_line",
+      "group": "Stab(L1)",
+      "group_order": 2,
+      "eligible_choices": ["L1", "L2", "L3"],
+      "orbit_sizes": [1, 2],
+      "fixed_choices": ["L1"],
+      "selector_count": 1,
+      "eligible_relation_value_count": 3,
+      "induced_natural_relation_section_count": 1,
+      "result": "conditional_unique_selector_from_added_mark"
+    },
+    {
+      "example_id": "ROOTED-TWO-CYCLE",
+      "family": "rooted_partition",
+      "group": "C2",
+      "group_order": 2,
+      "eligible_choices": ["v0", "v1"],
+      "orbit_sizes": [2],
+      "fixed_choices": [],
+      "selector_count": 0,
+      "eligible_relation_value_count": 2,
+      "induced_natural_relation_section_count": 0,
+      "result": "scoped_no_root_selector"
+    },
+    {
+      "example_id": "ROOTED-FOUR-CYCLE",
+      "family": "rooted_partition",
+      "group": "C4",
+      "group_order": 4,
+      "eligible_choices": ["v0", "v1", "v2", "v3"],
+      "orbit_sizes": [4],
+      "fixed_choices": [],
+      "selector_count": 0,
+      "eligible_relation_value_count": 2,
+      "induced_natural_relation_section_count": 0,
+      "potential_relation_classes": [["v0", "v2"], ["v1", "v3"]],
+      "potential_relation_class_count": 2,
+      "result": "scoped_no_root_selector_with_two_relation_classes"
+    },
+    {
+      "example_id": "LOADED-ROOT-SINGLETON",
+      "family": "rooted_partition",
+      "group": "root_preserving_subgroup",
+      "group_order": 1,
+      "eligible_choices": ["declared_root"],
+      "orbit_sizes": [1],
+      "fixed_choices": ["declared_root"],
+      "selector_count": 1,
+      "eligible_relation_value_count": 1,
+      "induced_natural_relation_section_count": 1,
+      "result": "conditional_unique_selector_from_added_root"
+    },
+    {
+      "example_id": "GRADED-FOUR-CHAIN",
+      "family": "graded_orbit",
+      "group": "trivial_order_automorphism_group",
+      "group_order": 1,
+      "eligible_choices": ["grade_zero"],
+      "orbit_sizes": [1],
+      "fixed_choices": ["grade_zero"],
+      "selector_count": 1,
+      "eligible_relation_value_count": 1,
+      "induced_natural_relation_section_count": 1,
+      "result": "conditional_unique_minimum"
+    },
+    {
+      "example_id": "TRIVIAL-TWO-CHOICE-RELATION-IMAGE-CONTROL",
+      "family": "theorem_control",
+      "group": "trivial",
+      "group_order": 1,
+      "eligible_choices": ["a", "b"],
+      "orbit_sizes": [1, 1],
+      "fixed_choices": ["a", "b"],
+      "selector_count": 2,
+      "injective_relation_image_count": 2,
+      "constant_relation_image_count": 1,
+      "result": "selector_multiplicity_does_not_force_relation_multiplicity"
+    }
+  ],
+  "arbitrary_partition_control": {
+    "carrier": ["a", "b", "c"],
+    "partition_count": 5,
+    "partitions": [
+      [["a"], ["b"], ["c"]],
+      [["a", "b"], ["c"]],
+      [["a", "c"], ["b"]],
+      [["a"], ["b", "c"]],
+      [["a", "b", "c"]]
+    ],
+    "result": "every_partition_is_realizable_by_a_prospectively_fixed_functor_between_finite_discrete_categories",
+    "guard": "prospective_fixation_alone_is_not_a_source_derivation_or_selection_principle"
+  },
+  "marked_interface_countermodel": {
+    "object_x": "marked_K2",
+    "object_y": "marked_P3_with_endpoints_marked",
+    "invariant_before": {
+      "x": [1, 0],
+      "y": [1, 0]
+    },
+    "operation": "add_edge_between_marked_endpoints_if_absent",
+    "invariant_after": {
+      "x": [1, 0],
+      "y": [1, 1]
+    },
+    "result": "the_homology_kernel_does_not_support_this_marked_interface_operation",
+    "guard": "this_refutes_a_missing_descent_premise_not_the_conditional_congruence_theorem"
+  },
+  "extension_lattice": {
+    "atoms": ["R", "O", "Q", "G", "M", "I", "B", "D"],
+    "node_count": 256,
+    "directed_cover_edge_count": 1024,
+    "rank_sizes": [1, 8, 28, 56, 70, 56, 28, 8, 1],
+    "guard": "boolean_inclusion_is_a_declaration_envelope_not_a_physical_cost_or_scientific_reduct_order"
+  },
+  "minimum_extension_control": {
+    "universe": ["d", "n", "q"],
+    "clauses": [["d", "q"], ["n", "q"]],
+    "minimal_signatures": [["q"], ["d", "n"]],
+    "failed_signatures": [[], ["d"], ["n"]],
+    "omitted_capability": "u_star",
+    "guard": "omitted_capabilities_are_outside_the_theorem_quantifiers"
+  },
+  "authority_limits": {
+    "scientific_status_changed": false,
+    "general_eqsrc_discharged": false,
+    "physical_gauge_established": false,
+    "ontology_or_source_law_adopted": false,
+    "future_extension_impossibility_established": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "publication_authorized": false,
+    "global_no_go_claimed": false
+  }
+}

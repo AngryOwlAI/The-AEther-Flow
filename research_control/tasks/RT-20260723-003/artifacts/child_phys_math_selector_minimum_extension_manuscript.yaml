@@ -1,0 +1,202 @@
+schema_id: "p15_t03_child_phys_math_selector_minimum_extension_manuscript_v1"
+schema_version: 1
+artifact_id: "P15-T03-CHILD-PHYS-MATH-SELECTOR-MINIMUM-EXTENSION-MANUSCRIPT-V1"
+task_id: "RT-20260723-003"
+job_id: "AJ-RT-20260723-003-001"
+plan_task_id: "P15-T03"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+authority: "draft/control"
+artifact_role: "parent_child_synthesis_input"
+claim_boundary_id: "CB-V21-P15-T03-SELECTOR-MINIMUM-EXTENSION-MANUSCRIPT-001"
+
+purpose: >-
+  Supply a source-grounded mathematical architecture integrating the natural-
+  selector classification, exact existence and uniqueness qualifications,
+  finite countermodels, the typed B8 extension lattice, the finite minimum-
+  extension theorem, and conditional quotient alternatives without enlarging
+  any theorem domain or scientific authority.
+
+generic_selector_theorem:
+  independent_statement: >-
+    Let G be a small groupoid, let S:G->Set be a covariant functor, and let
+    I=pi_0(G). Choose one representative r_i for every connected component and
+    isomorphisms tau_X:r_[X]->X. Put H_i=Aut_G(r_i) and let F_i be the points
+    of S(r_i) fixed by every H_i action. Evaluation at representatives is a
+    bijection Nat(1_G,S)->product_i F_i, with inverse
+    sigma_X=S(tau_X)(x_[X]).
+  proof_steps:
+    - "Naturality at each automorphism forces the representative value into F_i."
+    - "For f:X->Y, the conjugate tau_Y^{-1} f tau_X lies in H_[X], so fixedness proves naturality of the reconstructed family."
+    - "Identity transports and naturality at tau_X prove the two constructions are inverse."
+  existence_qualifications:
+    empty_factor_implies_no_selector: true
+    arbitrary_factorwise_nonempty_implies_product_nonempty: false
+    sufficient_product_conditions:
+      - "finite component set"
+      - "supplied product tuple"
+      - "declared suitable choice principle"
+  uniqueness_qualifications:
+    unique_selector: "Every F_i is a singleton."
+    multiple_selectors: "Some F_i has at least two points and the complementary product is nonempty."
+    multiple_fixed_factor_alone_sufficient: false
+  full_category_guard: >-
+    If S extends to a category C with wide core G, full selectors are exactly
+    the core selector tuples satisfying the additional naturality equalizers
+    for every noninvertible arrow of C.
+
+relation_image_theorem:
+  data: "A functor E:G->Set and a natural transformation K:S=>E."
+  statement: >-
+    If at least one selector exists, the image of K_* is a singleton exactly
+    when every component image K_r_i(F_i) is a singleton.
+  guards:
+    - "Multiple selectors do not necessarily induce multiple relations."
+    - "A unique selector-induced relation does not imply a unique selector."
+    - "If no selector exists, the K_* image is empty."
+    - "Available relation values on eligible choices must not be conflated with selector-induced natural relation sections."
+    - "K_* is not asserted to be surjective onto all natural E-sections."
+
+finite_examples:
+  atlas_fixture_count: 12
+  response:
+    sign_swap: "C2 acts transitively on two choices; fixed count 0; two available K-values; no selector-induced natural relation section."
+    token_swap: "C2 acts transitively on two token choices; fixed count 0; two available K-values."
+    tagged_singleton: "A supplied tag gives fixed count 1 and one conditional selector."
+  line:
+    full_action: "GL(2,F2) has order 6 and acts transitively on three lines; fixed count 0; three available line values."
+    marked_control: "The stabilizer of one marked line has order 2 and fixes exactly that line."
+    interpretation_guard: "Structural line symmetry is not physical orientation or gauge."
+  roots:
+    two_cycle: "C2 acts transitively on two roots; fixed count 0."
+    four_cycle: "C4 acts transitively on four roots; fixed count 0; four choices collapse to two parity relation values."
+    loaded_root: "A supplied root certificate gives one conditional selector."
+    four_token_census:
+      loop_free_directed_graph_count: 4096
+      admitted_rooted_record_count: 1088
+      admitted_graph_count: 557
+      one_relation_graph_count: 292
+      two_relation_graph_count: 265
+  multiple_fixed_control:
+    selector_count: 2
+    injective_K_relation_image_count: 2
+    constant_K_relation_image_count: 1
+  arbitrary_partition:
+    theorem: "Every partition of a finite set is the kernel relation of a prospectively fixed functor between finite discrete categories."
+    three_element_partition_count: 5
+    consequence: "Prospective fixation is auditable but is not a mathematical source-selection principle."
+
+typed_extension_lattice:
+  atoms:
+    R: "root or partition provenance"
+    O: "orientation or line datum"
+    Q: "quotient discriminator or readout law"
+    G: "grade rank order or minimum"
+    M: "measure stochastic kernel or readout"
+    I: "initial state preparation or history"
+    B: "boundary or terminal condition"
+    D: "transition evolution order or flow"
+  declaration_envelope:
+    lattice: "B8"
+    node_count: 256
+    directed_cover_edge_count: 1024
+    rank_sizes: [1, 8, 28, 56, 70, 56, 28, 8, 1]
+  admissible_reduct_guard: >-
+    Boolean inclusion is syntactic bookkeeping. Scientific assumption order
+    requires a well-typed target-neutral reduct between realized extensions.
+  compatible_fixed_locus: >-
+    Compatible selectors are C_E(e_E) intersect Fix(H_E). Cardinalities zero,
+    one, and greater than one give obstruction, uniqueness, and residual
+    underdetermination.
+  nonmonotonicity_guard: >-
+    Adding declarations can reduce the stabilizer and enlarge the raw fixed
+    locus, so selector uniqueness is not monotone in declaration inclusion.
+
+minimum_extension_theorem:
+  statement: >-
+    For a finite capability universe U and nonempty sound obstruction clauses
+    C_j, every escaping capability set contains an inclusion-minimal hitting
+    signature and the family of such minima is finite and nonempty.
+  proof: >-
+    Repeatedly delete dispensable elements from a finite escaping set until
+    finite descent terminates. U itself hits all nonempty clauses and P(U) is
+    finite.
+  finite_control:
+    universe: ["d", "n", "q"]
+    clauses:
+      - ["d", "q"]
+      - ["n", "q"]
+    minimal_signatures:
+      - ["q"]
+      - ["d", "n"]
+    failing_signatures:
+      - []
+      - ["d"]
+      - ["n"]
+  incomplete_universe_guard: >-
+    Omitted capabilities lie outside the theorem quantifiers. A separate
+    completeness theorem would be needed for future-extension impossibility.
+  forbidden_interpretation: "Inclusion-minimal does not mean physically sufficient preferred selected or adopted."
+
+conditional_quotient_implications:
+  base: "For a prospectively fixed I:C->D, A~_I B iff I(A) is isomorphic to I(B) is an equivalence relation."
+  composition: "Congruence requires declared bifunctors and an invertible natural comparison."
+  localization: "Preservation follows from factorization through localization; the converse requires isomorphism reflection."
+  coarse_graining: "Exact preservation requires I to factor through Q; recovering equality before information loss requires reflection."
+  variations: "Variation preservation requires the declared natural comparison I composed with V isomorphic to I."
+  arbitrary_partition_obstruction: "Prospectivity alone permits every finite partition including identity and universal extremes."
+  marked_interface_countermodel: >-
+    Marked K2 and marked P3 both have homology (1,0), but adding an absent edge
+    between marked endpoints leaves K2 at (1,0) and sends P3 to (1,1). The
+    object quotient forgets interface data needed by that operation.
+  exact_limit: >-
+    This refutes a missing descent premise rather than the conditional
+    congruence theorem. Source derivation, reflection, interface completeness,
+    operational meaning, and physical gauge remain separate.
+
+source_basis:
+  - path: "research_control/tasks/RT-20260720-016/artifacts/eqsrc_no_selector_nonuniqueness_theorem_v1.tex"
+    sha256: "d6df090765c9da56d08fdac41d8d0af5575391a382206e853cfda756da9a56ae"
+  - path: "research_control/tasks/RT-20260720-017/artifacts/eqsrc_finite_countermodel_atlas_v1.tex"
+    sha256: "4a7c84ecf769b19e92b2b2dffd7224ddd4e1e02e4cc93cff797d01fa0e1bc62b"
+  - path: "research_control/tasks/RT-20260720-023/artifacts/eqsrc_source_extension_lattice_v1.tex"
+    sha256: "b0f539b7a1d53f9cafb93151f6420cbd12077c317e2bba8176442607c0319a85"
+  - path: "research_control/tasks/RT-20260720-026/artifacts/eqsrc_invariant_functor_quotient_relation_candidate_v1.tex"
+    sha256: "badc60c72ff16f84fe88568b825ff738a8f160a225f011715f027c1da2cfa1c3"
+  - path: "research_control/tasks/RT-20260720-027/artifacts/eqsrc_invariant_functor_quotient_smuggling_audit_v1.tex"
+    sha256: "0e3991d70dd7754149821d132808062dd5bf153c810086629686e45593c78c1c"
+  - path: "research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex"
+    sha256: "a5b59ddf497659097783e8e8dcd9c4de1726652265b0b53cab007da233f34aa3"
+
+handoff_to_parent:
+  shared_consensus:
+    - "The selector theorem is complete only on the declared groupoid and functor."
+    - "Empty singleton and multiple fixed loci classify deterministic point selectors while relation images probability dynamics and quotients are different targets."
+    - "Finite controls establish no physical gauge or universal obstruction."
+    - "B8 is a declaration envelope rather than a physical cost order."
+    - "Minimum signatures are finite-model routing lower bounds."
+    - "Quotient theorems retain separate reflection interface source-derivation and physical-bridge obligations."
+    - "General EqSrc remains open."
+  unique_contribution:
+    - "A jargon-independent theorem and proof architecture."
+    - "An integrated comparison of selection relation irrelevance extension minima and quotient-first alternatives."
+    - "Exact finite counts and proof/data boundaries for parent replay."
+  unresolved_limitations:
+    - "The source category selector and quotient packages are not ontology-derived."
+    - "The full groupoid relation-image and noninvertible-arrow results are not covered by the existing finite Lean archive."
+    - "The extension universe is finite and non-exhaustive."
+    - "No operational matter-response empirical or exact-GR bridge is supplied."
+
+authority_limits:
+  theorem_truth_inferred_from_validator: false
+  structural_automorphisms_are_physical_gauge: false
+  general_eqsrc_discharged: false
+  global_no_go_established: false
+  future_extension_impossibility_established: false
+  ontology_modified: false
+  source_law_adopted: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  external_human_review_present: false
+  publication_authorized: false

@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260723-002` and `handoff-0835`.
+`RT-20260723-003` and `handoff-0836`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260723-002` |
-| Latest handoff ID | `handoff-0835` |
-| Current status | `p15_t01_p10_t07_identity_and_rt001_routing_snapshot_recovery_complete_p15_t03_selected` |
+| Active task ID | `RT-20260723-003` |
+| Latest handoff ID | `handoff-0836` |
+| Current status | `p15_t03_selector_minimum_extension_theorem_manuscript_complete_p12_t05_selected` |
 | V16 completed | false |
-| Current route family | benchmark or recovery (project system) |
+| Current route family | publication preparation (scientific) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v21 selector minimum extension theorem manuscript |
-| Required next authority | After the normal checkpoint commits this preserved recovery transaction, one separately claimed P15-T03 ontology-formalizer packet may prepare a focused no-natural-selector and minimum-extension theorem manuscript, proof archive, countermodel data, and review packet without globalizing scoped results or creating publication authority. |
-| Next recommended action | Run exactly one bounded v21 P15-T03 ontology-formalizer publication-preparation AgentJob to prepare the no-natural-selector and minimum-extension theorem paper while preserving scoped theorem and no-global-no-go boundaries. |
+| Current burden | none for physics derivation; live control burden is v21 durable scientific quality metrics |
+| Required next authority | One fresh P12-T05 project-system packet may define denominator-bound durable scientific-quality metrics, reporting, calibration, and warning policy without treating metrics, routing, or system validation as theorem truth or physics progress. |
+| Next recommended action | Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260723-002` |
-| Latest research handoff ID | `handoff-0835` |
-| Latest research next action | Run exactly one bounded v21 P15-T03 ontology-formalizer publication-preparation AgentJob to prepare the no-natural-selector and minimum-extension theorem paper while preserving scoped theorem and no-global-no-go boundaries. |
+| Latest research task ID | `RT-20260723-003` |
+| Latest research handoff ID | `handoff-0836` |
+| Latest research next action | Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260723-002/00_TASK.yaml`.
-- Active task objective: Regenerate only the three drifted P10-T07 content-address identity outputs from the current P10-T05 contract, preserve the predecessor copy byte-for-byte, align the RT-001 execution-role write allowlist with its immutable AgentJob snapshot, identify handoff-0834 literally in its Markdown mirror, and complete one normal governed checkpoint without executing P15-T03.
-- Latest handoff path: `research_control/handoffs/handoff-0835.yaml`.
-- Latest handoff summary: RT-20260723-002 deterministically reseals exactly three P10-T07 identity outputs from the unchanged tool and current P10-T05 contract, preserves the predecessor e22bde41 content copy byte-for-byte, makes the expired RT-001 execution-role and registry allowlists equal its immutable AgentJob, and adds the missing literal handoff-0834 Markdown identity. All focused, migration-readiness, routing, exact-path, protected P15-T01, repository, documentation, memory, and claim-boundary gates pass before one normal governed checkpoint. No P15-T01 scientific byte, event-store activation, scientific status, ontology, Distance-to-GR ledger, external action, or P15-T03 execution changed.
-- Current route family: benchmark or recovery (project system).
-- Next recommended action: Run exactly one bounded v21 P15-T03 ontology-formalizer publication-preparation AgentJob to prepare the no-natural-selector and minimum-extension theorem paper while preserving scoped theorem and no-global-no-go boundaries.
+- Active task path: `research_control/tasks/RT-20260723-003/00_TASK.yaml`.
+- Active task objective: Integrate the general selector classification finite countermodels typed extension lattice minimum-extension theorem and conditional quotient implications into one source-grounded manuscript whose foundations interpretation and novelty language remain exactly scoped.
+- Latest handoff path: `research_control/handoffs/handoff-0836.yaml`.
+- Latest handoff summary: P15-T03 completed one registered proposal-only selector and minimum-extension theorem manuscript with a fixed-locus classification, relation-image distinction, finite countermodels, B8 declaration envelope, finite minimum-extension theorem, conditional quotient guards, eight-source literature boundary, and resolved two-child synthesis. The 103-check task-local validator and two-pass nine-page TeX build pass. General EqSrc, physical gauge, ontology adoption, scientific ledgers, Distance-to-GR, external review, publication, proof authority, and completed derivation remain unchanged.
+- Current route family: publication preparation (scientific).
+- Next recommended action: Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run exactly one bounded v21 P15-T03 ontology-formalizer publication-preparation AgentJob to prepare the no-natural-selector and minimum-extension theorem paper while preserving scoped theorem and no-global-no-go boundaries.
+Run exactly one bounded v21 P12-T05 project-control-maintainer project-system AgentJob to replace misleading volume proxies with denominator-bound durable scientific-quality metrics without treating a score or system success as theorem truth or Distance-to-GR progress.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -326,13 +326,24 @@ No validation-layer split is recorded in the latest handoff.
 
 Authorization layers:
 
-No authorization-layer split is recorded in the latest handoff.
+| Authorization field | Value | Meaning |
+| --- | --- | --- |
+| `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
+| `protected_scoped_gate_review_scope` | not_applicable | exact scope of protected review authority |
+| `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
+| `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
+| `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
+| `p12_t05_project_system_packet_authorized` | False | extension authorization field |
+| `project_control_change_authorized` | False | extension authorization field |
+| `project_control_change_scope` | P15-T03 completion only | extension authorization field |
+| `proof_authority` | False | extension authorization field |
+| `publication_authority` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260723-002`;
-- latest handoff: `handoff-0835`;
-- current status: `p15_t01_p10_t07_identity_and_rt001_routing_snapshot_recovery_complete_p15_t03_selected`;
+- active task: `RT-20260723-003`;
+- latest handoff: `handoff-0836`;
+- current status: `p15_t03_selector_minimum_extension_theorem_manuscript_complete_p12_t05_selected`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -342,8 +353,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0835.yaml`
-- `research_control/tasks/RT-20260723-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-0836.yaml`
+- `research_control/tasks/RT-20260723-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -359,7 +370,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0835*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0836*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations
