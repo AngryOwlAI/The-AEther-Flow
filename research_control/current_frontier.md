@@ -3,7 +3,7 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260723-012` and `handoff-0845`.
+`RT-20260723-014` and `handoff-0847`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
@@ -14,15 +14,15 @@ tracked authority files govern.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260723-012` |
-| Latest handoff ID | `handoff-0845` |
-| Current status | `p12_t06_contract_parity_recovery_pass_checkpoint_ready` |
+| Active task ID | `RT-20260723-014` |
+| Latest handoff ID | `handoff-0847` |
+| Current status | `p12_t07_resolver_fixture_isolated_checkpoint_ready_signal_reseal_then_p13_t01` |
 | V16 completed | false |
 | Current route family | benchmark or recovery (project system) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v21 methodology evaluation |
-| Required next authority | One governed checkpoint may commit the cumulative P12-T06 transaction. Only after that commit may one fresh bounded continue-research frame execute P12-T07 methodology evaluation without treating methodology evidence as scientific progress. |
-| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260723-012-001. Only after it commits, continue the v21 relay with one fresh bounded P12-T07 methodology-evaluation frame through continue-research. |
+| Current burden | none for physics derivation; live control burden is p12 t05 generated artifact source integrity reseal |
+| Required next authority | One governed checkpoint may commit the cumulative P12-T07 transaction. Only after that commit may one separate improve-project-system packet resolve PIS-RT-20260723-013-001 by resealing the exact P12-T05 generated outputs and downstream hashes without changing metric semantics; P13-T01 remains the normal included continuation after that prerequisite. |
+| Next recommended action | Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01. |
 
 ## Active-State Bifurcation
 
@@ -33,9 +33,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260723-012` |
-| Latest research handoff ID | `handoff-0845` |
-| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260723-012-001. Only after it commits, continue the v21 relay with one fresh bounded P12-T07 methodology-evaluation frame through continue-research. |
+| Latest research task ID | `RT-20260723-014` |
+| Latest research handoff ID | `handoff-0847` |
+| Latest research next action | Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -68,12 +68,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260723-012/00_TASK.yaml`.
-- Active task objective: Repair only the sealed P12-T06 staged research-control contract and parity findings, preserve the passing dashboard payload and every scientific boundary, and make the cumulative transaction ready for one normal governed checkpoint.
-- Latest handoff path: `research_control/handoffs/handoff-0845.yaml`.
-- Latest handoff summary: Generation 80 restored the exact source-backed P12-T06 strict-YAML memory-authority payload-exclusion completion authorization dual-budget role-registry ordinary-route active-state and content-hash contracts sealed by the failed checkpoint. All six dashboard payload hashes privacy freshness validator behavior scientific status and protected authority remain unchanged. The cumulative transaction is ready for one governed checkpoint.
+- Active task path: `research_control/tasks/RT-20260723-014/00_TASK.yaml`.
+- Active task objective: Make the resolver skill-contract test supply an explicit empty open-signal set, preserve the two intentional live-signal precedence regressions and the complete P12-T07 transaction, and prepare the cumulative transaction for one normal governed checkpoint.
+- Latest handoff path: `research_control/handoffs/handoff-0847.yaml`.
+- Latest handoff summary: Generation 82 isolated the resolver skill-contract no-signal fixture with one explicit empty open-signal set. The fixture's boundary assertions and resolver implementation are unchanged, both intentional live-signal regressions still pass, the full 63-test classifier module passes, and all 21 protected P12-T07 payload handoff and signal-sidecar paths retain their routed hashes. Only the predecessor documentation-impact receipt was synchronized for the cumulative gate. The transaction is ready for one governed checkpoint.
 - Current route family: benchmark or recovery (project system).
-- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260723-012-001. Only after it commits, continue the v21 relay with one fresh bounded P12-T07 methodology-evaluation frame through continue-research.
+- Next recommended action: Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -302,7 +302,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the one authorized governed checkpoint for AJ-RT-20260723-012-001. Only after it commits, continue the v21 relay with one fresh bounded P12-T07 methodology-evaluation frame through continue-research.
+Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -320,20 +320,20 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 6 | receipt complete |
-| `PENDING` | 1 | open item; evidence must explain why |
+| `PASS` | 3 | receipt complete |
+| `PENDING` | 4 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Generation 80 was validated claimed and consumed exactly once before its one routed worker invocation. |
-| `completion_internal` | PASS | receipt complete | The task-local receipt binds the sealed blocker source repairs and all six preserved dashboard payload hashes. |
-| `post_write` | PASS | receipt complete | Dashboard freshness focused tests classification resolver signal documentation claim-language and diff checks pass. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | One normal governed checkpoint remains required before P12-T07. |
-| `renderer` | PASS | receipt complete | Task index current frontier and compact frontier were rendered fresh from the recovery authority surfaces. |
-| `memory_bootstrap` | PASS | receipt complete | Tracked memory derivatives were synchronized from canonical sources and registries and validate-only passed. |
-| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation passes with historical warnings only and no current hard failure. |
+| `pre_execution` | PASS | receipt complete | Generation 82 was validated claimed and consumed exactly once before its one routed worker invocation. |
+| `completion_internal` | PASS | receipt complete | The task-local receipt binds the exact fixture repair and 21 protected predecessor payload handoff and sidecar hashes. |
+| `post_write` | PASS | receipt complete | Three focused regressions and the full 63-test project-change-classifier module pass. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | One normal governed checkpoint remains required before the existing signal sidecar may be processed. |
+| `renderer` | PENDING | open item; evidence must explain why | Task index current frontier and compact frontier must be rendered from finalized control sources before checkpoint. |
+| `memory_bootstrap` | PENDING | open item; evidence must explain why | Tracked memory derivatives must be synchronized and validate-only must pass before checkpoint. |
+| `claim_language_linter` | PENDING | open item; evidence must explain why | Changed-source claim-language validation remains required before checkpoint. |
 
 Authorization layers:
 
@@ -354,9 +354,9 @@ Authorization layers:
 
 Legacy compatibility records:
 
-- active task: `RT-20260723-012`;
-- latest handoff: `handoff-0845`;
-- current status: `p12_t06_contract_parity_recovery_pass_checkpoint_ready`;
+- active task: `RT-20260723-014`;
+- latest handoff: `handoff-0847`;
+- current status: `p12_t07_resolver_fixture_isolated_checkpoint_ready_signal_reseal_then_p13_t01`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -366,8 +366,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0845.yaml`
-- `research_control/tasks/RT-20260723-012/00_TASK.yaml`
+- `research_control/handoffs/handoff-0847.yaml`
+- `research_control/tasks/RT-20260723-014/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -383,7 +383,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0845*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0847*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

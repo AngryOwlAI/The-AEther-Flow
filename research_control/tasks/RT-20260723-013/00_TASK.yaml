@@ -1,0 +1,84 @@
+validation_status: "PASS"
+task_id: "RT-20260723-013"
+task_type: "v21_governance_methodology_evaluation"
+title: "Evaluate the v21 governance and methodology reforms"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "integration_or_selection"
+  milestone: "source_equivalence_eqsrc"
+  candidate_family: "v21_governance_methodology_ablation"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "science_draft"
+  scope: "scientific_audit"
+status: "completed"
+created_at: "2026-07-23T20:19:27Z"
+updated_at: "2026-07-23T20:36:23Z"
+parent_task_id: "RT-20260723-012"
+parent_handoff_id: "handoff-0845"
+current_decision_id: "DDR-20260723-013"
+current_job_id: "AJ-RT-20260723-013-001"
+role_id: "external-red-team-reviewer"
+role_version: "0.1.0"
+execution_role_ref: "external-red-team-reviewer@0.1.0--RT-20260723-013"
+requires_human_gate: false
+human_authorization_note: "Generation 81 of the immutable user-requested relay and handoff-0845 authorize exactly one dependency-ready P12-T07 methodology-evaluation packet. They do not authorize scientific promotion, ontology adoption, external contact, publication, or proof authority."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v21"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  plan_phase_id: "P12"
+  plan_task_id: "P12-T07"
+  plan_task_name: "Evaluate the v21 governance and methodology reforms"
+  recommendation_ids:
+    - "V21-R34"
+    - "V21-R35"
+    - "V21-R36"
+    - "V21-R37"
+    - "V21-R43"
+    - "V21-R44"
+    - "V21-R45"
+    - "V21-R51"
+    - "V21-R52"
+    - "V21-R53"
+    - "V21-R69"
+objective: "Run reproducible ablations and route-history analyses to test whether payload gates, family freezes, dual budgets, reviewer diversity, and quality metrics improve research decisions."
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Assess the AI research system as a research object without promoting physics."
+route_label: "methodology-evaluation-packet"
+dual_budget_category: "mixed"
+primary_budget: "physics"
+claim_boundary_id: "CB-V21-P12-T07-GOVERNANCE-METHODOLOGY-EVALUATION-001"
+claim_boundary:
+  allowed_scope: "One task-local methodology evaluation memo, deterministic ablation result, limitations and next-study plan, two-child synthesis, compact receipts, standard control records, and one next handoff."
+  dependency_task_ids:
+    - "RT-20260722-013"
+    - "RT-20260722-015"
+    - "RT-20260722-011"
+    - "RT-20260723-011"
+    - "RT-20260723-012"
+  current_handoff: "handoff-0845"
+  fixture_and_route_history_analysis_authorized: true
+  causal_superiority_claim_authorized: false
+  external_review_completed: false
+  human_expert_review_completed: false
+  independent_replication_completed: false
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  proof_authority: false
+output_artifacts:
+  - "research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_ablation_results.json"
+  - "research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_evaluation_memo.md"
+  - "research_control/tasks/RT-20260723-013/artifacts/p12_t07_limitations_and_next_study.md"
+  - "research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_validation.json"
+  - "research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_compact_receipt.json"
+  - "research_control/tasks/RT-20260723-013/artifacts/validation_blocker_checkpoint_project_improvement_signal_fixture_v1.yaml"
+documentation_impact_id: "DI-RT-20260723-013-001"
+completion_id: "AJC-AJ-RT-20260723-013-001"
+project_improvement_signals:
+  - "PIS-RT-20260723-013-001"
+closure_status: "payload_complete_checkpoint_blocked_project_system_fixture_recovery_required"
+summary: "P12-T07 completed a source-bound five-mechanism methodology evaluation with two-child synthesis. Three controls have bounded support, reviewer context evidence is mixed, and the P12-T05 quality-metric mechanism is integrity-qualified because three live source hashes disagree with its stored report and receipt. The single governed checkpoint failed closed on one live-signal-coupled project-change resolver test fixture, restored the index, and made no commit. No physics or protected authority changed."
+next_recommended_action: "Run one exact-manifest improve-project-system recovery that isolates the resolver skill-contract fixture from live open signals, then rerun and checkpoint the preserved P12-T07 transaction; only afterward process PIS-RT-20260723-013-001 and resume P13-T01."

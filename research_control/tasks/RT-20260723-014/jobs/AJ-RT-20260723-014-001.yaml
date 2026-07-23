@@ -1,0 +1,324 @@
+job_id: "AJ-RT-20260723-014-001"
+task_id: "RT-20260723-014"
+decision_id: "DDR-20260723-014"
+role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-014"
+status: "completed"
+validation_status: "PASS"
+created_at: "2026-07-23T22:21:12Z"
+started_at: "2026-07-23T22:21:12Z"
+completed_at: "2026-07-23T22:26:02Z"
+completion_path: "research_control/tasks/RT-20260723-014/jobs/completions/AJC-AJ-RT-20260723-014-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The user-authorized recursive relay immutably routed generation 82 through improve-project-system for this exact P12-T07 resolver-fixture recovery."
+objective: "Isolate only the resolver skill-contract no-signal fixture, preserve intentional live-signal precedence behavior and every P12-T07 transaction byte, and checkpoint the cumulative transaction before the separate P12-T05 signal reseal and P13-T01."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system fixture isolation only; no derivation milestone advances."
+route_label: "isolate_resolver_skill_contract_fixture_from_live_signals_v1"
+route_reason: "The generation-81 checkpoint passed its task-local and control gates but one of 1196 repository tests read the newly open signal registry while asserting a no-signal skill-contract boundary."
+immutable_route_sha256: "b8701d35374a252c93f7c884264c41104f1d4b0e9e9dce29b294d517a786e976"
+plan_task_id: "P12-T07"
+recovery_for_plan_task_id: "P12-T07"
+next_plan_task_id: "P13-T01"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific methodology resolver policy or live-signal precedence assumption changes; one no-signal regression fixture supplies its missing explicit empty signal set."
+  materiality_basis: "Restores deterministic repository-test compatibility and checkpoint eligibility for the preserved P12-T07 transaction."
+  source_basis:
+    - "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+    - "research_control/handoffs/handoff-0846.yaml"
+    - "research_control/tasks/RT-20260723-013/artifacts/validation_blocker_checkpoint_project_improvement_signal_fixture_v1.yaml"
+  expected_artifact_paths:
+    - "tests/test_project_change_classifier.py"
+    - "research_control/tasks/RT-20260723-014/artifacts/resolver_skill_contract_fixture_isolation_receipt.json"
+  project_system_justification: "The packet changes one regression fixture and control evidence only; it creates no physics result, signal resolution, or P13-T01 execution."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "tests/test_project_change_classifier.py"
+      - "research_control/tasks/RT-20260723-014/artifacts/resolver_skill_contract_fixture_isolation_receipt.json"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the skill-contract fixture supplies an explicit empty open-signal set and retains its project-control-maintainer assertions"
+      - "the high-signal-preemption and selected-sidecar-context regressions remain unchanged and pass"
+      - "the full project-change-classifier module passes"
+      - "the preserved P12-T07 payload signal sidecar and scientific boundaries remain unchanged"
+      - "one normal governed checkpoint commits without legacy validation"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: true
+    exception_id: "BLOCK-P12-T07-PROJECT-IMPROVEMENT-SIGNAL-FIXTURE-001"
+    evidence_path: "research_control/tasks/RT-20260723-013/artifacts/validation_blocker_checkpoint_project_improvement_signal_fixture_v1.yaml"
+    evidence_sha256: "dd3d503192805cf15573e4da39738035302233acf43e98a7112dc6aa82a972a5"
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0845"
+  source_handoff_path: "research_control/handoffs/handoff-0845.yaml"
+  source_handoff_sha256: "ccd5dad7312905d771e72451db31b8e0175b7c507ff8efdbdc3ad8146eac18e1"
+  selected_plan_task_id: "P12-T07"
+  guard_outcome: "physics_bearing_route_selected"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research-goal/SKILL.md"
+  - ".codex/skills/continue-research-goal/references/goal-file-schema.md"
+  - ".codex/skills/continue-research-continue-goal/SKILL.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/validator-engineer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-0845.yaml"
+  - "research_control/handoffs/handoff-0846.yaml"
+  - "research_control/handoffs/handoff-0846.md"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.md"
+  - "research_control/tasks/RT-20260723-013/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/test_project_change_classifier.py"
+  - "registries/**"
+allowed_write_paths:
+  - "tests/test_project_change_classifier.py"
+  - "research_control/tasks/RT-20260723-013/**"
+  - "research_control/tasks/RT-20260723-014/**"
+  - "research_control/handoffs/handoff-0846.yaml"
+  - "research_control/handoffs/handoff-0846.md"
+  - "research_control/handoffs/handoff-0847.yaml"
+  - "research_control/handoffs/handoff-0847.md"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+  - "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.md"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/AGENT_JOB_REGISTRY.csv"
+  - "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+  - "registries/DIRECTOR_DECISION_REGISTRY.csv"
+  - "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - "registries/PROJECT_IMPROVEMENT_SIGNAL_REGISTRY.csv"
+  - "registries/RESEARCH_TASK_REGISTRY.csv"
+  - "registries/ROLE_EXECUTION_REGISTRY.csv"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+forbidden_paths:
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - ".agents/**"
+  - ".codex/skills/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+allowed_source_classes:
+  - "project_control_test"
+  - "task_control_record"
+  - "active_routing_supersession"
+  - "registry"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+forbidden_source_classes:
+  - "resolver_implementation_or_policy_change"
+  - "live_signal_suppression_or_resolution"
+  - "immutable_predecessor_methodology_payload_mutation"
+  - "canonical_ontology_write"
+  - "source_law_adoption_or_rejection"
+  - "scientific_ledger_change"
+  - "P13_T01_execution"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "gate_chair_verdict"
+  - "proof_authority"
+  - "publication_authority"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "external_system_mutation"
+approved_commands:
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'resolver skill-contract fixture project improvement signal' --limit 10 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-IMPROVE-PROJECT-SYSTEM --json"
+  - ".venv/bin/python -m unittest -v tests.test_project_change_classifier.ProjectChangeClassifierTests.test_resolver_recommends_project_control_maintainer_for_skill_contract tests.test_project_change_classifier.ProjectChangeClassifierTests.test_high_signal_preempts_current_documentation_impact tests.test_project_change_classifier.ProjectChangeClassifierTests.test_resolver_surfaces_sidecar_context_for_selected_signal"
+  - ".venv/bin/python -m unittest -v tests.test_project_change_classifier"
+  - ".venv/bin/python -m scripts.validation.cli plan --profile affected --paths tests/test_project_change_classifier.py research_control/tasks/RT-20260723-014 research_control/program_state.yaml research_control/handoffs/handoff-0847.yaml --explain"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-014-001"
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "focused_resolver_fixture_regressions"
+  - "project_change_classifier_module"
+  - "affected_validation_plan"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language"
+  - "research_control_diff"
+  - "task_index_renderer"
+  - "current_frontier_renderer"
+  - "compact_frontier_renderer"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint"
+expected_outputs:
+  - "tests/test_project_change_classifier.py"
+  - "research_control/tasks/RT-20260723-014/artifacts/resolver_skill_contract_fixture_isolation_receipt.json"
+  - "research_control/tasks/RT-20260723-014/jobs/completions/AJC-AJ-RT-20260723-014-001.yaml"
+  - "research_control/handoffs/handoff-0847.yaml"
+  - "research_control/handoffs/handoff-0847.md"
+  - "research_control/program_state.yaml"
+stop_conditions:
+  - "the fixture repair requires resolver implementation policy or live-signal precedence changes"
+  - "either intentional live-signal regression changes or fails"
+  - "any P12-T07 payload signal sidecar or scientific boundary byte changes"
+  - "a required write path is outside the AgentJob allowlist"
+  - "validation or the single governed checkpoint fails"
+  - "the repair would process PIS-RT-20260723-013-001 execute P13-T01 or edit scientific authority"
+  - "more than one AgentJob or checkpoint would be required"
+claim_boundary: "Patch only the exact no-signal skill-contract test fixture, preserve live-signal behavior and the complete P12-T07 transaction, create normal recovery evidence and derivatives, and invoke at most one checkpoint; no resolver policy, signal resolution, P13-T01, science, promotion, proof, publication, or Gate Chair authority."
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1002
+    relationship_row_count: 4960
+    semantic_row_count: 1002
+    vault_row_count: 1002
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-IMPROVE-PROJECT-SYSTEM --json"
+      query_type: "lookup"
+      query_text: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      returned_object_ids:
+        - "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+  canonical_inspections:
+    - object_id: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/improve-project-system/SKILL.md"
+      source_hash: "09396af30259f10892734eb12d00d89c1a68495f7ebfb01a67eb7f6af936e8f2"
+  authority_note: "Obsidian wiki semantic relationship and .local layers are retrieval only and not authority; tracked canonical sources registries and research-control state govern this recovery."

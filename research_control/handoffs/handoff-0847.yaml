@@ -1,0 +1,252 @@
+validation_status: "PASS"
+handoff_id: "handoff-0847"
+handoff_number: 847
+handoff_kind: "ordinary_research"
+task_id: "RT-20260723-014"
+decision_id: "DDR-20260723-014"
+job_id: "AJ-RT-20260723-014-001"
+completion_id: "AJC-AJ-RT-20260723-014-001"
+completion_path: "research_control/tasks/RT-20260723-014/jobs/completions/AJC-AJ-RT-20260723-014-001.yaml"
+completion_sha256: "4aed73e440019fc37c49fda8a4b7d4dc44a801a65f7226260b3deffdd16bbc90"
+status: "ready_for_director"
+created_at: "2026-07-23T22:26:02Z"
+parent_handoff_id: "handoff-0846"
+plan_task_id: "P12-T07"
+source_role_id: "validator-engineer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "validator-engineer@0.2.0--RT-20260723-014"
+summary: "Generation 82 isolated the resolver skill-contract no-signal fixture with one explicit empty open-signal set. The fixture's boundary assertions and resolver implementation are unchanged, both intentional live-signal regressions still pass, the full 63-test classifier module passes, and all 21 protected P12-T07 payload handoff and signal-sidecar paths retain their routed hashes. Only the predecessor documentation-impact receipt was synchronized for the cumulative gate. The transaction is ready for one governed checkpoint."
+next_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01."
+current_claim_boundary: "CB-V21-P12-T07-RESOLVER-SKILL-CONTRACT-FIXTURE-ISOLATION-001"
+loop_risk_route: "p12_t07_checkpoint_then_p12_t05_source_integrity_reseal_then_p13_t01_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260723-014"
+  latest_research_handoff_id: "handoff-0847"
+  latest_research_next_action: "Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "One governed checkpoint may commit the cumulative P12-T07 transaction. Only after that commit may one separate improve-project-system packet resolve PIS-RT-20260723-013-001 by resealing the exact P12-T05 generated outputs and downstream hashes without changing metric semantics; P13-T01 remains the normal included continuation after that prerequisite."
+  newly_completed_recovery_task: "RT-20260723-014"
+  recovery_for_plan_task_id: "P12-T07"
+  recovery_completion_path: "research_control/tasks/RT-20260723-014/jobs/completions/AJC-AJ-RT-20260723-014-001.yaml"
+  recovery_completion_sha256: "4aed73e440019fc37c49fda8a4b7d4dc44a801a65f7226260b3deffdd16bbc90"
+  recovery_receipt_path: "research_control/tasks/RT-20260723-014/artifacts/resolver_skill_contract_fixture_isolation_receipt.json"
+  recovery_receipt_sha256: "add86a93847f462c36e7385de4b141b8eff759485846b87c67fb76dd4584a944"
+  source_blocker_path: "research_control/tasks/RT-20260723-013/artifacts/validation_blocker_checkpoint_project_improvement_signal_fixture_v1.yaml"
+  source_blocker_sha256: "dd3d503192805cf15573e4da39738035302233acf43e98a7112dc6aa82a972a5"
+  source_handoff_id: "handoff-0846"
+  source_handoff_sha256: "e62415327888dab05dbc95dbbcca2fe7ba9cf33b0af490769707b4a1abe364ff"
+  explicit_empty_open_signal_set_supplied: true
+  boundary_assertions_changed: false
+  resolver_implementation_changed: false
+  live_signal_precedence_semantics_changed: false
+  focused_regression_status: "PASS_3_OF_3"
+  module_regression_status: "PASS_63_OF_63"
+  protected_predecessor_path_count: 21
+  protected_predecessor_hash_mismatch_count: 0
+  predecessor_documentation_impact_updated_for_cumulative_gate: true
+  p12_t07_payload_changed: false
+  p12_t07_checkpoint_ready: true
+  p12_t07_checkpoint_committed: false
+  checkpoint_invocation_count: 0
+  p12_t05_signal_id: "PIS-RT-20260723-013-001"
+  p12_t05_signal_processed: false
+  p13_t01_selected_next: true
+  p13_t01_dependency_ready_after_signal: true
+  p13_t01_executed: false
+  p4_t05_dependency_ready: true
+  p4_t05_requires_human_gate: true
+  p4_t05_executed: false
+  scientific_ledger_change_count: 0
+  scientific_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  blocked_claims:
+    - "test isolation checkpoint validation or commit status presented as physics evidence theorem truth or Distance-to-GR progress"
+    - "PIS-RT-20260723-013-001 processed inside the fixture-recovery AgentJob"
+    - "P13-T01 executed before the signal reseal completes"
+    - "P4-T05 protected ontology decision executed without exact human authority"
+    - "resolver implementation signal precedence P12-T05 metric semantics or P12-T07 methodology evidence changed"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "benchmark promotion publication proof authority completed derivation or global no-go"
+
+fixture_isolation:
+  task_id: "RT-20260723-014"
+  receipt_path: "research_control/tasks/RT-20260723-014/artifacts/resolver_skill_contract_fixture_isolation_receipt.json"
+  receipt_sha256: "add86a93847f462c36e7385de4b141b8eff759485846b87c67fb76dd4584a944"
+  test_path: "tests/test_project_change_classifier.py"
+  test_sha256_before: "5ffbe22f165cefc6b5fe5369274767b49dac61eb2952cea4511d6a739197cb31"
+  test_sha256_after: "6d0a84789ff5dd40add5106dfa02c3f4c0ae66a5f5c22585ef311a3f1b7b8c92"
+  focused_regression_status: "PASS_3_OF_3"
+  module_regression_status: "PASS_63_OF_63"
+  checkpoint_status: "PENDING"
+  checkpoint_committed: false
+  legacy_validation_used: false
+  resolver_implementation_changed: false
+  signal_registry_changed_by_repair: false
+  predecessor_methodology_payload_changed: false
+
+preserved_p12_t07_result:
+  task_id: "RT-20260723-013"
+  completion_path: "research_control/tasks/RT-20260723-013/jobs/completions/AJC-AJ-RT-20260723-013-001.yaml"
+  completion_sha256: "616324cbd2103d9cdb59ac53cc7c450c59b5d91ece1b44889362866d449e27d3"
+  handoff_id: "handoff-0846"
+  handoff_yaml_sha256: "e62415327888dab05dbc95dbbcca2fe7ba9cf33b0af490769707b4a1abe364ff"
+  handoff_markdown_sha256: "534cbbb80d04d4b0768dd9a022918d9c92840c0a8205dbb3604c51aa252c9408"
+  methodology_result_sha256: "a262ba7b1c12dc133b32e4ae81f0aadd9132981b18e51c5ebe372bab6a8a5089"
+  methodology_memo_sha256: "4e4d0b4ea090779c6818a7b58a00d6d145e705dde006a839c9c6cbe029addcf6"
+  methodology_validation_status: "PASS_28_CHECKS"
+  causal_superiority_established: false
+  scientific_status_changed: false
+  external_human_review_present: false
+  publication_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes one project-control test fixture and control evidence only."
+  downstream_unlocked:
+    - "P12-T07_cumulative_checkpoint"
+  downstream_still_blocked:
+    - "PIS-RT-20260723-013-001_until_checkpoint"
+    - "P13-T01_until_signal_reseal"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+required_next_packet:
+  task_type: "p12_t05_generated_artifact_source_integrity_reseal"
+  signal_id: "PIS-RT-20260723-013-001"
+  objective: "Reseal only the stale P12-T05 generated validation report compact receipt and exact downstream hashes without changing metric semantics."
+  dependency_ready_after_checkpoint: true
+  executed: false
+
+selected_next_route:
+  route_id: "p13_t01_validation_planner_equivalence_burn_in_v1"
+  route_label: "validation-planner-equivalence-burn-in"
+  role_family: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  plan_task_id: "P13-T01"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Compare legacy and planner validation on a fixed representative corpus without promoting physics."
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: false
+  pending_after_signal_reseal: true
+  physics_promotion_authorized: false
+  executed: false
+  prerequisite_project_improvement_signal_id: "PIS-RT-20260723-013-001"
+  next_action: "After checkpoint and the separate P12-T05 generated-artifact reseal, compare legacy and planner validation on the fixed P13-T01 corpus."
+  source_handoff: "research_control/handoffs/handoff-0847.yaml"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0847"
+  ordinary_handoff_id: "handoff-0847"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P4-T05"
+  selected_plan_task_id: "P13-T01"
+  selected_route_class: "project_system"
+  selected_worker_skill: "improve-project-system"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 82 was validated claimed and consumed exactly once before its one routed worker invocation."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The task-local receipt binds the exact fixture repair and 21 protected predecessor payload handoff and sidecar hashes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Three focused regressions and the full 63-test project-change-classifier module pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One normal governed checkpoint remains required before the existing signal sidecar may be processed."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Task index current frontier and compact frontier must be rendered from finalized control sources before checkpoint."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory derivatives must be synchronized and validate-only must pass before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+project_improvement_signals: []
+project_improvement_bridge:
+  required: true
+  sidecar_path: "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml"
+  signal_ids:
+    - "PIS-RT-20260723-013-001"
+  recursive_goal_recovery_required: false
+  reason: "This recovery emits no new signal. The existing P12-T05 generated-artifact-drift sidecar remains the immediate post-checkpoint prerequisite and does not supersede the ordinary P13-T01 continuation."
+
+handoff_authority_boundary:
+  this_handoff_authorizes: "One governed checkpoint for AJ-RT-20260723-014-001 and after commit Director consideration of the existing PIS-RT-20260723-013-001 sidecar before the ordinary P13-T01 continuation."
+  this_handoff_does_not_authorize:
+    - "PIS-RT-20260723-013-001 resolution inside the completed fixture-recovery AgentJob"
+    - "P13-T01 before checkpoint and signal reseal"
+    - "resolver implementation policy or live-signal precedence changes"
+    - "P12-T05 metric-semantic or P12-T07 methodology-evidence changes"
+    - "P4-T05 protected ontology decision without exact human authority"
+    - "canonical ontology source-law scientific-ledger or Distance-to-GR edit"
+    - "physical interpretation establishment benchmark promotion publication proof authority completed derivation or global no-go"
+
+next_plan_task_id: "P13-T01"
+next_plan_task_execution_ready_after_checkpoint: false
+next_plan_task_executed: false
+notes: "The exact P12-T07 fixture isolation is complete with all methodology and signal semantics preserved. One governed checkpoint and the existing P12-T05 source-integrity sidecar remain before P13-T01."

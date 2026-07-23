@@ -851,9 +851,14 @@ class ProjectChangeClassifierTests(unittest.TestCase):
         self.assertNotIn("project_improvement_signal_recorded", result["reason_codes"])
 
     def test_resolver_recommends_project_control_maintainer_for_skill_contract(self) -> None:
-        result = self.resolver.resolve_project_improvement(
-            [".codex/skills/continue-research/SKILL.md"]
-        )
+        with mock.patch.object(
+            self.resolver,
+            "collect_signals",
+            return_value={"open_signals": []},
+        ):
+            result = self.resolver.resolve_project_improvement(
+                [".codex/skills/continue-research/SKILL.md"]
+            )
         self.assertEqual(result["boundary"], "project_system_agent_job_required")
         self.assertEqual(result["recommended_role"], "project-control-maintainer")
         self.assertTrue(result["resolver_is_advisory"])

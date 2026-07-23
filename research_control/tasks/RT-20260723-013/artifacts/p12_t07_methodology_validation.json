@@ -1,0 +1,181 @@
+{
+  "check_count": 28,
+  "checks": [
+    {
+      "check_id": "output_exists:research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_ablation_results.json",
+      "detail": "exists=True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "output_deterministic:research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_ablation_results.json",
+      "detail": "observed_sha256=a262ba7b1c12dc133b32e4ae81f0aadd9132981b18e51c5ebe372bab6a8a5089",
+      "status": "PASS"
+    },
+    {
+      "check_id": "output_exists:research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_evaluation_memo.md",
+      "detail": "exists=True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "output_deterministic:research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_evaluation_memo.md",
+      "detail": "observed_sha256=4e4d0b4ea090779c6818a7b58a00d6d145e705dde006a839c9c6cbe029addcf6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "output_exists:research_control/tasks/RT-20260723-013/artifacts/p12_t07_limitations_and_next_study.md",
+      "detail": "exists=True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "output_deterministic:research_control/tasks/RT-20260723-013/artifacts/p12_t07_limitations_and_next_study.md",
+      "detail": "observed_sha256=812e41305e9d39fa4f136eda29d5197a1c63cf8b1dfb68164d347cee34dbf137",
+      "status": "PASS"
+    },
+    {
+      "check_id": "output_exists:research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_compact_receipt.json",
+      "detail": "exists=True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "output_deterministic:research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_compact_receipt.json",
+      "detail": "observed_sha256=2775e6f0ee0b4e9d0e3a63eb0cb97ddbef2ccc04bf74be5ebaa5b9270ae8062b",
+      "status": "PASS"
+    },
+    {
+      "check_id": "payload_gate_counts",
+      "detail": "payload={'admitted_case_count': 4, 'case_count': 10, 'legacy_readable_case_count': 1, 'rejected_case_count': 5, 'rejected_case_ids': ['prospective_missing_block', 'selector_only_rejected', 'process_receipt_rejected_as_physics', 'project_system_mislabeled_physics', 'authority_overread_rejected']}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_freeze_counts",
+      "detail": "family={'case_count': 11, 'frozen_family_count': 5, 'global_no_go_inferred': False, 'lawful_route_preservation_count': 6, 'repeated_cycle_suppression_count': 3}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ordinary_route_counts",
+      "detail": "route={'dual_budget_admitted_count': 5, 'dual_budget_category_coverage': ['mixed', 'physics_bearing', 'support_only', 'system_bearing'], 'dual_budget_fixture_case_count': 12, 'dual_budget_rejected_count': 7, 'dual_budget_rejected_error_count': 8, 'fixture_case_count': 12, 'fixture_fail_expected_count': 6, 'fixture_pass_expected_count': 5, 'fixture_warn_expected_count': 1, 'live_consecutive_project_system_tasks': 9, 'live_outcome': 'physics_bearing_route_selected', 'live_ready_science_plan_task_ids': ['P4-T05', 'P12-T07'], 'live_selected_plan_task_id': 'P12-T07', 'system_success_counts_as_distance_to_gr': False, 'system_success_counts_as_physics': False}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "review_context_counts",
+      "detail": "review={'assessment_disagreement_count': 3, 'context_classification_counts': {'blind_same_model_review': 2, 'same_context_role_review': 2}, 'eligible_cross_context_axis_count': 10, 'exact_agreement_count': 7, 'false_consensus_risk_count': 7, 'p11_repair_required_count': 2, 'review_record_count': 4, 'reviewed_object_count': 2}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "quality_metric_counts",
+      "detail": "quality={'check_count': 44, 'fixture_case_count': 14, 'live_invalid_count': 0, 'live_measured_count': 3, 'live_not_measured_count': 5, 'live_source_binding_status': 'stale', 'live_source_hash_mismatch_count': 3, 'live_source_hash_mismatches': [{'embedded_sha256': '7253ac9138885061cd854fd61b69757ae78aa8c497ba1066ade2a0c19c62a4b8', 'observed_sha256': '60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003', 'path': 'research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json'}, {'embedded_sha256': '25205ad3cf4f28492467bdd6343d52647c76ddfd67d7609bc9ce187ec06e8b75', 'observed_sha256': 'b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb', 'path': 'research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md'}, {'embedded_sha256': 'b7fc9ff6f6d55e2ec9462700f8c4f985ab77ff5ffcc9cfdd07923b60011c6436', 'observed_sha256': 'b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308', 'path': 'research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md'}], 'metric_count': 8, 'stored_receipt_status': 'PASS', 'stored_report_status': 'PASS'}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "quality_source_integrity_defect_preserved",
+      "detail": "quality_mismatches=[{'embedded_sha256': '7253ac9138885061cd854fd61b69757ae78aa8c497ba1066ade2a0c19c62a4b8', 'observed_sha256': '60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003', 'path': 'research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json'}, {'embedded_sha256': '25205ad3cf4f28492467bdd6343d52647c76ddfd67d7609bc9ce187ec06e8b75', 'observed_sha256': 'b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb', 'path': 'research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md'}, {'embedded_sha256': 'b7fc9ff6f6d55e2ec9462700f8c4f985ab77ff5ffcc9cfdd07923b60011c6436', 'observed_sha256': 'b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308', 'path': 'research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md'}]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "attempt_rework_counts",
+      "detail": "attempts={'abandonment_status': 'not_measured', 'audit_objection_count': 1, 'event_count': 8, 'historical_completeness_claimed': False, 'physics_failure_count': 0, 'repair_event_count': 2, 'represented_task_count': 7, 'source_receipt_result': 'PASS', 'validation_catch_count': 1, 'verdict': 'bounded_visibility_only'}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "causal_identifiability_guard",
+      "detail": "design={'causal_inference_status': 'not_identified', 'control_off_basis': 'guard-removal exposure analysis only', 'control_on_basis': 'exact predecessor reports and tracked live handoff', 'design': 'retrospective_hash_bound_fixture_and_route_history_ablation', 'pre_registered_outcome_present': False, 'randomized_assignment_present': False, 'scientific_outcome_ground_truth_available': False, 'unit_of_analysis': ['policy fixture case', 'reviewed object by assessment axis', 'bounded attempt-ledger event', 'live ordinary-route decision']}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_phys_math_complete",
+      "detail": "status=completed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_phys_math_authority",
+      "detail": "authority={'methodology_evidence_is_physics_progress': False, 'theorem_truth_evaluated': False, 'scientific_status_changed': False, 'ontology_or_source_law_adopted': False, 'exact_gr_benchmark_changed': False, 'distance_to_gr_changed': False, 'external_review_completed': False, 'independent_replication_completed': False, 'causal_superiority_established': False, 'proof_or_publication_authority_created': False, 'gate_chair_authority_created': False}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_phys_phil_complete",
+      "detail": "status=completed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_phys_phil_authority",
+      "detail": "authority={'methodology_evidence_is_physics_progress': False, 'theorem_truth_evaluated': False, 'scientific_status_changed': False, 'ontology_or_source_law_adopted': False, 'exact_gr_benchmark_changed': False, 'distance_to_gr_changed': False, 'external_review_completed': False, 'independent_replication_completed': False, 'causal_superiority_established': False, 'proof_or_publication_authority_created': False, 'gate_chair_authority_created': False}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_conflict_review",
+      "detail": "verdict=resolved unresolved=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "memo_phrase:causal improvement in sc",
+      "detail": "phrase='causal improvement in scientific truth'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "memo_phrase:not physics evidence",
+      "detail": "phrase='not physics evidence'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "memo_phrase:independent-replication ",
+      "detail": "phrase='independent-replication counts remain zero'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "memo_phrase:source-integrity defect",
+      "detail": "phrase='source-integrity defect'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "memo_phrase:P12-T07 is therefore com",
+      "detail": "phrase='P12-T07 is therefore complete'",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority_boundary",
+      "detail": "authority={'causal_superiority_established': False, 'distance_to_gr_delta_changed': False, 'external_review_completed': False, 'human_expert_review_completed': False, 'independent_replication_completed': False, 'methodology_evidence_is_physics_progress': False, 'ontology_adoption_authorized': False, 'physics_promotion_authorized': False, 'proof_authority': False, 'publication_authority': False, 'scientific_claims_changed': False, 'theorem_truth_evaluated': False}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash_exactness",
+      "detail": "source_count=22",
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary_summary": "Reproducible bounded methodology evaluation only; causal scientific superiority external review theorem truth ontology Distance-to-GR promotion proof and publication authority remain false.",
+  "failure_count": 0,
+  "output_hashes": {
+    "research_control/tasks/RT-20260723-013/artifacts/p12_t07_limitations_and_next_study.md": "812e41305e9d39fa4f136eda29d5197a1c63cf8b1dfb68164d347cee34dbf137",
+    "research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_ablation_results.json": "a262ba7b1c12dc133b32e4ae81f0aadd9132981b18e51c5ebe372bab6a8a5089",
+    "research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_compact_receipt.json": "2775e6f0ee0b4e9d0e3a63eb0cb97ddbef2ccc04bf74be5ebaa5b9270ae8062b",
+    "research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_evaluation_memo.md": "4e4d0b4ea090779c6818a7b58a00d6d145e705dde006a839c9c6cbe029addcf6"
+  },
+  "plan_task_id": "P12-T07",
+  "schema_id": "v21_p12_t07_methodology_validation_v1",
+  "source_hashes": {
+    "implementations_plans/recommendations_implementation_plan_continue_task-v21.md": "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087",
+    "research_control/design/v21_recommendation_backlog.yaml": "849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f",
+    "research_control/handoffs/handoff-0845.yaml": "ccd5dad7312905d771e72451db31b8e0175b7c507ff8efdbdc3ad8146eac18e1",
+    "research_control/tasks/RT-20260721-005/artifacts/v21_candidate_lineage_registry.json": "788289c942bdcc5fff2f1337998f50d2b6fe89ca541de65a0ae24a651da97489",
+    "research_control/tasks/RT-20260721-006/artifacts/v21_research_attempt_ledger.json": "f32e7d272d3d99a339a2cfd81e56b1d44e51e1449b2e34e9dd111161397c1ba2",
+    "research_control/tasks/RT-20260722-010/artifacts/review_agreement_and_leakage_analysis.json": "8e57d7813843fd9f383a930773876018c64cc622763960277052e789c01808b4",
+    "research_control/tasks/RT-20260722-011/artifacts/p11_scientific_qa_compact_receipt.json": "e99347c8ad1864deda009bdbedabdc79553992d976030477fb3975dc5dce7368",
+    "research_control/tasks/RT-20260722-012/artifacts/physics_payload_admission_report.json": "01599b670aa33468ef8759197aa226914b2647f7c2f06eda3af1ae830f590d19",
+    "research_control/tasks/RT-20260722-013/artifacts/family_freeze_validation_report.json": "660382dd28e09a312f56e51d041c6696671b2e23d732afafaa1909298e9a023a",
+    "research_control/tasks/RT-20260722-014/artifacts/dual_budget_validation_report.json": "03732b26ff2d88e887c4dce0b793cbb21f1c2df07570bf33b82fac9d63cd2082",
+    "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_validation_report.json": "6dfd2a1c941ec26051f46d5b6e7494efea9590d6b1f8d87b4bafa0c73763c950",
+    "research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json": "60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md": "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_compact_receipt.json": "5aeeb1c5b33b229843b5033d85b66098719b50ec1e775a8ae2e46df832801ffa",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md": "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308",
+    "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json": "6082c5c23d93741f01e61dcdf48c76fe4c7b723605440261dea95c94c399fd6e",
+    "research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py": "e4102ac5ce28653e9c8195762aeb519c1f5c08e615aa03221d18b0906fd73260",
+    "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_compact_receipt.json": "4cc99fbe23855f6e59e21f46a66fe195d2f8a04c4239df5a003cd2bb2c5578e2",
+    "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.json": "5fc9a671fe5212d6623905dc7d4cef9a89d56ba9f189f42caf01c4c7587e1c32",
+    "scripts/research_control/render_ai_methodology_metrics_dashboard.py": "059ff7191575cb865fac020c010314901e04aa11e0054706866be62b81ac17af",
+    "scripts/research_control/report_physics_progress_metrics.py": "07cd220950e4b85632385da1dcaa932c8a6c48c50b33e2736dd6f181bc9abfd1",
+    "scripts/research_control/scientific_quality_metrics.py": "2e9b443da0e9beeccd08a54936972a8438ba64b7fcc12dccd4d4793b7111ccc9"
+  },
+  "status": "PASS",
+  "task_id": "RT-20260723-013"
+}

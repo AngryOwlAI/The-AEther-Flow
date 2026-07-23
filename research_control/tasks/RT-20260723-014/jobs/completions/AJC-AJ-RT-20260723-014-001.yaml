@@ -1,0 +1,314 @@
+validation_status: "PASS"
+job_id: "AJ-RT-20260723-014-001"
+completion_id: "AJC-AJ-RT-20260723-014-001"
+task_id: "RT-20260723-014"
+task_type: "project_system_resolver_skill_contract_fixture_recovery"
+decision_id: "DDR-20260723-014"
+role_id: "validator-engineer"
+source_role_id: "validator-engineer"
+role_version: "0.2.0"
+execution_role_ref: "validator-engineer@0.2.0--RT-20260723-014"
+status: "completed"
+final_repository_validation_status: "PASS_CHECKPOINT_READY"
+created_at: "2026-07-23T22:21:12Z"
+started_at: "2026-07-23T22:21:12Z"
+completed_at: "2026-07-23T22:26:02Z"
+objective: "Isolate only the resolver skill-contract no-signal fixture, preserve intentional live-signal precedence behavior and every P12-T07 transaction byte, and checkpoint the cumulative transaction before the separate P12-T05 signal reseal and P13-T01."
+completion_summary: "Generation 82 patched only the skill-contract fixture's signal collector with an explicit empty open-signal set. Its boundary and role assertions are unchanged, both intentional live-signal regressions remain unchanged and pass, the full 63-test project-change-classifier module passes, and the 21 protected P12-T07 payload handoff and sidecar paths retain their exact routed hashes. Only the predecessor documentation-impact receipt was synchronized for the cumulative gate."
+objective_result: "p12_t07_resolver_skill_contract_fixture_isolated_checkpoint_ready"
+
+goal_receipt:
+  goal_id: "crg-20260720T161354Z-96bc2664ce31bfe0"
+  goal_sha256: "630b81e0f318cf85eb8ceb2ffbaf85f2148f68ee721c121d61f76b0ab393291a"
+  generation: 82
+  passes_consumed: 78
+  idempotency_key: "crg-20260720T161354Z-96bc2664ce31bfe0:82"
+  handoff_token: "1eda87c57b4abcefc186989980347dd8064c27b9b378d8e3"
+  relay_claim_token: "a4df2ad88c0609173ea86404a695a537fa98bfd997aee802"
+  immutable_route_hash: "b8701d35374a252c93f7c884264c41104f1d4b0e9e9dce29b294d517a786e976"
+  worker_skill: "improve-project-system"
+  worker_invocation_count: 1
+
+transaction_status: "completed_checkpoint_ready"
+result_disposition: "p12_t07_resolver_fixture_isolation_pass_one_checkpoint_pending"
+work_item_status: "repair_completed"
+plan_task_id: "P12-T07"
+checkpoint_commit: "none_checkpoint_pending"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_CHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "tests/test_project_change_classifier.py"
+      - "research_control/tasks/RT-20260723-014/artifacts/resolver_skill_contract_fixture_isolation_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the skill-contract fixture supplies an explicit empty open-signal set and retains its project-control-maintainer assertions"
+      - "the high-signal-preemption and selected-sidecar-context regressions remain unchanged and pass"
+      - "the full project-change-classifier module passes"
+      - "the preserved P12-T07 payload signal sidecar and scientific boundaries remain unchanged"
+      - "one normal governed checkpoint commits without legacy validation"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0845"
+  selected_plan_task_id: "P12-T07"
+  guard_outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+artifacts:
+  - "research_control/tasks/RT-20260723-014/artifacts/resolver_skill_contract_fixture_isolation_receipt.json"
+output_paths:
+  - "tests/test_project_change_classifier.py"
+  - "research_control/tasks/RT-20260723-014/**"
+  - "research_control/handoffs/handoff-0847.yaml"
+  - "research_control/handoffs/handoff-0847.md"
+  - "research_control/program_state.yaml"
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260723-014/artifacts/resolver_skill_contract_fixture_isolation_receipt.json"
+    sha256: "add86a93847f462c36e7385de4b141b8eff759485846b87c67fb76dd4584a944"
+
+fixture_isolation_result:
+  source_blocker_path: "research_control/tasks/RT-20260723-013/artifacts/validation_blocker_checkpoint_project_improvement_signal_fixture_v1.yaml"
+  source_blocker_sha256: "dd3d503192805cf15573e4da39738035302233acf43e98a7112dc6aa82a972a5"
+  test_path: "tests/test_project_change_classifier.py"
+  test_sha256_before: "5ffbe22f165cefc6b5fe5369274767b49dac61eb2952cea4511d6a739197cb31"
+  test_sha256_after: "6d0a84789ff5dd40add5106dfa02c3f4c0ae66a5f5c22585ef311a3f1b7b8c92"
+  explicit_empty_open_signal_set_supplied: true
+  boundary_assertions_changed: false
+  resolver_implementation_changed: false
+  intentional_live_signal_tests_changed: false
+  focused_regression_status: "PASS_3_OF_3"
+  module_regression_status: "PASS_63_OF_63"
+  protected_predecessor_path_count: 21
+  protected_predecessor_manifest_sha256: "0b385a9f6bbe4d7ba31a62923cf68580e2931f3a9dcdeb99abac3eecb4ea8c2a"
+  protected_predecessor_hash_mismatch_count: 0
+  predecessor_documentation_impact_updated_for_cumulative_gate: true
+  p12_t07_payload_changed: false
+  p12_t05_signal_processed: false
+  p13_t01_executed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+
+preserved_hashes:
+  p12_t07_result_sha256: "a262ba7b1c12dc133b32e4ae81f0aadd9132981b18e51c5ebe372bab6a8a5089"
+  p12_t07_memo_sha256: "4e4d0b4ea090779c6818a7b58a00d6d145e705dde006a839c9c6cbe029addcf6"
+  p12_t07_completion_sha256: "616324cbd2103d9cdb59ac53cc7c450c59b5d91ece1b44889362866d449e27d3"
+  handoff_0846_yaml_sha256: "e62415327888dab05dbc95dbbcca2fe7ba9cf33b0af490769707b4a1abe364ff"
+  handoff_0846_markdown_sha256: "534cbbb80d04d4b0768dd9a022918d9c92840c0a8205dbb3604c51aa252c9408"
+  improvement_sidecar_yaml_sha256: "1fec66f056e7388fae651847a713678e7d1706e3c179dc6abc15cf3d448237e9"
+  improvement_sidecar_markdown_sha256: "c8ef65330862c4babaa9c31457db51693a31a0059b201541bed2fb5c5a2328d4"
+
+command_results:
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS_CORE_WITH_7_LOCAL_CACHE_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-IMPROVE-PROJECT-SYSTEM --json"
+    status: "PASS_REGISTERED_CANONICAL_SOURCE"
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier.ProjectChangeClassifierTests.test_resolver_recommends_project_control_maintainer_for_skill_contract"
+    status: "FAIL_BASELINE_LIVE_SIGNAL_PREEMPTION_REPRODUCED"
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier.ProjectChangeClassifierTests.test_resolver_recommends_project_control_maintainer_for_skill_contract tests.test_project_change_classifier.ProjectChangeClassifierTests.test_high_signal_preempts_current_documentation_impact tests.test_project_change_classifier.ProjectChangeClassifierTests.test_resolver_surfaces_sidecar_context_for_selected_signal"
+    status: "PASS_3_OF_3"
+  - command: ".venv/bin/python -m unittest -v tests.test_project_change_classifier"
+    status: "PASS_63_OF_63"
+
+validation_summary:
+  status: "PASS_CHECKPOINT_READY"
+  passing_gates:
+    - "exact no-signal fixture isolation"
+    - "three focused resolver regressions"
+    - "complete 63-test project-change-classifier module"
+    - "21 protected predecessor payload handoff and sidecar hashes"
+  pending_gates:
+    - "one normal governed checkpoint"
+  checkpoint:
+    invoked: false
+    invocation_count: 0
+    reason: "One normal governed checkpoint remains authorized after all precheckpoint gates pass."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Generation 82 lease parity repository identity maximum reasoning effort exact 59-path dirty manifest predecessor inactivity and immutable recovery route were verified before one claim and consume."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The fixture supplies an explicit empty open-signal set while preserving its boundary assertions."
+      - "The task-local receipt binds before and after test hashes plus every protected predecessor hash."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Three focused resolver tests and the complete 63-test module pass."
+      - "Classification resolver signal documentation claim-language diff and memory checks remain required before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One normal governed checkpoint is authorized and has not yet been invoked."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Task index current frontier and compact frontier will be rendered from finalized control sources before checkpoint."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization and validate-only remain required before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains required before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  publication_authorized: false
+  proof_authority: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - "The generation-81 blocker records one no-signal fixture coupled to the lawful open signal registry."
+    - "The exact fixture patch and focused regressions restore isolation without changing resolver behavior."
+  open_or_blocked_physical_targets:
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+  forbidden_overread:
+    - "test isolation as scientific progress"
+    - "checkpoint readiness as physics evidence or theorem truth"
+    - "signal precedence behavior as scientific status"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery changes one project-control test fixture and control evidence only."
+  downstream_unlocked:
+    - "P12-T07_cumulative_checkpoint"
+  downstream_still_blocked:
+    - "PIS-RT-20260723-013-001_until_checkpoint"
+    - "P13-T01_until_signal_reseal"
+    - "source_ontology_derivation"
+    - "general_eqsrc"
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations_derivation"
+    - "benchmark_promotion"
+    - "external_publication"
+
+next_work_item:
+  signal_id: "PIS-RT-20260723-013-001"
+  title: "Reseal the stale P12-T05 generated report and compact receipt"
+  worker_skill: "improve-project-system"
+  recommended_role: "documentation-curator"
+  dependency_ready_after_checkpoint: true
+  executed: false
+  next_plan_task_after_signal: "P13-T01"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "WARN"
+    local_retrieval_status: "WARN"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1002
+    relationship_row_count: 4960
+    semantic_row_count: 1002
+    vault_row_count: 1002
+    local_cache_only_warning_count: 7
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-IMPROVE-PROJECT-SYSTEM --json"
+      query_type: "lookup"
+      query_text: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      returned_object_ids:
+        - "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+  canonical_inspections:
+    - object_id: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/improve-project-system/SKILL.md"
+      source_hash: "09396af30259f10892734eb12d00d89c1a68495f7ebfb01a67eb7f6af936e8f2"
+  authority_note: "Obsidian wiki semantic relationship and .local layers are retrieval only and not authority; tracked canonical sources registries and research-control state govern this recovery."
+
+project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "This recovery emits no new signal. The separate pre-existing PIS-RT-20260723-013-001 sidecar remains open and must be processed only after checkpoint."
+
+out_of_scope_remaining_work:
+  - "PIS-RT-20260723-013-001 remains open and must be processed in one separate project-system packet after checkpoint."
+  - "P13-T01 remains unexecuted until that source-integrity reseal completes."
+  - "No scientific source ontology ledger Distance-to-GR promotion benchmark promotion proof publication push or protected human-gated decision is authorized."
+forbidden_conclusion_summary: "This recovery supplies no authority to change resolver semantics signal status methodology results scientific sources ontology candidates ledgers Distance-to-GR status benchmark status proof publication or Gate Chair decisions and does not execute P13-T01."
+verdict: "p12_t07_resolver_fixture_isolated_checkpoint_ready_no_physics_delta"
+next_recommendation: "Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system frame before P13-T01."

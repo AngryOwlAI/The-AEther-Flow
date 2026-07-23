@@ -1,0 +1,119 @@
+schema_id: "child_phys_math_methodology_ablation_v1"
+execution_unit_id: "child_phys_math"
+job_id: "AJ-RT-20260723-013-001"
+plan_task_id: "P12-T07"
+status: "completed"
+perspective: "physicist_mathematician"
+execution_mode: "read_only_child_analysis"
+estimand:
+  control_on: "Observed policy or report behavior on the fixed source corpus."
+  control_off: "Bounded guard-suppression or view-removal exposure on the same corpus."
+  causal_counterfactual: "Unidentified for every mechanism because no randomized deployment, matched cohort, or scientific-outcome comparison exists."
+source_bindings:
+  - path: "research_control/tasks/RT-20260722-012/artifacts/physics_payload_admission_report.json"
+    sha256: "01599b670aa33468ef8759197aa226914b2647f7c2f06eda3af1ae830f590d19"
+  - path: "research_control/tasks/RT-20260722-013/artifacts/family_freeze_validation_report.json"
+    sha256: "660382dd28e09a312f56e51d041c6696671b2e23d732afafaa1909298e9a023a"
+  - path: "research_control/tasks/RT-20260722-014/artifacts/dual_budget_validation_report.json"
+    sha256: "03732b26ff2d88e887c4dce0b793cbb21f1c2df07570bf33b82fac9d63cd2082"
+  - path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_validation_report.json"
+    sha256: "6dfd2a1c941ec26051f46d5b6e7494efea9590d6b1f8d87b4bafa0c73763c950"
+  - path: "research_control/handoffs/handoff-0845.yaml"
+    sha256: "ccd5dad7312905d771e72451db31b8e0175b7c507ff8efdbdc3ad8146eac18e1"
+  - path: "research_control/tasks/RT-20260722-010/artifacts/review_agreement_and_leakage_analysis.json"
+    sha256: "8e57d7813843fd9f383a930773876018c64cc622763960277052e789c01808b4"
+  - path: "research_control/tasks/RT-20260722-011/artifacts/p11_scientific_qa_compact_receipt.json"
+    sha256: "e99347c8ad1864deda009bdbedabdc79553992d976030477fb3975dc5dce7368"
+  - path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_validation_report.json"
+    sha256: "6082c5c23d93741f01e61dcdf48c76fe4c7b723605440261dea95c94c399fd6e"
+  - path: "research_control/tasks/RT-20260723-011/artifacts/attempt_rework_dashboard.json"
+    sha256: "5fc9a671fe5212d6623905dc7d4cef9a89d56ba9f189f42caf01c4c7587e1c32"
+mechanism_findings:
+  - mechanism_id: "physics_payload_admission"
+    control_on:
+      case_count: 10
+      admitted_count: 4
+      rejected_count: 5
+      legacy_readable_count: 1
+    control_off_exposure:
+      simulated_rejection_suppression_count: 5
+    verdict: "strong_fixture_conformance_causal_scientific_benefit_unidentified"
+  - mechanism_id: "family_freeze"
+    control_on:
+      case_count: 11
+      frozen_family_count: 5
+      admitted_count: 6
+      rejected_count: 5
+      direct_repeat_or_repackage_suppression_count: 3
+      global_no_go_inferred: false
+    control_off_exposure:
+      simulated_policy_rejection_suppression_count: 5
+    verdict: "strong_fixture_conformance_novelty_effect_unidentified"
+  - mechanism_id: "dual_budget_and_ordinary_route"
+    control_on:
+      dual_budget_case_count: 12
+      dual_budget_admitted_count: 5
+      dual_budget_rejected_count: 7
+      ordinary_route_case_count: 12
+      ordinary_route_pass_count: 5
+      ordinary_route_warn_count: 1
+      ordinary_route_fail_count: 6
+      live_project_system_streak: 9
+      live_selected_plan_task_id: "P12-T07"
+    control_off_exposure:
+      dual_budget_rejection_suppression_count: 7
+      live_counterfactual_route: "unidentified"
+    verdict: "strong_conformance_one_live_activation_causal_productivity_effect_unidentified"
+  - mechanism_id: "reviewer_context_comparison"
+    control_on:
+      review_record_count: 4
+      reviewed_object_count: 2
+      eligible_pair_axis_count: 10
+      exact_agreement_count: 7
+      assessment_disagreement_count: 3
+      false_consensus_risk_count: 7
+      external_or_independent_review_completed: false
+    control_off_exposure:
+      paired_disagreements_lost_if_either_arm_removed: 3
+    verdict: "context_visibility_supported_on_small_internal_sample_accuracy_advantage_unidentified"
+  - mechanism_id: "scientific_quality_metrics"
+    control_on:
+      metric_family_count: 8
+      measured_count: 3
+      not_measured_count: 5
+      invalid_count: 0
+      fixture_case_count: 14
+      stored_validation_check_count: 44
+    control_off_exposure:
+      simulated_false_zero_entries: 5
+    verdict: "denominator_semantics_supported_predictiveness_unidentified_pending_source_integrity_review"
+  - mechanism_id: "attempt_rework_visibility"
+    control_on:
+      event_count: 8
+      represented_task_count: 7
+      validation_catch_count: 1
+      audit_objection_count: 1
+      repair_event_count: 2
+      abandonment_status: "not_measured"
+    control_off_exposure:
+      typed_event_visibility_lost: 8
+    verdict: "bounded_visibility_supported_population_rates_unidentified"
+cross_mechanism_limitations:
+  - "All fixture suites are purposive conformance tests rather than sampled scientific decisions."
+  - "No randomized control-off deployment or matched scientific-outcome cohort exists."
+  - "Mechanisms were introduced sequentially and interact."
+  - "Units differ across cases, review axes, tasks, and events and cannot be pooled."
+  - "Resource, false-positive, and opportunity costs are mostly not measured."
+calibrated_conclusion: "The evidence supports bounded rule conformance and observability only."
+authority_boundary:
+  methodology_evidence_is_physics_progress: false
+  theorem_truth_evaluated: false
+  scientific_status_changed: false
+  ontology_or_source_law_adopted: false
+  exact_gr_benchmark_changed: false
+  distance_to_gr_changed: false
+  external_review_completed: false
+  independent_replication_completed: false
+  causal_superiority_established: false
+  proof_or_publication_authority_created: false
+  gate_chair_authority_created: false

@@ -1,0 +1,82 @@
+schema_id: "child_phys_phil_methodology_ablation_v1"
+execution_unit_id: "child_phys_phil"
+job_id: "AJ-RT-20260723-013-001"
+plan_task_id: "P12-T07"
+status: "completed"
+perspective: "physicist_philosopher"
+execution_mode: "read_only_child_analysis"
+source_integrity:
+  status: "defect_confirmed_parent_disposition_required"
+  p12_t05_live_vs_embedded_mismatches:
+    - path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_metric_taxonomy_v1.md"
+      observed_sha256: "b2e31738a445e68e4de6ea20381886bcd6c3747cccd693187f0904a7742ad308"
+      embedded_sha256: "b7fc9ff6f6d55e2ec9462700f8c4f985ab77ff5ffcc9cfdd07923b60011c6436"
+    - path: "research_control/tasks/RT-20260723-004/artifacts/scientific_quality_calibration_warning_policy_v1.md"
+      observed_sha256: "b9b4e4fcc603c9eee508456999936a4e0378b188235f73f35c454009728648cb"
+      embedded_sha256: "25205ad3cf4f28492467bdd6343d52647c76ddfd67d7609bc9ce187ec06e8b75"
+    - path: "research_control/tasks/RT-20260723-004/artifacts/fixtures/scientific_quality_metric_cases.json"
+      observed_sha256: "60bcb8819734e5e565b08a46b29e85ebffde14f6c1e33dd13cfdd1c02628d003"
+      embedded_sha256: "7253ac9138885061cd854fd61b69757ae78aa8c497ba1066ade2a0c19c62a4b8"
+  matching_control:
+    path: "research_control/tasks/RT-20260723-004/artifacts/validate_scientific_quality_metrics.py"
+    observed_and_embedded_sha256: "e4102ac5ce28653e9c8195762aeb519c1f5c08e615aa03221d18b0906fd73260"
+  interpretation: "Definitions remain readable, but the stored P12-T05 report and receipt do not currently establish exact source-bound reproduction."
+mechanism_verdicts:
+  physics_payload_admission:
+    verdict: "operationally_supported_for_tested_declaration_and_authority_rules"
+    caution: "Policy conformance is not novelty, correctness, relevance, theorem truth, or better downstream decisions."
+    goodhart_risk: "Cosmetic route-decision identities or assumption deltas may satisfy declarations without substantive payload."
+  family_freeze:
+    verdict: "operationally_supported_for_exact_encoded_repeat_control"
+    caution: "A local freeze is neither falsity, impossibility, nor global exhaustion."
+    goodhart_risk: "Trivial assumption perturbations or identity churn can evade exact encodings."
+  dual_budgets_and_ordinary_route_guard:
+    verdict: "accounting_separation_supported_route_relevance_observed_causal_benefit_unidentified"
+    taxonomy_tension:
+      task_class: "science"
+      admission_path: "physics"
+      payload_type: "route_decision"
+      selected_route_class: "physics_bearing"
+      dual_budget_category: "mixed"
+      primary_budget: "physics"
+      scientific_status_changed: false
+      distance_to_gr_changed: false
+    required_interpretation: "Physics-facing or plan-classified routing is not physics evidence or physics progress."
+    goodhart_risk: "Cosmetic physics-bearing or mixed tasks can reset a project-system streak."
+  reviewer_context_diversity:
+    verdict: "context_sensitivity_observed_diversity_effect_unidentified"
+    caution: "Four internal reviews of two objects contain no different-model, human-expert, or independent-replication arm."
+    goodhart_risk: "Agreement or finding-count optimization can mimic diversity."
+  durable_quality_metrics:
+    verdict: "advisory_metric_design_supported_exact_source_bound_ablation_not_currently_reproducible"
+    caution: "Five of eight live denominators are absent, and three live source hashes disagree with the stored report and receipt."
+    goodhart_risk: "Narrow eligible populations or identity proliferation can improve a metric without improving science."
+  attempt_rework_dashboard:
+    verdict: "bounded_visibility_supported_population_rates_unidentified"
+    caution: "Eight events are historically incomplete; zero observed abandonment is not a zero abandonment rate."
+    goodhart_risk: "Event splitting, selective recording, or favorable reclassification can distort visibility."
+consensus_candidates:
+  - "The controls improve traceability, authority separation, and visibility for tested cases."
+  - "Fixture PASS establishes rule conformance only."
+  - "Handoff-0845 supplies one compliant route choice, not its counterfactual cause."
+  - "The available corpus does not identify causal superiority or better scientific outcomes."
+  - "Review agreement is correlated internal evidence, not external confirmation."
+unique_cautions:
+  - "Physics-facing versus physics-evidence wording is essential."
+  - "The P12-T05 live-versus-embedded hash mismatch blocks an unqualified reproducibility claim."
+  - "A pass-like disposition share is not a completion or scientific-success rate."
+overall_verdict:
+  classification: "bounded_methodology_support_with_causal_non_identification_and_source_integrity_tension"
+  confidence: "moderate_for_operational_rule_behavior_low_for_better_decision_outcomes"
+authority_boundary:
+  methodology_evidence_is_physics_progress: false
+  theorem_truth_evaluated: false
+  scientific_status_changed: false
+  ontology_or_source_law_adopted: false
+  exact_gr_benchmark_changed: false
+  distance_to_gr_changed: false
+  external_review_completed: false
+  independent_replication_completed: false
+  causal_superiority_established: false
+  proof_or_publication_authority_created: false
+  gate_chair_authority_created: false

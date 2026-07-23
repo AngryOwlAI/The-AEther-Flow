@@ -2,7 +2,7 @@
   "schema_id": "compact_current_frontier_v16",
   "generated_from": [
     "research_control/program_state.yaml",
-    "research_control/handoffs/handoff-0845.yaml",
+    "research_control/handoffs/handoff-0847.yaml",
     "registries/DISTANCE_TO_GR_LEDGER.csv",
     "registries/METRIC_USE_LEDGER.csv",
     "research_control/current_frontier.md",
@@ -11,17 +11,17 @@
     "research_control/design/active_state_bifurcation_policy_v1.md"
   ],
   "active_state": {
-    "active_task_id": "RT-20260723-012",
-    "latest_handoff_id": "handoff-0845",
-    "current_status": "p12_t06_contract_parity_recovery_pass_checkpoint_ready",
+    "active_task_id": "RT-20260723-014",
+    "latest_handoff_id": "handoff-0847",
+    "current_status": "p12_t07_resolver_fixture_isolated_checkpoint_ready_signal_reseal_then_p13_t01",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260723-012",
-    "latest_research_handoff_id": "handoff-0845",
-    "latest_research_next_action": "Run the one authorized governed checkpoint for AJ-RT-20260723-012-001. Only after it commits, continue the v21 relay with one fresh bounded P12-T07 methodology-evaluation frame through continue-research.",
+    "latest_research_task_id": "RT-20260723-014",
+    "latest_research_handoff_id": "handoff-0847",
+    "latest_research_next_action": "Run the one authorized governed checkpoint for AJ-RT-20260723-014-001. After commit, process PIS-RT-20260723-013-001 in one separate improve-project-system packet before P13-T01.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -30,10 +30,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "continue_v21_p12_t07_after_checkpoint_v1",
-    "role_family": "external-red-team-reviewer@0.1.0",
+    "route_id": "p13_t01_validation_planner_equivalence_burn_in_v1",
+    "role_family": "process-integrity-auditor@0.1.0",
     "target_derivation_milestone": "source_equivalence_eqsrc",
-    "milestone_burden": "Assess the AI research system as a research object without promoting physics.",
+    "milestone_burden": "Compare legacy and planner validation on a fixed representative corpus without promoting physics.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -612,7 +612,28 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One normal governed checkpoint remains required before P12-T07."
+          "One normal governed checkpoint remains required before the existing signal sidecar may be processed."
+        ]
+      },
+      {
+        "layer": "renderer",
+        "status": "PENDING",
+        "evidence": [
+          "Task index current frontier and compact frontier must be rendered from finalized control sources before checkpoint."
+        ]
+      },
+      {
+        "layer": "memory_bootstrap",
+        "status": "PENDING",
+        "evidence": [
+          "Tracked memory derivatives must be synchronized and validate-only must pass before checkpoint."
+        ]
+      },
+      {
+        "layer": "claim_language_linter",
+        "status": "PENDING",
+        "evidence": [
+          "Changed-source claim-language validation remains required before checkpoint."
         ]
       }
     ]

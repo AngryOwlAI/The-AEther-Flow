@@ -1,0 +1,88 @@
+{
+  "schema_id": "v21_resolver_skill_contract_fixture_isolation_receipt_v1",
+  "receipt_id": "RECEIPT-P12-T07-RESOLVER-SKILL-CONTRACT-FIXTURE-ISOLATION-001",
+  "task_id": "RT-20260723-014",
+  "job_id": "AJ-RT-20260723-014-001",
+  "plan_task_id": "P12-T07",
+  "created_at": "2026-07-23T22:26:02Z",
+  "status": "PASS_CHECKPOINT_READY",
+  "route": {
+    "strategy_id": "isolate_resolver_skill_contract_fixture_from_live_signals_v1",
+    "immutable_route_sha256": "b8701d35374a252c93f7c884264c41104f1d4b0e9e9dce29b294d517a786e976",
+    "source_generation": 82,
+    "worker_skill": "improve-project-system"
+  },
+  "source_blocker": {
+    "path": "research_control/tasks/RT-20260723-013/artifacts/validation_blocker_checkpoint_project_improvement_signal_fixture_v1.yaml",
+    "sha256": "dd3d503192805cf15573e4da39738035302233acf43e98a7112dc6aa82a972a5",
+    "failed_test": "test_project_change_classifier.ProjectChangeClassifierTests.test_resolver_recommends_project_control_maintainer_for_skill_contract",
+    "observed_status": "FAIL_1_OF_1196_PROJECT_IMPROVEMENT_SIGNAL_FIXTURE"
+  },
+  "repair": {
+    "path": "tests/test_project_change_classifier.py",
+    "symbol": "ProjectChangeClassifierTests.test_resolver_recommends_project_control_maintainer_for_skill_contract",
+    "sha256_before": "5ffbe22f165cefc6b5fe5369274767b49dac61eb2952cea4511d6a739197cb31",
+    "sha256_after": "6d0a84789ff5dd40add5106dfa02c3f4c0ae66a5f5c22585ef311a3f1b7b8c92",
+    "behavior_change": "The no-signal skill-contract fixture patches resolve_project_improvement.collect_signals to return an explicit empty open_signals list.",
+    "boundary_assertions_changed": false,
+    "resolver_implementation_changed": false,
+    "signal_registry_changed_by_repair": false,
+    "live_signal_precedence_semantics_changed": false
+  },
+  "focused_regressions": [
+    {
+      "test": "tests.test_project_change_classifier.ProjectChangeClassifierTests.test_resolver_recommends_project_control_maintainer_for_skill_contract",
+      "status": "PASS"
+    },
+    {
+      "test": "tests.test_project_change_classifier.ProjectChangeClassifierTests.test_high_signal_preempts_current_documentation_impact",
+      "status": "PASS"
+    },
+    {
+      "test": "tests.test_project_change_classifier.ProjectChangeClassifierTests.test_resolver_surfaces_sidecar_context_for_selected_signal",
+      "status": "PASS"
+    }
+  ],
+  "module_regression": {
+    "command": ".venv/bin/python -m unittest -v tests.test_project_change_classifier",
+    "status": "PASS_63_OF_63"
+  },
+  "preserved_transaction": {
+    "source_dirty_manifest_path_count": 59,
+    "source_dirty_manifest_sha256": "11cae31da9625b33d8acafc2d8c861edce8f3b0e89f0df2a6fcd5d0af9407dcf",
+    "protected_predecessor_path_count": 21,
+    "protected_predecessor_manifest_sha256": "0b385a9f6bbe4d7ba31a62923cf68580e2931f3a9dcdeb99abac3eecb4ea8c2a",
+    "protected_predecessor_hash_mismatch_count": 0,
+    "protected_scope": [
+      "research_control/tasks/RT-20260723-013/** except the cumulative documentation-impact receipt",
+      "research_control/handoffs/handoff-0846.yaml",
+      "research_control/handoffs/handoff-0846.md",
+      "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.yaml",
+      "research_control/project_improvement_handoffs/improve-project-handoff_20260723_013.md"
+    ],
+    "predecessor_documentation_impact_sha256_before": "450076d6826ac26ce9c824deaa8025b7882e56455016d9c860f339366ab7da34",
+    "predecessor_documentation_impact_sha256_after": "771a7e3f0c6fef5313987d6e8a1477cdb728890b47ab2708fdc9a2718934da73",
+    "predecessor_documentation_impact_updated_for_cumulative_gate": true,
+    "p12_t07_payload_changed": false,
+    "project_improvement_signal_processed": false,
+    "project_improvement_sidecar_changed": false,
+    "scientific_status_changed": false,
+    "distance_to_gr_changed": false
+  },
+  "checkpoint": {
+    "command": ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260723-014-001",
+    "invoked": false,
+    "invocation_count": 0,
+    "status": "PENDING_ONE_NORMAL_GOVERNED_CHECKPOINT",
+    "legacy_validation_used": false
+  },
+  "authority_limits": {
+    "physics_evidence_created": false,
+    "ontology_or_source_law_adopted": false,
+    "scientific_ledger_changed": false,
+    "physics_promotion_authorized": false,
+    "publication_authorized": false,
+    "proof_authority": false,
+    "p13_t01_executed": false
+  }
+}

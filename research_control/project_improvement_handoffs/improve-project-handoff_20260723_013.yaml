@@ -1,0 +1,66 @@
+improvement_handoff_id: "improve-project-handoff_20260723_013"
+created_at: "2026-07-23T20:36:25Z"
+status: "open"
+source:
+  source_kind: "research_completion_and_handoff"
+  task_id: "RT-20260723-013"
+  decision_id: "DDR-20260723-013"
+  job_id: "AJ-RT-20260723-013-001"
+  completion_path: "research_control/tasks/RT-20260723-013/jobs/completions/AJC-AJ-RT-20260723-013-001.yaml"
+  regular_handoff_id: "handoff-0846"
+  regular_handoff_yaml_path: "research_control/handoffs/handoff-0846.yaml"
+  regular_handoff_markdown_path: "research_control/handoffs/handoff-0846.md"
+normal_research_continuation:
+  regular_handoff_created: true
+  continue_research_next_action: "Preserve P13-T01 as the next included plan item. Before executing it, process PIS-RT-20260723-013-001 through the separate improve-project-system sidecar to reseal only the stale P12-T05 generated report, receipt, and exact downstream hash references."
+  sidecar_does_not_replace_regular_handoff: true
+project_boundary:
+  recommended_skill: "improve-project-system"
+  project_system_only: true
+  physics_claim_promotion_authorized: false
+  canonical_science_source_edits_authorized: false
+  generated_derivative_hand_edits_authorized: false
+  requires_human_gate: false
+signal_summary:
+  signal_ids:
+    - "PIS-RT-20260723-013-001"
+  signal_count: 1
+  highest_severity: "high"
+  selected_signal_id: "PIS-RT-20260723-013-001"
+  routing_basis: "highest_severity_then_created_at_then_signal_id"
+issues:
+  - issue_id: "IPH-ISSUE-001"
+    signal_id: "PIS-RT-20260723-013-001"
+    signal_type: "generated_artifact_drift"
+    severity: "high"
+    title: "Generated Artifact Drift: PIS-RT-20260723-013-001"
+    description: "The current P12-T05 validator returns FAIL because scientific_quality_validation_report.json and scientific_quality_compact_receipt.json embed stale hashes for the taxonomy, calibration policy, and fixture corpus. P12-T07 preserves the three exact live-versus-embedded deltas and does not repair the predecessor."
+    evidence:
+      - evidence_path: "research_control/tasks/RT-20260723-013/artifacts/p12_t07_methodology_ablation_results.json"
+        evidence_summary: "The current P12-T05 validator returns FAIL because scientific_quality_validation_report.json and scientific_quality_compact_receipt.json embed stale hashes for the taxonomy, calibration policy, and fixture corpus. P12-T07 preserves the three exact live-versus-embedded deltas and does not repair the predecessor."
+    impact: "Project-system follow-up is required under the improvement workflow."
+    recommended_skill: "improve-project-system"
+    recommended_role: "documentation-curator"
+    recommended_next_step: "Run /improve-project-system to process this signal as one bounded project-system AgentJob."
+solution_plan:
+  present: false
+  status: "absent"
+  plan_owner_role: "project-system-director"
+  implementation_role: ""
+  objective: ""
+  allowed_write_paths_hint:
+    - ""
+  required_validators:
+    - "collect_project_improvement_signals --validate-emitted"
+    - "validate_documentation_impact"
+    - "validate_research_control"
+  plan_steps:
+    - step_id: "PLAN-001"
+      action: "Project-System Director converts the issue inventory into one bounded AgentJob when no executable plan is present."
+      expected_output: "One AgentJob with allowlisted paths and validators."
+      stop_condition: "No role fits without authority expansion."
+resolution:
+  resolved_by_job_id: ""
+  resolution_evidence_path: ""
+  resolved_at: ""
+notes: ""
