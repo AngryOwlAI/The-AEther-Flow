@@ -6,17 +6,17 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Active State
 
-- Active task: `RT-20260722-019`
-- Latest handoff: `handoff-0828`
-- Current status: `p14_t03_no_target_necessary_but_insufficient_policy_complete_p14_t05_selected`
+- Active task: `RT-20260722-020`
+- Latest handoff: `handoff-0829`
+- Current status: `p14_t05_scoped_negative_result_success_and_minimum_extension_pathway_complete_p15_t01_selected`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260722-019`
-- Latest research handoff: `handoff-0828`
-- Latest research next action: Run exactly one bounded v21 P14-T05 ontology-formalizer philosophy-foundations AgentJob to formalize the scoped no-go and minimum-extension success pathway without globalizing local results or changing claim authority.
+- Latest research task: `RT-20260722-020`
+- Latest research handoff: `handoff-0829`
+- Latest research next action: Run exactly one bounded v21 P15-T01 documentation-curator publication-preparation AgentJob to prepare an internal exact-GR interpretive manuscript package without submission, publication, benchmark, or derivation authority.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -26,10 +26,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 
 ## Next Route
 
-- Route ID: `v21_p14_t05_scoped_negative_result_minimum_extension_success_pathway`
-- Role family: `ontology-formalizer@0.2.0`
-- Target milestone: `source_equivalence_eqsrc`
-- Milestone burden: Ensure negative science can close a line without becoming global theory rejection.
+- Route ID: `v21_p15_t01_exact_gr_interpretive_manuscript_package`
+- Role family: `documentation-curator@2.0.0`
+- Target milestone: `benchmark_promotion`
+- Milestone burden: Prepare a defensible publication without changing benchmark or derivation authority.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -64,8 +64,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `48c50a99c19d83c589e54c0e70f78cca3f5ab38b97f4f5c7b30e1ef1aff09aa6`
-- JSON SHA-256: `2be64bc96e68ee0037f127cfd1fb1e10ed54ab6c66b42a40ec0155f85b5c98c9`
+- YAML SHA-256: `64f46871226a9c7d56687a6db51b4f179b4aa7922b5d6bc7a58b24635ee43bca`
+- JSON SHA-256: `9ade1350d47c54c9f6dcc28e79eccb4a75e719044c19844855589edd4f9144d4`
 
 ## Authority Warning
 

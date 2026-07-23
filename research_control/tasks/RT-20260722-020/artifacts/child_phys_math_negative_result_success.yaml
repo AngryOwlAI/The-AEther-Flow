@@ -1,0 +1,74 @@
+schema_id: "p14_t05_child_phys_math_negative_result_success_v1"
+schema_version: 1
+artifact_id: "P14-T05-CHILD-PHYS-MATH-NEGATIVE-RESULT-SUCCESS-V1"
+task_id: "RT-20260722-020"
+job_id: "AJ-RT-20260722-020-001"
+plan_task_id: "P14-T05"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+authority: "draft/control"
+artifact_role: "parent_child_synthesis_input"
+claim_boundary_id: "CB-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-001"
+
+purpose: >-
+  Supply exact result-record definitions, a five-level strength ladder, finite
+  counterexamples, and a minimum-extension hitting-set theorem that closes only
+  the quantified question supported by its evidence.
+
+payload:
+  payload_id: "NR-MINIMUM-EXTENSION-HITTING-SET-THEOREM-V1"
+  payload_type: "theorem_with_hypotheses_and_proof"
+  candidate_family: "V21-P14-NEGATIVE-RESULT-SUCCESS-PATHWAY-V1"
+  target_derivation_milestone: "source_equivalence_eqsrc"
+  milestone_burden: "Ensure negative science can close a line without becoming global theory rejection."
+  mathematical_scope: >-
+    Finite declared capability universes and exact scope-indexed research
+    questions; not a complete universe of possible source extensions.
+  new_mathematical_payload:
+    - "exact five-component negative-result record"
+    - "five-level strength ladder with distinct quantifier domains"
+    - "finite hitting-set theorem for inclusion-minimal extension signatures"
+    - "incomplete-universe proposition blocking future-extension impossibility"
+    - "two-clause finite control example with two minimal signatures"
+  theorem_statement: >-
+    For finite U and nonempty obstruction clauses C_j, every escaping extension
+    signature contains an inclusion-minimal hitting set, and the collection of
+    such signatures is finite and nonempty.
+  proof_summary: >-
+    Escaping is definitionally the hitting-set property. Repeated deletion of
+    dispensable elements terminates because U is finite, yielding a minimal
+    hitting set. The power set of U is finite and U hits all nonempty clauses.
+  countermodel_or_obstruction: >-
+    With U={d,n,q}, C1={d,q}, and C2={n,q}, the exact minimal signatures are
+    {q} and {d,n}; empty, {d}, and {n} fail. Omitted capabilities remain outside
+    the theorem's universe and therefore block a future-impossibility overread.
+
+scope_guards:
+  inclusion_minimal_not_ontologically_preferred: true
+  capability_universe_complete: false
+  clause_sufficiency_for_physics: false
+  future_extension_impossibility: false
+  global_theory_rejection: false
+  exact_gr_recovery_obligation_preserved: true
+  target_atlas_free_source_definition_required: true
+
+source_basis:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v21.md"
+    sha256: "4d11bd3aa78d97e8707cf48821a139bfe3ddb311f798b78663544ef6520bf087"
+  - path: "research_control/tasks/RT-20260720-021/jobs/completions/AJC-AJ-RT-20260720-021-001.yaml"
+    sha256: "35c4b7e44cc1dbf73f9e908b1452ee967ed73d3c1908d40d0566322172f769a0"
+  - path: "research_control/tasks/RT-20260720-029/jobs/completions/AJC-AJ-RT-20260720-029-001.yaml"
+    sha256: "17e8314c2a5ae3aa257b693cd20df9fa055c3abb2bf1e8b890776d70544b8bf1"
+  - path: "research_control/tasks/RT-20260722-019/jobs/completions/AJC-AJ-RT-20260722-019-001.yaml"
+    sha256: "1996cb234816a9043ea8928661314055570ec1c9c872a7331d0a2a0ef8da5eec"
+
+handoff_to_parent:
+  shared_consensus:
+    - "negative results close exact quantified questions only"
+    - "minimum-extension signatures are necessary routing lower bounds"
+    - "no present result establishes future-extension impossibility"
+  unique_contribution:
+    - "finite hitting-set proof and incomplete-universe proposition"
+  unresolved_limitations:
+    - "the provisional EqSrc capability universe is intentionally non-exhaustive"

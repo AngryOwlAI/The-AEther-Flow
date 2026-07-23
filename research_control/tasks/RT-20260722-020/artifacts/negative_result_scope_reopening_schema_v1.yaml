@@ -1,0 +1,184 @@
+schema_id: "negative_result_scope_reopening_schema_v1"
+schema_version: 1
+artifact_id: "P14-T05-NEGATIVE-RESULT-SCOPE-REOPENING-SCHEMA-V1"
+task_id: "RT-20260722-020"
+job_id: "AJ-RT-20260722-020-001"
+plan_task_id: "P14-T05"
+status: "draft/control"
+claim_boundary_id: "CB-V21-P14-T05-NEGATIVE-RESULT-SUCCESS-001"
+target_derivation_milestone: "source_equivalence_eqsrc"
+milestone_burden: "Ensure negative science can close a line without becoming global theory rejection."
+
+exact_question_record:
+  required_fields:
+    - "question_id"
+    - "instance_domain"
+    - "admissible_construction_family"
+    - "assumptions"
+    - "tested_claim"
+    - "source_paths_and_sha256es"
+  identity_rule: "Changing any required field creates a new exact question."
+
+strength_ladder:
+  - strength_id: "finite_countermodel"
+    quantifier_scope: "At least one witness in the declared finite domain falsifies a universal claim."
+    minimum_evidence:
+      - "exact witness"
+      - "machine-checkable or hand-checkable claim evaluation"
+      - "domain and assumption identity"
+    allowed_closure: "close_exact_universal_claim_for_declared_domain"
+    forbidden_overread: "all constructions or future extensions fail"
+  - strength_id: "scoped_obstruction"
+    quantifier_scope: "A named family fails an explicit burden under recorded assumptions."
+    minimum_evidence:
+      - "sealed family inventory"
+      - "burden definition"
+      - "member-level evidence or a covering lemma"
+    allowed_closure: "freeze_family"
+    forbidden_overread: "family inventory is complete for all possible routes"
+  - strength_id: "scoped_no_go_theorem"
+    quantifier_scope: "Every member of an explicitly admissible class fails the exact claim."
+    minimum_evidence:
+      - "theorem statement with complete quantifiers"
+      - "hypotheses"
+      - "proof"
+      - "source and domain hashes"
+    allowed_closure: "close_scoped_question"
+    forbidden_overread: "global theory rejection or future-extension impossibility"
+  - strength_id: "minimum_extension_theorem"
+    quantifier_scope: "Every escape in a finite declared capability universe contains an inclusion-minimal hitting signature."
+    minimum_evidence:
+      - "finite capability universe"
+      - "nonempty obstruction clauses"
+      - "clause-soundness qualification"
+      - "hitting-set proof"
+    allowed_closure: "route_to_minimal_extension_signatures"
+    forbidden_overread: "minimal signature is sufficient physically preferred or adopted"
+  - strength_id: "future_extension_impossibility"
+    quantifier_scope: "Every admissible future extension fails."
+    minimum_evidence:
+      - "complete extension universe theorem or equivalent meta-theorem"
+      - "global proof"
+      - "separately authorized global wording"
+    allowed_closure: "protected_global_closure_only"
+    forbidden_overread: "inference from finite examples family freezes or an incomplete capability universe"
+    current_status: "not_established_and_blocked"
+
+scientific_completion_predicate:
+  predicate_id: "NR-EXACT-SCOPE-COMPLETE-V1"
+  all_required:
+    - "exact_question_identity_complete"
+    - "strength_label_supported"
+    - "proof_countermodel_or_sealed_audit_present"
+    - "no_target_and_circularity_audit_recorded_when_applicable"
+    - "assumptions_and_nonimplications_explicit"
+    - "reopening_predicate_explicit"
+    - "review_provenance_calibrated"
+    - "authority_surfaces_separated"
+  completion_effect: "The exact question or family may close at its supported strength."
+  non_effects:
+    - "programme completion"
+    - "ontology adoption or rejection"
+    - "physical interpretation"
+    - "scientific ledger mutation"
+    - "Distance-to-GR promotion"
+    - "publication authority"
+    - "proof authority beyond the exact internal record"
+
+closure_states:
+  - state: "keep_open"
+    condition: "Evidence does not yet support a stronger bounded disposition."
+  - state: "close_exact_route"
+    condition: "The exact question record has a qualifying finite countermodel or equivalent route-specific result."
+  - state: "freeze_family"
+    condition: "A sealed named family is covered by a qualifying scoped obstruction."
+  - state: "close_scoped_question"
+    condition: "A scoped no-go theorem covers the explicitly admissible class."
+  - state: "protected_global_closure"
+    condition: "A complete-universe theorem and separately authorized global conclusion exist."
+    current_status: "not_available"
+
+reopening_trigger_classes:
+  - trigger_id: "assumption_change"
+    effect: "Create a new question record; preserve the old result."
+  - trigger_id: "domain_enlargement"
+    effect: "Create a new question record; prior closure remains scoped to its old domain."
+  - trigger_id: "new_construction_family"
+    effect: "Evaluate outside the frozen inventory without erasing that inventory."
+  - trigger_id: "new_capability"
+    effect: "Extend the capability universe and recompute minimal hitting signatures."
+  - trigger_id: "proof_defect"
+    effect: "Suspend the affected strength label until repaired."
+  - trigger_id: "operational_bridge"
+    effect: "Open the relevant physical-adequacy burden as a distinct question."
+  - trigger_id: "material_independent_review"
+    effect: "Open a bounded repair or response packet."
+
+current_eqsrc_classifications:
+  - result_id: "P2-T08-DETERMINISTIC-EQUIVARIANT-SELECTOR"
+    source_task_id: "RT-20260720-021"
+    assigned_strength: "scoped_no_go_or_nonuniqueness_within_declared_domain"
+    review_provenance: "internal_AI_no_blocking_defect_not_external_human_review"
+    closure: "exact_declared_selector_question_only"
+    reopening:
+      - "stochastic selector"
+      - "added source mark"
+      - "changed morphism class"
+      - "changed admissible variations"
+  - result_id: "P3-T07-HISTORICAL-FAMILY-FREEZE"
+    source_task_id: "RT-20260720-029"
+    assigned_strength: "scoped_obstruction"
+    closure: "five historical families and seven exact candidates locally frozen"
+    reopening:
+      - "new source-derived discriminator"
+      - "new operational functor theorem"
+      - "new invariant quotient with interface descent and physical bridge"
+  - result_id: "P14-T03-NO-TARGET-SUFFICIENCY"
+    source_task_id: "RT-20260722-019"
+    assigned_strength: "task_local_claim_logic_theorem"
+    closure: "no-target purity remains necessary and insufficient"
+    reopening:
+      - "material defect in the exact finite logic"
+  - result_id: "GENERAL-EQSRC"
+    assigned_strength: "not_discharged"
+    closure: "keep_open"
+    reopening:
+      - "same-milestone source extension"
+
+minimum_extension_model:
+  theorem_id: "NR-MINIMUM-EXTENSION-HITTING-SET-THEOREM-V1"
+  minimum_semantics: "inclusion_minimal_unless_declared_cost_function"
+  capability_universe_complete: false
+  clause_system_physically_sufficient: false
+  provisional_signatures:
+    - signature_id: "selection_path"
+      required_capabilities:
+        - "source_derived_discriminator"
+        - "morphism_transformation_and_variation_laws"
+    - signature_id: "representative_irrelevance_path"
+      required_capabilities:
+        - "physical_observable_functor"
+        - "physical_morphism_preservation_and_reflection_theorem"
+    - signature_id: "quotient_path"
+      required_capabilities:
+        - "source_defined_invariant_functor"
+        - "interface_descent"
+        - "physical_operational_bridge"
+  authority_limits:
+    signatures_exhaustive: false
+    signatures_sufficient_for_physics: false
+    signature_selected: false
+    ontology_candidate_created: false
+    ontology_adoption_authorized: false
+
+authority_limits:
+  global_no_go_established: false
+  future_extension_impossibility_established: false
+  current_adoption_status: "blocked_adoption_open_continuation"
+  same_milestone_continuation_open: true
+  canonical_ontology_changed: false
+  scientific_ledger_changed: false
+  physical_interpretation_authorized: false
+  publication_authorized: false
+  physics_promotion_authorized: false
+  completed_derivation_claimed: false

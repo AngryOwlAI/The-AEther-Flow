@@ -1,0 +1,81 @@
+schema_id: "negative_result_publication_readiness_v1"
+schema_version: 1
+artifact_id: "P14-T05-NEGATIVE-RESULT-PUBLICATION-READINESS-V1"
+task_id: "RT-20260722-020"
+job_id: "AJ-RT-20260722-020-001"
+plan_task_id: "P14-T05"
+status: "draft/control"
+purpose: >-
+  Define evidence and authority criteria for eventually presenting a scoped
+  negative result in a manuscript without treating internal readiness as
+  submission publication theorem certification or programme rejection.
+
+readiness_levels:
+  - level_id: "draft_control_only"
+    required:
+      - "exact question identity"
+      - "candidate evidence"
+      - "claim boundary"
+    authority_effect: "none"
+  - level_id: "internal_manuscript_integration_ready"
+    required:
+      - "immutable source paths and hashes"
+      - "strength label supported by proof countermodel or sealed audit"
+      - "scope assumptions nonimplications and reopening criteria"
+      - "target-atlas and circularity audit where applicable"
+      - "mathematical payload separated from validator receipts"
+      - "citations and related negative results preserved"
+      - "internal conflict review complete"
+    authority_effect: "may be considered for a separately controlled internal manuscript edit"
+  - level_id: "external_review_candidate"
+    required:
+      - "internal manuscript integration criteria"
+      - "review packet with exact questions"
+      - "reviewer independence and provenance disclosed"
+      - "all blocking review defects resolved or explicitly open"
+    authority_effect: "may be sent only under separately authorized external-contact workflow"
+  - level_id: "publication_submission_eligible"
+    required:
+      - "external review disposition when required"
+      - "human publication owner approval"
+      - "venue and authorship checks"
+      - "canonical manuscript authority check"
+      - "claims revalidated against current repository state"
+    authority_effect: "eligibility only; submission still requires explicit human authorization"
+
+current_assessment:
+  achieved_level: "draft_control_only"
+  internal_manuscript_integration_ready: true
+  external_review_candidate: false
+  publication_submission_eligible: false
+  publication_authorized: false
+  external_human_review_present: false
+  rationale: >-
+    P14-T05 supplies an exact internal theorem policy schema and receipts, but
+    it has not received independent external human review and carries no human
+    publication authorization.
+
+wording_policy:
+  allowed:
+    - "draft/control scoped negative result"
+    - "exact route locally closed"
+    - "named family locally frozen"
+    - "ready for separately controlled internal manuscript integration"
+    - "same-milestone continuation remains open"
+  blocked:
+    - "the theory has been disproved"
+    - "no future extension can succeed"
+    - "peer reviewed"
+    - "published"
+    - "publication authorized"
+    - "general EqSrc solved"
+    - "completed GR derivation"
+
+authority_limits:
+  readiness_is_evidence_not_authority: true
+  validator_pass_is_peer_review: false
+  internal_ai_review_is_external_human_review: false
+  manuscript_integration_is_publication: false
+  human_submission_gate_required: true
+  scientific_status_changed: false
+  physics_promotion_authorized: false

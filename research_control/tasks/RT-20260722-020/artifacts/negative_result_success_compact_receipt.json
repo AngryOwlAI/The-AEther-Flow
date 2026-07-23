@@ -1,0 +1,48 @@
+{
+  "schema_id": "negative_result_success_compact_receipt_v1",
+  "task_id": "RT-20260722-020",
+  "job_id": "AJ-RT-20260722-020-001",
+  "plan_task_id": "P14-T05",
+  "status": "PASS_DRAFT_CONTROL_NO_DISTANCE_DELTA",
+  "target_derivation_milestone": "source_equivalence_eqsrc",
+  "milestone_burden": "Ensure negative science can close a line without becoming global theory rejection.",
+  "result": {
+    "artifact_path": "research_control/tasks/RT-20260722-020/artifacts/negative_result_success_pathway_v1.tex",
+    "artifact_sha256": "a5b59ddf497659097783e8e8dcd9c4de1726652265b0b53cab007da233f34aa3",
+    "scope_schema_path": "research_control/tasks/RT-20260722-020/artifacts/negative_result_scope_reopening_schema_v1.yaml",
+    "scope_schema_sha256": "0cab86b54a802652d33553dee1cfe0be8751412f82367f558c9fb16b33cd9bed",
+    "publication_readiness_path": "research_control/tasks/RT-20260722-020/artifacts/negative_result_publication_readiness_v1.yaml",
+    "publication_readiness_sha256": "970a411114f37f78687d759fea369b03cf8cb2e343edc6a1053b56da62b65d22",
+    "validation_report_path": "research_control/tasks/RT-20260722-020/artifacts/negative_result_success_validation_report.json",
+    "validation_report_sha256": "b9175292a779da8af03c2e38a21024fb716bcc508bfa423ee7fc338c679aff95",
+    "validation_status": "PASS_104_CHECKS",
+    "latex_compile_status": "PASS",
+    "strength_level_count": 5,
+    "reopening_trigger_count": 7,
+    "provisional_extension_signature_count": 3,
+    "parent_conflict_count": 5,
+    "unresolved_parent_conflict_count": 0
+  },
+  "scientific_disposition": {
+    "exact_scope_policy_complete": true,
+    "minimum_extension_theorem_proved_in_declared_finite_model": true,
+    "historical_eqsrc_families_locally_frozen": true,
+    "general_eqsrc_discharged": false,
+    "same_milestone_continuation_open": true,
+    "current_adoption_status": "blocked_adoption_open_continuation",
+    "global_no_go_established": false,
+    "future_extension_impossibility_established": false,
+    "scientific_ledger_changed": false,
+    "distance_to_gr_changed": false,
+    "canonical_ontology_changed": false,
+    "publication_authorized": false,
+    "physics_promotion_authorized": false,
+    "completed_derivation_claimed": false
+  },
+  "next_plan_order_disposition": {
+    "selected_plan_task_id": "P15-T01",
+    "selected_worker_skill": "continue-research",
+    "executed": false,
+    "reason": "P15-T01 is dependency-ready and precedes later eligible items; P14-T06 remains blocked by human-gated P14-T04."
+  }
+}

@@ -1,0 +1,350 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newcommand{\powerset}{\mathcal{P}}
+
+\title{Scoped Negative-Result Success and Minimum-Extension Pathway\\
+\large P14-T05 draft/control formalization}
+\author{The \AE ther-Flow Research Project}
+\date{2026-07-22}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This task-local packet defines when a negative scientific result may complete
+an exact research question without becoming a global rejection of the
+\AE ther-Flow programme.  It distinguishes finite countermodels, scoped
+obstructions, scoped no-go theorems, minimum-extension theorems, and the much
+stronger claim that no future extension could succeed.  A finite hitting-set
+theorem converts an explicit family of obstruction clauses into
+inclusion-minimal extension signatures.  The theorem is a lower-bound and
+routing result, not an ontology proposal, adoption, physical interpretation,
+or proof of general source equivalence.  The current EqSrc selector and
+quotient results are classified conservatively: several exact routes are
+locally frozen, while general EqSrc and same-milestone source-extension
+continuation remain open.
+\end{abstract}
+
+\section{Authority and exact claim boundary}
+
+This artifact has status \texttt{draft/control}.  Its mathematical statements
+are proved only in the explicit finite or scope-indexed control models defined
+below.  It does not edit or supersede canonical ontology, choose a physical
+gauge, adopt a source-side law, alter the Distance-to-GR ledger, establish
+general EqSrc, derive a metric, couple matter, derive Einstein equations,
+authorize publication, or establish a completed first-principles GR
+derivation.  Exact-GR recovery remains an adopted downstream closure in the
+canonical interpretation; it is not thereby a derivation from substrate
+structure.
+
+The governing discipline is:
+\begin{quote}
+Close the exact quantified question that the witness or theorem answers;
+preserve every explicitly stated assumption and domain boundary; and name a
+reopening condition.  Never promote ``this route fails'' to ``the theory
+fails'' without a theorem whose quantified universe actually supports that
+conclusion.
+\end{quote}
+
+\section{Scope-bearing result records}
+
+\begin{definition}[Exact question record]
+An exact question record is
+\[
+ Q=(I,\mathcal{M},A,C,S),
+\]
+where $I$ is the instance domain, $\mathcal{M}$ is the explicitly admissible
+construction family, $A$ is the assumption list, $C(m,i)$ is the tested claim,
+and $S$ is the immutable source-and-version fingerprint.  Two records with a
+different component are different questions.
+\end{definition}
+
+\begin{definition}[Negative-result record]
+A negative-result record is
+\[
+ R=(Q,L,W,P,O),
+\]
+where $L$ is a strength label from the ladder below, $W$ is a finite witness or
+counterexample set when applicable, $P$ is a proof or audit record, and $O$ is
+an explicit reopening predicate.  A record is \emph{scientifically complete
+for its exact scope} only if all five components are present and its evidence
+supports the selected strength label.
+\end{definition}
+
+The phrase ``scientifically complete for its exact scope'' is deliberately
+separate from ontology adoption, physical interpretation, Gate Chair verdict,
+external publication, and programme completion.
+
+\section{Negative-result strength ladder}
+
+\begin{definition}[Finite countermodel]
+For a fixed question record $Q$, a finite countermodel is one pair
+$(m,i)\in\mathcal{M}\times I$ with $\neg C(m,i)$.  It refutes a universal
+claim over the stated domain.  It says nothing about constructions or
+instances outside that domain.
+\end{definition}
+
+\begin{definition}[Scoped obstruction]
+A scoped obstruction identifies an explicit burden $B$ and proves or audits
+that a named family $\mathcal{F}\subseteq\mathcal{M}$ does not discharge $B$
+under $A$.  It may freeze the exact family $\mathcal{F}$, but it is weaker than
+a no-go theorem for all of $\mathcal{M}$ unless $\mathcal{F}=\mathcal{M}$ is
+itself established.
+\end{definition}
+
+\begin{definition}[Scoped no-go theorem]
+A scoped no-go theorem proves
+\[
+  \forall m\in\mathcal{M}\;\forall i\in I,\quad \neg C(m,i)
+\]
+or an explicitly equivalent quantified statement, under the assumptions $A$
+and source fingerprint $S$.  Its conclusion is exhausted by those
+quantifiers.  The theorem does not range over unlisted future extensions.
+\end{definition}
+
+\begin{definition}[Minimum-extension theorem]
+A minimum-extension theorem provides necessary added-capability signatures for
+escaping a finite, explicit obstruction system.  ``Minimum'' means
+inclusion-minimal unless a cost function is separately declared; it does not
+mean ontologically preferred, physically realized, or adopted.
+\end{definition}
+
+\begin{definition}[Future-extension impossibility]
+A future-extension impossibility claim quantifies over a justified complete
+universe of admissible future source extensions and proves that none can meet
+the target.  This strength requires a completeness theorem for that universe
+or an equivalent meta-theorem.  No such theorem is supplied here, so this
+label is blocked for the present EqSrc frontier.
+\end{definition}
+
+The ladder is not a rhetoric scale.  Each step changes the quantified domain
+or conclusion and therefore demands new evidence.
+
+\section{Minimum-extension hitting-set theorem}
+
+Let $U$ be a finite declared universe of extension capabilities.  Let
+$J=\{1,\ldots,n\}$ index obstruction burdens, and let each nonempty
+$C_j\subseteq U$ contain the capabilities that can discharge burden $j$.
+An extension signature is a set $E\subseteq U$.
+
+\begin{definition}[Escape predicate]
+The task-local escape predicate is
+\[
+ \operatorname{Esc}(E)\;\Longleftrightarrow\;
+ \bigwedge_{j\in J}(E\cap C_j\neq\varnothing).
+\]
+Thus an escaping signature must supply at least one declared capability for
+each obstruction clause.  This definition states necessary control burdens;
+it does not assert that satisfying them is sufficient for physics.
+\end{definition}
+
+\begin{theorem}[Finite minimum-extension signatures]
+\label{thm:hitting}
+For finite $U$ and nonempty clauses $C_j$, the following hold.
+\begin{enumerate}
+  \item $\operatorname{Esc}(E)$ holds exactly when $E$ is a hitting set of
+  $\{C_j:j\in J\}$.
+  \item Every escaping $E$ contains an inclusion-minimal escaping subset
+  $H\subseteq E$.
+  \item The collection
+  \[
+    \mathcal{H}_{\min}=
+    \{H\subseteq U:\operatorname{Esc}(H)\ \text{and no proper subset of }H
+      \text{ escapes}\}
+  \]
+  is finite and nonempty.
+  \item Consequently, any construction that escapes all declared clauses must
+  realize at least one signature $H\in\mathcal{H}_{\min}$, provided its added
+  capabilities are represented in $U$ and the clause model is sound for the
+  exact question record.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Part 1 is the definition of a hitting set.  For Part 2, begin with finite $E$.
+If a proper subset still escapes, delete a dispensable element; repeat.  Since
+$E$ is finite, deletion terminates at an escaping subset with no escaping
+proper subset.  Part 3 follows because $\powerset(U)$ is finite, $U$ itself
+hits every nonempty $C_j$, and Part 2 supplies at least one minimal member.
+For Part 4, represent a successful construction by its capability set $E$.
+Soundness of the clauses gives $\operatorname{Esc}(E)$; Part 2 then supplies
+$H\subseteq E$.  The representation and soundness qualifications are
+essential and prevent an unlisted extension from being ruled out.
+\end{proof}
+
+\begin{corollary}[Weighted routing, not adoption]
+If a nonnegative cost $w:U\to\mathbb{R}_{\geq0}$ is declared, one may rank
+$\mathcal{H}_{\min}$ by $\sum_{u\in H}w(u)$.  A least-cost signature is least
+only in that declared bookkeeping model.  It is not thereby the true ontology,
+a physical law, or an authorized implementation choice.
+\end{corollary}
+
+\begin{proposition}[No global conclusion from an incomplete universe]
+If a capability $u_\star$ or a sound discharge mechanism is omitted from $U$
+or from every relevant clause, Theorem~\ref{thm:hitting} provides no verdict
+about extensions using $u_\star$.  Therefore the theorem cannot establish
+future-extension impossibility without a separate completeness result.
+\end{proposition}
+
+\begin{proof}
+The theorem quantifies only over subsets of $U$ and assumes the clauses are
+sound.  An omitted capability is outside that quantified universe, so no
+conclusion about it follows.
+\end{proof}
+
+\section{Finite control examples}
+
+Let $U=\{d,n,q\}$ with clauses $C_1=\{d,q\}$ and
+$C_2=\{n,q\}$.  Here $d$ denotes a source-derived discriminator, $n$ a
+naturality-and-variation law, and $q$ a quotient plus interface-descent
+capability.  Then
+\[
+ \mathcal{H}_{\min}=\bigl\{\{q\},\{d,n\}\bigr\}.
+\]
+The empty signature and the singletons $\{d\}$ and $\{n\}$ fail.  The
+signature $\{q\}$ is minimal in this toy clause model but is not automatically
+physically adequate: an operational bridge and exact-GR recovery obligations
+remain separate.  Likewise $\{d,n\}$ merely records necessary declared
+capabilities and does not select or adopt their laws.
+
+This two-clause example separates four claims:
+\begin{enumerate}
+  \item a current family can fail a burden;
+  \item the exact family can be locally frozen;
+  \item an explicit capability model can identify minimal reopening routes;
+  \item no conclusion follows about every future extension.
+\end{enumerate}
+
+\section{Conservative classification of the EqSrc frontier}
+
+The current records support the following bounded classification.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.23\textwidth}
+                  >{\raggedright\arraybackslash}p{0.24\textwidth}
+                  >{\raggedright\arraybackslash}p{0.43\textwidth}}
+\toprule
+Existing result & Allowed strength & Preserved boundary \\
+\midrule
+\endhead
+Empty fixed locus for an exact deterministic equivariant selector domain &
+Scoped no-selector conclusion for that domain &
+No conclusion about stochastic selectors, extra marks, altered morphisms,
+changed variations, or other source extensions. \\
+Multiple fixed loci or distinct $K$-images &
+Finite countermodel or scoped nonuniqueness obstruction &
+No unique physical representative and no physical-gauge verdict follow. \\
+Singleton product of fixed loci &
+Conditional existence and uniqueness within the declared selector model &
+Existence is not source derivation, naturality, operational meaning, or
+physical realization. \\
+Five historical selector families and seven exact candidates &
+Local family freeze under recorded assumptions &
+Their coordinates are preserved; general EqSrc remains undischarged. \\
+Generic invariant-functor quotient candidate &
+Conditional theorem plus locally frozen generic adequacy route &
+No physical quotient, interface descent, operational completeness, or
+general EqSrc is established. \\
+P14-T03 no-target result &
+Task-local claim-logic theorem &
+No-target purity is necessary and insufficient; it is not a theorem about
+nature or a protected gate verdict. \\
+\bottomrule
+\end{longtable}
+
+Internal AI review of the P2 selector theorem found no blocking defect in its
+declared proposal-only domain.  That review is not independent external human
+review and does not supply theorem, adoption, or publication authority.
+
+\section{Provisional EqSrc extension signatures}
+
+The following signatures are routing aids.  They are non-exhaustive,
+proposal-only, and conditional on the present burden decomposition.
+
+\begin{description}
+  \item[Selection path.] A source-derived discriminator together with explicit
+  morphism, transformation, and variation laws.  The discriminator must not be
+  defined by importing the target metric atlas it is meant to derive.
+  \item[Representative-irrelevance path.] A physical-observable functor plus a
+  theorem that the admitted physical morphisms preserve and reflect the
+  relevant operational content.  Algebraic orbit constancy alone is not an
+  operational theorem.
+  \item[Quotient path.] A source-defined invariant functor, interface descent,
+  and a physical bridge that establishes why the quotient carries the required
+  observables.  A mathematically defined quotient alone does not establish
+  physical adequacy.
+\end{description}
+
+Stochastic selection, added marks, changed admissible variations, and altered
+morphism classes are distinct extensions.  They reopen the exact route only
+when their new assumptions and capability costs are declared.  They are not
+counterexamples to a theorem whose scope excluded them.
+
+\section{Closure and reopening policy}
+
+An exact route may be marked \texttt{close\_exact\_route} when its negative
+record identifies the full question tuple, evidence, strength, and reopening
+predicate.  A named finite family may be marked \texttt{freeze\_family} when
+every listed member has a qualifying result and the family inventory is
+sealed.  A scoped question may be marked \texttt{close\_scoped\_question}
+only when a theorem covers the declared admissible class.  None of these
+statuses closes the entire research programme.
+
+Reopening is evidence-triggered, not rhetorical.  Valid triggers include a
+changed assumption, enlarged instance domain, new admissible construction,
+new capability outside the prior universe, repaired proof defect, stronger
+operational bridge, or independent review that identifies a material gap.
+Every reopened route receives a new exact question record and retains the old
+negative result as historical evidence.
+
+\section{Publication-readiness criteria}
+
+A negative result is internally manuscript-ready only if:
+\begin{enumerate}
+  \item the exact question tuple and immutable source hashes are included;
+  \item the selected strength label is supported by a checkable proof,
+  countermodel, or sealed audit;
+  \item scope, assumptions, non-implications, and reopening criteria are stated;
+  \item target-atlas leakage and circularity have been audited where relevant;
+  \item mathematical payload is separated from validator and workflow receipts;
+  \item ontology, physical, ledger, review, and publication authority are named
+  separately;
+  \item citations and related negative results are preserved; and
+  \item a human publication owner independently authorizes submission after
+  any required external review.
+\end{enumerate}
+
+Items 1--7 are evidence-readiness criteria.  Item 8 is protected publication
+authority.  This packet satisfies neither external-review nor human-submission
+authority and therefore records only \texttt{draft/control} status.  ``Ready
+for internal manuscript integration'' must never be shortened to ``published''
+or ``publication authorized.''
+
+\section{Distance-to-GR disposition}
+
+The P14-T05 burden is discharged at task-local policy scope: negative science
+can close an exact line while same-milestone continuation stays open.  The
+scientific frontier remains unchanged.  Source ontology is not derived;
+general EqSrc is undischarged; effective metric, matter coupling, Einstein
+equations, and benchmark promotion remain blocked by their existing burdens.
+No row of the Distance-to-GR ledger is changed.
+
+\section{Source basis}
+
+The controlling sources are the v21 implementation plan (P14-T05), the
+canonical foundations and geometry manuscripts, the epistemic-category and
+scoped-positive vocabularies, the GR derivation burden map, the Distance-to-GR
+ledger, P2-T08 review evidence, the P3-T07 family-freeze completion and repair,
+and the P14-T03 no-target sufficiency policy.  Their hashes and exact paths are
+recorded in the associated AgentJob and scope/reopening schema.  Generated
+wiki notes and local retrieval caches are derivative discovery aids only.
+
+\end{document}
